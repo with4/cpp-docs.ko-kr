@@ -1,15 +1,14 @@
 ---
-title: "mersenne_twister_engine 클래스 | Microsoft 문서"
+title: mersenne_twister_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- mersenne_twister_engine
 - random/std::mersenne_twister_engine
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: bc94cb819bbf71893503f91bb3469a5be771f5cd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f847f0eb599f3696c51f26b885c52927020f702d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 클래스
-메르센 트위스터 알고리즘을 기반으로 정수의 고품질 임의 시퀀스를 생성합니다.  
+# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine Class
+Generates a high quality random sequence of integers based on the Mersenne twister algorithm.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class UIntType,   
@@ -54,55 +53,55 @@ template <class UIntType,
 class mersenne_twister_engine;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `UIntType`  
- 부호가 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `W`  
- **단어 크기**. 상태 시퀀스의 각 단어 크기입니다(비트). **사전 조건**: `2u < W ≤ numeric_limits<UIntType>::digits`  
+ **Word size**. Size of each word, in bits, of the state sequence. **Precondition**: `2u < W ≤ numeric_limits<UIntType>::digits`  
   
  `N`  
- **상태 크기**. 상태 시퀀스의 요소(값) 수입니다.  
+ **State size**. The number of elements (values) in the state sequence.  
   
  `M`  
- **시프트 크기**. 각 트위스트 중 건너 뛸 요소의 수입니다. **사전 조건**: `0 < M ≤ N`  
+ **Shift size**. The number of elements to skip during each twist. **Precondition**: `0 < M ≤ N`  
   
  `R`  
- **마스크 비트**. **사전 조건**: `R ≤ W`  
+ **Mask bits**. **Precondition**: `R ≤ W`  
   
  `A`  
- **XOR 마스크**. **사전 조건**: `A ≤ (1u<<W) - 1u`  
+ **XOR mask**. **Precondition**: `A ≤ (1u<<W) - 1u`  
   
  `U`, `S`, `T`, `L`  
- **시프트 조작 매개 변수**. 암호화(조작)할 때 시프트 값으로 사용됩니다. 사전 조건: `U,S,T,L ≤ W`  
+ **Tempering shift parameters**. Used as shift values during scrambling (tempering). Precondition: `U,S,T,L ≤ W`  
   
  `D`, `B`, `C`  
- **비트 마스크 조작 매개 변수**. 암호화(조작)할 때 비트 마스크 값으로 사용됩니다. 사전 조건: `D,B,C ≤ (1u<<W) - 1u`  
+ **Tempering bit mask parameters**. Used as bit mask values during scrambling (tempering). Precondition: `D,B,C ≤ (1u<<W) - 1u`  
   
  `F`  
- **초기화 승수**. 시퀀스 초기화를 지원하는 데 사용됩니다. 사전 조건: `F ≤ (1u<<W) - 1u`  
+ **Initialization multiplier**. Used to help with initialization of the sequence. Precondition: `F ≤ (1u<<W) - 1u`  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`mersenne_twister_engine::mersenne_twister_engine`|`mersenne_twister_engine::min`|`mersenne_twister_engine::discard`|  
 |`mersenne_twister_engine::operator()`|`mersenne_twister_engine::max`|`mersenne_twister_engine::seed`|  
   
- `default_seed`는 `5489u`로 정의된 멤버 상수로, `mersenne_twister_engine::seed` 및 단일 값 생성자의 기본 매개 변수 값으로 사용됩니다.  
+ `default_seed` is a member constant, defined as `5489u`, used as the default parameter value for `mersenne_twister_engine::seed` and the single value constructor.  
   
- 엔진 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
- 이 템플릿 클래스는 닫힌 간격 [ `0`, `2`<sup>W</sup> - `1`]에 대한 값을 반환하는 난수 엔진을 설명합니다. 여기에는 `W * (N - 1) + R`비트의 큰 정수 값이 들어 있습니다. 이 큰 값에서 한 번에 `W`비트를 추출하고 모든 비트를 사용하는 경우 추출할 새 비트 집합이 있도록 비트를 시프트 후 혼합하여 큰 값을 비틉니다. `operator()`가 `N`번 이상 호출된 경우 엔진의 상태는 사용된 마지막 `N``W`비트 값이고, 그렇지 않으면 사용된 `M``W`비트 값과 시드의 마지막 `N - M` 값입니다.  
+## <a name="remarks"></a>Remarks  
+ This template class describes a random number engine, returning values on the closed interval [ `0`, `2`<sup>W</sup> - `1`]. It holds a large integral value with `W * (N - 1) + R` bits. It extracts `W` bits at a time from this large value, and when it has used all the bits it twists the large value by shifting and mixing the bits so that it has a new set of bits to extract from. The engine's state is the last `N` `W`-bit values used if `operator()` has been called at least `N` times, otherwise the `M` `W`-bit values that have been used and the last `N - M` values of the seed.  
   
- 생성기는 시프트 값 `N` 및 `M`과 트위스트 값 `R` 그리고 조건부 XOR 마스크 `A`로 정의되는, 트위스트되고 일반화된 피드백 시프트 레지스터를 사용하여 보유하고 있는 큰 값을 트위스트합니다. 또한 값 `U`, `D`, `S`, `B`, `T`, `C` 및 `L`로 정의된 비트 암호화 매트릭스에 따라 원시 시프트 레지스터의 비트를 암호화(조작)합니다.  
+ The generator twists the large value that it holds by using a twisted generalized feedback shift register defined by shift values `N` and `M`, a twist value `R`, and a conditional XOR-mask `A`. Additionally, the bits of the raw shift register are scrambled (tempered) according to a bit-scrambling matrix defined by values `U`, `D`, `S`, `B`, `T`, `C`, and `L`.  
   
- 템플릿 인수 `UIntType`은 최대 `2`<sup>W</sup> - `1`까지 값을 보유할 수 있도록 충분히 커야 합니다. 다른 템플릿 인수의 값은 다음 요구 사항을 충족해야 합니다. `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.  
+ The template argument `UIntType` must be large enough to hold values up to `2`<sup>W</sup> - `1`. The values of the other template arguments must satisfy the following requirements: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.  
   
- 이 엔진에서 직접 생성기를 생성할 수 있더라도 다음의 미리 정의된 형식 정의 중 하나를 사용하는 것이 좋습니다.  
+ Although you can construct a generator from this engine directly, it is recommended you use one of these predefined typedefs:  
   
- `mt19937`: 32비트 메르센 트위스터 엔진입니다(Matsumoto 및 Nishimura, 1998).  
+ `mt19937`: 32-bit Mersenne twister engine (Matsumoto and Nishimura, 1998).  
   
 ```  
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,   
@@ -113,7 +112,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;  
 ```  
   
- `mt19937_64`: 64비트 메르센 트위스터 엔진입니다(Matsumoto 및 Nishimura, 2000).  
+ `mt19937_64`: 64-bit Mersenne twister engine (Matsumoto and Nishimura, 2000).  
   
 ```  
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,   
@@ -124,17 +123,17 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- 메르센 트위스터 알고리즘에 대한 자세한 내용은 Wikipedia 문서 [Mersenne twister](http://go.microsoft.com/fwlink/LinkId=402356)(메르센 트위스터)를 참조하세요.  
+ For detailed information about the Mersenne twister algorithm, see the Wikipedia article [Mersenne twister](http://go.microsoft.com/fwlink/LinkId=402356).  
   
-## <a name="example"></a>예제  
- 코드 예제는 [\<random>](../standard-library/random.md)을 참조하세요.  
+## <a name="example"></a>Example  
+ For a code example, see [\<random>](../standard-library/random.md).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

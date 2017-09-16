@@ -1,5 +1,5 @@
 ---
-title: "CReBar 클래스 | Microsoft 문서"
+title: CReBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- rebar controls, control bar
-- CReBar class
-- Internet Explorer 4.0 common controls
+- CReBar [MFC], AddBar
+- CReBar [MFC], Create
+- CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
 caps.latest.revision: 22
 author: mikeblome
@@ -39,46 +39,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 38ac4611503bec70ea9f809a4d4f9d4b5133e30e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19014f5049d32a469699ffcbf59052d945bc7e81
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crebar-class"></a>CReBar 클래스
-rebar 컨트롤의 레이아웃, 지속성 및 상태 정보를 제공하는 컨트롤 막대입니다.  
+# <a name="crebar-class"></a>CReBar Class
+A control bar that provides layout, persistence, and state information for rebar controls.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CReBar : public CControlBar  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CReBar::AddBar](#addbar)|Rebar 밴드를 추가합니다.|  
-|[CReBar::Create](#create)|Rebar 컨트롤을 만들고 연결 하는 `CReBar` 개체입니다.|  
-|[CReBar::GetReBarCtrl](#getrebarctrl)|내부 공용 컨트롤에 직접 액세스할 수 있습니다.|  
+|[CReBar::AddBar](#addbar)|Adds a band to a rebar.|  
+|[CReBar::Create](#create)|Creates the rebar control and attaches it to the `CReBar` object.|  
+|[CReBar::GetReBarCtrl](#getrebarctrl)|Allows direct access to the underlying common control.|  
   
-## <a name="remarks"></a>주의  
- Rebar 개체에는 다양 한 자식 창, 일반적으로 다른 컨트롤 편집 상자, 도구 모음 및 목록 상자를 포함 하 여 포함할 수 있습니다. Rebar 개체는 지정 된 비트맵을 통해 해당 자식 창을 표시할 수 있습니다. 응용 프로그램이 자동으로 크기를 조정 rebar 하거나 사용자 클릭 하거나 해당 위치 조정 막대를 끌어 rebar 크기를 수동으로.  
+## <a name="remarks"></a>Remarks  
+ A rebar object can contain a variety of child windows, usually other controls, including edit boxes, toolbars, and list boxes. A rebar object can display its child windows over a specified bitmap. Your application can automatically resize the rebar, or the user can manually resize the rebar by clicking or dragging its gripper bar.  
   
- ![RebarMenu의](../../mfc/reference/media/vc4sc61.gif "vc4sc61")  
+ ![Example of RebarMenu](../../mfc/reference/media/vc4sc61.gif "vc4sc61")  
   
-## <a name="rebar-control"></a>Rebar 컨트롤  
- Rebar 개체 도구 모음 개체 비슷하게 동작 합니다. Rebar 밴드의 크기를 조정 하려면 클릭 하 여 끌기 메커니즘을 사용 합니다. rebar 컨트롤은 그리퍼 막대, 비트맵, 텍스트 레이블 및 자식 창이 조합된 하나 이상의 밴드를 포함할 수 있습니다. 그러나 밴드는 둘 이상의 자식 창을 포함할 수 없습니다.  
+## <a name="rebar-control"></a>Rebar Control  
+ A rebar object behaves similarly to a toolbar object. A rebar uses the click-and-drag mechanism to resize its bands. A rebar control can contain one or more bands, with each band having any combination of a gripper bar, a bitmap, a text label, and a child window. However, bands cannot contain more than one child window.  
   
- **CReBar** 사용 하는 [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) 클래스의 구현을 제공 하도록 합니다. Rebar 컨트롤을 통해 액세스할 수 있습니다 [GetReBarCtrl](#getrebarctrl) 컨트롤의 사용자 지정 옵션을 활용할 수 있습니다. Rebar 컨트롤에 대 한 자세한 내용은 참조 `CReBarCtrl`합니다. Rebar 컨트롤을 사용 하는 방법에 대 한 자세한 내용은 참조 [CReBarCtrl 사용 하 여](../../mfc/using-crebarctrl.md)합니다.  
+ **CReBar** uses the [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) class to provide its implementation. You can access the rebar control through [GetReBarCtrl](#getrebarctrl) to take advantage of the control's customization options. For more information about rebar controls, see `CReBarCtrl`. For more information about using rebar controls, see [Using CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
->  Rebar 및 rebar 컨트롤 개체에는 MFC 컨트롤 모음 고정을 지원 하지 않습니다. 경우 **CRebar::EnableDocking** 응용 프로그램은 assert 호출 됩니다.  
+>  Rebar and rebar control objects do not support MFC control bar docking. If **CRebar::EnableDocking** is called, your application will assert.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,11 +89,11 @@ class CReBar : public CControlBar
   
  `CReBar`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="addbar"></a>CReBar::AddBar  
- 에 rebar 밴드를 추가 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="addbar"></a>  CReBar::AddBar  
+ Call this member function to add a band to the rebar.  
   
 ```  
 BOOL AddBar(
@@ -111,33 +111,33 @@ BOOL AddBar(
     DWORD dwStyle = RBBS_GRIPPERALWAYS);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pBar`  
- 에 대 한 포인터는 `CWnd` 자식 창이 rebar에 삽입할 개체입니다. 참조 된 개체가 있어야는 **WS_CHILD**합니다.  
+ A pointer to a `CWnd` object that is the child window to be inserted into the rebar. The referenced object must have a **WS_CHILD**.  
   
  `lpszText`  
- Rebar에 표시할 텍스트를 포함 하는 문자열에 대 한 포인터입니다. **NULL** 기본적으로 합니다. 에 포함 된 텍스트 `lpszText` 자식 창;에 속하지 않는 rebar 자체에 있습니다.  
+ A pointer to a string containing the text to appear on the rebar. **NULL** by default. The text contained in `lpszText` is not part of the child window; it is on the rebar itself.  
   
  `pbmp`  
- 에 대 한 포인터는 `CBitmap` rebar 백그라운드에 표시 되는 개체입니다. **NULL** 기본적으로 합니다.  
+ A pointer to a `CBitmap` object to be displayed on the rebar background. **NULL** by default.  
   
  `dwStyle`  
- A `DWORD` rebar에 적용할 스타일을 포함 합니다. 참조는 **fStyle** 함수 Win32 구조에 대 한 설명 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) 대역 외 스타일의 전체 목록은 합니다.  
+ A `DWORD` containing the style to apply to the rebar. See the **fStyle** function description in the Win32 structure [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) for a complete list of band styles.  
   
  *clrFore*  
- A **COLORREF** rebar의 전경색을 나타내는 값입니다.  
+ A **COLORREF** value that represents the foreground color of the rebar.  
   
  *clrBack*  
- A **COLORREF** rebar의 배경색을 나타내는 값입니다.  
+ A **COLORREF** value that represents the background color of the rebar.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CReBarCtrl #&1;](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="create"></a>CReBar::Create  
- 이 멤버 함수는 rebar 만들기를 호출 합니다.  
+##  <a name="create"></a>  CReBar::Create  
+ Call this member function to create a rebar.  
   
 ```  
 virtual BOOL Create(
@@ -147,47 +147,47 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_REBAR);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 에 대 한 포인터는 `CWnd` 인 Windows 창 상태 표시줄의 부모인 개체입니다. 프레임 창 일반적으로입니다.  
+ Pointer to the `CWnd` object whose Windows window is the parent of the status bar. Normally your frame window.  
   
  `dwCtrlStyle`  
- Rebar 컨트롤의 스타일입니다. 기본적으로 **RBS_BANDBORDERS**이며 표시 좁힐 선으로 rebar 컨트롤 내에서 인접 한 밴드를 구분 합니다. 참조 [Rebar 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb774377) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 스타일의 목록에 대 한 합니다.  
+ The rebar control style. By default, **RBS_BANDBORDERS**, which displays narrow lines to separate adjacent bands within the rebar control. See [Rebar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb774377) in the Windows SDK for a list of styles.  
   
  `dwStyle`  
- Rebar 창 스타일입니다.  
+ The rebar window styles.  
   
  `nID`  
- Rebar의 자식 창 id입니다.  
+ The rebar's child-window ID.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CReBar::AddBar](#addbar)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CReBar::AddBar](#addbar).  
   
-##  <a name="getrebarctrl"></a>CReBar::GetReBarCtrl  
- 이 멤버 함수에는 기본 공용 컨트롤에 직접 액세스할 수 있습니다.  
+##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl  
+ This member function allows direct access to the underlying common control.  
   
 ```  
 CReBarCtrl& GetReBarCtrl() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 참조는 [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to a [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) object.  
   
-### <a name="remarks"></a>주의  
- Rebar 프로그램을 사용자 지정 Windows rebar 공용 컨트롤의 기능을 활용 하려면이 멤버 함수를 호출 합니다. 호출 하는 경우 `GetReBarCtrl`, 참조 개체를 반환 된 `CReBarCtrl` 개체 멤버 함수 집합 중 하나를 사용할 수 있도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to take advantage of the functionality of the Windows rebar common control in customizing your rebar. When you call `GetReBarCtrl`, it returns a reference object to the `CReBarCtrl` object so you can use either set of member functions.  
   
- 사용 하는 방법에 대 한 자세한 내용은 `CReBarCtrl` 프로그램 크기 조정 막대를 사용자 지정 하려면 참조 [CReBarCtrl 사용 하 여](../../mfc/using-crebarctrl.md)합니다.  
+ For more information about using `CReBarCtrl` to customize your rebar, see [Using CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_CReBarCtrl #&2;](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CReBarCtrl#2](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 MFCIE](../../visual-cpp-samples.md)   
- [CControlBar 클래스](../../mfc/reference/ccontrolbar-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MFCIE](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

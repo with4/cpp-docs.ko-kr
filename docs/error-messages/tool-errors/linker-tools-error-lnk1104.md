@@ -1,7 +1,7 @@
 ---
-title: "링커 도구 오류 LNK1104 | Microsoft Docs"
+title: Linker Tools Error LNK1104 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,55 +34,55 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: c6121f598bc2913b65fe781b07bcc27e6b55375b
+ms.translationtype: MT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: e2ed1195fcd389a1ac5a0c93e66ad44aa96faf54
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="linker-tools-error-lnk1104"></a>링커 도구 오류 LNK1104
-파일을 열 수 없습니다 '*filename*'  
+# <a name="linker-tools-error-lnk1104"></a>Linker Tools Error LNK1104
+cannot open file '*filename*'  
   
-링커 지정된 된 파일을 열 수 없습니다.  
+The linker could not open the specified file.  
   
-## <a name="possible-causes-and-solutions"></a>가능한 원인 및 해결
+## <a name="possible-causes-and-solutions"></a>Possible causes and solutions
   
-이 오류는 링커에서 읽기 또는 쓰기 위해 파일을 열려고 할 때 발생할 수 있습니다. 이 문제의 가장 일반적인 원인은 파일이 존재 하지 않는에 없는 디렉터리 중 하나는 링커는 검색, 또는 사용 하 고 다른 프로세스에 의해 잠겨 있습니다. 드물지만, 디스크 공간이 부족 해질 있을 수 있습니다, 파일이 너무 클 수, 파일 경로가 너무 길거나, 수 있습니다 또는 파일에 액세스할 수 있는 권한이 없을 수 있습니다.  
+This error can occur when the linker attempts to open a file for reading or for writing. The most common causes of this problem are that the file does not exist, can't be found in one of the directories the linker searches, or is in use and locked by another process. Less commonly, you may have run out of disk space, the file may be too large, the path to the file may be too long, or you may not have permission to access the file.  
 
-이러한 일반적인 문제 중 하나를 확인 합니다.  
+Check for one of these common issues:  
 
--   다시 작성 하려고 할 때 응용 프로그램 실행 중입니다. 실행 파일 또는.pdb 같은 디버그 파일을 열 수 없는 파일 경우 이것이 일반적인 원인입니다. 이 문제를 해결 하려면 프로그램을 중지 하 고 다시 작성 하기 전에 디버거에서 언로드하십시오.  
+-   Your application is already running when you try to rebuild it. If the file that can't be opened is the executable or a debugging file such as a .pdb, this is a common cause. To fix this issue, stop the program and unload it from the debugger before building it again.  
   
--   파일 *filename* 은 솔루션에 의해 빌드 되지만 링커 액세스 하려고 할 때 아직 존재 하지 않습니다. 이 프로젝트 하 나와이 파일을 생성 하 고 다른 프로젝트에 따라 달라 집니다 하지만 프로젝트가 올바른 순서로 빌드되지 않은 경우 발생할 수 있습니다. 이 문제를 해결 하려면 프로젝트 참조를 요구 하기 전 누락 된 파일을 빌드할 하므로 파일을 사용 하는 프로젝트에 설정 되어 있는지를 확인 합니다. 자세한 내용은 참조 [Visual c + + 프로젝트에서 참조 추가](../../ide/adding-references-in-visual-cpp-projects.md) 및 [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)합니다.  
+-   The file *filename* is built by your solution, but does not yet exist when the linker tries to access it. This can happen when one project depends on another project to produce this file, but the projects are not built in the correct order. To fix this issue, make sure your project references are set in the project that uses the file so the missing file is built before it is required. For more information, see [Adding references in Visual C++ projects](../../ide/adding-references-in-visual-cpp-projects.md) and [Managing references in a project](/visualstudio/ide/managing-references-in-a-project).  
   
--   파일 이름 또는 명령줄에서 또는 #pragma lib 지시문에 지정 된 경로가 올바르지 않거나 경로 잘못 된 드라이브 지정 합니다. 맞춤법을 확인 하 고 지정된 된 위치에 파일이 있는지 확인 합니다.  
+-   The filename or path specified on the command line or in a #pragma lib directive is incorrect, or the path has an invalid drive specification. Check your spelling and verify the file exists at the specified location.  
   
--   Visual Studio IDE를 다른 컴퓨터에서 복사 된 프로젝트를 빌드하려면 사용 하는 경우 라이브러리에 대 한 설치 위치는 달라질 수 있습니다. 라이브러리 디렉터리 속성을 확인 하십시오.는 [VC + + 디렉터리 속성 페이지](../../ide/vcpp-directories-property-page.md) 하 고 필요에 따라 업데이트 합니다. 보고 편집할 IDE에서 설정 합니다. 현재 라이브러리 경로 라이브러리 디렉터리 속성에 대 한 드롭다운 컨트롤을 선택 하 고 선택 **편집**합니다. **값 평가** 라이브러리 디렉터리 대화 상자의 섹션 라이브러리 파일의 검색 하는 현재 경로 나열 합니다.  
+-   If you are using the Visual Studio IDE to build a project that was copied from another computer, the installation locations for libraries may be different. Check the Library Directories property on the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md) and update it if necessary. To see and edit the current library paths set in the IDE, choose the drop-down control for the Library Directories property and choose **Edit**. The **Evaluated value** section of the Library Directories dialog lists the current paths searched for library files.  
   
--   이전 버전의 Visual Studio를 사용 하 여 만든 프로젝트를 작성 하는 경우 플랫폼 도구 집합 및 해당 버전에 대 한 라이브러리 수 하지 설치할 수 없습니다. 이 문제를 해결 하려면 두 가지 옵션이 있습니다: 설치한 현재 플랫폼 도구 집합을 사용 하도록 프로젝트를 업그레이드할 수 있습니다 또는 이전 도구 집합을 설치 하 고 변경 하지 않고 프로젝트를 빌드할 수 있습니다. 자세한 내용은 참조 [프로젝트를 이전 버전의 Visual c + +에서에서 업그레이드할](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) 및 [이전 프로젝트를 빌드하려면 Visual Studio의 네이티브 멀티 타기 팅을 사용](../../porting/use-native-multi-targeting.md)합니다.
+-   If you're building a project that was created using an older version of Visual Studio, the platform toolset and libraries for that version may not be not installed. To fix this issue, you have two options: you can upgrade the project to use the current platform toolset you have installed, or you can install the older toolset and build the project unchanged. For more information, see [Upgrading Projects from Earlier Versions of Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) and [Use native multi-targeting in Visual Studio to build old projects](../../porting/use-native-multi-targeting.md).
   
--   현재 프로젝트 구성 또는 플랫폼 도구 집합에 대 한 라이브러리가 설치 되지 않습니다. 플랫폼 도구 집합 및 Windows SDK에 지정 있는지 확인은 [일반 속성 페이지](../../ide/general-property-page-project.md) 프로젝트에 대해 설치 되 고 필요한 라이브러리에 지정 된 라이브러리 디렉터리에서 사용할 수 있는지 확인은 [VC + + 디렉터리 속성 페이지](../../ide/vcpp-directories-property-page.md) 구성 설정에 대 한 합니다. 디버그 및 소매 구성에 대 한 별도 설정이 하나 빌드의 작동 하는 경우 오류가 발생 하면 다른 설정이 올바른지, 그리고 두 구성 모두에 대 한 설치 되는 필요한 도구 및 라이브러리에 있는지 확인 하므로 합니다.  
+-   The libraries for the current project configuration or platform toolset are not installed. Verify that the platform toolset and Windows SDK specified in the [General property page](../../ide/general-property-page-project.md) for your project are installed, and verify that the required libraries are available in the Library Directories specified in the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md) for your configuration settings. There are separate settings for Debug and Retail configurations, so if one build works but the other causes an error, make sure the settings are correct and the required tools and libraries are installed for both configurations.  
   
--   Windows SDK의 경로 만료 합니다. 버전의 Visual Studio 버전 보다 최신 버전인 Windows SDK의 버전을 설치한 경우에 지정 된 된 경로 있는지 확인은 [VC + + 디렉터리 속성 페이지](../../ide/vcpp-directories-property-page.md) 새 SDK와 일치 하도록 업데이트 됩니다. 개발자 명령 프롬프트를 사용 하는 경우 새 SDK 경로 대 한 환경 변수를 초기화 하는 일괄 처리 파일 업데이트 되었는지 확인 합니다.  
+-   The path to the Windows SDK is out of date. If you have installed a version of the Windows SDK that is newer than your version of Visual Studio, make sure that the paths specified in the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md) are updated to match the new SDK. If you use the Developer Command Prompt, make sure that the batch file that initializes the environment variables is updated for the new SDK paths.  
   
--   다른 프로그램에서 파일을 열어서 링커에서 해당 파일에 쓸 수 없습니다. 바이러스 백신 프로그램 종종 일시적으로 차단 새로 만든된 파일에 대 한 액세스. 이 문제를 해결 하려면 바이러스 백신 검사 프로그램에서 프로젝트 빌드 디렉터리를 제외 해 보십시오.  
+-   Another program may have the file open and the linker cannot write to it. Antivirus programs often temporarily block access to newly created files. To fix this issue, try excluding your project build directories from the antivirus scanner.  
   
--   병렬 빌드 옵션을 사용 하는 경우에 Visual Studio가 다른 스레드에서 파일을 잠금 가능 합니다. 이 문제를 해결 하려면 동일한 코드 개체 또는 여러 프로젝트에 라이브러리 작성 하지 마십시오 하 고 프로젝트에서 빌드된 이진 파일을 선택할 빌드 종속 항목 또는 프로젝트 참조를 사용을 확인 합니다.  
+-   If you are using a parallel build option, it's possible that Visual Studio has locked the file on another thread. To fix this issue, verify that you do not build the same code object or library in multiple projects, and that you use build dependencies or project references to pick up built binaries in your project.  
   
--   잘못 된 LIB 환경 변수를 만들어야합니다. 명령줄 빌드에 LIB 환경 변수 설정 하 고이 사용 하면 라이브러리에 대 한 모든 디렉터리를 포함 있는지를 확인 합니다. IDE에서 LIB 변수 속성으로 설정 된 라이브러리 디렉터리에는 [VC + + 디렉터리 속성 페이지](../../ide/vcpp-directories-property-page.md)합니다. 모든 있는지 확인 해야 하는 라이브러리를 포함 하는 디렉터리는 다음과 같습니다. 라이브러리 디렉터리를 입력 해야 할 경우 표준 라이브러리 디렉터리를 재정의 하는, 사용할 수 있습니다는 [/LIBPATH](../../build/reference/libpath-additional-libpath.md)) 명령줄 또는 프로젝트에 대 한 링커 속성 페이지에서 추가 라이브러리 디렉터리 속성 옵션입니다.  
+-   You have an incorrect LIB environment variable. In command line builds, verify that the LIB environment variable is set and contains all the directories for the libraries you use. In the IDE, the LIB variable is set by the Library Directories property on the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md). Make sure all the directories that contain the libraries you need are listed here. If you need to supply a library directory that overrides a standard library directory, you can use the [/LIBPATH](../../build/reference/libpath-additional-libpath.md)) option on the command line, or the Additional Library Directories property in the Linker property page for your project.  
   
--   프로젝트의 속성 페이지 대화 상자에서 개별 라이브러리를 지정할 때 라이브러리 이름은 쉼표가 아닌 공백을 사용 하 여 구분 되어야 합니다.  
+-   When specifying individual libraries in a project's Property Pages dialog box, library names must be separated by spaces, not commas.  
   
--   에 대 한 경로 *filename* 최대 260 자가 하를 확장 합니다. 이름을 변경 하거나 필요한 파일의 경로를 단축 하는 데 필요한 경우 디렉터리 구조를 다시 정렬 합니다.  
+-   The path for *filename* expands to more than 260 characters. Change the names or rearrange your directory structure if needed to shorten the paths to the required files.  
   
--   파일이 너무 큽니다. 라이브러리 또는 개체 파일 두 개 이상의 크기가 gigabyte 32 비트 링커 문제가 발생할 수 있습니다. 이 문제에 대 한 가능한 수정 하는 64 비트 도구 집합을 사용 하는 것입니다. 명령줄에서이 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 명령줄에서 64 비트 Visual c + + 도구를 사용 하도록 설정](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)합니다. IDE에서이 작업을 수행 하는 방법에 대 한 정보를 참조 하십시오. [64 비트 컴파일러 및 도구를 사용 하 여 MSBuild](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) 및 스택 오버플로이 게시물: [amd64 네이티브 도구 체인을 사용 하 여 Visual Studio를 설정 하는 방법을](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055)합니다.  
+-   The file is too large. Libraries or object files more than a gigabyte in size may cause problems for the 32-bit linker. A possible fix for this issue is to use the 64-bit toolset. For more information on how to do this at the command line, see [How to: Enable a 64-Bit Visual C++ Toolset on the Command Line](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). For information on how to do this in the IDE, see [Using MSBuild with the 64-bit Compiler and Tools](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project)  and this Stack Overflow post: [How to make Visual Studio use the native amd64 toolchain](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).  
   
--   에 액세스 하려면 부족 한 파일 권한이 *filename*합니다. 이 보호 된 시스템 디렉터리의 파일을 라이브러리에 액세스 하거나 자신의 원래 사용 권한을 가진 다른 사용자가에서 복사 된 파일을 사용 하는 경우 발생할 수 있습니다 설정 합니다. 이 문제를 해결 하려면 파일을 쓰기 가능 프로젝트 디렉터리로 이동 합니다. 파일이 쓰기 가능한 디렉터리에 액세스할 수 없거나 사용 권한이 되지만 관리자 명령 프롬프트를 사용 하 고 takeown.exe 명령 파일의 소유권을 갖도록를 실행할 수 있습니다.  
+-   You have insufficient file permissions to access *filename*. This can happen if you access library files in protected system directories, or use files copied from other users that have their original permissions set. To fix this issue, move the file to a writeable project directory. If the file is in a writeable directory but has inaccessible permissions, you can use an Administrator command prompt and run the takeown.exe command to take ownership of the file.  
   
--   디스크 공간이 필요가 없습니다. 링커는 여러 사례에서 임시 파일을 사용합니다. 충분 한 디스크 공간이 있는 경우에 매우 큰 링크 상당 부분 사용 하거나 사용 가능한 디스크 공간을 조각 수 있습니다. 사용 하는 것이 좋습니다는 [/OPT (최적화)](../../build/reference/opt-optimizations.md) 옵션; 수행 전이적 comdat 제거 읽기 모든 개체 파일 여러 번입니다.  
+-   You don't have enough disk space. The linker uses temporary files in several cases. Even if you have sufficient disk space, a very large link can deplete or fragment the available disk space. Consider using the [/OPT (Optimizations)](../../build/reference/opt-optimizations.md) option; doing transitive comdat elimination reads all the object files multiple times.  
   
--   경우는 *filename* LNK 라는*n*, 임시 파일의 링커에 의해 생성 된 파일 이름인 TMP 환경 변수에 지정 된 디렉터리가 존재 하지 않을 수 있습니다, 또는 둘 이상의 디렉터리가 TMP 환경 변수에 대해 지정할 수 있습니다. TMP 환경 변수에 대해 하나의 디렉터리 경로만 지정 해야 합니다.  
+-   If the *filename* is named LNK*n*, which is a filename generated by the linker for a temporary file, the directory specified in the TMP environment variable may not exist, or more than one directory may be specified for the TMP environment variable. Only one directory path should be specified for the TMP environment variable.  
   
--   라이브러리 이름에 대해 오류 메시지가 발생하고, 이전 Microsoft Visual C++ 개발 시스템에서 .mak 파일을 최근에 포팅한 경우 라이브러리가 더 이상 유효하지 않을 수 있습니다. 라이브러리 이름은 올바른 이며 지정된 된 위치에 있는지 확인 하거나 새 위치를 가리키도록 LIB 경로 업데이트 합니다.  
+-   If the error message occurs for a library name, and you recently ported the .mak file from a previous Microsoft Visual C++ development system, the library may no longer be valid. Ensure that the library name is correct and still exists in the specified location, or update the LIB path to point to the new location.  
 

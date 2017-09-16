@@ -1,5 +1,5 @@
 ---
-title: "연결 맵 | Microsoft 문서"
+title: Connection Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,168 +33,168 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 8947930d20cc65075abe442b233e4c086f10f76e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6bbb1b543b73aeff21485504788c24b97e603b4e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="connection-maps"></a>연결 맵
-OLE 컨트롤의 다른 응용 프로그램에 대 한 인터페이스를 노출할 수 있습니다. 이러한 인터페이스는이 컨트롤에는 컨테이너에서의 액세스만을 허용 합니다. OLE 컨트롤을 다른 OLE 개체의 외부 인터페이스에 액세스 하려는 경우에 연결점을 확립 되어야 합니다. 이 연결점에는 나가는 외부 디스패치 맵, 예: 이벤트 맵 또는 알림 함수에 대 한 액세스를 제어할 수 있습니다.  
+# <a name="connection-maps"></a>Connection Maps
+OLE controls are able to expose interfaces to other applications. These interfaces only allow access from a container into that control. If an OLE control wants to access external interfaces of other OLE objects, a connection point must be established. This connection point allows a control outgoing access to external dispatch maps, such as event maps or notification functions.  
   
- Microsoft Foundation Class 라이브러리는 연결 지점을 지 원하는 프로그래밍 모델을 제공 합니다. 이 모델에서는 "연결 매핑합니다" 인터페이스 또는 OLE 컨트롤에 대 한 연결 지점을 지정 하는 데 사용 됩니다. 연결 맵 각 연결 지점에 대 한 매크로 포함합니다. 연결 맵에 대 한 자세한 내용은 참조는 [CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md) 클래스입니다.  
+ The Microsoft Foundation Class Library offers a programming model that supports connection points. In this model, "connection maps" are used to designate interfaces or connection points for the OLE control. Connection maps contain one macro for each connection point. For more information on connection maps, see the [CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md) class.  
   
- 일반적으로 컨트롤이 두 개의 연결 지점을 지원 합니다: 이벤트 및 알림 속성에 대 한 하나입니다. 이러한 작업으로 구현 됩니다는 `COleControl` 기본 클래스 및 컨트롤 기록기에 의해 추가 작업이 필요 합니다. 클래스에서 구현 하려는 모든 추가 연결 포인트를 수동으로 추가 해야 합니다. 연결 맵 및 지점 지원, MFC에서는 다음 매크로 제공 합니다.  
+ Typically, a control will support just two connection points: one for events and one for property notifications. These are implemented by the `COleControl` base class and require no additional work by the control writer. Any additional connection points you want to implement in your class must be added manually. To support connection maps and points, MFC provides the following macros:  
   
-### <a name="connection-map-declaration-and-demarcation"></a>연결 맵 선언 및 구분  
-  
-|||  
-|-|-|  
-|[BEGIN_CONNECTION_PART](#begin_connection_part)|(클래스 선언에 사용 해야 합니다)는 추가 연결 지점을 구현 하는 포함된 된 클래스를 선언 합니다.|  
-|[END_CONNECTION_PART](#end_connection_part)|(클래스 선언에 사용 해야 합니다) 연결 지점의 선언을 종료 합니다.|  
-|[CONNECTION_IID](#connection_iid)|컨트롤의 연결 지점의 인터페이스 ID를 지정합니다.|  
-|[DECLARE_CONNECTION_MAP](#declare_connection_map)|연결 맵 클래스 (클래스 선언에 사용 해야 합니다)에서 사용될지를 선언 합니다.|  
-|[BEGIN_CONNECTION_MAP](#begin_connection_map)|(클래스 구현에 사용 해야 합니다) 연결 맵의 정의 시작 합니다.|  
-|[END_CONNECTION_MAP](#end_connection_map)|(클래스 구현에 사용 해야 합니다) 연결 맵의 정의 끝냅니다.|  
-|[CONNECTION_PART](#connection_part)|컨트롤의 연결 맵을 연결점을 지정합니다.|  
-  
- 다음 함수는 싱크 설정 하 고 연결 지점을 사용 하 여 연결을 끊기 지원:  
-  
-### <a name="initializationtermination-of-connection-points"></a>연결 지점의 초기화/종료  
+### <a name="connection-map-declaration-and-demarcation"></a>Connection Map Declaration and Demarcation  
   
 |||  
 |-|-|  
-|[AfxConnectionAdvise](#afxconnectionadvise)|원본 및 싱크 간에 연결을 설정 합니다.|  
-|[AfxConnectionUnadvise](#afxconnectionunadvise)|원본 및 싱크 간의 연결을 중단합니다.|  
+|[BEGIN_CONNECTION_PART](#begin_connection_part)|Declares an embedded class that implements an additional connection point (must be used in the class declaration).|  
+|[END_CONNECTION_PART](#end_connection_part)|Ends the declaration of a connection point (must be used in the class declaration).|  
+|[CONNECTION_IID](#connection_iid)|Specifies the interface ID of the control's connection point.|  
+|[DECLARE_CONNECTION_MAP](#declare_connection_map)|Declares that a connection map will be used in a class (must be used in the class declaration).|  
+|[BEGIN_CONNECTION_MAP](#begin_connection_map)|Begins the definition of a connection map (must be used in the class implementation).|  
+|[END_CONNECTION_MAP](#end_connection_map)|Ends the definition of a connection map (must be used in the class implementation).|  
+|[CONNECTION_PART](#connection_part)|Specifies a connection point in the control's connection map.|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
- 사용 된 `BEGIN_CONNECTION_PART` 추가 연결 지점 이벤트와 속성 알림 연결 지점 외의 정의 시작 하는 매크로입니다.  
+ The following functions assist a sink in establishing and disconnecting a connection using connection points:  
+  
+### <a name="initializationtermination-of-connection-points"></a>Initialization/Termination of Connection Points  
+  
+|||  
+|-|-|  
+|[AfxConnectionAdvise](#afxconnectionadvise)|Establishes a connection between a source and a sink.|  
+|[AfxConnectionUnadvise](#afxconnectionunadvise)|Breaks a connection between a source and a sink.|  
+  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
+ Use the `BEGIN_CONNECTION_PART` macro to begin the definition of additional connection points beyond the event and property notification connection points.  
   
 ```   
 BEGIN_CONNECTION_PART(theClass, localClass)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 연결점 컨트롤 클래스의 이름을 지정 합니다.  
+ Specifies the name of the control class whose connection point this is.  
   
  *localClass*  
- 연결 지점을 구현하는 로컬 클래스의 이름을 지정합니다.  
+ Specifies the name of the local class that implements the connection point.  
   
-### <a name="remarks"></a>주의  
- 클래스 멤버 함수를 정의 하는 선언 (.h) 파일에서 시작 하 여 연결 지점을 `BEGIN_CONNECTION_PART` 매크로 추가 `CONNECTION_IID` 매크로 및 구현 하 고 연결 지점 맵을 완료 하려는 다른 모든 멤버 함수는 `END_CONNECTION_PART` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ In the declaration (.h) file that defines the member functions for your class, start the connection point with the `BEGIN_CONNECTION_PART` macro, then add the `CONNECTION_IID` macro and any other member functions you wish to implement, and complete the connection point map with the `END_CONNECTION_PART` macro.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART  
- 연결 지점의 선언을 종료합니다.  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
+ Ends the declaration of your connection point.  
   
 ```   
 END_CONNECTION_PART(localClass)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *localClass*  
- 연결 지점을 구현하는 로컬 클래스의 이름을 지정합니다.  
+ Specifies the name of the local class that implements the connection point.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID  
- Between은 `BEGIN_CONNECTION_PART` 및 `END_CONNECTION_PART` OLE 컨트롤에서 지 원하는 연결 지점에 대 한 인터페이스 ID를 정의 하는 매크로입니다.  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
+ Use between the `BEGIN_CONNECTION_PART` and `END_CONNECTION_PART` macros to define an interface ID for a connection point supported by your OLE control.  
   
 ```   
 CONNECTION_IID(iid)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `iid`  
- 연결 지점에서 호출 하는 인터페이스의 인터페이스 ID입니다.  
+ The interface ID of the interface called by the connection point.  
   
-### <a name="remarks"></a>주의  
- `iid` 인수가 ID 연결 지점에 연결 된 해당 싱크를 호출 하는 인터페이스를 식별 하는 데 사용 하는 인터페이스입니다. 예:  
+### <a name="remarks"></a>Remarks  
+ The `iid` argument is an interface ID used to identify the interface that the connection point will call on its connected sinks. For example:  
   
- [!code-cpp[NVC_MFCConnectionPoints #&10;](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
+ [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
- 호출 하는 연결 지점을 지정 하는 `ISinkInterface` 인터페이스입니다.  
+ specifies a connection point that calls the `ISinkInterface` interface.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
- 각 `COleControl`-프로그램의 파생된 클래스에 추가 연결 지점을 지 원하는 컨트롤을 지정 하기 위해 연결 맵을 제공할 수 있습니다.  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
+ Each `COleControl`-derived class in your program can provide a connection map to specify additional connection points that your control supports.  
   
 ```   
 DECLARE_CONNECTION_MAP() 
 ```  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 컨트롤 추가 점수를 지 원하는 경우는 `DECLARE_CONNECTION_MAP` 클래스 선언 후에는 매크로입니다. 그런 다음 클래스 멤버 함수를 정의 하는.cpp 파일에서 사용 하는 `BEGIN_CONNECTION_MAP` 매크로 `CONNECTION_PART` 각 컨트롤의 연결 포인트에 대 한 매크로 및 `END_CONNECTION_MAP` 연결 맵의 끝을 선언 하는 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ If your control supports additional points, use the `DECLARE_CONNECTION_MAP` macro at the end of your class declaration. Then, in the .cpp file that defines the member functions for the class, use the `BEGIN_CONNECTION_MAP` macro, `CONNECTION_PART` macros for each of the control's connection points, and the `END_CONNECTION_MAP` macro to declare the end of the connection map.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
- 프로그램에서 각 `COleControl` 파생 클래스는 컨트롤을 지원하는 연결 포인트를 지정하기 위해 연결 맵을 제공할 수 있습니다.  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
+ Each `COleControl`-derived class in your program can provide a connection map to specify connection points that your control will support.  
   
 ```   
 BEGIN_CONNECTION_MAP(theClass, theBase)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 연결을 매핑할 컨트롤 클래스의 이름을 지정합니다.  
+ Specifies the name of the control class whose connection map this is.  
   
  *theBase*  
- `theClass`의 기본 클래스 이름을 지정합니다.  
+ Specifies the name of the base class of `theClass`.  
   
-### <a name="remarks"></a>주의  
- 구현에서 (합니다. 클래스에 대 한 멤버 함수를 정의 하는 CPP) 파일 연결 맵을 시작한는 `BEGIN_CONNECTION_MAP` 매크로 사용 하 여 연결 지점의 각각에 대해 매크로 항목을 추가 합니다는 [CONNECTION_PART](#connection_part) 매크로입니다. 마지막으로, 연결 맵을 완료는 [END_CONNECTION_MAP](#end_connection_map) 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.CPP) file that defines the member functions for your class, start the connection map with the `BEGIN_CONNECTION_MAP` macro, then add macro entries for each of your connection points using the [CONNECTION_PART](#connection_part) macro. Finally, complete the connection map with the [END_CONNECTION_MAP](#end_connection_map) macro.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
- 연결 맵의 정의를 끝냅니다.  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
+ Ends the definition of your connection map.  
   
 ```   
 END_CONNECTION_MAP()  
 ```  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART  
- OLE 컨트롤에 대 한 연결 지점을 특정 인터페이스 ID에 매핑합니다.  
+##  <a name="connection_part"></a>  CONNECTION_PART  
+ Maps a connection point for your OLE control to a specific interface ID.  
   
 ```   
 CONNECTION_PART(theClass, iid, localClass)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 연결점 컨트롤 클래스의 이름을 지정 합니다.  
+ Specifies the name of the control class whose connection point this is.  
   
  `iid`  
- 연결 지점에서 호출 하는 인터페이스의 인터페이스 ID입니다.  
+ The interface ID of the interface called by the connection point.  
   
  *localClass*  
- 연결 지점을 구현하는 로컬 클래스의 이름을 지정합니다.  
+ Specifies the name of the local class that implements the connection point.  
   
-### <a name="remarks"></a>주의  
- 예:  
+### <a name="remarks"></a>Remarks  
+ For example:  
   
- [!code-cpp[NVC_MFCConnectionPoints #&2;](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
   
- 호출 하는 연결 지점과 연결 맵을 구현 하는 `IID_ISinkInterface` 인터페이스입니다.  
+ implements a connection map, with a connection point, that calls the `IID_ISinkInterface` interface .  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
- 로 지정 된 소스 간에 연결을 설정 하려면이 함수를 호출 `pUnkSrc`, 및로 지정 된 분류 `pUnkSink`합니다.  
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
+ Call this function to establish a connection between a source, specified by `pUnkSrc`, and a sink, specified by `pUnkSink`.  
   
 ```   
 BOOL AFXAPI AfxConnectionAdvise(
@@ -205,33 +205,33 @@ BOOL AFXAPI AfxConnectionAdvise(
     DWORD FAR* pdwCookie);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pUnkSrc`  
- 인터페이스를 호출 하는 개체에 대 한 포인터입니다.  
+ A pointer to the object that calls the interface.  
   
  `pUnkSink`  
- 인터페이스를 구현 하는 개체에 대 한 포인터입니다.  
+ A pointer to the object that implements the interface.  
   
  `iid`  
- 연결의 인터페이스 ID입니다.  
+ The interface ID of the connection.  
   
  `bRefCount`  
- **True 이면** 연결을 만들의 참조 횟수를 인해 해야 함을 나타냅니다 `pUnkSink` 증가 합니다. **FALSE** 참조 횟수가 증가 하지를 나타냅니다.  
+ **TRUE** indicates that creating the connection should cause the reference count of `pUnkSink` to be incremented. **FALSE** indicates that the reference count should not be incremented.  
   
  `pdwCookie`  
- 에 대 한 포인터는 `DWORD` 연결 식별자를 반환할 위치입니다. 이 값으로 전달할지는 `dwCookie` 매개 변수를 `AfxConnectionUnadvise` 연결을 끊으면.  
+ A pointer to a `DWORD` where a connection identifier is returned. This value should be passed as the `dwCookie` parameter to `AfxConnectionUnadvise` when disconnecting the connection.  
   
-### <a name="return-value"></a>반환 값  
- 연결이 설정 된; 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a connection was established; otherwise 0.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCConnectionPoints #&8;](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxctl.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
- 로 지정 된 소스, 간의 연결을 끊거나이 함수를 호출 `pUnkSrc`, 및로 지정 된 분류 `pUnkSink`합니다.  
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
+ Call this function to disconnect a connection between a source, specified by `pUnkSrc`, and a sink, specified by `pUnkSink`.  
   
 ```   
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -242,31 +242,31 @@ BOOL AFXAPI AfxConnectionUnadvise(
     DWORD dwCookie); 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pUnkSrc`  
- 인터페이스를 호출 하는 개체에 대 한 포인터입니다.  
+ A pointer to the object that calls the interface.  
   
  `pUnkSink`  
- 인터페이스를 구현 하는 개체에 대 한 포인터입니다.  
+ A pointer to the object that implements the interface.  
   
  `iid`  
- 연결 지점 인터페이스의 인터페이스 ID입니다.  
+ The interface ID of the connection point interface.  
   
  `bRefCount`  
- **True 이면** 는 연결을 끊는 중의 참조 횟수를 인해 해야 함을 나타냅니다 `pUnkSink` 감소 됩니다. **FALSE** 참조 횟수 감소 하지 않아야 나타냅니다.  
+ **TRUE** indicates that disconnecting the connection should cause the reference count of `pUnkSink` to be decremented. **FALSE** indicates that the reference count should not be decremented.  
   
  `dwCookie`  
- 반환 된 연결 식별자 `AfxConnectionAdvise`합니다.  
+ The connection identifier returned by `AfxConnectionAdvise`.  
   
-### <a name="return-value"></a>반환 값  
- 연결 하는 0이 아닌 경우 연결이 끊어졌습니다. 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a connection was disconnected; otherwise 0.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCConnectionPoints #&9;](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxctl.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h 
 
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

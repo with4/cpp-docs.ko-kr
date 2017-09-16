@@ -1,5 +1,5 @@
 ---
-title: "표준 대화 상자 데이터 교환 루틴 | Microsoft Docs"
+title: Standard Dialog Data Exchange Routines | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,42 +31,42 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 86491a06a81f5b0ddf0c91c9c5f2b5f23261b49b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f2ca5979646139a88c994cd6b6f100fbd202f50
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="standard-dialog-data-exchange-routines"></a>표준 대화 상자 데이터 교환 루틴
-이 항목에서는 일반적인 MFC 대화 상자 컨트롤에 사용 되는 표준 대화 상자 데이터 교환 (DDX) 루틴을 나열 합니다.  
+# <a name="standard-dialog-data-exchange-routines"></a>Standard Dialog Data Exchange Routines
+This topic lists the standard dialog data exchange (DDX) routines used for common MFC dialog controls.  
   
 > [!NOTE]
->  표준 대화 상자 데이터 교환 루틴은 헤더 파일 afxdd_.h에서 정의 됩니다. 그러나 응용 프로그램에는 afxwin.h를 포함 되어야 합니다.  
+>  The standard dialog data exchange routines are defined in the header file afxdd_.h. However, applications should include afxwin.h.  
   
-### <a name="ddx-functions"></a>DDX 함수  
+### <a name="ddx-functions"></a>DDX Functions  
   
 |||  
 |-|-|  
-|[DDX_CBIndex](#ddx_cbindex)|초기화 하거나 현재 선택 된 콤보 상자 컨트롤의 인덱스를 검색 합니다.|  
-|[DDX_CBString](#ddx_cbstring)|초기화 하거나 콤보 상자 컨트롤의 편집 필드의 현재 콘텐츠를 검색 합니다.|  
-|[DDX_CBStringExact](#ddx_cbstringexact)|초기화 하거나 콤보 상자 컨트롤의 편집 필드의 현재 콘텐츠를 검색 합니다.|  
-|[DDX_Check](#ddx_check)|초기화 하거나 확인란 컨트롤의 현재 상태를 검색 합니다.|  
-|[DDX_Control](#ddx_control)|하위 클래스는 대화 상자 내에서 지정 된 컨트롤입니다.|  
-|[DDX_DateTimeCtrl](#ddx_datetimectrl)|초기화 하거나 날짜 및 시간 선택 컨트롤의 날짜 / 시간 데이터를 검색 합니다.|  
-|[DDX_IPAddress](#ddx_ipaddress)|초기화 하거나 IP 주소 컨트롤의 현재 값을 검색 합니다.|  
-|[DDX_LBIndex](#ddx_lbindex)|초기화 하거나 현재 선택 된 목록 상자 컨트롤의 인덱스를 검색 합니다.|  
-|[DDX_LBString](#ddx_lbstring)|초기화 하거나 목록 상자 컨트롤 내에서 현재 선택 영역을 검색 합니다.|  
-|[DDX_LBStringExact](#ddx_lbstringexact)|초기화 하거나 목록 상자 컨트롤 내에서 현재 선택 영역을 검색 합니다.|
-|[DDX_ManagedControl](#ddx_managedcontrol)|컨트롤의 리소스 id입니다. 일치 하는.NET 컨트롤을 만듭니다.|  
-|[DDX_MonthCalCtrl](#ddx_monthcalctrl)|초기화 하거나 달력 컨트롤의 현재 값을 검색 합니다.|  
-|[DDX_Radio](#ddx_radio)|초기화 하거나 라디오 컨트롤 그룹 내에서 현재 확인란이 라디오 컨트롤이의 0 기반 인덱스를 검색 합니다.|  
-|[DDX_Scroll](#ddx_scroll)|초기화 하거나 스크롤 컨트롤의 위치 조정 컨트롤의 현재 위치를 검색 합니다.|  
-|[DDX_Slider](#ddx_slider)|초기화 하거나 슬라이더 컨트롤의 위치 조정 컨트롤의 현재 위치를 검색 합니다.|  
-|[DDX_Text](#ddx_text)|초기화 하거나 편집 컨트롤의 현재 값을 검색 합니다.|  
+|[DDX_CBIndex](#ddx_cbindex)|Initializes or retrieves the index of the current selection of a combo box control.|  
+|[DDX_CBString](#ddx_cbstring)|Initializes or retrieves the current contents of the edit field of a combo box control.|  
+|[DDX_CBStringExact](#ddx_cbstringexact)|Initializes or retrieves the current contents of the edit field of a combo box control.|  
+|[DDX_Check](#ddx_check)|Initializes or retrieves the current state of a check box control.|  
+|[DDX_Control](#ddx_control)|Subclasses a given control within a dialog box.|  
+|[DDX_DateTimeCtrl](#ddx_datetimectrl)|Initializes or retrieves date and/or time data of a date and time picker control.|  
+|[DDX_IPAddress](#ddx_ipaddress)|Initializes or retrieves the current value of an IP address control.|  
+|[DDX_LBIndex](#ddx_lbindex)|Initializes or retrieves the index of the current selection of a list box control.|  
+|[DDX_LBString](#ddx_lbstring)|Initializes or retrieves the current selection within a list box control.|  
+|[DDX_LBStringExact](#ddx_lbstringexact)|Initializes or retrieves the current selection within a list box control.|
+|[DDX_ManagedControl](#ddx_managedcontrol)|Creates a .NET control matching the control's resource ID.|  
+|[DDX_MonthCalCtrl](#ddx_monthcalctrl)|Initializes or retrieves the current value of a month calendar control.|  
+|[DDX_Radio](#ddx_radio)|Initializes or retrieves the 0-based index of the radio control that is currently checked within a radio control group.|  
+|[DDX_Scroll](#ddx_scroll)|Initializes or retrieves the current position of a scroll control's thumb.|  
+|[DDX_Slider](#ddx_slider)|Initializes or retrieves the current position of a slider control's thumb.|  
+|[DDX_Text](#ddx_text)|Initializes or retrieves the current value of an edit control.|  
   
-##  <a name="ddx_cbindex"></a>DDX_CBIndex  
- `DDX_CBIndex` 함수의 전송을 관리 `int` 대화 상자에서 콤보 상자 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_cbindex"></a>  DDX_CBIndex  
+ The `DDX_CBIndex` function manages the transfer of `int` data between a combo box control in a dialog box, form view, or control view object and a `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_CBIndex(
@@ -75,26 +75,26 @@ void AFXAPI DDX_CBIndex(
     int& index);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 콤보 상자 컨트롤에 연결 된 컨트롤 속성의 리소스 ID입니다.  
+ The resource ID of the combo box control associated with the control property.  
   
- *인덱스*  
- 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
+ *index*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>설명  
- 때 `DDX_CBIndex` 호출 *인덱스* 현재 콤보 상자의 선택 항목의 인덱스에 설정 됩니다. 선택 된 항목이 경우 *인덱스* 0으로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_CBIndex` is called, *index* is set to the index of the current combo box selection. If no item is selected, *index* is set to 0.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_cbstring"></a>DDX_CBString  
- `DDX_CBString` 함수의 전송을 관리 `CString` 대화 상자에서 콤보 상자 컨트롤의 편집 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_cbstring"></a>  DDX_CBString  
+ The `DDX_CBString` function manages the transfer of `CString` data between the edit control of a combo box control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_CBString(
@@ -103,29 +103,29 @@ void AFXAPI DDX_CBString(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 콤보 상자 컨트롤에 연결 된 컨트롤 속성의 리소스 ID입니다.  
+ The resource ID of the combo box control associated with the control property.  
   
  *value*  
- 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 때 `DDX_CBString` 호출 *값* 현재 콤보 상자의 선택 항목으로 설정 됩니다. 선택 된 항목이 경우 *값* 길이가 0 인 문자열로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_CBString` is called, *value* is set to the current combo box selection. If no item is selected, *value* is set to a string of zero length.  
   
 > [!NOTE]
->  콤보 상자의 드롭다운 목록 상자 이면 교환 값은 255 자로 제한 됩니다.  
+>  If the combo box is a drop-down list box, the value exchanged is limited to 255 characters.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact  
- `DDX_CBStringExact` 함수의 전송을 관리 `CString` 대화 상자에서 콤보 상자 컨트롤의 편집 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact  
+ The `DDX_CBStringExact` function manages the transfer of `CString` data between the edit control of a combo box control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_CBStringExact(
@@ -134,29 +134,29 @@ void AFXAPI DDX_CBStringExact(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 콤보 상자 컨트롤에 연결 된 컨트롤 속성의 리소스 ID입니다.  
+ The resource ID of the combo box control associated with the control property.  
   
  *value*  
- 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 때 `DDX_CBStringExact` 호출 *값* 현재 콤보 상자의 선택 항목으로 설정 됩니다. 선택 된 항목이 경우 *값* 길이가 0 인 문자열로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_CBStringExact` is called, *value* is set to the current combo box selection. If no item is selected, *value* is set to a string of zero length.  
   
 > [!NOTE]
->  콤보 상자의 드롭다운 목록 상자 이면 교환 값은 255 자로 제한 됩니다.  
+>  If the combo box is a drop-down list box, the value exchanged is limited to 255 characters.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_check"></a>DDX_Check  
- `DDX_Check` 함수의 전송을 관리 `int` 대화 상자에서 확인란 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_check"></a>  DDX_Check  
+ The `DDX_Check` function manages the transfer of `int` data between a check box control in a dialog box, form view, or control view object and a `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_Check(
@@ -165,26 +165,26 @@ void AFXAPI DDX_Check(
     int& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 컨트롤 속성에 연결 된 확인란 컨트롤의 리소스 ID입니다.  
+ The resource ID of the check box control associated with the control property.  
   
  *value*  
- 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>설명  
- 때 `DDX_Check` 호출 *값* 확인란 컨트롤의 현재 상태로 설정 됩니다. 가능한 상태 값의 목록에 대 한 참조 [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) 에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_Check` is called, *value* is set to the current state of the check box control. For a list of the possible state values, see [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) in the Windows SDK.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_control"></a>DDX_Control  
- `DDX_Control` 로 지정 된 컨트롤을 서브 클래스 함수 `nIDC`, 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체입니다.  
+##  <a name="ddx_control"></a>  DDX_Control  
+ The `DDX_Control` function subclasses the control, specified by `nIDC`, of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_Control(
@@ -193,26 +193,26 @@ void AFXAPI DDX_Control(
     CWnd& rControl);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `nIDC`  
- 서브클래싱 할 컨트롤의 리소스 ID입니다.  
+ The resource ID of the control to be subclassed.  
   
  *rControl*  
- 대화 상자, 폼 뷰 또는 지정된 된 컨트롤에 관련 된 컨트롤 뷰 개체의 멤버 변수를 가리킵니다.  
+ A reference to a member variable of the dialog box, form view, or control view object related to the specified control.  
   
-### <a name="remarks"></a>주의  
- `pDX` 개체를 프레임 워크에서 제공 하는 경우는 `DoDataExchange` 함수를 호출 합니다. 따라서 `DDX_Control` 재정의가 내 에서만 호출 되어야 `DoDataExchange`합니다.  
+### <a name="remarks"></a>Remarks  
+ The `pDX` object is supplied by the framework when the `DoDataExchange` function is called. Therefore, `DDX_Control` should only be called within your override of `DoDataExchange`.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl  
- `DDX_DateTimeCtrl` 함수는 날짜 및 시간 선택 컨트롤 간의 날짜 및/또는 시간 데이터의 전송을 관리 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) 대화 상자 또는 폼 뷰 개체 및 중 하나는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 또는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 대화 상자나 폼 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl  
+ The `DDX_DateTimeCtrl` function manages the transfer of date and/or time data between a date and time picker control ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) in a dialog box or form view object and either a [CTime](../../atl-mfc-shared/reference/ctime-class.md) or a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) data member of the dialog box or form view object.  
   
 ```  
 void AFXAPI DDX_DateTimeCtrl(
@@ -231,33 +231,33 @@ void AFXAPI DDX_DateTimeCtrl(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다. 이 개체를 삭제할 필요가 없습니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction. You don't need to delete this object.  
   
  `nIDC`  
- 멤버 변수와 연결 된 날짜 및 시간 선택 컨트롤의 리소스 ID입니다.  
+ The resource ID of the date and time picker control associated with the member variable.  
   
  *value*  
- 처음 두 버전에 대 한 참조는 `CTime` 또는 `COleDateTime` 멤버 변수, 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환 합니다. 세 번째 버전에 대 한 참조에는 `CString` 데이터 멤버 컨트롤 뷰 개체입니다.  
+ In the first two versions, a reference to a `CTime` or `COleDateTime` member variable, dialog box, form view, or control view object with which data is exchanged. In the third version, a reference to a `CString` data member control view object.  
   
-### <a name="remarks"></a>주의  
- 때 `DDX_DateTimeCtrl` 호출 되 *값* 현재로 설정 된 날짜 및 시간 선택 컨트롤 또는 컨트롤의 상태 설정 되어 *값*exchange의 방향에 따라 합니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_DateTimeCtrl` is called, *value* is set to the current state of the date and time picker control, or the control is set to *value*, depending on the direction of the exchange.  
   
- 위의 세 번째 버전에서 `DDX_DateTimeCtrl` 의 전송을 관리 `CString` 데이터 날짜 간의 시간 컨트롤 및 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 컨트롤 뷰 개체의 데이터 멤버입니다. 문자열의 날짜 및 시간 형식 지정에 대 한 현재 로캘을 규칙을 사용 하 여 지정 합니다.  
+ In the third version above, `DDX_DateTimeCtrl` manages the transfer of `CString` data between a date time control and a [CString](../../atl-mfc-shared/reference/cstringt-class.md) data member of the control view object. The string is formatted using the current locale's rules for formatting dates and times.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
 
    
 
  
-## <a name="ddx_managedcontrol"></a>DDX_ManagedControl
-컨트롤의 리소스 id입니다. 일치 하는.NET 컨트롤을 만듭니다.  
+## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
+Creates a .NET control matching the control's resource ID.  
    
-### <a name="syntax"></a>구문  
+### <a name="syntax"></a>Syntax  
   ```  
 template <typename T>  
 void DDX_ManagedControl(  
@@ -265,32 +265,32 @@ void DDX_ManagedControl(
      int nIDC,   
      CWinFormsControl<T>& control );  
 ```
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange 클래스](cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange Class](cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 컨트롤 속성에 연결 된 컨트롤의 리소스 ID입니다.  
+ The resource ID of the control associated with the control property.  
   
  `control`  
- 에 대 한 참조는 [CWinFormsControl 클래스](cwinformscontrol-class.md) 개체입니다.  
+ A reference to a [CWinFormsControl Class](cwinformscontrol-class.md) object.  
    
-### <a name="remarks"></a>설명  
- `DDX_ManagedControl`호출 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) 리소스 컨트롤 id입니다. 일치 하는 컨트롤을 만들려면 사용 하 여 `DDX_ManagedControl` 컨트롤에 리소스 Id 중에서 만들려는 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)합니다. 데이터 교환에 대 한 Windows Forms 컨트롤에서 DDX/DDV 함수를 사용할 필요가 없습니다.  
+### <a name="remarks"></a>Remarks  
+ `DDX_ManagedControl` calls [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) to create a control matching the resource control ID. Use `DDX_ManagedControl` to create controls from resource IDs in [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). For data exchange, you do not need to use the DDX/DDV functions with Windows Forms controls.  
   
- 자세한 내용은 참조 [하는 방법: Windows Forms에서 DDX/DDV 데이터 바인딩 수행](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)합니다.  
+ For more information, see [How to: Do DDX/DDV Data Binding with Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
    
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxwinforms.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h  
    
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>See Also  
  [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)   
  [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
  
 
   
-##  <a name="ddx_ipaddress"></a>DDX_IPAddress  
- `DDX_IPAddress` 함수 IP 주소 컨트롤 및 컨트롤 뷰 개체의 데이터 멤버 간의 데이터 전송을 관리 합니다.  
+##  <a name="ddx_ipaddress"></a>  DDX_IPAddress  
+ The `DDX_IPAddress` function manages the transfer of data between an IP Address control and a data member of the control view object.  
   
 ```  
 void AFXAPI DDX_IPAddress(
@@ -299,35 +299,35 @@ void AFXAPI DDX_IPAddress(
     DWORD& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 컨트롤 속성에 연결 된 IP 주소 컨트롤의 리소스 ID입니다.  
+ The resource ID of the IP Address control associated with the control property.  
   
  *value*  
- 에 대 한 참조는 `DWORD` IP 주소 컨트롤의 네 필드 값이 포함 됩니다. 필드는 채워져 있거나 다음과 같아야 합니다.  
+ A reference to the `DWORD` containing the four-field value of the IP Address control. The fields are filled or read as follows.  
   
-|필드|필드 값을 포함 하는 비트|  
+|Field|Bits containing the field value|  
 |-----------|-------------------------------------|  
-|3|0 ~ 7|  
-|2|8 ~ 15|  
-|1|부터 23까지 16|  
-|0|-31 24|  
+|3|0 through 7|  
+|2|8 through 15|  
+|1|16 through 23|  
+|0|24 through 31|  
   
- Win32를 사용 하 여 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) 값을 읽거나 사용 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) 을 값을 채웁니다. 이러한 메시지에 설명 된 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Use the Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) to read the value, or use [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) to fill the value. These messages are described in the Windows SDK.  
   
-### <a name="remarks"></a>주의  
- 때 `DDX_IPAddress` 호출 *값* 하거나 IP 주소 컨트롤에서 읽혀집니다 또는 *값* exchange의 방향에 따라 컨트롤에 기록 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_IPAddress` is called, *value* is either read from the IP Address control, or *value* is written to the control, depending on the direction of the exchange.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_lbindex"></a>DDX_LBIndex  
- `DDX_LBIndex` 함수의 전송을 관리 `int` 대화 상자에서 목록 상자 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_lbindex"></a>  DDX_LBIndex  
+ The `DDX_LBIndex` function manages the transfer of `int` data between a list box control in a dialog box, form view, or control view object and an `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_LBIndex(
@@ -336,26 +336,26 @@ void AFXAPI DDX_LBIndex(
     int& index);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 목록 상자 컨트롤에 연결 된 컨트롤 속성의 리소스 ID입니다.  
+ The resource ID of the list box control associated with the control property.  
   
- *인덱스*  
- 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
+ *index*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>설명  
- 때 `DDX_LBIndex` 호출 *인덱스* 현재 목록 상자 선택의 인덱스에 설정 됩니다. 선택 된 항목이 경우 *인덱스* -1로 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_LBIndex` is called, *index* is set to the index of the current list box selection. If no item is selected, *index* is set to -1.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_lbstring"></a>DDX_LBString  
- `DDX_LBString` 함수의 전송을 관리 `CString` 대화 상자에서 목록 상자 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_lbstring"></a>  DDX_LBString  
+ The `DDX_LBString` function manages the transfer of `CString` data between a list box control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_LBString(
@@ -364,31 +364,31 @@ void AFXAPI DDX_LBString(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 목록 상자 컨트롤에 연결 된 컨트롤 속성의 리소스 ID입니다.  
+ The resource ID of the list box control associated with the control property.  
   
  *value*  
- 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 때 `DDX_LBString` 시작 부분이 일치 하는 컨트롤의 첫 번째 항목 목록 상자 컨트롤에 데이터를 전송 하기 위해 호출 *값* 을 선택 합니다. (접두사만 하지 않고 전체 항목 일치를 사용 하 여 [DDX_LBStringExact](#ddx_lbstringexact).) 일치 하는 항목이 있으면 항목이 선택 됩니다. 일치 하는 것은 대/소문자 구분 합니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_LBString` is called to transfer data to a list box control, the first item in the control whose beginning matches *value* is selected. (To match the entire item rather than just a prefix, use [DDX_LBStringExact](#ddx_lbstringexact).) If there are no matches, no items are selected. The matching is case-insensitive.  
   
- 때 `DDX_LBString` 목록 상자 컨트롤에서 데이터를 전송 하기 위해 호출 *값* 현재 목록 상자 선택으로 설정 됩니다. 선택 된 항목이 경우 *값* 길이가 0 인 문자열로 설정 됩니다.  
+ When `DDX_LBString` is called to transfer data from a list box control, *value* is set to the current list box selection. If no item is selected, *value* is set to a string of zero length.  
   
 > [!NOTE]
->  목록 상자는 드롭다운 목록 상자 인 경우 교환 값은 255 자로 제한 됩니다.  
+>  If the list box is a drop-down list box, the value exchanged is limited to 255 characters.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact  
- `DDX_CBStringExact` 함수의 전송을 관리 `CString` 대화 상자에서 목록 상자 컨트롤의 편집 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact  
+ The `DDX_CBStringExact` function manages the transfer of `CString` data between the edit control of a list box control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_LBStringExact(
@@ -397,31 +397,31 @@ void AFXAPI DDX_LBStringExact(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 목록 상자 컨트롤에 연결 된 컨트롤 속성의 리소스 ID입니다.  
+ The resource ID of the list box control associated with the control property.  
   
  *value*  
- 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 때 `DDX_LBStringExact` 일치 하는 컨트롤의 첫 번째 항목 목록 상자 컨트롤에 데이터를 전송 하기 위해 호출 *값* 을 선택 합니다. (전체 항목 보다는 방금 접두사 일치를 사용 하 여 [DDX_LBString](#ddx_lbstring).) 일치 하는 항목이 있으면 항목이 선택 됩니다. 일치 하는 것은 대/소문자 구분 합니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_LBStringExact` is called to transfer data to a list box control, the first item in the control that matches *value* is selected. (To match just a prefix rather than the entire item, use [DDX_LBString](#ddx_lbstring).) If there are no matches, no items are selected. The matching is case-insensitive.  
   
- 때 `DDX_CBStringExact` 목록 상자 컨트롤에서 데이터를 전송 하기 위해 호출 *값* 현재 목록 상자 선택으로 설정 됩니다. 선택 된 항목이 경우 *값* 길이가 0 인 문자열로 설정 됩니다.  
+ When `DDX_CBStringExact` is called to transfer data from a list box control, *value* is set to the current list box selection. If no item is selected, *value* is set to a string of zero length.  
   
 > [!NOTE]
->  목록 상자는 드롭다운 목록 상자 인 경우 교환 값은 255 자로 제한 됩니다.  
+>  If the list box is a drop-down list box, the value exchanged is limited to 255 characters.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl  
- `DDX_MonthCalCtrl` 함수 month calendar 컨트롤 간의 날짜 데이터의 전송을 관리 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 및 중 하나에 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 또는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl  
+ The `DDX_MonthCalCtrl` function manages the transfer of date data between a month calendar control ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) in a dialog box, form view, or control view object and either a [CTime](../../atl-mfc-shared/reference/ctime-class.md) or a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_MonthCalCtrl(
@@ -435,30 +435,30 @@ void AFXAPI DDX_MonthCalCtrl(
     COleDateTime& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다. 이 개체를 삭제할 필요가 없습니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction. You don't need to delete this object.  
   
  `nIDC`  
- 멤버 변수 연관 된 month calendar 컨트롤의 리소스 ID입니다.  
+ The resource ID of the month calendar control associated with the member variable.  
   
  *value*  
- 에 대 한 참조는 `CTime` 또는 `COleDateTime` 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환 합니다.  
+ A reference to a `CTime` or `COleDateTime` member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  컨트롤에는 날짜 값만 관리합니다. 컨트롤 창의 생성 시간을 반영 하도록 세트나 만큼의 시간에 대 한 호출을 사용 하 여 컨트롤에 설정 된 시간 개체의 시간 필드는 `CMonthCalCtrl::SetCurSel`합니다.  
+>  The control manages a date value only. The time fields in the time object are set to reflect the creation time of the control window, or whatever time was set in the control with a call to `CMonthCalCtrl::SetCurSel`.  
   
- 때 `DDX_MonthCalCtrl` 호출 *값* month calendar 컨트롤의 현재 상태로 설정 됩니다.  
+ When `DDX_MonthCalCtrl` is called, *value* is set to the current state of the month calendar control.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_radio"></a>DDX_Radio  
- `DDX_Radio` 함수의 전송을 관리 `int` 대화 상자에 라디오 컨트롤 그룹 간에 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다. 값은 `int` 데이터 멤버는 그룹 내에서 단추를 선택 된 라디오 단추가 따라 결정 됩니다.  
+##  <a name="ddx_radio"></a>  DDX_Radio  
+ The `DDX_Radio` function manages the transfer of `int` data between a radio control group in a dialog box, form view, or control view object and a `int` data member of the dialog box, form view, or control view object. The value of the `int` data member is determined according to which radio button within the group is selected.  
   
 ```  
 void AFXAPI DDX_Radio(
@@ -467,28 +467,28 @@ void AFXAPI DDX_Radio(
     int& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 그룹의 첫 번째 라디오 컨트롤의 리소스 ID입니다.  
+ The resource ID of the first radio control in the group.  
   
  *value*  
- 멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>설명  
- 때 `DDX_Radio` 호출 *값* 라디오 컨트롤 그룹의 현재 상태로 설정 됩니다. 현재 체크 라디오 컨트롤이의 0 기반 인덱스와 값이 설정 또는 라디오 컨트롤이 없는 경우-1 확인 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_Radio` is called, *value* is set to the current state of the radio control group. The value is set as a 0-based index of the radio control that is currently checked, or -1 if no radio controls are checked.  
   
- 첫 번째 라디오 단추 그룹에 있는 경우에 예를 들어 (WS_GROUP 스타일이 적용 된 단추)의 값을 검사는 `int` 등 구성원은 0입니다.  
+ For example, in case that the first radio button in the group is checked (the button with WS_GROUP style) the value of the `int` member is 0 and so on.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_scroll"></a>DDX_Scroll  
- `DDX_Scroll` 함수의 전송을 관리 `int` 대화 상자에서 스크롤 막대 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_scroll"></a>  DDX_Scroll  
+ The `DDX_Scroll` function manages the transfer of `int` data between a scroll-bar control in a dialog box, form view, or control view object and an `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_Scroll(
@@ -497,26 +497,26 @@ void AFXAPI DDX_Scroll(
     int& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 스크롤 막대 컨트롤에 연결 된 컨트롤 속성의 리소스 ID입니다.  
+ The resource ID of the scroll-bar control associated with the control property.  
   
  *value*  
- 데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>주의  
- 때 `DDX_Scroll` 호출 *값* 컨트롤의 위치 조정 컨트롤의 현재 위치를 설정 합니다. 컨트롤의 위치 조정 컨트롤의 현재 위치와 관련 된 값에 대 한 자세한 내용은 참조 하십시오. [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_Scroll` is called, *value* is set to the current position of the control's thumb. For more information on the values associated with the current position of the control's thumb, see [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) in the Windows SDK.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_slider"></a>DDX_Slider  
- `DDX_Slider` 함수의 전송을 관리 `int` 대화 상자나 폼 보기에서 슬라이더 컨트롤 간에 데이터 및 `int` 대화 상자나 폼 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_slider"></a>  DDX_Slider  
+ The `DDX_Slider` function manages the transfer of `int` data between a slider control in a dialog box or form view and an `int` data member of the dialog box or form view object.  
   
 ```  
 void AFXAPI DDX_Slider(
@@ -525,26 +525,26 @@ void AFXAPI DDX_Slider(
     int& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 슬라이더 컨트롤의 리소스 ID입니다.  
+ The resource ID of the slider control.  
   
  *value*  
- 교환할 값에 대 한 참조입니다. 이 매개 변수를 보유 하거나 슬라이더 컨트롤의 현재 위치를 설정 합니다.  
+ A reference to the value to be exchanged. This parameter holds or sets the slider control's current position.  
   
-### <a name="remarks"></a>설명  
- 때 `DDX_Slider` 호출 *값* 컨트롤의 스크롤 상자의 현재 위치를 설정 또는 값 수신한 교환의 방향에 따라 위치 합니다.  
+### <a name="remarks"></a>Remarks  
+ When `DDX_Slider` is called, *value* is set to the current position of the control's thumb, or the value receives the position, depending on the direction of the exchange.  
   
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 슬라이더 컨트롤에 대 한 정보를 참조 하십시오. [CSliderCtrl 사용 하 여](../../mfc/using-csliderctrl.md)합니다.  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For information about slider controls, see [Using CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_text"></a>DDX_Text  
- `DDX_Text` 함수의 전송을 관리 `int`, **UINT**, **긴**, `DWORD`, `CString`, **float**, 또는 **double** 대화 상자에서 편집 컨트롤 간의 데이터 보기를 구성 하거나 보기 제어 및 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
+##  <a name="ddx_text"></a>  DDX_Text  
+ The `DDX_Text` function manages the transfer of `int`, **UINT**, **long**, `DWORD`, `CString`, **float**, or **double** data between an edit control in a dialog box, form view, or control view and a [CString](../../atl-mfc-shared/reference/cstringt-class.md) data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_Text(
@@ -603,23 +603,23 @@ void AFXAPI DDX_Text(
     COleDateTime& value);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체에 있는 편집 컨트롤의 ID입니다.  
+ The ID of an edit control in the dialog box, form view, or control view object.  
   
  *value*  
- 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버에 대 한 참조입니다. 데이터 형식이 *값* 는 오버 로드 된 버전에 따라 달라 집니다 `DDX_Text` 사용 합니다.  
+ A reference to a data member in the dialog box, form view, or control view object. The data type of *value* depends on which of the overloaded versions of `DDX_Text` you use.  
   
-### <a name="remarks"></a>주의  
- DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
 
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
 
-## <a name="see-also"></a>참고 항목  
- [표준 대화 상자 데이터 유효성 검사 루틴](../../mfc/reference/standard-dialog-data-validation-routines.md)   
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Standard Dialog Data Validation Routines](../../mfc/reference/standard-dialog-data-validation-routines.md)   
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

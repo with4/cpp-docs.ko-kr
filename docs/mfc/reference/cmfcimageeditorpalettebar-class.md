@@ -1,5 +1,5 @@
 ---
-title: "CMFCImageEditorPaletteBar 클래스 | Microsoft 문서"
+title: CMFCImageEditorPaletteBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCImageEditorPaletteBar class
+- CMFCImageEditorPaletteBar [MFC], GetRowHeight
+- CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
 caps.latest.revision: 20
 author: mikeblome
@@ -36,38 +37,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f6b987a27b43d713835a71dd5c31587020f23f2f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ec477422342f47dd7aa705f132b2afa3333ac9d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar 클래스
-이미지 편집기 대화 상자 팔레트 모음 기능을 제공 합니다.  
+# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar Class
+Provides palette bar functionality to an image editor dialog box.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCImageEditorPaletteBar : public CMFCToolBar  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|이름|설명|  
-|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|도구 모음 단추의 높이 반환합니다. (재정의 [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|도구 모음 테두리 확장 단추를 표시할 수 있는지 여부를 결정 합니다. (재정의 [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|Name|Description|  
+|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Returns the height of toolbar buttons. (Overrides [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determines whether the toolbar can display buttons that have extended borders. (Overrides [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
   
-### <a name="remarks"></a>주의  
- 이 클래스는 사용자 코드에서 직접 사용할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ This class is not intended to be used directly from your code.  
   
- 이미지 편집기 대화 상자에서 팔레트 표시줄을 표시 하려면이 클래스를 사용 하는 프레임 워크입니다. 이미지 편집기 대화 상자에 대 한 자세한 내용은 참조 [CMFCImageEditorDialog 클래스](../../mfc/reference/cmfcimageeditordialog-class.md)합니다.  
+ The framework uses this class to display a palette bar in an image editor dialog box. For more information about the image editor dialog box, see [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -84,31 +85,31 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
   
  [CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afximageeditordialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afximageeditordialog.h  
   
-##  <a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
- 도구 모음 단추의 높이 반환합니다.  
+##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight  
+ Returns the height of toolbar buttons.  
   
 ```  
 virtual int GetRowHeight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 도구 모음에서 각 단추의 높이입니다.  
+### <a name="return-value"></a>Return Value  
+ The height of each button on the toolbar.  
   
-##  <a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
- 도구 모음 테두리 확장 단추를 표시할 수 있는지 여부를 결정 합니다.  
+##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+ Determines whether the toolbar can display buttons that have extended borders.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `FALSE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCImageEditorDialog 클래스](../../mfc/reference/cmfcimageeditordialog-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)
 

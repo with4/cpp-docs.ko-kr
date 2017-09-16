@@ -1,5 +1,5 @@
 ---
-title: "CFileException 클래스 | Microsoft 문서"
+title: CFileException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,9 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFile class, exceptions of
-- exceptions, file type
-- CFileException class
+- CFileException [MFC], CFileException
+- CFileException [MFC], ErrnoToException
+- CFileException [MFC], GetErrorMessage
+- CFileException [MFC], OsErrorToException
+- CFileException [MFC], ThrowErrno
+- CFileException [MFC], ThrowOsError
+- CFileException [MFC], m_cause
+- CFileException [MFC], m_lOsError
+- CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 caps.latest.revision: 20
 author: mikeblome
@@ -45,65 +51,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d9064ae66f0dcd0e9f0dce0eedd8e38353f9da06
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 34e70e01a2bc13c20d285bacf9c6907c13db5e02
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfileexception-class"></a>CFileException 클래스
-파일 관련 예외 상태를 나타냅니다.  
+# <a name="cfileexception-class"></a>CFileException Class
+Represents a file-related exception condition.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFileException : public CException  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFileException::CFileException](#cfileexception)|`CFileException` 개체를 생성합니다.|  
+|[CFileException::CFileException](#cfileexception)|Constructs a `CFileException` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFileException::ErrnoToException](#errnotoexception)|반환 될 런타임 오류 번호에 해당 하는 코드입니다.|  
-|[CFileException::GetErrorMessage](#geterrormessage)|예외를 설명 하는 메시지를 검색 합니다.|  
-|[CFileException::OsErrorToException](#oserrortoexception)|운영 체제 오류 코드에 해당 하는 이유 코드를 반환 합니다.|  
-|[CFileException::ThrowErrno](#throwerrno)|런타임 오류 번호에 따라 파일 예외를 throw 합니다.|  
-|[CFileException::ThrowOsError](#throwoserror)|운영 체제 오류 번호에 따라 파일 예외를 throw 합니다.|  
+|[CFileException::ErrnoToException](#errnotoexception)|Returns cause code corresponding to a run-time error number.|  
+|[CFileException::GetErrorMessage](#geterrormessage)|Retrieves the message describing an exception.|  
+|[CFileException::OsErrorToException](#oserrortoexception)|Returns a cause code corresponding to an operating system error code.|  
+|[CFileException::ThrowErrno](#throwerrno)|Throws a file exception based on a runtime error number.|  
+|[CFileException::ThrowOsError](#throwoserror)|Throws a file exception based on an operating system error number.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFileException::m_cause](#m_cause)|예외 원인에 해당 하는 이식 가능한 코드를 포함 합니다.|  
-|[CFileException::m_lOsError](#m_loserror)|관련된 운영 체제 오류 번호가 있습니다.|  
-|[CFileException::m_strFileName](#m_strfilename)|이 예외에 대 한 파일의 이름을 포함합니다.|  
+|[CFileException::m_cause](#m_cause)|Contains portable code corresponding to the exception cause.|  
+|[CFileException::m_lOsError](#m_loserror)|Contains the related operating-system error number.|  
+|[CFileException::m_strFileName](#m_strfilename)|Contains the name of the file for this exception.|  
   
-## <a name="remarks"></a>주의  
- `CFileException` 클래스는 이식 가능한 이유 코드 및 운영 체제별 오류 번호를 보유 하는 공용 데이터 멤버를 포함 합니다. 클래스는 또한 파일 예외를 throw 하 고 운영 체제 오류와 C 런타임 오류에 대 한 원인은 코드를 반환 하기 위한 정적 멤버 함수를 제공 합니다.  
+## <a name="remarks"></a>Remarks  
+ The `CFileException` class includes public data members that hold the portable cause code and the operating-system-specific error number. The class also provides static member functions for throwing file exceptions and for returning cause codes for both operating-system errors and C run-time errors.  
   
- `CFileException`개체를 생성 하 고 throw `CFile` 멤버 함수 및 파생 된 클래스의 멤버 함수입니다. 범위 내에서 이러한 개체를 액세스할 수는 **CATCH** 식입니다. 이식성을 위하여 원인 코드에만 사용 하 여 예외에 대 한 이유를 가져옵니다. 예외에 대 한 자세한 내용은 문서를 참조 하십시오. [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md)합니다.  
+ `CFileException` objects are constructed and thrown in `CFile` member functions and in member functions of derived classes. You can access these objects within the scope of a **CATCH** expression. For portability, use only the cause code to get the reason for an exception. For more information about exceptions, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `CFileException`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cfileexception"></a>CFileException::CFileException  
- 생성 된 `CFileException` 원인 코드와 운영 체제 코드 개체에 저장 하는 개체입니다.  
+##  <a name="cfileexception"></a>  CFileException::CFileException  
+ Constructs a `CFileException` object that stores the cause code and the operating-system code in the object.  
   
 ```  
 CFileException(
@@ -112,44 +118,44 @@ CFileException(
     LPCTSTR lpszArchiveName = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cause`  
- 예외에 대 한 이유를 나타내는 열거 형식 변수입니다. 참조 [CFileException::m_cause](#m_cause) 가능한 값 목록은 합니다.  
+ An enumerated type variable that indicates the reason for the exception. See [CFileException::m_cause](#m_cause) for a list of the possible values.  
   
  `lOsError`  
- 운영 체제별 이유는 사용 가능한 경우는 예외입니다. `lOsError` 보다 자세한 정보를 제공 하는 매개 변수 `cause` 않습니다.  
+ An operating-system-specific reason for the exception, if available. The `lOsError` parameter provides more information than `cause` does.  
   
  `lpszArchiveName`  
- 이름을 포함 하는 문자열을 가리키는 `CFile` 예외를 발생 시킨 개체입니다.  
+ Points to a string containing the name of the `CFile` object causing the exception.  
   
-### <a name="remarks"></a>주의  
- 이 생성자를 직접 사용 하지 않고 대신 전역 함수를 호출 [AfxThrowFileException](exception-processing.md#afxthrowfileexception)합니다.  
+### <a name="remarks"></a>Remarks  
+ Do not use this constructor directly, but rather call the global function [AfxThrowFileException](exception-processing.md#afxthrowfileexception).  
   
 > [!NOTE]
->  변수 `lOsError` 에 적용 됩니다 `CFile` 및 `CStdioFile` 개체입니다. `CMemFile` 클래스는이 오류 코드를 처리 하지 않습니다.  
+>  The variable `lOsError` applies only to `CFile` and `CStdioFile` objects. The `CMemFile` class does not handle this error code.  
   
-##  <a name="errnotoexception"></a>CFileException::ErrnoToException  
- 에 지정 된 런타임 라이브러리 오류 값으로 변환 된 `CFileException` 오류 값을 열거 합니다.  
+##  <a name="errnotoexception"></a>  CFileException::ErrnoToException  
+ Converts a given run-time library error value to a `CFileException` enumerated error value.  
   
 ```  
 static int PASCAL ErrnoToException(int nErrno);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nErrno`  
- ERRNO 런타임 포함 파일에 정의 된 정수 오류 코드입니다.&8;.  
+ An integer error code as defined in the run-time include file ERRNO.H.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 런타임 라이브러리 오류 값에 해당 하는 열거형된 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Enumerated value that corresponds to a given run-time library error value.  
   
-### <a name="remarks"></a>주의  
- 참조 [CFileException::m_cause](#m_cause) 가능한 목록에 대 한 열거 값입니다.  
+### <a name="remarks"></a>Remarks  
+ See [CFileException::m_cause](#m_cause) for a list of the possible enumerated values.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles #&26;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#26](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]  
   
-##  <a name="geterrormessage"></a>CFileException::GetErrorMessage  
- 예외를 설명 하는 텍스트를 검색 합니다.  
+##  <a name="geterrormessage"></a>  CFileException::GetErrorMessage  
+ Retrieves text that describes an exception.  
   
 ```  
 virtual BOOL GetErrorMessage(
@@ -158,148 +164,148 @@ virtual BOOL GetErrorMessage(
     PUINT pnHelpContext = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in, out] `lpszError`  
- 오류 메시지를 수신 하는 버퍼에 대 한 포인터입니다.  
+ Pointer to a buffer that receives an error message.  
   
  [in] `nMaxError`  
- 지정 된 버퍼에 저장할 수는 문자의 최대 수입니다. 여기에 null 종결 문자 포함 됩니다.  
+ The maximum number of characters the specified buffer can hold. This includes the terminating null character.  
   
  [in, out] `pnHelpContext`  
- 도움말 컨텍스트 ID를 수신 하는 부호 없는 정수에 대 한 포인터 경우 `NULL`, ID가 없습니다. 반환 됩니다.  
+ Pointer to an unsigned integer that receives the help context ID. If `NULL`, no ID is returned.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 지정 된 버퍼가 너무 작아서 오류 메시지가 잘립니다.  
+### <a name="remarks"></a>Remarks  
+ If the specified buffer is too small, the error message is truncated.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 `CFileException::GetErrorMessage`합니다.  
+### <a name="example"></a>Example  
+ The following example uses `CFileException::GetErrorMessage`.  
   
- [!code-cpp[NVC_MFCExceptions #&22;](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#22](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]  
   
-##  <a name="m_cause"></a>CFileException::m_cause  
- `CFileException` 열거형 형식으로 정의되는 값을 포함합니다.  
+##  <a name="m_cause"></a>  CFileException::m_cause  
+ Contains values defined by a `CFileException` enumerated type.  
   
 ```  
 int m_cause;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 데이터 멤버는 `int` 형식의 공용 변수입니다. 아래에 열거자와 해당 의미가 나와 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This data member is a public variable of type `int`. The enumerators and their meanings are as follows:  
   
-- `CFileException::none`0: 오류가 발생 하지 않았습니다.  
+- `CFileException::none` 0: No error occurred.  
   
-- `CFileException::genericException`1: 지정 되지 않은 오류가 발생 했습니다.  
+- `CFileException::genericException` 1: An unspecified error occurred.  
   
-- `CFileException::fileNotFound`2: 파일을 찾을 수 없습니다.  
+- `CFileException::fileNotFound` 2: The file could not be located.  
   
-- `CFileException::badPath`3: 전체 또는 경로의 일부가 올바르지 않습니다.  
+- `CFileException::badPath` 3: All or part of the path is invalid.  
   
-- `CFileException::tooManyOpenFiles`4: 열려 있는 파일의 허용 된 수를 초과 했습니다.  
+- `CFileException::tooManyOpenFiles` 4: The permitted number of open files was exceeded.  
   
-- `CFileException::accessDenied`5: 파일에 액세스할 수 없습니다.  
+- `CFileException::accessDenied` 5: The file could not be accessed.  
   
-- `CFileException::invalidFile`6: 잘못 된 파일 핸들을 사용 하려고 했습니다.  
+- `CFileException::invalidFile` 6: There was an attempt to use an invalid file handle.  
   
-- `CFileException::removeCurrentDir`7: 현재 작업 디렉터리를 제거할 수 없습니다.  
+- `CFileException::removeCurrentDir` 7: The current working directory cannot be removed.  
   
-- `CFileException::directoryFull`8: 디렉터리 항목이 더 이상 있습니다.  
+- `CFileException::directoryFull` 8: There are no more directory entries.  
   
-- `CFileException::badSeek`9: 파일 포인터를 설정 하는 동안 오류가 발생 했습니다.  
+- `CFileException::badSeek` 9: There was an error trying to set the file pointer.  
   
-- `CFileException::hardIO`10: 하드웨어 오류가 발생 했습니다.  
+- `CFileException::hardIO` 10: There was a hardware error.  
   
-- `CFileException::sharingViolation`11: 공유 합니다. EXE가 로드 되지 또는 공유 영역이 잠겼습니다.  
+- `CFileException::sharingViolation` 11: SHARE.EXE was not loaded, or a shared region was locked.  
   
-- `CFileException::lockViolation`12: 이미 잠겨 있는 영역을 잠그려고 시도 했습니다.  
+- `CFileException::lockViolation` 12: There was an attempt to lock a region that was already locked.  
   
-- `CFileException::diskFull`14: 디스크가 꽉 차지 합니다.  
+- `CFileException::diskFull` 14: The disk is full.  
   
-- `CFileException::endOfFile`15: 파일의 끝에 도달 했습니다.  
-  
-    > [!NOTE]
-    >  이러한 `CFileException` 원인 열거자는 `CArchiveException` 원인 열거자와는 다릅니다.  
+- `CFileException::endOfFile` 15: The end of file was reached.  
   
     > [!NOTE]
-    > `CArchiveException::generic`은 사용되지 않습니다. 대신 `genericException`를 사용하십시오. 응용 프로그램에서 `generic`을 사용하며 /clr을 사용하여 빌드한 경우 발생하는 구문 오류는 해독하기가 쉽지 않습니다.  
+    >  These `CFileException` cause enumerators are distinct from the `CArchiveException` cause enumerators.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles #&30;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]  
+    > [!NOTE]
+    > `CArchiveException::generic` is deprecated. Use `genericException` instead. If `generic` is used in an application and built with /clr, the resulting syntax errors are not easy to decipher.  
   
-##  <a name="m_loserror"></a>CFileException::m_lOsError  
- 이 예외에 대 한 운영 체제 오류 코드를 포함합니다.  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#30](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]  
+  
+##  <a name="m_loserror"></a>  CFileException::m_lOsError  
+ Contains the operating-system error code for this exception.  
   
 ```  
 LONG m_lOsError;  
 ```  
   
-### <a name="remarks"></a>주의  
- 오류 코드 목록에 대 한 운영 체제 기술 설명서를 참조 하십시오. 이 데이터 멤버는 형식의 공용 변수 **긴**합니다.  
+### <a name="remarks"></a>Remarks  
+ See your operating-system technical manual for a listing of error codes. This data member is a public variable of type **LONG**.  
   
-##  <a name="m_strfilename"></a>CFileException::m_strFileName  
- 이 예외 상태에 대 한 파일의 이름을 포함합니다.  
+##  <a name="m_strfilename"></a>  CFileException::m_strFileName  
+ Contains the name of the file for this exception condition.  
   
 ```  
 CString m_strFileName;  
 ```  
   
-##  <a name="oserrortoexception"></a>CFileException::OsErrorToException  
- 에 해당 하는 열거자를 반환 된 특정 `lOsError` 값입니다. 오류 코드를 알 수 없는 경우 함수는 반환 **CFileException::generic**합니다.  
+##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException  
+ Returns an enumerator that corresponds to a given `lOsError` value. If the error code is unknown, then the function returns **CFileException::generic**.  
   
 ```  
 static int PASCAL OsErrorToException(LONG lOsError);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lOsError`  
- 운영 체제 시스템-관련 오류 코드입니다.  
+ An operating-system-specific error code.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 운영 체제 오류 값에 해당 하는 열거형된 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Enumerated value that corresponds to a given operating-system error value.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles #&27;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
-##  <a name="throwerrno"></a>CFileException::ThrowErrno  
- 생성 한 `CFileException` 개체에 해당 하는 지정 된 `nErrno` 값, 예외를 throw 합니다.  
+##  <a name="throwerrno"></a>  CFileException::ThrowErrno  
+ Constructs a `CFileException` object corresponding to a given `nErrno` value, then throws the exception.  
   
 ```  
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nErrno`  
- ERRNO 런타임 포함 파일에 정의 된 정수 오류 코드입니다.&8;.  
+ An integer error code as defined in the run-time include file ERRNO.H.  
   
  `lpszFileName`  
- 파일의 이름을 포함 하는 문자열에 대 한 포인터를 발생 시킨 예외를 사용할 수 있는 경우.  
+ A pointer to the string containing the name of the file that caused the exception, if available.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles #&28;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
-##  <a name="throwoserror"></a>CFileException::ThrowOsError  
- Throw는 `CFileException` 에 해당 하는 지정 된 `lOsError` 값입니다. 오류 코드를 알 수 없는 경우 다음으로 코딩 된 예외를 throw 하는 함수 **CFileException::generic**합니다.  
+##  <a name="throwoserror"></a>  CFileException::ThrowOsError  
+ Throws a `CFileException` corresponding to a given `lOsError` value. If the error code is unknown, then the function throws an exception coded as **CFileException::generic**.  
   
 ```  
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lOsError`  
- 운영 체제 시스템-관련 오류 코드입니다.  
+ An operating-system-specific error code.  
   
  `lpszFileName`  
- 파일의 이름을 포함 하는 문자열에 대 한 포인터를 발생 시킨 예외를 사용할 수 있는 경우.  
+ A pointer to the string containing the name of the file that caused the exception, if available.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCFiles #&29;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [CException 클래스](../../mfc/reference/cexception-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [예외 처리](../../mfc/reference/exception-processing.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](../../mfc/reference/cexception-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Exception Processing](../../mfc/reference/exception-processing.md)
 
 
 

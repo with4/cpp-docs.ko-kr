@@ -1,5 +1,5 @@
 ---
-title: "allocator_base 클래스 | Microsoft 문서"
+title: allocator_base Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,12 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- allocator_base
 - allocators/stdext::allocator_base
-- stdext::allocator_base
-- stdext::allocators::allocator_base
 - allocators/stdext::allocators::allocator_base
-- allocators::allocator_base
 - allocators/stdext::allocator_base::const_pointer
 - allocators/stdext::allocator_base::const_reference
 - allocators/stdext::allocator_base::difference_type
@@ -33,7 +29,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- allocator_base class
+- stdext::allocator_base [C++]
+- stdext::allocators [C++], allocator_base
+- stdext::allocator_base [C++], const_pointer
+- stdext::allocator_base [C++], const_reference
+- stdext::allocator_base [C++], difference_type
+- stdext::allocator_base [C++], pointer
+- stdext::allocator_base [C++], reference
+- stdext::allocator_base [C++], size_type
+- stdext::allocator_base [C++], value_type
+- stdext::allocator_base [C++], _Charalloc
+- stdext::allocator_base [C++], _Chardealloc
+- stdext::allocator_base [C++], address
+- stdext::allocator_base [C++], allocate
+- stdext::allocator_base [C++], construct
+- stdext::allocator_base [C++], deallocate
+- stdext::allocator_base [C++], destroy
+- stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 caps.latest.revision: 17
 author: corob-msft
@@ -53,104 +65,104 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 11e6300d0d625f419e47d5f60f1db175419e3420
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 55e3a008319b851260502c8ae515132b687ff0d0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatorbase-class"></a>allocator_base 클래스
-동기화 필터에서 사용자 정의 할당자를 만드는 데 필요한 기본 클래스 및 일반 함수를 정의합니다.  
+# <a name="allocatorbase-class"></a>allocator_base Class
+Defines the base class and common functions needed to create a user-defined allocator from a synchronization filter.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type, class Sync>  
 class allocator_base
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|할당자에 의해 할당된 요소 형식입니다.|  
-|`Sync`|할당자에 대한 동기화 정책, 즉 [sync_none 클래스](../standard-library/sync-none-class.md), [sync_per_container 클래스](../standard-library/sync-per-container-class.md), [sync_per_thread 클래스](../standard-library/sync-per-thread-class.md) 또는 [sync_shared 클래스](../standard-library/sync-shared-class.md)입니다.|  
+|`Type`|The type of elements allocated by the allocator.|  
+|`Sync`|The synchronization policy for the allocator, which is [sync_none Class](../standard-library/sync-none-class.md), [sync_per_container Class](../standard-library/sync-per-container-class.md), [sync_per_thread Class](../standard-library/sync-per-thread-class.md), or [sync_shared Class](../standard-library/sync-shared-class.md).|  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocator_base](#allocator_base)|`allocator_base` 형식의 개체를 생성합니다.|  
+|[allocator_base](#allocator_base)|Constructs an object of type `allocator_base`.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[const_pointer](#const_pointer)|할당자에 의해 관리되는 개체 형식에 대한 상수 포인터를 제공하는 형식입니다.|  
-|[const_reference](#const_reference)|할당자에 의해 관리되는 개체 형식에 대한 상수 참조를 제공하는 형식입니다.|  
-|[difference_type](#difference_type)|할당자에 의해 관리되는 개체 형식에 대한 포인터 값의 차이를 나타낼 수 있는 부호 있는 정수 형식입니다.|  
-|[pointer](#pointer)|할당자에 의해 관리되는 개체 형식에 대한 포인터를 제공하는 형식입니다.|  
-|[reference](#reference)|할당자에 의해 관리되는 개체 형식에 대한 참조를 제공하는 형식입니다.|  
-|[size_type](#size_type)|템플릿 클래스 `allocator_base`의 개체가 할당할 수 있는 시퀀스의 길이를 나타내는 부호 없는 정수 형식입니다.|  
-|[value_type](#value_type)|할당자에 의해 관리되는 형식입니다.|  
+|[const_pointer](#const_pointer)|A type that provides a constant pointer to the type of object managed by the allocator.|  
+|[const_reference](#const_reference)|A type that provides a constant reference to type of object managed by the allocator.|  
+|[difference_type](#difference_type)|A signed integral type that can represent the difference between values of pointers to the type of object managed by the allocator.|  
+|[pointer](#pointer)|A type that provides a pointer to the type of object managed by the allocator.|  
+|[reference](#reference)|A type that provides a reference to the type of object managed by the allocator.|  
+|[size_type](#size_type)|An unsigned integral type that can represent the length of any sequence that an object of template class `allocator_base` can allocate.|  
+|[value_type](#value_type)|A type that is managed by the allocator.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[_Charalloc](#charalloc)|`char` 형식의 배열에 대한 저장소를 할당합니다.|  
-|[_Chardealloc](#chardealloc)|`char` 형식의 요소를 포함하는 배열에 대한 저장소를 해제합니다.|  
-|[address](#address)|값이 지정된 개체의 주소를 찾습니다.|  
-|[allocate](#allocate)|적어도 지정된 개수의 요소를 저장할 수 있을 만큼 큰 메모리 블록을 할당합니다.|  
-|[construct](#construct)|지정된 값으로 초기화된 특정 형식의 개체를 지정된 주소에 생성합니다.|  
-|[deallocate](#deallocate)|지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.|  
-|[destroy](#destroy)|개체가 저장된 메모리 할당을 취소하지 않고 개체 소멸자를 호출합니다.|  
-|[max_size](#max_size)|사용 가능한 메모리가 모두 사용되기 전에 allocator 클래스의 개체가 할당할 수 있는 `Type` 형식의 요소 수를 반환합니다.|  
+|[_Charalloc](#charalloc)|Allocates storage for an array of type `char`.|  
+|[_Chardealloc](#chardealloc)|Frees storage for the array containing elements of type `char`.|  
+|[address](#address)|Finds the address of an object whose value is specified.|  
+|[allocate](#allocate)|Allocates a block of memory large enough to store at least some specified number of elements.|  
+|[construct](#construct)|Constructs a specific type of object at a specified address that is initialized with a specified value.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[destroy](#destroy)|Calls an objects destructor without deallocating the memory where the object was stored.|  
+|[max_size](#max_size)|Returns the number of elements of type `Type` that could be allocated by an object of class allocator before the free memory is used up.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **네임스페이스:** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="charalloc"></a>  allocator_base::_Charalloc  
- `char` 형식의 배열에 대한 저장소를 할당합니다.  
+ Allocates storage for an array of type `char`.  
   
 ```
 char *_Charalloc(size_type count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|할당할 배열의 요소 수입니다.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>반환 값  
- 할당된 개체에 대한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 rebind를 컴파일할 수 없는 컴파일러로 컴파일할 때 컨테이너에 의해 사용됩니다. 동기화 필터의 `allocate` 함수에 대한 호출 결과를 반환하여 사용자 정의 할당자에 대해 `_Charalloc`를 구현합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is used by containers when compiled with a compiler that cannot compile rebind. It implements `_Charalloc` for the user-defined allocator by returning the result of a call to the `allocate` function of the synchronization filter.  
   
 ##  <a name="chardealloc"></a>  allocator_base::_Chardealloc  
- `char` 형식의 요소를 포함하는 배열에 대한 저장소를 해제합니다.  
+ Frees storage for the array containing elements of type `char`.  
   
 ```
 void _Chardealloc(void* ptr, size_type count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|  
-|`count`|저장소에서 할당을 취소할 개체의 수입니다.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 rebind를 컴파일할 수 없는 컴파일러로 컴파일할 때 컨테이너에 의해 사용됩니다. 동기화 필터의 `deallocate` 함수를 호출하여 사용자 정의 할당자에 대해 `_Chardealloc`를 구현합니다. `*this`와 같은지를 비교하여 같은 크기와 형식의 배열 개체를 할당하는 할당자 개체에 대해 `_Charalloc`를 호출함으로써 포인터 ptr이 이미 반환된 상태여야 합니다. `_Chardealloc`은 예외를 throw할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is used by containers when compiled with a compiler that cannot compile rebind. It implements `_Chardealloc` for the user-defined allocator by calling the `deallocate` function of the synchronization filter. The pointer ptr must have been earlier returned by a call to `_Charalloc` for an allocator object that compares equal to `*this`, allocating an array object of the same size and type. `_Chardealloc` never throws an exception.  
   
 ##  <a name="address"></a>  allocator_base::address  
- 값이 지정된 개체의 주소를 찾습니다.  
+ Finds the address of an object whose value is specified.  
   
 ```
 pointer address(reference val);
@@ -158,18 +170,18 @@ pointer address(reference val);
 const_pointer address(const_reference val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `val`  
- 주소를 검색하는 개체의 const 또는 nonconst 값입니다.  
+ The const or nonconst value of the object whose address is being searched for.  
   
-### <a name="return-value"></a>반환 값  
- 각각 const 또는 nonconst 값으로 발견된 개체에 대한 const 또는 nonconst 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A const or nonconst pointer to the object found of, respectively, const or nonconst value.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `&val`을 반환함으로써 사용자 정의 할당자에 대해 구현됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by returning `&val`.  
   
 ##  <a name="allocate"></a>  allocator_base::allocate  
- 적어도 지정된 개수의 요소를 저장할 수 있을 만큼 큰 메모리 블록을 할당합니다.  
+ Allocates a block of memory large enough to store at least some specified number of elements.  
   
 ```
 template <class Other>  
@@ -178,21 +190,21 @@ pointer allocate(size_type _Nx, const Other* _Hint = 0);
 pointer allocate(size_type _Nx);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|할당할 배열의 요소 수입니다.|  
-|`_Hint`|이 매개 변수는 무시됩니다.|  
+|`_Nx`|The number of elements in the array to be allocated.|  
+|`_Hint`|This parameter is ignored.|  
   
-### <a name="return-value"></a>반환 값  
- 할당된 개체에 대한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>설명  
- `_Nx == 1`인 경우 멤버 함수는 Type `*` 형식의 동기화 필터의 `allocate` 함수에 대한 호출 결과를 반환하여 사용자 정의 할당자에 대한 메모리 할당을 구현합니다. 아닌 경우 호출 결과를 `operator new(_Nx * sizeof(Type))`으로 반환하여 Type `*` 형식으로 캐스팅합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function implements memory allocation for the user-defined allocator by returning the result of a call to the `allocate` function of the synchronization filter of type Type `*` if `_Nx == 1`, otherwise by returning the result of a call to `operator new(_Nx * sizeof(Type))` cast to type Type `*`.  
   
 ##  <a name="allocator_base"></a>  allocator_base::allocator_base  
- `allocator_base` 형식의 개체를 생성합니다.  
+ Constructs an object of type `allocator_base`.  
   
 ```
 allocator_base();
@@ -201,128 +213,128 @@ template <class Other>
 allocator_base(const allocator_base<Other, Sync>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|복사할 할당자 개체입니다.|  
+|`right`|The allocator object to be copied.|  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 [allocator_base](../standard-library/allocator-base-class.md) 인스턴스를 생성합니다. 두 번째 생성자는 임의의 `allocator_base<Type, _Sync>` 인스턴스 `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`에 대해 `allocator_base` 인스턴스를 생성합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an [allocator_base](../standard-library/allocator-base-class.md) instance. The second constructor constructs an `allocator_base` instance such that for any `allocator_base<Type, _Sync>` instance `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.  
   
 ##  <a name="const_pointer"></a>  allocator_base::const_pointer  
- 할당자에 의해 관리되는 개체 형식에 대한 상수 포인터를 제공하는 형식입니다.  
+ A type that provides a constant pointer to the type of object managed by the allocator.  
   
 ```
 typedef const Type *const_pointer;
 ```  
   
 ##  <a name="const_reference"></a>  allocator_base::const_reference  
- 할당자에 의해 관리되는 개체 형식에 대한 상수 참조를 제공하는 형식입니다.  
+ A type that provides a constant reference to type of object managed by the allocator.  
   
 ```
 typedef const Type& const_reference;
 ```  
   
 ##  <a name="construct"></a>  allocator_base::construct  
- 지정된 값으로 초기화된 특정 형식의 개체를 지정된 주소에 생성합니다.  
+ Constructs a specific type of object at a specified address that is initialized with a specified value.  
   
 ```
 void construct(pointer ptr, const Type& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|개체를 생성할 위치에 대한 포인터입니다.|  
-|`val`|생성되는 개체를 초기화할 값입니다.|  
+|`ptr`|A pointer to the location where the object is to be constructed.|  
+|`val`|The value with which the object being constructed is to be initialized.|  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `new((void*)ptr Type(val)`을 호출함으로써 사용자 정의 할당자에 대해 구현됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by calling `new((void*)ptr Type(val)`.  
   
 ##  <a name="deallocate"></a>  allocator_base::deallocate  
- 지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(pointer ptr, size_type _Nx);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.|  
-|`_Nx`|저장소에서 할당을 취소할 개체의 수입니다.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`_Nx`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `_Nx == 1`인 경우 동기화 필터 `Sync`에서 `deallocate(ptr)`를 호출하고, 아닌 경우 `operator delete(_Nx * ptr)`를 호출함으로써 사용자 정의 할당자에 대해 구현됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by calling `deallocate(ptr)` on the synchronization filter `Sync` if `_Nx == 1`, otherwise by calling `operator delete(_Nx * ptr)`.  
   
 ##  <a name="destroy"></a>  allocator_base::destroy  
- 개체가 저장된 메모리 할당을 취소하지 않고 개체 소멸자를 호출합니다.  
+ Calls an objects destructor without deallocating the memory where the object was stored.  
   
 ```
 void destroy(pointer ptr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|소멸될 개체의 주소를 지정하는 포인터입니다.|  
+|`ptr`|A pointer designating the address of the object to be destroyed.|  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `ptr->~Type()`을 호출함으로써 사용자 정의 할당자에 대해 구현됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by calling `ptr->~Type()`.  
   
 ##  <a name="difference_type"></a>  allocator_base::difference_type  
- 할당자에 의해 관리되는 개체 형식에 대한 포인터 값의 차이를 나타낼 수 있는 부호 있는 정수 형식입니다.  
+ A signed integral type that can represent the difference between values of pointers to the type of object managed by the allocator.  
   
 ```
 typedef std::ptrdiff_t difference_type;
 ```  
   
 ##  <a name="max_size"></a>  allocator_base::max_size  
- 사용 가능한 메모리가 모두 사용되기 전에 allocator 클래스의 개체가 할당할 수 있는 `Type` 형식의 요소 수를 반환합니다.  
+ Returns the number of elements of type `Type` that could be allocated by an object of class allocator before the free memory is used up.  
   
 ```
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 할당할 수 있는 요소의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of elements that could be allocated.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `0 < (size_t)-1 / sizeof(Type)`인 경우 `(size_t)-1 / sizeof(Type)`, 아닌 경우 `1`을 반환함으로써 사용자 정의 할당자에 대해 구현됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by returning `(size_t)-1 / sizeof(Type)` if `0 < (size_t)-1 / sizeof(Type)`, otherwise `1`.  
   
 ##  <a name="pointer"></a>  allocator_base::pointer  
- 할당자에 의해 관리되는 개체 형식에 대한 포인터를 제공하는 형식입니다.  
+ A type that provides a pointer to the type of object managed by the allocator.  
   
 ```
 typedef Type *pointer;
 ```  
   
 ##  <a name="reference"></a>  allocator_base::reference  
- 할당자에 의해 관리되는 개체 형식에 대한 참조를 제공하는 형식입니다.  
+ A type that provides a reference to the type of object managed by the allocator.  
   
 ```
 typedef Type& reference;
 ```  
   
 ##  <a name="size_type"></a>  allocator_base::size_type  
- 템플릿 클래스 `allocator_base` 의 개체가 할당할 수 있는 시퀀스의 길이를 나타내는 부호 없는 정수 형식입니다.  
+ An unsigned integral type that can represent the length of any sequence that an object of template class `allocator_base` can allocate.  
   
 ```
 typedef std::size_t size_type;
 ```  
   
 ##  <a name="value_type"></a>  allocator_base::value_type  
- 할당자에 의해 관리되는 형식입니다.  
+ A type that is managed by the allocator.  
   
 ```
 typedef Type value_type;
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

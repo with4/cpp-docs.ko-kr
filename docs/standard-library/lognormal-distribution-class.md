@@ -1,5 +1,5 @@
 ---
-title: "lognormal_distribution 클래스 | Microsoft 문서"
+title: lognormal_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- lognormal_distribution
 - random/std::lognormal_distribution
 - random/std::lognormal_distribution::reset
 - random/std::lognormal_distribution::m
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- lognormal_distribution class
+- std::lognormal_distribution [C++]
+- std::lognormal_distribution [C++], reset
+- std::lognormal_distribution [C++], m
+- std::lognormal_distribution [C++], s
+- std::lognormal_distribution [C++], param
+- std::lognormal_distribution [C++], min
+- std::lognormal_distribution [C++], max
+- std::lognormal_distribution [C++], param_type
+- std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
 caps.latest.revision: 15
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3c5d969e7250987471f88579d30e36d7838a9ed1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 145806b7b8994283b21ebcf2a3b0033eece9a1cc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lognormaldistribution-class"></a>lognormal_distribution 클래스
-대수 정규 분포를 생성합니다.  
+# <a name="lognormaldistribution-class"></a>lognormal_distribution Class
+Generates a log normal distribution.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```  
 template <class RealType = double>  
 class lognormal_distribution  
@@ -84,33 +91,33 @@ public:
    result_type max() const;
    };  
 ```  
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
-대수 정규 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified integral type, or type `double` if none is provided, distributed according to the Log Normal Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
 |`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|  
   
-속성 함수 `m()` 및 `s()`는 각각 저장된 분포 매개 변수인 *m* 및 *s*에 대한 값을 반환합니다.  
+The property functions `m()` and `s()` return the values for the stored distribution parameters *m* and *s*, respectively.  
   
-속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-로그 정규 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [LogNormal Distribution](http://go.microsoft.com/fwlink/LinkId=400917)(로그 정규 분포)을 참조하세요.  
+For detailed information about the LogNormal distribution, see the Wolfram MathWorld article [LogNormal Distribution](http://go.microsoft.com/fwlink/LinkId=400917).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -194,38 +201,38 @@ Distribution for 10 samples:
     10: 5.4406507912  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
- 분포를 생성합니다.  
+ Constructs the distribution.  
   
 ```  
 explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);
 explicit lognormal_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *m*  
-`m` 분포 매개 변수입니다.  
+The `m` distribution parameter.  
   
 *s*  
-`s` 분포 매개 변수입니다.  
+The `s` distribution parameter.  
   
 *parm*  
-분포를 생성하는 데 사용되는 `param_type` 구조체입니다.  
+The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0.0 < s`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < s`  
   
-첫 번째 생성자는 저장된 `m` 값이 *m* 값을 보유하고 저장된 `s` 값이 *s* 값을 보유하고 있는 개체를 생성합니다.  
+The first constructor constructs an object whose stored `m` value holds the value *m* and whose stored `s` value holds the value *s*.  
   
-두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  lognormal_distribution::param_type  
-분포의 매개 변수를 저장합니다.  
+Stores the parameters of the distribution.  
   
 ```  
 struct param_type {  
@@ -238,22 +245,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
 };  
 ```    
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *m*  
-`m` 분포 매개 변수입니다.  
+The `m` distribution parameter.  
   
 *s*  
-`s` 분포 매개 변수입니다.  
+The `s` distribution parameter.  
   
 *right*  
-비교에 사용되는 `param_type` 구조체입니다.  
+The `param_type` structure used to compare.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0.0 < s`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < s`  
   
-이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "WINDOWPOS 구조&1; | Microsoft 문서"
+title: WINDOWPOS Structure1 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WINDOWPOS structure
+- WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 522b15d630c3a5a3593010250db0491601493c69
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b67d22414408e68ebcd60a79a19e8b372d761cd9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="windowpos-structure1"></a>WINDOWPOS 구조&1;
-`WINDOWPOS` 구조에는 창 위치와 크기에 대 한 정보가 들어 있습니다.  
+# <a name="windowpos-structure1"></a>WINDOWPOS Structure1
+The `WINDOWPOS` structure contains information about the size and position of a window.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagWINDOWPOS { /* wp */  
@@ -57,59 +57,59 @@ typedef struct tagWINDOWPOS { /* wp */
 } WINDOWPOS;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  *hwnd*  
- 창을 식별합니다.  
+ Identifies the window.  
   
  *hwndInsertAfter*  
- 뒤에이 창을 배치 되는 창을 식별 합니다.  
+ Identifies the window behind which this window is placed.  
   
  *x*  
- 창의 왼쪽된 가장자리의 위치를 지정합니다.  
+ Specifies the position of the left edge of the window.  
   
  *y*  
- 창의 오른쪽 가장자리의 위치를 지정합니다.  
+ Specifies the position of the right edge of the window.  
   
  `cx`  
- 창 너비를 픽셀 단위로 지정 합니다.  
+ Specifies the window width, in pixels.  
   
  `cy`  
- 창의 높이 픽셀 단위로 지정 합니다.  
+ Specifies the window height, in pixels.  
   
  `flags`  
- 창 위치 지정 옵션을 지정합니다. 이 멤버는 다음 값 중 하나일 수 있습니다.  
+ Specifies window-positioning options. This member can be one of the following values:  
   
-- **SWP_DRAWFRAME** 창 주위 프레임 (창에 대 한 클래스 설명을에 정의 됨)를 그립니다. 받습니다는 `WM_NCCALCSIZE` 메시지입니다.  
+- **SWP_DRAWFRAME** Draws a frame (defined in the class description for the window) around the window. The window receives a `WM_NCCALCSIZE` message.  
   
-- **SWP_FRAMECHANGED** 보냅니다는 `WM_NCCALCSIZE` 창의 크기를 변경 되는 경우에 창에 메시지입니다. 이 플래그를 지정 하지 않으면 `WM_NCCALCSIZE` 창의 크기가 변경 되는 경우에 전송 됩니다.  
+- **SWP_FRAMECHANGED** Sends a `WM_NCCALCSIZE` message to the window, even if the window's size is not being changed. If this flag is not specified, `WM_NCCALCSIZE` is sent only when the window's size is being changed.  
   
-- **SWP_HIDEWINDOW** 창을 숨깁니다.  
+- **SWP_HIDEWINDOW** Hides the window.  
   
-- `SWP_NOACTIVATE`창을 활성화 하지 않습니다.  
+- `SWP_NOACTIVATE` Does not activate the window.  
   
-- **SWP_NOCOPYBITS** 클라이언트 영역의 전체 내용을 삭제 합니다. 이 플래그를 지정 하지 않으면 클라이언트 영역의 유효한 내용은 저장 되며 창이 크기 또는 위치를 변경한 후 클라이언트 영역에 다시 복사 됩니다.  
+- **SWP_NOCOPYBITS** Discards the entire contents of the client area. If this flag is not specified, the valid contents of the client area are saved and copied back into the client area after the window is sized or repositioned.  
   
-- `SWP_NOMOVE`현재 위치를 유지 (무시는 **x** 및 **y** 멤버).  
+- `SWP_NOMOVE` Retains current position (ignores the **x** and **y** members).  
   
-- **SWP_NOOWNERZORDER** Z 순서에서 소유자 창의 위치를 변경 되지 않습니다.  
+- **SWP_NOOWNERZORDER** Does not change the owner window's position in the Z-order.  
   
-- `SWP_NOSIZE`현재 크기를 유지 (무시는 **cx** 및 **cy** 멤버).  
+- `SWP_NOSIZE` Retains current size (ignores the **cx** and **cy** members).  
   
-- **SWP_NOREDRAW** 변경 내용을 다시 그려지지 않습니다.  
+- **SWP_NOREDRAW** Does not redraw changes.  
   
-- **SWP_NOREPOSITION** 동일 **SWP_NOOWNERZORDER**합니다.  
+- **SWP_NOREPOSITION** Same as **SWP_NOOWNERZORDER**.  
   
-- **SWP_NOSENDCHANGING** 창 받지 못하게에서 방지는 `WM_WINDOWPOSCHANGING` 메시지입니다.  
+- **SWP_NOSENDCHANGING** Prevents the window from receiving the `WM_WINDOWPOSCHANGING` message.  
   
-- `SWP_NOZORDER`현재 순서를 유지 하면서 (무시는 **hwndInsertAfter** 멤버).  
+- `SWP_NOZORDER` Retains current ordering (ignores the **hwndInsertAfter** member).  
   
-- **SWP_SHOWWINDOW** 창을 표시 합니다.  
+- **SWP_SHOWWINDOW** Displays the window.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)
 
 

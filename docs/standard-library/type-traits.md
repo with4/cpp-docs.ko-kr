@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bf9d18a5433f21c4f73d2c7da28a88b85767222e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
-형식 인수의 속성에 대한 정보를 제공하거나 변환된 형식을 생성하는 컴파일 시간 상수를 제공하는 템플릿을 정의합니다.  
+Defines templates that provide compile-time constants that give information about the properties of their type arguments or produce transformed types.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <type_traits>  
 ```  
   
-## <a name="remarks"></a>설명  
- `<type_traits>`의 클래스 및 템플릿은 컴파일 시간에 형식 유추, 분류 및 변환을 지원하고, 형식 관련 오류를 검색하고, 제네릭 코드 최적화를 지원하는 데 사용됩니다. 이러한 클래스와 템플릿에는 형식 속성을 설명하는 단항 형식 특성, 형식 간의 관계를 설명하는 이진 형식 특성, 그리고 형식 속성을 수정하는 변환 특성이 포함됩니다.  
+## <a name="remarks"></a>Remarks  
+ The classes and templates in `<type_traits>` are used to support type inference, classification, and transformation at compile time, to detect type-related errors, and to help you optimize your generic code. These classes and templates include unary type traits that describe a property of a type, binary type traits that describe a relationship between types, and transformation traits that modify a property of a type.  
   
- 형식 특성을 지원하려는 경우 `integral_constant` 도우미 클래스를 정의합니다. 이 클래스는 형식 조건자의 기본 클래스를 구성하는 템플릿 특수화 `true_type` 및 `false_type`을 포함합니다. *형식 조건자*는 형식 인수를 하나 이상 사용하는 템플릿입니다. 형식 조건자가 *true인 경우* 형식은 [true_type](../standard-library/type-traits-typedefs.md#true_type)에서 직접 또는 간접적으로 공개 파생됩니다. 형식 조건자가 *false인 경우* 형식은 [false_type](../standard-library/type-traits-typedefs.md#false_type)에서 직접 또는 간접적으로 공개 파생됩니다.  
+ To support type traits, a helper class, `integral_constant`, is defined. It has template specializations `true_type` and `false_type` that form the base classes for type predicates. A *type predicate* is a template that takes one or more type arguments. When a type predicate *holds true*, it is publicly derived, directly or indirectly, from [true_type](../standard-library/type-traits-typedefs.md#true_type). When a type predicate *holds false*, it is publicly derived, directly or indirectly, from [false_type](../standard-library/type-traits-typedefs.md#false_type).  
   
- *형식 한정자* 또는 *변환 특성*은 템플릿 인수를 하나 이상 사용하며 수정된 형식과 동일한 의미인 단일 구성원(`type`)를 포함하는 템플릿입니다.  
+ A *type modifier* or *transformation trait* is a template that takes one or more template arguments and has one member, `type`, which is a synonym for the modified type.  
   
-### <a name="alias-templates"></a>별칭 템플릿  
- 형식 특성을 간단하게 표현할 수 있도록 `typename some_trait<T>::type`용 [별칭 템플릿](../cpp/aliases-and-typedefs-cpp.md)이 제공됩니다. 여기서 "`some_trait`"는 템플릿 클래스 이름입니다. 예를 들어 [add_const](../standard-library/add-const-class.md)에는 다음과 같이 정의된 `add_const_t` 형식에 대한 별칭 템플릿이 있습니다.  
+### <a name="alias-templates"></a>Alias Templates  
+ To simplify type traits expressions, [alias templates](../cpp/aliases-and-typedefs-cpp.md) for `typename some_trait<T>::type` are provided, where " `some_trait`" is the template class name. For example, [add_const](../standard-library/add-const-class.md) has an alias template for its type, `add_const_t`, defined as:  
   
 ```cpp  
 template <class T>
@@ -74,159 +74,159 @@ using add_const_t = typename add_const<T>::type;
 |add_rvalue_reference_t|decay_t|remove_cv_t|underlying_type_t|  
 |add_volatile_t|enable_if_t|remove_extent_t||  
   
-### <a name="classes"></a>클래스  
- 도우미 클래스 및 형식 정의  
+### <a name="classes"></a>Classes  
+ Helper class and typedefs  
   
 |||  
 |-|-|  
-|[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|형식 및 값에서 정수 계열 상수를 만듭니다.|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type)|값이 true인 정수 상수를 보관합니다.|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type)|값이 false인 정수 상수를 보관합니다.|  
+|[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Makes an integral constant from a type and a value.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Holds integral constant with true value.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Holds integral constant with false value.|  
   
- 기본 형식 범주  
-  
-|||  
-|-|-|  
-|[is_void](../standard-library/is-void-class.md)|형식이 `void`인지 테스트합니다.|  
-|[is_null_pointer](../standard-library/is-null-pointer-class.md)|형식이 `std::nullptr_t`인지 테스트합니다.|  
-|[is_integral](../standard-library/is-integral-class.md)|형식이 정수인지 테스트합니다.|  
-|[is_floating_point](../standard-library/is-floating-point-class.md)|형식이 부동 소수점인지 테스트합니다.|  
-|[is_array](../standard-library/is-array-class.md)|형식이 배열형인지 테스트합니다.|  
-|[is_pointer](../standard-library/is-pointer-class.md)|형식이 포인터인지 테스트합니다.|  
-|[is_lvalue_reference](../standard-library/is-lvalue-reference-class.md)|형식이 lvalue 참조인지 여부를 테스트합니다.|  
-|[is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)|형식이 rvalue 참조인지 테스트합니다.|  
-|[is_member_object_pointer](../standard-library/is-member-object-pointer-class.md)|형식이 멤버 개체에 대한 포인터인지 테스트합니다.|  
-|[is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)|형식이 멤버 함수에 대한 포인터인지 테스트합니다.|  
-|[is_enum](../standard-library/is-enum-class.md)|형식이 열거형인지 테스트합니다.|  
-|[is_union](../standard-library/is-union-class.md)|형식이 공용 구조체인지 테스트합니다.|  
-|[is_class](../standard-library/is-class-class.md)|형식이 클래스인지 테스트합니다.|  
-|[is_function](../standard-library/is-function-class.md)|형식이 함수 형식인지 테스트합니다.|  
-  
- 복합 형식 범주  
+ Primary type categories  
   
 |||  
 |-|-|  
-|[is_reference](../standard-library/is-reference-class.md)|형식이 참조인지 테스트합니다.|  
-|[is_arithmetic](../standard-library/is-arithmetic-class.md)|형식이 산술형인지 테스트합니다.|  
-|[is_fundamental](../standard-library/is-fundamental-class.md)|형식이 `void` 또는 산술형인지 테스트합니다.|  
-|[is_object](../standard-library/is-object-class.md)|형식이 개체 형식인지 테스트합니다.|  
-|[is_scalar](../standard-library/is-scalar-class.md)|형식이 스칼라 형식인지 테스트합니다.|  
-|[is_compound](../standard-library/is-compound-class.md)|형식이 스칼라가 아닌지 테스트합니다.|  
-|[is_member_pointer](../standard-library/is-member-pointer-class.md)|형식이 멤버에 대한 포인터인지 테스트합니다.|  
+|[is_void](../standard-library/is-void-class.md)|Tests whether the type is `void`.|  
+|[is_null_pointer](../standard-library/is-null-pointer-class.md)|Tests whether the type is `std::nullptr_t`.|  
+|[is_integral](../standard-library/is-integral-class.md)|Tests whether the type is integral.|  
+|[is_floating_point](../standard-library/is-floating-point-class.md)|Tests whether the type is floating-point.|  
+|[is_array](../standard-library/is-array-class.md)|Tests whether the type is an array.|  
+|[is_pointer](../standard-library/is-pointer-class.md)|Tests whether the type is a pointer.|  
+|[is_lvalue_reference](../standard-library/is-lvalue-reference-class.md)|Tests if type is an lvalue reference.|  
+|[is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)|Tests if type is an rvalue reference.|  
+|[is_member_object_pointer](../standard-library/is-member-object-pointer-class.md)|Tests whether the type is a pointer to a member object.|  
+|[is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)|Tests whether the type is a pointer to a member function.|  
+|[is_enum](../standard-library/is-enum-class.md)|Tests whether the type is an enumeration.|  
+|[is_union](../standard-library/is-union-class.md)|Tests whether the type is a union.|  
+|[is_class](../standard-library/is-class-class.md)|Tests whether the type is a class.|  
+|[is_function](../standard-library/is-function-class.md)|Tests whether the type is a function type.|  
   
- 형식 속성  
-  
-|||  
-|-|-|  
-|[is_const](../standard-library/is-const-class.md)|형식이 `const`인지 테스트합니다.|  
-|[is_volatile](../standard-library/is-volatile-class.md)|형식이 `volatile`인지 테스트합니다.|  
-|[is_trivial](../standard-library/is-trivial-class.md)|형식이 trivial인지 테스트합니다.|  
-|[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|형식을 일반적으로 복사할 수 있는지 테스트합니다.|  
-|[is_standard_layout](../standard-library/is-standard-layout-class.md)|형식이 표준 레이아웃 형식인지 테스트합니다.|  
-|[is_pod](../standard-library/is-pod-class.md)|형식이 POD인지 테스트합니다.|  
-|[is_literal_type](../standard-library/is-literal-type-class.md)|형식이 `constexpr` 변수이거나 `constexpr` 함수에서 사용할 수 있는지 테스트합니다.|  
-|[is_empty](../standard-library/is-empty-class.md)|형식이 빈 클래스인지 테스트합니다.|  
-|[is_polymorphic](../standard-library/is-polymorphic-class.md)|형식이 다형 클래스인지 테스트합니다.|  
-|[is_abstract](../standard-library/is-abstract-class.md)|형식이 추상 클래스인지 테스트합니다.|  
-|[is_final](../standard-library/is-final-class.md)|형식이 `final`로 표시된 클래스 종류인지 테스트합니다.|  
-|[is_signed](../standard-library/is-signed-class.md)|형식이 부호 있는 정수인지 테스트합니다.|  
-|[is_unsigned](../standard-library/is-unsigned-class.md)|형식이 부호가 없는 정수인지 테스트합니다.|  
-|[is_constructible](../standard-library/is-constructible-class.md)|형식이 지정된 인수 유형을 사용하여 생성 가능한지 테스트합니다.|  
-|[is_default_constructible](../standard-library/type-traits-functions.md#is_default_constructible)|형식에 기본 생성자가 있는지 테스트합니다.|  
-|[is_copy_constructible](../standard-library/type-traits-functions.md#is_copy_constructible)|형식에 복사 생성자가 있는지 테스트합니다.|  
-|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|형식에 이동 생성자가 있는지 테스트합니다.|  
-|[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|첫 번째 형식에 두 번째 형식의 값을 할당할 수 있는지 테스트합니다.|  
-|[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|형식에 해당 형식의 const 참조 값을 할당할 수 있는지 테스트합니다.|  
-|[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|형식에 해당 형식의 rvalue 참조를 할당할 수 있는지 테스트합니다.|  
-|[is_destructible](../standard-library/is-destructible-class.md)|형식이 소멸 가능한지 테스트합니다.|  
-|[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|지정된 형식을 사용하여 생성될 때 형식이 특수 작업을 사용하지 않는지 테스트합니다.|  
-|[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|기본 생성될 때 형식이 특수 작업을 사용하지 않는지 테스트합니다.|  
-|[is_trivially_copy_constructible](../standard-library/is-trivially-copy-constructible-class.md)|복사를 통해 생성될 때 형식이 특수 작업을 사용하지 않는지 테스트합니다.|  
-|[is_trivially_move_constructible](../standard-library/type-traits-functions.md#is_trivially_move_constructible)|이동을 통해 생성될 때 형식이 특수 작업을 사용하지 않는지 테스트합니다.|  
-|[is_trivially_assignable](../standard-library/is-trivially-assignable-class.md)|형식이 할당 가능하며 할당에서 특수 작업을 사용하지 않는지 테스트합니다.|  
-|[is_trivially_copy_assignable](../standard-library/type-traits-functions.md#is_trivially_copy_assignable)|형식이 복사 할당 가능하며 할당에서 특수 작업을 사용하지 않는지 테스트합니다.|  
-|[is_trivially_move_assignable](../standard-library/type-traits-functions.md#is_trivially_move_assignable)|형식이 이동 할당 가능하며 할당에서 특수 작업을 사용하지 않는지 테스트합니다.|  
-|[is_trivially_destructible](../standard-library/is-trivially-destructible-class.md)|형식이 소멸 가능하며 소멸자가 특수 작업을 사용하지 않는지 테스트합니다.|  
-|[is_nothrow_constructible](../standard-library/is-nothrow-constructible-class.md)|형식이 생성 가능하며 지정된 형식을 사용하여 생성할 때 throw되지 않는 것으로 확인되는지 테스트합니다.|  
-|[is_nothrow_default_constructible](../standard-library/is-nothrow-default-constructible-class.md)|형식이 기본 생성 가능하며 기본 생성 시에 throw되지 않는 것으로 확인되는지 테스트합니다.|  
-|[is_nothrow_copy_constructible](../standard-library/is-nothrow-copy-constructible-class.md)|형식이 복사 생성 가능하며 복사 생성자가 throw되지 않는 것으로 확인되는지 테스트합니다.|  
-|[is_nothrow_move_constructible](../standard-library/is-nothrow-move-constructible-class.md)|형식이 이동 생성 가능하며 이동 생성자가 throw되지 않는 것으로 확인되는지 테스트합니다.|  
-|[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|형식이 지정된 형식을 사용하여 할당 가능하며 할당이 throw되지 않는 것으로 확인되는지 테스트합니다.|  
-|[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|형식이 복사 할당 가능하며 할당이 throw되지 않는 것으로 확인되는지 테스트합니다.|  
-|[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|형식이 이동 할당 가능하며 할당이 throw되지 않는 것으로 확인되는지 테스트합니다.|  
-|[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|형식이 소멸 가능하며 소멸자가 throw되지 않는 것으로 확인되는지 테스트합니다.|  
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|형식에 가상 소멸자가 있는지 테스트합니다.|  
-  
- 형식 속성 쿼리  
+ Composite type categories  
   
 |||  
 |-|-|  
-|[alignment_of](../standard-library/alignment-of-class.md)|형식의 맞춤을 가져옵니다.|  
-|[rank](../standard-library/rank-class.md)|배열 차원 수를 가져옵니다.|  
-|[extent](../standard-library/extent-class.md)|지정된 배열 차원에서 요소의 수를 가져옵니다.|  
+|[is_reference](../standard-library/is-reference-class.md)|Tests whether the type is a reference.|  
+|[is_arithmetic](../standard-library/is-arithmetic-class.md)|Tests whether the type is arithmetic.|  
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Tests whether the type is `void` or arithmetic.|  
+|[is_object](../standard-library/is-object-class.md)|Tests whether the type is an object type.|  
+|[is_scalar](../standard-library/is-scalar-class.md)|Tests whether the type is scalar.|  
+|[is_compound](../standard-library/is-compound-class.md)|Tests whether the type is not scalar.|  
+|[is_member_pointer](../standard-library/is-member-pointer-class.md)|Tests whether the type is a pointer to a member.|  
   
- 형식 관계  
-  
-|||  
-|-|-|  
-|[is_same](../standard-library/is-same-class.md)|두 형식이 동일한지 테스트합니다.|  
-|[is_base_of](../standard-library/is-base-of-class.md)|한 형식이 다른 형식의 기본 형식인지를 테스트합니다.|  
-|[is_convertible](../standard-library/is-convertible-class.md)|한 가지 형식을 다른 형식으로 변환할 수 있는지 테스트합니다.|  
-  
- const-volatile 수정  
+ Type properties  
   
 |||  
 |-|-|  
-|[add_const](../standard-library/add-const-class.md)|형식에서 `const` 형식을 생성합니다.|  
-|[add_volatile](../standard-library/add-volatile-class.md)|형식에서 `volatile` 형식을 생성합니다.|  
-|[add_cv](../standard-library/add-cv-class.md)|형식에서 `const``volatile` 형식을 생성합니다.|  
-|[remove_const](../standard-library/remove-const-class.md)|형식에서 비const 형식을 생성합니다.|  
-|[remove_volatile](../standard-library/remove-volatile-class.md)|형식에서 비volatile 형식을 생성합니다.|  
-|[remove_cv](../standard-library/remove-cv-class.md)|형식에서 비const/비volatile 형식을 생성합니다.|  
+|[is_const](../standard-library/is-const-class.md)|Tests whether the type is `const`.|  
+|[is_volatile](../standard-library/is-volatile-class.md)|Tests whether the type is `volatile`.|  
+|[is_trivial](../standard-library/is-trivial-class.md)|Tests whether the type is trivial.|  
+|[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Tests whether the type is trivially copyable.|  
+|[is_standard_layout](../standard-library/is-standard-layout-class.md)|Tests if type is a standard layout type.|  
+|[is_pod](../standard-library/is-pod-class.md)|Tests whether the type is a POD.|  
+|[is_literal_type](../standard-library/is-literal-type-class.md)|Tests whether the type can be a `constexpr` variable or used in a `constexpr` function.|  
+|[is_empty](../standard-library/is-empty-class.md)|Tests whether the type is an empty class.|  
+|[is_polymorphic](../standard-library/is-polymorphic-class.md)|Tests whether the type is a polymorphic class.|  
+|[is_abstract](../standard-library/is-abstract-class.md)|Tests whether the type is an abstract class.|  
+|[is_final](../standard-library/is-final-class.md)|Tests whether the type is a class type marked `final`.|  
+|[is_signed](../standard-library/is-signed-class.md)|Tests whether the type is a signed integer.|  
+|[is_unsigned](../standard-library/is-unsigned-class.md)|Tests whether the type is an unsigned integer.|  
+|[is_constructible](../standard-library/is-constructible-class.md)|Tests whether the type is constructible using the specified argument types.|  
+|[is_default_constructible](../standard-library/type-traits-functions.md#is_default_constructible)|Tests whether the type has a default constructor.|  
+|[is_copy_constructible](../standard-library/type-traits-functions.md#is_copy_constructible)|Tests whether the type has a copy constructor.|  
+|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|Tests whether the type has a move constructor.|  
+|[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Tests whether the first type can be assigned a value of the second type.|  
+|[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Tests whether a type can be assigned a const reference value of the type.|  
+|[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Tests whether a type can be assigned an rvalue reference of the type.|  
+|[is_destructible](../standard-library/is-destructible-class.md)|Tests whether the type is destructible.|  
+|[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Tests whether the type uses no non-trivial operations when constructed using the specified types.|  
+|[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Tests whether the type uses no non-trivial operations when default constructed.|  
+|[is_trivially_copy_constructible](../standard-library/is-trivially-copy-constructible-class.md)|Tests whether the type uses no non-trivial operations when copy constructed.|  
+|[is_trivially_move_constructible](../standard-library/type-traits-functions.md#is_trivially_move_constructible)|Tests whether the type uses no non-trivial operations when move constructed.|  
+|[is_trivially_assignable](../standard-library/is-trivially-assignable-class.md)|Tests whether the types are assignable and the assignment uses no non-trivial operations.|  
+|[is_trivially_copy_assignable](../standard-library/type-traits-functions.md#is_trivially_copy_assignable)|Tests whether the type is copy assignable and the assignment uses no non-trivial operations.|  
+|[is_trivially_move_assignable](../standard-library/type-traits-functions.md#is_trivially_move_assignable)|Tests whether the type is move assignable and the assignment uses no non-trivial operations.|  
+|[is_trivially_destructible](../standard-library/is-trivially-destructible-class.md)|Tests whether the type is destructible and the destructor uses no non-trivial operations.|  
+|[is_nothrow_constructible](../standard-library/is-nothrow-constructible-class.md)|Tests whether the type is constructible and is known not to throw when constructed using the specified types.|  
+|[is_nothrow_default_constructible](../standard-library/is-nothrow-default-constructible-class.md)|Tests whether the type is default constructible and is known not to throw when default constructed.|  
+|[is_nothrow_copy_constructible](../standard-library/is-nothrow-copy-constructible-class.md)|Tests whether the type is copy constructible and the copy constructor is known not to throw.|  
+|[is_nothrow_move_constructible](../standard-library/is-nothrow-move-constructible-class.md)|Tests whether the type is move constructible and the move constructor is known not to throw.|  
+|[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Tests whether the type is assignable using the specified type and the assignment is known not to throw.|  
+|[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Tests whether the type is copy assignable and the assignment is known not to throw.|  
+|[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Tests whether the type is move assignable and the assignment is known not to throw.|  
+|[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Tests whether the type is destructible and the destructor is known not to throw.|  
+|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Tests whether the type has a virtual destructor.|  
   
- 참조 수정  
+ Type property queries  
   
 |||  
 |-|-|  
-|[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|형식에서 형식에 대한 참조를 생성합니다.|  
-|[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|형식에서 형식에 대한 rvalue 참조를 생성합니다.|  
-|[remove_reference](../standard-library/remove-reference-class.md)|형식에서 비참조 형식을 생성합니다.|  
+|[alignment_of](../standard-library/alignment-of-class.md)|Gets the alignment of a type.|  
+|[rank](../standard-library/rank-class.md)|Gets the number of array dimensions.|  
+|[extent](../standard-library/extent-class.md)|Gets the number of elements in the specified array dimension.|  
   
- 부호 수정  
-  
-|||  
-|-|-|  
-|[make_signed](../standard-library/make-signed-class.md)|부호가 있는 경우 형식을 생성하거나, 형식의 크기보다 크거나 같은 부호가 있는 가장 작은 형식을 생성합니다.|  
-|[make_unsigned](../standard-library/make-unsigned-class.md)|부호가 없는 경우 형식을 생성하거나, 형식의 크기보다 크거나 같은 부호가 없는 가장 작은 형식을 생성합니다.|  
-  
- 배열 수정  
+ Type relations  
   
 |||  
 |-|-|  
-|[remove_all_extents](../standard-library/remove-all-extents-class.md)|배열 형식에서 배열이 아닌 형식을 생성합니다.|  
-|[remove_extent](../standard-library/remove-extent-class.md)|배열 형식에서 요소 형식을 생성합니다.|  
+|[is_same](../standard-library/is-same-class.md)|Tests whether two types are the same.|  
+|[is_base_of](../standard-library/is-base-of-class.md)|Tests whether one type is a base of another.|  
+|[is_convertible](../standard-library/is-convertible-class.md)|Tests whether one type is convertible to another.|  
   
- 포인터 수정  
-  
-|||  
-|-|-|  
-|[add_pointer](../standard-library/add-pointer-class.md)|형식에서 형식에 대한 포인터를 생성합니다.|  
-|[remove_pointer](../standard-library/remove-pointer-class.md)|입력에 대한 포인터에서 형식을 생성합니다.|  
-  
- 기타 변환  
+ Const-volatile modifications  
   
 |||  
 |-|-|  
-|[aligned_storage](../standard-library/aligned-storage-class.md)|정렬된 형식에 대해 초기화되지 않은 메모리를 할당합니다.|  
-|[aligned_union](../standard-library/aligned-union-class.md)|특수한 생성자 또는 소멸자를 사용하여 정렬된 공용 구조체에 대해 초기화되지 않은 메모리를 할당합니다.|  
-|[common_type](../standard-library/common-type-class.md)|모든 매개 변수 팩 형식의 공통 형식을 생성합니다.|  
-|[conditional](../standard-library/conditional-class.md)|조건이 true이면 지정된 첫 번째 형식을 생성하고 그렇지 않으면 지정된 두 번째 형식을 생성합니다.|  
-|[decay](../standard-library/decay-class.md)|값으로 전달된 형식을 생성합니다. 비참조, 비상수, 비휘발성 형식 또는 형식에 대한 포인터를 만듭니다.|  
-|[enable_if](../standard-library/enable-if-class.md)|조건이 true이면 지정된 형식을 생성하고 그렇지 않으면 형식을 생성하지 않습니다.|  
-|[result_of](../standard-library/result-of-class.md)|지정된 인수 유형을 사용하는 호출 가능 형식의 반환 형식을 결정합니다.|  
-|[underlying_type](../standard-library/underlying-type-class.md)|열거형 형식에 대한 내부 정수 계열 형식을 생성합니다.|  
+|[add_const](../standard-library/add-const-class.md)|Produces a `const` type from type.|  
+|[add_volatile](../standard-library/add-volatile-class.md)|Produces a `volatile` type from type.|  
+|[add_cv](../standard-library/add-cv-class.md)|Produces a `const volatile` type from type.|  
+|[remove_const](../standard-library/remove-const-class.md)|Produces a non-const type from type.|  
+|[remove_volatile](../standard-library/remove-volatile-class.md)|Produces a non-volatile type from type.|  
+|[remove_cv](../standard-library/remove-cv-class.md)|Produces a non-const non-volatile type from type.|  
   
-## <a name="see-also"></a>참고 항목  
+ Reference modifications  
+  
+|||  
+|-|-|  
+|[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|Produces a reference to type from type.|  
+|[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|Produces an rvalue reference to type from type|  
+|[remove_reference](../standard-library/remove-reference-class.md)|Produces a non-reference type from type.|  
+  
+ Sign modifications  
+  
+|||  
+|-|-|  
+|[make_signed](../standard-library/make-signed-class.md)|Produces the type if signed, or the smallest signed type greater than or equal in size to type.|  
+|[make_unsigned](../standard-library/make-unsigned-class.md)|Produces the type if unsigned, or the smallest unsigned type greater than or equal in size to type.|  
+  
+ Array modifications  
+  
+|||  
+|-|-|  
+|[remove_all_extents](../standard-library/remove-all-extents-class.md)|Produces a non-array type from an array type.|  
+|[remove_extent](../standard-library/remove-extent-class.md)|Produces the element type from an array type.|  
+  
+ Pointer modifications  
+  
+|||  
+|-|-|  
+|[add_pointer](../standard-library/add-pointer-class.md)|Produces a pointer to type from type.|  
+|[remove_pointer](../standard-library/remove-pointer-class.md)|Produces a type from a pointer to type.|  
+  
+ Other transformations  
+  
+|||  
+|-|-|  
+|[aligned_storage](../standard-library/aligned-storage-class.md)|Allocates uninitialized memory for an aligned type.|  
+|[aligned_union](../standard-library/aligned-union-class.md)|Allocates uninitialized memory for an aligned union with a non-trivial constructor or destructor.|  
+|[common_type](../standard-library/common-type-class.md)|Produces the common type of all the types of the parameter pack.|  
+|[conditional](../standard-library/conditional-class.md)|If the condition is true, produces the first specified type, otherwise the second specified type.|  
+|[decay](../standard-library/decay-class.md)|Produces the type as passed by value. Makes non-reference, non-const, or non-volatile type, or makes a pointer to type.|  
+|[enable_if](../standard-library/enable-if-class.md)|If the condition is true, produces the specified type, otherwise no type.|  
+|[result_of](../standard-library/result-of-class.md)|Determines the return type of the callable type that takes the specified argument types.|  
+|[underlying_type](../standard-library/underlying-type-class.md)|Produces the underlying integral type for an enumeration type.|  
+  
+## <a name="see-also"></a>See Also  
  [\<functional>](../standard-library/functional.md)
 
 

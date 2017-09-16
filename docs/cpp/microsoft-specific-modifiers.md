@@ -1,50 +1,67 @@
 ---
-title: "Microsoft 전용 한정자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Microsoft-Specific Modifiers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Microsoft 전용 한정자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0aa0480efacfade3dab0f58bc8c558479e875e28
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-이 단원에서는 다음 영역의 Microsoft 전용 C\+\+ 확장에 대해 설명합니다.  
+---
+# <a name="microsoft-specific-modifiers"></a>Microsoft-Specific Modifiers
+This section describes Microsoft-specific extensions to C++ in the following areas:  
   
--   다른 포인터가 오프셋될 수 있는 기준으로 포인터를 사용하는 방식인 [기준 주소 지정](../cpp/based-addressing.md)  
+-   [Based addressing](../cpp/based-addressing.md), the practice of using a pointer as a base from which other pointers can be offset  
   
--   [함수 호출 규칙](../cpp/calling-conventions.md)  
+-   [Function calling conventions](../cpp/calling-conventions.md)  
   
--   [\_\_declspec](../cpp/declspec.md) 키워드로 선언된 확장된 스토리지 클래스 특성  
+-   Extended storage-class attributes declared with the [__declspec](../cpp/declspec.md) keyword  
   
--   [\_\_w64](../cpp/w64.md) 키워드  
+-   The [__w64](../cpp/w64.md) keyword  
   
- Microsoft 전용 키워드 중 대다수는 파생 형식을 형성하는 선언자를 수정하는 데 사용될 수 있습니다.  선언자에 대한 자세한 내용은 [선언자](http://msdn.microsoft.com/ko-kr/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)를 참조하십시오.  
+ Many of the Microsoft-specific keywords can be used to modify declarators to form derived types. For more information about declarators, see [Declarators](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
   
-### Microsoft 전용 키워드  
+### <a name="microsoft-specific-keywords"></a>Microsoft-Specific Keywords  
   
-|키워드|의미|파생 형식을 만드는 데 사용됩니까?|  
-|---------|--------|-------------------------|  
-|[\_\_based](../cpp/based-grammar.md)|뒤에 오는 이름이 32비트 오프셋을 선언에 포함된 32비트 기준으로 선언합니다.|예|  
-|[\_\_cdecl](../cpp/cdecl.md)|뒤에 오는 이름이 C 명명 및 호출 규칙을 사용합니다.|예|  
-|[\_\_declspec](../cpp/declspec.md)|뒤에 오는 이름이 Microsoft 전용 저장소 클래스 특성을 지정합니다.|아니요|  
-|[\_\_fastcall](../cpp/fastcall.md)|뒤에 오는 이름이 인수 전달 시 가능하면 스택 대신 레지스터를 사용하는 함수를 선언합니다.|예|  
-|[\_\_restrict](../cpp/extension-restrict.md)|\_\_declspec\([제한](../cpp/restrict.md)\)과 유사하지만 변수에서 사용됩니다.|아니요|  
-|[\_\_stdcall](../cpp/stdcall.md)|뒤에 오는 이름이 표준 호출 규칙을 준수하는 함수를 지정합니다.|예|  
-|[\_\_w64](../cpp/w64.md)|64비트 컴파일러에서 더 큰 형식으로 데이터 형식을 표시합니다.|아니요|  
-|[\_\_unaligned](../cpp/unaligned.md)|형식 또는 다른 데이터의 포인터가 정렬되지 않음을 지정합니다.|아니요|  
-|[\_\_vectorcall](../cpp/vectorcall.md)|뒤에 오는 이름이 인수 전달 시 가능하면 스택 대신 SSE 레지스터 등의 레지스터를 사용하는 함수를 선언합니다.|예|  
+|Keyword|Meaning|Used to Form Derived Types?|  
+|-------------|-------------|---------------------------------|  
+|[__based](../cpp/based-grammar.md)|The name that follows declares a 32-bit offset to the 32-bit base contained in the declaration.|Yes|  
+|[__cdecl](../cpp/cdecl.md)|The name that follows uses the C naming and calling conventions.|Yes|  
+|[__declspec](../cpp/declspec.md)|The name that follows specifies a Microsoft-specific storage-class attribute.|No|  
+|[__fastcall](../cpp/fastcall.md)|The name that follows declares a function that uses registers, when available, instead of the stack for argument passing.|Yes|  
+|[__restrict](../cpp/extension-restrict.md)|Similar to __declspec([restrict](../cpp/restrict.md)), but for use on variables.|No|  
+|[__stdcall](../cpp/stdcall.md)|The name that follows specifies a function that observes the standard calling convention.|Yes|  
+|[__w64](../cpp/w64.md)|Marks a data type as being larger on a 64-bit compiler.|No|  
+|[__unaligned](../cpp/unaligned.md)|Specifies that a pointer to a type or other data is not aligned..|No|  
+|[__vectorcall](../cpp/vectorcall.md)|The name that follows declares a function that uses registers, including SSE registers, when available, instead of the stack for argument passing.|Yes|  
   
-## 참고 항목  
- [C\+\+ 언어 참조](../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)

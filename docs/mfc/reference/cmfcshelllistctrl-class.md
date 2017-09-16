@@ -1,5 +1,5 @@
 ---
-title: "CMFCShellListCtrl 클래스 | Microsoft 문서"
+title: CMFCShellListCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,7 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCShellListCtrl class
+- CMFCShellListCtrl [MFC], DisplayFolder
+- CMFCShellListCtrl [MFC], DisplayParentFolder
+- CMFCShellListCtrl [MFC], EnableShellContextMenu
+- CMFCShellListCtrl [MFC], GetCurrentFolder
+- CMFCShellListCtrl [MFC], GetCurrentFolderName
+- CMFCShellListCtrl [MFC], GetCurrentItemIdList
+- CMFCShellListCtrl [MFC], GetCurrentShellFolder
+- CMFCShellListCtrl [MFC], GetItemPath
+- CMFCShellListCtrl [MFC], GetItemTypes
+- CMFCShellListCtrl [MFC], IsDesktop
+- CMFCShellListCtrl [MFC], OnCompareItems
+- CMFCShellListCtrl [MFC], OnFormatFileDate
+- CMFCShellListCtrl [MFC], OnFormatFileSize
+- CMFCShellListCtrl [MFC], OnGetItemIcon
+- CMFCShellListCtrl [MFC], OnGetItemText
+- CMFCShellListCtrl [MFC], OnSetColumns
+- CMFCShellListCtrl [MFC], Refresh
+- CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
 caps.latest.revision: 30
 author: mikeblome
@@ -52,60 +69,60 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8adac043d30d7555522c05165ffd3856c5999872
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 023ff60fa23c063a5d0c71a9c4099723b6dbe771
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 클래스
-`CMFCShellListCtrl` 클래스 Windows 목록 컨트롤 기능을 제공 하 고 셸 항목 목록을 표시 하는 기능을 포함 하도록 확장 합니다.  
+# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl Class
+The `CMFCShellListCtrl` class provides Windows list control functionality and expands it by including the ability to display a list of shell items.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCShellListCtrl : public CMFCListCtrl  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCShellListCtrl::DisplayFolder](#displayfolder)|제공 된 폴더에 포함 된 항목의 목록이 표시 됩니다.|  
-|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|현재 표시 된 폴더의 부모 폴더에 포함 된 항목의 목록이 표시 됩니다.|  
-|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|바로 가기 메뉴를 사용 하지 않도록 설정 하거나 사용 합니다.|  
-|[CMFCShellListCtrl::GetCurrentFolder](#getcurrentfolder)|현재 폴더의 경로 검색 합니다.|  
-|[CMFCShellListCtrl::GetCurrentFolderName](#getcurrentfoldername)|현재 폴더의 이름을 검색합니다.|  
-|[CMFCShellListCtrl::GetCurrentItemIdList](#getcurrentitemidlist)|현재는 목록 컨트롤 항목의 PIDL를 반환합니다.|  
-|[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|현재 셸 폴더에 대 한 포인터를 반환합니다.|  
-|[CMFCShellListCtrl::GetItemPath](#getitempath)|항목의 텍스트 경로 반환합니다.|  
-|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|목록 컨트롤에서 표시 되는 셸 항목 형식을 반환 합니다.|  
-|[CMFCShellListCtrl::IsDesktop](#isdesktop)|현재 선택한 폴더 바탕 화면 폴더 인지 확인 합니다.|  
-|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|프레임 워크는 두 개의 항목을 비교 하는 경우이 메서드를 호출 합니다. (재정의 [CMFCListCtrl::OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems).)|  
-|[CMFCShellListCtrl::OnFormatFileDate](#onformatfiledate)|프레임 워크 목록 컨트롤에 의해 표시 되는 파일 날짜를 검색 하는 경우 호출 됩니다.|  
-|[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|프레임 워크는 목록 컨트롤의 파일 크기를 변환할 때 호출 됩니다.|  
-|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|프레임 워크는 목록 컨트롤 항목의 아이콘을 검색 하는 경우 호출 됩니다.|  
-|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|프레임 워크는 목록 컨트롤 항목의 텍스트를 변환할 때 호출 됩니다.|  
-|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|열의 이름을 설정할 때에 프레임 워크에서 호출 합니다.|  
-|[CMFCShellListCtrl::Refresh](#refresh)|목록 컨트롤을 다시 표시 및 새로 고칩니다.|  
-|[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|목록 컨트롤에 의해 표시 되는 항목의 유형을 설정 합니다.|  
+|[CMFCShellListCtrl::DisplayFolder](#displayfolder)|Displays a list of items that are contained in a provided folder.|  
+|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|Displays a list of items that are contained in the folder that is the parent of the currently displayed folder.|  
+|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Enables or disables the shortcut menu.|  
+|[CMFCShellListCtrl::GetCurrentFolder](#getcurrentfolder)|Retrieves the path of the current folder.|  
+|[CMFCShellListCtrl::GetCurrentFolderName](#getcurrentfoldername)|Retrieves the name of the current folder.|  
+|[CMFCShellListCtrl::GetCurrentItemIdList](#getcurrentitemidlist)|Returns the PIDL of the current list control item.|  
+|[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|Returns a pointer to the current Shell folder.|  
+|[CMFCShellListCtrl::GetItemPath](#getitempath)|Returns the textual path of an item.|  
+|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|Returns Shell item types that are displayed by the list control.|  
+|[CMFCShellListCtrl::IsDesktop](#isdesktop)|Checks if the currently selected folder is the desktop folder.|  
+|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|The framework calls this method when it compares two items. (Overrides [CMFCListCtrl::OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems).)|  
+|[CMFCShellListCtrl::OnFormatFileDate](#onformatfiledate)|Called when the framework retrieves the file date displayed by the list control.|  
+|[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|Called when the framework converts the file size of a list control.|  
+|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|Called when the framework retrieves the icon of a list control item.|  
+|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|Called when the framework converts the text of a list control item.|  
+|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|Called by the framework when it sets the names of the columns.|  
+|[CMFCShellListCtrl::Refresh](#refresh)|Refreshes and repaints the list control.|  
+|[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|Sets the type of items displayed by the list control.|  
   
-## <a name="remarks"></a>주의  
- `CMFCShellListCtrl` 의 기능을 확장 하는 클래스는 [CMFCListCtrl 클래스](../../mfc/reference/cmfclistctrl-class.md) Windows 셸 항목을 나열 하 여 프로그램을 사용 하 여 합니다. 표시 형식을 사용 하는 탐색기 창에 대 한 목록 보기의 비슷합니다.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCShellListCtrl` class extends the functionality of the [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md) by enabling your program to list Windows shell items. The display format that is used is like that of a list view for an Explorer window.  
   
- A [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) 개체와 연결 될 수는 `CMFCShellListCtrl` 개체 전체 탐색기 창을 만들 수 있습니다. 그런 다음에 항목을 선택 하는 `CMFCShellTreeCtrl` 하면는 `CMFCShellListCtrl` 선택한 항목의 콘텐츠를 나열 하는 개체입니다.  
+ A [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) object can be associated with a `CMFCShellListCtrl` object to create a complete Explorer window. Then, selecting an item in the `CMFCShellTreeCtrl` will cause the `CMFCShellListCtrl` object to list the contents of the selected item.  
   
-## <a name="example"></a>예제  
- 다음 예제에는 개체를 만드는 방법을 보여 줍니다는 `CMFCShellListCtrl` 클래스 및 현재 표시 된 폴더의 상위 폴더를 표시 하는 방법입니다. 이 코드 조각은의 일부인는 [탐색기 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to create an object of the `CMFCShellListCtrl` class and how to display the parent folder of the currently displayed folder. This code snippet is part of the [Explorer sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_Explorer #&1;](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_Explorer #&2;](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]  
-[!code-cpp[NVC_MFC_Explorer #&3;](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_Explorer#1](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_Explorer#2](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]  
+[!code-cpp[NVC_MFC_Explorer#3](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_3.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -118,107 +135,107 @@ class CMFCShellListCtrl : public CMFCListCtrl
   
  `CMFCShellListCtrl`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxshelllistCtrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxshelllistCtrl.h  
   
-##  <a name="displayfolder"></a>CMFCShellListCtrl::DisplayFolder  
- 제공 된 폴더에 포함 된 항목의 목록이 표시 됩니다.  
+##  <a name="displayfolder"></a>  CMFCShellListCtrl::DisplayFolder  
+ Displays a list of items that are contained in the provided folder.  
   
 ```  
 virtual HRESULT DisplayFolder(LPCTSTR lpszPath);
 virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPath`  
- 폴더의 경로 포함 하는 문자열입니다.  
+ A string that contains the path of a folder.  
   
  [in] `lpItemInfo`  
- 에 대 한 포인터는 `LPAFX_SHELLITEMINFO` 표시할 폴더를 설명 하는 구조입니다.  
+ A pointer to a `LPAFX_SHELLITEMINFO` structure that describes a folder to display.  
   
-### <a name="return-value"></a>반환 값  
- `S_OK`성공 하면 `E_FAIL` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `S_OK` if successful; `E_FAIL` otherwise.  
   
-##  <a name="displayparentfolder"></a>CMFCShellListCtrl::DisplayParentFolder  
- 업데이트는 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) 현재 표시 된 폴더의 상위 폴더를 표시 하는 개체입니다.  
+##  <a name="displayparentfolder"></a>  CMFCShellListCtrl::DisplayParentFolder  
+ Updates the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object to display the parent folder of the currently displayed folder.  
   
 ```  
 virtual HRESULT DisplayParentFolder();
 ```  
   
-### <a name="return-value"></a>반환 값  
- `S_OK`성공 하면 `E_FAIL` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `S_OK` if successful; `E_FAIL` otherwise.  
   
-##  <a name="enableshellcontextmenu"></a>CMFCShellListCtrl::EnableShellContextMenu  
- 바로 가기 메뉴를 수 있습니다.  
+##  <a name="enableshellcontextmenu"></a>  CMFCShellListCtrl::EnableShellContextMenu  
+ Enables the shortcut menu.  
   
 ```  
 void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 프레임 워크의 바로 가기 메뉴를 활성화 하는지 여부를 지정 하는 부울입니다.  
+ A Boolean that specifies whether the framework enables the shortcut menu.  
   
-##  <a name="getcurrentfolder"></a>CMFCShellListCtrl::GetCurrentFolder  
- 현재 선택된 된 폴더의 경로 검색 된 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
+##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
+ Retrieves the path of the currently selected folder in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 BOOL GetCurrentFolder(CString& strPath) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `strPath`  
- 문자열 매개 변수는 메서드는 경로 기록 하는 위치에 대 한 참조입니다.  
+ A reference to a string parameter where the method writes the path.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 otherwise.  
   
-### <a name="remarks"></a>주의  
- 선택한 폴더가 없을 경우이 메서드는 `CMFCShellListCtrl`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method fails if there is no folder selected in the `CMFCShellListCtrl`.  
   
-##  <a name="getcurrentfoldername"></a>CMFCShellListCtrl::GetCurrentFolderName  
- 현재 선택된 된 폴더의 이름을 검색는 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
+##  <a name="getcurrentfoldername"></a>  CMFCShellListCtrl::GetCurrentFolderName  
+ Retrieves the name of the currently selected folder in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 BOOL GetCurrentFolderName(CString& strName) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `strName`  
- 문자열 매개 변수는 메서드 이름을 기록 하는 위치에 대 한 참조입니다.  
+ A reference to a string parameter where the method writes the name.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 otherwise.  
   
-### <a name="remarks"></a>주의  
- 선택한 폴더가 없을 경우이 메서드는 `CMFCShellListCtrl`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method fails if there is no folder selected in the `CMFCShellListCtrl`.  
   
-##  <a name="getcurrentitemidlist"></a>CMFCShellListCtrl::GetCurrentItemIdList  
- 현재 선택한 항목의 PIDL를 반환합니다.  
+##  <a name="getcurrentitemidlist"></a>  CMFCShellListCtrl::GetCurrentItemIdList  
+ Returns the PIDL of the currently selected item.  
   
 ```  
 LPITEMIDLIST GetCurrentItemIdList() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 항목의 PIDL 합니다.  
+### <a name="return-value"></a>Return Value  
+ The PIDL of the current item.  
   
-##  <a name="getcurrentshellfolder"></a>CMFCShellListCtrl::GetCurrentShellFolder  
- 현재 선택한 항목에 대 한 포인터를 가져옵니다는 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
+##  <a name="getcurrentshellfolder"></a>  CMFCShellListCtrl::GetCurrentShellFolder  
+ Gets a pointer to the currently selected item in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 const IShellFolder* GetCurrentShellFolder() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [IShellFolder 인터페이스](http://msdn.microsoft.com/library/windows/desktop/bb775075) 선택 된 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [IShellFolder Interface](http://msdn.microsoft.com/library/windows/desktop/bb775075) for the selected object.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 반환 `NULL` 현재 선택 된 개체가 없는 경우.  
+### <a name="remarks"></a>Remarks  
+ This method returns `NULL` if no object is currently selected.  
   
-##  <a name="getitempath"></a>CMFCShellListCtrl::GetItemPath  
- 항목에 대 한 경로 검색합니다.  
+##  <a name="getitempath"></a>  CMFCShellListCtrl::GetItemPath  
+ Retrieves the path for an item.  
   
 ```  
 BOOL GetItemPath(
@@ -226,43 +243,43 @@ BOOL GetItemPath(
     int iItem) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `strPath`  
- 경로 받는 문자열에 대 한 참조입니다.  
+ A reference to a string that receives the path.  
   
  [in] `iItem`  
- 목록 항목의 인덱스입니다.  
+ The index of the list item.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`성공 하면 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` otherwise.  
   
-### <a name="remarks"></a>주의  
- 제공 하는 인덱스 `iItem` 기반 하 여 현재 표시 되는 항목으로는 [CMFCShellListCtrl 클래스](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The index supplied by `iItem` is based on the items currently displayed by the [CMFCShellListCtrl Class](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
-##  <a name="getitemtypes"></a>CMFCShellListCtrl::GetItemTypes  
- 에 표시 된 항목의 형식을 반환는 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
+##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
+ Returns the type of items displayed by the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 SHCONTF GetItemTypes() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539) 에 나열 된 항목의 형식을 포함 하는 값은 `CMFCShellListCtrl`합니다.  
+### <a name="return-value"></a>Return Value  
+ A [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539) value that contains the type of items listed in the `CMFCShellListCtrl`.  
   
-### <a name="remarks"></a>주의  
- 에 나열 된 항목의 유형을 설정 하는 `CMFCShellListCtrl`, 호출 [CMFCShellListCtrl::SetItemTypes](#setitemtypes)합니다.  
+### <a name="remarks"></a>Remarks  
+ To set the type of items listed in a `CMFCShellListCtrl`, call [CMFCShellListCtrl::SetItemTypes](#setitemtypes).  
   
-##  <a name="isdesktop"></a>CMFCShellListCtrl::IsDesktop  
- 결정 되는 폴더에 표시 되는 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) 개체는 바탕 화면 폴더입니다.  
+##  <a name="isdesktop"></a>  CMFCShellListCtrl::IsDesktop  
+ Determines if the folder that is displayed in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object is the desktop folder.  
   
 ```  
 BOOL IsDesktop() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`표시 된 폴더는 바탕 화면 폴더; 하는 경우 `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the displayed folder is the desktop folder; `FALSE` otherwise.  
   
-##  <a name="oncompareitems"></a>CMFCShellListCtrl::OnCompareItems  
+##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -272,17 +289,17 @@ virtual int OnCompareItems(
     int iColumn);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lParam1`  
  [in] `lParam2`  
  [in] `iColumn`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onformatfiledate"></a>CMFCShellListCtrl::OnFormatFileDate  
- 프레임 워크는 개체에 연결 된 문자열로 날짜를 변환 해야 하는 경우이 메서드를 호출 합니다.  
+##  <a name="onformatfiledate"></a>  CMFCShellListCtrl::OnFormatFileDate  
+ The framework calls this method when it must convert the date associated with an object into a string.  
   
 ```  
 virtual void OnFormatFileDate(
@@ -290,18 +307,18 @@ virtual void OnFormatFileDate(
     CString& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `tmFile`  
- 파일과 관련 된 날짜입니다.  
+ The date associated with a file.  
   
  [out] `str`  
- 파일 형식이 지정 된 날짜를 포함 하는 문자열입니다.  
+ A string that contains the formatted file date.  
   
-### <a name="remarks"></a>주의  
- 경우는 [CMFCShellListCtrl 클래스](../../mfc/reference/cmfcshelllistctrl-class.md) 파일과 연결 된 날짜를 표시 하는 개체, 해당 날짜를 문자열 형식 변환 해야 합니다. `CMFCShellListCtrl` 이 메서드를 사용 하 여 해당 변환 확인 합니다. 기본적으로이 메서드는 문자열로 날짜를 현재 로캘을 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ When a [CMFCShellListCtrl Class](../../mfc/reference/cmfcshelllistctrl-class.md) object displays the date associated with a file, it must convert that date to a string format. The `CMFCShellListCtrl` uses this method to make that conversion. By default, this method uses the current locale to format the date into a string.  
   
-##  <a name="onformatfilesize"></a>CMFCShellListCtrl::OnFormatFileSize  
- 프레임 워크는 개체의 크기를 문자열로 변환 하는 경우이 메서드를 호출 합니다.  
+##  <a name="onformatfilesize"></a>  CMFCShellListCtrl::OnFormatFileSize  
+ The framework calls this method when it converts the size of an object to a string.  
   
 ```  
 virtual void OnFormatFileSize(
@@ -309,18 +326,18 @@ virtual void OnFormatFileSize(
     CString& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lFileSize`  
- 프레임 워크를 표시 하는 파일의 크기입니다.  
+ The size of the file that the framework will display.  
   
  [out] `str`  
- 서식이 지정 된 파일 크기를 포함 하는 문자열입니다.  
+ A string that contains the formatted file size.  
   
-### <a name="remarks"></a>주의  
- 경우는 [CMFCShellListCtrl 클래스](../../mfc/reference/cmfcshelllistctrl-class.md) 파일의 크기를 표시 해야 하는 개체, 파일 크기를 문자열 형식으로 변환 해야 합니다. `CMFCShellListCtrl` 이 메서드를 사용 하 여 해당 변환 확인 합니다. 기본적으로이 메서드 (킬로바이트)을 바이트에서 파일 크기를 변환 하 고은 현재 로캘을 사용 하 여 문자열에 크기를 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ When a [CMFCShellListCtrl Class](../../mfc/reference/cmfcshelllistctrl-class.md) object needs to display the size of a file, it needs to convert the file size into a string format. The `CMFCShellListCtrl` uses this method to make that conversion. By default, this method converts the file size from bytes to kilobytes and then uses the current locale to format the size into string.  
   
-##  <a name="ongetitemicon"></a>CMFCShellListCtrl::OnGetItemIcon  
- 프레임 워크는 셸 목록 항목과 연결 된 아이콘을 검색 하려면이 메서드를 호출 합니다.  
+##  <a name="ongetitemicon"></a>  CMFCShellListCtrl::OnGetItemIcon  
+ The framework calls this method to retrieve the icon associated with a shell list item.  
   
 ```  
 virtual int OnGetItemIcon(
@@ -328,23 +345,23 @@ virtual int OnGetItemIcon(
     LPAFX_SHELLITEMINFO pItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iItem`  
- 항목 인덱스입니다.  
+ The item index.  
   
  [in] `pItem`  
- A `LPAFX_SHELLITEMINFO` 항목을 설명 하는 매개 변수입니다.  
+ A `LPAFX_SHELLITEMINFO` parameter that describes the item.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 아이콘 이미지의 인덱스 함수가 실패 한 경우-1입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the icon image if successful; -1 if the function fails.  
   
-### <a name="remarks"></a>주의  
- 아이콘 이미지 인덱스 시스템 이미지 목록을 기반으로 합니다.  
+### <a name="remarks"></a>Remarks  
+ The icon image index is based on the system image list.  
   
- 기본적으로이 방법은에 의존는 `pItem` 매개 변수입니다. 값 `iItem` 기본 구현에서 사용 되지 않습니다. 사용할 수 있습니다 `iItem` 사용자 지정 동작을 구현 합니다.  
+ By default, this method relies on the `pItem` parameter. The value of `iItem` is not used in the default implementation. You can use `iItem` to implement custom behavior.  
   
-##  <a name="ongetitemtext"></a>CMFCShellListCtrl::OnGetItemText  
- 셸 항목의 텍스트를 검색 해야 하는 경우이 메서드를 호출 하는 프레임 워크입니다.  
+##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
+ The framework calls this method when it must retrieve the text of a shell item.  
   
 ```  
 virtual CString OnGetItemText(
@@ -353,64 +370,64 @@ virtual CString OnGetItemText(
     LPAFX_SHELLITEMINFO pItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iItem`  
- 항목 인덱스입니다.  
+ The item index.  
   
  [in] `iColumn`  
- 관련 열입니다.  
+ The column of interest.  
   
  [in] `pItem`  
- A `LPAFX_SHELLITEMINFO` 항목을 설명 하는 매개 변수입니다.  
+ A `LPAFX_SHELLITEMINFO` parameter that describes the item.  
   
-### <a name="return-value"></a>반환 값  
- A `CString` 항목과 연결 된 텍스트가 포함 된 합니다.  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the text associated with the item.  
   
-### <a name="remarks"></a>주의  
- 각 항목에는 `CMFCShellListCtrl` 개체 하나 이상의 열에 텍스트를 있을 수 있습니다. 이 메서드를 호출 하는 프레임 워크에서 관심 있는 열을 지정 합니다. 이 함수를 수동으로 호출 하는 경우 관심 있는 열도 지정 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Each item in the `CMFCShellListCtrl` object may have text in one or more columns. When the framework calls this method, it specifies the column that it is interested in. If you call this function manually, you must also specify the column that you are interested in.  
   
- 기본적으로이 방법은에 의존는 `pItem` 매개 변수를 프로세스에 있는 항목을 확인 합니다. 값 `iItem` 기본 구현에서 사용 되지 않습니다.  
+ By default, this method relies on the `pItem` parameter to determine which item to process. The value of `iItem` is not used in the default implementation.  
   
-##  <a name="onsetcolumns"></a>CMFCShellListCtrl::OnSetColumns  
- 프레임 워크는 열의 이름을 설정 하는 경우이 메서드를 호출 합니다.  
+##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
+ The framework calls this method when it sets the names of the columns.  
   
 ```  
 virtual void OnSetColumns();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본적으로 프레임 워크에서 네 개의 열을 만들고는 `CMFCShellListCtrl` 개체입니다. 이러한 열 이름은 `Name`, `Size`, `Type`, 및 `Modified`합니다. 열과 해당 이름 수를 사용자 지정 하려면이 메서드를 재정의할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ By default, the framework creates four columns in a `CMFCShellListCtrl` object. The names of these columns are `Name`, `Size`, `Type`, and `Modified`. You can override this method to customize the number of columns and their names.  
   
-##  <a name="refresh"></a>CMFCShellListCtrl::Refresh  
- 새로 고쳐지고 다시 표시는 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
+##  <a name="refresh"></a>  CMFCShellListCtrl::Refresh  
+ Refreshes and repaints the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 virtual HRESULT Refresh();
 ```  
   
-### <a name="return-value"></a>반환 값  
- `S_OK`성공 하면 그렇지 않은 경우 오류 값입니다.  
+### <a name="return-value"></a>Return Value  
+ `S_OK` if successful; otherwise an error value.  
   
-### <a name="remarks"></a>주의  
- 표시 되는 항목 목록을 새로 고치려면이 메서드를 호출 하는 `CMFCShellListCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to refresh the list of items displayed by the `CMFCShellListCtrl` object.  
   
-##  <a name="setitemtypes"></a>CMFCShellListCtrl::SetItemTypes  
- 에 나열 된 항목의 형식을 설정 하는 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
+##  <a name="setitemtypes"></a>  CMFCShellListCtrl::SetItemTypes  
+ Sets the type of items that are listed in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 void SetItemTypes(SHCONTF nTypes);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nTypes`  
- 목록 항목의 형식에 `CMFCShellListCtrl` 개체가 지 원하는 합니다.  
+ A list of item types that the `CMFCShellListCtrl` object supports.  
   
-### <a name="remarks"></a>주의  
- 항목 형식 목록에 대 한 자세한 내용은 참조 [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information about the list of item types, see [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539).  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCListCtrl 클래스](../../mfc/reference/cmfclistctrl-class.md)   
- [CMFCShellTreeCtrl 클래스](../../mfc/reference/cmfcshelltreectrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)   
+ [CMFCShellTreeCtrl Class](../../mfc/reference/cmfcshelltreectrl-class.md)
 

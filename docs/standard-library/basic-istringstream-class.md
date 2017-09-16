@@ -1,5 +1,5 @@
 ---
-title: "basic_istringstream 클래스 | Microsoft 문서"
+title: basic_istringstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sstream/std::basic_istringstream
-- basic_istringstream
 - sstream/std::basic_istringstream::allocator_type
 - sstream/std::basic_istringstream::rdbuf
 - sstream/std::basic_istringstream::str
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_istringstream class
+- std::basic_istringstream [C++]
+- std::basic_istringstream [C++], allocator_type
+- std::basic_istringstream [C++], rdbuf
+- std::basic_istringstream [C++], str
+- std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
 caps.latest.revision: 19
 author: corob-msft
@@ -38,76 +41,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dd5ffa6d31f78fe71fdc099c39dd6ad719a217cf
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0e84865032be2804b76942a019c82c9f81ff821e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicistringstream-class"></a>basic_istringstream 클래스
-[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 클래스의 스트림 버퍼에서 요소와 인코드된 개체의 추출을 제어하는 개체를 설명합니다.  
+# <a name="basicistringstream-class"></a>basic_istringstream Class
+Describes an object that controls extraction of elements and encoded objects from a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>, class Alloc = allocator<Elem>>  
 class basic_istringstream : public basic_istream<Elem, Tr>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Alloc`  
- 할당자 클래스입니다.  
+ The allocator class.  
   
  `Elem`  
- 문자열 기본 요소의 형식입니다.  
+ The type of the basic element of the string.  
   
  *Tr*  
- 문자열의 기본 요소에서 특수화된 문자 특성입니다.  
+ The character traits specialized on the basic element of the string.  
   
-## <a name="remarks"></a>설명  
- 이 템플릿 클래스는 형식 **Elem**의 요소가 있고 문자 특성이 **Tr**에 의해 결정되며 요소가 클래스 `Alloc`의 할당자에 의해 할당되는 클래스 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>의 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어하는 개체를 설명합니다. 이 개체는 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 클래스의 개체를 저장합니다.  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that controls extraction of elements and encoded objects from a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>, with elements of type **Elem**, whose character traits are determined by the class **Tr**, and whose elements are allocated by an allocator of class `Alloc`. The object stores an object of class basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_istringstream](#basic_istringstream)|`basic_istringstream` 형식의 개체를 생성합니다.|  
+|[basic_istringstream](#basic_istringstream)|Constructs an object of type `basic_istringstream`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|이 형식은 템플릿 매개 변수 `Alloc`의 동의어입니다.|  
+|[allocator_type](#allocator_type)|The type is a synonym for the template parameter `Alloc`.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[rdbuf](#rdbuf)|`pointer` 형식의 저장된 스트림 버퍼 주소를 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>로 반환합니다.|  
-|[str](#str)|쓰기 위치를 변경하지 않고 문자열 버퍼에서 텍스트를 설정하거나 가져옵니다.|  
-|[swap](#swap)|이 `basic_istringstream` 개체의 값을 제공된 개체의 값으로 교환합니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|개체 매개 변수에서 이 `basic_istringstream` 개체에 값을 할당합니다.|  
+|[rdbuf](#rdbuf)|Returns the address of the stored stream buffer of type `pointer` to [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|  
+|[str](#str)|Sets or gets the text in a string buffer without changing the write position.|  
+|[swap](#swap)|Exchanges the values in this `basic_istringstream` object for those of the provided object.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<sstream>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Assigns the values to this `basic_istringstream` object from the object parameter.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<sstream>  
+  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  basic_istringstream::allocator_type  
- 이 형식은 템플릿 매개 변수 `Alloc`의 동의어입니다.  
+ The type is a synonym for the template parameter `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
 ##  <a name="basic_istringstream"></a>  basic_istringstream::basic_istringstream  
- `basic_istringstream` 형식의 개체를 생성합니다.  
+ Constructs an object of type `basic_istringstream`.  
   
 ```  
 explicit basic_istringstream(
@@ -121,52 +124,52 @@ basic_istringstream(
     basic_istringstream&& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Mode`  
- [ios_base::openmode](../standard-library/ios-base-class.md#openmode)의 열거형 중 하나입니다.  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `str`  
- `basic_string` 형식의 개체입니다.  
+ An object of type `basic_string`.  
   
  `right`  
- `basic_istringstream` 개체에 대한 rvalue 참조입니다.  
+ An rvalue reference of a `basic_istringstream` object.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 [basic_istream](../standard-library/basic-istream-class.md)( `sb`)를 호출하여 기본 클래스를 초기화합니다. 여기서 `sb`는 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`> 클래스의 저장된 개체입니다. 또한 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`)을 호출하여 `sb`를 초기화합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base class by calling [basic_istream](../standard-library/basic-istream-class.md)( `sb`), where `sb` is the stored object of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>. It also initializes `sb` by calling `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).  
   
- 두 번째 생성자는 `basic_istream(sb)`를 호출하여 기본 개체를 초기화합니다. 또한 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`)을 호출하여 `sb`를 초기화합니다.  
+ The second constructor initializes the base class by calling `basic_istream(sb)`. It also initializes `sb` by calling `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`).  
   
- 세 번째 생성자는 rvalue 참조로 처리되는 `right`의 내용으로 개체를 초기화합니다.  
+ The third constructor initializes the object with the contents of `right`, treated as an rvalue reference.  
   
 ##  <a name="op_eq"></a>  basic_istringstream::operator=  
- 개체 매개 변수에서 이 `basic_istringstream` 개체에 값을 할당합니다.  
+ Assigns the values to this `basic_istringstream` object from the object parameter.  
   
 ```  
 basic_istringstream& operator=(basic_istringstream&& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- `basic_istringstream` 개체에 대한 rvalue 참조입니다.  
+ An rvalue reference to a `basic_istringstream` object.  
   
-### <a name="remarks"></a>설명  
- 멤버 연산자는 rvalue 참조 이동 할당으로 처리되는 `right`의 내용을 사용하여 개체의 내용을 바꿉니다.  
+### <a name="remarks"></a>Remarks  
+ The member operator replaces the contents of the object with the contents of `right`, treated as an rvalue reference move assignment.  
   
 ##  <a name="rdbuf"></a>  basic_istringstream::rdbuf  
- **pointer** 형식의 저장된 스트림 버퍼 주소를 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>로 반환합니다.  
+ Returns the address of the stored stream buffer of type **pointer** to [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
   
 ```  
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- **pointer** 형식의 저장된 스트림 버퍼 주소를 basic_stringbuf< **Elem**, **Tr**, `Alloc`>로 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The address of the stored stream buffer of type **pointer** to basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
   
-### <a name="example"></a>예제  
-  `rdbuf`의 사용 예제는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) for an example that uses `rdbuf`.  
   
 ##  <a name="str"></a>  basic_istringstream::str  
- 쓰기 위치를 변경하지 않고 문자열 버퍼에서 텍스트를 설정하거나 가져옵니다.  
+ Sets or gets the text in a string buffer without changing the write position.  
   
 ```  
 basic_string<Elem, Tr, Alloc> str() const;
@@ -176,38 +179,38 @@ void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Newstr`  
- 새 문자열입니다.  
+ The new string.  
   
-### <a name="return-value"></a>반환 값  
- [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`> 클래스의 개체를 반환합니다. 이 개체의 제어된 시퀀스는 **\*this**에 의해 제어된 시퀀스의 복사본입니다.  
+### <a name="return-value"></a>Return Value  
+ Returns an object of class [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, whose controlled sequence is a copy of the sequence controlled by **\*this**.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str)을 반환합니다. 두 번째 멤버 함수는 `rdbuf` -> **str**( `_Newstr`)을 호출합니다.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). The second member function calls `rdbuf` -> **str**( `_Newstr`).  
   
-### <a name="example"></a>예제  
-  **str**의 사용 예제는 [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str)을 참조하세요.  
+### <a name="example"></a>Example  
+  See [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) for an example that uses **str**.  
   
 ##  <a name="swap"></a>  basic_istringstream::swap  
- 두 `basic_istringstream` 개체의 값을 교환합니다.  
+ Exchanges the values of two `basic_istringstream` objects.  
   
 ```  
 void swap(basic_istringstream& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|`basic_istringstream` 개체에 대한 `lvalue` 참조입니다.|  
+|`right`|An `lvalue` reference to a `basic_istringstream` object.|  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 이 개체의 값과 `right`의 값을 교환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function exchanges the values of this object and the values of `right`.  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 프로그래밍](../standard-library/iostream-programming.md)   
- [iostreams 규칙](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

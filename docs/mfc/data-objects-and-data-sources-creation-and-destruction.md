@@ -1,93 +1,111 @@
 ---
-title: "데이터 개체 및 데이터 소스: 생성 및 소멸 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터 개체[C++], 만들기"
-  - "데이터 개체[C++], 소멸"
-  - "데이터 소스 개체[C++], 만들기"
-  - "데이터 소스 개체[C++], 소멸"
-  - "데이터 소스[C++], 및 데이터 개체"
-  - "데이터 소스[C++], 만들기"
-  - "데이터 소스[C++], 소멸"
-  - "데이터 소스[C++], 역할"
-  - "데이터 개체 제거"
-  - "소멸[C++], 데이터 개체"
-  - "소멸[C++], 데이터 소스"
-  - "개체 만들기[C++], 데이터 소스 개체"
+title: 'Data Objects and Data Sources: Creation and Destruction | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- destroying data objects [MFC]
+- object creation [MFC], data source objects
+- data sources [MFC], and data objects
+- data source objects [MFC], creating
+- destruction [MFC], data sources
+- data source objects [MFC], destroying
+- data objects [MFC], creating
+- data objects [MFC], destroying
+- data sources [MFC], role
+- data sources [MFC], destroying
+- destruction [MFC], data objects
+- data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 데이터 개체 및 데이터 소스: 생성 및 소멸
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0117f2ea3ab82b9748a611f9b1c52e2e089cabb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-문서 [데이터 개체 및 데이터 소스\(OLE\)](../mfc/data-objects-and-data-sources-ole.md)에 설명된 대로 데이터 개체와 데이터 소스는 데이터 전송의 양쪽을 나타냅니다.  이 문서에서는 다음을 포함하여 데이터 전송을 제대로 수행하기 위해 이들 개체 및 소스를 만들고 제거할 경우에 대해 설명합니다.  
+---
+# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Data Objects and Data Sources: Creation and Destruction
+As explained in the article [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md), data objects and data sources represent both sides of a data transfer. This article explains when to create and destroy these objects and sources to perform your data transfers properly, including:  
   
--   [데이터 개체 만들기](#_core_creating_data_objects)  
+-   [Creating data objects](#_core_creating_data_objects)  
   
--   [데이터 개체 제거](#_core_destroying_data_objects)  
+-   [Destroying data objects](#_core_destroying_data_objects)  
   
--   [데이터 소스 만들기](#_core_creating_data_sources)  
+-   [Creating data sources](#_core_creating_data_sources)  
   
--   [데이터 소스 제거](#_core_destroying_data_sources)  
+-   [Destroying data sources](#_core_destroying_data_sources)  
   
-##  <a name="_core_creating_data_objects"></a> 데이터 개체 만들기  
- 데이터 개체는 대상 응용 프로그램인 클라이언트 또는 서버에서 사용됩니다.  대상 응용 프로그램의 데이터 개체는 소스 응용 프로그램과 대상 응용 프로그램 간 연결의 한쪽 끝입니다.  대상 응용 프로그램의 데이터 개체는 데이터 소스의 데이터에 액세스하고 데이터와 상호 작용하는 데 사용됩니다.  
+##  <a name="_core_creating_data_objects"></a> Creating Data Objects  
+ Data objects are used by the destination application — either the client or the server. A data object in the destination application is one end of a connection between the source application and the destination application. A data object in the destination application is used to access and interact with the data in the data source.  
   
- 데이터 개체를 필요한 두 가지 일반적인 경우가 있습니다.  첫 번째 상황은 끌어서 놓기를 사용하여 응용 프로그램에서 데이터를 삭제하는 경우입니다.  두 번째 상황은 편집 메뉴에서 붙여넣기 또는 선택하여 붙여넣기를 선택하는 경우입니다.  
+ There are two common situations where a data object is needed. The first situation is when data is dropped in your application using drag and drop. The second situation is when Paste or Paste Special is chosen from the Edit menu.  
   
- 끌어서 놓기 상황에서는 데이터 개체를 만들 필요가 없습니다.  기존 데이터 개체에 대한 포인터는 `OnDrop` 함수에 전달됩니다.  이 데이터 개체는 프레임워크를 통해 끌어서 놓기 작업 일부로 만들어지고 프레임워크를 통해 제거됩니다.  다른 메서드에서 붙여넣기가 수행될 때 항상 이 경우에 해당하는 것은 아닙니다.  자세한 내용은 [데이터 개체 제거](#_core_destroying_data_objects)를 참조하세요.  
+ In a drag-and-drop situation, you do not need to create a data object. A pointer to an existing data object will be passed to your `OnDrop` function. This data object is created by the framework as part of the drag-and-drop operation and will also be destroyed by it. This is not always the case when pasting is done by another method. For more information, see [Destroying Data Objects](#_core_destroying_data_objects).  
   
- 응용 프로그램에서 붙여넣기 또는 선택하여 붙여넣기 작업을 수행할 경우 `COleDataObject` 개체를 만들고 해당 `AttachClipboard` 멤버 함수를 호출해야 합니다.  이렇게 하면 데이터 개체가 클립보드의 데이터와 연결됩니다.  그런 다음 붙여넣기 함수에서 이 데이터 개체를 사용할 수 있습니다.  
+ If the application is performing a paste or paste special operation, you should create a `COleDataObject` object and call its `AttachClipboard` member function. This associates the data object with the data on the Clipboard. You can then use this data object in your paste function.  
   
-##  <a name="_core_destroying_data_objects"></a> 데이터 개체 제거  
- [데이터 개체 만들기](#_core_creating_data_objects)에 설명된 체계를 따를 경우 데이터 개체 제거는 데이터 전송의 사소한 측면입니다.  붙여넣기 함수에서 만들어진 데이터 개체는 붙여넣기 함수가 반환될 때 MFC를 통해 제거됩니다.  
+##  <a name="_core_destroying_data_objects"></a> Destroying Data Objects  
+ If you follow the scheme described in [Creating Data Objects](#_core_creating_data_objects), destroying data objects is a trivial aspect of data transfers. The data object that was created in your paste function will be destroyed by MFC when your paste function returns.  
   
- 붙여넣기 작업을 처리하는 또 다른 방법을 따를 경우 붙여넣기 작업이 완료된 후 데이터 개체가 제거되어야 합니다.  데이터 개체가 제거될 때까지 응용 프로그램에서는 데이터를 클립보드에 복사할 수 없습니다.  
+ If you follow another method of handling paste operations, make sure the data object is destroyed after your paste operation is complete. Until the data object is destroyed, it will be impossible for any application to successfully copy data to the Clipboard.  
   
-##  <a name="_core_creating_data_sources"></a> 데이터 소스 만들기  
- 데이터 소스는 데이터 전송의 클라이언트 또는 서버 쪽이 될 수 있는 데이터 전송의 소스에서 사용됩니다.  소스 응용 프로그램의 데이터 소스는 소스 응용 프로그램과 대상 응용 프로그램 간 연결의 한쪽 끝입니다.  대상 응용 프로그램의 데이터 개체는 데이터 소스의 데이터와 상호 작용하는 데 사용됩니다.  
+##  <a name="_core_creating_data_sources"></a> Creating Data Sources  
+ Data sources are used by the source of the data transfer, which can be either the client or the server side of the data transfer. A data source in the source application is one end of a connection between the source application and the destination application. A data object in the destination application is used to interact with the data in the data source.  
   
- 데이터 소스는 응용 프로그램에서 데이터를 클립보드에 복사해야 할 때 생성됩니다.  다음과 같은 일반적인 시나리오가 실행됩니다.  
+ Data sources are created when an application needs to copy data to the Clipboard. A typical scenario runs like this:  
   
-1.  사용자가 일부 데이터를 선택합니다.  
+1.  The user selects some data.  
   
-2.  사용자가 **편집** 메뉴에서 **복사**\(또는 **잘라내기**\)를 선택하거나 끌어서 놓기 작업을 시작합니다.  
+2.  The user chooses **Copy** (or **Cut**) from the **Edit** menu or begins a drag-and-drop operation.  
   
-3.  프로그램의 디자인에 따라 응용 프로그램에서는 `COleDataSource` 개체 또는 `COleDataSource`에서 파생 클래스 개체를 만듭니다.  
+3.  Depending on the design of the program, the application creates either a `COleDataSource` object or an object from a class derived from `COleDataSource`.  
   
-4.  선택한 데이터는 `COleDataSource::CacheData` 또는 `COleDataSource::DelayRenderData` 그룹의 함수 중 하나를 호출하는 방식으로 데이터 소스에 삽입됩니다.  
+4.  The selected data is inserted into the data source by calling one of the functions in the `COleDataSource::CacheData` or `COleDataSource::DelayRenderData` groups.  
   
-5.  응용 프로그램에서는 3단계에서 생성된 개체에 속한 `SetClipboard` 멤버 함수\(또는 끌어서 놓기 작업인 경우 `DoDragDrop` 멤버 함수\)를 호출합니다.  
+5.  The application calls the `SetClipboard` member function (or the `DoDragDrop` member function if this is a drag-and-drop operation) belonging to the object created in step 3.  
   
-6.  **잘라내기** 작업이거나 `DoDragDrop`이 `DROPEFFECT_MOVE`를 반환할 경우 1단계에서 선택한 데이터가 문서에서 삭제됩니다.  
+6.  If this is a **Cut** operation or `DoDragDrop` returns `DROPEFFECT_MOVE`, the data selected in step 1 is deleted from the document.  
   
- 이 시나리오는 MFC OLE 샘플 [OCLIENT](../top/visual-cpp-samples.md) 및 [HIERSVR](../top/visual-cpp-samples.md)을 통해 구현됩니다.  `GetClipboardData` 및 `OnGetClipboardData` 함수 외에 모든 함수에 대한 각 응용 프로그램의 `CView` 파생 클래스 소스를 살펴봅니다.  이들 두 함수는 `COleClientItem` 또는 `COleServerItem` 파생 클래스 구현이 포함됩니다.  이들 샘플 프로그램에서는 이러한 개념을 구현하는 방법의 좋은 예를 제공합니다.  
+ This scenario is implemented by the MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md). Look at the source for each application's `CView`-derived class for all but the `GetClipboardData` and `OnGetClipboardData` functions. These two functions are in either the `COleClientItem` or `COleServerItem`-derived class implementations. These sample programs provide a good example of how to implement these concepts.  
   
- `COleDataSource` 개체를 만들어야 할 한 가지 다른 상황은 끌어서 놓기 작업의 기본 동작을 수정할 경우 발생합니다.  자세한 내용은 [끌어서 놓기: 사용자 지정](../mfc/drag-and-drop-customizing.md) 문서를 참조하세요.  
+ One other situation in which you might want to create a `COleDataSource` object occurs if you are modifying the default behavior of a drag-and-drop operation. For more information, see the [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md) article.  
   
-##  <a name="_core_destroying_data_sources"></a> 데이터 소스 제거  
- 데이터 소스는 현재 데이터 소스를 처리해야 하는 응용 프로그램을 통해 제거되어야 합니다.  [COleDataSource::DoDragDrop](../Topic/COleDataSource::DoDragDrop.md)을 호출하는 것과 같이 데이터 소스를 OLE에 전달하는 경우에는 **pDataSrc\-\>InternalRelease**를 호출해야 합니다.  예:  
+##  <a name="_core_destroying_data_sources"></a> Destroying Data Sources  
+ Data sources must be destroyed by the application currently responsible for them. In situations where you hand the data source to OLE, such as calling [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), you need to call **pDataSrc->InternalRelease**. For example:  
   
- [!code-cpp[NVC_MFCListView#1](../mfc/codesnippet/CPP/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   
- 데이터를 OLE에 전달하지 않은 경우에는 사용자가 일반적인 C\+\+ 개체를 제거하는 것처럼 데이터 소스를 제거해야 합니다.  
+ If you have not handed your data source to OLE, then you are responsible for destroying it, as with any typical C++ object.  
   
- 자세한 내용은 [끌어서 놓기](../mfc/drag-and-drop-ole.md), [클립보드](../mfc/clipboard.md) 및 [데이터 개체 및 데이터 소스 조작](../mfc/data-objects-and-data-sources-manipulation.md)을 참조하세요.  
+ For more information, see [Drag and Drop](../mfc/drag-and-drop-ole.md), [Clipboard](../mfc/clipboard.md), and [Manipulating Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md).  
   
-## 참고 항목  
- [데이터 개체 및 데이터 소스\(OLE\)](../mfc/data-objects-and-data-sources-ole.md)   
+## <a name="see-also"></a>See Also  
+ [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [COleDataObject Class](../mfc/reference/coledataobject-class.md)   
  [COleDataSource Class](../mfc/reference/coledatasource-class.md)
+

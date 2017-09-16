@@ -1,5 +1,5 @@
 ---
-title: "conditional 클래스 | Microsoft 문서"
+title: conditional Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- conditional
 - type_traits/std::conditional
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: b7e187e8ddbb4a9457b5fe9eddda152464d7518d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ac4654577ee1869050a2750587bdef36f170432e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="conditional-class"></a>conditional 클래스
-지정된 조건에 따라 두 가지 형식 중 하나를 선택합니다.  
+# <a name="conditional-class"></a>conditional Class
+Selects one of two types, depending on the specified condition.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <bool B, class T1, class T2>  
@@ -55,25 +54,25 @@ template <bool _Test, class _T1, class _T2>
 using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `B`  
- 선택된 형식을 확인하는 값입니다.  
+ The value that determines the selected type.  
   
  `T1`  
- B가 true인 경우의 형식 결과입니다.  
+ The type result when B is true.  
   
  `T2`  
- B가 false인 경우의 형식 결과입니다.  
+ The type result when B is false.  
   
-## <a name="remarks"></a>설명  
- 템플릿 멤버 typedef `conditional<B, T1, T2>::type` 는 `T1` 가 `B` 로 확인될 때 `true`으로 확인되고, `T2` 가 `B` 로 확인될 때 `false`로 확인됩니다.  
+## <a name="remarks"></a>Remarks  
+ The template member typedef `conditional<B, T1, T2>::type` evaluates to `T1` when `B` evaluates to `true`, and evaluates to `T2` when `B` evaluates to `false`.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

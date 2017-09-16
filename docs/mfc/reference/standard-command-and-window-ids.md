@@ -1,5 +1,5 @@
 ---
-title: "표준 명령 및 창 Id | Microsoft 문서"
+title: Standard Command and Window IDs | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,29 +33,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: d308f3f9efc5933124460d9839a0e94fffa60b4a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 30a36f5b71a99888eff47c539c9bf3534481e71d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="standard-command-and-window-ids"></a>표준 명령 및 창 ID
-Microsoft Foundation Class 라이브러리는 Afxres.h의 여러 표준 명령 및 창 ID를 정의합니다. 이러한 ID는 메시지를 처리기 함수에 매핑하기 위해 리소스 편집기 및 속성 창 내에서 일반적으로 사용됩니다. 모든 표준 명령는 **ID_** 접두사입니다. 예를 들어 메뉴 편집기를 사용 하면 일반적으로 파일 열기 메뉴 항목에 연결한 표준 `ID_FILE_OPEN` 명령 id입니다.  
+# <a name="standard-command-and-window-ids"></a>Standard Command and Window IDs
+The Microsoft Foundation Class Library defines a number of standard command and window IDs in Afxres.h. These IDs are most commonly used within the resource editors and the Properties window to map messages to your handler functions. All standard commands have an             **ID_** prefix. For example, when you use the menu editor, you normally bind the File Open menu item to the standard             `ID_FILE_OPEN` command ID.  
   
- 대부분의 표준 명령에 대 한 응용 프로그램 코드 하지 않아도 명령 ID를 참조 하는 프레임 워크 자체가 해당 기본 프레임 워크 클래스에서 메시지 맵을 통해 명령을 처리 하기 때문에 ( `CWinThread`, `CWinApp`, `CView`, **CDocument**등).  
+ For most standard commands, application code does not need to refer to the command ID, because the framework itself handles the commands through message maps in its primary framework classes (                `CWinThread`,                 `CWinApp`,                 `CView`,                 **CDocument**, and so on).  
   
- 접두사를 포함 하는 여러 다른 표준 id가 정의 하는 표준 명령 Id 외에도 **AFX_ID**합니다. 이러한 Id는 표준 창 Id (접두사 **AFX_IDW_**), 문자열 Id (접두사 **AFX_IDS_**), 및 기타 형식이 있습니다.  
+ In addition to standard command IDs, a number of other standard IDs are defined which have a prefix of                 **AFX_ID**. These IDs include standard window IDs (prefix                 **AFX_IDW_**), string IDs (prefix                 **AFX_IDS_**), and several other types.  
   
- 로 시작 하는 Id는 **AFX_ID** 접두사는 거의 사용 되지 않지만 프레임 워크 참조 하는 함수를 재정의 하는 경우 이러한 Id를 참조 해야 할 수는 **AFX_ID**s.  
+ IDs that begin with the                 **AFX_ID** prefix are rarely used by programmers, but you might need to refer to these IDs when overriding framework functions that also refer to the                 **AFX_ID**s.  
   
- ID는 이 참조 설명서에서 개별적으로 설명하지 않습니다. 기술 참고 사항에서에 대 한 자세한 정보를 찾을 수 있습니다 [20](../../mfc/tn020-id-naming-and-numbering-conventions.md), [21](../../mfc/tn021-command-and-message-routing.md), 및 [22](../../mfc/tn022-standard-commands-implementation.md)합니다.  
+ IDs are not individually documented in this reference. You can find more information on them in Technical Notes                 [20](../../mfc/tn020-id-naming-and-numbering-conventions.md),                 [21](../../mfc/tn021-command-and-message-routing.md), and                 [22](../../mfc/tn022-standard-commands-implementation.md).  
   
 > [!NOTE]
->  헤더 파일 Afxres.h는 Afxwin.h에 간접적으로 포함됩니다. 응용 프로그램의 리소스 스크립트(.rc) 파일에 다음 문을 명시적으로 포함해야 합니다.  
+>  The header file Afxres.h is indirectly included in Afxwin.h. You must explicitly include the following statement in your application's resource script (.rc) file:  
   
- [!code-cpp[NVC_MFC_Utilities #&47;](../../mfc/codesnippet/cpp/standard-command-and-window-ids_1.h)]  
+ [!code-cpp[NVC_MFC_Utilities#47](../../mfc/codesnippet/cpp/standard-command-and-window-ids_1.h)]  
   
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "slice 클래스 | Microsoft Docs"
+title: slice Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - valarray/std::slice
-- slice
 - valarray/std::slice::size
 - valarray/std::slice::start
 - valarray/std::slice::stride
 dev_langs:
 - C++
 helpviewer_keywords:
-- slice class
+- std::slice [C++]
+- std::slice [C++], size
+- std::slice [C++], start
+- std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 caps.latest.revision: 23
 author: corob-msft
@@ -37,59 +39,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1732814d42a3c20e9c0248d61bd93f830c073bd9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2fb661edd99dba7d187988ee0e3401f3fc784724
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="slice-class"></a>slice 클래스
-부모 valarray의 1차원 하위 집합을 정의하는 데 사용되는 valarray에 대한 유틸리티 클래스입니다. valarray가 배열의 모든 요소를 포함하는 2차원 행렬로 간주되는 경우 조각은 2차원 배열에서 1차원 벡터를 추출합니다.  
+# <a name="slice-class"></a>slice Class
+A utility class to valarray that is used to define one-dimensional subsets of a parent valarray. If a valarray is regarded as a two-dimensional matrix with all elements in an array, then the slice extracts a vector in one dimension out of the two-dimensional array.  
   
-## <a name="remarks"></a>설명  
- 이 클래스는 [slice_array](../standard-library/slice-array-class.md) 형식의 개체 특징을 결정하는 매개 변수를 저장합니다. slice 클래스의 개체가 [valarray](../standard-library/valarray-class.md#op_at)**\<Type>** 클래스의 개체에 대한 인수로 표시되는 경우 valarray의 하위 집합이 간접적으로 생성됩니다. 부모 valarray에서 선택되는 하위 집합을 지정하는 저장된 값은 다음과 같습니다.  
+## <a name="remarks"></a>Remarks  
+ The class stores the parameters that characterize an object of type [slice_array](../standard-library/slice-array-class.md) The subset of a valarray is indirectly constructed when an object of class slice appears as an argument for an object of class [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. The stored values that specify the subset selected from the parent valarray include:  
   
--   배열의 시작 인덱스입니다.  
+-   A starting index in the valarray.  
   
--   조각의 총 길이 또는 요소 수입니다.  
+-   A total length, or number of elements in the slice.  
   
--   valarray에서 이후 요소 인덱스 사이의 거리 또는 진행 속도입니다.  
+-   A stride, or distance between subsequent indices of elements in the valarray.  
   
- slice에서 정의된 집합이 상수 valarray의 하위 집합인 경우 slice는 새 valarray입니다. slice에서 정의된 집합이 비상수 valarray의 하위 집합인 경우 slice에 원래 valarray에 대한 참조 의미 체계가 있습니다. 비상수 valarray에 대한 평가 메커니즘은 시간과 메모리를 절약합니다.  
+ If the set defined by a slice is the subset of a constant valarray, then the slice is a new valarray. If the set defined by a slice is the subset of a nonconstant valarray, then the slice has reference semantics to the original valarray. The evaluation mechanism for nonconstant valarrays saves time and memory.  
   
- slice에서 정의된 소스 및 대상 하위 집합이 고유하고 모든 인덱스가 유효한 경우에만 valarray에 대한 작업이 보장됩니다.  
+ Operations on valarrays are guaranteed only if the source and destination subsets defined by the slices are distinct and all indices are valid.  
   
-### <a name="constructors"></a>생성자  
-  
-|||  
-|-|-|  
-|[slice](#slice)|동일한 거리만큼 떨어져 있고 지정된 요소에서 시작하는 많은 요소로 구성된 `valarray`의 하위 집합을 정의합니다.|  
-  
-### <a name="member-functions"></a>멤버 함수  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[size](#size)|`valarray`의 조각에 있는 요소 수를 찾습니다.|  
-|[start](#start)|`valarray`의 조각 시작 인덱스를 찾습니다.|  
-|[stride](#stride)|`valarray`의 조각 요소 간의 거리를 찾습니다.|  
+|[slice](#slice)|Defines a subset of a `valarray` that consists of a number of elements that are an equal distance apart and that start at a specified element.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<valarray>  
+### <a name="member-functions"></a>Member Functions  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[size](#size)|Finds the number of elements in a slice of a `valarray`.|  
+|[start](#start)|Finds the starting index of a slice of a `valarray`.|  
+|[stride](#stride)|Finds the distance between elements in a slice of a `valarray`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
+  
+ **Namespace:** std  
   
 ##  <a name="size"></a>  slice::size  
- valarray의 조각에 있는 요소 수를 찾습니다.  
+ Finds the number of elements in a slice of a valarray.  
   
 ```  
 size_t size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- valarray의 조각에 있는 요소의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of elements in a slice of a valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_size.cpp  
@@ -142,7 +144,7 @@ The size of slice vaSlice is: 6.
 ```  
   
 ##  <a name="slice"></a>  slice::slice  
- 동일한 거리만큼 떨어져 있고 지정된 요소에서 시작하는 많은 요소로 구성된 valarray의 하위 집합을 정의합니다.  
+ Defines a subset of a valarray that consists of a number of elements that are an equal distance apart and that start at a specified element.  
   
 ```  
 slice();
@@ -153,23 +155,23 @@ slice(
     size_t stride);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_StartIndex`  
- 하위 집합에 있는 첫 번째 요소의 valarray 인덱스입니다.  
+ The valarray index of the first element in the subset.  
   
  `_Len`  
- 하위 집합의 요소 수입니다.  
+ The number of elements in the subset.  
   
  `stride`  
- 하위 집합의 요소 간 거리입니다.  
+ The distance between elements in the subset.  
   
-### <a name="return-value"></a>반환 값  
- 기본 생성자는 시작 인덱스, 총 길이 및 진행 속도에 대해 0을 저장합니다. 두 번째 생성자는 시작 인덱스에 대해 `_StartIndex`, 총 길이에 대해 `_Len`, 진행 속도에 대해 `stride`를 저장합니다.  
+### <a name="return-value"></a>Return Value  
+ The default constructor stores zeros for the starting index, total length, and stride. The second constructor stores `_StartIndex` for the starting index, `_Len` for the total length, and `stride` for the stride.  
   
-### <a name="remarks"></a>설명  
- 진행 속도는 음수일 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The stride may be negative.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_ctor.cpp  
@@ -211,16 +213,16 @@ va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```  
   
 ##  <a name="start"></a>  slice::start  
- valarray 조각의 시작 인덱스를 찾습니다.  
+ Finds the starting index of a slice of a valarray.  
   
 ```  
 size_t start() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- valarray 조각의 시작 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The starting index of a slice of a valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_start.cpp  
@@ -267,16 +269,16 @@ The start index of slice vaSlice is: 3.
 ```  
   
 ##  <a name="stride"></a>  slice::stride  
- valarray의 조각 내 요소 간 거리를 찾습니다.  
+ Finds the distance between elements in a slice of a valarray.  
   
 ```  
 size_t stride() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- valarray의 조각 내 요소 간 거리입니다.  
+### <a name="return-value"></a>Return Value  
+ The distance between elements in a slice of a valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_stride.cpp  
@@ -322,7 +324,7 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

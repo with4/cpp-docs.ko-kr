@@ -1,5 +1,5 @@
 ---
-title: "&lt;array&gt; 함수 | Microsoft 문서"
+title: '&lt;array&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,22 +17,26 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 326e4fddbf29e706faa4e726ece331a0fe64471b
+helpviewer_keywords:
+- std::array [C++], get
+- std::get [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d7bb16b490d20934a263147c0d6e28694e006552
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltarraygt-functions"></a>&lt;array&gt; 함수
-\<array> 헤더에는 `array` 개체에서 작동하는 두 개의 비 멤버 함수인 `get` 및 `swap`이 포함되어 있습니다.  
+# <a name="ltarraygt-functions"></a>&lt;array&gt; functions
+The \<array> header includes two non-member functions, `get` and `swap`, that operate on `array` objects.  
   
 |||  
 |-|-|  
 |[get](#get)|[swap](#swap)|  
   
 ##  <a name="get"></a>  get  
-배열의 지정된 요소에 대한 참조를 반환합니다.  
+Returns a reference to the specified element of the array.  
   
 ```  
 template <int Index, class T, size_t N>  
@@ -45,20 +49,20 @@ template <int Index, class T, size_t N>
 constexpr T&& get(array<T, N>&& arr) noexcept;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Index`  
- 요소 오프셋입니다.  
+ The element offset.  
   
  `T`  
- 요소의 형식입니다.  
+ The type of an element.  
   
  `N`  
- 배열의 요소 수입니다.  
+ The number of elements in the array.  
   
  `arr`  
- 선택할 배열입니다.  
+ The array to select from.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <array>   
@@ -91,30 +95,30 @@ int main()
 ```  
   
 ##  <a name="swap"></a>  swap  
-두 개의 `array` 개체를 교환하는 `std::swap`의 비 멤버 템플릿 특수화입니다.  
+A non-member template specialization of `std::swap` that swaps two `array` objects.  
   
 ```  
 template <class Ty, std::size_t N>  
 void swap(array<Ty, N>& left, array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 요소의 형식입니다.  
+ The type of an element.  
   
  `N`  
- 배열의 크기입니다.  
+ The size of the array.  
   
  `left`  
- 교환할 첫 번째 배열입니다.  
+ The first array to swap.  
   
  `right`  
- 교환할 두 번째 배열입니다.  
+ The second array to swap.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `left.swap(right)`를 실행합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function executes `left.swap(right)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__swap.cpp   
@@ -160,7 +164,7 @@ int main()
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

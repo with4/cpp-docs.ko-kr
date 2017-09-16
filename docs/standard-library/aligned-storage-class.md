@@ -1,5 +1,5 @@
 ---
-title: "aligned_storage 클래스 | Microsoft 문서"
+title: aligned_storage Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- aligned_storage
 - type_traits/std::aligned_storage
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 0da44c2fb505b2edbce9e5ccb028a6e167b4cf17
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: aba37911df828d499dd3594e2db0e4fe0916c105
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="alignedstorage-class"></a>aligned_storage 클래스
-적절하게 정렬된 형식을 만듭니다.  
+# <a name="alignedstorage-class"></a>aligned_storage Class
+Makes suitably aligned type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <std::size_t Len, std::size_t Align>  
@@ -55,17 +54,17 @@ template <std::size_t Len, std::size_t Align = alignment_of<max_align_t>::value>
 using aligned_storage_t = typename aligned_storage<Len, Align>::type;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Len`  
- 개체 크기입니다.  
+ The object size.  
   
  `Align`  
- 개체 정렬입니다.  
+ The object alignment.  
   
-## <a name="remarks"></a>설명  
- 템플릿 멤버 typedef `type`은 맞춤 `Align` 및 크기 `Len`의 POD 형식과 동의어입니다. `Align`은 일부 형식 `T` 또는 기본 맞춤에 대해 `alignment_of<T>::value`와 같아야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The template member typedef `type` is a synonym for a POD type with alignment `Align` and size `Len`. `Align` must be equal to `alignment_of<T>::value` for some type `T`, or to the default alignment.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -90,12 +89,12 @@ alignment_of<int> == 4
 aligned to double == 8  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [alignment_of 클래스](../standard-library/alignment-of-class.md)
+ [alignment_of Class](../standard-library/alignment-of-class.md)
 

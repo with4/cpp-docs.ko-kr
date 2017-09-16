@@ -1,5 +1,5 @@
 ---
-title: "CDialogEx 클래스 | Microsoft 문서"
+title: CDialogEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,8 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDialogEx class
-- CDialogEx::PreTranslateMessage method
+- CDialogEx [MFC], CDialogEx
+- CDialogEx [MFC], SetBackgroundColor
+- CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
 caps.latest.revision: 27
 author: mikeblome
@@ -38,46 +39,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: c12aa0152fdbf83e423b944a0100045962ddb704
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63da5d8ae72d64020ee336dc4d8b3b0bceb428ff
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdialogex-class"></a>CDialogEx 클래스
-`CDialogEx` 클래스는 대화 상자의 배경 색과 배경 이미지를 지정합니다.  
+# <a name="cdialogex-class"></a>CDialogEx Class
+The `CDialogEx` class specifies the background color and background image of a dialog box.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDialogEx : public CDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogEx::CDialogEx](#cdialogex)|`CDialogEx` 개체를 생성합니다.|  
-|`CDialogEx::~CDialogEx`|소멸자|  
+|[CDialogEx::CDialogEx](#cdialogex)|Constructs a `CDialogEx` object.|  
+|`CDialogEx::~CDialogEx`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|대화 상자의 배경 색을 설정합니다.|  
-|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|대화 상자의 배경 이미지를 설정합니다.|  
+|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Sets the background color of the dialog box.|  
+|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Sets the background image of the dialog box.|  
   
-## <a name="remarks"></a>주의  
- `CDialogEx` 클래스를 사용하려면 `CDialogEx` 클래스 대신 `CDialog` 클래스에서 대화 상자 클래스를 파생합니다.  
+## <a name="remarks"></a>Remarks  
+ To use the `CDialogEx` class, derive your dialog box class from the `CDialogEx` class instead of the `CDialog` class.  
   
- 대화 상자 이미지는 리소스 파일에 저장됩니다. 프레임워크는 리소스 파일에서 로드되는 모든 이미지를 자동으로 삭제합니다. 현재 배경 이미지를 프로그래밍 방식으로 삭제 하려면 호출의 [CDialogEx::SetBackgroundImage](#setbackgroundimage) 메서드 또는 구현 된 `OnDestroy` 이벤트 처리기입니다. 호출 하는 경우는 [CDialogEx::SetBackgroundImage](#setbackgroundimage) 메서드를 한 `HBITMAP` 이미지 핸들로 매개 변수입니다. `CDialogEx` 개체가 이미지의 소유권을 갖게 되며 `m_bAutoDestroyBmp` 플래그가 `TRUE`이면 삭제합니다.  
+ Dialog box images are stored in a resource file. The framework automatically deletes any image that is loaded from the resource file. To programmatically delete the current background image, call the [CDialogEx::SetBackgroundImage](#setbackgroundimage) method or implement an `OnDestroy` event handler. When you call the [CDialogEx::SetBackgroundImage](#setbackgroundimage) method, pass in an `HBITMAP` parameter as the image handle. The `CDialogEx` object will take ownership of the image and delete it if the `m_bAutoDestroyBmp` flag is `TRUE`.  
   
- A `CDialogEx` 개체의 부모가 될 수는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 개체입니다. [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 호출 개체는 `CDialogEx::SetActiveMenu` 메서드 때는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 개체가 열려 있습니다. 나중에 `CDialogEx` 개체가 처리 될 때까지 모든 메뉴 이벤트는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 개체가 닫혀 있습니다.  
+ A `CDialogEx` object can be a parent of a [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object. The [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object calls the `CDialogEx::SetActiveMenu` method when the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object opens. Afterward, the `CDialogEx` object handles any menu event until the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object is closed.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,11 +89,11 @@ class CDialogEx : public CDialog
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdialogex.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
- `CDialogEx` 개체를 생성합니다.  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
+ Constructs a `CDialogEx` object.  
   
 ```  
 CDialogEx(
@@ -105,25 +106,25 @@ CDialogEx(
     CWnd* pParentWnd=NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nIDTemplate`  
- 대화 상자 템플릿 리소스 ID입니다.  
+ The resource ID of a dialog box template.  
   
  [in] `lpszTemplateName`  
- 대화 상자 템플릿 리소스 이름입니다.  
+ The resource name of a dialog box template.  
   
  [in] `pParent`  
- 부모 창에 대 한 포인터입니다. 기본값은 `NULL`입니다.  
+ A pointer to the parent window. The default value is `NULL`.  
   
  [in] `pParentWnd`  
- 부모 창에 대 한 포인터입니다. 기본값은 `NULL`입니다.  
+ A pointer to the parent window. The default value is `NULL`.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
- 대화 상자의 배경 색을 설정합니다.  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
+ Sets the background color of the dialog box.  
   
 ```  
 void SetBackgroundColor(
@@ -131,17 +132,17 @@ void SetBackgroundColor(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- RGB 색상 값입니다.  
+ An RGB color value.  
   
  [in] `bRepaint`  
- `TRUE`즉시; 화면을 업데이트 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to immediately update the screen; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
- 대화 상자의 배경 이미지를 설정합니다.  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
+ Sets the background image of the dialog box.  
   
 ```  
 void SetBackgroundImage(
@@ -157,31 +158,31 @@ BOOL SetBackgroundImage(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hBitmap`  
- 배경 이미지에 대 한 핸들입니다.  
+ A handle to the background image.  
   
  [in] `uiBmpResId`  
- 배경 이미지의 리소스 ID입니다.  
+ The resource ID of the background image.  
   
  [in] `location`  
- 중 하나는 `CDialogEx::BackgroundLocation` 이미지의 위치를 지정 하는 값입니다. 유효한 값에는 BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT, 및 BACKGR_BOTTOMRIGHT 포함 됩니다. 기본값은 BACKGR_TILE 합니다.  
+ One of the `CDialogEx::BackgroundLocation` values that specify the location of the image. Valid values include BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT, and BACKGR_BOTTOMRIGHT. The default value is BACKGR_TILE.  
   
  [in] `bAutoDestroy`  
- `TRUE`배경 이미지를 자동으로 삭제 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to automatically destroy the background image; otherwise, `FALSE`.  
   
  [in] `bRepaint`  
- `TRUE`대화 상자;을 즉시 다시 그리게 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` to immediately redraw the dialog box; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- 오버 로드 구문, 두 번째 방법은 `TRUE` 방법이 고, 그렇지 않으면 경우 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ In the second method overload syntax, `TRUE` if the method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 대화 상자의 클라이언트 영역에 맞게 지정 하는 이미지 늘어나지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The image that you specify is not stretched to fit the dialog box client area.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md)   
- [CContextMenuManager 클래스](../../mfc/reference/ccontextmenumanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)   
+ [CContextMenuManager Class](../../mfc/reference/ccontextmenumanager-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "DDX_DHtml 도우미 매크로 | Microsoft 문서"
+title: DDX_DHtml Helper Macros | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,11 +20,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- macros, exchanging data with HMTL pages
-- DDX macros
-- HTML pages, helper macros
+- macros [MFC], exchanging data with HMTL pages
+- DDX macros [MFC]
+- HTML pages [MFC], helper macros
 - DDX (dialog data exchange), DHtml helper macros
-- macros, DDX_DHtml helpers
+- macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
 caps.latest.revision: 14
 author: mikeblome
@@ -44,34 +44,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: d3c5136b52206a1ec67e1e1fc78ec291a2954faf
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f0ef5d607ee9a3a0dcd9651141174201857d7330
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ddxdhtml-helper-macros"></a>DDX_DHtml 도우미 매크로
-DDX_DHtml 도우미 매크로 사용 하는 HTML 페이지에 컨트롤의 자주 사용 되는 속성에 쉽게 액세스할 수 있습니다.  
+# <a name="ddxdhtml-helper-macros"></a>DDX_DHtml Helper Macros
+The DDX_DHtml helper macros allow easy access to the commonly used properties of controls on an HTML page.  
   
-### <a name="data-exchange-macros"></a>데이터 교환 매크로  
+### <a name="data-exchange-macros"></a>Data Exchange Macros  
   
 |||  
 |-|-|  
-|[DDX_DHtml_ElementValue](#ddx_dhtml_elementvalue)|설정 하거나 선택된 된 컨트롤에서 Value 속성을 검색 합니다.|  
-|[DDX_DHtml_ElementInnerText](#ddx_dhtml_elementinnertext)|설정 하거나 현재 요소의 시작 및 끝 태그 사이 텍스트를 검색 합니다.|  
-|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|설정 하거나 현재 요소의 시작 및 끝 태그 사이의 HTML을 검색 합니다.|  
-|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|설정 하거나 대상 URL 또는 앵커 지점을 검색 합니다.|  
-|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|설정 하거나 대상 창이 나 프레임을 검색 합니다.|  
-|[DDX_DHtml_Img_Src](#ddx_dhtml_img_src)|설정 하거나 이미지 또는 문서에서 비디오 클립의 이름을 검색 합니다.|  
-|[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|설정 하거나 연결된 된 프레임의 URL을 검색 합니다.|  
-|[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|설정 하거나 연결된 된 프레임의 URL을 검색 합니다.|  
+|[DDX_DHtml_ElementValue](#ddx_dhtml_elementvalue)|Sets or retrieves the Value property from the selected control.|  
+|[DDX_DHtml_ElementInnerText](#ddx_dhtml_elementinnertext)|Sets or retrieves the text between the start and end tags of the current element.|  
+|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|Sets or retrieves the HTML between the start and end tags of the current element.|  
+|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|Sets or retrieves the destination URL or anchor point.|  
+|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|Sets or retrieves the target window or frame.|  
+|[DDX_DHtml_Img_Src](#ddx_dhtml_img_src)|Sets or retrieves the name of an image or a video clip in the document.|  
+|[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Sets or retrieves the URL of the associated frame.|  
+|[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Sets or retrieves the URL of the associated frame.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
 
-## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
-설정 하거나 대상 URL 또는 앵커 지점을 검색 합니다.  
+## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
+Sets or retrieves the destination URL or anchor point.  
   
   
   
@@ -82,21 +82,21 @@ DDX_DHtml_Anchor_Href(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>주의  
- 이 매크로 호출 하 여 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 는 DISPID_IHTMLANCHORELEMENT_HREF를 사용 하 여 함수 디스패치 id입니다.
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLANCHORELEMENT_HREF dispatch ID.
 
-## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
- 설정 하거나 대상 창이 나 프레임을 검색 합니다.  
+## <a name="ddx_dhtml_anchor_target"></a>  DDX_DHtml_Anchor_Target
+ Sets or retrieves the target window or frame.  
     
 ```  
 DDX_DHtml_Anchor_Target(
@@ -105,21 +105,21 @@ DDX_DHtml_Anchor_Target(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>주의  
- 이 매크로 호출 하 여 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 는 DISPID_IHTMLANCHORELEMENT_TARGET를 사용 하 여 함수 디스패치 id입니다.  
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLANCHORELEMENT_TARGET dispatch ID.  
 
-## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
- 설정 하거나 현재 요소의 시작 및 끝 태그 사이의 HTML을 검색 합니다.  
+## <a name="ddx_dhtml_elementinnerhtml"></a>  DDX_DHtml_ElementInnerHtml
+ Sets or retrieves the HTML between the start and end tags of the current element.  
   
   
   
@@ -130,22 +130,22 @@ DDX_DHtml_ElementInnerHtml(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>주의  
- 이 매크로 호출 하 여 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 는 DISPID_IHTMLELEMENT_INNERHTML를 사용 하 여 함수 디스패치 id입니다.  
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLELEMENT_INNERHTML dispatch ID.  
   
 
-## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
-설정 하거나 현재 요소의 시작 및 끝 태그 사이 텍스트를 검색 합니다.  
+## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
+Sets or retrieves the text between the start and end tags of the current element.  
   
   
   
@@ -156,21 +156,21 @@ DDX_DHtml_ElementInnerText(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>주의  
- 이 매크로 호출 하 여 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 는 DISPID_IHTMLELEMENT_INNERTEXT를 사용 하 여 함수 디스패치 id입니다. 
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLELEMENT_INNERTEXT dispatch ID. 
 
-## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
-설정 하거나 선택된 된 컨트롤에서 Value 속성을 검색 합니다.  
+## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue  
+Sets or retrieves the Value property from the selected control.  
  
 ```  
 DDX_DHtml_ElementValue(
@@ -179,23 +179,23 @@ DDX_DHtml_ElementValue(
     var)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 교환 되는 값입니다. 참조 *값* 에서 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)합니다.  
+ The value being exchanged. See *value* in [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
   
-## <a name="remarks"></a>주의  
- 이 매크로 Value 속성에 있는 컨트롤에서 실행 하는 경우에 성공할 수 있습니다. Value 속성에 있는 컨트롤에는 입력란, 목록 상자 및 콤보 상자가 포함 됩니다.  
+## <a name="remarks"></a>Remarks  
+ This macro will only succeed when run on controls that have a Value property. Controls that have a Value property include edit boxes, list boxes, and combo boxes.  
   
- 이 매크로 호출 하 여 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 는 DISPID_A_VALUE를 사용 하 여 함수 디스패치 id입니다.  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_A_VALUE dispatch ID.  
 
-## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
-설정 하거나 연결된 된 프레임의 URL을 검색 합니다.  
+## <a name="ddx_dhtml_frame_src"></a> DDX_DHtml_Frame_Src
+Sets or retrieves the URL of the associated frame.  
   
 ```  
 DDX_DHtml_Frame_Src(
@@ -204,21 +204,21 @@ DDX_DHtml_Frame_Src(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>주의  
- 이 매크로 호출 하 여 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 는 DISPID_IHTMLFRAMEBASE_SRC를 사용 하 여 함수 디스패치 id입니다.  
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLFRAMEBASE_SRC dispatch ID.  
 
-## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
-설정 하거나 연결된 된 프레임의 URL을 검색 합니다.  
+## <a name="ddx_dhtml_iframe_src"></a> DDX_DHtml_IFrame_Src
+Sets or retrieves the URL of the associated frame.  
   
   
   
@@ -229,21 +229,21 @@ DDX_DHtml_IFrame_Src(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>주의  
- 이 매크로 호출 하 여 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 는 DISPID_IHTMLFRAMEBASE_SRC를 사용 하 여 함수 디스패치 id입니다. 
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLFRAMEBASE_SRC dispatch ID. 
 
 ## <a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
-이미지 또는 문서에서 비디오 클립의 이름을 검색 하거나 가져옵니다.  
+Gets or retrieves the name of an image or a video clip in the document.  
   
 ```  
 DDX_DHtml_Img_Src(
@@ -252,22 +252,22 @@ DDX_DHtml_Img_Src(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-## <a name="remarks"></a>주의  
- 사용 하는 경우는 `DDX_DHtml_Img_Src` 이미지 요소를 Internet Explorer 이미지 개체에 대 한 src 속성을 검색 하는 매크로 이미지 원본에 대 한 완전 하 게 이스케이프 된 URL을 반환 합니다. 예를 들어, 사용 하는 경우는 `DDX_DHtml_Img_Src` "몇 가지 흥미로운 그림" 문자열에 이미지 요소의 src 속성을 설정 하는 매크로 Internet Explorer "res://d:\myapplication\myapp.exe/some%20interesting%20picture." 문자열을 반환 합니다 해당 속성을 검색 하는 경우  
+## <a name="remarks"></a>Remarks  
+ When using the `DDX_DHtml_Img_Src` macro to retrieve the src property for an IMAGE element, the Internet Explorer image object will return the fully escaped URL for the image source. For example, if you use the `DDX_DHtml_Img_Src` macro to set the src property of an IMAGE element to the string "some interesting picture," when you retrieve that property, Internet Explorer will return the string "res://d:\myapplication\myapp.exe/some%20interesting%20picture."  
   
- 이 매크로 호출 하 여 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 는 DISPID_IHTMLIMGELEMENT_SRC를 사용 하 여 함수 디스패치 id입니다.  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLIMGELEMENT_SRC dispatch ID.  
 
   
-## <a name="see-also"></a>참고 항목  
- [CDHtmlDialog 클래스](../../mfc/reference/cdhtmldialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md)
 

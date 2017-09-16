@@ -1,5 +1,5 @@
 ---
-title: "duration_values 구조체 | Microsoft 문서"
+title: duration_values Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,76 +34,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b170debfdb4759b41963bc0faca13b3db11ad39a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 71c90fc57ee4e7b6bb7628426401dd72ec3de20f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="durationvalues-structure"></a>duration_values 구조체
-[duration](../standard-library/duration-class.md) 템플릿 매개 변수 `Rep`에 대한 특정 값을 제공합니다.  
+# <a name="durationvalues-structure"></a>duration_values Structure
+Provides specific values for the [duration](../standard-library/duration-class.md) template parameter `Rep`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Rep>  
 struct duration_values;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[max](#max)|정적. `Rep` 형식 값의 상한을 지정합니다.|  
-|[min](#min)|정적. `Rep` 형식 값의 하한을 지정합니다.|  
-|[0](#zero)|정적. `Rep(0)`를 반환합니다.|  
+|[max](#max)|Static. Specifies the upper limit for a value of type `Rep`.|  
+|[min](#min)|Static. Specifies the lower limit for a value of type `Rep`.|  
+|[zero](#zero)|Static. Returns `Rep(0)`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<c h >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<chrono>  
   
- **네임스페이스:** std::chrono  
+ **Namespace:** std::chrono  
   
 ##  <a name="max"></a>  duration_values::max  
- 형식 `Ref`의 값에 대한 상한을 반환하는 정적 메서드입니다.  
+ Static method that returns the upper bound for values of type `Ref`.  
   
 ```  
 static constexpr Rep max();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 실제로 `numeric_limits<Rep>::max()`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ In effect, returns `numeric_limits<Rep>::max()`.  
   
-### <a name="remarks"></a>설명  
- `Rep`가 사용자 정의 형식인 경우 반환 값은 [duration_values::zero](#zero)보다 커야 합니다.  
+### <a name="remarks"></a>Remarks  
+ When `Rep` is a user-defined type, the return value must be greater than [duration_values::zero](#zero).  
   
 ##  <a name="min"></a>  duration_values::min  
- `Ref` 형식의 값에 대한 하한값을 반환하는 정적 메서드입니다.  
+ Static method that returns the lower bound for values of type `Ref`.  
   
 ```  
 static constexpr Rep min();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 실제로 `numeric_limits<Rep>::lowest()`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ In effect, returns `numeric_limits<Rep>::lowest()`.  
   
-### <a name="remarks"></a>설명  
- `Rep`가 사용자 정의 형식인 경우 반환 값은 [duration_values:: zero](#zero)보다 작아야 합니다.  
+### <a name="remarks"></a>Remarks  
+ When `Rep` is a user-defined type, the return value must be less than or equal to [duration_values::zero](#zero).  
   
 ##  <a name="zero"></a>  duration_values::zero  
- `Rep(0)`를 반환합니다.  
+ Returns `Rep(0)`.  
   
 ```  
 static constexpr Rep zero();
 ```  
   
-### <a name="remarks"></a>설명  
- `Rep`가 사용자 정의 형식인 경우 반환 값은 가산적 무한대를 나타내야 합니다.  
+### <a name="remarks"></a>Remarks  
+ When `Rep` is a user-defined type, the return value must represent the additive infinity.  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
 
 

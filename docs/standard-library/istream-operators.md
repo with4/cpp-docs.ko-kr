@@ -1,28 +1,31 @@
 ---
-title: "&lt;istream&gt; 연산자 | Microsoft 문서"
+title: '&lt;istream&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- istream/std::operator&gt;&gt;
+dev_langs:
+- C++
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
 caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f73a5e24fd3864a46ac0c50bbdb18a1089a4a05e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 99f20cdf8aa0a8fd19bac697fdac1bb2f642bf8e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltistreamgt-operators"></a>&lt;istream&gt; 연산자
+# <a name="ltistreamgt-operators"></a>&lt;istream&gt; operators
  
 ##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
- 스트림에서 문자 및 문자열을 추출합니다.  
+ Extracts characters and strings from the stream.  
   
 ```  
 template <class Elem, class Tr>  
@@ -61,26 +64,26 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 단일 문자입니다.  
+ A character.  
   
  `Istr`  
- 스트림입니다.  
+ A stream.  
   
  `str`  
- 문자열  
+ A string.  
   
  `val`  
- 형식입니다.  
+ A type.  
   
-### <a name="return-value"></a>반환 값  
- 스트림  
+### <a name="return-value"></a>Return Value  
+ The stream  
   
-### <a name="remarks"></a>설명  
- `basic_istream` 클래스도 여러 가지 추출 연산자를 정의합니다. 자세한 내용은 [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ The `basic_istream` class also defines several extraction operators. For more information, see [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt).  
   
- 템플릿 함수는 다음과 같습니다.  
+ The template function:  
   
 ```cpp  
 template <class Elem, class Tr>  
@@ -88,11 +91,11 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```  
   
- 이 함수는 최대 *N* - 1개 요소를 추출하여 _ *Str*에서 시작하는 배열에 저장합니다. `Istr`. [width](../standard-library/ios-base-class.md#width)가 0보다 큰 경우 *N*은 `Istr`. **width**이고, 그러지 않은 경우에는 선언할 수 있는 가장 큰 **Elem** 배열의 크기입니다. 이 함수는 항상 저장하는 추출된 요소 다음에 **Elem()** 값을 저장합니다. 추출은 파일의 끝, **Elem**(0) 값을 갖는 문자(추출되지 않음) 또는 [ws](../standard-library/istream-functions.md#ws)에 의해 삭제될 모든 요소(추출되지 않음)에서 미리 중지됩니다. 함수가 요소를 추출하지 않는 경우 `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다. 어떤 경우든 `Istr`. **width**(0)를 호출하고 `Istr`을 반환합니다.  
+ extracts up to *N* - 1 elements and stores them in the array starting at _ *Str*. If `Istr`. [width](../standard-library/ios-base-class.md#width) is greater than zero, *N* is `Istr`. **width**; otherwise, it is the size of the largest array of **Elem** that can be declared. The function always stores the value **Elem()** after any extracted elements it stores. Extraction stops early on end of file, on a character with value **Elem**(0) (which is not extracted), or on any element (which is not extracted) that would be discarded by [ws](../standard-library/istream-functions.md#ws). If the function extracts no elements, it calls `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, it calls `Istr`. **width**(0) and returns `Istr`.  
   
- **보안 정보** 입력 스트림에서 추출할 null로 끝나는 문자열은 대상 버퍼 `str`의 크기를 초과해서는 안 됩니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
+ **Security Note** The null-terminated string being extracted from the input stream must not exceed the size of the destination buffer `str`. For more information, see [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- 템플릿 함수는 다음과 같습니다.  
+ The template function:  
   
 ```cpp  
 template <class Elem, class Tr>  
@@ -100,9 +103,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```  
   
- 가능한 경우 요소를 추출하여 `Ch`에 저장합니다. 그렇지 않으면 **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다. 어떤 경우든 `Istr`을 반환합니다.  
+ extracts an element, if it is possible, and stores it in `Ch`. Otherwise, it calls **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, it returns `Istr`.  
   
- 템플릿 함수는 다음과 같습니다.  
+ The template function:  
   
 ```cpp  
 template <class Tr>  
@@ -110,9 +113,9 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```  
   
- `Istr` >> ( `char`**\***) `str`을 반환합니다.  
+ returns `Istr` >> ( `char`**\***) `str`.  
   
- 템플릿 함수는 다음과 같습니다.  
+ The template function:  
   
 ```cpp  
 template <class Tr>  
@@ -120,9 +123,9 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char& Ch);
 ```  
   
- `Istr` >> ( **char&**) `Ch`를 반환합니다.  
+ returns `Istr` >> ( **char&**) `Ch`.  
   
- 템플릿 함수는 다음과 같습니다.  
+ The template function:  
   
 ```cpp  
 template <class Tr>  
@@ -130,9 +133,9 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```  
   
- `Istr` >> ( **char \***) `str`을 반환합니다.  
+ returns `Istr` >> ( **char \***) `str`.  
   
- 템플릿 함수는 다음과 같습니다.  
+ The template function:  
   
 ```cpp  
 template <class Tr>  
@@ -140,9 +143,9 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char& Ch);
 ```  
   
- `Istr` >> ( **char&**) `Ch`를 반환합니다.  
+ returns `Istr` >> ( **char&**) `Ch`.  
   
- 템플릿 함수는 다음과 같습니다.  
+ The template function:  
   
 ```cpp  
 template <class Elem, class Tr, class Type>  
@@ -151,9 +154,9 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```  
   
- `Istr` `>>` `val`을 반환하고 프로세스에서 `Istr`에 대한 `rvalue reference`를 `lvalue`로 변환합니다.  
+ returns `Istr` `>>` `val` (and converts an `rvalue reference` to `Istr` to an `lvalue` in the process).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istream_op_extract.cpp  
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<istream>](../standard-library/istream.md)
 
 

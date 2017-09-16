@@ -1,5 +1,5 @@
 ---
-title: "COleStreamFile 클래스 | Microsoft 문서"
+title: COleStreamFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,13 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- data streams [C++]
-- streams [C++], OLE
-- data streams [C++], OLE
-- structured storage in OLE
-- OLE structured storage [C++]
-- OLE [C++], streams of data
-- COleStreamFile class
+- COleStreamFile [MFC], COleStreamFile
+- COleStreamFile [MFC], Attach
+- COleStreamFile [MFC], CreateMemoryStream
+- COleStreamFile [MFC], CreateStream
+- COleStreamFile [MFC], Detach
+- COleStreamFile [MFC], GetStream
+- COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
 caps.latest.revision: 22
 author: mikeblome
@@ -47,114 +47,113 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0840d365f4179da0ad680256688eaf9484cb3cd8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c9ddf0128a69869ea90d151c54fc4fa2d8a613d8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colestreamfile-class"></a>COleStreamFile 클래스
-데이터의 스트림을 나타냅니다 ( `IStream`) OLE 구조적 저장소의 일부로 복합 파일입니다.  
+# <a name="colestreamfile-class"></a>COleStreamFile Class
+Represents a stream of data ( `IStream`) in a compound file as part of OLE Structured Storage.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleStreamFile : public CFile  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleStreamFile::COleStreamFile](#colestreamfile)|`COleStreamFile` 개체를 생성합니다.|  
+|[COleStreamFile::COleStreamFile](#colestreamfile)|Constructs a `COleStreamFile` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleStreamFile::Attach](#attach)|스트림 개체에 연결합니다.|  
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|전역 메모리에서 스트림을 만들고 개체와 연결 합니다.|  
-|[COleStreamFile::CreateStream](#createstream)|스트림을 만들고 개체와 연결 합니다.|  
-|[COleStreamFile::Detach](#detach)|스트림을 개체에서 연결을 끊습니다.|  
-|[COleStreamFile::GetStream](#getstream)|현재 스트림을 반환합니다.|  
-|[COleStreamFile::OpenStream](#openstream)|스트림을 엽니다 안전 하 게 개체에 연결 합니다.|  
+|[COleStreamFile::Attach](#attach)|Associates a stream with the object.|  
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Creates a stream from global memory and associates it with the object.|  
+|[COleStreamFile::CreateStream](#createstream)|Creates a stream and associates it with the object.|  
+|[COleStreamFile::Detach](#detach)|Disassociates the stream from the object.|  
+|[COleStreamFile::GetStream](#getstream)|Returns the current stream.|  
+|[COleStreamFile::OpenStream](#openstream)|Safely opens a stream and associates it with the object.|  
   
-## <a name="remarks"></a>주의  
- `IStorage` 스트림 이름을 열거나 하지 않은 경우 메모리 스트림을 생성 전에 개체가 존재 해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ An `IStorage` object must exist before the stream can be opened or created unless it is a memory stream.  
   
- `COleStreamFile`개체를 정확히 동일 하 게 조작 [CFile](../../mfc/reference/cfile-class.md) 개체입니다.  
+ `COleStreamFile` objects are manipulated exactly like [CFile](../../mfc/reference/cfile-class.md) objects.  
   
- 스트림 및 저장소를 조작 하는 방법에 대 한 자세한 내용은 문서를 참조 하십시오. [컨테이너: 복합 파일](../../mfc/containers-compound-files.md)...  
+ For more information about manipulating streams and storages, see the article [Containers: Compound Files](../../mfc/containers-compound-files.md)..  
   
- 자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 및 [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) and [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
   
  `COleStreamFile`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
- 사용 하 여 제공 된 OLE 스트림을 연결의 `COleStreamFile` 개체입니다.  
+##  <a name="attach"></a>  COleStreamFile::Attach  
+ Associates the supplied OLE stream with the `COleStreamFile` object.  
   
 ```  
 void Attach(LPSTREAM lpStream);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpStream`  
- OLE 스트림 가리키는 ( `IStream`) 개체와 연결 되도록 합니다. 안 **NULL**합니다.  
+ Points to the OLE stream ( `IStream`) to be associated with the object. Cannot be **NULL**.  
   
-### <a name="remarks"></a>주의  
- 개체가 이미 아니어야 OLE 스트림과 사용 하 여 연결 합니다.  
+### <a name="remarks"></a>Remarks  
+ The object must not already be associated with an OLE stream.  
   
- 자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in the Windows SDK.  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
- 
-          `COleStreamFile` 개체를 만듭니다.  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
+ Creates a `COleStreamFile` object.  
   
 ```  
 COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpStream`  
- 개체와 연결 되도록 OLE 스트림에 대 한 포인터입니다.  
+ Pointer to the OLE stream to be associated with the object.  
   
-### <a name="remarks"></a>주의  
- 경우 `lpStream` 는 **NULL**, 개체가 OLE 스트림과 연결 된, 제공 된 OLE 스트림과 연결 된 개체가 그렇지 않은 경우.  
+### <a name="remarks"></a>Remarks  
+ If `lpStream` is **NULL**, the object is not associated with an OLE stream, otherwise, the object is associated with the supplied OLE stream.  
   
- 자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in the Windows SDK.  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
- 안전 하 게 있는 경우 오류는 일반, 예상 된 조건이 전역 공유 메모리에서 새 스트림을 만듭니다.  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
+ Safely creates a new stream out of global, shared memory where a failure is a normal, expected condition.  
   
 ```  
 BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pError`  
- 가리키는 [CFileException](../../mfc/reference/cfileexception-class.md) 개체 또는 **NULL** 만들기 작업의 완료 상태를 나타내는입니다. 스트림을 만들 시도 하 여 생성 된 가능한 예외를 모니터링 하려는 경우이 매개 변수를 제공 합니다.  
+ Points to a [CFileException](../../mfc/reference/cfileexception-class.md) object or **NULL** that indicates the completion status of the create operation. Supply this parameter if you want to monitor possible exceptions generated by attempting to create the stream.  
   
-### <a name="return-value"></a>반환 값  
- 스트림이 성공적으로 만들어지면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the stream is created successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 메모리는 OLE 하위 시스템에 의해 할당 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The memory is allocated by the OLE subsystem.  
   
- 자세한 내용은 참조 [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) in the Windows SDK.  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
- 여기서 오류는 정상적이 고 예상 된 조건이 제공 되는 저장소 개체에 새 스트림을 안전 하 게 만듭니다.  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
+ Safely creates a new stream in the supplied storage object where a failure is a normal, expected condition.  
   
 ```  
 BOOL CreateStream(
@@ -164,54 +163,54 @@ BOOL CreateStream(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpStorage`  
- 만들려는 스트림을 포함 하는 OLE 저장소 개체를 가리킵니다. 안 **NULL**합니다.  
+ Points to the OLE storage object that contains the stream to be created. Cannot be **NULL**.  
   
  `lpszStreamName`  
- 만들 스트림의 이름입니다. 안 **NULL**합니다.  
+ Name of the stream to be created. Cannot be **NULL**.  
   
  `nOpenFlags`  
- 스트림을 열 때 사용할 액세스 모드입니다. 단독, 읽기/쓰기가 가능 하며 모드 만들 기본적으로 사용 됩니다. 사용 가능한 모드의 전체 목록은 참조 하십시오. [CFile::CFile](../../mfc/reference/cfile-class.md#cfile)합니다.  
+ Access mode to use when opening the stream. Exclusive, read/write, and create modes are used by default. For a complete list of the available modes, see [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
  `pError`  
- 가리키는 [CFileException](../../mfc/reference/cfileexception-class.md) 개체 또는 **NULL**합니다. 스트림을 만들 시도 하 여 생성 된 가능한 예외를 모니터링 하려는 경우이 매개 변수를 제공 합니다.  
+ Points to a [CFileException](../../mfc/reference/cfileexception-class.md) object or **NULL**. Supply this parameter if you want to monitor possible exceptions generated by attempting to create the stream.  
   
-### <a name="return-value"></a>반환 값  
- 스트림이 성공적으로 만들어지면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the stream is created successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 열기 실패 하면 파일 예외가 throw 됩니다 및 `pError` 없는 **NULL**합니다.  
+### <a name="remarks"></a>Remarks  
+ A file exception will be thrown if the open fails and `pError` is not **NULL**.  
   
- 자세한 내용은 참조 [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) in the Windows SDK.  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
- 스트림을 닫지 않고 스트림을 개체에서 연결을 끊습니다.  
+##  <a name="detach"></a>  COleStreamFile::Detach  
+ Disassociates the stream from the object without closing the stream.  
   
 ```  
 LPSTREAM Detach();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 스트림에 대 한 포인터 ( `IStream`) 된 개체와 연결 합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the stream ( `IStream`) that was associated with the object.  
   
-### <a name="remarks"></a>주의  
- 프로그램을 종료 하기 전에 다른 방식으로 스트림을 닫아야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The stream must be closed in some other fashion before the program terminates.  
   
- 자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in the Windows SDK.  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
- 현재 스트림에 대 한 포인터를 반환 하려면이 함수를 호출 합니다.  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
+ Call this function to return a pointer to current stream.  
   
 ```  
 IStream* GetStream() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 스트림 인터페이스에 대 한 포인터 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current stream interface ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
- 기존 스트림을 엽니다.  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
+ Opens an existing stream.  
   
 ```  
 BOOL OpenStream(
@@ -221,30 +220,30 @@ BOOL OpenStream(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpStorage`  
- 스트림을 열 수를 포함 하는 OLE 저장소 개체를 가리킵니다. 안 **NULL**합니다.  
+ Points to the OLE storage object that contains the stream to be opened. Cannot be **NULL**.  
   
  `lpszStreamName`  
- 열려는 스트림의 이름입니다. 안 **NULL**합니다.  
+ Name of the stream to be opened. Cannot be **NULL**.  
   
  `nOpenFlags`  
- 스트림을 열 때 사용할 액세스 모드입니다. 전용 및 읽기/쓰기 모드는 기본적으로 사용 됩니다. 사용 가능한 모드의 전체 목록에 대 한 참조 [CFile::CFile](../../mfc/reference/cfile-class.md#cfile)합니다.  
+ Access mode to use when opening the stream. Exclusive and read/write modes are used by default. For the complete list of the available modes, see [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
  `pError`  
- 가리키는 [CFileException](../../mfc/reference/cfileexception-class.md) 개체 또는 **NULL**합니다. 스트림을 열려고 시도 하 여 생성 된 가능한 예외를 모니터링 하려는 경우이 매개 변수를 제공 합니다.  
+ Points to a [CFileException](../../mfc/reference/cfileexception-class.md) object or **NULL**. Supply this parameter if you want to monitor possible exceptions generated by attempting to open the stream.  
   
-### <a name="return-value"></a>반환 값  
- 스트림이 성공적으로 열린 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the stream is opened successfully; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 열기 실패 하면 파일 예외가 throw 됩니다 및 `pError` 없는 **NULL**합니다.  
+### <a name="remarks"></a>Remarks  
+ A file exception will be thrown if the open fails and `pError` is not **NULL**.  
   
- 자세한 내용은 참조 [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) in the Windows SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [CFile 클래스](../../mfc/reference/cfile-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CFile Class](../../mfc/reference/cfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

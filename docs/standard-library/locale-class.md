@@ -1,5 +1,5 @@
 ---
-title: "locale 클래스 | Microsoft 문서"
+title: locale Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocale/std::locale
-- locale
 - locale/std::locale::category
 - locale/std::locale::combine
 - locale/std::locale::name
@@ -22,7 +21,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- locale class
+- std::locale [C++]
+- std::locale [C++], category
+- std::locale [C++], combine
+- std::locale [C++], name
+- std::locale [C++], classic
+- std::locale [C++], global
+- std::locale [C++], facet
+- std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 caps.latest.revision: 28
 author: corob-msft
@@ -42,41 +48,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6e33e125d2689d37443bec58c5b01f5b7e72ccfd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 43a9308d5dea59e8cff6165237ccf1f7778a3548
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="locale-class"></a>locale 클래스
-문화별 정보를 특정 지역별 환경을 전체적으로 정의하는 패싯 집합으로 캡슐화하는 로캘 개체에 대해 설명하는 클래스입니다.  
+# <a name="locale-class"></a>locale Class
+The class that describes a locale object that encapsulates culture-specific information as a set of facets that collectively define a specific localized environment.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class locale;  
 ```  
   
-## <a name="remarks"></a>설명  
- 패싯은 다음 형식의 공용 개체를 가진 [facet](#facet_class) 클래스에서 파생된 클래스 개체에 대한 포인터입니다.  
+## <a name="remarks"></a>Remarks  
+ A facet is a pointer to an object of a class derived from class [facet](#facet_class) that has a public object of the form:  
   
 ```  
 static locale::id id;  
 ```  
   
- 이러한 패싯의 개방형 집합을 정의할 수 있습니다. 또한 임의 수의 패싯을 지정하는 로캘 개체를 만들 수 있습니다.  
+ You can define an open-ended set of these facets. You can also construct a locale object that designates an arbitrary number of facets.  
   
- 이러한 패싯의 미리 정의된 그룹은 일반적으로 `setlocale` 함수에 의해 표준 C 라이브러리에서 관리되는 [로캘 범주](#category)를 나타냅니다.  
+ Predefined groups of these facets represent the [locale categories](#category) traditionally managed in the Standard C Library by the function `setlocale`.  
   
- 범주 collate(LC_COLLATE)에 포함되는 패싯:  
+ Category collate (LC_COLLATE) includes the facets:  
   
 ```  
 collate<char>  
 collate<wchar_t>  
 ```  
   
- 범주 ctype(LC_CTYPE)에 포함되는 패싯:  
+ Category ctype (LC_CTYPE) includes the facets:  
   
 ```  
 ctype<char>  
@@ -87,7 +93,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>  
 ```  
   
- 범주 monetary(LC_MONETARY)에 포함되는 패싯:  
+ Category monetary (LC_MONETARY) includes the facets:  
   
 ```  
 moneypunct<char, false>  
@@ -100,7 +106,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>  
 ```  
   
- 범주 numeric(LC_NUMERIC)에 포함되는 패싯:  
+ Category numeric (LC_NUMERIC) includes the facets:  
   
 ```  
 num_get<char, istreambuf_iterator<char>>  
@@ -111,7 +117,7 @@ numpunct<char>
 numpunct<wchar_t>  
 ```  
   
- 범주 time(LC_TIME)에 포함되는 패싯:  
+ Category time (LC_TIME) includes the facets:  
   
 ```  
 time_get<char, istreambuf_iterator<char>>  
@@ -120,32 +126,32 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>  
 ```  
   
- 범주 messages(LC_MESSAGES)에 포함되는 패싯:  
+ Category messages (LC_MESSAGES) includes the facets:  
   
 ```  
 messages<char>  
 messages<wchar_t>  
 ```  
   
- (마지막 범주는 Posix에 필요하지만 C 표준은 해당하지 않습니다.)  
+ (The last category is required by Posix, but not the C Standard.)  
   
- 이러한 미리 정의된 패싯 중 일부는 iostreams 클래스가 숫자 값과 텍스트 시퀀스 사이의 변환을 제어하는 데 사용됩니다.  
+ Some of these predefined facets are used by the iostreams classes, to control the conversion of numeric values to and from text sequences.  
   
- 클래스 로캘 개체는 또한 로캘 이름을 [string](../standard-library/string-typedefs.md#string) 클래스의 개체로 저장합니다. 잘못된 로캘 이름을 사용하여 로캘 패싯 또는 로캘 개체를 만들 경우 [runtime_erro](../standard-library/runtime-error-class.md) 클래스의 개체가 throw됩니다. 로캘 개체를 확인할 수 없고 C-스타일 로캘이 개체로 표현된 로캘에 정확히 해당할 경우 저장된 로캘 이름은 `"*"`입니다. 그러지 않을 경우 로캘 개체 `Loc`에 대해 `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`)을 호출하여 표준 C 라이브러리 내에서 일치하는 로캘을 설정할 수 있습니다.  
+ An object of class locale also stores a locale name as an object of class [string](../standard-library/string-typedefs.md#string). Using an invalid locale name to construct a locale facet or a locale object throws an object of class [runtime_error](../standard-library/runtime-error-class.md). The stored locale name is `"*"` if the locale object cannot be certain that a C-style locale corresponds exactly to that represented by the object. Otherwise, you can establish a matching locale within the Standard C Library, for the locale object `Loc`, by calling `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`).  
   
- 이 구현에서는 정적 멤버 함수도 호출하여  
+ In this implementation, you can also call the static member function:  
   
 ```  
 static locale empty();
 ```  
   
- 패싯이 없는 로캘 개체를 구성할 수 있습니다. 또한 투명 로캘이기도 합니다. 템플릿 함수 [has_facet](../standard-library/locale-functions.md#has_facet) 및 [use_facet](../standard-library/locale-functions.md#use_facet)이 투명 로캘에서 요청된 패싯을 찾을 수 없을 경우 우선 전역 로캘을 참조한 다음, 투명할 경우 클래식 로캘을 참조합니다. 따라서, 다음과 같이 작성할 수 있습니다.  
+ to construct a locale object that has no facets. It is also a transparent locale; if the template functions [has_facet](../standard-library/locale-functions.md#has_facet) and [use_facet](../standard-library/locale-functions.md#use_facet) cannot find the requested facet in a transparent locale, they consult first the global locale and then, if that is transparent, the classic locale. Thus, you can write:  
   
 ```  
 cout.imbue(locale::empty());
 ```  
   
-[cout](../standard-library/iostream.md#cout)에 대한 다음 삽입은 전역 로캘의 현재 상태에 따라 조정됩니다. 다음과 같이 작성할 수도 있습니다.  
+Subsequent insertions to [cout](../standard-library/iostream.md#cout) are mediated by the current state of the global locale. You can even write:  
   
 ```  
 locale loc(locale::empty(),
@@ -155,56 +161,56 @@ locale loc(locale::empty(),
 cout.imbue(loc);
 ```   
   
- 전역 로캘에서 날짜 및 통화 금액 삽입에 대해 달라진 규칙을 제공하는 경우에도 `cout`에 대한 후속 삽입 숫자 서식 지정 규칙은 C 로캘과 동일하게 유지됩니다.  
+ Numeric formatting rules for subsequent insertions to `cout` remain the same as in the C locale, even as the global locale supplies changing rules for inserting dates and monetary amounts.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[locale](#locale)|패싯 또는 범주를 다른 로캘의 패싯 또는 범주로 대체한 경우 로캘 또는 로캘의 복사본을 만듭니다.|  
+|[locale](#locale)|Creates a locale, or a copy of a locale, or a copy of locale where a facet or a category has been replaced by a facet or category from another locale.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[category](#category)|표준 패싯 범주를 나타내는 비트 마스크 값을 제공하는 정수 형식입니다.|  
+|[category](#category)|An integer type that provides bitmask values to denote standard facet families.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[combine](#combine)|지정된 로캘의 패싯을 대상 로캘로 삽입합니다.|  
-|[name](#name)|저장된 로캘 이름을 반환합니다.|  
-  
-### <a name="static-functions"></a>정적 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[classic](#classic)|정적 멤버 함수는 클래식 C 로캘을 나타내는 로캘 개체를 반환합니다.|  
-|[global](#global)|프로그램에 대한 기본 로컬을 다시 설정합니다.|  
+|[combine](#combine)|Inserts a facet from a specified locale into a target locale.|  
+|[name](#name)|Returns the stored locale name.|  
   
-### <a name="operators"></a>연산자  
-  
-|||  
-|-|-|  
-|[operator!=](#op_neq)|두 로캘이 다른지 테스트합니다.|  
-|[operator( )](#op_call)|두 `basic_string` 개체를 비교합니다.|  
-|[operator==](#op_eq_eq)|두 로캘이 같은지 테스트합니다.|  
-  
-### <a name="classes"></a>클래스  
+### <a name="static-functions"></a>Static Functions  
   
 |||  
 |-|-|  
-|[facet](#facet_class)|모든 로캘 패싯에 대한 기본 클래스로 사용하는 클래스입니다.|  
-|[id](#id_class)|멤버 클래스는 로캘의 패싯을 조회하기 위한 인덱스로 사용되는 고유한 패싯 ID를 제공합니다.|  
+|[classic](#classic)|The static member function returns a locale object that represents the classic C locale.|  
+|[global](#global)|Resets the default local for the program.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[operator!=](#op_neq)|Tests two locales for inequality.|  
+|[operator( )](#op_call)|Compares two `basic_string` objects.|  
+|[operator==](#op_eq_eq)|Tests two locales for equality.|  
+  
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[facet](#facet_class)|A class that serves as the base class for all locale facets.|  
+|[id](#id_class)|The member class provides a unique facet identification used as an index for looking up facets in a locale.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
+  
+ **Namespace:** std  
   
 ##  <a name="category"></a>  locale::category  
- 표준 패싯 범주를 나타내는 비트 마스크 값을 제공하는 정수 형식입니다.  
+ An integer type that provides bitmask values to denote standard facet families.  
   
 ```  
 typedef int category;  
@@ -218,43 +224,43 @@ static const int all = LC_ALL;
 static const int none = 0;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 클래스 로캘에 로컬인 비트 마스크 형식의 고유 요소 그룹을 나타내거나 해당 C 로캘 범주를 나타내는 데 사용할 수 있는 `int` 형식의 동의어입니다. 요소는 다음과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for an `int` type that can represent a group of distinct elements of a bitmask type local to class locale or can be used to represent any of the corresponding C locale categories. The elements are:  
   
-- **collate** - C 범주 LC_COLLATE에 해당  
+- **collate**, corresponding to the C category LC_COLLATE  
   
-- **ctype** - C 범주 LC_CTYPE에 해당  
+- **ctype**, corresponding to the C category LC_CTYPE  
   
-- **monetary** - C 범주 LC_MONETARY에 해당  
+- **monetary**, corresponding to the C category LC_MONETARY  
   
-- **numeric** - C 범주 LC_NUMERIC에 해당  
+- **numeric**, corresponding to the C category LC_NUMERIC  
   
-- **time** - C 범주 LC_TIME에 해당  
+- **time**, corresponding to the C category LC_TIME  
   
-- **messages** - Posix 범주 LC_MESSAGES에 해당  
+- **messages**, corresponding to the Posix category LC_MESSAGES  
   
- 또한 두 개의 유용한 값은 다음과 같습니다.  
+ In addition, two useful values are:  
   
-- **none** - C 범주 중 해당하는 항목 없음  
+- **none**, corresponding to none of the C categories  
   
-- **all** - 모든 범주 LC_ALL의 C 공용 구조체에 해당  
+- **all**, corresponding to the C union of all categories LC_ALL  
   
- **monetary** &#124; **time**에서처럼 이러한 상수와 함께 `OR`을 사용하면 임의의 범주 그룹을 나타낼 수 있습니다.  
+ You can represent an arbitrary group of categories by using `OR` with these constants, as in **monetary** &#124; **time**.  
   
 ##  <a name="classic"></a>  locale::classic  
- 정적 멤버 함수는 클래식 C 로캘을 나타내는 로캘 개체를 반환합니다.  
+ The static member function returns a locale object that represents the classic C locale.  
   
 ```  
 static const locale& classic();
 ```  
   
-### <a name="return-value"></a>반환 값  
- C 로캘에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the C locale.  
   
-### <a name="remarks"></a>설명  
- 클래식 C 로캘은 국제화되지 않은 프로그램에서 암시적으로 사용되는 표준 C 라이브러리 내의 영어(미국) ASCII 로캘입니다.  
+### <a name="remarks"></a>Remarks  
+ The classic C locale is the U.S. English ASCII locale within the Standard C Library that is implicitly used in programs that are not internationalized.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_classic.cpp  
@@ -294,21 +300,21 @@ The current locale is not classic.
 ```  
   
 ##  <a name="combine"></a>  locale::combine  
- 지정된 로캘의 패싯을 대상 로캘로 삽입합니다.  
+ Inserts a facet from a specified locale into a target locale.  
   
 ```  
 template <class Facet>  
 locale combine(const locale& Loc) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- 대상 로캘에 삽입할 패싯을 포함하는 로캘입니다.  
+ The locale containing the facet to be inserted into the target locale.  
   
-### <a name="return-value"></a>반환 값  
- 이 멤버 함수는 `Loc`에 나열된 **\*이** 패싯 `Facet`을 대체하거나 이 패싯에 추가되는 로캘 개체를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The member function returns a locale object that replaces in or adds to **\*this** the facet `Facet` listed in `Loc`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_combine.cpp  
@@ -338,8 +344,8 @@ int main() {
 }  
 ```  
   
-##  <a name="facet_class"></a>  facet 클래스  
- 모든 로캘 패싯에 대한 기본 클래스로 사용하는 클래스입니다.  
+##  <a name="facet_class"></a>  facet Class  
+ A class that serves as the base class for all locale facets.  
 
 ```    
 class facet { 
@@ -352,29 +358,29 @@ private:
      // not defined    
 };  
 ```  
-### <a name="remarks"></a>설명  
- 클래스 패싯의 개체를 복사하거나 할당할 수 없습니다. `locale::facet` 클래스에서 파생된 개체는 생성하고 삭제할 수 있지만 기본 클래스 proper의 개체는 생성하고 삭제할 수 없습니다. 일반적으로 **localeloc**( `locale::classic`( ), **new**`_Myfac`);에서처럼 로캘을 생성할 때 패싯에서 파생된 `_Myfac` 개체가 생성됩니다.  
+### <a name="remarks"></a>Remarks  
+ Note that you cannot copy or assign an object of class facet. You can construct and destroy objects derived from class `locale::facet` but not objects of the base class proper. Typically, you construct an object `_Myfac` derived from facet when you construct a locale, as in **localeloc**( `locale::classic`( ), **new**`_Myfac`);  
   
- 이러한 경우 기본 클래스 패싯에 대한 생성자에는 0인`_Refs` 인수가 있어야 합니다. 개체가 더 이상 필요하지 않으면 삭제됩니다. 따라서 개체의 수명을 담당하는 드문 경우에만 0이 아닌 _ *Refs* 인수를 제공합니다.  
+ In such cases, the constructor for the base class facet should have a zero `_Refs` argument. When the object is no longer needed, it is deleted. Thus, you supply a nonzero _ *Refs* argument only in those rare cases where you take responsibility for the lifetime of the object.  
   
 ##  <a name="global"></a>  locale::global  
- 프로그램에 대한 기본 로캘을 다시 설정하며, C와 C++ 모두의 전역 로캘에 영향을 줍니다.  
+ Resets the default locale for the program. This affects the global locale for both C and C++.  
   
 ```  
 static locale global(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- 프로그램에서 기본 로캘로 사용할 로캘입니다.  
+ The locale to be used as the default locale by the program.  
   
-### <a name="return-value"></a>반환 값  
- 기본 로캘이 다시 설정되기 전의 이전 로캘입니다.  
+### <a name="return-value"></a>Return Value  
+ The previous locale before the default locale was reset.  
   
-### <a name="remarks"></a>설명  
- 프로그램이 시작될 때는 전역 로캘이 클래식 로캘과 같습니다. `global()` 함수는 `setlocale( LC_ALL, loc.name. c_str())`을 호출하여 표준 C 라이브러리에서 일치하는 로캘을 설정합니다.  
+### <a name="remarks"></a>Remarks  
+ At program startup, the global locale is the same as the classic locale. The `global()` function calls `setlocale( LC_ALL, loc.name. c_str())` to establish a matching locale in the Standard C library.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_global.cpp  
@@ -402,16 +408,16 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="id_class"></a>  id 클래스  
- 멤버 클래스는 로캘의 패싯을 조회하기 위한 인덱스로 사용되는 고유한 패싯 ID를 제공합니다.  
+##  <a name="id_class"></a>  id Class  
+ The member class provides a unique facet identification used as an index for looking up facets in a locale.  
   
 class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };  
   
-### <a name="remarks"></a>설명  
- 멤버 클래스는 각 고유 로캘 패싯에 필요한 정적 멤버 개체에 대해 설명합니다. **id** 클래스의 개체는 복사하거나 할당할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The member class describes the static member object required by each unique locale facet. Note that you cannot copy or assign an object of class **id**.  
   
 ##  <a name="locale"></a>  locale::locale  
- 패싯 또는 범주를 다른 로캘의 패싯 또는 범주로 대체한 경우 로캘 또는 로캘의 복사본을 만듭니다.  
+ Creates a locale, or a copy of a locale, or a copy of locale where a facet or a category has been replaced by a facet or category from another locale.  
   
 ```  
 locale();
@@ -426,42 +432,42 @@ template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Locname`  
- 로캘 이름입니다.  
+ Name of a locale.  
   
  `Loc`  
- 새 로캘을 생성할 때 복사되는 로캘입니다.  
+ A locale that is to be copied in constructing the new locale.  
   
  `Other`  
- 범주를 선택할 로캘입니다.  
+ A locale from which to select a category.  
   
  `Cat`  
- 생성된 로캘로 대체될 범주입니다.  
+ The category to be substituted into the constructed locale.  
   
  `Fac`  
- 생성된 로캘로 대체될 패싯입니다.  
+ The facet to be substituted into the constructed locale.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 전역 로캘과 일치하도록 개체를 초기화합니다. 두 번째 및 세 번째 생성자는 동작이 로캘 이름 `Locname`과 일치하도록 모든 로캘 범주를 초기화합니다. 나머지 생성자는 다음과 같은 경우를 제외하고 `Loc`를 복사합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the object to match the global locale. The second and third constructors initialize all the locale categories to have behavior consistent with the locale name `Locname`. The remaining constructors copy `Loc`, with the exceptions noted:  
   
  `locale(const locale& Loc, const locale& Other, category Cat);`  
   
- `Other`에서 C & `Cat`가 0이 아닌 범주 C에 해당하는 패싯을 대체합니다.  
+ replaces from `Other` those facets corresponding to a category C for which C & `Cat` is nonzero.  
   
  `locale(const locale& Loc, const char* Locname, category Cat);`  
   
  `locale(const locale& Loc, const string& Locname, category Cat);`  
   
- `locale(Locname, _All)`에서 C & `Cat`가 0이 아닌 범주 C에 해당하는 패싯을 대체합니다.  
+ replaces from `locale(Locname, _All)` those facets corresponding to a category C for which C & `Cat` is nonzero.  
   
  `template<class Facet> locale(const locale& Loc, Facet* Fac);`  
   
- `Fac`가 null 포인터가 아닌 경우 `Loc` 패싯 `Fac`를 대체하거나 이 패싯에 추가합니다.  
+ replaces in (or adds to) `Loc` the facet `Fac`, if `Fac` is not a null pointer.  
   
- 로캘 이름 `Locname`이 null 포인터이거나 유효하지 않은 경우 함수는 [runtime_error](../standard-library/runtime-error-class.md)를 throw합니다.  
+ If a locale name `Locname` is a null pointer or otherwise invalid, the function throws [runtime_error](../standard-library/runtime-error-class.md).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_locale.cpp  
@@ -502,16 +508,16 @@ int main( ) {
 ```  
   
 ##  <a name="name"></a>  locale::name  
- 저장된 로캘 이름을 반환합니다.  
+ Returns the stored locale name.  
   
 ```  
 string name() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 로캘의 이름을 지정하는 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ A string giving the name of the locale.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_name.cpp  
@@ -539,23 +545,23 @@ The name of the current locale is: German_Germany.1252.
 ```  
   
 ##  <a name="op_neq"></a>  locale::operator!=  
- 두 로캘이 다른지 테스트합니다.  
+ Tests two locales for inequality.  
   
 ```  
 bool operator!=(const locale& right) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 같지 않음을 테스트할 로캘 중 하나입니다.  
+ One of the locales to be tested for inequality.  
   
-### <a name="return-value"></a>반환 값  
- 로캘이 동일한 로캘의 복사본이 아닌 경우 **true**이고 로캘이 동일한 로캘의 복사본인 경우 **false**인 부울 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A Boolean value that is **true** if the locales are not copies of the same locale; **false** if the locales are copies of the same locale.  
   
-### <a name="remarks"></a>설명  
- 두 로캘은 두 로캘이 동일한 로캘이거나, 한 로캘이 다른 로캘의 복사본이거나, 이름이 동일한 경우 같습니다.  
+### <a name="remarks"></a>Remarks  
+ Two locales are equal if they are the same locale, if one is a copy of the other, or if they have identical names.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_op_ne.cpp  
@@ -596,7 +602,7 @@ locales loc1 (German_Germany.1252) and
 ```  
   
 ##  <a name="op_call"></a>  locale::operator()  
- 두 `basic_string` 개체를 비교합니다.  
+ Compares two `basic_string` objects.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -605,24 +611,24 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 왼쪽 문자열입니다.  
+ The left string.  
   
  `right`  
- 오른쪽 문자열입니다.  
+ The right string.  
   
-### <a name="return-value"></a>반환 값  
- 멤버 함수는 다음을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The member function returns:  
   
--   첫 번째 시퀀스가 두 번째 시퀀스보다 작은 것으로 비교되는 경우, -1  
+-   -1 if the first sequence compares less than the second sequence.  
   
--   두 번째 시퀀스가 첫 번째 시퀀스보다 작은 것으로 비교되는 경우, +1  
+-   +1 if the second sequence compares less than the first sequence.  
   
--   시퀀스가 같은 경우, 0  
+-   0 if the sequences are equivalent.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 다음을 효과적으로 실행합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function effectively executes:  
   
 ```  
 const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
@@ -630,9 +636,9 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```  
   
- 따라서 로캘 개체를 함수 개체로 사용할 수 있습니다.  
+ Thus, you can use a locale object as a function object.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_op_compare.cpp  
@@ -664,23 +670,23 @@ int main( )
 ```  
   
 ##  <a name="op_eq_eq"></a>  locale::operator==  
- 두 로캘이 같은지 테스트합니다.  
+ Tests two locales for equality.  
   
 ```  
 bool operator==(const locale& right) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 같은지 여부를 테스트할 로캘 중 하나입니다.  
+ One of the locales to be tested for equality.  
   
-### <a name="return-value"></a>반환 값  
- 로캘이 동일한 로캘의 복사본인 경우 **true**이고 로캘이 동일한 로캘의 복사본이 아닌 경우 **false**인 부울 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A Boolean value that is **true** if the locales are copies of the same locale; **false** if the locales are not copies of the same locale.  
   
-### <a name="remarks"></a>설명  
- 두 로캘은 두 로캘이 동일한 로캘이거나, 한 로캘이 다른 로캘의 복사본이거나, 이름이 동일한 경우 같습니다.  
+### <a name="remarks"></a>Remarks  
+ Two locales are equal if they are the same locale, if one is a copy of the other, or if they have identical names.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_op_eq.cpp  
@@ -724,10 +730,10 @@ locales loc1 (German_Germany.1252)
  and loc3 (English_United States.1252) are not equal.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<locale>](../standard-library/locale.md)   
- [코드 페이지](../c-runtime-library/code-pages.md)   
- [로캘 이름, 언어 및 국가/지역 문자열](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Code Pages](../c-runtime-library/code-pages.md)   
+ [Locale Names, Languages, and Country/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

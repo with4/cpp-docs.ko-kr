@@ -1,5 +1,5 @@
 ---
-title: "CWordArray 클래스 | Microsoft Docs"
+title: CWordArray Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,12 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- INT
-- UINT
-- indexed arrays
-- arrays [C++], indexed
-- WORD data type
-- CWordArray class
+- CObArray [MFC], CObArray
+- CObArray [MFC], Add
+- CObArray [MFC], Append
+- CObArray [MFC], Copy
+- CObArray [MFC], ElementAt
+- CObArray [MFC], FreeExtra
+- CObArray [MFC], GetAt
+- CObArray [MFC], GetCount
+- CObArray [MFC], GetData
+- CObArray [MFC], GetSize
+- CObArray [MFC], GetUpperBound
+- CObArray [MFC], InsertAt
+- CObArray [MFC], IsEmpty
+- CObArray [MFC], RemoveAll
+- CObArray [MFC], RemoveAt
+- CObArray [MFC], SetAt
+- CObArray [MFC], SetAtGrow
+- CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
 caps.latest.revision: 26
 author: mikeblome
@@ -57,99 +69,99 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 16ab3abe3cff8695d5d44de24eb4d3c93f64cea4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 14c889c1a43a179aa031c61705592e17a7a1b516
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cwordarray-class"></a>CWordArray 클래스
-16비트 단어 배열을 지원합니다.  
+# <a name="cwordarray-class"></a>CWordArray Class
+Supports arrays of 16-bit words.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CWordArray : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
- 멤버 함수 `CWordArray` 클래스의 멤버 함수와 비슷한 [CObArray](../../mfc/reference/cobarray-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CObArray` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 볼 때마다는 [CObject](../../mfc/reference/cobject-class.md) 포인터를 함수 매개 변수 또는 반환 값으로 대체 한 **단어**합니다.  
+## <a name="members"></a>Members  
+ The member functions of `CWordArray` are similar to the member functions of class [CObArray](../../mfc/reference/cobarray-class.md). Because of this similarity, you can use the `CObArray` reference documentation for member function specifics. Wherever you see a [CObject](../../mfc/reference/cobject-class.md) pointer as a function parameter or return value, substitute a **WORD**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
- 예를 들어 위의 코드는  
+ for example, translates to  
   
  `WORD CWordArray::GetAt( int <nIndex> ) const;`  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|빈 배열을 생성합니다.|  
+|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Constructs an empty array.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|배열 끝에 요소를 추가하고 필요하면 배열을 확장합니다.|  
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|배열에 다른 배열을 추가하고 필요하면 배열을 확장합니다.|  
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|배열에 다른 배열을 복사하고 필요하면 배열을 확장합니다.|  
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|배열 내의 요소 포인터에 대한 임시 참조를 반환합니다.|  
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|현재 상한을 초과하며 사용되지 않는 모든 메모리를 해제합니다.|  
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|지정된 인덱스의 값을 반환합니다.|  
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|이 배열에 있는 요소의 수를 가져옵니다.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|배열의 요소에 대한 액세스를 허용합니다. 수 **NULL**합니다.|  
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|이 배열에 있는 요소의 수를 가져옵니다.|  
-|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|유효한 최대 인덱스를 반환합니다.|  
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|지정한 인덱스에 요소 하나 또는 다른 배열의 모든 요소를 삽입합니다.|  
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|배열이 비어 있는지를 확인합니다.|  
-|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|이 배열의 모든 요소를 반환합니다.|  
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|특정 인덱스의 요소를 제거합니다.|  
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|지정된 인덱스의 값을 설정합니다. 배열은 확장할 수 없습니다.|  
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|지정된 인덱스의 값을 설정합니다. 필요한 경우 배열을 확장합니다.|  
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|이 배열에 포함된 요소의 수를 설정합니다.|  
+|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Adds an element to the end of the array; grows the array if necessary.|  
+|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Appends another array to the array; grows the array if necessary.|  
+|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Copies another array to the array; grows the array if necessary.|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Returns a temporary reference to the element pointer within the array.|  
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Frees all unused memory above the current upper bound.|  
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Returns the value at a given index.|  
+|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Gets the number of elements in this array.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Allows access to elements in the array. Can be **NULL**.|  
+|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Gets the number of elements in this array.|  
+|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Returns the largest valid index.|  
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserts an element (or all the elements in another array) at a specified index.|  
+|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Determines if the array is empty.|  
+|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Removes all the elements from this array.|  
+|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Removes an element at a specific index.|  
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Sets the value for a given index; array not allowed to grow.|  
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Sets the value for a given index; grows the array if necessary.|  
+|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Sets the number of elements to be contained in this array.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|지정한 인덱스에 있는 요소를 설정하거나 가져옵니다.|  
+|[CObArray::operator &#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Sets or gets the element at the specified index.|  
   
-## <a name="remarks"></a>주의  
- `CWordArray`통합 된 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) 매크로를 serialization 및 요소 덤프를 지원 합니다. 단어의 배열을 오버 로드 된 삽입 연산자 또는으로 보관 파일로 저장 되는 경우는 [cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize) 멤버 함수의 경우 각 요소가 이면 차례로 직렬화 합니다.  
+## <a name="remarks"></a>Remarks  
+ `CWordArray` incorporates the [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro to support serialization and dumping of its elements. If an array of words is stored to an archive, either with an overloaded insertion operator or with the [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) member function, each element is, in turn, serialized.  
   
 > [!NOTE]
->  배열을 사용하기 전에 `SetSize`를 사용하여 배열 크기를 설정하고 배열에 대해 메모리를 할당합니다. `SetSize`를 사용하지 않는 경우 배열에 요소를 추가하면 배열이 자주 다시 할당되고 복사됩니다. 이처럼 다시 할당 및 복사가 자주 수행되면 효율성이 떨어지며 메모리가 조각화될 수 있습니다.  
+>  Before using an array, use `SetSize` to establish its size and allocate memory for it. If you do not use `SetSize`, adding elements to your array causes it to be frequently reallocated and copied. Frequent reallocation and copying are inefficient and can fragment memory.  
   
- 배열에 있는 개별 요소의 덤프가 필요한 경우 덤프 컨텍스트 깊이 1 이상으로 설정 해야 합니다.  
+ If you need a dump of individual elements in the array, you must set the depth of the dump context to 1 or greater.  
   
- 사용 하 여 대 한 자세한 내용은 `CWordArray`, 문서를 참조 [컬렉션](../../mfc/collections.md)합니다.  
+ For more information on using `CWordArray`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CWordArray`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcoll.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcoll.h  
   
-##  <a name="icommandsource_interface"></a>ICommandSource 인터페이스  
- 사용자 정의 컨트롤에 명령 원본 개체에서 전송 되는 명령을 관리 합니다.  
+##  <a name="icommandsource_interface"></a>  ICommandSource Interface  
+ Manages commands sent from a command source object to a user control.  
   
 ```  
 interface class ICommandSource  
 ```  
   
-### <a name="remarks"></a>주의  
- MFC 뷰에서 사용자 정의 컨트롤을 호스팅하는 경우 [CWinFormsView 클래스](../../mfc/reference/cwinformsview-class.md) 경로 명령 및 업데이트 명령을 MFC 명령 (예를 들어 프레임 메뉴 항목 및 도구 모음 단추)을 처리할 수 있도록 허용 하는 사용자 정의 컨트롤에 UI 메시지입니다. 를 구현 하면 사용자 정의 컨트롤에 대 한 참조는 `ICommandSource` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ When you host a user control in an MFC View, [CWinFormsView Class](../../mfc/reference/cwinformsview-class.md) routes commands and update command UI messages to the user control to allow it to handle MFC commands (for example, frame menu items and toolbar buttons). By implementing  , you give the user control a reference to the `ICommandSource` object.  
   
- 참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) 사용 하는 방법의 예 `ICommandTarget`합니다.  
+ See [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) for an example of how to use `ICommandTarget`.  
   
- Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
- 명령 원본 개체에 명령 처리기를 추가합니다.  
+##  <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler  
+ Adds a command handler to a command source object.  
   
 ```  
 void AddCommandHandler(
@@ -157,20 +169,20 @@ void AddCommandHandler(
     CommandHandler^ cmdHandler);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 명령 ID입니다.  
+ The command ID.  
   
  `cmdHandler`  
- 명령 처리기 메서드인에 대 한 핸들입니다.  
+ A handle to the command handler method.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 명령 처리기를 추가 `cmdHandler` 명령 원본 개체에 매핑되는 처리기에 `cmdID`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method adds the command handler `cmdHandler` to the command source object and maps the handler to `cmdID`.  
   
- 참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) 사용 하는 방법의 예 `AddCommandHandler`합니다.  
+ See [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) for an example of how to use `AddCommandHandler`.  
   
-##  <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
- 명령 원본 개체에 명령 처리기의 그룹을 추가 합니다.  
+##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler  
+ Adds a group of command handlers to a command source object.  
   
 ```  
 void AddCommandRangeHandler(
@@ -179,21 +191,21 @@ void AddCommandRangeHandler(
     CommandHandler^ cmdHandler);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdIDMin`  
- 명령 ID 범위의 시작 인덱스입니다.  
+ The beginning index of the command ID range.  
   
  `cmdIDMax`  
- 명령 ID 범위의 끝 인덱스입니다.  
+ The ending index of the command ID range.  
   
  `cmdHandler`  
- 명령이 매핑되는 메시지 처리기 방법에 대 한 핸들입니다.  
+ A handle to the message handler method to which the commands are mapped.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 명령 Id의 연속 된 범위 단일 메시지 처리기에 매핑하고 명령 원본 개체에 추가 합니다. 이 한 방법으로 관련 된 단추 그룹을 처리 하기 위한 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method maps a contiguous range of command IDs to a single message handler and adds it to the command source object. This is used for handling a group of related buttons with one method.  
   
-##  <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
- 명령 원본 개체에 사용자 인터페이스 명령 메시지 처리기의 그룹을 추가 합니다.  
+##  <a name="addcommandrangeuihandler"></a>  ICommandSource::AddCommandRangeUIHandler  
+ Adds a group of user interface command message handlers to a command source object.  
   
 ```  
 void AddCommandRangeUIHandler(
@@ -202,21 +214,21 @@ void AddCommandRangeUIHandler(
     CommandUIHandler^ cmdUIHandler);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdIDMin`  
- 명령 ID 범위의 시작 인덱스입니다.  
+ The beginning index of the command ID range.  
   
  `cmdIDMax`  
- 명령 ID 범위의 끝 인덱스입니다.  
+ The ending index of the command ID range.  
   
  `cmdHandler`  
- 명령이 매핑되는 메시지 처리기 방법에 대 한 핸들입니다.  
+ A handle to the message handler method to which the commands are mapped.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 단일 사용자 인터페이스 명령 메시지 처리기를 명령 Id의 연속 된 범위를 매핑하고 명령 원본 개체에 추가 합니다. 이 한 방법으로 관련 된 단추 그룹을 처리 하기 위한 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method maps a contiguous range of command IDs to a single user interface command message handler and adds it to the command source object. This is used for handling a group of related buttons with one method.  
   
-##  <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
- 명령 원본 개체에는 사용자 인터페이스 명령 메시지 처리기를 추가합니다.  
+##  <a name="addcommanduihandler"></a>  ICommandSource::AddCommandUIHandler  
+ Adds a user interface command message handler to a command source object.  
   
 ```  
 void AddCommandUIHandler(
@@ -224,65 +236,46 @@ void AddCommandUIHandler(
     CommandUIHandler^ cmdUIHandler);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 명령 ID입니다.  
+ The command ID.  
   
  `cmdUIHandler`  
- 사용자 인터페이스 명령 메시지 처리기 방법에 대 한 핸들입니다.  
+ A handle to the user interface command message handler method.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 사용자 인터페이스 명령 메시지 처리기 추가 `cmdHandler` 명령 원본 개체에 매핑되는 처리기에 `cmdID`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method adds the user interface command message handler `cmdHandler` to the command source object and maps the handler to `cmdID`.  
   
-##  <a name="postcommand"></a>ICommandSource::PostCommand  
- 처리 되기를 기다리지 않고 메시지를 게시 합니다.  
+##  <a name="postcommand"></a>  ICommandSource::PostCommand  
+ Posts a message without waiting for it to be processed.  
   
 ```  
 void PostCommand(unsigned int command);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `command`  
- 게시 될 메시지의 명령 ID입니다.  
+ The command ID of the message to be posted.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 비동기적으로 하 여 지정 된 ID에 매핑된 메시지 게시 `command`합니다. 호출 [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) 해당 창 메시지를 처리할 때까지 기다리지 않고 창의 메시지 큐와 돌아올에 메시지를 배치할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method asynchronously posts the message mapped to the ID specified by `command`. It calls [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) to place the message in the window's message queue and then returns without waiting for the corresponding window to process the message.  
   
-##  <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
- 명령 원본 개체에서 명령 처리기를 제거합니다.  
+##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler  
+ Removes a command handler from a command source object.  
   
 ```  
 void RemoveCommandHandler(unsigned int cmdID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 명령 ID입니다.  
+ The command ID.  
   
-### <a name="remarks"></a>주의  
- 이 메서드 매핑할 명령 처리기를 제거 `cmdID` 명령 소스 개체에서입니다.  
+### <a name="remarks"></a>Remarks  
+ This method removes the command handler mapped to `cmdID` from the command source object.  
   
-##  <a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
- 명령 원본 개체에서 명령 처리기의 그룹을 제거합니다.  
-  
-```  
-void RemoveCommandRangeUIHandler(
-    unsigned int cmdIDMin,  
-    unsigned int cmdIDMax);
-```  
-  
-### <a name="parameters"></a>매개 변수  
- `cmdIDMin`  
- 명령 ID 범위의 시작 인덱스입니다.  
-  
- `cmdIDMax`  
- 명령 ID 범위의 끝 인덱스입니다.  
-  
-### <a name="remarks"></a>주의  
- 이 메서드는 메시지 처리기에서 명령 Id 지정에 매핑된의 그룹을 제거 `cmdIDMin` 및 `cmdIDMax`, 명령 원본 개체에서 합니다.  
-  
-##  <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
- 명령 원본 개체에서 사용자 인터페이스 명령 메시지 처리기의 그룹을 제거합니다.  
+##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler  
+ Removes a group of command handlers from a command source object.  
   
 ```  
 void RemoveCommandRangeUIHandler(
@@ -290,214 +283,233 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMax);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdIDMin`  
- 명령 ID 범위의 시작 인덱스입니다.  
+ The beginning index of the command ID range.  
   
  `cmdIDMax`  
- 명령 ID 범위의 끝 인덱스입니다.  
+ The ending index of the command ID range.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 사용자 인터페이스 명령 메시지 처리기를에서 명령 Id 지정에 매핑된의 그룹을 제거 `cmdIDMin` 및 `cmdIDMax`, 명령 원본 개체에서 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method removes a group of message handlers, mapped to the command IDs specifed by `cmdIDMin` and `cmdIDMax`, from the command source object.  
   
-##  <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
- 명령 원본 개체에서 사용자 인터페이스 명령 메시지 처리기를 제거합니다.  
+##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler  
+ Removes a group of user interface command message handlers from a command source object.  
+  
+```  
+void RemoveCommandRangeUIHandler(
+    unsigned int cmdIDMin,  
+    unsigned int cmdIDMax);
+```  
+  
+### <a name="parameters"></a>Parameters  
+ `cmdIDMin`  
+ The beginning index of the command ID range.  
+  
+ `cmdIDMax`  
+ The ending index of the command ID range.  
+  
+### <a name="remarks"></a>Remarks  
+ This method removes a group of user interface command message handlers, mapped to the command IDs specifed by `cmdIDMin` and `cmdIDMax`, from the command source object.  
+  
+##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler  
+ Removes a user interface command message handler from a command source object.  
   
 ```  
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 명령 ID입니다.  
+ The command ID.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는에 매핑된 사용자 인터페이스 명령 메시지 처리기를 제거 `cmdID` 명령 소스 개체에서입니다.  
+### <a name="remarks"></a>Remarks  
+ This method removes the user interface command message handler mapped to `cmdID` from the command source object.  
   
-##  <a name="sendcommand"></a>ICommandSource::SendCommand  
- 메시지를 보내고 반환 하기 전에 처리 되기를 기다립니다.  
+##  <a name="sendcommand"></a>  ICommandSource::SendCommand  
+ Sends a message and waits for it to be processed before returning.  
   
 ```  
 void SendCommand(unsigned int command);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `command`  
- 보낼 메시지의 명령 ID입니다.  
+ The command ID of the message to be sent.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 동기적으로 처리 하 여 지정 된 ID에 매핑된 메시지 전송 `command`합니다. 호출 [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) 해당 창 프로시저에서 반환 하기 전에 메시지를 처리할 때 까지는 창의 메시지 큐와 대기에 메시지를 배치 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method synchronously sends the message mapped to the ID specified by `command`. It calls [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) to place the message in the window's message queue and waits until that window procedure has processed the message before returning.  
   
-##  <a name="icommandtarget_interface"></a>ICommandTarget 인터페이스  
- 명령 원본 개체에서 명령을 수신 하도록 인터페이스와 함께 사용자 정의 컨트롤을 제공 합니다.  
+##  <a name="icommandtarget_interface"></a>  ICommandTarget Interface  
+ Provides a user control with an interface to receive commands from a command source object.  
   
 ```  
 interface class ICommandTarget  
 ```  
   
-### <a name="remarks"></a>주의  
- MFC 뷰에서 사용자 정의 컨트롤을 호스팅하는 경우 [CWinFormsView](../../mfc/reference/cwinformsview-class.md) 경로 명령 및 업데이트 명령을 MFC 명령 (예를 들어 프레임 메뉴 항목 및 도구 모음 단추)을 처리할 수 있도록 허용 하는 사용자 정의 컨트롤에 UI 메시지입니다. 구현 하 여 `ICommandTarget`, 사용자 정의 컨트롤 개체에 대 한 참조를 제공 합니다.  
+### <a name="remarks"></a>Remarks  
+ When you host a user control in an MFC View, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) routes commands and update command UI messages to the user control to allow it to handle MFC commands (for example, frame menu items and toolbar buttons). By implementing `ICommandTarget`, you give the user control a reference to the  object.  
   
- 참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) 사용 하는 방법의 예 `ICommandTarget`합니다.  
+ See [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) for an example of how to use `ICommandTarget`.  
   
- Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="initialize"></a>ICommandTarget::Initialize  
- 명령 대상 개체를 초기화합니다.  
+##  <a name="initialize"></a>  ICommandTarget::Initialize  
+ Initializes the command target object.  
   
 ```  
 void Initialize(ICommandSource^ cmdSource);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdSource`  
- 명령 원본 개체에 대 한 핸들입니다.  
+ A handle to the command source object.  
   
-### <a name="remarks"></a>설명  
- MFC 뷰에서 사용자 정의 컨트롤을 호스팅하는 경우 [CWinFormsView](../../mfc/reference/cwinformsview-class.md) 경로 명령 및 업데이트 명령을 MFC 명령을 처리할 수 있도록 허용 하는 사용자 정의 컨트롤에 UI 메시지입니다.  
+### <a name="remarks"></a>Remarks  
+ When you host a user control in an MFC View, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) routes commands and update command UI messages to the user control to allow it to handle MFC commands.  
   
- 이 메서드는 명령 대상 개체를 초기화 하 고 지정 된 명령 원본 개체와 연결 `cmdSource`합니다. 사용자 컨트롤 클래스 구현에서 호출 되어야 합니다. 초기화 하는 과정을 등록 해야 명령 처리기 명령 원본 개체와 호출 하 여 [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) 에 `Initialize` 구현 합니다. 참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) 사용 하는 방법의 예 `Initialize` 에이 작업을 수행 합니다.  
+ This method initializes the command target object and associates it with the specified command source object `cmdSource`. It should be called in the user control class implementation. At initialization, you should register command handlers with the command source object by calling [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) in the `Initialize` implementation. See [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) for an example of how to use `Initialize` to do this.  
   
-##  <a name="icommandui_interface"></a>ICommandUI 인터페이스  
- 사용자 인터페이스 명령을 관리합니다.  
+##  <a name="icommandui_interface"></a>  ICommandUI Interface  
+ Manages user interface commands.  
   
 ```  
 interface class ICommandUI  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 인터페이스는 메서드 및 사용자 인터페이스 명령을 관리 하는 속성을 제공 합니다. `ICommandUI`유사한 [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)제외 하 고 `ICommandUI` .NET 구성 요소와 상호 운용 하는 MFC 응용 프로그램에 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This interface provides methods and properties that manage user interface commands. `ICommandUI` is similar to [CCmdUI Class](../../mfc/reference/ccmdui-class.md), except that `ICommandUI` is used for MFC applications that interoperate with .NET components.  
   
- `ICommandUI`내에서 사용 되는 `ON_UPDATE_COMMAND_UI` 처리기-파생된 클래스에서 합니다. 메뉴에서 각 메뉴 항목으로 사용 하도록 설정 표시 됩니다 (선택 해야 하는지 또는) 응용 프로그램의 사용자를 활성화 하는 경우 또는 사용 하지 않도록 설정 합니다. 구현 하 여이 정보를 제공 하는 각 메뉴 명령 대상일은 `ON_UPDATE_COMMAND_UI` 처리기입니다. 각 응용 프로그램의 명령 사용자 인터페이스 개체에 대 한 속성 창을 사용 메시지-맵 항목 및 각 처리기에 대 한 함수 프로토타입을 만들 수 있습니다.  
+ `ICommandUI` is used within an `ON_UPDATE_COMMAND_UI` handler in an  -derived class. When a user of an application activates (selects or clicks) a menu, each menu item is displayed as enabled or disabled. The target of each menu command provides this information by implementing an `ON_UPDATE_COMMAND_UI` handler. For each of the command user interface objects in your application, use the Properties window to create a message-map entry and function prototype for each handler.  
   
- 방법에 대 한 자세한 내용은 `ICommandUI` 인터페이스는 명령 라우팅에 사용을 참조 하십시오. [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)합니다.  
+ For more information on how the `ICommandUI` interface is used in command routing, see [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
   
- Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
- MFC의 사용자 인터페이스 명령 관리 되는 방법에 대 한 자세한 내용은 참조 하십시오. [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)합니다.  
+ For more information on how user interface commands are managed in MFC, see [CCmdUI Class](../../mfc/reference/ccmdui-class.md).  
   
-##  <a name="check"></a>ICommandUI::Check  
- 이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정합니다.  
+##  <a name="check"></a>  ICommandUI::Check  
+ Sets the user interface item for this command to the appropriate check state.  
   
 ```  
 property UICheckState Check;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 속성을 적절 한 확인 상태로이 명령에 대 한 사용자 인터페이스 항목을 설정합니다. 설정 `Check` 다음과 같은 값으로.  
+### <a name="remarks"></a>Remarks  
+ This property sets the user interface item for this command to the appropriate check state. Set `Check` to the following values:  
   
-|용어|정의|  
+|Term|Definition|  
 |----------|----------------|  
-|0|선택하지 않음|  
-|1|확인|  
-|2|비활성화 상태 설정|  
+|0|Uncheck|  
+|1|Check|  
+|2|Set indeterminate|  
   
-##  <a name="continuerouting"></a>ICommandUI::ContinueRouting  
- 현재 메시지 처리기의 체인을 라우팅 계속 하려면는 명령 라우팅 메커니즘을 알려줍니다.  
+##  <a name="continuerouting"></a>  ICommandUI::ContinueRouting  
+ Tells the command routing mechanism to continue routing the current message down the chain of handlers.  
   
 ```  
 void ContinueRouting();
 ```  
   
-### <a name="remarks"></a>설명  
- 와 함께에서 사용 해야 하는 고급 멤버 함수는 [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) 반환 하는 처리기 `FALSE`합니다. 자세한 내용은 기술 참고를 참조 하십시오. [TN006: 메시지 맵](../../mfc/tn006-message-maps.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ This is an advanced member function that should be used in conjunction with an [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) handler that returns `FALSE`. For more information, see Technical Note [TN006: Message Maps](../../mfc/tn006-message-maps.md).  
   
-##  <a name="enabled"></a>ICommandUI::Enabled  
- 이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 하거나 사용 합니다.  
+##  <a name="enabled"></a>  ICommandUI::Enabled  
+ Enables or disables the user interface item for this command.  
   
 ```  
 property bool Enabled;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 속성 사용 하거나이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 합니다. 설정 `Enabled` 를 `TRUE` 해당 항목을 사용할 수 있도록 `FALSE` 사용 하지 않도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ This property enables or disables the user interface item for this command. Set `Enabled` to `TRUE` to enable the item, `FALSE` to disable it.  
   
-##  <a name="id"></a>ICommandUI::ID  
- 가 나타내는 사용자 인터페이스 개체의 ID를 가져옵니다는 `ICommandUI` 개체입니다.  
+##  <a name="id"></a>  ICommandUI::ID  
+ Gets the ID of the user interface object represented by the `ICommandUI` object.  
   
 ```  
 property unsigned int ID;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 속성을 가져옵니다 도구 모음 단추, 메뉴 항목의 ID (핸들) 또는 기타 사용자 인터페이스 개체를 나타내는 `ICommandUI` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This property gets the ID (a handle) of the menu item, toolbar button, or other user interface object represented by the `ICommandUI` object.  
   
-##  <a name="index"></a>ICommandUI::Index  
- 가 나타내는 사용자 인터페이스 개체의 인덱스를 가져옵니다는 `ICommandUI` 개체입니다.  
+##  <a name="index"></a>  ICommandUI::Index  
+ Gets the index of the user interface object represented by the `ICommandUI` object.  
   
 ```  
 property unsigned int Index;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 속성을 가져옵니다 도구 모음 단추, 메뉴 항목의 인덱스 (핸들) 또는 기타 사용자 인터페이스 개체를 나타내는 `ICommandUI` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This property gets the index (a handle) of the menu item, toolbar button, or other user interface object represented by the `ICommandUI` object.  
   
-##  <a name="radio"></a>ICommandUI::Radio  
- 이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정합니다.  
+##  <a name="radio"></a>  ICommandUI::Radio  
+ Sets the user interface item for this command to the appropriate check state.  
   
 ```  
 property bool Radio;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 속성을 적절 한 확인 상태로이 명령에 대 한 사용자 인터페이스 항목을 설정합니다. 설정 `Radio` 를 `TRUE` ; 항목을 설정 하려면 그렇지 않은 경우 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ This property sets the user interface item for this command to the appropriate check state. Set `Radio` to `TRUE` to enable the item; otherwise `FALSE`.  
   
-##  <a name="text"></a>ICommandUI::Text  
- 이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 합니다.  
+##  <a name="text"></a>  ICommandUI::Text  
+ Sets the text of the user interface item for this command.  
   
 ```  
 property String^ Text;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 속성을이 명령에 대 한 사용자 인터페이스 항목의 설정입니다. 설정 `Text` 텍스트 문자열 핸들에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This property sets the text of the user interface item for this command. Set `Text` to a text string handle.  
   
-##  <a name="iview_interface"></a>IView 인터페이스  
- 몇 가지 메서드를 구현 하는 [CWinFormsView](../../mfc/reference/cwinformsview-class.md) 를 사용 하는 관리 되는 컨트롤에 알림을 보냅니다.  
+##  <a name="iview_interface"></a>  IView Interface  
+ Implements several methods that [CWinFormsView](../../mfc/reference/cwinformsview-class.md) uses to send view notifications to a managed control.  
   
 ```  
 interface class IView  
 ```  
   
-### <a name="remarks"></a>주의  
- `IView`몇 가지 메서드를 구현 하는 `CWinFormsView` 호스팅된 관리 되는 컨트롤에 공통 보기 알림을 전달할를 사용 하 여 합니다. 이들은 [OnInitialUpdate](../../mfc/reference/iview-interface.md), [OnUpdate](../../mfc/reference/iview-interface.md) 및 [OnActivateView](../../mfc/reference/iview-interface.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ `IView` implements several methods that `CWinFormsView` uses to forward common view notifications to a hosted managed control. These are [OnInitialUpdate](../../mfc/reference/iview-interface.md), [OnUpdate](../../mfc/reference/iview-interface.md) and [OnActivateView](../../mfc/reference/iview-interface.md).  
   
- `IView`유사한 [CView](../../mfc/reference/cview-class.md), 하지만 관리 되는 보기 및 컨트롤에만 사용 됩니다.  
+ `IView` is similar to [CView](../../mfc/reference/cview-class.md), but is used only with managed views and controls.  
   
- Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="onactivateview"></a>IView::OnActivateView  
- 뷰 활성화 또는 비활성화 하는 경우에 MFC에서 호출 됩니다.  
+##  <a name="onactivateview"></a>  IView::OnActivateView  
+ Called by MFC when a view is activated or deactivated.  
   
 ```  
 void OnActivateView(bool activate);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `activate`  
- 보기를 새로 있는지 여부를 나타냅니다. 활성화 또는 비활성화 합니다.  
+ Indicates whether the view is being activated or deactivated.  
   
-##  <a name="oninitialupdate"></a>IView::OnInitialUpdate  
- 보기에는 문서에 처음 연결 되었으나 처음 표시 되는 보기 프레임 워크에서 호출 됩니다.  
+##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate  
+ Called by the framework after the view is first attached to the document, but before the view is initially displayed.  
   
 ```  
 void OnInitialUpdate();
 ```  
   
-##  <a name="onupdate"></a>IView::OnUpdate  
- 문서 보기의 수정 된 후에 MFC에서 호출 됩니다.  
+##  <a name="onupdate"></a>  IView::OnUpdate  
+ Called by MFC after the view's document has been modified.  
   
 ```  
 void OnUpdate();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 함수에서는 보기 수정 내용을 반영 하도록 표시를 업데이트 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function allows the view to update its display to reflect modifications.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 수집](../../visual-cpp-samples.md)   
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

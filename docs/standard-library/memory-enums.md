@@ -1,5 +1,5 @@
 ---
-title: "&lt;memory&gt; 열거형 | Microsoft 문서"
+title: '&lt;memory&gt; enums | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,33 +11,33 @@ f1_keywords:
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: d2f3cf1ec90c7caff5bb3a100d45d69a4a35e01a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: eb02712cbe1d55721002cc45dc7719bd2eaea910
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltmemorygt-enums"></a>&lt;memory&gt; 열거형
+# <a name="ltmemorygt-enums"></a>&lt;memory&gt; enums
 ||  
 |-|  
 |[pointer_safety](#pointer_safety)|  
   
-##  <a name="pointer_safety"></a>  pointer_safety 열거형  
- `get_pointer_safety`에서 반환할 수 있는 값의 열거형입니다.  
+##  <a name="pointer_safety"></a>  pointer_safety Enumeration  
+ The enumeration of possible values returned by `get_pointer_safety`.  
   
 class pointer_safety { relaxed, preferred, strict };  
   
-### <a name="remarks"></a>설명  
- 범위 `enum`은 `get_pointer_safety``()`에서 반환할 수 있는 값을 정의합니다.  
+### <a name="remarks"></a>Remarks  
+ The scoped `enum` defines the values that can be returned by `get_pointer_safety()`:  
   
- `relaxed` - 안전하게 파생되지 않은 포인터(선언되거나 할당된 개체에 대한 포인터)를 안전하게 파생된 포인터와 동일하게 처리합니다.  
+ `relaxed` -- pointers not safely derived (obviously pointers to declared or allocated objects) are treated the same as those safely derived.  
   
- `preferred` - 이전 설명과 같지만 안전하게 파생되지 않은 포인터를 역참조해서는 안 됩니다.  
+ `preferred` -- as before, but pointers not safely derived should not be dereferenced.  
   
- `strict` - 안전하게 파생되지 않은 포인터를 안전하게 파생된 포인터와 다르게 처리할 수 있습니다.  
+ `strict` -- pointers not safely derived might be treated differently than those safely derived.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)
 
 

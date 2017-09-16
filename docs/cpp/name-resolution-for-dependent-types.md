@@ -1,26 +1,43 @@
 ---
-title: "종속적인 형식에 대한 이름 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Name Resolution for Dependent Types | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 종속적인 형식에 대한 이름 확인
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 055b6e4300179d3a2350782b9d92547d288dbe5a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-템플릿 정의의 정규화된 이름에 **형식 이름**을 사용하여 지정된 정규화 이름이 형식을 식별한다는 것을 컴파일러에 지시합니다.  자세한 내용은 [형식 이름](../cpp/typename.md)을 참조하십시오.  
+---
+# <a name="name-resolution-for-dependent-types"></a>Name Resolution for Dependent Types
+Use **typename** for qualified names in template definitions to tell the compiler that the given qualified name identifies a type. For more information, see [typename](../cpp/typename.md).  
   
 ```cpp  
 // template_name_resolution1.cpp  
@@ -45,18 +62,16 @@ int main()
 }  
 ```  
   
-### Output  
-  
-```  
+```Output  
 Name resolved by using typename keyword.  
 ```  
   
- 종속 이름에 대한 이름 검색은 템플릿 정의의 컨텍스트\(다음 예제에서 `myFunction(char)`를 검색하는 컨텍스트\) 및 템플릿 인스턴스화의 컨텍스트에서 이름을 조사합니다.  다음 예제에서는 템플릿이 main에서 인스턴스화되므로 `MyNamespace::myFunction`은 인스턴스화된 지점부터 표시되며 더 잘 일치하는 것으로 선택됩니다.  `MyNamespace::myFunction`의 이름이 바뀐 경우 `myFunction(char)`이 대신 호출됩니다.  
+ Name lookup for dependent names examines names from both the context of the template definition—in the following example, this context would find `myFunction(char)`—and the context of the template instantiation.In the following example, the template is instantiated in main; therefore, the `MyNamespace::myFunction` is visible from the point of instantiation and is picked as the better match. If `MyNamespace::myFunction` were renamed, `myFunction(char)` would be called instead.  
   
- 모든 이름은 종속 이름인 것처럼 확인됩니다.  그러나 충돌 발생 가능성이 있을 경우 철저하게 정규화된 이름을 사용하는 것이 좋습니다.  
+ All names are resolved as if they were dependent names. Nevertheless, we recommend that you use fully qualified names if there is any possible conflict.  
   
 ```cpp  
-//template_name_resolution2.cpp  
+// template_name_resolution2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
 using namespace std;  
@@ -93,14 +108,14 @@ int main()
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Int MyNamespace::myFunction  
 ```  
   
-### 템플릿 명확성  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]는 "템플릿" 키워드를 사용하여 명확성에 대한 C\+\+ 98\/03\/11 표준 규칙을 적용합니다.  다음 예제에서 [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)]은 표준에 맞지 않는 줄과 표준에 맞는 줄을 모두 허용합니다. [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]는 표준에 맞는 줄만 허용합니다.  
+### <a name="template-disambiguation"></a>Template Disambiguation  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] enforces the C++98/03/11 standard rules for disambiguation with the "template" keyword. In the following example, Visual C++ 2010 would accept both the nonconforming lines and the conforming lines.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] accepts only the conforming lines.  
   
 ```cpp  
 #include <iostream>  
@@ -129,7 +144,7 @@ int main() {
 }  
 ```  
   
- 기본적으로 C\+\+에서는 `AY::Rebind`가 템플릿이 아니며 컴파일러에서 다음 " `<`"을 less\-than으로 해석한다고 가정하기 때문에 명확성 규칙 준수가 필요합니다.  C\+\+에 `Rebind`가 템플릿이라는 것을 인지시켜 "`<`"을 꺾쇠로 올바르게 구문 분석할 수 있도록 해야 합니다.  
+ Conformance with the disambiguation rules is required because, by default, C++ assumes that `AY::Rebind` isn't a template, and so the compiler interprets the following "`<`" as a less-than. It has to know that `Rebind` is a template so that it can correctly parse "`<`" as an angle bracket.  
   
-## 참고 항목  
- [이름 확인](../cpp/templates-and-name-resolution.md)
+## <a name="see-also"></a>See Also  
+ [Name Resolution](../cpp/templates-and-name-resolution.md)

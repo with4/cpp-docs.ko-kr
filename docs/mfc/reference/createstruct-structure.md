@@ -1,5 +1,5 @@
 ---
-title: "CREATESTRUCT 구조체 | Microsoft 문서"
+title: CREATESTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CREATESTRUCT structure
+- CREATESTRUCT structure [MFC]
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
 caps.latest.revision: 14
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ec72d4725cb7e5959369b24a6ff7f0e3e9da1ca7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0409e6ff80c9491ffc36b4ca7b6ecc05edfdb264
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="createstruct-structure"></a>CREATESTRUCT 구조체
-`CREATESTRUCT` 구조는 응용 프로그램의 창 프로시저에 전달 된 초기화 매개 변수를 정의 합니다.  
+# <a name="createstruct-structure"></a>CREATESTRUCT Structure
+The `CREATESTRUCT` structure defines the initialization parameters passed to the window procedure of an application.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagCREATESTRUCT {  
@@ -62,48 +62,48 @@ typedef struct tagCREATESTRUCT {
 } CREATESTRUCT;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `lpCreateParams`  
- 창을 만드는 데 사용할 데이터를 가리킵니다.  
+ Points to data to be used to create the window.  
   
  `hInstance`  
- 새 창을 소유 하는 모듈의 모듈 인스턴스 핸들을 식별 합니다.  
+ Identifies the module-instance handle of the module that owns the new window.  
   
  `hMenu`  
- 새 창에서 사용할 메뉴를 식별 합니다. 정수 ID를 포함 하는 경우 자식 창  
+ Identifies the menu to be used by the new window. If a child window, contains the integer ID.  
   
  `hwndParent`  
- 새 창을 소유 하는 창을 식별 합니다. 이 멤버는 **NULL** 경우 새 최상위 창입니다.  
+ Identifies the window that owns the new window. This member is **NULL** if the new window is a top-level window.  
   
  `cy`  
- 새 창의 높이 지정합니다.  
+ Specifies the height of the new window.  
   
  `cx`  
- 새 창의 너비를 지정합니다.  
+ Specifies the width of the new window.  
   
  `y`  
- 새 창의 왼쪽된 위 모퉁이의 y 좌표를 지정합니다. 새 창의 자식 창이; 면 좌표는 부모 창을 기준으로 그렇지 않으면 좌표는 화면 원점을 기준으로 합니다.  
+ Specifies the y-coordinate of the upper left corner of the new window. Coordinates are relative to the parent window if the new window is a child window; otherwise coordinates are relative to the screen origin.  
   
  `x`  
- 새 창의 왼쪽된 위 모퉁이의 x 좌표를 지정합니다. 새 창의 자식 창이; 면 좌표는 부모 창을 기준으로 그렇지 않으면 좌표는 화면 원점을 기준으로 합니다.  
+ Specifies the x-coordinate of the upper left corner of the new window. Coordinates are relative to the parent window if the new window is a child window; otherwise coordinates are relative to the screen origin.  
   
  `style`  
- 새 창을 지정 [스타일](../../mfc/reference/styles-used-by-mfc.md)합니다.  
+ Specifies the new window's [style](../../mfc/reference/styles-used-by-mfc.md).  
   
  `lpszName`  
- 새 창의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다.  
+ Points to a null-terminated string that specifies the new window's name.  
   
  `lpszClass`  
- 새 창을 Windows 클래스 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다 (한 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 구조; 자세한 내용은 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]).  
+ Points to a null-terminated string that specifies the new window's Windows class name (a [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure; for more information, see the Windows SDK).  
   
  `dwExStyle`  
- 지정 된 [확장 스타일](../../mfc/reference/extended-window-styles.md) 새 창에 대 한 합니다.  
+ Specifies the [extended style](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) for the new window.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)
 
 

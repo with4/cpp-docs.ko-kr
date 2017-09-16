@@ -1,37 +1,56 @@
 ---
-title: "동적 개체 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CObject 클래스, 동적 개체 만들기"
-  - "동적 개체 만들기"
-  - "개체 만들기, 런타임에 동적으로"
-  - "개체[C++], 런타임에 동적으로 만들기"
+title: Dynamic Object Creation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- object creation [MFC], dynamically at run time
+- CObject class [MFC], dynamic object creation
+- objects [MFC], creating dynamically at run time
+- dynamic object creation [MFC]
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 동적 개체 만들기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 15931a9e22697461b1a20ce4ed14d6ebbe3fe57a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-This article explains how to create an object dynamically at run time.  The procedure uses run\-time class information, as discussed in the article [Accessing Run\-Time Class Information](../mfc/accessing-run-time-class-information.md).  
+---
+# <a name="dynamic-object-creation"></a>Dynamic Object Creation
+This article explains how to create an object dynamically at run time. The procedure uses run-time class information, as discussed in the article [Accessing Run-Time Class Information](../mfc/accessing-run-time-class-information.md).  
   
-#### To dynamically create an object given its run\-time class  
+#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>To dynamically create an object given its run-time class  
   
-1.  Use the following code to dynamically create an object by using the `CreateObject` function of the `CRuntimeClass`.  Note that on failure, `CreateObject` returns **NULL** instead of raising an exception:  
+1.  Use the following code to dynamically create an object by using the `CreateObject` function of the `CRuntimeClass`. Note that on failure, `CreateObject` returns **NULL** instead of raising an exception:  
   
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/CPP/dynamic-object-creation_1.cpp)]  
+     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]  
   
-## 참고 항목  
- [CObject 사용](../mfc/using-cobject.md)
+## <a name="see-also"></a>See Also  
+ [Using CObject](../mfc/using-cobject.md)
+
+

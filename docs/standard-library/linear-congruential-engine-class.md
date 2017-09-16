@@ -1,5 +1,5 @@
 ---
-title: "linear_congruential_engine 클래스 | Microsoft 문서"
+title: linear_congruential_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- linear_congruential_engine
 - random/std::linear_congruential_engine
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: bbb733e102af57627c00006816bb8d955877d0f8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 633e8219aa39a503af2e716deb41d25cdcd8f751
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="linearcongruentialengine-class"></a>linear_congruential_engine 클래스
-선형 합동 알고리즘에 따라 임의 시퀀스를 생성합니다.  
+# <a name="linearcongruentialengine-class"></a>linear_congruential_engine Class
+Generates a random sequence by the linear congruential algorithm.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```  
 class linear_congruential_engine{  
    public:  // types  
@@ -68,61 +67,61 @@ class linear_congruential_engine{
    void discard(unsigned long long z);
    };  
 ```  
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `UIntType`  
- 부호가 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `A`  
- **승수**. **사전 조건**: 설명 섹션을 참조하세요.  
+ **Multiplier**. **Precondition**: See Remarks section.  
   
  `C`  
- **증분**. **사전 조건**: 설명 섹션을 참조하세요.  
+ **Increment**. **Precondition**: See Remarks section.  
   
  `M`  
- **모듈러스**. **사전 조건**: 설명을 참조하세요.  
+ **Modulus**. **Precondition**: See remarks.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`linear_congruential_engine::linear_congruential_engine`|`linear_congruential_engine::min`|`linear_congruential_engine::discard`|  
 |`linear_congruential_engine::operator()`|`linear_congruential_engine::max`|`linear_congruential_engine::seed`|  
   
- `default_seed`는 `1u`로 정의된 멤버 상수로, `linear_congruential_engine::seed` 및 단일 값 생성자의 기본 매개 변수 값으로 사용됩니다.  
+ `default_seed` is a member constant, defined as `1u`, used as the default parameter value for `linear_congruential_engine::seed` and the single value constructor.  
   
- 엔진 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
- `linear_congruential_engine` 템플릿 클래스는 가장 단순한 생성기 엔진이지만 가장 빠르거나 품질이 가장 뛰어나지는 않습니다. 이 엔진을 개선한 것이 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)입니다. 이러한 엔진 둘 다 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)만큼 빠르거나 품질 결과가 뛰어나지는 않습니다.  
+## <a name="remarks"></a>Remarks  
+ The `linear_congruential_engine` template class is the simplest generator engine, but not the fastest or highest quality. An improvement over this engine is the [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Neither of these engines is as fast or with as high quality results as the [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
   
- 이 엔진은 되풀이 관계(*period*) `x(i) = (A * x(i-1) + C) mod M`을 사용하여 사용자가 지정한 부호 없는 정수 형식의 값을 생성합니다.  
+ This engine produces values of a user-specified unsigned integral type using the recurrence relation ( *period*) `x(i) = (A * x(i-1) + C) mod M`.  
   
- `M`이 0이면 이 모듈러스 연산에 사용되는 값은 `numeric_limits<result_type>::max() + 1`입니다. 엔진의 상태는 반환되는 마지막 값이거나 `operator()`를 호출하지 않은 경우에는 시드 값입니다.  
+ If `M` is zero, the value used for this modulus operation is `numeric_limits<result_type>::max() + 1`. The engine's state is the last value returned, or the seed value if no call has been made to `operator()`.  
   
- `M`이 0이 아니면 템플릿 인수 `A`와 `C`의 값이 `M`보다 작아야 합니다.  
+ If `M` is not zero, the values of the template arguments `A` and `C` must be less than `M`.  
   
- 이 엔진에서 직접 생성기를 생성할 수 있더라도 다음의 미리 정의된 형식 정의 중 하나를 사용할 수 있습니다.  
+ Although you can construct a generator from this engine directly, you can also use one of these predefined typedefs.  
   
- `minstd_rand0`: 1988 최소 표준 엔진입니다(Lewis, Goodman 및 Miller, 1969).  
+ `minstd_rand0`: 1988 minimal standard engine (Lewis, Goodman, and Miller, 1969).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;  
 ```  
   
- `minstd_rand`: 업데이트된 최소 표준 엔진 `minstd_rand0`입니다(Park, Miller 및 Stockmeyer, 1993).  
+ `minstd_rand`: Updated minimal standard engine `minstd_rand0` (Park, Miller, and Stockmeyer, 1993).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;  
 ```  
   
- 선형 합동 엔진 알고리즘에 대한 자세한 내용은 Wikipedia 문서 [Linear congruential generator](http://go.microsoft.com/fwlink/LinkId=402446)(선형 합동 발생기)를 참조하세요.  
+ For detailed information about the linear congruential engine algorithm, see the Wikipedia article [Linear congruential generator](http://go.microsoft.com/fwlink/LinkId=402446).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

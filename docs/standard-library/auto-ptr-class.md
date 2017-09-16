@@ -1,5 +1,5 @@
 ---
-title: "auto_ptr 클래스 | Microsoft 문서"
+title: auto_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- auto_ptr
 - memory/std::auto_ptr
 - memory/std::auto_ptr::element_type
 - memory/std::auto_ptr::get
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- auto_ptr class
+- std::auto_ptr [C++]
+- std::auto_ptr [C++], element_type
+- std::auto_ptr [C++], get
+- std::auto_ptr [C++], release
+- std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
 caps.latest.revision: 26
 author: corob-msft
@@ -38,21 +41,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 320dbc4d09bfcc65fce8471ce23e127f28deb6b9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a60c75b2bf00ef780e08682eb82b6c8218bc5f0f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="autoptr-class"></a>auto_ptr 클래스
-제어가 블록을 나갈 때 리소스가 자동으로 제거되도록 리소스를 스마트 포인터로 래핑합니다.  
+# <a name="autoptr-class"></a>auto_ptr Class
+Wraps a smart pointer around a resource that ensures the resource is destroyed automatically when control leaves a block.  
   
- 더욱 강력한 `unique_ptr` 클래스가 `auto_ptr`을 대체합니다. 자세한 내용은 [unique_ptr 클래스](../standard-library/unique-ptr-class.md)를 참조하세요.  
+ The more capable `unique_ptr` class supersedes `auto_ptr`. For more information, see [unique_ptr Class](../standard-library/unique-ptr-class.md).  
   
- `throw()` 및 예외 처리에 대한 자세한 내용은 [예외 사양(throw)](../cpp/exception-specifications-throw-cpp.md)을 참조하세요.  
+ For more information about `throw()` and exception handling, see [Exception Specifications (throw)](../cpp/exception-specifications-throw-cpp.md).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
  ```   
 class auto_ptr {
 public:
@@ -75,57 +78,57 @@ public:
     void reset(Type* ptr = 0);
 };
 ```  
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `right`  
- 기존 리소스를 가져올 `auto_ptr`입니다.  
+ The `auto_ptr` from which to get an existing resource.  
   
  `ptr`  
- 저장된 포인터를 바꾸도록 지정된 포인터입니다.  
+ The pointer specified to replace the stored pointer.  
   
-## <a name="remarks"></a>설명  
- 이라는 스마트 포인터를 설명 하는 템플릿 클래스는 `auto_ptr`, 할당 된 개체입니다. 포인터는 null이거나 `new`로 할당된 개체를 지정해야 합니다. 저장된 값이 다른 개체에 할당되면 `auto_ptr`이 소유권을 전송합니다. null 포인터를 사용한 전송 후 저장된 값을 대체합니다. `auto_ptr<Type>`에 대한 소멸자는 할당된 개체를 삭제합니다. `auto_ptr<Type>`은 예외가 발생하는 경우에도 제어가 블록을 나갈 때 할당된 개체가 자동으로 삭제되도록 합니다. 동일한 개체를 소유하는 두 개의 `auto_ptr<Type>` 개체를 생성하면 안 됩니다.  
+## <a name="remarks"></a>Remarks  
+ The template class describes a smart pointer, called an `auto_ptr`, to an allocated object. The pointer must be either null or designate an object allocated by `new`. The `auto_ptr` transfers ownership if its stored value is assigned to another object. (It replaces the stored value after a transfer with a null pointer.) The destructor for `auto_ptr<Type>` deletes the allocated object. The `auto_ptr<Type>` ensures that an allocated object is automatically deleted when control leaves a block, even through a thrown exception. You should not construct two `auto_ptr<Type>` objects that own the same object.  
   
- 함수 호출에 대한 인수로 `auto_ptr<Type>` 개체 값을 전달할 수 있습니다. `auto_ptr`은 표준 라이브러리 컨테이너의 요소일 수 없습니다. C++ 표준 라이브러리 컨테이너를 사용하여 `auto_ptr<Type>` 개체의 시퀀스를 안정적으로 관리할 수 없습니다.  
+ You can pass an `auto_ptr<Type>` object by value as an argument to a function call. An `auto_ptr` cannot be an element of any Standard Library container. You cannot reliably manage a sequence of `auto_ptr<Type>` objects with a C++ Standard Library container.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[auto_ptr](#auto_ptr)|`auto_ptr` 형식의 개체에 대한 생성자입니다.|  
+|[auto_ptr](#auto_ptr)|The constructor for objects of type `auto_ptr`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|이 형식은 템플릿 매개 변수 `Type`의 동의어입니다.|  
+|[element_type](#element_type)|The type is a synonym for the template parameter `Type`.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[get](#get)|이 멤버 함수는 저장된 포인터 `myptr`을 반환합니다.|  
-|[release](#release)|이 멤버는 저장된 포인터 `myptr`을 null 포인터로 대체하고 이전에 저장된 포인터를 반환합니다.|  
-|[reset](#reset)|이 멤버 함수는 저장된 포인터 값 `myptr`이 함수 호출의 결과로 변경되는 경우에만 `delete myptr` 식을 계산합니다. 그런 다음 저장된 포인터를 `ptr`로 바꿉니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|한 `auto_ptr` 개체에서 다른 개체로 소유권을 전송하는 대입 연산자입니다.|  
-|[operator*](#op_star)|`auto_ptr` 형식의 개체에 대한 역참조 연산자입니다.|  
-|[operator->](#operator-_gt)|멤버 액세스를 허용하기 위한 연산자입니다.|  
-|[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|한 종류의 `auto_ptr`에서 다른 종류의 `auto_ptr`로 캐스팅합니다.|  
-|[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|`auto_ptr`에서 `auto_ptr_ref`로 캐스팅합니다.|  
+|[get](#get)|The member function returns the stored pointer `myptr`.|  
+|[release](#release)|The member replaces the stored pointer `myptr` with a null pointer and returns the previously stored pointer.|  
+|[reset](#reset)|The member function evaluates the expression `delete myptr`, but only if the stored pointer value `myptr` changes as a result of function call. It then replaces the stored pointer with `ptr`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<memory>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|An assignment operator that transfers ownership from one `auto_ptr` object to another.|  
+|[operator*](#op_star)|The dereferencing operator for objects of type `auto_ptr`.|  
+|[operator->](#operator-_gt)|The operator for allowing member access.|  
+|[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Casts from one kind of `auto_ptr` to another kind of `auto_ptr`.|  
+|[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Casts from an `auto_ptr` to an `auto_ptr_ref`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
+  
+ **Namespace:** std  
   
 ##  <a name="auto_ptr"></a>  auto_ptr::auto_ptr  
- `auto_ptr` 형식의 개체에 대한 생성자입니다.  
+ The constructor for objects of type `auto_ptr`.  
   
 ```   
 explicit auto_ptr(Type* ptr  = 0) throw();
@@ -138,21 +141,21 @@ template <class Other>
 auto _ptr(auto _ptr<Other>& right) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- `auto_ptr`이 캡슐화하는 개체에 대한 포인터입니다.  
+ The pointer to the object that `auto_ptr` encapsulates.  
   
  `right`  
- 생성자에 의해 복사될 `auto_ptr` 개체입니다.  
+ The `auto_ptr` object to be copied by the constructor.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 할당된 개체에 대한 저장된 포인터인 **myptr**에 `ptr`을 저장합니다. 두 번째 생성자에 저장 된 포인터의 소유권을 전송 `right`를 저장 하 여 `right`합니다. [release](#release)를 **myptr**에 저장합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores `ptr` in **myptr**, the stored pointer to the allocated object. The second constructor transfers ownership of the pointer stored in `right`, by storing `right`. [release](#release) in **myptr**.  
   
- 세 번째 생성자도 두 번째와 동일하게 동작합니다. 단, **right**. `ref`. **release**를 **myptr**에 저장한다는 점이 다릅니다. 여기서 `ref`는 `right`에 저장된 참조입니다.  
+ The third constructor behaves the same as the second, except that it stores **right**. `ref`. **release** in **myptr**, where `ref` is the reference stored in `right`.  
   
- **Other**에 대한 포인터가 **Type**에 대한 포인터로 암시적으로 변환될 수 있는 경우, 템플릿 생성자는 두 번째 생성자와 동일하게 동작합니다.  
+ The template constructor behaves the same as the second constructor, provided that a pointer to **Other** can be implicitly converted to a pointer to **Type**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_auto_ptr.cpp  
@@ -212,7 +215,7 @@ Destructing 00311AF8
 ```  
   
 ##  <a name="element_type"></a>  auto_ptr::element_type  
- 이 형식은 템플릿 매개 변수 **Type**의 동의어입니다.  
+ The type is a synonym for the template parameter **Type**.  
   
 ```  
  
@@ -220,16 +223,16 @@ typedef Type element  _type;
 ```  
   
 ##  <a name="get"></a>  auto_ptr::get  
- 이 멤버 함수는 저장된 포인터 **myptr**을 반환합니다.  
+ The member function returns the stored pointer **myptr**.  
   
 ```   
 Type *get() const throw();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 저장된 포인터 **myptr**입니다.  
+### <a name="return-value"></a>Return Value  
+ The stored pointer **myptr**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_get.cpp  
@@ -277,7 +280,7 @@ Destructing 00311B88 Value: 6
 ```  
   
 ##  <a name="op_eq"></a>  auto_ptr::operator=  
- 한 `auto_ptr` 개체에서 다른 개체로 소유권을 전송하는 대입 연산자입니다.  
+ An assignment operator that transfers ownership from one `auto_ptr` object to another.  
   
 ```  
 template <class Other>  
@@ -286,63 +289,63 @@ auto_ptr<Type>& operator=(auto_ptr<Type>& right) throw();
 auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- `auto_ptr` 형식의 개체입니다.  
+ An object of type `auto_ptr`.  
   
-### <a name="return-value"></a>반환 값  
- `auto_ptr`\< **Type**> 형식의 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to an object of type `auto_ptr`\< **Type**>.  
   
-### <a name="remarks"></a>설명  
- 이 할당은 저장된 포인터 **myptr**이 할당의 결과로 변경되는 경우에만 **delete myptr** 식을 계산합니다. 그런 다음 _ *Right*에 저장된 포인터의 소유권을 전송하기 위해 \_ *Right*. [release](#release)를 **myptr**에 저장합니다. 함수는 **\*this**를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The assignment evaluates the expression **delete myptr**, but only if the stored pointer **myptr** changes as a result of the assignment. It then transfers ownership of the pointer stored in _ *Right*, by storing \_ *Right*. [release](#release) in **myptr**. The function returns **\*this**.  
   
-### <a name="example"></a>예제  
-  멤버 연산자의 사용 예는 [auto_ptr::auto_ptr](#auto_ptr)을 참조하세요.  
+### <a name="example"></a>Example  
+  For an example of the use of the member operator, see [auto_ptr::auto_ptr](#auto_ptr).  
   
 ##  <a name="op_star"></a>  auto_ptr::operator*  
- `auto_ptr` 형식의 개체에 대한 역참조 연산자입니다.  
+ The dereferencing operator for objects of type `auto_ptr`.  
   
 ```   
 Type& operator*() const throw();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 포인터가 소유한 **Type** 형식의 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to an object of type **Type** that the pointer owns.  
   
-### <a name="remarks"></a>설명  
- 간접 참조 연산자는 `*`[get](#get)을 반환합니다. 따라서 저장된 포인터는 null이 아니어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The indirection operator returns `*`[get](#get). Hence, the stored pointer must not be null.  
   
-### <a name="example"></a>예제  
-  멤버 함수를 사용하는 방법의 예는 [auto_ptr::auto_ptr](#auto_ptr)을 참조하세요.  
+### <a name="example"></a>Example  
+  For an example of how to use the member function, see [auto_ptr::auto_ptr](#auto_ptr).  
   
 ##  <a name="auto_ptr__operator-_gt"></a>  auto_ptr::operator-&gt;  
- 멤버 액세스를 허용하기 위한 연산자입니다.  
+ The operator for allowing member access.  
   
 ```   
 Type * operator->() const throw();
 ```  
   
-### <a name="return-value"></a>반환 값  
- **auto_ptr**을 소유한 개체의 멤버입니다.  
+### <a name="return-value"></a>Return Value  
+ A member of the object that **auto_ptr** owns.  
   
-### <a name="remarks"></a>설명  
- 선택 연산자는 [get](#get)`( )`을 반환합니다. 따라서 *ap*-> **member** 식은 ( *ap*. **get**( ) )-> **member**와 동일하게 동작합니다. 여기서 *ap*는 `auto_ptr`\< **Type**> 클래스의 개체입니다. 따라서 저장된 포인터는 null이 아니어야 하며, **Type**은 클래스, 구조체 또는 **member** 멤버가 있는 공용 구조체 형식이어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The selection operator returns [get](#get)`( )`, so that the expression *ap*-> **member** behaves the same as ( *ap*. **get**( ) )-> **member**, where *ap* is an object of class `auto_ptr`\< **Type**>. Hence, the stored pointer must not be null, and **Type** must be a class, struct, or union type with a **member** member.  
   
-### <a name="example"></a>예제  
-  멤버 함수를 사용하는 방법의 예는 [auto_ptr::auto_ptr](#auto_ptr)을 참조하세요.  
+### <a name="example"></a>Example  
+  For an example of how to use the member function, see [auto_ptr::auto_ptr](#auto_ptr).  
   
 ##  <a name="op_auto_ptr_lt_other_gt"></a>  auto_ptr::operator auto_ptr&lt;Other&gt;  
- 한 종류의 `auto_ptr`에서 다른 종류의 `auto_ptr`로 캐스팅합니다.  
+ Casts from one kind of `auto_ptr` to another kind of `auto_ptr`.  
   
 ```   
 template <class Other>  
 operator auto _ptr<Other>() throw();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 형식 캐스팅 연산자는 `auto_ptr` \< **Other**>( **\*this**)를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The type cast operator returns `auto_ptr` \< **Other**>( **\*this**).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_op_auto_ptr.cpp  
@@ -360,17 +363,17 @@ int main()
 ```  
   
 ##  <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::operator auto_ptr_ref&lt;Other&gt;  
- `auto_ptr`에서 **auto_ptr_ref**로 캐스트합니다.  
+ Casts from an `auto_ptr` to an **auto_ptr_ref**.  
   
 ```   
 template <class Other>  
 operator auto _ptr  _ref<Other>() throw();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 형식 캐스팅 연산자는 **auto_ptr_ref**\< **Other**>( **\*this**)를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The type cast operator returns **auto_ptr_ref**\< **Other**>( **\*this**).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_op_auto_ptr_ref.cpp  
@@ -419,19 +422,19 @@ main exiting
 ```  
   
 ##  <a name="release"></a>  auto_ptr::release  
- 이 멤버는 저장된 포인터 **myptr**을 null 포인터로 대체하고 이전에 저장된 포인터를 반환합니다.  
+ The member replaces the stored pointer **myptr** with a null pointer and returns the previously stored pointer.  
   
 ```   
 Type *release() throw();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이전에 저장된 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ The previously stored pointer.  
   
-### <a name="remarks"></a>설명  
- 이 멤버는 저장된 포인터 **myptr**을 null 포인터로 대체하고 이전에 저장된 포인터를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member replaces the stored pointer **myptr** with a null pointer and returns the previously stored pointer.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_release.cpp  
@@ -478,17 +481,17 @@ Destructing 00311B88 Value: 6
 ```  
   
 ##  <a name="reset"></a>  auto_ptr::reset  
- 멤버 함수는 식을 계산 **삭제** **myptr**, 경우에 저장 된 포인터 값 **myptr** 함수 호출의 결과로 변경 합니다. 그런 다음 저장된 포인터를 **ptr**로 바꿉니다.  
+ The member function evaluates the expression **delete** **myptr**, but only if the stored pointer value **myptr** changes as a result of a function call. It then replaces the stored pointer with **ptr**.  
   
 ```   
 void reset(Type* ptr = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 저장된 포인터 **myptr**을 바꾸도록 지정된 포인터입니다.  
+ The pointer specified to replace the stored pointer **myptr**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_reset.cpp  
@@ -535,8 +538,8 @@ pi2 == pi3
 Destructing 00311B88 Value: 6  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [unique_ptr 클래스](../standard-library/unique-ptr-class.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [unique_ptr Class](../standard-library/unique-ptr-class.md)
 
 

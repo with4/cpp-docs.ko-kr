@@ -1,5 +1,5 @@
 ---
-title: "CDumpContext 클래스 | Microsoft Docs"
+title: CDumpContext Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,11 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDumpContext class
-- AfxDump object
-- diagnostics, diagnostic classes
-- diagnostic classes
-- diagnosis, diagnostic classes
+- CDumpContext [MFC], CDumpContext
+- CDumpContext [MFC], DumpAsHex
+- CDumpContext [MFC], Flush
+- CDumpContext [MFC], GetDepth
+- CDumpContext [MFC], HexDump
+- CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
 caps.latest.revision: 20
 author: mikeblome
@@ -44,96 +45,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 0722150ff3cc496a462008b362e55362aeebb9c1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 898a93a0aa92f861feeb9d496007f71fe9bf0680
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdumpcontext-class"></a>CDumpContext 클래스
-사용자가 읽을 수 있는 텍스트 형식으로 스트림 지향 진단 출력을 지원합니다.  
+# <a name="cdumpcontext-class"></a>CDumpContext Class
+Supports stream-oriented diagnostic output in the form of human-readable text.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDumpContext  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDumpContext::CDumpContext](#cdumpcontext)|`CDumpContext` 개체를 생성합니다.|  
+|[CDumpContext::CDumpContext](#cdumpcontext)|Constructs a `CDumpContext` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDumpContext::DumpAsHex](#dumpashex)|16 진수 형식으로 표시 된 항목으로 덤프합니다.|  
-|[CDumpContext::Flush](#flush)|덤프 컨텍스트 버퍼의 모든 데이터를 지웁니다.|  
-|[CDumpContext::GetDepth](#getdepth)|해당 하는 덤프의 깊이 정수를 가져옵니다.|  
-|[CDumpContext::HexDump](#hexdump)|16 진수 형식의 배열에 포함 된 바이트를 덤프 합니다.|  
-|[CDumpContext::SetDepth](#setdepth)|덤프의 깊이 가져오거나 설정 합니다.|  
+|[CDumpContext::DumpAsHex](#dumpashex)|Dumps the indicated item in hexadecimal format.|  
+|[CDumpContext::Flush](#flush)|Flushes any data in the dump context buffer.|  
+|[CDumpContext::GetDepth](#getdepth)|Gets an integer corresponding to the depth of the dump.|  
+|[CDumpContext::HexDump](#hexdump)|Dumps bytes contained in an array in hexadecimal format.|  
+|[CDumpContext::SetDepth](#setdepth)|Sets the depth of the dump.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDumpContext::operator&lt;&lt;](#operator_lt_lt)|에 덤프 컨텍스트 변수 및 개체를 삽입합니다.|  
+|[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|Inserts variables and objects into the dump context.|  
   
-## <a name="remarks"></a>설명  
- `CDumpContext`기본 클래스는 없습니다.  
+## <a name="remarks"></a>Remarks  
+ `CDumpContext` does not have a base class.  
   
- 사용할 수 있습니다 [afxDump](diagnostic-services.md#afxdump)는 미리 선언 된 `CDumpContext` 대부분의 프로그램 덤프에 대 한 개체입니다. `afxDump` 개체는 Microsoft Foundation Class 라이브러리의 디버그 버전에만 사용할 수 있습니다.  
+ You can use [afxDump](diagnostic-services.md#afxdump), a predeclared `CDumpContext` object, for most of your dumping. The `afxDump` object is available only in the Debug version of the Microsoft Foundation Class Library.  
   
- 메모리의 여러 [진단 서비스](../../mfc/reference/diagnostic-services.md) 사용 `afxDump` 출력에 대 한 합니다.  
+ Several of the memory [diagnostic services](../../mfc/reference/diagnostic-services.md) use `afxDump` for their output.  
   
- Windows 환경에서 미리 정의 된 출력에서 `afxDump` 개념적으로 유사한 개체는 `cerr` 스트림, Windows 함수를 통해 디버거에 라우팅 된다고 **OutputDebugString**합니다.  
+ Under the Windows environment, the output from the predefined `afxDump` object, conceptually similar to the `cerr` stream, is routed to the debugger via the Windows function **OutputDebugString**.  
   
- `CDumpContext` 클래스에 오버 로드 된 삽입 ( **<<**)에 대 한 연산자 `CObject` 개체의 데이터를 덤프 하는 포인터입니다. 파생된 된 개체에 대 한 사용자 지정 덤프 형식 해야 하는 경우 재정의 [CObject::Dump](../../mfc/reference/cobject-class.md#dump)합니다. 대부분 Microsoft Foundation 클래스에서 재정의 된 구현 `Dump` 멤버 함수입니다.  
+ The `CDumpContext` class has an overloaded insertion ( **<<**) operator for `CObject` pointers that dumps the object's data. If you need a custom dump format for a derived object, override [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Most Microsoft Foundation classes implement an overridden `Dump` member function.  
   
- 클래스에서 파생 되지 않은 `CObject`와 같은 `CString`, `CTime`, 및 `CTimeSpan`, 자신의 오버 로드 된가 `CDumpContext` 삽입 연산자와 같은 자주 사용 하는 do 구조체로 **CFileStatus**, `CPoint`, 및 `CRect`합니다.  
+ Classes that are not derived from `CObject`, such as `CString`, `CTime`, and `CTimeSpan`, have their own overloaded `CDumpContext` insertion operators, as do often-used structures such as **CFileStatus**, `CPoint`, and `CRect`.  
   
- 사용 하는 경우는 [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) 또는 [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) 매크로 클래스의 구현에서 `CObject::Dump` 의 이름을 인쇄 프로그램 `CObject`-클래스를 파생 합니다. 그렇지 않은 경우 인쇄 됩니다 `CObject`합니다.  
+ If you use the [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) or [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macro in the implementation of your class, then `CObject::Dump` will print the name of your `CObject`-derived class. Otherwise, it will print `CObject`.  
   
- `CDumpContext` 클래스 라이브러리의 디버그와 릴리스 버전을 사용할 수는 있지만 `Dump` 멤버 함수는 디버그 버전 에서만에서 정의 됩니다. 사용 하 여 **#ifdef _DEBUG**  /  `#endif` 을 사용자 지정을 비롯 하 여 진단 코드 문을 `Dump` 멤버 함수입니다.  
+ The `CDumpContext` class is available with both the Debug and Release versions of the library, but the `Dump` member function is defined only in the Debug version. Use **#ifdef _DEBUG** / `#endif` statements to bracket your diagnostic code, including your custom `Dump` member functions.  
   
- 직접 만들기 전에 `CDumpContext` 개체를 만들어야 합니다는 `CFile` 덤프 대상으로 사용 되는 개체입니다.  
+ Before you create your own `CDumpContext` object, you must create a `CFile` object that serves as the dump destination.  
   
- 대 한 자세한 내용은 `CDumpContext`, 참조 [MFC 응용 프로그램 디버깅](/visualstudio/debugger/mfc-debugging-techniques)합니다.  
+ For more information on `CDumpContext`, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
   
  **#define _DEBUG**  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CDumpContext`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cdumpcontext"></a>CDumpContext::CDumpContext  
- 클래스의 개체를 생성 `CDumpContext`합니다.  
+##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext  
+ Constructs an object of class `CDumpContext`.  
   
 ```  
 CDumpContext(CFile* pFile = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pFile`  
- 에 대 한 포인터는 `CFile` 덤프 대상인 개체입니다.  
+ A pointer to the `CFile` object that is the dump destination.  
   
-### <a name="remarks"></a>주의  
- `afxDump` 개체는 자동으로 만들어집니다.  
+### <a name="remarks"></a>Remarks  
+ The `afxDump` object is constructed automatically.  
   
- 내부에 쓰지 않아도 `CFile` 덤프 컨텍스트 활성 상태가 아니면 동안 덤프를 방해할 수 있습니다. Windows 환경에서 출력 하 고 디버거 Windows 함수를 통해 라우팅됩니다 **OutputDebugString**합니다.  
+ Do not write to the underlying `CFile` while the dump context is active; otherwise, you will interfere with the dump. Under the Windows environment, the output is routed to the debugger via the Windows function **OutputDebugString**.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities # 12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
-##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
- 16 진수 숫자로 지정된 된 형식으로 덤프 합니다.  
+##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex  
+ Dumps the specified type formatted as hexadecimal numbers.  
   
 ```  
 CDumpContext& DumpAsHex(BYTE b);  
@@ -146,40 +147,40 @@ CDumpContext& DumpAsHex(ULONGLONG n);
 CDumpContext& DumpAsHex(WORD w);
 ```  
   
-### <a name="return-value"></a>반환 값  
- `CDumpContext` 개체에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to a `CDumpContext` object.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 16 진수 숫자로 지정 된 형식의 항목을 덤프를 호출 합니다. 배열 덤프 하려면 호출 [CDumpContext::HexDump](#hexdump)합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to dump the item of the specified type as a hexadecimal number. To dump an array, call [CDumpContext::HexDump](#hexdump).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities # 13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
-##  <a name="flush"></a>CDumpContext::Flush  
- 덤프 컨텍스트에 연결 된 파일에 기록 하는 버퍼에 남아 있는 모든 데이터를 수행 하도록 합니다.  
+##  <a name="flush"></a>  CDumpContext::Flush  
+ Forces any data remaining in buffers to be written to the file attached to the dump context.  
   
 ```  
 void Flush();
 ```  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities # 14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
-##  <a name="getdepth"></a>CDumpContext::GetDepth  
- 프로세스에서 전체 또는 단순 덤프 인지 확인 합니다.  
+##  <a name="getdepth"></a>  CDumpContext::GetDepth  
+ Determines whether a deep or shallow dump is in process.  
   
 ```  
 int GetDepth() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 설정한 대로 덤프의 깊이 `SetDepth`합니다.  
+### <a name="return-value"></a>Return Value  
+ The depth of the dump as set by `SetDepth`.  
   
-### <a name="example"></a>예제  
-  예를 참조 [SetDepth](#setdepth)합니다.  
+### <a name="example"></a>Example  
+  See the example for [SetDepth](#setdepth).  
   
-##  <a name="hexdump"></a>CDumpContext::HexDump  
- 덤프를 16 진수로 서식이 지정 된 바이트 배열입니다.  
+##  <a name="hexdump"></a>  CDumpContext::HexDump  
+ Dumps an array of bytes formatted as hexadecimal numbers.  
   
 ```  
 void HexDump(
@@ -189,27 +190,27 @@ void HexDump(
     int nWidth);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *lpszLine*  
- 새 줄의 시작 부분에 출력 하는 문자열입니다.  
+ A string to output at the start of a new line.  
   
  *pby*  
- 바이트 덤프를 포함 하는 버퍼에 대 한 포인터입니다.  
+ A pointer to a buffer containing the bytes to dump.  
   
  `nBytes`  
- 덤프 하는 바이트 수입니다.  
+ The number of bytes to dump.  
   
  `nWidth`  
- 최대 바이트 수입니다 (하지 출력 줄 너비) 줄당 덤프.  
+ Maximum number of bytes dumped per line (not the width of the output line).  
   
-### <a name="remarks"></a>주의  
- 16 진수를 나타내는 단일, 특정 항목 형식을 덤프 하려면 호출 [CDumpContext::DumpAsHex](#dumpashex)합니다.  
+### <a name="remarks"></a>Remarks  
+ To dump a single, specific item type as a hexadecimal number, call [CDumpContext::DumpAsHex](#dumpashex).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities # 15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
-##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
- 덤프 컨텍스트를 지정된 된 데이터를 출력합니다.  
+##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;  
+ Outputs the specified data to the dump context.  
   
 ```  
 CDumpContext& operator<<(const CObject* pOb);  
@@ -235,39 +236,39 @@ CDumpContext& operator<<(HACCEL h);
 CDumpContext& operator<<(HFONT h);
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CDumpContext` 참조 합니다. 반환 값을 사용 하 여 소스 코드의 한 줄에 여러 개의 삽입을 작성할 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ A `CDumpContext` reference. Using the return value, you can write multiple insertions on a single line of source code.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 삽입 연산자는 오버 로드 `CObject` 와 대부분의 기본 형식 뿐만 아니라 포인터입니다. 문자열 내용의; 덤프에 문자 결과에 대 한 포인터 에 대 한 포인터 `void` 만 주소의 16 진수 덤프 합니다. A **LONGLONG** 64 비트 부호 있는 정수; 덤프 A **ULONGLONG** 64 비트 부호 없는 정수의 덤프 합니다.  
+### <a name="remarks"></a>Remarks  
+ The insertion operator is overloaded for `CObject` pointers as well as for most primitive types. A pointer to character results in a dump of string contents; a pointer to `void` results in a hexadecimal dump of the address only. A **LONGLONG** results in a dump of a 64-bit signed integer; A **ULONGLONG** results in a dump of a 64-bit unsigned integer.  
   
- 사용 하는 경우는 `IMPLEMENT_DYNAMIC` 또는 `IMPLEMENT_SERIAL` 클래스에 다음 삽입 연산자의 구현에서 매크로 통해 `CObject::Dump`의 이름을 인쇄 프로그램 `CObject`-클래스를 파생 합니다. 그렇지 않은 경우 인쇄 됩니다 `CObject`합니다. 재정의 하는 경우는 `Dump` 함수 클래스에 다음의 16 진수 덤프 하는 대신 개체의 내용의 좀 더 의미 있는 출력을 제공할 수 있습니다.  
+ If you use the `IMPLEMENT_DYNAMIC` or `IMPLEMENT_SERIAL` macro in the implementation of your class, then the insertion operator, through `CObject::Dump`, will print the name of your `CObject`-derived class. Otherwise, it will print `CObject`. If you override the `Dump` function of the class, then you can provide a more meaningful output of the object's contents instead of a hexadecimal dump.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities # 17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
-##  <a name="setdepth"></a>CDumpContext::SetDepth  
- 덤프에 대 한 깊이 가져오거나 설정 합니다.  
+##  <a name="setdepth"></a>  CDumpContext::SetDepth  
+ Sets the depth for the dump.  
   
 ```  
 void SetDepth(int nNewDepth);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *nNewDepth*  
- 새 깊이 값입니다.  
+ The new depth value.  
   
-### <a name="remarks"></a>설명  
- 기본 형식 또는 단순을 덤프 하는 경우 `CObject` 에 다른 개체에 대 한 포인터 없이 포함 된 값이 0은 충분 합니다. 모든 개체가 된 상태 였던 전체 덤프를 지정 하는 0 보다 큰 값이 재귀적으로 덤프 합니다. 예를 들어 컬렉션의 전체 덤프는 컬렉션의 모든 요소를 덤프 합니다. 파생된 클래스에서 다른 특정 깊이 값을 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If you are dumping a primitive type or simple `CObject` that contains no pointers to other objects, then a value of 0 is sufficient. A value greater than 0 specifies a deep dump where all objects are dumped recursively. For example, a deep dump of a collection will dump all elements of the collection. You may use other specific depth values in your derived classes.  
   
 > [!NOTE]
->  순환 참조는 전체 덤프에서 찾을 수 없습니다 및 무한 루프가 발생할 수 있습니다.  
+>  Circular references are not detected in deep dumps and can result in infinite loops.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities # 16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CFile 클래스](../../mfc/reference/cfile-class.md)   
- [CObject 클래스](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFile Class](../../mfc/reference/cfile-class.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "MFC DLL 프로젝트 만들기 | Microsoft 문서"
+title: Creating an MFC DLL Project | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,10 +13,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MFC DLLs [C++], creating projects
-- DLLs [C++], MFC
-- projects [C++], creating
-- DLLs [C++], creating
+- MFC DLLs [MFC], creating projects
+- DLLs [MFC], MFC
+- projects [MFC], creating
+- DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
 caps.latest.revision: 13
 author: mikeblome
@@ -36,38 +36,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: c403d1351c43e043fd3048d342dafcf069951446
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b133538b16801d844109bd57225c0bc09a237a34
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="creating-an-mfc-dll-project"></a>MFC DLL 프로젝트 만들기
-MFC DLL은 여러 응용 프로그램에서 동시에 사용할 수 있는 함수의 공유 라이브러리로 사용 되는 이진 파일. MFC DLL 프로젝트를 만드는 가장 쉬운 방법은 MFC DLL 마법사를 사용 하 여 됩니다.  
+# <a name="creating-an-mfc-dll-project"></a>Creating an MFC DLL Project
+An MFC DLL is a binary file that acts as a shared library of functions that can be used simultaneously by multiple applications. The easiest way to create an MFC DLL project is to use the MFC DLL Wizard.  
   
 > [!NOTE]
->  IDE의 기능이의 모양을 활성 설정이 나 버전에 따라 달라질 수 다를 수 있습니다 도움말에서 설명 하는 것입니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  The appearance of features in the IDE can depend on your active settings or edition, and might differ from those described in Help. To change your settings, choose **Import and Export Settings** on the **Tools** menu. For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>MFC DLL 마법사를 사용 하 여 MFC DLL 프로젝트를 만들려면  
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>To create an MFC DLL Project using the MFC DLL Wizard  
   
-1.  도움말 항목의 지침에 따라 [Visual c + + 응용 프로그램 마법사로 프로젝트 만들기](../../ide/creating-desktop-projects-by-using-application-wizards.md)합니다.  
+1.  Follow the instructions in the help topic [Creating a Project with a Visual C++ Application Wizard](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
- **참고** 에 **새 프로젝트** 대화 상자는 `MFC DLL` MFC DLL 마법사를 열려면 템플릿 창에서 아이콘입니다.  
+ **Note** In the **New Project** dialog box, select the `MFC DLL` icon in the Templates pane to open the MFC DLL Wizard.  
   
-1.  사용 하 여 응용 프로그램 설정을 정의 [응용 프로그램 설정](../../mfc/reference/application-settings-mfc-dll-wizard.md) 의 페이지는 [MFC DLL 마법사](../../mfc/reference/mfc-dll-wizard.md)합니다.  
+1.  Define your application settings using the [application settings](../../mfc/reference/application-settings-mfc-dll-wizard.md) page of the [MFC DLL Wizard](../../mfc/reference/mfc-dll-wizard.md).  
   
     > [!NOTE]
-    >  마법사의 기본 설정을 그대로 유지하려면 이 단계를 건너 뜁니다.  
+    >  Skip this step to keep the wizard default settings.  
   
-2.  클릭 **마침** 는 마법사를 닫고에서 새 프로젝트를 열고 **솔루션 탐색기**합니다.  
+2.  Click **Finish** to close the wizard and open your new project in **Solution Explorer**.  
   
- 프로젝트가 만들어지면 솔루션 탐색기에서 만든 파일을 볼 수 있습니다. 마법사에서 프로젝트용으로 만드는 파일에 대한 자세한 내용은 프로젝트 생성 파일인 ReadMe.txt를 참조하세요. 파일 형식에 대 한 자세한 내용은 참조 [Visual c + + 프로젝트용으로 만들어지는 파일 형식](../../ide/file-types-created-for-visual-cpp-projects.md)합니다.  
+ Once your project is created, you can view the files created in the Solution Explorer. For more information about the files the wizard creates for your project, see the project-generated file ReadMe.txt. For more information about the file types, see [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
-## <a name="see-also"></a>참고 항목  
- [Visual c + + 프로젝트 형식](http://msdn.microsoft.com/library/912b4ba2-7719-43d5-b087-db33e3f9329a)   
- [코드 마법사로 기능 추가](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [속성 페이지](../../ide/property-pages-visual-cpp.md)   
- [응용 프로그램 배포](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+## <a name="see-also"></a>See Also  
+ [Visual C++ Project Types](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Property Pages](../../ide/property-pages-visual-cpp.md)   
+ [Deploying Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 
 

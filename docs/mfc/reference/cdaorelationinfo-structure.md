@@ -1,5 +1,5 @@
 ---
-title: "CDaoRelationInfo 구조체 | Microsoft 문서"
+title: CDaoRelationInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
-- CDaoRelationInfo structure
+- CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 7c3a8195aed2c3b3fe5c78c98afcc6e72a83cc21
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dee874251923212544fa886f5a219e1613fe61c9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 구조체
-`CDaoRelationInfo` 구조에서 두 테이블의 필드 간에 정의 된 관계에 대 한 정보를 포함 한 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체입니다.  
+# <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo Structure
+The `CDaoRelationInfo` structure contains information about a relation defined between fields of two tables in a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoRelationInfo  
@@ -60,49 +60,49 @@ struct CDaoRelationInfo
 };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- Relation 개체를 이름을 고유 하 게 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 하십시오.  
+ Uniquely names the relation object. For more information, see the topic "Name Property" in DAO Help.  
   
  *m_strTable*  
- 관계에서 기본 테이블을 이름을 지정 합니다.  
+ Names the primary table in the relation.  
   
  *m_strForeignTable*  
- 관계에서 외래 테이블을 이름을 지정 합니다. 외래 테이블은 외래 키를 포함 하는 데 사용 되는 테이블입니다. 일반적으로 사용 하 여 외래 테이블 설정 하거나 참조 무결성을 적용 합니다. 외래 테이블은 대개 일 대 다 관계의 다 쪽에 있습니다. 외래 테이블의 예로 미국 또는 캐나다의 주 고객 주문에 대 한 코드를 포함 하는 테이블입니다.  
+ Names the foreign table in the relation. A foreign table is a table used to contain foreign keys. Generally, you use a foreign table to establish or enforce referential integrity. The foreign table is usually on the many side of a one-to-many relationship. Examples of foreign tables include tables containing codes for the American states or Canadian provinces or customer orders.  
   
  `m_lAttributes`  
- 관계 형식에 대 한 정보를 포함합니다. 이 멤버의 값은 다음 중 하나일 수 있습니다.  
+ Contains information about the relation type. The value of this member can be any of the following:  
   
-- **dbRelationUnique** 한 일 관계입니다.  
+- **dbRelationUnique** Relationship is one-to-one.  
   
-- **dbRelationDontEnforce** 관계가 않습니다 (참조 무결성)를 적용 합니다.  
+- **dbRelationDontEnforce** Relationship is not enforced (no referential integrity).  
   
-- **dbRelationInherited** 관계는 두 개의 연결 된 테이블을 포함 하는 현재 데이터베이스에 존재 합니다.  
+- **dbRelationInherited** Relationship exists in a noncurrent database that contains the two attached tables.  
   
-- **dbRelationLeft** 관계는 왼쪽된 조인 합니다. 첫 번째에서 레코드의 모든을 포함 하는 왼쪽된 우선 외부 조인 (왼쪽) 두 테이블의 두 번째 (오른쪽) 테이블의 레코드에 일치 하는 값이 없는 경우에 합니다.  
+- **dbRelationLeft** The relationship is a left join. A left outer join includes all of the records from the first (left-hand) of two tables, even if there are no matching values for records in the second (right-hand) table.  
   
-- **dbRelationRight** 관계는 오른쪽 조인입니다. 오른쪽 우선 외부 조인에서 두 번째 레코드를 모두 포함 (오른쪽) 두 테이블의 첫 번째 (왼쪽) 테이블의 레코드에 일치 하는 값이 없는 경우에 합니다.  
+- **dbRelationRight** The relationship is a right join. A right outer join includes all of the records from the second (right-hand) of two tables, even if there are no matching values for records in the first (left-hand) table.  
   
-- **중** 계단식 업데이트를 수행 합니다.  
+- **dbRelationUpdateCascade** Updates will cascade.  
   
-- **dbRelationDeleteCascade** 삭제에 연계 됩니다.  
+- **dbRelationDeleteCascade** Deletions will cascade.  
   
  `m_pFieldInfos`  
- 배열에 대 한 포인터 [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) 구조입니다. 배열 관계의 각 필드에 대 한 개체를 포함합니다. `m_nFields` 데이터 멤버는 배열 요소의 수를 제공 합니다.  
+ A pointer to an array of [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. The array contains one object for each field in the relation. The `m_nFields` data member gives a count of the array elements.  
   
  `m_nFields`  
- 수가 `CDaoRelationFieldInfo` 개체에 `m_pFieldInfos` 데이터 멤버입니다.  
+ The number of `CDaoRelationFieldInfo` objects in the `m_pFieldInfos` data member.  
   
-## <a name="remarks"></a>주의  
- 기본 및 보조 위의에 대 한 참조에서의 정보를 반환 하는 방법을 나타내는 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) 클래스에서 멤버 함수 `CDaoDatabase`합니다.  
+## <a name="remarks"></a>Remarks  
+ The references to Primary and Secondary above indicate how the information is returned by the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function in class `CDaoDatabase`.  
   
- 관계 개체는 MFC 클래스에 의해 표시 되지 않습니다. 대신, MFC 개체를 내부 DAO 개체는 `CDaoDatabase` 관계 개체의 컬렉션을 유지 하는 클래스: `CDaoDatabase` 관계 정보나 사용자의 일부 개별 항목에 액세스 하는 공급 멤버 함수를 한 번에 액세스할 수는 `CDaoRelationInfo` 를 호출 하 여 개체는 `GetRelationInfo` 포함 하는 데이터베이스 개체의 멤버 함수입니다.  
+ Relation objects are not represented by an MFC class. Instead, the DAO object underlying an MFC object of the `CDaoDatabase` class maintains a collection of relation objects: `CDaoDatabase` supplies member functions to access some individual items of relation information, or you can access them all at once with a `CDaoRelationInfo` object by calling the `GetRelationInfo` member function of the containing database object.  
   
- 검색 한 정보는 [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) 멤버 함수에 저장 되는 `CDaoRelationInfo` 구조입니다. `CDaoRelationInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoRelationInfo` 개체입니다.  
+ Information retrieved by the [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function is stored in a `CDaoRelationInfo` structure. `CDaoRelationInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoRelationInfo` object.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>참고 항목  
- [CDaoRelationFieldInfo 구조체](../../mfc/reference/cdaorelationfieldinfo-structure.md)
+## <a name="see-also"></a>See Also  
+ [CDaoRelationFieldInfo Structure](../../mfc/reference/cdaorelationfieldinfo-structure.md)
 

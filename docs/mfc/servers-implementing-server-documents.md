@@ -1,33 +1,50 @@
 ---
-title: "서버: 서버 문서 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE 서버 응용 프로그램, OLE 서버 구현"
-  - "OLE 서버 응용 프로그램, 서버 문서 관리"
-  - "서버 문서, 구현"
-  - "서버, 서버 문서"
+title: 'Servers: Implementing Server Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], managing server documents
+- OLE server applications [MFC], implementing OLE servers
+- servers, server documents
+- server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 서버: 서버 문서 구현
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df2da0855532b4f5503933b3c0b1f6379b3d0ade
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="servers-implementing-server-documents"></a>Servers: Implementing Server Documents
 This article explains the steps you must take to successfully implement a server document if you did not specify the OLE Server option in the application wizard.  
   
-#### To define a server document class  
+#### <a name="to-define-a-server-document-class"></a>To define a server document class  
   
 1.  Derive your document class from `COleServerDoc` instead of **CDocument**.  
   
@@ -35,16 +52,18 @@ This article explains the steps you must take to successfully implement a server
   
 3.  Implement the `OnGetEmbeddedItem` member function of your server document class.  
   
-     `OnGetEmbeddedItem` is called when the user of a container application creates or edits an embedded item.  It should return an item representing the entire document.  This should be an object of your `COleServerItem`\-derived class.  
+     `OnGetEmbeddedItem` is called when the user of a container application creates or edits an embedded item. It should return an item representing the entire document. This should be an object of your `COleServerItem`-derived class.  
   
-4.  Override the `Serialize` member function to serialize the contents of the document.  You do not need to serialize the list of server items unless you are using them to represent the native data in your document.  For more information, see *Implementing Server Items* in the article [Servers: Server Items](../mfc/servers-server-items.md).  
+4.  Override the `Serialize` member function to serialize the contents of the document. You do not need to serialize the list of server items unless you are using them to represent the native data in your document. For more information, see *Implementing Server Items* in the article [Servers: Server Items](../mfc/servers-server-items.md).  
   
- When a server document is created, the framework automatically registers the document with the OLE system DLLs.  This allows the DLLs to identify the server documents.  
+ When a server document is created, the framework automatically registers the document with the OLE system DLLs. This allows the DLLs to identify the server documents.  
   
  For more information, see [COleServerItem](../mfc/reference/coleserveritem-class.md) and [COleServerDoc](../mfc/reference/coleserverdoc-class.md) in the *Class Library Reference*.  
   
-## 참고 항목  
- [서버](../mfc/servers.md)   
- [서버: 서버 항목](../mfc/servers-server-items.md)   
- [서버: 서버 구현](../mfc/servers-implementing-a-server.md)   
- [서버: 내부 프레임 창 구현](../mfc/servers-implementing-in-place-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)   
+ [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)   
+ [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md)
+
+

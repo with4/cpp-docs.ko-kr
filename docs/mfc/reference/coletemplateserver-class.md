@@ -1,5 +1,5 @@
 ---
-title: "COleTemplateServer 클래스 | Microsoft 문서"
+title: COleTemplateServer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,14 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Automation servers [C++], implementing
-- servers, OLE
-- OLE server applications, managing server documents
-- link containers [C++]
-- visual editing, servers
-- OLE link containers
-- COleTemplateServer class
-- OLE server applications, COleTemplateServer class
+- COleTemplateServer [MFC], COleTemplateServer
+- COleTemplateServer [MFC], ConnectTemplate
+- COleTemplateServer [MFC], Unregister
+- COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 caps.latest.revision: 23
 author: mikeblome
@@ -45,46 +41,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ea82939cd0e8a8ba5612c65d238be8ae9996ef08
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7ea6cb24647abb96cf0d535a4b1c25055a68acb6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coletemplateserver-class"></a>COleTemplateServer 클래스
-OLE 비주얼 편집 서버, 자동화 서버 및 링크 컨테이너(포함에 대한 링크를 지원하는 응용 프로그램)에 사용합니다.  
+# <a name="coletemplateserver-class"></a>COleTemplateServer Class
+Used for OLE visual editing servers, automation servers, and link containers (applications that support links to embeddings).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleTemplateServer : public COleObjectFactory  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleTemplateServer::COleTemplateServer](#coletemplateserver)|`COleTemplateServer` 개체를 생성합니다.|  
+|[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Constructs a `COleTemplateServer` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleTemplateServer::ConnectTemplate](#connecttemplate)|문서 서식 파일을 연결 하는 기본 `COleObjectFactory` 개체입니다.|  
-|[COleTemplateServer::Unregister](#unregister)|관련된 문서 서식 파일을 등록 취소합니다.|  
-|[COleTemplateServer::UpdateRegistry](#updateregistry)|OLE 시스템 레지스트리에 문서 유형을 등록합니다.|  
+|[COleTemplateServer::ConnectTemplate](#connecttemplate)|Connects a document template to the underlying `COleObjectFactory` object.|  
+|[COleTemplateServer::Unregister](#unregister)|Unregisters the associated document template.|  
+|[COleTemplateServer::UpdateRegistry](#updateregistry)|Registers the document type with the OLE system registry.|  
   
-## <a name="remarks"></a>주의  
- 이 클래스는 클래스에서 파생 [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); 일반적으로 사용할 수 있습니다 `COleTemplateServer` 사용자 고유의 클래스를 파생 하는 대신 직접. `COleTemplateServer`사용 하 여 한 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) 서버 문서를 관리 하는 개체입니다. 사용 하 여 `COleTemplateServer` 전체 서버, 즉, 독립 실행형 응용 프로그램으로 실행할 수 있는 서버를 구현 하는 경우. 단일 문서 인터페이스 (SDI) 응용 프로그램은 지원 하지만 전체 서버는 일반적으로 여러 문서 MDI (인터페이스) 응용 프로그램입니다. 하나의 `COleTemplateServer` 응용 프로그램이 지 원하는 서버 문서의 각 형식에 대 한 개체가 필요 합니다; 즉, 서버 응용 프로그램에서 워크시트 및 차트 모두를 지 원하는 경우 있습니다 있어야 두 `COleTemplateServer` 개체입니다.  
+## <a name="remarks"></a>Remarks  
+ This class is derived from the class [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); usually, you can use `COleTemplateServer` directly rather than deriving your own class. `COleTemplateServer` uses a [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) object to manage the server documents. Use `COleTemplateServer` when implementing a full server, that is, a server that can be run as a standalone application. Full servers are typically multiple document interface (MDI) applications, although single document interface (SDI) applications are supported. One `COleTemplateServer` object is needed for each type of server document an application supports; that is, if your server application supports both worksheets and charts, you must have two `COleTemplateServer` objects.  
   
- `COleTemplateServer`재정의 `OnCreateInstance` 멤버 함수에 정의 된 `COleObjectFactory`합니다. 이 멤버 함수는 올바른 형식의 c + + 개체를 만드는 프레임 워크에 의해 호출 됩니다.  
+ `COleTemplateServer` overrides the `OnCreateInstance` member function defined by `COleObjectFactory`. This member function is called by the framework to create a C++ object of the proper type.  
   
- 서버에 대 한 자세한 내용은 문서를 참조 하십시오. [서버: 서버 구현](../../mfc/servers-implementing-a-server.md)합니다.  
+ For more information about servers, see the article [Servers: Implementing a Server](../../mfc/servers-implementing-a-server.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -93,21 +89,21 @@ class COleTemplateServer : public COleObjectFactory
   
  `COleTemplateServer`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdisp.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
   
-##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
- `COleTemplateServer` 개체를 생성합니다.  
+##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
+ Constructs a `COleTemplateServer` object.  
   
 ```  
 COleTemplateServer();
 ```  
   
-### <a name="remarks"></a>주의  
- 에 대 한 간략 한 설명은의 사용은 `COleTemplateServer` 클래스를 참조는 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) 클래스 개요.  
+### <a name="remarks"></a>Remarks  
+ For a brief description of the use of the `COleTemplateServer` class, see the [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) class overview.  
   
-##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
- 가 가리키는 문서 서식 파일을 연결 `pDocTemplate` 기본 [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) 개체입니다.  
+##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
+ Connects the document template pointed to by `pDocTemplate` to the underlying [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) object.  
   
 ```  
 void ConnectTemplate(
@@ -116,34 +112,34 @@ void ConnectTemplate(
     BOOL bMultiInstance);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- 서식 파일을 요청 하는 OLE 클래스 ID에 대 한 참조입니다.  
+ Reference to the OLE class ID that the template requests.  
   
  `pDocTemplate`  
- 서식 파일에 대 한 포인터입니다.  
+ Pointer to the document template.  
   
  `bMultiInstance`  
- 단일 인스턴스 응용 프로그램의 여러 인스턴스를 지원할 수 있는지를 나타냅니다. 경우 **TRUE**, 개체를 만들 각 요청에 대 한 응용 프로그램의 여러 인스턴스가 시작 됩니다.  
+ Indicates whether a single instance of the application can support multiple instantiations. If **TRUE**, multiple instances of the application are launched for each request to create an object.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [CLSID Key](http://msdn.microsoft.com/library/windows/desktop/ms691424) in the Windows SDK.  
   
-##  <a name="unregister"></a>COleTemplateServer::Unregister  
- 관련된 문서 서식 파일을 등록 취소합니다.  
+##  <a name="unregister"></a>  COleTemplateServer::Unregister  
+ Unregisters the associated document template.  
   
 ```  
 BOOL Unregister();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 TRUE이고, 실패하면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if successful; otherwise FALSE.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
  EnterRemarks  
   
-##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
- 문서 템플릿 문자열에서 파일 형식 정보를 로드 하 고 OLE 시스템 레지스트리에 해당 정보를 배치 합니다.  
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
+ Loads file-type information from the document-template string and places that information in the OLE system registry.  
   
 ```  
 void UpdateRegistry(
@@ -153,42 +149,42 @@ void UpdateRegistry(
     BOOL bRegister = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nAppType`  
- 값은 **OLE_APPTYPE** AFXDISP에 정의 된 열거형입니다.&8;. 다음 값 중 하나를 가질 수 있습니다.  
+ A value from the **OLE_APPTYPE** enumeration, which is defined in AFXDISP.H. It can have any one of the following values:  
   
-- `OAT_INPLACE_SERVER`서버에는 전체 서버 사용자 인터페이스에 있습니다.  
+- `OAT_INPLACE_SERVER` Server has full server user-interface.  
   
-- `OAT_SERVER`서버 지원만 포함 합니다.  
+- `OAT_SERVER` Server supports only embedding.  
   
-- `OAT_CONTAINER`컨테이너는 포함 된 개체에 대 한 링크를 지원합니다.  
+- `OAT_CONTAINER` Container supports links to embedded objects.  
   
-- `OAT_DISPATCH_OBJECT`개체는 `IDispatch`-가능 합니다.  
+- `OAT_DISPATCH_OBJECT` Object is `IDispatch`-capable.  
   
-- **OAT_DOC_OBJECT_SERVER** 서버 모두를 지원 합니다. 포함 및 구성 요소 문서 개체 모델입니다.  
+- **OAT_DOC_OBJECT_SERVER** Server supports both embedding and the Document Object component model.  
   
  `rglpszRegister`  
- 항목이 없는 경우에 레지스트리에 기록 된 항목의 목록입니다.  
+ A list of entries that is written into the registry only if no entries exist.  
   
  `rglpszOverwrite`  
- 위의 모든 항목의 존재 여부에 관계 없이 레지스트리로 작성 된 목록 항목입니다.  
+ A list of entries that is written into the registry regardless of whether any preceding entries exist.  
   
  `bRegister`  
- 클래스를 등록 인지 확인 합니다. 경우 `bRegister` 는 **TRUE**, 클래스는 시스템 레지스트리에 등록 됩니다. 그렇지 않으면 클래스 등록 취소합니다.  
+ Determines whether the class is to be registered. If `bRegister` is **TRUE**, the class is registered with the system registry. Otherwise, it unregisters the class.  
   
-### <a name="remarks"></a>주의  
- 등록 정보에 대 한 호출을 사용 하 여 로드는 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)합니다. 검색할 부분 문자열에는 인덱스에 의해 식별 **regFileTypeId**, **regFileTypeName**, 및 **fileNewName**에 설명 된 대로 `GetDocString` 페이지를 참조 합니다.  
+### <a name="remarks"></a>Remarks  
+ The registration information is loaded by means of a call to [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). The substrings retrieved are those identified by the indexes **regFileTypeId**, **regFileTypeName**, and **fileNewName**, as described in the `GetDocString` reference pages.  
   
- 하는 경우는 **regFileTypeId** 부분 문자열은 비어 있거나에 대 한 호출 `GetDocString` 기타 다른 이유로,이 함수가 실패 하면 실패 하 고 레지스트리에서 파일 정보를 입력 하지 않으면.  
+ If the **regFileTypeId** substring is empty or if the call to `GetDocString` fails for any other reason, this function fails and the file information is not entered in the registry.  
   
- 인수에 있는 정보 `rglpszRegister` 및 `rglpszOverwrite` 호출을 통해 레지스트리에 기록 [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)합니다. 두 개의 인수는 등록 되는 기본 정보를 **NULL**, 대부분의 응용 프로그램에 적합 합니다. 이러한 인수에 있는 정보의 구조에 대 한 정보를 참조 하십시오. `AfxOleRegisterServerClass`합니다.  
+ The information in the arguments `rglpszRegister` and `rglpszOverwrite` is written to the registry through a call to [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). The default information, which is registered when the two arguments are **NULL**, is suitable for most applications. For information on the structure of the information in these arguments, see `AfxOleRegisterServerClass`.  
   
- 자세한 내용은 참조 [IDispatch 인터페이스를 구현](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)합니다.  
+ For more information, see [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 HIERSVR](../../visual-cpp-samples.md)   
- [COleObjectFactory 클래스](../../mfc/reference/coleobjectfactory-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleServerDoc 클래스](../../mfc/reference/coleserverdoc-class.md)   
- [COleServerItem 클래스](../../mfc/reference/coleserveritem-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [COleObjectFactory Class](../../mfc/reference/coleobjectfactory-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleServerDoc Class](../../mfc/reference/coleserverdoc-class.md)   
+ [COleServerItem Class](../../mfc/reference/coleserveritem-class.md)
 

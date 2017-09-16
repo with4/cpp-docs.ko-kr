@@ -1,5 +1,5 @@
 ---
-title: "CSettingsStoreSP 클래스 | Microsoft 문서"
+title: CSettingsStoreSP Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSettingsStoreSP class
+- CSettingsStoreSP [MFC], CSettingsStoreSP
+- CSettingsStoreSP [MFC], Create
+- CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
 caps.latest.revision: 18
 author: mikeblome
@@ -37,64 +39,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 00131a3c03fdb2c1c1de247a8e1bdcfd9beaf852
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cafba9ad629afadbdfb2299d4810230fa2a2d441
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csettingsstoresp-class"></a>CSettingsStoreSP 클래스
-`CSettingsStoreSP` 클래스의 인스턴스를 만드는 데 사용할 수 있는 도우미 클래스는는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  
+# <a name="csettingsstoresp-class"></a>CSettingsStoreSP Class
+The `CSettingsStoreSP` class is a helper class that you can use to create instances of the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSettingsStoreSP  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|`CSettingsStoreSP` 개체를 생성합니다.|  
+|[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Constructs a `CSettingsStoreSP` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStoreSP::Create](#create)|파생 된 클래스의 인스턴스를 만들고 `CSettingsStore`합니다.|  
-|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|런타임 클래스를 가져오거나 설정 합니다. `Create` 메서드는 런타임 클래스를 사용 하 여 만들려는 개체의 클래스를 결정 합니다.|  
+|[CSettingsStoreSP::Create](#create)|Creates an instance of a class that is derived from `CSettingsStore`.|  
+|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Sets the runtime class. The `Create` method uses the runtime class to determine what class of objects to create.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`m_dwUserData`|에 저장 된 사용자 지정 사용자 데이터는 `CSettingsStoreSP` 개체입니다. 생성자에서이 데이터를 제공 된 `CSettingsStoreSP` 개체입니다.|  
-|`m_pRegistry`|`CSettingsStore`-파생 된 개체는 `Create` 메서드를 만듭니다.|  
+|`m_dwUserData`|Custom user data that is stored in the `CSettingsStoreSP` object. You supply this data in the constructor of the `CSettingsStoreSP` object.|  
+|`m_pRegistry`|The `CSettingsStore`-derived object that the `Create` method creates.|  
   
-## <a name="remarks"></a>주의  
- 사용할 수는 `CSettingsStoreSP` 클래스는 XML 파일 또는 데이터베이스 같은 다른 위치에 모든 MFC 레지스트리 작업을 리디렉션할 수 있습니다. 이렇게 하려면 다음 단계를 수행합니다.  
+## <a name="remarks"></a>Remarks  
+ You can use the `CSettingsStoreSP` class to redirect all MFC registry operations to other locations, such as an XML file or a database. To do this, follow these steps:  
   
-1.  클래스를 만듭니다 (예: `CMyStore`)에서 파생 하 고 `CSettingsStore`합니다.  
+1.  Create a class (such as `CMyStore`) and derive it from `CSettingsStore`.  
   
-2.  사용 하 여 [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) 및 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate) 매크로 사용자 지정으로 `CSettingsStore` 클래스를 사용 하는 동적 생성 합니다.  
+2.  Use [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) and [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate) macros with your custom `CSettingsStore` class to enable dynamic creation.  
   
-3.  가상 함수를 재정의 하 여 구현 된 `Read` 및 `Write` 사용자 지정 클래스의 함수입니다. 데이터 읽기 및 쓰기를 원하는 위치에 있는 다른 모든 기능을 구현 합니다.  
+3.  Override the virtual functions and implement the `Read` and `Write` functions in your custom class. Implement any other functionality to read and write data to your desired location.  
   
-4.  응용 프로그램에서 호출 `CSettingsStoreSP::SetRuntimeClass` 에 대 한 포인터를 전달 하 고는 [CRuntimeClass 구조](../../mfc/reference/cruntimeclass-structure.md) 클래스에서 가져옵니다.  
+4.  In your application, call `CSettingsStoreSP::SetRuntimeClass` and pass in a pointer to the [CRuntimeClass Structure](../../mfc/reference/cruntimeclass-structure.md) obtained from your class.  
   
- 프레임 워크는 주로 레지스트리를 액세스 하 고, 때마다 이제 동적으로 사용자 지정 클래스를 인스턴스화할 되며 읽기 나 쓰기 데이터를 사용 합니다.  
+ Whenever the framework would typically access the registry, it will now dynamically instantiate your custom class and use it to read or write data.  
   
- `CSettingsStoreSP::SetRuntimeClass`전역 정적 변수를 사용합니다. 따라서 하나의 사용자 지정 저장소를 한 번에 사용할 수 있습니다.  
+ `CSettingsStoreSP::SetRuntimeClass` uses a global static variable. Therefore, only one custom store is available at a time.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxsettingsstore.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsettingsstore.h  
   
-##  <a name="create"></a>CSettingsStoreSP::Create  
- 파생 된 개체의 새 인스턴스를 만듭니다는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  
+##  <a name="create"></a>  CSettingsStoreSP::Create  
+ Creates a new instance of an object that is derived from the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
 ```  
 CSettingsStore& CSettingsStoreSP Create(
@@ -102,61 +104,61 @@ CSettingsStore& CSettingsStoreSP Create(
     BOOL bReadOnly);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bAdmin`  
- 결정 하는 부울 매개 변수 여부는 `CSettingsStore` 관리자 모드에서 개체가 만들어집니다.  
+ A Boolean parameter that determines whether a `CSettingsStore` object is created in administrator mode.  
   
  [in] `bReadOnly`  
- 결정 하는 부울 매개 변수 여부는 `CSettingsStore` 읽기 전용 액세스에 대해 개체가 만들어집니다.  
+ A Boolean parameter that determines whether a `CSettingsStore` object is created for read-only access.  
   
-### <a name="return-value"></a>반환 값  
- 새로 만든에 대 한 참조 `CSettingsStore` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the newly created `CSettingsStore` object.  
   
-### <a name="remarks"></a>주의  
- 메서드를 사용 하면 [CSettingsStoreSP::SetRuntimeClass](#setruntimeclass) 개체의 유형을 확인 하려면 `CSettingsStoreSP::Create` 만들어집니다. 기본적으로이 메서드는 다음과 같이 생성 됩니다. 한 `CSettingsStore` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You can use the method [CSettingsStoreSP::SetRuntimeClass](#setruntimeclass) to determine what type of object `CSettingsStoreSP::Create` will create. By default, this method creates a `CSettingsStore` object.  
   
- 만드는 경우는 `CSettingsStore` 모든 레지스트리 액세스를 위한 기본 위치는 HKEY_LOCAL_MACHINE 관리자 모드에서 개체입니다. 그렇지 않으면 모든 레지스트리 액세스를 위한 기본 위치는 HKEY_CURRENT_USER 합니다.  
+ If you create a `CSettingsStore` object in administrator mode, the default location for all registry access is HKEY_LOCAL_MACHINE. Otherwise, the default location for all registry access is HKEY_CURRENT_USER.  
   
- 경우 `bAdmin` 는 `TRUE`, 응용 프로그램에 대 한 관리 권한이 있어야 합니다. 그렇지 않으면 레지스트리를 액세스 하려고 하면 실패 합니다.  
+ If `bAdmin` is `TRUE`, the application must have administration rights. Otherwise, it will fail when it tries to access the registry.  
   
-### <a name="example"></a>예제  
- 다음 예제에 사용 하는 방법을 보여 줍니다는 `Create` 의 메서드는 `CSettingsStoreSP` 클래스입니다.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Create` method of the `CSettingsStoreSP` class.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&33;](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
- 생성 된 [CSettingsStoreSP 클래스](../../mfc/reference/csettingsstoresp-class.md) 개체입니다.  
+##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
+ Constructs a [CSettingsStoreSP Class](../../mfc/reference/csettingsstoresp-class.md) object.  
   
 ```  
 CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `dwUserData`  
- 사용자 정의 데이터를는 `CSettingsStoreSP` 저장소 개체입니다.  
+ User-defined data that the `CSettingsStoreSP` object stores.  
   
-### <a name="remarks"></a>주의  
- `CSettingsStoreSP` 개체에서 데이터를 저장 `dwUserData` 보호 된 멤버 변수에 `m_dwUserData`합니다.  
+### <a name="remarks"></a>Remarks  
+ The `CSettingsStoreSP` object stores the data from `dwUserData` in the protected member variable `m_dwUserData`.  
   
-##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
- 런타임 클래스를 가져오거나 설정 합니다. 메서드가 [CSettingsStoreSP::Create](#create) 런타임 클래스를 사용 하 여 만들 개체의 종류를 결정 합니다.  
+##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
+ Sets the runtime class. The method [CSettingsStoreSP::Create](#create) uses the runtime class to determine what type of object to create.  
   
 ```  
 static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pRTI`  
- 파생 된 클래스에 대 한 런타임 클래스 정보에 대 한 포인터는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  
+ A pointer to the runtime class information for a class derived from the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`성공 하면 `FALSE` 로 클래스를 식별 하는 경우 `pRTI` 에서 파생 되지 않은 `CSettingsStore`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` if the class identified by `pRTI` is not derived from `CSettingsStore`.  
   
-### <a name="remarks"></a>주의  
- 사용할 수는 [CSettingsStoreSP 클래스](../../mfc/reference/csettingsstoresp-class.md) 에서 클래스를 파생 `CSettingsStore`합니다. 메서드를 사용 하 여 `SetRuntimeClass` 에서 파생 된 사용자 지정 클래스의 개체를 만들려는 경우 `CSettingsStore`합니다.  
+### <a name="remarks"></a>Remarks  
+ You can use the [CSettingsStoreSP Class](../../mfc/reference/csettingsstoresp-class.md) to derive classes from `CSettingsStore`. Use the method `SetRuntimeClass` if you want to create objects of a custom class that is derived from `CSettingsStore`.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md)
 

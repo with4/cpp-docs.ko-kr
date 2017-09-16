@@ -1,5 +1,5 @@
 ---
-title: "char_traits&lt;wchar_t&gt; 구조체 | Microsoft 문서"
+title: char_traits&lt;wchar_t&gt; Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,34 +34,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 8816f9cadccdb1c8b52733c079668f1b07ea54da
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6d8e35828caa6de04cf61539ceb829dd239d7e18
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; 구조체
-`wchar_t` 형식 요소에 대한 템플릿 구조체 **char_traits\<CharType>**의 특수화인 클래스입니다.  
+# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; Struct
+A class that is a specialization of the template struct **char_traits\<CharType>** to an element of type `wchar_t`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>  
 struct char_traits<wchar_t>;
 ```  
   
-## <a name="remarks"></a>설명  
- 특수화를 사용하면 구조체에서 이 `wchar_t` 형식의 개체를 조작하는 라이브러리 함수를 활용할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Specialization allows the struct to take advantage of library functions that manipulate objects of this type `wchar_t`.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<string>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<string>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [char_traits 구조체](../standard-library/char-traits-struct.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [char_traits Struct](../standard-library/char-traits-struct.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

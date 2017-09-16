@@ -1,37 +1,54 @@
 ---
-title: "도구 모음 도구 설명 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBRS_FLYBY 상수"
-  - "CBRS_TOOLTIPS 상수"
-  - "flyby 상태 표시줄 업데이트"
-  - "상태 표시줄, 도구 설명"
-  - "도구 설명[C++]"
-  - "도구 설명[C++], 활성화"
-  - "도구 설명[C++], 텍스트 추가"
-  - "업데이트"
-  - "업데이트, 상태 표시줄 메시지"
-  - "상태 표시줄 메시지 업데이트"
+title: Toolbar Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], activating
+- CBRS_TOOLTIPS constant [MFC]
+- tool tips [MFC], adding text
+- updates [MFC]
+- CBRS_FLYBY constant [MFC]
+- tool tips [MFC]
+- updating status bar messages
+- updates, status bar messages
+- status bars [MFC], tool tips
+- flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 도구 모음 도구 설명
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 766437e46f51610a032db8ed3c24e880be2b17c2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-Tool tips are the tiny popup windows that present short descriptions of a toolbar button's purpose when you position the mouse over a button for a period of time.  When you create an application with the Application Wizard that has a toolbar, tool tip support is provided for you.  This article explains both the tool tip support created by the Application Wizard and how to add tool tip support to your application.  
+---
+# <a name="toolbar-tool-tips"></a>Toolbar Tool Tips
+Tool tips are the tiny popup windows that present short descriptions of a toolbar button's purpose when you position the mouse over a button for a period of time. When you create an application with the Application Wizard that has a toolbar, tool tip support is provided for you. This article explains both the tool tip support created by the Application Wizard and how to add tool tip support to your application.  
   
  This article covers:  
   
@@ -42,11 +59,11 @@ Tool tips are the tiny popup windows that present short descriptions of a toolba
 ##  <a name="_core_activating_tool_tips"></a> Activating Tool Tips  
  To activate tool tips in your application, you must do two things:  
   
--   Add the `CBRS_TOOLTIPS` style to the other styles \(such as **WS\_CHILD**, **WS\_VISIBLE**, and other **CBRS\_** styles\) passed as the `dwStyle` parameter to the [CToolBar::Create](../Topic/CToolBar::Create.md) function or in [SetBarStyle](../Topic/CControlBar::SetBarStyle.md).  
+-   Add the `CBRS_TOOLTIPS` style to the other styles (such as **WS_CHILD**, **WS_VISIBLE**, and other **CBRS_** styles) passed as the `dwStyle` parameter to the [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) function or in [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
   
--   As described in the procedure below, append the toolbar tip text, separated by a newline character \('\\n'\), to the string resource containing the command\-line prompt for the toolbar command.  The string resource shares the ID of the toolbar button.  
+-   As described in the procedure below, append the toolbar tip text, separated by a newline character ('\n'), to the string resource containing the command-line prompt for the toolbar command. The string resource shares the ID of the toolbar button.  
   
-#### To add the tool tip text  
+#### <a name="to-add-the-tool-tip-text"></a>To add the tool tip text  
   
 1.  While you are editing the toolbar in the toolbar editor, open the **Toolbar Button Properties** window for a given button.  
   
@@ -57,24 +74,26 @@ Tool tips are the tiny popup windows that present short descriptions of a toolba
   
  If a control bar with tool tips enabled has child controls placed on it, the control bar will display a tool tip for every child control on the control bar as long as it meets the following criteria:  
   
--   The ID of the control is not – 1.  
+-   The ID of the control is not - 1.  
   
--   The string\-table entry with the same ID as the child control in the resource file has a tool tip string.  
+-   The string-table entry with the same ID as the child control in the resource file has a tool tip string.  
   
 ##  <a name="_core_fly_by_status_bar_updates"></a> Flyby Status Bar Updates  
- A feature related to tool tips is "flyby" status bar updating.  By default, the message on the status bar describes only a particular toolbar button when the button is activated.  By including `CBRS_FLYBY` in your list of styles passed to `CToolBar::Create`, you can have these messages updated when the mouse cursor passes over the toolbar without actually activating the button.  
+ A feature related to tool tips is "flyby" status bar updating. By default, the message on the status bar describes only a particular toolbar button when the button is activated. By including `CBRS_FLYBY` in your list of styles passed to `CToolBar::Create`, you can have these messages updated when the mouse cursor passes over the toolbar without actually activating the button.  
   
-### 추가 정보  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [MFC Toolbar Implementation \(overview information on toolbars\)](../mfc/mfc-toolbar-implementation.md)  
+-   [MFC Toolbar Implementation (overview information on toolbars)](../mfc/mfc-toolbar-implementation.md)  
   
--   [도구 모음 고정 및 고정 해제](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   [CToolBar](../mfc/reference/ctoolbar-class.md) 및 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 클래스  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
 -   [Working with the toolbar control](../mfc/working-with-the-toolbar-control.md)  
   
 -   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
-## 참고 항목  
- [MFC 도구 모음 구현](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

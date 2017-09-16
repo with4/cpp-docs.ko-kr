@@ -1,5 +1,5 @@
 ---
-title: "CDCRenderTarget 클래스 | Microsoft 문서"
+title: CDCRenderTarget Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDCRenderTarget class
+- CDCRenderTarget [MFC], CDCRenderTarget
+- CDCRenderTarget [MFC], Attach
+- CDCRenderTarget [MFC], BindDC
+- CDCRenderTarget [MFC], Create
+- CDCRenderTarget [MFC], Detach
+- CDCRenderTarget [MFC], GetDCRenderTarget
+- CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
 caps.latest.revision: 16
 author: mikeblome
@@ -41,75 +47,75 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2bbd62b06f4287904fce49f8a6ce9900476b07c0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c3cb0ea9b9b745004c337e6edd508c3a4bcbe786
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdcrendertarget-class"></a>CDCRenderTarget 클래스
-ID2D1DCRenderTarget에 대 한 래퍼입니다.  
+# <a name="cdcrendertarget-class"></a>CDCRenderTarget Class
+A wrapper for ID2D1DCRenderTarget.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDCRenderTarget : public CRenderTarget;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|CDCRenderTarget 개체를 만듭니다.|  
+|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Constructs a CDCRenderTarget object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDCRenderTarget::Attach](#attach)|기존 연결 개체를 대상 인터페이스를 렌더링 합니다.|  
-|[CDCRenderTarget::BindDC](#binddc)|렌더링 대상을 그리기 명령을 실행 하는 장치 컨텍스트를 바인딩합니다.|  
-|[CDCRenderTarget::Create](#create)|CDCRenderTarget를 만듭니다.|  
-|[CDCRenderTarget::Detach](#detach)|렌더링 대상 인터페이스 개체에서 분리|  
-|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|반환 ID2D1DCRenderTarget 인터페이스|  
+|[CDCRenderTarget::Attach](#attach)|Attaches existing render target interface to the object|  
+|[CDCRenderTarget::BindDC](#binddc)|Binds the render target to the device context to which it issues drawing commands|  
+|[CDCRenderTarget::Create](#create)|Creates a CDCRenderTarget.|  
+|[CDCRenderTarget::Detach](#detach)|Detaches render target interface from the object|  
+|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Returns ID2D1DCRenderTarget interface|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|반환 ID2D1DCRenderTarget 인터페이스|  
+|[CDCRenderTarget::operator ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|Returns ID2D1DCRenderTarget interface|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|ID2D1DCRenderTarget 개체에 대 한 포인터입니다.|  
+|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|A pointer to an ID2D1DCRenderTarget object.|  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
   
  [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="attach"></a>CDCRenderTarget::Attach  
- 기존 연결 개체를 대상 인터페이스를 렌더링 합니다.  
+##  <a name="attach"></a>  CDCRenderTarget::Attach  
+ Attaches existing render target interface to the object  
   
 ```  
 void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pTarget`  
- 기존 렌더링 대상 인터페이스입니다. NULL 일 수 없습니다.  
+ Existing render target interface. Cannot be NULL  
   
-##  <a name="binddc"></a>CDCRenderTarget::BindDC  
- 렌더링 대상을 그리기 명령을 실행 하는 장치 컨텍스트를 바인딩합니다.  
+##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
+ Binds the render target to the device context to which it issues drawing commands  
   
 ```  
 BOOL BindDC(
@@ -117,74 +123,74 @@ BOOL BindDC(
     const CRect& rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dc`  
- 렌더링 대상의 그리기 명령을 실행 하는 장치 컨텍스트  
+ The device context to which the render target issues drawing commands  
   
  `rect`  
- 렌더링 대상에서 연결 된 장치 컨텍스트 (HDC)에 대 한 핸들의 크기  
+ The dimensions of the handle to a device context (HDC) to which the render target is bound  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
- CDCRenderTarget 개체를 만듭니다.  
+##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget  
+ Constructs a CDCRenderTarget object.  
   
 ```  
 CDCRenderTarget();
 ```  
   
-##  <a name="create"></a>CDCRenderTarget::Create  
- CDCRenderTarget를 만듭니다.  
+##  <a name="create"></a>  CDCRenderTarget::Create  
+ Creates a CDCRenderTarget.  
   
 ```  
 BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `props`  
- 렌더링 모드, 픽셀 형식, 원격 옵션, DPI 정보 및 하드웨어 렌더링에 필요한 최소 DirectX 지원 합니다.  
+ The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="detach"></a>CDCRenderTarget::Detach  
- 렌더링 대상 인터페이스 개체에서 분리  
+##  <a name="detach"></a>  CDCRenderTarget::Detach  
+ Detaches render target interface from the object  
   
 ```  
 ID2D1DCRenderTarget* Detach();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 분리에 대 한 포인터는 대상 인터페이스를 렌더링 합니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached render target interface.  
   
-##  <a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
- 반환 ID2D1DCRenderTarget 인터페이스  
+##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget  
+ Returns ID2D1DCRenderTarget interface  
   
 ```  
 ID2D1DCRenderTarget* GetDCRenderTarget();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1DCRenderTarget 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1DCRenderTarget interface or NULL if object is not initialized yet.  
   
-##  <a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
- ID2D1DCRenderTarget 개체에 대 한 포인터입니다.  
+##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget  
+ A pointer to an ID2D1DCRenderTarget object.  
   
 ```  
 ID2D1DCRenderTarget* m_pDCRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
- 반환 ID2D1DCRenderTarget 인터페이스  
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget*  
+ Returns ID2D1DCRenderTarget interface  
   
 ```  
 operator ID2D1DCRenderTarget*();
 ```   
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1DCRenderTarget 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1DCRenderTarget interface or NULL if object is not initialized yet.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

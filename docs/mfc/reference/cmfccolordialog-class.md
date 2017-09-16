@@ -1,5 +1,5 @@
 ---
-title: "CMFCColorDialog 클래스 | Microsoft 문서"
+title: CMFCColorDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,20 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCColorDialog::m_CurrentColor data member
-- CMFCColorDialog::m_pPropSheet data member
-- CMFCColorDialog::m_btnColorSelect data member
-- CMFCColorDialog class
-- CMFCColorDialog::m_wndColors data member
-- CMFCColorDialog::m_bIsMyPalette data member
-- CMFCColorDialog::m_pColourSheetTwo data member
-- CMFCColorDialog::m_NewColor data member
-- CMFCColorDialog::m_pPalette data member
-- CMFCColorDialog::m_wndStaticPlaceHolder data member
-- CMFCColorDialog::m_pColourSheetOne data member
-- CMFCColorDialog::m_hcurPicker data member
-- CMFCColorDialog::PreTranslateMessage method
-- CMFCColorDialog::m_bPickerMode data member
+- CMFCColorDialog [MFC], CMFCColorDialog
+- CMFCColorDialog [MFC], GetColor
+- CMFCColorDialog [MFC], GetPalette
+- CMFCColorDialog [MFC], RebuildPalette
+- CMFCColorDialog [MFC], SetCurrentColor
+- CMFCColorDialog [MFC], SetNewColor
+- CMFCColorDialog [MFC], SetPageOne
+- CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
 caps.latest.revision: 30
 author: mikeblome
@@ -55,67 +49,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ac621157e0fcb5bcabef2ae8f367a1b141b4ace0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12272d0a71099bd2e65c8c32c65fc38035da0047
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccolordialog-class"></a>CMFCColorDialog 클래스
-`CMFCColorDialog` 클래스 색 선택 대화 상자를 나타냅니다.  
+# <a name="cmfccolordialog-class"></a>CMFCColorDialog Class
+The `CMFCColorDialog` class represents a color selection dialog box.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCColorDialog : public CDialogEx  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|`CMFCColorDialog` 개체를 생성합니다.|  
-|`CMFCColorDialog::~CMFCColorDialog`|소멸자|  
+|[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Constructs a `CMFCColorDialog` object.|  
+|`CMFCColorDialog::~CMFCColorDialog`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorDialog::GetColor](#getcolor)|현재 선택 된 색을 반환합니다.|  
-|[CMFCColorDialog::GetPalette](#getpalette)|색의 팔레트를 반환합니다.|  
-|`CMFCColorDialog::PreTranslateMessage`|창 메시지를 변환 하 여으로 디스패치 되기 전에 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 및 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수입니다. 구문 및 자세한 정보에 대 한 참조 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)합니다. (`CDialogEx::PreTranslateMessage`를 재정의합니다.)|  
-|[CMFCColorDialog::RebuildPalette](#rebuildpalette)|색상표를 시스템으로 색상표에서 파생 됩니다.|  
-|[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|현재 선택 된 색을 설정합니다.|  
-|[CMFCColorDialog::SetNewColor](#setnewcolor)|가장 값에 해당 하는 지정 된 RGB 색을 설정 합니다.|  
-|[CMFCColorDialog::SetPageOne](#setpageone)|첫 번째 속성 페이지에 대 한 RGB 값을 선택합니다.|  
-|[CMFCColorDialog::SetPageTwo](#setpagetwo)|두 번째 속성 페이지에 대 한 RGB 값을 선택합니다.|  
+|[CMFCColorDialog::GetColor](#getcolor)|Returns the current selected color.|  
+|[CMFCColorDialog::GetPalette](#getpalette)|Returns the color's palette.|  
+|`CMFCColorDialog::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For syntax and more information, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CDialogEx::PreTranslateMessage`.)|  
+|[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Derives a palette from the system palette.|  
+|[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Sets the current selected color.|  
+|[CMFCColorDialog::SetNewColor](#setnewcolor)|Sets the color most equivalent to a specified RGB value.|  
+|[CMFCColorDialog::SetPageOne](#setpageone)|Selects an RGB value for the first property page.|  
+|[CMFCColorDialog::SetPageTwo](#setpagetwo)|Selects an RGB value for the second property page.|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE`색 선택 대화 상자 자체 색상표를 사용 하는 경우 또는 `FALSE` 대화 상자에 지정 된 색상표를 사용 하는 경우는 `CMFCColorDialog` 생성자입니다.|  
-|`m_bPickerMode`|`TRUE`사용자 선택 대화 상자;에서 색을 선택 하는 동안 그렇지 않으면 `FALSE`합니다.|  
-|`m_btnColorSelect`|사용자가 선택한 색 단추입니다.|  
-|`m_CurrentColor`|현재 선택 된 색입니다.|  
-|`m_hcurPicker`|색을 선택 하는 데 사용 되는 커서입니다.|  
-|`m_NewColor`|잠재 선택한 색상은 영구적으로 선택 하거나 원래 색으로 되돌릴 수 있습니다.|  
-|`m_pColourSheetOne`|색 선택 속성 시트의 첫 번째 속성 페이지에 대 한 포인터입니다.|  
-|`m_pColourSheetTwo`|색 선택 속성 시트의 두 번째 속성 페이지에 대 한 포인터입니다.|  
-|`m_pPalette`|현재 논리 팔레트입니다.|  
-|`m_pPropSheet`|색 선택 대화 상자에 대 한 속성 시트에 대 한 포인터입니다.|  
-|`m_wndColors`|색 선택 컨트롤 개체입니다.|  
-|`m_wndStaticPlaceHolder`|색 선택 속성 시트에 대 한 자리 표시자 인 정적 컨트롤입니다.|  
+|`m_bIsMyPalette`|`TRUE` if the color selection dialog box uses its own color palette, or `FALSE` if the dialog box uses a palette that is specified in the `CMFCColorDialog` constructor.|  
+|`m_bPickerMode`|`TRUE` while the user is selecting a color from the selection dialog box; otherwise, `FALSE`.|  
+|`m_btnColorSelect`|The color button that the user has selected.|  
+|`m_CurrentColor`|The currently selected color.|  
+|`m_hcurPicker`|The cursor that is used to pick a color.|  
+|`m_NewColor`|The prospective selected color, which can be permanently selected or reverted to the original color.|  
+|`m_pColourSheetOne`|A pointer to the first property page of the color selection property sheet.|  
+|`m_pColourSheetTwo`|A pointer to the second property page of the color selection property sheet.|  
+|`m_pPalette`|The current logical palette.|  
+|`m_pPropSheet`|A pointer to the property sheet for the color selection dialog box.|  
+|`m_wndColors`|A color picker control object.|  
+|`m_wndStaticPlaceHolder`|A static control that is a placeholder for the color picker property sheet.|  
   
-## <a name="remarks"></a>주의  
- 색 선택 대화 상자에서 두 페이지가 있는 속성 시트로 표시 됩니다. 첫 번째 페이지에서 시스템 팔레트;에서 표준 색 선택 두 번째 페이지에서 사용자 지정 색을 선택 합니다.  
+## <a name="remarks"></a>Remarks  
+ The color selection dialog box is displayed as a property sheet with two pages. On the first page, you select a standard color from the system palette; on the second page, you select a custom color.  
   
- 생성할 수는 `CMFCColorDialog` 스택에서 개체를 호출 `DoModal`, 초기 색상에 대 한 매개 변수로 전달는 `CMFCColorDialog` 생성자입니다. 색 선택 대화 상자는 다음 여러 개 만들고 [CMFCColorPickerCtrl 클래스](../../mfc/reference/cmfccolorpickerctrl-class.md) 각 색 팔레트를 처리 하는 개체입니다.  
+ You can construct a `CMFCColorDialog` object on the stack and then call `DoModal`, passing the initial color as a parameter to the `CMFCColorDialog` constructor. The color selection dialog box then creates several [CMFCColorPickerCtrl Class](../../mfc/reference/cmfccolorpickerctrl-class.md) objects to handle each color palette.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -128,16 +122,16 @@ class CMFCColorDialog : public CDialogEx
   
  [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 색 대화 상자에서 다양 한 방법을 사용 하 여 구성 하는 방법의 `CMFCColorDialog` 클래스입니다. 예제에서는 현재 개체와의 대화 상자에서 새로운 색을 설정 하는 방법 및 색 대화의 두 속성 페이지에서 선택한 색의 빨강, 녹색 및 파랑 구성 요소를 설정 하는 방법을 보여 줍니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a color dialog by using various methods in the `CMFCColorDialog` class. The example shows how to set the current and the new colors of the dialog, and how to set the red, green, and blue components of a selected color on the two property pages of the color dialog. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #&3;](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcolordialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcolordialog.h  
   
-##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
- `CMFCColorDialog` 개체를 생성합니다.  
+##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
+ Constructs a `CMFCColorDialog` object.  
   
 ```  
 CMFCColorDialog(
@@ -147,84 +141,84 @@ CMFCColorDialog(
     HPALETTE hPal=NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `clrInit`  
- 기본적으로 색 선택 합니다. 없는 값을 지정 하는 경우 기본값은 RGB(0,0,0) (검정색).  
+ The default color selection. If no value is specified, the default is RGB(0,0,0) (black).  
   
  [in] `dwFlags`  
- (예약 됨.)  
+ (Reserved.)  
   
  [in] `pParentWnd`  
- 이 대화 상자의 부모 또는 소유자 창에 대 한 포인터입니다.  
+ A pointer to the dialog box's parent or owner window.  
   
  [in] `hPal`  
- 색상표에 대 한 핸들입니다.  
+ A handle to a color palette.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
- 색 대화 상자에서 사용자가 선택한 색을 검색 합니다.  
+##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
+ Retrieves the color that the user selects from the color dialog.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) RGB 색 대화 상자에서 선택한 색에 대 한 정보를 포함 하는 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the RGB information for the color selected in the color dialog box.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 호출한 후에 호출 된 `DoModal` 메서드.  
+### <a name="remarks"></a>Remarks  
+ Call this function after you call the `DoModal` method.  
   
-##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
- 현재 색 대화 상자에서 사용할 수 있는 색상표를 검색 합니다.  
+##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
+ Retrieves the color palette that is available in the current color dialog.  
   
 ```  
 CPalette* GetPalette() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CPalette` 에 지정 된 개체는 `CMFCColorDialog` 생성자입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CPalette` object that was specified in the `CMFCColorDialog` constructor.  
   
-### <a name="remarks"></a>주의  
- 색상표에 사용자가 선택할 수는 색을 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ The color palette specifies the colors that the user can choose.  
   
-##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
- 색상표를 시스템으로 색상표에서 파생 됩니다.  
+##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
+ Derives a palette from the system palette.  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
- 대화 상자에 현재 색을 설정합니다.  
+##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor  
+ Sets the current color of the dialog box.  
   
 ```  
 void SetCurrentColor(COLORREF rgb);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `rgb`  
- RGB 색상 값  
+ An RGB color value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
- 현재 색 가장 유사한 현재 색상표에서 색을 설정 합니다.  
+##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
+ Sets the current color to the color in the current palette that is most similar.  
   
 ```  
 void SetNewColor(COLORREF rgb);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `rgb`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) RGB 색을 지정 하는 합니다.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) that specifies an RGB color.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
- 색 대화의 첫 번째 속성 페이지에서 선택한 색의 빨강, 녹색 및 파랑 구성 요소를 명시적으로 지정합니다.  
+##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
+ Explicitly specifies the red, green, and blue components of a selected color on the first property page of a color dialog.  
   
 ```  
 void SetPageOne(
@@ -233,20 +227,20 @@ void SetPageOne(
     BYTE B);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `R`  
- RGB 값의 빨간색 구성 요소를 지정합니다.  
+ Specifies the red component of the RGB value.  
   
  [in] `G`  
- RGB 값의 녹색 구성 요소를 지정합니다.  
+ Specifies the green component of the RGB value.  
   
  [in] `B`  
- RGB 값의 파랑 구성 요소를 지정합니다.  
+ Specifies the blue component of the RGB value.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
- 색 대화의 두 번째 속성 페이지에서 선택한 색의 빨강, 녹색 및 파랑 구성 요소를 명시적으로 지정합니다.  
+##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
+ Explicitly specifies the red, green, and blue components of a selected color on the second property page of a color dialog.  
   
 ```  
 void SetPageTwo(
@@ -255,20 +249,20 @@ void SetPageTwo(
     BYTE B);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `R`  
- RGB 값의 빨간색 구성 요소를 지정합니다.  
+ Specifies a red component of the RGB value  
   
  [in] `G`  
- RGB 값의 녹색 구성 요소를 지정합니다.  
+ Specifies a green component of an RGB value  
   
  [in] `B`  
- RGB 값의 파란색 구성 요소를 지정합니다.  
+ Specifies a blue component of an RGB value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCColorPickerCtrl 클래스](../../mfc/reference/cmfccolorpickerctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCColorPickerCtrl Class](../../mfc/reference/cmfccolorpickerctrl-class.md)
 

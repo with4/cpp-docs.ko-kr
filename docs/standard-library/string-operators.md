@@ -1,23 +1,42 @@
 ---
-title: "&lt;string&gt; 연산자 | Microsoft Docs"
+title: '&lt;string&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- string/std::operator!=
+- string/std::operator&gt;
+- string/std::operator&gt;&gt;
+- string/std::operator&gt;=
+- string/std::operator&lt;
+- string/std::operator&lt;&lt;
+- string/std::operator&lt;=
+- string/std::operator+
+- string/std::operator==
+dev_langs:
+- C++
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 7ed2e8ebcfec6c7d592969208c155daa0e27724e
+helpviewer_keywords:
+- std::operator!= (string)
+- std::operator&gt; (string)
+- std::operator&gt;&gt; (string)
+- std::operator&gt;= (string)
+- std::operator&lt; (string)
+- std::operator&lt;&lt; (string)
+- std::operator&lt;= (string), std::operator== (string)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7df007a987c224f4a0e0fff25ebdf6b8cc8ec1c7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltstringgt-operators"></a>&lt;string&gt; 연산자
+# <a name="ltstringgt-operators"></a>&lt;string&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|  
@@ -25,7 +44,7 @@ ms.lasthandoff: 04/29/2017
 |[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_add"></a>  operator+  
- 두 문자열 개체를 연결합니다.  
+ Concatenates two string objects.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -89,20 +108,20 @@ basic_string<CharType, Traits, Allocator>&& operator+(
     const basic_string<CharType, Traits, Allocator>&& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 연결할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be concatenated.  
   
  `right`  
- 연결할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be concatenated.  
   
-### <a name="return-value"></a>반환 값  
- 입력 문자열의 연결인 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ The string that is the concatenation of the input strings.  
   
-### <a name="remarks"></a>설명  
- 각 함수는 `operator+`를 오버로드하여 템플릿 클래스 [basic_string 클래스](../standard-library/basic-string-class.md)의 두 개체를 연결합니다. 모든 함수는 실제로는 `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The functions each overload `operator+` to concatenate two objects of template class [basic_string Class](../standard-library/basic-string-class.md). All effectively return `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_con.cpp  
@@ -155,7 +174,7 @@ The string concatenating s1 & s3 is: antiheroine!
 ```  
   
 ##  <a name="op_neq"></a>  operator!=  
- 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같지 않은지 테스트합니다.  
+ Tests if the string object on the left side of the operator is not equal to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -174,20 +193,20 @@ bool operator!=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체와 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is not lexicographically equal to the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- string 개체 간의 비교는 해당 문자의 쌍 단위 어휘 비교를 기반으로 합니다. 문자 수와 개별 문자 값이 같은 두 문자열은 동일한 문자열입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between string objects is based on a pairwise lexicographical comparison of their characters. Two strings are equal if they have the same number of characters and their respective character values are the same. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_ne.cpp  
@@ -242,7 +261,7 @@ The strings s3 & s2 are not equal.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같은지 테스트합니다.  
+ Tests if the string object on the left side of the operator is equal to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -261,20 +280,20 @@ bool operator==(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체와 같으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically equal to the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- string 개체 간의 비교는 해당 문자의 쌍 단위 어휘 비교를 기반으로 합니다. 문자 수와 개별 문자 값이 같은 두 문자열은 동일한 문자열입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between string objects is based on a pairwise lexicographical comparison of their characters. Two strings are equal if they have the same number of characters and their respective character values are the same. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_eq.cpp  
@@ -329,7 +348,7 @@ The strings s3 & s2 are not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작은지 테스트합니다.  
+ Tests if the string object on the left side of the operator is less than to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -348,26 +367,26 @@ bool operator<(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체보다 작으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically less than the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 문자열 간의 어휘 비교에서는 다음이 확인될 때까지 두 문자열의 문자를 하나씩 비교합니다.  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between strings compares them character by character until:  
   
--   해당하는 두 문자가 같지 않음이 확인될 때까지. 이 경우 해당 비교 결과를 문자열 간의 비교 결과로 가져옵니다.  
+-   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
   
--   같지 않은 문자는 없으나 한 문자열의 문자 수가 다른 문자열보다 많음이 확인될 때까지. 이 경우 더 짧은 문자열이 더 긴 문자열보다 작은 것으로 간주합니다.  
+-   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
   
--   같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.  
+-   It finds no inequalities and finds that the strings have the same number of characters, and so the strings are equal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_lt.cpp  
@@ -421,7 +440,7 @@ The string s3 is less than the string s2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작거나 같은지 테스트합니다.  
+ Tests if the string object on the left side of the operator is less than or equal to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -440,26 +459,26 @@ bool operator<=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically less than or equal to the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 문자열 간의 어휘 비교에서는 다음이 확인될 때까지 두 문자열의 문자를 하나씩 비교합니다.  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between strings compares them character by character until:  
   
--   해당하는 두 문자가 같지 않음이 확인될 때까지. 이 경우 해당 비교 결과를 문자열 간의 비교 결과로 가져옵니다.  
+-   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
   
--   같지 않은 문자는 없으나 한 문자열의 문자 수가 다른 문자열보다 많음이 확인될 때까지. 이 경우 더 짧은 문자열이 더 긴 문자열보다 작은 것으로 간주합니다.  
+-   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
   
--   같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.  
+-   It finds no inequalities and finds that the strings have the same number of characters, so the strings are equal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_le.cpp  
@@ -520,7 +539,7 @@ The string s2 is greater than the string s3.
 ```  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- 문자열을 출력 스트림에 기록하는 템플릿 함수입니다.  
+ A template function that writes a string into the output stream.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -529,21 +548,21 @@ basic_ostream<CharType, Traits>& operator<<(
     const basic_string<CharType, Traits, Allocator>& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  _Ostr  
- 문자열이 기록되는 출력 스트림입니다.  
+ The output stream being written to.  
   
  `str`  
- 출력 스트림에 입력할 문자열입니다.  
+ The string to be entered into the output stream.  
   
-### <a name="return-value"></a>반환 값  
- 출력 스트림 `_Ostr`에 지정된 문자열의 값을 기록합니다.  
+### <a name="return-value"></a>Return Value  
+ Writes the value of the specified string to the output stream `_Ostr`.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는 **operator<<**를 오버로드하여 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 _ *Str* 개체를 스트림 \_ *Ostr*에 씁니다. 이 함수는 실제로는 \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size))를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function overloads **operator<<** to insert an object _ *Str* of template class [basic_string](../standard-library/basic-string-class.md) into the stream \_ *Ostr.* The function effectively returns \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 큰지 테스트합니다.  
+ Tests if the string object on the left side of the operator is greater than to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -562,26 +581,26 @@ bool operator>(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체보다 크면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically greater than the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 문자열 간의 어휘 비교에서는 다음이 확인될 때까지 두 문자열의 문자를 하나씩 비교합니다.  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between strings compares them character by character until:  
   
--   해당하는 두 문자가 같지 않음이 확인될 때까지. 이 경우 해당 비교 결과를 문자열 간의 비교 결과로 가져옵니다.  
+-   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
   
--   같지 않은 문자는 없으나 한 문자열의 문자 수가 다른 문자열보다 많음이 확인될 때까지. 이 경우 더 짧은 문자열이 더 긴 문자열보다 작은 것으로 간주합니다.  
+-   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
   
--   같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.  
+-   It finds no inequalities and finds that the strings have the same number of characters, and so the strings are equal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_gt.cpp  
@@ -642,7 +661,7 @@ The string s2 is greater than the string s3.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 크거나 같은지 테스트합니다.  
+ Tests if the string object on the left side of the operator is greater than or equal to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -661,26 +680,26 @@ bool operator>=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 연산자의 좌변에 있는 string 개체의 어휘가 우변에 있는 string 개체보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically greater than or equal to the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 문자열 간의 어휘 비교에서는 다음이 확인될 때까지 두 문자열의 문자를 하나씩 비교합니다.  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between strings compares them character by character until:  
   
--   해당하는 두 문자가 같지 않음이 확인될 때까지. 이 경우 해당 비교 결과를 문자열 간의 비교 결과로 가져옵니다.  
+-   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
   
--   같지 않은 문자는 없으나 한 문자열의 문자 수가 다른 문자열보다 많음이 확인될 때까지. 이 경우 더 짧은 문자열이 더 긴 문자열보다 작은 것으로 간주합니다.  
+-   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
   
--   같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.  
+-   It finds no inequalities and finds the strings have the same number of characters, and so the strings are equal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_ge.cpp  
@@ -741,7 +760,7 @@ The string s2 is greater than or equal to the string s3.
 ```  
   
 ##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
- 입력 스트림에서 문자열을 읽는 템플릿 함수입니다.  
+ A template function that reads a string from an input stream.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -750,32 +769,32 @@ basic_istream<CharType, Traits>& operator>>(
     basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Istr`  
- 시퀀스를 추출하는 데 사용되는 입력 스트림입니다.  
+ The input stream used to extract the sequence  
   
  `right`  
- 입력 스트림에서 추출되는 문자열입니다.  
+ The string that is being extracted from the input stream.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 문자열의 값을 읽고 `_Istr` 로 반환 하 고 `right`합니다.  
+### <a name="return-value"></a>Return Value  
+ Reads the value of the specified string from `_Istr` and returns it into `right`.  
   
-### <a name="remarks"></a>설명  
- `skipws` 플래그가 설정된 경우가 아니면 연산자는 선행 공백을 건너뜁니다. 그리고 다음 문자가 공백이거나 파일의 끝에 도달할 때까지 뒤에 오는 모든 문자를 읽습니다.  
+### <a name="remarks"></a>Remarks  
+ The operator skips the leading white spaces unless the `skipws` flag is set. It reads all the following characters until the next character is a white space or the end of the file is reached.  
   
- 템플릿 함수는 **operator>>**를 오버로드하여 `right`로 제어되는 시퀀스를 `_Istr` 스트림에서 추출된 요소 시퀀스로 바꿉니다. 다음과 같은 경우 추출이 중지됩니다.  
+ The template function overloads **operator>>** to replace the sequence controlled by `right` with a sequence of elements extracted from the stream `_Istr`. Extraction stops:  
   
--   파일의 끝에 도달하는 경우  
+-   At end of file.  
   
--   함수가 `_Istr`을 추출한 후 값이 0이 아닌 경우 **width** 요소  
+-   After the function extracts `_Istr`. **width** elements, if that value is nonzero.  
   
- 함수가 `_Istr`을 추출한 후 [max_size](../standard-library/basic-string-class.md#max_size) 요소  
+ After the function extracts `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) elements.  
   
--   함수가 *ch* 요소를 추출한 후 이 요소의 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`), **is**( **ctype**\< **CharType**>:: **space**, *ch*)가 true이면 문자가 되돌려집니다.  
+-   After the function extracts an element *ch* for which [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) is true, in which case the character is put back.  
   
- 함수는 요소를 추출하지 않는 경우 [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`)를 호출하며, 어떤 경우든 **istr**. **width**(0)을 호출하고 \* **this**를 반환합니다.  
+ If the function extracts no elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`). In any case, it calls **istr**. **width**(0) and returns \* **this**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_read_.cpp  
@@ -794,6 +813,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<string>](../standard-library/string.md)
 

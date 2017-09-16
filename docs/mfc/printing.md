@@ -1,31 +1,48 @@
 ---
-title: "인쇄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "문서, 인쇄"
-  - "인쇄[MFC]"
-  - "인쇄[MFC], 프레임워크에서"
-  - "뷰 클래스, 인쇄 작업"
+title: Printing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- view classes [MFC], print operations
+- documents [MFC], printing
+- printing [MFC], from framework
+- printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 인쇄
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 095ef2d763a44607c5d026b61301d46d7654dfe2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-Microsoft Windows implements device\-independent display.  In MFC, this means that the same drawing calls, in the `OnDraw` member function of your view class, are responsible for drawing on the display and on other devices, such as printers.  For print preview, the target device is a simulated printer output to the display.  
+---
+# <a name="printing"></a>Printing
+Microsoft Windows implements device-independent display. In MFC, this means that the same drawing calls, in the `OnDraw` member function of your view class, are responsible for drawing on the display and on other devices, such as printers. For print preview, the target device is a simulated printer output to the display.  
   
 ##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Your Role in Printing vs. the Framework's Role  
  Your view class has the following responsibilities:  
@@ -34,9 +51,9 @@ Microsoft Windows implements device\-independent display.  In MFC, this means th
   
 -   When asked to print a specified page, draw that portion of the document.  
   
--   Allocate and deallocate any fonts or other graphics device interface \(GDI\) resources needed for printing.  
+-   Allocate and deallocate any fonts or other graphics device interface (GDI) resources needed for printing.  
   
--   If necessary, send any escape codes needed to change the printer mode before printing a given page, for example, to change the printing orientation on a per\-page basis.  
+-   If necessary, send any escape codes needed to change the printer mode before printing a given page, for example, to change the printing orientation on a per-page basis.  
   
  The framework's responsibilities are as follows:  
   
@@ -44,15 +61,15 @@ Microsoft Windows implements device\-independent display.  In MFC, this means th
   
 -   Create a [CDC](../mfc/reference/cdc-class.md) object for the printer.  
   
--   Call the [StartDoc](../Topic/CDC::StartDoc.md) and [EndDoc](../Topic/CDC::EndDoc.md) member functions of the `CDC` object.  
+-   Call the [StartDoc](../mfc/reference/cdc-class.md#startdoc) and [EndDoc](../mfc/reference/cdc-class.md#enddoc) member functions of the `CDC` object.  
   
--   Repeatedly call the [StartPage](../Topic/CDC::StartPage.md) member function of the `CDC` object, inform the view class which page should be printed, and call the [EndPage](../Topic/CDC::EndPage.md) member function of the `CDC` object.  
+-   Repeatedly call the [StartPage](../mfc/reference/cdc-class.md#startpage) member function of the `CDC` object, inform the view class which page should be printed, and call the [EndPage](../mfc/reference/cdc-class.md#endpage) member function of the `CDC` object.  
   
 -   Call overridable functions in the view at the appropriate times.  
   
  The following articles discuss how the framework supports printing and print preview:  
   
-### 추가 정보  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
 -   [How default printing is done](../mfc/how-default-printing-is-done.md)  
   
@@ -64,5 +81,7 @@ Microsoft Windows implements device\-independent display.  In MFC, this means th
   
 -   [Print preview](../mfc/print-preview-architecture.md)  
   
-## 참고 항목  
- [인쇄 및 인쇄 미리 보기](../mfc/printing-and-print-preview.md)
+## <a name="see-also"></a>See Also  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)
+
+

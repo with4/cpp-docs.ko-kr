@@ -1,5 +1,5 @@
 ---
-title: "numpunct 클래스 | Microsoft Docs"
+title: numpunct Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocnum/std::numpunct
-- numpunct
 - locale/std::numpunct::char_type
 - locale/std::numpunct::string_type
 - locale/std::numpunct::decimal_point
@@ -26,7 +25,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- numpunct class
+- std::numpunct [C++]
+- std::numpunct [C++], char_type
+- std::numpunct [C++], string_type
+- std::numpunct [C++], decimal_point
+- std::numpunct [C++], do_decimal_point
+- std::numpunct [C++], do_falsename
+- std::numpunct [C++], do_grouping
+- std::numpunct [C++], do_thousands_sep
+- std::numpunct [C++], do_truename
+- std::numpunct [C++], falsename
+- std::numpunct [C++], grouping
+- std::numpunct [C++], thousands_sep
+- std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 caps.latest.revision: 22
 author: corob-msft
@@ -46,87 +57,87 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 56dbd3ed6e655ec5f431d383864f949925baaf5c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: aaaeb63198a6ff5191f5bb758c90c0d41d3dc4c4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="numpunct-class"></a>numpunct 클래스
-`CharType` 형식의 시퀀스에 대해 설명하는 로컬 패싯으로 사용할 수 있는 개체에 대해 설명하는 템플릿 클래스입니다. CharType 형식의 시퀀스는 숫자 및 부울 식의 서식 지정 및 문장 부호에 대한 정보를 나타내는 데 사용됩니다.  
+# <a name="numpunct-class"></a>numpunct Class
+A template class that describes an object that can serve as a local facet to describe the sequences of type `CharType` used to represent information about the formatting and punctuation of numeric and Boolean expressions.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType>  
 class numpunct : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 로캘의 문자를 인코딩하기 위해 프로그램 내 사용하는 형식입니다.  
+ The type used within a program to encode characters in a locale.  
   
-## <a name="remarks"></a>설명  
- 모든 로캘 패싯과 마찬가지로, 고정 개체 ID에는 초기값 0이 저장되어 있습니다. 저장된 값에 액세스를 처음 시도하면 **id**에 고유한 양수 값이 저장됩니다.  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[numpunct](#numpunct)|`numpunct` 형식의 개체에 대한 생성자입니다.|  
+|[numpunct](#numpunct)|The constructor for objects of type `numpunct`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|로캘에서 사용하는 문자를 설명하기 위해 사용하는 형식입니다.|  
-|[string_type](#string_type)|`CharType` 형식의 문자가 포함된 문자열을 설명하는 형식입니다.|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[decimal_point](#decimal_point)|소수점으로 사용할 로캘별 요소를 반환합니다.|  
-|[do_decimal_point](#do_decimal_point)|소수점으로 사용할 로캘별 요소를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[do_falsename](#do_falsename)|`false` 값을 텍스트로 표현하는 데 사용할 문자열을 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[do_grouping](#do_grouping)|소수점 자리 왼쪽의 숫자를 그룹화하는 방법을 결정하는 로캘별 규칙을 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[do_thousands_sep](#do_thousands_sep)|1000 단위 구분 기호로 사용할 로캘별 요소를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[do_truename](#do_truename)|`true` 값을 텍스트로 표현하는 데 사용할 문자열을 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.|  
-|[falsename](#falsename)|`false` 값을 텍스트로 표현하기 위해 사용할 문자열을 반환합니다.|  
-|[grouping](#grouping)|소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙을 반환합니다.|  
-|[thousands_sep](#thousands_sep)|1000 단위 구분 기호로 사용할 로캘별 요소를 반환합니다.|  
-|[truename](#truename)|`true` 값을 텍스트로 표현하기 위해 사용할 문자열을 반환합니다.|  
+|[decimal_point](#decimal_point)|Returns a locale-specific element to use as a decimal point.|  
+|[do_decimal_point](#do_decimal_point)|A protected virtual member function that is called to return a locale-specific element to use as a decimal point.|  
+|[do_falsename](#do_falsename)|A protected virtual member function that is called to return a string to use as a text representation of the value `false`.|  
+|[do_grouping](#do_grouping)|A protected virtual member function that is called to return a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
+|[do_thousands_sep](#do_thousands_sep)|A protected virtual member function that is called to return a locale-specific element to use as a thousands separator.|  
+|[do_truename](#do_truename)|A protected virtual member function that is called to return a string to use as a text representation of the value `true`.|  
+|[falsename](#falsename)|Returns a string to use as a text representation of the value `false`.|  
+|[grouping](#grouping)|Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
+|[thousands_sep](#thousands_sep)|Returns a locale-specific element to use as a thousands separator.|  
+|[truename](#truename)|Returns a string to use as a text representation of the value `true`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  numpunct::char_type  
- 로캘에서 사용하는 문자를 설명하기 위해 사용하는 형식입니다.  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**과 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType.**  
   
 ##  <a name="decimal_point"></a>  numpunct::decimal_point  
- 소수점으로 사용할 로캘별 요소를 반환합니다.  
+ Returns a locale-specific element to use as a decimal point.  
   
 ```  
 CharType decimal_point() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점으로 사용할 로캘별 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific element to use as a decimal point.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_decimal_point](#do_decimal_point)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_decimal_point](#do_decimal_point).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_decimal_point.cpp  
@@ -154,97 +165,97 @@ German_Germany.1252 thousands separator .
 ```  
   
 ##  <a name="do_decimal_point"></a>  numpunct::do_decimal_point  
- 소수점으로 사용할 로캘별 요소를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.  
+ A protected virtual member function that is called to return a locale-specific element to use as a decimal point.  
   
 ```  
 virtual CharType do_decimal_point() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점으로 사용할 로캘별 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific element to use as a decimal point.  
   
-### <a name="example"></a>예제  
-  `decimal_point`에 의해 가상 구성원 함수가 호출되는 [decimal_point](#decimal_point)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [decimal_point](#decimal_point), where the virtual member function is called by `decimal_point`.  
   
 ##  <a name="do_falsename"></a>  numpunct::do_falsename  
- 보호된 가상 구성원 함수는 **false** 값을 텍스트로 표현하는 데 사용할 시퀀스를 반환합니다.  
+ The protected virtual member function returns a sequence to use as a text representation of the value **false**.  
   
 ```  
 virtual string_type do_falsename() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- **false** 값을 텍스트로 표현하는 데 사용할 시퀀스가 포함된 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ A string containing a sequence to use as a text representation of the value **false**.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 모든 로캘에서 **false** 값을 나타내기 위해 "false" 문자열을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the string "false" to represent the value **false** in all locales.  
   
-### <a name="example"></a>예제  
-  `falsename`에 의해 가상 구성원 함수가 호출되는 [falsename](#falsename)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [falsename](#falsename), where the virtual member function is called by `falsename`.  
   
 ##  <a name="do_grouping"></a>  numpunct::do_grouping  
- 소수점 자리 왼쪽의 숫자를 그룹화하는 방법을 결정하는 로캘별 규칙을 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.  
+ A protected virtual member function that is called to return a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
 ```  
 virtual string do_grouping() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
-### <a name="remarks"></a>설명  
- 보호된 가상 멤버 함수가 소수점 자리 왼쪽의 숫자를 그룹화하는 방법을 결정하는 로캘별 규칙을 반환합니다. 인코딩이 **lconv::grouping**과 동일합니다.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function returns a locale-specific rule for determining how digits are grouped to the left of any decimal point. The encoding is the same as for **lconv::grouping**.  
   
-### <a name="example"></a>예제  
-  **grouping**에 의해 가상 구성원 함수가 호출되는 [grouping](#grouping)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [grouping](#grouping), where the virtual member function is called by **grouping**.  
   
 ##  <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep  
- 1000 단위 구분 기호로 사용할 로캘별 요소를 반환하기 위해 호출하는 보호된 가상 멤버 함수입니다.  
+ A protected virtual member function that is called to return a locale-specific element to use as a thousands separator.  
   
 ```  
 virtual CharType do_thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 1000 단위 구분 기호로 사용할 로캘별 요소를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns a locale-specific element to use as a thousands separator.  
   
-### <a name="remarks"></a>설명  
- 보호된 가상 구성원 함수는 소수점 왼쪽의 그룹 구분 기호로 사용할 **CharType** 형식의 로캘별 요소를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function returns a locale-specific element of type **CharType** to use as a group separator to the left of any decimal point.  
   
-### <a name="example"></a>예제  
-  `thousands_sep`에 의해 가상 구성원 함수가 호출되는 [thousands_sep](#thousands_sep)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [thousands_sep](#thousands_sep), where the virtual member function is called by `thousands_sep`.  
   
 ##  <a name="do_truename"></a>  numpunct::do_truename  
- **true** 값을 텍스트로 표현하는 데 사용할 문자열을 반환하기 위해 호출하는 보호된 가상 구성원 함수입니다.  
+ A protected virtual member function that is called to return a string to use as a text representation of the value **true**.  
   
 ```  
 virtual string_type do_truename() const;
 ```  
   
-### <a name="remarks"></a>설명  
- **true** 값을 텍스트로 표현하기 위해 사용할 문자열입니다.  
+### <a name="remarks"></a>Remarks  
+ A string to use as a text representation of the value **true**.  
   
- 모든 로캘은 **true** 값을 나타내기 위한 문자열 "true"를 반환합니다.  
+ All locales return a string "true" to represent the value **true**.  
   
-### <a name="example"></a>예제  
-  `truename`에 의해 가상 구성원 함수가 호출되는 [truename](#truename)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [truename](#truename), where the virtual member function is called by `truename`.  
   
 ##  <a name="falsename"></a>  numpunct::falsename  
- **false** 값을 텍스트로 표현하기 위해 사용할 문자열을 반환합니다.  
+ Returns a string to use as a text representation of the value **false**.  
   
 ```  
 string_type falsename() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- **false** 값을 텍스트로 표현하는 데 사용할 **CharType** 시퀀스가 포함된 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ A string containing a sequence of **CharType**s to use as a text representation of the value **false**.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 모든 로캘에서 **false** 값을 나타내기 위해 "false" 문자열을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the string "false" to represent the value **false** in all locales.  
   
- 구성원 함수는 [do_falsename](#do_falsename)을 반환합니다.  
+ The member function returns [do_falsename](#do_falsename).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_falsename.cpp  
@@ -276,19 +287,19 @@ French_France.1252 falsename false
 ```  
   
 ##  <a name="grouping"></a>  numpunct::grouping  
- 소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙을 반환합니다.  
+ Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
 ```  
 string grouping() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 소수점 왼쪽의 숫자를 그룹화할 방법을 결정하기 위한 로캘별 규칙입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_grouping](#do_grouping)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_grouping](#do_grouping).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_grouping.cpp  
@@ -319,53 +330,53 @@ German_Germany.1252 international grouping:
 ```  
   
 ##  <a name="numpunct"></a>  numpunct::numpunct  
- `numpunct` 형식의 개체에 대한 생성자입니다.  
+ The constructor for objects of type `numpunct`.  
   
 ```  
 explicit numpunct(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 개체에 대한 메모리 관리 형식을 지정하는 데 사용하는 정수값입니다.  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>설명  
- `_Refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: 개체를 포함하는 로캘에 의해 개체의 수명이 관리됩니다.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: 개체의 수명을 수동으로 관리해야 합니다.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: 이러한 값은 정의 되지 않습니다.  
+-   \> 1: These values are not defined.  
   
- 소멸자는 보호되므로 직접적인 예제는 확인할 수 없습니다.  
+ No direct examples are possible, because the destructor is protected.  
   
- 생성자는 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ##  <a name="string_type"></a>  numpunct::string_type  
- **CharType** 형식의 문자가 포함된 문자열을 설명하는 형식입니다.  
+ A type that describes a string containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType, Traits, Allocator> string_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 개체가 문장 부호 시퀀스의 복사본을 저장할 수 있는 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 특수화를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the punctuation sequences.  
   
 ##  <a name="thousands_sep"></a>  numpunct::thousands_sep  
- 1000 단위 구분 기호로 사용할 로캘별 요소를 반환합니다.  
+ Returns a locale-specific element to use as a thousands separator.  
   
 ```  
 CharType thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 1000 단위 구분 기호로 사용할 로캘별 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ A locale-specific element to use as a thousands separator.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_thousands_sep](#do_thousands_sep)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_thousands_sep](#do_thousands_sep).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_thou_sep.cpp  
@@ -393,21 +404,21 @@ German_Germany.1252 thousands separator .
 ```  
   
 ##  <a name="truename"></a>  numpunct::truename  
- **true** 값을 텍스트로 표현하기 위해 사용할 문자열을 반환합니다.  
+ Returns a string to use as a text representation of the value **true**.  
   
 ```  
 string_type falsename() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- **true** 값을 텍스트로 표현하기 위해 사용할 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ A string to use as a text representation of the value **true**.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 [do_truename](#do_truename)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_truename](#do_truename).  
   
- 모든 로캘은 **true** 값을 나타내기 위한 문자열 "true"를 반환합니다.  
+ All locales return a string "true" to represent the value **true**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_truename.cpp  
@@ -438,9 +449,9 @@ French_France.1252 truename true
 French_France.1252 falsename false  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [facet 클래스](../standard-library/locale-class.md#facet_class)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet Class](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

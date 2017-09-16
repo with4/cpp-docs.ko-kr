@@ -1,5 +1,5 @@
 ---
-title: "CControlBar 클래스 | Microsoft Docs"
+title: CControlBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CControlBar class
-- OLE resize bars
-- OLE resize bars, base class
-- dialog bars, base class
-- toolbars [C++], base class
-- control bars [C++], base class
-- status bars, base class
+- CControlBar [MFC], CControlBar
+- CControlBar [MFC], CalcDynamicLayout
+- CControlBar [MFC], CalcFixedLayout
+- CControlBar [MFC], CalcInsideRect
+- CControlBar [MFC], DoPaint
+- CControlBar [MFC], DrawBorders
+- CControlBar [MFC], DrawGripper
+- CControlBar [MFC], EnableDocking
+- CControlBar [MFC], GetBarStyle
+- CControlBar [MFC], GetBorders
+- CControlBar [MFC], GetCount
+- CControlBar [MFC], GetDockingFrame
+- CControlBar [MFC], IsFloating
+- CControlBar [MFC], OnUpdateCmdUI
+- CControlBar [MFC], SetBarStyle
+- CControlBar [MFC], SetBorders
+- CControlBar [MFC], SetInPlaceOwner
+- CControlBar [MFC], m_bAutoDelete
+- CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 caps.latest.revision: 22
 author: mikeblome
@@ -59,72 +71,72 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 17702c4ca8559f1990cbbc183f1e409a6b2be484
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4715579bd2ec352ab45401c6d59e144adaf38900
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
-컨트롤 막대 클래스에 대 한 기본 클래스 [CStatusBar](../../mfc/reference/cstatusbar-class.md), [CToolBar](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), 및 [COleResizeBar](../../mfc/reference/coleresizebar-class.md)합니다.  
+The base class for the control-bar classes [CStatusBar](../../mfc/reference/cstatusbar-class.md), [CToolBar](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), and [COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CControlBar : public CWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Protected 생성자  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CControlBar::CControlBar](#ccontrolbar)|`CControlBar` 개체를 생성합니다.|  
+|[CControlBar::CControlBar](#ccontrolbar)|Constructs a `CControlBar` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|로 동적 컨트롤 막대의 크기를 반환 하는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.|  
-|[CControlBar::CalcFixedLayout](#calcfixedlayout)|로 컨트롤 막대의 크기를 반환 하는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.|  
-|[CControlBar::CalcInsideRect](#calcinsiderect)|컨트롤 막대 영역의; 현재 크기를 반환합니다. 테두리를 포함 합니다.|  
-|[CControlBar::DoPaint](#dopaint)|테두리 및 컨트롤 막대의 위치 조정 막대를 렌더링합니다.|  
-|[CControlBar::DrawBorders](#drawborders)|컨트롤 막대의 테두리를 렌더링합니다.|  
-|[CControlBar::DrawGripper](#drawgripper)|컨트롤 막대의 위치 조정 막대를 렌더링합니다.|  
-|[CControlBar::EnableDocking](#enabledocking)|고정 또는 부동 수에 있는 컨트롤 막대를 허용 합니다.|  
-|[CControlBar::GetBarStyle](#getbarstyle)|컨트롤 막대 스타일 설정을 검색합니다.|  
-|[CControlBar::GetBorders](#getborders)|컨트롤 막대의 테두리 값을 검색 합니다.|  
-|[CControlBar::GetCount](#getcount)|비-의 수를 반환 `HWND` 컨트롤 막대에 있는 요소입니다.|  
-|[CControlBar::GetDockingFrame](#getdockingframe)|컨트롤 막대 도킹 프레임에 대 한 포인터를 반환 합니다.|  
-|[CControlBar::IsFloating](#isfloating)|컨트롤 막대에는 부동 컨트롤 막대 이면 0이 아닌 값을 반환 합니다.|  
-|[CControlBar::OnUpdateCmdUI](#onupdatecmdui)|UI 명령 처리기를 호출합니다.|  
-|[CControlBar::SetBarStyle](#setbarstyle)|컨트롤 막대 스타일 설정을 수정합니다.|  
-|[CControlBar::SetBorders](#setborders)|컨트롤 막대의 테두리 값을 설정합니다.|  
-|[CControlBar::SetInPlaceOwner](#setinplaceowner)|컨트롤 막대의 내부 소유자를 변경합니다.|  
+|[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|Returns the size of a dynamic control bar as a [CSize](../../atl-mfc-shared/reference/csize-class.md) object.|  
+|[CControlBar::CalcFixedLayout](#calcfixedlayout)|Returns the size of the control bar as a [CSize](../../atl-mfc-shared/reference/csize-class.md) object.|  
+|[CControlBar::CalcInsideRect](#calcinsiderect)|Returns the current dimensions of the control bar area; including the borders.|  
+|[CControlBar::DoPaint](#dopaint)|Renders the borders and gripper of the control bar.|  
+|[CControlBar::DrawBorders](#drawborders)|Renders the borders of the control bar.|  
+|[CControlBar::DrawGripper](#drawgripper)|Renders the gripper of the control bar.|  
+|[CControlBar::EnableDocking](#enabledocking)|Allows a control bar to be docked or floating.|  
+|[CControlBar::GetBarStyle](#getbarstyle)|Retrieves the control bar style settings.|  
+|[CControlBar::GetBorders](#getborders)|Retrieves the border values of the control bar.|  
+|[CControlBar::GetCount](#getcount)|Returns the number of non- `HWND` elements in the control bar.|  
+|[CControlBar::GetDockingFrame](#getdockingframe)|Returns a pointer to the frame to which a control bar is docked.|  
+|[CControlBar::IsFloating](#isfloating)|Returns a nonzero value if the control bar in question is a floating control bar.|  
+|[CControlBar::OnUpdateCmdUI](#onupdatecmdui)|Calls the Command UI handlers.|  
+|[CControlBar::SetBarStyle](#setbarstyle)|Modifies the control bar style settings.|  
+|[CControlBar::SetBorders](#setborders)|Sets the border values of the control bar.|  
+|[CControlBar::SetInPlaceOwner](#setinplaceowner)|Changes the in-place owner of a control bar.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CControlBar::m_bAutoDelete](#m_bautodelete)|0이 아니면는 `CControlBar` Windows 컨트롤 막대 소멸 될 때 개체를 삭제 합니다.|  
-|[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|컨트롤 막대의 내부 소유자입니다.|  
+|[CControlBar::m_bAutoDelete](#m_bautodelete)|If nonzero, the `CControlBar` object is deleted when the Windows control bar is destroyed.|  
+|[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|The in-place owner of the control bar.|  
   
-## <a name="remarks"></a>설명  
- 컨트롤 막대는 왼쪽 또는 오른쪽 프레임 창에 일반적으로 정렬 되는 창입니다. 자식 항목을 포함할 수 있습니다 `HWND`기반 컨트롤을 생성 및 Windows 메시지 또는 비 응답 하는 창- `HWND`-windows가 아닌 응용 프로그램 코드 또는 프레임 워크 코드에서 관리 하는 항목을 기반으로 합니다. 목록 상자 편집 컨트롤의 예는 `HWND`-기반된 컨트롤; 상태 표시줄 창 및 비트맵 단추는 비- `HWND`-컨트롤을 기반으로 합니다.  
+## <a name="remarks"></a>Remarks  
+ A control bar is a window that is usually aligned to the left or right of a frame window. It may contain child items that are either `HWND`-based controls, which are windows that generate and respond to Windows messages, or non- `HWND`-based items, which are not windows and are managed by application code or framework code. List boxes and edit controls are examples of `HWND`-based controls; status-bar panes and bitmap buttons are examples of non- `HWND`-based controls.  
   
- 컨트롤 막대 windows는 일반적으로 부모 프레임 창의 자식 창 되며 일반적으로 형제 클라이언트 보기 또는 프레임 창의 MDI 클라이언트에 있습니다. A `CControlBar` 개체의 자체 위치를 부모 창의 클라이언트 영역에 대 한 정보를 사용 합니다. 그런 다음 부모 창의 클라이언트 영역에 공간 할당 되지 않은 남아에 대 한 부모 창을 알립니다.  
+ Control-bar windows are usually child windows of a parent frame window and are usually siblings to the client view or MDI client of the frame window. A `CControlBar` object uses information about the parent window's client rectangle to position itself. It then informs the parent window as to how much space remains unallocated in the parent window's client area.  
   
- 대 한 자세한 내용은 `CControlBar`를 참조 하세요.  
+ For more information on `CControlBar`, see:  
   
-- [컨트롤 막대](../../mfc/control-bars.md)  
+- [Control Bars](../../mfc/control-bars.md)  
   
-- [기술 참고 31: 컨트롤 막대](../../mfc/tn031-control-bars.md)합니다.  
+- [Technical Note 31: Control Bars](../../mfc/tn031-control-bars.md).  
   
--   기술 자료 문서 Q242577: PRB: 업데이트 명령 UI 처리기 않으면 작동 하지 않는다 대화 상자에 연결 된 메뉴  
+-   Knowledge Base article Q242577 : PRB: Update Command UI Handlers Do Not Work for Menu Attached to a Dialog Box  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -133,11 +145,11 @@ class CControlBar : public CWnd
   
  `CControlBar`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="calcdynamiclayout"></a>CControlBar::CalcDynamicLayout  
- 프레임 워크는 동적 도구 모음의 크기를 계산 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="calcdynamiclayout"></a>  CControlBar::CalcDynamicLayout  
+ The framework calls this member function to calculate the dimensions of a dynamic toolbar.  
   
 ```  
 virtual CSize CalcDynamicLayout(
@@ -145,31 +157,31 @@ virtual CSize CalcDynamicLayout(
     DWORD nMode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nLength`  
- 가로 또는 세로에 따라 컨트롤 막대의 요청 된 차원 `dwMode`합니다.  
+ The requested dimension of the control bar, either horizontal or vertical, depending on `dwMode`.  
   
  `nMode`  
- 다음과 같은 미리 정의 된 플래그는 동적 컨트롤 막대의 너비와 높이 결정 하는 데 사용 됩니다. 비트 OR (|) 연산자를 사용 하 여 플래그를 조합 합니다.  
+ The following predefined flags are used to determine the height and width of the dynamic control bar. Use the bitwise-OR (&#124;) operator to combine the flags.  
   
-|레이아웃 모드 플래그|그 의미|  
+|Layout mode flags|What it means|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|컨트롤 막대를 프레임의 크기를 확장할 수 있는지 여부를 나타냅니다. 표시줄이 (도킹의 사용할 수 없음)는 도킹 모음 경우 설정 합니다. 설정 하지는 막대는 도킹 또는 부동 하는 경우 (도킹 가능). 경우 설정, `LM_STRETCH` 무시 `nLength` 에 따라 크기를 반환 하 고는 `LM_HORZ` 상태입니다. `LM_STRETCH`와 비슷하게 작동 하는 `bStretch` 에 사용 된 매개 변수 [CalcFixedLayout](#calcfixedlayout); 늘이기 방향 사이의 관계에 대 한 자세한 내용은 해당 멤버 함수를 참조 하십시오.|  
-|`LM_HORZ`|막대를 가로 또는 세로 방향인 임을 나타냅니다. 경우에 표시줄은 가로 방향 설정 되지 않은 세로 방향 이면 설정 합니다. `LM_HORZ`와 비슷하게 작동 하는 `bHorz` 에 사용 된 매개 변수 [CalcFixedLayout](#calcfixedlayout); 늘이기 방향 사이의 관계에 대 한 자세한 내용은 해당 멤버 함수를 참조 하십시오.|  
-|**LM_MRUWIDTH**|가장 최근에 동적 너비를 사용한 합니다. 무시 `nLength` 너비 가장 최근에 사용한 매개 변수 및 사용 하 고 기억된 합니다.|  
-|`LM_HORZDOCK`|가로 크기를 도킹 합니다. 무시 `nLength` 매개 변수 및 가장 너비가 동적 크기를 반환 합니다.|  
-|`LM_VERTDOCK`|세로 크기를 도킹 합니다. 무시 `nLength` 매개 변수 및 높이 가장 큰 동적 크기를 반환 합니다.|  
-|`LM_LENGTHY`|경우에 설정 `nLength` 너비 대신 높이 (Y 방향)을 나타냅니다.|  
-|`LM_COMMIT`|다시 설정 **LM_MRUWIDTH** 부동 컨트롤 막대의 현재 너비입니다.|  
+|`LM_STRETCH`|Indicates whether the control bar should be stretched to the size of the frame. Set if the bar is not a docking bar (not available for docking). Not set when the bar is docked or floating (available for docking). If set, `LM_STRETCH` ignores `nLength` and returns dimensions based on the `LM_HORZ` state. `LM_STRETCH` works similarly to the `bStretch` parameter used in [CalcFixedLayout](#calcfixedlayout); see that member function for more information about the relationship between stretching and orientation.|  
+|`LM_HORZ`|Indicates that the bar is horizontally or vertically oriented. Set if the bar is horizontally oriented, and if it is vertically oriented, it is not set. `LM_HORZ` works similarly to the `bHorz` parameter used in [CalcFixedLayout](#calcfixedlayout); see that member function for more information about the relationship between stretching and orientation.|  
+|**LM_MRUWIDTH**|Most Recently Used Dynamic Width. Ignores `nLength` parameter and uses the remembered most recently used width.|  
+|`LM_HORZDOCK`|Horizontal Docked Dimensions. Ignores `nLength` parameter and returns the dynamic size with the largest width.|  
+|`LM_VERTDOCK`|Vertical Docked Dimensions. Ignores `nLength` parameter and returns the dynamic size with the largest height.|  
+|`LM_LENGTHY`|Set if `nLength` indicates height (Y-direction) instead of width.|  
+|`LM_COMMIT`|Resets **LM_MRUWIDTH** to current width of floating control bar.|  
   
-### <a name="return-value"></a>반환 값  
- 컨트롤 막대 (픽셀)의 크기는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The control bar size, in pixels, of a [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>설명  
- 파생 클래스에서 직접 동적 레이아웃을 제공 하려면이 멤버 함수 재정의 `CControlBar`합니다. MFC 클래스에서 파생 된 `CControlBar`와 같은 [CToolbar](../../mfc/reference/ctoolbar-class.md)이 멤버 함수를 재정의 하 고 고유한 구현을 제공 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this member function to provide your own dynamic layout in classes you derive from `CControlBar`. MFC classes derived from `CControlBar`, such as [CToolbar](../../mfc/reference/ctoolbar-class.md), override this member function and provide their own implementation.  
   
-##  <a name="calcfixedlayout"></a>CControlBar::CalcFixedLayout  
- 컨트롤 막대의 가로 크기를 계산 하려면이 함수를 호출 합니다.  
+##  <a name="calcfixedlayout"></a>  CControlBar::CalcFixedLayout  
+ Call this member function to calculate the horizontal size of a control bar.  
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -177,30 +189,30 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bStretch`  
- 프레임의 크기에 막대를 늘이는 있는지 여부를 나타냅니다. `bStretch` 매개 변수는 0이 아닌 막대 (도킹의 사용할 수 없음)는 도킹 모음 아니며는 0 도킹 또는 부동 하는 경우 (도킹 가능) 하는 경우.  
+ Indicates whether the bar should be stretched to the size of the frame. The `bStretch` parameter is nonzero when the bar is not a docking bar (not available for docking) and is 0 when it is docked or floating (available for docking).  
   
  `bHorz`  
- 막대를 가로 또는 세로 방향인 임을 나타냅니다. `bHorz` 매개 변수는 0이 아닌 막대 가로 방향의 고 세로 방향은 0입니다.  
+ Indicates that the bar is horizontally or vertically oriented. The `bHorz` parameter is nonzero if the bar is horizontally oriented and is 0 if it is vertically oriented.  
   
-### <a name="return-value"></a>반환 값  
- 컨트롤 막대 (픽셀)의 크기는 `CSize` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The control bar size, in pixels, of a `CSize` object.  
   
-### <a name="remarks"></a>주의  
- 예: 도구 모음 컨트롤 막대 가로로 늘릴 수 있는 또는 세로로 단추에 맞게 컨트롤 막대에 포함 합니다.  
+### <a name="remarks"></a>Remarks  
+ Control bars such as toolbars can stretch horizontally or vertically to accommodate the buttons contained in the control bar.  
   
- 경우 `bStretch` 은 **TRUE**, 차원에서 제공 하는 방향 따라 스트레치 `bHorz`합니다. 즉, 경우 `bHorz` 은 **FALSE**, 컨트롤 막대를 세로 방향으로 늘립니다. 경우 `bStretch` 은 **FALSE**, 늘이기 발생 합니다. 다음 표에서 가능한 조합 및 결과 컨트롤 막대 스타일의 `bStretch` 및 `bHorz`합니다.  
+ If `bStretch` is **TRUE**, stretch the dimension along the orientation provided by `bHorz`. In other words, if `bHorz` is **FALSE**, the control bar is stretched vertically. If `bStretch` is **FALSE**, no stretch occurs. The following table shows the possible permutations, and resulting control-bar styles, of `bStretch` and `bHorz`.  
   
-|bStretch|bHorz|늘이기|방향|고정/Not 도킹|  
+|bStretch|bHorz|Stretching|Orientation|Docking/Not docking|  
 |--------------|-----------|----------------|-----------------|--------------------------|  
-|**TRUE**|**TRUE**|가로 확장|가로로 조정|도킹 하지|  
-|**TRUE**|**FALSE**|수직 확장|세로 방향|도킹 하지|  
-|**FALSE**|**TRUE**|사용 가능한 확장 하지 않는|가로로 조정|도킹|  
-|**FALSE**|**FALSE**|사용 가능한 확장 하지 않는|세로 방향|도킹|  
+|**TRUE**|**TRUE**|Horizontal stretching|Horizontally oriented|Not docking|  
+|**TRUE**|**FALSE**|Vertical stretching|Vertically oriented|Not docking|  
+|**FALSE**|**TRUE**|No stretching available|Horizontally oriented|Docking|  
+|**FALSE**|**FALSE**|No stretching available|Vertically oriented|Docking|  
   
-##  <a name="calcinsiderect"></a>CControlBar::CalcInsideRect  
- 프레임 워크 컨트롤 막대의 클라이언트 영역을 계산 하려면이 함수를 호출 합니다.  
+##  <a name="calcinsiderect"></a>  CControlBar::CalcInsideRect  
+ The framework calls this function to calculate the client area of the control bar.  
   
 ```  
 virtual void CalcInsideRect(
@@ -208,43 +220,43 @@ virtual void CalcInsideRect(
     BOOL bHorz) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rect`  
- 컨트롤 막대;의 현재 크기를 포함합니다. 테두리를 포함 합니다.  
+ Contains the current dimensions of the control bar; including the borders.  
   
  `bHorz`  
- 막대를 가로 또는 세로 방향인 임을 나타냅니다. `bHorz` 매개 변수는 0이 아닌 막대 가로 방향의 고 세로 방향은 0입니다.  
+ Indicates that the bar is horizontally or vertically oriented. The `bHorz` parameter is nonzero if the bar is horizontally oriented and is 0 if it is vertically oriented.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 컨트롤 막대 그려집니다 전에 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is called before the control bar is painted.  
   
- 테두리 및 컨트롤 막대의 그리퍼 막대의 렌더링을 사용자 지정 하려면이 함수를 재정의 합니다.  
+ Override this function to customize the rendering of the borders and gripper bar of the control bar.  
   
-##  <a name="ccontrolbar"></a>CControlBar::CControlBar  
- `CControlBar` 개체를 생성합니다.  
+##  <a name="ccontrolbar"></a>  CControlBar::CControlBar  
+ Constructs a `CControlBar` object.  
   
 ```  
 CControlBar();
 ```  
   
-##  <a name="dopaint"></a>CControlBar::DoPaint  
- 테두리 및 컨트롤 막대의 그리퍼 막대를 렌더링 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="dopaint"></a>  CControlBar::DoPaint  
+ Called by the framework to render the borders and gripper bar of the control bar.  
   
 ```  
 virtual void DoPaint(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 테두리 및 컨트롤 막대의 위치 조정 막대 렌더링에 사용할 장치 컨텍스트를 가리킵니다.  
+ Points to the device context to be used for rendering the borders and gripper of the control bar.  
   
-### <a name="remarks"></a>주의  
- 컨트롤 막대의 그리기 동작을 사용자 지정 하려면이 함수를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the drawing behavior of the control bar.  
   
- 다른 사용자 지정 메서드를 재정의 하는 `DrawBorders` 및 `DrawGripper` 함수를 테두리 및 위치 조정 막대에 대 한 사용자 지정 그리기 코드를 추가 합니다. 이러한 메서드는 기본적으로 호출 되기 때문에 `DoPaint` 메서드를 재정의 하는 `DoPaint` 은 필요 하지 않습니다.  
+ Another customization method is to override the `DrawBorders` and `DrawGripper` functions and add custom drawing code for the borders and gripper. Because these methods are called by the default `DoPaint` method, an override of `DoPaint` is not needed.  
   
-##  <a name="drawborders"></a>CControlBar::DrawBorders  
- 컨트롤 막대의 테두리를 렌더링 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="drawborders"></a>  CControlBar::DrawBorders  
+ Called by the framework to render the borders of the control bar.  
   
 ```  
 virtual void DrawBorders(
@@ -252,18 +264,18 @@ virtual void DrawBorders(
     CRect& rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 컨트롤 막대의 테두리를 렌더링에 사용할 장치 컨텍스트를 가리킵니다.  
+ Points to the device context to be used for rendering the borders of the control bar.  
   
  `rect`  
- A `CRect` 컨트롤 막대의 크기를 포함 하는 개체입니다.  
+ A `CRect` object containing the dimensions of the control bar.  
   
-### <a name="remarks"></a>설명  
- 컨트롤 막대 테두리의 모양을 사용자 지정 하려면이 함수를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the appearance of the control bar borders.  
   
-##  <a name="drawgripper"></a>CControlBar::DrawGripper  
- 컨트롤 막대의 위치 조정 막대를 렌더링 하기 위해 프레임 워크에서 호출 됩니다.  
+##  <a name="drawgripper"></a>  CControlBar::DrawGripper  
+ Called by the framework to render the gripper of the control bar.  
   
 ```  
 virtual void DrawGripper(
@@ -271,131 +283,131 @@ virtual void DrawGripper(
     const CRect& rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 컨트롤 막대 위치 조정 막대 렌더링에 사용할 장치 컨텍스트를 가리킵니다.  
+ Points to the device context to be used for rendering the control bar gripper.  
   
  `rect`  
- A `CRect` 컨트롤 막대 위치 조정 막대의 크기를 포함 하는 개체입니다.  
+ A `CRect` object containing the dimensions of the control bar gripper.  
   
-### <a name="remarks"></a>주의  
- 컨트롤 막대 위치 조정 막대의 모양을 사용자 지정 하려면이 함수를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the appearance of the control bar gripper.  
   
-##  <a name="enabledocking"></a>CControlBar::EnableDocking  
- 도킹 컨트롤 막대를 사용 하도록 설정 하려면이 함수를 호출 합니다.  
+##  <a name="enabledocking"></a>  CControlBar::EnableDocking  
+ Call this function to enable a control bar to be docked.  
   
 ```  
 void EnableDocking(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwDockStyle`  
- 지원 되는 경우 컨트롤 막대 도킹을 지원 하는지 여부와 해당 부모 창에 컨트롤 모음을 도킹할 수 있는의 양쪽 측면을 지정 합니다. 다음 중 하나 이상을 하나일 수 있습니다.  
+ Specifies whether the control bar supports docking and the sides of its parent window to which the control bar can be docked, if supported. Can be one or more of the following:  
   
-- `CBRS_ALIGN_TOP`클라이언트 영역의 위쪽에 도킹 수 있습니다.  
+- `CBRS_ALIGN_TOP` Allows docking at the top of the client area.  
   
-- `CBRS_ALIGN_BOTTOM`클라이언트 영역의 맨 아래에 도킹 수 있습니다.  
+- `CBRS_ALIGN_BOTTOM` Allows docking at the bottom of the client area.  
   
-- `CBRS_ALIGN_LEFT`클라이언트 영역의 왼쪽에 도킹할 수 있습니다.  
+- `CBRS_ALIGN_LEFT` Allows docking on the left side of the client area.  
   
-- `CBRS_ALIGN_RIGHT`클라이언트 영역의 오른쪽에 도킹 수 있습니다.  
+- `CBRS_ALIGN_RIGHT` Allows docking on the right side of the client area.  
   
-- `CBRS_ALIGN_ANY`클라이언트 영역의 한쪽에 도킹 수 있습니다.  
+- `CBRS_ALIGN_ANY` Allows docking on any side of the client area.  
   
-- `CBRS_FLOAT_MULTI`여러 컨트롤 막대를를 단일 미니 프레임 창에서 이동할 수 있습니다.  
+- `CBRS_FLOAT_MULTI` Allows multiple control bars to be floated in a single mini-frame window.  
   
- 0 인 경우 (즉, 나타내는 플래그가 없는) 컨트롤 막대 도킹 되지 것입니다.  
+ If 0 (that is, indicating no flags), the control bar will not dock.  
   
-### <a name="remarks"></a>설명  
- 지정 된 면 대상 프레임 창에서 도킹 가능한 면 중 하 나와 일치 해야 합니다 또는 컨트롤 막대 해당 프레임 창으로 도킹 될 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The sides specified must match one of the sides enabled for docking in the destination frame window, or the control bar cannot be docked to that frame window.  
   
-##  <a name="getbarstyle"></a>CControlBar::GetBarStyle  
- 이 함수를 결정 하기 위해 호출 **CBRS_** (컨트롤 막대 스타일) 설정을 컨트롤 막대에 대 한 현재 설정 되어 있습니다.  
+##  <a name="getbarstyle"></a>  CControlBar::GetBarStyle  
+ Call this function to determine which **CBRS_** (control bar styles) settings are currently set for the control bar.  
   
 ```  
 DWORD GetBarStyle();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 **CBRS_** 컨트롤 막대에 대 한 (컨트롤 막대 스타일) 설정 합니다. 참조 [CControlBar::SetBarStyle](#setbarstyle) 전체 목록을 사용할 수 있는 스타일에 대 한 합니다.  
+### <a name="return-value"></a>Return Value  
+ The current **CBRS_** (control bar styles) settings for the control bar. See [CControlBar::SetBarStyle](#setbarstyle) for the complete list of available styles.  
   
-### <a name="remarks"></a>주의  
- 처리 하지 않는 **WS_** (창 스타일) 스타일입니다.  
+### <a name="remarks"></a>Remarks  
+ Does not handle **WS_** (window style) styles.  
   
-##  <a name="getborders"></a>CControlBar::GetBorders  
- 컨트롤 막대에 대 한 현재 경계 값을 반환합니다.  
+##  <a name="getborders"></a>  CControlBar::GetBorders  
+ Returns the current border values for the control bar.  
   
 ```  
 CRect GetBorders() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CRect` 컨트롤 막대 개체의 각 면의 현재 너비 (픽셀 단위)에 포함 된 개체입니다. 예를 들어 값은 `left` 멤버의 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체, 왼쪽 테두리의 너비입니다.  
+### <a name="return-value"></a>Return Value  
+ A `CRect` object that contains the current width (in pixels) of each side of the control bar object. For example, the value of the `left` member, of [CRect](../../atl-mfc-shared/reference/crect-class.md) object, is the width of the left hand border.  
   
-##  <a name="getcount"></a>CControlBar::GetCount  
- 비-의 수를 반환 `HWND` 에 있는 항목은 `CControlBar` 개체입니다.  
+##  <a name="getcount"></a>  CControlBar::GetCount  
+ Returns the number of non- `HWND` items on the `CControlBar` object.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 수가 이외의 `HWND` 에 있는 항목은 `CControlBar` 개체입니다. 이 함수에 대 한 0을 반환 합니다.는 [CDialogBar](../../mfc/reference/cdialogbar-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of non- `HWND` items on the `CControlBar` object. This function returns 0 for a [CDialogBar](../../mfc/reference/cdialogbar-class.md) object.  
   
-### <a name="remarks"></a>주의  
- 파생된 된 개체에 따라 달라 집니다 항목의 형식: 창에 대해 [CStatusBar](../../mfc/reference/cstatusbar-class.md) 개체 및 단추 및 구분 기호에 대 한 [CToolBar](../../mfc/reference/ctoolbar-class.md) 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The type of the item depends on the derived object: panes for [CStatusBar](../../mfc/reference/cstatusbar-class.md) objects, and buttons and separators for [CToolBar](../../mfc/reference/ctoolbar-class.md) objects.  
   
-##  <a name="getdockingframe"></a>CControlBar::GetDockingFrame  
- 컨트롤 막대 도킹 되는 현재 프레임 창에 대 한 포인터를 가져오려면이 함수를 호출 합니다.  
+##  <a name="getdockingframe"></a>  CControlBar::GetDockingFrame  
+ Call this member function to obtain a pointer to the current frame window to which your control bar is docked.  
   
 ```  
 CFrameWnd* GetDockingFrame() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 프레임 창에 대 한 포인터 그렇지 않으면 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a frame window if successful; otherwise **NULL**.  
   
- 경우 (즉, 하는 경우 컨트롤 막대 부동 창인) 컨트롤 막대가 프레임 창으로 도킹 되지 않은,이 함수는 해당 부모에 대 한 포인터를 반환 하는 [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)합니다.  
+ If the control bar is not docked to a frame window (that is, if the control bar is floating), this function will return a pointer to its parent [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md).  
   
-### <a name="remarks"></a>설명  
- 도킹 가능한 컨트롤 막대에 대 한 자세한 내용은 참조 [CControlBar::EnableDocking](#enabledocking) 및 [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information about dockable control bars, see [CControlBar::EnableDocking](#enabledocking) and [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
   
-##  <a name="isfloating"></a>CControlBar::IsFloating  
- 부동 또는 도킹 컨트롤 막대 되는지 확인 하려면이 함수를 호출 합니다.  
+##  <a name="isfloating"></a>  CControlBar::IsFloating  
+ Call this member function to determine whether the control bar is floating or docked.  
   
 ```  
 BOOL IsFloating() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 컨트롤 막대; 부동 창인 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control bar is floating; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 호출, 부동에 도킹 컨트롤 막대에서의 상태를 변경 하려면 [CFrameWnd::FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar)합니다.  
+### <a name="remarks"></a>Remarks  
+ To change the state of a control bar from docked to floating, call [CFrameWnd::FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar).  
   
-##  <a name="m_bautodelete"></a>CControlBar::m_bAutoDelete  
- 0이 아니면는 `CControlBar` Windows 컨트롤 막대 소멸 될 때 개체를 삭제 합니다.  
+##  <a name="m_bautodelete"></a>  CControlBar::m_bAutoDelete  
+ If nonzero, the `CControlBar` object is deleted when the Windows control bar is destroyed.  
   
 ```  
 BOOL m_bAutoDelete;  
 ```  
   
-### <a name="remarks"></a>주의  
- `m_bAutoDelete`형식의 공용 변수 **BOOL**합니다.  
+### <a name="remarks"></a>Remarks  
+ `m_bAutoDelete` is a public variable of type **BOOL**.  
   
- 컨트롤 막대 개체는 일반적으로 프레임 창 개체에 포함 됩니다. 이 경우 `m_bAutoDelete` 포함 된 컨트롤 막대 개체는 프레임 창 소멸 될 때 소멸 되기 때문에 0입니다.  
+ A control-bar object is usually embedded in a frame-window object. In this case, `m_bAutoDelete` is 0 because the embedded control-bar object is destroyed when the frame window is destroyed.  
   
- 할당 하는 경우이 변수를 0이 아닌 값으로 설정 된 `CControlBar` 힙에에 개체를 호출 하지 않으려는 **삭제**합니다.  
+ Set this variable to a nonzero value if you allocate a `CControlBar` object on the heap and you do not plan to call **delete**.  
   
-##  <a name="m_pinplaceowner"></a>CControlBar::m_pInPlaceOwner  
- 컨트롤 막대의 내부 소유자입니다.  
+##  <a name="m_pinplaceowner"></a>  CControlBar::m_pInPlaceOwner  
+ The in-place owner of the control bar.  
   
 ```  
 CWnd* m_pInPlaceOwner;  
 ```  
   
-##  <a name="onupdatecmdui"></a>CControlBar::OnUpdateCmdUI  
- 이 멤버 함수는 도구 모음 또는 상태 표시줄의 상태를 업데이트 하기 위해 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onupdatecmdui"></a>  CControlBar::OnUpdateCmdUI  
+ This member function is called by the framework to update the status of the toolbar or status bar.  
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -403,60 +415,60 @@ virtual void OnUpdateCmdUI(
     BOOL bDisableIfNoHndler) = 0;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pTarget`  
- 응용 프로그램의 주 프레임 창을 가리킵니다. 이 포인터 업데이트 메시지 라우팅에 사용 됩니다.  
+ Points to the main frame window of the application. This pointer is used for routing update messages.  
   
  `bDisableIfNoHndler`  
- 업데이트 처리기가 있는 컨트롤 사용 안 함으로 자동으로 표시할지 여부를 나타내는 플래그입니다.  
+ Flag that indicates whether a control that has no update handler should be automatically displayed as disabled.  
   
-### <a name="remarks"></a>주의  
- 개별 단추 또는 창을 업데이트 하려면 사용의 `ON_UPDATE_COMMAND_UI` 메시지 맵에 업데이트 처리기를 적절 하 게 설정 하는 매크로입니다. 참조 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) 이 매크로 사용 하는 방법에 대 한 자세한 내용은 합니다.  
+### <a name="remarks"></a>Remarks  
+ To update an individual button or pane, use the `ON_UPDATE_COMMAND_UI` macro in your message map to set an update handler appropriately. See [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) for more information about using this macro.  
   
- `OnUpdateCmdUI`응용 프로그램이 유휴 상태일 때 프레임 워크에서 호출 됩니다. 업데이트할 프레임 창 해제 되어야 합니다 자식 창에 직접 이상 보이는 프레임 창의. `OnUpdateCmdUI`고급 재정의할 수 있습니다.  
+ `OnUpdateCmdUI` is called by the framework when the application is idle. The frame window to be updated must be a child window, at least indirectly, of a visible frame window. `OnUpdateCmdUI` is an advanced overridable.  
   
-##  <a name="setbarstyle"></a>CControlBar::SetBarStyle  
- 원하는 설정 하려면이 함수 호출 **CBRS_** 컨트롤 막대에 대 한 스타일입니다.  
+##  <a name="setbarstyle"></a>  CControlBar::SetBarStyle  
+ Call this function to set the desired **CBRS_** styles for the control bar.  
   
 ```  
 void SetBarStyle(DWORD dwStyle);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 컨트롤 막대에 대 한 원하는 스타일입니다. 다음 중 하나 이상을 하나일 수 있습니다.  
+ The desired styles for the control bar. Can be one or more of the following:  
   
-- `CBRS_ALIGN_TOP`프레임 창의 클라이언트 영역의 위쪽에 도킹 컨트롤 막대를 허용 합니다.  
+- `CBRS_ALIGN_TOP` Allows the control bar to be docked to the top of the client area of a frame window.  
   
-- `CBRS_ALIGN_BOTTOM`프레임 창의 클라이언트 영역 아래쪽에 도킹 컨트롤 막대를 허용 합니다.  
+- `CBRS_ALIGN_BOTTOM` Allows the control bar to be docked to the bottom of the client area of a frame window.  
   
-- `CBRS_ALIGN_LEFT`컨트롤 막대 프레임 창의 클라이언트 영역의 왼쪽에 도킹할 수를 허용 합니다.  
+- `CBRS_ALIGN_LEFT` Allows the control bar to be docked to the left side of the client area of a frame window.  
   
-- `CBRS_ALIGN_RIGHT`프레임 창의 클라이언트 영역 오른쪽에 도킹 컨트롤 막대를 허용 합니다.  
+- `CBRS_ALIGN_RIGHT` Allows the control bar to be docked to the right side of the client area of a frame window.  
   
-- `CBRS_ALIGN_ANY`모든 면 프레임 창의 클라이언트 영역에 도킹 컨트롤 막대를 허용 합니다.  
+- `CBRS_ALIGN_ANY` Allows the control bar to be docked to any side of the client area of a frame window.  
   
-- `CBRS_BORDER_TOP`하면는 테두리가 표시 됩니다 때 컨트롤 막대의 위쪽 가장자리에 그릴 수 있습니다.  
+- `CBRS_BORDER_TOP` Causes a border to be drawn on the top edge of the control bar when it would be visible.  
   
-- `CBRS_BORDER_BOTTOM`표시 되 고 때 컨트롤 막대의 아래쪽 가장자리에 그려질 테두리를 하면 됩니다.  
+- `CBRS_BORDER_BOTTOM` Causes a border to be drawn on the bottom edge of the control bar when it would be visible.  
   
-- `CBRS_BORDER_LEFT`표시 되 고 때 컨트롤 막대의 왼쪽된 가장자리에 그려질 테두리를 하면 됩니다.  
+- `CBRS_BORDER_LEFT` Causes a border to be drawn on the left edge of the control bar when it would be visible.  
   
-- `CBRS_BORDER_RIGHT`표시 되 고 때 컨트롤 막대의 오른쪽 가장자리에 그려질 테두리를 하면 됩니다.  
+- `CBRS_BORDER_RIGHT` Causes a border to be drawn on the right edge of the control bar when it would be visible.  
   
-- `CBRS_FLOAT_MULTI`여러 컨트롤 막대를를 단일 미니 프레임 창에서 이동할 수 있습니다.  
+- `CBRS_FLOAT_MULTI` Allows multiple control bars to be floated in a single mini-frame window.  
   
-- `CBRS_TOOLTIPS`컨트롤 막대에 대해 표시할 도구 설명 하면 됩니다.  
+- `CBRS_TOOLTIPS` Causes tool tips to be displayed for the control bar.  
   
-- `CBRS_FLYBY`도구 설명으로 동시에 업데이트할 메시지 텍스트를입니다.  
+- `CBRS_FLYBY` Causes message text to be updated at the same time as tool tips.  
   
-- **CBRS_GRIPPER** 의 밴드에 사용한 것과 비슷한 그리퍼 하면는 **CReBar** 개체에 대해 그릴 `CControlBar`-클래스를 파생 합니다.  
+- **CBRS_GRIPPER** Causes a gripper, similar to that used on bands in a **CReBar** object, to be drawn for any `CControlBar`-derived class.  
   
-### <a name="remarks"></a>주의  
- 영향을 주지 않습니다는 **WS_** (창 스타일) 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Does not affect the **WS_** (window style) settings.  
   
-##  <a name="setborders"></a>CControlBar::SetBorders  
- 컨트롤 막대의 테두리 크기를 설정 하려면이 함수를 호출 합니다.  
+##  <a name="setborders"></a>  CControlBar::SetBorders  
+ Call this function to set the size of the control bar's borders.  
   
 ```  
 void SetBorders(
@@ -468,46 +480,46 @@ void SetBorders(
 void SetBorders(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *cxLeft*  
- 픽셀 단위로 컨트롤 막대의 왼쪽된 테두리의 너비입니다.  
+ The width (in pixels) of the control bar's left border.  
   
  *cyTop*  
- 픽셀 단위로 컨트롤 막대의 위쪽 테두리의 높이입니다.  
+ The height (in pixels) of the control bar's top border.  
   
  *cxRight*  
- 픽셀 단위로 컨트롤 막대 오른쪽 테두리의 너비입니다.  
+ The width (in pixels) of the control bar's right border.  
   
  *cyBottom*  
- 픽셀 단위로 컨트롤 막대의 아래쪽 테두리의 높이입니다.  
+ The height (in pixels) of the control bar's bottom border.  
   
  `lpRect`  
- 에 대 한 포인터는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 컨트롤 막대 개체의 각 테두리의 현재 너비 (픽셀 단위)에 포함 된 개체입니다.  
+ A pointer to a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that contains the current width (in pixels)of each border of the control bar object.  
   
-### <a name="example"></a>예제  
- 다음 코드 예제에서는 5 픽셀 컨트롤 막대의 위쪽 및 아래쪽 테두리와 왼쪽 및 오른쪽 테두리를 2 픽셀로 설정합니다.  
+### <a name="example"></a>Example  
+ The following code example sets the top and bottom borders of the control bar to 5 pixels, and the left and right borders to 2 pixels:  
   
- [!code-cpp[NVC_MFCControlLadenDialog # 61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]  
   
-##  <a name="setinplaceowner"></a>CControlBar::SetInPlaceOwner  
- 컨트롤 막대의 내부 소유자를 변경합니다.  
+##  <a name="setinplaceowner"></a>  CControlBar::SetInPlaceOwner  
+ Changes the in-place owner of a control bar.  
   
 ```  
 void SetInPlaceOwner(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 에 대 한 포인터는 `CWnd` 개체입니다.  
+ A pointer to a `CWnd` object.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 CTRLBARS](../../visual-cpp-samples.md)   
- [CWnd 클래스](../../mfc/reference/cwnd-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CToolBar 클래스](../../mfc/reference/ctoolbar-class.md)   
- [CDialogBar 클래스](../../mfc/reference/cdialogbar-class.md)   
- [CStatusBar 클래스](../../mfc/reference/cstatusbar-class.md)   
- [CReBar 클래스](../../mfc/reference/crebar-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CToolBar Class](../../mfc/reference/ctoolbar-class.md)   
+ [CDialogBar Class](../../mfc/reference/cdialogbar-class.md)   
+ [CStatusBar Class](../../mfc/reference/cstatusbar-class.md)   
+ [CReBar Class](../../mfc/reference/crebar-class.md)
 

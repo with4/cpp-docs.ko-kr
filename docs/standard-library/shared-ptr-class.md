@@ -1,15 +1,14 @@
 ---
-title: "shared_ptr 클래스 | Microsoft Docs"
+title: shared_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- shared_ptr
 - memory/std::shared_ptr
 - memory/std::shared_ptr::element_type
 - memory/std::shared_ptr::get
@@ -32,7 +31,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- shared_ptr class
+- std::shared_ptr [C++]
+- std::shared_ptr [C++], element_type
+- std::shared_ptr [C++], get
+- std::shared_ptr [C++], owner_before
+- std::shared_ptr [C++], reset
+- std::shared_ptr [C++], swap
+- std::shared_ptr [C++], unique
+- std::shared_ptr [C++], use_count
+- std::shared_ptr [C++], element_type
+- std::shared_ptr [C++], get
+- std::shared_ptr [C++], owner_before
+- std::shared_ptr [C++], reset
+- std::shared_ptr [C++], swap
+- std::shared_ptr [C++], unique
+- std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 caps.latest.revision: 28
 author: corob-msft
@@ -52,30 +65,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a6fd55efcd0501cd794cdffa506b5cbb6b04ff5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="sharedptr-class"></a>shared_ptr 클래스
-동적으로 할당된 개체 주위에 참조 횟수가 계산되는 스마트 포인터를 래핑합니다.  
+# <a name="sharedptr-class"></a>shared_ptr Class
+Wraps a reference-counted smart pointer around a dynamically allocated object.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```
 template <class T>
 class shared_ptr; 
 ```  
   
-## <a name="remarks"></a>설명  
- shared_ptr 클래스는 참조 개수 계산을 사용하여 리소스를 관리하는 개체를 설명합니다. `shared_ptr` 개체는 null 포인터를 소유하거나 보유한 리소스에 대한 포인터를 보유합니다. 둘 이상의 `shared_ptr` 개체가 리소스를 소유할 수 있습니다. 특정 리소스를 소유하는 마지막 `shared_ptr` 개체가 삭제되면 리소스가 해제됩니다.  
+## <a name="remarks"></a>Remarks  
+ The shared_ptr class describes an object that uses reference counting to manage resources. A `shared_ptr` object effectively holds a pointer to the resource that it owns or holds a null pointer. A resource can be owned by more than one `shared_ptr` object; when the last `shared_ptr` object that owns a particular resource is destroyed, the resource is freed.  
   
- 다시 할당되거나 다시 설정되면 `shared_ptr`에서 리소스 소유가 중지됩니다.  
+ A `shared_ptr` stops owning a resource when it is reassigned or reset.  
   
- 특정 멤버 함수에 대해 언급된 경우를 제외하고 템플릿 인수 `T`는 불완전한 형식일 수 있습니다.  
+ The template argument `T` might be an incomplete type except as noted for certain member functions.  
   
- `G*` 형식의 리소스 포인터 또는 `shared_ptr<G>`에서 `shared_ptr<T>` 개체가 생성된 경우 포인터 형식 `G*`를 `T*`로 변환할 수 있어야 합니다. 그렇지 않으면 코드가 컴파일되지 않습니다. 예:  
+ When a `shared_ptr<T>` object is constructed from a resource pointer of type `G*` or from a `shared_ptr<G>`, the pointer type `G*` must be convertible to `T*`. If it is not, the code will not compile. For example:  
   
 ```cpp  
 #include <memory>  
@@ -93,101 +106,101 @@ shared_ptr<int> sp5(new G); // error, G* not convertible to int*
 shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared_ptr<F>  
 ```  
   
- `shared_ptr` 개체가 리소스를 소유합니다.  
+ A `shared_ptr` object owns a resource:  
   
--   해당 리소스에 대한 포인터를 사용하여 생성된 경우  
+-   if it was constructed with a pointer to that resource,  
   
--   해당 리소스를 소유하는 `shared_ptr` 개체에서 생성된 경우  
+-   if it was constructed from a `shared_ptr` object that owns that resource,  
   
--   해당 리소스를 가리키는 [weak_ptr 클래스](../standard-library/weak-ptr-class.md) 개체에서 생성된 경우 또는  
+-   if it was constructed from a [weak_ptr Class](../standard-library/weak-ptr-class.md) object that points to that resource, or  
   
--   해당 리소스의 소유권이 [shared_ptr::operator=](#op_eq)를 사용하여 또는 구성원 함수 [shared_ptr::reset](#reset)을 호출하여 할당된 경우  
+-   if ownership of that resource was assigned to it, either with [shared_ptr::operator=](#op_eq) or by calling the member function [shared_ptr::reset](#reset).  
   
- 리소스를 소유하는 `shared_ptr` 개체는 제어 블록을 공유합니다. 제어 블록은 다음을 보유합니다.  
+ The `shared_ptr` objects that own a resource share a control block. The control block holds:  
   
--   리소스를 소유하는 `shared_ptr` 개체 수  
+-   the number of `shared_ptr` objects that own the resource,  
   
--   리소스를 가리키는 `weak_ptr` 개체 수  
+-   the number of `weak_ptr` objects that point to the resource,  
   
--   해당 리소스에 대한 삭제자(있는 경우)  
+-   the deleter for that resource if it has one,  
   
--   제어 블록에 대한 사용자 지정 할당자(있는 경우)  
+-   the custom allocator for the control block if it has one.  
   
- null 포인터를 사용하여 초기화된 `shared_ptr` 개체에는 제어 블록이 있고 비어 있지 않습니다. `shared_ptr` 개체가 리소스를 해제한 후에는 더 이상 해당 리소스를 소유하지 않습니다. `weak_ptr` 개체가 리소스를 해제한 후에는 더 이상 해당 리소스를 가리키지 않습니다.  
+ A `shared_ptr` object that is initialized by using a null pointer has a control block and is not empty. After a `shared_ptr` object releases a resource, it no longer owns that resource. After a `weak_ptr` object releases a resource, it no longer points to that resource.  
   
- 리소스를 소유하는 `shared_ptr` 개체 수가 0이 되면 리소스의 소유권이 원래 생성된 방식에 따라 개체를 삭제하거나 개체 주소를 삭제자에 전달하여 리소스가 해제됩니다. 리소스를 소유하는 `shared_ptr` 개체 수가 0이고 해당 리소스를 가리키는 `weak_ptr` 개체 수가 0이면 제어 블록에 대한 사용자 지정 할당자를 사용하여(있는 경우) 제어 블록이 해제됩니다.  
+ When the number of `shared_ptr` objects that own a resource becomes zero, the resource is freed, either by deleting it or by passing its address to a deleter, depending on how ownership of the resource was originally created. When the number of `shared_ptr` objects that own a resource is zero, and the number of `weak_ptr` objects that point to that resource is zero, the control block is freed, using the custom allocator for the control block if it has one.  
   
- 빈 `shared_ptr` 개체는 리소스를 소유하지 않으며 제어 블록이 없습니다.  
+ An empty `shared_ptr` object does not own any resources and has no control block.  
   
- 삭제자는 멤버 함수 `operator()`가 있는 함수 개체입니다. 복사를 통해 해당 형식을 생성할 수 있어야 하며, 복사 생성자와 소멸자에서 예외가 발생하지 않아야 합니다. 삭제할 개체를 나타내는 매개 변수 하나를 사용합니다.  
+ A deleter is a function object that has a member function `operator()`. Its type must be copy constructible, and its copy constructor and destructor must not throw exceptions. It accepts one parameter, the object to be deleted.  
   
- 일부 함수는 결과 `shared_ptr<T>` 또는 `weak_ptr<T>` 개체의 속성을 정의하는 인수 목록을 사용합니다. 여러 가지 방법으로 이러한 인수 목록을 지정할 수 있습니다.  
+ Some functions take an argument list that defines properties of the resulting `shared_ptr<T>` or `weak_ptr<T>` object. You can specify such an argument list in several ways:  
   
- 인수 없이 - 결과 개체는 빈 `shared_ptr` 개체 또는 빈 `weak_ptr` 개체입니다.  
+ no arguments -- the resulting object is an empty `shared_ptr` object or an empty `weak_ptr` object.  
   
- `ptr` - 관리할 리소스에 대한 `Other*` 형식의 포인터입니다. `T`는 완전한 형식이어야 합니다. 제어 블록을 할당할 수 없어 함수가 실패하면 `delete ptr` 식을 계산합니다.  
+ `ptr` -- a pointer of type `Other*` to the resource to be managed. `T` must be a complete type. If the function fails (because the control block cannot be allocated) it evaluates the expression `delete ptr`.  
   
- `ptr, dtor` - 관리할 리소스에 대한 `Other*` 형식의 포인터 및 해당 리소스에 대한 삭제자입니다. 제어 블록을 할당할 수 없어 함수가 실패하면 `dtor(ptr)`을 호출하므로 잘 정의해야 합니다.  
+ `ptr, dtor` -- a pointer of type `Other*` to the resource to be managed and a deleter for that resource. If the function fails (because the control block cannot be allocated), it calls `dtor(ptr)`, which must be well defined.  
   
- `ptr, dtor, alloc` - 관리할 리소스에 대한 `Other*` 형식의 포인터, 해당 리소스에 대한 삭제자 및 할당하고 해제해야 하는 저장소를 관리할 할당자입니다. 제어 블록을 할당할 수 없어 함수가 실패하면 `dtor(ptr)`을 호출하므로 잘 정의해야 합니다.  
+ `ptr, dtor, alloc` -- a pointer of type `Other*` to the resource to be managed, a deleter for that resource, and an allocator to manage any storage that must be allocated and freed. If the function fails (because the control block can't be allocated) it calls `dtor(ptr)`, which must be well defined.  
   
- `sp` - 관리할 리소스를 소유하는 `shared_ptr<Other>` 개체입니다.  
+ `sp` -- a `shared_ptr<Other>` object that owns the resource to be managed.  
   
- `wp` - 관리할 리소스를 가리키는 `weak_ptr<Other>` 개체입니다.  
+ `wp` -- a `weak_ptr<Other>` object that points to the resource to be managed.  
   
- `ap` - 관리할 리소스에 대한 포인터를 보유하는 `auto_ptr<Other>` 개체입니다. 함수가 성공하면 `ap.release()`를 호출하고, 그렇지 않으면 `ap`를 변경하지 않고 그대로 둡니다.  
+ `ap` -- an `auto_ptr<Other>` object that holds a pointer to the resource to be managed. If the function succeeds it calls `ap.release()`; otherwise it leaves `ap` unchanged.  
   
- 모든 경우에서 포인터 형식 `Other*`를 `T*`로 변환할 수 있어야 합니다.  
+ In all cases, the pointer type `Other*` must be convertible to `T*`.  
   
-## <a name="thread-safety"></a>스레드로부터의 안전성  
- 개체가 소유권을 공유하는 복사본이더라도 다중 스레드가 여러 `shared_ptr` 개체를 동시에 읽고 쓸 수 있습니다.  
+## <a name="thread-safety"></a>Thread Safety  
+ Multiple threads can read and write different `shared_ptr` objects at the same time, even when the objects are copies that share ownership.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>생성자  
-  
-|||  
-|-|-|  
-|[shared_ptr](#shared_ptr)|`shared_ptr`를 생성합니다.|  
-|[shared_ptr::~shared_ptr](#dtorshared_ptr)|`shared_ptr`을 삭제합니다.|  
-  
-### <a name="methods"></a>메서드  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|요소의 형식입니다.|  
-|[get](#get)|소유하는 리소스의 주소를 가져옵니다.|  
-|[owner_before](#owner_before)|`shared_ptr`이 제공된 포인터 앞에 정렬되는(또는 보다 작은) 경우 true를 반환합니다.|  
-|[reset](#reset)|소유하는 리소스를 대체합니다.|  
-|[swap](#swap)|두 `shared_ptr` 개체를 교환합니다.|  
-|[unique](#unique)|소유하는 리소스가 고유한지 테스트합니다.|  
-|[use_count](#use_count)|리소스 소유자 수를 계산합니다.|  
+|[shared_ptr](#shared_ptr)|Constructs a `shared_ptr`.|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Destroys a `shared_ptr`.|  
   
-### <a name="operators"></a>연산자  
+### <a name="methods"></a>Methods  
   
 |||  
 |-|-|  
-|[shared_ptr::operator boolean-type](#op_boolean-type)|소유하는 리소스가 있는지 테스트합니다.|  
-|[shared_ptr::operator*](#op_star)|지정된 값을 가져옵니다.|  
-|[shared_ptr::operator=](#op_eq)|소유하는 리소스를 대체합니다.|  
-|[shared_ptr::operator-&gt;](#operator-_gt)|지정된 값으로 포인터를 가져옵니다.|  
+|[element_type](#element_type)|The type of an element.|  
+|[get](#get)|Gets address of owned resource.|  
+|[owner_before](#owner_before)|Returns true if this `shared_ptr` is ordered before (or less than) the provided pointer.|  
+|[reset](#reset)|Replace owned resource.|  
+|[swap](#swap)|Swaps two `shared_ptr` objects.|  
+|[unique](#unique)|Tests if owned resource is unique.|  
+|[use_count](#use_count)|Counts numbers of resource owners.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<memory>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|Tests if an owned resource exists.|  
+|[shared_ptr::operator*](#op_star)|Gets the designated value.|  
+|[shared_ptr::operator=](#op_eq)|Replaces the owned resource.|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|Gets a pointer to the designated value.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
+  
+ **Namespace:** std  
   
 ##  <a name="element_type"></a>  shared_ptr::element_type  
- 요소의 형식입니다.  
+ The type of an element.  
   
 ```  
 typedef T element_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `T`의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `T`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_element_type.cpp   
@@ -212,16 +225,16 @@ int main()
 ```  
   
 ##  <a name="get"></a>  shared_ptr::get  
- 소유하는 리소스의 주소를 가져옵니다.  
+ Gets address of owned resource.  
   
 ```  
 T *get() const;
 ```  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 소유하는 리소스의 주소를 반환합니다. 개체가 리소스를 소유하지 않는 경우에는 0을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the address of the owned resource. If the object does not own a resource it returns 0.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_get.cpp   
@@ -249,16 +262,16 @@ sp0.get() == 0 == true
 ```  
   
 ##  <a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
- 소유하는 리소스가 있는지 테스트합니다.  
+ Tests if an owned resource exists.  
   
 ```  
 operator boolean-type() const;
 ```  
   
-### <a name="remarks"></a>설명  
- 연산자는 `bool`로 변환 가능한 형식의 값을 반환합니다. `bool`일 경우 `true`로 변환한 결과는 `get() != 0`입니다. 그렇지 않으면 `false`입니다.  
+### <a name="remarks"></a>Remarks  
+ The operator returns a value of a type that is convertible to `bool`. The result of the conversion to `bool` is `true` when `get() != 0`, otherwise `false`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_bool.cpp   
@@ -287,16 +300,16 @@ int main()
 ```  
   
 ##  <a name="op_star"></a>  shared_ptr::operator*  
- 지정된 값을 가져옵니다.  
+ Gets the designated value.  
   
 ```  
 T& operator*() const;
 ```  
   
-### <a name="remarks"></a>설명  
- 간접 연산자는 `*get()`을 반환합니다. 따라서 저장된 포인터는 null이 아니어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The indirection operator returns `*get()`. Hence, the stored pointer must not be null.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_st.cpp   
@@ -320,7 +333,7 @@ int main()
 ```  
   
 ##  <a name="op_eq"></a>  shared_ptr::operator=  
- 소유하는 리소스를 대체합니다.  
+ Replaces the owned resource.  
   
 ```  
 shared_ptr& operator=(const shared_ptr& sp);
@@ -341,17 +354,17 @@ template <class Other, class Deletor>
 shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `sp`  
- 복사할 공유 포인터입니다.  
+ The shared pointer to copy.  
   
  `ap`  
- 복사할 자동 포인터입니다.  
+ The auto pointer to copy.  
   
-### <a name="remarks"></a>설명  
- 모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자 실행이 실패하면 `*this`는 변경되지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The operators all decrement the reference count for the resource currently owned by `*this` and assign ownership of the resource named by the operand sequence to `*this`. If the reference count falls to zero, the resource is released. If an operator fails it leaves `*this` unchanged.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_as.cpp   
@@ -382,16 +395,16 @@ int main()
 ```  
   
 ##  <a name="shared_ptr__operator-_gt"></a>  shared_ptr::operator-&gt;  
- 지정된 값으로 포인터를 가져옵니다.  
+ Gets a pointer to the designated value.  
   
 ```  
 T * operator->() const;
 ```  
   
-### <a name="remarks"></a>설명  
- 선택 연산자는 `get()`을 반환합니다. 따라서 `sp->member` 식은 `(sp.get())->member`와 동일하게 동작하며, 여기서 `sp`는 클래스 `shared_ptr<T>`의 개체입니다. 따라서 저장된 포인터는 null이 아니어야 하며, `T`는 클래스, 구조체 또는 `member` 구성원이 있는 공용 구조체 형식이어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The selection operator returns `get()`, so that the expression `sp->member` behaves the same as `(sp.get())->member` where `sp` is an object of class `shared_ptr<T>`. Hence, the stored pointer must not be null, and `T` must be a class, structure, or union type with a member `member`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_ar.cpp   
@@ -418,7 +431,7 @@ sp0->second == 2
 ```  
   
 ##  <a name="owner_before"></a>  shared_ptr::owner_before  
- `shared_ptr`이 제공된 포인터 앞에 정렬되는(또는 보다 작은) 경우 true를 반환합니다.  
+ Returns true if this `shared_ptr` is ordered before (or less than) the provided pointer.  
   
 ```  
 template <class Other>  
@@ -428,15 +441,15 @@ template <class Other>
 bool owner_before(const weak_ptr<Other>& ptr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- `shared_ptr` 또는 `weak_ptr`에 대한 `lvalue` 참조입니다.  
+ An `lvalue` reference to either a `shared_ptr` or a `weak_ptr`.  
   
-### <a name="remarks"></a>설명  
- 템플릿 구성원 함수는 `*this`가 `ordered before``ptr`이면 true를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template member function returns true if `*this` is `ordered before` `ptr`.  
   
 ##  <a name="reset"></a>  shared_ptr::reset  
- 소유하는 리소스를 대체합니다.  
+ Replace owned resource.  
   
 ```  
 void reset();
@@ -451,29 +464,29 @@ template <class Other, class D, class A>
 void reset(Other *ptr, D dtor, A alloc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Other`  
- 인수 포인터에 의해 제어되는 형식입니다.  
+ The type controlled by the argument pointer.  
   
  `D`  
- 삭제자의 형식입니다.  
+ The type of the deleter.  
   
  `ptr`  
- 복사할 포인터입니다.  
+ The pointer to copy.  
   
  `dtor`  
- 복사할 deleter입니다.  
+ The deleter to copy.  
   
  `A`  
- 할당자의 형식입니다.  
+ The type of the allocator.  
   
  `alloc`  
- 복사할 할당자입니다.  
+ The allocator to copy.  
   
-### <a name="remarks"></a>설명  
- 모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자 실행이 실패하면 `*this`는 변경되지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The operators all decrement the reference count for the resource currently owned by `*this` and assign ownership of the resource named by the operand sequence to `*this`. If the reference count falls to zero, the resource is released. If an operator fails it leaves `*this` unchanged.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_reset.cpp   
@@ -521,7 +534,7 @@ int main()
 ```  
   
 ##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
- `shared_ptr`를 생성합니다.  
+ Constructs a `shared_ptr`.  
   
 ```  
 shared_ptr();
@@ -569,38 +582,38 @@ template <class Other, class D>
 shared_ptr(const unique_ptr<Other, D>& up) = delete;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Other`  
- 인수 포인터에 의해 제어되는 형식입니다.  
+ The type controlled by the argument pointer.  
   
  `ptr`  
- 복사할 포인터입니다.  
+ The pointer to copy.  
   
  `D`  
- 삭제자의 형식입니다.  
+ The type of the deleter.  
   
  `A`  
- 할당자의 형식입니다.  
+ The type of the allocator.  
   
  `dtor`  
- 삭제자입니다.  
+ The deleter.  
   
  `ator`  
- 할당자입니다.  
+ The allocator.  
   
  `sp`  
- 복사할 스마트 포인터입니다.  
+ The smart pointer to copy.  
   
  `wp`  
- 취약 포인터입니다.  
+ The weak pointer.  
   
  `ap`  
- 복사할 자동 포인터입니다.  
+ The auto pointer to copy.  
   
-### <a name="remarks"></a>설명  
- 각 생성자는 피연산자 시퀀스에 의해 이름이 지정되는 리소스를 소유하는 개체를 생성합니다. `shared_ptr(const weak_ptr<Other>& wp)` 생성자는 `wp.expired()`인 경우 [bad_weak_ptr 클래스](../standard-library/bad-weak-ptr-class.md) 형식의 예외 개체를 throw합니다.  
+### <a name="remarks"></a>Remarks  
+ The constructors each construct an object that owns the resource named by the operand sequence. The constructor `shared_ptr(const weak_ptr<Other>& wp)` throws an exception object of type [bad_weak_ptr Class](../standard-library/bad-weak-ptr-class.md) if `wp.expired()`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_construct.cpp   
@@ -654,16 +667,16 @@ int main()
 ```  
   
 ##  <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
- `shared_ptr`을 삭제합니다.  
+ Destroys a `shared_ptr`.  
   
 ```  
 ~shared_ptr();
 ```  
   
-### <a name="remarks"></a>설명  
- 소멸자는 현재 `*this`가 소유한 리소스의 참조 수를 줄입니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다.  
+### <a name="remarks"></a>Remarks  
+ The destructor decrements the reference count for the resource currently owned by `*this`. If the reference count falls to zero, the resource is released.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_destroy.cpp   
@@ -708,20 +721,20 @@ use count == 1
 ```  
   
 ##  <a name="swap"></a>  shared_ptr::swap  
- 두 `shared_ptr` 개체를 교환합니다.  
+ Swaps two `shared_ptr` objects.  
   
 ```  
 void swap(shared_ptr& sp);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `sp`  
- 교환할 공유 포인터입니다.  
+ The shared pointer to swap with.  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 원래 `*this`의 소유였다가 이후에 `sp`의 소유가 된 리소스 및 원래 `sp`의 소유였다가 이후에 `*this`의 소유가 된 리소스를 남겨 둡니다. 함수는 두 리소스의 참조 개수를 변경하지 않으며 예외도 throw하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The member function leaves the resource originally owned by `*this` subsequently owned by `sp`, and the resource originally owned by `sp` subsequently owned by `*this`. The function does not change the reference counts for the two resources and it does not throw any exceptions.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_swap.cpp   
@@ -776,16 +789,16 @@ int main()
 ```  
   
 ##  <a name="unique"></a>  shared_ptr::unique  
- 소유하는 리소스가 고유한지 테스트합니다.  
+ Tests if owned resource is unique.  
   
 ```  
 bool unique() const;
 ```  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 다른 `shared_ptr` 개체가 `*this`의 소유인 리소스를 소유하지 않는 경우 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `true` if no other `shared_ptr` object owns the resource that is owned by `*this`, otherwise `false`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_unique.cpp   
@@ -822,16 +835,16 @@ sp1.unique() == false
 ```  
   
 ##  <a name="use_count"></a>  shared_ptr::use_count  
- 리소스 소유자 수를 계산합니다.  
+ Counts numbers of resource owners.  
   
 ```  
 long use_count() const;
 ```  
   
-### <a name="remarks"></a>설명  
- 구성원 함수는 `*this`의 소유인 리소스를 소유한 `shared_ptr` 개체의 수를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of `shared_ptr` objects that own the resource that is owned by `*this`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_use_count.cpp   
@@ -859,9 +872,9 @@ sp1.use_count() == 1
 sp1.use_count() == 2  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [weak_ptr 클래스](../standard-library/weak-ptr-class.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [weak_ptr Class](../standard-library/weak-ptr-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "_1 개체 | Microsoft 문서"
+title: _1 Object | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9001045194ca9a7b96a5ba44ab01b2e7a736be06
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="1-object"></a>_1 개체
-대체 가능한 인수에 대한 자리 표시자입니다.  
+# <a name="1-object"></a>_1 Object
+Placeholders for replaceable arguments.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace placeholders {  
@@ -54,12 +54,12 @@ namespace placeholders {
  } // namespace placeholders (within std)  
 ```  
   
-## <a name="remarks"></a>설명  
- 개체 `_1, _2, ... _M` 자리 표시자를 지정 하는 첫 번째, 두 번째,..., Mth 인수 함수 호출을 반환 하는 개체에 각각 [바인딩할](../standard-library/functional-functions.md#bind)합니다. bind 식을 평가할 때 N번째 인수를 삽입해야 하는 위치를 지정하려면 `_N`을 사용합니다.  
+## <a name="remarks"></a>Remarks  
+ The objects `_1, _2, ... _M` are placeholders designating the first, second, ..., Mth argument, respectively in a function call to an object returned by [bind](../standard-library/functional-functions.md#bind). You use `_N` to specify where the Nth argument should be inserted when the bind expression is evaluated.  
   
- 이 구현에서 `M`의 값은 20입니다.  
+ In this implementation the value of `M` is 20.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional_placeholder.cpp   
@@ -111,12 +111,12 @@ int main()
 3^2 == 9  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [바인딩](../standard-library/functional-functions.md#bind)   
- [is_placeholder 클래스](../standard-library/is-placeholder-class.md)
+## <a name="see-also"></a>See Also  
+ [bind](../standard-library/functional-functions.md#bind)   
+ [is_placeholder Class](../standard-library/is-placeholder-class.md)
 

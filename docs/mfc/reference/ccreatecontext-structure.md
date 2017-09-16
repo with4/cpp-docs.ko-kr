@@ -1,5 +1,5 @@
 ---
-title: "CCreateContext 구조 | Microsoft 문서"
+title: CCreateContext Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCreateContext structure
+- CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
 caps.latest.revision: 22
 author: mikeblome
@@ -33,61 +33,61 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 231f2e44e085d27a2b2cbf289adf7b0521471b0e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ccb666fdd2289eb08c7a84791525c1a12385ca9b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccreatecontext-structure"></a>CCreateContext 구조
-프레임 워크를 사용 하는 `CCreateContext` 프레임 창 및 문서와 연결 된 뷰를 만들 때 구성 합니다.  
+# <a name="ccreatecontext-structure"></a>CCreateContext Structure
+The framework uses the `CCreateContext` structure when it creates the frame windows and views that are associated with a document.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CCreateContext  
 ```  
   
-## <a name="remarks"></a>주의  
- `CCreateContext`구조와 기본 클래스는 없습니다.  
+## <a name="remarks"></a>Remarks  
+ `CCreateContext` is a structure and does not have a base class.  
   
- 창을 만들 때이 구조체의 값 데이터의 보기에는 문서의 구성 요소를 연결 하는 데 사용 되는 정보를 제공 합니다. 사용 해야 `CCreateContext` 생성 프로세스의 부분을 재정의 하는 경우.  
+ When you create a window, the values in this structure provide the information used to connect the components of a document to the view of its data. You only have to use `CCreateContext` if you are overriding parts of the creation process.  
   
- A `CCreateContext` 구조 문서, 프레임 창, 보기 및 문서 서식 파일에 대 한 포인터를 포함 합니다. 에 대 한 포인터도 포함 한 `CRuntimeClass` 만들려는 보기의 유형을 식별 하는 합니다. 런타임 클래스 정보 및 현재 문서 포인터는 새 뷰를 동적으로 작성 하는 데 사용 됩니다. 다음 표에서 시기와 방법을 제안 각 `CCreateContext` 멤버를 사용할 수 있습니다.  
+ A `CCreateContext` structure contains pointers to the document, the frame window, the view, and the document template. It also contains a pointer to a `CRuntimeClass` that identifies the type of view to create. The run-time class information and the current document pointer are used to create a new view dynamically. The following table suggests how and when each `CCreateContext` member might be used:  
   
-|멤버|형식|에 대 한|  
+|Member|Type|What it is for|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`새 보기를 만듭니다.|  
-|`m_pCurrentDoc`|`CDocument*`|새 보기와 연결할 기존 문서입니다.|  
-|`m_pNewDocTemplate`|`CDocTemplate*`|문서 서식 파일을 새 MDI 프레임 창 만드는 연관 됩니다.|  
-|`m_pLastView`|`CView*`|원래 보기 있는 추가 보기 모델링 되며, 분할 창 보기 생성 또는 문서에서 두 번째 뷰 생성 합니다.|  
-|`m_pCurrentFrame`|`CFrameWnd*`|프레임 창에 추가 프레임 창 모델링 되며, 문서에서 두 번째 프레임 창 만드는와 같이 합니다.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` of the new view to create.|  
+|`m_pCurrentDoc`|`CDocument*`|The existing document to be associated with the new view.|  
+|`m_pNewDocTemplate`|`CDocTemplate*`|The document template associated with the creation of a new MDI frame window.|  
+|`m_pLastView`|`CView*`|The original view on which additional views are modeled, as in the creation of splitter window views or the creation of a second view on a document.|  
+|`m_pCurrentFrame`|`CFrameWnd*`|The frame window on which additional frame windows are modeled, as in the creation of a second frame window on a document.|  
   
- 에 저장 된 정보는 문서 템플릿을 문서 및 관련된 구성 요소를 만들 때 유효성을 검사는 `CCreateContext` 구조입니다. 예를 들어 존재 하지 않는 문서에 대 한 보기를 만들 수 없습니다.  
+ When a document template creates a document and its associated components, it validates the information stored in the `CCreateContext` structure. For example, a view should not be created for a nonexistent document.  
   
 > [!NOTE]
->  에 대 한 포인터의 모든 `CCreateContext` 는 선택 사항이 며 수 `NULL` 지정 되지 않은 또는 알 수 없는 경우.  
+>  All of the pointers in `CCreateContext` are optional and can be `NULL` if unspecified or unknown.  
   
- `CCreateContext`아래에 나열 된 멤버 함수에서 사용 하는 "를 참조 하십시오." 재정의 하려는 경우 특정 정보에 대 한 이러한 함수에 대 한 설명을 참조 하십시오.  
+ `CCreateContext` is used by the member functions listed under "See Also." Consult the descriptions of these functions for specific information if you plan to override them.  
   
- 다음은 몇 가지 일반적인 지침입니다.  
+ Here are a few general guidelines:  
   
--   와 같이 창 만들기에 대 한 인수로 전달 될 때 `CWnd::Create`, `CFrameWnd::Create`, 및 `CFrameWnd::LoadFrame`, 만들기 컨텍스트 무엇 새 창에 연결할지를 지정 합니다. 대부분의 windows에 대 한 전체 구조는 선택 사항 및 `NULL` 포인터를 전달할 수 있습니다.  
+-   When passed as an argument for window creation, as in `CWnd::Create`, `CFrameWnd::Create`, and `CFrameWnd::LoadFrame`, the create context specifies what the new window should be connected to. For most windows, the entire structure is optional and a `NULL` pointer can be passed.  
   
--   재정의 가능한 멤버 함수에 대 한 예: `CFrameWnd::OnCreateClient`, `CCreateContext` 인수는 선택 사항입니다.  
+-   For overridable member functions, such as `CFrameWnd::OnCreateClient`, the `CCreateContext` argument is optional.  
   
--   관련 된 멤버 함수에 대 한 뷰를 만드는 제공 해야 뷰를 만드는 데 충분 한 정보. 예를 들어 분할 창에서 첫 번째 뷰를 제공 해야 클래스 정보 보기 및 현재 문서입니다.  
+-   For member functions involved in view creation, you must provide enough information to create the view. For example, for the first view in a splitter window, you must supply the view class information and the current document.  
   
- 일반적으로 프레임 워크 기본값을 사용 하는 경우 무시 해도 `CCreateContext`합니다. 고급 수정, Microsoft Foundation Class 라이브러리 소스 코드 또는 VIEWEX, 같은 샘플 프로그램을 사용 하려는 경우를 안내 합니다. 필수 매개 변수를 잊어버리면 프레임 워크 어설션을 알려 줍니다 잊음 있습니다.  
+ In general, if you use the framework defaults, you can ignore `CCreateContext`. If you attempt more advanced modifications, the Microsoft Foundation Class Library source code or the sample programs, such as VIEWEX, will guide you. If you do forget a required parameter, a framework assertion will tell you what you forgot.  
   
- 대 한 자세한 내용은 `CCreateContext`, MFC 샘플 [VIEWEX](../../visual-cpp-samples.md)합니다.  
+ For more information on `CCreateContext`, see the MFC sample [VIEWEX](../../visual-cpp-samples.md).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)   
  [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)   
  [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)   

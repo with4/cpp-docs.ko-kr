@@ -1,5 +1,5 @@
 ---
-title: "CResourceException 클래스 | Microsoft 문서"
+title: CResourceException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,11 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource allocation exception
-- resources [C++], allocating
-- resource exceptions
-- exceptions, resource
-- CResourceException class
+- CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
 caps.latest.revision: 22
 author: mikeblome
@@ -39,36 +35,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2013a73f91687277df9dd1e6747aba2dd02a4346
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e177da6dbaabd6cd96f0a5e61303a6194bf7ba6d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cresourceexception-class"></a>CResourceException 클래스
-Windows에서 요청된 리소스를 찾거나 할당할 수 없을 경우 발생합니다.  
+# <a name="cresourceexception-class"></a>CResourceException Class
+Generated when Windows cannot find or allocate a requested resource.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CResourceException : public CSimpleException  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CResourceException::CResourceException](#cresourceexception)|`CResourceException` 개체를 생성합니다.|  
+|[CResourceException::CResourceException](#cresourceexception)|Constructs a `CResourceException` object.|  
   
-## <a name="remarks"></a>주의  
- 더 이상 없는 한정 가능한 것은 필요 합니다.  
+## <a name="remarks"></a>Remarks  
+ No further qualification is necessary or possible.  
   
- 사용 하 여 대 한 자세한 내용은 `CResourceException`, 문서를 참조 하십시오 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For more information on using `CResourceException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -77,22 +73,22 @@ class CResourceException : public CSimpleException
   
  `CResourceException`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cresourceexception"></a>CResourceException::CResourceException  
- `CResourceException` 개체를 생성합니다.  
+##  <a name="cresourceexception"></a>  CResourceException::CResourceException  
+ Constructs a `CResourceException` object.  
   
 ```  
 CResourceException();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 생성자를 직접 사용 하지 않고 대신 전역 함수를 호출 [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)합니다. 예외에 대 한 자세한 내용은 문서를 참조 하십시오. [MFC의 예외 처리](../exception-handling-in-mfc.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ Do not use this constructor directly, but rather call the global function [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). for more information about exceptions, see the article [Exception Handling in MFC](../exception-handling-in-mfc.md).  
   
-## <a name="see-also"></a>참고 항목  
- [CException 클래스](cexception-class.md)   
- [계층 구조 차트](../hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](cexception-class.md)   
+ [Hierarchy Chart](../hierarchy-chart.md)
 
 
 

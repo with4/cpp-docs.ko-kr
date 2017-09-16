@@ -1,5 +1,5 @@
 ---
-title: "CCheckListBox 클래스 | Microsoft 문서"
+title: CCheckListBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,8 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCheckListBox class
-- checklist boxes
+- CCheckListBox [MFC], CCheckListBox
+- CCheckListBox [MFC], Create
+- CCheckListBox [MFC], DrawItem
+- CCheckListBox [MFC], Enable
+- CCheckListBox [MFC], GetCheck
+- CCheckListBox [MFC], GetCheckStyle
+- CCheckListBox [MFC], IsEnabled
+- CCheckListBox [MFC], MeasureItem
+- CCheckListBox [MFC], OnGetCheckPosition
+- CCheckListBox [MFC], SetCheck
+- CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
 caps.latest.revision: 26
 author: mikeblome
@@ -46,73 +55,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2cce91e3b6cb6cdf6ec2f4564fcf5090a54c917f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af338e05ffbbbcce5cd6fadd8e8d9e432924b353
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cchecklistbox-class"></a>CCheckListBox 클래스
-Windows 검사 목록 상자의 기능을 제공합니다.  
+# <a name="cchecklistbox-class"></a>CCheckListBox Class
+Provides the functionality of a Windows checklist box.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCheckListBox : public CListBox  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCheckListBox::CCheckListBox](#cchecklistbox)|`CCheckListBox` 개체를 생성합니다.|  
+|[CCheckListBox::CCheckListBox](#cchecklistbox)|Constructs a `CCheckListBox` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCheckListBox::Create](#create)|Windows 검사 목록 상자를 만들고 연결 하는 `CCheckListBox` 개체입니다.|  
-|[CCheckListBox::DrawItem](#drawitem)|소유자 그리기 목록 상자의 변경 내용의 시각적 측면이 때 프레임 워크에 의해 호출 됩니다.|  
-|[CCheckListBox::Enable](#enable)|검사 목록 상자 항목을 사용 하지 않도록 설정 하거나 사용 합니다.|  
-|[CCheckListBox::GetCheck](#getcheck)|항목의 확인란의 상태를 가져옵니다.|  
-|[CCheckListBox::GetCheckStyle](#getcheckstyle)|확인란 컨트롤의 스타일을 가져옵니다.|  
-|[CCheckListBox::IsEnabled](#isenabled)|항목이 사용 되는지 여부를 결정 합니다.|  
-|[CCheckListBox::MeasureItem](#measureitem)|소유자 그리기 스타일 목록 상자를 만들 때에 프레임 워크에서 호출 합니다.|  
-|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|항목의 확인란의 위치를 가져오기 위해 프레임 워크에 의해 호출 됩니다.|  
-|[CCheckListBox::SetCheck](#setcheck)|항목의 확인란의 상태를 설정합니다.|  
-|[CCheckListBox::SetCheckStyle](#setcheckstyle)|컨트롤의 확인란의 스타일을 설정 합니다.|  
+|[CCheckListBox::Create](#create)|Creates the Windows checklist box and attaches it to the `CCheckListBox` object.|  
+|[CCheckListBox::DrawItem](#drawitem)|Called by the framework when a visual aspect of an owner-draw list box changes.|  
+|[CCheckListBox::Enable](#enable)|Enables or disables a checklist box item.|  
+|[CCheckListBox::GetCheck](#getcheck)|Gets the state of an item's check box.|  
+|[CCheckListBox::GetCheckStyle](#getcheckstyle)|Gets the style of the control's check boxes.|  
+|[CCheckListBox::IsEnabled](#isenabled)|Determines whether an item is enabled.|  
+|[CCheckListBox::MeasureItem](#measureitem)|Called by the framework when a list box with an owner-draw style is created.|  
+|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|Called by the framework to get the position of an item's check box.|  
+|[CCheckListBox::SetCheck](#setcheck)|Sets the state of an item's check box.|  
+|[CCheckListBox::SetCheckStyle](#setcheckstyle)|Sets the style of the control's check boxes.|  
   
-## <a name="remarks"></a>주의  
- "검사 목록 상자의" 파일 이름과 같은 항목의 목록이 표시 됩니다. 목록의 각 항목에는 사용자를 확인 하거나 지울 수 있는 옆의 확인란에 있습니다.  
+## <a name="remarks"></a>Remarks  
+ A "checklist box" displays a list of items, such as filenames. Each item in the list has a check box next to it that the user can check or clear.  
   
- `CCheckListBox`소유자가 그린 컨트롤에 대해서만 되므로 개 이상의 텍스트 문자열 목록에 포함 합니다. 간단히 말하면, 검사 목록 상자에는 텍스트 문자열과 확인란, 포함 되어 있지만 텍스트를 전혀 필요 하지 않습니다. 예를 들어 각 항목 옆에 있는 확인란을 사용 하는 작은 비트맵의 목록이 있어야 수 있습니다.  
+ `CCheckListBox` is only for owner-drawn controls because the list contains more than text strings. At its simplest, a checklist box contains text strings and check boxes, but you do not need to have text at all. For example, you could have a list of small bitmaps with a check box next to each item.  
   
- 고유한 클래스를 파생 해야 사용자가 직접 검사 목록 상자를 만들려면 `CCheckListBox`합니다. 사용자 고유의 클래스를 파생 하는 파생 클래스 생성자를 작성 하려면 다음 호출 **만들기**합니다.  
+ To create your own checklist box, you must derive your own class from `CCheckListBox`. To derive your own class, write a constructor for the derived class, then call **Create**.  
   
- 목록 상자에서 해당 부모에 보낸 Windows 알림 메시지를 처리 하려는 경우 (일반적으로 클래스에서 파생 [CDialog](../../mfc/reference/cdialog-class.md)), 각 메시지에 대 한 부모 클래스에 메시지 맵 항목 및 메시지-처리기 멤버 함수를 추가 합니다.  
+ If you want to handle Windows notification messages sent by a list box to its parent (usually a class derived from [CDialog](../../mfc/reference/cdialog-class.md)), add a message-map entry and message-handler member function to the parent class for each message.  
   
- 각 메시지-맵 항목은 다음 형식을 사용 합니다.  
+ Each message-map entry takes the following form:  
   
  **ON_**Notification **(**`id`, `memberFxn`**)**  
   
- 여기서 `id` 알림을 전송 하는 컨트롤의 자식 창 ID를 지정 하 고 `memberFxn` 알림을 처리 하는 작성 한 부모 멤버 함수의 이름입니다.  
+ where `id` specifies the child window ID of the control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
   
- 부모의 함수 프로토타입에 다음과 같습니다.  
+ The parent's function prototype is as follows:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- 특히 관련 된 메시지 맵 항목이 하나만 **CCheckListBox** (에 대 한 메시지 맵 항목을 참조 하십시오. 하지만 [CListBox](../../mfc/reference/clistbox-class.md)):  
+ There is only one message-map entry that pertains specifically to **CCheckListBox** (but see also the message-map entries for [CListBox](../../mfc/reference/clistbox-class.md)):  
   
-- **ON_CLBN_CHKCHANGE** 사용자가 항목의 확인란의 상태를 변경 합니다.  
+- **ON_CLBN_CHKCHANGE** The user has changed the state of an item's checkbox.  
   
- 검사 목록 상자의 기본 검사 목록 상자 (각의 왼쪽에 있는 기본 크기의 확인란을 사용 하 여 문자열의 목록) 인 경우에 기본값을 사용할 수 있습니다 [CCheckListBox::DrawItem](#drawitem) 검사 목록 상자를 그립니다. 재정의 해야 그렇지는 [CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem) 함수 및 [CCheckListBox::DrawItem](#drawitem) 및 [CCheckListBox::MeasureItem](#measureitem) 함수입니다.  
+ If your checklist box is a default checklist box (a list of strings with the default-sized checkboxes to the left of each), you can use the default [CCheckListBox::DrawItem](#drawitem) to draw the checklist box. Otherwise, you must override the [CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem) function and the [CCheckListBox::DrawItem](#drawitem) and [CCheckListBox::MeasureItem](#measureitem) functions.  
   
- 대화 상자 템플릿에서 또는 코드에서 직접 검사 목록 상자를 만들 수 있습니다.  
+ You can create a checklist box either from a dialog template or directly in your code.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -123,24 +132,24 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
- `CCheckListBox` 개체를 생성합니다.  
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox  
+ Constructs a `CCheckListBox` object.  
   
 ```  
 CCheckListBox();
 ```  
   
-### <a name="remarks"></a>주의  
- 생성 한 `CCheckListBox` 두 단계에서는 개체입니다. 파생 된 클래스를 먼저 정의 `CCheckListBox`, 다음 호출 **만들기**, Windows 검사 목록 상자를 초기화 하 고 연결 하는 `CCheckListBox` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CCheckListBox` object in two steps. First define a class derived from `CCheckListBox`, then call **Create**, which initializes the Windows checklist box and attaches it to the `CCheckListBox` object.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCControlLadenDialog #&60;](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
- Windows 검사 목록 상자를 만들고 연결 하는 `CCheckListBox` 개체입니다.  
+##  <a name="create"></a>  CCheckListBox::Create  
+ Creates the Windows checklist box and attaches it to the `CCheckListBox` object.  
   
 ```  
 virtual BOOL Create(
@@ -150,67 +159,67 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 검사 목록 상자의 스타일을 지정합니다. 스타일 해야 **LBS_HASSTRINGS** 와 **LBS_OWNERDRAWFIXED** (목록에서 모든 항목 높이 같게 만들기는 하는 데 사용) 또는 **LBS_OWNERDRAWVARIABLE** (다양 한 높이 목록의 항목). 이 스타일 결합할 수 다른 [목록 상자 스타일](../../mfc/reference/list-box-styles.md) 제외 하 고 **LBS_USETABSTOPS**합니다.  
+ Specifies the style of the checklist box. The style must be **LBS_HASSTRINGS** and either **LBS_OWNERDRAWFIXED** (all items in the list are the same height) or **LBS_OWNERDRAWVARIABLE** (items in the list are of varying heights). This style can be combined with other [list-box styles](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) except **LBS_USETABSTOPS**.  
   
  `rect`  
- 검사 목록 상자의 크기와 위치를 지정합니다. 일 수는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.  
+ Specifies the checklist-box size and position. Can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- 검사 목록 상자의 부모 창 지정 (일반적으로 `CDialog` 개체). 않아야 **NULL**합니다.  
+ Specifies the checklist box's parent window (usually a `CDialog` object). It must not be **NULL**.  
   
  `nID`  
- 검사 목록 상자 컨트롤 ID를 지정 합니다.  
+ Specifies the checklist box's control ID.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 생성 한 `CCheckListBox` 두 단계에서는 개체입니다. 파생 된 클래스를 먼저 정의 **CcheckListBox** 다음 호출 **만들기**, Windows 검사 목록 상자를 초기화 하 고 연결 하는 `CCheckListBox`합니다. 참조 [CCheckListBox::CCheckListBox](#cchecklistbox) 샘플입니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CCheckListBox` object in two steps. First, define a class derived from **CcheckListBox** and then call **Create**, which initializes the Windows checklist box and attaches it to the `CCheckListBox`. See [CCheckListBox::CCheckListBox](#cchecklistbox) for a sample.  
   
- 때 **만들기** 를 실행 하 고 Windows 보냅니다는 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), 및 [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 메시지를 검사 목록 상자 컨트롤입니다.  
+ When **Create** executes, Windows sends the [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages to the checklist-box control.  
   
- 에서는 기본적으로 이러한 메시지의 처리는 [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), 및 [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 에서 멤버 함수는 `CWnd` 기본 클래스입니다. 기본 메시지 처리를 확장 하려면 메시지 맵을 추가 파생된 클래스와 멤버 함수 재정의 이전 메시지-처리기입니다. 재정의 `OnCreate`예를 들어, 새 클래스에 대 한 필요한 초기화를 수행 하도록 합니다.  
+ These messages are handled by default by the [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), and [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, add a message map to the your derived class and override the preceding message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- 다음 적용 [창 스타일](../../mfc/reference/window-styles.md) 검사 목록 상자 컨트롤에:  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a checklist-box control:  
   
-- **WS_CHILD** 항상  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE** 일반적으로  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED** 거의  
+- **WS_DISABLED** Rarely  
   
-- **WS_VSCROLL** 세로 스크롤 막대를 추가 하려면  
+- **WS_VSCROLL** To add a vertical scroll bar  
   
-- **WS_HSCROLL** 가로 스크롤 막대를 추가 하려면  
+- **WS_HSCROLL** To add a horizontal scroll bar  
   
-- **WS_GROUP** 컨트롤을 그룹화  
+- **WS_GROUP** To group controls  
   
-- **WS_TABSTOP** 이 컨트롤에 탭을 허용 하려면  
+- **WS_TABSTOP** To allow tabbing to this control  
   
-##  <a name="drawitem"></a>CCheckListBox::DrawItem  
- 시각적 측면이 소유자가 그린 검사 목록 상자 변경 될 때 프레임 워크에 의해 호출 됩니다.  
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem  
+ Called by the framework when a visual aspect of an owner-drawn checklist box changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- 에 대 한 긴 포인터는 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) 필요한 드로잉의 종류에 대 한 정보가 포함 된 구조체입니다.  
+ A long pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>주의  
- **itemAction** 및 **itemState** 의 멤버는 `DRAWITEMSTRUCT` 구조 그리기 작업을 수행할을 정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** and **itemState** members of the `DRAWITEMSTRUCT` structure define the drawing action that is to be performed.  
   
- 기본적으로이 함수는 각 문자열 기본 크기의 확인란 왼쪽으로 목록이 구성 된 기본 확인란을 선택 목록을, 그립니다. 에 지정 된 확인란 목록 크기는 [만들기](#create)합니다.  
+ By default, this function draws a default checkbox list, consisting of a list of strings each with a default-sized checkbox to the left. The checkbox list size is the one specified in [Create](#create).  
   
- 그리기 아닌 문자열 목록을 사용 하 여, 가변 길이 항목 또는 왼쪽에 있는 확인란이 검사 목록 상자와 같은 기본 되지 않는 소유자 그리기 검사 목록 상자를 구현 하려면이 멤버 함수를 재정의 합니다. 응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 인터페이스 (GDI) 개체를 복원 해야 `lpDrawItemStruct` 이 멤버 함수를 종료 하기 전에 합니다.  
+ Override this member function to implement drawing of owner-draw checklist boxes that are not the default, such as checklist boxes with lists that aren't strings, with variable-height items, or with checkboxes that aren't on the left. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the termination of this member function.  
   
- 검사 목록 상자 스타일 검사 목록 상자 항목 높이가 모두 없으면 (에 지정 된 **만들기**) 이어야 합니다 **LBS_OWNERVARIABLE**를 재정의 해야 하 고는 [MeasureItem](#measureitem) 함수입니다.  
+ If checklist box items are not all the same height, the checklist box style (specified in **Create**) must be **LBS_OWNERVARIABLE**, and you must override the [MeasureItem](#measureitem) function.  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
- 검사 목록 상자 항목을 사용 하지 않도록 설정 하거나 사용 하려면이 함수를 호출 합니다.  
+##  <a name="enable"></a>  CCheckListBox::Enable  
+ Call this function to enable or disable a checklist box item.  
   
 ```  
 void Enable(
@@ -218,76 +227,76 @@ void Enable(
     BOOL bEnabled = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 사용 하도록 설정 하는 검사 목록 상자 항목의 인덱스입니다.  
+ Index of the checklist box item to be enabled.  
   
  `bEnabled`  
- 항목이 사용 되는지 여부를 지정 합니다.  
+ Specifies whether the item is enabled or disabled.  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
- 지정 된 확인란의 상태를 검색합니다.  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
+ Retrieves the state of the specified check box.  
   
 ```  
 int GetCheck(int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 목록 상자에 있는 확인란의&0;부터 시작 인덱스입니다.  
+ Zero-based index of a check box that is contained in the list box.  
   
-### <a name="return-value"></a>반환 값  
- 지정한 확인란의 상태입니다. 다음 표에서 가능한 값을 나열합니다.  
+### <a name="return-value"></a>Return Value  
+ The state of the specified check box. The following table lists possible values.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|`BST_CHECKED`|확인 확인란을 선택 합니다.|  
-|`BST_UNCHECKED`|확인란 확인 하지 않습니다.|  
-|`BST_INDETERMINATE`|확인란 상태가 비활성화 되었습니다.|  
+|`BST_CHECKED`|The check box is checked.|  
+|`BST_UNCHECKED`|The check box is not checked.|  
+|`BST_INDETERMINATE`|The check box state is indeterminate.|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
- 검사 목록 상자의 스타일을 가져오려면이 함수를 호출 합니다.  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
+ Call this function to get the checklist box's style.  
   
 ```  
 UINT GetCheckStyle();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 컨트롤의 확인란 스타일입니다.  
+### <a name="return-value"></a>Return Value  
+ The style of the control's check boxes.  
   
-### <a name="remarks"></a>주의  
- 가능한 스타일에 대 한 자세한 내용은 참조 [SetCheckStyle](#setcheckstyle)합니다.  
+### <a name="remarks"></a>Remarks  
+ For information on possible styles, see [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
- 항목을 사용할 수 있는지 여부를 확인 하려면이 함수를 호출 합니다.  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
+ Call this function to determine whether an item is enabled.  
   
 ```  
 BOOL IsEnabled(int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 항목의 인덱스입니다.  
+ Index of the item.  
   
-### <a name="return-value"></a>반환 값  
- 항목이 활성화 되 면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item is enabled; otherwise 0.  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
- 기본이 아닌 스타일으로 검사 목록 상자를 만들 때 프레임 워크에서 호출 합니다.  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
+ Called by the framework when a checklist box with a nondefault style is created.  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpMeasureItemStruct`  
- 에 대 한 긴 포인터는 [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) 구조입니다.  
+ A long pointer to a [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 기본적으로 아무 작업도 수행합니다. 이 멤버 함수를 재정의 하 고 입력의 `MEASUREITEMSTRUCT` 구조를 검사 목록 상자 항목의 크기의 Windows 사용자에 게 알립니다. 검사 목록 상자의 만들어진 경우는 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md) 스타일, 프레임 워크가 멤버 함수 목록 상자에서 각 항목에 대해 호출 합니다. 그렇지 않은 경우이 멤버는 한 번만 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. Override this member function and fill in the `MEASUREITEMSTRUCT` structure to inform Windows of the dimensions of checklist-box items. If the checklist box is created with the [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style, the framework calls this member function for each item in the list box. Otherwise, this member is called only once.  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
- 프레임 워크는 항목에 확인란의 크기와 위치를 가져오려면이 함수를 호출 합니다.  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
+ The framework calls this function to get the position and size of the check box in an item.  
   
 ```  
 virtual CRect OnGetCheckPosition(
@@ -295,21 +304,21 @@ virtual CRect OnGetCheckPosition(
     CRect rectCheckBox);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *rectItem*  
- 목록 항목의 크기와 위치 합니다.  
+ The position and size of the list item.  
   
  `rectCheckBox`  
- 기본 위치와 크기는 항목의 상자를 선택합니다.  
+ The default position and size of an item's check box.  
   
-### <a name="return-value"></a>반환 값  
- 항목의 크기와 위치 상자를 선택합니다.  
+### <a name="return-value"></a>Return Value  
+ The position and size of an item's check box.  
   
-### <a name="remarks"></a>주의  
- 기본 구현에서는 확인란의 크기와 기본 위치에만 반환 ( `rectCheckBox`). 기본적으로 확인란 항목의 왼쪽 위 모퉁이에 정렬 되 고 표준 확인란 크기입니다. 오른쪽에 있는 확인란을 선택 하거나 크게 또는 작게 확인란이 있는 경우 있을 수 있습니다. 이러한 경우 재정의 `OnGetCheckPosition` 확인란 위치 및 항목 내에서 크기를 변경할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation only returns the default position and size of the check box ( `rectCheckBox`). By default, a check box is aligned in the upper-left corner of an item and is the standard check box size. There may be cases where you want the check boxes on the right, or want a larger or smaller check box. In these cases, override `OnGetCheckPosition` to change the check box position and size within the item.  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
- 지정 된 확인란의 상태를 설정합니다.  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
+ Sets the state of the specified check box.  
   
 ```  
 void SetCheck(
@@ -317,35 +326,35 @@ void SetCheck(
     int nCheck);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 목록 상자에 있는 확인란의&0;부터 시작 인덱스입니다.  
+ Zero-based index of a check box that is contained in the list box.  
   
  `nCheck`  
- 지정한 확인란에 대 한 단추 상태입니다. 가능한 값에 대 한 설명 섹션을 참조 합니다.  
+ The button state for the specified check box. See the Remarks section for possible values.  
   
-### <a name="remarks"></a>주의  
- 다음 표에서 가능한 값은 `nCheck` 매개 변수입니다.  
+### <a name="remarks"></a>Remarks  
+ The following table lists possible values for the `nCheck` parameter.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
-|**BST_CHECKED**|지정 된 확인란을 선택 합니다.|  
-|**BST_UNCHECKED**|지정 된 확인란의 선택을 취소 합니다.|  
-|**BST_INDETERMINATE**|지정한 확인란 상태 비활성화 상태를 설정 합니다.<br /><br /> 이 상태는 확인란 스타일은 경우에 사용할 수만 `BS_AUTO3STATE` 또는 `BS_3STATE`합니다. 자세한 내용은 참조 [단추 스타일](../../mfc/reference/button-styles.md)합니다.|  
+|**BST_CHECKED**|Select the specified check box.|  
+|**BST_UNCHECKED**|Clear the specified check box.|  
+|**BST_INDETERMINATE**|Set the specified check box state to indeterminate.<br /><br /> This state is only available if the check box style is `BS_AUTO3STATE` or `BS_3STATE`. For more information, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
- 검사 목록 상자에서 확인란의 스타일을 설정 하려면이 함수를 호출 합니다.  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
+ Call this function to set the style of check boxes in the checklist box.  
   
 ```  
 void SetCheckStyle(UINT nStyle);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nStyle`  
- 검사 목록 상자에서 확인란의 스타일을 결정 합니다.  
+ Determines the style of check boxes in the checklist box.  
   
-### <a name="remarks"></a>주의  
- 유효한 스타일은:  
+### <a name="remarks"></a>Remarks  
+ Valid styles are:  
   
 - **BS_CHECKBOX**  
   
@@ -355,11 +364,11 @@ void SetCheckStyle(UINT nStyle);
   
 - **BS_3STATE**  
   
- 이러한 스타일에 대 한 자세한 내용은 참조 [단추 스타일](../../mfc/reference/button-styles.md)합니다.  
+ For information on these styles, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
-## <a name="see-also"></a>참고 항목  
- [TSTCON MFC 샘플](../../visual-cpp-samples.md)   
- [CListBox 클래스](../../mfc/reference/clistbox-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CListBox 클래스](../../mfc/reference/clistbox-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample TSTCON](../../visual-cpp-samples.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)
 

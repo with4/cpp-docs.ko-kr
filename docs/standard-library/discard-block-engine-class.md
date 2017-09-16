@@ -1,5 +1,5 @@
 ---
-title: "discard_block_engine 클래스 | Microsoft 문서"
+title: discard_block_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- discard_block_engine
 - random/std::discard_block_engine
 dev_langs:
 - C++
@@ -34,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: b770c9b353f126939a1d70c195b9cc421cb2e06e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f98da1248f00e34f3660f613e5a95b8ffc101c56
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="discardblockengine-class"></a>discard_block_engine 클래스
-기본 엔진에서 반환된 값을 버려 임의의 시퀀스를 생성합니다.  
+# <a name="discardblockengine-class"></a>discard_block_engine Class
+Generates a random sequence by discarding values returned by its base engine.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Engine, size_t P, size_t R>  
 class discard_block_engine;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Engine`  
- 기본 엔진 유형입니다.  
+ The base engine type.  
   
  `P`  
- **블록 크기**입니다. 각 블록에 있는 값의 수입니다.  
+ **Block size**. The number of values in each block.  
   
  `R`  
- **사용된 블록**입니다. 사용된 각 블록에 있는 값의 수입니다. 나머지는 버립니다(`P` - `R`). **사전 조건**: `0 < R ≤ P`  
+ **Used block**. The number of values in each block that are used. The rest are discarded ( `P` - `R`). **Precondition**: `0 < R ≤ P`  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|  
 |`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|  
   
- 엔진 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
- 이 템플릿 클래스는 기본 엔진에서 반환하는 일부 값을 버려 값을 생성하는 엔진 어댑터에 대해 설명합니다.  
+## <a name="remarks"></a>Remarks  
+ This template class describes an engine adaptor that produces values by discarding some of the values returned by its base engine.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

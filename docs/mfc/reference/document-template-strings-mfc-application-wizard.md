@@ -1,50 +1,69 @@
 ---
-title: "MFC 응용 프로그램 마법사, 문서 템플릿 문자열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.doctemp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 응용 프로그램 마법사, 문서 서식 파일 문자열"
+title: Document Template Strings, MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.doctemp
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# MFC 응용 프로그램 마법사, 문서 템플릿 문자열
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3aeaccbb050f93fb366f7352f8df0276e0327434
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-MFC 응용 프로그램 마법사의 이 페이지에서는 다음과 같은 옵션을 사용하여 문서 관리 및 지역화를 설정할 수 있습니다.  문서 템플릿 문자열은 [응용 프로그램 종류](../../mfc/reference/application-type-mfc-application-wizard.md) 페이지에서 **문서\/뷰 아키텍처 지원**을 포함한 응용 프로그램에서만 사용할 수 있습니다.  대화 상자에서는 사용할 수 없습니다.  대부분의 문서 템플릿 문자열은 응용 프로그램에 표시되고 응용 프로그램 사용자가 사용하는 것이기 때문에 마법사의 **응용 프로그램 종류** 페이지에서 지정한 **리소스 언어**로 지역화됩니다.  
+---
+# <a name="document-template-strings-mfc-application-wizard"></a>Document Template Strings, MFC Application Wizard
+In this page of the MFC Application Wizard, provide or refine the following options to help with document management and localization. Document template strings are available for applications that include **Document/view architecture support** in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md). They are not available for dialog boxes. Because most document template strings are visible and used by the application's users, they are localized into the **Resource language** indicated in the **Application Type** page of the wizard.  
   
- **지역화되지 않은 문자열**  
- 이 옵션은 사용자 문서를 만드는 응용 프로그램에 적용됩니다.  파일 확장명과 파일 형식 ID를 제공하면 사용자가 문서를 쉽게 열고, 인쇄하고, 저장할 수 있습니다.  이러한 항목은 사용자가 아니라 시스템에서 사용하므로 지역화되지 않습니다.  
+ **Nonlocalized strings**  
+ Applies to applications that create user documents. Users can open, print, and save documents more easily if you provide a file extension and a file type ID. These items are not localized because they are used by the system rather than by the user.  
   
-|옵션|설명|  
-|--------|--------|  
-|**파일 확장명**|응용 프로그램을 사용할 때 사용자가 저장하는 문서와 연관된 파일 확장명을 설정합니다.  예를 들어, 프로젝트 이름이 Widget이면 파일 확장명을 .wgt로 지정할 수 있습니다. 파일 확장명을 입력할 때에는 마침표를 포함시키지 마십시오.<br /><br /> 파일 확장명을 사용할 경우 사용자가 문서 아이콘을 프린터 아이콘에 끌어다 놓으면 응용 프로그램을 시작하지 않고도 Explorer에서 응용 프로그램의 문서를 인쇄할 수 있습니다.<br /><br /> 확장명을 지정하지 않은 경우에는 사용자가 파일을 저장할 때 파일 확장명을 지정해야 합니다.  마법사에서는 기본 파일 확장명을 제공하지 않습니다.|  
-|**파일 형식 ID**|시스템 레지스트리의 문서 형식에 대한 레이블을 설정합니다.|  
+|Option|Description|  
+|------------|-----------------|  
+|**File extension**|Sets the file extension associated with the documents that the user saves when using the application. For example, if your project is named Widget, you could name the file extension .wgt. (When you enter the file extension, do not include the period.)<br /><br /> If you provide a file extension, the Explorer can print your application's documents without launching your application when the user drops the document icon on a printer icon.<br /><br /> If you do not specify an extension, a user must specify a file extension when saving files. The wizard does not provide a default file extension.|  
+|**File type ID**|Sets the label for your document type in the system registry.|  
   
- **지역화된 문자열**  
- 응용 프로그램 사용자가 읽고 사용하는 응용 프로그램 및 문서와 연관된 문자열을 생성하므로 문자열이 지역화됩니다.  
+ **Localized strings**  
+ Produces strings associated with the application and document that are read and used by the application's users, so the strings are localized.  
   
-|옵션|설명|  
-|--------|--------|  
-|**언어**|**지역화된 문자열**의 모든 상자에 표시되는 문자열의 언어를 나타냅니다.  이 상자의 값을 변경하려면 MFC 응용 프로그램 마법사의 [응용 프로그램 종류](../../mfc/reference/application-type-mfc-application-wizard.md) 페이지에 있는 **리소스 언어**에서 적절한 언어를 선택합니다.|  
-|**주 프레임 캡션**|응용 프로그램의 주 프레임 맨 위에 나타나는 텍스트를 설정합니다.  기본값은 프로젝트 이름입니다.|  
-|**문서 형식 이름**|응용 프로그램의 문서를 그룹화할 수 있는 문서 형식을 식별합니다.  기본값은 프로젝트 이름입니다.  기본값을 변경해도 이 대화 상자의 다른 옵션은 바뀌지 않습니다.|  
-|**필터 이름**|사용자가 특정 파일 형식의 파일을 찾기 위해 표시할 수 있는 이름을 설정합니다.  이 옵션은 표준 Windows **열기** 대화 상자의 **파일 형식** 옵션과 **다른 이름으로 저장** 대화 상자의 **파일 형식** 옵션에서 사용할 수 있습니다.  기본값은 프로젝트 이름 뒤에 Files를 쓰고, **파일 확장명**에서 지정한 확장명을 그 뒤에 붙입니다.  예를 들어, 프로젝트 이름이 Widget이고 파일 확장명이 .wgt이면 **필터 이름**은 기본적으로 Widget Files \(\*.wgt\)가 됩니다.|  
-|**파일의 새 약식 이름**|새 문서 템플릿이 둘 이상인 경우 Windows 표준 `새로 만들기` 대화 상자에 나타나는 이름을 설정합니다.  응용 프로그램이 [자동화 서버](../../mfc/automation-servers.md)이면 이 이름은 자동화 개체의 약식 이름으로 사용됩니다.  기본값은 프로젝트 이름입니다.|  
-|**파일 형식의 긴 이름**|시스템 레지스트리의 파일 형식 이름을 설정합니다.  응용 프로그램이 자동화 서버인 경우 이 이름을 자동화 개체의 긴 이름으로 사용합니다.  기본값은 프로젝트 이름 다음에 .Document를 붙입니다.|  
+|Option|Description|  
+|------------|-----------------|  
+|**Language**|Indicates the language in which strings are displayed for all the boxes under **Localized strings**. To change the value in this box, select the appropriate language under **Resource language** in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard.|  
+|**Main frame caption**|Sets the text appearing at the top of the main application frame. By default, the project name.|  
+|**Doc type name**|Identifies the type of document under which a document of the application can be grouped. By default, the project name. Changing the default does not change any other options in this dialog box.|  
+|**Filter name**|Sets the name your users can indicate to find files of your file type. This option is available from the **Files of type** and **Save as type** options in the standard Windows **Open** and **Save as** dialog boxes. By default, the project name plus Files, followed by the extension provided in **File extension**. For example, if your project is named Widget, and the file extension is .wgt, the **Filter name** is Widget Files (*.wgt) by default.|  
+|**File new short name**|Sets the name appearing in the standard Windows `New` dialog box, if there is more than one new document template. If your application is an [Automation server](../../mfc/automation-servers.md), this name is used as the short name of your Automation object. By default, the project name.|  
+|**File type long name**|Sets the file type name in the system registry. If your application is an Automation server, this name is used as the long name of your Automation object. By default, the project name plus .Document.|  
   
-## 참고 항목  
- [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
+
+

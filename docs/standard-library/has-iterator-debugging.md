@@ -1,5 +1,5 @@
 ---
-title: "_HAS_ITERATOR_DEBUGGING | Microsoft 문서"
+title: _HAS_ITERATOR_DEBUGGING | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,39 +33,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
-ms.openlocfilehash: 97d899ead2c556a39118dd49bf1f6ac7ef8a9b04
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 509b189610f4bdc682951205c468274c517f0cf9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="hasiteratordebugging"></a>_HAS_ITERATOR_DEBUGGING  
   
-[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)로 교체된 이 매크로는 반복기 디버깅 기능이 디버그 빌드에서 사용하도록 설정되었는지 여부를 정의합니다. 반복기 디버깅은 기본적으로 디버그 빌드에서는 사용하도록 설정되고 정품 빌드에서는 사용하지 않도록 설정됩니다. 자세한 내용은 [디버그 반복기 지원](../standard-library/debug-iterator-support.md)을 참조하세요.  
+Superseded by [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), this macro defines whether the iterator debugging feature is enabled in a debug build. By default, iterator debugging is enabled in Debug builds and disabled in Retail builds. For more information, see [Debug Iterator Support](../standard-library/debug-iterator-support.md).  
   
 > [!IMPORTANT]
-> `_HAS_ITERATOR_DEBUGGING` 매크로는 직접 사용되지 않습니다. 대신 `_ITERATOR_DEBUG_LEVEL`을 사용하여 반복기 디버그 설정을 제어합니다. 자세한 내용은 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 참조하세요.  
+> Direct use of the `_HAS_ITERATOR_DEBUGGING` macro is deprecated. Instead, use `_ITERATOR_DEBUG_LEVEL` to control iterator debug settings. For more information, see [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).  
   
-## <a name="remarks"></a>설명  
-디버그 빌드에서 반복기 디버깅을 사용하도록 설정하려면 `_ITERATOR_DEBUG_LEVEL`을 2로 설정합니다. 이 값은 `_HAS_ITERATOR_DEBUGGING` 설정 1(사용)과 동일합니다.  
+## <a name="remarks"></a>Remarks  
+To enable iterator debugging in debug builds, set `_ITERATOR_DEBUG_LEVEL` to 2. This is equivalent to a `_HAS_ITERATOR_DEBUGGING` setting of 1, or enabled:  
   
 ```  
 #define _ITERATOR_DEBUG_LEVEL 2  
 ```  
   
-일반 정품 빌드에서는 `_ITERATOR_DEBUG_LEVEL`을 2로 설정할 수 없고 `_HAS_ITERATOR_DEBUGGING`을 1로 설정할 수 없습니다.  
+`_ITERATOR_DEBUG_LEVEL` cannot be set to 2 (and `_HAS_ITERATOR_DEBUGGING` cannot be set to 1) in retail builds.  
   
-디버그 빌드에서 디버그 반복기를 사용하지 않도록 설정하려면 `_ITERATOR_DEBUG_LEVEL`을 0 또는 1로 설정합니다. 이 값은 `_HAS_ITERATOR_DEBUGGING` 설정 0(사용 안 함)과 동일합니다.  
+To disable debug iterators in debug builds, set `_ITERATOR_DEBUG_LEVEL` to 0 or 1. This is equivalent to a `_HAS_ITERATOR_DEBUGGING` setting of 0, or disabled:  
   
 ```  
 #define _ITERATOR_DEBUG_LEVEL 0  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)   
- [디버그 반복기 지원](../standard-library/debug-iterator-support.md)   
- [확인된 반복기](../standard-library/checked-iterators.md)   
- [안전한 라이브러리: C++ 표준 라이브러리](../standard-library/safe-libraries-cpp-standard-library.md)
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)   
+ [Checked Iterators](../standard-library/checked-iterators.md)   
+ [Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md)
 
 

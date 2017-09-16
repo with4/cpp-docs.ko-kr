@@ -1,119 +1,138 @@
 ---
-title: "리본 디자이너(MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.ribbon.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 리본 디자이너"
-  - "리본 디자이너(MFC)"
+title: Ribbon Designer (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.ribbon.F1
+dev_langs:
+- C++
+helpviewer_keywords:
+- Ribbon Designer (MFC)
+- MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# 리본 디자이너(MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21372eebe92c9cba42d25f79b9e2ffc32f43f019
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-리본 디자이너를 사용하여 MFC 응용 프로그램에서 리본을 만들고 사용자 지정할 수 있습니다.  리본은 명령을 논리 그룹으로 구성하는 UI\(사용자 인터페이스\) 요소입니다.  이러한 그룹은 창 위쪽을 가로지르는 스트립에 별도의 탭으로 나타납니다.  리본은 메뉴 모음 및 도구 모음을 대체합니다.  리본으로 응용 프로그램 사용 편의성을 크게 향상시킬 수 있습니다.  자세한 내용은 [리본](http://go.microsoft.com/fwlink/?LinkId=129233)을 참조하세요.  다음 그림에서는 리본을 보여 줍니다.  
+---
+# <a name="ribbon-designer-mfc"></a>Ribbon Designer (MFC)
+The Ribbon Designer lets you create and customize ribbons in MFC applications. A ribbon is a user interface (UI) element that organizes commands into logical groups. These groups appear on separate tabs in a strip across the top of the window. The ribbon replaces the menu bar and toolbars. A ribbon can significantly improve application usability. For more information, see [Ribbons](http://go.microsoft.com/fwlink/linkid=129233). The following illustration shows a ribbon.  
   
- ![MFC 리본 리소스 컨트롤](../mfc/media/ribbon_no_callouts.png "Ribbon\_No\_Callouts")  
+ ![MFC Ribbon Resource Control](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
- 이전 버전의 Visual Studio에서 리본을 만들려면 [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md) 같은 MFC 리본 클래스를 사용하는 코드를 작성해야 했습니다.  [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]에서는 리본 디자이너가 제공하는 다른 방법을 사용하여 리본을 작성합니다. 먼저 리소스로 리본을 만들고 사용자 지정합니다.  그런 다음 MFC 응용 프로그램의 코드에서 리본 리소스를 로드합니다.  리본 리소스와 MFC 리본 클래스를 함께 사용할 수도 있습니다.  예를 들어 리본 리소스를 만든 다음 런타임에 코드를 사용하여 프로그래밍 방식으로 더 많은 요소를 추가할 수 있습니다.  
+ In earlier versions of Visual Studio, ribbons had to be created by writing code that uses the MFC ribbon classes such as [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). In [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], the ribbon designer provides an alternative method for building ribbons. First, create and customize a ribbon as a resource. Then load the ribbon resource from code in the MFC application. You can even use ribbon resources and MFC ribbon classes together. For example, you can create a ribbon resource, and then programmatically add more elements to it at runtime by using code.  
   
-## 리본 디자이너 이해  
- 리본 디자이너는 리소스로 리본을 만들고 저장합니다.  리본 리소스를 만들 때 리본 디자이너는 다음과 같은 세 가지 작업을 수행합니다.  
+## <a name="understanding-the-ribbon-designer"></a>Understanding the Ribbon Designer  
+ The ribbon designer creates and stores the ribbon as a resource. When you create a ribbon resource, the ribbon designer does these three things:  
   
--   프로젝트 리소스 정의 스크립트\(\*.rc\)에 항목을 추가합니다.  다음 예제에서 `IDR_RIBBON`은 리본 리소스를 식별하는 고유한 이름이고, `RT_RIBBON_XML`은 리소스 종류이며, `ribbon.mfcribbon-ms`는 리소스 파일의 이름입니다.  
+-   Adds an entry in the project resource definition script (*.rc). In the following example, `IDR_RIBBON` is the unique name that identifies the ribbon resource, `RT_RIBBON_XML` is the resource type, and `ribbon.mfcribbon-ms` is the name of the resource file.  
   
-    ```  
-    IDR_RIBBON             RT_RIBBON_XML                      "res\\ribbon.mfcribbon-ms"  
-    ```  
+ ```  
+    IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  
+ ```  
   
--   resource.h에 명령 ID의 정의를 추가합니다.  
+-   Adds the definitions of Command IDs to resource.h.  
   
-    ```  
-    #define IDR_RIBBON            307  
-    ```  
+ ```  
+ #define IDR_RIBBON            307  
+ ```  
   
--   리본의 단추, 컨트롤 및 특성을 정의하는 XML 코드가 포함되는 리본 리소스 파일\(\*.mfcribbon\-ms\)을 만듭니다.  리본 디자이너에서 리본을 변경한 내용은 XML로 리소스 파일에 저장됩니다.  다음 코드 예제에서는 \*.mfcribbon\-ms 파일의 내용 일부를 보여 줍니다.  
+-   Creates a ribbon resource file (*.mfcribbon-ms) that contains the XML code that defines the ribbon's buttons, controls, and attributes. Changes to the ribbon in the ribbon designer are stored in the resource file as XML. The following code example shows part of the contents of a \*.mfcribbon-ms file:  
   
-    ```  
-    <RIBBON_BAR>  
-      <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
-      <IMAGE>  
-        <ID>  
-          <NAME>IDB_BUTTONS</NAME>  
-          <VALUE>113</VALUE>  
-        </ID> …  
-    ```  
+ ```  
+ <RIBBON_BAR>  
+ <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
+ <IMAGE>  
+ <ID>  
+ <NAME>IDB_BUTTONS</NAME>  
+ <VALUE>113</VALUE>  
+ </ID>   
+ ```  
   
- MFC 응용 프로그램에서 리본 리소스를 사용하려면 [CMFCRibbonBar::LoadFromResource](../Topic/CMFCRibbonBar::LoadFromResource.md)를 호출하여 리소스를 로드합니다.  
+ To use the ribbon resource in your MFC application, load the resource by calling [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).  
   
-## 리본 디자이너를 사용하여 리본 만들기  
- 다음은 MFC 프로젝트에 리본 리소스를 추가하는 두 가지 방법입니다.  
+## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Creating a Ribbon By Using the Ribbon Designer  
+ These are the two ways to add a ribbon resource to your MFC project:  
   
--   MFC 응용 프로그램을 만들고 MFC 프로젝트 마법사를 구성하여 리본을 만듭니다.  자세한 내용은 [연습: MFC를 사용하여 리본 응용 프로그램 만들기](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)를 참조하세요.  
+-   Create an MFC application and configure the MFC Project Wizard to create the ribbon. For more information, see [Walkthrough: Creating a Ribbon Application By Using MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
   
--   기존 MFC 프로젝트에서 리본 리소스를 만들고 로드합니다.  자세한 내용은 [연습: MFC 자유 곡선 응용 프로그램 업데이트\(파트 1\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)를 참조하세요.  
+-   In an existing MFC project, create a ribbon resource and load it. For more information, see [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
- 프로젝트에 수동으로 코딩된 리본이 이미 있는 경우 MFC에서 기존 리본을 리본 리소스로 변환하는 데 사용할 수 있는 함수를 제공합니다.  자세한 내용은 [방법: 기존 MFC 리본을 리본 리소스로 변환](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)을 참조하세요.  
+ If your project already has a manually coded ribbon, MFC has functions that you can use to convert the existing ribbon to a ribbon resource. For more information, see [How to: Convert an Existing MFC Ribbon to a Ribbon Resource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
   
 > [!NOTE]
->  대화 상자 기반 응용 프로그램에서는 리본을 만들 수 없습니다.  자세한 내용은 [MFC 응용 프로그램 마법사, 응용 프로그램 종류](../mfc/reference/application-type-mfc-application-wizard.md)를 참조하세요.  
+>  Ribbons cannot be created in dialog-based applications. For more information, see [Application Type, MFC Application Wizard](../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## 리본 사용자 지정  
- 리본 디자이너에서 리본을 열려면 리소스 뷰에서 리본 리소스를 두 번 클릭합니다.  디자이너에서 리본의 요소, 응용 프로그램 단추 또는 빠른 실행 도구 모음을 추가, 제거 및 사용자 지정할 수 있습니다.  이벤트\(예: 단추 클릭 이벤트 및 메뉴 이벤트\)를 응용 프로그램의 메서드에 연결할 수도 있습니다.  
+## <a name="customizing-ribbons"></a>Customizing Ribbons  
+ To open a ribbon in the ribbon designer, double-click the ribbon resource in Resource View. In the designer, you can add, remove, and customize elements on the ribbon, the Application button, or the quick access toolbar. You can also link events, for example, button-click events and menu events, to a method in your application.  
   
- 다음 그림에서는 리본 디자이너의 다양한 구성 요소를 보여 줍니다.  
+ The following illustration shows the various components in the ribbon designer.  
   
- ![MFC 리본 디자이너](../mfc/media/ribbon_designer.png "Ribbon\_Designer")  
+ ![MFC Ribbon Designer](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
--   **도구 상자:** 디자이너 화면으로 끌어 놓을 수 있는 컨트롤을 포함합니다.  
+- **Toolbox:** Contains controls that can be dragged to the designer surface.  
   
--   **디자이너 화면:** 리본 리소스의 시각적 표현을 포함합니다.  
+- **Designer Surface:** Contains the visual representation of the ribbon resource.  
   
--   **속성 창:** 디자이너 화면에서 선택한 항목의 특성을 나열합니다.  
+- **Properties window:** Lists the attributes of the item that is selected on the designer surface.  
   
--   **리소스 뷰 창:** 리본 리소스를 포함하는 리소스를 프로젝트에서 표시합니다.  
+- **Resource View window:** Displays the resources that include ribbon resources, in your project.  
   
--   **Ribbon 편집기 도구 모음:** 리본을 미리 보고 시각적 테마를 변경할 수 있는 명령을 포함합니다.  
+- **Ribbon Editor Toolbar:** Contains commands that let you preview the ribbon and change its visual theme.  
   
- 다음 항목에서는 리본 디자이너의 기능을 사용하는 방법에 대해 설명합니다.  
+ The following topics describe how to use the features in the ribbon designer:  
   
--   [방법: 응용 프로그램 단추 사용자 지정](../mfc/how-to-customize-the-application-button.md)  
+- [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
--   [방법: 빠른 실행 도구 모음 사용자 지정](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+- [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
--   [방법: 리본 컨트롤 및 이벤트 처리기 추가](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
+- [How to: Add Ribbon Controls and Event Handlers](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
   
--   [방법: MFC 응용 프로그램에서 리본 리소스 로드](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
+- [How to: Load a Ribbon Resource from an MFC Application](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
-## 리본 요소의 정의  
- ![MFC 리본](../mfc/media/ribbon.png "Ribbon")  
+## <a name="definitions-of-ribbon-elements"></a>Definitions of Ribbon Elements  
+ ![MFC Ribbon](../mfc/media/ribbon.png "ribbon")  
   
--   **응용 프로그램 단추:** 리본의 왼쪽 위 모서리에 나타나는 단추입니다.  응용 프로그램 단추는 파일 메뉴를 대체하고 리본이 최소화되는 경우에도 표시됩니다.  이 단추를 클릭하면 명령 목록이 있는 메뉴가 표시됩니다.  
+- **Application button:** The button that appears on the upper-left corner of a ribbon. The Application button replaces the File menu and is visible even when the ribbon is minimized. When the button is clicked, a menu that has a list of commands is displayed.  
   
--   **빠른 실행 도구 모음:** 자주 사용하는 명령을 표시하는 작고 사용자 지정 가능한 도구 모음입니다.  
+- **Quick Access toolbar:** A small, customizable toolbar that displays frequently used commands.  
   
--   **범주**: 리본 탭의 내용을 나타내는 논리적 그룹화입니다.  
+- **Category**: The logical grouping that represents the contents of a ribbon tab.  
   
--   **범주 기본값 단추:** 리본이 최소화되었을 때 리본에 나타나는 단추입니다.  단추를 클릭하면 범주가 메뉴로 다시 나타납니다.  
+- **Category Default button:** The button that appears on the ribbon when the ribbon is minimized. When the button is clicked, the category reappears as a menu.  
   
--   **패널:** 관련된 컨트롤 그룹을 표시하는 리본 표시줄의 영역입니다.  모든 리본 범주에는 하나 이상의 리본 패널이 있습니다.  
+- **Panel:** An area of the ribbon bar that displays a group of related controls. Every ribbon category contains one or more ribbon panels.  
   
--   **리본 요소:** 단추, 콤보 상자 등 패널에 있는 컨트롤입니다.  리본에서 호스트할 수 있는 다양한 컨트롤을 보려면 [RibbonGadgets 샘플: 리본 가젯 응용 프로그램](../top/visual-cpp-samples.md)을 참조하세요.  
+- **Ribbon elements:** Controls in the panels, for example, buttons and combo boxes. To see the various controls that can be hosted on a ribbon, see [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md).  
   
-## 참고 항목  
- [사용자 인터페이스 요소](../mfc/user-interface-elements-mfc.md)   
- [Working with Resource Files](../mfc/working-with-resource-files.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Working with Resource Files](../windows/working-with-resource-files.md)
+
+

@@ -1,11 +1,11 @@
 ---
-title: "&lt;functional&gt; 함수 | Microsoft 문서"
+title: '&lt;functional&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -47,20 +47,54 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- functional functions
+- std::bind [C++]
+- std::bind1st
+- std::bind2nd
+- std::bit_and [C++]
+- std::bit_not [C++]
+- std::bit_or [C++]
+- std::bit_xor [C++]
+- std::cref [C++]
+- 
+- std::mem_fn [C++]
+- std::mem_fun [C++]
+- std::mem_fun_ref [C++]
+- std::not1
+- std::not2
+- std::ptr_fun [C++]
+- std::ref [C++]
+- 
+- std::swap [C++]
+- 
+- std::bind [C++]
+- std::bind1st
+- std::bind2nd
+- std::bit_and [C++]
+- std::bit_not [C++]
+- std::bit_or [C++]
+- std::bit_xor [C++]
+- std::cref [C++]
+- std::mem_fn [C++]
+- std::mem_fun [C++]
+- std::mem_fun_ref [C++]
+- std::not1
+- std::not2
+- std::ptr_fun [C++]
+- std::ref [C++]
+- std::swap [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 16d93ad5a46dccbc53fa67a08e2f8432b18f14b5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2bfc2d23e642167528730a8abee406931625b3bd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 함수
+# <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; functions
 ||||  
 |-|-|-|  
 |[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|  
@@ -71,7 +105,7 @@ ms.lasthandoff: 04/19/2017
 |[swap](#swap)|  
   
 ##  <a name="bind"></a>  bind  
- 호출 가능 개체에 인수를 바인딩합니다.  
+ Binds arguments to a callable object.  
   
 ```  
 template <class Fty, class T1, class T2, ..., class TN>  
@@ -81,43 +115,43 @@ template <class Ret, class Fty, class T1, class T2, ..., class TN>
 unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Fty`  
- 호출할 개체의 형식입니다.  
+ The type of the object to call.  
   
  `TN`  
- N번째 인수의 형식입니다.  
+ The type of the Nth call argument.  
   
  `fn`  
- 호출할 개체입니다.  
+ The object to call.  
   
  `tN`  
- N번째 호출 인수입니다.  
+ The Nth call argument.  
   
-### <a name="remarks"></a>설명  
- `Fty, T1, T2, ..., TN` 형식은 복사를 통해 생성할 수 있어야 하고 `INVOKE(fn, t1, ..., tN)`은 일부 값 `w1, w2, ..., wN`에 대한 유효한 식이어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The types `Fty, T1, T2, ..., TN` must be copy constructible, and `INVOKE(fn, t1, ..., tN)` must be a valid expression for some values `w1, w2, ..., wN`.  
   
- 첫 번째 템플릿 함수는 약한 결과 형식이 포함된 전달 호출 래퍼 `g`를 반환합니다. 효과 `g(u1, u2, ..., uM)` 은 `INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`여기서 `cv` 의 cv 한정자는 `g` 바인딩된 인수 형식 및 값 `v1, v2, ..., vN` 아래 지정 된 대로 결정 됩니다. 이를 사용하여 인수를 호출 가능 개체에 바인딩하면 맞춤형 인수 목록이 포함된 호출 가능 개체가 생성됩니다.  
+ The first template function returns a forwarding call wrapper `g` with a weak result type. The effect of `g(u1, u2, ..., uM)` is `INVOKE(f, v1, v2, ..., vN, `[result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, where `cv` is the cv-qualifiers of `g` and the values and types of the bound arguments `v1, v2, ..., vN` are determined as specified below. You use it to bind arguments to a callable object to make a callable object with a tailored argument list.  
   
- 두 번째 템플릿 함수는 `Ret`의 동의어인 중첩된 형식 `result_type`이 포함된 전달 호출 래퍼 `g`를 반환합니다. `g(u1, u2, ..., uM)`의 결과는 `INVOKE(f, v1, v2, ..., vN, Ret)`입니다. 여기서 `cv`는 `g`의 cv 한정자이고 바인딩된 인수 `v1, v2, ..., vN`의 값과 형식은 아래 지정된 대로 결정됩니다. 이를 사용하여 인수를 호출 가능 개체에 바인딩하면 맞춤형 인수 목록 및 지정된 반환 형식이 포함된 호출 가능 개체가 생성됩니다.  
+ The second template function returns a forwarding call wrapper `g` with a nested type `result_type` that is a synonym for `Ret`. The effect of `g(u1, u2, ..., uM)` is `INVOKE(f, v1, v2, ..., vN, Ret)`, where `cv` is the cv-qualifiers of `g` and the values and types of the bound arguments `v1, v2, ..., vN` are determined as specified below. You use it to bind arguments to a callable object to make a callable object with a tailored argument list and with a specified return type.  
   
- 바인딩된 인수 `v1, v2, ..., vN` 및 해당 형식 `V1, V2, ..., VN`의 값은 다음과 같이 `bind` 호출 시 `Ti` 형식에 대한 해당 인수 `ti`의 형식 및 호출 래퍼 `g`의 cv 한정자 `cv`에 따라 결정됩니다.  
+ The values of the bound arguments `v1, v2, ..., vN` and their corresponding types `V1, V2, ..., VN` depend on the type of the corresponding argument `ti` of type `Ti` in the call to `bind` and the cv-qualifiers `cv` of the call wrapper `g` as follows:  
   
- `ti`가 `reference_wrapper<T>` 형식인 경우 `vi` 인수의 값은 `ti.get()`이고 해당 형식 `Vi`의 값은 `T&`입니다.  
+ if `ti` is of type `reference_wrapper<T>` the argument `vi` is `ti.get()` and its type `Vi` is `T&`;  
   
- `std::is_bind_expression<Ti>::value` 값이 `true`인 경우 `vi` 인수의 값은 `ti(u1, u2, ..., uM)`이고 해당 형식 `Vi`의 값은 `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`입니다.  
+ if the value of `std::is_bind_expression<Ti>::value` is `true` the argument `vi` is `ti(u1, u2, ..., uM)` and its type `Vi` is `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;  
   
- `std::is_placeholder<Ti>::value`의 `j` 값이 0이 아닌 경우 `vi` 인수의 값은 `uj`이고 해당 형식 `Vi`의 값은 `Uj&`입니다.  
+ if the value `j` of `std::is_placeholder<Ti>::value` is not zero the argument `vi` is `uj` and its type `Vi` is `Uj&`;  
   
- 이외의 경우에는 `vi` 인수의 값은 `ti`이고 해당 형식 `Vi`의 값은 `Ti` `cv` `&`입니다.  
+ otherwise the argument `vi` is `ti` and its type `Vi` is `Ti` `cv` `&`.  
   
- 예를 들어 `f(int, int)` 함수의 경우 `bind(f, _1, 0)` 식은 전달 호출 래퍼 `cw`를 반환하므로 `cw(x)`가 `f(x, 0)`을 호출합니다. `bind(f, 0, _1)` 식은 전달 호출 래퍼 `cw`를 반환하므로 `cw(x)`가 `f(0, x)`를 반환합니다.  
+ For example, given a function `f(int, int)` the expression `bind(f, _1, 0)` returns a forwarding call wrapper `cw` such that `cw(x)` calls `f(x, 0)`. The expression `bind(f, 0, _1)` returns a forwarding call wrapper `cw` such that `cw(x)` calls `f(0, x)`.  
   
- `fn` 인수 이외에 `bind` 호출의 인수 개수는 호출 가능 개체 `fn`에 전달할 수 있는 인수 개수와 같아야 합니다. 따라서 `bind(cos, 1.0)`은 올바른 값이고 `bind(cos)` 및 `bind(cos, _1, 0.0)`은 둘 다 잘못된 값입니다.  
+ The number of arguments in a call to `bind` in addition to the argument `fn` must be equal to the number of arguments that can be passed to the callable object `fn`. Thus, `bind(cos, 1.0)` is correct, and both `bind(cos)` and `bind(cos, _1, 0.0)` are incorrect.  
   
- `bind`에서 반환된 호출 래퍼에 대한 함수 호출의 인수 개수는 `bind` 호출의 모든 자리 표시자 인수에 대한 `is_placeholder<PH>::value`의 번호가 가장 높은 값보다 크거나 같아야 합니다. 따라서 `bind(cos, _2)(0.0, 1.0)`은 올바른 값이고 `cos(1.0)`을 반환하며, `bind(cos, _2)(0.0)`은 잘못된 값입니다.  
+ The number of arguments in the function call to the call wrapper returned by `bind` must be at least as large as the highest numbered value of `is_placeholder<PH>::value` for all of the placeholder arguments in the call to `bind`. Thus, `bind(cos, _2)(0.0, 1.0)` is correct (and returns `cos(1.0)`), and `bind(cos, _2)(0.0)` is incorrect.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__bind.cpp   
@@ -170,29 +204,29 @@ int main()
 ```  
   
 ##  <a name="bind1st"></a>  bind1st  
- 이항 함수의 첫 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 어댑터를 만드는 도우미 템플릿 함수입니다.  
+ A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the first argument of the binary function to a specified value.  
   
 ```  
 template <class Operation, class Type>  
 binder1st <Operation> bind1st (const Operation& func, const Type& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `func`  
- 단항 함수 개체로 변환할 이항 함수 개체입니다.  
+ The binary function object to be converted to a unary function object.  
   
  `left`  
- 이항 함수 개체의 첫 번째 인수가 바인딩되는 값입니다.  
+ The value to which the first argument of the binary function object is to be bound.  
   
-### <a name="return-value"></a>반환 값  
- 이진 함수 개체의 첫 번째 인수는 값에 바인딩할 결과인 개체를 단항 함수 `left`합니다.  
+### <a name="return-value"></a>Return Value  
+ The unary function object that results from binding the first argument of the binary function object to the value `left`.  
   
-### <a name="remarks"></a>설명  
- 함수 바인더는 일종의 함수 어댑터이고, 함수 개체를 반환할 경우 특정 형식의 함수 컴퍼지션에서 더 복잡하고 강력한 식을 생성하는 데 사용될 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Function binders are a kind of function adaptor and, because they return function objects, can be used in certain types of function composition to construct more complicated and powerful expressions.  
   
- `func`가 `Operation` 형식 개체이고 `c`가 상수이면 `bind1st`(`func`, `c`)는 [binder1st](../standard-library/binder1st-class.md) 클래스 생성자 `binder1st`< `Operation`>(`func`, `c`)과 동일하고 더 편리합니다.  
+ If `func` is an object of type `Operation` and `c` is a constant, then `bind1st` ( `func`, `c`) is equivalent to the [binder1st](../standard-library/binder1st-class.md) class constructor `binder1st`< `Operation`> ( `func`, `c`) and is more convenient.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_bind1st.cpp  
@@ -260,29 +294,29 @@ The number of elements in v1 less than 10 is: 2.
 ```  
   
 ##  <a name="bind2nd"></a>  bind2nd  
- 이항 함수의 두 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 어댑터를 만드는 도우미 템플릿 함수입니다.  
+ A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the second argument of the binary function to a specified value.  
   
 ```  
 template <class Operation, class Type>  
 binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `func`  
- 단항 함수 개체로 변환할 이항 함수 개체입니다.  
+ The binary function object to be converted to a unary function object.  
   
  `right`  
- 이항 함수 개체의 두 번째 인수가 바인딩되는 값입니다.  
+ The value to which the second argument of the binary function object is to be bound.  
   
-### <a name="return-value"></a>반환 값  
- 이항 함수 개체의 두 번째 인수는 값에 바인딩할 결과인 단항 함수 개체로 `right`합니다.  
+### <a name="return-value"></a>Return Value  
+ The unary function object that results from binding the second argument of the binary function object to the value `right`.  
   
-### <a name="remarks"></a>설명  
- 함수 바인더는 일종의 함수 어댑터이고, 함수 개체를 반환할 경우 특정 형식의 함수 컴퍼지션에서 더 복잡하고 강력한 식을 생성하는 데 사용될 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Function binders are a kind of function adaptor and, because they return function objects, can be used in certain types of function composition to construct more complicated and powerful expressions.  
   
- `func`가 **Operation** 형식 개체이고 `c`가 상수이면 `bind2nd`(`func`, `c`)는 [binder2nd](../standard-library/binder2nd-class.md) 클래스 생성자 **binder2nd\<Operation>**(`func`, `c`)과 동일하고 더 편리합니다.  
+ If `func` is an object of type **Operation** and `c` is a constant, then `bind2nd` ( `func`, `c` ) is equivalent to the [binder2nd](../standard-library/binder2nd-class.md) class constructor **binder2nd\<Operation>** ( `func`, `c` ) and more convenient.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_bind2nd.cpp  
@@ -350,7 +384,7 @@ The number of elements in v1 less than 10 is: 2.
 ```  
   
 ##  <a name="bit_and"></a>  bit_and  
- 인수에 대해 비트 AND 연산(이항 `operator&`)을 수행하는 사전 정의된 함수 개체입니다.  
+ A predefined function object that performs the bitwise AND operation (binary `operator&`) on its arguments.  
   
 ```  
 template <class Type = void>  
@@ -370,24 +404,24 @@ struct bit_and<void>
 };
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 지정되었거나 유추된 형식의 피연산자를 가져오는 `operator&`를 지원하는 모든 형식입니다.  
+ Any type that supports an `operator&` that takes operands of the specified or inferred types.  
   
  `Left`  
- 비트 AND 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The left operand of the bitwise AND operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 비트 AND 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The right operand of the bitwise AND operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-### <a name="return-value"></a>반환 값  
- `Left``&``Right`의 결과입니다. 특수화된 템플릿은 `operator&`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
+### <a name="return-value"></a>Return Value  
+ The result of `Left & Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator&`.  
   
-### <a name="remarks"></a>설명  
- `bit_and` 함수는 기본 데이터 형식에 대한 필수 형식이나 이항 `operator&`를 구현하는 사용자 정의 형식으로 제한됩니다.  
+### <a name="remarks"></a>Remarks  
+ The `bit_and` functor is restricted to integral types for the basic data types, or to user-defined types that implement binary `operator&`.  
   
 ##  <a name="bit_not"></a>  bit_not  
- 인수에 대해 비트 보수(NOT) 연산(이항 `operator~`)을 수행하는 사전 정의된 함수 개체입니다.  
+ A predefined function object that performs the bitwise complement (NOT) operation (unary `operator~`) on its argument.  
   
 ```  
 template <class Type = void>  
@@ -405,21 +439,21 @@ struct bit_not<void>
  };  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Type`  
- 이항 `operator~`를 지원하는 형식입니다.  
+ A type that supports a unary `operator~`.  
   
  `Right`  
- 비트 보수 연산의 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `Type`의 lvalue 또는 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The operand of the bitwise complement operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of an lvalue or rvalue reference argument of inferred type `Type`.  
   
-### <a name="return-value"></a>반환 값  
- `~``Right`의 결과입니다. 특수화된 템플릿은 `operator~`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
+### <a name="return-value"></a>Return Value  
+ The result of `~ Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator~`.  
   
-### <a name="remarks"></a>설명  
- `bit_not` 함수는 기본 데이터 형식에 대한 필수 형식이나 이항 `operator~`를 구현하는 사용자 정의 형식으로 제한됩니다.  
+### <a name="remarks"></a>Remarks  
+ The `bit_not` functor is restricted to integral types for the basic data types, or to user-defined types that implement binary `operator~`.  
   
 ##  <a name="bit_or"></a>  bit_or  
- 인수에 대해 비트 OR 연산(`operator|`)을 수행하는 사전 정의된 함수 개체입니다.  
+ A predefined function object that performs the bitwise OR operation ( `operator|`) on its arguments.  
   
 ```  
 template <class Type = void>  
@@ -439,24 +473,24 @@ struct bit_or<void>
 };
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 지정되었거나 유추된 형식의 피연산자를 가져오는 `operator|`를 지원하는 모든 형식입니다.  
+ Any type that supports an `operator|` that takes operands of the specified or inferred types.  
   
  `Left`  
- 비트 OR 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The left operand of the bitwise OR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 비트 OR 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The right operand of the bitwise OR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-### <a name="return-value"></a>반환 값  
- `Left``|``Right`의 결과입니다. 특수화된 템플릿은 `operator|`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
+### <a name="return-value"></a>Return Value  
+ The result of `Left | Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator|`.  
   
-### <a name="remarks"></a>설명  
- `bit_or` 함수는 기본 데이터 형식에 대한 필수 형식이나 `operator|`를 구현하는 사용자 정의 형식으로 제한됩니다.  
+### <a name="remarks"></a>Remarks  
+ The `bit_or` functor is restricted to integral types for the basic data types, or to user-defined types that implement `operator|`.  
   
 ##  <a name="bit_xor"></a>  bit_xor  
- 인수에 대해 비트 XOR 연산(이항 `operator^`)을 수행하는 사전 정의된 함수 개체입니다.  
+ A predefined function object that performs the bitwise XOR operation (binary `operator^`) on its arguments.  
   
 ```  
 template <class Type = void>  
@@ -476,24 +510,24 @@ struct bit_xor<void>
 };
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 지정되었거나 유추된 형식의 피연산자를 가져오는 `operator^`를 지원하는 모든 형식입니다.  
+ Any type that supports an `operator^` that takes operands of the specified or inferred types.  
   
  `Left`  
- 비트 XOR 연산의 왼쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `T`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The left operand of the bitwise XOR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 비트 XOR 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
+ The right operand of the bitwise XOR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-### <a name="return-value"></a>반환 값  
- `Left``^``Right`의 결과입니다. 특수화된 템플릿은 `operator^`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
+### <a name="return-value"></a>Return Value  
+ The result of `Left ^ Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator^`.  
   
-### <a name="remarks"></a>설명  
- `bit_xor` 함수는 기본 데이터 형식에 대한 필수 형식이나 이항 `operator^`를 구현하는 사용자 정의 형식으로 제한됩니다.  
+### <a name="remarks"></a>Remarks  
+ The `bit_xor` functor is restricted to integral types for the basic data types, or to user-defined types that implement binary `operator^`.  
   
 ##  <a name="cref"></a>  cref  
- 인수에서 const `reference_wrapper`를 생성합니다.  
+ Constructs a const `reference_wrapper` from an argument.  
   
 ```  
 template <class Ty>  
@@ -503,17 +537,17 @@ template <class Ty>
 reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 래핑할 인수의 형식입니다.  
+ The type of the argument to wrap.  
   
  `arg`  
- 래핑할 인수입니다.  
+ The argument to wrap.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 함수는 `reference_wrapper<const Ty>(arg.get())`를 반환합니다. 이를 사용하여 상수 참조를 래핑합니다. 두 번째 함수는 `reference_wrapper<const Ty>(arg)`를 반환합니다. 이 함수를 사용하여 래핑된 참조를 상수 참조로 다시 래핑합니다.  
+### <a name="remarks"></a>Remarks  
+ The first function returns `reference_wrapper<const Ty>(arg.get())`. You use it to wrap a const reference. The second function returns `reference_wrapper<const Ty>(arg)`. You use it to rewrap a wrapped reference as a const reference.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__cref.cpp   
@@ -547,28 +581,28 @@ cref(neg)(i) = -1
 ```  
   
 ##  <a name="mem_fn"></a>  mem_fn  
- 단순 호출 래퍼를 생성합니다.  
+ Generates a simple call wrapper.  
   
 ```  
 template <class Ret, class Ty>  
 unspecified mem_fn(Ret Ty::*pm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ret`  
- 래핑된 함수의 반환 형식입니다.  
+ The return type of the wrapped function.  
   
  `Ty`  
- 멤버 함수 포인터의 형식입니다.  
+ The type of the member function pointer.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수는 약한 결과 형식이 포함된 단순 호출 래퍼 `cw`를 반환하므로 `cw(t, a2, ..., aN)` 식은 `INVOKE(pm, t, a2, ..., aN)`과 같습니다. 이 함수는 예외를 throw하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns a simple call wrapper `cw`, with a weak result type, such that the expression `cw(t, a2, ..., aN)` is equivalent to `INVOKE(pm, t, a2, ..., aN)`. It does not throw any exceptions.  
   
- `Ty` 형식이 인수를 사용하지 않는 cv 한정자 `cv`가 포함된 멤버 함수 포인터인 경우에만 반환된 호출 래퍼가 `std::unary_function<cv Ty*, Ret>`에서 파생됩니다. 나중에 이 호출 래퍼는 중첩된 형식 `result_type`을 `Ret`의 동의어로, 중첩된 형식 `argument_type`을 `cv Ty*`의 동의어로 정의합니다.  
+ The returned call wrapper is derived from `std::unary_function<cv Ty*, Ret>` (hence defining the nested type `result_type` as a synonym for `Ret` and the nested type `argument_type` as a synonym for `cv Ty*`) only if the type `Ty` is a pointer to member function with cv-qualifier `cv` that takes no arguments.  
   
- `Ty` 형식이 `T2` 형식의 인수 하나를 사용하는 cv 한정자 `cv`가 포함된 멤버 함수 포인터인 경우에만 반환된 호출 래퍼가 `std::binary_function<cv Ty*, T2, Ret>`에서 파생됩니다. 나중에 이 호출 래퍼는 중첩된 형식 `result_type`을 `Ret`의 동의어로, 중첩된 형식 `first argument_type`을 `cv Ty*`의 동의어로, 중첩된 형식 `second argument_type`을 `T2`의 동의어로 정의합니다.  
+ The returned call wrapper is derived from `std::binary_function<cv Ty*, T2, Ret>` (hence defining the nested type `result_type` as a synonym for `Ret`, the nested type `first argument_type` as a synonym for `cv Ty*`, and the nested type `second argument_type` as a synonym for `T2`) only if the type `Ty` is a pointer to member function with cv-qualifier `cv` that takes one argument, of type `T2`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__mem_fn.cpp   
@@ -608,7 +642,7 @@ int main()
 ```  
   
 ##  <a name="mem_fun"></a>  mem_fun  
- 포인터 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다.  
+ Helper template functions used to construct function object adaptors for member functions when initialized with pointer arguments.  
   
 ```  
 template <class Result, class Type>  
@@ -624,14 +658,14 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pmem`  
- 함수 개체로 변환할 **Type** 클래스의 멤버 함수 포인터입니다.  
+ A pointer to the member function of class **Type** to be converted to a function object.  
   
-### <a name="return-value"></a>반환 값  
- `mem_fun_t` 또는 `mem_fun1_t` 형식의 **const** 또는 **non_const** 함수 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A **const** or **non_const** function object of type `mem_fun_t` or `mem_fun1_t`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_mem_fun.cpp  
@@ -692,7 +726,7 @@ int main( )
 ```  
   
 ##  <a name="mem_fun_ref"></a>  mem_fun_ref  
- 참조 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다.  
+ Helper template functions used to construct function object adaptors for member functions when initialized by using reference arguments.  
   
 ```  
 template <class Result, class Type>  
@@ -708,14 +742,14 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) const);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pmem`  
- 함수 개체로 변환할 `Type` 클래스의 멤버 함수 포인터입니다.  
+ A pointer to the member function of class `Type` to be converted to a function object.  
   
-### <a name="return-value"></a>반환 값  
- `mem_fun_ref_t` 또는 `mem_fun1_ref_t` 형식의 `const` 또는 `non_const` 함수 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A `const` or `non_const` function object of type `mem_fun_ref_t` or `mem_fun1_ref_t`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_mem_fun_ref.cpp  
@@ -794,24 +828,24 @@ With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```  
   
 ##  <a name="not1"></a>  not1  
- 단항 조건자의 보수를 반환합니다.  
+ Returns the complement of a unary predicate.  
   
 ```  
 template <class UnaryPredicate>  
 unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pred`  
- 부정할 단항 조건자입니다.  
+ The unary predicate to be negated.  
   
-### <a name="return-value"></a>반환 값  
- 수정된 단항 조건자의 부정을 나타내는 단항 조건자입니다.  
+### <a name="return-value"></a>Return Value  
+ A unary predicate that is the negation of the unary predicate modified.  
   
-### <a name="remarks"></a>설명  
- `unary_negate`가 단항 조건자 **Pred**(*x*)에서 생성된 경우 이 함수는 **!Pred**(*x*)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ If a `unary_negate` is constructed from a unary predicate **Pred**( *x*), then it returns **!Pred**( *x*).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_not1.cpp  
@@ -862,24 +896,24 @@ The number of elements in v1 not greater than 10 is: 3.
 ```  
   
 ##  <a name="not2"></a>  not2  
- 이항 조건자의 보수를 반환합니다.  
+ Returns the complement of a binary predicate.  
   
 ```  
 template <class BinaryPredicate>  
 binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `func`  
- 부정할 이항 조건자입니다.  
+ The binary predicate to be negated.  
   
-### <a name="return-value"></a>반환 값  
- 수정된 이항 조건자의 부정을 나타내는 이항 조건자입니다.  
+### <a name="return-value"></a>Return Value  
+ A binary predicate that is the negation of the binary predicate modified.  
   
-### <a name="remarks"></a>설명  
- `binary_negate`가 이항 조건자 **BinPred**(*x*, *y*)에서 생성된 경우 이 함수는 ! **BinPred**(*x*, *y*)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ If a `binary_negate` is constructed from a binary predicate **BinPred**( *x*, *y*), then it returns ! **BinPred**( *x*, *y*).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_not2.cpp  
@@ -934,7 +968,7 @@ Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```  
   
 ##  <a name="ptr_fun"></a>  ptr_fun  
- 단항 및 이항 함수 포인터를 각각 조정 가능한 단항 및 이항 함수로 변환하는 데 사용되는 도우미 템플릿 함수입니다.  
+ Helper template functions used to convert unary and binary function pointers, respectively, into unary and binary adaptable functions.  
   
 ```  
 template <class Arg, class Result>  
@@ -944,23 +978,23 @@ template <class Arg1, class Arg2, class Result>
 pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(Result (*pfunc)(Arg1, Arg2));
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pfunc`  
- 조정 가능한 함수로 변환할 단항 또는 이항 함수 포인터입니다.  
+ The unary or binary function pointer to be converted to an adaptable function.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 템플릿 함수는 단항 함수 [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) < `Arg`, **Result**>(* `pfunc`)를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first template function returns the unary function [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) < `Arg`, **Result**>(* `pfunc`).  
   
- 두 번째 템플릿 함수는 이항 함수 [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**, **Arg2**, **Result**>(* `pfunc`)를 반환합니다.  
+ The second template function returns binary function [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**, **Arg2**, **Result**>(* `pfunc`).  
   
-### <a name="remarks"></a>설명  
- 함수 포인터는 함수 개체이고 함수를 매개 변수로 사용할 C++ 표준 라이브러리 알고리즘에 전달될 수 있지만 조정할 수는 없습니다. 함수 포인터를 어댑터와 함께 사용하려면(예: 값을 함수 포인터에 바인딩 또는 함수 포인터를 부정자와 함께 사용) 적응을 가능하게 하는 중첩된 형식을 함수 포인터에 제공해야 합니다. `ptr_fun` 도우미 함수를 통해 단항 및 이행 함수 포인터를 변환하면 함수 어댑터를 단항 및 이행 함수 포인터와 함께 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ A function pointer is a function object and may be passed to any C++ Standard Library algorithm that is expecting a function as a parameter, but it is not adaptable. To use it with an adaptor, such as binding a value to it or using it with a negator, it must be supplied with the nested types that make such an adaptation possible. The conversion of unary and binary function pointers by the `ptr_fun` helper function allows the function adaptors to work with unary and binary function pointers.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
  [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]  
   
 ##  <a name="ref"></a>  ref  
- 인수에서 `reference_wrapper` 를 생성합니다.  
+ Constructs a `reference_wrapper` from an argument.  
   
 ```  
 template <class Ty>  
@@ -970,11 +1004,11 @@ template <class Ty>
 reference_wrapper<Ty> ref(reference_wrapper<Ty>& arg);
 ```  
   
-### <a name="return-value"></a>반환 값  
- `arg`, 특히 `reference_wrapper<Ty>(arg)`에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to `arg`; specifically, `reference_wrapper<Ty>(arg)`.  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 문자열 변수에 바인딩된 함수 및 `ref`호출에서 계산된 문자열 변수의 참조에 바인딩된 함수의 두 함수를 정의합니다. 변수의 값이 변경될 경우 첫 번째 함수는 이전 값을 계속 사용하고 두 번째 함수는 새 값을 사용합니다.  
+### <a name="example"></a>Example  
+  The following example defines two functions: one bound to a string variable, the other bound to a reference of the string variable computed by a call to `ref`. When the value of the variable changes, the first function continues to use the old value and the second function uses the new value.  
   
 ```cpp  
 #include <algorithm>  
@@ -1049,27 +1083,27 @@ tiger cougar
 ```  
   
 ##  <a name="swap"></a>  swap  
- 두 `function` 개체를 교환합니다.  
+ Swaps two `function` objects.  
   
 ```  
 template <class Fty>  
 void swap(function<Fty>& f1, function<Fty>& f2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Fty`  
- 함수 개체에서 제어되는 형식입니다.  
+ The type controlled by the function objects.  
   
  `f1`  
- 첫 번째 함수 개체입니다.  
+ The first function object.  
   
  `f2`  
- 두 번째 함수 개체입니다.  
+ The second function object.  
   
-### <a name="remarks"></a>설명  
- 함수에서 `f1.swap(f2)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The function returns `f1.swap(f2)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__swap.cpp   
@@ -1112,7 +1146,7 @@ empty == false
 val == -3  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<functional>](../standard-library/functional.md)
 
 

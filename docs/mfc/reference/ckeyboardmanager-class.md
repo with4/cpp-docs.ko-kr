@@ -1,5 +1,5 @@
 ---
-title: "CKeyboardManager 클래스 | Microsoft 문서"
+title: CKeyboardManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CKeyboardManager class
+- CKeyboardManager [MFC], CKeyboardManager
+- CKeyboardManager [MFC], CleanUp
+- CKeyboardManager [MFC], FindDefaultAccelerator
+- CKeyboardManager [MFC], IsKeyHandled
+- CKeyboardManager [MFC], IsKeyPrintable
+- CKeyboardManager [MFC], IsShowAllAccelerators
+- CKeyboardManager [MFC], LoadState
+- CKeyboardManager [MFC], ResetAll
+- CKeyboardManager [MFC], SaveState
+- CKeyboardManager [MFC], ShowAllAccelerators
+- CKeyboardManager [MFC], TranslateCharToUpper
+- CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
 caps.latest.revision: 33
 author: mikeblome
@@ -46,90 +57,90 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: bbe12d2bf4af0008233df25e09f09008c402ee7f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c49d5be8f9e208defeb1752c4288e212bb5dec45
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ckeyboardmanager-class"></a>CKeyboardManager 클래스
-주 프레임 창 및 자식 프레임 창에 대한 바로 가기 키 테이블을 관리합니다.  
+# <a name="ckeyboardmanager-class"></a>CKeyboardManager Class
+Manages shortcut key tables for the main frame window and child frame windows.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CKeyboardManager : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
-  
-|||  
-|-|-|  
-|이름|설명|  
-|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|`CKeyboardManager` 개체를 생성합니다.|  
-  
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|이름|설명|  
-|[CKeyboardManager::CleanUp](#cleanup)|바로 가기 키 테이블을 지웁니다.|  
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|지정 된 명령 및 창에 대 한 기본 바로 가기 키를 검색합니다.|  
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|액셀러레이터 키 테이블에서 키를 처리할지 여부를 결정 합니다.|  
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|인쇄 가능한 문자 인지를 나타냅니다.|  
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|메뉴 명령에 대 한 모든 바로 가기 키 또는 기본 바로 가기 키 표시 여부를 나타냅니다.|  
-|[CKeyboardManager::LoadState](#loadstate)|Windows 레지스트리에서 바로 가기 키 테이블을 로드합니다.|  
-|[CKeyboardManager::ResetAll](#resetall)|응용 프로그램 리소스에서 바로 가기 키 테이블을 다시 로드합니다.|  
-|[CKeyboardManager::SaveState](#savestate)|Windows 레지스트리를 바로 가기 키 테이블을 저장합니다.|  
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|모든 명령에 대 한 모든 바로 가기 키 또는 각 명령에 대 한 단일 바로 가기 키 프레임 워크가 표시 여부를 지정 합니다. 이 메서드는 관련 된 바로 가기 키가 하나만 있는 명령을 영향을 주지 않습니다.|  
-|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|문자를 해당 상위 레지스터를 변환 합니다.|  
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|새 바로 가기 키 테이블으로 바로 가기 키 테이블을 업데이트합니다.|  
+|Name|Description|  
+|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Constructs a `CKeyboardManager` object.|  
   
-## <a name="remarks"></a>주의  
- 이 클래스의 멤버를 저장 및 Windows 레지스트리를 바로 가기 키 테이블을 로드 하 고, 바로 가기 키 테이블을 업데이트 하려면 서식 파일을 사용 하 여 켜고 프레임 창에서 명령에 대 한 기본 바로 가기 키를 찾습니다. 또한는 `CKeyboardManager` 개체를 사용 하면 사용자에 게 바로 가기 키 표시 되는 방식을 제어할 수 있습니다.  
+### <a name="public-methods"></a>Public Methods  
   
- 만들어야 합니다를 `CKeyboardManager` 개체를 수동으로. 응용 프로그램의 프레임 워크에 의해 자동으로 만들 수는 있습니다. 하지만 호출 해야 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) 응용 프로그램의 초기화 과정입니다. 응용 프로그램에 대 한 키보드 관리자에 대 한 포인터를 가져오려면, 호출 [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)합니다.  
+|||  
+|-|-|  
+|Name|Description|  
+|[CKeyboardManager::CleanUp](#cleanup)|Clears the shortcut key tables.|  
+|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Retrieves the default shortcut key for the specified command and window.|  
+|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determines whether a key is handled by the accelerator table.|  
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indicates whether a character is printable.|  
+|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indicates whether menus show all shortcut keys for a command or only the default shortcut key.|  
+|[CKeyboardManager::LoadState](#loadstate)|Loads the shortcut key tables from the Windows registry.|  
+|[CKeyboardManager::ResetAll](#resetall)|Reloads the shortcut key tables from the application resource.|  
+|[CKeyboardManager::SaveState](#savestate)|Saves the shortcut key tables to the Windows registry.|  
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Specifies whether the framework displays all the shortcut keys for all commands, or a single shortcut key for each command. This method does not affect commands that have only one associated shortcut key.|  
+|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Converts a character to its upper register.|  
+|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Updates a shortcut key table with a new shortcut key table.|  
   
-## <a name="example"></a>예제  
- 다음 예제에서는에 대 한 포인터를 검색 하는 방법을 한 `CKeyboardManager` 에서 개체는 `CWinAppEx` 클래스 및 메뉴 명령과 연결 된 모든 바로 가기 키를 표시 하는 방법입니다. 이 코드 조각은의 일부인는 [사용자 지정 페이지 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ The members of this class enable you to save and load shortcut key tables to the Windows registry, use a template to update the short cut key tables, and find the default shortcut key for a command in a frame window. In addition, the `CKeyboardManager` object lets you control how shortcut keys are displayed to the user.  
   
- [!code-cpp[NVC_MFC_CustomPages #&5;](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
+ You should not create a `CKeyboardManager` object manually. It will be created automatically by the framework of your application. However, you should call [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) during the initialization process of your application. To get a pointer to the keyboard manager for your application, call [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a pointer to a `CKeyboardManager` object from a `CWinAppEx` class, and how to show all the shortcut keys associated with menu commands. This code snippet is part of the [Custom Pages sample](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxkeyboardmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxkeyboardmanager.h  
   
-##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
- `CKeyboardManager` 개체를 생성합니다.  
+##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager  
+ Constructs a `CKeyboardManager` object.  
   
 ```  
 CKeyboardManager();
 ```  
   
-### <a name="remarks"></a>주의  
- 대부분의 경우에서 않아도 만들려는 `CKeyboardManager` 직접. 기본적으로 프레임 워크를 만듭니다. 에 대 한 포인터를 얻으려면는 `CKeyboardManager`, 호출 [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)합니다. 하나 수동으로 만드는 경우 메서드와 함께 초기화 해야 하면 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)합니다.  
+### <a name="remarks"></a>Remarks  
+ In most cases, you do not have to create a `CKeyboardManager` directly. By default, the framework creates one for you. To get a pointer to the `CKeyboardManager`, call [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). If you do create one manually, you must initialize it with the method [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
   
-##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
- 해제는 `CKeyboardManager` 리소스 모든 바로 가기 키 매핑을 지웁니다.  
+##  <a name="cleanup"></a>  CKeyboardManager::CleanUp  
+ Frees the `CKeyboardManager` resources and clears all shortcut key mappings.  
   
 ```  
 static void CleanUp();
 ```  
   
-### <a name="remarks"></a>주의  
- 바로 가기 키에 대 한 자세한 내용은 참조 [키보드 및 마우스 사용자 지정](../../mfc/keyboard-and-mouse-customization.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information about shortcut keys, see [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md).  
   
- 응용 프로그램 프레임 워크 중 응용 프로그램을 종료할 것을 자동으로 호출 하기 때문에 종료 될 때이 함수를 호출할 필요가 없습니다.  
+ You do not have to call this function when your application exits because the framework calls it automatically during application exit.  
   
-##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
- 지정 된 명령 및 창에 대 한 기본 바로 가기 키를 검색합니다.  
+##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator  
+ Retrieves the default shortcut key for the specified command and window.  
   
 ```  
 static BOOL FindDefaultAccelerator(
@@ -139,27 +150,27 @@ static BOOL FindDefaultAccelerator(
     BOOL bIsDefaultFrame);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 명령 ID입니다.  
+ The command ID.  
   
  [out] `str`  
- `CString` 개체에 대한 참조입니다.  
+ A reference to a `CString` object.  
   
  [in] `pWndFrame`  
- 프레임 창에 대 한 포인터입니다.  
+ A pointer to a frame window.  
   
  [in] `bIsDefaultFrame`  
- 프레임 창의 기본 프레임 창 인지를 지정 합니다.  
+ Specifies whether the frame window is the default frame window.  
   
-### <a name="return-value"></a>반환 값  
- 바로 가기를; 없으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the shortcut is found; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 지정 된 명령을 찾습니다 `uiCmd` 기본 바로 가기 키를 검색 합니다. 메서드는이 바로 가기 키와 연결 된 문자열을 사용 하 고 값을 씁니다는 `str` 매개 변수입니다.  
+### <a name="remarks"></a>Remarks  
+ This method looks up the command specified by `uiCmd` and retrieves the default shortcut key. Then the method takes the string associated with this shortcut key and writes the value to the `str` parameter.  
   
-##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
- 지정된 된 키를 처리할지 여부를 결정은 [CKeyboardManager 클래스](../../mfc/reference/ckeyboardmanager-class.md)합니다.  
+##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
+ Determines whether the specified key is handled by the [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ```  
 static BOOL __stdcall IsKeyHandled(
@@ -169,57 +180,57 @@ static BOOL __stdcall IsKeyHandled(
     BOOL bIsDefaultFrame);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|[in] `nKey`|확인할 키입니다.|  
-|[in] `fVirt`|바로 가기 키의 동작을 지정 합니다. 가능한 값 목록은 참조 하십시오. [바로 가기 키 구조](http://msdn.microsoft.com/library/windows/desktop/ms646340)합니다.|  
-|[in] `pWndFrame`|프레임 창입니다. 이 메서드는이 프레임에서 바로 가기 키를 처리할지 여부를 결정 합니다.|  
-|[in] `bIsDefaultFrame`|나타내는 부울 매개 변수 여부 `pWndFrame` 기본 프레임 창입니다.|  
+|Parameter|Description|  
+|[in] `nKey`|The key to check.|  
+|[in] `fVirt`|Specifies the behavior of the shortcut key. For a list of possible values, see [ACCEL Structure](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] `pWndFrame`|A frame window. This method determines whether a shortcut key is handled in this frame.|  
+|[in] `bIsDefaultFrame`|A Boolean parameter that indicates whether `pWndFrame` is the default frame window.|  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`바로 가기 키가 처리 합니다. `FALSE`키 처리 되지 않은 경우 또는 경우 `pWndFrame` 는 `NULL`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the shortcut key is handled. `FALSE` if the key is not handled or if `pWndFrame` is `NULL`.  
   
-### <a name="remarks"></a>주의  
- 입력된 매개 변수는 액셀러레이터 키 테이블에 모두에 대 한 항목과 일치 해야 함 `nKey` 및 `fVirt` 에서 바로 가기 키를 처리할지 여부를 확인 하려면 `pWndFrame`합니다.  
+### <a name="remarks"></a>Remarks  
+ The input parameters must match the entry in the accelerator table both for `nKey` and `fVirt` to determine whether a shortcut key is handled in `pWndFrame`.  
   
-##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
- 인쇄 가능한 문자 인지를 나타냅니다.  
+##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
+ Indicates whether a character is printable.  
   
 ```  
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|[in] `nChar`|이 메서드를 검사 하는 문자입니다.|  
+|Parameter|Description|  
+|[in] `nChar`|The character that this method checks.|  
   
-### <a name="return-value"></a>반환 값  
- 0이 아닌 문자 이면 인쇄할 수 없는 경우&0;입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the character is printable, zero if it is not.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 호출 하는 경우는 실패 [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) 실패 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method fails if a call to [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) fails.  
   
-##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
- 메뉴 명령과 연결 된 모든 바로 가기 키 또는 기본 바로 가기 키만 메뉴가 표시 여부를 나타냅니다.  
+##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
+ Indicates whether menus show all the shortcut keys associated with menu commands or only the default shortcut keys.  
   
 ```  
 static BOOL IsShowAllAccelerators();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 응용 프로그램 메뉴 명령;에 대 한 모든 바로 가기 키를 나열 하는 경우 0이 아닌 응용 프로그램 기본 바로 가기 키를 표시 하는 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the application lists all the shortcut keys for menu commands; 0 if the application displays only default shortcut keys.  
   
-### <a name="remarks"></a>주의  
- 응용 프로그램의 메뉴 모음에서 메뉴 명령에 대 한 바로 가기 키를 나열합니다. 함수를 사용 하 여 [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) 응용 프로그램 나열 모든 바로 가기 키 또는 기본 바로 가기 키만이 여부를 제어할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The application lists the shortcut keys for menu commands in the menu bar. Use the function [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) to control whether the application lists all the shortcut keys or just the default shortcut keys.  
   
-##  <a name="loadstate"></a>CKeyboardManager::LoadState  
- Windows 레지스트리에서 바로 가기 키 테이블을 로드합니다.  
+##  <a name="loadstate"></a>  CKeyboardManager::LoadState  
+ Loads the shortcut key tables from the Windows registry.  
   
 ```  
 BOOL LoadState(
@@ -227,33 +238,33 @@ BOOL LoadState(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 레지스트리 경로 `CKeyboardManager` 데이터가 저장 됩니다.  
+ The registry path where `CKeyboardManager` data is saved.  
   
  [in] `pDefaultFrame`  
- 기본 창으로 사용 하 여 프레임 창에 대 한 포인터입니다.  
+ A pointer to a frame window to use as the default window.  
   
-### <a name="return-value"></a>반환 값  
- 그렇지 않으면 상태를 성공적으로 로드 되거나 0 0이 아닌 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the state was loaded successfully or 0 otherwise.  
   
-### <a name="remarks"></a>주의  
- 하는 경우는 `lpszProfileName` 매개 변수는 `NULL`,이 메서드는 기본 레지스트리 위치에 대 한 확인 `CKeyboardManager` 데이터입니다. 지정 된 기본 레지스트리 위치는 [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)합니다. 방법으로 데이터를 이전에 작성 해야 [CKeyboardManager::SaveState](#savestate)합니다.  
+### <a name="remarks"></a>Remarks  
+ If the `lpszProfileName` parameter is `NULL`, this method checks the default registry location for `CKeyboardManager` data. The default registry location is specified by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). The data must be previously written with the method [CKeyboardManager::SaveState](#savestate).  
   
- 기본 창을 지정 하지 않으면 응용 프로그램의 주 프레임 창 사용 됩니다.  
+ If you do not specify a default window, the main frame window of your application will be used.  
   
-##  <a name="resetall"></a>CKeyboardManager::ResetAll  
- 응용 프로그램 리소스에서 바로 가기 키 테이블을 다시 로드합니다.  
+##  <a name="resetall"></a>  CKeyboardManager::ResetAll  
+ Reloads the shortcut key tables from the application resource.  
   
 ```  
 void ResetAll();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 함수에 저장 된 바로 가기를 지우는 `CKeyboardManager` 인스턴스. 그런 다음 응용 프로그램 리소스에서 키보드 관리자의 상태 다시 로드 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function clears the shortcuts stored in the `CKeyboardManager` instance. It will then reload the state of the keyboard manager from the application resource.  
   
-##  <a name="savestate"></a>CKeyboardManager::SaveState  
- Windows 레지스트리를 바로 가기 키 테이블을 저장합니다.  
+##  <a name="savestate"></a>  CKeyboardManager::SaveState  
+ Saves the shortcut key tables to the Windows registry.  
   
 ```  
 BOOL SaveState(
@@ -261,23 +272,23 @@ BOOL SaveState(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 나중에 다시 레지스트리 경로 `CKeyboardManager` 상태입니다.  
+ The registry path for saving the `CKeyboardManager` state.  
   
  [in] `pDefaultFrame`  
- 기본 창이 있는 프레임 창에 대 한 포인터입니다.  
+ A pointer to a frame window that becomes the default window.  
   
-### <a name="return-value"></a>반환 값  
- 키보드 관리자 상태를 성공적으로 저장 한 경우 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the keyboard manager state was saved successfully, or 0 otherwise.  
   
-### <a name="remarks"></a>주의  
- 하는 경우는 `lpszProfileName` 매개 변수는 `NULL`,이 메서드가 쓸는 `CKeyboardManager` 상태에서 지정한 기본 위치는 [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)합니다. 나중에 메서드를 사용 하 여 데이터를 로드할 수 위치를 지정 하는 경우 [CKeyboardManager::LoadState](#loadstate)합니다.  
+### <a name="remarks"></a>Remarks  
+ If the `lpszProfileName` parameter is `NULL`, this method will write the `CKeyboardManager` state to the default location specified by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). If you specify a location, you can load the data later using the method [CKeyboardManager::LoadState](#loadstate).  
   
- 기본 창을 지정 하지 않으면 주 프레임 창의 기본 창으로 사용 됩니다.  
+ If you do not specify a default window, the main frame window will be used as the default window.  
   
-##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
- 메뉴 명령과 연결 된 모든 바로 가기 키를 보여 줍니다.  
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators  
+ Shows all the shortcut keys associated with menu commands.  
   
 ```  
 static void ShowAllAccelerators(
@@ -285,34 +296,34 @@ static void ShowAllAccelerators(
     LPCTSTR lpszDelimiter = _afxDefaultAcceleratorDelimiter);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bShowAll`  
- 경우 `true`, 모든 바로 가기 키 표시 됩니다. 경우 `false`, 첫 번째 바로 가기 키만 표시 됩니다.  
+ If `true`, all the shortcut keys will be displayed. If `false`, only the first shortcut key will be displayed.  
   
  [in] `lpszDelimiter`  
- 바로 가기 키 사이 삽입할 문자열입니다. 이 구분 기호 하나만 하나의 바로 가기 키 표시 되는 경우에 영향이 없습니다.  
+ A string to insert between shortcut keys. This delimiter has no effect if only one shortcut key is displayed.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 명령에 연결 된 바로 가기 키를 둘 이상의 첫 번째 바로 가기 키만 표시 됩니다. 이 함수를 사용 하면 모든 명령과 연결 된 모든 바로 가기 키를 나열할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ By default, if a command has more than one shortcut key associated with it, only the first shortcut key will be shown. This function enables you to list all the shortcut keys associated with all commands.  
   
- 메뉴 모음에 명령 옆에 있는 바로 가기 키에 나열 됩니다. 문자열에서 제공 하는 모든 바로 가기 키를 표시 되 면 `lpszDelimiter` 개별 바로 가기 키를 구분 합니다.  
+ The shortcut keys will be listed next to the command in the menu bar. If all the shortcut keys are displayed, the string provided by `lpszDelimiter` will separate individual shortcut keys.  
   
-##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
- 문자를 해당 상위 레지스터를 변환 합니다.  
+##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
+ Converts a character to its upper register.  
   
 ```  
 static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- 변환할 문자입니다.  
+ The character to convert.  
   
-### <a name="return-value"></a>반환 값  
- 문자는 입력된 매개 변수의 상위 레지스터입니다.  
+### <a name="return-value"></a>Return Value  
+ The character that is the upper register of the input parameter.  
   
-##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
- 새 바로 가기 키 테이블으로 바로 가기 키 테이블을 업데이트합니다.  
+##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable  
+ Updates a shortcut key table with a new shortcut key table.  
   
 ```  
 BOOL UpdateAccelTable(
@@ -328,34 +339,34 @@ BOOL UpdateAccelTable(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pTemplate`  
- 문서 서식 파일에 대 한 포인터입니다.  
+ A pointer to a document template.  
   
  [in] `lpAccel`  
- 새 바로 가기 키에 대 한 포인터입니다.  
+ A pointer to the new shortcut key.  
   
  [in] `nSize`  
- 새 바로 가기 테이블의 크기입니다.  
+ The size of the new shortcut table.  
   
  [in] `pDefaultFrame`  
- 기본 프레임 창에 대 한 포인터입니다.  
+ A pointer to the default frame window.  
   
  [in] `hAccelNew`  
- 새 바로 가기 테이블에 대 한 핸들입니다.  
+ A handle to the new shortcut table.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용 하 여 여러 프레임 창 개체에 대 한 새 바로 가기 키를 가진 기존 바로 가기 테이블을 바꿀 수 있습니다. 함수는 지정 된 문서 서식 파일에 연결 된 모든 프레임 창 개체에 대 한 액세스를 얻으려고 매개 변수로 문서 서식 파일을 받습니다.  
+### <a name="remarks"></a>Remarks  
+ Use this function to replace the existing shortcut table with new shortcut keys for several frame window objects. The function receives a document template as a parameter to obtain access to all frame window objects connected to the given document template.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)   
  [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)   
- [키보드 및 마우스 사용자 지정](../../mfc/keyboard-and-mouse-customization.md)
+ [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md)
 
 
 

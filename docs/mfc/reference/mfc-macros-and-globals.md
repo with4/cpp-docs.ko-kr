@@ -1,5 +1,5 @@
 ---
-title: "MFC 매크로 및 전역 | Microsoft Docs"
+title: MFC Macros and Globals | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - MFC, macros
 - global functions, MFC
 - macros, MFC
-- global functions
+- global functions [MFC]
 - global variables, MFC
 - Afx naming convention
 - macros
@@ -40,120 +40,120 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 4de4d9a0764bb2f25eaf63c302fa03ebc12e3cee
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 077df418dfaea723965bb2a8876bceaf754a8346
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="mfc-macros-and-globals"></a>MFC 매크로 및 전역
-Microsoft Foundation Class 라이브러리는 두 개의 주요 섹션으로 나눌 수 있습니다. (1)는 MFC 클래스 및 (2) 매크로 및 전역 합니다. 함수 또는 변수는 클래스의 구성원이 아니므로, 경우 전역 함수 또는 변수입니다.  
+# <a name="mfc-macros-and-globals"></a>MFC Macros and Globals
+The Microsoft Foundation Class Library can be divided into two major sections: (1) the MFC classes and (2) macros and globals. If a function or variable is not a member of a class, it is a global function or variable.  
   
- MFC 라이브러리와 액티브 템플릿 라이브러리 (ATL) 문자열 변환 매크로 공유합니다. 자세한 내용은 참조 [문자열 변환 매크로](../../atl/reference/string-conversion-macros.md) ATL 설명서에 있습니다.  
+ The MFC library and the Active Template Library (ATL) share string conversion macros. For more information, see [String Conversion Macros](../../atl/reference/string-conversion-macros.md) in the ATL documentation.  
   
- MFC 매크로 및 전역 변수는 다음 범주에서 기능을 제공 합니다.  
+ The MFC macros and globals offer functionality in the following categories.  
   
-## <a name="general-mfc"></a>일반 MFC  
+## <a name="general-mfc"></a>General MFC  
   
--   [데이터 형식](data-types-mfc.md)  
+-   [Data types](data-types-mfc.md)  
   
--   [MFC 클래스 개체의 형식 캐스팅](type-casting-of-mfc-class-objects.md)  
+-   [Type casting of MFC class objects](type-casting-of-mfc-class-objects.md)  
   
--   [런타임 개체 모델 서비스](run-time-object-model-services.md)  
+-   [Run-time object model services](run-time-object-model-services.md)  
   
--   [진단 서비스](diagnostic-services.md)  
+-   [Diagnostic services](diagnostic-services.md)  
   
--   [예외 처리](exception-processing.md)  
+-   [Exception processing](exception-processing.md)  
   
--   [CString 서식 지정 및 메시지 상자 표시](cstring-formatting-and-message-box-display.md)  
+-   [CString formatting and message-box display](cstring-formatting-and-message-box-display.md)  
   
--   [메시지 맵](message-map-macros-mfc.md)  
+-   [Message maps](message-map-macros-mfc.md)  
 
--   [대리자 및 인터페이스 맵](delegate-and-interface-maps.md)
+-   [Delegate and Interface Maps](delegate-and-interface-maps.md)
 
--   [모듈 및 DLL](extension-dll-macros.md)
+-   [Modules and DLLs](extension-dll-macros.md)
   
--   [응용 프로그램 정보 및 관리](application-information-and-management.md)  
+-   [Application information and management](application-information-and-management.md)  
   
--   [표준 명령 및 창 Id](standard-command-and-window-ids.md)  
+-   [Standard command and window IDs](standard-command-and-window-ids.md)  
   
--   [컬렉션 클래스 도우미](collection-class-helpers.md)  
+-   [Collection class helpers](collection-class-helpers.md)  
   
--   [회색 및 디더링된 비트맵 함수](gray-and-dithered-bitmap-functions.md)  
+-   [Gray and dithered bitmap functions](gray-and-dithered-bitmap-functions.md)  
   
--   [표준 대화 상자 데이터 교환 루틴 (DDX)](standard-dialog-data-exchange-routines.md)  
+-   [Standard dialog data exchange (DDX) routines](standard-dialog-data-exchange-routines.md)  
   
--   [표준 대화 상자 데이터 유효성 검사 (DDV) 루틴](standard-dialog-data-validation-routines.md)  
+-   [Standard dialog data validation (DDV) routines](standard-dialog-data-validation-routines.md)  
   
--   [AFX 메시지](afx-messages.md)  
+-   [AFX Messages](afx-messages.md)  
   
--   [ToolBar 컨트롤 스타일](toolbar-control-styles.md)  
+-   [ToolBar Control Styles](toolbar-control-styles.md)  
   
--   [CMFCImagePaintArea::IMAGE_EDIT_MODE 열거형](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
+-   [CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
 
   
-## <a name="database"></a>데이터베이스  
+## <a name="database"></a>Database  
   
--   [RFX (필드 교환) 함수 기록](record-field-exchange-functions.md) 및 [대량 레코드 필드 교환 (대량 RFX) 함수](record-field-exchange-functions.md) MFC ODBC 클래스  
+-   [Record Field Exchange (RFX) functions](record-field-exchange-functions.md) and [Bulk Record Field Exchange (bulk RFX) functions](record-field-exchange-functions.md) for the MFC ODBC classes  
   
--   [레코드 필드 교환 (DFX) 함수](record-field-exchange-functions.md) MFC DAO 클래스에 대 한  
+-   [Record field exchange (DFX) functions](record-field-exchange-functions.md) for the MFC DAO classes  
   
--   [CRecordView 및 CDaoRecordView에 대 한 대화 상자 데이터 교환 (DDX) 함수](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (MFC ODBC와 DAO 클래스)  
+-   [Dialog data exchange (DDX) functions for CRecordView and CDaoRecordView](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (MFC ODBC and DAO classes)  
   
--   [OLE 컨트롤에 대 한 대화 상자 데이터 교환 (DDX) 함수](dialog-data-exchange-functions-for-ole-controls.md)  
+-   [Dialog data exchange (DDX) functions for OLE controls](dialog-data-exchange-functions-for-ole-controls.md)  
   
--   [매크로 및 전역을 지 원하는 ODBC Open Database Connectivity () API 함수 직접 호출](database-macros-and-globals.md)  
+-   [Macros and globals to aid in calling Open Database Connectivity (ODBC) API functions directly](database-macros-and-globals.md)  
   
--   [DAO 데이터베이스 엔진 초기화 및 종료](dao-database-engine-initialization-and-termination.md)  
+-   [DAO database engine initialization and termination](dao-database-engine-initialization-and-termination.md)  
   
-## <a name="internet"></a>인터넷  
+## <a name="internet"></a>Internet  
   
--   [인터넷 URL 전역 구문 분석](internet-url-parsing-globals.md)  
+-   [Internet URL parsing globals](internet-url-parsing-globals.md)  
   
-## <a name="dhtml--dhtml-event-maps"></a>DHTML / DHTML 이벤트 맵  
+## <a name="dhtml--dhtml-event-maps"></a>DHTML / DHTML Event Maps  
   
--   [DHTML 대화 상자 데이터 교환 (DDX) 도우미 매크로](ddx-dhtml-helper-macros.md)  
+-   [DHTML dialog data exchange (DDX) helper macros](ddx-dhtml-helper-macros.md)  
   
--   [DHTML 이벤트 맵](dhtml-event-maps.md)  
+-   [DHTML event maps](dhtml-event-maps.md)  
   
 ## <a name="ole"></a>OLE  
   
--   [OLE 초기화](ole-initialization.md)  
+-   [OLE initialization](ole-initialization.md)  
   
--   [응용 프로그램 컨트롤](application-control.md)  
+-   [Application control](application-control.md)  
   
--   [디스패치 맵](dispatch-maps.md)  
+-   [Dispatch maps](dispatch-maps.md)  
   
- MFC에서 호출 하는 함수를 제공 하는 또한 [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) 는 사용 되는 모든 OLE 컨테이너 완벽 하 게 지원 MFC 4.0을 사용 하 여 개발 OLE 컨트롤을 포함 합니다.  
+ In addition, MFC provides a function called [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) that enables any OLE container developed with MFC 4.0 to fully support embedded OLE controls.  
   
-## <a name="ole-controls"></a>OLE 컨트롤  
+## <a name="ole-controls"></a>OLE Controls  
   
--   [가변 매개 변수 형식 상수](variant-parameter-type-constants.md)  
+-   [Variant parameter type constants](variant-parameter-type-constants.md)  
   
--   [형식 라이브러리 액세스](type-library-access.md)  
+-   [Type library access](type-library-access.md)  
   
--   [속성 페이지](property-pages-mfc.md)  
+-   [Property pages](property-pages-mfc.md)  
   
--   [이벤트 맵](event-maps.md)  
+-   [Event maps](event-maps.md)  
   
--   [이벤트 싱크 맵](event-sink-maps.md)  
+-   [Event sink maps](event-sink-maps.md)  
   
--   [연결 맵](connection-maps.md)  
+-   [Connection maps](connection-maps.md)  
   
--   [OLE 컨트롤 등록](registering-ole-controls.md)  
+-   [Registering OLE controls](registering-ole-controls.md)  
   
--   [클래스 팩터리 및 라이선스](class-factories-and-licensing.md)  
+-   [Class factories and licensing](class-factories-and-licensing.md)  
   
--   [OLE 컨트롤의 지 속성](persistence-of-ole-controls.md)  
+-   [Persistence of OLE controls](persistence-of-ole-controls.md)  
   
- 이 섹션의 첫 번째 부분은 간단 하 게 각각의 이전 범주에 설명 하 고 전역 변수 및 기능에 간략하게 설명 함께 범주에는 매크로 나열 합니다. 아래에 전역 함수, 전역 변수 및 MFC 라이브러리의 매크로에 대해 설명 합니다.  
+ The first part of this section briefly discusses each of the previous categories and lists the globals and macros in the category, together with brief descriptions of functionality. Following this are descriptions of the global functions, global variables, and macros in the MFC library.  
   
 > [!NOTE]
->  대부분의 전역 함수가 "Afx" 접두사로 시작 하지만 이러한 규칙을 준수 하지 않는 일부 예를 들어 대화 상자 데이터 교환 (DDX) 함수 및 많은 데이터베이스 기능을 합니다. 모든 전역 변수 "afx" 접두사로 시작합니다. 매크로 특정 접두사로 시작 되지 않는 있지만 대문자로 기록 됩니다.  
+>  Many global functions start with the prefix "Afx", but some, for example, the dialog data exchange (DDX) functions and many of the database functions, do not follow this convention. All global variables start with "afx" as a prefix. Macros do not start with any particular prefix, but they are written in uppercase letters.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스 개요](../../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../../mfc/class-library-overview.md)
 
 
 

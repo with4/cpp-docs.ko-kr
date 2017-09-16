@@ -1,115 +1,134 @@
 ---
-title: "TN020: ID 명명 및 번호 매기기 규칙 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "리소스 식별자"
-  - "리소스 식별자, 이름 지정 및 번호 매기기"
-  - "TN020"
+title: 'TN020: ID Naming and Numbering Conventions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.id
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN020
+- resource identifiers, naming and numbering
+- resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# TN020: ID 명명 및 번호 매기기 규칙
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 87a4ee80b5ce116c792b17f0ba18f34693a5586b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 주석은 ID 명명 및 MFC 2.0을 사용하여 리소스, 명령, 문자열, 컨트롤 및 자식 창에 대한 번호 매기기 규칙을 설명합니다.  
+---
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: ID Naming and Numbering Conventions
+This note describes the ID naming and numbering conventions that MFC 2.0 uses for resources, commands, strings, controls, and child windows.  
   
- MFC ID 명명 및 번호 규칙은 다음 요구 사항을 충족하기 위한 것입니다.  
+ The MFC ID naming and numbering conventions are intended to meet the following requirements:  
   
--   Visual C\+\+ 리소스 편집기가 지원하는 MFC 응용 프로그램과 MFC 라이브러리에서 사용되는 ID 명명 표준을 제공합니다.  이렇게 하면, ID의 리소스 출처 및 형식을 프로그래머가 쉽게 해석할 수 있습니다.  
+-   Provide a consistent ID-naming standard used across the MFC library and MFC applications that are supported by the Visual C++ resource editor. This makes it easier for the programmer to interpret the type and origin of a resource from its ID.  
   
--   특정 유형의 ID 사이에 강력한 1 대 1 관계를 강조합니다.  
+-   Emphasize the strong 1-to-1 relationship between certain types of IDs.  
   
--   이미 널리 사용 되는 Windows에서 ID를 명명 표준을 준수합니다.  
+-   Conform to already widely used standards for naming IDs in Windows.  
   
--   ID 번호 공간을 분할합니다.  프로그래머, MFC, Windows 및 Visual C\+\+ 편집할 리소스에 의해 ID 번호를 할당받을 수 있습니다.  적절한 파티션은 ID 번호의 중복을 방지하는 데에 도움이 됩니다.  
+-   Partition the ID-numbering space. ID numbers can be assigned by the programmer, MFC, Windows, and Visual C++-edited resources. Appropriate partitioning will help avoid duplication of ID numbers.  
   
-## ID 접두사 명명 규칙  
- ID의 여러 종류는 응용 프로그램에서 발생할 수 있습니다.  MFC ID 명명 규칙은 다른 리소스 형식에 대해 다른 접두사를 정의합니다.  
+## <a name="the-id-prefix-naming-convention"></a>The ID Prefix Naming Convention  
+ Several types of IDs can occur in an application. The MFC ID-naming convention defines different prefixes for different resource types.  
   
- MFC 는 "IDR\_" 접두사를 사용하여 여러 리소스 형식에 적용 되는 리소스 ID를 나타냅니다.  예를 들어, 특정된 프레임 창에서, MFC는 메뉴, 가속기, 문자열과 아이콘 리소스를 나타내는 동일한 접두사 "IDR\_"을 사용합니다.  다음 표에서 다양한 접두사와 그 사용 방법을 보여 줍니다.:  
+ MFC uses the prefix "IDR_" to indicate a resource ID that applies to multiple resource types. For example, for a given frame window, MFC uses the same "IDR_" prefix to indicate a menu, accelerator, string and icon resource. The following table shows the various prefixes and their usage:  
   
-|접두사|기능|  
-|---------|--------|  
-|IDR\_|여러 리소스 종류 \(주로 메뉴, 액셀러레이터 키 및 리본 메뉴에 사용\).|  
-|IDD\_|대화 상자 템플릿 리소스 \(예: IDD\_DIALOG1\).|  
-|IDC\_|커서 리소스.|  
-|IDI\_|아이콘 리소스.|  
-|IDB\_|비트맵 리소스.|  
-|IDS\_|문자열 리소스.|  
+|Prefix|Use|  
+|------------|---------|  
+|IDR_|For multiple resource types (primarily used for menus, accelerators, and ribbons).|  
+|IDD_|For dialog template resources (for example, IDD_DIALOG1).|  
+|IDC_|For cursor resources.|  
+|IDI_|For icon resources.|  
+|IDB_|For bitmap resources.|  
+|IDS_|For string resources.|  
   
- DIALOG 리소스 내에서 MFC는 이 규칙을 따릅니다:  
+ Within a DIALOG resource, MFC follows these conventions:  
   
-|접두사 또는 레이블|기능|  
-|----------------|--------|  
-|IDOK, IDCANCEL|표준 누름 단추 ID.|  
-|IDC\_|다른 대화 상자 컨트롤입니다.|  
+|Prefix or label|Use|  
+|---------------------|---------|  
+|IDOK, IDCANCEL|For standard push button IDs.|  
+|IDC_|For other dialog controls.|  
   
- "IDC\_" 접두사는 커서에 사용됩니다.  일반적인 응용 프로그램은 몇 가지 커서 및 여러 가지 대화 상자 컨트롤을 갖고 있기 때문에 이 명명 충돌은 문제가 되지 않습니다.  
+ The "IDC_" prefix is also used for cursors. This naming conflict is not usually a problem because a typical application will have few cursors and many dialog controls.  
   
- 메뉴 리소스 내에서, MFC는 이 규칙을 따릅니다:  
+ Within a menu resource, MFC follows these conventions:  
   
-|접두사|기능|  
-|---------|--------|  
-|IDM\_|MFC 명령 아키텍처를 사용하지 않는 메뉴 항목.|  
-|ID\_|MFC 명령 아키텍처를 사용하는 메뉴 명령.|  
+|Prefix|Use|  
+|------------|---------|  
+|IDM_|For menu items that do not use the MFC command architecture.|  
+|ID_|For menu commands that use the MFC command architecture.|  
   
- MFC 명령 아키텍처 명령을 따르는 명령은 `ON_COMMAND` 명령 처리기를 가져야 하며 `ON_UPDATE_COMMAND_UI` 처리기를 가질 수 있습니다.  만약 명령 처리기가 MFC 명령 아키텍처를 따르면, 명령 처리기는 메뉴 명령, 도구 모음 단추 또는 대화 상자 모음 단추에 바인딩된 여부를 확인할 것입니다.  프로그램의 메시지 표시줄에 표시되는 메뉴 프롬프트 문자열 같은 "ID\_" 접두사가 사용됩니다.  대부분의 응용 프로그램의 메뉴 항목은 MFC 명령 규칙을 따릅니다.  모든 표준 명령 ID는 \(예를 들어, `ID_FILE_NEW`\) 는 이 규칙을 따릅니다.  
+ Commands that follow the MFC command architecture must have an `ON_COMMAND` command handler and can have an `ON_UPDATE_COMMAND_UI` handler. If these command handlers follow the MFC command architecture, they will function correctly whether they are bound to a menu command, a toolbar button, or a dialog bar button. The same "ID_" prefix is also used for a menu prompt string that is displayed on the program's message bar. Most of the menu items in your application should follow the MFC command conventions. All of the standard command IDs (for example, `ID_FILE_NEW`) follow this convention.  
   
- 또한 MFC 형식이 "IDP"를 \("IDS\_"대신\) 문자열의 특수 한 형식으로 사용합니다.  접두사 "IDP\_" 문자열은 즉, 메시지 상자에 사용 되는 문자열입니다. 문자열 "IDP\_"는 프로그램에 의해 결정되는 문자열의 자리 표시자로 "%1" 및 "%2"를 포함할 수 있습니다. "IDP\_"문자열은 일반적으로 그와 관련된 도움말 항목을 갖고 "IDS\_" 문자열은 도움말 항목을 갖지 않습니다. "IDP\_" 문자열은 항상 지역화되고 "IDS\_" 문자열은 되지 않을 수 있습니다.  
+ MFC also uses "IDP_" as a specialized form of strings (instead of "IDS_"). Strings with the "IDP_" prefix are prompts, that is, strings used in message boxes. "IDP_" strings can contain "%1" and "%2" as placeholders of strings determined by the program. "IDP_" strings usually have help topics associated with them, and "IDS_" strings do not. "IDP_" strings are always localized, and "IDS_" strings might not be localized.  
   
- 또한 MFC 라이브러리는 컨트롤 ID \("IDC\_" 대신\) 의 특수한 형식으로 "IDW\_" 접두사를 사용합니다.  이러한 ID는 프레임 워크 클래스에서 뷰 분할자와 같은 자식 창에 할당됩니다.  MFC 구현 ID는 "AFX\_" 라는 접두사가 됩니다.  
+ The MFC library also uses the "IDW_" prefix as a specialized form of control IDs (instead of "IDC_"). These IDs are assigned to child windows such as views and splitters by the framework classes. MFC implementation IDs are prefixed with "AFX_".  
   
-## ID 번호 매기기 규칙  
- 다음 표에서 특정 종류의 ID에 대한 유효한 범위입니다.  제한 중 일부는 기술 구현 제한이고 이외에는 Windows에 미리 정의된 ID 또는 MFC 기본 구현과의 충돌로 부터 ID 형태를 보호하도록 설계된 규칙입니다.  
+## <a name="the-id-numbering-convention"></a>The ID-Numbering Convention  
+ The following table lists the valid ranges for the IDs of the specific types. Some of the limits are technical implementation limits, and others are conventions that are designed to prevent your IDs from colliding with Windows predefined IDs or MFC default implementations.  
   
- 권장된 범위 내에 모든 ID를 정의하는 것이 좋습니다.  이러한 범위의 하위 제한은 0이 사용되지 않으므로 1입니다.  일반적인 규칙을 사용하여 첫 번째 ID를 101 또는 100을 사용하는 것이 좋습니다.  
+ We strongly recommend that you define all IDs inside the recommended ranges. The lower limit of these ranges is 1 because 0 is not used. We recommend that you use the common convention and use 100 or 101 as the first ID.  
   
-|접두사|리소스 형식.|유효 범위|  
-|---------|-------------|-----------|  
-|IDR\_|여러|0x6FFF\-1을 통한 1|  
-|IDD\_|대화 상자 템플릿|0x6FFF\-1을 통한 1|  
-|IDC\_,IDI\_,IDB\_|비트맵, 아이콘, 커서|0x6FFF\-1을 통한 1|  
-|IDS\_, IDP\_|일반 문자열|1부터 0x7FFF|  
-|ID\_|명령|0x8000 부터 0xDFFF|  
-|IDC\_|컨트롤|8 부터 0xDFFF|  
+|Prefix|Resource type|Valid range|  
+|------------|-------------------|-----------------|  
+|IDR_|multiple|1 through 0x6FFF|  
+|IDD_|dialog templates|1 through 0x6FFF|  
+|IDC_,IDI_,IDB_|cursors, icons, bitmaps|1 through 0x6FFF|  
+|IDS_, IDP_|general strings|1 through 0x7FFF|  
+|ID_|commands|0x8000 through 0xDFFF|  
+|IDC_|controls|8 through 0xDFFF|  
   
- 이러한 범위 제한에 대한 원인은 다음과 같습니다.  
+ Reasons for these range limits:  
   
--   규칙에 따라 ID 값 0은 사용되지 않습니다.  
+-   By convention, the ID value of 0 is not used.  
   
--   Windows 구현 제한은 true 리소스 Id 0x7FFF 보다 작거나 같은 수를 제한합니다.  
+-   Windows implementation limitations restrict true resource IDs to be less than or equal to 0x7FFF.  
   
--   이러한 범위를 예약 하는 MFC의 내부 프레임 워크:  
+-   MFC's internal framework reserves these ranges:  
   
-    -   0x7FFF 부터 0x7000 \(afxres.h 참조\)  
+    -   0x7000 through 0x7FFF (see afxres.h)  
   
-    -   0xEFFF 부터 0xE000 \(afxres.h 참조\)  
+    -   0xE000 through 0xEFFF (see afxres.h)  
   
-    -   16000 부터 18000 \(afxribbonres.h 참조\)  
+    -   16000 through 18000 (see afxribbonres.h)  
   
-     이 범위는 나중에 MFC 구현을 변경할 수 있습니다.  
+     These ranges may change in future MFC implementations.  
   
--   여러 Windows 시스템 명령은 0xF000부터 0xFFFF의 범위를 사용합니다.  
+-   Several Windows system commands use the range of 0xF000 through 0xFFFF.  
   
--   1부터 7의 컨트롤 ID는 IDOK, IDCANCEL 등과 같은 표준 컨트롤에 대해 예약되어 있습니다.  
+-   Control IDs of 1 through 7 are reserved for standard controls such as IDOK and IDCANCEL.  
   
--   명령 메뉴 프롬프트 문자열에 대해 0x8000 부터0xFFFF까지 범위는 예약되어 있습니다.  
+-   The range of 0x8000 through 0xFFFF for strings is reserved for menu prompts for commands.  
   
-## 참고 항목  
- [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   
- [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

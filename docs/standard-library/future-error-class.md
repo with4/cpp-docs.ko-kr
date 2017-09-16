@@ -1,5 +1,5 @@
 ---
-title: "future_error 클래스 | Microsoft 문서"
+title: future_error Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,17 +32,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 07d01d2efc3aadf1d8b5a585b7f4c7b8b76d87cc
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 086976f48d08253da018fcb40cfe2ab4119e5d85
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="futureerror-class"></a>future_error 클래스
-[future](../standard-library/future-class.md) 개체를 관리하는 형식의 메서드에서 throw될 수 있는 예외 개체를 설명합니다.  
+# <a name="futureerror-class"></a>future_error Class
+Describes an exception object that can be thrown by methods of types that manage [future](../standard-library/future-class.md) objects.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 class future_error : public logic_error {
@@ -56,13 +56,13 @@ const char *what() const throw();
 };
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<이후 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [logic_error 클래스](../standard-library/logic-error-class.md)   
- [error_code 클래스](../standard-library/error-code-class.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [logic_error Class](../standard-library/logic-error-class.md)   
+ [error_code Class](../standard-library/error-code-class.md)
 

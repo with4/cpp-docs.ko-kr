@@ -1,5 +1,5 @@
 ---
-title: "CSettingsStore 클래스 | Microsoft 문서"
+title: CSettingsStore Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSettingsStore class
+- CSettingsStore [MFC], CSettingsStore
+- CSettingsStore [MFC], Close
+- CSettingsStore [MFC], CreateKey
+- CSettingsStore [MFC], DeleteKey
+- CSettingsStore [MFC], DeleteValue
+- CSettingsStore [MFC], Open
+- CSettingsStore [MFC], Read
+- CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
 caps.latest.revision: 29
 author: mikeblome
@@ -42,88 +49,87 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0b07f6b12e178d8e324313ea3b0f6de9ae7420c9
-ms.openlocfilehash: 0918c8dd9b6284adecb61bc95ddfd41c22d16cb8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6ecae74312bbdca97de8f636d54e1ddd441dd837
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
-Windows API 함수를 래핑하여 레지스트리에 액세스하는 데 사용할 수 있는 개체 지향 인터페이스를 제공합니다.  
+Wraps Windows API functions, providing an object-oriented interface that you use to access the registry.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSettingsStore : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStore::CSettingsStore](#csettingsstore)|`CSettingsStore` 개체를 생성합니다.|  
+|[CSettingsStore::CSettingsStore](#csettingsstore)|Constructs a `CSettingsStore` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStore::Close](#close)|열린 레지스트리 키를 닫습니다.|  
-|[CSettingsStore::CreateKey](#createkey)|지정된 된 키를 열거나 존재 하지 않는 경우이 만듭니다.|  
-|[CSettingsStore::DeleteKey](#deletekey)|지정된 된 키 및 모든 자식 노드를 삭제합니다.|  
-|[CSettingsStore::DeleteValue](#deletevalue)|열기 키의 지정된 된 값을 삭제 합니다.|  
-|[CSettingsStore::Open](#open)|지정 된 키를 엽니다.|  
-|[CSettingsStore::Read](#read)|지정된 된 키 값에 대 한 데이터를 검색합니다.|  
-|[CSettingsStore::Write](#write)|열기 키 아래의 레지스트리 값을 씁니다.|  
+|[CSettingsStore::Close](#close)|Closes the open registry key.|  
+|[CSettingsStore::CreateKey](#createkey)|Opens the specified key or creates it if it does not exist.|  
+|[CSettingsStore::DeleteKey](#deletekey)|Deletes the specified key and all its children.|  
+|[CSettingsStore::DeleteValue](#deletevalue)|Deletes the specified value of the open key.|  
+|[CSettingsStore::Open](#open)|Opens the specified key.|  
+|[CSettingsStore::Read](#read)|Retrieves the data for a specified key value.|  
+|[CSettingsStore::Write](#write)|Writes a value to the registry under the open key.|  
   
-## <a name="remarks"></a>주의  
- 멤버 함수는 `CreateKey` 및 `Open` 은 매우 유사 합니다. 레지스트리 키가 이미 있는 경우 `CreateKey` 및 `Open` 동일한 방법으로 함수입니다. 그러나 레지스트리 키가 없으면, `CreateKey` 반면 만들 `Open` 오류 값을 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ The member functions `CreateKey` and `Open` are very similar. If the registry key already exists, `CreateKey` and `Open` function in the same way. However, if the registry key does not exist, `CreateKey` will create it whereas `Open` will return an error value.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 열기 및 읽기 메서드를 사용 하는 방법의 `CSettingsStore` 클래스입니다. 이 코드 조각은의 일부인는 [도구 팁 데모 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use the Open and Read methods of the `CSettingsStore` class. This code snippet is part of the [Tool Tip Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_ToolTipDemo #&1;](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CSettingsStore`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxsettingsstore.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
- 열린 레지스트리 키를 닫습니다.  
+##  <a name="close"></a>  CSettingsStore::Close  
+ Closes the open registry key.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본적으로이 메서드는의 소멸자에서는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, this method is called from the destructor of the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
- 레지스트리 키를 열거나 존재 하지 않는 경우이 만듭니다.  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
+ Opens a registry key or creates it if it does not exist.  
   
 ```  
 virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pszPath`  
- 만들거나 열 수에 대 한 키의 이름을 지정 합니다.  
+ Specifies the name of a key to be created or opened.  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면&0; 그렇지 않으면&0;이 아닌 값입니다.  
+### <a name="return-value"></a>Return Value  
+ 0 if successful; otherwise a nonzero value.  
   
-### <a name="remarks"></a>주의  
- `CreateKey`사용 하 여 `m_hKey` 레지스트리 질문의 루트 라고 합니다. 검색 `pszPath` 의 하위 키로 `m_hKey`합니다. 키가 없으면 `CreateKey` 을 만듭니다. 그렇지 않으면 키를 엽니다. `CreateKey`다음 설정 `m_hKey` 만들거나 열린 키에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ `CreateKey` uses `m_hKey` as the root of registry inquiries. It searches for `pszPath` as a subkey of `m_hKey`. If the key does not exist, `CreateKey` creates it. Otherwise, it opens the key. `CreateKey` then sets `m_hKey` to the created or opened key.  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
- 
-          `CSettngsStore` 개체를 만듭니다.  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
+ Creates a `CSettngsStore` object.  
   
 ```  
 CSettingsStore(
@@ -131,22 +137,22 @@ CSettingsStore(
     BOOL bReadOnly);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bAdmin`  
- 지정 하는 부울 매개 변수 여부는 `CSettingsStore` 개체 관리자 모드에서 작동 합니다.  
+ Boolean parameter that specifies whether the `CSettingsStore` object is acting in administrator mode.  
   
  [in] `bReadOnly`  
- 지정 하는 부울 매개 변수 여부는 `CSettingsStore` 개체는 읽기 전용 모드에 만들어집니다.  
+ Boolean parameter that specifies whether the `CSettingsStore` object is created in read-only mode.  
   
-### <a name="remarks"></a>주의  
- 경우 `bAdmin` 로 설정 된 `false`, `m_hKey` 멤버 변수로 설정 되어 `HKEY_LOCAL_MACHINE`합니다. If you set `bAdmin` to `true`, `m_hKey` is set to `HKEY_CURRENT_USER`.  
+### <a name="remarks"></a>Remarks  
+ If `bAdmin` is set to `false`, the `m_hKey` member variable is set to `HKEY_LOCAL_MACHINE`. If you set `bAdmin` to `true`, `m_hKey` is set to `HKEY_CURRENT_USER`.  
   
- 보안 액세스 권한이 달라는 `bReadOnly` 매개 변수입니다. 경우 `bReadonly` 는 `false`, 보안 액세스로 설정 됩니다 `KEY_ALL_ACCESS`합니다. 경우 `bReadyOnly` 는 `true`, 액세스 보안의 조합으로 설정 됩니다 `KEY_QUERY_VALUE, KEY_NOTIFY` 및 `KEY_ENUMERATE_SUB_KEYS`합니다. 레지스트리 함께 보안 액세스에 대 한 자세한 내용은 참조 [레지스트리 키 보안 및 액세스 권한](http://msdn.microsoft.com/library/windows/desktop/ms724878)합니다.  
+ The security access depends on the `bReadOnly` parameter. If `bReadonly` is `false`, the security access will be set to `KEY_ALL_ACCESS`. If `bReadyOnly` is `true`, the security access will be set to a combination of `KEY_QUERY_VALUE, KEY_NOTIFY` and `KEY_ENUMERATE_SUB_KEYS`. For more information about security access together with the registry, see [Registry Key Security and Access Rights](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
   
- 에 대 한 소멸자 `CSettingsStore` 해제 `m_hKey` 자동으로 합니다.  
+ The destructor for `CSettingsStore` releases `m_hKey` automatically.  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
- 레지스트리에서 키 및 모든 자식 노드를 삭제합니다.  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
+ Deletes a key and all its children from the registry.  
   
 ```  
 virtual BOOL DeleteKey(
@@ -154,54 +160,54 @@ virtual BOOL DeleteKey(
     BOOL bAdmin = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pszPath`  
- 삭제할 키의 이름입니다.  
+ The name of the key to delete.  
   
  [in] `bAdmin`  
- 삭제할 키의 위치를 지정 하는 스위치입니다.  
+ Switch that specifies the location of the key to delete.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 있으면이 메서드는 실패는 `CSettingsStore` 개체는 읽기 전용 모드에서입니다.  
+### <a name="remarks"></a>Remarks  
+ This method will fail if the `CSettingsStore` object is in read-only mode.  
   
- 경우 매개 변수 `bAdmin` 가&0; 이면 `DeleteKey` 검색에서 삭제 하는 키에 대 한 `HKEY_CURRENT_USER`합니다. 경우 `bAdmin` 이 값은&0; `DeleteKey` 검색에서 삭제 하는 키에 대 한 `HKEY_LOCAL_MACHINE`합니다.  
+ If the parameter `bAdmin` is zero, `DeleteKey` searches for the key to delete under `HKEY_CURRENT_USER`. If `bAdmin` is nonzero, `DeleteKey` searches for the key to delete under `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
- 값을 삭제 `m_hKey`합니다.  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
+ Deletes a value from `m_hKey`.  
   
 ```  
 virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pszValue`  
- 제거 하려면 값 필드를 지정 합니다.  
+ Specifies the value field to remove.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="open"></a>CSettingsStore::Open  
- 레지스트리 키를 엽니다.  
+##  <a name="open"></a>  CSettingsStore::Open  
+ Opens a registry key.  
   
 ```  
 virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pszPath`  
- 레지스트리 키의 이름입니다.  
+ The name of a registry key.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 지정 된 키 성공적으로 열리면 설정 `m_hKey` 이 키의 핸들입니다.  
+### <a name="remarks"></a>Remarks  
+ After this method successfully opens the specified key, it sets `m_hKey` to the handle of this key.  
   
-##  <a name="read"></a>CSettingsStore::Read  
- 레지스트리 키에서 값을 읽습니다.  
+##  <a name="read"></a>  CSettingsStore::Read  
+ Reads a value from a key in the registry.  
   
 ```  
 virtual BOOL Read(
@@ -275,63 +281,63 @@ virtual BOOL Read(
     CObject*& pObj);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pszKey`  
- 레지스트리에서 읽을 값의 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
+ Pointer to a null-terminated string that contains the name of the value to read from the registry.  
   
  [out] `iVal`  
- 레지스트리 키에서 읽은 값을 받는 정수 변수에 대 한 참조입니다.  
+ Reference to an integer variable that receives the value read from the registry key.  
   
  [out] `dwVal`  
- 레지스트리 키에서 읽은 값을 수신 하는 32 비트 2 배 워드 변수 참조입니다.  
+ Reference to a 32-bit double word variable that receives the value read from the registry key.  
   
  [out] `sVal`  
- 레지스트리 키에서 읽은 값을 수신 하는 문자열 변수 참조입니다.  
+ Reference to a string variable that receives the value read from the registry key.  
   
  [out] `scStringList`  
- 레지스트리 키에서 읽은 값을 수신 하는 문자열 목록 변수 참조입니다.  
+ Reference to a string list variable that receives the value read from the registry key.  
   
  [out] `scArray`  
- 레지스트리 키에서 읽은 값을 수신 하는 문자열 배열 변수 참조입니다.  
+ Reference to a string array variable that receives the value read from the registry key.  
   
  [out] `dwcArray`  
- 레지스트리 키에서 읽은 값을 수신 하는 32 비트 2 배 워드 배열 변수 참조입니다.  
+ Reference to a 32-bit double word array variable that receives the value read from the registry key.  
   
  [out] `wcArray`  
- 레지스트리 키에서 읽은 값을 수신 하는 16 비트 단어 배열 변수 참조입니다.  
+ Reference to a 16-bit word array variable that receives the value read from the registry key.  
   
  [out] `bcArray`  
- 레지스트리 키에서 읽은 값을 수신 하는 바이트 배열 변수 참조입니다.  
+ Reference to a byte array variable that receives the value read from the registry key.  
   
  [out] `lpPoint`  
- 에 대 한 포인터에 대 한 참조는 `POINT` 레지스트리 키에서 읽은 값을 받는 구조입니다.  
+ Reference to a pointer to a `POINT` structure that receives the value read from the registry key.  
   
  [out] `rect`  
- 에 대 한 참조는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 레지스트리 키에서 읽은 값을 받는 변수입니다.  
+ Reference to a [CRect](../../atl-mfc-shared/reference/crect-class.md) variable that receives the value read from the registry key.  
   
  [out] `ppData`  
- 레지스트리 키에서 값을 받는 데이터에 대 한 포인터를 읽습니다.  
+ Pointer to a pointer to data that receives the value read from the registry key.  
   
  [out] `pBytes`  
- 부호 없는 정수 변수에 대 한 포인터입니다. 이 변수는 버퍼의 크기를 받는 `ppData` 를 가리킵니다.  
+ Pointer to an unsigned integer variable. This variable receives the size of the buffer that `ppData` points to.  
   
  [out] `list`  
- 에 대 한 참조는 [CObList](../../mfc/reference/coblist-class.md) 레지스트리 키에서 읽은 값을 받는 변수입니다.  
+ Reference to a [CObList](../../mfc/reference/coblist-class.md) variable that receives the value read from the registry key.  
   
  [out] `obj`  
- 에 대 한 참조는 [CObject](../../mfc/reference/cobject-class.md) 레지스트리 키에서 읽은 값을 받는 변수입니다.  
+ Reference to a [CObject](../../mfc/reference/cobject-class.md) variable that receives the value read from the registry key.  
   
  [out] `pObj`  
- 에 대 한 포인터에 대 한 참조는 `CObject` 레지스트리 키에서 읽은 값을 받는 변수입니다.  
+ Reference to a pointer to a `CObject` variable that receives the value read from the registry key.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- `Read`에 대 한 검사 `pszKey` 의 하위 키로 `m_hKey`합니다.  
+### <a name="remarks"></a>Remarks  
+ `Read` checks for `pszKey` as a subkey of `m_hKey`.  
   
-##  <a name="write"></a>CSettingsStore::Write  
- 열기 키 아래의 레지스트리 값을 씁니다.  
+##  <a name="write"></a>  CSettingsStore::Write  
+ Writes a value to the registry under the open key.  
   
 ```  
 virtual BOOL Write(
@@ -405,63 +411,63 @@ virtual BOOL Write(
     CObject* pObj);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pszKey`  
- 설정할 값의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ Pointer to a string that contains the name of the value to set.  
   
  [in] `iVal`  
- 저장할 데이터를 포함 하는 정수 변수에 대 한 참조입니다.  
+ Reference to an integer variable that contains the data to store.  
   
  [in] `dwVal`  
- 저장할 데이터를 포함 하는 32 비트 2 배 워드 변수 참조입니다.  
+ Reference to a 32-bit double word variable that contains the data to store.  
   
  [in] `pszVal`  
- 저장할 데이터를 포함 하는 null로 끝나는 문자열 변수에 대 한 포인터입니다.  
+ Pointer to a null-terminated string variable that contains the data to store.  
   
  [in] `scStringList`  
- 에 대 한 참조는 [CStringList](../../mfc/reference/cstringlist-class.md) 저장할 데이터를 포함 하는 변수입니다.  
+ Reference to a [CStringList](../../mfc/reference/cstringlist-class.md) variable that contains the data to store.  
   
  [in] `bcArray`  
- 저장할 데이터를 포함 하는 바이트 배열 변수에 대 한 참조입니다.  
+ Reference to a byte array variable that contains the data to store.  
   
  [in] `scArray`  
- 저장할 데이터를 포함 하는 문자열 배열 변수에 대 한 참조입니다.  
+ Reference to a string array variable that contains the data to store.  
   
  [in] `dwcArray`  
- 저장할 데이터를 포함 하는 32 비트 2 배 워드 배열 변수에 대 한 참조입니다.  
+ Reference to a 32-bit double word array variable that contains the data to store.  
   
  [in] `wcArray`  
- 저장할 데이터를 포함 하는 16 비트 단어 배열 변수에 대 한 참조입니다.  
+ Reference to a 16-bit word array variable that contains the data to store.  
   
  [in] `rect`  
- 에 대 한 참조는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 저장할 데이터를 포함 하는 변수입니다.  
+ Reference to a [CRect](../../atl-mfc-shared/reference/crect-class.md) variable that contains the data to store.  
   
  [in] `lpPoint`  
- 에 대 한 포인터에 대 한 참조는 `POINT` 저장할 데이터를 포함 하는 변수입니다.  
+ Reference to a pointer to a `POINT` variable that contains the data to store.  
   
  [in] `pData`  
- 저장할 데이터를 포함 하는 버퍼에 대 한 포인터입니다.  
+ Pointer to a buffer that contains the data to store.  
   
  [in] `nBytes`  
- (바이트)는 데이터의 크기를 지정 된 `pData` 매개 지점입니다.  
+ Specifies the size, in bytes, of the data to which the `pData` parameter points.  
   
  [in] `list`  
- 에 대 한 참조는 [CObList](../../mfc/reference/coblist-class.md) 저장할 데이터를 포함 하는 변수입니다.  
+ Reference to a [CObList](../../mfc/reference/coblist-class.md) variable that contains the data to store.  
   
  [in] `obj`  
- 에 대 한 참조는 [CObject](../../mfc/reference/cobject-class.md) 저장할 데이터를 포함 하는 변수입니다.  
+ Reference to a [CObject](../../mfc/reference/cobject-class.md) variable that contains the data to store.  
   
  [in] `pObj`  
- 에 대 한 포인터에 대 한 포인터는 `CObject` 저장할 데이터를 포함 하는 변수입니다.  
+ Pointer to a pointer to a `CObject` variable that contains the data to store.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 설정 해야 레지스트리에 쓰려면 `bReadOnly` 만들 때&0;이 아닌 값으로는 [CSettingsStore](../../mfc/reference/csettingsstore-class.md) 개체입니다. 자세한 내용은 참조 [CSettingsStore::CSettingsStore](#csettingsstore)합니다.  
+### <a name="remarks"></a>Remarks  
+ In order to write to the registry, you must set `bReadOnly` to a nonzero value when you create a [CSettingsStore](../../mfc/reference/csettingsstore-class.md) object. For more information, see [CSettingsStore::CSettingsStore](#csettingsstore).  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)
 

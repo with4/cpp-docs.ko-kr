@@ -1,5 +1,5 @@
 ---
-title: "CRgn 클래스 | Microsoft Docs"
+title: CRgn Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HRGN
-- CRgn class
-- regions, MFC
+- CRgn [MFC], CRgn
+- CRgn [MFC], CombineRgn
+- CRgn [MFC], CopyRgn
+- CRgn [MFC], CreateEllipticRgn
+- CRgn [MFC], CreateEllipticRgnIndirect
+- CRgn [MFC], CreateFromData
+- CRgn [MFC], CreateFromPath
+- CRgn [MFC], CreatePolygonRgn
+- CRgn [MFC], CreatePolyPolygonRgn
+- CRgn [MFC], CreateRectRgn
+- CRgn [MFC], CreateRectRgnIndirect
+- CRgn [MFC], CreateRoundRectRgn
+- CRgn [MFC], EqualRgn
+- CRgn [MFC], FromHandle
+- CRgn [MFC], GetRegionData
+- CRgn [MFC], GetRgnBox
+- CRgn [MFC], OffsetRgn
+- CRgn [MFC], PtInRegion
+- CRgn [MFC], RectInRegion
+- CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
 caps.latest.revision: 23
 author: mikeblome
@@ -56,79 +73,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3aa69aa3947409b5b3d96a9da92f5d4549eebbb4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9aab720a355bb351c32d6a2242979306e62cbbaf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crgn-class"></a>CRgn 클래스
-Windows GDI(그래픽 장치 인터페이스) 영역을 캡슐화합니다.  
+# <a name="crgn-class"></a>CRgn Class
+Encapsulates a Windows graphics device interface (GDI) region.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRgn : public CGdiObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRgn::CRgn](#crgn)|`CRgn` 개체를 생성합니다.|  
+|[CRgn::CRgn](#crgn)|Constructs a `CRgn` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRgn::CombineRgn](#combinergn)|집합은 `CRgn` 개체의 지정 된 두 합집합 동일 있도록 `CRgn` 개체입니다.|  
-|[CRgn::CopyRgn](#copyrgn)|설정 된 `CRgn` 개체는 지정 된 복사본 수 있도록 `CRgn` 개체입니다.|  
-|[CRgn::CreateEllipticRgn](#createellipticrgn)|초기화 한 `CRgn` 타원형 영역이 있는 개체입니다.|  
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|초기화 한 `CRgn` 정의한 타원형 영역이 있는 개체는 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.|  
-|[CRgn::CreateFromData](#createfromdata)|지정된 된 지역 및 변환 데이터를 영역을 만듭니다.|  
-|[CRgn::CreateFromPath](#createfrompath)|지정 된 장치 컨텍스트로 선택 된 경로에서 영역을 만듭니다.|  
-|[CRgn::CreatePolygonRgn](#createpolygonrgn)|초기화 한 `CRgn` 다각형 영역이 있는 개체입니다. 시스템의 다각형 자동으로 닫힙니다, 필요한 경우 첫 번째와 마지막 꼭지점에서 선을 그려.|  
-|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|초기화 한 `CRgn` 개체는 일련의 닫힌된 다각형으로 구성 된 지역에 있습니다. 다각형이 이거나 겹칠 수 있습니다.|  
-|[CRgn::CreateRectRgn](#createrectrgn)|초기화 한 `CRgn` 사각형 영역 개체입니다.|  
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|초기화 한 `CRgn` 개체에 정의 된 사각형 영역이 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.|  
-|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|초기화 한 `CRgn` 모퉁이가 둥근 사각형 영역이 있는 개체입니다.|  
-|[CRgn::EqualRgn](#equalrgn)|에서는 두 `CRgn` 동일한 지 여부를 결정 하는 개체입니다.|  
-|[CRgn::FromHandle](#fromhandle)|에 대 한 포인터를 반환 합니다.는 `CRgn` Windows 영역에 대 한 핸들을 지정 되 면 개체입니다.|  
-|[CRgn::GetRegionData](#getregiondata)|지정된 된 영역을 설명 하는 데이터는 지정 된 버퍼를 채웁니다.|  
-|[CRgn::GetRgnBox](#getrgnbox)|경계 사각형의 좌표를 검색 한 `CRgn` 개체입니다.|  
-|[CRgn::OffsetRgn](#offsetrgn)|이동 된 `CRgn` 개체에서 지정 된 오프셋 합니다.|  
-|[CRgn::PtInRegion](#ptinregion)|지정된 된 지점 값이 영역에 있는지 여부를 결정 합니다.|  
-|[CRgn::RectInRegion](#rectinregion)|영역의 경계 내에서 지정된 된 사각형의 일부 인지 확인 합니다.|  
-|[CRgn::SetRectRgn](#setrectrgn)|설정의 `CRgn` 개체 지정된 된 사각형 영역입니다.|  
+|[CRgn::CombineRgn](#combinergn)|Sets a `CRgn` object so that it is equivalent to the union of two specified `CRgn` objects.|  
+|[CRgn::CopyRgn](#copyrgn)|Sets a `CRgn` object so that it is a copy of a specified `CRgn` object.|  
+|[CRgn::CreateEllipticRgn](#createellipticrgn)|Initializes a `CRgn` object with an elliptical region.|  
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initializes a `CRgn` object with an elliptical region defined by a [RECT](../../mfc/reference/rect-structure1.md) structure.|  
+|[CRgn::CreateFromData](#createfromdata)|Creates a region from the given region and transformation data.|  
+|[CRgn::CreateFromPath](#createfrompath)|Creates a region from the path that is selected into the given device context.|  
+|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initializes a `CRgn` object with a polygonal region. The system closes the polygon automatically, if necessary, by drawing a line from the last vertex to the first.|  
+|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initializes a `CRgn` object with a region consisting of a series of closed polygons. The polygons may be disjoint, or they may overlap.|  
+|[CRgn::CreateRectRgn](#createrectrgn)|Initializes a `CRgn` object with a rectangular region.|  
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initializes a `CRgn` object with a rectangular region defined by a [RECT](../../mfc/reference/rect-structure1.md) structure.|  
+|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initializes a `CRgn` object with a rectangular region with rounded corners.|  
+|[CRgn::EqualRgn](#equalrgn)|Checks two `CRgn` objects to determine whether they are equivalent.|  
+|[CRgn::FromHandle](#fromhandle)|Returns a pointer to a `CRgn` object when given a handle to a Windows region.|  
+|[CRgn::GetRegionData](#getregiondata)|Fills the specified buffer with data describing the given region.|  
+|[CRgn::GetRgnBox](#getrgnbox)|Retrieves the coordinates of the bounding rectangle of a `CRgn` object.|  
+|[CRgn::OffsetRgn](#offsetrgn)|Moves a `CRgn` object by the specified offsets.|  
+|[CRgn::PtInRegion](#ptinregion)|Determines whether a specified point is in the region.|  
+|[CRgn::RectInRegion](#rectinregion)|Determines whether any part of a specified rectangle is within the boundaries of the region.|  
+|[CRgn::SetRectRgn](#setrectrgn)|Sets the `CRgn` object to the specified rectangular region.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[HRGN CRgn::operator](#operator_hrgn)|에 포함 된 Windows 핸들을 반환 된 `CRgn` 개체입니다.|  
+|[CRgn::operator HRGN](#operator_hrgn)|Returns the Windows handle contained in the `CRgn` object.|  
   
-## <a name="remarks"></a>주의  
- 영역은 원형 또는 다각형 영역 창 내에서. 클래스의 멤버 함수를 사용 하면 영역을 사용 하려면 `CRgn` 클래스의 멤버로 정의 된 클리핑 함수로 `CDC`합니다.  
+## <a name="remarks"></a>Remarks  
+ A region is an elliptical or polygonal area within a window. To use regions, you use the member functions of class `CRgn` with the clipping functions defined as members of class `CDC`.  
   
- 멤버 함수 `CRgn` 을 생성, 변경 및 영역 개체를 호출 하는 방법에 대 한 정보를 검색 합니다.  
+ The member functions of `CRgn` create, alter, and retrieve information about the region object for which they are called.  
   
- 사용 하 여 대 한 자세한 내용은 `CRgn`, 참조 [그래픽 개체](../../mfc/graphic-objects.md)합니다.  
+ For more information on using `CRgn`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CRgn`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="combinergn"></a>CRgn::CombineRgn  
- 두 개의 기존 영역을 결합 하 여 새 GDI 영역을 만듭니다.  
+##  <a name="combinergn"></a>  CRgn::CombineRgn  
+ Creates a new GDI region by combining two existing regions.  
   
 ```  
 int CombineRgn(
@@ -137,79 +154,79 @@ int CombineRgn(
     int nCombineMode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pRgn1`  
- 기존 영역을 식별합니다.  
+ Identifies an existing region.  
   
  `pRgn2`  
- 기존 영역을 식별합니다.  
+ Identifies an existing region.  
   
  `nCombineMode`  
- 두 소스 영역을 결합 하는 경우 수행할 작업을 지정 합니다. 다음 값 중 하나일 수 있습니다.  
+ Specifies the operation to be performed when combining the two source regions. It can be any one of the following values:  
   
-- **RGN_AND** 두 영역 (겹치는 부분)에 대해 겹치는 영역을 사용 합니다.  
+- **RGN_AND** Uses overlapping areas of both regions (intersection).  
   
-- **RGN_COPY** 지역 1의 복사본을 만듭니다 (으로 식별 `pRgn1`).  
+- **RGN_COPY** Creates a copy of region 1 (identified by `pRgn1`).  
   
-- **RGN_DIFF** 1 영역의 영역으로 구성 된 영역을 만듭니다 (으로 식별 `pRgn1`) 2 영역에 속하지 않는 (으로 식별 `pRgn2`).  
+- **RGN_DIFF** Creates a region consisting of the areas of region 1 (identified by `pRgn1`) that are not part of region 2 (identified by `pRgn2`).  
   
-- **RGN_OR** (union) 전체에 있는 두 영역을 결합 합니다.  
+- **RGN_OR** Combines both regions in their entirety (union).  
   
-- **RGN_XOR** 두 영역 결합 되지만 겹치는 영역을 제거 합니다.  
+- **RGN_XOR** Combines both regions but removes overlapping areas.  
   
-### <a name="return-value"></a>반환 값  
- 결과 영역의 형식을 지정합니다. 다음 값 중 하나일 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ Specifies the type of the resulting region. It can be one of the following values:  
   
-- **COMPLEXREGION** 새 영역에 테두리를 겹치는 합니다.  
+- **COMPLEXREGION** New region has overlapping borders.  
   
-- **오류** 만든 새 지역 없습니다.  
+- **ERROR** No new region created.  
   
-- **NULLREGION** 새 영역 비어 있습니다.  
+- **NULLREGION** New region is empty.  
   
-- **SIMPLEREGION** 새 영역에 겹치는 테두리가 없습니다.  
+- **SIMPLEREGION** New region has no overlapping borders.  
   
-### <a name="remarks"></a>주의  
- 영역을 결합 하 여 지정 된 대로 `nCombineMode`합니다.  
+### <a name="remarks"></a>Remarks  
+ The regions are combined as specified by `nCombineMode`.  
   
- 영역을 결합 하 고 결과 영역 핸들에 저장 된 지정한 두는 `CRgn` 개체입니다. 모든 지역에 저장 되는 따라서는 `CRgn` 개체 결합 된 지역으로 대체 됩니다.  
+ The two specified regions are combined, and the resulting region handle is stored in the `CRgn` object. Thus, whatever region is stored in the `CRgn` object is replaced by the combined region.  
   
- 영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 제한 64k의 메모리, 중 더 작은 값입니다.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 사용 하 여 [CopyRgn](#copyrgn) 한 지역의 다른 영역에 복사 하 합니다.  
+ Use [CopyRgn](#copyrgn) to simply copy one region into another region.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView # 144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
-##  <a name="copyrgn"></a>CRgn::CopyRgn  
- 에 정의 된 영역 복사 `pRgnSrc` 에 `CRgn` 개체입니다.  
+##  <a name="copyrgn"></a>  CRgn::CopyRgn  
+ Copies the region defined by `pRgnSrc` into the `CRgn` object.  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pRgnSrc`  
- 기존 영역을 식별합니다.  
+ Identifies an existing region.  
   
-### <a name="return-value"></a>반환 값  
- 결과 영역의 형식을 지정합니다. 다음 값 중 하나일 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ Specifies the type of the resulting region. It can be one of the following values:  
   
-- **COMPLEXREGION** 새 영역에 테두리를 겹치는 합니다.  
+- **COMPLEXREGION** New region has overlapping borders.  
   
-- **오류** 만든 새 지역 없습니다.  
+- **ERROR** No new region created.  
   
-- **NULLREGION** 새 영역 비어 있습니다.  
+- **NULLREGION** New region is empty.  
   
-- **SIMPLEREGION** 새 영역에 겹치는 테두리가 없습니다.  
+- **SIMPLEREGION** New region has no overlapping borders.  
   
-### <a name="remarks"></a>주의  
- 이전에 저장 된 영역을 대체 하는 새 영역은 `CRgn` 개체입니다. 이 함수는 특별 한 경우는 [CombineRgn](#combinergn) 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ The new region replaces the region formerly stored in the `CRgn` object. This function is a special case of the [CombineRgn](#combinergn) member function.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRgn::CreateEllipticRgn](#createellipticrgn)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="createellipticrgn"></a>CRgn::CreateEllipticRgn  
- 타원형 영역을 만듭니다.  
+##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn  
+ Creates an elliptical region.  
   
 ```  
 BOOL CreateEllipticRgn(
@@ -219,58 +236,58 @@ BOOL CreateEllipticRgn(
     int y2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 타원의 경계 사각형의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
+ Specifies the logical x-coordinate of the upper-left corner of the bounding rectangle of the ellipse.  
   
  `y1`  
- 타원의 경계 사각형의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
+ Specifies the logical y-coordinate of the upper-left corner of the bounding rectangle of the ellipse.  
   
  `x2`  
- 타원의 경계 사각형의 오른쪽 아래 모퉁이의 논리적 x 좌표를 지정합니다.  
+ Specifies the logical x-coordinate of the lower-right corner of the bounding rectangle of the ellipse.  
   
  `y2`  
- 타원의 경계 사각형의 오른쪽 아래 모퉁이의 논리적 y 좌표를 지정합니다.  
+ Specifies the logical y-coordinate of the lower-right corner of the bounding rectangle of the ellipse.  
   
-### <a name="return-value"></a>반환 값  
- 작업이 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지역으로 지정 된 경계 사각형에 의해 정의 된 `x1`, `y1`, `x2`, 및 `y2`합니다. 지역에 저장 되는 `CRgn` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The region is defined by the bounding rectangle specified by `x1`, `y1`, `x2`, and `y2`. The region is stored in the `CRgn` object.  
   
- 영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 제한 64k의 메모리, 중 더 작은 값입니다.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 마친 다음 사용 하 여 만든 영역을 사용 하는 `CreateEllipticRgn` 함수, 응용 프로그램을 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 `DeleteObject` 함수를 제거 합니다.  
+ When it has finished using a region created with the `CreateEllipticRgn` function, an application should select the region out of the device context and use the `DeleteObject` function to remove it.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView # 145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
   
-##  <a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect  
- 타원형 영역을 만듭니다.  
+##  <a name="createellipticrgnindirect"></a>  CRgn::CreateEllipticRgnIndirect  
+ Creates an elliptical region.  
   
 ```  
 BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 가리키는 `RECT` 구조 또는 `CRect` 타원의 경계 사각형의 왼쪽 및 오른쪽 아래 모퉁이의 논리적 좌표가 포함 된 개체입니다.  
+ Points to a `RECT` structure or a `CRect` object that contains the logical coordinates of the upper-left and lower-right corners of the bounding rectangle of the ellipse.  
   
-### <a name="return-value"></a>반환 값  
- 작업이 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지역 구조 또는가 가리키는 개체가 정의 `lpRect` 에 저장 됩니다는 `CRgn` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The region is defined by the structure or object pointed to by `lpRect` and is stored in the `CRgn` object.  
   
- 영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 제한 64k의 메모리, 중 더 작은 값입니다.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 마친 다음 사용 하 여 만든 영역을 사용 하는 `CreateEllipticRgnIndirect` 함수, 응용 프로그램을 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 `DeleteObject` 함수를 제거 합니다.  
+ When it has finished using a region created with the `CreateEllipticRgnIndirect` function, an application should select the region out of the device context and use the `DeleteObject` function to remove it.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRgn::CreateRectRgnIndirect](#createrectrgnindirect)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).  
   
-##  <a name="createfromdata"></a>CRgn::CreateFromData  
- 지정된 된 지역 및 변환 데이터를 영역을 만듭니다.  
+##  <a name="createfromdata"></a>  CRgn::CreateFromData  
+ Creates a region from the given region and transformation data.  
   
 ```  
 BOOL CreateFromData(
@@ -279,41 +296,41 @@ BOOL CreateFromData(
     const RGNDATA* pRgnData);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *lpXForm*  
- 가리키는 [XFORM](../../mfc/reference/xform-structure.md) 영역에서 수행할 변환을 정의 하는 데이터 구조입니다. 이 포인터 이면 **NULL**, identity 변환을 사용 합니다.  
+ Points to an [XFORM](../../mfc/reference/xform-structure.md) data structure that defines the transformation to be performed on the region. If this pointer is **NULL**, the identity transformation is used.  
   
  `nCount`  
- 가 가리키는 바이트 수가 지정 `pRgnData`합니다.  
+ Specifies the number of bytes pointed to by `pRgnData`.  
   
  `pRgnData`  
- 가리키는 [RGNDATA](../../mfc/reference/rgndata-structure.md) 지역 데이터를 포함 하는 데이터 구조입니다.  
+ Points to a [RGNDATA](../../mfc/reference/rgndata-structure.md) data structure that contains the region data.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 응용 프로그램 호출 하 여 영역에 대 한 데이터를 검색할 수는 `CRgn::GetRegionData` 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ An application can retrieve data for a region by calling the `CRgn::GetRegionData` function.  
   
-##  <a name="createfrompath"></a>CRgn::CreateFromPath  
- 지정 된 장치 컨텍스트로 선택 된 경로에서 영역을 만듭니다.  
+##  <a name="createfrompath"></a>  CRgn::CreateFromPath  
+ Creates a region from the path that is selected into the given device context.  
   
 ```  
 BOOL CreateFromPath(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 닫힌된 경로가 포함 된 장치 컨텍스트를 식별 합니다.  
+ Identifies a device context that contains a closed path.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지정 된 디바이스 컨텍스트는 `pDC` 매개 변수는 닫힌된 경로가 포함 되어야 합니다. 후 `CreateFromPath` Windows 영역 경로 장치 컨텍스트에서 닫힌된 경로 삭제 합니다.  
+### <a name="remarks"></a>Remarks  
+ The device context identified by the `pDC` parameter must contain a closed path. After `CreateFromPath` converts a path into a region, Windows discards the closed path from the device context.  
   
-##  <a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn  
- 다각형 영역을 만듭니다.  
+##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
+ Creates a polygonal region.  
   
 ```  
 BOOL CreatePolygonRgn(
@@ -322,9 +339,9 @@ BOOL CreatePolygonRgn(
     int nMode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 배열을 가리키는 **지점** 구조 또는 배열을 `CPoint` 개체입니다. X-좌표와 y 좌표는 다각형의 한 꼭 짓 점에 각 구조를 지정합니다. **지점** 구조 형식은 다음과 같습니다.  
+ Points to an array of **POINT** structures or an array of `CPoint` objects. Each structure specifies the x-coordinate and y-coordinate of one vertex of the polygon. The **POINT** structure has the following form:  
   
  `typedef struct tagPOINT {`  
   
@@ -335,30 +352,30 @@ BOOL CreatePolygonRgn(
  `} POINT;`  
   
  `nCount`  
- 개수를 지정 **지점** 구조 또는 `CPoint` 가 가리키는 배열의 개체에에서 `lpPoints`합니다.  
+ Specifies the number of **POINT** structures or `CPoint` objects in the array pointed to by `lpPoints`.  
   
  `nMode`  
- 지역에 대 한 채우기 모드를 지정합니다. 이 매개 변수 중 하나일 수 있습니다 **대체** 또는 **굴곡**합니다.  
+ Specifies the filling mode for the region. This parameter may be either **ALTERNATE** or **WINDING**.  
   
-### <a name="return-value"></a>반환 값  
- 작업이 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 시스템의 다각형 자동으로 닫힙니다, 필요한 경우 첫 번째와 마지막 꼭지점에서 선을 그려. 결과 영역에 저장 되는 `CRgn` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The system closes the polygon automatically, if necessary, by drawing a line from the last vertex to the first. The resulting region is stored in the `CRgn` object.  
   
- 영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 제한 64k의 메모리, 중 더 작은 값입니다.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 다각형 채우기 모드가 인 경우 **대체**, 시스템 간에 검색 한 줄에 홀수 번호와 짝수 다각형 면 영역을 채웁니다. 즉, 시스템 등 세 번째와 네 번째 쪽 사이, 첫 번째 및 두 번째 쪽 사이 영역을 채웁니다.  
+ When the polygon-filling mode is **ALTERNATE**, the system fills the area between odd-numbered and even-numbered polygon sides on each scan line. That is, the system fills the area between the first and second side, between the third and fourth side, and so on.  
   
- 다각형 채우기 모드가 인 경우 **굴곡**, 도형 그린 영역을 채우는 여부를 결정 하는 방향을 사용 됩니다. Polygon에 있는 각 선 세그먼트는 시계 방향으로 또는 시계 반대 방향에 그려집니다. 그림의 외부로 둘러싸인된 영역에서 가져온 가상 선 시계 반대 방향으로 선 세그먼트를 통과할 때마다 수는 증가 합니다. 줄 시계 반대 방향으로 선 세그먼트를 통과할 때의 개수가 감소 됩니다. 줄이 그림의 바깥쪽에 도달할 때 수가 0이 아닌 경우는 영역을 채웁니다.  
+ When the polygon-filling mode is **WINDING**, the system uses the direction in which a figure was drawn to determine whether to fill an area. Each line segment in a polygon is drawn in either a clockwise or a counterclockwise direction. Whenever an imaginary line drawn from an enclosed area to the outside of a figure passes through a clockwise line segment, a count is incremented. When the line passes through a counterclockwise line segment, the count is decremented. The area is filled if the count is nonzero when the line reaches the outside of the figure.  
   
- 응용 프로그램이를 완료할 때 사용 하 여 만든 영역을 사용 하 여 `CreatePolygonRgn` 함수를 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 `DeleteObject` 함수를 제거 합니다.  
+ When an application has finished using a region created with the `CreatePolygonRgn` function, it should select the region out of the device context and use the `DeleteObject` function to remove it.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView # 146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
   
-##  <a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn  
- 일련의 닫힌된 다각형으로 구성 된 영역을 만듭니다.  
+##  <a name="createpolypolygonrgn"></a>  CRgn::CreatePolyPolygonRgn  
+ Creates a region consisting of a series of closed polygons.  
   
 ```  
 BOOL CreatePolyPolygonRgn(
@@ -368,9 +385,9 @@ BOOL CreatePolyPolygonRgn(
     int nPolyFillMode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 배열을 가리키는 **지점** 구조 또는 배열을 `CPoint` 다각형의 꼭 짓 점을 정의 하는 개체입니다. 시스템에 자동으로 닫히지 않습니다 때문에 각 다각형 명시적으로 닫아야 합니다. 다각형은 연속으로 지정 됩니다. **지점** 구조 형식은 다음과 같습니다.  
+ Points to an array of **POINT** structures or an array of `CPoint` objects that defines the vertices of the polygons. Each polygon must be explicitly closed because the system does not close them automatically. The polygons are specified consecutively. The **POINT** structure has the following form:  
   
  `typedef struct tagPOINT {`  
   
@@ -381,32 +398,32 @@ BOOL CreatePolyPolygonRgn(
  `} POINT;`  
   
  `lpPolyCounts`  
- 정수 배열 가리킵니다. 에 있는 첫 번째 다각형의 꼭 짓 점 수를 지정 하는 첫 번째 정수는 `lpPoints` 배열에 두 번째 정수 두 번째 다각형의 꼭 짓 점 수를 지정 합니다.  
+ Points to an array of integers. The first integer specifies the number of vertices in the first polygon in the `lpPoints` array, the second integer specifies the number of vertices in the second polygon, and so on.  
   
  `nCount`  
- 정수 총 수를 지정 된 `lpPolyCounts` 배열입니다.  
+ Specifies the total number of integers in the `lpPolyCounts` array.  
   
  `nPolyFillMode`  
- 다각형 채우기 모드를 지정합니다. 이 값 중 하나일 수 있습니다 **대체** 또는 **굴곡**합니다.  
+ Specifies the polygon-filling mode. This value may be either **ALTERNATE** or **WINDING**.  
   
-### <a name="return-value"></a>반환 값  
- 작업이 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 결과 영역에 저장 되는 `CRgn` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The resulting region is stored in the `CRgn` object.  
   
- 다각형이 이거나 겹칠 수 있습니다.  
+ The polygons may be disjoint, or they may overlap.  
   
- 영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 제한 64k의 메모리, 중 더 작은 값입니다.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 다각형 채우기 모드가 인 경우 **대체**, 시스템 간에 검색 한 줄에 홀수 번호와 짝수 다각형 면 영역을 채웁니다. 즉, 시스템 등 세 번째와 네 번째 쪽 사이, 첫 번째 및 두 번째 쪽 사이 영역을 채웁니다.  
+ When the polygon-filling mode is **ALTERNATE**, the system fills the area between odd-numbered and even-numbered polygon sides on each scan line. That is, the system fills the area between the first and second side, between the third and fourth side, and so on.  
   
- 다각형 채우기 모드가 인 경우 **굴곡**, 도형 그린 영역을 채우는 여부를 결정 하는 방향을 사용 됩니다. Polygon에 있는 각 선 세그먼트는 시계 방향으로 또는 시계 반대 방향에 그려집니다. 그림의 외부로 둘러싸인된 영역에서 가져온 가상 선 시계 반대 방향으로 선 세그먼트를 통과할 때마다 수는 증가 합니다. 줄 시계 반대 방향으로 선 세그먼트를 통과할 때의 개수가 감소 됩니다. 줄이 그림의 바깥쪽에 도달할 때 수가 0이 아닌 경우는 영역을 채웁니다.  
+ When the polygon-filling mode is **WINDING**, the system uses the direction in which a figure was drawn to determine whether to fill an area. Each line segment in a polygon is drawn in either a clockwise or a counterclockwise direction. Whenever an imaginary line drawn from an enclosed area to the outside of a figure passes through a clockwise line segment, a count is incremented. When the line passes through a counterclockwise line segment, the count is decremented. The area is filled if the count is nonzero when the line reaches the outside of the figure.  
   
- 응용 프로그램이를 완료할 때 사용 하 여 만든 영역을 사용 하 여 `CreatePolyPolygonRgn` 함수를 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 멤버 함수를 제거 합니다.  
+ When an application has finished using a region created with the `CreatePolyPolygonRgn` function, it should select the region out of the device context and use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove it.  
   
-##  <a name="createrectrgn"></a>CRgn::CreateRectRgn  
- 에 저장 되어 있는 사각형 영역을 만드는 데는 `CRgn` 개체입니다.  
+##  <a name="createrectrgn"></a>  CRgn::CreateRectRgn  
+ Creates a rectangular region that is stored in the `CRgn` object.  
   
 ```  
 BOOL CreateRectRgn(
@@ -416,42 +433,42 @@ BOOL CreateRectRgn(
     int y2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 영역의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
+ Specifies the logical x-coordinate of the upper-left corner of the region.  
   
  `y1`  
- 영역의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
+ Specifies the logical y-coordinate of the upper-left corner of the region.  
   
  `x2`  
- 영역의 오른쪽 아래 모퉁이의 논리적 x 좌표를 지정합니다.  
+ Specifies the logical x-coordinate of the lower-right corner of the region.  
   
  `y2`  
- 영역의 오른쪽 아래 모퉁이의 논리적 y 좌표를 지정합니다.  
+ Specifies the logical y-coordinate of the lower-right corner of the region.  
   
-### <a name="return-value"></a>반환 값  
- 작업이 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 제한 64k의 메모리, 중 더 작은 값입니다.  
+### <a name="remarks"></a>Remarks  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 마친 의해 만들어진 영역을 사용 하 여 `CreateRectRgn`, 응용 프로그램을 사용할지는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 영역을 제거 하는 멤버 함수입니다.  
+ When it has finished using a region created by `CreateRectRgn`, an application should use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove the region.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView # 147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
   
- 추가 예제를 참조 하십시오. [CRgn::CombineRgn](#combinergn)합니다.  
+ For an additional example, see [CRgn::CombineRgn](#combinergn).  
   
-##  <a name="createrectrgnindirect"></a>CRgn::CreateRectRgnIndirect  
- 에 저장 되어 있는 사각형 영역을 만드는 데는 `CRgn` 개체입니다.  
+##  <a name="createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect  
+ Creates a rectangular region that is stored in the `CRgn` object.  
   
 ```  
 BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 가리키는 `RECT` 구조 또는 `CRect` 영역의 왼쪽 및 오른쪽 아래 모퉁이의 논리적 좌표가 포함 된 개체입니다. `RECT` 구조체 형식은 다음과 같습니다.  
+ Points to a `RECT` structure or `CRect` object that contains the logical coordinates of the upper-left and lower-right corners of the region. The `RECT` structure has the following form:  
   
  `typedef struct tagRECT {`  
   
@@ -465,19 +482,19 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
   
  `} RECT;`  
   
-### <a name="return-value"></a>반환 값  
- 작업이 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 제한 64k의 메모리, 중 더 작은 값입니다.  
+### <a name="remarks"></a>Remarks  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 마친 의해 만들어진 영역을 사용 하 여 `CreateRectRgnIndirect`, 응용 프로그램을 사용할지는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 영역을 제거 하는 멤버 함수입니다.  
+ When it has finished using a region created by `CreateRectRgnIndirect`, an application should use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove the region.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView # 148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
   
-##  <a name="createroundrectrgn"></a>CRgn::CreateRoundRectRgn  
- 에 저장 된 모퉁이가 둥근 사각형 영역을 만드는 데는 `CRgn` 개체입니다.  
+##  <a name="createroundrectrgn"></a>  CRgn::CreateRoundRectRgn  
+ Creates a rectangular region with rounded corners that is stored in the `CRgn` object.  
   
 ```  
 BOOL CreateRoundRectRgn(
@@ -489,85 +506,85 @@ BOOL CreateRoundRectRgn(
     int y3);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 영역의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
+ Specifies the logical x-coordinate of the upper-left corner of the region.  
   
  `y1`  
- 영역의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
+ Specifies the logical y-coordinate of the upper-left corner of the region.  
   
  `x2`  
- 영역의 오른쪽 아래 모퉁이의 논리적 x 좌표를 지정합니다.  
+ Specifies the logical x-coordinate of the lower-right corner of the region.  
   
  `y2`  
- 영역의 오른쪽 아래 모퉁이의 논리적 y 좌표를 지정합니다.  
+ Specifies the logical y-coordinate of the lower-right corner of the region.  
   
  *x3*  
- 둥근된 모퉁이 만드는 데는 타원의 너비를 지정 합니다.  
+ Specifies the width of the ellipse used to create the rounded corners.  
   
  `y3`  
- 둥근된 모퉁이 만드는 데는 타원의 높이 지정 합니다.  
+ Specifies the height of the ellipse used to create the rounded corners.  
   
-### <a name="return-value"></a>반환 값  
- 작업이 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 제한 64k의 메모리, 중 더 작은 값입니다.  
+### <a name="remarks"></a>Remarks  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 응용 프로그램이를 완료할 때 사용 하 여 만든 영역을 사용 하 여 `CreateRoundRectRgn` 함수를 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 멤버 함수를 제거 합니다.  
+ When an application has finished using a region created with the `CreateRoundRectRgn` function, it should select the region out of the device context and use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove it.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView # 149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
   
-##  <a name="crgn"></a>CRgn::CRgn  
- `CRgn` 개체를 생성합니다.  
+##  <a name="crgn"></a>  CRgn::CRgn  
+ Constructs a `CRgn` object.  
   
 ```  
 CRgn();
 ```  
   
-### <a name="remarks"></a>주의  
- `m_hObject` 데이터 멤버에 없는 Windows GDI 영역이 다른의 하나 이상의 개체가 인스턴스화될 때까지 `CRgn` 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ The `m_hObject` data member does not contain a valid Windows GDI region until the object is initialized with one or more of the other `CRgn` member functions.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRgn::CreateRoundRectRgn](#createroundrectrgn)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateRoundRectRgn](#createroundrectrgn).  
   
-##  <a name="equalrgn"></a>CRgn::EqualRgn  
- 지정된 된 영역에 저장 된 영역에 동일한 여부를 확인는 `CRgn` 개체입니다.  
+##  <a name="equalrgn"></a>  CRgn::EqualRgn  
+ Determines whether the given region is equivalent to the region stored in the `CRgn` object.  
   
 ```  
 BOOL EqualRgn(CRgn* pRgn) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pRgn`  
- 영역을 식별 합니다.  
+ Identifies a region.  
   
-### <a name="return-value"></a>반환 값  
- 두 영역 동일 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the two regions are equivalent; otherwise 0.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView # 150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
   
-##  <a name="fromhandle"></a>CRgn::FromHandle  
- 에 대 한 포인터를 반환 합니다.는 `CRgn` Windows 영역에 대 한 핸들을 지정 되 면 개체입니다.  
+##  <a name="fromhandle"></a>  CRgn::FromHandle  
+ Returns a pointer to a `CRgn` object when given a handle to a Windows region.  
   
 ```  
 static CRgn* PASCAL FromHandle(HRGN hRgn);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hRgn`  
- Windows 영역에 대 한 핸들을 지정합니다.  
+ Specifies a handle to a Windows region.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CRgn` 개체입니다. 함수가 성공 하지 못한 경우 반환 값은 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CRgn` object. If the function was not successful, the return value is **NULL**.  
   
-### <a name="remarks"></a>주의  
- 경우는 `CRgn` 개체가 이미 임시 핸들에 연결 되지 않은 `CRgn` 개체가 생성 되 고 연결 합니다. 이 임시 `CRgn` 개체는 다음에 응용 프로그램의 경우 이벤트 루프 유휴 시간에 인 될 때까지 모든 임시 그래픽 대답 하에서 개체를 삭제만 유효 합니다. 임시 개체가 올바른지만 한 창 메시지를 처리 하는 동안는 하는 또 다른 방법은 말하면 합니다.  
+### <a name="remarks"></a>Remarks  
+ If a `CRgn` object is not already attached to the handle, a temporary `CRgn` object is created and attached. This temporary `CRgn` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. Another way of saying this is that the temporary object is only valid during the processing of one window message.  
   
-##  <a name="getregiondata"></a>CRgn::GetRegionData  
- 데이터 영역을 설명 하는 지정된 된 버퍼를 채웁니다.  
+##  <a name="getregiondata"></a>  CRgn::GetRegionData  
+ Fills the specified buffer with data describing the region.  
   
 ```  
 int GetRegionData(
@@ -575,29 +592,29 @@ int GetRegionData(
     int nCount) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpRgnData`  
- 가리키는 [RGNDATA](../../mfc/reference/rgndata-structure.md) 정보를 받는 데이터 구조입니다. 이 매개 변수가 **NULL**, 반환 값 영역 데이터에 필요한 바이트 수를 포함 합니다.  
+ Points to a [RGNDATA](../../mfc/reference/rgndata-structure.md) data structure that receives the information. If this parameter is **NULL**, the return value contains the number of bytes needed for the region data.  
   
  `nCount`  
- 크기를 바이트 단위로 지정 된 `lpRgnData` 버퍼입니다.  
+ Specifies the size, in bytes, of the `lpRgnData` buffer.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 및 `nCount` 적절 한 수를 지정, 바이트의 반환 값은 항상 `nCount`합니다. 함수가 실패 하거나 경우 `nCount` 작은 지정 보다 적절 한 바이트 수를 반환 값은 0 (오류).  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds and `nCount` specifies an adequate number of bytes, the return value is always `nCount`. If the function fails, or if `nCount` specifies less than adequate number of bytes, the return value is 0 (error).  
   
-### <a name="remarks"></a>주의  
- 이 데이터 영역을 구성 하는 사각형의 크기를 포함 합니다. 이 함수는와 함께에서 사용 되는 `CRgn::CreateFromData` 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ This data includes the dimensions of the rectangles that make up the region. This function is used in conjunction with the `CRgn::CreateFromData` function.  
   
-##  <a name="getrgnbox"></a>CRgn::GetRgnBox  
- 경계 사각형의 좌표를 검색 된 `CRgn` 개체입니다.  
+##  <a name="getrgnbox"></a>  CRgn::GetRgnBox  
+ Retrieves the coordinates of the bounding rectangle of the `CRgn` object.  
   
 ```  
 int GetRgnBox(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 가리키는 `RECT` 구조 또는 `CRect` 경계 사각형의 좌표를 받을 개체입니다. `RECT` 구조체 형식은 다음과 같습니다.  
+ Points to a `RECT` structure or `CRect` object to receive the coordinates of the bounding rectangle. The `RECT` structure has the following form:  
   
  `typedef struct tagRECT {`  
   
@@ -611,22 +628,22 @@ int GetRgnBox(LPRECT lpRect) const;
   
  `} RECT;`  
   
-### <a name="return-value"></a>반환 값  
- 영역의 형식을 지정합니다. 다음 값 중 하나일 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ Specifies the region's type. It can be any of the following values:  
   
-- **COMPLEXREGION** 테두리가 겹치는 영역에 있습니다.  
+- **COMPLEXREGION** Region has overlapping borders.  
   
-- **NULLREGION** 영역이 비어 있습니다.  
+- **NULLREGION** Region is empty.  
   
-- **오류** `CRgn` 개체 유효한 영역을 지정 하지 않습니다.  
+- **ERROR** `CRgn` object does not specify a valid region.  
   
-- **SIMPLEREGION** 지역에 겹치는 테두리가 없습니다.  
+- **SIMPLEREGION** Region has no overlapping borders.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRgn::CreatePolygonRgn](#createpolygonrgn)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreatePolygonRgn](#createpolygonrgn).  
   
-##  <a name="offsetrgn"></a>CRgn::OffsetRgn  
- 에 저장 된 영역으로 이동 된 `CRgn` 개체에서 지정 된 오프셋 합니다.  
+##  <a name="offsetrgn"></a>  CRgn::OffsetRgn  
+ Moves the region stored in the `CRgn` object by the specified offsets.  
   
 ```  
 int OffsetRgn(
@@ -636,52 +653,52 @@ int OffsetRgn(
 int OffsetRgn(POINT point);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *x*  
- 오른쪽 또는 왼쪽으로 이동 하는 단위 수를 지정 합니다.  
+ Specifies the number of units to move left or right.  
   
  *y*  
- 위로 또는 아래로 이동할 단위 수를 지정 합니다.  
+ Specifies the number of units to move up or down.  
   
  `point`  
- x 좌표 `point` 오른쪽 또는 왼쪽으로 이동 하는 단위 수를 지정 합니다. y-좌표 `point` 위로 또는 아래로 이동할 단위 수를 지정 합니다. `point` 매개 변수 중 하나일 수 있습니다는 **지점** 구조 또는 `CPoint` 개체입니다.  
+ The x-coordinate of `point` specifies the number of units to move left or right. The y-coordinate of `point` specifies the number of units to move up or down. The `point` parameter may be either a **POINT** structure or a `CPoint` object.  
   
-### <a name="return-value"></a>반환 값  
- 새 영역의 유형입니다. 다음 값 중 하나일 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ The new region's type. It can be any one of the following values:  
   
-- **COMPLEXREGION** 테두리가 겹치는 영역에 있습니다.  
+- **COMPLEXREGION** Region has overlapping borders.  
   
-- **오류** 지역 핸들이 잘못 되었습니다.  
+- **ERROR** Region handle is not valid.  
   
-- **NULLREGION** 영역이 비어 있습니다.  
+- **NULLREGION** Region is empty.  
   
-- **SIMPLEREGION** 지역에 겹치는 테두리가 없습니다.  
+- **SIMPLEREGION** Region has no overlapping borders.  
   
-### <a name="remarks"></a>설명  
- 함수는 영역을 이동 *x* x 축 단위 및 *y* y 축의 단위입니다.  
+### <a name="remarks"></a>Remarks  
+ The function moves the region *x* units along the x-axis and *y* units along the y-axis.  
   
- 영역의 좌표 값은 32, 767 및 보다 크거나-32, 768 보다 작아야 합니다. *x* 및 *y* 잘못 된 지역 좌표를 방지 하기 위해 매개 변수를 신중 하 게 선택 해야 합니다.  
+ The coordinate values of a region must be less than or equal to 32,767 and greater than or equal to -32,768. The *x* and *y* parameters must be carefully chosen to prevent invalid region coordinates.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CRgn::CreateEllipticRgn](#createellipticrgn)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="operator_hrgn"></a>HRGN CRgn::operator  
- 이 연산자를 사용 하 여의 연결 된 Windows GDI 핸들을 가져올 수는 `CRgn` 개체입니다.  
+##  <a name="operator_hrgn"></a>  CRgn::operator HRGN  
+ Use this operator to get the attached Windows GDI handle of the `CRgn` object.  
   
 ```  
 operator HRGN() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 경우 성공 Windows GDI 개체에 대 한 핸들 나타내는 `CRgn` 개체; 그렇지 않으면 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CRgn` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>주의  
- 이 연산자는의 직접 사용을 지원 하려면 캐스팅 연산자는 **HRGN** 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an **HRGN** object.  
   
- 그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 문서 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about using graphic objects, see the article [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-##  <a name="ptinregion"></a>CRgn::PtInRegion  
- 확인 여부로 지정한 점을 *x* 및 *y* 에 저장 된 영역에는 `CRgn` 개체입니다.  
+##  <a name="ptinregion"></a>  CRgn::PtInRegion  
+ Checks whether the point given by *x* and *y* is in the region stored in the `CRgn` object.  
   
 ```  
 BOOL PtInRegion(
@@ -691,29 +708,29 @@ BOOL PtInRegion(
 BOOL PtInRegion(POINT point) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *x*  
- 테스트할 점의의 논리적 x 좌표를 지정 합니다.  
+ Specifies the logical x-coordinate of the point to test.  
   
  *y*  
- 테스트할 점의의 논리적 y 좌표를 지정 합니다.  
+ Specifies the logical y-coordinate of the point to test.  
   
  `point`  
- x 및 y 좌표 `point` 의 값을 테스트할 점의 x 및 y 좌표를 지정 합니다. `point` 매개 변수 수는 **지점** 구조 또는 `CPoint` 개체입니다.  
+ The x- and y-coordinates of `point` specify the x- and y-coordinates of the point to test the value of. The `point` parameter can either be a **POINT** structure or a `CPoint` object.  
   
-### <a name="return-value"></a>반환 값  
- 지점이; 지역에 있으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the point is in the region; otherwise 0.  
   
-##  <a name="rectinregion"></a>CRgn::RectInRegion  
- 사각형의 모든 부분에서 지정한 `lpRect` 내에 저장 된 영역의 경계는 `CRgn` 개체입니다.  
+##  <a name="rectinregion"></a>  CRgn::RectInRegion  
+ Determines whether any part of the rectangle specified by `lpRect` is within the boundaries of the region stored in the `CRgn` object.  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 가리키는 `RECT` 구조 또는 `CRect` 개체입니다. `RECT` 구조체 형식은 다음과 같습니다.  
+ Points to a `RECT` structure or `CRect` object. The `RECT` structure has the following form:  
   
  `typedef struct tagRECT {`  
   
@@ -727,11 +744,11 @@ BOOL RectInRegion(LPCRECT lpRect) const;
   
  `} RECT;`  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 사각형의 일부 영역;의 경계 내에 있는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if any part of the specified rectangle lies within the boundaries of the region; otherwise 0.  
   
-##  <a name="setrectrgn"></a>CRgn::SetRectRgn  
- 사각형 영역을 만듭니다.  
+##  <a name="setrectrgn"></a>  CRgn::SetRectRgn  
+ Creates a rectangular region.  
   
 ```  
 void SetRectRgn(
@@ -743,30 +760,30 @@ void SetRectRgn(
 void SetRectRgn(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 사각형 영역의 왼쪽 위 모서리의 x 좌표를 지정합니다.  
+ Specifies the x-coordinate of the upper-left corner of the rectangular region.  
   
  `y1`  
- 사각형 영역의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
+ Specifies the y-coordinate of the upper-left corner of the rectangular region.  
   
  `x2`  
- 사각형 영역의 오른쪽 아래 모서리의 x 좌표를 지정합니다.  
+ Specifies the x-coordinate of the lower-right corner of the rectangular region.  
   
  `y2`  
- 사각형 영역의 오른쪽 아래 모서리의 y 좌표를 지정합니다.  
+ Specifies the y-coordinate of the lower-right corner of the rectangular region.  
   
  `lpRect`  
- 사각형 영역을 지정 합니다. 에 대 한 일 수 있습니다는 `RECT` 구조 또는 `CRect` 개체입니다.  
+ Specifies the rectangular region. Can be either a pointer to a `RECT` structure or a `CRect` object.  
   
-### <a name="remarks"></a>설명  
- 그러나와 달리 [CreateRectRgn](#createrectrgn),는 추가 메모리를 로컬 Windows 응용 프로그램 힙에서 할당 하지 않습니다. 대신,에 저장 된 영역에 대해 할당 된 공간을 사용 하 여 `CRgn` 개체입니다. 즉는 `CRgn` 개체 해야 이미 초기화 된 호출 하기 전에 유효한 Windows 영역과 `SetRectRgn`합니다. 제공한 포인트 `x1`, `y1`, `x2`, 및 `y2` 할당 된 공간의 최소 크기를 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Unlike [CreateRectRgn](#createrectrgn), however, it does not allocate any additional memory from the local Windows application heap. Instead, it uses the space allocated for the region stored in the `CRgn` object. This means that the `CRgn` object must already have been initialized with a valid Windows region before calling `SetRectRgn`. The points given by `x1`, `y1`, `x2`, and `y2` specify the minimum size of the allocated space.  
   
- 대신이 함수를 사용 하 여는 `CreateRectRgn` 로컬 메모리 관리자에 대 한 호출을 방지 하려면 멤버 함수입니다.  
+ Use this function instead of the `CreateRectRgn` member function to avoid calls to the local memory manager.  
   
-## <a name="see-also"></a>참고 항목  
- [CWnd 클래스](../../mfc/reference/cwnd-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

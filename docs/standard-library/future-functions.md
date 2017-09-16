@@ -1,5 +1,5 @@
 ---
-title: "&lt;future&gt; 함수 | Microsoft 문서"
+title: '&lt;future&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,21 +15,27 @@ f1_keywords:
 ms.assetid: 1e3acc1e-736a-42dc-ade2-b2fe69aa96bc
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c542e696e0e5ddef350d40b45fe16f4c3a77882d
+helpviewer_keywords:
+- std::async [C++]
+- std::future_category [C++]
+- std::make_error_code [C++]
+- std::make_error_condition [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 96c09f6b90a0c531a7dcc916512247d0fa4084b2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltfuturegt-functions"></a>&lt;future&gt; 함수
+# <a name="ltfuturegt-functions"></a>&lt;future&gt; functions
 ||||  
 |-|-|-|  
 |[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|  
 |[make_error_condition](#make_error_condition)|[swap](#swap)|  
   
 ##  <a name="async"></a>  async  
- *비동기 공급자*를 나타냅니다.  
+ Represents an *asynchronous provider*.  
   
 ```
 template <class Fn, class... ArgTypes>
@@ -41,75 +47,75 @@ future<typename result_of<Fn(ArgTypes...)>::type>
     async(launch policy, Fn&& fn, ArgTypes&&... args);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `policy`  
- [launch](../standard-library/future-enums.md#launch) 값입니다.  
+ A [launch](../standard-library/future-enums.md#launch) value.  
   
-### <a name="remarks"></a>설명  
- 약어의 정의:  
+### <a name="remarks"></a>Remarks  
+ Definitions of abbreviations:  
   
 |||  
 |-|-|  
-|*dfn*|호출하는 `decay_copy(forward<Fn>(fn))`의 결과입니다.|  
-|*dargs*|`decay_copy(forward<ArgsTypes>(args...))` 호출의 결과입니다.|  
-|*Ty*|`result_of<Fn(ArgTypes...)>::type` 형식|  
+|*dfn*|The result of calling `decay_copy(forward<Fn>(fn))`.|  
+|*dargs*|The results of the calls `decay_copy(forward<ArgsTypes>(args...))`.|  
+|*Ty*|The type `result_of<Fn(ArgTypes...)>::type`.|  
   
- 첫 번째 템플릿 함수는 `async(launch::any, fn, args...)`를 반환합니다.  
+ The first template function returns `async(launch::any, fn, args...)`.  
   
- 두 번째 함수는 *연결된 비동기 상태*에 *dfn* 및 *dargs*의 값과 결과를 갖는 `future<Ty>` 개체와, 개별 스레드 실행을 관리하는 스레드 개체를 반환합니다.  
+ The second function returns a `future<Ty>` object whose *associated asynchronous state* holds a result together with the values of *dfn* and *dargs* and a thread object to manage a separate thread of execution.  
   
- `decay<Fn>::type`이 시작 이외의 형식이 아닌 경우 두 번째 함수는 오버로드 확인에 참여하지 않습니다.  
+ Unless `decay<Fn>::type` is a type other than launch, the second function does not participate in overload resolution.  
   
- `policy`가 `launch::any`인 경우 함수는 `launch::async` 또는 `launch::deferred`를 선택합니다. 이 구현에서는 함수는 `launch::async`를 사용합니다.  
+ If `policy` is `launch::any`, the function might choose `launch::async` or `launch::deferred`. In this implementation, the function uses `launch::async`.  
   
- `policy`가 `launch::async`인 경우 함수는 `INVOKE(dfn, dargs..., Ty)`를 계산하는 스레드를 생성합니다. 함수는 결과를 기다리지 않고 스레드를 만든 후 반환합니다. 시스템에서 새 스레드를 시작할 수 없으면 오류 코드가 `resource_unavailable_try_again`인 [system_error](../standard-library/system-error-class.md)를 throw합니다.  
+ If `policy` is `launch::async`, the function creates a thread that evaluates `INVOKE(dfn, dargs..., Ty)`. The function returns after it creates the thread without waiting for results. If the system can't start a new thread, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `resource_unavailable_try_again`.  
   
- `policy`가 `launch::deferred`일 경우 연결된 비동기 상태에 *지연된 함수*가 있는 것으로 표시하고 반환합니다. 연결된 비동기 상태가 유효해지기를 기다리는 non-timed 함수의 첫 번째 호출은 `INVOKE(dfn, dargs..., Ty)`를 평가함으로써 지연된 함수를 호출합니다.  
+ If `policy` is `launch::deferred`, the function marks its associated asynchronous state as holding a *deferred function* and returns. The first call to any non-timed function that waits for the associated asynchronous state to be ready in effect calls the deferred function by evaluating `INVOKE(dfn, dargs..., Ty)`.  
   
- 어떤 경우에도 `future` 개체의 연결된 비동기 상태는 예외를 throw하거나 정상적으로 반환함으로써 `INVOKE(dfn, dargs..., Ty)`의 계산이 완료될 때까지 *준비*로 설정되지 않습니다. 예외가 throw되거나 계산에서 값이 반환된 경우 연결된 비동기 상태의 결과는 예외입니다.  
+ In all cases, the associated asynchronous state of the `future` object is not set to *ready* until the evaluation of `INVOKE(dfn, dargs..., Ty)` completes, either by throwing an exception or by returning normally. The result of the associated asynchronous state is an exception if one was thrown, or any value that's returned by the evaluation.  
   
 > [!NOTE]
->  `std::async`로 시작하는 작업에 연결된 `future` 또는 마지막 [shared_future](../standard-library/shared-future-class.md)의 경우 작업이 완료되지 않은 경우 소멸자가 차단됩니다. 즉 이 스레드가 `.get()` 또는 `.wait()`를 아직 호출하지 않은 경우 소멸자를 차단하고 작업을 계속 실행합니다. `future`에서 가져온 `std::async`가 로컬 범위 밖으로 이동되는 경우 해당 future를 사용하는 다른 코드는 공유 상태 준비를 위해 소멸자가 차단될 것을 알고 있어야 합니다.  
+>  For a `future`—or the last [shared_future](../standard-library/shared-future-class.md)—that's attached to a task started with `std::async`, the destructor blocks if the task has not completed; that is, it blocks if this thread did not yet call `.get()` or `.wait()` and the task is still running. If a `future` obtained from `std::async` is moved outside the local scope, other code that uses it must be aware that its destructor may block for the shared state to become ready.  
   
- 의사 함수 `INVOKE`는 [\<functional>](../standard-library/functional.md)에 정의되어 있습니다.  
+ The pseudo-function `INVOKE` is defined in [\<functional>](../standard-library/functional.md).  
   
 ##  <a name="future_category"></a>  future_category  
- `future` 개체와 연결된 오류의 특징을 결정하는 [error_category](../standard-library/error-category-class.md) 개체에 대한 참조를 반환합니다.  
+ Returns a reference to the [error_category](../standard-library/error-category-class.md) object that characterizes errors that are associated with `future` objects.  
   
 ```
 const error_category& future_category() noexcept;
 ```  
   
 ##  <a name="make_error_code"></a>  make_error_code  
- [future](../standard-library/future-class.md) 오류의 특징을 결정하는 [error_category](../standard-library/error-category-class.md) 개체와 함께 [error_code](../standard-library/error-code-class.md)를 만듭니다.  
+ Creates an [error_code](../standard-library/error-code-class.md) together with the [error_category](../standard-library/error-category-class.md) object that characterizes [future](../standard-library/future-class.md) errors.  
   
 ```
 inline error_code make_error_code(future_errc Errno) noexcept;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Errno`  
- 보고된 오류를 식별하는 [future_errc](../standard-library/future-enums.md#future_errc) 값입니다.  
+ A [future_errc](../standard-library/future-enums.md#future_errc) value that identifies the reported error.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
  `error_code(static_cast<int>(Errno), future_category());`  
   
 ##  <a name="make_error_condition"></a>  make_error_condition  
- [future](../standard-library/future-class.md) 오류의 특정을 결정하는 [error_category](../standard-library/error-category-class.md) 개체와 함께 [error_condition](../standard-library/error-condition-class.md)을 만듭니다.  
+ Creates an [error_condition](../standard-library/error-condition-class.md) together with the [error_category](../standard-library/error-category-class.md) object that characterizes [future](../standard-library/future-class.md) errors.  
   
 ```
 inline error_condition make_error_condition(future_errc Errno) noexcept;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Errno`  
- 보고된 오류를 식별하는 [future_errc](../standard-library/future-enums.md#future_errc) 값입니다.  
+ A [future_errc](../standard-library/future-enums.md#future_errc) value that identifies the reported error.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
  `error_condition(static_cast<int>(Errno), future_category());`  
   
 ##  <a name="swap"></a>  swap  
- `promise` 개체 하나의 *연결된 비동기 상태*를 다른 개체의 상태와 교환합니다.  
+ Exchanges the *associated asynchronous state* of one `promise` object with that of another.  
   
 ```
 template <class Ty>
@@ -119,14 +125,14 @@ template <class Ty, class... ArgTypes>
 void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& Right) noexcept;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 왼쪽 `promise` 개체입니다.  
+ The left `promise` object.  
   
  `Right`  
- 오른쪽 `promise` 개체입니다.  
+ The right `promise` object.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<future>](../standard-library/future.md)
 
 

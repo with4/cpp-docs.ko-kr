@@ -1,48 +1,67 @@
 ---
-title: "MFC 응용 프로그램 마법사, 생성된 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.classes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 응용 프로그램 마법사, 생성된 클래스"
+title: Generated Classes, MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.classes
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# MFC 응용 프로그램 마법사, 생성된 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2c57a0297648b05928ad6d1fecb2abb0b103d87
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 항목에서는 프로젝트에서 생성한 기본 클래스와 파일의 이름을 나열합니다.  기본적으로 기본 클래스와 파일의 이름은 **새 프로젝트** 대화 상자에서 지정한 프로젝트 이름을 기반으로 합니다.  여기에서 설명하는 것과 같이 대부분의 이름을 변경할 수 있습니다.  
+---
+# <a name="generated-classes-mfc-application-wizard"></a>Generated Classes, MFC Application Wizard
+This topic lists the names of base classes and files that your project generates. By default, the names are based on the project name that you specified in the **New Project Dialog Box**. You can change most of these names, as described here:  
   
- **생성된 클래스**  
- 프로젝트용으로 만들어진 클래스의 이름.  기본적으로 이 이름은 프로젝트 이름을 기반으로 합니다.  The default MFC project creates a C*ProjName*View class, a C*ProjName*App class, a C*ProjName*Doc class, a CMainFrame class, and a CChildFrame class.  이 페이지의 다른 모든 값에는 **생성된 클래스** 목록에 현재 선택되어 있는 클래스에 대한 정보가 포함됩니다.  
+ **Generated classes**  
+ The names of the classes created for the project. By default, the names are based on the project name. The default MFC project creates a C*ProjName*View class, a C*ProjName*App class, a C*ProjName*Doc class, a CMainFrame class, and a CChildFrame class. All other values on this page contain information about the class currently selected in the **Generated classes** list.  
   
- 클래스 이름을 변경하려면 **클래스 이름** 텍스트 상자를 사용합니다.  
+ To change a class name, use the **Class Name** text box.  
   
- **클래스 이름**  
- **생성된 클래스** 목록에 현재 선택되어 있는 클래스의 이름.  상자가 활성화되어 있으면 클래스 이름을 변경할 수 있습니다.  **클래스 이름** 상자로부터 포커스를 이동하면 선택된 클래스 이름에 대한 변경 내용이 **생성된 클래스** 목록에 표시됩니다.  
+ **Class name**  
+ The name of the class that is currently selected in the **Generated classes** list. If the box is active, you can change the class name. When you change the focus from the **Class Name** box, any change to the selected class name appears in the **Generated classes** list.  
   
- **.h 파일**  
- **생성된 클래스** 목록에 현재 선택되어 있는 클래스의 헤더 파일 이름.  텍스트 상자가 활성화되어 있으면 헤더 파일의 이름을 변경할 수 있습니다.  
+ **.h file**  
+ The name of the header file of the class that is currently selected in the **Generated classes** list. If the text box is active, you can change the name of the header file.  
   
- **기본 클래스**  
- **생성된 클래스** 목록에 현재 선택되어 있는 클래스의 기본 클래스 이름.  상자가 활성화되어 있으면 기본 클래스에 대해 다른 클래스를 목록에서 선택할 수 있습니다.  
+ **Base class**  
+ The name of the base class of the currently selected class in the **Generated classes** list. If the box is active, you can select from the list another class for the base class.  
   
- **.cpp 파일**  
- 선택한 클래스와 연관된 소스 코드 파일의 이름.  텍스트 상자가 활성화되어 있으면 구현 파일의 이름을 변경할 수 있습니다.  
+ **.cpp file**  
+ The name of the source code file that is associated with the selected class. If the text box is active, you can change the name of the implementation file.  
   
-## 참고 항목  
- [MFC 응용 프로그램 마법사, 고급 기능](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
- [Visual C\+\+ 프로젝트용으로 만들어지는 파일 형식](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [Advanced Features, MFC Application Wizard](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
+
+

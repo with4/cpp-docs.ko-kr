@@ -1,85 +1,106 @@
 ---
-title: "템플릿 및 이름 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Templates and Name Resolution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 템플릿 및 이름 확인
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 83e4c6681f49b097c412040364d88bf8843ecbc5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-템플릿 정의에는 3가지 형식의 이름이 있습니다.  
+---
+# <a name="templates-and-name-resolution"></a>Templates and Name Resolution
+
+In template definitions, there are three types of names.  
   
--   지역으로 선언된 이름\(템플릿 자체의 이름과 템플릿 정의 내에 선언된 모든 이름 포함\)  
+-   Locally declared names, including the name of the template itself and any names declared inside the template definition.  
   
--   템플릿 정의 바깥쪽 범위의 이름  
+-   Names from the enclosing scope outside the template definition.  
   
--   어떤 방식으로든 템플릿 인수에 종속되는 이름\(종속 이름\)  
+-   Names that depend in some way on the template arguments, referred to as dependent names.  
   
- 처음 두 이름은 클래스 및 함수 범위와 관련된 반면 종속 이름의 경우 복잡성을 처리하기 위해 템플릿 정의에 이름 확인을 위한 특별한 규칙이 요구됩니다.  이는 템플릿이 인스턴스화될 때까지 컴파일러가 이러한 이름에 대해 거의 알지 못하기 때문입니다. 이름의 형식은 사용되는 템플릿 인수에 따라 전혀 달라질 수 있습니다.  독립적 이름은 일반적인 규칙에 따라 템플릿 정의 시점에 조회됩니다.  템플릿 인수와는 별개인 이러한 이름은 모든 템플릿 특수화를 위해 한 번 조회됩니다.  종속 이름은 템플릿이 인스턴스화될 때까지 조회되지 않으며 각 특수화에 대해 개별적으로 조회됩니다.  
+ While the first two names also pertain to class and function scopes, special rules for name resolution are required in template definitions to deal with the added complexity of dependent names. This is because the compiler knows little about these names until the template is instantiated, because they could be totally different types depending on which template arguments are used. Nondependent names are looked up according to the usual rules and at the point of definition of the template. These names, being independent of the template arguments, are looked up once for all template specializations. Dependent names are not looked up until the template is instantiated and are looked up separately for each specialization.  
   
- 형식은 템플릿 인수에 종속된 경우 종속적입니다.  특히 형식은 다음과 같은 경우 종속적입니다.  
+ A type is dependent if it depends on the template arguments. Specifically, a type is dependent if it is:  
   
--   템플릿 인수 자체임  
+-   The template argument itself:  
   
-    ```  
+    ```cpp
     T  
     ```  
   
--   종속 형식을 포함하며 한정자를 사용하는 정규화된 이름임  
+-   A qualified name with a qualification including a dependent type:  
   
-    ```  
+    ```cpp
     T::myType  
     ```  
   
--   정규화되지 않은 부분이 종속 형식을 식별하는 경우 정규화된 이름임  
+-   A qualified name if the unqualified part identifies a dependent type:  
   
-    ```  
+    ```cpp
     N::T  
     ```  
   
--   기본 형식이 종속 형식인 const 또는 volatile 형식임  
+-   A const or volatile type for which the base type is a dependent type:  
   
-    ```  
+    ```cpp
     const T  
     ```  
   
--   종속 형식 기반의 포인터, 참조, 배열 또는 함수 포인터 형식임  
+-   A pointer, reference, array, or function pointer type based on a dependent type:  
   
-    ```  
+    ```cpp
     T *, T &, T [10], T (*)()  
     ```  
   
--   크기가 템플릿 매개 변수를 기반으로 하는 배열임  
+-   An array whose size is based on a template parameter:  
   
-    ```  
+    ```cpp
     template <int arg> class X {  
     int x[arg] ; // dependent type  
     }  
     ```  
   
--   템플릿 매개 변수에서 생성된 템플릿 형식임  
+-   a template type constructed from a template parameter:  
   
-    ```  
+    ```cpp
     T<int>, MyTemplate<T>  
     ```  
   
-## 형식 종속성 및 값 종속성  
- 템플릿 매개 변수에 종속된 이름 및 식은 템플릿 매개 변수가 형식 매개 변수인지, 아니면 값 매개 변수인지에 따라 형식 종속 항목 또는 값 종속 항목으로 분류됩니다.  또한 템플릿 인수에 종속된 형식으로 템플릿에 선언된 모든 식별자는 값 종속 식으로 초기화된 정수 계열 또는 열거형 형식과 마찬가지로 값 종속 항목으로 간주됩니다.  
+## <a name="type-dependence-and-value-dependence"></a>Type Dependence and Value Dependence
+
+ Names and expressions dependent on a template parameter are categorized as type dependent or value dependent, depending on whether the template parameter is a type parameter or a value parameter. Also, any identifiers declared in a template with a type dependent on the template argument are considered value dependent, as is a integral or enumeration type initialized with a value-dependent expression.  
   
- 형식 종속 및 값 종속 식은 형식 또는 값에 종속되는 변수가 포함된 식입니다.  이러한 식의 의미 체계는 템플릿에 사용되는 매개 변수에 따라 달라질 수 있습니다.  
+ Type-dependent and value-dependent expressions are expressions that involve variables that are type dependent or value dependent. These expressions can have semantics that differ, depending on the parameters used for the template.  
   
-## 참고 항목  
- [템플릿](../cpp/templates-cpp.md)
+## <a name="see-also"></a>See Also
+
+ [Templates](../cpp/templates-cpp.md)
+

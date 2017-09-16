@@ -1,5 +1,5 @@
 ---
-title: "COleInsertDialog 클래스 | Microsoft 문서"
+title: COleInsertDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,10 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE Insert Object dialog box
-- dialog boxes, OLE
-- COleInsertDialog class
-- Insert Object dialog box
+- COleInsertDialog [MFC], COleInsertDialog
+- COleInsertDialog [MFC], CreateItem
+- COleInsertDialog [MFC], DoModal
+- COleInsertDialog [MFC], GetClassID
+- COleInsertDialog [MFC], GetDrawAspect
+- COleInsertDialog [MFC], GetIconicMetafile
+- COleInsertDialog [MFC], GetPathName
+- COleInsertDialog [MFC], GetSelectionType
+- COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 caps.latest.revision: 24
 author: mikeblome
@@ -46,59 +51,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 078f421dacc79ff929249cd35c520b0c4d4a222e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a890bca0062dd3089cf4a84f43150497262dd8f7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleinsertdialog-class"></a>COleInsertDialog 클래스
-OLE 개체 삽입 대화 상자에 사용합니다.  
+# <a name="coleinsertdialog-class"></a>COleInsertDialog Class
+Used for the OLE Insert Object dialog box.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleInsertDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|`COleInsertDialog` 개체를 생성합니다.|  
+|[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Constructs a `COleInsertDialog` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleInsertDialog::CreateItem](#createitem)|대화 상자에서 선택한 항목을 만듭니다.|  
-|[COleInsertDialog::DoModal](#domodal)|OLE 개체 삽입 대화 상자를 표시합니다.|  
-|[COleInsertDialog::GetClassID](#getclassid)|가져옵니다는 **CLSID** 선택한 항목과 연결 합니다.|  
-|[COleInsertDialog::GetDrawAspect](#getdrawaspect)|항목을 아이콘으로 그릴 것인지를 지정 합니다.|  
-|[COleInsertDialog::GetIconicMetafile](#geticonicmetafile)|이 항목의 아이콘 폼과 연결 된 메타 파일에 대 한 핸들을 가져옵니다.|  
-|[COleInsertDialog::GetPathName](#getpathname)|대화 상자에서 선택한 파일의 전체 경로 가져옵니다.|  
-|[COleInsertDialog::GetSelectionType](#getselectiontype)|선택한 개체의 형식을 가져옵니다.|  
+|[COleInsertDialog::CreateItem](#createitem)|Creates the item selected in the dialog box.|  
+|[COleInsertDialog::DoModal](#domodal)|Displays the OLE Insert Object dialog box.|  
+|[COleInsertDialog::GetClassID](#getclassid)|Gets the **CLSID** associated with the chosen item.|  
+|[COleInsertDialog::GetDrawAspect](#getdrawaspect)|Tells whether to draw the item as an icon.|  
+|[COleInsertDialog::GetIconicMetafile](#geticonicmetafile)|Gets a handle to the metafile associated with the iconic form of this item.|  
+|[COleInsertDialog::GetPathName](#getpathname)|Gets the full path to the file chosen in the dialog box.|  
+|[COleInsertDialog::GetSelectionType](#getselectiontype)|Gets the type of object selected.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleInsertDialog::m_io](#m_io)|형식의 구조 **OLEUIINSERTOBJECT** 하는 대화 상자의 동작을 제어 합니다.|  
+|[COleInsertDialog::m_io](#m_io)|A structure of type **OLEUIINSERTOBJECT** that controls the behavior of the dialog box.|  
   
-## <a name="remarks"></a>주의  
- 클래스의 개체를 만들 `COleInsertDialog` 이 대화 상자를 호출 하려는 경우. 후는 `COleInsertDialog` 개체를 생성, 사용할 수는 [m_io](#m_io) 값 또는 대화 상자에서 컨트롤의 상태를 초기화 하는 구조입니다. `m_io` 형식의 구조는 **OLEUIINSERTOBJECT**합니다. 이 대화 상자 클래스를 사용 하는 방법에 대 한 자세한 내용은 참조는 [DoModal](#domodal) 멤버 함수입니다.  
+## <a name="remarks"></a>Remarks  
+ Create an object of class `COleInsertDialog` when you want to call this dialog box. After a `COleInsertDialog` object has been constructed, you can use the [m_io](#m_io) structure to initialize the values or states of controls in the dialog box. The `m_io` structure is of type **OLEUIINSERTOBJECT**. For more information about using this dialog class, see the [DoModal](#domodal) member function.  
   
 > [!NOTE]
->  응용 프로그램 컨테이너 마법사에서 생성 된 코드는이 클래스를 사용합니다.  
+>  Application Wizard-generated container code uses this class.  
   
- 자세한 내용은 참조는 [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) structure in the Windows SDK.  
   
- OLE 관련 대화 상자에 대 한 자세한 내용은 문서를 참조 하십시오. [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+ For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -113,11 +118,11 @@ class COleInsertDialog : public COleDialog
   
  `COleInsertDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
- 이 함수가 구성만 `COleInsertDialog` 개체입니다.  
+##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
+ This function constructs only a `COleInsertDialog` object.  
   
 ```  
 COleInsertDialog (
@@ -125,49 +130,49 @@ COleInsertDialog (
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 원하는 수의 비트 OR 연산자를 사용 하 여 결합 되는 다음 값을 포함 하는 생성 플래그:  
+ Creation flag that contains any number of the following values to be combined using the bitwise-OR operator:  
   
-- **IOF_SHOWHELP** 대화 상자가 호출 될 때 도움말 단추가 표시 되도록 지정 합니다.  
+- **IOF_SHOWHELP** Specifies that the Help button will be displayed when the dialog box is called.  
   
-- **IOF_SELECTCREATENEW** 대화 상자가 호출 될 때 새로 만들기 라디오 단추는 처음 선택 되도록 지정 합니다. 기본 인증 이며 함께 사용할 수 없습니다이 **IOF_SELECTCREATEFROMFILE**합니다.  
+- **IOF_SELECTCREATENEW** Specifies that the Create New radio button will be selected initially when the dialog box is called. This is the default and cannot be used with **IOF_SELECTCREATEFROMFILE**.  
   
-- **IOF_SELECTCREATEFROMFILE** 대화 상자가 호출 될 때 파일에서 만들기 라디오 단추는 처음 선택 되도록 지정 합니다. 함께 사용할 수 없습니다 **IOF_SELECTCREATENEW**합니다.  
+- **IOF_SELECTCREATEFROMFILE** Specifies that the Create From File radio button will be selected initially when the dialog box is called. Cannot be used with **IOF_SELECTCREATENEW**.  
   
-- **IOF_CHECKLINK** 대화 상자가 호출 될 때 연결 확인란은 처음 확인 않도록 지정 합니다.  
+- **IOF_CHECKLINK** Specifies that the Link check box will be checked initially when the dialog box is called.  
   
-- **IOF_DISABLELINK** 대화 상자가 호출 될 때 연결 확인란 사용 하지 않음을 지정 합니다.  
+- **IOF_DISABLELINK** Specifies that the Link check box will be disabled when the dialog box is called.  
   
-- **IOF_CHECKDISPLAYASICON** 지정 하 고 아이콘으로 표시 확인란은 처음 선택 됩니다, 현재 아이콘이 표시 되는 대화 상자를 호출할 때 변경 아이콘 단추가 활성화 됩니다.  
+- **IOF_CHECKDISPLAYASICON** Specifies that the Display As Icon check box will be checked initially, the current icon will be displayed, and the Change Icon button will be enabled when the dialog box is called.  
   
-- **IOF_VERIFYSERVERSEXIST** 지정 대화 상자는 등록 데이터베이스에 지정 된 서버가 대화 상자가 표시 되기 전에 존재 하는지 확인 하 여 목록 상자에 추가 하는 클래스의 유효성을 검사 해야 합니다. 이 플래그를 설정 성능이 크게 저하 될 수 있습니다.  
+- **IOF_VERIFYSERVERSEXIST** Specifies that the dialog box should validate the classes it adds to the list box by ensuring that the servers specified in the registration database exist before the dialog box is displayed. Setting this flag can significantly impair performance.  
   
  `pParentWnd`  
- 부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 개체가 속한 합니다. 있으면 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창에 설정 됩니다.  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog object is set to the main application window.  
   
-### <a name="remarks"></a>주의  
- 대화 상자를 표시 하려면 호출의 [DoModal](#domodal) 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ To display the dialog box, call the [DoModal](#domodal) function.  
   
-##  <a name="createitem"></a>COleInsertDialog::CreateItem  
- 형식의 개체를 만들려면이 함수를 호출 [활성화](../../mfc/reference/coleclientitem-class.md) 경우에만 [DoModal](#domodal) 반환 **IDOK**합니다.  
+##  <a name="createitem"></a>  COleInsertDialog::CreateItem  
+ Call this function to create an object of type [COleClientItem](../../mfc/reference/coleclientitem-class.md) only if [DoModal](#domodal) returns **IDOK**.  
   
 ```  
 BOOL CreateItem(COleClientItem* pItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 만들 항목을 가리킵니다.  
+ Points to the item to be created.  
   
-### <a name="return-value"></a>반환 값  
- 항목을 만든; 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if item was created; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 할당 하는 `COleClientItem` 이 함수를 호출 하기 전에 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You must allocate the `COleClientItem` object before you can call this function.  
   
-##  <a name="domodal"></a>COleInsertDialog::DoModal  
- OLE 개체 삽입 대화 상자를 표시 하려면이 함수를 호출 합니다.  
+##  <a name="domodal"></a>  COleInsertDialog::DoModal  
+ Call this function to display the OLE Insert Object dialog box.  
   
 ```  
 virtual INT_PTR   
@@ -178,94 +183,94 @@ INT_PTR
     DoModal(DWORD  dwFlags);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 다음 값 중 하나입니다.  
+ One of the following values:  
   
- `COleInsertDialog::DocObjectsOnly`DocObjects만을 삽입합니다.  
+ `COleInsertDialog::DocObjectsOnly` inserts only DocObjects.  
   
- `COleInsertDialog::ControlsOnly`ActiveX 컨트롤에만 삽입합니다.  
+ `COleInsertDialog::ControlsOnly` inserts only ActiveX controls.  
   
- DocObject 아니고 ActiveX 컨트롤을 삽입 하는&0;입니다. 위에 나열 된 첫 번째 프로토타입으로 동일 하 게 구현에서이 값 결과입니다.  
+ Zero inserts neither a DocObject nor an ActiveX control. This value results in the same implementation as the first prototype listed above.  
   
-### <a name="return-value"></a>반환 값  
- 대화 상자에 대 한 완료 상태입니다. 다음 값 중 하나입니다.  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
--   IDOK 대화 상자가 성공적으로 표시 된 경우입니다.  
+-   IDOK if the dialog box was successfully displayed.  
   
--   IDCANCEL 사용자 대화 상자를 취소 합니다.  
+-   IDCANCEL if the user canceled the dialog box.  
   
--   IDABORT 오류가 발생 합니다. IDABORT 반환 되 면 호출는 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) 발생 한 오류 유형에 대 한 자세한 정보를 멤버 함수입니다. 목록이 가능한 오류에 대 한 참조는 [OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+-   IDABORT if an error occurred. If IDABORT is returned, call the [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) function in the Windows SDK.  
   
-### <a name="remarks"></a>주의  
- 멤버를 설정 하 여 다양 한 대화 상자 컨트롤을 초기화 하려는 경우는 [m_io](#m_io) 구조를 호출 하기 전에이 작업을 수행 해야 `DoModal`, 대화 상자 개체를 생성 한 후 하지만 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_io](#m_io) structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
   
- 경우 `DoModal` IDOK 반환 다른 구성원 설정 또는 사용자가 대화 상자에 대 한 정보 입력을 검색 하는 함수를 호출할 수 있습니다.  
+ If `DoModal` returns IDOK, you can call other member functions to retrieve the settings or information input into the dialog box by the user.  
   
-##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
- 가져오려면이 함수를 호출 하는 **CLSID** 연결 된 경우에만 선택한 항목 [DoModal](#domodal) 반환 **IDOK** 선택 유형을 이며 **COleInsertDialog::createNewItem**합니다.  
+##  <a name="getclassid"></a>  COleInsertDialog::GetClassID  
+ Call this function to get the **CLSID** associated with the selected item only if [DoModal](#domodal) returns **IDOK** and the selection type is **COleInsertDialog::createNewItem**.  
   
 ```  
 REFCLSID GetClassID() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 반환 된 **CLSID** 선택된 항목과 관련 된 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the **CLSID** associated with the selected item.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [CLSID Key](http://msdn.microsoft.com/library/windows/desktop/ms691424) in the Windows SDK.  
   
-##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
- 사용자를 아이콘으로 선택한 항목을 표시 하도록 선택 하는 경우를 확인 하려면이 함수를 호출 합니다.  
+##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
+ Call this function to determine if the user chose to display the selected item as an icon.  
   
 ```  
 DVASPECT GetDrawAspect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체를 렌더링 하는 데 필요한 메서드입니다.  
+### <a name="return-value"></a>Return Value  
+ The method needed to render the object.  
   
-- `DVASPECT_CONTENT`아이콘으로 표시 확인란을 선택 하지 된 경우 반환 됩니다.  
+- `DVASPECT_CONTENT` Returned if the Display As Icon check box was not checked.  
   
-- `DVASPECT_ICON`아이콘으로 표시 확인란을 선택 된 경우 반환 됩니다.  
+- `DVASPECT_ICON` Returned if the Display As Icon check box was checked.  
   
-### <a name="remarks"></a>주의  
- 경우에만이 함수를 호출 [DoModal](#domodal) 반환 **IDOK**합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function only if [DoModal](#domodal) returns **IDOK**.  
   
- 그리기 측면에 대 한 자세한 내용은 참조 하십시오. [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on drawing aspect, see [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) data structure in the Windows SDK.  
   
-##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
- 선택한 항목의 아이콘 모양을 포함 하는 메타 파일에 대 한 핸들을 가져오려면이 함수를 호출 합니다.  
+##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
+ Call this function to get a handle to the metafile that contains the iconic aspect of the selected item.  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 확인란 아이콘으로 표시 된 경우 선택된 된 항목의 아이콘 모양을 포함 하 여 메타 파일에 대 한 핸들을 선택 하 여 대화 상자를 해제할 때 체크 **확인**고, 그렇지 않으면 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ The handle to the metafile containing the iconic aspect of the selected item, if the Display As Icon check box was checked when the dialog was dismissed by choosing **OK**; otherwise **NULL**.  
   
-##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
- 경우에만 선택한 파일의 전체 경로 가져오려면이 함수를 호출 [DoModal](#domodal) 반환 **IDOK** 선택 유형을 아니며 **COleInsertDialog::createNewItem**합니다.  
+##  <a name="getpathname"></a>  COleInsertDialog::GetPathName  
+ Call this function to get the full path of the selected file only if [DoModal](#domodal) returns **IDOK** and the selection type is not **COleInsertDialog::createNewItem**.  
   
 ```  
 CString GetPathName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 대화 상자에서 선택한 파일에 대 한 전체 경로입니다. 선택 영역 형식이 `createNewItem`,이 함수는 반환 된 의미 없는 `CString` 릴리스 모드에서 또는 디버그 모드에서 어설션을 발생 시킵니다.  
+### <a name="return-value"></a>Return Value  
+ The full path to the file selected in the dialog box. If the selection type is `createNewItem`, this function returns a meaningless `CString` in release mode or causes an assertion in debug mode.  
   
-##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
- 개체 삽입 대화 상자를 선택 하 여 해제할 때 선택한 선택 유형을 가져오려면이 함수를 호출 **확인**합니다.  
+##  <a name="getselectiontype"></a>  COleInsertDialog::GetSelectionType  
+ Call this function to get the selection type chosen when the Insert Object dialog box was dismissed by choosing **OK**.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 선택한 항목의 형식입니다.  
+### <a name="return-value"></a>Return Value  
+ Type of selection made.  
   
-### <a name="remarks"></a>주의  
- 반환 형식 값으로 지정 됩니다는 **선택** 에 선언 된 열거형 형식은 `COleInsertDialog` 클래스입니다.  
+### <a name="remarks"></a>Remarks  
+ The return type values are specified by the **Selection** enumeration type declared in the `COleInsertDialog` class.  
   
 ```  
 enum Selection {
@@ -275,29 +280,29 @@ enum Selection {
     };  
 ```  
   
- 이러한 값에 대 한 간략 한 설명을 따르십시오.  
+ Brief descriptions of these values follow:  
   
-- **COleInsertDialog::createNewItem** 새로 만들기 라디오 단추가 선택 되었습니다.  
+- **COleInsertDialog::createNewItem** The Create New radio button was selected.  
   
-- **COleInsertDialog::insertFromFile** The 파일에서 만들기 라디오 단추가 선택 된 있고 연결 확인란을 선택 하지 했습니다.  
+- **COleInsertDialog::insertFromFile** The Create From File radio button was selected and the Link check box was not checked.  
   
-- **COleInsertDialog::linkToFile** The 파일에서 만들기 라디오 단추가 선택 된 고 링크 확인란이 선택 되어 있습니다.  
+- **COleInsertDialog::linkToFile** The Create From File radio button was selected and the Link check box was checked.  
   
-##  <a name="m_io"></a>COleInsertDialog::m_io  
- 형식의 구조 **OLEUIINSERTOBJECT** 개체 삽입 대화 상자에서의 동작을 제어 하는 데 사용 합니다.  
+##  <a name="m_io"></a>  COleInsertDialog::m_io  
+ Structure of type **OLEUIINSERTOBJECT** used to control the behavior of the Insert Object dialog box.  
   
 ```  
 OLEUIINSERTOBJECT m_io;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 구조체의 멤버는 직접 또는 멤버 함수를 통해 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified either directly or through member functions.  
   
- 자세한 내용은 참조는 [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) structure in the Windows SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 OCLIENT](../../visual-cpp-samples.md)   
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

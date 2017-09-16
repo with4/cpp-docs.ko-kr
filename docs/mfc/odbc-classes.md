@@ -1,31 +1,48 @@
 ---
-title: "ODBC 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터베이스 클래스[C++], ODBC"
-  - "ODBC 클래스[C++]"
+title: ODBC Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- database classes [MFC], ODBC
+- ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ODBC 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a47826abfb31bf4ac74b84900fdaa0cfa9d9514d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-These classes work with the other application framework classes to give easy access to a wide variety of databases for which Open Database Connectivity \(ODBC\) drivers are available.  
+---
+# <a name="odbc-classes"></a>ODBC Classes
+These classes work with the other application framework classes to give easy access to a wide variety of databases for which Open Database Connectivity (ODBC) drivers are available.  
   
  Programs that use ODBC databases will have at least a `CDatabase` object and a `CRecordset` object.  
   
@@ -33,23 +50,25 @@ These classes work with the other application framework classes to give easy acc
  Encapsulates a connection to a data source, through which you can operate on the data source.  
   
  [CRecordset](../mfc/reference/crecordset-class.md)  
- Encapsulates a set of records selected from a data source.  Recordsets enable scrolling from record to record, updating records \(adding, editing, and deleting records\), qualifying the selection with a filter, sorting the selection, and parameterizing the selection with information obtained or calculated at run time.  
+ Encapsulates a set of records selected from a data source. Recordsets enable scrolling from record to record, updating records (adding, editing, and deleting records), qualifying the selection with a filter, sorting the selection, and parameterizing the selection with information obtained or calculated at run time.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- Provides a form view directly connected to a recordset object.  The dialog data exchange \(DDX\) mechanism exchanges data between the recordset and the controls of the record view.  Like all form views, a record view is based on a dialog template resource.  Record views also support moving from record to record in the recordset, updating records, and closing the associated recordset when the record view closes.  
+ Provides a form view directly connected to a recordset object. The dialog data exchange (DDX) mechanism exchanges data between the recordset and the controls of the record view. Like all form views, a record view is based on a dialog template resource. Record views also support moving from record to record in the recordset, updating records, and closing the associated recordset when the record view closes.  
   
  [CDBException](../mfc/reference/cdbexception-class.md)  
- An exception resulting from failures in data access processing.  This class serves the same purpose as other exception classes in the exception\-handling mechanism of the class library.  
+ An exception resulting from failures in data access processing. This class serves the same purpose as other exception classes in the exception-handling mechanism of the class library.  
   
  [CFieldExchange](../mfc/reference/cfieldexchange-class.md)  
- Supplies context information to support record field exchange \(RFX\), which exchanges data between the field data members and parameter data members of a recordset object and the corresponding table columns on the data source.  Analogous to class [CDataExchange](../mfc/reference/cdataexchange-class.md), which is used similarly for dialog data exchange \(DDX\).  
+ Supplies context information to support record field exchange (RFX), which exchanges data between the field data members and parameter data members of a recordset object and the corresponding table columns on the data source. Analogous to class [CDataExchange](../mfc/reference/cdataexchange-class.md), which is used similarly for dialog data exchange (DDX).  
   
-## Related Classes  
+## <a name="related-classes"></a>Related Classes  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Encapsulates a handle to storage for a binary large object \(BLOB\), such as a bitmap.  `CLongBinary` objects are used to manage large data objects stored in database tables.  
+ Encapsulates a handle to storage for a binary large object (BLOB), such as a bitmap. `CLongBinary` objects are used to manage large data objects stored in database tables.  
   
  [CDBVariant](../mfc/reference/cdbvariant-class.md)  
- Allows you to store a value without worrying about the value's data type.  `CDBVariant` tracks the data type of the current value, which is stored in a union.  
+ Allows you to store a value without worrying about the value's data type. `CDBVariant` tracks the data type of the current value, which is stored in a union.  
   
-## 참고 항목  
- [클래스 개요](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

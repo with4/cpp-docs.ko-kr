@@ -1,5 +1,5 @@
 ---
-title: "&lt;memory&gt; 연산자 | Microsoft 문서"
+title: '&lt;memory&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,14 +21,14 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6416c01a3538961af9f1c6f2e8bca3c91ffd4bde
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9a8504cadcd584e423a1050c7fa02b935a1fa0e9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltmemorygt-operators"></a>&lt;memory&gt; 연산자
+# <a name="ltmemorygt-operators"></a>&lt;memory&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/29/2017
 |[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 개체 간의 같지 않음을 테스트합니다.  
+ Tests for inequality between objects.  
   
 ```  
 template <class Type, class Other>  
@@ -55,28 +55,28 @@ bool operator!=(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 같지 않음을 테스트할 개체 중 하나입니다.  
+ One of the objects to be tested for inequality.  
   
  `right`  
- 같지 않음을 테스트할 개체 중 하나입니다.  
+ One of the objects to be tested for inequality.  
   
  `Ty1`  
- 왼쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- 오른쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the right shared pointer.  
   
-### <a name="return-value"></a>반환 값  
- 개체가 같지 않으면 **true**이고, 개체가 같으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the objects are not equal; **false** if objects are equal.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 템플릿 연산자는 false를 반환합니다. (모든 기본 할당자가 같습니다.)  
+### <a name="remarks"></a>Remarks  
+ The first template operator returns false. (All default allocators are equal.)  
   
- 두 번째 및 세 번째 템플릿 연산자는 `!(left == right)`을 반환합니다.  
+ The second and third template operators return `!(left == right)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // memory_op_me.cpp  
@@ -105,7 +105,7 @@ int main( )
 The allocator objects Alloc & v1Alloc are equal.  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__operator_ne.cpp   
@@ -134,7 +134,7 @@ sp0 != sp1 == true
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 개체 간의 같음을 테스트합니다.  
+ Tests for equality between objects.  
   
 ```  
 template <class Type, class Other>  
@@ -153,28 +153,28 @@ bool operator==(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 같은지 여부를 테스트할 개체 중 하나입니다.  
+ One of the objects to be tested for equality.  
   
  `right`  
- 같은지 여부를 테스트할 개체 중 하나입니다.  
+ One of the objects to be tested for equality.  
   
  `Ty1`  
- 왼쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- 오른쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the right shared pointer.  
   
-### <a name="return-value"></a>반환 값  
- 개체가 같으면 `true`이고, 같지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the objects are equal, `false` if objects are not equal.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 템플릿 연산자는 true를 반환합니다. (모든 기본 할당자가 같습니다.)  
+### <a name="remarks"></a>Remarks  
+ The first template operator returns true. (All default allocators are equal.)  
   
- 두 번째 및 세 번째 템플릿 연산자는 ` left.get() ==  right.get()`을 반환합니다.  
+ The second and third template operators return ` left.get() ==  right.get()`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // memory_op_eq.cpp  
@@ -214,7 +214,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__operator_eq.cpp   
@@ -243,7 +243,7 @@ sp0 == sp1 == false
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 한 개체가 두 번째 개체보다 크거나 같은지 테스트합니다.  
+ Tests for one object being greater than or equal to a second object.  
   
 ```  
 template <class T, class Del1, class U, class Del2>  
@@ -257,24 +257,24 @@ bool operator>=(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 개체 중 하나입니다.  
+ One of the objects to be compared.  
   
  `right`  
- 비교할 개체 중 하나입니다.  
+ One of the objects to be compared.  
   
  `Ty1`  
- 왼쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- 오른쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the right shared pointer.  
   
-### <a name="remarks"></a>설명  
- 템플릿 연산자는 반환 `left.get() >= right.get()`합니다.  
+### <a name="remarks"></a>Remarks  
+ The template operators return `left.get() >= right.get()`.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 한 개체가 두 번째 개체보다 작은지 테스트합니다.  
+ Tests for one object being less than a second object.  
   
 ```  
 template <class T, class Del1, class U, class Del2>  
@@ -288,21 +288,21 @@ bool operator<(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 개체 중 하나입니다.  
+ One of the objects to be compared.  
   
  `right`  
- 비교할 개체 중 하나입니다.  
+ One of the objects to be compared.  
   
  `Ty1`  
- 왼쪽 포인터에 의해 제어되는 형식입니다.  
+ The type controlled by the left pointer.  
   
  `Ty2`  
- 오른쪽 포인터에 의해 제어되는 형식입니다.  
+ The type controlled by the right pointer.  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 한 개체가 두 번째 개체보다 작거나 같은지 테스트합니다.  
+ Tests for one object being less than or equal to a second object.  
   
 ```  
 template <class T, class Del1, class U, class Del2>  
@@ -316,24 +316,24 @@ bool operator<=(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 개체 중 하나입니다.  
+ One of the objects to be compared.  
   
  `right`  
- 비교할 개체 중 하나입니다.  
+ One of the objects to be compared.  
   
  `Ty1`  
- 왼쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- 오른쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the right shared pointer.  
   
-### <a name="remarks"></a>설명  
- 템플릿 연산자는 반환`left.get() <= right.get()`  
+### <a name="remarks"></a>Remarks  
+ The template operators return `left.get() <= right.get()`  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 한 개체가 두 번째 개체보다 큰지 테스트합니다.  
+ Tests for one object being greater than a second object.  
   
 ```  
 template <class Ty1, class Del1, class Ty2, class Del2>  
@@ -347,21 +347,21 @@ bool operator>(
     const shared_ptr<Ty2>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 비교할 개체 중 하나입니다.  
+ One of the objects to be compared.  
   
  `right`  
- 비교할 개체 중 하나입니다.  
+ One of the objects to be compared.  
   
  `Ty1`  
- 왼쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the left shared pointer.  
   
  `Ty2`  
- 오른쪽 공유 포인터로 제어되는 형식입니다.  
+ The type controlled by the right shared pointer.  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
-공유 포인터를 스트림에 씁니다.  
+Writes the shared pointer to the stream.  
   
 ```  
 template <class Elem, class Tr, class Ty>  
@@ -369,26 +369,26 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
     shared_ptr<Ty>& sp);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- 스트림 요소의 형식입니다.  
+ The type of the stream element.  
   
  `Tr`  
- 스트림 요소 특성의 형식입니다.  
+ The type the stream element traits.  
   
  `Ty`  
- 공유 포인터에 의해 제어되는 형식입니다.  
+ The type controlled by the shared pointer.  
   
  `out`  
- 출력 스트림입니다.  
+ The output stream.  
   
  `sp`  
- 공유 포인터입니다.  
+ The shared pointer.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수가 `out << sp.get()`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `out << sp.get()`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__operator_sl.cpp   
@@ -411,7 +411,7 @@ int main()
 sp0 == 3f3040 (varies)  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "tuple_size 클래스 | Microsoft Docs"
+title: tuple_size Class; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,13 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- tuple_size
-- std::tuple_size
-- utility/std::tuple_size
+- tuple_size", "std::tuple_size", "utility/std::tuple_size
 dev_langs:
 - C++
 helpviewer_keywords:
-- tuple_size Class
+- ', '
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
 caps.latest.revision: 23
 author: corob-msft
@@ -35,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: f0ae102852f1db46b68d86438e20ce9645535d19
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 15bc0b29c4775438ee93b899c061aa539f5c1546
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="tuplesize-class"></a>tuple_size 클래스
-`tuple` 에 포함된 요소 수를 보관합니다.  
+# <a name="tuplesize-class"></a>tuple_size Class;
+Reports the number of elements that a `tuple` contains.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 // TEMPLATE STRUCT tuple_size  
@@ -80,34 +78,34 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;   
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
 *Tuple*  
-튜플의 형식입니다. 
+The type of the tuple. 
   
 *Elem*  
-배열 요소의 형식입니다. 
+The type of the array elements. 
   
 *Size*  
-배열의 크기입니다. 
+The size of the array. 
   
 *T1*  
-쌍의 첫 번째 구성원 형식입니다. 
+The type of the first member of the pair. 
   
 *T2*  
-쌍의 두 번째 구성원 형식입니다. 
+The type of the second member of the pair. 
   
-*유형*  
-튜플 요소의 형식입니다. 
+*Types*  
+The types of the tuple elements. 
   
   
-## <a name="remarks"></a>설명  
-템플릿 클래스에는 해당 값이 `value` 형식 튜플의 범위인 내부 상수 식인 `Tuple`멤버가 있습니다.  
+## <a name="remarks"></a>Remarks  
+The template class has a member `value` that is an integral constant expression whose value is the extent of the tuple type `Tuple`.  
   
-배열의 템플릿 특수화에는 해당 값이 `value`(배열의 크기)인 정수 계열 상수 식 `Size` 구성원이 있습니다.  
+The template specialization for arrays has a member `value` that is an integral constant expression whose value is `Size`, which is the size of the array.  
   
-쌍의 템플릿 특수화에는 해당 값이 2인 정수 계열 상수 식 `value` 구성원이 있습니다.  
+The template specialization for pair has a member `value` that is an integral constant expression whose value is 2.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>   
@@ -135,15 +133,15 @@ int main()
  0 1.5 2 3.7  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<tuple>  
- **헤더:** \<array>(배열 특수화용)  
- **헤더:** \<utility>(쌍 특수화용)  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<tuple>  
+ **Header:** \<array> (for array specialization)  
+ **Header:** \<utility> (for pair specialization)  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)   
  [tuple](../standard-library/tuple-class.md)  
- [tuple_element 클래스](../standard-library/tuple-element-class-tuple.md)
+ [tuple_element Class](../standard-library/tuple-element-class-tuple.md)
 

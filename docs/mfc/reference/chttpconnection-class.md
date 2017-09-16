@@ -1,5 +1,5 @@
 ---
-title: "CHttpConnection 클래스 | Microsoft 문서"
+title: CHttpConnection Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,18 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- servers, connecting to
-- protocols, HTTP
-- connecting to servers, HTTP servers
-- Internet protocols, HTTP
-- HTTP connections
-- Internet protocols
-- CHttpConnection class
-- HTTP servers, connecting to
-- connecting to servers
-- Internet connections, HTTP
-- connections [C++], HTTP
-- Internet server, HTTP
+- CHttpConnection [MFC], CHttpConnection
+- CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 caps.latest.revision: 24
 author: mikeblome
@@ -47,58 +37,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1b02a79cebbd73a05478887115646f0544f0a92d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4a484b97fcdb5a3cb3ddfe603594d6e10657a181
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chttpconnection-class"></a>CHttpConnection 클래스
-HTTP 서버와의 연결을 관리합니다.  
+# <a name="chttpconnection-class"></a>CHttpConnection Class
+Manages your connection to an HTTP server.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHttpConnection : public CInternetConnection  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHttpConnection::CHttpConnection](#chttpconnection)|
-          `CHttpConnection` 개체를 만듭니다.|  
+|[CHttpConnection::CHttpConnection](#chttpconnection)|Creates a `CHttpConnection` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHttpConnection::OpenRequest](#openrequest)|HTTP 요청을 엽니다.|  
+|[CHttpConnection::OpenRequest](#openrequest)|Opens an HTTP request.|  
   
-## <a name="remarks"></a>주의  
- HTTP은 MFC WinInet 클래스에서 구현 하는 세 가지 인터넷 서버 프로토콜 중 하나입니다.  
+## <a name="remarks"></a>Remarks  
+ HTTP is one of three Internet server protocols implemented by the MFC WinInet classes.  
   
- 클래스 `CHttpConnection` 생성자 및 하나의 멤버 함수에 포함 된 [OpenRequest](#openrequest), HTTP 프로토콜을 사용 하 여 서버에 대 한 연결을 관리 하 합니다.  
+ The class `CHttpConnection` contains a constructor and one member function, [OpenRequest](#openrequest), that manages connections to a server with an HTTP protocol.  
   
- HTTP 서버와 통신할 먼저 만들어야 인스턴스의 [CInternetSession](../../mfc/reference/cinternetsession-class.md), 만들면는 [CHttpConnection](#_mfc_chttpconnection) 개체입니다. 만들 없도록는 `CHttpConnection` 개체를 직접 호출 하는 대신, [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)를 작성 하는 `CHttpConnection` 개체 하 고 포인터를 반환 합니다.  
+ To communicate with an HTTP server, you must first create an instance of [CInternetSession](../../mfc/reference/cinternetsession-class.md), and then create a [CHttpConnection](#_mfc_chttpconnection) object. You never create a `CHttpConnection` object directly; rather, call [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection), which creates the `CHttpConnection` object and returns a pointer to it.  
   
- 방법에 대 한 자세한 내용을 보려면 `CHttpConnection` 작동 하는 다른 MFC 인터넷 클래스 문서를 참조 하십시오. [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md)합니다. 다른 두 가지를 사용 하 여 서버에 연결 하는 방법에 대 한 자세한 내용은 인터넷 프로토콜, gopher 및 FTP 지원에 대 한 참조는 클래스 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) 및 [CFtpConnection](../../mfc/reference/cftpconnection-class.md)합니다.  
+ To learn more about how `CHttpConnection` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md). For more information about connecting to servers using the other two supported Internet protocols, gopher and FTP, see the classes [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) and [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
   
  `CHttpConnection`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
- 이 멤버 함수를 생성 하 라고는 `CHttpConnection` 개체입니다.  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
+ This member function is called to construct a `CHttpConnection` object.  
   
 ```  
 CHttpConnection(
@@ -127,43 +116,43 @@ CHttpConnection(
     DWORD_PTR dwContext = 1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pSession`  
- 에 대 한 포인터는 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다.  
+ A pointer to a [CInternetSession](../../mfc/reference/cinternetsession-class.md) object.  
   
  `hConnected`  
- 인터넷 연결에 대 한 핸들입니다.  
+ A handle to an Internet connection.  
   
  `pstrServer`  
- 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the server name.  
   
  `dwContext`  
- 에 대 한 컨텍스트 식별자는 `CInternetConnection` 개체입니다. 참조 **주의** 에 대 한 자세한 내용은 `dwContext`합니다.  
+ The context identifier for the `CInternetConnection` object. See **Remarks** for more information about `dwContext`.  
   
  `nPort`  
- 인터넷이이 연결의 포트를 식별 하는 번호입니다.  
+ The number that identifies the Internet port for this connection.  
   
  `pstrUserName`  
- 사용자가 로그인의 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 경우 **NULL**, 기본값은 익명입니다.  
+ Pointer to a null-terminated string that specifies the name of the user to log in. If **NULL**, the default is anonymous.  
   
  `pstrPassword`  
- 로그인에 사용할 암호를 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 모두 `pstrPassword` 및 `pstrUserName` 는 **NULL**, 기본 익명 암호는 사용자의 전자 메일 이름입니다. 경우 `pstrPassword` 는 **NULL** (또는 빈 문자열) 하지만 `pstrUserName` 없는 **NULL**, 빈 암호가 사용 됩니다. 다음 표에서 설명의 네 가지 가능한 설정에 대 한 동작 `pstrUserName` 및 `pstrPassword`:  
+ A pointer to a null-terminated string that specifies the password to use to log in. If both `pstrPassword` and `pstrUserName` are **NULL**, the default anonymous password is the user's email name. If `pstrPassword` is **NULL** (or an empty string) but `pstrUserName` is not **NULL**, a blank password is used. The following table describes the behavior for the four possible settings of `pstrUserName` and `pstrPassword`:  
   
-|`pstrUserName`|`pstrPassword`|FTP 서버에 전송 하는 사용자 이름|FTP 서버에 전송 되는 암호|  
+|`pstrUserName`|`pstrPassword`|Username sent to FTP server|Password sent to FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** 또는 ""|**NULL** 또는 ""|"익명"|사용자의 전자 메일 이름|  
-|비- **NULL** 문자열|**NULL** 또는 ""|`pstrUserName`|" "|  
-|**NULL** 비 **NULL** 문자열|**오류**|**오류**||  
-|비- **NULL** 문자열|비- **NULL** 문자열|`pstrUserName`|`pstrPassword`|  
+|**NULL** or " "|**NULL** or " "|"anonymous"|User's email name|  
+|Non- **NULL** String|**NULL** or " "|`pstrUserName`|" "|  
+|**NULL** Non- **NULL** String|**ERROR**|**ERROR**||  
+|Non- **NULL** String|Non- **NULL** String|`pstrUserName`|`pstrPassword`|  
   
  `dwFlags`  
- 조합 된 **INTERNET_ FLAG_\* ** 플래그입니다. 표를 참조는 **주의** 섹션 [CHttpConnection::OpenRequest](#openrequest) 에 대 한 설명은 `dwFlags` 값입니다.  
+ Any combination of the **INTERNET_ FLAG_\*** flags. See the table in the **Remarks** section of [CHttpConnection::OpenRequest](#openrequest) for a description of `dwFlags` values.  
   
-### <a name="remarks"></a>주의  
- 사용자를 만들지는 `CHttpConnection` 직접. 호출 하 여 개체를 만드는 대신, [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)합니다.  
+### <a name="remarks"></a>Remarks  
+ You never create a `CHttpConnection` directly. Rather, you create an object by calling [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
   
-##  <a name="openrequest"></a>CHttpConnection::OpenRequest  
- HTTP 연결을 열려면 이 멤버 함수를 호출합니다.  
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest  
+ Call this member function to open an HTTP connection.  
   
 ```  
 CHttpFile* OpenRequest(
@@ -186,32 +175,32 @@ CHttpFile* OpenRequest(
     DWORD dwFlags = INTERNET_FLAG_EXISTING_CONNECT);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pstrVerb`  
- 요청에 사용할 동사를 포함하는 문자열에 대한 포인터입니다. `NULL`의 경우 "GET"을 사용합니다.  
+ A pointer to a string containing the verb to use in the request. If `NULL`, "GET" is used.  
   
  `pstrObjectName`  
- 지정된 동사의 대상 개체를 포함하는 문자열에 대한 포인터입니다. 일반적으로 파일 이름, 실행 모듈 또는 검색 지정자입니다.  
+ A pointer to a string containing the target object of the specified verb. This is generally a filename, an executable module, or a search specifier.  
   
  `pstrReferer`  
- 문서의의 주소 (URL)을 지정 하는 문자열에 대 한 포인터 요청의 URL ( `pstrObjectName`)을 받았습니다. `NULL`인 경우 HTTP 헤더가 지정되지 않습니다.  
+ A pointer to a string that specifies the address (URL) of the document from which the URL in the request ( `pstrObjectName`) was obtained. If `NULL`, no HTTP header is specified.  
   
  `dwContext`  
- `OpenRequest` 작업에 대한 컨텍스트 식별자입니다. 자세한 내용은 `dwContext` 설명 부분을 참조하십시오.  
+ The context identifier for the `OpenRequest` operation. See the Remarks section for more information about `dwContext`.  
   
  `ppstrAcceptTypes`  
- 클라이언트에 허용되는 콘텐츠 형식을 나타내는 문자열에 대한 `LPCTSTR` 포인터의 Null로 끝나는 배열에 대한 포인터입니다. `ppstrAcceptTypes`가 `NULL`인 경우 서버는 클라이언트가 "text/*" 형식의 문서만 허용하여 텍스트 문서만 허용되고 그림이나 기타 이진 파일은 허용되지 않는 것으로 해석합니다. 콘텐츠 형식 첨부 HTTP POST 및 PUT 등 첨부된 정보가 있는 쿼리에 대한 데이터의 형식을 식별하는 CGI 변수 CONTENT_TYPE과 같습니다.  
+ A pointer to a null-terminated array of `LPCTSTR` pointers to strings indicating content types accepted by the client. If `ppstrAcceptTypes` is `NULL`, the servers interpret that the client only accepts documents of type "text/*" (that is, only text documents and not pictures or other binary files). The content type is equivalent to the CGI variable CONTENT_TYPE, which identifies the type of data for queries that have attached information, such as HTTP POST and PUT.  
   
  `pstrVersion`  
- HTTP 버전을 정의하는 문자열에 대한 포인터입니다. `NULL`의 경우 "HTTP/1.0"을 사용합니다.  
+ A pointer to a string defining the HTTP version. If `NULL`, "HTTP/1.0" is used.  
   
  `dwFlags`  
- INTERNET_ * FLAG_ 플래그의 조합입니다. 가능한 `dwFlags` 값 목록은 설명 부분을 참조하십시오.  
+ Any combination of the INTERNET_ FLAG_* flags. See the Remarks section for a description of possible `dwFlags` values.  
   
  `nVerb`  
- HTTP 요청 형식과 관련된 숫자입니다. 다음 중 하나일 수 있습니다.  
+ A number associated with the HTTP request type. Can be one of the following:  
   
-|HTTP 요청 형식|`nVerb` 값|  
+|HTTP request type|`nVerb` value|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -221,27 +210,27 @@ CHttpFile* OpenRequest(
 |`HTTP_VERB_DELETE`|5|  
 |`HTTP_VERB_UNLINK`|6|  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CHttpFile](../../mfc/reference/chttpfile-class.md) 요청 된 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CHttpFile](../../mfc/reference/chttpfile-class.md) object requested.  
   
-### <a name="remarks"></a>주의  
- `dwFlags`은 다음 중 하나일 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ `dwFlags` can be one of the following:  
   
-|인터넷 플래그|설명|  
+|Internet flag|Description|  
 |-------------------|-----------------|  
-|`INTERNET_FLAG_RELOAD`|캐시가 아니라 원본 서버에서 요청한 파일, 개체 또는 디렉터리 목록을 다운로드합니다.|  
-|`INTERNET_FLAG_DONT_CACHE`|반환된 엔터티를 캐시에 추가하지 않습니다.|  
-|`INTERNET_FLAG_MAKE_PERSISTENT`|반환된 엔터티를 영구 엔터티로 캐시에 추가합니다. 이는 표준 캐시 정리, 일관성 검사 또는 가비지 컬렉션으로 캐시에서 이 항목을 제거할 수 없다는 의미입니다.|  
-|`INTERNET_FLAG_SECURE`|보안 트랜잭션 의미 체계를 사용합니다. SSL/PCT 사용으로 변환되며 HTTP 요청에서 의미를 갖습니다.|  
-|`INTERNET_FLAG_NO_AUTO_REDIRECT`|HTTP 에서만 사용, 리디렉션 해야 처리 되지 않도록 자동으로의 지정 [chttpfile:: Sendrequest](../../mfc/reference/chttpfile-class.md#sendrequest)합니다.|  
+|`INTERNET_FLAG_RELOAD`|Forces a download of the requested file, object, or directory listing from the origin server, not from the cache.|  
+|`INTERNET_FLAG_DONT_CACHE`|Does not add the returned entity to the cache.|  
+|`INTERNET_FLAG_MAKE_PERSISTENT`|Adds the returned entity to the cache as a persistent entity. This means that standard cache cleanup, consistency checking, or garbage collection cannot remove this item from the cache.|  
+|`INTERNET_FLAG_SECURE`|Uses secure transaction semantics. This translates to using SSL/PCT and is only meaningful in HTTP requests|  
+|`INTERNET_FLAG_NO_AUTO_REDIRECT`|Used only with HTTP, specifies that redirections should not be automatically handled in [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|  
   
- `dwContext` 기본값을 재정의하여 컨텍스트 식별자를 설정한 값으로 설정합니다. 특정 작업과 연관 된 컨텍스트 식별자는 `CHttpConnection` 개체에서 만든 해당 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다. 값이 반환 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 작업에 대 한 상태에 있습니다. 문서를 참조 하십시오 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
+ Override the `dwContext` default to set the context identifier to a value of your choosing. The context identifier is associated with this specific operation of the `CHttpConnection` object created by its [CInternetSession](../../mfc/reference/cinternetsession-class.md) object. The value is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the operation with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.  
   
- 이 함수를 사용할 경우 예외가 throw될 수 있습니다.  
+ Exceptions may be thrown with this function.  
   
-## <a name="see-also"></a>참고 항목  
- [CInternetConnection 클래스](../../mfc/reference/cinternetconnection-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CInternetConnection 클래스](../../mfc/reference/cinternetconnection-class.md)   
- [CHttpFile 클래스](../../mfc/reference/chttpfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [CHttpFile Class](../../mfc/reference/chttpfile-class.md)
 

@@ -1,15 +1,14 @@
 ---
-title: "student_t_distribution 클래스 | Microsoft Docs"
+title: student_t_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- student_t_distribution
 - random/std::student_t_distribution
 - random/std::student_t_distribution::result_type
 - random/std::student_t_distribution::reset
@@ -22,7 +21,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- student_t_distribution class
+- std::student_t_distribution [C++]
+- std::student_t_distribution [C++], result_type
+- std::student_t_distribution [C++], reset
+- std::student_t_distribution [C++], n
+- std::student_t_distribution [C++], param
+- std::student_t_distribution [C++], min
+- std::student_t_distribution [C++], max
+- std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
 caps.latest.revision: 16
 author: corob-msft
@@ -42,17 +48,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4075f8852f90ea49f5c9c01f7d82b51766792d7b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6a3d8928b8cd0c3a4194840e6a8bea2a7eabfe3c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="studenttdistribution-class"></a>student_t_distribution 클래스
-Student의 *t* 분포를 생성합니다.  
+# <a name="studenttdistribution-class"></a>student_t_distribution Class
+Generates a Student's *t*-distribution.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class student_t_distribution {  
@@ -80,25 +86,25 @@ public:
    result_type max() const;
    };  
 ```  
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
 *RealType*  
- 부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
- Student의 *t* 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>Remarks  
+ The template class describes a distribution that produces values of a user-specified integral type, or type `double` if none is provided, distributed according to the Student's *t*-Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
 |`student_t_distribution::operator()`||[param_type](#param_type)|  
   
- 속성 함수 `n()`은 저장된 분포 매개 변수 `n`의 값을 반환합니다.  
+ The property function `n()` returns the value for the stored distribution parameter `n`.  
   
- 분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
- Student의 *t* 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Student의 t 분포](http://go.microsoft.com/fwlink/LinkId=401094)를 참조하세요.  
+ For detailed information about the Student's *t*-distribution, see the Wolfram MathWorld article [Students t-Distribution](http://go.microsoft.com/fwlink/LinkId=401094).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -173,35 +179,35 @@ Distribution for 10 samples:
     10: 92.7084335614  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution  
- 분포를 생성합니다.  
+ Constructs the distribution.  
   
 ```  
 explicit student_t_distribution(RealType n = 1.0);
 explicit student_t_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *n*  
- `n` 분포 매개 변수입니다.  
+ The `n` distribution parameter.  
   
 *parm*  
- 분포를 생성하는 데 사용되는 매개 변수 패키지입니다.  
+ The parameter package used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
- **사전 조건:** `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < n`  
   
- 첫 번째 생성자는 저장된 `n` 값이 *n* 값을 갖는 개체를 생성합니다.  
+ The first constructor constructs an object whose stored `n` value holds the value *n*.  
   
- 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+ The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  student_t_distribution::param_type  
- 분포의 모든 매개 변수를 저장합니다.  
+ Stores all the parameters of the distribution.  
 ```cpp    
 struct param_type {  
    typedef student_t_distribution<result_type> distribution_type;  
@@ -213,19 +219,19 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *n*  
-`n` 분포 매개 변수입니다.  
+The `n` distribution parameter.  
   
 *right*  
-이 매개 변수와 비교할 `param_type` 개체입니다.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>설명  
- **사전 조건:** `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < n`  
   
- 이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+ This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

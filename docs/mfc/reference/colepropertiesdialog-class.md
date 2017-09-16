@@ -1,5 +1,5 @@
 ---
-title: "COlePropertiesDialog 클래스 | Microsoft Docs"
+title: COlePropertiesDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,12 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE Object Properties dialog box
-- Object Properties dialog box
-- dialog boxes, OLE
-- OLE documents, modifying properties
-- property pages, OLE
-- COlePropertiesDialog class
+- COlePropertiesDialog [MFC], COlePropertiesDialog
+- COlePropertiesDialog [MFC], DoModal
+- COlePropertiesDialog [MFC], OnApplyScale
+- COlePropertiesDialog [MFC], m_gp
+- COlePropertiesDialog [MFC], m_lp
+- COlePropertiesDialog [MFC], m_op
+- COlePropertiesDialog [MFC], m_psh
+- COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
 caps.latest.revision: 23
 author: mikeblome
@@ -47,57 +49,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 1a53c1e65504049e35fdec8065de279ca41fe342
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc7087042379010d572d3bf1753813ddb1233bf2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 클래스
-Windows 공용 OLE 개체 속성 대화 상자를 캡슐화합니다.  
+# <a name="colepropertiesdialog-class"></a>COlePropertiesDialog Class
+Encapsulates the Windows common OLE Object Properties dialog box.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COlePropertiesDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|`COlePropertiesDialog` 개체를 생성합니다.|  
+|[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|Constructs a `COlePropertiesDialog` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePropertiesDialog::DoModal](#domodal)|대화 상자를 표시 하 고 사용자는 선택할 수 있습니다.|  
-|[COlePropertiesDialog::OnApplyScale](#onapplyscale)|문서 항목의 크기 조정을 변경 될 때 프레임 워크에서 호출 됩니다.|  
+|[COlePropertiesDialog::DoModal](#domodal)|Displays the dialog box and allows the user to make a selection.|  
+|[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Called by the framework when the scaling of the document item has changed.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePropertiesDialog::m_gp](#m_gp)|"일반" 페이지를 초기화 하는 데 사용 되는 구조는 `COlePropertiesDialog` 개체입니다.|  
-|[COlePropertiesDialog::m_lp](#m_lp)|"링크" 페이지를 초기화 하는 데 사용 되는 구조는 `COlePropertiesDialog` 개체입니다.|  
-|[COlePropertiesDialog::m_op](#m_op)|초기화 하는 데 사용 되는 구조는 `COlePropertiesDialog` 개체입니다.|  
-|[COlePropertiesDialog::m_psh](#m_psh)|추가 사용자 지정 속성 페이지를 추가 하는 데 사용 되는 구조입니다.|  
-|[COlePropertiesDialog::m_vp](#m_vp)|"View" 페이지를 사용자 지정 하는 데 사용 되는 구조는 `COlePropertiesDialog` 개체입니다.|  
+|[COlePropertiesDialog::m_gp](#m_gp)|A structure used to initialize the "General" page of a `COlePropertiesDialog` object.|  
+|[COlePropertiesDialog::m_lp](#m_lp)|A structure used to initialize the "Link" page of a `COlePropertiesDialog` object.|  
+|[COlePropertiesDialog::m_op](#m_op)|A structure used to initialize the `COlePropertiesDialog` object.|  
+|[COlePropertiesDialog::m_psh](#m_psh)|A structure used to add additional custom property pages.|  
+|[COlePropertiesDialog::m_vp](#m_vp)|A structure used to customize the "View" page of a `COlePropertiesDialog` object.|  
   
-## <a name="remarks"></a>주의  
- 일반 OLE 개체 속성 대화 상자에는 쉽게 표시 하 고 Windows 표준와 일치 하는 방식에서 OLE 문서 항목의 속성을 수정 하는 방법을 제공 합니다. 이러한 속성 중 일부 옵션 (항목이 연결 된) 경우 항목의 링크에 아이콘 및 이미지 크기 조정 및 정보를 표시 하기 위한 문서 항목을 나타내는 파일에 대 한 정보가 들어 있습니다.  
+## <a name="remarks"></a>Remarks  
+ Common OLE Object Properties dialog boxes provide an easy way to display and modify the properties of an OLE document item in a manner consistent with Windows standards. These properties include, among others, information on the file represented by the document item, options for displaying the icon and image scaling, and information on the item's link (if the item is linked).  
   
- 사용 하는 `COlePropertiesDialog` 개체를 사용 하 여 개체를 만들려면 먼저는 `COlePropertiesDialog` 생성자입니다. 대화 상자를 생성 한 후 호출 하 여 `DoModal` 대화 상자를 표시 하 고 사용자가 항목의 속성을 수정 하도록 허용 하려면 멤버 함수입니다. `DoModal`사용자는 확인 선택 여부를 반환 합니다 ( **IDOK**) 또는 Cancel ( **IDCANCEL**) 단추입니다. 확인 및 취소 단추 외에도 적용 단추가 있습니다. 사용자가 적용을 선택 하면 문서 항목의 속성을 변경한 항목에 적용 되 고 해당 이미지가 자동으로 업데이트 되었지만 활성 상태로 유지 됩니다.  
+ To use a `COlePropertiesDialog` object, first create the object using the `COlePropertiesDialog` constructor. After the dialog box has been constructed, call the `DoModal` member function to display the dialog box and allow the user to modify any properties of the item. `DoModal` returns whether the user selected the OK ( **IDOK**) or the Cancel ( **IDCANCEL**) button. In addition to the OK and Cancel buttons, there is an Apply button. When the user selects Apply, any changes made to the properties of the document item are applied to the item and its image is automatically updated, but remains active.  
   
- [m_psh](#m_psh) 데이터 멤버에 대 한 포인터는 한 **PROPSHEETHEADER** 구조 및 대부분의 경우 명시적으로 액세스 해야 합니다. 기본 일반, 뷰 및 링크 페이지 이외의 추가 속성 페이지를 해야 하는 경우는 예외가입니다. 이 경우 수정할 수 있습니다는 `m_psh` 호출 하기 전에 사용자 지정 페이지를 포함 하도록 데이터 멤버는 `DoModal` 멤버 함수입니다.  
+ The [m_psh](#m_psh) data member is a pointer to a **PROPSHEETHEADER** structure, and in most cases you will not need to access it explicitly. One exception is when you need additional property pages beyond the default General, View, and Link pages. In this case, you can modify the `m_psh` data member to include your custom pages before calling the `DoModal` member function.  
   
- OLE 대화 상자에 대 한 자세한 내용은 문서 참조 [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+ For more information on OLE dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,12 +114,11 @@ class COlePropertiesDialog : public COleDialog
   
  `COlePropertiesDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog  
- 
-          `COlePropertiesDialog` 개체를 만듭니다.  
+##  <a name="colepropertiesdialog"></a>  COlePropertiesDialog::COlePropertiesDialog  
+ Creates a `COlePropertiesDialog` object.  
   
 ```  
 COlePropertiesDialog(
@@ -127,114 +128,114 @@ COlePropertiesDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 액세스 되는 속성을 가진 문서 항목에 대 한 포인터입니다.  
+ Pointer to the document item whose properties are being accessed.  
   
  *nScaleMin*  
- 최소 배율 문서 항목 이미지에 대 한 백분율입니다.  
+ Minimum scaling percentage for the document item image.  
   
  *nScaleMax*  
- 최대 조정 문서 항목 이미지에 대 한 백분율입니다.  
+ Maximum scaling percentage for the document item image.  
   
  `pParentWnd`  
- 이 대화 상자의 부모 또는 소유자에 대 한 포인터입니다.  
+ Pointer to the dialog box's parent or owner.  
   
-### <a name="remarks"></a>주의  
- 일반 OLE 개체 속성 대화 상자 클래스에서 파생 `COlePropertiesDialog` 문서 항목에 대해 크기 조정을 구현 하는 데 있습니다. 이 클래스의 인스턴스에 의해 구현 된 모든 대화 상자에서 문서 항목의 크기 조정을 지원 하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ Derive your common OLE Object Properties dialog class from `COlePropertiesDialog` in order to implement scaling for your document items. Any dialog boxes implemented by an instance of this class will not support scaling of the document item.  
   
- 기본적으로 공용 OLE 개체 속성 대화 상자에는 세 가지 기본 페이지에 있습니다.  
+ By default, the common OLE Object Properties dialog box has three default pages:  
   
--   일반  
+-   General  
   
-     이 페이지는 선택한 문서 항목이 나타내는 파일에 대 한 시스템 정보를 포함 합니다. 이 페이지에서 사용자 다른 형식으로 선택한 항목 형식으로 변환할 수 있습니다.  
+     This page contains system information for the file represented by the selected document item. From this page, the user can convert the selected item to another type.  
   
--   보기  
+-   View  
   
-     이 페이지, 항목을 표시 하 고, 아이콘을 변경 하 고, 이미지의 크기를 변경 하는 옵션이 있습니다.  
+     This page contains options for displaying the item, changing the icon, and changing the scaling of the image.  
   
--   링크  
+-   Link  
   
-     이 페이지에서 링크 된 항목의 위치를 변경 하 고 연결 된 항목을 업데이트 하는 옵션이 있습니다. 사용자는이 페이지에서 선택한 항목의 연결을 끊을 수 있습니다.  
+     This page contains options for changing the location of the linked item and updating the linked item. From this page, the user can break the link of the selected item.  
   
- 기본적으로 제공 하는 것 이상의 페이지에 추가 하려면 수정 된 [m_psh](#m_psh) 의 생성자를 종료 하기 전에 멤버 변수 프로그램 `COlePropertiesDialog`-클래스를 파생 합니다. 이의 고급 구현을 `COlePropertiesDialog` 생성자입니다.  
+ To add pages beyond those provided by default, modify the [m_psh](#m_psh) member variable before exiting the constructor of your `COlePropertiesDialog`-derived class. This is an advanced implementation of the `COlePropertiesDialog` constructor.  
   
-##  <a name="domodal"></a>COlePropertiesDialog::DoModal  
- Windows 공용 OLE 개체 속성 대화 상자를 표시 하 고 사용자가 보거나 문서 항목의 다양 한 속성을 변경 하도록 허용 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="domodal"></a>  COlePropertiesDialog::DoModal  
+ Call this member function to display the Windows common OLE Object Properties dialog box and allow the user to view and/or change the various properties of the document item.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>반환 값  
- **IDOK** 또는 **IDCANCEL** 성공 하면 그렇지 않으면 0입니다. **IDOK** 및 **IDCANCEL** 는 사용자 확인 또는 취소 단추를 선택 하는지 여부를 나타내는 상수입니다.  
+### <a name="return-value"></a>Return Value  
+ **IDOK** or **IDCANCEL** if successful; otherwise 0. **IDOK** and **IDCANCEL** are constants that indicate whether the user selected the OK or Cancel button.  
   
- 경우 **IDCANCEL** 반환 되 면 Windows를 호출할 수 있습니다 [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) 함수 오류가 발생 한 것인지 확인 합니다.  
+ If **IDCANCEL** is returned, you can call the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred.  
   
-##  <a name="m_gp"></a>COlePropertiesDialog::m_gp  
- 형식의 구조 [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), OLE 개체 속성 대화 상자의 일반 페이지를 초기화 하는 데 사용 합니다.  
+##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
+ A structure of type [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), used to initialize the General page of the OLE Object Properties dialog box.  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 페이지는 유형 및 크기는 포함의 하며 변환 대화 상자에 대 한 사용자 액세스를 허용 합니다. 이 페이지에는 표시 링크 대상의 경우 개체는 링크입니다.  
+### <a name="remarks"></a>Remarks  
+ This page shows the type and size of an embedding and allows the user access to the Convert dialog box. This page also shows the link destination if the object is a link.  
   
- 대 한 자세한 내용은 **OLEUIGNRLPROPS** 구조, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on the **OLEUIGNRLPROPS** structure, see the Windows SDK.  
   
-##  <a name="m_lp"></a>COlePropertiesDialog::m_lp  
- 형식의 구조 [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), OLE 개체 속성 대화 상자의 연결 페이지를 초기화 하는 데 사용 합니다.  
+##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
+ A structure of type [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), used to initialize the Link page of the OLE Object Properties dialog box.  
   
 ```  
 OLEUILINKPROPS m_lp;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 페이지는 링크 된 항목의 위치를 표시 및 사용 하면 업데이트 또는 중단 된 항목에 대 한 링크를 합니다.  
+### <a name="remarks"></a>Remarks  
+ This page shows the location of the linked item and allows the user to update, or break, the link to the item.  
   
- 대 한 자세한 내용은 **OLEUILINKPROPS** 구조, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on the **OLEUILINKPROPS** structure, see the Windows SDK.  
   
-##  <a name="m_op"></a>COlePropertiesDialog::m_op  
- 형식의 구조 [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), 공용 OLE 개체 속성 대화 상자를 초기화 하는 데 사용 합니다.  
+##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
+ A structure of type [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), used to initialize the common OLE Object Properties dialog box.  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 구조는 일반, 링크 및 보기 페이지를 초기화 하는 데 사용 되는 멤버를 포함 합니다.  
+### <a name="remarks"></a>Remarks  
+ This structure contains members used to initialize the General, Link, and View pages.  
   
- 자세한 내용은 참조는 **OLEUIOBJECTPROPS** 및 [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) 구조체에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the **OLEUIOBJECTPROPS** and [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) structures in the Windows SDK.  
   
-##  <a name="m_psh"></a>COlePropertiesDialog::m_psh  
- 형식의 구조 [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), 멤버가 대화 상자 개체의 특성을 저장 합니다.  
+##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
+ A structure of type [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), whose members store the characteristics of the dialog object.  
   
 ```  
 PROPSHEETHEADER m_psh;  
 ```  
   
-### <a name="remarks"></a>주의  
- 생성 한 후 한 `COlePropertiesDialog` 개체를 사용할 수 있습니다 `m_psh` 호출 하기 전에 대화 상자의 다양 한 측면을 설정 하는 `DoModal` 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ After constructing a `COlePropertiesDialog` object, you can use `m_psh` to set various aspects of the dialog box before calling the `DoModal` member function.  
   
- 수정 하는 경우는 `m_psh` 데이터 멤버를 직접 모든 기본 동작을 재정의 하 합니다.  
+ If you modify the `m_psh` data member directly, you will override any default behavior.  
   
- 대 한 자세한 내용은 **PROPSHEETHEADER** 구조, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on the **PROPSHEETHEADER** structure, see the Windows SDK.  
   
-##  <a name="m_vp"></a>COlePropertiesDialog::m_vp  
- 형식의 구조 [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), OLE 개체 속성 대화 상자의 보기 페이지를 초기화 하는 데 사용 합니다.  
+##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
+ A structure of type [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), used to initialize the View page of the OLE Object Properties dialog box.  
   
 ```  
 OLEUIVIEWPROPS m_vp;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 페이지에서는 사용자를 "콘텐츠" 및 "아이콘" 뷰는 개체의 사이 전환 하 고 컨테이너 내에서 배율을 변경 합니다. 개체 아이콘으로 표시 되는 경우 아이콘 변경 대화 상자에 대 한 사용자 액세스를 수도 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This page allows the user to toggle between "content" and "iconic" views of the object, and change its scaling within the container. It also allows the user access to the Change Icon dialog box when the object is being displayed as an icon.  
   
- 대 한 자세한 내용은 **OLEUIVIEWPROPS** 구조, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on the **OLEUIVIEWPROPS** structure, see the Windows SDK.  
   
-##  <a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
- 크기 조정 값 변경 되어 확인 또는 적용 중 하나를 선택한 경우 프레임 워크에서 호출 됩니다.  
+##  <a name="onapplyscale"></a>  COlePropertiesDialog::OnApplyScale  
+ Called by the framework when the scaling value has changed and either OK or Apply was selected.  
   
 ```  
 virtual BOOL OnApplyScale(
@@ -243,29 +244,29 @@ virtual BOOL OnApplyScale(
     BOOL bRelativeToOrig);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 액세스 되는 속성을 가진 문서 항목에 대 한 포인터입니다.  
+ Pointer to the document item whose properties are being accessed.  
   
  `nCurrentScale`  
- 대화 눈금의 숫자 값입니다.  
+ Numerical value of the dialog scale.  
   
  *bRelativeToOrig*  
- 문서 항목의 원래 크기에 배율을 적용 되는지 여부를 나타냅니다.  
+ Indicates whether scaling applies to the original size of the document item.  
   
-### <a name="return-value"></a>반환 값  
- 0이 아닌 값 처리 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if handled; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 기본 구현은 아무 작업도 수행하지 않습니다. 크기 조정 컨트롤을 사용 하려면이 함수를 재정의 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing. You must override this function to enable the scaling controls.  
   
 > [!NOTE]
->  프레임 워크에서이 함수를 호출 공용 OLE 개체 속성 대화 상자 표시 되기 전에 **NULL** 에 대 한 `pItem` 에-1 `nCurrentScale`합니다. 이 크기 조정 컨트롤을 사용 해야 하는지 확인 하려면 수행 됩니다.  
+>  Before the common OLE Object Properties dialog box is displayed, the framework calls this function with a **NULL** for `pItem` and a - 1 for `nCurrentScale`. This is done to determine if the scaling controls should be enabled.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 CIRC](../../visual-cpp-samples.md)   
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)   
- [CPropertyPage 클래스](../../mfc/reference/cpropertypage-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CIRC](../../visual-cpp-samples.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [CPropertyPage Class](../../mfc/reference/cpropertypage-class.md)
 

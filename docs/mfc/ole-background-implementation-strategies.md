@@ -1,51 +1,70 @@
 ---
-title: "OLE 백그라운드 구현 전략 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "응용 프로그램[OLE], OLE 구현"
-  - "OLE[C++], 개발 전략"
-  - "OLE 응용 프로그램[C++], OLE 구현"
+title: 'OLE Background: Implementation Strategies | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE [MFC], development strategy
+- OLE applications [MFC], implementing OLE
+- applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# OLE 백그라운드 구현 전략
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ac98cd3ba6b9d75be159a51b35238ecec03126d0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-응용 프로그램에 따라, OLE 지원을 추가하는 것에 대한 네 가지 가능한 구현 전략이 있습니다.  
+---
+# <a name="ole-background-implementation-strategies"></a>OLE Background: Implementation Strategies
+Depending on your application, there are four possible implementation strategies for adding OLE support:  
   
--   새 응용 프로그램을 작성하는 중입니다.  
+-   You are writing a new application.  
   
-     이 문제는 일반적으로 최소 작업을 필요로 합니다.  MFC 응용 프로그램 마법사를 실행 하고 고급 기능 또는 복합 문서 지원 기초 응용 프로그램 만들기를 선택 합니다.  이러한 옵션 및 용도에 대한 정보를 보려면 [Creating an MFC EXE Program](../mfc/reference/mfc-application-wizard.md) 를 참조하십시오.  
+     This situation usually requires the least work. You run the MFC Application Wizard and select either Advanced Features or Compound Document Support to create a skeleton application. For information on these options and what they do, see the article [Creating an MFC EXE Program](../mfc/reference/mfc-application-wizard.md).  
   
--   프로그램은 OLE를 지원하지 않는 Microsoft Foundation 클래스 라이브러리 버전 2.0 이상 또는 그 이상으로 작성되어야 합니다.  
+-   You have a program written with the Microsoft Foundation Class Library version 2.0 or higher that does not support OLE.  
   
-     이전에 설명한 대로 MFC 응용 프로그램을 사용하여 새로운 응용 프로그램을 만들고, 코드를 새 응용 프로그램에서 기존 응용 프로그램으로 복사 붙여넣기 합니다.  이 것은 서버, 컨테이너 또는 자동화 된 응용 프로그램에 대해 작동 합니다.  이 계획의 예제는 MFC [SCRIBBLE](../top/visual-cpp-samples.md) 예제를 참조하십시오.  
+     Create a new application with the MFC Application Wizard as previously mentioned, and then copy and paste the code from the new application into your existing application. This will work for servers, containers, or automated applications. See the MFC [SCRIBBLE](../visual-cpp-samples.md) sample for an example of this strategy.  
   
--   OLE 1.0 버전 지원을 구현하는 MFC 라이브러리 프로그램을 가져야합니다.  
+-   You have a Microsoft Foundation Class Library program that implements OLE version 1.0 support.  
   
-     이 변환 전략에 대해 [MFC Technical Note 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md) 를 참조하십시오.  
+     See [MFC Technical Note 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md) for this conversion strategy.  
   
--   MFC를 사용하여 작성되지 않은 프로그램을 가지고 OLE 지원이 구현되거나 구현되지 않습니다.  
+-   You have an application that was not written using the Microsoft Foundation Classes and that may or may not have implemented OLE support.  
   
-     이 경우에는 많은 작업이 필요합니다.  한 가지 방법은 첫째 전략과 같이 새 응용 프로그램 만들고 기존 코드를 새 응용 프로그램에 복사 붙여넣기 하는 것입니다.  C로 작성된 코드인 경우, 코드를 수정하여 C\+\+ 코드로 컴파일 될 수 있게 해야 합니다.  C 코드에서 Windows API를 호출 하는 경우 Microsoft Foundation 클래스를 사용 하도록 변경할 필요가 없습니다.  이 접근은 MFC의 2.0 버전 및 그 이상의 버전에서 사용되는 문서\/뷰 아키텍처를 지원하기 위해 프로그램의 재구성을 요구할 수도 있습니다.  이 아키텍처에 대한 자세한 내용은 [Technical Note 25](../mfc/tn025-document-view-and-frame-creation.md) 를 참조하십시오.  
+     This situation requires the most work. One approach is to create a new application, as in the first strategy, and then copy and paste your existing code into it. If your existing code is written in C, then you may need to modify it so it can compile as C++ code. If your C code calls the Windows API, then you do not have to change it to use the Microsoft Foundation classes. This approach likely will require some restructuring of your program to support the document/view architecture used by versions 2.0 and higher of the Microsoft Foundation Classes. For more information on this architecture, see [Technical Note 25](../mfc/tn025-document-view-and-frame-creation.md).  
   
- 전략을 결정했으면, [Containers](../mfc/containers.md) 또는 [Servers](../mfc/servers.md) 를\(작성한 응용 프로그램의 형식에 따라\) 읽거나 샘플 프로그램을 시험해야 합니다.  MFC OLE 샘플 [OCLIENT](../top/visual-cpp-samples.md) 및 [HIERSVR](../top/visual-cpp-samples.md) 는 컨테이너 및 서버의 다양한 양상을 각각 구현하는 방법을 설명합니다.  이 문서 전반에 걸친 다양한 시점에서, 기술이 설명된 다양한 예제로서 이러한 샘플의 특정 함수를 참조할 수 있습니다.  
+ Once you have decided on a strategy, you should either read the [Containers](../mfc/containers.md) or [Servers](../mfc/servers.md) articles (depending on the type of application you are writing) or examine the sample programs, or both. The MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md) show how to implement the various aspects of containers and servers, respectively. At various points throughout these articles, you will be referred to certain functions in these samples as examples of the techniques being discussed.  
   
-## 참고 항목  
- [OLE 백그라운드](../mfc/ole-background.md)   
- [컨테이너: 컨테이너 구현](../mfc/containers-implementing-a-container.md)   
- [서버: 서버 구현](../mfc/servers-implementing-a-server.md)   
- [MFC 응용 프로그램 마법사](../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [Containers: Implementing a Container](../mfc/containers-implementing-a-container.md)   
+ [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)   
+ [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md)
+
+

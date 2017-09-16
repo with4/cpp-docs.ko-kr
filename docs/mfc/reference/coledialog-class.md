@@ -1,5 +1,5 @@
 ---
-title: "COleDialog 클래스 | Microsoft 문서"
+title: COleDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,9 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE dialog boxes, base class
-- dialog boxes, OLE
-- COleDialog class
+- COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
 caps.latest.revision: 21
 author: mikeblome
@@ -37,32 +35,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 018d06ac167a8c352d9f1822b373126c4e615854
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 82cc7cff7b295e2685a0456d525ed0d74af44e46
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledialog-class"></a>COleDialog 클래스
-OLE 대화 상자에 공통적인 기능을 제공합니다.  
+# <a name="coledialog-class"></a>COleDialog Class
+Provides functionality common to dialog boxes for OLE.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDialog::GetLastError](#getlasterror)|대화 상자에서 반환 된 오류 코드를 가져옵니다.|  
+|[COleDialog::GetLastError](#getlasterror)|Gets the error code returned by the dialog box.|  
   
-## <a name="remarks"></a>주의  
- 파생 된 몇 가지 클래스를 제공 하는 Microsoft Foundation Class 라이브러리 `COleDialog`:  
+## <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library provides several classes derived from `COleDialog`:  
   
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
   
@@ -82,9 +80,9 @@ class COleDialog : public CCommonDialog
   
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
- OLE 관련 대화 상자에 대 한 자세한 내용은 문서를 참조 하십시오. [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+ For more information about OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -97,25 +95,25 @@ class COleDialog : public CCommonDialog
   
  `COleDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="getlasterror"></a>COleDialog::GetLastError  
- 호출의 `GetLastError` 멤버 함수 추가 오류 정보를 가져올 때 `DoModal` 반환 **IDABORT**합니다.  
+##  <a name="getlasterror"></a>  COleDialog::GetLastError  
+ Call the `GetLastError` member function to get additional error information when `DoModal` returns **IDABORT**.  
   
 ```  
 UINT GetLastError() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 반환 된 오류 코드 `GetLastError` 표시 되는 특정 대화 상자에 따라 달라 집니다.  
+### <a name="return-value"></a>Return Value  
+ The error codes returned by `GetLastError` depend on the specific dialog box displayed.  
   
-### <a name="remarks"></a>주의  
- 참조는 `DoModal` 특정 오류 메시지에 대 한 정보에 대 한 파생된 클래스에서 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ See the `DoModal` member function in the derived classes for information about specific error messages.  
   
-## <a name="see-also"></a>참고 항목  
- [CCommonDialog 클래스](../../mfc/reference/ccommondialog-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

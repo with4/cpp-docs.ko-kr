@@ -1,53 +1,71 @@
 ---
-title: "속성 시트(MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "대화 상자, 속성 시트"
-  - "대화 상자, 탭"
-  - "속성 시트"
-  - "탭 대화 상자"
+title: Property Sheets (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], tabs
+- property sheets
+- dialog boxes [MFC], property sheets
+- tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 속성 시트(MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 579d5e55bb7d739749ab213ce66c299e88d8391b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 문서에서는 MFC 응용 프로그램의 속성 시트에 대한 지원을 구현 하는 방법을 설명 합니다.  탭 대화 상자 라고도 하는 속성 시트 대화 상자에서 컨트롤의 많은 수를 관리 하는 방법을 제공 합니다.  속성 시트는 각각 별도 대화 상자 템플릿 리소스를 기반으로 하는 속성 페이지를 포함합니다.  대화 상자의 컨트롤을 논리 그룹으로 나눌 수 있으며 각 그룹 속성 페이지에 넣을 수 있습니다.  
+---
+# <a name="property-sheets-mfc"></a>Property Sheets (MFC)
+This family of articles explains how to implement support for property sheets in MFC applications. A property sheet, also known as a tab dialog box, provides a way to manage large numbers of controls in a dialog box. The property sheet contains property pages, each based on a separate dialog template resource. You can divide your dialog box's controls into logical groups and put each group on its own property page.  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [속성 시트 및 속성 페이지](../mfc/property-sheets-and-property-pages-in-mfc.md)  
+-   [Property sheets and property pages](../mfc/property-sheets-and-property-pages-in-mfc.md)  
   
--   [응용 프로그램에서 속성 시트 사용](../mfc/using-property-sheets-in-your-application.md)  
+-   [Using Property Sheets in Your Application](../mfc/using-property-sheets-in-your-application.md)  
   
--   [Adding Controls to a Property Sheet](../mfc/adding-controls-to-a-property-sheet.md)\(반대 속성 페이지\)  
+-   [Adding Controls to a Property Sheet](../mfc/adding-controls-to-a-property-sheet.md) (as opposed to a property page)  
   
--   [속성 시트와 프로그램 간의 데이터 교환](../mfc/exchanging-data.md)  
+-   [Exchanging data between a property sheet and your program](../mfc/exchanging-data.md)  
   
--   [모델리스 속성 시트 만들기](../mfc/creating-a-modeless-property-sheet.md)  
+-   [Creating a modeless property sheet](../mfc/creating-a-modeless-property-sheet.md)  
   
--   [적용 단추 처리](../mfc/handling-the-apply-button.md)  
+-   [Handling the Apply button](../mfc/handling-the-apply-button.md)  
   
--   [마법사 역할을 하는 속성 시트](../mfc/property-sheets-as-wizards.md)  
+-   [Property Sheets as Wizards](../mfc/property-sheets-as-wizards.md)  
   
 -   [Class CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
   
 -   [Class CPropertyPage](../mfc/reference/cpropertypage-class.md)  
   
--   [샘플](../top/visual-cpp-samples.md)  
+-   [Sample](../visual-cpp-samples.md)  
   
-## 참고 항목  
- [사용자 인터페이스 요소](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

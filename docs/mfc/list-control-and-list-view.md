@@ -1,40 +1,57 @@
 ---
-title: "목록 컨트롤 및 목록 뷰 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl 클래스, 및 CListView"
-  - "CListView 클래스, 및 CListCtrl"
-  - "list 컨트롤, 목록 보기"
-  - "목록 보기"
-  - "뷰, 목록 및 목록 컨트롤"
+title: List Control and List View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListView class [MFC], and CListCtrl
+- views [MFC], list and list control
+- CListCtrl class [MFC], and CListView
+- list views [MFC]
+- list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 목록 컨트롤 및 목록 뷰
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7a60bf5c088c3914f9ed73a34a1dfa40f58bb1a5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-For convenience, MFC encapsulates the list control in two ways.  You can use list controls:  
+---
+# <a name="list-control-and-list-view"></a>List Control and List View
+For convenience, MFC encapsulates the list control in two ways. You can use list controls:  
   
 -   Directly, by embedding a [CListCtrl](../mfc/reference/clistctrl-class.md) object in a dialog class.  
   
 -   Indirectly, by using class [CListView](../mfc/reference/clistview-class.md).  
   
- `CListView` makes it easy to integrate a list control with the MFC document\/view architecture, encapsulating the control much as [CEditView](../mfc/reference/ceditview-class.md) encapsulates an edit control: the control fills the entire surface area of an MFC view. \(The view *is* the control, cast to `CListView`.\)  
+ `CListView` makes it easy to integrate a list control with the MFC document/view architecture, encapsulating the control much as [CEditView](../mfc/reference/ceditview-class.md) encapsulates an edit control: the control fills the entire surface area of an MFC view. (The view *is* the control, cast to `CListView`.)  
   
- A `CListView` object inherits from [CCtrlView](../mfc/reference/cctrlview-class.md) and its base classes and adds a member function to retrieve the underlying list control.  Use view members to work with the view as a view.  Use the [GetListCtrl](../Topic/CListView::GetListCtrl.md) member function to gain access to the list control's member functions.  Use these members to:  
+ A `CListView` object inherits from [CCtrlView](../mfc/reference/cctrlview-class.md) and its base classes and adds a member function to retrieve the underlying list control. Use view members to work with the view as a view. Use the [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) member function to gain access to the list control's member functions. Use these members to:  
   
 -   Add, delete, or manipulate "items" in the list.  
   
@@ -42,10 +59,12 @@ For convenience, MFC encapsulates the list control in two ways.  You can use lis
   
  To obtain a reference to the `CListCtrl` underlying a `CListView`, call `GetListCtrl` from your list view class:  
   
- [!code-cpp[NVC_MFCListView#4](../mfc/codesnippet/CPP/list-control-and-list-view_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#4](../atl/reference/codesnippet/cpp/list-control-and-list-view_1.cpp)]  
   
  This topic describes both ways to use the list control.  
   
-## 참고 항목  
- [CListCtrl 사용](../mfc/using-clistctrl.md)   
- [컨트롤](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

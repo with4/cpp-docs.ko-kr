@@ -1,5 +1,5 @@
 ---
-title: "exponential_distribution 클래스 | Microsoft 문서"
+title: exponential_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- exponential_distribution
 - random/std::exponential_distribution
 - random/std::exponential_distribution::reset
 - random/std::exponential_distribution::lambda
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- exponential_distribution class
+- std::exponential_distribution [C++]
+- std::exponential_distribution [C++], reset
+- std::exponential_distribution [C++], lambda
+- std::exponential_distribution [C++], param
+- std::exponential_distribution [C++], min
+- std::exponential_distribution [C++], max
+- std::exponential_distribution [C++], param_type
+- std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
 caps.latest.revision: 18
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: eaf28ef7a02d358422d7e655688f5f4bf7cccc7d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9a01105b4c35fb1ada147fc4026eb0e459fc1229
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="exponentialdistribution-class"></a>exponential_distribution 클래스
-지수 분포를 생성합니다.  
+# <a name="exponentialdistribution-class"></a>exponential_distribution Class
+Generates an exponential distribution.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class RealType = double>
@@ -85,30 +91,30 @@ public:
    result_type max() const;
    };  
 ``` 
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.
+*URNG* The random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
   
   
-## <a name="remarks"></a>설명  
- 지수 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>Remarks  
+ The template class describes a distribution that produces values of a user-specified integral type, or type `double` if none is provided, distributed according to the Exponential Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
 |`exponential_distribution::operator()`||[param_type](#param_type)|  
   
-속성 멤버 함수 `lambda()`는 저장된 분포 매개 변수 `lambda`의 값을 반환합니다.  
+The property member function `lambda()` returns the value for the stored distribution parameter `lambda`.  
   
-속성 멤버 함수 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+The property member function `param()` sets or returns the `param_type` stored distribution parameter package.  
   
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-지수 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Exponential Distribution](http://go.microsoft.com/fwlink/LinkId=401098)(지수 분포)을 참조하세요.  
+For detailed information about the exponential distribution, see the Wolfram MathWorld article [Exponential Distribution](http://go.microsoft.com/fwlink/LinkId=401098).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -184,35 +190,35 @@ Distribution for 10 samples:
     10: 2.1201210996  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution  
- 분포를 생성합니다.  
+ Constructs the distribution.  
   
 ```  
 explicit exponential_distribution(result_type lambda = 1.0);
 explicit exponential_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *lambda*  
- `lambda` 분포 매개 변수입니다.  
+ The `lambda` distribution parameter.  
   
 *parm*  
- 분포를 생성하는 데 사용되는 매개 변수 패키지입니다.  
+ The parameter package used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0.0 < lambda`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < lambda`  
   
-첫 번째 생성자는 저장된 `lambda` 값이 *lambda* 값을 보유하는 개체를 생성합니다.  
+The first constructor constructs an object whose stored `lambda` value holds the value *lambda*.  
   
-두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  exponential_distribution::param_type  
-분포의 매개 변수를 저장합니다.  
+Stores the parameters of the distribution.  
   
 ```
 struct param_type {  
@@ -225,19 +231,19 @@ struct param_type {
    };
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *lambda*  
-`lambda` 분포 매개 변수입니다.  
+The `lambda` distribution parameter.  
   
 *right*  
-이 매개 변수와 비교할 `param_type` 개체입니다.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0.0 < lambda`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < lambda`  
   
-이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)
 
 

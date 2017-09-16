@@ -1,5 +1,5 @@
 ---
-title: "CBrush 클래스 | Microsoft 문서"
+title: CBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,8 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- brushes, CBrush class
-- CBrush class
+- CBrush [MFC], CBrush
+- CBrush [MFC], CreateBrushIndirect
+- CBrush [MFC], CreateDIBPatternBrush
+- CBrush [MFC], CreateHatchBrush
+- CBrush [MFC], CreatePatternBrush
+- CBrush [MFC], CreateSolidBrush
+- CBrush [MFC], CreateSysColorBrush
+- CBrush [MFC], FromHandle
+- CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 caps.latest.revision: 21
 author: mikeblome
@@ -44,68 +51,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: efcbe2757de3a7e4621e2b20c88726ead111cf8c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23a816363af6f77ff498890a4e4cca8ecc17d53a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbrush-class"></a>CBrush 클래스
-Windows GDI(그래픽 장치 인터페이스) 브러시를 캡슐화합니다.  
+# <a name="cbrush-class"></a>CBrush Class
+Encapsulates a Windows graphics device interface (GDI) brush.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBrush : public CGdiObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::CBrush](#cbrush)|`CBrush` 개체를 생성합니다.|  
+|[CBrush::CBrush](#cbrush)|Constructs a `CBrush` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|스타일, 색 및 패턴에 지정 된 브러시를 초기화 한 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) 구조입니다.|  
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|장치 독립적 비트맵 (DIB)로 지정 된 패턴으로는 브러시를 초기화 합니다.|  
-|[CBrush::CreateHatchBrush](#createhatchbrush)|지정 된 교차 무늬 패턴 및 색 브러시를 초기화합니다.|  
-|[CBrush::CreatePatternBrush](#createpatternbrush)|비트맵으로 지정 된 패턴으로는 브러시를 초기화 합니다.|  
-|[CBrush::CreateSolidBrush](#createsolidbrush)|지정 된 단색으로 브러시를 초기화합니다.|  
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|기본 시스템 색상 브러시를 만듭니다.|  
-|[CBrush::FromHandle](#fromhandle)|에 대 한 포인터를 반환 합니다.는 `CBrush` Windows에 대 한 핸들을 지정 하는 경우 개체 `HBRUSH` 개체입니다.|  
-|[CBrush::GetLogBrush](#getlogbrush)|가져옵니다는 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) 구조입니다.|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|Initializes a brush with the style, color, and pattern specified in a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.|  
+|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Initializes a brush with a pattern specified by a device-independent bitmap (DIB).|  
+|[CBrush::CreateHatchBrush](#createhatchbrush)|Initializes a brush with the specified hatched pattern and color.|  
+|[CBrush::CreatePatternBrush](#createpatternbrush)|Initializes a brush with a pattern specified by a bitmap.|  
+|[CBrush::CreateSolidBrush](#createsolidbrush)|Initializes a brush with the specified solid color.|  
+|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Creates a brush that is the default system color.|  
+|[CBrush::FromHandle](#fromhandle)|Returns a pointer to a `CBrush` object when given a handle to a Windows `HBRUSH` object.|  
+|[CBrush::GetLogBrush](#getlogbrush)|Gets a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[HBRUSH CBrush::operator](#operator_hbrush)|에 연결 된 창 핸들을 반환 된 `CBrush` 개체입니다.|  
+|[CBrush::operator HBRUSH](#operator_hbrush)|Returns the Windows handle attached to the `CBrush` object.|  
   
-## <a name="remarks"></a>주의  
- 사용 하는 `CBrush` 개체를 생성 한 `CBrush` 개체를 하나 전달 `CDC` 브러시를 필요로 하는 멤버 함수입니다.  
+## <a name="remarks"></a>Remarks  
+ To use a `CBrush` object, construct a `CBrush` object and pass it to any `CDC` member function that requires a brush.  
   
- 무늬, 또는 무늬 브러시 실선, 가능 합니다.  
+ Brushes can be solid, hatched, or patterned.  
   
- 대 한 자세한 내용은 `CBrush`, 참조 [그래픽 개체](../../mfc/graphic-objects.md)합니다.  
+ For more information on `CBrush`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CBrush`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
- `CBrush` 개체를 생성합니다.  
+##  <a name="cbrush"></a>  CBrush::CBrush  
+ Constructs a `CBrush` object.  
   
 ```  
 CBrush(); 
@@ -114,66 +121,66 @@ CBrush(int nIndex, COLORREF crColor);
 explicit CBrush(CBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- RGB 색으로 브러시의 전경색을 지정합니다. 브러시 무늬는 경우이 매개 변수는 빗살 무늬의 색을 지정 합니다.  
+ Specifies the foreground color of the brush as an RGB color. If the brush is hatched, this parameter specifies the color of the hatching.  
   
  `nIndex`  
- 브러시의 해치 스타일을 지정합니다. 다음 값 중 하나를 수 있습니다.  
+ Specifies the hatch style of the brush. It can be any one of the following values:  
   
-- `HS_BDIAGONAL`45도 회전 하향 해치 (왼쪽에서 오른쪽)  
+- `HS_BDIAGONAL` Downward hatch (left to right) at 45 degrees  
   
-- `HS_CROSS`가로 및 세로 격자  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`45도 교차 무늬  
+- `HS_DIAGCROSS` Crosshatch at 45 degrees  
   
-- `HS_FDIAGONAL`45도 회전 상향 해치 (왼쪽에서 오른쪽)  
+- `HS_FDIAGONAL` Upward hatch (left to right) at 45 degrees  
   
-- `HS_HORIZONTAL`가로 빗살 무늬  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`세로 빗살 무늬  
+- `HS_VERTICAL` Vertical hatch  
   
  `pBitmap`  
- 가리키는 `CBitmap` 브러시를 칠하는 있는 비트맵을 지정 하는 개체입니다.  
+ Points to a `CBitmap` object that specifies a bitmap with which the brush paints.  
   
-### <a name="remarks"></a>주의  
- `CBrush`가&4; 개의 오버 로드 생성자입니다. 인수가 없는 생성자가 초기화 되지 않은 생성 `CBrush` 개체를 사용 하려면 먼저 초기화 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ `CBrush` has four overloaded constructors.The constructor with no arguments constructs an uninitialized `CBrush` object that must be initialized before it can be used.  
   
- 인수가 없는 생성자를 사용 하는 경우 결과 초기화 해야 `CBrush` 개체 [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), 또는 [CreateDIBPatternBrush](#createdibpatternbrush)합니다. 인수를 사용 하는 생성자 중 하나를 사용 하는 경우 다음 더 이상 초기화가 필요 합니다. 인수가 있는 생성자는 인수가 없는 생성자는 항상 성공 하는 동안 오류가 발생 하는 경우 예외를 throw 수 있습니다.  
+ If you use the constructor with no arguments, you must initialize the resulting `CBrush` object with [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), or [CreateDIBPatternBrush](#createdibpatternbrush). If you use one of the constructors that takes arguments, then no further initialization is necessary. The constructors with arguments can throw an exception if errors are encountered, while the constructor with no arguments will always succeed.  
   
- 단일 생성자 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 매개 변수는 지정 된 색으로 단색 브러시를 생성 합니다. 색을 RGB 값을 지정 하 고으로 생성할 수 있습니다는 `RGB` WINDOWS에는 매크로입니다.&8;.  
+ The constructor with a single [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter constructs a solid brush with the specified color. The color specifies an RGB value and can be constructed with the `RGB` macro in WINDOWS.H.  
   
- 두 개의 매개 변수를 사용 하 여 생성자 빗살 무늬 브러시를 생성합니다. `nIndex` 빗살 무늬로의 인덱스를 지정 하는 매개 변수입니다. `crColor` 매개 변수는 색을 지정 합니다.  
+ The constructor with two parameters constructs a hatch brush. The `nIndex` parameter specifies the index of a hatched pattern. The `crColor` parameter specifies the color.  
   
- 포함 된 생성자는 `CBitmap` 매개 변수는 무늬 브러시를 생성 합니다. 매개 변수는 비트맵을 식별합니다. 비트맵을 사용 하 여 만들어진 것으로 가정 [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), 또는 [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)합니다. 채우기 패턴에 사용할 비트맵에 대 한 최소 크기는 8 x 8 픽셀입니다.  
+ The constructor with a `CBitmap` parameter constructs a patterned brush. The parameter identifies a bitmap. The bitmap is assumed to have been created by using [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), or [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). The minimum size for a bitmap to be used in a fill pattern is 8 pixels by 8 pixels.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&21;](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
- 스타일, 색 및 패턴에 지정 된 브러시를 초기화 한 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) 구조입니다.  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
+ Initializes a brush with a style, color, and pattern specified in a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *lpLogBrush*  
- 가리키는 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) 브러시에 대 한 정보가 포함 된 구조체입니다.  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure that contains information about the brush.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 모든 장치 컨텍스트에 대 한 현재 브러시로 선택할 이후에 브러시를 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- (평면 1, 픽셀당 1 비트)의 흑백 비트맵을 사용 하 여 만든 브러시는 현재 텍스트 색과 배경색을 사용 하 여 그려집니다. 0으로 설정 하는 비트를 나타내는 픽셀 현재 텍스트 색으로 그려집니다. 1로 설정 하는 비트를 나타내는 픽셀을 현재 배경색으로 그려집니다.  
+ A brush created using a monochrome (1 plane, 1 bit per pixel) bitmap is drawn using the current text and background colors. Pixels represented by a bit set to 0 will be drawn with the current text color. Pixels represented by a bit set to 1 will be drawn with the current background color.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&22;](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
- 장치 독립적 비트맵 (DIB)로 지정 된 패턴으로는 브러시를 초기화 합니다.  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
+ Initializes a brush with the pattern specified by a device-independent bitmap (DIB).  
   
 ```  
 BOOL CreateDIBPatternBrush(
@@ -186,49 +193,49 @@ BOOL CreateDIBPatternBrush(
     UINT nUsage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *hPackedDIB*  
- 압축 된 장치 독립적 비트맵 DIB ()를 포함 하는 전역 메모리 개체를 식별 합니다.  
+ Identifies a global-memory object containing a packed device-independent bitmap (DIB).  
   
  *nUsage*  
- 지정 여부는 **bmiColors** 의 필드는 [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) 현재 실현된 논리 색상표에 명시적 RGB 값 또는 인덱스를 포함 하는 데이터 구조 ("압축 DIB"의 일부). 매개 변수는 다음 값 중 하나 여야 합니다.  
+ Specifies whether the **bmiColors[]** fields of the [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) data structure (a part of the "packed DIB") contain explicit RGB values or indices into the currently realized logical palette. The parameter must be one of the following values:  
   
-- **DIB_PAL_COLORS** 색상표 16 비트 인덱스의 배열로 구성 됩니다.  
+- **DIB_PAL_COLORS** The color table consists of an array of 16-bit indexes.  
   
-- **DIB_RGB_COLORS** 색상표 리터럴 RGB 값을 포함 합니다.  
+- **DIB_RGB_COLORS** The color table contains literal RGB values.  
   
  *lpPackedDIB*  
- 구성 된 압축된 DIB 가리키는 `BITMAPINFO` 구조 바로 뒤에 비트맵의 픽셀을 정의 하는 바이트 배열입니다.  
+ Points to a packed DIB consisting of a `BITMAPINFO` structure immediately followed by an array of bytes defining the pixels of the bitmap.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 브러시는 래스터 작업을 지 원하는 모든 장치 컨텍스트에 대 한 이후에 선택할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected for any device context that supports raster operations.  
   
- 두 버전에는 DIB를 처리 하는 방식과 다릅니다.  
+ The two versions differ in the way you handle the DIB:  
   
--   첫 번째 버전에는 DIB에 핸들을 얻기 위해 호출 Windows **GlobalAlloc** 함수를 전역 메모리 블록을 할당 하 고 다음 메모리에 압축 된 DIB을 채웁니다.  
+-   In the first version, to obtain a handle to the DIB you call the Windows **GlobalAlloc** function to allocate a block of global memory and then fill the memory with the packed DIB.  
   
--   두 번째 버전에서는 필요 없는 호출 **GlobalAlloc** 압축된 DIB에 메모리를 할당 합니다.  
+-   In the second version, it is not necessary to call **GlobalAlloc** to allocate memory for the packed DIB.  
   
- 압축 된 DIB 이루어져는 `BITMAPINFO` 바로 뒤에 비트맵의 픽셀을 정의 하는 바이트 배열 데이터 구조입니다. 채우기 패턴으로 사용 하는 비트맵 8 x 8 픽셀 이어야 합니다. 비트맵 크기가 큰 경우, Windows는 처음 8 개 행 및 비트맵의 왼쪽 위 모퉁이 있는 픽셀의 8 개의 열에 해당 하는 비트를 사용 하 여 채우기 패턴을 만듭니다.  
+ A packed DIB consists of a `BITMAPINFO` data structure immediately followed by the array of bytes that defines the pixels of the bitmap. Bitmaps used as fill patterns should be 8 pixels by 8 pixels. If the bitmap is larger, Windows creates a fill pattern using only the bits corresponding to the first 8 rows and 8 columns of pixels in the upper-left corner of the bitmap.  
   
- 흑백 장치 컨텍스트에서 두 가지 색 DIB 패턴 브러시를 선택 하는 응용 프로그램, Windows는 DIB에 지정 된 색 무시 하 고 대신 장치 컨텍스트의 현재 텍스트와 배경 색을 사용 하는 패턴 브러시를 표시 합니다. 픽셀 DIB (오프셋에서 DIB 색상표에서)의 첫 번째 색에 매핑된 텍스트 색을 사용 하 여 표시 됩니다. 오프셋 1 색상표) (에서 두 번째 색에 매핑된 픽셀 배경색을 사용 하 여 표시 됩니다.  
+ When an application selects a two-color DIB pattern brush into a monochrome device context, Windows ignores the colors specified in the DIB and instead displays the pattern brush using the current text and background colors of the device context. Pixels mapped to the first color (at offset 0 in the DIB color table) of the DIB are displayed using the text color. Pixels mapped to the second color (at offset 1 in the color table) are displayed using the background color.  
   
- 다음 Windows 기능 사용에 대 한 정보를 참조 하십시오.는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]:  
+ For information about using the following Windows functions, see the Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (이 함수는 3.0 이전 버전의 Windows 용으로 작성 된 응용 프로그램 호환성을 위해서만 제공 됩니다; 사용 된 **CreateDIBPatternBrushPt** 함수입니다.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (This function is provided only for compatibility with applications written for versions of Windows earlier than 3.0; use the **CreateDIBPatternBrushPt** function.)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (Win32 기반 응용 프로그램에 대 한이 기능을 사용할 수 합니다.)  
+- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (This function should be used for Win32-based applications.)  
   
 - [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView&23;](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
- 지정 된 교차 무늬 패턴 및 색 브러시를 초기화합니다.  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
+ Initializes a brush with the specified hatched pattern and color.  
   
 ```  
 BOOL CreateHatchBrush(
@@ -236,176 +243,176 @@ BOOL CreateHatchBrush(
     COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 브러시의 해치 스타일을 지정합니다. 다음 값 중 하나를 수 있습니다.  
+ Specifies the hatch style of the brush. It can be any one of the following values:  
   
-- `HS_BDIAGONAL`45도 회전 하향 해치 (왼쪽에서 오른쪽)  
+- `HS_BDIAGONAL` Downward hatch (left to right) at 45 degrees  
   
-- `HS_CROSS`가로 및 세로 격자  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`45도 교차 무늬  
+- `HS_DIAGCROSS` Crosshatch at 45 degrees  
   
-- `HS_FDIAGONAL`45도 회전 상향 해치 (왼쪽에서 오른쪽)  
+- `HS_FDIAGONAL` Upward hatch (left to right) at 45 degrees  
   
-- `HS_HORIZONTAL`가로 빗살 무늬  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`세로 빗살 무늬  
+- `HS_VERTICAL` Vertical hatch  
   
  `crColor`  
- RGB 색 (의 해치 색)으로 브러시의 전경색을 지정합니다. 참조 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 자세한 내용은 합니다.  
+ Specifies the foreground color of the brush as an RGB color (the color of the hatches). See [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) in the Windows SDK for more information.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 모든 장치 컨텍스트에 대 한 현재 브러시로 선택할 이후에 브러시를 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&24;](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
- 비트맵으로 지정 된 패턴으로는 브러시를 초기화 합니다.  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
+ Initializes a brush with a pattern specified by a bitmap.  
   
 ```  
 BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pBitmap`  
- 비트맵을 식별합니다.  
+ Identifies a bitmap.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 브러시는 래스터 작업을 지 원하는 모든 장치 컨텍스트에 대 한 이후에 선택할 수 있습니다. 로 식별 되는 비트맵 `pBitmap` 일반적으로 사용 하 여 초기화 되는 [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), 또는 [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected for any device context that supports raster operations. The bitmap identified by `pBitmap` is typically initialized by using the [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), or [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) function.  
   
- 채우기 패턴으로 사용 하는 비트맵 8 x 8 픽셀 이어야 합니다. 큰 비트맵 경우 해당 하는 처음 8 개 행과 열 비트맵의 왼쪽 위 모퉁이 있는 픽셀의 비트만 사용 됩니다.  
+ Bitmaps used as fill patterns should be 8 pixels by 8 pixels. If the bitmap is larger, Windows will only use the bits corresponding to the first 8 rows and columns of pixels in the upper-left corner of the bitmap.  
   
- 관련된 비트맵 영향을 주지 않고 패턴 브러시를 삭제할 수 있습니다. 즉, 비트맵 임의 개수의 패턴 브러시를 만드는 데 사용할 수 있습니다.  
+ A pattern brush can be deleted without affecting the associated bitmap. This means the bitmap can be used to create any number of pattern brushes.  
   
- 흑백 비트맵 (픽셀당 1 비트, 평면 1 색)을 사용 하 여 만든 브러시는 현재 텍스트 색과 배경색을 사용 하 여 그려집니다. 0으로 설정 하는 비트를 나타내는 픽셀은 현재 텍스트 색으로 그려집니다. 1로 설정 하는 비트를 나타내는 픽셀 현재 배경색으로 그려집니다.  
+ A brush created using a monochrome bitmap (1 color plane, 1 bit per pixel) is drawn using the current text and background colors. Pixels represented by a bit set to 0 are drawn with the current text color. Pixels represented by a bit set to 1 are drawn with the current background color.  
   
- 사용 하 여에 대 한 내용은 [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508)는 Windows 함수 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For information about using [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), a Windows function, see the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&25;](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
- 지정 된 단색으로 브러시를 초기화합니다.  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
+ Initializes a brush with a specified solid color.  
   
 ```  
 BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 브러시의 색을 지정 하는 구조입니다. 색을 RGB 값을 지정 하 고으로 생성할 수 있습니다는 `RGB` WINDOWS에는 매크로입니다.&8;.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure that specifies the color of the brush. The color specifies an RGB value and can be constructed with the `RGB` macro in WINDOWS.H.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 모든 장치 컨텍스트에 대 한 현재 브러시로 선택할 이후에 브러시를 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- 만든 브러시를 사용 하 여 응용 프로그램이 완료할 때 `CreateSolidBrush`, 장치 컨텍스트 외부로 브러시를 선택 해야 합니다.  
+ When an application has finished using the brush created by `CreateSolidBrush`, it should select the brush out of the device context.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CBrush::CBrush](#cbrush)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CBrush::CBrush](#cbrush).  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
- 브러시 색을 초기화합니다.  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
+ Initializes a brush color.  
   
 ```  
 BOOL CreateSysColorBrush(int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 색 인덱스를 지정합니다. 이 값은 21 창 요소 중 하나를 그리는 데 사용 되는 색에 해당 합니다. 참조 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 값의 목록에 대 한 합니다.  
+ Specifies a color index. This value corresponds to the color used to paint one of the 21 window elements. See [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) in the Windows SDK for a list of values.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 모든 장치 컨텍스트에 대 한 현재 브러시로 선택할 이후에 브러시를 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- 만든 브러시를 사용 하 여 응용 프로그램이 완료할 때 `CreateSysColorBrush`, 장치 컨텍스트 외부로 브러시를 선택 해야 합니다.  
+ When an application has finished using the brush created by `CreateSysColorBrush`, it should select the brush out of the device context.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&26;](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
- 에 대 한 포인터를 반환 합니다.는 `CBrush` Windows에 대 한 핸들을 지정 하는 경우 개체 [HBRUSH](#operator_hbrush) 개체입니다.  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
+ Returns a pointer to a `CBrush` object when given a handle to a Windows [HBRUSH](#operator_hbrush) object.  
   
 ```  
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hBrush`  
- `HANDLE`에 Windows GDI 브러시입니다.  
+ `HANDLE` to a Windows GDI brush.  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CBrush` 성공 하 고 그렇지 않으면 개체 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CBrush` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>주의  
- 하는 경우는 `CBrush` 임시 핸들에 개체가 이미 연결 되지 않은 `CBrush` 개체를 만들어 연결 합니다. 이 임시 `CBrush` 개체는 응용 프로그램의 경우 이벤트 루프에서 유휴 시간에는 다음 때만 유효 합니다. 이 이번에는 임시 그래픽 개체를 모두 삭제 됩니다. 즉, 임시 개체는 하나의 창 메시지를 처리 하는 동안에 유효 합니다.  
+### <a name="remarks"></a>Remarks  
+ If a `CBrush` object is not already attached to the handle, a temporary `CBrush` object is created and attached. This temporary `CBrush` object is valid only until the next time the application has idle time in its event loop. At this time, all temporary graphic objects are deleted. In other words, the temporary object is valid only during the processing of one window message.  
   
- 그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CBrush::CBrush](#cbrush)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CBrush::CBrush](#cbrush).  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
- 검색 하려면이 멤버 함수를 호출 하는 `LOGBRUSH` 구조입니다.  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
+ Call this member function to retrieve the `LOGBRUSH` structure.  
   
 ```  
 int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pLogBrush`  
- 가리키는 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) 브러시에 대 한 정보가 포함 된 구조체입니다.  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure that contains information about the brush.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 및 `pLogBrush` 유효한 포인터가 반환 값은 버퍼에 저장 된 바이트 수입니다.  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, and `pLogBrush` is a valid pointer, the return value is the number of bytes stored into the buffer.  
   
- 함수가 성공 하면 및 `pLogBrush` 는 **NULL**, 반환 값은 함수에 정보를 저장 하는 데 필요한 바이트 수가 버퍼에 저장 됩니다.  
+ If the function succeeds, and `pLogBrush` is **NULL**, the return value is the number of bytes required to hold the information the function would store into the buffer.  
   
- 함수가 실패 한 경우 반환 값은 0입니다.  
+ If the function fails, the return value is 0.  
   
-### <a name="remarks"></a>주의  
- `LOGBRUSH` 구조 스타일, 색 및 브러시의 패턴을 정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The `LOGBRUSH` structure defines the style, color, and pattern of a brush.  
   
- 예를 들어 호출 `GetLogBrush` 특정 색 또는 패턴 비트맵의 일치 하도록 합니다.  
+ For example, call `GetLogBrush` to match the particular color or pattern of a bitmap.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&27;](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>HBRUSH CBrush::operator  
- 이 연산자를 사용 하 여의 연결 된 Windows GDI 핸들을 가져올 수는 `CBrush` 개체입니다.  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
+ Use this operator to get the attached Windows GDI handle of the `CBrush` object.  
   
 ```  
 operator HBRUSH() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 Windows GDI 개체에 대 한 핸들 표현는 `CBrush` 개체; 그렇지 않으면 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CBrush` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>주의  
- 이 연산자는 직접 사용을 지원 하려면 캐스팅 연산자는 `HBRUSH` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HBRUSH` object.  
   
- 그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&28;](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 PROPDLG](../../visual-cpp-samples.md)   
- [CGdiObject 클래스](../../mfc/reference/cgdiobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CBitmap 클래스](../../mfc/reference/cbitmap-class.md)   
- [CDC 클래스](../../mfc/reference/cdc-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample PROPDLG](../../visual-cpp-samples.md)   
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CBitmap Class](../../mfc/reference/cbitmap-class.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)
 

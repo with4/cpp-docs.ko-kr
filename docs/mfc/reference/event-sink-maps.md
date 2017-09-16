@@ -1,5 +1,5 @@
 ---
-title: "이벤트 싱크 맵 | Microsoft 문서"
+title: Event Sink Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- event sink maps
+- event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
 caps.latest.revision: 14
 author: mikeblome
@@ -33,228 +33,228 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 33bf66d18b499787a34b2da501bb3e8ead255459
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 97e0a23daee3fc9e0312ef603f80c064fa07edf7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="event-sink-maps"></a>이벤트 싱크 맵
-포함 된 OLE 컨트롤 이벤트를 발생 시키는 하는 경우 컨트롤 컨테이너 라고는 이벤트 싱크 맵"," MFC에서 제공 하는 메커니즘을 사용 하 여 이벤트를 수신 합니다. 이 이벤트 싱크 맵과 해당 이벤트의 매개 변수 뿐만 아니라 각 특정 이벤트에 대 한 처리기 함수를 지정합니다. 이벤트 싱크 맵에 대 한 자세한 내용은 문서를 참조 하십시오. [ActiveX 컨트롤 컨테이너](../../mfc/activex-control-containers.md)합니다.  
+# <a name="event-sink-maps"></a>Event Sink Maps
+When an embedded OLE control fires an event, the control's container receives the event using a mechanism, called an "event sink map," supplied by MFC. This event sink map designates handler functions for each specific event, as well as parameters of those events. For more information on event sink maps, see the article [ActiveX Control Containers](../../mfc/activex-control-containers.md).  
   
-### <a name="event-sink-maps"></a>이벤트 싱크 맵  
+### <a name="event-sink-maps"></a>Event Sink Maps  
   
 |||  
 |-|-|  
-|[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|이벤트 싱크 맵과의 정의 시작합니다.|  
-|[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|이벤트 싱크 맵과 선언합니다.|  
-|[END_EVENTSINK_MAP](#end_eventsink_map)|이벤트 싱크 맵 정의 끝냅니다.|  
-|[ON_EVENT](#on_event)|특정 이벤트에 대 한 이벤트 처리기를 정의합니다.|  
-|[ON_EVENT_RANGE](#on_event_range)|OLE 컨트롤의 집합에서 발생 하는 특정 이벤트에 대 한 이벤트 처리기를 정의 합니다.|  
-|[ON_EVENT_REFLECT](#on_event_reflect)|컨트롤 컨테이너에 의해 처리 전에 컨트롤에서 발생 하는 이벤트를 받습니다.|  
-|[ON_PROPNOTIFY](#on_propnotify)|OLE 컨트롤에서 속성 알림 처리에 대 한 처리기를 정의 합니다.|  
-|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|OLE 컨트롤의 집합에서 속성 알림 처리에 대 한 처리기를 정의 합니다.|  
-|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|컨트롤 컨테이너에 의해 처리 되기 전에 컨트롤에 의해 전송 된 속성 알림을 수신 합니다.|  
+|[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|Starts the definition of an event sink map.|  
+|[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|Declares an event sink map.|  
+|[END_EVENTSINK_MAP](#end_eventsink_map)|Ends the definition of an event sink map.|  
+|[ON_EVENT](#on_event)|Defines an event handler for a specific event.|  
+|[ON_EVENT_RANGE](#on_event_range)|Defines an event handler for a specific event fired from a set of OLE controls.|  
+|[ON_EVENT_REFLECT](#on_event_reflect)|Receives events fired by the control before they are handled by the control's container.|  
+|[ON_PROPNOTIFY](#on_propnotify)|Defines a handler for handling property notifications from an OLE control.|  
+|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Defines a handler for handling property notifications from a set of OLE controls.|  
+|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Receives property notifications sent by the control before they are handled by the control's container.|  
   
-##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
- 이벤트 싱크 맵의 정의 시작합니다.  
+##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP  
+ Begins the definition of your event sink map.  
   
 ```   
 BEGIN_EVENTSINK_MAP(theClass, baseClass)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 이벤트 싱크를 매핑할 컨트롤 클래스의 이름을 지정 합니다.  
+ Specifies the name of the control class whose event sink map this is.  
   
  `baseClass`  
- `theClass`의 기본 클래스 이름을 지정합니다.  
+ Specifies the name of the base class of `theClass`.  
   
-### <a name="remarks"></a>주의  
- 클래스 멤버 함수를 정의 하는 구현 (.cpp) 파일에서 이벤트 싱크 맵을 시작한는 `BEGIN_EVENTSINK_MAP` 매크로, 그런 다음 알림, 각 이벤트에 대해 매크로 항목을 추가 하 고 완료 된 이벤트 싱크 맵과 `END_EVENTSINK_MAP` 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the event sink map with the `BEGIN_EVENTSINK_MAP` macro, then add macro entries for each event to be notified of, and complete the event sink map with the `END_EVENTSINK_MAP` macro.  
   
- 이벤트 싱크 맵 및 OLE 컨트롤 컨테이너에 대 한 자세한 내용은 문서를 참조 하십시오. [ActiveX 컨트롤 컨테이너](../../mfc/activex-control-containers.md)합니다.  
+ For more information on event sink maps and OLE control containers, see the article [ActiveX Control Containers](../../mfc/activex-control-containers.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
- OLE 컨테이너는 컨테이너의 통지는 이벤트를 지정 하는 이벤트 싱크 맵을 제공할 수 있습니다.  
+##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
+ An OLE container can provide an event sink map to specify the events your container will be notified of.  
   
 ```   
 DECLARE_EVENTSINK_MAP()   
 ```  
   
-### <a name="remarks"></a>주의  
- 사용 하는 `DECLARE_EVENTSINK_MAP` 클래스 선언 후에는 매크로입니다. 그런 다음는 합니다. 사용 하 여, 클래스에 대 한 멤버를 정의 하는 CPP 파일 함수는 `BEGIN_EVENTSINK_MAP` 매크로, 각 알림, 이벤트에 대해 매크로 항목 및 `END_EVENTSINK_MAP` 이벤트 싱크 목록의 끝을 선언 하는 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_EVENTSINK_MAP` macro at the end of your class declaration. Then, in the .CPP file that defines the member functions for the class, use the `BEGIN_EVENTSINK_MAP` macro, macro entries for each of the events to be notified of, and the `END_EVENTSINK_MAP` macro to declare the end of the event sink list.  
   
- 이벤트 싱크 맵에 대 한 자세한 내용은 문서를 참조 하십시오. [ActiveX 컨트롤 컨테이너](../../mfc/activex-control-containers.md)합니다.  
+ For more information on event sink maps, see the article [ActiveX Control Containers](../../mfc/activex-control-containers.md).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
- 이벤트 싱크 맵의 정의 종료합니다.  
+##  <a name="end_eventsink_map"></a>  END_EVENTSINK_MAP  
+ Ends the definition of your event sink map.  
   
 ```   
 END_EVENTSINK_MAP()   
 ```  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_event"></a>ON_EVENT  
- 사용 된 `ON_EVENT` 매크로 이벤트에 대 한 이벤트 처리기 함수를 정의 하는 OLE 컨트롤에 의해 발생 합니다.  
+##  <a name="on_event"></a>  ON_EVENT  
+ Use the `ON_EVENT` macro to define an event handler function for an event fired by an OLE control.  
   
 ```   
 ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams) 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 이벤트 싱크 맵 속해 있는 클래스입니다.  
+ The class to which this event sink map belongs.  
   
  `id`  
- OLE 컨트롤의 컨트롤 ID입니다.  
+ The control ID of the OLE control.  
   
  `dispid`  
- 컨트롤에 의해 발생 한 이벤트의 발송 ID입니다.  
+ The dispatch ID of the event fired by the control.  
   
  `pfnHandler`  
- 이벤트를 처리 하는 멤버 함수에 대 한 포인터입니다. 이 함수에 있어야는 **BOOL** 반환 형식 및 이벤트의 매개 변수와 일치 하는 매개 변수 형식 (참조 `vtsParams`). 함수를 반환 해야 **TRUE** 이벤트 처리 하 고, 그렇지 않으면 했는지를 나타내는 **FALSE**합니다.  
+ Pointer to a member function that handles the event. This function should have a **BOOL** return type, and parameter types that match the event's parameters (see `vtsParams`). The function should return **TRUE** to indicate the event was handled; otherwise **FALSE**.  
   
  `vtsParams`  
- 시퀀스를 **VTS_** 이벤트에 대 한 매개 변수 형식을 지정 하는 상수입니다. 이 같은 디스패치 맵 항목에 사용 되는 동일한 상수 `DISP_FUNCTION`합니다.  
+ A sequence of **VTS_** constants that specifies the types of the parameters for the event. These are the same constants that are used in dispatch map entries such as `DISP_FUNCTION`.  
   
-### <a name="remarks"></a>주의  
- `vtsParams` 인수는 공백으로 구분 된 목록에서 값의 **VTS_** 상수입니다. (쉼표) 공백으로 구분 하 여 이러한 값 중 하나 이상이 있는 함수의 매개 변수 목록을 지정 합니다. 예:  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation #&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 이어서 정수 (short)를 포함 하는 목록을 지정는 **BOOL**합니다.  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- 목록에 대해서는 **VTS_** 상수 참조 [EVENT_CUSTOM](event-maps.md#event_custom)합니다.  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_event_range"></a>ON_EVENT_RANGE  
- 사용 된 `ON_EVENT_RANGE` 이벤트에 대 한 이벤트 처리기 함수를 정의 하는 매크로 연속 Id 범위 내에서 컨트롤 ID를 가진 모든 OLE 컨트롤에 의해 발생 합니다.  
+##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
+ Use the `ON_EVENT_RANGE` macro to define an event handler function for an event fired by any OLE control having a control ID within a contiguous range of IDs.  
   
 ```   
 ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 이벤트 싱크 맵 속해 있는 클래스입니다.  
+ The class to which this event sink map belongs.  
   
  `idFirst`  
- 범위에서 첫 번째 OLE 컨트롤의 컨트롤 ID입니다.  
+ The control ID of the first OLE control in the range.  
   
  `idLast`  
- 범위에서 마지막 OLE 컨트롤의 컨트롤 ID입니다.  
+ The control ID of the last OLE control in the range.  
   
  `dispid`  
- 컨트롤에 의해 발생 한 이벤트의 발송 ID입니다.  
+ The dispatch ID of the event fired by the control.  
   
  `pfnHandler`  
- 이벤트를 처리 하는 멤버 함수에 대 한 포인터입니다. 이 함수에 있어야는 **BOOL** 반환 형식, 형식의 첫 번째 매개 변수 **UINT** (컨트롤 ID의 경우)에 대 한 및 이벤트의 매개 변수와 일치 하는 추가 매개 변수 형식 (참조 `vtsParams`). 함수를 반환 해야 **TRUE** 이벤트 처리 하 고, 그렇지 않으면 했는지를 나타내는 **FALSE**합니다.  
+ Pointer to a member function that handles the event. This function should have a **BOOL** return type, a first parameter of type **UINT** (for the control ID), and additional parameter types that match the event's parameters (see `vtsParams`). The function should return **TRUE** to indicate the event was handled; otherwise **FALSE**.  
   
  `vtsParams`  
- 시퀀스를 **VTS_** 이벤트에 대 한 매개 변수 형식을 지정 하는 상수입니다. 첫 번째 상수 형식 이어야 **VTS_I4**, 컨트롤 id 이 같은 디스패치 맵 항목에 사용 되는 동일한 상수 `DISP_FUNCTION`합니다.  
+ A sequence of **VTS_** constants that specifies the types of the parameters for the event. The first constant should be of type **VTS_I4**, for the control ID. These are the same constants that are used in dispatch map entries such as `DISP_FUNCTION`.  
   
-### <a name="remarks"></a>주의  
- `vtsParams` 인수는 공백으로 구분 된 목록에서 값의 **VTS_** 상수입니다. (쉼표) 공백으로 구분 하 여 이러한 값 중 하나 이상이 있는 함수의 매개 변수 목록을 지정 합니다. 예:  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation #&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 이어서 정수 (short)를 포함 하는 목록을 지정는 **BOOL**합니다.  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- 목록에 대해서는 **VTS_** 상수 참조 [EVENT_CUSTOM](event-maps.md#event_custom)합니다.  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 세 가지 컨트롤에 대 한 구현 MouseDown 이벤트에 대 한 이벤트 처리기를 ( `IDC_MYCTRL1` 통해 `IDC_MYCTRL3`). 이벤트 처리기 함수 `OnRangeMouseDown`, 대화 상자 클래스의 헤더 파일에서 선언 됩니다 ( `CMyDlg`)으로:  
+### <a name="example"></a>Example  
+ The following example demonstrates an event handler, for the MouseDown event, implemented for three controls ( `IDC_MYCTRL1` through `IDC_MYCTRL3`). The event handler function, `OnRangeMouseDown`, is declared in the header file of the dialog class ( `CMyDlg`) as:  
   
- [!code-cpp[NVC_MFCAutomation #&12;](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
+ [!code-cpp[NVC_MFCAutomation#12](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
   
- 아래 코드는 대화 상자 클래스의 구현 파일에서 정의 됩니다.  
+ The code below is defined in the implementation file of the dialog class.  
   
- [!code-cpp[NVC_MFCAutomation #&13;](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
- `ON_EVENT_REFLECT` 매크로 사용할 이벤트 싱크 맵 OLE 컨트롤의 래퍼 클래스의 경우 컨트롤은 컨트롤 컨테이너에 의해 처리 되기 전에 발생 하는 이벤트를 수신 합니다.  
+##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
+ The `ON_EVENT_REFLECT` macro, when used in the event sink map of an OLE control's wrapper class, receives events fired by the control before they are handled by the control's container.  
   
 ```   
 ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams) 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 이벤트 싱크 맵 속해 있는 클래스입니다.  
+ The class to which this event sink map belongs.  
   
  dispid  
- 컨트롤에 의해 발생 한 이벤트의 발송 ID입니다.  
+ The dispatch ID of the event fired by the control.  
   
  `pfnHandler`  
- 이벤트를 처리 하는 멤버 함수에 대 한 포인터입니다. 이 함수에 있어야는 **BOOL** 반환 형식 및 이벤트의 매개 변수와 일치 하는 매개 변수 형식 (참조 `vtsParams`). 함수를 반환 해야 **TRUE** 이벤트 처리 하 고, 그렇지 않으면 했는지를 나타내는 **FALSE**합니다.  
+ Pointer to a member function that handles the event. This function should have a **BOOL** return type and parameter types that match the event's parameters (see `vtsParams`). The function should return **TRUE** to indicate the event was handled; otherwise **FALSE**.  
   
  `vtsParams`  
- 시퀀스를 **VTS_** 이벤트에 대 한 매개 변수 형식을 지정 하는 상수입니다. 이 같은 디스패치 맵 항목에 사용 되는 동일한 상수 `DISP_FUNCTION`합니다.  
+ A sequence of **VTS_** constants that specifies the types of the parameters for the event. These are the same constants that are used in dispatch map entries such as `DISP_FUNCTION`.  
   
-### <a name="remarks"></a>주의  
- `vtsParams` 인수는 공백으로 구분 된 목록에서 값의 **VTS_** 상수입니다.  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants.  
   
- (쉼표) 공백으로 구분 하 여 이러한 값 중 하나 이상이 있는 함수의 매개 변수 목록을 지정 합니다. 예:  
+ One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation #&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 이어서 정수 (short)를 포함 하는 목록을 지정는 **BOOL**합니다.  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- 목록에 대해서는 **VTS_** 상수 참조 [EVENT_CUSTOM](event-maps.md#event_custom)합니다.  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
- 사용 된 `ON_PROPNOTIFY` OLE 컨트롤의 속성 알림을 처리 하기 위한 이벤트 싱크 맵 항목을 정의 하는 매크로입니다.  
+##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
+ Use the `ON_PROPNOTIFY` macro to define an event sink map entry for handling property notifications from an OLE control.  
   
 ```   
 ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)  
  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 이벤트 싱크 맵 속해 있는 클래스입니다.  
+ The class to which this event sink map belongs.  
   
  `id`  
- OLE 컨트롤의 컨트롤 ID입니다.  
+ The control ID of the OLE control.  
   
  `dispid`  
- 알림 영역에서 관련 된 속성의 디스패치 ID입니다.  
+ The dispatch ID of the property involved in the notification.  
   
  `pfnRequest`  
- 처리 하는 멤버 함수에 대 한 포인터는 **OnRequestEdit** 이 속성에 대 한 알림입니다. 이 함수에 있어야는 **BOOL** 반환 형식 및 **BOOL\* ** 매개 변수입니다. 이 함수 매개 변수를 설정 해야 **TRUE** 속성을 변경할 수 있도록 하 고 **FALSE** 허용 되지 않습니다. 함수를 반환 해야 **TRUE** 알림을 처리 하 고, 그렇지 않으면 했는지를 나타내는 **FALSE**합니다.  
+ Pointer to a member function that handles the **OnRequestEdit** notification for this property. This function should have a **BOOL** return type and a **BOOL\*** parameter. This function should set the parameter to **TRUE** to allow the property to change and **FALSE** to disallow. The function should return **TRUE** to indicate the notification was handled; otherwise **FALSE**.  
   
  `pfnChanged`  
- 처리 하는 멤버 함수에 대 한 포인터는 **OnChanged** 이 속성에 대 한 알림입니다. 함수가 있어야는 **BOOL** 반환 형식 및 **UINT** 매개 변수입니다. 함수를 반환 해야 **TRUE** 알림을 처리 하 고, 그렇지 않으면 나타내는 **FALSE**합니다.  
+ Pointer to a member function that handles the **OnChanged** notification for this property. The function should have a **BOOL** return type and a **UINT** parameter. The function should return **TRUE** to indicate that notification was handled; otherwise **FALSE**.  
   
-### <a name="remarks"></a>주의  
- `vtsParams` 인수는 공백으로 구분 된 목록에서 값의 **VTS_** 상수입니다. (쉼표) 공백으로 구분 하 여 이러한 값 중 하나 이상이 있는 함수의 매개 변수 목록을 지정 합니다. 예:  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation #&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 이어서 정수 (short)를 포함 하는 목록을 지정는 **BOOL**합니다.  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- 목록에 대해서는 **VTS_** 상수 참조 [EVENT_CUSTOM](event-maps.md#event_custom)합니다.  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
- 사용 된 `ON_PROPNOTIFY_RANGE` 연속 Id 범위 내에서 컨트롤 ID를 가진 모든 OLE 컨트롤의 속성 알림을 처리 하기 위한 이벤트 싱크 맵 항목을 정의 하는 매크로입니다.  
+##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
+ Use the `ON_PROPNOTIFY_RANGE` macro to define an event sink map entry for handling property notifications from any OLE control having a control ID within a contiguous range of IDs.  
   
 ```  
  
@@ -262,30 +262,30 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 이벤트 싱크 맵 속해 있는 클래스입니다.  
+ The class to which this event sink map belongs.  
   
  `idFirst`  
- 범위에서 첫 번째 OLE 컨트롤의 컨트롤 ID입니다.  
+ The control ID of the first OLE control in the range.  
   
  `idLast`  
- 범위에서 마지막 OLE 컨트롤의 컨트롤 ID입니다.  
+ The control ID of the last OLE control in the range.  
   
  `dispid`  
- 알림 영역에서 관련 된 속성의 디스패치 ID입니다.  
+ The dispatch ID of the property involved in the notification.  
   
  `pfnRequest`  
- 처리 하는 멤버 함수에 대 한 포인터는 **OnRequestEdit** 이 속성에 대 한 알림입니다. 이 함수에 있어야는 **BOOL** 반환 형식 및 **UINT** 및 **BOOL\* ** 매개 변수입니다. 함수 매개 변수를 설정 해야 **TRUE** 속성을 변경할 수 있도록 하 고 **FALSE** 허용 되지 않습니다. 함수를 반환 해야 **TRUE** 알림을 처리 하 고, 그렇지 않으면 나타내는 **FALSE**합니다.  
+ Pointer to a member function that handles the **OnRequestEdit** notification for this property. This function should have a **BOOL** return type and **UINT** and **BOOL\*** parameters. The function should set the parameter to **TRUE** to allow the property to change and **FALSE** to disallow. The function should return **TRUE** to indicate that notification was handled; otherwise **FALSE**.  
   
  `pfnChanged`  
- 처리 하는 멤버 함수에 대 한 포인터는 **OnChanged** 이 속성에 대 한 알림입니다. 함수가 있어야는 **BOOL** 반환 형식 및 **UINT** 매개 변수입니다. 함수를 반환 해야 **TRUE** 알림을 처리 하 고, 그렇지 않으면 나타내는 **FALSE**합니다.  
+ Pointer to a member function that handles the **OnChanged** notification for this property. The function should have a **BOOL** return type and a **UINT** parameter. The function should return **TRUE** to indicate that notification was handled; otherwise **FALSE**.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
- `ON_PROPNOTIFY_REFLECT` 매크로 사용할 이벤트 싱크 맵 OLE 컨트롤의 래퍼 클래스의 경우 컨트롤은 컨트롤 컨테이너에 의해 처리 되기 전에 보낸 속성 알림을 수신 합니다.  
+##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
+ The `ON_PROPNOTIFY_REFLECT` macro, when used in the event sink map of an OLE control's wrapper class, receives property notifications sent by the control before they are handled by the control's container.  
   
 ```  
  
@@ -293,22 +293,22 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 이 이벤트 싱크 맵 속해 있는 클래스입니다.  
+ The class to which this event sink map belongs.  
   
  `dispid`  
- 알림 영역에서 관련 된 속성의 디스패치 ID입니다.  
+ The dispatch ID of the property involved in the notification.  
   
  `pfnRequest`  
- 처리 하는 멤버 함수에 대 한 포인터는 **OnRequestEdit** 이 속성에 대 한 알림입니다. 이 함수에 있어야는 **BOOL** 반환 형식 및 **BOOL\* ** 매개 변수입니다. 이 함수 매개 변수를 설정 해야 **TRUE** 속성을 변경할 수 있도록 하 고 **FALSE** 허용 되지 않습니다. 함수를 반환 해야 **TRUE** 알림을 처리 하 고, 그렇지 않으면 했는지를 나타내는 **FALSE**합니다.  
+ Pointer to a member function that handles the **OnRequestEdit** notification for this property. This function should have a **BOOL** return type and a **BOOL\*** parameter. This function should set the parameter to **TRUE** to allow the property to change and **FALSE** to disallow. The function should return **TRUE** to indicate the notification was handled; otherwise **FALSE**.  
   
  `pfnChanged`  
- 처리 하는 멤버 함수에 대 한 포인터는 **OnChanged** 이 속성에 대 한 알림입니다. 함수가 있어야는 **BOOL** 반환 형식 및 매개 변수가 없습니다. 함수를 반환 해야 **TRUE** 알림을 처리 하 고, 그렇지 않으면 했는지를 나타내는 **FALSE**합니다.  
+ Pointer to a member function that handles the **OnChanged** notification for this property. The function should have a **BOOL** return type and no parameters. The function should return **TRUE** to indicate the notification was handled; otherwise **FALSE**.  
   
-### <a name="requirements"></a>요구 사항  
-  **헤더** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
     
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

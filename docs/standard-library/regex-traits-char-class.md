@@ -1,5 +1,5 @@
 ---
-title: "regex_traits&lt;char&gt; 클래스 | Microsoft Docs"
+title: regex_traits&lt;char&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,39 +33,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: ccff902e47483f7f5346637e66e66cb5036d6ffb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b21ac24f58f1f238041d2ac12ef267789feebb06
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="regextraitsltchargt-class"></a>regex_traits&lt;char&gt; 클래스
-char에 대한 regex_traits의 특수화입니다.  
+# <a name="regextraitsltchargt-class"></a>regex_traits&lt;char&gt; Class
+Specialization of regex_traits for char.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <>  
 class regex_traits<char>  
 ```  
   
-## <a name="remarks"></a>설명  
- 이 클래스는 `char` 형식의 요소에 대한 템플릿 클래스 [regex_traits](../standard-library/regex-traits-class.md)의 명시적 특수화입니다(이 형식의 개체를 조작하는 라이브러리 함수를 활용할 수 있도록 함).  
+## <a name="remarks"></a>Remarks  
+ The class is an explicit specialization of template class [regex_traits](../standard-library/regex-traits-class.md) for elements of type `char` (so that it can take advantage of library functions that manipulate objects of this type).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<regex>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants 클래스](../standard-library/regex-constants-class.md)  
-[regex_error 클래스](../standard-library/regex-error-class.md)  
-[\<regex> 함수](../standard-library/regex-functions.md)  
-[regex_iterator 클래스](../standard-library/regex-iterator-class.md)  
-[\<regex> 연산자](../standard-library/regex-operators.md)  
-[regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 클래스](../standard-library/regex-traits-class.md)  
-[\<regex> 형식 정의](../standard-library/regex-typedefs.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[\<regex> operators](../standard-library/regex-operators.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 

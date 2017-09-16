@@ -1,104 +1,122 @@
 ---
-title: "MFC 클래스 마법사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.wizards.classwizard"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 클래스 마법사"
-  - "마법사(MFC)"
+title: MFC Class Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.wizards.classwizard
+dev_langs:
+- C++
+helpviewer_keywords:
+- wizards (MFC)
+- MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MFC 클래스 마법사
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d163ea30b71096e457595804bad01a6004e609f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-프로젝트의 클래스에 메시지와 메시지 처리기를 추가할 수 있습니다.  또한 다른 마법사를 시작하거나 클래스를 프로젝트에 추가할 수 있습니다.  
+---
+# <a name="mfc-class-wizard"></a>MFC Class Wizard
+Lets you add messages and message handlers to classes in your project. You can also start other wizards or add a class to your project.  
   
- **MFC 클래스 마법사**를 열려면 **프로젝트** 메뉴에서 **클래스 마법사**를 클릭합니다.  키보드 바로 가기로 마법사를 열려면 CTRL \+ SHIFT \+ X를 입력합니다.  
+ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard**. To open the wizard with a keyboard shortcut, type CTRL+SHIFT+X.  
   
-## UI 요소 목록  
- **프로젝트**  
- 솔루션에 있는 프로젝트의 이름입니다.  
+## <a name="uielement-list"></a>UIElement List  
+ **Project**  
+ The name of a project in your solution.  
   
- 드롭다운 목록 상자에서 솔루션의 다른 프로젝트를 선택할 수 있습니다.  
+ You can select other projects in your solution from the drop-down list box.  
   
- **클래스 이름**  
- 프로젝트의 클래스 이름입니다.  
+ **Class name**  
+ The name of a class in your project.  
   
- **클래스 이름** 목록에서 클래스를 선택할 때 클래스의 데이터가 **MFC 클래스 마법사**의 컨트롤을 채웁니다.  컨트롤의 값을 변경할 때 선택한 클래스의 데이터가 영향을 받습니다.  
+ When you select a class in the **Class name** list, data from the class populates the controls in the **MFC Class Wizard**. When you change the value of a control, data in the selected class is affected.  
   
- **클래스 추가**  
- 여러 가지 소스 중 하나에서 클래스를 추가할 수 있습니다.  
+ **Add Class**  
+ Lets you add a class from one of several sources.  
   
- 선택 항목에 따라 **MFC 클래스 추가 마법사**, **Typelib의 클래스 추가 마법사**, **ActiveX 컨트롤의 클래스 추가 마법사** 또는 **MFC ODBC 소비자 마법사**가 시작됩니다.  
+ Depending on your selection, the **MFC Add Class Wizard**, **Add Class From Typelib Wizard**, **Add Class From ActiveX Control Wizard**, or **MFC ODBC Consumer Wizard** is started.  
   
- **기본 클래스**  
- **Class name**에 표시되는 클래스의 기본 클래스입니다.  
+ **Base class**  
+ The base class of the class that is displayed in **Class name**.  
   
- **클래스 선언**  
- **클래스 이름** 클래스가 선언되는 클래스입니다.  
+ **Class declaration**  
+ The class in which the **Class name** class is declared.  
   
- 여기에 있는 이름이 **클래스 구현**에 있는 이름과 다른 경우에만 **클래스 선언** 상자가 표시됩니다.  
+ The **Class declaration** box is displayed only if the name in it differs from the name in **Class implementation**.  
   
- **리소스**  
- 있을 경우 **클래스 이름**의 리소스 ID입니다.  그렇지 않으면, **리소스** 상자가 비어 있습니다.  
+ **Resource**  
+ The ID of the resource in **Class name**, if any. Otherwise, the **Resource** box is empty.  
   
- **클래스 구현**  
- **클래스 이름**에서 클래스의 구현을 포함하는 파일의 이름입니다.  
+ **Class implementation**  
+ The name of the file that contains the implementation of the class in **Class name**.  
   
- 화살표를 클릭하여 다른 구현 파일을 선택할 수 있습니다.  다음 표에 사용 가능한 옵션이 나와 있습니다.  
+ You can select a different implementation file by clicking the arrow. The following table lists the available options.  
   
-|옵션|설명|  
-|--------|--------|  
-|**파일 열기**|클래스 마법사가 종료되고 현재 클래스 구현 파일이 열립니다.|  
-|**상위 폴더 열기**|현재 클래스 구현 파일에 들어 있는 폴더를 엽니다.|  
-|**전체 경로를 클립보드에 복사**|현재 구현 파일의 경로를 클립보드로 복사합니다.|  
+|Option|Description|  
+|------------|-----------------|  
+|**Open File**|Exits the class wizard and opens the current class implementation file.|  
+|**Open Containing Folder**|Opens the folder that contains the current class implementation file.|  
+|**Copy Full Path to Clipboard**|Copies the path of the current implementation file to the Clipboard.|  
   
- **명령**  
- 명령 및 메시지 처리기를 추가, 삭제, 편집 또는 검색할 수 있습니다.  
+ **Commands**  
+ Lets you add, delete, edit, or search for a command and its message handler.  
   
- 처리기를 추가하려면 **처리기 추가**를 클릭하거나 **개체 ID** 목록 또는 **메시지** 목록에서 항목을 두 번 클릭합니다.  결과 함수 이름, ID 및 메시지는 **멤버 함수** 목록에 표시됩니다.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Object IDs** list or **Messages** list. The resulting function name, ID, and message are displayed in the **Member functions** list.  
   
- 처리기를 삭제하려면 **멤버 함수** 목록에서 항목을 선택하고 **삭제 처리기**를 클릭합니다.  
+ To delete a handler, select an item in the **Member functions** list and then click **Delete Handler**.  
   
- 처리기를 수정하려면 **멤버 함수** 목록에서 해당 항목을 두 번 클릭합니다.  또는 목록에서 항목을 선택한 다음 **코드 편집**을 클릭합니다.  
+ To modify a handler, double-click the corresponding item in the **Member functions** list. Or, select an item in the list box and then click **Edit Code**.  
   
- **메시지**  
- 메시지 및 메시지 처리기를 추가, 삭제, 편집 또는 검색할 수 있습니다.  
+ **Messages**  
+ Lets you add, delete, edit, or search for a message and its message handler.  
   
- 처리기를 추가하려면 **처리기 추가**를 클릭하거나 **메시지** 목록에서 항목을 두 번 클릭합니다.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Messages** list.  
   
- 사용자 지정 메시지를 추가하려면 **사용자 지정 메시지 추가**를 클릭하거나 Enter 키를 누른 다음 **사용자 지정 메시지 추가** 대화 상자에서 값을 지정합니다.  해당 대화 상자에서 **등록된 메시지**를 선택하여 운영 체제 전체에 고유성이 보장되는 창 메시지를 처리할 수도 있습니다.  
+ To add a custom message, click **Add Custom Message** or press the Enter key, and then specify values in the **Add Custom Message** dialog box. In that dialog box, you can also select **Registered Message** to handle a window message that is guaranteed to be unique throughout the operating system.  
   
- **가상 함수**  
- 가상 함수 또는 재정의된 가상 함수를 추가, 삭제, 편집 또는 검색할 수 있습니다.  
+ **Virtual Functions**  
+ Lets you add, delete, edit, or search for a virtual function, or an overridden virtual function.  
   
- **멤버 변수**  
- 멤버 변수를 추가, 삭제, 편집 또는 검색할 수 있습니다.  
+ **Member Variables**  
+ Lets you add, delete, edit, or search for a member variable.  
   
- **메서드**  
- 메서드를 추가, 삭제 또는 검색하고 메서드의 정의 또는 선언으로 이동할 수도 있습니다.  
+ **Methods**  
+ Lets you add, delete, or search for a method, and also go to the definition or declaration of a method.  
   
- 메서드를 추가하려면 **메서드 추가**를 클릭한 다음 **메서드 추가** 대화 상자에서 값을 지정합니다.  
+ To add a method, click **Add Method**, and then specify values in the **Add Method** dialog box.  
   
- 메서드를 삭제하려면 **메서드** 목록에서 항목을 선택하고 **삭제 방법**을 클릭합니다.  
+ To delete a method, select an item in the **Methods** list and then click **Delete Method**.  
   
- 선언을 표시하려면 **메서드** 목록에서 항목을 선택하고 **선언으로 이동**을 클릭합니다.  
+ To display a declaration, select an item in the **Methods** list and then click **Go to Declaration.**  
   
- 정의를 표시하려면 **메서드** 목록에 있는 항목을 두 번 클릭합니다.  또는 **메서드** 목록에서 항목을 선택하고 **정의로 이동** 단추를 클릭합니다.  
+ To display a definition, double-click an item in the **Methods** list. Or, select an item in the **Methods** list and then click the **Go to Definition** button.  
   
-## 참고 항목  
- [클래스 추가](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
+

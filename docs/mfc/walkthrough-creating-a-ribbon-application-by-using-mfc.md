@@ -1,101 +1,120 @@
 ---
-title: "연습: MFC를 사용하여 리본 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "리본 응용 프로그램 만들기(MFC)"
-  - "리본 응용 프로그램, 만들기(MFC)"
+title: 'Walkthrough: Creating a Ribbon Application By Using MFC | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon application, creating (MFC)
+- creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# 연습: MFC를 사용하여 리본 응용 프로그램 만들기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd9aff0bf52100207e2df0504226c991d0f66614
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 연습은 **MFC 응용 프로그램 마법사**를 사용하여 기본 리본 메뉴가 있는 응용 프로그램을 만드는 방법을 보여줍니다.  그런 다음 **즐겨찾기** 리본 패널이 포함된 **사용자 지정** 리본 범주를 추가하여 리본 메뉴를 확장하고 이 패널에 자주 사용하는 명령을 몇 가지 추가할 수 있습니다.  
+---
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Walkthrough: Creating a Ribbon Application By Using MFC
+This walkthrough shows how to use the **MFC Application Wizard** to create an application that has a ribbon by default. You can then expand the ribbon by adding a **Custom** ribbon category that has a **Favorites** ribbon panel, and then adding some frequently used commands to the panel.  
   
-## 사전 요구 사항  
- 이 연습에서는 **일반 개발 설정**을 사용하기 위해 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]를 설정한 것으로 가정합니다.  다른 설정을 사용할 경우, 다음 지침에서 참조되는 UI\(사용자 인터페이스\) 요소 중 일부가 표시되지 않을 수도 있습니다.  설정을 변경하는 방법에 대한 정보는 [How to: Reset Your Settings](http://msdn.microsoft.com/ko-kr/c95c51be-e609-4769-abba-65e6beedec76)을 참조하십시오.  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that you have set [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to use **General Development Settings**. If you are using different settings, some of the user interface (UI) elements that are referenced in the following instructions might not be displayed. For information about how to change settings, see [How to: Reset Your Settings](http://msdn.microsoft.com/en-us/c95c51be-e609-4769-abba-65e6beedec76).  
   
-### 리본 메뉴를 포함하고 있는 MFC 응용 프로그램을 만들려면  
+### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>To create an MFC application that has a ribbon  
   
-1.  리본 메뉴를 포함하고 있는 MFC 응용 프로그램을 만들려면 **MFC 응용 프로그램 마법사**를 사용하십시오.  마법사를 실행하려면 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+1.  Use the **MFC Application Wizard** to create an MFC application that has a ribbon. To run the wizard, on the **File** menu, point to **New**, and then click **Project**.  
   
-2.  **새 프로젝트** 대화 상자에서 **설치된 템플릿** 아래의 **Visual C\+\+** 노드를 확장하여, **MFC**를 선택한 다음, **MFC 응용 프로그램**을 선택합니다.  프로젝트의 이름을 입력\(예: `MFCRibbonApp`\)한 다음, **확인**을 클릭합니다.  
+2.  In the **New Project** dialog box, expand the **Visual C++** node under **Installed Templates**, select **MFC**, and then select **MFC Application**. Type a name for the project, for example, `MFCRibbonApp`, and then click **OK**.  
   
-3.  **MFC 응용 프로그램 마법사**의 첫 페이지에서 **다음**을 클릭합니다.  
+3.  On the first page of the **MFC Application Wizard**, click **Next**.  
   
-4.  **응용 프로그램 종류** 페이지의 **비주얼 스타일 및 색** 아래에서 **Office 2007\(파랑 테마\)**을 선택합니다.  다른 설정은 그대로 둡니다.  **다음**을 클릭합니다.  
+4.  On the **Application Type** page, under **Visual style and colors**, select **Office 2007 (Blue theme)**. Leave the other settings as they are. Click **Next**.  
   
-5.  **복합 문서 지원** 페이지에서 **없음**이 선택되었는지 확인한 후 **다음**을 클릭합니다.  
+5.  On the **Compound Document Support** page, make sure that **None** is selected and then click **Next**.  
   
-6.  **문서 템플릿 속성** 페이지의 **파일 확장명** 상자에서, 이 응용 프로그램에서 작성할 문서의 파일 이름 확장명을 입력합니다\(예: `mfcrbnapp`\).  **다음**을 클릭합니다.  
+6.  On the **Document Template Properties** page, in the **File extension** box, type a file name extension for documents that this application creates, for example, `mfcrbnapp`. Click **Next**.  
   
-7.  **데이터베이스 지원** 페이지에서 **없음**이 선택되었는지 확인한 후 **다음**을 클릭합니다.  
+7.  On the **Database Support** page, make sure that **None** is selected and then click **Next**.  
   
-8.  **사용자 인터페이스 기능** 페이지에서 **리본 사용**이 선택되었는지 확인합니다.  **다음**을 클릭합니다.  
+8.  On the **User Interface Features** page, make sure that **Use a ribbon** is selected. Click **Next**.  
   
-9. 기본적으로 **MFC 응용 프로그램 마법사**는 여러 도킹 창에 대한 지원을 추가합니다.  이 연습에서는 리본 메뉴만을 설명하기 때문에, 응용 프로그램에서 이러한 옵션을 제거할 수 있습니다.  **고급 기능** 페이지에서 모든 옵션의 선택을 취소합니다.  **다음**을 클릭합니다.  
+9. By default, the **MFC Application Wizard** adds support for several docking panes. Because this walkthrough just teaches about the ribbon, you can remove these options from the application. On the **Advanced Features** page, clear all options. Click **Next**.  
   
-10. **생성된 클래스** 페이지에서 **마침**을 클릭하여 MFC 응용 프로그램을 만듭니다.  
+10. On the **Generated Classes** page, click **Finish** to create the MFC application.  
   
-11. 응용 프로그램이 만들어졌는지 확인하기 위하여, 응용 프로그램을 빌드하고 실행합니다.  응용 프로그램을 빌드하려면 **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  응용 프로그램이 빌드되면 **디버그** 메뉴에서 **디버깅 시작**을 클릭하여 응용 프로그램을 실행합니다.  
+11. To verify that the application was created successfully, build it and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run it by clicking **Start Debugging** on the **Debug** menu.  
   
-     마법사에서 **홈**이라는 이름의 리본 범주 하나를 가진 리본 메뉴를 자동으로 생성합니다.  이 리본 메뉴에는 **클립보드**, **보기** 및 **창**이라는 세 가지 리본 패널이 포함되어 있습니다.  
+     The wizard automatically creates a ribbon that has one ribbon category that is named **Home**. This ribbon contains three ribbon panels, which are named **Clipboard**, **View**, and **Window**.  
   
-### 리본 메뉴에 범주와 패널을 추가하려면  
+### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>To add a category and panel to the ribbon  
   
-1.  마법사에서 만든 리본 리소스를 열기 위해 **보기** 메뉴에서 **다른 창**을 가리킨 다음 **리소스 뷰**를 클릭합니다.  **리소스 뷰**에서 **리본**을 클릭한 다음, **IDR\_RIBBON**을 두 번 클릭합니다.  
+1.  To open the ribbon resource that the wizard created, on the **View** menu, point to **Other Windows** and then click **Resource View**. In **Resource View**, click **Ribbon** and then double-click **IDR_RIBBON**.  
   
-2.  먼저, **도구 상자**의 **범주**를 두 번 클릭하여 리본 메뉴에 사용자 지정 범주를 추가합니다.  
+2.  First, add a custom category to the ribbon by double-clicking **Category** in the **Toolbox**.  
   
-     캡션이 있는 범주인 **Category1**이 생성됩니다.  기본적으로 범주에는 하나의 패널이 포함되어 있습니다.  
+     A category that has the caption **Category1** is created. By default, the category contains one panel.  
   
-     **Category1**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  **속성** 창에서 **캡션**을 `사용자 지정`으로 변경합니다.  
+     Right-click **Category1** and then click **Properties**. In the **Properties** window, change **Caption** to `Custom`.  
   
-     **큰 이미지** 및 **작은 이미지** 속성은 이 범주의 리본 요소에 대한 아이콘으로 사용되는 비트맵을 지정합니다.  이 연습 범위에서는 사용자 지정 비트맵 만들기를 다루지 않기 때문에, 마법사에서 만든 비트맵을 다시 사용합니다.  작은 비트맵은 16 x 16 픽셀입니다.  작은 이미지의 경우 리소스 ID IDB\_FILESMALL로 액세스할 수 있는 비트맵을 사용합니다.  큰 비트맵은 32 x 32 픽셀입니다.  큰 이미지의 경우 리소스 ID IDB\_FILELARGE로 액세스할 수 있는 비트맵을 사용합니다.  
+     The **Large Images** and **Small Images** properties specify the bitmaps that are used as icons for the ribbon elements in this category. Because creating custom bitmaps is beyond the scope of this walkthrough, just reuse the bitmaps that were created by the wizard. Small bitmaps are 16 pixels by 16 pixels. For small images, use the bitmaps that are accessed by the IDB_FILESMALL resource ID. Large bitmaps are 32 pixels by 32 pixels. For large images, use the bitmaps that are accessed by the IDB_FILELARGE resource ID.  
   
     > [!NOTE]
-    >  HDPI 디스플레이에서는 HDPI 버전의 이미지가 자동으로 사용됩니다.  
+    >  On high dots per inch (HDPI) displays, the HDPI versions of the images are automatically used.  
   
-3.  다음으로, 패널을 사용자 지정합니다.  패널은 논리적으로 연관된 항목들을 그룹화하는 데 사용됩니다.  예를 들어, 이 응용 프로그램의 **홈** 탭에서 **잘라내기**, **복사** 및 **붙여넣기** 명령은 모두 **클립보드** 패널에 있습니다.  패널을 사용자 지정하려면 **패널1**을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  **속성** 창에서 **캡션**을 `즐겨찾기`로 변경합니다.  
+3.  Next, customize the panel. Panels are used to group items that are logically related to one another. For example, on the **Home** tab of this application, the **Cut**, **Copy**, and **Paste** commands are all located on the **Clipboard** panel. To customize the panel, right-click **Panel1** and then click **Properties**. In the **Properties** window, change **Caption** to `Favorites`.  
   
-     패널의 **이미지 인덱스**를 지정할 수 있습니다.  이 숫자는 리본 패널이 **빠른 실행 도구 모음**에 추가될 때 표시되는 아이콘을 지정합니다.  이 아이콘은 리본 패널 자체에 표시되지 않습니다.  
+     You can specify the **Image Index** for the panel. This number specifies the icon that is displayed if the ribbon panel is added to the **Quick Access Toolbar**. The icon is not displayed on the ribbon panel itself.  
   
-4.  리본 컨트롤 미리 보기를 통해 리본 범주와 패널이 생성되었는지 확인합니다.  **Ribbon 편집기 도구 모음**의 **Ribbon 테스트** 단추를 클릭합니다.  **사용자 지정** 탭 및 **즐겨찾기** 패널이 리본 메뉴에 표시되어야 합니다.  
+4.  To verify that the ribbon category and panel were created successfully, preview the ribbon control. On the **Ribbon Editor Toolbar**, click the **Test Ribbon** button. A **Custom** tab and **Favorites** panel should be displayed on the ribbon.  
   
-### 리본 패널에 요소를 추가하려면  
+### <a name="to-add-elements-to-the-ribbon-panels"></a>To add elements to the ribbon panels  
   
-1.  이전 절차에서 만든 패널에 요소를 추가하려면 **도구 상자**의 **Ribbon 편집기** 영역에서 컨트롤을 디자인 뷰의 패널로 끌어 옵니다.  
+1.  To add elements to the panel that you created in the previous procedure, drag controls from the **Ribbon Editor** section of the **Toolbox** to the panel in the design view.  
   
-2.  먼저, **인쇄** 단추를 추가합니다.  **인쇄** 단추에는 기본 프린터를 사용하여 출력하는 **빠른 인쇄** 명령을 포함하는 하위 메뉴가 있습니다.  이 두 명령은 모두 이 응용 프로그램에 이미 정의되어 있고,  응용 프로그램 메뉴에 있습니다.  
+2.  First, add a **Print** button. The **Print** button will have a submenu that contains a **Quick Print** command that prints by using the default printer. Both of these commands are already defined for this application. They are located on the application menu.  
   
-     **인쇄** 단추를 만들기 위해서는 단추 도구를 패널로 끌어 옵니다.  
+     To create the **Print** button, drag a Button tool to the panel.  
   
-     **속성** 창에서 **ID** 속성을 이미 정의된 **ID\_FILE\_PRINT**로 변경합니다.  **캡션**을 `인쇄`로 변경합니다.  **이미지 인덱스**를 `4`로 변경합니다.  
+     In the **Properties** window, change the **ID** property to **ID_FILE_PRINT**, which should already be defined. Change **Caption** to `Print`. Change **Image Index** to `4`.  
   
-     **빠른 인쇄** 단추를 만들려면 **메뉴 항목** 옆의 속성 값 열을 클릭한 다음, 줄임표\(**...**\)를 클릭합니다.  **항목 편집기**에서 레이블이 지정되지 않은 **추가** 단추를 클릭하여 메뉴 항목을 만듭니다.  **속성** 창에서 **캡션**을 `빠른 인쇄`로, **ID**를 `ID_FILE_PRINT_DIRECT`로, **이미지**를 `5`로 변경합니다.  이미지 속성은 IDB\_FILESMALL 비트맵 리소스의 빠른 인쇄 아이콘을 지정합니다.  
+     To create the **Quick Print** button, click the property value column next to **Menu Items**, and then click the ellipsis (**...**). In the **Items Editor**, click the unlabeled **Add** button to create a menu item. In the **Properties** window, change **Caption** to `Quick Print`, **ID** to `ID_FILE_PRINT_DIRECT`, and **Image** to `5`. The image property specifies the Quick Print icon in the IDB_FILESMALL bitmap resource.  
   
-3.  리본 패널에 단추가 추가되었는지 확인하기 위해 응용 프로그램을 빌드하고 실행합니다.  응용 프로그램을 빌드하려면 **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  응용 프로그램이 제대로 빌드되면 **디버그** 메뉴에서 **디버깅 시작**을 클릭하여 응용 프로그램을 실행합니다.  리본 메뉴 내 **사용자 지정** 탭의 **즐겨찾기** 패널에 **인쇄** 단추 및 콤보 상자가 표시되어야 합니다.  
+3.  To verify that the buttons were added to the ribbon panel, build the application and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run the application by clicking **Start Debugging** on the **Debug** menu. The **Print** button and the combo box on the **Favorites** panel on the **Custom** tab on the ribbon should be displayed.  
   
-## 다음 단계  
- [방법: 빠른 실행 도구 모음 사용자 지정](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+## <a name="next-steps"></a>Next Steps  
+ [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
- [방법: 응용 프로그램 단추 사용자 지정](../mfc/how-to-customize-the-application-button.md)  
+ [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
- 종단 간 샘플의 경우 [샘플\(MFC 기능 팩\)](../top/visual-cpp-samples.md)을 참조하십시오.  
+ For end-to-end samples, see [Samples (MFC Feature Pack)](../visual-cpp-samples.md).  
   
-## 참고 항목  
- [연습](../mfc/walkthroughs-mfc.md)   
- [샘플\(MFC 기능 팩\)](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Samples (MFC Feature Pack)](../visual-cpp-samples.md)
+
+

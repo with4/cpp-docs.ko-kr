@@ -1,45 +1,63 @@
 ---
-title: "방법: CComPtr 및 CComQIPtr 인스턴스 만들기 및 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Create and Use CComPtr and CComQIPtr Instances | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 방법: CComPtr 및 CComQIPtr 인스턴스 만들기 및 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 27d3ae9fe9f740cec799218ab12897a7dd842d15
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-클래식 Windows 프로그래밍에서 라이브러리는 종종 COM 개체\(보다 정확하게는 COM 서버\)로 구현됩니다. 많은 Windows 운영 체제 구성 요소가 COM 서버로 구현되므로 많은 참가자가 이 형식의 라이브러리를 제공합니다. COM의 기본 사항에 대한 자세한 내용은 [Component Object Model \(COM\)](http://msdn.microsoft.com/ko-kr/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)을 참조하세요.  
+---
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and Use CComPtr and CComQIPtr Instances
+In classic Windows programming, libraries are often implemented as COM objects (or more precisely, as COM servers). Many Windows operating system components are implemented as COM servers, and many contributors provide libraries in this form. For information about the basics of COM, see [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
   
- COM\(구성 요소 개체 모델\) 개체를 인스턴스화할 때 소멸자에서 `AddRef` 및 `Release`에 대한 호출을 사용하여 참조 계산을 수행하는 COM 스마트 포인터에 인터페이스 포인터를 저장합니다. ATL\(액티브 템플릿 라이브러리\) 또는 MFC 라이브러리를 사용하는 경우 `CComPtr` 스마트 포인터를 사용합니다. ATL 또는 MFC를 사용하지 않는 경우에는 `_com_ptr_t`를 사용합니다.`std::unique_ptr`에 해당하는 COM이 없기 때문에 단일 소유자 시나리오와 여러 소유자 시나리오 모두에 이러한 스마트 포인터를 사용합니다.`CComPtr`과 `ComQIPtr` 둘 다 rvalue 참조가 있는 이동 작업을 지원합니다.  
+ When you instantiate a Component Object Model (COM) object, store the interface pointer in a COM smart pointer, which performs the reference counting by using calls to `AddRef` and `Release` in the destructor. If you are using the Active Template Library (ATL) or the Microsoft Foundation Class Library (MFC), then use the `CComPtr` smart pointer. If you are not using ATL or MFC, then use `_com_ptr_t`. Because there is no COM equivalent to `std::unique_ptr`, use these smart pointers for both single-owner and multiple-owner scenarios. Both `CComPtr` and `ComQIPtr` support move operations that have rvalue references.  
   
-## 예제  
- 다음 예제에서는 `CComPtr`을 사용하여 COM 개체를 인스턴스화하고 해당 인터페이스에 대한 포인터를 가져오는 방법을 보여 줍니다.`CComPtr::CoCreateInstance` 멤버 함수는 이름이 같은 Win32 함수 대신 COM 개체를 만드는 데 사용됩니다.  
+## <a name="example"></a>Example  
+ The following example shows how to use `CComPtr` to instantiate a COM object and obtain pointers to its interfaces. Notice that the `CComPtr::CoCreateInstance` member function is used to create the COM object, instead of the Win32 function that has the same name.  
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` 및 해당 상대는 ATL의 일부이며 atlcomcli.h에 정의됩니다.`_com_ptr_t`은 Stdlib.h에서 선언됩니다. 컴파일러는 형식 라이브러리에 대한 래퍼 클래스를 생성할 때 `_com_ptr_t`의 특수화를 만듭니다.  
+ `CComPtr` and its relatives are part of the ATL and are defined in atlcomcli.h. `_com_ptr_t` is declared in comip.h. The compiler creates specializations of `_com_ptr_t` when it generates wrapper classes for type libraries.  
   
-## 예제  
- 또한 ATL은 COM 개체를 쿼리하여 추가 인터페이스를 검색할 수 있도록 보다 간단한 구문이 있는 `CComQIPtr`을 제공합니다. 그러나 `CComQIPtr`에서 수행할 수 있는 모든 작업을 수행하고 원시 COM 인터페이스 포인터와 의미 체계가 보다 일치하므로 `CComPtr`을 사용하는 것이 좋습니다.`CComPtr`를 사용하여 인터페이스를 쿼리하는 경우 out 매개 변수에 새 인터페이스 포인터가 배치됩니다. 호출에 실패한 경우 일반적인 COM 패턴인 HRESULT가 반환됩니다.`CComQIPtr`을 사용하는 경우 반환 값은 포인터 자체이며, 호출에 실패한 경우 내부 HRESULT 반환 값에 액세스할 수 없습니다. 다음 두 줄은 `CComPtr`과 `CComQIPtr`의 오류 처리 메커니즘 차이를 보여 줍니다.  
+## <a name="example"></a>Example  
+ ATL also provides `CComQIPtr`, which has a simpler syntax for querying a COM object to retrieve an additional interface. However, we recommend `CComPtr` because it does everything that `CComQIPtr` can do and is semantically more consistent with raw COM interface pointers. If you use a `CComPtr` to query for an interface, the new interface pointer is placed in an out parameter. If the call fails, an HRESULT is returned, which is the typical COM pattern. With `CComQIPtr`, the return value is the pointer itself, and if the call fails, the internal HRESULT return value cannot be accessed. The following two lines show how the error handling mechanisms in `CComPtr` and `CComQIPtr` differ.  
   
  [!code-cpp[COM_smart_pointers#02](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_2.cpp)]  
   
-## 예제  
- `CComPtr`은 COM 자동화 구성 요소에 대한 포인터를 저장하고 런타임에 바인딩을 사용하여 인터페이스에서 메서드를 호출할 수 있도록 하는 IDispatch 특수화를 제공합니다.`CComDispatchDriver`는 암시적으로 `CComPtr<IDispatch>`로 변환할 수 있는 `CComQIPtr<IDispatch, &IIDIDispatch>`에 대한 typedef입니다. 따라서 이 세 가지 이름 중 하나가 코드에 표시되면 이는 `CComPtr<IDispatch>`와 같습니다. 다음 예제에서는 `CComPtr<IDispatch>`를 사용하여 Microsoft Word 개체 모델에 대한 포인터를 가져오는 방법을 보여 줍니다.  
+## <a name="example"></a>Example  
+ `CComPtr` provides a specialization for IDispatch that enables it to store pointers to COM automation components and invoke the methods on the interface by using late binding. `CComDispatchDriver` is a typedef for `CComQIPtr<IDispatch, &IIDIDispatch>`, which is implicitly convertible to `CComPtr<IDispatch>`. Therefore, when any of these three names appears in code, it is equivalent to `CComPtr<IDispatch>`. The following example shows how to obtain a pointer to the Microsoft Word object model by using a `CComPtr<IDispatch>`.  
   
  [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]  
   
-## 참고 항목  
- [스마트 포인터](../cpp/smart-pointers-modern-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)

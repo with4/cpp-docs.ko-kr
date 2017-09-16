@@ -1,5 +1,5 @@
 ---
-title: "ICommandUI 인터페이스 | Microsoft 문서"
+title: ICommandUI Interface | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ICommandUI interface
+- ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 caps.latest.revision: 24
 author: mikeblome
@@ -41,109 +41,109 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1db6b3fa58639140322816c37103566353b15633
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 31f76aabfcfcd9f5497e0eb6ba1c2352eee32aa0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="icommandui-interface"></a>ICommandUI 인터페이스
-사용자 인터페이스 명령을 관리합니다.  
+# <a name="icommandui-interface"></a>ICommandUI Interface
+Manages user interface commands.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 interface class ICommandUI  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[icommandui__Check](#check)|이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정합니다.|  
-|[ICommandUI::ContinueRouting](#continuerouting)|현재 메시지의 처리기는 체인을 계속 하려면 명령 라우팅 메커니즘에 알려줍니다.|  
-|[ICommandUI::Enabled](#enabled)|이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 하거나 사용 합니다.|  
-|[ICommandUI::ID](#id)|가 나타내는 사용자 인터페이스 개체의 ID를 가져옵니다는 `ICommandUI` 개체입니다.|  
-|[ICommandUI::Index](#index)|가 나타내는 사용자 인터페이스 개체의 인덱스를 가져옵니다는 `ICommandUI` 개체입니다.|  
-|[ICommandUI::Radio](#radio)|이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정합니다.|  
-|[ICommandUI::Text](#text)|이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정합니다.|  
+|[icommandui__Check](#check)|Sets the user interface item for this command to the appropriate check state.|  
+|[ICommandUI::ContinueRouting](#continuerouting)|Tells the command-routing mechanism to continue routing the current message down the chain of handlers.|  
+|[ICommandUI::Enabled](#enabled)|Enables or disables the user interface item for this command.|  
+|[ICommandUI::ID](#id)|Gets the ID of the user interface object represented by the `ICommandUI` object.|  
+|[ICommandUI::Index](#index)|Gets the index of the user interface object represented by the `ICommandUI` object.|  
+|[ICommandUI::Radio](#radio)|Sets the user interface item for this command to the appropriate check state.|  
+|[ICommandUI::Text](#text)|Sets the text of the user interface item for this command.|  
   
-## <a name="remarks"></a>주의  
- 이 인터페이스는 사용자 인터페이스 명령을 관리 하는 메서드와 속성을 제공 합니다. `ICommandUI`유사한 [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)점을 제외 하 고 `ICommandUI` .NET 구성 요소와 상호 운용 되는 MFC 응용 프로그램에 사용 됩니다.  
+## <a name="remarks"></a>Remarks  
+ This interface provides methods and properties that manage user interface commands. `ICommandUI` is similar to [CCmdUI Class](../../mfc/reference/ccmdui-class.md), except that `ICommandUI` is used for MFC applications that interoperate with .NET components.  
   
- `ICommandUI`내에서 사용 되는 `ON_UPDATE_COMMAND_UI` 의 처리기는 [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-클래스를 파생 합니다. 메뉴에서 각 메뉴 항목 사용으로 표시 됩니다 (선택 해야 하는지 또는) 응용 프로그램의 사용자를 활성화 하는 경우 또는 사용 하지 않도록 설정 합니다. 구현 하 여이 정보를 제공 하는 각 메뉴 명령에 대상은 `ON_UPDATE_COMMAND_UI` 처리기입니다. 각 응용 프로그램에서 명령 사용자 인터페이스 개체에 대 한 메시지-맵 항목 및 각 처리기에 대 한 함수 프로토타입을 만드는 속성 창을 사용 합니다.  
+ `ICommandUI` is used within an `ON_UPDATE_COMMAND_UI` handler in an [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-derived class. When a user of an application activates (selects or clicks) a menu, each menu item is displayed as enabled or disabled. The target of each menu command provides this information by implementing an `ON_UPDATE_COMMAND_UI` handler. For each of the command user interface objects in your application, use the Properties window to create a message-map entry and function prototype for each handler.  
   
- 방법에 대 한 자세한 내용은 `ICommandUI` 인터페이스는 명령 라우팅에 사용을 참조 하십시오. [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)합니다.  
+ For more information on how the `ICommandUI` interface is used in command routing, see [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
   
- Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
- MFC의 사용자 인터페이스 명령을 관리 되는 방법에 대 한 자세한 내용은 참조 하십시오. [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)합니다.  
+ For more information on how user interface commands are managed in MFC, see [CCmdUI Class](../../mfc/reference/ccmdui-class.md).  
   
-## <a name="check"></a>ICommandUI::Check  
-이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정합니다.
+## <a name="check"></a> ICommandUI::Check  
+Sets the user interface item for this command to the appropriate check state.
 ```
 property UICheckState Check;
 ```
-## <a name="remarks"></a>주의  
-이 속성을 적절 한 확인 상태로이 명령에 대 한 사용자 인터페이스 항목을 설정합니다. 다음 값을 확인을 설정 합니다.  
-- 0 선택 취소  
-- 1  
-- 비활성화 상태의 설정&2;  
+## <a name="remarks"></a>Remarks  
+This property sets the user interface item for this command to the appropriate check state. Set Check to the following values:  
+- 0 Uncheck  
+- 1 Check  
+- 2 Set indeterminate  
 
-## <a name="continuerouting"></a>ICommandUI::ContinueRouting   
-현재 메시지의 처리기는 체인을 계속 하는 명령 라우팅 메커니즘을 알려줍니다.
+## <a name="continuerouting"></a> ICommandUI::ContinueRouting   
+Tells the command routing mechanism to continue routing the current message down the chain of handlers.
 ```
 void ContinueRouting();
 ```
-## <a name="remarks"></a>주의
-FALSE를 반환 하는 ON_COMMAND_EX 처리기와 함께에서 사용 해야 하는 고급 멤버 함수입니다. 자세한 내용은 기술 참고 TN006 참조: 메시지 맵.
+## <a name="remarks"></a>Remarks
+This is an advanced member function that should be used in conjunction with an ON_COMMAND_EX handler that returns FALSE. For more information, see Technical Note TN006: Message Maps.
 
-## <a name="enabled"></a>ICommandUI::Enabled 
-이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 하거나 사용 합니다.
+## <a name="enabled"></a> ICommandUI::Enabled 
+Enables or disables the user interface item for this command.
 ```
 property bool Enabled;
 ```
-## <a name="remarks"></a>주의
-이 속성 사용 하거나이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 합니다. 사용 항목을 사용 하지 않도록 하려면 FALSE true로 설정 하는 Enabled를 설정 합니다.
+## <a name="remarks"></a>Remarks
+This property enables or disables the user interface item for this command. Set Enabled to TRUE to enable the item, FALSE to disable it.
 
-## <a name="id"></a>ICommandUI::ID  
-ICommandUI 개체로 표현 되는 사용자 인터페이스 개체의 ID를 가져옵니다.
+## <a name="id"></a> ICommandUI::ID  
+Gets the ID of the user interface object represented by the ICommandUI object.
 ```
 property unsigned int ID;
 ```
-## <a name="remarks"></a>주의
-이 속성의 메뉴 항목, 도구 모음 단추 또는 ICommandUI 개체가 나타내는 다른 사용자 인터페이스 개체의 ID를 (핸들)를 가져옵니다.
+## <a name="remarks"></a>Remarks
+This property gets the ID (a handle) of the menu item, toolbar button, or other user interface object represented by the ICommandUI object.
 
-## <a name="index"></a>ICommandUI::Index   
-ICommandUI 개체로 표현 되는 사용자 인터페이스 개체의 인덱스를 가져옵니다.
+## <a name="index"></a> ICommandUI::Index   
+Gets the index of the user interface object represented by the ICommandUI object.
 ```
 property unsigned int Index;
 ```
-## <a name="remarks"></a>주의
-이 속성의 메뉴 항목, 도구 모음 단추 또는 ICommandUI 개체가 나타내는 다른 사용자 인터페이스 개체의 인덱스를 (핸들)를 가져옵니다.
+## <a name="remarks"></a>Remarks
+This property gets the index (a handle) of the menu item, toolbar button, or other user interface object represented by the ICommandUI object.
 
-## <a name="radio"></a>ICommandUI::Radio 
-이 명령에 대 한 사용자 인터페이스 항목을 적절 한 선택 상태를 설정합니다.
+## <a name="radio"></a> ICommandUI::Radio 
+Sets the user interface item for this command to the appropriate check state.
 ```
 property bool Radio;
 ```
-## <a name="remarks"></a>주의
-이 속성을 적절 한 확인 상태로이 명령에 대 한 사용자 인터페이스 항목을 설정합니다. 항목이 사용 하도록 설정 하려면 true이 고 라디오를 설정 그렇지 않으면 FALSE입니다.
+## <a name="remarks"></a>Remarks
+This property sets the user interface item for this command to the appropriate check state. Set Radio to TRUE to enable the item; otherwise FALSE.
 
-## <a name="text"></a>ICommandUI::Text 
-이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정합니다.
+## <a name="text"></a> ICommandUI::Text 
+Sets the text of the user interface item for this command.
 ```
 property String^ Text;
 ```
-## <a name="remarks"></a>주의
-이 속성이이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 합니다. 텍스트 문자열 핸들에 텍스트를 설정 합니다.
+## <a name="remarks"></a>Remarks
+This property sets the text of the user interface item for this command. Set Text to a text string handle.
 
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwinforms.h (atlmfc\lib\mfcmifc80.dll 어셈블리에에서 정의 됨)  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
   
-## <a name="see-also"></a>참고 항목  
- [CCmdUI 클래스](../../mfc/reference/ccmdui-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdUI Class](../../mfc/reference/ccmdui-class.md)
 

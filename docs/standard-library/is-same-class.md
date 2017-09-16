@@ -1,5 +1,5 @@
 ---
-title: "is_same 클래스 | Microsoft 문서"
+title: is_same Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_same
 - type_traits/std::is_same
 dev_langs:
 - C++
@@ -35,34 +34,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 763b2b9e120976270ccdad8509e0d60f280f9344
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7d8131b60cd89fae164205b6f04b6213c280ad0b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="issame-class"></a>is_same 클래스
-두 형식이 동일한지 테스트합니다.  
+# <a name="issame-class"></a>is_same Class
+Tests if two types are the same.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty1, class Ty2>  
 struct is_same;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty1`  
- 쿼리할 첫 번째 형식입니다.  
+ The first type to query.  
   
  `Ty2`  
- 쿼리할 두 번째 형식입니다.  
+ The second type to query.  
   
-## <a name="remarks"></a>설명  
- 형식 조건자의 인스턴스는 `Ty1` 및 `Ty2` 형식이 동일한 형식인 경우 true이고 그렇지 않은 경우 false입니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the types `Ty1` and `Ty2` are the same type, otherwise it holds false.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_same.cpp   
@@ -106,13 +105,13 @@ is_same<int, int> == true
 is_same<int, const int> == false  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_convertible 클래스](../standard-library/is-convertible-class.md)   
- [is_base_of 클래스](../standard-library/is-base-of-class.md)
+ [is_convertible Class](../standard-library/is-convertible-class.md)   
+ [is_base_of Class](../standard-library/is-base-of-class.md)
 

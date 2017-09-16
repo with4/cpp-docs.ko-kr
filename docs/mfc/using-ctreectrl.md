@@ -1,33 +1,50 @@
 ---
-title: "CTreeCtrl 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CTreeCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 클래스, CTreeCtrl 정보"
-  - "트리 컨트롤, using"
+title: Using CTreeCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CTreeCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], about CTreeCtrl
+- tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# CTreeCtrl 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 80479ada12cf36676de50423730804f418ef6783
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-A tree control, represented by the class [CTreeCtrl](../mfc/reference/ctreectrl-class.md), is a window that displays a hierarchical list of items, such as the headings in a document, the entries in an index, or the files and directories on a disk.  Each item consists of a label and an optional bitmapped image, and each item can have a list of subitems associated with it.  By clicking an item, the user can expand and collapse the associated list of subitems.  The directory tree in the left\-hand pane of File Explorer is an example of a tree control.  
+---
+# <a name="using-ctreectrl"></a>Using CTreeCtrl
+A tree control, represented by the class [CTreeCtrl](../mfc/reference/ctreectrl-class.md), is a window that displays a hierarchical list of items, such as the headings in a document, the entries in an index, or the files and directories on a disk. Each item consists of a label and an optional bitmapped image, and each item can have a list of subitems associated with it. By clicking an item, the user can expand and collapse the associated list of subitems. The directory tree in the left-hand pane of File Explorer is an example of a tree control.  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
 -   [CTreeCtrl vs. CTreeView](../mfc/ctreectrl-vs-ctreeview.md)  
   
@@ -51,11 +68,13 @@ A tree control, represented by the class [CTreeCtrl](../mfc/reference/ctreectrl-
   
 -   [Tree Control Item Selection](../mfc/tree-control-item-selection.md)  
   
--   [Tree Control Drag\-and\-Drop Operations](../mfc/tree-control-drag-and-drop-operations.md)  
+-   [Tree Control Drag-and-Drop Operations](../mfc/tree-control-drag-and-drop-operations.md)  
   
 -   [Tree Control Item Information](../mfc/tree-control-item-information.md)  
   
 -   [Tree Control Notification Messages](../mfc/tree-control-notification-messages.md)  
   
-## 참고 항목  
- [컨트롤](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

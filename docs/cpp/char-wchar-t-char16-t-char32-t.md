@@ -1,44 +1,58 @@
 ---
-title: "char, wchar_t, char16_t, char32_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "char_cpp"
-  - "char16_t_cpp"
-  - "whchar_t_cpp"
-  - "char32_t_cpp"
-dev_langs: 
-  - "C++"
+title: char, wchar_t, char16_t, char32_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- char_cpp
+- char16_t_cpp
+- whchar_t_cpp
+- char32_t_cpp
+dev_langs:
+- C++
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
 caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# char, wchar_t, char16_t, char32_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ed34959adc927aefd97299704285994897f4e6ef
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-char, wchar\_t, char16\_t 및 char32\_t 형식은 영숫자 문자와 영숫자가 아닌 문자 모양 및 인쇄되지 않는 문자를 나타내는 기본 제공 형식입니다.  char은 크기가 8비트이고 wchar\_t 및 char16\_t는 크기가 16비트이고 char32\_t는 32비트입니다.  
+---
+# <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
+The types char, wchar_t, char16_t and char32_t are built in types that represent alphanumeric characters as well as non-alphanumeric glyphs and non-printing characters. char is eight bits in size, wchar_t and char16_t are 16 bits in size, and char32_t is 32 bits.  
   
-## 구문  
+## <a name="syntax"></a>Syntax  
   
-```vb  
-char     ch1{ 'a' };  
-wchar_t  ch2{ 'a' }; // or {L'a'}  
-char16_t ch3{ L'a' };// or {L'a'}  
-char32_t ch4{ L'a' };// or {L'a'}  
+```cpp  
+char     ch1{ 'a' };    wchar_t  ch2{ 'a' }; // or {L'a'}    char16_t ch3{ L'a' };// or {L'a'}    char32_t ch4{ L'a' };// or {L'a'}  
 ```  
   
-## 설명  
- `char` 형식은 C와 C\+\+의 독창적인 문자 형식이었습니다.  ASCII 문자 집합이나 ISO\-8859 문자 집합 중 하나 또는 UTF\-8  문자 집합의 문자를 저장하는 데 사용할 수 있습니다.  `unsigned char` 형식은 종종 C\+\+의 기본 제공 형식이 아닌 *바이트*를 나타내는 데 사용됩니다.  char 형식은 다수의 언어에서 텍스트에 적합하지 않습니다.  일반적으로 최신 프로그램에서는 텍스트를 나타내는 데 와이드 문자 형식 중 하나를 사용해야 합니다.  유니코드는  
+## <a name="remarks"></a>Remarks  
+ The `char` type was the original character type in C and C++. It can be used to store characters from the ASCII character set or any of the ISO-8859 character sets, or the UTF-8 character set. The type `unsigned char` is often used to represent a *byte* which is not a built-in type in C++. The char type is not suitable for text in many languages. In general, modern programs should use one of the wide character types to represent text. Unicode is the  
   
- C\+\+ 표준 라이브러리에서 basic\_string 형식은 좁은 문자열과 와이드 문자열 모두에 특화되었습니다.  문자가 char 형식일 때는 std::string을 사용하고, 문자가 wchar\_t 형식일 때는 std::wstring을 사용합니다.  텍스트를 나타내는 다른 형식\(예: std::stringstream 및 std::cout\)들은 좁은 문자열과 와이드 문자열에 대해 특수화되었습니다.  
+ In the C++ standard library, the basic_string type is specialized for both narrow and wide strings. Use std::string when the characters are of type char, and std::wstring when the characters are of type wchar_t. Other types that represent text, including std::stringstream and std::cout have specializations for narrow and wide strings.  
   
-## 요구 사항
+## <a name="requirements"></a>Requirements

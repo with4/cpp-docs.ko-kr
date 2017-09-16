@@ -1,5 +1,5 @@
 ---
-title: "CDockState 클래스 | Microsoft 문서"
+title: CDockState Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,14 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dock state
-- size
-- docking control bars
-- CDockState class
-- states, dockable control bar
-- position, control bar
-- size, control bar
-- docking tool windows
+- CDockState [MFC], Clear
+- CDockState [MFC], GetVersion
+- CDockState [MFC], LoadState
+- CDockState [MFC], SaveState
+- CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
 caps.latest.revision: 23
 author: mikeblome
@@ -46,116 +43,116 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fc8beb80cc35c1816fbc305ece2bfbc5df2e7cd0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8b16523382c1530f0c7c1022e632be0339801cfb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdockstate-class"></a>CDockState 클래스
-영구 메모리(파일)에서 하나 이상의 도킹 컨트롤 막대의 상태를 로드, 언로드 또는 지우는 serialize된 `CObject` 클래스입니다.  
+# <a name="cdockstate-class"></a>CDockState Class
+A serialized `CObject` class that loads, unloads, or clears the state of one or more docking control bars in persistent memory (a file).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDockState : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDockState::Clear](#clear)|도킹 상태 정보를 지웁니다.|  
-|[CDockState::GetVersion](#getversion)|저장 된 버전 번호를 검색 합니다. 상태 표시줄입니다.|  
-|[CDockState::LoadState](#loadstate)|검색에서에서 상태 정보를 레지스트리 또는 합니다. INI 파일입니다.|  
-|[CDockState::SaveState](#savestate)|레지스트리 또는 INI 파일에 상태 정보를 저장합니다.|  
+|[CDockState::Clear](#clear)|Clears the dock state information.|  
+|[CDockState::GetVersion](#getversion)|Retrieves the version number of the stored bar state.|  
+|[CDockState::LoadState](#loadstate)|Retrieves state information from the registry or .INI file.|  
+|[CDockState::SaveState](#savestate)|Saves state information to the registry or INI file.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDockState::m_arrBarInfo](#m_arrbarinfo)|저장 된 포인터의 배열에는 각 컨트롤 막대에 대 한 항목이 있는 상태 정보를 도킹 합니다.|  
+|[CDockState::m_arrBarInfo](#m_arrbarinfo)|Array of pointers to the stored dock state information with one entry for each control bar.|  
   
-## <a name="remarks"></a>주의  
- 도킹 상태 표시줄과 도킹 여부의 위치와 크기를 포함 합니다. 때 상태를 저장 된 검색 도킹 `CDockState` 막대의 검사 위치 및 막대 현재 화면 설정으로 표시 되지 않으면 `CDockState` 막대의 크기를 조정할 위치를 볼 수 있도록 합니다. 주요 목적은 `CDockState` 다양 한 컨트롤 막대의 전체 상태를 저장 하 고 해당 상태를 저장할 수 있도록 하 고 레지스트리의 응용 프로그램을 로드 합니다. INI 파일의 또는의 일환으로 이진 형식으로는 `CArchive` 개체의 콘텐츠입니다.  
+## <a name="remarks"></a>Remarks  
+ The dock state includes the size and position of the bar and whether or not it is docked. When retrieving the stored dock state, `CDockState` checks the bar's position and, if the bar is not visible with the current screen settings, `CDockState` scales the bar's position so that it is visible. The main purpose of `CDockState` is to hold the entire state of a number of control bars and to allow that state to be saved and loaded either to the registry, the application's .INI file, or in binary form as part of a `CArchive` object's contents.  
   
- 막대는 도킹 가능한 모든 컨트롤 막대, 도구 모음, 상태 표시줄 또는 대화 상자 막대를 포함 하 여 수 있습니다. `CDockState`개체를 작성 하 고 통해 파일에서 읽거나는 `CArchive` 개체입니다.  
+ The bar can be any dockable control bar, including a toolbar, status bar, or dialog bar. `CDockState` objects are written and read to or from a file via a `CArchive` object.  
   
- [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) 모든 프레임 창의의 상태 정보를 검색 `CControlBar` 개체를 가져와 `CDockState` 개체입니다. 콘텐츠를 작성할 수 있습니다는 `CDockState` 개체와 함께 저장소를 [Serialize](../../mfc/reference/cobject-class.md#serialize) 또는 [CDockState::SaveState](#savestate)합니다. 나중에 프레임 창에서 컨트롤 막대의 상태를 복원 하려면 포함 하 여 상태를 로드할 수 있습니다 `Serialize` 또는 [CDockState::LoadState](#loadstate), 사용 하 여 [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) 프레임 창은 컨트롤 막대에 저장된 된 상태를 적용할 수 있습니다.  
+ [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) retrieves the state information of all the frame window's `CControlBar` objects and puts it into the `CDockState` object. You can then write the contents of the `CDockState` object to storage with [Serialize](../../mfc/reference/cobject-class.md#serialize) or [CDockState::SaveState](#savestate). If you later want to restore the state of the control bars in the frame window, you can load the state with `Serialize` or [CDockState::LoadState](#loadstate), then use [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) to apply the saved state to the frame window's control bars.  
   
- 도킹 컨트롤 막대에 대 한 자세한 내용은 문서를 참조 [컨트롤 막대](../../mfc/control-bars.md), [도구 모음: 고정 및 고정 해제](../../mfc/docking-and-floating-toolbars.md), 및 [프레임 창](../../mfc/frame-windows.md)합니다.  
+ For more information on docking control bars, see the articles [Control Bars](../../mfc/control-bars.md), [Toolbars: Docking and Floating](../../mfc/docking-and-floating-toolbars.md), and [Frame Windows](../../mfc/frame-windows.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDockState`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxadv.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxadv.h  
   
-##  <a name="clear"></a>CDockState::Clear  
- 이 함수에 저장 된 모든 도킹 정보를 호출 하는 `CDockState` 개체입니다.  
+##  <a name="clear"></a>  CDockState::Clear  
+ Call this function to clear all docking information stored in the `CDockState` object.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>주의  
- 뿐만 아니라 막대 도킹 여부 막대의 크기와 위치를 제외한 여부 및 표시 여부 포함 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This includes not only whether the bar is docked or not, but the bar's size and position and whether or not it is visible.  
   
-##  <a name="getversion"></a>CDockState::GetVersion  
- 저장 된 버전 번호를 검색 하려면이 함수를 호출 합니다. 상태 표시줄입니다.  
+##  <a name="getversion"></a>  CDockState::GetVersion  
+ Call this function to retrieve the version number of the stored bar state.  
   
 ```  
 DWORD GetVersion();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 1이 저장된 표시줄 상태 표시줄 현재 보다 오래 된 정보는 경우 2 저장된 모음 정보는 현재와 동일 하 게 상태 표시줄입니다.  
+### <a name="return-value"></a>Return Value  
+ 1 if the stored bar information is older than current bar state; 2 if the stored bar information is the same as the current bar state.  
   
-### <a name="remarks"></a>주의  
- 버전 지원을 통해 수정 된 막대를 새 영구 속성을 추가 하 고 계속 감지 하 여 막대의 이전 버전에서 만든 영구 상태를 로드할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Version support enables a revised bar to add new persistent properties and still be able to detect and load the persistent state created by an earlier version of the bar.  
   
-##  <a name="loadstate"></a>CDockState::LoadState  
- 레지스트리에서 상태 정보를 검색 하려면이 함수를 호출 하거나. INI 파일입니다.  
+##  <a name="loadstate"></a>  CDockState::LoadState  
+ Call this function to retrieve state information from the registry or .INI file.  
   
 ```  
 void LoadState(LPCTSTR lpszProfileName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszProfileName`  
- 초기화 파일 또는 상태 정보가 저장 되어 있는 Windows 레지스트리에서 키에 있는 섹션의 이름을 지정 하는 null teminated 문자열을 가리킵니다.  
+ Points to a null-teminated string that specifies the name of a section in the initialization file or a key in the Windows registry where state information is stored.  
   
-### <a name="remarks"></a>주의  
- 프로필 이름은 응용 프로그램의 섹션입니다. INI 파일 또는 레지스트리 막대의 상태 정보를 포함 합니다. 레지스트리를 제어 표시줄 상태 정보를 저장할 수 또는 합니다. INI 파일을 `SaveState`합니다.  
+### <a name="remarks"></a>Remarks  
+ The profile name is the section of the application's .INI file or the registry that contains the bars' state information. You can save control bar state information to the registry or .INI file with `SaveState`.  
   
-##  <a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
- A `CPtrArray` 가 상태 정보를 저장 하는 각 컨트롤 막대에 대 한 저장된 컨트롤 막대 정보에 대 한 포인터의 배열인 개체는 `CDockState` 개체입니다.  
+##  <a name="m_arrbarinfo"></a>  CDockState::m_arrBarInfo  
+ A `CPtrArray` object that is an array of pointers to the stored control bar information for each control bar that has saved state information in the `CDockState` object.  
   
 ```  
 CPtrArray m_arrBarInfo;  
 ```  
   
-##  <a name="savestate"></a>CDockState::SaveState  
- 레지스트리에 상태 정보를 저장 하려면이 함수를 호출 하거나. INI 파일입니다.  
+##  <a name="savestate"></a>  CDockState::SaveState  
+ Call this function to save the state information to the registry or .INI file.  
   
 ```  
 void SaveState(LPCTSTR lpszProfileName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszProfileName`  
- 초기화 파일 또는 상태 정보가 저장 되어 있는 Windows 레지스트리에서 키에 있는 섹션의 이름을 지정 하는 null teminated 문자열을 가리킵니다.  
+ Points to a null-teminated string that specifies the name of a section in the initialization file or a key in the Windows registry where state information is stored.  
   
-### <a name="remarks"></a>주의  
- 프로필 이름은 응용 프로그램의 섹션입니다. 포함 된 INI 파일이 나 레지스트리 컨트롤 막대의 상태 정보입니다. `SaveState`또한 현재 화면 크기를 저장합니다. 레지스트리에서 컨트롤 모음 정보를 검색할 수 또는 합니다. INI 파일을 `LoadState`합니다.  
+### <a name="remarks"></a>Remarks  
+ The profile name is the section of the application's .INI file or the registry that contains the control bar's state information. `SaveState` also saves the current screen size. You can retrieve control bar information from the registry or .INI file with `LoadState`.  
   
-## <a name="see-also"></a>참고 항목  
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

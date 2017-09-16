@@ -1,5 +1,5 @@
 ---
-title: "CDaoDatabaseInfo 구조체 | Microsoft 문서"
+title: CDaoDatabaseInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoDatabaseInfo structure
+- CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
 caps.latest.revision: 14
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed7eb8612099daf59cb7e722434102095122f3d1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4403b7ac9d37f55763ecadbac3f8bd912860ea74
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 구조체
-`CDaoDatabaseInfo` 구조에 데이터 액세스 개체 (DAO)에 대해 정의 된 데이터베이스 개체에 대 한 정보가 들어 있습니다.  
+# <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo Structure
+The `CDaoDatabaseInfo` structure contains information about a database object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoDatabaseInfo  
@@ -59,76 +59,76 @@ struct CDaoDatabaseInfo
 };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 데이터베이스 개체의 고유 이름을 지정 합니다. 이 속성을 직접 검색 하려면 호출 [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname)합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
+ Uniquely names the database object. To directly retrieve this property, call [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). For details, see the topic "Name Property" in DAO Help.  
   
  `m_bUpdatable`  
- 데이터베이스에 변경 내용을 만들 수 있는지 여부를 나타냅니다. 이 속성을 직접 검색 하려면 호출 [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)합니다. 자세한 내용은 DAO 도움말의 "업데이트할 수 있는 속성" 항목을 참조 합니다.  
+ Indicates whether changes can be made to the database. To directly retrieve this property, call [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). For details, see the topic "Updatable Property" in DAO Help.  
   
  *m_bTransactions*  
- 데이터 소스에서 트랜잭션을 지원 하는지 여부를 지정-일련의 나중에 다시 롤백할 수 있는 변경의 기록 (취소) 또는 커밋 (저장). 데이터베이스는 Microsoft Jet 데이터베이스 엔진에 기반을 트랜잭션 속성은&0;이 아닌 하 고 트랜잭션을 사용할 수 있습니다. 다른 데이터베이스 엔진에 트랜잭션을 지원 하지 않을 수 있습니다. 이 속성을 직접 검색 하려면 호출 [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact)합니다. 자세한 내용은 DAO 도움말에서 "트랜잭션 속성" 항목을 참조 합니다.  
+ Indicates whether a data source supports transactions — the recording of a series of changes that can later be rolled back (canceled) or committed (saved). If a database is based on the Microsoft Jet database engine, the Transactions property is nonzero and you can use transactions. Other database engines may not support transactions. To directly retrieve this property, call [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact). For details, see the topic "Transactions Property" in DAO Help.  
   
  *m_strVersion*  
- Microsoft Jet 데이터베이스 엔진의 버전을 나타냅니다. 이 속성의 값을 직접 검색 하는 데이터베이스 개체의 호출 [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "Version 속성" 항목을 참조 합니다.  
+ Indicates the version of the Microsoft Jet database engine. To retrieve the value of this property directly, call the database object's [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) member function. For details, see the topic "Version Property" in DAO Help.  
   
  `m_lCollatingOrder`  
- 문자열 비교 또는 정렬에 대 한 텍스트 정렬 순서를 지정 합니다. 가능한 값은 다음과 같습니다.  
+ Specifies the sequence of the sort order in text for string comparison or sorting. Possible values include:  
   
-- **dbSortGeneral** 일반 (영어, 프랑스어, 독일어, 포르투갈어, 이탈리아어, 현대 스페인어) 정렬 순서를 사용 합니다.  
+- **dbSortGeneral** Use the General (English, French, German, Portuguese, Italian, and Modern Spanish) sort order.  
   
-- **dbSortArabic** 아랍어 정렬 순서를 사용 합니다.  
+- **dbSortArabic** Use the Arabic sort order.  
   
-- **dbSortCyrillic** 러시아어의 정렬 순서를 사용 합니다.  
+- **dbSortCyrillic** Use the Russian sort order.  
   
-- **dbSortCzech** 체코어 정렬 순서를 사용 합니다.  
+- **dbSortCzech** Use the Czech sort order.  
   
-- **dbSortDutch** 네덜란드어 정렬 순서를 사용 합니다.  
+- **dbSortDutch** Use the Dutch sort order.  
   
-- **dbSortGreek** 그리스어 정렬 순서를 사용 합니다.  
+- **dbSortGreek** Use the Greek sort order.  
   
-- **dbSortHebrew** 히브리어 정렬 순서를 사용 합니다.  
+- **dbSortHebrew** Use the Hebrew sort order.  
   
-- **dbSortHungarian** 헝가리어 정렬 순서를 사용 합니다.  
+- **dbSortHungarian** Use the Hungarian sort order.  
   
-- **dbSortIcelandic** 아이슬란드어 정렬 순서를 사용 합니다.  
+- **dbSortIcelandic** Use the Icelandic sort order.  
   
-- **dbSortNorwdan** 노르웨이어 또는 덴마크어 정렬 순서를 사용 합니다.  
+- **dbSortNorwdan** Use the Norwegian or Danish sort order.  
   
-- **dbSortPDXIntl** Paradox 국제 정렬 순서를 사용 합니다.  
+- **dbSortPDXIntl** Use the Paradox International sort order.  
   
-- **dbSortPDXNor** Paradox 노르웨이어 또는 덴마크어 정렬 순서를 사용 합니다.  
+- **dbSortPDXNor** Use the Paradox Norwegian or Danish sort order.  
   
-- **dbSortPDXSwe** Paradox 스웨덴어 또는 핀란드어 정렬 순서를 사용 합니다.  
+- **dbSortPDXSwe** Use the Paradox Swedish or Finnish sort order.  
   
-- **dbSortPolish** 폴란드어 정렬 순서를 사용 합니다.  
+- **dbSortPolish** Use the Polish sort order.  
   
-- **dbSortSpanish** 스페인어 정렬 순서를 사용 합니다.  
+- **dbSortSpanish** Use the Spanish sort order.  
   
-- **dbSortSwedFin** 스웨덴어 또는 핀란드어 정렬 순서를 사용 합니다.  
+- **dbSortSwedFin** Use the Swedish or Finnish sort order.  
   
-- **dbSortTurkish** 터키어 정렬 순서를 사용 합니다.  
+- **dbSortTurkish** Use the Turkish sort order.  
   
-- **dbSortUndefined** 정렬 순서는 정의 되지 않거나 알 수 있습니다.  
+- **dbSortUndefined** The sort order is undefined or unknown.  
   
- 자세한 내용은 "사용자 지정 Windows 레지스트리 설정에 대 한 데이터 액세스" DAO 도움말의 항목을 참조 하십시오.  
+ For more information, see the topic "Customizing Windows Registry Settings for Data Access" in DAO Help.  
   
  *m_nQueryTimeout*  
- Microsoft Jet 데이터베이스 엔진 시간 초과 오류가 전에 대기 하는 시간 (초)의 수에는 ODBC 데이터베이스에서 쿼리를 실행할 때 발생 합니다. 기본 제한 시간은 60 초입니다. 쿼리 제한 시간을 0으로 설정 하는 경우 시간 제한 없이 발생 합니다. 이 응답을 중지 하도록 프로그램을 발생할 수 있습니다. 이 속성의 값을 직접 검색 하는 데이터베이스 개체의 호출 [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "쿼리 제한 시간 속성" 항목을 참조 합니다.  
+ The number of seconds the Microsoft Jet database engine waits before a timeout error occurs when a query is run on an ODBC database. The default timeout value is 60 seconds. When QueryTimeout is set to 0, no timeout occurs; this can cause the program to stop responding. To retrieve the value of this property directly, call the database object's [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) member function. For details, see the topic "QueryTimeout Property" in DAO Help.  
   
  `m_strConnect`  
- 열려 있는 데이터베이스의 원본에 대 한 정보를 제공합니다. 정보에 대 한 연결 문자열을 한이 속성의 값을 직접 검색 하는 방법에 대 한 정보를 참조 하십시오.는 [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) 멤버 함수입니다. 자세한 내용은 DAO 도움말에서 "연결 속성" 항목을 참조 하십시오.  
+ Provides information about the source of an open database. For information about connect strings, and for information about retrieving the value of this property directly, see the [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) member function. For more information, see the topic "Connect Property" in DAO Help.  
   
-## <a name="remarks"></a>주의  
- 데이터베이스는 MFC 클래스 개체를 원본으로 사용 하는 DAO 개체 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)합니다. 기본, 보조 및 위에서 모두에 대 한 참조에서의 정보를 반환 하는 방법을 나타내는 [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) 멤버 함수입니다.  
+## <a name="remarks"></a>Remarks  
+ The database is a DAO object underlying an MFC object of class [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). The references to Primary, Secondary, and All above indicate how the information is returned by the [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) member function.  
   
- 검색 한 정보는 [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) 멤버 함수에 저장 되는 `CDaoDatabaseInfo` 구조입니다. 호출 `GetDatabaseInfo` 에 대 한는 `CDaoWorkspace` 개체가 데이터베이스 데이터 정렬 인 데이터베이스 개체가 저장 됩니다. `CDaoDatabaseInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoDatabaseInfo` 개체입니다.  
+ Information retrieved by the [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) member function is stored in a `CDaoDatabaseInfo` structure. Call `GetDatabaseInfo` for the `CDaoWorkspace` object in whose Databases collection the database object is stored. `CDaoDatabaseInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoDatabaseInfo` object.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoWorkspace 클래스](../../mfc/reference/cdaoworkspace-class.md)   
- [CDaoDatabase 클래스](../../mfc/reference/cdaodatabase-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)
 

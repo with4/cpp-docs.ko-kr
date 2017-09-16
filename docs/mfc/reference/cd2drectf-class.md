@@ -1,5 +1,5 @@
 ---
-title: "CD2DRectF 클래스 | Microsoft 문서"
+title: CD2DRectF Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DRectF class
+- CD2DRectF [MFC], CD2DRectF
+- CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
 caps.latest.revision: 18
 author: mikeblome
@@ -36,52 +37,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5bca2dcce32679083e5917d855f711984989a489
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fade68a235bc93ff8dccce1d68c3b7d354a26c39
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2drectf-class"></a>CD2DRectF 클래스
-`D2D1_RECT_F`의 래퍼입니다.  
+# <a name="cd2drectf-class"></a>CD2DRectF Class
+A wrapper for `D2D1_RECT_F`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DRectF : public D2D1_RECT_F;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectF::CD2DRectF](#cd2drectf)|오버로드됨. 생성 된 `CD2DRectF` 에서 개체 `D2D1_RECT_F` 개체입니다.|  
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Overloaded. Constructs a `CD2DRectF` object from `D2D1_RECT_F` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|반환 된 `boolean` 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( `null`).|  
+|[CD2DRectF::IsNull](#isnull)|Returns a `boolean` value that indicates whether an expression contains no valid data ( `null`).|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectF::operator CRect](#operator_crect)|변환 `CD2DRectF` 를 `CRect` 개체입니다.|  
+|[CD2DRectF::operator CRect](#operator_crect)|Converts `CD2DRectF` to `CRect` object.|  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `D2D1_RECT_F`  
   
  `CD2DRectF`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
- CRect 개체에서 CD2DRectF 개체를 만듭니다.  
+##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
+ Constructs a CD2DRectF object from CRect object.  
   
 ```  
 CD2DRectF(const CRect& rect);  
@@ -96,42 +97,42 @@ CD2DRectF(
     FLOAT fBottom = 0.);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rect`  
- 소스 사각형  
+ source rectangle  
   
  `fLeft`  
- 원본 왼쪽된 좌표  
+ source left coordinate  
   
  `fTop`  
- 원본 위쪽 좌표  
+ source top coordinate  
   
  `fRight`  
- 원본 오른쪽 좌표  
+ source right coordinate  
   
  `fBottom`  
- 원본 아래쪽 좌표  
+ source bottom coordinate  
   
-##  <a name="isnull"></a>CD2DRectF::IsNull  
- 식에 유효 하지 않은 데이터 (Null)이 포함 되어 있는지 여부를 나타내는 부울 값을 반환 합니다.  
+##  <a name="isnull"></a>  CD2DRectF::IsNull  
+ Returns a Boolean value that indicates whether an expression contains no valid data (Null).  
   
 ```  
 BOOL IsNull() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- TRUE 이면 사각형의 위쪽, 왼쪽, 아래쪽 및 오른쪽 값은 모두 0입니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if rectangle's top, left, bottom, and right values are all equal to 0; otherwise FALSE.  
   
-##  <a name="operator_crect"></a>CD2DRectF::operator CRect  
- CD2DRectF CRect 개체로 변환합니다.  
+##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
+ Converts CD2DRectF to CRect object.  
   
 ```  
 operator CRect();
 ```   
   
-### <a name="return-value"></a>반환 값  
- D2D 사각형의 현재 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Current value of D2D rectangle.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

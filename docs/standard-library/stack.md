@@ -1,5 +1,5 @@
 ---
-title: "&lt;스택&gt; | Microsoft Docs"
+title: '&lt;stack&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<stack>
-- std::<stack>
-- <stack>
+- std::<stack>", "<stack>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,43 +34,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a769d1f945c6a79c0941a505e3291ae0f5529bbd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4f63ff66c50d830feb3fe34b2102bd9ed47e6eb2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
-템플릿 클래스 스택 및 두 개의 지원 템플릿을 정의합니다.  
+Defines the template class stack and two supporting templates.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <stack>  
   
 ```  
   
-### <a name="operators"></a>연산자  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/stack-operators.md#op_neq)|연산자의 좌변에 있는 스택 개체가 우변에 있는 스택 개체와 같지 않은지 테스트합니다.|  
-|[operator<](../standard-library/stack-operators.md#op_lt)|연산자의 좌변에 있는 스택 개체가 우변에 있는 스택 개체보다 작은지 테스트합니다.|  
-|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|연산자의 좌변에 있는 스택 개체가 우변에 있는 스택 개체보다 작거나 같은지 테스트합니다.|  
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|연산자의 좌변에 있는 스택 개체가 우변에 있는 스택 개체와 같은지 테스트합니다.|  
-|[operator>](../standard-library/stack-operators.md#op_gt)|연산자의 좌변에 있는 스택 개체가 우변에 있는 스택 개체보다 큰지 테스트합니다.|  
-|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|연산자의 좌변에 있는 스택 개체가 우변에 있는 스택 개체보다 크거나 같은지 테스트합니다.|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Tests if the stack object on the left side of the operator is not equal to the stack object on the right side.|  
+|[operator<](../standard-library/stack-operators.md#op_lt)|Tests if the stack object on the left side of the operator is less than the stack object on the right side.|  
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Tests if the stack object on the left side of the operator is less than or equal to the stack object on the right side.|  
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Tests if the stack object on the left side of the operator is equal to the stack object on the right side.|  
+|[operator>](../standard-library/stack-operators.md#op_gt)|Tests if the stack object on the left side of the operator is greater than the stack object on the right side.|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Tests if the stack object on the left side of the operator is greater than or equal to the stack object on the right side.|  
   
-### <a name="classes"></a>클래스  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[stack 클래스](../standard-library/stack-class.md)|최근에 일부 기본 컨테이너 형식에 추가된 요소로만 액세스를 제한하는 템플릿 컨테이너 어댑터 클래스입니다.|  
+|[stack Class](../standard-library/stack-class.md)|A template container adaptor class that provides a restriction of functionality limiting access to the element most recently added to some underlying container type.|  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

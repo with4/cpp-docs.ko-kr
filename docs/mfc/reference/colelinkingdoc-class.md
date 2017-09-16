@@ -1,5 +1,5 @@
 ---
-title: "COleLinkingDoc 클래스 | Microsoft 문서"
+title: COleLinkingDoc Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,8 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE containers, client items
-- COleLinkingDoc class
+- COleLinkingDoc [MFC], COleLinkingDoc
+- COleLinkingDoc [MFC], Register
+- COleLinkingDoc [MFC], Revoke
+- COleLinkingDoc [MFC], OnFindEmbeddedItem
+- COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
 caps.latest.revision: 24
 author: mikeblome
@@ -40,68 +43,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: acdfde1413d5ff93efc63dbbf211881f71cf624e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a457e139aa4770baa22dd148e0676ef522f238ca
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colelinkingdoc-class"></a>COleLinkingDoc 클래스
-포함된 항목에 대한 연결을 지원하는 OLE 컨테이너 문서의 기본 클래스입니다.  
+# <a name="colelinkingdoc-class"></a>COleLinkingDoc Class
+The base class for OLE container documents that support linking to the embedded items they contain.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleLinkingDoc : public COleDocument  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|`COleLinkingDoc` 개체를 생성합니다.|  
+|[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Constructs a `COleLinkingDoc` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinkingDoc::Register](#register)|OLE 시스템 Dll은 문서에 등록합니다.|  
-|[COleLinkingDoc::Revoke](#revoke)|문서의 등록을 취소합니다.|  
+|[COleLinkingDoc::Register](#register)|Registers the document with the OLE system DLLs.|  
+|[COleLinkingDoc::Revoke](#revoke)|Revokes the document's registration.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|지정 된 포함 된 항목을 찾습니다.|  
-|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|지정 된 연결 된 항목을 찾습니다.|  
+|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Finds the specified embedded item.|  
+|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Finds the specified linked item.|  
   
-## <a name="remarks"></a>주의  
- 컨테이너 응용 프로그램을 지 원하는 포함 된 항목에 연결 "링크 컨테이너입니다." 라고 합니다. [OCLIENT](../../visual-cpp-samples.md) 샘플 응용 프로그램은 링크 컨테이너의 예입니다.  
+## <a name="remarks"></a>Remarks  
+ A container application that supports linking to embedded items is called a "link container." The [OCLIENT](../../visual-cpp-samples.md) sample application is an example of a link container.  
   
- 연결된 된 항목의 원본에 다른 문서에 포함된 된 항목 경우를 포함 하는 문서가 포함 된 항목을 편집할 수에 대 한 순서 대로 로드 되어야 합니다. 이러한 이유로 링크 컨테이너 연결된 된 항목의 원본을 편집 하는 사용자가 원하는 경우 다른 컨테이너 응용 프로그램에서 실행 될 수 있어야 합니다. 응용 프로그램 사용도 해야는 [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) 클래스를 프로그래밍 방식으로 시작 하는 경우 문서를 만들 수 있습니다.  
+ When a linked item's source is an embedded item in another document, that containing document must be loaded in order for the embedded item to be edited. For this reason, a link container must be able to be launched by another container application when the user wants to edit the source of a linked item. Your application must also use the [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) class so that it can create documents when launched programmatically.  
   
- 컨테이너 링크 컨테이너를 하려면 문서에서 파생 `COleLinkingDoc` 대신 [COleDocument](../../mfc/reference/coledocument-class.md)합니다. 다른 OLE 컨테이너와 마찬가지로 응용 프로그램의 네이티브 데이터 뿐만 아니라 포함 또는 연결 된 항목을 저장 하기 위한 클래스를 디자인 해야 합니다. 또한 네이티브 데이터를 저장 하기 위한 데이터 구조를 디자인 해야 합니다. 정의 하는 경우는 `CDocItem`-응용 프로그램의 네이티브에 대 한 클래스를 파생 데이터를 정의한 인터페이스를 사용할 수 있습니다 `COleDocument` OLE 데이터 뿐만 아니라 기본 데이터를 저장할 수 있습니다.  
+ To make your container a link container, derive your document class from `COleLinkingDoc` instead of [COleDocument](../../mfc/reference/coledocument-class.md). As with any other OLE container, you must design your class for storing the application's native data as well as embedded or linked items. Also, you must design data structures for storing your native data. If you define a `CDocItem`-derived class for your application's native data, you can use the interface defined by `COleDocument` to store your native data as well as your OLE data.  
   
- 응용 프로그램을 다른 컨테이너에 의해 프로그래밍 방식으로 실행할 수 있도록 선언는 `COleTemplateServer` 개체의 응용 프로그램의 구성원으로 `CWinApp`-클래스를 파생 합니다.  
+ To allow your application to be launched programmatically by another container, declare a `COleTemplateServer` object as a member of your application's `CWinApp`-derived class:  
   
- [!code-cpp[NVC_MFCOleContainer&23;](../../mfc/codesnippet/cpp/colelinkingdoc-class_1.h)]  
+ [!code-cpp[NVC_MFCOleContainer#23](../../mfc/codesnippet/cpp/colelinkingdoc-class_1.h)]  
   
- 에 `InitInstance` 의 멤버 함수에 `CWinApp`-파생 클래스를 문서 서식 파일을 만들고 지정 여 `COleLinkingDoc`-문서 클래스와 파생:  
+ In the `InitInstance` member function of your `CWinApp`-derived class, create a document template and specify your `COleLinkingDoc`-derived class as the document class:  
   
- [!code-cpp[NVC_MFCOleContainer #&24;](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
+ [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- 연결 프로그램 `COleTemplateServer` 개체는 개체를 호출 하 여 문서 서식 파일에 `ConnectTemplate` 멤버 함수와 OLE 시스템으로 호출 하 여 개체를 모든 클래스는 레지스터 **COleTemplateServer::RegisterAll**:  
+ Connect your `COleTemplateServer` object to your document templates by calling the object's `ConnectTemplate` member function, and register all class objects with the OLE system by calling **COleTemplateServer::RegisterAll**:  
   
- [!code-cpp[NVC_MFCOleContainer #&25;](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
+ [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
- 샘플은 `CWinApp`-클래스 정의 파생 하 고 `InitInstance` 함수 OCLIENT를 참조 하십시오. H와 OCLIENT 합니다. MFC 샘플에서 CPP [OCLIENT](../../visual-cpp-samples.md)합니다.  
+ For a sample `CWinApp`-derived class definition and `InitInstance` function, see OCLIENT.H and OCLIENT.CPP in the MFC sample [OCLIENT](../../visual-cpp-samples.md).  
   
- 사용 하 여 대 한 자세한 내용은 `COleLinkingDoc`, 문서를 참조 [컨테이너: 컨테이너 구현](../../mfc/containers-implementing-a-container.md) 및 [컨테이너: 고급 기능](../../mfc/containers-advanced-features.md)합니다.  
+ For more information on using `COleLinkingDoc`, see the articles [Containers: Implementing a Container](../../mfc/containers-implementing-a-container.md) and [Containers: Advanced Features](../../mfc/containers-advanced-features.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,55 +115,55 @@ class COleLinkingDoc : public COleDocument
   
  `COleLinkingDoc`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
- 생성 된 `COleLinkingDoc` OLE 시스템 Dll와의 통신을 시작 하지 않고 개체입니다.  
+##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
+ Constructs a `COleLinkingDoc` object without beginning communications with the OLE system DLLs.  
   
 ```  
 COleLinkingDoc();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출 해야는 `Register` 문서를 열면 OLE를 알리기 위해 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ You must call the `Register` member function to inform OLE that the document is open.  
   
-##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
- 문서에서 지정한 이름 가진 포함된 된 OLE 항목에 포함 되는지 여부를 결정 하는 프레임 워크에서 호출 됩니다.  
+##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
+ Called by the framework to determine whether the document contains an embedded OLE item with the specified name.  
   
 ```  
 virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszItemName`  
- 요청 된 항목이 포함 된 OLE의 이름에 대 한 포인터입니다.  
+ Pointer to the name of the embedded OLE item requested.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 항목;에 대 한 포인터 **NULL** 항목이 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the specified item; **NULL** if the item is not found.  
   
-### <a name="remarks"></a>주의  
- 기본 구현 (이름 비교는 대/소문자 구분) 지정한 이름의 항목에 대 한 포함 된 항목의 목록을 검색 합니다. 사용자 고유의 메서드를 저장 하거나 포함 된 OLE 항목 이름을 지정 해야 하는 경우이 함수를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default implementation searches the list of embedded items for an item with the specified name (the name comparison is case sensitive). Override this function if you have your own method of storing or naming embedded OLE items.  
   
-##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
- 지정 된 이름의 연결 된 서버 항목을 문서에 포함 되는지 여부를 확인 하는 프레임 워크에서 호출 됩니다.  
+##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
+ Called by the framework to check whether the document contains a linked server item with the specified name.  
   
 ```  
 virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszItemName`  
- 연결 된 OLE 요청한 항목의 이름에 대 한 포인터입니다.  
+ Pointer to the name of the linked OLE item requested.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 된 항목;에 대 한 포인터 **NULL** 항목이 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the specified item; **NULL** if the item is not found.  
   
-### <a name="remarks"></a>주의  
- 기본 `COleLinkingDoc` 구현은 항상 **NULL**합니다. 이 함수는 파생된 클래스에서 재정의 된 `COleServerDoc` (이름 비교는 대/소문자 구분) 지정한 이름의 연결된 된 항목에 대 한 OLE 서버 항목의 목록을 검색할 수 있습니다. 저장 하거나 연결 된 서버 항목을 검색 하는 사용자 고유의 메서드를 구현한 경우이 함수를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ The default `COleLinkingDoc` implementation always returns **NULL**. This function is overriden in the derived class `COleServerDoc` to search the list of OLE server items for a linked item with the specified name (the name comparison is case sensitive). Override this function if you have implemented your own method of storing or retrieving linked server items.  
   
-##  <a name="register"></a>COleLinkingDoc::Register  
- 문서를 열면 OLE 시스템 Dll에 알립니다.  
+##  <a name="register"></a>  COleLinkingDoc::Register  
+ Informs the OLE system DLLs that the document is open.  
   
 ```  
 BOOL Register(
@@ -168,36 +171,36 @@ BOOL Register(
     LPCTSTR lpszPathName);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *pFactory*  
- OLE 팩터리 개체에 대 한 포인터 (수 **NULL**).  
+ Pointer to an OLE factory object (can be **NULL**).  
   
  `lpszPathName`  
- 컨테이너 문서의 정규화 된 경로에 대 한 포인터입니다.  
+ Pointer to the fully qualified path of the container document.  
   
-### <a name="return-value"></a>반환 값  
- 문서가 성공적으로 등록 되 면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document is successfully registered; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 만들거나 OLE 시스템 Dll에 문서를 등록 하는 명명 된 파일을 열 때이 함수를 호출 합니다. 문서는 포함 된 항목을 나타내는 경우이 함수를 호출할 필요가 없습니다 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function when creating or opening a named file to register the document with the OLE system DLLs. There is no need to call this function if the document represents an embedded item.  
   
- 사용 중인 경우 `COleTemplateServer` 응용 프로그램에서 `Register` 에서 자동으로 호출 `COleLinkingDoc`의 구현의 `OnNewDocument`, `OnOpenDocument`, 및 `OnSaveDocument`합니다.  
+ If you are using `COleTemplateServer` in your application, `Register` is called for you by `COleLinkingDoc`'s implementation of `OnNewDocument`, `OnOpenDocument`, and `OnSaveDocument`.  
   
-##  <a name="revoke"></a>COleLinkingDoc::Revoke  
- 문서를 열면 더 이상 OLE 시스템 Dll에 알립니다.  
+##  <a name="revoke"></a>  COleLinkingDoc::Revoke  
+ Informs the OLE system DLLs that the document is no longer open.  
   
 ```  
 void Revoke();
 ```  
   
-### <a name="remarks"></a>주의  
- OLE 시스템 Dll으로 문서의 등록을 해지 하려면이 함수를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to revoke the document's registration with the OLE system DLLs.  
   
- 명명 된 파일을 닫을 때이 함수를 호출 해야 하지만 일반적으로 수행 필요 없습니다 직접 호출할 수 있습니다. `Revoke`자동으로 호출 `COleLinkingDoc`의 구현의 `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, 및 `OnSaveDocument`합니다.  
+ You should call this function when closing a named file, but you usually do not need to call it directly. `Revoke` is called for you by `COleLinkingDoc`'s implementation of `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, and `OnSaveDocument`.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 OCLIENT](../../visual-cpp-samples.md)   
- [COleDocument 클래스](../../mfc/reference/coledocument-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CDocTemplate 클래스](../../mfc/reference/cdoctemplate-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [COleDocument Class](../../mfc/reference/coledocument-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)
 

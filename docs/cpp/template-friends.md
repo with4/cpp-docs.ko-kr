@@ -1,32 +1,63 @@
+
 ---
-title: "템플릿 friend | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Template Friends | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 077acea5-0d0f-4b33-916d-1211797e5e28
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
 robots: noindex,nofollow
-caps.handback.revision: 9
----
-# 템플릿 friend
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2503967191bed658e8f3e9f56f8a32b3917590b2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-클래스 템플릿에는 [friends](http://msdn.microsoft.com/ko-kr/bf412640-d857-4acb-b2b5-513131cb9681)가 있을 수 있습니다.  클래스 또는 클래스 템플릿, 함수 또는 함수 템플릿은 템플릿 클래스에 대한 friend일 수 있습니다.  friends는 클래스 템플릿 또는 함수 템플릿의 특수화가 될 수도 있지만 부분 특수화는 될 수 없습니다.  
+---
+# <a name="template-friends"></a>Template Friends
+
+Class templates can have [friends](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). A class or class template, function, or function template can be a friend to a template class. Friends can also be specializations of a class template or function template, but not partial specializations.  
   
-## 예제  
- 다음 예제에서 friend 함수는 클래스 템플릿 내에서 함수 템플릿으로 정의됩니다.  이 코드는 모든 템플릿 인스턴스화에 대한 friend 함수 버전을 만듭니다.  이 구문은 사용자의 friend 함수가 클래스와 같은 템플릿 매개 변수로 결정될 경우 유용합니다.  
+**C++ 11**:  A type parameter can be declared as a friend by using the form `friend T;`.  
   
+```cpp
+template <typename T>  
+class my_class  
+{  
+    friend T;  
+    //...  
+};  
 ```  
+  
+## <a name="example"></a>Example
+
+In the following example, a friend function is defined as a function template within the class template. This code produces a version of the friend function for every instantiation of the template. This construct is useful if your friend function depends on the same template parameters as the class does.  
+  
+```cpp
 // template_friend1.cpp  
 // compile with: /EHsc  
   
@@ -96,15 +127,19 @@ int main() {
 }  
 ```  
   
-  **A B C D E F G H I J K L M N O P Q R S T U V W X Y Z**   
-**a b c d e f g h i j k l m n o p q r s t u v w x y z**   
-**A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z**    
-## 예제  
- 다음 예제에서는 템플릿 특수화를 가진 friend를 다룹니다.  원본 함수 템플릿이 friend인 경우 함수 템플릿 특수화는 자동으로 friend입니다.  
-  
- 또한 다음 코드의 friend 선언 앞의 주석이 나타내는 것처럼 템플릿의 특수화 버전만 friend로 선언할 수 있습니다.  이렇게 하면 friend 템플릿 특수화 정의를 템플릿 클래스 외부에 배치해야 합니다.  
-  
+```Output
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z   
+a b c d e f g h i j k l m n o p q r s t u v w x y z   
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z   
 ```  
+  
+## <a name="example"></a>Example  
+
+The next example involves a friend that has a template specialization. A function template specialization is automatically a friend if the original function template is a friend.  
+  
+It is also possible to declare only the specialized version of the template as the friend, as the comment before the friend declaration in the following code indicates. If you do this, you must put the definition of the friend template specialization outside of the template class.  
+  
+```cpp
 // template_friend2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -182,13 +217,17 @@ int main()
     f(a);  
 }  
 ```  
-  
-  **10 generic**  
-**10 int**   
-## 예제  
- 다음 예제에서는 클래스 템플릿 내에 선언된 friend 클래스 템플릿을 보여 줍니다.  클래스 템플릿은 friend 클래스의 템플릿 인수로 사용됩니다.  friend 클래스 템플릿은 선언된 클래스 템플릿의 외부에 정의되어야 합니다.  또한 friend 템플릿의 모든 특수화 또는 부분 특수화는 원본 클래스 템플릿의 friend입니다.  
-  
+
+```Output
+10 generic  
+10 int  
 ```  
+  
+## <a name="example"></a>Example  
+ 
+The next example shows a friend class template declared within a class template. The class template is then used as the template argument for the friend class. Friend class templates must be defined outside of the class template in which they are declared. Any specializations or partial specializations of the friend template are also friends of the original class template.  
+  
+```cpp  
 // template_friend3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -232,10 +271,15 @@ int main()
    x4->print();  
 }  
 ```  
+
+```Output 
+65  
+97  
+A  
+a  
+```  
   
-  **65**  
-**97**  
-**A**  
-**a**   
-## 참고 항목  
- [기본 인수](../cpp/default-arguments.md)
+## <a name="see-also"></a>See Also  
+
+[Default Arguments](../cpp/default-arguments.md)
+

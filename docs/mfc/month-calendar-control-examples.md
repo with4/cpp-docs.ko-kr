@@ -1,30 +1,49 @@
 ---
-title: "MonthCalendar 컨트롤 예 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMonthCalCtrl 클래스, 예제"
-  - "MonthCalendar 컨트롤, 예제"
+title: Month Calendar Control Examples | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- month calendar controls [MFC], examples
+- CMonthCalCtrl class [MFC], examples
 ms.assetid: 1af7fb59-d6fd-46e0-aaa5-b0394a0a3ed5
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MonthCalendar 컨트롤 예
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6540fc83d2073eac364541e304035ee8aaded8b3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-[CMNCTRL1](../top/visual-cpp-samples.md) 샘플 응용 프로그램은 `CMonthCalCtrl` 클래스의 다양한 속성을 보여줍니다.  샘플에서 나눠진 별도의 탭에 있는 컨트롤은 기본 기능을 보여주고 동적으로 특정 특성들을 수정하도록 해줍니다.  
+---
+# <a name="month-calendar-control-examples"></a>Month Calendar Control Examples
+The [CMNCTRL1](../visual-cpp-samples.md) sample application demonstrates the various attributes of the `CMonthCalCtrl` class. The control, found on a separate tab in the sample, demonstrates basic functionality and allows the user to dynamically modify certain attributes.  
   
-## 참고 항목  
- [CMonthCalCtrl 사용](../mfc/using-cmonthcalctrl.md)   
- [컨트롤](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

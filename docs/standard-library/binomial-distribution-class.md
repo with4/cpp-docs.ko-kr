@@ -1,5 +1,5 @@
 ---
-title: "binomial_distribution 클래스 | Microsoft 문서"
+title: binomial_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- binomial_distribution
 - random/std::binomial_distribution
 - random/std::binomial_distribution::reset
 - random/std::binomial_distribution::p
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- binomial_distribution class
+- std::binomial_distribution [C++]
+- std::binomial_distribution [C++], reset
+- std::binomial_distribution [C++], p
+- std::binomial_distribution [C++], t
+- std::binomial_distribution [C++], param
+- std::binomial_distribution [C++], min
+- std::binomial_distribution [C++], max
+- std::binomial_distribution [C++], param_type
+- std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
 caps.latest.revision: 22
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 38de1b8245612bca84c381c143b4a12e9f08c83e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cf9727a3c8b88840b7f31f250b136398fe5ab207
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="binomialdistribution-class"></a>binomial_distribution 클래스
-이항 분포를 생성합니다.  
+# <a name="binomialdistribution-class"></a>binomial_distribution Class
+Generates a binomial distribution.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class IntType = int>
@@ -88,35 +95,35 @@ public:
    result_type max() const;
    };  
 ```  
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
-정수 결과 형식으로, 기본적으로 `int`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
+The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* 균일 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
 
-## <a name="remarks"></a>설명  
-이항 분포 이산 확률 함수에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `int` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Binomial Distribution discrete probability function. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|  
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|  
   
-속성 멤버 `t()` 및 `p()`는 각각 현재 저장된 분포 매개 변수 값 `t` 및 `p`를 반환합니다.  
+The property members `t()` and `p()` return the currently stored distribution parameter values `t` and `p` respectively.  
   
-속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-이항 분포 이산 확률 함수에 대한 자세한 내용은 Wolfram MathWorld 문서 [이항 분포](http://go.microsoft.com/fwlink/LinkId=398469)를 참조하세요.  
+For detailed information about the binomial distribution discrete probability function, see the Wolfram MathWorld article [Binomial Distribution](http://go.microsoft.com/fwlink/LinkId=398469).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -171,7 +178,7 @@ int main()
 }  
 ```  
   
-첫 번째 실행:  
+First run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -195,7 +202,7 @@ Histogram for 100 samples:
     12 :  
 ```  
   
-두 번째 실행:  
+Second run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -219,7 +226,7 @@ Histogram for 100 samples:
     16 ::  
 ```  
   
-세 번째 실행:  
+Third run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -241,38 +248,38 @@ Histogram for 100 samples:
     21 :  
 ```  
   
-## <a name="requirements"></a>요구 사항  
-**헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**네임스페이스:** std  
+**Namespace:** std  
   
 ##  <a name="binomial_distribution"></a>  binomial_distribution::binomial_distribution  
-분포를 생성합니다.  
+Constructs the distribution.  
   
 ```  
 explicit binomial_distribution(result_type t = 1, double p = 0.5);
 explicit binomial_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *t*  
-`t` 분포 매개 변수입니다.  
+The `t` distribution parameter.  
   
 *p*  
-`p` 분포 매개 변수입니다.  
+The `p` distribution parameter.  
   
 *parm*  
-분포를 생성하는 데 사용되는 `param_type` 구조체입니다.  
+The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0 ≤ t` 및 `0.0 ≤ p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0 ≤ t` and `0.0 ≤ p ≤ 1.0`  
   
-첫 번째 생성자는 저장된 `p` 값이 *p* 값을 보유하고 저장된 `t` 값이 *t* 값을 보유하고 있는 개체를 생성합니다.  
+The first constructor constructs an object whose stored `p` value holds the value *p* and whose stored `t` value holds the value *t*.  
   
-두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  binomial_distribution::param_type  
-분포의 모든 매개 변수를 저장합니다.  
+Stores all the parameters of the distribution.  
   
 ```cpp  
 struct param_type {  
@@ -286,22 +293,22 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *t*  
-`t` 분포 매개 변수입니다.  
+The `t` distribution parameter.  
   
 *p*  
-`p` 분포 매개 변수입니다.  
+The `p` distribution parameter.  
   
 *right*  
- 이 매개 변수와 비교할 `param_type` 개체입니다.  
+ The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0 ≤ t` 및 `0.0 ≤ p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0 ≤ t` and `0.0 ≤ p ≤ 1.0`  
   
-이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

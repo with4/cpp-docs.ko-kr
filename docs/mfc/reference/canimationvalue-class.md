@@ -1,5 +1,5 @@
 ---
-title: "CAnimationValue 클래스 | Microsoft 문서"
+title: CAnimationValue Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationValue class
+- CAnimationValue [MFC], CAnimationValue
+- CAnimationValue [MFC], AddTransition
+- CAnimationValue [MFC], GetValue
+- CAnimationValue [MFC], GetVariable
+- CAnimationValue [MFC], SetDefaultValue
+- CAnimationValue [MFC], GetAnimationVariableList
+- CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
 caps.latest.revision: 17
 author: mikeblome
@@ -41,88 +47,88 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 083c8be9a0d9d518d5353b6d02c0050944312805
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: da4240aaa77b40875a111f95ebed0812d2971016
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationvalue-class"></a>CAnimationValue 클래스
-하나의 값을 갖는 애니메이션 개체 기능을 구현합니다.  
+# <a name="canimationvalue-class"></a>CAnimationValue Class
+Implements the functionality of animation object that has one value.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationValue : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::CAnimationValue](#canimationvalue)|오버로드됨. CAnimationValue 개체를 만듭니다.|  
+|[CAnimationValue::CAnimationValue](#canimationvalue)|Overloaded. Constructs a CAnimationValue object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::AddTransition](#addtransition)|값에 적용할에 전환을 추가 합니다.|  
-|[CAnimationValue::GetValue](#getvalue)|오버로드됨. 현재 값을 검색 합니다.|  
-|[CAnimationValue::GetVariable](#getvariable)|캡슐화 된 애니메이션 변수에 대 한 액세스를 제공합니다.|  
-|[CAnimationValue::SetDefaultValue](#setdefaultvalue)|기본값을 설정합니다.|  
+|[CAnimationValue::AddTransition](#addtransition)|Adds a transition to be applied to a value.|  
+|[CAnimationValue::GetValue](#getvalue)|Overloaded. Retrieves the current value.|  
+|[CAnimationValue::GetVariable](#getvariable)|Provides access to encapsulated animation variable.|  
+|[CAnimationValue::SetDefaultValue](#setdefaultvalue)|Sets default value.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|목록에 캡슐화 된 애니메이션 변수를 추가합니다. (재정의 [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
+|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Puts the encapsulated animation variable into a list. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::operator DOUBLE](#operator_double)|CAnimationValue 및 DOUBLE 간의 변환을 제공합니다.|  
-|[CAnimationValue::operator INT32](#operator_int32)|INT32 CAnimationValue 사이의 변환을 제공합니다.|  
-|[CAnimationValue::operator =](#operator_eq)|오버로드됨. CAnimationValue을 INT32 값을 할당합니다.|  
+|[CAnimationValue::operator DOUBLE](#operator_double)|Provides conversion between CAnimationValue and DOUBLE.|  
+|[CAnimationValue::operator INT32](#operator_int32)|Provides conversion between CAnimationValue and INT32.|  
+|[CAnimationValue::operator=](#operator_eq)|Overloaded. Assigns an INT32 value to CAnimationValue.|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::m_value](#m_value)|캡슐화 된 애니메이션 변수를 애니메이션 값을 나타냅니다.|  
+|[CAnimationValue::m_value](#m_value)|The encapsulated animation variable that represents animation value.|  
   
-## <a name="remarks"></a>주의  
- CAnimationValue 클래스는 단일 CAnimationVariable 개체를 캡슐화 하 고 단일 애니메이션된 값을 응용 프로그램에 나타낼 수 있습니다. 애니메이션된 투명성 (페이드 효과), 각도 (개체 회전)에 대 한이 클래스에 사용할 수는 예를 들어, 나는 경우에는 다른 단일 애니메이션된 값에 따라 애니메이션을 만들어야 하는 경우. 응용 프로그램에서이 클래스를 사용 하 여 방금이 클래스의 개체를 인스턴스화할 CAnimationController::AddAnimationObject를 사용 하 여 애니메이션 컨트롤러를 추가 및 값에 적용할 각 전환에 대해 AddTransition를 호출 합니다.  
+## <a name="remarks"></a>Remarks  
+ The CAnimationValue class encapsulates a single CAnimationVariable object and can represent in applications a single animated value. For example, you can use this class for animated transparency (fade effect), angle (to rotate objects), or for any other case when you need to create an animation depending on a single animated value. To use this class in application, just instantiate an object of this class, add it to animation controller using CAnimationController::AddAnimationObject and call AddTransition for each transition to be applied to the value.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)  
   
  `CAnimationValue`
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationValue::AddTransition  
- 값에 적용할에 전환을 추가 합니다.  
+##  <a name="addtransition"></a>  CAnimationValue::AddTransition  
+ Adds a transition to be applied to a value.  
   
 ```  
 void AddTransition(CBaseTransition* pTransition);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pTransition`  
- 전환 개체에 대 한 포인터입니다.  
+ A pointer to transition object.  
   
-### <a name="remarks"></a>주의  
- 애니메이션 변수를 적용할 수는 전환의 내부 목록에 전환을 추가 하려면이 함수를 호출 합니다. 전환에 추가 되지 즉시 적용 되며 내부 목록에 저장 합니다. 전환 (특정 값에 대 한 스토리 보드에 추가 된) 적용 CAnimationController::AnimateGroup를 호출 하는 경우.  
+### <a name="remarks"></a>Remarks  
+ Call this function to add a transition to internal list of transitions to be applied to an animation variable. When you add transitions, they are not applied immediately and stored in an internal list. Transitions are applied (added to a storyboard for a particular value) when you call CAnimationController::AnimateGroup.  
   
-##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
- CAnimationValue 개체를 만듭니다.  
+##  <a name="canimationvalue"></a>  CAnimationValue::CAnimationValue  
+ Constructs a CAnimationValue object.  
   
 ```  
 CAnimationValue();
@@ -135,24 +141,24 @@ CAnimationValue(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dblDefaultValue`  
- 기본값을 지정합니다.  
+ Specifies default value.  
   
  `nGroupID`  
- 그룹 ID를 지정 합니다.  
+ Specifies Group ID.  
   
  `nObjectID`  
- 개체 ID를 지정 합니다.  
+ Specifies Object ID.  
   
  `dwUserData`  
- 사용자 정의 데이터를 지정합니다.  
+ specifies user-defined data.  
   
-### <a name="remarks"></a>주의  
- 기본 속성으로 CAnimationValue 개체를 생성 합니다: 기본 값, 그룹 ID 및 개체 ID는 0으로 설정 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Constructs CAnimationValue object with default properties: default value, Group ID and Object ID are set to 0.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
- 목록에 캡슐화 된 애니메이션 변수를 추가합니다.  
+##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList  
+ Puts the encapsulated animation variable into a list.  
   
 ```  
 virtual void GetAnimationVariableList(
@@ -160,109 +166,109 @@ virtual void GetAnimationVariableList(
     CAnimationVariable*>& lst);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lst`  
- 함수가 반환 될 때 애니메이션된 값을 나타내는 CAnimationVariable에 대 한 포인터를 포함 합니다.  
+ When the function returns, it contains a pointer to CAnimationVariable representing the animated value.  
   
-##  <a name="getvalue"></a>CAnimationValue::GetValue  
- 현재 값을 검색 합니다.  
+##  <a name="getvalue"></a>  CAnimationValue::GetValue  
+ Retrieves the current value.  
   
 ```  
 BOOL GetValue(DOUBLE& dblValue);  
 BOOL GetValue(INT32& nValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dblValue`  
- 출력입니다. 함수는 반환 될 때 애니메이션 변수의 현재 값을 포함 합니다.  
+ Output. When the function returns it contains a current value of animation variable.  
   
  `nValue`  
- 출력입니다. 함수는 반환 될 때 애니메이션 변수의 현재 값을 포함 합니다.  
+ Output. When the function returns it contains a current value of animation variable.  
   
-### <a name="return-value"></a>반환 값  
- 현재 값이 성공적으로 검색 된 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the current value was retrieved successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>주의  
- 현재 값을 검색 하려면이 함수를 호출 합니다. 이 구현에서는 캡슐화 된 COM 개체를 호출 하 고 호출이 실패 한 경우이 메서드 또는 SetDefaultValue 생성자에서 이전에 설정 된 기본 값을 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve the current value. This implementation calls the encapsulated COM object, and if the call fails, this method returns the default value that was previously set in constructor or with SetDefaultValue.  
   
-##  <a name="getvariable"></a>CAnimationValue::GetVariable  
- 캡슐화 된 애니메이션 변수에 대 한 액세스를 제공합니다.  
+##  <a name="getvariable"></a>  CAnimationValue::GetVariable  
+ Provides access to encapsulated animation variable.  
   
 ```  
 CAnimationVariable& GetVariable();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 캡슐화 된 애니메이션 변수에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated animation variable.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 캡슐화 된 애니메이션 변수에 액세스 합니다. CAnimationVariable에서 애니메이션 변수의 생성 되지 않은 경우 해당 포인터가 NULL이 될 수 기본 IUIAnimationVariable 개체에 액세스할 수 있게 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to access the encapsulated animation variable. From CAnimationVariable you get access to underlying IUIAnimationVariable object, whose pointer can be NULL if animation variable has not been created.  
   
-##  <a name="m_value"></a>CAnimationValue::m_value  
- 캡슐화 된 애니메이션 변수를 애니메이션 값을 나타냅니다.  
+##  <a name="m_value"></a>  CAnimationValue::m_value  
+ The encapsulated animation variable that represents animation value.  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="operator_double"></a>CAnimationValue::operator DOUBLE  
- CAnimationValue 및 DOUBLE 간의 변환을 제공합니다.  
+##  <a name="operator_double"></a>  CAnimationValue::operator DOUBLE  
+ Provides conversion between CAnimationValue and DOUBLE.  
   
 ```  
 operator DOUBLE();
 ```   
   
-### <a name="return-value"></a>반환 값  
- 애니메이션 값의 현재 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Current value of Animation Value.  
   
-### <a name="remarks"></a>주의  
- CAnimationValue 및 DOUBLE 간의 변환을 제공합니다. 이 메서드는 내부적으로 GetValue를 호출 하 고 오류를 확인 하지 않습니다. Getvalue가 실패 하는 경우 반환 되는 값 또는 SetDefaultValue 생성자에서 이전에 설정한 기본값을 포함 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Provides conversion between CAnimationValue and DOUBLE. This method internally calls GetValue and doesn't check for errors. If GetValue fails, the returned value will contain a default value previously set in constructor or with SetDefaultValue.  
   
-##  <a name="operator_int32"></a>CAnimationValue::operator INT32  
- INT32 CAnimationValue 사이의 변환을 제공합니다.  
+##  <a name="operator_int32"></a>  CAnimationValue::operator INT32  
+ Provides conversion between CAnimationValue and INT32.  
   
 ```  
 operator INT32();
 ```   
   
-### <a name="return-value"></a>반환 값  
- 정수로 애니메이션 값의 현재 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Current value of Animation Value as integer.  
   
-### <a name="remarks"></a>주의  
- INT32 CAnimationValue 사이의 변환을 제공합니다. 이 메서드는 내부적으로 GetValue를 호출 하 고 오류를 확인 하지 않습니다. Getvalue가 실패 하는 경우 반환 되는 값 또는 SetDefaultValue 생성자에서 이전에 설정한 기본값을 포함 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Provides conversion between CAnimationValue and INT32. This method internally calls GetValue and doesn't check for errors. If GetValue fails, the returned value will contain a default value previously set in constructor or with SetDefaultValue.  
   
-##  <a name="operator_eq"></a>CAnimationValue::operator =  
- CAnimationValue에 DOUBLE 값을 할당합니다.  
+##  <a name="operator_eq"></a>  CAnimationValue::operator=  
+ Assigns a DOUBLE value to CAnimationValue.  
   
 ```  
 void operator=(DOUBLE dblVal);  
 void operator=(INT32 nVal);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dblVal`  
- 애니메이션 값에 할당할 값을 지정 합니다.  
+ Specifies the value to be assigned to Animation Value.  
   
  `nVal`  
- 애니메이션 값에 할당할 값을 지정 합니다.  
+ Specifies the value to be assigned to Animation Value.  
   
-### <a name="remarks"></a>주의  
- CAnimationValue에 DOUBLE 값을 할당합니다. 이 값은 캡슐화 된 애니메이션 변수를 기본값으로 설정 됩니다. 이 애니메이션 개체 (ValueChanged 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Assigns a DOUBLE value to CAnimationValue. This value is set as a default value for encapsulated animation variable. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
- 기본값을 설정합니다.  
+##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue  
+ Sets default value.  
   
 ```  
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dblDefaultValue`  
- 기본값을 지정합니다.  
+ Specifies the default value.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 기본값을 설정 합니다. 애니메이션 시작 되지 않은 및/또는 기본 COM 개체 생성 되지 않은 경우 기본값은 응용 프로그램에 반환 됩니다. CAnimationVarible에 캡슐화 하는 기본 COM 개체를 이미 만든 경우이 메서드를 다시 만드는 것, 따라서 EnableValueChanged/EnableIntegerValueChanged 메서드를 다시 호출 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set a default value. A default value is returned to application when animation has not been started and/or underlying COM object has not been created. If the underlying COM object encapsulated in CAnimationVarible was already created, this method recreates it, therefore you might need to call EnableValueChanged/EnableIntegerValueChanged methods again.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

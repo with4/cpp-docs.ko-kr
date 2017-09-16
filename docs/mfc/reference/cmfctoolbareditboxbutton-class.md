@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolBarEditBoxButton 클래스 | Microsoft Docs"
+title: CMFCToolBarEditBoxButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,12 +37,29 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarEditBoxButton class
-- SetACCData method
-- OnCalculateSize method
-- OnDraw method
-- OnDrawOnCustomizeList method
-- Serialize method
+- CMFCToolBarEditBoxButton [MFC], CMFCToolBarEditBoxButton
+- CMFCToolBarEditBoxButton [MFC], CanBeStretched
+- CMFCToolBarEditBoxButton [MFC], CopyFrom
+- CMFCToolBarEditBoxButton [MFC], GetByCmd
+- CMFCToolBarEditBoxButton [MFC], GetContentsAll
+- CMFCToolBarEditBoxButton [MFC], GetContextMenuID
+- CMFCToolBarEditBoxButton [MFC], GetEditBorder
+- CMFCToolBarEditBoxButton [MFC], GetHwnd
+- CMFCToolBarEditBoxButton [MFC], GetInvalidateRect
+- CMFCToolBarEditBoxButton [MFC], HaveHotBorder
+- CMFCToolBarEditBoxButton [MFC], IsFlatMode
+- CMFCToolBarEditBoxButton [MFC], NotifyCommand
+- CMFCToolBarEditBoxButton [MFC], OnAddToCustomizePage
+- CMFCToolBarEditBoxButton [MFC], OnChangeParentWnd
+- CMFCToolBarEditBoxButton [MFC], OnClick
+- CMFCToolBarEditBoxButton [MFC], OnCtlColor
+- CMFCToolBarEditBoxButton [MFC], OnGlobalFontsChanged
+- CMFCToolBarEditBoxButton [MFC], OnMove
+- CMFCToolBarEditBoxButton [MFC], OnShow
+- CMFCToolBarEditBoxButton [MFC], OnSize
+- CMFCToolBarEditBoxButton [MFC], OnUpdateToolTip
+- CMFCToolBarEditBoxButton [MFC], SetContextMenuID
+- CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
 caps.latest.revision: 28
 author: mikeblome
@@ -62,111 +79,111 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4334dfc7074cd55173af15cc1fab59882c9e8e6c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1010e4bd7c7fc015fb27cbb61e814f652d2dfc23
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 클래스
-편집 컨트롤을 포함 하는 도구 모음 단추 ( [CEdit 클래스](../../mfc/reference/cedit-class.md)).  
+# <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton Class
+A toolbar button that contains an edit control ( [CEdit Class](../../mfc/reference/cedit-class.md)).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarEditBoxButton : public CMFCToolBarButton  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton](#cmfctoolbareditboxbutton)|`CMFCToolBarEditBoxButton` 개체를 생성합니다.|  
-|`CMFCToolBarEditBoxButton::~CMFCToolBarEditBoxButton`|소멸자|  
+|[CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton](#cmfctoolbareditboxbutton)|Constructs a `CMFCToolBarEditBoxButton` object.|  
+|`CMFCToolBarEditBoxButton::~CMFCToolBarEditBoxButton`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarEditBoxButton::CanBeStretched](#canbestretched)|사용자 지정 하는 동안 사용자의 단추를 늘릴 수 있는지 여부를 지정 합니다. (재정의 [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|  
-|[CMFCToolBarEditBoxButton::CopyFrom](#copyfrom)|도구 모음 단추 속성은 현재 단추에 복사합니다. (재정의 [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::CreateEdit](#createedit)|단추에 새 편집 컨트롤을 만듭니다.|  
-|`CMFCToolBarEditBoxButton::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|[CMFCToolBarEditBoxButton::GetByCmd](#getbycmd)|첫 번째 검색 `CMFCToolBarEditBoxButton` 지정한 명령 id입니다. 응용 프로그램의 개체|  
-|[CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall)|지정 된 명령 id입니다. 있는 첫 번째 편집 상자 도구 모음 컨트롤의 텍스트를 검색 합니다.|  
-|[CMFCToolBarEditBoxButton::GetContextMenuID](#getcontextmenuid)|단추와 연결 된 바로 가기 메뉴의 리소스 ID를 검색 합니다.|  
-|[CMFCToolBarEditBoxButton::GetEditBorder](#geteditborder)|편집 상자 단추의 편집 부분 경계 사각형을 검색 합니다.|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::GetEditBox](#geteditbox)|단추에 포함 된 편집 컨트롤에 대 한 포인터를 반환 합니다.|  
-|[CMFCToolBarEditBoxButton::GetHwnd](#gethwnd)|도구 모음 단추와 연결 된 창 핸들을 검색 합니다. (재정의 [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
-|[CMFCToolBarEditBoxButton::GetInvalidateRect](#getinvalidaterect)|영역 다시 그려야 하는 단추의 클라이언트 영역을 검색 합니다. (재정의 [CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect).)|  
-|`CMFCToolBarEditBoxButton::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에서는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식과 연결 된 개체입니다.|  
-|[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|사용자가 단추를 클릭 하는 경우 단추의 테두리 표시 되는지 여부를 결정 합니다. (재정의 [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
-|[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|편집 상자 단추 평면 스타일 있는지 확인 합니다.|  
-|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|단추를 처리 하는 지 여부를 지정 된 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 메시지입니다. (재정의 [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
-|[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|단추에 추가 되는 프레임 워크에서 호출 된 **사용자 지정** 대화 상자. (재정의 [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
-|`CMFCToolBarEditBoxButton::OnCalculateSize`|지정 된 장치 컨텍스트와 도킹 상태에 대 한 단추 크기를 계산 하기 위해 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|새 도구 모음에 단추를 삽입할 때 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
-|[CMFCToolBarEditBoxButton::OnClick](#onclick)|사용자가 마우스 단추를 클릭할 때 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|부모 도구 모음에서 처리 될 때 프레임 워크에서 호출 된 `WM_CTLCOLOR` 메시지입니다. (재정의 [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
-|`CMFCToolBarEditBoxButton::OnDraw`|지정 된 스타일 및 옵션을 사용 하 여 단추를 그리기 위해 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
-|`CMFCToolBarEditBoxButton::OnDrawOnCustomizeList`|단추를 그리기 위해 프레임 워크에서 호출 된 **명령을** 의 창은 **사용자 지정** 대화 상자. (재정의 [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
-|[CMFCToolBarEditBoxButton::OnGlobalFontsChanged](#onglobalfontschanged)|전역 글꼴 변경 될 때 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
-|[CMFCToolBarEditBoxButton::OnMove](#onmove)|부모 도구 모음에서 이동 하면 프레임 워크에서 호출 합니다. (재정의 [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove).)|  
-|[CMFCToolBarEditBoxButton::OnShow](#onshow)|프레임 워크에서 때 호출 단추 수 표시 하거나 숨깁니다. (재정의 [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow).)|  
-|[CMFCToolBarEditBoxButton::OnSize](#onsize)|부모 도구 모음에서 해당 크기를 변경 합니다. 또는 위치 및 이러한 변경 하면 크기를 변경 하려면 단추가 때 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|  
-|[CMFCToolBarEditBoxButton::OnUpdateToolTip](#onupdatetooltip)|부모 도구 모음에서 도구 설명 텍스트를 업데이트 하는 경우 프레임 워크에서 호출 됩니다. (재정의 [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|  
-|`CMFCToolBarEditBoxButton::Serialize`|보관 파일에서이 개체를 읽거나 보관 파일에 씁니다. (재정의 [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
-|`CMFCToolBarEditBoxButton::SetACCData`|제공 된 정보를 표시 `CAccessibilityData` 도구 모음 단추에서 내게 필요한 옵션 데이터와 개체입니다. (재정의 [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::SetContents](#setcontents)|단추의 edit 컨트롤의 텍스트를 설정합니다.|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall)|지정한 명령 ID가 되 고 해당 단추의 편집 컨트롤의 텍스트는 편집 컨트롤 단추를 찾습니다.|  
-|[CMFCToolBarEditBoxButton::SetContextMenuID](#setcontextmenuid)|단추와 연결 된 바로 가기 메뉴의 리소스 ID를 지정 합니다.|  
-|[CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)|응용 프로그램의 편집 상자 단추의 평면 스타일 모양을 지정합니다.|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::SetStyle](#setstyle)|단추 스타일을 지정합니다. (재정의 [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle).)|  
+|[CMFCToolBarEditBoxButton::CanBeStretched](#canbestretched)|Specifies whether a user can stretch the button during customization. (Overrides [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|  
+|[CMFCToolBarEditBoxButton::CopyFrom](#copyfrom)|Copies the properties of another toolbar button to the current button. (Overrides [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::CreateEdit](#createedit)|Creates a new edit control in the button.|  
+|`CMFCToolBarEditBoxButton::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCToolBarEditBoxButton::GetByCmd](#getbycmd)|Retrieves the first `CMFCToolBarEditBoxButton` object in the application that has the specified command ID.|  
+|[CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall)|Retrieves the text of the first edit box toolbar control that has the specified command ID.|  
+|[CMFCToolBarEditBoxButton::GetContextMenuID](#getcontextmenuid)|Retrieves the resource ID of the shortcut menu that is associated with the button.|  
+|[CMFCToolBarEditBoxButton::GetEditBorder](#geteditborder)|Retrieves the bounding rectangle of the edit part of the edit box button.|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::GetEditBox](#geteditbox)|Returns a pointer to the edit control that is embedded in the button.|  
+|[CMFCToolBarEditBoxButton::GetHwnd](#gethwnd)|Retrieves the window handle that is associated with the toolbar button. (Overrides [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
+|[CMFCToolBarEditBoxButton::GetInvalidateRect](#getinvalidaterect)|Retrieves the region of the client area of the button that must be redrawn. (Overrides [CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect).)|  
+|`CMFCToolBarEditBoxButton::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|Determines whether a border of the button is displayed when a user clicks the button. (Overrides [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
+|[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|Determines whether edit box buttons have a flat style.|  
+|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Specifies whether the button processes the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message. (Overrides [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|Called by the framework when the button is added to a **Customize** dialog box. (Overrides [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
+|`CMFCToolBarEditBoxButton::OnCalculateSize`|Called by the framework to calculate the size of the button for the specified device context and docking state. (Overrides [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
+|[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Called by the framework when the button is inserted into a new toolbar. (Overrides [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCToolBarEditBoxButton::OnClick](#onclick)|Called by the framework when the user clicks the mouse button. (Overrides [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
+|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|Called by the framework when the parent toolbar handles a `WM_CTLCOLOR` message. (Overrides [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
+|`CMFCToolBarEditBoxButton::OnDraw`|Called by the framework to draw the button by using the specified styles and options. (Overrides [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
+|`CMFCToolBarEditBoxButton::OnDrawOnCustomizeList`|Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box. (Overrides [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
+|[CMFCToolBarEditBoxButton::OnGlobalFontsChanged](#onglobalfontschanged)|Called by the framework when the global font has changed. (Overrides [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
+|[CMFCToolBarEditBoxButton::OnMove](#onmove)|Called by the framework when the parent toolbar moves. (Overrides [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove).)|  
+|[CMFCToolBarEditBoxButton::OnShow](#onshow)|Called by the framework when the button becomes visible or invisible. (Overrides [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow).)|  
+|[CMFCToolBarEditBoxButton::OnSize](#onsize)|Called by the framework when the parent toolbar changes its size or position and this change causes the button to change size. (Overrides [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|  
+|[CMFCToolBarEditBoxButton::OnUpdateToolTip](#onupdatetooltip)|Called by the framework when the parent toolbar updates its tooltip text. (Overrides [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|  
+|`CMFCToolBarEditBoxButton::Serialize`|Reads this object from an archive or writes it to an archive. (Overrides [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
+|`CMFCToolBarEditBoxButton::SetACCData`|Populates the provided `CAccessibilityData` object with accessibility data from the toolbar button. (Overrides [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetContents](#setcontents)|Sets the text in the edit control of the button.|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall)|Finds the edit control button that has a specified command ID, and sets the text in the edit control of that button.|  
+|[CMFCToolBarEditBoxButton::SetContextMenuID](#setcontextmenuid)|Specifies the resource ID of the shortcut menu that is associated with the button.|  
+|[CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)|Specifies the flat style appearance of edit box buttons in the application.|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetStyle](#setstyle)|Specifies the style of the button. (Overrides [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle).)|  
   
-## <a name="remarks"></a>설명  
- 편집 상자 단추를 도구 모음을 추가 하려면 다음이 단계를 수행 합니다.  
+## <a name="remarks"></a>Remarks  
+ To add an edit box button to a toolbar, follow these steps:  
   
- 1. 부모 도구 모음 리소스의 단추에 대한 더미 리소스 ID를 예약합니다.  
+ 1. Reserve a dummy resource ID for the button in the parent toolbar resource.  
   
- 2. 생성 된 `CMFCToolBarEditBoxButton` 개체입니다.  
+ 2. Construct a `CMFCToolBarEditBoxButton` object.  
   
- 3. 처리 하는 메시지 처리기에는 `AFX_WM_RESETTOOLBAR` 메시지를 사용 하 여 새 콤보 상자 단추 더미 단추 바꿉니다 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)합니다.  
+ 3. In the message handler that processes the `AFX_WM_RESETTOOLBAR` message, replace the dummy button with the new combo box button by using [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
- 자세한 내용은 참조 [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)합니다.  
+ For more information, see [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `CMFCToolBarEditBoxButton` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 지정 하는 사용자 수 단추 사용자 지정 하는 동안, 단추를 누를 때 단추의 테두리 표시 되도록 지정, 텍스트 상자 컨트롤의 텍스트를 설정, 응용 프로그램에서 편집 상자 단추의 평면 스타일 모양을 지정 늘어나고 편집 상자 도구 모음 컨트롤의 스타일을 지정 하는 방법을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCToolBarEditBoxButton` class. The example shows how to specify that a user can stretch the button during customization, specify that a border of the button is displayed when a user clicks the button, set the text in the text box control, specify the flat style appearance of edit box buttons in the application, and specify the style of a toolbar edit box control.  
   
- [!code-cpp[NVC_MFC_RibbonApp # 40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
  `CMFCToolBarEditBoxButton` 
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtoolbareditboxbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbareditboxbutton.h  
   
-##  <a name="canbestretched"></a>CMFCToolBarEditBoxButton::CanBeStretched  
- 사용자 지정 하는 동안 사용자의 단추를 늘릴 수 있는지 여부를 지정 합니다.  
+##  <a name="canbestretched"></a>  CMFCToolBarEditBoxButton::CanBeStretched  
+ Specifies whether a user can stretch the button during customization.  
   
 ```  
 virtual BOOL CanBeStretched() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드는 `TRUE`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 프레임 워크에는 사용자를 사용자 지정 하는 동안 도구 모음 단추를 늘이는 허용 되지 않습니다. 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) 하 여 사용자가 사용자 지정 하는 동안 편집 상자 도구 모음 단추를 늘릴 수 있도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default, the framework does not allow the user to stretch a toolbar button during customization. This method extends the base class implementation ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) by allowing the user to stretch an edit box toolbar button during customization.  
   
-##  <a name="cmfctoolbareditboxbutton"></a>CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton  
- 생성 된 [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) 개체입니다.  
+##  <a name="cmfctoolbareditboxbutton"></a>  CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton  
+ Constructs a [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) object.  
   
 ```  
 CMFCToolBarEditBoxButton(
@@ -176,42 +193,42 @@ CMFCToolBarEditBoxButton(
     int iWidth=0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 컨트롤 ID를 지정 합니다.  
+ Specifies the control ID.  
   
  [in] `iImage`  
- 도구 모음 이미지의 0부터 시작 인덱스를 지정합니다. 이미지에는 [CMFCToolBarImages 클래스](../../mfc/reference/cmfctoolbarimages-class.md) 개체를 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md) 클래스를 유지 관리 합니다.  
+ Specifies the zero-based index of a toolbar image. The image is located in the [CMFCToolBarImages Class](../../mfc/reference/cmfctoolbarimages-class.md) object that [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md) class maintains.  
   
  [in] `dwStyle`  
- 편집 컨트롤의 스타일을 지정합니다.  
+ Specifies the edit control style.  
   
  [in] `iWidth`  
- 편집 컨트롤의 픽셀에서 너비를 지정합니다.  
+ Specifies the width in pixels of the edit control.  
   
-### <a name="remarks"></a>설명  
- 기본 생성자는 다음과 같은 상황에 편집 컨트롤의 스타일을 설정합니다.  
+### <a name="remarks"></a>Remarks  
+ The default constructor sets the edit control style to the following combination:  
   
  `WS_CHILD | WS_VISIBLE | ES_AUTOHSCROLL`  
   
- 컨트롤의 기본 너비는 150 픽셀입니다.  
+ The default width of the control is 150 pixels.  
   
-##  <a name="copyfrom"></a>CMFCToolBarEditBoxButton::CopyFrom  
- 도구 모음 단추 속성은 현재 단추에 복사합니다.  
+##  <a name="copyfrom"></a>  CMFCToolBarEditBoxButton::CopyFrom  
+ Copies the properties of another toolbar button to the current button.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 복사할 소스 단추에 대 한 참조입니다.  
+ A reference to the source button from which to copy.  
   
-### <a name="remarks"></a>주의  
- 이 도구 모음 단추를 도구 모음 단추 복사 하려면이 메서드를 호출 합니다. `src`형식 이어야 합니다 `CMFCToolBarEditBoxButton`합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this method to copy another toolbar button to this toolbar button. `src` must be of type `CMFCToolBarEditBoxButton`.  
   
-##  <a name="createedit"></a>CMFCToolBarEditBoxButton::CreateEdit  
- 단추에 새 편집 컨트롤을 만듭니다.  
+##  <a name="createedit"></a>  CMFCToolBarEditBoxButton::CreateEdit  
+ Creates a new edit control in the button.  
   
 ```  
 virtual CEdit* CreateEdit(
@@ -219,194 +236,194 @@ virtual CEdit* CreateEdit(
     const CRect& rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `[in] pWndParent`  
- 편집 컨트롤의 부모 창을 지정합니다. NULL이 아니어야 합니다.  
+ Specifies the parent window of the edit control. It must not be NULL.  
   
  `[in] rect`  
- 편집 컨트롤의 크기와 위치를 지정합니다.  
+ Specifies the edit control's size and position.  
   
-### <a name="return-value"></a>반환 값  
- 새로 만든된 편집 컨트롤에 대 한 포인터 `NULL` 컨트롤의 생성 및 첨부 파일 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created edit control; it is `NULL` if the control's creation and attachment fail.  
   
-### <a name="remarks"></a>주의  
- 생성할는 `CMFCToolBarEditBoxButton` 두 단계를 수행에서 하는 개체입니다. 먼저 생성자를 호출 하 고 다음 `CreateEdit`, Windows 편집 컨트롤을 만들고에 연결 하는 `CMFCToolBarEditBoxButton` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CMFCToolBarEditBoxButton` object in two steps. First call the constructor, and then call `CreateEdit`, which creates the Windows edit control and attaches it to the `CMFCToolBarEditBoxButton` object.  
   
-##  <a name="getbycmd"></a>CMFCToolBarEditBoxButton::GetByCmd  
- 첫 번째 검색 `CMFCToolBarEditBoxButton` 지정한 명령 id입니다. 응용 프로그램의 개체  
+##  <a name="getbycmd"></a>  CMFCToolBarEditBoxButton::GetByCmd  
+ Retrieves the first `CMFCToolBarEditBoxButton` object in the application that has the specified command ID.  
   
 ```  
 static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 검색할 단추의 명령 ID입니다.  
+ The command ID of the button to retrieve.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 `CMFCToolBarEditBoxButton` 지정한 명령 ID가 있는 응용 프로그램의 개체 또는 `NULL` 이러한 개체가 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ The first `CMFCToolBarEditBoxButton` object in the application that has the specified command ID, or `NULL` if no such object exists.  
   
-### <a name="remarks"></a>설명  
- 이 공유 유틸리티 메서드는 메서드에서 같은 [CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall) 및 [CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall) 있는 지정 된 명령 id입니다. 첫 번째 편집 상자 도구 모음 컨트롤의 텍스트를 가져오거나 설정 하려면  
+### <a name="remarks"></a>Remarks  
+ This shared utility method is used by methods such as [CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall) and [CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall) to set or get the text of the first edit box toolbar control that has the specified command ID.  
   
-##  <a name="getcontentsall"></a>CMFCToolBarEditBoxButton::GetContentsAll  
- 지정 된 명령 id입니다. 있는 첫 번째 편집 상자 도구 모음 컨트롤의 텍스트를 검색 합니다.  
+##  <a name="getcontentsall"></a>  CMFCToolBarEditBoxButton::GetContentsAll  
+ Retrieves the text of the first edit box toolbar control that has the specified command ID.  
   
 ```  
 static CString __stdcall GetContentsAll(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 내용을 검색할 단추의 명령 ID입니다.  
+ The command ID of the button from which to retrieve contents.  
   
-### <a name="return-value"></a>반환 값  
- A `CString` 있는 지정 된 명령 id입니다. 첫 번째 편집 상자 도구 모음 컨트롤의 텍스트가 포함 된 개체  
+### <a name="return-value"></a>Return Value  
+ A `CString` object that contains the text of the first edit box toolbar control that has the specified command ID.  
   
-### <a name="remarks"></a>주의  
- 이 이렇게 하지 않으면 빈 문자열을 반환 `CMFCToolBarEditBoxButton` 개체는 지정한 명령 id입니다.  
+### <a name="remarks"></a>Remarks  
+ This method returns the empty string if no `CMFCToolBarEditBoxButton` objects have the specified command ID.  
   
-##  <a name="getcontextmenuid"></a>CMFCToolBarEditBoxButton::GetContextMenuID  
- 단추와 연결 된 바로 가기 메뉴의 리소스 ID를 검색 합니다.  
+##  <a name="getcontextmenuid"></a>  CMFCToolBarEditBoxButton::GetContextMenuID  
+ Retrieves the resource ID of the shortcut menu that is associated with the button.  
   
 ```  
 UINT GetContextMenuID();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추에 연결 된 바로 가기 메뉴가 경우 0 또는 단추와 연결 된 바로 가기 메뉴의 리소스 ID입니다.  
+### <a name="return-value"></a>Return Value  
+ The resource ID of the shortcut menu that is associated with the button or 0 if the button has no associated shortcut menu.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크 리소스 ID를 사용 하 여 단추 마우스 바로 가기 메뉴를 만듭니다.  
+### <a name="remarks"></a>Remarks  
+ The framework uses the resource ID to create the shortcut menu when the user right-clicks on the button.  
   
-##  <a name="geteditborder"></a>CMFCToolBarEditBoxButton::GetEditBorder  
- 편집 상자 단추의 편집 부분 경계 사각형을 검색 합니다.  
+##  <a name="geteditborder"></a>  CMFCToolBarEditBoxButton::GetEditBorder  
+ Retrieves the bounding rectangle of the edit part of the edit box button.  
   
 ```  
 virtual void GetEditBorder(CRect& rectBorder);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `rectBorder`  
- 에 대 한 참조는 `CRect` 경계 사각형을 받는 개체입니다.  
+ A reference to the `CRect` object that receives the bounding rectangle.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 클라이언트 좌표로 편집 컨트롤의 경계 사각형을 검색합니다. 1 픽셀씩 각 방향에는 사각형의 크기를 확장합니다.  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the bounding rectangle of the edit control in client coordinates. It expands the size of the rectangle in each direction by one pixel.  
   
- [CMFCVisualManager::OnDrawEditBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondraweditborder) 주위에 테두리를 그릴 때이 메서드를 호출 메서드는 `CMFCToolBarEditBoxButton` 개체입니다.  
+ The [CMFCVisualManager::OnDrawEditBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondraweditborder) method calls this method when it draws the border around a `CMFCToolBarEditBoxButton` object.  
   
-##  <a name="geteditbox"></a>CMFCToolBarEditBoxButton::GetEditBox  
- 에 대 한 포인터를 반환 합니다.는 [CEdit 클래스](../../mfc/reference/cedit-class.md) 단추에 포함 된 컨트롤입니다.  
+##  <a name="geteditbox"></a>  CMFCToolBarEditBoxButton::GetEditBox  
+ Returns a pointer to the [CEdit Class](../../mfc/reference/cedit-class.md) control that is embedded in the button.  
   
 ```  
 CEdit* GetEditBox() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CEdit 클래스](../../mfc/reference/cedit-class.md) 단추가 포함 된 컨트롤입니다. `NULL` 경우는 `CEdit` 컨트롤 아직 생성 되지 않은 합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CEdit Class](../../mfc/reference/cedit-class.md) control that the button contains. It is `NULL` if the `CEdit` control has not been created yet.  
   
-### <a name="remarks"></a>주의  
- 만들는 `CEdit` 호출 하 여 컨트롤 [CMFCToolBarEditBoxButton::CreateEdit](#createedit)합니다.  
+### <a name="remarks"></a>Remarks  
+ You create the `CEdit` control by calling [CMFCToolBarEditBoxButton::CreateEdit](#createedit).  
   
-##  <a name="gethwnd"></a>CMFCToolBarEditBoxButton::GetHwnd  
- 도구 모음 단추와 연결 된 창 핸들을 검색 합니다.  
+##  <a name="gethwnd"></a>  CMFCToolBarEditBoxButton::GetHwnd  
+ Retrieves the window handle that is associated with the toolbar button.  
   
 ```  
 virtual HWND GetHwnd();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추와 연결 된 창 핸들입니다.  
+### <a name="return-value"></a>Return Value  
+ The window handle that is associated with the button.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 재정의 [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) 편집 상자 단추 편집 컨트롤 파트의 창 핸들을 반환 하 여 메서드.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) method by returning the window handle of the edit control part of the edit box button.  
   
-##  <a name="getinvalidaterect"></a>CMFCToolBarEditBoxButton::GetInvalidateRect  
- 영역 다시 그려야 하는 단추의 클라이언트 영역을 검색 합니다.  
+##  <a name="getinvalidaterect"></a>  CMFCToolBarEditBoxButton::GetInvalidateRect  
+ Retrieves the region of the client area of the button that must be redrawn.  
   
 ```  
 virtual const CRect GetInvalidateRect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CRect` 다시 그려야 하는 지역을 지정 하는 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A `CRect` object that specifies the region that must be redrawn.  
   
-### <a name="remarks"></a>설명  
- 이 메서드가 기본 클래스 구현을 확장 [CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect), 텍스트 레이블 영역 지역에 포함 하 여 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect), by including in the region the area of the text label.  
   
-##  <a name="havehotborder"></a>CMFCToolBarEditBoxButton::HaveHotBorder  
- 사용자가 단추를 클릭 하는 경우 단추의 테두리 표시 되는지 여부를 결정 합니다.  
+##  <a name="havehotborder"></a>  CMFCToolBarEditBoxButton::HaveHotBorder  
+ Determines whether a border of the button is displayed when a user clicks the button.  
   
 ```  
 virtual BOOL HaveHotBorder() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추를 선택 하는 경우의 테두리를 표시 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a button displays its border when selected; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 이 메서드가 기본 클래스 구현을 확장 [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder), 컨트롤이 표시 되는 경우 0이 아닌 값을 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder), by returning a nonzero value if the control is visible.  
   
-##  <a name="isflatmode"></a>CMFCToolBarEditBoxButton::IsFlatMode  
- 편집 상자 단추 평면 스타일 있는지 확인 합니다.  
+##  <a name="isflatmode"></a>  CMFCToolBarEditBoxButton::IsFlatMode  
+ Determines whether edit box buttons have a flat style.  
   
 ```  
 static BOOL __stdcall IsFlatMode();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 단추 평면 스타일; 있으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the buttons have a flat style; otherwise, 0.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 편집 상자 단추 평면 스타일을 적용 합니다. 사용 하 여는 [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) 응용 프로그램에 대 한 평면 스타일 모양을 변경 하는 메서드.  
+### <a name="remarks"></a>Remarks  
+ By default, edit box buttons have a flat style. Use the [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) method to change the flat style appearance for your application.  
   
-##  <a name="notifycommand"></a>CMFCToolBarEditBoxButton::NotifyCommand  
- 단추를 처리 하는 지 여부를 지정 된 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 메시지입니다.  
+##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
+ Specifies whether the button processes the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iNotifyCode`  
- 명령과 사용 하 여 연결 된 알림 메시지입니다.  
+ The notification message that is associated with the command.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`단추를 처리 하는 경우는 `WM_COMMAND` 메시지 또는 `FALSE` 를 나타내는 부모 도구 모음에서 메시지를 처리할 수 있어야 합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button processes the `WM_COMMAND` message, or `FALSE` to indicate that the message must be handled by the parent toolbar.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크를 보낼 때이 메서드를 호출는 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 메시지를 부모 창입니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it is about to send a [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message to the parent window.  
   
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 처리 하 여는 [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687) 알림입니다. 이 개체와 동일한 명령 ID 가진 각 편집 상자에 대 한이 개체의 텍스트 레이블을에 텍스트 레이블을 설정합니다.  
+ This method extends the base class implementation ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) by processing the [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687) notification. For each edit box with the same command ID as this object, it sets its text label to the text label of this object.  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarEditBoxButton::OnAddToCustomizePage  
- 단추에 추가 되는 프레임 워크에서 호출 된 **사용자 지정** 대화 상자.  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarEditBoxButton::OnAddToCustomizePage  
+ Called by the framework when the button is added to a **Customize** dialog box.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage))이이 개체와 같은 명령 ID가 있는 모든 도구 모음에서 편집 상자 컨트롤에서 속성을 복사 하 여 합니다. 없는 도구 모음에 있는이 개체와 같은 명령 ID는 편집 상자 컨트롤 하는 경우이 메서드는 아무 작업도 수행 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage)) by copying the properties from the edit box control in any toolbar that has the same command ID as this object. This method does nothing if no toolbar has an edit box control that has the same command ID as this object.  
   
- 에 대 한 자세한 내용은 **사용자 지정** 대화 상자, 참조 [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)합니다.  
+ For more information about the **Customize** dialog box, see [CMFCToolBarsCustomizeDialog Class](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarEditBoxButton::OnChangeParentWnd  
- 새 도구 모음에 단추를 삽입할 때 프레임 워크에서 호출 됩니다.  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarEditBoxButton::OnChangeParentWnd  
+ Called by the framework when the button is inserted into a new toolbar.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 새 부모 창에 대 한 포인터입니다.  
+ A pointer to the new parent window.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 기본 클래스 구현을 재정의 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 내부 다시 만들어 `CEdit` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) by recreating the internal `CEdit` object.  
   
-##  <a name="onclick"></a>CMFCToolBarEditBoxButton::OnClick  
- 사용자가 마우스 단추를 클릭할 때 프레임 워크에서 호출 됩니다.  
+##  <a name="onclick"></a>  CMFCToolBarEditBoxButton::OnClick  
+ Called by the framework when the user clicks the mouse button.  
   
 ```  
 virtual BOOL OnClick(
@@ -414,21 +431,21 @@ virtual BOOL OnClick(
     BOOL bDelay = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 사용되지 않습니다.  
+ Unused.  
   
  [in] `bDelay`  
- 사용되지 않습니다.  
+ Unused.  
   
-### <a name="return-value"></a>반환 값  
- 단추 클릭 하 여 메시지를 처리 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button processes the click message; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 재정의 ( [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)) 하는 경우 0이 아닌 값을 반환 하 여 내부 `CEdit` 개체가 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation ( [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)) by returning a nonzero value if the internal `CEdit` object is visible.  
   
-##  <a name="onctlcolor"></a>CMFCToolBarEditBoxButton::OnCtlColor  
- 부모 도구 모음에서 처리 될 때 프레임 워크에서 호출 된 `WM_CTLCOLOR` 메시지입니다.  
+##  <a name="onctlcolor"></a>  CMFCToolBarEditBoxButton::OnCtlColor  
+ Called by the framework when the parent toolbar handles a `WM_CTLCOLOR` message.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -436,73 +453,73 @@ virtual HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 단추를 표시 하는 장치 컨텍스트.  
+ The device context that displays the button.  
   
  [in] `nCtlColor`  
- 사용되지 않습니다.  
+ Unused.  
   
-### <a name="return-value"></a>반환 값  
- 전역 창 브러시에 사용 되는 핸들입니다.  
+### <a name="return-value"></a>Return Value  
+ A handle to the global window brush.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 재정의 ( [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)) 전체 텍스트 및 배경색을 하는 텍스트 색과 배경색의 제공 된 장치 컨텍스트를 각각 설정 하 여 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation ( [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)) by setting the text and background colors of the provided device context to the global text and background colors, respectively.  
   
- 응용 프로그램에 사용할 수 있는 전역 옵션에 대 한 자세한 내용은 참조 [AFX_GLOBAL_DATA 구조체](../../mfc/reference/afx-global-data-structure.md)합니다.  
+ For more information about global options that are available to your application, see [AFX_GLOBAL_DATA Structure](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarEditBoxButton::OnGlobalFontsChanged  
- 전역 글꼴 변경 될 때 프레임 워크에서 호출 됩니다.  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarEditBoxButton::OnGlobalFontsChanged  
+ Called by the framework when the global font has changed.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) 글로벌 글꼴의 컨트롤의 글꼴을 변경 하 여 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) by changing the font of the control to that of the global font.  
   
- 응용 프로그램에 사용할 수 있는 전역 옵션에 대 한 자세한 내용은 참조 [AFX_GLOBAL_DATA 구조체](../../mfc/reference/afx-global-data-structure.md)합니다.  
+ For more information about global options that are available to your application, see [AFX_GLOBAL_DATA Structure](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="onmove"></a>CMFCToolBarEditBoxButton::OnMove  
- 부모 도구 모음에서 이동 하면 프레임 워크에서 호출 합니다.  
+##  <a name="onmove"></a>  CMFCToolBarEditBoxButton::OnMove  
+ Called by the framework when the parent toolbar moves.  
   
 ```  
 virtual void OnMove();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 재정의 ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove))의 내부 위치를 업데이트 하 여 `CEdit` 개체  
+### <a name="remarks"></a>Remarks  
+ This method overrides the default class implementation ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) by updating the position of the internal `CEdit` object  
   
-##  <a name="onshow"></a>CMFCToolBarEditBoxButton::OnShow  
- 프레임 워크에서 때 호출 단추 수 표시 하거나 숨깁니다.  
+##  <a name="onshow"></a>  CMFCToolBarEditBoxButton::OnShow  
+ Called by the framework when the button becomes visible or invisible.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 단추가 표시 되는지 여부를 지정 합니다. 이 매개 변수가 `TRUE`, 단추가 표시 됩니다. 그렇지 않으면 단추가 표시 되지 않습니다.  
+ Specifies whether the button is visible. If this parameter is `TRUE`, the button is visible. Otherwise, the button is not visible.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 하는 경우에 단추를 표시 하 여 `bShow` 은 `TRUE`합니다. 그렇지 않으면이 메서드는 단추를 숨깁니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) by displaying the button if `bShow` is `TRUE`. Otherwise, this method hides the button.  
   
-##  <a name="onsize"></a>CMFCToolBarEditBoxButton::OnSize  
- 부모 도구 모음에서 해당 크기를 변경 합니다. 또는 위치 및 이러한 변경 하면 크기를 변경 하려면 단추가 때 프레임 워크에서 호출 됩니다.  
+##  <a name="onsize"></a>  CMFCToolBarEditBoxButton::OnSize  
+ Called by the framework when the parent toolbar changes its size or position and this change causes the button to change size.  
   
 ```  
 virtual void OnSize(int iSize);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iSize`  
- 새 너비 (픽셀)에서 단추입니다.  
+ The new width of the button, in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 기본 클래스 구현을 재정의 [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize), 크기 및 위치는 내부 업데이트 하 여 `CEdit` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the default class implementation, [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize), by updating the size and position of the internal `CEdit` object.  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarEditBoxButton::OnUpdateToolTip  
- 부모 도구 모음에서 도구 설명 텍스트를 업데이트 하는 경우 프레임 워크에서 호출 됩니다.  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarEditBoxButton::OnUpdateToolTip  
+ Called by the framework when the parent toolbar updates its tooltip text.  
   
 ```  
 virtual BOOL OnUpdateToolTip(
@@ -512,38 +529,38 @@ virtual BOOL OnUpdateToolTip(
     CString& str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 사용되지 않습니다.  
+ Unused.  
   
  [in] `iButtonIndex`  
- 사용되지 않습니다.  
+ Unused.  
   
  [in] `wndToolTip`  
- 도구 설명 텍스트를 표시 하는 컨트롤입니다.  
+ The control that displays the tooltip text.  
   
  [out] `str`  
- A `CString` 업데이트 된 도구 설명 텍스트를 받는 개체입니다.  
+ A `CString` object that receives the updated tooltip text.  
   
-### <a name="return-value"></a>반환 값  
- 도구 설명 텍스트; 업데이트 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method updates the tooltip text; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) 단추의 편집 부분에 연관 된 도구 설명 텍스트를 표시 하 여 합니다. 경우 내부 `CEdit` 개체가 `NULL` 의 창 핸들 또는 `CEdit` 개체가 기존 창 식별 하지 않습니다,이 메서드는 아무 작업도 수행 하 고 반환 `FALSE`합니다.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) by displaying the tooltip text that is associated with the edit part of the button. If the internal `CEdit` object is `NULL` or the window handle of the `CEdit` object does not identify an existing window, this method does nothing and returns `FALSE`.  
   
-##  <a name="setcontents"></a>CMFCToolBarEditBoxButton::SetContents  
- 텍스트 상자 컨트롤에서 텍스트를 설정 합니다.  
+##  <a name="setcontents"></a>  CMFCToolBarEditBoxButton::SetContents  
+ Sets the text in the text box control.  
   
 ```  
 virtual void SetContents(const CString& sContents);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `[in] sContents`  
- 설정할 새 텍스트를 지정 합니다.  
+ Specifies the new text to set.  
   
-##  <a name="setcontentsall"></a>CMFCToolBarEditBoxButton::SetContentsAll  
- 발견 한 [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) 가지고 있는 개체 ID를 지정 된 명령을 해당 텍스트 상자에 지정된 된 텍스트를 설정 합니다.  
+##  <a name="setcontentsall"></a>  CMFCToolBarEditBoxButton::SetContentsAll  
+ Finds a [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) object that has a specified command ID and sets the specified text within its text box.  
   
 ```  
 static BOOL SetContentsAll(
@@ -551,65 +568,65 @@ static BOOL SetContentsAll(
     const CString& strContents);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 텍스트를 변경할 수는 컨트롤의 명령 ID를 지정 합니다.  
+ Specifies the command ID of the control for which the text will be changed.  
   
  [in] `strContents`  
- 설정할 새 텍스트를 지정 합니다.  
+ Specifies the new text to set.  
   
-### <a name="return-value"></a>반환 값  
- 텍스트 설정 되었으면 0이 아닌 인 경우 0은 `CMFCToolBarEditBoxButton` 지정한 명령 ID 가진 컨트롤 존재 하지 않습니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the text was set; 0 if the `CMFCToolBarEditBoxButton` control with the specified command ID does not exist.  
   
-##  <a name="setcontextmenuid"></a>CMFCToolBarEditBoxButton::SetContextMenuID  
- 단추와 연결 된 바로 가기 메뉴의 리소스 ID를 지정 합니다.  
+##  <a name="setcontextmenuid"></a>  CMFCToolBarEditBoxButton::SetContextMenuID  
+ Specifies the resource ID of the shortcut menu that is associated with the button.  
   
 ```  
 void SetContextMenuID(UINT uiResID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 바로 가기 메뉴의 리소스 ID입니다.  
+ The resource ID of the shortcut menu.  
   
-### <a name="remarks"></a>설명  
- 프레임 워크 리소스 ID를 사용 하 여 도구 모음 단추를 클릭할 때 바로 가기 메뉴를 만듭니다.  
+### <a name="remarks"></a>Remarks  
+ The framework uses the resource ID to create the shortcut menu when the user right-clicks the toolbar button.  
   
-##  <a name="setflatmode"></a>CMFCToolBarEditBoxButton::SetFlatMode  
- 응용 프로그램의 편집 상자 단추의 평면 스타일 모양을 지정합니다.  
+##  <a name="setflatmode"></a>  CMFCToolBarEditBoxButton::SetFlatMode  
+ Specifies the flat style appearance of edit box buttons in the application.  
   
 ```  
 static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bFlat`  
- 편집 상자 단추에 대 한 기본 스타일입니다. 이 매개 변수가 `TRUE`, 평면 스타일 모양을 사용할 수 있습니다; 그렇지 않으면 평면 스타일 모양을 사용 불가능 합니다.  
+ The flat style for edit box buttons. If this parameter is `TRUE`, the flat style appearance is enabled; otherwise the flat style appearance is disabled.  
   
-### <a name="remarks"></a>설명  
- 편집 상자 단추에 대 한 기본 플랫 스타일은 `TRUE`합니다. 사용 하 여는 [CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode) 평면 스타일 모양을 응용 프로그램에 대 한를 검색 하는 메서드입니다.  
+### <a name="remarks"></a>Remarks  
+ The default flat style for edit box buttons is `TRUE`. Use the [CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode) method to retrieve the flat style appearance for your application.  
   
-##  <a name="setstyle"></a>CMFCToolBarEditBoxButton::SetStyle  
- 도구 모음 스타일 편집 상자 컨트롤을 지정 합니다.  
+##  <a name="setstyle"></a>  CMFCToolBarEditBoxButton::SetStyle  
+ Specifies the style of a toolbar edit box control.  
   
 ```  
 virtual void SetStyle(UINT nStyle);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nStyle`  
- 설정할 새 스타일입니다.  
+ A new style to set.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 설정 [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) 를 `nStyle` 응용 프로그램 사용자 지정 모드에는 응용 프로그램 사용자 지정 모드에 있지 않은 경우 사용 하도록 설정 하는 경우 텍스트 상자 비활성화 (참조 [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) 및 [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). 참조 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md) 유효한 스타일 플래그 목록은 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sets [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) to `nStyle` It also disables the text box when the application is in Customize mode, and enables it when the application is not in Customize mode (see [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) and [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). See [ToolBar Control Styles](../../mfc/reference/toolbar-control-styles.md) for a list of valid style flags.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [CEdit 클래스](../../mfc/reference/cedit-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

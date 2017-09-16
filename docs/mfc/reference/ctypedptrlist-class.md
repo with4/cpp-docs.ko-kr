@@ -1,5 +1,5 @@
 ---
-title: "CTypedPtrList 클래스 | Microsoft 문서"
+title: CTypedPtrList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,12 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CTypedPtrList class
-- type-safe collections
-- lists [C++]
-- template classes, CTypedPtrList class
-- linked lists [C++]
-- pointer lists
+- CTypedPtrList [MFC], AddHead
+- CTypedPtrList [MFC], AddTail
+- CTypedPtrList [MFC], GetAt
+- CTypedPtrList [MFC], GetHead
+- CTypedPtrList [MFC], GetNext
+- CTypedPtrList [MFC], GetPrev
+- CTypedPtrList [MFC], GetTail
+- CTypedPtrList [MFC], RemoveHead
+- CTypedPtrList [MFC], RemoveTail
+- CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
 caps.latest.revision: 24
 author: mikeblome
@@ -49,315 +53,315 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ca8d868333aa977710e387fc1bb13271dc8f99fa
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c049f0d54e6a583e21af5f67d03f6b1373c1d915
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctypedptrlist-class"></a>CTypedPtrList 클래스
-클래스 `CPtrList`의 개체에 대한 형식 안전 "래퍼"를 제공합니다.  
+# <a name="ctypedptrlist-class"></a>CTypedPtrList Class
+Provides a type-safe "wrapper" for objects of class `CPtrList`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class BASE_CLASS, class TYPE>  
 class CTypedPtrList : public BASE_CLASS  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `BASE_CLASS`  
- 형식화 된 포인터 목록 클래스의 기본 클래스 포인터 목록 클래스 여야 합니다 ( `CObList` 또는 `CPtrList`).  
+ Base class of the typed pointer list class; must be a pointer list class ( `CObList` or `CPtrList`).  
   
  `TYPE`  
- 기본 클래스 목록에 저장 된 요소의 형식입니다.  
+ Type of the elements stored in the base-class list.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTypedPtrList::AddHead](#addhead)|(새 헤드는) 목록 헤드에 요소 (또는 다른 목록에 있는 모든 요소)를 추가 합니다.|  
-|[CTypedPtrList::AddTail](#addtail)|(새 비상 로그는) 목록의 끝에 요소 (또는 다른 목록에 있는 모든 요소)를 추가 합니다.|  
-|[CTypedPtrList::GetAt](#getat)|지정된 된 위치에 요소를 가져옵니다.|  
-|[CTypedPtrList::GetHead](#gethead)|목록 (비어 있을 수 없습니다)의 head 요소를 반환 합니다.|  
-|[CTypedPtrList::GetNext](#getnext)|반복에 대 한 다음 요소를 가져옵니다.|  
-|[CTypedPtrList::GetPrev](#getprev)|반복에 대 한 이전 요소를 가져옵니다.|  
-|[CTypedPtrList::GetTail](#gettail)|(비워 둘 수 없습니다) 목록의 꼬리 요소를 반환 합니다.|  
-|[CTypedPtrList::RemoveHead](#removehead)|목록의 시작에서 요소를 제거 합니다.|  
-|[CTypedPtrList::RemoveTail](#removetail)|목록 꼬리에서 요소를 제거 합니다.|  
-|[CTypedPtrList::SetAt](#setat)|지정된 된 위치에 요소를 설정 합니다.|  
+|[CTypedPtrList::AddHead](#addhead)|Adds an element (or all the elements in another list) to the head of the list (makes a new head).|  
+|[CTypedPtrList::AddTail](#addtail)|Adds an element (or all the elements in another list) to the tail of the list (makes a new tail).|  
+|[CTypedPtrList::GetAt](#getat)|Gets the element at a given position.|  
+|[CTypedPtrList::GetHead](#gethead)|Returns the head element of the list (cannot be empty).|  
+|[CTypedPtrList::GetNext](#getnext)|Gets the next element for iterating.|  
+|[CTypedPtrList::GetPrev](#getprev)|Gets the previous element for iterating.|  
+|[CTypedPtrList::GetTail](#gettail)|Returns the tail element of the list (cannot be empty).|  
+|[CTypedPtrList::RemoveHead](#removehead)|Removes the element from the head of the list.|  
+|[CTypedPtrList::RemoveTail](#removetail)|Removes the element from the tail of the list.|  
+|[CTypedPtrList::SetAt](#setat)|Sets the element at a given position.|  
   
-## <a name="remarks"></a>주의  
- 사용 하는 경우 `CTypedPtrList` 대신 `CObList` 또는 `CPtrList`, c + + 형식 검사 기능에 짝이 맞지 않는 포인터 형식으로 인 한 오류를 제거 하는 데 도움이 됩니다.  
+## <a name="remarks"></a>Remarks  
+ When you use `CTypedPtrList` rather than `CObList` or `CPtrList`, the C++ type-checking facility helps eliminate errors caused by mismatched pointer types.  
   
- 또한는 `CTypedPtrList` 많이 사용 하는 경우 필요할 수 캐스팅을 수행 하는 래퍼 `CObList` 또는 `CPtrList`합니다.  
+ In addition, the `CTypedPtrList` wrapper performs much of the casting that would be required if you used `CObList` or `CPtrList`.  
   
- 때문에 모든 `CTypedPtrList` 함수는 인라인, 크기 또는 코드의 속도이 템플릿을 사용 하 여 크게 적용 되지 않습니다.  
+ Because all `CTypedPtrList` functions are inline, use of this template does not significantly affect the size or speed of your code.  
   
- 목록에서 파생 된 `CObList` 를 serialize 할 수 있지만 파생 된 `CPtrList` 수 없습니다.  
+ Lists derived from `CObList` can be serialized, but those derived from `CPtrList` cannot.  
   
- `CTypedPtrList` 개체를 삭제하거나 해당 요소를 제거할 경우 참조하는 엔터티가 아니라 포인터만 제거됩니다.  
+ When a `CTypedPtrList` object is deleted, or when its elements are removed, only the pointers are removed, not the entities they reference.  
   
- 사용 하 여 대 한 자세한 내용은 `CTypedPtrList`, 문서를 참조 [컬렉션](../../mfc/collections.md) 및 [템플릿 기반 클래스](../../mfc/template-based-classes.md)합니다.  
+ For more information on using `CTypedPtrList`, see the articles [Collections](../../mfc/collections.md) and [Template-Based Classes](../../mfc/template-based-classes.md).  
   
-## <a name="example"></a>예제  
- 이 예의 인스턴스를 만들고 `CTypedPtrList`, 하나의 개체 추가, 목록을 디스크에 serialize 하 고 다음 개체를 삭제 합니다.  
+## <a name="example"></a>Example  
+ This example creates an instance of `CTypedPtrList`, adds one object, serializes the list to disk, and then deletes the object:  
   
- [!code-cpp[NVC_MFCCollections #&110;](../../mfc/codesnippet/cpp/ctypedptrlist-class_1.cpp)]  
+ [!code-cpp[NVC_MFCCollections#110](../../mfc/codesnippet/cpp/ctypedptrlist-class_1.cpp)]  
   
- [!code-cpp[NVC_MFCCollections #&111;](../../mfc/codesnippet/cpp/ctypedptrlist-class_2.cpp)]  
+ [!code-cpp[NVC_MFCCollections#111](../../mfc/codesnippet/cpp/ctypedptrlist-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `BASE_CLASS`  
   
  `_CTypedPtrList`  
   
  `CTypedPtrList`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: AddHead**합니다.  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
+ This member function calls `BASE_CLASS`**::AddHead**.  
   
 ```  
 POSITION AddHead(TYPE newElement);  
 void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 기본 클래스 목록에 저장 된 요소의 형식입니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Type of the elements stored in the base-class list.  
   
  `newElement`  
- 이 목록에 추가할 개체 포인터입니다. A **NULL** 값은 사용할 수 있습니다.  
+ The object pointer to be added to this list. A **NULL** value is allowed.  
   
  `BASE_CLASS`  
- 형식화 된 포인터 목록 클래스의 기본 클래스 포인터 목록 클래스 여야 합니다 ( [CObList](../../mfc/reference/coblist-class.md) 또는 [해당 클래스가](../../mfc/reference/cptrlist-class.md)).  
+ Base class of the typed pointer list class; must be a pointer list class ( [CObList](../../mfc/reference/coblist-class.md) or [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
  `pNewList`  
- 에 대 한 포인터를 다른 [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) 개체입니다. 요소 `pNewList` 이 목록에 추가 됩니다.  
+ A pointer to another [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) object. The elements in `pNewList` will be added to this list.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 버전은 반환 된 **위치** 새로 삽입된 된 요소의 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The first version returns the **POSITION** value of the newly inserted element.  
   
-### <a name="remarks"></a>주의  
- 목록의 시작 하기 전에 새 요소를 추가 하는 첫 번째 버전입니다. 두 번째 버전에는 다른 머리 앞에 요소 목록을 추가합니다.  
+### <a name="remarks"></a>Remarks  
+ The first version adds a new element before the head of the list. The second version adds another list of elements before the head.  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: AddTail**합니다.  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
+ This member function calls `BASE_CLASS`**::AddTail**.  
   
 ```  
 POSITION AddTail(TYPE newElement);  
 void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 기본 클래스 목록에 저장 된 요소의 형식입니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Type of the elements stored in the base-class list.  
   
  `newElement`  
- 이 목록에 추가할 개체 포인터입니다. A **NULL** 값은 사용할 수 있습니다.  
+ The object pointer to be added to this list. A **NULL** value is allowed.  
   
  `BASE_CLASS`  
- 형식화 된 포인터 목록 클래스의 기본 클래스 포인터 목록 클래스 여야 합니다 ( [CObList](../../mfc/reference/coblist-class.md) 또는 [해당 클래스가](../../mfc/reference/cptrlist-class.md)).  
+ Base class of the typed pointer list class; must be a pointer list class ( [CObList](../../mfc/reference/coblist-class.md) or [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
  `pNewList`  
- 에 대 한 포인터를 다른 [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) 개체입니다. 요소 `pNewList` 이 목록에 추가 됩니다.  
+ A pointer to another [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) object. The elements in `pNewList` will be added to this list.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 버전은 반환 된 **위치** 새로 삽입된 된 요소의 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The first version returns the **POSITION** value of the newly inserted element.  
   
-### <a name="remarks"></a>주의  
- 첫 번째 버전 목록 꼬리 후 새 요소를 추가 합니다. 두 번째 버전 목록 꼬리 후 다른 목록 요소를 추가합니다.  
+### <a name="remarks"></a>Remarks  
+ The first version adds a new element after the tail of the list. The second version adds another list of elements after the tail of the list.  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
- 형식의 변수 **위치** 목록에 대 한 키입니다.  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
+ A variable of type **POSITION** is a key for the list.  
   
 ```  
 TYPE& GetAt(POSITION position);  
 TYPE GetAt(POSITION position) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수 목록에 저장 된 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
- *위치*  
- A **위치** 이전에서 반환 된 값 `GetHeadPosition` 또는 **찾을** 멤버 함수 호출 합니다.  
+ *position*  
+ A **POSITION** value returned by a previous `GetHeadPosition` or **Find** member function call.  
   
-### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetAt` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 함수는 대입문의 오른쪽에만 사용할 수 있으며 이므로 목록 수정 되지 않도록에서 보호 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetAt` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- 목록에 대 한 포인터를 통해 또는 직접 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetAt` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 합니다. *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetAt` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>주의  
- 작업할 수 없습니다.와 인덱스를 동일 하지 않으며는 **위치** 직접 값입니다. `GetAt`검색 된 `CObject` 지정된 된 위치와 연결 된 포인터입니다.  
+### <a name="remarks"></a>Remarks  
+ It is not the same as an index, and you cannot operate on a **POSITION** value yourself. `GetAt` retrieves the `CObject` pointer associated with a given position.  
   
- 확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 올바르지 않을 경우 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- 이 인라인 함수를 호출 `BASE_CLASS` **:: GetAt**합니다.  
+ This inline function calls `BASE_CLASS`**::GetAt**.  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
- 이 그룹의 head 요소를 나타내는 포인터를 가져옵니다.  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
+ Gets the pointer that represents the head element of this list.  
   
 ```  
 TYPE& GetHead();  
 TYPE GetHead() const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수 목록에 저장 된 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
-### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetHead` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 함수는 대입문의 오른쪽에만 사용할 수 있으며 이므로 목록 수정 되지 않도록에서 보호 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetHead` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- 목록에 대 한 포인터를 통해 또는 직접 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetHead` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 합니다. *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetHead` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>주의  
- 목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetHead`합니다. 목록이 비어 있으면 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 요소는 목록에 포함 되어 있는지 확인 합니다.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `GetHead`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) to verify that the list contains elements.  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
- 로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 다음 항목의 값입니다.  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
+ Gets the list element identified by `rPosition`, then sets `rPosition` to the **POSITION** value of the next entry in the list.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
 TYPE GetNext(POSITION& rPosition) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수를이 목록에 포함 된 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements contained in this list.  
   
  `rPosition`  
- 에 대 한 참조는 **위치** 이전에서 반환 된 값 `GetNext`, `GetHeadPosition`, 또는 기타 멤버 함수 호출 합니다.  
+ A reference to a **POSITION** value returned by a previous `GetNext`, `GetHeadPosition`, or other member function call.  
   
-### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetNext` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 함수는 대입문의 오른쪽에만 사용할 수 있으며 이므로 목록 수정 되지 않도록에서 보호 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetNext` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- 목록에 대 한 포인터를 통해 또는 직접 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetNext` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 합니다. *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetNext` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>주의  
- 사용할 수 있습니다 `GetNext` 정방향 반복 루프를 호출 하 여 초기 위치를 설정 하는 경우에 `GetHeadPosition` 또는 [CPtrList::Find](../../mfc/reference/coblist-class.md#find)합니다.  
+### <a name="remarks"></a>Remarks  
+ You can use `GetNext` in a forward iteration loop if you establish the initial position with a call to `GetHeadPosition` or [CPtrList::Find](../../mfc/reference/coblist-class.md#find).  
   
- 확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 올바르지 않을 경우 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- 검색 된 요소가 있으면 목록에서 마지막 다음의 새 값 `rPosition` 로 설정 된 **NULL**합니다.  
+ If the retrieved element is the last in the list, then the new value of `rPosition` is set to **NULL**.  
   
- 반복 하는 동안 요소를 제거 하는 것이 불가능 합니다. 예를 참조 [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)합니다.  
+ It is possible to remove an element during an iteration. See the example for [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
- 로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 이전 항목의 값입니다.  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
+ Gets the list element identified by `rPosition`, then sets `rPosition` to the **POSITION** value of the previous entry in the list.  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
 TYPE GetPrev(POSITION& rPosition) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수를이 목록에 포함 된 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements contained in this list.  
   
  `rPosition`  
- 에 대 한 참조는 **위치** 이전에서 반환 된 값 `GetPrev` 또는 다른 멤버 함수 호출 합니다.  
+ A reference to a **POSITION** value returned by a previous `GetPrev` or other member function call.  
   
-### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetPrev` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 함수는 대입문의 오른쪽에만 사용할 수 있으며 이므로 목록 수정 되지 않도록에서 보호 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetPrev` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- 목록에 대 한 포인터를 통해 또는 직접 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetPrev` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 합니다. *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetPrev` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>주의  
- 사용할 수 있습니다 `GetPrev` 를 호출 하 여 초기 위치를 설정 하는 경우 역방향 반복 루프에서 `GetTailPosition` 또는 **찾을**합니다.  
+### <a name="remarks"></a>Remarks  
+ You can use `GetPrev` in a reverse iteration loop if you establish the initial position with a call to `GetTailPosition` or **Find**.  
   
- 확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 올바르지 않을 경우 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- 검색 된 요소가 있으면 목록에서 첫 번째 다음의 새 값 `rPosition` 로 설정 된 **NULL**합니다.  
+ If the retrieved element is the first in the list, then the new value of `rPosition` is set to **NULL**.  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
- 이 그룹의 head 요소를 나타내는 포인터를 가져옵니다.  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
+ Gets the pointer that represents the head element of this list.  
   
 ```  
 TYPE& GetTail();  
 TYPE GetTail() const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수 목록에 저장 된 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
-### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetTail` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 함수는 대입문의 오른쪽에만 사용할 수 있으며 이므로 목록 수정 되지 않도록에서 보호 합니다.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetTail` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- 목록에 대 한 포인터를 통해 또는 직접 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetTail` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 합니다. *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetTail` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>주의  
- 목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetTail`합니다. 목록이 비어 있으면 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 요소는 목록에 포함 되어 있는지 확인 합니다.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `GetTail`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) to verify that the list contains elements.  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
- 목록의 시작에서 요소를 제거 하 고 반환 합니다.  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
+ Removes the element from the head of the list and returns it.  
   
 ```  
 TYPE RemoveHead();
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수 목록에 저장 된 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
-### <a name="return-value"></a>반환 값  
- 목록 헤드에 이전에 대 한 포인터입니다. 이 포인터는 템플릿 매개 변수로 지정 된 형식의 *형식*합니다.  
+### <a name="return-value"></a>Return Value  
+ The pointer previously at the head of the list. This pointer is of the type specified by the template parameter *TYPE*.  
   
-### <a name="remarks"></a>주의  
- 목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveHead`합니다. 목록이 비어 있으면 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 요소는 목록에 포함 되어 있는지 확인 합니다.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `RemoveHead`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) to verify that the list contains elements.  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
- 목록 꼬리에서 요소를 제거 하 고 반환 합니다.  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
+ Removes the element from the tail of the list and returns it.  
   
 ```  
 TYPE RemoveTail();
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수 목록에 저장 된 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
-### <a name="return-value"></a>반환 값  
- 목록의 끝에 이전에 대 한 포인터입니다. 이 포인터는 템플릿 매개 변수로 지정 된 형식의 *형식*합니다.  
+### <a name="return-value"></a>Return Value  
+ The pointer previously at the tail of the list. This pointer is of the type specified by the template parameter *TYPE*.  
   
-### <a name="remarks"></a>주의  
- 목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveTail`합니다. 목록이 비어 있으면 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 요소는 목록에 포함 되어 있는지 확인 합니다.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `RemoveTail`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) to verify that the list contains elements.  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: SetAt**합니다.  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
+ This member function calls `BASE_CLASS`**::SetAt**.  
   
 ```  
 void SetAt(POSITION pos, TYPE newElement);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pos`  
- **위치** 설정할 요소입니다.  
+ The **POSITION** of the element to be set.  
   
- *형식*  
- 기본 클래스 목록에 저장 된 요소의 형식입니다.  
+ *TYPE*  
+ Type of the elements stored in the base-class list.  
   
  `newElement`  
- 목록에 쓸 개체 포인터입니다.  
+ The object pointer to be written to the list.  
   
-### <a name="remarks"></a>주의  
- 형식의 변수 **위치** 목록에 대 한 키입니다. 작업할 수 없습니다.와 인덱스를 동일 하지 않으며는 **위치** 직접 값입니다. `SetAt`목록에서 지정된 된 위치에 개체 포인터를 씁니다.  
+### <a name="remarks"></a>Remarks  
+ A variable of type **POSITION** is a key for the list. It is not the same as an index, and you cannot operate on a **POSITION** value yourself. `SetAt` writes the object pointer to the specified position in the list.  
   
- 확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 올바르지 않을 경우 Microsoft Foundation 클래스 라이브러리의 디버그 버전 어설션 합니다.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- 에 대 한 자세한 설명 부분 참조 [CObList::SetAt](../../mfc/reference/coblist-class.md#setat)합니다.  
+ For more detailed remarks, see [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플을 수집](../../visual-cpp-samples.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [해당 클래스가 클래스](../../mfc/reference/cptrlist-class.md)   
- [CObList 클래스](../../mfc/reference/coblist-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CPtrList Class](../../mfc/reference/cptrlist-class.md)   
+ [CObList Class](../../mfc/reference/coblist-class.md)
 

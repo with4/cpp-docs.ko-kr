@@ -1,5 +1,5 @@
 ---
-title: "리플 렉 트 된 메시지에 대 한 메시지 처리기 정의 | Microsoft 문서"
+title: Defining a Message Handler for a Reflected Message | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- messages, reflected
-- message handling, reflected messages
+- messages [MFC], reflected
+- message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
 caps.latest.revision: 9
 author: mikeblome
@@ -34,52 +34,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0033c75d351aa201a0c18e81395d764b9d45761b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e7a447048143d175e143a3e9c3072c844194bf8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="defining-a-message-handler-for-a-reflected-message"></a>리플렉트된 메시지의 메시지 처리기 정의
-새 MFC 컨트롤 클래스를 만든 후에 대 한 메시지 처리기를 정의할 수 있습니다. 리플 렉 트 된 메시지 처리기는 부모에 의해 메시지를 수신 하기 전에 자체 메시지를 처리 하 여 컨트롤 클래스를 허용 합니다. MFC를 사용할 수 있습니다 [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) 제어에서 부모 창에 메시지를 보내는 함수입니다.  
+# <a name="defining-a-message-handler-for-a-reflected-message"></a>Defining a Message Handler for a Reflected Message
+Once you have created a new MFC control class, you can define message handlers for it. Reflected message handlers allow your control class to handle its own messages before the message is received by the parent. You can use the MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) function to send messages from your control to a parent window.  
   
- 예를 들어 해도이 기능을 사용 하 여 자체는 다시 그리게 하는 목록 상자를 만들 의존 하기 보다는 (소유자 그리기)를 위해 부모 창에 있습니다. 리플 렉 트 된 메시지에 대 한 자세한 내용은 참조 하십시오. [리플렉션된 메시지 처리](../../mfc/handling-reflected-messages.md)합니다.  
+ With this functionality you could, for example, create a list box that will redraw itself rather than relying on the parent window to do so (owner drawn). For more information on reflected messages, see [Handling Reflected Messages](../../mfc/handling-reflected-messages.md).  
   
- 만들려는 [ActiveX 컨트롤](../../mfc/activex-controls-on-the-internet.md) 같은 기능을 갖춘 ActiveX 컨트롤에 대 한 프로젝트를 만들어야 합니다.  
+ To create an [ActiveX control](../../mfc/activex-controls-on-the-internet.md) with the same functionality, you must create a project for the ActiveX control.  
   
 > [!NOTE]
->  리플 렉 트 된 메시지를 추가할 수 없습니다 (OCM_*메시지*) ActiveX 제어 속성 창을 사용 하 여 아래에서 설명 합니다. 이러한 메시지는 수동으로 추가 해야 합니다.  
+>  You cannot add a reflected message (OCM_*Message*) for an ActiveX control using the Properties window, as described below. You must add these messages manually.  
   
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>속성 창에서 리플 렉 트 된 메시지에 대 한 메시지 처리기를 정의 하려면  
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>To define a message handler for a reflected message from the Properties window  
   
-1.  예: 목록 컨트롤, rebar 컨트롤, 도구 모음 또는 트리 컨트롤을 MFC 프로젝트에 추가 합니다.  
+1.  Add a control, such as a list, a rebar control, a toolbar, or a tree control, to your MFC project.  
   
-2.  클래스 뷰의 컨트롤 클래스의 이름을 클릭 합니다.  
+2.  In Class View, click the name of your control class.  
   
-3.  에 [속성 창](/visualstudio/ide/reference/properties-window)에 컨트롤 클래스 이름이 표시는 **클래스 이름** 목록입니다.  
+3.  In the [Properties window](/visualstudio/ide/reference/properties-window), the control class name appears in the **Class Name** list.  
   
-4.  클릭 된 **메시지** 단추 컨트롤에 추가할 수 있는 Windows 메시지를 표시 합니다.  
+4.  Click the **Messages** button to display the Windows messages available to add to the control.  
   
-5.  머리글 표시 될 때까지 속성 창에 있는 메시지의 목록 아래로 스크롤하여 **리플렉션**합니다. 또는 클릭 하 고는 **범주** 단추는 뷰 참조를 축소 하는 **리플렉션** 제목입니다.  
+5.  Scroll down the list of messages in the Properties window until you see the heading **Reflected**. Alternately, click the **Categories** button and collapse the view to see the **Reflected** heading.  
   
-6.  리플 렉 트 된 메시지 처리기를 정의 하려면 선택 합니다. 리플 렉 트 된 메시지는 등호 (=)로 표시 됩니다.  
+6.  Select the reflected message for which you want to define a handler. Reflected messages are marked with an equal sign (=).  
   
-7.  처리기로의 제안된 된 이름을 표시 하려면 속성 창의 오른쪽 열에서 셀을 클릭 \<추가 >*HandlerName*합니다. (예를 들어는 **WM_CTLCOLOR =** 메시지 처리기 제안 \<추가 >**CtlColor**).  
+7.  Click the cell in the right column in the Properties window to display the suggested name of the handler as \<add>*HandlerName*. (For example, the **=WM_CTLCOLOR** message handler suggests \<add>**CtlColor**).  
   
-8.  제안된 된 이름을 수락을 클릭 합니다. 처리기는 프로젝트에 추가 됩니다.  
+8.  Click the suggested name to accept. The handler is added to your project.  
   
-     리플 렉 트 된 메시지 창의 오른쪽 열에 추가 된 메시지 처리기 이름이 나타납니다.  
+     Message handler names that you have added appear in the right column of the reflected messages window.  
   
-9. 를 편집 하거나 메시지 처리기를 삭제 하려면 4-7 단계를 반복 합니다. 편집 또는 삭제 및 적절 한 작업을 클릭 하 고 처리기 이름을 포함 하는 셀을 클릭 합니다.  
+9. To edit or delete a message handler, repeat steps 4 through 7. Click the cell containing the handler name to edit or delete and click the appropriate task.  
   
-## <a name="see-also"></a>참고 항목  
- [함수에 메시지 매핑](../../mfc/reference/mapping-messages-to-functions.md)   
- [코드 마법사로 기능 추가](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [클래스 추가](../../ide/adding-a-class-visual-cpp.md)   
- [멤버 함수 추가](../../ide/adding-a-member-function-visual-cpp.md)   
- [멤버 변수 추가](../../ide/adding-a-member-variable-visual-cpp.md)   
- [가상 함수 재정의](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC 메시지 처리기](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [클래스 구조 탐색](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

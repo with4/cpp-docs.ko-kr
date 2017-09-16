@@ -1,5 +1,5 @@
 ---
-title: "CMiniFrameWnd 클래스 | Microsoft Docs"
+title: CMiniFrameWnd Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMiniFrameWnd class
-- mini-frame windows
-- toolbars [C++]
+- CMiniFrameWnd [MFC], CMiniFrameWnd
+- CMiniFrameWnd [MFC], Create
+- CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
 caps.latest.revision: 21
 author: mikeblome
@@ -39,45 +39,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7a7119a7317e8837c7ce672b2607a4e37b5239f5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7191683a95253c2a1eb0d8ed49552b5d2e507894
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cminiframewnd-class"></a>CMiniFrameWnd 클래스
-일반적으로 부동 도구 모음에 있는 절반 높이의 프레임 창을 나타냅니다.  
+# <a name="cminiframewnd-class"></a>CMiniFrameWnd Class
+Represents a half-height frame window typically seen around floating toolbars.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMiniFrameWnd : public CFrameWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|`CMiniFrameWnd` 개체를 생성합니다.|  
+|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Constructs a `CMiniFrameWnd` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMiniFrameWnd::Create](#create)|만듭니다는 `CMiniFrameWnd` 생성 한 후 개체입니다.|  
-|[CMiniFrameWnd::CreateEx](#createex)|만듭니다는 `CMiniFrameWnd` 생성 한 후 (추가 옵션이 포함 된) 개체입니다.|  
+|[CMiniFrameWnd::Create](#create)|Creates a `CMiniFrameWnd` object after construction.|  
+|[CMiniFrameWnd::CreateEx](#createex)|Creates a `CMiniFrameWnd` object (with additional options) after construction.|  
   
-## <a name="remarks"></a>주의  
- 이러한 미니 프레임 창을 제외 하 고 최대화/최소화 단추를 갖지 않습니다 또는 메뉴만 있는 경우 한 번 클릭을 해제 하려면 시스템 메뉴의 기본 프레임 창 처럼 동작 합니다.  
+## <a name="remarks"></a>Remarks  
+ These mini-frame windows behave like normal frame windows, except that they do not have minimize/maximize buttons or menus and you only have to single-click on the system menu to dismiss them.  
   
- 사용 하는 `CMiniFrameWnd` 개체, 개체를 먼저 정의 합니다. 그런 다음 호출에서 [만들기](#create) 미니 프레임 창을 표시 하려면 멤버 함수입니다.  
+ To use a `CMiniFrameWnd` object, first define the object. Then call the [Create](#create) member function to display the mini-frame window.  
   
- 사용 하는 방법에 대 한 자세한 내용은 `CMiniFrameWnd` 개체, 문서를 참조 하십시오. [도킹 및 부동 도구 모음](../../mfc/docking-and-floating-toolbars.md)합니다.  
+ For more information on how to use `CMiniFrameWnd` objects, see the article [Docking and Floating Toolbars](../../mfc/docking-and-floating-toolbars.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,21 +88,21 @@ class CMiniFrameWnd : public CFrameWnd
   
  `CMiniFrameWnd`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
- 생성 된 `CMiniFrameWnd` 개체 되지만 창이 되지는 않습니다.  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
+ Constructs a `CMiniFrameWnd` object, but does not create the window.  
   
 ```  
 CMiniFrameWnd();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출 하는 창을 만들기 위해 [CMiniFrameWnd::Create](#create)합니다.  
+### <a name="remarks"></a>Remarks  
+ To create the window, call [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
- Windows 미니 프레임 창을 만들고에 연결 된 `CMiniFrameWnd` 개체입니다.  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
+ Creates the Windows mini-frame window and attaches it to the `CMiniFrameWnd` object.  
   
 ```  
 virtual BOOL Create(
@@ -114,58 +114,57 @@ virtual BOOL Create(
     UINT nID = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpClassName`  
- Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 클래스 이름은 전역에 등록 되는 이름 수 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 함수입니다. 경우 **NULL**, 창 클래스를 프레임 워크에 의해 등록 됩니다. MFC는 다음과 같은 스타일과 특성 클래스는 기본 클래스를 제공합니다.  
+ Points to a null-terminated character string that names the Windows class. The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function. If **NULL**, the window class will be registered for you by the framework. MFC gives the default class the following styles and attributes:  
   
--   집합에 비트 스타일 **CS_DBLCLKS**, 어떤 보냅니다 마우스를 두 번 클릭할 때 메시지 창 프로시저를 두 번 클릭 합니다.  
+-   Sets style bit **CS_DBLCLKS**, which sends double-click messages to the window procedure when the user double-clicks the mouse.  
   
--   집합에 비트 스타일 **CS_HREDRAW** 및 **CS_VREDRAW**, 창 크기가 변경 될 때 다시 그릴 클라이언트 영역의 내용을 직접입니다.  
+-   Sets style bits **CS_HREDRAW** and **CS_VREDRAW**, which direct the contents of the client area to be redrawn when the window changes size.  
   
--   Windows 표준 클래스 커서 설정 **IDC_ARROW**합니다.  
+-   Sets the class cursor to the Windows standard **IDC_ARROW**.  
   
--   클래스의 배경 브러시 설정 하는 **NULL**이므로 창 배경을 허무는 없습니다.  
+-   Sets the class background brush to **NULL**, so the window will not erase its background.  
   
--   클래스 아이콘 표준, 없어 플래그 Windows 로고 아이콘을 설정 합니다.  
+-   Sets the class icon to the standard, waving-flag Windows logo icon.  
   
--   Windows에서 표시 된 대로 창의 기본 크기 및 위치를 설정 합니다.  
+-   Sets the window to the default size and position, as indicated by Windows.  
   
  `lpWindowName`  
- 창 이름이 포함 된 null로 끝나는 문자열을 가리킵니다.  
+ Points to a null-terminated character string that contains the window name.  
   
  `dwStyle`  
- 창 스타일 특성을 지정합니다. 이러한 특수 스타일의 표준 창 스타일 및 하나 이상의 포함할 수 있습니다.  
+ Specifies the window style attributes. These can include standard window styles and one or more of the following special styles:  
   
-- **MFS_MOVEFRAME** 미니 프레임 창을 창의 캡션 뿐 아니라 모든 가장자리를 클릭 하 여 이동할 수 있습니다.  
+- **MFS_MOVEFRAME** Allows the mini-frame window to be moved by clicking on any edge of the window, not just the caption.  
   
-- **MFS_4THICKFRAME** 미니 프레임 창의 크기를 조정 하지 않도록 설정 합니다.  
+- **MFS_4THICKFRAME** Disables resizing of the mini-frame window.  
   
-- **MFS_SYNCACTIVE** 동기화를 부모 창의 정품 인증 미니 프레임 창 활성화 합니다.  
+- **MFS_SYNCACTIVE** Synchronizes the activation of the mini-frame window to the activation of its parent window.  
   
-- **MFS_THICKFRAME** 클라이언트 영역의 내용을 허용 작은 크기를 조정할 수 있는 미니 프레임 창을 수 있습니다.  
+- **MFS_THICKFRAME** Allows the mini-frame window to be sized as small as the contents of the client area allow.  
   
-- **MFS_BLOCKSYSMENU** 시스템 메뉴와 컨트롤 메뉴에 대 한 액세스를 비활성화 하 고 부분 (제목 표시줄)로 변환 합니다.  
+- **MFS_BLOCKSYSMENU** Disables access to the system menu and the control menu, and converts them to part of the caption (title bar).  
   
- 참조 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 에 대 한 설명은 가능한 창 스타일 값입니다. 미니 프레임 창에 사용 되는 일반적인 조합이 **WS_POPUP | WS_CAPTION | WS_SYSMENU**합니다.  
+ See [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of possible window style values. The typical combination used for mini-frame windows is **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
- A `RECT` 창의 원하는 크기를 지정 하는 구조입니다.  
+ A `RECT` structure specifying the desired dimensions of the window.  
   
  `pParentWnd`  
- 부모 창을 가리킵니다. 사용 하 여 **NULL** 최상위 창에 대 한 합니다.  
+ Points to the parent window. Use **NULL** for top-level windows.  
   
  `nID`  
- 이 자식 컨트롤의 식별자는 미니 프레임 창의 자식 창으로를 만든 경우 그렇지 않으면 0입니다.  
+ If the mini-frame window is created as a child window, this is the identifier of the child control; otherwise 0.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- **만들** 창 클래스 이름 및 창 이름을 초기화 하 고 해당 유형과 부모에 대 한 기본값을 등록 합니다.  
+### <a name="remarks"></a>Remarks  
+ **Create** initializes the window's class name and window name and registers default values for its style and parent.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
- 
-          `CMiniFrameWnd` 개체를 만듭니다.  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
+ Creates a `CMiniFrameWnd` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -178,48 +177,48 @@ virtual BOOL CreateEx(
     UINT nID = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 확장된 스타일을 지정 된 `CMiniFrameWnd` 만들려는 합니다. 적용 하는 [확장 창 스타일](../../mfc/reference/extended-window-styles.md) 창에 있습니다.  
+ Specifies the extended style of the `CMiniFrameWnd` being created. Apply any of the [extended window styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) to the window.  
   
  `lpClassName`  
- Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리키는 (한 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 구조). 클래스 이름은 전역에 등록 되는 이름 수 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 함수 또는 미리 정의 된 컨트롤 클래스 이름 중입니다. 않아야 **NULL**합니다.  
+ Points to a null-terminated character string that names the Windows class (a [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure). The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function or any of the predefined control-class names. It must not be **NULL**.  
   
  `lpWindowName`  
- 창 이름이 포함 된 null로 끝나는 문자열을 가리킵니다.  
+ Points to a null-terminated character string that contains the window name.  
   
  `dwStyle`  
- 창 스타일 특성을 지정합니다. 참조 [창 스타일](../../mfc/reference/window-styles.md) 및 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 에 대 한 설명은 사용할 수 있는 값입니다.  
+ Specifies the window style attributes. See [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of the possible values.  
   
  `rect`  
- 크기와의 클라이언트 좌표에서 창의 위치 `pParentWnd`합니다.  
+ The size and position of the window, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 부모 창 개체를 가리킵니다.  
+ Points to the parent window object.  
   
  `nID`  
- 자식 창의 식별자입니다.  
+ The identifier of the child window.  
   
-### <a name="return-value"></a>반환 값  
- 성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE on success, FALSE on failure.  
   
-### <a name="remarks"></a>설명  
- `CreateEx` 매개 변수에 지정 된 **WNDCLASS**, 창 스타일 (선택 사항) 초기 위치 및 창 크기입니다. `CreateEx`또한 창의 부모 (있는 경우) 및 ID를 지정  
+### <a name="remarks"></a>Remarks  
+ The `CreateEx` parameters specify the **WNDCLASS**, window style, and (optionally) initial position and size of the window. `CreateEx` also specifies the window's parent (if any) and ID.  
   
- 때 `CreateEx` 실행 되 면 Windows 보냅니다는 [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), 및 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) 메시지를 창.  
+ When `CreateEx` executes, Windows sends the [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) messages to the window.  
   
- 기본 메시지 처리를 확장 하려면에서 클래스를 파생 `CMiniFrameWnd`, 메시지 맵을 새 클래스에 추가 하 고 위의 메시지에 대 한 멤버 함수를 제공 합니다. 재정의 `OnCreate`, 예를 들어 새 클래스에 대 한 필요한 초기화를 수행 하도록 합니다.  
+ To extend the default message handling, derive a class from `CMiniFrameWnd`, add a message map to the new class, and provide member functions for the above messages. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- 더 이상 재정의 **에***메시지* 메시지 파생된 클래스에 추가 기능을 추가 하는 처리기.  
+ Override further **On***Message* message handlers to add further functionality to your derived class.  
   
- 경우는 **WS_VISIBLE** 스타일은 지정, Windows 창을 활성화 하 고 창을 표시 하는 데 필요한 모든 메시지를 보냅니다. 창 스타일 제목 표시줄을 지정 하는 경우 창 제목은 가리키는 `lpszWindowName` 매개 변수는 제목 표시줄에 표시 됩니다.  
+ If the **WS_VISIBLE** style is given, Windows sends the window all the messages required to activate and show the window. If the window style specifies a title bar, the window title pointed to by the `lpszWindowName` parameter is displayed in the title bar.  
   
- `dwStyle` 매개 변수의 조합이 포함 될 수 [창 스타일](../../mfc/reference/window-styles.md)합니다.  
+ The `dwStyle` parameter can be any combination of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- 이전 스타일 팔레트 도구 상자 창은 이상 지원 되지 않습니다. "X" 닫기 단추 없는 하는 이전 스타일 MFC 응용 프로그램에서 이전 버전의 Windows 실행 하는 경우 지원 되었습니다 있지만 더 이상 Visual c + +.NET에서 지원 됩니다. 만 새 `WS_EX_TOOLWINDOW` 스타일은 지원 되지 않으면이 스타일에 대 한 참조 [확장 창 스타일](../../mfc/reference/extended-window-styles.md)합니다.  
+ The old style Palette toolbox windows are no longer supported. The old style, which did not have an "X" Close button, was supported when running an MFC application on previous versions of Windows, but is no longer supported in Visual C++.NET. Only the new `WS_EX_TOOLWINDOW` style is now supported; for a description of this style, see [Extended Window Styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
-## <a name="see-also"></a>참고 항목  
- [CFrameWnd 클래스](../../mfc/reference/cframewnd-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CFrameWnd 클래스](../../mfc/reference/cframewnd-class.md)
+## <a name="see-also"></a>See Also  
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)
 

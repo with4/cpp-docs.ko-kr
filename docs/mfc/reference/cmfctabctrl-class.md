@@ -1,5 +1,5 @@
 ---
-title: "CMFCTabCtrl 클래스 | Microsoft 문서"
+title: CMFCTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -63,14 +63,55 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCTabCtrl::SwapTabs method
-- CMFCTabCtrl constructor
-- CMFCTabCtrl::MoveTab method
-- CMFCTabCtrl::GetTabFromPoint method
-- CMFCTabCtrl::PreTranslateMessage method
-- CMFCTabCtrl::RecalcLayout method
-- CMFCTabCtrl class
-- CMFCTabCtrl::IsPtInTabArea method
+- CMFCTabCtrl [MFC], ActivateMDITab
+- CMFCTabCtrl [MFC], AllowDestroyEmptyTabbedPane
+- CMFCTabCtrl [MFC], AutoSizeWindow
+- CMFCTabCtrl [MFC], CalcRectEdit
+- CMFCTabCtrl [MFC], Create
+- CMFCTabCtrl [MFC], EnableActiveTabCloseButton
+- CMFCTabCtrl [MFC], EnableInPlaceEdit
+- CMFCTabCtrl [MFC], EnableTabDocumentsMenu
+- CMFCTabCtrl [MFC], EnsureVisible
+- CMFCTabCtrl [MFC], GetDocumentIcon
+- CMFCTabCtrl [MFC], GetFirstVisibleTabNum
+- CMFCTabCtrl [MFC], GetResizeMode
+- CMFCTabCtrl [MFC], GetScrollBar
+- CMFCTabCtrl [MFC], GetTabArea
+- CMFCTabCtrl [MFC], GetTabMaxWidth
+- CMFCTabCtrl [MFC], GetTabsHeight
+- CMFCTabCtrl [MFC], GetTabsRect
+- CMFCTabCtrl [MFC], GetWndArea
+- CMFCTabCtrl [MFC], HideActiveWindowHorzScrollBar
+- CMFCTabCtrl [MFC], HideInactiveWindow
+- CMFCTabCtrl [MFC], HideNoTabs
+- CMFCTabCtrl [MFC], HideSingleTab
+- CMFCTabCtrl [MFC], IsActiveInMDITabGroup
+- CMFCTabCtrl [MFC], IsActiveTabBoldFont
+- CMFCTabCtrl [MFC], IsActiveTabCloseButton
+- CMFCTabCtrl [MFC], IsDrawFrame
+- CMFCTabCtrl [MFC], IsFlatFrame
+- CMFCTabCtrl [MFC], IsFlatTab
+- CMFCTabCtrl [MFC], IsLeftRightRounded
+- CMFCTabCtrl [MFC], IsMDITabGroup
+- CMFCTabCtrl [MFC], IsOneNoteStyle
+- CMFCTabCtrl [MFC], IsSharedScroll
+- CMFCTabCtrl [MFC], IsTabDocumentsMenu
+- CMFCTabCtrl [MFC], IsVS2005Style
+- CMFCTabCtrl [MFC], ModifyTabStyle
+- CMFCTabCtrl [MFC], OnDragEnter
+- CMFCTabCtrl [MFC], OnDragOver
+- CMFCTabCtrl [MFC], OnShowTabDocumentsMenu
+- CMFCTabCtrl [MFC], SetActiveInMDITabGroup
+- CMFCTabCtrl [MFC], SetActiveTab
+- CMFCTabCtrl [MFC], SetActiveTabBoldFont
+- CMFCTabCtrl [MFC], SetDrawFrame
+- CMFCTabCtrl [MFC], SetFlatFrame
+- CMFCTabCtrl [MFC], SetImageList
+- CMFCTabCtrl [MFC], SetResizeMode
+- CMFCTabCtrl [MFC], SetTabMaxWidth
+- CMFCTabCtrl [MFC], StopResize
+- CMFCTabCtrl [MFC], SynchronizeScrollBar
+- CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 caps.latest.revision: 33
 author: mikeblome
@@ -90,130 +131,130 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 595ff7fbcd55f3b756ce650e02b6247b898d7629
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 435157fe230a29763a6e068e72a2b4d668651fcc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
-`CMFCTabCtrl` 클래스 탭 컨트롤에 대 한 기능을 제공 합니다. 탭 컨트롤은 맨 위 또는 아래에 평면 또는&3;차원 탭이 포함된 도킹 가능한 창을 표시합니다. 탭은 텍스트와 이미지를 표시하고 활성화된 경우 색을 변경할 수 있습니다.  
+The `CMFCTabCtrl` class provides functionality for a tab control. The tab control displays a dockable window with flat or three-dimensional tabs at its top or bottom. The tabs can display text and an image and can change color when active.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCTabCtrl : public CMFCBaseTabCtrl  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCTabCtrl::CMFCTabCtrl`|기본 생성자입니다.|  
-|`CMFCTabCtrl::~CMFCTabCtrl`|소멸자|  
+|`CMFCTabCtrl::CMFCTabCtrl`|Default constructor.|  
+|`CMFCTabCtrl::~CMFCTabCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTabCtrl::ActivateMDITab](#activatemditab)|현재 탭 컨트롤의 지정 된 탭을 표시 하 고 해당 탭에 포커스를 설정 합니다.|  
+|[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Displays the specified tab of the current tab control and sets the focus on that tab.|  
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||  
-|[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|프레임 워크 창의 모든 탭 컨트롤 때 해당 탭 컨트롤의 사용자 인터페이스 요소 클라이언트 영역의 크기를 조정 하는지 여부를 지정 합니다.|  
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|지정 된 탭 영역의 크기를 압축 됩니다. (`CMFCBaseTabCtrl::CalcRectEdit`를 재정의합니다.)|  
-|[CMFCTabCtrl::Create](#create)|탭 컨트롤을 만들고 연결 하는 `CMFCTabCtrl` 개체입니다.|  
-|`CMFCTabCtrl::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|표시 하거나 닫기 단추를 숨깁니다 ( **X**) 활성 탭에 있습니다.|  
-|[CMFCTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|레이블 편집 가능한 탭을 사용 하지 않도록 설정 하거나 사용 합니다. (재정의 [CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|  
-|[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)|두 개의 단추를 탭 창 메뉴를 여는 단추와 창의 탭을 스크롤 하는 대체 합니다.|  
-|[CMFCTabCtrl::EnsureVisible](#ensurevisible)|탭에 표시 되는지 확인 합니다.|  
-|[CMFCTabCtrl::GetDocumentIcon](#getdocumenticon)|연결 탭 창 팝업 메뉴에 탭 된 기호를 검색 합니다.|  
-|[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|현재 탭 컨트롤에 표시 되는 첫 번째 탭의 인덱스를 검색 합니다.|  
-|[CMFCTabCtrl::GetResizeMode](#getresizemode)|현재 탭 컨트롤을 조정할 수 있는 방법을 지정 하는 값을 검색 합니다.|  
-|[CMFCTabCtrl::GetScrollBar](#getscrollbar)|탭 컨트롤에 연관 된 스크롤 막대 개체에 대 한 포인터를 검색 합니다.|  
-|[CMFCTabCtrl::GetTabArea](#gettabarea)|위쪽 또는 아래쪽의 탭 컨트롤의 탭 레이블 영역의 경계 사각형을 검색합니다. (재정의 [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|  
-|`CMFCTabCtrl::GetTabFromPoint`|지정된 된 지점에 포함 된 탭을 검색 합니다. (재정의 [CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|  
-|[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|탭의 최대 너비를 검색합니다.|  
-|[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|현재 탭 컨트롤의 탭 영역의 높이 검색합니다.|  
-|[CMFCTabCtrl::GetTabsRect](#gettabsrect)|현재 탭 컨트롤의 탭 영역 경계가 되는 사각형을 검색 합니다. (재정의 [CMFCBaseTabCtrl::GetTabsRect](../../mfc/reference/cmfcbasetabctrl-class.md#gettabsrect).)|  
-|`CMFCTabCtrl::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식으로 연결 된 개체입니다.|  
-|[CMFCTabCtrl::GetWndArea](#getwndarea)|현재 탭 컨트롤의 클라이언트 영역 경계를 검색합니다.|  
-|[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)|현재 창의 있는 경우 가로 스크롤 막대를 숨깁니다.|  
-|[CMFCTabCtrl::HideInactiveWindow](#hideinactivewindow)|프레임 워크 비활성 탭 컨트롤 창을 표시할 수 있는지 여부를 지정 합니다.|  
-|[CMFCTabCtrl::HideNoTabs](#hidenotabs)|사용 하거나 볼 수 있는 탭이 없을 경우 탭 영역 그리기를 사용 하지 않도록 설정 합니다.|  
-|[CMFCTabCtrl::HideSingleTab](#hidesingletab)|사용 하거나 단일 탭된 창 경우 탭 그리기를 사용 하지 않도록 설정 합니다. (재정의 [CMFCBaseTabCtrl::HideSingleTab](../../mfc/reference/cmfcbasetabctrl-class.md#hidesingletab).)|  
-|[CMFCTabCtrl::IsActiveInMDITabGroup](#isactiveinmditabgroup)|탭 컨트롤의 현재 탭 다중 문서 인터페이스 탭 그룹에서 활성 탭 여부를 나타냅니다.|  
-|[CMFCTabCtrl::IsActiveTabBoldFont](#isactivetabboldfont)|활성 탭의 텍스트가 굵은 글꼴을 사용 하 여 표시 되는지 여부를 나타냅니다.|  
-|[CMFCTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)|나타냅니다 여부 닫기 단추 ( **X**)는 활성 탭 또는 탭 영역의 오른쪽 위 모서리에 표시 됩니다.|  
-|[CMFCTabCtrl::IsDrawFrame](#isdrawframe)|탭된 창에 포함 된 창 주위 프레임 사각형 그릴지 여부를 나타냅니다.|  
-|[CMFCTabCtrl::IsFlatFrame](#isflatframe)|평면 또는 3D 탭 영역 주위의 프레임 인지를 나타냅니다.|  
-|[CMFCTabCtrl::IsFlatTab](#isflattab)|현재 탭 컨트롤의 탭의 모양 평평한 지 여부를 나타냅니다.|  
-|[CMFCTabCtrl::IsLeftRightRounded](#isleftrightrounded)|현재 탭 컨트롤의 탭의 왼쪽 및 오른쪽의 모양을 반올림 있는지 여부를 나타냅니다.|  
-|[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|현재 탭 컨트롤은 다중 문서 인터페이스 창의 클라이언트 영역에 포함 되어 있는지 여부를 나타냅니다.|  
-|[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)|Microsoft OneNote의 스타일에서 현재 탭 컨트롤을 표시할지 여부를 나타냅니다.|  
-|`CMFCTabCtrl::IsPtInTabArea`|영역 내부에 탭 지점을 인지 여부를 확인 합니다. (재정의 [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|  
-|[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|현재 탭 컨트롤에 탭 그룹으로 스크롤할 수 있는 스크롤 막대가 있는지 여부를 나타냅니다.|  
-|[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|탭 컨트롤에서 스크롤 단추 또는 탭 창 메뉴를 표시 하는 단추를 표시할지 여부를 나타냅니다.|  
-|[CMFCTabCtrl::IsVS2005Style](#isvs2005style)|Visual Studio.NET 2005의 스타일에서 탭 표시 되는지 여부를 나타냅니다.|  
-|[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|현재 탭 컨트롤의 탭의 모양을 지정합니다.|  
-|`CMFCTabCtrl::MoveTab`|다른 탭 위치 탭을 이동합니다. (재정의 [CMFCBaseTabCtrl::MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab).)|  
-|[CMFCTabCtrl::OnDragEnter](#ondragenter)|커서를 먼저 탭 컨트롤 창으로 끌 때에 프레임 워크에서 호출 합니다.|  
-|[CMFCTabCtrl::OnDragOver](#ondragover)|놓기 대상 창 위로 마우스를 이동할 때 프레임 워크에서 끌기 작업 중 호출. (재정의 [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
-|[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|사용자 탭을 선택 하 고 활성 탭 선택 된 탭을 사용 하면 될 때까지 대기, 탭 창 팝업 메뉴를 표시 합니다.|  
-|`CMFCTabCtrl::PreTranslateMessage`|창 메시지를 변환 하 여으로 디스패치 되기 전에 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 및 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수입니다. (재정의 [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
-|`CMFCTabCtrl::RecalcLayout`|탭 컨트롤의 내부 레이아웃이 다시 계산 됩니다. (재정의 [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
-|[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|탭 컨트롤의 현재 탭 다중 문서 인터페이스 탭 그룹에서 활성 탭으로 설정합니다.|  
-|[CMFCTabCtrl::SetActiveTab](#setactivetab)|탭을 활성화합니다. (재정의 [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
-|[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|활성 탭에 굵은 글꼴을 사용 하지 않도록 설정 하거나 사용 합니다.|  
-|[CMFCTabCtrl::SetDrawFrame](#setdrawframe)|사용 하거나 drawinga 프레임 사각형 있는 포함 된 막대를 사용 하지 않도록 설정 합니다.|  
-|[CMFCTabCtrl::SetFlatFrame](#setflatframe)|평면 또는 3D 프레임 탭 영역 주위에 그릴 것인지를 지정 합니다.|  
-|[CMFCTabCtrl::SetImageList](#setimagelist)|이미지 목록을 지정합니다. (재정의 [CMFCBaseTabCtrl::SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist).)|  
-|[CMFCTabCtrl::SetResizeMode](#setresizemode)|다음 컨트롤을 다시 표시 되 고 현재 탭 컨트롤을 조정할 수 있는 방법을 지정 합니다.|  
-|[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)|탭된 창에 최대 탭 너비를 지정합니다.|  
-|[CMFCTabCtrl::StopResize](#stopresize)|탭 컨트롤의 현재 크기 조정 작업을 종료합니다.|  
-|`CMFCTabCtrl::SwapTabs`|탭의 쌍을 바꿉니다. (재정의 [CMFCBaseTabCtrl::SwapTabs](../../mfc/reference/cmfcbasetabctrl-class.md#swaptabs).)|  
-|[CMFCTabCtrl::SynchronizeScrollBar](#synchronizescrollbar)|플랫 탭을 표시 하는 탭 컨트롤에 가로 스크롤 막대를 그립니다.|  
+|[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|Specifies whether the framework is to resize the client area of all tab control windows when a user interface element of the tab control changes.|  
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Deflates the size of the specified tab area. (Overrides `CMFCBaseTabCtrl::CalcRectEdit`.)|  
+|[CMFCTabCtrl::Create](#create)|Creates the tab control and attaches it to the `CMFCTabCtrl` object.|  
+|`CMFCTabCtrl::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|Shows or hides a Close button ( **X**) on the active tab.|  
+|[CMFCTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Enables or disables editable tab labels. (Overrides [CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|  
+|[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)|Replaces two buttons that scroll the window tabs with a button that opens a menu of tabbed windows.|  
+|[CMFCTabCtrl::EnsureVisible](#ensurevisible)|Ensures that a tab is visible.|  
+|[CMFCTabCtrl::GetDocumentIcon](#getdocumenticon)|Retrieves the symbol that is associated with a tab in a popup menu of tabbed windows.|  
+|[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|Retrieves the index of the first tab that is visible in the current tab control.|  
+|[CMFCTabCtrl::GetResizeMode](#getresizemode)|Retrieves a value that specifies how the current tab control can be resized.|  
+|[CMFCTabCtrl::GetScrollBar](#getscrollbar)|Retrieves a pointer to the scroll bar object that is associated with the tab control.|  
+|[CMFCTabCtrl::GetTabArea](#gettabarea)|Retrieves the bounding rectangle of the tab label area at the top or bottom of the tab control. (Overrides [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|  
+|`CMFCTabCtrl::GetTabFromPoint`|Retrieves the tab that contains a specified point. (Overrides [CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|  
+|[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|Retrieves the maximum width of a tab.|  
+|[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|Retrieves the height of the tab area of the current tab control.|  
+|[CMFCTabCtrl::GetTabsRect](#gettabsrect)|Retrieves a rectangle that bounds the tab area of the current tab control. (Overrides [CMFCBaseTabCtrl::GetTabsRect](../../mfc/reference/cmfcbasetabctrl-class.md#gettabsrect).)|  
+|`CMFCTabCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCTabCtrl::GetWndArea](#getwndarea)|Retrieves the boundary of the client area of the current tab control.|  
+|[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)|Hides the horizontal scroll bar, if any, of the active window.|  
+|[CMFCTabCtrl::HideInactiveWindow](#hideinactivewindow)|Specifies whether the framework is to display inactive tab control windows.|  
+|[CMFCTabCtrl::HideNoTabs](#hidenotabs)|Enables or disables drawing the tab area if there are no visible tabs.|  
+|[CMFCTabCtrl::HideSingleTab](#hidesingletab)|Enables or disables drawing a tab when there is a single tabbed window. (Overrides [CMFCBaseTabCtrl::HideSingleTab](../../mfc/reference/cmfcbasetabctrl-class.md#hidesingletab).)|  
+|[CMFCTabCtrl::IsActiveInMDITabGroup](#isactiveinmditabgroup)|Indicates whether the current tab of a tab control is the active tab in an multiple document interface tab group.|  
+|[CMFCTabCtrl::IsActiveTabBoldFont](#isactivetabboldfont)|Indicates whether the text of the active tab is displayed using a bold font.|  
+|[CMFCTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)|Indicates whether the Close button ( **X**) is displayed on an active tab or the upper-right corner of the tab area.|  
+|[CMFCTabCtrl::IsDrawFrame](#isdrawframe)|Indicates whether the tabbed window draws a frame rectangle around embedded panes.|  
+|[CMFCTabCtrl::IsFlatFrame](#isflatframe)|Indicates whether the frame around the tab area is flat or 3D.|  
+|[CMFCTabCtrl::IsFlatTab](#isflattab)|Indicates whether the appearance of the tabs in the current tab control is flat or not.|  
+|[CMFCTabCtrl::IsLeftRightRounded](#isleftrightrounded)|Indicates whether the appearance of the left and right side of a tab in the current tab control is rounded.|  
+|[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|Indicates whether the current tab control is contained in the client area of a multiple-document interface window.|  
+|[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)|Indicates whether the current tab control is displayed in the style of Microsoft OneNote.|  
+|`CMFCTabCtrl::IsPtInTabArea`|Determines if a point is inside the tab area. (Overrides [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|  
+|[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|Indicates whether the current tab control has a scroll bar that can scroll its tabs as a group.|  
+|[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|Indicates whether the tab control displays scroll buttons or a button that displays a menu of tabbed windows.|  
+|[CMFCTabCtrl::IsVS2005Style](#isvs2005style)|Indicates whether tabs are displayed in the style of Visual Studio .NET 2005.|  
+|[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|Specifies the appearance of tabs in the current tab control.|  
+|`CMFCTabCtrl::MoveTab`|Moves a tab to another tab position. (Overrides [CMFCBaseTabCtrl::MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab).)|  
+|[CMFCTabCtrl::OnDragEnter](#ondragenter)|Called by the framework when the cursor is first dragged into the tab control window.|  
+|[CMFCTabCtrl::OnDragOver](#ondragover)|Called by the framework during a drag operation when the mouse is moved over the drop target window. (Overrides [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
+|[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Displays a popup menu of tabbed windows, waits until the user selects a tab, and makes the selected tab the active tab.|  
+|`CMFCTabCtrl::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::RecalcLayout`|Recalculates the internal layout of the tab control. (Overrides [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
+|[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Sets the current tab of a tab control as the active tab in an multiple document interface tab group.|  
+|[CMFCTabCtrl::SetActiveTab](#setactivetab)|Activates a tab. (Overrides [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
+|[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|Enables or disables use of a bold font on active tabs.|  
+|[CMFCTabCtrl::SetDrawFrame](#setdrawframe)|Enables or disables drawinga frame rectangle around an embedded bar.|  
+|[CMFCTabCtrl::SetFlatFrame](#setflatframe)|Specifies whether to draw a flat or a 3D frame around the tab area.|  
+|[CMFCTabCtrl::SetImageList](#setimagelist)|Specifies an image list. (Overrides [CMFCBaseTabCtrl::SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist).)|  
+|[CMFCTabCtrl::SetResizeMode](#setresizemode)|Specifies how the current tab control can be resized and then redisplays the control.|  
+|[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)|Specifies the maximum tab width in a tabbed window.|  
+|[CMFCTabCtrl::StopResize](#stopresize)|Terminates the current resize operation on the tab control.|  
+|`CMFCTabCtrl::SwapTabs`|Swaps a pair of tabs. (Overrides [CMFCBaseTabCtrl::SwapTabs](../../mfc/reference/cmfcbasetabctrl-class.md#swaptabs).)|  
+|[CMFCTabCtrl::SynchronizeScrollBar](#synchronizescrollbar)|Draws a horizontal scroll bar on a tab control that displays flat tabs.|  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|현재 보기를에서 새 탭을 삽입 하 고 사용 포커스를 잃을 수 없습니다.|  
+|[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Prevents the active view from losing focus when a new tab is inserted and enabled.|  
   
-## <a name="remarks"></a>주의  
- `CMFCTabCtrl` 클래스는 지원 합니다.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCTabCtrl` class supports:  
   
--   탭 컨트롤 스타일 등이 포함 된 3D에서 flat 플랫 공유 가로 스크롤 막대를 사용 합니다.  
+-   Tab control styles that include 3D, flat, and flat with a shared horizontal scroll bar.  
   
--   위쪽 또는 아래쪽 창에 있는 탭입니다.  
+-   Tabs located at the top or the bottom of the window.  
   
--   텍스트, 이미지 또는 텍스트 및 이미지를 표시 하는 탭을 선택 합니다.  
+-   Tabs that display text, images, or text and images.  
   
--   탭이 활성화 하는 경우 색을 변경 하는 탭을 선택 합니다.  
+-   Tabs that change color when the tab is active.  
   
--   테두리 크기를 조정할 수 있는 탭에 대 한 변경 합니다.  
+-   Border size changes for adjustable tabs.  
   
--   분리 가능한 탭된 창입니다.  
+-   Detachable tabbed windows.  
   
- `CMFCTabCtrl` 클래스는 대화 상자를 사용 하 여 도킹을 사용 하는 응용 프로그램 제어와 같은 막대에 대 한 것은 [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] 및 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]합니다. 자세한 내용은 참조 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)합니다.  
+ The `CMFCTabCtrl` class can be used with a dialog box, but is intended for applications that use docking control bars like [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] and [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. For more information, see [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
- 응용 프로그램의 탭 컨트롤을 도킹 한 크기 조정 가능한 추가 하려면 다음이 단계를 따르십시오.  
+ Follow these steps to add a resizable, docking tab control in your application:  
   
-1.  인스턴스를 만들고 [CTabbedPane 클래스](../../mfc/reference/ctabbedpane-class.md)합니다.  
+1.  Create an instance of [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md).  
   
-2.  호출 [CDockablePane::Create](../../mfc/reference/cdockablepane-class.md#create)합니다.  
+2.  Call [CDockablePane::Create](../../mfc/reference/cdockablepane-class.md#create).  
   
-3.  사용 하 여 [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) 또는 [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) 새 탭을 추가 합니다.  
+3.  Use [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) or [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) to add new tabs.  
   
-4.  호출 [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) 현재 도킹 탭 컨트롤 주 프레임 창에 도킹할 수 있도록 합니다.  
+4.  Call [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) so that the current docking tab control can dock at the main frame window.  
   
-5.  호출 [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane) 은 탭된 창을 주 프레임에 도킹 합니다.  
+5.  Call [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane) to dock the tabbed window at the main frame.  
   
- 탭된 창으로 도킹 컨트롤 막대를 만드는 방법에 대 한 예제를 보려면 [CTabbedPane 클래스](../../mfc/reference/ctabbedpane-class.md)합니다. 사용 하 여 `CMFCTabCtrl` 비 도킹 컨트롤을 만드는 것이 한 `CMFCTabCtrl` 개체와 다음 호출 [CMFCTabCtrl::Create](#create)합니다.  
+ For an example of how to create a tabbed window as a docking control bar, see [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md). To use `CMFCTabCtrl` as a non-docking control, create a `CMFCTabCtrl` object and then call [CMFCTabCtrl::Create](#create).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -224,53 +265,53 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
  [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)  
   
-## <a name="example"></a>예제  
- 다음 예제에서 다양 한 메서드를 사용 하는 방법을 보여 줍니다는 `CMFCTabCtrl` 를 구성 하는 클래스는 `CMFCTabCtrl` 개체입니다. 예제에는 탭을 추가, 활성 탭에 있는 닫기 단추를 표시, 편집 가능한 탭 레이블을 사용 및 탭된 창 레이블의 팝업 메뉴를 표시 하는 방법을 설명 합니다. 이 예제는의 일부는 [상태 컬렉션 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCTabCtrl` class to configure a `CMFCTabCtrl` object. The example explains how to add a tab, show the Close button on the active tab, enable editable tab labels, and display a pop-up menu of tabbed window labels. This example is part of the [State Collection sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StateCollection #&1;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_StateCollection #&3;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtabctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtabctrl.h  
   
-##  <a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
- 현재 탭 컨트롤의 지정 된 탭을 표시 하 고 해당 탭에 포커스를 설정 합니다.  
+##  <a name="activatemditab"></a>  CMFCTabCtrl::ActivateMDITab  
+ Displays the specified tab of the current tab control and sets the focus on that tab.  
   
 ```  
 void ActivateMDITab(int nTab = -1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nTab`  
- 표시 되는 또는 현재 활성 탭을 지정 하려면-1 인 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of a tab to display, or -1 to specify the currently active tab.  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 항상 `TRUE`입니다.  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
- 프레임 워크 창의 모든 탭 컨트롤 때 해당 탭 컨트롤의 사용자 인터페이스 요소 클라이언트 영역의 크기를 조정 하는지 여부를 지정 합니다.  
+##  <a name="autosizewindow"></a>  CMFCTabCtrl::AutoSizeWindow  
+ Specifies whether the framework is to resize the client area of all tab control windows when a user interface element of the tab control changes.  
   
 ```  
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoSize`  
- `TRUE`탭 컨트롤 창에 자동으로 크기를 조정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to automatically resize tab control windows; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="create"></a>CMFCTabCtrl::Create  
- 탭 컨트롤을 만들고 연결 하는 `CMFCTabCtrl` 개체입니다.  
+##  <a name="create"></a>  CMFCTabCtrl::Create  
+ Creates the tab control and attaches it to the `CMFCTabCtrl` object.  
   
 ```  
 BOOL Create(
@@ -282,175 +323,175 @@ BOOL Create(
     BOOL bCloseBtn=FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `style`  
- 탭 컨트롤의 스타일입니다. 자세한 내용은 설명 부분을 참조하세요.  
+ The style of the tab control. For more information, see Remarks.  
   
  [in] `rect`  
- 탭 컨트롤의 경계를 설정 하는 사각형입니다.  
+ A rectangle that bounds the tab control.  
   
  [in] `pParentWnd`  
- 부모 창에 대 한 포인터입니다. `NULL`이 아니어야 합니다.  
+ A pointer to a parent window. Must not be `NULL`.  
   
  [in] `nID`  
- 탭 컨트롤의 ID입니다.  
+ The ID of the tab control.  
   
  [in] `location`  
- 탭의 위치입니다. 기본값은 `LOCATION_BOTTOM`입니다. 자세한 내용은 설명 부분을 참조하세요.  
+ The location of tabs. The default value is `LOCATION_BOTTOM`. For more information, see Remarks.  
   
  [in] `bCloseBtn`  
- `TRUE`탭; 닫기 단추를 표시 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `FALSE`입니다.  
+ `TRUE` to display a close button on the tab; otherwise, `FALSE`. The default value is `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그러지 않으면 `FALSE`입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 다음 표에서 설명에 지정할 수 있는 값은 `style` 매개 변수입니다.  
+### <a name="remarks"></a>Remarks  
+ The following table describes the values you can specify for the `style` parameter.  
   
-|스타일|설명|  
+|Style|Description|  
 |-----------|-----------------|  
-|STYLE_3D|3 차원 모양의 탭 컨트롤을 만듭니다.|  
-|STYLE_FLAT|플랫 탭이 포함 된 탭 컨트롤을 만듭니다.|  
-|STYLE_FLAT_SHARED_HORZ_SCROLL|플랫 탭 및 부모 창에서 자르는 하는 경우에 탭을 스크롤할 수 있는 스크롤 막대를 사용 하 여 탭 컨트롤을 만듭니다.|  
-|STYLE_3D_ONENOTE|Microsoft OneNote의 스타일에서 탭 컨트롤을 만듭니다.|  
-|STYLE_3D_VS2005|Microsoft Visual Studio 2005의 스타일에서 탭 컨트롤을 만듭니다.|  
-|STYLE_3D_ROUNDED|Microsoft Visual Studio 2005의 스타일에서 둥근된 탭이 포함 된 탭 컨트롤을 만듭니다.|  
-|STYLE_3D_ROUNDED_SCROLL|둥근된 탭과 Microsoft Visual Studio 2005의 스타일에서 스크롤 단추 탭 컨트롤을 만듭니다.|  
+|STYLE_3D|Creates a tab control with a three-dimensional appearance.|  
+|STYLE_FLAT|Creates a tab control with flat tabs.|  
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Creates a tab control with flat tabs and a scroll bar that can scroll the tabs if they are clipped by a parent window.|  
+|STYLE_3D_ONENOTE|Creates a tab control in the style of Microsoft OneNote.|  
+|STYLE_3D_VS2005|Creates a tab control in the style of Microsoft Visual Studio 2005.|  
+|STYLE_3D_ROUNDED|Creates a tab control with rounded tabs in the style of Microsoft Visual Studio 2005.|  
+|STYLE_3D_ROUNDED_SCROLL|Creates a tab control with rounded tabs and scroll buttons in the style of Microsoft Visual Studio 2005.|  
   
- 에 지정할 수 있는 값을 나열 하는 다음 표에 `location` 매개 변수입니다.  
+ The following table lists the values you can specify for the `location` parameter.  
   
-|위치|설명|  
+|Location|Description|  
 |--------------|-----------------|  
-|LOCATION_BOTTOM|탭의 탭 컨트롤의 맨 아래에 나와 있습니다.|  
-|LOCATION_TOP|탭의 탭 컨트롤의 위쪽에 나와 있습니다.|  
+|LOCATION_BOTTOM|Tabs are located at the bottom of the tab control.|  
+|LOCATION_TOP|Tabs are located at the top of the tab control.|  
   
-### <a name="example"></a>예제  
- 다음 예제에 사용 하는 방법을 보여 줍니다는 `Create` 에서 메서드는 `CMFCTabCtrl` 클래스입니다. 이 예제는의 일부는 [상태 컬렉션 샘플](../../visual-cpp-samples.md)합니다.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Create` method in the `CMFCTabCtrl` class. This example is part of the [State Collection sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StateCollection #&1;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_StateCollection #&2;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
   
-##  <a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
- 지정 된 탭 영역의 크기를 압축 됩니다.  
+##  <a name="calcrectedit"></a>  CMFCTabCtrl::CalcRectEdit  
+ Deflates the size of the specified tab area.  
   
 ```  
 virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `rectEdit`  
- 탭의 영역을 지정 하는 사각형입니다.  
+ A rectangle that specifies the area of a tab.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 탭의 레이블을 변경 하면 호출 됩니다. 이 메서드는&1;/2 현재 탭 높이 지정된 된 사각형의 왼쪽과 오른쪽을 수축 하 고 위쪽 및 아래쪽 단위로 한 단위씩 수축.  
+### <a name="remarks"></a>Remarks  
+ This method is called when you change the label of a tab. This method deflates the left and right sides of the specified rectangle by one-half the current tab height, and deflates the top and bottom by one unit.  
   
-##  <a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
- 표시 하거나 닫기 단추를 숨깁니다 ( **X**) 활성 탭에 있습니다.  
+##  <a name="enableactivetabclosebutton"></a>  CMFCTabCtrl::EnableActiveTabCloseButton  
+ Shows or hides a Close button ( **X**) on the active tab.  
   
 ```  
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`활성 탭;에 닫기 단추를 표시 하려면 `FALSE` 닫기 단추 탭 영역의 오른쪽 위 모서리를 표시 합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to display the Close button on the active tab; `FALSE` to display the Close button on the upper-right corner of the tab area. The default value is `TRUE`.  
   
-##  <a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
- 레이블 편집 가능한 탭을 사용 하지 않도록 설정 하거나 사용 합니다.  
+##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
+ Enables or disables editable tab labels.  
   
 ```  
 virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`편집 가능한 탭 레이블,를 사용 하도록 설정 하려면 `FALSE` 편집 가능한 탭 레이블을 사용 하지 않으려면 합니다.  
+ `TRUE` to enable editable tab labels; `FALSE` to disable editable tab labels.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
- 두 개의 단추를 사용 하 여 창의 탭 스크롤해야 하는 사용자 인터페이스와 탭 창 팝업 메뉴를 표시 하는 인터페이스 사이 전환 합니다.  
+##  <a name="enabletabdocumentsmenu"></a>  CMFCTabCtrl::EnableTabDocumentsMenu  
+ Toggles between a user interface that uses two buttons to scroll the window tabs and an interface that displays a pop-up menu of tabbed windows.  
   
 ```  
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`레이블 탭된 창,의 팝업 메뉴를 표시 하려면 `FALSE` 앞으로 및 뒤로 스크롤 단추를 표시할 수 있습니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to display a pop-up menu of tabbed window labels; `FALSE` to display forward and backward scroll buttons. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 사용자가 레이블 탭을 클릭 하면 해당 탭된 창 프레임 워크에 표시 됩니다. 탭 레이블이 표시 되 면, 해당 위치를 변경 하지 않고 탭된 창이 열립니다. 사용자가 팝업 메뉴에서 문서를 선택 하는 경우 해당 탭된 창 화면 꺼져 탭된 창에는 첫 번째 탭 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When the user clicks a tab label, the framework displays the corresponding tabbed window. If the tab label is visible, the tabbed window is opened without changing its position. If the user selects a document from the pop-up menu and the corresponding tabbed window is off screen, the tabbed window becomes the first tab.  
   
-##  <a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
- 탭에 표시 되는지 확인 합니다.  
+##  <a name="ensurevisible"></a>  CMFCTabCtrl::EnsureVisible  
+ Ensures that a tab is visible.  
   
 ```  
 virtual BOOL EnsureVisible(int iTab);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 탭의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of a tab.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`성공 하면 `FALSE` 경우는 `iTab` 매개 변수 인덱스가 잘못 되었습니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if it is successful; `FALSE` if the `iTab` parameter index is invalid.  
   
-### <a name="remarks"></a>주의  
- 지정 된 탭 표시 되는지 보장 하기 위해이 메서드를 사용 합니다. 필요한 경우 탭 컨트롤이 스크롤됩니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to guarantee that the specified tab is visible. The tab control will scroll if it is required.  
   
-##  <a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
- 팝업 메뉴 탭 창에 탭과 연관 된 이미지를 검색 합니다.  
+##  <a name="getdocumenticon"></a>  CMFCTabCtrl::GetDocumentIcon  
+ Retrieves the image that is associated with a tab in a pop-up menu of tabbed windows.  
   
 ```  
 static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nCmdID`  
- 팝업 메뉴 탭 창에서 탭의 명령 ID입니다.  
+ The command ID of a tab in a pop-up menu of tabbed windows.  
   
-### <a name="return-value"></a>반환 값  
- 비트맵 이미지의 핸들입니다.  
+### <a name="return-value"></a>Return Value  
+ The handle of a bitmap image.  
   
-##  <a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
- 현재 탭 컨트롤에 표시 되는 첫 번째 탭의 인덱스를 검색 합니다.  
+##  <a name="getfirstvisibletabnum"></a>  CMFCTabCtrl::GetFirstVisibleTabNum  
+ Retrieves the index of the first tab that is visible in the current tab control.  
   
 ```  
 virtual int GetFirstVisibleTabNum() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 탭 컨트롤의 탭의&0;부터 시작 하는 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of a tab in the tab control.  
   
-### <a name="remarks"></a>주의  
- Microsoft OneNote의 스타일에서 탭 컨트롤을 표시 하는 경우에이 메서드를 사용 합니다. 사용 된 [CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle) 메서드는 스타일을 결정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method only when the tab control is displayed in the style of Microsoft OneNote. Use the [CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle) method to determine the style.  
   
-##  <a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
- 현재 탭 컨트롤을 조정할 수 있는 방법을 지정 하는 값을 검색 합니다.  
+##  <a name="getresizemode"></a>  CMFCTabCtrl::GetResizeMode  
+ Retrieves a value that specifies how the current tab control can be resized.  
   
 ```  
 ResizeMode GetResizeMode() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 중 하나는 `CMFCTabCtrl::ResizeMode` 탭 컨트롤을 조정할 수 있는 방법을 지정 하는 열거형 값입니다. 가능한 값 목록은 설명 부분을 참조 하십시오.는 [CMFCTabCtrl::SetResizeMode](#setresizemode) 메서드.  
+### <a name="return-value"></a>Return Value  
+ One of the `CMFCTabCtrl::ResizeMode` enumeration values that specifies how the tab control can be resized. For a list of possible values, see the Remarks section of the [CMFCTabCtrl::SetResizeMode](#setresizemode) method.  
   
-##  <a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
- 탭 컨트롤에 연관 된 스크롤 막대 개체에 대 한 포인터를 검색 합니다.  
+##  <a name="getscrollbar"></a>  CMFCTabCtrl::GetScrollBar  
+ Retrieves a pointer to the scroll bar object that is associated with the tab control.  
   
 ```  
 CScrollBar* GetScrollBar();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 스크롤 하는 개체에 대 한 포인터 또는 `NULL` 탭 컨트롤 사용 하 여 만들지 않은 경우는 `STYLE_FLAT_SHARED_HORZ_SCROLL` 스타일입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a scrollbar object, or a `NULL` if the tab control was not created by using the `STYLE_FLAT_SHARED_HORZ_SCROLL` style.  
   
-### <a name="remarks"></a>주의  
- 탭 컨트롤의 포함 된 스크롤 막대에 액세스 하려면이 메서드를 사용 합니다. 스크롤 막대 개체를 만들 때 탭 컨트롤에 있을 때만 `STYLE_FLAT_SHARED_HORZ_SCROLL` 스타일입니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to access the tab control's embedded scroll bar. A scroll bar object is created only when the tab control has the `STYLE_FLAT_SHARED_HORZ_SCROLL` style.  
   
-##  <a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
- 위쪽 또는 아래쪽의 탭 컨트롤의 탭 레이블 영역의 경계 사각형을 검색합니다.  
+##  <a name="gettabarea"></a>  CMFCTabCtrl::GetTabArea  
+ Retrieves the bounding rectangle of the tab label area at the top or bottom of the tab control.  
   
 ```  
 void GetTabArea(
@@ -458,295 +499,295 @@ void GetTabArea(
     CRect& rectTabAreaBottom) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `rectTabAreaTop`  
- 이 메서드가 반환 하는 경우이 참조는 맨 위 탭 레이블 영역 경계가 되는 사각형을 포함 합니다. 클라이언트 좌표에는 사각형은입니다. 이 참조가 없는 탭 레이블 영역 탭 컨트롤의 위쪽에 있는 경우 비어 있습니다.  
+ When this method returns, this reference contains a rectangle that bounds the top tab label area. The rectangle is in client coordinates. This reference is empty if no tab label area exists at the top of the tab control.  
   
  [out] `rectTabAreaBottom`  
- 이 메서드가 반환 하는 경우이 참조는 아래쪽 탭 레이블 영역 경계가 되는 사각형을 포함 합니다. 클라이언트 좌표에는 사각형은입니다. 이 참조가 없는 탭 레이블 영역 탭 컨트롤의 아래쪽에 있는 경우 비어 있습니다.  
+ When this method returns, this reference contains a rectangle that bounds the bottom tab label area. The rectangle is in client coordinates. This reference is empty if no tab label area exists at the bottom of the tab control.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 크기와 탭된 창에 탭 영역 위치를 결정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to determine the size and position of the tab area in the tabbed window.  
   
-##  <a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
- 탭의 최대 너비를 검색합니다.  
+##  <a name="gettabmaxwidth"></a>  CMFCTabCtrl::GetTabMaxWidth  
+ Retrieves the maximum width of a tab.  
   
 ```  
 int GetTabMaxWidth() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 최대 너비 (픽셀)에서 탭입니다. 반환 값이 0 이면 탭 너비는 제한이 없습니다.  
+### <a name="return-value"></a>Return Value  
+ Maximum width of a tab, in pixels. If the return value is 0, the tab width is unlimited.  
   
-### <a name="remarks"></a>주의  
- 사용 된 [CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth) 최대 탭 너비를 설정 하는 방법입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth) method to set maximum tab width.  
   
-##  <a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
- 현재 탭 컨트롤의 탭 영역의 높이 검색합니다.  
+##  <a name="gettabsheight"></a>  CMFCTabCtrl::GetTabsHeight  
+ Retrieves the height of the tab area of the current tab control.  
   
 ```  
 virtual int GetTabsHeight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 모든 탭이 표시 또는 경우에는&0; 탭이 보이지 않을 경우 탭 영역의 높이입니다.  
+### <a name="return-value"></a>Return Value  
+ The height of the tab area if any tab is visible, or zero if no tab is visible.  
   
-##  <a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
- 현재 탭 컨트롤의 탭 영역 경계가 되는 사각형을 검색 합니다.  
+##  <a name="gettabsrect"></a>  CMFCTabCtrl::GetTabsRect  
+ Retrieves a rectangle that bounds the tab area of the current tab control.  
   
 ```  
 virtual void GetTabsRect(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `rect`  
- 이 메서드는 `rect` 매개 변수 탭 영역 경계를 설정 하는 사각형을 포함 합니다.  
+ When this method returns, the `rect` parameter contains a rectangle that bounds the tab area.  
   
-##  <a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
- 현재 탭 컨트롤의 클라이언트 영역 경계를 검색합니다.  
+##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
+ Retrieves the boundary of the client area of the current tab control.  
   
 ```  
 void GetWndArea(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in, out] `rect`  
- 이 메서드가 반환 하는 경우이 매개 변수는 현재 탭 컨트롤의 경계를 설정 하는 사각형을 포함 합니다.  
+ When this method returns, this parameter contains a rectangle that bounds the current tab control.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
- 활성 창에 있는 경우에 가로 스크롤 막대를 숨깁니다.  
+##  <a name="hideactivewindowhorzscrollbar"></a>  CMFCTabCtrl::HideActiveWindowHorzScrollBar  
+ Hides the horizontal scroll bar, if any, in the active window.  
   
 ```  
 void HideActiveWindowHorzScrollBar();
 ```  
   
-### <a name="remarks"></a>주의  
- 탭 컨트롤 깜박이 사용자가 탭 컨트롤 페이지 간에 전환 되지 않도록 하려면이 메서드를 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to prevent the tab control from blinking when the user switches between tab control pages.  
   
-##  <a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
- 프레임 워크 비활성 탭 컨트롤 창에 표시 되는지 여부를 지정 합니다.  
+##  <a name="hideinactivewindow"></a>  CMFCTabCtrl::HideInactiveWindow  
+ Specifies whether the framework displays inactive tab control windows.  
   
 ```  
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- `TRUE`나타내지 비활성 창입니다. `FALSE` 비활성 창에 표시 합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` not to display an inactive window; `FALSE` to display an inactive window. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
- 사용 하거나 볼 수 있는 탭이 없을 경우 탭 영역 그리기를 사용 하지 않도록 설정 합니다.  
+##  <a name="hidenotabs"></a>  CMFCTabCtrl::HideNoTabs  
+ Enables or disables drawing of the tab area if there are no visible tabs.  
   
 ```  
 void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- `TRUE`탭 영역이; 그리기를 사용 하도록 설정 하려면 `FALSE` 드로잉을 사용 하지 않도록 설정 하려면. 기본값은 `TRUE`입니다.  
+ `TRUE` to enable drawing the tab area; `FALSE` to disable drawing. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
- 사용 하거나 단일 탭된 창 경우 탭 그리기를 사용 하지 않도록 설정 합니다.  
+##  <a name="hidesingletab"></a>  CMFCTabCtrl::HideSingleTab  
+ Enables or disables tab drawing if there is a single tabbed window.  
   
 ```  
 virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- `TRUE`단일 탭된 창;에 대 한 탭을 그리지를 `FALSE` 단일 탭을 그리는 데 있습니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to not draw a tab for a single tabbed window; `FALSE` to draw a single tab. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
- 탭 컨트롤의 현재 탭 다중 문서 인터페이스 탭 그룹에서 활성 탭 여부를 나타냅니다.  
+##  <a name="isactiveinmditabgroup"></a>  CMFCTabCtrl::IsActiveInMDITabGroup  
+ Indicates whether the current tab of a tab control is the active tab in a multiple document interface tab group.  
   
 ```  
 BOOL IsActiveInMDITabGroup() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 컨트롤의 현재 탭이 활성 탭 MDI 탭 그룹에 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current tab of a tab control is the active tab in an MDI tab group; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 세로 또는 가로 탭 그룹 중 하나에 여러 개의 문서 창을 구성할 수 있으며 다른 탭 그룹에서 문서를 쉽게 이동할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can organize multiple document windows into either vertical or horizontal tab groups and easily shuffle documents from one tab group to another.  
   
-##  <a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
- 활성 탭의 텍스트가 굵은 글꼴을 사용 하 여 표시 되는지 여부를 나타냅니다.  
+##  <a name="isactivetabboldfont"></a>  CMFCTabCtrl::IsActiveTabBoldFont  
+ Indicates whether the text of the active tab is displayed using a bold font.  
   
 ```  
 BOOL IsActiveTabBoldFont() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`활성 탭 굵은 글꼴;를 사용 하 여 표시 되 면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the active tab is displayed using the bold font; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 사용 하는 [CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont) 메서드 활성 탭 글꼴을 변경 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont) method to change the active tab font.  
   
-##  <a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
- 나타냅니다 여부 닫기 단추 ( **X**) 또는 탭 영역의 오른쪽 위 모서리는 활성 탭에 표시 됩니다.  
+##  <a name="isactivetabclosebutton"></a>  CMFCTabCtrl::IsActiveTabCloseButton  
+ Indicates whether the Close button ( **X**) is displayed on an active tab or on the upper-right corner of the tab area.  
   
 ```  
 virtual BOOL IsActiveTabCloseButton() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`활성 탭;에 표시 되 면 닫기 단추 `FALSE` 이면 닫기 단추 탭 영역의 오른쪽 위 모서리에 표시 됩니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the Close button is displayed on the active tab; `FALSE` if the Close button is displayed on the upper-right corner of the tab area.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
- 탭된 창에 포함 된 창 주위 프레임 사각형 그릴지 여부를 나타냅니다.  
+##  <a name="isdrawframe"></a>  CMFCTabCtrl::IsDrawFrame  
+ Indicates whether the tabbed window draws a frame rectangle around embedded panes.  
   
 ```  
 BOOL IsDrawFrame() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`경우에 프레임 사각형이 그려집니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a frame rectangle is drawn; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 사용 된 [CMFCTabCtrl::SetDrawFrame](#setdrawframe) 사용할지 여부를 프레임에 사각형을 그려 메서드.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetDrawFrame](#setdrawframe) method to enable or disable drawing a frame rectangle.  
   
-##  <a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
- 평면 또는 3D 탭 영역 주위의 프레임 인지를 나타냅니다.  
+##  <a name="isflatframe"></a>  CMFCTabCtrl::IsFlatFrame  
+ Indicates whether the frame around the tab area is flat or 3D.  
   
 ```  
 BOOL IsFlatFrame() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 영역 주위의 프레임 플랫; 인 경우 `FALSE` 프레임은&3; 차원 하는 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame around the tab area is flat; `FALSE` if the frame is three-dimensional.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 [CMFCTabCtrl::SetFlatFrame](#setflatframe) 프레임을 그리는 방법을 변경 하려면 메서드.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetFlatFrame](#setflatframe) method to change how the frame is drawn.  
   
-##  <a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
- 현재 탭 컨트롤의 탭의 모양 평평한 지 여부를 나타냅니다.  
+##  <a name="isflattab"></a>  CMFCTabCtrl::IsFlatTab  
+ Indicates whether the appearance of the tabs in the current tab control is flat or not.  
   
 ```  
 virtual BOOL IsFlatTab() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`현재 탭 컨트롤의 탭의 모양 플랫; 인 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the appearance of the tabs in the current tab control is flat; otherwise, `FALSE`.  
   
-##  <a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
- 현재 탭 컨트롤의 탭의 왼쪽 및 오른쪽의 모양을 반올림 있는지 여부를 나타냅니다.  
+##  <a name="isleftrightrounded"></a>  CMFCTabCtrl::IsLeftRightRounded  
+ Indicates whether the appearance of the left and right side of a tab in the current tab control is rounded.  
   
 ```  
 virtual BOOL IsLeftRightRounded() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`각 탭의 양쪽; 반올림 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the sides of each tab is rounded; otherwise, `FALSE`.  
   
-##  <a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
- 현재 탭 컨트롤은 다중 문서 인터페이스 창의 클라이언트 영역에 포함 되어 있는지 여부를 나타냅니다.  
+##  <a name="ismditabgroup"></a>  CMFCTabCtrl::IsMDITabGroup  
+ Indicates whether the current tab control is contained in the client area of a multiple-document interface window.  
   
 ```  
 virtual BOOL IsMDITabGroup() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`현재 탭 컨트롤은 MDI 클라이언트 영역 창;에 있는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current tab control is in an MDI client area window; otherwise, `FALSE`.  
   
-##  <a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
- Microsoft OneNote의 스타일에서 현재 탭 컨트롤을 표시할지 여부를 나타냅니다.  
+##  <a name="isonenotestyle"></a>  CMFCTabCtrl::IsOneNoteStyle  
+ Indicates whether the current tab control is displayed in the style of Microsoft OneNote.  
   
 ```  
 virtual BOOL IsOneNoteStyle() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`Microsoft OneNote;의 스타일 탭 컨트롤을 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control is displayed in the style of Microsoft OneNote; otherwise, `FALSE`.  
   
-##  <a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
- 현재 탭 컨트롤에 탭 그룹으로 스크롤할 수 있는 스크롤 막대가 있는지 여부를 나타냅니다.  
+##  <a name="issharedscroll"></a>  CMFCTabCtrl::IsSharedScroll  
+ Indicates whether the current tab control has a scroll bar that can scroll its tabs as a group.  
   
 ```  
 BOOL IsSharedScroll() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭 컨트롤에는 공유 스크롤 막대. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control has a shared scroll bar; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드가 반환 `TRUE` 경우는 `style` 의 매개 변수는 [CMFCTabCtrl::Create](#create) 메서드는 STYLE_FLAT_SHARED_HORZ_SCROLL 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method returns `TRUE` if the `style` parameter of the [CMFCTabCtrl::Create](#create) method is STYLE_FLAT_SHARED_HORZ_SCROLL.  
   
-##  <a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
- 탭 컨트롤에서 스크롤 단추 또는 탭 창 메뉴를 표시 하는 단추를 표시할지 여부를 나타냅니다.  
+##  <a name="istabdocumentsmenu"></a>  CMFCTabCtrl::IsTabDocumentsMenu  
+ Indicates whether the tab control displays scroll buttons or a button that displays a menu of tabbed windows.  
   
 ```  
 BOOL IsTabDocumentsMenu() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`탭된 창의 레이블 탭된 창, 팝업 메뉴를 사용 하 여 스크롤됩니다 하는 경우 `FALSE` 경우 앞으로 및 뒤로 스크롤 단추를 사용 하 여 탭된 창 스크롤됩니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tabbed windows are scrolled using a popup menu of tabbed window labels; `FALSE` if tabbed windows are scrolled using forward and backward scroll buttons.  
   
-### <a name="remarks"></a>주의  
- 사용 된 [CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu) 스크롤 하는 방법을 지정 하는 메서드 탭 창입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu) method to specify the method of scrolling tabbed windows.  
   
-##  <a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
- Visual Studio 2005의 스타일을 사용 하 여 탭을 그리는 있는지 여부를 나타냅니다.  
+##  <a name="isvs2005style"></a>  CMFCTabCtrl::IsVS2005Style  
+ Indicates whether tabs are drawn using the style of Visual Studio 2005.  
   
 ```  
 virtual BOOL IsVS2005Style() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`Visual Studio 2005;의 스타일을 사용 하 여 탭을 그리는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tabs are drawn using the style of Visual Studio 2005; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 사용 하는 `style` 의 매개 변수는 [CMFCTabCtrl::Create](#create) 탭을 그리는 방법을 지정 하는 방법입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the `style` parameter of the [CMFCTabCtrl::Create](#create) method to specify how tabs are drawn.  
   
-##  <a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
- 현재 보기를에서 새 탭을 삽입 하 고 사용 포커스를 잃을 수 없습니다.  
+##  <a name="m_benableactivate"></a>  CMFCTabCtrl::m_bEnableActivate  
+ Prevents the active view from losing focus when a new tab is inserted and enabled.  
   
 ```  
 static BOOL m_bEnableActivate;  
 ```  
   
-### <a name="remarks"></a>주의  
- 포커스가 있는 탭을 삽입 하 고 활성화 하는 경우에 일반적으로 새 탭된 창에서 수행 됩니다. 설정의 `CMFCTabCtrl::m_bEnableActivate` 멤버 변수를 `FALSE` 원래 포커스를 유지할 수 있습니다. 기본값은 `TRUE`입니다.  
+### <a name="remarks"></a>Remarks  
+ The focus is usually taken by a new tabbed window when the tab is inserted and made active. Set the `CMFCTabCtrl::m_bEnableActivate` member variable to `FALSE` to retain the original focus. The default value is `TRUE`.  
   
-##  <a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
- 현재 탭 컨트롤의 탭의 모양을 지정합니다.  
+##  <a name="modifytabstyle"></a>  CMFCTabCtrl::ModifyTabStyle  
+ Specifies the appearance of tabs in the current tab control.  
   
 ```  
 BOOL ModifyTabStyle(Style style);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `style`  
- 탭 컨트롤의 모양을 지정 하는 열거형 값 중 하나입니다. 자세한 내용은 주의에 있는 표를 참조 하십시오.  
+ One of the enumeration values that specifies the appearance of the tab control. For more information, see the table in Remarks.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `TRUE`입니다.  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 값은 `style` 매개 변수는 다음 중 하나일 수 `CMFCTabCtrl::Style` 열거형입니다.  
+### <a name="remarks"></a>Remarks  
+ The value of the `style` parameter can be one of the following `CMFCTabCtrl::Style` enumerations.  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|STYLE_3D|모서리가 둥근 사각형,&3; 차원 탭을 표시 합니다.|  
-|STYLE_3D_ONENOTE|세로 한쪽 및 경사 한쪽 있고 둥근 모퉁이&3; 차원 탭이 표시 됩니다.|  
-|STYLE_3D_ROUNDED|양쪽 기울어지게 되어 둥글게 있는&3; 차원 탭이 표시 됩니다.|  
-|STYLE_3D_ROUNDED_SCROLL|양쪽 기울어지게 되어 둥글게 있는&3; 차원 탭이 표시 됩니다. 동시에 표시할 수 있는 것 보다 더 많은 탭에 있는 경우 프레임 워크 드롭다운 화살표 및 탭을 활성화 하려면 메뉴를 표시 합니다.|  
-|STYLE_3D_SCROLLED|사각형,&3; 차원 탭이 표시 됩니다. 동시에 표시할 수 있는 것 보다 더 많은 탭에 있는 경우 프레임 워크 드롭다운 화살표 및 탭을 활성화 하려면 메뉴를 표시 합니다.|  
-|STYLE_3D_VS2005|3 차원, 표시 경사 한쪽 및 세로 한쪽 있는 탭을 반올림 합니다.|  
-|STYLE_FLAT|왼쪽과 오른쪽 기울어지게가 있는&2; 차원 탭이 표시 됩니다.|  
-|STYLE_FLAT_SHARED_HORZ_SCROLL|2 차원 탭이 표시 됩니다. 동시에 표시할 수 있는 것 보다 더 많은 탭에 있는 경우 프레임 워크 탭 영역의 끝에 스크롤 화살표를 표시 합니다.|  
+|STYLE_3D|Displays three-dimensional, rectangular tabs that have round corners.|  
+|STYLE_3D_ONENOTE|Displays three-dimensional tabs that have one vertical side and one slanted side and that have rounded corners.|  
+|STYLE_3D_ROUNDED|Displays three-dimensional tabs that have slanted sides and rounded corners.|  
+|STYLE_3D_ROUNDED_SCROLL|Displays three-dimensional tabs that have slanted sides and rounded corners. If there are more tabs than can be displayed at the same time, the framework displays a drop-down arrow and a menu of tabs to make active.|  
+|STYLE_3D_SCROLLED|Displays three-dimensional, rectangular tabs. If there are more tabs than can be displayed at the same time, the framework displays a drop-down arrow and a menu of tabs to make active.|  
+|STYLE_3D_VS2005|Displays three-dimensional, rounded tabs that have one slanted side and one vertical side.|  
+|STYLE_FLAT|Displays two-dimensional tabs that have slanted left and right sides.|  
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Displays two-dimensional tabs. If there are more tabs than can be displayed at the same time, the framework displays scroll arrows at the ends of the tab area.|  
   
-##  <a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
- 처음 될 때 커서의 현재 탭 컨트롤의 창 프레임 워크에서 끌어서 놓기 작업 동안 호출 합니다.  
+##  <a name="ondragenter"></a>  CMFCTabCtrl::OnDragEnter  
+ Called by the framework during a drag-and-drop operation when the cursor first enters the window of the current tab control.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -755,26 +796,26 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDataObject`  
- 끌 데이터를 포함 하는 데이터 개체를 가리킵니다.  
+ Points to a data object that contains data that the user drags.  
   
  [in] `dwKeyState`  
- 보조 키의 상태를 포함합니다. 이 매개 변수는 다음 값의 비트 조합 (OR): `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, 및 `MK_RBUTTON`합니다. 자세한 내용은 참조는 **메시지 매개 변수** 섹션 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
+ Contains the state of the modifier keys. This parameter is a bitwise combination (OR) of the following values: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, and `MK_RBUTTON`. For more information, see the **Message Parameters** section of [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
   
  [in] `point`  
- 클라이언트 좌표에서 커서의 현재 위치를 포함합니다.  
+ Contains the current location of the cursor in client coordinates.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `DROPEFFECT_NONE`, 즉, 놓기 대상 데이터를 받아들일 수 없습니다.  
+### <a name="return-value"></a>Return Value  
+ Always `DROPEFFECT_NONE`, which means that the drop target cannot accept the data.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 끌어서 놓기 작업을 지원 합니다. 사용자 고유의 사용자 지정 동작을 구현 하려면이 메서드를 재정의 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to support a drag-and-drop operation. Override this method to implement your own custom behavior.  
   
- 기본적으로이 메서드가 호출 `CMFCTabCtrl::OnDragOver`는 항상 반환 `DROPEFFECT_NONE`합니다.  
+ By default, this method only calls `CMFCTabCtrl::OnDragOver`, which always returns `DROPEFFECT_NONE`.  
   
-##  <a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
- 놓기 대상 창 위로 마우스를 이동할 때 프레임 워크에서 끌기 작업 중 호출.  
+##  <a name="ondragover"></a>  CMFCTabCtrl::OnDragOver  
+ Called by the framework during a drag operation when the mouse is moved over the drop target window.  
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -783,96 +824,96 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDataObject`  
- 에 대 한 포인터는 [COleDataObject](../../mfc/reference/coledataobject-class.md) 개체를 놓기 대상 위로 끄는입니다.  
+ Pointer to a [COleDataObject](../../mfc/reference/coledataobject-class.md) object that is being dragged over the drop target.  
   
  [in] `dwKeyState`  
- 보조키 비트 조합 (또는 상태) `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, 및 `MK_RBUTTON`합니다. 자세한 내용은 "메시지 매개 변수"의 참조 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
+ The state of the modifier keys, which is a bitwise combination (OR) of `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, and `MK_RBUTTON`. For more information, see "Message Parameters" in [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
   
  [in] `point`  
- 현재 마우스 위치입니다.  
+ The current mouse position.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `DROPEFFECT_NONE`입니다.  
+### <a name="return-value"></a>Return Value  
+ Always `DROPEFFECT_NONE`.  
   
-### <a name="remarks"></a>주의  
- 사용자 지정 구현으로이 메서드를 재정의 합니다. 자세한 내용은 참조는 [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover) 메서드.  
+### <a name="remarks"></a>Remarks  
+ Override this method with your custom implementation. For more information, see the [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover) method.  
   
-##  <a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
- 사용자 탭을 선택 하 고 활성 탭 선택 된 탭을 사용 하면 될 때까지 대기, 탭 창 팝업 메뉴를 표시 합니다.  
+##  <a name="onshowtabdocumentsmenu"></a>  CMFCTabCtrl::OnShowTabDocumentsMenu  
+ Displays a pop-up menu of tabbed windows, waits until the user selects a tab, and makes the selected tab the active tab.  
   
 ```  
 virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 팝업 메뉴를 표시할 곳을의 좌표를 지정 합니다.  
+ The coordinates of where to display the pop-up menu.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
- 탭 컨트롤의 현재 탭 다중 문서 인터페이스 탭 그룹에서 활성 탭으로 설정합니다.  
+##  <a name="setactiveinmditabgroup"></a>  CMFCTabCtrl::SetActiveInMDITabGroup  
+ Sets the current tab of a tab control as the active tab in a multiple document interface tab group.  
   
 ```  
 void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bActive`  
- `TRUE`활성 탭을 현재 탭을 확인 하려면 `FALSE` 비활성을 현재 탭 수 있도록 합니다.  
+ `TRUE` to make the current tab the active tab; `FALSE` to make the current tab inactive.  
   
-### <a name="remarks"></a>주의  
- 세로 또는 가로 탭 그룹 중 하나에 여러 개의 문서 창을 구성할 수 있으며 다른 탭 그룹에서 문서를 쉽게 이동할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can organize multiple document windows into either vertical or horizontal tab groups and easily shuffle documents from one tab group to another.  
   
-##  <a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
- 탭을 활성화합니다.  
+##  <a name="setactivetab"></a>  CMFCTabCtrl::SetActiveTab  
+ Activates a tab.  
   
 ```  
 virtual BOOL SetActiveTab(int iTab);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 활성화 탭의&0;부터 시작 하는 인덱스를 지정 합니다.  
+ Specifies the zero-based index of the tab to activate.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`지정 된 탭이 활성; 수행 된 경우 `FALSE` 하는 경우 지정 된 `iTab` 매개 변수 값이 잘못 되었습니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified tab was made active; `FALSE` if the specified `iTab` parameter value is invalid.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 하지 않습니다는 `AFX_WM_CHANGE_ACTIVE_TAB` 탭 컨트롤의 부모 창에 알림.  
+### <a name="remarks"></a>Remarks  
+ This method does not send the `AFX_WM_CHANGE_ACTIVE_TAB` notification to the parent window of the tab control.  
   
- `SetActiveTab` 메서드를 자동으로 호출 된 [CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) 깜박이 화면을 방지 하기 위해.  
+ The `SetActiveTab` method automatically calls the [CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) method to prevent the screen from blinking.  
   
-##  <a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
- 활성 탭에 굵은 글꼴을 사용 하지 않도록 설정 하거나 사용 합니다.  
+##  <a name="setactivetabboldfont"></a>  CMFCTabCtrl::SetActiveTabBoldFont  
+ Enables or disables use of a bold font on active tabs.  
   
 ```  
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bIsBold`  
- `TRUE`활성 탭;의 레이블을 표시 하려면 굵은 글꼴을 사용 하 여 `FALSE` 를 사용 하 여 표준 글꼴 레이블을 표시 합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to use a bold font to display the label of the active tab; `FALSE` to use the standard font to display the label. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
- 프레임 사각형 포함 된 막대는 그릴지 여부를 지정 합니다.  
+##  <a name="setdrawframe"></a>  CMFCTabCtrl::SetDrawFrame  
+ Specifies whether a frame rectangle is drawn around an embedded bar.  
   
 ```  
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bDraw`  
- `TRUE`포함 된 막대는; 주위에 프레임 영역을 표시 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to display a frame rectangle around an embedded bar; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
- 평면 또는 3D 프레임 탭 영역 주위에 그릴 것인지를 지정 합니다.  
+##  <a name="setflatframe"></a>  CMFCTabCtrl::SetFlatFrame  
+ Specifies whether to draw a flat or a 3D frame around the tab area.  
   
 ```  
 void SetFlatFrame(
@@ -880,17 +921,17 @@ void SetFlatFrame(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bFlat`  
- `TRUE`탭 영역이; 주위 플랫 (2D) 프레임을 표시 하려면 `FALSE`&3; 차원 (3D) 프레임을 그리려면 합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to draw a flat (2D) frame around the tab area; `FALSE` to draw a three-dimensional (3D) frame. The default value is `TRUE`.  
   
  [in] `bRepaint`  
- `TRUE`창에 즉시 다시 그리게 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` to redraw the window immediately; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
- 이미지 목록을 지정합니다.  
+##  <a name="setimagelist"></a>  CMFCTabCtrl::SetImageList  
+ Specifies an image list.  
   
 ```  
 virtual BOOL SetImageList(
@@ -901,93 +942,93 @@ virtual BOOL SetImageList(
 virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 이미지 목록을 포함 하는 비트맵 리소스의 ID입니다.  
+ The ID of a bitmap resource that contains the image list.  
   
  [in] `cx`  
- 픽셀 단위로 각 이미지의 너비입니다. 기본값은 15입니다.  
+ The width of each image, in pixels. The default value is 15.  
   
  [in] `clrTransp`  
- 투명 한 이미지 색입니다. 이 색이 지정 된 이미지의 부품 투명 하 게 됩니다. 기본값은 색 자홍, RGB(255,0,255) 합니다.  
+ The transparent image color. The parts of the image that are this color will be transparent. The default value is the color magenta, RGB(255,0,255).  
   
  [in] `hImageList`  
- 미리 로드 된 이미지 목록에 대 한 핸들입니다.  
+ A handle to a preloaded image list.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이 메서드는 성공 하는 경우 `FALSE`탭 컨트롤의 평면 스타일을 사용 하 여 만들어집니다 또는 첫 번째 메서드 오버 로드로 지정 된 비트맵을 로드할 수 없는 경우는 `uiID` 매개 변수입니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful. `FALSE` if the tab control is created by using a flat style or if the first method overload cannot load the bitmap that is specified by the `uiID` parameter.  
   
-### <a name="remarks"></a>주의  
- 탭 컨트롤에 대 한 이미지 목록 설정 하려면이 메서드를 사용 합니다. 이미지 목록에서 이미지 탭 레이블 옆에 표시 됩니다. 이 메서드는 탭 크기를 조정 이미지와 텍스트를 모두 포함할 수 있도록 탭 높이 다시 계산 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set an image list for the tab control. The images from the image list are displayed next to the tab label. This method recalculates the tab height so that the tab is sized to contain both the image and the text.  
   
- 사용 하 여 [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) 표시할 이미지의 인덱스를 지정 하 고 탭 컨트롤에 상속 되는 메서드.  
+ Use the [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) method that is inherited by the tab control to specify the index of the image to display.  
   
-##  <a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
- 다음 컨트롤을 다시 표시 되 고 현재 탭 컨트롤을 조정할 수 있는 방법을 지정 합니다.  
+##  <a name="setresizemode"></a>  CMFCTabCtrl::SetResizeMode  
+ Specifies how the current tab control can be resized and then redisplays the control.  
   
 ```  
 void SetResizeMode(ResizeMode resizeMode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `resizeMode`  
- 중 하나는 `CMFCTabCtrl::ResizeMode` 탭 컨트롤을 조정할 수 있는 방법을 지정 하는 열거형 값입니다. 가능한 값 목록은 주의에 있는 표를 참조 하십시오.  
+ One of the `CMFCTabCtrl::ResizeMode` enumeration values that specifies how the tab control can be resized. For a list of possible values, see the table in Remarks.  
   
-### <a name="remarks"></a>주의  
- `resizeMode` 매개 변수는 다음 중 하나일 수 `ResizeMode` 열거형 값입니다.  
+### <a name="remarks"></a>Remarks  
+ The `resizeMode` parameter can be one of the following `ResizeMode` enumeration values.  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|RESIZE_NO|탭 컨트롤의 크기를 조정할 수 없습니다.|  
-|RESIZE_VERT|가로 변경 되지 않지만 세로로 탭 컨트롤을 조정할 수 있습니다.|  
-|RESIZE_HORIZ|탭 컨트롤 가로로 하지만 하지 세로로 조정할 수 있습니다.|  
+|RESIZE_NO|The tab control cannot be resized.|  
+|RESIZE_VERT|The tab control can be resized vertically but not horizontally.|  
+|RESIZE_HORIZ|The tab control can be resized horizontally but not vertically.|  
   
-##  <a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
- 탭된 창에 최대 탭 너비를 지정합니다.  
+##  <a name="settabmaxwidth"></a>  CMFCTabCtrl::SetTabMaxWidth  
+ Specifies the maximum tab width in a tabbed window.  
   
 ```  
 void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nTabMaxWidth`  
- 최대 탭 너비 (픽셀)에서입니다.  
+ The maximum tab width, in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 탭된 창에 각 탭의 너비를 제한 합니다. 이 메서드는 탭에 매우 긴 레이블이 있는 경우에 유용 합니다. [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) 클래스 생성자에서 최대 탭 너비를 0으로, 실제로 너비 제한 됨을 의미 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to limit the width of each tab in a tabbed window. This method is useful if tabs have very long labels. The [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) class constructor initializes the maximum tab width to 0, which actually means that the width is not limited.  
   
-##  <a name="stopresize"></a>CMFCTabCtrl::StopResize  
- 탭 컨트롤의 현재 크기 조정 작업을 종료합니다.  
+##  <a name="stopresize"></a>  CMFCTabCtrl::StopResize  
+ Terminates the current resize operation on the tab control.  
   
 ```  
 void StopResize(BOOL bCancel);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bCancel`  
- `TRUE`현재 크기 조정 작업; 중단 `FALSE` 현재 크기 조정 작업을 완료 합니다. 두 경우 모두 프레임 워크는 크기 조정 직사각형을 그리기를 중지 합니다.  
+ `TRUE` to abandon the current resize operation; `FALSE` to complete the current resize operation. In either case, the framework stops drawing the resize rectangle.  
   
-##  <a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
- 플랫 탭을 표시 하는 탭 컨트롤에 가로 스크롤 막대를 그립니다.  
+##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
+ Draws a horizontal scroll bar on a tab control that displays flat tabs.  
   
 ```  
 BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `pScrollInfo`  
- 에 대 한 포인터는 [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) 구조 또는 `NULL`합니다. 이 메서드가 반환 하 고이 매개 변수가 없으면 `NULL`, 스크롤 막대의 모든 매개 변수를 포함 하는 구조입니다. 기본값은 `NULL`입니다.  
+ Pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure or `NULL`. When this method returns, and if this parameter is not `NULL`, the structure contains all the parameters of the scroll bar. The default value is `NULL`.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이 메서드가 성공 합니다. 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 플랫 탭을 표시 하는 탭 컨트롤을 영향을 줍니다. 스크롤 막대를 동시에 모든 탭을 영향을 줍니다.  
+### <a name="remarks"></a>Remarks  
+ This method affects only a tab control that displays flat tabs. The scroll bar influences all the tabs at the same time.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)   
- [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md)   
- [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)
 

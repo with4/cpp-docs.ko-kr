@@ -1,61 +1,80 @@
 ---
-title: "OLE 백그라운드: MFC 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IMarshall"
-  - "IMoniker"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IMarshall 클래스"
-  - "IMoniker 인터페이스, MFC"
-  - "MFC 라이브러리, 구현"
-  - "OLE IMarshal 인터페이스"
-  - "OLE IMoniker 인터페이스"
-  - "OLE IUnknown"
-  - "OLE MFC 라이브러리 구현"
-  - "OLE, 복합 파일"
+title: 'OLE Background: MFC Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IMarshall
+- IMoniker
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC libraries, implementing
+- OLE MFC library implementation
+- OLE IMarshal interface
+- IMoniker interface, MFC
+- IMarshall class [MFC]
+- OLE, compound files
+- OLE IMoniker interface
+- OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# OLE 백그라운드: MFC 구현
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c814fe6b2c59d8b43329a46048e64e7ad42e322b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-OLE API의 크기와 복잡성으로 인해 OLE 응용 프로그램을 직접 작성하기 위해 호출하는데 매우 시간이 오래 걸릴 수 있습니다.  OLE의 Microsoft Foundation Class 라이브러리 구현의 목표는 완벽한 기능을 갖춘 OLE 지원 응용 프로그램을 만들기 위해해야 할 일의 양을 줄이는 것입니다.  
+---
+# <a name="ole-background-mfc-implementation"></a>OLE Background: MFC Implementation
+Because of the size and complexity of the raw OLE API, calling it directly to write OLE applications can be very time consuming. The goal of the Microsoft Foundation Class Library implementation of OLE is to reduce the amount of work you have to do to write full-featured, OLE-capable applications.  
   
- 이 문서에서는 MFC 내부에서 구현되지 않은 OLE API 부분을 설명합니다.  토론은 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]의 OLE 단원에 무엇이 맵을 어떻게 구현하는지에 대해 설명합니다.  
+ This article explains the parts of the OLE API that have not been implemented inside MFC. The discussion also explains how what is implemented maps to the OLE section of the Windows SDK.  
   
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> 클래스 라이브러리에서 구현되지 않은 OLE 부분  
- 몇 가지 인터페이스와 기능은 OLE MFC에서 직접 지원하지 않습니다.  이러한 기능을 사용하려면 OLE API를 직접 호출할 수 있습니다.  
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Portions of OLE Not Implemented by the Class Library  
+ A few interfaces and features of OLE are not directly provided by MFC. If you want to use these features, you can call the OLE API directly.  
   
- IMoniker 인터페이스  
- `IMoniker`  인터페이스는 클래스 라이브러리에서 구현 됩니다 \(예를 들어,  `COleServerItem`  클래스\) 그러나 프로그래머에게 노출되지는 않습니다.  이 인터페이스에 대한 자세한 내용은   [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] OLE 섹션의 OLE 모니커 구현을 참조하십시오.  그러나 [CMonikerFile](../mfc/reference/cmonikerfile-class.md) 및  [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) 클래스 또한 참고하십시오.  
+ IMoniker Interface  
+ The `IMoniker` interface is implemented by the class library (for example, the `COleServerItem` class) but has not previously been exposed to the programmer. For more information about this interface, see OLE Moniker Implementations in the OLE section of the Windows SDK. However, see also class [CMonikerFile](../mfc/reference/cmonikerfile-class.md) and [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
   
- IUnknown 및 IMarshal 인터페이스  
- **IUnknown** 인터페이스는 클래스 라이브러리에서 구현 되지만 프로그래머에게 노출되지 않습니다.   **IMarshal** 인터페이스 클래스 라이브러리에서 구현 되지 않지만 내부적으로 사용됩니다.  클래스 라이브러리를 사용한 자동화 서버 빌드는 이미 마샬링 기능이 내장 되어 있습니다.  
+ IUnknown and IMarshal Interfaces  
+ The **IUnknown** interface is implemented by the class library but is not exposed to the programmer. The **IMarshal** interface is not implemented by the class library but is used internally. Automation servers built using the class library already have marshaling capabilities built in.  
   
- Docfiles \(복합 파일\)  
- 복합 파일은 클래스 라이브러리에서 부분적으로 지원됩니다.  직접 만드는 것을 넘어 복합 파일을 조작 하는 함수는 지원하지 않습니다.  MFC는 **COleFileStream** 클래스를 사용하여  표준 파일 함수와 스트림 조작을 지원합니다.  자세한 내용은   [컨테이너: 복합 파일](../mfc/containers-compound-files.md)문서를 참조 하십시오..  
+ Docfiles (Compound Files)  
+ Compound files are partially supported by the class library. None of the functions that directly manipulate compound files beyond creation are supported. MFC uses class **COleFileStream** to support manipulation of streams with standard file functions. For more information, see the article [Containers: Compound Files](../mfc/containers-compound-files.md).  
   
- In\-process 서버와 개체 처리기  
- 프로세스에서 서버와 개체 처리기 시각적 데이터를 편집 또는 동적 연결 라이브러리 \(DLL\)의 모든 구성 요소 개체 모델 \(COM\) 개체의 구현을 허용합니다.  이렇게 하려면 OLE API를 직접 호출하여 DLL을 구현할 수 있습니다.  그러나, 사용자 인터페이스가 없는 자동화 서버를 작성하는 경우에는 해당 서버를 in\-process 서버로 만든 다음 DLL에 완전히 포함시킬 수 있습니다.  이러한 항목에 대한 자세한 내용은  [자동화 서버](../mfc/automation-servers.md)을 참조하십시오.  
+ In-Process Servers and Object Handlers  
+ In-process servers and object handlers allow implementation of visual editing data or full Component Object Model (COM) objects in a dynamic-link library (DLL). To do this, you can implement your DLL by calling the OLE API directly. However, if you are writing an Automation server and your server has no user interface, you can use AppWizard to make your server an in-process server and put it completely into a DLL. For more information about these topics, see [Automation Servers](../mfc/automation-servers.md).  
   
 > [!TIP]
->  자동화 서버를 구현 하는 가장 쉬운 방법은 DLL에 배치하는 것입니다.  MFC는 이 방법을 지원합니다.  
+>  The easiest way to implement an Automation server is to place it in a DLL. MFC supports this approach.  
   
- Microsoft Foundation OLE 클래스 OLE 인터페이스를 구현 하는 방법에 대한 자세한 내용은  [38](../mfc/tn038-mfc-ole-iunknown-implementation.md),  [39](../mfc/tn039-mfc-ole-automation-implementation.md), 및  [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)의 MFC 기술 참고를 참조하십시오.  
+ For more information on how the Microsoft Foundation OLE classes implement OLE interfaces, see MFC Technical Notes [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md), and [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
   
-## 참고 항목  
- [OLE 백그라운드](../mfc/ole-background.md)   
- [OLE 백그라운드 구현 전략](../mfc/ole-background-implementation-strategies.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: Implementation Strategies](../mfc/ole-background-implementation-strategies.md)
+
+

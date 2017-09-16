@@ -1,5 +1,5 @@
 ---
-title: "bernoulli_distribution 클래스 | Microsoft 문서"
+title: bernoulli_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- bernoulli_distribution
 - random/std::bernoulli_distribution
 - random/std::bernoulli_distribution::reset
 - random/std::bernoulli_distribution::p
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- bernoulli_distribution class
+- std::bernoulli_distribution [C++]
+- std::bernoulli_distribution [C++], reset
+- std::bernoulli_distribution [C++], p
+- std::bernoulli_distribution [C++], param
+- std::bernoulli_distribution [C++], min
+- std::bernoulli_distribution [C++], max
+- std::bernoulli_distribution [C++], param_type
+- std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
 caps.latest.revision: 22
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6711efe0bf60bc9320e1d97c83de50dcc3020971
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: af7aee87a8e1dd47a6548ac0edb4057b54b0bb2d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="bernoullidistribution-class"></a>bernoulli_distribution 클래스
-베르누이 분포를 생성합니다.  
+# <a name="bernoullidistribution-class"></a>bernoulli_distribution Class
+Generates a Bernoulli distribution.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class bernoulli_distribution  
@@ -85,33 +91,33 @@ public:
    };  
 ```
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-*URNG* 균일 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
-클래스는 베르누이 분포 이산 확률 함수에 따라 분포된 `bool` 형식의 값을 생성하는 분포를 나타냅니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>Remarks  
+The class describes a distribution that produces values of type `bool`, distributed according to the Bernoulli distribution discrete probability function. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
 |`bernoulli_distribution::operator()`||[param_type](#param_type)|  
   
-속성 멤버 `p()`는 저장된 분포 매개 변수 값 `p`를 반환합니다.  
+The property member `p()` returns the currently stored distribution parameter value `p`.  
   
-속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-베르누이 분포 이산 확률 함수에 대한 자세한 내용은 Wolfram MathWorld 문서 [베르누이 분포](http://go.microsoft.com/fwlink/LinkId=398467)를 참조하세요.  
+For detailed information about the Bernoulli distribution discrete probability function, see the Wolfram MathWorld article [Bernoulli Distribution](http://go.microsoft.com/fwlink/LinkId=398467).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -171,35 +177,35 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
  true :::::::::::::::::::::::::::::::::::::::::
 ```  
   
-## <a name="requirements"></a>요구 사항  
-**헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**네임스페이스:** std  
+**Namespace:** std  
   
 ##  <a name="bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution  
-분포를 생성합니다.  
+Constructs the distribution.  
   
 ```  
 explicit bernoulli_distribution(double p = 0.5);
 explicit bernoulli_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *p*  
- 저장된 `p` 분포 매개 변수입니다.  
+ The stored `p` distribution parameter.  
   
 *parm*  
- 분포를 생성하는 데 사용되는 `param_type` 구조체입니다.  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
- **사전 조건:** `0.0 ≤ p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 ≤ p ≤ 1.0`  
   
-첫 번째 생성자는 저장된 `p` 값이 *p* 값을 보유하는 개체를 생성합니다.  
+The first constructor constructs an object whose stored `p` value holds the value *p*.  
   
-두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  bernoulli_distribution::param_type  
-분포의 매개 변수를 포함합니다.  
+Contains the parameters of the distribution.  
   
 struct param_type {  
    typedef bernoulli_distribution distribution_type;  
@@ -207,16 +213,16 @@ struct param_type {
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *p*  
-저장된 `p` 분포 매개 변수입니다.  
+The stored `p` distribution parameter.  
   
-### <a name="remarks"></a>설명  
-**사전 조건:** `0.0 ≤ p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 ≤ p ≤ 1.0`  
   
-이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

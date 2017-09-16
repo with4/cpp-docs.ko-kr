@@ -1,5 +1,5 @@
 ---
-title: "런타임 개체 모델 서비스 | Microsoft Docs"
+title: Run-Time Object Model Services | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,46 +33,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 2ac30fa747b13c469846c51e9826242fdf54f8c1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5d1433042bb0f1d01ba5a8fa78e1ffc0cccaa38e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="run-time-object-model-services"></a>런타임 개체 모델 서비스
-클래스 [CObject](../../mfc/reference/cobject-class.md) 및 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 런타임 클래스 정보, serialization 및 동적 개체 만들기에 대 한 액세스를 포함 한 몇 가지 개체 서비스를 캡슐화 합니다. 모든 클래스에서 파생 된 `CObject` 이 기능을 상속 합니다.  
+# <a name="run-time-object-model-services"></a>Run-Time Object Model Services
+The classes [CObject](../../mfc/reference/cobject-class.md) and [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) encapsulate several object services, including access to run-time class information, serialization, and dynamic object creation. All classes derived from `CObject` inherit this functionality.  
   
- 런타임 클래스 정보에 대 한 액세스를 사용 하면 런타임에 개체의 클래스에 대 한 정보를 확인할 수 있습니다. 런타임 시 개체의 클래스를 결정 하는 기능 추가 형식 검사 함수 인수 및 개체의 클래스를 기반으로 하는 특수 한 용도의 코드를 작성 해야 할 때 유용 합니다. 런타임 클래스 정보는 c + + 언어에서 직접 지원 되지 않습니다.  
+ Access to run-time class information enables you to determine information about an object's class at run time. The ability to determine the class of an object at run time is useful when you need extra type-checking of function arguments and when you must write special-purpose code based on the class of an object. Run-time class information is not supported directly by the C++ language.  
   
- Serialization은 프로세스를 작성 하거나 또는 개체의 내용을 읽는 파일에서입니다. 응용 프로그램이 종료 후에 개체의 내용을 저장 하 serialization을 사용할 수 있습니다. 응용 프로그램 다시 시작 되 면에 다음 개체 파일에서 읽을 수 있습니다. 이러한 데이터 개체를 "영구." 라고 합니다.  
+ Serialization is the process of writing or reading an object's contents to or from a file. You can use serialization to store an object's contents even after the application exits. The object can then be read from the file when the application is restarted. Such data objects are said to be "persistent."  
   
- 동적 개체 만들기를 사용 하면 런타임 시 지정된 된 클래스의 개체를 만들 수 있습니다. 예를 들어, 문서, 뷰 및 프레임 개체 지원 해야 동적 생성 프레임 워크 동적으로 만들어야 하기 때문에 합니다.  
+ Dynamic object creation enables you to create an object of a specified class at run time. For example, document, view, and frame objects must support dynamic creation because the framework needs to create them dynamically.  
   
- 다음 표에서 런타임 클래스 정보, serialization 및 동적 생성을 지 원하는 MFC 매크로 나열 합니다.  
+ The following table lists the MFC macros that support run-time class information, serialization, and dynamic creation.  
   
- 이러한 런타임 개체 서비스와 serialization에 대 한 자세한 내용은 문서 참조 [CObject 클래스: 런타임 클래스 정보 액세스](../../mfc/accessing-run-time-class-information.md)합니다.  
+ For more information on these run-time object services and serialization, see the article [CObject Class: Accessing Run-Time Class Information](../../mfc/accessing-run-time-class-information.md).  
   
-### <a name="run-time-object-model-services-macros"></a>런타임 개체 모델 서비스 매크로  
+### <a name="run-time-object-model-services-macros"></a>Run-Time Object Model Services Macros  
   
 
 
 |||  
 |-|-|  
-|[DECLARE_DYNAMIC](#declare_dynamic)|(클래스 선언에 사용 해야 합니다) 런타임 클래스 정보에 액세스할 수 있도록 합니다.|  
-|[DECLARE_DYNCREATE](#declare_dyncreate)|동적 만들고 (클래스 선언에 사용 해야 합니다) 런타임 클래스 정보에 대 한 액세스를 사용할 수 있습니다.|  
-|[DECLARE_SERIAL](#declare_serial)|Serialization 및 (클래스 선언에 사용 해야 합니다) 런타임 클래스 정보에 액세스할 수 있습니다.|  
-|[IMPLEMENT_DYNAMIC](#implement_dynamic)|(클래스 구현에 사용 해야 합니다) 런타임 클래스 정보에 액세스할 수 있도록 합니다.|  
-|[IMPLEMENT_DYNCREATE](#implement_dyncreate)|동적 만들기 및 실행 시간 정보 (클래스 구현에 사용 해야 합니다)에 액세스할 수 있도록 합니다.|  
-|[IMPLEMENT_SERIAL](#implement_serial)|Serialization 및 런타임 클래스 정보 (클래스 구현에 사용 해야 합니다)에 대 한 액세스를 허용 합니다.|  
-|[RUNTIME_CLASS](#runtime_class)|반환 된 `CRuntimeClass` 명명된 된 클래스에 해당 합니다.|  
+|[DECLARE_DYNAMIC](#declare_dynamic)|Enables access to run-time class information (must be used in the class declaration).|  
+|[DECLARE_DYNCREATE](#declare_dyncreate)|Enables dynamic creation and access to run-time class information (must be used in the class declaration).|  
+|[DECLARE_SERIAL](#declare_serial)|Enables serialization and access to run-time class information (must be used in the class declaration).|  
+|[IMPLEMENT_DYNAMIC](#implement_dynamic)|Enables access to run-time class information (must be used in the class implementation).|  
+|[IMPLEMENT_DYNCREATE](#implement_dyncreate)|Enables dynamic creation and access to run-time information (must be used in the class implementation).|  
+|[IMPLEMENT_SERIAL](#implement_serial)|Permits serialization and access to run-time class information (must be used in the class implementation).|  
+|[RUNTIME_CLASS](#runtime_class)|Returns the `CRuntimeClass` structure that corresponds to the named class.|  
 
 
- OLE는 런타임 시 개체의 동적 생성 자주 필요합니다. 예를 들어 OLE 서버 응용 프로그램의 클라이언트에서 요청에 대 한 응답으로 동적으로 OLE 항목을 만들 수 있어야 합니다. 마찬가지로, 자동화 서버 자동화 클라이언트에서 요청에 따라에서 항목을 만들 수 있어야 합니다.  
+ OLE frequently requires the dynamic creation of objects at run time. For example, an OLE server application must be able to create OLE items dynamically in response to a request from a client. Similarly, an automation server must be able to create items in response to requests from automation clients.  
   
- Microsoft Foundation Class 라이브러리를 OLE 특정 두 매크로 제공합니다.  
+ The Microsoft Foundation Class Library provides two macros specific to OLE.  
   
-### <a name="dynamic-creation-of-ole-objects"></a>OLE 개체의 동적 만들기  
+### <a name="dynamic-creation-of-ole-objects"></a>Dynamic Creation of OLE Objects  
 
  
 
@@ -83,431 +83,429 @@ ms.lasthandoff: 04/12/2017
 
 |||  
 |-|-|  
-|[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|공용 컨트롤 라이브러리 지정된 된 API를 구현 하는지 여부를 결정 합니다.|
-|[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|공용 컨트롤 라이브러리 지정된 된 API를 구현 하는지 여부를 결정 합니다.|
-|[DECLARE_OLECREATE](#declare_olecreate)|개체를를 OLE 자동화를 통해 만들 수 있습니다.|  
-|[DECLARE_OLECTLTYPE](#declare_olectltype)|선언 된 **GetUserTypeNameID** 및 `GetMiscStatus` 컨트롤 클래스의 멤버 함수입니다.|
-|[DECLARE_PROPPAGEIDS](#declare_proppageids)|OLE 컨트롤에는 해당 속성을 표시 하도록 이러한 속성 페이지 목록이 선언 합니다.|
-|[IMPLEMENT_OLECREATE](#implement_olecreate)|개체를를 OLE 시스템에서 만들 수 있습니다.|  
-|[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|구현 된 **GetUserTypeNameID** 및 `GetMiscStatus` 컨트롤 클래스의 멤버 함수입니다.|  
-|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|이 매크로 중 하나 또는 [IMPLEMENT_OLECREATE](#implement_olecreate) 클래스를 사용 하는 모든 클래스에 대 한 구현 파일에 표시 되어야 `DECLARE_OLECREATE`합니다. |
+|[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|Determines whether the Common Controls library implements the specified API.|
+|[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|Determines whether the Common Controls library implements the specified API.|
+|[DECLARE_OLECREATE](#declare_olecreate)|Enables objects to be created through OLE automation.|  
+|[DECLARE_OLECTLTYPE](#declare_olectltype)|Declares the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.|
+|[DECLARE_PROPPAGEIDS](#declare_proppageids)|Declares that the OLE control provides a list of property pages to display its properties.|
+|[IMPLEMENT_OLECREATE](#implement_olecreate)|Enables objects to be created by the OLE system.|  
+|[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|Implements the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.|  
+|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|Either this macro or [IMPLEMENT_OLECREATE](#implement_olecreate) must appear in the implementation file for any class that uses `DECLARE_OLECREATE`. |
 
-## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
-공용 컨트롤 라이브러리 지정된 된 API를 구현 하는지 여부를 결정 합니다.  
+## <a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
+Determines whether the Common Controls library implements the specified API.  
    
-### <a name="syntax"></a>구문  
+### <a name="syntax"></a>Syntax  
   ```  
 AFX_COMCTL32_IF_EXISTS(  proc );  
 ```
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `proc`  
- 함수 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터 또는 함수의 서 수 값을 지정 합니다. 하위 단어;에 있어야 하는 경우이 매개 변수는 서 수 값을 상위 단어에는 0 이어야 합니다. 이 매개 변수는 유니코드 여야 합니다.  
+ Pointer to a null-terminated string containing the function name, or specifies the function's ordinal value. If this parameter is an ordinal value, it must be in the low-order word; the high-order word must be zero. This parameter must be in Unicode.  
    
-### <a name="remarks"></a>주의  
- 이 매크로 사용 하 여 지정 되었는지 여부를 공용 컨트롤 라이브러리 함수에서 결정 `proc` (호출 하는 대신 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to determine whether the Common Controls library the function specified by `proc` (instead of calling [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
-### <a name="requirements"></a>요구 사항  
+### <a name="requirements"></a>Requirements  
  afxcomctl32.h, afxcomctl32.inl  
    
-### <a name="see-also"></a>참고 항목  
- [MFC 일반 격리 제어 라이브러리](../isolation-of-the-mfc-common-controls-library.md)
- [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
+### <a name="see-also"></a>See Also  
+ [Isolation of the MFC Common Controls Library](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
  
-## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
-공용 컨트롤 라이브러리 지정된 된 API를 구현 하는지 여부를 결정 합니다. (이 유니코드 버전을 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).  
+## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
+Determines whether the Common Controls library implements the specified API (this is the Unicode version of [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).  
    
-### <a name="syntax"></a>구문    
+### <a name="syntax"></a>Syntax    
 ```  
 AFX_COMCTL32_IF_EXISTS2( proc );  
 ```
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `proc`  
- 함수 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터 또는 함수의 서 수 값을 지정 합니다. 하위 단어;에 있어야 하는 경우이 매개 변수는 서 수 값을 상위 단어에는 0 이어야 합니다. 이 매개 변수는 유니코드 여야 합니다.  
+ Pointer to a null-terminated string containing the function name, or specifies the function's ordinal value. If this parameter is an ordinal value, it must be in the low-order word; the high-order word must be zero. This parameter must be in Unicode.  
    
-### <a name="remarks"></a>설명  
- 이 매크로 사용 하 여 지정 되었는지 여부를 공용 컨트롤 라이브러리 함수에서 결정 `proc` (호출 하는 대신 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)합니다. 이 매크로 유니코드 버전을 `AFX_COMCTL32_IF_EXISTS`합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to determine whether the Common Controls library the function specified by `proc` (instead of calling [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). This macro is the Unicode version of `AFX_COMCTL32_IF_EXISTS`.  
    
-### <a name="requirements"></a>요구 사항  
+### <a name="requirements"></a>Requirements  
  afxcomctl32.h, afxcomctl32.inl  
    
-### <a name="see-also"></a>참고 항목  
- [MFC 일반 격리 제어 라이브러리](../isolation-of-the-mfc-common-controls-library.md)
- [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
+### <a name="see-also"></a>See Also  
+ [Isolation of the MFC Common Controls Library](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
 
 
 
-##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
- 클래스를 파생 하는 경우 개체의 클래스에 대 한 런타임 정보에 액세스할 수 있는 기능을 추가 `CObject`합니다.  
+##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC  
+ Adds the ability to access run-time information about an object's class when deriving a class from `CObject`.  
   
 ```
 DECLARE_DYNAMIC(class_name) 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 클래스의 실제 이름입니다.  
+ The actual name of the class.  
   
-### <a name="remarks"></a>주의  
- 추가 된 `DECLARE_DYNAMIC` 매크로 클래스에 대 한 헤더 (.h) 모듈에이 클래스의 개체에 액세스 해야 하는 모든.cpp 모듈에 해당 모듈이 포함 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Add the `DECLARE_DYNAMIC` macro to the header (.h) module for the class, then include that module in all .cpp modules that need access to objects of this class.  
   
- 사용 하는 경우는 **DECLARE**_ **동적** 및 `IMPLEMENT_DYNAMIC` 설명 된 대로 매크로 사용할 수 있습니다는 `RUNTIME_CLASS` 매크로 및 `CObject::IsKindOf` 함수를 런타임 시 개체의 클래스를 확인 합니다.  
+ If you use the **DECLARE**_ **DYNAMIC** and `IMPLEMENT_DYNAMIC` macros as described, you can then use the `RUNTIME_CLASS` macro and the `CObject::IsKindOf` function to determine the class of your objects at run time.  
   
- 경우 `DECLARE_DYNAMIC` 다음 클래스 선언에 포함 된 `IMPLEMENT_DYNAMIC` 클래스 구현에 포함 되어야 합니다.  
+ If `DECLARE_DYNAMIC` is included in the class declaration, then `IMPLEMENT_DYNAMIC` must be included in the class implementation.  
   
- 대 한 자세한 내용은 `DECLARE_DYNAMIC` 매크로 참조 [CObject 클래스 항목이](../../mfc/using-cobject.md)합니다.  
+ For more information on the `DECLARE_DYNAMIC` macro, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>예제  
- 예를 참조 [IMPLEMENT_DYNAMIC](#implement_dynamic)합니다.  
+### <a name="example"></a>Example  
+ See the example for [IMPLEMENT_DYNAMIC](#implement_dynamic).  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
- 개체를 사용 하면 `CObject`-런타임 시 동적으로 생성 하기 위해 파생 클래스입니다.  
+##  <a name="declare_dyncreate"></a>  DECLARE_DYNCREATE  
+ Enables objects of `CObject`-derived classes to be created dynamically at run time.  
   
 ```
 DECLARE_DYNCREATE(class_name)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 클래스의 실제 이름입니다.  
+ The actual name of the class.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는이 기능을 사용 하 여 새 개체를 동적으로 만듭니다. 예를 들어 새 보기 새 문서를 열 때 생성 됩니다. 문서, 뷰 및 프레임 클래스는 프레임 워크 동적으로 만들어야 하기 때문에 동적 만들기를 지원 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework uses this ability to create new objects dynamically. For example, the new view created when you open a new document. Document, view, and frame classes should support dynamic creation because the framework needs to create them dynamically.  
   
- 추가 된 `DECLARE_DYNCREATE` 매크로 클래스에 대 한.h 모듈에서이 클래스의 개체에 액세스 해야 하는 모든.cpp 모듈에 해당 모듈이 포함 됩니다.  
+ Add the `DECLARE_DYNCREATE` macro in the .h module for the class, then include that module in all .cpp modules that need access to objects of this class.  
   
- 경우 `DECLARE_DYNCREATE` 다음 클래스 선언에 포함 된 `IMPLEMENT_DYNCREATE` 클래스 구현에 포함 되어야 합니다.  
+ If `DECLARE_DYNCREATE` is included in the class declaration, then `IMPLEMENT_DYNCREATE` must be included in the class implementation.  
   
- 대 한 자세한 내용은 `DECLARE_DYNCREATE` 매크로 참조 [CObject 클래스 항목이](../../mfc/using-cobject.md)합니다.  
+ For more information on the `DECLARE_DYNCREATE` macro, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
 > [!NOTE]
->  `DECLARE_DYNCREATE` 의 모든 기능을 포함 하는 매크로 `DECLARE_DYNAMIC`합니다.  
+>  The `DECLARE_DYNCREATE` macro includes all the functionality of `DECLARE_DYNAMIC`.  
   
-### <a name="example"></a>예제  
- 예를 참조 [IMPLEMENT_DYNCREATE](#implement_dyncreate)합니다.  
+### <a name="example"></a>Example  
+ See the example for [IMPLEMENT_DYNCREATE](#implement_dyncreate).  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
  
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
-선언 된 **GetUserTypeNameID** 및 `GetMiscStatus` 컨트롤 클래스의 멤버 함수입니다.  
+Declares the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.  
    
-### <a name="syntax"></a>구문    
+### <a name="syntax"></a>Syntax    
 ```
 DECLARE_OLECTLTYPE( class_name )  
 ```
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 컨트롤 클래스의 이름입니다.  
+ The name of the control class.  
    
-### <a name="remarks"></a>설명  
- **GetUserTypeNameID** 및 `GetMiscStatus` 에 선언 된 순수 가상 함수는 `COleControl`합니다. 이러한 함수는 순수 이므로 가상, 이러한 재정의 되어야 컨트롤 클래스에 있습니다. 외에 **DECLARE_OLECTLTYPE**를 추가 해야 합니다는 `IMPLEMENT_OLECTLTYPE` 컨트롤 클래스 선언에는 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ **GetUserTypeNameID** and `GetMiscStatus` are pure virtual functions, declared in `COleControl`. Because these functions are pure virtual, they must be overridden in your control class. In addition to **DECLARE_OLECTLTYPE**, you must add the `IMPLEMENT_OLECTLTYPE` macro to your control class declaration.  
    
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxctl.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
    
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>See Also  
  [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
  
 
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
-OLE 컨트롤에는 해당 속성을 표시 하도록 이러한 속성 페이지 목록이 선언 합니다.  
+Declares that the OLE control provides a list of property pages to display its properties.  
    
-### <a name="syntax"></a>구문    
+### <a name="syntax"></a>Syntax    
 ```
 DECLARE_PROPPAGEIDS( class_name )  
 ```
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 속성 페이지를 소유 하는 컨트롤 클래스의 이름입니다.  
+ The name of the control class that owns the property pages.  
    
-### <a name="remarks"></a>주의  
- 사용 하 여는 `DECLARE_PROPPAGEIDS` 끝 클래스 선언에는 매크로입니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하는 `BEGIN_PROPPAGEIDS` 매크로, 각 컨트롤의 속성 페이지에 대해 매크로 항목 및 `END_PROPPAGEIDS` 속성 페이지 목록의 끝을 선언 하는 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_PROPPAGEIDS` macro at the end of your class declaration. Then, in the .cpp file that defines the member functions for the class, use the `BEGIN_PROPPAGEIDS` macro, macro entries for each of your control's property pages, and the `END_PROPPAGEIDS` macro to declare the end of the property page list.  
   
- 속성 페이지에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤: 속성 페이지](../mfc-activex-controls-property-pages.md)합니다.  
+ For more information on property pages, see the article [ActiveX Controls: Property Pages](../mfc-activex-controls-property-pages.md).  
    
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxctl.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
    
-### <a name="see-also"></a>참고 항목   
+### <a name="see-also"></a>See Also   
  [BEGIN_PROPPAGEIDS](#begin_proppageids)   
  [END_PROPPAGEIDS](#end_proppageids)
 
-##  <a name="declare_serial"></a>DECLARE_SERIAL  
- C + + 헤더는 데 필요한 코드를 생성 한 `CObject`-serialize 할 수 있는 클래스를 파생 합니다.  
+##  <a name="declare_serial"></a>  DECLARE_SERIAL  
+ Generates the C++ header code necessary for a `CObject`-derived class that can be serialized.  
   
 ```
 DECLARE_SERIAL(class_name)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 클래스의 실제 이름입니다.  
+ The actual name of the class.  
   
-### <a name="remarks"></a>설명  
- Serialization은 프로세스 작성 하거나 하 고 개체의 내용의 읽을 파일에서입니다.  
+### <a name="remarks"></a>Remarks  
+ Serialization is the process of writing or reading the contents of an object to and from a file.  
   
- 사용 하 여는 `DECLARE_SERIAL` .h 모듈에서는 매크로 한 후이 클래스의 개체에 액세스 해야 하는 모든.cpp 모듈에 해당 모듈을 포함 합니다.  
+ Use the `DECLARE_SERIAL` macro in an .h module, and then include that module in all .cpp modules that need access to objects of this class.  
   
- 경우 `DECLARE_SERIAL` 다음 클래스 선언에 포함 된 `IMPLEMENT_SERIAL` 클래스 구현에 포함 되어야 합니다.  
+ If `DECLARE_SERIAL` is included in the class declaration, then `IMPLEMENT_SERIAL` must be included in the class implementation.  
   
- `DECLARE_SERIAL` 의 모든 기능을 포함 하는 매크로 `DECLARE_DYNAMIC` 및 `DECLARE_DYNCREATE`합니다.  
+ The `DECLARE_SERIAL` macro includes all the functionality of `DECLARE_DYNAMIC` and `DECLARE_DYNCREATE`.  
   
- 사용할 수 있습니다는 **AFX_API** 를 자동으로 내보낼 매크로 `CArchive` 추출 연산자를 사용 하는 클래스는 `DECLARE_SERIAL` 및 `IMPLEMENT_SERIAL` 매크로입니다. 대괄호를 다음 코드로 클래스 선언 (.h 파일에 있음):  
+ You can use the **AFX_API** macro to automatically export the `CArchive` extraction operator for classes that use the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros. Bracket the class declarations (located in the .h file) with the following code:  
   
- [!code-cpp[NVC_MFCCObjectSample # 20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
+ [!code-cpp[NVC_MFCCObjectSample#20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
   
- 대 한 자세한 내용은 `DECLARE_SERIAL` 매크로 참조 [CObject 클래스 항목이](../../mfc/using-cobject.md)합니다.  
+ For more information on the `DECLARE_SERIAL` macro, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCObjectSample # 21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
   
-### <a name="requirements"></a>요구 사항  
- **헤더:** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC  
- 동적에 필요한 c + + 코드를 생성 `CObject`-클래스 이름 및 계층 구조 내에서 위치에 대 한 런타임 액세스를 사용 하 여 클래스를 파생 합니다.  
+##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC  
+ Generates the C++ code necessary for a dynamic `CObject`-derived class with run-time access to the class name and position within the hierarchy.  
   
 ```
 IMPLEMENT_DYNAMIC(class_name, base_class_name)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 클래스의 실제 이름입니다.  
+ The actual name of the class.  
   
  `base_class_name`  
- 기본 클래스의 이름입니다.  
+ The name of the base class.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여는 `IMPLEMENT_DYNAMIC` .cpp 모듈 및 다음 링크는 결과 개체를 한 번만 코드는 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the `IMPLEMENT_DYNAMIC` macro in a .cpp module, and then link the resulting object code only once.  
   
- 자세한 내용은 참조 [CObject 클래스 항목이](../../mfc/using-cobject.md)합니다.  
+ For more information, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCObjectSample # 2](../../mfc/codesnippet/cpp/run-time-object-model-services_3.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#2](../../mfc/codesnippet/cpp/run-time-object-model-services_3.h)]  
   
- [!code-cpp[NVC_MFCCObjectSample # 3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
- 개체를 사용 하면 `CObject`-런타임에 동적으로 생성 하기 위해 파생 클래스와 함께 사용할 경우 시간는 `DECLARE_DYNCREATE` 매크로입니다.  
+##  <a name="implement_dyncreate"></a>  IMPLEMENT_DYNCREATE  
+ Enables objects of `CObject`-derived classes to be created dynamically at run time when used with the `DECLARE_DYNCREATE` macro.  
   
 ```
 IMPLEMENT_DYNCREATE(class_name, base_class_name)   
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 클래스의 실제 이름입니다.  
+ The actual name of the class.  
   
  `base_class_name`  
- 기본 클래스의 실제 이름입니다.  
+ The actual name of the base class.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크는이 기능을 사용 하 여 새 개체를 동적으로 만들거나 예를 들어 직렬화 하는 동안 디스크에서 개체를 읽을 경우. 추가 된 `IMPLEMENT_DYNCREATE` 클래스 구현 파일에는 매크로입니다. 자세한 내용은 참조 [CObject 클래스 항목이](../../mfc/using-cobject.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework uses this ability to create new objects dynamically, for example, when it reads an object from disk during serialization. Add the `IMPLEMENT_DYNCREATE` macro in the class implementation file. For more information, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
- 사용 하는 경우는 `DECLARE_DYNCREATE` 및 `IMPLEMENT_DYNCREATE` 매크로 사용할 수 있습니다는 `RUNTIME_CLASS` 매크로 및 `CObject::IsKindOf` 멤버 함수를 런타임 시 개체의 클래스를 확인 합니다.  
+ If you use the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` macros, you can then use the `RUNTIME_CLASS` macro and the `CObject::IsKindOf` member function to determine the class of your objects at run time.  
   
- 경우 `DECLARE_DYNCREATE` 다음 클래스 선언에 포함 된 `IMPLEMENT_DYNCREATE` 클래스 구현에 포함 되어야 합니다.  
+ If `DECLARE_DYNCREATE` is included in the class declaration, then `IMPLEMENT_DYNCREATE` must be included in the class implementation.  
   
- 참고가 매크로 정의 클래스에 대 한 기본 생성자를 호출 합니다. 특수 한 생성자는 클래스에 의해 명시적으로 구현 되는 경우 기본 생성자도 명시적으로 구현 해야 합니다. 기본 생성자는 클래스에 추가할 수 **개인** 또는 **보호** 멤버 섹션 클래스 구현 외부에서 호출 되 고 하지 못하도록 합니다.  
+ Note that this macro definition will invoke the default constructor for your class. If a non-trivial constructor is explicitly implemented by the class, it must also explicitly implement the default constructor as well. The default constructor can be added to the class's **private** or **protected** member sections to prevent it from being called from outside the class implementation.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCObjectSample # 22](../../mfc/codesnippet/cpp/run-time-object-model-services_5.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#22](../../mfc/codesnippet/cpp/run-time-object-model-services_5.h)]  
   
- [!code-cpp[NVC_MFCCObjectSample # 23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
-이 매크로 중 하나 또는 [IMPLEMENT_OLECREATE](#implement_olecreate) 클래스를 사용 하는 모든 클래스에 대 한 구현 파일에 표시 되어야 `DECLARE_OLECREATE`합니다.  
+## <a name="implement_olecreate_flags"></a>  IMPLEMENT_OLECREATE_FLAGS
+Either this macro or [IMPLEMENT_OLECREATE](#implement_olecreate) must appear in the implementation file for any class that uses `DECLARE_OLECREATE`.  
    
-### <a name="syntax"></a>구문    
+### <a name="syntax"></a>Syntax    
 ```
 IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags, 
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
   
 ```
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 클래스의 실제 이름입니다.  
+ The actual name of the class.  
   
  *external_name*  
- (따옴표에 포함) 다른 응용 프로그램에 노출 되는 개체 이름입니다.  
+ The object name exposed to other applications (enclosed in quotation marks).  
   
  `nFlags`  
- 다음과 같은 플래그 중 하나 이상을 포함 되어 있습니다.  
+ Contains one or more of the following flags:  
   
--   `afxRegInsertable`OLE 개체에 대 한 개체 삽입 대화 상자에 표시를 제어할 수 있습니다.    
--   `afxRegApartmentThreading`ThreadingModel 레지스트리에서 설정 하는 스레딩 모델이 아파트 = 합니다.    
--   **afxRegFreeThreading** ThreadingModel 레지스트리에서 스레딩 모델을 설정 합니다. 무료 = 합니다.  
+-   `afxRegInsertable` Allows the control to appear in the Insert Object dialog box for OLE objects.    
+-   `afxRegApartmentThreading` Sets the threading model in the registry to ThreadingModel=Apartment.    
+-   **afxRegFreeThreading** Sets the threading model in the registry to ThreadingModel=Free.  
   
-     두 플래그를 결합할 수 있습니다 `afxRegApartmentThreading` 및 `afxRegFreeThreading` ThreadingModel 설정할 = Both입니다. 참조 [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) 스레딩 모델 등록에 대 한 자세한 내용은 Windows sdk입니다.    
+     You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) in the Windows SDK for more information on threading model registration.    
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
- 클래스의의 구성 요소 **CLSID**합니다.  
+ Components of the class's **CLSID**.  
    
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  사용 하는 경우 `IMPLEMENT_OLECREATE_FLAGS`를 사용 하 여 개체가 지 원하는 스레딩 모델을 지정할 수 있습니다는 `nFlags` 매개 변수입니다. 사용 하 여 단일 스레딩 모델만 지원 하려는 경우 `IMPLEMENT_OLECREATE`합니다.  
+>  If you use `IMPLEMENT_OLECREATE_FLAGS`, you can specify which threading model your object supports by using the `nFlags` parameter. If you want to support only the single-treading model, use `IMPLEMENT_OLECREATE`.  
   
- 외부 이름에는 다른 응용 프로그램에 노출 된 식별자입니다. 자동화 서버에서이 클래스의 개체를 요청 하려면 외부 이름을 사용 하는 클라이언트 응용 프로그램.  
+ The external name is the identifier exposed to other applications. Client applications use the external name to request an object of this class from an automation server.  
   
- OLE 클래스 ID가 개체에 대 한 고유 128 비트 식별자입니다. 하나 이루어져 **긴**, 두 개의 **단어**s 및 8 **바이트**s에 의해 표시 된 대로 *l*, *w1*, *w2*, 및 *b1* 통해 *b8* 구문 설명에 있습니다. 응용 프로그램 마법사 및 코드 마법사를 필요에 따라 고유한 OLE 클래스 Id를 만듭니다.  
+ The OLE class ID is a unique 128-bit identifier for the object. It consists of one **long**, two **WORD**s, and eight **BYTE**s, as represented by *l*, *w1*, *w2*, and *b1* through *b8* in the syntax description. The Application Wizard and code wizards create unique OLE class IDs for you as required.  
    
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
    
-### <a name="see-also"></a>참고 항목  
- [매크로 및 전역](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [CLSID Key](http://msdn.microsoft.com/library/windows/desktop/ms691424)
 
 
-## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
-구현 된 **GetUserTypeNameID** 및 `GetMiscStatus` 컨트롤 클래스의 멤버 함수입니다.  
+## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
+Implements the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.  
    
-### <a name="syntax"></a>구문    
+### <a name="syntax"></a>Syntax    
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )  
 ```
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 컨트롤 클래스의 이름입니다.  
+ The name of the control class.  
   
  *idsUserTypeName*  
- 컨트롤의 외부 이름을 포함 하는 문자열의 리소스 ID입니다.  
+ The resource ID of a string containing the external name of the control.  
   
  *dwOleMisc*  
- 하나 이상의 플래그를 포함 하는 열거형입니다. 이 열거형에 대 한 자세한 내용은 참조 하십시오. [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows sdk에서입니다.  
+ An enumeration containing one or more flags. For more information on this enumeration, see [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) in the Windows SDK.  
    
-### <a name="remarks"></a>주의  
- 외에 `IMPLEMENT_OLECTLTYPE`를 추가 해야 합니다는 **DECLARE_OLECTLTYPE** 컨트롤 클래스 선언에는 매크로입니다.  
+### <a name="remarks"></a>Remarks  
+ In addition to `IMPLEMENT_OLECTLTYPE`, you must add the **DECLARE_OLECTLTYPE** macro to your control class declaration.  
   
- **GetUserTypeNameID** 멤버 함수가 컨트롤 클래스를 식별 하는 리소스 문자열을 반환 합니다. `GetMiscStatus`반환 된 **OLEMISC** 컨트롤에 대 한 비트입니다. 이 열거형에는 컨트롤의 기타 특징을 설명 하는 설정의 컬렉션을 지정 합니다. 에 대 한 전체 설명은 **OLEMISC** 설정을 참조 [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows sdk에서입니다.  
+ The **GetUserTypeNameID** member function returns the resource string that identifies your control class. `GetMiscStatus` returns the **OLEMISC** bits for your control. This enumeration specifies a collection of settings describing miscellaneous characteristics of your control. For a full description of the **OLEMISC** settings, see [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) in the Windows SDK.  
   
 > [!NOTE]
->  ActiveX 컨트롤에서 사용 하는 기본 설정이: **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, 및 **OLEMISC_RECOMPOSEONRESIZE**합니다.  
+>  The default settings used by the ActiveX ControlWizard are: **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, and **OLEMISC_RECOMPOSEONRESIZE**.  
    
-### <a name="requirements"></a>요구 사항  
- **헤더:** afxctl.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
    
-### <a name="see-also"></a>참고 항목  
- [매크로 및 전역](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [DECLARE_OLECTLTYPE](#declare_olectltype)
 
-##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
- 동적에 필요한 c + + 코드를 생성 `CObject`-클래스 이름 및 계층 구조 내에서 위치에 대 한 런타임 액세스를 사용 하 여 클래스를 파생 합니다.  
+##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL  
+ Generates the C++ code necessary for a dynamic `CObject`-derived class with run-time access to the class name and position within the hierarchy.  
   
 ```
 IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 클래스의 실제 이름입니다.  
+ The actual name of the class.  
   
  `base_class_name`  
- 기본 클래스의 이름입니다.  
+ The name of the base class.  
   
  *wSchema*  
- A **UINT** 식별 하 고 처리 하 여 만든 데이터 역직렬화 프로그램을 허용 하도록 보관 파일에 인코딩될 "버전 번호" 이전 버전을 프로그래밍 합니다. 클래스 스키마 번호가-1 수 없습니다.  
+ A **UINT** "version number" that will be encoded in the archive to enable a deserializing program to identify and handle data created by earlier program versions. The class schema number must not be -1.  
   
-### <a name="remarks"></a>주의  
- 사용 된 `IMPLEMENT_SERIAL` 매크로.cpp 모듈에 다음 결과 개체 코드를 한 번만 연결 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use the `IMPLEMENT_SERIAL` macro in a .cpp module; then link the resulting object code only once.  
   
- 사용할 수 있습니다는 **AFX_API** 를 자동으로 내보낼 매크로 `CArchive` 추출 연산자를 사용 하는 클래스는 `DECLARE_SERIAL` 및 `IMPLEMENT_SERIAL` 매크로입니다. 대괄호를 다음 코드로 클래스 선언 (.h 파일에 있음):  
+ You can use the **AFX_API** macro to automatically export the `CArchive` extraction operator for classes that use the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros. Bracket the class declarations (located in the .h file) with the following code:  
   
- [!code-cpp[NVC_MFCCObjectSample # 20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
+ [!code-cpp[NVC_MFCCObjectSample#20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
   
- 자세한 내용은 참조는 [CObject 클래스 항목이](../../mfc/using-cobject.md)합니다.  
+ For more information, see the [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCObjectSample # 24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="runtime_class"></a>RUNTIME_CLASS  
- C + + 클래스의 이름에서 런타임에 클래스 구조를 가져옵니다.  
+##  <a name="runtime_class"></a>  RUNTIME_CLASS  
+ Gets the run-time class structure from the name of a C++ class.  
   
 ```
 RUNTIME_CLASS(class_name)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- (인용 부호로 묶지) 클래스의 실제 이름입니다.  
+ The actual name of the class (not enclosed in quotation marks).  
   
-### <a name="remarks"></a>설명  
- `RUNTIME_CLASS`에 대 한 포인터를 반환 합니다.는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 에서 지정 된 클래스에 대 한 구조 *class_name*합니다. 만 `CObject`-파생 된 클래스를 사용 하 여 선언 `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, 또는 `DECLARE_SERIAL` 에 대 한 포인터를 반환 합니다는 `CRuntimeClass` 구조입니다.  
+### <a name="remarks"></a>Remarks  
+ `RUNTIME_CLASS` returns a pointer to a [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure for the class specified by *class_name*. Only `CObject`-derived classes declared with `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, or `DECLARE_SERIAL` will return pointers to a `CRuntimeClass` structure.  
   
- 자세한 내용은 참조 [CObject 클래스 항목이](../../mfc/using-cobject.md)합니다.  
+ For more information, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCCObjectSample # 25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
 
-### <a name="requirements"></a>요구 사항  
- **헤더:** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
    
-##  <a name="declare_olecreate"></a>DECLARE_OLECREATE  
- 개체를 사용 하면 `CCmdTarget`-OLE 자동화를 통해 생성 되는 클래스를 파생 합니다.  
+##  <a name="declare_olecreate"></a>  DECLARE_OLECREATE  
+ Enables objects of `CCmdTarget`-derived classes to be created through OLE automation.  
   
 ```
 DECLARE_OLECREATE(class_name) 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 클래스의 실제 이름입니다.  
+ The actual name of the class.  
   
-### <a name="remarks"></a>주의  
- 이 매크로 다른 OLE 지원 응용 프로그램을이 형식의 개체를 만들 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This macro enables other OLE-enabled applications to create objects of this type.  
   
- 추가 된 `DECLARE_OLECREATE` 매크로 클래스에 대 한.h 모듈에서 한 후이 클래스의 개체에 액세스 해야 하는 모든.cpp 모듈에 해당 모듈을 포함 합니다.  
+ Add the `DECLARE_OLECREATE` macro in the .h module for the class, and then include that module in all .cpp modules that need access to objects of this class.  
   
- 경우 `DECLARE_OLECREATE` 다음 클래스 선언에 포함 된 `IMPLEMENT_OLECREATE` 클래스 구현에 포함 되어야 합니다. 사용 하는 클래스 선언 `DECLARE_OLECREATE` 사용 하 여 해야 `DECLARE_DYNCREATE` 또는 `DECLARE_SERIAL`합니다.  
+ If `DECLARE_OLECREATE` is included in the class declaration, then `IMPLEMENT_OLECREATE` must be included in the class implementation. A class declaration using `DECLARE_OLECREATE` must also use `DECLARE_DYNCREATE` or `DECLARE_SERIAL`.  
 
-### <a name="requirements"></a>요구 사항  
- **헤더**: afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h  
 
-##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
- 이 매크로 중 하나 또는 [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) 클래스를 사용 하는 모든 클래스에 대 한 구현 파일에 표시 되어야 `DECLARE_OLECREATE`합니다.  
+##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE  
+ Either this macro or [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) must appear in the implementation file for any class that uses `DECLARE_OLECREATE`.  
   
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 클래스의 실제 이름입니다.  
+ The actual name of the class.  
   
  *external_name*  
- (따옴표에 포함) 다른 응용 프로그램에 노출 되는 개체 이름입니다.  
+ The object name exposed to other applications (enclosed in quotation marks).  
   
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
- 클래스의의 구성 요소 **CLSID**합니다.  
+ Components of the class's **CLSID**.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  사용 하는 경우 `IMPLEMENT_OLECREATE`, 단일 스레딩 모델 기본적으로 지원 합니다. 사용 하는 경우 `IMPLEMENT_OLECREATE_FLAGS`를 사용 하 여 개체가 지 원하는 스레딩 모델을 지정할 수 있습니다는 `nFlags` 매개 변수입니다.  
+>  If you use `IMPLEMENT_OLECREATE`, by default, you support only the single threading model. If you use `IMPLEMENT_OLECREATE_FLAGS`, you can specify which threading model your object supports by using the `nFlags` parameter.  
   
- 외부 이름에는 다른 응용 프로그램에 노출 된 식별자입니다. 자동화 서버에서이 클래스의 개체를 요청 하려면 외부 이름을 사용 하는 클라이언트 응용 프로그램.  
+ The external name is the identifier exposed to other applications. Client applications use the external name to request an object of this class from an automation server.  
   
- OLE 클래스 ID가 개체에 대 한 고유 128 비트 식별자입니다. 하나 이루어져 **긴**, 두 개의 **단어**s 및 8 **바이트**s에 의해 표시 된 대로 *l*, *w1*, *w2*, 및 *b1* 통해 *b8* 구문 설명에 있습니다. 응용 프로그램 마법사 및 코드 마법사를 필요에 따라 고유한 OLE 클래스 Id를 만듭니다.  
+ The OLE class ID is a unique 128-bit identifier for the object. It consists of one **long**, two **WORD**s, and eight **BYTE**s, as represented by *l*, *w1*, *w2*, and *b1* through *b8* in the syntax description. The Application Wizard and code wizards create unique OLE class IDs for you as required.  
 
-### <a name="requirements"></a>요구 사항  
- **헤더**: afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h 
 
-## <a name="see-also"></a>참고 항목  
- [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 
 

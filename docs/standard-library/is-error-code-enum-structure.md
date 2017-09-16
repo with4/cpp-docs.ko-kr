@@ -1,5 +1,5 @@
 ---
-title: "is_error_code_enum 구조체 | Microsoft 문서"
+title: is_error_code_enum Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,30 +32,30 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: f9b576e6d69cc499aa05cbd857b3cd35f99a8adc
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2f0af7cac938ab3e45fb889886439caf99cbe154
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iserrorcodeenum-structure"></a>is_error_code_enum 구조체
-[future_errc](../standard-library/future-enums.md#future_errc)가 [error_code](../standard-library/error-code-class.md)를 저장하는 데 적합함을 나타내는 특수화입니다.  
+# <a name="iserrorcodeenum-structure"></a>is_error_code_enum Structure
+Specialization that indicates that [future_errc](../standard-library/future-enums.md#future_errc) is suitable for storing an [error_code](../standard-library/error-code-class.md).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>
 struct is_error_code_enum<Future_errc> : public true_type;
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<이후 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "CJumpList 클래스 | Microsoft 문서"
+title: CJumpList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,7 +29,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CJumpList class
+- CJumpList [MFC], CJumpList
+- CJumpList [MFC], AbortList
+- CJumpList [MFC], AddDestination
+- CJumpList [MFC], AddKnownCategory
+- CJumpList [MFC], AddTask
+- CJumpList [MFC], AddTasks
+- CJumpList [MFC], AddTaskSeparator
+- CJumpList [MFC], ClearAll
+- CJumpList [MFC], ClearAllDestinations
+- CJumpList [MFC], CommitList
+- CJumpList [MFC], GetDestinationList
+- CJumpList [MFC], GetMaxSlots
+- CJumpList [MFC], GetRemovedItems
+- CJumpList [MFC], InitializeList
+- CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
 caps.latest.revision: 15
 author: mikeblome
@@ -49,73 +63,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b3662bd00f7c757df3a77f5920c48389bbd749fb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 025d9a2d80e12318cc4438a4ba2c365d41c41fb1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cjumplist-class"></a>CJumpList 클래스
-A `CJumpList` 작업 표시줄에서 아이콘에서 마우스 오른쪽 단추로 클릭할 때 표시 되는 바로 가기 목록입니다.  
+# <a name="cjumplist-class"></a>CJumpList Class
+A `CJumpList` is the list of shortcuts revealed when you right click on an icon in the task bar.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CJumpList;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CJumpList::CJumpList](#cjumplist)|`CJumpList` 개체를 생성합니다.|  
-|[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|`CJumpList` 개체를 제거합니다.|  
+|[CJumpList::CJumpList](#cjumplist)|Constructs a `CJumpList` object.|  
+|[CJumpList::~CJumpList](#cjumplist__~cjumplist)|Destroys a `CJumpList` object.|  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CJumpList::AbortList](#abortlist)|목록 작성 트랜잭션을 커밋하지 않고 중단 합니다.|  
-|[CJumpList::AddDestination](#adddestination)|오버로드됨. 대상 목록에 추가합니다.|  
-|[CJumpList::AddKnownCategory](#addknowncategory)|알려진 범주 목록에 추가합니다.|  
-|[CJumpList::AddTask](#addtask)|오버로드됨. 정식 작업 범주에 항목을 추가합니다.|  
-|[CJumpList::AddTasks](#addtasks)|정식 작업 범주에 항목을 추가합니다.|  
-|[CJumpList::AddTaskSeparator](#addtaskseparator)|작업 사이 구분 기호를 추가합니다.|  
-|[CJumpList::ClearAll](#clearall)|모든 작업 및 대상의 현재 인스턴스에 추가 된 제거 `CJumpList` 지금까지 합니다.|  
-|[CJumpList::ClearAllDestinations](#clearalldestinations)|현재 인스턴스에 추가 된 모든 대상을 제거 `CJumpList` 지금까지 합니다.|  
-|[CJumpList::CommitList](#commitlist)|목록 작성 트랜잭션을 종료 하 고 연결 된 저장소 (이 경우 레지스트리.)에 보고 된 목록을 커밋합니다.|  
-|[CJumpList::GetDestinationList](#getdestinationlist)|대상 목록에 대 한 인터페이스 포인터를 검색합니다.|  
-|[CJumpList::GetMaxSlots](#getmaxslots)|호출 응용 프로그램의 대상 메뉴에 표시할 수 있는 범주 헤더를 포함 하는 항목의 최대 수를 검색 합니다.|  
-|[CJumpList::GetRemovedItems](#getremoveditems)|나타내는 항목의 배열을 반환 대상을 제거 합니다.|  
-|[CJumpList::InitializeList](#initializelist)|목록 작성 트랜잭션을 시작합니다.|  
-|[CJumpList::SetAppID](#setappid)|빌드되는 목록에 대 한 응용 프로그램 사용자 모델 ID를 설정 합니다.|  
+|[CJumpList::AbortList](#abortlist)|Aborts a list-building transaction without committing.|  
+|[CJumpList::AddDestination](#adddestination)|Overloaded. Adds destination to the list.|  
+|[CJumpList::AddKnownCategory](#addknowncategory)|Appends a Known Category to the list.|  
+|[CJumpList::AddTask](#addtask)|Overloaded. Adds items to the canonical Tasks category.|  
+|[CJumpList::AddTasks](#addtasks)|Adds items to the canonical Tasks category.|  
+|[CJumpList::AddTaskSeparator](#addtaskseparator)|Adds a separator between tasks.|  
+|[CJumpList::ClearAll](#clearall)|Removes all tasks and destinations that have been added to the current instance of `CJumpList` so far.|  
+|[CJumpList::ClearAllDestinations](#clearalldestinations)|Removes all destinations that have been added to the current instance of `CJumpList` so far.|  
+|[CJumpList::CommitList](#commitlist)|Ends a list-building transaction and commits the reported list to the associated store (the registry in this case.)|  
+|[CJumpList::GetDestinationList](#getdestinationlist)|Retrieves an interface pointer to destination list.|  
+|[CJumpList::GetMaxSlots](#getmaxslots)|Retrieves the maximum number of items, including category headers that can display in the calling application's destination menu.|  
+|[CJumpList::GetRemovedItems](#getremoveditems)|Returns array of items that represent removed destinations.|  
+|[CJumpList::InitializeList](#initializelist)|Begins a list-building transaction.|  
+|[CJumpList::SetAppID](#setappid)|Sets the Application User Model ID for the list that will be built.|  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CJumpList](../../mfc/reference/cjumplist-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxadv.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxadv.h  
   
-##  <a name="_dtorcjumplist"></a>CJumpList:: ~ CJumpList  
- `CJumpList` 개체를 제거합니다.  
+##  <a name="_dtorcjumplist"></a>  CJumpList::~CJumpList  
+ Destroys a `CJumpList` object.  
   
 ```  
 ~CJumpList();
 ```  
   
-##  <a name="abortlist"></a>CJumpList::AbortList  
- 목록 작성 트랜잭션을 커밋하지 않고 중단 합니다.  
+##  <a name="abortlist"></a>  CJumpList::AbortList  
+ Aborts a list-building transaction without committing.  
   
 ```  
 void AbortList();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 호출 하는 것과 동일한 효과가 소멸 `CJumpList` 호출 하지 않고 `CommitList`합니다.  
+### <a name="remarks"></a>Remarks  
+ Calling this method has the same effect as destroying `CJumpList` without calling `CommitList`.  
   
-##  <a name="adddestination"></a>CJumpList::AddDestination  
- 대상 목록에 추가합니다.  
+##  <a name="adddestination"></a>  CJumpList::AddDestination  
+ Adds destination to the list.  
   
 ```  
 BOOL AddDestination(
@@ -133,45 +147,45 @@ BOOL AddDestination(
     IShellLink* pShellLink);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpcszCategoryName`  
- 범주 이름을 지정합니다. 지정된 된 범주가 없는 경우 생성 됩니다.  
+ Specifies a category name. If the specified category does not exist, it will be created.  
   
  `strDestinationPath`  
- 대상 파일의 경로를 지정합니다.  
+ Specifies a path to destination file.  
   
  `strCategoryName`  
- 범주 이름을 지정합니다. 지정된 된 범주가 없는 경우 생성 됩니다.  
+ Specifies a category name. If the specified category does not exist, it will be created.  
   
  `pShellItem`  
- 추가 중인 대상 나타내는 셸 항목을 지정 합니다.  
+ Specifies a Shell Item representing the destination being added.  
   
  `pShellLink`  
- 추가 중인 대상 나타내는 셸 링크를 지정 합니다.  
+ Specifies a Shell Link representing the destination being added.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- 인스턴스의 `CJumpList` 내부적으로 추가 된 대상에 따라 누적 한 다음에 커밋합니다 `CommitList`합니다.  
+### <a name="remarks"></a>Remarks  
+ The instance of `CJumpList` internally accumulates added destinations and then commits them in `CommitList`.  
   
-##  <a name="addknowncategory"></a>CJumpList::AddKnownCategory  
- 알려진 범주 목록에 추가합니다.  
+##  <a name="addknowncategory"></a>  CJumpList::AddKnownCategory  
+ Appends a Known Category to the list.  
   
 ```  
 BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `category`  
- 알려진된 범주 유형을 지정합니다. 일 수 있습니다 `KDC_RECENT`, 또는 `KDC_KNOWN`합니다.  
+ Specifies a known category type. Can be either `KDC_RECENT`, or `KDC_KNOWN`.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- 범주를 활용 하는 모든 응용 프로그램에 대 한 자동으로 계산 됩니다 하는 빈도 및 최근 범주는 알려진 `SHAddToRecentDocs` (또는 직접 사용 하지는 셸 응용 프로그램의 일부 시나리오에서는 대신 하 여 호출 됩니다).  
+### <a name="remarks"></a>Remarks  
+ Known Categories are the Frequent and Recent categories that we will automatically calculate for every application that utilizes `SHAddToRecentDocs` (or indirectly uses it as the shell will call it on the application's behalf in some scenarios).  
   
-##  <a name="addtask"></a>CJumpList::AddTask  
- 정식 작업 범주에 항목을 추가합니다.  
+##  <a name="addtask"></a>  CJumpList::AddTask  
+ Adds items to the canonical Tasks category.  
   
 ```  
 BOOL AddTask(
@@ -184,158 +198,158 @@ BOOL AddTask(
 BOOL AddTask(IShellLink* pShellLink);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `strTargetExecutablePath`  
- 대상 작업 경로 지정합니다.  
+ Specifies the target task path.  
   
  `strCommandLineArgs`  
- StrTargetExecutablePath로 지정 된 실행 파일의 명령줄 인수를 지정 합니다.  
+ Specifies command line arguments of the executable specified by strTargetExecutablePath.  
   
  `strTitle`  
- 대상 목록에 표시 될 작업의 이름입니다.  
+ Task name that will be displayed in the Destination List.  
   
  `strIconLocation`  
- 제목과 함께 대상 목록에 표시 될 아이콘의 위치입니다.  
+ Location of icon that will be displayed in the Destination List along with the title.  
   
  `iIconIndex`  
- 아이콘 인덱스입니다.  
+ Icon index.  
   
  `pShellLink`  
- 추가할 작업을 나타내는 셸 링크입니다.  
+ Shell Link that represents a task to be added.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- 인스턴스의 `CJumpList` 지정 된 작업에 따라 누적 하는 동안 대상 목록에 추가 합니다 `CommitList`합니다. 작업 항목은 응용 프로그램의 대상 메뉴 맨 아래에 범주에 표시 됩니다. 이 범주 UI에 채워진 후 다른 모든 범주 보다 우선 합니다.  
+### <a name="remarks"></a>Remarks  
+ The instance of `CJumpList` accumulates specified tasks and adds them to the Destination List during `CommitList`. Task items will appear in a category at the bottom of the application's destination menu. This category takes precedence over all other categories when it is filled in the UI.  
   
-##  <a name="addtasks"></a>CJumpList::AddTasks  
- 정식 작업 범주에 항목을 추가합니다.  
+##  <a name="addtasks"></a>  CJumpList::AddTasks  
+ Adds items to the canonical Tasks category.  
   
 ```  
 BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pObjectCollection`  
- 추가할 작업의 컬렉션입니다.  
+ A collection of tasks to be added.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- CJumpList의 인스턴스를 지정 된 작업을 누적 하 하는 동안 대상 목록에 추가 `CommitList`합니다. 작업 항목은 응용 프로그램의 대상 메뉴 맨 아래에 범주에 표시 됩니다. 이 범주 UI에 채워진 후 다른 모든 범주 보다 우선 합니다.  
+### <a name="remarks"></a>Remarks  
+ The instance of CJumpList accumulates specified tasks and adds them to the Destination List during `CommitList`. Task items will appear in a category at the bottom of the application's destination menu. This category takes precedence over all other categories when it is filled in the UI.  
   
-##  <a name="addtaskseparator"></a>CJumpList::AddTaskSeparator  
- 작업 사이 구분 기호를 추가합니다.  
+##  <a name="addtaskseparator"></a>  CJumpList::AddTaskSeparator  
+ Adds a separator between tasks.  
   
 ```  
 BOOL AddTaskSeparator();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 하면 0이 아니고 있지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if it is successful, 0 if it is not.  
   
-##  <a name="cjumplist"></a>CJumpList::CJumpList  
- `CJumpList` 개체를 생성합니다.  
+##  <a name="cjumplist"></a>  CJumpList::CJumpList  
+ Constructs a `CJumpList` object.  
   
 ```  
 CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bAutoCommit`  
- 이 매개 변수가 FALSE 이면 소멸자의 목록은 자동으로 커밋되지 않은 합니다.  
+ If this parameter is FALSE the list is not automatically committed in  destructor.  
   
-##  <a name="clearall"></a>CJumpList::ClearAll  
- 모든 작업 및 대상의 현재 인스턴스에 추가 된 제거 `CJumpList` 지금까지 합니다.  
+##  <a name="clearall"></a>  CJumpList::ClearAll  
+ Removes all tasks and destinations that have been added to the current instance of `CJumpList` so far.  
   
 ```  
 void ClearAll();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 지우고 모든 데이터와 내부 인터페이스를 해제 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method clears and releases all data and internal interfaces.  
   
-##  <a name="clearalldestinations"></a>CJumpList::ClearAllDestinations  
- 지금까지 CJumpList의 현재 인스턴스에 추가 된 모든 대상을 제거 합니다.  
+##  <a name="clearalldestinations"></a>  CJumpList::ClearAllDestinations  
+ Removes all destinations that have been added to the current instance of CJumpList so far.  
   
 ```  
 void ClearAllDestinations();
 ```  
   
-### <a name="remarks"></a>주의  
- 대상 목록 건물의 현재 세션에서 지금까지 추가 되어 있어야 하며 다른 대상에 다시 추가 하는 모든 대상을 제거 해야 하는 경우이 함수를 호출 합니다. 경우 내부 `ICustomDestinationList` 되었습니다 초기화 것은 활성 상태로 남아 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function if you need to remove all destinations that have been added so far in the current session of destination list building and add other destinations again. If the internal `ICustomDestinationList` has been initialized, it's left alive.  
   
-##  <a name="commitlist"></a>CJumpList::CommitList  
- 목록 건물에서 트랜잭션을 종료 하 고 연결 된 저장소 (이 경우 레지스트리)에 보고 된 목록을 커밋합니다.  
+##  <a name="commitlist"></a>  CJumpList::CommitList  
+ Ends a list-building transaction and commits the reported list to the associated store (the registry in this case).  
   
 ```  
 BOOL CommitList();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- 커밋 원자성입니다. 커밋에 실패 하면 오류가 반환 됩니다.  때 `CommitList` 라고, 현재 제거 된 항목 목록이 정리 됩니다. 활성 목록 건물 트랜잭션이 없는 있도록 개체를 다시 설정이 메서드를 호출 합니다. 목록을 업데이트 하려면 `BeginList` 다시 호출 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The commit is atomic. An error will be returned if the commit fails.  When `CommitList` is called, the current list of removed items will be cleaned up. Calling this method resets the object so that it does not have an active list-building transaction. To update the list, `BeginList` needs to be called again.  
   
-##  <a name="getdestinationlist"></a>CJumpList::GetDestinationList  
- 대상 목록에 대 한 인터페이스 포인터를 검색합니다.  
+##  <a name="getdestinationlist"></a>  CJumpList::GetDestinationList  
+ Retrieves an interface pointer to destination list.  
   
 ```  
 ICustomDestinationList* GetDestinationList();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- 점프 목록 초기화 되지 않은 또는 커밋 또는 중단, 값이 반환된 됩니다 `NULL`합니다.  
+### <a name="remarks"></a>Remarks  
+ If the jump list has not been initialized, or has been committed or aborted, the returned value will be `NULL`.  
   
-##  <a name="getmaxslots"></a>CJumpList::GetMaxSlots  
- 호출 응용 프로그램의 대상 메뉴에 표시할 수 있는 범주 헤더를 포함 하는 항목의 최대 수를 검색 합니다.  
+##  <a name="getmaxslots"></a>  CJumpList::GetMaxSlots  
+ Retrieves the maximum number of items, including category headers that can display in the calling application's destination menu.  
   
 ```  
 UINT GetMaxSlots() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- 응용 프로그램에는 다양 한 항목 및이 값 만큼 결합 하는 범주 헤더 보고할만 수 있습니다. 경우에 대 한 호출이 `AppendCategory`, `AppendKnownCategory`, 또는 `AddUserTasks` 이 수를 초과, 오류를 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ Applications may only report a number of items and category headers combined up to this value. If calls to `AppendCategory`, `AppendKnownCategory`, or `AddUserTasks` exceed this number, they will return failure.  
   
-##  <a name="getremoveditems"></a>CJumpList::GetRemovedItems  
- 나타내는 항목의 배열을 반환 대상을 제거 합니다.  
+##  <a name="getremoveditems"></a>  CJumpList::GetRemovedItems  
+ Returns array of items that represent removed destinations.  
   
 ```  
 IObjectArray* GetRemovedItems();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- 점프 목록 초기화 하는 동안 제거 된 대상은 검색 됩니다. 새 대상 목록을 생성 하는 경우 응용 프로그램은 제거 목록 열거자가 반환 하는 모든 항목에 대 한 추적 데이터를 지우는 제거 대상 목록에서 먼저 처리 해야 합니다. 응용 프로그램에 대 한 현재 호출 된다고 방금 제거 된 항목을 제공 하려고 할 경우 `BeginList` 시작 다시 해당 항목을 추가 하는 메서드 호출은 실패 합니다, 응용 프로그램은 제거 목록을 엔진 유지 되도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ The removed destinations are retrieved during initialization of jump list. When generating a new destination list, applications are expected to first process the removed destinations list, clearing their tracking data for any item returned by the removed list enumerator. If an application attempts to provide an item that was just removed in the transaction that the current call to `BeginList` started, the method call that re-added that item will fail, to ensure that applications are respecting the removed list.  
   
-##  <a name="initializelist"></a>CJumpList::InitializeList  
- 목록 작성 트랜잭션을 시작합니다.  
+##  <a name="initializelist"></a>  CJumpList::InitializeList  
+ Begins a list-building transaction.  
   
 ```  
 BOOL InitializeList();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- 에 대 한 포인터를 검색 하려는 경우가 아니면이 메서드를 명시적으로 호출할 필요가 없습니다 `ICustomDestinationList` 를 사용 하 여 `GetDestinationList`를 사용 하 여 사용 가능한 슬롯 수가 `GetMaxSlots`, 또는 사용 하 여 제거 된 항목 목록을 `GetRemovedItems`합니다.  
+### <a name="remarks"></a>Remarks  
+ You don't need to call this method explicitly unless you wish to retrieve a pointer to `ICustomDestinationList` using `GetDestinationList`, the number of available slots using `GetMaxSlots`, or list of removed items using `GetRemovedItems`.  
   
-##  <a name="setappid"></a>CJumpList::SetAppID  
- 빌드되는 목록에 대 한 응용 프로그램 사용자 모델 ID를 설정 합니다.  
+##  <a name="setappid"></a>  CJumpList::SetAppID  
+ Sets the Application User Model ID for the list that will be built.  
   
 ```  
 void SetAppID(LPCTSTR strAppID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `strAppID`  
- 응용 프로그램 사용자 모델 ID를 지정 하는 문자열  
+ A string that specifies the Application User Model ID.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

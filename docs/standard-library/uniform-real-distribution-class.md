@@ -1,5 +1,5 @@
 ---
-title: "uniform_real_distribution 클래스 | Microsoft Docs"
+title: uniform_real_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- uniform_real_distribution
 - random/std::uniform_real_distribution
 - random/std::uniform_real_distribution::reset
 - random/std::uniform_real_distribution::a
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- uniform_real_distribution class
+- std::uniform_real_distribution [C++]
+- std::uniform_real_distribution [C++], reset
+- std::uniform_real_distribution [C++], a
+- std::uniform_real_distribution [C++], b
+- std::uniform_real_distribution [C++], param
+- std::uniform_real_distribution [C++], min
+- std::uniform_real_distribution [C++], max
+- std::uniform_real_distribution [C++], param_type
+- std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
 caps.latest.revision: 18
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 34c8090f40b4653f4c8798ffac404dc1652f7b52
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0534c96f521c4bbe60647f0b644342c272b07209
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="uniformrealdistribution-class"></a>uniform_real_distribution 클래스
-시작 범위는 포함되고 끝 범위는 제외되는 출력 범위 내에서 균등한(모든 값이 균일하게 있을 것 같음) 부동 소수점 분포를 생성합니다.  
+# <a name="uniformrealdistribution-class"></a>uniform_real_distribution Class
+Generates a uniform (every value is equally probable) floating-point distribution within an output range that is inclusive-exclusive.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
    class uniform_real_distribution {
@@ -87,31 +94,31 @@ public:
    result_type max() const;
 };
  ``` 
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
-템플릿 클래스는 분포를 사용하여 사용자 지정 정수 부동 소수점 형식의 값을 생성하는 포함-제외 분포를 설명합니다. 따라서 모든 값이 균일할 수 있습니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+## <a name="remarks"></a>Remarks  
+The template class describes an inclusive-exclusive distribution that produces values of a user-specified integral floating point type with a distribution so that every value is equally probable. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|  
   
-속성 멤버 `a()`는 분포의 현재 저장된 최하한을 반환하고 `b()`는 현재 저장된 최상한을 반환합니다. 이 분포 클래스의 경우 최하한과 최상한 값은 [\<random>](../standard-library/random.md) 항목에서 설명한 공통 속성 함수 `min()` 및 `max()`가 반환한 값과 동일합니다.  
+The property member `a()` returns the currently stored minimum bound of the distribution, while `b()` returns the currently stored maximum bound. For this distribution class, these minimum and maximum values are the same as those returned by the common property functions `min()` and `max()` described in the [\<random>](../standard-library/random.md) topic.  
   
-속성 구성원 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -189,38 +196,38 @@ Distribution for 10 samples:
          10: 0.8795716566
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution  
-분포를 생성합니다.  
+Constructs the distribution.  
   
 ```  
 explicit uniform_real_distribution(result_type a = 0.0, result_type b = 1.0);
 explicit uniform_real_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *a*  
-난수 값의 하한으로, 하한 값도 포함됩니다.  
+The lower bound for random values, inclusive.  
   
 *b*  
-난수 값의 상한으로, 상한 값은 제외됩니다.  
+The upper bound for random values, exclusive.  
   
 *parm*  
-분포를 생성하는 데 사용되는 `param_type` 구조체입니다.  
+The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
- **사전 조건:** `a < b`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `a < b`  
   
-첫 번째 생성자는 저장된 `a` 값이 *a* 값을 갖고 저장된 `b` 값이 *b* 값을 갖는 개체를 생성합니다.  
+The first constructor constructs an object whose stored `a` value holds the value *a* and whose stored `b` value holds the value *b*.  
   
-두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  uniform_real_distribution::param_type  
- 분포의 모든 매개 변수를 저장합니다.  
+ Stores all the parameters of the distribution.  
   
 ```  
 struct param_type {  
@@ -233,22 +240,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```  
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *a*  
-난수 값의 하한으로, 하한 값도 포함됩니다.  
+The lower bound for random values, inclusive.  
   
 *b*  
-난수 값의 상한으로, 상한 값은 제외됩니다.  
+The upper bound for random values, exclusive.  
   
 *right*  
-이 매개 변수와 비교할 `param_type` 개체입니다.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>설명  
- **사전 조건:** `a < b`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `a < b`  
   
-이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

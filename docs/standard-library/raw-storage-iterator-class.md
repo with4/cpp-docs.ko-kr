@@ -1,5 +1,5 @@
 ---
-title: "raw_storage_iterator 클래스 | Microsoft Docs"
+title: raw_storage_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,14 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- raw_storage_iterator
 - memory/std::raw_storage_iterator
 - memory/std::raw_storage_iterator::element_type
 - memory/std::raw_storage_iterator::iter_type
 dev_langs:
 - C++
 helpviewer_keywords:
-- raw_storage_iterator class
+- std::raw_storage_iterator [C++]
+- std::raw_storage_iterator [C++], element_type
+- std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
 caps.latest.revision: 17
 author: corob-msft
@@ -36,97 +37,97 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 46bfc6bc42e09348d0760f7d03d70c816fde31ed
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5a513b9b27c72c36f831eba839538910914d4057
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="rawstorageiterator-class"></a>raw_storage_iterator 클래스
-초기화되지 않은 메모리에 결과를 저장하는 알고리즘을 사용할 수 있도록 제공되는 어댑터 클래스입니다.  
+# <a name="rawstorageiterator-class"></a>raw_storage_iterator Class
+An adaptor class that is provided to enable algorithms to store their results into uninitialized memory.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class OutputIterator, class Type>  
 class raw_storage_iterator
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `OutputIterator`  
- 저장되는 개체에 대한 출력 반복기를 지정합니다.  
+ Specifies the output iterator for the object being stored.  
   
  *Type*  
- 저장소를 할당할 개체 형식입니다.  
+ The type of object for which storage is being allocated.  
   
-## <a name="remarks"></a>설명  
- 이 클래스는 생성하는 시퀀스에서 **Type** 형식의 개체를 생성하는 출력 반복기를 설명합니다. `raw_storage_iterator`\< **ForwardIterator**, **Type**> 클래스의 개체는 개체를 생성할 때 지정하는 **ForwardIterator** 클래스의 정방향 반복기 개체를 통해 저장소에 액세스합니다. **ForwardIterator** 클래스의 first 개체에 대해 **&\*first** 식은 생성된 시퀀스에서 다음 개체(**Type** 형식)에 대해 생성되지 않은 저장소를 지정해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The class describes an output iterator that constructs objects of type **Type** in the sequence it generates. An object of class `raw_storage_iterator`\< **ForwardIterator**, **Type**> accesses storage through a forward iterator object, of class **ForwardIterator**, that you specify when you construct the object. For an object first of class **ForwardIterator**, the expression **&\*first** must designate unconstructed storage for the next object (of type **Type**) in the generated sequence.  
   
- 이 어댑터 클래스는 메모리 할당 및 개체 생성을 구분하는 데 필요한 경우에 사용됩니다. `raw_storage_iterator`를 사용하여 `malloc` 함수를 통해 할당된 메모리와 같은 초기화되지 않은 저장소에 개체를 복사할 수 있습니다.  
+ This adaptor class is used when it is necessary to separate memory allocation and object construction. The `raw_storage_iterator` can be used to copy objects into uninitialized storage, such as memory allocated using the `malloc` function.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[raw_storage_iterator](#raw_storage_iterator)|지정된 기본 출력 반복기를 사용하여 원시 저장소 반복기를 생성합니다.|  
+|[raw_storage_iterator](#raw_storage_iterator)|Constructs a raw storage iterator with a specified underlying output iterator.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|원시 저장소 반복기를 저장할 요소를 설명하는 형식을 제공합니다.|  
-|[iter_type](#iter_type)|원시 저장소 반복기의 기반이 되는 반복기를 설명하는 형식을 제공합니다.|  
+|[element_type](#element_type)|Provides a type that describes an element to be stored a raw storage iterator.|  
+|[iter_type](#iter_type)|Provides a type that describes an iterator that underlies a raw storage iterator.|  
   
-### <a name="operators"></a>연산자  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|출력 반복기 식 * `ii` = `x`를 구현하는 데 사용되는 역참조 연산자입니다.|  
-|[operator=](#op_eq)|메모리에 저장하기 위해 원시 저장소 반복기 식 * `i` = `x`를 구현하는 데 사용되는 대입 연산자입니다.|  
-|[operator++](#op_add_add)|원시 저장소 반복기에 대한 사전 증가 및 사후 증가 연산자입니다.|  
+|[operator*](#op_star)|A dereferencing operator used to implement the output iterator expression * `ii` = `x`.|  
+|[operator=](#op_eq)|An assignment operator used to implement the raw storage iterator expression * `i` = `x` for storing in memory.|  
+|[operator++](#op_add_add)|Preincrement and postincrement operators for raw storage iterators.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="element_type"></a>  raw_storage_iterator::element_type  
- 원시 저장소 반복기를 저장할 요소를 설명하는 형식을 제공합니다.  
+ Provides a type that describes an element to be stored a raw storage iterator.  
   
 ```
 typedef Type element_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 raw_storage_iterator 클래스 템플릿 매개 변수 **Type**과 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the raw_storage_iterator class template parameter **Type**.  
   
 ##  <a name="iter_type"></a>  raw_storage_iterator::iter_type  
- 원시 저장소 반복기의 기반이 되는 반복기를 설명하는 형식을 제공합니다.  
+ Provides a type that describes an iterator that underlies a raw storage iterator.  
   
 ```
 typedef ForwardIterator iter_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **ForwardIterator**와 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **ForwardIterator**.  
   
 ##  <a name="op_star"></a>  raw_storage_iterator::operator*  
- 원시 저장소 반복기 식 \* *ii* = *x*를 구현하는 데 사용되는 역참조 연산자입니다.  
+ A dereferencing operator used to implement the raw storage iterator expression \* *ii* = *x*.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 원시 저장소 반복기에 대한 참조  
+### <a name="return-value"></a>Return Value  
+ A reference to the raw storage iterator  
   
-### <a name="remarks"></a>설명  
- 원시 저장소 반복기가 충족해야 하는 **ForwardIterator**에 대한 요구 사항은 \* *ii* = *t* 식만 유효해야 한다는 것과 해당 반복기 자체는 **operator** 또는 `operator=`에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이 구현의 구성원 연산자는 [operator=](#op_eq)( **constType**&)이 \* *ptr* = `val`과 같이 식에서 실제 저장을 수행할 수 있도록 **\*this**를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The requirements for a **ForwardIterator** are that the raw storage iterator must satisfy require only the expression \* *ii* = *t* be valid and that it says nothing about the **operator** or the `operator=` on their own. The member operators in this implementation returns **\*this**, so that [operator=](#op_eq)( **constType**&) can perform the actual store in an expression, such as \* *ptr* = `val`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_deref.cpp  
@@ -178,26 +179,26 @@ Constructing 5
 ```  
   
 ##  <a name="op_eq"></a>  raw_storage_iterator::operator=  
- 메모리에 저장하기 위해 원시 저장소 반복기 식 \* *i* = *x*를 구현하는 데 사용되는 대입 연산자입니다.  
+ Assignment operator used to implement the raw storage iterator expression \* *i* = *x* for storing in memory.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `val`  
- 메모리에 삽입할 **Type** 형식의 개체 값입니다.  
+ The value of the object of type **Type** to be inserted into memory.  
   
-### <a name="return-value"></a>반환 값  
- 연산자는 `val`을 메모리에 삽입한 다음 원시 저장소 반복기에 대한 참조를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The operator inserts `val` into memory, and then returns a reference to the raw storage iterator.  
   
-### <a name="remarks"></a>설명  
- 원시 저장소 반복기가 충족해야 하는 **ForwardIterator** 상태에 대한 요구 사항은 \* *ii* = *t* 식만 유효해야 한다는 것과 해당 반복기 자체는 **operator** 또는 `operator=`에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이러한 구성원 연산자는 **\*this**를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The requirements for a **ForwardIterator** state that the raw storage iterator must satisfy require only the expression \* *ii* = *t* be valid, and that it says nothing about the **operator** or the `operator=` on their own. These member operators return **\*this**.  
   
- 대입 연산자는 placement new 식 **new** ( ( `void` \*)&\* **first**) **Type**( `val`)을 평가하여 저장된 반복기 값을 먼저 사용해 출력 시퀀스에서 다음 개체를 생성합니다.  
+ The assignment operator constructs the next object in the output sequence using the stored iterator value first, by evaluating the placement new expression **new** ( ( `void` \*)&\* **first**) **Type**( `val`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_assign.cpp  
@@ -247,7 +248,7 @@ Constructing 5
 ```  
   
 ##  <a name="op_add_add"></a>  raw_storage_iterator::operator++  
- 원시 저장소 반복기에 대한 사전 증가 및 사후 증가 연산자입니다.  
+ Preincrement and postincrement operators for raw storage iterators.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator++();
@@ -255,19 +256,19 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```  
   
-### <a name="return-value"></a>반환 값  
- 원시 저장소 반복기 또는 원시 저장소 반복기에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ An raw storage iterator or a reference to an raw storage iterator.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 연산자는 연결된 입력 스트림에서 **CharType** 형식의 개체를 추출하고 저장하려고 합니다. 두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first operator eventually attempts to extract and store an object of type **CharType** from the associated input stream. The second operator makes a copy of the object, increments the object, and then returns the copy.  
   
- 첫 번째 preincrement 연산자는 저장된 출력 반복기 개체를 증가시키고 **\*this**를 반환합니다.  
+ The first preincrement operator increments the stored output iterator object, and then returns **\*this**.  
   
- 두 번째 postincrement 연산자는 **\*this**의 복사본을 만들고 저장된 출력 반복기 개체를 증가시킨 다음 해당 복사본을 반환합니다.  
+ The second postincrement operator makes a copy of **\*this**, increments the stored output iterator object, and then returns the copy.  
   
- 생성자는 출력 반복기 개체로 **first**를 저장합니다.  
+ The constructor stores **first** as the output iterator object.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_incr.cpp  
@@ -300,17 +301,17 @@ array 4 = 8
 ```  
   
 ##  <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
- 지정된 기본 출력 반복기를 사용하여 원시 저장소 반복기를 생성합니다.  
+ Constructs a raw storage iterator with a specified underlying output iterator.  
   
 ```
 explicit raw_storage_iterator(ForwardIterator first);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `first`  
- 생성 중인 `raw_storage_iterator`의 기준으로 사용할 정방향 반복기입니다.  
+ The forward iterator that is to underlie the `raw_storage_iterator` object being constructed.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_ctor.cpp  
@@ -390,8 +391,8 @@ array 3 = 4
 *\  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

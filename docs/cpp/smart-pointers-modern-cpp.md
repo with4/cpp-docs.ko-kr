@@ -1,125 +1,141 @@
 ---
-title: "스마트 포인터(최신 C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Smart Pointers (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 스마트 포인터(최신 C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 6b25a9c39f09aef0958c475b663151b97285a6fb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-현대적인 C\+\+ 프로그래밍에서 표준 라이브러리에는 프로그램이 메모리 및 리소스 누출로부터 방해 받지 않고 예외가 발생하지 않도록 보장하기 위해 사용되는 *스마트 포인터*가 포함됩니다.  
+---
+# <a name="smart-pointers-modern-c"></a>Smart Pointers (Modern C++)
+In modern C++ programming, the Standard Library includes *smart pointers*, which are used to help ensure that programs are free of memory and resource leaks and are exception-safe.  
   
-## 스마트 포인터 용도  
- 스마트 포인터는 [\<memory\>](../standard-library/memory.md) 헤더 파일의 `std` 네임스페이스에 정의됩니다.  [RAII](../cpp/objects-own-resources-raii.md) 또는 *Resource Acquisition Is Initialialization* 프로그래밍 언어에 중요합니다.  이 관용구의 주요 목표는 개체의 모든 자원 생성이 한 줄의 코드에서 만들어지고 준비되어 그 개체가 초기화되는 동시에 자원 수집이 발생하는 것을 확인하는 것입니다.  실제로 RAII의 기본 원칙은 힙 할당 리소스\(예: 동적 할당 메모리 또는 시스템 개체 핸들\)의 소유권을 해당 소멸자가 리소스를 삭제하거나 비우는 코드 및 모든 관련 정리 코드가 포함된 스택 할당 개체에 제공하는 것입니다.  
+## <a name="uses-for-smart-pointers"></a>Uses for smart pointers  
+ Smart pointers are defined in the `std` namespace in the [\<memory>](../standard-library/memory.md) header file. They are crucial to the [RAII](../cpp/objects-own-resources-raii.md) or *Resource Acquisition Is Initialialization* programming idiom. The main goal of this idiom is to ensure that resource acquisition occurs at the same time that the object is initialized, so that all resources for the object are created and made ready in one line of code. In practical terms, the main principle of RAII is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles—to a stack-allocated object whose destructor contains the code to delete or free the resource and also any associated cleanup code.  
   
- 대부분의 경우 실제 리소스를 가리키도록 기본 포인터 또는 리소스 핸들을 초기화할 때는 포인터를 스마트 포인터로 즉시 전달합니다.  현대적인 C\+\+에서 기본 포인터는 성능이 중요하며, 소유권 관련 혼동 여지가 없는 제한된 범위, 루프 또는 지원 함수의 작은 코드 블록에서만 사용됩니다.  
+ In most cases, when you initialize a raw pointer or resource handle to point to an actual resource, pass the pointer to a smart pointer immediately. In modern C++, raw pointers are only used in small code blocks of limited scope, loops, or helper functions where performance is critical and there is no chance of confusion about ownership.  
   
- 다음 예제에서는 원시 포인터 선언을 스마트 포인터 선언과 비교합니다.  
+ The following example compares a raw pointer declaration to a smart pointer declaration.  
   
  [!code-cpp[smart_pointers_intro#1](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_1.cpp)]  
   
- 예제에서와 같이 스마트 포인터는 스택에서 선언되고 힙 할당 개체를 가리키는 원시 포인터를 사용하여 초기화하는 스마트 포인터입니다.  스마트 포인터가 초기화되면 원시 포인터를 소유합니다.  원시 포인터가 지정한 메모리를 스마트 포인터가 삭제해야 함을 의미합니다.  스마트 포인터 소멸자에는 삭제할 호출이 포함되며, 스마트 포인터는 스택에 선언되기 때문에 스마트 포인터가 범위를 벗어나면 스택의 다른 위치에서 예외가 throw되더라도 해당 소멸자가 호출됩니다.  
+ As shown in the example, a smart pointer is a class template that you declare on the stack, and initialize by using a raw pointer that points to a heap-allocated object. After the smart pointer is initialized, it owns the raw pointer. This means that the smart pointer is responsible for deleting the memory that the raw pointer specifies. The smart pointer destructor contains the call to delete, and because the smart pointer is declared on the stack, its destructor is invoked when the smart pointer goes out of scope, even if an exception is thrown somewhere further up the stack.  
   
- 스마트 포인터 클래스 오버로드가 캡슐화된 원시 포인터를 반환하는 익숙한 포인터 연산자인 `->` 및 `*`를 사용하여 캡슐화된 포인터에 액세스합니다.  
+ Access the encapsulated pointer by using the familiar pointer operators, `->` and `*`, which the smart pointer class overloads to return the encapsulated raw pointer.  
   
- C\+\+ 스마트 포인터 관용구는 C\# 같은 언어에서의 개체 생성과 유사합니다. 즉 개체를 생성한 후 시스템이 정확한 시간에 그것을 지울 수 있도록 합니다.  백그라운드에서 실행된 별도 가비지 수집기는 런타임 환경을 빠르고 효율적이게 만드는 표준 C\+\+ 범위 지정 규칙을 통해 관리되는 메모리라는 것이 차이점입니다.  
+ The C++ smart pointer idiom resembles object creation in languages such as C#: you create the object and then let the system take care of deleting it at the correct time. The difference is that no separate garbage collector runs in the background; memory is managed through the standard C++ scoping rules so that the runtime environment is faster and more efficient.  
   
 > [!IMPORTANT]
->  매개 변수 목록이 아닌 별도 코드 줄에서 스마트 포인터를 만들어야 특정 매개 변수 목록 할당 규칙으로 인해 아주 작은 리소스 누수도 발생하지 않습니다.  
+>  Always create smart pointers on a separate line of code, never in a parameter list, so that a subtle resource leak won't occur due to certain parameter list allocation rules.  
   
- 다음 예제에서는 표준 템플릿 라이브러리의 `unique_ptr` 스마트 포인터 형식이 큰 개체에 대한 포인터를 캡슐화하는 데 어떻게 사용될 수 있는지 보여줍니다.  
+ The following example shows how a `unique_ptr` smart pointer type from the C++ Standard Library could be used to encapsulate a pointer to a large object.  
   
  [!code-cpp[smart_pointers_intro#2](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]  
   
- 이 예제는 다음과 같이 스마트 포인터를 사용하는 필수 단계를 보여 줍니다.  
+ The example demonstrates the following essential steps for using smart pointers.  
   
-1.  스마트 포인터를 자동\(지역\) 변수로 선언합니다. \(스마트 포인터 자체에 `new` 또는 `malloc` 식을 사용하지 마십시오.\)  
+1.  Declare the smart pointer as an automatic (local) variable. (Do not use the `new` or `malloc` expression on the smart pointer itself.)  
   
-2.  형식 매개 변수에서 캡슐화된 포인터가 가리키는 대상의 형식을 지정합니다.  
+2.  In the type parameter, specify the pointed-to type of the encapsulated pointer.  
   
-3.  원시 포인터를 스마트 포인터 생성자의 `new`\-ed 개체에 전달합니다. \(일부 유틸리티 기능 또는 스마트 포인터 생성자로 이 작업을 자동으로 수행할 수 있습니다.\)  
+3.  Pass a raw pointer to a `new`-ed object in the smart pointer constructor. (Some utility functions or smart pointer constructors do this for you.)  
   
-4.  오버로드된 `->` 및 `*` 연산자를 사용하여 개체에 액세스합니다.  
+4.  Use the overloaded `->` and `*` operators to access the object.  
   
-5.  스마트 포인터로 개체를 삭제할 수 있습니다.  
+5.  Let the smart pointer delete the object.  
   
- 스마트 포인터는 메모리 및 성능 관점에서 최대한 효율적으로 사용할 수 있도록 설계되었습니다.  예를 들어, `unique_ptr`의 유일한 데이터 멤버는 캡슐화된 포인터입니다.  즉, `unique_ptr`은 해당 포인터와 정확히 동일한 크기\(4바이트 또는 8바이트\)입니다.  스마트 포인터 오버로드된 \* 및 \-\> 연산자를 사용하여 캡슐화된 포인터에 액세스하면 원시 포인터에 직접 액세스하는 것보다 크게 느려지지 않습니다.  
+ Smart pointers are designed to be as efficient as possible both in terms of memory and performance. For example, the only data member in `unique_ptr` is the encapsulated pointer. This means that `unique_ptr` is exactly the same size as that pointer, either four bytes or eight bytes. Accessing the encapsulated pointer by using the smart pointer overloaded * and -> operators is not significantly slower than accessing the raw pointers directly.  
   
- 스마트 포인터에는 "점" 표기법을 사용하여 액세스할 수 있는 고유한 멤버 함수가 있습니다.  예를 들어, 일부 STL 스마트 포인터에는 포인터 소유권을 릴리스하는 멤버 다시 설정 기능이 있습니다.  다음 예에 표시된 것처럼 스마트 포인터가 범위를 벗어나기 전에 스마트 포인터에서 소유하는 메모리를 비우려는 경우에 유용합니다.  
+ Smart pointers have their own member functions, which are accessed by using “dot” notation. For example, some C++ Standard Library smart pointers have a reset member function that releases ownership of the pointer. This is useful when you want to free the memory owned by the smart pointer before the smart pointer goes out of scope, as shown in the following example.  
   
  [!code-cpp[smart_pointers_intro#3](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]  
   
- 스마트 포인터는 일반적으로 원시 포인터를 직접 액세스하는 방법을 제공합니다.  STL 스마트 포인터에는 이 목적의 `get` 멤버 함수가 포함되며, `CComPtr`에는 공용 `p` 클래스 멤버가 포함됩니다.  기본 포인터에 대한 직접 액세스를 제공하면 스마트 포인터를 사용하여 자체 코드에서 메모리를 관리하고 스마트 포인터를 지원하지 않는 코드에 원시 포인터를 전달할 수 있습니다.  
+ Smart pointers usually provide a way to access their  raw pointer directly. C++ Standard Library smart pointers have a `get` member function for this purpose, and `CComPtr` has a public `p` class member. By providing direct access to the underlying pointer, you can use the smart pointer to manage memory in your own code and still pass the raw pointer to code that does not support smart pointers.  
   
  [!code-cpp[smart_pointers_intro#4](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]  
   
-## 스마트 포인터의 종류  
- 다음 섹션에서는 다양한 종류의 Windows 프로그래밍 환경에서 사용할 수 있는 스마트 포인터에 대한 정보를 요약하고 사용하는 경우에 대해 설명합니다.  
+## <a name="kinds-of-smart-pointers"></a>Kinds of Smart Pointers  
+ The following section summarizes the different kinds of smart pointers that are available in the Windows programming environment and describes when to use them.  
   
- **C\+\+ 표준 라이브러리 스마트 포인터**  
- POCO\(Plain Old C\+\+ 개체\)에 대한 포인터를 캡슐화하는 데 가장 먼저 스마트 포인터를 사용합니다.  
+ **C++ Standard Library Smart Pointers**  
+ Use these smart pointers as a first choice for encapsulating pointers to plain old C++ objects (POCO).  
   
--   `unique_ptr`    
-    기본 포인터로 한 명의 소유자만 허용합니다.  `shared_ptr`이 필요하다는 점을 확실히 알 경우 POCO의 기본 선택으로 사용합니다.  새 소유자로 이동할 수 있지만 복사하거나 공유할 수 없습니다.  사용하지 않는 `auto_ptr`을 대체합니다.  `boost::scoped_ptr`과 비교합니다.  `unique_ptr`은 작고 효율적이며, 크기는 1 포인터이고 STL 컬렉션에서 빠른 삽입 및 검색을 위해 rvalue 참조를 지원합니다.  헤더 파일: `<memory>`.  자세한 내용은 [방법: unique\_ptr 인스턴스 만들기 및 사용](../cpp/how-to-create-and-use-unique-ptr-instances.md) 및 [unique\_ptr 클래스](../standard-library/unique-ptr-class.md)를 참조하십시오.  
+-   `unique_ptr`   
+     Allows exactly one owner of the underlying pointer. Use as the default choice for POCO unless you know for certain that you require a `shared_ptr`. Can be moved to a new owner, but not copied or shared. Replaces `auto_ptr`, which is deprecated. Compare to `boost::scoped_ptr`. `unique_ptr` is small and efficient; the size is one pointer and it supports rvalue references for fast insertion and retrieval from C++ Standard Library collections. Header file: `<memory>`. For more information, see [How to: Create and Use unique_ptr Instances](../cpp/how-to-create-and-use-unique-ptr-instances.md) and [unique_ptr Class](../standard-library/unique-ptr-class.md).  
   
--   `shared_ptr`    
-    참조 횟수가 계산되는 스마트 포인터입니다.  원시 포인터 하나를 여러 소유자에게 할당하려고 할 경우 사용합니다\(예: 컨테이너에서 포인터 복사본을 반환할 때 원본을 유지하고 싶을 경우\).  원시 포인터는 모든 `shared_ptr` 소유자가 범위를 벗어나거나 소유권을 포기할 때까지 삭제되지 않습니다.  크기는 2개의 포인터입니다. 하나는 개체용이고, 다른 하나는 참조 횟수가 포함된 공유 제어 블록용입니다.  헤더 파일: `<memory>`.  자세한 내용은 [방법: shared\_ptr 인스턴스 만들기 및 사용](../cpp/how-to-create-and-use-shared-ptr-instances.md) 및 [shared\_ptr 클래스](../standard-library/shared-ptr-class.md)를 참조하십시오.  
+-   `shared_ptr`   
+     Reference-counted smart pointer. Use when you want to assign one raw pointer to multiple owners, for example, when you return a copy of a pointer from a container but want to keep the original. The raw pointer is not deleted until all `shared_ptr` owners have gone out of scope or have otherwise given up ownership. The size is two pointers; one for the object and one for the shared control block that contains the reference count. Header file: `<memory>`. For more information, see [How to: Create and Use shared_ptr Instances](../cpp/how-to-create-and-use-shared-ptr-instances.md) and [shared_ptr Class](../standard-library/shared-ptr-class.md).  
   
--   `weak_ptr`    
-    `shared_ptr`과 함께 사용할 수 있는 특별한 경우의 스마트 포인터입니다.  `weak_ptr`은 하나 이상의 `shared_ptr` 인스턴스가 소유하는 개체에 대한 액세스를 제공하지만, 참조 수 계산에 참가하지 않습니다.  개체를 관찰하는 동시에 해당 개체를 활성 상태로 유지하지 않으려는 경우 사용합니다.  `shared_ptr` 인스턴스 사이의 순환 참조를 차단하기 위해 필요한 경우도 있습니다.  헤더 파일: `<memory>`.  자세한 내용은 [방법: weak\_ptr 인스턴스 만들기 및 사용](../cpp/how-to-create-and-use-weak-ptr-instances.md) 및 [weak\_ptr 클래스](../standard-library/weak-ptr-class.md)를 참조하십시오.  
+-   `weak_ptr`   
+    Special-case smart pointer for use in conjunction with `shared_ptr`. A `weak_ptr` provides access to an object that is owned by one or more `shared_ptr` instances, but does not participate in reference counting. Use when you want to observe an object, but do not require it to remain alive. Required in some cases to break circular references between `shared_ptr` instances. Header file: `<memory>`. For more information, see [How to: Create and Use weak_ptr Instances](../cpp/how-to-create-and-use-weak-ptr-instances.md) and [weak_ptr Class](../standard-library/weak-ptr-class.md).  
   
- **COM 개체의 스마트 포인터\(Windows 기본 프로그래밍\)**  
- COM 개체를 사용하는 경우 인터페이스 포인터를 적절한 스마트 포인터 형식으로 래핑합니다.  ATL\(Active Template Library\)은 다양한 목적을 위해 여러 스마트 포인터를 정의합니다.  .tlb 파일에서 래퍼 클래스를 만들 때 컴파일러가 사용하는 `_com_ptr_t` 스마트 포인터 형식을 사용할 수도 있습니다.  ATL 헤더 파일을 포함하지 않으려는 경우에 가장 좋습니다.  
+ **Smart Pointers for COM Objects (Classic Windows Programming)**  
+ When you work with COM objects, wrap the interface pointers in an appropriate smart pointer type. The Active Template Library (ATL) defines several smart pointers for various purposes. You can also use the `_com_ptr_t` smart pointer type, which the compiler uses when it creates wrapper classes from .tlb files. It's the best choice when you do not want to include the ATL header files.  
   
  [CComPtr Class](../atl/reference/ccomptr-class.md)  
- ATL을 사용할 수 없는 이상 이 형식을 사용합니다.  `AddRef` 및 `Release` 메서드를 사용하여 참조 수 계산을 수행합니다.  자세한 내용은 [방법: CComPtr 및 CComQIPtr 인스턴스 만들기 및 사용](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)을 참조하십시오.  
+ Use this unless you cannot use ATL. Performs reference counting by using the `AddRef` and `Release` methods. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComQIPtr Class](../atl/reference/ccomqiptr-class.md)  
- `CComPtr`과 유사하지만 COM 개체에서 `QueryInterface`를 호출하는 간단한 구문을 제공합니다.  자세한 내용은 [방법: CComPtr 및 CComQIPtr 인스턴스 만들기 및 사용](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)을 참조하십시오.  
+ Resembles `CComPtr` but also provides simplified syntax for calling `QueryInterface` on COM objects. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComHeapPtr Class](../atl/reference/ccomheapptr-class.md)  
- `CoTaskMemFree`를 사용하여 메모리를 해제하는 개체에 대한 스마트 포인터  
+ Smart pointer to objects that use `CoTaskMemFree` to free memory.  
   
  [CComGITPtr Class](../atl/reference/ccomgitptr-class.md)  
- GIT\(전역 인터페이스 테이블\)에서 가져온 인터페이스에 대한 스마트 포인터입니다.  
+ Smart pointer for interfaces that are obtained from the global interface table (GIT).  
   
- [\_com\_ptr\_t 클래스](../cpp/com-ptr-t-class.md)  
- 기능 면에서 `CComQIPtr`과 유사하지만 ATL 헤더에 의존하지 않습니다.  
+ [_com_ptr_t Class](../cpp/com-ptr-t-class.md)  
+ Resembles `CComQIPtr` in functionality but does not depend on ATL headers.  
   
- **POCO 개체에 대한 ATL 스마트 포인터**  
- ATL은 COM 개체에 대한 스마트 포인터뿐만 아니라 이전 일반 C\+\+ 개체에 대한 스마트 포인터 및 스마트 포인터 컬렉션을 정의합니다.  클래식 Windows 프로그래밍에서 이러한 형식은 특히 코드 이식이 필요하지 않거나 STL 및 ATL 프로그래밍 모델을 혼합하지 않으려는 경우에 STL 컬렉션에 대한 유용한 대안이 될 수 있습니다.  
+ **ATL Smart Pointers for POCO Objects**  
+ In addition to smart pointers for COM objects, ATL also defines smart pointers, and collections of smart pointers, for plain old C++ objects. In classic Windows programming, these types are useful alternatives to the C++ Standard Library collections, especially when code portability is not required or when you do not want to mix the programming models of the C++ Standard Library and ATL.  
   
  [CAutoPtr Class](../atl/reference/cautoptr-class.md)  
- 복사 소유권을 전송하여 고유 소유권을 적용하는 스마트 포인터입니다.  사용되지 않는 `std::auto_ptr` 클래스에 비교할 수 있습니다.  
+ Smart pointer that enforces unique ownership by transferring ownership on copy. Comparable to the deprecated `std::auto_ptr` Class.  
   
  [CHeapPtr Class](../atl/reference/cheapptr-class.md)  
- [malloc](../c-runtime-library/reference/malloc.md) 함수를 사용하여 할당된 개체의 스마트 포인터입니다.  
+ Smart pointer for objects that are allocated by using the C [malloc](../c-runtime-library/reference/malloc.md) function.  
   
  [CAutoVectorPtr Class](../atl/reference/cautovectorptr-class.md)  
- 배열을 위해 `new[]`를 사용하여 할당하는 스마트 포인터입니다.  
+ Smart pointer for arrays that are allocated by using `new[]`.  
   
  [CAutoPtrArray Class](../atl/reference/cautoptrarray-class.md)  
- `CAutoPtr` 요소 배열을 캡슐화하는 클래스입니다.  
+ Class that encapsulates an array of `CAutoPtr` elements.  
   
  [CAutoPtrList Class](../atl/reference/cautoptrlist-class.md)  
- `CAutoPtr` 노드 목록을 조작하기 위해 메서드를 캡슐화하는 클래스입니다.  
+ Class that encapsulates methods for manipulating a list of `CAutoPtr` nodes.  
   
-## 참고 항목  
- [C\+\+의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+ 언어 참조](../cpp/cpp-language-reference.md)   
- [C\+\+ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)   
- [\(NOTINBUILD\)Overview: Memory Management in C\+\+](http://msdn.microsoft.com/ko-kr/2201885d-3d91-4a6e-aaa6-7a554e0362a8)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)   
+

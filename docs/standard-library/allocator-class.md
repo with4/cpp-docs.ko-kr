@@ -1,5 +1,5 @@
 ---
-title: "allocator 클래스 | Microsoft 문서"
+title: allocator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- allocator
 - memory/std::allocator
 - memory/std::allocator::const_pointer
 - memory/std::allocator::const_reference
@@ -28,7 +27,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- allocator class
+- std::allocator [C++]
+- std::allocator [C++], const_pointer
+- std::allocator [C++], const_reference
+- std::allocator [C++], difference_type
+- std::allocator [C++], pointer
+- std::allocator [C++], reference
+- std::allocator [C++], size_type
+- std::allocator [C++], value_type
+- std::allocator [C++], address
+- std::allocator [C++], allocate
+- std::allocator [C++], construct
+- std::allocator [C++], deallocate
+- std::allocator [C++], destroy
+- std::allocator [C++], max_size
+- std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 caps.latest.revision: 20
 author: corob-msft
@@ -48,110 +61,110 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a2447e0e42cc0a7fdc22db9de415f6dde46c40a5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cb70a813a39fb0b4fc8311eed3fd44371f6839db
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocator-class"></a>allocator 클래스
-템플릿 클래스는 **형식** 형식의 개체 배열에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다. 클래스 **allocator**의 개체는 C++ 표준 라이브러리의 여러 컨테이너 템플릿 클래스에 대한 생성자에 지정된 기본 할당자 개체입니다.  
+# <a name="allocator-class"></a>allocator Class
+The template class describes an object that manages storage allocation and freeing for arrays of objects of type **Type**. An object of class **allocator** is the default allocator object specified in the constructors for several container template classes in the C++ Standard Library.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type>  
 class allocator  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  *Type*  
- 저장소를 할당하거나 할당 취소할 개체의 형식입니다.  
+ The type of object for which storage is being allocated or deallocated.  
   
-## <a name="remarks"></a>설명  
- 모든 C++ 표준 템플릿 라이브러리 컨테이너에는 **allocator**로 기본 설정되는 템플릿 매개 변수가 있습니다. 사용자 지정 할당자로 컨테이너를 생성하면 해당 컨테이너 요소의 할당 및 해제를 제어할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ All the C++ Standard Library containers have a template parameter that defaults to **allocator**. Constructing a container with a custom allocator provide control over allocation and freeing of that container's elements.  
   
- 예를 들어 할당자 개체에서 전용 힙 또는 공유 메모리에 저장소를 할당하거나, 작거나 큰 개체 크기에 맞게 최적화할 수 있습니다. 또한 제공된 형식 정의를 사용하여 공유 메모리를 관리하는 특수 접근자 개체를 통해 요소에 액세스하거나 자동 가비지 컬렉션을 수행하도록 지정할 수 있습니다. 따라서 할당자 개체를 사용하여 저장소를 할당하는 클래스는 C++ 표준 라이브러리의 컨테이너처럼 이러한 형식을 사용하여 포인터 및 참조 개체를 선언해야 합니다.  
+ For example, an allocator object might allocate storage on a private heap or in shared memory, or it might optimize for small or large object sizes. It might also specify, through the type definitions it supplies, that elements be accessed through special accessor objects that manage shared memory, or perform automatic garbage collection. Hence, a class that allocates storage using an allocator object should use these types for declaring pointer and reference objects, as the containers in the C++ Standard Library do.  
   
- **(C_++98/03만 해당)**할당자 클래스에서 파생시키는 경우 `_Other` typedef에서 새로 파생 클래스를 참조하는 [rebind](#rebind) 구조체를 제공해야 합니다.  
+ **(C_++98/03 only)**When you derive from allocator class, you have to provide a [rebind](#rebind) struct, whose `_Other` typedef references your newly-derived class.  
   
- 따라서 할당자는 다음과 같은 형식을 정의합니다.  
+ Thus, an allocator defines the following types:  
   
-- [pointer](#pointer)는 **형식**에 대한 포인터처럼 동작합니다.  
+- [pointer](#pointer) behaves like a pointer to **Type**.  
   
-- [const_pointer](#const_pointer)는 **형식**에 대한 const 포인터처럼 동작합니다.  
+- [const_pointer](#const_pointer) behaves like a const pointer to **Type**.  
   
-- [reference](#reference)는 **형식**에 대한 참조처럼 동작합니다.  
+- [reference](#reference) behaves like a reference to **Type**.  
   
-- [const_reference](#const_reference)는 **형식**에 대한 const 참조처럼 동작합니다.  
+- [const_reference](#const_reference) behaves like a const reference to **Type**.  
   
- 이러한 **형식**은 할당된 요소에 대해 포인터 및 참조를 사용해야 하는 폼을 지정합니다. ([allocator::pointer](#pointer)는 클래스 **allocator**에 대한 명확한 정의가 있는 경우에도 모든 할당자 개체에 대한 **형식**\*과 동일할 필요가 없습니다.)  
+ These **Type**s specify the form that pointers and references must take for allocated elements. ( [allocator::pointer](#pointer) is not necessarily the same as **Type**\* for all allocator objects, even though it has this obvious definition for class **allocator**.)  
   
- **C++11 이상:** 할당자에서 이동 작업을 사용하려면 최소 할당자 인터페이스를 사용하고 복사 생성자, == 및 != 연산자, 할당 및 할당 취소를 구현하세요. 자세한 내용 및 예제는 [할당자](../standard-library/allocators.md)를 참조하세요.  
+ **C++11 and later:**  To enable move operations in your allocator, use the minimal allocator interface and implement copy constructor, == and != operators, allocate and deallocate. For more information and an example, see [Allocators](../standard-library/allocators.md)  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocator](#allocator)|`allocator` 개체를 만드는 데 사용되는 생성자입니다.|  
+|[allocator](#allocator)|Constructors used to create `allocator` objects.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[const_pointer](#const_pointer)|할당자에 의해 관리되는 개체 형식에 대한 상수 포인터를 제공하는 형식입니다.|  
-|[const_reference](#const_reference)|할당자에 의해 관리되는 개체 형식에 대한 상수 참조를 제공하는 형식입니다.|  
-|[difference_type](#difference_type)|할당자에 의해 관리되는 개체 형식에 대한 포인터 값의 차이를 나타낼 수 있는 부호 있는 정수 형식입니다.|  
-|[pointer](#pointer)|할당자에 의해 관리되는 개체 형식에 대한 포인터를 제공하는 형식입니다.|  
-|[reference](#reference)|할당자에 의해 관리되는 개체 형식에 대한 참조를 제공하는 형식입니다.|  
-|[size_type](#size_type)|템플릿 클래스 `allocator`의 개체가 할당할 수 있는 시퀀스의 길이를 나타내는 부호 없는 정수 형식입니다.|  
-|[value_type](#value_type)|할당자에 의해 관리되는 형식입니다.|  
+|[const_pointer](#const_pointer)|A type that provides a constant pointer to the type of object managed by the allocator.|  
+|[const_reference](#const_reference)|A type that provides a constant reference to type of object managed by the allocator.|  
+|[difference_type](#difference_type)|A signed integral type that can represent the difference between values of pointers to the type of object managed by the allocator.|  
+|[pointer](#pointer)|A type that provides a pointer to the type of object managed by the allocator.|  
+|[reference](#reference)|A type that provides a reference to the type of object managed by the allocator.|  
+|[size_type](#size_type)|An unsigned integral type that can represent the length of any sequence that an object of template class `allocator` can allocate.|  
+|[value_type](#value_type)|A type that is managed by the allocator.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[address](#address)|값이 지정된 개체의 주소를 찾습니다.|  
-|[allocate](#allocate)|적어도 지정된 개수의 요소를 저장할 수 있을 만큼 큰 메모리 블록을 할당합니다.|  
-|[construct](#construct)|지정된 값으로 초기화된 특정 형식의 개체를 지정된 주소에 생성합니다.|  
-|[deallocate](#deallocate)|지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.|  
-|[destroy](#destroy)|개체가 저장된 메모리 할당을 취소하지 않고 개체 소멸자를 호출합니다.|  
-|[max_size](#max_size)|사용 가능한 메모리를 사용하기 전에 클래스 `allocator`의 개체에서 할당할 수 있는 `Type` 형식의 요소 수를 반환합니다.|  
-|[rebind](#rebind)|한 형식의 개체에 할당자를 사용하여 다른 형식의 개체에 저장소를 할당할 수 있는 구조체입니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|`allocator` 개체를 다른 `allocator` 개체에 할당합니다.|  
+|[address](#address)|Finds the address of an object whose value is specified.|  
+|[allocate](#allocate)|Allocates a block of memory large enough to store at least some specified number of elements.|  
+|[construct](#construct)|Constructs a specific type of object at a specified address that is initialized with a specified value.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[destroy](#destroy)|Calls an objects destructor without deallocating the memory where the object was stored.|  
+|[max_size](#max_size)|Returns the number of elements of type `Type` that could be allocated by an object of class `allocator` before the free memory is used up.|  
+|[rebind](#rebind)|A structure that enables an allocator for objects of one type to allocate storage for objects of another type.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<memory>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Assigns one `allocator` object to another `allocator` object.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
+  
+ **Namespace:** std  
   
 ##  <a name="address"></a>  allocator::address  
- 값이 지정된 개체의 주소를 찾습니다.  
+ Finds the address of an object whose value is specified.  
   
 ```  
 pointer address(reference val) const;
 const_pointer address(const_reference val) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `val`  
- 주소를 검색하는 개체의 const 또는 nonconst 값입니다.  
+ The const or nonconst value of the object whose address is being searched for.  
   
-### <a name="return-value"></a>반환 값  
- 각각 const 또는 nonconst 값으로 발견된 개체에 대한 const 또는 nonconst 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A const or nonconst pointer to the object found of, respectively, const or nonconst value.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 할당된 요소에 대해 포인터가 가져야 하는 형식으로 `val`의 주소를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member functions return the address of `val`, in the form that pointers must take for allocated elements.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_address.cpp  
@@ -196,26 +209,26 @@ The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```  
   
 ##  <a name="allocate"></a>  allocator::allocate  
- 적어도 지정된 개수의 요소를 저장할 수 있을 만큼 큰 메모리 블록을 할당합니다.  
+ Allocates a block of memory large enough to store at least some specified number of elements.  
   
 ```  
 pointer allocate(size_type count, const void* _Hint);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `count`  
- 충분한 저장소를 할당해야 할 요소의 수입니다.  
+ The number of elements for which sufficient storage is to be allocated.  
   
  *_Hint*  
- 할당자 개체를 지원할 수 있는 const 포인터는 요청 이전에 할당된 개체의 주소를 찾음으로써 저장소의 요청을 충족시킵니다.  
+ A const pointer that may assist the allocator object satisfy the request for storage by locating the address of an object allocated prior to the request.  
   
-### <a name="return-value"></a>반환 값  
- 할당된 개체에 대한 포인터이거나, 메모리가 할당되지 않은 경우 null입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object or null if memory was not allocated.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 연산자 new(`count`)를 호출함으로써 **Type** 형식의 count 요소 배열에 대한 저장소를 할당합니다. 할당된 개체에 대한 포인터를 반환합니다. 힌트 인수는 일부 할당자의 참조 지역성 개선에 도움이 됩니다. 동일한 할당자 개체에 의해 이미 할당되었지만 아직 할당 취소되지 않은 개체의 주소가 유효한 선택입니다. 힌트를 제공하지 않으려면 null 포인터 인수를 대신 사용합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function allocates storage for an array of count elements of type **Type**, by calling operator new( `count`). It returns a pointer to the allocated object. The hint argument helps some allocators in improving locality of reference; a valid choice is the address of an object earlier allocated by the same allocator object and not yet deallocated. To supply no hint, use a null pointer argument instead.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_allocate.cpp  
@@ -252,7 +265,7 @@ int main( )
 ```  
   
 ##  <a name="allocator"></a>  allocator::allocator  
- 할당자 개체를 만드는 데 사용되는 생성자입니다.  
+ Constructors used to create allocator objects.  
   
 ```  
 allocator();
@@ -261,14 +274,14 @@ template <class Other>
 allocator(const allocator<Other>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 복사할 할당자 개체입니다.  
+ The allocator object to be copied.  
   
-### <a name="remarks"></a>설명  
- 생성자는 아무 작업도 수행하지 않습니다. 그러나 일반적으로 다른 할당자 개체로부터 구성된 할당자 개체는 비교 시 같아야 하며, 두 할당자 개체 간에 개체 할당 및 해제를 서로 혼합할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The constructor does nothing. In general, however, an allocator object constructed from another allocator object should compare equal to it and permit intermixing of object allocation and freeing between the two allocator objects.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_allocator.cpp  
@@ -332,16 +345,16 @@ The allocator objects cAlloc & Alloc are equal.
 ```  
   
 ##  <a name="const_pointer"></a>  allocator::const_pointer  
- 할당자에 의해 관리되는 개체 형식에 대한 상수 포인터를 제공하는 형식입니다.  
+ A type that provides a constant pointer to the type of object managed by the allocator.  
   
 ```  
 typedef const value_type *const_pointer;  
 ```  
   
-### <a name="remarks"></a>설명  
- 포인터 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 const 개체를 **\*ptr** 식을 통해 지정할 수 있는 **ptr** 개체를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The pointer type describes an object **ptr** that can designate, through the expression **\*ptr**, any const object that an object of template class allocator can allocate.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_const_ptr.cpp  
@@ -385,16 +398,16 @@ The integer's address found has a value of: 10.
 ```  
   
 ##  <a name="const_reference"></a>  allocator::const_reference  
- 할당자에 의해 관리되는 개체 형식에 대한 상수 참조를 제공하는 형식입니다.  
+ A type that provides a constant reference to type of object managed by the allocator.  
   
 ```  
 typedef const value_type& const_reference;  
 ```  
   
-### <a name="remarks"></a>설명  
- 참조 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 const 개체를 지정할 수 있는 개체를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The reference type describes an object that can designate any const object that an object of template class allocator can allocate.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_const_ref.cpp  
@@ -449,7 +462,7 @@ The value of the element referred to by vcref,
 ```  
   
 ##  <a name="construct"></a>  allocator::construct  
- 지정된 값으로 초기화된 특정 형식의 개체를 지정된 주소에 생성합니다.  
+ Constructs a specific type of object at a specified address that is initialized with a specified value.  
   
 ```  
 void construct(pointer ptr, const Type& val);
@@ -458,17 +471,17 @@ template <class _Other>
 void construct(pointer ptr, _Other&&...   val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 개체를 생성할 위치에 대한 포인터입니다.  
+ A pointer to the location where the object is to be constructed.  
   
  `val`  
- 생성되는 개체를 초기화할 값입니다.  
+ The value with which the object being constructed is to be initialized.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 **new** ( ( `void` \*) `ptr` ) **Type** ( `val` )과 등가입니다.  
+### <a name="remarks"></a>Remarks  
+ The first member function is equivalent to **new** ( ( `void` \*) `ptr` ) **Type** ( `val` ).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_construct.cpp  
@@ -518,40 +531,40 @@ The modified vector v1 is:
 ```  
   
 ##  <a name="deallocate"></a>  allocator::deallocate  
- 지정된 위치부터 시작하여 저장소에서 지정된 개수의 개체를 해제합니다.  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```  
 void deallocate(pointer ptr, size_type count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 저장소에서 할당을 취소할 첫 번째 개체에 대한 포인터입니다.  
+ A pointer to the first object to be deallocated from storage.  
   
  `count`  
- 저장소에서 할당을 취소할 개체의 수입니다.  
+ The number of objects to be deallocated from storage.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수 하면 count 형식 개체의 배열에 대 한 저장소 **형식** 에서 시작 `ptr`를 호출 하 여 `operator delete(ptr)`합니다. **\*이것**과 같은지를 비교하는 할당자 개체에 대해 [allocate](#allocate)를 호출하고 같은 크기와 형식의 배열 개체를 할당하여 `ptr` 포인터가 이미 반환된 상태여야 합니다. `deallocate`은 예외를 throw할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The member function frees storage for the array of count objects of type **Type** beginning at `ptr`, by calling `operator delete(ptr)`. The pointer `ptr` must have been returned earlier by a call to [allocate](#allocate) for an allocator object that compares equal to **\*this**, allocating an array object of the same size and type. `deallocate` never throws an exception.  
   
-### <a name="example"></a>예제  
-  멤버 함수 사용의 예제를 보려면 [allocator::allocate](#allocate)를 참조하세요.  
+### <a name="example"></a>Example  
+  For an example using the member function, see [allocator::allocate](#allocate).  
   
 ##  <a name="destroy"></a>  allocator::destroy  
- 개체가 저장된 메모리 할당을 취소하지 않고 개체 소멸자를 호출합니다.  
+ Calls an objects destructor without deallocating the memory where the object was stored.  
   
 ```  
 void destroy(pointer ptr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 소멸될 개체의 주소를 지정하는 포인터입니다.  
+ A pointer designating the address of the object to be destroyed.  
   
-### <a name="remarks"></a>설명  
- 가 지정 된 개체를 제거 하는 멤버 함수 `ptr`, 소멸자를 호출 하 여 `ptr->` **형식**::**~ 형식**합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function destroys the object designated by `ptr`, by calling the destructor `ptr->`**Type**::**~Type**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_destroy.cpp  
@@ -601,16 +614,16 @@ The modified vector v1 is:
 ```  
   
 ##  <a name="difference_type"></a>  allocator::difference_type  
- 할당자에 의해 관리되는 개체 형식에 대한 포인터 값의 차이를 나타낼 수 있는 부호 있는 정수 형식입니다.  
+ A signed integral type that can represent the difference between values of pointers to the type of object managed by the allocator.  
   
 ```  
 typedef ptrdiff_t difference_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 부호 있는 정수 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The signed integer type describes an object that can represent the difference between the addresses of any two elements in a sequence that an object of template class allocator can allocate.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_diff_type.cpp  
@@ -660,16 +673,16 @@ The difference between the integer's addresses is: 8.
 ```  
   
 ##  <a name="max_size"></a>  allocator::max_size  
- 사용 가능한 메모리가 모두 사용되기 전에 allocator 클래스의 개체가 할당할 수 있는 **Type** 형식의 요소 수를 반환합니다.  
+ Returns the number of elements of type **Type** that could be allocated by an object of class allocator before the free memory is used up.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 할당할 수 있는 요소의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of elements that could be allocated.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_max_size.cpp  
@@ -727,24 +740,24 @@ int main( )
 ```  
   
 ##  <a name="op_eq"></a>  allocator::operator=  
- 한 할당자 개체를 다른 할당자 개체에 할당합니다.  
+ Assigns one allocator object to another allocator object.  
   
 ```  
 template <class Other>  
 allocator<Type>& operator=(const allocator<Other>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 다른 할당자 개체에 할당할 할당자 개체입니다.  
+ An allocator object to be assigned to another such object.  
   
-### <a name="return-value"></a>반환 값  
- 할당자 개체에 대한 참조  
+### <a name="return-value"></a>Return Value  
+ A reference to the allocator object  
   
-### <a name="remarks"></a>설명  
- 템플릿 대입 연산자는 아무것도 수행하지 않습니다. 그러나 일반적으로 다른 할당자 개체에 할당된 할당자 개체는 비교 시 같아야 하며, 두 할당자 개체 간에 개체 할당 및 해제를 서로 혼합할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The template assignment operator does nothing. In general, however, an allocator object assigned to another allocator object should compare equal to it and permit intermixing of object allocation and freeing between the two allocator objects.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_op_assign.cpp  
@@ -786,16 +799,16 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  allocator::pointer  
- 할당자에 의해 관리되는 개체 형식에 대한 포인터를 제공하는 형식입니다.  
+ A type that provides a pointer to the type of object managed by the allocator.  
   
 ```  
 typedef value_type *pointer;  
 ```  
   
-### <a name="remarks"></a>설명  
- 포인터 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 개체를 **\*ptr** 식을 통해 지정할 수 있는 **ptr** 개체를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The pointer type describes an object **ptr** that can designate, through the expression **\*ptr**, any object that an object of template class allocator can allocate.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_ptr.cpp  
@@ -839,32 +852,32 @@ The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```  
   
 ##  <a name="rebind"></a>  allocator::rebind  
- 한 형식의 개체에 할당자를 사용하여 다른 형식의 개체에 저장소를 할당할 수 있는 구조체입니다.  
+ A structure that enables an allocator for objects of one type to allocate storage for objects of another type.  
 ```  
 struct rebind {    typedef allocator<_Other> other ;    };  
 ```  
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *other*  
- 메모리를 할당 중인 요소의 형식입니다.  
+ The type of element for which memory is being allocated.  
   
-### <a name="remarks"></a>설명  
- 이 구조체는 구현 중인 컨테이너의 요소 형식과는 다른 형식의 메모리를 할당하는 데 유용합니다.  
+### <a name="remarks"></a>Remarks  
+ This structure is useful for allocating memory for type that differs from the element type of the container being implemented.  
   
- 멤버 템플릿 클래스는 other 형식을 정의합니다. 형식 이름 **allocator**\< **Type**>이 지정되면 형식 이름 **allocator**\<_ **Other**>를 제공하는 것이 유일한 목적입니다.  
+ The member template class defines the type other. Its sole purpose is to provide the type name **allocator**\<_ **Other**>, given the type name **allocator**\< **Type**>.  
   
- 예를 들어 형식 **A**의 할당자 개체 **al**이 지정되면 다음 식으로 형식 **_Other**의 개체를 할당할 수 있습니다.  
+ For example, given an allocator object **al** of type **A**, you can allocate an object of type **_Other** with the expression:  
   
 ```  
 A::rebind<Other>::other(al).allocate(1, (Other *)0)  
 ```  
   
- 또는 다음과 같은 형식을 작성하여 포인터 형식의 이름을 지정할 수 있습니다.  
+ Or, you can name its pointer type by writing the type:  
   
 ```  
 A::rebind<Other>::other::pointer  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_rebind.cpp  
@@ -890,16 +903,16 @@ int main( )
 ```  
   
 ##  <a name="reference"></a>  allocator::reference  
- 할당자에 의해 관리되는 개체 형식에 대한 참조를 제공하는 형식입니다.  
+ A type that provides a reference to the type of object managed by the allocator.  
   
 ```  
 typedef value_type& reference;  
 ```  
   
-### <a name="remarks"></a>설명  
- 참조 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 개체를 지정할 수 있는 개체를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The reference type describes an object that can designate any object that an object of template class allocator can allocate.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_reference.cpp  
@@ -948,13 +961,13 @@ The element referred to by vref after being modified is: 150.
 ```  
   
 ##  <a name="size_type"></a>  allocator::size_type  
- 템플릿 클래스 할당자의 개체가 할당할 수 있는 시퀀스의 길이를 나타내는 부호 없는 정수 형식입니다.  
+ An unsigned integral type that can represent the length of any sequence that an object of template class allocator can allocate.  
   
 ```  
 typedef size_t size_type;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_size_type.cpp  
@@ -992,16 +1005,16 @@ int main( )
 ```  
   
 ##  <a name="value_type"></a>  allocator::value_type  
- 할당자에 의해 관리되는 형식입니다.  
+ A type that is managed by the allocator.  
   
 ```  
 typedef Type value_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **Type**과 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Type**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // allocator_value_type.cpp  
@@ -1050,7 +1063,7 @@ The modified vector v is:
  ( 150 200 300 400 500 600 700 ).  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

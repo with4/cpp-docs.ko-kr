@@ -1,118 +1,134 @@
 ---
-title: "C++에서 예외 및 스택 해제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Exceptions and Stack Unwinding in C++ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++에서 예외 및 스택 해제
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: a0148b9d6de51d31cdc95b710dae5119298a3f9a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-C\+\+ 예외 메커니즘에서 컨트롤은 throw 문에서 throw된 형식을 처리할 수 있는 첫 번째 catch 문으로 이동합니다.  catch 문이 도달하면 throw 및 catch 문 사이의 범위에서 모든 자동 변수는 *스택 해제*로 알려진 프로세스에서 삭제됩니다.  스택 해제에서 실행은 다음과 같이 진행됩니다.  
+---
+# <a name="exceptions-and-stack-unwinding-in-c"></a>Exceptions and Stack Unwinding in C++
+In the C++ exception mechanism, control moves from the throw statement to the first catch statement that can handle the thrown type. When the catch statement is reached, all of the automatic variables that are in scope between the throw and catch statements are destroyed in a process that is known as *stack unwinding*. In stack unwinding, execution proceeds as follows:  
   
-1.  제어는 일반 순차적 실행으로 `try` 문에 도달합니다.  `try` 블록의 보호된 섹션이 실행됩니다.  
+1.  Control reaches the `try` statement by normal sequential execution. The guarded section in the `try` block is executed.  
   
-2.  보호된 섹션을 실행하는 동안 예외가 throw되지 않는 경우 `try` 블록 다음에 오는 `catch` 절은 실행되지 않습니다.  연결된 `try` 블록 다음에 오는 마지막 `catch` 절 뒤에 있는 문에서 계속 실행됩니다.  
+2.  If no exception is thrown during execution of the guarded section, the `catch` clauses that follow the `try` block are not executed. Execution continues at the statement after the last `catch` clause that follows the associated `try` block.  
   
-3.  보호된 섹션의 실행 중 또는 보호된 섹션이 직접 또는 간접적으로 호출하는 임의의 루틴에서 예외가 throw될 경우 `throw` 피연산자가 만든 개체에서 예외 개체가 만들어집니다. 이는 복사 생성자가 관련될 수 있음을 의미합니다. 이 지점에서 컴파일러는 throw된 형식의 예외를 처리할 수 있는 더 높은 실행 컨텍스트 또는 모든 예외 형식을 처리할 수 있는 `catch` 처리기에서 `catch` 절을 검색합니다.  `catch` 처리기는 `try` 블록 다음에 오는 모양의 순서대로 검사됩니다.  적절한 처리기가 발견되지 않으면 바로 다음 바깥쪽 `try` 블록을 검사합니다.  이 프로세스는 가장 바깥쪽 `try` 블록이 검사될 때까지 계속됩니다.  
+3.  If an exception is thrown during execution of the guarded section or in any routine that the guarded section calls either directly or indirectly, an exception object is created from the object that is created by the `throw` operand. (This implies that a copy constructor may be involved.) At this point, the compiler looks for a `catch` clause in a higher execution context that can handle an exception of the type that is thrown, or for a `catch` handler that can handle any type of exception. The `catch` handlers are examined in order of their appearance after the `try` block. If no appropriate handler is found, the next dynamically enclosing `try` block is examined. This process continues until the outermost enclosing `try` block is examined.  
   
-4.  일치하는 처리기를 여전히 찾을 수 없거나 해제 프로세스 중 처리기가 컨트롤을 갖기 전에 예외가 발생하는 경우 미리 정의된 런타임 함수 `terminate`가 호출됩니다.  예외가 throw되었지만 해제 작업을 시작하기 전에 예외가 발생하는 경우 `terminate`가 호출됩니다.  
+4.  If a matching handler is still not found, or if an exception occurs during the unwinding process but before the handler gets control, the predefined run-time function `terminate` is called. If an exception occurs after the exception is thrown but before the unwind begins, `terminate` is called.  
   
-5.  일치하는 `catch` 처리기가 검색되고 이 처리기가 값으로 catch되는 경우 해당 정식 매개 변수는 예외 개체를 복사하여 초기화됩니다.  참조로 catch하면 예외 개체를 참조하도록 매개 변수가 초기화됩니다.  정식 매개 변수가 초기화된 후 스택 해제 프로세스가 시작됩니다.  이는 `catch` 처리기와 관련 있는 `try` 블록의 시작과 예외의 throw 사이트 사이에서 완전히 생성되었으나 아직 소멸되지 않은 모든 자동 개체의 소멸과 관련이 있습니다.  소멸은 생성과 반대 순서로 발생합니다.  `catch` 처리기가 실행되고 프로그램은 마지막 처리기 즉, `catch` 처리기가 아닌 첫 번째 문 또는 구문 다음에 실행을 다시 시작합니다.  제어는 `switch` 문의 `case` 레이블 또는 `goto` 문이 아닌 throw된 예외를 통해서만 `catch` 처리기에 들어올 수 있습니다.  
+5.  If a matching `catch` handler is found, and it catches by value, its formal parameter is initialized by copying the exception object. If it catches by reference, the parameter is initialized to refer to the exception object. After the formal parameter is initialized, the process of unwinding the stack begins. This involves the destruction of all automatic objects that were fully constructed—but not yet destructed—between the beginning of the `try` block that is associated with the `catch` handler and the throw site of the exception. Destruction occurs in reverse order of construction. The `catch` handler is executed and the program resumes execution after the last handler—that is, at the first statement or construct that is not a `catch` handler. Control can only enter a `catch` handler through a thrown exception, never through a `goto` statement or a `case` label in a `switch` statement.  
   
-## 스택 해제 예제  
- 다음 예제에서는 예외가 throw되면 어떻게 스택이 해제되는지 보여 줍니다.  스레드에서의 실행은 방식에 따라 각 함수를 해제하면서 `C`의 throw 문에서 `main`의 catch 문으로 점프합니다.  `Dummy` 개체가 만들어진 다음 범위에서 벗어날 때 소멸되는 순서를 살펴보십시오.  또한 catch 문이 포함된 `main`을 제외하고는 어떤 함수도 완료할 수 없습니다.  함수 `A`는 `B()` 호출에서 반환되지 않으며 `B`도 `C()` 호출에서 반환되지 않습니다.  `Dummy` 포인터의 정의 및 해당 delete 문에 대한 주석 처리를 제거한 다음 프로그램을 실행하면 포인터가 삭제되지 않습니다.  이는 함수가 예외 보장을 제공하지 않는 경우 발생할 수 있음을 보여 줍니다.  자세한 내용은 방법: 예외 디자인을 참조하십시오.  catch 문을 주석으로 처리하는 경우 처리되지 않은 예외로 인해 프로그램을 종료할 때 나타나는 현상을 확인할 수 있습니다.  
+## <a name="stack-unwinding-example"></a>Stack Unwinding Example  
+ The following example demonstrates how the stack is unwound when an exception is thrown. Execution on the thread jumps from the throw statement in `C` to the catch statement in `main`, and unwinds each function along the way. Notice the order in which the `Dummy` objects are created and then destroyed as they go out of scope. Also notice that no function completes except `main`, which contains the catch statement. Function `A` never returns from its call to `B()`, and `B` never returns from its call to `C()`. If you uncomment the definition of the `Dummy` pointer and the corresponding delete statement, and then run the program, notice that the pointer is never deleted. This shows what can happen when functions do not provide an exception guarantee. For more information, see How to: Design for Exceptions. If you comment out the catch statement, you can observe what happens when a program terminates because of an unhandled exception.  
   
 ```  
-#include <string>  
-#include <iostream>  
-using namespace std;  
+#include <string>  
+#include <iostream>  
+using namespace std;  
   
-class MyException{};  
-class Dummy  
+class MyException{};  
+class Dummy  
 {  
-    public:  
-    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }  
-    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }  
-    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }  
-    void PrintMsg(string s) { cout << s  << MyName <<  endl; }  
-    string MyName;   
-    int level;  
+    public:  
+    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }  
+    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }  
+    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }  
+    void PrintMsg(string s) { cout << s  << MyName <<  endl; }  
+    string MyName;   
+    int level;  
 };  
   
-void C(Dummy d, int i)  
-{   
-    cout << "Entering FunctionC" << endl;  
-    d.MyName = " C";  
-    throw MyException();     
+void C(Dummy d, int i)  
+{   
+    cout << "Entering FunctionC" << endl;  
+    d.MyName = " C";  
+    throw MyException();     
   
-    cout << "Exiting FunctionC" << endl;  
+    cout << "Exiting FunctionC" << endl;  
 }  
   
-void B(Dummy d, int i)  
+void B(Dummy d, int i)  
 {  
-    cout << "Entering FunctionB" << endl;  
-    d.MyName = "B";  
-    C(d, i + 1);     
-    cout << "Exiting FunctionB" << endl;   
+    cout << "Entering FunctionB" << endl;  
+    d.MyName = "B";  
+    C(d, i + 1);     
+    cout << "Exiting FunctionB" << endl;   
 }  
   
-void A(Dummy d, int i)  
-{   
-    cout << "Entering FunctionA" << endl;  
-    d.MyName = " A" ;  
-  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!  
-    B(d, i + 1);  
- //   delete pd;   
-    cout << "Exiting FunctionA" << endl;     
+void A(Dummy d, int i)  
+{   
+    cout << "Entering FunctionA" << endl;  
+    d.MyName = " A" ;  
+  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!  
+    B(d, i + 1);  
+ //   delete pd;   
+    cout << "Exiting FunctionA" << endl;     
 }  
   
-int main()  
+int main()  
 {  
-    cout << "Entering main" << endl;  
-    try  
-    {  
-        Dummy d(" M");  
-        A(d,1);  
-    }  
-    catch (MyException& e)  
-    {  
-        cout << "Caught an exception of type: " << typeid(e).name() << endl;  
-    }  
+    cout << "Entering main" << endl;  
+    try  
+    {  
+        Dummy d(" M");  
+        A(d,1);  
+    }  
+    catch (MyException& e)  
+    {  
+        cout << "Caught an exception of type: " << typeid(e).name() << endl;  
+    }  
   
-    cout << "Exiting main." << endl;  
-    char c;  
-    cin >> c;  
+    cout << "Exiting main." << endl;  
+    char c;  
+    cin >> c;  
 }  
   
-/* Output:  
-    Entering main  
-    Created Dummy: M  
-    Copy created Dummy: M  
-    Entering FunctionA  
-    Copy created Dummy: A  
-    Entering FunctionB  
-    Copy created Dummy: B  
-    Entering FunctionC  
-    Destroyed Dummy: C  
-    Destroyed Dummy: B  
-    Destroyed Dummy: A  
-    Destroyed Dummy: M  
-    Caught an exception of type: class MyException  
-    Exiting main.  
+/* Output:  
+    Entering main  
+    Created Dummy: M  
+    Copy created Dummy: M  
+    Entering FunctionA  
+    Copy created Dummy: A  
+    Entering FunctionB  
+    Copy created Dummy: B  
+    Entering FunctionC  
+    Destroyed Dummy: C  
+    Destroyed Dummy: B  
+    Destroyed Dummy: A  
+    Destroyed Dummy: M  
+    Caught an exception of type: class MyException  
+    Exiting main.  
   
 */  
   

@@ -1,5 +1,5 @@
 ---
-title: "&lt;valarray&gt; 함수 | Microsoft Docs"
+title: '&lt;valarray&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,14 +27,32 @@ f1_keywords:
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c5d52ee25c8afaa531413859a57f97e014d568e8
+helpviewer_keywords:
+- std::abs [C++]
+- std::acos [C++]
+- std::asin [C++]
+- std::atan [C++]
+- std::atan2
+- std::cos [C++]
+- std::cosh [C++]
+- std::exp [C++]
+- std::log [C++]
+- std::log10
+- std::pow [C++]
+- std::sin [C++]
+- std::sinh [C++]
+- std::sqrt [C++]
+- std::swap [C++]
+- std::tan [C++]
+- std::tanh [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 35a42bfd4584e4451fecd6700574301adcabf20d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 함수
+# <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; functions
 ||||  
 |-|-|-|  
 |[abs](#abs)|[acos](#acos)|[asin](#asin)|  
@@ -45,21 +63,21 @@ ms.lasthandoff: 04/19/2017
 |[tan](#tan)|[tanh](#tanh)|  
   
 ##  <a name="abs"></a>  abs  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 절대값과 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> abs(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 절대값과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_abs.cpp  
@@ -97,26 +115,26 @@ The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .
 ```  
   
 ##  <a name="acos"></a>  acos  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 아크코사인과 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the arccosine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> acos(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 아크코사인과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the arccosine of the elements of the input valarray.  
   
-### <a name="remarks"></a>설명  
- 반환되는 요소의 단위는 라디안입니다.  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- 반환 값은 코사인값 입력과 일치하는 0과 +pi 사이의 주요 값입니다.  
+ The return value is a principal value between 0 and +pi that is consistent with the cosine value input.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_acos.cpp  
@@ -166,26 +184,26 @@ The arccosine of the initial valarray is:
 ```  
   
 ##  <a name="asin"></a>  asin  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 아크사인과 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the arcsine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> asin(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 아크사인과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the arcsine of the elements of the input valarray.  
   
-### <a name="remarks"></a>설명  
- 반환되는 요소의 단위는 라디안입니다.  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- 반환 값은 보안 주체 사이 + pi/2와-pi/2 사인 일치 하는 값 입력 합니다.  
+ The return value is a principal value between +pi/2 and -pi/2 that is consistent with the sine value input.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_asin.cpp  
@@ -235,26 +253,26 @@ The arcsine of the initial valarray is:
 ```  
   
 ##  <a name="atan"></a>  atan  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 아크탄젠트 주요 값과 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the principal value of the arctangent of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> atan(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 아크탄젠트와 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the arctangent of the elements of the input valarray.  
   
-### <a name="remarks"></a>설명  
- 반환되는 요소의 단위는 라디안입니다.  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- 반환 값은 보안 주체 사이 + pi/2와-pi/2 탄젠트 일치 하는 값 입력 합니다.  
+ The return value is a principal value between +pi/2 and -pi/2 that is consistent with the tangent value input.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_atan.cpp  
@@ -307,7 +325,7 @@ The arcsine of the initial valarray is:
 ```  
   
 ##  <a name="atan2"></a>  atan2  
- 요소가 valarray의 요소 및 상수 조합에 의해 지정된 데카르트 구성 요소의 아크탄젠트와 같은 valarray를 반환합니다.  
+ Returns a valarray whose elements are equal to the arctangent of the Cartesian components specified by a combination of constants and elements of valarrays.  
   
 ```  
 template <class Type>  
@@ -320,30 +338,30 @@ template <class Type>
 valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 해당 요소가 아크탄젠트 인수의 y좌표 값을 제공하는 입력 valarray 또는 상수 숫자 데이터 형식  
+ The constant numerical data type or input valarray whose elements provide the values for the y-coordinate of the arctangent argument.  
   
  `right`  
- 해당 요소가 아크탄젠트 인수의 x좌표 값을 제공하는 입력 valarray 또는 상수 숫자 데이터 형식  
+ The constant numerical data type or input valarray whose elements provide the values for the x-coordinate of the arctangent argument.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소 `I`가 다음의 아크탄젠트와 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements `I` are equal to the arctangent of:  
   
-- 첫 번째 템플릿 함수의 경우 `left` [ *I* ] / *_Righ*t [ *I* ]  
+- `left` [ *I* ] / *_Righ*t [ *I* ] for the first template function.  
   
-- 두 번째 템플릿 함수의 경우 `left` [ *I* ] / `right`  
+- `left` [ *I* ] / `right` for the second template function.  
   
-- 세 번째 템플릿 함수의 경우 `left` / `right` [ *I* ]  
+- `left` / `right` [ *I* ] for the third template function.  
   
-### <a name="remarks"></a>설명  
- 반환되는 요소의 단위는 라디안입니다.  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- 이 함수는 표준 탄젠트 함수로 손실 되는 인수에 있는 구성 요소는 기호에 대 한 정보를 유지 하 고이 정보는 사분면의 반환 값을 할당할 수 사이의 고유한 각도 + pi 있으며-pi를 활성화 합니다.  
+ This function preserves information about the signs of the components in the argument that is lost by the standard tangent function, and this knowledge of the quadrant enables the return value to be assigned a unique angle between +pi and -pi.  
   
- `left` 및 `right`의 요소 수가 다르면 결과가 정의되지 않습니다.  
+ If `left` and `right` have a different number of elements, the result is undefined.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_atan2.cpp  
@@ -397,21 +415,21 @@ The atan2 ( y / x ) of the initial valarrays is:
 ```  
   
 ##  <a name="cos"></a>  cos  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 코사인과 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the cosine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> cos(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 절대값과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_cos.cpp  
@@ -471,26 +489,26 @@ The cosine of the initial valarray is:
 ```  
   
 ##  <a name="cosh"></a>  cosh  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 쌍곡 코사인과 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> cosh(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 쌍곡선 코사인과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.  
   
-### <a name="remarks"></a>설명  
- 지수 함수로 쌍곡선 코사인을 정의하는 ID입니다.  
+### <a name="remarks"></a>Remarks  
+ Identities defining the hyperbolic cosine in terms of exponential function:  
   
  cosh ( *z* ) = ( exp ( *z* ) + exp ( - *z* ) ) / 2  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_cosh.cpp  
@@ -550,21 +568,21 @@ The hyperbolic cosine of the initial valarray is:
 ```  
   
 ##  <a name="exp"></a>  exp  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 자연 지수와 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the natural exponential of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> exp(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 자연 지수와 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the natural exponential of the elements of the input valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_exp.cpp  
@@ -610,21 +628,21 @@ The natural exponential of the initial valarray is:
 ```  
   
 ##  <a name="log"></a>  log  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 자연 로그와 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the natural logarithm of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> log(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 절대값과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_log.cpp  
@@ -670,21 +688,21 @@ The natural logarithm of the initial valarray is:
 ```  
   
 ##  <a name="log10"></a>  log10  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 base 10 또는 상용 로그와 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the base 10 or common logarithm of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> log10(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 상용 로그와 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the common logarithm of the elements of the input valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_log10.cpp  
@@ -732,7 +750,7 @@ The common logarithm of the initial valarray is:
 ```  
   
 ##  <a name="pow"></a>  pow  
- 입력 valarray 및 상수의 요소에서 작동하고 요소가 입력 valarray의 요소로 지정된 밑수 또는 입력 valarray 또는 상수의 요소로 지정된 지수의 상수 거듭제곱과 같은 valarray를 반환합니다.  
+ Operates on the elements of input valarrays and constants, returning a valarray whose elements are equal to a base specified either by the elements of an input valarray or a constant raised to an exponent specified either by the elements of an input valarray or a constant.  
   
 ```  
 template <class Type>  
@@ -754,26 +772,26 @@ pow(
     const valarray<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 해당 요소가 지수화할 각 요소의 밑을 제공하는 입력 valarray  
+ The input valarray whose elements supply the base for each element to be exponentiated.  
   
  `right`  
- 해당 요소가 지수화할 각 요소의 거듭제곱을 제공하는 입력 valarray  
+ The input valarray whose elements supply the power for each element to be exponentiated.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소 `I`가 다음 항목과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements `I` are equal to:  
   
-- 첫 번째 템플릿 함수의 경우 거듭제곱 `right` [ *I* ]로 증가된 `left` [ *I* ]  
+- `left` [ *I* ] raised to the power `right` [ *I* ] for the first template function.  
   
-- 두 번째 템플릿 함수의 경우 거듭제곱 `right`로 증가된 `left` [ *I* ]  
+- `left` [ *I* ] raised to the power `right` for the second template function.  
   
-- 세 번째 템플릿 함수의 경우 거듭제곱 `right` [ *I* ]로 증가된 `left`  
+- `left` raised to the power `right` [ *I* ] for the third template function.  
   
-### <a name="remarks"></a>설명  
- `left` 및 `right`의 요소 수가 다르면 결과가 정의되지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ If `left` and `right` have a different number of elements, the result is undefined.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <valarray>  
@@ -825,21 +843,21 @@ n = 5   gives 1024
 ```  
   
 ##  <a name="sin"></a>  sin  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 사인과 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the sine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> sin(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 사인과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the sine of the elements of the input valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sin.cpp  
@@ -899,26 +917,26 @@ The sine of the initial valarray is:
 ```  
   
 ##  <a name="sinh"></a>  sinh  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 쌍곡 사인과 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic sine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> sinh(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 쌍곡선 사인과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the hyperbolic sine of the elements of the input valarray.  
   
-### <a name="remarks"></a>설명  
- 지수 함수로 쌍곡선 사인을 정의하는 ID입니다.  
+### <a name="remarks"></a>Remarks  
+ Identities defining the hyperbolic sine in terms of exponential function:  
   
  sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sinh.cpp  
@@ -978,21 +996,21 @@ The hyperbolic sine of the initial valarray is:
 ```  
   
 ##  <a name="sqrt"></a>  sqrt  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 제곱근과 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the square root of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> sqrt(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 제곱근과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the square root of the elements of the input valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sqrt.cpp  
@@ -1029,7 +1047,7 @@ The square root of the initial valarray is: ( 0 1 2 3 4 ).
 ```  
   
 ##  <a name="swap"></a>  swap  
- 두 valarray의 요소를 교환합니다.  
+ Exchanges the elements of two valarrays.  
   
 ```  
 template <class Type>  
@@ -1038,32 +1056,32 @@ void swap(
     valarray<Type>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`valarray` 형식의 개체입니다.|  
-|`right`|`valarray` 형식의 개체입니다.|  
+|`left`|An object of type `valarray`.|  
+|`right`|An object of type `valarray`.|  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 ` left.swap( right)`를 실행합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function executes ` left.swap( right)`.  
   
 ##  <a name="tan"></a>  tan  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 탄젠트와 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the tangent of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> tan(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 탄젠트와 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the tangent of the elements of the input valarray.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_tan.cpp  
@@ -1123,26 +1141,26 @@ The tangent of the initial valarray is:
 ```  
   
 ##  <a name="tanh"></a>  tanh  
- 입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 쌍곡 탄젠트와 같은 valarray를 반환합니다.  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic tangent of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> tanh(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- 구성원 함수를 통해 해당 요소의 연산을 수행할 입력 valarray  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>반환 값  
- 해당 요소가 입력 valarray 요소의 쌍곡선 코사인과 같은 valarray  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.  
   
-### <a name="remarks"></a>설명  
- 지수 함수로 쌍곡선 탄젠트를 정의하는 ID입니다.  
+### <a name="remarks"></a>Remarks  
+ Identities defining the hyperbolic tangent in terms of the exponential function:  
   
  tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_tanh.cpp  
@@ -1201,7 +1219,7 @@ The hyperbolic tangent of the initial valarray is:
 0.996272  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<valarray>](../standard-library/valarray.md)
 
 

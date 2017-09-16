@@ -1,5 +1,5 @@
 ---
-title: "CFolderPickerDialog 클래스 | Microsoft 문서"
+title: CFolderPickerDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFolderPickerDialog class
+- CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
 caps.latest.revision: 22
 author: mikeblome
@@ -35,34 +35,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0d020544a16056d3f4db538750ed5a16b54f9a51
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9ffe67842dd3114a6877e3ade056b25ec7633da9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 클래스
-CFolderPickerDialog 클래스 폴더 선택 모드에서 CFileDialog를 구현합니다.  
+# <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog Class
+CFolderPickerDialog class implements CFileDialog in the folder picker mode.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFolderPickerDialog : public CFileDialog;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|소멸자|  
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|생성자입니다.|  
+|[CFolderPickerDialog::~CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destructor.|  
+|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Constructor.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -77,11 +77,11 @@ class CFolderPickerDialog : public CFileDialog;
   
  `CFolderPickerDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
- 생성자입니다.  
+##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
+ Constructor.  
   
 ```  
 explicit CFolderPickerDialog(
@@ -91,30 +91,30 @@ explicit CFolderPickerDialog(
     DWORD dwSize = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszFolder`  
- 초기 폴더입니다.  
+ Initial folder.  
   
  `dwFlags`  
- 대화 상자를 사용자 지정할 수 있도록 하는 하나 이상의 플래그의 조합입니다.  
+ A combination of one or more flags that allow you to customize the dialog box.  
   
  `pParentWnd`  
- 대화 상자 개체의 부모 또는 소유자 창에 대 한 포인터입니다.  
+ A pointer to the dialog box object's parent or owner window.  
   
  `dwSize`  
- OPENFILENAME 구조체의 크기입니다.  
+ The size of the OPENFILENAME structure.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
- 소멸자  
+##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog::~CFolderPickerDialog  
+ Destructor.  
   
 ```  
 virtual ~CFolderPickerDialog();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

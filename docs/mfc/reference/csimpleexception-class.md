@@ -1,5 +1,5 @@
 ---
-title: "CSimpleException 클래스 | Microsoft 문서"
+title: CSimpleException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSimpleException class
+- CSimpleException [MFC], CSimpleException
+- CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
 caps.latest.revision: 19
 author: mikeblome
@@ -36,78 +37,78 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5612d76a2351b9898b8ffe082844686d21fcd7a0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ab6a2347567dfe404d3dc5c154e24c789dff45c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csimpleexception-class"></a>CSimpleException 클래스
-이 클래스는 리소스에 중요한 MFC 예외의 기본 클래스입니다.  
+# <a name="csimpleexception-class"></a>CSimpleException Class
+This class is a base class for resource-critical MFC exceptions.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CSimpleException : public CException  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSimpleException::CSimpleException](#csimpleexception)|생성자입니다.|  
+|[CSimpleException::CSimpleException](#csimpleexception)|The constructor.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSimpleException::GetErrorMessage](#geterrormessage)|발생 한 오류에 대 한 텍스트를 제공 합니다.|  
+|[CSimpleException::GetErrorMessage](#geterrormessage)|Provides text about an error that has occurred.|  
   
-## <a name="remarks"></a>주의  
- `CSimpleException`리소스에 중요 한 MFC 예외에 대 한 기본 클래스 이며 소유권 및 오류 메시지의 초기화를 처리 합니다. 다음 클래스를 사용 하 여 `CSimpleException` 그 기본 클래스로:  
+## <a name="remarks"></a>Remarks  
+ `CSimpleException` is the base class for resource-critical MFC exceptions and handles the ownership and initialization of an error message. The following classes use `CSimpleException` as their base class:  
   
 |||  
 |-|-|  
-|[CMemoryException 클래스](../../mfc/reference/cmemoryexception-class.md)|메모리 부족 예외|  
-|[CNotSupportedException 클래스](../../mfc/reference/cnotsupportedexception-class.md)|지원 되지 않는 작업에 대 한 요청|  
-|[CResourceException 클래스](../../mfc/reference/cresourceexception-class.md)|Windows 리소스를 찾을 수 없거나 불가|  
-|[CUserException 클래스](../../mfc/reference/cuserexception-class.md)|리소스를 나타내는 예외를 찾을 수 없습니다.|  
-|[CInvalidArgException 클래스](../../mfc/reference/cinvalidargexception-class.md)|잘못 된 인수를 나타내는 예외|  
+|[CMemoryException Class](../../mfc/reference/cmemoryexception-class.md)|Out-of-memory exception|  
+|[CNotSupportedException Class](../../mfc/reference/cnotsupportedexception-class.md)|Requests for an unsupported operation|  
+|[CResourceException Class](../../mfc/reference/cresourceexception-class.md)|Windows resource not found or not creatable|  
+|[CUserException Class](../../mfc/reference/cuserexception-class.md)|Exception that indicates a resource could not be found|  
+|[CInvalidArgException Class](../../mfc/reference/cinvalidargexception-class.md)|Exception that indicates an invalid argument|  
   
- 때문에 `CSimpleException` 되는 추상 기본 클래스를 선언할 수 없습니다는 `CSimpleException` 개체에 직접. 대신, 앞의 표에서 것과 같은 파생 된 개체를 선언 해야 합니다. 파생 된 클래스를 선언 하는 모델로 서 이전 클래스를 사용 합니다.  
+ Because `CSimpleException` is an abstract base class, you cannot declare a `CSimpleException` object directly. Instead, you must declare derived objects such as those in the previous table. If you are declaring your own derived class, use the previous classes as a model.  
   
- 자세한 내용은 참조는 [CException 클래스](../../mfc/reference/cexception-class.md) 항목 및 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md)합니다.  
+ For more information, see the [CException Class](../../mfc/reference/cexception-class.md) topic and [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `CSimpleException`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
- 생성자입니다.  
+##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
+ The constructor.  
   
 ```  
 CSimpleException();  
 explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bAutoDelete`  
- 지정 **TRUE** 하는 경우에 대 한 메모리는 `CSimpleException` 힙에 할당 된 개체입니다. 이 인해는 `CSimpleException` 삭제할 때 개체는 **삭제** 멤버 함수가 호출 되어 예외를 삭제 합니다. 지정 **FALSE** 경우는 `CSimpleException` 개체가 스택에 이거나 전역 개체입니다. 이 경우에 `CSimpleException` 개체는 되지 삭제는 **삭제** 멤버 함수를 호출 합니다.  
+ Specify **TRUE** if the memory for the `CSimpleException` object has been allocated on the heap. This will cause the `CSimpleException` object to be deleted when the **Delete** member function is called to delete the exception. Specify **FALSE** if the `CSimpleException` object is on the stack or is a global object. In this case, the `CSimpleException` object will not be deleted when the **Delete** member function is called.  
   
-### <a name="remarks"></a>주의  
- 되지 일반적으로이 생성자를 직접 호출 해야 합니다. 인스턴스를 만들어야 한다는 예외를 throw 하는 함수는 `CException`-파생 클래스와 MFC 중 하나를 사용 해야 함수 같은 throw 되거나 해당 생성자를 호출 [AfxThrowFileException](exception-processing.md#afxthrowfileexception), 미리 정의 된 형식을 throw 하 합니다.  
+### <a name="remarks"></a>Remarks  
+ You would normally never need to call this constructor directly. A function that throws an exception should create an instance of a `CException`-derived class and call its constructor, or it should use one of the MFC throw functions, such as [AfxThrowFileException](exception-processing.md#afxthrowfileexception), to throw a predefined type.  
   
-##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
- 발생 한 오류에 대 한 텍스트를 제공 하려면이 멤버 함수를 호출 합니다.  
+##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
+ Call this member function to provide text about an error that has occurred.  
   
 ```  
 virtual BOOL GetErrorMessage(
@@ -116,26 +117,26 @@ virtual BOOL GetErrorMessage(
     PUNIT  pnHelpContext = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszError`  
- 오류 메시지를 수신할 버퍼에 대 한 포인터입니다.  
+ A pointer to a buffer that will receive an error message.  
   
  `nMaxError`  
- 버퍼에 저장할 수를 포함 한 문자의 최대 수는 **NULL** 종결자입니다.  
+ The maximum number of characters the buffer can hold, including the **NULL** terminator.  
   
  `pnHelpContext`  
- 주소는 **UINT** 는 받습니다 도움말 컨텍스트 id입니다. 경우 **NULL**, ID가 없습니다. 반환 됩니다.  
+ The address of a **UINT** that will receive the help context ID. If **NULL**, no ID will be returned.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아니고 그렇지 않으면 0이 고 오류가 없으면 메시지 텍스트를 사용할 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0 if no error message text is available.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CException 클래스](../../mfc/reference/cexception-class.md)   
- [예외 처리](../../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CException Class](../../mfc/reference/cexception-class.md)   
+ [Exception Handling](../../mfc/exception-handling-in-mfc.md)
 
 
 

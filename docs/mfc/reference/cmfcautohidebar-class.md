@@ -1,5 +1,5 @@
 ---
-title: "CMFCAutoHideBar 클래스 | Microsoft 문서"
+title: CMFCAutoHideBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCAutoHideToolBar class
+- CMFCAutoHideBar [MFC], CMFCAutoHideBar
+- CMFCAutoHideBar [MFC], AddAutoHideWindow
+- CMFCAutoHideBar [MFC], AllowShowOnPaneMenu
+- CMFCAutoHideBar [MFC], CalcFixedLayout
+- CMFCAutoHideBar [MFC], Create
+- CMFCAutoHideBar [MFC], GetFirstAHWindow
+- CMFCAutoHideBar [MFC], GetVisibleCount
+- CMFCAutoHideBar [MFC], OnShowControlBarMenu
+- CMFCAutoHideBar [MFC], RemoveAutoHideWindow
+- CMFCAutoHideBar [MFC], SetActiveInGroup
+- CMFCAutoHideBar [MFC], SetRecentVisibleState
+- CMFCAutoHideBar [MFC], ShowAutoHideWindow
+- CMFCAutoHideBar [MFC], StretchPane
+- CMFCAutoHideBar [MFC], UnSetAutoHideMode
+- CMFCAutoHideBar [MFC], UpdateVisibleState
+- CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
 caps.latest.revision: 35
 author: mikeblome
@@ -50,69 +65,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: db15fc9fa3925230e372b6e13368f455dcfbb1a9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bbbb09f536af4b2d50b482dc9b2211bd693ad235
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 클래스
-`CMFCAutoHideBar` 클래스는 자동 숨기기 기능을 구현하는 특수 도구 모음 클래스입니다.  
+# <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar Class
+The `CMFCAutoHideBar` class is a special toolbar class that implements the auto-hide feature.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCAutoHideBar : public CPane  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::CMFCAutoHideBar](#cmfcautohidebar)||  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
-|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(`CPane::AllowShowOnPaneMenu`를 재정의합니다.)|  
-|[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(재정의 [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
-|[CMFCAutoHideBar::Create](#create)|컨트롤 막대를 만들고 연결 하는 [CPane](../../mfc/reference/cpane-class.md) 개체입니다. (재정의 [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
+|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Overrides `CPane::AllowShowOnPaneMenu`.)|  
+|[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(Overrides [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
+|[CMFCAutoHideBar::Create](#create)|Creates a control bar and attaches it to the [CPane](../../mfc/reference/cpane-class.md) object. (Overrides [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
 |[CMFCAutoHideBar::GetFirstAHWindow](#getfirstahwindow)||  
 |[CMFCAutoHideBar::GetVisibleCount](#getvisiblecount)||  
-|[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|특수 창 메뉴를 표시하려고 할 때 프레임워크에서 호출됩니다. (재정의 [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
+|[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|Called by the framework when a special pane menu is about to be displayed. (Overrides [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
 |[CMFCAutoHideBar::RemoveAutoHideWindow](#removeautohidewindow)||  
-|[CMFCAutoHideBar::SetActiveInGroup](#setactiveingroup)|(재정의 [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).)|  
+|[CMFCAutoHideBar::SetActiveInGroup](#setactiveingroup)|(Overrides [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).)|  
 |[CMFCAutoHideBar::SetRecentVisibleState](#setrecentvisiblestate)||  
 |[CMFCAutoHideBar::ShowAutoHideWindow](#showautohidewindow)||  
-|[CMFCAutoHideBar::StretchPane](#stretchpane)|창을 가로 또는 세로로 확장합니다. (재정의 [CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane).)|  
+|[CMFCAutoHideBar::StretchPane](#stretchpane)|Stretches a pane vertically or horizontally. (Overrides [CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane).)|  
 |[CMFCAutoHideBar::UnSetAutoHideMode](#unsetautohidemode)||  
 |[CMFCAutoHideBar::UpdateVisibleState](#updatevisiblestate)||  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|위에 마우스 커서를 두면 때 시점 사이의 지연 시간을 [CMFCAutoHideButton 클래스](../../mfc/reference/cmfcautohidebutton-class.md) 및 프레임 워크 연결된 된 창을 표시 하는 경우 현재 합니다.|  
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|The time delay between the moment when the user places the mouse cursor over a [CMFCAutoHideButton Class](../../mfc/reference/cmfcautohidebutton-class.md) and the moment when the framework shows the associated window.|  
   
-## <a name="remarks"></a>주의  
- 사용자가 도킹 창을 자동 숨기기 모드로 전환하면 프레임워크에서 자동으로 `CMFCAutoHideBar` 개체를 만듭니다. 또한 필요한 만듭니다 [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) 및 [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) 개체입니다. 각 `CAutoHideDockSite` 개체는 개별 `CMFCAutoHideButton`에 연결됩니다.  
+## <a name="remarks"></a>Remarks  
+ When the user switches a dock pane to auto-hide mode, the framework automatically creates a `CMFCAutoHideBar` object. It also creates the necessary [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) and [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) objects. Each `CAutoHideDockSite` object is associated with an individual `CMFCAutoHideButton`.  
   
- `CMFCAutoHideBar` 클래스는 사용자의 마우스로 `CMFCAutoHideButton`을 가리킬 때 `CAutoHideDockSite`의 표시를 구현합니다. 도구 모음에서 WM_MOUSEMOVE 메시지를 받으면 `CMFCAutoHideBar`에서 타이머를 시작합니다. 타이머가 완료되면 도구 모음에 WM_TIMER 이벤트 알림을 보냅니다. 도구 모음은 마우스 포인터가 타이머가 시작될 때 배치되었던 것과 동일한 자동 숨기기 단추에 배치되었는지 확인하여 이 이벤트를 처리합니다. 그럴 경우 연결된 `CAutoHideDockSite`가 표시됩니다.  
+ The `CMFCAutoHideBar` class implements the display of a `CAutoHideDockSite` when a user's mouse hovers over a `CMFCAutoHideButton`. When the toolbar receives a WM_MOUSEMOVE message, `CMFCAutoHideBar` starts a timer. When the timer finishes, it sends the toolbar a WM_TIMER event notification. The toolbar handles this event by checking whether the mouse pointer is positioned over the same auto-hide button that it was positioned over when the timer started. If it is, the attached `CAutoHideDockSite` is displayed.  
   
- `m_nShowAHWndDelay`를 설정하여 타이머의 지연 길이를 제어할 수 있습니다. 기본값은 400ms입니다.  
+ You can control the length of the timer's delay by setting `m_nShowAHWndDelay`. The default value is 400 ms.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `CMFCAutoHideBar` 개체를 생성하고 해당 `GetDockSiteRow` 메서드를 사용하는 방법을 보여 줍니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCAutoHideBar` object and use its `GetDockSiteRow` method.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&26;](../../mfc/reference/codesnippet/cpp/cmfcautohidebar-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cmfcautohidebar-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -125,11 +140,11 @@ class CMFCAutoHideBar : public CPane
   
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxautohidebar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxautohidebar.h  
   
-##  <a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
- 자동으로 숨길 수 있도록 하는 기능을 `CDockablePane` 창에 추가합니다.  
+##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow  
+ Adds functionality to a `CDockablePane` window that enables it to auto-hide.  
   
 ```  
 CMFCAutoHideButton* AddAutoHideWindow(
@@ -137,17 +152,17 @@ CMFCAutoHideButton* AddAutoHideWindow(
     DWORD dwAlignment);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pAutoHideWnd`  
- 숨기려는 창입니다.  
+ The window that you want to hide.  
   
  [in] `dwAlignment`  
- 응용 프로그램 창에 자동 숨기기 단추의 맞춤을 지정하는 값입니다.  
+ A value that specifies the alignment of the auto-hide button with the application window.  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
- `dwAlignment` 매개 변수는 자동 숨기기 단추가 응용 프로그램에 있음을 나타냅니다. 이 매개 변수는 다음 값 중 하나가 될 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The `dwAlignment` parameter indicates where the auto-hide button resides in the application. The parameter can be any one of the following values:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -157,18 +172,18 @@ CMFCAutoHideButton* AddAutoHideWindow(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout  
 
   
 ```  
@@ -177,24 +192,24 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bStretch`  
  [in] `bHorz`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
- CMFCAutoHideBar 개체를 생성합니다.  
+##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar  
+ Constructs a CMFCAutoHideBar object.  
   
 ```  
 CMFCAutoHideBar();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="create"></a>CMFCAutoHideBar::Create  
+##  <a name="create"></a>  CMFCAutoHideBar::Create  
 
   
 ```  
@@ -208,7 +223,7 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszClassName`  
  [in] `dwStyle`  
  [in] `rect`  
@@ -217,102 +232,102 @@ virtual BOOL Create(
  [in] `dwControlBarStyle`  
  [in] `pContext`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
- 응용 프로그램의 첫 번째 자동 숨기기 창에 대한 포인터를 반환합니다.  
+##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow  
+ Returns a pointer to the first auto-hide window in the application.  
   
 ```  
 CDockablePane* GetFirstAHWindow();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 응용 프로그램의 첫 번째 자동 숨기기 창이거나, 없는 경우 NULL입니다.  
+### <a name="return-value"></a>Return Value  
+ The first auto-hide window in the application, or NULL if there isn't one.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
- 표시되는 자동 숨기기 단추 수를 가져옵니다.  
+##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount  
+ Gets the number of visible auto-hide buttons.  
   
 ```  
 int GetVisibleCount();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 표시되는 자동 숨기기 단추 수를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the number of visible auto-hide buttons.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
- 위에 마우스 커서를 두면 때 시점 사이의 지연 시간을 [CMFCAutoHideButton 클래스](../../mfc/reference/cmfcautohidebutton-class.md) 및 프레임 워크 연결된 된 창을 표시 하는 경우 현재 합니다.  
+##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
+ The time delay between the moment when the user places the mouse cursor over a [CMFCAutoHideButton Class](../../mfc/reference/cmfcautohidebutton-class.md) and the moment when the framework shows the associated window.  
   
 ```  
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
 ```  
   
-### <a name="remarks"></a>주의  
- 사용자 위에 마우스 커서를 배치 하는 경우는 `CMFCAutoHideButton`, 프레임 워크에 연결된 된 창을 표시 하기 전에 약간의 지연이 발생 합니다. 이 매개 변수는 이러한 지연 시간 (밀리초)의 길이 결정합니다.  
+### <a name="remarks"></a>Remarks  
+ When the user places the mouse cursor over a `CMFCAutoHideButton`, there is a slight delay before the framework displays the associated window. This parameter determines the length of that delay in milliseconds.  
   
-##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
   
 ```  
 virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `CPoint`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
- 자동 숨기기 창을 제거하고 삭제합니다.  
+##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow  
+ Removes and destroys the auto-hide window.  
   
 ```  
     BOOL RemoveAutoHideWindow(CDockablePane* pAutoHideWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
- CDockablePane *`pAutoHideWnd`  
- 제거할 자동 숨기기 창입니다.  
+### <a name="parameters"></a>Parameters  
+ CDockablePane* `pAutoHideWnd`  
+ The auto-hide window to remove.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 TRUE이고, 실패하면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if successful; otherwise FALSE.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
- 자동 숨기기 막대에 활성으로 플래그를 지정합니다.  
+##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup  
+ Flags an auto-hide bar as active.  
   
 ```  
 virtual void SetActiveInGroup(BOOL bActive);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- [in] BOOL`bActive`  
- 활성으로 설정하려면 TRUE이고, 그러지 않으면 FALSE입니다.  
+### <a name="parameters"></a>Parameters  
+ [in] BOOL `bActive`  
+ TRUE to set to active; otherwise FALSE.  
   
-### <a name="remarks"></a>주의  
- 참조 [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup)합니다.  
+### <a name="remarks"></a>Remarks  
+ See [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
-##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
+##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
   
 ```  
 void SetRecentVisibleState(BOOL bState);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bState`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
- 자동 숨기기 창을 표시합니다.  
+##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow  
+ Shows the auto-hide window.  
   
 ```  
 BOOL ShowAutoHideWindow(
@@ -321,23 +336,21 @@ BOOL ShowAutoHideWindow(
         BOOL bDelay);  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- [in] CDockablePane *`pAutoHideWnd`  
- [in] BOOL`bShow`  
- 창을 표시하려면 TRUE입니다.  
+### <a name="parameters"></a>Parameters  
+ [in] CDockablePane* `pAutoHideWnd`  
+ [in] BOOL `bShow`  
+ TRUE to show the window.  
   
- [in] BOOL`bDelay`  
- 이 매개 변수는 무시됩니다.  
+ [in] BOOL `bDelay`  
+ This parameter is ignored.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 TRUE이고, 실패하면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if successful; otherwise FALSE.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
- 
-      
-    `CMFCAutoHideButton` 개체에 맞게 자동 숨기기 막대의 크기를 축소된 상태로 조정합니다.  
+##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane  
+ Resizes the auto-hide bar in its collapsed state to fit the `CMFCAutoHideButton` object.  
   
 ```  
 virtual CSize StretchPane(
@@ -345,45 +358,45 @@ virtual CSize StretchPane(
     BOOL bVert);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nLength`  
- 값이 기본 구현에서 사용되지 않습니다. 파생된 구현에서는 이 값을 사용하여 크기 조정된 창의 길이를 나타냅니다.  
+ The value is unused in the base implementation. In derived implementations, use this value to indicate the length of the resized pane.  
   
  [in] `bVert`  
- 값이 기본 구현에서 사용되지 않습니다. 파생 된 구현에서 사용 하 여 `TRUE` 자동 숨김 표시줄을 세로로 축소 된 경우를 처리 하도록 하 고 `FALSE` 자동 숨김 표시줄이 가로 방향으로 축소 되는 경우.  
+ The value is unused in the base implementation. In derived implementations, use `TRUE` to handle the case where the auto-hide bar is collapsed vertically, and `FALSE` for the case where the auto-hide bar is collapsed horizontally.  
   
-### <a name="return-value"></a>반환 값  
- 크기 조정된 창의 결과 크기입니다.  
+### <a name="return-value"></a>Return Value  
+ The resulting size of the resized pane.  
   
-### <a name="remarks"></a>주의  
- 파생된 클래스는 이 메서드를 재정의하여 동작을 사용자 지정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Derived classes can override this method to customize the behavior.  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
- 자동 숨기기 막대의 그룹에 대해 자동 숨기기 모드를 사용하지 않도록 설정합니다.  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode  
+ Disables auto-hide mode for a group of auto-hide bars.  
   
 ```  
 void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] pFirstBarInGroup  
- 그룹의 첫 번째 자동 숨기기 막대에 대한 포인터입니다.  
+ A pointer to the first auto-hide bar in the group.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
- 자동 숨기기 막대를 다시 그려야 할 때 프레임워크에서 호출됩니다.  
+##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState  
+ Called by the framework when the auto-hide bar needs to be redrawn.  
   
 ```  
 void UpdateVisibleState();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CPane 클래스](../../mfc/reference/cpane-class.md)   
- [CAutoHideDockSite 클래스](../../mfc/reference/cautohidedocksite-class.md)   
- [CMFCAutoHideButton 클래스](../../mfc/reference/cmfcautohidebutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CPane Class](../../mfc/reference/cpane-class.md)   
+ [CAutoHideDockSite Class](../../mfc/reference/cautohidedocksite-class.md)   
+ [CMFCAutoHideButton Class](../../mfc/reference/cmfcautohidebutton-class.md)
 

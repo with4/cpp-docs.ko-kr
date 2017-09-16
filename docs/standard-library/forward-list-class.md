@@ -1,15 +1,14 @@
 ---
-title: "forward_list 클래스 | Microsoft 문서"
+title: forward_list Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- forward_list
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
 - forward_list/std::forward_list::const_iterator
@@ -51,7 +50,44 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- forward_list class
+- std::forward_list
+- std::forward_list::allocator_type
+- std::forward_list::const_iterator
+- std::forward_list::const_pointer
+- std::forward_list::const_reference
+- std::forward_list::difference_type
+- std::forward_list::iterator
+- std::forward_list::pointer
+- std::forward_list::reference
+- std::forward_list::size_type
+- std::forward_list::value_type
+- std::forward_list::assign
+- std::forward_list::before_begin
+- std::forward_list::begin
+- std::forward_list::cbefore_begin
+- std::forward_list::cbegin
+- std::forward_list::cend
+- std::forward_list::clear
+- std::forward_list::emplace_after
+- std::forward_list::emplace_front
+- std::forward_list::empty
+- std::forward_list::end
+- std::forward_list::erase_after
+- std::forward_list::front
+- std::forward_list::get_allocator
+- std::forward_list::insert_after
+- std::forward_list::max_size
+- std::forward_list::merge
+- std::forward_list::pop_front
+- std::forward_list::push_front
+- std::forward_list::remove
+- std::forward_list::remove_if
+- std::forward_list::resize
+- std::forward_list::reverse
+- std::forward_list::sort
+- std::forward_list::splice_after
+- std::forward_list::swap
+- std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 caps.latest.revision: 25
 author: corob-msft
@@ -71,17 +107,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: cde111871667e754f629fd69562a6aa4aeb07b94
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0301f86f42d08f06655b9285745108987af08f48
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="forwardlist-class"></a>forward_list 클래스
-다양한 길이의 요소 시퀀스를 제어하는 개체를 설명합니다. 각각 `Type` 형식의 멤버를 포함하는 노드의 단일 연결 목록으로 시퀀스가 저장됩니다.  
+# <a name="forwardlist-class"></a>forward_list Class
+Describes an object that controls a varying-length sequence of elements. The sequence is stored as a singly-linked list of nodes, each containing a member of type `Type`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type,   
@@ -89,99 +125,99 @@ template <class Type,
 class forward_list   
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|forward_list에 저장되는 요소 데이터 형식입니다.|  
-|`Allocator`|forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체입니다. 이 매개 변수는 선택적 요소입니다. 기본값은 allocator< `Type`>입니다.|  
+|`Type`|The element data type to be stored in the forward_list.|  
+|`Allocator`|The stored allocator object that encapsulates details about the  forward_list allocation and deallocation of memory. This parameter is optional. The default value is allocator< `Type`>.|  
   
-## <a name="remarks"></a>설명  
- `forward_list` 개체는 [allocator 클래스](../standard-library/allocator-class.md)(일반적으로 `std::allocator)`라고 함)를 기반으로 하는 `Allocator` 클래스의 저장된 개체를 통해 제어하는 시퀀스에 대한 저장소를 할당 및 해제합니다. 자세한 내용은 [할당자](../standard-library/allocators.md)를 참조하세요. 할당자 개체는 템플릿 클래스 `allocator`의 개체와 같은 외부 인터페이스가 있어야 합니다.  
+## <a name="remarks"></a>Remarks  
+ A `forward_list` object allocates and frees storage for the sequence it controls through a stored object of class `Allocator` that is based on [allocator Class](../standard-library/allocator-class.md) (commonly known as `std::allocator)`. For more information, see [Allocators](../standard-library/allocators.md). An allocator object must have the same external interface as an object of template class `allocator`.  
   
 > [!NOTE]
->  컨테이너 개체를 할당하는 경우 저장된 할당자 개체는 복사되지 않습니다.  
+>  The stored allocator object is not copied when the container object is assigned.  
   
- `forward_list`를 통해 제어되는 시퀀스의 요소를 지울 경우 반복기, 포인터 및 참조가 무효화될 수도 있습니다. `forward_list`를 통해 제어되는 시퀀스에서 수행되는 삽입 및 스플라이스는 반복기를 무효화하지 않습니다.  
+ Iterators, pointers and references might become invalid when elements of their controlled sequence are erased through `forward_list`. Insertions and splices performed on the controlled sequence through `forward_list` do not invalidate iterators.  
   
- 제어되는 시퀀스에 대한 추가는 `Type(const  T&)` 생성자를 호출하는 유일한 멤버 함수인 [forward_list::insert_after](#insert_after)를 호출하여 발생할 수 있습니다. `forward_list`는 이동 생성자를 호출할 수도 있습니다. 이러한 식에서 예외가 발생하는 경우 컨테이너 개체는 새 요소를 삽입하지 않고 예외를 다시 발생시킵니다. 따라서 이러한 예외가 발생하면 템플릿 클래스 `forward_list`의 개체가 알려진 상태로 유지됩니다.  
+ Additions to the controlled sequence might occur by calls to [forward_list::insert_after](#insert_after), which is the only member function that calls the constructor `Type(const  T&)`. `forward_list` might also call move constructors. If such an expression throws an exception, the container object inserts no new elements and rethrows the exception. Thus, an object of template class `forward_list` is left in a known state when such exceptions occur.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[forward_list](#forward_list)|`forward_list` 형식의 개체를 생성합니다.|  
+|[forward_list](#forward_list)|Constructs an object of type `forward_list`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|정방향 목록 개체의 할당자 클래스를 나타내는 형식입니다.|  
-|[const_iterator](#const_iterator)|정방향 목록에 대한 상수 반복기를 제공하는 형식입니다.|  
-|[const_pointer](#const_pointer)|정방향 목록의 `const` 요소에 대한 포인터를 제공하는 형식입니다.|  
-|[const_reference](#const_reference)|정방향 목록의 요소에 대한 상수 참조를 제공하는 형식입니다.|  
-|[difference_type](#difference_type)|반복기가 가리키는 요소 사이의 범위에 있는 정방향 목록의 요소 수를 나타내는 데 사용할 수 있는 부호 있는 정수 형식입니다.|  
-|[iterator](#iterator)|정방향 목록에 대한 반복기를 제공하는 형식입니다.|  
-|[pointer](#pointer)|정방향 목록의 요소에 대한 포인터를 제공하는 형식입니다.|  
-|[reference](#reference)|정방향 목록의 요소에 대한 참조를 제공하는 형식입니다.|  
-|[size_type](#size_type)|두 요소 사이의 부호가 없는 거리를 나타내는 형식입니다.|  
-|[value_type](#value_type)|정방향 목록에 저장된 요소의 형식을 나타내는 형식입니다.|  
+|[allocator_type](#allocator_type)|A type that represents the allocator class for a forward list object.|  
+|[const_iterator](#const_iterator)|A type that provides a constant iterator for the forward list.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a forward list.|  
+|[const_reference](#const_reference)|A type that provides a constant reference to an element in the forward list.|  
+|[difference_type](#difference_type)|A signed integer type that can be used to represent the number of elements of a forward list in a range between elements pointed to by iterators.|  
+|[iterator](#iterator)|A type that provides an iterator for the forward list.|  
+|[pointer](#pointer)|A type that provides a pointer to an element in the forward list.|  
+|[reference](#reference)|A type that provides a reference to an element in the forward list.|  
+|[size_type](#size_type)|A type that represents the unsigned distance between two elements.|  
+|[value_type](#value_type)|A type that represents the type of element stored in a forward list.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[assign](#assign)|정방향 목록에서 요소를 삭제하고 대상 정방향 목록에서 요소의 새 집합을 복사합니다.|  
-|[before_begin](#before_begin)|정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 반복기를 반환합니다.|  
-|[begin](#begin)|정방향 목록에서 첫 번째 요소의 주소를 지정하는 반복기를 반환합니다.|  
-|[cbefore_begin](#cbefore_begin)|정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 const 반복기를 반환합니다.|  
-|[cbegin](#cbegin)|정방향 목록에서 첫 번째 요소의 주소를 지정하는 const 반복기를 반환합니다.|  
-|[cend](#cend)|정방향 목록에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 const 반복기를 반환합니다.|  
-|[clear](#clear)|정방향 목록의 모든 요소를 지웁니다.|  
-|[emplace_after](#emplace_after)|이동 후 지정된 위치 뒤에 새 요소를 생성합니다.|  
-|[emplace_front](#emplace_front)|생성된 요소를 목록 시작 부분에 추가합니다.|  
-|[empty](#empty)|정방향 목록이 비어 있는지 테스트합니다.|  
-|[end](#end)|정방향 목록에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 반복기를 반환합니다.|  
-|[erase_after](#erase_after)|정방향 목록의 지정된 위치 뒤에서 요소를 제거합니다.|  
-|[front](#front)|정방향 목록의 첫 번째 요소에 대한 참조를 반환합니다.|  
-|[get_allocator](#get_allocator)|정방향 목록을 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.|  
-|[insert_after](#insert_after)|정방향 목록의 지정된 위치 뒤에 요소를 추가합니다.|  
-|[max_size](#max_size)|정방향 목록의 최대 길이를 반환합니다.|  
-|[merge](#merge)|요소를 인수 목록에서 제거하고 대상 정방향 목록에 삽입한 다음 새로 조합된 요소 집합을 오름차순 또는 기타 지정된 순서로 정렬합니다.|  
-|[pop_front](#pop_front)|정방향 목록의 시작 부분에 있는 요소를 삭제합니다.|  
-|[push_front](#push_front)|정방향 목록의 시작 부분에 요소를 추가합니다.|  
-|[remove](#remove)|정방향 목록에서 지정된 값과 일치하는 요소를 지웁니다.|  
-|[remove_if](#remove_if)|지정된 조건자를 충족하는 요소를 정방향 목록에서 지웁니다.|  
-|[resize](#resize)|정방향 목록의 새 크기를 지정합니다.|  
-|[reverse](#reverse)|정방향 목록에 요소가 나타나는 순서를 반대로 바꿉니다.|  
-|[sort](#sort)|오름차순 또는 조건자를 통해 지정된 순서로 요소를 정렬합니다.|  
-|[splice_after](#splice_after)|노드 간의 연결을 다시 붙입니다.|  
-|[swap](#swap)|두 정방향 목록의 요소를 교환합니다.|  
-|[unique](#unique)|지정된 테스트를 통과하는 인접 요소를 제거합니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|정방향 목록의 요소를 다른 정방향 목록의 복사본으로 바꿉니다.|  
+|[assign](#assign)|Erases elements from a forward list and copies a new set of elements to a target forward list.|  
+|[before_begin](#before_begin)|Returns an iterator addressing the position before the first element in a forward list.|  
+|[begin](#begin)|Returns an iterator addressing the first element in a forward list.|  
+|[cbefore_begin](#cbefore_begin)|Returns a const iterator addressing the position before the first element in a forward list.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in a forward list.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a forward list.|  
+|[clear](#clear)|Erases all the elements of a forward list.|  
+|[emplace_after](#emplace_after)|Move constructs a new element after a specified position.|  
+|[emplace_front](#emplace_front)|Adds an element constructed in place to the beginning of the list.|  
+|[empty](#empty)|Tests whether a forward list is empty.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a forward list.|  
+|[erase_after](#erase_after)|Removes elements from the forward list after a specified position.|  
+|[front](#front)|Returns a reference to the first element in a forward list.|  
+|[get_allocator](#get_allocator)|Returns a copy of the allocator object used to construct a forward list.|  
+|[insert_after](#insert_after)|Adds elements to the forward list after a specified position.|  
+|[max_size](#max_size)|Returns the maximum length of a forward list.|  
+|[merge](#merge)|Removes the elements from the argument list, inserts them into the target forward list, and orders the new, combined set of elements in ascending order or in some other specified order.|  
+|[pop_front](#pop_front)|Deletes the element at the beginning of a forward list.|  
+|[push_front](#push_front)|Adds an element to the beginning of a forward list.|  
+|[remove](#remove)|Erases elements in a forward list that matches a specified value.|  
+|[remove_if](#remove_if)|Erases elements from a forward list for which a specified predicate is satisfied.|  
+|[resize](#resize)|Specifies a new size for a forward list.|  
+|[reverse](#reverse)|Reverses the order in which the elements occur in a forward list.|  
+|[sort](#sort)|Arranges the elements in ascending order or with an order specified by a predicate.|  
+|[splice_after](#splice_after)|Restitches links between nodes.|  
+|[swap](#swap)|Exchanges the elements of two forward lists.|  
+|[unique](#unique)|Removes adjacent elements that pass a specified test.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<forward_list>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Replaces the elements of the forward list with a copy of another forward list.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<forward_list>  
+  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  forward_list::allocator_type  
- 정방향 목록 개체의 할당자 클래스를 나타내는 형식입니다.  
+ A type that represents the allocator class for a forward list object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `allocator_type`은 템플릿 매개 변수 Allocator의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ `allocator_type` is a synonym for the template parameter Allocator.  
   
 ##  <a name="assign"></a>  forward_list::assign  
- 정방향 목록에서 요소를 삭제하고 대상 정방향 목록에서 요소의 새 집합을 복사합니다.  
+ Erases elements from a forward list and copies a new set of elements to a target forward list.  
   
 ```  
 void assign(
@@ -195,76 +231,76 @@ template <class InputIterator>
 void assign(InputIterator First, InputIterator Last);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`first`|대체 범위의 시작입니다.|  
-|`last`|대체 범위의 끝입니다.|  
-|`count`|할당할 요소 수입니다.|  
-|`val`|각 요소에 할당할 값입니다.|  
-|`Type`|값의 형식입니다.|  
-|`IList`|복사할 initializer_list입니다.|  
+|`first`|The beginning of the replacement range.|  
+|`last`|The end of the replacement range.|  
+|`count`|The number of elements to assign.|  
+|`val`|The value to assign each element.|  
+|`Type`|The type of the value.|  
+|`IList`|The initializer_list to copy.|  
   
-### <a name="remarks"></a>설명  
- forward_list가 정수 형식이면 첫 번째 멤버 함수는 `assign((size_type)First, (Type)Last)`와 동일하게 동작합니다. 그렇지 않으면 첫 번째 멤버 함수는 `*this`로 제어되는 시퀀스를 [ `First, Last)` 시퀀스로 바꿉니다. 대체 시퀀스는 초기 제어되는 시퀀스와 겹치면 안 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If the forward_list is an integer type, the first member function behaves the same as `assign((size_type)First, (Type)Last)`. Otherwise, the first member function replaces the sequence controlled by `*this` with the sequence [ `First, Last)`, which must not overlap the initial controlled sequence.  
   
- 두 번째 멤버 함수는 `*this`로 제어되는 시퀀스를 `Val` 값의 `Count` 요소 반복으로 바꿉니다.  
+ The second member function replaces the sequence controlled by `*this` with a repetition of `Count` elements of value `Val`.  
   
- 세 번째 멤버 함수는 initializer_list의 요소를 forward_list로 복사합니다.  
+ The third member function copies the elements of the initializer_list into the forward_list.  
   
 ##  <a name="before_begin"></a>  forward_list::before_begin  
- 정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 반복기를 반환합니다.  
+ Returns an iterator addressing the position before the first element in a forward list.  
   
 ```  
 const_iterator before_begin() const;
 iterator before_begin();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 시퀀스의 첫 번째 요소 바로 앞(또는 빈 시퀀스의 끝 바로 앞)을 가리키는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator that points just before the first element of the sequence (or just before the end of an empty sequence).  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="begin"></a>  forward_list::begin  
- 정방향 목록에서 첫 번째 요소의 주소를 지정하는 반복기를 반환합니다.  
+ Returns an iterator addressing the first element in a forward list.  
   
 ```  
 const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator that points at the first element of the sequence (or just beyond the end of an empty sequence).  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="cbefore_begin"></a>  forward_list::cbefore_begin  
- 정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 const 반복기를 반환합니다.  
+ Returns a const iterator addressing the position before the first element in a forward list.  
   
 ```  
 const_iterator cbefore_begin() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 시퀀스의 첫 번째 요소 바로 앞(또는 빈 시퀀스의 끝 바로 앞)을 가리키는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator that points just before the first element of the sequence (or just before the end of an empty sequence).  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="cbegin"></a>  forward_list::cbegin  
- 범위의 첫 번째 요소를 주소 지정하는 `const` 반복기를 반환합니다.  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 `const` 정방향 액세스 반복기입니다(빈 범위의 경우 `cbegin() == cend()`).  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>설명  
- `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- `begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`가 `begin()` 및 `cbegin()`을 지원하는 수정 가능(비`const`)한 컨테이너로 가정합니다.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -274,19 +310,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  forward_list::cend  
- 범위에서 마지막 요소 바로 다음의 위치를 주소 지정하는 `const` 반복기를 반환합니다.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 범위 끝의 바로 다음을 가리키는 정방향 액세스 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>설명  
- `cend`는 반복기가 범위 끝을 통과했는지 여부를 테스트하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- `end()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`가 `end()` 및 `cend()`를 지원하는 수정 가능(비`const`)한 컨테이너로 가정합니다.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -296,148 +332,148 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- `cend`에서 반환한 값은 역참조되지 않아야 합니다.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  forward_list::clear  
- 정방향 목록의 모든 요소를 지웁니다.  
+ Erases all the elements of a forward list.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 `erase_after(before_begin(), end()).`를 호출합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function calls `erase_after(before_begin(), end()).`  
   
 ##  <a name="const_iterator"></a>  forward_list::const_iterator  
- 정방향 목록에 대한 상수 반복기를 제공하는 형식입니다.  
+ A type that provides a constant iterator for the forward list.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- `const_iterator`는 제어되는 시퀀스의 상수 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식의 동의어로 설명됩니다.  
+### <a name="remarks"></a>Remarks  
+ `const_iterator` describes an object that can serve as a constant forward iterator for the controlled sequence. It is described here as a synonym for an implementation-defined type.  
   
 ##  <a name="const_pointer"></a>  forward_list::const_pointer  
- 정방향 목록의 `const` 요소에 대한 포인터를 제공하는 형식입니다.  
+ A type that provides a pointer to a `const` element in a forward list.  
   
 ```  
 typedef typename Allocator::const_pointer  
     const_pointer; 
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="const_reference"></a>  forward_list::const_reference  
- 정방향 목록의 요소에 대한 상수 참조를 제공하는 형식입니다.  
+ A type that provides a constant reference to an element in the forward list.  
   
 ```  
 typedef typename Allocator::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="difference_type"></a>  forward_list::difference_type  
- 반복기가 가리키는 요소 사이의 범위에 있는 정방향 목록의 요소 수를 나타내는 데 사용할 수 있는 부호 있는 정수 형식입니다.  
+ A signed integer type that can be used to represent the number of elements of a forward list in a range between elements pointed to by iterators.  
   
 ```  
 typedef typename Allocator::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `difference_type`은 제어되는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ `difference_type` describes an object that can represent the difference between the addresses of any two elements in the controlled sequence.  
   
 ##  <a name="emplace_after"></a>  forward_list::emplace_after  
- 이동 후 지정된 위치 뒤에 새 요소를 생성합니다.  
+ Move constructs a new element after a specified position.  
   
 ```  
 template <class T>  
 iterator emplace_after(const_iterator Where, Type&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Where`|대상 정방향 목록에서 새 요소가 생성된 위치입니다.|  
-|`val`|생성자 인수입니다.|  
+|`Where`|The position in the target forward list where the new element is constructed.|  
+|`val`|The constructor argument.|  
   
-### <a name="return-value"></a>반환 값  
- 새로 삽입된 요소를 지정하는 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An iterator that designates the newly inserted element.  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 제어되는 시퀀스에서 `Where`가 가리키는 요소 바로 뒤에 생성자 인수 `val`이 있는 요소를 삽입합니다. 그렇지 않으면 해당 동작은 [forward_list::insert_after](#insert_after)와 동일합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function inserts an element with the constructor arguments `val` just after the element pointed to by `Where` in the controlled sequence. Its behavior is otherwise the same as [forward_list::insert_after](#insert_after).  
   
 ##  <a name="emplace_front"></a>  forward_list::emplace_front  
- 생성된 요소를 목록 시작 부분에 추가합니다.  
+ Adds an element constructed in place to the beginning of the list.  
   
 ```  
 template <class Type>  
 void emplace_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|정방향 목록의 시작에 추가된 요소입니다.|  
+|`val`|The element added to the beginning of the forward list.|  
   
-### <a name="remarks"></a>설명  
- 이 멤버 함수는 제어되는 시퀀스의 끝에 생성자 인수 `_ val`이 있는 요소를 삽입합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function inserts an element with the constructor arguments `_ val` at the end of the controlled sequence.  
   
- 예외가 throw되면 컨테이너는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.  
+ If an exception is thrown, the container is left unaltered and the exception is rethrown.  
   
 ##  <a name="empty"></a>  forward_list::empty  
- 정방향 목록이 비어 있는지 테스트합니다.  
+ Tests whether a forward list is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 정방향 목록이 비어 있으면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the forward list is empty; otherwise, `false`.  
   
 ##  <a name="end"></a>  forward_list::end  
- 정방향 목록에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 반복기를 반환합니다.  
+ Returns an iterator that addresses the location succeeding the last element in a forward list.  
   
 ```  
 const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 시퀀스의 끝 바로 다음을 가리키는 정방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator that points just beyond the end of the sequence.  
   
 ##  <a name="erase_after"></a>  forward_list::erase_after  
- 정방향 목록의 지정된 위치 뒤에서 요소를 제거합니다.  
+ Removes elements from the forward list after a specified position.  
   
 ```  
 iterator erase_after(const_iterator Where);
 iterator erase_after(const_iterator first, const_iterator last);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Where`|대상 정방향 목록에서 요소가 지워진 위치입니다.|  
-|`first`|지울 범위의 시작입니다.|  
-|`last`|지울 범위의 끝입니다.|  
+|`Where`|The position in the target forward list where the element is erased.|  
+|`first`|The beginning of the range to erase.|  
+|`last`|The end of the range to erase.|  
   
-### <a name="return-value"></a>반환 값  
- 제거되는 요소 뒤에 남아 있는 첫 번째 요소를 지정하는 반복기이거나, 남아 있는 요소가 없는 경우에는 [forward_list::end](#end)입니다.  
+### <a name="return-value"></a>Return Value  
+ An iterator that designates the first element remaining beyond any elements removed, or [forward_list::end](#end) if no such element exists.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 `Where` 바로 뒤에 있는 제어되는 시퀀스의 요소를 제거합니다.  
+### <a name="remarks"></a>Remarks  
+ The first member function removes the element of the controlled sequence just after `Where`.  
   
- 두 번째 멤버 함수는 `( first,  last)` 범위(끝점은 포함되지 않음)에 있는 제어되는 시퀀스의 요소를 제거합니다.  
+ The second member function removes the elements of the controlled sequence in the range `( first,  last)` (neither end point is included).  
   
- `N` 요소를 지우면 `N` 소멸자가 호출됩니다. [다시 할당](../standard-library/forward-list-class.md)이 수행되므로 지워진 요소에 대한 반복기와 참조가 무효화됩니다.  
+ Erasing `N` elements causes `N` destructor calls. [Reallocation](../standard-library/forward-list-class.md) occurs, so iterators and references become invalid for the erased elements.  
   
- 멤버 함수는 예외를 throw하지 않습니다.  
+ The member functions never throw an exception.  
   
 ##  <a name="forward_list"></a>  forward_list::forward_list  
- `forward_list` 형식의 개체를 생성합니다.  
+ Constructs an object of type `forward_list`.  
   
 ```  
 forward_list();
@@ -456,56 +492,56 @@ template <class InputIterator>
 forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Al`|이 개체에 사용할 할당자 클래스입니다.|  
-|`Count`|생성된 목록의 요소 수입니다.|  
-|`Val`|생성된 목록에 있는 요소의 값입니다.|  
-|`Right`|생성된 목록이 복사본으로 지정될 목록입니다.|  
-|`First`|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|  
-|`Last`|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|  
-|`IList`|복사할 initializer_list입니다.|  
+|`Al`|The allocator class to use with this object.|  
+|`Count`|The number of elements in the list constructed.|  
+|`Val`|The value of the elements in the list constructed.|  
+|`Right`|The list of which the constructed list is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list to copy.|  
   
-### <a name="remarks"></a>설명  
- 모든 생성자는 [할당자](../standard-library/allocator-class.md)를 저장하고 제어되는 시퀀스를 초기화합니다. 할당자 개체는 `Al` 인수입니다(있는 경우). 복사 생성자의 경우 ` right.get_allocator()`입니다. 그렇지 않으면 `Allocator()`입니다.  
+### <a name="remarks"></a>Remarks  
+ All constructors store an [allocator](../standard-library/allocator-class.md) and initialize the controlled sequence. The allocator object is the argument `Al`, if present. For the copy constructor, it is ` right.get_allocator()`. Otherwise, it is `Allocator()`.  
   
- 처음 두 생성자는 빈 초기 제어되는 시퀀스를 지정합니다.  
+ The first two constructors specify an empty initial controlled sequence.  
   
- 세 번째 생성자는 `Type()` 값의 `Count` 요소 반복을 지정합니다.  
+ The third constructor specifies a repetition of `Count` elements of value `Type()`.  
   
- 네 번째와 다섯 번째 생성자는 `Val` 값의 `Count` 요소 반복을 지정합니다.  
+ The fourth and fifth constructors specify a repetition of `Count` elements of value `Val`.  
   
- 여섯 번째 생성자는 `Right`에 의해 제어되는 시퀀스의 복사본을 지정합니다. `InputIterator`가 정수 형식이면 다음 두 생성자가 `(Type)Last` 값의 `(size_type)First` 요소 반복을 지정합니다. 그렇지 않으면 다음 두 생성자는 시퀀스 `[First, Last)`를 지정합니다.  
+ The sixth constructor specifies a copy of the sequence controlled by `Right`. If `InputIterator` is an integer type, the next two constructors specify a repetition of `(size_type)First` elements of value `(Type)Last`. Otherwise, the next two constructors specify the sequence `[First, Last)`.  
   
- 아홉 번째 및 열 번째 생성자는 여섯 번째와 같지만 [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 참조를 포함합니다.  
+ The ninth and tenth constructors are the same as the sixth, but with an [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) reference.  
   
- 마지막 생성자는 `initializer_list<Type>` 클래스의 개체를 사용하여 초기 제어되는 시퀀스를 지정합니다.  
+ The last constructor specifies the initial controlled sequence with an object of class `initializer_list<Type>`.  
   
 ##  <a name="front"></a>  forward_list::front  
- 정방향 목록의 첫 번째 요소에 대한 참조를 반환합니다.  
+ Returns a reference to the first element in a forward list.  
   
 ```  
 reference front();
 const_reference front() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 비어 있지 않아야 하는 제어된 시퀀스의 첫 번째 요소에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the first element of the controlled sequence, which must be non-empty.  
   
 ##  <a name="get_allocator"></a>  forward_list::get_allocator  
- 정방향 목록을 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.  
+ Returns a copy of the allocator object used to construct a forward list.  
   
 ```  
 allocator_type get_allocator() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 저장된 [할당자](../standard-library/allocator-class.md) 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The stored [allocator](../standard-library/allocator-class.md) object.  
   
 ##  <a name="insert_after"></a>  forward_list::insert_after  
- 정방향 목록의 지정된 위치 뒤에 요소를 추가합니다.  
+ Adds elements to the forward list after a specified position.  
   
 ```  
 iterator insert_after(const_iterator Where, const Type& Val);
@@ -516,61 +552,61 @@ template <class InputIterator>
 void insert_after(const_iterator Where, InputIterator First, InputIterator Last);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Where`|대상 정방향 목록에서 첫 번째 요소가 삽입된 위치입니다.|  
-|`Count`|삽입할 요소의 수입니다.|  
-|`First`|삽입 범위의 시작입니다.|  
-|`Last`|삽입 범위의 끝입니다.|  
-|`Val`|정방향 목록에 추가된 요소입니다.|  
-|`IList`|삽입할 initializer_list입니다.|  
+|`Where`|The position in the target forward list where the first element is inserted.|  
+|`Count`|The number of elements to insert.|  
+|`First`|The beginning of the insertion range.|  
+|`Last`|The end of the insertion range.|  
+|`Val`|The element added to the forward list.|  
+|`IList`|The initializer_list to insert.|  
   
-### <a name="return-value"></a>반환 값  
- 새로 삽입된 요소(첫 번째 및 마지막 멤버 함수만)를 지정하는 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An iterator that designates the newly inserted element (first and last member functions only).  
   
-### <a name="remarks"></a>설명  
- 각 멤버 함수는 제어되는 시퀀스에서 `Where`가 가리키는 요소 바로 뒤에 나머지 피연산자로 지정된 시퀀스를 삽입합니다.  
+### <a name="remarks"></a>Remarks  
+ Each of the member functions inserts—just after the element pointed to by `Where` in the controlled sequence—a sequence that' specified by the remaining operands.  
   
- 첫 번째 멤버 함수는 `Val` 값을 포함하는 요소를 삽입하고 새로 삽입된 요소를 지정하는 반복기를 반환합니다.  
+ The first member function inserts an element that has value `Val` and returns an iterator that designates the newly inserted element.  
   
- 두 번째 멤버 함수는 `Val` 값의 `Count` 요소 반복을 삽입합니다.  
+ The second member function inserts a repetition of `Count` elements of value `Val`.  
   
- `InputIterator`가 정수 형식이면 세 번째 멤버 함수는 `insert(it, (size_type)First, (Type)Last)`와 동일하게 동작합니다. 그렇지 않으면 시퀀스 `[First, Last)`를 삽입합니다. 대체 시퀀스는 초기 제어되는 시퀀스와 겹치면 안 됩니다.  
+ If `InputIterator` is an integer type, the third member function behaves the same as `insert(it, (size_type)First, (Type)Last)`. Otherwise, it inserts the sequence `[First, Last)`, which must not overlap the initial controlled sequence.  
   
- 네 번째 멤버 함수는 `initializer_list<Type>` 클래스의 개체로 지정되는 시퀀스를 삽입합니다.  
+ The fourth member function inserts the sequence that's specified by an object of class `initializer_list<Type>`.  
   
- 마지막 멤버 함수는 첫 번째와 같지만 [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 참조를 포함합니다.  
+ The last member function is the same as the first, but with an [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) reference.  
   
- `N` 요소를 삽입하면 `N` 생성자가 호출됩니다. [다시 할당](../standard-library/forward-list-class.md)이 수행되지만 반복기나 참조가 무효화되지 않습니다.  
+ Inserting `N` elements causes `N` constructor calls. [Reallocation](../standard-library/forward-list-class.md) occurs, but no iterators or references become invalid.  
   
- 하나 이상의 요소를 삽입하는 동안 예외가 throw되면 컨테이너는 변경되지 않고 예외가 다시 throw됩니다.  
+ If an exception is thrown during the insertion of one or more elements, the container is left unaltered and the exception is rethrown.  
   
 ##  <a name="iterator"></a>  forward_list::iterator  
- 정방향 목록에 대한 반복기를 제공하는 형식입니다.  
+ A type that provides an iterator for the forward list.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- `iterator`는 제어되는 시퀀스의 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식의 동의어로 설명됩니다.  
+### <a name="remarks"></a>Remarks  
+ `iterator` describes an object that can serve as a forward iterator for the controlled sequence. It is described here as a synonym for an implementation-defined type.  
   
 ##  <a name="max_size"></a>  forward_list::max_size  
- 정방향 목록의 최대 길이를 반환합니다.  
+ Returns the maximum length of a forward list.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체가 제어할 수 있는 가장 긴 시퀀스의 길이입니다.  
+### <a name="return-value"></a>Return Value  
+ The length of the longest sequence that the object can control.  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="merge"></a>  forward_list::merge  
- 두 개의 정렬된 시퀀스를 선형 시간의 단일 정렬된 시퀀스로 결합합니다. 인수 목록에서 요소를 제거하고 이 `forward_list`에 삽입합니다. `merge`를 호출하기 전에 같은 비교 함수 개체별로 두 목록을 정렬해야 합니다. 결합된 목록은 해당 비교 함수 개체별로 정렬됩니다.  
+ Combines two sorted sequences into a single sorted sequence in linear time. Removes the elements from the argument list, and inserts them into this `forward_list`. The two lists should be sorted by the same compare function object before the call to `merge`. The combined list will be sorted by that compare function object.  
   
 ```  
 void merge(forward_list& right);
@@ -578,24 +614,24 @@ template <class Predicate>
 void merge(forward_list& right, Predicate comp);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|병합할 소스 정방향 목록입니다.|  
-|`comp`|요소를 정렬하는 데 사용되는 비교 함수 개체입니다.|  
+|`right`|The forward list to merge from.|  
+|`comp`|The compare function object that is used to sort elements.|  
   
-### <a name="remarks"></a>설명  
- `forward_list::merge`는 `forward_list``right``,`에서 요소를 제거하고 이 `forward_list`에 삽입합니다. 두 시퀀스는 모두 아래 설명된 동일한 조건자별로 순서가 지정되어야 합니다. 결합된 시퀀스도 비교 함수 개체별로 순서가 지정되어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ `forward_list::merge` removes the elements from the `forward_list` `right`, and inserts them into this `forward_list`. Both sequences must be ordered by the same predicate, described below. The combined sequence is also ordered by that compare function object.  
   
- 위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 첫 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `!(*Pj < *Pi)`를 적용합니다. 요소는 `ascending` 순서로 정렬됩니다. 두 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `! comp(*Pj, *Pi)`를 적용합니다.  
+ For the iterators `Pi` and `Pj` designating elements at positions `i` and `j`, the first member function imposes the order `!(*Pj < *Pi)` whenever `i < j`. (The elements are sorted in `ascending` order.) The second member function imposes the order `! comp(*Pj, *Pi)` whenever `i < j`.  
   
- 원래 제어되는 시퀀스의 요소 쌍은 결과 제어되는 시퀀스에서 반전되지 않습니다. 결과 제어되는 시퀀스의 요소 쌍이 같은 것으로 확인되면(`!(*Pi < *Pj) && !(*Pj < *Pi)`) 원래 제어되는 시퀀스의 요소가 `right`에서 제어되는 시퀀스의 요소 앞에 나타납니다.  
+ No pairs of elements in the original controlled sequence are reversed in the resulting controlled sequence. If a pair of elements in the resulting controlled sequence compares equal ( `!(*Pi < *Pj) && !(*Pj < *Pi)`), an element from the original controlled sequence appears before an element from the sequence controlled by `right`.  
   
- `comp`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 순서로 남아 있고 예외가 다시 throw됩니다.  
+ An exception occurs only if `comp` throws an exception. In that case, the controlled sequence is left in unspecified order and the exception is rethrown.  
   
 ##  <a name="op_eq"></a>  forward_list::operator=  
- 정방향 목록의 요소를 다른 정방향 목록의 복사본으로 바꿉니다.  
+ Replaces the elements of the forward list with a copy of another forward list.  
   
 ```  
 forward_list& operator=(const forward_list& right);
@@ -603,143 +639,143 @@ forward_list& operator=(initializer_list<Type> IList);
 forward_list& operator=(forward_list&& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|정방향 목록으로 복사되는 정방향 목록입니다.|  
-|`IList`|`Type` 형식 요소의 시퀀스처럼 동작하는 중괄호로 묶인 이니셜라이저 목록입니다.|  
+|`right`|The forward list being copied into the forward list.|  
+|`IList`|A brace-enclosed initializer list, which behaves just like a sequence of elements of type `Type`.|  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 연산자는 제어되는 시퀀스를 `right`로 제어되는 시퀀스 복사본으로 바꿉니다.  
+### <a name="remarks"></a>Remarks  
+ The first member operator replaces the controlled sequence with a copy of the sequence controlled by `right`.  
   
- 두 번째 멤버 연산자는 `initializer_list<Type>` 클래스 개체의 제어되는 시퀀스를 대체합니다.  
+ The second member operator replaces the controlled sequence from an object of class `initializer_list<Type>`.  
   
- 세 번째 멤버 연산자는 첫 번째 멤버 연산자와 동일하지만 [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 참조를 포함합니다.  
+ The third member operator is the same as the first, but with an [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) reference.  
   
 ##  <a name="pointer"></a>  forward_list::pointer  
- 정방향 목록의 요소에 대한 포인터를 제공하는 형식입니다.  
+ A type that provides a pointer to an element in the forward list.  
   
 ```  
 typedef typename Allocator::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="pop_front"></a>  forward_list::pop_front  
- 정방향 목록의 시작 부분에 있는 요소를 삭제합니다.  
+ Deletes the element at the beginning of a forward list.  
   
 ```  
 void pop_front();
 ```  
   
-### <a name="remarks"></a>설명  
- 비어 있지 않아야 하는 정방향 목록의 첫 번째 요소입니다.  
+### <a name="remarks"></a>Remarks  
+ The first element of the forward list must be non-empty.  
   
- 멤버 함수는 예외를 throw하지 않습니다.  
+ The member function never throws an exception.  
   
 ##  <a name="push_front"></a>  forward_list::push_front  
- 정방향 목록의 시작 부분에 요소를 추가합니다.  
+ Adds an element to the beginning of a forward list.  
   
 ```  
 void push_front(const Type& val);
 void push_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|정방향 목록의 시작에 추가된 요소입니다.|  
+|`val`|The element added to the beginning of the forward list.|  
   
-### <a name="remarks"></a>설명  
- 예외가 throw되면 컨테이너는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the container is left unaltered and the exception is rethrown.  
   
 ##  <a name="reference"></a>  forward_list::reference  
- 정방향 목록의 요소에 대한 참조를 제공하는 형식입니다.  
+ A type that provides a reference to an element in the forward list.  
   
 ```  
 typedef typename Allocator::reference reference;  
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="remove"></a>  forward_list::remove  
- 정방향 목록에서 지정된 값과 일치하는 요소를 지웁니다.  
+ Erases elements in a forward list that matches a specified value.  
   
 ```  
 void remove(const Type& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|요소에 값이 있는 경우 목록에서 해당 요소가 제거됩니다.|  
+|`val`|The value which, if held by an element, will result in that element's removal from the list.|  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 `*P ==  val`인 경우 반복기 `P`로 지정된 모든 요소를 제어되는 시퀀스에서 제거합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function removes from the controlled sequence all elements, designated by the iterator `P`, for which `*P ==  val`.  
   
- 멤버 함수는 예외를 throw하지 않습니다.  
+ The member function never throws an exception.  
   
 ##  <a name="remove_if"></a>  forward_list::remove_if  
- 지정된 조건자를 충족하는 요소를 정방향 목록에서 지웁니다.  
+ Erases elements from a forward list for which a specified predicate is satisfied.  
   
 ```  
 template <class Predicate>  
 void remove_if(Predicate pred);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`pred`|요소로 충족된 경우 목록에서 요소가 삭제되는 단항 조건자입니다.|  
+|`pred`|The unary predicate which, if satisfied by an element, results in the deletion of that element from the list.|  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 ` pred(*P)`가 true인 경우 반복기 `P`로 지정된 모든 요소를 제어되는 시퀀스에서 제거합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function removes from the controlled sequence all elements, designated by the iterator `P`, for which ` pred(*P)` is true.  
   
- `pred`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 상태로 남아 있고 예외가 다시 throw됩니다.  
+ An exception occurs only if `pred` throws an exception. In that case, the controlled sequence is left in an unspecified state and the exception is rethrown.  
   
 ##  <a name="resize"></a>  forward_list::resize  
- 정방향 목록의 새 크기를 지정합니다.  
+ Specifies a new size for a forward list.  
   
 ```  
 void resize(size_type _Newsize);
 void resize(size_type _Newsize, const Type& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Newsize`|크기 조정된 정방향 목록의 요소 수입니다.|  
-|`val`|안쪽 여백에 사용할 값입니다.|  
+|`_Newsize`|The number of elements in the resized forward list.|  
+|`val`|The value to use for padding.|  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 둘 다 목록의 요소 수가 `_Newsize`인지 확인합니다. 제어되는 시퀀스 길이를 늘려야 할 경우 첫 번째 멤버 함수는 값이 `Type()`인 요소를 추가하지만, 두 번째 멤버 함수는 값이 `val`인 요소를 추가합니다. 제어되는 시퀀스 길이를 줄이기 위해 두 멤버 함수는 모두 실제로 `erase_after(begin() + _Newsize - 1, end())`를 호출합니다.  
+### <a name="remarks"></a>Remarks  
+ The member functions both ensure that the number of elements in the list henceforth is `_Newsize`. If it must make the controlled sequence longer, the first member function appends elements with value `Type()`, while the second member function appends elements with value `val`. To make the controlled sequence shorter, both member functions effectively call `erase_after(begin() + _Newsize - 1, end())`.  
   
 ##  <a name="reverse"></a>  forward_list::reverse  
- 정방향 목록에 요소가 나타나는 순서를 반대로 바꿉니다.  
+ Reverses the order in which the elements occur in a forward list.  
   
 ```  
 void reverse();
 ```  
   
-### <a name="remarks"></a>설명  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="size_type"></a>  forward_list::size_type  
- 두 요소 사이의 부호가 없는 거리를 나타내는 형식입니다.  
+ A type that represents the unsigned distance between two elements.  
   
 ```  
 typedef typename Allocator::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 부호 없는 정수 형식은 제어되는 시퀀스의 길이를 나타낼 수 있는 개체를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The unsigned integer type describes an object that can represent the length of any controlled sequence.  
   
 ##  <a name="sort"></a>  forward_list::sort  
- 오름차순 또는 조건자를 통해 지정된 순서로 요소를 정렬합니다.  
+ Arranges the elements in ascending order or with an order specified by a predicate.  
   
 ```  
 void sort();
@@ -747,21 +783,21 @@ template <class Predicate>
 void sort(Predicate pred);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`pred`|순서 지정 조건자입니다.|  
+|`pred`|The ordering predicate.|  
   
-### <a name="remarks"></a>설명  
- 두 멤버 함수는 모두 제어되는 시퀀스에서 요소의 순서를 아래 설명된 조건자별로 지정합니다.  
+### <a name="remarks"></a>Remarks  
+ Both member functions order the elements in the controlled sequence by a predicate, described below.  
   
- 위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 첫 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `!(*Pj < *Pi)`를 적용합니다. 요소는 `ascending` 순서로 정렬됩니다. 멤버 템플릿 함수는 `i < j`가 실행될 때마다 순서 `! pred(*Pj, *Pi)`를 적용합니다. 원래 제어되는 시퀀스의 순서가 지정된 요소 쌍은 결과 제어되는 시퀀스에서 반전되지 않습니다. 정렬이 안정적입니다.  
+ For the iterators `Pi` and `Pj` designating elements at positions `i` and `j`, the first member function imposes the order `!(*Pj < *Pi)` whenever `i < j`. (The elements are sorted in `ascending` order.) The member template function imposes the order `! pred(*Pj, *Pi)` whenever `i < j`. No ordered pairs of elements in the original controlled sequence are reversed in the resulting controlled sequence. (The sort is stable.)  
   
- `pred`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 순서로 남아 있고 예외가 다시 throw됩니다.  
+ An exception occurs only if `pred` throws an exception. In that case, the controlled sequence is left in unspecified order and the exception is rethrown.  
   
 ##  <a name="splice_after"></a>  forward_list::splice_after  
- 요소를 원본 forward_list에서 제거한 다음 대상 forward_list에 삽입합니다.  
+ Removes elements from a source forward_list and inserts them into a destination forward_list.  
   
 ```  
 // insert the entire source forward_list  
@@ -786,34 +822,34 @@ void splice_after(
     const_iterator Last);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Where`  
- 대상 forward_list의 위치로, 이 위치 앞에서 삽입합니다.  
+ The position in the destination forward_list after which to insert.  
   
  `Source`  
- 대상 forward_list으로 삽입할 원본 forward_list입니다.  
+ The source forward_list that is to be inserted into the destination forward_list.  
   
  `Iter`  
- 원본 forward_list에서 삽입할 요소입니다.  
+ The element to be inserted from the source forward_list.  
   
  `First`  
- 원본 forward_list에서 삽입할 범위 내 첫 번째 요소입니다.  
+ The first element in the range to be inserted from source forward_list.  
   
  `Last`  
- 원본 forward_list에서 삽입할 범위를 벗어난 첫 번째 위치입니다.  
+ The first position beyond the range to be inserted from the source forward_list.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수의 첫 번째 쌍은 제어되는 시퀀스에서 `Source`로 가리키는 요소 바로 뒤에 `Where`로 제어되는 시퀀스를 삽입합니다. 또한 `Source`에서 모든 요소를 제거합니다. `&Source`는 `this`와 같으면 안 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The first pair of member functions inserts the sequence controlled by `Source` just after the element in the controlled sequence pointed to by `Where`. It also removes all elements from `Source`. ( `&Source` must not equal `this`.)  
   
- 멤버 함수의 두 번째 쌍은 `Iter`로 제어되는 시퀀스에서 `Source` 바로 뒤 요소를 제거하여 제어된 시퀀스에서 `Where`로 가리키는 요소 바로 뒤에 삽입합니다. `Where == Iter || Where == ++Iter`인 경우 아무 것도 변경되지 않습니다.  
+ The second pair of member functions removes the element just after `Iter` in the sequence controlled by `Source` and inserts it just after the element in the controlled sequence pointed to by `Where`. (If `Where == Iter || Where == ++Iter`, no change occurs.)  
   
- 멤버 함수의 세 번째 쌍(범위가 지정된 스플라이스)은 `(First, Last)`로 제어되는 시퀀스에서 `Source`로 가리키는 요소 바로 뒤에 `Where`로 지정된 하위 범위를 삽입합니다. 또한 `Source`로 제어되는 시퀀스에서 원래 하위 범위를 제거합니다. `&Source == this`인 경우 `(First, Last)` 범위는 `Where`가 가리키는 요소를 제외해야 합니다.  
+ The third pair of member functions (ranged splice) inserts the subrange designated by `(First, Last)` from the sequence controlled by `Source` just after the element in the controlled sequence pointed to by `Where`. It also removes the original subrange from the sequence controlled by `Source`. (If `&Source == this`, the range `(First, Last)` must not include the element pointed to by `Where`.)  
   
- 범위가 지정된 스플라이스가 `N`개 요소 및 `&Source != this`를 삽입하면 [iterator](#iterator) 클래스의 개체가 `N`배 증분됩니다.  
+ If the ranged splice inserts `N` elements, and `&Source != this`, an object of class [iterator](#iterator) is incremented `N` times.  
   
- 스플라이스된 요소를 지정하는 어떤 반복기, 포인터 또는 참조도 잘못되지 않습니다.  
+ No iterators, pointers, or references that designate spliced elements become invalid.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // forward_list_splice_after.cpp  
@@ -888,23 +924,23 @@ Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40
 ```  
   
 ##  <a name="swap"></a>  forward_list::swap  
- 두 정방향 목록의 요소를 교환합니다.  
+ Exchanges the elements of two forward lists.  
   
 ```  
 void swap(forward_list& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|교환할 요소를 제공하는 정방향 목록입니다.|  
+|`right`|The forward list providing the elements to be exchanged.|  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 `*this`와 `right` 간에 제어된 시퀀스를 교환합니다. `get_allocator() ==  right.get_allocator()`인 경우 일정한 시간에 이 작업을 수행하고, 예외를 throw하지 않고, 두 개의 제어되는 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the controlled sequences between `*this` and `right`. If `get_allocator() ==  right.get_allocator()`, it does so in constant time, it throws no exceptions, and it invalidates no references, pointers, or iterators that designate elements in the two controlled sequences. Otherwise, it performs a number of element assignments and constructor calls proportional to the number of elements in the two controlled sequences.  
   
 ##  <a name="unique"></a>  forward_list::unique  
- 동일한 요소의 모든 연속 그룹에서 첫 번째 요소를 제외하고 모두 제거합니다.  
+ Eliminates all but the first element from every consecutive group of equal elements.  
   
 ```  
 void unique();
@@ -912,32 +948,32 @@ template <class BinaryPredicate>
 void unique(BinaryPredicate comp);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`comp`|연속 요소를 비교하는 데 사용되는 이진 조건자입니다.|  
+|`comp`|The binary predicate used to compare successive elements.|  
   
-### <a name="remarks"></a>설명  
- 각 고유 요소의 첫 번째 요소를 유지하고 나머지를 제거합니다. 목록에서 동일한 값의 요소가 인접하도록 요소를 정렬해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Keeps the first of each unique element, and removes the rest. The elements must be sorted so that elements of equal value are adjacent in the list.  
   
- 첫 번째 멤버 함수는 이전 요소와 같은 것으로 확인된 모든 요소를 제어되는 시퀀스에서 제거합니다. 위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 두번째 멤버 함수는 `i + 1 == j &&  comp(*Pi, *Pj)`에 해당하는 모든 요소를 제거합니다.  
+ The first member function removes from the controlled sequence every element that compares equal to its preceding element. For the iterators `Pi` and `Pj` designating elements at positions `i` and `j`, the second member function removes every element for which `i + 1 == j &&  comp(*Pi, *Pj)`.  
   
- 길이가 `N`(> 0)인 제어되는 시퀀스의 경우 조건자 ` comp(*Pi, *Pj)`는 `N - 1`번 평가됩니다.  
+ For a controlled sequence of length `N` (> 0), the predicate ` comp(*Pi, *Pj)` is evaluated `N - 1` times.  
   
- `comp`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 상태로 남아 있고 예외가 다시 throw됩니다.  
+ An exception occurs only if `comp` throws an exception. In that case, the controlled sequence is left in an unspecified state and the exception is rethrown.  
   
 ##  <a name="value_type"></a>  forward_list::value_type  
- 정방향 목록에 저장된 요소의 형식을 나타내는 형식입니다.  
+ A type that represents the type of element stored in a forward list.  
   
 ```  
 typedef typename Allocator::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 _`Ty`의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter _ `Ty`.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<forward_list>](../standard-library/forward-list.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "deque 클래스 | Microsoft 문서"
+title: deque Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- deque
 - deque/std::deque
 - deque/std::deque::allocator_type
 - deque/std::deque::const_iterator
@@ -55,8 +54,48 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- deque class, about deque class
-- deque class
+- std::deque [C++]
+- std::deque [C++], allocator_type
+- std::deque [C++], const_iterator
+- std::deque [C++], const_pointer
+- std::deque [C++], const_reference
+- std::deque [C++], const_reverse_iterator
+- std::deque [C++], difference_type
+- std::deque [C++], iterator
+- std::deque [C++], pointer
+- std::deque [C++], reference
+- std::deque [C++], reverse_iterator
+- std::deque [C++], size_type
+- std::deque [C++], value_type
+- std::deque [C++], assign
+- std::deque [C++], at
+- std::deque [C++], back
+- std::deque [C++], begin
+- std::deque [C++], cbegin
+- std::deque [C++], cend
+- std::deque [C++], clear
+- std::deque [C++], crbegin
+- std::deque [C++], crend
+- std::deque [C++], emplace
+- std::deque [C++], emplace_back
+- std::deque [C++], emplace_front
+- std::deque [C++], empty
+- std::deque [C++], end
+- std::deque [C++], erase
+- std::deque [C++], front
+- std::deque [C++], get_allocator
+- std::deque [C++], insert
+- std::deque [C++], max_size
+- std::deque [C++], pop_back
+- std::deque [C++], pop_front
+- std::deque [C++], push_back
+- std::deque [C++], push_front
+- std::deque [C++], rbegin
+- std::deque [C++], rend
+- std::deque [C++], resize
+- std::deque [C++], shrink_to_fit
+- std::deque [C++], size
+- std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 caps.latest.revision: 22
 author: corob-msft
@@ -76,129 +115,129 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6d3f4d5eee3da48a8503b18695f68db91c22d391
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bb3eb5f01b10bc6a6517ab8cdee9fba2a19c1058
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="deque-class"></a>deque 클래스
-선형 정렬에서 지정된 형식의 요소를 정렬하고 벡터처럼 모든 요소에 대한 빠른 임의 액세스와 컨테이너 뒤쪽에서 효율적인 삽입 및 삭제를 가능하게 합니다. 그러나 벡터와 달리 `deque` 클래스는 컨테이너 앞에서 효율적인 삽입 및 삭제를 지원합니다.  
+# <a name="deque-class"></a>deque Class
+Arranges elements of a given type in a linear arrangement and, like a vector, enables fast random access to any element, and efficient insertion and deletion at the back of the container. However, unlike a vector, the `deque` class also supports efficient insertion and deletion at the front of the container.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```unstlib  
 template <class Type, class Allocator =allocator<Type>>  
 class deque  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Type`  
- deque에 저장되는 요소 데이터 형식입니다.  
+ The element data type to be stored in the deque.  
   
  `Allocator`  
- deque의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 **allocator\<Type>***입니다.*  
+ The type that represents the stored allocator object that encapsulates details about the deque's allocation and deallocation of memory. This argument is optional, and the default value is **allocator\<Type>***.*  
   
-## <a name="remarks"></a>설명  
- 컨테이너 형식은 일반적으로 응용 프로그램에서 필요한 검색과 삽입의 형식을 기준으로 선택해야 합니다. 요소에 대한 임의 액세스는 거의 발생하지 않으며 요소 삽입 또는 삭제는 시퀀스 끝에서만 수행하면 되는 시퀀스를 관리할 때는 [벡터](../standard-library/vector-class.md)를 기본 컨테이너로 사용해야 합니다. 시퀀스 내의 모든 위치에서 효율적인 삽입 및 삭제(일정한 시간)가 최상일 때 목록 컨테이너의 성능이 가장 우수합니다. 시퀀스 중 이러한 작업에는 시퀀스의 요소 수에 비례하는 요소 복사본 및 할당이 필요합니다(선형 시간).  
+## <a name="remarks"></a>Remarks  
+ The choice of container type should be based in general on the type of searching and inserting required by the application. [Vectors](../standard-library/vector-class.md) should be the preferred container for managing a sequence when random access to any element is at a premium and insertions or deletions of elements are only required at the end of a sequence. The performance of the list container is superior when efficient insertions and deletions (in constant time) at any location within the sequence is at a premium. Such operations in the middle of the sequence require element copies and assignments proportional to the number of elements in the sequence (linear time).  
   
- 멤버 함수가 시퀀스의 요소를 삽입하거나 지워야 하면 deque 다시 할당이 수행됩니다.  
+ Deque reallocation occurs when a member function must insert or erase elements of the sequence:  
   
--   빈 시퀀스에 요소를 삽입하거나 요소를 지워 빈 시퀀스가 남는 경우 [begin](#begin) 및 [end](#end)에서 이전에 반환된 반복기가 무효화됩니다.  
+-   If an element is inserted into an empty sequence, or if an element is erased to leave an empty sequence, then iterators earlier returned by [begin](#begin) and [end](#end) become invalid.  
   
--   deque의 첫 번째 위치에 요소를 삽입하는 경우 기존 요소를 지정하는 모든 반복기가 무효화되지만 참조는 그렇지 않습니다.  
+-   If an element is inserted at the first position of the deque, then all iterators, but no references, that designate existing elements become invalid.  
   
--   deque의 끝에 요소를 삽입하는 경우 [end](#end) 및 기존 요소를 지정하는 모든 반복기가 무효화되지만 참조는 그렇지 않습니다.  
+-   If an element is inserted at the end of the deque, then [end](#end) and all iterators, but no references, that designate existing elements become invalid.  
   
--   deque 앞에서 요소를 지우는 경우 해당 반복기와 지워진 요소에 대한 참조만 무효화됩니다.  
+-   If an element is erased at the front of the deque, only that iterator and references to the erased element become invalid.  
   
--   deque의 끝에서 마지막 요소를 지우는 경우 최종 요소에 대한 해당 반복기와 지워진 요소에 대한 참조만 무효화됩니다.  
+-   If the last element is erased from the end of the deque, only that iterator to the final element and references to the erased element become invalid.  
   
- 그렇지 않으면 요소를 삽입 또는 제거하는 경우 모든 반복기와 참조가 무효화됩니다.  
+ Otherwise, inserting or erasing an element invalidates all iterators and references.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[deque](#deque)|`deque.`를 생성합니다. 빈 상태, 지정된 개수의 빈 요소와 함께 로드, 다른 `deque`에서 콘텐츠 이동 또는 복사, 반복기를 사용하여 콘텐츠 복사 또는 이동 및 `deque`에 한 요소를 `count`번 복사 등 다양한 방법으로 새 `deque`의 콘텐츠를 설정하기 위해 여러 생성자가 제공됩니다. 일부 생성자의 경우 사용자 지정 `allocator`를 사용하여 요소를 만들 수 있습니다.|  
+|[deque](#deque)|Constructs a `deque.` Several constructors are provided to set up the contents of the new `deque` in different ways: empty; loaded with a specified number of empty elements; contents moved or copied from another `deque`; contents copied or moved by using an iterator; and one element copied into the `deque` `count` times. Some of the constructors enable using a custom `allocator` to create elements.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|`allocator` 개체의 `deque` 클래스를 나타내는 형식입니다.|  
-|[const_iterator](#const_iterator)|`deque`의 요소를 `const`로 액세스하고 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.|  
-|[const_pointer](#const_pointer)|`deque`의 요소에 대한 포인터를 `const.`로 제공하는 형식입니다.|  
-|[const_reference](#const_reference)|읽기 및 기타 작업을 위해 `deque`의 요소에 대한 참조를 `const.`로 제공하는 형식입니다.|  
-|[const_reverse_iterator](#const_reverse_iterator)|`deque`의 요소를 `const`로 액세스하고 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다. deque가 역방향으로 표시됩니다. 자세한 내용은 [reverse_iterator 클래스](../standard-library/reverse-iterator-class.md)를 참조하세요.|  
-|[difference_type](#difference_type)|동일한 `deque` 내의 요소를 참조하는 두 임의 액세스 반복기 간의 차이를 제공하는 형식입니다.|  
-|[iterator](#iterator)|`deque`에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다.|  
-|[pointer](#pointer)|`deque`의 요소에 대한 포인터를 제공하는 형식입니다.|  
-|[reference](#reference)|`deque` 내에 저장된 요소에 대한 참조를 제공하는 형식입니다.|  
-|[reverse_iterator](#reverse_iterator)|`deque`에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다. deque가 역방향으로 표시됩니다.|  
-|[size_type](#size_type)|`deque`의 요소 수를 계산하는 형식입니다.|  
-|[value_type](#value_type)|`deque` 내에 저장된 데이터 형식을 나타내는 형식입니다.|  
+|[allocator_type](#allocator_type)|A type that represents the `allocator` class for the `deque` object.|  
+|[const_iterator](#const_iterator)|A type that provides a random-access iterator that can access and read elements in the `deque` as `const`|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to an element in a `deque` as a `const.`|  
+|[const_reference](#const_reference)|A type that provides a reference to an element in a `deque` for reading and other operations as a `const.`|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a random-access iterator that can access and read elements in the `deque` as `const`. The deque is viewed in reverse. For more information, see [reverse_iterator Class](../standard-library/reverse-iterator-class.md)|  
+|[difference_type](#difference_type)|A type that provides the difference between two random-access iterators that refer to elements in the same `deque`.|  
+|[iterator](#iterator)|A type that provides a random-access iterator that can read or modify any element in a `deque`.|  
+|[pointer](#pointer)|A type that provides a pointer to an element in a `deque`.|  
+|[reference](#reference)|A type that provides a reference to an element stored in a `deque`.|  
+|[reverse_iterator](#reverse_iterator)|A type that provides a random-access iterator that can read or modify an element in a `deque`. The deque is viewed in reverse order.|  
+|[size_type](#size_type)|A type that counts the number of elements in a `deque`.|  
+|[value_type](#value_type)|A type that represents the data type stored in a `deque`.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[assign](#assign)|`deque`에서 요소를 지우고 대상 `deque`에 요소의 새 시퀀스를 복사합니다.|  
-|[at](#at)|`deque`의 지정된 위치에 있는 요소에 대한 참조를 반환합니다.|  
-|[back](#back)|`deque`의 마지막 요소에 대한 참조를 반환합니다.|  
-|[begin](#begin)|`deque`의 첫 번째 요소를 처리하는 임의 액세스 반복기를 반환합니다.|  
-|[cbegin](#cbegin)|`deque`의 첫 번째 요소에 대해 const 반복기를 반환합니다.|  
-|[cend](#cend)|`deque` 끝의 바로 다음을 가리키는 임의 액세스 `const` 반복기를 반환합니다.|  
-|[clear](#clear)|`deque`의 모든 요소를 지웁니다.|  
-|[crbegin](#crbegin)|역방향으로 표시된 `deque`의 첫 번째 요소에 대한 임의 액세스 const 반복기를 반환합니다.|  
-|[crend](#crend)|역방향으로 표시된 `deque`의 첫 번째 요소에 대한 임의 액세스 const 반복기를 반환합니다.|  
-|[emplace](#emplace)|내부에서 생성된 요소를 `deque`의 지정된 위치에 삽입합니다.|  
-|[emplace_back](#emplace_back)|생성된 요소를 `deque`의 끝에 추가합니다.|  
-|[emplace_front](#emplace_front)|생성된 요소를 `deque`의 시작 부분에 추가합니다.|  
-|[empty](#empty)|`deque`에 0개의 요소가 포함된 경우 `true`를 반환하고, 하나 이상의 요소가 포함된 경우 `false`를 반환합니다.|  
-|[end](#end)|`deque` 끝의 바로 다음을 가리키는 임의 액세스 반복기를 반환합니다.|  
-|[erase](#erase)|`deque`의 지정된 위치에서 요소 또는 요소 범위를 제거합니다.|  
-|[front](#front)|`deque`의 첫 번째 요소에 대한 참조를 반환합니다.|  
-|[get_allocator](#get_allocator)|`allocator`를 생성하는 데 사용된 `deque` 개체의 복사본을 반환합니다.|  
-|[insert](#insert)|한 요소, 여러 요소 또는 요소의 범위를 `deque`의 지정된 위치에 삽입합니다.|  
-|[max_size](#max_size)|`deque`의 최대 허용 길이를 반환합니다.|  
-|[pop_back](#pop_back)|`deque`의 끝에 있는 요소를 지웁니다.|  
-|[pop_front](#pop_front)|`deque`의 시작 부분에 있는 요소를 지웁니다.|  
-|[push_back](#push_back)|`deque`의 끝에 요소를 추가합니다.|  
-|[push_front](#push_front)|`deque`의 시작 부분에 요소를 추가합니다.|  
-|[rbegin](#rbegin)|역방향 `deque`의 첫 번째 요소에 대한 임의 액세스 반복기를 반환합니다.|  
-|[rend](#rend)|역방향 `deque`에서 마지막 요소 바로 다음을 가리키는 임의 액세스 반복기를 반환합니다.|  
-|[resize](#resize)|`deque`의 새 크기를 지정합니다.|  
-|[shrink_to_fit](#shrink_to_fit)|여분의 용량을 삭제합니다.|  
-|[size](#size)|`deque`에 있는 요소 수를 반환합니다.|  
-|[swap](#swap)|두 `deque`의 요소를 교환합니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#op_at)|지정된 위치에 있는 `deque` 요소에 대한 참조를 반환합니다.|  
-|[operator=](#op_eq)|`deque`의 요소를 다른 `deque`의 복사본으로 바꿉니다.|  
+|[assign](#assign)|Erases elements from a `deque` and copies a new sequence of elements to the target `deque`.|  
+|[at](#at)|Returns a reference to the element at a specified location in the `deque`.|  
+|[back](#back)|Returns a reference to the last element of the `deque`.|  
+|[begin](#begin)|Returns a random-access  iterator addressing the first element in the `deque`.|  
+|[cbegin](#cbegin)|Returns a const iterator to the first element in the `deque`.|  
+|[cend](#cend)|Returns a random-access `const` iterator that points just beyond the end of the `deque`.|  
+|[clear](#clear)|Erases all the elements of a `deque`.|  
+|[crbegin](#crbegin)|Returns a random-access const iterator to the first element in a `deque` viewed in reverse order.|  
+|[crend](#crend)|Returns a random-access const iterator to the first element in a `deque` viewed in reverse order.|  
+|[emplace](#emplace)|Inserts an element constructed in place into the `deque` at a specified position.|  
+|[emplace_back](#emplace_back)|Adds an element constructed in place to the end of the `deque`.|  
+|[emplace_front](#emplace_front)|Adds an element constructed in place to the start of the `deque`.|  
+|[empty](#empty)|Returns `true` if the `deque` contains zero elements, and `false` if it contains one or more elements.|  
+|[end](#end)|Returns a random-access iterator that points just beyond the end of the `deque`.|  
+|[erase](#erase)|Removes an element or a range of elements in a `deque` from specified positions.|  
+|[front](#front)|Returns a reference to the first element in a `deque`.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object that is used to construct the `deque`.|  
+|[insert](#insert)|Inserts an element, several elements, or a range of elements into the `deque` at a specified position.|  
+|[max_size](#max_size)|Returns the maximum possible length of the `deque`.|  
+|[pop_back](#pop_back)|Erases the element at the end of the `deque`.|  
+|[pop_front](#pop_front)|Erases the element at the start of the `deque`.|  
+|[push_back](#push_back)|Adds an element to the end of the `deque`.|  
+|[push_front](#push_front)|Adds an element to the start of the `deque`.|  
+|[rbegin](#rbegin)|Returns a random-access iterator to the first element in a reversed `deque`.|  
+|[rend](#rend)|Returns a random-access iterator that points just beyond the last element in a reversed `deque`.|  
+|[resize](#resize)|Specifies a new size for a `deque`.|  
+|[shrink_to_fit](#shrink_to_fit)|Discards excess capacity.|  
+|[size](#size)|Returns the number of elements in the `deque`.|  
+|[swap](#swap)|Exchanges the elements of two `deque`s.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더**: \<deque>  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator&#91;&#93;](#op_at)|Returns a reference to the `deque` element at a specified position.|  
+|[operator=](#op_eq)|Replaces the elements of the `deque` with a copy of another `deque`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<deque>  
   
 ##  <a name="allocator_type"></a>  deque::allocator_type  
- deque 개체의 할당자 클래스를 나타내는 형식입니다.  
+ A type that represents the allocator class for the deque object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- **allocator_type**은 템플릿 매개 변수 **Allocator**의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ **allocator_type** is a synonym for the template parameter **Allocator**.  
   
-### <a name="example"></a>예제  
-  [get_allocator](#get_allocator)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [get_allocator](#get_allocator).  
   
 ##  <a name="assign"></a>  deque::assign  
- deque에서 요소를 삭제하고 대상 deque에 요소의 새 집합을 복사합니다.  
+ Erases elements from a deque and copies a new set of elements to the target deque.  
   
 ```  
 template <class InputIterator>  
@@ -213,26 +252,26 @@ void assign(
 void assign(initializer_list<Type> IList);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `First`  
- 인수 deque에서 복사할 요소 범위에 있는 첫 번째 요소의 위치입니다.  
+ Position of the first element in the range of elements to be copied from the argument deque.  
   
  `Last`  
- 인수 deque에서 복사할 요소 범위를 벗어난 첫 번째 요소의 위치입니다.  
+ Position of the first element beyond the range of elements to be copied from the argument deque.  
   
  `Count`  
- deque에 삽입되는 요소의 복사본의 수입니다.  
+ The number of copies of an element being inserted into the deque.  
   
  `Val`  
- deque에 삽입되는 요소의 값입니다.  
+ The value of the element being inserted into the deque.  
   
  `IList`  
- deque에 삽입되는 initializer_list입니다.  
+ The initializer_list being inserted into the deque.  
   
-### <a name="remarks"></a>설명  
- 대상 deque에서 기존 요소가 지워진 후 `assign`은 원래 deque나 일부 다른 deque에서 지정된 범위의 요소를 대상 deque에 삽입하거나, 지정한 값의 새 요소 복사본을 대상 deque에 삽입합니다.  
+### <a name="remarks"></a>Remarks  
+ After any existing elements in the target deque are erased, `assign` either inserts a specified range of elements from the original deque or from some other deque into the target deque, or inserts copies of a new element of a specified value into the target deque.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_assign.cpp  
@@ -289,7 +328,7 @@ d1 = 5678c1 =102030c1 =5060c1 =4444444
 ```  
   
 ##  <a name="at"></a>  deque::at  
- deque의 지정된 위치에 있는 요소에 대한 참조를 반환합니다.  
+ Returns a reference to the element at a specified location in the deque.  
   
 ```  
 reference at(size_type pos);
@@ -297,17 +336,17 @@ reference at(size_type pos);
 const_reference at(size_type pos) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pos`  
- deque에서 참조할 요소의 아래 첨자 또는 위치 번호입니다.  
+ The subscript (or position number) of the element to reference in the deque.  
   
-### <a name="return-value"></a>반환 값  
- `pos`가 deque 크기보다 크면 **at**은 예외를 throw합니다.  
+### <a name="return-value"></a>Return Value  
+ If `pos` is greater than the size of the deque, **at** throws an exception.  
   
-### <a name="return-value"></a>반환 값  
- **at**의 반환 값이 `const_reference`에 할당되는 경우에는 deque 개체를 수정할 수 없습니다. **at**의 반환 값이 **reference**에 할당되는 경우에는 deque 개체를 수정할 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ If the return value of **at** is assigned to a `const_reference`, the deque object cannot be modified. If the return value of **at** is assigned to a **reference**, the deque object can be modified.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_at.cpp  
@@ -336,22 +375,22 @@ The second element is 20
 ```  
   
 ##  <a name="back"></a>  deque::back  
- deque의 마지막 요소에 대한 참조를 반환합니다.  
+ Returns a reference to the last element of the deque.  
   
 ```  
 reference back();
 const_reference back() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- deque의 마지막 요소입니다. deque가 비어 있으면 반환 값이 정의 해제됩니다.  
+### <a name="return-value"></a>Return Value  
+ The last element of the deque. If the deque is empty, the return value is undefined.  
   
-### <a name="remarks"></a>설명  
- **back**의 반환 값이 `const_reference`에 할당된 경우 deque 개체를 수정할 수 없습니다. **back**의 반환 값이 **reference**에 할당된 경우에는 deque 개체를 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If the return value of **back** is assigned to a `const_reference`, the deque object cannot be modified. If the return value of **back** is assigned to a **reference**, the deque object can be modified.  
   
- 1 또는 2로 정의된 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 컴파일한 경우 빈 deque의 요소에 액세스하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty deque.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_back.cpp  
@@ -382,20 +421,20 @@ The next-to-last integer of c1 is 10
 ```  
   
 ##  <a name="begin"></a>  deque::begin  
- deque의 첫 번째 요소 주소를 지정하는 반복기를 반환합니다.  
+ Returns an iterator addressing the first element in the deque.  
   
 ```  
 const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>반환 값  
- deque의 첫 번째 요소 또는 빈 deque 다음의 위치 주소를 지정하는 임의 액세스 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator addressing the first element in the deque or to the location succeeding an empty deque.  
   
-### <a name="remarks"></a>설명  
- **begin**의 반환 값이 `const_iterator`에 할당된 경우 deque 개체를 수정할 수 없습니다. **begin**의 반환 값이 **iterator**에 할당된 경우 deque 개체를 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If the return value of **begin** is assigned to a `const_iterator`, the deque object cannot be modified. If the return value of **begin** is assigned to an **iterator**, the deque object can be modified.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_begin.cpp  
@@ -431,19 +470,19 @@ The first element of c1 is now 20
 ```  
   
 ##  <a name="cbegin"></a>  deque::cbegin  
- 범위의 첫 번째 요소를 주소 지정하는 `const` 반복기를 반환합니다.  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 `const` 임의 액세스 반복기입니다(빈 범위의 경우 `cbegin() == cend()`).  
+### <a name="return-value"></a>Return Value  
+ A `const` random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>설명  
- `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- `begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`가 `begin()` 및 `cbegin()`을 지원하는 수정 가능(비`const`)한 컨테이너로 가정합니다.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -454,19 +493,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  deque::cend  
- 범위에서 마지막 요소 바로 다음의 위치를 주소 지정하는 `const` 반복기를 반환합니다.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 범위 끝의 바로 다음을 가리키는 임의 액세스 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>설명  
- `cend`는 반복기가 범위 끝을 통과했는지 여부를 테스트하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- `end()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`가 `end()` 및 `cend()`를 지원하는 수정 가능(비`const`)한 컨테이너로 가정합니다.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -476,16 +515,16 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- `cend`에서 반환한 값은 역참조되지 않아야 합니다.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  deque::clear  
- deque의 모든 요소를 지웁니다.  
+ Erases all the elements of a deque.  
   
 ```  
 void clear();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_clear.cpp  
@@ -514,39 +553,39 @@ The size of the deque after clearing is 0
 ```  
   
 ##  <a name="const_iterator"></a>  deque::const_iterator  
- deque의 **const** 요소 하나를 액세스하고 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.  
+ A type that provides a random-access iterator that can access and read a **const** element in the deque.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
-### <a name="example"></a>예제  
-  [back](#back)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [back](#back).  
   
 ##  <a name="const_pointer"></a>  deque::const_pointer  
- deque에 있는 `const` 요소에 대한 포인터를 제공합니다.  
+ Provides a pointer to a `const` element in a deque.  
   
 ```
 typedef typename Allocator::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>설명  
- `const_pointer` 형식을 사용하여 요소의 값을 수정할 수는 없습니다. [iterator](#iterator)는 deque 요소에 액세스하는 데 사용되는 경우가 더 많습니다.  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element. An [iterator](#iterator) is more commonly used to access a deque element.  
   
 ##  <a name="const_reference"></a>  deque::const_reference  
- **const** 작업을 읽고 수행하기 위해 deque에 저장된 **const** 요소에 대한 참조를 제공하는 형식입니다.  
+ A type that provides a reference to a **const** element stored in a deque for reading and performing **const** operations.  
   
 ```  
 typedef typename Allocator::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>설명  
- `const_reference` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reference` cannot be used to modify the value of an element.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_const_ref.cpp  
@@ -579,32 +618,32 @@ The second element is 20
 ```  
   
 ##  <a name="const_reverse_iterator"></a>  deque::const_reverse_iterator  
- deque의 모든 **const** 요소를 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.  
+ A type that provides a random-access iterator that can read any **const** element in the deque.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- `const_reverse_iterator` 형식은 요소 값을 수정할 수 없으며 deque를 역방향으로 반복하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is used to iterate through the deque in reverse.  
   
-### <a name="example"></a>예제  
-  반복기를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin) for an example of how to declare and use an iterator.  
   
 ##  <a name="crbegin"></a>  deque::crbegin  
- 역방향 deque의 첫 번째 요소에 대해 const 반복기를 반환합니다.  
+ Returns a const iterator to the first element in a reversed deque.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 역방향 [deque](../standard-library/deque-class.md)에서 첫 번째 요소의 주소를 지정하거나 역방향이 해제된 `deque`에서 마지막 요소의 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A const reverse random-access iterator addressing the first element in a reversed [deque](../standard-library/deque-class.md) or addressing what had been the last element in the unreversed `deque`.  
   
-### <a name="remarks"></a>설명  
- 반환 값이 `crbegin`이면 `deque` 개체를 수정할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `crbegin`, the `deque` object cannot be modified.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_crbegin.cpp  
@@ -638,25 +677,25 @@ The first element of the reversed deque is 2.
 ```  
   
 ##  <a name="crend"></a>  deque::crend  
- 역방향 deque에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 상수 반복기를 반환합니다.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed deque.  
   
 ```  
 const_reverse_iterator crend() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 역방향 [deque](../standard-library/deque-class.md)에서 마지막 요소 다음의 위치(역방향이 해제된 deque의 첫 번째 요소 앞의 위치) 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A const reverse random-access iterator that addresses the location succeeding the last element in a reversed [deque](../standard-library/deque-class.md) (the location that had preceded the first element in the unreversed deque).  
   
-### <a name="remarks"></a>설명  
- `crend`는 [array::cend](../standard-library/array-class-stl.md#cend)가 `deque`에 사용되는 것처럼 역방향 `deque`에 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed `deque` just as [array::cend](../standard-library/array-class-stl.md#cend) is used with a `deque`.  
   
- 반환 값이 `crend`(적절하게 감소)인 `deque` 개체는 수정할 수 없습니다.  
+ With the return value of `crend` (suitably decremented), the `deque` object cannot be modified.  
   
- `crend`를 사용하여 역방향 반복기가 deque 끝에 도달했는지 여부를 테스트할 수 있습니다.  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its deque.  
   
- `crend`에서 반환한 값은 역참조되지 않아야 합니다.  
+ The value returned by `crend` should not be dereferenced.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_crend.cpp  
@@ -684,7 +723,7 @@ int main( )
 ```  
   
 ##  <a name="deque"></a>  deque::deque  
- 특정 크기의 deque 또는 특정 값의 요소나 특정 할당자가 포함된 목록을 다른 deque 일부 또는 전체의 복사본으로 생성합니다.  
+ Constructs a deque of a specific size, or with elements of a specific value, or with a specific allocator, or as a copy of all or part of some other deque.  
   
 ```  
 deque();
@@ -712,39 +751,39 @@ deque(
 deque(initializer_list<value_type> IList, const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`Al`|이 개체에 사용할 할당자 클래스입니다.|  
-|`Count`|생성된 deque에 있는 요소의 수입니다.|  
-|`Val`|생성된 deque에 있는 요소의 값입니다.|  
-|`Right`|생성된 deque가 복사본으로 지정될 deque입니다.|  
-|`First`|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|  
-|`Last`|복사할 요소의 범위를 벗어난 첫 번째 요소의 위치입니다.|  
-|`IList`|복사할 initializer_list입니다.|  
+|Parameter|Description|  
+|`Al`|The allocator class to use with this object.|  
+|`Count`|The number of elements in the constructed deque.|  
+|`Val`|The value of the elements in the constructed deque.|  
+|`Right`|The deque of which the constructed deque is to be a copy.|  
+|`First`|Position of the first element in the range of elements to be copied.|  
+|`Last`|Position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list to be copied.|  
   
-### <a name="remarks"></a>설명  
- 모든 생성자는 할당자 개체(`Al`)를 저장하고 deque를 초기화합니다.  
+### <a name="remarks"></a>Remarks  
+ All constructors store an allocator object ( `Al`) and initialize the deque.  
   
- 처음 두 생성자는 빈 초기 deque를 지정하며, 그 중 두 번째 생성자는 사용할 할당자 형식(`_Al`)을 지정합니다.  
+ The first two constructors specify an empty initial deque; the second one also specifies the allocator type ( `_Al`) to be used.  
   
- 세 번째 생성자는 `Type` 클래스에 대한 기본값 요소의 지정된 반복 횟수(`count`)를 지정합니다.  
+ The third constructor specifies a repetition of a specified number ( `count`) of elements of the default value for class `Type`.  
   
- 네 번째와 다섯 번째 생성자는 `val` 값(`Count`) 요소 반복을 지정합니다.  
+ The fourth and fifth constructors specify a repetition of ( `Count`) elements of value `val`.  
   
- 여섯 번째 생성자는 `Right` deque의 복사본을 지정합니다.  
+ The sixth constructor specifies a copy of the deque `Right`.  
   
- 일곱 번째 및 여덟 번째 생성자는 deque의 범위 `[First, Last)`를 복사합니다.  
+ The seventh and eighth constructors copy the range `[First, Last)` of a deque.  
   
- 일곱 번째 생성자는 `Right` deque를 이동합니다.  
+ The seventh constructor moves the deque `Right`.  
   
- 여덟 번째 생성자는 initializer_list의 콘텐츠를 복사합니다.  
+ The eighth constructor copies the contents of an initializer_list.  
   
- 중간 다시 할당을 수행하는 생성자는 없습니다.  
+ None of the constructors perform any interim reallocations.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 / compile with: /EHsc  
@@ -949,16 +988,16 @@ int main( )
 ```  
   
 ##  <a name="difference_type"></a>  deque::difference_type  
- 동일한 deque 내의 요소를 참조하는 두 반복기 사이의 차이를 제공하는 형식입니다.  
+ A type that provides the difference between two iterators that refer to elements within the same deque.  
   
 ```  
 typedef typename Allocator::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `difference_type`은 두 포인터 사이의 요소로도 설명할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ A `difference_type` can also be described as the number of elements between two pointers.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_diff_type.cpp  
@@ -1002,7 +1041,7 @@ The number '30' is in c1 collection 3 times.
 ```  
   
 ##  <a name="emplace"></a>  deque::emplace  
- 내부에서 생성된 요소를 deque의 지정된 위치에 삽입합니다.  
+ Inserts an element constructed in place into the deque at a specified position.  
   
 ```  
 iterator emplace(
@@ -1010,21 +1049,21 @@ iterator emplace(
     Type&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`_Where`|[deque](../standard-library/deque-class.md)에서 첫 번째 요소를 삽입하는 위치입니다.|  
-|`val`|`deque`에 삽입되는 요소의 값입니다.|  
+|Parameter|Description|  
+|`_Where`|The position in the [deque](../standard-library/deque-class.md) where the first element is inserted.|  
+|`val`|The value of the element being inserted into the `deque`.|  
   
-### <a name="return-value"></a>반환 값  
- 이 함수는 새 요소를 deque에 삽입한 위치를 가리키는 반복기를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The function returns an iterator that points to the position where the new element was inserted into the deque.  
   
-### <a name="remarks"></a>설명  
- 모든 삽입 작업에서는 많은 계산을 수행해야 할 수 있습니다. `deque` 성능에 대한 설명은 `deque`를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ Any insertion operation can be expensive, see `deque` for a discussion of `deque` performance.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_emplace.cpp  
@@ -1067,20 +1106,20 @@ vv1[0] = 10 20 30
 ```  
   
 ##  <a name="emplace_back"></a>  deque::emplace_back  
- 내부에서 생성된 요소를 deque의 끝에 추가합니다.  
+ Adds an element constructed in place to the end of the deque.  
   
 ```  
 void emplace_back(Type&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`val`|[deque](../standard-library/deque-class.md) 끝에 추가되는 요소입니다.|  
+|Parameter|Description|  
+|`val`|The element added to the end of the [deque](../standard-library/deque-class.md).|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_emplace_back.cpp  
@@ -1117,20 +1156,20 @@ Moved last element: 2
 ```  
   
 ##  <a name="emplace_front"></a>  deque::emplace_front  
- 내부에서 생성된 요소를 deque의 끝에 추가합니다.  
+ Adds an element constructed in place to the end of the deque.  
   
 ```  
 void emplace_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`val`|[deque](../standard-library/deque-class.md)의 시작 부분에 추가할 요소입니다.|  
+|Parameter|Description|  
+|`val`|The element added to the beginning of the [deque](../standard-library/deque-class.md).|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_emplace_front.cpp  
@@ -1167,16 +1206,16 @@ Moved last element: 2
 ```  
   
 ##  <a name="empty"></a>  deque::empty  
- deque가 비어 있는지 여부를 테스트합니다.  
+ Tests if a deque is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- deque가 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque is empty; **false** if the deque is not empty.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_empty.cpp  
@@ -1202,7 +1241,7 @@ The deque is not empty.
 ```  
   
 ##  <a name="end"></a>  deque::end  
- deque에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.  
+ Returns an iterator that addresses the location succeeding the last element in a deque.  
   
 ```  
 const_iterator end() const;
@@ -1210,13 +1249,13 @@ const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>반환 값  
- deque에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 임의 액세스 반복기입니다. deque가 비어 있으면 deque::end == deque::begin입니다.  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator that addresses the location succeeding the last element in a deque. If the deque is empty, then deque::end == deque::begin.  
   
-### <a name="remarks"></a>설명  
- **end**는 반복기가 deque의 끝에 도달했는지 여부를 테스트하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has reached the end of its deque.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_end.cpp  
@@ -1259,7 +1298,7 @@ The deque is now: 10 400 30
 ```  
   
 ##  <a name="erase"></a>  deque::erase  
- deque의 지정된 위치에서 요소 또는 요소 범위를 제거합니다.  
+ Removes an element or a range of elements in a deque from specified positions.  
   
 ```  
 iterator erase(iterator _Where);
@@ -1267,23 +1306,23 @@ iterator erase(iterator _Where);
 iterator erase(iterator first, iterator last);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Where`  
- deque에서 제거할 요소의 위치입니다.  
+ Position of the element to be removed from the deque.  
   
  `first`  
- deque에서 제거되는 첫 번째 요소의 위치입니다.  
+ Position of the first element removed from the deque.  
   
  `last`  
- deque에서 제거되는 마지막 요소 바로 뒤의 위치입니다.  
+ Position just beyond the last element removed from the deque.  
   
-### <a name="return-value"></a>반환 값  
- 제거되는 요소 뒤에 남아 있는 첫 번째 요소를 지정하는 임의 액세스 반복기이거나, 남아 있는 요소가 없는 경우에는 deque 끝에 대한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator that designates the first element remaining beyond any elements removed, or a pointer to the end of the deque if no such element exists.  
   
-### <a name="remarks"></a>설명  
- **erase**는 예외를 throw할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ **erase** never throws an exception.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_erase.cpp  
@@ -1328,7 +1367,7 @@ After erasing all elements but the first, deque becomes: 20
 ```  
   
 ##  <a name="front"></a>  deque::front  
- deque의 첫 번째 요소에 대한 참조를 반환합니다.  
+ Returns a reference to the first element in a deque.  
   
 ```  
 reference front();
@@ -1336,15 +1375,15 @@ reference front();
 const_reference front() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- deque가 비어 있으면 반환이 정의 해제됩니다.  
+### <a name="return-value"></a>Return Value  
+ If the deque is empty, the return is undefined.  
   
-### <a name="remarks"></a>설명  
- `front`의 반환 값이 `const_reference`에 할당되는 경우에는 deque 개체를 수정할 수 없습니다. `front`의 반환 값이 **reference**에 할당되는 경우에는 deque 개체를 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If the return value of `front` is assigned to a `const_reference`, the deque object cannot be modified. If the return value of `front` is assigned to a **reference**, the deque object can be modified.  
   
- 1 또는 2로 정의된 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 컴파일한 경우 빈 deque의 요소에 액세스하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty deque.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_front.cpp  
@@ -1375,19 +1414,19 @@ The second integer of c1 is 11
 ```  
   
 ##  <a name="get_allocator"></a>  deque::get_allocator  
- deque를 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.  
+ Returns a copy of the allocator object used to construct the deque.  
   
 ```  
 Allocator get_allocator() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- deque에서 사용되는 할당자입니다.  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the deque.  
   
-### <a name="remarks"></a>설명  
- deque 클래스의 할당자는 클래스가 저장소를 관리하는 방법을 지정합니다. C++ 표준 라이브러리 컨테이너 클래스와 함께 제공되는 기본 할당자를 사용하면 대부분의 프로그래밍 요구 사항을 충족할 수 있습니다. 할당자 클래스를 직접 작성하고 사용하는 방법에 대해서는 고급 C++ 항목에서 다룹니다.  
+### <a name="remarks"></a>Remarks  
+ Allocators for the deque class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_get_allocator.cpp  
@@ -1411,7 +1450,7 @@ int main( )
 ```  
   
 ##  <a name="insert"></a>  deque::insert  
- 요소 하나 또는 여러 개나 요소의 범위를 deque의 지정된 위치에 삽입합니다.  
+ Inserts an element or a number of elements or a range of elements into the deque at a specified position.  
   
 ```  
 iterator insert(
@@ -1438,48 +1477,48 @@ iterator insert(
 IList);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`Where`|대상 deque에서 첫 번째 요소를 삽입하는 위치입니다.|  
-|`Val`|deque에 삽입되는 요소의 값입니다.|  
-|`Count`|deque에 삽입되는 요소의 수입니다.|  
-|`First`|인수 deque에서 복사할 요소 범위에 있는 첫 번째 요소의 위치입니다.|  
-|`Last`|인수 deque에서 복사할 요소 범위를 벗어난 첫 번째 요소의 위치입니다.|  
-|`IList`|삽입할 요소의 initializer_list입니다.|  
+|Parameter|Description|  
+|`Where`|The position in the target deque where the first element is inserted.|  
+|`Val`|The value of the element being inserted into the deque.|  
+|`Count`|The number of elements being inserted into the deque.|  
+|`First`|The position of the first element in the range of elements in the argument deque to be copied.|  
+|`Last`|The position of the first element beyond the range of elements in the argument deque to be copied.|  
+|`IList`|The initializer_list of elements to insert.|  
   
-### <a name="return-value"></a>반환 값  
- 처음 두 insert 함수는 새 요소가 deque에 삽입된 위치를 가리키는 반복기를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first two insert functions return an iterator that points to the position where the new element was inserted into the deque.  
   
-### <a name="remarks"></a>설명  
- 모든 삽입 작업에서는 많은 계산을 수행해야 할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Any insertion operation can be expensive.  
   
 ##  <a name="iterator"></a>  deque::iterator  
- deque에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다.  
+ A type that provides a random-access iterator that can read or modify any element in a deque.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- **iterator** 형식은 요소값을 수정할 때 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ A type **iterator** can be used to modify the value of an element.  
   
-### <a name="example"></a>예제  
-  [begin](#begin)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin).  
   
 ##  <a name="max_size"></a>  deque::max_size  
- deque의 최대 길이를 반환합니다.  
+ Returns the maximum length of the deque.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- deque의 최대 허용 길이입니다.  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the deque.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_max_size.cpp  
@@ -1499,7 +1538,7 @@ int main( )
 ```  
   
 ##  <a name="op_at"></a>  deque::operator[]  
- 지정된 위치에 있는 deque 요소에 대한 참조를 반환합니다.  
+ Returns a reference to the deque element at a specified position.  
   
 ```  
 reference operator[](size_type pos);
@@ -1507,19 +1546,19 @@ reference operator[](size_type pos);
 const_reference operator[](size_type pos) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pos`  
- 참조할 deque 요소의 위치입니다.  
+ The position of the deque element to be referenced.  
   
-### <a name="return-value"></a>반환 값  
- 인수에 해당 위치가 지정된 요소에 대한 참조입니다. 지정된 위치가 deque의 크기보다 클 경우 결과가 정의 해제됩니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to the element whose position is specified in the argument. If the position specified is greater than the size of the deque, the result is undefined.  
   
-### <a name="remarks"></a>설명  
- `operator[]`의 반환 값이 `const_reference`에 할당되는 경우에는 deque 개체를 수정할 수 없습니다. `operator[]`의 반환 값이 **reference**에 할당되는 경우에는 deque 개체를 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If the return value of `operator[]` is assigned to a `const_reference`, the deque object cannot be modified. If the return value of `operator[]` is assigned to a **reference**, the deque object can be modified.  
   
- 1 또는 2로 정의된 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 컴파일한 경우 deque 범위를 벗어난 요소에 액세스하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element outside the bounds of the deque.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_op_ref.cpp  
@@ -1547,7 +1586,7 @@ The second integer of c1 is 20
 ```  
   
 ##  <a name="op_eq"></a>  deque::operator=  
- 다른 deque의 요소를 사용하여 이 deque의 요소를 대체합니다.  
+ Replaces the elements of this deque using the elements from another deque.  
   
 ```  
 deque& operator=(const deque& right);
@@ -1555,19 +1594,19 @@ deque& operator=(const deque& right);
 deque& operator=(deque&& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`right`|새 콘텐츠를 제공하는 deque입니다.|  
+|Parameter|Description|  
+|`right`|The deque that provides the new content.|  
   
-### <a name="remarks"></a>설명  
- 첫 번째 재정의는 할당 소스인 `right`에서 이 deque로 요소를 복사합니다. 두 번째 재정의는 `right`에서 이 deque를 이동합니다.  
+### <a name="remarks"></a>Remarks  
+ The first override copies elements to this deque from `right`, the source of the assignment. The second override moves elements to this deque from `right`.  
   
- 연산자가 실행되기 전에 이 deque에 포함된 요소는 제거됩니다.  
+ Elements that are contained in this deque before the operator executes are removed.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_operator_as.cpp  
@@ -1621,26 +1660,26 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  deque::pointer  
- [deque](../standard-library/deque-class.md)에 있는 요소에 대한 포인터를 제공합니다.  
+ Provides a pointer to an element in a [deque](../standard-library/deque-class.md).  
   
 ```unstlib  
 typedef typename Allocator::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>설명  
- 형식 **pointer**는 요소의 값을 수정할 때 사용할 수 있습니다. [iterator](#iterator)는 deque 요소에 액세스하는 데 사용되는 경우가 더 많습니다.  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element. An [iterator](#iterator) is more commonly used to access a deque element.  
   
 ##  <a name="pop_back"></a>  deque::pop_back  
- deque의 끝에 있는 요소를 삭제합니다.  
+ Deletes the element at the end of the deque.  
   
 ```  
 void pop_back();
 ```  
   
-### <a name="remarks"></a>설명  
- 마지막 요소는 비워 둘 수 없습니다. `pop_back`은 예외를 throw할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The last element must not be empty. `pop_back` never throws an exception.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_pop_back.cpp  
@@ -1671,16 +1710,16 @@ After deleting the element at the end of the deque, the last element is: 1
 ```  
   
 ##  <a name="pop_front"></a>  deque::pop_front  
- deque의 시작 부분에 있는 요소를 삭제합니다.  
+ Deletes the element at the beginning of the deque.  
   
 ```  
 void pop_front();
 ```  
   
-### <a name="remarks"></a>설명  
- 첫 번째 요소는 비워 둘 수 없습니다. `pop_front`은 예외를 throw할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ The first element must not be empty. `pop_front` never throws an exception.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_pop_front.cpp  
@@ -1711,7 +1750,7 @@ After deleting the element at the beginning of the deque, the first element is: 
 ```  
   
 ##  <a name="push_back"></a>  deque::push_back  
- deque 끝에 요소를 추가합니다.  
+ Adds an element to the end of the deque.  
   
 ```  
 void push_back(const Type& val);
@@ -1719,18 +1758,18 @@ void push_back(const Type& val);
 void push_back(Type&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`val`|deque 끝에 추가되는 요소입니다.|  
+|Parameter|Description|  
+|`val`|The element added to the end of the deque.|  
   
-### <a name="remarks"></a>설명  
- 예외가 throw되면 deque는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the deque is left unaltered and the exception is rethrown.  
   
 ##  <a name="push_front"></a>  deque::push_front  
- deque의 시작 부분에 요소를 추가합니다.  
+ Adds an element to the beginning of the deque.  
   
 ```  
     void push_front(const Type& val);
@@ -1738,17 +1777,17 @@ void push_back(Type&& val);
 void push_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`val`|deque의 시작 부분에 추가할 요소입니다.|  
+|Parameter|Description|  
+|`val`|The element added to the beginning of the deque.|  
   
-### <a name="remarks"></a>설명  
- 예외가 throw되면 deque는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the deque is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_push_front.cpp  
@@ -1786,7 +1825,7 @@ Moved first element: a
 ```  
   
 ##  <a name="rbegin"></a>  deque::rbegin  
- 역방향 deque의 첫 번째 요소에 대한 반복기를 반환합니다.  
+ Returns an iterator to the first element in a reversed deque.  
   
 ```  
 const_reverse_iterator rbegin() const;
@@ -1794,17 +1833,17 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 역방향 deque에서 첫 번째 요소의 주소를 지정하거나 역방향이 해제된 deque에서 마지막 요소의 주소를 지정하는 역방향 임의 액세스 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A reverse random-access iterator addressing the first element in a reversed deque or addressing what had been the last element in the unreversed deque.  
   
-### <a name="remarks"></a>설명  
- `rbegin`은 deque에서 [begin](#begin)이 사용되는 것처럼 역방향 deque에 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed deque just as [begin](#begin) is used with a deque.  
   
- `rbegin`의 반환 값이 `const_reverse_iterator`에 할당되는 경우에는 deque 개체를 수정할 수 없습니다. `rbegin`의 반환 값이 `reverse_iterator`에 할당되는 경우에는 deque 개체를 수정할 수 있습니다.  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, the deque object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, the deque object can be modified.  
   
- `rbegin`은 deque를 역방향으로 반복할 때 사용할 수 있습니다.  
+ `rbegin` can be used to iterate through a deque backwards.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_rbegin.cpp  
@@ -1859,13 +1898,13 @@ Last element in deque is now 40.
 ```  
   
 ##  <a name="reference"></a>  deque::reference  
- deque에 저장된 요소에 대한 참조를 제공하는 형식입니다.  
+ A type that provides a reference to an element stored in a deque.  
   
 ```  
 typedef typename Allocator::reference reference;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_reference.cpp  
@@ -1894,7 +1933,7 @@ The second element is 20
 ```  
   
 ##  <a name="rend"></a>  deque::rend  
- 역방향 deque에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.  
+ Returns an iterator that addresses the location succeeding the last element in a reversed deque.  
   
 ```  
 const_reverse_iterator rend() const;
@@ -1902,19 +1941,19 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 역방향 deque에서 마지막 요소 다음의 위치(역방향이 해제된 deque의 첫 번째 요소 앞의 위치) 주소를 지정하는 역방향 임의 액세스 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A reverse random-access iterator that addresses the location succeeding the last element in a reversed deque (the location that had preceded the first element in the unreversed deque).  
   
-### <a name="remarks"></a>설명  
- `rend`는 deque에서 [end](#end)가 사용되는 것처럼 역방향 deque에 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed deque just as [end](#end) is used with a deque.  
   
- `rend`의 반환 값이 `const_reverse_iterator`에 할당되는 경우에는 deque 개체를 수정할 수 없습니다. `rend`의 반환 값이 `reverse_iterator`에 할당되는 경우에는 deque 개체를 수정할 수 있습니다.  
+ If the return value of `rend` is assigned to a `const_reverse_iterator`, the deque object cannot be modified. If the return value of `rend` is assigned to a `reverse_iterator`, the deque object can be modified.  
   
- `rend`를 사용하여 역방향 반복기가 deque 끝에 도달했는지 여부를 테스트할 수 있습니다.  
+ `rend` can be used to test whether a reverse iterator has reached the end of its deque.  
   
- `rend`에서 반환한 값은 역참조되지 않아야 합니다.  
+ The value returned by `rend` should not be dereferenced.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_rend.cpp  
@@ -1976,7 +2015,7 @@ The modified reversed deque is: 30 20 40
 ```  
   
 ##  <a name="resize"></a>  deque::resize  
- deque의 새 크기를 지정합니다.  
+ Specifies a new size for a deque.  
   
 ```  
 void resize(size_type _Newsize);
@@ -1984,23 +2023,23 @@ void resize(size_type _Newsize);
 void resize(size_type _Newsize, Type val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Newsize`  
- deque의 새 크기입니다.  
+ The new size of the deque.  
   
  `val`  
- 새 크기가 원래 크기보다 클 경우 deque에 추가되는 새 요소의 값입니다. 값을 생략하면 새 요소에 클래스의 기본값이 할당됩니다.  
+ The value of the new elements to be added to the deque if the new size is larger that the original size. If the value is omitted, the new elements are assigned the default value for the class.  
   
-### <a name="remarks"></a>설명  
- deque의 크기가 요청된 크기 `_Newsize`보다 작으면 요청한 크기에 도달할 때까지 deque에 요소가 추가됩니다.  
+### <a name="remarks"></a>Remarks  
+ If the deque's size is less than the requested size, `_Newsize`, elements are added to the deque until it reaches the requested size.  
   
- deque의 크기가 요청된 크기보다 크면 deque가 요청된 크기 `_Newsize`에 도달할 때까지 deque 끝에서 가장 가까운 요소가 삭제됩니다.  
+ If the deque's size is larger than the requested size, the elements closest to the end of the deque are deleted until the deque reaches the size `_Newsize`.  
   
- deque의 현재 크기와 요청된 크기가 동일하면 아무런 작업도 실행되지 않습니다.  
+ If the present size of the deque is the same as the requested size, no action is taken.  
   
- [크기](#size)는 deque의 현재 크기를 반영합니다.  
+ [size](#size) reflects the current size of the deque.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_resize.cpp  
@@ -2041,29 +2080,29 @@ The value of the last element is now 20
 ```  
   
 ##  <a name="reverse_iterator"></a>  deque::reverse_iterator  
- 역방향 deque에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다.  
+ A type that provides a random-access iterator that can read or modify an element in a reversed deque.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- `reverse_iterator` 형식은 deque를 반복하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` is use to iterate through the deque.  
   
-### <a name="example"></a>예제  
-  rbegin의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for rbegin.  
   
 ##  <a name="shrink_to_fit"></a>  deque::shrink_to_fit  
- 여분의 용량을 삭제합니다.  
+ Discards excess capacity.  
   
 ```  
 void shrink_to_fit();
 ```  
   
-### <a name="remarks"></a>설명  
- `shrink_to_fit`가 [deque](../standard-library/deque-class.md)에서 사용되는 저장소를 줄이는지 확인하는 간편한 방법은 없습니다.  
+### <a name="remarks"></a>Remarks  
+ There is no portable way to determine if `shrink_to_fit` reduces the storage used by a [deque](../standard-library/deque-class.md).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_shrink_to_fit.cpp  
@@ -2093,16 +2132,16 @@ Current size of v1 = 1
 ```  
   
 ##  <a name="size"></a>  deque::size  
- deque의 요소 수를 반환합니다.  
+ Returns the number of elements in the deque.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- deque의 현재 길이입니다.  
+### <a name="return-value"></a>Return Value  
+ The current length of the deque.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_size.cpp  
@@ -2132,17 +2171,17 @@ The deque length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  deque::size_type  
- deque의 요소 수를 계산하는 형식입니다.  
+ A type that counts the number of elements in a deque.  
   
 ```  
 typedef typename Allocator::size_type size_type;  
 ```  
   
-### <a name="example"></a>예제  
-  [size](#size)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [size](#size).  
   
 ##  <a name="swap"></a>  deque::swap  
- 두 deque의 요소를 교환합니다.  
+ Exchanges the elements of two deques.  
   
 ```  
 void swap(deque<Type, Allocator>& right);
@@ -2151,14 +2190,14 @@ friend void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right) te
 void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 교환할 요소를 제공하는 deque 또는 `left` deque와 요소를 교환할 deque입니다.  
+ The deque providing the elements to be swapped, or the deque whose elements are to be exchanged with those of the deque `left`.  
   
  `left`  
- `right` deque와 요소를 교환할 deque입니다.  
+ A deque whose elements are to be exchanged with those of the deque `right`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_swap.cpp  
@@ -2214,16 +2253,16 @@ After swapping with c2, deque c1 is: 1 2 3
 ```  
   
 ##  <a name="value_type"></a>  deque::value_type  
- deque에 저장된 데이터 형식을 나타내는 형식입니다.  
+ A type that represents the data type stored in a deque.  
   
 ```  
 typedef typename Allocator::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `value_type`은 템플릿 매개 변수 **Type**의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ `value_type` is a synonym for the template parameter **Type**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp 
 // deque_value_type.cpp  
@@ -2243,8 +2282,8 @@ int main( )
 44  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

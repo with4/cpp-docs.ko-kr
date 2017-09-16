@@ -1,5 +1,5 @@
 ---
-title: "CDaoRelationFieldInfo 구조체 | Microsoft 문서"
+title: CDaoRelationFieldInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
-- CDaoRelationFieldInfo structure
+- CDaoRelationFieldInfo structure [MFC]
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 23d7497502f611cf2311e574556186dc5f7c7d3d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 58505b69e8acb04122bbf62d8cecf6635a4efb8a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo 구조체
-`CDaoRelationFieldInfo` 구조에 데이터 액세스 개체 (DAO)에 대해 정의 된 관계에 있는 필드에 대 한 정보가 들어 있습니다.  
+# <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo Structure
+The `CDaoRelationFieldInfo` structure contains information about a field in a relation defined for data access objects (DAO).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoRelationFieldInfo  
@@ -54,24 +54,24 @@ struct CDaoRelationFieldInfo
 };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 관계의 기본 테이블에 있는 필드의 이름입니다.  
+ The name of the field in the primary table of the relation.  
   
  `m_strForeignName`  
- 관계의 외래 테이블의 필드의 이름입니다.  
+ The name of the field in the foreign table of the relation.  
   
-## <a name="remarks"></a>주의  
- DAO relation 개체는 기본 테이블 및 관계를 정의 하는 외래 테이블의 필드에 필드를 지정 합니다. 위의 구조 정의에서 기본에 대 한 참조 정보에 반환 되는 방법을 나타내는 `m_pFieldInfos` 의 멤버는 [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) 를 호출 하 여 가져온 개체는 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) 클래스의 멤버 함수 `CDaoDatabase`합니다.  
+## <a name="remarks"></a>Remarks  
+ A DAO relation object specifies the fields in a primary table and the fields in a foreign table that define the relation. The references to Primary in the structure definition above indicate how the information is returned in the `m_pFieldInfos` member of a [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object obtained by calling the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function of class `CDaoDatabase`.  
   
- 관계 개체 및 관계 field 개체는 MFC 클래스에 의해 표시 되지 않습니다. DAO 클래스의 기본 MFC 개체를 개체 대신 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 관계 컬렉션 이라고 하는 관계 개체의 컬렉션을 포함 합니다. 각 관계 개체 관계 field 개체의 컬렉션을 포함합니다. 각 관계 field 개체 상호 외래 테이블의 필드와 기본 테이블의 필드를 연결합니다. 전체적으로 볼 때, 관계 field 개체 필드 그룹 각 테이블에 있는 정의 함께 관계를 정의 합니다. `CDaoDatabase`사용 하 여 관계 개체에 액세스할 수 있습니다는 `CDaoRelationInfo` 를 호출 하 여 개체의 `GetRelationInfo` 멤버 함수입니다. `CDaoRelationInfo` 개체, 그런 다음에 데이터 멤버가, `m_pFieldInfos`, 배열을 가리키는 `CDaoRelationFieldInfo` 개체입니다.  
+ Relation objects and relation field objects are not represented by an MFC class. Instead, the DAO objects underlying MFC objects of class [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contain a collection of relation objects, called the Relations collection. Each relation object, in turn, contains a collection of relation field objects. Each relation field object correlates a field in the primary table with a field in the foreign table. Taken together, the relation field objects define a group of fields in each table, which together define the relation. `CDaoDatabase` lets you access relation objects with a `CDaoRelationInfo` object by calling the `GetRelationInfo` member function. The `CDaoRelationInfo` object, then, has a data member, `m_pFieldInfos`, that points to an array of `CDaoRelationFieldInfo` objects.  
   
- 호출의 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) 포함 하는 멤버 함수 `CDaoDatabase` 개체 관계 컬렉션은 해당 관심이 있는 relation 개체 저장 합니다. 다음 액세스는 `m_pFieldInfos` 의 멤버는 [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) 개체입니다. `CDaoRelationFieldInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoRelationFieldInfo` 개체입니다.  
+ Call the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function of the containing `CDaoDatabase` object in whose Relations collection is stored the relation object you are interested in. Then access the `m_pFieldInfos` member of the [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object. `CDaoRelationFieldInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoRelationFieldInfo` object.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoRelationInfo 구조체](../../mfc/reference/cdaorelationinfo-structure.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoRelationInfo Structure](../../mfc/reference/cdaorelationinfo-structure.md)
 

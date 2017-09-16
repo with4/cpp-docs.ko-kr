@@ -1,5 +1,5 @@
 ---
-title: "&lt;array&gt; 연산자 | Microsoft 문서"
+title: '&lt;array&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,15 +18,15 @@ dev_langs:
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c85e1930bc8bfe492368fd40fe488156cf9a3ed1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4bd1ed8f2c2ea40d7f500e302189762bc7f24962
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltarraygt-operators"></a>&lt;array&gt; 연산자
-\<array> 헤더는 다음의 `array` 비 멤버 비교 템플릿 함수를 포함합니다.  
+# <a name="ltarraygt-operators"></a>&lt;array&gt; operators
+The \<array> header includes these `array` non-member comparison template functions.  
   
 ||||  
 |-|-|-|  
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/29/2017
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 배열 비교, 같지 않음  
+ Array comparison, not equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -43,23 +43,23 @@ bool operator!=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 요소의 형식입니다.  
+ The type of an element.  
   
  `N`  
- 배열의 크기입니다.  
+ The size of the array.  
   
  `left`  
- 비교할 왼쪽 컨테이너입니다.  
+ Left container to compare.  
   
  `right`  
- 비교할 오른쪽 컨테이너입니다.  
+ Right container to compare.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수가 `!(left == right)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left == right)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_ne.cpp   
@@ -104,7 +104,7 @@ true
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 배열 비교, 보다 작음  
+ Array comparison, less than.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -113,23 +113,23 @@ bool operator<(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 요소의 형식입니다.  
+ The type of an element.  
   
  `N`  
- 배열의 크기입니다.  
+ The size of the array.  
   
  `left`  
- 비교할 왼쪽 컨테이너입니다.  
+ Left container to compare.  
   
  `right`  
- 비교할 오른쪽 컨테이너입니다.  
+ Right container to compare.  
   
-### <a name="remarks"></a>설명  
- [array 클래스](../standard-library/array-class-stl.md) 템플릿 클래스의 두 개체를 비교하기 위한 템플릿 함수 오버로드 `operator<`입니다. 함수에서 `lexicographical_compare(left.begin(), left.end(), right.begin())`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function overloads `operator<` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `lexicographical_compare(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_lt.cpp   
@@ -175,7 +175,7 @@ true
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 배열 비교, 보다 작거나 같음  
+ Array comparison, less than or equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -184,23 +184,23 @@ bool operator<=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 요소의 형식입니다.  
+ The type of an element.  
   
  `N`  
- 배열의 크기입니다.  
+ The size of the array.  
   
  `left`  
- 비교할 왼쪽 컨테이너입니다.  
+ Left container to compare.  
   
  `right`  
- 비교할 오른쪽 컨테이너입니다.  
+ Right container to compare.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수가 `!(right < left)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(right < left)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_le.cpp   
@@ -246,7 +246,7 @@ false
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 배열 비교, 같음  
+ Array comparison, equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -255,23 +255,23 @@ bool operator==(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 요소의 형식입니다.  
+ The type of an element.  
   
  `N`  
- 배열의 크기입니다.  
+ The size of the array.  
   
  `left`  
- 비교할 왼쪽 컨테이너입니다.  
+ Left container to compare.  
   
  `right`  
- 비교할 오른쪽 컨테이너입니다.  
+ Right container to compare.  
   
-### <a name="remarks"></a>설명  
- [array 클래스](../standard-library/array-class-stl.md) 템플릿 클래스의 두 개체를 비교하기 위한 템플릿 함수 오버로드 `operator==`입니다. 함수에서 `equal(left.begin(), left.end(), right.begin())`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function overloads `operator==` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `equal(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_eq.cpp   
@@ -317,7 +317,7 @@ false
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 배열 비교, 보다 큼  
+ Array comparison, greater than.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -326,23 +326,23 @@ bool operator>(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 요소의 형식입니다.  
+ The type of an element.  
   
  `N`  
- 배열의 크기입니다.  
+ The size of the array.  
   
  `left`  
- 비교할 왼쪽 컨테이너입니다.  
+ Left container to compare.  
   
  `right`  
- 비교할 오른쪽 컨테이너입니다.  
+ Right container to compare.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수가 `(right < left)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `(right < left)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_gt.cpp   
@@ -388,7 +388,7 @@ true
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 배열 비교, 보다 크거나 같음  
+ Array comparison, greater than or equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -397,23 +397,23 @@ bool operator>=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 요소의 형식입니다.  
+ The type of an element.  
   
  `N`  
- 배열의 크기입니다.  
+ The size of the array.  
   
  `left`  
- 비교할 왼쪽 컨테이너입니다.  
+ Left container to compare.  
   
  `right`  
- 비교할 오른쪽 컨테이너입니다.  
+ Right container to compare.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수가 `!(left < right)`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left < right)`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_ge.cpp   
@@ -458,7 +458,7 @@ true
 false  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

@@ -1,50 +1,67 @@
 ---
-title: "Windows Vista 공용 컨트롤의 빌드 요구 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "공용 컨트롤(MFC)"
-  - "공용 컨트롤(MFC), 빌드 요구 사항"
+title: Build Requirements for Windows Vista Common Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- common controls (MFC), build requirements
+- common controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Windows Vista 공용 컨트롤의 빌드 요구 사항
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 604e0ae364c8316fea386c1bb7160fc9030c0a67
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-Microsoft 기반 클래스 \(MFC\) 라이브러리는 Windows 공용 컨트롤 버전 6.1을 지원합니다.  공용 컨트롤에 포함 된 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 라이브러리에 포함 되는 [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]에 포합됩니다.  새 클래스 및 기존 클래스를 개선 하는 새로운 메서드 및 메서드를 지 원하는 라이브러리를 제공 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 공용 컨트롤입니다.  응용 프로그램을 빌드할 때 다음 단원에서 설명 하는 컴파일 및 마이그레이션 요구 사항을 따라야 합니다.  
+---
+# <a name="build-requirements-for-windows-vista-common-controls"></a>Build Requirements for Windows Vista Common Controls
+The Microsoft Foundation Class (MFC) library supports Windows Common Controls version 6.1. The common controls are included in [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] and the library is included in the [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. The library provides new methods that enhance existing classes, and new classes and methods that support [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] common controls. When you build your application, you should follow the compilation and migration requirements that are described in the following sections.  
   
-## 컴파일 요구 사항  
+## <a name="compilation-requirements"></a>Compilation Requirements  
   
-### 지원 Version  
- 새 클래스 및 메서드 일부 지원만 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 이상 다른 방법 또한 이전 버전의 운영 체제를 지원 합니다.  메모에는  `Requirements`  각 메서드 항목의 경우 필요한 최소 운영 체제를 지정 합니다. [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)].  
+### <a name="supported-versions"></a>Supported Versions  
+ Some new classes and methods support only [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] and later, while other methods also support earlier operating systems. A note in the `Requirements` section of each method topic specifies when the minimum required operating system is [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)].  
   
- 컴퓨터 실행 되지 않는 경우에 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]를에서 실행 되는 MFC 응용 프로그램을 빌드할 수 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 컴퓨터에 버전 6.1 MFC 헤더 파일을 사용 하는 경우가 있습니다.  그러나 일반적인 제어 용으로 특별히 디자인 된 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 해당 시스템에 대해서만 작동 하 고 이전 운영 체제에서 무시 됩니다.  
+ Even if your computer does not run [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], you can build an MFC application that will run on [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] if you have the version 6.1 MFC header files on your computer. However, common controls that are designed specifically for [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] operate only on that system, and are ignored by earlier operating systems.  
   
-### 지원되는 문자 집합  
- 새 Windows 공용 컨트롤에 ANSI 문자 집합 및 유니코드 문자 집합만 지원합니다.  명령줄에서 응용 프로그램을 빌드하는 경우 모두 다음과 같은 정의 사용 \(\/ D\) 컴파일러 옵션을 기본으로 유니코드 문자 집합이 있습니다:  
+### <a name="supported-character-sets"></a>Supported Character Sets  
+ The new Windows common controls support only the Unicode character set, and not the ANSI character set. If you build your application on the command line, use both of the following define (/D) compiler options to specify Unicode as the underlying character set:  
   
 ```  
 /D_UNICODE /DUNICODE  
 ```  
   
- Visual Studio 통합된 개발 환경 \(IDE\)에서 응용 프로그램을 빌드하는 경우 지정 된  **유니코드 문자 집합** 옵션은 **문자 집합** 속성에는 **일반** 프로젝트 속성의 노드가 있습니다.  
+ If you build your application in the Visual Studio integrated development environment (IDE), specify the **Unicode Character Set** option of the **Character Set** property in the **General** node of the project properties.  
   
- 여러 가지 MFC 메서드의 ANSI 버전 Windows 공용 컨트롤 버전 6.1부터 시작 되지 않습니다.  자세한 내용은 [사용되지 않는 ANSI API](../mfc/deprecated-ansi-apis.md)을 참조하십시오.  
+ The ANSI version of several MFC methods have been deprecated starting with Windows Common Controls version 6.1. For more information, see [Deprecated ANSI APIs](../mfc/deprecated-ansi-apis.md).  
   
-## 데이터 정렬 요구 사항  
- Visual Studio IDE를 사용 하 여 Windows 공용 컨트롤 버전 6.1을 사용 하 여 새 MFC 응용 프로그램 빌드를 IDE는 자동으로 적절 한 매니페스트를 선언 합니다.  그러나 이전 버전의 Visual Studio 기존 MFC 응용 프로그램을 마이그레이션하고 새 공용 컨트롤을 사용 하려는 경우 IDE 제공 하지 않습니다 자동으로 응용 프로그램을 업그레이드 하려면 매니페스트 정보가 있습니다.  대신, stdafx.h 파일에 다음 소스 코드를 수동으로 삽입 해야 합니다.  
+## <a name="migration-requirements"></a>Migration Requirements  
+ If you use the Visual Studio IDE to build a new MFC application that uses Windows Common Controls version 6.1, the IDE automatically declares an appropriate manifest. However, if you migrate an existing MFC application from an earlier version of Visual Studio and you want to use the new common controls, the IDE does not automatically provide manifest information to upgrade your application. Instead, you must manually insert the following source code in your stdafx.h file:  
   
 ```  
 #ifdef UNICODE  
@@ -60,7 +77,9 @@ Microsoft 기반 클래스 \(MFC\) 라이브러리는 Windows 공용 컨트롤 �
 #endif  
 ```  
   
-## 참고 항목  
- [일반 MFC 항목](../mfc/general-mfc-topics.md)   
- [계층 구조 차트](../mfc/hierarchy-chart.md)   
- [사용되지 않는 ANSI API](../mfc/deprecated-ansi-apis.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
+ [Hierarchy Chart](../mfc/hierarchy-chart.md)   
+ [Deprecated ANSI APIs](../mfc/deprecated-ansi-apis.md)
+
+

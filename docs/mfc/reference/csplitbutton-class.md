@@ -1,5 +1,5 @@
 ---
-title: "CSplitButton 클래스 | Microsoft 문서"
+title: CSplitButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSplitButton class
+- CSplitButton [MFC], CSplitButton
+- CSplitButton [MFC], Create
+- CSplitButton [MFC], SetDropDownMenu
+- CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
 caps.latest.revision: 24
 author: mikeblome
@@ -38,51 +41,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b4c038a177d5c501d4baad8eaa208af0e76ce231
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0048cd50f84e2a0707ea851142378337231af770
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csplitbutton-class"></a>CSplitButton 클래스
-`CSplitButton` 클래스 분할 단추 컨트롤을 나타냅니다. 분할 단추 컨트롤은 사용자가 단추의 주요 부분을 클릭할 때 기본 동작을 수행하고 사용자가 단추의 드롭다운 화살표를 클릭하면 드롭다운 메뉴를 표시합니다.  
+# <a name="csplitbutton-class"></a>CSplitButton Class
+The `CSplitButton` class represents a split button control. The split button control performs a default behavior when a user clicks the main part of the button, and displays a drop-down menu when a user clicks the drop-down arrow of the button.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSplitButton : public CButton  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSplitButton::CSplitButton](#csplitbutton)|`CSplitButton` 개체를 생성합니다.|  
+|[CSplitButton::CSplitButton](#csplitbutton)|Constructs a `CSplitButton` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSplitButton::Create](#create)|지정 된 스타일으로 분할 단추 컨트롤을 만들고 현재 연결 `CSplitButton` 개체입니다.|  
-|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|현재는 분할 단추 컨트롤의 드롭다운 화살표를 클릭할 때 표시 되는 드롭다운 메뉴를 설정 합니다.|  
+|[CSplitButton::Create](#create)|Creates a split button control with specified styles and attaches it to the current `CSplitButton` object.|  
+|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Sets the drop-down menu that is displayed when a user clicks the drop-down arrow of the current split button control.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSplitButton::OnDropDown](#ondropdown)|처리는 `BCN_DROPDOWN` 는 현재 분할 단추 컨트롤의 드롭다운 화살표를 클릭 하면 시스템에서 보내는 알림입니다.|  
+|[CSplitButton::OnDropDown](#ondropdown)|Handles the `BCN_DROPDOWN` notification that the system sends when a user clicks the drop-down arrow of the current split button control.|  
   
-## <a name="remarks"></a>주의  
- `CSplitButton` 에서 파생 된 클래스는 [CButton](../../mfc/reference/cbutton-class.md) 클래스입니다. 분할 단추 컨트롤 하는 단추 컨트롤 스타일 `BS_SPLITBUTTON`합니다. 사용자가 드롭다운 화살표를 클릭 하면 사용자 지정 메뉴를 표시 합니다. 자세한 내용은 참조는 `BS_SPLITBUTTON` 및 `BS_DEFSPLITBUTTON` 스타일을 [단추 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775951)합니다.  
+## <a name="remarks"></a>Remarks  
+ The `CSplitButton` class is derived from the [CButton](../../mfc/reference/cbutton-class.md) class. The split button control is a button control whose style is `BS_SPLITBUTTON`. It displays a custom menu when a user clicks the drop-down arrow. For more information, see the `BS_SPLITBUTTON` and `BS_DEFSPLITBUTTON` styles in [Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
- 다음 그림은 pager 컨트롤 및 (1) 분할 단추 컨트롤을 포함 하는 대화 상자를 보여 줍니다. (2) 드롭다운 화살표를 이미 클릭 하 고 (3) 하위 메뉴가 표시 됩니다.  
+ The following figure depicts a dialog box that contains a pager control and a (1) split button control. The (2) drop-down arrow has already been clicked and the (3) submenu is displayed.  
   
- ![Splitbutton 및 pager 컨트롤이 있는 대화 상자입니다. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Dialog with a splitbutton and pager control.](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -93,15 +96,15 @@ class CSplitButton : public CButton
   
  `CSplitButton`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
- 이 클래스에서 지원 됩니다 [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] 이상.  
+ This class is supported in [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] and later.  
   
- 이 클래스에 대 한 추가 요구 사항에 설명 되어 [빌드 요구 사항에 대 한 Windows Vista 공용 컨트롤](../../mfc/build-requirements-for-windows-vista-common-controls.md)합니다.  
+ Additional requirements for this class are described in [Build Requirements for Windows Vista Common Controls](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="create"></a>CSplitButton::Create  
- 지정 된 스타일으로 분할 단추 컨트롤을 만들고 현재 연결 `CSplitButton` 개체입니다.  
+##  <a name="create"></a>  CSplitButton::Create  
+ Creates a split button control with specified styles and attaches it to the current `CSplitButton` object.  
   
 ```  
 virtual BOOL Create(
@@ -111,20 +114,20 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwStyle`|컨트롤에 적용 될 스타일의 비트 조합 (OR)입니다. 자세한 내용은 참조 [단추 스타일](../../mfc/reference/button-styles.md)합니다.|  
-|[in] `rect`|에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 컨트롤의 크기와 위치를 포함 하는 구조입니다.|  
-|[in] `pParentWnd`|에 대 한 null이 아닌 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 개체 컨트롤의 부모 창입니다.|  
-|[in] `nID`|컨트롤의 ID입니다.|  
+|[in] `dwStyle`|A bitwise combination (OR) of styles to be applied to the control. For more information, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control.|  
+|[in] `pParentWnd`|A non-null pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
- `CSplitButton` 개체를 생성합니다. 생성자의 매개 변수는 분할 단추 컨트롤의 드롭다운 화살표를 클릭할 때 표시 되는 하위 메뉴를 지정 합니다.  
+##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
+ Constructs a `CSplitButton` object. The constructor's parameters specify a submenu that is displayed when a user clicks the drop-down arrow of the split button control.  
   
 ```  
 CSplitButton();
@@ -136,19 +139,19 @@ CSplitButton(
 CSplitButton(CMenu* pMenu)  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `nMenuId`|메뉴 표시줄의 리소스 ID입니다.|  
-|[in] `nSubMenuId`|하위 메뉴의 리소스 ID입니다.|  
-|[in] `pMenu`|에 대 한 포인터는 [CMenu](../../mfc/reference/cmenu-class.md) 하위 메뉴를 지정 하는 개체입니다. `CSplitButton` 개체 삭제는 `CMenu` 개체와 연결 된 `HMENU` 때는 `CSplitButton` 개체가 범위를 벗어난 있습니다.|  
+|[in] `nMenuId`|The resource ID of the menu bar.|  
+|[in] `nSubMenuId`|The resource ID of a submenu.|  
+|[in] `pMenu`|A pointer to a [CMenu](../../mfc/reference/cmenu-class.md) object that specifies a submenu. The `CSplitButton` object deletes the `CMenu` object and its associated `HMENU` when the `CSplitButton` object goes out of scope.|  
   
-### <a name="remarks"></a>주의  
- 사용 된 [CSplitButton::Create](#create) 분할 단추 컨트롤을 만들고에 연결 하는 메서드는 `CSplitButton` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [CSplitButton::Create](#create) method to create a split button control and attach it to the `CSplitButton` object.  
   
-##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
- 처리는 `BCN_DROPDOWN` 는 현재 분할 단추 컨트롤의 드롭다운 화살표를 클릭 하면 시스템에서 보내는 알림입니다.  
+##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
+ Handles the `BCN_DROPDOWN` notification that the system sends when a user clicks the drop-down arrow of the current split button control.  
   
 ```  
 afx_msg void OnDropDown(
@@ -156,19 +159,19 @@ afx_msg void OnDropDown(
     LRESULT* pResult);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pNMHDR`|에 대 한 포인터는 [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) 구조에 대 한 정보를 포함 하는 [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) 알림.|  
-|[out] `pResult`|(사용 되지 않습니다) 아무 값도 반환 합니다. 반환 값은 [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) 알림.|  
+|[in] `pNMHDR`|Pointer to an [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) structure that contains information about the [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
+|[out] `pResult`|(Not used; no value is returned.) Return value of the [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
   
-### <a name="remarks"></a>주의  
- 사용자가 분할 단추 컨트롤에 있는 드롭다운 화살표를 클릭 하면 시스템 보냅니다는 `BCN_DROPDOWN` 알림 메시지는 `OnDropDown` 메서드 핸들입니다. 그러나는 `CSplitButton` 개체를 전달 하지 않습니다는 `BCN_DROPDOWN` 분할 단추 컨트롤을 포함 하는 컨트롤에는 알림입니다. 따라서 포함 하는 컨트롤 알림에 대 한 응답으로 사용자 지정 작업을 지원할 수 없습니다.  
+### <a name="remarks"></a>Remarks  
+ When the user clicks the drop-down arrow on a split button control, system sends a `BCN_DROPDOWN` notification message, which the `OnDropDown` method handles. However, the `CSplitButton` object does not forward the `BCN_DROPDOWN` notification to the control that contains the split button control. Consequently, the containing control cannot support a custom action in response to the notification.  
   
- 포함 하는 컨트롤을 지원 하는 사용자 지정 동작을 구현 하려면 사용을 [CButton](../../mfc/reference/cbutton-class.md) 개체의 스타일으로 `BS_SPLITBUTTON` 대신는 `CSplitButton` 개체입니다. 그런 다음에 대 한 처리기를 구현에서 `BCN_DROPDOWN` 에서 알림을 `CButton` 개체입니다. 자세한 내용은 참조 [단추 스타일](../../mfc/reference/button-styles.md)합니다.  
+ To implement a custom action that the containing control supports, use a [CButton](../../mfc/reference/cbutton-class.md) object with a style of `BS_SPLITBUTTON` instead of a `CSplitButton` object. Then implement a handler for the `BCN_DROPDOWN` notification in the `CButton` object. For more information, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
- 분할 단추를 제어 하는 자체 지원 하 여 사용자 지정 동작을 구현 하려면 사용 [리플렉션 메시지](../../mfc/tn062-message-reflection-for-windows-controls.md)합니다. 고유한 클래스를 파생 되는 `CSplitButton` 클래스 및 이름을, 예를 들어 CMySplitButton 합니다. 그런 다음 다음과 같은 메시지 맵을 응용 프로그램에 추가 처리 하는 `BCN_DROPDOWN` 알림:  
+ To implement a custom action that the split button control itself supports, use [message reflection](../../mfc/tn062-message-reflection-for-windows-controls.md). Derive your own class from the `CSplitButton` class and name it, for example, CMySplitButton. Then add the following message map to your application to handle the `BCN_DROPDOWN` notification:  
   
 ```  
 BEGIN_MESSAGE_MAP(CMySplitButton,
@@ -177,8 +180,8 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
- 현재는 분할 단추 컨트롤의 드롭다운 화살표를 클릭할 때 표시 되는 드롭다운 메뉴를 설정 합니다.  
+##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
+ Sets the drop-down menu that is displayed when a user clicks the drop-down arrow of the current split button control.  
   
 ```  
 void SetDropDownMenu(
@@ -188,28 +191,28 @@ void SetDropDownMenu(
 void SetDropDownMenu(CMenu* pMenu);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `nMenuId`|메뉴 표시줄의 리소스 ID입니다.|  
-|[in] `nSubMenuId`|하위 메뉴의 리소스 ID입니다.|  
-|[in] `pMenu`|에 대 한 포인터는 [CMenu](../../mfc/reference/cmenu-class.md) 하위 메뉴를 지정 하는 개체입니다. `CSplitButton` 개체 삭제는 `CMenu` 개체와 연결 된 `HMENU` 때는 `CSplitButton` 개체가 범위를 벗어난 있습니다.|  
+|[in] `nMenuId`|The resource ID of the menu bar.|  
+|[in] `nSubMenuId`|The resource ID of a submenu.|  
+|[in] `pMenu`|Pointer to a [CMenu](../../mfc/reference/cmenu-class.md) object that specifies a submenu. The `CSplitButton` object deletes the `CMenu` object and its associated `HMENU` when the `CSplitButton` object goes out of scope.|  
   
-### <a name="remarks"></a>주의  
- `nMenuId` 매개 변수는 메뉴 모음 항목의 가로 목록 메뉴 표시줄을 식별 합니다. `nSubMenuId` 매개 변수는는 드롭다운 목록에서 메뉴 항목에 연결 된 각 메뉴 모음 항목의 하위 메뉴를 식별 하는 인덱스 번호는&0;부터 시작 합니다. 예를 들어 일반적인 응용 프로그램에 포함 하는 메뉴가 메뉴 모음 항목을 "File" "편집" 및 "Help"입니다. "File" 메뉴 모음 항목에 하위 메뉴가 메뉴 항목이 포함 된 "Open," "닫기" 및 "종료"입니다. 분할 단추 컨트롤의 드롭다운 화살표를 클릭 하면 지정 된 하위 메뉴의 메뉴 모음 하지 컨트롤에 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The `nMenuId` parameter identifies a menu bar, which is a horizontal list of menu bar items. The `nSubMenuId` parameter is a zero-based index number that identifies a submenu, which is the drop-down list of menu items associated with each menu bar item. For example, a typical application has a menu that contains the menu bar items, "File," "Edit," and "Help." The "File" menu bar item has a submenu that contains the menu items, "Open," "Close" and "Exit." When the drop-down arrow of the split-button control is clicked, the control displays the specified submenu, not the menu bar.  
   
- 다음 그림은 pager 컨트롤 및 (1) 분할 단추 컨트롤을 포함 하는 대화 상자를 보여 줍니다. (2) 드롭다운 화살표를 이미 클릭 하 고 (3) 하위 메뉴가 표시 됩니다.  
+ The following figure depicts a dialog box that contains a pager control and a (1) split button control. The (2) drop-down arrow has already been clicked and the (3) submenu is displayed.  
   
- ![Splitbutton 및 pager 컨트롤이 있는 대화 상자입니다. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Dialog with a splitbutton and pager control.](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
-### <a name="example"></a>예제  
- 다음 코드 예제에서 첫 번째 문을 보여 줍니다는 [CSplitButton::SetDropDownMenu](#setdropdownmenu) 메서드. 만든 메뉴는 Visual studio 메뉴 모음 ID 이름이 자동으로 지정 하는 리소스 편집기 `IDR_MENU1`합니다. `nSubMenuId` 매개 변수를&0; 인 메뉴 표시줄의 유일한 하위 메뉴를 가리킵니다.  
+### <a name="example"></a>Example  
+ The first statement in the following code example demonstrates the [CSplitButton::SetDropDownMenu](#setdropdownmenu) method. We created the menu with the Visual Studio resource editor, which automatically named the menu bar ID, `IDR_MENU1`. The `nSubMenuId` parameter, which is zero, refers to the only submenu of the menu bar.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [CSplitButton 클래스](../../mfc/reference/csplitbutton-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CButton 클래스](../../mfc/reference/cbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [CSplitButton Class](../../mfc/reference/csplitbutton-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)
 

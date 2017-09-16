@@ -1,5 +1,5 @@
 ---
-title: "char_traits 구조체 | Microsoft 문서"
+title: char_traits Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iosfwd/std::char_traits
-- char_traits
 - string/std::char_traits::char_type
 - string/std::char_traits::int_type
 - string/std::char_traits::off_type
@@ -55,67 +54,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 558234b6411d3f2d10e84e3befda99084c7ca6d2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e4b0571c6e9ee43fbd4dac0712440dd7bf5103c4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="chartraits-struct"></a>char_traits 구조체
-char_traits 구조체는 문자와 연결된 특성을 설명합니다.  
+# <a name="chartraits-struct"></a>char_traits Struct
+The char_traits struct describes attributes associated with a character.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType>  
 struct char_traits;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 요소 데이터 형식입니다.  
+ The element data type.  
   
-## <a name="remarks"></a>설명  
- 템플릿 구조체는 **CharType** 형식에 대한 다양한 문자 특성을 설명합니다. [basic_ios](../standard-library/basic-ios-class.md)를 비롯한 여러 iostream 템플릿 클래스와 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)은 이 정보를 사용하여 **CharType** 형식의 요소를 조작합니다. 이러한 요소 형식은 명시적 생성 또는 소멸을 요구하지 않아야 합니다. 기본 생성자, 복사 생성자 및 대입 연산자에 예상 의미 체계를 제공해야 합니다. 비트 복사는 할당과 동일한 효과가 있어야 합니다. char_traits 구조체의 멤버 함수는 예외를 발생시킬 수 없습니다.  
+## <a name="remarks"></a>Remarks  
+ The template struct describes various character traits for type **CharType**. The template class [basic_string](../standard-library/basic-string-class.md) as well as several iostream template classes, including [basic_ios](../standard-library/basic-ios-class.md), use this information to manipulate elements of type **CharType**. Such an element type must not require explicit construction or destruction. It must supply a default constructor, a copy constructor, and an assignment operator, with the expected semantics. A bitwise copy must have the same effect as an assignment. None of the member functions of struct char_traits can throw exceptions.  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|문자 형식입니다.|  
-|[int_type](#int_type)|`char_type` 형식의 문자 또는 EOF(파일 끝) 문자를 나타낼 수 있는 정수 형식입니다.|  
-|[off_type](#off_type)|스트림 내의 위치 간 오프셋을 나타낼 수 있는 정수 형식입니다.|  
-|[pos_type](#pos_type)|스트림 내의 위치를 나타낼 수 있는 정수 형식입니다.|  
-|[state_type](#state_type)|스트림 내의 멀티바이트 문자에 대한 변환 상태를 나타내는 형식입니다.|  
+|[char_type](#char_type)|A type of character.|  
+|[int_type](#int_type)|An integer type that can represent a character of type `char_type` or an end-of-file (EOF) character.|  
+|[off_type](#off_type)|An integer type that can represent offsets between positions in a stream.|  
+|[pos_type](#pos_type)|An integer type that can represent positions in a stream.|  
+|[state_type](#state_type)|A type that represents the conversion state in for multibyte characters in a stream.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[assign](#assign)|한 문자 값을 다른 문자 값에 할당합니다.|  
-|[compare](#compare)|두 문자열의 문자를 지정한 개수까지 비교합니다.|  
-|[copy](#copy)|한 문자열에서 다른 문자열로 지정한 개수의 문자를 복사합니다. 더 이상 사용되지 않습니다. 대신 [char_traits::_Copy_s](#copy_s)를 사용합니다.|  
-|[_Copy_s](#copy_s)|한 문자열에서 다른 문자열로 지정한 개수의 문자를 복사합니다.|  
-|[eof](#eof)|EOF(파일 끝) 문자를 반환합니다.|  
-|[eq](#eq)|두 `char_type` 문자가 같은지 테스트합니다.|  
-|[eq_int_type](#eq_int_type)|`int_type`로 표시된 두 문자가 같은지 테스트합니다.|  
-|[find](#find)|문자 범위에서 지정한 문자의 첫 번째 발생을 검색합니다.|  
-|[length](#length)|문자열의 길이를 반환합니다.|  
-|[lt](#lt)|한 문자가 다른 문자보다 작은지 테스트합니다.|  
-|[move](#move)|한 시퀀스에서 겹칠 수 있는 다른 시퀀스로 지정한 개수의 문자를 복사합니다. 더 이상 사용되지 않습니다. 대신 [char_traits::_Move_s](#move_s)를 사용합니다.|  
-|[_Move_s](#move_s)|한 시퀀스에서 겹칠 수 있는 다른 시퀀스로 지정한 개수의 문자를 복사합니다.|  
-|[not_eof](#not_eof)|문자가 EOF(파일 끝) 문자인지 테스트합니다.|  
-|[to_char_type](#to_char_type)|`int_type` 문자를 해당하는 `char_type` 문자로 변환하고 결과를 반환합니다.|  
-|[to_int_type](#to_int_type)|`char_type` 문자를 해당하는 `int_type` 문자로 변환하고 결과를 반환합니다.|  
+|[assign](#assign)|Assigns one character value to another.|  
+|[compare](#compare)|Compares up to a specified number of characters in two strings.|  
+|[copy](#copy)|Copies a specified number of characters from one string to another. Deprecated. Use [char_traits::_Copy_s](#copy_s) instead.|  
+|[_Copy_s](#copy_s)|Copies a specified number of characters from one string to another.|  
+|[eof](#eof)|Returns the end-of-file (EOF) character.|  
+|[eq](#eq)|Tests whether two `char_type` characters are equal.|  
+|[eq_int_type](#eq_int_type)|Tests whether two characters represented as `int_type`s are equal.|  
+|[find](#find)|Searches for the first occurrence of a specified character in a range of characters.|  
+|[length](#length)|Returns the length of a string.|  
+|[lt](#lt)|Tests whether one character is less than another.|  
+|[move](#move)|Copies a specified number of characters in a sequence to another, possible overlapping, sequence. Deprecated. Use [char_traits::_Move_s](#move_s) instead.|  
+|[_Move_s](#move_s)|Copies a specified number of characters in a sequence to another, possible overlapping, sequence.|  
+|[not_eof](#not_eof)|Tests whether a character is the end-of-file (EOF) character.|  
+|[to_char_type](#to_char_type)|Converts an `int_type` character to the corresponding `char_type` character and returns the result.|  
+|[to_int_type](#to_int_type)|Converts a `char_type` character to the corresponding `int_type` character and returns the result.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<string>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<string>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="assign"></a>  char_traits::assign  
- 문자열의 다른 요소 또는 다양한 요소에 하나의 문자 값을 할당합니다.  
+ Assigns one character value to another or to a range of elements in a string.  
   
 ```  
 static void assign(char_type& _CharTo,
@@ -126,23 +125,23 @@ static char_type *assign(char_type* strTo,
     char_type _CharFrom);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  **_** *CharFrom*  
- 값을 할당할 문자입니다.  
+ The character whose value is to be assigned.  
   
  *_CharTo*  
- 문자 값을 할당받을 요소입니다.  
+ The element that is to be assigned the character value.  
   
  * strTo*  
- 초기 요소가 문자 값을 할당받을 문자열 또는 문자 배열입니다.  
+ The string or character array whose initial elements are to be assigned character values.  
   
  `_Num`  
- 값을 할당받을 예정인 요소의 수입니다.  
+ The number of elements that are going to be assigned values.  
   
-### <a name="return-value"></a>반환 값  
- 두 번째 멤버 함수는 첫 번째 `_Num` 요소가 *_CharFrom*의 값을 할당받은 문자열에 대한 포인터를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The second member function returns a pointer to the string whose first `_Num` elements have been assigned values of *_CharFrom*.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_assign.cpp  
@@ -184,20 +183,20 @@ The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 ```  
   
 ##  <a name="char_type"></a>  char_traits::char_type  
- 문자 형식입니다.  
+ A type of character.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-### <a name="example"></a>예제  
-  `char_type`을 선언하고 사용하는 방법에 대한 예제는 [copy](#copy)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [copy](#copy) for an example of how to declare and use `char_type`.  
   
 ##  <a name="compare"></a>  char_traits::compare  
- 두 문자열의 문자를 지정한 개수까지 비교합니다.  
+ Compares up to a specified number of characters in two strings.  
   
 ```  
 static int compare(const char_type* str1,
@@ -205,25 +204,25 @@ static int compare(const char_type* str1,
     size_t _Num);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  * str1*  
- 서로 비교할 두 문자열의 첫 번째입니다.  
+ The first of two strings to be compared to each other.  
   
  * str2*  
- 서로 비교할 두 문자열의 두 번째입니다.  
+ The second of two strings to be compared to each other.  
   
  `_Num`  
- 비교할 문자열에 있는 요소의 수입니다.  
+ The number of elements in the strings to be compared.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 문자열이 두 번째 문자열보다 작은 경우 음수 값, 두 문자열이 같은 경우 0, 첫 번째 문자열이 두 번째 문자열보다 큰 경우 양수 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A negative value if the first string is less than the second string, 0 if the two strings are equal, or a positive value if the first string is greater than the second string.  
   
-### <a name="remarks"></a>설명  
- 요소별로 두 문자열을 비교합니다. 먼저 요소가 서로 같은지 테스트한 후 시퀀스에서 요소 쌍이 같지 않으면 더 작은지 테스트합니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between the strings is made element by element, first testing for equality and then, if a pair of elements in the sequence tests not equal, they are tested for less than.  
   
- 두 문자열이 범위에 대해 같은지 비교하되 하나가 다른 문자열보다 길면 두 문자열 중 짧은 문자열이 더 긴 문자열보다 작습니다.  
+ If two strings compare equal over a range but one is longer than the other, then the shorter of the two is less than the longer one.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_compare.cpp  
@@ -257,9 +256,9 @@ int main() {
 ```  
   
 ##  <a name="copy"></a>  char_traits::copy  
- 한 문자열에서 다른 문자열로 지정한 개수의 문자를 복사합니다.  
+ Copies a specified number of characters from one string to another.  
   
- 이 메서드는 전달된 값이 정확한지 확인하기 위해 호출자를 사용하므로 보안상 위험할 수 있습니다. 대신 [char_traits::_Copy_s](#copy_s)를 사용하는 것이 좋습니다.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct. Consider using [char_traits::_Copy_s](#copy_s) instead.  
   
 ```  
 static char_type *copy(char_type* _To,
@@ -267,23 +266,23 @@ static char_type *copy(char_type* _To,
     size_t _Num);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_To`  
- 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열의 시작 부분에 있는 요소입니다.  
+ The element at the beginning of the string or character array targeted to receive the copied sequence of characters.  
   
  `_From`  
- 복사할 소스 문자열 또는 문자 배열의 시작 부분에 있는 요소입니다.  
+ The element at the beginning of the source string or character array to be copied.  
   
  `_Num`  
- 복사할 요소의 수입니다.  
+ The number of elements to be copied.  
   
-### <a name="return-value"></a>반환 값  
- 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열로 복사되는 첫 번째 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ The first element copied into the string or character array targeted to receive the copied sequence of characters.  
   
-### <a name="remarks"></a>설명  
- 소스 및 대상 문자 시퀀스는 겹치지 않아야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source and destination character sequences must not overlap.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_copy.cpp  
@@ -315,7 +314,7 @@ The result1 = copy ( s1 , s2 , 4 ) is: ABCD-1234-abcd
 ```  
   
 ##  <a name="copy_s"></a>  char_traits::_Copy_s  
- 한 문자열에서 다른 문자열로 지정한 개수의 문자를 복사합니다.  
+ Copies a specified number of characters from one string to another.  
   
 ```  
 static char_type *_Copy_s(
@@ -325,26 +324,26 @@ static char_type *_Copy_s(
     size_t count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dest`  
- 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열입니다.  
+ The string or character array targeted to receive the copied sequence of characters.  
   
  `dest_size`  
- `dest`의 크기입니다. `char_type`이 `char`이면 이 크기는 바이트 단위입니다. `char_type`이 `wchar_t`이면 이 크기는 단어 단위입니다.  
+ The size of `dest`. If `char_type` is `char`, then this size is in bytes. If `char_type` is `wchar_t`, then this size is in words.  
   
  `_From`  
- 복사할 소스 문자열 또는 문자 배열입니다.  
+ The source string or character array to be copied.  
   
  `count`  
- 복사할 요소의 수입니다.  
+ The number of elements to be copied.  
   
-### <a name="return-value"></a>반환 값  
- 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열입니다.  
+### <a name="return-value"></a>Return Value  
+ The string or character array targeted to receive the copied sequence of characters.  
   
-### <a name="remarks"></a>설명  
- 소스 및 대상 문자 시퀀스는 겹치지 않아야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The source and destination character sequences must not overlap.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits__Copy_s.cpp  
@@ -376,21 +375,21 @@ The result1 = _Copy_s(s1, char_traits<char>::length(s1), s2, 4) is: ABCD-1234-ab
 ```  
   
 ##  <a name="eof"></a>  char_traits::eof  
- EOF(파일 끝) 문자를 반환합니다.  
+ Returns the end-of-file (EOF) character.  
   
 ```  
 static int_type eof();
 ```  
   
-### <a name="return-value"></a>반환 값  
- EOF 문자입니다.  
+### <a name="return-value"></a>Return Value  
+ The EOF character.  
   
-### <a name="remarks"></a>설명  
- 파일의 끝을 나타내는 값입니다(예: `EOF` 또는 `WEOF`).  
+### <a name="remarks"></a>Remarks  
+ A value that represents end of file (such as `EOF` or `WEOF`).  
   
- C++ 표준에서는 이 값이 유효한 `char_type` 값에 해당하면 안 됩니다. Visual C++ 컴파일러는 `char` 형식이 아니라 `wchar_t` 형식에 이 제약 조건을 적용합니다. 아래 예제에서는 이 작업을 보여 줍니다.  
+ The C++ standard states that this value must not correspond to a valid `char_type` value. The Visual C++ compiler enforces this constraint for type `char`, but not for type `wchar_t`. The example below demonstrates this.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_eof.cpp  
@@ -424,23 +423,23 @@ The eof marker for char_traits<wchar_t> is: 65535
 ```  
   
 ##  <a name="eq"></a>  char_traits::eq  
- 두 `char_type` 문자가 같은지 테스트합니다.  
+ Tests whether two `char_type` characters are equal.  
   
 ```  
 static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Ch1`  
- 같은지 테스트할 두 문자 중 첫 번째입니다.  
+ The first of two characters to be tested for equality.  
   
  `_Ch2`  
- 같은지 테스트할 두 문자 중 두 번째입니다.  
+ The second of two characters to be tested for equality.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 문자가 두 번째 문자와 같으면 **true**이고, 같지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first character is equal to the second character; otherwise **false**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_eq.cpp  
@@ -481,23 +480,23 @@ The character ch1 is equal to the character ch3.
 ```  
   
 ##  <a name="eq_int_type"></a>  char_traits::eq_int_type  
- `int_type`으로 표시된 두 문자가 같은지 여부를 테스트합니다.  
+ Tests whether two characters represented as `int_type`s are equal or not.  
   
 ```  
 static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Ch1`  
- **int_type**이 같은지 테스트할 두 문자 중 첫 번째입니다.  
+ The first of the two characters to be tested for equality as **int_type**s.  
   
  `_Ch2`  
- `int_type`이 같은지 테스트할 두 문자 중 두 번째입니다.  
+ The second of the two characters to be tested for equality as `int_type`s.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 문자가 두 번째 문자와 같으면 **true**이고, 같지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first character is equal to the second character; otherwise **false**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_eq_int_type.cpp  
@@ -563,7 +562,7 @@ The int_type representation of character ch1
 ```  
   
 ##  <a name="find"></a>  char_traits::find  
- 문자 범위에서 지정한 문자의 첫 번째 발생을 검색합니다.  
+ Searches for the first occurrence of a specified character in a range of characters.  
   
 ```  
 static const char_type* find(const char_type* str,
@@ -571,20 +570,20 @@ static const char_type* find(const char_type* str,
     const char_type& _Ch);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- 검색할 문자열의 첫 번째 문자입니다.  
+ The first character in the string to be searched.  
   
  `_Num`  
- 검색할 범위에서의 위치 수입니다(첫 번째부터 계산).  
+ The number of positions, counting from the first, in the range to be searched.  
   
  `_Ch`  
- 범위에서 검색할 문자입니다.  
+ The character to be searched for in the range.  
   
-### <a name="return-value"></a>반환 값  
- 일치 항목이 발견되는 경우 범위에서 지정된 문자 중 처음 나오는 문자에 대한 포인터입니다. 일치 항목이 발견되지 않으면 Null 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first occurrence of the specified character in the range if a match is found; otherwise, a null pointer.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_find.cpp  
@@ -627,33 +626,33 @@ The result2 of the search is NULL.
 ```  
   
 ##  <a name="int_type"></a>  char_traits::int_type  
- `char_type` 형식의 문자 또는 EOF(파일 끝) 문자를 나타낼 수 있는 정수 형식입니다.  
+ An integer type that can represent a character of type `char_type` or an end-of-file (EOF) character.  
   
 ```  
 typedef long int_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- **CharType** 형식의 값을 `int_type`으로 형식 캐스트한 후 원래 값을 변경하지 않고 **CharType**으로 다시 형식 캐스트할 수 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ It must be possible to type cast a value of type **CharType** to `int_type` then back to **CharType** without altering the original value.  
   
-### <a name="example"></a>예제  
-  `int_type`을 선언하고 사용하는 방법에 대한 예제는 [eq_int_type](#eq_int_type)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [eq_int_type](#eq_int_type) for an example of how to declare and use `int_type`.  
   
 ##  <a name="length"></a>  char_traits::length  
- 문자열의 길이를 반환합니다.  
+ Returns the length of a string.  
   
 ```  
 static size_t length(const char_type* str);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- 길이를 측정할 C 문자열입니다.  
+ The C-string whose length is to be measured.  
   
-### <a name="return-value"></a>반환 값  
- 측정되는 시퀀스의 요소 수입니다(Null 종결자를 포함하지 않음).  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the sequence being measured, not including the null terminator.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_length.cpp  
@@ -680,23 +679,23 @@ The length of C-string str1 is: 5.
 ```  
   
 ##  <a name="lt"></a>  char_traits::lt  
- 한 문자가 다른 문자보다 작은지 테스트합니다.  
+ Tests whether one character is less than another.  
   
 ```  
 static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Ch1`  
- 작은지 테스트할 두 문자 중 첫 번째입니다.  
+ The first of two characters to be tested for less than.  
   
  `_Ch2`  
- 작은지 테스트할 두 문자 중 두 번째입니다.  
+ The second of two characters to be tested for less than.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 문자가 두 번째 문자보다 작으면 **true**이고, 작지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first character is less than the second character; otherwise **false**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_lt.cpp  
@@ -736,9 +735,9 @@ The character ch3 is not less than the character ch2.
 ```  
   
 ##  <a name="move"></a>  char_traits::move  
- 한 시퀀스에서 겹칠 수 있는 다른 시퀀스로 지정한 개수의 문자를 복사합니다.  
+ Copies a specified number of characters in a sequence to another, possibly overlapping sequence.  
   
- 이 메서드는 전달된 값이 정확한지 확인하기 위해 호출자를 사용하므로 보안상 위험할 수 있습니다. 대신 [char_traits::_Move_s](#move_s)를 사용하는 것이 좋습니다.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct. Consider using [char_traits::_Move_s](#move_s) instead.  
   
 ```  
 static char_type *move(char_type* _To,
@@ -746,23 +745,23 @@ static char_type *move(char_type* _To,
     size_t _Num);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_To`  
- 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열의 시작 부분에 있는 요소입니다.  
+ The element at the beginning of the string or character array targeted to receive the copied sequence of characters.  
   
  `_From`  
- 복사할 소스 문자열 또는 문자 배열의 시작 부분에 있는 요소입니다.  
+ The element at the beginning of the source string or character array to be copied.  
   
  `_Num`  
- 소스 문자열에서 복사할 요소의 수입니다.  
+ The number of elements to be copied from the source string.  
   
-### <a name="return-value"></a>반환 값  
- 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열로 복사되는 `_To`의 첫 번째 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ The first element `_To` copied into the string or character array targeted to receive the copied sequence of characters.  
   
-### <a name="remarks"></a>설명  
- 소스 및 대상이 겹칠 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The source and destination may overlap.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_move.cpp  
@@ -809,7 +808,7 @@ The result2 = move ( sToFrom2 , findc , 8 ) is: cd-1234-4-ABCD
 ```  
   
 ##  <a name="move_s"></a>  char_traits::_Move_s  
- 한 시퀀스에서 겹칠 수 있는 다른 시퀀스로 지정한 개수의 문자를 복사합니다.  
+ Copies a specified number of characters in a sequence to another, possibly overlapping sequence.  
   
 ```  
 static char_type *_Move_s(
@@ -819,26 +818,26 @@ static char_type *_Move_s(
     size_t count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dest`  
- 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열의 시작 부분에 있는 요소입니다.  
+ The element at the beginning of the string or character array targeted to receive the copied sequence of characters.  
   
  `dest_size`  
- `dest`의 크기입니다. `char_type`이 `char`이면 이 크기는 바이트 단위입니다. `char_type`이 `wchar_t`이면 이 크기는 단어 단위입니다.  
+ The size of `dest`. If `char_type` is `char`, then this is in bytes. If `char_type` is `wchar_t`, then this is in words.  
   
  `_From`  
- 복사할 소스 문자열 또는 문자 배열의 시작 부분에 있는 요소입니다.  
+ The element at the beginning of the source string or character array to be copied.  
   
  `count`  
- 소스 문자열에서 복사할 요소의 수입니다.  
+ The number of elements to be copied from the source string.  
   
-### <a name="return-value"></a>반환 값  
- 복사된 문자 시퀀스를 수신하도록 지정된 문자열 또는 문자 배열로 복사되는 `dest`의 첫 번째 요소입니다.  
+### <a name="return-value"></a>Return Value  
+ The first element `dest` copied into the string or character array targeted to receive the copied sequence of characters.  
   
-### <a name="remarks"></a>설명  
- 소스 및 대상이 겹칠 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The source and destination may overlap.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits__Move_s.cpp  
@@ -885,22 +884,22 @@ The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) i
 ```  
   
 ##  <a name="not_eof"></a>  char_traits::not_eof  
- 문자가 EOF(파일 끝) 문자인지 아닌지 테스트합니다.  
+ Tests whether a character is not the end-of-file (EOF) character or is the EOF.  
   
 ```  
 static int_type not_eof(const int_type& _Ch);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- EOF 문자인지 여부를 테스트할 `int_type`으로 표시된 문자입니다.  
+ The character represented as an `int_type` to be tested for whether it is the EOF character or not.  
   
-### <a name="return-value"></a>반환 값  
- 문자의 **int_type**이 EOF 문자의 int_type과 같지 않은 경우 테스트한 문자의 `int_type` 표현입니다.  
+### <a name="return-value"></a>Return Value  
+ The `int_type` representation of the character tested, if the **int_type** of the character is not equal to that of the EOF character.  
   
- 문자 `int_type` 값이 EOF `int_type` 값과 같으면 **false**입니다.  
+ If the character `int_type` value is equal to the EOF `int_type` value, then **false**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_not_eof.cpp  
@@ -954,63 +953,63 @@ The eofTest2 indicates int2 is an EOF character.
 ```  
   
 ##  <a name="off_type"></a>  char_traits::off_type  
- 스트림 내의 위치 간 오프셋을 나타낼 수 있는 정수 형식입니다.  
+ An integer type that can represent offsets between positions in a stream.  
   
 ```  
 typedef streamoff off_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 다양한 스트림 위치 지정 작업과 관련된 바이트 오프셋을 저장할 수 있는 개체를 설명하는 부호 있는 정수입니다. 일반적으로 이 형식은 [streamoff](../standard-library/ios-typedefs.md#streamoff)의 동의어이며, 기본적으로 해당 형식과 동일한 속성을 가집니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a signed integer that describes an object that can store a byte offset involved in various stream positioning operations. It is typically a synonym for [streamoff](../standard-library/ios-typedefs.md#streamoff), but it has essentially the same properties as that type.  
   
 ##  <a name="pos_type"></a>  char_traits::pos_type  
- 스트림 내의 위치를 나타낼 수 있는 정수 형식입니다.  
+ An integer type that can represent positions in a stream.  
   
 ```  
 typedef streampos pos_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 스트림 내의 임의 파일 위치 표시기를 복원하는 데 필요한 모든 정보를 저장할 수 있는 개체를 설명합니다. 일반적으로 이 형식은 [streampos](../standard-library/ios-typedefs.md#streampos)의 동의어이며, 어떤 경우에든 기본적으로 해당 형식과 동일한 속성을 가집니다.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can store all the information needed to restore an arbitrary file-position indicator within a stream. It is typically a synonym for [streampos](../standard-library/ios-typedefs.md#streampos), but in any case it has essentially the same properties as that type.  
   
 ##  <a name="state_type"></a>  char_traits::state_type  
- 스트림 내 멀티바이트 문자에 대한 변환 상태를 나타내는 형식입니다.  
+ A type that represents the conversion state for multibyte characters in a stream.  
   
 ```  
 typedef implementation-defined state_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 형식은 변환 상태를 나타낼 수 있는 개체에 대해 설명합니다. 일반적으로 이 형식은 `mbstate_t`의 동의어이며, 어떤 경우에든 기본적으로 해당 형식과 동일한 속성을 가집니다.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can represent a conversion state. It is typically a synonym for `mbstate_t`, but in any case it has essentially the same properties as that type.  
   
 ##  <a name="to_char_type"></a>  char_traits::to_char_type  
- `int_type` 문자를 해당하는 `char_type` 문자로 변환하고 결과를 반환합니다.  
+ Converts an `int_type` character to the corresponding `char_type` character and returns the result.  
   
 ```  
 static char_type to_char_type(const int_type& _Ch);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- `char_type`으로 나타낼 `int_type` 문자입니다.  
+ The `int_type` character to be represented as a `char_type`.  
   
-### <a name="return-value"></a>반환 값  
- `int_type` 문자에 해당하는 `char_type` 문자입니다.  
+### <a name="return-value"></a>Return Value  
+ The `char_type` character corresponding to the `int_type` character.  
   
- 지정되지 않은 결과를 생성하는 등 표현할 수 없는 `_Ch` 값입니다.  
+ A value of `_Ch` that cannot be represented as such yields an unspecified result.  
   
-### <a name="remarks"></a>설명  
- 변환 작업 [to_int_type](#to_int_type) 및 `to_char_type`은 서로 역수이므로 다음이 성립합니다.  
+### <a name="remarks"></a>Remarks  
+ The conversion operations [to_int_type](#to_int_type) and `to_char_type` are inverse to each other, so that:  
   
  `to_int_type` ( `to_char_type` ( *x* ) ) == *x*  
   
- 위의 식은 임의의 `int_type` *x*에 대해 적용되고,  
+ for any `int_type` *x* and  
   
  `to_char_type` ( `to_int_type` ( *x* ) ) == *x*  
   
- 위의 식은 임의의 `char_type` *x*에 대해 적용됩니다.  
+ for any `char_type` *x*.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_to_char_type.cpp  
@@ -1086,31 +1085,31 @@ The recovered char_type of ch2 is equal to the original ch2.
 ```  
   
 ##  <a name="to_int_type"></a>  char_traits::to_int_type  
- `char_type` 문자를 해당하는 `int_type` 문자로 변환하고 결과를 반환합니다.  
+ Converts a `char_type` character to the corresponding `int_type` character and returns the result.  
   
 ```  
 static int_type to_int_type(const char_type& _Ch);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- `int_type`으로 나타낼 `char_type` 문자입니다.  
+ The `char_type` character to be represented as an `int_type`.  
   
-### <a name="return-value"></a>반환 값  
- `char_type` 문자에 해당하는 `int_type` 문자입니다.  
+### <a name="return-value"></a>Return Value  
+ The `int_type` character corresponding to the `char_type` character.  
   
-### <a name="remarks"></a>설명  
- 변환 작업 `to_int_type` 및 [to_char_type](#to_char_type)은 서로 역수이므로 다음이 성립합니다.  
+### <a name="remarks"></a>Remarks  
+ The conversion operations `to_int_type` and [to_char_type](#to_char_type) are inverse to each other, so that:  
   
  `to_int_type` ( `to_char_type` ( *x* ) ) == *x*  
   
- 위의 식은 임의의 `int_type` *x*에 대해 적용되고,  
+ for any `int_type` *x*, and  
   
  `to_char_type` ( `to_int_type` ( *x* ) ) == *x*  
   
- 위의 식은 임의의 `char_type` *x*에 대해 적용됩니다.  
+ for any `char_type` *x*.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_to_int_type.cpp  
@@ -1184,7 +1183,7 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "common_type 클래스 | Microsoft 문서"
+title: common_type Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- common_type
 - type_traits/std::common_type
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 9166035a7de5414f23149354f0c8fb658f4a30fe
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: de91723a1957090d9df279cc1ad4788bdd20b696
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="commontype-class"></a>common_type 클래스
-여러 형식의 공용 형식을 결정합니다.  
+# <a name="commontype-class"></a>common_type Class
+Determines the common type of one or more types.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class... T>  
@@ -68,14 +67,14 @@ struct common_type<T, U, V...> {
 };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
- [완전한 형식](../c-language/incomplete-types.md)이거나 void인 형식 목록입니다.  
+#### <a name="parameters"></a>Parameters  
+ List of types that are either [complete types](../c-language/incomplete-types.md) or void.  
   
-## <a name="remarks"></a>설명  
- `type` 멤버는 매개 변수 목록의 모든 형식을 변환할 수 있는 공용 형식입니다.  
+## <a name="remarks"></a>Remarks  
+ The `type` member is the common type to which all types in the parameter list can be converted.  
   
-## <a name="example"></a>예제  
- 다음 프로그램에서는 몇 가지 적절한 사용 시나리오를 보여 주고 결과를 테스트합니다.  
+## <a name="example"></a>Example  
+ The following program demonstrates some correct usage scenarios and tests for results.  
   
 ```cpp  
 // Compile using cl.exe /EHsc  
@@ -116,7 +115,7 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>출력  
+## <a name="output"></a>Output  
   
 ```
 Test for typedefs of common_type int
@@ -138,12 +137,12 @@ ModifiedIntType: false
 ClassType: true
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

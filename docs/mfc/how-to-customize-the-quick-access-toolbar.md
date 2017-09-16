@@ -1,63 +1,82 @@
 ---
-title: "방법: 빠른 실행 도구 모음 사용자 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "빠른 실행 도구 모음, 사용자 지정"
+title: 'How to: Customize the Quick Access Toolbar | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 방법: 빠른 실행 도구 모음 사용자 지정
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1b26489b5f24649dabba5034ec8814ab9ea163ce
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-빠른 액세스 도구 모음 \(QAT\)은 응용 프로그램 단추 옆에 있는 또는 범주 탭에서 하나 표시 되는 명령 집합이 포함된 사용자 지정 가능한 도구 모음입니다.  다음 그림은 일반적인 빠른 실행 도구 모음을 보여줍니다.  
+---
+# <a name="how-to-customize-the-quick-access-toolbar"></a>How to: Customize the Quick Access Toolbar
+The Quick Access Toolbar (QAT) is a customizable toolbar that contains a set of commands that are either displayed next to the Application button or under the category tabs. The following illustration shows a typical Quick Access Toolbar.  
   
- ![MFC 리본 빠른 실행 도구 모음](../mfc/media/quick_access_toolbar.png "Quick\_Access\_Toolbar")  
+ ![MFC Ribbon Quick Access Toolbar](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")  
   
- 빠른 실행 도구 모음을 사용자 지정 하려면  **속성** 창에서 열고, 해당 명령을 수정한 뒤 리본 컨트롤 미리 보기를 합니다.  
+ To customize the Quick Access Toolbar, open it in the **Properties** window, modify its commands, and then preview the ribbon control.  
   
-### 속성 창에서 빠른 실행 도구 모음을 열려면  
+### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>To open the Quick Access Toolbar in the Properties window  
   
-1.  Visual Studio에서  **보기** 메뉴에서 **리소스 뷰**를 클릭합니다.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  **리소스 뷰**에서, 디자인 화면에 표시 하려면 리본 메뉴 리소스를 두 번 클릭합니다.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-3.  디자인 화면에서 빠른 실행 도구 모음 메뉴를 마우스 오른쪽 단추로 클릭 한 다음  **속성이**을 클릭합니다.  
+3.  On design surface, right-click the Quick Access Toolbar menu and then click **Properties**.  
   
-## 빠른 실행 도구 모음 속성  
- 다음 표에서 빠른 실행 도구 모음의 속성을 정의합니다.  
+## <a name="quick-access-toolbar-properties"></a>Quick Access Toolbar Properties  
+ The following table defines the properties of the Quick Access Toolbar.  
   
-|Property|정의|  
-|--------------|--------|  
-|QAT 위치|응용 프로그램이 시작 될 때 빠른 실행 도구 모음 위치를 지정합니다.  위치는 **위에** 또는  **아래** 리본 컨트롤일 수 있습니다.|  
-|QAT 항목|빠른 실행 도구 모음에 사용할 수 있는 명령을 지정합니다.|  
+|Property|Definition|  
+|--------------|----------------|  
+|QAT Position|Specifies the position of the Quick Access Toolbar when the application starts. The position can be either **Above** or **Below** the ribbon control.|  
+|QAT Items|Specifies the commands that are available for the Quick Access Toolbar.|  
   
-#### 빠른 실행 도구 모음에서 명령을 추가 하거나 제거하려면  
+#### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>To add or remove commands on the Quick Access Toolbar  
   
-1.  **속성** 창에서 **QAT Items**을 클릭하고 줄임표**...** 단추를 클릭합니다.  
+1.  In the **Properties** window, click **QAT Items**, and then click the ellipsis button **(...)**.  
   
-2.  **QAT 항목 편집기** 대화 상자에서 **추가** 및  **제거** 버튼을 사용하여  단추를 빠른 실행 도구 모음에 있는 명령의 목록을 수정할 수 있습니다.  
+2.  In the **QAT Items Editor** dialog box, use the **Add** and **Remove** buttons to modify the list of commands on the Quick Access Toolbar.  
   
-3.  빠른 실행 도구 모음과 빠른 실행 도구 모음 메뉴에 나타나는 명령을 원한다면 명령 옆에 있는 상자를 선택합니다.  메뉴에만 표시하는 명령을 원한다면 상자 선택을 취소합니다.  
+3.  If you want a command to appear on both the Quick Access Toolbar and the Quick Access Toolbar menu, select the box next to the command. If you want the command to appear only on the menu, clear the box.  
   
-## 리본 메뉴 미리보기  
- 디자인 화면에 빠른 실행 도구 모음 명령이 표시되지 않습니다.  그들을 보기 위해서는 리본 메뉴의 미리보기 또는 응용 프로그램을 실행합니다.  
+## <a name="previewing-the-ribbon"></a>Previewing the Ribbon  
+ Quick Access Toolbar commands do not appear on the design surface. To view them, you must either preview the ribbon or run the application.  
   
-#### 리본 컨트롤 미리보기  
+#### <a name="to-preview-the-ribbon-control"></a>To preview the ribbon control  
   
--   **Ribbon 편집기 도구 모음**의 **Ribbon 테스트** 단추를 클릭합니다.  
+-   On the **Ribbon Editor Toolbar**, click **Test Ribbon**.  
   
-## 참고 항목  
- [리본 디자이너\(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

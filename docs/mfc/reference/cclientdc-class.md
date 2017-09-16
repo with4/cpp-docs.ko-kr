@@ -1,5 +1,5 @@
 ---
-title: "CClientDC 클래스 | Microsoft 문서"
+title: CClientDC Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,10 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CClientDC class
-- device contexts, client area
-- client-area device context
-- CDC class, device contexts for client areas
+- CClientDC [MFC], CClientDC
+- CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
 caps.latest.revision: 22
 author: mikeblome
@@ -39,86 +37,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 619bed4d31994bde8464ad710e9f050d6ba0696a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d3948274f1862de8f5cc8191140940ed97cdb02c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cclientdc-class"></a>CClientDC 클래스
-Windows 함수 호출을 맡고 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) 생성 시 및 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) 소멸 시.  
+# <a name="cclientdc-class"></a>CClientDC Class
+Takes care of calling the Windows functions [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) at construction time and [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) at destruction time.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CClientDC : public CDC  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CClientDC::CClientDC](#cclientdc)|생성 된 `CClientDC` 에 연결 된 개체는 `CWnd`합니다.|  
+|[CClientDC::CClientDC](#cclientdc)|Constructs a `CClientDC` object connected to the `CWnd`.|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|`HWND` 이 창의 `CClientDC` 유효 합니다.|  
+|[CClientDC::m_hWnd](#m_hwnd)|The `HWND` of the window for which this `CClientDC` is valid.|  
   
-## <a name="remarks"></a>주의  
- 즉, 연결 된 장치 컨텍스트는 `CClientDC` 개체는 창의 클라이언트 영역입니다.  
+## <a name="remarks"></a>Remarks  
+ This means that the device context associated with a `CClientDC` object is the client area of a window.  
   
- 대 한 자세한 내용은 `CClientDC`, 참조 [장치 컨텍스트](../../mfc/device-contexts.md)합니다.  
+ For more information on `CClientDC`, see [Device Contexts](../../mfc/device-contexts.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
  `CClientDC`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cclientdc"></a>CClientDC::CClientDC  
- 생성 된 `CClientDC` 의 클라이언트 영역에 액세스 하는 개체는 [CWnd](../../mfc/reference/cwnd-class.md) 가리키는 `pWnd`합니다.  
+##  <a name="cclientdc"></a>  CClientDC::CClientDC  
+ Constructs a `CClientDC` object that accesses the client area of the [CWnd](../../mfc/reference/cwnd-class.md) pointed to by `pWnd`.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 창 디바이스 컨텍스트 개체에 액세스 하는 클라이언트 영역입니다.  
+ The window whose client area the device context object will access.  
   
-### <a name="remarks"></a>주의  
- Windows 함수를 호출 하는 생성자 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)합니다.  
+### <a name="remarks"></a>Remarks  
+ The constructor calls the Windows function [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- 예외 (형식의 `CResourceException`) 하는 경우 throw 되는 Windows `GetDC` 호출이 실패 합니다. 장치 컨텍스트에 하지 못할 경우 Windows에 이미 할당 된 모든 사용 가능한 장치 컨텍스트. 응용 프로그램은 Windows 아래에서 언제 든 지 사용할 수 있는&5; 개의 일반적인 디스플레이 컨텍스트를 위한 경쟁 합니다.  
+ An exception (of type `CResourceException`) is thrown if the Windows `GetDC` call fails. A device context may not be available if Windows has already allocated all of its available device contexts. Your application competes for the five common display contexts available at any given time under Windows.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocView #&42;](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CClientDC::m_hWnd  
- `HWND` 의 `CWnd` 포인터를 생성 하는 데는 `CClientDC` 개체입니다.  
+##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
+ The `HWND` of the `CWnd` pointer used to construct the `CClientDC` object.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-### <a name="remarks"></a>주의  
- `m_hWnd`보호 된 변수가입니다.  
+### <a name="remarks"></a>Remarks  
+ `m_hWnd` is a protected variable.  
   
-### <a name="example"></a>예제  
-  예를 참조 [CClientDC::CClientDC](#cclientdc)합니다.  
+### <a name="example"></a>Example  
+  See the example for [CClientDC::CClientDC](#cclientdc).  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 MDI](../../visual-cpp-samples.md)   
- [CDC 클래스](../../mfc/reference/cdc-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CDC 클래스](../../mfc/reference/cdc-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDI](../../visual-cpp-samples.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)
 

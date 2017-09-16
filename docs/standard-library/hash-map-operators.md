@@ -1,23 +1,27 @@
 ---
-title: "&lt;hash_map&gt; 연산자 | Microsoft 문서"
+title: '&lt;hash_map&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- hash_map/std::operator!=
+- hash_map/std::operator==
+dev_langs:
+- C++
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 7d47da5bcdb614e5eaf43fbabbe836226e3f907b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 11e3f989709f34b43ec7c84601c157a7e9b0d163
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; 연산자
+# <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; operators
 |||  
 |-|-|  
 |[operator!=](#op_neq)|[operator!=](#op_neq)|
@@ -25,30 +29,30 @@ ms.lasthandoff: 04/29/2017
 ##  <a name="op_neq"></a>  operator!=  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_map Class](../standard-library/unordered-map-class.md).  
   
- 연산자의 좌변에 있는 hash_map 개체가 우변에 있는 hash_map 개체와 같지 않은지 테스트합니다.  
+ Tests if the hash_map object on the left side of the operator is not equal to the hash_map object on the right side.  
   
 ```  
 bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `hash_map` 형식의 개체입니다.  
+ An object of type `hash_map`.  
   
  `right`  
- `hash_map` 형식의 개체입니다.  
+ An object of type `hash_map`.  
   
-### <a name="return-value"></a>반환 값  
- hash_map이 같지 않으면 **true**이고, hash_map이 같으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_maps are not equal; **false** if hash_maps are equal.  
   
-### <a name="remarks"></a>설명  
- hash_map 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 hash_map은 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_map objects is based on a pairwise comparison of their elements. Two hash_maps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- 멤버는 [< hash_map >](../standard-library/hash-map.md) 및 [< hash_set >](../standard-library/hash-set.md) 헤더 파일에 [ stdext Namespace](../standard-library/stdext-namespace.md)합니다.  
+ Members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files in the [ stdext Namespace](../standard-library/stdext-namespace.md).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_map_op_ne.cpp  
@@ -91,28 +95,28 @@ The hash_maps hm1 and hm3 are equal.
 ##  <a name="op_eq_eq"></a>  operator== 
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](../standard-library/unordered-map-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_map Class](../standard-library/unordered-map-class.md).  
   
- 연산자의 좌변에 있는 hash_map 개체가 우변에 있는 hash_map 개체와 같은지 테스트합니다.  
+ Tests if the hash_map object on the left side of the operator is equal to the hash_map object on the right side.  
   
 ```  
 bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `hash_map` 형식의 개체입니다.  
+ An object of type `hash_map`.  
   
  `right`  
- `hash_map` 형식의 개체입니다.  
+ An object of type `hash_map`.  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 hash_map이 연산자 우변의 hash_map과 같으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_map on the left side of the operator is equal to the hash_map on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- hash_map 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 hash_map은 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_map objects is based on a pairwise comparison of their elements. Two hash_maps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
     
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_map_op_eq.cpp  
@@ -155,28 +159,28 @@ The hash_maps hm1 and hm3 are equal.
 ##  <a name="op_neq"></a>  operator!=  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 연산자의 좌변에 있는 hash_multimap 개체가 우변에 있는 hash_multimap 개체와 같지 않은지 테스트합니다.  
+ Tests if the hash_multimap object on the left side of the operator is not equal to the hash_multimap object on the right side.  
   
 ```  
 bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const hash_multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `hash_multimap` 형식의 개체입니다.  
+ An object of type `hash_multimap`.  
   
  `right`  
- `hash_multimap` 형식의 개체입니다.  
+ An object of type `hash_multimap`.  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap이 같지 않으면 **true**이고, hash_multimap이 같으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multimaps are not equal; **false** if hash_multimaps are equal.  
   
-### <a name="remarks"></a>설명  
- hash_multimap 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 hash_multimap은 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_multimap objects is based on a pairwise comparison of their elements. Two hash_multimaps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
    
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_op_ne.cpp  
@@ -219,28 +223,28 @@ The hash_multimaps hm1 and hm3 are equal.
 ##  <a name="op_eq_eq"></a>  operator==  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 연산자의 좌변에 있는 hash_multimap 개체가 우변에 있는 hash_multimap 개체와 같은지 테스트합니다.  
+ Tests if the hash_multimap object on the left side of the operator is equal to the hash_multimap object on the right side.  
   
 ```  
 bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const hash_multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- `hash_multimap` 형식의 개체입니다.  
+ An object of type `hash_multimap`.  
   
  `right`  
- `hash_multimap` 형식의 개체입니다.  
+ An object of type `hash_multimap`.  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 hash_multimap이 연산자 우변의 hash_multimap과 같으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multimap on the left side of the operator is equal to the hash_multimap on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- hash_multimap 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 hash_multimap은 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_multimap objects is based on a pairwise comparison of their elements. Two hash_multimaps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_op_eq.cpp  
@@ -280,7 +284,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<hash_map>](../standard-library/hash-map.md)
 
 

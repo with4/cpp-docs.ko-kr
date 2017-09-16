@@ -1,5 +1,5 @@
 ---
-title: "COleDispatchException 클래스 | Microsoft 문서"
+title: COleDispatchException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,10 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleDispatchException class
-- Automation, exceptions
-- exceptions, OLE
-- OLE exceptions, to IDispatch interface
+- COleDispatchException [MFC], m_dwHelpContext
+- COleDispatchException [MFC], m_strDescription
+- COleDispatchException [MFC], m_strHelpFile
+- COleDispatchException [MFC], m_strSource
+- COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
 caps.latest.revision: 22
 author: mikeblome
@@ -42,108 +43,108 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0071e57b6c8f6bec73712186e8ff8baa9bfcc165
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e462a1b0e3808f6077df7c8a643533471b9af7b3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledispatchexception-class"></a>COleDispatchException 클래스
-OLE 자동화의 핵심인 OLE `IDispatch` 인터페이스에만 해당하는 예외를 처리합니다.  
+# <a name="coledispatchexception-class"></a>COleDispatchException Class
+Handles exceptions specific to the OLE `IDispatch` interface, which is a key part of OLE automation.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDispatchException : public CException  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|오류에 대 한 도움말 컨텍스트입니다.|  
-|[COleDispatchException::m_strDescription](#m_strdescription)|일반 텍스트 오류 설명입니다.|  
-|[COleDispatchException::m_strHelpFile](#m_strhelpfile)|도움말에 사용할 파일을 `m_dwHelpContext`합니다.|  
-|[COleDispatchException::m_strSource](#m_strsource)|예외를 생성 하는 응용 프로그램입니다.|  
-|[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-특정 오류 코드입니다.|  
+|[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|Help context for error.|  
+|[COleDispatchException::m_strDescription](#m_strdescription)|Verbal error description.|  
+|[COleDispatchException::m_strHelpFile](#m_strhelpfile)|Help file to use with `m_dwHelpContext`.|  
+|[COleDispatchException::m_strSource](#m_strsource)|Application that generated the exception.|  
+|[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-specific error code.|  
   
-## <a name="remarks"></a>주의  
- 같은 다른 예외 클래스에서 파생 되는 `CException` 기본 클래스 `COleDispatchException` 와 함께 사용할 수는 **THROW**, `THROW_LAST`, **시도**, **CATCH**, `AND_CATCH`, 및 `END_CATCH` 매크로입니다.  
+## <a name="remarks"></a>Remarks  
+ Like the other exception classes derived from the `CException` base class, `COleDispatchException` can be used with the **THROW**, `THROW_LAST`, **TRY**, **CATCH**, `AND_CATCH`, and `END_CATCH` macros.  
   
- 일반적으로 호출 해야 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) 만들고 throw 하는 `COleDispatchException` 개체입니다.  
+ In general, you should call [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) to create and throw a `COleDispatchException` object.  
   
- 예외에 대 한 자세한 내용은 문서를 참조 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md) 및 [예외: OLE 예외](../../mfc/exceptions-ole-exceptions.md)합니다.  
+ For more information on exceptions, see the articles [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md) and [Exceptions: OLE Exceptions](../../mfc/exceptions-ole-exceptions.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `COleDispatchException`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdisp.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
   
-##  <a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
- 응용 프로그램의 도움말에서 도움말 컨텍스트를 식별 (합니다. HLP) 파일입니다.  
+##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext  
+ Identifies a help context in your application's help (.HLP) file.  
   
 ```  
 DWORD m_dwHelpContext;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버는 해당 함수에 의해 설정 되어 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) 때 예외가 throw 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member is set by the function [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) when an exception is thrown.  
   
-### <a name="example"></a>예제  
-  예를 참조 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
+### <a name="example"></a>Example  
+  See the example for [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
-##  <a name="m_strdescription"></a>COleDispatchException::m_strDescription  
- "디스크가 꽉 찼습니다." 등의 일반 언어로 된 오류 설명을 포함합니다.  
+##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription  
+ Contains a verbal error description, such as "Disk full."  
   
 ```  
 CString m_strDescription;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버는 해당 함수에 의해 설정 되어 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) 때 예외가 throw 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member is set by the function [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) when an exception is thrown.  
   
-### <a name="example"></a>예제  
-  예를 참조 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
+### <a name="example"></a>Example  
+  See the example for [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
-##  <a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
- 프레임 워크는 응용 프로그램의 도움말 파일의 이름으로이 문자열을 채웁니다.  
+##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile  
+ The framework fills in this string with the name of the application's help file.  
   
 ```  
 CString m_strHelpFile;  
 ```  
   
-##  <a name="m_strsource"></a>COleDispatchException::m_strSource  
- 프레임 워크 예외를 생성 하는 응용 프로그램의 이름으로이 문자열을 채웁니다.  
+##  <a name="m_strsource"></a>  COleDispatchException::m_strSource  
+ The framework fills in this string with the name of the application that generated the exception.  
   
 ```  
 CString m_strSource;  
 ```  
   
-### <a name="example"></a>예제  
-  예를 참조 [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
+### <a name="example"></a>Example  
+  See the example for [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
-##  <a name="m_wcode"></a>COleDispatchException::m_wCode  
- 응용 프로그램에 특정 오류 코드를 포함 합니다.  
+##  <a name="m_wcode"></a>  COleDispatchException::m_wCode  
+ Contains an error code specific to your application.  
   
 ```  
 WORD m_wCode;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버는 해당 함수에 의해 설정 되어 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) 때 예외가 throw 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This member is set by the function [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) when an exception is thrown.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 CALCDRIV](../../visual-cpp-samples.md)   
- [CException 클래스](../../mfc/reference/cexception-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleDispatchDriver 클래스](../../mfc/reference/coledispatchdriver-class.md)   
- [COleException 클래스](../../mfc/reference/coleexception-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CALCDRIV](../../visual-cpp-samples.md)   
+ [CException Class](../../mfc/reference/cexception-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDispatchDriver Class](../../mfc/reference/coledispatchdriver-class.md)   
+ [COleException Class](../../mfc/reference/coleexception-class.md)
 

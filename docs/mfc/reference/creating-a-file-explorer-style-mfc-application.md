@@ -1,64 +1,83 @@
 ---
-title: "파일 탐색기 스타일 MFC 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfcexplorer.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "브라우저, 탐색기 스타일 응용 프로그램"
-  - "탐색기 스타일 응용 프로그램, 만들기"
-  - "MFC 응용 프로그램, Windows 탐색기 스타일"
+title: Creating a File Explorer-Style MFC Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfcexplorer.project
+dev_langs:
+- C++
+helpviewer_keywords:
+- browsers [MFC], Explorer-style applications
+- MFC applications [MFC], Windows Explorer-style
+- Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 파일 탐색기 스타일 MFC 응용 프로그램 만들기
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1ec48d8090c06c23670e21ef5fbdaa37428d7851
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-Many Windows system applications use the user interface \(UI\) for File Explorer.  When you start File Explorer, for example, you see an application with a vertical splitter bar dividing the client area.  클라이언트 영역의 왼쪽 창에는 탐색 및 검색 기능이 제공되고 오른쪽 창에는 왼쪽 창에서 선택한 항목과 관련된 세부 사항이 표시됩니다.  사용자가 왼쪽 창에서 항목을 클릭하면 오른쪽 창의 내용이 다시 채워집니다.  MDI 응용 프로그램에서는 **보기** 메뉴의 명령을 사용하여 오른쪽 창에 표시되는 세부 사항의 정도를 변경할 수 있습니다. SDI 또는 다중 최상위 문서 응용 프로그램에서는 도구 모음 단추만을 사용하여 세부 사항을 변경할 수 있습니다.  
+---
+# <a name="creating-a-file-explorer-style-mfc-application"></a>Creating a File Explorer-Style MFC Application
+Many Windows system applications use the user interface (UI) for File Explorer. When you start File Explorer, for example, you see an application with a vertical splitter bar dividing the client area. The left side of the client area provides navigation and browsing features, and the right side of the client area shows details pertinent to the selection in the left pane. When a user clicks an item in the left pane, the application repopulates the right pane. In an MDI application, you can use commands on the **View** menu to change the amount of detail shown in the right pane. (In an SDI or multiple top-level document application, you can change the detail using the toolbar buttons only.)  
   
- 창의 내용은 응용 프로그램에 따라 다릅니다.  파일 시스템 브라우저에서는 왼쪽 창에 디렉터리나 컴퓨터의 계층 구조 보기 또는 컴퓨터 그룹이 표시되고 오른쪽 창에는 폴더, 개별 파일 또는 컴퓨터와 그 세부 사항이 표시됩니다.  내용은 반드시 파일이 아닐 수도 있습니다.  전자 메일 메시지, 오류 보고서 또는 데이터베이스에 있는 그 밖의 항목일 수 있습니다.  
+ The contents of the panes depend on the application. In a file-system browser, the left pane shows a hierarchical view of directories or machines, or machine groups, while the right pane displays folders, individual files, or machines, and details about them. The contents do not necessarily have to be files. They could be e-mail messages, error reports, or other items in a database.  
   
- 마법사에서는 다음과 같은 클래스를 만듭니다.  
+ The wizard creates the following classes for you:  
   
--   **CLeftView** 클래스는 클라이언트 영역의 왼쪽 창을 정의합니다.  이 클래스는 항상 [CTreeView](../../mfc/reference/ctreeview-class.md)에서 파생됩니다.  
+-   The **CLeftView** class defines the left pane of the client area. It is always derived from [CTreeView](../../mfc/reference/ctreeview-class.md).  
   
--   C*ProjName*View 클래스는 클라이언트 영역의 오른쪽 창을 정의합니다.  기본적으로 이 클래스는 [CListView](../../mfc/reference/clistview-class.md)에서 파생되지만 마법사의 [생성된 클래스](../../mfc/reference/generated-classes-mfc-application-wizard.md) 페이지의 **기본 클래스** 목록에서 지정하는 클래스에 따라 다른 형식의 뷰가 될 수도 있습니다.  
+-   The C*ProjName*View class defines the right pane of the client area. By default, it is derived from [CListView](../../mfc/reference/clistview-class.md) but can be another type of view depending on the class you specify from the **Base class** list in the [Generated Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard.  
   
- 생성된 응용 프로그램에 SDI\(Single Document Interface\), MDI\(Multiple Document Interface\) 또는 다중 최상위 문서 아키텍처가 포함될 수 있습니다.  응용 프로그램에서 만드는 각 프레임 창은 [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)를 사용하여 세로로 나뉩니다.  이 응용 프로그램 형식의 각 분할 창 내에 별개의 컨트롤 뷰가 있다는 점을 제외하면, 이 응용 프로그램 형식을 코딩하는 것은 분할 창을 사용하는 일반 MFC 응용 프로그램을 코딩하는 것과 비슷합니다.  
+ The generated application can have a single document interface (SDI), a multiple document interface (MDI), or a multiple top-level documents architecture. Each frame window the application creates is vertically split using [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md). Coding this application type is similar to coding a normal MFC application that uses a splitter, except that this type of application has separate control views within each splitter pane.  
   
- 오른쪽 창에서 기본 목록 뷰를 사용할 경우, 마법사는 추가 메뉴 선택 항목\(MDI 응용 프로그램의 경우만\)과 도구 모음 단추를 만들어 뷰의 스타일을 큰 아이콘, 작은 아이콘, 간단히, 자세히 모드 사이에서 전환할 수 있도록 합니다.  
+ If you use the default list view in the right pane, the wizard creates additional menu choices (in MDI applications only) and toolbar buttons to switch the view's style among large icons, small icons, list, and detail modes.  
   
-### To begin creating a File Explorer\-style MFC executable  
+### <a name="to-begin-creating-a-file-explorer-style-mfc-executable"></a>To begin creating a File Explorer-style MFC executable  
   
-1.  [MFC 응용 프로그램 만들기](../../mfc/reference/creating-an-mfc-application.md)의 지시를 따릅니다.  
+1.  Follow the directions in [Creating an MFC Application](../../mfc/reference/creating-an-mfc-application.md).  
   
 2.  In the MFC Application Wizard [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page, select the **File Explorer** project style.  
   
-3.  마법사의 다른 페이지에서 원하는 기타 옵션을 설정합니다.  
+3.  Set any other options you desire on the other pages of the wizard.  
   
-4.  **마침**을 클릭하여 기초 응용 프로그램을 생성합니다.  
+4.  Click **Finish** to generate the skeleton application.  
   
- 자세한 내용은 다음을 참조하십시오.  
+ For more information, see:  
   
--   [여러 문서 형식, 뷰 및 프레임 창](../../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Multiple Document Types, Views, and Frame Windows](../../mfc/multiple-document-types-views-and-frame-windows.md)  
   
--   [파생 뷰 클래스](../../mfc/derived-view-classes-available-in-mfc.md)  
+-   [Derived View Classes](../../mfc/derived-view-classes-available-in-mfc.md)  
   
--   [응용 프로그램 디자인 선택](../../mfc/application-design-choices.md)  
+-   [Application Design Choices](../../mfc/application-design-choices.md)  
   
-## 참고 항목  
- [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)   
- [웹 브라우저 스타일 MFC 응용 프로그램 만들기](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)   
- [폼 기반 MFC 응용 프로그램 만들기](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
+ [Creating a Web Browser-Style MFC Application](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)   
+ [Creating a Forms-Based MFC Application](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+
+

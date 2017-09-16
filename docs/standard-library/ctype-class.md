@@ -1,15 +1,14 @@
 ---
-title: "ctype 클래스 | Microsoft 문서"
+title: ctype Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ctype
 - xlocale/std::ctype
 - locale/std::ctype::char_type
 - locale/std::ctype::do_is
@@ -29,7 +28,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ctype class
+- std::ctype [C++]
+- std::ctype [C++], char_type
+- std::ctype [C++], do_is
+- std::ctype [C++], do_narrow
+- std::ctype [C++], do_scan_is
+- std::ctype [C++], do_scan_not
+- std::ctype [C++], do_tolower
+- std::ctype [C++], do_toupper
+- std::ctype [C++], do_widen
+- std::ctype [C++], is
+- std::ctype [C++], narrow
+- std::ctype [C++], scan_is
+- std::ctype [C++], scan_not
+- std::ctype [C++], tolower
+- std::ctype [C++], toupper
+- std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 caps.latest.revision: 19
 author: corob-msft
@@ -49,119 +63,119 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2e99ceb296bd3f620ce1bd58e8b0de6b6132299b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bc317befaaea6c504d97738fe29afc2478ff0042
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ctype-class"></a>ctype 클래스
-문자를 분류하고, 대문자에서 소문자로 변환하고, 네이티브 문자 집합과 로캘에서 사용하는 문자 집합 사이에서 변환하는 데 사용하는 패싯을 제공하는 클래스입니다.  
+# <a name="ctype-class"></a>ctype Class
+A class that provides a facet that is used to classify characters, convert from upper and lower cases, and convert between the native character set and that set used by the locale.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType>  
 class ctype : public ctype_base;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 문자를 인코딩하기 위해 프로그램 내 사용하는 형식  
+ The type used within a program to encode characters.  
   
-## <a name="remarks"></a>설명  
- 모든 로캘 패싯과 마찬가지로, 고정 개체 ID에는 초기값 0이 저장되어 있습니다. 저장된 값에 액세스를 처음 시도하면 **id**에 고유한 양수 값이 저장됩니다. 분류 기준에는 기본 클래스 ctype_base에 중첩된 비트 마스크 형식이 있습니다.  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.** Classification criteria are provided a nested bitmask type in the base class ctype_base.  
   
- C++ 표준 라이브러리는 다음과 같이 이 템플릿 클래스의 두 가지 명시적 특수화를 정의합니다.  
+ The C++ Standard Library defines two explicit specializations of this template class:  
   
-- [ctype](../standard-library/ctype-char-class.md)< `char`>, 차이를 별도로 설명하는 명시적 특수화입니다.  
+- [ctype](../standard-library/ctype-char-class.md)< `char`>, an explicit specialization whose differences are described separately.  
   
-- **ctype**< `wchar_t`>, 요소를 와이드 문자로 처리합니다.  
+- **ctype**< `wchar_t`>, which treats elements as wide characters.  
   
- 템플릿 클래스 **ctype**\< **CharType**>의 기타 특수화:  
+ Other specializations of template class **ctype**\< **CharType**>:  
   
--   (`char`) **ch** 식을 사용하여 **CharType** 형식의 ***ch*** 값을 `char` 형식의 값으로 변환합니다.  
+-   Convert a value ***ch*** of type **CharType** to a value of type `char` with the expression ( `char`) **ch**.  
   
--   **CharType** (**byte**) 식을 사용하여 `char` 형식의 ***바이트*** 값을 **CharType** 형식의 값으로 변환합니다.  
+-   Convert a value ***byte*** of type `char` to a value of type **CharType** with the expression **CharType** ( **byte**).  
   
- `char` 값에 대한 다른 모든 작업은 명시적 특수화인 **ctype**< `char`>과 동일한 방식으로 수행됩니다.  
+ All other operations are performed on `char` values in the same way as for the explicit specialization **ctype**< `char`>.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[ctype](#ctype)|문자의 로캘 패싯으로 사용할 수 있는 `ctype` 클래스의 개체에 대한 생성자입니다.|  
+|[ctype](#ctype)|Constructor for objects of class `ctype` that serve as locale facets for characters.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|로캘에서 사용하는 문자를 설명하는 형식|  
+|[char_type](#char_type)|A type that describes a character used by a locale.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[do_is](#do_is)|단일 문자에 특정 특성이 있는지 여부를 테스트하거나 범위에 있는 각 문자의 특성을 분류하고 배열에 저장하기 위해 호출하는 가상 함수입니다.|  
-|[do_narrow](#do_narrow)|로캘에서 사용하는 `CharType` 형식의 문자를 네이티브 문자 집합의 `char` 형식의 해당 문자로 변환하기 위해 호출하는 가상 함수입니다.|  
-|[do_scan_is](#do_scan_is)|범위에서 지정된 마스크와 일치하는 첫 번째 문자를 찾기 위해 호출하는 가상 함수입니다.|  
-|[do_scan_not](#do_scan_not)|범위에서 지정된 마스크와 일치하지 않는 첫 번째 문자를 찾기 위해 호출하는 가상 함수입니다.|  
-|[do_tolower](#do_tolower)|문자 또는 문자 범위를 소문자로 변환하기 위해 호출하는 함수입니다.|  
-|[do_toupper](#do_toupper)|문자 또는 문자 범위를 대문자로 변환하기 위해 호출하는 함수입니다.|  
-|[do_widen](#do_widen)|네이티브 문자 집합의 `char` 형식의 문자를 로캘에서 사용하는 `CharType` 형식의 문자로 변환하기 위해 호출하는 가상 함수입니다.|  
-|[is](#is)|단일 문자에 특정 특성이 있는지 여부를 테스트하거나 범위에 있는 각 문자의 특성을 분류하고 배열에 저장합니다.|  
-|[narrow](#narrow)|로캘에서 사용하는 `CharType` 형식의 문자를 네이티브 문자 집합의 형식 문자의 해당 문자로 변환합니다.|  
-|[scan_is](#scan_is)|범위에서 지정된 마스크와 일치하는 첫 번째 문자를 찾습니다.|  
-|[scan_not](#scan_not)|범위에서 지정된 마스크와 일치하지 않는 첫 번째 문자를 찾습니다.|  
-|[tolower](#tolower)|문자 또는 문자 범위를 소문자로 변환합니다.|  
-|[toupper](#toupper)|문자 또는 문자 범위를 대문자로 변환합니다.|  
-|[widen](#widen)|네이티브 문자 집합의 `char` 형식의 문자를 로캘에서 사용하는 `CharType` 형식의 해당 문자로 변환합니다.|  
+|[do_is](#do_is)|A virtual function called to test whether a single character has a particular attribute, or classify the attributes of each character in a range and stores them in an array.|  
+|[do_narrow](#do_narrow)|A virtual function called to convert a character of type `CharType` used by a locale to the corresponding character of type `char` in the native character set.|  
+|[do_scan_is](#do_scan_is)|A virtual function called to locate the first character in a range that matches a specified mask.|  
+|[do_scan_not](#do_scan_not)|A virtual function called to locate the first character in a range that does not match a specified mask.|  
+|[do_tolower](#do_tolower)|A virtual function called to convert a character or a range of characters to their lower case.|  
+|[do_toupper](#do_toupper)|A virtual function called to convert a character or a range of characters to upper case.|  
+|[do_widen](#do_widen)|A virtual function called to converts a character of type `char` in the native character set to the corresponding character of type `CharType` used by a locale.|  
+|[is](#is)|Tests whether a single character has a particular attribute, or classifies the attributes of each character in a range and stores them in an array.|  
+|[narrow](#narrow)|Converts a character of type `CharType` used by a locale to the corresponding character of type char in the native character set.|  
+|[scan_is](#scan_is)|Locates the first character in a range that matches a specified mask.|  
+|[scan_not](#scan_not)|Locates the first character in a range that does not match a specified mask.|  
+|[tolower](#tolower)|Converts a character or a range of characters to lower case.|  
+|[toupper](#toupper)|Converts a character or a range of characters to upper case.|  
+|[widen](#widen)|Converts a character of type `char` in the native character set to the corresponding character of type `CharType` used by a locale.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  ctype::char_type  
- 로캘에서 사용하는 문자를 설명하는 형식  
+ A type that describes a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-### <a name="example"></a>예제  
-  `char_type`을 반환 값으로 사용하는 예제는 멤버 함수 [widen](#widen)을 참조하세요.  
+### <a name="example"></a>Example  
+  See the member function [widen](#widen) for an example that uses `char_type` as a return value.  
   
 ##  <a name="ctype"></a>  ctype::ctype  
- 문자의 로캘 패싯으로 사용할 수 있는 ctype 클래스의 개체에 대한 생성자입니다.  
+ Constructor for objects of class ctype that serve as locale facets for characters.  
   
 ```  
 explicit ctype(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 개체에 대한 메모리 관리 형식을 지정하는 데 사용하는 정수값입니다.  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>설명  
- `_Refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: 개체를 포함하는 로캘에 의해 개체의 수명이 관리됩니다.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: 개체의 수명을 수동으로 관리해야 합니다.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: 이러한 값은 정의 되지 않습니다.  
+-   \> 1: These values are not defined.  
   
- 소멸자는 보호되므로 직접적인 예제는 확인할 수 없습니다.  
+ No direct examples are possible, because the destructor is protected.  
   
- 생성자는 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`)를 통해 해당 `locale::facet` 기본 개체를 초기화합니다.  
+ The constructor initializes its `locale::facet` base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ##  <a name="do_is"></a>  ctype::do_is  
- 단일 문자에 특정 특성이 있는지 여부를 테스트하거나 범위에 있는 각 문자의 특성을 분류하고 배열에 저장하기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to test whether a single character has a particular attribute, or classify the attributes of each character in a range and stores them in an array.  
   
 ```  
 virtual bool do_is(
@@ -175,35 +189,35 @@ virtual const CharType *do_is(
     mask* dest) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 문자를 테스트할 마스크 값입니다.  
+ The mask value for which the character is to be tested.  
   
  `ch`  
- 특성을 테스트할 문자입니다.  
+ The character whose attributes are to be tested.  
   
  `first`  
- 특성을 분류할 범위 내 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range whose attributes are to be classified.  
   
  `last`  
- 특성을 분류할 범위 내 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range whose attributes are to be classified.  
   
  `dest`  
- 각 문자의 특성에 대한 특징을 지정하는 마스크 값을 저장할 배열의 시작 부분에 대한 포인터입니다.  
+ A pointer to the beginning of the array where the mask values characterizing the attributes of each of the characters are to be stored.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 멤버 함수는, 테스트한 문자가 마스크 값에서 설명한 특성을 포함하는 경우 **true**인 부울 값을 반환하며 특성을 포함하지 못하는 경우 **false**인 부울 값을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first member function returns a Boolean value that is **true** if the character tested has the attribute described by the mask value; **false** if it fails to have the attribute.  
   
- 두 번째 멤버 함수는 범위 내 각 문자의 특성에 대한 특징을 지정하는 마스크 값을 포함하는 배열을 반환합니다.  
+ The second member function returns an array containing the mask values characterizing the attributes of each of the characters in the range.  
   
-### <a name="remarks"></a>설명  
- 문자의 특성을 분류하는 마스크 값은 ctype이 파생되는 [ctype_base](../standard-library/ctype-base-class.md) 클래스에서 제공합니다. 첫 번째 멤버 함수에는 논리 비트 연산자(| , & , ^ , ~)를 통해 마스크 값을 조합하여 형성되는 첫 번째 매개 변수(비트 마스크라고도 함)에 대한 식도 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The mask values classifying the attributes of the characters are provided by the class [ctype_base](../standard-library/ctype-base-class.md), from which ctype derives. The first member function can accept expressions for its first parameter referred to as bitmasks and formed from the combination of mask values by the logical bitwise operators (&#124; , & , ^ , ~).  
   
-### <a name="example"></a>예제  
-  `do_is`를 호출하는 [is](#is)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [is](#is), which calls `do_is`.  
   
 ##  <a name="do_narrow"></a>  ctype::do_narrow  
- 로캘에서 사용하는 `CharType` 형식의 문자를 네이티브 문자 집합의 `char` 형식의 해당 문자로 변환하기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to convert a character of type `CharType` used by a locale to the corresponding character of type `char` in the native character set.  
   
 ```  
 virtual char do_narrow(
@@ -218,35 +232,35 @@ virtual const CharType* do_narrow(
     char* dest) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 로캘에서 변환하는 데 사용하는 `Chartype` 형식의 문자입니다.   
+ The character of type `Chartype` used by the locale to be converted.  
   
  `default`  
- 멤버 함수에서 `char` 형식에 해당하는 문자가 없는 `CharType` 형식의 문자에 할당할 기본값입니다.  
+ The default value to be assigned by the member function to characters of type `CharType` that do not have counterpart characters of type `char`.  
   
  `first`  
- 변환할 문자 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range of characters to be converted.  
   
  `last`  
- 변환할 문자 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range of characters to be converted.  
   
  `dest`  
- 변환한 문자 범위를 저장하는 대상 범위 내 `char` 형식의 첫 번째 문자에 대한 const 포인터입니다.  
+ A const pointer to the first character of type `char` in the destination range that stores the converted range of characters.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 보호된 멤버 함수는 정의된 해당 문자가 없는 경우 `CharType` 또는 `default` 형식의 매개 변수 문자에 해당하는 char 형식의 네이티브 문자를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first protected member function returns the native character of type char that corresponds to the parameter character of type `CharType` or `default` if no counterpart is defined.  
   
- 두 번째 보호된 멤버 함수는 `CharType` 형식의 문자에서 변환된 네이티브 문자의 대상 범위에 대한 포인터를 반환합니다.  
+ The second protected member function returns a pointer to the destination range of native characters converted from characters of type `CharType`.  
   
-### <a name="remarks"></a>설명  
- 두 번째 멤버 템플릿 함수는 저장소에 보호 `dest`[ `I`] 값 `do_narrow`( `first` [ `I`], `default`)에 대 한 `I` 간격에서 [0, `last`  -  `first`).  
+### <a name="remarks"></a>Remarks  
+ The second protected member template function stores in `dest`[ `I`] the value `do_narrow`( `first` [ `I`], `default`), for `I` in the interval [0, `last` - `first`).  
   
-### <a name="example"></a>예제  
-  `do_narrow`를 호출하는 [narrow](#narrow)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [narrow](#narrow), which calls `do_narrow`.  
   
 ##  <a name="do_scan_is"></a>  ctype::do_scan_is  
- 범위에서 지정된 마스크와 일치하는 첫 번째 문자를 찾기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to locate the first character in a range that matches a specified mask.  
   
 ```  
 virtual const CharType *do_scan_is(
@@ -255,27 +269,27 @@ virtual const CharType *do_scan_is(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 문자로 일치할 마스크 값입니다.  
+ The mask value to be matched by a character.  
   
  `first`  
- 검색할 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range to be scanned.  
   
  `last`  
- 검색할 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range to be scanned.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 마스크와 일치하는 범위의 첫 번째 문자에 대한 포인터입니다. 이러한 값이 없는 경우 함수는 `last.`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first character in a range that does match a specified mask. If no such value exists, the function returns `last.`  
   
-### <a name="remarks"></a>설명  
- 보호된 멤버 함수는 [do_is](#do_is)( `maskVal`, * `ptr`)가 true인 [`first`, `last`) 범위의 가장 작은 포인터 `ptr`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The protected member function returns the smallest pointer `ptr` in the range [ `first`, `last`) for which [do_is](#do_is)( `maskVal`, * `ptr`) is true.  
   
-### <a name="example"></a>예제  
-  `do_scan_is`를 호출하는 [scan_is](#scan_is)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [scan_is](#scan_is), which calls `do_scan_is`.  
   
 ##  <a name="do_scan_not"></a>  ctype::do_scan_not  
- 범위에서 지정된 마스크와 일치하지 않는 첫 번째 문자를 찾기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to locate the first character in a range that does not match a specified mask.  
   
 ```  
 virtual const CharType *do_scan_not(
@@ -284,27 +298,27 @@ virtual const CharType *do_scan_not(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 문자로 일치하지 않을 마스크 값입니다.  
+ The mask value not to be matched by a character.  
   
  `first`  
- 검색할 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range to be scanned.  
   
  `last`  
- 검색할 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range to be scanned.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 마스크와 일치하지 않은 범위의 첫 번째 문자에 대한 포인터입니다. 이러한 값이 없는 경우 함수는 `last`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first character in a range that doesn't match a specified mask. If no such value exists, the function returns `last`.  
   
-### <a name="remarks"></a>설명  
- 보호된 멤버 함수는 [do_is](#do_is)( `maskVal`, * `ptr`)가 false인 [`first`, `last`) 범위의 가장 작은 포인터 `ptr`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The protected member function returns the smallest pointer `ptr` in the range [ `first`, `last`) for which [do_is](#do_is)( `maskVal`, * `ptr`) is false.  
   
-### <a name="example"></a>예제  
-  `do_scan_not`을 호출하는 [scan_not](#scan_not)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [scan_not](#scan_not), which calls `do_scan_not`.  
   
 ##  <a name="do_tolower"></a>  ctype::do_tolower  
- 문자 또는 문자 범위를 소문자로 변환하기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to convert a character or a range of characters to lower case.  
   
 ```  
 virtual CharType do_tolower(CharType ch) const;
@@ -315,27 +329,27 @@ virtual const CharType *do_tolower(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 소문자로 변환할 문자입니다.  
+ The character to be converted to lower case.  
   
  `first`  
- 대/소문자를 변환할 문자 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range of characters whose cases are to be converted.  
   
  `last`  
- 대/소문자를 변환할 문자 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range of characters whose cases are to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 보호된 멤버 함수는 `ch` 매개 변수의 소문자 형태를 반환합니다. 소문자 형태가 없는 경우 `ch`를 반환합니다. 두 번째 보호된 멤버 함수는 `last`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first protected member function returns the lowercase form of the parameter `ch`. If no lowercase form exists, it returns `ch`. The second protected member function returns `last`.  
   
-### <a name="remarks"></a>설명  
- 두 번째 보호 된 멤버 템플릿 함수는 각 요소를 바꿉니다 `first` [ `I`]에 대 한 `I` 간격에서 [0, `last`  -  `first`)와 `do_tolower`( `first` [ `I`]).  
+### <a name="remarks"></a>Remarks  
+ The second protected member template function replaces each element `first` [ `I`], for `I` in the interval [0, `last` - `first`), with `do_tolower`( `first` [ `I`]).  
   
-### <a name="example"></a>예제  
-  `do_tolower`를 호출하는 [tolower](#tolower)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [tolower](#tolower), which calls `do_tolower`.  
   
 ##  <a name="do_toupper"></a>  ctype::do_toupper  
- 문자 또는 문자 범위를 대문자로 변환하기 위해 호출하는 함수입니다.  
+ A virtual function called to convert a character or a range of characters to upper case.  
   
 ```  
 virtual CharType do_toupper(CharType ch) const;
@@ -346,27 +360,27 @@ virtual const CharType *do_toupper(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 대문자로 변환할 문자입니다.  
+ The character to be converted to upper case.  
   
  `first`  
- 대/소문자를 변환할 문자 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range of characters whose cases are to be converted.  
   
  `last`  
- 대/소문자를 변환할 문자 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to character immediately following the last character in the range of characters whose cases are to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 보호된 멤버 함수는 `ch` 매개 변수의 대문자 형태를 반환합니다. 대문자 형태가 없는 경우 `ch`를 반환합니다. 두 번째 보호된 멤버 함수는 `last`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first protected member function returns the uppercase form of the parameter `ch`. If no uppercase form exists, it returns `ch`. The second protected member function returns `last`.  
   
-### <a name="remarks"></a>설명  
- 두 번째 보호 된 멤버 템플릿 함수는 각 요소를 바꿉니다 `first` [ `I`]에 대 한 `I` 간격에서 [0, `last`  -  `first`)와 `do_toupper`( `first` [ `I`]).  
+### <a name="remarks"></a>Remarks  
+ The second protected member template function replaces each element `first` [ `I`], for `I` in the interval [0, `last` - `first`), with `do_toupper`( `first` [ `I`]).  
   
-### <a name="example"></a>예제  
-  `do_toupper`를 호출하는 [toupper](#toupper)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [toupper](#toupper), which calls `do_toupper`.  
   
 ##  <a name="do_widen"></a>  ctype::do_widen  
- 네이티브 문자 집합의 `char` 형식의 문자를 로캘에서 사용하는 `CharType` 형식의 문자로 변환하기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to converts a character of type `char` in the native character set to the corresponding character of type `CharType` used by a locale.  
   
 ```  
 virtual CharType do_widen(char byte) const;
@@ -378,32 +392,32 @@ virtual const char *do_widen(
     CharType* dest) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `byte`  
- 변환할 네이티브 문자 집합 내 `char` 형식의 문자입니다.  
+ The character of type `char` in the native character set to be converted.  
   
  `first`  
- 변환할 문자 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range of characters to be converted.  
   
  `last`  
- 변환할 문자 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range of characters to be converted.  
   
  `dest`  
- 변환한 문자 범위를 저장하는 대상 범위 내 `CharType` 형식의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character of type `CharType` in the destination range that stores the converted range of characters.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 보호된 멤버 함수는 네이티브 `char` 형식의 매개 변수 문자에 해당하는 `CharType` 형식의 문자를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first protected member function returns the character of type `CharType` that corresponds to the parameter character of native type `char`.  
   
- 두 번째 보호된 멤버 함수는 `char` 형식의 네이티브 문자에서 변환된 로캘에서 사용하는 `CharType` 형식 문자의 대상 범위에 대한 포인터를 반환합니다.  
+ The second protected member function returns a pointer to the destination range of characters of type `CharType` used by a locale converted from native characters of type `char`.  
   
-### <a name="remarks"></a>설명  
- 두 번째 보호된 멤버 템플릿 함수는 [0, `last` - `first`) 간격의 `I`에 대해 `do_widen`( `first`[ `I`]) 값을 `dest`[ `I`]에 저장합니다.  
+### <a name="remarks"></a>Remarks  
+ The second protected member template function stores in `dest`[ `I`] the value `do_widen`( `first`[ `I`]), for `I` in the interval [0, `last` - `first`).  
   
-### <a name="example"></a>예제  
-  `do_widen`을 호출하는 [widen](#widen)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [widen](#widen), which calls `do_widen`.  
   
 ##  <a name="is"></a>  ctype::is  
- 단일 문자에 특정 특성이 있는지 여부를 테스트하거나 범위에 있는 각 문자의 특성을 분류하고 배열에 저장합니다.  
+ Tests whether a single character has a particular attribute or classifies the attributes of each character in a range and stores them in an array.  
   
 ```  
 bool is(mask maskVal, CharType ch) const;
@@ -415,31 +429,31 @@ const CharType *is(
     mask* dest) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 문자를 테스트할 마스크 값입니다.  
+ The mask value for which the character is to be tested.  
   
  `ch`  
- 특성을 테스트할 문자입니다.  
+ The character whose attributes are to be tested.  
   
  `first`  
- 특성을 분류할 범위 내 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range whose attributes are to be classified.  
   
  `last`  
- 특성을 분류할 범위 내 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range whose attributes are to be classified.  
   
  `dest`  
- 각 문자의 특성에 대한 특징을 지정하는 마스크 값을 저장할 배열의 시작 부분에 대한 포인터입니다.  
+ A pointer to the beginning of the array where the mask values characterizing the attributes of each of the characters are to be stored.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 멤버 함수는 테스트한 문자가 마스크 값에서 설명한 특성을 포함하는 경우 `true`를 반환하며 특성을 포함하지 못하는 경우 `false`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first member function returns `true` if the character tested has the attribute described by the mask value; `false` if it fails to have the attribute.  
   
- 두 번째 멤버 함수는 특성을 분류할 범위의 마지막 문자에 대한 포인터를 반환합니다.  
+ The second member function returns a pointer to the last character in the range whose attributes are to be classified.  
   
-### <a name="remarks"></a>설명  
- 문자의 특성을 분류하는 마스크 값은 ctype이 파생되는 [ctype_base 클래스](../standard-library/ctype-base-class.md)에서 제공합니다. 첫 번째 멤버 함수에는 논리 비트 연산자(| , & , ^ , ~)를 통해 마스크 값을 조합하여 형성되는 첫 번째 매개 변수(비트 마스크라고도 함)에 대한 식도 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The mask values classifying the attributes of the characters are provided by the class [ctype_base Class](../standard-library/ctype-base-class.md), from which ctype derives. The first member function can accept expressions for its first parameter referred to as bitmasks and formed from the combination of mask values by the logical bitwise operators (&#124; , & , ^ , ~).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_is.cpp  
@@ -479,7 +493,7 @@ int main() {
 ```  
   
 ##  <a name="narrow"></a>  ctype::narrow  
- 로캘에서 사용하는 `CharType` 형식의 문자를 네이티브 문자 집합 내 `char` 형식의 해당 문자로 변환합니다.  
+ Converts characters of type `CharType` used by a locale to the corresponding characters of type `char` in the native character set.  
   
 ```  
 char narrow(CharType ch, char default = '\0') const;
@@ -492,31 +506,31 @@ const CharType* narrow(
     char* dest) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 로캘에서 변환하는 데 사용하는 `Chartype` 형식의 문자입니다.   
+ The character of type `Chartype` used by the locale to be converted.  
   
  `default`  
- 멤버 함수에서 `char` 형식에 해당하는 문자가 없는 `CharType` 형식의 문자에 할당할 기본값입니다.  
+ The default value to be assigned by the member function to characters of type `CharType` that do not have counterpart characters of type `char`.  
   
  `first`  
- 변환할 문자 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range of characters to be converted.  
   
  `last`  
- 변환할 문자 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range of characters to be converted.  
   
  `dest`  
- 변환한 문자 범위를 저장하는 대상 범위 내 `char` 형식의 첫 번째 문자에 대한 const 포인터입니다.  
+ A const pointer to the first character of type `char` in the destination range that stores the converted range of characters.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 멤버 함수는 정의된 해당 문자가 없는 경우 `CharType``default` 형식의 매개 변수 문자에 해당하는 `char` 형식의 네이티브 문자를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the native character of type `char` that corresponds to the parameter character of type `CharType default` if not counterpart is defined.  
   
- 두 번째 멤버 함수는 `CharType` 형식의 문자에서 변환된 네이티브 문자의 대상 범위에 대한 포인터를 반환합니다.  
+ The second member function returns a pointer to the destination range of native characters converted from characters of type `CharType`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 [do_narrow](#do_narrow)( `ch`, `default`)를 반환합니다. 두 번째 멤버 함수는 [do_narrow](#do_narrow) ( `first`, `last`, `default`, `dest`)를 반환합니다. 기본 소스 문자만 `narrow` 아래에 고유 역 이미지 `CharType`을 포함하는 것이 보장됩니다. 이러한 기본 소스 문자의 경우 `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**와 같이 고정 값을 유지합니다.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_narrow](#do_narrow)( `ch`, `default`). The second member function returns [do_narrow](#do_narrow) ( `first`, `last`, `default`, `dest`). Only the basic source characters are guaranteed to have a unique inverse image `CharType` under `narrow`. For these basic source characters, the following invariant holds: `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_narrow.cpp  
@@ -543,7 +557,7 @@ Xhello everyone
 ```  
   
 ##  <a name="scan_is"></a>  ctype::scan_is  
- 범위에서 지정된 마스크와 일치하는 첫 번째 문자를 찾습니다.  
+ Locates the first character in a range that matches a specified mask.  
   
 ```  
 const CharType *scan_is(
@@ -552,23 +566,23 @@ const CharType *scan_is(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 문자로 일치할 마스크 값입니다.  
+ The mask value to be matched by a character.  
   
  `first`  
- 검색할 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range to be scanned.  
   
  `last`  
- 검색할 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range to be scanned.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 마스크와 일치하는 범위의 첫 번째 문자에 대한 포인터입니다. 이러한 값이 없는 경우 함수는 `last.`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first character in a range that does match a specified mask. If no such value exists, the function returns `last.`  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 [do_scan_is](#do_scan_is)( `maskVal`, `first`, `last`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_scan_is](#do_scan_is)( `maskVal`, `first`, `last`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_scan_is.cpp  
@@ -595,7 +609,7 @@ The first punctuation is "," at position: 5
 ```  
   
 ##  <a name="scan_not"></a>  ctype::scan_not  
- 범위에서 지정된 마스크와 일치하지 않는 첫 번째 문자를 찾습니다.  
+ Locates the first character in a range that does not match a specified mask.  
   
 ```  
 const CharType *scan_not(
@@ -604,23 +618,23 @@ const CharType *scan_not(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 문자로 일치하지 않을 마스크 값입니다.  
+ The mask value not to be matched by a character.  
   
  `first`  
- 검색할 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range to be scanned.  
   
  `last`  
- 검색할 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range to be scanned.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 마스크와 일치하지 않은 범위의 첫 번째 문자에 대한 포인터입니다. 이러한 값이 없는 경우 함수는 `last`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first character in a range that does not match a specified mask. If no such value exists, the function returns `last`.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 [do_scan_not](#do_scan_not)( `maskVal`, `first`, `last`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_scan_not](#do_scan_not)( `maskVal`, `first`, `last`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_scan_not.cpp  
@@ -647,7 +661,7 @@ First nonalpha character is "," at position: 5
 ```  
   
 ##  <a name="tolower"></a>  ctype::tolower  
- 문자 또는 문자 범위를 소문자로 변환합니다.  
+ Converts a character or a range of characters to lower case.  
   
 ```  
 CharType tolower(CharType ch) const;
@@ -656,25 +670,25 @@ CharType tolower(CharType ch) const;
 const CharType *tolower(CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 소문자로 변환할 문자입니다.  
+ The character to be converted to lower case.  
   
  `first`  
- 대/소문자를 변환할 문자 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range of characters whose cases are to be converted.  
   
  `last`  
- 대/소문자를 변환할 문자 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range of characters whose cases are to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 멤버 함수는 `ch` 매개 변수의 소문자 형태를 반환합니다. 소문자 형태가 없는 경우 `ch`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the lowercase form of the parameter `ch`. If no lowercase form exists, it returns `ch`.  
   
- 두 번째 멤버 함수는 `last`를 반환합니다.  
+ The second member function returns `last`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 [do_tolower](#do_tolower)( `ch`)를 반환합니다. 두 번째 멤버 함수는 [do_tolower](#do_tolower)( `first`, `last`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_tolower](#do_tolower)( `ch`). The second member function returns [do_tolower](#do_tolower)( `first`, `last`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_tolower.cpp  
@@ -700,32 +714,32 @@ The lowercase string is: hello, my name is john
 ```  
   
 ##  <a name="toupper"></a>  ctype::toupper  
- 문자 또는 문자 범위를 대문자로 변환합니다.  
+ Converts a character or a range of characters to upper case.  
   
 ```  
 CharType toupper(CharType ch) const; 
 const CharType *toupper(CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 대문자로 변환할 문자입니다.  
+ The character to be converted to uppercase.  
   
  `first`  
- 대/소문자를 변환할 문자 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range of characters whose cases are to be converted.  
   
  `last`  
- 대/소문자를 변환할 문자 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range of characters whose cases are to be converted.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 멤버 함수는 `ch` 매개 변수의 대문자 형태를 반환합니다. 대문자 형태가 없는 경우 `ch`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the uppercase form of the parameter `ch`. If no uppercase form exists, it returns `ch`.  
   
- 두 번째 멤버 함수는 `last`를 반환합니다.  
+ The second member function returns `last`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 [do_toupper](#do_toupper)( `ch`)를 반환합니다. 두 번째 멤버 함수는 [do_toupper](#do_toupper)( `first`, `last`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_toupper](#do_toupper)( `ch`). The second member function returns [do_toupper](#do_toupper)( `first`, `last`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_toupper.cpp  
@@ -751,35 +765,35 @@ The uppercase string is: HELLO, MY NAME IS JOHN
 ```  
   
 ##  <a name="widen"></a>  ctype::widen  
- 네이티브 문자 집합의 `char` 형식의 문자를 로캘에서 사용하는 `CharType` 형식의 해당 문자로 변환합니다.  
+ Converts a character of type `char` in the native character set to the corresponding character of type `CharType` used by a locale.  
   
 ```  
 CharType widen(char byte) const; 
 const char *widen(const char* first, const char* last, CharType* dest) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `byte`  
- 변환할 네이티브 문자 집합 내 char 형식의 문자입니다.  
+ The character of type char in the native character set to be converted.  
   
  `first`  
- 변환할 문자 범위의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character in the range of characters to be converted.  
   
  `last`  
- 변환할 문자 범위의 마지막 문자 바로 다음에 있는 문자에 대한 포인터입니다.  
+ A pointer to the character immediately following the last character in the range of characters to be converted.  
   
  `dest`  
- 변환한 문자 범위를 저장하는 대상 범위 내 `CharType` 형식의 첫 번째 문자에 대한 포인터입니다.  
+ A pointer to the first character of type `CharType` in the destination range that stores the converted range of characters.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 멤버 함수는 네이티브 `char` 형식의 매개 변수 문자에 해당하는 `CharType` 형식의 문자를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the character of type `CharType` that corresponds to the parameter character of native type `char`.  
   
- 두 번째 멤버 함수는 `char` 형식의 네이티브 문자에서 변환된 로캘에서 사용하는 `CharType` 형식 문자의 대상 범위에 대한 포인터를 반환합니다.  
+ The second member function returns a pointer to the destination range of characters of type `CharType` used by a locale converted from native characters of type `char`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 [do_widen](#do_widen)( `byte`)를 반환합니다. 두 번째 멤버 함수는 [do_widen](#do_widen)( `first`, `last`, `dest`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_widen](#do_widen)( `byte`). The second member function returns [do_widen](#do_widen)( `first`, `last`, `dest`).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_widen.cpp  
@@ -809,8 +823,8 @@ Hello everyone!
 Hello everyone!  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

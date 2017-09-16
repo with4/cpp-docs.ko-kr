@@ -1,5 +1,5 @@
 ---
-title: "CHtmlEditCtrlBase 클래스 | Microsoft Docs"
+title: CHtmlEditCtrlBase Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -121,7 +121,113 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHtmlEditCtrlBase class
+- CHtmlEditCtrlBase [MFC], AddToGlyphTable
+- CHtmlEditCtrlBase [MFC], Bold
+- CHtmlEditCtrlBase [MFC], Button
+- CHtmlEditCtrlBase [MFC], CheckBox
+- CHtmlEditCtrlBase [MFC], ClearSelection
+- CHtmlEditCtrlBase [MFC], Copy
+- CHtmlEditCtrlBase [MFC], Cut
+- CHtmlEditCtrlBase [MFC], Delete
+- CHtmlEditCtrlBase [MFC], DropDownBox
+- CHtmlEditCtrlBase [MFC], EmptyGlyphTable
+- CHtmlEditCtrlBase [MFC], ExecCommand
+- CHtmlEditCtrlBase [MFC], Font
+- CHtmlEditCtrlBase [MFC], GetAbsolutePosition
+- CHtmlEditCtrlBase [MFC], GetBackColor
+- CHtmlEditCtrlBase [MFC], GetBlockFormat
+- CHtmlEditCtrlBase [MFC], GetBlockFormatNames
+- CHtmlEditCtrlBase [MFC], GetBookMark
+- CHtmlEditCtrlBase [MFC], GetDocument
+- CHtmlEditCtrlBase [MFC], GetDocumentHTML
+- CHtmlEditCtrlBase [MFC], GetDocumentTitle
+- CHtmlEditCtrlBase [MFC], GetEvent
+- CHtmlEditCtrlBase [MFC], GetEventSrcElement
+- CHtmlEditCtrlBase [MFC], GetFontFace
+- CHtmlEditCtrlBase [MFC], GetFontSize
+- CHtmlEditCtrlBase [MFC], GetForeColor
+- CHtmlEditCtrlBase [MFC], GetFrameZone
+- CHtmlEditCtrlBase [MFC], GetIsDirty
+- CHtmlEditCtrlBase [MFC], GetShowAlignedSiteTags
+- CHtmlEditCtrlBase [MFC], GetShowAllTags
+- CHtmlEditCtrlBase [MFC], GetShowAreaTags
+- CHtmlEditCtrlBase [MFC], GetShowBRTags
+- CHtmlEditCtrlBase [MFC], GetShowCommentTags
+- CHtmlEditCtrlBase [MFC], GetShowMiscTags
+- CHtmlEditCtrlBase [MFC], GetShowScriptTags
+- CHtmlEditCtrlBase [MFC], GetShowStyleTags
+- CHtmlEditCtrlBase [MFC], GetShowUnknownTags
+- CHtmlEditCtrlBase [MFC], HorizontalLine
+- CHtmlEditCtrlBase [MFC], HyperLink
+- CHtmlEditCtrlBase [MFC], IE50Paste
+- CHtmlEditCtrlBase [MFC], Iframe
+- CHtmlEditCtrlBase [MFC], Image
+- CHtmlEditCtrlBase [MFC], Indent
+- CHtmlEditCtrlBase [MFC], InsFieldSet
+- CHtmlEditCtrlBase [MFC], InsInputButton
+- CHtmlEditCtrlBase [MFC], InsInputHidden
+- CHtmlEditCtrlBase [MFC], InsInputImage
+- CHtmlEditCtrlBase [MFC], InsInputPassword
+- CHtmlEditCtrlBase [MFC], InsInputReset
+- CHtmlEditCtrlBase [MFC], InsInputSubmit
+- CHtmlEditCtrlBase [MFC], InsInputUpload
+- CHtmlEditCtrlBase [MFC], Is1DElement
+- CHtmlEditCtrlBase [MFC], Is2DElement
+- CHtmlEditCtrlBase [MFC], Italic
+- CHtmlEditCtrlBase [MFC], JustifyCenter
+- CHtmlEditCtrlBase [MFC], JustifyLeft
+- CHtmlEditCtrlBase [MFC], JustifyRight
+- CHtmlEditCtrlBase [MFC], ListBox
+- CHtmlEditCtrlBase [MFC], Marquee
+- CHtmlEditCtrlBase [MFC], NewDocument
+- CHtmlEditCtrlBase [MFC], OrderList
+- CHtmlEditCtrlBase [MFC], Outdent
+- CHtmlEditCtrlBase [MFC], Paragraph
+- CHtmlEditCtrlBase [MFC], Paste
+- CHtmlEditCtrlBase [MFC], PrintDocument
+- CHtmlEditCtrlBase [MFC], PrintPreview
+- CHtmlEditCtrlBase [MFC], QueryStatus
+- CHtmlEditCtrlBase [MFC], RadioButton
+- CHtmlEditCtrlBase [MFC], RefreshDocument
+- CHtmlEditCtrlBase [MFC], RemoveFormat
+- CHtmlEditCtrlBase [MFC], SaveAs
+- CHtmlEditCtrlBase [MFC], SelectAll
+- CHtmlEditCtrlBase [MFC], Set2DPosition
+- CHtmlEditCtrlBase [MFC], SetAbsolutePosition
+- CHtmlEditCtrlBase [MFC], SetAtomicSelection
+- CHtmlEditCtrlBase [MFC], SetAutoURLDetectMode
+- CHtmlEditCtrlBase [MFC], SetBackColor
+- CHtmlEditCtrlBase [MFC], SetBlockFormat
+- CHtmlEditCtrlBase [MFC], SetBookMark
+- CHtmlEditCtrlBase [MFC], SetCSSEditingLevel
+- CHtmlEditCtrlBase [MFC], SetDefaultComposeSettings
+- CHtmlEditCtrlBase [MFC], SetDesignMode
+- CHtmlEditCtrlBase [MFC], SetDisableEditFocusUI
+- CHtmlEditCtrlBase [MFC], SetDocumentHTML
+- CHtmlEditCtrlBase [MFC], SetFontFace
+- CHtmlEditCtrlBase [MFC], SetFontSize
+- CHtmlEditCtrlBase [MFC], SetForeColor
+- CHtmlEditCtrlBase [MFC], SetIE5PasteMode
+- CHtmlEditCtrlBase [MFC], SetLiveResize
+- CHtmlEditCtrlBase [MFC], SetMultiSelect
+- CHtmlEditCtrlBase [MFC], SetOverrideCursor
+- CHtmlEditCtrlBase [MFC], SetOverwriteMode
+- CHtmlEditCtrlBase [MFC], SetRespectVisInDesign
+- CHtmlEditCtrlBase [MFC], SetShowAlignedSiteTags
+- CHtmlEditCtrlBase [MFC], SetShowAllTags
+- CHtmlEditCtrlBase [MFC], SetShowAreaTags
+- CHtmlEditCtrlBase [MFC], SetShowBRTags
+- CHtmlEditCtrlBase [MFC], SetShowCommentTags
+- CHtmlEditCtrlBase [MFC], SetShowMiscTags
+- CHtmlEditCtrlBase [MFC], SetShowScriptTags
+- CHtmlEditCtrlBase [MFC], SetShowStyleTags
+- CHtmlEditCtrlBase [MFC], SetShowUnknownTags
+- CHtmlEditCtrlBase [MFC], TextArea
+- CHtmlEditCtrlBase [MFC], TextBox
+- CHtmlEditCtrlBase [MFC], UnBookmark
+- CHtmlEditCtrlBase [MFC], Underline
+- CHtmlEditCtrlBase [MFC], Unlink
+- CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
 caps.latest.revision: 21
 author: mikeblome
@@ -141,153 +247,153 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: a32d9df86837c5cafd27f8f876a703d0b3ec3bfe
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df8a6665e01fed9de2328e1577683c5a69da5813
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 클래스
-HTML 편집 구성 요소를 나타냅니다.  
+# <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase Class
+Represents an HTML editing component.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T> class CHtmlEditCtrlBase  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|디자인 모드에서 특정 태그에 대 한 표시할 이미지를 지정 하는 문자 모양 테이블에 항목을 추가 합니다.|  
-|[CHtmlEditCtrlBase::Bold](#bold)|선택한 텍스트의 굵게 표시 된 상태를 토글합니다.|  
-|[CHtmlEditCtrlBase::Button](#button)|현재 선택 영역에 단추 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::CheckBox](#checkbox)|현재 선택 영역에서 확인란 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|현재 선택을 해제합니다.|  
-|[CHtmlEditCtrlBase::Copy](#copy)|현재 선택 영역을 클립보드에 복사 합니다.|  
-|[CHtmlEditCtrlBase::Cut](#cut)|현재 선택 영역을 클립보드에 복사 하 고 삭제 합니다.|  
-|[CHtmlEditCtrlBase::Delete](#delete)|현재 선택 영역을 삭제합니다.|  
-|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|현재 선택 영역에 대해 드롭다운 목록 선택 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|디자인 모드에서 태그에 대 한 표시 되는 모든 이미지를 숨기는 문자 모양 테이블에서 모든 항목을 제거 합니다.|  
-|[CHtmlEditCtrlBase::ExecCommand](#execcommand)|명령을 실행합니다.|  
-|[CHtmlEditCtrlBase::Font](#font)|텍스트 색, 글꼴 및 현재 선택 된 글꼴 크기를 변경할 수 있도록 글꼴 대화 상자를 엽니다.|  
-|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|요소의 위치 속성이 "절대." 인지 반환|  
-|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|현재 선택 항목의 배경색을 검색합니다.|  
-|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|현재 블록 형식 태그를 검색합니다.|  
-|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|사용 가능한 블록 형식 태그에 해당 하는 문자열을 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|책갈피 앵커의 이름을 검색합니다.|  
-|[CHtmlEditCtrlBase::GetDocument](#getdocument)|문서 개체를 검색합니다.|  
-|[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|현재 문서의 HTML을 검색합니다.|  
-|[CHtmlEditCtrlBase::GetDocumentTitle](#getdocumenttitle)|문서의 제목을 검색합니다.|  
-|[CHtmlEditCtrlBase::GetEvent](#getevent)|가장 최근 이벤트와 관련 된 정보를 포함 하는 이벤트 개체에 대 한 인터페이스 포인터를 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|이벤트를 발생 시킨 개체를 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetFontFace](#getfontface)|현재 선택 영역에 대 한 글꼴 이름을 검색합니다.|  
-|[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|현재 선택 영역에 대 한 글꼴 크기를 검색합니다.|  
-|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|전경 (텍스트) 색 현재 선택 영역을 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|웹 브라우저에서 현재 페이지의 보안 영역을 반환합니다.|  
-|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|HTML 문서 변경 되었는지 여부를 나타냅니다.|  
-|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|모든 요소에 대해 문자 모양을 표시 되는지 여부를 반환 합니다.는 **styleFloat** 속성입니다.|  
-|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|WebBrowser 문서에서 모든 태그의 위치를 표시 하려면 문자 모양을 표시 여부를 반환 합니다.|  
-|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|WebBrowser 영역 태그 문자 모양을 표시 하는지 여부를 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|WebBrowser br 태그 문자 모양을 표시 하는지 여부를 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|WebBrowser 주석 태그 문자 모양을 표시 하는지 여부를 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|WebBrowser Internet Explorer 4.0에 표시 된 모든 태그를 표시 하는지 여부를 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|WebBrowser 모든 스크립트 태그 문자 모양을 표시 하는지 여부를 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|WebBrowser 모든 스타일 태그 문자 모양을 표시 하는지 여부를 검색 합니다.|  
-|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|WebBrowser를 알 수 없는 모든 태그 문자 모양을 표시 하는지 여부를 검색 합니다.|  
-|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|현재 선택 영역에 가로 선을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::HyperLink](#hyperlink)|현재 선택 영역에 있는 하이퍼링크를 삽입합니다.|  
-|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Microsoft Internet Explorer 5와 호환 되는 붙여넣기 작업을 수행합니다.|  
-|[CHtmlEditCtrlBase::Iframe](#iframe)|현재 선택 영역에 있는 인라인 프레임을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::Image](#image)|현재 선택 영역에 있는 이미지를 덮어씁니다.|  
-|[CHtmlEditCtrlBase::Indent](#indent)|선택한 텍스트의 들여쓰기는 들여쓰기 증분만큼 증가합니다.|  
-|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|현재 선택 영역에 있는 상자를 덮어씁니다.|  
-|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|현재 선택 영역에 단추 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|현재 선택에 숨겨진된 컨트롤을 삽입합니다.|  
-|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|이미지 컨트롤에서 현재 선택 영역을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|현재 선택 영역에 대해 암호 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|현재 선택 영역에 재설정 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|현재 선택 영역에 있는 전송 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|현재 선택 영역에 파일 업로드 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|요소는 정적으로 배치 하는 경우 확인 합니다.|  
-|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|요소 절대 위치로 지정 하는 경우를 결정 합니다.|  
-|[CHtmlEditCtrlBase::Italic](#italic)|현재 선택 영역을 기울임꼴 및 일반 글꼴로 설정/해제 합니다.|  
-|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|형식 블록에 중점을 현재 선택이 설정은에 있습니다.|  
-|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|왼쪽 정렬 형식을 블록에서 현재 선택이 설정은 합니다.|  
-|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|오른쪽 정렬 형식 블록에서 현재 선택이 설정은 합니다.|  
-|[CHtmlEditCtrlBase::ListBox](#listbox)|현재 선택 항목의 목록 상자 선택 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::Marquee](#marquee)|현재 선택한 내용에는 빈 윤곽을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::NewDocument](#newdocument)|새 문서를 만듭니다.|  
-|[CHtmlEditCtrlBase::OrderList](#orderlist)|현재 선택 영역을 정렬 된 목록 및 일반 형식 블록을 설정/해제 합니다.|  
-|[CHtmlEditCtrlBase::Outdent](#outdent)|감소 한 증분 형식 블록의 들여쓰기에 현재 선택이 설정은 합니다.|  
-|[CHtmlEditCtrlBase::Paragraph](#paragraph)|현재 선택 영역에서 줄 바꿈을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::Paste](#paste)|현재 선택 영역에서 클립보드의 내용을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|현재 문서를 인쇄 합니다.|  
-|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|현재 문서의 기본 인쇄 미리 보기 템플릿 또는 사용자 지정 템플릿을 사용 하 여 인쇄 미리 보기 창을 엽니다.|  
-|[CHtmlEditCtrlBase::QueryStatus](#querystatus)|명령의 상태를 쿼리 하는이 메서드를 호출 합니다.|  
-|[CHtmlEditCtrlBase::RadioButton](#radiobutton)|현재 선택 영역에 있는 라디오 컨트롤이 덮어씁니다.|  
-|[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|현재 문서를 새로 고칩니다.|  
-|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|현재 선택 영역에서 서식 지정 태그를 제거합니다.|  
-|[CHtmlEditCtrlBase::SaveAs](#saveas)|현재 웹 페이지를 파일에 저장 합니다.|  
-|[CHtmlEditCtrlBase::SelectAll](#selectall)|전체 문서를 선택합니다.|  
-|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|절대 위치로 지정 된 요소를를 끌어 이동할 수 있습니다.|  
-|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|설정 하는 요소의 위치 속성을 "absolute" 또는 "정적"입니다.|  
-|[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|원자성 선택 모드를 설정 합니다.|  
-|[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|URL의 자동 검색을 켜고 끕니다.|  
-|[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|현재 선택 항목의 배경색을 설정합니다.|  
-|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|현재 블록 형식 태그를 설정합니다.|  
-|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|현재 선택 영역 또는 삽입 지점에 대 한 책갈피 앵커를 만듭니다.|  
-|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|CSS 수준 (CSS1 또는 CSS2) 편집기를 지 원하는 있는 경우 선택 되었습니다.|  
-|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|작성 설정 기본 설정 하려면이 메서드를 호출 합니다.|  
-|[CHtmlEditCtrlBase::SetDesignMode](#setdesignmode)|디자인 모드를 설정 합니다.|  
-|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|빗살 무늬 테두리를 사용 하지 않도록 설정 하 고 편집 포커스가 있는 요소 주위 처리 합니다.|  
-|[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|현재 문서의 HTML을 설정합니다.|  
-|[CHtmlEditCtrlBase::SetFontFace](#setfontface)|현재 선택 영역에 대 한 글꼴을 설정합니다.|  
-|[CHtmlEditCtrlBase::SetFontSize](#setfontsize)|현재 선택 영역에 대 한 글꼴 크기를 설정합니다.|  
-|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|현재 선택 된 전경 (텍스트) 색을 설정합니다.|  
-|[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|Microsoft Internet Explorer 5와 호환 되도록 붙여넣기 작업을 설정 합니다.|  
-|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|WebBrowser 요소의 모양을 크기 조정 또는 이동 작업 동안 지속적으로 업데이트 하도록 하면 됩니다.|  
-|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|여러 선택할 수 있습니다.|  
-|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|마우스 포인터를 변경 하려면 되지 WebBrowser 명령입니다.|  
-|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|설정/해제 간에 텍스트 입력 모드 삽입를 덮어씁니다.|  
-|[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|디자인 모드에서 보이지 않는 요소를 숨깁니다.|  
-|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|모든 요소에 대해 문자 모양을 표시는 **styleFloat** 속성입니다.|  
-|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|문서에서 모든 태그의 위치를 표시 하려면 문자 모양이 표시 됩니다.|  
-|[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|모든 영역 태그 문자 모양을 표시합니다.|  
-|[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|모든 br 태그 문자 모양을 표시합니다.|  
-|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|에 대 한 모든 주석 태그 문자 모양을 표시합니다.|  
-|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|Internet Explorer 4.0에 표시 된 모든 태그를 표시 합니다.|  
-|[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|모든 스크립트 태그 문자 모양을 표시합니다.|  
-|[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|모든 스타일 태그 문자 모양을 표시합니다.|  
-|[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|모든 알 수 없는 태그 문자 모양을 표시합니다.|  
-|[CHtmlEditCtrlBase::TextArea](#textarea)|현재 선택 영역에 여러 줄 텍스트 입력된 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::TextBox](#textbox)|현재 선택 영역에 텍스트 컨트롤을 덮어씁니다.|  
-|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|현재 선택 영역에서 모든 책갈피를 제거합니다.|  
-|[CHtmlEditCtrlBase::Underline](#underline)|밑줄을 밑줄이 없는 현재 선택 영역을 설정/해제 합니다.|  
-|[CHtmlEditCtrlBase::Unlink](#unlink)|현재 선택 영역에서 하이퍼링크를 제거합니다.|  
-|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|현재 선택 영역을 정렬 된 목록 및 일반 형식 블록을 설정/해제 합니다.|  
+|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Adds an entry to the glyph table, which specifies images to display for specific tags in design mode.|  
+|[CHtmlEditCtrlBase::Bold](#bold)|Toggles the bold state of the selected text.|  
+|[CHtmlEditCtrlBase::Button](#button)|Overwrites a button control on the current selection.|  
+|[CHtmlEditCtrlBase::CheckBox](#checkbox)|Overwrites a check box control on the current selection.|  
+|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|Clears the current selection.|  
+|[CHtmlEditCtrlBase::Copy](#copy)|Copies the current selection to the clipboard.|  
+|[CHtmlEditCtrlBase::Cut](#cut)|Copies the current selection to the clipboard and then deletes it.|  
+|[CHtmlEditCtrlBase::Delete](#delete)|Deletes the current selection.|  
+|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|Overwrites a drop-down selection control on the current selection.|  
+|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|Removes all entries from the glyph table, which hides all images displayed for tags in design mode.|  
+|[CHtmlEditCtrlBase::ExecCommand](#execcommand)|Executes a command.|  
+|[CHtmlEditCtrlBase::Font](#font)|Opens a font dialog box to enable the user to change the text color, font, and font size of the current selection.|  
+|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|Returns whether an element's position property is "absolute."|  
+|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|Retrieves the background color of the current selection.|  
+|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|Retrieves the current block format tag.|  
+|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|Retrieves the strings corresponding to the available block format tags.|  
+|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|Retrieves the name of a bookmark anchor.|  
+|[CHtmlEditCtrlBase::GetDocument](#getdocument)|Retrieves the document object.|  
+|[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|Retrieves the HTML of the current document.|  
+|[CHtmlEditCtrlBase::GetDocumentTitle](#getdocumenttitle)|Retrieves the document's title.|  
+|[CHtmlEditCtrlBase::GetEvent](#getevent)|Retrieves an interface pointer to the event object that contains information relevant to the most recent event.|  
+|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|Retrieves the object that fired the event.|  
+|[CHtmlEditCtrlBase::GetFontFace](#getfontface)|Retrieves the font name for the current selection.|  
+|[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|Retrieves the font size for the current selection.|  
+|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|Retrieves the foreground (text) color of the current selection.|  
+|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|Returns the security zone of the current page in the web browser.|  
+|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|Indicates whether the HTML document has changed.|  
+|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|Returns whether a glyph is displayed for all elements that have a **styleFloat** property.|  
+|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|Returns whether the WebBrowser displays glyphs to show the location of all tags in a document.|  
+|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|Retrieves whether the WebBrowser displays a glyph for area tags.|  
+|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|Retrieves whether the WebBrowser displays a glyph for br tags.|  
+|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|Retrieves whether the WebBrowser displays a glyph for comment tags.|  
+|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|Retrieves whether the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|Retrieves whether the WebBrowser displays a glyph for all the script tags.|  
+|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|Retrieves whether the WebBrowser displays a glyph for all the style tags.|  
+|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|Retrieves whether the WebBrowser displays a glyph for all unknown tags.|  
+|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|Overwrites a horizontal line on the current selection.|  
+|[CHtmlEditCtrlBase::HyperLink](#hyperlink)|Inserts a hyperlink on the current selection.|  
+|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Performs a paste operation compatible with Microsoft Internet Explorer 5.|  
+|[CHtmlEditCtrlBase::Iframe](#iframe)|Overwrites an inline frame on the current selection.|  
+|[CHtmlEditCtrlBase::Image](#image)|Overwrites an image on the current selection.|  
+|[CHtmlEditCtrlBase::Indent](#indent)|Increases the indent of the selected text by one indentation increment.|  
+|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|Overwrites a box on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|Overwrites a button control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|Inserts a hidden control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|Overwrites an image control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|Overwrites a password control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|Overwrites a reset control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|Overwrites a submit control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|Overwrites a file upload control on the current selection.|  
+|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|Determines if an element is statically positioned.|  
+|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|Determines if an element is absolutely positioned.|  
+|[CHtmlEditCtrlBase::Italic](#italic)|Toggles the current selection between italic and nonitalic.|  
+|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|Centers the format block in which the current selection is located.|  
+|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|Left-justifies the format block in which the current selection is located.|  
+|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|Right-justifies the format block in which the current selection is located.|  
+|[CHtmlEditCtrlBase::ListBox](#listbox)|Overwrites a list box selection control on the current selection.|  
+|[CHtmlEditCtrlBase::Marquee](#marquee)|Overwrites an empty marquee on the current selection.|  
+|[CHtmlEditCtrlBase::NewDocument](#newdocument)|Creates a new document.|  
+|[CHtmlEditCtrlBase::OrderList](#orderlist)|Toggles the current selection between an ordered list and a normal format block.|  
+|[CHtmlEditCtrlBase::Outdent](#outdent)|Decreases by one increment the indentation of the format block in which the current selection is located.|  
+|[CHtmlEditCtrlBase::Paragraph](#paragraph)|Overwrites a line break on the current selection.|  
+|[CHtmlEditCtrlBase::Paste](#paste)|Overwrites the contents of the clipboard on the current selection.|  
+|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|Prints the current document.|  
+|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|Opens the Print Preview window for the current document using either the default print preview template or a custom template.|  
+|[CHtmlEditCtrlBase::QueryStatus](#querystatus)|Call this method to query the status of commands.|  
+|[CHtmlEditCtrlBase::RadioButton](#radiobutton)|Overwrites a radio control on the current selection.|  
+|[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|Refreshes the current document.|  
+|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|Removes the formatting tags from the current selection.|  
+|[CHtmlEditCtrlBase::SaveAs](#saveas)|Saves the current Web page to a file.|  
+|[CHtmlEditCtrlBase::SelectAll](#selectall)|Selects the entire document.|  
+|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|Allows absolutely positioned elements to be moved by dragging.|  
+|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|Sets an element's position property to "absolute" or "static."|  
+|[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|Set atomic selection mode.|  
+|[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|Turns automatic URL detection on and off.|  
+|[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|Sets the background color of the current selection.|  
+|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|Sets the current block format tag.|  
+|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|Creates a bookmark anchor for the current selection or insertion point.|  
+|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|Selects which CSS level (CSS1 or CSS2) the editor will support, if any.|  
+|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|Call this method to set the default compose settings.|  
+|[CHtmlEditCtrlBase::SetDesignMode](#setdesignmode)|Set design mode.|  
+|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|Disables the hatched border and handles around an element that has edit focus.|  
+|[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|Sets the HTML of the current document.|  
+|[CHtmlEditCtrlBase::SetFontFace](#setfontface)|Sets the font for the current selection.|  
+|[CHtmlEditCtrlBase::SetFontSize](#setfontsize)|Sets the font size for the current selection.|  
+|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|Sets the foreground (text) color of the current selection.|  
+|[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|Sets the paste operation to be compatible with Microsoft Internet Explorer 5.|  
+|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|Causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation.|  
+|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|Enables multiple selection.|  
+|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Commands the WebBrowser never to change the mouse pointer.|  
+|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|Toggles the text-entry mode between insert and overwrite.|  
+|[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|Hides invisible elements in design mode.|  
+|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|Displays a glyph for all elements that have a **styleFloat** property.|  
+|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|Displays glyphs to show the location of all tags in a document.|  
+|[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|Displays a glyph for all the area tags.|  
+|[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|Displays a glyph for all the br tags.|  
+|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|Displays a glyph for all the comment tags.|  
+|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|Displays all the tags shown in Microsoft Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|Displays a glyph for all the script tags.|  
+|[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|Displays a glyph for all the style tags.|  
+|[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|Displays a glyph for all the unknown tags.|  
+|[CHtmlEditCtrlBase::TextArea](#textarea)|Overwrites a multiline text input control on the current selection.|  
+|[CHtmlEditCtrlBase::TextBox](#textbox)|Overwrites a text control on the current selection.|  
+|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|Removes any bookmark from the current selection.|  
+|[CHtmlEditCtrlBase::Underline](#underline)|Toggles the current selection between underlined and not underlined.|  
+|[CHtmlEditCtrlBase::Unlink](#unlink)|Removes any hyperlink from the current selection.|  
+|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Toggles the current selection between an ordered list and a normal format block.|  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 파생된 클래스의 이름입니다.  
+ The name of the derived class.  
   
-## <a name="remarks"></a>주의  
- **CHtmlEditCtrlBase** 는 멤버 함수는 WebBrowser HTML 편집 명령와 같은 [b o l d](#bold)합니다. (또는 호출할 수 있습니다 [ExecCommand](#execcommand) 실행 하는 **IDM_BOLD** 명령입니다.)  
+## <a name="remarks"></a>Remarks  
+ **CHtmlEditCtrlBase** provides member functions for the WebBrowser's HTML editing commands, such as [Bold](#bold). (Alternately, you can call [ExecCommand](#execcommand) to execute the **IDM_BOLD** command.)  
   
- **CHtmlEditCtrlBase** 자체 stand 되지는 않습니다. HTML 편집 WebBrowser의 기능을 노출 하는 파생된 클래스에 대 한 기본 클래스로 하도록 설계 되었습니다 (참조 [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md) 및 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)).  
+ **CHtmlEditCtrlBase** is not intended to stand on its own. It is designed to be a base class for derived classes that expose the HTML editing functionality of the WebBrowser (see [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md) and [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CHtmlEditCtrlBase`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxhtml.h  
   
-##  <a name="addtoglyphtable"></a>CHtmlEditCtrlBase::AddToGlyphTable  
- 디자인 모드에서 특정 태그에 대 한 표시할 이미지를 지정 하는 문자 모양 테이블에 항목을 추가 합니다.  
+##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable  
+ Adds an entry to the glyph table, which specifies images to display for specific tags in design mode.  
   
 ```  
 HRESULT AddToGlyphTable(
@@ -301,170 +407,170 @@ HRESULT AddToGlyphTable(
     unsigned int nImgHeight) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szTag`  
- 태그 이름 (예: "P" 또는 "table")입니다.  
+ The tag name (for example, "P" or "table").  
   
  *szImgUrl*  
- 이미지 URL입니다.  
+ The image URL.  
   
  *nTagType*  
- 태그 형식의: 0만 열린 태그에 대 한 이미지의 크기는 것을 의미 합니다. 1만 닫는 태그에 대 한 이미지의 크기는 것을 의미 합니다. 2는 이미지의 크기는 모두 태그와 닫는 태그에 대 한 것을 의미 합니다. 단일 태그 br 및 주석 예: 0으로 설정 태그 형식으로 추가 되어야 합니다.  
+ Tag type: 0 means the image is for the opening tag only. 1 means the image is for the closing tag only. 2 means the image is for both the opening and closing tags. Single tags such as br and comment must be added with the tag type set to 0.  
   
  *nAlignment*  
- 맞춤 (사각형 요소에만 해당):이 매개 변수 맞춤 특성을 가진 요소에 대 한 이미지를 나타냅니다. 왼쪽 = 0, 센터 = 1, 오른쪽 = 2, 및 정의 되지 않은 = 3입니다. 왼쪽, 오른쪽 또는 가운데 특성 설정 요소에 합니다.  
+ Alignment (rectangular elements only): This parameter indicates that the image is for an element with an alignment attribute. Left = 0, center = 1, right = 2, and undefined = 3. Left, right, or center attributes must be explicitly set on the element.  
   
  *nPosInfo*  
- 위치 정보입니다. 어떤 연계 스타일 시트 (CSS) 위치를 지정할 값 정적 위치에 적용 되는 문자 모양을 결정 합니다. 위치 = 0, 절대 위치 = 1, 상대 위치 = 2, 및 모든 = 3입니다. 이 필드를 두면 태그에 대 한 하나의 문자 모양 및 태그를 두면 앵커 포인트를 표시 하려면 다른 문자를 지정할 수 있습니다.  
+ Positioning information. Determines what cascading style sheets (CSS) positioning value the glyph applies to, where static positioning = 0, absolute positioning = 1, relative positioning = 2, and all = 3. This field enables you to specify one glyph for a tag when it is not positioned and another glyph to show an anchor point when the tag is positioned.  
   
  *nDirection*  
- 방향입니다. 이 매개 변수는 현재 언어의 읽기 순서에 따라 태그에 대 한 이미지를 지정 합니다. 왼쪽에서 오른쪽으로 0을 지정, 1 오른쪽에서 왼쪽으로 지정 합니다., 2 인 경우 아래에서 위로, 아래에서 위로 지정 하는 3 및 4를 모두 지정 합니다. 일반적으로이 필드 4를 설정 합니다.  
+ The direction. This parameter specifies the image for a tag based on the reading order of the current language. 0 specifies left to right, 1 specifies right to left, 2 specifies top to bottom, 3 specifies bottom to top, and 4 specifies all. You normally set this field to 4.  
   
  *nImgWidth*  
- 이미지 너비 (픽셀)에서입니다.  
+ The image width in pixels.  
   
  *nImgHeight*  
- 이미지 높이 (픽셀)에서입니다.  
+ The image height in pixels.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 매개 변수에 대 한 자세한 내용은 "문자 모양 표 문자열 형식입니다"의 참조 [편집 문자 모양을 사용 하 여](https://msdn.microsoft.com/library/aa969614.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information on the parameters, see "Glyph Table String Format" in [Using Editing Glyphs](https://msdn.microsoft.com/library/aa969614.aspx).  
   
- 이 메서드는 전송 된 [IDM_ADDTOGLYPHTABLE 명령 ID](https://msdn.microsoft.com/library/aa769891.aspx) WebBrowser 컨트롤에 있습니다.  
+ This method sends the [IDM_ADDTOGLYPHTABLE command ID](https://msdn.microsoft.com/library/aa769891.aspx) to the WebBrowser control.  
   
-##  <a name="bold"></a>CHtmlEditCtrlBase::Bold  
- 선택한 텍스트의 굵게 표시 된 상태를 토글합니다.  
+##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold  
+ Toggles the bold state of the selected text.  
   
 ```  
 HRESULT Bold() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_BOLD 명령 ID](https://msdn.microsoft.com/library/aa769861.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BOLD command ID](https://msdn.microsoft.com/library/aa769861.aspx) to the WebBrowser control.  
   
-##  <a name="button"></a>CHtmlEditCtrlBase::Button  
- 현재 선택 영역에 단추 컨트롤을 덮어씁니다.  
+##  <a name="button"></a>  CHtmlEditCtrlBase::Button  
+ Overwrites a button control on the current selection.  
   
 ```  
 HRESULT Button(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 단추 컨트롤의 ID입니다.  
+ The ID of the button control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_BUTTON 명령 ID](https://msdn.microsoft.com/library/aa769966.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BUTTON command ID](https://msdn.microsoft.com/library/aa769966.aspx) to the WebBrowser control.  
   
-##  <a name="checkbox"></a>CHtmlEditCtrlBase::CheckBox  
- 현재 선택 영역에서 확인란 컨트롤을 덮어씁니다.  
+##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox  
+ Overwrites a check box control on the current selection.  
   
 ```  
 HRESULT CheckBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 확인란 컨트롤의 ID입니다.  
+ The ID of the check box control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_CHECKBOX 명령 ID](https://msdn.microsoft.com/library/aa769972.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_CHECKBOX command ID](https://msdn.microsoft.com/library/aa769972.aspx) to the WebBrowser control.  
   
-##  <a name="clearselection"></a>CHtmlEditCtrlBase::ClearSelection  
- 현재 선택을 해제합니다.  
+##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection  
+ Clears the current selection.  
   
 ```  
 HRESULT ClearSelection() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_CLEARSELECTION 명령 ID](https://msdn.microsoft.com/library/aa770038.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_CLEARSELECTION command ID](https://msdn.microsoft.com/library/aa770038.aspx) to the WebBrowser control.  
   
-##  <a name="copy"></a>CHtmlEditCtrlBase::Copy  
- 현재 선택 영역을 클립보드에 복사 합니다.  
+##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy  
+ Copies the current selection to the clipboard.  
   
 ```  
 HRESULT Copy() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_COPY 명령 ID](https://msdn.microsoft.com/library/aa769872.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_COPY command ID](https://msdn.microsoft.com/library/aa769872.aspx) to the WebBrowser control.  
   
-##  <a name="cut"></a>CHtmlEditCtrlBase::Cut  
- 현재 선택 영역을 클립보드에 복사 하 고 삭제 합니다.  
+##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut  
+ Copies the current selection to the clipboard and then deletes it.  
   
 ```  
 HRESULT Cut() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_CUT 명령 ID](https://msdn.microsoft.com/library/aa769875.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_CUT command ID](https://msdn.microsoft.com/library/aa769875.aspx) to the WebBrowser control.  
   
-##  <a name="delete"></a>CHtmlEditCtrlBase::Delete  
- 현재 선택 영역을 삭제합니다.  
+##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete  
+ Deletes the current selection.  
   
 ```  
 HRESULT Delete() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_DELETE 명령 ID](https://msdn.microsoft.com/library/aa769876.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_DELETE command ID](https://msdn.microsoft.com/library/aa769876.aspx) to the WebBrowser control.  
   
-##  <a name="dropdownbox"></a>CHtmlEditCtrlBase::DropDownBox  
- 현재 선택 영역에 대해 드롭다운 목록 선택 컨트롤을 덮어씁니다.  
+##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox  
+ Overwrites a drop-down selection control on the current selection.  
   
 ```  
 HRESULT DropDownBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 드롭다운 목록 선택 컨트롤의 ID입니다.  
+ The ID of the drop-down selection control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_DROPDOWNBOX 명령 ID](https://msdn.microsoft.com/library/aa769984.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_DROPDOWNBOX command ID](https://msdn.microsoft.com/library/aa769984.aspx) to the WebBrowser control.  
   
-##  <a name="emptyglyphtable"></a>CHtmlEditCtrlBase::EmptyGlyphTable  
- 디자인 모드에서 태그에 대 한 표시 되는 모든 이미지를 숨기는 문자 모양 테이블에서 모든 항목을 제거 합니다.  
+##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable  
+ Removes all entries from the glyph table, which hides all images displayed for tags in design mode.  
   
 ```  
 HRESULT EmptyGlyphTable() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_EMPTYGLYPHTABLE 명령 ID](https://msdn.microsoft.com/library/aa769907.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_EMPTYGLYPHTABLE command ID](https://msdn.microsoft.com/library/aa769907.aspx) to the WebBrowser control.  
   
-##  <a name="execcommand"></a>CHtmlEditCtrlBase::ExecCommand  
- 명령을 실행합니다.  
+##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand  
+ Executes a command.  
   
 ```  
 HRESULT ExecCommand(
@@ -481,855 +587,855 @@ HRESULT ExecCommand(
     VARIANT* pOutVar = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 실행할 명령 ID입니다. 목록에 대 한 참조 [MSHTML 명령 식별자](https://msdn.microsoft.com/library/aa741315.aspx)합니다.  
+ The command ID to be executed. For a list, see [MSHTML Command Identifiers](https://msdn.microsoft.com/library/aa741315.aspx).  
   
  `cmdExecOpt`  
- 가져온 값의 [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) 개체 해야 명령이 실행 되는 방법을 설명 하는 열거형입니다.  
+ Values taken from the [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) enumeration, which describe how the object should execute the command.  
   
  *pInVar*  
- 입력된 인수입니다.  
+ The input arguments.  
   
  *pOutVar*  
- 명령 출력 합니다.  
+ The command output.  
   
  *pGuid*  
- 명령 그룹의 GUID입니다.  
+ The GUID of the command group.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는의 기능을 제공 [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)합니다.  
+### <a name="remarks"></a>Remarks  
+ This method provides the functionality of [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
   
-##  <a name="font"></a>CHtmlEditCtrlBase::Font  
- 텍스트 색, 글꼴 및 현재 선택 된 글꼴 크기를 변경할 수 있도록 글꼴 대화 상자를 엽니다.  
+##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
+ Opens a font dialog box to enable the user to change the text color, font, and font size of the current selection.  
   
 ```  
 HRESULT Font() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_FONT 명령 ID](https://msdn.microsoft.com/library/aa769913.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_FONT command ID](https://msdn.microsoft.com/library/aa769913.aspx) to the WebBrowser control.  
   
-##  <a name="getabsoluteposition"></a>CHtmlEditCtrlBase::GetAbsolutePosition  
- 요소의 위치 속성이 "절대." 인지 반환  
+##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition  
+ Returns whether an element's position property is "absolute."  
   
 ```  
 HRESULT GetAbsolutePosition(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 요소의 위치 속성에 "절대." 설정 되 면 true  
+ True if the element's position property is set to "absolute."  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [IDM_ABSOLUTE_POSITION 명령 ID](https://msdn.microsoft.com/library/aa769889.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_ABSOLUTE_POSITION Command ID](https://msdn.microsoft.com/library/aa769889.aspx).  
   
-##  <a name="getbackcolor"></a>CHtmlEditCtrlBase::GetBackColor  
- 현재 선택 항목의 배경색을 검색합니다.  
+##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor  
+ Retrieves the background color of the current selection.  
   
 ```  
 HRESULT GetBackColor(int& nColor) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nColor`  
- 배경색입니다.  
+ The background color.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_BACKCOLOR 명령 ID](https://msdn.microsoft.com/library/aa769858.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx) to the WebBrowser control.  
   
-##  <a name="getblockformat"></a>CHtmlEditCtrlBase::GetBlockFormat  
- 현재 블록 형식 태그를 검색합니다.  
+##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat  
+ Retrieves the current block format tag.  
   
 ```  
 HRESULT GetBlockFormat(CString& strFormat) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *strFormat*  
- 현재 블록 형식 태그입니다.  
+ The current block format tag.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_BLOCKFMT 명령 ID](https://msdn.microsoft.com/library/aa769883.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BLOCKFMT command ID](https://msdn.microsoft.com/library/aa769883.aspx) to the WebBrowser control.  
   
-##  <a name="getblockformatnames"></a>CHtmlEditCtrlBase::GetBlockFormatNames  
- 사용 가능한 블록 형식 태그에 해당 하는 문자열을 검색 합니다.  
+##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames  
+ Retrieves the strings corresponding to the available block format tags.  
   
 ```  
 HRESULT GetBlockFormatNames(CStringArray& sa) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *sa*  
- 사용 가능한 블록 형식 태그 문자열의 배열입니다.  
+ The available block format tags, as an array of strings.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_GETBLOCKFMTS 명령 ID](https://msdn.microsoft.com/library/aa769884.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_GETBLOCKFMTS command ID](https://msdn.microsoft.com/library/aa769884.aspx) to the WebBrowser control.  
   
-##  <a name="getbookmark"></a>CHtmlEditCtrlBase::GetBookMark  
- 책갈피 앵커의 이름을 검색합니다.  
+##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark  
+ Retrieves the name of a bookmark anchor.  
   
 ```  
 HRESULT GetBookMark(CString& strAnchor) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *strAnchor*  
- 책갈피 앵커의 이름입니다.  
+ The name of a bookmark anchor.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [IDM_BOOKMARK 명령 ID](https://msdn.microsoft.com/library/aa769873.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_BOOKMARK Command ID](https://msdn.microsoft.com/library/aa769873.aspx).  
   
-##  <a name="getdocument"></a>CHtmlEditCtrlBase::GetDocument  
- 문서 개체를 검색합니다.  
+##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument  
+ Retrieves the document object.  
   
 ```  
 HRESULT GetDocument(IHTMLDocument2** ppDoc) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ppDoc`  
- Document 개체입니다.  
+ The document object.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="getdocumenthtml"></a>CHtmlEditCtrlBase::GetDocumentHTML  
- 현재 문서의 HTML을 검색합니다.  
+##  <a name="getdocumenthtml"></a>  CHtmlEditCtrlBase::GetDocumentHTML  
+ Retrieves the HTML of the current document.  
   
 ```  
 HRESULT GetDocumentHTML(CString& szHTML) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szHTML`  
- HTML입니다.  
+ The HTML.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="getdocumenttitle"></a>CHtmlEditCtrlBase::GetDocumentTitle  
- 문서의 제목을 검색합니다.  
+##  <a name="getdocumenttitle"></a>  CHtmlEditCtrlBase::GetDocumentTitle  
+ Retrieves the document's title.  
   
 ```  
 HRESULT GetDocumentTitle(CString& szTitle) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *szTitle*  
- 문서의 제목입니다.  
+ The document's title.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="getevent"></a>CHtmlEditCtrlBase::GetEvent  
- 가장 최근 이벤트와 관련 된 정보를 포함 하는 이벤트 개체에 대 한 인터페이스 포인터를 검색 합니다.  
+##  <a name="getevent"></a>  CHtmlEditCtrlBase::GetEvent  
+ Retrieves an interface pointer to the event object that contains information relevant to the most recent event.  
   
 ```  
 HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ppEventObj`  
- 이벤트 개체입니다.  
+ The event object.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="geteventsrcelement"></a>CHtmlEditCtrlBase::GetEventSrcElement  
- 이벤트를 발생 시킨 개체를 검색 합니다.  
+##  <a name="geteventsrcelement"></a>  CHtmlEditCtrlBase::GetEventSrcElement  
+ Retrieves the object that fired the event.  
   
 ```  
 HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *ppSrcElement*  
- 이벤트를 발생 시킨 요소입니다.  
+ The element that fired the event.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="getfontface"></a>CHtmlEditCtrlBase::GetFontFace  
- 현재 선택 영역에 대 한 글꼴 이름을 검색합니다.  
+##  <a name="getfontface"></a>  CHtmlEditCtrlBase::GetFontFace  
+ Retrieves the font name for the current selection.  
   
 ```  
 HRESULT GetFontFace(CString& strFace) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `strFace`  
- 글꼴 이름입니다.  
+ The font name.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 현재 선택 영역에 둘 이상의 글꼴을 사용 하는 경우 `strFace` 빈 문자열입니다.  
+### <a name="remarks"></a>Remarks  
+ If the current selection uses more than one font, `strFace` will be an empty string.  
   
- 이 메서드는 전송 된 [IDM_FONTNAME 명령 ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser 컨트롤에 있습니다.  
+ This method sends the [IDM_FONTNAME command ID](https://msdn.microsoft.com/library/aa769880.aspx) to the WebBrowser control.  
   
-##  <a name="getfontsize"></a>CHtmlEditCtrlBase::GetFontSize  
- 현재 선택 영역에 대 한 글꼴 크기를 검색합니다.  
+##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize  
+ Retrieves the font size for the current selection.  
   
 ```  
 HRESULT GetFontSize(short& nSize) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nSize`  
- 글꼴 크기입니다.  
+ The font size.  
   
-### <a name="return-value"></a>반환 값  
- HTML 글꼴 크기 (1-7)을 반환합니다. 선택 영역 여러 글꼴 크기를 포함 하는 경우 0을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the HTML font size (1-7). Returns 0 if the selection contains multiple font sizes.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_FONTSIZE 명령 ID](https://msdn.microsoft.com/library/aa769881.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_FONTSIZE command ID](https://msdn.microsoft.com/library/aa769881.aspx) to the WebBrowser control.  
   
-##  <a name="getforecolor"></a>CHtmlEditCtrlBase::GetForeColor  
- 전경 (텍스트) 색 현재 선택 영역을 검색 합니다.  
+##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor  
+ Retrieves the foreground (text) color of the current selection.  
   
 ```  
 HRESULT GetForeColor(int& nColor);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nColor`  
- 전경색입니다.  
+ The foreground color.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_FORECOLOR 명령 ID](https://msdn.microsoft.com/library/aa769882.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_FORECOLOR Command ID](https://msdn.microsoft.com/library/aa769882.aspx) to the WebBrowser control.  
   
-##  <a name="getframezone"></a>CHtmlEditCtrlBase::GetFrameZone  
- 웹 브라우저에서 현재 페이지의 보안 영역을 반환합니다.  
+##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone  
+ Returns the security zone of the current page in the web browser.  
   
 ```  
 HRESULT GetFrameZone(short& nZone) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *nZone*  
- 보안 영역입니다.  
+ The security zone.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_GETFRAMEZONE 명령 ID](https://msdn.microsoft.com/library/aa769916.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_GETFRAMEZONE command ID](https://msdn.microsoft.com/library/aa769916.aspx) to the WebBrowser control.  
   
-##  <a name="getisdirty"></a>CHtmlEditCtrlBase::GetIsDirty  
- HTML 문서 변경 되었는지 여부를 나타냅니다.  
+##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty  
+ Indicates whether the HTML document has changed.  
   
 ```  
 HRESULT GetIsDirty() const;  
 ```  
   
-### <a name="remarks"></a>주의  
- 문서 변경 되었는지 여부를 나타냅니다. `GetIsDirty`반환 된 `HRESULT` 에서 [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910)합니다.  
+### <a name="remarks"></a>Remarks  
+ Indicates whether the document has changed. `GetIsDirty` returns an `HRESULT` from [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
   
-##  <a name="getshowalignedsitetags"></a>CHtmlEditCtrlBase::GetShowAlignedSiteTags  
- 모든 요소에 대해 문자 모양을 표시 되는지 여부를 반환 합니다.는 **styleFloat** 속성입니다.  
+##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
+ Returns whether a glyph is displayed for all elements that have a **styleFloat** property.  
   
 ```  
 HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 기호가 있는 모든 요소에 대해 표시 되 면 true는 **styleFloat** 속성, false 이면 문자 모양은 표시 됩니다.  
+ True if a glyph is displayed for all elements that have a **styleFloat** property; false if no glyph is displayed.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [IDM_SHOWALIGNEDSITETAGS 명령 ID](https://msdn.microsoft.com/library/aa769947.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWALIGNEDSITETAGS Command ID](https://msdn.microsoft.com/library/aa769947.aspx).  
   
-##  <a name="getshowalltags"></a>CHtmlEditCtrlBase::GetShowAllTags  
- WebBrowser 문서에서 모든 태그의 위치를 표시 하려면 문자 모양을 표시 여부를 반환 합니다.  
+##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags  
+ Returns whether the WebBrowser displays glyphs to show the location of all tags in a document.  
   
 ```  
 HRESULT GetShowAllTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- WebBrowser; 문서에서 모든 태그의 위치를 표시 하려면 문자 모양으로 표시 하는 경우 true입니다. 그렇지 않은 경우 false입니다.  
+ True if the WebBrowser displays glyphs to show the location of all tags in a document; false if it does not.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [IDM_SHOWALLTAGS 명령 ID](https://msdn.microsoft.com/library/aa769948.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWALLTAGS Command ID](https://msdn.microsoft.com/library/aa769948.aspx).  
   
-##  <a name="getshowareatags"></a>CHtmlEditCtrlBase::GetShowAreaTags  
- WebBrowser 영역 태그 문자 모양을 표시 하는지 여부를 검색 합니다.  
+##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags  
+ Retrieves whether the WebBrowser displays a glyph for area tags.  
   
 ```  
 HRESULT GetShowAreaTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- True 이면 WebBrowser는 그렇지 않은 경우 false 영역 태그에 대 한 문자가 표시 됩니다.  
+ True if the WebBrowser displays a glyph for area tags, false if it does not.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [IDM_SHOWAREATAGS 명령 ID](https://msdn.microsoft.com/library/aa769949.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWAREATAGS Command ID](https://msdn.microsoft.com/library/aa769949.aspx).  
   
-##  <a name="getshowbrtags"></a>CHtmlEditCtrlBase::GetShowBRTags  
- WebBrowser br 태그 문자 모양을 표시 하는지 여부를 검색 합니다.  
+##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags  
+ Retrieves whether the WebBrowser displays a glyph for br tags.  
   
 ```  
 HRESULT GetShowBRTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- WebBrowser 문자 모양을 표시 br 태그에 대 한 false를 반환 하지 않으면 면 true입니다.  
+ True if the WebBrowser displays a glyph for br tags, false if it doesn't.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [IDM_SHOWWBRTAGS 명령 ID](https://msdn.microsoft.com/library/aa769956.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWWBRTAGS Command ID](https://msdn.microsoft.com/library/aa769956.aspx).  
   
-##  <a name="getshowcommenttags"></a>CHtmlEditCtrlBase::GetShowCommentTags  
- WebBrowser 주석 태그 문자 모양을 표시 하는지 여부를 검색 합니다.  
+##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags  
+ Retrieves whether the WebBrowser displays a glyph for comment tags.  
   
 ```  
 HRESULT GetShowCommentTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- True 이면 WebBrowser 표시 주석 태그 문자 모양을 false를 반환 하지 않으면.  
+ True if the WebBrowser displays a glyph for comment tags, false if it doesn't.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [IDM_SHOWCOMMENTTAGS 명령 ID](https://msdn.microsoft.com/library/aa769950.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWCOMMENTTAGS Command ID](https://msdn.microsoft.com/library/aa769950.aspx).  
   
-##  <a name="getshowmisctags"></a>CHtmlEditCtrlBase::GetShowMiscTags  
- WebBrowser Internet Explorer 4.0에 표시 된 모든 태그를 표시 하는지 여부를 검색 합니다.  
+##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags  
+ Retrieves whether the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0.  
   
 ```  
 HRESULT GetShowMiscTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- WebBrowser Internet Explorer 4.0, 그렇지 않은 경우 false에에서 표시 된 모든 태그를 표시 하는 경우 true입니다.  
+ True if the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0, false if it does not.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [IDM_SHOWMISCTAGS 명령 ID](https://msdn.microsoft.com/library/aa769952.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWMISCTAGS Command ID](https://msdn.microsoft.com/library/aa769952.aspx).  
   
-##  <a name="getshowscripttags"></a>CHtmlEditCtrlBase::GetShowScriptTags  
- WebBrowser 모든 스크립트 태그 문자 모양을 표시 하는지 여부를 검색 합니다.  
+##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags  
+ Retrieves whether the WebBrowser displays a glyph for all the script tags.  
   
 ```  
 HRESULT GetShowScriptTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- True 이면 WebBrowser 표시는 모든 스크립트 태그 문자 모양을 false 그렇지 않은 경우.  
+ True if the WebBrowser displays a glyph for all the script tags, false if it does not.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [IDM_SHOWSCRIPTTAGS 명령 ID](https://msdn.microsoft.com/library/aa769953.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWSCRIPTTAGS Command ID](https://msdn.microsoft.com/library/aa769953.aspx).  
   
-##  <a name="getshowstyletags"></a>CHtmlEditCtrlBase::GetShowStyleTags  
- WebBrowser 모든 스타일 태그 문자 모양을 표시 하는지 여부를 검색 합니다.  
+##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags  
+ Retrieves whether the WebBrowser displays a glyph for all the style tags.  
   
 ```  
 HRESULT GetShowStyleTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- True 이면 WebBrowser 표시 스타일 태그 문자 모양을 false 그렇지 않은 경우  
+ True if the WebBrowser displays a glyph for all the style tags, false if it does not  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [IDM_SHOWSTYLETAGS 명령 ID](https://msdn.microsoft.com/library/aa769954.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWSTYLETAGS Command ID](https://msdn.microsoft.com/library/aa769954.aspx).  
   
-##  <a name="getshowunknowntags"></a>CHtmlEditCtrlBase::GetShowUnknownTags  
- WebBrowser를 알 수 없는 모든 태그 문자 모양을 표시 하는지 여부를 검색 합니다.  
+##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags  
+ Retrieves whether the WebBrowser displays a glyph for all unknown tags.  
   
 ```  
 HRESULT GetShowUnknownTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- True 이면 WebBrowser 표시 모든 알 수 없는 태그 문자 모양을 false 그렇지 않은 경우.  
+ True if the WebBrowser displays a glyph for all unknown tags, false if it does not.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [IDM_SHOWUNKNOWNTAGS 명령 ID](https://msdn.microsoft.com/library/aa769955.aspx)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWUNKNOWNTAGS Command ID](https://msdn.microsoft.com/library/aa769955.aspx).  
   
-##  <a name="horizontalline"></a>CHtmlEditCtrlBase::HorizontalLine  
- 현재 선택 영역에 가로 선을 덮어씁니다.  
+##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine  
+ Overwrites a horizontal line on the current selection.  
   
 ```  
 HRESULT HorizontalLine(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *szID*  
- 가로 줄에 대 한 ID입니다.  
+ The ID for the horizontal line.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_HORIZONTALLINE 명령 ID](https://msdn.microsoft.com/library/aa769968.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_HORIZONTALLINE command ID](https://msdn.microsoft.com/library/aa769968.aspx) to the WebBrowser control.  
   
-##  <a name="hyperlink"></a>CHtmlEditCtrlBase::HyperLink  
- 현재 선택 영역에 있는 하이퍼링크를 삽입합니다.  
+##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink  
+ Inserts a hyperlink on the current selection.  
   
 ```  
 HRESULT HyperLink(LPCTSTR szUrl = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szUrl`  
- 하이퍼링크 URL입니다.  
+ The hyperlink URL.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_HYPERLINK 명령 ID](https://msdn.microsoft.com/library/aa769874.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_HYPERLINK command ID](https://msdn.microsoft.com/library/aa769874.aspx) to the WebBrowser control.  
   
-##  <a name="ie50paste"></a>CHtmlEditCtrlBase::IE50Paste  
- Internet Explorer 5와 호환 되는 붙여넣기 작업을 수행 합니다.  
+##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste  
+ Performs a paste operation that's compatible with Internet Explorer 5.  
   
 ```  
 HRESULT IE50Paste(LPCTSTR szData) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szData`  
- 문자열을 붙여 넣을 것입니다.  
+ The string to paste.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_IE50_PASTE 명령 ID](https://msdn.microsoft.com/library/aa769922.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_IE50_PASTE command ID](https://msdn.microsoft.com/library/aa769922.aspx) to the WebBrowser control.  
   
-##  <a name="iframe"></a>CHtmlEditCtrlBase::Iframe  
- 현재 선택 영역에 있는 인라인 프레임을 덮어씁니다.  
+##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe  
+ Overwrites an inline frame on the current selection.  
   
 ```  
 HRESULT Iframe(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 인라인 프레임에 대 한 ID입니다.  
+ The ID for the inline frame.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_IFRAME 명령 ID](https://msdn.microsoft.com/library/aa769969.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_IFRAME command ID](https://msdn.microsoft.com/library/aa769969.aspx) to the WebBrowser control.  
   
-##  <a name="image"></a>CHtmlEditCtrlBase::Image  
- 현재 선택 영역에 있는 이미지를 덮어씁니다.  
+##  <a name="image"></a>  CHtmlEditCtrlBase::Image  
+ Overwrites an image on the current selection.  
   
 ```  
 HRESULT Image(LPCTSTR szUrl = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szUrl`  
- 삽입할 이미지의 경로 파일 이름입니다.  
+ The path and file name of the image to be inserted.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_IMAGE 명령 ID](https://msdn.microsoft.com/library/aa769970.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_IMAGE command ID](https://msdn.microsoft.com/library/aa769970.aspx) to the WebBrowser control.  
   
-##  <a name="indent"></a>CHtmlEditCtrlBase::Indent  
- 선택한 텍스트의 들여쓰기는 들여쓰기 증분만큼 증가합니다.  
+##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent  
+ Increases the indent of the selected text by one indentation increment.  
   
 ```  
 HRESULT Indent() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_INDENT 명령 ID](https://msdn.microsoft.com/library/aa769963.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INDENT command ID](https://msdn.microsoft.com/library/aa769963.aspx) to the WebBrowser control.  
   
-##  <a name="insfieldset"></a>CHtmlEditCtrlBase::InsFieldSet  
- 현재 선택 영역에 있는 상자를 덮어씁니다.  
+##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet  
+ Overwrites a box on the current selection.  
   
 ```  
 HRESULT InsFieldSet(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 상자에 대 한 ID입니다.  
+ The ID for the box.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_INSFIELDSET 명령 ID](https://msdn.microsoft.com/library/aa769967.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSFIELDSET command ID](https://msdn.microsoft.com/library/aa769967.aspx) to the WebBrowser control.  
   
-##  <a name="insinputbutton"></a>CHtmlEditCtrlBase::InsInputButton  
- 현재 선택 영역에 단추 컨트롤을 덮어씁니다.  
+##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton  
+ Overwrites a button control on the current selection.  
   
 ```  
 HRESULT InsInputButton(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 단추 컨트롤에 대 한 ID입니다.  
+ The ID for the button control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_INSINPUTBUTTON 명령 ID](https://msdn.microsoft.com/library/aa769971.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTBUTTON command ID](https://msdn.microsoft.com/library/aa769971.aspx) to the WebBrowser control.  
   
-##  <a name="insinputhidden"></a>CHtmlEditCtrlBase::InsInputHidden  
- 현재 선택에 숨겨진된 컨트롤을 삽입합니다.  
+##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden  
+ Inserts a hidden control on the current selection.  
   
 ```  
 HRESULT InsInputHidden(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 숨겨진된 컨트롤에 대 한 ID입니다.  
+ The ID for the hidden control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_INSINPUTHIDDEN 명령 ID](https://msdn.microsoft.com/library/aa769974.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTHIDDEN command ID](https://msdn.microsoft.com/library/aa769974.aspx) to the WebBrowser control.  
   
-##  <a name="insinputimage"></a>CHtmlEditCtrlBase::InsInputImage  
- 이미지 컨트롤에서 현재 선택 영역을 덮어씁니다.  
+##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage  
+ Overwrites an image control on the current selection.  
   
 ```  
 HRESULT InsInputImage(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 이미지 컨트롤에 대 한 ID입니다.  
+ The ID for the image control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_INSINPUTIMAGE 명령 ID](https://msdn.microsoft.com/library/aa769975.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTIMAGE command ID](https://msdn.microsoft.com/library/aa769975.aspx) to the WebBrowser control.  
   
-##  <a name="insinputpassword"></a>CHtmlEditCtrlBase::InsInputPassword  
- 현재 선택 영역에 대해 암호 컨트롤을 덮어씁니다.  
+##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword  
+ Overwrites a password control on the current selection.  
   
 ```  
 HRESULT InsInputPassword(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 암호 컨트롤에 대 한 ID입니다.  
+ The ID for the password control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_INSINPUTPASSWORD 명령 ID](https://msdn.microsoft.com/library/aa769976.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTPASSWORD command ID](https://msdn.microsoft.com/library/aa769976.aspx) to the WebBrowser control.  
   
-##  <a name="insinputreset"></a>CHtmlEditCtrlBase::InsInputReset  
- 현재 선택 영역에 재설정 컨트롤을 덮어씁니다.  
+##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset  
+ Overwrites a reset control on the current selection.  
   
 ```  
 HRESULT InsInputReset(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 원래 대로 컨트롤에 대 한 ID입니다.  
+ The ID for the reset control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_INSINPUTRESET 명령 ID](https://msdn.microsoft.com/library/aa769978.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTRESET command ID](https://msdn.microsoft.com/library/aa769978.aspx) to the WebBrowser control.  
   
-##  <a name="insinputsubmit"></a>CHtmlEditCtrlBase::InsInputSubmit  
- 현재 선택 영역에 있는 전송 컨트롤을 덮어씁니다.  
+##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit  
+ Overwrites a submit control on the current selection.  
   
 ```  
 HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 전송 컨트롤에 대 한 ID입니다.  
+ The ID for the submit control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_INSINPUTSUBMIT 명령 ID](https://msdn.microsoft.com/library/aa769979.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTSUBMIT command ID](https://msdn.microsoft.com/library/aa769979.aspx) to the WebBrowser control.  
   
-##  <a name="insinputupload"></a>CHtmlEditCtrlBase::InsInputUpload  
- 현재 선택 영역에 파일 업로드 컨트롤을 덮어씁니다.  
+##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload  
+ Overwrites a file upload control on the current selection.  
   
 ```  
 HRESULT InsInputUpload(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 파일 업로드 컨트롤에 대 한 ID입니다.  
+ The ID for the file upload control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_INSINPUTUPLOAD 명령 ID](https://msdn.microsoft.com/library/aa769973.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTUPLOAD command ID](https://msdn.microsoft.com/library/aa769973.aspx) to the WebBrowser control.  
   
-##  <a name="is1delement"></a>CHtmlEditCtrlBase::Is1DElement  
- 요소는 정적으로 배치 하는 경우 확인 합니다.  
+##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement  
+ Determines if an element is statically positioned.  
   
 ```  
 HRESULT Is1DElement(bool& bValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bValue`  
- 그렇지 않으면 요소는 정적 위치 지정이 고, false 면 true입니다.  
+ True if the element is statically positioned, false otherwise.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_1D_ELEMENT 명령 ID](https://msdn.microsoft.com/library/aa769885.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_1D_ELEMENT command ID](https://msdn.microsoft.com/library/aa769885.aspx) to the WebBrowser control.  
   
-##  <a name="is2delement"></a>CHtmlEditCtrlBase::Is2DElement  
- 요소 절대 위치로 지정 하는 경우를 결정 합니다.  
+##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement  
+ Determines if an element is absolutely positioned.  
   
 ```  
 HRESULT Is2DElement(bool& bValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bValue`  
- 그렇지 않으면 요소는이 고, false 절대 위치로 지정 된 경우 true입니다.  
+ True if the element is absolutely positioned, false otherwise.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_2D_ELEMENT 명령 ID](https://msdn.microsoft.com/library/aa769886.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_2D_ELEMENT command ID](https://msdn.microsoft.com/library/aa769886.aspx) to the WebBrowser control.  
   
-##  <a name="italic"></a>CHtmlEditCtrlBase::Italic  
- 현재 선택 영역을 기울임꼴 및 일반 글꼴로 설정/해제 합니다.  
+##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic  
+ Toggles the current selection between italic and nonitalic.  
   
 ```  
 HRESULT Italic() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_ITALIC 명령 ID](https://msdn.microsoft.com/library/aa769988.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_ITALIC command ID](https://msdn.microsoft.com/library/aa769988.aspx) to the WebBrowser control.  
   
-##  <a name="justifycenter"></a>CHtmlEditCtrlBase::JustifyCenter  
- 형식 블록에 중점을 현재 선택이 설정은에 있습니다.  
+##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter  
+ Centers the format block in which the current selection is located.  
   
 ```  
 HRESULT JustifyCenter() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_JUSTIFYCENTER 명령 ID](https://msdn.microsoft.com/library/aa769989.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_JUSTIFYCENTER command ID](https://msdn.microsoft.com/library/aa769989.aspx) to the WebBrowser control.  
   
-##  <a name="justifyleft"></a>CHtmlEditCtrlBase::JustifyLeft  
- 왼쪽 정렬 형식을 블록에서 현재 선택이 설정은 합니다.  
+##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft  
+ Left-justifies the format block in which the current selection is located.  
   
 ```  
 HRESULT JustifyLeft() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_JUSTIFYLEFT 명령 ID](https://msdn.microsoft.com/library/aa770011.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_JUSTIFYLEFT command ID](https://msdn.microsoft.com/library/aa770011.aspx) to the WebBrowser control.  
   
-##  <a name="justifyright"></a>CHtmlEditCtrlBase::JustifyRight  
- 오른쪽 정렬 형식 블록에서 현재 선택이 설정은 합니다.  
+##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight  
+ Right-justifies the format block in which the current selection is located.  
   
 ```  
 HRESULT JustifyRight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_JUSTIFYRIGHT 명령 ID](https://msdn.microsoft.com/library/aa770013.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_JUSTIFYRIGHT command ID](https://msdn.microsoft.com/library/aa770013.aspx) to the WebBrowser control.  
   
-##  <a name="listbox"></a>CHtmlEditCtrlBase::ListBox  
- 현재 선택 항목의 목록 상자 선택 컨트롤을 덮어씁니다.  
+##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox  
+ Overwrites a list box selection control on the current selection.  
   
 ```  
 HRESULT ListBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 목록 상자 컨트롤에 대 한 ID입니다.  
+ The ID for the list box control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_LISTBOX 명령 ID](https://msdn.microsoft.com/library/aa769985.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_LISTBOX command ID](https://msdn.microsoft.com/library/aa769985.aspx) to the WebBrowser control.  
   
-##  <a name="marquee"></a>CHtmlEditCtrlBase::Marquee  
- 현재 선택한 내용에는 빈 윤곽을 덮어씁니다.  
+##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee  
+ Overwrites an empty marquee on the current selection.  
   
 ```  
 HRESULT Marquee(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 움직이는 텍스트에 대 한 ID입니다.  
+ The ID for the marquee.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_MARQUEE 명령 ID](https://msdn.microsoft.com/library/aa769981.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_MARQUEE command ID](https://msdn.microsoft.com/library/aa769981.aspx) to the WebBrowser control.  
   
-##  <a name="newdocument"></a>CHtmlEditCtrlBase::NewDocument  
- 새 문서를 만듭니다.  
+##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument  
+ Creates a new document.  
   
 ```  
 HRESULT NewDocument() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="orderlist"></a>CHtmlEditCtrlBase::OrderList  
- 현재 선택 영역을 정렬 된 목록 및 일반 형식 블록을 설정/해제 합니다.  
+##  <a name="orderlist"></a>  CHtmlEditCtrlBase::OrderList  
+ Toggles the current selection between an ordered list and a normal format block.  
   
 ```  
 HRESULT OrderList(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 정렬된 된 목록에 대 한 ID입니다.  
+ The ID for the ordered list.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_ORDERLIST 명령 ID](https://msdn.microsoft.com/library/aa769982.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_ORDERLIST command ID](https://msdn.microsoft.com/library/aa769982.aspx) to the WebBrowser control.  
   
-##  <a name="outdent"></a>CHtmlEditCtrlBase::Outdent  
- 감소 한 증분 형식 블록의 들여쓰기에 현재 선택이 설정은 합니다.  
+##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent  
+ Decreases by one increment the indentation of the format block in which the current selection is located.  
   
 ```  
 HRESULT Outdent() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_OUTDENT 명령 ID](https://msdn.microsoft.com/library/aa770015.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_OUTDENT command ID](https://msdn.microsoft.com/library/aa770015.aspx) to the WebBrowser control.  
   
-##  <a name="paragraph"></a>CHtmlEditCtrlBase::Paragraph  
- 현재 선택 영역에서 줄 바꿈을 덮어씁니다.  
+##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph  
+ Overwrites a line break on the current selection.  
   
 ```  
 HRESULT Paragraph(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 단락에 대 한 ID입니다.  
+ The ID for the paragraph.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_PARAGRAPH 명령 ID](https://msdn.microsoft.com/library/aa769983.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_PARAGRAPH command ID](https://msdn.microsoft.com/library/aa769983.aspx) to the WebBrowser control.  
   
-##  <a name="paste"></a>CHtmlEditCtrlBase::Paste  
- 현재 선택 영역에서 클립보드의 내용을 덮어씁니다.  
+##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste  
+ Overwrites the contents of the clipboard on the current selection.  
   
 ```  
 HRESULT Paste() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_PASTE 명령 ID](https://msdn.microsoft.com/library/aa770017.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_PASTE command ID](https://msdn.microsoft.com/library/aa770017.aspx) to the WebBrowser control.  
   
-##  <a name="printdocument"></a>CHtmlEditCtrlBase::PrintDocument  
- 현재 문서를 인쇄 합니다.  
+##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument  
+ Prints the current document.  
   
 ```  
 HRESULT PrintDocument() const;  
@@ -1337,266 +1443,266 @@ HRESULT PrintDocument(LPCTSTR szPrintTemplate) const;
 HRESULT PrintDocument(bool bShowPrintDialog) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szPrintTemplate`  
- 인쇄 템플릿;에 대 한 경로 지정 하지 않으면 기본 인쇄 템플릿이 사용 됩니다.  
+ Path to a print template; if none is specified, the default print template is used.  
   
  *bShowPrintDialog*  
- True 이면 인쇄 대화 상자를 표시 합니다.  
+ If true, shows the Print dialog.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_PRINT 명령 ID](https://msdn.microsoft.com/library/aa769937.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_PRINT command ID](https://msdn.microsoft.com/library/aa769937.aspx) to the WebBrowser control.  
   
-##  <a name="printpreview"></a>CHtmlEditCtrlBase::PrintPreview  
- 현재 문서의 기본 인쇄 미리 보기 템플릿 또는 사용자 지정 템플릿을 사용 하 여 인쇄 미리 보기 창을 엽니다.  
+##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview  
+ Opens the Print Preview window for the current document using either the default print preview template or a custom template.  
   
 ```  
 HRESULT PrintPreview() const;  
 HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szPrintTemplate`  
- 경로 인쇄 템플릿입니다.  
+ Path to a print template.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_PRINTPREVIEW 명령 ID](https://msdn.microsoft.com/library/aa769938.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_PRINTPREVIEW command ID](https://msdn.microsoft.com/library/aa769938.aspx) to the WebBrowser control.  
   
-##  <a name="querystatus"></a>CHtmlEditCtrlBase::QueryStatus  
- 명령의 상태를 쿼리 하는이 메서드를 호출 합니다.  
+##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus  
+ Call this method to query the status of commands.  
   
 ```  
 long QueryStatus(long cmdID) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 명령 ID입니다. 가져온 명령 식별자는 `CGID_MSHTML` 명령 그룹입니다. 이 명령은 Mshtmcid.h에 정의 됩니다. 온라인 목록을 찾을 수 있습니다 [MSHTML 명령 식별자](http://go.microsoft.com/fwlink/linkid=149220)합니다.  
+ The command ID. Command identifiers are taken from the `CGID_MSHTML` command group. These commands are defined in Mshtmcid.h. You can also find the list online at [MSHTML Command Identifiers](http://go.microsoft.com/fwlink/linkid=149220).  
   
-### <a name="return-value"></a>반환 값  
- 반환 된 [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) 에 대 한 상태를 나타내는 `cmdID`, 또는 실패 한 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Returns an [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) indicating the status for `cmdID`, or 0 on failure.  
   
-##  <a name="radiobutton"></a>CHtmlEditCtrlBase::RadioButton  
- 현재 선택 영역에 있는 라디오 컨트롤이 덮어씁니다.  
+##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
+ Overwrites a radio control on the current selection.  
   
 ```  
 HRESULT RadioButton(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 라디오 단추의 ID입니다.  
+ The ID of the radio button.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_RADIOBUTTON 명령 ID](https://msdn.microsoft.com/library/aa769977.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_RADIOBUTTON command ID](https://msdn.microsoft.com/library/aa769977.aspx) to the WebBrowser control.  
   
-##  <a name="refreshdocument"></a>CHtmlEditCtrlBase::RefreshDocument  
- 현재 문서를 새로 고칩니다.  
+##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument  
+ Refreshes the current document.  
   
 ```  
 HRESULT RefreshDocument() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_REFRESH 명령 ID](https://msdn.microsoft.com/library/aa770020.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_REFRESH Command ID](https://msdn.microsoft.com/library/aa770020.aspx) to the WebBrowser control.  
   
-##  <a name="removeformat"></a>CHtmlEditCtrlBase::RemoveFormat  
- 현재 선택 영역에서 서식 지정 태그를 제거합니다.  
+##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat  
+ Removes the formatting tags from the current selection.  
   
 ```  
 HRESULT RemoveFormat() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_REMOVEFORMAT 명령 ID](https://msdn.microsoft.com/library/aa770021.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_REMOVEFORMAT command ID](https://msdn.microsoft.com/library/aa770021.aspx) to the WebBrowser control.  
   
-##  <a name="saveas"></a>CHtmlEditCtrlBase::SaveAs  
- 현재 웹 페이지를 파일에 저장 합니다.  
+##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs  
+ Saves the current Web page to a file.  
   
 ```  
 HRESULT SaveAs(LPCTSTR szPath = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szPath`  
- 웹 페이지를 저장할 경로 파일 이름입니다.  
+ The path and file name to which to save the Web page.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_SAVEAS 명령 ID](https://msdn.microsoft.com/library/aa770024.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_SAVEAS command ID](https://msdn.microsoft.com/library/aa770024.aspx) to the WebBrowser control.  
   
-##  <a name="selectall"></a>CHtmlEditCtrlBase::SelectAll  
- 전체 문서를 선택합니다.  
+##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll  
+ Selects the entire document.  
   
 ```  
 HRESULT SelectAll() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_SELECTALL 명령 ID](https://msdn.microsoft.com/library/aa770025.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_SELECTALL command ID](https://msdn.microsoft.com/library/aa770025.aspx) to the WebBrowser control.  
   
-##  <a name="set2dposition"></a>CHtmlEditCtrlBase::Set2DPosition  
- 절대 위치로 지정 된 요소를를 끌어 이동할 수 있습니다.  
+##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition  
+ Allows absolutely positioned elements to be moved by dragging.  
   
 ```  
 HRESULT Set2DPosition(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 인 경우, 절대 위치로 지정 된 요소를 끌어 이동할 수 있습니다.  
+ If true, absolutely positioned elements can be moved by dragging.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_2D_POSITION 명령 ID](https://msdn.microsoft.com/library/aa769887.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_2D_POSITION command ID](https://msdn.microsoft.com/library/aa769887.aspx) to the WebBrowser control.  
   
-##  <a name="setabsoluteposition"></a>CHtmlEditCtrlBase::SetAbsolutePosition  
- 설정 하는 요소의 위치 속성을 "absolute" 또는 "정적"입니다.  
+##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition  
+ Sets an element's position property to "absolute" or "static."  
   
 ```  
 HRESULT SetAbsolutePosition(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 요소의 위치 속성은 "absolute"; true 인 경우 false 인 경우 "정적"입니다.  
+ If true, the element's position property is "absolute"; if false, it is "static."  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_ABSOLUTE_POSITION 명령 ID](https://msdn.microsoft.com/library/aa769889.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_ABSOLUTE_POSITION command ID](https://msdn.microsoft.com/library/aa769889.aspx) to the WebBrowser control.  
   
-##  <a name="setatomicselection"></a>CHtmlEditCtrlBase::SetAtomicSelection  
- 원자성 선택 모드를 설정 합니다.  
+##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection  
+ Set atomic selection mode.  
   
 ```  
 HRESULT SetAtomicSelection(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 ATOMICSELECTION 특성이 TRUE로 설정 된 모든 요소를 하나의 단위로 선택할 수 있는 됩니다.  
+ If true, any element that has an ATOMICSELECTION attribute set to TRUE will be selectable only as a unit.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_ATOMICSELECTION 명령 ID](https://msdn.microsoft.com/library/aa769892.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_ATOMICSELECTION command ID](https://msdn.microsoft.com/library/aa769892.aspx) to the WebBrowser control.  
   
-##  <a name="setautourldetectmode"></a>CHtmlEditCtrlBase::SetAutoURLDetectMode  
- URL의 자동 검색을 켜고 끕니다.  
+##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode  
+ Turns automatic URL detection on and off.  
   
 ```  
 HRESULT SetAutoURLDetectMode(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 자동 URL 검색이 사용 됩니다.  
+ If true, automatic URL detection is enabled.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_AUTOURLDETECT_MODE 명령 ID](https://msdn.microsoft.com/library/aa769893.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_AUTOURLDETECT_MODE command ID](https://msdn.microsoft.com/library/aa769893.aspx) to the WebBrowser control.  
   
-##  <a name="setbackcolor"></a>CHtmlEditCtrlBase::SetBackColor  
- 현재 선택 항목의 배경색을 설정합니다.  
+##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor  
+ Sets the background color of the current selection.  
   
 ```  
 HRESULT SetBackColor(int nColor) const;  
 HRESULT SetBackColor(LPCTSTR szColor) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nColor`  
- 색입니다. 참조 `pvaIn` 에 [IDM_BACKCOLOR 명령 ID](https://msdn.microsoft.com/library/aa769858.aspx)합니다.  
+ The color. See `pvaIn` in [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx).  
   
  `szColor`  
- 색입니다. 참조 `pvaIn` 에 [IDM_BACKCOLOR 명령 ID](https://msdn.microsoft.com/library/aa769858.aspx)합니다.  
+ The color. See `pvaIn` in [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx).  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_BACKCOLOR_ 명령 ID](https://msdn.microsoft.com/library/aa769858.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BACKCOLOR_ command ID](https://msdn.microsoft.com/library/aa769858.aspx) to the WebBrowser control.  
   
-##  <a name="setblockformat"></a>CHtmlEditCtrlBase::SetBlockFormat  
- 현재 블록 형식 태그를 설정합니다.  
+##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat  
+ Sets the current block format tag.  
   
 ```  
 HRESULT SetBlockFormat(LPCTSTR szFormat) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szFormat`  
- 형식 태그입니다.  
+ The format tag.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) to the WebBrowser control.  
   
-##  <a name="setbookmark"></a>CHtmlEditCtrlBase::SetBookMark  
- 현재 선택 영역 또는 삽입 지점에 대 한 책갈피 앵커를 만듭니다.  
+##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark  
+ Creates a bookmark anchor for the current selection or insertion point.  
   
 ```  
 HRESULT SetBookMark(LPCTSTR szAnchorName) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *szAnchorName*  
- 앵커 이름입니다.  
+ The anchor name.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM_BOOKMARK 명령 ID](https://msdn.microsoft.com/library/aa769873.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BOOKMARK command ID](https://msdn.microsoft.com/library/aa769873.aspx) to the WebBrowser control.  
   
-##  <a name="setcsseditinglevel"></a>CHtmlEditCtrlBase::SetCSSEditingLevel  
- CSS 수준 (CSS1 또는 CSS2) 편집기를 지 원하는 있는 경우 선택 되었습니다.  
+##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel  
+ Selects which CSS level (CSS1 or CSS2) the editor will support, if any.  
   
 ```  
 HRESULT SetCSSEditingLevel(short nLevel) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nLevel`  
- CSS 수준입니다. CSS 지원 하지 않을 경우 0을 전달 합니다.  
+ The CSS level. Pass 0 if you do not want CSS support.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_CSSEDITING_LEVEL 명령 ID](https://msdn.microsoft.com/library/aa769903.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_CSSEDITING_LEVEL command ID](https://msdn.microsoft.com/library/aa769903.aspx) to the WebBrowser control.  
   
-##  <a name="setdefaultcomposesettings"></a>CHtmlEditCtrlBase::SetDefaultComposeSettings  
- 작성 설정 기본 설정 하려면이 메서드를 호출 합니다.  
+##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings  
+ Call this method to set the default compose settings.  
   
 ```  
 HRESULT SetDefaultComposeSettings(
@@ -1609,481 +1715,481 @@ HRESULT SetDefaultComposeSettings(
     bool bUnderline = false) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *szFontName*  
- 글꼴 이름입니다.  
+ The font name.  
   
  *nFontSize*  
- 글꼴 크기입니다.  
+ The font size.  
   
  *crFontColor*  
- 글꼴 색입니다.  
+ The font color.  
   
  *crFontBgColor*  
- 글꼴 배경색입니다.  
+ The font background color.  
   
  *bBold*  
- 굵은 텍스트에 대 한 true를 전달 합니다.  
+ Pass true for bold text.  
   
  `bItalic`  
- 기울임꼴 텍스트에 대 한 true를 전달 합니다.  
+ Pass true for italic text.  
   
  `bUnderline`  
- 밑줄이 그어진된 텍스트에 대 한 true를 전달 합니다.  
+ Pass true for underlined text.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_COMPOSESETTINGS 명령 ID](https://msdn.microsoft.com/library/aa769901.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_COMPOSESETTINGS command ID](https://msdn.microsoft.com/library/aa769901.aspx) to the WebBrowser control.  
   
-##  <a name="setdesignmode"></a>CHtmlEditCtrlBase::SetDesignMode  
- 디자인 모드를 설정 합니다.  
+##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode  
+ Set design mode.  
   
 ```  
 BOOL SetDesignMode(BOOL bMode) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bMode`  
- True 이면 디자인 모드를 설정 합니다.  
+ If true, turns design mode on.  
   
-### <a name="return-value"></a>반환 값  
- 성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE on success, FALSE on failure.  
   
-##  <a name="setdisableeditfocusui"></a>CHtmlEditCtrlBase::SetDisableEditFocusUI  
- 빗살 무늬 테두리를 사용 하지 않도록 설정 하 고 편집 포커스가 있는 요소 주위 처리 합니다.  
+##  <a name="setdisableeditfocusui"></a>  CHtmlEditCtrlBase::SetDisableEditFocusUI  
+ Disables the hatched border and handles around an element that has edit focus.  
   
 ```  
 HRESULT SetDisableEditFocusUI(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 비활성화 해치 테두리와 사이트 선택 가능한 요소 주위에 핸들이 요소에 있는 "편집 포커스" 디자인 모드에서 즉 때 텍스트 또는 요소 내용을 편집할 수 있습니다.  
+ If true, disables the hatched border and handles around a site selectable element when the element has "edit focus" in design mode; that is, when the text or contents of the element can be edited.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM_DISABLE_EDITFOCUS_UI 명령 ID](https://msdn.microsoft.com/library/aa769905.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_DISABLE_EDITFOCUS_UI command ID](https://msdn.microsoft.com/library/aa769905.aspx) to the WebBrowser control.  
   
-##  <a name="setdocumenthtml"></a>CHtmlEditCtrlBase::SetDocumentHTML  
- 현재 문서의 HTML을 설정합니다.  
+##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML  
+ Sets the HTML of the current document.  
   
 ```  
 HRESULT SetDocumentHTML(LPCTSTR szHTML) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szHTML`  
- HTML입니다.  
+ The HTML.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="setfontface"></a>CHtmlEditCtrlBase::SetFontFace  
- 현재 선택 영역에 대 한 글꼴을 설정합니다.  
+##  <a name="setfontface"></a>  CHtmlEditCtrlBase::SetFontFace  
+ Sets the font for the current selection.  
   
 ```  
 HRESULT SetFontFace(LPCTSTR szFace) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szFace`  
- 글꼴 이름입니다.  
+ The font name.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM FONTNAME 명령 ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM FONTNAME Command ID](https://msdn.microsoft.com/library/aa769880.aspx) to the WebBrowser control.  
   
-##  <a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize  
- 현재 선택 영역에 대 한 글꼴 크기를 설정합니다.  
+##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize  
+ Sets the font size for the current selection.  
   
 ```  
 HRESULT SetFontSize(unsigned short size) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `size`  
- HTML 글꼴 크기 (1-7)입니다. 글꼴 크기를 1로 설정 하는 값이 0입니다.  
+ The HTML font size (1-7). A value of 0 sets the font size to 1.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM FONTSIZE 명령 ID](https://msdn.microsoft.com/library/aa769881.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM FONTSIZE command ID](https://msdn.microsoft.com/library/aa769881.aspx) to the WebBrowser control.  
   
-##  <a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor  
- 현재 선택 된 전경 (텍스트) 색을 설정합니다.  
+##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor  
+ Sets the foreground (text) color of the current selection.  
   
 ```  
 HRESULT SetForeColor(LPCTSTR szColor) const;  
 HRESULT SetForeColor(int nColor) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szColor`  
- 색입니다.  
+ The color.  
   
  `nColor`  
- 색입니다.  
+ The color.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM FORECOLOR 명령 ID](https://msdn.microsoft.com/library/aa769882.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM FORECOLOR command ID](https://msdn.microsoft.com/library/aa769882.aspx) to the WebBrowser control.  
   
-##  <a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode  
- Microsoft Internet Explorer 5와 호환 되도록 붙여넣기 작업을 설정 합니다.  
+##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode  
+ Sets the paste operation to be compatible with Microsoft Internet Explorer 5.  
   
 ```  
 HRESULT SetIE5PasteMode(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 인 경우 붙여넣기 작업이 모든 Internet Explorer 5; 호환 되는 false 인 경우, 붙여넣기 작업 Internet Explorer 5.5와 호환 됩니다.  
+ If true, all paste operations are compatible with Internet Explorer 5; if false, paste operations are compatible with Internet Explorer 5.5.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM IE50_PASTE_MODE 명령 ID](https://msdn.microsoft.com/library/aa769923.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM IE50_PASTE_MODE command ID](https://msdn.microsoft.com/library/aa769923.aspx) to the WebBrowser control.  
   
-##  <a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize  
- WebBrowser 요소의 모양을 이동이 완료 될 때만 업데이트 하지 않고/이동 하거나 크기 조정 작업을 하는 동안 지속적으로 업데이트 하거나 크기를 조정 하면 됩니다.  
+##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize  
+ Causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation, rather than updating only at the completion of the move or resize.  
   
 ```  
 HRESULT SetLiveResize(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 WebBrowser 요소의 모양을/이동 하거나 크기 조정 작업; 동안 지속적으로 업데이트를 사용 하면 false 인 경우, 이동 또는 크기 조정으로 완료 될 때만 업데이트 합니다.  
+ If true, causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation; if false, it updates only at the completion of the move or resize.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM LIVERESIZE 명령 ID](https://msdn.microsoft.com/library/aa769928.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM LIVERESIZE command ID](https://msdn.microsoft.com/library/aa769928.aspx) to the WebBrowser control.  
   
-##  <a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect  
- 여러 선택할 수 있습니다.  
+##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect  
+ Enables multiple selection.  
   
 ```  
 HRESULT SetMultiSelect(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 인 경우, SHIFT 또는 CTRL 키를 누르고 있는 경우 한 번에 둘 이상의 사이트를 선택할 수 있는 요소를 선택할 수 있습니다.  
+ If true, allows for the selection of more than one site-selectable element at a time when the user holds down the SHIFT or CTRL keys.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM MULTIPLESELECTION 명령 ID](https://msdn.microsoft.com/library/aa769929.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM MULTIPLESELECTION command ID](https://msdn.microsoft.com/library/aa769929.aspx) to the WebBrowser control.  
   
-##  <a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor  
- 마우스 포인터를 변경 하려면 되지 WebBrowser 명령입니다.  
+##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor  
+ Commands the WebBrowser never to change the mouse pointer.  
   
 ```  
 HRESULT SetOverrideCursor(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 WebBrowser에 마우스 포인터를 변경 되지 않습니다.  
+ If true, the WebBrowser will not change the mouse pointer.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM OVERRIDE_CURSOR 명령 ID](https://msdn.microsoft.com/library/aa769932.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM OVERRIDE_CURSOR command ID](https://msdn.microsoft.com/library/aa769932.aspx) to the WebBrowser control.  
   
-##  <a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode  
- 설정/해제 간에 텍스트 입력 모드 삽입를 덮어씁니다.  
+##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode  
+ Toggles the text-entry mode between insert and overwrite.  
   
 ```  
 HRESULT SetOverwriteMode(bool bMode) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bMode`  
- True 이면 텍스트 입력 모드가 덮어쓰기; false 인 경우, 텍스트 입력 모드는 삽입 합니다.  
+ If true, text-entry mode is overwrite; if false, text-entry mode is insert.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM 덮어쓰기 명령 ID](https://msdn.microsoft.com/library/aa770016.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM OVERWRITE command ID](https://msdn.microsoft.com/library/aa770016.aspx) to the WebBrowser control.  
   
-##  <a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign  
- 디자인 모드에서 보이지 않는 요소를 숨깁니다.  
+##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign  
+ Hides invisible elements in design mode.  
   
 ```  
 HRESULT SetRespectVisInDesign(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 디자인 모드와 찾아보기 모드; 모두에서 "hidden"으로 설정 또는 "none"으로 속성 집합을 표시할 표시 하는 요소가 표시 되지 않습니다 true 인 경우 false 인 경우, 해당 요소가 찾아보기 모드에만 표시 됩니다.  
+ If true, any elements that have a visibility set to "hidden" or display property set to "none" will not be shown in both design mode and browse mode; if false, those elements will be displayed only in browse mode.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM RESPECTVISIBILITY_INDESIGN 명령 ID](https://msdn.microsoft.com/library/aa770023.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM RESPECTVISIBILITY_INDESIGN command ID](https://msdn.microsoft.com/library/aa770023.aspx) to the WebBrowser control.  
   
-##  <a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags  
- 모든 요소에 대해 문자 모양을 표시는 **styleFloat** 속성입니다.  
+##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags  
+ Displays a glyph for all elements that have a **styleFloat** property.  
   
 ```  
 HRESULT SetShowAlignedSiteTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면에 있는 모든 요소에 대 한 문자 모양을 표시는 **styleFloat** 속성입니다.  
+ If true, displays a glyph for all elements that have a **styleFloat** property.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM SHOWALIGNEDSITETAGS 명령 ID](https://msdn.microsoft.com/library/aa769947.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWALIGNEDSITETAGS command ID](https://msdn.microsoft.com/library/aa769947.aspx) to the WebBrowser control.  
   
-##  <a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags  
- 문서에서 모든 태그의 위치를 표시 하려면 문자 모양이 표시 됩니다.  
+##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags  
+ Displays glyphs to show the location of all tags in a document.  
   
 ```  
 HRESULT SetShowAllTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 인 경우, 문서에서 모든 태그의 위치를 표시 하려면 문자 모양이 표시 됩니다.  
+ If true, displays glyphs to show the location of all tags in a document.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM SHOWALLTAGS 명령 ID](https://msdn.microsoft.com/library/aa769948.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWALLTAGS command ID](https://msdn.microsoft.com/library/aa769948.aspx) to the WebBrowser control.  
   
-##  <a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags  
- 모든 영역 태그 문자 모양을 표시합니다.  
+##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags  
+ Displays a glyph for all the area tags.  
   
 ```  
 HRESULT SetShowAreaTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 모든 영역 태그 문자 모양을 표시 합니다.  
+ If true, displays a glyph for all the area tags.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM SHOWAREATAGS 명령 ID](https://msdn.microsoft.com/library/aa769949.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWAREATAGS command ID](https://msdn.microsoft.com/library/aa769949.aspx) to the WebBrowser control.  
   
-##  <a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags  
- 모든 br 태그 문자 모양을 표시합니다.  
+##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags  
+ Displays a glyph for all the br tags.  
   
 ```  
 HRESULT SetShowBRTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 모든 br 태그 문자 모양을 표시 합니다.  
+ If true, displays a glyph for all the br tags.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM SHOWWBRTAGS 명령 ID](https://msdn.microsoft.com/library/aa769956.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWWBRTAGS command ID](https://msdn.microsoft.com/library/aa769956.aspx) to the WebBrowser control.  
   
-##  <a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags  
- 에 대 한 모든 주석 태그 문자 모양을 표시합니다.  
+##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags  
+ Displays a glyph for all the comment tags.  
   
 ```  
 HRESULT SetShowCommentTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 모든 주석 태그 문자 모양을 표시 합니다.  
+ If true, displays a glyph for all the comment tags.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM SHOWCOMMENTTAGS 명령 ID](https://msdn.microsoft.com/library/aa769950.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWCOMMENTTAGS command ID](https://msdn.microsoft.com/library/aa769950.aspx) to the WebBrowser control.  
   
-##  <a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags  
- Internet Explorer 4.0에 표시 된 모든 태그를 표시 합니다.  
+##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags  
+ Displays all the tags shown in Microsoft Internet Explorer 4.0.  
   
 ```  
 HRESULT SetShowMiscTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 인 경우, Microsoft Internet Explorer 4.0에 표시 된 모든 태그를 표시 합니다.  
+ If true, displays all the tags shown in Microsoft Internet Explorer 4.0.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM SHOWMISCTAGS 명령 ID](https://msdn.microsoft.com/library/aa769952.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWMISCTAGS command ID](https://msdn.microsoft.com/library/aa769952.aspx) to the WebBrowser control.  
   
-##  <a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags  
- 모든 스크립트 태그 문자 모양을 표시합니다.  
+##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags  
+ Displays a glyph for all the script tags.  
   
 ```  
 HRESULT SetShowScriptTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 모든 스크립트 태그 문자 모양을 표시 합니다.  
+ If true, displays a glyph for all the script tags.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM SHOWSCRIPTTAGS 명령 ID](https://msdn.microsoft.com/library/aa769953.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWSCRIPTTAGS command ID](https://msdn.microsoft.com/library/aa769953.aspx) to the WebBrowser control.  
   
-##  <a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags  
- 모든 스타일 태그 문자 모양을 표시합니다.  
+##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags  
+ Displays a glyph for all the style tags.  
   
 ```  
 HRESULT SetShowStyleTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 이면 모든 스타일 태그 문자 모양을 표시 합니다.  
+ If true, displays a glyph for all the style tags.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM SHOWSTYLETAGS 명령 ID](https://msdn.microsoft.com/library/aa769954.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWSTYLETAGS command ID](https://msdn.microsoft.com/library/aa769954.aspx) to the WebBrowser control.  
   
-##  <a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags  
- 모든 알 수 없는 태그 문자 모양을 표시합니다.  
+##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags  
+ Displays a glyph for all the unknown tags.  
   
 ```  
 HRESULT SetShowUnknownTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- True 인 경우, 모든 알 수 없는 태그 문자 모양을 표시 합니다.  
+ If true, displays a glyph for all the unknown tags.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM SHOWUNKNOWNTAGS 명령 ID](https://msdn.microsoft.com/library/aa769955.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWUNKNOWNTAGS command ID](https://msdn.microsoft.com/library/aa769955.aspx) to the WebBrowser control.  
   
-##  <a name="textarea"></a>CHtmlEditCtrlBase::TextArea  
- 현재 선택 영역에 여러 줄 텍스트 입력된 컨트롤을 덮어씁니다.  
+##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea  
+ Overwrites a multiline text input control on the current selection.  
   
 ```  
 HRESULT TextArea(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 여러 줄 텍스트 입력된 컨트롤의 ID입니다.  
+ The ID of the multiline text input control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM TEXTAREA 명령 ID](https://msdn.microsoft.com/library/aa769986.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM TEXTAREA command ID](https://msdn.microsoft.com/library/aa769986.aspx) to the WebBrowser control.  
   
-##  <a name="textbox"></a>CHtmlEditCtrlBase::TextBox  
- 현재 선택 영역에 텍스트 컨트롤을 덮어씁니다.  
+##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox  
+ Overwrites a text control on the current selection.  
   
 ```  
 HRESULT TextBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 텍스트 컨트롤의 ID입니다.  
+ The ID of the text control.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [IDM TEXTBOX 명령 ID](https://msdn.microsoft.com/library/aa769980.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM TEXTBOX command ID](https://msdn.microsoft.com/library/aa769980.aspx) to the WebBrowser control.  
   
-##  <a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark  
- 현재 선택 영역에서 모든 책갈피를 제거합니다.  
+##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark  
+ Removes any bookmark from the current selection.  
   
 ```  
 HRESULT UnBookmark() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [명령 ID IDM UNBOOKMARK](https://msdn.microsoft.com/library/aa770034.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM UNBOOKMARK command ID](https://msdn.microsoft.com/library/aa770034.aspx) to the WebBrowser control.  
   
-##  <a name="underline"></a>CHtmlEditCtrlBase::Underline  
- 밑줄을 밑줄이 없는 현재 선택 영역을 설정/해제 합니다.  
+##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline  
+ Toggles the current selection between underlined and not underlined.  
   
 ```  
 HRESULT Underline() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [명령 ID IDM 밑줄](https://msdn.microsoft.com/library/aa770035.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM UNDERLINE command ID](https://msdn.microsoft.com/library/aa770035.aspx) to the WebBrowser control.  
   
-##  <a name="unlink"></a>CHtmlEditCtrlBase::Unlink  
- 현재 선택 영역에서 하이퍼링크를 제거합니다.  
+##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink  
+ Removes any hyperlink from the current selection.  
   
 ```  
 HRESULT Unlink() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [명령 ID IDM 연결을 해제](https://msdn.microsoft.com/library/aa770037.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM UNLINK command ID](https://msdn.microsoft.com/library/aa770037.aspx) to the WebBrowser control.  
   
-##  <a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList  
- 현재 선택 영역을 정렬 된 목록 및 일반 형식 블록을 설정/해제 합니다.  
+##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList  
+ Toggles the current selection between an ordered list and a normal format block.  
   
 ```  
 HRESULT UnorderList(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 순서가 지정 되지 않은 목록의 ID입니다.  
+ The ID of the unordered list.  
   
-### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>설명  
- 이 메서드는 전송 된 [IDM UNORDERLIST 명령 ID](https://msdn.microsoft.com/library/aa769987.aspx) WebBrowser 컨트롤에 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM UNORDERLIST command ID](https://msdn.microsoft.com/library/aa769987.aspx) to the WebBrowser control.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [HTMLEdit 샘플](../../visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [HTMLEdit Sample](../../visual-cpp-samples.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "CD2DGeometry 클래스 | Microsoft 문서"
+title: CD2DGeometry Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,7 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DGeometry class
+- CD2DGeometry [MFC], CD2DGeometry
+- CD2DGeometry [MFC], Attach
+- CD2DGeometry [MFC], CombineWithGeometry
+- CD2DGeometry [MFC], CompareWithGeometry
+- CD2DGeometry [MFC], ComputeArea
+- CD2DGeometry [MFC], ComputeLength
+- CD2DGeometry [MFC], ComputePointAtLength
+- CD2DGeometry [MFC], Destroy
+- CD2DGeometry [MFC], Detach
+- CD2DGeometry [MFC], FillContainsPoint
+- CD2DGeometry [MFC], Get
+- CD2DGeometry [MFC], GetBounds
+- CD2DGeometry [MFC], GetWidenedBounds
+- CD2DGeometry [MFC], IsValid
+- CD2DGeometry [MFC], Outline
+- CD2DGeometry [MFC], Simplify
+- CD2DGeometry [MFC], StrokeContainsPoint
+- CD2DGeometry [MFC], Tessellate
+- CD2DGeometry [MFC], Widen
+- CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
 caps.latest.revision: 17
 author: mikeblome
@@ -54,96 +73,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 948b2e2154259557e3a52c2045586cffce2a16f8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dc5ac92b1f9ea42ff03710976678c574f69f219d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dgeometry-class"></a>CD2DGeometry 클래스
-ID2D1Geometry에 대 한 래퍼입니다.  
+# <a name="cd2dgeometry-class"></a>CD2DGeometry Class
+A wrapper for ID2D1Geometry.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DGeometry : public CD2DResource;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|CD2DGeometry 개체를 만듭니다.|  
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|소멸자입니다. D2D 기 하 도형 개체가 소멸 될 때 호출 됩니다.|  
+|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Constructs a CD2DGeometry object.|  
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|The destructor. Called when a D2D geometry object is being destroyed.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::Attach](#attach)|기존 개체에 대 한 리소스 인터페이스를 연결.|  
-|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|지정 된 geometry이 기 하이 도형 결합 하 고 결과 ID2D1SimplifiedGeometrySink 저장 합니다.|  
-|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|이 기 하이 도형 및 지정 된 geometry의 교차를 설명합니다. 지정한 평면화 허용 오차를 사용 하 여 비교 합니다.|  
-|[CD2DGeometry::ComputeArea](#computearea)|였 기 하 도형의 면적을 계산 하 여 지정된 된 매트릭스 변환 하 고 지정된 된 허용 오차를 사용 하 여 결합 합니다.|  
-|[CD2DGeometry::ComputeLength](#computelength)|가 각 세그먼트를 선으로 롤백된 것 처럼 geometry의 길이 계산 합니다.|  
-|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|지정한 후 점과 탄젠트 벡터에 기 하 도형 따라 지정된 된 거리를 계산 하 여 지정된 된 매트릭스 변환 하 고 지정된 된 허용 오차를 사용 하 여 결합 합니다.|  
-|[CD2DGeometry::Destroy](#destroy)|CD2DGeometry 개체를 소멸 시킵니다. (재정의 [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DGeometry::Detach](#detach)|개체에서 리소스 인터페이스를 분리합니다.|  
-|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|기 하 도형으로 채워진 영역은 지정된 된 지점을 지정한 평면화 허용 오차를 포함 하는지 여부를 나타냅니다.|  
-|[CD2DGeometry::Get](#get)|반환 ID2D1Geometry 인터페이스|  
+|[CD2DGeometry::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Combines this geometry with the specified geometry and stores the result in an ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|Describes the intersection between this geometry and the specified geometry. The comparison is performed using the specified flattening tolerance.|  
+|[CD2DGeometry::ComputeArea](#computearea)|Computes the area of the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.|  
+|[CD2DGeometry::ComputeLength](#computelength)|Calculates the length of the geometry as though each segment were unrolled into a line.|  
+|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Calculates the point and tangent vector at the specified distance along the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.|  
+|[CD2DGeometry::Destroy](#destroy)|Destroys a CD2DGeometry object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DGeometry::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Indicates whether the area filled by the geometry would contain the specified point given the specified flattening tolerance.|  
+|[CD2DGeometry::Get](#get)|Returns ID2D1Geometry interface|  
 |[CD2DGeometry::GetBounds](#getbounds)||  
-|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|지정 된 스트로크 너비 및 스타일에 의해 확장 된 고 지정된 된 매트릭스에 의해 변환 된 후에 기 하 도형의 경계를 가져옵니다.|  
-|[CD2DGeometry::IsValid](#isvalid)|리소스 유효성 검사 (재정의 [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DGeometry::Outline](#outline)|기 하 도형의 개요를 계산 하 고 결과 ID2D1SimplifiedGeometrySink에 기록 합니다.|  
-|[CD2DGeometry::Simplify](#simplify)|선 및 (선택적 요소) 입방 형&3; 차원 곡선을 포함 하 고 결과 ID2D1SimplifiedGeometrySink에 기록 하는 기 하 도형의 단순화 된 버전을 만듭니다.|  
-|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|기 하 도형의 스트로크에 지정된 된 지점을 지정 된 스트로크 두께, 스타일 및 변환을 포함 되는지 여부를 결정 합니다.|  
-|[CD2DGeometry::Tessellate](#tessellate)|지정된 된 매트릭스를 사용 하 여 변환 된 기 하 도형을 포괄 하 고 지정된 된 허용 오차를 사용 하 여 결합 하는 시계 방향으로 돌아가는 삼각형의 집합을 만듭니다.|  
-|[CD2DGeometry::Widen](#widen)|기 하 도형이 지정된 획에 따라 확장 하 고 한 후 결과 ID2D1SimplifiedGeometrySink에 기록 하 여 지정된 된 매트릭스 변환 하 고 지정된 된 허용 오차를 사용 하 여 결합 합니다.|  
+|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Gets the bounds of the geometry after it has been widened by the specified stroke width and style and transformed by the specified matrix.|  
+|[CD2DGeometry::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DGeometry::Outline](#outline)|Computes the outline of the geometry and writes the result to an ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::Simplify](#simplify)|Creates a simplified version of the geometry that contains only lines and (optionally) cubic Bezier curves and writes the result to an ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Determines whether the geometry's stroke contains the specified point given the specified stroke thickness, style, and transform.|  
+|[CD2DGeometry::Tessellate](#tessellate)|Creates a set of clockwise-wound triangles that cover the geometry after it has been transformed using the specified matrix and flattened using the specified tolerance.|  
+|[CD2DGeometry::Widen](#widen)|Widens the geometry by the specified stroke and writes the result to an ID2D1SimplifiedGeometrySink after it has been transformed by the specified matrix and flattened using the specified tolerance.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|반환 ID2D1Geometry 인터페이스|  
+|[CD2DGeometry::operator ID2D1Geometry*](#operator_id2d1geometry_star)|Returns ID2D1Geometry interface|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::m_pGeometry](#m_pgeometry)|ID2D1Geometry에 대 한 포인터입니다.|  
+|[CD2DGeometry::m_pGeometry](#m_pgeometry)|A pointer to an ID2D1Geometry.|  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  `CD2DGeometry`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
- 소멸자입니다. D2D 기 하 도형 개체가 소멸 될 때 호출 됩니다.  
+##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry::~CD2DGeometry  
+ The destructor. Called when a D2D geometry object is being destroyed.  
   
 ```  
 virtual ~CD2DGeometry();
 ```  
   
-##  <a name="attach"></a>CD2DGeometry::Attach  
- 기존 개체에 대 한 리소스 인터페이스를 연결.  
+##  <a name="attach"></a>  CD2DGeometry::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1Geometry* pResource);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- 기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
- CD2DGeometry 개체를 만듭니다.  
+##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
+ Constructs a CD2DGeometry object.  
   
 ```  
 CD2DGeometry(
@@ -151,15 +170,15 @@ CD2DGeometry(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 렌더링 대상에 대 한 포인터입니다.  
+ A pointer to the render target.  
   
  `bAutoDestroy`  
- 개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
- 지정 된 geometry이 기 하이 도형 결합 하 고 결과 ID2D1SimplifiedGeometrySink 저장 합니다.  
+##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
+ Combines this geometry with the specified geometry and stores the result in an ID2D1SimplifiedGeometrySink.  
   
 ```  
 BOOL CombineWithGeometry(
@@ -170,27 +189,27 @@ BOOL CombineWithGeometry(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `inputGeometry`  
- 이 인스턴스와 결합 하 여 기하학입니다.  
+ The geometry to combine with this instance.  
   
  `combineMode`  
- 결합을 수행 하는 작업의 형식입니다.  
+ The type of combine operation to perform.  
   
  `inputGeometryTransform`  
- 결합 하기 전의 inputGeometry에 적용할 변환 합니다.  
+ The transform to apply to inputGeometry before combining.  
   
  `geometrySink`  
- 결합 작업의 결과입니다.  
+ The result of the combine operation.  
   
  `flatteningTolerance`  
- 기 하 도형의 다각형 근사값에서 점 사이의 거리에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometries. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
- 이 기 하이 도형 및 지정 된 geometry의 교차를 설명합니다. 지정한 평면화 허용 오차를 사용 하 여 비교 합니다.  
+##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry  
+ Describes the intersection between this geometry and the specified geometry. The comparison is performed using the specified flattening tolerance.  
   
 ```  
 D2D1_GEOMETRY_RELATION CompareWithGeometry(
@@ -199,21 +218,21 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `inputGeometry`  
- 테스트할 기하학입니다.  
+ The geometry to test.  
   
  `inputGeometryTransform`  
- InputGeometry에 적용할 변환 합니다.  
+ The transform to apply to inputGeometry.  
   
  `flatteningTolerance`  
- 기 하 도형의 다각형 근사값에서 점 사이의 거리에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometries. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="computearea"></a>CD2DGeometry::ComputeArea  
- 였 기 하 도형의 면적을 계산 하 여 지정된 된 매트릭스 변환 하 고 지정된 된 허용 오차를 사용 하 여 결합 합니다.  
+##  <a name="computearea"></a>  CD2DGeometry::ComputeArea  
+ Computes the area of the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL ComputeArea(
@@ -222,21 +241,21 @@ BOOL ComputeArea(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- 영역을 계산 하기 전에이 기 하이 도형에 적용할 변환입니다.  
+ The transform to apply to this geometry before computing its area.  
   
  `area`  
- 이 메서드가 반환 될 때이 기 하이 도형 변환 되 고 병합 된 버전의 영역에 대 한 포인터를 포함 합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
+ When this method returns, contains a pointer to the area of the transformed, flattened version of this geometry. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 다각형 근사값 geometry의 점 간 거리에 허용 되는 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="computelength"></a>CD2DGeometry::ComputeLength  
- 가 각 세그먼트를 선으로 롤백된 것 처럼 geometry의 길이 계산 합니다.  
+##  <a name="computelength"></a>  CD2DGeometry::ComputeLength  
+ Calculates the length of the geometry as though each segment were unrolled into a line.  
   
 ```  
 BOOL ComputeLength(
@@ -245,21 +264,21 @@ BOOL ComputeLength(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- 길이 계산 하기 전에 기 하 도형에 적용할 변환입니다.  
+ The transform to apply to the geometry before calculating its length.  
   
  `length`  
- 이 메서드가 반환 될 때 기 하 도형의 길이에 대 한 포인터를 포함 합니다. 닫힌된 기 하 도형의 길이 암시적 닫는 세그먼트를 포함합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
+ When this method returns, contains a pointer to the length of the geometry. For closed geometries, the length includes an implicit closing segment. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 다각형 근사값 geometry의 점 간 거리에 허용 되는 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
- 지정한 후 점과 탄젠트 벡터에 기 하 도형 따라 지정된 된 거리를 계산 하 여 지정된 된 매트릭스 변환 하 고 지정된 된 허용 오차를 사용 하 여 결합 합니다.  
+##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength  
+ Calculates the point and tangent vector at the specified distance along the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL ComputePointAtLength(
@@ -270,44 +289,44 @@ BOOL ComputePointAtLength(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `length`  
- 지점 및 찾을 탄젠트 기 하 도형 따라 거리입니다. 이 간격은 0 미만인 경우이 메서드는 기 하 도형에서 첫 번째 요소를 계산 합니다. 이 거리는 geometry의 길이 보다 클 경우이 메서드는 형상의 시작점을 계산 합니다.  
+ The distance along the geometry of the point and tangent to find. If this distance is less then 0, this method calculates the first point in the geometry. If this distance is greater than the length of the geometry, this method calculates the last point in the geometry.  
   
  `worldTransform`  
- 지정 된 지점 및 탄젠트를 계산 하기 전에 기 하 도형에 적용할 변환입니다.  
+ The transform to apply to the geometry before calculating the specified point and tangent.  
   
  `point`  
- 기 하 도형 따라 지정 된 거리 만큼 떨어진 위치입니다. 이 지점 x 및 y로 NaN을 포함 하는 기 하 도형 비어 있는 경우 값입니다.  
+ The location at the specified distance along the geometry. If the geometry is empty, this point contains NaN as its x and y values.  
   
  `unitTangentVector`  
- 이 메서드가 반환 될 때 탄젠트 벡터에 기 하 도형 따라 지정된 된 거리에 대 한 포인터를 포함 합니다. 이 벡터의 x 및 y로 NaN을 포함 하는 기 하 도형 비어 있는 경우 값입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
+ When this method returns, contains a pointer to the tangent vector at the specified distance along the geometry. If the geometry is empty, this vector contains NaN as its x and y values. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 다각형 근사값 geometry의 점 간 거리에 허용 되는 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="destroy"></a>CD2DGeometry::Destroy  
- CD2DGeometry 개체를 소멸 시킵니다.  
+##  <a name="destroy"></a>  CD2DGeometry::Destroy  
+ Destroys a CD2DGeometry object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DGeometry::Detach  
- 개체에서 리소스 인터페이스를 분리합니다.  
+##  <a name="detach"></a>  CD2DGeometry::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1Geometry* Detach();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 분리 된 리소스 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
- 기 하 도형으로 채워진 영역은 지정된 된 지점을 지정한 평면화 허용 오차를 포함 하는지 여부를 나타냅니다.  
+##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint  
+ Indicates whether the area filled by the geometry would contain the specified point given the specified flattening tolerance.  
   
 ```  
 BOOL FillContainsPoint(
@@ -317,33 +336,33 @@ BOOL FillContainsPoint(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `point`  
- 테스트 지점입니다.  
+ The point to test.  
   
  `worldTransform`  
- 포함을 테스트 하기 전에 기 하 도형에 적용할 변환입니다.  
+ The transform to apply to the geometry prior to testing for containment.  
   
  `contains`  
- 이 메서드가 반환 될 때 값이 포함 한 bool TRUE는 기 하 도형으로 채워진 영역에 있습니다. 그렇지 않으면 FALSE입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
+ When this method returns, contains a bool value that is TRUE if the area filled by the geometry contains point; otherwise, FALSE. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 숫자 정확도 정확한 기하학적 경로 및 경로 교차 계산 됩니다. 채우기가 허용 오차 보다 작은 없는 포인트는 여전히 내부 간주 됩니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The numeric accuracy with which the precise geometric path and path intersection is calculated. Points missing the fill by less than the tolerance are still considered inside. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="get"></a>CD2DGeometry::Get  
- 반환 ID2D1Geometry 인터페이스  
+##  <a name="get"></a>  CD2DGeometry::Get  
+ Returns ID2D1Geometry interface  
   
 ```  
 ID2D1Geometry* Get();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Geometry 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Geometry interface or NULL if object is not initialized yet.  
   
-##  <a name="getbounds"></a>CD2DGeometry::GetBounds  
+##  <a name="getbounds"></a>  CD2DGeometry::GetBounds  
   
 ```   
 BOOL GetBounds(
@@ -351,14 +370,14 @@ const D2D1_MATRIX_3X2_F& worldTransform,
 CD2DRectF& bounds) const; 
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
  `bounds`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-##  <a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
- 지정 된 스트로크 너비 및 스타일에 의해 확장 된 고 지정된 된 매트릭스에 의해 변환 된 후에 기 하 도형의 경계를 가져옵니다.  
+##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds  
+ Gets the bounds of the geometry after it has been widened by the specified stroke width and style and transformed by the specified matrix.  
   
 ```  
 BOOL GetWidenedBounds(
@@ -369,54 +388,54 @@ BOOL GetWidenedBounds(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `strokeWidth`  
- 기 하 도형을 넓히는 윤곽선을 스트로크 여 기준이 양입니다.  
+ The amount by which to widen the geometry by stroking its outline.  
   
  `strokeStyle`  
- 기 하 도형을 확장 하는 선의 스타일입니다.  
+ The style of the stroke that widens the geometry.  
   
  `worldTransform`  
- 기 하 도형 변환 되 고 기 하 도형을 스트로크 한 후 기 하 도형에 적용할 변환 합니다.  
+ A transform to apply to the geometry after the geometry is transformed and after the geometry has been stroked.  
   
  `bounds`  
- 이 메서드가 반환 하는 경우에 확장 된 기의 범위를 포함 합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
+ When this method returns, contains the bounds of the widened geometry. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 기 하 도형의 다각형 근사값에서 점 사이의 거리에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometries. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="isvalid"></a>CD2DGeometry::IsValid  
- 리소스 유효성 검사  
+##  <a name="isvalid"></a>  CD2DGeometry::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- TRUE 이면 리소스는 올바르지 않습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
- ID2D1Geometry에 대 한 포인터입니다.  
+##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry  
+ A pointer to an ID2D1Geometry.  
   
 ```  
 ID2D1Geometry* m_pGeometry;  
 ```  
   
-##  <a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
- 반환 ID2D1Geometry 인터페이스  
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry*  
+ Returns ID2D1Geometry interface  
   
 ```  
 operator ID2D1Geometry*();
 ```   
   
-### <a name="return-value"></a>반환 값  
- 개체가 아직 초기화 되지 않은 경우에 NULL 또는 ID2D1Geometry 인터페이스에 대 한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Geometry interface or NULL if object is not initialized yet.  
   
-##  <a name="outline"></a>CD2DGeometry::Outline  
- 기 하 도형의 개요를 계산 하 고 결과 ID2D1SimplifiedGeometrySink에 기록 합니다.  
+##  <a name="outline"></a>  CD2DGeometry::Outline  
+ Computes the outline of the geometry and writes the result to an ID2D1SimplifiedGeometrySink.  
   
 ```  
 BOOL Outline(
@@ -425,21 +444,21 @@ BOOL Outline(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- 기 하 도형 윤곽선에 적용할 변환입니다.  
+ The transform to apply to the geometry outline.  
   
  `geometrySink`  
- 기 하 도형 변환 개요 ID2D1SimplifiedGeometrySink 추가 됩니다.  
+ The ID2D1SimplifiedGeometrySink to which the geometry transformed outline is appended.  
   
  `flatteningTolerance`  
- 다각형 근사값 geometry의 점 간 거리에 허용 되는 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="simplify"></a>CD2DGeometry::Simplify  
- 선 및 (선택적 요소) 입방 형&3; 차원 곡선을 포함 하 고 결과 ID2D1SimplifiedGeometrySink에 기록 하는 기 하 도형의 단순화 된 버전을 만듭니다.  
+##  <a name="simplify"></a>  CD2DGeometry::Simplify  
+ Creates a simplified version of the geometry that contains only lines and (optionally) cubic Bezier curves and writes the result to an ID2D1SimplifiedGeometrySink.  
   
 ```  
 BOOL Simplify(
@@ -449,24 +468,24 @@ BOOL Simplify(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `simplificationOption`  
- 간단한 기 하 도형 곡선을 포함 해야 하는지 여부를 지정 하는 값입니다.  
+ A value that specifies whether the simplified geometry should contain curves.  
   
  `worldTransform`  
- 간소화 된 기 하 도형에 적용할 변환입니다.  
+ The transform to apply to the simplified geometry.  
   
  `geometrySink`  
- ID2D1SimplifiedGeometrySink 단순한 기 하 도형이 추가 됩니다.  
+ The ID2D1SimplifiedGeometrySink to which the simplified geometry is appended.  
   
  `flatteningTolerance`  
- 다각형 근사값 geometry의 점 간 거리에 허용 되는 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
- 기 하 도형의 스트로크에 지정된 된 지점을 지정 된 스트로크 두께, 스타일 및 변환을 포함 되는지 여부를 결정 합니다.  
+##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint  
+ Determines whether the geometry's stroke contains the specified point given the specified stroke thickness, style, and transform.  
   
 ```  
 BOOL StrokeContainsPoint(
@@ -478,30 +497,30 @@ BOOL StrokeContainsPoint(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `point`  
- 포함에 대 한 테스트 지점입니다.  
+ The point to test for containment.  
   
  `strokeWidth`  
- 적용할 선의 두께입니다.  
+ The thickness of the stroke to apply.  
   
  `strokeStyle`  
- 적용할 선의 스타일입니다.  
+ The style of the stroke to apply.  
   
  `worldTransform`  
- 스트로크 기 하 도형에 적용할 변환 합니다.  
+ The transform to apply to the stroked geometry.  
   
  `contains`  
- 이 메서드가 반환 될 때 기 하 도형의 스트로크에 지정된 된 지점이 포함 되어 있는 경우 TRUE로 설정 하는 부울 값을 포함 합니다. 그렇지 않으면 FALSE입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
+ When this method returns, contains a boolean value set to TRUE if the geometry's stroke contains the specified point; otherwise, FALSE. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 숫자 정확도 정확한 기하학적 경로 및 경로 교차 계산 됩니다. 허용 오차 보다 작은 스트로크가 없는 포인트는 여전히 내부 간주 됩니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The numeric accuracy with which the precise geometric path and path intersection is calculated. Points missing the stroke by less than the tolerance are still considered inside. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="tessellate"></a>CD2DGeometry::Tessellate  
- 지정된 된 매트릭스를 사용 하 여 변환 된 기 하 도형을 포괄 하 고 지정된 된 허용 오차를 사용 하 여 결합 하는 시계 방향으로 돌아가는 삼각형의 집합을 만듭니다.  
+##  <a name="tessellate"></a>  CD2DGeometry::Tessellate  
+ Creates a set of clockwise-wound triangles that cover the geometry after it has been transformed using the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL Tessellate(
@@ -510,21 +529,21 @@ BOOL Tessellate(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- 이 기 하 도형 또는 NULL에 적용할 변환입니다.  
+ The transform to apply to this geometry, or NULL.  
   
  `tessellationSink`  
- 에 없을 붙여집니다 ID2D1TessellationSink 합니다.  
+ The ID2D1TessellationSink to which the tessellated is appended.  
   
  `flatteningTolerance`  
- 다각형 근사값 geometry의 점 간 거리에 허용 되는 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="widen"></a>CD2DGeometry::Widen  
- 기 하 도형이 지정된 획에 따라 확장 하 고 한 후 결과 ID2D1SimplifiedGeometrySink에 기록 하 여 지정된 된 매트릭스 변환 하 고 지정된 된 허용 오차를 사용 하 여 결합 합니다.  
+##  <a name="widen"></a>  CD2DGeometry::Widen  
+ Widens the geometry by the specified stroke and writes the result to an ID2D1SimplifiedGeometrySink after it has been transformed by the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL Widen(
@@ -535,25 +554,25 @@ BOOL Widen(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `strokeWidth`  
- 기 하 도형을 넓히는 기준이 양입니다.  
+ The amount by which to widen the geometry.  
   
  `strokeStyle`  
- 기 하 도형 또는 NULL에 적용할 선의 스타일입니다.  
+ The style of stroke to apply to the geometry, or NULL.  
   
  `worldTransform`  
- 그 확대 후 기 하 도형에 적용할 변환 합니다.  
+ The transform to apply to the geometry after widening it.  
   
  `geometrySink`  
- 확장 된 기 붙여집니다 ID2D1SimplifiedGeometrySink 합니다.  
+ The ID2D1SimplifiedGeometrySink to which the widened geometry is appended.  
   
  `flatteningTolerance`  
- 다각형 근사값 geometry의 점 간 거리에 허용 되는 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

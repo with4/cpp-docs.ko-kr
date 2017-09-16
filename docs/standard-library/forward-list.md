@@ -1,5 +1,5 @@
 ---
-title: "&lt;forward_list&gt; | Microsoft 문서"
+title: '&lt;forward_list&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <forward_list>
-- std::<forward_list>
-- std.<forward_list>
+- <forward_list>", "std::<forward_list>", "std.<forward_list>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,47 +33,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3493d1897018e203e3918c3368c68f5b112908b6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8177a16536343b85978d1a2a861559b0387840c8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
-컨테이너 템플릿 클래스 forward_list 및 다양한 지원 템플릿을 정의합니다.  
+Defines the container template class forward_list and several supporting templates.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <forward_list>  
 ```  
   
-### <a name="operators"></a>연산자  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체와 같은지 테스트합니다.|  
-|[operator!=](../standard-library/forward-list-operators.md#op_neq)|연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체와 같지 않은지 테스트합니다.|  
-|[operator<](../standard-library/forward-list-operators.md#op_lt)|연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체보다 작은지 테스트합니다.|  
-|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체보다 작거나 같은지 테스트합니다.|  
-|[operator>](../standard-library/forward-list-operators.md#op_gt)|연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체보다 큰지 테스트합니다.|  
-|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체보다 크거나 같은지 테스트합니다.|  
+|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Tests if the forward list object on the left side of the operator is equal to the forward list object on the right side.|  
+|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Tests if the forward list object on the left side of the operator is not equal to the forward list object on the right side.|  
+|[operator<](../standard-library/forward-list-operators.md#op_lt)|Tests if the forward list object on the left side of the operator is less than the forward list object on the right side.|  
+|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Tests if the forward list object on the left side of the operator is less than or equal to the forward list object on the right side.|  
+|[operator>](../standard-library/forward-list-operators.md#op_gt)|Tests if the forward list object on the left side of the operator is greater than the forward list object on the right side.|  
+|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Tests if the forward list object on the left side of the operator is greater than or equal to the forward list object on the right side.|  
   
-### <a name="functions"></a>함수  
-  
-|||  
-|-|-|  
-|[swap](../standard-library/forward-list-functions.md#swap)|두 정방향 목록의 요소를 교환합니다.|  
-  
-### <a name="classes"></a>클래스  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[forward_list](../standard-library/forward-list-class.md)|다양한 길이의 요소 시퀀스를 제어하는 개체를 설명합니다. 각각 `Type` 형식의 멤버를 포함하는 요소의 단일 연결 목록으로 시퀀스가 저장됩니다.|  
+|[swap](../standard-library/forward-list-functions.md#swap)|Exchanges the elements of two forward lists.|  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[forward_list](../standard-library/forward-list-class.md)|Describes an object that controls a varying-length sequence of elements. The sequence is stored as a singly-linked list of elements, each containing a member of type `Type`.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

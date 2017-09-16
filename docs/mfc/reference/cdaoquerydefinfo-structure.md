@@ -1,5 +1,5 @@
 ---
-title: "CDaoQueryDefInfo 구조체 | Microsoft 문서"
+title: CDaoQueryDefInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
-- CDaoQueryDefInfo structure
+- CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 80e681345091ef54e2be2e3f1c1ea6ccaefd9d17
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0c9f4f84340bb2f05289782992d2b969a1e58b9c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 구조체
-`CDaoQueryDefInfo` 구조에 데이터 액세스 개체 (DAO)에 대해 정의 하는 쿼리 정의 개체에 대 한 정보가 들어 있습니다.  
+# <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo Structure
+The `CDaoQueryDefInfo` structure contains information about a querydef object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoQueryDefInfo  
@@ -61,75 +61,75 @@ struct CDaoQueryDefInfo
 };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 쿼리 정의 개체의 고유 이름을 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 하십시오. 호출 [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) 이 속성을 직접 검색할 수 있습니다.  
+ Uniquely names the querydef object. For more information, see the topic "Name Property" in DAO Help. Call [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) to retrieve this property directly.  
   
  `m_nType`  
- 쿼리 정의 개체의 작업 유형을 나타내는 값입니다. 값은 다음 중 하나일 수 있습니다.  
+ A value that indicates the operational type of a querydef object. The value can be one of the following:  
   
-- **dbQSelect** 선택-쿼리 레코드를 선택 합니다.  
+- **dbQSelect** Select — the query selects records.  
   
-- **dbQAction** 작업-쿼리 이동 하거나 데이터를 변경 하지만 레코드를 반환 하지 않습니다.  
+- **dbQAction** Action — the query moves or changes data but does not return records.  
   
-- **dbQCrosstab** 크로스탭-쿼리 데이터는 스프레드시트 형식으로 반환 합니다.  
+- **dbQCrosstab** Crosstab — the query returns data in a spreadsheet-like format.  
   
-- **dbQDelete** 삭제-쿼리에 지정 된 행의 집합을 삭제 합니다.  
+- **dbQDelete** Delete — the query deletes a set of specified rows.  
   
-- **dbQUpdate** 업데이트-쿼리 레코드 집합을 변경 합니다.  
+- **dbQUpdate** Update — the query changes a set of records.  
   
-- **dbQAppend** 추가-쿼리는 테이블 또는 쿼리의 끝에 새 레코드를 추가 합니다.  
+- **dbQAppend** Append — the query adds new records to the end of a table or query.  
   
-- **dbQMakeTable** 테이블 만들기-쿼리 레코드 집합에서 새 테이블을 만듭니다.  
+- **dbQMakeTable** Make-table — the query creates a new table from a recordset.  
   
-- **dbQDDL** 데이터 정의-쿼리 테이블 또는 해당 파트의 구조에 영향을 줍니다.  
+- **dbQDDL** Data-definition — the query affects the structure of tables or their parts.  
   
-- **dbQSQLPassThrough** 통과-SQL 문을 중간 처리 하지 않고 데이터베이스 백 엔드에 직접 전달 됩니다.  
+- **dbQSQLPassThrough** Pass-through — the SQL statement is passed directly to the database backend, without intermediate processing.  
   
-- **dbQSetOperation** Union-쿼리 두 개의 지정 된 모든 레코드의 데이터가 들어 있는 스냅숏 형식 recordset 개체를 만들거나 이상의 테이블이 중복 된 레코드를 제거 합니다. 중복 값을 포함 하려면 키워드를 추가 **모든** 쿼리 정의 SQL 문에 합니다.  
+- **dbQSetOperation** Union — the query creates a snapshot-type recordset object containing data from all specified records in two or more tables with any duplicate records removed. To include the duplicates, add the keyword **ALL** in the querydef's SQL statement.  
   
-- **dbQSPTBulk** 사용한 **dbQSQLPassThrough** 레코드를 반환 하지 않는 쿼리를 지정할 수 있습니다.  
+- **dbQSPTBulk** Used with **dbQSQLPassThrough** to specify a query that does not return records.  
   
 > [!NOTE]
->  SQL 통과 쿼리를 만들려면 설정 하지 않으면는 **dbQSQLPassThrough** 상수입니다. 이 설정은 자동으로 Microsoft Jet 데이터베이스 엔진에 의해 쿼리 정의 개체를 만들고 연결 속성을 설정 합니다.  
+>  To create a SQL pass-through query, you do not set the **dbQSQLPassThrough** constant. This is set automatically by the Microsoft Jet database engine when you create a querydef object and set the Connect property.  
   
- 자세한 내용은 DAO 도움말의 "Type 속성" 항목을 참조 하십시오.  
+ For more information, see the topic "Type Property" in DAO Help.  
   
  `m_dateCreated`  
- 날짜 및 쿼리 정의 만든 시간입니다. 쿼리 정의 만든 날짜를 직접 검색 하려면 호출의 [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다. 자세한 내용은 아래의 설명을 참조 하십시오. 도 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 하십시오.  
+ The date and time the querydef was created. To directly retrieve the date the querydef was created, call the [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) member function of the `CDaoTableDef` object associated with the table. See Comments below for more information. Also see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
  `m_dateLastUpdated`  
- 날짜 및 시간을 가장 최근 쿼리 정의에 적용 한 변경입니다. 테이블을 마지막으로 수정한 날짜를 직접 검색 하려면 호출의 [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) 쿼리 정의의 멤버 함수입니다. 자세한 내용은 아래의 설명을 참조 하십시오. 고 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 하십시오.  
+ The date and time of the most recent change made to the querydef. To directly retrieve the date the table was last updated, call the [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) member function of the querydef. See Comments below for more information. And see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
  `m_bUpdatable`  
- 변경 내용을 쿼리 정의 개체를 연결할 수 있는지 여부를 나타냅니다. 이 속성이 **TRUE**, 쿼리 정의 업데이트할 수 있는 고, 그렇지 않으면, 않습니다. 업데이트할 수는 쿼리 정의 개체의 쿼리 정의 변경할 수를 의미 합니다. 업데이트할 수 있는 쿼리 정의 개체의 속성이 **TRUE** 쿼리 정의 업데이트할 수 있습니다, 경우에 결과 레코드 집합을 업데이트할 수 없습니다. 이 속성을 직접 검색 하려면 쿼리 정의 [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "업데이트할 수 있는 속성" 항목을 참조 하십시오.  
+ Indicates whether changes can be made to a querydef object. If this property is **TRUE**, the querydef is updatable; otherwise, it is not. Updatable means the querydef object's query definition can be changed. The Updatable property of a querydef object is set to **TRUE** if the query definition can be updated, even if the resulting recordset is not updatable. To retrieve this property directly, call the querydef's [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) member function. For more information, see the topic "Updatable Property" in DAO Help.  
   
  *m_bReturnsRecords*  
- 외부 데이터베이스에는 SQL 통과 쿼리의 레코드를 반환 하는지 여부를 나타냅니다. 이 속성이 **TRUE**, 쿼리 레코드를 반환 합니다. 이 속성을 직접 검색 하려면 호출 [CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords)합니다. 모든 SQL 통과 쿼리 외부 데이터베이스에 레코드를 반환 합니다. 예를 들어 SQL **업데이트** SQL 하는 동안 레코드를 반환 하지 않는 레코드를 업데이트 하는 문을 **선택** 문에 레코드를 반환 합니다. 자세한 내용은 DAO 도움말의 "ReturnsRecords 속성" 항목을 참조 하십시오.  
+ Indicates whether a SQL pass-through query to an external database returns records. If this property is **TRUE**, the query returns records. To directly retrieve this property, call [CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords). Not all SQL pass-through queries to external databases return records. For example, a SQL **UPDATE** statement updates records without returning records, while a SQL **SELECT** statement does return records. For more information, see the topic "ReturnsRecords Property" in DAO Help.  
   
  *m_strSQL*  
- 쿼리 정의 개체를 실행 하는 쿼리를 정의 하는 SQL 문입니다. 레코드 선택 방법, 그룹화 및 정렬 쿼리를 실행 하는 경우를 결정 하는 SQL 문을 포함 하는 SQL 속성입니다. 다이너셋 또는 스냅숏 형식 recordset 개체에서를 포함 하는 레코드를 선택 하는 쿼리를 사용할 수 있습니다. 대량 레코드를 반환 하지 않고 데이터를 수정 하는 쿼리를 정의할 수 있습니다. 직접 쿼리 정의 호출 하 여이 속성의 값을 검색할 수 [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) 멤버 함수입니다.  
+ The SQL statement that defines the query executed by a querydef object. The SQL property contains the SQL statement that determines how records are selected, grouped, and ordered when you execute the query. You can use the query to select records to include in a dynaset- or snapshot-type recordset object. You can also define bulk queries to modify data without returning records. You can retrieve the value of this property directly by calling the querydef's [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) member function.  
   
  `m_strConnect`  
- 통과 쿼리를 사용 하는 데이터베이스의 원본에 대 한 정보를 제공 합니다. 이 정보에는 연결 문자열의 형태로 이루어집니다. 자세한 정보에 대 한 연결 문자열을 한이 속성의 값을 직접 검색 하는 방법에 대 한 정보를 참조 하십시오.는 [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) 멤버 함수입니다.  
+ Provides information about the source of a database used in a pass-through query. This information takes the form of a connect string. For more information about connect strings, and for information about retrieving the value of this property directly, see the [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) member function.  
   
  *m_nODBCTimeout*  
- Microsoft Jet 데이터베이스 엔진 시간 초과 오류가 전에 대기 하는 시간 (초)의 수에는 ODBC 데이터베이스에서 쿼리를 실행할 때 발생 합니다. Microsoft SQL Server와 같은 ODBC 데이터베이스를 사용 하는 경우에 ODBC 서버의 네트워크 트래픽 또는 중형 사용 되기 때문에 지연 나타날 수 있습니다. 무기한 대기 하는 대신 Microsoft Jet 엔진 오류가 발생 하기 전에 대기 하는 시간을 지정할 수 있습니다. 기본 제한 시간은 60 초입니다. 직접 쿼리 정의 호출 하 여이 속성의 값을 검색할 수 [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "ODBCTimeout 속성" 항목을 참조 하십시오.  
+ The number of seconds the Microsoft Jet database engine waits before a timeout error occurs when a query is run on an ODBC database. When you're using an ODBC database, such as Microsoft SQL Server, there may be delays because of network traffic or heavy use of the ODBC server. Rather than waiting indefinitely, you can specify how long the Microsoft Jet engine waits before it produces an error. The default timeout value is 60 seconds. You can retrieve the value of this property directly by calling the querydef's [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout) member function. For more information, see the topic "ODBCTimeout Property" in DAO Help.  
   
-## <a name="remarks"></a>주의  
- 쿼리 정의 클래스의 개체 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)합니다. 기본, 보조 및 위에서 모두에 대 한 참조에서의 정보를 반환 하는 방법을 나타내는 [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) 클래스에서 멤버 함수 `CDaoDatabase`합니다.  
+## <a name="remarks"></a>Remarks  
+ The querydef is an object of class [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). The references to Primary, Secondary, and All above indicate how the information is returned by the [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) member function in class `CDaoDatabase`.  
   
- 검색 한 정보는 [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) 멤버 함수에 저장 되는 `CDaoQueryDefInfo` 구조입니다. 호출 `GetQueryDefInfo` 쿼리 정의 개체가 해당 QueryDefs 컬렉션에 저장 하는 데이터베이스 개체에 대 한 합니다. `CDaoQueryDefInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoQueryDefInfo` 개체입니다. 클래스 `CDaoDatabase` 에 반환 된 속성 모두에 직접 액세스 하는 것에 대 한 멤버 함수를 제공 하는 또한는 `CDaoQueryDefInfo` 개체를 호출할 필요가 거의 아마도 `GetQueryDefInfo`합니다.  
+ Information retrieved by the [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) member function is stored in a `CDaoQueryDefInfo` structure. Call `GetQueryDefInfo` for the database object in whose QueryDefs collection the querydef object is stored. `CDaoQueryDefInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoQueryDefInfo` object. Class `CDaoDatabase` also supplies member functions for directly accessing all of the properties returned in a `CDaoQueryDefInfo` object, so you will probably seldom need to call `GetQueryDefInfo`.  
   
- 쿼리 정의 개체의 필드 또는 매개 변수 컬렉션에 새 필드 또는 매개 변수 개체를 추가 하는 경우 기본 데이터베이스에 새 개체에 대해 지정 된 데이터 형식을 지원 하지 않는 경우 예외가 throw 됩니다.  
+ When you append a new field or parameter object to the Fields or Parameters collection of a querydef object, an exception is thrown if the underlying database does not support the data type specified for the new object.  
   
- 날짜 및 시간 설정이 있는 쿼리 정의 만들었거나 마지막으로 업데이트 하는 컴퓨터에서 파생 됩니다. 다중 사용자 환경에서 사용자가 가져야 이러한 설정을 사용 하 여 파일 서버에서 직접는 **시간 net** DateCreated 및 LastUpdated 속성 설정에 대 한 불일치를 방지 하는 명령입니다.  
+ The date and time settings are derived from the computer on which the querydef was created or last updated. In a multiuser environment, users should get these settings directly from the file server using the **net time** command to avoid discrepancies in the DateCreated and LastUpdated property settings.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoQueryDef 클래스](../../mfc/reference/cdaoquerydef-class.md)   
- [CDaoDatabase 클래스](../../mfc/reference/cdaodatabase-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)
 

@@ -1,193 +1,233 @@
 ---
-title: "연습: 응용 프로그램에 CTaskDialog 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTaskDialog, 추가"
-  - "연습[C++], 대화 상자"
+title: 'Walkthrough: Adding a CTaskDialog to an Application | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTaskDialog, adding
+- walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# 연습: 응용 프로그램에 CTaskDialog 추가
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f33e4f4d12d5c561de6c2a932586b856b015f739
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이 연습에서는 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md)를 소개하고 이를 응용 프로그램에 추가하는 방법을 보여 줍니다.  
+---
+# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Walkthrough: Adding a CTaskDialog to an Application
+This walkthrough introduces the [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) and shows you how to add one to your application.  
   
- `CTaskDialog`는 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]에서 Windows 메시지 상자를 대체하는 작업 대화 상자입니다.`CTaskDialog`는 원래 메시지 상자를 개선하고 기능을 추가합니다. Windows 메시지 상자는 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에서 계속 지원됩니다.  
+ The `CTaskDialog` is a task dialog box that replaces the Windows message box in [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. The `CTaskDialog` improves the original message box and adds functionality. The Windows message box is still supported in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
   
 > [!NOTE]
->  [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 이전 버전의 Windows는 `CTaskDialog`를 지원하지 않습니다. 이전 버전의 Windows에서 응용 프로그램을 실행하는 사용자에게 메시지를 표시하려면 다른 대화 상자 옵션을 프로그래밍해야 합니다. 정적 메서드 [CTaskDialog::IsSupported](../Topic/CTaskDialog::IsSupported.md)를 사용하여 런타임에 사용자 컴퓨터에서 `CTaskDialog`를 표시할 수 있는지 결정할 수 있습니다. 또한 `CTaskDialog`는 응용 프로그램이 유니코드 라이브러리와 함께 빌드된 경우에만 사용할 수 있습니다.  
+>  Versions of Windows earlier than [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] do not support the `CTaskDialog`. You must program an alternative dialog box option if you want to show a message to a user who runs your application on an earlier version of Windows. You can use the static method [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) to determine at run time whether a user's computer can display a `CTaskDialog`. In addition, the `CTaskDialog` is only available when your application is built with the Unicode library.  
   
- `CTaskDialog`는 정보를 수집하고 표시할 수 있도록 여러 선택적 요소를 지원합니다. 예를 들어 `CTaskDialog`는 명령 링크, 사용자 지정 단추, 사용자 지정 아이콘 및 바닥글을 표시할 수 있습니다. 또한 `CTaskDialog`에는 사용자가 선택한 선택적 요소를 확인하기 위해 작업 대화 상자를 쿼리하는 데 사용할 수 있는 여러 메서드가 있습니다.  
+ The `CTaskDialog` supports several optional elements to gather and display information. For example, a `CTaskDialog` can display command links, customized buttons, customized icons, and a footer. The `CTaskDialog` also has several methods that enable you to query the state of the task dialog box to determine what optional elements the user selected.  
   
-## 사전 요구 사항  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
   
--   [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
   
-## Windows 메시지 상자를 CTaskDialog로 대체  
- 다음 절차에서는 Windows 메시지 상자를 대체하는 `CTaskDialog`의 가장 기본적인 사용법을 보여 줍니다. 또한 이 예제에서는 작업 대화 상자와 연결된 아이콘을 변경합니다. 아이콘을 변경하면 `CTaskDialog`가 Windows 메시지 상자와 동일하게 표시됩니다.  
+## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Replacing a Windows Message Box with a CTaskDialog  
+ The following procedure demonstrates the most basic use of the `CTaskDialog`, which is to replace the Windows message box. This example also changes the icon associated with the task dialog box. Changing the icon makes the `CTaskDialog` appear identical to the Windows message box.  
   
-#### Windows 메시지 상자를 CTaskDialog로 대체하려면  
+#### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>To Replace a Windows Message Box with a CTaskDialog  
   
-1.  기본 설정으로 새 MFC 응용 프로그램 프로젝트를 만듭니다. 이를 `MyProject`라고 합니다.  
+1.  Create a new MFC Application project with the default settings. Call it `MyProject`.  
   
-2.  **솔루션 탐색기**를 사용하여 MyProject.cpp 파일을 엽니다.  
+2.  Use the **Solution Explorer** to open the file MyProject.cpp.  
   
-3.  포함 목록 뒤에 `#include "afxtaskdialog.h"`를 추가합니다.  
+3.  Add `#include "afxtaskdialog.h"` after the list of includes.  
   
-4.  `CMyProjectApp::InitInstance` 메서드를 찾습니다.`return TRUE;` 문 앞에 다음 코드 줄을 삽입합니다. 이 코드는 Windows 메시지 상자 또는 `CTaskDialog`에서 사용하는 문자열을 만듭니다.  
+4.  Find the method `CMyProjectApp::InitInstance`. Insert the following lines of code before the `return TRUE;` statement. This code creates the strings that we use in either the Windows message box or in the `CTaskDialog`.  
   
-    ```  
-    CString message("My message to the user");  
-    CString dialogTitle("My Task Dialog title");  
+ ```  
+    CString message("My message to the user");
+
+    CString dialogTitle("My Task Dialog title");
+
     CString emptyString;  
-    ```  
+ ```  
   
-5.  4단계의 코드 뒤에 다음 코드를 추가합니다. 이 코드를 사용하면 사용자 컴퓨터에서 `CTaskDialog`가 지원됩니다. 대화 상자가 지원되지 않는 경우 응용 프로그램에 Windows 메시지 상자가 대신 표시됩니다.  
+5.  Add the following code after the code from step 4. This code guarantees that the user's computer supports the `CTaskDialog`. If the dialog is not supported, the application displays a Windows message box instead.  
   
-    ```  
+ ```  
     if (CTaskDialog::IsSupported())  
-    {  
+ {  
+ 
+ }  
+    else 
+ {  
+    AfxMessageBox(message);
+
+ }  
+ ```  
   
-    }  
-    else  
-    {  
-       AfxMessageBox(message);  
-    }  
-    ```  
+6.  Insert the following code between the brackets after the `if` statement from step 5. This code creates the `CTaskDialog`.  
   
-6.  5단계의 `if` 문 뒤에 다음 코드를 대괄호로 묶어 삽입합니다. 이 코드는 `CTaskDialog`를 만듭니다.  
+ ```  
+    CTaskDialog taskDialog(message,
+    emptyString,
+    dialogTitle,
+    TDCBF_OK_BUTTON);
+
+ ```  
   
-    ```  
-    CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);  
-    ```  
+7.  On the next line, add the following code. This code sets the warning icon.  
   
-7.  그 다음 줄에 다음 코드를 추가합니다. 이 코드는 경고 아이콘을 설정합니다.  
+ ```  
+    taskDialog.SetMainIcon(TD_WARNING_ICON);
+
+ ```  
   
-    ```  
-    taskDialog.SetMainIcon(TD_WARNING_ICON);  
-    ```  
+8.  On the next line, add the following code. This code displays the task dialog box.  
   
-8.  그 다음 줄에 다음 코드를 추가합니다. 이 코드는 작업 대화 상자를 표시합니다.  
+ ```  
+    taskDialog.DoModal();
+
+ ```  
   
-    ```  
-    taskDialog.DoModal();  
-    ```  
+ You can omit step 7 if you do not want the `CTaskDialog` to display the same icon as the Windows message box. If you omit that step, the `CTaskDialog` has no icon when the application displays it.  
   
- `CTaskDialog`를 Windows 메시지 상자와 동일한 아이콘으로 표시하지 않으려는 경우 7단계를 생략할 수 있습니다. 이 단계를 생략하면 `CTaskDialog`가 아무 아이콘 없이 응용 프로그램에 표시됩니다.  
+ Compile and run the application. The application displays the task dialog box after it starts.  
   
- 응용 프로그램을 컴파일하고 실행합니다. 응용 프로그램이 시작된 후 작업 대화 상자가 표시됩니다.  
+## <a name="adding-functionality-to-the-ctaskdialog"></a>Adding Functionality to the CTaskDialog  
+ The following procedure shows you how to add functionality to the `CTaskDialog` that you created in the previous procedure. The example code shows you how to execute specific instructions based on the user's selections.  
   
-## CTaskDialog에 기능 추가  
- 다음 절차에서는 이전 절차에서 만든 `CTaskDialog`에 기능을 추가하는 방법을 보여 줍니다. 예제 코드는 사용자의 선택에 따라 구체적인 지침을 실행하는 방법을 보여 줍니다.  
+#### <a name="to-add-functionality-to-the-ctaskdialog"></a>To Add Functionality to the CTaskDialog  
   
-#### CTaskDialog에 기능을 추가하려면  
+1.  Navigate to the **Resource View**. If you cannot see the **Resource View**, you can open it from the **View** menu.  
   
-1.  **리소스 뷰**로 이동합니다.**리소스 뷰**가 보이지 않는 경우 **뷰** 메뉴에서 열 수 있습니다.  
+2.  Expand the **Resource View** until you can select the **String Table** folder. Expand it and double-click the **String Table** entry.  
   
-2.  **문자열 테이블** 폴더를 선택할 수 있을 때까지 **리소스 뷰**를 확장합니다. 폴더를 확장하고 **문자열 테이블** 항목을 두 번 클릭합니다.  
+3.  Scroll to the bottom of the string table and add a new entry. Change the ID to `TEMP_LINE1`. Set the caption to **Command Line 1**.  
   
-3.  문자열 테이블의 아래쪽으로 스크롤한 다음 새 항목을 추가합니다. ID를 `TEMP_LINE1`로 변경합니다. 캡션을 **Command Line 1**로 설정합니다.  
+4.  Add another new entry. Change the ID to `TEMP_LINE2`. Set the caption to **Command Line 2**.  
   
-4.  다른 새 항목을 추가합니다. ID를 `TEMP_LINE2`로 변경합니다. 캡션을 **Command Line 2**로 설정합니다.  
+5.  Navigate back to MyProject.cpp.  
   
-5.  MyProject.cpp로 다시 이동합니다.  
+6.  After `CString emptyString;`, add the following code:  
   
-6.  `CString emptyString;` 뒤에 다음 코드를 추가합니다.  
+ ```  
+    CString expandedLabel("Hide extra information");
+
+    CString collapsedLabel("Show extra information");
+
+    CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
+
+ ```  
   
-    ```  
-    CString expandedLabel("Hide extra information");  
-    CString collapsedLabel("Show extra information");  
-    CString expansionInfo("This is the additional information to the user,\nextended over two lines.");  
-    ```  
+7.  Find the `taskDialog.DoModal()` statement and replace that statement with the following code. This code updates the task dialog box and adds new controls:  
   
-7.  `taskDialog.DoModal()` 문을 찾아서 다음 코드로 바꿉니다. 이 코드는 작업 대화 상자를 업데이트하고 새 컨트롤을 추가합니다.  
+ ```  
+    taskDialog.SetMainInstruction(L"Warning");
+
+ taskDialog.SetCommonButtons(TDCBF_YES_BUTTON | TDCBF_NO_BUTTON | TDCBF_CANCEL_BUTTON);
+
+    taskDialog.LoadCommandControls(TEMP_LINE1,
+    TEMP_LINE2);
+
+    taskDialog.SetExpansionArea(expansionInfo,
+    collapsedLabel,
+    expandedLabel);
+
+    taskDialog.SetFooterText(L"This is the a small footnote to the user");
+
+    taskDialog.SetVerificationCheckboxText(L"Remember your selection");
+
+ ```  
   
-    ```  
-    taskDialog.SetMainInstruction(L"Warning");  
-    taskDialog.SetCommonButtons(TDCBF_YES_BUTTON | TDCBF_NO_BUTTON | TDCBF_CANCEL_BUTTON);  
-    taskDialog.LoadCommandControls(TEMP_LINE1, TEMP_LINE2);  
-    taskDialog.SetExpansionArea(expansionInfo, collapsedLabel, expandedLabel);  
-    taskDialog.SetFooterText(L"This is the a small footnote to the user");  
-    taskDialog.SetVerificationCheckboxText(L"Remember your selection");  
-    ```  
+8.  Add the following line of code that displays the task dialog box to the user and retrieves the user's selection:  
   
-8.  사용자에게 작업 대화 상자를 표시하고 사용자가 선택한 항목을 검색하는 다음 코드 줄을 추가합니다.  
+ ```  
+    INT_PTR result = taskDialog.DoModal();
+
+ ```  
   
-    ```  
-    INT_PTR result = taskDialog.DoModal();  
-    ```  
+9. Insert the following code after the call to `taskDialog.DoModal()`. This section of code processes the user's input:  
   
-9. `taskDialog.DoModal()`에 대한 호출 뒤에 다음 코드를 삽입합니다. 이 코드 섹션은 사용자의 입력을 처리합니다.  
-  
-    ```  
-    if (taskDialog.GetVerificationCheckboxState() )  
-    {  
-       // PROCESS IF the user selects the verification checkbox   
-    }  
-  
+ ```  
+    if (taskDialog.GetVerificationCheckboxState())  
+ { *// PROCESS IF the user selects the verification checkbox   
+ }  
+ 
     switch (result)  
-    {  
-       case TEMP_LINE1:  
-          // PROCESS IF the first command line  
-          break;  
-       case TEMP_LINE2:  
-          // PROCESS IF the second command line  
-          break;  
-       case IDYES:  
-          // PROCESS IF the user clicks yes  
-          break;  
-       case IDNO:  
-          // PROCESS IF the user clicks no  
-          break;  
-       case IDCANCEL:  
-          // PROCESS IF the user clicks cancel  
-          break;  
-       default:  
-          // This case should not be hit because closing the dialog box results in IDCANCEL  
-          break;  
-    }  
-    ```  
+ {  
+    case TEMP_LINE1: *// PROCESS IF the first command line  
+    break; 
+    case TEMP_LINE2: *// PROCESS IF the second command line  
+    break; 
+    case IDYES: *// PROCESS IF the user clicks yes  
+    break; 
+    case IDNO: *// PROCESS IF the user clicks no  
+    break; 
+    case IDCANCEL: *// PROCESS IF the user clicks cancel  
+    break; 
+    default: *// This case should not be hit because closing the dialog box results in IDCANCEL  
+    break; 
+ }  
+ ```  
   
- 9단계의 코드에서 PROCESS IF로 시작하는 주석을 지정된 조건에 따라 실행하려는 코드로 바꿉니다.  
+ In the code in step 9, replace the comments that start with PROCESS IF with the code that you want to execute under the specified conditions.  
   
- 응용 프로그램을 컴파일하고 실행합니다. 새 컨트롤 및 추가 정보를 사용하는 작업 대화 상자가 응용 프로그램에 표시됩니다.  
+ Compile and run the application. The application displays the task dialog box that uses the new controls and additional information.  
   
-## CTaskDialog 개체를 만들지 않고 CTaskDialog 표시  
- 다음 절차에서는 `CTaskDialog` 개체를 만들지 않고 `CTaskDialog`를 표시하는 방법을 보여 줍니다. 이 예제에서는 이전 절차를 계속 진행합니다.  
+## <a name="displaying-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Displaying a CTaskDialog Without Creating a CTaskDialog Object  
+ The following procedure shows you how to display a `CTaskDialog` without first creating a `CTaskDialog` object. This example continues the previous procedures.  
   
-#### CTaskDialog 개체를 만들지 않고 CTaskDialog를 표시하려면  
+#### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>To Display a CTaskDialog Without Creating a CTaskDialog Object  
   
-1.  MyProject.cpp 파일을 엽니다\(아직 열려 있지 않은 경우\).  
+1.  Open the MyProject.cpp file if it is not already open.  
   
-2.  `if (CTaskDialog::IsSupported())` 문에 대한 오른쪽 대괄호로 이동합니다.  
+2.  Navigate to the closing bracket for the `if (CTaskDialog::IsSupported())` statement.  
   
-3.  `if` 문의 오른쪽 대괄호 바로 앞\(`else` 블록의 앞\)에 다음 코드를 삽입합니다.  
+3.  Insert the following code immediately before the closing bracket of the `if` statement (before the `else` block):  
   
-    ```  
-    HRESULT result2 = CTaskDialog::ShowDialog(L"My error message", L"Error", L"New Title", TEMP_LINE1, TEMP_LINE2);  
-    ```  
+ ```  
+    HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
+    L"Error",
+    L"New Title",
+    TEMP_LINE1,
+    TEMP_LINE2);
+
+ ```  
   
- 응용 프로그램을 컴파일하고 실행합니다. 두 개의 작업 대화 상자가 응용 프로그램에 표시됩니다. 첫 번째 대화 상자는 CTaskDialog에 기능을 추가하려면 절차에 따라 표시되는 것이고, 두 번째 대화 상자는 마지막 절차에 따라 표시되는 것입니다.  
+ Compile and run the application. The application displays two task dialog boxes. The first dialog box is from the To Add Functionality to the CTaskDialog procedure; the second dialog box is from the last procedure.  
   
- 이러한 예제는 `CTaskDialog`에 사용 가능한 일부 옵션만 보여 주지만 시작하는 데 도움이 될 수 있습니다. 클래스에 대한 전체 설명은 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md)를 참조하세요.  
+ These examples do not demonstrate all the available options for a `CTaskDialog`, but should help you get started. See [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) for a full description of the class.  
   
-## 참고 항목  
- [대화 상자](../mfc/dialog-boxes.md)   
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
  [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md)   
- [CTaskDialog::CTaskDialog](../Topic/CTaskDialog::CTaskDialog.md)
+ [CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)
+
+

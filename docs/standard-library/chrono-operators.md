@@ -1,5 +1,5 @@
 ---
-title: "&lt;chrono&gt; 연산자 | Microsoft 문서"
+title: '&lt;chrono&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,23 +11,23 @@ f1_keywords:
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 caps.latest.revision: 8
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a58daf9d43392ffa89872ab0a76e680b63dbb977
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c7403464027d1e08a926dc6edb67b8cb8a37523a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltchronogt-operators"></a>&lt;chrono&gt; 연산자
+# <a name="ltchronogt-operators"></a>&lt;chrono&gt; operators
 ||||  
 |-|-|-|  
-|[modulo 연산자](#op_modulo)|[operator!=](#op_neq)|[operator&gt;](#op_gt)|  
+|[operator modulo](#op_modulo)|[operator!=](#op_neq)|[operator&gt;](#op_gt)|  
 |[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
 |[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
 ##  <a name="operator-"></a>  operator-  
- [duration](../standard-library/duration-class.md) 및 [time_point](../standard-library/time-point-class.md) 개체의 빼기 또는 부정 연산자입니다.  
+ Operator for subtraction or negation of [duration](../standard-library/duration-class.md) and [time_point](../standard-library/time-point-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -50,28 +50,28 @@ constexpr typename common_type<Duration1, Duration2>::type
        const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 왼쪽 `duration` 또는 `time_point` 개체입니다.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 오른쪽 `duration` 또는 `time_point` 개체입니다.  
+ The right `duration` or `time_point` object.  
   
  `Time`  
- `time_point` 개체입니다.  
+ A `time_point` object.  
   
  `Dur`  
- `duration` 개체입니다.  
+ A `duration` object.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 함수는 간격 길이가 두 인수의 시간 간격 간 차이인 `duration` 개체를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first function returns a `duration` object whose interval length is the difference between the time intervals of the two arguments.  
   
- 두 번째 함수는 `Time`으로 지정된 시점에서 `Dur`이 나타내는 시간 간격의 부정만큼 치환된 시점을 나타내는 `time_point` 개체를 반환합니다.  
+ The second function returns a `time_point` object that represents a point in time that is displaced, by the negation of the time interval that is represented by `Dur`, from the point in time that is specified by `Time`.  
   
- 세 번째 함수는 `Left`와 `Right` 사이의 시간 간격을 나타내는 `duration` 개체를 반환합니다.  
+ The third function returns a `duration` object that represents the time interval between `Left` and `Right`.  
   
 ##  <a name="op_neq"></a>  operator!=  
- [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체에 대한 같지 않음 연산자입니다.  
+ Inequality operator for [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -86,18 +86,18 @@ constexpr bool operator!=(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 왼쪽 `duration` 또는 `time_point` 개체입니다.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 오른쪽 `duration` 또는 `time_point` 개체입니다.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>반환 값  
- 각 함수는 `!(Left == Right)`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Each function returns `!(Left == Right)`.  
   
 ##  <a name="op_star"></a>  operator*  
- [duration](../standard-library/chrono-operators.md#op_star) 개체에 대한 곱하기 연산자입니다.  
+ Multiplication operator for [duration](../standard-library/chrono-operators.md#op_star) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -115,22 +115,22 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
        Period2>& Dur);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Dur`  
- `duration` 개체입니다.  
+ A `duration` object.  
   
  `Mult`  
- 정수 값입니다.  
+ An integral value.  
   
-### <a name="return-value"></a>반환 값  
- 각 함수는 간격 길이가 `Mult`에 `Dur`의 길이를 곱한 값인 `duration` 개체를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Each function returns a `duration` object whose interval length is `Mult` multiplied by the length of `Dur`.  
   
- `is_convertible<Rep2, common_type<Rep1, Rep2>>`가 *true*가 아닌 한 첫 번째 함수는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.  
+ Unless `is_convertible<Rep2, common_type<Rep1, Rep2>>`*holds true*, the first function does not participate in overload resolution. For more information, sssee [<type_traits>](../standard-library/type-traits.md).  
   
- `is_convertible<Rep1, common_type<Rep1, Rep2>>`가 *true*가 아닌 한 두 번째 함수는 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.  
+ Unless `is_convertible<Rep1, common_type<Rep1, Rep2>>`*holds true*, the second function does not participate in overload resolution. For more information, see [<type_traits>](../standard-library/type-traits.md).  
   
 ##  <a name="op_div"></a>  operator/  
- [duration](../standard-library/chrono-operators.md#op_star) 개체에 대한 나누기 연산자입니다.  
+ Division operator for [duration](../standard-library/chrono-operators.md#op_star) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -147,28 +147,28 @@ constexpr typename common_type<Rep1, Rep2>::type
      const duration<Rep2, Period2>& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Dur`  
- `duration` 개체입니다.  
+ A `duration` object.  
   
  `Div`  
- 정수 값입니다.  
+ An integral value.  
   
  `Left`  
- 왼쪽 `duration` 개체입니다.  
+ The left `duration` object.  
   
  `Right`  
- 오른쪽 `duration` 개체입니다.  
+ The right `duration` object.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 연산자는 길이 `Dur`을 `Div` 값으로 나눈 간격 길이를 가진 duration 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The first operator returns a duration object whose interval length is the length of `Dur` divided by the value `Div`.  
   
- 두 번째 연산자는 간격 길이 `Left` 및 `Right`의 비율을 반환합니다.  
+ The second operator returns the ratio of the interval lengths of `Left` and `Right`.  
   
- `is_convertible<Rep2, common_type<Rep1, Rep2>>`가 *true*이고 `Rep2`가 `duration`의 인스턴스화가 아닌 경우 외에는 첫 번째 연산자가 오버로드 확인에 참여하지 않습니다. 자세한 내용은 [<type_traits>](../standard-library/type-traits.md)를 참조하세요.  
+ Unless `is_convertible<Rep2, common_type<Rep1, Rep2>>`*holds true*, and `Rep2` is not an instantiation of `duration`, the first operator does not participate in overload resolution. For more information, see [<type_traits>](../standard-library/type-traits.md).  
   
 ##  <a name="op_add"></a>  operator+  
- [duration](../standard-library/duration-class.md) 및 [time_point](../standard-library/time-point-class.md) 개체를 추가합니다.  
+ Adds [duration](../standard-library/duration-class.md) and [time_point](../standard-library/time-point-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -192,26 +192,26 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
       const time_point<Clock, Duration2>& Time);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 왼쪽 `duration` 또는 `time_point` 개체입니다.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 오른쪽 `duration` 또는 `time_point` 개체입니다.  
+ The right `duration` or `time_point` object.  
   
  `Time`  
- `time_point` 개체입니다.  
+ A `time_point` object.  
   
  `Dur`  
- `duration` 개체입니다.  
+ A `duration` object.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 함수는 `Left` 및 `Right` 간격의 합계와 동일한 시간 간격을 갖는 `duration` 개체를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first function returns a `duration` object that has a time interval that is equal to the sum of the intervals of `Left` and `Right`.  
   
- 두 번째 및 세 번째 함수는 시점 `Time`에서 간격 `Dur`로 대체되는 시점을 나타내는 `time_point` 개체를 반환합니다.  
+ The second and third functions return a `time_point` object that represents a point in time that is displaced, by the interval `Dur`, from the point in time `Time`.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 작은지 여부를 확인합니다.  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is less than another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -226,20 +226,20 @@ constexpr bool operator<(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 왼쪽 `duration` 또는 `time_point` 개체입니다.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 오른쪽 `duration` 또는 `time_point` 개체입니다.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 함수는 `Left`의 간격 길이가 `Right`의 간격 길이보다 작으면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first function returns `true` if the interval length of `Left` is less than the interval length of `Right`. Otherwise, the function returns `false`.  
   
- 두 번째 함수는 `Left`가 `Right`보다 앞에 오면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  
+ The second function returns `true` if `Left` precedes `Right`. Otherwise, the function returns `false`.  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 작거나 같은지 여부를 확인합니다.  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is less than or equal to another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -253,18 +253,18 @@ constexpr bool operator<=(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 왼쪽 `duration` 또는 `time_point` 개체입니다.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 오른쪽 `duration` 또는 `time_point` 개체입니다.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>반환 값  
- 각 함수는 `!(Right < Left)`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Each function returns `!(Right < Left)`.  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 두 `duration` 개체가 길이가 동일한 시간 간격을 나타내는지 여부 또는 두 `time_point` 개체가 동일한 시점을 나타내는지 여부를 확인합니다.  
+ Determines whether two `duration` objects represent time intervals that have the same length, or whether two `time_point` objects represent the same point in time.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -278,20 +278,20 @@ constexpr bool operator==(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 왼쪽 `duration` 또는 `time_point` 개체입니다.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 오른쪽 `duration` 또는 `time_point` 개체입니다.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 함수는 `Left`와 `Right`가 길이가 같은 시간 간격을 나타내면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first function returns `true` if `Left` and `Right` represent time intervals that have the same length. Otherwise, the function returns `false`.  
   
- 두 번째 함수는 `Left`와 `Right`가 동일한 시점을 나타내면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  
+ The second function returns `true` if `Left` and `Right` represent the same point in time. Otherwise, the function returns `false`.  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 큰지 여부를 확인합니다.  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is greater than another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -305,18 +305,18 @@ constexpr bool operator>(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 왼쪽 `duration` 또는 `time_point` 개체입니다.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 오른쪽 `duration` 또는 `time_point` 개체입니다.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>반환 값  
- 각 함수는 `Right < Left`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Each function returns `Right < Left`.  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 하나의 [duration](../standard-library/duration-class.md) 또는 [time_point](../standard-library/time-point-class.md) 개체가 다른 `duration` 또는 `time_point` 개체보다 크거나 같은지 여부를 확인합니다.  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is greater than or equal to another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -330,18 +330,18 @@ constexpr bool operator>=(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 왼쪽 `duration` 또는 `time_point` 개체입니다.  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 오른쪽 `duration` 또는 `time_point` 개체입니다.  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>반환 값  
- 각 함수는 `!(Left < Right)`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Each function returns `!(Left < Right)`.  
   
-##  <a name="op_modulo"></a>  modulo 연산자  
- [duration](../standard-library/duration-class.md) 개체에 대한 모듈로 연산용 연산자입니다.  
+##  <a name="op_modulo"></a>  operator modulo  
+ Operator for modulo operations on [duration](../standard-library/duration-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -357,25 +357,25 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
      const duration<Rep2, Period2>& Right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Dur`  
- `duration` 개체입니다.  
+ A `duration` object.  
   
  `Div`  
- 정수 값입니다.  
+ An integral value.  
   
  `Left`  
- 왼쪽 `duration` 개체입니다.  
+ The left `duration` object.  
   
  `Right`  
- 오른쪽 `duration` 개체입니다.  
+ The right `duration` object.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 함수는 간격 길이가 `Dur` modulo `Div`인 `duration` 개체를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first function returns a `duration` object whose interval length is `Dur` modulo `Div`.  
   
- 두 번째 함수는 `Left` modulo `Right`를 나타내는 값을 반환합니다.  
+ The second function returns a value that represents `Left` modulo `Right`.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<chrono>](../standard-library/chrono.md)
 
 

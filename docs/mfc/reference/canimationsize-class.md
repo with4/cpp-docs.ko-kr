@@ -1,5 +1,5 @@
 ---
-title: "CAnimationSize 클래스 | Microsoft 문서"
+title: CAnimationSize Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationSize class
+- CAnimationSize [MFC], CAnimationSize
+- CAnimationSize [MFC], AddTransition
+- CAnimationSize [MFC], GetCX
+- CAnimationSize [MFC], GetCY
+- CAnimationSize [MFC], GetDefaultValue
+- CAnimationSize [MFC], GetValue
+- CAnimationSize [MFC], SetDefaultValue
+- CAnimationSize [MFC], GetAnimationVariableList
+- CAnimationSize [MFC], m_cxValue
+- CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
 caps.latest.revision: 17
 author: mikeblome
@@ -44,76 +53,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 84b9ae3b81f72f6c0ae8e88f78357c29e8d82ffd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2f65230f8a54737c95e99925a9a7812686acad2f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationsize-class"></a>CAnimationSize 클래스
-차원에 애니메이션을 적용할 수 있는 크기 개체 기능을 구현합니다.  
+# <a name="canimationsize-class"></a>CAnimationSize Class
+Implements the functionality of a size object whose dimensions can be animated.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationSize : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::CAnimationSize](#canimationsize)|오버로드됨. 애니메이션 크기 개체를 생성 합니다.|  
+|[CAnimationSize::CAnimationSize](#canimationsize)|Overloaded. Constructs an animation size object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::AddTransition](#addtransition)|너비와 높이 대 한 변환을 추가합니다.|  
-|[CAnimationSize::GetCX](#getcx)|너비를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.|  
-|[CAnimationSize::GetCY](#getcy)|높이 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.|  
-|[CAnimationSize::GetDefaultValue](#getdefaultvalue)|너비와 높이 대 한 기본 값을 반환합니다.|  
-|[CAnimationSize::GetValue](#getvalue)|현재 값을 반환 합니다.|  
-|[CAnimationSize::SetDefaultValue](#setdefaultvalue)|기본값을 설정합니다.|  
+|[CAnimationSize::AddTransition](#addtransition)|Adds transitions for Width and Height.|  
+|[CAnimationSize::GetCX](#getcx)|Provides access to CAnimationVariable representing Width.|  
+|[CAnimationSize::GetCY](#getcy)|Provides access to CAnimationVariable representing Height.|  
+|[CAnimationSize::GetDefaultValue](#getdefaultvalue)|Returns the default values for Width and Height.|  
+|[CAnimationSize::GetValue](#getvalue)|Returns current value.|  
+|[CAnimationSize::SetDefaultValue](#setdefaultvalue)|Sets default value.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|목록에 캡슐화 된 애니메이션 변수를 추가합니다. (재정의 [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
+|[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Puts the encapsulated animation variables into a list. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::operator CSize](#operator_csize)|CAnimationSize는 CSize 변환합니다.|  
-|[CAnimationSize::operator =](#operator_eq)|SzSrc CAnimationSize 할당합니다.|  
+|[CAnimationSize::operator CSize](#operator_csize)|Converts a CAnimationSize to a CSize.|  
+|[CAnimationSize::operator=](#operator_eq)|Assigns szSrc to CAnimationSize.|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::m_cxValue](#m_cxvalue)|캡슐화 된 애니메이션 변수를 애니메이션 크기의 너비를 나타냅니다.|  
-|[CAnimationSize::m_cyValue](#m_cyvalue)|캡슐화 된 애니메이션 변수를 애니메이션 크기의 높이 나타냅니다.|  
+|[CAnimationSize::m_cxValue](#m_cxvalue)|The encapsulated animation variable that represents width of animation size.|  
+|[CAnimationSize::m_cyValue](#m_cyvalue)|The encapsulated animation variable that represents height of animation size.|  
   
-## <a name="remarks"></a>주의  
- CAnimationSize 클래스는 두 개의 CAnimationVariable 개체를 캡슐화 하 고 크기를 응용 프로그램에 나타낼 수 있습니다. 두의 크기에 애니메이션을 적용 하려면이 클래스를 사용할 수는 예를 들어 화면에서 차원 개체 (사각형, 처럼 제어 등). 응용 프로그램에서이 클래스를 사용 하 여 방금이 클래스의 개체를 인스턴스화할 CAnimationController::AddAnimationObject를 사용 하 여 애니메이션 컨트롤러를 추가 및 너비 및 높이에 적용할 각 전환에 대해 AddTransition를 호출 합니다.  
+## <a name="remarks"></a>Remarks  
+ The CAnimationSize class encapsulates two CAnimationVariable objects and can represent in applications a size. For example, you can use this class to animate a size of any two dimensional object on the screen (like rectangle, control etc). To use this class in application, just instantiate an object of this class, add it to animation controller using CAnimationController::AddAnimationObject and call AddTransition for each transition to be applied to Width and/or Height.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)  
   
  `CAnimationSize` 
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationSize::AddTransition  
- 너비와 높이 대 한 변환을 추가합니다.  
+##  <a name="addtransition"></a>  CAnimationSize::AddTransition  
+ Adds transitions for Width and Height.  
   
 ```  
 void AddTransition(
@@ -121,18 +130,18 @@ void AddTransition(
     CBaseTransition* pCYTransition);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pCXTransition`  
- 너비에 대 한 전환에 대 한 포인터입니다.  
+ A pointer to transition for Width.  
   
  `pCYTransition`  
- 높이 대 한 전환에 대 한 포인터입니다.  
+ A pointer to transition for Height.  
   
-### <a name="remarks"></a>주의  
- 지정된 된 전환을 너비와 높이 대 한 변수 애니메이션에 적용할 변환의 내부 목록에 추가 하려면이 함수를 호출 합니다. 전환에 추가 되지 즉시 적용 되며 내부 목록에 저장 합니다. 전환 (특정 값에 대 한 스토리 보드에 추가 된) 적용 CAnimationController::AnimateGroup를 호출 하는 경우. 차원 중 하나에 전환을 적용할 필요가 없으면 NULL을 전달할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to add the specified transitions to the internal list of transitions to be applied to animation variables for Width and Height. When you add transitions, they are not applied immediately and stored in an internal list. Transitions are applied (added to a storyboard for a particular value) when you call CAnimationController::AnimateGroup. If you don't need to apply a transition to one of dimensions, you can pass NULL.  
   
-##  <a name="canimationsize"></a>CAnimationSize::CAnimationSize  
- 애니메이션 크기 개체를 생성 합니다.  
+##  <a name="canimationsize"></a>  CAnimationSize::CAnimationSize  
+ Constructs an animation size object.  
   
 ```  
 CAnimationSize();
@@ -145,24 +154,24 @@ CAnimationSize(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szDefault`  
- 기본 크기를 지정합니다.  
+ Specifies default size.  
   
  `nGroupID`  
- 그룹 ID를 지정 합니다.  
+ Specifies Group ID.  
   
  `nObjectID`  
- 개체 ID를 지정 합니다.  
+ Specifies Object ID.  
   
  `dwUserData`  
- 사용자 정의 데이터를 지정합니다.  
+ Specifies user-defined data.  
   
-### <a name="remarks"></a>주의  
- 개체 너비, 높이 대 한 기본 값으로 구성 되며 개체 ID 및 그룹 ID를 0으로 설정 됩니다. SetDefaultValue 및 SetID를 사용 하 여 런타임에 나중에 변경할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The object is constructed with default values for width, height, Object ID and Group ID, which will be set to 0. They can be changed later at runtime using SetDefaultValue and SetID.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
- 목록에 캡슐화 된 애니메이션 변수를 추가합니다.  
+##  <a name="getanimationvariablelist"></a>  CAnimationSize::GetAnimationVariableList  
+ Puts the encapsulated animation variables into a list.  
   
 ```  
 virtual void GetAnimationVariableList(
@@ -170,121 +179,121 @@ virtual void GetAnimationVariableList(
     CAnimationVariable*>& lst);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lst`  
- 함수가 반환 될 때 너비와 높이 나타내는 두 CAnimationVariable 개체에 대 한 포인터가 포함 되어 있습니다.  
+ When the function returns, it contains pointers to two CAnimationVariable objects representing the width and height.  
   
-##  <a name="getcx"></a>CAnimationSize::GetCX  
- 너비를 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.  
+##  <a name="getcx"></a>  CAnimationSize::GetCX  
+ Provides access to CAnimationVariable representing Width.  
   
 ```  
 CAnimationVariable& GetCX();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 너비를 나타내는 캡슐화 된 CAnimationVariable에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing Width.  
   
-### <a name="remarks"></a>주의  
- 너비를 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing Width.  
   
-##  <a name="getcy"></a>CAnimationSize::GetCY  
- 높이 나타내는 CAnimationVariable에 대 한 액세스를 제공 합니다.  
+##  <a name="getcy"></a>  CAnimationSize::GetCY  
+ Provides access to CAnimationVariable representing Height.  
   
 ```  
 CAnimationVariable& GetCY();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 높이 나타내는 캡슐화 된 CAnimationVariable에 대 한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing Height.  
   
-### <a name="remarks"></a>주의  
- 높이 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing Height.  
   
-##  <a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
- 너비와 높이 대 한 기본 값을 반환합니다.  
+##  <a name="getdefaultvalue"></a>  CAnimationSize::GetDefaultValue  
+ Returns the default values for Width and Height.  
   
 ```  
 CSize GetDefaultValue();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 기본 값을 포함 하는 CSize 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ A CSize object containing default values.  
   
-### <a name="remarks"></a>주의  
- 생성자 또는 SetDefaultValue 하 여 이전에 설정 된 기본값을 검색 하려면이 함수를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve default value, which was previously set by constructor or SetDefaultValue.  
   
-##  <a name="getvalue"></a>CAnimationSize::GetValue  
- 현재 값을 반환 합니다.  
+##  <a name="getvalue"></a>  CAnimationSize::GetValue  
+ Returns current value.  
   
 ```  
 BOOL GetValue(CSize& szValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szValue`  
- 출력입니다. 이 메서드가 반환 될 때 현재 값을 포함 합니다.  
+ Output. Contains the current value when this method returns.  
   
-### <a name="return-value"></a>반환 값  
- True 이면 현재 값을 검색 했습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if the current value was successfully retrieved; otherwise FALSE.  
   
-### <a name="remarks"></a>주의  
- 애니메이션 크기의 현재 값을 검색 하려면이 함수를 호출 합니다. 이 방법이 실패 하면 너비 및 크기에 대 한 기본 COM 개체 초기화 되지 않은 경우 szValue SetDefaultValue 또는 생성자에서 이전에 설정 된 기본값을 포함 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve the current value of animation size. If this method fails or underlying COM objects for Width and Size have not been initialized, szValue contains default value, which was previously set in constructor or by SetDefaultValue.  
   
-##  <a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
- 캡슐화 된 애니메이션 변수를 애니메이션 크기의 너비를 나타냅니다.  
+##  <a name="m_cxvalue"></a>  CAnimationSize::m_cxValue  
+ The encapsulated animation variable that represents width of animation size.  
   
 ```  
 CAnimationVariable m_cxValue;  
 ```  
   
-##  <a name="m_cyvalue"></a>CAnimationSize::m_cyValue  
- 캡슐화 된 애니메이션 변수를 애니메이션 크기의 높이 나타냅니다.  
+##  <a name="m_cyvalue"></a>  CAnimationSize::m_cyValue  
+ The encapsulated animation variable that represents height of animation size.  
   
 ```  
 CAnimationVariable m_cyValue;  
 ```  
   
-##  <a name="operator_csize"></a>CAnimationSize::operator CSize  
- CAnimationSize는 CSize 변환합니다.  
+##  <a name="operator_csize"></a>  CAnimationSize::operator CSize  
+ Converts a CAnimationSize to a CSize.  
   
 ```  
 operator CSize();
 ```   
   
-### <a name="return-value"></a>반환 값  
- CSize 크기 애니메이션의 현재 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Current value of animation size as CSize.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 GetValue 내부적으로 호출 합니다. 어떤 이유로 getvalue가 실패 하면 반환 되는 크기 너비와 높이 대 한 기본 값이 포함 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function internally calls GetValue. If GetValue for some reason fails, the returned size will contain default values for Width and Height.  
   
-##  <a name="operator_eq"></a>CAnimationSize::operator =  
- SzSrc CAnimationSize 할당합니다.  
+##  <a name="operator_eq"></a>  CAnimationSize::operator=  
+ Assigns szSrc to CAnimationSize.  
   
 ```  
 void operator=(const CSize& szSrc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szSrc`  
- CSize 또는 크기를 나타냅니다.  
+ Refers to CSize or SIZE.  
   
-### <a name="remarks"></a>주의  
- SzSrc CAnimationSize 할당합니다. 이 연산자는 생성 된 너비와 높이 대 한 기본 COM 개체를 다시 만드는 SetDefaultValue를 호출 하기 때문에 애니메이션이 시작 되기 전에 하는 것이 좋습니다. 이 애니메이션 개체 (ValueChanged 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Assigns szSrc to CAnimationSize. It's recommended to do that before animation start, because this operator calls SetDefaultValue, which recreates the underlying COM objects for Width and Height if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-##  <a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
- 기본값을 설정합니다.  
+##  <a name="setdefaultvalue"></a>  CAnimationSize::SetDefaultValue  
+ Sets default value.  
   
 ```  
 void SetDefaultValue(const CSize& szDefault);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szDefault`  
- 새 기본 크기를 지정합니다.  
+ Specifies new default size.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용 하 여 애니메이션 개체에 기본값을 설정 합니다. 이 메서드는 애니메이션 크기의 너비와 높이에 기본값을 할당 합니다. 기본 COM 개체를 만든 경우도 다시 것입니다. 이 애니메이션 개체 (ValueChanged 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this function to set a default value to animation object. This methods assigns default values to Width and Height of animation size. It also recreates underlying COM objects if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolBarImages 클래스 | Microsoft 문서"
+title: CMFCToolBarImages Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -81,7 +81,73 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarImages class
+- CMFCToolBarImages [MFC], CMFCToolBarImages
+- CMFCToolBarImages [MFC], AdaptColors
+- CMFCToolBarImages [MFC], AddIcon
+- CMFCToolBarImages [MFC], AddImage
+- CMFCToolBarImages [MFC], CleanUp
+- CMFCToolBarImages [MFC], Clear
+- CMFCToolBarImages [MFC], ConvertTo32Bits
+- CMFCToolBarImages [MFC], CopyImageToClipboard
+- CMFCToolBarImages [MFC], CopyTo
+- CMFCToolBarImages [MFC], CreateFromImageList
+- CMFCToolBarImages [MFC], CreateRegionFromImage
+- CMFCToolBarImages [MFC], DeleteImage
+- CMFCToolBarImages [MFC], Draw
+- CMFCToolBarImages [MFC], DrawEx
+- CMFCToolBarImages [MFC], EnableRTL
+- CMFCToolBarImages [MFC], EndDrawImage
+- CMFCToolBarImages [MFC], ExtractIcon
+- CMFCToolBarImages [MFC], FillDitheredRect
+- CMFCToolBarImages [MFC], GetAlwaysLight
+- CMFCToolBarImages [MFC], GetBitsPerPixel
+- CMFCToolBarImages [MFC], GetCount
+- CMFCToolBarImages [MFC], GetDisabledImageAlpha
+- CMFCToolBarImages [MFC], GetFadedImageAlpha
+- CMFCToolBarImages [MFC], GetImageSize
+- CMFCToolBarImages [MFC], GetImageWell
+- CMFCToolBarImages [MFC], GetImageWellLight
+- CMFCToolBarImages [MFC], GetLastImageRect
+- CMFCToolBarImages [MFC], GetLightPercentage
+- CMFCToolBarImages [MFC], GetMapTo3DColors
+- CMFCToolBarImages [MFC], GetMask
+- CMFCToolBarImages [MFC], GetResourceOffset
+- CMFCToolBarImages [MFC], GetScale
+- CMFCToolBarImages [MFC], GetTransparentColor
+- CMFCToolBarImages [MFC], GrayImages
+- CMFCToolBarImages [MFC], Is32BitTransparencySupported
+- CMFCToolBarImages [MFC], IsPreMultiplyAutoCheck
+- CMFCToolBarImages [MFC], IsRTL
+- CMFCToolBarImages [MFC], IsReadOnly
+- CMFCToolBarImages [MFC], IsScaled
+- CMFCToolBarImages [MFC], IsUserImagesList
+- CMFCToolBarImages [MFC], IsValid
+- CMFCToolBarImages [MFC], Load
+- CMFCToolBarImages [MFC], LoadStr
+- CMFCToolBarImages [MFC], MapFromSysColor
+- CMFCToolBarImages [MFC], MapTo3dColors
+- CMFCToolBarImages [MFC], MapToSysColor
+- CMFCToolBarImages [MFC], MapToSysColorAlpha
+- CMFCToolBarImages [MFC], Mirror
+- CMFCToolBarImages [MFC], MirrorBitmap
+- CMFCToolBarImages [MFC], MirrorBitmapVert
+- CMFCToolBarImages [MFC], MirrorVert
+- CMFCToolBarImages [MFC], OnSysColorChange
+- CMFCToolBarImages [MFC], PrepareDrawImage
+- CMFCToolBarImages [MFC], Save
+- CMFCToolBarImages [MFC], SetAlwaysLight
+- CMFCToolBarImages [MFC], SetDisabledImageAlpha
+- CMFCToolBarImages [MFC], SetFadedImageAlpha
+- CMFCToolBarImages [MFC], SetImageSize
+- CMFCToolBarImages [MFC], SetLightPercentage
+- CMFCToolBarImages [MFC], SetMapTo3DColors
+- CMFCToolBarImages [MFC], SetPreMultiplyAutoCheck
+- CMFCToolBarImages [MFC], SetSingleImage
+- CMFCToolBarImages [MFC], SetTransparentColor
+- CMFCToolBarImages [MFC], SmoothResize
+- CMFCToolBarImages [MFC], UpdateImage
+- CMFCToolBarImages [MFC], PreMultiplyAlpha
+- CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 caps.latest.revision: 31
 author: mikeblome
@@ -101,129 +167,129 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ff94497108033b17d52b79594fdbe30e8ed7da03
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1b8303ab4a6d8199c5f9adeee51cf01d1d4254b4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 클래스
-도구 모음에 이미지를 지정 합니다. `CMFCToolBarImages` 클래스는 파일 또는 응용 프로그램 리소스에서 로드 된 도구 모음 이미지를 관리 합니다.  
+# <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages Class
+The images on a toolbar. The `CMFCToolBarImages` class manages toolbar images loaded from application resources or from files.  
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarImages : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|`CMFCToolBarImages` 개체를 생성합니다.|  
+|[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|Constructs a `CMFCToolBarImages` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCToolBarImages::AdaptColors](#adaptcolors)||  
-|[CMFCToolBarImages::AddIcon](#addicon)|도구 모음 이미지 아이콘을 추가 합니다.|  
-|[CMFCToolBarImages::AddImage](#addimage)|도구 모음 이미지에 비트맵을 추가합니다.|  
+|[CMFCToolBarImages::AddIcon](#addicon)|Adds an icon to the toolbar images.|  
+|[CMFCToolBarImages::AddImage](#addimage)|Adds a bitmap to the toolbar images.|  
 |[CMFCToolBarImages::CleanUp](#cleanup)||  
-|[CMFCToolBarImages::Clear](#clear)|이 개체에 할당 된 시스템 리소스를 해제 합니다.|  
-|[CMFCToolBarImages::ConvertTo32Bits](#convertto32bits)|변환에는 비트맵을을 32 bpp 이미지 밑줄이 그어집니다.|  
+|[CMFCToolBarImages::Clear](#clear)|Frees the system resources that were allocated to this object.|  
+|[CMFCToolBarImages::ConvertTo32Bits](#convertto32bits)|Converts underlined bitmaps to 32 bpp images.|  
 |[CMFCToolBarImages::CopyImageToClipboard](#copyimagetoclipboard)||  
 |[CMFCToolBarImages::CopyTo](#copyto)||  
-|[CMFCToolBarImages::CreateFromImageList](#createfromimagelist)|이미지 목록에서 도구 모음 이미지를 초기화 합니다 ( [CImageList 클래스](../../mfc/reference/cimagelist-class.md)).|  
+|[CMFCToolBarImages::CreateFromImageList](#createfromimagelist)|Initializes the toolbar images from an image list ( [CImageList Class](../../mfc/reference/cimagelist-class.md)).|  
 |[CMFCToolBarImages::CreateRegionFromImage](#createregionfromimage)||  
-|[CMFCToolBarImages::DeleteImage](#deleteimage)|도구 모음 이미지의이 집합에는 사용자 지정 이미지가 포함 된 경우 도구 모음 이미지의 지정된 된 인덱스에 있는 이미지를 삭제 합니다.|  
-|[CMFCToolBarImages::Draw](#draw)|하나의 도구 모음 이미지 (단추)를 그립니다.|  
+|[CMFCToolBarImages::DeleteImage](#deleteimage)|Deletes the image that has a specified index from the toolbar images if this set of toolbar images contains user-defined images.|  
+|[CMFCToolBarImages::Draw](#draw)|Draws a single toolbar image (button).|  
 |[CMFCToolBarImages::DrawEx](#drawex)||  
 |[CMFCToolBarImages::EnableRTL](#enablertl)||  
-|[CMFCToolBarImages::EndDrawImage](#enddrawimage)|도구 모음 이미지를 그릴 후 시스템 리소스를 해제 합니다.|  
-|[CMFCToolBarImages::ExtractIcon](#extracticon)|도구 모음 이미지에서 지정 된 이미지 인덱스를 가진 아이콘을 반환 합니다.|  
-|[CMFCToolBarImages::FillDitheredRect](#fillditheredrect)|도구 모음 배경 색이 포함 하는 브러시를 사용 하 여 사각형을 채웁니다.|  
+|[CMFCToolBarImages::EndDrawImage](#enddrawimage)|Frees system resources after a toolbar image is drawn.|  
+|[CMFCToolBarImages::ExtractIcon](#extracticon)|Returns the icon that has a specified image index from the toolbar images.|  
+|[CMFCToolBarImages::FillDitheredRect](#fillditheredrect)|Fills a rectangle by using a brush that has the toolbar background colors.|  
 |[CMFCToolBarImages::GetAlwaysLight](#getalwayslight)||  
-|[CMFCToolBarImages::GetBitsPerPixel](#getbitsperpixel)|밑줄이 그어진된 이미지의 현재 해상도 반환합니다.|  
-|[CMFCToolBarImages::GetCount](#getcount)|도구 모음 이미지의 수를 반환합니다.|  
-|[CMFCToolBarImages::GetDisabledImageAlpha](#getdisabledimagealpha)|비활성화 된 이미지에 사용 되는 알파 채널을 반환 합니다.|  
+|[CMFCToolBarImages::GetBitsPerPixel](#getbitsperpixel)|Returns current resolution of underlined images.|  
+|[CMFCToolBarImages::GetCount](#getcount)|Returns the number of images on the toolbar.|  
+|[CMFCToolBarImages::GetDisabledImageAlpha](#getdisabledimagealpha)|Returns the alpha channel value that is used for disabled images.|  
 |[CMFCToolBarImages::GetFadedImageAlpha](#getfadedimagealpha)||  
-|[CMFCToolBarImages::GetImageSize](#getimagesize)|메모리 (원본 크기)에 저장 되어 있는 도구 모음 이미지의 크기 또는 화면 (대상 크기)에 그려진 도구 모음 이미지의 크기를 검색 합니다.|  
-|[CMFCToolBarImages::GetImageWell](#getimagewell)|모든 도구 모음 이미지를 포함 하는 비트맵에 핸들을 반환 합니다.|  
+|[CMFCToolBarImages::GetImageSize](#getimagesize)|Retrieves either the size of the toolbar images that are stored in memory (source size), or the size of the toolbar images that are drawn on the screen (destination size).|  
+|[CMFCToolBarImages::GetImageWell](#getimagewell)|Returns the handle to the bitmap that contains all the toolbar images.|  
 |[CMFCToolBarImages::GetImageWellLight](#getimagewelllight)||  
 |[CMFCToolBarImages::GetLastImageRect](#getlastimagerect)||  
 |[CMFCToolBarImages::GetLightPercentage](#getlightpercentage)||  
 |[CMFCToolBarImages::GetMapTo3DColors](#getmapto3dcolors)||  
 |[CMFCToolBarImages::GetMask](#getmask)||  
-|[CMFCToolBarImages::GetResourceOffset](#getresourceoffset)|지정 된 리소스 ID에 대 한 이미지 인덱스를 반환합니다.|  
-|[CMFCToolBarImages::GetScale](#getscale)|밑줄이 그어진된 이미지의 현재 크기 조정 비율을 반환합니다.|  
+|[CMFCToolBarImages::GetResourceOffset](#getresourceoffset)|Returns the image index for a specified resource ID.|  
+|[CMFCToolBarImages::GetScale](#getscale)|Returns current scale ratio of underlined images.|  
 |[CMFCToolBarImages::GetTransparentColor](#gettransparentcolor)||  
-|[CMFCToolBarImages::GrayImages](#grayimages)|도구 모음 이미지를 사용할 수 없는 보이도록 할 회색으로 표시 합니다.|  
-|[CMFCToolBarImages::Is32BitTransparencySupported](#is32bittransparencysupported)|운영 체제 32 비트 알파 혼합을 지원 하는지 여부를 결정 합니다.|  
+|[CMFCToolBarImages::GrayImages](#grayimages)|Grays the toolbar images to make them look disabled.|  
+|[CMFCToolBarImages::Is32BitTransparencySupported](#is32bittransparencysupported)|Determines whether the operating system supports 32-bit alpha blending.|  
 |[CMFCToolBarImages::IsPreMultiplyAutoCheck](#ispremultiplyautocheck)||  
-|[CMFCToolBarImages::IsRTL](#isrtl)|오른쪽에서 왼쪽 (RTL) 지원 사용 되는지 여부를 결정 합니다.|  
-|[CMFCToolBarImages::IsReadOnly](#isreadonly)|도구 모음 이미지 읽기 전용인 지 여부를 결정 합니다.|  
-|[CMFCToolBarImages::IsScaled](#isscaled)|여부 밑줄이 그어진된 이미지는 크기가 조정 여부를 알려 줍니다.|  
-|[CMFCToolBarImages::IsUserImagesList](#isuserimageslist)|이미지 사용자 지정 도구 모음 이미지의이 집합에 포함 되는지 여부를 결정 합니다.|  
-|[CMFCToolBarImages::IsValid](#isvalid)|이 도구 모음 이미지이 집합이 유효한 도구 모음 이미지에 포함 되는지 여부를 결정 합니다.|  
-|[CMFCToolBarImages::Load](#load)|파일 또는 시스템 리소스에서 도구 모음 이미지를 로드합니다.|  
+|[CMFCToolBarImages::IsRTL](#isrtl)|Determines whether right-to-left (RTL) support is enabled.|  
+|[CMFCToolBarImages::IsReadOnly](#isreadonly)|Determines whether the toolbar images are read-only.|  
+|[CMFCToolBarImages::IsScaled](#isscaled)|Tells whether the underlined images are scaled or not.|  
+|[CMFCToolBarImages::IsUserImagesList](#isuserimageslist)|Determines whether this set of toolbar images contains user-defined images.|  
+|[CMFCToolBarImages::IsValid](#isvalid)|Determines whether this set of toolbar images contains a valid toolbar image.|  
+|[CMFCToolBarImages::Load](#load)|Loads toolbar images from system resources or from a file.|  
 |[CMFCToolBarImages::LoadStr](#loadstr)||  
 |[CMFCToolBarImages::MapFromSysColor](#mapfromsyscolor)||  
 |[CMFCToolBarImages::MapTo3dColors](#mapto3dcolors)||  
 |[CMFCToolBarImages::MapToSysColor](#maptosyscolor)||  
 |[CMFCToolBarImages::MapToSysColorAlpha](#maptosyscoloralpha)||  
-|[CMFCToolBarImages::Mirror](#mirror)|모든 도구 모음 이미지를 가로 방향으로 반영 됩니다.|  
-|[CMFCToolBarImages::MirrorBitmap](#mirrorbitmap)|가로 방향으로 비트맵을 미러링합니다.|  
+|[CMFCToolBarImages::Mirror](#mirror)|Horizontally mirrors all of the toolbar images.|  
+|[CMFCToolBarImages::MirrorBitmap](#mirrorbitmap)|Horizontally mirrors a bitmap.|  
 |[CMFCToolBarImages::MirrorBitmapVert](#mirrorbitmapvert)||  
 |[CMFCToolBarImages::MirrorVert](#mirrorvert)||  
 |[CMFCToolBarImages::OnSysColorChange](#onsyscolorchange)||  
-|[CMFCToolBarImages::PrepareDrawImage](#preparedrawimage)|지정된 된 크기에서 도구 모음 이미지를 그리는 데 필요한 리소스를 할당 합니다.|  
-|[CMFCToolBarImages::Save](#save)|도구 모음 이미지의이 집합에는 사용자 지정 이미지가 포함 된 경우 도구 모음 이미지 파일에 저장 합니다.|  
+|[CMFCToolBarImages::PrepareDrawImage](#preparedrawimage)|Allocates the resources that are required to draw a toolbar image at a specified size.|  
+|[CMFCToolBarImages::Save](#save)|Stores the toolbar images in a file if this set of toolbar images contains user-defined images.|  
 |[CMFCToolBarImages::SetAlwaysLight](#setalwayslight)||  
-|[CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha)|비활성화 된 이미지에 사용 되는 알파 채널 값을 설정 합니다.|  
+|[CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha)|Sets the alpha channel value that is used for disabled images.|  
 |[CMFCToolBarImages::SetFadedImageAlpha](#setfadedimagealpha)||  
-|[CMFCToolBarImages::SetImageSize](#setimagesize)|도구 모음 이미지 (원본 크기)의 크기를 설정합니다.|  
+|[CMFCToolBarImages::SetImageSize](#setimagesize)|Sets the size of a toolbar image (source size).|  
 |[CMFCToolBarImages::SetLightPercentage](#setlightpercentage)||  
 |[CMFCToolBarImages::SetMapTo3DColors](#setmapto3dcolors)||  
 |[CMFCToolBarImages::SetPreMultiplyAutoCheck](#setpremultiplyautocheck)||  
 |[CMFCToolBarImages::SetSingleImage](#setsingleimage)||  
-|[CMFCToolBarImages::SetTransparentColor](#settransparentcolor)|도구 모음 이미지의 투명 한 색을 설정합니다.|  
-|[CMFCToolBarImages::SmoothResize](#smoothresize)|밑줄이 그어진된 이미지를 원활 하 게 크기가 조정 됩니다.|  
-|[CMFCToolBarImages::UpdateImage](#updateimage)|비트맵에서 도구 모음 사용자 지정 이미지를 업데이트합니다.|  
+|[CMFCToolBarImages::SetTransparentColor](#settransparentcolor)|Sets the transparent color of the toolbar images.|  
+|[CMFCToolBarImages::SmoothResize](#smoothresize)|Smoothly resizes underlined images.|  
+|[CMFCToolBarImages::UpdateImage](#updateimage)|Updates a user-defined toolbar image from a bitmap.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCToolBarImages::PreMultiplyAlpha](#premultiplyalpha)||  
   
-### <a name="data-members"></a>데이터 멤버  
+### <a name="data-members"></a>Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE`truecolor 알파 혼합 (32 비트 색상)은 사용할 수 없습니다.|  
+|[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE` if truecolor alpha blending (32-bit color) is disabled.|  
   
-## <a name="remarks"></a>주의  
- 관리 하는 도구 모음 이미지의 전체 비트맵 `CMFCToolbarImages` 하나 이상의 작은 도구 모음 이미지 (단추)의 크기가 고정 되어 구성 됩니다.  
+## <a name="remarks"></a>Remarks  
+ The full bitmap of toolbar images managed by `CMFCToolbarImages` consists of one or more small toolbar images (buttons) of a fixed size.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 구성 방법을 보여 줍니다.는 `CMFCToolBarImages` 의 다양 한 메서드를 사용 하 여 개체의 `CMFCToolBarImages` 클래스입니다. 도구 모음 이미지의 크기를 설정, 이미지를 로드 하 고, 이미지의 투명 한 색을 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a `CMFCToolBarImages` object by using various methods in the `CMFCToolBarImages` class. The example shows how to set the size of the toolbar image, load an image, and set the transparent color of the image. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&32;](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]  
-[!code-cpp[NVC_MFC_VisualStudioDemo #&33;](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]  
+[!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMFCToolBarImages`   
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtoolbarimages.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarimages.h  
   
-##  <a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors  
+##  <a name="adaptcolors"></a>  CMFCToolBarImages::AdaptColors  
 
   
 ```  
@@ -232,14 +298,14 @@ void AdaptColors(
     COLORREF clrTone);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `clrBase`  
  [in] `clrTone`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addicon"></a>CMFCToolBarImages::AddIcon  
- 도구 모음 이미지의 목록에 아이콘을 추가 합니다.  
+##  <a name="addicon"></a>  CMFCToolBarImages::AddIcon  
+ Adds an icon to the list of toolbar images.  
   
 ```  
 int AddIcon(
@@ -247,18 +313,18 @@ int AddIcon(
     BOOL bAlphaBlend=FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hIcon`  
- 추가 될 아이콘에 대 한 핸들입니다.  
+ A handle to the icon to be added.  
   
  [in] `bAlphaBlend`  
- `TRUE`알파 혼합; 사용 되는이 아이콘은 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if this icon is used with alpha blending; otherwise `FALSE`.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 추가 된 도구 모음 이미지의&0;부터 시작 하는 인덱스 그렇지 않으면-1입니다.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the toolbar image that was added if the method is successful; otherwise -1.  
   
-##  <a name="addimage"></a>CMFCToolBarImages::AddImage  
- 도구 모음 이미지에 비트맵을 추가합니다.  
+##  <a name="addimage"></a>  CMFCToolBarImages::AddImage  
+ Adds a bitmap to the toolbar images.  
   
 ```  
 int AddImage(
@@ -270,94 +336,94 @@ int AddImage(
     int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hbmp`  
- 추가를 비트맵에 대 한 핸들입니다.  
+ The handle to the bitmap to add.  
   
  [in] `bSetBitPerPixel`  
- `TRUE`하는 경우는 `CMFCToolBarImages` 개체가 새 이미지의 색 농도 (픽셀 당 비트)를 사용 합니다. `FALSE` 경우는 `CMFCToolbarImages` 현재 색 농도 보관 합니다.  
+ `TRUE` if the `CMFCToolBarImages`  object uses the color depth (bits per pixel) of the new image; `FALSE` if the `CMFCToolbarImages` object keeps the current color depth.  
   
  [in] `imageList`  
- 에 대 한 참조는 `CMFCToolbarImages` 추가할 이미지를 포함 하는 개체입니다.  
+ A reference to a `CMFCToolbarImages` object that contains the image to add.  
   
  [in] `nIndex`  
- 원본에 대 한 인덱스 `CMFCToolbarImages` 추가할 이미지의 개체입니다.  
+ The index in the source `CMFCToolbarImages` object of the image to add.  
   
-### <a name="return-value"></a>반환 값  
- 도구 모음 수가 이미지를 `CMFCToolBarImages` 새로운 비트맵 성공적으로 추가 된 후 개체를 유지 관리 작업에 실패 한 경우-1입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of toolbar images that the `CMFCToolBarImages`  object maintains after the new bitmap was added successfully; -1 if the operation failed.  
   
-##  <a name="cleanup"></a>CMFCToolBarImages::CleanUp  
+##  <a name="cleanup"></a>  CMFCToolBarImages::CleanUp  
 
   
 ```  
 static void __stdcall CleanUp();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="clear"></a>CMFCToolBarImages::Clear  
- 시스템 리소스를 해제 하는 [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md) 할당 된 개체입니다.  
+##  <a name="clear"></a>  CMFCToolBarImages::Clear  
+ Frees the system resources that the [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md) object allocated.  
   
 ```  
 void Clear();
 ```  
   
-##  <a name="cmfctoolbarimages"></a>CMFCToolBarImages::CMFCToolBarImages  
- `CMFCToolBarImages` 개체를 생성합니다.  
+##  <a name="cmfctoolbarimages"></a>  CMFCToolBarImages::CMFCToolBarImages  
+ Constructs a `CMFCToolBarImages` object.  
   
 ```  
 CMFCToolBarImages();
 ```  
   
-### <a name="remarks"></a>주의  
- 생성 된 `CMFCToolBarImages` 개체의 렌더링 엔진을 초기화 하 고 16 x 15 픽셀 이미지 크기를 기본값으로 설정 합니다. 사용 하 여 [CMFCToolBarImages::SetImageSize](#setimagesize) 이미지를 추가 하기 전에 이미지 크기를 변경 합니다.  
+### <a name="remarks"></a>Remarks  
+ Constructs a `CMFCToolBarImages` object, initializes its rendering engine and sets the image size to its default value 16x15 pixels. Use [CMFCToolBarImages::SetImageSize](#setimagesize) to change the image size before you add images.  
   
-##  <a name="copyimagetoclipboard"></a>CMFCToolBarImages::CopyImageToClipboard  
+##  <a name="copyimagetoclipboard"></a>  CMFCToolBarImages::CopyImageToClipboard  
 
   
 ```  
 BOOL CopyImageToClipboard(int iImage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iImage`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copyto"></a>CMFCToolBarImages::CopyTo  
+##  <a name="copyto"></a>  CMFCToolBarImages::CopyTo  
 
   
 ```  
 BOOL CopyTo(CMFCToolBarImages& imageList);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `imageList`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="createfromimagelist"></a>CMFCToolBarImages::CreateFromImageList  
- 도구 모음 이미지를 초기화 한 [CImageList 클래스](../../mfc/reference/cimagelist-class.md) 개체입니다.  
+##  <a name="createfromimagelist"></a>  CMFCToolBarImages::CreateFromImageList  
+ Initializes the toolbar images from a [CImageList Class](../../mfc/reference/cimagelist-class.md) object.  
   
 ```  
 BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `imageList`  
- 도구 모음 이미지에 대 한 원본으로 사용할 이미지 목록입니다.  
+ The image list to be used as a source for toolbar images.  
   
-### <a name="return-value"></a>반환 값  
- 항상 `TRUE`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용 하 여 신속 하 게 외부 이미지 목록에서 도구 모음 이미지 목록 초기화 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this function to quickly initialize the toolbar images list from an external image list.  
   
-##  <a name="createregionfromimage"></a>CMFCToolBarImages::CreateRegionFromImage  
+##  <a name="createregionfromimage"></a>  CMFCToolBarImages::CreateRegionFromImage  
 
   
 ```  
@@ -366,30 +432,30 @@ static HRGN __stdcall CreateRegionFromImage(
     COLORREF clrTransparent);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bmp`  
  [in] `clrTransparent`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="deleteimage"></a>CMFCToolBarImages::DeleteImage  
- 도구 모음 이미지의 지정된 된 인덱스에는 사용자 지정 이미지를 삭제 합니다.  
+##  <a name="deleteimage"></a>  CMFCToolBarImages::DeleteImage  
+ Deletes the user-defined image that has a specified index from the toolbar images.  
   
 ```  
 BOOL DeleteImage(int iImage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iImage`  
- 삭제 하려면 이미지의&0;부터 시작 하는 인덱스를 지정 합니다.  
+ Specifies the zero-based index of the image to delete.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이미지를 성공적으로 삭제 하는 경우 `FALSE` 이미지 인덱스 올바르지는 `CMFCToolbarImages` 개체는 일시적 이며는 `CMFCToolbarImages` 개체 사용자 지정 이미지를 포함 하지 않거나 다른 경우 오류가 발생 합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the image was deleted successfully; `FALSE` if the image index is invalid, the `CMFCToolbarImages` object is temporary, the `CMFCToolbarImages` object does not contain user-defined images, or if some other error occurred.  
   
-##  <a name="draw"></a>CMFCToolBarImages::Draw  
- 하나의 도구 모음 이미지를 그립니다.  
+##  <a name="draw"></a>  CMFCToolBarImages::Draw  
+ Draws a single toolbar image.  
   
 ```  
 BOOL Draw(
@@ -405,41 +471,41 @@ BOOL Draw(
     BYTE alphaSrc=255);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
  [in] `x`  
- 이미지를 그릴 사각형의 왼쪽의 X 좌표입니다.  
+ The X coordinate of the left side of the rectangle where the image is to be drawn.  
   
  [in] `y`  
- 이미지를 그릴 사각형의 위쪽의 Y 좌표입니다.  
+ The Y coordinate of the top of the rectangle where the image is to be drawn.  
   
  [in] `iImageIndex`  
- 표시할 이미지의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the image to be displayed.  
   
  [in] `bHilite`  
- `TRUE`경우 이미지를 강조 표시 합니다. 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if the image is to be highlighted; otherwise `FALSE`.  
   
  [in] `bDisabled`  
- `TRUE`이미지를 사용할 수 없는 스타일;에 그릴 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if the image is to be drawn in the disabled style; otherwise `FALSE`.  
   
  [in] `bIndeterminate`  
- `TRUE`이미지가는 상태임 스타일;에 그릴 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if the image is to be drawn in the indeterminate state style; otherwise `FALSE`.  
   
  [in] `bShadow`  
- `TRUE`이미지가는 그림자를 그릴 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if the image is to be drawn with a drop shadow; otherwise `FALSE`.  
   
  [in] `bInactive`  
- `TRUE`이미지가 비활성 상태 스타일;에 그릴 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` if the image is to be drawn in the inactive state style; otherwise `FALSE`.  
   
  [in] `alphaSrc`  
- 알파 채널 (opacity) 값입니다. 값이 255 의미 이미지가 그려지는 불투명 하 게 됩니다. 값이 0 이면 이미지 투명 그려집니다. 이 값은 32 비트 컬러 이미지에 대해서만 및 Windows Vista 유리 스타일을 표시 하는 이미지를 사용 합니다.  
+ The alpha channel (opacity) value. A value of 255 means the image is drawn opaque. A value of 0 means the image is drawn transparent. This value is used only for 32 bit color images and for images that displayed a Windows Vista glass style.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`지정된 된 이미지는 성공적으로 표시 된 경우 `FALSE` 이미지 인덱스 잘못 되었거나 다른 몇 가지 오류가 발생 한 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified image was displayed successfully; `FALSE` if the image index was invalid or some other error occurred.  
   
-##  <a name="drawex"></a>CMFCToolBarImages::DrawEx  
+##  <a name="drawex"></a>  CMFCToolBarImages::DrawEx  
 
   
 ```  
@@ -456,7 +522,7 @@ BOOL DrawEx(
     BYTE alphaSrc = 255);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `rect`  
  [in] `iImageIndex`  
@@ -467,49 +533,49 @@ BOOL DrawEx(
  [in] `0)`  
  [in] `alphaSrc`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablertl"></a>CMFCToolBarImages::EnableRTL  
+##  <a name="enablertl"></a>  CMFCToolBarImages::EnableRTL  
 
   
 ```  
 static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bIsRTL`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enddrawimage"></a>CMFCToolBarImages::EndDrawImage  
- 시스템 리소스를 해제 하는 [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage) 를 호출 하 여 도구 모음 이미지를 그린 후 할당 [CMFCToolBarImages::Draw](#draw)합니다.  
+##  <a name="enddrawimage"></a>  CMFCToolBarImages::EndDrawImage  
+ Frees system resources that [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage) allocated after you draw a toolbar image by calling [CMFCToolBarImages::Draw](#draw).  
   
 ```  
 void EndDrawImage(CAfxDrawState& ds);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `ds`  
- 에 대 한 참조는 `CAfxDrawState` 에 전달 된 개체는 `PrepareDrawImage` 메서드.  
+ A reference to the `CAfxDrawState` object that was passed to the `PrepareDrawImage` method.  
   
-##  <a name="extracticon"></a>CMFCToolBarImages::ExtractIcon  
- 도구 모음 이미지에서 지정 된 이미지 인덱스를 가진 아이콘을 반환 합니다.  
+##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
+ Returns the icon that has a specified image index from the toolbar images.  
   
 ```  
 HICON ExtractIcon(int nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 아이콘으로 추출할은 이미지가 이미지 목록에서&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index in the image list at which the image to be extracted as an icon is located.  
   
-### <a name="return-value"></a>반환 값  
- 추출 된 아이콘에 대 한 핸들 또는 `NULL` 경우 `nIndex` 범위를 벗어났습니다.  
+### <a name="return-value"></a>Return Value  
+ A handle to the extracted icon, or `NULL` if `nIndex` is out of range.  
   
-##  <a name="fillditheredrect"></a>CMFCToolBarImages::FillDitheredRect  
- 도구 모음 배경 색으로 사각형을 채웁니다.  
+##  <a name="fillditheredrect"></a>  CMFCToolBarImages::FillDitheredRect  
+ Fills a rectangle with the toolbar background colors.  
   
 ```  
 static void FillDitheredRect(
@@ -517,271 +583,271 @@ static void FillDitheredRect(
     const CRect& rect);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 장치 컨텍스트에 대한 포인터입니다.  
+ A pointer to a device context.  
   
  [in] `rect`  
- 채울 사각형의 좌표입니다.  
+ The coordinates of a rectangle to fill.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 시스템 색 COLOR_BTNFACE 및 COLOR_BTNHIGHLIGHT의 평균을 색으로 사각형을 채웁니다. 시스템 256 색을 사용 하는 경우 사각형이 채워집니다 디더링된 패턴 이러한 두 가지 색을 대신 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to fill a rectangle with a color that is the average of the system colors COLOR_BTNFACE and COLOR_BTNHIGHLIGHT. If the system is using 256 or fewer colors, the rectangle will be filled with a dithered pattern of those two colors instead.  
   
-##  <a name="getalwayslight"></a>CMFCToolBarImages::GetAlwaysLight  
+##  <a name="getalwayslight"></a>  CMFCToolBarImages::GetAlwaysLight  
 
   
 ```  
 BOOL GetAlwaysLight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcount"></a>CMFCToolBarImages::GetCount  
- 도구 모음 이미지 목록의 이미지의 수를 반환합니다.  
+##  <a name="getcount"></a>  CMFCToolBarImages::GetCount  
+ Returns the number of images in the toolbar images list.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이미지 수는 `CMFCToolBarImages` 개체입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of images in the `CMFCToolBarImages`  object.  
   
-##  <a name="getdisabledimagealpha"></a>CMFCToolBarImages::GetDisabledImageAlpha  
- 비활성화 된 이미지에 사용 되는 알파 채널 (opacity) 값을 반환 합니다.  
+##  <a name="getdisabledimagealpha"></a>  CMFCToolBarImages::GetDisabledImageAlpha  
+ Returns the alpha channel (opacity) value that is used for disabled images.  
   
 ```  
 static BYTE GetDisabledImageAlpha();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 알파 채널 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The current alpha channel value.  
   
-### <a name="remarks"></a>주의  
- 호출할 수 있습니다 [CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha) 알파 채널 값을 변경 합니다.  
+### <a name="remarks"></a>Remarks  
+ You can call [CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha) to change the alpha channel value.  
   
-##  <a name="getfadedimagealpha"></a>CMFCToolBarImages::GetFadedImageAlpha  
+##  <a name="getfadedimagealpha"></a>  CMFCToolBarImages::GetFadedImageAlpha  
 
   
 ```  
 static BYTE __stdcall GetFadedImageAlpha();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getimagesize"></a>CMFCToolBarImages::GetImageSize  
- 메모리 (원본 크기)에 저장 되어 있는 도구 모음 이미지의 크기 또는 화면 (대상 크기)에 그려진 도구 모음 이미지의 크기를 검색 합니다.  
+##  <a name="getimagesize"></a>  CMFCToolBarImages::GetImageSize  
+ Retrieves either the size of the toolbar images that are stored in memory (source size), or the size of the toolbar images that are drawn on the screen (destination size).  
   
 ```  
 SIZE GetImageSize(BOOL bDest=FALSE) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bDest`  
- `TRUE`검색할 대상 크기입니다. `FALSE` 소스 이미지 크기를 검색 하도록 합니다.  
+ `TRUE` to retrieve the destination size; `FALSE` to retrieve the source image size.  
   
-### <a name="return-value"></a>반환 값  
- A `SIZE` 구조를 이미지의 크기를 픽셀 단위로 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ A `SIZE` structure, which specifies the size of an image in pixels.  
   
-### <a name="remarks"></a>주의  
- 원본 이미지의 크기는에 저장 된 이미지의 크기는 [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md) 개체입니다. 호출할 수 있습니다 [CMFCToolBarImages::SetImageSize](#setimagesize) 원본 크기를 설정 합니다. 기본값은 16 x 15 픽셀입니다.  
+### <a name="remarks"></a>Remarks  
+ The size of the source image is the size of the images that are stored in the [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md) object. You can call [CMFCToolBarImages::SetImageSize](#setimagesize) to set the source size. The default value is 16x15 pixels.  
   
- 기본적으로 대상 이미지 크기는 0x0입니다. 호출할 때 대상 크기를 지정 [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage)합니다. [CMFCToolBarImages::EndDrawImage](#enddrawimage) 메서드는 대상 크기를 기본값으로 다시 설정 합니다.  
+ By default, the destination image size is 0x0. You specify the destination size when you call [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage). The [CMFCToolBarImages::EndDrawImage](#enddrawimage) method resets the destination size to the default value.  
   
-##  <a name="getimagewell"></a>CMFCToolBarImages::GetImageWell  
- 모든 도구 모음 이미지를 포함 하는 비트맵에 핸들을 반환 합니다.  
+##  <a name="getimagewell"></a>  CMFCToolBarImages::GetImageWell  
+ Returns the handle to the bitmap that contains all the toolbar images.  
   
 ```  
 HBITMAP GetImageWell() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 도구 모음 이미지를 포함 하는 비트맵에 대 한 핸들입니다.  
+### <a name="return-value"></a>Return Value  
+ A handle to a bitmap that contains toolbar images.  
   
-### <a name="remarks"></a>주의  
- 도구 모음 이미지 라고 하는 단일 비트맵의 행에 저장 되어 있는 *이미지 잘*합니다. 이미지 웰을 도구 모음 이미지를 찾으려면 도구 모음 이미지의 너비에 따라 이미지의 인덱스를 곱하기 (참조 [CMFCToolBarImages::GetImageSize](#getimagesize))도 이미지 내에 있는 이미지의 가로 오프셋을 얻을 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The toolbar images are stored in a row in a single bitmap that is known as an *image well*. To find a toolbar image in the image well, multiply the index of the image by the width of the toolbar images (see [CMFCToolBarImages::GetImageSize](#getimagesize)) to obtain the horizontal offset of the image inside the image well.  
   
-##  <a name="getimagewelllight"></a>CMFCToolBarImages::GetImageWellLight  
+##  <a name="getimagewelllight"></a>  CMFCToolBarImages::GetImageWellLight  
 
   
 ```  
 HBITMAP GetImageWellLight() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlastimagerect"></a>CMFCToolBarImages::GetLastImageRect  
+##  <a name="getlastimagerect"></a>  CMFCToolBarImages::GetLastImageRect  
 
   
 ```  
 CRect GetLastImageRect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlightpercentage"></a>CMFCToolBarImages::GetLightPercentage  
+##  <a name="getlightpercentage"></a>  CMFCToolBarImages::GetLightPercentage  
 
   
 ```  
 int GetLightPercentage() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getmapto3dcolors"></a>CMFCToolBarImages::GetMapTo3DColors  
+##  <a name="getmapto3dcolors"></a>  CMFCToolBarImages::GetMapTo3DColors  
 
   
 ```  
 BOOL GetMapTo3DColors() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getmask"></a>CMFCToolBarImages::GetMask  
+##  <a name="getmask"></a>  CMFCToolBarImages::GetMask  
 
   
 ```  
 HBITMAP GetMask(int iImage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iImage`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getresourceoffset"></a>CMFCToolBarImages::GetResourceOffset  
- 지정 된 리소스 ID에 대 한 이미지 인덱스를 반환합니다.  
+##  <a name="getresourceoffset"></a>  CMFCToolBarImages::GetResourceOffset  
+ Returns the image index for a specified resource ID.  
   
 ```  
 int GetResourceOffset(UINT uiResId) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiResId`  
- 이미지 리소스 id입니다.  
+ An image resource ID.  
   
-### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 이미지 인덱스 지정 된 리소스 ID 사용 하 여 이미지에 존재 하지 않는 경우-1입니다.  
+### <a name="return-value"></a>Return Value  
+ An image index if the method was successful; -1 if the image with the specified resource ID does not exist.  
   
-##  <a name="gettransparentcolor"></a>CMFCToolBarImages::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>  CMFCToolBarImages::GetTransparentColor  
 
   
 ```  
 COLORREF GetTransparentColor() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="grayimages"></a>CMFCToolBarImages::GrayImages  
- 도구 모음 이미지를 사용할 수 없는 보이도록 할 회색으로 표시 합니다.  
+##  <a name="grayimages"></a>  CMFCToolBarImages::GrayImages  
+ Grays the toolbar images to make them look disabled.  
   
 ```  
 BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nGrayImageLuminancePercentage`  
- 광도 비율입니다.  
+ Luminance percentage.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`성공적으로 선택할 수 없게 된 이미지 컬렉션에 있는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if images in the collection were grayed successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 각 픽셀의 빨간색, 녹색 및 파랑 구성 요소를 평균 하 고 결과 곱한 여 도구 모음 이미지를 수정 합니다. `nGrayImageLuminancePercentage` 100으로 나눈 값입니다. 경우 `nGrayImageLuminancePercentage` 가 0 또는 음수, 130의 기본값 대신 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method modifies the toolbar images by averaging the red, green, and blue components of each pixel and multiplying the result by `nGrayImageLuminancePercentage` divided by 100. If `nGrayImageLuminancePercentage` is zero or negative, the default value of 130 is used instead.  
   
 > [!NOTE]
->  변경 내용을 취소 하려면 원본에서 이미지를 다시 로드 해야 합니다. 호출 하 여 수행할 수 있습니다 [CMFCToolBarImages::Load](#load) 또는 [CMFCToolBarImages::UpdateImage](#updateimage) (만 이미지에 대 한 사용자 정의)를 호출 하 여 [CMFCToolBarImages::Clear](#clear) 를 호출 하 여 이미지를 다시 추가 하 고 [CMFCToolBarImages::AddIcon](#addicon) 또는 [CMFCToolBarImages::AddImage](#addimage)합니다.  
+>  If you want to undo the change, you must reload the images from the source. You can do this by calling [CMFCToolBarImages::Load](#load) or [CMFCToolBarImages::UpdateImage](#updateimage) (only for user-defined images), or by calling [CMFCToolBarImages::Clear](#clear) and adding the images again by calling [CMFCToolBarImages::AddIcon](#addicon) or [CMFCToolBarImages::AddImage](#addimage).  
   
-##  <a name="is32bittransparencysupported"></a>CMFCToolBarImages::Is32BitTransparencySupported  
- 운영 체제 32 비트 알파 혼합을 지원 하는지 여부를 지정 합니다.  
+##  <a name="is32bittransparencysupported"></a>  CMFCToolBarImages::Is32BitTransparencySupported  
+ Specifies whether the operating system supports 32-bit alpha blending.  
   
 ```  
 static BOOL Is32BitTransparencySupported();
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`알파 혼합 32 비트 지원 되 면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if 32-bit alpha blending is supported; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 정적 메서드를 사용 하 여 운영 체제 32 비트 알파 혼합을 지원 하는지 여부를 런타임에 결정 합니다. 이 기능이 지원 [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] 이상 버전.  
+### <a name="remarks"></a>Remarks  
+ Use this static method to determine at runtime whether the operating system supports 32-bit alpha blending. This feature is supported on [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] and later versions.  
   
-##  <a name="ispremultiplyautocheck"></a>CMFCToolBarImages::IsPreMultiplyAutoCheck  
+##  <a name="ispremultiplyautocheck"></a>  CMFCToolBarImages::IsPreMultiplyAutoCheck  
 
   
 ```  
 BOOL IsPreMultiplyAutoCheck() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isreadonly"></a>CMFCToolBarImages::IsReadOnly  
- 도구 모음 이미지 읽기 전용인 지 여부를 지정 합니다.  
+##  <a name="isreadonly"></a>  CMFCToolBarImages::IsReadOnly  
+ Specifies whether the toolbar images are read-only.  
   
 ```  
 BOOL IsReadOnly() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음 이미지 되며 읽기 전용 이며, 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar images are read-only, otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- `CMFCToolbarImages` 개체는 읽기 전용 비트맵을 사용 하 여 복사한 하거나 도구 모음 이미지를 사용 하 여 비트맵에서 읽기 전용 파일에서 로드 된 경우는 `CMFCToolBarImages::CopyTemp` 메서드.  
+### <a name="remarks"></a>Remarks  
+ The `CMFCToolbarImages` object is read-only when the bitmap with toolbar images was loaded from a read-only file, or when the bitmap was copied in using the `CMFCToolBarImages::CopyTemp` method.  
   
-##  <a name="isrtl"></a>CMFCToolBarImages::IsRTL  
- 오른쪽에서 왼쪽 (RTL) 지원 사용 되는지 여부를 지정 합니다.  
+##  <a name="isrtl"></a>  CMFCToolBarImages::IsRTL  
+ Specifies whether right-to-left (RTL) support is enabled.  
   
 ```  
 static BOOL IsRTL();
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`RTL 지원을 활성화 되 면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if RTL support is enabled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- RTL 지원 응용 프로그램은 오른쪽에서 왼쪽으로 아랍어, 히브리어, 페르시아어, 우르두어 등에서 읽을 수 있는 언어를 지역화 하는 경우에 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ RTL support is used when the application is localized to a language that is read from right to left, such as Arabic, Hebrew, Persian, or Urdu.  
   
-##  <a name="isuserimageslist"></a>CMFCToolBarImages::IsUserImagesList  
- 이미지 사용자 지정 도구 모음 이미지의이 집합에 포함 되는지 여부를 지정 합니다.  
+##  <a name="isuserimageslist"></a>  CMFCToolBarImages::IsUserImagesList  
+ Specifies whether this set of toolbar images contains user-defined images.  
   
 ```  
 BOOL IsUserImagesList() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`하는 경우는 `CMFCToolBarImages` 도구 모음 사용자 지정 이미지를 포함 하는 개체 고, 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `CMFCToolBarImages`  object contains user-defined toolbar images; otherwise `FALSE`.  
   
-##  <a name="isvalid"></a>CMFCToolBarImages::IsValid  
- 유효한 도구 모음 이미지 도구 모음 이미지의이 집합에 포함 되어 있는지 여부를 나타냅니다.  
+##  <a name="isvalid"></a>  CMFCToolBarImages::IsValid  
+ Indicates whether this set of toolbar images contains a valid toolbar image.  
   
 ```  
 BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`경우에 `CMFCToolBarImages` 개체는 유효 하 고, 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a `CMFCToolBarImages`  object is valid; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- `CMFCToolBarImages` 도구 모음 이미지를 사용 하 여 비트맵을 해당 핸들은 개체가 유효 하지 않습니다 `NULL`합니다.  
+### <a name="remarks"></a>Remarks  
+ The `CMFCToolBarImages` object is not valid when its handle to a bitmap with toolbar images is `NULL`.  
   
-##  <a name="load"></a>CMFCToolBarImages::Load  
- 파일 또는 시스템 리소스에서 도구 모음 이미지를 로드합니다.  
+##  <a name="load"></a>  CMFCToolBarImages::Load  
+ Loads toolbar images from system resources or from a file.  
   
 ```  
 BOOL Load(
@@ -794,29 +860,29 @@ BOOL Load(
     DWORD nMaxFileSize = 819200);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `uiResID`  
- 비트맵 리소스의 ID입니다.  
+ The ID of a bitmap resource.  
   
  [in] `hinstRes`  
- 리소스 DLL의 인스턴스입니다.  
+ An instance of the resource DLL.  
   
  [in] `bAdd`  
- `TRUE`기존 비트맵에 로드 된 비트맵을 추가 하려면 또는 `FALSE` 기존 비트맵 이미지를 바꿔야 합니다.  
+ `TRUE` to add the loaded bitmap to the existing bitmap, or `FALSE` to replace the existing bitmap.  
   
  [in] `lpszBmpFileName`  
- 비트맵을 로드 하는 디스크 파일 경로입니다.  
+ A path to a disk file from which to load the bitmap.  
   
  [in] `nMaxFileSize`  
- 비트맵 파일에 바이트의 최대 수 또는 파일 크기에 관계 없이 비트맵을 로드 하는 0을 지정 합니다. 메서드가 반환 하는 경우 파일의 크기가이 최대 크기를 초과 하면 `FALSE` 비트맵을 로드 하지 않습니다.  
+ Maximum number of bytes in the bitmap file; or 0 to load the bitmap regardless of file size. If the size of the file exceeds this maximum size, the method returns `FALSE` and does not load the bitmap.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`비트맵을 성공적으로 로드 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the bitmap was loaded successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 파일에 읽기 전용 특성을 읽기 전용으로 이미지 목록이 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If the file has the read-only attribute, the image list is marked as read-only.  
   
-##  <a name="loadstr"></a>CMFCToolBarImages::LoadStr  
+##  <a name="loadstr"></a>  CMFCToolBarImages::LoadStr  
 
   
 ```  
@@ -826,16 +892,16 @@ BOOL LoadStr(
     BOOL bAdd = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `lpszResourceName`  
  [in] `hinstRes`  
  [in] `bAdd`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="mapfromsyscolor"></a>CMFCToolBarImages::MapFromSysColor  
+##  <a name="mapfromsyscolor"></a>  CMFCToolBarImages::MapFromSysColor  
 
   
 ```  
@@ -844,15 +910,15 @@ static COLORREF __stdcall MapFromSysColor(
     BOOL bUseRGBQUAD = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
  [in] `bUseRGBQUAD`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="mapto3dcolors"></a>CMFCToolBarImages::MapTo3dColors  
+##  <a name="mapto3dcolors"></a>  CMFCToolBarImages::MapTo3dColors  
 
   
 ```  
@@ -862,16 +928,16 @@ BOOL MapTo3dColors(
     COLORREF clrDest = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bUseRGBQUAD`  
  [in] `clrSrc`  
  [in] `clrDest`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="maptosyscolor"></a>CMFCToolBarImages::MapToSysColor  
+##  <a name="maptosyscolor"></a>  CMFCToolBarImages::MapToSysColor  
 
   
 ```  
@@ -880,43 +946,43 @@ static COLORREF __stdcall MapToSysColor(
     BOOL bUseRGBQUAD = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
  [in] `bUseRGBQUAD`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="maptosyscoloralpha"></a>CMFCToolBarImages::MapToSysColorAlpha  
+##  <a name="maptosyscoloralpha"></a>  CMFCToolBarImages::MapToSysColorAlpha  
 
   
 ```  
 static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="mirror"></a>CMFCToolBarImages::Mirror  
- 도구 모음 이미지를 가로 미러 이미지를 바꿉니다.  
+##  <a name="mirror"></a>  CMFCToolBarImages::Mirror  
+ Replaces the toolbar images with their horizontal mirror image.  
   
 ```  
 BOOL Mirror();
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이미지 미러링 성공적으로 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the images were successfully mirrored; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 오른쪽에서 왼쪽 문자 체계를 지 원하는 데 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method is used to support right-to-left writing systems.  
   
-##  <a name="mirrorbitmap"></a>CMFCToolBarImages::MirrorBitmap  
- 가로 미러 이미지는 비트맵을으로 바꿉니다.  
+##  <a name="mirrorbitmap"></a>  CMFCToolBarImages::MirrorBitmap  
+ Replaces a bitmap with its horizontal mirror image.  
   
 ```  
 static BOOL MirrorBitmap(
@@ -924,20 +990,20 @@ static BOOL MirrorBitmap(
     int cxImage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in, out] `hbmp`  
- 미러링 하는 비트맵에 대 한 핸들입니다.  
+ A handle to bitmap to mirror.  
   
  [in] `cxImage`  
- 픽셀 단위로 이미지의 너비입니다.  
+ Width of the image in pixels.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이미지를 성공적으로 미러링 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the image was successfully mirrored; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 오른쪽에서 왼쪽 문자 체계를 지 원하는 데 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is used to support right-to-left writing systems.  
   
-##  <a name="mirrorbitmapvert"></a>CMFCToolBarImages::MirrorBitmapVert  
+##  <a name="mirrorbitmapvert"></a>  CMFCToolBarImages::MirrorBitmapVert  
 
   
 ```  
@@ -946,35 +1012,35 @@ static BOOL __stdcall MirrorBitmapVert(
     int cyImage);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hbmp`  
  [in] `cyImage`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="mirrorvert"></a>CMFCToolBarImages::MirrorVert  
+##  <a name="mirrorvert"></a>  CMFCToolBarImages::MirrorVert  
 
   
 ```  
 BOOL MirrorVert();
 ```  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange  
+##  <a name="onsyscolorchange"></a>  CMFCToolBarImages::OnSysColorChange  
 
   
 ```  
 void OnSysColorChange();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="premultiplyalpha"></a>CMFCToolBarImages::PreMultiplyAlpha  
+##  <a name="premultiplyalpha"></a>  CMFCToolBarImages::PreMultiplyAlpha  
 
   
 ```  
@@ -985,28 +1051,28 @@ static BOOL __stdcall PreMultiplyAlpha(
 BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `hbmp`  
  [in] `bAutoCheckPremlt`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bdisabletruecoloralpha"></a>CMFCToolBarImages::m_bDisableTrueColorAlpha  
- `TRUE`truecolor 알파 혼합 (32 비트 색상)은 사용할 수 없습니다.  
+##  <a name="m_bdisabletruecoloralpha"></a>  CMFCToolBarImages::m_bDisableTrueColorAlpha  
+ `TRUE` if truecolor alpha blending (32-bit color) is disabled.  
   
 ```  
 static BOOL m_bDisableTrueColorAlpha;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 멤버 변수를 설정 `FALSE` 도구 모음 이미지에 대 한 알파 혼합 truecolor 사용할 수 있도록 합니다.  
+### <a name="remarks"></a>Remarks  
+ Set this member variable to `FALSE` to enable truecolor alpha-blending for toolbar images.  
   
- 기본값은 `TRUE` 이전 버전과 호환성에 대 한 합니다.  
+ The default value is `TRUE` for backward compatibility.  
   
-##  <a name="preparedrawimage"></a>CMFCToolBarImages::PrepareDrawImage  
- 지정된 된 크기에서 도구 모음 이미지를 그리는 데 필요한 리소스를 할당 합니다.  
+##  <a name="preparedrawimage"></a>  CMFCToolBarImages::PrepareDrawImage  
+ Allocates the resources that are required to draw a toolbar image at a specified size.  
   
 ```  
 BOOL PrepareDrawImage(
@@ -1016,79 +1082,79 @@ BOOL PrepareDrawImage(
     BOOL bFadeInactive=FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `ds`  
- 에 대 한 참조 `CAfxDrawState` 이미지 렌더링 단계 간에 할당 된 리소스를 저장 하는 구조입니다.  
+ A reference to `CAfxDrawState` structure, which stores the allocated resources between image rendering stages.  
   
  [in] `sizeImageDest`  
- 대상 이미지의 크기를 지정합니다.  
+ Specifies the size of a destination image.  
   
  [in] `bFadeInactive`  
- `TRUE`비활성 원하는 이미지를 그릴 실패 합니다.  
+ `TRUE` if you want inactive images to be drawn faded.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음 이미지를 그리는 데 필요한 리소스가 성공적으로 할당 그렇지 않은 경우 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the resources required to draw the toolbar image were allocated successfully, otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 호출한 후 호출할 수 있습니다 [CMFCToolBarImages::Draw](#draw) 임의의 횟수입니다. 호출 해야 드로잉을 마친 후 [CMFCToolBarImages::EndDrawImage](#enddrawimage) 에서 할당 된 리소스를 해제 하려면 `PrepareDrawImage`합니다.  
+### <a name="remarks"></a>Remarks  
+ After you call this method, you can call [CMFCToolBarImages::Draw](#draw) any number of times. After you finished drawing, you must call [CMFCToolBarImages::EndDrawImage](#enddrawimage) to release the resources allocated by `PrepareDrawImage`.  
   
-##  <a name="save"></a>CMFCToolBarImages::Save  
- 도구 모음 이미지의이 집합에는 사용자 지정 이미지가 포함 된 경우 도구 모음 이미지 파일에 저장 합니다.  
+##  <a name="save"></a>  CMFCToolBarImages::Save  
+ Stores the toolbar images in a file if this set of toolbar images contains user-defined images.  
   
 ```  
 BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszBmpFileName`  
- 디스크 파일 경로입니다.  
+ A path to a disk file.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음 이미지는 성공적으로 저장 된 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar images were saved successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
- 디스크 파일에 사용자 지정 이미지를 저장 하려면이 메서드를 호출 합니다. 경우 `lpszBmpFileName` 는 `NULL`, 있는 비트맵으로 로드 된 파일에 비트맵을 저장 하는 메서드는 [CMFCToolBarImages::Load](#load) 메서드.  
+### <a name="remarks"></a>Remarks  
+ Call this method to store the user-defined images into a disk file. If `lpszBmpFileName` is `NULL`, the method stores the bitmap into the file from which the bitmap was loaded by the [CMFCToolBarImages::Load](#load) method.  
   
-##  <a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight  
+##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight  
 
   
 ```  
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bAlwaysLight`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdisabledimagealpha"></a>CMFCToolBarImages::SetDisabledImageAlpha  
- 비활성화 된 이미지에 사용 되는 알파 채널 (opacity) 값을 설정 합니다.  
+##  <a name="setdisabledimagealpha"></a>  CMFCToolBarImages::SetDisabledImageAlpha  
+ Sets the alpha channel (opacity) value that is used for disabled images.  
   
 ```  
 static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nValue`  
- 알파 채널의 새 값입니다.  
+ The new value of the alpha channel.  
   
-### <a name="remarks"></a>주의  
- 비활성화 된 이미지에 대 한 사용자 지정 알파 값을 설정 하려면이 메서드를 사용 합니다. 기본값은 반투명 하 비활성화 된 단추 이미지에 이르게 127입니다. 값 0 설정 하는 경우 사용할 수 없는 이미지 완전히 투명 하 게 됩니다. 값이 255로 설정 하면 사용할 수 없는 이미지를 완전히 불투명 하 게 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set a custom alpha value for disabled images. The default value is 127, which causes disabled button images to be semitransparent. If you set a value of 0, disabled images will be completely transparent. If you set a value of 255, disabled images will be completely opaque.  
   
-##  <a name="setfadedimagealpha"></a>CMFCToolBarImages::SetFadedImageAlpha  
+##  <a name="setfadedimagealpha"></a>  CMFCToolBarImages::SetFadedImageAlpha  
 
   
 ```  
 static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nValue`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setimagesize"></a>CMFCToolBarImages::SetImageSize  
- 각 도구 모음 이미지 (원본 크기)의 크기를 설정합니다.  
+##  <a name="setimagesize"></a>  CMFCToolBarImages::SetImageSize  
+ Sets the size of each toolbar image (source size).  
   
 ```  
 void SetImageSize(
@@ -1096,77 +1162,77 @@ void SetImageSize(
     BOOL bUpdateCount=FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `sizeImage`  
- 도구 모음 이미지의 새 크기입니다.  
+ The new size of toolbar images.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 도구 모음 이미지의 크기는 16 x 15 픽셀입니다. 다른 크기의 도구 모음 이미지를 사용 하려는 경우이 메서드를 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ By default the size of the toolbar image is 16x15 pixels. Call this method if you want to use toolbar images of a different size.  
   
-##  <a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage  
+##  <a name="setlightpercentage"></a>  CMFCToolBarImages::SetLightPercentage  
 
   
 ```  
 void SetLightPercentage(int nValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nValue`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DColors  
+##  <a name="setmapto3dcolors"></a>  CMFCToolBarImages::SetMapTo3DColors  
 
   
 ```  
 void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bMapTo3DColors`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck  
+##  <a name="setpremultiplyautocheck"></a>  CMFCToolBarImages::SetPreMultiplyAutoCheck  
 
   
 ```  
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `bAuto`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage  
+##  <a name="setsingleimage"></a>  CMFCToolBarImages::SetSingleImage  
 
   
 ```  
 void SetSingleImage();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settransparentcolor"></a>CMFCToolBarImages::SetTransparentColor  
- 도구 모음 이미지의 투명 한 색을 설정합니다.  
+##  <a name="settransparentcolor"></a>  CMFCToolBarImages::SetTransparentColor  
+ Sets the transparent color of the toolbar images.  
   
 ```  
 COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `clrTransparent`  
- RGB 값입니다.  
+ An RGB value.  
   
-### <a name="return-value"></a>반환 값  
- 이전 투명색입니다.  
+### <a name="return-value"></a>Return Value  
+ The previous transparent color.  
   
-### <a name="remarks"></a>주의  
- 또는 프레임 워크 호출 하는 경우 [CMFCToolBarImages::Draw](#draw), 메서드는 지정 된 색과 일치 하는 모든 픽셀을 그리지 않습니다 `clrTransparent`합니다.  
+### <a name="remarks"></a>Remarks  
+ When you or the framework call [CMFCToolBarImages::Draw](#draw), the method does not draw any pixel that matches the color specified by `clrTransparent`.  
   
-##  <a name="updateimage"></a>CMFCToolBarImages::UpdateImage  
- 비트맵에서 도구 모음 사용자 지정 이미지를 업데이트합니다.  
+##  <a name="updateimage"></a>  CMFCToolBarImages::UpdateImage  
+ Updates a user-defined toolbar image from a bitmap.  
   
 ```  
 BOOL UpdateImage(
@@ -1174,85 +1240,85 @@ BOOL UpdateImage(
     HBITMAP hbmp);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `iImage`  
- 업데이트할 이미지의&0;부터 시작 하는 인덱스입니다.  
+ The zero-based index of the image to update.  
   
  [in] `hbmp`  
- 이미지를 업데이트 하려는 비트맵에 대 한 핸들입니다.  
+ A handle to the bitmap from which to update the image.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`이미지는 성공적으로 업데이트 된 경우 `FALSE` 이미지 목록을 사용자 정의 또는 임시 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the image was updated successfully; `FALSE` if the image list is not user-defined or temporary.  
   
-##  <a name="convertto32bits"></a>CMFCToolBarImages::ConvertTo32Bits  
- 변환에는 비트맵을을 32 bpp 이미지 밑줄이 그어집니다.  
+##  <a name="convertto32bits"></a>  CMFCToolBarImages::ConvertTo32Bits  
+ Converts underlined bitmaps to 32 bpp images.  
   
 ```  
 BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `clrTransparent`  
- 밑줄이 그어진된 비트맵의 투명 한 색을 지정합니다.  
+ Specifies transparent color of underlined bitmaps.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getbitsperpixel"></a>CMFCToolBarImages::GetBitsPerPixel  
- 밑줄이 그어진된 이미지의 현재 해상도 반환합니다.  
+##  <a name="getbitsperpixel"></a>  CMFCToolBarImages::GetBitsPerPixel  
+ Returns current resolution of underlined images.  
   
 ```  
 int GetBitsPerPixel() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 총&24;bpp (픽셀당) 비트에서 밑줄이 있는 이미지의 현재 해상도 나타내는 정수 값입니다.  
+### <a name="return-value"></a>Return Value  
+ An integer value representing the current resolution of underlined images, in bits per pixel (bpp).  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getscale"></a>CMFCToolBarImages::GetScale  
- 밑줄이 그어진된 이미지의 현재 크기 조정 비율을 반환합니다.  
+##  <a name="getscale"></a>  CMFCToolBarImages::GetScale  
+ Returns the current scale ratio of underlined images.  
   
 ```  
 double GetScale() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 비율을 나타내는 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A value representing the current scale ratio.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isscaled"></a>CMFCToolBarImages::IsScaled  
- 여부 밑줄이 그어진된 이미지는 크기가 조정 여부를 알려 줍니다.  
+##  <a name="isscaled"></a>  CMFCToolBarImages::IsScaled  
+ Tells whether the underlined images are scaled or not.  
   
 ```  
 BOOL IsScaled () const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`밑줄이 그어진된 이미지 크기를 조정 하 고 하는 경우 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if underlined images are scaled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="smoothresize"></a>CMFCToolBarImages::SmoothResize  
- 밑줄이 그어진된 이미지를 원활 하 게 크기가 조정 됩니다.  
+##  <a name="smoothresize"></a>  CMFCToolBarImages::SmoothResize  
+ Smoothly resizes underlined images.  
   
 ```  
 BOOL SmoothResize(double dblImageScale);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dblImageScale`  
- 크기 조정 비율입니다.  
+ Scale ratio.  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`크기 조정 성공 하면 그렇지 않으면 `FALSE`합니다.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if resize succeeds; otherwise `FALSE`.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)
 

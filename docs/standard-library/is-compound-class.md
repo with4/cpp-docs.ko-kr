@@ -1,15 +1,14 @@
 ---
-title: "is_compound 클래스 | Microsoft 문서"
+title: is_compound Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_compound
 - type_traits/std::is_compound
 dev_langs:
 - C++
@@ -35,30 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 2137c8a92c3821137ab1669b4b9162fd309d0fbe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 11ef1e4b7d65849961ab6596bf95866485d4b68a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iscompound-class"></a>is_compound 클래스
-지정된 형식이 기본 형식이 아닌지 테스트합니다.  
+# <a name="iscompound-class"></a>is_compound Class
+Tests if the specified type is not fundamental.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_compound;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
-## <a name="remarks"></a>설명  
- 형식 조건자 인스턴스는 `Ty`의 형식이 기본 형식인 경우(즉, [is_fundamental](../standard-library/is-fundamental-class.md)`<``Ty``>`이 `true`인 경우) `false`이고, 그렇지 않으면 이 `true`입니다. 따라서 `Ty`가 배열 형식이거나, 함수 형식이거나, `void`, 개체 또는 함수에 대한 포인터이거나, 비정적 클래스 멤버에 대한 참조, 클래스, 집합체, 열거형 또는 포인터이거나, 이들 중 하나의 *cv 한정* 형식이면 조건자는 `true`입니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds `false` if the type of `Ty` is a fundamental type (that is, if [is_fundamental](../standard-library/is-fundamental-class.md)`<Ty>` holds `true`); otherwise, it holds `true`. Thus, the predicate holds `true` if `Ty` is an array type, a function type, a pointer to `void` or an object or a function, a reference, a class, a union, an enumeration, or a pointer to non-static class member, or a *cv-qualified* form of one of them.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_compound.cpp   
@@ -100,12 +100,12 @@ is_compound<void *> == true
 is_compound<int> == false  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_class 클래스](../standard-library/is-class-class.md)
+ [is_class Class](../standard-library/is-class-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "COleConvertDialog 클래스 | Microsoft 문서"
+title: COleConvertDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,11 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleConvertDialog class
-- OLE Convert dialog box
-- dialog boxes, OLE
-- OLE dialog boxes, Convert
-- Convert dialog box
+- COleConvertDialog [MFC], COleConvertDialog
+- COleConvertDialog [MFC], DoConvert
+- COleConvertDialog [MFC], DoModal
+- COleConvertDialog [MFC], GetClassID
+- COleConvertDialog [MFC], GetDrawAspect
+- COleConvertDialog [MFC], GetIconicMetafile
+- COleConvertDialog [MFC], GetSelectionType
+- COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
 caps.latest.revision: 22
 author: mikeblome
@@ -46,55 +49,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6db5caf443e7f71c58e2c65b46794c2c9d246d38
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a17349605d3c59b2681d0ec2579a575b7aa0eb83
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleconvertdialog-class"></a>COleConvertDialog 클래스
-자세한 내용은 참조는 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+# <a name="coleconvertdialog-class"></a>COleConvertDialog Class
+For more information, see the [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) structure in the Windows SDK.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleConvertDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleConvertDialog::COleConvertDialog](#coleconvertdialog)|`COleConvertDialog` 개체를 생성합니다.|  
+|[COleConvertDialog::COleConvertDialog](#coleconvertdialog)|Constructs a `COleConvertDialog` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleConvertDialog::DoConvert](#doconvert)|대화 상자에 지정 된 변환을 수행 합니다.|  
-|[COleConvertDialog::DoModal](#domodal)|OLE 변경 항목 대화 상자를 표시합니다.|  
-|[COleConvertDialog::GetClassID](#getclassid)|가져옵니다는 **CLSID** 선택한 항목과 연결 합니다.|  
-|[COleConvertDialog::GetDrawAspect](#getdrawaspect)|항목 아이콘으로 그릴 것인지를 지정 합니다.|  
-|[COleConvertDialog::GetIconicMetafile](#geticonicmetafile)|이 항목의 아이콘 폼과 연결 된 메타 파일에 대 한 핸들을 가져옵니다.|  
-|[COleConvertDialog::GetSelectionType](#getselectiontype)|선택한 항목의 형식을 가져옵니다.|  
+|[COleConvertDialog::DoConvert](#doconvert)|Performs the conversion specified in the dialog box.|  
+|[COleConvertDialog::DoModal](#domodal)|Displays the OLE Change Item dialog box.|  
+|[COleConvertDialog::GetClassID](#getclassid)|Gets the **CLSID** associated with the chosen item.|  
+|[COleConvertDialog::GetDrawAspect](#getdrawaspect)|Specifies whether to draw item as an icon.|  
+|[COleConvertDialog::GetIconicMetafile](#geticonicmetafile)|Gets a handle to the metafile associated with the iconic form of this item.|  
+|[COleConvertDialog::GetSelectionType](#getselectiontype)|Gets the type of selection chosen.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleConvertDialog::m_cv](#m_cv)|대화 상자의 동작을 제어 하는 구조입니다.|  
+|[COleConvertDialog::m_cv](#m_cv)|A structure that controls the behavior of the dialog box.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  응용 프로그램 컨테이너 마법사에서 생성 된 코드는이 클래스를 사용합니다.  
+>  Application Wizard-generated container code uses this class.  
   
- OLE 관련 대화 상자에 대 한 자세한 내용은 문서를 참조 하십시오. [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+ For more information about OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -109,11 +112,11 @@ class COleConvertDialog : public COleDialog
   
  `COleConvertDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
- 만 생성 한 `COleConvertDialog` 개체입니다.  
+##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
+ Constructs only a `COleConvertDialog` object.  
   
 ```  
 explicit COleConvertDialog (
@@ -123,128 +126,128 @@ explicit COleConvertDialog (
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 활성화 또는 변환에 항목을 가리킵니다.  
+ Points to the item to be converted or activated.  
   
  `dwFlags`  
- 원하는 수의 다음 값을 포함 하는 생성 플래그 비트를 사용 하 여 결합-or 연산자:  
+ Creation flag, which contains any number of the following values combined using the bitwise-or operator:  
   
-- **CF_SELECTCONVERTTO** 대화 상자가 호출 될 때 변환 대상 라디오 단추는 처음 선택 되도록 지정 합니다. 이 값이 기본값입니다.  
+- **CF_SELECTCONVERTTO** Specifies that the Convert To radio button will be selected initially when the dialog box is called. This is the default.  
   
-- **CF_SELECTACTIVATEAS** 대화 상자가 호출 될 때 다른 이름으로 활성화 라디오 단추는 처음 선택 되도록 지정 합니다.  
+- **CF_SELECTACTIVATEAS** Specifies that the Activate As radio button will be selected initially when the dialog box is called.  
   
-- **CF_SETCONVERTDEFAULT** 지정 하는 클래스 인 **CLSID** 에 지정 된는 **clsidConvertDefault** 의 멤버는 `m_cv` 구조 변환 대상 라디오 단추를 선택할 때 클래스 목록 상자에서 기본 선택 항목으로 사용 됩니다.  
+- **CF_SETCONVERTDEFAULT** Specifies that the class whose **CLSID** is specified by the **clsidConvertDefault** member of the `m_cv` structure will be used as the default selection in the class list box when the Convert To radio button is selected.  
   
-- **CF_SETACTIVATEDEFAULT** 지정 하는 클래스 인 **CLSID** 에 지정 된는 **clsidActivateDefault** 의 멤버는 `m_cv` 활성화 라디오 단추를 선택할 때 구조 클래스 목록 상자에서 기본 선택 항목으로 사용 됩니다.  
+- **CF_SETACTIVATEDEFAULT** Specifies that the class whose **CLSID** is specified by the **clsidActivateDefault** member of the `m_cv` structure will be used as the default selection in the class list box when the Activate As radio button is selected.  
   
-- **CF_SHOWHELPBUTTON** 대화 상자가 호출 될 때 도움말 단추가 표시 되도록 지정 합니다.  
+- **CF_SHOWHELPBUTTON** Specifies that the Help button will be displayed when the dialog box is called.  
   
  `pClassID`  
- 항목을 활성화 또는 변환의 CLSID 가리킵니다. 경우 **NULL**, **CLSID** 연관 `pItem` 사용 됩니다.  
+ Points to the CLSID of the item to be converted or activated. If **NULL**, the **CLSID** associated with `pItem` will be used.  
   
  `pParentWnd`  
- 부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 개체가 속한 합니다. 있으면 **NULL**, 대화 상자의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog box is set to the main application window.  
   
-### <a name="remarks"></a>주의  
- 대화 상자를 표시 하려면 호출의 [DoModal](#domodal) 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ To display the dialog box, call the [DoModal](#domodal) function.  
   
- 자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 및 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) 구조입니다.  
+ For more information, see [CLSID Key](http://msdn.microsoft.com/library/windows/desktop/ms691424) and the [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) structure.  
   
-##  <a name="doconvert"></a>COleConvertDialog::DoConvert  
- 성공적으로 반환 된 후이 함수를 호출 [DoModal](#domodal)형식의 개체를 활성화 하거나 변환 해야 하거나, [활성화](../../mfc/reference/coleclientitem-class.md)합니다.  
+##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
+ Call this function, after returning successfully from [DoModal](#domodal), either to convert or to activate an object of type [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
   
 ```  
 BOOL DoConvert(COleClientItem* pItem);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 활성화 또는 변환에 항목을 가리킵니다. 안 **NULL**합니다.  
+ Points to the item to be converted or activated. Cannot be **NULL**.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 항목 또는 변환 변환 대화 상자에서 사용자가 선택한 정보에 따라 활성화 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The item is converted or activated according to the information selected by the user in the Convert dialog box.  
   
-##  <a name="domodal"></a>COleConvertDialog::DoModal  
- OLE 변환 대화 상자를 표시 하려면이 함수를 호출 합니다.  
+##  <a name="domodal"></a>  COleConvertDialog::DoModal  
+ Call this function to display the OLE Convert dialog box.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 대화 상자에 대 한 완료 상태입니다. 다음 값 중 하나입니다.  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK** 대화 상자가 성공적으로 표시 된 경우.  
+- **IDOK** if the dialog box was successfully displayed.  
   
-- **IDCANCEL** 사용자 대화 상자를 취소 합니다.  
+- **IDCANCEL** if the user canceled the dialog box.  
   
-- **IDABORT** 오류가 발생 합니다. 경우 **IDABORT** 은 호출 반환 되는 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) 발생 한 오류 유형에 대 한 자세한 정보를 멤버 함수입니다. 목록이 가능한 오류에 대 한 참조는 [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) 함수는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) function in the Windows SDK.  
   
-### <a name="remarks"></a>주의  
- 멤버를 설정 하 여 다양 한 대화 상자 컨트롤을 초기화 하려는 경우는 [m_cv](#m_cv) 구조를 호출 하기 전에이 작업을 수행 해야 `DoModal`, 대화 상자 개체를 생성 한 후 하지만 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_cv](#m_cv) structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
   
- 경우 `DoModal` 반환 **IDOK**, 다른 구성원 설정 또는 사용자가 대화 상자에 입력 된 정보를 검색 하는 함수를 호출할 수 있습니다.  
+ If `DoModal` returns **IDOK**, you can call other member functions to retrieve the settings or information that was input by the user into the dialog box.  
   
-##  <a name="getclassid"></a>COleConvertDialog::GetClassID  
- 가져오려면이 함수를 호출 하는 **CLSID** 변환 대화 상자에서 사용자가 선택한 항목으로 연결 합니다.  
+##  <a name="getclassid"></a>  COleConvertDialog::GetClassID  
+ Call this function to get the **CLSID** associated with the item the user selected in the Convert dialog box.  
   
 ```  
 REFCLSID GetClassID() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- **CLSID** 변환 대화 상자에서 선택한 항목과 연결 합니다.  
+### <a name="return-value"></a>Return Value  
+ The **CLSID** associated with the item that was selected in the Convert dialog box.  
   
-### <a name="remarks"></a>주의  
- 호출 후에이 함수 [DoModal](#domodal) 반환 **IDOK**합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function only after [DoModal](#domodal) returns **IDOK**.  
   
- 자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see [CLSID Key](http://msdn.microsoft.com/library/windows/desktop/ms691424) in the Windows SDK.  
   
-##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
- 사용자가 선택한 항목을 아이콘으로 표시 하려고 선택 여부를 확인 하려면이 함수를 호출 합니다.  
+##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
+ Call this function to determine whether the user chose to display the selected item as an icon.  
   
 ```  
 DVASPECT GetDrawAspect() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체를 렌더링 하는 데 필요한 메서드입니다.  
+### <a name="return-value"></a>Return Value  
+ The method needed to render the object.  
   
-- `DVASPECT_CONTENT`아이콘으로 표시 확인란을 선택 하지 된 경우 반환 됩니다.  
+- `DVASPECT_CONTENT` Returned if the Display As Icon check box was not checked.  
   
-- `DVASPECT_ICON`아이콘으로 표시 확인란을 선택 된 경우 반환 됩니다.  
+- `DVASPECT_ICON` Returned if the Display As Icon check box was checked.  
   
-### <a name="remarks"></a>주의  
- 호출 후에이 함수 [DoModal](#domodal) 반환 **IDOK**합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this function only after [DoModal](#domodal) returns **IDOK**.  
   
- 그리기 측면에 대 한 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information on drawing aspect, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) data structure in the Windows SDK.  
   
-##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
- 선택한 항목의 아이콘 모양을 포함 하는 메타 파일에 대 한 핸들을 가져오려면이 함수를 호출 합니다.  
+##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
+ Call this function to get a handle to the metafile that contains the iconic aspect of the selected item.  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 확인란 아이콘으로 표시 된 경우 선택된 된 항목의 아이콘 모양을 포함 하 여 메타 파일에 대 한 핸들을 선택 하 여 대화 상자를 해제할 때 체크 **확인**고, 그렇지 않으면 **NULL**합니다.  
+### <a name="return-value"></a>Return Value  
+ The handle to the metafile containing the iconic aspect of the selected item, if the Display As Icon check box was checked when the dialog was dismissed by choosing **OK**; otherwise **NULL**.  
   
-##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
- 변환 대화 상자에서 선택한 변환의 형식을 확인 하려면이 함수를 호출 합니다.  
+##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType  
+ Call this function to determine the type of conversion selected in the Convert dialog box.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 선택한 항목의 형식입니다.  
+### <a name="return-value"></a>Return Value  
+ Type of selection made.  
   
-### <a name="remarks"></a>주의  
- 반환 형식 값으로 지정 됩니다는 **선택** 에 선언 된 열거형 형식은 `COleConvertDialog` 클래스입니다.  
+### <a name="remarks"></a>Remarks  
+ The return type values are specified by the **Selection** enumeration type declared in the `COleConvertDialog` class.  
   
 ```  
 enum Selection {
@@ -254,28 +257,28 @@ enum Selection {
     };  
 ```  
   
- 이러한 값에 대 한 간략 한 설명을 따르십시오.  
+ Brief descriptions of these values follow:  
   
-- **COleConvertDialog::noConversion** 대화 상자를 취소 하거나 사용자가 선택한 변환이 반환 됩니다. 경우 `COleConvertDialog::DoModal` 반환 **IDOK**를 사용자 이전에 선택한 것 보다 다른 아이콘을 선택한 수 있습니다.  
+- **COleConvertDialog::noConversion** Returned if either the dialog box was canceled or the user selected no conversion. If `COleConvertDialog::DoModal` returned **IDOK**, it is possible that the user selected a different icon than the one previously selected.  
   
-- **COleConvertDialog::convertItem** 사용자로 변환 하는 다른 항목을 선택한 변환 대상 라디오 단추를 선택 하는 경우 반환 되 고 `DoModal` 반환 **IDOK**합니다.  
+- **COleConvertDialog::convertItem** Returned if the Convert To radio button was checked, the user selected a different item to convert to, and `DoModal` returned **IDOK**.  
   
-- **COleConvertDialog::activateAs** 사용자를 활성화 하려면 다른 항목을 선택한 다른 이름으로 활성화 라디오 단추를 선택 하는 경우 반환 되 고 `DoModal` 반환 **IDOK**합니다.  
+- **COleConvertDialog::activateAs** Returned if the Activate As radio button was checked, the user selected a different item to activate, and `DoModal` returned **IDOK**.  
   
-##  <a name="m_cv"></a>COleConvertDialog::m_cv  
- 형식의 구조 **OLEUICONVERT** 변환 대화 상자의 동작을 제어 하는 데 사용 합니다.  
+##  <a name="m_cv"></a>  COleConvertDialog::m_cv  
+ Structure of type **OLEUICONVERT** used to control the behavior of the Convert dialog box.  
   
 ```  
 OLEUICONVERT m_cv;  
 ```  
   
-### <a name="remarks"></a>주의  
- 이 구조체의 멤버는 직접 또는 멤버 함수를 통해 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified either directly or through member functions.  
   
- 자세한 내용은 참조는 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) 구조에서 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) structure in the Windows SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [COleDialog 클래스](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

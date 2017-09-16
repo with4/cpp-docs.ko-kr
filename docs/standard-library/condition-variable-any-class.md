@@ -1,5 +1,5 @@
 ---
-title: "condition_variable_any 클래스 | Microsoft 문서"
+title: condition_variable_any Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,71 +37,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0c72f22ed2962b3d1a200e99ace2c56d69194c78
+helpviewer_keywords:
+- std::condition_variable_any
+- std::condition_variable_any::condition_variable_any
+- std::condition_variable_any::notify_all
+- std::condition_variable_any::notify_one
+- std::condition_variable_any::wait
+- std::condition_variable_any::wait_for
+- std::condition_variable_any::wait_until
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bbb4ce1dc861727543608fcea3261621e5251dad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="conditionvariableany-class"></a>condition_variable_any 클래스
-`condition_variable_any` 클래스를 사용하여 모든 `mutex` 형식의 이벤트를 대기합니다.  
+# <a name="conditionvariableany-class"></a>condition_variable_any Class
+Use the class `condition_variable_any` to wait for an event that has any `mutex` type.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 class condition_variable_any;
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[condition_variable_any](#condition_variable_any)|`condition_variable_any` 개체를 생성합니다.|  
+|[condition_variable_any](#condition_variable_any)|Constructs a `condition_variable_any` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[notify_all](#notify_all)|`condition_variable_any` 개체를 대기 중인 모든 스레드를 차단 해제합니다.|  
-|[notify_one](#notify_one)|`condition_variable_any` 개체를 대기 중인 스레드 중 하나를 차단 해제합니다.|  
-|[대기](#wait)|스레드를 차단합니다.|  
-|[wait_for](#wait_for)|스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.|  
-|[wait_until](#wait_until)|스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.|  
+|[notify_all](#notify_all)|Unblocks all threads that are waiting for the `condition_variable_any` object.|  
+|[notify_one](#notify_one)|Unblocks one of the threads that are waiting for the `condition_variable_any` object.|  
+|[wait](#wait)|Blocks a thread.|  
+|[wait_for](#wait_for)|Blocks a thread, and sets a time interval after which the thread unblocks.|  
+|[wait_until](#wait_until)|Blocks a thread, and sets a maximum point in time at which the thread unblocks.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<condition_variable >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<condition_variable>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-##  <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any 생성자  
- `condition_variable_any` 개체를 생성합니다.  
+##  <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any Constructor  
+ Constructs a `condition_variable_any` object.  
   
 ```
 condition_variable_any();
 ```  
   
-### <a name="remarks"></a>설명  
- 메모리가 부족한 경우 생성자에서 `not_enough_memory` 오류 코드가 있는 [system_error](../standard-library/system-error-class.md) 개체를 throw합니다. 몇 가지 다른 리소스를 사용할 수 없기 때문에 개체를 생성할 수 없는 경우 생성자에서 `resource_unavailable_try_again` 오류 코드가 있는 `system_error` 개체를 throw합니다.  
+### <a name="remarks"></a>Remarks  
+ If not enough memory is available, the constructor throws a [system_error](../standard-library/system-error-class.md) object that has a `not_enough_memory` error code. If the object cannot be constructed because some other resource is not available, the constructor throws a `system_error` object that has a `resource_unavailable_try_again` error code.  
   
 ##  <a name="notify_all"></a>  condition_variable_any::notify_all  
- `condition_variable_any` 개체를 대기 중인 모든 스레드를 차단 해제합니다.  
+ Unblocks all threads that are waiting for the `condition_variable_any` object.  
   
 ```
 void notify_all() noexcept;
 ```  
   
 ##  <a name="notify_one"></a>  condition_variable_any::notify_one  
- `condition_variable_any` 개체를 기다리는 스레드 중 하나를 차단 해제합니다.  
+ Unblocks one of the threads that are waiting on the `condition_variable_any` object.  
   
 ```
 void notify_one() noexcept;
 ```  
   
 ##  <a name="wait"></a>  condition_variable_any::wait  
- 스레드를 차단합니다.  
+ Blocks a thread.  
   
 ```
 template <class Lock>  
@@ -111,17 +119,17 @@ template <class Lock, class Predicate>
 void wait(Lock& Lck, Predicate Pred);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- 모든 형식의 `mutex` 개체입니다.  
+ A `mutex` object of any type.  
   
  `Pred`  
- `true` 또는 `false`를 반환하는 모든 식입니다.  
+ Any expression that returns `true` or `false`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 메서드는 `condition_variable_any` 개체에서 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all)에 대한 호출을 통해 신호를 받을 때까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable_any` object is signaled by a call to [notify_one](../standard-library/condition-variable-class.md#notify_one) or [notify_all](../standard-library/condition-variable-class.md#notify_all). It can also wake up spuriously.  
   
- 두 번째 메서드는 실제로 다음 코드를 실행합니다.  
+ The second method in effect executes the following code.  
   
 ```
 while (!Pred())
@@ -129,7 +137,7 @@ while (!Pred())
 ```    
   
 ##  <a name="wait_for"></a>  condition_variable_any::wait_for  
- 스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.  
+ Blocks a thread, and sets a time interval after which the thread unblocks.  
   
 ```
 template <class Lock, class Rep, class Period>
@@ -139,25 +147,25 @@ template <class Lock, class Rep, class Period, class Predicate>
 bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicate Pred);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- 모든 형식의 `mutex` 개체입니다.  
+ A `mutex` object of any type.  
   
  `Rel_time`  
- 스레드가 대기 모드를 해제하기 전까지의 시간을 지정하는 `chrono::duration` 개체입니다.  
+ A `chrono::duration` object that specifies the amount of time before the thread wakes up.  
   
  `Pred`  
- `true` 또는 `false`를 반환하는 모든 식입니다.  
+ Any expression that returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 메서드는 `Rel_time`이 경과되면 대기가 종료될 경우 `cv_status::timeout`을 반환합니다. 그렇지 않은 경우 메서드는 `cv_status::no_timeout`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first method returns `cv_status::timeout` if the wait terminates when `Rel_time` has elapsed. Otherwise, the method returns `cv_status::no_timeout`.  
   
- 두 번째 메서드는 `Pred`의 값을 반환합니다.  
+ The second method returns the value of `Pred`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 메서드는 `condition_variable_any` 개체에서 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all)에 대한 호출을 통해 신호를 받을 때까지 또는 `Rel_time` 시간 간격이 경과될 때까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable_any` object is signaled by a call to [notify_one](../standard-library/condition-variable-class.md#notify_one) or [notify_all](../standard-library/condition-variable-class.md#notify_all), or until the time interval `Rel_time` has elapsed. It can also wake up spuriously.  
   
- 두 번째 메서드는 실제로 다음 코드를 실행합니다.  
+ The second method in effect executes the following code.  
   
 ```cpp  
 while(!Pred())
@@ -168,7 +176,7 @@ return true;
 ```  
   
 ##  <a name="wait_until"></a>  condition_variable_any::wait_until  
- 스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.  
+ Blocks a thread, and sets a maximum point in time at which the thread unblocks.  
   
 ```
 template <class Lock, class Clock, class Duration>
@@ -190,25 +198,25 @@ void wait_until(
     Predicate Pred);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- 뮤텍스 개체입니다.  
+ A mutex object.  
   
  `Abs_time`  
- [chrono::time_point](../standard-library/time-point-class.md) 개체입니다.  
+ A [chrono::time_point](../standard-library/time-point-class.md) object.  
   
  `Pred`  
- `true` 또는 `false`를 반환하는 모든 식입니다.  
+ Any expression that returns `true` or `false`.  
   
-### <a name="return-value"></a>반환 값  
- `cv_status` 형식을 반환하는 메서드는 `Abs_time`이 경과되면 대기가 종료될 경우 `cv_status::timeout`을 반환합니다. 그렇지 않으면 메서드는 `cv_status::no_timeout`을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Methods that return a `cv_status` type return `cv_status::timeout` if the wait terminates when `Abs_time` elapses. Otherwise, the methods return `cv_status::no_timeout`.  
   
- `bool`을 반환하는 메서드는 `Pred`의 값을 반환합니다.  
+ Methods that return a `bool` return the value of `Pred`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 메서드는 `condition_variable` 개체에서 [notify_one](../standard-library/condition-variable-class.md#notify_one) 또는 [notify_all](../standard-library/condition-variable-class.md#notify_all)에 대한 호출을 통해 신호를 받을 때까지 또는 `Abs_time`까지 차단합니다. 또한 의사적으로 대기 모드를 해제할 수도 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable` object is signaled by a call to [notify_one](../standard-library/condition-variable-class.md#notify_one) or [notify_all](../standard-library/condition-variable-class.md#notify_all), or until `Abs_time`. It can also wake up spuriously.  
   
- 두 번째 메서드는 실제로 다음 코드를 실행합니다.  
+ The second method in effect executes the following code.  
   
 ```
 while(!Pred())
@@ -218,10 +226,10 @@ while(!Pred())
 return true;
 ```  
   
- 세 번째와 네 번째 메서드는 `xtime` 형식의 개체에 대한 포인터를 사용하여 `chrono::time_point` 개체를 대체합니다. `xtime` 개체는 신호를 기다리는 최대 시간을 지정합니다.  
+ The third and fourth methods use a pointer to an object of type `xtime` to replace the `chrono::time_point` object. The `xtime` object specifies the maximum amount of time to wait for a signal.  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [<condition_variable>](../standard-library/condition-variable.md)
 
 

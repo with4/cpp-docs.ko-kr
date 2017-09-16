@@ -1,7 +1,7 @@
 ---
-title: "링커 도구 오류 LNK2019 | Microsoft Docs"
+title: Linker Tools Error LNK2019 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -36,70 +36,70 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: fad921c3b4f13f5704c293188c0b91315146c33c
+ms.translationtype: MT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 879eb99c918f80af66b20154acfd915d1ae45702
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="linker-tools-error-lnk2019"></a>링커 도구 오류 LNK2019
-확인 되지 않은 외부 기호 '*기호*'함수에서 참조 된'*함수*'  
+# <a name="linker-tools-error-lnk2019"></a>Linker Tools Error LNK2019
+unresolved external symbol '*symbol*' referenced in function '*function*'  
   
-컴파일된 코드를 *함수* 참조 또는 호출을 사용 하면 *기호*이지만, 그에 라이브러리 또는 개체 파일을 링커에 지정 기호가 정의 되지 않습니다.  
+The compiled code for *function* makes a reference or call to *symbol*, but that symbol isn't defined in any of the libraries or object files specified to the linker.  
   
-이 오류 메시지 다음에 심각한 오류 [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md)합니다. LNK1120 오류를 해결 하려면 모든 LNK2001 및 LNK2019 오류를 수정 해야 합니다.  
+This error message is followed by fatal error [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). You must fix all LNK2001 and LNK2019 errors to fix error LNK1120.  
   
-## <a name="possible-causes"></a>가능한 원인  
+## <a name="possible-causes"></a>Possible causes  
   
-이 오류가 발생 하는 방법은 여러 가지가 있지만 링커 없습니다 된 변수 또는 함수에 대 한 참조를 포함 하는 모든 *해결*, 또는 대 한 정의 확인해 보세요. 기호가 없을 때 확인할 수 있습니다 *선언*, 하지는 않지만 *정의*이므로 다른 소스 파일 또는 라이브러리에는 정의가 있을 수 있습니다. 기호 참조 되었지만 정의 되지 않았습니다. 된 경우 링커는 확인 되지 않은 외부 기호 오류가 생성 됩니다.  
+There are many ways to get this error, but all of them involve a reference to a function or variable that the linker can't *resolve*, or find a definition for. The compiler can identify when a symbol is not *declared*, but not when it is not *defined*, because the definition may be in a different source file or library. If a symbol is referred to but never defined, the linker generates an unresolved external symbol error.  
   
-LNK2019를 일으키는 일반적인 문제는 다음과 같습니다.  
+Here are some common problems that cause LNK2019:  
   
--   **개체 파일 또는 기호 정의 포함 하는 라이브러리 연결 되지 않습니다.** Visual Studio에서 정의 포함 하는 소스 파일 프로젝트의 일부분으로 연결 된 빌드를 확인 합니다. 명령줄에서 정의 포함 하는 소스 파일을 컴파일한 있으며 결과 개체 파일에 연결 하는 파일의 목록에 포함 되어 있는지 확인 합니다.  
+-   **The object file or library that contains the definition of the symbol is not linked.** In Visual Studio, verify that the source file that contains the definition is built and linked as part of your project. On the command line, verify that the source file that contains the definition is compiled, and that the resulting object file is included in the list of files to link.  
   
--   **기호 선언의 철자가 기호 정의의 철자와 같지 않습니다.** 올바른 철자 및 대/소문자가 선언과 정의 모두 사용 되 고 아무 곳에 나 기호가 사용 되었거나 호출을 확인 합니다.  
+-   **The declaration of the symbol is not spelled the same as the definition of the symbol.** Verify the correct spelling and capitalization is used in both the declaration and the definition, and wherever the symbol is used or called.  
   
--   **함수가 사용되지만 매개 변수의 형식이나 개수가 함수 정의와 일치하지 않습니다.** 함수 선언은 정의와 일치해야 합니다. 함수 호출이 선언과 일치하며 선언이 정의와 일치하는지 확인하세요. 또한 템플릿 함수를 호출하는 코드에는 정의와 같은 템플릿 매개 변수가 포함되는 일치하는 템플릿 함수 선언이 있어야 합니다. 템플릿 선언 불일치의 예를 들어 LNK2019e.cpp "예" 섹션에서 샘플을 참조 합니다.  
+-   **A function is used but the type or number of the parameters do not match the function definition.** The function declaration must match the definition. Verify that the function call matches the declaration, and that the declaration matches the definition. Code that invokes template functions must also have matching template function declarations that include the same template parameters as the definition. For an example of a template declaration mismatch, see sample LNK2019e.cpp in the Examples section.  
   
--   **함수 또는 변수가 선언되었지만 정의되지 않았습니다.** 이 문제는 일반적으로 선언이 헤더 파일에 존재 하지만 일치 하는 정의가 구현 되지 의미 합니다. 멤버 함수 또는 정적 데이터 멤버의 경우 구현에 클래스 범위 선택기가 포함되어야 합니다. 예제를 보려면 [Missing Function Body or Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md)를 참조하십시오.  
+-   **A function or variable is declared but not defined.** This usually means a declaration exists in a header file, but no matching definition is implemented. For member functions or static data members, the implementation must include the class scope selector. For an example, see [Missing Function Body or Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md).  
   
--   **함수 선언과 함수 정의 간에 호출 규칙이 다릅니다.** 호출 규칙([__cdecl](../../cpp/cdecl.md), [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md)또는 [__vectorcall](../../cpp/vectorcall.md))은 트데코레이된 이름의 일부로써 인코딩됩니다. 호출 규칙이 동일한지 확인하세요.  
+-   **The calling convention is different between the function declaration and the function definition.** Calling conventions ([__cdecl](../../cpp/cdecl.md), [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), or [__vectorcall](../../cpp/vectorcall.md)) are encoded as part of the decorated name. Verify that the calling convention is the same.  
   
--   **기호가 C 파일에 정의되어 있지만 C++ 파일에서 extern "C"를 사용하지 않고 선언되었습니다.** C로 컴파일된 파일에 정의 된 기호는 사용 하지 않는 한 c + + 파일에 선언 된 기호와 다른 트 데코 레이 된 이름과 이름을 [extern "C"](../../cpp/using-extern-to-specify-linkage.md) 한정자입니다. 선언이 각 기호의 컴파일 링크와 일치하는지 확인하세요. 마찬가지로, C 프로그램에서 사용할 기호를 C++ 파일에서 정의하는 경우 정의에 `extern "C"` 을 사용하세요.  
+-   **A symbol is defined in a C file, but declared without using extern "C" in a C++ file.** Symbols defined in a file that is compiled as C have different decorated names than symbols declared in a C++ file unless you use an [extern "C"](../../cpp/using-extern-to-specify-linkage.md) modifier. Verify that the declaration matches the compilation linkage for each symbol. Similarly, if you define a symbol in a C++ file that will be used by a C program, use `extern "C"` in the definition.  
   
--   **기호는 정적으로 정의된 후 나중에 파일 외부에서 참조됩니다.** C와 달리 C++에서는 [전역 상수](../../error-messages/tool-errors/global-constants-in-cpp.md) 에 `static` 링크가 있습니다. 이 제한을 해결하기 위해 헤더 파일에 `const` 초기화를 포함하고 .cpp 파일에 해당 헤더를 포함하거나, 변수를 비상수로 만들고 상수 참조를 사용하여 액세스할 수 있습니다.  
+-   **A symbol is defined as static and then later referenced outside the file.** In C++, unlike C, [global constants](../../error-messages/tool-errors/global-constants-in-cpp.md) have `static` linkage. To get around this limitation, you can include the `const` initializations in a header file and include that header in your .cpp files, or you can make the variable non-constant and use a constant reference to access it.  
   
--   **클래스의 정적 멤버가 정의되지 않았습니다.** 정적 클래스 멤버에는 고유한 정의가 있어야 합니다. 그렇지 않으면 단일 정의 규칙을 위반하게 됩니다. 인라인으로 정의될 수 없는 정적 클래스 멤버는 정규화된 이름을 사용하여 한 소스 파일에 정의되어야 합니다. 전혀 정의되지 않은 경우 링커는 LNK2019를 생성합니다.  
+-   **A static member of a class is not defined.** A static class member must have a unique definition, or it will violate the one-definition rule. A static class member that cannot be defined inline must be defined in one source file by using its fully-qualified name. If it is not defined at all, the linker generates LNK2019.  
   
--   **빌드 종속성은 솔루션의 프로젝트 종속성으로만 정의됩니다.** 이전 버전의 Visual Studio에서는이 수준의 종속성으로 충분 했습니다. 그러나 Visual Studio 2010 이상에서는 Visual Studio을 사용 하려면 한 [프로젝트 간 참조](/visualstudio/ide/managing-references-in-a-project)합니다. 프로젝트에 프로젝트 간 참조가 없는 경우 이 링커 오류가 발생할 수 있습니다. 프로젝트 간 참조를 추가하여 오류를 해결하세요.  
+-   **A build dependency is only defined as a project dependency in the solution.** In earlier versions of Visual Studio, this level of dependency was sufficient. However, starting with Visual Studio 2010, Visual Studio requires a [project-to-project reference](/visualstudio/ide/managing-references-in-a-project). If your project does not have a project-to-project reference, you may receive this linker error. Add a project-to-project reference to fix it.  
   
--   **Windows 응용 프로그램에 대한 설정을 사용하여 콘솔 응용 프로그램을 빌드합니다**. 오류 메시지가 **unresolved external symbol WinMain referenced in function**`function_name`와 유사한 경우 **/SUBSYSTEM:WINDOWS** 대신 **/SUBSYSTEM:CONSOLE**를 참조하십시오. 이 설정에 대한 자세한 내용과 Visual Studio에서 이 속성을 설정하는 방법에 대한 지침은 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)을 참조하세요.  
+-   **You build a console application by using settings for a Windows application**. If the error message is similar to **unresolved external symbol WinMain referenced in function**`function_name`, link by using **/SUBSYSTEM:CONSOLE** instead of **/SUBSYSTEM:WINDOWS**. For more information about this setting, and for instructions on how to set this property in Visual Studio, see [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md).  
   
--   **여러 소스 파일에서 함수 인라이닝에 대해 여러 컴파일러 옵션을 사용합니다.** 여러 소스 파일에서 .cpp 파일에 정의된 인라인된 함수를 사용하고 함수 인라이닝 컴파일러 옵션을 혼합하면 LNK2019가 발생할 수 있습니다. 자세한 내용은 [Function Inlining Problems](../../error-messages/tool-errors/function-inlining-problems.md)을 참조하세요.  
+-   **You use different compiler options for function inlining in different source files.** Using inlined functions defined in .cpp files and mixing function inlining compiler options in different source files can cause LNK2019. For more information, see [Function Inlining Problems](../../error-messages/tool-errors/function-inlining-problems.md).  
   
--   **범위 밖의 자동 변수를 사용합니다.** 자동(함수 범위) 변수는 해당 함수의 범위 내에서만 사용할 수 있습니다. 이러한 변수는 `extern` 으로 선언할 수 없으며 다른 소스 파일에서 사용할 수 없습니다. 예제를 보려면 [Automatic (Function Scope) Variables](../../error-messages/tool-errors/automatic-function-scope-variables.md)를 참조하십시오.  
+-   **You use automatic variables outside their scope.** Automatic (function scope) variables can only be used in the scope of that function. These variables can't be declared `extern` and used in other source files. For an example, see [Automatic (Function Scope) Variables](../../error-messages/tool-errors/automatic-function-scope-variables.md).  
   
--   **내장 함수를 호출하거나 대상 아키텍처에서 지원하지 않는 내장 함수에 대해 인수 형식을 전달합니다.** 예들 들어 AVX2 내장 함수를 사용하지만 [/ARCH:AVX2](../../build/reference/arch-x86.md) 컴파일러 옵션을 지정하지 않은 경우, 컴파일러는 내장 함수가 외부 함수라고 가정합니다. 인라인 명령을 생성하는 대신 컴파일러는 내장 함수와 같은 이름의 외부 기호에 대해 호출을 생성합니다. 링커가 이 누락된 함수의 정의를 찾으려고 할 때 LNK2019가 생성됩니다. 대상 아키텍처에서 지원하는 내장 함수 및 형식만 사용하는지 확인하세요.  
+-   **You call instrinsic functions or pass argument types to intrinsic functions that are not supported on your target architecture.** For example, if you use an AVX2 intrinsic, but do not specify the [/ARCH:AVX2](../../build/reference/arch-x86.md) compiler option, the compiler assumes that the intrinsic is an external function. Instead of generating an inline instruction, the compiler generates a call to an external symbol with the same name as the intrinsic. When the linker tries to find the definition of this missing function, it generates LNK2019. Verify that you only use intrinsics and types supported by your target architecture.  
   
--   **네이티브 wchar를 사용 하는 코드를 혼합 하 여\_하지 않은 코드로 t입니다.** Visual C++ 2005에서 수행된 C++ 언어 규칙 작업은 `wchar_t` 를 기본적으로 네이티브 형식으로 만듭니다. 이전 버전의 Visual C++를 사용하여 컴파일된 라이브러리 및 개체 파일과 호환되는 코드를 생성하려면 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 컴파일러 옵션을 사용해야 합니다. 일부 파일이 동일한를 사용 하 여 컴파일되지 않은 경우 **/Zc:wchar\_t** 설정, 형식 참조를 호환 가능한 형식 확인 되지 않을 수 있습니다. 사용된 형식을 업데이트하거나 컴파일할 때 일관된 `wchar_t` 설정을 사용하여 모든 라이브러리 및 개체 파일의 **/Zc:wchar_t** 형식이 호환되는지 확인하세요.  
+-   **You mix code that uses native wchar\_t with code that doesn't.** C++ language conformance work that was done in Visual C++ 2005 made `wchar_t` a native type by default. You must use the [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) compiler option to generate code compatible with library and object files compiled by using earlier versions of Visual C++. If not all files have been compiled by using the same **/Zc:wchar\_t** settings, type references may not resolve to compatible types. Verify that `wchar_t` types in all library and object files are compatible, either by updating the types that are used, or by using consistent **/Zc:wchar_t** settings when you compile.  
   
-## <a name="diagnosis-tools"></a>진단 도구    
+## <a name="diagnosis-tools"></a>Diagnosis tools    
   
-링커가 특정 기호 정의를 찾을 수 없는 이유는 확인하기 어려울 수 있습니다. 종종 빌드 정의 포함 하는 코드를 포함 하지 또는 빌드 옵션 다른 만든 데코레이팅된 이름 외부 기호에 대 한 문제가입니다. LNK2019 오류를 진단하는데 도움이 되는 여러 가지 도구 및 옵션이 있습니다.  
+It can be difficult to tell why the linker can't find a particular symbol definition. Often the problem is that you have not included the code that contains the definition in your build, or build options have created different decorated names for external symbols. There are several tools and options that can help you diagnose a LNK2019 error.  
   
--   [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) 링커 옵션은 링커가 참조하는 파일을 확인하는데 도움이 될 수 있습니다. 기호 정의를 포함하는 파일이 빌드에 포함되어 있는지 여부를 확인할 수 있습니다.  
+-   The [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) linker option can help you determine which files the linker references. This can help you verify whether the file that contains the definition of the symbol is included in your build.  
   
--   DUMPBIN 유틸리티의 [/EXPORTS](../../build/reference/dash-exports.md) 및 [/SYMBOLS](../../build/reference/symbols.md) 옵션은 .dll 및 개체 또는 라이브러리 파일에 정의된 기호를 찾는 데 도움이 될 수 있습니다. 내보낸 트데코레이된 이름이 링커가 검색하는 트데코레이된 이름과 일치하는지 확인하세요.  
+-   The [/EXPORTS](../../build/reference/dash-exports.md) and [/SYMBOLS](../../build/reference/symbols.md) options of the DUMPBIN utility can help you discover which symbols are defined in your .dll and object or library files. Verify that the exported decorated names match the decorated names the linker searches for.  
   
--   UNDNAME 유틸리티는 트데코레이된 이름에 해당하는 데코레이팅되지 않은 외부 기호를 보여 줄 수 있습니다.  
-## <a name="examples"></a>예제  
+-   The UNDNAME utility can show you the equivalent undecorated external symbol for a decorated name.  
+## <a name="examples"></a>Examples  
   
-LNK2019 오류를 해결하는 방법에 대한 정보와 함께, LNK2019 오류를 유발하는 여러 가지 코드 예제는 다음과 같습니다.  
+Here are several examples of code that causes a LNK2019 error, together with information about how to fix the error.  
   
-### <a name="a-symbol-is-declared-but-not-defined"></a>기호가 선언되었지만 정의되지 않았습니다.  
+### <a name="a-symbol-is-declared-but-not-defined"></a>A symbol is declared but not defined  
   
-이 예제에서는 외부 변수가 선언 되었지만 정의 되지 않았습니다.  
+In this example, an external variable is declared but not defined:  
   
 ```cpp  
 // LNK2019.cpp  
@@ -111,7 +111,7 @@ int main() {
 }  
 ```  
   
-변수 및 함수로 선언 된 다른 예로 `extern` 아니지만 정의가 제공 됩니다.  
+Here is another example where a variable and function are declared as `extern` but no definition is provided:  
   
 ```cpp  
 // LNK2019c.cpp  
@@ -126,11 +126,11 @@ void f() {
 int main() {}  
 ```  
   
-하지 않는 한 `i` 및 `g` 정의 된 링커 빌드에 포함 된 파일 중 하나에 l n k 2019를 생성 합니다. 컴파일의 일부로써 정의를 포함하는 소스 코드 파일을 포함하여 오류를 해결할 수 있습니다. 또는.obj 파일이 나 링커에 정의 포함 하는.lib 파일을 전달할 수 있습니다.  
+Unless `i` and `g` are defined in one of the files included in the build, the linker generates LNK2019. You can fix the errors by including the source code file that contains the definitions as part of the compilation. Alternatively, you can pass .obj files or .lib files that contain the definitions to the linker.  
   
-### <a name="a-static-data-member-is-declared-but-not-defined"></a>정적 데이터 멤버가 선언되었지만 정의되지 않았습니다.  
+### <a name="a-static-data-member-is-declared-but-not-defined"></a>A static data member is declared but not defined  
   
-정적 데이터 멤버가 선언되었지만 정의되지 않은 경우에도 LNK2019가 발생할 수 있습니다. 다음 샘플에서는 LNK2019가 생성되며 해결 방법을 보여 줍니다.  
+LNK2019 can also occur when a static data member is declared but not defined. The following sample generates LNK2019, and shows how to fix it.  
   
 ```cpp  
 // LNK2019b.cpp  
@@ -149,9 +149,9 @@ int main() {
 }  
 ```  
   
-### <a name="declaration-parameters-do-not-match-definition"></a>선언 매개 변수가 정의와 일치하지 않습니다.  
+### <a name="declaration-parameters-do-not-match-definition"></a>Declaration parameters do not match definition  
   
-템플릿 함수를 호출하는 코드에는 일치하는 템플릿 함수 선언이 있어야 합니다. 선언에는 정의와 동일한 템플릿 매개 변수가 포함되어야 합니다. 다음 샘플에서는 사용자 정의 연산자에 LNK2019가 생성되고 해결 방법을 보여 줍니다.  
+Code that invokes template functions must have matching template function declarations. Declarations must include the same template parameters as the definition. The following sample generates LNK2019 on a user-defined operator, and shows how to fix it.  
   
 ```cpp  
 // LNK2019e.cpp  
@@ -179,9 +179,9 @@ int main() {
 }  
 ```  
   
-### <a name="inconsistent-wchart-type-definitions"></a>일관성 없는 wchar_t 형식 정의  
+### <a name="inconsistent-wchart-type-definitions"></a>Inconsistent wchar_t type definitions  
   
-이 샘플을 사용 하는 내보내기가 있는 DLL을 만듭니다. `WCHAR`, 확인 되 `wchar_t`합니다.  
+This sample creates a DLL that has an export that uses `WCHAR`, which resolves to `wchar_t`.  
   
 ```cpp  
 // LNK2019g.cpp  
@@ -191,7 +191,7 @@ int main() {
 __declspec(dllexport) void func(WCHAR*) {}  
 ```  
   
-다음 샘플 이전 샘플에서 DLL을 사용 하 고 형식을 unsigned short * 및 WCHAR 때문에 l n k 2019를 생성\* 같지 않습니다.  
+The next sample uses the DLL in the previous sample, and generates LNK2019 because the types unsigned short* and WCHAR\* are not the same.  
   
 ```cpp  
 // LNK2019h.cpp  
@@ -204,10 +204,10 @@ int main() {
 }  
 ```  
   
- 이 오류를 해결 하려면 변경 `unsigned short` 를 `wchar_t` 또는 `WCHAR`를 사용 하 여 LNK2019g.cpp를 컴파일 **/Zc:wchar_t-**합니다.  
+ To fix this error, change `unsigned short` to `wchar_t` or `WCHAR`, or compile LNK2019g.cpp by using **/Zc:wchar_t-**.  
   
-## <a name="additional-resources"></a>추가 리소스  
+## <a name="additional-resources"></a>Additional resources  
   
-LNK2001에 대 한 가능한 원인 및 해결 하는 방법에 대 한 자세한 내용은 스택 오버플로 질문을 참조 하십시오. [정의 되지 않은 참조/확인 되지 않은 외부 기호 오류가 란 무엇이 고 어떻게 해결 하나요?](http://stackoverflow.com/q/12573816/2002113)합니다.  
+For more information about possible causes and solutions for LNK2001, see the Stack Overflow question [What is an undefined reference/unresolved external symbol error and how do I fix it?](http://stackoverflow.com/q/12573816/2002113).  
 
 

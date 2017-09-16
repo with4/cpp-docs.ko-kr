@@ -1,33 +1,52 @@
 ---
-title: "클래스 그리기 및 인쇄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.drawing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "그리기, 클래스"
-  - "그래픽[C++], 그래픽 출력 클래스"
-  - "출력[C++], 그래픽 클래스"
-  - "인쇄 클래스"
+title: Drawing and Printing Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.drawing
+dev_langs:
+- C++
+helpviewer_keywords:
+- output [MFC], graphical classes
+- drawing [MFC], classes
+- printing classes [MFC]
+- graphics [MFC], graphical output classes
 ms.assetid: 2781c599-a038-462a-98ca-634b07ee22b0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 클래스 그리기 및 인쇄
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fe8c093655472cfd21b9c775a6fa37d1e39d6a8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-Windows에서 모든 그래픽은 출력 장치 컨텍스트 \(DC\) 라는 가상 그리기 영역에 그려집니다.  MFC는 비트 맵, 브러시, 팔레트, 그리고 펜으로 윈도우 그리기 도구뿐만 아니라 다양한 DC 형식을 캡슐화하는 클래스를 제공합니다.  
+---
+# <a name="drawing-and-printing-classes"></a>Drawing and Printing Classes
+In Windows, all graphical output is drawn on a virtual drawing area called a device context (DC). MFC provides classes to encapsulate the various types of DCs, as well as encapsulations for Windows drawing tools such as bitmaps, brushes, palettes, and pens.  
   
-## 참고 항목  
- [클래스 개요](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

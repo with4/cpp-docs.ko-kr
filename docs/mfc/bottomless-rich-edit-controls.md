@@ -1,37 +1,56 @@
 ---
-title: "바닥 없는 Rich Edit 컨트롤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "바닥 없는 rich edit 컨트롤"
-  - "CRichEditCtrl 클래스, 바닥 없음"
-  - "rich edit 컨트롤, 바닥 없음"
+title: Bottomless Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- bottomless rich edit controls
+- rich edit controls [MFC], bottomless
+- CRichEditCtrl class [MFC], bottomless
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 바닥 없는 Rich Edit 컨트롤
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8aa7de0cd6da9a8fafc28d68203eb61c65bab627
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-응용 프로그램은 rich edit 컨트롤\([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) 크기를 항상 같은 내용에 맞게 필요에 따라 조정할 수 있습니다.   Rich edit 컨트롤은 해당 내용의 크기가 변경될 때마다 부모 창에 [EN\_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983)을 보냄으로써 이러한 소위 "바닥 없음" 기능을 지원합니다.  
+---
+# <a name="bottomless-rich-edit-controls"></a>Bottomless Rich Edit Controls
+Your application can resize a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) as needed so that it is always the same size as its contents. A rich edit control supports this so-called "bottomless" functionality by sending its parent window an [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) notification message whenever the size of its contents changes.  
   
- **EN\_REQUESTRESIZE** 알림 메시지를 처리할 때, 응용 프로그램은 지정된 [REQRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787950) 구조에 컨트롤을 지정된 크기로 조정해야합니다.  응용 프로그램은 또한 높이 컨트롤의 변화를 수용하기 위해 컨트롤 근처의 모든 정보를 이동 할 수 있습니다.  컨트롤의 크기를 조정 하려면  `CWnd`  함수  [SetWindowPos](../Topic/CWnd::SetWindowPos.md)을 사용합니다.  
+ When processing the **EN_REQUESTRESIZE** notification message, an application should resize the control to the dimensions in the specified [REQRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787950) structure. An application might also move any information near the control to accommodate the control's change in height. To resize the control, you can use the `CWnd` function [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [RequestResize](../Topic/CRichEditCtrl::RequestResize.md) 멤버 함수를 사용하여   **EN\_REQUESTRESIZE** 알림 메시지를 보내기 위해 바닥 없음 rich edit 컨트롤을 할 수 있습니다.  이 메시지는 [OnSize](../Topic/CWnd::OnSize.md) 처리기에서 유용할 수 있습니다.  
+ You can force a bottomless rich edit control to send an **EN_REQUESTRESIZE** notification message by using the [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) member function. This message can be useful in the [OnSize](../mfc/reference/cwnd-class.md#onsize) handler.  
   
- **EN\_REQUESTRESIZE** 알림 메시지를 받으려면  `SetEventMask`  멤버 함수를 사용해 알림을 활성화해야 합니다.  
+ To receive **EN_REQUESTRESIZE** notification messages, you must enable the notification by using the `SetEventMask` member function.  
   
-## 참고 항목  
- [CRichEditCtrl 사용](../mfc/using-cricheditctrl.md)   
- [컨트롤](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

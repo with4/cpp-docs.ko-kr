@@ -1,5 +1,5 @@
 ---
-title: "lock_guard 클래스 | Microsoft 문서"
+title: lock_guard Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,48 +33,48 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 047c7ab9db009bceafe47bb0ae53b876adad81b5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 56bff026e272b14dd6b7a08d23f04f7997e2a570
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lockguard-class"></a>lock_guard 클래스
-소멸자가 `mutex`의 잠금을 해제하는 개체를 만들기 위해 인스턴스화할 수 있는 템플릿을 나타냅니다.  
+# <a name="lockguard-class"></a>lock_guard Class
+Represents a template that can be instantiated to create an object whose destructor unlocks a `mutex`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Mutex>
 class lock_guard;
 ```  
   
-## <a name="remarks"></a>설명  
- 템플릿 인수 `Mutex`는 *뮤텍스 형식*의 이름을 지정해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The template argument `Mutex` must name a *mutex type*.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-typedefs"></a>공용 Typedefs  
+### <a name="public-typedefs"></a>Public Typedefs  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`lock_guard::mutex_type`|템플릿 인수 `Mutex`에 대한 동의어입니다.|  
+|`lock_guard::mutex_type`|Synonym for the template argument `Mutex`.|  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[lock_guard](#lock_guard)|`lock_guard` 개체를 생성합니다.|  
-|[lock_guard::~lock_guard 소멸자](#dtorlock_guard_destructor)|생성자에 전달된 `mutex`를 잠금 해제합니다.|  
+|[lock_guard](#lock_guard)|Constructs a `lock_guard` object.|  
+|[lock_guard::~lock_guard Destructor](#dtorlock_guard_destructor)|Unlocks the `mutex` that was passed to the constructor.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<뮤텍스 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-##  <a name="lock_guard"></a>  lock_guard::lock_guard 생성자  
- `lock_guard` 개체를 생성합니다.  
+##  <a name="lock_guard"></a>  lock_guard::lock_guard Constructor  
+ Constructs a `lock_guard` object.  
   
 ```cpp  
 explicit lock_guard(mutex_type& Mtx);
@@ -82,27 +82,27 @@ explicit lock_guard(mutex_type& Mtx);
 lock_guard(mutex_type& Mtx, adopt_lock_t);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Mtx`  
- *뮤텍스 형식* 개체입니다.  
+ A *mutex type* object.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 `lock_guard` 형식의 개체를 생성하고 `Mtx`를 잠급니다. `Mtx`가 재귀 뮤텍스가 아니면 이 생성자를 호출할 때 잠금이 해제되어 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an object of type `lock_guard` and locks `Mtx`. If `Mtx` is not a recursive mutex, it must be unlocked when this constructor is called.  
   
- 두 번째 생성자는 `Mtx`를 잠그지 않습니다. 이 생성자를 호출할 때 `Mtx`가 잠겨 있어야 합니다. 생성자는 예외를 throw하지 않습니다.  
+ The second constructor does not lock `Mtx`. `Mtx` must be locked when this constructor is called. The constructor throws no exceptions.  
   
-##  <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard 소멸자  
- 생성자에 전달된 `mutex`를 잠금 해제합니다.  
+##  <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard Destructor  
+ Unlocks the `mutex` that was passed to the constructor.  
   
 ```
 ~lock_guard() noexcept;
 ```  
   
-### <a name="remarks"></a>설명  
- 소멸자가 실행될 때 `mutex`가 없으면 동작이 정의되지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ If the `mutex` does not exist when the destructor runs, the behavior is undefined.  
   
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

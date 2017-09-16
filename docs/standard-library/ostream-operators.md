@@ -1,31 +1,34 @@
 ---
-title: "&lt;ostream&gt; 연산자 | Microsoft Docs"
+title: '&lt;ostream&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- ostream/std::operator&lt;&lt;
+dev_langs:
+- C++
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 097b3ec2a7b097eb2137e1fd5fe59eabc0da537f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8f133af1d58a083492aa0631f51721a94a6d612f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 연산자
+# <a name="ltostreamgt-operators"></a>&lt;ostream&gt; operators
 ||  
 |-|  
 |[operator&lt;&lt;](#op_lt_lt)|  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- 스트림에 다양한 형식을 씁니다.  
+ Writes various types to the stream.  
   
 ```
 template <class _Elem, class _Tr>
@@ -84,32 +87,32 @@ basic_ostream <_Elem, _Tr>& operator<<(
     Ty val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- 단일 문자입니다.  
+ A character.  
   
  `_Elem`  
- 요소 형식입니다.  
+ The element type.  
   
  `_Ostr`  
- `basic_ostream` 개체입니다.  
+ A `basic_ostream` object.  
   
  `str`  
- 문자열입니다.  
+ A character string.  
   
  `_Tr`  
- 문자 특성입니다.  
+ Character traits.  
   
  `val`  
- 형식입니다.  
+ The type  
   
-### <a name="return-value"></a>반환 값  
- 스트림입니다.  
+### <a name="return-value"></a>Return Value  
+ The stream.  
   
-### <a name="remarks"></a>설명  
- `basic_ostream` 클래스도 여러 가지 삽입 연산자를 정의합니다. 자세한 내용은 [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ The `basic_ostream` class also defines several insertion operators. For more information, see [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).  
   
- 다음 템플릿 함수는  
+ The template function  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -118,9 +121,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- `str`에서 시작되는 시퀀스의 길이 N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`)를 결정하고 시퀀스를 삽입합니다. N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)인 경우 함수는 `_Ostr.``width` - N 채우기 문자의 반복도 삽입합니다. ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)인 경우 반복은 시퀀스 앞에 옵니다. 그렇지 않은 경우에는 반복이 시퀀스 뒤에 옵니다. 함수에서 `_Ostr`을 반환합니다.  
+ determines the length N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`) of the sequence beginning at `str`, and inserts the sequence. If N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), then the function also inserts a repetition of `_Ostr.width` - N fill characters. The repetition precedes the sequence if ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Otherwise, the repetition follows the sequence. The function returns `_Ostr`.  
   
- 다음 템플릿 함수는  
+ The template function  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -129,9 +132,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```  
   
- `_Ch` 요소를 삽입합니다. 1 < `_Ostr.width`인 경우 함수는 `_Ostr.width` - 1 채우기 문자의 반복도 삽입합니다. `_Ostr.flags & adjustfield != left`인 경우 반복은 시퀀스 앞에 옵니다. 그렇지 않은 경우에는 반복이 시퀀스 뒤에 옵니다. `_Ostr`를 반환합니다.  
+ inserts the element `_Ch`. If 1 < `_Ostr.width`, then the function also inserts a repetition of `_Ostr.width` - 1 fill characters. The repetition precedes the sequence if `_Ostr.flags & adjustfield != left`. Otherwise, the repetition follows the sequence. It returns `_Ostr`.  
   
- 다음 템플릿 함수는  
+ The template function  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -140,7 +143,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const char *str);
 ```  
   
- 다음 코드와 동일하게 동작합니다.  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -149,9 +152,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- 단, `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`))을 호출하여 `str`에서 시작되는 시퀀스의 각 `_Ch` 요소를 `Elem` 형식의 개체로 변환합니다.  
+ except that each element `_Ch` of the sequence beginning at `str` is converted to an object of type `Elem` by calling `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)).  
   
- 다음 템플릿 함수는  
+ The template function  
   
 ```cpp
 template <class _Elem, class _Tr>
@@ -160,7 +163,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     char _Ch);
 ```  
   
- 다음 코드와 동일하게 동작합니다.  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -169,9 +172,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```  
   
- 단, `_Ostr.put`( `_Ostr.widen`( `_Ch`))를 호출하여 `_Ch`를 `Elem` 형식의 개체로 변환합니다.  
+ except that `_Ch` is converted to an object of type `Elem` by calling `_Ostr.put`( `_Ostr.widen`( `_Ch`)).  
   
- 다음 템플릿 함수는  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -180,7 +183,7 @@ basic_ostream<char, _Tr>& operator<<(
     const char *str);
 ```  
   
- 다음 코드와 동일하게 동작합니다.  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -189,9 +192,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- 요소를 삽입하기 전에 확장할 필요가 없습니다.  
+ (It does not have to widen the elements before inserting them.)  
   
- 다음 템플릿 함수는  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -200,7 +203,7 @@ basic_ostream<char, Tr>& operator<<(
     char _Ch);
 ```  
   
- 다음 코드와 동일하게 동작합니다.  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -209,9 +212,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```  
   
- `_Ch`를 삽입하기 전에 확장할 필요가 없습니다.  
+ (It does not have to widen `_Ch` before inserting it.)  
   
- 다음 템플릿 함수는  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -220,9 +223,9 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```  
   
- `_Ostr` << ( `const char *`) `str`을 반환합니다.  
+ returns `_Ostr` << ( `const char *`) `str`.  
   
- 다음 템플릿 함수는  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -231,9 +234,9 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```  
   
- `_Ostr` << ( `char`) `_Ch`를 반환합니다.  
+ returns `_Ostr` << ( `char`) `_Ch`.  
   
- 다음 템플릿 함수는  
+ The template function:  
   
 ```cpp  
 template <class _Tr>
@@ -242,9 +245,9 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```  
   
- `_Ostr` << ( `const char *`) `str`를 반환합니다.  
+ returns `_Ostr` << ( `const char *`) `str`.  
   
- 다음 템플릿 함수는  
+ The template function:  
   
 ```cpp  
 template <class _Tr>
@@ -253,9 +256,9 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```  
   
- `_Ostr` << ( `char`) `_Ch`를 반환합니다.  
+ returns `_Ostr` << ( `char`) `_Ch`.  
   
- 다음 템플릿 함수는  
+ The template function:  
   
 ```cpp  
 template <class _Elem, class _Tr, class T>
@@ -264,12 +267,12 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```  
   
- `_Ostr` `<<` `val`을 반환하고 [RValue 참조](../cpp/rvalue-reference-declarator-amp-amp.md)를 `_Ostr`(프로세스의 lvalue)로 변환합니다.  
+ returns `_Ostr` `<<` `val` (and converts a [RValue Reference](../cpp/rvalue-reference-declarator-amp-amp.md) to `_Ostr` to an lvalue in the process).  
   
-### <a name="example"></a>예제  
-  `operator<<`를 사용하는 방법의 예제를 보려면 [flush](../standard-library/ostream-functions.md#flush)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [flush](../standard-library/ostream-functions.md#flush) for an example using `operator<<`.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<ostream>](../standard-library/ostream.md)
 
 

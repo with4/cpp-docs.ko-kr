@@ -1,35 +1,54 @@
 ---
-title: "TN032: MFC 예외 메커니즘 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.exceptions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CException 클래스, using"
-  - "MFC, 예외"
-  - "TN032"
+title: 'TN032: MFC Exception Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.exceptions
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN032
+- MFC, exceptions
+- CException class [MFC], using
 ms.assetid: 0271f0aa-82cb-47a2-b7ea-e88126fc7e43
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN032: MFC 예외 메커니즘
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 86c149585d9ea7905ace80f7a6aad51eab5dc6dc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-이전 버전의 Visual C\+\+ 표준 c \+ \+ 예외 메커니즘을 지원 하지 않는 MFC 매크로 제공 하 고  **TRY\/CATCH\/THROW** 대신 사용합니다.  이 버전의 Visual C\+\+ c \+ \+ 예외를 완벽 하 게 지원 합니다.  이 노트 이전 매크로의 고급 구현 자세히 다룬 스택 기반 객체 자동 정리 하는 방법을 포함합니다.  C \+ \+ 예외 스택 기본적으로 해제를 지원 하기 때문에 기술 정보를 더 이상 필요 없습니다.  
+---
+# <a name="tn032-mfc-exception-mechanism"></a>TN032: MFC Exception Mechanism
+Previous versions of Visual C++ did not support the standard C++ exception mechanism, and MFC provided macros **TRY/CATCH/THROW** that were used instead. This version of Visual C++ fully supports C++ exceptions. This note covered some of the advanced implementation details of the previous macros including how to automatically cleanup stack based objects. Because C++ exceptions support stack unwinding by default, this technical note is no longer necessary.  
   
- 참조  [예외:를 사용 하 여 MFC 매크로 c \+ \+ 예외](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) 새 c \+ \+ 키워드와 MFC 매크로 차이점에 대 한 자세한 내용은.다음을 참조하세요.  
+ Refer to [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) for more information on the differences between the MFC macros and the new C++ keywords.  
   
-## 참고 항목  
- [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   
- [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

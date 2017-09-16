@@ -1,30 +1,45 @@
 ---
-title: "&lt;list&gt; 연산자 | Microsoft 문서"
+title: '&lt;list&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- list/std::operator!=
+- list/std::operator&gt;
+- list/std::operator&gt;=
+- list/std::operator&lt;
+- list/std::operator&lt;=
+- list/std::operator==
+dev_langs:
+- C++
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5713a02d534f8e4e2245ba3d181d78c529adbe79
+helpviewer_keywords:
+- std::operator!= (list)
+- std::operator&gt; (list)
+- std::operator&gt;= (list)
+- std::operator&lt; (list)
+- std::operator&lt;= (list)
+- std::operator== (list)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 575dcc65565bf004da19238b743f1802e023668c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltlistgt-operators"></a>&lt;list&gt; 연산자
+# <a name="ltlistgt-operators"></a>&lt;list&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체와 같지 않은지 테스트합니다.  
+ Tests if the list object on the left side of the operator is not equal to the list object on the right side.  
   
 ```
 bool operator!=(
@@ -32,20 +47,20 @@ bool operator!=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
  `right`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>반환 값  
- 목록이 같지 않으면 **true**이고 목록이 같으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the lists are not equal; **false** if the lists are equal.  
   
-### <a name="remarks"></a>설명  
- 목록 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 목록은 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. Two lists are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_ne.cpp  
@@ -71,7 +86,7 @@ Lists not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체보다 작은지 테스트합니다.  
+ Tests if the list object on the left side of the operator is less than the list object on the right side.  
   
 ```
 bool operator<(
@@ -79,20 +94,20 @@ bool operator<(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
  `right`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 목록이 연산자 우변의 목록보다 작지만 같지 않으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is less than but not equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 목록 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 작음 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_lt.cpp  
@@ -122,7 +137,7 @@ List c1 is less than list c2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체보다 작거나 같은지 테스트합니다.  
+ Tests if the list object on the left side of the operator is less than or equal to the list object on the right side.  
   
 ```
 bool operator<=(
@@ -130,20 +145,20 @@ bool operator<=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
  `right`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 목록이 연산자 우변의 목록보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is less than or equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 목록 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 작거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_le.cpp  
@@ -173,7 +188,7 @@ List c1 is less than or equal to list c2.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체와 같은지 테스트합니다.  
+ Tests if the list object on the left side of the operator is equal to the list object on the right side.  
   
 ```
 bool operator==(
@@ -181,20 +196,20 @@ bool operator==(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
  `right`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 목록이 연산자 우변의 목록과 같으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 목록 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 목록은 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. Two lists are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_eq.cpp  
@@ -220,7 +235,7 @@ The lists are equal.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체보다 큰지 테스트합니다.  
+ Tests if the list object on the left side of the operator is greater than the list object on the right side.  
   
 ```
 bool operator>(
@@ -228,20 +243,20 @@ bool operator>(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
  `right`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 목록이 연산자 우변의 목록보다 크면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is greater than the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 목록 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 큼 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_gt.cpp  
@@ -271,7 +286,7 @@ List c1 is greater than list c2.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 연산자의 좌변에 있는 목록 개체가 우변에 있는 목록 개체보다 크거나 같은지 테스트합니다.  
+ Tests if the list object on the left side of the operator is greater than or equal to the list object on the right side.  
   
 ```
 bool operator>=(
@@ -279,20 +294,20 @@ bool operator>=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
  `right`  
- **list** 형식의 개체입니다.  
+ An object of type **list**.  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 목록이 연산자 우변의 목록보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is greater than or equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 목록 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 크거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_ge.cpp  
@@ -322,7 +337,7 @@ List c1 is greater than or equal to list c2.
 *\  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<list>](../standard-library/list.md)
 
 

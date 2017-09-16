@@ -1,5 +1,5 @@
 ---
-title: "is_member_pointer 클래스 | Microsoft 문서"
+title: is_member_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_member_pointer
 - type_traits/std::is_member_pointer
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 3f6040bd57b98bb79c2e041a8f6f1ce39b90f7eb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8f0f45b05e550bf0a44e915871f3d6b7453520df
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ismemberpointer-class"></a>is_member_pointer 클래스
-형식이 멤버에 대한 포인터인지 여부를 테스트합니다.  
+# <a name="ismemberpointer-class"></a>is_member_pointer Class
+Tests if type is a pointer to member.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_member_pointer;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
-## <a name="remarks"></a>설명  
- 형식 조건자의 인스턴스는 `Ty` 형식이 멤버 함수에 대한 포인터, 멤버 개체에 대한 포인터 또는 이들 중 하나의 `cv-qualified` 형식인 경우 true이고, 그렇지 않으면 false입니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a pointer to member function or a pointer to member object, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_member_pointer.cpp   
@@ -103,14 +102,14 @@ is_member_pointer<int trivial::*> == true
 is_member_pointer<int (functional::*)()> == true  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_member_function_pointer 클래스](../standard-library/is-member-function-pointer-class.md)   
- [is_member_object_pointer 클래스](../standard-library/is-member-object-pointer-class.md)   
- [is_pointer 클래스](../standard-library/is-pointer-class.md)
+ [is_member_function_pointer Class](../standard-library/is-member-function-pointer-class.md)   
+ [is_member_object_pointer Class](../standard-library/is-member-object-pointer-class.md)   
+ [is_pointer Class](../standard-library/is-pointer-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CODBCFieldInfo 구조체 | Microsoft 문서"
+title: CODBCFieldInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ODBC, data source information
-- CODBCFieldInfo structure
+- ODBC [MFC], data source information
+- CODBCFieldInfo structure [MFC]
 ms.assetid: 92598b4f-facc-4108-b282-63a179ff79ab
 caps.latest.revision: 12
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1080eb323c599014d84acab94aee4622795fdb96
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 73fa2ac08d93fd9b9c9324cd1cb9ae57c4d62456
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 구조체
-`CODBCFieldInfo` 구조는 ODBC 데이터 원본에 있는 필드에 대 한 정보를 포함 합니다.  
+# <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo Structure
+The `CODBCFieldInfo` structure contains information about the fields in an ODBC data source.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CODBCFieldInfo  
@@ -57,30 +57,30 @@ struct CODBCFieldInfo
 };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- @FSHO2@필드의 이름입니다.  
+ The name of the field.  
   
  *m_nSQLType*  
- SQL 데이터 형식 필드입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식과 수 있습니다. "SQL 데이터 형식" 목록이 유효한 ODBC SQL 데이터 형식에 대 한 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.  
+ The SQL data type of the field. This can be an ODBC SQL data type or a driver-specific SQL data type. For a list of valid ODBC SQL data types, see "SQL Data Types" in the Windows SDK. For information about driver-specific SQL data types, see the driver's documentation.  
   
  *m_nPrecision*  
- 필드의 최대 전체 자릿수입니다. 자세한 내용은 다음을 참조 하십시오 "정밀도, 배율, 길이 및 표시 크기"에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ The maximum precision of the field. For details, see "Precision, Scale, Length, and Display Size" in the Windows SDK.  
   
  *m_nScale*  
- 필드의 소수 자릿수입니다. 자세한 내용은 다음을 참조 하십시오 "정밀도, 배율, 길이 및 표시 크기"에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ The scale of the field. For details, see "Precision, Scale, Length, and Display Size" in the Windows SDK.  
   
  *m_nNullability*  
- 필드에 Null 값을 수락할지 여부. 두 값 중 하나일 수 있습니다이: **SQL_NULLABLE** 필드는 Null 값을 허용 하는 경우 또는 **SQL_NO_NULLS** 필드는 Null 값을 허용 하지 않는 경우.  
+ Whether the field accepts a Null value. This can be one of two values: **SQL_NULLABLE** if the field accepts Null values, or **SQL_NO_NULLS** if the field does not accept Null values.  
   
-## <a name="remarks"></a>주의  
- 이 정보를 검색 하려면 호출 [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)합니다.  
+## <a name="remarks"></a>Remarks  
+ To retrieve this information, call [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdb.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
-## <a name="see-also"></a>참고 항목  
- [구조, 스타일, 콜백 및 메시지 맵](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)   
  [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
 

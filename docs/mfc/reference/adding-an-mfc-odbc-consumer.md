@@ -1,40 +1,59 @@
 ---
-title: "MFC ODBC 소비자 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ODBC 소비자"
+title: Adding an MFC ODBC Consumer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ODBC consumers
 ms.assetid: 2dc97909-1f7e-43ee-9d47-99e612727058
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# MFC ODBC 소비자 추가
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e345261ba9cde7e7d97c3741de0e34fd7fd2db8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-MFC ODBC 소비자는 데이터 소스에 액세스하는 데 필요한 ODBC 레코드 집합과 데이터 바인딩으로 구성됩니다.  
+---
+# <a name="adding-an-mfc-odbc-consumer"></a>Adding an MFC ODBC Consumer
+An MFC ODBC consumer consists of an ODBC recordset class and data bindings necessary to access a data source.  
   
-### MFC ODBC 소비자를 추가하려면  
+### <a name="to-add-an-mfc-odbc-consumer"></a>To add an MFC ODBC consumer  
   
-1.  클래스 뷰에서 프로젝트를 마우스 오른쪽 단추로 클릭합니다.  바로 가기 메뉴에서 **추가**를 클릭한 다음 **클래스 추가**를 클릭합니다.  
+1.  In Class View, right-click the project. On the shortcut menu, click **Add** and then click **Add Class**.  
   
-2.  Visual C\+\+ 폴더에서 **MFC ODBC 소비자** 아이콘을 두 번 클릭하거나 아이콘을 선택한 다음 **열기**를 클릭합니다.  
+2.  In the Visual C++ folder, double-click the **MFC ODBC Consumer** icon or select it and click **Open**.  
   
-     MFC ODBC 소비자 마법사가 열립니다.  
+     The MFC ODBC Consumer Wizard opens.  
   
-3.  [MFC ODBC 소비자 마법사](../../mfc/reference/mfc-odbc-consumer-wizard.md)에서 설명한 대로 설정을 정의합니다.  
+3.  Define settings as described in [MFC ODBC Consumer Wizard](../../mfc/reference/mfc-odbc-consumer-wizard.md).  
   
-4.  **마침**을 클릭하여 마법사를 닫습니다. 그러면 새로 만든 ODBC 소비자 코드가 프로젝트에 삽입됩니다.  
+4.  Click **Finish** to close the wizard, which will insert the newly created ODBC consumer code in your project.  
   
-## 참고 항목  
- [코드 마법사로 기능 추가](../../ide/adding-functionality-with-code-wizards-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+

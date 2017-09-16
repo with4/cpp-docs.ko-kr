@@ -1,42 +1,59 @@
 ---
-title: "예외: OLE 예외 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "예외 처리, OLE"
-  - "예외, OLE"
-  - "OLE 예외"
-  - "OLE 예외, 처리 클래스"
-  - "OLE, 예외"
+title: 'Exceptions: OLE Exceptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE, exceptions
+- OLE exceptions [MFC]
+- exceptions [MFC], OLE
+- exception handling [MFC], OLE
+- OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 예외: OLE 예외
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77b7c16ab3cb1ebad70e6a65980d3c5fd818a3c4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-The techniques and facilities for handling exceptions in OLE are the same as those for handling other exceptions.  For further information on exception handling, see the article [C\+\+ 예외 처리](../cpp/cpp-exception-handling.md).  
+---
+# <a name="exceptions-ole-exceptions"></a>Exceptions: OLE Exceptions
+The techniques and facilities for handling exceptions in OLE are the same as those for handling other exceptions. For further information on exception handling, see the article [C++ Exception Handling](../cpp/cpp-exception-handling.md).  
   
- All exception objects are derived from the abstract base class `CException`.  MFC provides two classes for handling OLE exceptions:  
+ All exception objects are derived from the abstract base class `CException`. MFC provides two classes for handling OLE exceptions:  
   
 -   [COleException](../mfc/reference/coleexception-class.md) For handling general OLE exceptions.  
   
--   [COleDispatchException](../mfc/reference/coledispatchexception-class.md) For generating and handling OLE dispatch \(automation\) exceptions.  
+-   [COleDispatchException](../mfc/reference/coledispatchexception-class.md) For generating and handling OLE dispatch (automation) exceptions.  
   
- The difference between these two classes is the amount of information they provide and where they are used.  `COleException` has a public data member that contains the OLE status code for the exception.  `COleDispatchException` supplies more information, including the following:  
+ The difference between these two classes is the amount of information they provide and where they are used. `COleException` has a public data member that contains the OLE status code for the exception. `COleDispatchException` supplies more information, including the following:  
   
--   An application\-specific error code  
+-   An application-specific error code  
   
 -   An error description, such as "Disk full"  
   
@@ -46,9 +63,11 @@ The techniques and facilities for handling exceptions in OLE are the same as tho
   
 -   The name of the application that generated the exception  
   
- `COleDispatchException` provides more information so that it can be used with products like Microsoft Visual Basic.  The verbal error description can be used in a message box or other notification; the Help information can be used to help the user respond to the conditions that caused the exception.  
+ `COleDispatchException` provides more information so that it can be used with products like Microsoft Visual Basic. The verbal error description can be used in a message box or other notification; the Help information can be used to help the user respond to the conditions that caused the exception.  
   
- Two global functions correspond to the two OLE exception classes: [AfxThrowOleException](../Topic/AfxThrowOleException.md) and [AfxThrowOleDispatchException](../Topic/AfxThrowOleDispatchException.md).  Use them to throw general OLE exceptions and OLE dispatch exceptions, respectively.  
+ Two global functions correspond to the two OLE exception classes: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) and [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Use them to throw general OLE exceptions and OLE dispatch exceptions, respectively.  
   
-## 참고 항목  
- [예외 처리](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

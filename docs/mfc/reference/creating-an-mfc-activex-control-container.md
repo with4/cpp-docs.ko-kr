@@ -1,47 +1,66 @@
 ---
-title: "MFC ActiveX 컨트롤 컨테이너 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.activex.container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 컨트롤 컨테이너[C++], 만들기"
-  - "컨테이너[C++], 만들기"
-  - "MFC ActiveX 컨트롤[C++], 컨테이너"
-  - "OLE 컨트롤[C++], 컨테이너"
+title: Creating an MFC ActiveX Control Container | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.activex.container
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], containers
+- ActiveX control containers [MFC], creating
+- containers [MFC], creating
+- OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# MFC ActiveX 컨트롤 컨테이너 만들기
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9bfc976963c759b540fc104fbddceebcc8747375
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-ActiveX 컨트롤 컨테이너는 ActiveX\(이전의OLE\) 컨트롤이 실행되는 환경을 제공하는 상위 프로그램입니다.  ActiveX 컨트롤을 포함할 수 있는 응용 프로그램을 만들 때는 MFC를 사용할 수도 있고 사용하지 않을 수도 있습니다. 그러나 MFC를 사용하여 만드는 것이 훨씬 쉽습니다.  
+---
+# <a name="creating-an-mfc-activex-control-container"></a>Creating an MFC ActiveX Control Container
+An ActiveX control container is a parent program that supplies the environment for an ActiveX (formerly OLE) control to run. You can create an application capable of containing ActiveX controls with or without MFC, but it is much easier to do with MFC.  
   
- [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)를 사용하여 MFC 컨테이너 프로그램을 만들면 MFC와 ActiveX 클래스에서 구현된 자동화 및 ActiveX 컨트롤의 다양한 기능에 액세스할 수 있습니다.  이 기능에는 비주얼 편집, 자동화, 복합 파일 만들기, 컨트롤 지원 등이 포함됩니다.  상위 프로그램에서 지원할 MFC 응용 프로그램 마법사의 비주얼 편집 옵션에는 컨테이너, 미니 서버, 풀 서버 및 컨테이너와 서버가 모두 있는 프로그램 만들기가 포함됩니다.  
+ Creating an MFC container program using the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md) allows you to access the many features of ActiveX controls and Automation that are implemented by the MFC and ActiveX classes. These features include visual editing, Automation, creating compound files, and support for controls. The MFC Application Wizard visual editing options that your parent program will support include creating a container, a mini-server, a full-server, and a program that is both a container and a server.  
   
--   **새로운 MFC 응용 프로그램**.  자동화, 비주얼 편집, 복합 파일 또는 컨트롤 지원을 포함하는 새로운 MFC 프로그램을 만들려면 MFC 응용 프로그램 마법사를 사용하고 적절한 자동화 옵션을 선택합니다.  
+-   **New MFC Application**. To create a new MFC program that includes Automation, visual editing, compound files, or control support, use the MFC Application Wizard and choose the appropriate Automation options.  
   
--   **기존 MFC 응용 프로그램**.  기존 MFC 응용 프로그램에 컨트롤 포함을 추가하려면 [OLE 컨트롤 컨테이너: OLE 컨트롤 포함 기능 직접 활성화](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)를 참조하십시오.  
+-   **Existing MFC Application**. If you are adding control containment to an existing MFC application, see [OLE Control Containers: Manually Enabling OLE Control Containment](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).  
   
-### 다음과 같은 유형의 응용 프로그램에 대해 ActiveX 컨테이너를 만들려면  
+### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>To create an ActiveX container for any of the following types of applications  
   
-1.  [컨테이너](../../mfc/containers.md)  
+1.  [Containers](../../mfc/containers.md)  
   
-2.  [비주얼 편집](../../mfc/ole-mfc.md)  
+2.  [Visual editing](../../mfc/ole-mfc.md)  
   
-3.  [MFC ActiveX 컨트롤](../../mfc/mfc-activex-controls.md)  
+3.  [MFC ActiveX controls](../../mfc/mfc-activex-controls.md)  
   
-## 참고 항목  
- [Visual C\+\+ 프로젝트 형식](../../ide/visual-cpp-project-types.md)
+## <a name="see-also"></a>See Also  
+ [Visual C++ Project Types](../../ide/visual-cpp-project-types.md)
+
+

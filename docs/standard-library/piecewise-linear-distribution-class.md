@@ -1,5 +1,5 @@
 ---
-title: "piecewise_linear_distribution 클래스 | Microsoft Docs"
+title: piecewise_linear_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- piecewise_linear_distribution
 - random/std::piecewise_linear_distribution
 - random/std::piecewise_linear_distribution::reset
 - random/std::piecewise_linear_distribution::intervals
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- piecewise_linear_distribution class
+- std::piecewise_linear_distribution [C++]
+- std::piecewise_linear_distribution [C++], reset
+- std::piecewise_linear_distribution [C++], intervals
+- std::piecewise_linear_distribution [C++], densities
+- std::piecewise_linear_distribution [C++], param
+- std::piecewise_linear_distribution [C++], min
+- std::piecewise_linear_distribution [C++], max
+- std::piecewise_linear_distribution [C++], param_type
+- std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
 caps.latest.revision: 21
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4c98be8541c04dd9819fd459fad4cfdf25951a0c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1f704513f6b0016ee460a6415b6beb3c397830bd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution 클래스
-각 간격의 확률이 선형적으로 다양하고 폭이 다양한 간격이 있는 부분 선형 분포를 생성합니다.  
+# <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution Class
+Generates a piecewise linear distribution that has varying-width intervals with linearly varying probability in each interval.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class piecewise_linear_distribution  
@@ -96,35 +103,35 @@ public:
    result_type max() const;
    };  
 ```  
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `RealType`  
- 부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ The floating point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>설명  
- 이 표본 분포에는 각 간격의 확률이 선형적으로 다양하고 폭이 다양한 간격이 있습니다. 표본 분포에 대한 자세한 내용은 [piecewise_linear_distribution](../standard-library/piecewise-constant-distribution-class.md) 및 [discrete_distribution](../standard-library/discrete-distribution-class.md)을 참조하세요.  
+## <a name="remarks"></a>Remarks  
+ This sampling distribution has varying-width intervals with linearly varying probability in each interval. For information about other sampling distributions, see [piecewise_linear_distribution](../standard-library/piecewise-constant-distribution-class.md) and [discrete_distribution](../standard-library/discrete-distribution-class.md).  
   
- 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
+ The following table links to articles about individual members:  
   
 ||||  
 |-|-|-|  
 |[piecewise_linear_distribution](#piecewise_linear_distribution)|`piecewise_linear_distribution::intervals`|`piecewise_linear_distribution::param`|  
 |`piecewise_linear_distribution::operator()`|`piecewise_linear_distribution::densities`|[param_type](#param_type)|  
   
-속성 함수 `intervals()`는 저장된 분포 간격 집합과 함께 `vector<result_type>`을 반환합니다.  
+The property function `intervals()` returns a `vector<result_type>` with the set of stored intervals of the distribution.  
   
-속성 함수 `densities()`는 각 간격 집합에 대해 저장된 밀도와 함께 `vector<result_type>`을 반환합니다. 이러한 밀도는 생성자 매개 변수에서 제공하는 가중치에 따라 계산됩니다.  
+The property function `densities()` returns a `vector<result_type>` with the stored densities for each interval set, which are calculated according to the weights provided in the constructor parameters.  
   
-속성 구성원 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -229,13 +236,13 @@ Distribution for 100 samples:
    14-15 :::::  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="piecewise_linear_distribution"></a>  piecewise_linear_distribution::piecewise_linear_distribution  
- 분포를 생성합니다.  
+ Constructs the distribution.  
   
 ```  
  
@@ -266,38 +273,38 @@ piecewise_linear_distribution(size_t count, RealType xmin, RealType xmax, UnaryO
 explicit piecewise_linear_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 *firstI*  
-대상 범위에 있는 첫 번째 요소의 입력 반복기입니다.  
+An input iterator of the first element in the distribution range.  
   
 *lastI*  
-대상 범위에 있는 마지막 요소의 입력 반복기입니다.  
+An input iterator of the last element in the distribution range.  
   
 *firstW*  
-가중치 범위에 있는 첫 번째 요소의 입력 반복기입니다.  
+An input iterator of the first element in the weights range.  
   
 *intervals*  
-분포의 간격이 있는 [initializer_list](../cpp/initializers.md)입니다.  
+An [initializer_list](../cpp/initializers.md) with the intervals of the distribution.  
   
 *count*  
-분포 범위의 요소 수입니다.  
+The number of elements in the distribution range.  
   
 *xmin*  
-분포 범위의 가장 작은 값입니다.  
+The lowest value in the distribution range.  
   
 *xmax*  
-분포 범위의 가장 큰 값입니다. *xmin*보다 커야 합니다.  
+The highest value in the distribution range. Must be greater than *xmin*.  
   
 *weightfunc*  
-분포의 확률 함수를 나타내는 개체입니다. 매개 변수와 반환 값은 둘 다 `double`로 변환할 수 있어야 합니다.  
+The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *parm*  
-분포를 생성하는 데 사용되는 매개 변수 구조입니다.  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>설명  
-기본 생성자는 저장된 매개 변수를 설정합니다. 따라서 확률 밀도가 1인 0~1 간격이 하나 있습니다.  
+### <a name="remarks"></a>Remarks  
+The default constructor sets the stored parameters such that there is one interval, 0 to 1, with a probability density of 1.  
   
-반복기 범위 생성자  
+The iterator range constructor  
   
 ```  
 template <class InputIteratorI, class InputIteratorW>  
@@ -307,9 +314,9 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```  
   
-시퀀스 [ `firstI`, `lastI`)에 대한 반복기의 간격과 `firstW`에서 시작하는 일치하는 가중치 시퀀스를 사용하여 분포 개체를 생성합니다.  
+constructs a distribution object with itnervals from iterators over the sequence [ `firstI`, `lastI`) and a matching weight sequence starting at `firstW`.  
   
-다음 이니셜라이저 목록 생성자는  
+The initializer list constructor  
   
 ```  
 template <class UnaryOperation>  
@@ -318,9 +325,9 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```  
   
-이니셜라이저 목록 `intervals`의 간격과 함수 `weightfunc`에서 생성된 가중치를 사용하여 분포 개체를 생성합니다.  
+constructs a distribution object with intervals from the intializer list `intervals` and weights generated from the function `weightfunc`.  
   
-다음과 같이 정의된 생성자는  
+The constructor defined as  
   
 ```  
 template <class UnaryOperation>  
@@ -331,16 +338,16 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```  
   
-[ `xmin,xmax`]에 대해 균등하게 배포된 `count`개 간격을 사용하여 분포 개체를 생성하여 함수 `weightfunc`에 따라 각 간격 가중치를 할당하고 `weightfunc`는 매개 변수 하나를 수락해야 하고 반환 값이 있어야 합니다. 이 두 값은 모두 `double`로 변환할 수 있습니다. **사전 조건:**`xmin < xmax`.  
+constructs a distribution object with `count` intervals distributed uniformly over [ `xmin,xmax`], assigning each interval weights according to the function `weightfunc`, and `weightfunc` must accept one parameter and have a return value, both of which are convertible to `double`. **Precondition:**`xmin < xmax`.  
   
-다음과 같이 정의된 생성자는  
+The constructor defined as  
 ```  
 explicit piecewise_linear_distribution(const param_type& parm);
 ```  
-`parm`을 사용하여 생성 개체를 저장된 매개 변수 구조로 생성합니다.  
+constructs a distribution object using `parm` as the stored parameter structure.  
   
 ##  <a name="param_type"></a>  piecewise_linear_distribution::param_type  
-분포의 모든 매개 변수를 저장합니다.  
+Stores all the parameters of the distribution.  
   
 ```  
 struct param_type {  
@@ -360,15 +367,15 @@ struct param_type {
    };  
 ```  
 
-### <a name="parameters"></a>매개 변수  
-[piecewise_linear_distribution](#piecewise_linear_distribution)에 대한 생성자 매개 변수를 참조하세요.  
+### <a name="parameters"></a>Parameters  
+See constructor parameters for [piecewise_linear_distribution](#piecewise_linear_distribution).  
   
-### <a name="remarks"></a>설명  
- **사전 조건:** `xmin < xmax`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `xmin < xmax`  
   
-이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

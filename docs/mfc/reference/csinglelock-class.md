@@ -1,5 +1,5 @@
 ---
-title: "경우 CSingleLock 클래스 | Microsoft 문서"
+title: CSingleLock Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,10 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSingleLock class
-- threading [MFC], access control
-- synchronization objects, access control
-- threading [MFC], synchronization
+- CSingleLock [MFC], CSingleLock
+- CSingleLock [MFC], IsLocked
+- CSingleLock [MFC], Lock
+- CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
 caps.latest.revision: 20
 author: mikeblome
@@ -41,55 +41,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b1efc2daf1c3714446223cc69f9cc2a6a3401173
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e71c3ef486fdff44525fc178666107b4a2963fff
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csinglelock-class"></a>경우 CSingleLock 클래스
-다중 스레드 프로그램에서 한 리소스에 대한 액세스를 제어할 때 사용하는 액세스 제어 메커니즘을 나타냅니다.  
+# <a name="csinglelock-class"></a>CSingleLock Class
+Represents the access-control mechanism used in controlling access to a resource in a multithreaded program.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSingleLock  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSingleLock::CSingleLock](#csinglelock)|`CSingleLock` 개체를 생성합니다.|  
+|[CSingleLock::CSingleLock](#csinglelock)|Constructs a `CSingleLock` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSingleLock::IsLocked](#islocked)|개체가 잠겨 있는지 확인 합니다.|  
-|[CSingleLock::Lock](#lock)|동기화 개체를 대기합니다.|  
-|[CSingleLock::Unlock](#unlock)|동기화 개체를 해제합니다.|  
+|[CSingleLock::IsLocked](#islocked)|Determines if the object is locked.|  
+|[CSingleLock::Lock](#lock)|Waits on a synchronization object.|  
+|[CSingleLock::Unlock](#unlock)|Releases a synchronization object.|  
   
-## <a name="remarks"></a>주의  
- `CSingleLock`기본 클래스는 없습니다.  
+## <a name="remarks"></a>Remarks  
+ `CSingleLock` does not have a base class.  
   
- 동기화 클래스를 사용 하려면 [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [아니오](../../mfc/reference/ccriticalsection-class.md), 및 [CEvent](../../mfc/reference/cevent-class.md)를 하나 만들어야 합니다를 `CSingleLock` 또는 [CMultiLock](../../mfc/reference/cmultilock-class.md) 개체를 대기 하 고 동기화 개체를 해제 합니다. 사용 하 여 `CSingleLock` 필요한 경우 한 번에 하나의 개체에서 대기 합니다. 사용 하 여 **CMultiLock** 특정 시간에 사용할 수 있는 여러 개체에 있는 경우.  
+ In order to use the synchronization classes [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), and [CEvent](../../mfc/reference/cevent-class.md), you must create either a `CSingleLock` or [CMultiLock](../../mfc/reference/cmultilock-class.md) object to wait on and release the synchronization object. Use `CSingleLock` when you only need to wait on one object at a time. Use **CMultiLock** when there are multiple objects that you could use at a particular time.  
   
- 사용 하는 `CSingleLock` 개체, 제어 된 리소스의 클래스에서 멤버 함수 내 해당 생성자를 호출 합니다. 그런 다음 호출에서 [IsLocked](#islocked) 멤버 함수는 리소스를 사용할 수 있는지를 합니다. 그럴 경우 멤버 함수의 나머지를 계속 합니다. 리소스를 사용할 수 없는 경우 지정된 된 양의 출시 될 리소스에 대 한 시간에 대 한 대기 또는 실패를 반환 합니다. 리소스 사용이 완료 된 후 호출 하거나는 [잠금 해제](#unlock) 작동 하는 경우는 `CSingleLock` 개체를 다시 사용 하거나 허용 하는 `CSingleLock` 개체 소멸 될 예정입니다.  
+ To use a `CSingleLock` object, call its constructor inside a member function in the controlled resource's class. Then call the [IsLocked](#islocked) member function to determine if the resource is available. If it is, continue with the remainder of the member function. If the resource is unavailable, either wait for a specified amount of time for the resource to be released, or return failure. After use of the resource is complete, either call the [Unlock](#unlock) function if the `CSingleLock` object is to be used again, or allow the `CSingleLock` object to be destroyed.  
   
- `CSingleLock`개체에서 파생 된 개체의 존재를 필요 [CSyncObject](../../mfc/reference/csyncobject-class.md)합니다. 이 일반적으로 제어 된 리소스 클래스의 데이터 멤버입니다. 사용 하는 방법에 대 한 자세한 내용은 `CSingleLock` 개체, 문서를 참조 하십시오. [다중 스레딩: 동기화 클래스를 사용 하는 방법을](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
+ `CSingleLock` objects require the presence of an object derived from [CSyncObject](../../mfc/reference/csyncobject-class.md). This is usually a data member of the controlled resource's class. For more information on how to use `CSingleLock` objects, see the article [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CSingleLock`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxmt.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmt.h  
   
-##  <a name="csinglelock"></a>CSingleLock::CSingleLock  
- `CSingleLock` 개체를 생성합니다.  
+##  <a name="csinglelock"></a>  CSingleLock::CSingleLock  
+ Constructs a `CSingleLock` object.  
   
 ```  
 explicit CSingleLock(
@@ -97,54 +97,54 @@ explicit CSingleLock(
     BOOL bInitialLock = FALSE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pObject`  
- 에 액세스할 수 있는 동기화 개체를 가리킵니다. 안 **NULL**합니다.  
+ Points to the synchronization object to be accessed. Cannot be **NULL**.  
   
  `bInitialLock`  
- 제공된 된 개체에 액세스 하려고 처음 것인지 지정 합니다.  
+ Specifies whether to initially attempt to access the supplied object.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 일반적으로 제어 되는 리소스의 액세스 멤버 함수 내에서 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This function is generally called from within an access member function of the controlled resource.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities #&19;](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#19](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
   
-##  <a name="islocked"></a>CSingleLock::IsLocked  
- 개체 관련 된 결정의 `CSingleLock` 개체를 신호 없음으로 (사용할 수 없음).  
+##  <a name="islocked"></a>  CSingleLock::IsLocked  
+ Determines if the object associated with the `CSingleLock` object is nonsignaled (unavailable).  
   
 ```  
 BOOL IsLocked();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 개체가 잠겨; 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the object is locked; otherwise 0.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities #&20;](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#20](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
   
-##  <a name="lock"></a>CSingleLock::Lock  
- 이 함수에 제공 된 동기화 개체에 의해 제어 되는 리소스에 액세스 하기를 호출 하 여 `CSingleLock` 생성자입니다.  
+##  <a name="lock"></a>  CSingleLock::Lock  
+ Call this function to gain access to the resource controlled by the synchronization object supplied to the `CSingleLock` constructor.  
   
 ```  
 BOOL Lock(DWORD dwTimeOut = INFINITE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *dwTimeOut*  
- 사용할 수 있는 동기화 개체에 대 한 대기 시간을 지정 합니다 (신호). 경우 **무한**, `Lock` 반환 하기 전에 개체에 신호가 전달 될 때까지 기다립니다.  
+ Specifies the amount of time to wait for the synchronization object to be available (signaled). If **INFINITE**, `Lock` will wait until the object is signaled before returning.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 동기화 개체가 신호를 받으면 `Lock` 성공적으로 반환 하 고 스레드 개체를 소유 하 게 합니다. 동기화 개체가 신호 없음으로 (사용 불가) `Lock` 신호를 받을 수에 지정 된 시간 (밀리초)까지 동기화 개체에 대 한 대기는 *dwTimeOut* 매개 변수입니다. 동기화 개체는 지정 된 기간에 신호가 전송 되 되지 않은 경우 `Lock` 실패를 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ If the synchronization object is signaled, `Lock` will return successfully and the thread now owns the object. If the synchronization object is nonsignaled (unavailable), `Lock` will wait for the synchronization object to become signaled up to the number of milliseconds specified in the *dwTimeOut* parameter. If the synchronization object did not become signaled in the specified amount of time, `Lock` returns failure.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities #&21;](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
-##  <a name="unlock"></a>CSingleLock::Unlock  
- 가 소유 하는 동기화 개체를 해제 `CSingleLock`합니다.  
+##  <a name="unlock"></a>  CSingleLock::Unlock  
+ Releases the synchronization object owned by `CSingleLock`.  
   
 ```  
 BOOL Unlock();
@@ -155,25 +155,25 @@ BOOL Unlock(
     LPLONG lPrevCount = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lCount`  
- 해제에 대 한 액세스 횟수입니다. 0보다 커야 합니다. 최대값을 초과 하는 개체의 수로 인해 지정 된 크기, 수는 변경 되지 않습니다 고 함수가 반환 **FALSE**합니다.  
+ Number of accesses to release. Must be greater than 0. If the specified amount would cause the object's count to exceed its maximum, the count is not changed and the function returns **FALSE**.  
   
  `lPrevCount`  
- 이전 횟수 동기화 개체를 수신 하는 변수를 가리킵니다. 경우 **NULL**, 이전 개수가 반환 되지 않습니다.  
+ Points to a variable to receive the previous count of the synchronization object. If **NULL**, the previous count is not returned.  
   
-### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 호출 하 `CSingleLock`의 소멸자입니다.  
+### <a name="remarks"></a>Remarks  
+ This function is called by `CSingleLock`'s destructor.  
   
- 두 번째 형태를 사용 하 여 둘 이상의 액세스 횟수 세마포를 해제 해야 하는 경우 `Unlock` 해제에 대 한 액세스의 수를 지정 합니다.  
+ If you need to release more than one access count of a semaphore, use the second form of `Unlock` and specify the number of accesses to release.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFC_Utilities #&21;](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CMultiLock 클래스](../../mfc/reference/cmultilock-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMultiLock Class](../../mfc/reference/cmultilock-class.md)
 

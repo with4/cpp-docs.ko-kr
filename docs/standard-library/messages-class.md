@@ -1,5 +1,5 @@
 ---
-title: "messages 클래스 | Microsoft 문서"
+title: messages Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- messages
 - xlocmes/std::messages
 - locale/std::messages::char_type
 - locale/std::messages::string_type
@@ -22,7 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- messages class
+- std::messages [C++]
+- std::messages [C++], char_type
+- std::messages [C++], string_type
+- std::messages [C++], close
+- std::messages [C++], do_close
+- std::messages [C++], do_get
+- std::messages [C++], do_open
+- std::messages [C++], get
+- std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 caps.latest.revision: 18
 author: corob-msft
@@ -42,108 +49,108 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8a3c647c9c64f2783bf2bc6d2eee86d7107af8d2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d81b70d987cbf9c6a08ea5db6338606531d5f0a5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="messages-class"></a>messages 클래스
-지정된 로캘에 대한 국제화된 메시지의 카탈로그에서 지역화된 메시지를 검색하기 위해 로캘 패싯으로 사용할 수 있는 개체에 대해 설명하는 템플릿 클래스입니다.  
+# <a name="messages-class"></a>messages Class
+The template class describes an object that can serve as a locale facet to retrieve localized messages from a catalog of internationalized messages for a given locale.  
   
- 현재 메시지 클래스가 구현되는 동안 메시지가 없습니다.  
+ Currently, while the messages class is implemented, there are no messages.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType>  
 class messages : public messages_base;
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 로캘의 문자를 인코딩하기 위해 프로그램 내 사용하는 형식입니다.  
+ The type used within a program to encode characters in a locale.  
   
-## <a name="remarks"></a>설명  
- 모든 로캘 패싯과 마찬가지로, 고정 개체 ID에는 초기값 0이 저장되어 있습니다. 저장된 값에 액세스를 처음 시도하면 **id**에 고유한 양수 값이 저장됩니다.  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
- 이 패싯은 기본적으로 기본 클래스 messages_base에 정의된 메시지의 카탈로그를 열고, 필요한 정보를 검색하며, 카탈로그를 닫습니다.  
+ This facet basically opens a catalog of messages defined in the base class messages_base, retrieves the information required, and closes the catalog.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[messages](#messages)|메시지 패싯 생성자 함수입니다.|  
+|[messages](#messages)|The message facet constructor function.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|메시지를 표시하는 데 사용하는 문자 형식입니다.|  
-|[string_type](#string_type)|`basic_string` 형식의 문자가 포함된 `CharType` 형식의 문자열을 설명하는 형식입니다.|  
+|[char_type](#char_type)|A character type that is used display messages.|  
+|[string_type](#string_type)|A type that describes a string of type `basic_string` containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>멤버 함수  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[close](#close)|메시지 카탈로그를 닫습니다.|  
-|[do_close](#do_close)|메시지 카탈로그를 닫기 위해 호출하는 가상 함수입니다.|  
-|[do_get](#do_get)|메시지 카탈로그를 검색하기 위해 호출하는 가상 함수입니다.|  
-|[do_open](#do_open)|메시지 카탈로그를 열기 위해 호출하는 가상 함수입니다.|  
-|[get](#get)|메시지 카탈로그를 불러옵니다.|  
-|[open](#open)|메시지 카탈로그를 엽니다.|  
+|[close](#close)|Closes the message catalog.|  
+|[do_close](#do_close)|A virtual function called to lose the message catalog.|  
+|[do_get](#do_get)|A virtual function called to retrieve the message catalog.|  
+|[do_open](#do_open)|A virtual function called to open the message catalog.|  
+|[get](#get)|Retrieves the message catalog.|  
+|[open](#open)|Opens the message catalog.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  messages::char_type  
- 메시지를 표시하는 데 사용하는 문자 형식입니다.  
+ A character type that is used display messages.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="close"></a>  messages::close  
- 메시지 카탈로그를 닫습니다.  
+ Closes the message catalog.  
   
 ```
 void close(catalog _Catval) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Catval`  
- 닫을 카탈로그입니다.  
+ The catalog to be closed.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 [do_close](#do_close)(_ *Catval*)을 호출합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function calls [do_close](#do_close)(_ *Catval*).  
   
 ##  <a name="do_close"></a>  messages::do_close  
- 메시지 카탈로그를 닫기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to lose the message catalog.  
   
 ```
 virtual void do_close(catalog _Catval) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Catval`  
- 닫을 카탈로그입니다.  
+ The catalog to be closed.  
   
-### <a name="remarks"></a>설명  
- 보호된 멤버 함수는 메시지 카탈로그 `_Catval`을 닫습니다. 이 카탈로그는 이전에 [do_open](#do_open)을 호출하여 열려 있어야 합니다.  
+### <a name="remarks"></a>Remarks  
+ The protected member function closes the message catalog `_Catval`, which must have been opened by an earlier call to [do_open](#do_open).  
   
- *_Catval*은 닫히지 않은 이전에 연 카탈로그에서 가져와야 합니다.  
+ *_Catval* must be obtained from a previously opened catalog that is not closed.  
   
-### <a name="example"></a>예제  
-  `do_close`를 호출하는 [close](#close)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [close](#close), which calls `do_close`.  
   
 ##  <a name="do_get"></a>  messages::do_get  
- 메시지 카탈로그를 검색하기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to retrieve the message catalog.  
   
 ```
 virtual string_type do_get(
@@ -153,30 +160,30 @@ virtual string_type do_get(
     const string_type& _Dfault) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Catval`  
- 검색할 메시지 카탈로그를 지정하는 ID 값입니다.  
+ The identification value specifying the message catalog to be searched.  
   
  `_Set`  
- 메시지 카탈로그에서 메시지를 찾는 데 사용되는 첫 번째 식별자입니다.  
+ The first identified used to locate a message in a message catalog.  
   
  `_Message`  
- 메시지 카탈로그에서 메시지를 찾는 데 사용되는 두 번째 식별자입니다.  
+ The second identified used to locate a message in a message catalog.  
   
  `_Dfault`  
- 오류 시 반환할 문자열입니다.  
+ The string to be returned on failure.  
   
-### <a name="return-value"></a>반환 값  
- 오류 시 `_Dfault`의 복사본을 반환합니다. 그렇지 않으면 지정된 메시지 시퀀스의 복사본을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ It returns a copy of `_Dfault` on failure. Otherwise, it returns a copy of the specified message sequence.  
   
-### <a name="remarks"></a>설명  
- 보호된 멤버 함수는 메시지 카탈로그 `_Catval`에서 메시지 시퀀스를 가져오려고 시도합니다. 이때 `_Set`, `_Message` 및 `_Dfault`를 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The protected member function tries to obtain a message sequence from the message catalog `_Catval`. It may make use of `_Set`, `_Message`, and `_Dfault` in doing so.  
   
-### <a name="example"></a>예제  
-  `do_get`을 호출하는 [get](#get)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [get](#get), which calls `do_get`.  
   
 ##  <a name="do_open"></a>  messages::do_open  
- 메시지 카탈로그를 열기 위해 호출하는 가상 함수입니다.  
+ A virtual function called to open the message catalog.  
   
 ```
 virtual catalog do_open(
@@ -184,26 +191,26 @@ virtual catalog do_open(
     const locale& _Loc) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Catname`  
- 검색할 카탈로그의 이름입니다.  
+ The name of the catalog to be searched.  
   
  `_Loc`  
- 카탈로그에서 검색되는 로캘입니다.  
+ The locale being searched for in the catalog.  
   
-### <a name="return-value"></a>반환 값  
- 오류 시 0보다 작은 것으로 비교되는 값을 반환합니다. 그렇지 않으면 반환된 값은 나중에 [get](#get)을 호출할 때 첫 번째 인수로 사용할 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ It returns a value that compares less than zero on failure. Otherwise, the returned value can be used as the first argument on a later call to [get](#get).  
   
-### <a name="remarks"></a>설명  
- 보호된 멤버 함수는 이름이 `_Catname`인 메시지 카탈로그를 열려고 시도합니다. 이때 `_Loc` 로캘을 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The protected member function tries to open a message catalog whose name is `_Catname`. It may make use of the locale `_Loc` in doing so  
   
- 반환 값은 나중에 [close](#close)를 호출할 때 인수로 사용해야 합니다.  
+ The return value should be used as the argument on a later call to [close](#close).  
   
-### <a name="example"></a>예제  
-  `do_open`을 호출하는 [open](#open)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [open](#open), which calls `do_open`.  
   
 ##  <a name="get"></a>  messages::get  
- 메시지 카탈로그를 불러옵니다.  
+ Retrieves the message catalog.  
   
 ```
 string_type get(
@@ -213,27 +220,27 @@ string_type get(
     const string_type& _Dfault) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Catval`  
- 검색할 메시지 카탈로그를 지정하는 ID 값입니다.  
+ The identification value specifying the message catalog to be searched.  
   
  `_Set`  
- 메시지 카탈로그에서 메시지를 찾는 데 사용되는 첫 번째 식별자입니다.  
+ The first identified used to locate a message in a message catalog.  
   
  `_Message`  
- 메시지 카탈로그에서 메시지를 찾는 데 사용되는 두 번째 식별자입니다.  
+ The second identified used to locate a message in a message catalog.  
   
  `_Dfault`  
- 오류 시 반환할 문자열입니다.  
+ The string to be returned on failure.  
   
-### <a name="return-value"></a>반환 값  
- 오류 시 `_Dfault`의 복사본을 반환합니다. 그렇지 않으면 지정된 메시지 시퀀스의 복사본을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ It returns a copy of `_Dfault` on failure. Otherwise, it returns a copy of the specified message sequence.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 [do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`).  
   
 ##  <a name="messages"></a>  messages::messages  
- 메시지 패싯 생성자 함수입니다.  
+ The message facet constructor function.  
   
 ```
 explicit messages(
@@ -244,28 +251,28 @@ protected: messages(
     size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 개체에 대한 메모리 관리의 유형을 지정하는 데 사용하는 정수 값입니다.  
+ Integer value used to specify the type of memory management for the object.  
   
  `_Locname`  
- 로캘 이름입니다.  
+ The name of the locale.  
   
-### <a name="remarks"></a>설명  
- `_Refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0: 개체를 포함하는 로캘에 의해 개체의 수명이 관리됩니다.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: 개체의 수명을 수동으로 관리해야 합니다.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: 이러한 값은 정의 되지 않습니다.  
+-   \> 1: These values are not defined.  
   
- 소멸자는 보호되므로 직접적인 예제는 확인할 수 없습니다.  
+ No direct examples are possible, because the destructor is protected.  
   
- 생성자는 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`)를 통해 해당 기본 개체를 초기화합니다.  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ##  <a name="open"></a>  messages::open  
- 메시지 카탈로그를 엽니다.  
+ Opens the message catalog.  
   
 ```
 catalog open(
@@ -273,33 +280,33 @@ catalog open(
     const locale& _Loc) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Catname`  
- 검색할 카탈로그의 이름입니다.  
+ The name of the catalog to be searched.  
   
  `_Loc`  
- 카탈로그에서 검색되는 로캘입니다.  
+ The locale being searched for in the catalog.  
   
-### <a name="return-value"></a>반환 값  
- 오류 시 0보다 작은 것으로 비교되는 값을 반환합니다. 그렇지 않으면 반환된 값은 나중에 [get](#get)을 호출할 때 첫 번째 인수로 사용할 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ It returns a value that compares less than zero on failure. Otherwise, the returned value can be used as the first argument on a later call to [get](#get).  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 [do_open](#do_open)( `_Catname`, `_Loc`)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_open](#do_open)( `_Catname`, `_Loc`).  
   
 ##  <a name="string_type"></a>  messages::string_type  
- **CharType** 형식의 문자가 포함된 `basic_string` 형식의 문자열을 설명하는 형식입니다.  
+ A type that describes a string of type `basic_string` containing characters of type **CharType**.  
   
 ```
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 개체가 메시지 시퀀스의 복사본을 저장할 수 있는 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 특수화를 설명합니다.  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the message sequences.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [messages_base 클래스](../standard-library/messages-base-class.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [messages_base Class](../standard-library/messages-base-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

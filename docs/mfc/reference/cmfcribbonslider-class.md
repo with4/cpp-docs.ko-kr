@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonSlider 클래스 | Microsoft 문서"
+title: CMFCRibbonSlider Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonSlider class
+- CMFCRibbonSlider [MFC], CMFCRibbonSlider
+- CMFCRibbonSlider [MFC], GetPos
+- CMFCRibbonSlider [MFC], GetRangeMax
+- CMFCRibbonSlider [MFC], GetRangeMin
+- CMFCRibbonSlider [MFC], GetRegularSize
+- CMFCRibbonSlider [MFC], GetZoomIncrement
+- CMFCRibbonSlider [MFC], HasZoomButtons
+- CMFCRibbonSlider [MFC], OnDraw
+- CMFCRibbonSlider [MFC], SetPos
+- CMFCRibbonSlider [MFC], SetRange
+- CMFCRibbonSlider [MFC], SetZoomButtons
+- CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
 caps.latest.revision: 43
 author: mikeblome
@@ -46,70 +57,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9f05ae7d0f3e1775a3321928867471749e11e679
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94c838e6a076f0bae82eef4baf47f00b1c1c2e01
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 클래스
-`CMFCRibbonSlider` 클래스는 리본 또는 리본 상태 표시줄에 추가할 수 있는 슬라이더 컨트롤을 구현 합니다. 리본 슬라이더 컨트롤은 Office 2007 응용 프로그램의 확대/축소 슬라이더와 유사합니다.  
+# <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider Class
+The `CMFCRibbonSlider` class implements a slider control that you can add to a ribbon bar or ribbon status bar. The ribbon slider control resembles the zoom sliders that appear in Office 2007 applications.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonSlider : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|생성 하 고 리본 슬라이더 컨트롤을 초기화 합니다.|  
+|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Constructs and initializes a ribbon slider control.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonSlider::GetPos](#getpos)|슬라이더 컨트롤의 현재 위치를 반환합니다.|  
-|[CMFCRibbonSlider::GetRangeMax](#getrangemax)|슬라이더의 최대값을 반환 합니다.|  
-|[CMFCRibbonSlider::GetRangeMin](#getrangemin)|슬라이더의 최소값을 반환합니다.|  
-|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|리본 요소의 보통 크기를 반환합니다. (재정의 [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
-|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|확대/축소 슬라이더 컨트롤에 대 한 증가값의 크기를 반환 합니다.|  
-|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|슬라이더 확대/축소 단추에 있는지 여부를 지정 합니다.|  
-|[CMFCRibbonSlider::OnDraw](#ondraw)|리본 요소를 그리기 위해 프레임워크에서 호출됩니다. (재정의 [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
-|[CMFCRibbonSlider::SetPos](#setpos)|슬라이더 컨트롤의 현재 위치를 설정합니다.|  
-|[CMFCRibbonSlider::SetRange](#setrange)|최소값과 최대값을 설정 하 여 슬라이더 컨트롤의 범위를 지정 합니다.|  
-|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|표시 하거나 확대/축소 단추를 숨깁니다.|  
-|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|확대/축소 슬라이더 컨트롤에 대 한 증가값의 크기를 설정합니다.|  
+|[CMFCRibbonSlider::GetPos](#getpos)|Returns the current position of the slider control.|  
+|[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Returns the maximum value of the slider.|  
+|[CMFCRibbonSlider::GetRangeMin](#getrangemin)|Returns the minimum value of the slider.|  
+|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|Returns the regular size of the ribbon element. (Overrides [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
+|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Returns the size of the zoom increment for the slider control.|  
+|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Specifies whether the slider has zoom buttons.|  
+|[CMFCRibbonSlider::OnDraw](#ondraw)|Called by the framework to draw the ribbon element. (Overrides [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
+|[CMFCRibbonSlider::SetPos](#setpos)|Sets the current position of the slider control.|  
+|[CMFCRibbonSlider::SetRange](#setrange)|Specifies the range of the slider control by setting the minimum and maximum values.|  
+|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|Shows or hides the zoom buttons.|  
+|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|Sets size of the zoom increment for the slider control.|  
   
-## <a name="remarks"></a>주의  
- 사용할 수는 `SetRange` 슬라이더에 대 한 확대/축소 간격의 범위를 구성 하는 방법입니다. 사용 하 여 슬라이더의 현재 위치를 설정할 수는 `SetPos` 메서드.  
+## <a name="remarks"></a>Remarks  
+ You can use the `SetRange` method to configure the range of zoom increments for the slider. You can set current position of the slider by using the `SetPos` method.  
   
- 사용 하 여 슬라이더 컨트롤의 왼쪽 및 오른쪽에 순환 확대/축소 단추를 표시할 수는 `SetZoomButtons` 메서드. 기본적으로 가로 슬라이더는, 왼쪽된 확대/축소 단추를 사용 하는 빼기 기호를 표시 하 고 오른쪽 확대/축소 단추를 사용 하는 더하기 기호를 표시 합니다.  
+ You can display circular zoom buttons on the left and right side of the slider control by using the `SetZoomButtons` method. By default, the slider is horizontal, the left zoom button displays a minus sign and the right zoom button displays a plus sign.  
   
- `SetZoomIncrement` 메서드 정의에 추가 하거나 확대/축소 단추를 클릭할 때 현재 위치에서 뺄 증가 합니다.  
+ The `SetZoomIncrement` method defines the increment to add to or subtract from the current position when a user clicks the zoom buttons.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 다양 한 메서드를 사용 하는 방법의 `CMFCRibbonSlider` 슬라이더의 속성을 설정 하는 클래스입니다. 예제를 생성 하는 방법을 보여 줍니다는 `CMFCRibbonSlider` 개체, 확대/축소 단추를 표시 하 고 슬라이더 컨트롤의 현재 위치를 설정 및 슬라이더 컨트롤에 대 한 값의 범위를 설정 합니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCRibbonSlider` class to set the properties of the slider. The example shows how to construct a `CMFCRibbonSlider` object, display zoom buttons, set the current position of the slider control, and set the range of values for the slider control.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&12;](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#12](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxribbonslider.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribbonslider.h  
   
-##  <a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider  
- 리본 슬라이더를 생성 합니다.  
+##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider  
+ Construct a ribbon slider.  
   
 ```  
 CMFCRibbonSlider(
@@ -117,94 +128,94 @@ CMFCRibbonSlider(
     int nWidth=100);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 슬라이더의 id입니다.  
+ Slider ID.  
   
  [in]. `nWidth`  
- 슬라이더 너비 (픽셀)에서입니다.  
+ Slider width in pixels.  
   
-### <a name="remarks"></a>주의  
- 생성 되는 리본 슬라이더 `nWidth` 픽셀로 슬라이더를 추가 하는 위치 패널 범주에 있습니다. 기본적으로 슬라이더를 가로로 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Constructs a ribbon slider that is `nWidth` pixels wide in the panel category where the slider is added. By default, the slider is horizontal.  
   
-##  <a name="getpos"></a>CMFCRibbonSlider::GetPos  
- 슬라이더 컨트롤의 현재 위치를 반환합니다.  
+##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
+ Returns the current position of the slider control.  
   
 ```  
 int GetPos() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 슬라이더의 시작 부분에 상대적인 위치를 나타내는 슬라이더 컨트롤의 현재 위치입니다.  
+### <a name="return-value"></a>Return Value  
+ The current position of the slider control, which is a position relative to the beginning of the slider.  
   
-##  <a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax  
- 슬라이더 컨트롤에 슬라이더를 이동할 수 있는 슬라이더의 최대 증가 가져옵니다.  
+##  <a name="getrangemax"></a>  CMFCRibbonSlider::GetRangeMax  
+ Obtains the maximum increment of the slider that the slider can travel on the slider control.  
   
 ```  
 int GetRangeMax() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 슬라이더 컨트롤에 슬라이더를 이동할 수 있는 슬라이더의 최대 증가 합니다.  
+### <a name="return-value"></a>Return Value  
+ The maximum increment of the slider that the slider can travel on the slider control.  
   
-##  <a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin  
- 슬라이더 컨트롤에 슬라이더를 이동할 수 있는 최소 증분을 반환 합니다.  
+##  <a name="getrangemin"></a>  CMFCRibbonSlider::GetRangeMin  
+ Returns the minimum increment that the slider can travel on the slider control.  
   
 ```  
 int GetRangeMin() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 최소 증가값을 슬라이더 컨트롤에 슬라이더를 이동할 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ The minimum increment that the slider can travel on the slider control.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="return-value"></a>반환 값  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement  
- 확대/축소 슬라이더 컨트롤에 대 한 증가값을 가져옵니다.  
+##  <a name="getzoomincrement"></a>  CMFCRibbonSlider::GetZoomIncrement  
+ Obtain the zoom increment for the slider control.  
   
 ```  
 int GetZoomIncrement() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 슬라이더 컨트롤에 대 한 확대/축소 증가 합니다.  
+### <a name="return-value"></a>Return Value  
+ The zoom increment for the slider control.  
   
-##  <a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons  
- 슬라이더 확대/축소 단추에 있는지 여부를 지정 합니다.  
+##  <a name="haszoombuttons"></a>  CMFCRibbonSlider::HasZoomButtons  
+ Specifies whether the slider has zoom buttons.  
   
 ```  
 BOOL HasZoomButtons() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- `TRUE`슬라이더에 확대/축소 단추가 있습니다. `FALSE` 그렇지 않은 경우.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the slider has zoom buttons; `FALSE` otherwise.  
   
-##  <a name="ondraw"></a>CMFCRibbonSlider::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpos"></a>CMFCRibbonSlider::SetPos  
- 슬라이더 컨트롤의 현재 위치를 설정 합니다.  
+##  <a name="setpos"></a>  CMFCRibbonSlider::SetPos  
+ Set the current position of the slider control.  
   
 ```  
 void SetPos(
@@ -212,15 +223,15 @@ void SetPos(
     BOOL bRedraw=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nPos`  
- 슬라이더에 대 한 설정 위치를 지정 합니다. 슬라이더의 시작 부분에 상대적인 위치가입니다.  
+ Specifies the position to set for the slider. The position is relative to the beginning of the slider.  
   
  [in] `bRedraw`  
- 경우 `TRUE`, 슬라이더 다시 그려집니다.  
+ If `TRUE`, the slider will be redrawn.  
   
-##  <a name="setrange"></a>CMFCRibbonSlider::SetRange  
- 슬라이더 컨트롤에 대 한 값의 범위를 설정 합니다.  
+##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
+ Set the range of values for the slider control.  
   
 ```  
 void SetRange(
@@ -228,40 +239,40 @@ void SetRange(
     int nMax);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nMin`  
- 슬라이더 컨트롤의 최소 값을 지정합니다.  
+ Specifies minimum value of the slider control.  
   
  [in] `nMax`  
- 슬라이더 컨트롤의 최대값을 지정합니다.  
+ Specifies maximum value of the slider control.  
   
-### <a name="remarks"></a>주의  
- 최소값과 최대값을 설정 하 여 슬라이더 컨트롤에 대 한 값의 범위를 지정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Specifies the range of values for the slider control by setting the minimum and maximum values.  
   
-##  <a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons  
- 표시 하거나 확대/축소 단추를 숨깁니다.  
+##  <a name="setzoombuttons"></a>  CMFCRibbonSlider::SetZoomButtons  
+ Display or hide zoom buttons.  
   
 ```  
 void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in]. `bSet`  
- `TRUE`확대/축소 단추;를 표시 하려면 `FALSE` 아이콘을 숨기려면 합니다.  
+ `TRUE` to display zoom buttons; `FALSE` to hide them.  
   
-##  <a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement  
- 슬라이더 컨트롤에 대 한 확대/축소 증분을 설정 합니다.  
+##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
+ Set the zoom increment for the slider control.  
   
 ```  
 void SetZoomIncrement(int nZoomIncrement);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `nZoomIncrement`  
- 슬라이더 컨트롤의 확대/축소 증분을 지정합니다.  
+ Specifies the zoom increment of the slider control.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonBaseElement 클래스](../../mfc/reference/cmfcribbonbaseelement-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)
 

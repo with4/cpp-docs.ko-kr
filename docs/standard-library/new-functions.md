@@ -1,5 +1,5 @@
 ---
-title: "&lt;new&gt; 함수 | Microsoft Docs"
+title: '&lt;new&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,49 +12,49 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0f796dc89314f9f6ac6da5c54f9afd16604fd1f6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnewgt-functions"></a>&lt;new&gt; 함수
+# <a name="ltnewgt-functions"></a>&lt;new&gt; functions
 |||  
 |-|-|  
 |[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|  
   
 ##  <a name="nothrow"></a>  nothrow  
- **new** 및 **delete**의 `nothrow` 버전에 대한 인수로 사용할 개체를 제공합니다.  
+ Provides an object to be used as an argument for the `nothrow` versions of **new** and **delete**.  
   
 ```  
 extern const std::nothrow_t nothrow;  
 ```  
   
-### <a name="remarks"></a>설명  
- 이 개체는 매개 변수 형식 [std::nothrow_t](../standard-library/nothrow-t-structure.md)의 일치를 확인하기 위한 함수 인수로 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ The object is used as a function argument to match the parameter type [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
   
-### <a name="example"></a>예제  
-  `std::nothrow_t`를 함수 매개 변수로 사용하는 방법의 예제는 [operator new](../standard-library/new-operators.md#op_new) 및 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [operator new](../standard-library/new-operators.md#op_new) and [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) for examples of how `std::nothrow_t` is used as a function parameter.  
   
 ##  <a name="set_new_handler"></a>  set_new_handler  
- `operator new`가 메모리 할당 시도에 실패할 때 호출되는 사용자 함수를 설치합니다.  
+ Installs a user function that is to be called when `operator new` fails in its attempt to allocate memory.  
   
 ```  
 new_handler set_new_handler(new_handler Pnew) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Pnew`  
- 설치할 new_handler입니다.  
+ The new_handler to be installed.  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 호출의 경우 0이고 후속 호출의 경우 이전 `new_handler`입니다.  
+### <a name="return-value"></a>Return Value  
+ 0 on the first call and the previous `new_handler` on subsequent calls.  
   
-### <a name="remarks"></a>설명  
- 함수는 유지 관리하는 정적 [새 처리기](../standard-library/new-typedefs.md#new_handler) 포인터에 `Pnew`를 저장한 다음 이전에 포인터에 저장되었던 값을 반환합니다. 새 처리기는 [operator new](../standard-library/new-operators.md#op_new)( **size_t**)에서 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ The function stores `Pnew` in a static [new handler](../standard-library/new-typedefs.md#new_handler) pointer that it maintains, then returns the value previously stored in the pointer. The new handler is used by [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_set_new_handler.cpp  
@@ -117,7 +117,7 @@ The new_handler is called:
 bad allocation  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<new>](../standard-library/new.md)
 
 

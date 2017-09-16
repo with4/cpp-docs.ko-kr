@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonQuickAccessToolBarDefaultState 클래스 | Microsoft 문서"
+title: CMFCRibbonQuickAccessToolBarDefaultState Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonQuickAccessToolBarDefaultState class
+- CMFCRibbonQuickAccessToolBarDefaultState [MFC], CMFCRibbonQuickAccessToolBarDefaultState
+- CMFCRibbonQuickAccessToolBarDefaultState [MFC], AddCommand
+- CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
+- CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
 caps.latest.revision: 28
 author: mikeblome
@@ -38,54 +41,54 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 211e8d897de923e7f07df389b0e9e7218cf45872
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77a7fb9b0818d3df8dc41db2b94a0789e0d03b15
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState 클래스
-리본 표시줄에 있는 빠른 실행 도구 모음에 대 한 기본 상태를 관리 하는 도우미 클래스 ( [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)).  
+# <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState Class
+A helper class that manages default state for the Quick Access Toolbar that is positioned on the ribbon bar ( [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonQuickAccessToolBarDefaultState  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState](#cmfcribbonquickaccesstoolbardefaultstate)|`CMFCRibbonQuickAccessToolbarDefaultState` 개체를 생성합니다.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState](#cmfcribbonquickaccesstoolbardefaultstate)|Constructs a `CMFCRibbonQuickAccessToolbarDefaultState` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|빠른 실행 도구 모음에 대 한 기본 상태는 명령을 추가합니다. 자체 도구 모음에서 변경 되지 않습니다.|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|다른 속성 하나 빠른 실행 도구 모음을 복사합니다.|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|빠른 실행 도구 모음에서 모든 명령을 제거합니다. 자체 도구 모음에서 변경 되지 않습니다.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Adds a command to the default state for the Quick Access Toolbar. This does not change the toolbar itself.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Copies the properties of one Quick Access Toolbar to another.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Removes all commands from the Quick Access Toolbar. This does not change the toolbar itself.|  
   
-## <a name="remarks"></a>주의  
- 응용 프로그램에서 빠른 실행 도구 모음을 만든 후 호출 하 여 기본 상태를 설정 하는 것이 좋습니다 [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate)합니다. 클릭할 때이 기본 상태가 복원 되는 **다시 설정** 단추는 **사용자 지정** 응용 프로그램의 페이지 **옵션** 대화 상자.  
+## <a name="remarks"></a>Remarks  
+ After you create the Quick Access Toolbar in your application, we recommend that you set its default state by calling [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). This default state is restored when a user clicks the **Reset** button on the **Customize** page of your application's **Options** dialog box.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)  
   
-## <a name="example"></a>예제  
- 개체를 생성 하는 방법은 다음 예제는 `CMFCRibbonQuickAccessToolbarDefaultState` 클래스 및 빠른 실행 도구 모음에 대 한 기본 상태에 명령을 추가 하는 방법입니다.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCRibbonQuickAccessToolbarDefaultState` class and how to add a command to the default state for the Quick Access Toolbar.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&21;](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#21](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxribbonquickaccesstoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribbonquickaccesstoolbar.h  
   
-##  <a name="addcommand"></a>CMFCRibbonQuickAccessToolBarDefaultState::AddCommand  
- 빠른 실행 도구 모음에 대 한 기본 상태는 명령을 추가합니다.  
+##  <a name="addcommand"></a>  CMFCRibbonQuickAccessToolBarDefaultState::AddCommand  
+ Adds a command to the default state for the Quick Access Toolbar.  
   
 ```  
 void AddCommand(
@@ -93,52 +96,52 @@ void AddCommand(
     BOOL bIsVisible=TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `[in] uiCmd`  
- 명령 ID를 지정 합니다.  
+ Specifies command ID.  
   
  `[in] bIsVisible`  
- 빠른 실행 도구 모음 기본 상태인 경우 명령의 표시 유형을 설정 합니다.  
+ Sets the visibility of the command when the Quick Access Toolbar is in the default state.  
   
-### <a name="remarks"></a>주의  
- 세 개의 결과 다음는 CMFCRibbonQuickAccessToolBarDefaultState에 명령 추가 됩니다. 첫째, 추가 된 각 명령은 빠른 실행 도구 모음의 오른쪽에 있는 드롭다운에 나열 됩니다. 이러한 방식으로 사용자는 추가 하거나 빠른 실행 도구 모음에서 해당 명령을 제거 쉽게 수 있습니다. 둘째로, 나열 되어 있는 명령만 표시 되는 것에 표시할 기본 상태를 클릭할 때 빠른 실행 도구 모음 다시 설정 되는 **재설정** 단추는 **사용자 지정** 대화 상자입니다. 셋째, 호출 하지 않은 경우 [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), 빠른 실행 도구 모음 표시 되는 명령을 사용이 목록에서 기본 표시 명령으로 처음으로 사용자가 응용 프로그램을 실행 합니다. 원하는 모든 명령에 추가 하면, 호출 [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) 해당 리본 표시줄의 빠른 실행 도구 모음에 대 한 기본 상태도이 인스턴스를 설정 하려면.  
+### <a name="remarks"></a>Remarks  
+ Adding a command to the CMFCRibbonQuickAccessToolBarDefaultState accomplishes three results. First, each added command is listed on the dropdown on the right side of the Quick Access Toolbar. In this manner, a user can easily add or remove that command from the Quick Access Toolbar. Second, the Quick Access Toolbar is reset to show only those commands that are listed as visible in the default state when the user clicks the **Reset** button in the **Customize** dialog box. Third, if you have not called [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), the Quick Access Toolbar uses the visible commands from this list as the default visible commands the first time a user runs your application. After you have added all the commands that you want, call [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) to set this instance as the default state for the Quick Access Toolbar of that Ribbon Bar.  
   
-##  <a name="copyfrom"></a>CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
- 다른 속성 하나 빠른 실행 도구 모음을 복사합니다.  
+##  <a name="copyfrom"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
+ Copies the properties of one Quick Access Toolbar to another.  
   
 ```  
 void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 원본에 대 한 참조를 `CMFCRibbonQuickAccessToolBarDefaultState` 복사할 개체입니다.  
+ A reference to the source `CMFCRibbonQuickAccessToolBarDefaultState` object to copy from.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 원본에서 각 명령 복사 `CMFCRibbonQuickAccessToolBarDefaultState` 개체를 사용 하 여이 개체는 [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) 메서드.  
+### <a name="remarks"></a>Remarks  
+ This method copies each command from the source `CMFCRibbonQuickAccessToolBarDefaultState` object to this object by using the [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) method.  
   
-##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
- 빠른 실행 도구 모음 기본 상태 개체를 생성합니다.  
+##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
+ Constructs the Quick Access Toolbar default state object.  
   
 ```  
 CMFCRibbonQuickAccessToolBarDefaultState();
 ```  
   
-### <a name="remarks"></a>주의  
- 기본적으로는 명령의 목록은 하의 새 인스턴스 [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) 포함 비어 있습니다.  
+### <a name="remarks"></a>Remarks  
+ By default, the list of commands that the new instance of [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) contains is empty.  
   
-##  <a name="removeall"></a>CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
- 빠른 실행 도구 모음에 있는 기본 명령 목록을 지웁니다.  
+##  <a name="removeall"></a>  CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
+ Clears the list of default commands in the Quick Access Toolbar.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 함수는 모든 명령을이 인스턴스에서 제거 하는에 대 한 이전 호출 [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) 추가 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function removes from this instance all the commands that the previous calls to [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) added.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)
 

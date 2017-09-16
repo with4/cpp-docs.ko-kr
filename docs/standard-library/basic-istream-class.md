@@ -1,20 +1,19 @@
 ---
-title: "basic_istream 클래스 | Microsoft 문서"
+title: basic_istream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_istream
 - istream/std::basic_istream
 - istream/std::basic_istream::gcount
 - istream/std::basic_istream::get
 - istream/std::basic_istream::getline
-- istream/std::basic_istream::ignore
+- istream/std::basic_istream::OVERWRITE
 - istream/std::basic_istream::peek
 - istream/std::basic_istream::putback
 - istream/std::basic_istream::read
@@ -28,7 +27,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_istream class
+- std::basic_istream [C++]
+- std::basic_istream [C++], gcount
+- std::basic_istream [C++], get
+- std::basic_istream [C++], getline
+- std::basic_istream [C++], OVERWRITE
+- std::basic_istream [C++], peek
+- std::basic_istream [C++], putback
+- std::basic_istream [C++], read
+- std::basic_istream [C++], readsome
+- std::basic_istream [C++], seekg
+- std::basic_istream [C++], sentry
+- std::basic_istream [C++], swap
+- std::basic_istream [C++], sync
+- std::basic_istream [C++], tellg
+- std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 caps.latest.revision: 21
 author: corob-msft
@@ -48,25 +61,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e8609e71bb233f3daeaaf9b5620f4bd7a59408f6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b564cbf771fdce6e292fbbc40458825d91a8fdce
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicistream-class"></a>basic_istream 클래스
-이 템플릿 클래스는 문자 특성이 *Tr*([traits_type](../standard-library/basic-ios-class.md#traits_type)이라고도 함) 클래스에 의해 결정되는 `Elem`([char_type](../standard-library/basic-ios-class.md#char_type)이라고도 함) 형식의 요소가 있는 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어하는 개체를 설명합니다.  
+# <a name="basicistream-class"></a>basic_istream Class
+Describes an object that controls extraction of elements and encoded objects from a stream buffer with elements of type `Elem`, also known as [char_type](../standard-library/basic-ios-class.md#char_type), whose character traits are determined by the class *Tr*, also known as [traits_type](../standard-library/basic-ios-class.md#traits_type).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_istream : virtual public basic_ios<Elem, Tr>  
 ```  
   
-## <a name="remarks"></a>설명  
- [operator>>](#op_gt_gt)를 오버로드하는 대부분의 멤버 함수는 형식이 지정된 입력 함수입니다. 다음 패턴을 따릅니다.  
+## <a name="remarks"></a>Remarks  
+ Most of the member functions that overload [operator>>](#op_gt_gt) are formatted input functions. They follow the pattern:  
   
 ```cpp  
 iostate state = goodbit;
@@ -99,7 +112,7 @@ setstate(state);
 return (*this);
 ```  
   
- 다른 많은 멤버 함수는 형식이 지정되지 않은 입력 함수입니다. 다음 패턴을 따릅니다.  
+ Many other member functions are unformatted input functions. They follow the pattern:  
   
 ```cpp  
 iostate state = goodbit;
@@ -131,56 +144,56 @@ if (ok)
 setstate(state);
 ```  
   
- 두 함수 그룹은 요소를 추출하는 동안 파일 끝을 발견할 경우 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)를 호출합니다.  
+ Both groups of functions call [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) if they encounter end of file while extracting elements.  
   
- `basic_istream`< `Elem`, *Tr*> 클래스의 개체는 다음을 저장합니다.  
+ An object of class `basic_istream`< `Elem`, *Tr*> stores:  
   
--   [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.` 클래스의 공용 가상 기준 개체  
+-   A virtual public base object of class [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.`  
   
--   형식이 지정되지 않은 마지막 입력 작업에 대한 추출 횟수(이전 코드에서 **count**라고 함)  
+-   An extraction count for the last unformatted input operation (called **count** in the previous code).  
   
-## <a name="example"></a>예제  
- 입력 스트림에 대한 자세한 내용은 [basic_ifstream 클래스](../standard-library/basic-ifstream-class.md)에 대한 예제를 참조하세요.  
+## <a name="example"></a>Example  
+ See the example for [basic_ifstream Class](../standard-library/basic-ifstream-class.md) to learn more about input streams.  
   
-### <a name="constructors"></a>생성자  
-  
-|||  
-|-|-|  
-|[basic_istream](#basic_istream)|`basic_istream` 형식의 개체를 생성합니다.|  
-  
-### <a name="member-functions"></a>멤버 함수  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[gcount](#gcount)|서식이 지정되지 않은 마지막 입력 동안 읽은 문자 수를 반환합니다.|  
-|[get](#get)|입력 스트림에서 하나 이상의 문자를 읽습니다.|  
-|[getline](#getline)|입력 스트림에서 한 줄을 읽습니다.|  
-|[ignore](#ignore)|현재 읽기 위치에서 많은 요소를 건너뜁니다.|  
-|[peek](#peek)|읽을 다음 문자를 반환합니다.|  
-|[putback](#putback)|지정된 문자를 스트림에 넣습니다.|  
-|[read](#read)|스트림에서 지정된 개수의 문자를 읽고 배열에 저장합니다.|  
-|[readsome](#readsome)|버퍼에서 읽기만 합니다.|  
-|[seekg](#seekg)|스트림에서 읽기 위치를 이동합니다.|  
-|[sentry](#sentry)|중첩된 클래스는 선언에서 형식이 지정된 입력 함수 및 형식이 지정되지 않은 입력 함수를 구성하는 개체를 설명합니다.|  
-|[swap](#swap)|이 `basic_istream` 개체를 제공된 `basic_istream` 개체 매개 변수로 교환합니다.|  
-|[sync](#sync)|스트림과 연결된 입력 장치를 스트림 버퍼와 동기화합니다.|  
-|[tellg](#tellg)|스트림에서 현재 읽기 위치를 보고합니다.|  
-|[unget](#unget)|가장 최근에 읽은 문자를 다시 스트림에 넣습니다.|  
+|[basic_istream](#basic_istream)|Constructs an object of type `basic_istream`.|  
   
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator>>](#op_gt_gt)|입력 스트림에 대해 함수를 호출하거나 입력 스트림에서 형식이 지정된 데이터를 읽습니다.|  
-|[operator=](#op_eq)|이 개체에 연산자의 오른쪽에 있는 `basic_istream`을 할당합니다. 복사본을 남기지 않는 `rvalue` 참조와 관련된 이동 할당입니다.|  
+|[gcount](#gcount)|Returns the number of characters read during the last unformatted input.|  
+|[get](#get)|Reads one or more characters from the input stream.|  
+|[getline](#getline)|Reads a line from the input stream.|  
+|[ignore](#ignore)|Causes a number of elements to be skipped from the current read position.|  
+|[peek](#peek)|Returns the next character to be read.|  
+|[putback](#putback)|Puts a specified character into the stream.|  
+|[read](#read)|Reads a specified number of characters from the stream and stores them in an array.|  
+|[readsome](#readsome)|Read from buffer only.|  
+|[seekg](#seekg)|Moves the read position in a stream.|  
+|[sentry](#sentry)|The nested class describes an object whose declaration structures the formatted input functions and the unformatted input functions.|  
+|[swap](#swap)|Exchanges this `basic_istream` object for the provided `basic_istream` object parameter.|  
+|[sync](#sync)|Synchronizes the input device associated with the stream with the stream's buffer.|  
+|[tellg](#tellg)|Reports the current read position in the stream.|  
+|[unget](#unget)|Puts the most recently read character back into the stream.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<istream>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[operator>>](#op_gt_gt)|Calls a function on the input stream or reads formatted data from the input stream.|  
+|[operator=](#op_eq)|Assigns the `basic_istream` on the right side of the operator to this object. This is a move assignment involving an `rvalue` reference that does not leave a copy behind.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<istream>  
+  
+ **Namespace:** std  
   
 ##  <a name="basic_istream"></a>  basic_istream::basic_istream  
- `basic_istream` 형식의 개체를 생성합니다.  
+ Constructs an object of type `basic_istream`.  
   
 ```  
 explicit basic_istream(
@@ -190,38 +203,38 @@ explicit basic_istream(
 basic_istream(basic_istream&& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- [basic_streambuf](../standard-library/basic-streambuf-class.md) 형식의 개체입니다.  
+ An object of type [basic_streambuf](../standard-library/basic-streambuf-class.md).  
   
  `_Isstd`  
-표준 스트림인 경우  `true`, 아닌 경우 `false`입니다.  
+ `true` if this is a standard stream; otherwise, `false`.  
   
  `right`  
- 복사할 `basic_istream` 개체입니다.  
+ A `basic_istream` object to copy.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 [init](../standard-library/basic-ios-class.md#init)(_S `trbuf`)를 호출하여 기본 개체를 초기화합니다. 또한 추출 개수에 0을 저장합니다. 이 추출 개수에 대한 자세한 내용은 [basic_istream Class](../standard-library/basic-istream-class.md) 개요 항목의 설명 섹션을 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base class by calling [init](../standard-library/basic-ios-class.md#init)(_S `trbuf`). It also stores zero in the extraction count. For more information about this extraction count, see the Remarks section of the [basic_istream Class](../standard-library/basic-istream-class.md) overview topic.  
   
- 두 번째 생성자는 `move``( right)`를 호출하여 기본 개체를 초기화합니다. 이 생성자는 또한 추출 개수에 _R `ight.gcount()`를 저장하고, _R `ight`에 대한 추출 개수에 0을 저장합니다.  
+ The second constructor initializes the base class by calling `move( right)`. It also stores _R `ight.gcount()` in the extraction count and stores zero in the extraction count for _R `ight`.  
   
-### <a name="example"></a>예제  
-  입력 스트림에 대한 자세한 내용은 [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream)에 대한 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) to learn more about input streams.  
   
 ##  <a name="gcount"></a>  basic_istream::gcount  
- 서식이 지정되지 않은 마지막 입력 동안 읽은 문자 수를 반환합니다.  
+ Returns the number of characters read during the last unformatted input.  
   
 ```  
 streamsize gcount() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 추출 개수입니다.  
+### <a name="return-value"></a>Return Value  
+ The extraction count.  
   
-### <a name="remarks"></a>설명  
- 형식이 지정되지 않은 문자를 읽으려면 [basic_istream::get](#get)을 사용하세요.  
+### <a name="remarks"></a>Remarks  
+ Use [basic_istream::get](#get) to read unformatted characters.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_gcount.cpp  
@@ -257,7 +270,7 @@ a
 ```  
   
 ##  <a name="get"></a>  basic_istream::get  
- 입력 스트림에서 하나 이상의 문자를 읽습니다.  
+ Reads one or more characters from the input stream.  
   
 ```  
 int_type get();
@@ -270,47 +283,47 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf);
 basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `count`  
- `strbuf`에서 읽을 문자 수입니다.  
+ The number of characters to read from `strbuf`.  
   
  `Delim`  
- `count` 이전에 발견될 경우 읽기를 종료해야 할 문자입니다.  
+ The character that should terminate the read if it is encountered before `count`.  
   
  `str`  
- 쓸 수 있는 문자열입니다.  
+ A string in which to write.  
   
  `Ch`  
- 가져올 문자입니다.  
+ A character to get.  
   
  `strbuf`  
- 쓸 수 있는 버퍼입니다.  
+ A buffer in which to write.  
   
-### <a name="return-value"></a>반환 값  
- 매개 변수 없는 형식의 get은 읽은 요소를 정수로서 또는 파일 끝으로서 반환합니다. 나머지 형식은 (* `this`) 스트림을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The parameterless form of get returns the element read as an integer or end of file. The remaining forms return the stream (* `this`).  
   
-### <a name="remarks"></a>설명  
- 형식이 지정되지 않은 이러한 입력 함수 중 첫 번째 함수는 가능한 경우 `rdbuf`-> `sbumpc`를 반환하여 요소를 추출합니다. 아닌 경우 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)를 반환합니다. 요소를 추출하지 않는 경우 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다.  
+### <a name="remarks"></a>Remarks  
+ The first of these unformatted input functions extracts an element, if possible, as if by returning `rdbuf`-> `sbumpc`. Otherwise, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). If the function extracts no element, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
   
- 두 번째 함수도 같은 방법으로 [int_type](../standard-library/basic-ios-class.md#int_type) 요소 `meta`를 추출합니다. `meta`가 **traits_type::eof**와 비교 시 같으면 함수는 `setstate`( **failbit**)를 호출합니다. 같지 않으면 `Ch`에 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`)를 저장합니다. 함수는 **\*this**를 반환합니다.  
+ The second function extracts the [int_type](../standard-library/basic-ios-class.md#int_type) element `meta` the same way. If `meta` compares equal to **traits_type::eof**, the function calls `setstate`( **failbit**). Otherwise, it stores **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) in `Ch`. The function returns **\*this**.  
   
- 세 번째 함수는 **get**(_ *Str*, `count`, `widen`('\ **n**'))을 반환합니다.  
+ The third function returns **get**(_ *Str*, `count`, `widen`('\ **n**')).  
   
- 네 번째 함수는 최대 `count` -1개 요소를 추출하여 _ *Str*로 시작되는 배열에 저장합니다. 함수는 항상 추출하여 저장한 요소 뒤에 `char_type`을 저장합니다. 테스트 순서에서 추출은 다음에서 중지됩니다.  
+ The fourth function extracts up to `count` - 1 elements and stores them in the array beginning at _ *Str*. It always stores `char_type` after any extracted elements it stores. In order of testing, extraction stops:  
   
--   파일의 끝.  
+-   At end of file.  
   
--   함수가 `Delim`과 비교 시 같은 요소를 추출하는 경우, 해당 요소는 제어된 시퀀스로 다시 돌아가게 됩니다.  
+-   After the function extracts an element that compares equal to `Delim`, in which case the element is put back to the controlled sequence.  
   
--   함수가 `count` - 1 요소를 추출한 후.  
+-   After the function extracts `count` - 1 elements.  
   
- 요소를 추출하지 않는 경우 함수는 `setstate`( **failbit**)를 호출합니다. 어떤 경우든 함수는 **\*this**를 반환합니다.  
+ If the function extracts no elements, it calls `setstate`( **failbit**). In any case, it returns **\*this**.  
   
- 다섯 번째 함수는 **get**( **strbuf**, `widen`('\ **n**'))을 반환합니다.  
+ The fifth function returns **get**( **strbuf**, `widen`('\ **n**')).  
   
- 여섯 번째 함수는 요소를 추출하고 **strbuf**에 삽입합니다. 추출되지 않은 _ *Delim*과 비교 시 같은 요소에서 또는 파일의 끝에서 추출이 중지됩니다. 또한 삽입이 실패하거나 예외를 throw하면(catch했지만 다시 throw되지 않음) 문제의 요소를 추출하지 않고 중단합니다. 요소를 추출하지 않는 경우 함수는 `setstate`( **failbit**)를 호출합니다. 어떤 경우든 함수는 **\*this**를 반환합니다.  
+ The sixth function extracts elements and inserts them in **strbuf**. Extraction stops on end-of-file or on an element that compares equal to _ *Delim,* which is not extracted. It also stops, without extracting the element in question, if an insertion fails or throws an exception (which is caught but not rethrown). If the function extracts no elements, it calls `setstate`( **failbit**). In any case, the function returns **\*this**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_get.cpp  
@@ -337,7 +350,7 @@ int main( )
 ```  
   
 ##  <a name="getline"></a>  basic_istream::getline  
- 입력 스트림에서 한 줄을 가져옵니다.  
+ Gets a line from the input stream.  
   
 ```  
 basic_istream<Elem, Tr>& getline(
@@ -350,33 +363,33 @@ basic_istream<Elem, Tr>& getline(
     char_type Delim);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `count`  
- **strbuf**에서 읽을 문자 수입니다.  
+ The number of characters to read from **strbuf**.  
   
  `Delim`  
- `count` 이전에 발견될 경우 읽기를 종료해야 할 문자입니다.  
+ The character that should terminate the read if it is encountered before `count`.  
   
  `str`  
- 쓸 수 있는 문자열입니다.  
+ A string in which to write.  
   
-### <a name="return-value"></a>반환 값  
- 스트림( **\*this**)입니다.  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>설명  
- 형식이 지정되지 않은 이러한 입력 함수의 첫 번째는 **getline**(_ *Str*, `count`, `widen`(' `\`**n**'))을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first of these unformatted input functions returns **getline**(_ *Str*, `count`, `widen`(' `\`**n**')).  
   
- 두 번째 함수는 최대 `count` -1개 요소를 추출하여 _ *Str*로 시작되는 배열에 저장합니다. 함수는 항상 추출하여 저장한 요소 뒤에 문자열 종결 문자를 저장합니다. 테스트 순서에서 추출은 다음에서 중지됩니다.  
+ The second function extracts up to `count` - 1 elements and stores them in the array beginning at _ *Str*. It always stores the string termination character after any extracted elements it stores. In order of testing, extraction stops:  
   
--   파일의 끝.  
+-   At end of file.  
   
--   함수가 `Delim`과 비교 시 같은 요소를 추출하는 경우, 해당 요소는 제어된 시퀀스로 다시 돌아가지도 않고 제어된 시퀀스에 추가되지도 않습니다.  
+-   After the function extracts an element that compares equal to `Delim`, in which case the element is neither put back nor appended to the controlled sequence.  
   
--   함수가 `count` - 1 요소를 추출한 후.  
+-   After the function extracts `count` - 1 elements.  
   
- 요소를 추출하지 않거나 `count` - 1개 요소를 추출하는 경우 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다. 어떤 경우든 함수는 **\*this**를 반환합니다.  
+ If the function extracts no elements or `count` - 1 elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, it returns **\*this**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_getline.cpp  
@@ -399,7 +412,7 @@ int main( )
 ```  
   
 ##  <a name="ignore"></a>  basic_istream::ignore  
- 현재 읽기 위치에서 많은 요소를 건너뜁니다.  
+ Causes a number of elements to be skipped from the current read position.  
   
 ```  
 basic_istream<Elem, Tr>& ignore(
@@ -407,20 +420,20 @@ basic_istream<Elem, Tr>& ignore(
     int_type Delim = traits_type::eof());
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `count`  
- 현재 읽기 위치에서 건너뛸 요소의 수입니다.  
+ The number of elements to skip from the current read position.  
   
  `Delim`  
- count 이전에 발견될 경우 반환을 **ignore**하고 `Delim` 이후의 모든 요소를 읽도록 할 요소입니다.  
+ The element that, if encountered before count, causes **ignore** to return and allowing all elements after `Delim` to be read.  
   
-### <a name="return-value"></a>반환 값  
- 스트림( **\*this**)입니다.  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>설명  
- 형식이 지정되지 않은 입력 함수는 최대 `count`개 요소를 추출하고 삭제합니다. 그러나 `count`가 **numeric_limits\<int>::max**와 같은 경우 임의로 큰 수로 간주됩니다. 요소 또는 파일의 끝에 추출 일찍 중지 `Ch` 되도록 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) 비교 하 여 같은 *Delim* (있는 추출). 함수는 **\*this**를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The unformatted input function extracts up to `count` elements and discards them. If `count` equals **numeric_limits\<int>::max**, however, it is taken as arbitrarily large. Extraction stops early on end of file or on an element `Ch` such that **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) compares equal to *Delim* (which is also extracted). The function returns **\*this**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_ignore.cpp  
@@ -442,9 +455,9 @@ Type 'abcdef': abcdef
 def  
 ```  
   
-##  <a name="op_gt_gt"></a>기본\_istream::operator >>
+##  <a name="op_gt_gt"></a>  basic\_istream::operator>>
   
-입력 스트림에 대해 함수를 호출하거나 입력 스트림에서 형식이 지정된 데이터를 읽습니다.  
+Calls a function on the input stream or reads formatted data from the input stream.  
   
 ```  
 basic_istream& operator>>(basic_istream& (* Pfn)(basic_istream&));
@@ -466,42 +479,42 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Pfn`  
- 함수 포인터입니다.  
+ A function pointer.  
   
  `strbuf`  
- **stream_buf** 형식의 개체입니다.  
+ An object of type **stream_buf**.  
   
  `val`  
- 스트림에서 읽은 값입니다.  
+ The value to read from the stream.  
   
-### <a name="return-value"></a>반환 값  
- 스트림( **\*this**)입니다.  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>설명  
- `<istream>` 헤더도 몇몇 전역 추출 연산자를 정의합니다. 자세한 내용은 [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt)을 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ The `<istream>` header also defines several global extraction operators. For more information, see [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt).  
   
- 첫 번째 멤버 함수는 **istr** >> `ws` 형식의 식이 [ws](../standard-library/istream-functions.md#ws)( **istr**)을 호출한 다음 **\*this**를 반환하도록 합니다. 두 번째와 세 번째 함수는 [hex](../standard-library/ios-functions.md#hex)와 같은 기타 조작자가 비슷하게 동작하도록 합니다. 나머지 함수는 형식이 지정된 입력 함수를 구성합니다.  
+ The first member function ensures that an expression of the form **istr** >> `ws` calls [ws](../standard-library/istream-functions.md#ws)( **istr**), and then returns **\*this**. The second and third functions ensure that other manipulators, such as [hex](../standard-library/ios-functions.md#hex), behave similarly. The remaining functions constitute the formatted input functions.  
   
- 다음 함수는  
+ The function:  
   
 ```  
 basic_istream& operator>>(
     basic_streambuf<Elem, Tr>* strbuf);
 ```  
   
- _ *Strbuf*가 null 포인터가 아닌 경우 요소를 추출하여 `strbuf`에 삽입합니다. 추출은 파일의 끝에서 중지됩니다. 또한 삽입이 실패하거나 예외를 throw하면(catch했지만 다시 throw되지 않음) 문제의 요소를 추출하지 않고 중단합니다. 요소를 추출하지 않는 경우 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다. 어떤 경우든 함수는 **\*this**를 반환합니다.  
+ extracts elements, if _ *Strbuf* is not a null pointer, and inserts them in `strbuf`. Extraction stops on end of file. It also stops without extracting the element in question, if an insertion fails or throws an exception (which is caught but not rethrown). If the function extracts no elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, the function returns **\*this**.  
   
- 다음 함수는  
+ The function:  
   
 ```  
 basic_istream& operator>>(bool& val);
 ```  
   
- 필드를 추출하고 다음을 호출하여 부울 값으로 변환합니다. [use_facet](../standard-library/basic-filebuf-class.md#open) < `num_get`\< **Elem**, **InIt**>( [getloc](../standard-library/ios-base-class.md#getloc)). [get](../standard-library/ios-base-class.md#getloc)( **InIt**( [rdbuf](../standard-library/basic-ios-class.md#rdbuf)), `Init`(0), **\*this**, `getloc`, `val`). 여기서 **InIt**는 [istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)\< **Elem**, **Tr**>로 정의됩니다. 함수는 **\*this**를 반환합니다.  
+ extracts a field and converts it to a Boolean value by calling [use_facet](../standard-library/basic-filebuf-class.md#open) < `num_get`\< **Elem**, **InIt**>( [getloc](../standard-library/ios-base-class.md#getloc)). [get](../standard-library/ios-base-class.md#getloc)( **InIt**( [rdbuf](../standard-library/basic-ios-class.md#rdbuf)), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as [istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)\< **Elem**, **Tr**>. The function returns **\*this**.  
   
- 다음 함수는  
+ The functions:  
   
 ```  
 basic_istream& operator>>(short& val);
@@ -515,11 +528,11 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```  
   
- 각각 필드를 추출하고 다음을 호출하여 숫자 값으로 변환합니다. `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as `istreambuf_iterator`\< **Elem**, **Tr**>, and `val` has type **long**,`unsigned long`, or **void \*** as needed.  
+ each extract a field and convert it to a numeric value by calling `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as `istreambuf_iterator`\< **Elem**, **Tr**>, and `val` has type **long**,`unsigned long`, or **void \*** as needed.  
   
- 변환된 값을 `val`의 형식으로 나타낼 수 없는 경우 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다. 어떤 경우든 함수는 **\*this**를 반환합니다.  
+ If the converted value cannot be represented as the type of `val`, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, the function returns **\*this**.  
   
- 다음 함수는  
+ The functions:  
   
 ```  
 basic_istream& operator>>(float& val);
@@ -527,11 +540,11 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```  
   
- 각각 필드를 추출하고 다음을 호출하여 숫자 값으로 변환합니다. `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). 여기서 **InIt**는 `istreambuf_iterator`\< **Elem**, **Tr**>로 정의되며, `val`은 필요에 따라 **double** 또는 `long double` 형식을 갖습니다.  
+ each extract a field and convert it to a numeric value by calling `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as `istreambuf_iterator`\< **Elem**, **Tr**>, and `val` has type **double** or `long double` as needed.  
   
- 변환된 값을 `val`의 형식으로 나타낼 수 없는 경우 함수는 `setstate`( **failbit**)를 호출합니다. 어떤 경우든 함수는 **\*this**를 반환합니다.  
+ If the converted value cannot be represented as the type of `val`, the function calls `setstate`( **failbit**). In any case, it returns **\*this**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istream_basic_istream_op_is.cpp  
@@ -569,36 +582,36 @@ int main( )
 ```  
   
 ##  <a name="op_eq"></a>  basic_istream::operator=  
- 이 개체에 연산자의 오른쪽에 있는 `basic_istream`을 할당합니다. 복사본을 남기지 않는 `rvalue` 참조와 관련된 이동 할당입니다.  
+ Assigns the `basic_istream` on the right side of the operator to this object. This is a move assignment involving an `rvalue` reference that does not leave a copy behind.  
   
 ```  
 basic_istream& operator=(basic_istream&& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- `basic_ifstream` 개체에 대한 `rvalue` 참조입니다.  
+ An `rvalue` reference to a `basic_ifstream` object.  
   
-### <a name="return-value"></a>반환 값  
- *this를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns *this.  
   
-### <a name="remarks"></a>설명  
- 멤버 연산자는 swap `( right)`를 호출합니다.  
+### <a name="remarks"></a>Remarks  
+ The member operator calls swap `( right)`.  
   
 ##  <a name="peek"></a>  basic_istream::peek  
- 읽을 다음 문자를 반환합니다.  
+ Returns the next character to be read.  
   
 ```  
 int_type peek();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 읽을 다음 문자입니다.  
+### <a name="return-value"></a>Return Value  
+ The next character that will be read.  
   
-### <a name="remarks"></a>설명  
- 형식이 지정되지 않은 입력 함수는 가능한 경우 `rdbuf` -> [sgetc](../standard-library/basic-streambuf-class.md#sgetc)를 반환하여 요소를 추출합니다. 아닌 경우 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The unformatted input function extracts an element, if possible, as if by returning `rdbuf` -> [sgetc](../standard-library/basic-streambuf-class.md#sgetc). Otherwise, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_peek.cpp  
@@ -631,24 +644,24 @@ a abcde
 ```  
   
 ##  <a name="putback"></a>  basic_istream::putback  
- 지정된 문자를 스트림에 넣습니다.  
+ Puts a specified character into the stream.  
   
 ```  
 basic_istream<Elem, Tr>& putback(
     char_type Ch);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 스트림에 다시 배치할 문자입니다.  
+ A character to put back into the stream.  
   
-### <a name="return-value"></a>반환 값  
- 스트림( **\*this**)입니다.  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>설명  
- 가능한 경우 [형식이 지정되지 않은 입력 함수](../standard-library/basic-istream-class.md)는 [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc)를 호출하는 것처럼 `Ch`를 다시 배치합니다. rdbuf가 null 포인터이거나 `sputbackc`에 대한 호출이 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)를 반환하면 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**)를 호출합니다. 어떤 경우든 함수는 **\*this**를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The [unformatted input function](../standard-library/basic-istream-class.md) puts back `Ch`, if possible, as if by calling [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc). If rdbuf is a null pointer, or if the call to `sputbackc` returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). In any case, it returns **\*this**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_putback.cpp  
@@ -674,9 +687,9 @@ qwq
 ```  
   
 ##  <a name="read"></a>  basic_istream::read  
- 스트림에서 지정된 개수의 문자를 읽고 배열에 저장합니다.  
+ Reads a specified number of characters from the stream and stores them in an array.  
   
- 이 메서드는 전달된 값이 정확한지 확인하기 위해 호출자를 사용하므로 보안상 위험할 수 있습니다.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 basic_istream<Elem, Tr>& read(
@@ -684,20 +697,20 @@ basic_istream<Elem, Tr>& read(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- 문자를 읽을 배열입니다.  
+ The array in which to read the characters.  
   
  `count`  
- 읽을 문자 수입니다.  
+ The number of characters to read.  
   
-### <a name="return-value"></a>반환 값  
- 스트림( `*this`)입니다.  
+### <a name="return-value"></a>Return Value  
+ The stream ( `*this`).  
   
-### <a name="remarks"></a>설명  
- 형식이 지정되지 않은 입력 함수는 최대 `count`개 요소를 추출하여 _ `Str`로 시작되는 배열에 저장합니다. 추출은 파일 끝에서 조기에 중지되며, 이 경우 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`)를 호출합니다. 어떤 경우든 `*this`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The unformatted input function extracts up to `count` elements and stores them in the array beginning at _ `Str`. Extraction stops early on end of file, in which case the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`). In any case, it returns `*this`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_read.cpp  
@@ -734,9 +747,9 @@ abcde
 ```  
   
 ##  <a name="readsome"></a>  basic_istream::readsome  
- 지정한 개수의 문자 값을 읽습니다.  
+ Reads the specified number of character values.  
   
- 이 메서드는 전달된 값이 정확한지 확인하기 위해 호출자를 사용하므로 보안상 위험할 수 있습니다.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 streamsize readsome(
@@ -744,22 +757,22 @@ streamsize readsome(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `str`  
- `readsome`이 읽은 문자를 저장하는 배열입니다.  
+ The array in which `readsome` stores the characters it reads.  
   
  `count`  
- 읽을 문자 수입니다.  
+ The number of characters to read.  
   
-### <a name="return-value"></a>반환 값  
- 실제로 읽은 문자 수 [gcount](#gcount)입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of characters actually read, [gcount](#gcount).  
   
-### <a name="remarks"></a>설명  
- 형식이 지정되지 않은 입력 함수는 입력 스트림에서 최대 `count`개 요소를 추출하여 `str` 배열에 저장합니다.  
+### <a name="remarks"></a>Remarks  
+ This unformatted input function extracts up to `count` elements from the input stream and stores them in the array `str`.  
   
- 이 함수는 입력을 기다리지 않고, 읽을 수 있는 데이터는 무엇이든 읽습니다.  
+ This function does not wait for input. It reads whatever data is available.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_readsome.cpp  
@@ -789,7 +802,7 @@ int main( )
 ```  
   
 ##  <a name="seekg"></a>  basic_istream::seekg  
- 스트림에서 읽기 위치를 이동합니다.  
+ Moves the read position in a stream.  
   
 ```  
 basic_istream<Elem, Tr>& seekg(pos_type pos);
@@ -797,30 +810,30 @@ basic_istream<Elem, Tr>& seekg(pos_type pos);
 basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pos`  
- 읽기 포인터를 이동할 절대 위치입니다.  
+ The absolute position in which to move the read pointer.  
   
  `off`  
- `way`를 기준으로 읽기 포인터를 이동할 오프셋입니다.  
+ An offset to move the read pointer relative to `way`.  
   
  `way`  
- [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 열거형 중 하나입니다.  
+ One of the [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) enumerations.  
   
-### <a name="return-value"></a>반환 값  
- 스트림( **\*this**)입니다.  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>설명  
- 첫 번째 멤버 함수는 절대 검색을 수행하고 두 번째 멤버 함수는 상대 검색을 수행합니다.  
+### <a name="remarks"></a>Remarks  
+ The first member function performs an absolute seek, the second member function performs a relative seek.  
   
 > [!NOTE]
->  표준 C++는 텍스트 파일에서 상대 검색을 지원하지 않으므로 두 번째 멤버 함수를 텍스트 파일과 함께 사용하지 마세요.  
+>  Do not use the second member function with text files, because Standard C++ does not support relative seeks in text files.  
   
- [fail](../standard-library/basic-ios-class.md#fail)이 false인 경우, 첫 번째 입력 함수는 일부 **pos_type** 임시 개체 **newpos**에 대해 **newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`)를 호출합니다. **fail**이 false인 경우 두 번째 함수는 **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`)를 호출합니다. 어떤 경우든 ( `off_type`) **newpos** == ( `off_type`)(-1)(배치 작업 실패)이면 함수는 **istr**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다. 두 함수 모두 **\*this**를 반환합니다.  
+ If [fail](../standard-library/basic-ios-class.md#fail) is false, the first member function calls **newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`), for some **pos_type** temporary object **newpos**. If **fail** is false, the second function calls **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`). In either case, if ( `off_type`) **newpos** == ( `off_type`)(-1) (the positioning operation fails), the function calls **istr**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Both functions return **\*this**.  
   
- [fail](../standard-library/basic-ios-class.md#fail)이 true인 경우 멤버 함수는 아무 작업도 수행하지 않습니다.  
+ If [fail](../standard-library/basic-ios-class.md#fail) is true, the member functions do nothing.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_seekg.cpp  
@@ -842,60 +855,60 @@ int main ( )
 ```  
   
 ##  <a name="sentry"></a>  basic_istream::sentry  
- 중첩된 클래스는 선언에서 형식이 지정된 입력 함수 및 형식이 지정되지 않은 입력 함수를 구성하는 개체를 설명합니다.  
+ The nested class describes an object whose declaration structures the formatted and unformatted input functions.  
   
 class sentry {  
    public:  
    explicit sentry( basic_istream\<Elem, Tr>& _Istr,  
    bool _Noskip = false); operator bool() const; };  
   
-### <a name="remarks"></a>설명  
- `_Istr``.`[good](../standard-library/basic-ios-class.md#good)이 true인 경우 생성자는  
+### <a name="remarks"></a>Remarks  
+ If `_Istr.`[good](../standard-library/basic-ios-class.md#good) is true, the constructor:  
   
--   `_Istr`. [tie](../standard-library/basic-ios-class.md#tie) -> [flush](../standard-library/basic-ostream-class.md#flush)를 호출합니다(`_Istr`. `tie`가 null 포인터가 아닌 경우).  
+-   Calls `_Istr`. [tie](../standard-library/basic-ios-class.md#tie) -> [flush](../standard-library/basic-ostream-class.md#flush) if `_Istr`. `tie` is not a null pointer  
   
--   `_Istr`인 경우 실제로 [ws](../standard-library/istream-functions.md#ws)( `_Istr`)을 호출합니다. ([flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws)가 0이 아닌 경우).  
+-   Effectively calls [ws](../standard-library/istream-functions.md#ws)( `_Istr`) if `_Istr`. [flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) is nonzero  
   
- 이러한 준비 작업 후 `_Istr`. **good**이 false이면 생성자는 `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다. 어떤 경우든 생성자는 `_Istr`. **good**에 의해 반환된 값을 **status**에 저장합니다. 나중에 **operator bool**을 호출하면 저장된 이 값이 전달됩니다.  
+ If, after any such preparation, `_Istr`. **good** is false, the constructor calls `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, the constructor stores the value returned by `_Istr`. **good** in **status**. A later call to **operator bool** delivers this stored value.  
   
 ##  <a name="swap"></a>  basic_istream::swap  
- 두 `basic_istream` 개체의 내용을 교환합니다.  
+ Exchanges the contents of two `basic_istream` objects.  
   
 ```  
 void swap(basic_istream& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- `basic_istream` 개체에 대한 lvalue 참조입니다.  
+ An lvalue reference to a `basic_istream` object.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 [basic_ios:: swap](../standard-library/basic-ios-class.md#swap)`(``right``)`를 호출합니다. 또한 추출 개수를 `right`에 대한 추출 개수로 교환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function calls [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)`. It also exchanges the extraction count with the extraction count for `right`.  
   
 ##  <a name="sync"></a>  basic_istream::sync  
- 스트림과 연결된 입력 장치를 스트림 버퍼와 동기화합니다.  
+ Synchronizes the input device associated with the stream with the stream's buffer.  
   
 ```  
 int sync();
 ```  
   
-### <a name="return-value"></a>반환 값  
- [rdbuf](../standard-library/basic-ios-class.md#rdbuf)가 null 포인터인 경우 함수는 -1을 반환하고, 아닌 경우 `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync)를 호출합니다. -1이 반환되는 경우 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**)를 호출하고 -1을 반환합니다. 아닌 경우 함수는 0을 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ If [rdbuf](../standard-library/basic-ios-class.md#rdbuf) is a null pointer, the function returns -1. Otherwise, it calls `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync). If that returns -1, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**) and returns -1. Otherwise, the function returns zero.  
   
 ##  <a name="tellg"></a>  basic_istream::tellg  
- 스트림에서 현재 읽기 위치를 보고합니다.  
+ Reports the current read position in the stream.  
   
 ```  
 pos_type tellg();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 스트림 내의 현재 위치입니다.  
+### <a name="return-value"></a>Return Value  
+ The current position in the stream.  
   
-### <a name="remarks"></a>설명  
- [fail](../standard-library/basic-ios-class.md#fail)이 false인 경우 멤버 함수는 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**)을 반환합니다. 아닌 경우 `pos_type`(-1)을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ If [fail](../standard-library/basic-ios-class.md#fail) is false, the member function returns [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Otherwise, it returns `pos_type`(-1).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_tellg.cpp  
@@ -922,21 +935,21 @@ int main()
 ```  
   
 ##  <a name="unget"></a>  basic_istream::unget  
- 가장 최근에 읽은 문자를 다시 스트림에 넣습니다.  
+ Puts the most recently read character back into the stream.  
   
 ```  
 basic_istream<Elem, Tr>& unget();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 스트림( **\*this**)입니다.  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>설명  
- 가능한 경우 [형식이 지정되지 않은 입력 함수](../standard-library/basic-istream-class.md)는 `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc)를 호출하는 것처럼 이전 요소를 스트림에 다시 배치합니다. [rdbuf](../standard-library/basic-ios-class.md#rdbuf)가 null 포인터이거나 `sungetc`에 대한 호출이 **traits_type::**[eof](../standard-library/basic-ios-class.md#eof)를 반환하면 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**)를 호출합니다. 어떤 경우든 함수는 **\*this**를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The [unformatted input function](../standard-library/basic-istream-class.md) puts back the previous element in the stream, if possible, as if by calling `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc). If [rdbuf](../standard-library/basic-ios-class.md#rdbuf) is a null pointer, or if the call to `sungetc` returns **traits_type::**[eof](../standard-library/basic-ios-class.md#eof), the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). In any case, it returns **\*this**.  
   
- `unget`이 실패할 수 있는 방법에 대한 자세한 내용은 [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc)를 참조하세요.  
+ For information on how `unget` might fail, see [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_unget.cpp  
@@ -968,9 +981,9 @@ abc
 abc  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 프로그래밍](../standard-library/iostream-programming.md)   
- [iostreams 규칙](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

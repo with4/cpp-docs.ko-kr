@@ -1,5 +1,5 @@
 ---
-title: "codecvt_base 클래스 | Microsoft 문서"
+title: codecvt_base Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_base
 - xlocale/std::codecvt_base
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d0c12f0dfb1b0ceb111f3c3313e78dd5c9197f70
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 892bdf1e5169bef9e057ac699ea91eddc184584a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="codecvtbase-class"></a>codecvt_base 클래스
-**result**로 나타내는 열거형을 정의하는 데 사용하는 codecvt 클래스의 기본 클래스입니다. result는 변환 결과를 나타내기 위해 패싯 멤버 함수에 대한 반환 형식으로 사용됩니다.  
+# <a name="codecvtbase-class"></a>codecvt_base Class
+A base class for the codecvt class that is used to define an enumeration type referred to as **result**, used as the return type for the facet member functions to indicate the result of a conversion.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 class codecvt_base : public locale::facet {
@@ -63,24 +62,24 @@ protected:
 };
 ```  
   
-## <a name="remarks"></a>설명  
- 이 클래스는 템플릿 클래스 [codecvt](../standard-library/codecvt-class.md)의 모든 특수화에 공통적인 열거형을 설명합니다. 열거형 결과는 다음과 같이 [do_in](../standard-library/codecvt-class.md#do_in) 또는 [do_out](../standard-library/codecvt-class.md#do_out)의 가능한 반환 값을 설명합니다.  
+## <a name="remarks"></a>Remarks  
+ The class describes an enumeration common to all specializations of template class [codecvt](../standard-library/codecvt-class.md). The enumeration result describes the possible return values from [do_in](../standard-library/codecvt-class.md#do_in) or [do_out](../standard-library/codecvt-class.md#do_out):  
   
-- 내부 문자 인코딩과 외부 문자 인코딩 간 변환에 성공한 경우 **ok**  
+- **ok** if the conversion between internal and external character encodings succeeds.  
   
-- 변환이 성공하기에는 대상이 충분히 크지 않은 경우 **partial**  
+- **partial** if the destination is not large enough for the conversion to succeed.  
   
-- 소스 시퀀스의 형식이 잘못된 경우 **error**  
+- **error** if the source sequence is ill formed.  
   
-- 함수가 변환을 수행하지 않은 경우 **noconv**  
+- **noconv** if the function performs no conversion.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

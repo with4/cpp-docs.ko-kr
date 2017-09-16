@@ -1,5 +1,5 @@
 ---
-title: "CTypedPtrArray 클래스 | Microsoft 문서"
+title: CTypedPtrArray Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,8 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- pointer arrays
-- CTypedPtrArray class
+- CTypedPtrArray [MFC], Add
+- CTypedPtrArray [MFC], Append
+- CTypedPtrArray [MFC], Copy
+- CTypedPtrArray [MFC], ElementAt
+- CTypedPtrArray [MFC], GetAt
+- CTypedPtrArray [MFC], InsertAt
+- CTypedPtrArray [MFC], SetAt
+- CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
 caps.latest.revision: 22
 author: mikeblome
@@ -43,173 +49,173 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 24b21d017d46cc88d7e243aff75ccf6383d2c870
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0280c1e23c0ce5f503d25cc89b3b839cdef39b79
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctypedptrarray-class"></a>CTypedPtrArray 클래스
-`CPtrArray` 또는 `CObArray`클래스의 개체에 대해 형식 안전 "래퍼"를 제공합니다.  
+# <a name="ctypedptrarray-class"></a>CTypedPtrArray Class
+Provides a type-safe "wrapper" for objects of class `CPtrArray` or `CObArray`.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class BASE_CLASS, class TYPE>  
 class CTypedPtrArray : public BASE_CLASS  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `BASE_CLASS`  
- 형식화 된 포인터 배열 클래스의 기본 클래스 배열 클래스 여야 합니다 ( `CObArray` 또는 `CPtrArray`).  
+ Base class of the typed pointer array class; must be an array class ( `CObArray` or `CPtrArray`).  
   
  `TYPE`  
- 기본 클래스 배열에 저장 된 요소의 형식입니다.  
+ Type of the elements stored in the base-class array.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTypedPtrArray::Add](#add)|배열의 끝에 새 요소를 추가합니다. 필요한 경우 배열을 확장합니다|  
-|[CTypedPtrArray::Append](#append)|한 배열의 내용을 다른 끝에 추가합니다. 필요한 경우 배열을 확장합니다|  
-|[CTypedPtrArray::Copy](#copy)|배열에 다른 배열을 복사하고 필요하면 배열을 확장합니다.|  
-|[CTypedPtrArray::ElementAt](#elementat)|배열 내의 요소 포인터에 대한 임시 참조를 반환합니다.|  
-|[CTypedPtrArray::GetAt](#getat)|지정된 인덱스의 값을 반환합니다.|  
-|[CTypedPtrArray::InsertAt](#insertat)|지정한 인덱스에 요소 하나 또는 다른 배열의 모든 요소를 삽입합니다.|  
-|[CTypedPtrArray::SetAt](#setat)|지정된 인덱스의 값을 설정합니다. 배열은 확장할 수 없습니다.|  
-|[CTypedPtrArray::SetAtGrow](#setatgrow)|지정된 인덱스의 값을 설정합니다. 필요한 경우 배열을 확장합니다.|  
+|[CTypedPtrArray::Add](#add)|Adds a new element to the end of an array. Grows the array if necessary|  
+|[CTypedPtrArray::Append](#append)|Adds the contents of one array to the end of another. Grows the array if necessary|  
+|[CTypedPtrArray::Copy](#copy)|Copies another array to the array; grows the array if necessary.|  
+|[CTypedPtrArray::ElementAt](#elementat)|Returns a temporary reference to the element pointer within the array.|  
+|[CTypedPtrArray::GetAt](#getat)|Returns the value at a given index.|  
+|[CTypedPtrArray::InsertAt](#insertat)|Inserts an element (or all the elements in another array) at a specified index.|  
+|[CTypedPtrArray::SetAt](#setat)|Sets the value for a given index; array not allowed to grow.|  
+|[CTypedPtrArray::SetAtGrow](#setatgrow)|Sets the value for a given index; grows the array if necessary.|  
   
-### <a name="public-operators"></a>Public 연산자  
+### <a name="public-operators"></a>Public Operators  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTypedPtrArray::operator]](#operator_at)|지정한 인덱스에 있는 요소를 설정하거나 가져옵니다.|  
+|[CTypedPtrArray::operator [ ]](#operator_at)|Sets or gets the element at the specified index.|  
   
-## <a name="remarks"></a>주의  
- 사용 하는 경우 `CTypedPtrArray` 대신 `CPtrArray` 또는 `CObArray`, c + + 형식 검사 기능에 짝이 맞지 않는 포인터 형식으로 인 한 오류를 제거 하는 데 도움이 됩니다.  
+## <a name="remarks"></a>Remarks  
+ When you use `CTypedPtrArray` rather than `CPtrArray` or `CObArray`, the C++ type-checking facility helps eliminate errors caused by mismatched pointer types.  
   
- 또한는 `CTypedPtrArray` 많이 사용 하는 경우 필요할 수 캐스팅을 수행 하는 래퍼 `CObArray` 또는 `CPtrArray`합니다.  
+ In addition, the `CTypedPtrArray` wrapper performs much of the casting that would be required if you used `CObArray` or `CPtrArray`.  
   
- 때문에 모든 `CTypedPtrArray` 함수는 인라인, 크기 또는 코드의 속도이 템플릿을 사용 하 여 크게 적용 되지 않습니다.  
+ Because all `CTypedPtrArray` functions are inline, use of this template does not significantly affect the size or speed of your code.  
   
- 사용 하 여 대 한 자세한 내용은 `CTypedPtrArray`, 문서를 참조 [컬렉션](../../mfc/collections.md) 및 [템플릿 기반 클래스](../../mfc/template-based-classes.md)합니다.  
+ For more information on using `CTypedPtrArray`, see the articles [Collections](../../mfc/collections.md) and [Template-Based Classes](../../mfc/template-based-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `BASE_CLASS`  
   
  `CTypedPtrArray`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtempl.h  
   
-##  <a name="add"></a>CTypedPtrArray::Add  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: 추가**합니다.  
+##  <a name="add"></a>  CTypedPtrArray::Add  
+ This member function calls `BASE_CLASS`**::Add**.  
   
 ```  
 INT_PTR Add(TYPE newElement);
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 배열에 추가할 요소의 종류를 지정 하는 템플릿 매개 변수  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of element to be added to the array.  
   
  `newElement`  
- 이 배열에 추가할 요소입니다.  
+ The element to be added to this array.  
   
-### <a name="return-value"></a>반환 값  
- 추가 된 요소의 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the added element.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 자세한 설명 부분 참조 [CObArray::Add](../../mfc/reference/cobarray-class.md#add)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
   
-##  <a name="append"></a>CTypedPtrArray::Append  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: Append**합니다.  
+##  <a name="append"></a>  CTypedPtrArray::Append  
+ This member function calls `BASE_CLASS`**::Append**.  
   
 ```  
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `BASE_CLASS`  
- 형식화 된 포인터 배열 클래스의 기본 클래스 배열 클래스 여야 합니다 ( [CObArray](../../mfc/reference/cobarray-class.md) 또는 [사용할 때](../../mfc/reference/cptrarray-class.md)).  
+ Base class of the typed pointer array class; must be an array class ( [CObArray](../../mfc/reference/cobarray-class.md) or [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
- *형식*  
- 기본 클래스 배열에 저장 된 요소의 형식입니다.  
+ *TYPE*  
+ Type of the elements stored in the base-class array.  
   
  *src*  
- 소스 배열에 추가할 요소입니다.  
+ Source of the elements to be appended to an array.  
   
-### <a name="return-value"></a>반환 값  
- 추가 된 첫 번째 요소의 인덱스입니다.  
+### <a name="return-value"></a>Return Value  
+ The index of the first appended element.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 자세한 설명 부분 참조 [CObArray::Append](../../mfc/reference/cobarray-class.md#append)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CObArray::Append](../../mfc/reference/cobarray-class.md#append).  
   
-##  <a name="copy"></a>CTypedPtrArray::Copy  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: 복사**합니다.  
+##  <a name="copy"></a>  CTypedPtrArray::Copy  
+ This member function calls `BASE_CLASS`**::Copy**.  
   
 ```  
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `BASE_CLASS`  
- 형식화 된 포인터 배열 클래스의 기본 클래스 배열 클래스 여야 합니다 ( [CObArray](../../mfc/reference/cobarray-class.md) 또는 [사용할 때](../../mfc/reference/cptrarray-class.md)).  
+ Base class of the typed pointer array class; must be an array class ( [CObArray](../../mfc/reference/cobarray-class.md) or [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
- *형식*  
- 기본 클래스 배열에 저장 된 요소의 형식입니다.  
+ *TYPE*  
+ Type of the elements stored in the base-class array.  
   
  *src*  
- 요소를 배열에 복사의 원본입니다.  
+ Source of the elements to be copied to an array.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 자세한 설명 부분 참조 [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).  
   
-##  <a name="elementat"></a>CTypedPtrArray::ElementAt  
- 이 인라인 함수를 호출 `BASE_CLASS` **:: ElementAt**합니다.  
+##  <a name="elementat"></a>  CTypedPtrArray::ElementAt  
+ This inline function calls `BASE_CLASS`**::ElementAt**.  
   
 ```  
 TYPE& ElementAt(INT_PTR nIndex);
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 이 배열에 저장 된 요소의 유형을 지정 하는 템플릿 매개 변수  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in this array.  
   
  `nIndex`  
- 0 보다 크거나 같은 경우에 있는 정수 인덱스 및 반환 하는 값 보다 작거나 `BASE_CLASS` **:: GetUpperBound**합니다.  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by `BASE_CLASS`**::GetUpperBound**.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 위치에 있는 요소에 대 한 임시 참조를 `nIndex`합니다. 이 요소는 템플릿 매개 변수로 지정 된 형식의 *형식*합니다.  
+### <a name="return-value"></a>Return Value  
+ A temporary reference to the element at the location specified by `nIndex`. This element is of the type specified by the template parameter *TYPE*.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 자세한 설명 부분 참조 [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
   
-##  <a name="getat"></a>CTypedPtrArray::GetAt  
- 이 인라인 함수를 호출 `BASE_CLASS` **:: GetAt**합니다.  
+##  <a name="getat"></a>  CTypedPtrArray::GetAt  
+ This inline function calls `BASE_CLASS`**::GetAt**.  
   
 ```  
 TYPE GetAt(INT_PTR nIndex) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수 배열에 저장 된 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the array.  
   
  `nIndex`  
- 0 보다 크거나 같은 경우에 있는 정수 인덱스 및 반환 하는 값 보다 작거나 `BASE_CLASS` **:: GetUpperBound**합니다.  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by `BASE_CLASS`**::GetUpperBound**.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 위치에 있는 요소의 복사본 `nIndex`합니다. 이 요소는 템플릿 매개 변수로 지정 된 형식의 *형식*합니다.  
+### <a name="return-value"></a>Return Value  
+ A copy of the element at the location specified by `nIndex`. This element is of the type specified by the template parameter *TYPE*.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 자세한 설명 부분 참조 [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
   
-##  <a name="insertat"></a>CTypedPtrArray::InsertAt  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: InsertAt**합니다.  
+##  <a name="insertat"></a>  CTypedPtrArray::InsertAt  
+ This member function calls `BASE_CLASS`**::InsertAt**.  
   
 ```  
 void InsertAt(
@@ -223,53 +229,53 @@ void InsertAt(
     CTypedPtrArray<BASE_CLASS, TYPE>* pNewArray);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 반환 된 값 보다 클 수 있는 정수 인덱스 [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)합니다.  
+ An integer index that may be greater than the value returned by [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
- *형식*  
- 기본 클래스 배열에 저장 된 요소의 형식입니다.  
+ *TYPE*  
+ Type of the elements stored in the base-class array.  
   
  `newElement`  
- 이 배열에 배치 될 개체 포인터입니다. A `newElement` 값의 **NULL** 허용 됩니다.  
+ The object pointer to be placed in this array. A `newElement` of value **NULL** is allowed.  
   
  `nCount`  
- 이 요소가 해야 하는 횟수 (기본값: 1)를 삽입 합니다.  
+ The number of times this element should be inserted (defaults to 1).  
   
  `nStartIndex`  
- 반환 된 값 보다 클 수 있는 정수 인덱스 `CObArray::GetUpperBound`합니다.  
+ An integer index that may be greater than the value returned by `CObArray::GetUpperBound`.  
   
  `BASE_CLASS`  
- 형식화 된 포인터 배열 클래스의 기본 클래스 배열 클래스 여야 합니다 ( [CObArray](../../mfc/reference/cobarray-class.md) 또는 [사용할 때](../../mfc/reference/cptrarray-class.md)).  
+ Base class of the typed pointer array class; must be an array class ( [CObArray](../../mfc/reference/cobarray-class.md) or [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  `pNewArray`  
- 이 배열에 추가할 요소를 포함 하는 또 다른 배열입니다.  
+ Another array that contains elements to be added to this array.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 자세한 설명 부분 참조 [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).  
   
-##  <a name="operator_at"></a>CTypedPtrArray::operator]  
- 이러한 인라인 연산자 호출 `BASE_CLASS` **:: operator**합니다.  
+##  <a name="operator_at"></a>  CTypedPtrArray::operator [ ]  
+ These inline operators call `BASE_CLASS`**::operator [ ]**.  
   
 ```  
 TYPE& operator[ ](int_ptr nindex);  
 TYPE operator[ ](int_ptr nindex) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
- *형식*  
- 템플릿 매개 변수 배열에 저장 된 요소의 형식을 지정 합니다.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the array.  
   
  `nIndex`  
- 0 보다 크거나 같은 경우에 있는 정수 인덱스 및 반환 하는 값 보다 작거나 `BASE_CLASS` **:: GetUpperBound**합니다.  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by `BASE_CLASS`**::GetUpperBound**.  
   
-### <a name="remarks"></a>주의  
- 첫 번째 연산자를 호출 하지 않은 배열에 대 한 **const**, 대입문의 왼쪽 (l 값) 또는 오른쪽 (r-value)에서 사용할 수 있습니다. 두 번째 호출에 대 한 **const** 배열, 오른쪽에만 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ The first operator, called for arrays that are not **const**, can be used on either the right (r-value) or the left (l-value) of an assignment statement. The second, invoked for **const** arrays, can be used only on the right.  
   
- 라이브러리의 디버그 버전의 아래 첨자 (중 하나에 대입문의 왼쪽 또는 오른쪽) 범위를 벗어났습니다 하는 경우를 가정 합니다.  
+ The Debug version of the library asserts if the subscript (either on the left or right side of an assignment statement) is out of bounds.  
   
-##  <a name="setat"></a>CTypedPtrArray::SetAt  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: SetAt**합니다.  
+##  <a name="setat"></a>  CTypedPtrArray::SetAt  
+ This member function calls `BASE_CLASS`**::SetAt**.  
   
 ```  
 void SetAt(
@@ -277,21 +283,21 @@ void SetAt(
     TYPE ptr);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 0 보다 크거나 같은 경우에 있는 정수 인덱스 및 반환 하는 값 보다 작거나 [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)합니다.  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
- *형식*  
- 기본 클래스 배열에 저장 된 요소의 형식입니다.  
+ *TYPE*  
+ Type of the elements stored in the base-class array.  
   
  *ptr*  
- 포인터는 nIndex 배열에 삽입할 요소입니다. NULL 값이 허용 됩니다.  
+ A pointer to the element to be inserted in the array at the nIndex. A NULL value is allowed.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 자세한 설명 부분 참조 [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).  
   
-##  <a name="setatgrow"></a>CTypedPtrArray::SetAtGrow  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: SetAtGrow**합니다.  
+##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow  
+ This member function calls `BASE_CLASS`**::SetAtGrow**.  
   
 ```  
 void SetAtGrow(
@@ -299,22 +305,22 @@ void SetAtGrow(
     TYPE newElement);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 정수 인덱스는 0 보다 크거나 같은 경우입니다.  
+ An integer index that is greater than or equal to 0.  
   
- *형식*  
- 기본 클래스 배열에 저장 된 요소의 형식입니다.  
+ *TYPE*  
+ Type of the elements stored in the base-class array.  
   
  `newElement`  
- 이 배열에 추가할 개체 포인터입니다. A **NULL** 값은 사용할 수 있습니다.  
+ The object pointer to be added to this array. A **NULL** value is allowed.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 자세한 설명 부분 참조 [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플을 수집](../../visual-cpp-samples.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [사용할 때 클래스](../../mfc/reference/cptrarray-class.md)   
- [CObArray 클래스](../../mfc/reference/cobarray-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CPtrArray Class](../../mfc/reference/cptrarray-class.md)   
+ [CObArray Class](../../mfc/reference/cobarray-class.md)
 

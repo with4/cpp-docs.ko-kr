@@ -1,5 +1,5 @@
 ---
-title: "seed_seq 클래스 | Microsoft Docs"
+title: seed_seq Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- seed_seq
 - random/std::seed_seq
 - random/std::seed_seq::result_type
 - random/std::seed_seq::generate
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- seed_seq class
+- std::seed_seq [C++]
+- std::seed_seq [C++], result_type
+- std::seed_seq [C++], generate
+- std::seed_seq [C++], size
+- std::seed_seq [C++], param
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
 caps.latest.revision: 19
 author: corob-msft
@@ -38,17 +41,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: b637e311971b71564244f9bbdcfc37973a514710
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bbcb40d865c562cca2f8cc2b427fbf93a7c9d191
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="seedseq-class"></a>seed_seq 클래스
-난수 엔진에 필요한 임의 시드를 공급할 수 있는 부호가 없는 정수 값의 벡터를 저장합니다.  
+# <a name="seedseq-class"></a>seed_seq Class
+Stores a vector of unsigned integer values that can supply a randomized seed for a random-number engine.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 ```  
 class seed_seq  
    {  
@@ -77,40 +80,40 @@ public:
    void operator=(const seed_seq&) = delete;  
    };  
 ```  
-## <a name="types"></a>유형  
+## <a name="types"></a>Types  
  `typedef unsigned int result_type;`   
-시드 시퀀스 요소의 형식입니다. 32비트 부호 없는 정수 형식입니다.  
+The type of the elements of the seed sequence. A 32-bit unsigned integer type.  
   
-## <a name="constructors"></a>생성자  
+## <a name="constructors"></a>Constructors  
  `seed_seq();`   
-기본 생성자로, 빈 내부 시퀀스를 포함하도록 초기화됩니다.  
+Default constructor, initializes to have an empty internal sequence.  
   
  `template<class T>`   
  `seed_seq(initializer_list<T> initlist);`   
-`initlist`를 사용하여 내부 시퀀스를 설정합니다.                   
-`T`은 정수 유형이어야 합니다.  
+Uses `initlist` to set the internal sequence.                   
+`T` must be an integer type.  
   
  `template<class InputIterator>`   
  `seed_seq(InputIterator begin, InputIterator end);`   
-제공된 입력 반복기 범위에 있는 모든 요소를 사용하여 내부 시퀀스를 초기화합니다.                  
-`iterator_traits<InputIterator>::value_type`은 정수 유형이어야 합니다.  
+Initializes the internal sequence using all elements in the input iterator range provided.                  
+`iterator_traits<InputIterator>::value_type` must be an integer type.  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="generating-functions"></a>생성 함수  
+### <a name="generating-functions"></a>Generating Functions  
  `template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);`   
-내부 알고리즘을 사용하여 제공된 시퀀스의 요소를 채웁니다. 이 알고리즘은 `seed_seq`를 초기화한 내부 시퀀스의 영향을 받습니다.                          
-`begin == end`이면 아무 작업도 수행하지 않습니다.  
+Populates the elements of the provided sequence using an internal algorithm. This algorithm is affected by the internal sequence with which `seed_seq` was initialized.                          
+Does nothing if `begin == end`.  
   
-### <a name="property-functions"></a>속성 함수  
+### <a name="property-functions"></a>Property Functions  
  `size_t size() const;`   
-`seed_seq`에 있는 요소 수를 반환합니다.  
+Returns the number of elements in the `seed_seq`.  
   
  `template<class OutputIterator> void param(OutputIterator dest) const;`   
-내부 시퀀스를 출력 반복기 `dest`에 복사합니다.  
+Copies the internal sequence into the output iterator `dest`.  
   
-## <a name="example"></a>예제  
- 다음 코드 예제는 생성자&3;개를 사용하여 배열에 할당된 경우 결과 `seed_seq` 인스턴스에서 출력을 생성합니다. 난수 생성기와 함께 `seed_seq`를 사용하는 예제는 [\<random>](../standard-library/random.md)을 참조하세요.  
+## <a name="example"></a>Example  
+ The following code example exercises the three constructors and generates output from the resulting `seed_seq` instances when assigned to an array. For an example that uses `seed_seq` with a random number generator, see [\<random>](../standard-library/random.md).  
   
 ```cpp  
 #include <iostream>  
@@ -177,15 +180,15 @@ Generating a sequence of 5 elements into an array:
 1985355432  
 ```  
   
-## <a name="remarks"></a>설명  
- 이 클래스의 구성원 함수는 예외를 throw하지 않습니다.  
+## <a name="remarks"></a>Remarks  
+ Member functions of this class do not throw exceptions.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

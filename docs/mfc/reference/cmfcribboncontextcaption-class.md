@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonContextCaption 클래스 | Microsoft 문서"
+title: CMFCRibbonContextCaption Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonContextCaption class
+- CMFCRibbonContextCaption [MFC], GetColor
+- CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
 caps.latest.revision: 24
 author: mikeblome
@@ -36,39 +37,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 54f71af5ec46a8ddac4459e9ffdbc5b10f3106d4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b5d6e65bc5b40c867f54a6cf80a39645eb7e18e4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption 클래스
-리본 범주 맨 위 또는 컨텍스트 범주에 나타나는 색 지정된 캡션을 구현합니다.  
+# <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption Class
+Implements a colored caption that appears at the top of a ribbon category or a context category.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonContextCaption : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonContextCaption::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|  
-|[CMFCRibbonContextCaption::GetColor](#getcolor)|캡션 색을 반환합니다.|  
+|`CMFCRibbonContextCaption::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCRibbonContextCaption::GetColor](#getcolor)|Returns the color of the caption.|  
 |[CMFCRibbonContextCaption::GetRightTabX](#getrighttabx)||  
-|`CMFCRibbonContextCaption::GetThisClass`|에 대 한 포인터를 가져오는 데 프레임 워크에 의해는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 이 클래스 형식으로 연결 된 개체입니다.|  
+|`CMFCRibbonContextCaption::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
   
-## <a name="remarks"></a>주의  
- 이 클래스는 직접 인스턴스화할 수 없습니다. [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md) 클래스를 사용 하 여이 클래스 내부적으로 리본 범주에 색을 추가 합니다.  
+## <a name="remarks"></a>Remarks  
+ This class cannot be directly instantiated. The [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) class uses this class internally to add color to ribbon categories.  
   
- 리본 범주에 대 한 색을 설정 하려면 호출 [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)합니다. 호출 컨텍스트 범주에 대 한 색을 설정 하려면 [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)합니다.  
+ To set the color for ribbon categories, call [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor). To set the color for context categories, call [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -77,18 +78,18 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
   
  [CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md)  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxRibbonBar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonBar.h  
   
-##  <a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
- 캡션의 배경색을 반환 합니다.  
+##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor  
+ Returns the background color of the caption.  
   
 ```  
 AFX_RibbonCategoryColor GetColor() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 반환 된 값은 다음 열거형된 값 중 하나일 수 있습니다.  
+### <a name="return-value"></a>Return Value  
+ The returned value can be one of the following enumerated values:  
   
 - `AFX_CategoryColor_None`  
   
@@ -106,25 +107,25 @@ AFX_RibbonCategoryColor GetColor() const;
   
 - `AFX_CategoryColor_Violet`  
   
-### <a name="remarks"></a>주의  
- 호출 하 여의 캡션 색을 설정할 수 있습니다 [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) 또는 [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)합니다.  
+### <a name="remarks"></a>Remarks  
+ The color of the caption can be set by calling [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) or [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
   
-##  <a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
- 범주의 리본 탭의 오른쪽 가장자리의 위치를 검색합니다.  
+##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX  
+ Retrieves the position of the right-hand edge of the category’s ribbon tab.  
   
 ```  
 int GetRightTabX() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 둘러싸는 사각형의 오른쪽 X 값을 반환 된 `CMFCRibbonCategory` 개체의 리본 탭 또는 탭 잘린 경우-1 값입니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the right-hand X-value of the enclosing rectangle of the `CMFCRibbonCategory` object’s ribbon tab, or a value of -1 if the tab is truncated.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [클래스](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton 클래스](../../mfc/reference/cmfcribbonbutton-class.md)   
- [CMFCRibbonCategory 클래스](../../mfc/reference/cmfcribboncategory-class.md)   
- [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)   
+ [CMFCRibbonCategory Class](../../mfc/reference/cmfcribboncategory-class.md)   
+ [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)
 

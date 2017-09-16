@@ -1,5 +1,5 @@
 ---
-title: "CDHtmlDialog 클래스 | Microsoft 문서"
+title: CDHtmlDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -69,7 +69,61 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDHtmlDialog class
+- CDHtmlDialog [MFC], CDHtmlDialog
+- CDHtmlDialog [MFC], CanAccessExternal
+- CDHtmlDialog [MFC], CreateControlSite
+- CDHtmlDialog [MFC], DDX_DHtml_AxControl
+- CDHtmlDialog [MFC], DDX_DHtml_CheckBox
+- CDHtmlDialog [MFC], DDX_DHtml_ElementText
+- CDHtmlDialog [MFC], DDX_DHtml_Radio
+- CDHtmlDialog [MFC], DDX_DHtml_SelectIndex
+- CDHtmlDialog [MFC], DDX_DHtml_SelectString
+- CDHtmlDialog [MFC], DDX_DHtml_SelectValue
+- CDHtmlDialog [MFC], DestroyModeless
+- CDHtmlDialog [MFC], EnableModeless
+- CDHtmlDialog [MFC], FilterDataObject
+- CDHtmlDialog [MFC], GetControlDispatch
+- CDHtmlDialog [MFC], GetControlProperty
+- CDHtmlDialog [MFC], GetCurrentUrl
+- CDHtmlDialog [MFC], GetDHtmlDocument
+- CDHtmlDialog [MFC], GetDropTarget
+- CDHtmlDialog [MFC], GetElement
+- CDHtmlDialog [MFC], GetElementHtml
+- CDHtmlDialog [MFC], GetElementInterface
+- CDHtmlDialog [MFC], GetElementProperty
+- CDHtmlDialog [MFC], GetElementText
+- CDHtmlDialog [MFC], GetEvent
+- CDHtmlDialog [MFC], GetExternal
+- CDHtmlDialog [MFC], GetHostInfo
+- CDHtmlDialog [MFC], GetOptionKeyPath
+- CDHtmlDialog [MFC], HideUI
+- CDHtmlDialog [MFC], IsExternalDispatchSafe
+- CDHtmlDialog [MFC], LoadFromResource
+- CDHtmlDialog [MFC], Navigate
+- CDHtmlDialog [MFC], OnBeforeNavigate
+- CDHtmlDialog [MFC], OnDocumentComplete
+- CDHtmlDialog [MFC], OnDocWindowActivate
+- CDHtmlDialog [MFC], OnFrameWindowActivate
+- CDHtmlDialog [MFC], OnInitDialog
+- CDHtmlDialog [MFC], OnNavigateComplete
+- CDHtmlDialog [MFC], ResizeBorder
+- CDHtmlDialog [MFC], SetControlProperty
+- CDHtmlDialog [MFC], SetElementHtml
+- CDHtmlDialog [MFC], SetElementProperty
+- CDHtmlDialog [MFC], SetElementText
+- CDHtmlDialog [MFC], SetExternalDispatch
+- CDHtmlDialog [MFC], SetHostFlags
+- CDHtmlDialog [MFC], ShowContextMenu
+- CDHtmlDialog [MFC], ShowUI
+- CDHtmlDialog [MFC], TranslateAccelerator
+- CDHtmlDialog [MFC], TranslateUrl
+- CDHtmlDialog [MFC], UpdateUI
+- CDHtmlDialog [MFC], m_bUseHtmlTitle
+- CDHtmlDialog [MFC], m_nHtmlResID
+- CDHtmlDialog [MFC], m_pBrowserApp
+- CDHtmlDialog [MFC], m_spHtmlDoc
+- CDHtmlDialog [MFC], m_strCurrentUrl
+- CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
 caps.latest.revision: 23
 author: mikeblome
@@ -89,101 +143,101 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: adf3664da1ecd1bdde9a1bd13e5b43ab7695e4d7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fb1da10dd606fd312b4176a3a5bfc523a1d83e3a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdhtmldialog-class"></a>CDHtmlDialog 클래스
-HTML을 사용 하는 대화 상자를 만드는 데 사용 되는 대신 사용자 인터페이스를 구현 하는 대화 상자 리소스입니다.  
+# <a name="cdhtmldialog-class"></a>CDHtmlDialog Class
+Is used to create dialog boxes that use HTML rather than dialog resources to implement their user interface.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDHtmlDialog : public CDialog, public CDHtmlEventSink  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|CDHtmlDialog 개체를 만듭니다.|  
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|CDHtmlDialog 개체를 소멸 시킵니다.|  
+|[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Constructs a CDHtmlDialog object.|  
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Destroys a CDHtmlDialog object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|재정의 가능한 하 라고 로드 된 페이지에 개체를 스크립팅 외부 디스패치 컨트롤 사이트에 액세스할 수 있는지 알아보려면 액세스 검사를 합니다. 확인 디스패치를 현재 시간대 또는 스크립팅 작업에 스크립트에 대 한 안전 하지 않은 개체에 대 한 허용 되는지 확인 합니다.|  
-|[CDHtmlDialog::CreateControlSite](#createcontrolsite)|재정의 가능을 대화 상자에서 WebBrowser 컨트롤을 호스팅할 컨트롤 사이트 인스턴스를 만드는 데 사용 합니다.|  
-|[CDHtmlDialog::DDX_DHtml_AxControl](#ddx_dhtml_axcontrol)|HTML 페이지에서 ActiveX 컨트롤의 속성 값과 멤버 변수 간에 데이터를 교환 합니다.|  
-|[CDHtmlDialog::DDX_DHtml_CheckBox](#ddx_dhtml_checkbox)|멤버 변수 및 HTML 페이지에서 확인란 간에 데이터를 교환 합니다.|  
-|[CDHtmlDialog::DDX_DHtml_ElementText](#ddx_dhtml_elementtext)|멤버 변수에서 HTML 페이지의 모든 HTML 요소 속성 사이 데이터를 교환합니다.|  
-|[CDHtmlDialog::DDX_DHtml_Radio](#ddx_dhtml_radio)|멤버 변수는 HTML 페이지에서 라디오 단추 사이 데이터를 교환합니다.|  
-|[CDHtmlDialog::DDX_DHtml_SelectIndex](#ddx_dhtml_selectindex)|HTML 페이지에서 목록 상자 인덱스를 가져오거나 설정 합니다.|  
-|[CDHtmlDialog::DDX_DHtml_SelectString](#ddx_dhtml_selectstring)|HTML 페이지에 (현재 인덱스에 따라) 목록 상자 항목의 표시 텍스트를 가져오거나 설정 합니다.|  
-|[CDHtmlDialog::DDX_DHtml_SelectValue](#ddx_dhtml_selectvalue)|HTML 페이지에 (현재 인덱스에 따라) 목록 상자 항목의 값을 가져오거나 설정 합니다.|  
-|[CDHtmlDialog::DestroyModeless](#destroymodeless)|모덜리스 대화 상자를 삭제합니다.|  
-|[CDHtmlDialog::EnableModeless](#enablemodeless)|모덜리스 대화 상자를 사용 합니다.|  
-|[CDHtmlDialog::FilterDataObject](#filterdataobject)|대화 상자를 호스트 브라우저에서 생성 하는 클립보드 데이터 개체를 필터링 할 수 있습니다.|  
-|[CDHtmlDialog::GetControlDispatch](#getcontroldispatch)|검색 된 `IDispatch` HTML 문서에 포함 된 ActiveX 컨트롤에 대 한 인터페이스입니다.|  
-|[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|지정된 된 ActiveX 컨트롤의 요청된 된 속성을 검색합니다.|  
-|[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|현재 문서와 연결 된는 로케이터 URL (Uniform Resource)를 검색 합니다.|  
-|[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|현재 로드 된 HTML 문서에서 IHTMLDocument2 인터페이스를 검색합니다.|  
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|대 한 대안을 제공 하는 대화 상자를 허용 하도록 놓기 대상으로 사용 하는 경우 포함 된 WebBrowser 컨트롤에 의해 호출 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)합니다.|  
-|[CDHtmlDialog::GetElement](#getelement)|HTML 요소에 인터페이스를 가져옵니다.|  
-|[CDHtmlDialog::GetElementHtml](#getelementhtml)|검색 된 **innerHTML** HTML 요소의 속성입니다.|  
-|[CDHtmlDialog::GetElementInterface](#getelementinterface)|HTML 요소에서 요청 된 인터페이스 포인터를 검색합니다.|  
-|[CDHtmlDialog::GetElementProperty](#getelementproperty)|HTML 요소의 속성의 값을 검색 합니다.|  
-|[CDHtmlDialog::GetElementText](#getelementtext)|검색 된 **innerText** HTML 요소의 속성입니다.|  
-|[CDHtmlDialog::GetEvent](#getevent)|가져옵니다는 **IHTMLEventObj** 현재 이벤트 개체에 대 한 포인터입니다.|  
-|[CDHtmlDialog::GetExternal](#getexternal)|호스트의 가져옵니다 `IDispatch` 인터페이스입니다.|  
-|[CDHtmlDialog::GetHostInfo](#gethostinfo)|호스트의 UI 기능을 검색합니다.|  
-|[CDHtmlDialog::GetOptionKeyPath](#getoptionkeypath)|사용자 기본 설정이 저장 되는 레지스트리 키를 검색 합니다.|  
-|[CDHtmlDialog::HideUI](#hideui)|호스트의 UI를 숨깁니다.|  
-|[CDHtmlDialog::IsExternalDispatchSafe](#isexternaldispatchsafe)|나타냅니다 여부는 호스트의 `IDispatch` 인터페이스는 스크립팅 작업에 안전 합니다.|  
-|[CDHtmlDialog::LoadFromResource](#loadfromresource)|WebBrowser 컨트롤에 지정된 된 리소스를 로드합니다.|  
-|[CDHtmlDialog::Navigate](#navigate)|지정된 된 URL로 이동합니다.|  
-|[CDHtmlDialog::OnBeforeNavigate](#onbeforenavigate)|탐색 이벤트가 발생 하기 전에 프레임 워크에서 호출 합니다.|  
-|[CDHtmlDialog::OnDocumentComplete](#ondocumentcomplete)|문서에 도달한 경우 응용 프로그램에 알리기 위해 프레임 워크에서 호출 된 `READYSTATE_COMPLETE` 상태입니다.|  
-|[CDHtmlDialog::OnDocWindowActivate](#ondocwindowactivate)|문서 창이 활성화 또는 비활성화 하는 경우에 프레임 워크에서 호출 합니다.|  
-|[CDHtmlDialog::OnFrameWindowActivate](#onframewindowactivate)|프레임 창 활성화 되거나 비활성화 때 프레임 워크에 의해 호출 됩니다.|  
-|[CDHtmlDialog::OnInitDialog](#oninitdialog)|응답으로 호출 된 **WM_INITDIALOG** 메시지입니다.|  
-|[CDHtmlDialog::OnNavigateComplete](#onnavigatecomplete)|탐색 이벤트가 완료 된 후에 프레임 워크에서 호출 합니다.|  
-|[CDHtmlDialog::ResizeBorder](#resizeborder)|해당 테두리 공간 크기를 조정 해야 하는 개체를 게 알립니다.|  
-|[CDHtmlDialog::SetControlProperty](#setcontrolproperty)|ActiveX 컨트롤의 속성을 새 값으로 설정합니다.|  
-|[CDHtmlDialog::SetElementHtml](#setelementhtml)|설정의 **innerHTML** HTML 요소의 속성입니다.|  
-|[CDHtmlDialog::SetElementProperty](#setelementproperty)|HTML 요소의 속성을 설정합니다.|  
-|[CDHtmlDialog::SetElementText](#setelementtext)|설정의 **innerText** HTML 요소의 속성입니다.|  
-|[CDHtmlDialog::SetExternalDispatch](#setexternaldispatch)|설정 하는 호스트의 `IDispatch` 인터페이스입니다.|  
-|[CDHtmlDialog::SetHostFlags](#sethostflags)|호스트의 UI 플래그를 설정합니다.|  
-|[CDHtmlDialog::ShowContextMenu](#showcontextmenu)|상황에 맞는 메뉴 표시 하려고 할 때 호출 됩니다.|  
-|[CDHtmlDialog::ShowUI](#showui)|호스트의 UI를 표시 합니다.|  
-|[CDHtmlDialog::TranslateAccelerator](#translateaccelerator)|메뉴 바로 가기 키 메시지를 처리 하기 위해 호출.|  
-|[CDHtmlDialog::TranslateUrl](#translateurl)|로드 되도록 URL을 수정 하려면 호출 됩니다.|  
-|[CDHtmlDialog::UpdateUI](#updateui)|명령 상태가 변경 되었음을 호스트에 알리기 위해 호출 합니다.|  
+|[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Overridable that is called as an access check to see whether scripting objects on the loaded page can access the external dispatch of the control site. Checks to make sure the dispatch is either safe for scripting or the current zone allows for objects that are not safe for scripting.|  
+|[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Overridable used to create a control site instance to host the WebBrowser control on the dialog.|  
+|[CDHtmlDialog::DDX_DHtml_AxControl](#ddx_dhtml_axcontrol)|Exchanges data between a member variable and the property value of an ActiveX control on an HTML page.|  
+|[CDHtmlDialog::DDX_DHtml_CheckBox](#ddx_dhtml_checkbox)|Exchanges data between a member variable and a check box on an HTML page.|  
+|[CDHtmlDialog::DDX_DHtml_ElementText](#ddx_dhtml_elementtext)|Exchanges data between a member variable and any HTML element property on an HTML page.|  
+|[CDHtmlDialog::DDX_DHtml_Radio](#ddx_dhtml_radio)|Exchanges data between a member variable and a radio button on an HTML page.|  
+|[CDHtmlDialog::DDX_DHtml_SelectIndex](#ddx_dhtml_selectindex)|Gets or sets the index of a list box on an HTML page.|  
+|[CDHtmlDialog::DDX_DHtml_SelectString](#ddx_dhtml_selectstring)|Gets or sets the display text of a list box entry (based on the current index) on an HTML page.|  
+|[CDHtmlDialog::DDX_DHtml_SelectValue](#ddx_dhtml_selectvalue)|Gets or sets the value of a list box entry (based on the current index) on an HTML page.|  
+|[CDHtmlDialog::DestroyModeless](#destroymodeless)|Destroys a modeless dialog box.|  
+|[CDHtmlDialog::EnableModeless](#enablemodeless)|Enables modeless dialog boxes.|  
+|[CDHtmlDialog::FilterDataObject](#filterdataobject)|Allows the dialog to filter clipboard data objects created by the hosted browser.|  
+|[CDHtmlDialog::GetControlDispatch](#getcontroldispatch)|Retrieves the `IDispatch` interface on an ActiveX control embedded in the HTML document.|  
+|[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|Retrieves the requested property of the specified ActiveX control.|  
+|[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|Retrieves the Uniform Resource Locator (URL) associated with the current document.|  
+|[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|Retrieves the IHTMLDocument2 interface on the currently loaded HTML document.|  
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Called by the contained WebBrowser control when it is being used as a drop target to allow the dialog to supply an alternative [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[CDHtmlDialog::GetElement](#getelement)|Gets an interface on an HTML element.|  
+|[CDHtmlDialog::GetElementHtml](#getelementhtml)|Retrieves the **innerHTML** property of an HTML element.|  
+|[CDHtmlDialog::GetElementInterface](#getelementinterface)|Retrieves the requested interface pointer from an HTML element.|  
+|[CDHtmlDialog::GetElementProperty](#getelementproperty)|Retrieves the value of an HTML element's property.|  
+|[CDHtmlDialog::GetElementText](#getelementtext)|Retrieves the **innerText** property of an HTML element.|  
+|[CDHtmlDialog::GetEvent](#getevent)|Gets the **IHTMLEventObj** pointer to the current event object.|  
+|[CDHtmlDialog::GetExternal](#getexternal)|Gets the host's `IDispatch` interface.|  
+|[CDHtmlDialog::GetHostInfo](#gethostinfo)|Retrieves the host's UI capabilities.|  
+|[CDHtmlDialog::GetOptionKeyPath](#getoptionkeypath)|Retrieves the registry key under which user preferences are stored.|  
+|[CDHtmlDialog::HideUI](#hideui)|Hides the host's UI.|  
+|[CDHtmlDialog::IsExternalDispatchSafe](#isexternaldispatchsafe)|Indicates whether the host's `IDispatch` interface is safe for scripting.|  
+|[CDHtmlDialog::LoadFromResource](#loadfromresource)|Loads the specified resource into the WebBrowser control.|  
+|[CDHtmlDialog::Navigate](#navigate)|Navigates to the specified URL.|  
+|[CDHtmlDialog::OnBeforeNavigate](#onbeforenavigate)|Called by the framework before a navigation event is fired.|  
+|[CDHtmlDialog::OnDocumentComplete](#ondocumentcomplete)|Called by the framework to notify an application when a document has reached the `READYSTATE_COMPLETE` state.|  
+|[CDHtmlDialog::OnDocWindowActivate](#ondocwindowactivate)|Called by the framework when the document window is activated or deactivated.|  
+|[CDHtmlDialog::OnFrameWindowActivate](#onframewindowactivate)|Called by the framework when the frame window is activated or deactivated.|  
+|[CDHtmlDialog::OnInitDialog](#oninitdialog)|Called in response to the **WM_INITDIALOG** message.|  
+|[CDHtmlDialog::OnNavigateComplete](#onnavigatecomplete)|Called by the framework after a navigation event is completed.|  
+|[CDHtmlDialog::ResizeBorder](#resizeborder)|Alerts the object that it needs to resize its border space.|  
+|[CDHtmlDialog::SetControlProperty](#setcontrolproperty)|Sets the property of an ActiveX control to a new value.|  
+|[CDHtmlDialog::SetElementHtml](#setelementhtml)|Sets the **innerHTML** property of an HTML element.|  
+|[CDHtmlDialog::SetElementProperty](#setelementproperty)|Sets a property of an HTML element.|  
+|[CDHtmlDialog::SetElementText](#setelementtext)|Sets the **innerText** property of an HTML element.|  
+|[CDHtmlDialog::SetExternalDispatch](#setexternaldispatch)|Sets the host's `IDispatch` interface.|  
+|[CDHtmlDialog::SetHostFlags](#sethostflags)|Sets the host's UI flags.|  
+|[CDHtmlDialog::ShowContextMenu](#showcontextmenu)|Called when a context menu is about to be displayed.|  
+|[CDHtmlDialog::ShowUI](#showui)|Shows the host's UI.|  
+|[CDHtmlDialog::TranslateAccelerator](#translateaccelerator)|Called to process menu accelerator-key messages.|  
+|[CDHtmlDialog::TranslateUrl](#translateurl)|Called to modify the URL to be loaded.|  
+|[CDHtmlDialog::UpdateUI](#updateui)|Called to notify the host that the command state has changed.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|HTML 문서의 제목 대화 캡션으로 사용 여부를 나타냅니다.|  
-|[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|리소스 ID의 HTML 리소스를 표시 합니다.|  
-|[CDHtmlDialog::m_pBrowserApp](#m_pbrowserapp)|웹 브라우저 응용 프로그램에 대 한 포인터입니다.|  
-|[CDHtmlDialog::m_spHtmlDoc](#m_sphtmldoc)|HTML 문서에 대 한 포인터입니다.|  
-|[CDHtmlDialog::m_strCurrentUrl](#m_strcurrenturl)|현재 URL입니다.|  
-|[CDHtmlDialog::m_szHtmlResID](#m_szhtmlresid)|HTML 리소스 ID의 문자열 버전|  
+|[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Indicates whether to use the HTML document's title as the dialog caption.|  
+|[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|Resource ID of HTML resource to be displayed.|  
+|[CDHtmlDialog::m_pBrowserApp](#m_pbrowserapp)|A pointer to a Web browser application.|  
+|[CDHtmlDialog::m_spHtmlDoc](#m_sphtmldoc)|A pointer to an HTML document.|  
+|[CDHtmlDialog::m_strCurrentUrl](#m_strcurrenturl)|The current URL.|  
+|[CDHtmlDialog::m_szHtmlResID](#m_szhtmlresid)|String version of the HTML resource ID.|  
   
-## <a name="remarks"></a>주의  
- **CDHtmlDialog** HTML 리소스 중 하나에서 표시 될 HTML 또는 URL을 로드할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ **CDHtmlDialog** can load the HTML to be displayed from either an HTML resource or a URL.  
   
- `CDHtmlDialog`수행 데이터 HTML 컨트롤을 교환 하 고 수도 단추 클릭과 같은 HTML 컨트롤에서 이벤트를 처리.  
+ `CDHtmlDialog` can also do data exchange with HTML controls and handle events from HTML controls, such as button clicks.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDHtmlSinkHandlerBase2`  
@@ -202,37 +256,37 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
   
  `CDHtmlDialog`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
   
-##  <a name="ddx_dhtml_helper_macros"></a>DDX_DHtml 도우미 매크로  
- DDX_DHtml 도우미 매크로 사용 하는 HTML 페이지에 컨트롤의 자주 사용 되는 속성에 쉽게 액세스할 수 있습니다.  
+##  <a name="ddx_dhtml_helper_macros"></a>  DDX_DHtml Helper Macros  
+ The DDX_DHtml helper macros allow easy access to the commonly used properties of controls on an HTML page.  
   
-### <a name="data-exchange-macros"></a>데이터 교환 매크로  
+### <a name="data-exchange-macros"></a>Data Exchange Macros  
   
 |||  
 |-|-|  
-|[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|설정 하거나 선택된 된 컨트롤에서 Value 속성을 검색 합니다.|  
-|[DDX_DHtml_ElementInnerText](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnertext)|설정 하거나 현재 요소의 시작 및 끝 태그 사이 텍스트를 검색 합니다.|  
-|[DDX_DHtml_ElementInnerHtml](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnerhtml)|설정 하거나 현재 요소의 시작 및 끝 태그 사이의 HTML을 검색 합니다.|  
-|[DDX_DHtml_Anchor_Href](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_href)|설정 하거나 대상 URL 또는 앵커 지점을 검색 합니다.|  
-|[DDX_DHtml_Anchor_Target](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_target)|설정 하거나 대상 창이 나 프레임을 검색 합니다.|  
-|[DDX_DHtml_Img_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_img_src)|설정 하거나 이미지 또는 문서에서 비디오 클립의 이름을 검색 합니다.|  
-|[DDX_DHtml_Frame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_frame_src)|설정 하거나 연결된 된 프레임의 URL을 검색 합니다.|  
-|[DDX_DHtml_IFrame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_iframe_src)|설정 하거나 연결된 된 프레임의 URL을 검색 합니다.|  
+|[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|Sets or retrieves the Value property from the selected control.|  
+|[DDX_DHtml_ElementInnerText](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnertext)|Sets or retrieves the text between the start and end tags of the current element.|  
+|[DDX_DHtml_ElementInnerHtml](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnerhtml)|Sets or retrieves the HTML between the start and end tags of the current element.|  
+|[DDX_DHtml_Anchor_Href](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_href)|Sets or retrieves the destination URL or anchor point.|  
+|[DDX_DHtml_Anchor_Target](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_target)|Sets or retrieves the target window or frame.|  
+|[DDX_DHtml_Img_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_img_src)|Sets or retrieves the name of an image or a video clip in the document.|  
+|[DDX_DHtml_Frame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_frame_src)|Sets or retrieves the URL of the associated frame.|  
+|[DDX_DHtml_IFrame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_iframe_src)|Sets or retrieves the URL of the associated frame.|  
   
-##  <a name="canaccessexternal"></a>CDHtmlDialog::CanAccessExternal  
- 재정의 가능한 하 라고 로드 된 페이지에 개체를 스크립팅 외부 디스패치 컨트롤 사이트에 액세스할 수 있는지 알아보려면 액세스 검사를 합니다. 확인 디스패치를 현재 시간대 또는 스크립팅 작업에 스크립트에 대 한 안전 하지 않은 개체에 대 한 허용 되는지 확인 합니다.  
+##  <a name="canaccessexternal"></a>  CDHtmlDialog::CanAccessExternal  
+ Overridable that is called as an access check to see whether scripting objects on the loaded page can access the external dispatch of the control site. Checks to make sure the dispatch is either safe for scripting or the current zone allows for objects that are not safe for scripting.  
   
 ```  
 virtual BOOL CanAccessExternal();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="cdhtmldialog"></a>CDHtmlDialog::CDHtmlDialog  
- 동적 HTML 리소스를 기반으로 대화 상자를 생성합니다.  
+##  <a name="cdhtmldialog"></a>  CDHtmlDialog::CDHtmlDialog  
+ Constructs a resource-based dynamic HTML dialog box.  
   
 ```  
 CDHtmlDialog();
@@ -250,37 +304,37 @@ CDHtmlDialog(
     CWnd *pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- 대화 상자 템플릿 리소스의 이름에 해당 하는 null로 끝나는 문자열입니다.  
+ The null-terminated string that is the name of a dialog-box template resource.  
   
  `szHtmlResID`  
- HTML 리소스의 이름에 해당 하는 null로 끝나는 문자열입니다.  
+ The null-terminated string that is the name of an HTML resource.  
   
  `pParentWnd`  
- 부모 또는 소유자 창 개체에 대 한 포인터 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 개체가 속한 합니다. 있으면 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
+ A pointer to the parent or owner window object (of type [CWnd](../../mfc/reference/cwnd-class.md)) to which the dialog object belongs. If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
  `nIDTemplate`  
- 대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
+ Contains the ID number of a dialog-box template resource.  
   
  `nHtmlResID`  
- HTML 리소스의 ID 번호를 포함합니다.  
+ Contains the ID number of an HTML resource.  
   
-### <a name="remarks"></a>주의  
- 생성자의 두 번째 양식 서식 파일 이름을 통해 대화 상자 리소스에 대 한 액세스를 제공합니다. 생성자의 세 번째 형식은 리소스 서식 파일의 ID 통해 대화 상자 리소스에 대 한 액세스를 제공합니다. ID로 시작 하는 일반적으로 **IDD_** 접두사입니다.  
+### <a name="remarks"></a>Remarks  
+ The second form of the constructor provides access to the dialog resource through the template name. The third form of the constructor provides access to the dialog resource through the ID of the resource template. Usually, the ID begins with the **IDD_** prefix.  
   
-##  <a name="_dtorcdhtmldialog"></a>CDHtmlDialog:: ~ CDHtmlDialog  
- CDHtmlDialog 개체를 소멸 시킵니다.  
+##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog::~CDHtmlDialog  
+ Destroys a CDHtmlDialog object.  
   
 ```  
 virtual ~CDHtmlDialog();
 ```  
   
-### <a name="remarks"></a>주의  
- [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) 멤버 함수를 제거 하 여 만든 모덜리스 대화 상자 사용 해야 [CDialog::Create](../../mfc/reference/cdialog-class.md#create)합니다.  
+### <a name="remarks"></a>Remarks  
+ The [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) member function must be used to destroy modeless dialog boxes that are created by [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
   
-##  <a name="createcontrolsite"></a>CDHtmlDialog::CreateControlSite  
- 재정의 가능을 대화 상자에서 WebBrowser 컨트롤을 호스팅할 컨트롤 사이트 인스턴스를 만드는 데 사용 합니다.  
+##  <a name="createcontrolsite"></a>  CDHtmlDialog::CreateControlSite  
+ Overridable used to create a control site instance to host the WebBrowser control on the dialog.  
   
 ```  
 virtual BOOL CreateControlSite(
@@ -290,21 +344,21 @@ virtual BOOL CreateControlSite(
     REFCLSID /* clsid */);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pContainer`  
- 에 대 한 포인터는 [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) 개체  
+ A pointer to the [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) object  
   
  `ppSite`  
- 에 대 한 포인터에 대 한 포인터는 [COleControlSite](../../mfc/reference/colecontrolsite-class.md)합니다.  
+ A pointer to a pointer to a [COleControlSite](../../mfc/reference/colecontrolsite-class.md).  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 사용자 지정 컨트롤 사이트 클래스의 인스턴스를 반환 하려면이 멤버 함수를 재정의할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can override this member function to return an instance of your own control site class.  
   
-##  <a name="ddx_dhtml_axcontrol"></a>CDHtmlDialog::DDX_DHtml_AxControl  
- HTML 페이지에서 ActiveX 컨트롤의 속성 값과 멤버 변수 간에 데이터를 교환 합니다.  
+##  <a name="ddx_dhtml_axcontrol"></a>  CDHtmlDialog::DDX_DHtml_AxControl  
+ Exchanges data between a member variable and the property value of an ActiveX control on an HTML page.  
   
 ```  
 void DDX_DHtml_AxControl(
@@ -321,27 +375,27 @@ void DDX_DHtml_AxControl(
     VARIANT& var);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `szId`  
- ActiveX 컨트롤의 HTML 소스에서 개체 태그의 ID 매개 변수의 값입니다.  
+ The value of the object tag's ID parameter in the HTML source for the ActiveX control.  
   
  `dispid`  
- 데이터를 교환 하려는 속성의 디스패치 ID입니다.  
+ The dispatch ID of the property with which you want to exchange data.  
   
  `szPropName`  
- 속성의 이름입니다.  
+ The name of the property.  
   
  `var`  
- 데이터 멤버 형식의 `VARIANT`, [COleVariant](../../mfc/reference/colevariant-class.md), 또는 [CComVariant](../../atl/reference/ccomvariant-class.md), ActiveX 컨트롤 속성에서 교환 되는 값을 보유 하 합니다.  
+ The data member, of type `VARIANT`, [COleVariant](../../mfc/reference/colevariant-class.md), or [CComVariant](../../atl/reference/ccomvariant-class.md), that holds the value exchanged with the ActiveX control property.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCHtmlHttp #&1;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCHtmlHttp#1](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_1.cpp)]  
   
-##  <a name="ddx_dhtml_checkbox"></a>CDHtmlDialog::DDX_DHtml_CheckBox  
- 멤버 변수 및 HTML 페이지에서 확인란 간에 데이터를 교환 합니다.  
+##  <a name="ddx_dhtml_checkbox"></a>  CDHtmlDialog::DDX_DHtml_CheckBox  
+ Exchanges data between a member variable and a check box on an HTML page.  
   
 ```  
 void DDX_DHtml_CheckBox(
@@ -350,21 +404,21 @@ void DDX_DHtml_CheckBox(
     int& value);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `szId`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  *value*  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCHtmlHttp #&2;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCHtmlHttp#2](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_2.cpp)]  
   
-##  <a name="ddx_dhtml_elementtext"></a>CDHtmlDialog::DDX_DHtml_ElementText  
- 멤버 변수에서 HTML 페이지의 모든 HTML 요소 속성 사이 데이터를 교환합니다.  
+##  <a name="ddx_dhtml_elementtext"></a>  CDHtmlDialog::DDX_DHtml_ElementText  
+ Exchanges data between a member variable and any HTML element property on an HTML page.  
   
 ```  
 void DDX_DHtml_ElementText(
@@ -416,21 +470,21 @@ void DDX_DHtml_ElementText(
     double& value);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `szId`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  *dispid*  
- 디스패치 ID 데이터를 교환 하려는 HTML 요소입니다.  
+ The dispatch ID of the HTML element with which you want to exchange data.  
   
  *value*  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-##  <a name="ddx_dhtml_radio"></a>CDHtmlDialog::DDX_DHtml_Radio  
- 멤버 변수는 HTML 페이지에서 라디오 단추 사이 데이터를 교환합니다.  
+##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio  
+ Exchanges data between a member variable and a radio button on an HTML page.  
   
 ```  
 void DDX_DHtml_Radio(
@@ -439,18 +493,18 @@ void DDX_DHtml_Radio(
     long& value);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `szId`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  *value*  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-##  <a name="ddx_dhtml_selectindex"></a>CDHtmlDialog::DDX_DHtml_SelectIndex  
- HTML 페이지에서 목록 상자 인덱스를 가져오거나 설정 합니다.  
+##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex  
+ Gets or sets the index of a list box on an HTML page.  
   
 ```  
 void DDX_DHtml_SelectIndex(
@@ -459,18 +513,18 @@ void DDX_DHtml_SelectIndex(
     long& value);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `szId`  
- HTML 컨트롤의 id 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's id parameter.  
   
  *value*  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-##  <a name="ddx_dhtml_selectstring"></a>CDHtmlDialog::DDX_DHtml_SelectString  
- HTML 페이지에 (현재 인덱스에 따라) 목록 상자 항목의 표시 텍스트를 가져오거나 설정 합니다.  
+##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString  
+ Gets or sets the display text of a list box entry (based on the current index) on an HTML page.  
   
 ```  
 void DDX_DHtml_SelectString(
@@ -479,18 +533,18 @@ void DDX_DHtml_SelectString(
     CString& value);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `szId`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  *value*  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-##  <a name="ddx_dhtml_selectvalue"></a>CDHtmlDialog::DDX_DHtml_SelectValue  
- HTML 페이지에 (현재 인덱스에 따라) 목록 상자 항목의 값을 가져오거나 설정 합니다.  
+##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue  
+ Gets or sets the value of a list box entry (based on the current index) on an HTML page.  
   
 ```  
 void DDX_DHtml_SelectValue(
@@ -499,45 +553,45 @@ void DDX_DHtml_SelectValue(
     CString& value);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `szId`  
- HTML 컨트롤의 ID 매개 변수에 대해 지정한 값입니다.  
+ The value that you specified for the HTML control's ID parameter.  
   
  *value*  
- 교환 되는 값입니다.  
+ The value being exchanged.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCHtmlHttp #&3;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCHtmlHttp#3](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_3.cpp)]  
   
-##  <a name="destroymodeless"></a>CDHtmlDialog::DestroyModeless  
- 모덜리스 대화 상자에서 분리 된 `CDHtmlDialog` 개체 및 개체를 소멸 시킵니다.  
+##  <a name="destroymodeless"></a>  CDHtmlDialog::DestroyModeless  
+ Detaches a modeless dialog box from the `CDHtmlDialog` object and destroys the object.  
   
 ```  
 void DestroyModeless();
 ```  
   
-##  <a name="enablemodeless"></a>CDHtmlDialog::EnableModeless  
- 모덜리스 대화 상자를 사용 합니다.  
+##  <a name="enablemodeless"></a>  CDHtmlDialog::EnableModeless  
+ Enables modeless dialog boxes.  
   
 ```  
 STDMETHOD(EnableModeless)(BOOL fEnable);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `fEnable`  
- 참조 `fEnable` 에서 [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `fEnable` in [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **E_NOTIMPL**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx), as described in the Windows SDK.  
   
-##  <a name="filterdataobject"></a>CDHtmlDialog::FilterDataObject  
- 대화 상자를 호스트 브라우저에서 생성 하는 클립보드 데이터 개체를 필터링 할 수 있습니다.  
+##  <a name="filterdataobject"></a>  CDHtmlDialog::FilterDataObject  
+ Allows the dialog to filter clipboard data objects created by the hosted browser.  
   
 ```  
 STDMETHOD(FilterDataObject)(
@@ -545,21 +599,21 @@ STDMETHOD(FilterDataObject)(
     IDataObject** ppDORet);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDO`  
- 참조 `pDO` 에서 [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pDO` in [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) in the Windows SDK.  
   
  `ppDORet`  
- 참조 `ppDORet` 에서 **IDocHostUIHandler::FilterDataObject** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `ppDORet` in **IDocHostUIHandler::FilterDataObject** in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **S_FALSE**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **S_FALSE**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx), as described in the Windows SDK.  
   
-##  <a name="getcontroldispatch"></a>CDHtmlDialog::GetControlDispatch  
- 검색 된 `IDispatch` 인터페이스 ActiveX 컨트롤에 의해 반환 되는 HTML 문서에 포함 된 [GetDHtmlDocument](#getdhtmldocument)합니다.  
+##  <a name="getcontroldispatch"></a>  CDHtmlDialog::GetControlDispatch  
+ Retrieves the `IDispatch` interface on an ActiveX control embedded in the HTML document returned by [GetDHtmlDocument](#getdhtmldocument).  
   
 ```  
 HRESULT GetControlDispatch(
@@ -567,18 +621,18 @@ HRESULT GetControlDispatch(
     IDispatch** ppdisp);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- ActiveX 컨트롤의 HTML ID입니다.  
+ The HTML ID of an ActiveX control.  
   
  *ppdisp*  
- `IDispatch` 인터페이스 컨트롤의 경우 웹 페이지에서 찾을 수 있습니다.  
+ The `IDispatch` interface of the control if found in the Web page.  
   
-### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A standard `HRESULT` value.  
   
-##  <a name="getcontrolproperty"></a>CDHtmlDialog::GetControlProperty  
- 지정된 된 ActiveX 컨트롤의 요청된 된 속성을 검색합니다.  
+##  <a name="getcontrolproperty"></a>  CDHtmlDialog::GetControlProperty  
+ Retrieves the requested property of the specified ActiveX control.  
   
 ```  
 VARIANT GetControlProperty(
@@ -596,52 +650,52 @@ VARIANT GetControlProperty(
     DISPID dispid);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szId`  
- ActiveX 컨트롤의 HTML ID입니다.  
+ The HTML ID of an ActiveX control.  
   
  `szPropName`  
- 현재 사용자의 기본 로캘로 속성의 이름입니다.  
+ The name of a property in the default locale of the current user.  
   
  `pdispControl`  
- `IDispatch` ActiveX 컨트롤의 포인터입니다.  
+ The `IDispatch` pointer of an ActiveX control.  
   
  `dispid`  
- 속성의 디스패치 ID입니다.  
+ The dispatch ID of a property.  
   
-### <a name="return-value"></a>반환 값  
- 컨트롤이 나 속성을 찾을 수 없는 경우 요청된 된 속성 또는 비어 있는 변수를 포함 하는 variant입니다.  
+### <a name="return-value"></a>Return Value  
+ A variant containing the requested property or an empty variant if the control or property could not be found.  
   
-### <a name="remarks"></a>주의  
- 오버 로드에서 맨 위에 있는 효율성이 맨 아래에 가장 효율적인에 나열 됩니다.  
+### <a name="remarks"></a>Remarks  
+ The overloads are listed from least efficient at the top to most efficient at the bottom.  
   
-##  <a name="getcurrenturl"></a>CDHtmlDialog::GetCurrentUrl  
- 현재 문서와 연결 된는 로케이터 URL (Uniform Resource)를 검색 합니다.  
+##  <a name="getcurrenturl"></a>  CDHtmlDialog::GetCurrentUrl  
+ Retrieves the Uniform Resource Locator (URL) associated with the current document.  
   
 ```  
 void GetCurrentUrl(CString& szUrl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szUrl`  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체를 검색 하 고 URL을 포함 합니다.  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing the URL to retrieve.  
   
-##  <a name="getdhtmldocument"></a>CDHtmlDialog::GetDHtmlDocument  
- 검색 된 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 현재 로드 된 HTML 문서에 대 한 인터페이스입니다.  
+##  <a name="getdhtmldocument"></a>  CDHtmlDialog::GetDHtmlDocument  
+ Retrieves the [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface on the currently loaded HTML document.  
   
 ```  
 HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *\*\*pphtmlDoc*  
- HTML 문서에 대 한 포인터에 대 한 포인터입니다.  
+ A pointer to a pointer to an HTML document.  
   
-### <a name="return-value"></a>반환 값  
- 표준 `HRESULT`입니다. 성공하는 경우 `S_OK`가 반환됩니다.  
+### <a name="return-value"></a>Return Value  
+ A standard `HRESULT`. Returns `S_OK` if successful.  
   
-##  <a name="getdroptarget"></a>CDHtmlDialog::GetDropTarget  
- 대 한 대안을 제공 하는 대화 상자를 허용 하도록 놓기 대상으로 사용 하는 경우 포함 된 WebBrowser 컨트롤에 의해 호출 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)합니다.  
+##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget  
+ Called by the contained WebBrowser control when it is being used as a drop target to allow the dialog to supply an alternative [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).  
   
 ```  
 STDMETHOD(GetDropTarget)(
@@ -649,21 +703,21 @@ STDMETHOD(GetDropTarget)(
     IDropTarget** ppDropTarget);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDropTarget`  
- 참조 `pDropTarget` 에서 [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pDropTarget` in [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) in the Windows SDK.  
   
  `ppDropTarget`  
- 참조 `ppDropTarget` 에서 **IDocHostUIHandler::GetDropTarget** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `ppDropTarget` in **IDocHostUIHandler::GetDropTarget** in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **E_NOTIMPL**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx), as described in the Windows SDK.  
   
-##  <a name="getelement"></a>CDHtmlDialog::GetElement  
- 지정한 HTML 요소에 대 한 인터페이스를 반환 `szElementId`합니다.  
+##  <a name="getelement"></a>  CDHtmlDialog::GetElement  
+ Returns an interface on the HTML element specified by `szElementId`.  
   
 ```  
 HRESULT GetElement(
@@ -677,43 +731,43 @@ HRESULT GetElement(
     IHTMLElement** pphtmlElement);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szElementId`  
- HTML 요소의 ID입니다.  
+ The ID of an HTML element.  
   
  *ppdisp*  
- `IDispatch` 요청 된 요소 또는 요소의 컬렉션에 대 한 포인터입니다.  
+ An `IDispatch` pointer to the requested element or collection of elements.  
   
  *pbCollection*  
- A **BOOL** 가 나타내는 개체가 있는지 여부를 나타내는 *ppdisp* 단일 요소 또는 요소의 컬렉션입니다.  
+ A **BOOL** indicating whether the object represented by *ppdisp* is a single element or a collection of elements.  
   
  *pphtmlElement*  
- **IHTMLElement** 요청 된 요소에 대 한 포인터입니다.  
+ An **IHTMLElement** pointer to the requested element.  
   
-### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A standard `HRESULT` value.  
   
-### <a name="remarks"></a>주의  
- 있을 수 있습니다 둘 이상의 요소가 지정 된 ID 사용 하는 상황을 처리 하는 경우 첫 번째 오버 로드를 사용 하 여 단일 항목 또는 컬렉션에 반환 된 인터페이스 포인터 인지 확인 하려면 마지막 매개 변수를 사용할 수 있습니다. 인터페이스 포인터 컬렉션에 있으면 쿼리할 수 있습니다는 **IHTMLElementCollection** 사용 하 여 해당 **항목** 순서에 따라 요소를 참조 하는 속성입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the first overload if you need to handle conditions in which there may be more than one element with the specified ID. You can use the last parameter to find out whether the returned interface pointer is to a collection or a single item. If the interface pointer is on a collection, you can query for the **IHTMLElementCollection** and use its **item** property to refer to the elements by ordinal position.  
   
- 두 번째 오버 로드는 페이지에 동일한 ID 가진 요소가 둘 이상 있으면 실패 합니다.  
+ The second overload will fail if there is more than one element with the same ID in the page.  
   
-##  <a name="getelementhtml"></a>CDHtmlDialog::GetElementHtml  
- 검색 된 **innerHTML** 속성으로 식별 되는 HTML 요소의 `szElementId`합니다.  
+##  <a name="getelementhtml"></a>  CDHtmlDialog::GetElementHtml  
+ Retrieves the **innerHTML** property of the HTML element identified by `szElementId`.  
   
 ```  
 BSTR GetElementHtml(LPCTSTR szElementId);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szElementId`  
- HTML 요소의 ID입니다.  
+ The ID of an HTML element.  
   
-### <a name="return-value"></a>반환 값  
- **innerHTML** 속성으로 식별 되는 HTML 요소의 `szElementId` 또는 **NULL** 요소를 찾을 수 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ The **innerHTML** property of the HTML element identified by `szElementId` or **NULL** if the element could not be found.  
   
-##  <a name="getelementinterface"></a>CDHtmlDialog::GetElementInterface  
- 으로 식별 되는 HTML 요소에서 요청 된 인터페이스 포인터를 검색 `szElementId`합니다.  
+##  <a name="getelementinterface"></a>  CDHtmlDialog::GetElementInterface  
+ Retrieves the requested interface pointer from the HTML element identified by `szElementId`.  
   
 ```  
 template <class Q> HRESULT GetElementInterface(
@@ -727,24 +781,24 @@ HRESULT GetElementInterface(
     void** ppvObj);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szElementId`  
- HTML 요소의 ID입니다.  
+ The ID of an HTML element.  
   
  `ppvObj`  
- 쿼리와 요소를 찾을 경우 요청 된 인터페이스 포인터를 채울 수 있는 포인터의 주소에 성공 합니다.  
+ Address of a pointer that will be filled with the requested interface pointer if the element is found and the query succeeds.  
   
  `riid`  
- 요청된 된 인터페이스의 ID (IID) 인터페이스입니다.  
+ The interface ID (IID) of the requested interface.  
   
-### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A standard `HRESULT` value.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCHtmlHttp #&4;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCHtmlHttp#4](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_4.cpp)]  
   
-##  <a name="getelementproperty"></a>CDHtmlDialog::GetElementProperty  
- 으로 식별 된 속성의 값을 검색 `dispid` 로 식별 되는 HTML 요소에서 `szElementId`합니다.  
+##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty  
+ Retrieves the value of the property identified by `dispid` from the HTML element identified by `szElementId`.  
   
 ```  
 VARIANT GetElementProperty(
@@ -752,83 +806,83 @@ VARIANT GetElementProperty(
     DISPID dispid);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szElementId`  
- HTML 요소의 ID입니다.  
+ The ID of an HTML element.  
   
  `dispid`  
- 속성의 디스패치 ID입니다.  
+ The dispatch ID of a property.  
   
-### <a name="return-value"></a>반환 값  
- 속성이 나 요소를 찾을 수 없는 경우 비어 있는 변수 또는 속성의 값입니다.  
+### <a name="return-value"></a>Return Value  
+ The value of the property or an empty variant if the property or element could not be found.  
   
-##  <a name="getelementtext"></a>CDHtmlDialog::GetElementText  
- 검색 된 **innerText** 속성으로 식별 되는 HTML 요소의 `szElementId`합니다.  
+##  <a name="getelementtext"></a>  CDHtmlDialog::GetElementText  
+ Retrieves the **innerText** property of the HTML element identified by `szElementId`.  
   
 ```  
 BSTR GetElementText(LPCTSTR szElementId);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szElementId`  
- HTML 요소의 ID입니다.  
+ The ID of an HTML element.  
   
-### <a name="return-value"></a>반환 값  
- **innerText** 속성으로 식별 되는 HTML 요소의 `szElementId` 또는 **NULL** 속성이 나 요소를 찾을 수 없는 경우.  
+### <a name="return-value"></a>Return Value  
+ The **innerText** property of the HTML element identified by `szElementId` or **NULL** if the property or element could not be found.  
   
-##  <a name="getevent"></a>CDHtmlDialog::GetEvent  
- 반환 된 **IHTMLEventObj** 현재 이벤트 개체에 대 한 포인터입니다.  
+##  <a name="getevent"></a>  CDHtmlDialog::GetEvent  
+ Returns the **IHTMLEventObj** pointer to the current event object.  
   
 ```  
 HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `ppEventObj`  
- 채워집니다 포인터의 주소는 **IHTMLEventObj** 인터페이스 포인터입니다.  
+ Address of a pointer that will be filled with the **IHTMLEventObj** interface pointer.  
   
-### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A standard `HRESULT` value.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 DHTML 이벤트 처리기 내에서 호출 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function should only be called from within a DHTML event handler.  
   
-##  <a name="getexternal"></a>CDHtmlDialog::GetExternal  
- 호스트의 가져옵니다 `IDispatch` 인터페이스입니다.  
+##  <a name="getexternal"></a>  CDHtmlDialog::GetExternal  
+ Gets the host's `IDispatch` interface.  
   
 ```  
 STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *ppDispatch*  
- 참조 *ppDispatch* 에서 [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See *ppDispatch* in [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 `S_OK` 성공 또는 **E_NOTIMPL** 실패 합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `S_OK` on success or **E_NOTIMPL** on failure.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx), as described in the Windows SDK.  
   
-##  <a name="gethostinfo"></a>CDHtmlDialog::GetHostInfo  
- 호스트의 UI 기능을 검색합니다.  
+##  <a name="gethostinfo"></a>  CDHtmlDialog::GetHostInfo  
+ Retrieves the host's UI capabilities.  
   
 ```  
 STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pInfo`  
- 참조 `pInfo` 에서 [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pInfo` in [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- `S_OK`를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns `S_OK`.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx), as described in the Windows SDK.  
   
-##  <a name="getoptionkeypath"></a>CDHtmlDialog::GetOptionKeyPath  
- 사용자 기본 설정이 저장 되는 레지스트리 키를 검색 합니다.  
+##  <a name="getoptionkeypath"></a>  CDHtmlDialog::GetOptionKeyPath  
+ Retrieves the registry key under which user preferences are stored.  
   
 ```  
 STDMETHOD(GetOptionKeyPath)(
@@ -836,113 +890,113 @@ STDMETHOD(GetOptionKeyPath)(
     DWORD dw);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pchKey`  
- 참조 `pchKey` 에서 [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pchKey` in [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) in the Windows SDK.  
   
  `dw`  
- 참조 `dw` 에서 **IDocHostUIHandler::GetOptionKeyPath** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `dw` in **IDocHostUIHandler::GetOptionKeyPath** in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **E_NOTIMPL**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx), as described in the Windows SDK.  
   
-##  <a name="hideui"></a>CDHtmlDialog::HideUI  
- 호스트의 UI를 숨깁니다.  
+##  <a name="hideui"></a>  CDHtmlDialog::HideUI  
+ Hides the host's UI.  
   
 ```  
 STDMETHOD(HideUI)(void);
 ```  
   
-### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **E_NOTIMPL**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx), as described in the Windows SDK.  
   
-##  <a name="isexternaldispatchsafe"></a>CDHtmlDialog::IsExternalDispatchSafe  
- 나타냅니다 여부는 호스트의 `IDispatch` 인터페이스는 스크립팅 작업에 안전 합니다.  
+##  <a name="isexternaldispatchsafe"></a>  CDHtmlDialog::IsExternalDispatchSafe  
+ Indicates whether the host's `IDispatch` interface is safe for scripting.  
   
 ```  
 virtual BOOL IsExternalDispatchSafe();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 반환 **FALSE**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **FALSE**.  
   
-##  <a name="loadfromresource"></a>CDHtmlDialog::LoadFromResource  
- DHTML 대화 상자에서 WebBrowser 컨트롤에 지정된 된 리소스를 로드합니다.  
+##  <a name="loadfromresource"></a>  CDHtmlDialog::LoadFromResource  
+ Loads the specified resource into the WebBrowser control in the DHTML dialog.  
   
 ```  
 BOOL LoadFromResource(LPCTSTR lpszResource);  
 BOOL LoadFromResource(UINT nRes);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszResource`  
- 로드할 리소스의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the name of the resource to load.  
   
  `nRes`  
- 로드 된 리소스의 ID입니다.  
+ The ID of the resource to load.  
   
-### <a name="return-value"></a>반환 값  
- **True 이면** 성공 하 고 그렇지 않으면 **FALSE**합니다.  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if successful; otherwise **FALSE**.  
   
-##  <a name="m_busehtmltitle"></a>CDHtmlDialog::m_bUseHtmlTitle  
- HTML 문서의 제목 대화 캡션으로 사용 여부를 나타냅니다.  
+##  <a name="m_busehtmltitle"></a>  CDHtmlDialog::m_bUseHtmlTitle  
+ Indicates whether to use the HTML document's title as the dialog caption.  
   
 ```  
 BOOL m_bUseHtmlTitle;  
 ```  
   
-### <a name="remarks"></a>주의  
- 경우 **m**_ **bUseHtmlTitle** 는 **true**, HTML 문서의 제목에 동일 하 고, 그렇지 않으면 대화 상자 캡션을 설정 되어, 대화 상자 리소스의 캡션을 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If **m**_ **bUseHtmlTitle** is **true**, the dialog caption is set equal to the title of the HTML document; otherwise, the caption in the dialog resource is used.  
   
-##  <a name="m_nhtmlresid"></a>CDHtmlDialog::m_nHtmlResID  
- 리소스 ID의 HTML 리소스를 표시 합니다.  
+##  <a name="m_nhtmlresid"></a>  CDHtmlDialog::m_nHtmlResID  
+ Resource ID of HTML resource to be displayed.  
   
 ```  
 UINT m_nHtmlResID;  
 ```  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCHtmlHttp #&5;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCHtmlHttp#5](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_5.cpp)]  
   
-##  <a name="m_pbrowserapp"></a>CDHtmlDialog::m_pBrowserApp  
- 웹 브라우저 응용 프로그램에 대 한 포인터입니다.  
+##  <a name="m_pbrowserapp"></a>  CDHtmlDialog::m_pBrowserApp  
+ A pointer to a Web browser application.  
   
 ```  
 CComPtr <IWebBrowser2> m_pBrowserApp;  
 ```  
   
-##  <a name="m_sphtmldoc"></a>CDHtmlDialog::m_spHtmlDoc  
- HTML 문서에 대 한 포인터입니다.  
+##  <a name="m_sphtmldoc"></a>  CDHtmlDialog::m_spHtmlDoc  
+ A pointer to an HTML document.  
   
 ```  
 CComPtr<IHTMLDocument2> m_spHtmlDoc;  
 ```  
   
-##  <a name="m_strcurrenturl"></a>CDHtmlDialog::m_strCurrentUrl  
- 현재 URL입니다.  
+##  <a name="m_strcurrenturl"></a>  CDHtmlDialog::m_strCurrentUrl  
+ The current URL.  
   
 ```  
 CString m_strCurrentUrl;  
 ```  
   
-##  <a name="m_szhtmlresid"></a>CDHtmlDialog::m_szHtmlResID  
- HTML 리소스 ID의 문자열 버전  
+##  <a name="m_szhtmlresid"></a>  CDHtmlDialog::m_szHtmlResID  
+ String version of the HTML resource ID.  
   
 ```  
 LPTSTR m_szHtmlResID;  
 ```  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCHtmlHttp #&6;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCHtmlHttp#6](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_6.cpp)]  
   
-##  <a name="navigate"></a>CDHtmlDialog::Navigate  
- 지정 된 URL로 식별 되는 리소스를 탐색 `lpszURL`합니다.  
+##  <a name="navigate"></a>  CDHtmlDialog::Navigate  
+ Navigates to the resource identified by the URL that is specified by `lpszURL`.  
   
 ```  
 void Navigate(
@@ -954,27 +1008,27 @@ void Navigate(
     DWORD dwPostDataLen = 0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszURL`  
- 대상에 대 한 URL을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the URL to be targeted.  
   
  `dwFlags`  
- 기록 목록에 리소스를 추가할 것인지를 캐시에 대 한 읽기 또는 쓰기 캐시를 사용할지 여부 및 리소스를 새 창에 표시할지 여부를 지정 하는 변수의 플래그입니다. 변수에서 정의 된 값의 조합 수는 [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) 열거형입니다.  
+ The flags of a variable that specifies whether to add the resource to the history list, whether to read to the cache or write from the cache, and whether to display the resource in a new window. The variable can be a combination of the values defined by the [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) enumeration.  
   
  `lpszTargetFrameName`  
- 리소스를 표시 하는 프레임의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string that contains the name of the frame in which to display the resource.  
   
  `lpszHeaders`  
- 서버에 보낼 HTTP 헤더를 지정 하는 값에 대 한 포인터입니다. 이러한 헤더는 Internet Explorer 기본 머리글에 추가 됩니다. 헤더는 서버는 서버 또는 상태 코드에 전달 되는 데이터의 형식에 필요한 작업으로 이러한 정보를 지정할 수 있습니다. 이 매개 변수는 URL이 HTTP URL 경우 무시 됩니다.  
+ A pointer to a value that specifies the HTTP headers to send to the server. These headers are added to the default Internet Explorer headers. The headers can specify such information as the action required of the server, the type of data being passed to the server, or a status code. This parameter is ignored if the URL is not an HTTP URL.  
   
  `lpvPostData`  
- HTTP POST 트랜잭션과 함께 보낼 데이터를 한 포인터입니다. 예를 들어 HTML 형식에서 수집 된 데이터를 보낼 POST 트랜잭션이 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 **Navigate** 는 HTTP GET 거래를 발급 합니다. 이 매개 변수는 URL이 HTTP URL 경우 무시 됩니다.  
+ A pointer to the data to send with the HTTP POST transaction. For example, the POST transaction is used to send data gathered by an HTML form. If this parameter does not specify any post data, **Navigate** issues an HTTP GET transaction. This parameter is ignored if the URL is not an HTTP URL.  
   
  `dwPostDataLen`  
- HTTP POST 트랜잭션과 함께 보낼 데이터입니다. 예를 들어 HTML 형식에서 수집 된 데이터를 보낼 POST 트랜잭션이 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 **Navigate** 는 HTTP GET 거래를 발급 합니다. 이 매개 변수는 URL이 HTTP URL 경우 무시 됩니다.  
+ Data to send with the HTTP POST transaction. For example, the POST transaction is used to send data gathered by an HTML form. If this parameter does not specify any post data, **Navigate** issues an HTTP GET transaction. This parameter is ignored if URL is not an HTTP URL.  
   
-##  <a name="onbeforenavigate"></a>CDHtmlDialog::OnBeforeNavigate  
- 프레임 워크는 이벤트가 발생 하는 탐색 하기 전에 발생에 의해 호출 됩니다.  
+##  <a name="onbeforenavigate"></a>  CDHtmlDialog::OnBeforeNavigate  
+ Called by the framework to cause an event to fire before a navigation occurs.  
   
 ```  
 virtual void OnBeforeNavigate(
@@ -982,15 +1036,15 @@ virtual void OnBeforeNavigate(
     LPCTSTR szUrl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDisp`  
- `IDispatch` 개체에 대한 포인터입니다.  
+ A pointer to an `IDispatch` object.  
   
  `szUrl`  
- 탐색할 URL을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the URL to navigate to.  
   
-##  <a name="ondocumentcomplete"></a>CDHtmlDialog::OnDocumentComplete  
- 문서에 달성 했을 때 응용 프로그램에 알리기 위해 프레임 워크에서 호출 된 `READYSTATE_COMPLETE` 상태입니다.  
+##  <a name="ondocumentcomplete"></a>  CDHtmlDialog::OnDocumentComplete  
+ Called by the framework to notify an application when a document has achieved the `READYSTATE_COMPLETE` state.  
   
 ```  
 virtual void OnDocumentComplete(
@@ -998,66 +1052,66 @@ virtual void OnDocumentComplete(
     LPCTSTR szUrl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDisp`  
- `IDispatch` 개체에 대한 포인터입니다.  
+ A pointer to an `IDispatch` object.  
   
  `szUrl`  
- 탐색 하는 URL을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the URL that was navigated to.  
   
-##  <a name="ondocwindowactivate"></a>CDHtmlDialog::OnDocWindowActivate  
- 문서 창이 활성화 또는 비활성화 하는 경우에 프레임 워크에서 호출 합니다.  
+##  <a name="ondocwindowactivate"></a>  CDHtmlDialog::OnDocWindowActivate  
+ Called by the framework when the document window is activated or deactivated.  
   
 ```  
 STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `fActivate`  
- 참조 `fActivate` 에서 [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `fActivate` in [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **E_NOTIMPL**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현을 [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implemention of [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx), as described in the Windows SDK.  
   
-##  <a name="onframewindowactivate"></a>CDHtmlDialog::OnFrameWindowActivate  
- 프레임 창 활성화 되거나 비활성화 때 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate  
+ Called by the framework when the frame window is activated or deactivated.  
   
 ```  
 STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `fActivate`  
- 참조 `fActivate` 에서 [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `fActivate` in [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **E_NOTIMPL**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx), as described in the Windows SDK.  
   
-##  <a name="oninitdialog"></a>CDHtmlDialog::OnInitDialog  
- 응답으로 호출 된 **WM_INITDIALOG** 메시지입니다.  
+##  <a name="oninitdialog"></a>  CDHtmlDialog::OnInitDialog  
+ Called in response to the **WM_INITDIALOG** message.  
   
 ```  
 virtual BOOL OnInitDialog();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 기본 구현에서는 반환 **TRUE**합니다.  
+### <a name="return-value"></a>Return Value  
+ The default implementation returns **TRUE**.  
   
-### <a name="remarks"></a>주의  
- 이 메시지는 동안 대화 상자를는 **만들기**, `CreateIndirect`, 또는 `DoModal` 대화 상자가 표시 됩니다 직전에 발생 하는 호출 합니다.  
+### <a name="remarks"></a>Remarks  
+ This message is sent to the dialog box during the **Create**, `CreateIndirect`, or `DoModal` calls, which occur immediately before the dialog box is displayed.  
   
- 대화 상자 초기화 될 때 특수 한 처리를 수행 하는 경우이 멤버 함수를 재정의 합니다. 기본 클래스에서 재정의 된 버전을 먼저 호출 하 `OnInitDialog` 하지만 해당 반환 값을 무시 합니다. 일반적으로 돌아가게 됩니다 **TRUE** 에서 재정의 된 멤버 함수입니다.  
+ Override this member function if you need to perform special processing when the dialog box is initialized. In the overridden version, first call the base class `OnInitDialog` but disregard its return value. You will normally return **TRUE** from your overridden member function.  
   
- Windows 호출의 `OnInitDialog` 사용자 메시지 맵을 통해 하므로 원하지 않는 메시지 맵 항목을이 멤버 함수에 대 한 보다는 모든 Microsoft Foundation 클래스 라이브러리 대화 상자에 공통 되는 표준 글로벌 대화 상자 프로시저를 통해 작동 합니다.  
+ Windows calls the `OnInitDialog` function through the standard global dialog-box procedure common to all Microsoft Foundation Class Library dialog boxes, rather than through your message map, so you do not need a message-map entry for this member function.  
   
-##  <a name="onnavigatecomplete"></a>CDHtmlDialog::OnNavigateComplete  
- 지정된 된 URL에 대 한 탐색이 완료 된 후에 프레임 워크에 의해 호출 됩니다.  
+##  <a name="onnavigatecomplete"></a>  CDHtmlDialog::OnNavigateComplete  
+ Called by the framework after navigation to the specified URL is completed.  
   
 ```  
 virtual void OnNavigateComplete(
@@ -1065,15 +1119,15 @@ virtual void OnNavigateComplete(
     LPCTSTR szUrl);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDisp`  
- `IDispatch` 개체에 대한 포인터입니다.  
+ A pointer to an `IDispatch` object.  
   
  `szUrl`  
- 탐색 하는 URL을 포함 하는 문자열에 대 한 포인터입니다.  
+ A pointer to a string containing the URL that was navigated to.  
   
-##  <a name="resizeborder"></a>CDHtmlDialog::ResizeBorder  
- 해당 테두리 공간 크기를 조정 해야 하는 개체를 게 알립니다.  
+##  <a name="resizeborder"></a>  CDHtmlDialog::ResizeBorder  
+ Alerts the object that it needs to resize its border space.  
   
 ```  
 STDMETHOD(ResizeBorder)(
@@ -1082,21 +1136,21 @@ STDMETHOD(ResizeBorder)(
     BOOL fRameWindow);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `prcBorder`  
- 참조 `prcBorder` 에서 [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `prcBorder` in [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) in the Windows SDK.  
   
  `pUIWindow`  
- 참조 `pUIWindow` 에서 **IDocHostUIHandler::ResizeBorder** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pUIWindow` in **IDocHostUIHandler::ResizeBorder** in the Windows SDK.  
   
  `fFrameWindow`  
- 참조 *fFrameWindow* 에서 **IDocHostUIHandler::ResizeBorder** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See *fFrameWindow* in **IDocHostUIHandler::ResizeBorder** in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **E_NOTIMPL**.  
   
-##  <a name="setcontrolproperty"></a>CDHtmlDialog::SetControlProperty  
- ActiveX 컨트롤의 속성을 새 값으로 설정합니다.  
+##  <a name="setcontrolproperty"></a>  CDHtmlDialog::SetControlProperty  
+ Sets the property of an ActiveX control to a new value.  
   
 ```  
 void SetControlProperty(
@@ -1117,24 +1171,24 @@ void SetControlProperty(
     VARIANT* pVar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szElementId`  
- ActiveX 컨트롤의 HTML ID입니다.  
+ The HTML ID of an ActiveX control.  
   
  `dispid`  
- 설정할 속성의 디스패치 ID입니다.  
+ The dispatch ID of the property to set.  
   
  *pVar*  
- 에 대 한 포인터는 **VARIANT** 새 속성 값을 포함 합니다.  
+ Pointer to a **VARIANT** containing the new property value.  
   
  `pdispControl`  
- ActiveX 컨트롤의에 대 한 포인터 `IDispatch` 인터페이스입니다.  
+ Pointer to an ActiveX control's `IDispatch` interface.  
   
  `szPropName`  
- 설정할 속성의 이름을 포함 하는 문자열입니다.  
+ String containing the name of the property to set.  
   
-##  <a name="setelementhtml"></a>CDHtmlDialog::SetElementHtml  
- 설정의 **innerHTML** HTML 요소의 속성입니다.  
+##  <a name="setelementhtml"></a>  CDHtmlDialog::SetElementHtml  
+ Sets the **innerHTML** property of an HTML element.  
   
 ```  
 void SetElementHtml(
@@ -1147,18 +1201,18 @@ void SetElementHtml(
     BSTR bstrText);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szElementId`  
- HTML 요소의 ID입니다.  
+ The ID of an HTML element.  
   
  `bstrText`  
- 새 값은 **innerHTML** 속성입니다.  
+ The new value of the **innerHTML** property.  
   
  `punkElem`  
- **IUnknown** HTML 요소의 포인터입니다.  
+ The **IUnknown** pointer of an HTML element.  
   
-##  <a name="setelementproperty"></a>CDHtmlDialog::SetElementProperty  
- HTML 요소의 속성을 설정합니다.  
+##  <a name="setelementproperty"></a>  CDHtmlDialog::SetElementProperty  
+ Sets a property of an HTML element.  
   
 ```  
 void SetElementProperty(
@@ -1167,18 +1221,18 @@ void SetElementProperty(
     VARIANT* pVar);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szElementId`  
- HTML 요소의 ID입니다.  
+ The ID of an HTML element.  
   
  `dispid`  
- 설정할 속성의 디스패치 ID입니다.  
+ The dispatch ID of the property to set.  
   
  *pVar*  
- 속성의 새 값입니다.  
+ The new value of the property.  
   
-##  <a name="setelementtext"></a>CDHtmlDialog::SetElementText  
- 설정의 **innerText** HTML 요소의 속성입니다.  
+##  <a name="setelementtext"></a>  CDHtmlDialog::SetElementText  
+ Sets the **innerText** property of an HTML element.  
   
 ```  
 void SetElementText(
@@ -1191,40 +1245,40 @@ void SetElementText(
     BSTR bstrText);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `szElementId`  
- HTML 요소의 ID입니다.  
+ The ID of an HTML element.  
   
  `bstrText`  
- 새 값은 **innerText** 속성입니다.  
+ The new value of the **innerText** property.  
   
  `punkElem`  
- **IUnknown** HTML 요소의 포인터입니다.  
+ The **IUnknown** pointer of an HTML element.  
   
-##  <a name="setexternaldispatch"></a>CDHtmlDialog::SetExternalDispatch  
- 설정 하는 호스트의 `IDispatch` 인터페이스입니다.  
+##  <a name="setexternaldispatch"></a>  CDHtmlDialog::SetExternalDispatch  
+ Sets the host's `IDispatch` interface.  
   
 ```  
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *pdispExternal*  
- 새 `IDispatch` 인터페이스입니다.  
+ The new `IDispatch` interface.  
   
-##  <a name="sethostflags"></a>CDHtmlDialog::SetHostFlags  
- 호스트 UI 플래그를 설정합니다.  
+##  <a name="sethostflags"></a>  CDHtmlDialog::SetHostFlags  
+ Sets the host UI flags.  
   
 ```  
 void SetHostFlags(DWORD dwFlags);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 가능한 값에 대 한 참조 [DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For possible values, see [DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) in the Windows SDK.  
   
-##  <a name="showcontextmenu"></a>CDHtmlDialog::ShowContextMenu  
- 상황에 맞는 메뉴 표시 하려고 할 때 호출 됩니다.  
+##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu  
+ Called when a context menu is about to be displayed.  
   
 ```  
 STDMETHOD(ShowContextMenu)(
@@ -1234,27 +1288,27 @@ STDMETHOD(ShowContextMenu)(
     IDispatch* pdispReserved);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwID`  
- 참조 `dwID` 에서 [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `dwID` in [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) in the Windows SDK.  
   
  `ppt`  
- 참조 `ppt` 에서 **IDocHostUIHandler::ShowContextMenu** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `ppt` in **IDocHostUIHandler::ShowContextMenu** in the Windows SDK.  
   
  `pcmdtReserved`  
- 참조 `pcmdtReserved` 에서 **IDocHostUIHandler::ShowContextMenu** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pcmdtReserved` in **IDocHostUIHandler::ShowContextMenu** in the Windows SDK.  
   
  `pdispReserved`  
- 참조 `pdispReserved` 에서 **IDocHostUIHandler::ShowContextMenu** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pdispReserved` in **IDocHostUIHandler::ShowContextMenu** in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **S_FALSE**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **S_FALSE**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx), as described in the Windows SDK.  
   
-##  <a name="showui"></a>CDHtmlDialog::ShowUI  
- 호스트의 UI를 표시 합니다.  
+##  <a name="showui"></a>  CDHtmlDialog::ShowUI  
+ Shows the host's UI.  
   
 ```  
 STDMETHOD(ShowUI)(
@@ -1265,30 +1319,30 @@ STDMETHOD(ShowUI)(
     IOleInPlaceUIWindow* pDoc);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwID`  
- 참조 `dwID` 에서 [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `dwID` in [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) in the Windows SDK.  
   
  `pActiveObject`  
- 참조 *d pActiveObject* 에서 **IDocHostUIHandler::ShowUI** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See *d pActiveObject* in **IDocHostUIHandler::ShowUI** in the Windows SDK.  
   
  `pCommandTarget`  
- 참조 `pCommandTarget` 에서 **IDocHostUIHandler::ShowUI** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pCommandTarget` in **IDocHostUIHandler::ShowUI** in the Windows SDK.  
   
  `pFrame`  
- 참조 `pFrame` 에서 **IDocHostUIHandler::ShowUI** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pFrame` in **IDocHostUIHandler::ShowUI** in the Windows SDK.  
   
  `pDoc`  
- 참조 `pDoc` 에서 **IDocHostUIHandler::ShowUI** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pDoc` in **IDocHostUIHandler::ShowUI** in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **S_FALSE**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **S_FALSE**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx), as described in the Windows SDK.  
   
-##  <a name="translateaccelerator"></a>CDHtmlDialog::TranslateAccelerator  
- 메뉴 바로 가기 키 메시지를 처리 하기 위해 호출.  
+##  <a name="translateaccelerator"></a>  CDHtmlDialog::TranslateAccelerator  
+ Called to process menu accelerator-key messages.  
   
 ```  
 STDMETHOD(TranslateAccelerator)(
@@ -1297,24 +1351,24 @@ STDMETHOD(TranslateAccelerator)(
     DWORD nCmdID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpMsg`  
- 참조 `lpMsg` 에서 [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `lpMsg` in [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) in the Windows SDK.  
   
  `pguidCmdGroup`  
- 참조 `pguidCmdGroup` 에서 **IDocHostUIHandler::TranslateAccelerator** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pguidCmdGroup` in **IDocHostUIHandler::TranslateAccelerator** in the Windows SDK.  
   
  `nCmdID`  
- 참조 `nCmdID` 에서 **IDocHostUIHandler::TranslateAccelerator** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `nCmdID` in **IDocHostUIHandler::TranslateAccelerator** in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **S_FALSE**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **S_FALSE**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx), as described in the Windows SDK.  
   
-##  <a name="translateurl"></a>CDHtmlDialog::TranslateUrl  
- 로드 되도록 URL을 수정 하려면 호출 됩니다.  
+##  <a name="translateurl"></a>  CDHtmlDialog::TranslateUrl  
+ Called to modify the URL to be loaded.  
   
 ```  
 STDMETHOD(TranslateUrl)(
@@ -1323,39 +1377,39 @@ STDMETHOD(TranslateUrl)(
     OLECHAR** ppchURLOut);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwTranslate`  
- 참조 `dwTranslate` 에서 [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `dwTranslate` in [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) in the Windows SDK.  
   
  `pchURLIn`  
- 참조 `pchURLIn` 에서 **IDocHostUIHandler::TranslateUrl** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `pchURLIn` in **IDocHostUIHandler::TranslateUrl** in the Windows SDK.  
   
  `ppchURLOut`  
- 참조 `ppchURLOut` 에서 **IDocHostUIHandler::TranslateUrl** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ See `ppchURLOut` in **IDocHostUIHandler::TranslateUrl** in the Windows SDK.  
   
-### <a name="return-value"></a>반환 값  
- 반환 **S_FALSE**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **S_FALSE**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx), as described in the Windows SDK.  
   
-##  <a name="updateui"></a>CDHtmlDialog::UpdateUI  
- 명령 상태가 변경 되었음을 호스트에 알리기 위해 호출 합니다.  
+##  <a name="updateui"></a>  CDHtmlDialog::UpdateUI  
+ Called to notify the host that the command state has changed.  
   
 ```  
 STDMETHOD(UpdateUI)(void);
 ```  
   
-### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns **E_NOTIMPL**.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)에 설명 된 대로 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This member function is CDHtmlDialog's implementation of [IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx), as described in the Windows SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 DHtmlExplore](../../visual-cpp-samples.md)   
- [DDX_DHtml 도우미 매크로](#ddx_dhtml_helper_macros)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample DHtmlExplore](../../visual-cpp-samples.md)   
+ [DDX_DHtml Helper Macros](#ddx_dhtml_helper_macros)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "CSingleDocTemplate 클래스 | Microsoft 문서"
+title: CSingleDocTemplate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,10 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- templates, SDI
-- document templates, single
-- single document interface (SDI), applications
-- CSingleDocTemplate class
+- CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 caps.latest.revision: 23
 author: mikeblome
@@ -38,48 +35,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 78e288dd958e73495a8d513d7fe3427ccc956a61
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 113ea3c8dca65f1762e1bdf969d4433afc884bef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csingledoctemplate-class"></a>CSingleDocTemplate 클래스
-SDI(단일 문서 인터페이스)를 구현하는 문서 템플릿을 정의합니다.  
+# <a name="csingledoctemplate-class"></a>CSingleDocTemplate Class
+Defines a document template that implements the single document interface (SDI).  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSingleDocTemplate : public CDocTemplate  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|`CSingleDocTemplate` 개체를 생성합니다.|  
+|[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Constructs a `CSingleDocTemplate` object.|  
   
-## <a name="remarks"></a>주의  
- SDI 응용 프로그램의 주 프레임 창을 사용 하 여 문서; 표시 하려면 한 번에 한 개의 문서만 열 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ An SDI application uses the main frame window to display a document; only one document can be open at a time.  
   
- 문서 서식 파일을&3; 가지 유형의 클래스 간의 관계를 정의합니다.  
+ A document template defines the relationship between three types of classes:  
   
--   문서 클래스에서 파생 되는 **CDocument**합니다.  
+-   A document class, which you derive from **CDocument**.  
   
--   위에 나열 된 문서 클래스에서 데이터를 표시 하는 뷰 클래스 이 클래스에서 파생 시킬 수 있습니다 `CView`, `CScrollView`, `CFormView`, 또는 `CEditView`합니다. (사용할 수 있습니다 `CEditView` 직접.)  
+-   A view class, which displays data from the document class listed above. You can derive this class from `CView`, `CScrollView`, `CFormView`, or `CEditView`. (You can also use `CEditView` directly.)  
   
--   프레임 창 클래스-보기가 포함 합니다. SDI 문서 서식 파일에 대 한에서이 클래스를 파생 시킬 수 `CFrameWnd`경우 기본 동작을 사용자 지정할 필요가 없습니다; 프레임 창에서 사용할 수 있습니다 `CFrameWnd` 사용자 고유의 클래스를 파생 하지 않고 직접.  
+-   A frame window class, which contains the view. For an SDI document template, you can derive this class from `CFrameWnd`; if you do not need to customize the behavior of the main frame window, you can use `CFrameWnd` directly without deriving your own class.  
   
- SDI 응용 프로그램는 일반적으로 한 가지 유형의 문서를 지원 하므로 하나만 `CSingleDocTemplate` 개체입니다. 한 번에 한 개의 문서만 열 수 있습니다.  
+ An SDI application typically supports one type of document, so it has only one `CSingleDocTemplate` object. Only one document can be open at a time.  
   
- 모든 멤버의 함수를 호출할 필요가 없습니다 `CSingleDocTemplate` 생성자를 제외 하 고 있습니다. 프레임 워크 핸들 `CSingleDocTemplate` 내부적으로 개체입니다.  
+ You don't need to call any member functions of `CSingleDocTemplate` except the constructor. The framework handles `CSingleDocTemplate` objects internally.  
   
- 사용 하 여 대 한 자세한 내용은 `CSingleDocTemplate`, 참조 [문서 템플릿 및 문서/뷰 만들기 프로세스](../../mfc/document-templates-and-the-document-view-creation-process.md)합니다.  
+ For more information on using `CSingleDocTemplate`, see [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,11 +85,11 @@ class CSingleDocTemplate : public CDocTemplate
   
  `CSingleDocTemplate`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate  
- `CSingleDocTemplate` 개체를 생성합니다.  
+##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate  
+ Constructs a `CSingleDocTemplate` object.  
   
 ```  
 CSingleDocTemplate(
@@ -102,11 +99,11 @@ CSingleDocTemplate(
     CRuntimeClass* pViewClass);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIDResource`  
- 문서 형식으로 사용 하는 리소스의 ID를 지정 합니다. 여기에 메뉴, 아이콘, 액셀러레이터 키 테이블 및 문자열 리소스가 포함 될 수 있습니다.  
+ Specifies the ID of the resources used with the document type. This may include menu, icon, accelerator table, and string resources.  
   
- 문자열 리소스 '\n' 문자로 구분 하는 최대&7; 개의 부분으로 구성 됩니다 ('\n' 문자 자리 표시자로 필요한 부분 문자열이 포함 되지 않은 경우, 후행 '\n' 문자가 필요 하지 않은 반면); 이러한 부분 문자열에는 문서 유형에 대해 설명합니다. 부분 문자열에 대 한 정보를 참조 하십시오. [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)합니다. 이 문자열 리소스를 응용 프로그램의 리소스 파일에서 찾을 수 있습니다. 예:  
+ The string resource consists of up to seven substrings separated by the '\n' character (the '\n' character is needed as a placeholder if a substring is not included; however, trailing '\n' characters are not necessary); these substrings describe the document type. For information about the substrings, see [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). This string resource is found in the application's resource file. For example:  
   
  `// MYCALC.RC`  
   
@@ -118,35 +115,35 @@ CSingleDocTemplate(
   
  `END`  
   
- 문자열 편집기;를 사용 하 여이 문자열을 편집할 수 있습니다. 전체 문자열&7; 별도 항목 아니라 문자열 편집기에서 단일 항목으로 나타납니다.  
+ You can edit this string using the string editor; the entire string appears as a single entry in the String Editor, not as seven separate entries.  
   
- 이러한 리소스 종류에 대 한 자세한 내용은 참조는 [문자열 편집기](../../windows/string-editor.md)합니다.  
+ For more information about these resource types, see the [String Editor](../../windows/string-editor.md).  
   
  `pDocClass`  
- 가리키는 `CRuntimeClass` 문서 클래스의 개체입니다. 이 클래스는 한 **CDocument**-문서를 나타내기 위해 정의한 클래스를 파생 합니다.  
+ Points to the `CRuntimeClass` object of the document class. This class is a **CDocument**-derived class you define to represent your documents.  
   
  `pFrameClass`  
- 가리키는 `CRuntimeClass` 프레임 창 클래스의 개체입니다. 될 수 있는이 클래스는 `CFrameWnd`-클래스를 파생 하거나, `CFrameWnd` 자체의 주 프레임 창에 대 한 기본 동작을 수행 합니다.  
+ Points to the `CRuntimeClass` object of the frame window class. This class can be a `CFrameWnd`-derived class, or it can be `CFrameWnd` itself if you want default behavior for your main frame window.  
   
  `pViewClass`  
- 가리키는 `CRuntimeClass` 뷰 클래스의 개체입니다. 이 클래스는는 `CView`-문서를 표시 하기 위해 정의 하는 클래스를 파생 합니다.  
+ Points to the `CRuntimeClass` object of the view class. This class is a `CView`-derived class you define to display your documents.  
   
-### <a name="remarks"></a>주의  
- 동적으로 할당 한 `CSingleDocTemplate` 개체를 전달 `CWinApp::AddDocTemplate` 에서 `InitInstance` 응용 프로그램 클래스의 멤버 함수입니다.  
+### <a name="remarks"></a>Remarks  
+ Dynamically allocate a `CSingleDocTemplate` object and pass it to `CWinApp::AddDocTemplate` from the `InitInstance` member function of your application class.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDocViewSDI #&13;](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocViewSDI#13](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
   
- [!code-cpp[NVC_MFCDocViewSDI #&14;](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#14](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]  
   
-## <a name="see-also"></a>참고 항목  
- [MFC 샘플 DOCKTOOL](../../visual-cpp-samples.md)   
- [CDocTemplate 클래스](../../mfc/reference/cdoctemplate-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CDocTemplate 클래스](../../mfc/reference/cdoctemplate-class.md)   
- [CDocument 클래스](../../mfc/reference/cdocument-class.md)   
- [CFrameWnd 클래스](../../mfc/reference/cframewnd-class.md)   
- [CMultiDocTemplate 클래스](../../mfc/reference/cmultidoctemplate-class.md)   
- [CView 클래스](../../mfc/reference/cview-class.md)   
- [CWinApp 클래스](../../mfc/reference/cwinapp-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample DOCKTOOL](../../visual-cpp-samples.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [CDocument Class](../../mfc/reference/cdocument-class.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [CMultiDocTemplate Class](../../mfc/reference/cmultidoctemplate-class.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CWinApp Class](../../mfc/reference/cwinapp-class.md)
 

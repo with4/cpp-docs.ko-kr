@@ -1,5 +1,5 @@
 ---
-title: "bad_weak_ptr 클래스 | Microsoft 문서"
+title: bad_weak_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- bad_weak_ptr
 - memory/std::bad_weak_ptr
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: b6d5102096f4d7ff27ceaf08abb7aa318273c6af
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ea321c5fe61ef2e2bbec82e3bcbe366bbe619da2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="badweakptr-class"></a>bad_weak_ptr 클래스
-불량 weak_ptr 예외를 보고합니다.  
+# <a name="badweakptr-class"></a>bad_weak_ptr Class
+Reports bad weak_ptr exception.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class bad_weak_ptr : public std::exception 
@@ -56,10 +55,10 @@ public:
  };  
 ```  
   
-## <a name="remarks"></a>설명  
- 이 클래스는 [weak_ptr 클래스](../standard-library/weak-ptr-class.md) 형식의 인수를 사용하는 [shared_ptr 클래스](../standard-library/shared-ptr-class.md) 생성자에서 throw될 수 있는 예외를 설명합니다. 멤버 함수 `what`에서 `"bad_weak_ptr"`을 반환합니다.  
+## <a name="remarks"></a>Remarks  
+ The class describes an exception that can be thrown from the [shared_ptr Class](../standard-library/shared-ptr-class.md) constructor that takes an argument of type [weak_ptr Class](../standard-library/weak-ptr-class.md). The member function `what` returns `"bad_weak_ptr"`.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__bad_weak_ptr.cpp   
@@ -97,11 +96,11 @@ int main()
 bad weak pointer  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [weak_ptr 클래스](../standard-library/weak-ptr-class.md)
+## <a name="see-also"></a>See Also  
+ [weak_ptr Class](../standard-library/weak-ptr-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CRecordset 클래스 | Microsoft Docs"
+title: CRecordset Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -76,10 +76,68 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- database records [C++]
-- CRecordset class
-- ODBC recordsets [C++], CRecordset objects
-- sets of records [C++]
+- CRecordset [MFC], CRecordset
+- CRecordset [MFC], AddNew
+- CRecordset [MFC], CanAppend
+- CRecordset [MFC], CanBookmark
+- CRecordset [MFC], Cancel
+- CRecordset [MFC], CancelUpdate
+- CRecordset [MFC], CanRestart
+- CRecordset [MFC], CanScroll
+- CRecordset [MFC], CanTransact
+- CRecordset [MFC], CanUpdate
+- CRecordset [MFC], CheckRowsetError
+- CRecordset [MFC], Close
+- CRecordset [MFC], Delete
+- CRecordset [MFC], DoBulkFieldExchange
+- CRecordset [MFC], DoFieldExchange
+- CRecordset [MFC], Edit
+- CRecordset [MFC], FlushResultSet
+- CRecordset [MFC], GetBookmark
+- CRecordset [MFC], GetDefaultConnect
+- CRecordset [MFC], GetDefaultSQL
+- CRecordset [MFC], GetFieldValue
+- CRecordset [MFC], GetODBCFieldCount
+- CRecordset [MFC], GetODBCFieldInfo
+- CRecordset [MFC], GetRecordCount
+- CRecordset [MFC], GetRowsetSize
+- CRecordset [MFC], GetRowsFetched
+- CRecordset [MFC], GetRowStatus
+- CRecordset [MFC], GetSQL
+- CRecordset [MFC], GetStatus
+- CRecordset [MFC], GetTableName
+- CRecordset [MFC], IsBOF
+- CRecordset [MFC], IsDeleted
+- CRecordset [MFC], IsEOF
+- CRecordset [MFC], IsFieldDirty
+- CRecordset [MFC], IsFieldNull
+- CRecordset [MFC], IsFieldNullable
+- CRecordset [MFC], IsOpen
+- CRecordset [MFC], Move
+- CRecordset [MFC], MoveFirst
+- CRecordset [MFC], MoveLast
+- CRecordset [MFC], MoveNext
+- CRecordset [MFC], MovePrev
+- CRecordset [MFC], OnSetOptions
+- CRecordset [MFC], OnSetUpdateOptions
+- CRecordset [MFC], Open
+- CRecordset [MFC], RefreshRowset
+- CRecordset [MFC], Requery
+- CRecordset [MFC], SetAbsolutePosition
+- CRecordset [MFC], SetBookmark
+- CRecordset [MFC], SetFieldDirty
+- CRecordset [MFC], SetFieldNull
+- CRecordset [MFC], SetLockingMode
+- CRecordset [MFC], SetParamNull
+- CRecordset [MFC], SetRowsetCursorPosition
+- CRecordset [MFC], SetRowsetSize
+- CRecordset [MFC], Update
+- CRecordset [MFC], m_hstmt
+- CRecordset [MFC], m_nFields
+- CRecordset [MFC], m_nParams
+- CRecordset [MFC], m_pDatabase
+- CRecordset [MFC], m_strFilter
+- CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 caps.latest.revision: 23
 author: mikeblome
@@ -99,524 +157,524 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9271608528699e93fa7b8315f8ef2fdd5ae1e54d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e2aad553929522346ae9fde947e0b01a4469a43a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crecordset-class"></a>CRecordset 클래스
-데이터 소스에서 선택한 레코드 집합을 나타냅니다.  
+# <a name="crecordset-class"></a>CRecordset Class
+Represents a set of records selected from a data source.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRecordset : public CObject  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRecordset::CRecordset](#crecordset)|`CRecordset` 개체를 생성합니다. 파생 된 클래스는이 호출 하는 생성자를 제공 해야 합니다.|  
+|[CRecordset::CRecordset](#crecordset)|Constructs a `CRecordset` object. Your derived class must provide a constructor that calls this one.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRecordset::AddNew](#addnew)|새 레코드를 추가 하기 위한 준비 합니다. 호출 `Update` 추가 완료 합니다.|  
-|[CRecordset::CanAppend](#canappend)|새 레코드를 통해 레코드 집합에 추가할 수 있으면 0이 아닌 반환는 `AddNew` 멤버 함수입니다.|  
-|[CRecordset::CanBookmark](#canbookmark)|레코드 집합에서 책갈피를 지 원하는 경우 0이 아닌 값을 반환 합니다.|  
-|[CRecordset::Cancel](#cancel)|비동기 작업 또는 두 번째 스레드가 프로세스를 취소합니다.|  
-|[CRecordset::CancelUpdate](#cancelupdate)|취소로 인해 모든 보류 중인 업데이트는 `AddNew` 또는 `Edit` 작업 합니다.|  
-|[CRecordset::CanRestart](#canrestart)|0이 아닌 경우 반환 `Requery` 레코드 집합의 쿼리를 다시 실행 하기 위해 호출할 수 있습니다.|  
-|[CRecordset::CanScroll](#canscroll)|레코드를 스크롤할 수 있으면 0이 아닌 값을 반환 합니다.|  
-|[CRecordset::CanTransact](#cantransact)|데이터 소스에서 트랜잭션을 지원 하면 0이 아닌 값을 반환 합니다.|  
-|[CRecordset::CanUpdate](#canupdate)|레코드 집합을 업데이트할 수 있으면 0이 아닌 반환 (있습니다 수 추가, 업데이트 또는 삭제 레코드).|  
-|[CRecordset::CheckRowsetError](#checkrowseterror)|레코드를 인출 하는 동안 발생 한 오류를 처리 하기 위해 호출 합니다.|  
-|[CRecordset::Close](#close)|레코드 집합을 ODBC 닫고 **HSTMT** 연관 됩니다.|  
-|[CRecordset::Delete](#delete)|레코드 집합에서 현재 레코드를 삭제합니다. 삭제 후 명시적으로 다른 레코드로 스크롤하여 해야 합니다.|  
-|[CRecordset::DoBulkFieldExchange](#dobulkfieldexchange)|대량 행의 데이터 원본에서 레코드 집합으로 데이터를 교환 하기 위해 호출 합니다. 구현 대량 레코드 필드 교환 (대량 RFX).|  
-|[CRecordset::DoFieldExchange](#dofieldexchange)|레코드 집합의 필드 데이터 멤버와 데이터 원본에 있는 해당 레코드 간에 (양방향)으로 데이터를 교환 하기 위해 호출 합니다. 구현 레코드 필드 교환 (RFX).|  
-|[CRecordset::Edit](#edit)|현재 레코드에 변경 내용에 대해 준비합니다. 호출 `Update` 편집을 완료 합니다.|  
-|[CRecordset::FlushResultSet](#flushresultset)|미리 정의 된 쿼리를 사용 하는 경우 검색할 설정 되는 다른 결과 0이 아닌 반환 합니다.|  
-|[CRecordset::GetBookmark](#getbookmark)|매개 변수 개체에 레코드의 책갈피 값을 할당합니다.|  
-|[CRecordset::GetDefaultConnect](#getdefaultconnect)|기본 연결 문자열을 가져오기 위해 호출 됩니다.|  
-|[CRecordset::GetDefaultSQL](#getdefaultsql)|기본 SQL 문자열 실행을 가져오기 위해 호출 됩니다.|  
-|[CRecordset::GetFieldValue](#getfieldvalue)|레코드 집합에서 필드의 값을 반환합니다.|  
-|[CRecordset::GetODBCFieldCount](#getodbcfieldcount)|레코드 집합의 필드 수를 반환합니다.|  
-|[CRecordset::GetODBCFieldInfo](#getodbcfieldinfo)|레코드 집합에서 특정 유형의 필드에 대 한 정보를 반환합니다.|  
-|[CRecordset::GetRecordCount](#getrecordcount)|레코드 집합의 레코드 수를 반환합니다.|  
-|[CRecordset::GetRowsetSize](#getrowsetsize)|단일 인출 하는 동안 검색할 레코드 수를 반환 합니다.|  
-|[CRecordset::GetRowsFetched](#getrowsfetched)|행을 인출 하는 동안 검색의 실제 수를 반환 합니다.|  
-|[CRecordset::GetRowStatus](#getrowstatus)|인출 후 행의 상태를 반환합니다.|  
-|[CRecordset::GetSQL](#getsql)|레코드 집합에 대 한 레코드를 선택 하는 데 SQL 문자열을 가져옵니다.|  
-|[CRecordset::GetStatus](#getstatus)|레코드 집합의 상태를 가져옵니다: 현재 레코드와 레코드의 최종 개수에 가져온 여부의 인덱스입니다.|  
-|[CRecordset::GetTableName](#gettablename)|레코드 집합의 기반이 되는 테이블의 이름을 가져옵니다.|  
-|[CRecordset::IsBOF](#isbof)|레코드 집합의 첫 번째 레코드 바로 앞 배치 된 경우 0이 아닌 값을 반환 합니다. 현재 기록이 없습니다.|  
-|[CRecordset::IsDeleted](#isdeleted)|레코드 집합 삭제 된 레코드에 배치 되는 경우 0이 아닌 값을 반환 합니다.|  
-|[CRecordset::IsEOF](#iseof)|레코드 집합 마지막 레코드 뒤 배치 된 경우 0이 아닌 값을 반환 합니다. 현재 기록이 없습니다.|  
-|[CRecordset::IsFieldDirty](#isfielddirty)|현재 레코드에 지정된 된 필드 정보가 변경 된 경우 0이 아닌 값을 반환 합니다.|  
-|[CRecordset::IsFieldNull](#isfieldnull)|현재 레코드에 지정된 된 필드를 null 이면 0이 아닌 값을 반환 합니다 (값이 없는).|  
-|[CRecordset::IsFieldNullable](#isfieldnullable)|현재 레코드에 지정된 된 필드 (예: 값 없음)을 null로 설정할 수 있는 경우 0이 아닌 값을 반환 합니다.|  
-|[CRecordset::IsOpen](#isopen)|0이 아닌 경우 반환 `Open` 가 이전에 호출 되었습니다.|  
-|[CRecordset::Move](#move)|어느 방향으로든에서 현재 레코드에서 지정된 된 수의 레코드를 레코드 집합을 배치합니다.|  
-|[CRecordset::MoveFirst](#movefirst)|레코드 집합의 첫 번째 레코드를 현재 레코드를 배치합니다. 에 대 한 테스트 `IsBOF` 첫 번째입니다.|  
-|[CRecordset::MoveLast](#movelast)|마지막 행 집합 또는 마지막 레코드에서 현재 레코드를 배치합니다. 에 대 한 테스트 `IsEOF` 첫 번째입니다.|  
-|[CRecordset::MoveNext](#movenext)|다음 레코드에 또는 다음 행 집합에서 현재 레코드를 배치합니다. 에 대 한 테스트 `IsEOF` 첫 번째입니다.|  
-|[CRecordset::MovePrev](#moveprev)|이전 레코드 또는 이전 행 집합에서 현재 레코드를 배치합니다. 에 대 한 테스트 `IsBOF` 첫 번째입니다.|  
-|[CRecordset::OnSetOptions](#onsetoptions)|(선택에 사용 됨) 하는 옵션을 설정 하려면 지정한 ODBC 문에 대 한 호출 됩니다.|  
-|[CRecordset::OnSetUpdateOptions](#onsetupdateoptions)|지정 된 ODBC 문에 대 한 옵션 (업데이트에 사용 됨)를 설정 하기 위해 호출 합니다.|  
-|[Crecordset:: Open](#open)|테이블을 검색 하거나 레코드 집합을 나타내는 쿼리를 수행 하 여 레코드 집합을 엽니다.|  
-|[CRecordset::RefreshRowset](#refreshrowset)|데이터 및 지정한 행의 상태를 새로 고칩니다.|  
-|[&Gt;crecordset:: Requery](#requery)|레코드 집합의 쿼리를 선택된 된 레코드를 새로 고치려면 다시 실행 합니다.|  
-|[CRecordset::SetAbsolutePosition](#setabsoluteposition)|지정 된 레코드 번호에 해당 하는 레코드를 레코드 집합을 배치 합니다.|  
-|[CRecordset::SetBookmark](#setbookmark)|책갈피 지정 된 레코드를 레코드 집합을 배치 합니다.|  
-|[CRecordset::SetFieldDirty](#setfielddirty)|변경 되는 현재 레코드에 지정된 된 필드를 표시 합니다.|  
-|[CRecordset::SetFieldNull](#setfieldnull)|(예: 값 없음) null로 현재 레코드에 지정된 된 필드의 값을 설정 합니다.|  
-|[CRecordset::SetLockingMode](#setlockingmode)|"낙관적" 잠금 (기본값) 또는 "비관적" 잠금을 잠금 모드를 설정 합니다. 업데이트에 대 한 레코드를 잠그는 방법을 결정 합니다.|  
-|[CRecordset::SetParamNull](#setparamnull)|지정된 된 매개 변수 (예: 값 없음) null로 설정 합니다.|  
-|[CRecordset::SetRowsetCursorPosition](#setrowsetcursorposition)|행 집합 내의 지정된 된 행에 커서를 놓습니다.|  
-|[CRecordset::SetRowsetSize](#setrowsetsize)|인출 하는 동안 검색할 레코드 수를 지정 합니다.|  
-|[CRecordset::Update](#update)|완료 되는 `AddNew` 또는 `Edit` 데이터 원본에서 새로 만들거나 편집한 데이터를 저장 하 여 작업 합니다.|  
+|[CRecordset::AddNew](#addnew)|Prepares for adding a new record. Call `Update` to complete the addition.|  
+|[CRecordset::CanAppend](#canappend)|Returns nonzero if new records can be added to the recordset via the `AddNew` member function.|  
+|[CRecordset::CanBookmark](#canbookmark)|Returns nonzero if the recordset supports bookmarks.|  
+|[CRecordset::Cancel](#cancel)|Cancels an asynchronous operation or a process from a second thread.|  
+|[CRecordset::CancelUpdate](#cancelupdate)|Cancels any pending updates due to an `AddNew` or `Edit` operation.|  
+|[CRecordset::CanRestart](#canrestart)|Returns nonzero if `Requery` can be called to run the recordset's query again.|  
+|[CRecordset::CanScroll](#canscroll)|Returns nonzero if you can scroll through the records.|  
+|[CRecordset::CanTransact](#cantransact)|Returns nonzero if the data source supports transactions.|  
+|[CRecordset::CanUpdate](#canupdate)|Returns nonzero if the recordset can be updated (you can add, update, or delete records).|  
+|[CRecordset::CheckRowsetError](#checkrowseterror)|Called to handle errors generated during record fetching.|  
+|[CRecordset::Close](#close)|Closes the recordset and the ODBC **HSTMT** associated with it.|  
+|[CRecordset::Delete](#delete)|Deletes the current record from the recordset. You must explicitly scroll to another record after the deletion.|  
+|[CRecordset::DoBulkFieldExchange](#dobulkfieldexchange)|Called to exchange bulk rows of data from the data source to the recordset. Implements bulk record field exchange (Bulk RFX).|  
+|[CRecordset::DoFieldExchange](#dofieldexchange)|Called to exchange data (in both directions) between the field data members of the recordset and the corresponding record on the data source. Implements record field exchange (RFX).|  
+|[CRecordset::Edit](#edit)|Prepares for changes to the current record. Call `Update` to complete the edit.|  
+|[CRecordset::FlushResultSet](#flushresultset)|Returns nonzero if there is another result set to be retrieved, when using a predefined query.|  
+|[CRecordset::GetBookmark](#getbookmark)|Assigns the bookmark value of a record to the parameter object.|  
+|[CRecordset::GetDefaultConnect](#getdefaultconnect)|Called to get the default connection string.|  
+|[CRecordset::GetDefaultSQL](#getdefaultsql)|Called to get the default SQL string to execute.|  
+|[CRecordset::GetFieldValue](#getfieldvalue)|Returns the value of a field in a recordset.|  
+|[CRecordset::GetODBCFieldCount](#getodbcfieldcount)|Returns the number of fields in the recordset.|  
+|[CRecordset::GetODBCFieldInfo](#getodbcfieldinfo)|Returns specific kinds of information about the fields in a recordset.|  
+|[CRecordset::GetRecordCount](#getrecordcount)|Returns the number of records in the recordset.|  
+|[CRecordset::GetRowsetSize](#getrowsetsize)|Returns the number of records you wish to retrieve during a single fetch.|  
+|[CRecordset::GetRowsFetched](#getrowsfetched)|Returns the actual number of rows retrieved during a fetch.|  
+|[CRecordset::GetRowStatus](#getrowstatus)|Returns the status of the row after a fetch.|  
+|[CRecordset::GetSQL](#getsql)|Gets the SQL string used to select records for the recordset.|  
+|[CRecordset::GetStatus](#getstatus)|Gets the status of the recordset: the index of the current record and whether a final count of the records has been obtained.|  
+|[CRecordset::GetTableName](#gettablename)|Gets the name of the table on which the recordset is based.|  
+|[CRecordset::IsBOF](#isbof)|Returns nonzero if the recordset has been positioned before the first record. There is no current record.|  
+|[CRecordset::IsDeleted](#isdeleted)|Returns nonzero if the recordset is positioned on a deleted record.|  
+|[CRecordset::IsEOF](#iseof)|Returns nonzero if the recordset has been positioned after the last record. There is no current record.|  
+|[CRecordset::IsFieldDirty](#isfielddirty)|Returns nonzero if the specified field in the current record has been changed.|  
+|[CRecordset::IsFieldNull](#isfieldnull)|Returns nonzero if the specified field in the current record is null (has no value).|  
+|[CRecordset::IsFieldNullable](#isfieldnullable)|Returns nonzero if the specified field in the current record can be set to null (having no value).|  
+|[CRecordset::IsOpen](#isopen)|Returns nonzero if `Open` has been called previously.|  
+|[CRecordset::Move](#move)|Positions the recordset to a specified number of records from the current record in either direction.|  
+|[CRecordset::MoveFirst](#movefirst)|Positions the current record on the first record in the recordset. Test for `IsBOF` first.|  
+|[CRecordset::MoveLast](#movelast)|Positions the current record on the last record or on the last rowset. Test for `IsEOF` first.|  
+|[CRecordset::MoveNext](#movenext)|Positions the current record on the next record or on the next rowset. Test for `IsEOF` first.|  
+|[CRecordset::MovePrev](#moveprev)|Positions the current record on the previous record or on the previous rowset. Test for `IsBOF` first.|  
+|[CRecordset::OnSetOptions](#onsetoptions)|Called to set options (used on selection) for the specified ODBC statement.|  
+|[CRecordset::OnSetUpdateOptions](#onsetupdateoptions)|Called to set options (used on update) for the specified ODBC statement.|  
+|[CRecordset::Open](#open)|Opens the recordset by retrieving the table or performing the query that the recordset represents.|  
+|[CRecordset::RefreshRowset](#refreshrowset)|Refreshes the data and status of the specified row(s).|  
+|[CRecordset::Requery](#requery)|Runs the recordset's query again to refresh the selected records.|  
+|[CRecordset::SetAbsolutePosition](#setabsoluteposition)|Positions the recordset on the record corresponding to the specified record number.|  
+|[CRecordset::SetBookmark](#setbookmark)|Positions the recordset on the record specified by the bookmark.|  
+|[CRecordset::SetFieldDirty](#setfielddirty)|Marks the specified field in the current record as changed.|  
+|[CRecordset::SetFieldNull](#setfieldnull)|Sets the value of the specified field in the current record to null (having no value).|  
+|[CRecordset::SetLockingMode](#setlockingmode)|Sets the locking mode to "optimistic" locking (the default) or "pessimistic" locking. Determines how records are locked for updates.|  
+|[CRecordset::SetParamNull](#setparamnull)|Sets the specified parameter to null (having no value).|  
+|[CRecordset::SetRowsetCursorPosition](#setrowsetcursorposition)|Positions the cursor on the specified row within the rowset.|  
+|[CRecordset::SetRowsetSize](#setrowsetsize)|Specifies the number of records you wish to retrieve during a fetch.|  
+|[CRecordset::Update](#update)|Completes an `AddNew` or `Edit` operation by saving the new or edited data on the data source.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRecordset::m_hstmt](#m_hstmt)|레코드 집합에 대 한 ODBC 문 핸들을 포함합니다. `HSTMT`를 입력합니다.|  
-|[CRecordset::m_nFields](#m_nfields)|레코드 집합의 필드 데이터 멤버의 수를 포함합니다. `UINT`를 입력합니다.|  
-|[CRecordset::m_nParams](#m_nparams)|레코드 집합의 매개 변수 데이터 멤버의 수를 포함합니다. `UINT`를 입력합니다.|  
-|[CRecordset::m_pDatabase](#m_pdatabase)|에 대 한 포인터는 `CDatabase` 레코드 집합을 데이터 원본에 연결 되어 있는 개체입니다.|  
-|[CRecordset::m_strFilter](#m_strfilter)|포함 된 `CString` 구조적 쿼리 언어 (SQL)를 지정 하는 `WHERE` 절. 필터로 사용 특정 조건에 해당 하는 레코드를 선택 합니다.|  
-|[CRecordset::m_strSort](#m_strsort)|포함 된 `CString` SQL를 지정 하는 `ORDER BY` 절. 레코드의 정렬 방식을 제어 하는 데 사용 합니다.|  
+|[CRecordset::m_hstmt](#m_hstmt)|Contains the ODBC statement handle for the recordset. Type `HSTMT`.|  
+|[CRecordset::m_nFields](#m_nfields)|Contains the number of field data members in the recordset. Type `UINT`.|  
+|[CRecordset::m_nParams](#m_nparams)|Contains the number of parameter data members in the recordset. Type `UINT`.|  
+|[CRecordset::m_pDatabase](#m_pdatabase)|Contains a pointer to the `CDatabase` object through which the recordset is connected to a data source.|  
+|[CRecordset::m_strFilter](#m_strfilter)|Contains a `CString` that specifies a Structured Query Language (SQL) `WHERE` clause. Used as a filter to select only those records that meet certain criteria.|  
+|[CRecordset::m_strSort](#m_strsort)|Contains a `CString` that specifies a SQL `ORDER BY` clause. Used to control how the records are sorted.|  
   
-## <a name="remarks"></a>주의  
- "레코드 집합" 이라고 `CRecordset` 개체는 일반적으로 두 가지 형태로 사용: 다이너셋 및 스냅숏을 합니다. 다이너셋 다른 사용자가 만든 데이터 업데이트와 동기화가 유지 합니다. 스냅숏은은 데이터의 정적 보기입니다. 이후에 다른 사용자 또는 응용 프로그램의 다른 레코드 집합의 레코드에 수행한 변경 내용을 반영 다이너셋은에서 레코드를 스크롤할 때 이지만 각 폼 레코드 집합 열릴 때 고정 레코드 집합을 나타냅니다.  
+## <a name="remarks"></a>Remarks  
+ Known as "recordsets," `CRecordset` objects are typically used in two forms: dynasets and snapshots. A dynaset stays synchronized with data updates made by other users. A snapshot is a static view of the data. Each form represents a set of records fixed at the time the recordset is opened, but when you scroll to a record in a dynaset, it reflects changes subsequently made to the record, either by other users or by other recordsets in your application.  
   
 > [!NOTE]
->  클래스를 사용 하 여 ODBC Open Database Connectivity () 클래스 아닌 개체 DAO (Data Access) 클래스와 함께 작업 하는 경우 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 대신 합니다. 자세한 내용은 문서 참조 [개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md)합니다.  
+>  If you are working with the Data Access Objects (DAO) classes rather than the Open Database Connectivity (ODBC) classes, use class [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) instead. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
   
- 두 종류의 레코드 집합을 사용 하려면 일반적으로에서 응용 프로그램 관련 레코드 집합 클래스가 파생 `CRecordset`합니다. 레코드 집합 데이터 원본에서 레코드를 선택 하 고 할 수 있습니다.  
+ To work with either kind of recordset, you typically derive an application-specific recordset class from `CRecordset`. Recordsets select records from a data source, and you can then:  
   
--   레코드를 스크롤하십시오.  
+-   Scroll through the records.  
   
--   레코드를 업데이트 하 고 잠금 모드를 지정 합니다.  
+-   Update the records and specify a locking mode.  
   
--   데이터 원본에서 사용 가능한 선택 레코드를 제한 하는 레코드 집합을 필터링 합니다.  
+-   Filter the recordset to constrain which records it selects from those available on the data source.  
   
--   레코드 집합을 정렬 합니다.  
+-   Sort the recordset.  
   
--   런타임이 될 때까지 알 수 없는 정보로 해당 선택 항목을 사용자 지정 하는 레코드 집합 매개 변수화 합니다.  
+-   Parameterize the recordset to customize its selection with information not known until run time.  
   
- 클래스를 사용 하려면 데이터베이스를 열고 생성자에 대 한 포인터에 전달 하는 레코드 집합 개체를 생성 하면 `CDatabase` 개체입니다. 레코드 집합의 다음 호출 **열려** 멤버 함수를 다이너셋은 또는 스냅숏을 인지를 지정할 수 있습니다. 호출 **열려** 데이터 원본에서 데이터를 선택 합니다. 레코드 집합 개체를 연 후에 해당 멤버 함수 및 데이터 멤버를 사용 하 여 레코드를 스크롤할 작업할를 합니다. 업데이트 가능 또는 읽기 전용 개체 다이너셋은 또는 스냅숏을에 따라 다를 사용할 수 있는 작업 (이에 따라 달라 집니다 ODBC Open Database Connectivity () 데이터 소스의 기능), 대량 행 페치를 구현 했습니다. 새로 고침 레코드 변경 되거나 이후 추가 된 수에 **열려** 호출, 개체의 **Requery** 멤버 함수입니다. 개체의 **닫기** 멤버 함수를 함께 했으면 개체를 삭제 합니다.  
+ To use your class, open a database and construct a recordset object, passing the constructor a pointer to your `CDatabase` object. Then call the recordset's **Open** member function, where you can specify whether the object is a dynaset or a snapshot. Calling **Open** selects data from the data source. After the recordset object is opened, use its member functions and data members to scroll through the records and operate on them. The operations available depend on whether the object is a dynaset or a snapshot, whether it is updatable or read-only (this depends on the capability of the Open Database Connectivity (ODBC) data source), and whether you have implemented bulk row fetching. To refresh records that may have been changed or added since the **Open** call, call the object's **Requery** member function. Call the object's **Close** member function and destroy the object when you finish with it.  
   
- 파생 된 `CRecordset` 클래스, 레코드 필드 교환 (RFX) 또는 대량 레코드 필드 교환 (대량 RFX)를 읽고 레코드 필드의 업데이트를 지 원하는 데 사용 됩니다.  
+ In a derived `CRecordset` class, record field exchange (RFX) or bulk record field exchange (Bulk RFX) is used to support reading and updating of record fields.  
   
- 레코드 집합의 레코드 및 레코드 필드 교환에 대 한 자세한 내용은 문서를 참조 [개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md), [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md), [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md), 및 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다. 다이너셋 및 스냅숏을에 초점을 맞춰, 문서를 참조 하십시오. [다이너셋](../../data/odbc/dynaset.md) 및 [스냅숏](../../data/odbc/snapshot.md)합니다.  
+ For more information about recordsets and record field exchange, see the articles [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md), [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md), and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md). For a focus on dynasets and snapshots, see the articles [Dynaset](../../data/odbc/dynaset.md) and [Snapshot](../../data/odbc/snapshot.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CRecordset`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdb.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
-##  <a name="addnew"></a>CRecordset::AddNew  
- 준비 테이블에 새 레코드를 추가 합니다.  
+##  <a name="addnew"></a>  CRecordset::AddNew  
+ Prepares for adding a new record to the table.  
   
 ```  
 virtual void AddNew();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출 해야 합니다는 [Requery](#requery) 멤버 함수는 새로 추가 된 레코드를 표시 합니다. 레코드의 필드는 처음 Null입니다. (데이터베이스 용어에서 Null 의미 "가치가 없습니다" 아니며 동일 **NULL** c + +에서.) 작업을 완료 하려면 호출 해야 합니다는 [업데이트](#update) 멤버 함수입니다. **업데이트** 데이터 소스에 변경 내용을 저장 합니다.  
+### <a name="remarks"></a>Remarks  
+ You must call the [Requery](#requery) member function to see the newly added record. The record's fields are initially Null. (In database terminology, Null means "having no value" and is not the same as **NULL** in C++.) To complete the operation, you must call the [Update](#update) member function. **Update** saves your changes to the data source.  
   
 > [!NOTE]
->  대량 행 페치를 구현한 경우 호출할 수 없습니다 `AddNew`합니다. 이 인해 실패 한 어설션이 발생 합니다. 하지만 클래스 `CRecordset` 메커니즘을 제공 하지 않는 데이터의 대량 행을 업데이트 하기 위한 ODBC API 함수를 사용 하 여 사용자 고유의 함수를 작성할 수 있습니다 **SQLSetPos**합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  If you have implemented bulk row fetching, you cannot call `AddNew`. This will result in a failed assertion. Although class `CRecordset` does not provide a mechanism for updating bulk rows of data, you can write your own functions by using the ODBC API function **SQLSetPos**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `AddNew`레코드 집합의 필드 데이터 멤버를 사용 하 여 새로운 빈 레코드를 준비 합니다. 호출한 후 `AddNew`, 레코드 집합의 필드 데이터 멤버에서 원하는 값을 설정 합니다. (호출할 필요가 없습니다는 [편집](#edit) 이 목적을 위해 멤버 함수는 사용. **편집** 기존 레코드에 대해서만 합니다.) 이후에 호출할 때 **업데이트**, 변경 된 필드 데이터 멤버의 값이 데이터 원본에 저장 됩니다.  
+ `AddNew` prepares a new, empty record using the recordset's field data members. After you call `AddNew`, set the values you want in the recordset's field data members. (You do not have to call the [Edit](#edit) member function for this purpose; use **Edit** only for existing records.) When you subsequently call **Update**, changed values in the field data members are saved on the data source.  
   
 > [!CAUTION]
->  호출 하기 전에 새 레코드를 스크롤할 경우 **업데이트**, 새 레코드가 손실 되 고 경고가 제공 됩니다.  
+>  If you scroll to a new record before you call **Update**, the new record is lost, and no warning is given.  
   
- 데이터 원본 트랜잭션을 지 원하는 경우 만들 수 있습니다 프로그램 `AddNew` 트랜잭션의 일부를 호출 합니다. 트랜잭션에 대 한 자세한 내용은 클래스를 참조 하십시오. [CDatabase](../../mfc/reference/cdatabase-class.md)합니다. 호출 해야 하는 참고 [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) 호출 하기 전에 `AddNew`합니다.  
+ If the data source supports transactions, you can make your `AddNew` call part of a transaction. For more information about transactions, see class [CDatabase](../../mfc/reference/cdatabase-class.md). Note that you should call [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) before calling `AddNew`.  
   
 > [!NOTE]
->  다이너셋에 대 한 마지막 레코드로 새 레코드는 레코드 집합에 추가 됩니다. 추가 된 레코드는 스냅숏을;에 추가 호출 해야 **Requery** 레코드 집합을 새로 고칠 수 있습니다.  
+>  For dynasets, new records are added to the recordset as the last record. Added records are not added to snapshots; you must call **Requery** to refresh the recordset.  
   
- 호출할 수 없는 `AddNew` 레코드 집합에 대 한 해당 **열려** 멤버 함수가 호출 되지 않았습니다. A `CDBException` 호출 하는 경우 throw 되 `AddNew` 레코드 집합에 추가 될 수 없습니다. 레코드 집합을 호출 하 여 업데이트할 수 있는지 여부를 확인할 수 있습니다 [CanAppend](#canappend)합니다.  
+ It is illegal to call `AddNew` for a recordset whose **Open** member function has not been called. A `CDBException` is thrown if you call `AddNew` for a recordset that cannot be appended to. You can determine whether the recordset is updatable by calling [CanAppend](#canappend).  
   
- 자세한 내용은 다음 문서를 참조: [레코드 집합: 레코드 집합의 레코드 업데이트 방법 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [레코드 집합: 추가, 업데이트 및 삭제 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), 및 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
+ For more information, see the following articles: [Recordset: How Recordsets Update Records (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [Recordset: Adding, Updating, and Deleting Records (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), and [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-### <a name="example"></a>예제  
- 문서를 참조 [트랜잭션: 트랜잭션이 수행 레코드 집합 (ODBC)에서](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)합니다.  
+### <a name="example"></a>Example  
+ See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="canappend"></a>CRecordset::CanAppend  
- 이전에 열린된 레코드 집합 수 새 레코드를 추가할 수 있는지 여부를 결정 합니다.  
+##  <a name="canappend"></a>  CRecordset::CanAppend  
+ Determines whether the previously opened recordset allows you to add new records.  
   
 ```  
 BOOL CanAppend() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합; 새 레코드를 추가할 수 있습니다. 0이 아닌 그렇지 않으면 0입니다. `CanAppend`읽기 전용으로 레코드 집합을 연 경우에 0을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset allows adding new records; otherwise 0. `CanAppend` will return 0 if you opened the recordset as read-only.  
   
-##  <a name="canbookmark"></a>CRecordset::CanBookmark  
- 책갈피를 사용 하 여 레코드를 표시 하 여 레코드 집합 수 있는지 여부를 결정 합니다.  
+##  <a name="canbookmark"></a>  CRecordset::CanBookmark  
+ Determines whether the recordset allows you to mark records using bookmarks.  
   
 ```  
 BOOL CanBookmark() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합 책갈피;를 지원 하면 0이 아니고 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset supports bookmarks; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 이 함수는 독립적으로 **CRecordset::useBookmarks** 옵션에 `dwOptions` 의 매개 변수는 [열려](#open) 멤버 함수입니다. `CanBookmark`지정 된 ODBC 드라이버와 커서 지원 책갈피를 입력 하는지 여부를 나타냅니다. **CRecordset::useBookmarks** 되는지 여부를 나타냅니다 책갈피를 사용할 수 있는 지원 되는 제공 합니다.  
+### <a name="remarks"></a>Remarks  
+ This function is independent of the **CRecordset::useBookmarks** option in the `dwOptions` parameter of the [Open](#open) member function. `CanBookmark` indicates whether the given ODBC driver and cursor type support bookmarks. **CRecordset::useBookmarks** indicates whether bookmarks will be available, provided they are supported.  
   
 > [!NOTE]
->  책갈피 앞 으로만 이동 가능한 레코드 집합에서 지원 되지 않습니다.  
+>  Bookmarks are not supported on forward-only recordsets.  
   
- 책갈피와 레코드 탐색에 대 한 자세한 내용은 문서를 참조 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) 및 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)합니다.  
+ For more information about bookmarks and recordset navigation, see the articles [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) and [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cancel"></a>CRecordset::Cancel  
- 진행 중인 비동기 작업 또는 프로세스를 두 번째 스레드가 데이터 소스를 취소 하도록 요청 합니다.  
+##  <a name="cancel"></a>  CRecordset::Cancel  
+ Requests that the data source cancel either an asynchronous operation in progress or a process from a second thread.  
   
 ```  
 void Cancel();
 ```  
   
-### <a name="remarks"></a>주의  
- MFC ODBC 클래스에 더 이상 비동기 처리; 사용 note 비동기 작업을 수행 하려면 직접 ODBC API 함수를 호출 해야 **SQLSetConnectOption**합니다. 자세한 내용은 "비동기적으로 함수 실행" 항목을 참조는 *ODBC SDK Programmer's Guide*합니다.  
+### <a name="remarks"></a>Remarks  
+ Note that the MFC ODBC classes no longer use asynchronous processing; to perform an asychronous operation, you must directly call the ODBC API function **SQLSetConnectOption**. For more information, see the topic "Executing Functions Asynchronously" in the *ODBC SDK Programmer's Guide*.  
   
-##  <a name="cancelupdate"></a>CRecordset::CancelUpdate  
- 보류 중인 업데이트를 인해을 모두 취소는 [편집](#edit) 또는 [AddNew](#addnew) 작업을 하기 전에 [업데이트](#update) 호출 됩니다.  
+##  <a name="cancelupdate"></a>  CRecordset::CancelUpdate  
+ Cancels any pending updates, caused by an [Edit](#edit) or [AddNew](#addnew) operation, before [Update](#update) is called.  
   
 ```  
 void CancelUpdate();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  이 멤버 함수 대량 행 페치를 있으므로 호출할 수 없습니다. 이러한 레코드 집합을 사용 하는 레코드 집합에 적용 되지 않는 **편집**, `AddNew`, 또는 **업데이트**합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  This member function is not applicable on recordsets that are using bulk row fetching, since such recordsets cannot call **Edit**, `AddNew`, or **Update**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- 더티 필드 자동 검사를 사용 하는 경우 `CancelUpdate` 하기 전에 있던 값을 멤버 변수를 복원 합니다 **편집** 또는 `AddNew` 호출 하지 못했으면, 값 변경 사항이 유지 됩니다. 기본적으로 자동 필드 확인은 사용 가능 고 레코드 집합이 열립니다. 를 비활성화 하려면를 지정 해야는 **CRecordset::noDirtyFieldCheck** 에 `dwOptions` 의 매개 변수는 [열려](#open) 멤버 함수입니다.  
+ If automatic dirty field checking is enabled, `CancelUpdate` will restore the member variables to the values they had before **Edit** or `AddNew` was called; otherwise, any value changes will remain. By default, automatic field checking is enabled when the recordset is opened. To disable it, you must specify the **CRecordset::noDirtyFieldCheck** in the `dwOptions` parameter of the [Open](#open) member function.  
   
- 데이터를 업데이트 하는 방법에 대 한 자세한 내용은 문서 참조 [레코드 집합: 추가, 업데이트 및 삭제 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)합니다.  
+ For more information about updating data, see the article [Recordset: Adding, Updating, and Deleting Records (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  
   
-##  <a name="canrestart"></a>CRecordset::CanRestart  
- 레코드 집합의 쿼리 (해당 레코드를 새로 고침)를 호출 하 여 다시 시작을 허용 하는지 여부를 결정은 **Requery** 멤버 함수입니다.  
+##  <a name="canrestart"></a>  CRecordset::CanRestart  
+ Determines whether the recordset allows restarting its query (to refresh its records) by calling the **Requery** member function.  
   
 ```  
 BOOL CanRestart() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- Requery가 허용 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if requery is allowed; otherwise 0.  
   
-##  <a name="canscroll"></a>CRecordset::CanScroll  
- 레코드 집합 스크롤을 허용 하는지 여부를 결정 합니다.  
+##  <a name="canscroll"></a>  CRecordset::CanScroll  
+ Determines whether the recordset allows scrolling.  
   
 ```  
 BOOL CanScroll() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합; 스크롤을 허용 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset allows scrolling; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 스크롤 하는 방법에 대 한 자세한 내용은 문서 참조 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information about scrolling, see the article [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cantransact"></a>CRecordset::CanTransact  
- 레코드 집합 트랜잭션을 허용 하는지 여부를 결정 합니다.  
+##  <a name="cantransact"></a>  CRecordset::CanTransact  
+ Determines whether the recordset allows transactions.  
   
 ```  
 BOOL CanTransact() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합 트랜잭션을; 허용 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset allows transactions; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 자세한 내용은 문서 참조 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="canupdate"></a>CRecordset::CanUpdate  
- 레코드 집합을 업데이트할 수 있는지 여부를 결정 합니다.  
+##  <a name="canupdate"></a>  CRecordset::CanUpdate  
+ Determines whether the recordset can be updated.  
   
 ```  
 BOOL CanUpdate() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합을 업데이트할 수 있으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset can be updated; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 레코드 집합 읽기 전용 데이터 원본 읽기 전용 이면 경우 또는 않을 지정한 **CRecordset::readOnly** 에 `dwOptions` 레코드 집합을 열 때 매개 변수입니다.  
+### <a name="remarks"></a>Remarks  
+ A recordset might be read-only if the underlying data source is read-only or if you specified **CRecordset::readOnly** in the `dwOptions` parameter when you opened the recordset.  
   
-##  <a name="checkrowseterror"></a>CRecordset::CheckRowsetError  
- 레코드를 인출 하는 동안 발생 한 오류를 처리 하기 위해 호출 합니다.  
+##  <a name="checkrowseterror"></a>  CRecordset::CheckRowsetError  
+ Called to handle errors generated during record fetching.  
   
 ```  
 virtual void CheckRowsetError(RETCODE nRetCode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nRetCode`  
- ODBC API 함수 코드를 반환 합니다. 자세한 내용은 설명을 참조하세요.  
+ An ODBC API function return code. For details, see Remarks.  
   
-### <a name="remarks"></a>주의  
- 이 가상 멤버 함수는 레코드는 인출 되는 경우 발생 하는 오류를 처리 하 고 대량 행 페치 중에 유용 합니다. 재정의 하는 것이 좋습니다. 만들려는 경우 `CheckRowsetError` 사용자 고유의 오류 처리를 구현 하 합니다.  
+### <a name="remarks"></a>Remarks  
+ This virtual member function handles errors that occur when records are fetched, and is useful during bulk row fetching. You may want to consider overriding `CheckRowsetError` to implement your own error handling.  
   
- `CheckRowsetError`자동으로 호출 커서 탐색 작업에서와 같은 **열려**, **Requery**, 또는 모든 **이동** 작업 합니다. ODBC API 함수의 반환 값 전달 **SQLExtendedFetch**합니다. 다음 표에서 사용할 수 있는 값의 `nRetCode` 매개 변수입니다.  
+ `CheckRowsetError` is called automatically in a cursor navigation operation, such as **Open**, **Requery**, or any **Move** operation. It is passed the return value of the ODBC API function **SQLExtendedFetch**. The following table lists the possible values for the `nRetCode` parameter.  
   
-|nRetCode|설명|  
+|nRetCode|Description|  
 |--------------|-----------------|  
-|**SQL_SUCCESS**|함수는 성공적으로 완료 되었습니다. 추가 정보 없음 ´ ù입니다.|  
-|**SQL_SUCCESS_WITH_INFO**|성공적으로 치명적이 지 않은 오류와 함께 가능 완료 하는 함수입니다. 호출 하 여 추가 정보를 가져올 수 있습니다 **SQLError**합니다.|  
-|**SQL_NO_DATA_FOUND**|결과 집합의 모든 행 인출 된 합니다.|  
-|**SQL_ERROR**|함수가 실패 했습니다. 호출 하 여 추가 정보를 가져올 수 있습니다 **SQLError**합니다.|  
-|**SQL_INVALID_HANDLE**|잘못 된 환경 핸들, 연결 핸들 또는 문 핸들 인해 함수가 실패 했습니다. 프로그래밍 오류를 나타냅니다. 추가 정보 없음에서 사용할 수는 **SQLError**합니다.|  
-|`SQL_STILL_EXECUTING`|비동기적으로 시작 하는 함수는 계속 실행 됩니다. 기본적으로 MFC 전달 하지는 않지만이 값을 참고 `CheckRowsetError`; MFC는 계속 호출 **SQLExtendedFetch** 더 이상 반환 될 때까지 `SQL_STILL_EXECUTING`합니다.|  
+|**SQL_SUCCESS**|Function completed successfully; no additional information is available.|  
+|**SQL_SUCCESS_WITH_INFO**|Function completed successfully, possibly with a nonfatal error. Additional information can be obtained by calling **SQLError**.|  
+|**SQL_NO_DATA_FOUND**|All rows from the result set have been fetched.|  
+|**SQL_ERROR**|Function failed. Additional information can be obtained by calling **SQLError**.|  
+|**SQL_INVALID_HANDLE**|Function failed due to an invalid environment handle, connection handle, or statement handle. This indicates a programming error. No additional information is available from **SQLError**.|  
+|`SQL_STILL_EXECUTING`|A function that was started asynchronously is still executing. Note that by default, MFC will never pass this value to `CheckRowsetError`; MFC will continue calling **SQLExtendedFetch** until it no longer returns `SQL_STILL_EXECUTING`.|  
   
- 에 대 한 자세한 내용은 **SQLError**, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about **SQLError**, see the Windows SDK. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="close"></a>CRecordset::Close  
- 레코드 집합을 닫습니다.  
+##  <a name="close"></a>  CRecordset::Close  
+ Closes the recordset.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>설명  
- ODBC **HSTMT** 및 모든 메모리를 레코드 집합에 할당 된 프레임 워크는 할당이 취소 됩니다. 일반적으로 호출한 후 **닫기**, 할당 된 경우 c + + recordset 개체를 삭제 하면 **새**합니다.  
+### <a name="remarks"></a>Remarks  
+ The ODBC **HSTMT** and all memory the framework allocated for the recordset are deallocated. Usually after calling **Close**, you delete the C++ recordset object if it was allocated with **new**.  
   
- 호출할 수 있습니다 **열려** 호출 후에 다시 **닫기**합니다. 이 레코드 집합 개체를 다시 사용할 수 있습니다. 호출 하는 대체 항목은 **Requery**합니다.  
+ You can call **Open** again after calling **Close**. This lets you reuse the recordset object. The alternative is to call **Requery**.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDatabase # 17](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#17](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]  
   
-##  <a name="crecordset"></a>CRecordset::CRecordset  
- `CRecordset` 개체를 생성합니다.  
+##  <a name="crecordset"></a>  CRecordset::CRecordset  
+ Constructs a `CRecordset` object.  
   
 ```  
 CRecordset(CDatabase* pDatabase = NULL);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pDatabase`  
- 에 대 한 포인터를 포함 한 `CDatabase` 개체 또는 값 **NULL**합니다. 그렇지 않은 경우 **NULL** 및 `CDatabase` 개체의 **열고** 데이터 원본에 연결 하는 데 멤버 함수가 호출 되지 않은, 레코드 집합 자체는 동안를 열려고 시도 **열** 호출 합니다. 전달 하는 경우 **NULL**, `CDatabase` 개체 생성 및 classwizard 함께 사용 된 레코드 집합 클래스를 파생 하는 경우 지정한 데이터 원본 정보를 사용 하 여 연결 합니다.  
+ Contains a pointer to a `CDatabase` object or the value **NULL**. If not **NULL** and the `CDatabase` object's **Open** member function has not been called to connect it to the data source, the recordset attempts to open it for you during its own **Open** call. If you pass **NULL**, a `CDatabase` object is constructed and connected for you using the data source information you specified when you derived your recordset class with ClassWizard.  
   
-### <a name="remarks"></a>주의  
- 사용 하거나 `CRecordset` 직접에서 응용 프로그램 관련 클래스를 파생 하거나 `CRecordset`합니다. 레코드 집합 클래스를 파생 클래스 마법사를 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ You can either use `CRecordset` directly or derive an application-specific class from `CRecordset`. You can use ClassWizard to derive your recordset classes.  
   
 > [!NOTE]
->  파생된 클래스 *해야* 자체 생성자를 제공 합니다. 파생된 클래스의 생성자에서 생성자를 호출 `CRecordset::CRecordset`을 따라 적절 한 매개 변수를 전달 합니다.  
+>  A derived class *must* supply its own constructor. In the constructor of your derived class, call the constructor `CRecordset::CRecordset`, passing the appropriate parameters along to it.  
   
- 전달 **NULL** 있어야 recordset 생성자에는 `CDatabase` 개체 구현 되 고 하기 위해 자동으로 연결 합니다. 이 하지 않아도 생성 하 고 연결 하는 유용한 줄임은 `CDatabase` 레코드 집합을 생성 하기 전에 개체입니다.  
+ Pass **NULL** to your recordset constructor to have a `CDatabase` object constructed and connected for you automatically. This is a useful shorthand that does not require you to construct and connect a `CDatabase` object prior to constructing your recordset.  
   
-### <a name="example"></a>예제  
- 자세한 내용은 문서 참조 [레코드 집합: 한 클래스에는 테이블 (ODBC) 선언](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)합니다.  
+### <a name="example"></a>Example  
+ For more information, see the article [Recordset: Declaring a Class for a Table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
   
-##  <a name="delete"></a>CRecordset::Delete  
- 현재 레코드를 삭제합니다.  
+##  <a name="delete"></a>  CRecordset::Delete  
+ Deletes the current record.  
   
 ```  
 virtual void Delete();
 ```  
   
-### <a name="remarks"></a>설명  
- 성공적으로 삭제 후에 레코드 집합의 필드 데이터 멤버는 Null 값으로 설정 되 고 중 하나를 명시적으로 호출 해야 합니다는 **이동** 삭제 된 레코드를 이동 하기 위해 함수입니다. 삭제 된 레코드를 이동 하면 일단으로 돌아갈 수 없으면입니다. 데이터 원본 트랜잭션을 지 원하는 경우 만들 수 있습니다는 **삭제** 트랜잭션의 일부를 호출 합니다. 자세한 내용은 문서 참조 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ After a successful deletion, the recordset's field data members are set to a Null value, and you must explicitly call one of the **Move** functions in order to move off the deleted record. Once you move off the deleted record, it is not possible to return to it. If the data source supports transactions, you can make the **Delete** call part of a transaction. For more information, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
 > [!NOTE]
->  대량 행 페치를 구현한 경우 호출할 수 없습니다 **삭제**합니다. 이 인해 실패 한 어설션이 발생 합니다. 하지만 클래스 `CRecordset` 메커니즘을 제공 하지 않는 데이터의 대량 행을 업데이트 하기 위한 ODBC API 함수를 사용 하 여 사용자 고유의 함수를 작성할 수 있습니다 **SQLSetPos**합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  If you have implemented bulk row fetching, you cannot call **Delete**. This will result in a failed assertion. Although class `CRecordset` does not provide a mechanism for updating bulk rows of data, you can write your own functions by using the ODBC API function **SQLSetPos**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!CAUTION]
->  레코드 집합을 업데이트할 수 있어야 하며 있어야 유효한 레코드를 레코드 집합의 현재 호출 하는 경우 **삭제**, 그렇지 않으면 오류가 발생 합니다. 예를 들어 레코드를 삭제 하지만 호출 하기 전에 새 레코드로 스크롤되지 않습니다 **삭제** 다시 **삭제** throw 한 [잠금을](../../mfc/reference/cdbexception-class.md)합니다.  
+>  The recordset must be updatable and there must be a valid record current in the recordset when you call **Delete**; otherwise, an error occurs. For example, if you delete a record but do not scroll to a new record before you call **Delete** again, **Delete** throws a [CDBException](../../mfc/reference/cdbexception-class.md).  
   
- 와 달리 [AddNew](#addnew) 및 [편집](#edit)에 대 한 호출 **삭제** 다음에 대 한 호출에 나타나지 않으면 [업데이트](#update)합니다. 경우는 **삭제** 호출이 실패 하면 필드 데이터 멤버는 남아 변경 되지 않습니다.  
+ Unlike [AddNew](#addnew) and [Edit](#edit), a call to **Delete** is not followed by a call to [Update](#update). If a **Delete** call fails, the field data members are left unchanged.  
   
-### <a name="example"></a>예제  
- 이 예제는 함수의 프레임에 만든 레코드 집합을 보여 줍니다. 이 예제에서는 있다고 가정 `m_dbCust`, 형식의 멤버 변수 `CDatabase` 이미 데이터 원본에 연결 합니다.  
+### <a name="example"></a>Example  
+ This example shows a recordset created on the frame of a function. The example assumes the existence of `m_dbCust`, a member variable of type `CDatabase` already connected to the data source.  
   
- [!code-cpp[NVC_MFCDatabase # 18](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#18](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]  
   
-##  <a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange  
- 대량 행의 데이터 원본에서 레코드 집합으로 데이터를 교환 하기 위해 호출 합니다. 구현 대량 레코드 필드 교환 (대량 RFX).  
+##  <a name="dobulkfieldexchange"></a>  CRecordset::DoBulkFieldExchange  
+ Called to exchange bulk rows of data from the data source to the recordset. Implements bulk record field exchange (Bulk RFX).  
   
 ```  
 virtual void DoBulkFieldExchange(CFieldExchange* pFX);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- 에 대 한 포인터는 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) 개체입니다. 프레임 워크 필드 exchange 작업에 대 한 컨텍스트를 지정 하려면이 개체를 설정 있어야 합니다.  
+ A pointer to a [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) object. The framework will already have set up this object to specify a context for the field exchange operation.  
   
-### <a name="remarks"></a>주의  
- 대량 행 페치 구현 되는 경우 프레임 워크 데이터 원본에서 레코드 집합 개체에 데이터를 자동으로 전송 하려면이 멤버 함수를 호출 합니다. `DoBulkFieldExchange`매개 변수 자리 표시자 레코드 집합의 선택에 대 한 SQL 문의 문자열에 있는 경우에 매개 변수 데이터 멤버를 사용 하 여 바인딩합니다.  
+### <a name="remarks"></a>Remarks  
+ When bulk row fetching is implemented, the framework calls this member function to automatically transfer data from the data source to your recordset object. `DoBulkFieldExchange` also binds your parameter data members, if any, to parameter placeholders in the SQL statement string for the recordset's selection.  
   
- 대량 행 페치 구현 되지 않은 경우 프레임 워크에서 호출 [DoFieldExchange](#dofieldexchange)합니다. 대량 행 페치를 구현 하려면 지정 해야 합니다는 `CRecordset::useMultiRowFetch` 옵션의는 `dwOptions` 에서 매개 변수는 [열려](#open) 멤버 함수입니다.  
+ If bulk row fetching is not implemented, the framework calls [DoFieldExchange](#dofieldexchange). To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option of the `dwOptions` parameter in the [Open](#open) member function.  
   
 > [!NOTE]
-> `DoBulkFieldExchange`파생 된 클래스를 사용 하는 경우에 사용할 수 `CRecordset`합니다. 레코드 집합 개체에서 직접 만든 경우 `CRecordset`를 호출 해야 합니다는 [GetFieldValue](#getfieldvalue) 멤버 함수가 데이터를 검색 합니다.  
+> `DoBulkFieldExchange` is available only if you are using a class derived from `CRecordset`. If you have created a recordset object directly from `CRecordset`, you must call the [GetFieldValue](#getfieldvalue) member function to retrieve data.  
   
- 대량 레코드 필드 교환 (대량 RFX) 레코드 필드 교환 (RFX)와 비슷합니다. 데이터를 레코드 집합 개체 데이터 소스에서 자동으로 전송 됩니다. 그러나 호출할 수 없습니다 `AddNew`, **편집**, **삭제**, 또는 **업데이트** 변경 내용을 데이터 소스에 다시 전송 하도록 합니다. 클래스 `CRecordset` 현재 데이터의 대량 행을 업데이트 하기 위한 메커니즘을 제공 하지 않는 ODBC API 함수를 사용 하 여 함수를 직접 작성할 수 있습니다 **SQLSetPos**합니다.  
+ Bulk record field exchange (Bulk RFX) is similar to record field exchange (RFX). Data is automatically transferred from the data source to the recordset object. However, you cannot call `AddNew`, **Edit**, **Delete**, or **Update** to transfer changes back to the data source. Class `CRecordset` currently does not provide a mechanism for updating bulk rows of data; however, you can write your own functions by using the ODBC API function **SQLSetPos**.  
   
- 클래스 마법사에서는 대량 레코드 필드 교환;를 지원 하지 않습니다 따라서 재정의 해야 `DoBulkFieldExchange` 대량 RFX 함수에 호출을 기록 하 여 수동으로 합니다. 이러한 함수에 대 한 자세한 내용은 항목을 참조 하십시오. [레코드 필드 교환 함수](../../mfc/reference/record-field-exchange-functions.md)합니다.  
+ Note that ClassWizard does not support bulk record field exchange; therefore, you must override `DoBulkFieldExchange` manually by writing calls to the Bulk RFX functions. For more information about these functions, see the topic [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md).  
   
- 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다. 관련된 정보에 대 한 문서를 참조 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다.  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). For related information, see the article [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="dofieldexchange"></a>CRecordset::DoFieldExchange  
- 레코드 집합의 필드 데이터 멤버와 데이터 원본에 있는 해당 레코드 간에 (양방향)으로 데이터를 교환 하기 위해 호출 합니다. 구현 레코드 필드 교환 (RFX).  
+##  <a name="dofieldexchange"></a>  CRecordset::DoFieldExchange  
+ Called to exchange data (in both directions) between the field data members of the recordset and the corresponding record on the data source. Implements record field exchange (RFX).  
   
 ```  
 virtual void DoFieldExchange(CFieldExchange* pFX);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- 에 대 한 포인터는 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) 개체입니다. 프레임 워크 필드 exchange 작업에 대 한 컨텍스트를 지정 하려면이 개체를 설정 있어야 합니다.  
+ A pointer to a [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) object. The framework will already have set up this object to specify a context for the field exchange operation.  
   
-### <a name="remarks"></a>설명  
- 대량 행 페치 구현 되지 않은 프레임 워크는 자동으로 레코드 집합 개체의 필드 데이터 멤버와 데이터 소스에서 현재 레코드의 해당 열 간에 데이터를 교환 하려면이 멤버 함수를 호출 합니다. `DoFieldExchange`매개 변수 자리 표시자 레코드 집합의 선택에 대 한 SQL 문의 문자열에 있는 경우에 매개 변수 데이터 멤버를 사용 하 여 바인딩합니다.  
+### <a name="remarks"></a>Remarks  
+ When bulk row fetching is not implemented, the framework calls this member function to automatically exchange data between the field data members of your recordset object and the corresponding columns of the current record on the data source. `DoFieldExchange` also binds your parameter data members, if any, to parameter placeholders in the SQL statement string for the recordset's selection.  
   
- 대량 행 페치 구현 되는 경우 프레임 워크에서 호출 [DoBulkFieldExchange](#dobulkfieldexchange)합니다. 대량 행 페치를 구현 하려면 지정 해야 합니다는 `CRecordset::useMultiRowFetch` 옵션의는 `dwOptions` 에서 매개 변수는 [열려](#open) 멤버 함수입니다.  
+ If bulk row fetching is implemented, the framework calls [DoBulkFieldExchange](#dobulkfieldexchange). To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option of the `dwOptions` parameter in the [Open](#open) member function.  
   
 > [!NOTE]
-> `DoFieldExchange`파생 된 클래스를 사용 하는 경우에 사용할 수 `CRecordset`합니다. 레코드 집합 개체에서 직접 만든 경우 `CRecordset`를 호출 해야 합니다는 [GetFieldValue](#getfieldvalue) 멤버 함수가 데이터를 검색 합니다.  
+> `DoFieldExchange` is available only if you are using a class derived from `CRecordset`. If you have created a recordset object directly from `CRecordset`, you must call the [GetFieldValue](#getfieldvalue) member function to retrieve data.  
   
- 양쪽 방향에서 작동 하는 레코드 필드 교환 (RFX) 라고 하는 필드 데이터를 교환할: 데이터 소스에서 레코드의 필드에 레코드 집합 개체의 필드 데이터 멤버와 recordset 개체에 데이터 소스에서 레코드입니다.  
+ The exchange of field data, called record field exchange (RFX), works in both directions: from the recordset object's field data members to the fields of the record on the data source, and from the record on the data source to the recordset object.  
   
- 구현 하기 위해 일반적으로 수행 해야 하는 작업만 `DoFieldExchange` 파생된 레코드 집합에 대 한 클래스는 클래스 마법사도 클래스를 만들고 필드 데이터 멤버의 이름 및 데이터 형식을 지정 합니다. 또한 클래스 마법사를 매개 변수 데이터 멤버를 지정 하거나 동적으로 바인딩할 열을 다루는 데 쓰는 코드를 추가할 수 있습니다. 자세한 내용은 문서 참조 [레코드 집합: 데이터 열 동적 바인딩 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)합니다.  
+ The only action you must normally take to implement `DoFieldExchange` for your derived recordset class is to create the class with ClassWizard and specify the names and data types of the field data members. You might also add code to what ClassWizard writes to specify parameter data members or to deal with any columns you bind dynamically. For more information, see the article [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
- 마법사의 재정의 기록 classwizard 함께 사용 된 파생된 레코드 집합 클래스를 선언 하면 `DoFieldExchange` 다음 예제와 유사한는:  
+ When you declare your derived recordset class with ClassWizard, the wizard writes an override of `DoFieldExchange` for you, which resembles the following example:  
   
- [!code-cpp[NVC_MFCDatabase # 19](../../mfc/codesnippet/cpp/crecordset-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#19](../../mfc/codesnippet/cpp/crecordset-class_3.cpp)]  
   
- RFX 함수에 대 한 자세한 내용은 항목을 참조 하십시오. [레코드 필드 교환 함수](../../mfc/reference/record-field-exchange-functions.md)합니다.  
+ For more information about the RFX functions, see the topic [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md).  
   
- 자세한 예제에 대 한 정보에 대 한 `DoFieldExchange`, 문서를 참조 [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md)합니다. RFX에 대 한 일반 정보에 대 한 문서를 참조 [레코드 필드 교환](../../data/odbc/record-field-exchange-rfx.md)합니다.  
+ For further examples and details about `DoFieldExchange`, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md). For general information about RFX, see the article [Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="edit"></a>CRecordset::Edit  
- 현재 레코드에 변경 내용 수 있습니다.  
+##  <a name="edit"></a>  CRecordset::Edit  
+ Allows changes to the current record.  
   
 ```  
 virtual void Edit();
 ```  
   
-### <a name="remarks"></a>주의  
- 호출한 후 **편집**, 해당 값을 직접 설정 하 여 필드 데이터 멤버를 변경할 수 있습니다. 이후에 호출 하는 경우 작업이 완료 되는 [업데이트](#update) 멤버 함수를 데이터 원본에 변경 내용을 저장 합니다.  
+### <a name="remarks"></a>Remarks  
+ After you call **Edit**, you can change the field data members by directly resetting their values. The operation is completed when you subsequently call the [Update](#update) member function to save your changes on the data source.  
   
 > [!NOTE]
->  대량 행 페치를 구현한 경우 호출할 수 없습니다 **편집**합니다. 이 인해 실패 한 어설션이 발생 합니다. 하지만 클래스 `CRecordset` 메커니즘을 제공 하지 않는 데이터의 대량 행을 업데이트 하기 위한 ODBC API 함수를 사용 하 여 사용자 고유의 함수를 작성할 수 있습니다 **SQLSetPos**합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  If you have implemented bulk row fetching, you cannot call **Edit**. This will result in a failed assertion. Although class `CRecordset` does not provide a mechanism for updating bulk rows of data, you can write your own functions by using the ODBC API function **SQLSetPos**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- **편집** 레코드 집합의 데이터 멤버의 값을 저장 합니다. 호출 하는 경우 **편집**를 변경한 다음 호출 **편집** 레코드의 값은 첫 번째 전에 있었던으로 복원 하는 다시 **편집** 호출 합니다.  
+ **Edit** saves the values of the recordset's data members. If you call **Edit**, make changes, then call **Edit** again, the record's values are restored to what they were before the first **Edit** call.  
   
- 경우에 따라 Null (데이터 포함) 하 여 열을 업데이트 하는 것이 좋습니다. 이렇게 하려면 호출 [SetFieldNull](#setfieldnull) 의 매개 변수와 함께 **TRUE** Null; 필드를 표시 하려면이 인해 업데이트 열 합니다. 해당 값이 변경 되지 않은 경우에 데이터 원본에 쓸 수를 호출 하는 필드를 원하는 경우 [SetFieldDirty](#setfielddirty) 의 매개 변수와 함께 **TRUE**합니다. 필드에 Null 값 하는 경우에 작동 합니다.  
+ In some cases, you may want to update a column by making it Null (containing no data). To do so, call [SetFieldNull](#setfieldnull) with a parameter of **TRUE** to mark the field Null; this also causes the column to be updated. If you want a field to be written to the data source even though its value has not changed, call [SetFieldDirty](#setfielddirty) with a parameter of **TRUE**. This works even if the field had the value Null.  
   
- 데이터 원본 트랜잭션을 지 원하는 경우 만들 수 있습니다는 **편집** 트랜잭션의 일부를 호출 합니다. 호출 해야 하는 참고 [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) 호출 하기 전에 **편집** 레코드 집합 열린 후 및 합니다. 또한 호출 하는 참고 [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) 호출에 대 한 대체 하지 않습니다 **업데이트** 완료 하는 **편집** 작업 합니다. 트랜잭션에 대 한 자세한 내용은 클래스를 참조 하십시오. [CDatabase](../../mfc/reference/cdatabase-class.md)합니다.  
+ If the data source supports transactions, you can make the **Edit** call part of a transaction. Note that you should call [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) before calling **Edit** and after the recordset has been opened. Also note that calling [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) is not a substitute for calling **Update** to complete the **Edit** operation. For more information about transactions, see class [CDatabase](../../mfc/reference/cdatabase-class.md).  
   
- 현재 잠금 모드에 따라 업데이트 되는 레코드에 의해 잠겨 **편집** 호출할 때까지 **업데이트** 또는 다른 레코드로 스크롤 중에 잠겨 있을 수 있습니다 또는 **편집** 호출 합니다. 사용 하 여 잠금 모드를 변경할 수 있습니다 [SetLockingMode](#setlockingmode)합니다.  
+ Depending on the current locking mode, the record being updated may be locked by **Edit** until you call **Update** or scroll to another record, or it may be locked only during the **Edit** call. You can change the locking mode with [SetLockingMode](#setlockingmode).  
   
- 현재 레코드의 이전 값이 호출 하기 전에 새 레코드를 스크롤할 경우 복원 **업데이트**합니다. A `CDBException` 호출 하는 경우 throw 되 **편집** 없는 현재 레코드 인지 또는 업데이트할 수 없는 레코드 집합에 대 한 합니다.  
+ The previous value of the current record is restored if you scroll to a new record before calling **Update**. A `CDBException` is thrown if you call **Edit** for a recordset that cannot be updated or if there is no current record.  
   
- 자세한 내용은 문서를 참조 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md) 및 [레코드 집합: 잠금 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)합니다.  
+ For more information, see the articles [Transaction (ODBC)](../../data/odbc/transaction-odbc.md) and [Recordset: Locking Records (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDatabase # 20](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#20](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]  
   
-##  <a name="flushresultset"></a>CRecordset::FlushResultSet  
- 여러 개의 결과 집합이 있는 경우 미리 정의 된 쿼리 (저장된 프로시저)의 다음 결과 집합을 검색 합니다.  
+##  <a name="flushresultset"></a>  CRecordset::FlushResultSet  
+ Retrieves the next result set of a predefined query (stored procedure), if there are multiple result sets.  
   
 ```  
 BOOL FlushResultSet();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 검색할; 추가 결과 집합이 없는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if there are more result sets to be retrieved; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 호출 해야 `FlushResultSet` 만 완료 되 면 완전히 현재 결과 집합에서 커서를 사용 합니다. 다음 결과 호출 하 여 집합을 검색 하는 경우 유의 `FlushResultSet`, 커서 해당 결과 집합에 대해 유효 하지 않으면 호출 해야는 [MoveNext](#movenext) 호출한 후 멤버 함수 `FlushResultSet`합니다.  
+### <a name="remarks"></a>Remarks  
+ You should call `FlushResultSet` only when you are completely finished with the cursor on the current result set. Note that when you retrieve the next result set by calling `FlushResultSet`, your cursor is not valid on that result set; you should call the [MoveNext](#movenext) member function after calling `FlushResultSet`.  
   
- 미리 정의 된 쿼리에서 사용 하는 출력 매개 변수 또는 입력/출력 매개 변수를 호출 해야 합니다 `FlushResultSet` 반환 될 때까지 `FALSE` (값 0), 이러한 매개 변수 값을 얻기 위해 합니다.  
+ If a predefined query uses an output parameter or input/output parameters, you must call `FlushResultSet` until it returns `FALSE` (the value 0), in order to obtain these parameter values.  
   
- `FlushResultSet`ODBC API 함수를 호출 `SQLMoreResults`합니다. 경우 `SQLMoreResults` 반환 `SQL_ERROR` 또는 `SQL_INVALID_HANDLE`, 다음 `FlushResultSet` 예외가 throw 됩니다. 에 대 한 자세한 내용은 `SQLMoreResults`, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ `FlushResultSet` calls the ODBC API function `SQLMoreResults`. If `SQLMoreResults` returns `SQL_ERROR` or `SQL_INVALID_HANDLE`, then `FlushResultSet` will throw an exception. For more information about `SQLMoreResults`, see the Windows SDK.  
   
- 저장된 프로시저를 호출 하려는 경우 필드 바인딩한 해야 `FlushResultSet`합니다.  
+ Your stored procedure needs to have bound fields if you want to call `FlushResultSet`.  
   
-### <a name="example"></a>예제  
- 다음 코드에 있다고 가정 `COutParamRecordset` 는 `CRecordset`-파생 된 개체는 입력된 매개 변수 및 출력 매개 변수를 사용 하 여 미리 정의 된 쿼리를 기반으로 하 고 여러 결과 집합입니다. 참고의 구조는 [DoFieldExchange](#dofieldexchange) 재정의 합니다.  
+### <a name="example"></a>Example  
+ The following code assumes that `COutParamRecordset` is a `CRecordset`-derived object based on a predefined query with an input parameter and an output parameter, and having multiple result sets. Note the structure of the [DoFieldExchange](#dofieldexchange) override.  
   
- [!code-cpp[NVC_MFCDatabase # 21](../../mfc/codesnippet/cpp/crecordset-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#21](../../mfc/codesnippet/cpp/crecordset-class_5.cpp)]  
   
- [!code-cpp[NVC_MFCDatabase # 22](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#22](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]  
   
-##  <a name="getbookmark"></a>CRecordset::GetBookmark  
- 현재 레코드에 대 한 책갈피 값을 가져옵니다.  
+##  <a name="getbookmark"></a>  CRecordset::GetBookmark  
+ Obtains the bookmark value for the current record.  
   
 ```  
 void GetBookmark(CDBVariant& varBookmark);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `varBookmark`  
- 에 대 한 참조는 [CDBVariant](../../mfc/reference/cdbvariant-class.md) 현재 레코드에서 책갈피를 나타내는 개체입니다.  
+ A reference to a [CDBVariant](../../mfc/reference/cdbvariant-class.md) object representing the bookmark on the current record.  
   
-### <a name="remarks"></a>주의  
- 책갈피 레코드 집합에서 지원 되는지 확인, 호출 [CanBookmark](#canbookmark)합니다. 지원 되는 경우 책갈피를 사용할 수 있도록 하려면 설정 해야 합니다는 **CRecordset::useBookmarks** 옵션에 `dwOptions` 의 매개 변수는 [열려](#open) 멤버 함수입니다.  
-  
-> [!NOTE]
->  책갈피 지원 되지 않거나 사용할 수 없는 경우 호출 `GetBookmark` 예외가 throw 됩니다. 책갈피 앞 으로만 이동 가능한 레코드 집합에서 지원 되지 않습니다.  
-  
- `GetBookmark`현재 레코드에 대 한 책갈피의 값을 할당 한 `CDBVariant` 개체입니다. 해당 레코드를 다른 레코드로 이동 후 언제 든 지 돌아가려면 호출 [SetBookmark](#setbookmark) 해당와 `CDBVariant` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ To determine if bookmarks are supported on the recordset, call [CanBookmark](#canbookmark). To make bookmarks available if they are supported, you must set the **CRecordset::useBookmarks** option in the `dwOptions` parameter of the [Open](#open) member function.  
   
 > [!NOTE]
->  특정 레코드 집합 작업이 끝난 후 책갈피 유효할 수 더 이상 없습니다. 예를 들어, 호출 하는 경우 `GetBookmark` 이어서 **Requery**, 인 레코드를 반환할 수 `SetBookmark`합니다. 호출 [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) 안전 하 게 호출할 수 있는지 여부를 확인 하려면 `SetBookmark`합니다.  
+>  If bookmarks are unsupported or unavailable, calling `GetBookmark` will result in an exception being thrown. Bookmarks are not supported on forward-only recordsets.  
   
- 책갈피와 레코드 탐색에 대 한 자세한 내용은 문서를 참조 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) 및 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)합니다.  
+ `GetBookmark` assigns the value of the bookmark for the current record to a `CDBVariant` object. To return to that record at any time after moving to a different record, call [SetBookmark](#setbookmark) with the corresponding `CDBVariant` object.  
   
-##  <a name="getdefaultconnect"></a>CRecordset::GetDefaultConnect  
- 기본 연결 문자열을 가져오기 위해 호출 됩니다.  
+> [!NOTE]
+>  After certain recordset operations, bookmarks may no longer be valid. For example, if you call `GetBookmark` followed by **Requery**, you may not be able to return to the record with `SetBookmark`. Call [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) to check whether you can safely call `SetBookmark`.  
+  
+ For more information about bookmarks and recordset navigation, see the articles [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) and [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+  
+##  <a name="getdefaultconnect"></a>  CRecordset::GetDefaultConnect  
+ Called to get the default connection string.  
   
 ```  
 virtual CString GetDefaultConnect();
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CString` 기본 연결 문자열을 포함 하 합니다.  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the default connection string.  
   
-### <a name="remarks"></a>주의  
- 프레임 워크를 레코드 집합의 기반이 되는 데이터 원본에 대 한 기본 연결 문자열을 가져옵니다.이 멤버 함수를 호출 합니다. Classwizard 함께 사용 하면에 대 한 동일한 데이터 원본에서에서 사용 하 여 클래스 마법사 테이블 및 열에 대 한 정보를 식별 하 여이 함수를 구현 합니다. 보면 하기 편리 하 게 응용 프로그램을 개발 하는 동안이 기본 연결에 의존 합니다. 하지만 기본 연결을 응용 프로그램의 사용자에 대 한 적절 한 수 있습니다. 해당 되는 경우, 해야 다시 구현할 있습니다이 함수를 클래스 마법사의 버전을 삭제 합니다. 연결 문자열에 대 한 자세한 내용은 문서 참조 [데이터 원본 (ODBC)](../../data/odbc/data-source-odbc.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this member function to get the default connection string for the data source on which the recordset is based. ClassWizard implements this function for you by identifying the same data source you use in ClassWizard to get information about tables and columns. You will probably find it convenient to rely on this default connection while developing your application. But the default connection may not be appropriate for users of your application. If that is the case, you should reimplement this function, discarding ClassWizard's version. For more information about connection strings, see the article [Data Source (ODBC)](../../data/odbc/data-source-odbc.md).  
   
-##  <a name="getdefaultsql"></a>CRecordset::GetDefaultSQL  
- 기본 SQL 문자열 실행을 가져오기 위해 호출 됩니다.  
+##  <a name="getdefaultsql"></a>  CRecordset::GetDefaultSQL  
+ Called to get the default SQL string to execute.  
   
 ```  
 virtual CString GetDefaultSQL();
 ```  
   
-### <a name="return-value"></a>반환 값  
- A `CString` 기본 SQL 문이 들어 있는입니다.  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the default SQL statement.  
   
-### <a name="remarks"></a>설명  
- 프레임 워크 멤버 가져오려면이 함수를 레코드 집합의 기반이 되는 기본 SQL 문을 호출 합니다. 테이블 이름 또는 SQL 때문일 **선택** 문.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this member function to get the default SQL statement on which the recordset is based. This might be a table name or a SQL **SELECT** statement.  
   
- 직접 정의한 하지 기본 SQL 문을 클래스 마법사를 사용 하 여 레코드 집합 클래스를 선언 하 여 및 classwizard 함께 사용 하면에 대 한이 작업을 수행 합니다.  
+ You indirectly define the default SQL statement by declaring your recordset class with ClassWizard, and ClassWizard performs this task for you.  
   
- 사용자는 용도 대 한 SQL 문의 문자열을 필요한 경우 문의 `GetSQL`를 반환 하는 SQL 문을 열려 있을 때 레코드 집합의 레코드를 선택 하는 데 사용 합니다. 클래스의 재정의에서 기본 SQL 문자열을 편집할 수 `GetDefaultSQL`합니다. 예를 들어 한 호출을 사용 하 여 미리 정의 된 쿼리를 지정할 수 있습니다는 **호출** 문. 그러나 (참고, 되는 경우 편집할 `GetDefaultSQL`를 수정 해야 `m_nFields` 데이터 원본에 있는 열의 수와 일치 하도록 합니다.)  
+ If you need the SQL statement string for your own use, call `GetSQL`, which returns the SQL statement used to select the recordset's records when it was opened. You can edit the default SQL string in your class's override of `GetDefaultSQL`. For example, you could specify a call to a predefined query using a **CALL** statement. (Note, however, that if you edit `GetDefaultSQL`, you also need to modify `m_nFields` to match the number of columns in the data source.)  
   
- 자세한 내용은 문서 참조 [레코드 집합: 한 클래스에는 테이블 (ODBC) 선언](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)합니다.  
+ For more information, see the article [Recordset: Declaring a Class for a Table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
   
 > [!CAUTION]
->  테이블 이름은 테이블 이름을 여러 개 제공 되는 경우 또는 경우 프레임 워크가 테이블 이름을 식별할 수 없습니다 비어 있게 됩니다는 **호출** 문을 해석할 수 없습니다. 사용할 때는 **호출** 문, 중괄호 사이 공백을 넣어야 및 **호출** 키워드, 중괄호 또는 하기 전에 공백 삽입 해야 하거나는 **선택** 키워드는 **선택** 문을 합니다.  
+>  The table name will be empty if the framework could not identify a table name, if multiple table names were supplied, or if a **CALL** statement could not be interpreted. Note that when using a **CALL** statement, you must not insert whitespace between the curly brace and the **CALL** keyword, nor should you insert whitespace before the curly brace or before the **SELECT** keyword in a **SELECT** statement.  
   
-##  <a name="getfieldvalue"></a>CRecordset::GetFieldValue  
- 현재 레코드의 필드 데이터를 검색합니다.  
+##  <a name="getfieldvalue"></a>  CRecordset::GetFieldValue  
+ Retrieves field data in the current record.  
   
 ```  
 void GetFieldValue(
@@ -641,17 +699,17 @@ void GetFieldValue(
     CStringW& strValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 필드의 이름입니다.  
+ The name of a field.  
   
  *varValu*e  
- 에 대 한 참조는 [CDBVariant](../../mfc/reference/cdbvariant-class.md) 필드의 값을 저장 하는 개체입니다.  
+ A reference to a [CDBVariant](../../mfc/reference/cdbvariant-class.md) object that will store the field's value.  
   
  `nFieldType`  
- 필드의 ODBC C 데이터 형식입니다. 기본값을 사용 하 여 **DEFAULT_FIELD_TYPE**, 강제로 `GetFieldValue` 다음 테이블을 기반으로 SQL 데이터 형식에서 C 데이터 형식을 결정 합니다. 그렇지 않으면 데이터를 직접 입력 하거나 호환 가능한 데이터 형식을; 선택을 지정할 수 있습니다. 예를 들어 임의의 데이터 형식으로 저장할 수 있습니다 **SQL_C_CHAR**합니다.  
+ The ODBC C data type of the field. Using the default value, **DEFAULT_FIELD_TYPE**, forces `GetFieldValue` to determine the C data type from the SQL data type, based on the following table. Otherwise, you can specify the data type directly or choose a compatible data type; for example, you can store any data type into **SQL_C_CHAR**.  
   
-|C 데이터 형식|SQL 데이터 형식|  
+|C data type|SQL data type|  
 |-----------------|-------------------|  
 |**SQL_C_BIT**|**SQL_BIT**|  
 |**SQL_C_UTINYINT**|**SQL_TINYINT**|  
@@ -663,51 +721,51 @@ void GetFieldValue(
 |**SQL_C_CHAR**|**SQL_NUMERICSQL_DECIMALSQL_BIGINTSQL_CHARSQL_VARCHARSQL_LONGVARCHAR**|  
 |**SQL_C_BINARY**|**SQL_BINARYSQL_VARBINARYSQL_LONGVARBINARY**|  
   
- ODBC 데이터 형식에 대 한 자세한 내용은 "SQL 데이터 형식" 및 "C 데이터 형식"의 부록 D에서 항목을 참조 하십시오.는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about ODBC data types, see the topics "SQL Data Types" and "C Data Types" in Appendix D of the Windows SDK.  
   
  `nIndex`  
- 필드의 0부터 시작 하는 인덱스입니다.  
+ The zero-based index of the field.  
   
  `strValue`  
- 에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체 필드의 값을 저장 하는 텍스트 필드의 데이터 형식에 관계 없이으로 변환 합니다.  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that will store the field's value converted to text, regardless of the field's data type.  
   
-### <a name="remarks"></a>주의  
- 이름 또는 인덱스로 필드를 찾을 수 있습니다. 필드 값 중 하나에 저장할 수는 `CDBVariant` 개체 또는 `CString` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You can look up a field either by name or by index. You can store the field value in either a `CDBVariant` object or a `CString` object.  
   
- 대량 행 페치를 구현한 경우 현재 레코드가 항상 행 집합의 첫 번째 레코드에 배치 됩니다. 사용 하도록 `GetFieldValue` 에 주어진된 행 집합 내에서 레코드를 먼저 호출 해야는 [SetRowsetCursorPosition](#setrowsetcursorposition) 멤버 함수를 해당 행 집합 내에서 원하는 행으로 커서를 이동 합니다. 그런 다음 호출 `GetFieldValue` 해당 행에 대 한 합니다. 대량 행 페치를 구현 하려면 지정 해야 합니다는 `CRecordset::useMultiRowFetch` 옵션의는 `dwOptions` 에서 매개 변수는 [열려](#open) 멤버 함수입니다.  
+ If you have implemented bulk row fetching, the current record is always positioned on the first record in a rowset. To use `GetFieldValue` on a record within a given rowset, you must first call the [SetRowsetCursorPosition](#setrowsetcursorposition) member function to move the cursor to the desired row within that rowset. Then call `GetFieldValue` for that row. To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option of the `dwOptions` parameter in the [Open](#open) member function.  
   
- 사용할 수 있습니다 `GetFieldValue` 를 동적으로 디자인 타임에이 정적으로 바인딩 보다는 런타임에 필드를 인출 합니다. 예를 들어, 레코드 집합 개체에서 직접 선언한 경우 `CRecordset`, 사용 해야 `GetFieldValue` 검색할 필드 데이터; 레코드 필드 교환 (RFX) 또는 대량 레코드 필드 교환 (대량 RFX) 구현 되지 않았습니다.  
-  
-> [!NOTE]
->  파생 하지 않는 레코드 집합 개체를 선언 하는 경우 `CRecordset`, ODBC 커서 라이브러리를 로드할 필요가 없습니다. 커서 라이브러리를 사용 하려면 레코드 집합에 바인딩된 열이 하나 이상 있어야 그러나 사용 하는 경우 `CRecordset` 를 직접 바인딩되는 열입니다. 멤버 함수 [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) 및 [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) 커서 라이브러리는 로드 하는지 여부를 제어 합니다.  
-  
- `GetFieldValue`ODBC API 함수를 호출 **SQLGetData**합니다. 드라이버는 값을 출력 하는 경우 **SQL_NO_TOTAL** 필드 값의 실제 길이 대 한 `GetFieldValue` 예외를 throw 합니다. 에 대 한 자세한 내용은 **SQLGetData**, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
-  
-### <a name="example"></a>예제  
- 다음 샘플 코드에 대 한 호출을 보여 줍니다. `GetFieldValue` recordset 개체에서 직접 선언에 대 한 `CRecordset`합니다.  
-  
- [!code-cpp[NVC_MFCDatabase # 23](../../mfc/codesnippet/cpp/crecordset-class_7.cpp)]  
+ You can use `GetFieldValue` to dynamically fetch fields at run time rather than statically binding them at design time. For example, if you have declared a recordset object directly from `CRecordset`, you must use `GetFieldValue` to retrieve the field data; record field exchange (RFX), or bulk record field exchange (Bulk RFX), is not implemented.  
   
 > [!NOTE]
->  DAO 클래스와 달리 `CDaoRecordset`, `CRecordset` 없는 `SetFieldValue` 멤버 함수입니다. 직접 개체를 만들 경우 `CRecordset`를 효과적으로 읽기 전용입니다.  
+>  If you declare a recordset object without deriving from `CRecordset`, do not have the ODBC Cursor Library loaded. The cursor library requires that the recordset have at least one bound column; however, when you use `CRecordset` directly, none of the columns are bound. The member functions [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) and [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) control whether the cursor library will be loaded.  
   
- 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ `GetFieldValue` calls the ODBC API function **SQLGetData**. If your driver outputs the value **SQL_NO_TOTAL** for the actual length of the field value, `GetFieldValue` throws an exception. For more information about **SQLGetData**, see the Windows SDK.  
   
-##  <a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount  
- 레코드 집합 개체에서 필드의 총 수를 검색합니다.  
+### <a name="example"></a>Example  
+ The following sample code illustrates calls to `GetFieldValue` for a recordset object declared directly from `CRecordset`.  
+  
+ [!code-cpp[NVC_MFCDatabase#23](../../mfc/codesnippet/cpp/crecordset-class_7.cpp)]  
+  
+> [!NOTE]
+>  Unlike the DAO class `CDaoRecordset`, `CRecordset` does not have a `SetFieldValue` member function. If you create an object directly from `CRecordset`, it is effectively read-only.  
+  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+  
+##  <a name="getodbcfieldcount"></a>  CRecordset::GetODBCFieldCount  
+ Retrieves the total number of fields in your recordset object.  
   
 ```  
 short GetODBCFieldCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합의 필드 수를 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The number of fields in the recordset.  
   
-### <a name="remarks"></a>설명  
- 레코드 집합 만들기에 대 한 자세한 내용은 문서 참조 [레코드 집합: 집합 만들기 및 닫기 (ODBC) 레코드 집합](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ For more information about creating recordsets, see the article [Recordset: Creating and Closing Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo  
- 레코드 집합의 필드에 대 한 정보를 가져옵니다.  
+##  <a name="getodbcfieldinfo"></a>  CRecordset::GetODBCFieldInfo  
+ Obtains information about the fields in the recordset.  
   
 ```  
 void GetODBCFieldInfo(
@@ -720,118 +778,118 @@ void GetODBCFieldInfo(
     CODBCFieldInfo& fieldinfo);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 필드의 이름입니다.  
+ The name of a field.  
   
  `fieldinfo`  
- 에 대 한 참조는 `CODBCFieldInfo` 구조입니다.  
+ A reference to a `CODBCFieldInfo` structure.  
   
  `nIndex`  
- 필드의 0부터 시작 하는 인덱스입니다.  
+ The zero-based index of the field.  
   
-### <a name="remarks"></a>주의  
- 한 버전의 함수를 사용 하면 필드 이름으로 조회할 수 있습니다. 다른 버전 인덱스 필드를 찾을 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ One version of the function lets you look up a field by name. The other version lets you look up a field by index.  
   
- 반환 되는 정보에 대 한 설명을 참조 하십시오.는 [CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md) 구조입니다.  
+ For a description about the information returned, see the [CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md) structure.  
   
- 레코드 집합 만들기에 대 한 자세한 내용은 문서 참조 [레코드 집합: 집합 만들기 및 닫기 (ODBC) 레코드 집합](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)합니다.  
+ For more information about creating recordsets, see the article [Recordset: Creating and Closing Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getrecordcount"></a>CRecordset::GetRecordCount  
- 레코드 집합의 크기를 결정 합니다.  
+##  <a name="getrecordcount"></a>  CRecordset::GetRecordCount  
+ Determines the size of the recordset.  
   
 ```  
 long GetRecordCount() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합;의 레코드 수 레코드 집합에; 레코드가 없는 경우 0 또는 레코드 수를 확인할 수 없는 경우-1을 추가 합니다.  
+### <a name="return-value"></a>Return Value  
+ The number of records in the recordset; 0 if the recordset contains no records; or -1 if the record count cannot be determined.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
 > [!CAUTION]
->  Record count으로 "최고 수 위 표시," 번호가 가장 큰 레코드 유지 관리는 아직 볼 사용자 레코드를 모두 이동 됩니다. 레코드의 총 수는 사용자가 마지막 레코드를 벗어나는 이동 후에 알려져 있습니다. 성능상의 이유로 수 업데이트 되지 않습니다 호출 하는 경우 `MoveLast`합니다. 호출 하는 레코드, 사용자가 직접 계산 `MoveNext` 때까지 반복 해 서 `IsEOF` 0이 아닌 값을 반환 합니다. 레코드를 통해 추가 **CRecordset:AddNew** 및 **업데이트** 횟수가 늘어납니다; 통해 레코드 삭제 `CRecordset::Delete` 수를 줄입니다.  
+>  The record count is maintained as a "high water mark," the highest-numbered record yet seen as the user moves through the records. The total number of records is only known after the user has moved beyond the last record. For performance reasons, the count is not updated when you call `MoveLast`. To count the records yourself, call `MoveNext` repeatedly until `IsEOF` returns nonzero. Adding a record via **CRecordset:AddNew** and **Update** increases the count; deleting a record via `CRecordset::Delete` decreases the count.  
   
-##  <a name="getrowsetsize"></a>CRecordset::GetRowsetSize  
- 지정 된 인출 하는 동안 검색할 행 수에 대 한 현재 설정을 가져옵니다.  
+##  <a name="getrowsetsize"></a>  CRecordset::GetRowsetSize  
+ Obtains the current setting for the number of rows you wish to retrieve during a given fetch.  
   
 ```  
 DWORD GetRowsetSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 인출 하는 동안 검색할 행의 수입니다.  
+### <a name="return-value"></a>Return Value  
+ The number of rows to retrieve during a given fetch.  
   
-### <a name="remarks"></a>주의  
- 레코드 집합 열릴 때 기본 행 집합 크기는 25; 대량 행 페치를 사용 하는 경우 그렇지 않으면은 1입니다.  
+### <a name="remarks"></a>Remarks  
+ If you are using bulk row fetching, the default rowset size when the recordset is opened is 25; otherwise, it is 1.  
   
- 대량 행 페치를 구현 하려면 지정 해야 합니다는 `CRecordset::useMultiRowFetch` 옵션에 `dwOptions` 의 매개 변수는 [열려](#open) 멤버 함수입니다. 행 집합 크기에 대 한 설정을 변경 하려면 호출 [SetRowsetSize](#setrowsetsize)합니다.  
+ To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option in the `dwOptions` parameter of the [Open](#open) member function. To change the setting for the rowset size, call [SetRowsetSize](#setrowsetsize).  
   
- 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="getrowsfetched"></a>CRecordset::GetRowsFetched  
- 인출 후에 실제 검색 된 레코드 수를 결정 합니다.  
+##  <a name="getrowsfetched"></a>  CRecordset::GetRowsFetched  
+ Determines how many records were actually retrieved after a fetch.  
   
 ```  
 DWORD GetRowsFetched() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 행 수가 페치 후 데이터 원본에서 검색 합니다.  
+### <a name="return-value"></a>Return Value  
+ The number of rows retrieved from the data source after a given fetch.  
   
-### <a name="remarks"></a>설명  
- 대량 행 페치를 구현한 경우에 유용 합니다. 행 집합 크기는 일반적으로 행 개수를 반입;에서 검색 됩니다 나타냅니다. 그러나 레코드 집합의 행 수가 전체 행 집합에 얼마나 많은 행을 검색할도 적용 됩니다. 예를 들어 레코드 집합 4 행 집합 크기 설정 하 여 10 개의 레코드에 있는 경우 다음 반복 레코드 집합에서 호출 하 여 `MoveNext` 최종 행 집합의 두 레코드가 있는 것에 발생 합니다.  
+### <a name="remarks"></a>Remarks  
+ This is useful when you have implemented bulk row fetching. The rowset size normally indicates how many rows will be retrieved from a fetch; however, the total number of rows in the recordset also affects how many rows will be retrieved in a rowset. For example, if your recordset has 10 records with a rowset size setting of 4, then looping through the recordset by calling `MoveNext` will result in the final rowset having only 2 records.  
   
- 대량 행 페치를 구현 하려면 지정 해야 합니다는 `CRecordset::useMultiRowFetch` 옵션에 `dwOptions` 의 매개 변수는 [열려](#open) 멤버 함수입니다. 행 집합 크기를 지정 하려면 호출 [SetRowsetSize](#setrowsetsize)합니다.  
+ To implement bulk row fetching, you must specify the `CRecordset::useMultiRowFetch` option in the `dwOptions` parameter of the [Open](#open) member function. To specify the rowset size, call [SetRowsetSize](#setrowsetsize).  
   
- 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDatabase # 24](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#24](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]  
   
-##  <a name="getrowstatus"></a>CRecordset::GetRowStatus  
- 현재 행 집합의 행에 대 한 상태를 가져옵니다.  
+##  <a name="getrowstatus"></a>  CRecordset::GetRowStatus  
+ Obtains the status for a row in the current rowset.  
   
 ```  
 WORD GetRowStatus(WORD wRow) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `wRow`  
- 1부터 행의 위치는 현재 행 집합의 합니다. 이 값의 범위는 1에서 행 집합의 크기.  
+ The one-based position of a row in the current rowset. This value can range from 1 to the size of the rowset.  
   
-### <a name="return-value"></a>반환 값  
- 행에 대 한 상태 값입니다. 자세한 내용은 설명을 참조하세요.  
+### <a name="return-value"></a>Return Value  
+ A status value for the row. For details, see Remarks.  
   
-### <a name="remarks"></a>주의  
- `GetRowStatus`데이터 소스에서 검색 된 이후 모든 행에 상태 변경 중 하나를 나타내는 값을 반환 하려면 행 해당 `wRow` 이 인출 된 합니다. 다음 표에서는 가능한 반환 값을 보여 줍니다.  
+### <a name="remarks"></a>Remarks  
+ `GetRowStatus` returns a value that indicates either any change in status to the row since it was last retrieved from the data source, or that no row corresponding to `wRow` was fetched. The following table lists the possible return values.  
   
-|상태 값|설명|  
+|Status value|Description|  
 |------------------|-----------------|  
-|`SQL_ROW_SUCCESS`|행이 변경 되지 않습니다.|  
-|`SQL_ROW_UPDATED`|행이 업데이트 되었습니다.|  
-|`SQL_ROW_DELETED`|해당 행이 삭제 되었습니다.|  
-|`SQL_ROW_ADDED`|행 추가 되었습니다.|  
-|`SQL_ROW_ERROR`|행이 오류로 인해 가져올 수 없습니다.|  
-|`SQL_ROW_NOROW`|에 해당 하는 행이 `wRow`합니다.|  
+|`SQL_ROW_SUCCESS`|The row is unchanged.|  
+|`SQL_ROW_UPDATED`|The row has been updated.|  
+|`SQL_ROW_DELETED`|The row has been deleted.|  
+|`SQL_ROW_ADDED`|The row has been added.|  
+|`SQL_ROW_ERROR`|The row is unretrievable due to an error.|  
+|`SQL_ROW_NOROW`|There is no row that corresponds to `wRow`.|  
   
- 자세한 내용은 ODBC API 함수를 참조 하십시오. **SQLExtendedFetch** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information, see the ODBC API function **SQLExtendedFetch** in the Windows SDK.  
   
-##  <a name="getstatus"></a>CRecordset::GetStatus  
- 마지막 레코드에 표시 여부 및 레코드 집합의 현재 레코드의 인덱스를 결정 합니다.  
+##  <a name="getstatus"></a>  CRecordset::GetStatus  
+ Determines the index of the current record in the recordset and whether the last record has been seen.  
   
 ```  
 void GetStatus(CRecordsetStatus& rStatus) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `rStatus`  
- 에 대 한 참조는 **CRecordsetStatus** 개체입니다. 자세한 내용은 설명 부분을 참조하세요.  
+ A reference to a **CRecordsetStatus** object. See the Remarks section for more information.  
   
-### <a name="remarks"></a>주의  
- `CRecordset`인덱스를 추적 하려고 하지만 경우에 따라이 불가능할 수도 있습니다. 참조 [GetRecordCount](#getrecordcount) 설명 합니다.  
+### <a name="remarks"></a>Remarks  
+ `CRecordset` attempts to track the index, but under some circumstances this may not be possible. See [GetRecordCount](#getrecordcount) for an explanation.  
   
- **CRecordsetStatus** 구조 형식은 다음과 같습니다.  
+ The **CRecordsetStatus** structure has the following form:  
   
  `struct CRecordsetStatus`  
   
@@ -843,282 +901,282 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
  `};`  
   
- 두 멤버가 **CRecordsetStatus** 의미는 다음과 같습니다.  
+ The two members of **CRecordsetStatus** have the following meanings:  
   
-- **m_lCurrentRecord** 알 수 있는 경우에 레코드 집합의 현재 레코드의 0부터 시작 인덱스를 포함 합니다. 이 멤버를 포함 하는 인덱스를 확인할 수 없는 경우 **AFX_CURRENT_RECORD_UNDEFINED** -(2). 경우 `IsBOF` 은 **TRUE** (레코드 집합을 빈 또는 첫 번째 레코드 바로 앞 스크롤하려고) 다음 **m_lCurrentRecord** 로 설정 된 **AFX_CURRENT_RECORD_BOF** (-1). 첫 번째 레코드에 대해 다음 설정 된 경우 0으로, 두 번째 1, 기록 등에입니다.  
+- **m_lCurrentRecord** Contains the zero-based index of the current record in the recordset, if known. If the index cannot be determined, this member contains **AFX_CURRENT_RECORD_UNDEFINED** (-2). If `IsBOF` is **TRUE** (empty recordset or attempt to scroll before first record), then **m_lCurrentRecord** is set to **AFX_CURRENT_RECORD_BOF** (-1). If on the first record, then it is set to 0, second record 1, and so on.  
   
-- **m_bRecordCountFinal** Nonzero 레코드 집합의 레코드의 총 수를 확인 하는 경우. 일반적으로이 수행 해야 합니다는 레코드 집합의 시작 부분에서 시작 하 고 호출 하 여 `MoveNext` 될 때까지 `IsEOF` 0이 아닌 값을 반환 합니다. 레코드에서 반환 된 계산이 멤버가이 0 이면 `GetRecordCount`,-1을 반환 하지이 레코드의 "최고 수 위 표시" 수만 있습니다.  
+- **m_bRecordCountFinal** Nonzero if the total number of records in the recordset has been determined. Generally this must be accomplished by starting at the beginning of the recordset and calling `MoveNext` until `IsEOF` returns nonzero. If this member is zero, the record count as returned by `GetRecordCount`, if not -1, is only a "high water mark" count of the records.  
   
-##  <a name="getsql"></a>CRecordset::GetSQL  
- 이 멤버 함수는가 열려 있을 때 레코드 집합의 레코드를 선택 하는 데 사용 된 SQL 문이를 호출 합니다.  
+##  <a name="getsql"></a>  CRecordset::GetSQL  
+ Call this member function to get the SQL statement that was used to select the recordset's records when it was opened.  
   
 ```  
 const CString& GetSQL() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A **const** 에 대 한 참조는 `CString` SQL 문이 들어 있는입니다.  
+### <a name="return-value"></a>Return Value  
+ A **const** reference to a `CString` that contains the SQL statement.  
   
-### <a name="remarks"></a>주의  
- 일반적으로 SQL 됩니다 **선택** 문. 반환한 문자열 `GetSQL` 읽기 전용입니다.  
+### <a name="remarks"></a>Remarks  
+ This will generally be a SQL **SELECT** statement. The string returned by `GetSQL` is read-only.  
   
- 반환한 문자열 `GetSQL` 간에 차이가 있는 일반적으로 모든 문자열에서 레코드 집합에 전달 했습니다는 `lpszSQL` 매개 변수를는 **열려** 멤버 함수입니다. 레코드 집합에 전달 하는 것에 따라 전체 SQL 문을 생성 때문에 이것이 **열려**, 어떤 수에서 지정한 클래스 마법사를 사용 하 여 지정한 무엇는 **m_strFilter** 및 `m_strSort` 데이터 멤버 및 매개 변수를 지정 합니다. 문서를 참조 하는 레코드 집합이 SQL 문을 생성 하는 방법에 대 한 세부 정보에 대 한 [레코드 집합: 레코드 집합의 레코드 선택 방법 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)합니다.  
+ The string returned by `GetSQL` is typically different from any string you may have passed to the recordset in the `lpszSQL` parameter to the **Open** member function. This is because the recordset constructs a full SQL statement based on what you passed to **Open**, what you specified with ClassWizard, what you may have specified in the **m_strFilter** and `m_strSort` data members, and any parameters you may have specified. For details about how the recordset constructs this SQL statement, see the article [Recordset: How Recordsets Select Records (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
 > [!NOTE]
->  이 함수를 호출한 후에 호출 [열려](#open)합니다.  
+>  Call this member function only after calling [Open](#open).  
   
-##  <a name="gettablename"></a>CRecordset::GetTableName  
- 레코드 집합의 쿼리의 기반이 되는 SQL 테이블의 이름을 가져옵니다.  
+##  <a name="gettablename"></a>  CRecordset::GetTableName  
+ Gets the name of the SQL table on which the recordset's query is based.  
   
 ```  
 const CString& GetTableName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A **const** 에 대 한 참조는 `CString` 테이블을 포함 하는 이름이 고, 그렇지 않으면 테이블에 따라 레코드 집합은 빈 문자열입니다.  
+### <a name="return-value"></a>Return Value  
+ A **const** reference to a `CString` that contains the table name, if the recordset is based on a table; otherwise, an empty string.  
   
-### <a name="remarks"></a>주의  
- `GetTableName`여러 테이블 또는 미리 정의 된 쿼리 (저장된 프로시저)의 조인이 아니라 테이블을 기반으로 레코드 집합의 경우 유효한만 있습니다. 이름에는 읽기 전용입니다.  
+### <a name="remarks"></a>Remarks  
+ `GetTableName` is only valid if the recordset is based on a table, not a join of multiple tables or a predefined query (stored procedure). The name is read-only.  
   
 > [!NOTE]
->  이 함수를 호출한 후에 호출 [열려](#open)합니다.  
+>  Call this member function only after calling [Open](#open).  
   
-##  <a name="isbof"></a>CRecordset::IsBOF  
- 레코드 집합의 첫 번째 레코드 바로 앞 배치 된 경우 0이 아닌 값을 반환 합니다. 현재 기록이 없습니다.  
+##  <a name="isbof"></a>  CRecordset::IsBOF  
+ Returns nonzero if the recordset has been positioned before the first record. There is no current record.  
   
 ```  
 BOOL IsBOF() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째 레코드; 앞 뒤로 스크롤 하는 경우 또는 레코드 집합에 레코드가 없는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset contains no records or if you have scrolled backward before the first record; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 레코드 집합의 첫 번째 레코드 바로 앞를 벗어났는지 여부를 알아보려면 레코드로 레코드에서 스크롤하면 전에이 멤버 함수를 호출 합니다. 사용할 수도 있습니다 `IsBOF` 와 함께 `IsEOF` 레코드 집합에는 모든 레코드가 포함 하거나 비어 있는지 확인 하려면. 호출한 후에 즉시 **열려**레코드 집합에 레코드가 없는 경우, `IsBOF` 0이 아닌 값을 반환 합니다. 첫 번째 레코드는 현재 레코드 레코드가 하나 이상 있는 레코드 집합을 열 때 및 `IsBOF` 0을 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this member function before you scroll from record to record to learn whether you have gone before the first record of the recordset. You can also use `IsBOF` along with `IsEOF` to determine whether the recordset contains any records or is empty. Immediately after you call **Open**, if the recordset contains no records, `IsBOF` returns nonzero.When you open a recordset that has at least one record, the first record is the current record and `IsBOF` returns 0.  
   
- 첫 번째 레코드는 현재 레코드 경우 호출 하면 `MovePrev`, `IsBOF` 이후에 0이 아닌 반환 합니다. 경우 `IsBOF` 0이 아닌 값을 반환 하 고 호출 `MovePrev`, 오류가 발생 합니다. 경우 `IsBOF` 반환 0이 아니고, 현재 레코드는 정의 되지 하 고 현재 레코드를 필요로 하는 모든 작업에서 오류가 발생 합니다.  
+ If the first record is the current record and you call `MovePrev`, `IsBOF` will subsequently return nonzero. If `IsBOF` returns nonzero and you call `MovePrev`, an error occurs. If `IsBOF` returns nonzero, the current record is undefined, and any action that requires a current record will result in an error.  
   
-### <a name="example"></a>예제  
- 이 예에서는 `IsBOF` 및 `IsEOF` 코드 스크롤하면 각 방향에서 레코드 집합에서 레코드 집합의 한계를 검색 하 합니다.  
+### <a name="example"></a>Example  
+ This example uses `IsBOF` and `IsEOF` to detect the limits of a recordset as the code scrolls through the recordset in both directions.  
   
- [!code-cpp[NVC_MFCDatabase # 25](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#25](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]  
   
-##  <a name="isdeleted"></a>CRecordset::IsDeleted  
- 현재 레코드 삭제 되었는지 여부를 결정 합니다.  
+##  <a name="isdeleted"></a>  CRecordset::IsDeleted  
+ Determines whether the current record has been deleted.  
   
 ```  
 BOOL IsDeleted() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합 삭제 된 레코드; 배치 되어 있으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset is positioned on a deleted record; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 레코드를 스크롤할 경우 및 `IsDeleted` 반환 **TRUE** (0이 아님), 다음으로 스크롤해야 다른 레코드가 다른 레코드 집합 작업을 수행 하기 전에.  
+### <a name="remarks"></a>Remarks  
+ If you scroll to a record and `IsDeleted` returns **TRUE** (nonzero), then you must scroll to another record before you can perform any other recordset operations.  
   
- 결과 `IsDeleted` 지정한 여부를 레코드 집합이 업데이트할 수 있는지에 레코드 집합 형식이 같은 많은 요인에 따라는 **CRecordset::skipDeletedRecords** 옵션 드라이버 팩 레코드를 삭제 여부를 레코드 집합을 열 때 및 여러 사용자가 있는지 여부를 확인 합니다.  
+ The result of `IsDeleted` depends on many factors, such as your recordset type, whether your recordset is updatable, whether you specified the **CRecordset::skipDeletedRecords** option when you opened the recordset, whether your driver packs deleted records, and whether there are multiple users.  
   
- 에 대 한 자세한 내용은 **CRecordset::skipDeletedRecords** 드라이버 압축을 참조 하 고는 [열려](#open) 멤버 함수입니다.  
+ For more information about **CRecordset::skipDeletedRecords** and driver packing, see the [Open](#open) member function.  
   
 > [!NOTE]
->  호출 하지 않아야 대량 행 페치를 구현한 경우 `IsDeleted`합니다. 대신, 호출 된 [GetRowStatus](#getrowstatus) 멤버 함수입니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  If you have implemented bulk row fetching, you should not call `IsDeleted`. Instead, call the [GetRowStatus](#getrowstatus) member function. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="iseof"></a>CRecordset::IsEOF  
- 레코드 집합 마지막 레코드 뒤 배치 된 경우 0이 아닌 값을 반환 합니다. 현재 기록이 없습니다.  
+##  <a name="iseof"></a>  CRecordset::IsEOF  
+ Returns nonzero if the recordset has been positioned after the last record. There is no current record.  
   
 ```  
 BOOL IsEOF() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합에 레코드가 없는 경우 또는 마지막 레코드; 보다 스크롤 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset contains no records or if you have scrolled beyond the last record; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 레코드 집합의 마지막 레코드 범위를 벗어났는지 여부를 알아보려면 레코드로 레코드에서 스크롤할 때이 함수를 호출 합니다. 사용할 수도 있습니다 `IsEOF` 레코드 집합에는 모든 레코드가 포함 하거나 비어 있는지 확인 하려면. 호출한 후에 즉시 **열려**레코드 집합에 레코드가 없는 경우, `IsEOF` 0이 아닌 값을 반환 합니다. 첫 번째 레코드는 현재 레코드 레코드가 하나 이상 있는 레코드 집합을 열 때 및 `IsEOF` 0을 반환 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this member function as you scroll from record to record to learn whether you have gone beyond the last record of the recordset. You can also use `IsEOF` to determine whether the recordset contains any records or is empty. Immediately after you call **Open**, if the recordset contains no records, `IsEOF` returns nonzero. When you open a recordset that has at least one record, the first record is the current record and `IsEOF` returns 0.  
   
- 호출 하는 경우 마지막 레코드가 현재 레코드 `MoveNext`, `IsEOF` 이후에 0이 아닌 반환 합니다. 경우 `IsEOF` 0이 아닌 값을 반환 하 고 호출 `MoveNext`, 오류가 발생 합니다. 경우 `IsEOF` 반환 0이 아니고, 현재 레코드는 정의 되지 하 고 현재 레코드를 필요로 하는 모든 작업에서 오류가 발생 합니다.  
+ If the last record is the current record when you call `MoveNext`, `IsEOF` will subsequently return nonzero. If `IsEOF` returns nonzero and you call `MoveNext`, an error occurs. If `IsEOF` returns nonzero, the current record is undefined, and any action that requires a current record will result in an error.  
   
-### <a name="example"></a>예제  
- 예를 참조 [IsBOF](#isbof)합니다.  
+### <a name="example"></a>Example  
+ See the example for [IsBOF](#isbof).  
   
-##  <a name="isfielddirty"></a>CRecordset::IsFieldDirty  
- 지정 된 필드 데이터 멤버 이후 변경 되었는지 여부를 결정 [편집](#edit) 또는 [AddNew](#addnew) 호출 되었습니다.  
+##  <a name="isfielddirty"></a>  CRecordset::IsFieldDirty  
+ Determines whether the specified field data member has been changed since [Edit](#edit) or [AddNew](#addnew) was called.  
   
 ```  
 BOOL IsFieldDirty(void* pv);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 필드 데이터 멤버의 상태를 확인 하려면에 대 한 포인터 또는 **NULL** 더티이 필드를 확인 합니다.  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are dirty.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 필드 데이터 멤버 호출 이후 변경 된 경우 0이 아닌 `AddNew` 또는 **편집**그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member has changed since calling `AddNew` or **Edit**; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 모든 더티 필드 데이터 멤버의 데이터를 전송할 레코드를 데이터 원본에 대해를 호출 하 여 현재 레코드가 업데이트 될 때는 [업데이트](#update) 의 멤버 함수 `CRecordset` (호출한 이후 **편집** 또는 `AddNew`).  
+### <a name="remarks"></a>Remarks  
+ The data in all dirty field data members will be transferred to the record on the data source when the current record is updated by a call to the [Update](#update) member function of `CRecordset` (following a call to **Edit** or `AddNew`).  
   
 > [!NOTE]
->  이 멤버 함수 대량 행 페치를 사용 하는 레코드 집합에 적용 되지 않습니다. 구현한 경우 대량 행 페치를 다음 `IsFieldDirty` 은 항상 반환 **FALSE** 실패 한 어설션이 발생 합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  This member function is not applicable on recordsets that are using bulk row fetching. If you have implemented bulk row fetching, then `IsFieldDirty` will always return **FALSE** and will result in a failed assertion. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- 호출 `IsFieldDirty` 이전에 대 한 호출의 효과 다시 설정 됩니다 [SetFieldDirty](#setfielddirty) 필드의 더티 상태는 다시 계산 합니다. 에 `AddNew` 경우 의사 null 값에서 현재 필드 값과 다른 경우 필드가 설정을 변경 합니다. 에 **편집** 경우 필드 값와 다른 경우 캐시 된 값 필드의 상태를 더티 설정 됩니다.  
+ Calling `IsFieldDirty` will reset the effects of preceding calls to [SetFieldDirty](#setfielddirty) since the dirty status of the field is re-evaluated. In the `AddNew` case, if the current field value differs from the pseudo null value, the field status is set dirty. In the **Edit** case, if the field value differs from the cached value, then the field status is set dirty.  
   
- `IsFieldDirty`이 통해 구현 [DoFieldExchange](#dofieldexchange)합니다.  
+ `IsFieldDirty` is implemented through [DoFieldExchange](#dofieldexchange).  
   
- 변경 플래그에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 집합의 레코드 선택 방법 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)합니다.  
+ For more information on the dirty flag, see the article [Recordset: How Recordsets Select Records (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
-##  <a name="isfieldnull"></a>CRecordset::IsFieldNull  
- 현재 레코드에 지정된 된 필드에 Null 인 경우 0이 아닌 값을 반환 합니다 (값이 없는).  
+##  <a name="isfieldnull"></a>  CRecordset::IsFieldNull  
+ Returns nonzero if the specified field in the current record is Null (has no value).  
   
 ```  
 BOOL IsFieldNull(void* pv);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 필드 데이터 멤버의 상태를 확인 하려면에 대 한 포인터 또는 **NULL** Null이 있는 필드를 확인 합니다.  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are Null.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 필드 데이터 멤버는 Null;로 플래그가 지정 되어 있으면 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member is flagged as Null; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 지정 된 필드 데이터 멤버는 레코드 집합의 Null로 플래그가 지정 되었는지 여부를 확인 하려면이 함수를 호출 합니다. (데이터베이스 용어에서 Null 의미 "가치가 없습니다" 아니며 동일 **NULL** c + +에서.) 필드 데이터 멤버를 Null로 플래그가 지정 되어 값이 현재 레코드의 열으로 해석 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to determine whether the specified field data member of a recordset has been flagged as Null. (In database terminology, Null means "having no value" and is not the same as **NULL** in C++.) If a field data member is flagged as Null, it is interpreted as a column of the current record for which there is no value.  
   
 > [!NOTE]
->  이 멤버 함수 대량 행 페치를 사용 하는 레코드 집합에 적용 되지 않습니다. 구현한 경우 대량 행 페치를 다음 `IsFieldNull` 은 항상 반환 **FALSE** 실패 한 어설션이 발생 합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  This member function is not applicable on recordsets that are using bulk row fetching. If you have implemented bulk row fetching, then `IsFieldNull` will always return **FALSE** and will result in a failed assertion. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `IsFieldNull`이 통해 구현 [DoFieldExchange](#dofieldexchange)합니다.  
+ `IsFieldNull` is implemented through [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isfieldnullable"></a>CRecordset::IsFieldNullable  
- 현재 레코드에 지정된 된 필드 (예: 값 없음) 하는 Null로 설정할 수 있는 경우 0이 아닌 값을 반환 합니다.  
+##  <a name="isfieldnullable"></a>  CRecordset::IsFieldNullable  
+ Returns nonzero if the specified field in the current record can be set to Null (having no value).  
   
 ```  
 BOOL IsFieldNullable(void* pv);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 필드 데이터 멤버의 상태를 확인 하려면에 대 한 포인터 또는 **NULL** 에 Null 값으로 설정할 수는 경우 필드를 결정 합니다.  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields can be set to a Null value.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수는 지정 된 필드 데이터 멤버 "null"이 허용 되는지 확인 하려면 (설정 될 수 있습니다; Null 값으로 호출 C + + **NULL** Null 이며 데이터베이스 용어에서 의미 같지는 않습니다 "가치가 없음").  
+### <a name="remarks"></a>Remarks  
+ Call this member function to determine whether the specified field data member is "nullable" (can be set to a Null value; C++ **NULL** is not the same as Null, which, in database terminology, means "having no value").  
   
 > [!NOTE]
->  대량 행 페치를 구현한 경우 호출할 수 없습니다 `IsFieldNullable`합니다. 대신, 호출 된 [GetODBCFieldInfo](#getodbcfieldinfo) 멤버 함수를 필드를 Null 값으로 설정할 수 있는지 여부를 결정 합니다. 항상 호출할 수 있는 참고 `GetODBCFieldInfo`대량 행 페치 구현 여부에 관계 없이 합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  If you have implemented bulk row fetching, you cannot call `IsFieldNullable`. Instead, call the [GetODBCFieldInfo](#getodbcfieldinfo) member function to determine whether a field can be set to a Null value. Note that you can always call `GetODBCFieldInfo`, regardless of whether you have implemented bulk row fetching. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Null이 될 수 없는 필드 값이 있어야 합니다. 데이터 원본 추가 또는 업데이트를 거부 하는 이러한 필드를 추가 하거나 레코드를 업데이트할 때 Null로 설정 하려고 하면 및 [업데이트](#update) 예외가 throw 됩니다. 호출 하면 예외가 발생 **업데이트**호출할 때가 아니라, [SetFieldNull](#setfieldnull)합니다.  
+ A field that cannot be Null must have a value. If you attempt to set a such a field to Null when adding or updating a record, the data source rejects the addition or update, and [Update](#update) will throw an exception. The exception occurs when you call **Update**, not when you call [SetFieldNull](#setfieldnull).  
   
- 사용 하 여 **NULL** 함수의 첫 번째 인수는 함수를에 적용 됩니다에 대 한 **outputColumn** 필드 하지 **param** 필드입니다. 예를 들어, 호출  
+ Using **NULL** for the first argument of the function will apply the function only to **outputColumn** fields, not **param** fields. For instance, the call  
   
- [!code-cpp[NVC_MFCDatabase # 26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
   
- 만 설정 됩니다 **outputColumn** 필드를 **NULL**; **param** 필드에 영향을 받지 않습니다.  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
- 작동 하도록 **param** 필드, 개별의 실제 주소를 입력 해야 **param** 와 같은 작업에 대 하 시겠습니까:  
+ To work on **param** fields, you must supply the actual address of the individual **param** you want to work on, such as:  
   
- [!code-cpp[NVC_MFCDatabase # 27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
   
- 즉, 설정할 수 없습니다. 모든 **param** 필드를 **NULL**있습니다, **outputColumn** 필드입니다.  
+ This means you cannot set all **param** fields to **NULL**, as you can with **outputColumn** fields.  
   
- `IsFieldNullable`이 통해 구현 [DoFieldExchange](#dofieldexchange)합니다.  
+ `IsFieldNullable` is implemented through [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isopen"></a>CRecordset::IsOpen  
- 레코드 집합 열기 이미 인지 여부를 확인 합니다.  
+##  <a name="isopen"></a>  CRecordset::IsOpen  
+ Determines if the recordset is already open.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 0이 아닌 경우 recordset 개체 [열려](#open) 또는 [Requery](#requery) 멤버 함수를 이전에 호출 하 고 레코드 집합 닫히지 않은; 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset object's [Open](#open) or [Requery](#requery) member function has previously been called and the recordset has not been closed; otherwise 0.  
   
-##  <a name="m_hstmt"></a>CRecordset::m_hstmt  
- 형식의 ODBC 문 데이터 구조에 대 한 핸들을 포함 **HSTMT**, 레코드와 연결 합니다.  
+##  <a name="m_hstmt"></a>  CRecordset::m_hstmt  
+ Contains a handle to the ODBC statement data structure, of type **HSTMT**, associated with the recordset.  
   
-### <a name="remarks"></a>주의  
- 연결 된 ODBC 데이터 원본에 각 쿼리는 **HSTMT**합니다.  
-  
-> [!CAUTION]
->  사용 하지 마십시오 **m_hstmt** 하기 전에 [열려](#open) 가 호출 되었습니다.  
-  
- 에 액세스할 필요가 없습니다 일반적으로 **HSTMT** 를 직접 SQL 문을 직접 실행을 위해 필요할 수 있습니다. `ExecuteSQL` 클래스의 멤버 함수 `CDatabase` 예제를 사용 하 여 제공 **m_hstmt**합니다.  
-  
-##  <a name="m_nfields"></a>CRecordset::m_nFields  
- 레코드 집합 클래스의 필드 데이터 멤버의 수를 포함합니다. 즉, 데이터 원본에서 레코드 집합에서 선택한 열 번호입니다.  
-  
-### <a name="remarks"></a>주의  
- 레코드 집합 클래스에 대 한 생성자를 초기화 해야 `m_nFields` 는 올바른 수를 사용 합니다. 하지 않은 경우 클래스 마법사 클래스를 선언할 때 레코드 집합을 사용 하는 경우이 초기화를 씁니다. 작성할 수도 있습니다 것 수동으로 합니다.  
-  
- 이 번호를 사용 하 여 필드 데이터 멤버와 데이터 소스에서 현재 레코드의 해당 열 간의 상호 작용을 관리 하는 프레임 워크입니다.  
+### <a name="remarks"></a>Remarks  
+ Each query to an ODBC data source is associated with an **HSTMT**.  
   
 > [!CAUTION]
->  이 숫자에 등록 하는 "출력 열"의 수와 일치 해야 `DoFieldExchange` 또는 `DoBulkFieldExchange` 를 호출한 후 [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) 매개 변수와 함께 **CFieldExchange::outputColumn**합니다.  
+>  Do not use **m_hstmt** before [Open](#open) has been called.  
   
- 동적으로 문서에 설명 된 대로 열을 바인딩할 수 있습니다 "레코드 집합: 동적으로 바인딩 데이터 열입니다." 이렇게 하면 경우의 수를 늘려야 `m_nFields` 의 호출 RFX 또는 대량 RFX 함수의 수를 반영 하도록 프로그램 `DoFieldExchange` 또는 `DoBulkFieldExchange` 동적으로 바인딩된 열에 대 한 멤버 함수입니다.  
+ Normally you do not need to access the **HSTMT** directly, but you might need it for direct execution of SQL statements. The `ExecuteSQL` member function of class `CDatabase` provides an example of using **m_hstmt**.  
   
- 자세한 내용은 문서를 참조 [레코드 집합: 데이터 열 동적 바인딩 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) 및 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+##  <a name="m_nfields"></a>  CRecordset::m_nFields  
+ Contains the number of field data members in the recordset class; that is, the number of columns selected by the recordset from the data source.  
   
-### <a name="example"></a>예제  
- 문서 참조 [레코드 필드 교환: RFX 사용](../../data/odbc/record-field-exchange-using-rfx.md)합니다.  
+### <a name="remarks"></a>Remarks  
+ The constructor for the recordset class must initialize `m_nFields` with the correct number. If you have not implemented bulk row fetching, ClassWizard writes this initialization for you when you use it to declare your recordset class. You can also write it manually.  
   
-##  <a name="m_nparams"></a>CRecordset::m_nParams  
- 레코드 집합 클래스;의 매개 변수 데이터 멤버의 수를 포함합니다. 즉, 매개 변수 수가 레코드 집합의 쿼리와 함께 전달 합니다.  
-  
-### <a name="remarks"></a>설명  
- 레코드 집합 클래스에 매개 변수 데이터 멤버, 경우에 클래스에 대 한 생성자 초기화 해야 `m_nParams` 는 올바른 수를 사용 합니다. 값 `m_nParams` 기본값은 0입니다. 초기화 매개 변수 수를 반영 하기 위해 클래스 생성자에 수동으로 추가 해야 (있음 수동으로 수행 해야 합니다) 매개 변수 데이터 멤버를 추가 하는 경우 (수가 이상이 이어야 '의 자리 표시자 프로그램 **m_strFilter** 또는 `m_strSort` 문자열)입니다.  
-  
- 레코드 집합의 쿼리를 매개 변수화 하는 경우이 값을 사용 하는 프레임 워크입니다.  
+ The framework uses this number to manage interaction between the field data members and the corresponding columns of the current record on the data source.  
   
 > [!CAUTION]
->  이 숫자는 "params"에 등록의 수와 일치 해야 `DoFieldExchange` 또는 `DoBulkFieldExchange` 를 호출한 후 [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) 의 매개 변수 값으로 **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, 또는 **CFieldExchange::inoutParam**합니다.  
+>  This number must correspond to the number of "output columns" registered in `DoFieldExchange` or `DoBulkFieldExchange` after a call to [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) with the parameter **CFieldExchange::outputColumn**.  
   
-### <a name="example"></a>예제  
-  문서를 참조 [레코드 집합: 레코드 집합 (ODBC)를 매개 변수화](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) 및 [레코드 필드 교환: RFX 사용](../../data/odbc/record-field-exchange-using-rfx.md)합니다.  
+ You can bind columns dynamically, as explained in the article "Recordset: Dynamically Binding Data Columns." If you do so, you must increase the count in `m_nFields` to reflect the number of RFX or Bulk RFX function calls in your `DoFieldExchange` or `DoBulkFieldExchange` member function for the dynamically bound columns.  
   
-##  <a name="m_pdatabase"></a>CRecordset::m_pDatabase  
- 에 대 한 포인터는 `CDatabase` 레코드 집합을 데이터 원본에 연결 되어 있는 개체입니다.  
+ For more information, see the articles [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) and [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="remarks"></a>주의  
- 이 변수는 두 가지 방법으로 설정 됩니다. 이미 연결 된 포인터를 전달 일반적으로 `CDatabase` 레코드 집합 개체를 생성할 때 개체입니다. 전달 하는 경우 **NULL** 대신 `CRecordset` 만듭니다는 `CDatabase` 있습니다에 대 한 개체를 연결 합니다. 두 경우 모두 `CRecordset` 포인터를이 변수에 저장 합니다.  
+### <a name="example"></a>Example  
+ See the article [Record Field Exchange: Using RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
- 일반적으로 직접 않아도 됩니다에 저장 된 포인터를 사용 하도록 **m_pDatabase**합니다. 그러나 사용자 고유의 확장을 작성 하는 경우 `CRecordset`, 포인터를 사용 하도록 할 수 있습니다. 예를 들어 할 수 있습니다 포인터 throw 되는 경우 사용자 고유의 `CDBException`s입니다. 동일한를 사용 하 여 작업을 수행 해야 할 경우 할 수 있습니다 또는 `CDatabase` 실행 제한 시간 설정 트랜잭션을 또는 호출 등의 개체는 `ExecuteSQL` 클래스의 멤버 함수 `CDatabase` SQL 문을 직접 실행 하 합니다.  
+##  <a name="m_nparams"></a>  CRecordset::m_nParams  
+ Contains the number of parameter data members in the recordset class; that is, the number of parameters passed with the recordset's query.  
   
-##  <a name="m_strfilter"></a>CRecordset::m_strFilter  
- 레코드 집합 개체를 생성 하지만 호출 하기 전에 해당 **열려** 멤버 함수,이 데이터 멤버를 사용 하 여 저장할는 `CString` SQL 포함 된 **여기서** 절.  
+### <a name="remarks"></a>Remarks  
+ If your recordset class has any parameter data members, the constructor for the class must initialize `m_nParams` with the correct number. The value of `m_nParams` defaults to 0. If you add parameter data members (which you must do manually) you must also manually add an initialization in the class constructor to reflect the number of parameters (which must be at least as large as the number of '' placeholders in your **m_strFilter** or `m_strSort` string).  
   
-### <a name="remarks"></a>설명  
- 레코드 집합이이 문자열을 사용 하 여 제한 (또는 필터링) 중에 선택 된 레코드는 **열려** 또는 **Requery** 호출 합니다. 이 "캘리포니아에 모든 영업" 같은 레코드 하위 집합을 선택 하는 데 유용 ("상태 = CA"). ODBC SQL 구문은 **여기서** 절은  
+ The framework uses this number when it parameterizes the recordset's query.  
+  
+> [!CAUTION]
+>  This number must correspond to the number of "params" registered in `DoFieldExchange` or `DoBulkFieldExchange` after a call to [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) with a parameter value of **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, or **CFieldExchange::inoutParam**.  
+  
+### <a name="example"></a>Example  
+  See the articles [Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) and [Record Field Exchange: Using RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
+  
+##  <a name="m_pdatabase"></a>  CRecordset::m_pDatabase  
+ Contains a pointer to the `CDatabase` object through which the recordset is connected to a data source.  
+  
+### <a name="remarks"></a>Remarks  
+ This variable is set in two ways. Typically, you pass a pointer to an already connected `CDatabase` object when you construct the recordset object. If you pass **NULL** instead, `CRecordset` creates a `CDatabase` object for you and connects it. In either case, `CRecordset` stores the pointer in this variable.  
+  
+ Normally you will not directly need to use the pointer stored in **m_pDatabase**. If you write your own extensions to `CRecordset`, however, you might need to use the pointer. For example, you might need the pointer if you throw your own `CDBException`s. Or you might need it if you need to do something using the same `CDatabase` object, such as running transactions, setting timeouts, or calling the `ExecuteSQL` member function of class `CDatabase` to execute SQL statements directly.  
+  
+##  <a name="m_strfilter"></a>  CRecordset::m_strFilter  
+ After you construct the recordset object, but before you call its **Open** member function, use this data member to store a `CString` containing a SQL **WHERE** clause.  
+  
+### <a name="remarks"></a>Remarks  
+ The recordset uses this string to constrain (or filter) the records it selects during the **Open** or **Requery** call. This is useful for selecting a subset of records, such as "all salespersons based in California" ("state = CA"). The ODBC SQL syntax for a **WHERE** clause is  
   
  `WHERE search-condition`  
   
- 포함 하지 않는 참고는 **여기서** 문자열에는 키워드입니다. 프레임 워크를 제공 합니다.  
+ Note that you do not include the **WHERE** keyword in your string. The framework supplies it.  
   
- 또한 매개 변수화 하는 필터 문자열을 배치 하 여 ' 실행 시간에 자리 표시자, 각 자리 표시자에 대 한 클래스의 매개 변수 데이터 멤버를 선언 하 고에서 레코드 집합에 매개 변수를 전달 합니다. 이렇게 하면 런타임 시 필터를 생성할 수 있습니다. 자세한 내용은 문서 참조 [레코드 집합: 레코드 집합 (ODBC)를 매개 변수화](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)합니다.  
+ You can also parameterize your filter string by placing '' placeholders in it, declaring a parameter data member in your class for each placeholder, and passing parameters to the recordset at run time. This lets you construct the filter at run time. For more information, see the article [Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
- SQL에 대 한 자세한 내용은 **여기서** 절 문서를 참조 하십시오. [SQL](../../data/odbc/sql.md)합니다. 문서를 선택 하 고 레코드를 필터링 하는 방법에 대 한 자세한 내용은 참고 [레코드 집합: 레코드 필터링 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)합니다.  
+ For more information about SQL **WHERE** clauses, see the article [SQL](../../data/odbc/sql.md). For more information about selecting and filtering records, see the article [Recordset: Filtering Records (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDatabase # 30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]  
   
-##  <a name="m_strsort"></a>CRecordset::m_strSort  
- 레코드 집합 개체를 생성 한 후 있지만 호출 하기 전에 해당 **열려** 멤버 함수,이 데이터 멤버를 사용 하 여 저장할는 `CString` SQL 포함 된 **ORDER BY** 절.  
+##  <a name="m_strsort"></a>  CRecordset::m_strSort  
+ After you construct the recordset object, but before you call its **Open** member function, use this data member to store a `CString` containing a SQL **ORDER BY** clause.  
   
-### <a name="remarks"></a>설명  
- 레코드 집합에서이 문자열을 사용 하 여 중 선택 하는 레코드를 정렬 하는 **열려** 또는 **Requery** 호출 합니다. 하나 이상의 열에서 레코드 집합을 정렬 하려면이 기능을 사용할 수 있습니다. ODBC SQL 구문에 대 한 프로그램 **ORDER BY** 절은  
+### <a name="remarks"></a>Remarks  
+ The recordset uses this string to sort the records it selects during the **Open** or **Requery** call. You can use this feature to sort a recordset on one or more columns. The ODBC SQL syntax for an **ORDER BY** clause is  
   
  `ORDER BY sort-specification [, sort-specification]...`  
   
- 여기서는 정렬 지정은 정수 또는 열 이름입니다. 정렬 문자열에 있는 열 목록에 "ASC" 또는 "DESC"를 추가 하 여 오름차순 또는 내림차순 순서 (순서는 기본적으로 오름차순)을 지정할 수도 있습니다. 선택 된 레코드는 첫 번째 열을 나열 하 여 다음의 두 번째 클러스터 및 등 기준 먼저 정렬 됩니다. 예를 들어 성, 이름으로 "Customers" 레코드 집합을 주문할 수 있습니다. 데이터 원본에 표시 하는 열의 수에 따라 달라 집니다. 자세한 내용은 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]를 참조하세요.  
+ where a sort-specification is an integer or a column name. You can also specify ascending or descending order (the order is ascending by default) by appending "ASC" or "DESC" to the column list in the sort string. The selected records are sorted first by the first column listed, then by the second, and so on. For example, you might order a "Customers" recordset by last name, then first name. The number of columns you can list depends on the data source. For more information, see the Windows SDK.  
   
- 포함 하지 않는 참고는 **ORDER BY** 문자열에는 키워드입니다. 프레임 워크를 제공 합니다.  
+ Note that you do not include the **ORDER BY** keyword in your string. The framework supplies it.  
   
- SQL 절에 대 한 자세한 내용은 문서 참조 [SQL](../../data/odbc/sql.md)합니다. 레코드를 정렬 하는 방법에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 정렬 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)합니다.  
+ For more information about SQL clauses, see the article [SQL](../../data/odbc/sql.md). For more information about sorting records, see the article [Recordset: Sorting Records (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDatabase # 31입니다.](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#31](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]  
   
-##  <a name="move"></a>CRecordset::Move  
- 앞으로 또는 뒤로 레코드 집합 내에서 현재 레코드 포인터를 이동합니다.  
+##  <a name="move"></a>  CRecordset::Move  
+ Moves the current record pointer within the recordset, either forward or backward.  
   
 ```  
 virtual void Move(
@@ -1126,203 +1184,203 @@ virtual void Move(
     WORD wFetchType = SQL_FETCH_RELATIVE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nRows`  
- 앞으로 또는 뒤로 이동 하는 행의 수입니다. 양수 값을 레코드 집합의 끝 부분으로 앞으로 이동 합니다. 음수 값 시작 부분을 향해 뒤로 이동합니다.  
+ The number of rows to move forward or backward. Positive values move forward, toward the end of the recordset. Negative values move backward, toward the beginning.  
   
  `wFetchType`  
- 행 집합을 결정 하는 **이동** 를 인출 합니다. 자세한 내용은 설명을 참조하세요.  
+ Determines the rowset that **Move** will fetch. For details, see Remarks.  
   
-### <a name="remarks"></a>설명  
- 0에 대 한 값을 전달 하는 경우 `nRows`, **이동** ; 현재 레코드를 새로 고칩니다. **이동** 현재 끝납니다 `AddNew` 또는 **편집** 모드 하기 전에 현재 레코드의 값을 복원 합니다 `AddNew` 또는 **편집** 호출 되었습니다.  
+### <a name="remarks"></a>Remarks  
+ If you pass a value of 0 for `nRows`, **Move** refreshes the current record; **Move** will end any current `AddNew` or **Edit** mode, and will restore the current record's value before `AddNew` or **Edit** was called.  
   
 > [!NOTE]
->  레코드 집합을 이동할 때 삭제 된 레코드를 건너뛸 수 없습니다. 참조 [CRecordset::IsDeleted](#isdeleted) 자세한 정보에 대 한 합니다. 열 때는 `CRecordset` 와 **skipDeletedRecords** 옵션이 설정, **이동** 하면 어설션는 `nRows` 매개 변수는 0입니다. 이 문제는 삭제 된 행은 동일한 데이터를 사용 하 여 다른 클라이언트 응용 프로그램의 새로 고침을 방지 합니다. 참조는 `dwOption` 매개 변수에서 [열려](#open) 에 대 한 설명은 **skipDeletedRecords**합니다.  
+>  When you move through a recordset, you cannot skip deleted records. See [CRecordset::IsDeleted](#isdeleted) for more information. When you open a `CRecordset` with the **skipDeletedRecords** option set, **Move** asserts if the `nRows` parameter is 0. This behavior prevents the refresh of rows that are deleted by other client applications using the same data. See the `dwOption` parameter in [Open](#open) for a description of **skipDeletedRecords**.  
   
- **이동** 행 집합에서 레코드 집합의 위치를 변경 합니다. 에 대 한 값을 기반으로 `nRows` 및 `wFetchType`, **이동** 적절 한 행 집합을 인출 하 고 다음 해당 행 집합에서 첫 번째 레코드를 현재 레코드 있도록 합니다. 하지 대량 행 페치를 구현한 다음 행 집합 크기는 항상 1입니다. 행 집합을 인출할 때 **이동** 직접 호출는 [CheckRowsetError](#checkrowseterror) 멤버 함수는 인출에서 발생 하는 오류를 처리 합니다.  
+ **Move** repositions the recordset by rowsets. Based on the values for `nRows` and `wFetchType`, **Move** fetches the appropriate rowset and then makes the first record in that rowset the current record. If you have not implemented bulk row fetching, then the rowset size is always 1. When fetching a rowset, **Move** directly calls the [CheckRowsetError](#checkrowseterror) member function to handle any errors resulting from the fetch.  
   
- 사용자가 전달 하는 값에 따라 **이동** 가 다른 같음 `CRecordset` 멤버 함수입니다. 특히, 값 `wFetchType` 보다 직관적으로 파악 하는 멤버 함수 및 현재 레코드를 이동 하는 기본 방법은 종종 나타낼 수 있습니다.  
+ Depending on the values you pass, **Move** is equivalent to other `CRecordset` member functions. In particular, the value of `wFetchType` may indicate a member function that is more intuitive and often the preferred method for moving the current record.  
   
- 다음 표에서 사용할 수 있는 값 `wFetchType`, 행 집합은 **이동** 인출 됩니다에 따라 `wFetchType` 및 `nRows`, 및 모든 해당 멤버 함수에 해당 하 `wFetchType`합니다.  
+ The following table lists the possible values for `wFetchType`, the rowset that **Move** will fetch based on `wFetchType` and `nRows`, and any equivalent member function corresponding to `wFetchType`.  
   
-|wFetchType|인출 된 행 집합|해당 하는 멤버 함수|  
+|wFetchType|Fetched rowset|Equivalent member function|  
 |----------------|--------------------|--------------------------------|  
-|`SQL_FETCH_RELATIVE`(기본값)|행 집합 시작 `nRows` 현재 행 집합에 있는 첫 번째 행의 행입니다.||  
-|`SQL_FETCH_NEXT`|다음 행 집합입니다. `nRows` 는 무시 됩니다.|[MoveNext](#movenext)|  
-|`SQL_FETCH_PRIOR`|이전 행 집합 `nRows` 는 무시 됩니다.|[MovePrev](#moveprev)|  
-|`SQL_FETCH_FIRST`|레코드 집합;에 있는 첫 번째 행 집합 `nRows` 는 무시 됩니다.|[MoveFirst](#movefirst)|  
-|`SQL_FETCH_LAST`|레코드 집합;에 있는 마지막 전체 행 집합 `nRows` 는 무시 됩니다.|[MoveLast](#movelast)|  
-|`SQL_FETCH_ABSOLUTE`|경우 `nRows` > 0, 시작 하는 행 집합 `nRows` 시작 부분에서 레코드 집합의 행입니다. 경우 `nRows` < 0,="" the="" rowset="" starting=""> `nRows` 레코드 집합의 끝 에서부터 행입니다. 경우 `nRows` = 0, 파일 시작 부분 (BOF) 조건 반환 됩니다.|[SetAbsolutePosition](#setabsoluteposition)|  
-|`SQL_FETCH_BOOKMARK`|에 해당 하는 책갈피 값을 갖는 행부터 행 집합 `nRows`합니다.|[SetBookmark](#setbookmark)|  
+|`SQL_FETCH_RELATIVE` (the default value)|The rowset starting `nRows` row(s) from the first row in the current rowset.||  
+|`SQL_FETCH_NEXT`|The next rowset; `nRows` is ignored.|[MoveNext](#movenext)|  
+|`SQL_FETCH_PRIOR`|The previous rowset; `nRows` is ignored.|[MovePrev](#moveprev)|  
+|`SQL_FETCH_FIRST`|The first rowset in the recordset; `nRows` is ignored.|[MoveFirst](#movefirst)|  
+|`SQL_FETCH_LAST`|The last complete rowset in the recordset; `nRows` is ignored.|[MoveLast](#movelast)|  
+|`SQL_FETCH_ABSOLUTE`|If `nRows` > 0, the rowset starting `nRows` row(s) from the beginning of the recordset. If `nRows` < 0, the rowset starting `nRows` row(s) from the end of the recordset. If `nRows` = 0, then a beginning-of-file (BOF) condition is returned.|[SetAbsolutePosition](#setabsoluteposition)|  
+|`SQL_FETCH_BOOKMARK`|The rowset starting at the row whose bookmark value corresponds to `nRows`.|[SetBookmark](#setbookmark)|  
   
 > [!NOTE]
->  앞 으로만 이동 가능한 레코드 집합에 대 한 **이동** 값만 유효 `SQL_FETCH_NEXT` 에 대 한 `wFetchType`합니다.  
+>  For foward-only recordsets, **Move** is only valid with a value of `SQL_FETCH_NEXT` for `wFetchType`.  
   
 > [!CAUTION]
->  호출 **이동** 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 레코드 집합에 레코드가 있는지를 확인 하려면 호출 [IsBOF](#isbof) 및 [IsEOF](#iseof)합니다.  
+>  Calling **Move** throws an exception if the recordset has no records. To determine whether the recordset has any records, call [IsBOF](#isbof) and [IsEOF](#iseof).  
   
 > [!NOTE]
->  시작 또는 레코드 집합의 끝을 지나서 스크롤 하는 경우 ( `IsBOF` 또는 `IsEOF` 0이 아닌 반환), 호출는 **이동** 가능 throw 것으로 함수는 `CDBException`합니다. 예를 들어 경우 `IsEOF` 0이 아닌 값을 반환 하 고 `IsBOF` 다음 하지 않는 `MoveNext` 예외를 throw 합니다 하지만 `MovePrev` 되지 것입니다.  
+>  If you have scrolled past the beginning or end of the recordset ( `IsBOF` or `IsEOF` returns nonzero), calling a **Move** function will possibly throw a `CDBException`. For example, if `IsEOF` returns nonzero and `IsBOF` does not, then `MoveNext` will throw an exception, but `MovePrev` will not.  
   
 > [!NOTE]
->  호출 하는 경우 **이동** 현재 레코드 되는 동안 업데이트 되거나 추가 된 업데이트 경고 없이 손실 됩니다.  
+>  If you call **Move** while the current record is being updated or added, the updates are lost without warning.  
   
- 레코드 집합 탐색에 대 한 자세한 내용은 문서를 참조 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) 및 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다. 관련된 정보에 대 한 ODBC API 함수를 참조 하십시오. **SQLExtendedFetch** 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). For related information, see the ODBC API function **SQLExtendedFetch** in the Windows SDK.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCDatabase # 28](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#28](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]  
   
-##  <a name="movefirst"></a>CRecordset::MoveFirst  
- 현재 레코드를 첫 번째 행 집합의 첫 번째 레코드를 만듭니다.  
+##  <a name="movefirst"></a>  CRecordset::MoveFirst  
+ Makes the first record in the first rowset the current record.  
   
 ```  
 void MoveFirst();
 ```  
   
-### <a name="remarks"></a>주의  
- 여부 대량 행 페치를 구현한에 관계 없이이 항상 첫 번째 레코드 집합의 레코드입니다.  
+### <a name="remarks"></a>Remarks  
+ Regardless of whether bulk row fetching has been implemented, this will always be the first record in the recordset.  
   
- 호출할 필요가 없습니다 **MoveFirst** 레코드 집합을 연 후에 즉시 합니다. 그 당시 (있는 경우) 첫 번째 레코드는 자동으로 현재 레코드.  
-  
-> [!NOTE]
->  이 멤버 함수 앞 으로만 이동 가능한 레코드 집합에 대해 올바르지 않습니다.  
+ You do not have to call **MoveFirst** immediately after you open the recordset. At that time, the first record (if any) is automatically the current record.  
   
 > [!NOTE]
->  레코드 집합을 이동할 때 삭제 된 레코드를 건너뛸 수 없습니다. 참조는 [IsDeleted](#isdeleted) 대 한 자세한 내용은 멤버 함수입니다.  
+>  This member function is not valid for forward-only recordsets.  
+  
+> [!NOTE]
+>  When you move through a recordset, you cannot skip deleted records. See the [IsDeleted](#isdeleted) member function for details.  
   
 > [!CAUTION]
->  중 하나를 호출는 **이동** 함수 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 레코드 집합에 레코드가 있는지를 확인 하려면 호출 `IsBOF` 및 `IsEOF`합니다.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. To determine whether the recordset has any records, call `IsBOF` and `IsEOF`.  
   
 > [!NOTE]
->  중 하나를 호출 하는 경우는 **이동** 함수 중에 현재 레코드는 업데이트 하거나 추가할 업데이트 경고 없이 손실 됩니다.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- 레코드 집합 탐색에 대 한 자세한 내용은 문서를 참조 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) 및 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>예제  
-  예를 참조 [IsBOF](#isbof)합니다.  
+### <a name="example"></a>Example  
+  See the example for [IsBOF](#isbof).  
   
-##  <a name="movelast"></a>CRecordset::MoveLast  
- 현재 레코드로 마지막 전체 행 집합의 첫 번째 레코드를 만듭니다.  
+##  <a name="movelast"></a>  CRecordset::MoveLast  
+ Makes the first record in the last complete rowset the current record.  
   
 ```  
 void MoveLast();
 ```  
   
-### <a name="remarks"></a>설명  
- 레코드 집합의 높으므로 행 집합 크기가 1, 하지 대량 행 페치를 구현한 경우 `MoveLast` 단순히 마지막 레코드로 이동 레코드 집합의 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you have not implemented bulk row fetching, your recordset has a rowset size of 1, so `MoveLast` simply moves to the last record in the recordset.  
   
 > [!NOTE]
->  이 멤버 함수 앞 으로만 이동 가능한 레코드 집합에 대해 올바르지 않습니다.  
+>  This member function is not valid for forward-only recordsets.  
   
 > [!NOTE]
->  레코드 집합을 이동할 때 삭제 된 레코드를 건너뛸 수 없습니다. 참조는 [IsDeleted](#isdeleted) 대 한 자세한 내용은 멤버 함수입니다.  
+>  When you move through a recordset, you cannot skip deleted records. See the [IsDeleted](#isdeleted) member function for details.  
   
 > [!CAUTION]
->  중 하나를 호출는 **이동** 함수 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 레코드 집합에 레코드가 있는지를 확인 하려면 호출 `IsBOF` 및 `IsEOF`합니다.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. To determine whether the recordset has any records, call `IsBOF` and `IsEOF`.  
   
 > [!NOTE]
->  중 하나를 호출 하는 경우는 **이동** 함수 중에 현재 레코드는 업데이트 하거나 추가할 업데이트 경고 없이 손실 됩니다.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- 레코드 집합 탐색에 대 한 자세한 내용은 문서를 참조 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) 및 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>예제  
-  예를 참조 [IsBOF](#isbof)합니다.  
+### <a name="example"></a>Example  
+  See the example for [IsBOF](#isbof).  
   
-##  <a name="movenext"></a>CRecordset::MoveNext  
- 현재 레코드로 다음 행 집합의 첫 번째 레코드를 만듭니다.  
+##  <a name="movenext"></a>  CRecordset::MoveNext  
+ Makes the first record in the next rowset the current record.  
   
 ```  
 void MoveNext();
 ```  
   
-### <a name="remarks"></a>설명  
- 레코드 집합의 높으므로 1, 행 집합 크기가 하지 대량 행 페치를 구현한 경우 `MoveNext` 단순히를 다음 레코드로 이동 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you have not implemented bulk row fetching, your recordset has a rowset size of 1, so `MoveNext` simply moves to the next record.  
   
 > [!NOTE]
->  레코드 집합을 이동할 때 삭제 된 레코드를 건너뛸 수 없습니다. 참조는 [IsDeleted](#isdeleted) 대 한 자세한 내용은 멤버 함수입니다.  
+>  When you move through a recordset, you cannot skip deleted records. See the [IsDeleted](#isdeleted) member function for details.  
   
 > [!CAUTION]
->  중 하나를 호출는 **이동** 함수 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 레코드 집합에 레코드가 있는지를 확인 하려면 호출 `IsBOF` 및 `IsEOF`합니다.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. To determine whether the recordset has any records, call `IsBOF` and `IsEOF`.  
   
 > [!NOTE]
->  호출 하는 것이 좋습니다 `IsEOF` 호출 하기 전에 `MoveNext`합니다. 예를 들어, 다음 레코드 집합의 끝을 지난 스크롤 `IsEOF` 는 0이 아닌; 반환 한 후속 호출에 `MoveNext` 예외를 throw 합니다.  
+>  It is also recommended that you call `IsEOF` before calling `MoveNext`. For example, if you have scrolled past the end of the recordset, `IsEOF` will return nonzero; a subsequent call to `MoveNext` would throw an exception.  
   
 > [!NOTE]
->  중 하나를 호출 하는 경우는 **이동** 함수 중에 현재 레코드는 업데이트 하거나 추가할 업데이트 경고 없이 손실 됩니다.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- 레코드 집합 탐색에 대 한 자세한 내용은 문서를 참조 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) 및 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>예제  
-  예를 참조 [IsBOF](#isbof)합니다.  
+### <a name="example"></a>Example  
+  See the example for [IsBOF](#isbof).  
   
-##  <a name="moveprev"></a>CRecordset::MovePrev  
- 현재 레코드로 이전 행 집합의 첫 번째 레코드를 만듭니다.  
+##  <a name="moveprev"></a>  CRecordset::MovePrev  
+ Makes the first record in the previous rowset the current record.  
   
 ```  
 void MovePrev();
 ```  
   
-### <a name="remarks"></a>설명  
- 레코드 집합의 높으므로 행 집합 크기가 1, 하지 대량 행 페치를 구현한 경우 `MovePrev` 단순히 이전 레코드로 이동 합니다.  
+### <a name="remarks"></a>Remarks  
+ If you have not implemented bulk row fetching, your recordset has a rowset size of 1, so `MovePrev` simply moves to the previous record.  
   
 > [!NOTE]
->  이 멤버 함수 앞 으로만 이동 가능한 레코드 집합에 대해 올바르지 않습니다.  
+>  This member function is not valid for forward-only recordsets.  
   
 > [!NOTE]
->  레코드 집합을 이동할 때 삭제 된 레코드를 건너뛸 수 없습니다. 참조는 [IsDeleted](#isdeleted) 대 한 자세한 내용은 멤버 함수입니다.  
+>  When you move through a recordset, you cannot skip deleted records. See the [IsDeleted](#isdeleted) member function for details.  
   
 > [!CAUTION]
->  중 하나를 호출는 **이동** 함수 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 레코드 집합에 레코드가 있는지를 확인 하려면 호출 `IsBOF` 및 `IsEOF`합니다.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. To determine whether the recordset has any records, call `IsBOF` and `IsEOF`.  
   
 > [!NOTE]
->  호출 하는 것이 좋습니다 `IsBOF` 호출 하기 전에 `MovePrev`합니다. 예를 들어, 다음 레코드 집합의 시작 부분 앞 스크롤 `IsBOF` 는 0이 아닌; 반환 한 후속 호출에 `MovePrev` 예외를 throw 합니다.  
+>  It is also recommended that you call `IsBOF` before calling `MovePrev`. For example, if you have scrolled ahead of the beginning of the recordset, `IsBOF` will return nonzero; a subsequent call to `MovePrev` would throw an exception.  
   
 > [!NOTE]
->  중 하나를 호출 하는 경우는 **이동** 함수 중에 현재 레코드는 업데이트 하거나 추가할 업데이트 경고 없이 손실 됩니다.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- 레코드 집합 탐색에 대 한 자세한 내용은 문서를 참조 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) 및 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about recordset navigation, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-### <a name="example"></a>예제  
-  예를 참조 [IsBOF](#isbof)합니다.  
+### <a name="example"></a>Example  
+  See the example for [IsBOF](#isbof).  
   
-##  <a name="onsetoptions"></a>CRecordset::OnSetOptions  
- (선택에 사용 됨) 하는 옵션을 설정 하려면 지정한 ODBC 문에 대 한 호출 됩니다.  
+##  <a name="onsetoptions"></a>  CRecordset::OnSetOptions  
+ Called to set options (used on selection) for the specified ODBC statement.  
   
 ```  
 virtual void OnSetOptions(HSTMT hstmt);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hstmt`  
- **HSTMT** ODBC 문의 해당 옵션을 설정 해야 합니다.  
+ The **HSTMT** of the ODBC statement whose options are to be set.  
   
-### <a name="remarks"></a>주의  
- 호출 `OnSetOptions` 지정된 ODBC 문에 대 한 (선택에 사용 됨) 하는 옵션을 설정할 수 있습니다. 프레임 워크는 레코드 집합에 대 한 초기 옵션을 설정 하려면이 멤버 함수를 호출 합니다. `OnSetOptions`커서 동시성 및 스크롤 가능 커서에 대 한 데이터 원본 지원 하 고 그에 따라 레코드 집합의 옵션을 설정 합니다. (하지만 `OnSetOptions` 선택 작업에 사용 되 `OnSetUpdateOptions` 업데이트 작업에 사용 됩니다.)  
+### <a name="remarks"></a>Remarks  
+ Call `OnSetOptions` to set options (used on selection) for the specified ODBC statement. The framework calls this member function to set initial options for the recordset. `OnSetOptions` determines the data source's support for scrollable cursors and for cursor concurrency and sets the recordset's options accordingly. (Whereas `OnSetOptions` is used for selection operations, `OnSetUpdateOptions` is used for update operations.)  
   
- 재정의 `OnSetOptions` 드라이버 또는 데이터 소스 특정 옵션을 설정할 수 있습니다. 예를 들어 데이터 원본 단독 액세스를 위해 열기를 지원, 재정의 하 `OnSetOptions` 해당 기능을 활용할 수 있습니다.  
+ Override `OnSetOptions` to set options specific to the driver or the data source. For example, if your data source supports opening for exclusive access, you might override `OnSetOptions` to take advantage of that ability.  
   
- 커서에 대 한 자세한 내용은 문서 참조 [ODBC](../../data/odbc/odbc-basics.md)합니다.  
+ For more information about cursors, see the article [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions  
- 지정 된 ODBC 문에 대 한 옵션 (업데이트에 사용 됨)를 설정 하기 위해 호출 합니다.  
+##  <a name="onsetupdateoptions"></a>  CRecordset::OnSetUpdateOptions  
+ Called to set options (used on update) for the specified ODBC statement.  
   
 ```  
 virtual void OnSetUpdateOptions(HSTMT hstmt);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `hstmt`  
- **HSTMT** ODBC 문의 해당 옵션을 설정 해야 합니다.  
+ The **HSTMT** of the ODBC statement whose options are to be set.  
   
-### <a name="remarks"></a>설명  
- 호출 `OnSetUpdateOptions` 지정된 ODBC 문에 대 한 (업데이트에 사용 됨) 하는 옵션을 설정할 수 있습니다. 레코드 집합에서 레코드를 업데이트 HSTMT를 만든 후 프레임 워크에서이 멤버 함수를 호출 합니다. (하지만 `OnSetOptions` 선택 작업에 사용 되 `OnSetUpdateOptions` 업데이트 작업에 사용 됩니다.) `OnSetUpdateOptions` 커서 동시성 및 스크롤 가능 커서에 대 한 데이터 원본 지원 하 고 그에 따라 레코드 집합의 옵션을 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call `OnSetUpdateOptions` to set options (used on update) for the specified ODBC statement. The framework calls this member function after it creates an HSTMT to update records in a recordset. (Whereas `OnSetOptions` is used for selection operations, `OnSetUpdateOptions` is used for update operations.) `OnSetUpdateOptions` determines the data source's support for scrollable cursors and for cursor concurrency and sets the recordset's options accordingly.  
   
- 재정의 `OnSetUpdateOptions` 해당 문을 사용 하는 데이터베이스에 액세스할 수 전에 ODBC 문의 옵션 설정입니다.  
+ Override `OnSetUpdateOptions` to set options of an ODBC statement before that statement is used to access a database.  
   
- 커서에 대 한 자세한 내용은 문서 참조 [ODBC](../../data/odbc/odbc-basics.md)합니다.  
+ For more information about cursors, see the article [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="open"></a>Crecordset:: Open  
- 테이블을 검색 하거나 레코드 집합을 나타내는 쿼리를 수행 하 여 레코드 집합을 엽니다.  
+##  <a name="open"></a>  CRecordset::Open  
+ Opens the recordset by retrieving the table or performing the query that the recordset represents.  
   
 ```  
 virtual BOOL Open(
@@ -1331,106 +1389,106 @@ virtual BOOL Open(
     DWORD dwOptions = none);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nOpenType`  
- 기본 값 **AFX_DB_USE_DEFAULT_TYPE**, 또는 다음 값 중 하나에서 사용 된 **enum OpenType**:  
+ Accept the default value, **AFX_DB_USE_DEFAULT_TYPE**, or use one of the following values from the **enum OpenType**:  
   
-- **CRecordset::dynaset** 양방향 스크롤이 레코드 집합입니다. 멤버 자격 및 레코드의 순서는 레코드 집합 열이 있지만 데이터 값을 다른 사용자가 변경한 다음 인출 작업이 표시 됩니다 때 결정 됩니다. 다이너셋의 키 집합 기반 레코드 집합 라고도 합니다.  
+- **CRecordset::dynaset** A recordset with bi-directional scrolling. The membership and ordering of the records are determined when the recordset is opened, but changes made by other users to the data values are visible following a fetch operation. Dynasets are also known as keyset-driven recordsets.  
   
-- **CRecordset::snapshot** 양방향 스크롤이 정적 레코드 집합입니다. 레코드 집합을 열면; 멤버 자격 및 레코드의 순서가 결정 됩니다. 데이터 값이 레코드는 인출 될 때 결정 됩니다. 레코드 집합을 닫고 다시 다음 될 때까지 다른 사용자가 변경한 내용이 표시 되지 않습니다.  
+- **CRecordset::snapshot** A static recordset with bi-directional scrolling. The membership and ordering of the records are determined when the recordset is opened; the data values are determined when the records are fetched. Changes made by other users are not visible until the recordset is closed and then reopened.  
   
-- **CRecordset::dynamic** 양방향 스크롤이 레코드 집합입니다. 멤버 자격, 정렬 및 데이터 값을 다른 사용자가 변경한 패치 동작이 표시 됩니다. 참고가 대부분의 ODBC 드라이버 이러한 형식의 레코드 집합을 지원 하지 않습니다.  
+- **CRecordset::dynamic** A recordset with bi-directional scrolling. Changes made by other users to the membership, ordering, and data values are visible following a fetch operation. Note that many ODBC drivers do not support this type of recordset.  
   
-- **CRecordset::forwardOnly** 앞 으로만 스크롤이 읽기 전용 레코드 집합입니다.  
+- **CRecordset::forwardOnly** A read-only recordset with only forward scrolling.  
   
-     에 대 한 `CRecordset`, 기본값은 **CRecordset::snapshot**합니다. 기본 값 메커니즘은 모두 ODBC와 상호 작용 하는 Visual c + + 마법사 수 있도록 `CRecordset` 및 DAO `CDaoRecordset`, 기본값이 다른 합니다.  
+     For `CRecordset`, the default value is **CRecordset::snapshot**. The default-value mechanism allows the Visual C++ wizards to interact with both ODBC `CRecordset` and DAO `CDaoRecordset`, which have different defaults.  
   
- 이러한 레코드 집합 유형에 대 한 자세한 내용은 문서 참조 [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md)합니다. 관련된 정보에 대 한 문서를 "를 사용 하 여 블록 및 스크롤 가능 커서"의 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ For more information about these recordset types, see the article [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). For related information, see the article "Using Block and Scrollable Cursors" in the Windows SDK.  
   
 > [!CAUTION]
->  요청 된 형식이 지원 되지 않는 경우 프레임 워크는 예외가 throw 됩니다.  
+>  If the requested type is not supported, the framework throws an exception.  
   
  `lpszSQL`  
- 다음 중 하나를 포함 하는 문자열 포인터.  
+ A string pointer containing one of the following:  
   
--   A **NULL** 포인터입니다.  
+-   A **NULL** pointer.  
   
--   테이블의 이름입니다.  
+-   The name of a table.  
   
--   SQL **선택** 문 (선택적으로는 SQL **여기서** 또는 **ORDER BY** 절).  
+-   A SQL **SELECT** statement (optionally with a SQL **WHERE** or **ORDER BY** clause).  
   
--   A **호출** 미리 정의 된 쿼리 (저장된 프로시저)의 이름을 지정 하는 문이 있습니다. 중괄호 사이 공백을 넣지 마십시오 주의 해야 하며 **호출** 키워드입니다.  
+-   A **CALL** statement specifying the name of a predefined query (stored procedure). Be careful that you do not insert whitespace between the curly brace and the **CALL** keyword.  
   
- 이 문자열에 대 한 자세한 내용은 테이블과 주의 아래의 클래스 마법사의 역할에 대해 토론을 참조 하십시오.  
+ For more information about this string, see the table and the discussion of ClassWizard's role under Remarks.  
   
 > [!NOTE]
->  결과 집합의 열 순서는 RFX 순서와 일치 해야 하거나 대량 RFX 함수 호출 프로그램 [DoFieldExchange](#dofieldexchange) 또는 [DoBulkFieldExchange](#dobulkfieldexchange) 재정의 작동 합니다.  
+>  The order of the columns in your result set must match the order of the RFX or Bulk RFX function calls in your [DoFieldExchange](#dofieldexchange) or [DoBulkFieldExchange](#dobulkfieldexchange) function override.  
   
  `dwOptions`  
- 아래 나열 된 값의 조합을 지정할 수 있는 비트 마스크입니다. 이 중 일부는 함께 사용할 수 없습니다. 기본값은 **none**합니다.  
+ A bitmask which can specify a combination of the values listed below. Some of these are mutually exclusive. The default value is **none**.  
   
-- **CRecordset::none** 아무 옵션도 설정 합니다. 이 매개 변수 값은 다른 모든 값을 함께 사용할 수 없습니다. 기본적으로 레코드 집합으로 업데이트할 수 있습니다 [편집](#edit) 또는 [삭제](#delete) 와 새 레코드를 추가할 수 있습니다. [AddNew](#addnew)합니다. 업데이트 허용 여부 뿐만 데이터 소스에 따라 다릅니다는 `nOpenType` 지정한 옵션. 대량 추가 대 한 최적화를 사용할 수 없는 경우 대량 행 페치 구현 되지 않습니다. 레코드 집합 탐색 하는 동안 삭제 된 레코드를 건너뛸 수 됩니다. 책갈피는 사용할 수 없습니다. 자동 더티 필드 검사 구현 됩니다.  
+- **CRecordset::none** No options set. This parameter value is mutually exclusive with all other values. By default, the recordset can be updated with [Edit](#edit) or [Delete](#delete) and allows appending new records with [AddNew](#addnew). Updatability depends on the data source as well as on the `nOpenType` option you specify. Optimization for bulk additions is not available. Bulk row fetching will not be implemented. Deleted records will not be skipped during recordset navigation. Bookmarks are not available. Automatic dirty field checking is implemented.  
   
-- **CRecordset::appendOnly** 하지 못하게 **편집** 또는 **삭제** 레코드 집합에 있습니다. 허용 `AddNew` 만 합니다. 이 옵션은 함께 사용할 수 없습니다 **CRecordset::readOnly**합니다.  
+- **CRecordset::appendOnly** Do not allow **Edit** or **Delete** on the recordset. Allow `AddNew` only. This option is mutually exclusive with **CRecordset::readOnly**.  
   
-- **CRecordset::readOnly** 읽기 전용으로 레코드 집합을 엽니다. 이 옵션은 함께 사용할 수 없습니다 **CRecordset::appendOnly**합니다.  
+- **CRecordset::readOnly** Open the recordset as read-only. This option is mutually exclusive with **CRecordset::appendOnly**.  
   
-- **CRecordset::optimizeBulkAdd** 레코드 수를 한 번에 추가 최적화 하기 위해 준비 된 SQL 문을 사용 합니다. ODBC API 함수를 사용 하지 않는 경우에 적용 **SQLSetPos** 를 레코드 집합을 업데이트 합니다. 첫 번째 업데이트 필드 커밋된 표시 되어 결정 합니다. 이 옵션은 함께 사용할 수 없습니다 `CRecordset::useMultiRowFetch`합니다.  
+- **CRecordset::optimizeBulkAdd** Use a prepared SQL statement to optimize adding many records at one time. Applies only if you are not using the ODBC API function **SQLSetPos** to update the recordset. The first update determines which fields are marked dirty. This option is mutually exclusive with `CRecordset::useMultiRowFetch`.  
   
-- `CRecordset::useMultiRowFetch`여러 행을 단일 인출 작업에서 검색할 수 있도록 대량 행 페치를 구현 합니다. 이 고급 기능으로 성능이 향상을 위해 디자인 그러나 대량 레코드 필드 교환 classwizard 함께 사용 하 여 지원 되지 않습니다. 이 옵션은 함께 사용할 수 없습니다 **CRecordset::optimizeBulkAdd**합니다. 지정 하는 경우 유의 `CRecordset::useMultiRowFetch`, 다음 옵션 **CRecordset::noDirtyFieldCheck** 자동으로 켜 집니다 (이중 버퍼링은 사용할 수 없음); 앞 으로만 이동 가능한 레코드 집합, 옵션에 **CRecordset::useExtendedFetch** 자동으로 켜 집니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+- `CRecordset::useMultiRowFetch` Implement bulk row fetching to allow multiple rows to be retrieved in a single fetch operation. This is an advanced feature designed to improve performance; however, bulk record field exchange is not supported by ClassWizard. This option is mutually exclusive with **CRecordset::optimizeBulkAdd**. Note that if you specify `CRecordset::useMultiRowFetch`, then the option **CRecordset::noDirtyFieldCheck** will be turned on automatically (double buffering will not be available); on forward-only recordsets, the option **CRecordset::useExtendedFetch** will be turned on automatically. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-- **CRecordset::skipDeletedRecords** 레코드 집합을 탐색할 경우 모든 삭제 된 레코드를 건너뜁니다. 특정 상대 인출에 있는 성능 속도가 느려집니다. 이 옵션은 앞 으로만 이동 가능한 레코드 집합에 유효 하지 않습니다. 호출 하는 경우 [이동](#move) 와 `nRows` 0으로 설정 하는 매개 변수 및 **CRecordset::skipDeletedRecords** 옵션이 설정, **이동** 어설션 됩니다. **CRecordset::skipDeletedRecords** 비슷합니다 *드라이버 압축*, 삭제 된 행을 의미 하는 레코드 집합에서 제거 됩니다. 그러나 경우 드라이버 팩 레코드, 다음 그 건너뜁니다 삭제; 레코드로 레코드 집합에 열려 있는 동안 다른 사용자가 삭제 된 레코드 건너뛰지 않습니다. **CRecordset::skipDeletedRecords** 다른 사용자가 삭제 된 행을 건너뜁니다.  
+- **CRecordset::skipDeletedRecords** Skip all deleted records when navigating through the recordset. This will slow performance in certain relative fetches. This option is not valid on forward-only recordsets. If you call [Move](#move) with the `nRows` parameter set to 0, and the **CRecordset::skipDeletedRecords** option set, **Move** will assert. Note that **CRecordset::skipDeletedRecords** is similar to *driver packing*, which means that deleted rows are removed from the recordset. However, if your driver packs records, then it will skip only those records that you delete; it will not skip records deleted by other users while the recordset is open. **CRecordset::skipDeletedRecords** will skip rows deleted by other users.  
   
-- **CRecordset::useBookmarks** 지원 되는 경우는 레코드 집합에서는 책갈피를 사용할 수 있습니다. 책갈피는 데이터 검색 속도가 느린 하지만 데이터 탐색에 대 한 성능 향상. 앞 으로만 이동 가능한 레코드 집합에는 유효 하지 않습니다. 자세한 내용은 문서 참조 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)합니다.  
+- **CRecordset::useBookmarks** May use bookmarks on the recordset, if supported. Bookmarks slow data retrieval but improve performance for data navigation. Not valid on forward-only recordsets. For more information, see the article [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-- **CRecordset::noDirtyFieldCheck** 더티 필드 자동 확인 (이중 버퍼링)를 해제 합니다. 이렇게 하면 성능이 향상 됩니다. 그러나 수동으로 표시 해야 필드 더티 같이 호출 하 여는 `SetFieldDirty` 및 `SetFieldNull` 멤버 함수입니다. 클래스에서 해당 이중 버퍼링 참고 `CRecordset` 이중 버퍼링 클래스에서 유사한 `CDaoRecordset`합니다. 그러나 `CRecordset`, 개별 필드에 이중 버퍼링을 사용할 수 없습니다; 모든 필드에 대해 사용 하도록 설정 하거나 모든 필드에 대해 사용 하지 않도록 설정 합니다. 옵션을 지정 하는 경우 `CRecordset::useMultiRowFetch`, 다음 **CRecordset::noDirtyFieldCheck** 켜 집니다 자동으로 소비량이 적어지지만 `SetFieldDirty` 및 `SetFieldNull` 대량 행 페치를 구현 하는 레코드 집합에서 사용할 수 없습니다.  
+- **CRecordset::noDirtyFieldCheck** Turn off automatic dirty field checking (double buffering). This will improve performance; however, you must manually mark fields as dirty by calling the `SetFieldDirty` and `SetFieldNull` member functions.Note that double buffering in class `CRecordset` is similar to double buffering in class `CDaoRecordset`. However, in `CRecordset`, you cannot enable double buffering on individual fields; you either enable it for all fields or disable it for all fields. Note that if you specify the option `CRecordset::useMultiRowFetch`, then **CRecordset::noDirtyFieldCheck** will be turned on automatically; however, `SetFieldDirty` and `SetFieldNull` cannot be used on recordsets that implement bulk row fetching.  
   
-- **CRecordset::executeDirect** 준비 된 SQL 문을 사용 하지 마십시오. 경우 성능 향상된을 위해이 옵션을 지정 된 **Requery** 멤버 함수가 호출 되지 것입니다.  
+- **CRecordset::executeDirect** Do not use a prepared SQL statement. For improved performance, specify this option if the **Requery** member function will never be called.  
   
-- **CRecordset::useExtendedFetch** 구현 **SQLExtendedFetch** 대신 **SQLFetch**합니다. 이 앞 으로만 이동 가능한 레코드 집합에 대량 행 페치를 구현 하기 위한 설계 되었습니다. 옵션을 지정 하는 경우 `CRecordset::useMultiRowFetch` 앞 으로만 이동 가능한 레코드 집합에, 다음 **CRecordset::useExtendedFetch** 자동으로 켜 집니다.  
+- **CRecordset::useExtendedFetch** Implement **SQLExtendedFetch** instead of **SQLFetch**. This is designed for implementing bulk row fetching on forward-only recordsets. If you specify the option `CRecordset::useMultiRowFetch` on a forward-only recordset, then **CRecordset::useExtendedFetch** will be turned on automatically.  
   
-- **CRecordset::userAllocMultiRowBuffers** 사용자 데이터에 대 한 저장소 버퍼를 할당 합니다. 와 함께에서이 옵션을 사용 하 여 `CRecordset::useMultiRowFetch` ; 사용자 고유의 저장소를 할당 하려면 그렇지 않은 경우 프레임 워크는 자동으로 할당 필요한 저장소입니다. 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다. 지정 **CRecordset::userAllocMultiRowBuffers** 지정 하지 않고 `CRecordset::useMultiRowFetch` 실패 한 어설션이 발생 합니다.  
+- **CRecordset::userAllocMultiRowBuffers** The user will allocate storage buffers for the data. Use this option in conjunction with `CRecordset::useMultiRowFetch` if you want to allocate your own storage; otherwise, the framework will automatically allocate the necessary storage. For more information, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Note that specifying **CRecordset::userAllocMultiRowBuffers** without specifying `CRecordset::useMultiRowFetch` will result in a failed assertion.  
   
-### <a name="return-value"></a>반환 값  
- 0이 아닌 경우에는 `CRecordset` 개체 했으면 성공적으로 열린 경우 0 [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) (호출) 하는 경우 0을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CRecordset` object was successfully opened; otherwise 0 if [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) (if called) returns 0.  
   
-### <a name="remarks"></a>주의  
- 레코드 집합에 정의 된 쿼리를 실행 하려면이 멤버 함수를 호출 해야 합니다. 호출 하기 전에 **열려**, 레코드 집합 개체를 생성 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ You must call this member function to run the query defined by the recordset. Before calling **Open**, you must construct the recordset object.  
   
- 이 레코드 집합의 데이터 원본이 연결을 호출 하기 전에 레코드 집합을 생성 하는 방법에 따라 달라 집니다 **열려**합니다. 전달 하는 경우는 [CDatabase](../../mfc/reference/cdatabase-class.md) 개체 데이터 소스에 연결 되지 않은 레코드 집합 생성자를 사용 하 여이 멤버 함수 [GetDefaultConnect](#getdefaultconnect) 데이터베이스 개체를 엽니다. 전달 하는 경우 **NULL** recordset 생성자에는 생성자를 생성 한 `CDatabase` , 개체 및 **열려** 데이터베이스 개체를 연결 하려고 합니다. 레코드 집합 및 이러한 다양 한 상황에서 연결을 닫지 대 한 세부 정보를 참조 하십시오. [닫기](#close)합니다.  
+ This recordset's connection to the data source depends on how you construct the recordset before calling **Open**. If you pass a [CDatabase](../../mfc/reference/cdatabase-class.md) object to the recordset constructor that has not been connected to the data source, this member function uses [GetDefaultConnect](#getdefaultconnect) to attempt to open the database object. If you pass **NULL** to the recordset constructor, the constructor constructs a `CDatabase` object for you, and **Open** attempts to connect the database object. For details on closing the recordset and the connection under these varying circumstances, see [Close](#close).  
   
 > [!NOTE]
->  통해 데이터 원본에 대 한 액세스는 `CRecordset` 항상 개체를 공유 합니다. 와 달리는 `CDaoRecordset` 사용할 수 없는 클래스는 `CRecordset` 개체를 단독으로 데이터 소스를 엽니다.  
+>  Access to a data source through a `CRecordset` object is always shared. Unlike the `CDaoRecordset` class, you cannot use a `CRecordset` object to open a data source with exclusive access.  
   
- 호출 하는 경우 **열려**, 일반적으로 SQL 쿼리를 **선택** 문은, 다음 표에 표시 된 조건에 따라 레코드를 선택 합니다.  
+ When you call **Open**, a query, usually a SQL **SELECT** statement, selects records based on criteria shown in the following table.  
   
-|LpszSQL 매개 변수 값|선택한 레코드에 따라 다릅니다.|예제|  
+|Value of the lpszSQL parameter|Records selected are determined by|Example|  
 |------------------------------------|----------------------------------------|-------------|  
-|**NULL**|반환한 문자열 `GetDefaultSQL`합니다.||  
-|SQL 테이블 이름|테이블 목록의 모든 열 `DoFieldExchange` 또는 `DoBulkFieldExchange`합니다.|`"Customer"`|  
-|미리 정의 된 쿼리 (저장된 프로시저) 이름|쿼리가 반환할 정의 된 열입니다.|`"{call OverDueAccts}"`|  
-|**선택** 열 목록 **FROM** 테이블 목록|지정 된 테이블의 지정 된 열입니다.|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|  
+|**NULL**|The string returned by `GetDefaultSQL`.||  
+|SQL table name|All columns of the table-list in `DoFieldExchange` or `DoBulkFieldExchange`.|`"Customer"`|  
+|Predefined query (stored procedure) name|The columns the query is defined to return.|`"{call OverDueAccts}"`|  
+|**SELECT** column-list **FROM** table-list|The specified columns from the specified table(s).|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|  
   
 > [!CAUTION]
->  SQL 문자열의 추가 공백을 넣지 마십시오 주의 해야 합니다. 예를 들어, 중괄호 사이 공백을 삽입 하는 경우 및 **호출** 키워드, MFC는 테이블 이름으로 SQL 문자열을 잘못 해석할에 통합 하는 **선택** 문에 있는 예외가 throw 됩니다. 마찬가지로, 출력 매개 변수를 사용 하는 미리 정의 된 쿼리 넣지 마십시오 중괄호 사이 공백이 및 ' 기호입니다. 마지막으로, 앞에 중괄호가 공백 하지 삽입 해야는 **호출** 문 또는 그 전에 **선택** 키워드는 **선택** 문.  
+>  Be careful that you do not insert extra whitespace in your SQL string. For example, if you insert whitespace between the curly brace and the **CALL** keyword, MFC will misinterpret the SQL string as a table name and incorporate it into a **SELECT** statement, which will result in an exception being thrown. Similarly, if your predefined query uses an output parameter, do not insert whitespace between the curly brace and the '' symbol. Finally, you must not insert whitespace before the curly brace in a **CALL** statement or before the **SELECT** keyword in a **SELECT** statment.  
   
- 전달 하는 일반적인 절차는 **NULL** 를 **열려**;이 경우 **열려** 호출 [GetDefaultSQL](#getdefaultsql)합니다. 파생 된 사용 중인 경우 `CRecordset` 클래스 **GetDefaultSQL** 클래스 마법사에서 지정한 테이블 이름을 제공 합니다. 대신의 기타 정보를 지정할 수 있습니다는 `lpszSQL` 매개 변수입니다.  
+ The usual procedure is to pass **NULL** to **Open**; in this case, **Open** calls [GetDefaultSQL](#getdefaultsql). If you are using a derived `CRecordset` class, **GetDefaultSQL** gives the table name(s) you specified in ClassWizard. You can instead specify other information in the `lpszSQL` parameter.  
   
- 전달 무엇이 든 **열려** 쿼리에 대 한 최종 SQL 문자열을 만듭니다 (문자열 SQL 있을 수 있습니다 **여기서** 및 **ORDER BY** 절에 추가 `lpszSQL` 전달 된 문자열) 다음 쿼리를 실행 하 고 있습니다. 호출 하 여 생성 된 문자열을 검사할 수 [GetSQL](#getsql) 호출한 후 **열려**합니다. 문서를 참조 하는 레코드 SQL 문을 생성 하 고 레코드를 선택 하는 방법에 대 한 추가 세부 정보에 대 한 [레코드 집합: 레코드 집합의 레코드 선택 방법 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)합니다.  
+ Whatever you pass, **Open** constructs a final SQL string for the query (the string may have SQL **WHERE** and **ORDER BY** clauses appended to the `lpszSQL` string you passed) and then executes the query. You can examine the constructed string by calling [GetSQL](#getsql) after calling **Open**. For additional details about how the recordset constructs a SQL statement and selects records, see the article [Recordset: How Recordsets Select Records (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
- 레코드 집합 클래스의 필드 데이터 멤버는 선택한 데이터의 열에 바인딩됩니다. 레코드가 반환 되는 경우 첫 번째 레코드는 현재 레코드가 됩니다.  
+ The field data members of your recordset class are bound to the columns of the data selected. If any records are returned, the first record becomes the current record.  
   
- 필터 또는 정렬 같은 레코드 집합에 대 한 옵션을 설정 하려는 경우는 레코드 집합 개체를 생성 한 후 있지만 호출 하기 전에 이러한 하 게 지정 **열려**합니다. 레코드 집합이 이미 열린 후 레코드 집합의 레코드를 새로 고칠 하려는 경우, 호출 [Requery](#requery)합니다.  
+ If you want to set options for the recordset, such as a filter or sort, specify these after you construct the recordset object but before you call **Open**. If you want to refresh the records in the recordset after the recordset is already open, call [Requery](#requery).  
   
- 추가 예제를 비롯 한 자세한 내용은 문서를 참조 [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md), [레코드 집합: 레코드 집합의 레코드 선택 방법 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md), 및 [레코드 집합: 집합 만들기 및 닫기 (ODBC) 레코드 집합](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)합니다.  
+ For more information, including additional examples, see the articles [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [Recordset: How Recordsets Select Records (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md), and [Recordset: Creating and Closing Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-### <a name="example"></a>예제  
- 다음 코드 예제는 여러 가지 형태의 표시는 **열려** 호출 합니다.  
+### <a name="example"></a>Example  
+ The following code examples show different forms of the **Open** call.  
   
- [!code-cpp[NVC_MFCDatabase # 16](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#16](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]  
   
-##  <a name="refreshrowset"></a>CRecordset::RefreshRowset  
- 데이터 및 현재 행 집합의 행에 대 한 상태를 업데이트합니다.  
+##  <a name="refreshrowset"></a>  CRecordset::RefreshRowset  
+ Updates the data and the status for a row in the current rowset.  
   
 ```  
 void RefreshRowset(
@@ -1438,204 +1496,204 @@ void RefreshRowset(
     WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `wRow`  
- 1부터 행의 위치는 현재 행 집합의 합니다. 이 값은 행 집합의 크기는 0부터 범위 수 있습니다.  
+ The one-based position of a row in the current rowset. This value can range from zero to the size of the rowset.  
   
  `wLockType`  
- 새로 고쳐 후 행을 잠그는 방법을 나타내는 값입니다. 자세한 내용은 설명을 참조하세요.  
+ A value indicating how to lock the row after it has been refreshed. For details, see Remarks.  
   
-### <a name="remarks"></a>설명  
- 값 0 전달 하는 경우 `wRow`을 다음 행 집합의 모든 행을 새로 고칩니다.  
+### <a name="remarks"></a>Remarks  
+ If you pass a value of zero for `wRow`, then every row in the rowset will be refreshed.  
   
- 사용 하도록 `RefreshRowset`, 해야 구현한 지정 하 여 대량 행 페치는 **CRecordset::useMulitRowFetch** 옵션에 [열려](#open) 멤버 함수.  
+ To use `RefreshRowset`, you must have implemented bulk row fetching by specifying the **CRecordset::useMulitRowFetch** option in the [Open](#open) member function.  
   
- `RefreshRowset`ODBC API 함수를 호출 **SQLSetPos**합니다. `wLockType` 후 행 잠금 상태를 지정 하는 매개 변수 **SQLSetPos** 실행 합니다. 다음 표에서 사용할 수 있는 값에 설명 `wLockType`합니다.  
+ `RefreshRowset` calls the ODBC API function **SQLSetPos**. The `wLockType` parameter specifies the lock state of the row after **SQLSetPos** has executed. The following table describes the possible values for `wLockType`.  
   
-|wLockType|설명|  
+|wLockType|Description|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(기본값)|드라이버 또는 데이터 원본 되기 전의 행 동일한 잠금 또는 잠금 해제 된 상태 인지 확인 `RefreshRowset` 호출 되었습니다.|  
-|`SQL_LOCK_EXCLUSIVE`|드라이버 또는 데이터 원본에서 행을 단독으로 잠깁니다. 일부 데이터 원본에는 이러한 유형의 잠금 지원합니다.|  
-|`SQL_LOCK_UNLOCK`|드라이버 또는 데이터 원본에는 행 잠금을 해제합니다. 일부 데이터 원본에는 이러한 유형의 잠금 지원합니다.|  
+|`SQL_LOCK_NO_CHANGE` (the default value)|The driver or data source ensures that the row is in the same locked or unlocked state as it was before `RefreshRowset` was called.|  
+|`SQL_LOCK_EXCLUSIVE`|The driver or data source locks the row exclusively. Not all data sources support this type of lock.|  
+|`SQL_LOCK_UNLOCK`|The driver or data source unlocks the row. Not all data sources support this type of lock.|  
   
- 에 대 한 자세한 내용은 **SQLSetPos**, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about **SQLSetPos**, see the Windows SDK. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="requery"></a>&Gt;crecordset:: Requery  
- (새로 고침)를 다시 작성 한 레코드 집합입니다.  
+##  <a name="requery"></a>  CRecordset::Requery  
+ Rebuilds (refreshes) a recordset.  
   
 ```  
 virtual BOOL Requery();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 레코드 집합을 다시 작성 되었습니다. 0이 아닌 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset was successfully rebuilt; otherwise 0.  
   
-### <a name="remarks"></a>설명  
- 레코드가 반환 되는 경우 첫 번째 레코드는 현재 레코드가 됩니다.  
+### <a name="remarks"></a>Remarks  
+ If any records are returned, the first record becomes the current record.  
   
- 추가 및 삭제 또는 다른 사용자가 데이터 원본에 수행 하는 반영 하기 위해 레코드를 다시 작성 해야 레코드 집합 호출 하 여 **Requery**합니다. 레코드 집합 다이너셋 인 경우 자동으로 해당 기존 레코드 (추가 하지 않음) 또는 다른 사용자가 되도록 하는 업데이트를 반영 합니다. 레코드 집합 스냅숏일 경우 호출 해야 **Requery** 다른 사용자가 뿐만 아니라 추가 및 삭제 하 여 편집 내용을 반영 하도록 합니다.  
+ In order for the recordset to reflect the additions and deletions that you or other users are making to the data source, you must rebuild the recordset by calling **Requery**. If the recordset is a dynaset, it automatically reflects updates that you or other users make to its existing records (but not additions). If the recordset is a snapshot, you must call **Requery** to reflect edits by other users as well as additions and deletions.  
   
- 다이너셋 또는 스냅숏으로 대 한 호출 **Requery** 언제 든 지 새 필터 또는 정렬 또는 새 매개 변수 값을 사용 하 여 레코드 집합 다시 작성 해야 합니다. 새 값을 할당 하 여 새 필터 또는 정렬 속성을 설정 **m_strFilter** 및 `m_strSort` 호출 하기 전에 **Requery**합니다. 새 값을 호출 하기 전에 매개 변수 데이터 멤버에 할당 하 여 새 매개 변수를 설정 **Requery**합니다. 필터 및 정렬 문자열 변경 되지 않은 경우 성능을 향상 시키는 쿼리를 다시 사용할 수 있습니다.  
+ For either a dynaset or a snapshot, call **Requery** any time you want to rebuild the recordset using a new filter or sort, or new parameter values. Set the new filter or sort property by assigning new values to **m_strFilter** and `m_strSort` before calling **Requery**. Set new parameters by assigning new values to parameter data members before calling **Requery**. If the filter and sort strings are unchanged, you can reuse the query, which improves performance.  
   
- 레코드 집합 다시 시도가 실패 하면 레코드 집합 닫혀 있습니다. 호출 하기 전에 **Requery**를 호출 하 여 레코드 집합 다시 쿼리되어 수 있는지 여부를 확인할 수 있습니다는 `CanRestart` 멤버 함수입니다. `CanRestart`에서는 프로시저를 **Requery** 성공 합니다.  
+ If the attempt to rebuild the recordset fails, the recordset is closed. Before you call **Requery**, you can determine whether the recordset can be requeried by calling the `CanRestart` member function. `CanRestart` does not guarantee that **Requery** will succeed.  
   
 > [!CAUTION]
->  호출 **Requery** 호출한 후에 [열려](#open)합니다.  
+>  Call **Requery** only after you have called [Open](#open).  
   
-### <a name="example"></a>예제  
- 이 예제에는 다른 정렬 순서를 적용 하는 레코드 집합 다시 작성 합니다.  
+### <a name="example"></a>Example  
+ This example rebuilds a recordset to apply a different sort order.  
   
- [!code-cpp[NVC_MFCDatabase # 29](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#29](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]  
   
-##  <a name="setabsoluteposition"></a>CRecordset::SetAbsolutePosition  
- 지정 된 레코드 번호에 해당 하는 레코드를 레코드 집합을 배치 합니다.  
+##  <a name="setabsoluteposition"></a>  CRecordset::SetAbsolutePosition  
+ Positions the recordset on the record corresponding to the specified record number.  
   
 ```  
 void SetAbsolutePosition(long nRows);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nRows`  
- 1부터 서 수 위치는 현재 레코드에 대 한 레코드 집합의 합니다.  
+ The one-based ordinal position for the current record in the recordset.  
   
-### <a name="remarks"></a>주의  
- `SetAbsolutePosition`이 서 수 위치에 기반 하 여 현재 레코드 포인터를 이동 합니다.  
-  
-> [!NOTE]
->  이 멤버 함수 앞 으로만 이동 가능한 레코드 집합에 올바르지 않습니다.  
-  
- ODBC 레코드 집합에 대 한 1의 절대 위치 설정을; 레코드 집합의 첫 번째 레코드를 참조 0으로 설정 파일의 시작 부분 (BOF) 위치를 나타냅니다.  
-  
- 음수 값을 전달할 수도 있습니다 `SetAbsolutePosition`합니다. 이 경우 위치 레코드 집합의 레코드 집합의 끝에서 평가 됩니다. 예를 들어 `SetAbsolutePosition( -1 )` 레코드 집합의 마지막 레코드를 현재 레코드 포인터를 이동 합니다.  
+### <a name="remarks"></a>Remarks  
+ `SetAbsolutePosition` moves the current record pointer based on this ordinal position.  
   
 > [!NOTE]
->  절대 위치 서로게이트 레코드 수로 사용할 수 없습니다. 책갈피는 유지 하 고 이전 레코드를 삭제할 때 레코드의 위치 변경 내용을 이후 지정된 된 위치에 반환 된 것이 좋습니다. 또한 확인할 수 없습니다에 지정된 된 레코드 해야 같은 절대 위치로 사용 하 여 SQL 문을 생성 하지 않는 한 레코드 집합 내에서 개별 레코드의 순서가 보장 되지 않으므로 레코드 집합 다시 다시 생성 하는 경우는 **ORDER BY** 절.  
+>  This member function is not valid on forward-only recordsets.  
   
- 레코드 집합 탐색 및 책갈피에 대 한 자세한 내용은 문서를 참조 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) 및 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)합니다.  
+ For ODBC recordsets, an absolute position setting of 1 refers to the first record in the recordset; a setting of 0 refers to the beginning-of-file (BOF) position.  
   
-##  <a name="setbookmark"></a>CRecordset::SetBookmark  
- 지정된 된 책갈피를 포함 하는 레코드를 레코드 집합을 배치 합니다.  
+ You can also pass negative values to `SetAbsolutePosition`. In this case the recordset's position is evaluated from the end of the recordset. For example, `SetAbsolutePosition( -1 )` moves the current record pointer to the last record in the recordset.  
+  
+> [!NOTE]
+>  Absolute position is not intended to be used as a surrogate record number. Bookmarks are still the recommended way of retaining and returning to a given position, since a record's position changes when preceding records are deleted. In addition, you cannot be assured that a given record will have the same absolute position if the recordset is re-created again because the order of individual records within a recordset is not guaranteed unless it is created with a SQL statement using an **ORDER BY** clause.  
+  
+ For more information about recordset navigation and bookmarks, see the articles [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) and [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
+  
+##  <a name="setbookmark"></a>  CRecordset::SetBookmark  
+ Positions the recordset on the record containing the specified bookmark.  
   
 ```  
 void SetBookmark(const CDBVariant& varBookmark);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `varBookmark`  
- 에 대 한 참조는 [CDBVariant](../../mfc/reference/cdbvariant-class.md) 특정 레코드에 대 한 책갈피 값을 포함 하는 개체입니다.  
+ A reference to a [CDBVariant](../../mfc/reference/cdbvariant-class.md) object containing the bookmark value for a specific record.  
   
-### <a name="remarks"></a>주의  
- 책갈피 레코드 집합에서 지원 되는지 확인, 호출 [CanBookmark](#canbookmark)합니다. 지원 되는 경우 책갈피를 사용할 수 있도록 하려면 설정 해야 합니다는 **CRecordset::useBookmarks** 옵션에 `dwOptions` 의 매개 변수는 [열려](#open) 멤버 함수입니다.  
-  
-> [!NOTE]
->  책갈피 지원 되지 않거나 사용할 수 없는 경우 호출 `SetBookmark` 예외가 throw 됩니다. 책갈피 앞 으로만 이동 가능한 레코드 집합에서 지원 되지 않습니다.  
-  
- 현재 레코드에 대 한 책갈피를 먼저 검색 하려면 호출 [GetBookmark](#getbookmark), 책갈피 값을 저장 한 `CDBVariant` 개체입니다. 나중으로 돌아갈 수 있습니다 해당 레코드를 호출 하 여 `SetBookmark` 저장 된 책갈피 값을 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ To determine if bookmarks are supported on the recordset, call [CanBookmark](#canbookmark). To make bookmarks available if they are supported, you must set the **CRecordset::useBookmarks** option in the `dwOptions` parameter of the [Open](#open) member function.  
   
 > [!NOTE]
->  특정 레코드 집합 작업이 끝난 후 호출 하기 전에 책갈피 지 속성을 확인 해야 `SetBookmark`합니다. 예를 들어, 사용 하 여 책갈피를 검색 하는 경우 `GetBookmark` 호출 **Requery**, 책갈피가 더 이상 유효 하지 않을 수 없습니다. 호출 [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) 안전 하 게 호출할 수 있는지 여부를 확인 하려면 `SetBookmark`합니다.  
+>  If bookmarks are unsupported or unavailable, calling `SetBookmark` will result in an exception being thrown. Bookmarks are not supported on forward-only recordsets.  
   
- 책갈피와 레코드 탐색에 대 한 자세한 내용은 문서를 참조 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) 및 [레코드 집합: 스크롤 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)합니다.  
+ To first retrieve the bookmark for the current record, call [GetBookmark](#getbookmark), which saves the bookmark value to a `CDBVariant` object. Later, you can return to that record by calling `SetBookmark` using the saved bookmark value.  
   
-##  <a name="setfielddirty"></a>CRecordset::SetFieldDirty  
- 필드 데이터 멤버는 레코드 집합을 변경 또는 변경 되지 않은 것을 플래그 합니다.  
+> [!NOTE]
+>  After certain recordset operations, you should check the bookmark persistence before calling `SetBookmark`. For example, if you retrieve a bookmark with `GetBookmark` and then call **Requery**, the bookmark may no longer be valid. Call [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) to check whether you can safely call `SetBookmark`.  
+  
+ For more information about bookmarks and recordset navigation, see the articles [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) and [Recordset: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+  
+##  <a name="setfielddirty"></a>  CRecordset::SetFieldDirty  
+ Flags a field data member of the recordset as changed or as unchanged.  
   
 ```  
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 레코드 집합의 필드 데이터 멤버의 주소를 포함 하거나 **NULL**합니다. 경우 **NULL**, 레코드 집합의 필드 데이터 멤버를 모든 플래그가 지정 됩니다. (C + + **NULL** 같지 않습니다 Null로 데이터베이스 용어에서 즉, "가치가 없습니다.")  
+ Contains the address of a field data member in the recordset or **NULL**. If **NULL**, all field data members in the recordset are flagged. (C++ **NULL** is not the same as Null in database terminology, which means "having no value.")  
   
  `bDirty`  
- **True 이면** 필드 데이터 멤버 "더티" (변경) 것으로 플래그가 지정 되어야 하는 경우. 그렇지 않으면 **FALSE** 필드 데이터 멤버 "정리" (변경 되지 않음) 플래그 지정 하는 경우.  
+ **TRUE** if the field data member is to be flagged as "dirty" (changed). Otherwise **FALSE** if the field data member is to be flagged as "clean" (unchanged).  
   
-### <a name="remarks"></a>설명  
- 다음과 같이 변경 되지 않은 필드를 표시 하면 필드를 업데이트 하지 않으면 SQL 트래픽이 적습니다.  
+### <a name="remarks"></a>Remarks  
+ Marking fields as unchanged ensures the field is not updated and results in less SQL traffic.  
   
 > [!NOTE]
->  이 멤버 함수 대량 행 페치를 사용 하는 레코드 집합에 적용 되지 않습니다. 구현한 경우 대량 행 페치를 다음 `SetFieldDirty` 실패 한 어설션이 발생 합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  This member function is not applicable on recordsets that are using bulk row fetching. If you have implemented bulk row fetching, then `SetFieldDirty` will result in a failed assertion. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- 프레임 워크 부호를 사용 하 여 필드 데이터 멤버 레코드 필드 교환 (RFX) 메커니즘에 의해 데이터 소스에서 레코드에 기록 될 됩니다 되도록 변경 합니다. 필드의 값을 일반적으로 변경 필드 설정 더티 자동으로 되므로 호출 필요가 거의 `SetFieldDirty` 하지만, 직접 할 때도 열은 명시적으로 업데이트 되거나 삽입 될 어떤 값이 필드 데이터 멤버에 관계 없이 확인 합니다.  
+ The framework marks changed field data members to ensure they will be written to the record on the data source by the record field exchange (RFX) mechanism. Changing the value of a field generally sets the field dirty automatically, so you will seldom need to call `SetFieldDirty` yourself, but you might sometimes want to ensure that columns will be explicitly updated or inserted regardless of what value is in the field data member.  
   
 > [!CAUTION]
->  이 멤버 함수를 호출한 후에 호출 [편집](#edit) 또는 [AddNew](#addnew)합니다.  
+>  Call this member function only after you have called [Edit](#edit) or [AddNew](#addnew).  
   
- 사용 하 여 **NULL** 함수의 첫 번째 인수는 함수를에 적용 됩니다에 대 한 **outputColumn** 필드 하지 **param** 필드입니다. 예를 들어, 호출  
+ Using **NULL** for the first argument of the function will apply the function only to **outputColumn** fields, not **param** fields. For instance, the call  
   
- [!code-cpp[NVC_MFCDatabase # 26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
   
- 만 설정 됩니다 **outputColumn** 필드를 **NULL**; **param** 필드에 영향을 받지 않습니다.  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
- 작동 하도록 **param** 필드, 개별의 실제 주소를 입력 해야 **param** 와 같은 작업에 대 하 시겠습니까:  
+ To work on **param** fields, you must supply the actual address of the individual **param** you want to work on, such as:  
   
- [!code-cpp[NVC_MFCDatabase # 27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
   
- 즉, 설정할 수 없습니다. 모든 **param** 필드를 **NULL**있습니다, **outputColumn** 필드입니다.  
+ This means you cannot set all **param** fields to **NULL**, as you can with **outputColumn** fields.  
   
-##  <a name="setfieldnull"></a>CRecordset::SetFieldNull  
- Null (특히 값 예:) 또는 Null이 아닌 레코드 집합의 필드 데이터 멤버를 플래그 지정 합니다.  
+##  <a name="setfieldnull"></a>  CRecordset::SetFieldNull  
+ Flags a field data member of the recordset as Null (specifically having no value) or as non-Null.  
   
 ```  
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 레코드 집합의 필드 데이터 멤버의 주소를 포함 하거나 **NULL**합니다. 경우 **NULL**, 레코드 집합의 필드 데이터 멤버를 모든 플래그가 지정 됩니다. (C + + **NULL** 같지 않습니다 Null로 데이터베이스 용어에서 즉, "가치가 없습니다.")  
+ Contains the address of a field data member in the recordset or **NULL**. If **NULL**, all field data members in the recordset are flagged. (C++ **NULL** is not the same as Null in database terminology, which means "having no value.")  
   
  `bNull`  
- 필드 데이터 멤버 (Null) 값이 없는 것으로 플래그가 지정 되어야 하는 경우에 0이 아닙니다. 필드 데이터 멤버는 Null이 아닌으로 플래그를 설정 하는 경우 그렇지 않으면 0입니다.  
+ Nonzero if the field data member is to be flagged as having no value (Null). Otherwise 0 if the field data member is to be flagged as non-Null.  
   
-### <a name="remarks"></a>설명  
- 레코드 집합에 새 레코드를 추가 하는 경우 모든 필드 데이터 멤버 처음 Null 값으로 설정 되며 "더티" (변경) 것으로 플래그가 지정 합니다. 데이터 원본에서 레코드를 검색 하는 경우 열이 이미 값 또는 null입니다.  
+### <a name="remarks"></a>Remarks  
+ When you add a new record to a recordset, all field data members are initially set to a Null value and flagged as "dirty" (changed). When you retrieve a record from a data source, its columns either already have values or are Null.  
   
 > [!NOTE]
->  대량 행 페치를 사용 하는 레코드 집합에는이 멤버 함수를 호출 하지 마십시오. 대량 행 페치를 구현한 경우 호출 `SetFieldNull` 실패 한 어설션의 결과. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  Do not call this member function on recordsets that are using bulk row fetching. If you have implemented bulk row fetching, calling `SetFieldNull` results in a failed assertion. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- 특히 값, 호출 되지 않는 것으로 현재 레코드의 필드를 지정 하려는 경우 `SetFieldNull` 와 `bNull` 로 설정 **TRUE** Null로 플래그를 지정 합니다. 필드는 Null 이전에 표시 된 값을 지정 하려는 경우 새 값을 설정 하기만 합니다. Null 플래그를 제거할 필요가 없습니다 `SetFieldNull`합니다. 필드는 Null이 될 수 있는지 여부를 확인 하려면 호출 `IsFieldNullable`합니다.  
+ If you specifically wish to designate a field of the current record as not having a value, call `SetFieldNull` with `bNull` set to **TRUE** to flag it as Null. If a field was previously marked Null and you now want to give it a value, simply set its new value. You do not have to remove the Null flag with `SetFieldNull`. To determine whether the field is allowed to be Null, call `IsFieldNullable`.  
   
 > [!CAUTION]
->  이 멤버 함수를 호출한 후에 호출 [편집](#edit) 또는 [AddNew](#addnew)합니다.  
+>  Call this member function only after you have called [Edit](#edit) or [AddNew](#addnew).  
   
- 사용 하 여 **NULL** 함수의 첫 번째 인수는 함수를에 적용 됩니다에 대 한 **outputColumn** 필드 하지 **param** 필드입니다. 예를 들어, 호출  
+ Using **NULL** for the first argument of the function will apply the function only to **outputColumn** fields, not **param** fields. For instance, the call  
   
- [!code-cpp[NVC_MFCDatabase # 26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]  
   
- 만 설정 됩니다 **outputColumn** 필드를 **NULL**; **param** 필드에 영향을 받지 않습니다.  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
- 작동 하도록 **param** 필드, 개별의 실제 주소를 입력 해야 **param** 와 같은 작업에 대 하 시겠습니까:  
+ To work on **param** fields, you must supply the actual address of the individual **param** you want to work on, such as:  
   
- [!code-cpp[NVC_MFCDatabase # 27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]  
   
- 즉, 설정할 수 없습니다. 모든 **param** 필드를 **NULL**있습니다, **outputColumn** 필드입니다.  
+ This means you cannot set all **param** fields to **NULL**, as you can with **outputColumn** fields.  
   
 > [!NOTE]
->  Null에 대 한 호출으로 매개 변수를 설정할 때 `SetFieldNull` 레코드 집합 어설션에 열려 있는 결과 크기를 합니다. 이 경우 호출 [SetParamNull](#setparamnull)합니다.  
+>  When setting parameters to Null, a call to `SetFieldNull` before the recordset is opened results in an assertion. In this case, call [SetParamNull](#setparamnull).  
   
- `SetFieldNull`이 통해 구현 [DoFieldExchange](#dofieldexchange)합니다.  
+ `SetFieldNull` is implemented through [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="setlockingmode"></a>CRecordset::SetLockingMode  
- "낙관적" 잠금 (기본값) 또는 "비관적" 잠금을 잠금 모드를 설정 합니다. 업데이트에 대 한 레코드를 잠그는 방법을 결정 합니다.  
+##  <a name="setlockingmode"></a>  CRecordset::SetLockingMode  
+ Sets the locking mode to "optimistic" locking (the default) or "pessimistic" locking. Determines how records are locked for updates.  
   
 ```  
 void SetLockingMode(UINT nMode);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nMode`  
- 다음 값 중 하나가 포함 된 **enum LockMode**:  
+ Contains one of the following values from the **enum LockMode**:  
   
-- **낙관적** 호출 하는 동안에 업데이트 되는 레코드를 잠그는 낙관적 잠금 **업데이트**합니다.  
+- **optimistic** Optimistic locking locks the record being updated only during the call to **Update**.  
   
-- **비관적** 레코드를 잠그는 비관적 잠금 즉시 **편집** 호출 되 고 유지 될 때까지 잠겨는 **업데이트** 호출이 완료 하거나 새 레코드로 이동 합니다.  
+- **pessimistic** Pessimistic locking locks the record as soon as **Edit** is called and keeps it locked until the **Update** call completes or you move to a new record.  
   
-### <a name="remarks"></a>주의  
- 레코드 집합 업데이트를 사용 하는 두 레코드 잠금 전략 지정 하려는 경우이 함수를 호출 합니다. 기본적으로 레코드 집합의 잠금 모드는 **낙관적**합니다. 더욱 주의로 변경할 수 **비관적** 잠금 전략입니다. 호출 `SetLockingMode` 구성 하 고 레코드 집합 개체를 열거나 후 있지만 호출 하기 전에 **편집**합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this member function if you need to specify which of two record-locking strategies the recordset is using for updates. By default, the locking mode of a recordset is **optimistic**. You can change that to a more cautious **pessimistic** locking strategy. Call `SetLockingMode` after you construct and open the recordset object but before you call **Edit**.  
   
-##  <a name="setparamnull"></a>CRecordset::SetParamNull  
- Null (특히 값 예:) 또는 Null이 아닌 매개 변수는 플래그입니다.  
+##  <a name="setparamnull"></a>  CRecordset::SetParamNull  
+ Flags a parameter as Null (specifically having no value) or as non-Null.  
   
 ```  
 void SetParamNull(
@@ -1643,104 +1701,104 @@ void SetParamNull(
     BOOL bNull = TRUE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 이 매개 변수의 0부터 시작하는 인덱스입니다.  
+ The zero-based index of the parameter.  
   
  `bNull`  
- 경우 **TRUE** (기본값) 매개 변수는 Null로 플래그가 지정 됩니다. 그렇지 않으면 매개 변수가 Null이 아닌으로 플래그가 지정 됩니다.  
+ If **TRUE** (the default value), the parameter is flagged as Null. Otherwise, the parameter is flagged as non-Null.  
   
-### <a name="remarks"></a>주의  
- 와 달리 [SetFieldNull](#setfieldnull)를 호출할 수 있습니다 `SetParamNull` 레코드 집합을 연 전에 합니다.  
+### <a name="remarks"></a>Remarks  
+ Unlike [SetFieldNull](#setfieldnull), you can call `SetParamNull` before you have opened the recordset.  
   
- `SetParamNull`미리 정의 된 쿼리 (저장된 프로시저) 일반적으로 사용 됩니다.  
+ `SetParamNull` is typically used with predefined queries (stored procedures).  
   
-##  <a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition  
- 현재 행 집합 내의 행에는 커서를 이동합니다.  
+##  <a name="setrowsetcursorposition"></a>  CRecordset::SetRowsetCursorPosition  
+ Moves the cursor to a row within the current rowset.  
   
 ```  
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `wRow`  
- 1부터 행의 위치는 현재 행 집합의 합니다. 이 값의 범위는 1에서 행 집합의 크기.  
+ The one-based position of a row in the current rowset. This value can range from 1 to the size of the rowset.  
   
  `wLockType`  
- 새로 고쳐 후 행을 잠그는 방법을 나타내는 값입니다. 자세한 내용은 설명을 참조하세요.  
+ Value indicating how to lock the row after it has been refreshed. For details, see Remarks.  
   
-### <a name="remarks"></a>설명  
- 대량 행 페치를 구현 하는 경우 레코드는 인출 된 행 집합의 첫 번째 레코드는 현재 레코드를 행 집합에서 검색 됩니다. 행 집합의 다른 레코드 현재 레코드를 있도록 호출 `SetRowsetCursorPosition`합니다. 예를 들어 결합할 수 있습니다 `SetRowsetCursorPosition` 와 [GetFieldValue](#getfieldvalue) 멤버 함수를 레코드 집합의 모든 레코드에서 데이터를 동적으로 검색 합니다.  
+### <a name="remarks"></a>Remarks  
+ When implementing bulk row fetching, records are retrieved by rowsets, where the first record in the fetched rowset is the current record. In order to make another record within the rowset the current record, call `SetRowsetCursorPosition`. For example, you can combine `SetRowsetCursorPosition` with the [GetFieldValue](#getfieldvalue) member function to dynamically retrieve the data from any record of your recordset.  
   
- 사용 하도록 `SetRowsetCursorPosition`, 해야 구현한 지정 하 여 대량 행 페치는 `CRecordset::useMultiRowFetch` 옵션의는 `dwOptions` 에서 매개 변수는 [열려](#open) 멤버 함수입니다.  
+ To use `SetRowsetCursorPosition`, you must have implemented bulk row fetching by specifying the `CRecordset::useMultiRowFetch` option of the `dwOptions` parameter in the [Open](#open) member function.  
   
- `SetRowsetCursorPosition`ODBC API 함수를 호출 **SQLSetPos**합니다. `wLockType` 후 행 잠금 상태를 지정 하는 매개 변수 **SQLSetPos** 실행 합니다. 다음 표에서 사용할 수 있는 값에 설명 `wLockType`합니다.  
+ `SetRowsetCursorPosition` calls the ODBC API function **SQLSetPos**. The `wLockType` parameter specifies the lock state of the row after **SQLSetPos** has executed. The following table describes the possible values for `wLockType`.  
   
-|wLockType|설명|  
+|wLockType|Description|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(기본값)|드라이버 또는 데이터 원본 되기 전의 행 동일한 잠금 또는 잠금 해제 된 상태 인지 확인 `SetRowsetCursorPosition` 호출 되었습니다.|  
-|`SQL_LOCK_EXCLUSIVE`|드라이버 또는 데이터 원본에서 행을 단독으로 잠깁니다. 일부 데이터 원본에는 이러한 유형의 잠금 지원합니다.|  
-|`SQL_LOCK_UNLOCK`|드라이버 또는 데이터 원본에는 행 잠금을 해제합니다. 일부 데이터 원본에는 이러한 유형의 잠금 지원합니다.|  
+|`SQL_LOCK_NO_CHANGE` (the default value)|The driver or data source ensures that the row is in the same locked or unlocked state as it was before `SetRowsetCursorPosition` was called.|  
+|`SQL_LOCK_EXCLUSIVE`|The driver or data source locks the row exclusively. Not all data sources support this type of lock.|  
+|`SQL_LOCK_UNLOCK`|The driver or data source unlocks the row. Not all data sources support this type of lock.|  
   
- 에 대 한 자세한 내용은 **SQLSetPos**, 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+ For more information about **SQLSetPos**, see the Windows SDK. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="setrowsetsize"></a>CRecordset::SetRowsetSize  
- 인출 하는 동안 검색할 레코드 수를 지정 합니다.  
+##  <a name="setrowsetsize"></a>  CRecordset::SetRowsetSize  
+ Specifies the number of records you wish to retrieve during a fetch.  
   
 ```  
 virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  *dwNewRowsetSize*  
- 지정 된 인출 하는 동안 검색할 행의 수입니다.  
+ The number of rows to retrieve during a given fetch.  
   
-### <a name="remarks"></a>주의  
- 이 가상 멤버 함수를 대량 행 페치를 사용 하는 경우 단일 인출 하는 동안 검색 하려는 행의 수를 지정 합니다. 대량 행 페치를 구현 하려면 설정 해야 합니다는 `CRecordset::useMultiRowFetch` 옵션에 `dwOptions` 의 매개 변수는 [열려](#open) 멤버 함수입니다.  
-  
-> [!NOTE]
->  호출 `SetRowsetSize` 대량을 구현 하지 않고 행을 인출 하면 실패 한 어설션이 합니다.  
-  
- 호출 `SetRowsetSize` 호출 하기 전에 **열려** 초기 레코드 집합에 대 한 행 집합 크기를 설정 합니다. 대량 행 페치를 구현 하는 경우 기본 행 집합 크기는 25입니다.  
+### <a name="remarks"></a>Remarks  
+ This virtual member function specifies how many rows you wish to retrieve during a single fetch when using bulk row fetching. To implement bulk row fetching, you must set the `CRecordset::useMultiRowFetch` option in the `dwOptions` parameter of the [Open](#open) member function.  
   
 > [!NOTE]
->  호출할 때 주의 해야 `SetRowsetSize`합니다. 데이터에 대 한 저장소를 수동으로 할당 하는 경우 (에 지정 된 대로 **CRecordset::userAllocMultiRowBuffers** dwOptions 매개 변수 옵션 **열려**)를 호출한 후 이러한 저장소 버퍼 다시 할당 해야 하는지 여부를 확인 해야 `SetRowsetSize`, 모든 커서 탐색 작업을 수행 하기 전에.  
+>  Calling `SetRowsetSize` without implementing bulk row fetching will result in a failed assertion.  
   
- 행 집합 크기에 대 한 현재 설정을 가져오려면, 호출 [GetRowsetSize](#getrowsetsize)합니다.  
+ Call `SetRowsetSize` before calling **Open** to initially set the rowset size for the recordset. The default rowset size when implementing bulk row fetching is 25.  
   
- 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+> [!NOTE]
+>  Use caution when calling `SetRowsetSize`. If you are manually allocating storage for the data (as specified by the **CRecordset::userAllocMultiRowBuffers** option of the dwOptions parameter in **Open**), you should check whether you need to reallocate these storage buffers after you call `SetRowsetSize`, but before you perform any cursor navigation operation.  
   
-##  <a name="update"></a>CRecordset::Update  
- 완료 되는 `AddNew` 또는 **편집** 데이터 원본에서 새로 만들거나 편집한 데이터를 저장 하 여 작업 합니다.  
+ To obtain the current setting for the rowset size, call [GetRowsetSize](#getrowsetsize).  
+  
+ For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+  
+##  <a name="update"></a>  CRecordset::Update  
+ Completes an `AddNew` or **Edit** operation by saving the new or edited data on the data source.  
   
 ```  
 virtual BOOL Update();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 하나의 레코드를 업데이트 했습니다. 0이 아닌 그렇지 않은 경우 변경 된 열이 없는 경우 0입니다. 업데이트 된 레코드가 한 레코드가 두 번 이상으로 업데이트 된 경우 예외가 throw 됩니다. 예외가 다른 모든 오류에 대 한 데이터 원본에 throw 됩니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if one record was successfully updated; otherwise 0 if no columns have changed. If no records were updated, or if more than one record was updated, an exception is thrown. An exception is also thrown for any other failure on the data source.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수를 호출한 후 호출 된 [AddNew](#addnew) 또는 [편집](#edit) 멤버 함수입니다. 이 호출은 필요 완료 하는 `AddNew` 또는 **편집** 작업 합니다.  
+### <a name="remarks"></a>Remarks  
+ Call this member function after a call to the [AddNew](#addnew) or [Edit](#edit) member function. This call is required to complete the `AddNew` or **Edit** operation.  
   
 > [!NOTE]
->  대량 행 페치를 구현한 경우 호출할 수 없습니다 **업데이트**합니다. 이 인해 실패 한 어설션이 발생 합니다. 하지만 클래스 `CRecordset` 메커니즘을 제공 하지 않는 데이터의 대량 행을 업데이트 하기 위한 ODBC API 함수를 사용 하 여 사용자 고유의 함수를 작성할 수 있습니다 **SQLSetPos**합니다. 대량 행 페치에 대 한 자세한 내용은 문서 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
+>  If you have implemented bulk row fetching, you cannot call **Update**. This will result in a failed assertion. Although class `CRecordset` does not provide a mechanism for updating bulk rows of data, you can write your own functions by using the ODBC API function **SQLSetPos**. For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- 둘 다 `AddNew` 및 **편집** 데이터 원본에 저장 하기 위한 추가 또는 편집 된 데이터가 배치 되는 편집 버퍼를 준비 합니다. **업데이트** 데이터를 저장 합니다. 표시 또는 변경 된 것으로 인식 필드만 업데이트 됩니다.  
+ Both `AddNew` and **Edit** prepare an edit buffer in which the added or edited data is placed for saving to the data source. **Update** saves the data. Only those fields marked or detected as changed are updated.  
   
- 데이터 원본 트랜잭션을 지 원하는 경우 만들 수 있습니다는 **업데이트** 호출 (및 해당 `AddNew` 또는 **편집** 호출) 트랜잭션의 일부입니다. 트랜잭션에 대 한 자세한 내용은 문서 참조 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
+ If the data source supports transactions, you can make the **Update** call (and its corresponding `AddNew` or **Edit** call) part of a transaction. For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
 > [!CAUTION]
->  호출 하는 경우 **업데이트** 호출 하지 `AddNew` 또는 **편집**, **업데이트** throw 한 `CDBException`합니다. 호출 하는 경우 `AddNew` 또는 **편집**를 호출 해야 **업데이트** 호출 하기 전에 **이동** 작업 레코드 집합 또는 데이터 원본 연결을 닫기 전에 또는 합니다. 그렇지 않은 경우 변경 내용을 알림 없이 손실 됩니다.  
+>  If you call **Update** without first calling either `AddNew` or **Edit**, **Update** throws a `CDBException`. If you call `AddNew` or **Edit**, you must call **Update** before you call a **Move** operation or before you close either the recordset or the data source connection. Otherwise, your changes are lost without notification.  
   
- 처리에 대 한 내용은 **업데이트** 오류 문서를 참조 하십시오. [레코드 집합: 레코드 집합의 레코드 업데이트 방법 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)합니다.  
+ For details on handling **Update** failures, see the article [Recordset: How Recordsets Update Records (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
-### <a name="example"></a>예제  
- 문서를 참조 [트랜잭션: 트랜잭션이 수행 레코드 집합 (ODBC)에서](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)합니다.  
+### <a name="example"></a>Example  
+ See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-## <a name="see-also"></a>참고 항목  
- [CObject 클래스](../../mfc/reference/cobject-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CDatabase 클래스](../../mfc/reference/cdatabase-class.md)   
- [CRecordView 클래스](../../mfc/reference/crecordview-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
+ [CRecordView Class](../../mfc/reference/crecordview-class.md)
 

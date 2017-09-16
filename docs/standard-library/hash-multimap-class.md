@@ -1,17 +1,15 @@
 ---
-title: "hash_multimap 클래스 | Microsoft 문서"
+title: hash_multimap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::hash_multimap
 - hash_map/stdext::hash_multimap
-- hash_multimap
 - hash_map/stdext::hash_multimap::allocator_type
 - hash_map/stdext::hash_multimap::const_iterator
 - hash_map/stdext::hash_multimap::const_pointer
@@ -55,7 +53,47 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- hash_multimap class
+- stdext::hash_multimap
+- stdext::hash_multimap::allocator_type
+- stdext::hash_multimap::const_iterator
+- stdext::hash_multimap::const_pointer
+- stdext::hash_multimap::const_reference
+- stdext::hash_multimap::const_reverse_iterator
+- stdext::hash_multimap::difference_type
+- stdext::hash_multimap::iterator
+- stdext::hash_multimap::key_compare
+- stdext::hash_multimap::key_type
+- stdext::hash_multimap::mapped_type
+- stdext::hash_multimap::pointer
+- stdext::hash_multimap::reference
+- stdext::hash_multimap::reverse_iterator
+- stdext::hash_multimap::size_type
+- stdext::hash_multimap::value_type
+- stdext::hash_multimap::begin
+- stdext::hash_multimap::cbegin
+- stdext::hash_multimap::cend
+- stdext::hash_multimap::clear
+- stdext::hash_multimap::count
+- stdext::hash_multimap::crbegin
+- stdext::hash_multimap::crend
+- stdext::hash_multimap::emplace
+- stdext::hash_multimap::emplace_hint
+- stdext::hash_multimap::empty
+- stdext::hash_multimap::end
+- stdext::hash_multimap::equal_range
+- stdext::hash_multimap::erase
+- stdext::hash_multimap::find
+- stdext::hash_multimap::get_allocator
+- stdext::hash_multimap::insert
+- stdext::hash_multimap::key_comp
+- stdext::hash_multimap::lower_bound
+- stdext::hash_multimap::max_size
+- stdext::hash_multimap::rbegin
+- stdext::hash_multimap::rend
+- stdext::hash_multimap::size
+- stdext::hash_multimap::swap
+- stdext::hash_multimap::upper_bound
+- stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 caps.latest.revision: 24
 author: corob-msft
@@ -75,20 +113,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 50239067b11ef3fc8ac5c7d3c4d155dab0dc3822
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5c9ba143e375499962688195228350d479df5a89
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="hashmultimap-class"></a>hash_multimap 클래스
+# <a name="hashmultimap-class"></a>hash_multimap Class
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 컨테이너 클래스 hash_multimap은 C++ 표준 라이브러리의 확장이며, 각 요소가 값이 고유할 필요가 없는 정렬 키와 관련 데이터 값으로 구성된 쌍인 컬렉션에서 데이터를 저장하고 빠르게 검색하는 데 사용됩니다.  
+ The container class hash_multimap is an extension of the C++ Standard Library and is used for the storage and fast retrieval of data from a collection in which each element is a pair that has a sort key whose value need not be unique and an associated data value.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Key,   
@@ -98,144 +136,144 @@ template <class Key,
 class hash_multimap  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Key`  
- hash_multimap에 저장되는 키 데이터 형식입니다.  
+ The key data type to be stored in the hash_multimap.  
   
  `Type`  
- hash_multimap에 저장되는 요소 데이터 형식입니다.  
+ The element data type to be stored in the hash_multimap.  
   
  `Traits`  
- 두 요소 값을 정렬 키로 비교하여 상대 순서를 확인할 수 있는 클래스 `Traits` 중 하나와 요소의 키 값을 **size_t** 형식의 부호 없는 정수에 매핑하는 단항 조건자인 해시 함수의 두 함수 개체를 포함하는 형식입니다. 이 인수는 선택 사항이며 기본값은 `hash_compare``<Key, less<Key> >`입니다.  
+ The type that includes two function objects, one of class `Traits` that is able to compare two element values as sort keys to determine their relative order and a hash function that is a unary predicate mapping key values of the elements to unsigned integers of type **size_t**. This argument is optional, and the `hash_compare<Key, less<Key> >` is the default value.  
   
  `Allocator`  
- hash_multimap의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `allocator<pair <const Key, Type> >`입니다.  
+ The type that represents the stored allocator object that encapsulates details about the hash_multimap's allocation and deallocation of memory. This argument is optional, and the default value is `allocator<pair <const Key, Type> >`.  
   
-## <a name="remarks"></a>설명  
- hash_multimap은 다음과 같습니다.  
+## <a name="remarks"></a>Remarks  
+ The hash_multimap is:  
   
--   연관된 키 값을 기준으로 하며 요소 값의 효율적인 검색을 지원하는 가변 크기 컨테이너인 연관 컨테이너입니다.  
+-   An associative container, which a variable size container that supports the efficient retrieval of element values based on an associated key value.  
   
--   이는 해당 요소에 액세스할 수 있는 양방향 반복기를 제공하기 때문에 되돌릴 수 있습니다.  
+-   Reversible, because it provides a bidirectional iterator to access its elements.  
   
--   요소가 요소의 키 값에 적용된 해시 함수 값을 기반으로 하여 버킷으로 그룹화되기 때문에 해시됩니다.  
+-   Hashed, because its elements are grouped into buckets based on the value of a hash function applied to the key values of the elements.  
   
--   해당 요소는 고유 키를 가질 필요가 없기 때문에 복수이며, 하나의 키 값은 이와 연관된 많은 요소 데이터 값을 가질 수 있습니다.  
+-   Multiple, because its elements do not need to have a unique keys, so that one key value may have many element data values associated with it.  
   
--   요소 값은 키 값과 구별되기 때문에 쌍 연관 컨테이너입니다.  
+-   A pair associative container, because its element values are distinct from its key values.  
   
--   제공하는 기능이 제네릭이고 요소 또는 키로 포함된 데이터의 특정 형식과 독립적이므로 템플릿 클래스입니다. 요소에 사용될 데이터 형식과 키는 대신 비교 함수 및 할당자와 함께 클래스 템플릿에서 매개 변수로 지정됩니다.  
+-   A template class, because the functionality it provides is generic and so independent of the specific type of data contained as elements or keys. The data types to be used for elements and keys are, instead, specified as parameters in the class template along with the comparison function and allocator.  
   
- 해시는 정렬보다 훨씬 효율적입니다. 성공적인 해시는 정렬 방식에 대한 컨테이너의 요소 수 로그에 비례하는 시간과 비교할 때 삽입, 삭제, 찾기를 일정한 평균 시간 이내에 수행합니다. hash_multimap 요소의 값은 연관된 키 값을 제외하고 직접적으로 변경할 수 있습니다. 대신, 이전 요소와 관련된 키 값을 삭제하고 새 요소와 연결된 새 키 값을 삽입해야 합니다.  
+ The main advantage of hashing over sorting is greater efficiency; a successful hashing performs insertions, deletions, and finds in constant average time as compared with a time proportional to the logarithm of the number of elements in the container for sorting techniques. The value of an element in a hash_multimap, but not its associated key value, may be changed directly. Instead, key values associated with old elements must be deleted and new key values associated with new elements inserted.  
   
- 컨테이너 형식은 일반적으로 응용 프로그램에서 필요한 검색과 삽입의 형식을 기준으로 선택해야 합니다. 해시된 연관 컨테이너는 조회, 삽입 및 제거 작업에 최적화되어 있습니다. 명시적으로 이러한 작업을 지원하는 멤버 함수는 잘 설계된 해시 함수와 함께 사용할 경우 효율적이며, 컨테이너의 요소 수에 종속되지 않는 일정한 평균 시간으로 작업을 수행합니다. 잘 설계된 해시 함수는 해시된 값의 균일한 분포를 생성하고 충돌 수를 최소화합니다. 여기서 충돌은 특정 키 값이 동일한 해시된 값에 매핑될 때 발생합니다. 가능한 최악의 해시 함수가 있는 최악의 경우에는 작업 수가 시퀀스의 요소 수에 비례합니다(선형 시간).  
+ The choice of container type should be based in general on the type of searching and inserting required by the application. Hashed associative containers are optimized for the operations of lookup, insertion and removal. The member functions that explicitly support these operations are efficient when used with a well-designed hash function, performing them in a time that is on average constant and not dependent on the number of elements in the container. A well-designed hash function produces a uniform distribution of hashed values and minimizes the number of collisions, where a collision is said to occur when distinct key values are mapped into the same hashed value. In the worst case, with the worst possible hash function, the number of operations is proportional to the number of elements in the sequence (linear time).  
   
- 응용 프로그램에서 값과 해당 키를 연결하는 조건을 만족할 경우 적절한 연관 컨테이너는 hash_multimap입니다. 이 구조 형식의 모델은 단어들이 항상 유일하게 정의되지 않는 "정의" 같이 문자열 값과 연결된 키 단어들의 정렬된 목록입니다. 대신 키워드가 고유하게 정의되어 키가 고유한 경우 hash_map이 적절한 컨테이너가 됩니다. 반면에 단어 목록만 저장하는 경우에는 hash_set이 올바른 컨테이너가 됩니다. 단어를 여러 번 중복할 수 있는 경우 hash_multiset이 적절한 컨테이너 구조입니다.  
+ The hash_multimap should be the associative container of choice when the conditions associating the values with their keys are satisfied by the application. A model for this type of structure is an ordered list of key words with associated string values providing, say, definitions, where the words were not always uniquely defined. If, instead, the keywords were uniquely defined so that keys were unique, then a hash_map would be the container of choice. If, on the other hand, just the list of words were being stored, then a hash_set would be the correct container. If multiple occurrences of the words were allowed, then a hash_multiset would be the appropriate container structure.  
   
- hash_multimap은 [value_compare](../standard-library/value-compare-class.md) 형식의 저장된 해시 `Traits` 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](../standard-library/hash-map-class.md#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이러한 함수 개체는 [hash_compare](../standard-library/hash-compare-class.md)`<Key,  less<Key> >` 클래스의 개체와 동일하게 동작해야 합니다. 특히, `Key` 형식의 모든 값 `Key`에 대해 `Traits (Key)` 호출은 `size_t` 형식의 값 분포를 생성합니다.  
+ The hash_multimap orders the sequence it controls by calling a stored hash `Traits` object of type [value_compare](../standard-library/value-compare-class.md). This stored object may be accessed by calling the member function [key_comp](../standard-library/hash-map-class.md#key_comp). Such a function object must behave the same as an object of class [hash_compare](../standard-library/hash-compare-class.md)`<Key,  less<Key> >`. Specifically, for all values `Key` of type `Key`, the call `Traits (Key)` yields a distribution of values of type `size_t`.  
   
- 일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 f(x, y)는 두 인수 개체 `x` 및 `y`를 가지는 함수 개체이며, `true` 또는 `false` 값을 반환합니다. 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 hash_multimap에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서, f(x, y) 및 f(y, x)가 모두 `false`인 경우 `x` 및 `y` 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.  
+ In general, the elements need be merely less than comparable to establish this order: so that, given any two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the non-equivalent elements. On a more technical note, the comparison function is a binary predicate that induces a strict weak ordering in the standard mathematical sense. A binary predicate f(x, y) is a function object that has two argument objects `x` and `y` and a return value of `true` or `false`. An ordering imposed on a hash_multimap is a strict weak ordering if the binary predicate is irreflexive, antisymmetric, and transitive and if equivalence is transitive, where two objects `x` and `y` are defined to be equivalent when both f(x, y) and f(y, x) are `false`. If the stronger condition of equality between keys replaces that of equivalence, then the ordering becomes total (in the sense that all the elements are ordered with respect to each other) and the keys matched will be indiscernible from each other.  
   
- 제어된 시퀀스의 실제 요소 순서는 해시 함수, 순서 지정 함수 및 컨테이너 개체에 저장된 해시 테이블의 현재 크기에 따라 달라집니다. 해시 테이블의 현재 크기를 확인할 수 없으므로 제어된 시퀀스의 요소 순서는 일반적으로 예측할 수 없습니다. 요소를 삽입할 경우 어떤 반복기도 무효화되지 않으며, 요소를 제거할 경우 제거된 요소를 명확히 가리키고 있는 반복기만 무효화됩니다.  
+ The actual order of elements in the controlled sequence depends on the hash function, the ordering function, and the current size of the hash table stored in the container object. You cannot determine the current size of the hash table, so you cannot in general predict the order of elements in the controlled sequence. Inserting elements invalidates no iterators, and removing elements invalidates only those iterators that had specifically pointed at the removed elements.  
   
- hash_multimap 클래스에서 제공하는 반복기는 양방향 반복기이지만, [insert](#insert) 및 [hash_multimap](#hash_multimap) 클래스 멤버 함수의 버전은 기능 요구 사항이 양방향 반복기 클래스에서 보장하는 것보다 최소화된 약한 입력 반복기를 템플릿 매개 변수로 사용합니다. 다른 반복기 개념은 관련된 상세 기능별로 범주를 구성합니다. 각 반복기 개념에는 요구 사항의 고유한 hash_multimap이 있으며, 이러한 요구 사항을 적용하는 알고리즘은 해당 반복기 형식이 제공하는 요구 사항으로 가정을 제한해야 합니다. 입력 반복기를 역참조하여 몇 가지 개체를 참조하고 시퀀스의 다음 반복기로 증가되는 경우를 가정할 수 있습니다. 이는 기능의 최소 hash_multimap이지만, 멤버 함수의 컨텍스트에서 반복기 범위 `[First, Last)`에 대해 설명하는 데에는 충분합니다.  
+ The iterator provided by the hash_multimap class is a bidirectional iterator, but the class member functions [insert](#insert) and [hash_multimap](#hash_multimap) have versions that take as template parameters a weaker input iterator, whose functionality requirements are more minimal than those guaranteed by the class of bidirectional iterators. The different iterator concepts form a family related by refinements in their functionality. Each iterator concept has its own hash_multimap of requirements, and the algorithms that work with them must limit their assumptions to the requirements provided by that type of iterator. It may be assumed that an input iterator may be dereferenced to refer to some object and that it may be incremented to the next iterator in the sequence. This is a minimal hash_multimap of functionality, but it is enough to be able to talk meaningfully about a range of iterators `[First, Last)` in the context of the member functions.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[hash_multimap](#hash_multimap)|특정 크기의 목록 또는 특정 값의 요소 또는 특정 `allocator`가 포함된 목록 또는 다른 `hash_multimap`의 복사본으로 생성합니다.|  
+|[hash_multimap](#hash_multimap)|Constructs a list of a specific size or with elements of a specific value or with a specific `allocator` or as a copy of some other `hash_multimap`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|`allocator` 개체의 `hash_multimap` 클래스를 나타내는 형식입니다.|  
-|[const_iterator](#const_iterator)|`const`에 있는 `hash_multimap` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|  
-|[const_pointer](#const_pointer)|`const`에 있는 `hash_multimap` 요소에 대한 포인터를 제공하는 형식입니다.|  
-|[const_reference](#const_reference)|`const` 작업을 읽고 수행하기 위해 `hash_multimap`에 저장된 `const` 요소에 대한 참조를 제공하는 형식입니다.|  
-|[const_reverse_iterator](#const_reverse_iterator)|`const`에 있는 `hash_multimap` 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.|  
-|[difference_type](#difference_type)|부호 있는 정수 형식은 반복기가 가리키는 요소 사이의 범위에 있는 `hash_multimap`의 요소의 개수를 표현하는 데 사용할 수 있습니다.|  
-|[iterator](#iterator)|`hash_multimap`에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|  
-|[key_compare](#key_compare)|`hash_multimap`의 두 요소간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.|  
-|[key_type](#key_type)|`hash_multimap`의 각 요소를 구성하는 정렬 키 개체를 설명하는 형식입니다.|  
-|[mapped_type](#mapped_type)|`hash_multimap` 내에 저장된 데이터 형식을 나타내는 형식입니다.|  
-|[pointer](#pointer)|`hash_multimap`의 요소에 대한 포인터를 제공하는 형식입니다.|  
-|[reference](#reference)|`hash_multimap` 내에 저장된 요소에 대한 참조를 제공하는 형식입니다.|  
-|[reverse_iterator](#reverse_iterator)|역순 `hash_multimap`의 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.|  
-|[size_type](#size_type)|`hash_multimap`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|  
-|[value_type](#value_type)|두 요소를 정렬 키로 비교하여 `hash_multimap`에서 상대적 순서를 결정할 수 있는 함수 개체를 제공하는 형식입니다.|  
+|[allocator_type](#allocator_type)|A type that represents the `allocator` class for the `hash_multimap` object.|  
+|[const_iterator](#const_iterator)|A type that provides a bidirectional iterator that can read a `const` element in the `hash_multimap`.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a `hash_multimap`.|  
+|[const_reference](#const_reference)|A type that provides a reference to a `const` element stored in a `hash_multimap` for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a bidirectional iterator that can read any `const` element in the `hash_multimap`.|  
+|[difference_type](#difference_type)|A signed integer type that can be used to represent the number of elements of a `hash_multimap` in a range between elements pointed to by iterators.|  
+|[iterator](#iterator)|A type that provides a bidirectional iterator that can read or modify any element in a `hash_multimap`.|  
+|[key_compare](#key_compare)|A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the `hash_multimap`.|  
+|[key_type](#key_type)|A type that describes the sort key object that constitutes each element of the `hash_multimap`.|  
+|[mapped_type](#mapped_type)|A type that represents the data type stored in a `hash_multimap`.|  
+|[pointer](#pointer)|A type that provides a pointer to an element in a `hash_multimap`.|  
+|[reference](#reference)|A type that provides a reference to an element stored in a `hash_multimap`.|  
+|[reverse_iterator](#reverse_iterator)|A type that provides a bidirectional iterator that can read or modify an element in a reversed `hash_multimap`.|  
+|[size_type](#size_type)|An unsigned integer type that can represent the number of elements in a `hash_multimap`.|  
+|[value_type](#value_type)|A type that provides a function object that can compare two elements as sort keys to determine their relative order in the `hash_multimap`.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[begin](#begin)|`hash_multimap`의 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.|  
-|[cbegin](#cbegin)|`hash_multimap`의 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|  
-|[cend](#cend)|`hash_multimap`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|  
-|[clear](#clear)|`hash_multimap`의 모든 요소를 지웁니다.|  
-|[count](#count)|키가 매개 변수로 지정된 키와 일치하는 `hash_multimap`의 요소 수를 반환합니다.|  
-|[crbegin](#crbegin)|역순 `hash_multimap`에서 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.|  
-|[crend](#crend)|역순 `hash_multimap`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.|  
-|[emplace](#emplace)|생성된 요소를 `hash_multimap`에 삽입합니다.|  
-|[emplace_hint](#emplace_hint)|배치 힌트를 사용하여 생성된 요소를 `hash_multimap`에 삽입합니다.|  
-|[empty](#empty)|`hash_multimap`가 비어 있는지 여부를 테스트합니다.|  
-|[end](#end)|`hash_multimap`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|  
-|[equal_range](#equal_range)|`hash_multimap`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|  
-|[erase](#erase)|`hash_multimap`의 지정된 위치에서 요소 또는 요소 범위를 제거합니다.|  
-|[find](#find)|지정된 키와 같은 키를 가진 `hash_multimap` 내 요소의 위치를 가리키는 반복기를 반환합니다.|  
-|[get_allocator](#get_allocator)|`allocator`을 생성하는 데 사용되는 `hash_multimap` 개체의 복사본을 반환합니다.|  
-|[insert](#insert)|요소 또는 요소의 범위를 `hash_multimap`의 지정된 위치에 삽입합니다.|  
-|[key_comp](#key_comp)|`hash_multimap`에서 키를 정렬하기 위해 사용하는 비교 개체의 복사본을 검색합니다.|  
-|[lower_bound](#lower_bound)|`hash_multimap`에서 지정된 키보다 같거나 큰 키 값을 가진 첫 번째 요소에 반복기를 반환합니다.|  
-|[max_size](#max_size)|`hash_multimap`의 최대 길이를 반환합니다.|  
-|[rbegin](#rbegin)|역순 `hash_multimap`에서 첫 번째 요소를 참조하는 반복기를 반환합니다.|  
-|[rend](#rend)|역순 `hash_multimap`에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.|  
-|[size](#size)|`hash_multimap`의 새 크기를 지정합니다.|  
-|[swap](#swap)|두 `hash_multimap`의 요소를 교환합니다.|  
-|[upper_bound](#upper_bound)|`hash_multimap`에서 지정된 키보다 큰 키 값을 가진 첫 번째 요소에 반복기를 반환합니다.|  
-|[value_comp](#value_comp)|`hash_multimap`에서 요소 값의 정렬에 사용되는 비교 개체의 복사본을 검색합니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[hash_multimap::operator=](#op_eq)|`hash_multimap`의 요소를 다른 `hash_multimap`의 복사본으로 대체합니다.|  
+|[begin](#begin)|Returns an iterator addressing the first element in the `hash_multimap`.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in the `hash_multimap`.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a `hash_multimap`.|  
+|[clear](#clear)|Erases all the elements of a `hash_multimap`.|  
+|[count](#count)|Returns the number of elements in a `hash_multimap` whose key matches a parameter-specified key.|  
+|[crbegin](#crbegin)|Returns a const iterator addressing the first element in a reversed `hash_multimap`.|  
+|[crend](#crend)|Returns a const iterator that addresses the location succeeding the last element in a reversed `hash_multimap`.|  
+|[emplace](#emplace)|Inserts an element constructed in place into a `hash_multimap`.|  
+|[emplace_hint](#emplace_hint)|Inserts an element constructed in place into a `hash_multimap`, with a placement hint.|  
+|[empty](#empty)|Tests if a `hash_multimap` is empty.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a `hash_multimap`.|  
+|[equal_range](#equal_range)|Returns an iterator that addresses the location succeeding the last element in a `hash_multimap`.|  
+|[erase](#erase)|Removes an element or a range of elements in a `hash_multimap` from specified positions|  
+|[find](#find)|Returns an iterator addressing the location of an element in a `hash_multimap` that has a key equivalent to a specified key.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object used to construct the `hash_multimap`.|  
+|[insert](#insert)|Inserts an element or a range of elements into the `hash_multimap` at a specified position.|  
+|[key_comp](#key_comp)|Retrieves a copy of the comparison object used to order keys in a `hash_multimap`.|  
+|[lower_bound](#lower_bound)|Returns an iterator to the first element in a `hash_multimap` that with a key value that is equal to or greater than that of a specified key.|  
+|[max_size](#max_size)|Returns the maximum length of the `hash_multimap`.|  
+|[rbegin](#rbegin)|Returns an iterator addressing the first element in a reversed `hash_multimap`.|  
+|[rend](#rend)|Returns an iterator that addresses the location succeeding the last element in a reversed `hash_multimap`.|  
+|[size](#size)|Specifies a new size for a `hash_multimap`.|  
+|[swap](#swap)|Exchanges the elements of two `hash_multimap`s.|  
+|[upper_bound](#upper_bound)|Returns an iterator to the first element in a `hash_multimap` that with a key value that is greater than that of a specified key.|  
+|[value_comp](#value_comp)|Retrieves a copy of the comparison object used to order element values in a `hash_multimap`.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<hash_map>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** stdext  
+|||  
+|-|-|  
+|[hash_multimap::operator=](#op_eq)|Replaces the elements of a `hash_multimap` with a copy of another `hash_multimap`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<hash_map>  
+  
+ **Namespace:** stdext  
   
 ##  <a name="allocator_type"></a>  hash_multimap::allocator_type  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap 개체의 할당자 클래스를 나타내는 형식입니다.  
+ A type that represents the allocator class for the hash_multimap object.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `allocator_type`은 템플릿 매개 변수 `Allocator`의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ `allocator_type` is a synonym for the template parameter `Allocator`.  
   
- `Allocator`에 대한 자세한 내용은 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목의 설명 섹션을 참조하세요.  
+ For more information on `Allocator`, see the Remarks section of the [hash_multimap Class](../standard-library/hash-multimap-class.md) topic.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [get_allocator](#get_allocator) for an example using `allocator_type`.  
   
 ##  <a name="begin"></a>  hash_multimap::begin  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap의 첫 번째 요소 주소를 지정하는 반복기를 반환합니다.  
+ Returns an iterator addressing the first element in the hash_multimap.  
   
 ```  
 const_iterator begin() const;
@@ -243,15 +281,15 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap의 첫 번째 요소 또는 빈 hash_multimap 다음의 위치 주소를 지정하는 양방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the first element in the hash_multimap or the location succeeding an empty hash_multimap.  
   
-### <a name="remarks"></a>설명  
- **begin**의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체의 요소는 수정할 수 없습니다. **begin**의 반환 값이 **iterator**에 할당된 경우에는 hash_multimap 개체의 요소를 수정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ If the return value of **begin** is assigned to a `const_iterator`, the elements in the hash_multimap object cannot be modified. If the return value of **begin** is assigned to an **iterator**, the elements in the hash_multimap object can be modified.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_begin.cpp  
@@ -298,18 +336,18 @@ The first element of hm1 is now 1.
 ##  <a name="cbegin"></a>  hash_multimap::cbegin  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap의 첫 번째 요소 주소를 지정하는 상수 반복기를 반환합니다.  
+ Returns a const iterator addressing the first element in the hash_multimap.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- [hash_multimap](../standard-library/hash-multimap-class.md)의 첫 번째 요소 또는 빈 `hash_multimap` 다음의 위치 주소를 지정하는 상수 양방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A const bidirectional iterator addressing the first element in the [hash_multimap](../standard-library/hash-multimap-class.md) or the location succeeding an empty `hash_multimap`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_cbegin.cpp  
@@ -341,25 +379,25 @@ The first element of hm1 is 2.
 ##  <a name="cend"></a>  hash_multimap::cend  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.  
+ Returns a const iterator that addresses the location succeeding the last element in a hash_multimap.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- [hash_multimap](../standard-library/hash-multimap-class.md)에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 상수 양방향 반복기입니다. `hash_multimap`이 비어 있으면 `hash_multimap::cend == hash_multimap::begin`입니다.  
+### <a name="return-value"></a>Return Value  
+ A const bidirectional iterator that addresses the location succeeding the last element in a [hash_multimap](../standard-library/hash-multimap-class.md). If the `hash_multimap` is empty, then `hash_multimap::cend == hash_multimap::begin`.  
   
-### <a name="remarks"></a>설명  
- `cend`는 반복기가 hash_multimap의 끝에 도달했는지 여부를 테스트하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has reached the end of its hash_multimap.  
   
- `cend`에서 반환한 값은 역참조되지 않아야 합니다.  
+ The value returned by `cend` should not be dereferenced.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_cend.cpp  
@@ -392,19 +430,19 @@ The value of last element of hm1 is 30.
 ##  <a name="clear"></a>  hash_multimap::clear  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap의 모든 요소를 지웁니다.  
+ Erases all the elements of a hash_multimap.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 hash_multimap::clear 멤버 함수의 사용을 보여 줍니다.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_multimap::clear member function.  
   
 ```  
 // hash_multimap_clear.cpp  
@@ -442,61 +480,61 @@ The size of the hash_multimap after clearing is 0.
 ##  <a name="const_iterator"></a>  hash_multimap::const_iterator  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap의 **const** 요소 하나를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.  
+ A type that provides a bidirectional iterator that can read a **const** element in the hash_multimap.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
- hash_multimap에 의해 정의된 `const_iterator`는 [value_type](#value_type)의 개체를 가리킵니다. 이러한 개체는 `pair`*\<***constKey, Type**, *>* 형식입니다. 키의 값은 첫 번째 멤버 쌍을 통해 제공되며 매핑된 요소의 값은 쌍의 두 번째 멤버를 통해 제공됩니다.  
+ The `const_iterator` defined by hash_multimap points to objects of [value_type](#value_type), which are of type `pair`*\<***constKey, Type***>*. The value of the key is available through the first member pair, and the value of the mapped element is available through the second member of the pair.  
   
- hash_multimap의 요소를 가리키는 `const_iterator``cIter`를 역참조하려면 **->** 연산자를 사용합니다.  
+ To dereference a `const_iterator` `cIter` pointing to an element in a hash_multimap, use the **->** operator.  
   
- 요소에 대한 키의 값에 액세스하려면 `cIter` -> **first**를 사용합니다. 이 항목은 (\* `cIter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `cIter` -> **second**를 사용합니다. 이 항목은 (\* `cIter`). **first**와 같습니다.  
+ To access the value of the key for the element, use `cIter` -> **first**, which is equivalent to (\* `cIter`). **first**. To access the value of the mapped datum for the element, use `cIter` -> **second**, which is equivalent to (\* `cIter`). **first**.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  `const_iterator`를 사용하는 예제는 [begin](#begin)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin) for an example using `const_iterator`.  
   
 ##  <a name="const_pointer"></a>  hash_multimap::const_pointer  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에서 **const** 요소에 대한 포인터를 제공하는 형식입니다.  
+ A type that provides a pointer to a **const** element in a hash_multimap.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>설명  
- `const_pointer` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element.  
   
- 대부분의 경우 [iterator](#iterator)를 사용하여 hash_multimap 개체의 요소에 액세스해야 합니다.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a hash_multimap object.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
 ##  <a name="const_reference"></a>  hash_multimap::const_reference  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- **const** 작업을 읽고 수행하기 위해 hash_multimap에 저장된 **const** 요소에 대한 참조를 제공하는 형식입니다.  
+ A type that provides a reference to a **const** element stored in a hash_multimap for reading and performing **const** operations.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_const_ref.cpp  
@@ -542,57 +580,57 @@ The data value of 1st element in the hash_multimap is 10.
 ##  <a name="const_reverse_iterator"></a>  hash_multimap::const_reverse_iterator  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap의 모든 **const** 요소를 읽을 수 있는 양방향 반복기를 제공하는 형식입니다.  
+ A type that provides a bidirectional iterator that can read any **const** element in the hash_multimap.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- `const_reverse_iterator` 형식은 요소 값을 수정할 수 없으며 hash_multimap을 역방향으로 반복하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is use to iterate through the hash_multimap in reverse.  
   
- hash_multimap에 의해 정의된 `const_reverse_iterator`는 `pair`*\<***const Key, Type>** 형식의 [value_type](#value_type) 개체를 가리킵니다. 형식에서 첫 번째 멤버는 요소에 대한 키이고 두 번째 멤버는 요소에 의해 포함된 매핑된 데이텀입니다.  
+ The `const_reverse_iterator` defined by hash_multimap points to objects of [value_type](#value_type), which are of type `pair`*\<***const Key, Type>**, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- hash_multimap의 요소를 가리키는 `const_reverse_iterator``crIter`를 역참조하려면 **->** 연산자를 사용합니다.  
+ To dereference a `const_reverse_iterator` `crIter` pointing to an element in a hash_multimap, use the **->** operator.  
   
- 요소에 대한 키의 값에 액세스하려면 `crIter` -> **first**를 사용합니다. 이 항목은 (\* `crIter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `crIter` -> **second**를 사용합니다. 이 항목은 (\* `crIter`). **first**와 같습니다.  
+ To access the value of the key for the element, use `crIter` -> **first**, which is equivalent to (\* `crIter`). **first**. To access the value of the mapped datum for the element, use `crIter` -> **second**, which is equivalent to (\* `crIter`). **first**.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [rend](#rend) for an example of how to declare and use the `const_reverse_iterator`.  
   
 ##  <a name="count"></a>  hash_multimap::count  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 키가 매개 변수로 지정된 키와 일치하는 hash_multimap의 요소 수를 반환합니다.  
+ Returns the number of elements in a hash_multimap whose key matches a parameter-specified key.  
   
 ```  
 size_type count(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- hash_multimap에서 일치하는지 확인할 요소의 키입니다.  
+ The key of the elements to be matched from the hash_multimap.  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap에 정렬 키가 매개 변수 키와 일치하는 요소가 있는 경우 1이고, hash_multimap에 일치하는 키가 포함된 요소가 없는 경우 0입니다.  
+### <a name="return-value"></a>Return Value  
+ 1 if the hash_multimap contains an element whose sort key matches the parameter key; 0 if the hash_multimap doesn't contain an element with a matching key.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 다음 범위에 있는 요소 중에서  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements in the range  
   
  **[lower_bound (** `key` **), upper_bound (** `key` **) )**  
   
- 키 값 `key`를 가진 요소의 수를 반환합니다.  
+ which have a key value `key`.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 hash_multimap::count 멤버 함수의 사용을 보여 줍니다.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_multimap::count member function.  
   
 ```  
 // hash_multimap_count.cpp  
@@ -638,27 +676,27 @@ The number of elements in hm1 with a sort key of 3 is: 0.
 ##  <a name="crbegin"></a>  hash_multimap::crbegin  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 역방향 hash_multimap에서 첫 번째 요소를 주소 지정하는 상수 반복기를 반환합니다.  
+ Returns a const iterator addressing the first element in a reversed hash_multimap.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 역방향 [hash_multimap](../standard-library/hash-multimap-class.md)에서 첫 번째 요소 또는 정방향 `hash_multimap`에서 마지막 요소의 주소를 지정하는 상수 역방향 양방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator addressing the first element in a reversed [hash_multimap](../standard-library/hash-multimap-class.md) or addressing what had been the last element in the unreversed `hash_multimap`.  
   
-### <a name="remarks"></a>설명  
- `crbegin`은 [hash_multimap::begin](#begin)이 `hash_multimap`에서 사용되는 것처럼 역방향 hash_multimap에서 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `crbegin` is used with a reversed hash_multimap just as [hash_multimap::begin](#begin) is used with a `hash_multimap`.  
   
- 반환 값이 `crbegin`이면 `hash_multimap` 개체를 수정할 수 없습니다.  
+ With the return value of `crbegin`, the `hash_multimap` object cannot be modified.  
   
- `crbegin`은 `hash_multimap`을 역방향으로 반복할 때 사용할 수 있습니다.  
+ `crbegin` can be used to iterate through a `hash_multimap` backwards.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_crbegin.cpp  
@@ -690,29 +728,29 @@ The first element of the reversed hash_multimap hm1 is 3.
 ##  <a name="crend"></a>  hash_multimap::crend  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 역방향 hash_multimap에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed hash_multimap.  
   
 ```  
 const_reverse_iterator crend() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 역방향 [hash_multimap](../standard-library/hash-multimap-class.md)에서 마지막 요소 다음의 위치(정방향 `hash_multimap`의 첫 번째 요소 앞의 위치) 주소를 지정하는 상수 역방향 양방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed [hash_multimap](../standard-library/hash-multimap-class.md) (the location that had preceded the first element in the unreversed `hash_multimap`).  
   
-### <a name="remarks"></a>설명  
- `crend`는 [hash_multimap::end](#end)가 hash_multimap에서 사용되는 것처럼 역방향 hash_multimap에서 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed hash_multimap just as [hash_multimap::end](#end) is used with a hash_multimap.  
   
- 반환 값이 `crend`이면 `hash_multimap` 개체를 수정할 수 없습니다.  
+ With the return value of `crend`, the `hash_multimap` object cannot be modified.  
   
- `crend`를 사용하여 역방향 반복기가 hash_multimap 끝에 도달했는지 여부를 테스트할 수 있습니다.  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its hash_multimap.  
   
- `crend`에서 반환한 값은 역참조되지 않아야 합니다.  
+ The value returned by `crend` should not be dereferenced.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_crend.cpp  
@@ -745,22 +783,22 @@ The last element of the reversed hash_multimap hm1 is 3.
 ##  <a name="difference_type"></a>  hash_multimap::difference_type  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 반복기가 가리키는 요소 사이의 범위에 있는 hash_multimap의 요소 수를 나타내는 데 사용할 수 있는 부호 있는 정수 형식입니다.  
+ A signed integer type that can be used to represent the number of elements of a hash_multimap in a range between elements pointed to by iterators.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `difference_type`은 컨테이너의 반복기를 빼거나 더할 때 반환되는 형식입니다. `difference_type`은 일반적으로 `first` 및 `last` 반복기 사이의 *[ first,  last)* 범위 내 요소 수를 나타내는 데 사용됩니다. 여기에는 `first`가 가리키는 요소에서 `last`가 가리키는 요소까지의 요소 범위가 포함됩니다(마지막 요소는 포함되지 않음).  
+### <a name="remarks"></a>Remarks  
+ The `difference_type` is the type returned when subtracting or incrementing through iterators of the container. The `difference_type` is typically used to represent the number of elements in the range *[ first,  last)* between the iterators `first` and `last`, includes the element pointed to by `first` and the range of elements up to, but not including, the element pointed to by `last`.  
   
- 입력 반복기 요구 사항을 충족하는 모든 반복기(set 등의 가역 컨테이너에서 지원하는 양방향 반복기 클래스 포함)에 대해 `difference_type`을 사용할 수는 있지만, 반복기 간의 빼기는 vector와 같은 임의 액세스 컨테이너가 제공하는 임의 액세스 반복기를 통해서만 지원됩니다.  
+ Note that although `difference_type` is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers such as set, subtraction between iterators is only supported by random-access iterators provided by a random-access container such as vector.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_difference_type.cpp  
@@ -823,31 +861,31 @@ The values of the mapped elements are: 10 20 30 20.
 ##  <a name="emplace"></a>  hash_multimap::emplace  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 생성된 요소를 hash_multimap에 삽입합니다.  
+ Inserts an element constructed in place into a hash_multimap.  
   
 ```  
 template <class ValTy>  
 iterator emplace(ValTy&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`val`|[hash_multimap](../standard-library/hash-multimap-class.md)에 삽입할 요소를 이동 생성하는 데 사용되는 값입니다.|  
+|Parameter|Description|  
+|`val`|The value used to move construct an element to be inserted into the [hash_multimap](../standard-library/hash-multimap-class.md).|  
   
-### <a name="return-value"></a>반환 값  
- `emplace` 멤버 함수는 새 요소가 삽입된 위치를 가리키는 반복기를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The `emplace` member function returns an iterator that points to the position where the new element was inserted.  
   
-### <a name="remarks"></a>설명  
- 요소의 [hash_multimap::value_type](#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
+### <a name="remarks"></a>Remarks  
+ The [hash_multimap::value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
- Visual C++ .NET 2003부터 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 없으며, 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ Beginning with Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_emplace.cpp  
@@ -879,9 +917,9 @@ After the emplace insertion, hm1 contains:
 ##  <a name="emplace_hint"></a>  hash_multimap::emplace_hint  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 배치 힌트를 사용하여 hash_multimap에 생성된 요소를 삽입합니다.  
+ Inserts an element constructed in place into a hash_multimap, with a placement hint.  
   
 ```  
 template <class ValTy>  
@@ -890,25 +928,25 @@ iterator emplace_hint(
     ValTy&& val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`val`|`hash_multimap`이 해당 요소(또는 더 일반적으로는 키가 동등하게 정렬된 요소)를 이미 포함하고 있지 않을 경우 [hash_multimap](../standard-library/hash-multimap-class.md)에 삽입되는 요소를 이동 생성하는 데 사용되는 값입니다.|  
-|`_Where`|올바른 삽입 지점 검색을 시작할 위치와 관련된 힌트입니다.|  
+|Parameter|Description|  
+|`val`|The value used to move construct an element to be inserted into the [hash_multimap](../standard-library/hash-multimap-class.md) unless the `hash_multimap` already contains that element (or, more generally, an element whose key is equivalently ordered).|  
+|`_Where`|A hint regarding the place to start searching for the correct point of insertion.|  
   
-### <a name="return-value"></a>반환 값  
- [hash_multimap::emplace](#emplace) 멤버 함수는 새 요소를 `hash_multimap`에 삽입한 위치를 가리키는 반복기를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The [hash_multimap::emplace](#emplace) member function returns an iterator that points to the position where the new element was inserted into the `hash_multimap`.  
   
-### <a name="remarks"></a>설명  
- 요소의 [hash_multimap::value_type](#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
+### <a name="remarks"></a>Remarks  
+ The [hash_multimap::value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
- 삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.  
+ Insertion can occur in amortized constant time, instead of logarithmic time, if the insertion point immediately follows `_Where`.  
   
- Visual C++ .NET 2003부터 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 없으며, 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ Beginning with Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_emplace_hint.cpp  
@@ -940,21 +978,21 @@ After the emplace insertion, hm1 contains:
 ##  <a name="empty"></a>  hash_multimap::empty  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap이 비어 있는지 테스트합니다.  
+ Tests if a hash_multimap is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap이 비어 있으면 **true**이고 hash_multimap이 비어 있지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multimap is empty; **false** if the hash_multimap is nonempty.  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_empty.cpp  
@@ -991,9 +1029,9 @@ The hash_multimap hm2 is empty.
 ##  <a name="end"></a>  hash_multimap::end  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.  
+ Returns an iterator that addresses the location succeeding the last element in a hash_multimap.  
   
 ```  
 const_iterator end() const;
@@ -1001,17 +1039,17 @@ const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 양방향 반복기입니다. hash_multimap이 비어 있으면 hash_multimap::end == hash_multimap::begin입니다.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator that addresses the location succeeding the last element in a hash_multimap. If the hash_multimap is empty, then hash_multimap::end == hash_multimap::begin.  
   
-### <a name="remarks"></a>설명  
- **end**는 반복기가 hash_multimap의 끝에 도달했는지 여부를 테스트하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has reached the end of its hash_multimap.  
   
- **end**에서 반환한 값을 역참조해서는 안 됩니다.  
+ The value returned by **end** should not be dereferenced.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_end.cpp  
@@ -1062,9 +1100,9 @@ The value of last element of hm1 is now 20.
 ##  <a name="equal_range"></a>  hash_multimap::equal_range  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 지정된 키보다 더 큰 키를 가진 hash_multimap의 첫 번째 요소와 지정된 키보다 더 크거나 같은 키를 가진 hash_multimap의 첫 번째 요소에 반복기의 쌍을 각각 반환합니다.  
+ Returns a pair of iterators respectively to the first element in a hash_multimap with a key that is greater than a specified key and to the first element in the hash_multimap with a key that is equal to or greater than the key.  
   
 ```  
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
@@ -1072,19 +1110,19 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- 검색 중인 hash_multimap에서 요소의 정렬 키와 비교할 인수 키입니다.  
+ The argument key to be compared with the sort key of an element from the hash_multimap being searched.  
   
-### <a name="return-value"></a>반환 값  
- 반복기 쌍. 여기서 첫 번째 반복기는 키의 [lower_bound](#lower_bound)이고 두 번째 반복기는 키의 [upper_bound](#upper_bound)입니다.  
+### <a name="return-value"></a>Return Value  
+ A pair of iterators such that the first is the [lower_bound](#lower_bound) of the key and the second is the [upper_bound](#upper_bound) of the key.  
   
- 구성원 함수가 반환하는 `pr` 쌍의 첫 번째 반복기에 액세스하려면 `pr`. **first**를 사용하고 하한 반복기를 역참조하려면 \*( `pr`. **first**)를 사용합니다. 구성원 함수가 반환하는 `pr` 쌍의 두 번째 반복기에 액세스하려면 `pr`. **second**를 사용하고 상한 반복기를 역참조하려면 \*( `pr`. **second**)를 사용합니다.  
+ To access the first iterator of a pair `pr` returned by the member function, use `pr`. **first** and to dereference the lower bound iterator, use \*( `pr`. **first**). To access the second iterator of a pair `pr` returned by the member function, use `pr`. **second** and to dereference the upper bound iterator, use \*( `pr`. **second**).  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_equal_range.cpp  
@@ -1150,9 +1188,9 @@ The hash_multimap hm1 doesn't have an element with a key less than 4.
 ##  <a name="erase"></a>  hash_multimap::erase  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 지정된 위치에서 hash_multimap의 요소 또는 요소의 범위를 제거하거나 지정된 키와 일치하는 요소를 제거합니다.  
+ Removes an element or a range of elements in a hash_multimap from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(iterator _Where);
@@ -1162,31 +1200,31 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `_Where`  
- hash_multimap에서 제거할 요소의 위치입니다.  
+ Position of the element to be removed from the hash_multimap.  
   
  `first`  
- hash_multimap에서 제거된 첫 번째 요소의 위치입니다.  
+ Position of the first element removed from the hash_multimap.  
   
  `last`  
- hash_multimap에서 제거된 마지막 요소 바로 뒤의 위치입니다.  
+ Position just beyond the last element removed from the hash_multimap.  
   
  `key`  
- hash_multimap에서 제거할 요소의 키입니다.  
+ The key of the elements to be removed from the hash_multimap.  
   
-### <a name="return-value"></a>반환 값  
- 처음 두 멤버 함수의 경우 제거된 요소 뒤에 남은 첫 번째 요소를 지정하는 양방향 반복기이거나 이러한 요소가 없을 경우 hash_multimap의 끝에 대한 포인터입니다.  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or a pointer to the end of the hash_multimap if no such element exists.  
   
- 세 번째 멤버 함수의 경우 hash_multimap에서 제거된 요소의 수를 반환합니다.  
+ For the third member function, returns the number of elements that have been removed from the hash_multimap.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 예외를 throw하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The member functions never throw an exception.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 hash_multimap::erase 멤버 함수의 사용을 보여 줍니다.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_multimap::erase member function.  
   
 ```  
 // hash_multimap_erase.cpp  
@@ -1274,9 +1312,9 @@ After another element with a key equal to that of the
 ##  <a name="find"></a>  hash_multimap::find  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 지정된 키와 같은 키를 가진 hash_multimap 내 요소의 첫 번째 위치를 가리키는 반복기를 반환합니다.  
+ Returns an iterator addressing the first location of an element in a hash_multimap that has a key equivalent to a specified key.  
   
 ```  
 iterator find(const Key& key);
@@ -1284,21 +1322,21 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- 검색 중인 hash_multimap에서 요소의 정렬 키와 일치 여부를 확인할 키입니다.  
+ The key to be matched by the sort key of an element from the hash_multimap being searched.  
   
-### <a name="return-value"></a>반환 값  
- 지정된 키를 포함하는 요소의 첫 번째 위치 또는 해당 키와 일치하는 항목이 없는 경우 hash_multimap의 마지막 요소 다음 위치에 대한 주소를 지정하는 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ An iterator that addresses the first location of an element with a specified key, or the location succeeding the last element in the hash_multimap if no match is found for the key.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 보다 작음 비교 가능 관계를 기반으로 순서를 적용하는 이진 조건자에서 정렬 키가 인수 키와 **같은** hash_multimap 내 요소의 주소를 지정하는 반복기를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The member function returns an iterator that addresses an element in the hash_multimap whose sort key is **equivalent** to the argument key under a binary predicate that induces an ordering based on a less than comparability relation.  
   
- **find**의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. **find**의 반환 값이 **iterator**에 할당되는 경우에는 hash_multimap 개체를 수정할 수 있습니다.  
+ If the return value of **find** is assigned to a `const_iterator`, the hash_multimap object cannot be modified. If the return value of **find** is assigned to an **iterator**, the hash_multimap object can be modified.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_find.cpp  
@@ -1369,23 +1407,23 @@ This is not the last element of hash_multimap hm1.
 ##  <a name="get_allocator"></a>  hash_multimap::get_allocator  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap을 생성하는 데 사용되는 할당자 개체의 복사본을 반환합니다.  
+ Returns a copy of the allocator object used to construct the hash_multimap.  
   
 ```  
 Allocator get_allocator() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap에서 사용되는 할당자입니다.  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the hash_multimap.  
   
-### <a name="remarks"></a>설명  
- hash_multimap 클래스의 할당자는 클래스가 저장소를 관리하는 방법을 지정합니다. C++ 표준 라이브러리 컨테이너 클래스와 함께 제공되는 기본 할당자를 사용하면 대부분의 프로그래밍 요구 사항을 충족할 수 있습니다. 할당자 클래스를 직접 작성하고 사용하는 방법에 대해서는 고급 C++ 항목에서 다룹니다.  
+### <a name="remarks"></a>Remarks  
+ Allocators for the hash_multimap class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_get_allocator.cpp  
@@ -1445,9 +1483,9 @@ int main( )
 ##  <a name="hash_multimap"></a>  hash_multimap::hash_multimap  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 비어 있거나 일부 다른 hash_multimap의 전체 또는 부분에 대한 복사본인 hash_multimap을 생성합니다.  
+ Constructs a hash_multimap that is empty or is a copy of all or part of some other hash_multimap.  
   
 ```  
 hash_multimap();
@@ -1497,41 +1535,41 @@ hash_multimap(
     const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`Al`|이 hash_multimap 개체에 사용할 저장소 할당자 클래스로, 기본값은 `Allocator`입니다.|  
-|`Comp`|map의 요소 순서를 지정하는 데 사용되는 `const``Traits` 형식의 비교 함수로, 기본값은 `Traits`입니다.|  
-|`Right`|생성된 set을 복사할 map입니다.|  
-|`First`|복사할 요소의 범위에서 첫 번째 요소의 위치입니다.|  
-|`Last`|복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.|  
-|`IList`|복사할 원본 initializer_list입니다.|  
+|Parameter|Description|  
+|`Al`|The storage allocator class to be used for this hash_multimap object, which defaults to `Allocator`.|  
+|`Comp`|The comparison function of type `const Traits` used to order the elements in the map, which defaults to `Traits`.|  
+|`Right`|The map of which the constructed set is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list to copy from.|  
   
-### <a name="remarks"></a>설명  
- 모든 생성자는 hash_multimap의 메모리 저장소를 관리하며 나중에 [get_allocator](#get_allocator)를 호출하여 반환할 수 있는 할당자 개체 형식을 저장합니다. allocator 매개 변수는 대체 할당자를 대체하는 데 사용되는 전처리 매크로 및 클래스 선언에서 생략되는 경우가 많습니다.  
+### <a name="remarks"></a>Remarks  
+ All constructors store a type of allocator object that manages memory storage for the hash_multimap and that can later be returned by calling [get_allocator](#get_allocator). The allocator parameter is often omitted in the class declarations and preprocessing macros are used to substitute alternative allocators.  
   
- 모든 생성자는 해당 hash_multimap을 초기화합니다.  
+ All constructors initialize their hash_multimap.  
   
- 모든 생성자는 hash_multimap의 키 간 순서를 설정하는 데 사용되며 나중에 [key_comp](#key_comp)를 호출하여 반환할 수 있는 `Traits` 형식의 함수 개체를 저장합니다.  
+ All constructors store a function object of type `Traits` that is used to establish an order among the keys of the hash_multimap and can later be returned by calling [key_comp](#key_comp).  
   
- 처음 3개 생성자는 빈 초기 hash_multimap을 지정하고, 두 번째 생성자는 요소의 순서를 설정하는 데 사용할 비교 함수(`Comp`)의 형식을 지정하며, 세 번째 생성자는 사용할 할당자 형식(`_Al`)을 명시적으로 지정합니다. `explicit` 키워드를 사용하는 경우 특정 종류의 자동 형식 변환이 수행되지 않습니다.  
+ The first three constructors specify an empty initial hash_multimap; the second specifies the type of comparison function ( `Comp`) to be used in establishing the order of the elements and the third explicitly specifies the allocator type ( `_Al`) to be used. The keyword `explicit` suppresses certain kinds of automatic type conversion.  
   
- 네 번째 생성자는 `Right` hash_multimap의 복사본을 지정합니다.  
+ The fourth constructor specifies a copy of the hash_multimap `Right`.  
   
- 다음 3개 생성자는 map의 범위 `First, Last)`를 복사하며, 범위 내에서 클래스 **Traits** 및 allocator의 비교 함수 형식을 지정하는 명시도는 계속 높아집니다.  
+ The next three constructors copy the range `First, Last)` of a map with increasing explicitness in specifying the type of comparison function of class **Traits** and allocator.  
   
- 여덟 번째 생성자는 hash_multimap `Right`를 이동합니다.  
+ The eighth constructor moves the hash_multimap `Right`.  
   
- 마지막 3개 생성자는 initializer_list를 사용합니다.  
+ The final three constructors use an initializer_list.  
   
 ##  <a name="insert"></a>  hash_multimap::insert  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에 요소 또는 요소의 범위를 삽입합니다.  
+ Inserts an element or a range of elements into a hash_multimap.  
   
 ```  
 iterator insert(
@@ -1557,79 +1595,79 @@ iterator insert(
     ValTy&& Val);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`Val`|해당 요소를 이미 포함하고 있지 않을 경우 또는 보다 일반적으로 키가 동등하게 정렬된 요소를 이미 포함하고 있지 않을 경우 hash_multimap에 삽입되는 요소의 값입니다.|  
-|`Where`|올바른 삽입 지점 검색을 시작할 위치에 대한 힌트입니다.|  
-|`First`|맵에서 복사할 첫 번째 요소의 위치입니다.|  
-|`Last`|맵에서 복사할 마지막 요소 바로 다음 위치입니다.|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the hash_multimap unless it already contains that element, or more generally, unless it already contains an element whose key is equivalently ordered.|  
+|`Where`|A hint about where to start searching for the correct point of insertion.|  
+|`First`|The position of the first element to be copied from a map.|  
+|`Last`|The position just beyond the last element to be copied from a map.|  
   
-### <a name="return-value"></a>반환 값  
- 처음 두 `insert` 멤버 함수는 새 요소가 삽입된 위치를 가리키는 반복기를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The first two `insert` member functions return an iterator that points to the position where the new element was inserted.  
   
- 세 번째 멤버 함수는 삽입할 요소에 initializer_list를 사용합니다.  
+ The third member function uses an initializer_list for the elements to be inserted.  
   
- 네 번째 멤버 함수는 지정된 집합의 `[First, Last)` 범위에서 반복기가 주소를 지정하는 각 요소에 해당하는 맵에 요소 값의 시퀀스를 삽입합니다.  
+ The fourth member function inserts the sequence of element values into a map that corresponds to each element addressed by an iterator in the range `[First, Last)` of a specified set.  
   
- 마지막 두 `insert` 멤버 함수는 삽입된 값을 이동-생성한다는 점을 제외하고 처음 두 함수와 똑같이 동작합니다.  
+ The last two `insert` member functions behave the same as the first two, except that they move-construct the inserted value.  
   
-### <a name="remarks"></a>설명  
- 요소의 [value_type](#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
+### <a name="remarks"></a>Remarks  
+ The [value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair in which the first component is equal to the key value and the second component is equal to the data value of the element.  
   
- 삽입 지점이 `insert`바로 뒤에 오면 로그 시간 대신 `Where`의 힌트 버전에 대한 분할 상환 상수 시간에 삽입이 발생할 수 있습니다.  
+ Insertion can occur in amortized constant time for the hint version of `insert`, instead of logarithmic time, if the insertion point immediately follows `Where`.  
   
 ##  <a name="iterator"></a>  hash_multimap::iterator  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에 있는 모든 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.  
+ A type that provides a bidirectional iterator that can read or modify any element in a hash_multimap.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- hash_multimap에 의해 정의된 **iterator**는 `pair`\< **const Key, Type**> 형식의 [value_type](#value_type) 개체를 가리킵니다. 형식에서 첫 번째 멤버는 요소에 대한 키이고 두 번째 멤버는 요소에 의해 포함된 매핑된 데이텀입니다.  
+### <a name="remarks"></a>Remarks  
+ The **iterator** defined by hash_multimap points to objects of [value_type](#value_type), which are of type `pair`\< **const Key, Type**>, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- hash_multimap의 요소를 가리키는 **반복기**`Iter`를 역참조하려면 **->** 연산자를 사용합니다.  
+ To dereference an **iterator**`Iter` pointing to an element in a hash_multimap, use the **->** operator.  
   
- 요소에 대한 키의 값에 액세스하려면 `Iter` -> **first**를 사용합니다. 이 항목은 (\* `Iter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `Iter` -> **second**를 사용합니다. 이 항목은 (\* `Iter`). **first**와 같습니다.  
+ To access the value of the key for the element, use `Iter` -> **first**, which is equivalent to (\* `Iter`). **first**. To access the value of the mapped datum for the element, use `Iter` -> **second**, which is equivalent to (\* `Iter`). **first**.  
   
- **iterator** 형식은 요소의 값을 수정할 때 사용할 수 있습니다.  
+ A type **iterator** can be used to modify the value of an element.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  **iterator**를 선언하고 사용하는 방법의 예제는 [begin](#begin)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin) for an example of how to declare and use **iterator**.  
   
 ##  <a name="key_comp"></a>  hash_multimap::key_comp  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에서 키를 정렬하기 위해 사용하는 비교 개체의 복사본을 검색합니다.  
+ Retrieves a copy of the comparison object used to order keys in a hash_multimap.  
   
 ```  
 key_compare key_comp() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap이 요소의 순서를 지정하는 데 사용하는 함수 개체를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the function object that a hash_multimap uses to order its elements.  
   
-### <a name="remarks"></a>설명  
- 저장된 개체는 멤버 함수  
+### <a name="remarks"></a>Remarks  
+ The stored object defines the member function  
   
- **bool operator(const Key&** `left` **, const Key&** `right` **);**를  
+ **bool operator(const Key&** `left` **, const Key&** `right` **);**  
   
- 정의합니다. 이 함수는 `left`가 앞에 오며 정렬 순서가 `right`와 같지 않으면 **true**를 반환합니다.  
+ which returns **true** if `left` precedes and is not equal to `right` in the sort order.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_key_comp.cpp  
@@ -1681,51 +1719,51 @@ int main( )
 ##  <a name="key_compare"></a>  hash_multimap::key_compare  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap의 두 요소 간 상대적 순서를 결정하는 두 정렬 키를 비교할 수 있는 함수 개체를 제공하는 형식입니다.  
+ A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the hash_multimap.  
   
 ```  
 typedef Traits key_compare;  
 ```  
   
-### <a name="remarks"></a>설명  
- **key_compare**는 템플릿 매개 변수 `Traits`의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ **key_compare** is a synonym for the template parameter `Traits`.  
   
- `Traits`에 대한 자세한 내용은 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목을 참조하세요.  
+ For more information on `Traits` see the [hash_multimap Class](../standard-library/hash-multimap-class.md) topic.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [key_comp](#key_comp) for an example of how to declare and use `key_compare`.  
   
 ##  <a name="key_type"></a>  hash_multimap::key_type  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap의 각 요소를 구성하는 정렬 키 개체를 설명하는 형식입니다.  
+ A type that describes the sort key object that constitutes each element of the hash_multimap.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `key_type`은 템플릿 매개 변수 `Key`의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ `key_type` is a synonym for the template parameter `Key`.  
   
- `Key`에 대한 자세한 내용은 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목의 설명 섹션을 참조하세요.  
+ For more information on `Key`, see the Remarks section of the [hash_multimap Class](../standard-library/hash-multimap-class.md) topic.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [value_type](#value_type) for an example of how to declare and use `key_compare`.  
   
 ##  <a name="lower_bound"></a>  hash_multimap::lower_bound  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에서 지정된 키보다 크거나 같은 키를 가진 첫 번째 요소에 반복기를 반환합니다.  
+ Returns an iterator to the first element in a hash_multimap with a key that is equal to or greater than a specified key.  
   
 ```  
 iterator lower_bound(const Key& key);
@@ -1733,19 +1771,19 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- 검색 중인 hash_multimap에서 요소의 정렬 키와 비교할 인수 키입니다.  
+ The argument key to be compared with the sort key of an element from the hash_multimap being searched.  
   
-### <a name="return-value"></a>반환 값  
- 인수 키보다 크거나 같은 키가 들어 있는 hash_multimap 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 hash_multimap에서 마지막 요소 다음 위치의 주소를 지정하는 [iterator](#iterator) 또는 [const_iterator](#const_iterator)입니다.  
+### <a name="return-value"></a>Return Value  
+ An [iterator](#iterator) or [const_iterator](#const_iterator) that addresses the location of an element in a hash_multimap with a key that is equal to or greater than the argument key, or that addresses the location succeeding the last element in the hash_multimap if no match is found for the key.  
   
- `lower_bound`의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. `lower_bound`의 반환 값이 **iterator**에 할당되는 경우에는 hash_multimap 개체를 수정할 수 있습니다.  
+ If the return value of `lower_bound` is assigned to a `const_iterator`, the hash_multimap object cannot be modified. If the return value of `lower_bound` is assigned to an **iterator**, the hash_multimap object can be modified.  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_lower_bound.cpp  
@@ -1817,42 +1855,42 @@ This is not the last element of hash_multimap hm1.
 ##  <a name="mapped_type"></a>  hash_multimap::mapped_type  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에 저장된 데이터 형식을 나타내는 형식입니다.  
+ A type that represents the data type stored in a hash_multimap.  
   
 ```  
 typedef Type mapped_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `mapped_type`은 템플릿 매개 변수 `Type`의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ `mapped_type` is a synonym for the template parameter `Type`.  
   
- `Type`에 대한 자세한 내용은 [hash_multimap 클래스](../standard-library/hash-multimap-class.md) 항목을 참조하세요.  
+ For more information on `Type` see the [hash_multimap Class](../standard-library/hash-multimap-class.md) topic.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [value_type](#value_type) for an example of how to declare and use `key_type`.  
   
 ##  <a name="max_size"></a>  hash_multimap::max_size  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap의 최대 길이를 반환합니다.  
+ Returns the maximum length of the hash_multimap.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap의 최대 허용 길이입니다.  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the hash_multimap.  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_max_size.cpp  
@@ -1876,9 +1914,9 @@ int main( )
 ##  <a name="op_eq"></a>  hash_multimap::operator=  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap의 요소를 다른 hash_multimap의 복사본으로 바꿉니다.  
+ Replaces the elements of the hash_multimap with a copy of another hash_multimap.  
   
 ```  
 hash_multimap& operator=(const hash_multimap& right);
@@ -1886,17 +1924,17 @@ hash_multimap& operator=(const hash_multimap& right);
 hash_multimap& operator=(hash_multimap&& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|매개 변수|설명|  
-|`right`|`hash_multimap`에 복사되는 [hash_multimap](../standard-library/hash-multimap-class.md)입니다.|  
+|Parameter|Description|  
+|`right`|The [hash_multimap](../standard-library/hash-multimap-class.md) being copied into the `hash_multimap`.|  
   
-### <a name="remarks"></a>설명  
- `hash_multimap`는 `operator=`에서 기존 요소를 지운 후에 `right`의 내용을 `hash_multimap`로 복사하거나 이동합니다.  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a `hash_multimap`, `operator=` either copies or moves the contents of `right` into the `hash_multimap`.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_operator_as.cpp  
@@ -1937,27 +1975,27 @@ int main( )
 ##  <a name="pointer"></a>  hash_multimap::pointer  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에서 요소에 대한 포인터를 제공하는 형식입니다.  
+ A type that provides a pointer to an element in a hash_multimap.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>설명  
- 형식 **pointer**는 요소의 값을 수정할 때 사용할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element.  
   
- 대부분의 경우 [iterator](#iterator)를 사용하여 hash_multimap 개체의 요소에 액세스해야 합니다.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a hash_multimap object.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
 ##  <a name="rbegin"></a>  hash_multimap::rbegin  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 역방향 hash_multimap에서 첫 번째 요소를 주소 지정하는 반복기를 반환합니다.  
+ Returns an iterator addressing the first element in a reversed hash_multimap.  
   
 ```  
 const_reverse_iterator rbegin() const;
@@ -1965,19 +2003,19 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 역방향 hash_multimap에서 첫 번째 요소 또는 정방향 hash_multimap에서 마지막 요소의 주소를 지정하는 역방향 양방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator addressing the first element in a reversed hash_multimap or addressing what had been the last element in the unreversed hash_multimap.  
   
-### <a name="remarks"></a>설명  
- `rbegin`은 [begin](#begin)이 hash_multimap에서 사용되는 것처럼 역방향 hash_multimap에서 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed hash_multimap just as [begin](#begin) is used with a hash_multimap.  
   
- `rbegin`의 반환 값이 `const_reverse_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. `rbegin`의 반환 값이 `reverse_iterator`에 할당된 경우에는 hash_multimap 개체를 수정할 수 있습니다.  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, then the hash_multimap object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, then the hash_multimap object can be modified.  
   
- `rbegin`은 hash_multimap을 역방향으로 반복할 때 사용할 수 있습니다.  
+ `rbegin` can be used to iterate through a hash_multimap backwards.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_rbegin.cpp  
@@ -2040,18 +2078,18 @@ After the erasure, the first element
 ##  <a name="reference"></a>  hash_multimap::reference  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에 저장된 요소에 대한 참조를 제공하는 형식입니다.  
+ A type that provides a reference to an element stored in a hash_multimap.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::reference reference;  
 ```  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_reference.cpp  
@@ -2104,9 +2142,9 @@ The modified data value of first element is 15.
 ##  <a name="rend"></a>  hash_multimap::rend  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 역방향 hash_multimap에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 반복기를 반환합니다.  
+ Returns an iterator that addresses the location succeeding the last element in a reversed hash_multimap.  
   
 ```  
 const_reverse_iterator rend() const;
@@ -2114,21 +2152,21 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 역방향 hash_multimap에서 마지막 요소 다음의 위치(정방향 hash_multimap의 첫 번째 요소 앞의 위치) 주소를 지정하는 역방향 양방향 반복기입니다.  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed hash_multimap (the location that had preceded the first element in the unreversed hash_multimap).  
   
-### <a name="remarks"></a>설명  
- `rend`은 [end](#end)가 hash_multimap에서 사용되는 것처럼 역방향 hash_multimap에서 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed hash_multimap just as [end](#end) is used with a hash_multimap.  
   
- `rend`의 반환 값이 [const_reverse_iterator](#const_reverse_iterator)에 할당되는 경우에는 hash_multimap 개체를 수정할 수 없습니다. `rend`의 반환 값이 [reverse_iterator](#reverse_iterator)에 할당되는 경우에는 hash_multimap 개체를 수정할 수 있습니다.  
+ If the return value of `rend` is assigned to a [const_reverse_iterator](#const_reverse_iterator), then the hash_multimap object cannot be modified. If the return value of `rend` is assigned to a [reverse_iterator](#reverse_iterator), then the hash_multimap object can be modified.  
   
- `rend`를 사용하여 역방향 반복기가 hash_multimap 끝에 도달했는지 여부를 테스트할 수 있습니다.  
+ `rend` can be used to test to whether a reverse iterator has reached the end of its hash_multimap.  
   
- `rend`에서 반환한 값은 역참조되지 않아야 합니다.  
+ The value returned by `rend` should not be dereferenced.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_rend.cpp  
@@ -2192,43 +2230,43 @@ After the erasure, the last element in the reversed hash_multimap is 2.
 ##  <a name="reverse_iterator"></a>  hash_multimap::reverse_iterator  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 역방향 hash_multimap의 요소를 읽거나 수정할 수 있는 양방향 반복기를 제공하는 형식입니다.  
+ A type that provides a bidirectional iterator that can read or modify an element in a reversed hash_multimap.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>설명  
- `reverse_iterator` 형식은 hash_multimap을 역방향으로 반복하는 데 사용됩니다.  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` is used to iterate through the hash_multimap in reverse.  
   
- hash_multimap에 의해 정의된 `reverse_iterator`는 `pair`\< **const Key, Type**> 형식의 [value_type](#value_type) 개체를 가리킵니다. 키의 값은 첫 번째 멤버 쌍을 통해 제공되며 매핑된 요소의 값은 쌍의 두 번째 멤버를 통해 제공됩니다.  
+ The `reverse_iterator` defined by hash_multimap points to objects of [value_type](#value_type), which are of type `pair`\< **const Key, Type**>. The value of the key is available through the first member pair and the value of the mapped element is available through the second member of the pair.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin) for an example of how to declare and use `reverse_iterator`.  
   
 ##  <a name="size"></a>  hash_multimap::size  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에 있는 요소 수를 반환합니다.  
+ Returns the number of elements in the hash_multimap.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap의 현재 길이입니다.  
+### <a name="return-value"></a>Return Value  
+ The current length of the hash_multimap.  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  다음 예제에서는 hash_multimap::size 멤버 함수의 사용을 보여 줍니다.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_multimap::size member function.  
   
 ```  
 // hash_multimap_size.cpp  
@@ -2262,41 +2300,41 @@ The hash_multimap length is now 2.
 ##  <a name="size_type"></a>  hash_multimap::size_type  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에서 요소 수를 계산하는 부호 없는 정수 형식입니다.  
+ An unsigned integer type that counts the number of elements in a hash_multimap.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
-  `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.  
+### <a name="example"></a>Example  
+  See the example for [size](#size) for an example of how to declare and use `size_type`  
   
 ##  <a name="swap"></a>  hash_multimap::swap  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 두 hash_multimap의 요소를 교환합니다.  
+ Exchanges the elements of two hash_multimaps.  
   
 ```  
 void swap(hash_multimap& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 교환할 요소를 제공하는 hash_multimap 또는 hash_multimap과 요소를 교환할 hash_multimap입니다.  
+ The hash_multimap providing the elements to be swapped or the hash_multimap whose elements are to be exchanged with those of the hash_multimap.  
   
-### <a name="remarks"></a>설명  
- 멤버 함수는 해당 요소를 교환할 두 hash_multimap의 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ The member function invalidates no references, pointers, or iterators that designate elements in the two hash_multimaps whose elements are being exchanged.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_swap.cpp  
@@ -2351,9 +2389,9 @@ After swapping with hm3, hash_multimap hm1 is: 300.
 ##  <a name="upper_bound"></a>  hash_multimap::upper_bound  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에서 지정된 키보다 큰 키를 가진 첫 번째 요소에 반복기를 반환합니다.  
+ Returns an iterator to the first element in a hash_multimap with a key that is greater than a specified key.  
   
 ```  
 iterator upper_bound(const Key& key);
@@ -2361,19 +2399,19 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `key`  
- 검색 중인 hash_multimap에서 요소의 정렬 키와 비교할 인수 키입니다.  
+ The argument key to be compared with the sort key of an element from the hash_multimap being searched.  
   
-### <a name="return-value"></a>반환 값  
- 인수 키보다 더 큰 키가 들어 있는 hash_multimap 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 hash_multimap에서 마지막 요소 다음 위치의 주소를 지정하는 [iterator](#iterator) 또는 [const_iterator](#const_iterator)입니다.  
+### <a name="return-value"></a>Return Value  
+ An [iterator](#iterator) or [const_iterator](#const_iterator) that addresses the location of an element in a hash_multimap with a key that is greater than the argument key, or that addresses the location succeeding the last element in the hash_multimap if no match is found for the key.  
   
- `upper_bound`의 반환 값이 `const_iterator`에 할당된 경우 hash_multimap 개체는 수정할 수 없습니다. `upper_bound`의 반환 값이 **iterator**에 할당되는 경우에는 hash_multimap 개체를 수정할 수 있습니다.  
+ If the return value of `upper_bound` is assigned to a `const_iterator`, the hash_multimap object cannot be modified. If the return value of `upper_bound` is assigned to a **iterator**, the hash_multimap object can be modified.  
   
-### <a name="remarks"></a>설명  
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_upper_bound.cpp  
@@ -2436,27 +2474,27 @@ The first element of hm1 with a key greater than
 ##  <a name="value_comp"></a>  hash_multimap::value_comp  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 멤버 함수는 키 값을 비교하여 hash_multimap의 요소 순서를 결정하는 함수 개체를 반환합니다.  
+ The member function returns a function object that determines the order of elements in a hash_multimap by comparing their key values.  
   
 ```  
 value_compare value_comp() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- hash_multimap이 요소의 순서를 지정하는 데 사용하는 비교 함수 개체를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ Returns the comparison function object that a hash_multimap uses to order its elements.  
   
-### <a name="remarks"></a>설명  
- hash_multimap *m*의 두 요소 *e*1(*k*1*, d*1) 및 *e*2(*k*2*, d*2)가 [value_type](#value_type)인 경우(여기서 *k*1 및 *k*2는 [key_type](#key_type) 형식의 요소 키이고 `d`1 및 `d`2는 [mapped_type](#mapped_type) 형식의 요소 데이터임) *m.*`value_comp`( )(*e*1*, e*2)는 *m.*`key_comp`( )(*k*1*, k*2)와 같습니다. 저장된 개체는 멤버 함수  
+### <a name="remarks"></a>Remarks  
+ For a hash_multimap *m*, if two elements *e*1( *k*1 *, d*1) and *e*2( *k*2 *, d*2) are objects of type [value_type](#value_type), where *k*1 and *k*2 are their keys of type [key_type](#key_type) and `d`1 and `d`2 are their data of type [mapped_type](#mapped_type), then *m.*`value_comp`( )( *e*1 *, e*2) is equivalent to *m.*`key_comp`( ) ( *k*1 *, k*2). A stored object defines the member function  
   
- **bool operator**(**value_type&**`left`, **value_type&** `right`);를  
+ **bool operator**( **value_type&**`left`, **value_type&** `right`);  
   
- 정의합니다. 이 함수는 `left`의 키 값이 앞에 오고 정렬 순서의 `right` 키 값과 같지 않으면 **true**를 반환합니다.  
+ which returns **true** if the key value of `left` precedes and is not equal to the key value of `right` in the sort order.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_value_comp.cpp  
@@ -2506,20 +2544,20 @@ int main( )
 ##  <a name="value_type"></a>  hash_multimap::value_type  
   
 > [!NOTE]
->  이 API는 더 이상 사용되지 않습니다. [unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)를 대신 사용하는 것이 좋습니다.  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- hash_multimap에 저장된 개체의 형식을 나타내는 형식입니다.  
+ A type that represents the type of object stored in a hash_multimap.  
   
 ```  
 typedef pair<const Key, Type> value_type;  
 ```  
   
-### <a name="remarks"></a>설명  
- `value_type`쌍으로 선언 된\<const [key_type](#key_type), [mapped_type](#mapped_type)> 쌍으로 연결 하지 및\<key_type, mapped_type > 비상수 반복기 또는 참조를 사용 하 여 연관 컨테이너의 키 변경 되지 않을 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ `value_type` is declared to be pair\<const [key_type](#key_type), [mapped_type](#mapped_type)> and not pair\<key_type, mapped_type> because the keys of an associative container may not be changed using a nonconstant iterator or reference.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 구성원은 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_value_type.cpp  
@@ -2578,8 +2616,8 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

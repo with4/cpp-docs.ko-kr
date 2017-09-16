@@ -1,5 +1,5 @@
 ---
-title: "CDaoFieldExchange 클래스 | Microsoft 문서"
+title: CDaoFieldExchange Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,15 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DAO (Data Access Objects), record field exchange (DFX)
-- field exchange
-- DFX (DAO record field exchange)
-- RFX (record field exchange), DAO classes
-- field exchange, record for DAO classes
-- exchanging data between databases and recordsets
-- DFX (DAO record field exchange), DAO Record Field Exchange
-- RFX (record field exchange)
-- CDaoFieldExchange class
+- CDaoFieldExchange [MFC], IsValidOperation
+- CDaoFieldExchange [MFC], SetFieldType
+- CDaoFieldExchange [MFC], m_nOperation
+- CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 caps.latest.revision: 23
 author: mikeblome
@@ -46,135 +41,135 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 31b7121f8e93f85ed73b5d095ac0995f3ddee721
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bc73eb6ba90585dfc308e5dd06e9cd3071a0a8ce
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 클래스
-DAO 데이터베이스 클래스에서 사용하는 DAO 레코드 필드 교환(DFX) 루틴을 지원합니다.  
+# <a name="cdaofieldexchange-class"></a>CDaoFieldExchange Class
+Supports the DAO record field exchange (DFX) routines used by the DAO database classes.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDaoFieldExchange  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|업데이트 되는 필드의 형식에 적합 한 현재 작업이&0;이 아닌 반환 합니다.|  
-|[CDaoFieldExchange::SetFieldType](#setfieldtype)|레코드 집합 데이터 멤버의 유형을 지정-열 또는 매개 변수-다음 호출 될 때까지 모든 후속 DFX 함수 호출을 나타내는 `SetFieldType`합니다.|  
+|[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Returns nonzero if the current operation is appropriate for the type of field being updated.|  
+|[CDaoFieldExchange::SetFieldType](#setfieldtype)|Specifies the type of recordset data member — column or parameter — represented by all subsequent calls to DFX functions until the next call to `SetFieldType`.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoFieldExchange::m_nOperation](#m_noperation)|레코드 집합의 현재 호출에서 수행 되는 DFX 작업 `DoFieldExchange` 멤버 함수입니다.|  
-|[CDaoFieldExchange::m_prs](#m_prs)|어떤 DFX에 작업을 수행 하는 레코드 집합에 대 한 포인터입니다.|  
+|[CDaoFieldExchange::m_nOperation](#m_noperation)|The DFX operation being performed by the current call to the recordset's `DoFieldExchange` member function.|  
+|[CDaoFieldExchange::m_prs](#m_prs)|A pointer to the recordset on which DFX operations are being performed.|  
   
-## <a name="remarks"></a>주의  
- `CDaoFieldExchange`기본 클래스는 없습니다.  
+## <a name="remarks"></a>Remarks  
+ `CDaoFieldExchange` does not have a base class.  
   
- 사용자 지정 데이터 형식에 대 한 데이터 교환 루틴을 작성 하는 경우이 클래스를 사용 합니다. 이렇게 하면 사용 하지 않습니다 직접이 클래스. DFX의 필드 데이터 멤버 간에 데이터를 교환 하면 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체와 데이터 소스에서 현재 레코드에서 해당 필드입니다. DFX는 데이터 원본을 클릭 하 여 데이터 소스에서 양방향으로 exchange를 관리합니다. 참조 [기술 참고 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) 사용자 지정 DFX 루틴을 작성 하는 방법에 대 한 정보에 대 한 합니다.  
+ Use this class if you are writing data exchange routines for custom data types; otherwise, you will not directly use this class. DFX exchanges data between the field data members of your [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object and the corresponding fields of the current record on the data source. DFX manages the exchange in both directions, from the data source and to the data source. See [Technical Note 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) for information about writing custom DFX routines.  
   
 > [!NOTE]
->  DAO 데이터베이스 클래스에 연결 ODBC (Open Database)을 기반으로 하는 MFC 데이터베이스 클래스와 구별 됩니다. 모든 DAO 데이터베이스 클래스 이름이 "CDao" 접두사가 있습니다. DAO 클래스의 ODBC 데이터 원본에 액세스할 수 있습니다. 일반적으로 기반으로 DAO MFC 클래스는 ODBC 기반 MFC 클래스 보다 더 수 있습니다. DAO 기반 클래스를 통해 자신의 데이터베이스 엔진을 통해 ODBC 드라이버를 포함 한 데이터를 액세스할 수 있습니다. 또한 사용자가 직접 DAO를 호출 하는 대신 클래스를 통해 테이블을 추가 하는 등의 데이터 정의 언어 (DDL) 작업을 지원 합니다.  
+>  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have the "CDao" prefix. You can still access ODBC data sources with the DAO classes. In general, the MFC classes based on DAO are more capable than the MFC classes based on ODBC. The DAO-based classes can access data, including through ODBC drivers, via their own database engine. They also support Data Definition Language (DDL) operations, such as adding tables via the classes instead of having to call DAO yourself.  
   
 > [!NOTE]
->  DAO 레코드 필드 교환 (DFX)는 ODBC 기반 MFC 데이터베이스 클래스에서 레코드 필드 교환 (RFX)와 매우 비슷합니다 ( `CDatabase`, `CRecordset`). RFX를 이해 하는 경우 사용 하기 쉬운 DFX를 찾이 됩니다.  
+>  DAO record field exchange (DFX) is very similar to record field exchange (RFX) in the ODBC-based MFC database classes ( `CDatabase`, `CRecordset`). If you understand RFX, you will find it easy to use DFX.  
   
- A `CDaoFieldExchange` 개체 컨텍스트 정보가 필요한 dao 레코드 필드 교환을 제공 합니다. `CDaoFieldExchange`개체는 바인딩 매개 변수 및 필드 데이터 멤버를 포함 하 여 현재 레코드의 필드에서 다양 한 플래그를 설정 및 작업의 수를 지원 합니다. Dfx 정의 형식의 레코드 집합 클래스 데이터 멤버에서 수행 되는 `enum` **FieldType** 에서 `CDaoFieldExchange`합니다. 가능한 **FieldType** 값은:  
+ A `CDaoFieldExchange` object provides the context information needed for DAO record field exchange to take place. `CDaoFieldExchange` objects support a number of operations, including binding parameters and field data members and setting various flags on the fields of the current record. DFX operations are performed on recordset-class data members of types defined by the `enum`**FieldType** in `CDaoFieldExchange`. Possible **FieldType** values are:  
   
-- **CDaoFieldExchange::outputColumn** 필드 데이터 멤버에 대 한 합니다.  
+- **CDaoFieldExchange::outputColumn** for field data members.  
   
-- **CDaoFieldExchange::param** 매개 변수 데이터 멤버에 대 한 합니다.  
+- **CDaoFieldExchange::param** for parameter data members.  
   
- [IsValidOperation](#isvalidoperation) 멤버 함수는 사용자 고유의 사용자 지정 DFX 루틴을 작성 하기 위한 제공 됩니다. 사용 하 여 [SetFieldType](#setfieldtype) 에 자주 프로그램 [CDaoRecordset::DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) 함수입니다. DFX 전역 함수에 대 한 자세한 참조 [레코드 필드 교환 함수](../../mfc/reference/record-field-exchange-functions.md)합니다. 사용자 지정 데이터 형식에 대 한 사용자 지정 DFX 루틴을 작성 하는 방법에 대 한 정보를 참조 하십시오. [기술 참고 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)합니다.  
+ The [IsValidOperation](#isvalidoperation) member function is provided for writing your own custom DFX routines. You will use [SetFieldType](#setfieldtype) frequently in your [CDaoRecordset::DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) functions. For details about the DFX global functions, see [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md). For information about writing custom DFX routines for your own data types, see [Technical Note 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CDaoFieldExchange`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
- 사용자가 직접 DFX 함수를 작성 하는 경우 호출 `IsValidOperation` 의 특정 필드 데이터 멤버 형식에서 현재 작업을 수행할 수 있는지 여부를 결정 하는 함수 시작 부분에 (한 **CDaoFieldExchange::outputColumn** 또는 **CDaoFieldExchange::param**).  
+##  <a name="isvalidoperation"></a>  CDaoFieldExchange::IsValidOperation  
+ If you write your own DFX function, call `IsValidOperation` at the beginning of your function to determine whether the current operation can be performed on a particular field data member type (a **CDaoFieldExchange::outputColumn** or a **CDaoFieldExchange::param**).  
   
 ```  
 BOOL IsValidOperation();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 작업이 업데이트 되는 필드의 형식에 대 한 적절 한 경우에&0;이 아닌 합니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the current operation is appropriate for the type of field being updated.  
   
-### <a name="remarks"></a>주의  
- DFX 메커니즘에 의해 수행 된 작업의 일부 가능한 필드 유형 중 하나에 적용 됩니다. DFX 함수 기존 모델을 따릅니다.  
+### <a name="remarks"></a>Remarks  
+ Some of the operations performed by the DFX mechanism apply only to one of the possible field types. Follow the model of the existing DFX functions.  
   
- 사용자 지정 DFX 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)합니다.  
+ For additional information on writing custom DFX routines, see [Technical Note 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
   
-##  <a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
- 수행할 작업을 식별 하는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 필드 exchange 개체와 연결 된 개체입니다.  
+##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation  
+ Identifies the operation to be performed on the [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object associated with the field exchange object.  
   
-### <a name="remarks"></a>주의  
- `CDaoFieldExchange` 레코드 집합에서 여러 DFX 작업의 수에 대 한 컨텍스트를 제공 하는 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ The `CDaoFieldExchange` object supplies the context for a number of different DFX operations on the recordset.  
   
 > [!NOTE]
->  **PSEUDONULL** MarkForAddNew 및 SetFieldNull 작업 아래에서 설명 하는 값은 Null 필드를 표시 하는 데 사용 하는 값입니다. DAO 레코드 필드 교환 메커니즘 (DFX) 어떤 필드가 명시적으로 표시 된 Null을 확인 하려면이 값을 사용 합니다. **PSEUDONULL** 에 필요 하지 않습니다 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 및 [COleCurrency](../../mfc/reference/colecurrency-class.md) 필드입니다.  
+>  The **PSEUDONULL** value described under the MarkForAddNew and SetFieldNull operations below is a value used to mark fields Null. The DAO record field exchange mechanism (DFX) uses this value to determine which fields have been explicitly marked Null. **PSEUDONULL** is not required for [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) and [COleCurrency](../../mfc/reference/colecurrency-class.md) fields.  
   
- 가능한 값 **m_nOperation** 됩니다.  
+ Possible values of **m_nOperation** are:  
   
-|작업|설명|  
+|Operation|Description|  
 |---------------|-----------------|  
-|**AddToParameterList**|빌드는 **매개 변수** SQL 문 절.|  
-|**AddToSelectList**|빌드는 **선택** SQL 문 절.|  
-|**BindField**|응용 프로그램의 메모리 위치에 데이터베이스의 필드를 바인딩합니다.|  
-|**BindParam**|레코드 집합의 쿼리에 대 한 매개 변수 값을 설정합니다.|  
-|**픽스업**|필드에 대해 Null 상태를 설정합니다.|  
-|**AllocCache**|레코드 집합의 필드를 "더티"에 대 한 확인 하는 데 사용 하는 캐시를 할당 합니다.|  
-|**StoreField**|현재 레코드를 캐시에 저장합니다.|  
-|**LoadField**|레코드 집합의 캐시 된 데이터 멤버 변수를 복원합니다.|  
-|**FreeCache**|레코드 집합의 필드를 "더티"에 대 한 확인 하는 데 사용 하는 캐시를 해제 합니다.|  
-|`SetFieldNull`|상태 필드의 값을 Null로 설정 하는 **PSEUDONULL**합니다.|  
-|**MarkForAddNew**|그렇지 않은 경우 필드를 "더티" 표시 **PSEUDONULL**합니다.|  
-|**MarkForEdit**|캐시를 일치 하지 않는 경우 필드를 "더티" 표시 합니다.|  
-|**SetDirtyField**|필드 "더티."로 표시 된 값을 설정|  
-|**DumpField**|필드의 내용을 (디버그에만 해당)를 덤프합니다.|  
-|**MaxDFXOperation**|입력 검사에 사용 합니다.|  
+|**AddToParameterList**|Builds the **PARAMETERS** clause of the SQL statement.|  
+|**AddToSelectList**|Builds the **SELECT** clause of the SQL statement.|  
+|**BindField**|Binds a field in the database to a memory location in your application.|  
+|**BindParam**|Sets parameter values for the recordset's query.|  
+|**Fixup**|Sets the Null status for a field.|  
+|**AllocCache**|Allocates the cache used to check for "dirty" fields in the recordset.|  
+|**StoreField**|Saves the current record to the cache.|  
+|**LoadField**|Restores the cached data member variables in the recordset.|  
+|**FreeCache**|Frees the cache used to check for "dirty" fields in the recordset.|  
+|`SetFieldNull`|Sets a field's status to Null and value to **PSEUDONULL**.|  
+|**MarkForAddNew**|Marks fields "dirty" if not **PSEUDONULL**.|  
+|**MarkForEdit**|Marks fields "dirty" if they do not match the cache.|  
+|**SetDirtyField**|Sets field values marked as "dirty."|  
+|**DumpField**|Dumps a field's contents (debug only).|  
+|**MaxDFXOperation**|Used for input checking.|  
   
-##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
- 에 대 한 포인터는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 연관 된 개체는 `CDaoFieldExchange` 개체입니다.  
+##  <a name="m_prs"></a>  CDaoFieldExchange::m_prs  
+ Contains a pointer to the [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object associated with the `CDaoFieldExchange` object.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
- 호출 `SetFieldType` 에 프로그램 `CDaoRecordset` 클래스의 `DoFieldExchange` 재정의 합니다.  
+##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType  
+ Call `SetFieldType` in your `CDaoRecordset` class's `DoFieldExchange` override.  
   
 ```  
 void SetFieldType(UINT nFieldType);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `nFieldType`  
- 값이는 **enum FieldType**안에서 선언 된 `CDaoFieldExchange`는 다음 중 하나가 될 수 있습니다.  
+ A value of the **enum FieldType**, declared in `CDaoFieldExchange`, which can be either of the following:  
   
 - **CDaoFieldExchange::outputColumn**  
   
 - **CDaoFieldExchange::param**  
   
-### <a name="remarks"></a>주의  
- 일반적으로 클래스 마법사를이 호출을 작성합니다. 사용자 고유의 함수를 작성 하 고 마법사를 사용 하 여 작성 하는 경우 프로그램 `DoFieldExchange` 함수, 필드 맵 외부 사용자가 직접 함수 호출을 추가 합니다. 마법사를 사용 하지 않는 경우는 없을 필드 맵을. 클래스의 각 필드 데이터 멤버에 대 한 DFX 함수에 대 한 호출 앞에 오는 호출과 필드 형식으로 식별 **CDaoFieldExchange::outputColumn**합니다.  
+### <a name="remarks"></a>Remarks  
+ Normally, ClassWizard writes this call for you. If you write your own function and are using the wizard to write your `DoFieldExchange` function, add calls to your own function outside the field map. If you do not use the wizard, there will not be a field map. The call precedes calls to DFX functions, one for each field data member of your class, and identifies the field type as **CDaoFieldExchange::outputColumn**.  
   
- 레코드 집합 클래스를 매개 변수화 할 경우 필드 map) (외부 모든 매개 변수 데이터 멤버에 대 한 DFX 호출을 추가 하 고 이러한 호출을 호출 하 여 앞에 야 해야 `SetFieldType`합니다. 값을 전달 **CDaoFieldExchange::param**합니다. (대신 사용할 수는 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) 해당 매개 변수 값을 설정 합니다.)  
+ If you parameterize your recordset class, you should add DFX calls for all parameter data members (outside the field map) and precede these calls with a call to `SetFieldType`. Pass the value **CDaoFieldExchange::param**. (You can, instead, use a [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) and set its parameter values.)  
   
- 일반적으로 필드 데이터 멤버 또는 매개 변수 데이터 멤버와 연결 된 DFX 함수 호출의 각 그룹 앞에 야를 호출 하 여 `SetFieldType`합니다. `nFieldType` 각 매개 변수 `SetFieldType` 호출 다음에 나오는 DFX 함수 호출에 의해 표시 되는 데이터 멤버의 형식을 식별 하는 `SetFieldType` 를 호출 합니다.  
+ In general, each group of DFX function calls associated with field data members or parameter data members must be preceded by a call to `SetFieldType`. The `nFieldType` parameter of each `SetFieldType` call identifies the type of the data members represented by the DFX function calls that follow the `SetFieldType` call.  
   
-## <a name="see-also"></a>참고 항목  
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [CDaoRecordset 클래스](../../mfc/reference/cdaorecordset-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoRecordset Class](../../mfc/reference/cdaorecordset-class.md)
 

@@ -1,76 +1,96 @@
 ---
-title: "TN025: 문서, 뷰 및 프레임 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.creation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "문서, 뷰 및 프레임 만들기"
-  - "TN025"
+title: 'TN025: Document, View, and Frame Creation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.creation
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], view and frame creation
+- TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN025: 문서, 뷰 및 프레임 만들기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2464f927450319b2b649d5601a157f4269993ea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn025-document-view-and-frame-creation"></a>TN025: Document, View, and Frame Creation
 > [!NOTE]
->  다음 기술 노트는 온라인 설명서에 먼저 포함되어 있었으므로 업데이트되지 않았습니다.  따라서 일부 절차 및 항목은 만료되거나 올바르지 않을 수 있습니다.  최신 정보를 보려면 온라인 설명서 색인에서 관심 있는 항목을 검색하는 것이 좋습니다.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 이 노트는 WinApps, DocTemplates, 문서, 프레임 및 뷰 생성 및 소유권 문제를 설명합니다.  
+ This note describes the creation and ownership issues for WinApps, DocTemplates, Documents, Frames and Views.  
   
-## WinApp  
- 시스템에서 `CWinApp` 는 하나뿐입니다.  
+## <a name="winapp"></a>WinApp  
+ There is one `CWinApp` object in the system.  
   
- 그것은 `WinMain` 의 프레임 워크의 내부 구현을 통해 생성되고 초기화됩니다.  어떤 작업을 유용하게 하려면 `CWinApp` 는 파생되어야 합니다. \(예외: 확장자 DLLs은 `CWinApp` 인스턴스를 가지지 않습니다\- 대신에 `DllMain` 에서 초기화가 완료됩니다\)  
+ It is statically constructed and initialized by the framework's internal implementation of `WinMain`. You must derive from `CWinApp` to do anything useful (exception: MFC extension DLLs should not have a `CWinApp` instance — initialization is done in `DllMain` instead).  
   
- 하나의 `CWinApp` 개체는 문서 템플릿의 목록을 가집니다\(`CPtrList`\)  응용 프로그램당 하나 이상의 문서 템플릿이 있습니다.  DocTemplates 는 `CWinApp::InitInstance` 내 리소스 파일\(문자열 배열\)에서 로드 됩니다.  
+ The one `CWinApp` object owns a list of document templates (a `CPtrList`). There is one or more document template per application. DocTemplates are usually loaded from the resource file (that is, a string array) in `CWinApp::InitInstance`.  
   
 ```  
-pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);  
-AddDocTemplate(pTemplate);  
+pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
+
+AddDocTemplate(pTemplate);
 ```  
   
- 하나의 `CWinApp` 개체는 응용 프로그램에서 모든 프레임 창을 가집니다.  응용 프로그램에 대한 메인 프레임 창은 **CWinApp::m\_pMainWnd** 에 저장됩니다. 작업을 수행하는 응용 프로그램 마법사가 없는 경우 `InitInstance` 내에 `m_pMainWnd` 를 설정합니다.  단일 문서 인터페이스\(SDI\) 에 대해 문서 프레임 창뿐만 아니라 메인 응용 프로그램 프레임 창으로서 제공하는 `CFrameWnd` 는 하나 뿐입니다.  다중 문서 인터페이스\(MDI\)에 대해 모든 자식 `CFrameWnd` 들을 포함하는 메인 응용 프로그램 프레임 창으로서 제공하는 MDI 프레임\(`CMDIFrameWnd` 클래스\) 입니다.  각 자식 창은 `CMDIChildWnd` 클래스\(`CFrameWnd` 에서 파생된\) 중 하나 입니다. 이것은 잠재적인 많은 문서 프레임 창중 하나로서 제공됩니다.  
+ The one `CWinApp` object owns all frame windows in the application. The main frame window for the application should be stored in **CWinApp::m_pMainWnd**; usually you set `m_pMainWnd` in the `InitInstance` implementation if you have not let AppWizard do it for you. For single document interface (SDI) this is one `CFrameWnd` that serves as the main application frame window as well as the only document frame window. For multiple document interface (MDI) this is an MDI-Frame (class `CMDIFrameWnd`) that serves as the main application frame window that contains all the child `CFrameWnd`s. Each child window is of class `CMDIChildWnd` (derived from `CFrameWnd`) and serves as one of potentially many document frame windows.  
   
-## DocTemplates  
- `CDocTemplate` 는 작성자와 관리자의 문서입니다.  생성 된 문서를 소유 하고 있습니다.  응용 프로그램이 아래에 설명된 것과 같이 리소스 기반의 접근방법을 사용하는 경우,`CDocTemplate` 에서 파생할 필요가 없습니다.  
+## <a name="doctemplates"></a>DocTemplates  
+ The `CDocTemplate` is the creator and manager of documents. It owns the documents that it creates. If your application uses the resource-based approach described below, it will not need to derive from `CDocTemplate`.  
   
- SDI 응용 프로그램에서 `CSingleDocTemplate` 클래스는 한 열린 문서를 추적 합니다.  MDI 응용 프로그램에서 `CMultiDocTemplate` 클래스는 템플릿으로 생성된 현재 열린 모든 파일의 목록을  `CPtrList` \) 보관합니다.   `CDocTemplate::AddDocument` 및 `CDocTemplate::RemoveDocument` 은 템플릿에서 문서를 추가하고 삭제하기 위해 가상 멤버 함수를 제공합니다.  `CDocTemplate` 는 **CDocument** 의 친구입니다. 따라서 보호되는 **CDocument::m\_pDocTemplate** 후방 포인터를 가르키기 위해 문서가 생성한 문서템플릿으로 설정할 수 있습니다.  
+ For an SDI application, the class `CSingleDocTemplate` keeps track of one open document. For an MDI application, the class `CMultiDocTemplate` keeps a list (a `CPtrList`) of all the currently open documents created from that template. `CDocTemplate::AddDocument` and `CDocTemplate::RemoveDocument` provide the virtual member functions for adding or removing a document from the template. `CDocTemplate` is a friend of **CDocument** so we can set the protected **CDocument::m_pDocTemplate** back pointer to point back to the doc template that created the document.  
   
- `CWinApp` 는 모든 문서 템플릿을 다시 쿼리하는 기본 `OnFileOpen` 구현을 처리합니다.  구현은 이미 열려 있는 문서에서 새 문서를 열고 형식을 결정을 포함 합니다.  
+ `CWinApp` handles the default `OnFileOpen` implementation, which will in turn query all the doc templates. The implementation includes looking for already open documents and deciding what format to open new documents in.  
   
- `CDocTemplate`는 문서 및 프레임에 대한 UI 바인딩을 관리합니다.  
+ `CDocTemplate` manages the UI binding for documents and frames.  
   
- `CDocTemplate`는 명명 되지 않은 문서의 개수를 유지합니다.  
+ `CDocTemplate` keeps a count of the number of unnamed documents.  
   
-## CDocument  
- **CDocument** 는 `CDocTemplate` 가 소유합니다.  
+## <a name="cdocument"></a>CDocument  
+ A **CDocument** is owned by a `CDocTemplate`.  
   
- 문서는 현재 보기 목록\(`CView`에서 파생된\) 을 가집니다. 이것은 문서를 보고 있습니다. \(`CPtrList`\)  
+ Documents have a list of currently open views (derived from `CView`) that are viewing the document (a `CPtrList`).  
   
- 문서는 보기를 생성하거나 파괴하지 않지만 생성된 후 서로 연결 됩니다.  문서를 닫을 때 \(파일\/닫기를 통해\), 연결 된 모든 뷰를 닫습니다.  \(즉, 창\/닫기를 통해\) 문서에서 마지막 보기가 닫힐 때 문서도 닫습니다.  
+ Documents do not create/destroy the views, but they are attached to each other after they are created. When a document is closed (that is, through File/Close), all attached views will be closed. When the last view on a document is closed (that is, Window/Close) the document will be closed.  
   
- `CDocument::AddView`, `RemoveView` 인터페이스는 목록 보기를 유지하기 위해 사용 됩니다.  **CDocument** 는 `CView` 는 친구입니다. 따라서 **CView::m\_pDocument** 후방 포인터를 설정할 수 있습니다.  
+ The `CDocument::AddView`, `RemoveView` interface is used to maintain the view list. **CDocument** is a friend of `CView` so we can set the **CView::m_pDocument** back pointer.  
   
-## CFrameWnd  
- `CFrameWnd` \(프레임으로 알려진\) 은 MFC 1.0에서 같은 역할을 하지만 현재 `CFrameWnd` 클래스는 새로운 클래스를 파생하지 않고 대부분에서 사용하기 위해 디자인 됩니다.  파생된 클래스 `CMDIFrameWnd` 및 `CMDIChildWnd` 은 향상되어 많은 표준 명령 대부분은 구현됩니다.  
+## <a name="cframewnd"></a>CFrameWnd  
+ A `CFrameWnd` (also known as a frame) plays the same role as in MFC 1.0, but now the `CFrameWnd` class is designed to be used in many cases without deriving a new class. The derived classes `CMDIFrameWnd` and `CMDIChildWnd` are also enhanced so many standard commands are already implemented.  
   
- `CFrameWnd` 는 프레임의 클라이언트 영역에서 창을 생성해야 합니다.  일반적으로 프레임의 클라이언트 영역을 채우는 하나의 메인 창입니다.  
+ The `CFrameWnd` is responsible for creating windows in the client area of the frame. Normally there is one main window filling the client area of the frame.  
   
- MDI 프레임 창에 대해 클라이언트 영역은 모든 MDI 자식 프레임 창의 부모인 MDICLIENT 컨트롤로 차례로 채워집니다.  SDI 프레임 창 또는 MDI 자식 프레임 창에 대해, 클라이언트 영역은 대부분 창 개체에서 파생되는 `CView` 로 채워집니다.  `CSplitterWnd`의 경우, 보기의 클라이언트 영역은 `CSplitterWnd` 창 개체로 채워지고, 창 개체\(분할 창당 하나\)로 부터 파생된 `CView` 는 `CSplitterWnd` 의 자식창으로서 생성됩니다.  
+ For an MDI-Frame window, the client area is filled with the MDICLIENT control which is in turn the parent of all the MDI-Child frame windows. For an SDI-Frame window or an MDI-Child frame window, the client area is usually filled with a `CView`-derived window object. In the case of `CSplitterWnd`, the client area of the view is filled with the `CSplitterWnd` window object, and the `CView`-derived window objects (one per split pane) are created as child windows of the `CSplitterWnd`.  
   
-## 참고 항목  
- [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   
- [범주별 기술 참고 사항](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

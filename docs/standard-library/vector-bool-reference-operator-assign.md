@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- =
-- operator=
-- vector<bool>::reference::operator=
-- std::vector<bool>::reference::operator=
+- =", "operator=", "vector<bool>::reference::operator=", "std::vector<bool>::reference::operator=
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 82c542fff74866ac57d65dc25b8ee8f75d53415d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2e32be8e98ca3aa7ca408883e31df03c8fef7f74
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
-비트에 부울 값을 할당하거나 참조된 요소에 저장된 값을 비트에 할당합니다.  
+Assigns a Boolean value to a bit, or the value held by a referenced element to a bit.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 reference& operator=(const reference& Right);
@@ -55,14 +52,14 @@ reference& operator=(const reference& Right);
 reference& operator=(bool Val);
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Right`  
- 해당 값을 비트에 할당할 요소 참조입니다.  
+ The element reference whose value is to be assigned to the bit.  
   
  `Val`  
- 비트에 할당될 부울 값입니다.  
+ The Boolean value to be assigned to the bit.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // vector_bool_ref_op_assign.cpp  
@@ -121,7 +118,7 @@ int main()
   
 ```  
   
-## <a name="output"></a>출력  
+## <a name="output"></a>Output  
   
 ```  
 The vector is: true false false true true  
@@ -136,13 +133,13 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<vector>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<vector>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
- [vector\<bool>::reference 클래스](../standard-library/vector-bool-reference-class.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

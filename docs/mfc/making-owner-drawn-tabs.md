@@ -1,32 +1,51 @@
 ---
-title: "소유자가 그린 탭으로 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl 클래스, 소유자가 그린 탭"
-  - "그리기, 탭"
-  - "소유자가 그린 탭"
-  - "탭, 소유자가 그린"
+title: Making Owner-Drawn Tabs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- owner-drawn tabs [MFC]
+- tabs [MFC], owner-drawn
+- CTabCtrl class [MFC], owner-drawn tabs
+- drawing [MFC], tabs
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 소유자가 그린 탭으로 정의
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1225ad6e29bde551cde3ab0df29c70fd4681bb9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-탭 컨트롤\([CTabCtrl](../mfc/reference/ctabctrl-class.md)\)의 개별 항목을 소유자가 그린 항목이 되기 위해서 정의할 수 있습니다.  자세한 내용은, [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]의 [Owner\-Drawn Tabs](http://msdn.microsoft.com/library/windows/desktop/bb760550)를 참조하십시오.  
+---
+# <a name="making-owner-drawn-tabs"></a>Making Owner-Drawn Tabs
+You can define individual items of a tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) to be owner-drawn items. For more information, see [Owner-Drawn Tabs](http://msdn.microsoft.com/library/windows/desktop/bb760550) in the Windows SDK.  
   
-## 참고 항목  
- [CTabCtrl 사용](../mfc/using-ctabctrl.md)   
- [컨트롤](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

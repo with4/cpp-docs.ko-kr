@@ -1,68 +1,87 @@
 ---
-title: "MFC의 유니코드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "문자열[C++], Unicode"
-  - "유니코드[C++], 사용"
-  - "유니코드[C++], MFC"
-  - "와이드 문자, 인코딩"
-  - "와이드 문자, Unicode"
+title: Unicode in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- wide characters, Unicode
+- Unicode [MFC], MFC
+- wide characters, encoding
+- strings [MFC], Unicode
+- Unicode [MFC], enabling
 ms.assetid: 1002004b-4113-4380-bf63-e1570934b793
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# MFC의 유니코드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66452e96c7ca61e3acad1ce1107b6ba24c0750b3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-MFC는 Windows NT, Windows 2000 및 Windows XP 플랫폼에서 와이드 문자 인코딩을 위한 유니코드 표준을 지원합니다.  유니코드 응용 프로그램은 Windows 98 플랫폼에서는 실행할 수 없습니다.  
+---
+# <a name="unicode-in-mfc"></a>Unicode in MFC
+MFC supports the Unicode standard for encoding wide characters on Windows NT, Windows 2000, and Windows XP platforms. Unicode applications cannot run on Windows 98 platforms.  
   
- MFC 라이브러리의 유니코드 버전은 아래에 설명됩니다.  
+ The Unicode versions of the MFC libraries are described below:  
   
-### 정적 연결 라이브러리  
+### <a name="static-link-libraries"></a>Static Link Libraries  
   
-|Release|디버그|설명|  
-|-------------|---------|--------|  
-|UAFXCW.lib, .pdb|UAFXCWD.lib, .pdb|유니코드 MFC 정적 연결 라이브러리입니다.|  
+|Release|Debug|Description|  
+|-------------|-----------|-----------------|  
+|UAFXCW.lib, .pdb|UAFXCWD.lib, .pdb|Unicode MFC static link library|  
   
-### 동적 연결 라이브러리  
+### <a name="dynamic-link-libraries"></a>Dynamic-Link Libraries  
   
-|Release|디버그|설명|  
-|-------------|---------|--------|  
-|MFC100U.lib, .dbg, def, .dll, .map, .pdb, .prf|MFC100UD.lib, .def, .dll, .map, .pdb|유니코드 MFC가 라이브러리를 가져옵니다. \(파일 확장명에 설명은 아래를 참조하세요\)|  
-|MFCS100U.lib, .pdb|MFCS100UD.lib, .pdb|유니코드 MFC는 응용 프로그램이나 DLL에서 정적으로 연결되어야 하는 코드를 포함한 라이브러리를 가져옵니다.|  
+|Release|Debug|Description|  
+|-------------|-----------|-----------------|  
+|MFC100U.lib, .dbg, def, .dll, .map, .pdb, .prf|MFC100UD.lib, .def, .dll, .map, .pdb|Unicode MFC import library (see notes below for explanation of file extensions)|  
+|MFCS100U.lib, .pdb|MFCS100UD.lib, .pdb|Unicode MFC import library containing code that must be statically linked in an application or DLL|  
   
- **파일 형식**  
+ **File Types**  
   
--   확장자\(.lib\)를 가진 라이브러리 파일을 가져옵니다.  
+-   Import library files have the extension (.lib).  
   
--   확장자\(.dll\)를 가진 동적 연결 라이브러리 파일입니다.  
+-   Dynamic-link library files have the extension (.dll).  
   
--   모듈 정의\(.def\)파일은 .exe 또는 .dll을 정의하기 위한 문을 포함하는 텍스트 파일입니다.  
+-   Module definition (.def) files are text files that contain statements for defining an .exe or .dll.  
   
--   MAP\(.Map\) 파일은 프로그램을 링크할 때 링커가 사용하는 정보를 포함하는 텍스트 파일입니다.  
+-   Map (.map) files are text files that contain information that the linker uses when linking a program.  
   
--   라이브러리 \(.lib\) 파일은 MFC의 DLL 버전과 함께 사용됩니다.  이러한 파일은 응용 프로그램 또는 DLL에서 정적으로 링크되어야 하는 코드를 포함합니다.  
+-   Library (.lib) files are used in conjunction with the DLL versions of MFC. These files contain code that must be statically linked in the application or DLL.  
   
--   프로그램 데이터베이스\(.pdb\) 파일은 디버깅 및 프로젝트 상태 정보를 포함합니다.  
+-   Program database (.pdb) files contain debugging and project state information.  
   
--   디버그 \(.dbg\) 파일은 Visual C\+\+ 디버거에서 사용하는 정보\(COFF FPO 및 CodeView\)를 포함합니다.  
+-   Debug (.dbg) files contain information (COFF FPO, and CodeView) that the Visual C++ Debugger uses.  
   
- 명명 규칙에 대한 자세한 정보는 [라이브러리 명명 규칙](../mfc/library-naming-conventions.md)을 참조하십시오.  
+ For detailed information on naming conventions, see [Library Naming Conventions](../mfc/library-naming-conventions.md).  
   
- MFC를 사용하여 유니코드를 사용하는 것에 대한 자세한 내용은 [Strings: Unicode and Multibyte Character Set \(MBCS\) Support](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)을 참조하십시오.  
+ For information on using Unicode with MFC, see [Strings: Unicode and Multibyte Character Set (MBCS) Support](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
   
-## 참고 항목  
- [개념](../mfc/mfc-concepts.md)   
- [일반 MFC 항목](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

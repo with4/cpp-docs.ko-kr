@@ -1,5 +1,5 @@
 ---
-title: "is_rvalue_reference 클래스 | Microsoft 문서"
+title: is_rvalue_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_rvalue_reference
 - type_traits/std::is_rvalue_reference
 dev_langs:
 - C++
@@ -35,38 +34,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 748a717c1f49206457bded1cd11be2dd30753f6f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: def660ab87c5fc9ea47814fe5bcd7e4c2cfb4118
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isrvaluereference-class"></a>is_rvalue_reference 클래스
-형식이 rvalue 참조인지 테스트합니다.  
+# <a name="isrvaluereference-class"></a>is_rvalue_reference Class
+Tests if type is an rvalue reference.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_rvalue_reference;
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 형식이 쿼리입니다.  
+ The type to query.  
   
-## <a name="remarks"></a>설명  
- 이 형식 조건자의 인스턴스는 `Ty` 형식이 [rvalue 참조](../cpp/rvalue-reference-declarator-amp-amp.md)인 경우 true입니다.  
+## <a name="remarks"></a>Remarks  
+ An instance of this type predicate holds true if the type `Ty` is an [rvalue reference](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Lvalue 및 Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)
+ [Lvalues and Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
 
 
 

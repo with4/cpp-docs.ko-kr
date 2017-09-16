@@ -1,92 +1,101 @@
 ---
-title: "알고리즘(최신 C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Algorithms (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 알고리즘(최신 C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 13b5b6c097bd8a68b0c91e6ede508559344a89ad
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/11/2017
 
-최신 C\+\+ 프로그래밍의 경우 STL\([표준 템플릿 라이브러리](../standard-library/cpp-standard-library-reference.md)\)의 알고리즘을 사용하는 것이 좋습니다.  다음은 몇 가지 중요한 예입니다.  
+---
+# <a name="algorithms-modern-c"></a>Algorithms (Modern C++)
+For modern C++ programming, we recommend that you use the algorithms in the [C++ Standard Library](../standard-library/cpp-standard-library-reference.md). Here are some important examples:  
   
--   `for_each`은 기본 통과 알고리즘입니다. \(또한 내부가 아닌 의미 체계용 `transform`입니다.  
+-   `for_each`, which is the default traversal algorithm. (Also `transform` for not-in-place semantics.)  
   
--   `find_if`은 검색 알고리즘 기본값입니다.  
+-   `find_if`, which is the default search algorithm.  
   
--   `sort`, `lower_bound` 및 기타 기본 정렬 및 검색 알고리즘.  
+-   `sort`, `lower_bound`, and the other default sorting and searching algorithms.  
   
- 비교 연산자를 작성하려면 가능한 경우 엄격한 `<`를 사용하고  *명명된 람다*를 사용합니다.  
+ To write a comparator, use strict `<` and use  *named lambdas* when you can.  
   
 ```cpp  
-  
 auto comp = [](const widget& w1, const widget& w2)  
       { return w1.weight() < w2.weight(); }  
   
 sort( v.begin(), v.end(), comp );  
   
 auto i = lower_bound( v.begin(), v.end(), comp );  
-  
 ```  
   
-## 루프  
- 가능하면 직접 작성한 루프 대신 범위 기반 `for` 루프 또는 알고리즘 호출 중 하나 또는 모두를 사용합니다.  `copy`, `transform`, `count_if`, `remove_if` 등은 의도가 명백하고 버그 없는 코드를 작성하기 쉽기 때문에 손으로 작성한 루프보다 훨씬 효과적입니다.  또한 많은 STL 알고리즘에는 이 알고리즘을 보다 효율적으로 만드는 구현 최적화가 있습니다.  
+## <a name="loops"></a>Loops  
+ When possible, use range-based `for` loops or algorithm calls, or both, instead of hand-written loops.`copy`, `transform`, `count_if`, `remove_if`, and others like them are much better than handwritten loops because their intent is obvious and they make it easier to write bug-free code. Also, many C++ Standard Library algorithms have implementation optimizations that make them more efficient.  
   
- 다음과 같은 이전 C\+\+ 대신:  
+ Instead of old C++ like this:  
   
 ```cpp  
-  
-for( auto i = strings.begin(); i != strings.end(); ++i ) {  
-  :::  
-  :::  
+for ( auto i = strings.begin(); i != strings.end(); ++i ) {  
+   /* ... */  
 }  
   
 auto i = v.begin();  
   
-for( ; i != v.end(); ++i ) {  
+for ( ; i != v.end(); ++i ) {  
   if (*i > x && *i < y) break;  
 }  
-  
 ```  
   
- 다음과 같은 최신 C\+\+를 사용합니다.  
+ Use modern C++ like this:  
   
 ```cpp  
-  
 for_each( begin(strings), end(strings), [](string& s) {  
-  :::  
-  :::  
+   // ...  
 } );  
-auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; }  );  
   
+auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
 ```  
   
-### 범위 기반 for 루프  
- 범위 기반 `for` 루프는 STL 알고리즘이 아닌 C\+\+11 언어 기능입니다.  하지만 루프에 대한 이 설명에서 언급할 가치가 있습니다.  범위 기반의 `for` 루프는 `for` 키워드의 확장이며 값의 범위에서 반복하는 루프를 작성하는 편리하고 효율적인 방법을 제공합니다.  STL 컨테이너, 문자열 및 배열은 범위 기반의 `for` 루프를 위해 기본적으로 제공됩니다.  사용자 정의 형식에 대해 이 새로운 반복 구문을 사용하려면 다음 지원을 추가합니다.  
+### <a name="range-based-for-loops"></a>Range-based for loops  
+ The range-based `for` loop is a C++11 language feature, not a C++ Standard Library algorithm. But it deserves mention in this discussion about loops. Range-based `for` loops are an extension of the `for` keyword and provide a convenient and efficient way to write loops that iterate over a range of values. C++ Standard Library containers, strings, and arrays are ready-made for range-based `for` loops. To enable this new iteration syntax for your user-defined type, add the following support:  
   
--   `begin` 메서드는 구조의 시작으로 반복기를 반환하고 `end` 메서드는 구조의 끝에 반복기를 반환합니다.  
+-   A `begin` method that returns an iterator to the beginning of the structure and an `end` method that returns an iterator to the end of the structure.  
   
--   이러한 방법에 대한 반복기에 대한 지원: `operator*`, `operator!=`, 및 `operator++`\(접두사 버전\).  
+-   Support in the iterator for these methods: `operator*`, `operator!=`, and `operator++` (prefix version).  
   
- 이러한 메서드는 멤버 함수 또는 독립 실행형 함수일 수 있습니다.  
+ These methods can be either members or stand-alone functions.  
   
-## 임의의 숫자  
- C\+\+ 커뮤니티에서 오랫동안 토론해 왔던 오래된 CRT `rand()` 함수에 많은 결함이 있다는 것은 비밀이 아닙니다.  최신 C\+\+에서는 이러한 단점을 처리할 필요가 없으며 신속하고 쉽게 만드는 도구는 [\<random\>](../standard-library/random.md)에 표시된 대로 STL에서 사용할 수 있으므로 자신의 균일하게 분산된 난수 생성기를 만들 필요가 없습니다.  
+## <a name="random-numbers"></a>Random Numbers  
+ It's no secret that the old CRT `rand()` function has many flaws, which have been discussed at length in the C++ community. In modern C++, you don't have to deal with those shortcomings—nor do you have to invent your own uniformly distributed random number generator—because the tools for quickly and easily creating them are available in the C++ Standard Library, as shown in [\<random>](../standard-library/random.md).  
   
-## 참고 항목  
- [C\+\+의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+ 언어 참조](../cpp/cpp-language-reference.md)   
- [C\+\+ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

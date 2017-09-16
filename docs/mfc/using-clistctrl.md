@@ -1,39 +1,56 @@
 ---
-title: "CListCtrl 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CListCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl 클래스, using"
+title: Using CListCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CListCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# CListCtrl 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e46bdfaa76ea2d2cae77d127dd4fbafe4351cd3e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-Use a list control to display any arrangement of icons with labels, as in File Explorer, or columnar lists of text, with or without icons.  For a description of the four possible "views" \(not to be confused with MFC views\) you can have in a list control — icon view, small icon view, list view, and report view — see Views in the [CListCtrl](../mfc/reference/clistctrl-class.md) class overview.  
+---
+# <a name="using-clistctrl"></a>Using CListCtrl
+Use a list control to display any arrangement of icons with labels, as in File Explorer, or columnar lists of text, with or without icons. For a description of the four possible "views" (not to be confused with MFC views) you can have in a list control — icon view, small icon view, list view, and report view — see Views in the [CListCtrl](../mfc/reference/clistctrl-class.md) class overview.  
   
- In some views, users can drag icons to different positions or edit icon labels.  For example, see the right\-hand pane in File Explorer, which uses a list control in a nondialog window.  You can experiment with the available views in Explorer's View menu.  
+ In some views, users can drag icons to different positions or edit icon labels. For example, see the right-hand pane in File Explorer, which uses a list control in a nondialog window. You can experiment with the available views in Explorer's View menu.  
   
- For related information, see [About List\-View Controls](http://msdn.microsoft.com/library/windows/desktop/bb774735) in the [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For related information, see [About List-View Controls](http://msdn.microsoft.com/library/windows/desktop/bb774735) in the Windows SDK.  
   
 > [!NOTE]
->  The [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] refers to list controls as "list view controls." This usage of "view" does not refer to MFC view classes, particularly `CListView`.  For more information, see [List Control and List View](../mfc/list-control-and-list-view.md).  
+>  The Windows SDK refers to list controls as "list view controls." This usage of "view" does not refer to MFC view classes, particularly `CListView`. For more information, see [List Control and List View](../mfc/list-control-and-list-view.md).  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
 -   [List Control and List View](../mfc/list-control-and-list-view.md)  
   
@@ -45,7 +62,7 @@ Use a list control to display any arrangement of icons with labels, as in File E
   
 -   [Creating the Image Lists](../mfc/creating-the-image-lists.md)  
   
--   [Adding Columns to the Control \(Report View\)](../mfc/adding-columns-to-the-control-report-view.md)  
+-   [Adding Columns to the Control (Report View)](../mfc/adding-columns-to-the-control-report-view.md)  
   
 -   [Adding Items to the Control](../mfc/adding-items-to-the-control.md)  
   
@@ -61,5 +78,7 @@ Use a list control to display any arrangement of icons with labels, as in File E
   
 -   [Destroying the List Control](../mfc/destroying-the-list-control.md)  
   
-## 참고 항목  
- [컨트롤](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

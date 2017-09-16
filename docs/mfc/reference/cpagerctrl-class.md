@@ -1,5 +1,5 @@
 ---
-title: "CPagerCtrl 클래스 | Microsoft 문서"
+title: CPagerCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,7 +35,27 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPagerCtrl class
+- CPagerCtrl [MFC], CPagerCtrl
+- CPagerCtrl [MFC], Create
+- CPagerCtrl [MFC], CreateEx
+- CPagerCtrl [MFC], ForwardMouse
+- CPagerCtrl [MFC], GetBkColor
+- CPagerCtrl [MFC], GetBorder
+- CPagerCtrl [MFC], GetButtonSize
+- CPagerCtrl [MFC], GetButtonState
+- CPagerCtrl [MFC], GetDropTarget
+- CPagerCtrl [MFC], GetScrollPos
+- CPagerCtrl [MFC], IsButtonDepressed
+- CPagerCtrl [MFC], IsButtonGrayed
+- CPagerCtrl [MFC], IsButtonHot
+- CPagerCtrl [MFC], IsButtonInvisible
+- CPagerCtrl [MFC], IsButtonNormal
+- CPagerCtrl [MFC], RecalcSize
+- CPagerCtrl [MFC], SetBkColor
+- CPagerCtrl [MFC], SetBorder
+- CPagerCtrl [MFC], SetButtonSize
+- CPagerCtrl [MFC], SetChild
+- CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
 caps.latest.revision: 26
 author: mikeblome
@@ -55,63 +75,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8b8bf05873239f274a9b1285797c01123fe071f7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e8ef536f35e3ec4db57befc51b79549b346f71f4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpagerctrl-class"></a>CPagerCtrl 클래스
-`CPagerCtrl` 클래스는 윈도우에 맞지 않는 포함된 창을 보기로 스크롤할 수 있는 Windows 페이저 컨트롤을 래핑합니다.  
+# <a name="cpagerctrl-class"></a>CPagerCtrl Class
+The `CPagerCtrl` class wraps the Windows pager control, which can scroll into view a contained window that does not fit the containing window.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPagerCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPagerCtrl::CPagerCtrl](#cpagerctrl)|`CPagerCtrl` 개체를 생성합니다.|  
+|[CPagerCtrl::CPagerCtrl](#cpagerctrl)|Constructs a `CPagerCtrl` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPagerCtrl::Create](#create)|지정 된 스타일으로 페이저 컨트롤을 만들고 현재 연결 `CPagerCtrl` 개체입니다.|  
-|[CPagerCtrl::CreateEx](#createex)|확장된 스타일을 지정된 하 여 페이저 컨트롤을 만들고 현재 연결 `CPagerCtrl` 개체입니다.|  
-|[CPagerCtrl::ForwardMouse](#forwardmouse)|설정 하거나 해제 전달 [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) 메시지는 현재 페이저 컨트롤에 포함 된 창입니다.|  
-|[CPagerCtrl::GetBkColor](#getbkcolor)|현재 페이저 컨트롤의 배경색을 검색합니다.|  
-|[CPagerCtrl::GetBorder](#getborder)|현재 페이저 컨트롤의 테두리 크기를 검색합니다.|  
-|[CPagerCtrl::GetButtonSize](#getbuttonsize)|현재 페이저 컨트롤의 단추 크기를 검색합니다.|  
-|[CPagerCtrl::GetButtonState](#getbuttonstate)|현재 페이저 컨트롤에서 지정 된 단추의 상태를 검색합니다.|  
-|[CPagerCtrl::GetDropTarget](#getdroptarget)|검색 된 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) 현재 페이저 컨트롤에 대 한 인터페이스입니다.|  
-|[CPagerCtrl::GetScrollPos](#getscrollpos)|현재 페이저 컨트롤의 스크롤 위치를 검색합니다.|  
-|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|현재 페이저 컨트롤의 지정 된 단추 인지 여부를 나타냅니다 `pressed` 상태입니다.|  
-|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|현재 페이저 컨트롤의 지정 된 단추 인지 여부를 나타냅니다 `grayed` 상태입니다.|  
-|[CPagerCtrl::IsButtonHot](#isbuttonhot)|현재 페이저 컨트롤의 지정 된 단추 인지 여부를 나타냅니다 `hot` 상태입니다.|  
-|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|현재 페이저 컨트롤의 지정 된 단추 인지 여부를 나타냅니다 `invisible` 상태입니다.|  
-|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|현재 페이저 컨트롤의 지정 된 단추 인지 여부를 나타냅니다 `normal` 상태입니다.|  
-|[CPagerCtrl::RecalcSize](#recalcsize)|현재 호출기 컨트롤이 포함 된 창의 크기 다시 계산 하도록 합니다.|  
-|[CPagerCtrl::SetBkColor](#setbkcolor)|현재 페이저 컨트롤의 배경색을 설정합니다.|  
-|[CPagerCtrl::SetBorder](#setborder)|현재 페이저 컨트롤의 테두리 크기를 설정합니다.|  
-|[CPagerCtrl::SetButtonSize](#setbuttonsize)|현재 페이저 컨트롤의 단추 크기를 설정합니다.|  
-|[CPagerCtrl::SetChild](#setchild)|현재 페이저 컨트롤에 포함 된 창을 설정입니다.|  
-|[CPagerCtrl::SetScrollPos](#setscrollpos)|현재 페이저 컨트롤의 스크롤 위치를 설정합니다.|  
+|[CPagerCtrl::Create](#create)|Creates a pager control with specified styles and attaches it to the current `CPagerCtrl` object.|  
+|[CPagerCtrl::CreateEx](#createex)|Creates a pager control with specified extended styles and attaches it to the current `CPagerCtrl` object.|  
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|Enables or disables forwarding [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messages to the window that is contained in the current pager control.|  
+|[CPagerCtrl::GetBkColor](#getbkcolor)|Retrieves the background color of the current pager control.|  
+|[CPagerCtrl::GetBorder](#getborder)|Retrieves the border size of the current pager control.|  
+|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Retrieves the button size of the current pager control.|  
+|[CPagerCtrl::GetButtonState](#getbuttonstate)|Retrieves the state of the specified button in the current pager control.|  
+|[CPagerCtrl::GetDropTarget](#getdroptarget)|Retrieves the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface for the current pager control.|  
+|[CPagerCtrl::GetScrollPos](#getscrollpos)|Retrieves the scroll position of the current pager control.|  
+|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Indicates whether the specified button of the current pager control is in `pressed` state.|  
+|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Indicates whether the specified button of the current pager control is in `grayed` state.|  
+|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Indicates whether the specified button of the current pager control is in `hot` state.|  
+|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Indicates whether the specified button of the current pager control is in `invisible` state.|  
+|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Indicates whether the specified button of the current pager control is in `normal` state.|  
+|[CPagerCtrl::RecalcSize](#recalcsize)|Causes the current pager control to recalculate the size of the contained window.|  
+|[CPagerCtrl::SetBkColor](#setbkcolor)|Sets the background color of the current pager control.|  
+|[CPagerCtrl::SetBorder](#setborder)|Sets the border size of the current pager control.|  
+|[CPagerCtrl::SetButtonSize](#setbuttonsize)|Sets the button size of the current pager control.|  
+|[CPagerCtrl::SetChild](#setchild)|Sets the contained window for the current pager control.|  
+|[CPagerCtrl::SetScrollPos](#setscrollpos)|Sets the scroll position of the current pager control.|  
   
-## <a name="remarks"></a>주의  
- 호출기 컨트롤이 선형 및 포함 하 고 창 보다 더 큰 포함 된 창을 보기로 스크롤할 수 있게 하는 다른 창을 포함 하는 창입니다. 페이저 컨트롤 자동으로 해당 가장 멀리 있는 범위에 포함 된 창은 스크롤될 때 사라진 두 스크롤 단추를 표시 하 고 그렇지 않으면 다시 나타납니다. 가로 또는 세로로 스크롤 하는 페이저 컨트롤을 만들 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ A pager control is a window that contains another window that is linear and larger than the containing window, and enables you to scroll the contained window into view. The pager control displays two scroll buttons that automatically disappear when the contained window is scrolled to its farthest extent, and reappear otherwise. You can create a pager control that scrolls either horizontally or vertically.  
   
- 예를 들어, 응용 프로그램에 해당 항목이 모두 표시 하기에 충분 하지 않은 경우 도구 모음, 페이저 컨트롤에 도구 모음을 지정할 수 있습니다 및 사용자는 왼쪽 또는 오른쪽의 모든 항목에 액세스 하 고 도구 모음을 스크롤할 수 있습니다. Microsoft Internet Explorer 버전 4.0 (commctrl.dll 버전 4.71) 페이저 컨트롤을 소개 합니다.  
+ For example, if your application has a toolbar that is not wide enough to show all of its items, you can assign the toolbar to a pager control and users will be able to scroll the toolbar to the left or right to access all of the items. Microsoft Internet Explorer Version 4.0 (commctrl.dll version 4.71) introduces the pager control.  
   
- `CPagerCtrl` 에서 파생 된 클래스는 [CWnd](../../mfc/reference/cwnd-class.md) 클래스입니다. 자세한 내용 및 pager 컨트롤의 그림에 대 한 참조 [페이저 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb760855)합니다.  
+ The `CPagerCtrl` class is derived from the [CWnd](../../mfc/reference/cwnd-class.md) class. For more information and an illustration of a pager control, see [Pager Controls](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -120,21 +140,21 @@ class CPagerCtrl : public CWnd
   
  `CPagerCtrl`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
- `CPagerCtrl` 개체를 생성합니다.  
+##  <a name="cpagerctrl"></a>  CPagerCtrl::CPagerCtrl  
+ Constructs a `CPagerCtrl` object.  
   
 ```  
 CPagerCtrl();
 ```  
   
-### <a name="remarks"></a>주의  
- 사용 된 [CPagerCtrl::Create](#create) 또는 [CPagerCtrl::CreateEx](#createex) 페이저 컨트롤을 만들고에 연결 하는 메서드는 `CPagerCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ Use the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method to create a pager control and attach it to the `CPagerCtrl` object.  
   
-##  <a name="create"></a>CPagerCtrl::Create  
- 지정 된 스타일으로 페이저 컨트롤을 만들고 현재 연결 `CPagerCtrl` 개체입니다.  
+##  <a name="create"></a>  CPagerCtrl::Create  
+ Creates a pager control with specified styles and attaches it to the current `CPagerCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -144,28 +164,28 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwStyle`|비트 조합 (OR) [창 스타일](../../mfc/reference/window-styles.md) 및 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859) 컨트롤에 적용할 수 있습니다.|  
-|[in] `rect`|에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 클라이언트 좌표에서 컨트롤의 크기와 위치를 포함 하는 구조입니다.|  
-|[in] `pParentWnd`|에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 개체 컨트롤의 부모 창입니다. 이 매개 변수 수 없습니다 `NULL`합니다.|  
-|[in] `nID`|컨트롤의 ID입니다.|  
+|[in] `dwStyle`|A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](http://msdn.microsoft.com/library/windows/desktop/bb760859) to be applied to the control.|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control in client coordinates.|  
+|[in] `pParentWnd`|A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be `NULL`.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 페이저 컨트롤을 만들려면 선언는 `CPagerCtrl` 변수를 다음 호출에서 [CPagerCtrl::Create](#create) 또는 [CPagerCtrl::CreateEx](#createex) 변수에 메서드.  
+### <a name="remarks"></a>Remarks  
+ To create a pager control, declare a `CPagerCtrl` variable, then call the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method on that variable.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 페이저 컨트롤을 만들어 다음 사용 하는 [CPagerCtrl::SetChild](#setchild) 페이저 컨트롤에서 매우 긴 단추 컨트롤을 연결 하는 방법이 있습니다. 사용 하 여는 [CPagerCtrl::SetButtonSize](#setbuttonsize) 20 픽셀 페이저 컨트롤의 높이 설정 하는 메서드 및 [CPagerCtrl::SetBorder](#setborder) 1 픽셀로 테두리 두께 설정 하는 방법입니다.  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CPagerCtrl::CreateEx  
- 확장된 스타일을 지정된 하 여 페이저 컨트롤을 만들고 현재 연결 `CPagerCtrl` 개체입니다.  
+##  <a name="createex"></a>  CPagerCtrl::CreateEx  
+ Creates a pager control with specified extended styles and attaches it to the current `CPagerCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -176,380 +196,380 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|확장된 스타일을 컨트롤에 적용할 수의 비트 조합입니다. 자세한 내용은 참조는 `dwExStyle` 의 매개 변수는 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) 함수입니다.|  
-|[in] `dwStyle`|비트 조합 (OR) [창 스타일](../../mfc/reference/window-styles.md) 및 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859) 컨트롤에 적용할 수 있습니다.|  
-|[in] `rect`|에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 클라이언트 좌표에서 컨트롤의 크기와 위치를 포함 하는 구조입니다.|  
-|[in] `pParentWnd`|에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 개체 컨트롤의 부모 창입니다. 이 매개 변수 수 없습니다 `NULL`합니다.|  
-|[in] `nID`|컨트롤의 ID입니다.|  
+|[in] `dwExStyle`|A bitwise combination of extended styles to be applied to the control. For more information, see the `dwExStyle` parameter of the [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) function.|  
+|[in] `dwStyle`|A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](http://msdn.microsoft.com/library/windows/desktop/bb760859) to be applied to the control.|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control in client coordinates.|  
+|[in] `pParentWnd`|A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be `NULL`.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 페이저 컨트롤을 만들려면 선언는 `CPagerCtrl` 변수를 다음 호출에서 [CPagerCtrl::Create](#create) 또는 [CPagerCtrl::CreateEx](#createex) 변수에 메서드.  
+### <a name="remarks"></a>Remarks  
+ To create a pager control, declare a `CPagerCtrl` variable, then call the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method on that variable.  
   
-##  <a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
- 설정 하거나 해제 전달 [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) 메시지는 현재 페이저 컨트롤에 포함 된 창입니다.  
+##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
+ Enables or disables forwarding [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messages to the window that is contained in the current pager control.  
   
 ```  
 void ForwardMouse(BOOL bForward);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `bForward`|`true`마우스 메시지 전달 또는 `false` 마우스 메시지를 전달 하지 않습니다.|  
+|[in] `bForward`|`true` to forward mouse messages, or `false` to not forward mouse messages.|  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) message, which is described in the Windows SDK.  
   
-##  <a name="getborder"></a>CPagerCtrl::GetBorder  
- 현재 페이저 컨트롤의 테두리 크기를 검색합니다.  
+##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
+ Retrieves the border size of the current pager control.  
   
 ```  
 int GetBorder() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 테두리 두께 픽셀 단위로 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The current border size, measured in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 [CPagerCtrl::GetBorder](#getborder) 페이저 컨트롤의 테두리의 두께 검색 하는 메서드입니다.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::GetBorder](#getborder) method to retrieve the thickness of the pager control's border.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&5;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
-##  <a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
- 현재 페이저 컨트롤의 배경색을 검색합니다.  
+##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor  
+ Retrieves the background color of the current pager control.  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 페이저 컨트롤의 현재 배경색을 포함 하는 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the current background color of the pager control.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 [CPagerCtrl::SetBkColor](#setbkcolor) 빨간색으로 페이저 컨트롤의 배경색을 설정 하는 메서드 및 [CPagerCtrl::GetBkColor](#getbkcolor) 변경을 수행 했는지 확인 하는 방법입니다.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::SetBkColor](#setbkcolor) method to set the background color of the pager control to red, and the [CPagerCtrl::GetBkColor](#getbkcolor) method to confirm that the change was made.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&4;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
- 현재 페이저 컨트롤의 단추 크기를 검색합니다.  
+##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
+ Retrieves the button size of the current pager control.  
   
 ```  
 int GetButtonSize() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 단추 크기를 픽셀 단위로 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The current button size, measured in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) message, which is described in the Windows SDK.  
   
- 페이저 컨트롤에는 `PGS_HORZ` 페이저 단추의 너비를 결정 하는 스타일을 단추 크기가 고 페이저 컨트롤에는 `PGS_VERT` 스타일을 단추 크기 페이저 단추의 높이 결정 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.  
+ If the pager control has the `PGS_HORZ` style, the button size determines the width of the pager buttons, and if the pager control has the `PGS_VERT` style, the button size determines the height of the pager buttons. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
-##  <a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
- 현재 페이저 컨트롤에서 지정한 스크롤 단추의 상태를 검색합니다.  
+##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
+ Retrieves the state of the specified scroll button in the current pager control.  
   
 ```  
 DWORD GetButtonState(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일이 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일이 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 단추의 상태는 `iButton` 매개 변수입니다. The state is either `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, or `PGF_HOT`. 자세한 내용은 반환 값 섹션을 참조는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
+### <a name="return-value"></a>Return Value  
+ The state of the button specified by the `iButton` parameter. The state is either `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, or `PGF_HOT`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK.  
   
-##  <a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
- 검색 된 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) 현재 페이저 컨트롤에 대 한 인터페이스입니다.  
+##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
+ Retrieves the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface for the current pager control.  
   
 ```  
 IDropTarget* GetDropTarget() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `IDropTarget` 현재 페이저 컨트롤에 대 한 인터페이스입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `IDropTarget` interface for the current pager control.  
   
-### <a name="remarks"></a>주의  
- `IDropTarget`구현 하는 인터페이스 중 하나는 응용 프로그램에서 끌어서 놓기 작업을 지원 합니다.  
+### <a name="remarks"></a>Remarks  
+ `IDropTarget` is one of the interfaces you implement to support drag-and-drop operations in your application.  
   
- 이 메서드는 전송 된 [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 이 메서드의 호출자는 호출을 담당는 `Release` 의 멤버는 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) 인터페이스는 인터페이스는 더 이상 필요 합니다.  
+ This method sends the [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) message, which is described in the Windows SDK. The caller of this method is responsible for calling the `Release` member of the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface when the interface is no longer needed.  
   
-##  <a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
- 현재 페이저 컨트롤의 스크롤 위치를 검색합니다.  
+##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
+ Retrieves the scroll position of the current pager control.  
   
 ```  
 int GetScrollPos() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 스크롤 위치를 픽셀 단위로 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The current scroll position, measured in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 [CPagerCtrl::GetScrollPos](#getscrollpos) 페이저 컨트롤의 현재 스크롤 위치를 검색 하는 메서드입니다. 이 예제에서는 사용 하는 페이저 컨트롤을&0;으로 맨 왼쪽 위치 이미 스크롤되지 않는 경우는 [CPagerCtrl::SetScrollPos](#setscrollpos) 스크롤 위치를&0;으로 설정 하는 방법입니다.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::GetScrollPos](#getscrollpos) method to retrieve the current scroll position of the pager control. If the pager control is not already scrolled to zero, the leftmost position, the example uses the [CPagerCtrl::SetScrollPos](#setscrollpos) method to set the scroll position to zero.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&7;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
-##  <a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
- 현재 페이저 컨트롤의 지정 된 스크롤 단추를 눌렀는지 여부를 나타냅니다.  
+##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
+ Indicates whether the specified scroll button of the current pager control is in pressed state.  
   
 ```  
 BOOL IsButtonDepressed(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일이 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일이 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>반환 값  
- `true`지정 된 단추를 누른 상태 이면 그렇지 않으면 `false`합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in pressed state; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_DEPRESSED`합니다. 자세한 내용은 반환 값 섹션을 참조는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_DEPRESSED`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
- 지정된 된 스크롤 단추는 현재 페이저 컨트롤의 회색으로 표시 된 상태 인지 여부를 나타냅니다.  
+##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
+ Indicates whether the specified scroll button of the current pager control is in grayed state.  
   
 ```  
 BOOL IsButtonGrayed(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일이 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일이 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>반환 값  
- `true`지정 된 단추가 회색으로 표시 된 상태 이면 경우 그렇지 않으면 `false`합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in grayed state; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_GRAYED`합니다. 자세한 내용은 반환 값 섹션을 참조는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_GRAYED`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
- 지정된 된 스크롤 단추는 현재 페이저 컨트롤의 활성 상태 인지 여부를 나타냅니다.  
+##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
+ Indicates whether the specified scroll button of the current pager control is in hot state.  
   
 ```  
 BOOL IsButtonHot(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일이 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일이 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>반환 값  
- `true`지정한 단추의; 활성 상태의 경우 그렇지 않으면 `false`합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in hot state; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_HOT`합니다. 자세한 내용은 반환 값 섹션을 참조는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_HOT`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
- 현재 페이저 컨트롤의 지정한 스크롤 단추 보이지 않는 상태 인지 여부를 나타냅니다.  
+##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
+ Indicates whether the specified scroll button of the current pager control is in invisible state.  
   
 ```  
 BOOL IsButtonInvisible(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일이 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일이 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>반환 값  
- `true`보이지 않는 상태 이면 지정 된 단추를 그렇지 않으면 `false`합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in invisible state; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- Windows에서는 추가 단추를 클릭 하면 없습니다 포함 된 창의 더 뷰로 가져올 때문에 가장 멀리 있는 범위에 포함 된 창은 스크롤될 때 특정 방향으로 스크롤 단추는 표시 되지 않습니다.  
+### <a name="remarks"></a>Remarks  
+ Windows makes the scroll button in a particular direction invisible when the contained window is scrolled to its farthest extent because clicking the button further cannot bring more of the contained window into view.  
   
- 이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_INVISIBLE`합니다. 자세한 내용은 반환 값 섹션을 참조는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_INVISIBLE`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) 페이저 컨트롤의 왼쪽 및 오른쪽 스크롤 단추는 표시 여부를 확인 하 합니다.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) method to determine whether the pager control's left and right scroll buttons are visible.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&6;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
-##  <a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
- 지정된 된 스크롤 단추는 현재 페이저 컨트롤의 정상 상태 인지 여부를 나타냅니다.  
+##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
+ Indicates whether the specified scroll button of the current pager control is in normal state.  
   
 ```  
 BOOL IsButtonNormal(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일이 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일이 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 고 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>반환 값  
- `true`정상 상태 이면 지정 된 단추를 그렇지 않으면 `false`합니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in normal state; otherwise, `false`.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_NORMAL`합니다. 자세한 내용은 반환 값 섹션을 참조는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_NORMAL`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="recalcsize"></a>CPagerCtrl::RecalcSize  
- 현재 호출기 컨트롤이 포함 된 창의 크기 다시 계산 하도록 합니다.  
+##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
+ Causes the current pager control to recalculate the size of the contained window.  
   
 ```  
 void RecalcSize();
 ```  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다. 따라서 페이저 컨트롤 보냅니다는 [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) 는 스크롤 가능한 창 크기에 포함 된 알림을 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) message, which is described in the Windows SDK. Consequently, the pager control sends the [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification to obtain the scrollable dimensions of the contained window.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 [CPagerCtrl::RecalcSize](#recalcsize) 메서드를 현재 페이저 컨트롤 크기 다시 계산을 요청 합니다.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::RecalcSize](#recalcsize) method to request the current pager control to recalculate its size.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&3;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 [리플렉션 메시지](../../mfc/tn062-message-reflection-for-windows-controls.md) 페이저 컨트롤 크기 계산을 수행 하는 컨트롤의 부모 대화 하도록 하는 대신 다시 계산을 사용할 수 있도록 합니다. 예제에서는 파생 되는 `MyPagerCtrl` 에서 클래스는 [CPagerCtrl 클래스](../../mfc/reference/cpagerctrl-class.md), 다음 메시지 지도 사용 하 여 연결 하는 [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) 알림을 `OnCalcsize` 알림 처리기. 이 예제에서는 알림 처리기를 고정된 값 페이저 컨트롤의 높이 너비를 설정합니다.  
+### <a name="example"></a>Example  
+ The following example uses [message reflection](../../mfc/tn062-message-reflection-for-windows-controls.md) to enable the pager control to recalculate its own size instead of requiring the control's parent dialog to perform the calculation. The example derives the `MyPagerCtrl` class from the [CPagerCtrl class](../../mfc/reference/cpagerctrl-class.md), then uses a message map to associate the [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification with the `OnCalcsize` notification handler. In this example, the notification handler sets the width and height of the pager control to fixed values.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&8;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
-##  <a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
- 현재 페이저 컨트롤의 배경색을 설정합니다.  
+##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor  
+ Sets the background color of the current pager control.  
   
 ```  
 COLORREF SetBkColor(COLORREF clrBk);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 새 배경 색 페이저 컨트롤을 포함 하는 값입니다.|  
+|[in] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the new background color of the pager control.|  
   
-### <a name="return-value"></a>반환 값  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 페이저 컨트롤의 이전 배경색을 포함 하는 값입니다.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the previous background color of the pager control.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 [CPagerCtrl::SetBkColor](#setbkcolor) 빨간색으로 페이저 컨트롤의 배경색을 설정 하는 메서드 및 [CPagerCtrl::GetBkColor](#getbkcolor) 변경을 수행 했는지 확인 하는 방법입니다.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::SetBkColor](#setbkcolor) method to set the background color of the pager control to red, and the [CPagerCtrl::GetBkColor](#getbkcolor) method to confirm that the change was made.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&4;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="setborder"></a>CPagerCtrl::SetBorder  
- 현재 페이저 컨트롤의 테두리 크기를 설정합니다.  
+##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
+ Sets the border size of the current pager control.  
   
 ```  
 int SetBorder(int iBorder);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iBorder`|새 테두리 두께 픽셀 단위로 지정 합니다. 하는 경우는 `iBorder` 매개 변수가 음수 이면 테두리 크기는&0;으로 설정 됩니다.|  
+|[in] `iBorder`|The new border size, measured in pixels. If the `iBorder` parameter is negative, the border size is set to zero.|  
   
-### <a name="return-value"></a>반환 값  
- 이전 테두리 두께 픽셀 단위로 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The previous border size, measured in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 페이저 컨트롤을 만들어 다음 사용 하는 [CPagerCtrl::SetChild](#setchild) 페이저 컨트롤에서 매우 긴 단추 컨트롤을 연결 하는 방법이 있습니다. 사용 하 여는 [CPagerCtrl::SetButtonSize](#setbuttonsize) 20 픽셀 페이저 컨트롤의 높이 설정 하는 메서드 및 [CPagerCtrl::SetBorder](#setborder) 1 픽셀로 테두리 두께 설정 하는 방법입니다.  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
- 현재 페이저 컨트롤의 단추 크기를 설정합니다.  
+##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize  
+ Sets the button size of the current pager control.  
   
 ```  
 int SetButtonSize(int iButtonSize);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButtonSize`|새 단추 크기를 픽셀 단위로 지정 합니다.|  
+|[in] `iButtonSize`|The new button size, measured in pixels.|  
   
-### <a name="return-value"></a>반환 값  
- 이전 단추 크기를 픽셀 단위로 지정 합니다.  
+### <a name="return-value"></a>Return Value  
+ The previous button size, measured in pixels.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, which is described in the Windows SDK.  
   
- 페이저 컨트롤에는 `PGS_HORZ` 페이저 단추의 너비를 결정 하는 스타일을 단추 크기가 고 페이저 컨트롤에는 `PGS_VERT` 스타일을 단추 크기 페이저 단추의 높이 결정 합니다. 기본 단추 크기는 3-4의 스크롤 막대의 너비 및 최소 단추 크기는 12 픽셀입니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.  
+ If the pager control has the `PGS_HORZ` style, the button size determines the width of the pager buttons, and if the pager control has the `PGS_VERT` style, the button size determines the height of the pager buttons. The default button size is three-fourths of the width of the scroll bar, and the minimum button size is 12 pixels. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 페이저 컨트롤을 만들어 다음 사용 하는 [CPagerCtrl::SetChild](#setchild) 페이저 컨트롤에서 매우 긴 단추 컨트롤을 연결 하는 방법이 있습니다. 사용 하 여는 [CPagerCtrl::SetButtonSize](#setbuttonsize) 20 픽셀 페이저 컨트롤의 높이 설정 하는 메서드 및 [CPagerCtrl::SetBorder](#setborder) 1 픽셀로 테두리 두께 설정 하는 방법입니다.  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setchild"></a>CPagerCtrl::SetChild  
- 현재 페이저 컨트롤에 포함 된 창을 설정입니다.  
+##  <a name="setchild"></a>  CPagerCtrl::SetChild  
+ Sets the contained window for the current pager control.  
   
 ```  
 void SetChild(HWND hwndChild);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `hwndChild`|포함 된 창을 처리 합니다.|  
+|[in] `hwndChild`|Handle to the window to be contained.|  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) message, which is described in the Windows SDK.  
   
- 이 메서드는 포함 된 창;의 부모를 변경 하지 않습니다. 만 스크롤에 대 한 페이저 컨트롤에 대 한 창 핸들을 할당합니다. 대부분의 경우에서 포함 된 창은 페이저 컨트롤의 자식 창이 됩니다.  
+ This method does not change the parent of the contained window; it only assigns a window handle to the pager control for scrolling. In most cases, the contained window will be a child window of the pager control.  
   
-### <a name="example"></a>예제  
- 다음 예제에서는 페이저 컨트롤을 만들어 다음 사용 하는 [CPagerCtrl::SetChild](#setchild) 페이저 컨트롤에서 매우 긴 단추 컨트롤을 연결 하는 방법이 있습니다. 사용 하 여는 [CPagerCtrl::SetButtonSize](#setbuttonsize) 20 픽셀 페이저 컨트롤의 높이 설정 하는 메서드 및 [CPagerCtrl::SetBorder](#setborder) 1 픽셀로 테두리 두께 설정 하는 방법입니다.  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
- 현재 페이저 컨트롤의 스크롤 위치를 설정합니다.  
+##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
+ Sets the scroll position of the current pager control.  
   
 ```  
 void SetScrollPos(int iPos);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iPos`|새 스크롤 위치를 픽셀 단위로 지정 합니다.|  
+|[in] `iPos`|The new scroll position, measured in pixels.|  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전송 된 [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) 에 설명 된 메시지는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, which is described in the Windows SDK.  
   
-## <a name="see-also"></a>참고 항목  
- [CPagerCtrl 클래스](../../mfc/reference/cpagerctrl-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)   
- [페이저 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb760855)
+## <a name="see-also"></a>See Also  
+ [CPagerCtrl Class](../../mfc/reference/cpagerctrl-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Pager Controls](http://msdn.microsoft.com/library/windows/desktop/bb760855)
 
 
 

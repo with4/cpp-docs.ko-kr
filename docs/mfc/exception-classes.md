@@ -1,67 +1,86 @@
 ---
-title: "예외 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.exception"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "예외 클래스"
-  - "예외 처리, 예외 클래스"
-  - "MFC, 예외"
+title: Exception Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.exception
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception classes [MFC]
+- exception handling [MFC], exception classes
+- MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 예외 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f917d9f426a9ce20644c1897c595ba58fc9b5d41
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-클래스 라이브러리는 클래스 `CException` 에 기반한 예외 처리 메커니즘을 제공합니다.  응용 프로그램 프레임 워크는 이 코드에서 예외를 사용합니다; 사용자 역시 이것을 사용할 수 있습니다.  자세한 내용은, [예외 처리](../mfc/exception-handling-in-mfc.md)를 참고하세요.  `CException` 으로부터 사용자 지정 예외 형식에서 파생 될 수 있습니다.  
+---
+# <a name="exception-classes"></a>Exception Classes
+The class library provides an exception-handling mechanism based on class `CException`. The application framework uses exceptions in its code; you can also use them in yours. For more information, see the article [Exceptions](../mfc/exception-handling-in-mfc.md). You can derive your own exception types from `CException`.  
   
- MFC는 이것을 지원하는 모든 예외클래스 뿐만아니라 파생될 수 있는 예외클래스까지 제공합니다.  
+ MFC provides an exception class from which you can derive your own exception as well as exception classes for all of the exceptions it supports.  
   
  [CException](../mfc/reference/cexception-class.md)  
- 예외에 대한 기본 클래스입니다.  
+ The base class for exceptions.  
   
  [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- 예외를 보관합니다.  
+ An archive exception.  
   
  [CDaoException](../mfc/reference/cdaoexception-class.md)  
- DAO 데이터베이스 작업에서 오류로 발생하는 예외입니다.  
+ An exception resulting from a failure in a DAO database operation.  
   
  [CDBException](../mfc/reference/cdbexception-class.md)  
- ODBC 데이터베이스 처리 과정에서 오류가 발생한 예외입니다.  
+ An exception resulting from a failure in ODBC database processing.  
   
  [CFileException](../mfc/reference/cfileexception-class.md)  
- 파일 기반 예외입니다.  
+ A file-oriented exception.  
   
  [CMemoryException](../mfc/reference/cmemoryexception-class.md)  
- out\-of\-memory 예외\[C\+\+\]  
+ An out-of-memory exception.  
   
  [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)  
- 지원되지 않은 기능을 사용함으로써 예외가 발생합니다.  
+ An exception resulting from using an unsupported feature.  
   
  [COleException](../mfc/reference/coleexception-class.md)  
- OLE 처리 과정에서 오류가 발생한 예외입니다.  이 클래스는 컨테이너와 서버, 두가지 모두 사용됩니다.  
+ An exception resulting from a failure in OLE processing. This class is used by both containers and servers.  
   
  [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- 자동화하는 동안 오류에서 발생하는 예외입니다.  자동화 예외는 자동화 서버에서 발생되고, 자동화 클라이언트에서 발견됩니다.  
+ An exception resulting from an error during automation. Automation exceptions are thrown by automation servers and caught by automation clients.  
   
  [CResourceException](../mfc/reference/cresourceexception-class.md)  
- Windows 리소스를 로드하는 오류에서 발생한 예외입니다.  
+ An exception resulting from a failure to load a Windows resource.  
   
  [CUserException](../mfc/reference/cuserexception-class.md)  
- 사용자가 시작한 작업을 중지하는 데 사용 되는 예외입니다.  일반적으로, 이 예외를 발생하기 전에 사용자에게 문제가 알려집니다.  
+ An exception used to stop a user-initiated operation. Typically, the user has been notified of the problem before this exception is thrown.  
   
-## 참고 항목  
- [클래스 개요](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

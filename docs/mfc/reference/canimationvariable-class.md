@@ -1,5 +1,5 @@
 ---
-title: "CAnimationVariable 클래스 | Microsoft 문서"
+title: CAnimationVariable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,7 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationVariable class
+- CAnimationVariable [MFC], CAnimationVariable
+- CAnimationVariable [MFC], AddTransition
+- CAnimationVariable [MFC], ApplyTransitions
+- CAnimationVariable [MFC], ClearTransitions
+- CAnimationVariable [MFC], Create
+- CAnimationVariable [MFC], CreateTransitions
+- CAnimationVariable [MFC], EnableIntegerValueChangedEvent
+- CAnimationVariable [MFC], EnableValueChangedEvent
+- CAnimationVariable [MFC], GetDefaultValue
+- CAnimationVariable [MFC], GetParentAnimationObject
+- CAnimationVariable [MFC], GetValue
+- CAnimationVariable [MFC], GetVariable
+- CAnimationVariable [MFC], SetDefaultValue
+- CAnimationVariable [MFC], SetParentAnimationObject
+- CAnimationVariable [MFC], m_bAutodestroyTransitions
+- CAnimationVariable [MFC], m_dblDefaultValue
+- CAnimationVariable [MFC], m_lstTransitions
+- CAnimationVariable [MFC], m_pParentObject
+- CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
 caps.latest.revision: 17
 author: mikeblome
@@ -53,101 +71,101 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 42513c841f6dc891369d7d6640ced1aa37f90e8e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 85388a9f55358c1c1fb5f5964d25c29c0231f3c0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationvariable-class"></a>CAnimationVariable 클래스
-애니메이션 변수를 나타냅니다.  
+# <a name="canimationvariable-class"></a>CAnimationVariable Class
+Represents an animation variable.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationVariable;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::CAnimationVariable](#canimationvariable)|애니메이션 변수 개체를 생성 합니다.|  
-|[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|소멸자입니다. CAnimationVariable 개체가 소멸 될 때 호출 됩니다.|  
+|[CAnimationVariable::CAnimationVariable](#canimationvariable)|Constructs an animation variable object.|  
+|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|The destructor. Called when a CAnimationVariable object is being destroyed.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::AddTransition](#addtransition)|전환을 추가합니다.|  
-|[CAnimationVariable::ApplyTransitions](#applytransitions)|스토리 보드에 내부 목록에서 전환을 추가 합니다.|  
-|[CAnimationVariable::ClearTransitions](#cleartransitions)|전환을 지웁니다.|  
-|[CAnimationVariable::Create](#create)|기본 애니메이션 변수 COM 개체를 만듭니다.|  
-|[CAnimationVariable::CreateTransitions](#createtransitions)|이 애니메이션 변수에 적용 될 모든 전환을 만듭니다.|  
-|[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|사용 하거나 IntegerValueChanged 이벤트를 사용 하지 않도록 설정 합니다.|  
-|[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|사용 하거나 ValueChanged 이벤트를 사용 하지 않도록 설정 합니다.|  
-|[CAnimationVariable::GetDefaultValue](#getdefaultvalue)|기본값을 반환합니다.|  
-|[CAnimationVariable::GetParentAnimationObject](#getparentanimationobject)|부모를 반환 애니메이션 개체입니다.|  
-|[CAnimationVariable::GetValue](#getvalue)|오버로드됨. 애니메이션 변수의 현재 값을 반환 합니다.|  
-|[CAnimationVariable::GetVariable](#getvariable)|IUIAnimationVariable COM 개체에 대 한 포인터를 반환합니다.|  
-|[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|기본값을 설정 하 고 IUIAnimationVariable COM 개체를 해제 합니다.|  
+|[CAnimationVariable::AddTransition](#addtransition)|Adds a transition.|  
+|[CAnimationVariable::ApplyTransitions](#applytransitions)|Adds transitions from the internal list to storyboard.|  
+|[CAnimationVariable::ClearTransitions](#cleartransitions)|Clears transitions.|  
+|[CAnimationVariable::Create](#create)|Creates the underlying animation variable COM object.|  
+|[CAnimationVariable::CreateTransitions](#createtransitions)|Creates all transitions to be applied to this animation variable.|  
+|[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Enables or disables the IntegerValueChanged event.|  
+|[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|Enables or disables the ValueChanged event.|  
+|[CAnimationVariable::GetDefaultValue](#getdefaultvalue)|Returns default value.|  
+|[CAnimationVariable::GetParentAnimationObject](#getparentanimationobject)|Returns the parent animation object.|  
+|[CAnimationVariable::GetValue](#getvalue)|Overloaded. Returns the current value of animation variable.|  
+|[CAnimationVariable::GetVariable](#getvariable)|Returns a pointer to IUIAnimationVariable COM object.|  
+|[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|Sets default value and releases IUIAnimationVariable COM object.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>Protected Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|애니메이션 변수 및 애니메이션 개체 간의 관계를 설정합니다.|  
+|[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Sets the relationship between an animation variable and an animation object.|  
   
-### <a name="public-data-members"></a>공용 데이터 멤버  
+### <a name="public-data-members"></a>Public Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|관련 된 전환 개체 삭제 되어야 할지 여부를 지정 합니다.|  
+|[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Specifies whether related transition objects should be deleted.|  
   
-### <a name="protected-data-members"></a>보호된 데이터 멤버  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|IUIAnimationVariable로 전파 되는 기본값을 지정 합니다.|  
-|[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|이 애니메이션 변수에 애니메이션을 적용 하는 전환 목록을 포함 합니다.|  
-|[CAnimationVariable::m_pParentObject](#m_pparentobject)|이 애니메이션 변수를 캡슐화 하는 애니메이션 개체에 대 한 포인터입니다.|  
-|[CAnimationVariable::m_variable](#m_variable)|IUIAnimationVariable COM 개체에 대 한 포인터를 저장합니다. 만들기에 실패 한 경우 또는 COM 개체, 아직 생성 되지 않은 경우 NULL입니다.|  
+|[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Specifies the default value, which is propagated to IUIAnimationVariable.|  
+|[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Contains a list of transitions that animate this animation variable.|  
+|[CAnimationVariable::m_pParentObject](#m_pparentobject)|A pointer to an animation object that encapsulates this animation variable.|  
+|[CAnimationVariable::m_variable](#m_variable)|Stores a pointer to IUIAnimationVariable COM object. NULL if the COM object has not been created yet, or if creation failed.|  
   
-## <a name="remarks"></a>주의  
- CAnimationVariable 클래스 IUIAnimationVariable COM 개체를 캡슐화합니다. 스토리 보드에서 애니메이션 변수에 적용할 전환 목록을 저장 합니다. CAnimationVariable 개체에 애니메이션된 값을 응용 프로그램, 지점, 크기, 색 및 사각형에 나타낼 수 있는 애니메이션 개체에 포함 됩니다.  
+## <a name="remarks"></a>Remarks  
+ The CAnimationVariable class encapsulates IUIAnimationVariable COM object. It also holds a list of transitions to be applied to the animation variable in a storyboard. CAnimationVariable objects are embedded to animation objects, which can represent in an application an animated value, point, size, color and rectangle.  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CAnimationVariable`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationvariable"></a>CAnimationVariable:: ~ CAnimationVariable  
- 소멸자입니다. CAnimationVariable 개체가 소멸 될 때 호출 됩니다.  
+##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable::~CAnimationVariable  
+ The destructor. Called when a CAnimationVariable object is being destroyed.  
   
 ```  
 virtual ~CAnimationVariable();
 ```  
   
-##  <a name="addtransition"></a>CAnimationVariable::AddTransition  
- 전환을 추가합니다.  
+##  <a name="addtransition"></a>  CAnimationVariable::AddTransition  
+ Adds a transition.  
   
 ```  
 void AddTransition(CBaseTransition* pTransition);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pTransition`  
- 추가할 전환에 대 한 포인터입니다.  
+ A pointer to a transition to add.  
   
-### <a name="remarks"></a>주의  
- 애니메이션 변수를 적용할 수는 전환의 내부 목록에 전환을 추가 하려면이 메서드는 합니다. 애니메이션을 예약한 경우이 목록은 지워야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called to add a transition to the internal list of transitions to be applied to the animation variable. This list should be cleared when an animation has been scheduled.  
   
-##  <a name="applytransitions"></a>CAnimationVariable::ApplyTransitions  
- 스토리 보드에 내부 목록에서 전환을 추가 합니다.  
+##  <a name="applytransitions"></a>  CAnimationVariable::ApplyTransitions  
+ Adds transitions from the internal list to storyboard.  
   
 ```  
 void ApplyTransitions(
@@ -156,66 +174,66 @@ void ApplyTransitions(
     BOOL bDependOnKeyframes);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pController`  
- 부모 애니메이션 컨트롤러에 대 한 포인터입니다.  
+ A pointer to parent animation controller.  
   
  `pStoryboard`  
- 스토리 보드에 대 한 포인터입니다.  
+ A pointer to storyboard.  
   
  `bDependOnKeyframes`  
- 이 메서드는 키 프레임에 종속 되는 전환을 추가 해야 하는 경우 TRUE입니다.  
+ TRUE, if this method should add transitions that depend on keyframes.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 스토리 보드에 내부 목록에서 전환을 추가 합니다. 호출 될 최상위 수준 코드에서 여러 번 전환 키 프레임에 의존 하지 않으며 키 프레임에 종속 된 전환을 추가 하는 추가 합니다. 기본 애니메이션 변수 COM 개체를 만들지 않은 경우이 메서드가이 단계에서 만듭니다.  
+### <a name="remarks"></a>Remarks  
+ This method adds transitions from the internal list to storyboard. It's called from the top level code several times to add transitions that do not depend on keyframes and add transitions that depend on keyframes. If the underlying animation variable COM object has not been created, this method creates it at this stage.  
   
-##  <a name="canimationvariable"></a>CAnimationVariable::CAnimationVariable  
- 애니메이션 변수 개체를 생성 합니다.  
+##  <a name="canimationvariable"></a>  CAnimationVariable::CAnimationVariable  
+ Constructs an animation variable object.  
   
 ```  
 CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dblDefaultValue`  
- 기본값을 지정합니다.  
+ Specifies the default value.  
   
-### <a name="remarks"></a>주의  
- 애니메이션 변수 개체를 생성 하 고 해당 기본값을 설정 합니다. 변수 애니메이션이 적용 되지 않는 하거나 애니메이션을 적용할 수 없는 경우 기본값을 사용 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Constructs an animation variable object and sets its default value. A default value is used when a variable is not animated, or can't be animated.  
   
-##  <a name="cleartransitions"></a>CAnimationVariable::ClearTransitions  
- 전환을 지웁니다.  
+##  <a name="cleartransitions"></a>  CAnimationVariable::ClearTransitions  
+ Clears transitions.  
   
 ```  
 void ClearTransitions(BOOL bAutodestroy);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `bAutodestroy`  
- 이 메서드가 전환 개체를 삭제 해야 하는지 여부를 지정 합니다.  
+ Specifies whether this method should delete transition objects.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 전환의 내부 목록에서 모든 전환을 제거합니다. BAutodestroy가 TRUE 인 경우 m_bAutodestroyTransitions가 TRUE 전환 삭제 됩니다. 그렇지 않으면 호출자가 전환 개체 할당을 취소 해야 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method removes all transitions from the internal list of transitions. If bAutodestroy is TRUE, or m_bAutodestroyTransitions is TRUE, then transitions are deleted. Otherwise the caller should deallocate the transition objects.  
   
-##  <a name="create"></a>CAnimationVariable::Create  
- 기본 애니메이션 변수 COM 개체를 만듭니다.  
+##  <a name="create"></a>  CAnimationVariable::Create  
+ Creates the underlying animation variable COM object.  
   
 ```  
 virtual BOOL Create(IUIAnimationManager* pManager);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pManager`  
- 애니메이션 관리자에 대 한 포인터입니다.  
+ A pointer to animation manager.  
   
-### <a name="return-value"></a>반환 값  
- TRUE 이면 애니메이션 변수 성공적으로 만들었습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the animation variable was successfully created; otherwise FALSE.  
   
-### <a name="remarks"></a>주의  
- 이 메서드 내부 애니메이션 변수 COM 개체를 만들고 기본값을 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method creates the underlying animation variable COM object and sets its default value.  
   
-##  <a name="createtransitions"></a>CAnimationVariable::CreateTransitions  
- 이 애니메이션 변수에 적용 될 모든 전환을 만듭니다.  
+##  <a name="createtransitions"></a>  CAnimationVariable::CreateTransitions  
+ Creates all transitions to be applied to this animation variable.  
   
 ```  
 BOOL CreateTransitions(
@@ -223,18 +241,18 @@ BOOL CreateTransitions(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
 `pLibrary`  
- 에 대 한 포인터는 [IUIAnimationTransitionLibrary 인터페이스](https://msdn.microsoft.com/library/windows/desktop/dd371897), 표준 전환의 라이브러리를 정의 하는 합니다.  
+ A pointer to an [IUIAnimationTransitionLibrary interface](https://msdn.microsoft.com/library/windows/desktop/dd371897), which defines a library of standard transitions.  
   
-### <a name="return-value"></a>반환 값  
- TRUE 이면 전환; 성공적으로 만들어졌습니다. 그렇지 않으면 FALSE입니다.  
+### <a name="return-value"></a>Return Value  
+ TRUE if transitions were created successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>주의  
- 전환의 변수의 내부 목록에 추가 된 전환 해야 할 경우이 메서드는 프레임 워크에 의해 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when it needs to create transitions that have been added to the variable's internal list of transitions.  
   
-##  <a name="enableintegervaluechangedevent"></a>CAnimationVariable::EnableIntegerValueChangedEvent  
- 사용 하거나 IntegerValueChanged 이벤트를 사용 하지 않도록 설정 합니다.  
+##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable::EnableIntegerValueChangedEvent  
+ Enables or disables the IntegerValueChanged event.  
   
 ```  
 void EnableIntegerValueChangedEvent (
@@ -242,18 +260,18 @@ void EnableIntegerValueChangedEvent (
     BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pController`  
- 부모 컨트롤러에 대 한 포인터입니다.  
+ A pointer to parent controller.  
   
  `bEnable`  
- TRUE-이벤트를 이벤트 사용 안 함-FALSE를 사용 하도록 설정 합니다.  
+ TRUE - enable event, FALSE - disable event.  
   
-### <a name="remarks"></a>주의  
- 필요한 경우 재정의 사용 하는 경우 프레임 워크는 CAnimationController::OnAnimationIntegerValueChanged 가상 메서드를 호출 합니다. 이 이벤트를 처리 하기 위해 CAnimationController에서 파생 된 클래스에서 재정의 해야 합니다. 이 메서드는 애니메이션 변수의 정수 값이 변경 될 때마다 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When ValueChanged event is enabled, the framework calls virtual method CAnimationController::OnAnimationIntegerValueChanged. You need to override it in a class derived from CAnimationController in order to process this event. This method is called every time the integer value of animation variable is changed.  
   
-##  <a name="enablevaluechangedevent"></a>CAnimationVariable::EnableValueChangedEvent  
- 사용 하거나 ValueChanged 이벤트를 사용 하지 않도록 설정 합니다.  
+##  <a name="enablevaluechangedevent"></a>  CAnimationVariable::EnableValueChangedEvent  
+ Enables or disables the ValueChanged event.  
   
 ```  
 void EnableValueChangedEvent (
@@ -261,142 +279,142 @@ void EnableValueChangedEvent (
     BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pController`  
- 부모 컨트롤러에 대 한 포인터입니다.  
+ A pointer to parent controller.  
   
  `bEnable`  
- TRUE-이벤트를 이벤트 사용 안 함-FALSE를 사용 하도록 설정 합니다.  
+ TRUE - enable event, FALSE - disable event.  
   
-### <a name="remarks"></a>주의  
- 필요한 경우 재정의 사용 하는 경우 프레임 워크는 CAnimationController::OnAnimationValueChanged 가상 메서드를 호출 합니다. 이 이벤트를 처리 하기 위해 CAnimationController에서 파생 된 클래스에서 재정의 해야 합니다. 이 메서드는 애니메이션 변수의 값이 변경 될 때마다 호출 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When ValueChanged event is enabled, the framework calls virtual method CAnimationController::OnAnimationValueChanged. You need to override it in a class derived from CAnimationController in order to process this event. This method is called every time the value of animation variable is changed.  
   
-##  <a name="getdefaultvalue"></a>CAnimationVariable::GetDefaultValue  
- 기본값을 반환합니다.  
+##  <a name="getdefaultvalue"></a>  CAnimationVariable::GetDefaultValue  
+ Returns default value.  
   
 ```  
 DOUBLE GetDefaultValue() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 기본값입니다.  
+### <a name="return-value"></a>Return Value  
+ The default value.  
   
-### <a name="remarks"></a>주의  
- 이 함수를 사용 하 여 애니메이션 변수의 기본값을 얻습니다. SetDefaultValue 메서드 또는 생성자에서 기본값을 설정할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ Use this function to obtain default value of animation variable. The default value can be set in constructor or by SetDefaultValue method.  
   
-##  <a name="getparentanimationobject"></a>CAnimationVariable::GetParentAnimationObject  
- 부모를 반환 애니메이션 개체입니다.  
+##  <a name="getparentanimationobject"></a>  CAnimationVariable::GetParentAnimationObject  
+ Returns the parent animation object.  
   
 ```  
 CAnimationBaseObject* GetParentAnimationObject();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 관계가 설정 된 경우 부모 애니메이션 개체에 대 한 포인터 그렇지 않으면 NULL입니다.  
+### <a name="return-value"></a>Return Value  
+ A pointer to parent animation object, if relationship was established, otherwise NULL.  
   
-### <a name="remarks"></a>주의  
- 부모 애니메이션 개체 (컨테이너)에 대 한 포인터를 검색 하려면이 메서드를 호출할 수 있습니다.  
+### <a name="remarks"></a>Remarks  
+ This method can be called to retrieve a pointer to a parent animation object (a container).  
   
-##  <a name="getvalue"></a>CAnimationVariable::GetValue  
- 애니메이션 변수의 현재 값을 반환 합니다.  
+##  <a name="getvalue"></a>  CAnimationVariable::GetValue  
+ Returns the current value of animation variable.  
   
 ```  
 HRESULT GetValue(DOUBLE& dblValue);  
 HRESULT GetValue(INT32& nValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dblValue`  
- 애니메이션 변수의 현재 값입니다.  
+ The current value of the animation variable.  
   
  `nValue`  
- 애니메이션 변수의 현재 값입니다.  
+ The current value of the animation variable.  
   
-### <a name="return-value"></a>반환 값  
- 하면 s_ok이 고 값을 성공적으로 가져온 또는 내부 애니메이션 변수 만들어지지 않았습니다. 그렇지 않으면 HRESULT 오류 코드입니다.  
+### <a name="return-value"></a>Return Value  
+ S_OK if the value was obtained successfully, or underlying animation variable has not been created. Otherwise HRESULT error code.  
   
-### <a name="remarks"></a>주의  
- 애니메이션 변수의 현재 값을 검색 하려면이 메서드를 호출할 수 있습니다. 기본 COM 개체를 만들지 않은 경우에 dblValue 함수가 반환 될 때 기본 값에 포함 됩니다.  
+### <a name="remarks"></a>Remarks  
+ This method can be called to retrieve the current value of animation variable. If the underlying COM object has not been created, dblValue will contain a default value, when the function returns.  
   
-##  <a name="getvariable"></a>CAnimationVariable::GetVariable  
- IUIAnimationVariable COM 개체에 대 한 포인터를 반환합니다.  
+##  <a name="getvariable"></a>  CAnimationVariable::GetVariable  
+ Returns a pointer to IUIAnimationVariable COM object.  
   
 ```  
 IUIAnimationVariable* GetVariable();
 ```  
   
-### <a name="return-value"></a>반환 값  
- 유효한 포인터 IUIAnimationVariable COM 개체 또는 애니메이션 변수를 만들지 못했습니다 있거나 만들 수 없는 경우 NULL입니다.  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to IUIAnimationVariable COM object, or NULL if animation variable was not created, or can't be created.  
   
-### <a name="remarks"></a>주의  
- 내부 IUIAnimationVariable COM 개체에 액세스 하 고 필요한 경우 해당 메서드를 직접 호출 하려면이 함수를 사용 합니다.  
+### <a name="remarks"></a>Remarks  
+ Use this function to access the underlying IUIAnimationVariable COM object and call its methods directly if needed.  
   
-##  <a name="m_bautodestroytransitions"></a>CAnimationVariable::m_bAutodestroyTransitions  
- 관련 된 전환 개체 삭제 되어야 할지 여부를 지정 합니다.  
+##  <a name="m_bautodestroytransitions"></a>  CAnimationVariable::m_bAutodestroyTransitions  
+ Specifies whether related transition objects should be deleted.  
   
 ```  
 BOOL m_bAutodestroyTransitions;  
 ```  
   
-### <a name="remarks"></a>주의  
- 전환의 내부 목록에서 제거 될 때이 값을 전환 개체를 강제 삭제 true로 설정 합니다. 이 값이 FALSE는 전환은 응용 프로그램을 호출 하 여 삭제 해야 합니다. 애니메이션을 예약한 후 항상 전환 목록이 지워집니다. 기본값은 FALSE입니다.  
+### <a name="remarks"></a>Remarks  
+ Set this value to TRUE to force deletion of transition objects when they are being removed from the internal list of transitions. If this value is FALSE the transitions should be deleted by calling application. The list of transitions is always cleared after an animation has been scheduled. The default value is FALSE.  
   
-##  <a name="m_dbldefaultvalue"></a>CAnimationVariable::m_dblDefaultValue  
- IUIAnimationVariable로 전파 되는 기본값을 지정 합니다.  
+##  <a name="m_dbldefaultvalue"></a>  CAnimationVariable::m_dblDefaultValue  
+ Specifies the default value, which is propagated to IUIAnimationVariable.  
   
 ```  
 DOUBLE m_dblDefaultValue;  
 ```  
   
-##  <a name="m_lsttransitions"></a>CAnimationVariable::m_lstTransitions  
- 이 애니메이션 변수에 애니메이션을 적용 하는 전환 목록을 포함 합니다.  
+##  <a name="m_lsttransitions"></a>  CAnimationVariable::m_lstTransitions  
+ Contains a list of transitions that animate this animation variable.  
   
 ```  
 CObList m_lstTransitions;  
 ```  
   
-##  <a name="m_pparentobject"></a>CAnimationVariable::m_pParentObject  
- 이 애니메이션 변수를 캡슐화 하는 애니메이션 개체에 대 한 포인터입니다.  
+##  <a name="m_pparentobject"></a>  CAnimationVariable::m_pParentObject  
+ A pointer to an animation object that encapsulates this animation variable.  
   
 ```  
 CAnimationBaseObject* m_pParentObject;  
 ```  
   
-##  <a name="m_variable"></a>CAnimationVariable::m_variable  
- IUIAnimationVariable COM 개체에 대 한 포인터를 저장합니다. 만들기에 실패 한 경우 또는 COM 개체, 아직 생성 되지 않은 경우 NULL입니다.  
+##  <a name="m_variable"></a>  CAnimationVariable::m_variable  
+ Stores a pointer to IUIAnimationVariable COM object. NULL if the COM object has not been created yet, or if creation failed.  
   
 ```  
 ATL::CComPtr<IUIAnimationVariable> m_variable;  
 ```  
   
-##  <a name="setdefaultvalue"></a>CAnimationVariable::SetDefaultValue  
- 기본값을 설정 하 고 IUIAnimationVariable COM 개체를 해제 합니다.  
+##  <a name="setdefaultvalue"></a>  CAnimationVariable::SetDefaultValue  
+ Sets default value and releases IUIAnimationVariable COM object.  
   
 ```  
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dblDefaultValue`  
- 새 기본값을 지정합니다.  
+ Specifies the new default value.  
   
-### <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 기본값을 다시 설정 합니다. 이 메서드 내부 IUIAnimationVariable COM 개체를 해제, 따라서 애니메이션 변수를 다시 만들 때, 기본 COM 개체에 새 기본값을 가져옵니다. 기본값은 애니메이션 변수를 나타내는 COM 개체를 만들지 않은 경우 또는 변수 애니메이션이 적용 되지 경우 GetValue에 의해 반환 됩니다.  
+### <a name="remarks"></a>Remarks  
+ Use this method to reset the default value. This method releases the internal IUIAnimationVariable COM object, therefore when animation variable is recreated, the underlying COM object gets the new default value. The default value is returned by GetValue if the COM object representing the animation variable is not created, or if the variable has not been animated.  
   
-##  <a name="setparentanimationobject"></a>CAnimationVariable::SetParentAnimationObject  
- 애니메이션 변수 및 애니메이션 개체 간의 관계를 설정합니다.  
+##  <a name="setparentanimationobject"></a>  CAnimationVariable::SetParentAnimationObject  
+ Sets the relationship between an animation variable and an animation object.  
   
 ```  
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `pParentObject`  
- 이 변수를 포함 하는 애니메이션 개체에 대 한 포인터입니다.  
+ A pointer to an animation object that contains this variable.  
   
-### <a name="remarks"></a>주의  
- 이 메서드는 내부적으로 애니메이션 변수에서 캡슐화 하는 애니메이션 개체 사이의 일대일 관계를 설정 합니다.  
+### <a name="remarks"></a>Remarks  
+ This method is called internally to establish one-to-one relationship between an animation variable and an animation object that encapsulates it.  
   
-## <a name="see-also"></a>참고 항목  
- [클래스](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

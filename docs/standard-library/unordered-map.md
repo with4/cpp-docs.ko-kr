@@ -33,41 +33,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 662bbde9b4fc43321bd1435d17d6b7110e7ac31c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 85a63b12b203b237c2d948ccd4aabeeb9a8ef9e3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
-컨테이너 템플릿 클래스 [unordered_map](../standard-library/unordered-map-class.md) 및 [unordered_multimap](../standard-library/unordered-multimap-class.md)과 지원 템플릿을 정의합니다.  
+Defines the container template classes [unordered_map](../standard-library/unordered-map-class.md) and [unordered_multimap](../standard-library/unordered-multimap-class.md) and their supporting templates.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <unordered_map>  
 ```  
   
-### <a name="classes"></a>클래스  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[unordered_map 클래스](../standard-library/unordered-map-class.md)|{key, mapped} 쌍의 해시 테이블을 저장합니다.|  
-|[unordered_multimap 클래스](../standard-library/unordered-multimap-class.md)|{key, mapped} 쌍의 해시 테이블을 저장합니다.|  
+|[unordered_map Class](../standard-library/unordered-map-class.md)|Stores hash table of {key, mapped} pairs.|  
+|[unordered_multimap Class](../standard-library/unordered-multimap-class.md)|Stores hash table of {key, mapped} pairs.|  
   
-### <a name="functions"></a>함수  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|연산자의 좌변에 있는 unordered_map 개체가 우변에 있는 unordered_map 개체와 같지 않은지 테스트합니다.|  
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|연산자의 좌변에 있는 unordered_map 개체가 우변에 있는 unordered_map 개체와 같은지 테스트합니다.|  
-|[swap 함수(unordered_map)](../standard-library/unordered-map-functions.md#swap)|두 map을 바꿉니다.|  
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|연산자의 좌변에 있는 unordered_multimap 개체가 우변에 있는 unordered_multimap 개체와 같지 않은지 테스트합니다.|  
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|연산자의 좌변에 있는 unordered_multimap 개체가 우변에 있는 unordered_multimap 개체와 같은지 테스트합니다.|  
-|[swap 함수(unordered_map)](../standard-library/unordered-map-functions.md#swap)|두 multimap을 바꿉니다.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Tests if the unordered_map object on the left side of the operator is not equal to the unordered_map object on the right side.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Tests if the unordered_map object on the left side of the operator is equal to the unordered_map object on the right side.|  
+|[swap Function (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Swaps two maps.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Tests if the unordered_multimap object on the left side of the operator is not equal to the unordered_multimap object on the right side.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Tests if the unordered_multimap object on the left side of the operator is equal to the unordered_multimap object on the right side.|  
+|[swap Function (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Swaps two multimaps.|  
   
-## <a name="see-also"></a>참고 항목  
- [unordered_multiset 클래스](../standard-library/unordered-multiset-class.md)   
- [unordered_set 클래스](../standard-library/unordered-set-class.md)
+## <a name="see-also"></a>See Also  
+ [unordered_multiset Class](../standard-library/unordered-multiset-class.md)   
+ [unordered_set Class](../standard-library/unordered-set-class.md)
 

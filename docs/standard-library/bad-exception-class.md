@@ -1,5 +1,5 @@
 ---
-title: "bad_exception 클래스 | Microsoft 문서"
+title: bad_exception Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- bad_exception
 - exception/std::bad_exception
 dev_langs:
 - C++
@@ -34,39 +33,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7870c00b019718188b80a64e0102638deb76f588
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2b61ecbc5e990f94f7d8fc4078ebaa644d78af88
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="badexception-class"></a>bad_exception 클래스
-이 클래스는 예기치 않은 처리기에서 throw할 수 있는 예외를 설명합니다.  
+# <a name="badexception-class"></a>bad_exception Class
+The class describes an exception that can be thrown from an unexpected handler.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class bad_exception    : public exception {};  
 ```  
   
-## <a name="remarks"></a>설명  
- [unexpected](../standard-library/exception-functions.md#unexpected)는 함수의 throw 목록에 `bad_exception`이 포함된 경우 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)로 지정된 또 다른 함수를 종료하거나 호출하는 대신 `bad_exception`을 throw합니다.  
+## <a name="remarks"></a>Remarks  
+ [unexpected](../standard-library/exception-functions.md#unexpected) will throw a `bad_exception` instead of terminating or instead of calling another function specified with [set_unexpected](../standard-library/exception-functions.md#set_unexpected) if `bad_exception` is included in the throw list of a function.  
   
- **what**에서 반환된 값은 구현 시 정의된 C 문자열입니다. 멤버 함수는 예외를 발생시키지 않습니다.  
+ The value returned by **what** is an implementation-defined C string. None of the member functions throw any exceptions.  
   
- `bad_exception` 클래스에 의해 상속된 멤버 목록은 [exception 클래스](../standard-library/exception-class.md)를 참조하세요.  
+ For a list of members inherited by the `bad_exception` class, see [exception Class](../standard-library/exception-class.md).  
   
-## <a name="example"></a>예제  
- `bad_exception`을 throw하는 [unexpected](../standard-library/exception-functions.md#unexpected) 사용의 예는 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)를 참조하세요.  
+## <a name="example"></a>Example  
+ See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of [unexpected](../standard-library/exception-functions.md#unexpected) throwing a `bad_exception`.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<exception>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<exception>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
-[exception 클래스](../standard-library/exception-class.md)
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+[exception Class](../standard-library/exception-class.md) [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

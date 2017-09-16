@@ -1,5 +1,5 @@
 ---
-title: "CHotKeyCtrl 클래스 | Microsoft 문서"
+title: CHotKeyCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,9 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- hot key controls
-- CHotKeyCtrl class
-- Windows common controls [C++], CHotKeyCtrl
+- CHotKeyCtrl [MFC], CHotKeyCtrl
+- CHotKeyCtrl [MFC], Create
+- CHotKeyCtrl [MFC], CreateEx
+- CHotKeyCtrl [MFC], GetHotKey
+- CHotKeyCtrl [MFC], GetHotKeyName
+- CHotKeyCtrl [MFC], GetKeyName
+- CHotKeyCtrl [MFC], SetHotKey
+- CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
 caps.latest.revision: 23
 author: mikeblome
@@ -44,54 +49,54 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: cbcc720d2b934cde9f8beb9bb95499d9cc569413
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 88fb6ec0631513bb65bd685e32401e08fd5bc26e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chotkeyctrl-class"></a>CHotKeyCtrl 클래스
-Windows의 공용 바로 가기 컨트롤의 기능을 제공합니다.  
+# <a name="chotkeyctrl-class"></a>CHotKeyCtrl Class
+Provides the functionality of the Windows common hot key control.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHotKeyCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Public 생성자  
+### <a name="public-constructors"></a>Public Constructors  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHotKeyCtrl::CHotKeyCtrl](#chotkeyctrl)|`CHotKeyCtrl` 개체를 생성합니다.|  
+|[CHotKeyCtrl::CHotKeyCtrl](#chotkeyctrl)|Constructs a `CHotKeyCtrl` object.|  
   
-### <a name="public-methods"></a>Public 메서드  
+### <a name="public-methods"></a>Public Methods  
   
-|이름|설명|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHotKeyCtrl::Create](#create)|Hot key 컨트롤을 만들고 연결 하는 `CHotKeyCtrl` 개체입니다.|  
-|[CHotKeyCtrl::CreateEx](#createex)|지정 된 Windows 확장된 스타일을 사용 하 여 바로 가기 키 컨트롤을 만들고에 연결 된 `CHotKeyCtrl` 개체입니다.|  
-|[CHotKeyCtrl::GetHotKey](#gethotkey)|Hot key 컨트롤에서 가상 키 코드 및 한정자 플래그의 바로 가기 키를 검색합니다.|  
-|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|바로 가기 키에 할당 하는 로컬 문자 집합에서 키 이름을 검색 합니다.|  
-|[CHotKeyCtrl::GetKeyName](#getkeyname)|지정된 된 가상 키 코드에 할당 하는 로컬 문자 집합에서 키 이름을 검색 합니다.|  
-|[CHotKeyCtrl::SetHotKey](#sethotkey)|Hot key 컨트롤에 대 한 바로 가기 키 조합을 설정합니다.|  
-|[CHotKeyCtrl::SetRules](#setrules)|잘못 된 조합 및 바로 가기 키 컨트롤에 대 한 기본 한정자 조합 정의합니다.|  
+|[CHotKeyCtrl::Create](#create)|Creates a hot key control and attaches it to a `CHotKeyCtrl` object.|  
+|[CHotKeyCtrl::CreateEx](#createex)|Creates a hot key control with the specified Windows extended styles and attaches it to a `CHotKeyCtrl` object.|  
+|[CHotKeyCtrl::GetHotKey](#gethotkey)|Retrieves the virtual key code and modifier flags of a hot key from a hot key control.|  
+|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Retrieves the key name, in the local character set, assigned to a hot key.|  
+|[CHotKeyCtrl::GetKeyName](#getkeyname)|Retrieves the key name, in the local character set, assigned to the specified virtual key code.|  
+|[CHotKeyCtrl::SetHotKey](#sethotkey)|Sets the hot key combination for a hot key control.|  
+|[CHotKeyCtrl::SetRules](#setrules)|Defines the invalid combinations and the default modifier combination for a hot key control.|  
   
-## <a name="remarks"></a>주의  
- "바로 가기 키 컨트롤"는 바로 가기 키를 만드는 데 사용할 수 있는 창입니다. "바로 가기 키"는 사용자 작업을 신속 하 게 수행 하기를 누를 수 있는 키 조합입니다. (예를 들어 사용자 만들 수 지정된 된 창 활성화 및 Z 순서의 맨 위쪽에 표시 하는 바로 가기 키입니다.) Hot key 컨트롤 사용자의 선택 항목을 표시 하 고 사용자가 유효한 키 조합을 선택 하면 합니다.  
+## <a name="remarks"></a>Remarks  
+ A "hot key control" is a window that enables the user to create a hot key. A "hot key" is a key combination that the user can press to perform an action quickly. (For example, a user can create a hot key that activates a given window and brings it to the top of the Z order.) The hot key control displays the user's choices and ensures that the user selects a valid key combination.  
   
- 이 컨트롤 (및 따라서는 `CHotKeyCtrl` 클래스)은 이상 Windows 95/98 및 Windows NT 버전 3.51에서 실행 중인 프로그램에만 사용할 수 있습니다.  
+ This control (and therefore the `CHotKeyCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- 응용 프로그램 컨트롤에서 지정 된 키 조합을 검색 하 고 사용할 수는 사용자가 키 조합의 선택한 경우는 **WM_SETHOTKEY** 시스템에서 바로 가기 키를 설정 하는 메시지입니다. 에 창 지정 된 사용자를 누를 때마다 바로 가기 키, 그 이후에 시스템의 모든 부분에서는 **WM_SETHOTKEY** 메시지 수신는 `WM_SYSCOMMAND` 메시지를 지정 하 **SC_HOTKEY**합니다. 이 메시지를 수신 하는 창을 활성화 합니다. 바로 가기 키 호출한 응용 프로그램까지 유효한 상태로 남아 **WM_SETHOTKEY** 종료 됩니다.  
+ When the user has chosen a key combination, the application can retrieve the specified key combination from the control and use the **WM_SETHOTKEY** message to set up the hot key in the system. Whenever the user presses the hot key thereafter, from any part of the system, the window specified in the **WM_SETHOTKEY** message receives a `WM_SYSCOMMAND` message specifying **SC_HOTKEY**. This message activates the window that receives it. The hot key remains valid until the application that called **WM_SETHOTKEY** exits.  
   
- 이 메커니즘에 의존 하는 바로 가기 키 지원와에서 다르면는 **WM_HOTKEY** 메시지와 Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) 및 [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) 함수입니다.  
+ This mechanism is different from the hot key support that depends on the **WM_HOTKEY** message and the Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) and [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) functions.  
   
- 사용 하 여 대 한 자세한 내용은 `CHotKeyCtrl`, 참조 [컨트롤](../../mfc/controls-mfc.md) 및 [CHotKeyCtrl 사용 하 여](../../mfc/using-chotkeyctrl.md)합니다.  
+ For more information on using `CHotKeyCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>상속 계층  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -100,18 +105,18 @@ class CHotKeyCtrl : public CWnd
   
  `CHotKeyCtrl`  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
- `CHotKeyCtrl` 개체를 생성합니다.  
+##  <a name="chotkeyctrl"></a>  CHotKeyCtrl::CHotKeyCtrl  
+ Constructs a `CHotKeyCtrl` object.  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="create"></a>CHotKeyCtrl::Create  
- Hot key 컨트롤을 만들고 연결 하는 `CHotKeyCtrl` 개체입니다.  
+##  <a name="create"></a>  CHotKeyCtrl::Create  
+ Creates a hot key control and attaches it to a `CHotKeyCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -121,29 +126,29 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 바로 가기 키 컨트롤의 스타일을 지정합니다. 모든 조합의 컨트롤 스타일을 적용 합니다. 참조 [일반적인 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 자세한 내용은 합니다.  
+ Specifies the hot key control's style. Apply any combination of control styles. See [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the Windows SDK for more information.  
   
  `rect`  
- 바로 가기 키 컨트롤의 크기와 위치를 지정합니다. 수 중 하나는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md)합니다.  
+ Specifies the hot key control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT structure](../../mfc/reference/rect-structure1.md).  
   
  `pParentWnd`  
- 일반적으로 부모 창의 바로 가기 키 컨트롤의 지정 된 [CDialog](../../mfc/reference/cdialog-class.md)합니다. 않아야 **NULL**합니다.  
+ Specifies the hot key control's parent window, usually a [CDialog](../../mfc/reference/cdialog-class.md). It must not be **NULL**.  
   
  `nID`  
- 바로 가기 키 컨트롤의 ID를 지정 합니다.  
+ Specifies the hot key control's ID.  
   
-### <a name="return-value"></a>반환 값  
- 0이 아닌 경우 초기화에 성공 하면 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero, if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 생성 한 `CHotKeyCtrl` 두 단계에서는 개체입니다. 먼저, 생성자를 호출 하 고 다음 호출 **만들기**, 바로 가기 키 컨트롤을 만들고 연결 하는 `CHotKeyCtrl` 개체입니다.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CHotKeyCtrl` object in two steps. First, call the constructor and then call **Create**, which creates the hot key control and attaches it to the `CHotKeyCtrl` object.  
   
- 컨트롤 확장된 창 스타일을 사용 하는 경우 호출할 [CreateEx](#createex) 대신 **만들기**합니다.  
+ If you want to use extended windows styles with your control, call [CreateEx](#createex) instead of **Create**.  
   
-##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
- 컨트롤 (자식 창)을 만들고 사용 하 여 연결 하려면이 함수를 호출 하 여 `CHotKeyCtrl` 개체입니다.  
+##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
+ Call this function to create a control (a child window) and associate it with the `CHotKeyCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -154,30 +159,30 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 생성 되는 컨트롤의 확장된 스타일을 지정 합니다. 확장된 창 스타일의 목록에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 바로 가기 키 컨트롤의 스타일을 지정합니다. 모든 조합의 컨트롤 스타일을 적용 합니다. 자세한 내용은 참조 [일반적인 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Specifies the hot key control's style. Apply any combination of control styles. For more information, see [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the Windows SDK.  
   
  `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에서 만든 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 컨트롤의 부모 창에 대 한 포인터입니다.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 컨트롤의 자식 창 id입니다.  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>반환 값  
- 성공하면 0이 아니고, 그렇지 않으면 0입니다.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>주의  
- 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 앞에 지정 된 Windows 확장된 스타일을 적용 하려면 **WS_EX_**합니다.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
- Hot key 컨트롤에서 가상 키 코드 및 한정자 플래그의 바로 가기 키를 검색합니다.  
+##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
+ Retrieves the virtual key code and modifier flags of a keyboard shortcut from a hot key control.  
   
 ```  
 DWORD GetHotKey() const;  
@@ -187,43 +192,43 @@ void GetHotKey(
     WORD& wModifiers) const;  
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [out] `wVirtualKeyCode`  
- 바로 가기 키의 가상 키 코드입니다. 표준 가상 키 코드 목록은 Winuser.h를 참조 하십시오.  
+ Virtual key code of the keyboard shortcut. For a list of standard virtual key codes, see Winuser.h.  
   
  [out] `wModifiers`  
- 바로 가기 키의 보조 키를 나타내는 플래그의 비트 조합 (OR)입니다.  
+ A bitwise combination (OR) of flags that indicate the modifier keys in the keyboard shortcut.  
   
- 보조키 플래그는 다음과 같습니다.  
+ The modifier flags are as follows:  
   
-|플래그|해당 키|  
+|Flag|Corresponding Key|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|Alt 키|  
-|`HOTKEYF_CONTROL`|CTRL 키|  
-|`HOTKEYF_EXT`|확장 된 키|  
-|`HOTKEYF_SHIFT`|Shift 키|  
+|`HOTKEYF_ALT`|ALT key|  
+|`HOTKEYF_CONTROL`|CTRL key|  
+|`HOTKEYF_EXT`|Extended key|  
+|`HOTKEYF_SHIFT`|SHIFT key|  
   
-### <a name="return-value"></a>반환 값  
- 첫 번째에서 메서드를 오버 로드는 `DWORD` 가상 키 코드 및 한정자 플래그를 포함 하는 합니다. 가상 키 코드를 포함 하는 하위 단어의 하위 바이트, 보조키 플래그를 포함 하는 하위 단어의 상위 바이트 및 상위 word은&0;입니다.  
+### <a name="return-value"></a>Return Value  
+ In the first overloaded method, a `DWORD` that contains the virtual key code and modifier flags. The low-order byte of the low-order word contains the virtual key code, the high-order byte of the low-order word contains the modifier flags, and the high-order word is zero.  
   
-### <a name="remarks"></a>주의  
- 가상 키 코드와 함께 한정자 키 바로 가기 키를 정의합니다.  
+### <a name="remarks"></a>Remarks  
+ The virtual key code and the modifier keys together define the keyboard shortcut.  
   
-##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
- 바로 가기 키의 지역화 된 이름을 가져오려면이 함수를 호출 합니다.  
+##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
+ Call this member function to get the localized name of the hot key.  
   
 ```  
 CString GetHotKeyName() const;  
 ```  
   
-### <a name="return-value"></a>반환 값  
- 현재 선택 된 바로 가기 키의 지역화 된 이름입니다. 선택한 바로 가기 키를가 하는 경우 `GetHotKeyName` 빈 문자열을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ The localized name of the currently selected hot key. If there is no selected hot key, `GetHotKeyName` returns an empty string.  
   
-### <a name="remarks"></a>주의  
- 이 멤버 함수를 반환 하는 이름은 키보드 드라이버에서 가져옵니다. 지역화 된 버전의 Windows에서 지역화 되지 않은 키보드 드라이버를 설치할 수 또는 그 반대로 합니다.  
+### <a name="remarks"></a>Remarks  
+ The name that this member function returns comes from the keyboard driver. You can install a non-localized keyboard driver in a localized version of Windows, and vice versa.  
   
-##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
- 지정 된 가상 키 코드에 할당 된 키의 지역화 된 이름을 가져오려면이 함수를 호출 합니다.  
+##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
+ Call this member function to get the localized name of the key assigned to a specified virtual key code.  
   
 ```  
 static CString GetKeyName(
@@ -231,24 +236,24 @@ static CString GetKeyName(
     BOOL fExtended);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `vk`  
- 가상 키 코드입니다.  
+ The virtual key code.  
   
  *fExtended*  
- 가상 키 코드 확장 키인 경우 **TRUE**고, 그렇지 않으면 **FALSE**합니다.  
+ If the virtual key code is an extended key, **TRUE**; otherwise **FALSE**.  
   
-### <a name="return-value"></a>반환 값  
- 지정 된 키의 지역화 된 이름을 `vk` 매개 변수입니다. 키에 매핑된 이름이 없는 경우 `GetKeyName` 빈 문자열을 반환 합니다.  
+### <a name="return-value"></a>Return Value  
+ The localized name of the key specified by the `vk` parameter. If the key has no mapped name, `GetKeyName` returns an empty string.  
   
-### <a name="remarks"></a>주의  
- Windows의 지역화 된 버전의 지역화 되지 않은 키보드 드라이버를 설치할 수 있도록 키보드 드라이버에서이 함수를 반환 하는 키 이름을 제공 하거나 그 반대로 합니다.  
+### <a name="remarks"></a>Remarks  
+ The key name that this function returns comes from the keyboard driver, so you can install a non-localized keyboard driver in a localized version of Windows, and vice versa.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_MFCControlLadenDialog #&69;](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
- Hot key 컨트롤에 대 한 바로 가기 키를 설정합니다.  
+##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey  
+ Sets the keyboard shortcut for a hot key control.  
   
 ```  
 void SetHotKey(
@@ -256,27 +261,27 @@ void SetHotKey(
     WORD wModifiers);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  [in] `wVirtualKeyCode`  
- 바로 가기 키의 가상 키 코드입니다. 표준 가상 키 코드 목록은 Winuser.h를 참조 하십시오.  
+ Virtual key code of the keyboard shortcut. For a list of standard virtual key codes, see Winuser.h.  
   
  [in] `wModifiers`  
- 바로 가기 키의 보조 키를 나타내는 플래그의 비트 조합 (OR)입니다.  
+ A bitwise combination (OR) of flags that indicate the modifier keys in the keyboard shortcut.  
   
- 보조키 플래그는 다음과 같습니다.  
+ The modifier flags are as follows:  
   
-|플래그|해당 키|  
+|Flag|Corresponding Key|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|Alt 키|  
-|`HOTKEYF_CONTROL`|CTRL 키|  
-|`HOTKEYF_EXT`|확장 된 키|  
-|`HOTKEYF_SHIFT`|Shift 키|  
+|`HOTKEYF_ALT`|ALT key|  
+|`HOTKEYF_CONTROL`|CTRL key|  
+|`HOTKEYF_EXT`|Extended key|  
+|`HOTKEYF_SHIFT`|SHIFT key|  
   
-### <a name="remarks"></a>주의  
- 가상 키 코드와 함께 한정자 키 바로 가기 키를 정의합니다.  
+### <a name="remarks"></a>Remarks  
+ The virtual key code and the modifier keys together define the keyboard shortcut.  
   
-##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
- 잘못 된 조합 및 바로 가기 키 컨트롤에 대 한 기본 한정자 조합을 정의 하려면이 함수를 호출 합니다.  
+##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
+ Call this function to define the invalid combinations and the default modifier combination for a hot key control.  
   
 ```  
 void SetRules(
@@ -284,35 +289,35 @@ void SetRules(
     WORD wModifiers);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `wInvalidComb`  
- 잘못 된 키 조합을 지정 하는 플래그의 배열입니다. 다음 값의 조합 수 있습니다.  
+ Array of flags that specifies invalid key combinations. It can be a combination of the following values:  
   
-- `HKCOMB_A`ALT 키  
+- `HKCOMB_A` ALT  
   
-- `HKCOMB_C`CTRL  
+- `HKCOMB_C` CTRL  
   
-- `HKCOMB_CA`CTRL + ALT  
+- `HKCOMB_CA` CTRL+ALT  
   
-- `HKCOMB_NONE`수정 되지 않은 키  
+- `HKCOMB_NONE` Unmodified keys  
   
-- `HKCOMB_S`SHIFT 키  
+- `HKCOMB_S` SHIFT  
   
-- `HKCOMB_SA`SHIFT + ALT  
+- `HKCOMB_SA` SHIFT+ALT  
   
-- `HKCOMB_SC`SHIFT + CTRL  
+- `HKCOMB_SC` SHIFT+CTRL  
   
-- `HKCOMB_SCA`SHIFT + CTRL + ALT  
+- `HKCOMB_SCA` SHIFT+CTRL+ALT  
   
  `wModifiers`  
- 사용자가 잘못 된 조합이 입력을 사용 하 여 키 조합을 지정 하는 플래그의 배열입니다. 보조키 플래그에 대 한 자세한 내용은 참조 하십시오. [GetHotKey](#gethotkey)합니다.  
+ Array of flags that specifies the key combination to use when the user enters an invalid combination. For more information on the modifier flags, see [GetHotKey](#gethotkey).  
   
-### <a name="remarks"></a>주의  
- 에 지정 된 플래그에 정의 된 대로 사용자에 잘못 된 키 조합이 포함 될 때 `wInvalidComb`, 시스템 OR 연산자를 사용 하 여 키에 지정 된 플래그를 사용 하 여 사용자가 입력을 결합 하 여 `wModifiers`합니다. 결과 키 조합은 문자열로 변환 하 고 바로 가기 키 컨트롤에 표시 됩니다.  
+### <a name="remarks"></a>Remarks  
+ When a user enters an invalid key combination, as defined by flags specified in `wInvalidComb`, the system uses the OR operator to combine the keys entered by the user with the flags specified in `wModifiers`. The resulting key combination is converted into a string and then displayed in the hot key control.  
   
-## <a name="see-also"></a>참고 항목  
- [CWnd 클래스](../../mfc/reference/cwnd-class.md)   
- [계층 구조 차트](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "mem_fun_t 클래스 | Microsoft 문서"
+title: mem_fun_t Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- mem_fun_t
 - xfunctional/std::mem_fun_t
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 88b79a99f04dc247fe52c7b65e6a9fd5f7cd4c2f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 145febc8075ba36f2ecc576bcafe4a23353b2ab2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="memfunt-class"></a>mem_fun_t 클래스
-포인터 인수를 사용하여 초기화할 때 인수를 사용하지 않는 **non_const** 멤버 함수를 단항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다.  
+# <a name="memfunt-class"></a>mem_fun_t Class
+An adapter class that allows a **non_const** member function that takes no arguments to be called as a unary function object when initialized with a pointer argument.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Result, class Type>
@@ -56,31 +55,31 @@ class mem_fun_t : public unary_function<Type *, Result> {
  };
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `_Pm`  
- 함수 개체로 변환할 **Type** 클래스의 멤버 함수 포인터입니다.  
+ A pointer to the member function of class **Type** to be converted to a function object.  
   
  `_Pleft`  
- `_Pm` 멤버 함수가 호출되는 개체입니다.  
+ The object that the `_Pm` member function is called on.  
   
-## <a name="return-value"></a>반환 값  
- 조정 가능한 단항 함수입니다.  
+## <a name="return-value"></a>Return Value  
+ An adaptable unary function.  
   
-## <a name="remarks"></a>설명  
- 템플릿 클래스는 `_Pm`의 복사본을 저장합니다. 이는 전용 멤버 개체에서 **Type** 클래스의 멤버 함수에 대한 포인터여야 합니다. 또한 해당 멤버 함수 `operator()`를 ( `_Pleft`->* `_Pm`)( )을 반환하는 것으로 정의합니다.  
+## <a name="remarks"></a>Remarks  
+ The template class stores a copy of `_Pm`, which must be a pointer to a member function of class **Type**, in a private member object. It defines its member function `operator()` as returning ( `_Pleft`->* `_Pm`)( ).  
   
-## <a name="example"></a>예제  
- `mem_fun_t`의 생성자는 일반적으로 직접 사용되지 않습니다. 도우미 함수 `mem_fun`은 멤버 함수를 적용하는 데 사용됩니다. 멤버 함수 어댑터를 사용하는 방법에 대한 예제는 [mem_fun](../standard-library/functional-functions.md#mem_fun)을 참조하세요.  
+## <a name="example"></a>Example  
+ The constructor of `mem_fun_t` is not usually used directly; the helper function `mem_fun` is used to adapt member functions. See [mem_fun](../standard-library/functional-functions.md#mem_fun) for an example of how to use member function adaptors.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [\<functional>](../standard-library/functional.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

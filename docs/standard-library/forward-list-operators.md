@@ -1,30 +1,45 @@
 ---
-title: "&lt;forward_list&gt; 연산자 | Microsoft 문서"
+title: '&lt;forward_list&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- forward_list/std::operator!=
+- forward_list/std::operator==
+- forward_list/std::operatoroperator&gt;
+- forward_list/std::operatoroperator&gt=;
+- forward_list/std::operatoroperator&lt;
+- forward_list/std::operatoroperator&lt;=
+dev_langs:
+- C++
 ms.assetid: 57492e09-3836-4dbc-9ae5-78ecf506c190
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ddf548e760d723bff19b58ac8dfe6ec60acdbbcc
+helpviewer_keywords:
+- std::operator!= (forward_list)
+- std::operator== (forward_list)
+- std::operatoroperator&gt; (forward_list)
+- std::operatoroperator&gt=; (forward_list)
+- std::operatoroperator&lt; (forward_list)
+- std::operatoroperator&lt;= (forward_list)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c00c7d1e506e60a0a8612601835ef4a91b98ea99
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt; 연산자
+# <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체와 같은지 테스트합니다.  
+ Tests if the forward list object on the left side of the operator is equal to the forward list object on the right side.  
   
 ```
 bool operator==(
@@ -32,18 +47,18 @@ bool operator==(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`forward_list` 형식의 개체입니다.|  
-|`right`|`forward_list` 형식의 개체입니다.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `operator==`을 오버로드하여 템플릿 클래스 `forward_list`의 개체 두 개를 비교합니다. 함수에서 `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ This template function overloads `operator==` to compare two objects of template class `forward_list`. The function returns `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.  
   
 ##  <a name="op_neq"></a>  operator!=  
- 연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체와 같지 않은지 테스트합니다.  
+ Tests if the forward list object on the left side of the operator is not equal to the forward list object on the right side.  
   
 ```
 bool operator!=(
@@ -51,21 +66,21 @@ bool operator!=(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`forward_list` 형식의 개체입니다.|  
-|`right`|`forward_list` 형식의 개체입니다.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>반환 값  
- 목록이 같지 않으면 **true**이고 목록이 같으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if the lists are not equal; **false** if the lists are equal.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `!(left == right)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ This template function returns `!(left == right)`.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체보다 작은지 테스트합니다.  
+ Tests if the forward list object on the left side of the operator is less than the forward list object on the right side.  
   
 ```
 bool operator<(
@@ -73,21 +88,21 @@ bool operator<(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`forward_list` 형식의 개체입니다.|  
-|`right`|`forward_list` 형식의 개체입니다.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 목록이 연산자 우변의 목록보다 작으며 같지 않으면 `true`이고 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the list on the left side of the operator is less than but not equal to the list on the right side of the operator; otherwise `false`.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `operator<`을 오버로드하여 템플릿 클래스 `forward_list`의 개체 두 개를 비교합니다. 함수에서 `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ This template function overloads `operator<` to compare two objects of template class `forward_list`. The function returns `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체보다 작거나 같은지 테스트합니다.  
+ Tests if the forward list object on the left side of the operator is less than or equal to the forward list object on the right side.  
   
 ```
 bool operator<=(
@@ -95,21 +110,21 @@ bool operator<=(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`forward_list` 형식의 개체입니다.|  
-|`right`|`forward_list` 형식의 개체입니다.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 목록이 연산자 우변의 목록보다 작거나 같으면 `true`이고 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the list on the left side of the operator is less than or equal to the list on the right side of the operator; otherwise `false`.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `!(right < left)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ This template function returns `!(right < left)`.  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체보다 큰지 테스트합니다.  
+ Tests if the forward list object on the left side of the operator is greater than the forward list object on the right side.  
   
 ```
 bool operator>(
@@ -117,21 +132,21 @@ bool operator>(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`forward_list` 형식의 개체입니다.|  
-|`right`|`forward_list` 형식의 개체입니다.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 목록이 연산자 우변의 목록보다 크면 `true`이고 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the list on the left side of the operator is greater than the list on the right side of the operator; otherwise `false`.  
   
-### <a name="remarks"></a>설명  
- 이 템플릿 함수는 `right < left`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ This template function returns `right < left`.  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 연산자의 좌변에 있는 정방향 목록 개체가 우변에 있는 정방향 목록 개체보다 크거나 같은지 테스트합니다.  
+ Tests if the forward list object on the left side of the operator is greater than or equal to the forward list object on the right side.  
   
 ```
 bool operator>=(
@@ -139,20 +154,20 @@ bool operator>=(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
   
-|매개 변수|설명|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`forward_list` 형식의 개체입니다.|  
-|`right`|`forward_list` 형식의 개체입니다.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>반환 값  
- 연산자 좌변의 목록이 연산자 우변의 목록보다 크거나 같으면 `true`이고 그렇지 않으면 `false`입니다.  
+### <a name="return-value"></a>Return Value  
+ `true` if the forward list on the left side of the operator is greater than or equal to the forward list on the right side of the operator; otherwise `false`.  
   
-### <a name="remarks"></a>설명  
- 템플릿 함수가 `!(left < right)`를 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left < right)`.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>See Also  
  [<forward_list>](../standard-library/forward-list.md)
 
 

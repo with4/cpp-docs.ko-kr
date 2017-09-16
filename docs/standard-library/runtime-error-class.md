@@ -1,5 +1,5 @@
 ---
-title: "runtime_error 클래스 | Microsoft Docs"
+title: runtime_error Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- runtime_error
 - stdexcept/std::runtime_error
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 38434b2a3f50a2056ea9727fb69170bb6a0b8b8d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 73cc36de9f467b3ddb339ad28007337cd3e2cee2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="runtimeerror-class"></a>runtime_error 클래스
-이 클래스는 프로그램이 실행되는 경우에만 검색될 수 있는 오류를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.  
+# <a name="runtimeerror-class"></a>runtime_error Class
+The class serves as the base class for all exceptions thrown to report errors presumably detectable only when the program executes.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class runtime_error : public exception {  
@@ -56,10 +55,10 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>설명  
- [exception 클래스](../standard-library/exception-class.md)가 반환하는 값은 **message**`.`[data](../standard-library/basic-string-class.md#data)의 복사본입니다.  
+## <a name="remarks"></a>Remarks  
+ The value returned by [exception Class](../standard-library/exception-class.md) is a copy of **message**`.`[data](../standard-library/basic-string-class.md#data).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>Example  
   
 ```cpp  
 // runtime_error.cpp  
@@ -87,15 +86,15 @@ Type class std::runtime_error
 *\  
 ```  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<stdexcept>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<stdexcept>  
   
- **네임스페이스:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>참고 항목  
-[exception 클래스](../standard-library/exception-class.md)
+## <a name="see-also"></a>See Also  
+[exception Class](../standard-library/exception-class.md)
 
     
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

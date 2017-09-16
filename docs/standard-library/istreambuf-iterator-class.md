@@ -1,5 +1,5 @@
 ---
-title: "istreambuf_iterator 클래스 | Microsoft 문서"
+title: istreambuf_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- istreambuf_iterator
 - streambuf/std::istreambuf_iterator
 - iterator/std::istreambuf_iterator::char_type
 - iterator/std::istreambuf_iterator::int_type
@@ -20,7 +19,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- istreambuf_iterator class
+- std::istreambuf_iterator [C++]
+- std::istreambuf_iterator [C++], char_type
+- std::istreambuf_iterator [C++], int_type
+- std::istreambuf_iterator [C++], istream_type
+- std::istreambuf_iterator [C++], streambuf_type
+- std::istreambuf_iterator [C++], traits_type
+- std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
 caps.latest.revision: 19
 author: corob-msft
@@ -40,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 942f61a053e77bf3d677f51cc30d39b5f4c76db6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c93e635fbd36b36082f5cd74499fc07fadb3e826
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istreambufiterator-class"></a>istreambuf_iterator 클래스
-템플릿 클래스 istreambuf_iterator는 여기에 저장되는 개체를 통해 액세스하는, `basic_streambuf`\< **CharType**, **Traits**>에 대한 형식 포인터의 입력 스트림 버퍼에서 문자 요소를 추출하는 입력 반복기 개체에 대해 설명합니다.  
+# <a name="istreambufiterator-class"></a>istreambuf_iterator Class
+The template class istreambuf_iterator describes an input iterator object that extracts character elements from an input stream buffer, which it accesses through an object it stores, of type pointer to `basic_streambuf`\< **CharType**, **Traits**>.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType class Traits = char_traits <CharType>>  
@@ -58,64 +63,64 @@ class istreambuf_iterator
 : public iterator<input_iterator_tag, CharType, typename Traits ::off_type, CharType*, CharType&>
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- istreambuf_iterator의 문자 형식을 나타내는 형식입니다.  
+ The type that represents the character type for the istreambuf_iterator.  
   
  `Traits`  
- istreambuf_iterator의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char_traits`\< *CharType>*입니다.  
+ The type that represents the character type for the istreambuf_iterator. This argument is optional and the default value is `char_traits`\< *CharType>.*  
   
-## <a name="remarks"></a>설명  
- istreambuf_iterator 클래스는 입력 반복기에 대한 요구 사항을 충족해야 합니다.  
+## <a name="remarks"></a>Remarks  
+ The istreambuf_iterator class must satisfy the requirements for an input iterator.  
   
- null이 아닌 저장된 포인터를 사용하여 istreambuf_iterator 클래스의 개체를 구성하거나 증가시킨 후 개체는 연결된 입력 스트림에서 **CharType** 형식의 개체에 대해 효과적인 추출 및 저장을 시도합니다. 하지만 개체를 실제로 역참조 또는 복사할 때까지 추출이 지연될 수 있습니다. 추출이 실패할 경우 개체는 저장된 포인터를 null 포인터로 대체하여 시퀀스 끝 표시기를 만듭니다.  
+ After constructing or incrementing an object of class istreambuf_iterator with a non-null stored pointer, the object effectively attempts to extract and store an object of type **CharType** from the associated input stream. The extraction may be delayed, however, until the object is actually dereferenced or copied. If the extraction fails, the object effectively replaces the stored pointer with a null pointer, thus making an end-of-sequence indicator.  
   
-### <a name="constructors"></a>생성자  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[istreambuf_iterator](#istreambuf_iterator)|입력 스트림에서 문자를 읽을 수 있도록 초기화된 `istreambuf_iterator`를 만듭니다.|  
+|[istreambuf_iterator](#istreambuf_iterator)|Constructs an `istreambuf_iterator` that is initialized to read characters from the input stream.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|`ostreambuf_iterator`의 문자 형식을 허용하는 형식입니다.|  
-|[int_type](#int_type)|`istreambuf_iterator`의 정수 형식을 허용하는 형식입니다.|  
-|[istream_type](#istream_type)|`istream_iterator`의 스트림 형식을 허용하는 형식입니다.|  
-|[streambuf_type](#streambuf_type)|`istreambuf_iterator`의 스트림 형식을 허용하는 형식입니다.|  
-|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|`istream_iterator`의 특성 형식을 허용하는 형식입니다.|  
+|[char_type](#char_type)|A type that provides for the character type of the `ostreambuf_iterator`.|  
+|[int_type](#int_type)|A type that provides an integer type for an `istreambuf_iterator`.|  
+|[istream_type](#istream_type)|A type that provides for the stream type of the `istream_iterator`.|  
+|[streambuf_type](#streambuf_type)|A type that provides for the stream type of the `istreambuf_iterator`.|  
+|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|A type that provides for the character traits type of the `istream_iterator`.|  
   
-### <a name="member-functions"></a>멤버 함수  
-  
-|||  
-|-|-|  
-|[equal](#equal)|두 입력 스트림 버퍼 반복기가 같은지 테스트합니다.|  
-  
-### <a name="operators"></a>연산자  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|역참조 연산자가 스트림의 다음 문자를 반환합니다.|  
-|[operator++](#op_add_add)|입력 스트림의 다음 문자를 반환하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.|  
-|[operator->](#operator-_gt)|멤버의 값을 반환합니다(있는 경우).|  
+|[equal](#equal)|Tests for equality between two input stream buffer iterators.|  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<iterator>  
+### <a name="operators"></a>Operators  
   
- **네임스페이스:** std  
+|||  
+|-|-|  
+|[operator*](#op_star)|The dereferencing operator returns the next character in the stream.|  
+|[operator++](#op_add_add)|Either returns the next character from the input stream or copies the object before incrementing it and returns the copy.|  
+|[operator->](#operator-_gt)|Returns the value of a member, if any.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  istreambuf_iterator::char_type  
- `ostreambuf_iterator`의 문자 형식을 허용하는 형식입니다.  
+ A type that provides for the character type of the `ostreambuf_iterator`.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_char_type.cpp  
@@ -149,23 +154,23 @@ int main( )
 ```  
   
 ##  <a name="equal"></a>  istreambuf_iterator::equal  
- 두 입력 스트림 버퍼 반복기가 같은지 테스트합니다.  
+ Tests for equivalence between two input stream buffer iterators.  
   
 ```
 bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `right`  
- 같은지 확인할 반복기입니다.  
+ The iterator for which to check for equality.  
   
-### <a name="return-value"></a>반환 값  
- `istreambuf_iterator`가 둘 다 스트림의 끝 반복기인 경우 또는 둘 다 스트림의 끝 반복기가 아닌 경우 **true**이고, 그렇지 않으면 **false**입니다.  
+### <a name="return-value"></a>Return Value  
+ **true** if both `istreambuf_iterator`s are end-of-stream iterators or if neither is an end-of-stream iterator; otherwise **false**.  
   
-### <a name="remarks"></a>설명  
- 범위는 `istreambuf_iterator`에서 현재 위치 및 스트림의 끝 반복기로 정의되지만 **equal** 멤버 함수에서는 스트림의 끝이 아닌 반복기가 모두 동일하므로 `istreambuf_iterator`를 사용하여 하위 범위를 정의할 수 없습니다. `==` 및 `!=` 연산자는 의미 체계가 동일합니다.  
+### <a name="remarks"></a>Remarks  
+ A range is defined by the `istreambuf_iterator` to the current position and the end-of-stream iterator, but since all non-end-of stream iterators are equivalent under the **equal** member function, it is not possible to define any subranges using `istreambuf_iterator`s. The `==` and `!=` operators have the same semantics.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_equal.cpp  
@@ -194,16 +199,16 @@ int main( )
 ```  
   
 ##  <a name="int_type"></a>  istreambuf_iterator::int_type  
- `istreambuf_iterator`의 정수 형식을 허용하는 형식입니다.  
+ A type that provides an integer type for an `istreambuf_iterator`.  
   
 ```
 typedef typename traits_type::int_type int_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 **Traits::int_type**의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for **Traits::int_type**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_int_type.cpp  
@@ -223,37 +228,37 @@ The inttype1 = 100.
 ```  
   
 ##  <a name="istream_type"></a>  istreambuf_iterator::istream_type  
- `istreambuf_iterator`의 스트림 형식을 허용하는 형식입니다.  
+ A type that provides for the stream type of the `istreambuf_iterator`.  
   
 ```
 typedef basic_istream<CharType, Traits> istream_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 `basic_istream`\< **CharType**, **Traits**>의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basic_istream`\< **CharType**, **Traits**>.  
   
-### <a name="example"></a>예제  
-  `istream_type`을 선언하고 사용하는 방법에 대한 예제는 [istreambuf_iterator](#istreambuf_iterator)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [istreambuf_iterator](#istreambuf_iterator) for an example of how to declare and use `istream_type`.  
   
 ##  <a name="istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
- 입력 스트림에서 문자를 읽을 수 있도록 초기화된 istreambuf_iterator를 생성합니다.  
+ Constructs an istreambuf_iterator that is initialized to read characters from the input stream.  
   
 ```
 istreambuf_iterator(streambuf_type* strbuf = 0) throw();
 istreambuf_iterator(istream_type& _Istr) throw();
 ```  
   
-### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- `istreambuf_iterator`를 연결 중인 입력 스트림 버퍼입니다.  
+ The input stream buffer to which the `istreambuf_iterator` is being attached.  
   
  `_Istr`  
- `istreambuf_iterator`를 연결 중인 입력 스트림입니다.  
+ The input stream to which the `istreambuf_iterator` is being attached.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 생성자는 `strbuf`로 입력 스트림 버퍼 포인터를 초기화합니다. 두 번째 생성자는 `_Istr`. `rdbuf`로 입력 스트림 버퍼 포인터를 초기화한 다음 **CharType** 형식의 개체를 추출하고 저장하려고 합니다.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the input stream-buffer pointer with `strbuf`. The second constructor initializes the input stream-buffer pointer with `_Istr`. `rdbuf`, and then eventually attempts to extract and store an object of type **CharType**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_istreambuf_iterator.cpp  
@@ -286,16 +291,16 @@ int main( )
 ```  
   
 ##  <a name="op_star"></a>  istreambuf_iterator::operator*  
- 역참조 연산자가 스트림의 다음 문자를 반환합니다.  
+ The dereferencing operator returns the next character in the stream.  
   
 ```
 CharType operator*() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 스트림의 다음 문자입니다.  
+### <a name="return-value"></a>Return Value  
+ The next character in the stream.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_operator_deref.cpp  
@@ -324,20 +329,20 @@ int main( )
 ```  
   
 ##  <a name="op_add_add"></a>  istreambuf_iterator::operator++  
- 입력 스트림의 다음 문자를 반환하거나 개체를 증가하기 전에 복사하여 복사본을 반환합니다.  
+ Either returns the next character from the input stream or copies the object before incrementing it and returns the copy.  
   
 ```
 istreambuf_iterator<CharType, Traits>& operator++();
 istreambuf_iterator<CharType, Traits> operator++(int);
 ```  
   
-### <a name="return-value"></a>반환 값  
- `istreambuf_iterator` 또는 `istreambuf_iterator`에 대한 참조입니다.  
+### <a name="return-value"></a>Return Value  
+ An `istreambuf_iterator` or a reference to an `istreambuf_iterator`.  
   
-### <a name="remarks"></a>설명  
- 첫 번째 연산자는 연결된 입력 스트림에서 **CharType** 형식의 개체를 추출하고 저장하려고 합니다. 두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.  
+### <a name="remarks"></a>Remarks  
+ The first operator eventually attempts to extract and store an object of type **CharType** from the associated input stream. The second operator makes a copy of the object, increments the object, and then returns the copy.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_operator_incr.cpp  
@@ -366,39 +371,39 @@ int main( )
 ```  
   
 ##  <a name="istreambuf_iterator__operator-_gt"></a>  istreambuf_iterator::operator-&gt;  
- 멤버의 값을 반환합니다(있는 경우).  
+ Returns the value of a member, if any.  
   
 ```
 const Elem* operator->() const;
 ```  
   
-### <a name="return-value"></a>반환 값  
- 이 연산자는 **&\*\*this**를 반환합니다.  
+### <a name="return-value"></a>Return Value  
+ The operator returns **&\*\*this**.  
   
 ##  <a name="streambuf_type"></a>  istreambuf_iterator::streambuf_type  
- istreambuf_iterator의 스트림 형식을 제공하는 형식입니다.  
+ A type that provides for the stream type of the istreambuf_iterator.  
   
 ```
 typedef basic_streambuf<CharType, Traits> streambuf_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 `basic_streambuf`\< **CharType**, **Traits**>의 동의어입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basic_streambuf`\< **CharType**, **Traits**>.  
   
-### <a name="example"></a>예제  
-  **istreambuf_type**을 선언하고 사용하는 방법에 대한 예제는 [istreambuf_iterator](#istreambuf_iterator)를 참조하세요.  
+### <a name="example"></a>Example  
+  See [istreambuf_iterator](#istreambuf_iterator) for an example of how to declare and use **istreambuf_type**.  
   
 ##  <a name="traits_type"></a>  istreambuf_iterator::traits_type  
- `istream_iterator`의 특성 형식을 허용하는 형식입니다.  
+ A type that provides for the character traits type of the `istream_iterator`.  
   
 ```
 typedef Traits traits_type;
 ```  
   
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **Traits**와 동일한 의미입니다.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Traits**.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_traits_type.cpp  
@@ -431,11 +436,11 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [iterator 구조체](../standard-library/iterator-struct.md)   
+## <a name="see-also"></a>See Also  
+ [iterator Struct](../standard-library/iterator-struct.md)   
  [\<iterator>](../standard-library/iterator.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -1,73 +1,92 @@
 ---
-title: "MFC ActiveX 컨트롤 마법사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 컨트롤[C++], MFC"
-  - "MFC ActiveX 컨트롤 마법사"
-  - "MFC ActiveX 컨트롤[C++], 마법사"
-  - "OLE 컨트롤[C++]"
-  - "OLE 컨트롤[C++], 만들기"
+title: MFC ActiveX Control Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX controls [MFC], MFC
+- MFC ActiveX controls [MFC], wizards
+- OLE controls [MFC], creating
+- MFC ActiveX Control Wizard
+- OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MFC ActiveX 컨트롤 마법사
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d911f96791e4bb7880c86a0571bfbbabf8a7eafb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/12/2017
 
-ActiveX 컨트롤은 [자동화 서버](../../mfc/automation-servers.md)의 한 종류로, 다시 사용할 수 있는 구성 요소입니다.  ActiveX 컨트롤을 호스팅하는 응용 프로그램은 해당 컨트롤의 [자동화 클라이언트](../../mfc/automation-clients.md)입니다.  다시 사용할 수 있는 구성 요소를 만드는 것이 목적인 경우에는 이 마법사를 사용하여 컨트롤을 만드십시오.  자세한 내용은 [MFC ActiveX 컨트롤](../../mfc/mfc-activex-controls.md)을 참조하십시오.  
+---
+# <a name="mfc-activex-control-wizard"></a>MFC ActiveX Control Wizard
+An ActiveX control is a specific type of [automation server](../../mfc/automation-servers.md); it is a reusable component. The application hosting the ActiveX control is the [automation client](../../mfc/automation-clients.md) of that control. If your goal is to create such a reusable component, then use this wizard to create your control. See [MFC ActiveX Controls](../../mfc/mfc-activex-controls.md) for more information.  
   
- 또한 [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)를 사용하여 자동화 서버 MFC 응용 프로그램을 만들 수 있습니다.  
+ Alternately, you can create an automation server MFC application using the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md).  
   
- 이 마법사를 사용하여 만든 ActiveX 컨트롤은 사용자 인터페이스를 가질 수도 있고, 보이지 않도록 만들 수도 있습니다.  마법사의 [컨트롤 설정](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) 페이지에서 이 옵션을 설정할 수 있습니다.  타이머 컨트롤은 보이지 않도록 설정할 수 있는 ActiveX 컨트롤의 한 예입니다.  
+ An ActiveX control created with this wizard can have a user interface, or it can be invisible. You can indicate this option in the [Control Settings](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) page in the wizard. A timer control is an example of an ActiveX control that you would want to be invisible.  
   
- ActiveX 컨트롤은 복잡한 사용자 인터페이스를 가질 수 있습니다.  일부 컨트롤은 캡슐화된 폼과 같은 형태일 수 있습니다. 즉, 하나의 컨트롤에 여러 필드가 들어 있으며 각 필드는 고유한 Windows 컨트롤입니다.  예를 들어, MFC ActiveX 컨트롤로 구현된 자동차 부품 개체는 사용자가 부품 번호, 부품 이름 및 기타 정보를 읽고 편집할 수 있는 폼 형태의 사용자 인터페이스를 가질 수 있습니다.  자세한 내용은 [MFC ActiveX 컨트롤](../../mfc/mfc-activex-controls.md)을 참조하십시오.  
+ ActiveX controls can have a complex user interface. Some controls might be like encapsulated forms: a single control containing many fields, each a Windows control in its own right. For example, an auto parts object implemented as an MFC ActiveX control might present a form-like user interface through which users could read and edit the part number, part name, and other information. See [MFC ActiveX Controls](../../mfc/mfc-activex-controls.md) for more information.  
   
- ActiveX 개체의 컨테이너를 만들려는 경우에는 [ActiveX 컨트롤 컨테이너 만들기](../../mfc/reference/creating-an-mfc-activex-control-container.md)를 참조하십시오.  
+ If you need to create a container for your ActiveX objects, see [Create an ActiveX Control Container](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
   
- MFC 기초 프로그램에는 C\+\+ 소스 파일\(.cpp\), 리소스 파일\(.rc\) 및 프로젝트 파일\(.vcxproj\)이 포함됩니다.  이 기초 파일에서 생성된 코드는 MFC를 기반으로 합니다.  
+ The MFC starter program includes C++ source (.cpp) files, resource (.rc) files, and a project (.vcxproj) file. The code generated in these starter files is based on MFC.  
   
- 다음 샘플 목록은 ActiveX 컨트롤에 대한 작업 및 성능 향상을 위한 여러 가지 방법입니다.  
+ The following sample list shows tasks and types of enhancements for your ActiveX control:  
   
--   [ActiveX 컨트롤 최적화](../../mfc/mfc-activex-controls-optimization.md)  
+-   [Optimizing an ActiveX Control](../../mfc/mfc-activex-controls-optimization.md)  
   
--   [ActiveX 컨트롤에 스톡 이벤트 추가](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
+-   [Adding Stock Events to an ActiveX Control](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
   
--   [사용자 지정 이벤트 추가](../../mfc/mfc-activex-controls-adding-custom-events.md)  
+-   [Adding Custom Events](../../mfc/mfc-activex-controls-adding-custom-events.md)  
   
--   [스톡 메서드 추가](../../mfc/mfc-activex-controls-adding-stock-methods.md)  
+-   [Adding Stock Methods](../../mfc/mfc-activex-controls-adding-stock-methods.md)  
   
--   [사용자 지정 메서드 추가](../../mfc/mfc-activex-controls-adding-custom-methods.md)  
+-   [Adding Custom Methods](../../mfc/mfc-activex-controls-adding-custom-methods.md)  
   
--   [스톡 속성 추가](../../mfc/mfc-activex-controls-adding-stock-properties.md)  
+-   [Adding Stock Properties](../../mfc/mfc-activex-controls-adding-stock-properties.md)  
   
--   [사용자 지정 속성 추가](../../mfc/mfc-activex-controls-adding-custom-properties.md)  
+-   [Adding Custom Properties](../../mfc/mfc-activex-controls-adding-custom-properties.md)  
   
--   [ActiveX 컨트롤 컨테이너에서 ActiveX 컨트롤 프로그래밍](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
+-   [Programming ActiveX Controls in an ActiveX Control Container](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
-## 개요  
- 이 마법사 페이지에서는 만들고 있는 MFC ActiveX 컨트롤 프로젝트의 현재 응용 프로그램 설정을 설명합니다.  마법사에서 프로젝트를 만들 때 사용하는 기본 설정은 다음과 같습니다.  
+## <a name="overview"></a>Overview  
+ This wizard page describes the current application settings for the MFC ActiveX control project you are creating. By default, the wizard creates a project as follows:  
   
--   기본 프로젝트는 런타임 라이선스나 도움말 파일을 생성하지 않습니다.  이러한 기본 설정은 [응용 프로그램 설정](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) 페이지에서 변경할 수 있습니다.  ActiveX 컨트롤 마법사의 이 페이지에서 선택한 내용만 **개요** 페이지에 반영됩니다.  
+-   The default project generates no run-time license or help files. You can change these default settings on the [Application Settings](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) page. Only the selections you make on this page of the ActiveX Control Wizard are reflected on the **Overview** page.  
   
--   프로젝트에는 프로젝트 이름을 기반으로 하는 컨트롤 클래스 및 속성 페이지 클래스가 포함됩니다.  [컨트롤 이름](../../mfc/reference/control-names-mfc-activex-control-wizard.md) 페이지에서 프로젝트 및 파일 이름을 편집할 수 있습니다.  
+-   The project includes a control class and a property page class, based on the name of the project. You can edit the names of your project and file names on the [Control Names](../../mfc/reference/control-names-mfc-activex-control-wizard.md) page.  
   
--   컨트롤은 기존 Windows 컨트롤을 기반으로 하지 않으며, 표시되었을 때 활성화되고, 사용자 인터페이스를 가지며, **정보** 대화 상자를 포함합니다.  [컨트롤 설정](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) 페이지에서 이러한 기본 설정을 변경할 수 있습니다.  
+-   The control is based on no existing Windows control, activates when it becomes visible, has a user interface, and includes an **About** dialog box. You can change these default settings on the [Control Settings](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) page.  
   
-## 참고 항목  
- [Visual C\+\+ 프로젝트 만들기 및 관리](../../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual C\+\+ 프로젝트 형식](../../ide/visual-cpp-project-types.md)   
- [개념](../../atl/active-template-library-atl-concepts.md)
+## <a name="see-also"></a>See Also  
+ [Creating and Managing Visual C++ Projects](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Visual C++ Project Types](../../ide/visual-cpp-project-types.md)   
+ [Concepts](../../atl/active-template-library-atl-concepts.md)
+
+
