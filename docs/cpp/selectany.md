@@ -1,55 +1,71 @@
 ---
-title: "selectany | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "selectany_cpp"
-  - "selectany"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec 키워드[C++], selectany"
-  - "selectany __declspec 키워드"
+title: selectany | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- selectany_cpp
+- selectany
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], selectany
+- selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# selectany
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9c17221e2d0875505d9aa3f1132ea4a4b6d4c489
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="selectany"></a>selectany
 **Microsoft 전용**  
   
- 선언된 전역 데이터 항목\(변수 또는 개체\)이 pick\-any COMDAT\(패키지된 함수\)임을 컴파일러에 알립니다.  
+ 선언된 전역 데이터 항목(변수 또는 개체)이 pick-any COMDAT(패키지된 함수)임을 컴파일러에 알립니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
 __declspec( selectany ) declarator  
 ```  
   
-## 설명  
- 링크 타임에 COMDAT의 정의가 여러 개 표시되면 링커가 그 중 하나를 선택하고 나머지는 무시합니다.  링커 옵션 [\/OPT:REF](../build/reference/opt-optimizations.md)\(최적화\)가 선택되면 링커 출력에서 참조하지 않는 데이터 항목을 모두 제거하기 위해 COMDAT가 제거됩니다.  
+## <a name="remarks"></a>설명  
+ 링크 타임에 COMDAT의 정의가 여러 개 표시되면 링커가 그 중 하나를 선택하고 나머지는 무시합니다. 경우 링커 옵션 [/opt: ref](../build/reference/opt-optimizations.md) (최적화)가 선택 되 면 링커 출력에서 모든 참조 되지 않은 데이터 항목을 제거 하려면 COMDAT 제거 발생 합니다.  
   
- 선언에서 전역 함수 또는 정적 메서드에 의한 생성자 및 할당은 참조를 만들지 않으며 \/OPT:REF 제거를 막지 않습니다.  데이터에 대한 다른 참조가 없을 경우 그러한 코드로 인해 의도하지 않은 결과가 발생해서는 안 됩니다.  
+ 선언에서 전역 함수 또는 정적 메서드에 의한 생성자 및 할당은 참조를 만들지 않으며 /OPT:REF 제거를 막지 않습니다. 데이터에 대한 다른 참조가 없을 경우 그러한 코드로 인해 의도하지 않은 결과가 발생해서는 안 됩니다.  
   
  동적으로 초기화되는 전역 개체의 경우 `selectany`가 참조하지 않는 개체의 초기화 코드도 삭제합니다.  
   
- 보통 EXE 또는 DLL 프로젝트에서 한 번만 전역 데이터 항목을 초기화할 수 있습니다.  둘 이상의 소스 파일에 같은 헤더가 나타날 경우 헤더에 정의된 전역 데이터를 초기화하는 데 `selectany`를 사용할 수 있습니다.  C 및 C\+\+ 컴파일러에서 `selectany`를 사용할 수 있습니다.  
+ 보통 EXE 또는 DLL 프로젝트에서 한 번만 전역 데이터 항목을 초기화할 수 있습니다. 둘 이상의 소스 파일에 같은 헤더가 나타날 경우 헤더에 정의된 전역 데이터를 초기화하는 데 `selectany`를 사용할 수 있습니다. C 및 C++ 컴파일러에서 `selectany`를 사용할 수 있습니다.  
   
 > [!NOTE]
 >  외부에 표시되는 전역 데이터 항목의 실제 초기화에 한해 `selectany`를 적용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  이 코드에서는 `selectany` 특성을 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -82,8 +98,8 @@ int i;
 __declspec(selectany) X x(1);  
 ```  
   
-## 예제  
- 이 코드에서는 [\/OPT:ICF](../build/reference/opt-optimizations.md) 링커 옵션을 사용할 때 `selectany` 특성을 사용하여 데이터 COMDAT 정리를 수행하는 방법을 보여 줍니다.  데이터가 `selectany`로 표시되고 **const**\(읽기 전용\) 섹션에 있어야 합니다.  읽기 전용 섹션을 명시적으로 지정해야 합니다.  
+## <a name="example"></a>예제  
+ 이 코드에서는 사용 하는 `selectany` 특성을 사용할 때 데이터 COMDAT 정리는 [/opt: icf](../build/reference/opt-optimizations.md) 링커 옵션입니다. 데이터와 표시 되어 해야 `selectany` 에 배치 하 고는 **const** (읽기 전용) 섹션. 읽기 전용 섹션을 명시적으로 지정해야 합니다.  
   
 ```  
 // selectany2.cpp  
@@ -98,6 +114,6 @@ int main() {
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_\_declspec](../cpp/declspec.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [__declspec](../cpp/declspec.md)   
+ [키워드](../cpp/keywords-cpp.md)

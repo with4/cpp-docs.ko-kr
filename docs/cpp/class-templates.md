@@ -1,44 +1,74 @@
 ---
-title: "클래스 템플릿 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "클래스 템플릿"
-  - "클래스[C++], 형식에 대해 작업"
-  - "템플릿, 클래스 템플릿"
+title: "클래스 템플릿과 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [C++], operating on type
+- class templates
+- templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 클래스 템플릿
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: f9e94e2b656262eff46cd75014e90110ab20dc43
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-클래스 템플릿을 사용하여 형식에 대해 작동하는 클래스 패밀리를 만들 수 있습니다.  클래스 템플릿은 매개 변수가 있는 형식입니다.  클래스 템플릿은 전달된 매개 변수\(템플릿 인수\)의 가능한 값 각각에 대해 별도의 클래스를 만들 수 있음을 암시합니다.  
+---
+# <a name="class-templates"></a>클래스 템플릿
+이 항목에서는 c + + 클래스 템플릿과 관련 된 규칙을 설명 합니다.  
   
- 템플릿 인수는 형식 또는 지정한 형식의 상수 값일 수 있습니다.  예를 들면 다음과 같습니다.  
+## <a name="member-functions-of-class-templates"></a>클래스 템플릿의 멤버 함수  
+ 멤버 함수는 클래스 템플릿의 내부 또는 외부에서 정의할 수 있습니다. 클래스 템플릿의 외부에서 정의하는 경우 함수 템플릿과 마찬가지로 정의됩니다.  
   
-```  
-// class_templates.cpp  
-template <class T, int i> class TempClass   
+```cpp  
+// member_function_templates1.cpp  
+template<class T, int i> class MyStack  
 {  
-public:  
-    TempClass( void );  
-    ~TempClass( void );  
-    int MemberSet( T a, int b );  
-private:  
-    T Tarray[i];  
-    int arraysize;  
+    T*  pStack;  
+    T StackBuffer[i];  
+    static const int cItems = i * sizeof(T);  
+public:   
+    MyStack( void );  
+    void push( const T item );  
+    T& pop( void );  
+};  
+  
+template< class T, int i > MyStack< T, i >::MyStack( void )  
+{  
+};  
+  
+template< class T, int i > void MyStack< T, i >::push( const T item )  
+{  
+};  
+  
+template< class T, int i > T& MyStack< T, i >::pop( void )  
+{  
 };  
   
 int main()  
@@ -46,27 +76,391 @@ int main()
 }  
 ```  
   
- 이 예제에서 템플릿 클래스는 `T` 형식 및 int `i`라는 두 매개 변수를 사용합니다.  `T` 매개 변수에는 구조체 및 클래스를 비롯한 모든 형식을 전달할 수 있습니다.  `i` 매개 변수에는 정수 상수를 전달해야 합니다.  `i`는 컴파일 타임에 정의되는 상수이므로 표준 배열 선언을 사용하여 `i` 크기의 멤버 배열을 정의할 수 있습니다.  
+ 템플릿 클래스 멤버 함수의 경우와 마찬가지로 클래스의 생성자 멤버 함수에 대한 정의에는 템플릿 인수 목록이 두 번 포함됩니다.  
   
- 자세한 내용은 다음을 참조하십시오.  
+ 다음 예제와 같이 멤버 함수는 추가 매개 변수를 지정하여 그 자체가 함수 템플릿이 될 수 있습니다.  
   
--   [클래스 템플릿의 멤버](../Topic/Members%20of%20Class%20Templates.md)  
+```cpp  
+// member_templates.cpp  
+template<typename T>  
+class X  
+{  
+public:  
+   template<typename U>  
+   void mf(const U &u);  
+};  
   
--   [클래스 멤버의 템플릿](../Topic/Templates%20for%20Class%20Members.md)  
+template<typename T> template <typename U>  
+void X<T>::mf(const U &u)  
+{  
+}  
   
--   [템플릿 클래스의 멤버 함수](../Topic/Member%20Functions%20of%20Template%20Classes.md)  
+int main()  
+{  
+}  
   
--   [중첩된 클래스 템플릿](../Topic/Nested%20Class%20Templates.md)  
+```  
   
--   [클래스 템플릿 인스턴스화](../Topic/Class%20Template%20Instantiation.md)  
+## <a name="nested-class-templates"></a>중첩 된 클래스 템플릿  
+ 클래스 또는 클래스 템플릿 안에 템플릿을 정의할 수 있으며 이 경우 멤버 템플릿이라고 합니다. 클래스인 멤버 템플릿은 중첩된 클래스 템플릿이라고 합니다. 멤버 템플릿에 함수에 대해서는 설명 [멤버 함수 템플릿](../cpp/member-function-templates.md)합니다.  
   
--   [클래스 템플릿의 명시적 특수화](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)  
+ 중첩된 클래스 템플릿은 바깥쪽 클래스의 범위 안에 클래스 템플릿으로 선언되며 바깥쪽 클래스 안이나 밖에 정의할 수 있습니다.  
   
--   [클래스 템플릿의 부분 특수화](../cpp/template-specialization-cpp.md)  
+ 다음 코드에서는 일반 클래스 안에 중첩된 클래스 템플릿을 보여 줍니다.  
   
--   [클래스 템플릿의 기본 인수](../Topic/Default%20Arguments%20for%20Class%20Templates.md)  
+```cpp  
+// nested_class_template1.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+using namespace std;  
   
--   [템플릿 friend](../cpp/template-friends.md)  
+class X  
+{  
   
-## 참고 항목  
+   template <class T>  
+   struct Y  
+   {  
+      T m_t;  
+      Y(T t): m_t(t) { }     
+   };  
+  
+   Y<int> yInt;  
+   Y<char> yChar;  
+  
+public:  
+   X(int i, char c) : yInt(i), yChar(c) { }  
+   void print()  
+   {  
+      cout << yInt.m_t << " " << yChar.m_t << endl;  
+   }  
+};  
+  
+int main()  
+{  
+   X x(1, 'a');  
+   x.print();  
+}  
+```  
+  
+```cpp  
+// nested_class_template2.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+using namespace std;  
+  
+template <class T>  
+class X  
+{  
+   template <class U> class Y  
+   {  
+      U* u;  
+   public:  
+      Y();  
+      U& Value();  
+      void print();  
+      ~Y();  
+   };  
+  
+   Y<int> y;  
+public:  
+   X(T t) { y.Value() = t; }  
+   void print() { y.print(); }  
+};  
+  
+template <class T>   
+template <class U>  
+X<T>::Y<U>::Y()  
+{  
+   cout << "X<T>::Y<U>::Y()" << endl;  
+   u = new U();  
+}  
+  
+template <class T>   
+template <class U>  
+U& X<T>::Y<U>::Value()  
+{  
+   return *u;  
+}  
+  
+template <class T>   
+template <class U>  
+void X<T>::Y<U>::print()  
+{  
+   cout << this->Value() << endl;  
+}  
+  
+template <class T>   
+template <class U>  
+X<T>::Y<U>::~Y()  
+{  
+   cout << "X<T>::Y<U>::~Y()" << endl;  
+   delete u;  
+}  
+  
+int main()  
+{  
+   X<int>* xi = new X<int>(10);  
+   X<char>* xc = new X<char>('c');  
+   xi->print();  
+   xc->print();  
+   delete xi;  
+   delete xc;  
+}  
+  
+//Output:   
+X<T>::Y<U>::Y()  
+X<T>::Y<U>::Y()  
+10  
+99  
+X<T>::Y<U>::~Y()  
+X<T>::Y<U>::~Y()
+```  
+  
+ 지역 클래스에는 멤버 템플릿이 허용되지 않습니다.  
+  
+## <a name="template-friends"></a>템플릿 friend  
+ 클래스 템플릿은 점이 [친구](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681)합니다. 클래스 또는 클래스 템플릿, 함수 또는 함수 템플릿은 템플릿 클래스에 대한 friend일 수 있습니다. friends는 클래스 템플릿 또는 함수 템플릿의 특수화가 될 수도 있지만 부분 특수화는 될 수 없습니다.  
+  
+ 다음 예제에서 friend 함수는 클래스 템플릿 내에서 함수 템플릿으로 정의됩니다. 이 코드는 모든 템플릿 인스턴스화에 대한 friend 함수 버전을 만듭니다. 이 구문은 사용자의 friend 함수가 클래스와 같은 템플릿 매개 변수로 결정될 경우 유용합니다.  
+  
+```cpp  
+// template_friend1.cpp  
+// compile with: /EHsc  
+  
+#include <iostream>  
+using namespace std;  
+  
+template <class T> class Array {  
+   T* array;  
+   int size;  
+  
+public:  
+   Array(int sz): size(sz) {  
+      array = new T[size];  
+      memset(array, 0, size * sizeof(T));  
+   }  
+  
+   Array(const Array& a) {  
+      size = a.size;  
+      array = new T[size];  
+      memcpy_s(array, a.array, sizeof(T));  
+   }  
+  
+   T& operator[](int i) {  
+      return *(array + i);  
+   }  
+  
+   int Length() { return size; }  
+  
+   void print() {  
+      for (int i = 0; i < size; i++)        
+         cout << *(array + i) << " ";  
+  
+      cout << endl;  
+   }  
+  
+   template<class T>  
+   friend Array<T>* combine(Array<T>& a1, Array<T>& a2);  
+};  
+  
+template<class T>  
+Array<T>* combine(Array<T>& a1, Array<T>& a2) {  
+   Array<T>* a = new Array<T>(a1.size + a2.size);  
+   for (int i = 0; i < a1.size; i++)  
+      (*a)[i] = *(a1.array + i);  
+  
+   for (int i = 0; i < a2.size; i++)  
+      (*a)[i + a1.size] = *(a2.array + i);  
+  
+   return a;  
+}  
+  
+int main() {  
+   Array<char> alpha1(26);  
+   for (int i = 0 ; i < alpha1.Length() ; i++)  
+      alpha1[i] = 'A' + i;  
+  
+   alpha1.print();  
+  
+   Array<char> alpha2(26);  
+   for (int i = 0 ; i < alpha2.Length() ; i++)  
+      alpha2[i] = 'a' + i;  
+  
+   alpha2.print();  
+   Array<char>*alpha3 = combine(alpha1, alpha2);  
+   alpha3->print();  
+   delete alpha3;  
+}  
+//Output:   
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z   
+a b c d e f g h i j k l m n o p q r s t u v w x y z   
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z   
+```  
+  
+ 다음 예제에서는 템플릿 특수화를 가진 friend를 다룹니다. 원본 함수 템플릿이 friend인 경우 함수 템플릿 특수화는 자동으로 friend입니다.  
+  
+ 또한 다음 코드의 friend 선언 앞의 주석이 나타내는 것처럼 템플릿의 특수화 버전만 friend로 선언할 수 있습니다. 이렇게 하면 friend 템플릿 특수화 정의를 템플릿 클래스 외부에 배치해야 합니다.  
+  
+```cpp  
+// template_friend2.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+using namespace std;  
+  
+template <class T>  
+class Array;  
+  
+template <class T>  
+void f(Array<T>& a);  
+  
+template <class T> class Array  
+{  
+    T* array;  
+    int size;  
+  
+public:  
+    Array(int sz): size(sz)  
+    {  
+        array = new T[size];  
+        memset(array, 0, size * sizeof(T));  
+    }  
+    Array(const Array& a)  
+    {  
+        size = a.size;  
+        array = new T[size];  
+        memcpy_s(array, a.array, sizeof(T));  
+    }  
+    T& operator[](int i)  
+    {  
+        return *(array + i);  
+    }  
+    int Length()  
+    {   
+        return size;  
+    }  
+    void print()  
+    {  
+        for (int i = 0; i < size; i++)  
+        {  
+            cout << *(array + i) << " ";  
+        }  
+        cout << endl;  
+    }  
+    // If you replace the friend declaration with the int-specific  
+    // version, only the int specialization will be a friend.  
+    // The code in the generic f will fail  
+    // with C2248: 'Array<T>::size' :  
+    // cannot access private member declared in class 'Array<T>'.  
+    //friend void f<int>(Array<int>& a);  
+  
+    friend void f<>(Array<T>& a);  
+};  
+  
+// f function template, friend of Array<T>  
+template <class T>  
+void f(Array<T>& a)  
+{  
+    cout << a.size << " generic" << endl;  
+}  
+  
+// Specialization of f for int arrays  
+// will be a friend because the template f is a friend.  
+template<> void f(Array<int>& a)  
+{  
+    cout << a.size << " int" << endl;  
+}  
+  
+int main()  
+{  
+    Array<char> ac(10);  
+    f(ac);  
+  
+    Array<int> a(10);  
+    f(a);  
+}  
+//Output:  
+10 generic  
+10 int  
+```  
+  
+ 다음 예제에서는 클래스 템플릿 내에 선언된 friend 클래스 템플릿을 보여 줍니다. 클래스 템플릿은 friend 클래스의 템플릿 인수로 사용됩니다. friend 클래스 템플릿은 선언된 클래스 템플릿의 외부에 정의되어야 합니다. 또한 friend 템플릿의 모든 특수화 또는 부분 특수화는 원본 클래스 템플릿의 friend입니다.  
+  
+```cpp  
+// template_friend3.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+using namespace std;  
+  
+template <class T>  
+class X  
+{  
+private:  
+   T* data;  
+   void InitData(int seed) { data = new T(seed); }  
+public:  
+   void print() { cout << *data << endl; }  
+   template <class U> friend class Factory;  
+};  
+  
+template <class U>  
+class Factory  
+{  
+public:  
+   U* GetNewObject(int seed)  
+   {  
+      U* pu = new U;  
+      pu->InitData(seed);  
+      return pu;  
+   }  
+};  
+  
+int main()  
+{  
+   Factory< X<int> > XintFactory;  
+   X<int>* x1 = XintFactory.GetNewObject(65);  
+   X<int>* x2 = XintFactory.GetNewObject(97);  
+  
+   Factory< X<char> > XcharFactory;  
+   X<char>* x3 = XcharFactory.GetNewObject(65);  
+   X<char>* x4 = XcharFactory.GetNewObject(97);  
+   x1->print();  
+   x2->print();  
+   x3->print();  
+   x4->print();  
+}  
+//Output:   
+65  
+97  
+A  
+a  
+```  
+  
+## <a name="reuse-of-template-parameters"></a>템플릿 매개 변수를 다시 사용  
+ 템플릿 매개 변수 목록에 템플릿 매개 변수를 재사용할 수 있습니다. 예를 들어 다음 코드는 허용됩니다.  
+  
+```cpp  
+// template_specifications2.cpp  
+  
+class Y   
+{  
+};  
+template<class T, T* pT> class X1   
+{  
+};  
+template<class T1, class T2 = T1> class X2   
+{  
+};  
+  
+Y aY;  
+  
+X1<Y, &aY> x1;  
+X2<int> x2;  
+  
+int main()  
+{  
+}  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [템플릿](../cpp/templates-cpp.md)
+

@@ -1,41 +1,57 @@
 ---
-title: "명시적 재정의 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "파생 클래스, 가상 함수"
-  - "가상 함수 명시적 재정의"
-  - "명시적 가상 함수 재정의"
-  - "재정의, 함수"
-  - "가상 함수, 명시적 재정의"
+title: "명시적 재정의 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding, functions
+- derived classes, virtual functions
+- explicit virtual function overrides
+- explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 명시적 재정의 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9ee79034ca7c74094753094cce29fc4a11b044ff
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="explicit-overrides-c"></a>명시적 재정의 (C++)
 **Microsoft 전용**  
   
- 동일한 가상 함수가 두 개 이상의 [인터페이스](../cpp/interface.md)에 선언되었거나 클래스가 이러한 인터페이스에서 파생된 경우 각 가상 함수를 명시적으로 재정의할 수 있습니다.  
+ 두 개 이상에 동일한 가상 함수를 선언 하는 경우 [인터페이스](../cpp/interface.md) 이러한 인터페이스에서 파생 된 클래스는 경우 각 가상 함수 명시적으로 재정의할 수 있습니다.  
   
- 새로운 관리되는 구문을 사용하는 관리 코드의 명시적 재정의에 대한 자세한 내용은 [명시적 재정의](../windows/explicit-overrides-cpp-component-extensions.md)를 참조하십시오.  
+ 새 관리 되는 구문을 사용 하 여 관리 코드에서 명시적에 대 한 정보를 재정의 대 한 참조 [명시적으로 재정의](../windows/explicit-overrides-cpp-component-extensions.md)합니다.  
   
  **Microsoft 전용 종료**  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 명시적 재정의를 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -113,17 +129,20 @@ int main() {
   
    // Cast to a CMyClass pointer so that the destructor gets called  
       CMyClass *p = dynamic_cast<CMyClass *>(pIMyInt1);  
-      delete p;  
+      delete p;  
 }  
 ```  
   
-  **In CMyClass::IMyInt1::mf1\(\)**  
-**In CMyClass::IMyInt1::mf1\(int\)**  
-**In CMyClass::IMyInt1::mf2\(\)**  
-**In CMyClass::IMyInt1::mf2\(int\)**  
-**In CMyClass::IMyInt2::mf1\(\)**  
-**In CMyClass::IMyInt2::mf1\(int\)**  
-**In CMyClass::IMyInt2::mf2\(\)**  
-**In CMyClass::IMyInt2::mf2\(int\)**   
-## 참고 항목  
+```Output  
+In CMyClass::IMyInt1::mf1()  
+In CMyClass::IMyInt1::mf1(int)  
+In CMyClass::IMyInt1::mf2()  
+In CMyClass::IMyInt1::mf2(int)  
+In CMyClass::IMyInt2::mf1()  
+In CMyClass::IMyInt2::mf1(int)  
+In CMyClass::IMyInt2::mf2()  
+In CMyClass::IMyInt2::mf2(int)  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [상속](../cpp/inheritance-cpp.md)

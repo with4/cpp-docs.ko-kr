@@ -1,38 +1,54 @@
 ---
-title: "증가 및 감소 연산자 오버로드(C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "감소 연산자"
-  - "감소 연산자, 형식"
-  - "증가 연산자"
-  - "증가 연산자, 형식"
+title: "증가 및 감소 연산자 (c + +)를 오버 로드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- increment operators
+- increment operators, types of
+- decrement operators
+- decrement operators, types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 증가 및 감소 연산자 오버로드(C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 432863fd2d1600ff0e82a69813c0513a32c56612
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="increment-and-decrement-operator-overloading-c"></a>증가 및 감소 연산자 오버로드(C++)
 증가 및 감소 연산자의 경우 각각 두 가지 변형이 있으므로 특수 범주에 속합니다.  
   
 -   사전 증가 및 사후 증가  
   
 -   사전 감소 및 사후 감소  
   
- 오버로드된 연산자 함수를 작성하는 경우 이러한 연산자의 전위 버전과 후위 버전에 대해 별도의 버전을 구현하는 것이 유용할 수 있습니다.  둘을 구분하기 위해 연산자의 전위 형태는 다른 단항 연산자와 같은 방식으로 선언되고 후위 형태는 `int` 형식의 추가 인수를 허용한다는 규칙이 적용됩니다.  
+ 오버로드된 연산자 함수를 작성하는 경우 이러한 연산자의 전위 버전과 후위 버전에 대해 별도의 버전을 구현하는 것이 유용할 수 있습니다. 둘을 구분하기 위해 연산자의 전위 형태는 다른 단항 연산자와 같은 방식으로 선언되고 후위 형태는 `int` 형식의 추가 인수를 허용한다는 규칙이 적용됩니다.  
   
 > [!NOTE]
 >  증가 또는 감소 연산자의 후위 형태에 대한 오버로드된 연산자를 지정할 때 추가 인수는 `int` 형식이어야 합니다. 다른 형식을 지정하면 오류가 생성됩니다.  
@@ -107,7 +123,7 @@ friend Point& operator--( Point& )      // Prefix decrement
 friend Point& operator--( Point&, int ) // Postfix decrement  
 ```  
   
- 증가 또는 감소 연산자의 후위 형태를 나타내는 `int` 형식의 인수는 일반적으로 인수를 전달하는 데 사용되지 않으며  일반적으로 0 값을 포함합니다.  그러나 이 인수는 다음과 같이 사용할 수 있습니다.  
+ 증가 또는 감소 연산자의 후위 형태를 나타내는 `int` 형식의 인수는 일반적으로 인수를 전달하는 데 사용되지 않으며 일반적으로 0 값을 포함합니다. 그러나 이 인수는 다음과 같이 사용할 수 있습니다.  
   
 ```  
 // increment_and_decrement2.cpp  
@@ -134,7 +150,7 @@ int main()
 }  
 ```  
   
- 위의 코드에 나와 있는 것처럼 명시적 호출 외에 이러한 값을 전달하기 위해 증가 또는 감소 연산자를 사용하는 구문은 없습니다.  더하기\/대입 연산자\(`+=`\)를 오버로드하면 보다 간단하게 이 기능을 구현할 수 있습니다.  
+ 위의 코드에 나와 있는 것처럼 명시적 호출 외에 이러한 값을 전달하기 위해 증가 또는 감소 연산자를 사용하는 구문은 없습니다. 더하기/대입 연산자(`+=`)를 오버로드하면 보다 간단하게 이 기능을 구현할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자 오버로드](../cpp/operator-overloading.md)

@@ -1,37 +1,53 @@
 ---
-title: "uuid (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "uuid"
-  - "uuid_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec 키워드[C++], uuid"
-  - "uuid __declspec 키워드"
+title: uuid (c + +) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- uuid
+- uuid_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], uuid
+- uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# uuid (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 80975b751b6e167573a038e55042b3546821c68f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="uuid-c"></a>uuid (C++)
 **Microsoft 전용**  
   
- 컴파일러는 `uuid` 특성을 사용하여 선언되거나 정의된\(전체 COM 개체 정의만 해당\) 클래스 또는 구조체에 GUID를 연결합니다.  
+ 컴파일러는 `uuid` 특성을 사용하여 선언되거나 정의된(전체 COM 개체 정의만 해당) 클래스 또는 구조체에 GUID를 연결합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -40,20 +56,20 @@ ComObjectGUID
 ") ) declarator  
 ```  
   
-## 설명  
- `uuid` 특성은 문자열을 인수로 사용합니다.  이 문자열은 **{}** 구분 기호를 사용하거나 사용하지 않고 일반 레지스트리 형식으로 GUID 이름을 지정합니다.  예를 들면 다음과 같습니다.  
+## <a name="remarks"></a>설명  
+ `uuid` 특성은 문자열을 인수로 사용합니다. 이 문자열 이름을 지정 하거나 사용 하지 않고 일반 레지스트리 형식에서 GUID는 **{}** 구분 기호입니다. 예:  
   
 ```  
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;  
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- 재선언에서 이 특성을 적용할 수 있습니다.  그러면 시스템 헤더가 **IUnknown** 등의 인터페이스 정의와 일부 다른 헤더의 재선언을 제공하여 GUID를 제공할 수 있습니다.  
+ 재선언에서 이 특성을 적용할 수 있습니다. 이렇게 하면와 같은 인터페이스의 정의 제공 하는 시스템 헤더 **IUnknown**, (예: COMDEF 일부 다른 헤더의 재선언. H)를 GUID를 제공 합니다.  
   
- [\_\_uuidof](../cpp/uuidof-operator.md) 키워드를 적용하여 사용자 정의 형식에 연결된 상수 GUID를 검색할 수 있습니다.  
+ 키워드 [__uuidof](../cpp/uuidof-operator.md) 사용자 정의 형식에 연결 된 GUID 상수를 검색에 적용할 수 있습니다.  
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_\_declspec](../cpp/declspec.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [__declspec](../cpp/declspec.md)   
+ [키워드](../cpp/keywords-cpp.md)

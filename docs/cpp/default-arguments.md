@@ -1,34 +1,51 @@
 ---
 title: "기본 인수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "인수[C++], default"
-  - "인수[C++], 함수"
-  - "함수 선언, 선언자"
-  - "기본 인수"
-  - "기본값[C++], 인수"
-  - "함수 선언자"
-  - "함수[C++], 기본 인수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- function declarators
+- functions [C++], default arguments
+- declaring functions, declarators
+- default arguments
+- arguments [C++], default
+- defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 기본 인수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b14cd3b6ff1386ab2484b8a424c6ef2ceee1cd85
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-많은 경우에 함수에는 기본값이면 충분할 정도로 가끔 사용되는 인수가 있습니다.  이러한 경우 기본 인수 기능을 사용하면 지정된 호출에서 의미가 있는 인수만 함수에 지정할 수 있습니다.  이 개념을 보여 주는 예제를 보려면 [함수 오버로드](../cpp/function-overloading.md)를 참조하세요.  
+---
+# <a name="default-arguments"></a>기본 인수
+많은 경우에 함수에는 기본값이면 충분할 정도로 가끔 사용되는 인수가 있습니다. 이러한 경우 기본 인수 기능을 사용하면 지정된 호출에서 의미가 있는 인수만 함수에 지정할 수 있습니다. 이 개념을 설명 하는 것이 좋습니다에 제시 된 예에서는 [함수 오버 로드](../cpp/function-overloading.md)합니다.  
   
 ```  
 // Prototype three print functions.  
@@ -47,7 +64,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.  
 ```  
   
- `print` 함수의 구현은 **double** 형식에 대한 이러한 함수가 하나만 있다는 사실을 반영하기 위해 약간 변경되었습니다.  
+ 구현에서 `print` 함수 형식에 대 한 이러한 함수가 하나만 있는지 사실을 반영 하므로 약간 변경 되어 **double**:  
   
 ```  
 // default_arguments.cpp  
@@ -90,13 +107,13 @@ print( d, 0 ); // Override default argument to achieve other
   
  기본 인수를 사용하는 경우 다음 사항에 유의하세요.  
   
--   기본 인수는 후행 인수가 생략되는 함수 호출에서만 사용되며 마지막 인수여야 합니다.  따라서 다음 코드는 올바르지 않습니다.  
+-   기본 인수는 후행 인수가 생략되는 함수 호출에서만 사용되며 마지막 인수여야 합니다. 따라서 다음 코드는 올바르지 않습니다.  
   
     ```  
     int print( double dvalue = 0.0, int prec );  
     ```  
   
--   기본 인수는 다시 지정한 정의가 원래 정의와 동일한 경우에도 이후 선언에서 다시 정의할 수 없습니다.  따라서 다음 코드는 오류를 생성합니다.  
+-   기본 인수는 다시 지정한 정의가 원래 정의와 동일한 경우에도 이후 선언에서 다시 정의할 수 없습니다. 따라서 다음 코드는 오류를 생성합니다.  
   
     ```  
     // Prototype for print function.  
@@ -115,11 +132,11 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   이후 선언에서 기본 인수를 더 추가할 수 있습니다.  
   
--   함수에 대한 포인터에 기본 인수를 제공할 수 있습니다.  예:  
+-   함수에 대한 포인터에 기본 인수를 제공할 수 있습니다. 예:  
   
     ```  
     int (*pShowIntVal)( int i = 0 );  
     ```  
   
-## 참고 항목  
- [C\+\+ 추상 선언자](http://msdn.microsoft.com/ko-kr/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>참고 항목  
+ 

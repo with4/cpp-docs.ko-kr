@@ -1,31 +1,47 @@
 ---
-title: "프로그램 종료 시 return 문 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터 형식[C++], 함수 반환 형식"
-  - "함수 반환 형식, return 문"
-  - "return 키워드[C++], 구문"
+title: "return 문 프로그램 종료 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- data types [C++], function return types
+- function return types, return statement
+- return keyword [C++], syntax
 ms.assetid: 66d002ab-5625-4b68-8446-71e1b8fcdbd8
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 프로그램 종료 시 return 문 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f5ba078ef364a046a9e635d8b2632558e426f4b8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-**main**에서 `return` 문을 실행하는 것은 **exit** 함수를 호출하는 것과 기능적으로 동일합니다.  다음 예제를 참조하십시오.  
+---
+# <a name="return-statement-in-program-termination-c"></a>프로그램 종료 시 return 문 (C++)
+발급 한 `return` 에서 문을 **주** 호출 하는 기능적는 **종료** 함수. 다음 예제를 참조하세요.  
   
 ```  
 // return_statement.cpp  
@@ -37,7 +53,7 @@ int main()
 }  
 ```  
   
- 위의 예제에서 **exit** 및 `return` 문은 기능적으로 동일합니다.  그러나 C\+\+에서는 `void`가 아닌 반환 형식을 가지는 함수가 값을 반환해야 합니다.  `return` 문을 사용하면 **main**에서 값을 반환할 수 있습니다.  
+ **종료** 및 `return` 앞의 예에서 문은 기능적으로 동일 합니다. 그러나 C++에서는 `void`가 아닌 반환 형식을 가지는 함수가 값을 반환해야 합니다. `return` 문을 사용 하면 한 값을 반환할 **주**합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [프로그램 종료](../cpp/program-termination.md)

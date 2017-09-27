@@ -1,59 +1,77 @@
 ---
 title: "인수 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argc 인수"
-  - "인수[C++], main 함수용"
-  - "argv 인수"
-  - "envp 인수"
-  - "main 함수, 인수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- envp argument
+- main function, arguments
+- arguments [C++], for main function
+- argv argument
+- argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 인수 정의
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d50e32a54cdb10af4adbfb3cfda64b8f1b21b2eb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="argument-definitions"></a>인수 정의
 프로토타입의 인수를 사용하면  
   
 ```  
   
-int main( int argc[ , char *argv[ ] [, char *envp[ ] ] ] ); int wmain( int argc[ , wchar_t *argv[ ] [, wchar_t *envp[ ] ] ] );  
+int main( int  
+argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar_t*envp[] ] ] );  
 ```  
   
- 인수를 편리하게 명령줄에서 구문 분석하고 선택적으로 환경 변수에 액세스할 수 있습니다.  인수 정의는 다음과 같습니다.  
+ 인수를 편리하게 명령줄에서 구문 분석하고 선택적으로 환경 변수에 액세스할 수 있습니다. 인수 정의는 다음과 같습니다.  
   
  `argc`  
- `argv` 뒤에 오는 인수의 수를 포함하는 정수입니다.  `argc` 매개 변수는 항상 1보다 크거나 같습니다.  
+ `argv` 뒤에 오는 인수의 수를 포함하는 정수입니다. `argc` 매개 변수는 항상 1보다 크거나 같습니다.  
   
  `argv`  
- 프로그램의 사용자가 입력한 명령줄 인수를 나타내는 null로 끝나는 문자열의 배열입니다.  규칙에 따라 `argv`**\[0\]**은 프로그램을 호출하는 데 사용하는 명령이고 `argv`**\[1\]**은 첫 번째 명령줄 인수가 되는 방식으로 `argv`**\[**`argc`**\]**\(항상 **NULL**임\)까지 진행됩니다.  명령줄 처리 억제에 대한 자세한 내용은 [명령줄 처리 사용자 지정](../cpp/customizing-cpp-command-line-processing.md)을 참조하십시오.  
+ 프로그램의 사용자가 입력한 명령줄 인수를 나타내는 null로 끝나는 문자열의 배열입니다. 규칙에 따라 `argv` **[0]** 된 프로그램을 호출, 명령 `argv` **[1]** 될 때까지 이런 식으로 확인 하 고 첫 번째 명령줄 인수는 `argv` ** [**`argc`**]**, 항상 **NULL**합니다. 참조 [명령줄 처리 사용자 지정](../cpp/customizing-cpp-command-line-processing.md) 명령줄 처리 억제에 대 한 내용은 합니다.  
   
- 첫 번째 명령줄 인수는 항상 `argv`**\[1\]**이고 마지막은 `argv`**\[**`argc` – 1**\]**입니다.  
+ 첫 번째 명령줄 인수는 항상 `argv` **[1]** 마지막 트랜잭션이 및 `argv` **[** `argc` -1**]**합니다.  
   
 > [!NOTE]
->  규칙에 따라 `argv`**\[0\]**은 프로그램을 호출하는 데 사용하는 명령입니다.  그러나 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)를 사용하여 프로세스를 생성할 수 있으며, 첫 번째 인수와 두 번째 인수\(`lpApplicationName` 및 `lpCommandLine`\)를 모두 사용하는 경우 `argv`**\[0\]**이 실행 파일 이름이 아닐 수 있습니다. 실행 파일 이름 및 정규화된 경로를 검색하려면 [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)을 사용하십시오.  
+>  규칙에 따라 `argv`**[0]**은 프로그램을 호출하는 데 사용하는 명령입니다.  그러나, 사용 하 여 프로세스를 생성할 수는 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) 첫 번째와 두 번째 인수를 사용 하는 경우 및 (`lpApplicationName` 및 `lpCommandLine`), `argv` **[0]** 되지 않을 수 있습니다는 실행 파일 이름입니다. 사용 하 여 [getmodulefilename이](http://msdn.microsoft.com/library/windows/desktop/ms683197) , 실행 파일 이름 및 전체 경로 검색할 수 있습니다.  
   
-## Microsoft 전용  
+## <a name="microsoft-specific"></a>Microsoft 전용  
  `envp`  
- 많은 UNIX 시스템에서 일반 확장인 `envp` 배열이 Microsoft C\+\+에서 사용됩니다.  이는 사용자 환경에서 설정된 변수를 나타내는 문자열의 배열입니다.  이 배열은 **NULL** 항목으로 종료됩니다.  이 배열은 **char\(char** \*envp\[ \]**\)**에 대한 포인터의 배열 또는 **char\(char** \*\*envp**\)** 포인터에 대한 포인터로 선언할 수 있습니다.  프로그램에서 **main** 대신 **wmain**을 사용하는 경우 `char` 대신 `wchar_t` 데이터 형식을 사용하십시오.  **main** 및 **wmain**으로 전달되는 환경 블록은 현재 환경의 "고정된" 복사본입니다.  이후에 **putenv** 또는 `_wputenv`에 대한 호출을 통해 환경을 변경하면 현재 환경\(`getenv`\/`_wgetenv` 및 `_environ`\/ `_wenviron` 변수에서 반환\)이 변경되지만 envp가 가리키는 블록은 변경되지 않습니다.  환경 처리 억제에 대한 자세한 내용은 [명령줄 처리 사용자 지정](../cpp/customizing-cpp-command-line-processing.md)을 참조하십시오.  이 인수는 C에서는 ANSI와 호환되지만 C\+\+에서는 호환되지 않습니다.  
+ 많은 UNIX 시스템에서 일반 확장인 `envp` 배열이 Microsoft C++에서 사용됩니다. 이는 사용자 환경에서 설정된 변수를 나타내는 문자열의 배열입니다. 이 배열은 종료 되는 한 **NULL** 항목입니다. 에 대 한 포인터의 배열으로 선언할 수 있습니다 **char (char** \*envp**)** 또는 포인터에 대 한 포인터로 **char (char** \* \* envp**)**합니다. 프로그램을 사용 하는 경우 **wmain** 대신 **주**를 사용 하 여는 `wchar_t` 데이터 형식 대신 `char`합니다. 에 전달 된 환경 블록 **주** 및 **wmain** 현재 환경의 "고정된" 복사본입니다. 호출을 통해 환경 변경 해도 **putenv** 또는 `_wputenv`, 현재 환경 (반환한 `getenv` / `_wgetenv` 및 `_environ` /  `_wenviron` 변수)는 변경 되지만 envp가 가리키는 블록은 변경 되지 것입니다. 참조 [명령줄 처리 사용자 지정](../cpp/customizing-cpp-command-line-processing.md) 환경 처리 억제에 대 한 내용은 합니다. 이 인수는 C에서는 ANSI와 호환되지만 C++에서는 호환되지 않습니다.  
   
-## Microsoft 전용 종료  
+**Microsoft 전용 종료**  
   
-## 예제  
- 다음 예제에서는 `argc`, `argv` 및 `envp` 인수를 **main**에 사용하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 사용 하는 방법을 보여 주는 다음 예제는 `argc`, `argv`, 및 `envp` 에 대 한 인수 **주**:  
   
 ```  
 // argument_definitions.cpp  
@@ -79,5 +97,5 @@ int main( int argc, char *argv[], char *envp[] ) {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [main: 프로그램 시작](../cpp/main-program-startup.md)

@@ -1,39 +1,56 @@
 ---
-title: "novtable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "novtable"
-  - "novtable_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec 키워드[C++], novtable"
-  - "novtable __declspec 키워드"
+title: novtable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- novtable
+- novtable_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- novtable __declspec keyword
+- __declspec keyword [C++], novtable
 ms.assetid: cfef09c5-8c1e-4b14-8a72-7d726ded4484
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# novtable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7064bd08a97f3eabbf337b1a351614e94d6458dd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-## Microsoft 전용  
+---
+# <a name="novtable"></a>novtable
+## <a name="microsoft-specific"></a>Microsoft 전용  
  `__declspec` 확장 특성입니다.  
   
- 이 형태의 `__declspec`는 모든 클래스 선언에 적용할 수 있지만, 자체적으로 인스턴스화되지 않을 클래스인 순수 인터페이스 클래스에만 적용해야 합니다.  `__declspec`는 컴파일러가 클래스의 생성자와 소멸자에서 vfptr을 초기화하는 코드를 생성하지 않도록 합니다.  대부분의 경우 이렇게 하면 클래스와 연결된 vtable에 대한 참조만 제거되므로 링커가 이를 제거합니다.  이 형태의 `__declspec`를 사용하면 코드 크기를 상당히 줄일 수 있습니다.  
+ 이 형태의 `__declspec`는 모든 클래스 선언에 적용할 수 있지만, 자체적으로 인스턴스화되지 않을 클래스인 순수 인터페이스 클래스에만 적용해야 합니다. `__declspec`는 컴파일러가 클래스의 생성자와 소멸자에서 vfptr을 초기화하는 코드를 생성하지 않도록 합니다. 대부분의 경우 이렇게 하면 클래스와 연결된 vtable에 대한 참조만 제거되므로 링커가 이를 제거합니다. 이 형태의 `__declspec`를 사용하면 코드 크기를 상당히 줄일 수 있습니다.  
   
- `novtable`로 표시된 클래스를 인스턴스화한 다음 클래스 멤버에 액세스하려고 하면 AV\(액세스 위반\)가 발생합니다.  
+ `novtable`로 표시된 클래스를 인스턴스화한 다음 클래스 멤버에 액세스하려고 하면 AV(액세스 위반)가 발생합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // novtable.cpp  
@@ -58,9 +75,12 @@ int main() {
 }  
 ```  
   
-  **In Y**   
-## Microsoft 전용 종료  
+```Output  
+In Y  
+```  
   
-## 참고 항목  
- [\_\_declspec](../cpp/declspec.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
+ [__declspec](../cpp/declspec.md)   
+ [키워드](../cpp/keywords-cpp.md)

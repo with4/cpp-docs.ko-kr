@@ -1,35 +1,52 @@
 ---
-title: "_com_error::_com_error | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error._com_error"
-  - "_com_error::_com_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_com_error 메서드"
+title: _com_error::_com_error | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error._com_error
+- _com_error::_com_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- _com_error method
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::_com_error
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 81efabf796d8d596326629af999f1932501befb5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comerrorcomerror"></a>_com_error::_com_error
 **Microsoft 전용**  
   
  `_com_error` 개체를 생성합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -43,21 +60,21 @@ _com_error(
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `hr`  
  `HRESULT` 정보입니다.  
   
  `perrinfo`  
  **IErrorInfo** 개체입니다.  
   
- **bool fAddRef\=false**  
- 생성자가 null이 아닌 **IErrorInfo** 인터페이스에서 AddRef를 호출하도록 합니다.  이를 통해 인터페이스의 소유권이 `_com_error` 개체로 전달되는 일반적인 경우에 참조 횟수를 정확하게 셀 수 있습니다.  
+ **bool fAddRef = false**  
+ Null이 아닌에서 AddRef를 호출 하는 생성자로 인해 **IErrorInfo** 인터페이스입니다. 이를 통해 인터페이스의 소유권이 `_com_error` 개체로 전달되는 일반적인 경우에 참조 횟수를 정확하게 셀 수 있습니다.  
   
 ```  
 throw _com_error(hr, perrinfo);  
 ```  
   
- 소유권을 `_com_error` 개체로 이전하는 코드를 원하지 않는 경우 및 `AddRef`가 **릴리스**를 `_com_error` 소멸자에서 오프셋하는 데 필요한 경우, 개체를 다음과 같이 생성합니다.  
+ 경우 원하지 않는 소유권을 전송 하는 코드는 `_com_error` 개체 및 `AddRef` 오프셋 하는 데 필요한는 **릴리스** 에 `_com_error` 소멸자 개체를 다음과 같이 생성:  
   
 ```  
 _com_error err(hr, perrinfo, true);  
@@ -66,10 +83,10 @@ _com_error err(hr, perrinfo, true);
  `that`  
  기존 `_com_error` 개체입니다.  
   
-## 설명  
- 첫 번째 생성자는 `HRESULT` 및 **IErrorInfo** 개체\(선택 사항\)를 사용하여 새 개체를 만듭니다.  두 번째 생성자는 기존 `_com_error` 개체의 복사본을 만듭니다.  
+## <a name="remarks"></a>설명  
+ 첫 번째 생성자는 지정 된 새 개체를 만듭니다는 `HRESULT` 및 선택적 **IErrorInfo** 개체입니다. 두 번째 생성자는 기존 `_com_error` 개체의 복사본을 만듭니다.  
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_com\_error 클래스](../cpp/com-error-class.md)
+## <a name="see-also"></a>참고 항목  
+ [_com_error 클래스](../cpp/com-error-class.md)

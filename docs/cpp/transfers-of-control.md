@@ -1,31 +1,48 @@
 ---
 title: "컨트롤 전송 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "제어 흐름, 분기"
-  - "제어 흐름, 제어 전달"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow, branching
+- control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컨트롤 전송
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a604c95bb21ad0098a3d4563738971791fc94a07
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-`goto` 문을 사용하거나  **문에서 `switch`case** 레이블을 사용하여 분기가 이니셜라이저를 지나는 프로그램을 지정할 수 있습니다.  이 같은 코드는 이니셜라이저를 포함한 선언이 점프 명령문이 있는 블록이 둘러싼 블록에 없는 경우 올바르지 않습니다.  
+---
+# <a name="transfers-of-control"></a>컨트롤 전송
+사용할 수 있습니다는 `goto` 문 또는 **대/소문자** 이라는 레이블이 `switch` 이니셜라이저 지난 분기 하는 프로그램을 지정 하는 문입니다. 이 같은 코드는 이니셜라이저를 포함한 선언이 점프 명령문이 있는 블록이 둘러싼 블록에 없는 경우 올바르지 않습니다.  
   
- 다음 예제에서는 `total`, `ch` 및 `i` 개체를 선언하고 초기화하는 루프를 보여 줍니다.  또한 이니셜라이저를 지나 컨트롤을 전송하는 잘못된 `goto` 문이 있습니다.  
+ 다음 예제에서는 `total`, `ch` 및 `i` 개체를 선언하고 초기화하는 루프를 보여 줍니다. 또한 이니셜라이저를 지나 컨트롤을 전송하는 잘못된 `goto` 문이 있습니다.  
   
 ```  
 // transfers_of_control.cpp  
@@ -57,9 +74,8 @@ int main()
 }  
 ```  
   
- 위의 예제에서 `goto` 문은 `i`의 초기화를 지나 컨트롤을 전송합니다.  단, `i`가 선언되었지만 초기화되지 않은 경우 전송은 유효합니다.  
+ 위의 예제에서 `goto` 문은 `i`의 초기화를 지나 컨트롤을 전송합니다. 단, `i`가 선언되었지만 초기화되지 않은 경우 전송은 유효합니다.  
   
- `total` 문의 `ch`statement 역할을 하는 블록 안에서 선언된 개체  *및 `while`는 해당 블록이 `break` 문을 사용하여 종료되는 경우 삭제됩니다.*  
+ 개체 `total` 및 `ch`역할을 하는 블록에 선언 된는 *문을* 의 `while` 문을 사용 하 여 해당 블록을 종료할 때 삭제 됩니다는 `break` 문.  
   
-## 참고 항목  
- [\(NOTINBUILD\) Declaration of Automatic Objects](http://msdn.microsoft.com/ko-kr/81f941e9-c1b1-4d1c-a28d-70b6ee9765db)
+

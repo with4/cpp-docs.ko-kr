@@ -1,51 +1,66 @@
 ---
 title: "auto 키워드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "auto"
-  - "auto_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto 키워드"
-  - "자동 저장소 클래스, auto 키워드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- auto
+- auto_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- automatic storage class, auto keyword
+- auto keyword
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# auto 키워드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0413fd47b486cf1613b7c249b93e6a3507a5577c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-`auto` 키워드는 선언 지정자입니다.  그러나 C\+\+ 표준에는 이 키워드의 원래 의미와 수정된 의미가 정의되어 있습니다.  [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 전까지 `auto` 키워드에서는 *자동* 저장소 클래스에 있는 변수, 즉 지역 변수를 선언합니다.  [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)]부터 `auto` 키워드에서는 선언의 초기화 식에서 형식이 추론되는 변수를 선언합니다.  [\/Zc:auto &#91;\-](../build/reference/zc-auto-deduce-variable-type.md) 컴파일러 옵션은 `auto` 키워드의 의미를 제어합니다.  
+---
+# <a name="auto-keyword"></a>auto 키워드
+`auto` 키워드는 선언 지정자입니다. 그러나 C++ 표준에는 이 키워드의 원래 의미와 수정된 의미가 정의되어 있습니다. Visual c + + 2010 이전는 `auto` 에 변수를 선언 하는 키워드는 *자동* 저장소 클래스, 즉 변수 지역 변수입니다. Visual c + + 2010부터는 `auto` 키워드로 선언 된 변수 선언에 초기화 식에서 해당 형식이 추론 됩니다. [/zc: auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md) 컴파일러 옵션의 의미를 제어는 `auto` 키워드입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 auto declarator ;  
 auto declarator initializer;  
 ```  
   
-## 설명  
- `auto` 키워드 정의는 C 프로그래밍 언어가 아닌 C\+\+ 프로그래밍 언어로 변경됩니다.  
+## <a name="remarks"></a>설명  
+ `auto` 키워드 정의는 C 프로그래밍 언어가 아닌 C++ 프로그래밍 언어로 변경됩니다.  
   
  다음 항목에서는 `auto` 키워드 및 해당 컴파일러 옵션을 설명합니다.  
   
--   [auto](../cpp/auto-cpp.md)은 `auto` 키워드의 새 정의를 설명합니다.  
+-   [자동](../cpp/auto-cpp.md) 설명의 새 정의 `auto` 키워드입니다.  
   
--   [\(NOTINBUILD\)auto Keyword \(Storage\-Class Specifier\)](http://msdn.microsoft.com/ko-kr/c7d0cecf-393d-4058-a6e6-b39e31d9edb0)는 `auto` 키워드의 원래 정의를 설명합니다.  
   
--   [\/Zc:auto\(변수 형식 추론\)](../build/reference/zc-auto-deduce-variable-type.md)은 사용할 `auto` 키워드의 정의를 컴파일러에 알리는 컴파일러 옵션을 설명합니다.  
+-   [/Zc: auto (변수 형식 추론)](../build/reference/zc-auto-deduce-variable-type.md) 의 정의 컴파일러에 알리는 컴파일러 옵션에 설명 된 `auto` 키워드를 사용 합니다.  
   
-## 참고 항목  
- [\(NOTINBUILD\)Storage\-Class Specifiers](http://msdn.microsoft.com/ko-kr/10b3d22d-cb40-450b-994b-08cf9a211b6c)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [키워드](../cpp/keywords-cpp.md)

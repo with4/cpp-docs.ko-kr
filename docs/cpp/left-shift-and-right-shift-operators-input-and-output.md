@@ -1,56 +1,69 @@
 ---
-title: "왼쪽 시프트 및 오른쪽 시프트 연산자(&gt;&gt; 및 &lt;&lt;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "<<"
-  - ">>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<< 연산자, 특정 개체와 사용"
-  - ">> 연산자"
-  - "비트 시프트 연산자"
-  - "왼쪽 시프트 연산자"
-  - "연산자[C++], 시프트"
-  - "오른쪽 시프트 연산자"
-  - "시프트 연산자"
+title: "왼쪽된 시프트 및 오른쪽 시프트 연산자 (&gt; &gt; 및 &lt; &lt;) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- <<
+- '>>'
+dev_langs:
+- C++
+helpviewer_keywords:
+- << operator, with specific objects
+- left shift operators
+- right shift operators
+- bitwise-shift operators
+- '>> operator'
+- shift operators
+- operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 왼쪽 시프트 및 오른쪽 시프트 연산자(&gt;&gt; 및 &lt;&lt;)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e695a90f871f973780a859fb27a06a2c6b246f3d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-비트 시프트 연산자는 `>>`의 비트를 오른쪽으로 이동하는 오른쪽 시프트 연산자\(`shift_expression`\)와 `<<`의 비트를 왼쪽으로 이동하는 왼쪽 시프트 연산자\(`shift_expression`\)입니다.  <sup>1</sup>  
+---
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>왼쪽된 시프트 및 오른쪽 시프트 연산자 (&gt; &gt; 및 &lt; &lt;)
+비트 시프트 연산자는 오른쪽 시프트 연산자 (>>)의 비트 이동 *shift 식* 오른쪽 및 왼쪽 시프트 연산자 (<<)의 비트를 이동 하 *shift 키를 누른 채 식* 왼쪽에 있습니다. <sup>1</sup>  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```  
+> *shift 식* `<<` *덧셈 식*  
+> *shift 식* `>>` *덧셈 식*  
   
-        shift-expression << additive-expression  
-shift-expression >> additive-expression  
-```  
-  
-## 설명  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]
->  다음 설명 및 예제는 X86 및 x64 아키텍처용 Windows에 대해 유효합니다.  왼쪽 시프트 및 오른쪽 시프트 연산자를 구현하는 방법은 ARM 장치용 Windows RT에서는 상당히 다릅니다.  자세한 내용은 [Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) 블로그 게시물의 "시프트 연산자" 섹션을 참조하세요.  
+> 다음 설명 및 예제는 X86 및 x64 아키텍처용 Windows에 대해 유효합니다. 왼쪽 시프트 및 오른쪽 시프트 연산자를 구현하는 방법은 ARM 장치용 Windows RT에서는 상당히 다릅니다. 자세한 내용은의 "시프트 연산자" 섹션을 참조 하십시오.는 [Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) 블로그 게시물입니다.  
   
-## 왼쪽 시프트  
- 왼쪽 시프트 연산자를 사용하면 `shift-expression`의 비트가 `additive-expression`에 의해 지정된 위치의 수만큼 왼쪽으로 이동합니다.  시프트 연산으로 비워진 비트 위치는 0으로 채워집니다.  왼쪽 시프트는 논리 시프트입니다\(부호 비트를 포함해 끝에서 벗어나 이동한 비트는 무시됨\).  비트 시프트에 대한 자세한 내용은 [비트 시프트](http://en.wikipedia.org/wiki/Bitwise_shift)를 참조하세요.  
+## <a name="left-shifts"></a>왼쪽 시프트  
+ 왼쪽 시프트 연산자의 bits *shift 식* 지정 된 위치 수 만큼 왼쪽으로 이동 *덧셈 식*합니다. 시프트 연산으로 비워진 비트 위치는 0으로 채워집니다. 왼쪽 시프트는 논리 시프트입니다(부호 비트를 포함해 끝에서 벗어나 이동한 비트는 무시됨). 비트 시프트 종류에 대 한 자세한 내용은 참조 [비트 시프트](http://en.wikipedia.org/wiki/Bitwise_shift)합니다.  
   
- 다음 예제에서는 부호 없는 숫자를 사용하는 왼쪽 시프트 연산을 보여 줍니다.  예제에서는 값을 비트 집합으로 나타내어 비트에서 어떤 일이 발생하는지 보여 줍니다.  자세한 내용은 [bitset 클래스](../standard-library/bitset-class.md)을 참조하세요.  
+ 다음 예제에서는 부호 없는 숫자를 사용하는 왼쪽 시프트 연산을 보여 줍니다. 예제에서는 값을 비트 집합으로 나타내어 비트에서 어떤 일이 발생하는지 보여 줍니다. 자세한 내용은 참조 [bitset 클래스](../standard-library/bitset-class.md)합니다.  
   
 ```cpp  
 #include <iostream>  
@@ -73,7 +86,7 @@ int main() {
   
 ```  
   
- 부호 비트가 영향을 받도록 부호 있는 숫자를 왼쪽 시프트하면 결과가 정의되지 않습니다.  다음 예제에서는 1비트가 부호 비트 위치로 왼쪽 이동하면 Visual C\+\+에서 어떤 일이 발생하는지 보여 줍니다.  
+ 부호 비트가 영향을 받도록 부호 있는 숫자를 왼쪽 시프트하면 결과가 정의되지 않습니다. 다음 예제에서는 1비트가 부호 비트 위치로 왼쪽 이동하면 Visual C++에서 어떤 일이 발생하는지 보여 줍니다.  
   
 ```cpp  
 #include <iostream>  
@@ -95,11 +108,11 @@ int main() {
 }  
 ```  
   
-## 오른쪽 시프트  
- 오른쪽 시프트 연산자를 사용하면 `shift-expression`의 비트 패턴이 `additive-expression`에 의해 지정된 위치의 수만큼 오른쪽으로 이동합니다.  부호 없는 숫자의 경우 시프트 연산으로 비워진 비트 위치는 0으로 채워집니다.  부호 있는 숫자의 경우 부호 비트는 비워진 비트 위치를 채우는 데 사용됩니다.  즉, 숫자가 양수이면 0이 사용되고 숫자가 음수이면 1이 사용됩니다.  
+## <a name="right-shifts"></a>오른쪽 시프트  
+ 오른쪽 시프트 연산자를 통해 비트 패턴이에 *shift 식* 지정 된 위치 수 만큼 오른쪽으로 이동 *덧셈 식*합니다. 부호 없는 숫자의 경우 시프트 연산으로 비워진 비트 위치는 0으로 채워집니다. 부호 있는 숫자의 경우 부호 비트는 비워진 비트 위치를 채우는 데 사용됩니다. 즉, 숫자가 양수이면 0이 사용되고 숫자가 음수이면 1이 사용됩니다.  
   
 > [!IMPORTANT]
->  부호 있는 음수의 오른쪽 시프트 결과는 구현에 따라 다릅니다.  Visual C\+\+는 부호를 사용하여 비워진 비트 위치를 채우지만 다른 구현도 마찬가지라는 보장은 없습니다.  
+> 부호 있는 음수의 오른쪽 시프트 결과는 구현에 따라 다릅니다. Visual C++는 부호를 사용하여 비워진 비트 위치를 채우지만 다른 구현도 마찬가지라는 보장은 없습니다.  
   
  이 예제에서는 부호 없는 숫자를 사용하는 오른쪽 시프트 연산을 보여 줍니다.  
   
@@ -179,8 +192,8 @@ int main() {
 }  
 ```  
   
-## 시프트 및 확장  
- 시프트 연산자 양쪽에 있는 식은 정수 계열 형식이어야 합니다.  정수 계열 확장은 [정수 계열 확장](../misc/integral-promotions.md)에 설명된 규칙에 따라 수행됩니다.  결과 형식은 확장된 `shift-expression`의 형식과 같습니다.  
+## <a name="shifts-and-promotions"></a>시프트 및 확장  
+ 시프트 연산자 양쪽에 있는 식은 정수 계열 형식이어야 합니다. 정수 계열 확장에 설명 된 규칙에 따라 수행 됩니다 [표준 변환](standard-conversions.md)합니다. 결과 형식은 확장 된 유형의와 같습니다 *shift 식*합니다.  
   
  다음 예제에서는 형식 `char`의 변수가 `int`로 확장됩니다.  
   
@@ -193,16 +206,16 @@ using namespace std;
 int main() {  
     char char1 = 'a';  
   
-    auto promoted1 = char1 << 1;  // 194  
+    auto promoted1 = char1 << 1;   // 194  
     cout << typeid(promoted1).name() << endl;  // int  
   
     auto promoted2 = char1 << 10;  // 99328  
-    cout << typeid(promoted2).name() << endl;   // int  
+    cout << typeid(promoted2).name() << endl;  // int  
 }  
 ```  
   
-## 추가 정보  
- `additive-expression`이 음수이거나 `additive-expression`이 \(확장된\) `shift-expression`의 비트 수보다 크거나 같은 경우 시프트 연산의 결과가 정의되지 않습니다.  `additive-expression`이 0이면 시프트 연산이 수행되지 않습니다.  
+## <a name="additional-details"></a>추가 정보  
+ 경우 시프트 연산의 결과가 정의 되지 않습니다 *덧셈 식* 가 음수 이거나 *덧셈 식* 보다 크거나 (승격)의 비트 수와 같고 * shift 식*합니다. 없음 시프트 연산이 수행 됩니다 *덧셈 식* 은 0입니다.  
   
 ```cpp  
 #include <iostream>  
@@ -227,13 +240,13 @@ int main() {
 }  
 ```  
   
-## 각주  
- 1 다음은 C\+\+ ISO 사양\(INCITS\/ISO\/IEC 14882\-2011\[2012\]\), 단원 5.8.2 및 5.8.3의 시프트 연산자에 대한 설명입니다.  
+## <a name="footnotes"></a>각주  
+ 1 다음은 시프트 연산자는 C + + 11 ISO 사양 (INCITS/ISO/IEC 14882-2011[2012]), 단원 5.8.2 및 5.8.3에에서 설명.  
   
- `E1 << E2`의 값은 `E1` 왼쪽 이동된 `E2` 비트 위치입니다. 비워진 비트는 0으로 채워집니다.  `E1`이 부호 없는 형식이면 결과의 값은 `E1 × 2`<sup>E2</sup>이고 줄어든 나머지는 결과 형식에 나타낼 수 있는 최대 값보다 1이 큽니다.  그렇지 않으면 `E1`이 부호 있는 형식이고 음수가 아닌 값이고 `E1 × 2`<sup>E2</sup>가 해당 부호 없는 형식의 결과 형식에 나타낼 수 있는 경우 결과 형식으로 변환된 그 값은 결과 값입니다. 그렇지 않으면 동작이 정의되지 않습니다.  
+ 값 **E1 << E2** 은 **E1** 왼쪽 이동 **E2** 비트 위치; 비워진 비트는 0으로 채워집니다. 경우 **E1** 부호 없는 형식 결과의 값은 **E1 × 2**<sup>**E2**</sup>감소에 표시할 수 있는 최대 값 보다 하나 더 큰 모듈로, 결과 형식입니다. 그렇지 않은 경우, **E1** 이 부호 있는 형식이 고 음수가 아닌 값 및 **E1 × 2**<sup>**E2** </sup> 가 해당 부호 없는 형식으로 표현 결과 형식의 다음 결과 형식으로 변환 하 고 해당 값을은 결과 값이입니다. 그렇지 않으면 동작이 정의 되지 않습니다.  
   
- `E1 >> E2`의 값은 `E1` 오른쪽 이동된 `E2` 비트 위치입니다.  `E1`이 부호 없는 형식이거나 `E1`이 부호 있는 형식이고 음수가 아닌 값인 경우 결과의 값은 `E1/2`<sup>E2</sup> 몫의 정수 부분입니다.  `E1`이 부호 있는 형식이고 음수인 경우 결과 값은 구현 시 정의됩니다.  
+ 값 **E1 >> E2** 은 **E1** 오른쪽 이동 된 **E2** 비트 위치입니다. 경우 **E1** 부호 없는 형식 이거나 **E1** 이 부호 있는 형식이 고 음수가 아닌 값으로, 결과의 몫의 정수 부분은 **E1/2** <sup> **E2**</sup>합니다. 경우 **E1** 에 음수 값이 부호 있는 형식, 구현에서 정의 된 결과 값이 있습니다.  
   
-## 참고 항목  
- [이항 연산자로 구성된 식](../cpp/expressions-with-binary-operators.md)   
- [C\+\+ 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+## <a name="see-also"></a>참고 항목  
+ [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)   
+ [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

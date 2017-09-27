@@ -1,48 +1,65 @@
 ---
-title: "appdomain | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "appdomain_cpp"
-  - "appdomain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec 키워드[C++], appdomain"
-  - "appdomain __declspec 키워드"
+title: appdomain | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- appdomain_cpp
+- appdomain
+dev_langs:
+- C++
+helpviewer_keywords:
+- appdomain __declspec keyword
+- __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# appdomain
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9d4143fa5bb7b302899207041d38cd355ac31b42
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-관리되는 응용 프로그램의 각 응용 프로그램 도메인에 특정 전역 변수 또는 정적 멤버 변수의 자체 복사본이 포함되어야 하도록 지정합니다.  자세한 내용은 [응용 프로그램 도메인 및 Visual C\+\+](../dotnet/application-domains-and-visual-cpp.md)를 참조하십시오.  
+---
+# <a name="appdomain"></a>appdomain
+관리되는 응용 프로그램의 각 응용 프로그램 도메인에 특정 전역 변수 또는 정적 멤버 변수의 자체 복사본이 포함되어야 하도록 지정합니다. 참조 [응용 프로그램 도메인 및 Visual c + +](../dotnet/application-domains-and-visual-cpp.md) 자세한 정보에 대 한 합니다.  
   
- 모든 응용 프로그램 도메인에는 appdomain별 변수의 자체 복사본이 있습니다.  어셈블리를 응용 프로그램 도메인으로 로드하면 appdomain 변수의 생성자가 실행되고 응용 프로그램 도메인을 언로드하면 소멸자가 실행됩니다.  
+ 모든 응용 프로그램 도메인에는 appdomain별 변수의 자체 복사본이 있습니다. 어셈블리를 응용 프로그램 도메인으로 로드하면 appdomain 변수의 생성자가 실행되고 응용 프로그램 도메인을 언로드하면 소멸자가 실행됩니다.  
   
- 공용 언어 런타임에서 프로세스 내의 모든 응용 프로그램 도메인이 전역 변수를 공유하도록 하려면 `__declspec(process)` 한정자를 사용합니다.  `__declspec(process)`는 기본적으로 [\/clr](../build/reference/clr-common-language-runtime-compilation.md) 아래에서 적용되며 `__declspec(appdomain)`는 기본적으로 **\/clr:pure** 아래에서 적용됩니다.  `__declspec(appdomain)`는 **\/clr:safe** 아래에서 적용됩니다.  
+ 공용 언어 런타임에서 프로세스 내의 모든 응용 프로그램 도메인이 전역 변수를 공유하도록 하려면 `__declspec(process)` 한정자를 사용합니다. `__declspec(process)`아래에 기본적으로 적용 되 [/clr](../build/reference/clr-common-language-runtime-compilation.md) 및 `__declspec(appdomain)` 가 아래에 기본적으로 적용 **/clr: pure**합니다. `__declspec(appdomain)`아래에서 적용 **/clr: safe**합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
   
- `__declspec(appdomain)`는 **\/clr** 컴파일러 옵션 중 하나를 사용할 때만 유효합니다.  전역 변수, 정적 멤버 변수 또는 정적 로컬 변수만 `__declspec(appdomain)`로 표시할 수 있습니다.  관리되는 형식의 정적 멤버는 항상 이 동작을 수행하므로 `__declspec(appdomain)`를 적용하면 오류가 발생합니다.  
+ `__declspec(appdomain)`경우에를 유효한 중 하나는 **/clr** 컴파일러 옵션을 사용 합니다. 전역 변수, 정적 멤버 변수 또는 정적 로컬 변수만 `__declspec(appdomain)`로 표시할 수 있습니다. 관리되는 형식의 정적 멤버는 항상 이 동작을 수행하므로 `__declspec(appdomain)`를 적용하면 오류가 발생합니다.  
   
- `__declspec(appdomain)`를 사용하는 것은 [TLS\(스레드 로컬 저장소\)](../parallel/thread-local-storage-tls.md)를 사용하는 것과 비슷합니다.  스레드에는 응용 프로그램 도메인과 마찬가지로 자체 저장소가 있습니다.  `__declspec(appdomain)`를 사용하면 전역 변수가 이 응용 프로그램용으로 작성된 각 응용 프로그램 도메인에 자체 저장소를 포함할 수 있습니다.  
+ 사용 하 여 `__declspec(appdomain)` 를 사용 하 여 유사한 [로컬 저장소 (TLS 스레드)](../parallel/thread-local-storage-tls.md)합니다. 스레드에는 응용 프로그램 도메인과 마찬가지로 자체 저장소가 있습니다. `__declspec(appdomain)`를 사용하면 전역 변수가 이 응용 프로그램용으로 작성된 각 응용 프로그램 도메인에 자체 저장소를 포함할 수 있습니다.  
   
- 프로세스별 및 appdomain별 변수를 조합하여 사용하는 경우에는 제한이 적용됩니다. 자세한 내용은 [프로세스](../cpp/process.md)를 참조하십시오.  
+ 프로세스별 및 appdomain 별 변수;의 사용에 제한이 있습니다. 참조 [프로세스](../cpp/process.md) 자세한 정보에 대 한 합니다.  
   
- 예를 들어 프로그램 시작 시에는 모든 프로세스별 변수가 초기화된 후에 모든 appdomain 변수가 초기화됩니다.  따라서 프로세스별 변수는 초기화 중에 응용 프로그램 도메인별 변수의 값을 사용할 수 없습니다.  따라서 appdomain별 변수와 프로세스별 변수를 조합하여 사용\(할당\)하는 것은 적절하지 않습니다.  
+ 예를 들어 프로그램 시작 시에는 모든 프로세스별 변수가 초기화된 후에 모든 appdomain 변수가 초기화됩니다. 따라서 프로세스별 변수는 초기화 중에 응용 프로그램 도메인별 변수의 값을 사용할 수 없습니다. 따라서 appdomain별 변수와 프로세스별 변수를 조합하여 사용(할당)하는 것은 적절하지 않습니다.  
   
- 특정 응용 프로그램 도메인에서 함수를 호출하는 방법에 대한 자세한 내용은 [call\_in\_appdomain 함수](../dotnet/call-in-appdomain-function.md)를 참조하십시오.  
+ 특정 응용 프로그램 도메인에서 함수를 호출 하는 방법에 대 한 정보를 참조 하십시오. [call_in_appdomain 함수](../dotnet/call-in-appdomain-function.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // declspec_appdomain.cpp  
@@ -119,28 +136,31 @@ int main() {
 }  
 ```  
   
-  **\_\_declspec\(process\) CGlobal::CGlobal 생성자**  
-**\_\_declspec\(appdomain\) CGlobal::CGlobal 생성자**  
-**초기 값**  
-**appdomain 'declspec\_appdomain.exe'의 process\_global 값: 10**  
-**appdomain 'declspec\_appdomain.exe'의 appdomain\_global 값: 10**  
-**\_\_declspec\(appdomain\) CGlobal::CGlobal 생성자**  
-**appdomain 'Domain 1'의 process\_global 값: 10**  
-**appdomain 'Domain 1'의 appdomain\_global 값: 10**  
-**\_\_declspec\(appdomain\) CGlobal::CGlobal 생성자**  
-**appdomain 'Domain 2'의 process\_global 값: 10**  
-**appdomain 'Domain 2'의 appdomain\_global 값: 10**  
-**변경된 값**  
-**appdomain 'declspec\_appdomain.exe'의 process\_global 값: 20**  
-**appdomain 'declspec\_appdomain.exe'의 appdomain\_global 값: 10**  
-**appdomain 'Domain 1'의 process\_global 값: 20**  
-**appdomain 'Domain 1'의 appdomain\_global 값: 11**  
-**appdomain 'Domain 2'의 process\_global 값: 20**  
-**appdomain 'Domain 2'의 appdomain\_global 값: 12**  
-**\_\_declspec\(appdomain\) CGlobal::~CGlobal 소멸자**  
-**\_\_declspec\(appdomain\) CGlobal::~CGlobal 소멸자**  
-**\_\_declspec\(appdomain\) CGlobal::~CGlobal 소멸자**  
-**\_\_declspec\(process\) CGlobal::~CGlobal 소멸자**   
-## 참고 항목  
- [\_\_declspec](../cpp/declspec.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+```Output  
+__declspec(process) CGlobal::CGlobal constructor  
+__declspec(appdomain) CGlobal::CGlobal constructor  
+Initial value  
+process_global value in appdomain 'declspec_appdomain.exe': 10  
+appdomain_global value in appdomain 'declspec_appdomain.exe': 10  
+__declspec(appdomain) CGlobal::CGlobal constructor  
+process_global value in appdomain 'Domain 1': 10  
+appdomain_global value in appdomain 'Domain 1': 10  
+__declspec(appdomain) CGlobal::CGlobal constructor  
+process_global value in appdomain 'Domain 2': 10  
+appdomain_global value in appdomain 'Domain 2': 10  
+Changed value  
+process_global value in appdomain 'declspec_appdomain.exe': 20  
+appdomain_global value in appdomain 'declspec_appdomain.exe': 10  
+process_global value in appdomain 'Domain 1': 20  
+appdomain_global value in appdomain 'Domain 1': 11  
+process_global value in appdomain 'Domain 2': 20  
+appdomain_global value in appdomain 'Domain 2': 12  
+__declspec(appdomain) CGlobal::~CGlobal destructor  
+__declspec(appdomain) CGlobal::~CGlobal destructor  
+__declspec(appdomain) CGlobal::~CGlobal destructor  
+__declspec(process) CGlobal::~CGlobal destructor  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [__declspec](../cpp/declspec.md)   
+ [키워드](../cpp/keywords-cpp.md)

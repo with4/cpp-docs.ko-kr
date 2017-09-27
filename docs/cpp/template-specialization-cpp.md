@@ -1,37 +1,54 @@
 ---
-title: "클래스 템플릿의 부분 특수화 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "클래스 템플릿의 부분 특수화"
+title: "템플릿 특수화 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 클래스 템플릿의 부분 특수화 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 6e6cf3d4ad48a50d6f4cdffa81cd4ca330ed33a9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-클래스 템플릿은 부분적으로 특수화될 수 있으며 결과 클래스는 여전히 템플릿입니다.  부분 특수화를 사용하면 다음과 같은 상황에서 특정 형식에 대해 템플릿 코드를 부분적으로 사용자 지정할 수 있습니다.  
+---
+# <a name="template-specialization-c"></a>템플릿 특수화 (c + +)
+
+클래스 템플릿은 부분적으로 특수화될 수 있으며 결과 클래스는 여전히 템플릿입니다. 부분 특수화를 사용하면 다음과 같은 상황에서 특정 형식에 대해 템플릿 코드를 부분적으로 사용자 지정할 수 있습니다.  
   
--   템플릿에 여러 형식이 있으며 그 중 일부만 특수화되어야 하는 경우.  결과는 나머지 형식에 대해 매개 변수화된 템플릿입니다.  
+-   템플릿에 여러 형식이 있으며 그 중 일부만 특수화되어야 하는 경우. 결과는 나머지 형식에 대해 매개 변수화된 템플릿입니다.  
   
--   템플릿에 형식이 하나만 있지만 포인터, 참조, 멤버에 대한 포인터 또는 함수 포인터 형식에 대한 특수화가 필요한 경우.  특수화 자체는 여전히 가리켜지거나 참조된 형식에 대한 템플릿입니다.  
+-   템플릿에 형식이 하나만 있지만 포인터, 참조, 멤버에 대한 포인터 또는 함수 포인터 형식에 대한 특수화가 필요한 경우. 특수화 자체는 여전히 가리켜지거나 참조된 형식에 대한 템플릿입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```  
+```cpp
 // partial_specialization_of_class_templates.cpp  
 template <class T> struct PTS {  
    enum {  
@@ -72,13 +89,17 @@ int main() {
 }  
 ```  
   
-  **PTS\<S\>::IsPointer \=\= 0 PTS\<S\>::IsPointerToDataMember \=\= 0**  
-**PTS\<S\*\>::IsPointer \=\= 1 PTS\<S\*\>::IsPointerToDataMember \=\=0**  
-**PTS\<int S::\*\>::IsPointer \=\= 0 PTS\<int S::\*\>::IsPointerToDataMember \=\= 1**   
-## 예제  
- 임의의 형식 **T**를 사용하는 템플릿 컬렉션 클래스가 있는 경우 임의의 포인터 형식 **T\***를 사용하는 부분 특수화를 만들 수 있습니다.  다음 코드에서는 컬렉션 클래스 템플릿 `Bag`와 컬렉션이 포인터 형식을 배열에 복사하기 전에 역참조하는 포인터 형식에 대한 부분 특수화를 보여 줍니다.  그런 다음 컬렉션은 가리켜진 값을 저장합니다.  원래 템플릿을 사용했다면 포인터 자체만 컬렉션에 저장되고 데이터는 삭제나 수정에 취약한 상태가 되었을 것입니다.  이 컬렉션의 특수 포인터 버전에서는 `add` 메서드에서 null 포인터를 검사하는 코드가 추가되었습니다.  
-  
+```Output  
+PTS<S>::IsPointer == 0 PTS<S>::IsPointerToDataMember == 0  
+PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0  
+PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1  
 ```  
+  
+## <a name="example"></a>예제
+
+ 형식을 사용 하는 템플릿 컬렉션 클래스가 있는 경우 **T**, 포인터 형식을 사용 하는 부분 특수화를 만들 수 있습니다 **T*** 합니다. 다음 코드에서는 컬렉션 클래스 템플릿 `Bag`와 컬렉션이 포인터 형식을 배열에 복사하기 전에 역참조하는 포인터 형식에 대한 부분 특수화를 보여 줍니다. 그런 다음 컬렉션은 가리켜진 값을 저장합니다. 원래 템플릿을 사용했다면 포인터 자체만 컬렉션에 저장되고 데이터는 삭제나 수정에 취약한 상태가 되었을 것입니다. 이 컬렉션의 특수 포인터 버전에서는 `add` 메서드에서 null 포인터를 검사하는 코드가 추가되었습니다.  
+  
+```cpp
 // partial_specialization_of_class_templates2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -179,14 +200,18 @@ int main() {
 }  
 ```  
   
-  **10 9 8**   
-**a b c**   
-**Null pointer\!**  
-**3 87 8 100**    
-## 예제  
- 다음 예제에서는 임의의 형식 쌍을 사용하는 템플릿 클래스를 정의한 다음 형식 중 하나가 `int`이도록 특수화된 해당 템플릿 클래스의 부분 특수화를 정의합니다.  특수화에서는 정수 기반의 간단한 거품 정렬을 구현하는 추가 정렬 메서드를 정의합니다.  
-  
+```Output  
+10 9 8   
+a b c   
+Null pointer!  
+3 87 8 100   
 ```  
+  
+## <a name="example"></a>예제
+
+ 다음 예제에서는 임의의 형식 쌍을 사용하는 템플릿 클래스를 정의한 다음 형식 중 하나가 `int`이도록 특수화된 해당 템플릿 클래스의 부분 특수화를 정의합니다. 특수화에서는 정수 기반의 간단한 거품 정렬을 구현하는 추가 정렬 메서드를 정의합니다.  
+  
+```cpp
 // partial_specialization_of_class_templates3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -315,17 +340,19 @@ int main() {
 }  
 ```  
   
-  **{apple, fruit}**  
-**{banana, fruit}**  
-**{dog, animal}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**  
-**{89, cat}**  
-**Sorted list:**  
-**{89, cat}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**   
-## 참고 항목  
- [클래스 템플릿의 명시적 특수화](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)
+```Output  
+{apple, fruit}  
+{banana, fruit}  
+{dog, animal}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+{89, cat}  
+  
+Sorted list:  
+{89, cat}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+```  
+

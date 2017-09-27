@@ -1,36 +1,53 @@
 ---
 title: "블록 범위가 있는 이름의 링크 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "블록 범위[C++]"
-  - "외부 링크, 범위 링크 규칙"
-  - "링크[C++], 범위 링크 규칙"
-  - "이름[C++], 범위 링크 규칙"
-  - "범위[C++], 링크 규칙"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope [C++], linkage rules
+- linkage [C++], scope linkage rules
+- names [C++], scope linkage rules
+- block scope [C++]
+- external linkage, scope linkage rules
 ms.assetid: 73efa91a-f761-47f7-bbd9-9f9e3508e218
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 블록 범위가 있는 이름의 링크
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: de093c90e0da4a906d8aefebfb7048733c1a1f1d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-다음 링크 규칙이 블록 범위가 있는 이름\(로컬 이름\)에 적용됩니다.  
+---
+# <a name="linkage-in-names-with-block-scope"></a>블록 범위가 있는 이름의 링크
+다음 링크 규칙이 블록 범위가 있는 이름(로컬 이름)에 적용됩니다.  
   
--   `extern`으로 선언된 이름은 이전에 **정적**으로 선언된 경우가 아니면 외부 링크를 가지고 있습니다.  
+-   로 선언 된 이름은 `extern` 로 이전에 선언 된 경우가 아니면 외부 링크가 있는 **정적**합니다.  
   
 -   블록 범위가 있는 다른 모든 이름에는 링크가 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [프로그램 및 링크](../cpp/program-and-linkage-cpp.md)

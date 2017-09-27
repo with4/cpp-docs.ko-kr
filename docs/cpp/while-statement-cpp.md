@@ -1,48 +1,64 @@
 ---
-title: "while 문 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "while_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "while 키워드[C++]"
-  - "while 키워드[C++], 구문"
+title: "while 문 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- while_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- while keyword [C++]
+- while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# while 문 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 694852e40699ac7b2663392cb8a4c02218a422a7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-*expression*이 0으로 평가될 때까지 *statement*을 반복적으로 실행합니다.  
+---
+# <a name="while-statement-c"></a>while 문 (C++)
+실행 *문을* 때까지 반복 해 서 *식* 0으로 계산 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
       while ( expression )  
-   statement  
+   statement  
 ```  
   
-## 설명  
- 각 루프를 실행하기 전에  식을 테스트하기 때문에 `while` 루프는 0번 이상 실행됩니다.  *식*은 정수 계열 형식, 포인터 형식 또는 정수 계열이거나 포인터 형식으로의 명확한 변환을 통한 클래스 형식 중 하나를 기반으로 해야 합니다.  
+## <a name="remarks"></a>설명  
+ 테스트 *식* 루프를 실행 하기 전에 수행 따라서는 `while` 루프 0 번 이상 실행 합니다. *식* 정수 계열 형식, 포인터 형식 또는 클래스 형식으로 명확한 변환 하는 정수 계열 또는 포인터 형식 이어야 합니다.  
   
- `while` 루프는 문 본문 내에서 [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) 또는 [return](../cpp/return-statement-cpp.md)이 실행될 때도 종료할 수 있습니다.  [계속](../cpp/continue-statement-cpp.md)을 사용하여 `while` 루프를 종료하지 않고 현재 반복을 종료합니다.  **continue**는 `while` 루프의 다음 반복으로 제어를 전달합니다.  
+ A `while` 루프 종료할 수도 있습니다는 [나누기](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), 또는 [반환](../cpp/return-statement-cpp.md) 문 내에서 본문이 실행 됩니다. 사용 하 여 [계속](../cpp/continue-statement-cpp.md) 끝내 지 않고 현재 반복을 종료 하는 `while` 루프입니다. **계속** 의 다음 반복으로 제어가 전달는 `while` 루프입니다.  
   
- 다음 코드는 문자열의 후행 밑줄을 트리밍하기 위해 `while` 루프를 사용합니다.  
+ 다음 코드에서는 `while` 문자열에서 후행 잘라내며 루프 밑줄:  
   
 ```  
 // while_statement.cpp  
@@ -71,11 +87,11 @@ int main()
 }  
 ```  
   
- 종료 조건이 루프의 맨 위에서 계산됩니다.  후행 밑줄이 없을 경우 루프가 실행되지 않습니다.  
+ 종료 조건은 루프의 맨 위쪽에 평가 됩니다. 뒤에 밑줄이 있으면 루프 실행 하지 않습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [반복 문](../cpp/iteration-statements-cpp.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)   
- [do\-while 문\(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for 문 \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [범위 기반 for 문\(C\+\+\)](../cpp/range-based-for-statement-cpp.md)
+ [키워드](../cpp/keywords-cpp.md)   
+ [do-while 문(C++)](../cpp/do-while-statement-cpp.md)   
+ [for 문(C++)](../cpp/for-statement-cpp.md)   
+ [범위 기반 for 문(C++)](../cpp/range-based-for-statement-cpp.md)

@@ -1,44 +1,60 @@
 ---
-title: "C++ 비트 필드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "비트 필드"
-  - "비트 필드"
-  - "필드[C++], 비트"
+title: "C + + 비트 필드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitfields
+- fields [C++], bit
+- bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 비트 필드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 71f70995cf1a59153a380f0e22f0321fd59abee0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-클래스와 구조체는 정수 형식보다 작은 저장 공간을 차지하는 멤버를 포함할 수 있습니다.  이러한 멤버는 비트 필드로 지정됩니다.  비트 필드 *멤버\-선언자* 사양의 구문은 다음을 따릅니다.  
+---
+# <a name="c-bit-fields"></a>C++ 비트 필드
+클래스와 구조체는 정수 형식보다 작은 저장 공간을 차지하는 멤버를 포함할 수 있습니다. 이러한 멤버는 비트 필드로 지정됩니다. 비트 필드에 대 한 구문 *멤버-선언 자* 사양 따릅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 declarator  : constant-expression  
 ```  
   
-## 설명  
- 선택 사항인 `declarator`는 프로그램에서 멤버에 액세스하는 데 사용하는 이름입니다.  정수 형식\(열거형 형식 포함\)이어야 합니다.  *constant\-expression*은 구조에서 멤버가 차지하는 비트 수를 지정합니다.  익명 비트 필드, 식별자가 없는 비트 필드 멤버를 안쪽 여백에 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 선택 사항인 `declarator`는 프로그램에서 멤버에 액세스하는 데 사용하는 이름입니다. 정수 형식(열거형 형식 포함)이어야 합니다. *문* 구조에서 멤버가 차지 하는 비트 수를 지정 합니다. 익명 비트 필드, 식별자가 없는 비트 필드 멤버를 안쪽 여백에 사용할 수 있습니다.  
   
 > [!NOTE]
->  너비가 0인 명명되지 않은 비트 필드는 다음 비트 필드를 다음 `type` 경계에 강제로 맞춥니다\(여기서 `type`은 멤버의 형식\).  
+>  너비가 0인 명명되지 않은 비트 필드는 다음 비트 필드를 다음 `type` 경계에 강제로 맞춥니다(여기서 `type`은 멤버의 형식).  
   
  다음 예제에서는 비트 필드가 포함된 구조체를 선언합니다.  
   
@@ -58,7 +74,7 @@ struct Date {
  ![날짜 개체의 메모리 레이아웃](../cpp/media/vc38uq1.png "vc38UQ1")  
 날짜 개체의 메모리 레이아웃  
   
- `nYear`는 길이가 8비트이며 선언된 형식인 **부호 없는 short**의 단어 경계를 벗어납니다.  따라서 새 **부호 없는 short**의 시작 부분에서 시작됩니다.  모든 비트 필드가 기본 형식의 한 개체에 맞아야 할 필요는 없습니다. 선언에서 요청된 비트 수에 따라 새 저장소 단위가 할당됩니다.  
+ `nYear` 길이가 8 비트 이며 선언 된 형식의 단어 경계를 벗어납니다 **부호 없는 short**합니다. 따라서 새의 시작 부분에서 시작 됩니다 **부호 없는 short**합니다. 모든 비트 필드가 기본 형식의 한 개체에 맞아야 할 필요는 없습니다. 선언에서 요청된 비트 수에 따라 새 저장소 단위가 할당됩니다.  
   
  **Microsoft 전용**  
   
@@ -82,17 +98,17 @@ struct Date {
   
  메모리 레이아웃은 다음 그림과 같습니다.  
   
- ![길이가 0인 비트 필드가 있는 날짜 개체의 레이아웃](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![0 & #45 있는 날짜 개체의 레이아웃; 길이 비트 필드](../cpp/media/vc38uq2.png "vc38UQ2")  
 길이가 0인 비트 필드가 있는 날짜 개체의 레이아웃  
   
- 비트 필드의 기본 형식은 [기본 형식](../cpp/fundamental-types-cpp.md)의 설명대로 정수 형식이어야 합니다.  
+ 비트 필드의 내부 형식에 설명 된 대로 정수 계열 형식 이어야 합니다 [기본 형식을](../cpp/fundamental-types-cpp.md)합니다.  
   
-## 비트 필드에 대한 제한  
+## <a name="restrictions-on-bit-fields"></a>비트 필드에 대한 제한  
  비트 필드에 대한 잘못된 연산은 다음과 같습니다.  
   
 1.  비트 필드의 주소 가져오기  
   
 2.  비트 필드를 사용하여 참조 초기화  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)

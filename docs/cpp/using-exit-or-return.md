@@ -1,33 +1,50 @@
 ---
-title: "exit 또는 return 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Exit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exit 함수"
-  - "return 키워드[C++], 프로그램 종료 시 사용"
+title: "사용 하 여 종료 하거나 반환할 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Exit
+dev_langs:
+- C++
+helpviewer_keywords:
+- exit function
+- return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# exit 또는 return 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9fc6588a6593559314774e30a4d65c5a60779eb5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-**main**에서 **exit**를 호출하거나 `return` 문을 실행하는 경우 초기화된 순서와 반대로 개체가 소멸됩니다.  다음 예제에서는 이러한 초기화 및 정리가 작동하는 방법을 보여 줍니다.  
+---
+# <a name="using-exit-or-return"></a>exit 또는 return 사용
+호출 하는 경우 **종료** 하거나 실행 한 `return` 에서 문을 **주**, 정적 개체 초기화의 역순으로 제거 됩니다. 다음 예제에서는 이러한 초기화 및 정리가 작동하는 방법을 보여 줍니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // using_exit_or_return1.cpp  
@@ -65,7 +82,7 @@ int main() {
 }  
 ```  
   
- 위의 예제에서 `main`에 진입하기 전에 정적 개체 `sd1` 및 `sd2`가 만들어지고 초기화됩니다.  `return` 문을 사용하여 이 프로그램이 종료된 후 먼저 `sd2`가 소멸된 후 `sd1`이 소멸됩니다.  `ShowData` 클래스에 대한 소멸자가 이 정적 개체와 연결된 파일을 닫습니다. 초기화, 생성자 및 소멸자에 대한 자세한 내용은 [특수 멤버 함수](../misc/special-member-functions-cpp.md)를 참조하십시오.  
+ 위의 예제에서 `sd1`에 진입하기 전에 정적 개체 `sd2` 및 `main`가 만들어지고 초기화됩니다. `return` 문을 사용하여 이 프로그램이 종료된 후 먼저 `sd2`가 소멸된 후 `sd1`이 소멸됩니다. `ShowData` 클래스에 대한 소멸자가 이 정적 개체와 연결된 파일을 닫습니다.   
   
  범위를 벗어나면 소멸되도록 블록 범위를 사용해 `ShowData` 개체를 선언하여 이 코드를 작성할 수도 있습니다.  
   
@@ -78,5 +95,5 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [추가 종료 고려 사항](../cpp/additional-termination-considerations.md)

@@ -1,34 +1,51 @@
 ---
-title: "ConvertBSTRToString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "ConvertBSTRToString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ConvertBSTRToString 함수"
+title: ConvertBSTRToString | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- ConvertBSTRToString
+dev_langs:
+- C++
+helpviewer_keywords:
+- ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# ConvertBSTRToString
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c559509083d21ff8b742ef80a55ac161bbca2f53
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Microsoft 전용**  
   
- `BSTR` 값을 **char \***로 변환합니다.  
+ 변환 된 `BSTR` 값을 한 **char \* **합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -37,14 +54,14 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pSrc`  
  BSTR 변수입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `ConvertBSTRToString`은 삭제해야 하는 문자열을 할당합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // ConvertBSTRToString.cpp  
@@ -65,14 +82,17 @@ int main() {
 }  
 ```  
   
-  **BSTR 텍스트: 테스트**  
-**char \* 텍스트: 테스트**   
-## Microsoft 전용 종료  
+```Output  
+BSTR text: Test  
+char * text: Test  
+```  
   
-## 요구 사항  
+**Microsoft 전용 종료**  
+  
+## <a name="requirements"></a>요구 사항  
  **헤더:** comutil.h.  
   
- **Lib:** comsuppw.lib 또는 comsuppwd.lib\(자세한 내용은 [\/Zc:wchar\_t\(wchar\_t를 네이티브 형식으로 인식\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 참조\)  
+ **Lib:** 에서는 comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한 내용은)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 COM 전역 함수](../cpp/compiler-com-global-functions.md)

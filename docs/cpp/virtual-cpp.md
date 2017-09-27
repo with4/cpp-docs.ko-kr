@@ -1,44 +1,60 @@
 ---
-title: "virtual (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "virtual_cpp"
-  - "virtual"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "기본 클래스, virtual"
-  - "가상 기본 클래스, 선언"
-  - "가상 함수, 선언"
-  - "virtual 키워드[C++]"
+title: "가상 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- virtual_cpp
+- virtual
+dev_langs:
+- C++
+helpviewer_keywords:
+- virtual base classes, declaring
+- base classes, virtual
+- virtual functions, declaring
+- virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# virtual (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 851f911dd7c49df1d685afe63ef5134cf0d5f175
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="virtual-c"></a>virtual (C++)
 `virtual` 키워드는 가상 함수 또는 가상 기본 클래스를 선언합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 virtual [type-specifiers] member-function-declarator  
 virtual [access-specifier] base-class-name  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `type-specifiers`  
  가상 멤버 함수의 반환 형식을 지정합니다.  
   
@@ -46,15 +62,15 @@ virtual [access-specifier] base-class-name
  멤버 함수를 선언합니다.  
   
  `access-specifier`  
- 기본 클래스 `public`, `protected` 또는 `private`에 대한 액세스 수준을 정의합니다.  `virtual` 키워드 앞이나 뒤에 나타날 수 있습니다.  
+ 기본 클래스 `public`, `protected` 또는 `private`에 대한 액세스 수준을 정의합니다. `virtual` 키워드 앞이나 뒤에 나타날 수 있습니다.  
   
  `base-class-name`  
  이전에 선언된 클래스 형식을 식별합니다.  
   
-## 설명  
- 자세한 내용은 [가상 함수](../cpp/virtual-functions.md) 및 [가상 기본 클래스](../misc/virtual-base-classes.md)를 참조하세요.  
+## <a name="remarks"></a>설명  
+ 참조 [가상 함수](../cpp/virtual-functions.md) 자세한 정보에 대 한 합니다.  
   
- 또한 키워드 [class](../cpp/class-cpp.md), [private](../cpp/private-cpp.md), [public](../cpp/public-cpp.md) 및 [protected](../cpp/protected-cpp.md)를 참조하세요.  
+ 또한 다음 키워드를 참조 하십시오: [클래스](../cpp/class-cpp.md), [개인](../cpp/private-cpp.md), [공용](../cpp/public-cpp.md), 및 [보호](../cpp/protected-cpp.md)합니다.  
   
-## 참고 항목  
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [키워드](../cpp/keywords-cpp.md)

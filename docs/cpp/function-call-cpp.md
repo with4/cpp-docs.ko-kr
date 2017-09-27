@@ -1,55 +1,71 @@
 ---
-title: "함수 호출 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "함수 호출 연산자 ( )"
-  - "함수 호출, C++ 함수"
-  - "함수 호출, operator"
-  - "함수 오버로드, 함수 호출 연산자"
-  - "함수[C++], 호출"
-  - "연산자 오버로드, 예제"
-  - "연산자 오버로드, 함수 호출"
-  - "연산자[C++], 오버로드"
+title: "함수 호출 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function calls, C++ functions
+- functions [C++], calling
+- operator overloading, function calls
+- function overloading, function-call operator
+- function calls, operator
+- operators [C++], overloading
+- operator overloading, examples
+- function call operator ( )
 ms.assetid: 5094254a-045b-46f7-8653-69bc91e80dce
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 함수 호출 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e066ab4c154c04c0c1a39b7f8d0164881a0a96cc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="function-call-c"></a>함수 호출 (C++)
 괄호를 사용하여 호출된 함수 호출 연산자는 이항 연산자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 primary-expression ( expression-list )  
 ```  
   
-## 설명  
- 이 컨텍스트에서 `primary-expression`이 첫 번째 피연산자이며, 빈 인수 목록일 수 있는 `expression-list`가 두 번째 피연산자입니다.  함수 호출 연산자는 여러 매개 변수가 필요한 연산에 사용됩니다.  이는 `expression-list`가 단일 피연산자가 아닌 목록이기 때문에 가능합니다.  함수 호출 연산자는 비정적 멤버 함수여야 합니다.  
+## <a name="remarks"></a>설명  
+ 이 컨텍스트에서 `primary-expression`이 첫 번째 피연산자이며, 빈 인수 목록일 수 있는 `expression-list`가 두 번째 피연산자입니다. 함수 호출 연산자는 여러 매개 변수가 필요한 연산에 사용됩니다. 이는 `expression-list`가 단일 피연산자가 아닌 목록이기 때문에 가능합니다. 함수 호출 연산자는 비정적 멤버 함수여야 합니다.  
   
- 오버로드된 경우 함수 호출 연산자는 함수가 호출되는 방법을 수정하는 것이 아니라 지정된 클래스 형식의 개체에 연산자가 적용될 때 연산자가 해석되는 방법을 수정합니다.  예를 들어 다음 코드는 대개 무의미합니다.  
+ 오버로드된 경우 함수 호출 연산자는 함수가 호출되는 방법을 수정하는 것이 아니라 지정된 클래스 형식의 개체에 연산자가 적용될 때 연산자가 해석되는 방법을 수정합니다. 예를 들어 다음 코드는 대개 무의미합니다.  
   
 ```  
 Point pt;  
 pt( 3, 2 );  
 ```  
   
- 하지만 적절하게 오버로드된 함수 호출 연산자가 제공된 경우에는 이 구문을 사용하여 `x` 좌표 3 단위 및 `y` 좌표 2 단위를 오프셋할 수 있습니다.  다음 코드에 이러한 정의가 나와 있습니다.  
+ 하지만 적절하게 오버로드된 함수 호출 연산자가 제공된 경우에는 이 구문을 사용하여 `x` 좌표 3 단위 및 `y` 좌표 2 단위를 오프셋할 수 있습니다. 다음 코드에 이러한 정의가 나와 있습니다.  
   
 ```  
 // function_call.cpp  
@@ -92,8 +108,7 @@ int main()
    S s;  
    s();//operates as s.operator ptf()()  
 }  
-  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자 오버로드](../cpp/operator-overloading.md)

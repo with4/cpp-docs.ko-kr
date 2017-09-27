@@ -1,35 +1,52 @@
 ---
 title: "type_info 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "type_info"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "type_info 클래스"
-  - "type_info 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- type_info
+dev_langs:
+- C++
+helpviewer_keywords:
+- class type_info
+- type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# type_info 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b87dec1f3d3a04d984c3bbd96344ebcb0a163f19
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-**type\_info** 클래스는 컴파일러가 프로그램 안에 생성하는 형식 정보에 대해 설명합니다.  이 클래스의 개체는 형식의 이름에 대한 포인터를 효과적으로 저장합니다.  **type\_info** 클래스는 두 형식의 동일성이나 정렬 순서를 비교하는 데 적합한 인코딩 값을 저장하기도 합니다.  형식의 인코딩 규칙 및 정렬 시퀀스는 지정되지 않으며 프로그램 간에 다를 수 있습니다.  
+---
+# <a name="typeinfo-class"></a>type_info 클래스
+**type_info** 클래스 컴파일러가 프로그램 안에 생성 하는 형식 정보를 설명 합니다. 이 클래스의 개체는 형식의 이름에 대한 포인터를 효과적으로 저장합니다. **type_info** 클래스도 두 형식의 비교 또는 정렬 순서에 대 한 적합 한 인코딩된 값을 저장 합니다. 형식의 인코딩 규칙 및 정렬 시퀀스는 지정되지 않으며 프로그램 간에 다를 수 있습니다.  
   
- **type\_info** 클래스를 사용하려면 \<`typeinfo>` 헤더 파일이 포함되어야 합니다.  **type\_info** 클래스의 인터페이스는 다음과 같습니다.  
+ `<typeinfo>` 헤더 파일을 사용 하려면 포함 되어야 합니다는 **type_info** 클래스입니다. 에 대 한 인터페이스는 **type_info** 클래스는:  
   
-```  
+```cpp
 class type_info {  
 public:  
     virtual ~type_info();  
@@ -42,19 +59,20 @@ public:
 };  
 ```  
   
- **type\_info** 클래스에 전용 복사 생성자가 하나만 있으므로 클래스의 개체를 직접 인스턴스화할 수 없습니다.  **type\_info** 개체\(임시\)를 생성하는 유일한 방법은 [typeid](../cpp/typeid-operator.md) 연산자를 사용하는 것입니다.  대입 연산자도 전용이므로 **type\_info** 클래스의 개체를 복사하거나 할당할 수 없습니다.  
+ 개체를 인스턴스화할 수 없습니다는 **type_info** 클래스에 전용 복사 생성자만 있기 때문에 클래스를 직접 합니다. (임시)를 생성 하는 유일한 방법은 **type_info** 는 사용 하 여 [typeid](../cpp/typeid-operator.md) 연산자입니다. 복사 하거나 클래스의 개체를 할당할 수 없습니다 이므로 대입 연산자, 개인도 **type_info**합니다.  
   
- **type\_info::hash\_code**는 **typeinfo** 형식의 값을 인덱스 값의 분포에 매핑하는 데 적합한 해시 함수를 정의합니다.  
+ **type_info:: hash_code** 형식의 값을 매핑하기에 적합 한 해시 함수를 정의 **typeinfo** 인덱스 값의 분포를 합니다.  
   
- `==` 및 `!=` 연산자를 사용하여 **type\_info** 개체의 같음과 다름을 각각 비교할 수 있습니다.  
+ 연산자 `==` 및 `!=` 다른 같음 또는 같지 않음 비교에 사용할 수 **type_info** 각각 개체입니다.  
   
- 형식의 정렬 순서와 상속 관계 간에 링크가 없습니다.  **type\_info::before** 멤버 함수를 사용하여 형식의 정렬 시퀀스를 결정하십시오.  다른 프로그램에서 또는 같은 프로그램의 다른 실행에서 **type\_info::before**가 같은 결과를 낸다는 보장은 없습니다.  이런 면에서 **type\_info::before**는 address\-of**\(&\)** 연산자와 비슷합니다.  
+ 형식의 정렬 순서와 상속 관계 간에 링크가 없습니다. 사용 하 여 **type_info:: before** 형식의 정렬 시퀀스를 결정 하는 멤버 함수입니다. 보장 되지 않습니다는 **type_info:: before** 에서 서로 다른 프로그램 또는 같은 프로그램의 다른 실행에서 동일한 결과 생성 합니다. 이러한 방식으로 **type_info:: before** 의 주소 유사한 **(&)** 연산자입니다.  
   
- **type\_info::name** 멤버 함수는 사용자가 읽을 수 있는 형식 이름을 나타내고 null로 끝나는 문자열에 **const char\***을 반환합니다.  가리키는 메모리는 캐시되며 직접 할당 해지되면 안 됩니다.  
+ **type_info:: name** 멤버 함수가 반환 하는 **const char\* ** 형식의 이해 하기 쉬운 이름을 나타내는 null로 끝나는 문자열에 있습니다. 가리키는 메모리는 캐시되며 직접 할당 해지되면 안 됩니다.  
   
- **type\_info::raw\_name** 멤버 함수는 데코레이팅된 개체 형식 이름을 나타내며 null로 끝나는 문자열에 **const char\***을 반환합니다.  공간을 절약하기 위해 이름은 실제로 데코레이팅된 형식으로 저장됩니다.  따라서 이 함수는 이름의 데코레이팅을 취소할 필요가 없으므로 **type\_info::name**보다 빠릅니다.  **type\_info::raw\_name** 함수가 반환하는 문자열은 비교 연산에 유용하지만 읽을 수 없습니다.  사용자가 읽을 수 있는 문자열이 필요할 경우 **type\_info::name** 함수를 대신 사용하십시오.  
+ **raw_name** 멤버 함수가 반환 하는 **const char\* ** 개체 유형의 데코 레이트 된 이름을 나타내는 null로 끝나는 문자열에 있습니다. 공간을 절약하기 위해 이름은 실제로 데코레이팅된 형식으로 저장됩니다. 따라서이 함수는 보다 빠르게 **type_info:: name** 이름을 이름의 데코레이팅을 취소할 필요가 없기 때문에 있습니다. 반환 된 문자열의 **raw_name** 함수는 비교 연산에 유용 하지만 읽을 수 없습니다. 사람이 읽을 수는 문자열을 필요한 경우 사용 된 **type_info:: name** 함수를 대신 합니다.  
   
- [\/GR\(런타임 형식 정보 사용\)](../build/reference/gr-enable-run-time-type-information.md) 컴파일러 옵션이 지정된 경우에만 다형 클래스의 형식 정보가 생성됩니다.  
+ 경우에만 다형 클래스에 대 한 형식 정보가 생성 됩니다는 [/GR (런타임 형식 정보 사용)](../build/reference/gr-enable-run-time-type-information.md) 컴파일러 옵션을 지정 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [런타임 형식 정보](../cpp/run-time-type-information.md)
+

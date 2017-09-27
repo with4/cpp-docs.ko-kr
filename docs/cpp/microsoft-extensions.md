@@ -1,60 +1,75 @@
 ---
 title: "Microsoft 확장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C/C++에 대한 Microsoft 확장"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Microsoft extensions to C/C++
 ms.assetid: 68654516-24ef-4f33-aae2-175f86cc1979
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Microsoft 확장
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9de205df0ff566c2638d09c627534bb8327de4f2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-*asm\-statement*:  
- **\_\_asm**  *assembly\-instruction* **;** opt  
+---
+# <a name="microsoft-extensions"></a>Microsoft 확장명
+*asm 문의*:  
+ **__asm***어셈블리 명령* **;** 선택    
   
- **\_\_asm {**  *assembly\-instruction\-list*  **};** opt  
+ **__asm {***어셈블리 명령 목록***};** 선택      
   
- *assembly\-instruction\-list*:  
- *assembly\-instruction* **;** opt  
+ *어셈블리 명령 목록*:  
+ *어셈블리 명령* **;** 선택  
   
- *assembly\-instruction* **;** *assembly\-instruction\-list* **;** opt  
+ *어셈블리 명령* **;** *어셈블리 명령 목록* **;** 선택  
   
- *ms\-modifier\-list*:  
- *ms\-modifier ms\-modifier\-list* opt  
+ *ms 한정자 목록*:  
+ *ms 한정자 ms 한정자 목록*선택  
   
- *ms\-modifier*:  
- **\_\_cdecl**  
+ *ms 한정자*:  
+ **__cdecl**  
   
- **\_\_fastcall**  
+ **__fastcall**  
   
- **\_\_stdcall**  
+ **__stdcall**  
   
- **\_\_syscall**\(이후 구현을 위해 예약됨\)  
+ **__syscall** (이후 구현을 위해 예약 됨)  
   
- **\_\_oldcall**\(이후 구현을 위해 예약됨\)  
+ **__oldcall** (이후 구현을 위해 예약 됨)  
   
- **\_\_unaligned**\(이후 구현을 위해 예약됨\)  
+ **__unaligned** (이후 구현을 위해 예약 됨)  
   
- *based\-modifier*  
+ *기반 한정자*  
   
- *based\-modifier*:  
- **\_\_based \(** *based\-type* **\)**  
+ *기반 한정자*:  
+ **__based (** *기반 형식* **)**  
   
- *based\-type*:  
+ *기반 형식*:  
  *name*  
-  
-## 참고 항목  
- [문법 요약](../misc/grammar-summary-cpp.md)
+

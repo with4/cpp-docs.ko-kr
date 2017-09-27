@@ -1,45 +1,60 @@
 ---
-title: "멤버 포인터 연산자: .* 및 -&gt;* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - ".*"
-  - "->*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".* 연산자"
-  - "->* 연산자"
-  - "식[C++], 연산자"
-  - "식[C++], 포인터"
-  - "멤버 포인터 연산자"
+title: "멤버 포인터 연산자:. * 및-&gt;* | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- .*
+- ->*
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], pointer
+- pointer-to-member operators
+- .* operator
+- expressions [C++], operators
+- ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 멤버 포인터 연산자: .* 및 -&gt;*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1dad74e99612df6ef868b4cd1f0b2ca5abb9c506
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-## 구문  
+---
+# <a name="pointer-to-member-operators--and--gt"></a>멤버 포인터 연산자:. * 및-&gt;*
+## <a name="syntax"></a>구문  
   
 ```  
-  
-      expression .* expression  
-expression –>* expression  
+expression .* expression  
+expression ->* expression  
 ```  
   
-## 설명  
- 멤버 포인터 연산자\(.\* 및 –\>\*\)는 식의 왼쪽에 지정된 개체에 대한 특정 클래스 멤버의 값을 반환합니다.  오른쪽에는 클래스 멤버를 지정해야 합니다.  다음 예제에서는 이러한 연산자를 사용하는 방법을 보여 줍니다.  
+## <a name="remarks"></a>설명  
+ 멤버 포인터 연산자. * 및->\*, 식의 왼쪽에 지정 된 개체에 대 한 특정 클래스 멤버의 값을 반환 합니다.  오른쪽에는 클래스 멤버를 지정해야 합니다.  다음 예제에서는 이러한 연산자를 사용하는 방법을 보여 줍니다.  
   
 ```  
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
@@ -79,7 +94,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 m_func1  
@@ -88,17 +103,17 @@ m_func1
 2  
 ```  
   
- 앞의 예제에서는 멤버 함수 `m_func1`을 호출하기 위해 `pmfn` 멤버에 대한 포인터가 사용되었습니다.  또 다른 멤버 포인터, `pmd`는 `m_num` 멤버에 액세스하는 데 사용됩니다.  
+ 앞의 예제에서는 멤버 함수 `pmfn`을 호출하기 위해 `m_func1` 멤버에 대한 포인터가 사용되었습니다. 또 다른 멤버 포인터, `pmd`는 `m_num` 멤버에 액세스하는 데 사용됩니다.  
   
- .\* 이항 연산자는 첫 번째 피연산자\(반드시 클래스 형식의 개체\)와 두 번째 피연산자\(반드시 멤버 포인터 형식\)를 결합합니다.  
+ .* 이항 연산자는 첫 번째 피연산자(반드시 클래스 형식의 개체)와 두 번째 피연산자(반드시 멤버 포인터 형식)를 결합합니다.  
   
- –\>\* 이항 연산자는 첫 번째 피연산자\(반드시 클래스 형식의 개체 포인터\)와 두 번째 피연산자\(반드시 멤버 포인터 형식\)를 결합합니다.  
+ 이항 연산자-> *는 첫 번째 피연산자, 반드시 클래스 형식의 개체에 포인터는 멤버 포인터 형식 이어야 하는 두 번째 피연산자와 결합 합니다.  
   
- .\* 연산자가 포함된 식에서 첫 번째 피연산자는 두 번째 피연산자에 지정된 멤버 포인터의 클래스 형식이면서 해당 멤버 포인터에 액세스할 수 있거나 해당 클래스에서 명확히 파생되고 해당 클래스에 액세스할 수 있는 형식이어야 합니다.  
+ .* 연산자가 포함된 식에서 첫 번째 피연산자는 두 번째 피연산자에 지정된 멤버 포인터의 클래스 형식이면서 해당 멤버 포인터에 액세스할 수 있거나 해당 클래스에서 명확히 파생되고 해당 클래스에 액세스할 수 있는 형식이어야 합니다.  
   
- –\>\* 연산자가 포함된 식에서 첫 번째 피연산자는 두 번째 피연산자에 지정된 형식의 "클래스 형식 포인터" 형식이거나 해당 클래스에서 명확히 파생된 형식이어야 합니다.  
+ ->를 포함 하는 식에서 * 연산자를 첫 번째 피연산자 형식의 "클래스 형식 포인터" 형식 지정 된 두 번째 피연산자에 해당 해야 형식의 명확 하 게에서 파생 되었거나 해당 클래스입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 클래스와 프로그램 부분을 살펴보십시오.  
   
 ```  
@@ -137,11 +152,12 @@ int main() {
 }  
 ```  
   
- .\* 또는 –\>\* 멤버 포인터 연산자의 결과는 멤버 포인터 선언에 지정된 형식의 개체 또는 함수입니다.  따라서 앞의 예제에서 `ADerived.*pmfnFunc1()` 식의 결과는 void를 반환하는 함수 포인터입니다.  두 번째 피연산자가 l\-value인 경우 이 결과는 l\-value입니다.  
+ 결과. * 또는->\* 개체 또는 함수 멤버에 대 한 포인터의 선언에 지정 된 형식의 멤버 포인터 연산자가 있습니다. 따라서 앞의 예제에서 `ADerived.*pmfnFunc1()` 식의 결과는 void를 반환하는 함수 포인터입니다. 두 번째 피연산자가 l-value인 경우 이 결과는 l-value입니다.  
   
 > [!NOTE]
 >  멤버 포인터 연산자 중 하나의 결과가 함수인 경우 결과는 함수 호출 연산자에 대한 피연산자로만 사용할 수 있습니다.  
   
-## 참고 항목  
- [C\+\+ 연산자](../misc/cpp-operators.md)   
- [C\+\+ 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+
+

@@ -1,32 +1,49 @@
 ---
 title: "참조 형식 함수 인수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "인수[C++], 함수"
-  - "함수 인수, 참조 형식"
-  - "함수 매개 변수, 참조 형식"
-  - "함수[C++], 매개 변수"
-  - "매개 변수 전달, 참조 형식 인수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- functions [C++], paramters
+- function parameters, reference-type
+- function arguments, reference-type
+- passing parameters, reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 참조 형식 함수 인수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e74cbde44cad618720983fbda4a6cf9ce8b75dc1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-보통은 큰 개체보다 참조를 함수에 전달하는 것이 더 효율적입니다.  이렇게 하면 개체에 액세스하는 데 사용된 구문을 유지하면서 컴파일러가 개체의 주소를 전달할 수 있습니다.  `Date` 구조체를 사용하는 다음 예제를 살펴보십시오.  
+---
+# <a name="reference-type-function-arguments"></a>참조 형식 함수 인수
+보통은 큰 개체보다 참조를 함수에 전달하는 것이 더 효율적입니다. 이렇게 하면 개체에 액세스하는 데 사용된 구문을 유지하면서 컴파일러가 개체의 주소를 전달할 수 있습니다. `Date` 구조체를 사용하는 다음 예제를 살펴보십시오.  
   
 ```  
 // reference_type_function_arguments.cpp  
@@ -67,9 +84,9 @@ int main()
 }  
 ```  
   
- 앞의 코드는 포인터 멤버 선택 연산자\(**–\>**\) 대신에 멤버 선택 연산자\(**.**\)를 사용하여 참조에 의해 전달되는 구조체의 멤버에 액세스하는 방법을 보여 줍니다.  
+ 위의 코드는 참조로 전달 되는 구조체의 멤버는 멤버 선택 연산자를 사용 하 여 액세스 하는 보여 줍니다 (**.**) 포인터 멤버 선택 연산자 대신 (**->**).  
   
- 참조 형식으로 전달된 인수는 포인터가 아닌 형식의 구문을 준수하지만 **const**에서 정의되지 않은 경우 수정할 수 있다는 포인터 형식의 중요한 한 가지 특성을 유지합니다.  이 코드에는 `GDate` 개체를 수정할 의도가 없기 때문에 더 적절한 함수 프로토타입은 다음과 같습니다.  
+ 포인터 형식의 중요 한 특성 참조 형식으로 전달 된 인수는 포인터가 아닌 형식의 구문을 준수, 하지만 유지:로 선언 되지 않은 수정할 수는 **const**합니다. 이 코드에는 `GDate` 개체를 수정할 의도가 없기 때문에 더 적절한 함수 프로토타입은 다음과 같습니다.  
   
 ```  
 long JulianFromGregorian( const Date& GDate );  
@@ -77,7 +94,7 @@ long JulianFromGregorian( const Date& GDate );
   
  이 프로토타입은 `JulianFromGregorian` 함수가 인수를 변경하지 않도록 합니다.  
   
- 참조 형식으로 프로토타입된 모든 함수는 *typename*에서 *typename***&**으로의 표준 변환이 있기 때문에 해당 위치에서 같은 형식의 개체를 받을 수 있습니다.  
+ 참조 형식으로 프로토타입 모든 함수에서 표준 변환 되기 때문에 해당 위치에 동일한 형식의 개체를 허용할 수 *typename* 를 *typename* ** & **.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [참조](../cpp/references-cpp.md)

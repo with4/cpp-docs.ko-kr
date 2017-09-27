@@ -1,90 +1,107 @@
 ---
 title: "단항 연산자가 있는 식 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "식[C++], 연산자"
-  - "식[C++], 단항 연산자"
-  - "단항 연산자, 식"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], unary operators
+- unary operators, expressions with
+- expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 단항 연산자가 있는 식
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: adde5e6fdb20924b633de60eba07390edad57907
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-단항 연산자는 하나의 식에서 하나의 피연산자에 대해서만 작동합니다.  단항 연산자의 종류는 다음과 같습니다.  
+---
+# <a name="expressions-with-unary-operators"></a>단항 연산자가 있는 식
+단항 연산자는 하나의 식에서 하나의 피연산자에 대해서만 작동합니다. 단항 연산자의 종류는 다음과 같습니다.  
   
--   [간접 참조 연산자\(\*\)](../cpp/indirection-operator-star.md)  
+-   [간접 참조 연산자 (*)](../cpp/indirection-operator-star.md)  
   
--   [주소 연산자\(&\)](../cpp/address-of-operator-amp.md)  
+-   [주소 연산자 (&)](../cpp/address-of-operator-amp.md)  
   
--   [단항 더하기 연산자\(\+\)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
+-   [단항 더하기 연산자 (+)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
--   [단항 부정 연산자\(–\)](../misc/unary-negation-operator.md)  
+-   [단항 부정 연산자 (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
--   [논리 부정 연산자\(\!\)](../cpp/logical-negation-operator-exclpt.md)  
+-   [논리 부정 연산자 (!)](../cpp/logical-negation-operator-exclpt.md)  
   
--   [1의 보수 연산자\(~\)](../cpp/one-s-complement-operator-tilde.md)  
+-   [1의 보수 연산자 (~)](../cpp/one-s-complement-operator-tilde.md)  
   
--   [후위 증가 연산자\(\+\+\)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [후 위 증가 연산자 (+ +)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
--   [후위 감소 연산자\(––\)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [전위 감소 연산자 (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
--   [캐스트 연산자\(\)](../cpp/cast-operator-parens.md)  
+-   [캐스트 연산자)](../cpp/cast-operator-parens.md)  
   
 -   [sizeof 연산자](../cpp/sizeof-operator.md)  
   
--   [\_\_uuidof 연산자](../cpp/uuidof-operator.md)  
+-   [__uuidof 연산자](../cpp/uuidof-operator.md)  
   
--   [\_\_alignof 연산자](../cpp/alignof-operator.md)  
+-   [__alignof 연산자](../cpp/alignof-operator.md)  
   
 -   [new 연산자](../cpp/new-operator-cpp.md)  
   
 -   [delete 연산자](../cpp/delete-operator-cpp.md)  
   
- 이러한 연산자는 오른쪽에서 왼쪽으로 결합됩니다.  단항 식은 일반적으로 후위 식 또는 주 식 앞에 오는 구문을 포함합니다.  
+ 이러한 연산자는 오른쪽에서 왼쪽으로 결합됩니다. 단항 식은 일반적으로 후위 식 또는 주 식 앞에 오는 구문을 포함합니다.  
   
  다음은 단항 식의 가능한 형식입니다.  
   
--   *postfix\-expression*  
+-   *postfix-expression*  
   
--   `++` *unary\-expression*  
+-   `++`*단항 식*  
   
--   `––` *unary\-expression*  
+-   `--`*단항 식*  
   
--   *unary\-operator* *cast\-expression*  
+-   *단항 연산자* *캐스트 식*  
   
--   `sizeof` *unary\-expression*  
+-   `sizeof`*단항 식*  
   
--   `sizeof(` *type\-name* `)`  
+-   `sizeof(`*형식-이름이*`)`  
   
--   `decltype(` *expression* `)`  
+-   `decltype(`*식*`)`  
   
--   *allocation\-expression*  
+-   *할당 식*  
   
--   *deallocation\-expression*  
+-   *할당 취소 식*  
   
- 모든 *postfix\-expression*은 *unary\-expression*으로 간주되는데, 모든 기본 식은 *postfix\-expression*으로 간주되므로 *unary\-expression*으로도 간주됩니다.  자세한 내용은 [후위 식](../cpp/postfix-expressions.md) 및 [기본 식](../cpp/primary-expressions.md)을 참조하십시오.  
+ 모든 *후 위 식* 것으로 간주 됩니다는 *단항 식*, 모든 기본 식으로 간주 하기 때문에 및는 *후 위 식*, 모든 기본 식 것으로 간주 한 *단항 식* 도 합니다. 자세한 내용은 참조 [후 위 식](../cpp/postfix-expressions.md) 및 [기본 식](../cpp/primary-expressions.md)합니다.  
   
- *unary\-operator*는 `* &`, `+`, `–`, `!`, `~` 기호 중 하나 이상으로 구성됩니다.  
+ A *단항 연산자* 다음 기호 중 하나 이상의 구성 됩니다.`* & + - ! ~`  
   
- *cast\-expression*은 형식을 변경하는 선택적 캐스트를 가진 단항 식입니다.  자세한 내용은 [캐스트 연산자: \(\)](../cpp/cast-operator-parens.md)를 참조하십시오.  
+ *캐스트 식* 은 단항 식 유형을 변경 하는 선택적 캐스팅을 사용 합니다. 자세한 내용은 참조 [캐스트 연산자: ()](../cpp/cast-operator-parens.md)합니다.  
   
- *expression*은 모든 식이 될 수 있습니다.  자세한 내용은 [식](../cpp/expressions-cpp.md)을 참조하십시오.  
+ *식* 식일 수 있습니다. 자세한 내용은 참조 [식](../cpp/expressions-cpp.md)합니다.  
   
- *allocation\-expression*은 `new` 연산자를 참조합니다.  *deallocation\-expression*은 `delete` 연산자를 참조합니다.  자세한 내용은 이 항목의 앞부분에 나오는 링크를 참조하십시오.  
+ *할당 식* 참조 하는 `new` 연산자입니다. *할당 취소 식* 참조 하는 `delete` 연산자입니다. 자세한 내용은 이 항목의 앞부분에 나오는 링크를 참조하십시오.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [식의 형식](../cpp/types-of-expressions.md)

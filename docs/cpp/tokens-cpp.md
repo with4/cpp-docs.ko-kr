@@ -1,32 +1,49 @@
 ---
-title: "C++ 토큰 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "구문 분석, C++ 토큰"
-  - "토큰"
-  - "변환 단위"
-  - "공백, C++ 토큰"
+title: "토큰 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- tokens
+- parsing, C++ tokens
+- translation units
+- white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 토큰
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 041750d86f12f82e0f905c65f0a75d6a32f37cdf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-토큰은 컴파일러에 의미 있는 C\+\+ 프로그램의 최소 요소입니다. C\+\+ 파서는 식별자, 키워드, 리터럴, 연산자, 문장 부호 및 기타 구분 기호 등의 토큰을 인식합니다. 이러한 토큰의 스트림은 변환 단위를 구성합니다.  
+---
+# <a name="tokens-c"></a>토큰 (c + +)
+토큰은 컴파일러에 의미 있는 C++ 프로그램의 최소 요소입니다. C++ 파서는 식별자, 키워드, 리터럴, 연산자, 문장 부호 및 기타 구분 기호 등의 토큰을 인식합니다. 이러한 토큰의 스트림은 변환 단위를 구성합니다.  
   
  토큰은 일반적으로 *공백*으로 구분됩니다. 하나 이상으로 구성된 다음 요소입니다.  
   
@@ -40,7 +57,7 @@ manager: "ghogen"
   
 -   설명  
   
- 파서는 키워드, 식별자, 리터럴, 연산자 및 문장 부호를 인식합니다. 특정 토큰 종류에 대한 자세한 내용은 [키워드](../cpp/keywords-cpp.md), [식별자](../cpp/identifiers-cpp.md), [숫자, 부울 및 포인터 리터럴](../cpp/numeric-boolean-and-pointer-literals-cpp.md), [문자열 및 문자 리터럴](../cpp/string-and-character-literals-cpp.md), [사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md), [C\+\+ 기본 제공 연산자, 우선 순위 및 계산 방향](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 및 [문장 부호](../cpp/punctuators-cpp.md)를 참조하세요. 토큰을 구분하는 데 필요한 경우를 제외하고 공백은 무시됩니다.  
+ 파서는 키워드, 식별자, 리터럴, 연산자 및 문장 부호를 인식합니다. 특정 토큰 종류에 대한 자세한 내용은 [키워드](../cpp/keywords-cpp.md), [식별자](../cpp/identifiers-cpp.md), [숫자, 부울 및 포인터 리터럴](../cpp/numeric-boolean-and-pointer-literals-cpp.md), [문자열 및 문자 리터럴](../cpp/string-and-character-literals-cpp.md), [사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md), [C++ 기본 제공 연산자, 우선 순위 및 계산 방향](../cpp/cpp-built-in-operators-precedence-and-associativity.md)및 [문장 부호](../cpp/punctuators-cpp.md)를 참조하세요. 토큰을 구분하는 데 필요한 경우를 제외하고 공백은 무시됩니다.  
   
  전처리 토큰은 전처리 단계에서 사용되어 컴파일러에 전달될 토큰 스트림을 생성합니다. 전처리 토큰 범주는 헤더 이름, 식별자, 전처리 숫자, 문자 리터럴, 문자열 리터럴, 전처리 연산자 및 문장 부호, 다른 범주 중 하나와 일치하지 않는 공백이 아닌 단일 문자입니다. 문자 및 문자열 리터럴은 사용자 정의 리터럴일 수 있습니다. 전처리 토큰은 공백이나 주석으로 구분할 수 있습니다.  
   
@@ -53,10 +70,12 @@ a = i+++j;
  코드를 작성하는 프로그래머는 다음 두 명령문을 사용하려고 했을 수 있습니다.  
   
 ```  
-a = i + (++j) a = (i++) + j  
+a = i + (++j)  
+  
+a = (i++) + j  
 ```  
   
- 파서는 입력 스트림에서 가장 긴 토큰을 만들기 때문에 두 번째 해석을 선택하여 `i++`, `+` 및 `j` 토큰을 만듭니다.  
+ 파서는 입력 스트림에서 가장 긴 토큰을 만들기 때문에 두 번째 해석을 선택하여 `i++`, `+`및 `j`토큰을 만듭니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [어휘 규칙](../cpp/lexical-conventions.md)

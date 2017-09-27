@@ -1,44 +1,60 @@
 ---
 title: "간접 참조 연산자: * | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "* 연산자"
-  - "간접 참조 연산자"
-  - "간접 참조 연산자, 구문"
-  - "연산자[C++], 간접 참조"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- '* operator'
+- indirection operator
+- operators [C++], indirection
+- indirection operator, syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 간접 참조 연산자: *
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-## 구문  
+---
+# <a name="indirection-operator-"></a>간접 참조 연산자: *
+## <a name="syntax"></a>구문  
   
 ```  
   
 * cast-expression  
 ```  
   
-## 설명  
- 단항 간접 연산자\(**\***\)는 포인터를 역참조합니다. 즉, 포인터 값을 l\-value로 변환합니다.  간접 연산자의 피연산자는 형식에 대한 포인터여야 합니다.  간접 식의 결과는 포인터 형식이 파생된 형식입니다.  이 문맥에서 사용되는 **\*** 연산자의 의미는 이항 연산자로 사용될 때의 의미\(곱셈\)와 다릅니다.  
+## <a name="remarks"></a>설명  
+ 단항 간접 연산자 (**\***)는 포인터를 역참조 l 값을 포인터 값 즉, 변환 합니다. 간접 참조 연산자의 피연산자는 형식에 대한 포인터여야 합니다. 간접 참조의 결과는 포인터 형식이 파생된 형식입니다. 사용은 ** \* ** 이 컨텍스트에서 연산자는 곱셈 이항 연산자로 해당 의미와에서 다릅니다.  
   
- 피연산자가 함수를 가리키는 경우 결과는 함수 지정자입니다.  저장소 위치를 가리키는 경우 결과는 저장소 위치를 지정하는 l\-value입니다.  
+ 피연산자가 함수를 가리키는 경우 결과는 함수 지정자입니다. 저장소 위치를 가리키는 경우 결과는 저장소 위치를 지정하는 l-value입니다.  
   
- 포인터에 대한 포인터를 역참조하기 위해 간접 연산자를 누적하여 사용할 수도 있습니다.  예를 들면 다음과 같습니다.  
+ 포인터에 대한 포인터를 역참조하기 위해 간접 연산자를 누적하여 사용할 수도 있습니다. 예:  
   
 ```  
 // expre_Indirection_Operator.cpp  
@@ -60,7 +76,7 @@ int main() {
 }  
 ```  
   
- 포인터 값이 잘못된 경우 결과가 정의되지 않습니다.  다음 목록은 포인터 값을 무효화하는 가장 일반적인 조건의 일부입니다.  
+ 포인터 값이 잘못된 경우 결과가 정의되지 않습니다. 다음 목록은 포인터 값을 무효화하는 가장 일반적인 조건의 일부입니다.  
   
 -   포인터가 null 포인터입니다.  
   
@@ -70,9 +86,8 @@ int main() {
   
 -   포인터가 실행 중인 프로그램에서 사용되지 않는 주소를 지정합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 연산자](../misc/cpp-operators.md)   
- [C\+\+ 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [주소 연산자: &](../cpp/address-of-operator-amp.md)   
  [연산자 주소 및 간접 참조](../c-language/indirection-and-address-of-operators.md)

@@ -1,36 +1,53 @@
 ---
 title: "할당 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "allocate"
-  - "allocate_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec 키워드[C++], 할당"
-  - "allocate __declspec 키워드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- allocate
+- allocate_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], allocate
+- allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 할당
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4f61d3b6e6ab256262ea370516f20cdb76bf890e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="allocate"></a>할당
 **Microsoft 전용**  
   
- **allocate** 선언 지정자는 데이터 항목이 할당될 데이터 세그먼트의 이름을 지정합니다.  
+ **할당** 선언 지정자는 데이터 항목이 할당 될 데이터 세그먼트 이름을 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -39,20 +56,20 @@ segname
 ")) declarator  
 ```  
   
-## 설명  
- *segname*이라는 이름은 다음 pragma 중 하나를 사용하여 선언해야 합니다.  
+## <a name="remarks"></a>설명  
+ 이름을 *segname* 다음 pragma 중 하나를 사용 하 여 선언 해야 합니다.  
   
--   [code\_seg](../preprocessor/code-seg.md)  
+-   [code_seg](../preprocessor/code-seg.md)  
   
--   [const\_seg](../preprocessor/const-seg.md)  
+-   [const_seg](../preprocessor/const-seg.md)  
   
--   [data\_seg](../preprocessor/data-seg.md)  
+-   [data_seg](../preprocessor/data-seg.md)  
   
--   [init\_seg](../preprocessor/init-seg.md)  
+-   [init_seg](../preprocessor/init-seg.md)  
   
 -   [section](../preprocessor/section.md)  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // allocate.cpp  
@@ -65,6 +82,6 @@ int main() {
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_\_declspec](../cpp/declspec.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [__declspec](../cpp/declspec.md)   
+ [키워드](../cpp/keywords-cpp.md)

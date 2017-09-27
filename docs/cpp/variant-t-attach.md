@@ -1,37 +1,54 @@
 ---
-title: "_variant_t::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t::Attach"
-  - "_variant_t.Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach 메서드"
-  - "VARIANT 개체"
-  - "VARIANT 개체, 연결"
+title: _variant_t::Attach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t::Attach
+- _variant_t.Attach
+dev_langs:
+- C++
+helpviewer_keywords:
+- Attach method
+- VARIANT object, attach
+- VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _variant_t::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 33e21d3bea71c80b8b60df222682fda560fbce9c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="varianttattach"></a>_variant_t::Attach
 **Microsoft 전용**  
   
- **VARIANT** 개체를 `_variant_t` 개체에 연결합니다.  
+ 연결 된 **VARIANT** 개체는 `_variant_t` 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -40,14 +57,14 @@ caps.handback.revision: 6
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *varSrc*  
- 이 `_variant_t` 개체에 연결되는 **VARIANT** 개체입니다.  
+ A **VARIANT** 개체를이 연결 `_variant_t` 개체입니다.  
   
-## 설명  
- **VARIANT**를 캡슐화하여 그 소유권을 받습니다.  이 멤버 함수는 캡슐화된 기존 **VARIANT**를 해제한 다음 제공된 **VARIANT**를 복사하여 해당 **VARTYPE**를 `VT_EMPTY`로 설정하여 `_variant_t` 소멸자가 리소스만 해제하도록 합니다.  
+## <a name="remarks"></a>설명  
+ 소유권은 **VARIANT** 캡슐화 하 여 그 합니다. 이 멤버 함수를 캡슐화 된 기존 해제 **VARIANT**, 다음 제공 된 복사 **VARIANT**, 설정 및 해당 **VARTYPE** 를 `VT_EMPTY` 되도록 해당 리소스에서 해제 될 수는 `_variant_t` 소멸자입니다.  
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_variant\_t 클래스](../cpp/variant-t-class.md)
+## <a name="see-also"></a>참고 항목  
+ [_variant_t 클래스](../cpp/variant-t-class.md)

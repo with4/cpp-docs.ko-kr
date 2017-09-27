@@ -1,32 +1,49 @@
 ---
-title: "C++ 식별자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데코레이팅된 이름"
-  - "데코레이팅된 이름, 데코레이팅된 이름 정보"
-  - "식별자"
-  - "식별자, C++"
-  - "공백, C++ 식별자"
+title: "식별자 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- decorated names
+- decorated names, about decorated names
+- identifiers, C++
+- white space, in C++ identifiers
+- identifiers
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 식별자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 84b0aafe5c5327e175791bb5107c72500f9834b1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="identifiers-c"></a>식별자 (c + +)
 식별자는 다음 중 하나를 나타내는 데 사용되는 문자 시퀀스입니다.  
   
 -   개체 또는 변수 이름  
@@ -50,12 +67,15 @@ manager: "ghogen"
  다음 문자는 식별자의 모든 문자로 허용됩니다.  
   
 ```  
-_ a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z  
+_ a b c d e f g h i j k l m  
+n o p q r s t u v w x y z  
+A B C D E F G H I J K L M  
+N O P Q R S T U V W X Y Z  
 ```  
   
- 특정 범위의 유니버설 문자 이름도 식별자에서 허용됩니다.  식별자의 유니버설 문자 이름은 제어 문자나 기본 소스 문자 집합의 문자를 지정할 수 없습니다. 자세한 내용은 [문자 집합](../cpp/character-sets2.md)을 참조하세요. 이러한 유니코드 코드 포인트 숫자 범위는 식별자의 모든 문자에 대해 유니버설 문자 이름으로 허용됩니다.  
+ 특정 범위의 유니버설 문자 이름도 식별자에서 허용됩니다.  식별자의 유니버설 문자 이름은 제어 문자나 기본 소스 문자 집합의 문자를 지정할 수 없습니다. 자세한 내용은 [Character Sets](../cpp/character-sets2.md)을 참조하세요. 이러한 유니코드 코드 포인트 숫자 범위는 식별자의 모든 문자에 대해 유니버설 문자 이름으로 허용됩니다.  
   
--   00A8, 00AA, 00AD, 00AF, 00B2\-00B5, 00B7\-00BA, 00BC\-00BE, 00C0\-00D6, 00D8\-00F6, 00F8\-00FF, 0100\-02FF, 0370\-167F, 1681\-180D, 180F\-1DBF, 1E00\-1FFF, 200B\-200D, 202A\-202E, 203F\-2040, 2054, 2060\-206F, 2070\-20CF, 2100\-218F, 2460\-24FF, 2776\-2793, 2C00\-2DFF, 2E80\-2FFF, 3004\-3007, 3021\-302F, 3031\-303F, 3040\-D7FF, F900\-FD3D, FD40\-FDCF, FDF0\-FE1F, FE30\-FE44, FE47\-FFFD, 10000\-1FFFD, 20000\-2FFFD, 30000\-3FFFD, 40000\-4FFFD, 50000\-5FFFD, 60000\-6FFFD, 70000\-7FFFD, 80000\-8FFFD, 90000\-9FFFD, A0000\-AFFFD, B0000\-BFFFD, C0000\-CFFFD, D0000\-DFFFD, E0000\-EFFFD  
+-   00A8, 00AA, 00AD, 00AF, 00B2-00B5, 00B7-00BA, 00BC-00BE, 00C0-00D6, 00D8-00F6, 00F8-00FF, 0100-02FF, 0370-167F, 1681-180D, 180F-1DBF, 1E00-1FFF, 200B-200D, 202A-202E, 203F-2040, 2054, 2060-206F, 2070-20CF, 2100-218F, 2460-24FF, 2776-2793, 2C00-2DFF, 2E80-2FFF, 3004-3007, 3021-302F, 3031-303F, 3040-D7FF, F900-FD3D, FD40-FDCF, FDF0-FE1F, FE30-FE44, FE47-FFFD, 10000-1FFFD, 20000-2FFFD, 30000-3FFFD, 40000-4FFFD, 50000-5FFFD, 60000-6FFFD, 70000-7FFFD, 80000-8FFFD, 90000-9FFFD, A0000-AFFFD, B0000-BFFFD, C0000-CFFFD, D0000-DFFFD, E0000-EFFFD  
   
  다음 문자는 식별자의 첫 번째 문자를 제외한 모든 문자로 허용됩니다.  
   
@@ -65,11 +85,11 @@ _ a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M 
   
  이러한 유니코드 코드 포인트 숫자 범위는 식별자의 첫 번째 문자를 제외한 모든 문자에 대해 유니버설 문자 이름으로도 허용됩니다.  
   
--   0300\-036F, 1DC0\-1DFF, 20D0\-20FF, FE20\-FE2F  
+-   0300-036F, 1DC0-1DFF, 20D0-20FF, FE20-FE2F  
   
  **Microsoft 전용**  
   
- Microsoft C\+\+ 식별자의 처음 2048 문자만 의미가 있습니다. 사용자 정의 형식의 이름은 컴파일러에서 "데코레이팅"되어 형식 정보를 유지합니다. 형식 정보를 포함하는 결과 이름은 2048자를 초과할 수 없습니다. 자세한 내용은 [데코레이팅된 이름](../build/reference/decorated-names.md)을 참조하세요. 데코레이팅된 식별자의 길이에 영향을 줄 수 있는 요인은 다음과 같습니다.  
+ Microsoft C++ 식별자의 처음 2048 문자만 의미가 있습니다. 사용자 정의 형식의 이름은 컴파일러에서 "데코레이팅"되어 형식 정보를 유지합니다. 형식 정보를 포함하는 결과 이름은 2048자를 초과할 수 없습니다. (참조 [데코 레이트 된 이름](../build/reference/decorated-names.md) 자세한 정보에 대 한 합니다.) 데코레이팅된 식별자의 길이에 영향을 줄 수 있는 요인은 다음과 같습니다.  
   
 -   식별자가 사용자 정의 형식의 개체 또는 사용자 정의 형식에서 파생된 형식을 나타내는지 여부  
   
@@ -77,21 +97,32 @@ _ a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M 
   
 -   함수에 사용되는 인수의 수  
   
- 달러 기호 `$`는 Visual C\+\+에서 유효한 식별자 문자입니다. 또한 Visual C\+\+에서는 식별자에서 허용되는 유니버설 문자 이름 범위로 표시된 실제 문자를 사용할 수 있습니다. 이러한 문자를 사용하려면 해당 문자를 포함하는 파일 인코딩 코드 페이지를 사용하여 파일을 저장해야 합니다.  이 예에서는 확장 문자와 유니버설 문자 이름을 코드에서 서로 바꿔 사용할 수 있는 방법을 보여 줍니다.  
+ 달러 기호 `$` 는 Visual C++에서 유효한 식별자 문자입니다. 또한 Visual C++에서는 식별자에서 허용되는 유니버설 문자 이름 범위로 표시된 실제 문자를 사용할 수 있습니다. 이러한 문자를 사용하려면 해당 문자를 포함하는 파일 인코딩 코드 페이지를 사용하여 파일을 저장해야 합니다.  이 예에서는 확장 문자와 유니버설 문자 이름을 코드에서 서로 바꿔 사용할 수 있는 방법을 보여 줍니다.  
   
 ```  
-// extended_identifier.cpp // In Visual Studio, use File, Advanced Save Options to set // the file encoding to Unicode codepage 1200 struct テスト         // Japanese 'test' { void トスト() {}  // Japanese 'toast' }; int main() { テスト \u30D1\u30F3;  // Japanese パン 'bread' in UCN form パン.トスト();        // compiler recognizes UCN or literal form }  
+// extended_identifier.cpp  
+// In Visual Studio, use File, Advanced Save Options to set  
+// the file encoding to Unicode codepage 1200  
+struct テスト         // Japanese 'test'  
+{  
+    void トスト() {}  // Japanese 'toast'  
+};  
+  
+int main() {  
+    テスト \u30D1\u30F3;  // Japanese パン 'bread' in UCN form  
+    パン.トスト();        // compiler recognizes UCN or literal form  
+}  
 ```  
   
- 식별자에서 허용되는 문자의 범위는 C\+\+\/CLI 코드를 컴파일하는 경우보다 덜 제한적입니다. \/clr을 사용하여 컴파일된 코드의 식별자는 [Standard ECMA\-335: Common Language Infrastructure\(CLI\)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)를 준수해야 합니다.  
+ 식별자에서 허용되는 문자의 범위는 C++/CLI 코드를 컴파일하는 경우보다 덜 제한적입니다. /clr을 사용하여 컴파일된 코드의 식별자는  [Standard ECMA-335: Common Language Infrastructure(CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)를 준수해야 합니다.  
   
  **Microsoft 전용 종료**  
   
- 식별자의 첫 번째 문자는 영문자\(대문자 또는 소문자\) 또는 밑줄\(**\_**\)이어야 합니다. C\+\+ 식별자가 대\/소문자를 구분하기 때문에 `fileName`은 `FileName`과 다릅니다.  
+ 식별자의 첫 번째 문자는 영문자(대문자 또는 소문자) 또는 밑줄( **_** )이어야 합니다. C++ 식별자가 대/소문자를 구분하기 때문에 `fileName` 은 `FileName`과 다릅니다.  
   
- 식별자는 키워드와 정확히 동일한 철자와 대\/소문자를 사용할 수 없습니다. 키워드가 포함된 식별자를 사용할 수 있습니다. 예를 들어, `Pint`는 키워드인 `int`가 포함되어 있어도 유효한 식별자입니다.  
+ 식별자는 키워드와 정확히 동일한 철자와 대/소문자를 사용할 수 없습니다. 키워드가 포함된 식별자를 사용할 수 있습니다. 예를 들어, `Pint` 는 키워드인 `int`가 포함되어 있어도 유효한 식별자입니다.  
   
- 식별자 앞에 오는 두 개의 연속 밑줄 문자\(**\_\_**\) 또는 대문자가 이어지는 단일 선행 밑줄은 모든 범위에서 C\+\+ 구현을 위해 예약됩니다. 현재 또는 나중에 예약되는 식별자와 충돌할 수 있기 때문에 파일 범위가 있는 이름에 소문자가 뒤에 오는 단일 선행 밑줄을 사용하지 않도록 해야 합니다.  
+ 식별자 앞에 오는 두 개의 연속 밑줄 문자( **__** ) 또는 대문자가 이어지는 단일 선행 밑줄은 모든 범위에서 C++ 구현을 위해 예약됩니다. 현재 또는 나중에 예약되는 식별자와 충돌할 수 있기 때문에 파일 범위가 있는 이름에 소문자가 뒤에 오는 단일 선행 밑줄을 사용하지 않도록 해야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [어휘 규칙](../cpp/lexical-conventions.md)

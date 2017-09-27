@@ -1,45 +1,60 @@
 ---
-title: "typename | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "typename"
-  - "typename_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "typename 템플릿 지정자"
+title: typename | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- typename
+- typename_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# typename
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 95283efc5d3b92a461ba6507e669f6f3e2af2689
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-알 수 없는 식별자가 형식임을 컴파일러에 알립니다.  
+---
+# <a name="typename"></a>typename
+템플릿 정의에 알 수 없는 식별자 형식임을 컴파일러 힌트를 제공 합니다. 템플릿 매개 변수 목록에서 형식 매개 변수를 지정 하는 데 사용 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 typename identifier;  
 ```  
   
-## 설명  
- 이 키워드는 템플릿 정의에서만 사용하십시오.  
+## <a name="remarks"></a>설명  
+ 템플릿 정의에 이름이 템플릿 인수;에 종속 된 정규화 된 이름을 경우이 키워드를 사용 해야 합니다. 정규화 된 이름이 종속 된 경우 선택 사항입니다. 자세한 내용은 참조 [템플릿 및 이름 확인](../cpp/templates-and-name-resolution.md)합니다.  
   
- 이름이 템플릿 인수에 종속된 정규화된 이름인 경우 이 키워드를 사용해야 하고, 정규화된 이름이 종속되어 있지 않은 경우에는 이 키워드가 선택 사항입니다.  자세한 내용은 [템플릿 및 이름 확인](../cpp/templates-and-name-resolution.md)을 참조하십시오.  
-  
- **typename**은 템플릿 선언 또는 정의의 모든 위치에서 모든 형식에 의해 사용될 수 있지만  템플릿 기본 클래스의 템플릿 인수로 사용되지 않는 한 기본 클래스 목록에서는 허용되지 않습니다.  
+ **typename** 템플릿 선언 또는 정의에 있는 형식에서 사용할 수 있습니다. 템플릿 기본 클래스의 템플릿 인수로 사용되지 않는 한 기본 클래스 목록에서는 허용되지 않습니다.  
   
 ```  
 template <class T>  
@@ -50,14 +65,14 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};  
 ```  
   
- 템플릿 매개 변수 목록에서 **class** 대신 **typename** 키워드를 사용할 수도 있습니다.  예를 들어, 다음 문은 동일합니다.  
+ **typename** 키워드 대신 사용할 수도 있습니다 **클래스** 템플릿 매개 변수 목록입니다. 예를 들어 다음 문은 의미상 동일합니다.  
   
 ```  
 template<class T1, class T2>...  
 template<typename T1, typename T2>...  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // typename.cpp  
@@ -71,6 +86,6 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [템플릿](../cpp/templates-cpp.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [서식 파일](../cpp/templates-cpp.md)   
+ [키워드](../cpp/keywords-cpp.md)
