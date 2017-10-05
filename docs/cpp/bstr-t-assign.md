@@ -1,34 +1,51 @@
 ---
-title: "_bstr_t::Assign | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::Assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assign 메서드"
+title: '_bstr_t:: assign | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::Assign
+dev_langs:
+- C++
+helpviewer_keywords:
+- Assign method
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# _bstr_t::Assign
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 11bbf30deb45e33bbc52354b3b1b03ac26e8a4ae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="bstrtassign"></a>_bstr_t::Assign
 **Microsoft 전용**  
   
- `BSTR`을 **\_**`bstr_t`로 래핑된 `BSTR`로 복사합니다.  
+ 복사는 `BSTR` 에 `BSTR` 의해 래핑되는 **_**`bstr_t`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void Assign(  
@@ -36,14 +53,14 @@ void Assign(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `s`  
- `_bstr_t`로 래핑된 `BSTR`로 복사되는 `BSTR`입니다.  
+ `BSTR`로 래핑된 `BSTR`로 복사되는 `_bstr_t`입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `Assign`은 이진 복사를 수행합니다. 즉, `BSTR`의 전체 길이가 내용과 관계없이 복사됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // _bstr_t_Assign.cpp  
@@ -104,16 +121,19 @@ int main()
 }  
 ```  
   
-  **bstrWrapper \= some text**  
-**bstrWrapper \= \(null\)**  
-**bstr \= some text**  
-**bstrWrapper \= SysAllocedString**  
-**bstrWrapper \= some text**  
-**bstrWrapper \= Yet another string**  
-**bstrWrapper2 \= some text**  
-**bstrWrapper \= changing BSTR**  
-**bstrWrapper2 \= some text**   
-## Microsoft 전용 종료  
+```Output  
+bstrWrapper = some text  
+bstrWrapper = (null)  
+bstr = some text  
+bstrWrapper = SysAllocedString  
+bstrWrapper = some text  
+bstrWrapper = Yet another string  
+bstrWrapper2 = some text  
+bstrWrapper = changing BSTR  
+bstrWrapper2 = some text  
+```  
   
-## 참고 항목  
- [\_bstr\_t 클래스](../cpp/bstr-t-class.md)
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
+ [_bstr_t 클래스](../cpp/bstr-t-class.md)

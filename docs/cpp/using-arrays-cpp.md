@@ -1,29 +1,45 @@
 ---
-title: "배열 사용 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "배열[C++]"
+title: "배열 (c + +)를 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++]
 ms.assetid: 7818a7fe-7e82-4881-a3d1-7d25162b7fc7
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 배열 사용 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 31402e2f113deb89fce6d2d8b6c3633f06a944be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-배열 첨자 연산자를 사용하여 배열의 개별 요소에 액세스할 수 있습니다 \(`[ ]`\).  아래 첨자 없이 식에 1차원 배열이 사용된 경우 배열 이름은 배열의 첫 번째 요소에 대한 포인터로 계산됩니다.  
+---
+# <a name="using-arrays-c"></a>배열 사용 (C++)
+배열 첨자 연산자(`[ ]`)를 사용하여 배열의 개별 요소에 액세스할 수 있습니다. 식에서 아래 첨자 없이 1차원 배열이 사용된 경우 배열 이름은 배열의 첫 번째 요소에 대한 포인터로 평가됩니다.  
   
 ```  
 // using_arrays.cpp  
@@ -35,7 +51,7 @@ int main() {
 }  
 ```  
   
- 다차원 배열을 사용할 때, 식의 다양 한 조합을 사용할 수 있습니다.  
+ 다차원 배열을 사용할 때 식에서 다양한 조합을 사용할 수 있습니다.  
   
 ```  
 // using_arrays_2.cpp  
@@ -56,7 +72,7 @@ int main() {
 }  
 ```  
   
- 위의 코드에서 `multi` 는 `double` 형식의 3차원 배열입니다.  `p2multi` 포인터는 크기가 3인 `double` 형식의 배열을 가리킵니다.  이 예제에서는 한 개, 두 개 및 세 개의 아래 첨자를 사용합니다.  `cout` 문에서처럼 모든 첨자를 지정하는 것이 더 일반적이기는 하지만 때로는 다음 `cout`문에서처럼 배열 요소의 특정 하위 집합을 선택하는 것이 유용합니다.  
+ 위의 코드에서 `multi`는 `double` 형식의 3차원 배열입니다. `p2multi` 포인터는 크기가 3인 `double` 형식의 배열을 가리킵니다. 이 예제에서 배열은 한 개, 두 개 및 세 개의 아래 첨자와 함께 사용됩니다. `cout` 문에서처럼 모든 첨자를 지정하는 것이 더 일반적이기는 하지만 `cout` 문에서처럼 배열 요소의 특정 하위 집합을 선택하는 것이 유용할 때도 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [배열](../cpp/arrays-cpp.md)

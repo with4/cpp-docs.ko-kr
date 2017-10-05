@@ -1,74 +1,90 @@
 ---
-title: "참조 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "선언, 참조"
-  - "개체[C++], 참조"
-  - "참조"
-  - "참조, 선언"
-  - "참조, 포인터"
-  - "개체 참조, 선언자 구문"
+title: "참조 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [C++], referencing
+- references
+- references, to pointers
+- declarations, references
+- references, declaring
+- referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 참조 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: fb208f61d2da9e7daa7a53ac68fdcdfcdf1acab4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-참조는 포인터와 마찬가지로, 메모리의 다른 위치에 있는 개체의 주소를 저장합니다.  하지만 포인터와는 달리, 참조는 초기화되고 나면 다른 개체를 참조하도록 설정하거나 null로 설정할 수 없습니다.  명명된 변수를 참조하는 lvalue 참조와 [임시 개체](../cpp/temporary-objects.md)를 참조하는 rvalue 참조 등, 두 가지 종류의 참조가 있습니다.  & 연산자는 lvalue 참조를 나타내고, && 연산자는 컨텍스트에 따라 rvalue 참조나 범용 참조\(rvalue 또는 lvalue\)를 나타냅니다.  
+---
+# <a name="references-c"></a>참조 (C++)
+참조는 포인터와 마찬가지로, 메모리의 다른 위치에 있는 개체의 주소를 저장합니다. 하지만 포인터와는 달리, 참조는 초기화되고 나면 다른 개체를 참조하도록 설정하거나 null로 설정할 수 없습니다. 참조의 두 종류가: 참조 하는 명명 된 변수 및 rvalue 참조에 대 한 참조는 lvalue 참조는 [임시 개체가](../cpp/temporary-objects.md)합니다. & 연산자는 lvalue 참조를 나타내고, && 연산자는 컨텍스트에 따라 rvalue 참조나 범용 참조(rvalue 또는 lvalue)를 나타냅니다.  
   
  참조를 선언할 수 있는 구문은 다음과 같습니다.  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator [= expression];  
 ```  
   
- 참조를 지정하는 임의의 유효한 선언자를 사용할 수 있습니다.  참조가 함수 또는 배열 형식에 대한 참조가 아닌 한 다음 단순화된 구문이 적용됩니다.  
+ 참조를 지정하는 임의의 유효한 선언자를 사용할 수 있습니다. 참조가 함수 또는 배열 형식에 대한 참조가 아닌 한 다음 단순화된 구문이 적용됩니다.  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&]   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&]   
 [cv-qualifiers] identifier [= expression];  
 ```  
   
  참조를 선언하는 시퀀스는 다음과 같습니다.  
   
- 1.  선언 지정자:  
+ 1. 선언 지정자:  
   
 -   선택적 저장소 클래스 지정자.  
   
--   선택적 **const** 및\/또는 `volatile` 한정자  
+-   선택적 **const** 및/또는 `volatile` 한정자입니다.  
   
 -   형식 지정자: 형식의 이름  
   
--   2.  선언자:  
+-   2. 선언자:  
   
--   선택적 Microsoft 전용 한정자.  자세한 내용은 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)를 참조하세요.  
+-   선택적 Microsoft 전용 한정자. 자세한 내용은 참조 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)합니다.  
   
 -   & 연산자 또는 && 연산자입니다.  
   
--   선택적 **const** 및\/또는 `volatile` 한정자  
+-   선택적 **const** 및/또는 `volatile` 한정자입니다.  
   
 -   식별자입니다.  
   
- 3.  선택적 이니셜라이저입니다.  
+ 3. 선택적 이니셜라이저입니다.  
   
- 배열 및 함수에 대한 포인터의 더 복잡한 선언자 형태도 배열 및 함수에 대한 참조에 적용됩니다. [포인터](../cpp/pointers-cpp.md) 및 [선언자](http://msdn.microsoft.com/ko-kr/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)를 참조하세요.  
+ 더 복잡 한 선언 자 형태 배열 및 함수에 대 한 포인터 배열 및 함수에 대 한 참조에도 적용에 대 한 참조 [포인터](../cpp/pointers-cpp.md) 및 [선언 자](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)합니다.  
   
- 여러 선언자와 이니셜라이저가 단일 선언 지정자 뒤에 쉼표로 구분된 목록으로 나타날 수 있습니다.  예:  
+ 여러 선언자와 이니셜라이저가 단일 선언 지정자 뒤에 쉼표로 구분된 목록으로 나타날 수 있습니다. 예:  
   
 ```  
 int &i;   
@@ -85,7 +101,7 @@ int &ref, *ptr, k;
   
  다음 프로그램에서 개체 이름인 `Today`와 개체에 대한 참조인 `TodayRef`를 프로그램에서 동일하게 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // references.cpp  
@@ -108,11 +124,14 @@ int main() {
 }  
 ```  
   
-  **3**  
-**3**  
-**4**  
-**4**   
-## 주석  
+```Output  
+3  
+3  
+4  
+4  
+```  
+  
+## <a name="comment"></a>주석  
  이 단원의 항목:  
   
 -   [참조 형식 함수 인수](../cpp/reference-type-function-arguments.md)  
@@ -121,5 +140,4 @@ int main() {
   
 -   [포인터에 대한 참조](../cpp/references-to-pointers.md)  
   
-## 참고 항목  
- [참조 초기화](../misc/initializing-references.md)
+

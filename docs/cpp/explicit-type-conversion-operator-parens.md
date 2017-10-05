@@ -1,51 +1,66 @@
 ---
 title: "명시적 형식 변환 연산자: () | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "변환[C++], explicit"
-  - "데이터 형식 변환[C++], explicit"
-  - "명시적 데이터 형식 변환 연산자"
-  - "연산자[C++], 명시적 형식 변환"
-  - "형식 변환[C++], 명시적 변환"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- explicit data type conversion operator
+- conversions [C++], explicit
+- operators [C++], explicit type conversion
+- data type conversion [C++], explicit
+- type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 명시적 형식 변환 연산자: ()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 09afbed7f5a399b9ca192ff57be1c866baf59626
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-C\+\+에서는 함수 호출 구문과 유사한 구문을 사용하여 명시적인 형식 변환을 수행할 수 있습니다.  
+---
+# <a name="explicit-type-conversion-operator-"></a>명시적 형식 변환 연산자: ()
+C++에서는 함수 호출 구문과 유사한 구문을 사용하여 명시적인 형식 변환을 수행할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
 simple-type-name ( expression-list )  
 ```  
   
-## 설명  
- *simple\-type\-name* 뒤에 괄호로 묶인 *expression\-list*가 오면 지정된 식을 사용하여 지정된 형식의 개체가 생성됩니다.  다음 예제에서는 int 형식으로의 명시적 형식 변환을 보여 줍니다.  
+## <a name="remarks"></a>설명  
+ A *단순 형식 이름* 이어서는 *식 목록* 괄호 구문에서 지정 된 식을 사용 하 여 지정 된 형식의 개체를 포함 합니다. 다음 예제에서는 int 형식으로의 명시적 형식 변환을 보여 줍니다.  
   
 ```  
 int i = int( d );  
 ```  
   
- 다음 예제에서는 [함수 호출 결과](../misc/function-call-results.md)에 정의된 `Point` 클래스의 수정된 버전을 사용합니다.  
+ 다음 예제에서는 한 `Point` 클래스입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // expre_Explicit_Type_Conversion_Operator.cpp  
@@ -91,14 +106,14 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
- 위의 예제에서는 상수를 사용한 명시적 형식 변환을 보여 주지만 개체에서 이러한 변환을 수행할 때도 동일한 기술을 사용할 수 있습니다.  다음 코드 조각에서 이를 보여 줍니다.  
+ 위의 예제에서는 상수를 사용한 명시적 형식 변환을 보여 주지만 개체에서 이러한 변환을 수행할 때도 동일한 기술을 사용할 수 있습니다. 다음 코드 조각에서 이를 보여 줍니다.  
   
 ```  
 int i = 7;  
@@ -107,13 +122,13 @@ float d;
 d = float( i );  
 ```  
   
- "캐스트" 구문을 사용하여 명시적 형식 변환을 지정할 수도 있습니다.  캐스트 구문을 사용하여 다시 작성한 이전 예제는 다음과 같습니다.  
+ "캐스트" 구문을 사용하여 명시적 형식 변환을 지정할 수도 있습니다. 캐스트 구문을 사용하여 다시 작성한 이전 예제는 다음과 같습니다.  
   
 ```  
 d = (float)i;  
 ```  
   
- 캐스트 스타일 변환과 함수 스타일 변환 모두 단일 값에서 변환할 때 동일한 결과를 생성합니다.  그러나 함수 스타일 구문에서는 변환을 위해 인수를 둘 이상 지정할 수 있습니다.  이 차이점은 사용자 정의 형식의 경우 중요합니다.  `Point` 클래스 및 해당 변환을 고려해 보십시오.  
+ 캐스트 스타일 변환과 함수 스타일 변환 모두 단일 값에서 변환할 때 동일한 결과를 생성합니다. 그러나 함수 스타일 구문에서는 변환을 위해 인수를 둘 이상 지정할 수 있습니다. 이 차이점은 사용자 정의 형식의 경우 중요합니다. `Point` 클래스 및 해당 변환을 고려해 보십시오.  
   
 ```  
 struct Point  
@@ -126,16 +141,15 @@ struct Point
 Point pt = Point( 3, 10 );  
 ```  
   
- 함수 스타일 변환을 사용하는 위의 예제에서는 두 개의 값\(*x* 값과 *y* 값\)을 사용자 정의 형식 `Point`로 변환하는 방법을 보여 줍니다.  
+ 앞의 예에서 함수 스타일 변환을 사용 하는 두 값을 변환 하는 방법을 보여 줍니다 (에 대 한 *x* 되 고 다른 하나 *y*) 사용자 정의 형식에 `Point`합니다.  
   
 > [!CAUTION]
->  명시적 형식 변환은 C\+\+ 컴파일러의 기본 제공 형식 검사를 재정의하므로 신중하게 사용하십시오.  
+>  명시적 형식 변환은 C++ 컴파일러의 기본 제공 형식 검사를 재정의하므로 신중하게 사용하십시오.  
   
- [캐스트](../cpp/cast-operator-parens.md) 표기법은 *simple\-type\-name*\(예: 포인터 또는 참조 형식\)이 없는 형식으로의 변환에 사용되어야 합니다.  *simple\-type\-name*으로 표현할 수 있는 형식으로의 변환은 둘 중 하나의 형태로 작성할 수 있습니다.  *simple\-type\-name*을 구성하는 항목에 대한 자세한 내용은 [형식 지정자](http://msdn.microsoft.com/ko-kr/34b6c737-0ef1-4470-9b77-b26e46c0bbd4)를 참조하십시오.  
+ [캐스트](../cpp/cast-operator-parens.md) 표기법을 사용 하 여가 없는 형식으로의 변환 해야는 *단순 형식 이름* (예: 포인터 또는 참조 형식). 변환으로 표현할 수 있는 형식에는 *단순 형식 이름* 둘 중 하나의 형태로 작성할 수 있습니다. 참조 [형식 지정자](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4) 구성 하는 항목에 대 한 자세한 내용은 *단순 형식 이름*합니다.  
   
  캐스트 내의 형식 정의는 올바르지 않습니다.  
   
-## 참고 항목  
- [후위 식](../cpp/postfix-expressions.md)   
- [C\+\+ 연산자](../misc/cpp-operators.md)   
- [C\+\+ 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+## <a name="see-also"></a>참고 항목  
+ [후 위 식](../cpp/postfix-expressions.md)   
+ [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

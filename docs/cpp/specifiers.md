@@ -1,30 +1,47 @@
 ---
 title: "지정자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "선언 지정자"
-  - "선언, 지정자"
-  - "지정자, 선언"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declaration specifiers
+- declarations, specifiers
+- specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 지정자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c67ae6ce353ee48635df1b3be6b124344cdd4e91
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-이 항목에서는 [선언](../misc/declarations.md)의 *decl\-specifiers*\(선언 지정자\) 구성 요소에 대해 설명합니다.  
+---
+# <a name="specifiers"></a>지정자
+이 항목에 설명 된 *decl 지정자* 의 (선언 지정자) 구성 요소는 [선언](declarations-and-definitions-cpp.md)합니다.  
   
  다음 자리 표시자 및 언어 키워드는 선언 지정자입니다.  
   
@@ -36,26 +53,26 @@ caps.handback.revision: 9
   
  [friend](../cpp/friend-cpp.md)  
   
- [형식 정의](http://msdn.microsoft.com/ko-kr/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
+ [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
   
- [\_\_declspec](../cpp/declspec.md) `(` *extended\-decl\-modifier\-seq* `)`  
+ [__declspec](../cpp/declspec.md) `(` *확장-decl-한정자-seq*`)`  
   
-## 설명  
- 선언의 *decl\-specifiers* 부분이 포인터 또는 참조 한정자를 포함하지 않는 형식 이름을 의미하기 위해 사용할 수 있는 *decl\-specifiers*의 가장 긴 시퀀스입니다.  선언의 나머지 부분은 소개된 이름을 포함하는 *declarator*입니다.  
+## <a name="remarks"></a>설명  
+ *decl 지정자* 선언의 부분은의 가장 긴 시퀀스 *decl 지정자* 또는 참조 한정자를 포인터를 포함 하지 않고 형식 이름을 의미 하기 위해 취할 수입니다. 선언의 나머지는 *선언 자*, 도입 된 이름이 포함 된 합니다.  
   
- 다음 표에서는 4개의 선언을 나열한 후 각 선언의 *decl\-specifers* 및 *declarator* 구성 요소를 따로 나열합니다.  
+ 다음 표에서 4 개의 선언을 목록과 다음 각 선언 *decl 지정자* 및 *선언 자* 구성 요소 별도로 합니다.  
   
-|선언|*decl\-specifiers*|`declarator`|  
-|--------|------------------------|------------------|  
+|선언|*decl 지정자*|`declarator`|  
+|-----------------|------------------------|------------------|  
 |`char *lpszAppName;`|`char`|`*lpszAppName`|  
 |`typedef char * LPSTR;`|`char`|`*LPSTR`|  
 |`const int func1();`|`const int`|`func1`|  
 |`volatile void *pvvObj;`|`volatile void`|`*pvvObj`|  
   
- `signed`, `unsigned`, `long` 및 `short`는 모두 `int`를 암시하므로 이러한 키워드 다음에 오는 `typedef` 이름은 *decl\-specifiers*가 아닌 *declarator\-list*의 멤버로 간주됩니다.  
+ 때문에 `signed`, `unsigned`, `long`, 및 `short` 모든 의미 `int`, `typedef` 의 구성원 이어야 만들어지며이 키워드 중 하나는 다음 이름을 *선언 자 목록* 의*decl 지정자*합니다.  
   
 > [!NOTE]
->  이름은 다시 선언할 수 있기 때문에 현재 범위에서 최신 선언에 해석이 적용됩니다.  재선언은 특히 `typedef` 이름이 컴파일러에 의해 해석되는 방법에 영향을 줄 수 있습니다.  
+>  이름은 다시 선언할 수 있기 때문에 현재 범위에서 최신 선언에 해석이 적용됩니다. 재선언은 특히 `typedef` 이름이 컴파일러에 의해 해석되는 방법에 영향을 줄 수 있습니다.  
   
-## 참고 항목  
- [선언](../misc/declarations.md)
+## <a name="see-also"></a>참고 항목  
+ [선언 및 정의](declarations-and-definitions-cpp.md)

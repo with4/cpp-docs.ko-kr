@@ -1,59 +1,75 @@
 ---
-title: "do-while 문(C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "do-while_cpp"
-  - "do-while"
-  - "do"
-  - "while_cpp"
-  - "do_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "do 키워드[C++]"
-  - "do 키워드[C++], do-while"
-  - "do-while 키워드[C++]"
-  - "while 키워드[C++], do-while"
+title: "수행-while 문 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- do-while_cpp
+- do-while
+- do
+- while_cpp
+- do_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- do keyword [C++], do-while
+- do-while keyword [C++]
+- do keyword [C++]
+- while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# do-while 문(C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8c81bbeea9f841a834d59186017b2932f83de862
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-지정된 종료 조건\(*expression*\)이 0으로 평가될 때까지 *statement*를 반복해서 실행합니다.  
+---
+# <a name="do-while-statement-c"></a>do-while 문(C++)
+실행는 *문을* 지정된 된 종료 조건 될 때까지 반복 해 서 (는 *식*) 0으로 계산 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
       do  
-   statement  
-   while ( expression ) ;  
+   statement  
+   while ( expression ) ;  
 ```  
   
-## 설명  
- 종료 조건은 각 루프를 실행한 후 테스트되므로 `do-while` 루프는 종료 식의 값에 따라 한 번 이상 실행됩니다.  `do-while` 문은 문 본문 내에서 [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) 또는 [return](../cpp/return-statement-cpp.md) 문이 실행되는 경우에도 종료될 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 종료 조건은 각 루프를 실행한 후 테스트되므로 `do-while` 루프는 종료 식의 값에 따라 한 번 이상 실행됩니다. `do-while` 문을 종료할 수도 있습니다는 [나누기](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), 또는 [반환](../cpp/return-statement-cpp.md) 문은 문 본문 내에서 실행 됩니다.  
   
- *expression*은 산술 형식이나 포인터 형식이어야 합니다.  다음과 같이 실행됩니다.  
+ *expression*은 산술 형식이나 포인터 형식이어야 합니다. 다음과 같이 실행됩니다.  
   
 1.  문 본문이 실행됩니다.  
   
-2.  다음으로, *expression*이 평가됩니다.  *expression*이 false인 경우 `do-while` 문이 종료되고 프로그램의 다음 문으로 제어가 전달됩니다.  *expression*이 true\(0이 아님\)인 경우에는 프로세스가 1단계부터 반복됩니다.  
+2.  다음으로, *expression*이 평가됩니다. *expression*이 false인 경우 `do-while` 문이 종료되고 프로그램의 다음 문으로 제어가 전달됩니다. *expression*이 true(0이 아님)인 경우에는 프로세스가 1단계부터 반복됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서는 `do-while` 문을 보여 줍니다.  
   
 ```  
@@ -69,9 +85,9 @@ int main()
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [반복 문](../cpp/iteration-statements-cpp.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)   
- [while 문 \(C\+\+\)](../cpp/while-statement-cpp.md)   
- [for 문 \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [범위 기반 for 문\(C\+\+\)](../cpp/range-based-for-statement-cpp.md)
+ [키워드](../cpp/keywords-cpp.md)   
+ [while 문(C++)](../cpp/while-statement-cpp.md)   
+ [for 문(C++)](../cpp/for-statement-cpp.md)   
+ [범위 기반 for 문(C++)](../cpp/range-based-for-statement-cpp.md)

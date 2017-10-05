@@ -1,36 +1,53 @@
 ---
-title: "_com_error::HRESULTToWCode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "HRESULTToWCode"
-  - "_com_error.HRESULTToWCode"
-  - "_com_error::HRESULTToWCode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HRESULTToWCode 메서드"
+title: _com_error::HRESULTToWCode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- HRESULTToWCode
+- _com_error.HRESULTToWCode
+- _com_error::HRESULTToWCode
+dev_langs:
+- C++
+helpviewer_keywords:
+- HRESULTToWCode method
 ms.assetid: ff3789f5-1047-41a0-b7e3-86dd8f638dba
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::HRESULTToWCode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 296c6f43c1bc840ae13bdf4ad355d7f41e2cc3fd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
 **Microsoft 전용**  
   
- 32비트 `HRESULT`를 16비트 `wCode`에 매핑합니다.  
+ 32 비트 매핑합니다 `HRESULT` 에 16 비트 `wCode`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -39,19 +56,19 @@ caps.handback.revision: 6
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `hr`  
- 16비트 `wCode`에 매핑할 32비트 `HRESULT`입니다.  
+ 32 비트 `HRESULT` 16 비트 매핑될 수 있도록 `wCode`합니다.  
   
-## 반환 값  
- 32비트 `HRESULT`에서 매핑된 16비트 `wCode`입니다.  
+## <a name="return-value"></a>반환 값  
+ 16 비트 `wCode` 32 비트에서 매핑된 `HRESULT`합니다.  
   
-## 설명  
- 자세한 내용은 [\_com\_error::WCode](../cpp/com-error-wcode.md)를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 참조 [_com_error:: wcode](../cpp/com-error-wcode.md) 자세한 정보에 대 한 합니다.  
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_com\_error::WCode](../cpp/com-error-wcode.md)   
- [\_com\_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
- [\_com\_error 클래스](../cpp/com-error-class.md)
+## <a name="see-also"></a>참고 항목  
+ [_com_error:: wcode](../cpp/com-error-wcode.md)   
+ [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
+ [_com_error 클래스](../cpp/com-error-class.md)

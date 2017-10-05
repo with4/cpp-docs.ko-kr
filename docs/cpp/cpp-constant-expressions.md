@@ -1,33 +1,49 @@
 ---
-title: "C++ 상수 식 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "상수 식"
-  - "상수 식, 구문"
-  - "식[C++], 상수"
+title: "C + + 상수 식 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- constant expressions, syntax
+- constant expressions
+- expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 상수 식
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8333b761aa51de44c8225e5ace97885eaaed56da
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-*상수* 값은 변경되지 않는 값입니다.  C\+\+에서는 개체를 수정할 수 없음을 나타내는 의도를 표현하고 해당 의도를 적용할 수 있는 두 가지 키워드를 제공합니다.  
+---
+# <a name="c-constant-expressions"></a>C++ 상수 식
+A *상수* 값은 변경 되지 않습니다. C++에서는 개체를 수정할 수 없음을 나타내는 의도를 표현하고 해당 의도를 적용할 수 있는 두 가지 키워드를 제공합니다.  
   
- C \+\+에서는 다음 선언에 대해 상수 식\(상수로 계산되는 식\)이 필요합니다.  
+ C ++에서는 다음 선언에 대해 상수 식(상수로 계산되는 식)이 필요합니다.  
   
 -   배열 범위  
   
@@ -47,7 +63,7 @@ manager: "ghogen"
   
 -   `sizeof` 식  
   
- 비정수 상수는 명시적이거나 암시적으로 상수 식에 사용할 수 있는 정수 계열 형식으로 변환해야 합니다.  따라서 다음 코드를 사용할 수 있습니다.  
+ 비정수 상수는 명시적이거나 암시적으로 상수 식에 사용할 수 있는 정수 계열 형식으로 변환해야 합니다. 따라서 다음 코드를 사용할 수 있습니다.  
   
 ```  
 const double Size = 11.0;  
@@ -58,5 +74,5 @@ char chArray[(int)Size];
   
  쉼표 연산자와 할당 연산자를 상수 식에 사용할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [식의 형식](../cpp/types-of-expressions.md)

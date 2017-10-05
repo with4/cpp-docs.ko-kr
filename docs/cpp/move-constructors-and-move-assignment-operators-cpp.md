@@ -1,31 +1,47 @@
 ---
-title: "이동 생성자 및 이동 할당 연산자(C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "이동 생성자"
+title: "이동 생성자 및 이동 할당 연산자 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 이동 생성자 및 이동 할당 연산자(C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-이 항목에서는 C\+\+ 클래스에 대한 *이동 생성자*와 이동 할당 연산자를 작성하는 방법에 대해 설명합니다.  이동 생성자를 사용하면 응용 프로그램의 성능을 크게 향상시킬 수 있는 이동 의미 체계를 구현할 수 있습니다.  이동 의미 체계에 대한 자세한 내용은 [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조하세요.  
+---
+# <a name="move-constructors-and-move-assignment-operators-c"></a>이동 생성자 및 이동 할당 연산자(C++)
+이 항목에서는 작성 하는 방법을 설명는 *이동 생성자* 및 c + + 클래스에 대 한 이동 할당 연산자입니다. 이동 생성자를 사용하면 응용 프로그램의 성능을 크게 향상시킬 수 있는 이동 의미 체계를 구현할 수 있습니다. 이동 의미 체계에 대 한 자세한 내용은 참조 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.  
   
- 이 항목은 메모리 버퍼를 관리하는 다음 C\+\+클래스 `MemoryBlock`을 기반으로 합니다.  
+ 이 항목은 메모리 버퍼를 관리하는 다음 C++클래스 `MemoryBlock`을 기반으로 합니다.  
   
 ```cpp  
 // MemoryBlock.h  
@@ -103,9 +119,9 @@ private:
 };  
 ```  
   
- 다음 절차에서는 예제 C\+\+ 클래스에 대한 이동 생성자와 이동 할당 연산자를 작성하는 방법을 설명합니다.  
+ 다음 절차에서는 예제 C++ 클래스에 대한 이동 생성자와 이동 할당 연산자를 작성하는 방법을 설명합니다.  
   
-### C\+\+ 클래스에 대한 이동 생성자를 만들려면  
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>C++ 클래스에 대한 이동 생성자를 만들려면  
   
 1.  다음 예제와 같이 클래스 형식에 대한 rvalue 참조를 매개 변수로 사용하는 빈 생성자 메서드를 정의합니다.  
   
@@ -124,14 +140,14 @@ private:
     _length = other._length;  
     ```  
   
-3.  소스 개체의 데이터 멤버를 기본 값에 할당합니다.  이에 따라 소멸자가 리소스\(예: 메모리\)를 여러 번 해제하는 것이 방지됩니다.  
+3.  소스 개체의 데이터 멤버를 기본 값에 할당합니다. 이에 따라 소멸자가 리소스(예: 메모리)를 여러 번 해제하는 것이 방지됩니다.  
   
     ```cpp  
     other._data = nullptr;  
     other._length = 0;  
     ```  
   
-### C\+\+ 클래스에 대한 이동 할당 연산자를 만들려면  
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>C++ 클래스에 대한 이동 할당 연산자를 만들려면  
   
 1.  다음 예제와 같이 클래스 형식에 대한 rvalue 참조를 매개 변수로 사용하고 클래스 형식에 대한 참조를 반환하는 빈 할당 연산자를 정의합니다.  
   
@@ -149,7 +165,7 @@ private:
     }  
     ```  
   
-3.  조건문에서 할당될 개체로부터 모든 리소스\(예: 메모리\)를 해제합니다.  
+3.  조건문에서 할당될 개체로부터 모든 리소스(예: 메모리)를 해제합니다.  
   
      다음 예제에서는 할당될 개체로부터 `_data` 멤버를 해제합니다.  
   
@@ -158,7 +174,7 @@ private:
     delete[] _data;  
     ```  
   
-     첫 번째 절차의 2\-3단계에 따라 소스 개체의 데이터 멤버를 생성할 개체로 전송합니다.  
+     첫 번째 절차의 2-3단계에 따라 소스 개체의 데이터 멤버를 생성할 개체로 전송합니다.  
   
     ```cpp  
     // Copy the data pointer and its length from the   
@@ -178,7 +194,7 @@ private:
     return *this;  
     ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 `MemoryBlock` 클래스에 대한 완전한 이동 생성자와 이동 할당 연산자를 보여 줍니다.  
   
 ```cpp  
@@ -226,8 +242,8 @@ MemoryBlock& operator=(MemoryBlock&& other)
 }  
 ```  
   
-## 예제  
- 다음 예제에서는 이동 의미 체계를 통해 응용 프로그램의 성능을 향상시키는 방법을 보여 줍니다.  이 예제에서는 벡터 개체에 두 요소를 추가한 다음 기존의 두 요소 사이에 새 요소를 삽입합니다.  [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)]에서 `vector` 클래스는 이동 의미 체계를 사용하여 벡터 요소를 복사하는 대신 이동하는 방식으로 삽입 작업을 효율적으로 수행합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 이동 의미 체계를 통해 응용 프로그램의 성능을 향상시키는 방법을 보여 줍니다. 이 예제에서는 벡터 개체에 두 요소를 추가한 다음 기존의 두 요소 사이에 새 요소를 삽입합니다. Visual c + + 2010에서의 `vector` 클래스는 이동 의미 체계를 복사 하는 대신 벡터의 요소를 이동 하 여 삽입 작업을 효율적으로 수행 합니다.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -272,7 +288,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 이전에서 이 예제는 다음과 같은 출력을 생성합니다.  
+ Visual c + + 2010 이전이 예제는 다음과 같은 출력을 생성합니다.  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -297,12 +313,12 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  이동 의미 체계를 사용하는 이 예제의 버전은 이동 의미 체계를 사용하지 않는 버전보다 적은 복사, 메모리 할당 및 메모리 할당 취소 작업을 수행하기 때문에 효율적입니다.  
   
-## 강력한 프로그래밍  
+## <a name="robust-programming"></a>강력한 프로그래밍  
  리소스 누수를 방지하려면 항상 이동 할당 연산자에서 메모리, 파일 핸들 및 소켓과 같은 리소스를 해제합니다.  
   
  리소스의 복구할 수 없는 소멸을 방지하려면 이동 할당 연산자에서 자체 할당을 적절하게 처리합니다.  
   
- 사용자 클래스에 이동 생성자와 이동 할당 연산자를 둘 다 제공하는 경우 이동 할당 연산자를 호출하는 이동 생성자를 작성하여 중복 코드를 제거할 수 있습니다.  다음 예제에서는 이동 할당 연산자를 호출하는 이동 생성자의 수정된 버전을 보여 줍니다.  
+ 사용자 클래스에 이동 생성자와 이동 할당 연산자를 둘 다 제공하는 경우 이동 할당 연산자를 호출하는 이동 생성자를 작성하여 중복 코드를 제거할 수 있습니다. 다음 예제에서는 이동 할당 연산자를 호출하는 이동 생성자의 수정된 버전을 보여 줍니다.  
   
 ```  
 // Move constructor.  
@@ -314,8 +330,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- [std::move](../Topic/move.md) 함수는 `other` 매개 변수의 rvalue 속성을 유지합니다.  
+ [std:: move](../standard-library/utility-functions.md#move) 의 rvalue 속성을 유지 하는 함수는 `other` 매개 변수입니다.  
   
-## 참고 항목  
- [Rvalue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<utility\> 이동](http://msdn.microsoft.com/ko-kr/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+## <a name="see-also"></a>참고 항목  
+ [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
+ [\<유틸리티 > 이동](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

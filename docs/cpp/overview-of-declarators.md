@@ -1,39 +1,57 @@
 ---
-title: "선언자 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "선언 자에 대 한 선언 자"
+title: "선언 자 개요 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 선언자 개요
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4a8f795a23f4e93f02d5d6b5ce98d60555a432d6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-선언자는 개체 또는 함수 이름을 지정하는 선언의 구성 요소입니다. 선언자는 명명된 개체가 개체, 포인터, 참조 또는 배열인지 여부도 지정합니다.  선언자는 기본 형식을 지정하지는 않지만, 포인터, 참조 및 배열과 같은 파생 형식을 지정하는 기본 형식의 형식 정보를 수정합니다.  함수에 적용되는 선언자는 형식 지정자와 함께 작동하여 개체, 포인터 또는 참조가 될 함수의 반환 형식을 완전히 지정합니다. (에 설명 된 지정자 [선언](../misc/declarations.md), 형식 및 저장소 클래스와 같은 속성을 전달 합니다. 이 섹션에서 설명 된 한정자 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md), 선언 자를 수정 합니다.) 다음 그림에서는 `MyFunction`의 전체 선언과 선언의 구성 요소를 보여 줍니다.  
+---
+# <a name="overview-of-declarators"></a>선언자 개요
+선언자는 개체 또는 함수 이름을 지정하는 선언의 구성 요소입니다. 선언자는 명명된 개체가 개체, 포인터, 참조 또는 배열인지 여부도 지정합니다.  선언자는 기본 형식을 지정하지는 않지만, 포인터, 참조 및 배열과 같은 파생 형식을 지정하는 기본 형식의 형식 정보를 수정합니다.  함수에 적용되는 선언자는 형식 지정자와 함께 작동하여 개체, 포인터 또는 참조가 될 함수의 반환 형식을 완전히 지정합니다. (에 설명 된 지정자 [선언 및 정의](declarations-and-definitions-cpp.md), 형식 및 저장소 클래스와 같은 속성을 전달 합니다. 및이 섹션에 설명 된 한정자 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md), 선언 자를 수정 합니다.) 다음 그림에서는 `MyFunction`의 전체 선언과 선언의 구성 요소를 보여 줍니다.  
   
- ![한정자, 지정자 및 선언자](../cpp/media/vc38qy1.png "vc38QY1")  
+ ![한정자, 지정자 및 선언 자](../cpp/media/vc38qy1.gif "vc38QY1")  
 지정자, 한정자 및 선언자  
   
  **Microsoft 전용**  
   
- 대부분의 Microsoft 확장 키워드를 파생 형식을 형성하기 위한 한정자로 사용할 수 있습니다. 해당 키워드는 지정자나 선언자가 아닙니다. (참조 [Microsoft-Specific 한정자](../cpp/microsoft-specific-modifiers.md).)  
+ 대부분의 Microsoft 확장 키워드를 파생 형식을 형성하기 위한 한정자로 사용할 수 있습니다. 해당 키워드는 지정자나 선언자가 아닙니다. (참조 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md).)  
   
  **Microsoft 전용 종료**  
   
- 선언자는 선택적인 지정자 목록 뒤의 선언 구문에 나타납니다. 이 지정자에 대해서는 설명 [선언 합니다.](../misc/declarations.md) 선언에는 둘 이상의 선언자가 포함될 수 있지만 각 선언자는 이름 하나만 선언합니다.  
+ 선언자는 선택적인 지정자 목록 뒤의 선언 구문에 나타납니다. 이 지정자에 대해서는 설명 [선언 합니다.](declarations-and-definitions-cpp.md) 선언에는 둘 이상의 선언자가 포함될 수 있지만 각 선언자는 이름 하나만 선언합니다.  
   
  다음 샘플 선언에서는 전체 선언을 만들기 위해 지정자와 선언자를 결합하는 방법을 보여 줍니다.  
   
@@ -53,7 +71,7 @@ const char *pch, ch;
   
  **포인터, 참조 및 배열에 대 한 선언 자**  
   
- 이름 앞에 포인터 연산자가 삽입된 개체는 포인터 또는 참조가 됩니다.   **\*** 연산자는 이름을 포인터로,으로 선언 된 **&** 연산자는 참조로 선언 합니다.  
+ 이름 앞에 포인터 연산자가 삽입된 개체는 포인터 또는 참조가 됩니다.  ** \* ** 연산자는 이름을 포인터로, 선언는 ** & ** 연산자는 참조로 선언 합니다.  
   
 ```  
 int *i; // declarator is *i  
@@ -69,7 +87,7 @@ const char *pcc; // pointer to const char
 const char *const cpcc; // const pointer to const char  
 ```  
   
- 자세한 내용은에서 찾을 수 있습니다 [const 및 volatile 포인터](../cpp/const-and-volatile-pointers.md)합니다.  
+ 자세한 내용은에서 확인할 수 있습니다 [const 및 volatile 포인터](../cpp/const-and-volatile-pointers.md)합니다.  
   
  클래스 또는 구조체 멤버의 포인터는 적절한 중첩 이름 지정자를 사용하여 선언됩니다.  
   
@@ -96,8 +114,6 @@ int i[2][2]; // two dimensional array
 int f(int a, int b, int c);  
 ```  
   
- 인수 목록에 대 한 자세한 내용은 [함수 선언](http://msdn.microsoft.com/ko-kr/3f9b4e14-60d2-47c1-acd8-4fa8fc988be7)합니다.  
-  
  함수의 포인터 및 참조는 아래와 같이 함수 이름 앞에 포인터 또는 참조 연산자를 추가하여 선언됩니다.  괄호는 보통 선택적으로 사용되며, 함수의 포인터를 포인터를 반환하는 함수와 구별할 때 필요합니다.  
   
 ```  
@@ -113,7 +129,7 @@ int (X::* pmf)(); // pointer to member function of X returning int
 int* (X::* pmf)(); // pointer to member function returning pointer to int  
 ```  
   
- 참고 항목 [멤버에 대 한 포인터](../cpp/pointers-to-members.md)합니다.  
+ 참고 항목 [멤버의 포인터에](../cpp/pointers-to-members.md)합니다.  
   
  **함수와 같은 선언에는 개체**  
   
@@ -151,7 +167,7 @@ PIFN pifnDispatchArray[7];
 int ( *pifnDispatchArray[7] )( char * );  
 ```  
   
- Typedef에 대 한 자세한 내용은 참조 하십시오. [typedef 지정자](http://msdn.microsoft.com/ko-kr/cc96cf26-ba93-4179-951e-695d1f5fdcf1)합니다.  
+ Typedef에 대 한 자세한 내용은 참조 하십시오. [별칭 및 typedef](aliases-and-typedefs-cpp.md)합니다.  
   
  단일 기본 형식의 포인터, 참조, 배열은 다음과 같이 쉼표로 구분된 단일 선언으로 결합할 수 있습니다.  
   
@@ -159,7 +175,7 @@ int ( *pifnDispatchArray[7] )( char * );
 int a, *b, c[5], **d, &e=a;  
 ```  
   
- **좀 더 복잡 한 선언 자 구문**  
+ **더 복잡 한 선언 자 구문**  
   
 -   함수의 포인터 배열, 배열의 포인터 등과 같은 개체를 지정하기 위해 포인터, 참조, 배열 및 함수 선언자를 결합할 수 있습니다.  
   
@@ -197,4 +213,4 @@ int a, *b, c[5], **d, &e=a;
 |요소가 10개인 배열|`(*i)[10]`|4|  
 |포인터|`*((*i)[10])`|6 다음에 5|  
   
- 여러 포인터, 참조, 배열 또는 함수 한정자가 사용될 때 선언자는 매우 복잡해질 수 있습니다.  항목 [더 복잡 한 선언 자 해석](../c-language/interpreting-more-complex-declarators.md) 좀 더 복잡 한 선언 자 구문을 읽는 방법에 설명 합니다.  항목은 c + +에서 원하는 위치에 있지만 C와 c + +에서는 모두에 적용할 수는 * MyClass 같은 정규화 된 이름은 포인터를 나타내는 데::\* 클래스의 멤버에 대 한 포인터를 지정 하는 데 사용 될 수 있습니다.
+ 여러 포인터, 참조, 배열 또는 함수 한정자가 사용될 때 선언자는 매우 복잡해질 수 있습니다.  항목 [더 복잡 한 선언 자 해석](../c-language/interpreting-more-complex-declarators.md) 더 복잡 한 선언 자 구문을 읽는 방법에 설명 합니다.  항목은 c + +, 어디에 있지만 C와 c + +, 모두에 적용할 수는 * MyClass 같은 정규화 된 이름은 포인터를 나타내는 데::\* 클래스의 멤버에 대 한 포인터를 지정 하는 데 사용 될 수 있습니다.

@@ -1,50 +1,66 @@
 ---
-title: "break 문 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "break_cpp"
-  - "break"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "break 키워드[C++]"
+title: "break 문 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- break_cpp
+- break
+dev_langs:
+- C++
+helpviewer_keywords:
+- break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# break 문 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2e016ccc90ef53ca5f269a73d3f5b7ed3185f550
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-`break` 문은 가장 가까운 바깥쪽 루프 또는 표시되는 조건문의 실행을 종료합니다.  제어는 종료된 문 뒤의 문이 있는 경우 전달됩니다.  
+---
+# <a name="break-statement-c"></a>break 문 (C++)
+`break` 문은 가장 가까운 바깥쪽 루프 또는 표시되는 조건문의 실행을 종료합니다. 제어는 종료된 문 뒤의 문이 있는 경우 전달됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 break;  
 ```  
   
-## 설명  
- `break` 문은 [switch](../cpp/switch-statement-cpp.md) 조건문 및 [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md) 및 [while](../cpp/while-statement-cpp.md) 루프 문과 함께 사용됩니다.  
+## <a name="remarks"></a>설명  
+ `break` 문을 사용 하는 조건부 [전환](../cpp/switch-statement-cpp.md) 문 및는 [않습니다](../cpp/do-while-statement-cpp.md), [에 대 한](../cpp/for-statement-cpp.md), 및 [동안](../cpp/while-statement-cpp.md) 루프 문입니다.  
   
- `switch` 문에서 `break` 문을 사용하면 프로그램이 `switch` 문 외부에서 다음 문을 실행합니다.  `break` 문 없이, `default` 절을 포함하여, `switch` 문 끝에 `case` 레이블에 일치하는 모든 문을 실행합니다.  
+ `switch` 문에서 `break` 문을 사용하면 프로그램이 `switch` 문 외부에서 다음 문을 실행합니다. `break` 문 없이, `case` 절을 포함하여, `switch` 문 끝에 `default` 레이블에 일치하는 모든 문을 실행합니다.  
   
- 루프에서 `break` 문은 가장 가까운 바깥쪽 `do`, `for` 또는 `while` 문의 실행을 종료합니다.  종료된 문 뒤에 문이 있는 경우 제어가 해당 문으로 전달됩니다.  
+ 루프에서 `break` 문은 가장 가까운 바깥쪽 `do`, `for` 또는 `while` 문의 실행을 종료합니다. 종료된 문 뒤에 문이 있는 경우 제어가 해당 문으로 전달됩니다.  
   
- 중첩된 문 내의 `break` 문은 해당 문을 둘러싼 `do`, `for`, `switch` 또는 `while` 문만을 종료합니다.  `return` 또는 `goto` 문을 사용하여 더 많이 중첩된 구조에서 제어를 전송할 수 있습니다.  
+ 중첩된 문 내의 `break` 문은 해당 문을 둘러싼 `do`, `for`, `switch` 또는 `while` 문만을 종료합니다. `return` 또는 `goto` 문을 사용하여 더 많이 중첩된 구조에서 제어를 전송할 수 있습니다.  
   
-## 예제  
- 다음 코드에서는 `for` 문에서 `break` 문을 사용하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 코드에서는 `break` 문에서 `for` 문을 사용하는 방법을 보여 줍니다.  
   
 ```cpp  
 #include <iostream>  
@@ -72,13 +88,16 @@ int nums []{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 }  
 ```  
   
-  **각 경우 다음과 같은 결과가 나타납니다.**   
-**1**  
-**2**  
-**3** 다음 코드에서는 `while` 루프 및 `do` 루프에서 `break`를 사용하는 방법을 보여 줍니다.  
+```Output  
+In each case:   
+1  
+2  
+3  
+```  
+  
+ 다음 코드에서는 `break` 루프 및 `while` 루프에서 `do`를 사용하는 방법을 보여 줍니다.  
   
 ```cpp  
-  
 #include <iostream>  
 using namespace std;  
   
@@ -104,11 +123,12 @@ int main() {
 }  
 ```  
   
-  **각 경우 다음과 같은 결과가 나타납니다.**  
-**0**  
-**1**  
-**2**  
-**3** 다음 코드에서는 switch 문에서 `break`를 사용하는 방법을 보여 줍니다.  각각의 경우를 별도로 처리하려면 모든 경우에 `break`를 사용해야 합니다. `break`를 사용하지 않는 경우 코드 실행은 다음 경우로 이동합니다.  
+```Output  
+In each case:  
+0123  
+```  
+  
+ 다음 코드에서는 switch 문에서 `break`를 사용하는 방법을 보여 줍니다. 각각의 경우를 별도로 처리하려면 모든 경우에 `break`를 사용해야 합니다. `break`를 사용하지 않는 경우 코드 실행은 다음 경우로 이동합니다.  
   
 ```cpp  
 #include <iostream>  
@@ -155,7 +175,7 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [점프 문](../cpp/jump-statements-cpp.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)   
+ [키워드](../cpp/keywords-cpp.md)   
  [continue 문](../cpp/continue-statement-cpp.md)

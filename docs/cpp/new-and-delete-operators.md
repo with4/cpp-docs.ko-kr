@@ -1,71 +1,86 @@
 ---
-title: "new 및 delete 연산자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "delete_cpp"
-  - "new_cpp"
-  - "new"
-  - "delete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delete 키워드[C++], 구문"
-  - "new 키워드[C++], 개체의 동적 할당"
-  - "nothrownew.obj"
+title: "새 및 delete 연산자 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- delete_cpp
+- new_cpp
+- new
+- delete
+dev_langs:
+- C++
+helpviewer_keywords:
+- new keyword [C++], dynamic allocation of objects
+- nothrownew.obj
+- delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# new 및 delete 연산자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 88f91e113ef47dc44ec0a300a99051cfaed3f08c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-C\+\+에서는 [new](../cpp/new-operator-cpp.md) 및 [delete](../cpp/delete-operator-cpp.md) 연산자를 사용하여 개체의 동적 할당 및 할당 해제를 지원합니다.  이러한 연산자는 사용 가능한 저장소라고 하는 풀에서 개체에 대한 메모리를 할당합니다.  `new` 연산자는 [operator new](../misc/operator-new-function.md) 특수 함수를 호출하고, `delete` 연산자는 [operator delete](../misc/operator-delete-function.md) 특수 함수를 호출합니다.  
+---
+# <a name="new-and-delete-operators"></a>new 및 delete 연산자
+
+C + +에서는 동적 할당 및 개체를 사용 하 여 할당 취소는 [새](../cpp/new-operator-cpp.md) 및 [삭제](../cpp/delete-operator-cpp.md) 연산자입니다. 이러한 연산자는 사용 가능한 저장소라고 하는 풀에서 개체에 대한 메모리를 할당합니다. `new` 특수 함수를 호출 하는 연산자 [new 연산자](../cpp/new-operator-cpp.md), 및 `delete` 특수 함수를 호출 하는 연산자 [delete 연산자](../cpp/delete-operator-cpp.md)합니다.  
   
- [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] .NET 2002에서 표준 C\+\+ 라이브러리의 `new` 함수는 C\+\+ 표준에서 지정된 동작, 즉 메모리 할당이 실패하는 경우 std::bad\_alloc 예외를 throw하는 동작을 지원합니다.  
+ Visual c + +.NET 2002에서의 `new` c + + 표준 라이브러리의 함수는 메모리 할당에 실패 하는 경우 std:: bad_alloc 예외를 throw 하는 c + + 표준에 지정 된 동작을 지원 합니다. Throw 되지 않는 버전의 원하는 경우 `new`, 프로그램을 nothrownew.obj와 연결 합니다. 그러나을 연결할 때 기본 nothrownew.obj와 연결 `operator new` c + + 표준 라이브러리의 함수가 더 이상.  
   
- C 런타임 라이브러리의 `new` 함수도 메모리 할당이 실패하는 경우 std::bad\_alloc 예외를 throw합니다.  
+ C 런타임 라이브러리 및 c + + 표준 라이브러리를 구성 하는 라이브러리 파일의 목록에 대 한 참조 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)합니다.  
   
- C 런타임 라이브러리의 throw하지 않는 `new` 버전을 원하는 경우 프로그램을 nothrownew.obj와 연결합니다.  하지만 nothrownew.obj와 연결하면 표준 C\+\+ 라이브러리의 `new`가 더 이상 작동하지 않습니다.  
-  
- C 런타임 라이브러리와 표준 C\+\+ 라이브러리를 구성하는 라이브러리 파일의 목록은 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)를 참조하세요.  
-  
-## new 연산자  
+##  <a id="new_operator"></a> New 연산자  
  프로그램에서 다음과 같은 문이 발견될 경우, `operator new` 함수가 호출됩니다.  
   
-```  
+```cpp  
 char *pch = new char[BUFFER_SIZE];  
 ```  
   
- 저장소의 0바이트가 요청될 경우 **operator new**는 명확한 개체 포인터를 반환합니다. 즉, **operator new**에 대한 반복 호출을 통해 다른 포인터를 반환합니다.  할당 요청을 위한 충분한 메모리가 없을 경우 **operator new**는 **NULL**을 반환하거나 예외를 발생시킵니다. 자세한 내용은 [new 및 delete 연산자](../cpp/new-and-delete-operators.md)를 참조하세요.  
+저장소의 0 바이트에 대 한 요청인 경우 **new 연산자** 고유 개체에 대 한 포인터를 반환 (즉, 반복 호출을 **new 연산자** 다른 포인터를 반환). 할당 요청에 대 한 메모리가 부족 한 경우 **new 연산자** std:: bad_alloc 예외를 throw 하거나 반환 **nullptr** throw 되지 않는에 연결 하면 `operator new` 지원 합니다.  
   
- 여유 메모리를 확보하는 루틴을 작성한 다음 할당을 다시 시도할 수도 있습니다. 자세한 내용은 [\_set\_new\_handler](../c-runtime-library/reference/set-new-handler.md)를 참고하세요.  복구 체계에 대한 자세한 내용은 다음 항목, [부족한 메모리 조건 처리](../misc/handling-insufficient-memory-conditions.md)를 참조하세요.  
+메모리를 해제 하 고; 할당을 다시 시도 하려고 하는 루틴을 작성할 수 있습니다. 참조 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) 자세한 정보에 대 한 합니다. 복구 체계에 대 한 자세한 내용은이 항목의 처리 메모리가 부족 하 여 섹션을 참조 합니다.  
+
   
- 다음 표에는 `operator new` 함수의 두 범위가 설명되어 있습니다.  
+다음 표에는 `operator new` 함수의 두 범위가 설명되어 있습니다.  
   
-### operator new 함수의 범위  
+### <a name="scope-for-operator-new-functions"></a>operator new 함수의 범위  
   
 |연산자|범위|  
-|---------|--------|  
-|**::operator new**|전역|  
-|*class\-name* **::operator new**|클래스|  
+|--------------|-----------|  
+|**:: new 연산자**|Global|  
+|*클래스 이름* **:: new 연산자**|클래스|  
   
- **operator new**의 첫 번째 인수는 **size\_t** 형식\(STDDEF.H에 정의된 형식\)이어야 하며 반환 형식은 항상 **void \***입니다.  
+ 첫 번째 인수 **new 연산자** 형식 이어야 합니다 **size_t** (STDDEF에 정의 된 형식입니다. 반환 형식 및 8)은 항상 **void \* **합니다.  
   
- 전역 **operator new** 함수를 사용하여 **new** 연산자가 기본 제공 형식의 개체, 즉 사용자 정의된 **operator new** 함수를 포함하지 않는 클래스 형식의 개체 및 모든 형식의 배열을 할당할 때 호출됩니다.  **new** 연산자를 사용하여 클래스 형식의 개체를 **operator new**가 정의되는 지점에 할당할 때 클래스의 **operator new**가 호출됩니다.  
+ 전역 **new 연산자** 함수 때 호출 되는 **새** 기본 제공 형식의 개체를 할당 연산자가 사용, 클래스 형식 개체의 포함 하지 않는 사용자 정의 **new 연산자** 함수 및 모든 종류의 배열입니다. 때는 **새** 클래스 형식의 개체를 할당 연산자를 사용 하는 위치는 **new 연산자** 정의 된 해당 클래스의 **new 연산자** 호출 됩니다.  
   
- 클래스에 대해 정의된 **operator new** 함수는 해당 클래스 형식 개체의 전역 **operator new** 함수를 숨기는 정적 멤버 함수입니다\(가상은 될 수 없음\).  메모리를 지정된 값에 할당하고 설정하기 위해 **new** 연산자가 사용되는 경우를 다음의 예제를 통해 살펴보세요.  
+ **new 연산자** 클래스는 전역 숨기는 정적 멤버 함수 (바이트일 수는 없습니다 따라서 가상)에 대해 정의 된 함수 **new 연산자** 해당 클래스 형식의 개체에 대 한 함수입니다. 경우 여기서 **새** 할당 하 고 지정된 된 값에 메모리를 설정 하는 데 사용 됩니다.  
   
-```  
+```cpp  
 // spec1_the_operator_new_function1.cpp  
 #include <malloc.h>  
 #include <memory.h>  
@@ -93,17 +108,17 @@ int main()
 }  
 ```  
   
- **new**의 괄호 안 인수는 `Blanks::operator new` 인수로서 `chInit`에 전달됩니다.  그러나 전역 **operator new** 함수가 숨겨져 있기 때문에 다음과 같은 오류를 생성하는 코드가 발생할 수 있습니다.  
+ 괄호 안 인수 **새** 에 전달 `Blanks::operator new` 로 `chInit` 인수입니다. 그러나 전역 **new 연산자** 함수가 숨겨져 오류가 발생 하는 다음과 같은 코드:  
   
-```  
+```cpp  
 Blanks *SomeBlanks = new Blanks;  
 ```  
   
- Visual C\+\+ 5.0 이전 버전에서 **new** 연산자를 통해 할당된 비클래스 형식 및 모든 배열\(**클래스** 형식인지 여부에 관계없음\)은 항상 전역 **operator new** 함수를 사용했습니다.  
+ Visual c + + 5.0 및 이전 버전, 비 클래스 형식 및 모든 배열 (의 인지 여부에 관계 없이 **클래스** 유형) 사용 하 여 할당 된 **새** 연산자는 항상 전역 사용 **new 연산자** 함수입니다.  
   
- Visual C\+\+ 5.0 이후부터 컴파일러는 클래스 선언에서 멤버 배열, **new** 및 **delete** 연산자를 지원합니다.  예:  
+ Visual c + + 5.0 이후부터, 컴파일러 지원 멤버 배열을 **새** 및 **삭제** 연산자 클래스 선언에 있습니다. 예:  
   
-```  
+```cpp  
 // spec1_the_operator_new_function2.cpp  
 class MyClass  
 {  
@@ -124,10 +139,10 @@ int main()
 }  
 ```  
   
-### 메모리 부족 처리  
+### <a name="handling-insufficient-memory"></a>메모리 부족 처리  
  다음과 같이 실패한 메모리 할당에 대한 테스트를 수행할 수 있습니다.  
   
-```  
+```cpp  
 // insufficient_memory_conditions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -142,27 +157,29 @@ int main() {
 }  
 ```  
   
- 실패한 메모리 할당 요청을 처리하는 또 다른 방법은, 이러한 오류를 처리하는 사용자 지정 복구 루틴을 작성한 후, [\_set\_new\_handler](../c-runtime-library/reference/set-new-handler.md) 런타임 함수를 요청하여 함수를 등록하는 것입니다.  
+ 실패 한 메모리 할당 요청을 처리 하는 다른 방법으로: 이러한 오류를 처리 하는 사용자 지정 복구 루틴을 작성 한 다음 함수를 호출 하 여 등록는 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) 런타임 함수입니다.  
   
-## delete 연산자  
- **new** 연산자를 사용하여 동적으로 할당되는 메모리는 **delete** 연산자를 사용하여 비울 수 있습니다.  delete 연산자는 **operator delete** 함수를 호출합니다. 이 함수는 메모리를 사용 가능한 풀로 다시 비웁니다.  **delete** 연산자를 사용하면 클래스 소멸자\(있을 경우\)도 호출됩니다.  
+##  <a id="delete_operator"></a> Delete 연산자  
+ 사용 하 여 동적으로 할당 된 메모리는 **새** 연산자를 사용 하 여 해제할 수는 **삭제** 연산자입니다. Delete 연산자 호출은 **delete 연산자** 함수 메모리 사용 가능한 풀으로 해제 합니다. 사용 하는 **삭제** 연산자 또한를 사용 하면 클래스 소멸자 (있을 경우)를 호출할 수 있습니다.  
   
- 전역 및 클래스 범위의 **operator delete** 함수가 있습니다.  하나의 **operator delete** 함수만 특정 클래스에 대해 정의할 수 있으며, 정의하는 경우 전역 **operator delete** 함수가 숨겨집니다.  전역 **operator delete** 함수는 항상 모든 형식의 배열에 대해 호출됩니다.  
+ 전역 및 클래스 범위의 **delete 연산자** 함수입니다. 하나의 **delete 연산자** 지정된 된 클래스에 대 한 함수를 정의할 수 있습니다; 전역 숨깁니다을 정의한 경우 속성이 **delete 연산자** 함수입니다. 전역 **delete 연산자** 함수는 항상 모든 형식의 배열에 대 한 호출 됩니다.  
   
- 전역 **operator delete** 함수는 선언되는 경우 할당 해제할 개체에 대한 포인터를 포함하는 **void \*** 형식의 단일 인수를 사용합니다.  반환 형식은 `void`입니다\(**operator delete**는 값을 반환할 수 없음\).  클래스 멤버 **operator delete** 함수에는 두 가지 형태가 있습니다.  
+ 전역 **delete 연산자** 함수입니다. 두 가지 형태가 있습니다 전역 **delete 연산자** 및 클래스 멤버 **delete 연산자** 함수:  
   
-```  
+```cpp  
 void operator delete( void * );  
 void operator delete( void *, size_t );  
 ```  
   
- 앞의 두 변형 형태 중 하나만 특정 클래스에 있을 수 있습니다.  첫 번째 형태는 전역 `operator delete`에 대해 설명한 대로 작동합니다.  두 번째 형태에는 두 개의 인수가 사용됩니다. 첫 번째 인수는 할당 해제할 메모리 블록에 대한 포인터이고 두 번째 인수는 할당 해제할 바이트 수입니다.  두 번째 형태는 기본 클래스의 **operator delete** 함수를 사용하여 파생 클래스의 개체를 삭제할 때 특히 유용합니다.  
+ 위의 두 가지 형태 중 하나만 지정된 된 클래스에 사용할 수 있습니다. 형식의 단일 인수를 사용 하는 첫 번째 형태는 **void \* **를 할당 해제할 개체에 포인터를 포함 합니다. 두 번째 형태-할당 취소 크기의-는 두 개의 인수는 첫 번째 할당 해제할 메모리 블록에 대 한 포인터가 고 중 두 번째 할당 해제할 바이트 수입니다. 두 가지 양식의 반환 형식이 `void` (**delete 연산자** 값을 반환할 수 없습니다).  
   
- **operator delete** 함수는 정적입니다. 따라서 가상일 수 없습니다.  `operator delete` 함수는 [멤버 액세스 제어](../cpp/member-access-control-cpp.md)에 설명된 대로 액세스 제어를 따릅니다.  
+ 두 번째 폼의 목적은 삭제 될 개체의 정확한 크기 범주에 대 한 검색을 하지 않는 자체 할당에 가깝게 저장 되 고 캐시 가능성이 해제; 속도를입니다. 두 번째 형태는 특히 유용 프로그램 **delete 연산자** 기본 클래스에서 함수는 파생된 클래스의 개체를 삭제 하는 데 사용 됩니다.  
   
- 다음 예제에서는 메모리의 할당 및 할당 해제를 기록하기 위해 설계된 사용자 정의 **operator new** 및 **operator delete** 함수를 보여 줍니다.  
+ **delete 연산자** 함수는 정적입니다; 따라서 가상 일 수 없습니다. `operator delete` 함수에 설명 된 대로 액세스 제어를 따릅니다 [멤버 액세스 제어](../cpp/member-access-control-cpp.md)합니다.  
   
-```  
+ 다음 예제에서는 사용자 정의 **new 연산자** 및 **delete 연산자** 할당 및 메모리 할당 해제를 기록 하도록 디자인 된 함수:  
+  
+```cpp  
 // spec1_the_operator_delete_function1.cpp  
 // compile with: /EHsc  
 // arguments: 3  
@@ -211,11 +228,11 @@ int main( int argc, char *argv[] ) {
 }  
 ```  
   
- 앞의 코드를 사용하여 "메모리 누수"를 검색할 수 있습니다. 메모리 누수는 사용 가능한 저장소에 할당되었지만 비워지지 않은 메모리를 의미합니다.  이 검색 작업을 수행하기 위해 메모리의 할당 및 할당 해제 횟수를 셀 수 있도록 전역 **new** 및 **delete** 연산자가 다시 정의됩니다.  
+ 앞의 코드를 사용하여 "메모리 누수"를 검색할 수 있습니다. 메모리 누수는 사용 가능한 저장소에 할당되었지만 비워지지 않은 메모리를 의미합니다. 전역이 검색을 수행 하려면 **새** 및 **삭제** 연산자 count 할당 및 메모리 할당 취소 하도록 다시 정의 됩니다.  
   
- Visual C\+\+ 5.0 이후부터 컴파일러는 클래스 선언에서 멤버 배열, **new** 및 **delete** 연산자를 지원합니다.  예:  
+ Visual c + + 5.0 이후부터, 컴파일러 지원 멤버 배열을 **새** 및 **삭제** 연산자 클래스 선언에 있습니다. 예:  
   
-```  
+```cpp  
 // spec1_the_operator_delete_function2.cpp  
 // compile with: /c  
 class X  {  
@@ -231,6 +248,5 @@ void f() {
    delete [] pX;  
 }  
 ```  
-  
-## 참고 항목  
- [특수 멤버 함수](../misc/special-member-functions-cpp.md)
+
+

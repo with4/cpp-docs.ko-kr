@@ -1,32 +1,48 @@
 ---
-title: "private (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "private_cpp"
-  - "private"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "private 키워드[C++]"
+title: private (c + +) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- private_cpp
+- private
+dev_langs:
+- C++
+helpviewer_keywords:
+- private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# private (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ec12850b2d2059c2824c0585edee21cb3fd1a7f7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-## 구문  
+---
+# <a name="private-c"></a>private (C++)
+## <a name="syntax"></a>구문  
   
 ```  
 private:  
@@ -34,26 +50,26 @@ private:
 private base-class  
 ```  
   
-## 설명  
- 클래스 멤버 목록 앞에 오는 `private` 키워드는 멤버 함수와 클래스의 friend에서만 멤버에 액세스하도록 지정합니다.  이 설정은 다음 액세스 지정자 또는 클래스 끝까지 선언된 모든 멤버에 적용됩니다.  
+## <a name="remarks"></a>설명  
+ 클래스 멤버 목록 앞에 오는 `private` 키워드는 멤버 함수와 클래스의 friend에서만 멤버에 액세스하도록 지정합니다. 이 설정은 다음 액세스 지정자 또는 클래스 끝까지 선언된 모든 멤버에 적용됩니다.  
   
  기본 클래스 이름 앞에 오는 `private` 키워드는 기본 클래스의 공용 및 보호된 멤버가 파생 클래스의 전용 멤버라고 지정합니다.  
   
- 클래스에서 멤버의 기본 액세스는 전용입니다.  구조체나 공용 구조체에서 멤버의 기본 액세스는 공용입니다.  
+ 클래스에서 멤버의 기본 액세스는 전용입니다. 구조체나 공용 구조체에서 멤버의 기본 액세스는 공용입니다.  
   
- 기본 클래스의 기본 액세스는 클래스에 대해 전용이고 구조체에 대해 공용입니다.  공용 구조체에 기본 클래스를 사용할 수 없습니다.  
+ 기본 클래스의 기본 액세스는 클래스에 대해 전용이고 구조체에 대해 공용입니다. 공용 구조체에 기본 클래스를 사용할 수 없습니다.  
   
- 관련 내용은 [클래스 멤버에 대한 액세스 제어](../cpp/friend-cpp.md)의 [friend](../cpp/public-cpp.md), [public](../cpp/protected-cpp.md), [protected](../misc/controlling-access-to-class-members.md) 및 멤버 액세스 테이블을 참조하세요.  
+ 관련된 정보를 참조 하십시오. [friend](../cpp/friend-cpp.md), [공용](../cpp/public-cpp.md), [보호](../cpp/protected-cpp.md), 멤버 액세스 테이블 및 [클래스멤버에대한액세스제어](member-access-control-cpp.md).  
   
-## \/clr 관련  
- CLR 형식에서 C\+\+ 액세스 지정자 키워드\(**public**, `private` 및 `protected`\)는 어셈블리와 관련된 형식 및 메서드의 표시 유형에 영향을 줄 수 있습니다.  자세한 내용은 [형식 멤버 표시 유형](../misc/type-and-member-visibility.md)을 참조하세요.  
+## <a name="clr-specific"></a>/clr 관련  
+ CLR 형식에서 c + + 액세스 지정자 키워드 (**공용**, `private`, 및 `protected`) 형식 및 어셈블리와 관련 된 메서드 표시 여부에 영향을 줄 수 있습니다. 자세한 내용은 참조 [멤버 액세스 제어](member-access-control-cpp.md)합니다.  
   
 > [!NOTE]
->  [\/LN](../build/reference/ln-create-msil-module.md)으로 컴파일된 파일은 이 동작의 영향을 받지 않습니다.  이 경우 관리되는 클래스\(공용 또는 전용\)가 모두 표시됩니다.  
+>  으로 컴파일된 파일 [/LN](../build/reference/ln-create-msil-module.md) 이 동작에 의해 영향을 받지 않습니다. 이 경우 관리되는 클래스(공용 또는 전용)가 모두 표시됩니다.  
   
-## END \/clr 관련  
+## <a name="end-clr-specific"></a>END /clr 관련  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // keyword_private.cpp  
@@ -90,6 +106,6 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [클래스 멤버에 대한 액세스 제어](../misc/controlling-access-to-class-members.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [클래스 멤버에 대 한 액세스 제어](member-access-control-cpp.md)   
+ [키워드](../cpp/keywords-cpp.md)

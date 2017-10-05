@@ -1,37 +1,53 @@
 ---
-title: "_bstr_t::operator ! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "! operator"
-  - "operator !, bstr"
-  - "operator!, bstr"
+title: "_bstr_t::operator ! | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::operator!
+dev_langs:
+- C++
+helpviewer_keywords:
+- '! operator'
+- operator!, bstr
+- operator !, bstr
 ms.assetid: 6e60b5a5-2d28-4eec-9e12-790da8f1fdd4
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _bstr_t::operator !
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 06866cfca077c776b086e5cde9ccf1a0278eca25
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Microsoft 전용**  
   
- 캡슐화된 `BSTR`이 **NULL** 문자열인지 확인합니다.  
+ 확인 캡슐화 된 `BSTR` 는 **NULL** 문자열입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -39,10 +55,10 @@ bool operator!( ) const throw( );
   
 ```  
   
-## 반환 값  
- 맞으면 **true**를 반환하고, 아니면 **false**를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 반환 **true** 그렇다면 **false** 그렇지 않은 경우.  
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_bstr\_t 클래스](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>참고 항목  
+ [_bstr_t 클래스](../cpp/bstr-t-class.md)

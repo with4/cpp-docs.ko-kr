@@ -1,30 +1,47 @@
 ---
-title: "Null 문 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "식[C++], null"
-  - "null 문"
-  - "null 값, 식"
+title: "문은 null | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], null
+- null statement
+- null values, expressions
 ms.assetid: 606f5953-55f0-40c8-ae03-3ee3a819b851
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Null 문
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f15fda458fe604d0501c4daa87e6a76cd0422260
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-"null 문"은 *expression*이 누락된 식 문입니다.  언어의 구문에 문이 필요하지만 식 계산은 필요하지 않은 경우에 이 문이 유용합니다.  이 문은 세미콜론으로 구성됩니다.  
+---
+# <a name="null-statement"></a>Null 문
+"Null 문"은 포함 하는 식 문을 *식* 없습니다. 언어의 구문에 문이 필요하지만 식 계산은 필요하지 않은 경우에 이 문이 유용합니다. 이 문은 세미콜론으로 구성됩니다.  
   
  null 문은 일반적으로 반복 문에서 자리 표시자로 사용되거나 복합 문 또는 함수의 끝에 레이블을 배치할 문으로 사용됩니다.  
   
@@ -50,5 +67,5 @@ int main()
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [식 문](../cpp/expression-statement.md)

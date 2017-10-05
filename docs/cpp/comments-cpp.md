@@ -1,40 +1,56 @@
 ---
-title: "C++ 주석 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "코드 주석, C++"
-  - "주석, C++ 코드"
-  - "주석, 코드 문서화"
-  - "공백, C++ 주석"
+title: "주석 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- code comments, C++
+- comments, documenting code
+- comments, C++ code
+- white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 주석
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c6c97e27ff4019eec3ee3f63f2b4ed06db6af317
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-주석은 컴파일러에서 무시되지만 프로그래머에게는 유용한 텍스트입니다.  주석은 나중에 참조할 수 있도록 코드에 주석을 추가하는 데 일반적으로 사용됩니다.  컴파일러는 이들을 공백으로 처리합니다.  특정 코드 줄을 비활성으로 만들면 테스트 시 메모를 사용할 수 있습니다. 그러나 주석이 포함 된 코드를 묶을 수는 있지만 주석은 중첩 될 수 없기 때문에 `#if`\/`#endif` 전처리기 지시문이 더 잘 작동합니다.  
+---
+# <a name="comments-c"></a>주석 (c + +)
+메모는 프로그래머에 게 유용 하지만 컴파일러에서 무시 하는 텍스트입니다. 주석은 나중에 참조할 수는 코드 주석을 추가 하려면 일반적으로 사용 됩니다. 컴파일러는 흰 공간으로 처리 합니다. 어떤 코드 줄을 비활성; 있도록 주석을 테스트를 사용할 수 있습니다. 그러나 `#if` / `#endif` 전처리기 지시문 더 잘 작동이 대 한 설명을 포함 하는 코드를 둘러쌀 수 되었지만 메모를 중첩할 수 없습니다.  
   
- C\+\+ 주석은 다음 방법 중 하나로 기록됩니다.  
+ C + + 주석 다음 방법 중 하나에 작성 됩니다.  
   
--   문자\(새로운 줄 포함\) 시퀀스 뒤에 오는 `/*`\(슬래시, 별표\) 문자는 `*/` 문자 뒤에 옵니다.  이 구문은 ANSI C와 같습니다.  
+-   `/*` (슬래시, 별표) 문자 다음에 옵니다 (줄 바꿈은 포함) 문자의 시퀀스는 `*/` 문자입니다. 이 구문은 ANSI C.와 동일  
   
--   `//`  \(슬래시 두 개\) 문자 시퀀스 다음에 문자의 시퀀스가 옵니다.  백슬래시가 바로 앞에 오지 않는 새 줄은 이러한 형식의 주석을 종료합니다.  따라서 일반적으로 "한 줄 주석"이라고 합니다.  
+-   `//` (두 개의 슬래시) 문자를 뒤에 일련의 문자입니다. 즉시는 아닙니다 백슬래시가 앞에 새 줄이 주석이 형식을 종료 합니다. 따라서 일반적으로 라고 "한 줄 주석"입니다.  
   
- 주석 문자\(`/*`, `*/` 및 `//`\)에는 문자 상수, 문자열 리터럴 또는 주석 안에서 특별한 의미가 없습니다.  따라서 첫 번째 구문을 사용하는 주석은 중첩할 수 없습니다.  
+ 주석 문자 (`/*`, `*/`, 및 `//`)가 내 문자 상수, 리터럴, 문자열 또는 주석 특별 한 의미가 없습니다. 따라서 첫 번째 구문을 사용 하 여 메모는 중첩할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [어휘 규칙](../cpp/lexical-conventions.md)

@@ -1,30 +1,47 @@
 ---
 title: "tile_static 키워드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "tile_static_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tile_static 키워드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- tile_static_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# tile_static 키워드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-`tile_static` 키워드는 스레드의 타일에 있는 모든 스레드에서 액세스할 수 있는 변수를 선언하는 데 사용됩니다.  변수의 수명은 실행이 선언 지점에 도달할 때 시작되고 커널 함수가 반환될 때 종료됩니다.  타일 사용에 대한 자세한 내용은 [타일 사용](../parallel/amp/using-tiles.md)을 참조하십시오.  
+---
+# <a name="tilestatic-keyword"></a>tile_static 키워드
+`tile_static` 키워드는 스레드의 타일에 있는 모든 스레드에서 액세스할 수 있는 변수를 선언하는 데 사용됩니다. 변수의 수명은 실행이 선언 지점에 도달할 때 시작되고 커널 함수가 반환될 때 종료됩니다. 타일 사용에 대 한 자세한 내용은 참조 하십시오. [를 사용 하 여 타일](../parallel/amp/using-tiles.md)합니다.  
   
  `tile_static` 키워드에는 다음과 같은 제한 사항이 있습니다.  
   
@@ -32,17 +49,16 @@ caps.handback.revision: 12
   
 -   포인터 또는 참조 형식인 변수에 사용할 수 없습니다.  
   
--   `tile_static` 변수에는 이니셜라이저가 있을 수 없습니다.  기본 생성자 및 소멸자가 자동으로 호출되지 않습니다.  
+-   `tile_static` 변수에는 이니셜라이저가 있을 수 없습니다. 기본 생성자 및 소멸자가 자동으로 호출되지 않습니다.  
   
 -   초기화되지 않은 `tile_static` 변수의 값은 정의되지 않습니다.  
   
 -   `tile_static` 변수가 `parallel_for_each`에 대한 비타일 호출이 루트에 있는 호출 그래프에서 선언된 경우 경고가 생성되고 변수의 동작이 정의되지 않습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 `tile_static` 변수를 사용하여 타일의 여러 스레드에서 데이터를 누적하는 방법을 보여 줍니다.  
   
 ```cpp  
-  
 // Sample data:  
 int sampledata[] = {  
     2, 2, 9, 7, 1, 4,  
@@ -154,8 +170,8 @@ for (int i = 0; i < 4; i++) {
   
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)   
- [C\+\+ AMP 개요](../parallel/amp/cpp-amp-overview.md)   
- [parallel\_for\_each 함수\(C\+\+ AMP\)](../Topic/parallel_for_each%20Function%20\(C++%20AMP\).md)   
+ [C + + AMP 개요](../parallel/amp/cpp-amp-overview.md)   
+ [parallel_for_each 함수 (c + + AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
  [연습: 매트릭스 곱](../parallel/amp/walkthrough-matrix-multiplication.md)

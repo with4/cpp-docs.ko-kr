@@ -1,41 +1,58 @@
 ---
 title: "bad_typeid 예외 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bad_typeid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_typeid 예외"
-  - "예외, bad_typeid"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bad_typeid
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_typeid exception
+- exceptions, bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# bad_typeid 예외
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ea7dc85862622180038cf520ef92b752b65eba84
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-`typeid`의 피연산자가 NULL 포인터인 경우 [typeid 연산자](../cpp/typeid-operator.md)가 `bad_typeid` 예외를 throw합니다.  
+---
+# <a name="badtypeid-exception"></a>bad_typeid 예외
+`bad_typeid` 예외를 throw 하는 [typeid 연산자](../cpp/typeid-operator.md) 때 피연산자 `typeid` 는 NULL 포인터입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
       catch (bad_typeid)  
-   statement  
+   statement  
 ```  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `bad_typeid`의 인터페이스는 다음과 같습니다.  
   
 ```  
@@ -48,7 +65,7 @@ public:
 };  
 ```  
   
- 다음 예제에서는 `bad_typeid` 예외를 throw하는 `typeid` 연산자를 보여 줍니다.  
+ 다음 예제에서는 `typeid` 예외를 throw하는 `bad_typeid` 연산자를 보여 줍니다.  
   
 ```  
 // expre_bad_typeid.cpp  
@@ -76,12 +93,12 @@ catch (bad_typeid){
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 Object is NULL  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [런타임 형식 정보](../cpp/run-time-type-information.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+ [키워드](../cpp/keywords-cpp.md)

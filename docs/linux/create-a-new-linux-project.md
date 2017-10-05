@@ -1,7 +1,7 @@
 ---
 title: "새 Linux 프로젝트 만들기 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 08/16/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -26,11 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: e0a92f82413702c639af4a2cd4c4cc62abcce2b2
+ms.translationtype: HT
+ms.sourcegitcommit: 86fae508ea7be012e7491420faf10302f4eb11a9
+ms.openlocfilehash: f738ba6f85f7ba5c75fa32251efc9989e151258b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/24/2017
 Visual Studio에서 새 Linux 프로젝트를 만들려면 다음을 수행합니다.
 
 1. Visual Studio에서 **파일 > 새 프로젝트**를 선택하거나 **Ctrl + Shift + N**을 누릅니다.
-1. **템플릿 > 다른 언어 > Visual C++ > 플랫폼 간 > Linux** 노드를 선택한 후 만들려는 프로젝트 형식을 선택하고, 이름/위치를 입력하고, [확인]을 클릭합니다.
+1. **[Visual C++] > [플랫폼 간] > [Linux]** 노드를 선택한 후 만들려는 프로젝트 형식을 선택하고, 이름/위치를 입력하고, [확인]을 클릭합니다.
 
    ![새 Linux 프로젝트](media/newproject.png)
 

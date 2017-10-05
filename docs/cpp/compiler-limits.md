@@ -1,46 +1,63 @@
 ---
 title: "컴파일러 한계 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe 컴파일러, 언어 구문에 대한 제한 사항"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, limits for language constructs
 ms.assetid: f1fa59c6-55b4-414b-80c5-3df72952160d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 한계
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 986a158ea74e56a0e52c1ffff77f83b8ede71ef5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-C\+\+ 표준에서는 다양한 언어 구문에 대한 한도를 권장합니다.  다음은 Visual C\+\+ 컴파일러에서 권장된 한도를 구현하지 않은 경우의 목록입니다.  첫 번째 수는 ISO C\+\+ 11 표준\(INCITS\/ISO\/IEC 14882\-2011\[2012\], Annex B\)으로 설정된 한도이고 두 번째 수는 Visual C\+\+로 구현된 한도입니다.  
+---
+# <a name="compiler-limits"></a>컴파일러 한계
+C++ 표준에서는 다양한 언어 구문에 대한 한도를 권장합니다. 다음은 Visual C++ 컴파일러에서 권장된 한도를 구현하지 않은 경우의 목록입니다. 첫 번째 수는 ISO C++ 11 표준(INCITS/ISO/IEC 14882-2011[2012], Annex B)으로 설정된 한도이고 두 번째 수는 Visual C++로 구현된 한도입니다.  
   
--   복합 문, 반복 제어 구조체 및 선택 제어 구조체의 중첩 단계 수 \[C\+\+ 표준: 256단계\] \(Visual C\+\+ 컴파일러: 중첩되는 문의 조합에 따라 다르지만 일반적으로 100 및 110단계\)  
+-   복합 문, 반복 제어 구조체 및 선택의 중첩 수준 제어 구조-c + + 표준: 256, Visual c + + 컴파일러: 중첩 된 문 다르지만 일반적으로 100 및 110 단계 조합에 따라 달라 집니다.  
   
--   단일 매크로 정의의 매개 변수 개수 \[C\+\+ 표준: 256개\] \(Visual C\+\+ 컴파일러: 127개\)  
+-   단일 매크로 정의-c + + 표준의 매개 변수: 256, Visual c + + 컴파일러: 127입니다.  
   
--   단일 매크로 호출의 인수 개수 \[C\+\+ 표준: 256개\] \(Visual C\+\+ 컴파일러 127개\)  
+-   하나의 매크로 호출의에서 인수-c + + 표준: 256, Visual c + + 컴파일러 127 개.  
   
--   문자열 리터럴 또는 와이드 문자열 리터럴의 문자 개수\(연결 후\) \[C\+\+ 표준: 65536자\] \(Visual C\+\+ 컴파일러: 싱글바이트 65535자\(`null` 종결자 포함\), 더블바이트 32767자\(`null` 종결자 포함\)\)  
+-   문자는 문자에는 리터럴 또는 와이드 문자열 리터럴 (연결)-후 문자열 c + + 표준: 65536, Visual c + + 컴파일러: 65, 535 단일 바이트 문자를 포함 한는 `null` 종결자가 오는, 및는 를포함하여32767더블바이트문자`null` 종결자입니다.  
   
--   단일 `struct-declaration-list` 내 클래스, 구조체 또는 공용 구조체의 중첩 단계 수 \[C\+\+ 표준: 256단계\] \(Visual C\+\+ 컴파일러: 16단계\)  
+-   중첩 된 클래스, 구조체 또는 공용 구조체 정의에 단일 수준의 `struct-declaration-list` -c + + 표준: 256, Visual c + + 컴파일러: 16입니다.  
   
--   생성자 정의의 멤버 이니셜라이저 개수 \[C\+\+ 표준: 6144개\] \(Visual C\+\+ 컴파일러: 6144개 이상\)  
+-   멤버 이니셜라이저 생성자 정의-c + + 표준: 6144, Visual c + + 컴파일러: 6144 개 이상 있습니다.  
   
--   단일 식별자의 범위 한정자 개수 \[C\+\+ 표준: 256개\] \(Visual C\+\+ 컴파일러: 127개\)  
+-   범위 한정자 개수의 하나 이상의 식별자-c + + 표준: 256, Visual c + + 컴파일러: 127입니다.  
   
--   중첩된 `extern` 지정의 개수\[C\+\+ 표준: 1024개\] \(Visual C\+\+ 컴파일러: 9개\(전역 범위의 암시적 `extern` 지정 제외 시\) 또는 10개\(전역 범위의 암시적 `extern` 지정 포함 시\)\)  
+-   중첩 된 `extern` 사양-c + + 표준: 1024, Visual c + + 컴파일러: 9 (암시적를 세 지 않고 `extern` 10, 암시적를 계산 하는 경우 나 전역 범위에 사양 `extern` 전역 범위에서 지정...  
   
--   템플릿 선언의 템플릿 인수 개수 \[C\+\+ 표준: 1024개\] \(Visual C\+\+ 컴파일러: 2046개\)  
+-   표준 c + +-템플릿 선언의 템플릿 인수: 1024, Visual c + + 컴파일러: 2046 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [비표준 동작](../cpp/nonstandard-behavior.md)

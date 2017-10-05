@@ -1,32 +1,49 @@
 ---
-title: "_set_com_error_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_com_error_handler 함수"
+title: _set_com_error_handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _set_com_error_handler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 626227fb9c5162e5b9fc72fc64348b75ecb27e44
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Microsoft 전용**  
   
  COM 오류 처리에 사용되는 기본 함수를 대체합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void __stdcall _set_com_error_handler(  
@@ -37,7 +54,7 @@ void __stdcall _set_com_error_handler(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pHandler`  
  대체 함수에 대한 포인터입니다.  
   
@@ -47,12 +64,12 @@ void __stdcall _set_com_error_handler(
  `perrinfo`  
  `IErrorInfo` 개체  
   
-## 설명  
- 기본적으로 [\_com\_raise\_error](../cpp/com-raise-error.md)는 모든 COM 오류를 처리합니다.  `_set_com_error_handler`를 사용하여 이 동작을 변경하여 사용자 고유의 오류 처리 함수를 호출할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 기본적으로 [_com_raise_error](../cpp/com-raise-error.md) 모든 COM 오류를 처리 합니다. `_set_com_error_handler`를 사용하여 이 동작을 변경하여 사용자 고유의 오류 처리 함수를 호출할 수 있습니다.  
   
  대체 함수에는 `_com_raise_error`의 시그니처에 해당하는 시그니처가 있어야 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // _set_com_error_handler.cpp  
@@ -89,11 +106,14 @@ int main()
 }  
 ```  
   
-  **Exception raised: Unable to establish the connection\!**   
-## 요구 사항  
+```Output  
+Exception raised: Unable to establish the connection!  
+```  
+  
+## <a name="requirements"></a>요구 사항  
  **헤더:** comdef.h  
   
- **Lib:** "wchar\_t is Native Type" 컴파일러 옵션이 설정되어 있는 경우 comsuppw.lib 또는 comsuppwd.lib를 사용합니다.  "wchar\_t is Native Type"이 해제되어 있는 경우 comsupp.lib를 사용합니다.  자세한 내용은 [\/Zc:wchar\_t\(wchar\_t를 네이티브 형식으로 인식\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)을 참조하십시오.  
+ **Lib:** 경우는 **wchar_t is Native Type** 컴파일러 옵션이 설정 되어 있는 경우 comsuppw.lib 또는 comsuppwd.lib를 사용 합니다. 경우 **wchar_t is Native Type** 해제, comsupp.lib를 사용 합니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 COM 전역 함수](../cpp/compiler-com-global-functions.md)

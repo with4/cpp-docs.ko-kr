@@ -1,89 +1,105 @@
 ---
-title: "_variant_t Extractors | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t.operatordouble"
-  - "operatorlong"
-  - "_variant_t::operator_bstr_t"
-  - "operatordouble"
-  - "_variant_t.operatorCY"
-  - "operatorCY"
-  - "_variant_t::operatorCY"
-  - "_variant_t::operatordouble"
-  - "operatorfloat"
-  - "operatorBYTE"
-  - "_variant_t.operatorDECIMAL"
-  - "_variant_t::operatorlong"
-  - "operatorIDispatch"
-  - "_variant_t.operatorBYTE"
-  - "operatorDECIMAL"
-  - "_variant_t.operator_bstr_t"
-  - "_variant_t::operatorDECIMAL"
-  - "_variant_t.operatorIUnknown"
-  - "_variant_t.operatorlong"
-  - "_variant_t::operatorIDispatch"
-  - "_variant_t::operatorIUnknown"
-  - "operatorIUnknown"
-  - "_variant_t.operatorbool"
-  - "_variant_t::operatorBYTE"
-  - "_variant_t.operatorfloat"
-  - "operator_bstr_t"
-  - "_variant_t::operatorbool"
-  - "operatorshort"
-  - "_variant_t::operatorshort"
-  - "_variant_t::operatorfloat"
-  - "_variant_t.operatorIDispatch"
-  - "_variant_t.operatorshort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "추출기, _variant_t 클래스"
-  - "operator _bstr_t"
-  - "operator bool"
-  - "operator BYTE"
-  - "operator CY"
-  - "operator DECIMAL"
-  - "operator double"
-  - "operator float"
-  - "operator IDispatch"
-  - "operator IUnknown"
-  - "operator long"
-  - "operator SHORT"
+title: "_variant_t 추출기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t.operatordouble
+- operatorlong
+- _variant_t::operator_bstr_t
+- operatordouble
+- _variant_t.operatorCY
+- operatorCY
+- _variant_t::operatorCY
+- _variant_t::operatordouble
+- operatorfloat
+- operatorBYTE
+- _variant_t.operatorDECIMAL
+- _variant_t::operatorlong
+- operatorIDispatch
+- _variant_t.operatorBYTE
+- operatorDECIMAL
+- _variant_t.operator_bstr_t
+- _variant_t::operatorDECIMAL
+- _variant_t.operatorIUnknown
+- _variant_t.operatorlong
+- _variant_t::operatorIDispatch
+- _variant_t::operatorIUnknown
+- operatorIUnknown
+- _variant_t.operatorbool
+- _variant_t::operatorBYTE
+- _variant_t.operatorfloat
+- operator_bstr_t
+- _variant_t::operatorbool
+- operatorshort
+- _variant_t::operatorshort
+- _variant_t::operatorfloat
+- _variant_t.operatorIDispatch
+- _variant_t.operatorshort
+dev_langs:
+- C++
+helpviewer_keywords:
+- extractors, _variant_t class
+- operator CY
+- operator IDispatch
+- operator SHORT
+- operator double
+- operator long
+- operator _bstr_t
+- operator DECIMAL
+- operator float
+- operator bool
+- operator BYTE
+- operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _variant_t Extractors
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 9ec02d82529a6772e079305c34c5f43ee163a2f7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="variantt-extractors"></a>_variant_t Extractors
 **Microsoft 전용**  
   
- 캡슐화된 **VARIANT** 개체에서 데이터를 추출합니다.  
+ 캡슐화 된 데이터를 추출 **VARIANT** 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
-      operator short( ) const;   
-operator long( ) const;   
-operator float( ) const;   
-operator double( ) const;   
-operator CY( ) const;   
-operator _bstr_t( ) const;   
-operator IDispatch*( ) const;   
-operator bool( ) const;   
-operator IUnknown*( ) const;   
-operator DECIMAL( ) const;   
+operator short( ) const;   
+operator long( ) const;   
+operator float( ) const;   
+operator double( ) const;   
+operator CY( ) const;   
+operator _bstr_t( ) const;   
+operator IDispatch*( ) const;   
+operator bool( ) const;   
+operator IUnknown*( ) const;   
+operator DECIMAL( ) const;   
 operator BYTE( ) const;  
 operator VARIANT() const throw();  
 operator char() const;  
@@ -95,32 +111,33 @@ operator __int64() const;
 operator unsigned __int64() const;  
 ```  
   
-## 설명  
- 캡슐화된 **VARIANT**에서 원시 데이터를 추출합니다.  **VARIANT**가 이미 올바른 형식이 아닌 경우 변환을 시도하기 위해 **VariantChangeType**가 사용되며 실패 시 오류가 발생합니다.  
+## <a name="remarks"></a>설명  
+ 캡슐화 된 원시 데이터를 추출 **VARIANT**합니다. 경우는 **VARIANT** 가 올바른 형식이 이미 **VariantChangeType** 변환을 시도 하는 데 사용 되 고 실패 시 오류가 생성 됩니다:  
   
--   **연산자 short\( \) short** 정수 값을 추출합니다.  
+-   **연산자 short ()** 추출는 **짧은** 정수 값입니다.  
   
--   **연산자 long\( \) long** 정수 값을 추출합니다.  
+-   **연산자 long ()** 추출는 **긴** 정수 값입니다.  
   
--   **연산자 float\( \) float** 숫자 값을 추출합니다.  
+-   **연산자 float ()** 추출는 **float** 숫자 값입니다.  
   
--   **연산자 double\( \) 이중** 정수 값을 추출합니다.  
+-   **연산자 double ()** 추출는 **double** 정수 값입니다.  
   
--   **연산자 CY\( \) CY** 개체를 추출합니다.  
+-   **연산자 CY ()** 추출는 **CY** 개체입니다.  
   
--   **연산자 bool\( \)** `bool` 값을 추출합니다.  
+-   **연산자 bool ()** 추출는 `bool` 값입니다.  
   
--   **연산자 DECIMAL\( \) DECIMAL** 값을 추출합니다.  
+-   **연산자 DECIMAL ()** 추출는 **10 진수** 값입니다.  
   
--   **연산자 BYTE\( \) BYTE** 값을 추출합니다.  
+-   **연산자 BYTE ()** 추출는 **바이트** 값입니다.  
   
--   **연산자 \_bstr\_t\( \)** `_bstr_t` 개체에서 캡슐화된 문자열을 추출합니다.  
+-   **연산자 _bstr_t ()** 에 캡슐화 된 문자열을 추출 하는 `_bstr_t` 개체입니다.  
   
--   **연산자 IDispatch \*\( \)** 캡슐화된 **VARIANT**에서 dispinterface 포인터를 추출합니다.  `AddRef`는 결과 포인터에서 호출되므로 **Release**를 호출하여 해제할 수 있습니다.  
+-   **연산자 IDispatch\*()** 캡슐화 된에서 dispinterface 포인터를 추출 **VARIANT**합니다. `AddRef`결과 포인터에서 호출 호출 하 여 되므로 **릴리스** 메모리를 해제 해야 합니다.  
   
--   **연산자 IUnknown\*\( \)** 캡슐화된 **VARIANT**에서 COM 인터페이스 포인터를 추출합니다.  `AddRef`는 결과 포인터에서 호출되므로 **Release**를 호출하여 해제할 수 있습니다.  
+-   **연산자 IUnknown\*()** 에서 캡슐화 된 COM 인터페이스 포인터를 추출 **VARIANT**합니다. `AddRef`결과 포인터에서 호출 호출 하 여 되므로 **릴리스** 메모리를 해제 해야 합니다.  
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_variant\_t 클래스](../cpp/variant-t-class.md)
+## <a name="see-also"></a>참고 항목  
+ [_variant_t 클래스](../cpp/variant-t-class.md)
+

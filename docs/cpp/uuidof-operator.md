@@ -1,38 +1,55 @@
 ---
 title: "__uuidof 연산자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__LIBID_"
-  - "__LIBID_cpp"
-  - "__uuidof"
-  - "__uuidof_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__LIBID_ 키워드[C++]"
-  - "__uuidof 키워드[C++]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __LIBID_
+- __LIBID_cpp
+- __uuidof
+- __uuidof_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __uuidof keyword [C++]
+- __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# __uuidof 연산자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 172ed545eb2c46db8df12e3e12a2296a5f172a1f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="uuidof-operator"></a>__uuidof 연산자
 **Microsoft 전용**  
   
  식에 연결된 GUID를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -41,22 +58,22 @@ caps.handback.revision: 9
 )  
 ```  
   
-## 설명  
- *식*은 형식 이름, 포인터, 참조 또는 배열 형식, 이러한 형식의 변수 또는 형식에 특화된 템플릿이 될 수 있습니다.  인수가 유효하면 컴파일러는 연결된 GUID를 인수를 사용하여 찾을 수 있습니다.  
+## <a name="remarks"></a>설명  
+ *식* 이러한 형식 또는 이러한 형식의 변수에서 특수화 된 템플릿, 형식 이름, 포인터, 참조 또는 해당 형식의 배열이 될 수 있습니다. 컴파일러에서 인수를 사용하여 연결된 GUID를 찾을 수 있으면 해당 인수는 유효합니다.  
   
- 이 내장의 특수 한 경우는 다음 경우 중 하나 **0** 또는 **NULL** 인수로 제공 됩니다.  이 경우, `__uuidof` 는 0으로 구성 된 GUID를 반환합니다.  
+ 이 내장 함수의 특별 한 경우는 경우 어느 **0** 또는 **NULL** 인수로 제공 합니다. 이 경우 `__uuidof`는 0으로 구성된 GUID를 반환합니다.  
   
- 이 키워드를 사용하여 연결된 GUID를 추출하려면:  
+ 이 키워드를 사용하여 연결된 GUID를 다음으로 추출합니다.  
   
--   확장된 특성 [uuid](../cpp/uuid-cpp.md) 에 의한 개체입니다.  
+-   개체는 [uuid](../cpp/uuid-cpp.md) 확장된 특성입니다.  
   
--   [모듈](../windows/module-cpp.md) 특성을 사용하여 만든 라이브러리 블록입니다.  
+-   사용 하 여 만든 라이브러리 블록의 [모듈](../windows/module-cpp.md) 특성입니다.  
   
 > [!NOTE]
->  디버그 빌드에서 `__uuidof` 는 항상 동적으로 \(런타임에서\) 개체를 초기화합니다.  릴리스 빌드에서, `__uuidof` 는 정적으로 \(컴파일 타임에서\) 개체를 초기화할 수 있습니다.  
+>  디버그 빌드에서 `__uuidof`는 항상 동적으로(런타임으로) 개체를 초기화합니다. 릴리스 빌드에서 `__uuidof`는 정적으로(컴파일 시) 개체를 초기화할 수 있습니다.  
   
-## 예제  
- \(ole.32lib를 사용하여 컴파일된\) 다음 코드는 Module 특성을 사용하여 만든 블록 라이브러리의 uuid를 표시합니다.  
+## <a name="example"></a>예제  
+ ole32.lib를 사용하여 컴파일된 다음 코드는 module 특성을 사용하여 만든 라이브러리 블록의 uuid를 표시합니다.  
   
 ```  
 // expre_uuidof.cpp  
@@ -79,8 +96,8 @@ int main() {
 }  
 ```  
   
-## 설명  
- 라이브러리가 더 이상 범위에 없는 경우에서 \_\_LIBID\_를 `__uuidof` 대신에 사용할 수 없습니다.  예를 들면 다음과 같습니다.  
+## <a name="comments"></a>설명  
+ 라이브러리를 더 이상 범위에서의 경우에서 __LIBID를 사용할 수 없습니다\_ 대신 `__uuidof`합니다. 예:  
   
 ```  
 StringFromCLSID(__LIBID_, &lpolestr);  
@@ -88,6 +105,6 @@ StringFromCLSID(__LIBID_, &lpolestr);
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+ [키워드](../cpp/keywords-cpp.md)

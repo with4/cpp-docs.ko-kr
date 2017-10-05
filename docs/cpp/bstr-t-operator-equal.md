@@ -1,37 +1,53 @@
 ---
-title: "_bstr_t::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= 연산자, 특정 Visual C++ 개체와 사용"
-  - "operator =, bstr"
-  - "operator=, bstr"
+title: _bstr_t::operator = | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator =, bstr
+- operator=, bstr
+- = operator, with specific Visual C++ objects
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _bstr_t::operator =
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 445c18ece9b998d5cfa75a1c9fe5bde3b60b2e52
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="bstrtoperator-"></a>_bstr_t::operator =
 **Microsoft 전용**  
   
  기존 `_bstr_t` 개체에 새 값을 할당합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -49,7 +65,7 @@ _bstr_t& operator=(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *s1*  
  기존 `_bstr_t` 개체에 할당될 `_bstr_t` 개체입니다.  
   
@@ -64,8 +80,8 @@ _bstr_t& operator=(
   
  **Microsoft 전용 종료**  
   
-## 예제  
- `operator=`를 사용하는 예제는 [\_bstr\_t::Assign](../cpp/bstr-t-assign.md)을 참조하십시오.  
+## <a name="example"></a>예제  
+ 참조 [_bstr_t:: assign](../cpp/bstr-t-assign.md) 사용 하는 예제에 대 한 `operator=`합니다.  
   
-## 참고 항목  
- [\_bstr\_t 클래스](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>참고 항목  
+ [_bstr_t 클래스](../cpp/bstr-t-class.md)

@@ -1,33 +1,50 @@
 ---
-title: "포인터에 대한 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "참조, 포인터"
+title: "포인터에 대 한 참조 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 포인터에 대한 참조
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf7a3fe930e8b862578286908598c9152943f134
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-포인터에 대한 참조는 개체에 대한 참조와 거의 같은 방법으로 선언할 수 있습니다.  포인터에 대한 참조를 선언하면 일반 포인터처럼 사용되는 수정 가능한 값이 생성됩니다.  
+---
+# <a name="references-to-pointers"></a>포인터에 대한 참조
+포인터에 대한 참조는 개체에 대한 참조와 거의 같은 방법으로 선언할 수 있습니다. 포인터에 대한 참조를 선언하면 일반 포인터처럼 사용되는 수정 가능한 값이 생성됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 코드 샘플은 포인터에 대한 포인터 사용과 포인터에 대한 참조 사용 간의 차이점을 보여 줍니다.  
   
- `Add1` 및 `Add2` 함수는 동일한 방식으로 호출되지는 않지만 기능상 동일합니다.  차이점은 `Add1`에서는 이중 간접 참조를 사용하지만 `Add2`에서는 포인터에 대한 참조의 편리성을 사용한다는 점입니다.  
+ `Add1` 및 `Add2` 함수는 동일한 방식으로 호출되지는 않지만 기능상 동일합니다. 차이점은 `Add1`에서는 이중 간접 참조를 사용하지만 `Add2`에서는 포인터에 대한 참조의 편리성을 사용한다는 점입니다.  
   
 ```  
 // references_to_pointers.cpp  
@@ -36,7 +53,7 @@ caps.handback.revision: 12
 #include <iostream>  
 #include <string>  
   
-// STL namespace  
+// C++ Standard Library namespace  
 using namespace std;  
   
 enum {  
@@ -157,9 +174,15 @@ int Add2( BTree*& Root, char *szToAdd ) {
 }  
 ```  
   
-  **Usage: Refptr \[1 &#124; 2\]**  
-**다음은 각 문자에 대한 설명입니다.**  
-**1 uses double indirection**  
-**2 uses a reference to a pointer.  Input is from stdin.**    
-## 참고 항목  
+```Output  
+Usage: Refptr [1 | 2]  
+  
+where:  
+1 uses double indirection  
+2 uses a reference to a pointer.  
+  
+Input is from stdin.  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [참조](../cpp/references-cpp.md)

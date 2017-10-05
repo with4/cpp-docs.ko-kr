@@ -1,33 +1,51 @@
 ---
-title: "함수 템플릿 호출의 오버로드 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "함수 템플릿 오버로드 확인"
+title: "함수 템플릿 호출의 오버 로드 확인 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 함수 템플릿 호출의 오버로드 확인
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: f5c4a8e6392bc5b4338738b56099adac268e7af1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-함수 템플릿은 동일한 이름의 비템플릿 함수를 오버로드할 수 있습니다.  이 시나리오에서 함수 호출은 첫 번째 템플릿 인수 추론을 사용하여 고유한 특수화를 통해 함수 템플릿을 인스턴스화할 수 있습니다.  템플릿 인수 추론이 실패하는 경우 다른 함수 오버로드가 호출을 해결하기 위해 고려됩니다.  후보 집합이라고도 불리는 이러한 다른 오버로드는 비템플릿 함수와 다른 인스턴스화된 함수 템플릿을 포함합니다.  템플릿 인수 추론이 성공하는 경우 생성된 함수는 오버로드 확인 규칙에 따라 다른 함수와 비교하여 최상의 경우를 결정합니다.  자세한 내용은 [오버 로딩](../misc/overloading-cpp.md) 및 [인수 일치](../misc/argument-matching.md)를 참조하십시오.  
+---
+# <a name="overload-resolution-of-function-template-calls"></a>함수 템플릿 호출의 오버로드 확인
+함수 템플릿은 동일한 이름의 비템플릿 함수를 오버로드할 수 있습니다. 이 시나리오에서 함수 호출은 첫 번째 템플릿 인수 추론을 사용하여 고유한 특수화를 통해 함수 템플릿을 인스턴스화할 수 있습니다. 템플릿 인수 추론이 실패하는 경우 다른 함수 오버로드가 호출을 해결하기 위해 고려됩니다. 후보 집합이라고도 불리는 이러한 다른 오버로드는 비템플릿 함수와 다른 인스턴스화된 함수 템플릿을 포함합니다. 템플릿 인수 추론이 성공하는 경우 생성된 함수는 오버로드 확인 규칙에 따라 다른 함수와 비교하여 최상의 경우를 결정합니다. 자세한 내용은 참조 [함수 오버 로드](function-overloading.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제
+
  비템플릿 함수가 템플릿 함수와 동일하게 일치하는 경우 다음 예제에서 템플릿 인수가 명시적으로 지정되지 않은 경우 비템플릿 함수가 호출 `f(1, 1)`로써 선택됩니다.  
   
-```  
+```cpp
 // template_name_resolution9.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -50,13 +68,17 @@ int main()
 }  
 ```  
   
-  **f\(int, int\)**  
-**void f\(T1, T2\)**  
-**void f\(T1, T2\)**   
-## 예제  
+```Output  
+f(int, int)  
+void f(T1, T2)  
+void f(T1, T2)  
+```  
+  
+## <a name="example"></a>예제
+
  다음 예제는 비템플릿 함수를 변환해야 하는 경우 정확하게 일치하는 템플릿 함수가 선호됨을 보여 줍니다.  
   
-```  
+```cpp
 // template_name_resolution10.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -80,8 +102,13 @@ int main()
 }  
 ```  
   
-  **void f\(T1, T2\)**   
-## 참고 항목  
+```Output  
+void f(T1, T2)  
+```  
+  
+## <a name="see-also"></a>참고 항목
+
  [이름 확인](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   
- [템플릿 인수 추론](../Topic/Template%20Argument%20Deduction.md)
+ 
+

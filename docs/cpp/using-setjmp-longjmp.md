@@ -1,43 +1,60 @@
 ---
-title: "setjmp/longjmp 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "longjmp"
-  - "setjmp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 예외 처리, setjmp/longjmp 함수"
-  - "C++ 프로그램의 longjmp 함수"
-  - "setjmp 함수"
-  - "setjmp 함수, C++ 프로그램"
-  - "SETJMP.H"
-  - "SETJMPEX.H"
+title: "Setjmp longjmp 사용 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- longjmp
+- setjmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ exception handling, setjmp/longjmp functions
+- SETJMPEX.H
+- longjmp function in C++ programs
+- SETJMP.H
+- setjmp function
+- setjmp function, C++ programs
 ms.assetid: 96be8816-f6f4-4567-9a9c-0c3c720e37c5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# setjmp/longjmp 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 356924c0a93f6d9d21bb417f84836385491b2144
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-[setjmp](../c-runtime-library/reference/setjmp.md) 및 [longjmp](../c-runtime-library/reference/longjmp.md)를 함께 사용하면 비로컬 `goto`를 실행할 수 있습니다.  setjmp와 longjmp는 표준 호출이나 반환 규칙을 사용하지 않고 전에 호출된 루틴에서 오류 처리 또는 복구 코드에 실행 제어를 전달하는 데 주로 사용됩니다.  
+---
+# <a name="using-setjmplongjmp"></a>setjmp/longjmp 사용
+때 [setjmp](../c-runtime-library/reference/setjmp.md) 및 [longjmp](../c-runtime-library/reference/longjmp.md) 는 로컬이 아닌를 실행 하는 방법을 제공 함께 사용할 `goto`합니다. setjmp와 longjmp는 표준 호출이나 반환 규칙을 사용하지 않고 전에 호출된 루틴에서 오류 처리 또는 복구 코드에 실행 제어를 전달하는 데 주로 사용됩니다.  
   
 > [!CAUTION]
->  그러나 `setjmp` 및 `longjmp`는 C\+\+ 개체 의미 체계를 지원하지 않으며 지역 변수의 최적화를 막아 성능을 저하시킬 수 있으므로 C\+\+ 프로그램에서는 사용하지 않는 것이 좋습니다.  대신 `try`\/`catch` 구문을 사용하십시오.  
+>  그러나 `setjmp` 및 `longjmp`는 C++ 개체 의미 체계를 지원하지 않으며 지역 변수의 최적화를 막아 성능을 저하시킬 수 있으므로 C++ 프로그램에서는 사용하지 않는 것이 좋습니다. 사용 하는 것이 좋습니다 `try` / `catch` 대신 생성 합니다.  
   
- C\+\+ 프로그램에서 `setjmp`\/`longjmp`를 사용하려면 함수와 C\+\+ 예외 처리 간에 올바른 상호 작용이 이루어지도록 SETJMP.H나 SETJMPEX.H를 포함해야 합니다.  [\/EH](../build/reference/eh-exception-handling-model.md)를 사용하여 컴파일할 경우 스택 해제 중에 로컬 개체의 소멸자가 호출됩니다.  **\/EHs**를 사용하여 컴파일할 경우 함수 중 하나가 [nothrow](../cpp/nothrow-cpp.md)를 사용하는 함수를 호출하고 `nothrow`를 사용하는 함수가 `longjmp`를 호출하면 최적화 프로그램에 따라 소멸자가 해제될 수 있습니다.  
+ 사용 하려는 경우 `setjmp` / `longjmp` c + + 프로그램에서 SETJMP도 포함 합니다. H 또는 SETJMPEX 합니다. 함수 및 c + + 예외 처리 간에 올바른 상호 작용이을 H. 사용 하는 경우 [/EH](../build/reference/eh-exception-handling-model.md) 를 컴파일하려면 로컬 개체에 대 한 소멸자가 스택 해제 중 호출 됩니다. 사용 하는 경우 **/EHs** 컴파일과 함수 호출 사용 하는 함수 중 하나를 [nothrow](../cpp/nothrow-cpp.md) 및 사용 하는 함수의 `nothrow` 호출 `longjmp`, 소멸자가 해제 하지 발생할 수 있으며, 그런 다음 최적화 프로그램에 따라.  
   
- 이식 가능한 코드에서 `longjmp`를 호출하는 비로컬 `goto`가 실행되면 프레임 기반 개체가 제대로 삭제되지 않을 수도 있습니다.  
+ 이식 가능한 코드에서 `goto`를 호출하는 비로컬 `longjmp`가 실행되면 프레임 기반 개체가 제대로 삭제되지 않을 수도 있습니다.  
   
-## 참고 항목  
- [\(구조적\) C 및 C\+\+ 예외 혼합](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+## <a name="see-also"></a>참고 항목  
+ [C(구조적) 및 C++ 예외 혼합](../cpp/mixing-c-structured-and-cpp-exceptions.md)

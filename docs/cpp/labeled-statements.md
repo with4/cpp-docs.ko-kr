@@ -1,31 +1,48 @@
 ---
-title: "레이블 문 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "goto"
-  - "case"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "labeled 문"
-  - "문, labeled"
+title: "문을 레이블이 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- goto
+- case
+dev_langs:
+- C++
+helpviewer_keywords:
+- labeled statement
+- statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 레이블 문
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9011728bf6b8eac5a8ce13ebca2301fc36ad633a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="labeled-statements"></a>레이블 문
 레이블은 프로그램 제어를 지정된 문에 직접 전송하는 데 사용됩니다.  
   
 ```  
@@ -36,8 +53,8 @@ default :  statement
   
  레이블의 범위는 레이블이 선언된 함수 전체입니다.  
   
-## 설명  
- 세 가지 형식의 레이블 문이 있습니다.  모두 문에서 특정 형식의 레이블을 분리하는 데 콜론을 사용합니다.  case 및 기본 레이블은 case 문과 관련이 있습니다.  
+## <a name="remarks"></a>설명  
+ 세 가지 형식의 레이블 문이 있습니다. 모두 문에서 특정 형식의 레이블을 분리하는 데 콜론을 사용합니다. case 및 기본 레이블은 case 문과 관련이 있습니다.  
   
 ```cpp  
 #include <iostream>   
@@ -66,13 +83,13 @@ int main() {
   
 ```  
   
- **goto 문**  
+ **Goto 문**  
   
- 소스 프로그램에 *identifier* 레이블이 나타나면 레이블이 선언됩니다.  [goto](../cpp/goto-statement-cpp.md) 문만이 제어를 *identifier* 레이블로 전송할 수 있습니다.  다음 코드 조각에서는 `goto` 문 및 *identifier* 레이블의 사용을 보여 줍니다.  
+ 모양을 *식별자* 소스 프로그램에 레이블이 나타나면 레이블이 선언 합니다. 만 [goto](../cpp/goto-statement-cpp.md) 문을 컨트롤을 전송할 수 있습니다는 *식별자* 레이블. 다음 코드 조각 사용을 보여 줍니다.는 `goto` 문 및 *식별자* 레이블:  
   
- 레이블은 단독으로 나타날 수 없고 항상 문에 첨부되어야 합니다.  레이블이 단독으로 필요한 경우 레이블 뒤에 null 문을 배치하세요.  
+ 레이블은 단독으로 나타날 수 없고 항상 문에 첨부되어야 합니다. 레이블이 단독으로 필요한 경우 레이블 뒤에 null 문을 배치하세요.  
   
- 레이블에는 함수 범위가 있으며 함수 내에서 레이블을 다시 선언할 수 없습니다.  그러나 다른 함수에서 동일한 이름을 레이블로 사용할 수 있습니다.  
+ 레이블에는 함수 범위가 있으며 함수 내에서 레이블을 다시 선언할 수 없습니다. 그러나 다른 함수에서 동일한 이름을 레이블로 사용할 수 있습니다.  
   
 ```  
 // labels_with_goto.cpp  
@@ -91,9 +108,9 @@ int main() {
 //Output: At Test2 label.  
 ```  
   
- **case 문**  
+ **Case 문**  
   
- 또한 **case** 키워드 다음에 표시되는 레이블도 `switch` 문 외부에 나타날 수 없습니다.  \(이러한 제한에도 **default** 키워드가 적용됩니다.\) 다음 코드 조각은 **case** 레이블의 올바른 사용을 보여 줍니다.  
+ 다음에 표시 되는 레이블을 **대/소문자** 키워드 외부에 나타날 수 없습니다는 `switch` 문. (이러한 제한에도 적용 됩니다는 **기본** 키워드입니다.) 다음 코드에서는 올바른 사용을 보여 줍니다. **대/소문자** 레이블:  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -121,8 +138,8 @@ switch( msg )
 }  
 ```  
   
-## case 문의 레이블  
- 또한 **case** 키워드 다음에 표시되는 레이블도 `switch` 문 외부에 나타날 수 없습니다.  \(이러한 제한에도 **default** 키워드가 적용됩니다.\) 다음 코드 조각은 **case** 레이블의 올바른 사용을 보여 줍니다.  
+## <a name="labels-in-the-case-statement"></a>case 문의 레이블  
+ 다음에 표시 되는 레이블을 **대/소문자** 키워드 외부에 나타날 수 없습니다는 `switch` 문. (이러한 제한에도 적용 됩니다는 **기본** 키워드입니다.) 다음 코드에서는 올바른 사용을 보여 줍니다. **대/소문자** 레이블:  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -165,12 +182,12 @@ switch( msg )
 }  
 ```  
   
-## goto 문의 레이블  
- 소스 프로그램에 *identifier* 레이블이 나타나면 레이블이 선언됩니다.  [goto](../cpp/goto-statement-cpp.md) 문만 *identifier* 레이블로 컨트롤을 전송할 수 있습니다.  다음 코드 조각에서는 `goto` 문 및 *identifier* 레이블의 사용을 보여 줍니다.  
+## <a name="labels-in-the-goto-statement"></a>goto 문의 레이블  
+ 모양을 *식별자* 소스 프로그램에 레이블이 나타나면 레이블이 선언 합니다. 만 [goto](../cpp/goto-statement-cpp.md) 문을 컨트롤을 전송할 수 있습니다는 *식별자* 레이블. 다음 코드 조각 사용을 보여 줍니다.는 `goto` 문 및 *식별자* 레이블:  
   
- 레이블은 단독으로 나타날 수 없고 항상 문에 첨부되어야 합니다.  레이블이 단독으로 필요한 경우 레이블 뒤에 null 문을 배치하세요.  
+ 레이블은 단독으로 나타날 수 없고 항상 문에 첨부되어야 합니다. 레이블이 단독으로 필요한 경우 레이블 뒤에 null 문을 배치하세요.  
   
- 레이블에는 함수 범위가 있으며 함수 내에서 레이블을 다시 선언할 수 없습니다.  그러나 다른 함수에서 동일한 이름을 레이블로 사용할 수 있습니다.  
+ 레이블에는 함수 범위가 있으며 함수 내에서 레이블을 다시 선언할 수 없습니다. 그러나 다른 함수에서 동일한 이름을 레이블로 사용할 수 있습니다.  
   
 ```  
 // labels_with_goto.cpp  
@@ -189,6 +206,6 @@ int main() {
   
 ```  
   
-## 참고 항목  
- [C\+\+문 개요](../cpp/overview-of-cpp-statements.md)   
- [switch 문 \(C\+\+\)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [C + + 문 개요](../cpp/overview-of-cpp-statements.md)   
+ [switch 문(C++)](../cpp/switch-statement-cpp.md)

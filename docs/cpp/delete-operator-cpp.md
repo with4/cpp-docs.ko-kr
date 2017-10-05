@@ -1,44 +1,60 @@
 ---
-title: "delete 연산자 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "delete_cpp"
-  - "delete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delete 키워드[C++]"
-  - "delete 키워드[C++], 개체 할당 해제"
-  - "delete 키워드[C++], 구문"
+title: "delete 연산자 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- delete_cpp
+- delete
+dev_langs:
+- C++
+helpviewer_keywords:
+- delete keyword [C++], syntax
+- delete keyword [C++], deallocating objects
+- delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# delete 연산자 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bfc2587b4d55ae0147adf797990139356d44cd30
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="delete-operator-c"></a>delete 연산자 (C++)
 메모리 블록을 할당 취소합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 [::] delete cast-expression  
 [::] delete [ ] cast-expression  
 ```  
   
-## 설명  
- *cast\-expression* 인수는 [new 연산자](../cpp/new-operator-cpp.md)를 사용하여 만든 개체에 이전에 할당된 메모리 블록에 대한 포인터여야 합니다.  **delete** 연산자는 `void` 형식의 결과를 가지므로 값을 반환하지 않습니다.  예:  
+## <a name="remarks"></a>설명  
+ *캐스트 식* 인수를 사용 하 여 만든 개체에 대해 이전에 할당 된 메모리 블록에 대 한 포인터 이어야는 [new 연산자](../cpp/new-operator-cpp.md)합니다. **삭제** 연산자의 결과 유형 `void` 있으며 값을 반환 하지 않습니다. 예:  
   
 ```  
 CDialog* MyDialog = new CDialog;  
@@ -46,9 +62,9 @@ CDialog* MyDialog = new CDialog;
 delete MyDialog;  
 ```  
   
- **new**로 할당되지 않은 개체에 대한 포인터에 **delete**를 사용하면 예기치 않은 결과가 제공됩니다.  그러나 값이 0인 포인터에는 **dlete**를 사용할 수 있습니다.  이 프로비전은 **new**가 실패 시 0을 반환하는 경우 실패한 **new** 작업의 결과를 삭제해도 됨을 의미합니다.  자세한 내용은 [new 및 delete 연산자](../cpp/new-and-delete-operators.md)를 참조하세요.  
+ 사용 하 여 **삭제** 와 할당 되지 않은 개체에 대 한 포인터에 **새** 예기치 않은 결과 제공 합니다. 그러나 사용할 수 있습니다 **삭제** 값이 0 인 포인터에 있습니다. 이 프로 비전 됨을 의미 때 **새** 삭제 실패로 인해 실패 시 0을 반환 합니다. **새** 작업은 무시 해도 됩니다. 참조 [새 및 delete 연산자](../cpp/new-and-delete-operators.md) 자세한 정보에 대 한 합니다.  
   
- 배열을 포함하는 기본 제공 형식에 **new** 및 **delete** 연산자를 사용할 수도 있습니다.  `pointer`가 배열을 가리키는 경우 `pointer` 앞에 빈 대괄호를 넣습니다.  
+ **새** 및 **삭제** 연산자 배열을 포함 하는 기본 제공 형식에 사용할 수도 있습니다. `pointer`가 배열을 가리키는 경우 `pointer` 앞에 빈 대괄호를 넣습니다.  
   
 ```  
 int* set = new int[100];  
@@ -56,14 +72,14 @@ int* set = new int[100];
 delete [] set;  
 ```  
   
- 개체에 **delete** 연산자를 사용하면 해당 메모리가 할당 취소됩니다.  개체가 삭제된 후에 포인터를 역참조하는 프로그램에서는 예기치 않은 결과나 충돌이 발생할 수 있습니다.  
+ 사용 하는 **삭제** 연산자는 개체에는 메모리의 할당을 취소 합니다. 개체가 삭제된 후에 포인터를 역참조하는 프로그램에서는 예기치 않은 결과나 충돌이 발생할 수 있습니다.  
   
- **delete**를 사용하여 C\+\+ 클래스 개체에 대한 메모리 할당을 취소하는 경우 개체의 메모리 할당이 취소되기 전에 개체의 소멸자가 호출됩니다\(개체에 소멸자가 있는 경우\).  
+ 때 **삭제** 는 c + + 클래스 개체에 대 한 메모리 할당을 취소 하는 데 사용, 개체의 소멸자가 하기 전에 호출 됩니다 (개체에 소멸자) 하는 경우 해당 개체의 메모리 할당 해제 됩니다.  
   
- **delete** 연산자에 대한 피연산자가 수정 가능한 l\-value이면 개체가 삭제된 후 해당 값이 정의되지 않습니다.  
+ 경우에 있는 피연산자는 **삭제** 연산자는 수정 가능한 l-value 이면 개체가 삭제 된 후 해당 값이 정의 되지 합니다.  
   
-## 삭제 사용  
- 단일 개체와 개체의 배열에 각각 사용되는 [delete 연산자](../cpp/delete-operator-cpp.md)의 두 가지 구문 변형이 있습니다.  다음 코드에서는 두 가지 변형의 차이점을 보여 줍니다.  
+## <a name="using-delete"></a>삭제 사용  
+ 에 대 한 두 가지 구문 변형이 [delete 연산자](../cpp/delete-operator-cpp.md): 단일 개체와 다른 개체의 배열입니다. 다음 코드에서는 두 가지 변형의 차이점을 보여 줍니다.  
   
 ```  
 // expre_Using_delete.cpp  
@@ -89,18 +105,19 @@ int main()
 }  
 ```  
   
- 개체에 대해 delete의 배열 형태\(delete \[ \]\)를 사용하는 경우와 배열에 대해 delete의 비배열 형태를 사용하는 경우에는 정의되지 않은 결과가 생성됩니다.  
+ 개체에 대해 delete의 배열 형태(delete [ ])를 사용하는 경우와 배열에 대해 delete의 비배열 형태를 사용하는 경우에는 정의되지 않은 결과가 생성됩니다.  
   
-## 예제  
- **delete**를 사용하는 예를 보려면 [new 연산자](../cpp/new-operator-cpp.md)를 참조하세요.  
+## <a name="example"></a>예제  
+ 에 대 한 예제 **삭제**, 참조 [new 연산자](../cpp/new-operator-cpp.md)합니다.  
   
-## delete 작동 방식  
- [delete 연산자](../cpp/delete-operator-cpp.md)는 [operator delete](../misc/operator-delete-function.md) 함수를 호출합니다.  
+## <a name="how-delete-works"></a>delete 작동 방식  
+ Delete 연산자 함수를 호출 **delete 연산자**합니다.  
   
- 클래스 형식이 아닌 개체의 경우\([class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md) 또는 [union](../cpp/unions.md)\) 전역 delete 연산자가 호출됩니다.  클래스 형식 개체의 경우에는 삭제 식이 단항 범위 확인 연산자\(::\)로 시작되면 할당 해제 함수의 이름이 전역 범위에서 확인됩니다.  그렇지 않으면 delete 연산자가 메모리 할당을 해제하기 전에 개체에 대한 소멸자를 호출합니다\(포인터가 null이 아닌 경우\).  delete 연산자는 클래스별로 정의될 수 있습니다. 지정된 클래스에 이러한 정의가 없는 경우 전역 delete 연산자가 호출됩니다.  삭제 식을 사용하여 정적 형식이 가상 소멸자인 클래스 개체를 할당 해제하는 경우, 할당 해제 함수는 개체의 동적 형식에 대한 가상 소멸자를 통해 확인됩니다.  
+ 하지 클래스 형식의 개체에 대 한 ([클래스](../cpp/class-cpp.md), [구조체](../cpp/struct-cpp.md), 또는 [union](../cpp/unions.md)), 전역 delete 연산자가 호출 됩니다. 클래스 형식 개체의 경우에는 삭제 식이 단항 범위 확인 연산자(::)로 시작되면 할당 해제 함수의 이름이 전역 범위에서 확인됩니다. 그렇지 않으면 delete 연산자가 메모리 할당을 해제하기 전에 개체에 대한 소멸자를 호출합니다(포인터가 null이 아닌 경우). delete 연산자는 클래스별로 정의될 수 있습니다. 지정된 클래스에 이러한 정의가 없는 경우 전역 delete 연산자가 호출됩니다. 삭제 식을 사용하여 정적 형식이 가상 소멸자인 클래스 개체를 할당 해제하는 경우, 할당 해제 함수는 개체의 동적 형식에 대한 가상 소멸자를 통해 확인됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)   
+ [키워드](../cpp/keywords-cpp.md)   
  [new 및 delete 연산자](../cpp/new-and-delete-operators.md)   
- [operator delete 함수](../misc/operator-delete-function.md)
+ 
+

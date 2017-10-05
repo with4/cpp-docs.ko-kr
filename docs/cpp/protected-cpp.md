@@ -1,33 +1,49 @@
 ---
-title: "protected (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "protected"
-  - "protected_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "protected 키워드[C++]"
-  - "protected 키워드[C++], 멤버 액세스"
+title: protected (c + +) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- protected
+- protected_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- protected keyword [C++], member access
+- protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# protected (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b65c73c7ecc3419f4a2a40e4bf693049226bd8b7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-## 구문  
+---
+# <a name="protected-c"></a>protected (C++)
+## <a name="syntax"></a>구문  
   
 ```  
 protected:  
@@ -35,8 +51,8 @@ protected:
 protected base-class  
 ```  
   
-## 설명  
- `protected` 키워드는 *member\-list*의 클래스 멤버에 대한 액세스를 다음 액세스 지정자\(**public** 또는 `private`\) 또는 클래스 정의의 끝까지 지정합니다.  `protected`로 선언된 클래스 멤버는 다음에만 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `protected` 키워드의 클래스 멤버에 대 한 액세스를 지정는 *멤버 목록* 까지 다음 액세스 지정자 (**공용** 또는 `private`) 또는 클래스 정의의 끝입니다. `protected`로 선언된 클래스 멤버는 다음에만 사용할 수 있습니다.  
   
 -   원래 이 멤버를 선언한 클래스의 멤버 함수  
   
@@ -48,21 +64,21 @@ protected base-class
   
  기본 클래스 이름 앞에 오는 `protected` 키워드는 기본 클래스의 공용 및 보호된 멤버가 파생된 해당 클래스의 보호된 멤버라고 지정합니다.  
   
- 보호된 멤버는 선언된 클래스의 멤버에만 액세스할 수 있는 `private` 멤버만큼 전용은 아니지만 어느 함수에서나 액세스할 수 있는 **public** 멤버만큼 공용도 아닙니다.  
+ 보호 된 멤버 만큼 전용 없는 `private` 멤버는 선언 하지만 만큼 공용도 아닌 클래스의 멤버에만 액세스할 수 있는 **공용** 모든 함수에 액세스할 수 있는 멤버입니다.  
   
- **static**으로도 선언된 보호된 멤버는 파생 클래스의 friend나 멤버 함수에 액세스할 수 있습니다.  **static**으로 선언되지 않은 보호된 멤버는 파생 클래스의 포인터, 참조 또는 개체를 통해서만 파생 클래스의 friend와 멤버 함수에 액세스할 수 있습니다.  
+ 보호 된 구성원으로도 선언 된 **정적** 파생된 클래스의 모든 친구 또는 멤버 함수에 액세스할 수 있어야 합니다. 보호 된 구성원으로 선언 되지 않은 **정적** 친구와 파생된 클래스의 개체 또는 포인터, 참조, 통해서만 파생된 클래스에서 멤버 함수에 액세스할 수 있어야 합니다.  
   
- 관련 정보는 [friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md) 및 [클래스 멤버에 대한 액세스 제어](../misc/controlling-access-to-class-members.md)의 멤버 액세스 테이블을 참조하세요.  
+ 관련된 정보를 참조 하십시오. [friend](../cpp/friend-cpp.md), [공용](../cpp/public-cpp.md), [개인](../cpp/private-cpp.md), 멤버 액세스 테이블 및 [클래스 멤버에 대 한 액세스 제어](member-access-control-cpp.md) .  
   
-## \/clr 관련  
- CLR 형식에서 C\+\+ 액세스 지정자 키워드\(**public**, `private` 및 `protected`\)는 어셈블리와 관련된 형식 및 메서드의 표시 유형에 영향을 줄 수 있습니다.  자세한 내용은 [형식 멤버 표시 유형](../misc/type-and-member-visibility.md)을 참조하세요.  
+## <a name="clr-specific"></a>/clr 관련  
+ CLR 형식에서 c + + 액세스 지정자 키워드 (**공용**, `private`, 및 `protected`) 형식 및 어셈블리와 관련 된 메서드 표시 여부에 영향을 줄 수 있습니다. 자세한 내용은 참조 [멤버 액세스 제어](member-access-control-cpp.md)합니다.  
   
 > [!NOTE]
->  [\/LN](../build/reference/ln-create-msil-module.md)으로 컴파일된 파일은 이 동작의 영향을 받지 않습니다.  이 경우 관리되는 클래스\(공용 또는 전용\)가 모두 표시됩니다.  
+>  으로 컴파일된 파일 [/LN](../build/reference/ln-create-msil-module.md) 이 동작에 의해 영향을 받지 않습니다. 이 경우 관리되는 클래스(공용 또는 전용)가 모두 표시됩니다.  
   
-## END \/clr 관련  
+## <a name="end-clr-specific"></a>END /clr 관련  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // keyword_protected.cpp  
@@ -96,6 +112,6 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [클래스 멤버에 대한 액세스 제어](../misc/controlling-access-to-class-members.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [클래스 멤버에 대 한 액세스 제어](member-access-control-cpp.md)   
+ [키워드](../cpp/keywords-cpp.md)

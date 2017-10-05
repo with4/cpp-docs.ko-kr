@@ -1,32 +1,48 @@
 ---
-title: "캐스팅 연산자: () | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "() 캐스트 연산자"
-  - "캐스트 연산자"
+title: "캐스트 연산자: () | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cast operators
+- () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 캐스팅 연산자: ()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bf8299fb0992f42fabe49bbbbffe0693fc93d961
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="cast-operator-"></a>캐스팅 연산자: ()
 형식 캐스팅은 특정 상황에서의 개체 형식에 대한 명시적 변환을 위한 메서드를 제공합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,12 +50,12 @@ manager: "ghogen"
 ( type-name ) cast-expression  
 ```  
   
-## 설명  
+## <a name="remarks"></a>설명  
  모든 단항 식은 캐스트 식으로 간주됩니다.  
   
- 형식 캐스팅이 만들어지면 컴파일러에서 *cast\-expression*을 *type\-name* 형식으로 처리합니다.  모든 스칼라 형식의 개체로 또는 다른 모든 스칼라 형식에서 변환하는 데 캐스트를 사용할 수 있습니다.  명시적 형식 캐스트는 암시적 변환 결과를 확인하는 동일한 규칙으로 제한됩니다.  캐스팅에 대한 추가 제한은 특정 형식의 실제 크기 또는 표현에서 발생할 수 있습니다.  
+ 형식 캐스팅이 만들어지면 컴파일러에서 *cast-expression*을 *type-name* 형식으로 처리합니다. 모든 스칼라 형식의 개체로 또는 다른 모든 스칼라 형식에서 변환하는 데 캐스트를 사용할 수 있습니다. 명시적 형식 캐스트는 암시적 변환 결과를 확인하는 동일한 규칙으로 제한됩니다. 캐스팅에 대한 추가 제한은 특정 형식의 실제 크기 또는 표현에서 발생할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // expre_CastOperator.cpp  
@@ -59,7 +75,7 @@ int main()
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // expre_CastOperator2.cpp  
@@ -122,14 +138,16 @@ int main()
 }  
 ```  
   
-  **RawBytes truncated to 10 chars:  Exciting\!\!**  
-**Casted Bytes:  Exciting**  
-**Note that the cast changed the raw internal string**  
-**Raw Bytes after cast:  Exciting**   
-## 참고 항목  
+```Output  
+RawBytes truncated to 10 chars:   Exciting!!  
+Casted Bytes:   Exciting  
+Note that the cast changed the raw internal string  
+Raw Bytes after cast:   Exciting  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 연산자](../misc/cpp-operators.md)   
- [C\+\+ 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [명시적 형식 변환 연산자: \(\)](../cpp/explicit-type-conversion-operator-parens.md)   
+ [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [명시적 형식 변환 연산자:)](../cpp/explicit-type-conversion-operator-parens.md)   
  [캐스팅 연산자](../cpp/casting-operators.md)   
  [캐스트 연산자](../c-language/cast-operators.md)

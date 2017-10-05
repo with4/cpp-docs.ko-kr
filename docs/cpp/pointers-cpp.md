@@ -1,35 +1,51 @@
 ---
-title: "포인터 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "선언, 포인터"
-  - "선언자, 포인터"
-  - "포인터"
-  - "포인터, 선언"
+title: "포인터 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, pointers
+- declarations, pointers
+- pointers
+- pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 포인터
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-c"></a>포인터 (c + +)
 포인터는 다음 시퀀스를 사용하여 선언합니다.  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
@@ -39,17 +55,17 @@ manager: "ghogen"
 * [cv-qualifiers] identifier [= expression]  
 ```  
   
- 1.  선언 지정자:  
+ 1. 선언 지정자:  
   
--   선택적 저장소 클래스 지정자.  자세한 내용은 [지정자](../cpp/specifiers.md)를 참조하십시오.  
+-   선택적 저장소 클래스 지정자. 자세한 내용은 참조 [지정자](../cpp/specifiers.md)합니다.  
   
 -   가리키는 대상 개체의 형식에 적용되는 선택적 `const` 또는 `volatile` 키워드  
   
 -   형식 지정자: 가리키는 대상 개체의 형식을 나타내는 형식의 이름  
   
- 2.  선언자:  
+ 2. 선언자:  
   
--   선택적 Microsoft 전용 한정자.  자세한 내용은 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)를 참조하십시오.  
+-   선택적 Microsoft 전용 한정자. 자세한 내용은 참조 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)합니다.  
   
 -   `*` 연산자  
   
@@ -72,8 +88,6 @@ manager: "ghogen"
 * identifier [ [ constant-expression ] ]  
 ```  
   
--   그러나 포인터 선언자는 더 복잡해질 수 있습니다.  자세한 내용은 [선언자](http://msdn.microsoft.com/ko-kr/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)를 참조하십시오.  
-  
 -   여러 선언자와 해당 이니셜라이저가 단일 선언에서 선언 지정자 뒤에 쉼표로 구분된 목록으로 함께 나타날 수 있습니다.  
   
  포인터 선언의 간단한 예제는 다음과 같습니다.  
@@ -90,7 +104,7 @@ char *pch;
 static unsigned int * const ptr;  
 ```  
   
- 위의 선언은 `ptr`이 정적 저장 기간이 포함된 `unsigned` `int` 형식의 개체에 대한 상수 포인터임을 지정합니다.  
+ 앞의 선언은 지정 `ptr` 형식의 개체에 대 한 상수 포인터 `unsigned` `int` 정적 저장 기간이 있는 합니다.  
   
  다음 예제에서는 여러 포인터가 선언 및 초기화되는 방법을 보여 줍니다.  
   
@@ -100,7 +114,7 @@ static int *p = &i, *q = &j;
   
  위의 예제에서 p 포인터와 q 포인터 모두 `int` 형식의 개체를 가리키며 각각 i 및 j 주소로 초기화됩니다.  저장소 클래스 지정자 `static`은 두 포인터에 모두 적용됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // pointer.cpp  
@@ -176,19 +190,22 @@ int main() {
 }  
 ```  
   
-  **0x0012FEC8**  
-**0x0012FEC8 2**  
-**0x0012FEC8 7**  
-**j \= 10**  
-**0x00320850 5**  
-**0x00320850 0**  
-**0x00320854 10**  
-**0x00320858 20**  
-**0x0032085C 30**  
-**0x00320860 40**  
-**dog dog**   
-## 예제  
- 다음은 데이터 구조\(이 경우에는 연결된 목록\)에서 포인터를 사용하는 방법을 보여 주는 또 다른 예제입니다.  
+```Output  
+0x0012FEC8  
+0x0012FEC8 2  
+0x0012FEC8 7  
+j is 10  
+0x00320850 5  
+0x00320850 0  
+0x00320854 10  
+0x00320858 20  
+0x0032085C 30  
+0x00320860 40  
+dog dog  
+```  
+  
+## <a name="example"></a>예제  
+ 다음은 데이터 구조(이 경우에는 연결된 목록)에서 포인터를 사용하는 방법을 보여 주는 또 다른 예제입니다.  
   
 ```  
 // pointer_linkedlist.cpp  
@@ -248,18 +265,26 @@ int main() {
 }  
 ```  
   
-  **`a 45 d a 789 d q`a \(add node\) d \(display list\) q \(quit\)**  
-**enter a number:**   
-**a \(add node\) d \(display list\) q \(quit\)**  
-**node 1 \= 45**  
-**a \(add node\) d \(display list\) q \(quit\)**  
-**enter a number:**   
-**a \(add node\) d \(display list\) q \(quit\)**  
-**node 1 \= 45**  
-**node 2 \= 789**  
-**a \(add node\) d \(display list\) q \(quit\)**   
-## 참고 항목  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/ko-kr/e7e18c18-0cad-4450-942b-d27e1d4dd088)   
- [포인터 형식의 더하기](../misc/addition-of-pointer-types.md)   
- [간접 참조 연산자: \*](../cpp/indirection-operator-star.md)   
+```Output  
+  
+      a  
+45  
+d  
+a  
+789  
+d  
+qa (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+a (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+node 2 = 789  
+a (add node)  d (display list)  q (quit)  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [간접 참조 연산자: *](../cpp/indirection-operator-star.md)   
  [주소 연산자: &](../cpp/address-of-operator-amp.md)

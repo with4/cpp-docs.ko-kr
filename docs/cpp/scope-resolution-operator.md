@@ -1,44 +1,65 @@
 ---
-title: "범위 해결 연산자: :: | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "::"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ":: 연산자"
-  - "연산자[C++], 범위 결정"
-  - "범위 결정 연산자"
-  - "범위, 범위 결정 연산자"
+title: "범위 해결 연산자::: | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '::'
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope, scope resolution operator
+- operators [C++], scope resolution
+- scope resolution operator
+- ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 범위 해결 연산자: ::
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 715eb7c5e004d7e0731ef599e54beb5fc6690e50
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
-범위 확인 연산자 `::`는 여러 범위에 사용된 식별자를 식별하고 구분하는 데 사용됩니다.  범위에 대한 자세한 내용은 [범위](../cpp/scope-visual-cpp.md)를 참조하세요.  
+---
+# <a name="scope-resolution-operator-"></a>범위 해결 연산자: ::
+범위 확인 연산자 `::`는 여러 범위에 사용된 식별자를 식별하고 구분하는 데 사용됩니다. 범위에 대 한 자세한 내용은 참조 [범위](../cpp/scope-visual-cpp.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-:: identifier class-name :: identifier namespace :: identifier enum class :: identifier enum struct :: identifier  
+:: identifier  
+class-name :: identifier  
+namespace :: identifier  
+enum class :: identifier  
+enum struct :: identifier  
 ```  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `identifier`에는 변수, 함수 또는 열거형 값이 해당됩니다.  
   
-## 클래스 및 네임스페이스에 사용  
+## <a name="with-classes-and-namespaces"></a>클래스 및 네임스페이스에 사용  
  다음 예제에서는 범위 확인 연산자가 네임스페이스 및 클래스에 사용되는 방법을 보여줍니다.  
   
 ```cpp  
@@ -85,7 +106,7 @@ int main() {
 }  
 ```  
   
- 범위 확인 연산자를 사용하여 네임스페이스 멤버를 식별하거나 using 지시문으로 멤버의 네임스페이스를 지명하는 네임스페이스를 식별할 수 있습니다.  아래 예제에서는 `ClassB`가 네임스페이스 `NamespaceB`에 선언되었지만 using 지시문을 사용하여 `NamespaceB`가 `NamespaceC`에서 지명되었으므로 `NamespaceC`를 사용하여 `ClassB`를 한정할 수 있습니다.  
+ 범위 확인 연산자를 사용하여 네임스페이스 멤버를 식별하거나 using 지시문으로 멤버의 네임스페이스를 지명하는 네임스페이스를 식별할 수 있습니다. 아래 예제에서는 `NamespaceC`가 네임스페이스 `ClassB`에 선언되었지만 using 지시문을 사용하여 `ClassB`가 `NamespaceB`에서 지명되었으므로 `NamespaceB`를 사용하여 `NamespaceC`를 한정할 수 있습니다.  
   
 ```cpp  
 namespace NamespaceB {  
@@ -109,7 +130,7 @@ int main() {
   
 ```  
   
- 범위 확인 연산자를 연쇄적으로 사용할 수 있습니다.  다음 예제에서 `NamespaceD::NamespaceD1`은 중첩된 네임스페이스 `NamespaceD1`을 식별하고 `NamespaceE::ClassE::ClassE1`은 중첩된 클래스 `ClassE1`을 식별합니다.  
+ 범위 확인 연산자를 연쇄적으로 사용할 수 있습니다. 다음 예제에서 `NamespaceD::NamespaceD1`은 중첩된 네임스페이스 `NamespaceD1`을 식별하고 `NamespaceE::ClassE::ClassE1`은 중첩된 클래스 `ClassE1`을 식별합니다.  
   
 ```cpp  
 namespace NamespaceD{  
@@ -137,7 +158,7 @@ int main() {
   
 ```  
   
-## 정적 멤버에 사용  
+## <a name="with-static-members"></a>정적 멤버에 사용  
  클래스의 정적 멤버를 호출하려면 범위 확인 연산자를 사용해야 합니다.  
   
 ```cpp  
@@ -157,8 +178,8 @@ int main() {
   
 ```  
   
-## 범위가 지정된 열거형에 사용  
- 다음 예제와 같이, 범위 확인 연산자를 범위가 지정된 열거형\([열거형 선언](../cpp/enumerations-cpp.md) 참조\)의 값에 사용할 수도 있습니다.  
+## <a name="with-scoped-enumerations"></a>범위가 지정된 열거형에 사용  
+ 범위 확인 연산자를 범위가 지정 된 열거형의 값으로는 또한 [열거형 선언](../cpp/enumerations-cpp.md)다음 예제와 같이,:  
   
 ```cpp  
 enum class EnumA{  
@@ -174,7 +195,6 @@ int main() {
   
 ```  
   
-## 참고 항목  
- [C\+\+ 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>참고 항목  
+ [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [네임스페이스](../cpp/namespaces-cpp.md)   
- [이름 및 정규화된 이름](../misc/names-and-qualified-names.md)

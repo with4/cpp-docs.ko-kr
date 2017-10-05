@@ -1,35 +1,52 @@
 ---
-title: "_bstr_t::GetBSTR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "GetBSTR"
-  - "_bstr_t::GetBSTR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetBSTR 메서드"
+title: _bstr_t::GetBSTR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- GetBSTR
+- _bstr_t::GetBSTR
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetBSTR method
 ms.assetid: 0c62ff16-4433-4183-a03c-d5a0a9b731ef
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _bstr_t::GetBSTR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 376951862a82d6588221b592238c9346d31bad4d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Microsoft 전용**  
   
- `_bstr_t`에 의해 래핑되는 `BSTR`의 시작 부분을 가리킵니다.  
+ `BSTR`에 의해 래핑되는 `_bstr_t`의 시작 부분을 가리킵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -37,16 +54,16 @@ BSTR& GetBSTR( );
   
 ```  
   
-## 반환 값  
- `_bstr_t`에 의해 래핑되는 `BSTR`의 시작 부분입니다.  
+## <a name="return-value"></a>반환 값  
+ `BSTR`에 의해 래핑되는 `_bstr_t`의 시작 부분입니다.  
   
-## 설명  
- `GetBSTR`은 `BSTR`을 공유하는 모든 `_bstr_t` 개체에 영향을 줍니다.  두 개 이상의 `_bstr_t`는 복사 생성자와 `operator=`를 사용하여 `BSTR`을 공유할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `GetBSTR`는 `_bstr_t`을 공유하는 모든 `BSTR` 개체에 영향을 줍니다. 두 개 이상의 `_bstr_t`는 복사 생성자와 `BSTR`를 사용하여 `operator=`을 공유할 수 있습니다.  
   
-## 예제  
- `GetBSTR`를 사용하는 예는 [\_bstr\_t::Assign](../cpp/bstr-t-assign.md)을 참조하십시오.  
+## <a name="example"></a>예제  
+ 참조 [_bstr_t:: assign](../cpp/bstr-t-assign.md) 사용 하는 예제 `GetBSTR`합니다.  
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_bstr\_t 클래스](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>참고 항목  
+ [_bstr_t 클래스](../cpp/bstr-t-class.md)
