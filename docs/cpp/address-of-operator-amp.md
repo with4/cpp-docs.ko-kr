@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- address-of
+- '&'
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/25/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 & cast-expression  
 ```  
   
@@ -136,3 +135,4 @@ int main() {
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Lvalue 참조 선언 자: &](../cpp/lvalue-reference-declarator-amp.md)   
  [연산자 주소 및 간접 참조](../c-language/indirection-and-address-of-operators.md)
+
