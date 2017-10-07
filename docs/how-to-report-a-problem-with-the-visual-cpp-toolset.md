@@ -15,14 +15,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
 ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
+ms.contentlocale: ko-kr
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Visual C++ 도구 집합의 문제를 보고하는 방법
@@ -40,7 +37,7 @@ Visual C++ 컴파일러, 링커 또는 기타 도구에 문제가 발생하면 �
   
  보고서는 Microsoft와 다른 개발자에게 중요합니다. Visual C++ 개선에 도움 주셔서 감사합니다!  
   
-##  <a name="a-namepreparea-how-to-prepare-your-report"></a><a name="prepare"></a> 보고서를 준비하는 방법  
+##  <a name="prepare"></a> 보고서를 준비하는 방법  
  완전한 정보가 없으면 발생한 문제를 다른 컴퓨터에서 재현하는 것이 매우 어렵기 때문에 고품질 보고서를 만드는 것이 중요합니다. 보고서가 향상될수록 더 효과적으로 문제를 재현하고 진단할 수 있습니다.  
   
  보고서에는 최소한 다음 정보가 포함되어야 합니다.  
@@ -144,7 +141,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information   
 ```  
   
-####  <a name="a-namebackendcrasha-backend-code-generation-crash"></a><a name="backend_crash"></a> 백 엔드(코드 생성) 충돌  
+####  <a name="backend_crash"></a> 백 엔드(코드 생성) 충돌  
  백 엔드 충돌은 컴파일러의 코드 생성 단계 중에 발생합니다. 일반적으로 컴파일러는 [심각한 오류 C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)을 내보내며, 문제와 관련된 소스 코드 파일 및 줄 번호를 참조하지 않을 수도 있습니다. compiler\utc\src\p2\main.c 파일을 언급하는 경우도 많지만 이 세부 정보는 무시해도 됩니다.  
   
  이러한 종류의 충돌을 보고하려면 [링크 재현](#link_repro)(LTCG(링크 타임 코드 생성)를 사용하는 경우) 또는 [전처리 재현](#preprocessed_repro)(LTCG를 사용하지 않는 경우)을 제공하세요. LTGC는 cl.exe에 대한 `/GL` 명령줄 인수를 통해 사용됩니다.  
@@ -217,7 +214,7 @@ CONTEXT:
   
  이러한 종류의 충돌을 보고하려면 [링크 재현](#link_repro)(LTCG(링크 타임 코드 생성)를 사용하는 경우) 또는 [전처리 재현](#preprocessed_repro)(LTCG를 사용하지 않는 경우)을 제공하세요. LTGC는 cl.exe에 대한 `/GL` 명령줄 인수를 통해 사용됩니다.  
   
-##  <a name="a-namesenda-ways-to-send-your-report"></a><a name="send"></a> 보고서를 보내는 방법  
+##  <a name="send"></a> 보고서를 보내는 방법  
  여러 가지 방법으로 보고서를 보낼 수 있습니다. Microsoft Connect에서 버그를 신고하거나, 전자 메일을 보내거나, Visual Studio의 기본 제공 문제 보고 도구를 사용할 수 있습니다. 보고서에 적합한 선택 항목은 발생한 문제 종류, 보고서를 조사할 엔지니어와 상호 작용하려는 방법, 진행 상황을 추적하거나 보고서를 커뮤니티와 공유할지 여부에 따라 달라집니다.  
   
 > [!NOTE]
@@ -268,7 +265,7 @@ Source code and repro steps:
 > [!TIP]
 >  Visual Studio에서 발생할 수 있고 도구 집합과 관련이 없는 다른 종류의 문제(예: UI 문제, 손상된 IDE 기능 또는 일반 충돌)에서는 스크린샷 기능과 발생한 문제를 초래하는 UI 작업 기록 기능 때문에 문제 보고 도구가 특히 유용할 수 있습니다. Microsoft Connect도 이러한 다른 종류의 오류를 보고하는 데 적합할 수 있지만 문제 보고 도구의 추가 기능이 없습니다. 이러한 다른 종류의 오류는 compilercrash@microsoft.com으로 전자 메일을 전송하여 보고하면 안 됩니다.  
   
-##  <a name="a-namegeneratea-generating-repros"></a><a name="generate"></a> 보고서 생성  
+##  <a name="generate"></a> 보고서 생성  
  재현은 발생한 문제를 보여 주는 완전한 자체 포함된 코드 예제입니다. 재현은 코드 조각이 **아닙니다**. 보고하는 문제로 인해 생성되는 오류를 제외하고 빌드 및 실행되는 전체 예제여야 합니다. 표준 헤더의 경우에도 필요한 모든 #include 지시문을 포함해야 합니다.  
   
  또한 좋은 재현은 다음과 같습니다.  
@@ -285,7 +282,7 @@ Source code and repro steps:
   
  다음은 각기 다른 종류의 문제를 보고하는 데 사용할 다양한 종류의 재현을 생성하기 위한 지침입니다.  
   
-###  <a name="a-namepreprocessedreproa-preprocessed-repos"></a><a name="preprocessed_repro"></a> 전처리 재현  
+###  <a name="preprocessed_repro"></a> 전처리 재현  
  전처리 재현은 문제를 보여 주고 원래 소스 파일을 처리하여 C 전처리기의 출력에서 생성된 단일 소스 파일입니다. 이 프로세스에서는 포함된 헤더를 인라인으로 처리하여 추가 소스 및 헤더 파일에 대한 종속성을 제거하며 매크로, #ifdef 및 로컬 환경에 종속될 수 있는 다른 전처리기 명령도 확인합니다.  
   
 > [!NOTE]
@@ -313,7 +310,7 @@ Source code and repro steps:
   
  마지막으로, 이 재현을 보고서를 첨부합니다.  
   
-###  <a name="a-namelinkreproa-link-repros"></a><a name="link_repro"></a> 링크 재현  
+###  <a name="link_repro"></a> 링크 재현  
  링크 재현은 링크 타임에 발생하는 문제(예: LTCG(링크 타임 코드 생성)와 관련된 백 엔드 충돌 또는 링커 충돌)를 총체적으로 보여 주는 빌드 아티팩트를 포함하는 단일 디렉터리입니다. 포함된 빌드 아티팩트는 문제를 재현할 수 있도록 링커 입력으로 필요한 항목입니다. 링크 재현은 링커를 통해 제공되는 기능을 사용하여 쉽게 만들 수 있습니다.  
   
 ##### <a name="to-generate-a-link-repro"></a>링크 재현을 생성하려면  
@@ -332,12 +329,7 @@ Source code and repro steps:
   
  마지막으로, 전체 디렉터리를 .zip 파일 등으로 압축하여 재현을 패키징하고 보고서에 첨부합니다.  
   
-###  <a name="a-nameotherreprosa-other-repros"></a><a name="other_repros"></a> 기타 재현  
+###  <a name="other_repros"></a> 기타 재현  
  문제를 단일 소스 파일이나 전처리 재현으로 줄일 수 없고 문제에 링크 재현이 필요하지 않은 경우 IDE 프로젝트를 조사할 수 있습니다. 프로젝트 내의 코드는 최소화해야 하며, 이 문서의 모든 지침도 적용됩니다.  
   
  재현을 최소 IDE 프로젝트로 만든 다음 전체 디렉터리 구조를 .zip 파일 등으로 압축하여 패키징하고 보고서에 첨부합니다.
-
-
-<!--HONumber=Feb17_HO4-->
-
-
