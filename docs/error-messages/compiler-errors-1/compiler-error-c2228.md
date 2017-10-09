@@ -19,26 +19,11 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 39bbed326de5fc0a367e9b7693d3975b766e9bfc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6960d2a34a6a68925e04e0812730025d1ce2ff92
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2228"></a>컴파일러 오류 C2228
@@ -67,6 +52,6 @@ int main() {
   
  Managed Extensions를 사용할 때 잘못된 구문을 사용하는 경우에도 이 오류가 나타납니다. 반면, 다른 Visual Studio 언어에서는 점(.) 연산자를 사용하여 관리되는 클래스의 멤버에 액세스할 수 있습니다. C++에서 개체에 대한 포인터는 멤버에 액세스할 때 -> 연산자를 사용해야 한다는 것을 뜻합니다.  
   
- 잘못 된:`String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
+ 올바르지 않은 코드: `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
   
- 오른쪽:`String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`
+ 올바른 코드: `String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`
