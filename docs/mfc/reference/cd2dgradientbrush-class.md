@@ -1,5 +1,5 @@
 ---
-title: "CD2DGradientBrush 클래스 | Microsoft 문서"
+title: "CD2DGradientBrush 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,31 +20,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DGradientBrush class
+- CD2DGradientBrush [MFC], CD2DGradientBrush
+- CD2DGradientBrush [MFC], Destroy
+- CD2DGradientBrush [MFC], m_arGradientStops
+- CD2DGradientBrush [MFC], m_colorInterpolationGamma
+- CD2DGradientBrush [MFC], m_extendMode
+- CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
 caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 0b0a692ef2b5194daf7b38eed9ebe3b2f4eda448
+ms.translationtype: MT
+ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
+ms.openlocfilehash: 0fdfbf838b8c0e294c8ddbd550a982c89b129df2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 클래스
@@ -77,7 +68,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |----------|-----------------|  
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP 구조체의 배열입니다.|  
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|어떤 색 그라데이션 중지점 사이의 보간을 수행 되는 공간입니다.|  
-|[CD2DGradientBrush::m_extendMode](#m_extendmode)|[0,&1;]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.|  
+|[CD2DGradientBrush::m_extendMode](#m_extendmode)|[0, 1]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.|  
 |[CD2DGradientBrush::m_pGradientStops](#m_pgradientstops)|D2D1_GRADIENT_STOP 구조의 배열에 대 한 포인터입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -127,13 +118,13 @@ CD2DGradientBrush(
  어떤 색 그라데이션 중지점 사이의 보간을 수행 되는 공간입니다.  
   
  `extendMode`  
- [0,&1;]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.  
+ [0, 1]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.  
   
  `pBrushProperties`  
  불투명도 및 브러시의 변환에 대 한 포인터입니다.  
   
  `bAutoDestroy`  
- 개체 소유자 (pParentTarget)에 의해 소멸 되는 것을 나타냅니다.  
+ 개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
 ##  <a name="destroy"></a>CD2DGradientBrush::Destroy  
  CD2DGradientBrush 개체를 소멸 시킵니다.  
@@ -157,7 +148,7 @@ D2D1_GAMMA m_colorInterpolationGamma;
 ```  
   
 ##  <a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
- [0,&1;]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.  
+ [0, 1]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.  
   
 ```  
 D2D1_EXTEND_MODE m_extendMode;  
