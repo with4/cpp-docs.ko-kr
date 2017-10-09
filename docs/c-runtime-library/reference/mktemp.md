@@ -1,41 +1,44 @@
 ---
-title: "mktemp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mktemp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mktemp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mktemp 함수"
+title: mktemp | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mktemp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- mktemp
+dev_langs:
+- C++
+helpviewer_keywords:
+- mktemp function
 ms.assetid: b58cba60-034f-4e63-b312-ccbcd489d0a7
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# mktemp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 72ff44298cb954750749117a993b547da04e976d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-이 POSIX 함수는 사용되지 않습니다.  보안이 향상된 [\_mktemp\_s](../../c-runtime-library/reference/mktemp-s-wmktemp-s.md) 또는 [\_mktemp](../../c-runtime-library/reference/mktemp-wmktemp.md) 대신에 ISO C\+\+ 규칙을 사용합니다.
+---
+# <a name="mktemp"></a>mktemp
+이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_mktemp](../../c-runtime-library/reference/mktemp-wmktemp.md) 또는 보안이 강화된 [_mktemp_s](../../c-runtime-library/reference/mktemp-s-wmktemp-s.md)를 사용하세요.

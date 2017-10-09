@@ -1,5 +1,5 @@
 ---
-title: "IAxWinHostWindowLic 인터페이스 | Microsoft 문서"
+title: "IAxWinHostWindowLic 인터페이스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 01ff8a7205418583606cbfdb1c028d7097501e00
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 6d0e8c0a8ec941c7a7980b81fcd95df08298ea28
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic 인터페이스
-이 인터페이스는 사용이 허가 된 컨트롤 및 해당 호스트 개체를 조작 하기 위한 메서드를 제공 합니다.  
+이 인터페이스는 라이센스가 있는 컨트롤 및 해당 호스트 개체를 조작 하기 위한 메서드를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,18 +44,18 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
   
 |||  
 |-|-|  
-|[CreateControlLic](#createcontrollic)|라이센스가 있는 컨트롤을 만들고 호스트 개체에 연결 합니다.|  
-|[CreateControlLicEx](#createcontrollicex)|라이센스가 있는 컨트롤을 만들고 호스트 개체에 연결 필요에 따라 이벤트 처리기를 설정 합니다.|  
+|[CreateControlLic](#createcontrollic)|사용이 허가 된 제어를 만들고 호스트 개체에 연결 합니다.|  
+|[CreateControlLicEx](#createcontrollicex)|사용이 허가 된 컨트롤을 만듭니다., 호스트 개체에 연결 하 고 필요에 따라 이벤트 처리기를 설정 합니다.|  
   
-## <a name="remarks"></a>주의  
- `IAxWinHostWindowLic`상속 [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) 라이선스가 있는 컨트롤 만들기를 지 원하는 메서드를 추가 합니다.  
+## <a name="remarks"></a>설명  
+ `IAxWinHostWindowLic`상속 [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) 사용이 허가 된 컨트롤의 만들기를 지 원하는 메서드를 추가 합니다.  
   
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 이 인터페이스의 멤버를 사용 하는 샘플에 대 한 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- 이 인터페이스의 정의 아래와 같이 IDL 또는 c + +에서 사용할 수 있습니다.  
+ 아래와 같이이 인터페이스의 정의 IDL 또는 c + +로 제공 됩니다.  
   
-|형식 정의|파일|  
+|정의 유형|파일|  
 |---------------------|----------|  
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h (ATLBase.h에도 포함)|  
@@ -87,9 +73,9 @@ STDMETHOD(CreateControlLic)(
   
 ### <a name="parameters"></a>매개 변수  
  `bstrLic`  
- [in] 컨트롤에 대 한 라이선스 키를 포함 하는 BSTR 합니다.  
+ [in] 컨트롤에 대 한 라이선스 키를 포함 하는 BSTR입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) 에 대 한 설명은 나머지 매개 변수 및 반환 값입니다.  
   
  이 메서드를 호출 하는 것 [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)  
@@ -98,7 +84,7 @@ STDMETHOD(CreateControlLic)(
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `IAxWinHostWindowLic::CreateControlLic`합니다.  
   
 ##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
- 사용이 허가 된 ActiveX 컨트롤을 만들고 초기화를 유사 하 게 지정 된 창에 호스팅합니다 [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)합니다.  
+ 사용 허가 받은 ActiveX 컨트롤을 만들고 초기화를 유사 하며 지정한 창에 호스팅합니다 [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)합니다.  
   
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -113,9 +99,9 @@ STDMETHOD(CreateControlLicEx)(
   
 ### <a name="parameters"></a>매개 변수  
  `bstrLic`  
- [in] 컨트롤에 대 한 라이선스 키를 포함 하는 BSTR 합니다.  
+ [in] 컨트롤에 대 한 라이선스 키를 포함 하는 BSTR입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) 에 대 한 설명은 나머지 매개 변수 및 반환 값입니다.  
   
 ### <a name="example"></a>예제  

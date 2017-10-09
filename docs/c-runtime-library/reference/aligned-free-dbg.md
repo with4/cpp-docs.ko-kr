@@ -35,25 +35,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3522cd33098484194fec8158b26577b9e01dfe62
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 724acaed1c99aa2507c33010e97f3f993e1b6de6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
@@ -72,7 +58,7 @@ void _aligned_free_dbg(
  `_aligned_malloc` 또는 `_aligned_offset_malloc` 함수로 반환된 메모리 블록에 대한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- `_aligned_free_dbg` 함수는 [_aligned_free](../../c-runtime-library/reference/aligned-free.md) 함수의 디버그 버전입니다. [_DEBUG](../../c-runtime-library/debug.md)를 정의하지 않은 경우 `_aligned_free_dbg`에 대한 각 호출이 `_aligned_free`에 대한 호출로 줄어듭니다. 둘 다 `_aligned_free` 및 `_aligned_free_dbg` 기본 힙에서 메모리 블록 이지만 `_aligned_free_dbg` 디버깅 기능을 수용: 메모리 부족 조건을 시뮬레이션 하는 힙의 연결된 리스트에서 해제 된 상태로 유지 하는 기능을 차단 합니다.  
+ `_aligned_free_dbg` 함수는 [_aligned_free](../../c-runtime-library/reference/aligned-free.md) 함수의 디버그 버전입니다. [_DEBUG](../../c-runtime-library/debug.md)를 정의하지 않은 경우 `_aligned_free_dbg`에 대한 각 호출이 `_aligned_free`에 대한 호출로 줄어듭니다. 둘 다 `_aligned_free` 및 `_aligned_free_dbg` 기본 힙에서 메모리 블록 하지만 `_aligned_free_dbg` 디버깅 기능을 수용: 메모리 부족 조건을 시뮬레이션 하는 힙의 연결된 리스트에서 해제 된 상태로 유지 하는 기능을 차단 합니다.  
   
  `_aligned_free_dbg`는 해제 작업을 수행하기 전에 지정된 파일과 블록 위치 모두에 대해 유효성 검사를 수행합니다. 응용 프로그램에서는 이러한 유효성 검사 정보를 제공하지 않습니다. 메모리 블록이 해제되면 디버그 힙 관리자는 자동으로 사용자 부분 양쪽에 있는 버퍼의 무결성을 확인하며 덮어쓰기가 발생하면 오류 보고서를 만듭니다. [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 플래그의 `_CRTDBG_DELAY_FREE_MEM_DF` 비트 필드가 설정되면 빈 블록은 값 0xDD로 채워지고, 빈 블록에는 `_FREE_BLOCK` 블록 형식이 할당되고, 메모리 블록에 대한 힙의 연결된 목록에서 보관됩니다.  
   
@@ -86,7 +72,7 @@ void _aligned_free_dbg(
 |-------------|---------------------|  
 |`_aligned_free_dbg`|\<crtdbg.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [디버그 루틴](../../c-runtime-library/debug-routines.md)

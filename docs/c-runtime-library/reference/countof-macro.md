@@ -1,46 +1,49 @@
 ---
-title: "_countof 매크로 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_countof"
-  - "countof"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_countof 매크로"
-  - "countof 매크로"
+title: "_countof 매크로 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _countof
+- countof
+dev_langs:
+- C++
+helpviewer_keywords:
+- countof macro
+- _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _countof 매크로
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 71d4310525f1d96184749b5b0b24cb0cf1da8512
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="countof-macro"></a>_countof 매크로
 정적으로 할당된 배열의 요소 수를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 size_t _countof(   
@@ -48,23 +51,23 @@ size_t _countof(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `array`  
  배열 이름입니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  배열의 요소 수이며 `size_t`로 표현됩니다.  
   
-## 설명  
- `array`는 실제로 포인터가 아니라 배열입니다.  C에서 `_countof`가 포인터일 경우 `array`는 잘못된 결과를 생성합니다.  C\+\+에서 `_countof`가 포인터일 경우 `array`는 컴파일에 실패합니다.  
+## <a name="remarks"></a>설명  
+ `array`는 실제로 포인터가 아니라 배열입니다. C에서 `_countof`가 포인터일 경우 `array`는 잘못된 결과를 생성합니다. C++에서 `_countof`가 포인터일 경우 `array`는 컴파일에 실패합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |매크로|필수 헤더|  
-|---------|-----------|  
-|`_countof`|\<stdlib.h\>|  
+|-----------|---------------------|  
+|`_countof`|\<stdlib.h>|  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // crt_countof.cpp  
@@ -86,7 +89,10 @@ int main( void )
 }  
 ```  
   
-  **sizeof\(arr\) \= 40 bytes**  
-**\_countof\(arr\) \= 20 elements**   
-## 참고 항목  
+```Output  
+sizeof(arr) = 40 bytes  
+_countof(arr) = 20 elements  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [sizeof 연산자](../../cpp/sizeof-operator.md)

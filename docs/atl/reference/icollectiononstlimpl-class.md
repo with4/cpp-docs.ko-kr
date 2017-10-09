@@ -1,5 +1,5 @@
 ---
-title: "ICollectionOnSTLImpl 클래스 | Microsoft 문서"
+title: "ICollectionOnSTLImpl 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,29 +24,15 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f6ee8d14046a8d114316527cebfc4b75fd667614
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: b1c2debc93f6503bf7928ed789345a50c281804d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 클래스
-이 클래스는 컬렉션 클래스를 사용 하는 메서드를 제공 합니다.  
+이 클래스는 컬렉션 클래스에 의해 사용 되는 메서드를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -116,7 +102,7 @@ class ICollectionOnSTLImpl : public T```
  This method returns the number of items in the collection.  
   
 ```
-STDMETHOD(getcount) (long * pcount);
+STDMETHOD(getcount) (장기 * pcount);
 ```  
   
 ### Parameters  
@@ -130,7 +116,7 @@ STDMETHOD(getcount) (long * pcount);
  This method returns the specified item from the collection.  
   
 ```
-STDMETHOD(get_Item) (긴 Index, ItemType pvar);
+STDMETHOD(get_Item) (긴 인덱스, ItemType pvar);
 ```  
   
 ### Parameters  

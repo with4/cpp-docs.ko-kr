@@ -1,5 +1,5 @@
 ---
-title: "_ATL_MODULE70 구조 | Microsoft 문서"
+title: "_ATL_MODULE70 구조 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,25 +22,11 @@ caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: ea1d87d3d500fc08f3da16de6820ca003e899419
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 104596d55ee2580cbee3cfc916ad9ef7390ce4c1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70 구조
@@ -62,15 +48,15 @@ struct _ATL_MODULE70 {
  버전 관리에 사용 되는 구조체의 크기입니다.  
   
  `m_nLockCnt`  
- 모듈을 활성 상태로 유지 되어야 기간을 확인 하려면 참조 횟수입니다.  
+ 모듈을 활성 상태로 남아 해야 기간 결정 하기 위한 참조 횟수입니다.  
   
  **m_pTermFuncs**  
- ATL 종료 될 때 호출 될 등록 된 함수를 추적 합니다.  
+ ATL 종료 될 때 호출 될에 등록 된 트랙 함수입니다.  
   
  **m_csStaticDataInitAndTypeInfo**  
  다중 스레드 상황에서 내부 데이터에 대 한 액세스를 조정 하는 데 사용 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  [_ATL_MODULE](atl-typedefs.md#_atl_module) 의 typedef로 정의 된 `_ATL_MODULE70`합니다.  
   
 ## <a name="requirements"></a>요구 사항  

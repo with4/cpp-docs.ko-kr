@@ -99,30 +99,15 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW 매크로
-디버그 보고서를 생성하여 응용 프로그램의 진행률을 추적합니다(디버그 버전에만 해당함). *n*은 `args`의 인수 수를 지정하며 0, 1, 2, 3, 4, 5 중 하나일 수 있습니다.  
+디버그 보고서를 생성하여 응용 프로그램의 진행률을 추적합니다(디버그 버전에만 해당함).  *n*  의 인수 개수를 지정 `args` 이며 0, 1, 2, 3, 4 또는 5 일 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -169,7 +154,7 @@ _RPTFWn(
   
  `_RPTW` 및 `_RPTFW` 매크로는 이러한 매크로의 와이드 문자 버전입니다. 이러한 매크로는 `wprintf`처럼 와이드 문자열을 인수로 사용합니다.  
   
- `_RPT` 매크로는 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 함수를 호출하여 사용자 메시지가 포함된 디버그 보고서를 생성합니다. `_RPTW` 매크로는 `_CrtDbgReportW` 함수를 호출하여 와이드 문자가 포함된 동일 보고서를 생성합니다. `_RPTF` 및 `_RPTFW` 매크로는 보고서 매크로가 호출된 소스 파일과 줄 번호 및 사용자 메시지를 사용하여 디버그 보고서를 만듭니다. [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 함수에서 정의한 것과 같은 규칙을 사용하여 `arg`[*n*] 인수를 `format` 문자열로 대체해 사용자 메시지를 만듭니다.  
+ `_RPT` 매크로는 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 함수를 호출하여 사용자 메시지가 포함된 디버그 보고서를 생성합니다. `_RPTW` 매크로는 `_CrtDbgReportW` 함수를 호출하여 와이드 문자가 포함된 동일 보고서를 생성합니다. `_RPTF` 및 `_RPTFW` 매크로는 보고서 매크로가 호출된 소스 파일과 줄 번호 및 사용자 메시지를 사용하여 디버그 보고서를 만듭니다. 사용자 메시지를 대체 하 여 작성는 `arg`[*n*] 인수는 `format` 문자열에 의해 정의 된 동일한 규칙을 사용 하는 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 함수입니다.  
   
  `_CrtDbgReport` 또는 `_CrtDbgReportW`는 디버그 보고서를 생성하고 `reportType`에 대해 정의된 파일 및 현재 보고서 모드에 따라 해당 대상을 결정합니다. [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 및 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 함수는 각 보고서 종류의 대상을 정의하는 데 사용됩니다.  
   

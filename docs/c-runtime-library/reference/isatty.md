@@ -37,25 +37,11 @@ caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dbffe7023e178949f7167f283107e147ed13cb66
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 39e8b9520672c676ffec470ab2e89fccdfaf3442
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="isatty"></a>_isatty
@@ -75,7 +61,7 @@ int fd
  테스트할 장치를 나타내는 파일 설명자입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_isatty`는 설명자가 문자 장치와 연결된 경우&0;이 아닌 값을 반환합니다. 그렇지 않으면 `_isatty`는 0을 반환합니다.  
+ `_isatty`는 설명자가 문자 장치와 연결된 경우 0이 아닌 값을 반환합니다. 그렇지 않으면 `_isatty`는 0을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  `_isatty` 함수는 `fd`가 문자 장치(터미널, 콘솔, 프린터 또는 직렬 포트)와 연결되어 있는지 여부를 확인합니다.  

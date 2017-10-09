@@ -30,25 +30,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 클래스
@@ -93,11 +79,11 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|캐스트 연산자입니다.|  
 |[CComPtrBase::operator!](#operator_not)|NOT 연산자입니다.|  
-|[CComPtrBase::operator / /](#operator_amp)|연산자 / /입니다.|  
+|[CComPtrBase::operator &](#operator_amp)|& 연산자입니다.|  
 |[CComPtrBase::operator *](#operator_star)|* 연산자입니다.|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|작음-than 연산자입니다.|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|작음-than 연산자입니다.|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|같음 연산자입니다.|  
-|[-> CComPtrBase::operator](#operator_ptr)|멤버에 포인터 연산자입니다.|  
+|[CComPtrBase::operator->](#operator_ptr)|멤버에 포인터 연산자입니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
@@ -105,7 +91,7 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::p](#p)|포인터 데이터 멤버 변수입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 클래스와 같은 COM 메모리 관리 루틴을 사용 하는 다른 스마트 포인터에 대 한 기본 사항을 제공 [CComQIPtr](../../atl/reference/ccomqiptr-class.md) 및 [CComPtr](../../atl/reference/ccomptr-class.md)합니다. 파생된 클래스 자신의 생성자 및 연산자를 추가 하지만에서 제공 하는 방법을 고려 `CComPtrBase`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -134,7 +120,7 @@ HRESULT Advise(
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [AtlAdvise](connection-point-global-functions.md#atladvise) 자세한 정보에 대 한 합니다.  
   
 ##  <a name="attach"></a>CComPtrBase::Attach  
@@ -148,7 +134,7 @@ void Attach(T* p2) throw();
  `p2`  
  `CComPtrBase` 개체는이 포인터의 소유권을 갖게 됩니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  **연결** 호출 [CComPtrBase::Release](#release) 기존 [CComPtrBase::p](#p) 멤버 변수 및 할당 `p2` 를 `CComPtrBase::p`합니다. 때는 `CComPtrBase` 개체 포인터의 소유권을 갖습니다를 자동으로 호출 `Release` 포인터 및 삭제 하는 포인터에 할당 된 데이터 개체의 참조 횟수가 0이 되는 경우.  
   
 ##  <a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
@@ -158,7 +144,7 @@ void Attach(T* p2) throw();
 ~CComPtrBase() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  가 가리키는 인터페이스를 해제 `CComPtrBase`합니다.  
   
 ##  <a name="cocreateinstance"></a>CComPtrBase::CoCreateInstance  
@@ -192,7 +178,7 @@ HRESULT CoCreateInstance(
 ### <a name="return-value"></a>반환 값  
  실패 시 성공 또는 REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING 또는 E_NOINTERFACE에 S_OK를 반환합니다. 참조 [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) 및 [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) 이러한 오류에 대 한 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  메서드의 첫 번째 형태를 호출 하면 [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) CLSID를 복구 하는 데 사용 됩니다. 두 형태를 모두 호출 [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
   
  디버그 빌드에 어설션 오류가 발생 하는 경우 발생 합니다 [CComPtrBase::p](#p) NULL 같지 않습니다.  
@@ -226,7 +212,7 @@ T* Detach() throw();
 ### <a name="return-value"></a>반환 값  
  포인터의 복사본을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  포인터의 소유권을 해제, 설정 된 [CComPtrBase::p](#p) 데이터 멤버 변수를 NULL 포인터의 복사본을 반환 합니다.  
   
 ##  <a name="isequalobject"></a>CComPtrBase::IsEqualObject  
@@ -238,7 +224,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>매개 변수  
  `pOther`  
- **IUnknown \*** 을 비교 합니다.  
+ **IUnknown \***  을 비교 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  개체가 동일한, false는 그렇지 않은 경우 true를 반환 합니다.  
@@ -254,7 +240,7 @@ bool operator!() const throw();
  이면 true를 반환은 `CComHeapPtr` 포인터가 NULL이 고 같으면 false 그렇지 않은 경우.  
   
 ##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
- 연산자 / /입니다.  
+ & 연산자입니다.  
   
 ```
 T** operator&() throw();
@@ -300,7 +286,7 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 ### <a name="return-value"></a>반환 값  
  값을 반환 된 [CComPtrBase::p](#p) 데이터 멤버 변수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 연산자를 사용 하 여가 가리키는 클래스에서 메서드를 호출 하는 `CComPtrBase` 개체입니다. 디버그 빌드에서 경우 어설션 오류가 발생 합니다는 `CComPtrBase` 데이터 멤버가 NULL을 가리킵니다.  
   
 ##  <a name="operator_lt"></a>CComPtrBase::operator&lt;  
@@ -355,7 +341,7 @@ template <class Q> HRESULT QueryInterface(Q
 ### <a name="return-value"></a>반환 값  
  실패 시 성공 또는 E_NOINTERFACE에 S_OK를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드를 호출 [iunknown:: Queryinterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)합니다.  
   
  디버그 빌드에 어설션 오류가 발생 하는 경우 발생 합니다 *pp* NULL 같지 않습니다.  
@@ -367,7 +353,7 @@ template <class Q> HRESULT QueryInterface(Q
 void Release() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  인터페이스 해제 되 고 [CComPtrBase::p](#p) NULL로 설정 됩니다.  
   
 ##  <a name="setsite"></a>CComPtrBase::SetSite  
@@ -384,7 +370,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드를 호출 [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

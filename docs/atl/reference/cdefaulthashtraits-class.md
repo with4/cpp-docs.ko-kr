@@ -1,5 +1,5 @@
 ---
-title: "CDefaultHashTraits 클래스 | Microsoft 문서"
+title: "CDefaultHashTraits 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,25 +21,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 5191327e5e60935829750c7d1e04ba89fcddc771
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 클래스
@@ -54,7 +40,7 @@ class CDefaultHashTraits
   
 #### <a name="parameters"></a>매개 변수  
  `T`  
- 컬렉션에 저장 될 데이터의 형식입니다.  
+ 컬렉션에 저장할 데이터의 형식입니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -64,8 +50,8 @@ class CDefaultHashTraits
 |----------|-----------------|  
 |[CDefaultHashTraits::Hash](#hash)|(정적) 지정된 된 요소에 대 한 해시 값을 계산 하려면이 함수를 호출 합니다.|  
   
-## <a name="remarks"></a>주의  
- 이 클래스는 지정된 된 요소에 대 한 해시 값을 반환 하는 단일 정적 함수를 포함 합니다. 이 클래스에서 사용 되는 [CDefaultElementTraits 클래스](../../atl/reference/cdefaultelementtraits-class.md)합니다.  
+## <a name="remarks"></a>설명  
+ 이 클래스는 지정된 된 요소에 대 한 해시 값을 반환 하는 단일 정적 함수를 포함 합니다. 이 클래스에서 사용 된는 [CDefaultElementTraits 클래스](../../atl/reference/cdefaultelementtraits-class.md)합니다.  
   
  자세한 내용은 참조 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.  
   
@@ -86,8 +72,8 @@ static ULONG Hash(const T& element) throw();
 ### <a name="return-value"></a>반환 값  
  해시 값을 반환합니다.  
   
-### <a name="remarks"></a>주의  
- 기본 해시 알고리즘은 매우 간단 합니다: 반환 값은 요소 번호입니다. 더 복잡 한 알고리즘을 해야 하는 경우이 함수를 재정의 합니다.  
+### <a name="remarks"></a>설명  
+ 기본 해싱 알고리즘은 매우 간단: 반환 값은 요소 수입니다. 더 복잡 한 알고리즘을 해야 하는 경우이 함수를 재정의 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)

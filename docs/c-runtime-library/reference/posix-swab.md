@@ -1,43 +1,44 @@
 ---
-title: "swab | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "swab"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "swab"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "swab 함수"
+title: swab | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- swab
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- swab
+dev_langs:
+- C++
+helpviewer_keywords:
+- swab function
 ms.assetid: fb8b7137-420d-4485-bb65-e1ec68602905
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# swab
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46d1c2a79398ccf49c17fb180431eff5a691ca08
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-이 POSIX 함수는 사용되지 않습니다.  대신에 ISO C\+\+ 규칙 [\_swab](../../c-runtime-library/reference/swab.md) 을 사용하십시오.
+---
+# <a name="swab"></a>swab
+이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_swab](../../c-runtime-library/reference/swab.md)를 사용하세요.
