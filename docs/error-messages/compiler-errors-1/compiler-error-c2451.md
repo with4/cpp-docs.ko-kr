@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2451 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2451"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2451"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2451
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2451
 ms.assetid: a64c93a5-ab8d-4d39-ae57-9ee7ef803036
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2451
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3860005ee3c17d568dabb9d4a49174cc3ca14d34
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'type' 형식의 조건식은 올바르지 않습니다.  
+---
+# <a name="compiler-error-c2451"></a>컴파일러 오류 C2451
+'type' 형식의 조건식 올바르지 않습니다.  
   
- 조건식이 정수 형식으로 계산됩니다.  
+ 조건 식은 정수 형식으로 평가합니다.  
   
- 다음 샘플에서는 C2451 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2451 오류가 생성 됩니다.  
   
 ```  
 // C2451.cpp  

@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f0e3815ef1631d905946ba8285d68ac5344f3ca6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e171a857247963e0278f7a167b70612b8234b323
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2389"></a>컴파일러 오류 C2389
 'operator': 'nullptr'는 잘못된 피연산자입니다.  
   
- `nullptr`피연산자 일 수 없습니다.  
+ `nullptr` 는 피연산자일 수 없습니다.  
   
  다음 샘플에서는 C2389를 생성합니다.  
   

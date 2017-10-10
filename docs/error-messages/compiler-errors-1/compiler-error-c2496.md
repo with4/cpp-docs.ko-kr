@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2496 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2496"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2496"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2496
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2496
 ms.assetid: 9a25237d-5bbb-4112-98f3-29cd99d3f89f
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C2496
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 35caa51076bbd1f176c9509c80dd3586eb3d385c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'identifier' : 'selectany'는 외부 링크가 있는 데이터 항목에만 적용할 수 있습니다.  
+---
+# <a name="compiler-error-c2496"></a>컴파일러 오류 C2496
+'identifier': 'selectany' 외부 링크가 있는 데이터 항목에만 적용 될 수 있습니다  
   
- [selectany](../../cpp/selectany.md) 특성은 외부에서 볼 수 있는 데이터 항목과 전역 데이터 항목에만 적용할 수 있습니다.  
+ [selectany](../../cpp/selectany.md) 외부에서 표시 되 고 전역 데이터 항목에만 특성을 적용할 수 있습니다.  
   
- 다음 샘플에서는 C2496 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2496 오류가 생성 됩니다.  
   
 ```  
 // C2496.cpp  

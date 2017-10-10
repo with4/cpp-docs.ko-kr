@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 2bd78b1118cb0476f386bb196aa53361b292160a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a08d0592bb50edf57124a034d2397e10262009b4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1077"></a>심각한 오류 C1077
@@ -46,4 +31,4 @@ ms.lasthandoff: 04/12/2017
   
  명령줄 옵션의 수가 내부 한계를 초과합니다.  
   
- 으로 정의 된 기호를 너무 많이 있을 수 있습니다 [/D](../../build/reference/d-preprocessor-definitions.md)합니다. (대신 정의를 헤더 파일에 배치합니다.)
+ 너무 많은 기호가 [/D](../../build/reference/d-preprocessor-definitions.md)를 사용하여 정의된 것일 수 있습니다. (대신 정의를 헤더 파일에 배치합니다.)

@@ -1,29 +1,32 @@
 ---
 title: "컴파일러 오류 C2308 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2308"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2308"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2308
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2308
 ms.assetid: d1eaf101-077d-4c43-97ac-410efd5b6fc9
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C2308
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 84766f4cac5a364c3d0c2f36b20da00458dbd8ab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-일치하지 않는 문자열을 연결하고 있습니다.  
+---
+# <a name="compiler-error-c2308"></a>컴파일러 오류 C2308
+일치 하지 않는 문자열 연결  
   
- 와이드 문자열과 비와이드 문자열을 모두 연결하도록 지정되었습니다.  와이드 문자열과 비와이드 문자열을 연결할 수 없습니다.
+ 두 너비와 비 와이드 문자 문자열 연결에 지정 했습니다. 와이드 문자 문자열 및 비 와이드 문자 문자열을 연결할 수 없습니다.

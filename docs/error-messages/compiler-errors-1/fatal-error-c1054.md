@@ -1,35 +1,38 @@
 ---
 title: "심각한 오류 C1054 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1054"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1054"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1054
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1054
 ms.assetid: 9cfb7307-b22a-4418-b7c0-2621b0ab5b1b
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 심각한 오류 C1054
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d02d8eb05633d7250dc3f7ee85dd78ccf4153052
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-컴파일러 한계 : 이니셜라이저가 너무 많이 중첩되었습니다.  
+---
+# <a name="fatal-error-c1054"></a>심각한 오류 C1054
+컴파일러 한계: 이니셜라이저가 너무 많이 중첩  
   
- 코드가 이니셜라이저의 중첩 한계\(초기화되는 형식의 조합에 따라 10\-15 수준\)를 초과합니다.  
+ 코드는 중첩 제한에서 이니셜라이저의 (초기화 되는 형식의 조합에 따라 10-15 수준)를 초과 합니다.  
   
-### 문제를 해결하려면 다음과 같은 해결책을 사용해 보십시오.  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>아래의 해결 방법 따라 수정합니다.  
   
-1.  초기화 중인 데이터 형식을 간단하게 만들어서 중첩 수준을 줄입니다.  
+1.  중첩을 줄이기 위해 초기화 중인 데이터 형식을 단순화 합니다.  
   
-2.  선언한 후에 변수를 별도의 문에서 초기화합니다.
+2.  선언 후 별도 문에 변수를 초기화 합니다.

@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2324 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2324"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2324"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2324
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2324
 ms.assetid: 215f0544-85b0-452d-825f-17a388b6a61c
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C2324
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 34ce2658607f673806d93579bc6d47a59d5206cd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'identifier' : 'name' 오른쪽에 올 수 없습니다.  
+---
+# <a name="compiler-error-c2324"></a>컴파일러 오류 C2324
+'identifier': 'name'의 오른쪽에 예기치 않은  
   
- 소멸자가 잘못된 식별자를 통해 호출되었습니다.  
+ 잘못 된 식별자를 사용 하 여 소멸자가 호출 됩니다.  
   
- 다음 샘플에서는 C2324 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2324 오류가 생성 됩니다.  
   
 ```  
 // C2324.cpp  

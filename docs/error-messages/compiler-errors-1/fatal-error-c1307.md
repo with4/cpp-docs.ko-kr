@@ -1,31 +1,34 @@
 ---
 title: "심각한 오류 C1307 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1307"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1307"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1307
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1307
 ms.assetid: 6f77d3d4-ba8a-476c-b540-aff19eb4efc4
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 심각한 오류 C1307
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1173f538f02e8178d523bb51476b4a10427099ea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fatal-error-c1307"></a>심각한 오류 C1307
 프로필 데이터가 수집된 이후 프로그램이 편집되었습니다.  
   
- [\/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)를 사용할 때 \/LTCG:PGINSTRUMENT 이후 다시 컴파일된 입력 모듈을 링커가 발견했습니다. 이 모듈은 기존 프로필 데이터가 더는 관련되지 않은 지점까지 변경되었습니다.  예를 들어, 다시 컴파일된 모듈에서 호출 그래프가 변경된 경우 컴파일러에서 C1307이 발생합니다.  
+ 사용 하는 경우 [/ltcg: pgoptimize](../../build/reference/ltcg-link-time-code-generation.md), 링커가 검색 입력된 모듈을 /ltcg: pginstrument 이후 다시 컴파일 및 모듈 여기서 기존 프로필 데이터가 더 이상 관련이 없는 지점으로 변경 되었습니다. 예를 들어 호출 그래프 다시 컴파일된 모듈에서 변경 된 경우 컴파일러는 C1307 생성 됩니다.  
   
- 이 오류를 해결하려면 \/LTCG:PGINSTRUMENT를 실행하고 모든 테스트 실행을 다시 수행한 다음 \/LTCG:PGOPTIMIZE를 실행해야 합니다.  \/LTCG:PGINSTRUMENT를 실행하고 모든 테스트 실행을 다시 수행할 수 없는 경우 \/LTCG:PGOPTIMIZE 대신 \/LTCG:PGUPDATE를 사용하여 최적화된 이미지를 만듭니다.
+ 이 오류를 해결 하려면 /ltcg: pginstrument 실행 하 고 모든 테스트 실행을 다시 실행 /ltcg: pgoptimize를 실행 합니다. 실행 /ltcg: pginstrument 및 다시 실행 모든 테스트를 실행할 수 없으면, 최적화 된 이미지를 만드는 /ltcg: pgupdate /ltcg: pgoptimize 대신 사용 합니다.

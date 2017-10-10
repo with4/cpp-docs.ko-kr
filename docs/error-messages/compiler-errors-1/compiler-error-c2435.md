@@ -19,25 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 53a3144fe8e87f36a1a5149d292130a9913b646a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b70ebf347e2d5b6af8938e348a5e789412241256
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2435"></a>컴파일러 오류 C2435
@@ -47,7 +33,7 @@ ms.lasthandoff: 04/01/2017
   
  응용 프로그램별 도메인 전역 변수는 초기화로 컴파일된 CRT가 필요 `/clr:pure`를 확인할 수 있는 이미지를 생성 하지 않는 합니다.  
   
- 자세한 내용은 참조 [appdomain](../../cpp/appdomain.md) 및 [프로세스](../../cpp/process.md)합니다.  
+ 자세한 내용은 [appdomain](../../cpp/appdomain.md) 및 [process](../../cpp/process.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C2435 오류가 생성 됩니다.  

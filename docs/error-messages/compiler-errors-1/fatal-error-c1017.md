@@ -1,36 +1,39 @@
 ---
 title: "심각한 오류 C1017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1017"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1017
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 심각한 오류 C1017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 478a0a17ef8e0f0e6cb6589798d901837e7aff75
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fatal-error-c1017"></a>심각한 오류 C1017
 정수 계열 상수 식이 잘못되었습니다.  
   
- `#if` 지시문의 식이 없거나 식이 상수가 아닙니다.  
+ 식에는 `#if` 지시문 존재 하지 않는 또는 상수 식이 아닙니다.  
   
- `#define`을 사용하여 정의한 상수가 `#if`, `#elif` 또는 `#else` 지시문에 사용되는 경우 정수 계열 상수인 값을 사용해야 합니다.  
+ 사용 하 여 정의 된 상수 `#define` 에 사용 되는 경우 정수 상수를 평가 하는 값을 가져야 합니다는 `#if`, `#elif`, 또는 `#else` 지시문입니다.  
   
- 다음 샘플에서는 C1017 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C1017 오류가 생성 됩니다.  
   
 ```  
 // C1017.cpp  
@@ -39,7 +42,7 @@ caps.handback.revision: 8
 #endif  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C1017b.cpp  
@@ -49,9 +52,9 @@ caps.handback.revision: 8
 #endif  
 ```  
   
- `CONSTANT_NAME`이 정수가 아니라 문자열이므로 `#if` 지시문은 심각한 오류인 C1017을 발생시킵니다.  
+ 때문에 `CONSTANT_NAME` 정수가 아닌 문자열로로 평가 되는 `#if` 지시어 심각한 오류 C1017를 생성 합니다.  
   
- 다른 경우에 전처리기는 정의되지 않은 상수를 0으로 계산하므로,  다음 샘플에 나타난 것처럼 의도하지 않은 결과가 생성됩니다.  `YES`는 정의되지 않았으므로 0으로 계산됩니다.  `#if` `CONSTANT_NAME` 식은 false가 되며 `YES`에 사용되는 코드는 전처리기에 의해 제거됩니다.  `NO`도 정의되지 않았으므로 0으로 계산되고, `#elif` `CONSTANT_NAME==NO`는 true\(`0 == 0`\)가 되며, 의도한 동작의 정반대로 전처리기가 문의 `#elif` 부분에 있는 코드는 그대로 둡니다.  
+ 다른 경우 전처리기는 정의 되지 않은 상수 0으로 계산 됩니다. 다음 샘플에 표시 된 대로 의도 하지 않은 결과가 발생할 수 있습니다. `YES`이 정의 되지 않습니다 않았으므로 0으로 계산 합니다. 식 `#if` `CONSTANT_NAME` 사용 되는 코드를 false로 평가 되 `YES` 전처리기에 의해 제거 됩니다. `NO`또한 정의 되지 않은 (영) 이므로 `#elif` `CONSTANT_NAME==NO` true로 평가 (`0 == 0`), 전처리기에서 코드는 `#elif` 보고서의 부분-정확히 반대는 의도 된 동작입니다.  
   
 ```  
 // C1017c.cpp  
@@ -64,4 +67,4 @@ caps.handback.revision: 8
 #endif  
 ```  
   
- 컴파일러가 전처리기 지시문을 처리하는 방법을 정확하게 알아보려면 [\/P](../../build/reference/p-preprocess-to-a-file.md), [\/E](../../build/reference/e-preprocess-to-stdout.md) 또는 [\/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)를 사용하십시오.
+ 컴파일러 전처리기 지시문을 처리 하는 방식을 정확 하 게를 보려면 사용 [/P](../../build/reference/p-preprocess-to-a-file.md), [/E](../../build/reference/e-preprocess-to-stdout.md), 또는 [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)합니다.

@@ -19,25 +19,11 @@ caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 23d6666e2b8e61a8761454729f4f7444a9800cbe
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2440"></a>컴파일러 오류 C2440
@@ -187,7 +173,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>예제  
- C2440는 <xref:System.Array>.</xref:System.Array> 형식이 Visual c + + 배열의 인스턴스를 만들려고 할 경우에 발생할 수 있습니다.  자세한 내용은 참조 [배열](../../windows/arrays-cpp-component-extensions.md)합니다.  다음 샘플에서는 C2440 오류가 생성 됩니다.  
+ 형식의 Visual c + + 배열의 인스턴스를 만들려고 할 경우에 C2440 발생할 수 있습니다는 <xref:System.Array>합니다.  자세한 내용은 참조 [배열](../../windows/arrays-cpp-component-extensions.md)합니다.  다음 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
 // C2440e.cpp  

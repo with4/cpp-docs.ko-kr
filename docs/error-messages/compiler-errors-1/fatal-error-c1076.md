@@ -1,38 +1,41 @@
 ---
 title: "심각한 오류 C1076 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1076"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1076"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1076
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1076
 ms.assetid: 84ac1180-3e8a-48e8-9f77-7f18a778b964
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 심각한 오류 C1076
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2e912cc4910ab1362719d94f374f145e90747e69
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-컴파일러 한계 : 내부 힙 한계에 도달했습니다. \/Zm을 사용하여 한계를 더 높게 지정하십시오.  
+---
+# <a name="fatal-error-c1076"></a>심각한 오류 C1076
+컴파일러 한계 : 내부 힙 한계에 도달했습니다. /Zm을 사용하여 한계를 더 높게 지정하십시오.  
   
  템플릿 인스턴스화나 기호가 너무 많은 경우 이 오류가 발생할 수 있습니다.  
   
  이 오류를 해결하려면  
   
-1.  [\/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) 옵션을 사용하여 컴파일러 메모리 제한을 [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) 오류 메시지에 지정된 값으로 설정합니다.  [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]에서 이 값을 설정하는 방법 등의 자세한 내용은 [\/Zm\(메모리 할당 제한 지정\)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)의 설명 단원을 참조하십시오.  
+1.  사용 하 여는 [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) 컴파일러 메모리 제한을에 지정 된 값으로 설정 하는 옵션은 [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) 오류 메시지입니다. 이 값을 설정 하는 방법을 포함 하는 자세한 정보에 대 한 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)], 주의 섹션을 참조 [/Zm (지정 미리 컴파일된 헤더 메모리 할당 제한)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)합니다.  
   
-2.  64비트 운영 체제에서 32비트로 호스팅된 컴파일러를 사용하는 경우 64비트로 호스팅된 컴파일러를 대신 사용하십시오.  자세한 내용은 [방법: 명령줄에서 64비트 Visual C\+\+ 도구 집합 활성화](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)을 참조하십시오.  
+2.  64비트 운영 체제에서 32비트로 호스팅된 컴파일러를 사용하는 경우 64비트로 호스팅된 컴파일러를 대신 사용하십시오. 자세한 내용은 참조 [하는 방법: 명령줄에서 64 비트 Visual c + + 도구를 사용 하도록 설정](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)합니다.  
   
 3.  필요 없는 포함 파일을 제거합니다.  
   
@@ -46,4 +49,4 @@ caps.handback.revision: 12
   
 8.  현재 파일을 좀 더 작은 여러 개의 파일로 분할합니다.  
   
- 빌드가 시작된 후에 바로 C1076이 발생하면 **\/Zm**에 지정된 값이 프로그램에 대해 너무 높기 때문일 수 있습니다.  **\/Zm** 값을 낮추십시오.
+ 값에 대해 지정 된 빌드가 시작 된 후 바로 c 1076이 발생 하면 **/Zm** 너무 높기 때문일 프로그램에 대 한 합니다. 줄이기는 **/Zm** 값입니다.

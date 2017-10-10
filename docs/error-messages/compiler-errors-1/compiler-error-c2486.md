@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2486 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2486"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2486"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2486
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2486
 ms.assetid: 436da349-6461-4e32-bfca-4f3e620108e2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2486
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b7f54417beefb9bd2c82763464d0e76ed81bf7ed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'\_\_LOCAL\_SIZE'는 'naked' 특성이 있는 함수에만 사용할 수 있습니다.  
+---
+# <a name="compiler-error-c2486"></a>컴파일러 오류 C2486
+' __LOCAL_SIZE' 'naked' 특성이 있는 함수에만 사용할 수  
   
- 인라인 어셈블리 함수에서 `__LOCAL_SIZE` 이름은 [naked](../../cpp/naked-cpp.md) 특성을 통해 선언된 함수에 예약되어 있습니다.  
+ 인라인 어셈블리 함수 이름에서에서 `__LOCAL_SIZE` 으로 선언 된 함수의 예약 되는 [naked](../../cpp/naked-cpp.md) 특성입니다.  
   
- 다음 샘플에서는 C2486 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2486 오류가 생성 됩니다.  
   
 ```  
 // C2486.cpp  
