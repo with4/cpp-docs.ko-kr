@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 59af9d4586607cc532e2dd8e206fa30cee95b755
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e8d665e473877ac78612ccaeb9e2e917ee4094c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3058"></a>컴파일러 오류 C3058
 'symbol': 기호를 'copyin' 절에 사용하기 전에 'threadprivate'로 선언하지 않았습니다.  
   
- 기호 먼저 선언 해야 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 에 사용할 수는 [copyin](../../parallel/openmp/reference/copyin.md) 절.  
+ 기호를 먼저 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 로 선언해야 [copyin](../../parallel/openmp/reference/copyin.md) 절에 사용할 수 있습니다.  
   
  다음 샘플에서는 C3058을 생성합니다.  
   

@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C2828 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2828"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2828"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2828
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2828
 ms.assetid: d8df6ed4-5954-46c2-b59b-52881d4e923d
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C2828
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8a461ae14edfbdffa9bd30068a7e935fb44817a6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-이항 형식을 사용하여 'operator operator'을\(를\) 전역으로 재정의할 수 없습니다.  
+---
+# <a name="compiler-error-c2828"></a>컴파일러 오류 C2828
+'operator 연산자' 이진 양식으로 전역으로 재정의할 수 없습니다.  
   
- 연산자가 개체의 외부에서 이항 형식을 사용할 수 없습니다.  
+ 연산자는 개체의 외부에서 이진 형식을 사용할 수 없습니다.  
   
-### 문제를 해결하려면 다음과 같은 해결책을 사용해 보십시오.  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>아래의 해결 방법 따라 수정합니다.  
   
-1.  오버로드된 연산자를 개체에 대해 지역적으로 만듭니다.  
+1.  개체에 로컬 오버 로드 된 연산자를 확인 합니다.  
   
-2.  오버로드할 적절한 단항 연산자를 선택합니다.
+2.  적절 한 단항 연산자를 오버 로드를 선택 합니다.

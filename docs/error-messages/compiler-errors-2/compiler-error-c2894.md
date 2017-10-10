@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2894 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2894"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2894"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2894
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2894
 ms.assetid: 4e250579-2b59-4993-a6f4-49273e7ecf06
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2894
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 38fe0c73c9ced138639d4370b3ba0e1afbe088a3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-템플릿에 'C' 링크가 있도록 선언할 수 없습니다.  
+---
+# <a name="compiler-error-c2894"></a>컴파일러 오류 C2894
+서식 파일에는 'C' 링크가를 선언할 수 없습니다.  
   
- 이 오류는 `extern` "C" 블록 안에 템플릿을 정의한 경우에 발생할 수 있습니다.  
+ 이 오류를 내에 정의 된 템플릿을 원인일 수 있습니다는 `extern` "C" 블록입니다.  
   
- 다음 샘플에서는 C2894 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2894 오류가 생성 됩니다.  
   
 ```  
 // C2894.cpp  
@@ -39,7 +42,7 @@ extern "C" {
 }  
 ```  
   
- 다음 샘플에서는 C2894 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2894 오류가 생성 됩니다.  
   
 ```  
 // C2894b.cpp  

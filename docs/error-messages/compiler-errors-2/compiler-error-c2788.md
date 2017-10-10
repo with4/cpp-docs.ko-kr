@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2788 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2788"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2788"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2788
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2788
 ms.assetid: 8688fc5c-e652-43b4-b407-9c488c76f2db
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C2788
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3d66496da2940a08d87f968678125b5836587ac
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 이 개체와 연결된 GUID가 두 개 이상입니다.  
+---
+# <a name="compiler-error-c2788"></a>컴파일러 오류 C2788
+'identifier':이 개체와 관련 된 둘 이상의 GUID  
   
- [\_\_uuidof](../../cpp/uuidof-operator.md) 연산자가 첨부 GUID를 포함하는 사용자 정의 형식을 사용하거나 사용자 정의 형식의 개체를 사용합니다.  이 오류는 인수가 GUID를 여러 개 포함하는 개체인 경우에 발생합니다.  
+ [__uuidof](../../cpp/uuidof-operator.md) 연산자는 연결 된 GUID 또는 사용자 정의 형식의 개체와 사용자 정의 형식을 사용 합니다. 이 오류는 인수가 개체가 여러 Guid 포함 하는 경우에 발생 합니다.  
   
- 다음 샘플에서는 C2788 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2788 오류가 생성 됩니다.  
   
 ```  
 // C2788.cpp  

@@ -1,38 +1,41 @@
 ---
 title: "컴파일러 오류 C2803 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2803"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2803"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2803
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2803
 ms.assetid: 2cdbe374-8cc4-4c4e-ba15-062a7479e937
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2803
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: efa9efa2dc204d302f69d873c0199d4431efccb1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'operator operator'에는 클래스 형식의 형식 매개 변수가 적어도 하나는 있어야 합니다.  
+---
+# <a name="compiler-error-c2803"></a>컴파일러 오류 C2803
+'operator 연산자' 클래스 형식의 정식 매개 변수가 하나 이상 있어야 합니다.  
   
- 오버로드된 연산자에 클래스 형식의 매개 변수가 부족합니다.  
+ 오버 로드 된 연산자에 클래스 형식의 매개 변수가 부족합니다.  
   
- 포인터가 아닌 참조를 사용하여 참조별로 매개 변수를 적어도 하나 이상 전달하거나 값별로 하나 이상 전달하여 "a \< b"를 작성할 수 있도록 해야 합니다. a\<b는 클래스 A 형식입니다.  
+ 포인터가 아닌 참조를 사용하여 참조별로 매개 변수를 적어도 하나 이상 전달하거나 값별로 하나 이상 전달하여 "a < b"를 작성할 수 있도록 해야 합니다. a와 b는 클래스 A 형식입니다.  
   
- 두 매개 변수가 모두 포인터인 경우에는 포인터 주소를 순수하게 비교하며 사용자 정의 변환을 사용하지 않습니다.  
+ 매개 변수가 모두 포인터인 경우 포인터 주소 순수 하 게 비교 이며 사용자 정의 변환을 사용 하지 않습니다.  
   
- 다음 샘플에서는 C2803 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2803 오류가 생성 됩니다.  
   
 ```  
 // C2803.cpp  

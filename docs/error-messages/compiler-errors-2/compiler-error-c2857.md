@@ -1,31 +1,34 @@
 ---
 title: "컴파일러 오류 C2857 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2857"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2857"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2857
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2857
 ms.assetid: b57302bd-58ec-45ae-992a-1e282d5eeccc
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2857
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ca0f2b8847600096c9e39de24c58e6a0021fa83f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-Ycfilename 명령줄 옵션과 함께 지정한 '\#include' 문이 소스 파일에 없습니다.  
+---
+# <a name="compiler-error-c2857"></a>컴파일러 오류 C2857
+' #include ' 문이 /Ycfilename 명령줄 옵션에 지정 된 소스 파일에서 찾을 수 없습니다  
   
- [\/Yc](../../build/reference/yc-create-precompiled-header-file.md) 옵션은 컴파일 중인 소스 파일에 포함되지 않은 포함 파일의 이름을 지정합니다.  
+ [/Yc](../../build/reference/yc-create-precompiled-header-file.md) 옵션 컴파일 중인 소스 파일에 포함 되지 않은 포함 파일의 이름을 지정 합니다.  
   
- 이 오류는 조건부 컴파일 블록에서 컴파일되지 않은 `#include` 문으로 인해 발생할 수 있습니다.
+ 이 오류를 때문일 수 있습니다는 `#include` 컴파일되지 않은 조건부 컴파일 블록의 문을 합니다.

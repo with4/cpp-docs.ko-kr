@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C2951 | Microsoft 문서"
+title: "컴파일러 오류 C2951 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 117c1b40c1533edb0abc5012e2b5fd5cd43d9c80
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4be1b3a298fc24572fcc44b9deb031c0d49b7332
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2951"></a>컴파일러 오류 C2951
-형식 선언은 전역 네임 스페이스 에서만 허용 됩니다 또는 클래스 범위  
+형식 선언은 전역, 네임 스페이스 에서만 허용 됩니다 또는 클래스 범위  
   
- 제네릭 또는 템플릿 클래스 외부 전역 네임 스페이스 범위를 선언할 수 없습니다. 포함 파일에 제네릭 또는 템플릿 선언에 만들면 포함 파일의 전역 범위에서 인지 확인 합니다.  
+ 제네릭 또는 템플릿 클래스 외부 전역 또는 네임 스페이스 범위를 선언할 수 없습니다. 포함 파일에 두 제네릭 또는 템플릿 선언 하는 경우에 전역 범위에서 포함 파일 인지 확인 합니다.  
   
  다음 샘플에서는 C2951 오류가 생성 됩니다.  
   

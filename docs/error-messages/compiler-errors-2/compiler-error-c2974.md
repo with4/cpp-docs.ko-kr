@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2974 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2974"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2974"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2974
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2974
 ms.assetid: 1b444260-f2bf-48d7-ab1e-35573d8c4a0e
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C2974
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e24e25816ac646bcf26099abbfa8e681fdd72a6e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'number'의 형식 인수가 잘못되었습니다. 형식이 필요합니다.  
+---
+# <a name="compiler-error-c2974"></a>컴파일러 오류 C2974
+잘못 된 형식 인수 'number' 형식이 필요합니다.  
   
- 제네릭 또는 템플릿 인수가 제네릭 또는 템플릿 선언과 일치하지 않습니다.  형식은 꺾쇠 괄호로 묶어야 합니다.  제네릭 또는 템플릿 정의를 확인하여 올바른 형식을 알아보십시오.  
+ 제네릭 또는 템플릿 인수는 제네릭 또는 템플릿 선언이 일치 하지 않습니다. 형식을 꺾쇠 괄호 안에 표시 됩니다. 올바른 유형을 검색 하는 제네릭 또는 템플릿 정의 확인 합니다.  
   
- 다음 샘플에서는 C2974 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2974 오류가 생성 됩니다.  
   
 ```  
 // C2974.cpp  
@@ -49,7 +52,7 @@ int main() {
 }  
 ```  
   
- 제네릭을 사용하는 경우에도 C2974가 발생할 수 있습니다.  
+ C2974는 제네릭을 사용 하는 경우에 발생할 수 있습니다.  
   
 ```  
 // C2974b.cpp  

@@ -1,37 +1,40 @@
 ---
 title: "컴파일러 오류 C2885 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2885"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2885"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2885
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 컴파일러 오류 C2885
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a19f209d53d7d0b37cddbf559fa3dc02ee50db7e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'class::identifier' : 비클래스 범위의 using 선언이 잘못되었습니다.  
+---
+# <a name="compiler-error-c2885"></a>컴파일러 오류 C2885
+'class::identifier': 하지 유효한 using 선언에서 비 클래스 범위로  
   
- [using](../../cpp/using-declaration.md) 선언을 잘못 사용했습니다.  
+ 사용한는 [를 사용 하 여](../../cpp/using-declaration.md) 선언 잘못 합니다.  
   
-## 예제  
- 이 오류는 Visual C\+\+ 2005에 대해 적용되었으며, 중첩된 형식에 대해 `using` 선언을 사용하는 것이 더 이상 유효하지 않으며 중첩된 형식에 대해 만드는 각 참조를 명시적으로 한정하거나, 형식을 네임스페이스에 넣거나, typedef를 만들어야 한다는 컴파일러 규칙의 결과로 발생할 수 있습니다.  
+## <a name="example"></a>예제  
+ 이 오류는 Visual c + + 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 없습니다: 다은 더 이상는 `using` 중첩된 형식이 선언을 이름을에 형식을 배치 하는 중첩 형식 선언을 명시적으로 정규화 해야 공간, 또는 typedef를 만들어야 합니다.  
   
- 다음 샘플에서는 C2885 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2885 오류가 발생 합니다.  
   
 ```  
 // C2885.cpp  
@@ -60,10 +63,10 @@ int main () {
 }  
 ```  
   
-## 예제  
- `using` 키워드를 클래스 멤버와 함께 사용하는 경우 C\+\+에서는 다른 클래스\(파생 클래스\) 내부에 해당 멤버를 정의해야 합니다.  
+## <a name="example"></a>예제  
+ 사용 하는 경우는 `using` 키워드와 c + + 클래스 멤버 (파생된 클래스)의 다른 클래스 안에 해당 멤버를 정의 해야 합니다.  
   
- 다음 샘플에서는 C2885 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2885 오류가 발생 합니다.  
   
 ```  
 // C2885_b.cpp  

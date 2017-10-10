@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 36c6f2d50187a330c58c5c129dcc91dda3382468
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 424c4dfb224b3d0778f80148aaac11e11c9ff440
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3057"></a>컴파일러 오류 C3057
 'symbol': 'threadprivate' 기호의 동적 초기화는 현재 지원되지 않습니다.  
   
- 사용 된 기호의 초기화 된 값을 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 절은 컴파일 타임에 알 수 있어야 합니다.  
+ [threadprivate](../../parallel/openmp/reference/threadprivate.md) 절에서 사용된 기호의 초기화된 값을 컴파일 시간에 알 수 있어야 합니다.  
   
  다음 샘플에서는 C3057을 생성합니다.  
   

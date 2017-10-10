@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3028"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3028
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 56d1ed561b4f414cc85c7b0d7f2c112648ae6281
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'member' : 데이터 공유 절에는 변수 또는 정적 데이터 멤버만 사용할 수 있습니다.  
+---
+# <a name="compiler-error-c3028"></a>컴파일러 오류 C3028
+'member': 변수 또는 정적 데이터 멤버만 데이터 공유 절에 사용할 수  
   
- 변수 또는 정적 데이터 멤버 이외의 기호를 reduction 절에 전달했습니다.  
+ 변수 또는 정적 데이터 멤버가 아닌 기호 reduction 절에 전달 되었습니다.  
   
- 다음 샘플에서는 C3028 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3028 오류가 생성 됩니다.  
   
 ```  
 // C3028.cpp  

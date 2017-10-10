@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2864 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2864"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2864"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2864
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 컴파일러 오류 C2864
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f205aeb886921439360191def0853e33e4eb0fea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'variable' : in\-class initializer를 사용하는 정적 데이터 멤버는 비휘발성 const 정수 계열 형식이어야 합니다.  
+---
+# <a name="compiler-error-c2864"></a>컴파일러 오류 C2864
+'variable' : in-class initializer를 사용하는 정적 데이터 멤버는 비휘발성 const 정수 계열 형식이어야 합니다.  
   
- `volatile`, `const`가 아니거나 정수 계열 형식이 아닌 것으로 정의된 `static` 데이터 멤버를 초기화하려면 멤버 정의 문을 사용합니다.  그러한 멤버는 선언에서 초기화할 수 없습니다.  
+ `static`, `volatile`가 아니거나 정수 계열 형식이 아닌 것으로 정의된 `const` 데이터 멤버를 초기화하려면 멤버 정의 문을 사용합니다. 그러한 멤버는 선언에서 초기화할 수 없습니다.  
   
- 이 샘플은 C2864를 생성합니다.  
+ 이 샘플에서는 c 2864를 생성합니다.  
   
 ```  
 // C2864.cpp  

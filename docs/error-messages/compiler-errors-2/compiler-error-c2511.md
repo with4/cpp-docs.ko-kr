@@ -1,40 +1,43 @@
 ---
-title: "컴파일러 오류 C2511 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2511"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2511"
+title: "컴파일러 오류 c 2511을 발생 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2511
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2511
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1ba01f808fb4dd618291777c1da7490b3b95af3c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 오버로드된 멤버 함수가 'class'에 없습니다.  
+---
+# <a name="compiler-error-c2511"></a>컴파일러 오류 C2511
+'identifier': 오버 로드 된 멤버 함수 'class'에서 찾을 수 없습니다  
   
- 지정한 매개 변수를 사용하여 선언된 함수의 버전이 없습니다.  가능한 원인  
+ 지정된 된 매개 변수 없는 버전의 함수 선언 됩니다.  가능한 원인:  
   
-1.  함수에 잘못된 매개 변수가 전달되었습니다.  
+1.  잘못 된 매개 변수는 함수에 전달 합니다.  
   
-2.  매개 변수가 잘못된 순서로 전달되었습니다.  
+2.  잘못 된 순서로 매개 변수 전달.  
   
-3.  매개 변수 이름의 철자가 잘못되었습니다.  
+3.  매개 변수 이름의 철자가 잘못 되었습니다.  
   
- 다음 샘플에서는 C2511 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 c 2511을 발생 합니다.  
   
 ```  
 // C2511.cpp  

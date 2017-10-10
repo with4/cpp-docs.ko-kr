@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 7a92313a605bb551ef7315d0b9f8cf56bf7e4f33
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 99974cf55ae6fe73c1bc51f3f9f2b20268381e16
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3045"></a>컴파일러 오류 C3045
 OpenMP 'sections' 지시문 다음에는 복합 문이 와야 합니다. '{'가 없습니다.  
   
- 괄호로 구분 된 코드 블록을 따라야는 [섹션](../../parallel/openmp/reference/sections-openmp.md) 지시문입니다.  
+ 괄호로 구분된 코드 블록이 [sections](../../parallel/openmp/reference/sections-openmp.md) 지시문 뒤에 나와야 합니다.  
   
  다음 샘플에서는 C3045를 생성합니다.  
   

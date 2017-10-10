@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2e0d9af0a16a009041c88e4ec0da0b92ef8eeb3d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 744b18726e00398dd6e151dc134389d2b8ed0ecb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2817"></a>컴파일러 오류 C2817
-'operator delete'의 반환 형식은 'void'이어야 합니다.  
+'operator delete'에 대 한 반환 형식은 'void' 이어야 합니다.  
   
 오버 로드 된 [delete 연산자](../../standard-library/new-operators.md#op_delete) 함수는 값을 반환할 수 없습니다.
 

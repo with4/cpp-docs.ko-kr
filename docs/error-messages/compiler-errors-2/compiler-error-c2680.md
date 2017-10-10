@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2680"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2680
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 컴파일러 오류 C2680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3a7d58aa7eb126392a0484ce28753c477d6137c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'type' : 이름의 대상 형식이 잘못되었습니다.  
+---
+# <a name="compiler-error-c2680"></a>컴파일러 오류 C2680
+'type': 이름에 대 한 잘못 된 대상 형식  
   
- 캐스팅 연산자가 포인터 또는 참조가 아닌 형식으로 변환하려고 했습니다.  [dynamic\_cast](../../cpp/dynamic-cast-operator.md) 연산자는 포인터 또는 참조에만 사용할 수 있습니다.  
+ 캐스팅 연산자는 포인터 또는 참조 되지 않는 형식으로 변환 하려고 했습니다. [dynamic_cast](../../cpp/dynamic-cast-operator.md) 연산자는 포인터 또는 참조에 대해서만 사용할 수 있습니다.  
   
- 다음 샘플에서는 C2680 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 c 2680 오류가 생성 됩니다.  
   
 ```  
 // C2680.cpp  
@@ -43,7 +46,7 @@ void g(B b) {
 }  
 ```  
   
- C2680은 대상을 정의하지 않은 경우에도 발생할 수 있습니다.  
+ C2680은 대상이 정의 되지 않은 경우에 발생할 수 있습니다.  
   
 ```  
 // C2680b.cpp  
