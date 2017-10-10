@@ -1,29 +1,32 @@
 ---
 title: "심각한 오류 C1603 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1603"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1603"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1603
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1603
 ms.assetid: e5a06925-f916-4637-8240-6d2d280e6124
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 심각한 오류 C1603
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fef8d7fa25a8f67a7e33a7c04c243592b9ee9646
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-인라인 어셈블리 분기 대상이 'number'바이트만큼 범위를 벗어났습니다.  
+---
+# <a name="fatal-error-c1603"></a>심각한 오류 C1603
+인라인 어셈블리 분기 대상이 'number' 바이트 만큼 범위를 벗어났습니다  
   
- JCXZ 또는 JECXZ 명령과 지정된 대상 레이블 간의 계산된 거리가 128바이트를 넘었습니다.  레이블이 명령에 좀 더 근접하도록 코드를 업데이트하십시오.
+ 계산된 간격 JCXZ 또는 JECXZ 명령 및 지정 된 대상 레이블을 128 바이트 보다 큽니다. 레이블을 더 가까운를 명령에 있도록 코드를 업데이트 합니다.

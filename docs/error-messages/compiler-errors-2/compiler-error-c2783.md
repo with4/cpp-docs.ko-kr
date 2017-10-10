@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2783 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2783"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2783"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2783
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2783
 ms.assetid: 1ce94a11-bb8b-4be3-a222-f1f105da74b3
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 컴파일러 오류 C2783
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1fff9803fa54d1ea18d0ada78c816067731e8c41
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'declaration' : 'identifier'의 템플릿 인수를 추론할 수 없습니다.  
+---
+# <a name="compiler-error-c2783"></a>컴파일러 오류 C2783
+'declaration': 'identifier'에 대 한 템플릿 인수를 추론할 수 없습니다  
   
- 컴파일러가 템플릿 인수를 확인할 수 없습니다.  기본 인수는 템플릿 인수를 추론하는 데 사용할 수 없습니다.  
+ 컴파일러는 템플릿 인수를 확인할 수 없습니다. 기본 인수는 템플릿 인수 추론을 사용할 수 없습니다.  
   
- 다음 샘플에서는 C2783 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2783 오류가 생성 됩니다.  
   
 ```  
 // C2783.cpp  
@@ -44,7 +47,7 @@ int main() {
 }  
 ```  
   
- 제네릭을 사용하는 경우에도 C2783이 발생할 수 있습니다.  
+ C2783은 제네릭을 사용 하는 경우에 발생할 수 있습니다.  
   
 ```  
 // C2783b.cpp  

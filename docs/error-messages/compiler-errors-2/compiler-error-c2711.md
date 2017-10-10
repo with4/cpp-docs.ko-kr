@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2711"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2711
 ms.assetid: 9df9f808-7419-4e63-abdd-e6538ff0871f
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C2711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a58a4497e007203119a376e38de82dd91030dfbc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function' : 이 함수는 관리 코드로 컴파일할 수 없습니다. \#pragma unmanaged를 사용해 보십시오.  
+---
+# <a name="compiler-error-c2711"></a>컴파일러 오류 C2711
+'function': 두이 일 수 없습니다는 관리 코드로 #pragma 고려  
   
- 일부 명령에서는 컴파일러가 바깥쪽 함수에 대해 MSIL을 생성하지 못하도록 합니다.  
+ 일부 명령에서 바깥쪽 함수에 대 한 MSIL을 생성할 컴파일러 수 없게 됩니다.  
   
- 다음 샘플에서는 C2711 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2711 오류가 생성 됩니다.  
   
 ```  
 // C2711.cpp  

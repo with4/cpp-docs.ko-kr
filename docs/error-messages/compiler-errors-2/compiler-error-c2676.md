@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C2676 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2676"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2676"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2676
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 컴파일러 오류 C2676
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed21b76da0834ff4a2aaa8af647d791fdaac075a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-이항 'operator' : 'type'이\(가\) 이 연산자를 정의하지 않거나 미리 정의된 연산자에 허용되는 형식으로의 변환을 정의하지 않습니다.  
+---
+# <a name="compiler-error-c2676"></a>컴파일러 오류 C2676
+이항 'operator': 'type' 정의 하지 않습니다이 연산자 또는 허용 되는 형식으로의 변환을 미리 정의 된 연산자  
   
- 연산자를 사용하려면 연산자를 지정된 형식에 대해 오버로드하거나 연산자에 정의된 형식으로 변환을 정의해야 합니다.  
+ 연산자를 사용하려면 지정된 형식에 대해 오버로드하거나 연산자가 정의된 형식으로의 변환을 정의해야 합니다.  
   
-## 예제  
- 다음 샘플에서는 C2676 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2676 오류가 발생 합니다.  
   
 ```  
 // C2676.cpp  
@@ -59,12 +62,12 @@ int main() {
 }  
 ```  
   
-## 예제  
- 참조 형식의 `this` 포인터에 포인터 연산을 시도하는 경우에도 C2676이 발생할 수 있습니다.  
+## <a name="example"></a>예제  
+ 포인터 산술 연산을 수행 하려는 경우에 C2676 발생할 수 있습니다는 `this` 참조 형식의 포인터입니다.  
   
- 참조 형식에서 `this` 포인터는 핸들 형식입니다.  자세한 내용은 [this pointer의 의미체계](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer) 를 참조하십시오.  
+ `this` 포인터는 참조 형식에서 형식 핸들입니다. 자세한 내용은 참조 [this의 의미 체계 포인터](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)합니다.  
   
- 다음 샘플에서는 C2676 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2676 오류가 발생 합니다.  
   
 ```  
 // C2676_a.cpp  

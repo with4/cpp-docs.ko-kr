@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C2664 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2664"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2664"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2664
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# 컴파일러 오류 C2664
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 933ef66a4f4fabea46c3f1ebaede1ea51429141c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function' : 인수 n을\(를\) 'type1'에서 'type2'\(으\)로 변환할 수 없습니다.  
+---
+# <a name="compiler-error-c2664"></a>컴파일러 오류 C2664
+'function' : 인수 n을(를) 'type1'에서 'type2'(으)로 변환할 수 없습니다.  
   
- 이 매개 변수 변환 문제는 클래스의 인스턴스가 생성되고 `explicit` 키워드로 표시된 생성자에 대해 암시적 변환을 시도할 경우에 발생할 수 있습니다.  명시적 변환에 대한 자세한 내용은 [변환](../../cpp/user-defined-type-conversions-cpp.md)을 참조하세요.  
+ 이 매개 변수 변환 문제는 클래스의 인스턴스가 생성되고 `explicit` 키워드로 표시된 생성자에 대해 암시적 변환을 시도할 경우에 발생할 수 있습니다. 명시적 변환에 대 한 자세한 내용은 참조 [사용자 정의 형식 변환](../../cpp/user-defined-type-conversions-cpp.md)합니다.  
   
  개체에 대한 참조를 매개 변수로 사용하는 함수에 임시 개체를 전달하는 경우 해당 참조는 `const` 참조여야 합니다.  
   
- 함수가 정해진 형식이 아닌 매개 변수를 통해 전달되면 적절한 생성자를 사용하여 임시 개체가 생성됩니다.  그런 다음 이 임시 개체가 함수에 전달됩니다.  이러한 경우 임시 개체는 참조를 초기화하는 데 사용됩니다.  이전 버전의 언어에서 모든 참조는 임시 개체에 의해 초기화될 수 있었습니다.  
+ 함수가 정해진 형식이 아닌 매개 변수를 통해 전달되면 적절한 생성자를 사용하여 임시 개체가 생성됩니다. 그런 다음 이 임시 개체가 함수에 전달됩니다. 이러한 경우 임시 개체는 참조를 초기화하는 데 사용됩니다. 이전 버전의 언어에서 모든 참조는 임시 개체에 의해 초기화될 수 있었습니다.  
   
  C2664를 해결하려면  
   
@@ -40,9 +43,9 @@ caps.handback.revision: 28
   
  C2664는 클래스에서 기본 클래스 중 하나의 멤버를 숨기는 경우에도 발생할 수 있습니다.  
   
- 자세한 내용은 [방법: System::String을 wchar\_t\* 또는 char\*로 변환](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)을 참조하세요.  
+ 자세한 내용은 참조 [하는 방법: 변환 system:: string을 wchar_t * 또는 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2664를 생성하고 해결 방법을 보여 줍니다.  
   
 ```  
@@ -65,7 +68,7 @@ int main() {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서도 C2664를 생성하고 해결 방법을 보여 줍니다.  
   
 ```  
@@ -83,8 +86,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 샘플에서는 문자열 리터럴로 `Test`를 호출하여 C2664를 보여 주고 해결 방법을 보여 줍니다.  매개 변수가 `szString` 참조이므로 적절한 생성자를 사용하여 개체를 생성해야 합니다.  결과 개체는 임시 개체이므로 참조를 초기화하는 데 사용할 수 없습니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 문자열 리터럴로 `Test`를 호출하여 C2664를 보여 주고 해결 방법을 보여 줍니다. 매개 변수가 `szString` 참조이므로 적절한 생성자를 사용하여 개체를 생성해야 합니다. 결과 개체는 임시 개체이므로 참조를 초기화하는 데 사용할 수 없습니다.  
   
 ```  
 // C2664c.cpp  
@@ -123,8 +126,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 컴파일러는 C\+\+ 표준 요구 사항에 따라 `const`를 적용합니다.  이 샘플은 C2664를 생성합니다.  
+## <a name="example"></a>예제  
+ 컴파일러는 C++ 표준 요구 사항에 따라 `const`를 적용합니다. 이 샘플은 C2664를 생성합니다.  
   
 ```  
 // C2664d.cpp  
@@ -147,7 +150,7 @@ int main()
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음은 C2664가 생성되는 더 복잡한 상황이며, 해결 방법에 대한 지침을 포함합니다.  
   
 ```  
@@ -191,8 +194,8 @@ int main( ) {
 }  
 ```  
   
-## 예제  
- 열거형 변수는 함수 호출을 충족하기 위한 해당 내부 형식으로 변환되지 않습니다.  자세한 내용은 [enum class](../../windows/enum-class-cpp-component-extensions.md)를 참조하세요.  다음 샘플에서는 C2664를 생성하고 해결 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 열거형 변수는 함수 호출을 충족하기 위한 해당 내부 형식으로 변환되지 않습니다. 자세한 내용은 참조 [enum 클래스](../../windows/enum-class-cpp-component-extensions.md)합니다. 다음 샘플에서는 C2664를 생성하고 해결 방법을 보여 줍니다.  
   
 ```  
 // C2664f.cpp  
@@ -212,8 +215,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- midl 컴파일러에 있는 버그로 인해 wchar\_t 형식이 형식 라이브러리에서 부호 없는 short로 생성됩니다.  이 오류를 해결하려면 C\+\+ 소스 코드에서 형식을 캐스팅하거나 idl 파일에서 형식을 문자열로 정의해야 합니다.  
+## <a name="example"></a>예제  
+ midl 컴파일러에 있는 버그로 인해 wchar_t 형식이 형식 라이브러리에서 부호 없는 short로 생성됩니다. 이 오류를 해결하려면 C++ 소스 코드에서 형식을 캐스팅하거나 idl 파일에서 형식을 문자열로 정의해야 합니다.  
   
 ```  
 // C2664g.idl  
@@ -234,9 +237,9 @@ library myproj1 {
 }  
 ```  
   
- C2664는 Visual C\+\+ 6.0에서 이후 버전으로 코드를 이식할 때 `wchar_t`를 사용해도 발생합니다.  Visual C\+\+ 6.0 및 이전 버전에서는 `wchar_t`가 `typedef`용 `unsigned short`였기 때문에 해당 형식으로 암시적으로 변환할 수 있었습니다.  Visual C\+\+ 6.0 이후 버전에서는 C\+\+ 표준에 지정된 것과 같이 `wchar_t`가 고유 기본 제공 형식이고 더 이상 `unsigned short`로 암시적으로 변환할 수 없습니다.  [\/Zc:wchar\_t\(wchar\_t를 네이티브 형식으로 인식\)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.  
+ C2664는 Visual C++ 6.0에서 이후 버전으로 코드를 이식할 때 `wchar_t`를 사용해도 발생합니다. Visual C++ 6.0 및 이전 버전에서는 `wchar_t`가 `typedef`용 `unsigned short`였기 때문에 해당 형식으로 암시적으로 변환할 수 있었습니다. Visual C++ 6.0 이후 버전에서는 C++ 표준에 지정된 것과 같이 `wchar_t`가 고유 기본 제공 형식이고 더 이상 `unsigned short`로 암시적으로 변환할 수 없습니다. 참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2664를 생성하고 해결 방법을 보여 줍니다.  
   
 ```  
@@ -257,7 +260,7 @@ int main() {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  C2664는 컴파일러가 템플릿 인수를 추론할 수 없는 경우에도 발생합니다.  
   
 ```  

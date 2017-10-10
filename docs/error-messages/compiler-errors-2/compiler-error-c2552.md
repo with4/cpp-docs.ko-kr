@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2552 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2552"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2552"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2552
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 컴파일러 오류 C2552
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e001837ca3d9ea9e5c5db1770188d030e21d7d9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2552"></a>컴파일러 오류 C2552
 'identifier': 이니셜라이저 목록을 사용하여 비 집합체를 초기화할 수 없습니다.  
   
  집합체 식별자가 잘못 초기화되었습니다.  
   
- [집합체](../../c-language/initializing-aggregate-types.md)는 다음으로 정의됩니다.  
+ [집계](../../c-language/initializing-aggregate-types.md) 으로 정의 됩니다.  
   
 -   배열  
   
@@ -42,7 +45,7 @@ caps.handback.revision: 12
   
     -   가상 함수  
   
- 또한 Visual C\+\+는 생성자를 포함하는 집합체에서 데이터 형식을 허용하지 않습니다.  
+ 또한 Visual C++는 생성자를 포함하는 집합체에서 데이터 형식을 허용하지 않습니다.  
   
  다음은 형식에서 집합체 초기화를 시도할 경우 C2552가 실행될 수 있는 이유를 나타냅니다.  
   
@@ -56,7 +59,7 @@ caps.handback.revision: 12
   
 -   형식이 ref 클래스 또는 CLR 인터페이스입니다.  
   
--   형식에 요소가 소멸자인 고정되지 않은 차원 배열\(0 배열\)이 있습니다.  
+-   형식에 요소가 소멸자인 고정되지 않은 차원 배열(0 배열)이 있습니다.  
   
  다음 샘플에서는 C2552 오류가 발생하는 경우를 보여 줍니다.  
   
