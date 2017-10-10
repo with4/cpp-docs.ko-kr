@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2247 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2247"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2247"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2247
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 컴파일러 오류 C2247
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 64eafb23ca83cb61ac9b45cf9c84ba69365f8198
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'identifier'에 액세스할 수 없습니다. 이는 'class'이\(가\) 'specifier'을\(를\) 사용하여 'class'에서 상속하기 때문입니다.  
+---
+# <a name="compiler-error-c2247"></a>컴파일러 오류 C2247
+' identifier' 'class'는 'class'에서 상속 하도록 'specifier'를 사용 하기 때문에 액세스할 수 없습니다.  
   
- `identifier`가 private 또는 protected 액세스로 선언된 클래스에서 상속되었습니다.  
+ `identifier`전용 또는 보호 된 액세스로 선언 된 클래스에서 상속 됩니다.  
   
- 다음 샘플에서는 C2247 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2247 오류가 생성 됩니다.  
   
 ```  
 // C2247.cpp  
@@ -41,9 +44,9 @@ class C : public B {} c;   // so even though C's B is public
 int j = c.i;               // C2247, i not accessible  
 ```  
   
- Visual Studio .NET 2003에서는 컴파일러 규칙에 따라 이제 컨트롤에 액세스할 때 보호된 멤버를 사용하기 때문에 이 오류가 발생할 수도 있습니다.  보호된 멤버 n은 n이 멤버로 포함된 클래스 A에서 상속하는 클래스 B의 멤버 함수를 통해서만 액세스될 수 있습니다.  
+ 이 오류는 Visual Studio.NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 있습니다: 보호 된 멤버가 포함 된 컨트롤에 액세스 합니다. 보호 된 멤버 (n) (A)는 (n) 멤버인 클래스에서 상속 되는 클래스 (B)의 멤버 함수를 통해 액세스할 수만 있습니다.  
   
- Visual Studio .NET 2003과 Visual Studio .NET 버전의 Visual C\+\+ 모두에서 올바른 코드가 되도록 하려면 멤버를 해당 형식의 Friend가 되도록 선언하십시오.  공용 상속을 사용할 수도 있습니다.  
+ Visual Studio.NET 2003 및 Visual c + +의 Visual Studio.NET 버전 모두에 적용 되는 코드에 대 한 종류의 friend가 될 멤버를 선언 합니다. 공용 상속 사용 될 수도 있습니다.  
   
 ```  
 // C2247b.cpp  
@@ -66,9 +69,9 @@ void A::f() {
 }  
 ```  
   
- Visual Studio .NET 2003에서는 컴파일러 규칙에 따라 이제 전용 기본 클래스에 액세스할 수 없기 때문에 C2247이 발생할 수도 있습니다.  형식 B의 전용 기본 클래스인 클래스 A는 B를 기본 클래스로 사용하는 형식 C에서 액세스할 수 없습니다.  
+ C2247 Visual Studio.NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 있습니다: 이제 전용 기본 클래스에 액세스할 수 없습니다. 전용 기본 클래스 형식에는 (A) 클래스 b (C)를 기본 클래스로 B를 사용 하는 형식에 액세스할 수 없습니다.  
   
- Visual Studio .NET 2003과 Visual Studio .NET 버전의 Visual C\+\+ 모두에서 올바른 코드가 되도록 하려면 범위 연산자를 사용하십시오.  
+ Visual Studio.NET 2003 및 Visual c + +의 Visual Studio.NET 버전 둘 다에 적용 되는 코드를 범위 연산자를 사용 합니다.  
   
 ```  
 // C2247c.cpp  

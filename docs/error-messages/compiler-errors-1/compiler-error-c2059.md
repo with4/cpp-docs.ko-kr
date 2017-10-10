@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2059 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2059"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2059"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2059
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# 컴파일러 오류 C2059
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dbf80ab803eaaacc29ac82657af130194417f1c7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-구문 오류 : 'token'  
+---
+# <a name="compiler-error-c2059"></a>컴파일러 오류 C2059
+구문 오류: 'token'  
   
- 토큰으로 인해 구문 오류가 발생했습니다.  
+ 토큰 구문 오류가 발생 했습니다.  
   
- 다음 예제에서는 `j`를 선언하는 줄에 대한 오류 메시지를 생성합니다.  
+ 다음 예제에서는 선언 하는 줄에 대 한 오류 메시지를 생성 `j`합니다.  
   
 ```  
 // C2059e.cpp  
@@ -38,11 +41,11 @@ caps.handback.revision: 22
    int j*; // C2059   
 ```  
   
- 오류의 원인을 알아보려면 오류 메시지에 기록된 줄뿐 아니라 위에 있는 줄들도 검사하십시오.  해당 줄을 검사해도 문제에 대한 아무런 단서를 얻지 못하면 오류 메시지에 표시된 줄과 위에 있는 줄 중 예상되는 몇 줄을 주석 처리하십시오.  
+ 오류의 원인을 확인 하려면 오류 메시지에 나열 된 줄 뿐만 아니라 위에 있는 줄을 검사 합니다. 해당 줄을 검사 문제에 대해 아무런 단서를, 오류 메시지에 나열 된 선과 상위 아마도 여러 줄 주석 보십시오.  
   
- 오류 메시지가 `typedef` 변수 바로 다음에 오는 기호에 대해 발생하는 경우에는 이 변수가 소스 코드 내에서 정의되었는지 확인합니다.  
+ 오류 메시지는 바로 뒤에 기호에 대해 발생 하는 경우는 `typedef` 변수, 변수 소스 코드에 정의 되어 있는지 확인 합니다.  
   
- **\/D** `symbol` **\=**을 사용하여 컴파일할 때와 같이 기호가 어떤 값으로도 계산되지 않으면 C2059 오류가 발생할 수 있습니다.  
+ C2059 오류가 발생할 수 있으므로, nothing으로 계산 되는 기호 때 **/D** `symbol`  **=**  컴파일하는 데 사용 됩니다.  
   
 ```  
 // C2059a.cpp  
@@ -58,9 +61,9 @@ int main() {
 }  
 ```  
   
- 함수의 기본 인수에 구조체를 지정하는 응용 프로그램을 컴파일할 때에도 C2059 오류가 발생할 수 있습니다.  인수의 기본값은 반드시 식이어야 합니다.  구조체를 초기화하는데 사용되는 예를 들어 이니셜라이저 목록은 식이 아닙니다.  이 문제를 해결하기 위해서는 생성자가 필수 초기화를 수행하도록 정의하십시오.  
+ C2059 발생할 수 있는 경우 구조를 함수에 대 한 기본 인수에 지정 하는 응용 프로그램을 컴파일하는 경우에 합니다. 인수에 대 한 기본값 식 이어야 합니다. 이니셜라이저 목록-구조를 초기화 하는 데 사용 하는 예를 들어 하나-식이 아닙니다.  이 문제를 해결 하려면 필요한 초기화를 수행 하는 생성자를 정의 합니다.  
   
- 다음 예제는 C2059를 발생시킵니다.  
+ 다음 예제에서는 C2059 오류가 생성 됩니다.  
   
 ```  
 // C2059b.cpp  
@@ -76,11 +79,11 @@ void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK  
 ```  
   
- 클래스 외부에 멤버 템플릿 클래스나 함수를 정의할 경우에도 C2059 오류가 발생할 수 있습니다.  자세한 내용은 [기술 자료 문서 241949](http://support.microsoft.com/kb/241949) 를 참조하십시오.  
+ 멤버 템플릿 클래스나 클래스 밖의 함수를 정의 하는 경우에 C2059을 얻을 수 있습니다. 자세한 내용은 참조 [기술 자료 문서 241949](http://support.microsoft.com/kb/241949)합니다.  
   
- C2059는 형식이 잘못된 캐스트에 대해 발생할 수 있습니다.  
+ 잘못 된 형식의 캐스트에 대 한 C2059 발생할 수 있습니다.  
   
- 다음 샘플에서는 C2059 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2059 오류가 생성 됩니다.  
   
 ```  
 // C2059c.cpp  
@@ -96,9 +99,9 @@ int main() {
 }  
 ```  
   
- C2059는 마침표가 포함된 네임스페이스 이름을 만들려는 경우에도 발생할 수 있습니다.  
+ C2059는 마침표가 포함 된 네임 스페이스 이름을 만들기 위해 사용 하려는 경우에 발생할 수 있습니다.  
   
- 다음 샘플에서는 C2059 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2059 오류가 생성 됩니다.  
   
 ```  
 // C2059d.cpp  
@@ -111,7 +114,7 @@ namespace A  {
 }  
 ```  
   
- C2059 운영자 이름을 정규화 할 수 있는 경우에 발생할 수 있습니다 \(`::`,  `->` , 및  `.` \) 키워드 다음에 야  `template` , 같이 있습니다.  
+ 이름을 정규화 할 수 있는 연산자 C2059 발생할 수 있습니다 (`::`, `->`, 및 `.`) 키워드 뒤에 야 `template`이 예제에 나온 것 처럼:  
   
 ```cpp  
 template <typename T> struct Allocator {  
@@ -126,7 +129,7 @@ template <typename X, typename AY> struct Container {
   
 ```  
   
- 기본적으로 c \+ \+는 가정  `AY::Rebind`  이고. 따라서 다음  `<`  으로 해석\-보다 작습니다.  알려야 컴파일러는 명시적으로  `Rebind`  는 꺾쇠 괄호 올바르게 구문 분석할 수 있도록 서식 파일입니다.  이 오류를 해결 하려면 사용 하는  `template`  종속 형식 이름을 다음과 같이 키워드입니다.  
+ 기본적으로 C++는 `AY::Rebind`이 템플릿이 아니라고 가정하기 때문에 다음 `<`는 보다 작음 기호로 해석됩니다.  꺾쇠 괄호로 올바르게 구문 분석될 수 있도록 `Rebind`이 템플릿임을 컴파일러에 명시적으로 알려야 합니다. 이 오류를 해결하려면 다음과 같이 종속 형식의 이름에서 `template` 키워드를 사용합니다.  
   
 ```cpp  
 template <typename T> struct Allocator {  

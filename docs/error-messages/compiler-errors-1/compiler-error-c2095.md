@@ -1,31 +1,34 @@
 ---
 title: "컴파일러 오류 C2095 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2095"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2095"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2095
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2095
 ms.assetid: 44f8ada1-974f-4e81-a408-33ac6695aa53
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2095
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f9b1ebad5c18bd1d48f4741cc1a14d620cb3aec
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'function' : 실제 매개 변수의 형식이 'void'입니다. 매개 변수 'number'  
+---
+# <a name="compiler-error-c2095"></a>컴파일러 오류 C2095
+'function': 실제 매개 변수는 'void' 형식의: 'number' 매개 변수  
   
- 함수에 전달된 매개 변수의 형식은 `void`인데, 이 형식은 허용되지 않습니다.  대신에 void에 대한 포인터\(`void *`\)를 사용하십시오.  
+ 함수에 전달 된 매개 변수 형식이 `void`,이 허용 되지 않습니다. Void에 대 한 포인터를 사용 하 여 ( `void *`) 대신.  
   
- `number`는 `void`인 매개 변수를 나타냅니다.
+ `number` 어느 매개 변수가 나타내는 `void`합니다.

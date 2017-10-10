@@ -19,32 +19,17 @@ caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 62a32d2a15e36819c8b74f35ef5eae57f1abb50f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 216a82734603db0fd62692f7818dcb1e1fa67b06
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2262"></a>컴파일러 오류 C2262
 'attribute_specifiers': InternalsVisibleTo 선언에는 버전, 문화권 또는 프로세서 아키텍처를 지정할 수 없습니다.  
   
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>특성이 올바르게 지정 하지 않았습니다.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 올바르게 지정하지 않았습니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C2262를 생성합니다.  

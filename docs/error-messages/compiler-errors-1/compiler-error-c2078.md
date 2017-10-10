@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2078"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2078
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2078
 ms.assetid: 9bead850-4123-46cf-a634-5c77ba974b2b
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C2078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6ae181d68f0487f663febfbe38fa42af8670b28
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2078"></a>컴파일러 오류 C2078
 이니셜라이저가 너무 많습니다.  
   
  이니셜라이저 수가 초기화할 개체 수를 초과합니다.  
   
- 이니셜라이저 목록에서 내부 중괄호를 생략하면 컴파일러가 개체 및 내부 개체에 대한 올바른 이니셜라이저 할당을 추론할 수 있습니다.  또한 완전한 중괄호를 사용하면 모호성이 제거되고 올바르게 할당됩니다.  부분 중괄호를 사용하면 개체에 대한 이니셜라이저 할당의 모호성으로 인해 C2078 오류가 발생할 수 있습니다.  
+ 이니셜라이저 목록에서 내부 중괄호를 생략하면 컴파일러가 개체 및 내부 개체에 대한 올바른 이니셜라이저 할당을 추론할 수 있습니다. 또한 완전한 중괄호를 사용하면 모호성이 제거되고 올바르게 할당됩니다. 부분 중괄호를 사용하면 개체에 대한 이니셜라이저 할당의 모호성으로 인해 C2078 오류가 발생할 수 있습니다.  
   
  다음 샘플에서는 C2078 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   

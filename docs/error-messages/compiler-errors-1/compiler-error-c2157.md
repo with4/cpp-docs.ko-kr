@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 152b55fb228d73b03df615fd336e40e984521432
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5735d0394be8114f2e0747e7e0d8dfefc84e580b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2157"></a>컴파일러 오류 C2157
 'function': pragma 목록에서 사용하려면 먼저 선언해야 합니다.  
   
- 함수 이름에 대 한 함수 목록에서 참조 되기 전에 선언 되지 않은 한 [alloc_text](../../preprocessor/alloc-text.md) pragma입니다.  
+ 함수 이름이 선언되지 않은 상태에서 [alloc_text](../../preprocessor/alloc-text.md) pragma에 대한 함수 목록에서 참조되었습니다.  
   
  다음 샘플에서는 C2157을 생성합니다.  
   

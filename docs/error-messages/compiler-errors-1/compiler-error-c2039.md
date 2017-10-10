@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C2039 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2039"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2039"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2039
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# 컴파일러 오류 C2039
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0a2fc962926a4a4d12232a9f785e7254fbcdb3f1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'identifier1' : 'identifier2'의 멤버가 아닙니다.  
+---
+# <a name="compiler-error-c2039"></a>컴파일러 오류 C2039
+'identifier1': 'identifier2'의 구성원이 아닙니다  
   
- 구조체, 클래스 또는 공용 구조체의 멤버를 코드에서 잘못 호출하거나 참조하고 있습니다.  
+ 코드 잘못 호출 하거나 구조체, 클래스 또는 공용 구조체의 멤버를 참조 합니다.  
   
-## 예제  
- 다음 샘플에서는 C2039 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
 // C2039.cpp  
@@ -43,8 +46,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 샘플에서는 C2039 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
 // C2039_b.cpp  
@@ -57,8 +60,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 샘플에서는 C2039 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
 // C2039_c.cpp  
@@ -74,8 +77,8 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK  
 ```  
   
-## 예제  
- C2039는 기본 인덱서에 잘못 액세스하려는 경우에도 발생할 수 있습니다.  다음 샘플에서는 C\#으로 작성된 구성 요소를 정의합니다.  
+## <a name="example"></a>예제  
+ C2039 기본 인덱서를 올바르게 액세스 하려고 할 경우에 발생할 수 있습니다. 다음 샘플 C#에서 작성 된 구성 요소를 정의 합니다.  
   
 ```  
 // C2039_d.cs  
@@ -90,8 +93,8 @@ public class B {
 };  
 ```  
   
-## 예제  
- 다음 샘플에서는 C2039 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
 // C2039_e.cpp  
@@ -108,8 +111,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 제네릭을 사용하는 경우에도 C2039가 발생할 수 있습니다.  다음 샘플에서는 C2039 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ C2039는 제네릭을 사용 하는 경우에 발생할 수 있습니다. 다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
 // C2039_f.cpp  
@@ -132,10 +135,10 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2039 오류는 관리되는 리소스 또는 관리되지 않는 리소스를 해제하려고 하는 경우에 발생할 수 있습니다.  자세한 내용은 [소멸자 및 종료자](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 를 참조하십시오.  
+## <a name="example"></a>예제  
+ C2039 관리 되거나 관리 되지 않는 리소스를 해제 하려고 할 때 발생할 수 있습니다. 자세한 내용은 참조 [소멸자 및 종료자](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)합니다.  
   
- 다음 샘플에서는 C2039 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
 // C2039_g.cpp  

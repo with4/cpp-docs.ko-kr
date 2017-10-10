@@ -19,30 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 223af570c50bd4918e9b136c30e9e97971739752
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 48aac0a2101b6c9cf02c29fe30ea12717b996087
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2231"></a>컴파일러 오류 C2231
-'.': 왼쪽 피연산자를 가리킵니다 s-k '를 사용 하 여 '->'  
+'.': 왼쪽 피연산자 포인트 s-k'를 사용 하세요. '->'  
   
  멤버 선택 연산 (.)의 왼쪽에 있는 피연산자는 클래스, 구조체 또는 공용 구조체 대신 포인터입니다.  
   
