@@ -1,38 +1,41 @@
 ---
 title: "컴파일러 오류 C3510 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3510"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3510"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3510
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 컴파일러 오류 C3510
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9603a4f94106d491ea5e14f30b36b1b230554ad2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-종속 형식 라이브러리 'type\_lib'을\(를\) 찾을 수 없습니다.  
+---
+# <a name="compiler-error-c3510"></a>컴파일러 오류 C3510
+type_lib' 종속 형식 라이브러리'를 찾을 수 없습니다.  
   
- [no\_registry](../../preprocessor/no-registry.md) 및 [auto\_search](../../preprocessor/auto-search.md)를 `#import`에 전달했지만 참조된 형식 라이브러리를 컴파일러가 찾을 수 없습니다.  
+ [no_registry](../../preprocessor/no-registry.md) 및 [auto_search](../../preprocessor/auto-search.md) 에 전달 된 `#import` 하지만 컴파일러에서 참조 된 형식 라이브러리를 찾을 수 없습니다.  
   
- 이 오류를 해결하려면 모든 형식 라이브러리와 참조된 형식 라이브러리를 컴파일러에서 사용할 수 있는지 확인해야 합니다.  
+ 이 오류를 해결 하려면 모든 형식 라이브러리와 참조 된 형식 라이브러리를 컴파일러에 사용할 수 있는지 확인 합니다.  
   
- 다음 샘플에서는 C3510 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3510 오류가 생성 됩니다.  
   
- 다음과 같은 두 개의 형식 라이브러리가 빌드되어 있고 C3510a.tlb가 경로에서 삭제되었거나 없는 경우를 가정해 봅시다.  
+ 가정 하 고 다음과 같은 두 개의 형식 라이브러리 작성 된 C3510a.tlb가 삭제 또는 경로에 없습니다.  
   
 ```  
 // C3510a.idl  
@@ -47,7 +50,7 @@ library C3510aLib
 };  
 ```  
   
- 두 번째 형식 라이브러리에 대한 소스 코드는 다음과 같습니다.  
+ 고 두 번째 형식 라이브러리에 대 한 소스 코드에는 다음을 추가 합니다.  
   
 ```  
 // C3510b.idl  
@@ -63,7 +66,7 @@ library C3510bLib
 };  
 ```  
   
- 클라이언트 코드는 다음과 같습니다.  
+ 및 클라이언트 코드:  
   
 ```  
 // C3510.cpp  

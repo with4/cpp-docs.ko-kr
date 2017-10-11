@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 83a215b1c4883ba7ed4b285af8c4efafe2cfaa05
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 42923edc2d238e7f0b64858561f7d23d211abd80
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3490"></a>컴파일러 오류 C3490
@@ -51,7 +36,7 @@ ms.lasthandoff: 04/04/2017
 -   메서드 선언에서 `const` 한정자를 제거합니다.  
   
 ## <a name="example"></a>예제  
- 멤버 변수를 수정 하기 때문에 다음 예제에서는 c 3490 `_i` 에 `const` 메서드:  
+ 다음 예제에서는 `_i` 메서드의 멤버 변수 `const` 를 수정하므로 C3490을 생성합니다.  
   
 ```  
 // C3490a.cpp  

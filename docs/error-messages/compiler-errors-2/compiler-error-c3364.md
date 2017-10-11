@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3364 | Microsoft 문서"
+title: "컴파일러 오류 C3364 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 783e05439168a63c21a3900c993813dd973a642a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ca9b4d5ca4362e1d728a854bb776573d25969d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3364"></a>컴파일러 오류 C3364
-'delegate': 대리자 생성자: 인수는 관리 되는 클래스의 멤버 함수 또는 전역 함수에 대 한 포인터 여야 합니다.  
+'delegate': 대리 생성자: 인수에 관리 되는 클래스의 멤버 함수 또는 전역 함수에 대 한 포인터 여야 합니다.  
   
- 대리자 생성자의 두 번째 매개 변수 멤버 함수의 주소 또는 모든 클래스의 정적 멤버 함수의 주소를 사용 합니다. 둘 다 단순 주소로 처리 됩니다.  
+ 대리 생성자의 두 번째 매개 변수는 멤버 함수의 주소 또는 클래스의 정적 멤버 함수의 주소를 사용 합니다. 둘 다 단순 주소로 처리 됩니다.  
   
  다음 샘플에서는 C3364 오류가 생성 됩니다.  
   

@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3509 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3509"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3509"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3509
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3509
 ms.assetid: cc2db39a-2f98-4e40-b803-496e585494e6
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3509
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bb8fcb4c51ce0a7e69154e77ac5990898275ba16
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'type': 자동화 반환 형식이 잘못되었습니다. 매개 변수가 'retval'로 표시된 경우 반환 형식은 'void', 'HRESULT' 또는 'SCODE'여야 합니다.  
+---
+# <a name="compiler-error-c3509"></a>컴파일러 오류 C3509
+'type': 자동화 반환 형식이 잘못 되었습니다. 'void', 'HRESULT' 또는 'SCODE' 해야 경우 매개 변수는 표시 된 'retval', 반환 형식  
   
- COM 인터페이스의 메서드는 void나 HRESULT를 반환해야 합니다.  
+ COM 인터페이스에서 메서드는 void 또는 HRESULT 반환 해야 합니다.  
   
- 다음 샘플에서는 C3509 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3509 오류가 생성 됩니다.  
   
 ```  
 // C3509.cpp  

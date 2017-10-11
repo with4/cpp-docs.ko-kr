@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3354 | Microsoft 문서"
+title: "컴파일러 오류 C3354 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: bebeb383e77e4da16a24867731535d9fa36d6c5e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e4fc95051f9a59db0fcb06fd4990637efda34516
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3354"></a>컴파일러 오류 C3354
 'function': 대리자를 만드는 데 사용되는 함수는 'type' 반환 형식을 사용할 수 없습니다.  
   
- 다음 형식에 대 한 반환 형식으로 올바르지 않습니다.는 `delegate`:  
+ 다음 형식은 `delegate`에 대한 반환 형식으로 부적합합니다.  
   
 -   함수 포인터  
   

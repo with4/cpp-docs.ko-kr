@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 231ccf64776c608131878caf9bdbe7e463903f6b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: da6145b3a3aecd5f550a58c009020fb24280349e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3291"></a>컴파일러 오류 C3291
 'default' : trivial 속성의 이름이 될 수 없습니다.  
   
- trivial 속성은 `default`로 이름을 바꿀 수 없습니다. 참조 [속성](../../windows/property-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
+ trivial 속성은 `default`로 이름을 바꿀 수 없습니다. 자세한 내용은 [property](../../windows/property-cpp-component-extensions.md) 를 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C3291을 생성합니다.  

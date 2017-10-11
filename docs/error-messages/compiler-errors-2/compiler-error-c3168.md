@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3168 | Microsoft 문서"
+title: "컴파일러 오류 C3168 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: da24e70142fa8b54b88e1d721cad01865f306202
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 980341a7871d314e3173449234fbb597a5b55d63
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3168"></a>컴파일러 오류 C3168
 'type': 열거형의 내부 형식이 잘못 되었습니다.  
   
-에 대해 지정 된 내부 형식이 `enum` 형식이 잘못 되었습니다. 기본 형식이 정수 계열 c + + 형식 또는 해당 CLR 형식 이어야 합니다.  
+에 대해 지정 된 내부 형식이 고 `enum` 형식이 잘못 되었습니다. 기본 형식이 c + + 정수 형식이 나 해당 CLR 형식 이어야 합니다.  
   
 다음 샘플에서는 C3168 오류가 생성 됩니다.  
   

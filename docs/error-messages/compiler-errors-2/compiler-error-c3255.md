@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3255 | Microsoft 문서"
+title: "컴파일러 오류 C3255 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2739be65060cabd5e40fb0156c44aca23f0b7dcc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 86052e8ffa7e9ba9627a290318dbe6115af3d36c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3255"></a>컴파일러 오류 C3255
-'value type': 네이티브 힙에이 값 형식 개체를 동적으로 할당할 수 없습니다  
+'값 유형':이 값 형식 개체를 네이티브 힙에 동적으로 할당할 수 없습니다  
   
- 값 형식의 인스턴스 (참조 [클래스 및 구조체](../../windows/classes-and-structs-cpp-component-extensions.md)) 관리 되는 멤버를 포함 하는 만들 수는 힙에 있지만 스택에 합니다.  
+ 값 형식 인스턴스의 (참조 [클래스 및 구조체](../../windows/classes-and-structs-cpp-component-extensions.md)) 관리 되는 멤버를 포함 하는 힙에 스택에 만들 수 있습니다.  
   
  다음 샘플에서는 C3255 오류가 생성 됩니다.  
   

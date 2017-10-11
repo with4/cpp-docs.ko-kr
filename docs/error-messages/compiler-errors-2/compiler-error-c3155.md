@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3155 | Microsoft 문서"
+title: "컴파일러 오류 C3155 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 651eb1a03eed55a3d383a32f027991a4a56d4371
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 75156c7b4611038b522501a20468595de10863af
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3155"></a>컴파일러 오류 C3155
-속성 인덱서에는 특성을 사용할 수 없습니다.  
+속성 인덱서에 특성이 허용 되지 않습니다.  
   
-인덱싱된 속성을 올바르게 선언 되었습니다. 자세한 내용은 참조 [하는 방법: 사용 하 여 속성에 C + + CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)합니다.  
+인덱싱된 속성을 잘못 선언 되었습니다. 자세한 내용은 참조 [하는 방법: 사용 하 여 속성 C + + /cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)합니다.  
   
 ## <a name="example"></a>예제  
 다음 샘플에서는 C3155 오류가 발생 합니다.  

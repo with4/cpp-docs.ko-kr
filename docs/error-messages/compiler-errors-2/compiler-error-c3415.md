@@ -19,34 +19,19 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: aeb26c5a3b1add0f3b8ec3eb9ba9ae2c20fb094e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9a03e0dbb61dc6f57b1a6fe3cd345d46f78b05a9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3415"></a>컴파일러 오류 C3415
 여러 'section_name' 섹션이 다양한 특성('value')을 갖고 있습니다.  
   
- 충돌 하는 값에 지정 된 [섹션](../../preprocessor/section.md) pragma입니다.  
+ [section](../../preprocessor/section.md) pragma에 충돌되는 값이 지정되었습니다.  
   
- `value`ntimage.h에 지정 된 섹션에 대 한 현재 설정이입니다. 예:  
+ `value` 는 ntimage.h에 지정된 것처럼 섹션의 현재 설정입니다. 예:  
   
 ```  
 // Section contains extended relocations.  

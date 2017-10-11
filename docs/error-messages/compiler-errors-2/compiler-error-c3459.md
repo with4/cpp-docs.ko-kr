@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3459 | Microsoft 문서"
+title: "컴파일러 오류 C3459 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 7061d3d633f9b2a4127189e74103141834800bfe
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 703844f749ea2911d2472079053608474de56785
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3459"></a>컴파일러 오류 C3459
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
 클래스 인덱서 속성에 적용하기 위한 특성을 잘못 사용했습니다.  
   
-자세한 내용은 참조 [하는 방법: 사용 하 여 속성에 C + + CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)합니다.  
+자세한 내용은 참조 [하는 방법: 사용 하 여 속성 C + + /cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)합니다.  
   
 ## <a name="example"></a>예제  
 다음 샘플에서는 C3459를 생성합니다.  

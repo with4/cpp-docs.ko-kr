@@ -1,29 +1,32 @@
 ---
 title: "컴파일러 오류 C3501 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3501"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3501"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3501
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3501
 ms.assetid: cad69fab-2687-41ac-961f-25dc4c51b167
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3501
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc778fe6719de9d370af3f23ebee1d7c131b1517
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-ProgID 'progid'에 대해 등록된 typelib가 없습니다.  
+---
+# <a name="compiler-error-c3501"></a>컴파일러 오류 C3501
+typelib가 없습니다. 'progid' ProgID에 대 한 등록  
   
- 지정된 progid의 클래스 ID에 관련된 형식 라이브러리가 없습니다.  따라서 `#import` 문에 이 progid를 전달할 수 없습니다.
+ 에 대 한 클래스 ID는 지정 된 progid에 없는 연결된 형식 라이브러리. 따라서 전달할 수 없습니다이를 progid는 `#import` 문.

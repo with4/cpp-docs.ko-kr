@@ -1,39 +1,42 @@
 ---
 title: "컴파일러 오류 C3531 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3531"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3531"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3531
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3531
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7753e30e305b7b36adc3b4d2b535f755fa455bdd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'기호': 'auto'가 포함된 형식의 기호에는 이니셜라이저가 있어야 합니다.  
+---
+# <a name="compiler-error-c3531"></a>컴파일러 오류 C3531
+'symbol': 'auto'가 포함 된 형식의 기호에는 이니셜라이저가 있어야 합니다.  
   
- 지정된 변수에 이니셜라이저 식이 없습니다.  
+ 지정된 된 변수에 이니셜라이저 식을 없습니다.  
   
-### 이 오류를 해결하려면  
+### <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  변수를 선언할 때 등호\(\=\) 구문을 사용하는 단순 할당과 같은 이니셜라이저 식을 지정합니다.  
+1.  변수를 선언 하는 경우 등호 구문을 사용 하는 단순 할당과 같은 이니셜라이저 식을 지정 합니다.  
   
-## 예제  
- 다음 예제에서는 `x1`, `y1, y2, y3` 및 `z2` 변수가 초기화되지 않기 때문에 C3531이 발생합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 때문에 c 3531 변수 `x1`, `y1, y2, y3`, 및 `z2` 요소가 초기화 되지 않았습니다.  
   
 ```  
 // C3531.cpp  
@@ -47,5 +50,5 @@ int main()
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [auto 키워드](../../cpp/auto-keyword.md)

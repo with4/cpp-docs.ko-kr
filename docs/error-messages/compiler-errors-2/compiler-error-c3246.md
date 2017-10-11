@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3246 | Microsoft 문서"
+title: "컴파일러 오류 C3246 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ac8458487d9ed500420f2e687f8eb7c37bf053da
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 262dc8bde5dcb4c12909c69bce3fa867685245eb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3246"></a>컴파일러 오류 C3246
 'class': 'sealed'로 선언했으므로 'type'에서 상속할 수 없습니다.  
   
-로 표시 된 클래스 [봉인](../../windows/sealed-cpp-component-extensions.md) 다른 클래스에 대 한 기본 클래스를 사용할 수 없습니다.  
+[sealed](../../windows/sealed-cpp-component-extensions.md) 로 표시된 클래스는 다른 클래스의 기본 클래스일 수 없습니다.  
   
 다음 샘플에서는 C3246을 생성합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3365 | Microsoft 문서"
+title: "컴파일러 오류 C3365 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 2ad4d2d5b926001fad668b62b6cbf0abe21542c0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2352ff83181fe1127e1faa60829d00f03508bccd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3365"></a>컴파일러 오류 C3365
 연산자 'operator': 피연산자 형식 'type1'과 'type2'가 서로 다릅니다.  
   
-다른 형식의 대리자를 작성하려고 했습니다.  참조 [하는 방법: 정의 및 사용 하 여 대리자 (C + + /cli CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) 대리자에 대 한 자세한 내용은 합니다.  
+다른 형식의 대리자를 작성하려고 했습니다.  참조 [하는 방법: 정의 하 고 사용 하 여 위임 (C + + /cli CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) 대리자에 대 한 자세한 내용은 합니다.  
   
 ## <a name="example"></a>예제  
 다음 샘플에서는 C3365를 생성합니다.  

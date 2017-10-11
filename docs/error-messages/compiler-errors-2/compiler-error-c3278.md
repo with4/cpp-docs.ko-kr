@@ -1,30 +1,33 @@
 ---
-title: "Compiler Error C3278 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3278"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3278"
+title: "컴파일러 오류 C3278 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3278
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compiler Error C3278
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee3c14e1b6d306807735f8d58570089f128a1c19
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-인터페이스 또는 순수 메서드 'method'을\(를\) 런타임에 직접 호출하지 못합니다.  
+---
+# <a name="compiler-error-c3278"></a>컴파일러 오류 C3278
+인터페이스 또는 순수 메서드 'method'을(를) 런타임에 직접 호출하지 못합니다.  
   
  인터페이스 메서드 또는 순수 메서드를 호출했지만 허용되지 않습니다.  
   

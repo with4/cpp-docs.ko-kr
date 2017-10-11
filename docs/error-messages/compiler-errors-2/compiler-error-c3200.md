@@ -1,32 +1,35 @@
 ---
 title: "컴파일러 오류 C3200 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3200"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3200"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3200
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3200
 ms.assetid: 44bb5e77-f0ec-421c-a732-b9ee7c0a3529
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 컴파일러 오류 C3200
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e4e1df5fb5c3da260ec5eba75d25e74207fbf8e2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'template' : 템플릿 매개 변수 'parameter'의 템플릿 인수가 잘못되었습니다. 클래스 템플릿이 필요합니다.  
+---
+# <a name="compiler-error-c3200"></a>컴파일러 오류 C3200
+'template': 템플릿 매개 변수 'parameter'에 대 한 잘못 된 템플릿 인수. 클래스 템플릿이 필요  
   
- 클래스 템플릿에 잘못된 인수를 전달했습니다.  클래스 템플릿은 템플릿을 매개 변수로 간주합니다.  다음 예제에서 `Y<int, int> aY`를 호출하면 C3200이 발생합니다.  첫째 매개 변수는 템플릿이어야 합니다\(예: `Y<X, int> aY`\).  
+ 클래스 템플릿을에 잘못 된 인수를 전달 합니다. 클래스 템플릿에서 매개 변수로 템플릿이 필요합니다. 다음 예제에서는 호출 `Y<int, int> aY` C3200를 생성 합니다. 첫 번째 매개 변수 수와 같은 해야 `Y<X, int> aY`합니다.  
   
 ```  
 // C3200.cpp  

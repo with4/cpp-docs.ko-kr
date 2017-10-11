@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3203 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3203"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3203"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3203
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 컴파일러 오류 C3203
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb8a9272a62080bd567989d90502d0ca2d003a57
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3203"></a>컴파일러 오류 C3203
 'type' : 특수화되지 않은 클래스 템플릿 또는 제네릭은 템플릿 또는 제네릭 매개 변수 'param'에 대한 템플릿 또는 제네릭 인수로 사용할 수 없습니다. 실제 형식이 필요합니다.  
   
- 클래스 템플릿 또는 제네릭에 잘못된 인수를 전달했습니다.  클래스 템플릿 또는 제네릭에는 매개 변수로 형식이 필요합니다.  
+ 클래스 템플릿 또는 제네릭에 잘못된 인수를 전달했습니다. 클래스 템플릿 또는 제네릭에는 매개 변수로 형식이 필요합니다.  
   
- 이 오류는 Visual C\+\+ 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성될 수 있습니다. 특수화되지 않은 클래스 템플릿은 기본 클래스 목록에서 템플릿 인수로 사용할 수 없습니다.  C3203 오류를 해결하려면 템플릿 형식 매개 변수를 기본 클래스 목록의 템플릿 매개 변수로 사용할 때 명시적으로 템플릿 클래스 이름에 추가합니다.  
+ 이 오류는 Visual C++ 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성될 수 있습니다. 특수화되지 않은 클래스 템플릿은 기본 클래스 목록에서 템플릿 인수로 사용할 수 없습니다. C3203 오류를 해결하려면 템플릿 형식 매개 변수를 기본 클래스 목록의 템플릿 매개 변수로 사용할 때 명시적으로 템플릿 클래스 이름에 추가합니다.  
   
 ```  
 // C3203.cpp  

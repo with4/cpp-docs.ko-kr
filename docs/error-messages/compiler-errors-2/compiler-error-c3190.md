@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3190 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3190"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3190"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3190
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3190
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 29d85c8a58b20c5a3c4492c56a66591e1509f2c4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-제공된 템플릿 인수를 사용하여 인스턴스화한 'instantiation'은\(는\) 'type' 멤버 함수의 명시적 인스턴스화가 아닙니다.  
+---
+# <a name="compiler-error-c3190"></a>컴파일러 오류 C3190
+제공 된 템플릿 인수를 갖는 ' 인스턴스화' t y'의 모든 멤버 함수의 명시적 인스턴스화가 아닙니다.  
   
- 함수를 명시적으로 인스턴스화하려고 했습니다. 하지만 제공된 형식 인수가 사용할 수 있는 함수와 일치하지 않습니다.  
+ 컴파일러는 명시적 함수 인스턴스화; 확인 시도를 검색 했습니다. 그러나 제공 된 형식 인수는 가능한 기능의 일치 하지 않습니다.  
   
- 다음 샘플에서는 C3190 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3190 오류가 생성 됩니다.  
   
 ```  
 // C3190.cpp  

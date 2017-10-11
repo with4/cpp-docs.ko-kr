@@ -1,39 +1,42 @@
 ---
 title: "컴파일러 오류 C3538 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3538"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3538"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3538
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3538
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: da21036ddd4cc8b468f291079e0c475ca1b7c4b3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3538"></a>컴파일러 오류 C3538
 선언자 목록에서 'auto'는 항상 동일한 형식으로 추론되어야 합니다.  
   
  선언 목록에 선언된 모든 변수가 동일한 형식으로 확인되지 않습니다.  
   
-### 이 오류를 해결하려면  
+### <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
 1.  목록에 있는 모든 `auto` 선언이 동일한 형식으로 추론되는지 확인합니다.  
   
-## 예제  
- 다음 문은 3538 오류를 생성합니다.  각 문에서 여러 변수를 선언하지만 각각의 `auto` 키워드 사용이 동일한 형식으로 추론되지 않습니다.  
+## <a name="example"></a>예제  
+ 다음 문은 3538 오류를 생성합니다. 각 문에서 여러 변수를 선언하지만 각각의 `auto` 키워드 사용이 동일한 형식으로 추론되지 않습니다.  
   
 ```  
 // C3538.cpp  
@@ -53,5 +56,5 @@ int main()
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [auto 키워드](../../cpp/auto-keyword.md)

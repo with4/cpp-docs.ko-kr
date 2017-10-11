@@ -1,37 +1,40 @@
 ---
 title: "컴파일러 오류 C3154 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3154"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3154"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3154
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3154
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: de38898f775d621edfec464de8a51d20c3bdb4f0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-가변 매개 변수\(...\) 앞에 ','가 필요합니다.매개 변수 배열 함수에서는 쉼표로 분리되지 않은 가변 매개 변수\(...\)를 사용할 수 없습니다.  
+---
+# <a name="compiler-error-c3154"></a>컴파일러 오류 C3154
+예상 ',' 줄임표 앞입니다. 비 쉼표로 구분 줄임표 매개 변수 배열 함수에서 지원 되지 않습니다.  
   
- 가변 인수 함수가 잘못 선언되었습니다.  
+ 가변 인수 함수를 올바르게 선언 되지 않았습니다.  
   
- 자세한 내용은 [Variable Argument Lists \(...\) \(C\+\+\/CLI\)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)을 참조하십시오.  
+ 자세한 내용은 참조 [가변 인수 목록 (...) (C + + /CLI CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
   
-## 예제  
- 다음 샘플에서는 C3154 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3154 오류가 발생 합니다.  
   
 ```  
 // C3154.cpp  
