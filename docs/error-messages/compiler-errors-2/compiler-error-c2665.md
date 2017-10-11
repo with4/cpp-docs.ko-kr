@@ -1,39 +1,42 @@
 ---
 title: "컴파일러 오류 C2665 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2665"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2665"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2665
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2665
 ms.assetid: a7f99b61-2eae-4f2b-ba75-ea68fd1e8312
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 컴파일러 오류 C2665
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5a349df2c60d746b6b090953362c7c6801e1f2a3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function': number1개의 오버로드 모두 number2번째 매개 변수를 'type' 형식으로부터 변환할 수 없습니다.  
+---
+# <a name="compiler-error-c2665"></a>컴파일러 오류 C2665
+'function': 'type' 형식에서 매개 변수 번호 2를 변환할 수는 번호 1 오버 로드가  
   
- 오버로드된 함수의 매개 변수를 필수 형식으로 변환할 수 없습니다.  다음과 같이 해결할 수 있습니다.  
+ 오버 로드 된 함수의 매개 변수에 필요한 형식으로 변환할 수 없습니다.  가능한 해결 방법:  
   
--   변환 연산자를 제공합니다.  
+-   변환 연산자를 제공 합니다.  
   
--   명시적 변환을 사용합니다.  
+-   명시적 변환을 사용 합니다.  
   
-## 예제  
- 다음 샘플에서는 C2665 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2665 오류가 발생 합니다.  
   
 ```  
 // C2665.cpp  

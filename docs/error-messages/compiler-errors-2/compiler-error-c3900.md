@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C3900 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3900"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3900"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3900
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3900
 ms.assetid: a94cc561-8fa8-4344-9e01-e81ff462fae5
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3900
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 29a2210ec372de6f752091a8eb13a4e5eb4f4aa7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'member': 현재 범위에서는 사용할 수 없습니다.  
+---
+# <a name="compiler-error-c3900"></a>컴파일러 오류 C3900
+'member': 현재 범위에 사용할 수 없습니다  
   
- 속성 블록에는 함수 선언과 인라인 함수 정의만 포함될 수 있습니다.  속성 블록에서는 함수를 제외한 어떠한 멤버도 허용되지 않습니다.  형식 정의, 연산자 또는 friend 함수도 허용되지 않습니다.  자세한 내용은 [속성](../../windows/property-cpp-component-extensions.md)을 참조하십시오.  
+ 속성 블록에는 함수 선언 및 인라인 함수 정의 포함 될 수 있습니다. 멤버 함수 밖에 없습니다 속성 블록에서 허용 됩니다. 없음 typedef, 연산자 또는 friend 함수를 사용할 수 있습니다. 자세한 내용은 [property](../../windows/property-cpp-component-extensions.md)을 참조하세요.  
   
- 이벤트 정의에는 액세스 메서드와 함수만 포함될 수 있습니다.  
+ 액세스 방법 및 함수에만 이벤트 정의 포함할 수 있습니다.  
   
- 다음 샘플에서는 C3900 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3900 오류가 생성 됩니다.  
   
 ```  
 // C3900.cpp  
@@ -43,7 +46,7 @@ ref class X {
 };  
 ```  
   
- 다음 샘플에서는 C3900 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3900 오류가 생성 됩니다.  
   
 ```  
 // C3900b.cpp  

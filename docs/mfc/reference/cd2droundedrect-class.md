@@ -1,5 +1,5 @@
 ---
-title: "CD2DRoundedRect 클래스 | Microsoft 문서"
+title: "CD2DRoundedRect 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,31 +15,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DRoundedRect class
+- CD2DRoundedRect [MFC], CD2DRoundedRect
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
 caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f9522f8555c37cd4a15b425c36cfa2d1b1b9851c
+ms.translationtype: MT
+ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
+ms.openlocfilehash: 5496ad1262246e44871cc540b4021c7fb18216ca
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cd2droundedrect-class"></a>CD2DRoundedRect 클래스

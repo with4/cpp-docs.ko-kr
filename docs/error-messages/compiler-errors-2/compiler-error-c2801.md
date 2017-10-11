@@ -1,48 +1,51 @@
 ---
 title: "컴파일러 오류 C2801 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2801"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2801"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2801
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2801
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2801
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 41e7956ace6c54cd55a2ed9f68f18c867bc80ad9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'operator operator'은\(는\) 정적 멤버가 아니어야 합니다.  
+---
+# <a name="compiler-error-c2801"></a>컴파일러 오류 C2801
+'operator 연산자' static이 아닌 멤버 여야 합니다.  
   
- 다음 연산자는 비정적 멤버로서만 오버로드할 수 있습니다.  
+ 비정적 멤버로 다음과 같은 연산자를 오버 로드할 수 있습니다.  
   
--   할당 연산자 `=`  
+-   할당`=`  
   
--   클래스 멤버 액세스 `->`  
+-   클래스 멤버 액세스`->`  
   
--   첨자 `[]`  
+-   첨자`[]`  
   
--   함수 호출 `()`  
+-   함수 호출`()`  
   
- C2801은 다음과 같은 원인으로 발생할 수 있습니다.  
+ 가능한 C2801 원인:  
   
--   오버로드된 연산자가 클래스, 구조체 또는 공용 구조체 멤버가 아닙니다.  
+-   오버 로드 된 연산자가 클래스, 구조체 또는 공용 구조체 멤버.  
   
--   오버로드된 연산자가 `static`으로 선언되었습니다.  
+-   오버 로드 된 연산자가 선언 `static`합니다.  
   
--   다음 샘플에서는 C2801 오류가 발생하는 경우를 보여 줍니다.  
+-   다음 샘플에서는 C2801 오류가 생성 됩니다.  
   
 ```  
 // C2801.cpp  

@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bec93f1ee238184cbb4eed0d98921fb28e94e222
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af19f0a0c347ab0f898a3a3d72b8cca5cb07dad8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2280"></a>컴파일러 오류 c 2280  
@@ -109,7 +94,7 @@ void f() {
   
 ## <a name="example-movable-deletes-implicit-copy"></a>예: 이동할 수 있는 암시적 복사본 삭제  
   
-클래스는 이동 생성자 또는 이동 할당 연산자를 선언 복사 생성자를 명시적으로 선언 하지 않는 경우, 컴파일러가 암시적으로 선언 복사 생성자를 하 고 정의 `deleted`합니다. 마찬가지로, 클래스는 이동 생성자 또는 이동 할당 연산자를 선언 복사 할당 연산자를 명시적으로 선언 하지 않는 경우, 컴파일러가 암시적으로 선언 복사 할당 연산자 하 고 정의 `deleted`합니다. 이 문제를 해결 하려면 이러한 멤버를 명시적으로 선언 해야 합니다.  
+클래스는 이동 생성자 또는 이동 할당 연산자를 선언 복사 생성자를 명시적으로 선언 하지 않는 경우, 컴파일러가 암시적으로 복사 생성자를 선언 하 고로 정의 `deleted`합니다. 마찬가지로, 클래스는 이동 생성자 또는 이동 할당 연산자를 선언 복사 할당 연산자를 명시적으로 선언 하지 않는 경우, 컴파일러가 암시적으로 선언 복사 할당 연산자 하 고 정의 `deleted`합니다. 이 문제를 해결 하려면 이러한 멤버를 명시적으로 선언 해야 합니다.  
  
 연결 하 여 오류 c 2280 표시 되 면는 `unique_ptr`는 거의 확실히는 해당 복사 생성자를 호출 하려고 하기 때문에 `deleted` 함수입니다. 기본적으로 `unique_ptr` 복사할 수 없습니다. 이동 생성자를 사용 하 여 소유권을 대신 전달 합니다.  
 
@@ -138,7 +123,7 @@ void copy(base *p)
 
 ## <a name="example-variant-and-volatile-members"></a>예: Variant 및 volatile 멤버  
   
-버전의 Visual Studio 2015 업데이트 2 이전 컴파일러 및 생성 된 맞지 않는 기본 생성자 및 소멸자 익명 공용 구조체에 대 한 했습니다. 로 암시적으로 선언 이제 이러한 `deleted`합니다. 이러한 버전의 암시적 정의 비준수 허용 `default` 복사 및 이동 생성자 및 `default` 복사 및 이동 할당 연산자에서는 클래스와 구조체는 `volatile` 멤버 변수입니다. 컴파일러에서 이제이 특수 생성자와 대입 연산자가를 고려 하 고 생성 하지 `default` 구현 합니다. 이러한 클래스는 공용 구조체 또는 클래스 내부에서 익명 공용 구조체의 멤버 이면 복사 및 이동 생성자 및 공용 구조체 또는 클래스의 복사 및 이동 할당 연산자는 암시적으로 정의 `deleted`합니다. 이 문제를 해결 하려면 필요한 특수 멤버 함수를 명시적으로 선언 해야 합니다.  
+버전의 Visual Studio 2015 업데이트 2 이전 컴파일러 및 생성 된 맞지 않는 기본 생성자 및 소멸자 익명 공용 구조체에 대 한 했습니다. 로 암시적으로 선언 이제 이러한 `deleted`합니다. 이러한 버전의 암시적 정의 맞지 않는 허용 `default` 복사 및 이동 생성자 및 `default` 복사 및 이동 할당 연산자에서는 클래스와 구조체는 `volatile` 멤버 변수입니다. 컴파일러에서 이제이 특수 생성자와 대입 연산자가를 고려 하 고 생성 하지 `default` 구현 합니다. 이러한 클래스는 공용 구조체 또는 클래스 내부에서 익명 공용 구조체의 멤버 이면 복사 및 이동 생성자 및 공용 구조체 또는 클래스의 복사 및 이동 할당 연산자는 암시적으로 정의 `deleted`합니다. 이 문제를 해결 하려면 필요한 특수 멤버 함수를 명시적으로 선언 해야 합니다.  
   
 ```cpp  
 // C2280_variant.cpp
@@ -167,7 +152,7 @@ int main() {
   
 ## <a name="example-indirect-base-members-deleted"></a>예: 간접 기본 멤버 삭제  
   
-고 함수를 호출 하려면 특수 멤버 간접적으로 파생 클래스의 파생된 클래스를 사용할 수 있는 맞지 않는 된 버전의 Visual Studio 2015 업데이트 2 이전 컴파일러 `private virtual` 기본 클래스입니다. 이제 컴파일러가 이러한 호출이 수행 하는 경우 컴파일러 오류 c 2280을 발급 합니다.  
+고 함수를 호출 하려면 특수 멤버 간접적으로 파생 클래스의 파생된 클래스를 사용할 수 있는 맞지 않는 된 버전의 Visual Studio 2015 업데이트 2 이전 컴파일러 `private virtual` 기본 클래스입니다. 이제 컴파일러 이러한 호출이 수행 하는 경우 컴파일러 오류 c 2280을 발급 합니다.  
   
 이 예제에서는 클래스 `top` 간접적으로 파생 된 가상 개인에서 `base`합니다. 멤버를 이렇게 하면 표준에 맞는 코드 `base` 에 액세스할 수 없도록 `top`형식의 개체는 `top` 없습니다 기본 생성 되거나 파괴 될 합니다. 이전 컴파일러 동작에 의존 하는 코드에서이 문제를 해결 하려면 중간 클래스를 사용 하 여 변경 `protected virtual` 파생을 또는 변경 된 `top` 직접 파생을 사용 하는 클래스:  
 

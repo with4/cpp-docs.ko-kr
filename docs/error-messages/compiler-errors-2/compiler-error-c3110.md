@@ -1,32 +1,35 @@
 ---
 title: "컴파일러 오류 C3110 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3110"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3110"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3110
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3110
 ms.assetid: 821dc71f-896e-4b2d-af0e-aa9932934b7b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3110
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 573b7bbbe40929d291c10426e7826293e8dfd4bc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function\_name' : COM 인터페이스 메서드를 오버로드할 수 없습니다.  
+---
+# <a name="compiler-error-c3110"></a>컴파일러 오류 C3110
+'function_name': COM 인터페이스 메서드를 오버 로드할 수 없습니다  
   
- 다음과 같은 인터페이스 특성으로 시작되는 인터페이스는  
+ 와 같은 인터페이스 특성으로 시작 되는 인터페이스:  
   
 -   [사용자 지정](../../windows/custom-cpp.md)  
   
@@ -36,7 +39,7 @@ caps.handback.revision: 7
   
 -   [object](../../windows/object-cpp.md)  
   
- 오버로드할 수 없습니다.  예를 들면 다음과 같습니다.  
+ 오버 로드할 수 없습니다. 예:  
   
 ```  
 // C3110.cpp  

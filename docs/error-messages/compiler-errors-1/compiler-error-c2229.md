@@ -1,38 +1,41 @@
 ---
 title: "컴파일러 오류 C2229 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2229"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2229"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2229
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C2229
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c54e3affb39cb396df1caaafe6450d5c6ac80f6e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-형식 'identifier'에 크기가 0인 잘못된 배열이 있습니다.  
+---
+# <a name="compiler-error-c2229"></a>컴파일러 오류 C2229
+'identifier' 형식에 잘못 된 크기가 0 인 배열  
   
- 구조체나 비트 필드의 멤버에 크기가 0인 배열이 있으며 이 멤버가 마지막 멤버가 아닙니다.  
+ 구조 또는 비트 필드의 멤버는 크기가 0 인 배열 마지막 멤버를 포함 합니다.  
   
- 크기가 0인 배열은 구조체의 마지막에만 올 수 있으므로 구조체를 할당할 때 배열 크기를 지정해야 합니다.  
+ 구조체의 마지막 멤버로 크기는 0 배열을 있을 수 있지만, 때문에 구조체를 할당할 때 해당 크기를 지정 해야 합니다.  
   
- 크기가 0인 배열이 구조체의 마지막 멤버가 아니면 컴파일러는 나머지 필드의 오프셋을 계산하지 못합니다.  
+ 0 크기의 배열이 구조체의 마지막 구성원 없으면 컴파일러가 나머지 필드에 대 한 오프셋을 계산할 수 없습니다.  
   
- 다음 샘플에서는 C2229 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2229 오류가 생성 됩니다.  
   
 ```  
 // C2229.cpp  

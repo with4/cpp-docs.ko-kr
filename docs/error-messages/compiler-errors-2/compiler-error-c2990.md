@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2990 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2990"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2990"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2990
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2990
 ms.assetid: 674e9f6a-6743-4af0-a7ed-cbe11103a2f8
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 컴파일러 오류 C2990
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9a2433bec7992c73fb7e9b7f358e89b7e75da384
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'class' : 비클래스 'type'이\(가\) 이미 클래스 'type'\(으\)로 선언되었습니다.  
+---
+# <a name="compiler-error-c2990"></a>컴파일러 오류 C2990
+'class': 비 클래스 형식으로 이미 클래스 형식으로 선언  
   
- 비 제네릭 또는 템플릿 클래스가 제네릭 또는 템플릿 클래스를 다시 정의합니다.  헤더 파일의 충돌 여부를 확인하십시오.  
+ 비 제네릭 또는 템플릿 클래스는 제네릭 또는 템플릿 클래스를 재정의합니다. 헤더 파일의 충돌을 확인 합니다.  
   
- 다음 샘플에서는 C2990 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2990 오류가 생성 됩니다.  
   
 ```  
 // C2990.cpp  
@@ -38,7 +41,7 @@ class C{};
 class C{};   // C2990  
 ```  
   
- 제네릭을 사용하는 경우에도 C2990이 발생할 수 있습니다.  
+ C2990은 제네릭을 사용 하는 경우에 발생할 수 있습니다.  
   
 ```  
 // C2990b.cpp  
@@ -49,9 +52,9 @@ ref struct GC;
 ref struct GC {};   // C2990  
 ```  
   
- C2990은 Visual C\+\+ 2005용 Visual C\+\+ 컴파일러의 변경 내용으로 인해 발생할 수도 있습니다. 이제 컴파일러에서 동일한 형식에 대한 선언이 여러 개인 경우 템플릿 사양과 관련하여 각 선언이 모두 동일해야 합니다.  
+ Visual c + + 2005; C2990 Visual c + + 컴파일러의 주요 변경 내용으로 인해 발생할 수 있습니다. 컴파일러는 이제 여러 선언이 동일한 형식에 대 한 템플릿 사양 동일할 필요 합니다.  
   
- 다음 샘플에서는 C2990 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2990 오류가 생성 됩니다.  
   
 ```  
 // C2990c.cpp  

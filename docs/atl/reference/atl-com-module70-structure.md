@@ -1,5 +1,5 @@
 ---
-title: "_ATL_COM_MODULE70 구조 | Microsoft 문서"
+title: "_ATL_COM_MODULE70 구조 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 503c2a29cf0e70020b012911c51b056f00562374
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a269820c5a0965553989bc57d7c239aa95e527ef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 구조
-ATL.에서는 COM 관련 코드에서 사용 하는  
+Atl에서 COM 관련 코드에서 사용 하는  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,18 +49,18 @@ struct _ATL_COM_MODULE70 {
  버전 관리에 사용 되는 구조체의 크기입니다.  
   
  `m_hInstTypeLib`  
- 이 모듈에 대 한 형식 라이브러리에 핸들 인스턴스.  
+ 이 모듈에 대 한 형식 라이브러리에 대 한 핸들 인스턴스.  
   
  **m_ppAutoObjMapFirst**  
- 이 모듈에 대 한 개체 맵 항목의 시작 부분을 나타내는 배열 요소의 주소입니다.  
+ 이 모듈에 대 한 개체 맵 항목의 시작 부분을 나타내는 배열 요소의 주소를 제공 합니다.  
   
  **m_ppAutoObjMapLast**  
- 이 모듈에 대 한 개체 맵 항목의 끝을 나타내는 배열 요소의 주소입니다.  
+ 이 모듈에 대 한 개체 맵 항목의 끝을 나타내는 배열 요소의 주소를 제공 합니다.  
   
  `m_csObjMap`  
  임계 영역 개체 맵 항목에 대 한 액세스를 serialize 하는 데 있습니다. ATL.에서 내부적으로 사용  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) 의 typedef로 정의 된 `_ATL_COM_MODULE70`합니다.  
   
 ## <a name="requirements"></a>요구 사항  

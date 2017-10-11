@@ -1,37 +1,40 @@
 ---
 title: "컴파일러 오류 C2714 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2714"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2714"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2714
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2714
 ms.assetid: 401a5a42-660c-4bad-9d63-1a2d092bc489
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C2714
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1f0fc4847cc6f3ab50f840b1ed5a097cc405cff8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-\_\_alignof\(void\)은\(는\) 사용할 수 없습니다.  
+---
+# <a name="compiler-error-c2714"></a>컴파일러 오류 C2714
+__alignof(void) 허용 되지 않습니다.  
   
- 잘못된 값을 연산자에 전달했습니다.  
+ 잘못 된 값은 운영자에 게 전달 되었습니다.  
   
- 자세한 내용은 [\_\_alignof 연산자](../../cpp/alignof-operator.md)를 참조하십시오.  
+ 참조 [__alignof 연산자](../../cpp/alignof-operator.md) 자세한 정보에 대 한 합니다.  
   
-## 예제  
- 다음 샘플에서는 C2714 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2714 오류가 발생 합니다.  
   
 ```  
 // C2714.cpp  

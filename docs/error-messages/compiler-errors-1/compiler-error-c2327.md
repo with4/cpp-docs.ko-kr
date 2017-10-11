@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C2327 | Microsoft 문서"
+title: "컴파일러 오류 C2327 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 62834115e3ad9c9733326a1bc94e5fa51209f485
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2eefd1e3fb4f23087b0f08bf6a9ff55593d9a961
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2327"></a>컴파일러 오류 C2327
-'symbol': 형식 이름, 정적, 또는 열거자 아닙니다  
+'symbol': 형식 이름, 정적 또는 열거자가 아닙니다  
   
- 중첩된 된 클래스 내에서 코드를 형식 이름, 정적 멤버 또는 열거자를 바깥쪽 클래스의 멤버에 액세스 하려고 합니다.  
+ 중첩된 된 클래스 내에서 코드를 형식 이름, 정적 멤버 또는 열거자는 바깥쪽 클래스의 멤버에 액세스 하려고 합니다.  
   
- 로 컴파일할 때 **/clr**,&2327; 일반적인 원인은 속성 형식으로 동일한 이름 가진 속성입니다.  
+ 로 컴파일할 때 **/clr**, C2327에 대 한 일반적인 원인 속성 형식으로 동일한 이름 가진 속성입니다.  
   
  다음 샘플에서는 C2327 오류가 생성 됩니다.  
   
@@ -129,7 +115,7 @@ namespace NA {
 }  
 ```  
   
-다음 샘플에서는 속성에 속성 형식으로 이름이 같은 경우 C2327를 보여 줍니다.  
+다음 샘플 속성 이름이 같은 속성 형식으로 때 C2327를 보여 줍니다.  
   
 ```  
 // C2327f.cpp  

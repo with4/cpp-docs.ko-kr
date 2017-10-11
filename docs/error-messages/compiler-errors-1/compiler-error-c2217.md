@@ -1,41 +1,44 @@
 ---
 title: "컴파일러 오류 C2217 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2217"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2217"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2217
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C2217
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f1795534af1332859fd1a33a137573df82643b4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'attribute1'에는 'attribute2'이\(가\) 있어야 합니다.  
+---
+# <a name="compiler-error-c2217"></a>컴파일러 오류 C2217
+'attribute1' 'attribute2' 필요  
   
- 첫 번째 함수 특성에는 두 번째 특성이 필요합니다.  
+ 첫 번째 함수 특성에는 두 번째 특성이 필요 합니다.  
   
-### 문제 해결을 위하여 확인해 볼 수 있는 원인  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>다음과 같은 가능한 원인을 확인하여 수정하려면  
   
-1.  중단 함수\(`__interrupt`\)가 `near`로 선언되었습니다.  중단 함수는 `far`여야 합니다.  
+1.  중단 (`__interrupt`)로 선언 된 함수 `near`합니다. 인터럽트 함수 여야 `far`합니다.  
   
-2.  중단 함수를 `__stdcall` 또는 `__fastcall`을 사용하여 선언했습니다.  중단 함수는 C 호출 규칙을 사용해야 합니다.  
+2.  으로 선언 된 함수 인터럽트 `__stdcall`, 또는 `__fastcall`합니다. 함수를 중단 해야 사용 C 호출 규칙입니다.  
   
-## 예제  
- C2217은 가변 인수를 사용하는 CLR 함수에 대리자를 바인딩하려고 하는 경우에도 발생할 수 있습니다.  함수에 e 매개 변수 배열 오버로드도 있는 경우 이 오버로드를 대신 사용하십시오.  다음 샘플에서는 C2217 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ C2217 가변 개수의 인수를 사용 하는 CLR 함수에 대리자를 바인딩할 사용 하려는 경우에 발생할 수 있습니다. 함수에 있는 경우 또한 e param 배열 오버 로드를 사용 하는 대신 합니다. 다음 샘플에서는 C2217 오류가 발생 합니다.  
   
 ```  
 // C2217.cpp  

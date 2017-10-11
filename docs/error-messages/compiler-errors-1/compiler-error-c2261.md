@@ -1,39 +1,42 @@
 ---
 title: "컴파일러 오류 C2261 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2261"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2261"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2261
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C2261
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8269b891ed899501625973b81c1823d4db2d56c8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'string' : 어셈블리 참조가 잘못되어 확인할 수 없습니다.  
+---
+# <a name="compiler-error-c2261"></a>컴파일러 오류 C2261
+'string': 어셈블리 참조가 잘못 되었으며 확인할 수 없습니다  
   
- 값이 잘못되었습니다.  
+ 값에 올바르지 않습니다.  
   
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>는 friend 어셈블리를 지정하는 데 사용됩니다.  예를 들어, a.dll에서 b.dll을 friend 어셈블리로 지정하려는 경우 a.dll에서 InternalsVisibleTo\("b"\)를 지정합니다.  그런 다음 런타임에 b.dll에서 전용 형식을 제외한 a.dll의 모든 내용에 액세스할 수 있습니다.  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>friend 어셈블리를 지정 하는 데 사용 됩니다. 예를 들어 a.dll를 b.dll friend 어셈블리 지정 하려는 경우 지정 a.dll) (에: InternalsVisibleTo("b") 합니다. 런타임에서 b.dll a.dll (유형 제외 하 고 개인)의 모든 항목에 액세스할 수 있도록 합니다.  
   
- friend 어셈블리를 지정하는 올바른 구문에 대한 자세한 내용은 [Friend 어셈블리\(C\+\+\)](../../dotnet/friend-assemblies-cpp.md)를 참조하십시오.  
+ Friend 어셈블리 지정 하는 경우에 올바른 구문에 자세한 내용은 [Friend 어셈블리 (c + +)](../../dotnet/friend-assemblies-cpp.md)합니다.  
   
-## 예제  
- 다음 샘플에서는 C2261 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2261 오류가 발생 합니다.  
   
 ```  
 // C2261.cpp  

@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 경고 C4950 | Microsoft 문서"
+title: "컴파일러 경고 C4950 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 937510b3fadf3dd2aff81defc08ea2c74b8b7dec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6a922a0ee324afcf5f263abe2189e4071c5575c7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4950"></a>컴파일러 경고 C4950
 'type_or_member': 사용되지 않는 것으로 표시되었습니다.  
   
-사용 되지 않음으로 표시 된 멤버 또는 형식이 고 <xref:System.ObsoleteAttribute>특성.</xref:System.ObsoleteAttribute>  
+사용 되지 않음으로 표시 된 멤버 또는 형식이 고 <xref:System.ObsoleteAttribute> 특성입니다.  
   
-C4950은 항상 오류로 실행됩니다. 이 경고를 사용 하 여 해제할 수는 [경고](../../preprocessor/warning.md) pragma 지시문 또는 [/wd](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션입니다.  
+C4950은 항상 오류로 실행됩니다. 사용 하 여이 경고를 해제할 수 있습니다는 [경고](../../preprocessor/warning.md) pragma 지시문 또는 [/wd](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션입니다.  
   
 ## <a name="example"></a>예제  
 다음 샘플에서는 C4950을 생성합니다.  

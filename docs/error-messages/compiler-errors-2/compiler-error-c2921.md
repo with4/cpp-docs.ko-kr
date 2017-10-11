@@ -1,32 +1,35 @@
 ---
-title: "Compiler Error C2921 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2921"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2921"
+title: "컴파일러 오류 C2921 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2921
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2921
 ms.assetid: 323642a0-bfc4-4942-9f41-c3adf5c54296
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compiler Error C2921
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e67921dab2b76f752bdf77184c16be2549bd3127
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2921"></a>컴파일러 오류 C2921
 재정의: 'class' : 클래스 템플릿 또는 제네릭이 'type'으로 다시 선언되고 있습니다.  
   
- 제네릭 또는 템플릿 클래스에 동일하지 않은 여러 선언이 있습니다.  이 오류를 해결하려면 형식에 따라 다른 이름을 사용하거나 형식 이름의 재정의를 제거하세요.  
+ 제네릭 또는 템플릿 클래스에 동일하지 않은 여러 선언이 있습니다. 이 오류를 해결하려면 형식에 따라 다른 이름을 사용하거나 형식 이름의 재정의를 제거하세요.  
   
  다음 샘플에서는 C2921을 생성합니다.  
   

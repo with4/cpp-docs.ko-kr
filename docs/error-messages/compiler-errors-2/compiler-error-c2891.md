@@ -1,39 +1,44 @@
 ---
 title: "컴파일러 오류 C2891 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2891"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2891"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2891
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2891
 ms.assetid: e12cfb2d-df45-4b0d-b155-c51d17e812fa
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2891
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6c35294472fe4142e7e6689adfc5f5f71c27b664
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'parameter' : 템플릿 매개 변수의 주소를 가져올 수 없습니다.  
+---
+# <a name="compiler-error-c2891"></a>컴파일러 오류 C2891
+'parameter': 템플릿 매개 변수의 주소를 가져올 수 없습니다  
   
- 다음과 같은 코드를 사용하는 경우 문제가 발생할 수 있습니다.  
+ Lvalue 경우가 아니라면 템플릿 매개 변수 주소를 가져올 수 없습니다. 형식 매개 변수가 주소가 없기 때문에 lvalue 않습니다. Lvalue 없는 템플릿 매개 변수 목록에 비형식 값도 주소를가지고 하지 않습니다. 이 템플릿 매개 변수로 전달 된 값에는 템플릿 인수는 컴파일러 생성 복사 이므로 컴파일러 오류 C2891 하는 코드의 예시입니다.  
   
 ```  
 template <int i> int* f() { return &i; }  
 ```  
   
- 다음 코드를 대신 사용하십시오.  
+ 템플릿 매개 변수를 lvalue 참조 형식에 같은 수의 주소는 수행 했습니다.  
   
 ```  
-template <int i> int* f() { return i; }  
-```
+template <int& r> int* f() { return &r; }  
+```  
+  
+ 이 오류를 해결 하려면 lvalue 하지 않은 주소는 템플릿 매개 변수를 사용 하지 않습니다.

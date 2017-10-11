@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C2674 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2674"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2674"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2674
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2674
 ms.assetid: 7cbd70d8-d992-44d7-a5cb-dd8cf9c759d2
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2674
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5a71216ee0c9b9bb824e9518691bc71730bb7465
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-이 컨텍스트에서는 제네릭 선언이 허용되지 않습니다.  
+---
+# <a name="compiler-error-c2674"></a>컴파일러 오류 C2674
+제네릭 선언은이 컨텍스트에서 사용할 수 없습니다.  
   
- 제네릭이 잘못 선언되었습니다.  자세한 내용은 [Generics](../../windows/generics-cpp-component-extensions.md)을 참조하십시오.  
+ 제네릭 잘못 선언 되었습니다. 자세한 내용은 [제네릭](../../windows/generics-cpp-component-extensions.md)을 참조하세요.  
   
-## 예제  
- 다음 샘플에서는 C2674 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2674 오류가 발생 합니다.  
   
 ```  
 // C2674.cpp  

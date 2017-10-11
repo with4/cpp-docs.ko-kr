@@ -1,39 +1,42 @@
 ---
 title: "컴파일러 경고 C4485 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4485"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4485"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4485
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 경고 C4485
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 435e49a857e3c448ac7e5f7ef00bb9032320aa25
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'override\_function' : 기본 ref 클래스 메서드 'base\_class\_function'과\(와\) 일치하지만 'new' 또는 'override'로 표시되어 있지 않습니다. 'new'\(및 'virtual'\)로 가정합니다.  
+---
+# <a name="compiler-warning-c4485"></a>컴파일러 경고 C4485
+'override_function': 기본 ref 클래스 메서드 'base_class_function'와 일치 하지 않으면이 '표시 된 new' 또는 'override'; 'new' (및 'virtual') 가정  
   
- `virtual` 키워드 사용에 관계없이 접근자는 기본 클래스 접근자 함수를 재정의하지만 `override` 또는 `new` 지정자는 재정의 함수 시그니처의 일부가 아닙니다.  이 경고를 해결하려면 `new` 또는 `override` 지정자를 추가하십시오.  
+ 재정의 하거나 사용 하지 않고는 `virtual` 키워드, 기본 클래스 접근자 함수를 되지만 `override` 또는 `new` 지정자 재정의 함수 서명의 일부가 아니었습니다. 추가 `new` 또는 `override` 이 경고를 해결 하려면 지정자입니다.  
   
- 자세한 내용은 [override](../../windows/override-cpp-component-extensions.md) 및 [new \(new slot in vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)를 참조하십시오.  
+ 참조 [재정의](../../windows/override-cpp-component-extensions.md) 및 [new (의 new 슬롯 vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
   
- C4485는 항상 오류로서 발생합니다.  C4485가 표시되지 않도록 하려면 [경고](../../preprocessor/warning.md) pragma를 사용합니다.  
+ C4485은 항상 오류로 실행 됩니다. 사용 하 여는 [경고](../../preprocessor/warning.md) pragma C4485 표시를 합니다.  
   
-## 예제  
- 다음 샘플에서는 C4485 경고가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4485  
   
 ```  
 // C4485.cpp  

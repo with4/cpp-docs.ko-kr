@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3367 | Microsoft 문서"
+title: "컴파일러 오류 C3367 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 8c7d1df695aa54e350902929ee8ea57be2101058
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d1d144399ca42ba321d8f3d11425bf2ff8e65891
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3367"></a>컴파일러 오류 C3367
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
 바인딩되지 않은 대리자를 호출할 때는 개체의 인스턴스를 전달해야 합니다. 정적 멤버 함수는 클래스 이름을 통해 호출되기 때문에 인스턴스 멤버 함수와 함께 바인딩되지 않은 대리자만 인스턴스화할 수 있습니다.  
   
-바인딩되지 않은 대리자에 대 한 자세한 내용은 참조 [하는 방법: 정의 및 사용 하 여 대리자 (C + + /cli CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)합니다.  
+바인딩되지 않은 대리자에 대 한 자세한 내용은 참조 [하는 방법: 정의 하 고 사용 하 여 위임 (C + + /cli CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)합니다.  
   
 ## <a name="example"></a>예제  
 다음 샘플에서는 C3367을 생성합니다.  

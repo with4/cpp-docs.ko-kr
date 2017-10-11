@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C2179 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2179"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2179"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2179
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2179
 ms.assetid: f929bfc6-3964-4e54-87d6-7529b9b6c0b9
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2179
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c0f311bcdbbdaa721e3897eae0a90ae892cf75d8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'type' : 특성 인수는 형식 매개 변수를 사용할 수 없습니다.  
+---
+# <a name="compiler-error-c2179"></a>컴파일러 오류 C2179
+'type': 특성 인수에서 형식 매개 변수를 사용할 수 없습니다  
   
- 제네릭 형식 매개 변수는 런타임에 확인됩니다.  그러나 특성 매개 변수는 컴파일할 때 확인해야 합니다.  따라서 제네릭 형식 매개 변수를 특성에 대한 인수로 사용할 수 없습니다.  
+ 제네릭 형식 매개 변수는 런타임에 확인 됩니다. 그러나 특성 매개 변수는 컴파일 타임에 확인 되어야 합니다. 따라서 특성에 대 한 인수로 제네릭 형식 매개 변수를 사용할 수 없습니다.  
   
-## 예제  
- 다음 샘플에서는 C2179 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2179 오류가 발생 합니다.  
   
 ```  
 // C2179.cpp  

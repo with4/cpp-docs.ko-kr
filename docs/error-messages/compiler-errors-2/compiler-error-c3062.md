@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C3062 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3062"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3062"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3062
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3062
 ms.assetid: 78632e6d-255f-42c3-b124-31a9194ff86d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3062
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1eebf751c267e9688eebb8c679fe801f77cfa4c0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'enum': 내부 형식이 'type'이므로 열거자에 값이 필요합니다.  
+---
+# <a name="compiler-error-c3062"></a>컴파일러 오류 C3062
+'enum': 열거자 값이 필요 하므로 내부 형식이 'type'  
   
- 열거형에는 내부 형식을 지정할 수 있습니다.  그러나 일부 형식에서는 각 열거자에 값을 할당해야 합니다.  
+ 열거형에는 내부 형식을 지정할 수 있습니다. 그러나 일부 형식에 각 열거자에 값을 할당 해야 합니다.  
   
- 열거형에 대한 자세한 내용은 [enum 클래스](../../windows/enum-class-cpp-component-extensions.md)를 참조하십시오.  
+ 열거형에 대 한 자세한 내용은 참조 하십시오. [enum 클래스](../../windows/enum-class-cpp-component-extensions.md)합니다.  
   
- 다음 샘플에서는 C3062 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3062 오류가 생성 됩니다.  
   
 ```  
 // C3062.cpp  

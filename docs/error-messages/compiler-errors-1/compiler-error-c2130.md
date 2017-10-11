@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 0e6bcfc51ac27b060205d6191b5189e6d7071238
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b510d68a1434f1c82c7d327391d9c7a34b954724
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2130"></a>컴파일러 오류 C2130
 \#줄에 파일 이름을 'token'를 포함 하는 문자열이 있어야 하는데  
   
- 선택적 파일 이름 토큰 다음 [#line](../../preprocessor/hash-line-directive-c-cpp.md) `linenumber` 문자열 이어야 합니다.  
+ [#line](../../preprocessor/hash-line-directive-c-cpp.md) `linenumber` 뒤에 오는 선택적 파일 이름 토큰은 문자열이어야 합니다.  
   
  다음 샘플에서는 C2130을 생성합니다.  
   

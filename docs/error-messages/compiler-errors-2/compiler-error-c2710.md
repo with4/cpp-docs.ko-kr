@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2710 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2710"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2710"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2710
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2710
 ms.assetid: a2a6bb5b-86ad-4a6c-acd0-e2bef8464e0e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2710
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5bb6349bf6efb8c63b68c78644343ace5dc07e67
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'construct' : '\_\_declspec\(modifier\)'는 포인터를 반환하는 함수에만 적용할 수 있습니다.  
+---
+# <a name="compiler-error-c2710"></a>컴파일러 오류 C2710
+'construct': '__declspec(modifier)' 포인터를 반환 하는 함수에만 적용할 수 있습니다  
   
- 반환 값이 포인터인 함수는 `modifier`를 적용할 수 있는 유일한 구문입니다.  
+ 반환 값이 함수는 있는 유일한 구문 `modifier` 적용 될 수 있습니다.  
   
- 다음 샘플에서는 C2710 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2710 오류가 생성 됩니다.  
   
 ```  
 // C2710.cpp  

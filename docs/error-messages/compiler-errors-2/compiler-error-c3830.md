@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3830 | Microsoft 문서"
+title: "컴파일러 오류 C3830 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 970a3f032ac367ec24cb5b036e3f3723732da754
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f2f821b1ba6dc523ba3a664fb9c8b658dee1c78f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3830"></a>컴파일러 오류 C3830
-'type1': 'type2', 값 형식은 인터페이스 클래스에서 상속만 수에서 상속할 수 없습니다  
+'type1': 값 형식 인터페이스 클래스에서 에서만 상속할 수 있습니다 'type2'에서 상속할 수 없습니다  
   
  값 형식이 기본 클래스를 상속할 수 없습니다.  자세한 내용은 참조 [클래스 및 구조체](../../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
   

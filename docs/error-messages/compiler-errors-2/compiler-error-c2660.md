@@ -1,41 +1,44 @@
 ---
 title: "컴파일러 오류 C2660 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2660"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2660"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2660
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 컴파일러 오류 C2660
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1a93046493897b69e4b557607d823566d82070f5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function' : 함수는 number개의 매개 변수를 사용하지 않습니다.  
+---
+# <a name="compiler-error-c2660"></a>컴파일러 오류 C2660
+'function': 함수는 숫자 매개 변수를 사용 하지 않습니다  
   
- 함수가 잘못된 개수의 매개 변수를 통해 호출되었습니다.  
+ 잘못 된 매개 변수 수와 함수가 호출 됩니다.  
   
- C2660은 이름이 동일한 MFC 멤버 함수가 아니라 Windows API 함수를 잘못 호출한 경우에 발생할 수 있습니다.  이 문제를 해결하려면 다음을 수행하십시오.  
+ C2660 실수로 이름이 같은 MFC 멤버 함수는 보다는 Windows API 함수 호출 하는 경우에 발생할 수 있습니다. 이 문제를 해결 하려면  
   
--   멤버 함수 호출의 형식을 따르도록 함수 호출을 조정합니다.  
+-   멤버 함수 호출의 형식에 맞게 함수 호출을 조정 합니다.  
   
--   범위 결정 연산자\(`::`\)를 사용하여 컴파일러가 전역 이름 범위에서 함수 이름을 검색하도록 합니다.  
+-   범위 결정 연산자를 사용 하 여 (`::`) 전역 네임 스페이스에서 함수 이름을 검색 하도록 컴파일러에 지시 합니다.  
   
-## 예제  
- 다음 샘플에서는 C2660 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 c2660 오류가 발생 합니다.  
   
 ```  
 // C2660.cpp  
@@ -47,8 +50,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2660은 관리되는 형식의 Dispose 메서드를 직접 호출하려고 하는 경우에도 발생할 수 있습니다.  자세한 내용은 [소멸자 및 종료자](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 를 참조하십시오.  다음 샘플에서는 C2660 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ C2660 직접 관리 되는 형식의 Dispose 메서드를 호출 하려고 하는 경우에 발생할 수 있습니다. 자세한 내용은 참조 [소멸자 및 종료자](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)합니다. 다음 샘플에서는 c2660 오류가 발생 합니다.  
   
 ```  
 // C2660_a.cpp  
@@ -68,8 +71,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2660은 파생 클래스가 함수를 숨기는 경우에 발생합니다.  
+## <a name="example"></a>예제  
+ 파생된 클래스 함수를 숨기 C2660 발생 합니다.  
   
 ```  
 // C2660b.cpp  
@@ -98,8 +101,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2660은 인덱싱된 속성을 잘못 호출하는 경우에 발생할 수 있습니다.  
+## <a name="example"></a>예제  
+ C2660 인덱싱된 속성을 올바르게 호출 하는 경우에 발생할 수 있습니다.  
   
 ```  
 // C2660c.cpp  
@@ -122,8 +125,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2660은 인덱싱된 속성을 잘못 호출하는 경우에 발생할 수 있습니다.  
+## <a name="example"></a>예제  
+ C2660 인덱싱된 속성을 올바르게 호출 하는 경우에 발생할 수 있습니다.  
   
 ```  
 // C2660d.cpp  
@@ -144,8 +147,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- C2660은 템플릿 클래스에 새 연산자를 정의했지만 해당 형식이 바깥쪽 형식이 아닌 개체를 새 연산자가 만드는 경우에 발생할 수 있습니다.  
+## <a name="example"></a>예제  
+ C2660 new 연산자 형식이 바깥쪽 형식이 아닌 개체를 생성 하지만 템플릿 클래스에 새 연산자를 정의 하는 경우에 발생할 수 있습니다.  
   
 ```  
 // C2660e.cpp  

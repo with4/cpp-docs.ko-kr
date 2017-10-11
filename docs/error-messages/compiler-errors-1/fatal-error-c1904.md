@@ -1,5 +1,5 @@
 ---
-title: "심각한 오류 C1904 | Microsoft 문서"
+title: "심각한 오류 C1904 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 994729ca02158fd2291fab5421fc091a3ad8fc56
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 69e36c722ae7b93d338d0a6d7d2329ad0fe6b427
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1904"></a>심각한 오류 C1904
@@ -46,4 +31,4 @@ ms.lasthandoff: 02/24/2017
   
  이 오류는 특성 공급자 오류를 나타냅니다.  
   
- 오류 상황 파악, 문제를 격리 하 재현할 수 있는 테스트 사례를 만든 다음에 문의 하십시오 [의견을 보내](/visualstudio/ide/talk-to-us)합니다.
+ 오류에 대 한 환경을 기록, 문제를 파악 하 여 재현 가능한 테스트 사례를 문의 한 다음 [의견 보내기](/visualstudio/ide/talk-to-us)합니다.

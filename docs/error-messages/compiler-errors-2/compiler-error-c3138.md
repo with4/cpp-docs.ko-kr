@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3138 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3138"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3138"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3138
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3138
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ba06bed1ce02c8a3030720152892e0e35760afa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'interface' : 'attribute' 인터페이스는 IDispatch에서 상속하거나 IDispatch에서 상속하는 인터페이스에서 상속해야 합니다.  
+---
+# <a name="compiler-error-c3138"></a>컴파일러 오류 C3138
+'interface': 'attribute' 인터페이스는 IDispatch에서 상속 하는 인터페이스 또는 IDispatch에서 상속 해야 합니다  
   
- [dual](../../windows/dual.md) 또는 [dispinterface](../../windows/dispinterface.md) 특성을 사용하는 인터페이스에 직접 또는 간접 기본 인터페이스로 `IDispatch`가 지정되어 있지 않습니다.  
+ 사용 하 여 인터페이스는 [이중](../../windows/dual.md) 또는 [dispinterface](../../windows/dispinterface.md) 특성에 없는 `IDispatch` 직접 또는 간접 기본 인터페이스로 합니다.  
   
- 다음 예제에서는 C3138 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 예제에서는 C3138 오류가 생성 됩니다.  
   
 ```  
 // C3138.cpp  

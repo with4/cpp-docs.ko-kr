@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2733 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2733"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2733"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2733
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2733
 ms.assetid: 67f83561-c633-407c-a2ee-f9fd16e165bf
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2733
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 22643ad7b1e801f2e4b9ee663c73f0d8fb97562d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-오버로드된 함수 'function'의 두 번째 C 링크는 허용되지 않습니다.  
+---
+# <a name="compiler-error-c2733"></a>컴파일러 오류 C2733
+오버 로드 된 사용할 수 없습니다 ' function' 함수의 두 번째 C 링크  
   
- 둘 이상의 오버로드된 함수가 C 링크로 선언되었습니다.  C 링크를 사용할 경우, 지정한 함수에 대한 하나의 형식만 외부 형식이 될 수 있습니다.  오버로드된 함수들은 데코레이팅되지 않은 동일 이름을 사용하므로 C 프로그램에서 사용할 수 없습니다.  
+ 둘 이상의 오버 로드 된 함수는 C 링크로 선언 됩니다. C 링크를 사용 하 여 한 가지 형태의 지정된 된 함수 외부 될 수 있습니다. 오버 로드 된 함수는 동일한 데코 레이트 되지 않은 이름이 있으므로 C 프로그램에서 사용할 수 없습니다.  
   
- 다음 샘플에서는 C2733 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2733 오류가 생성 됩니다.  
   
 ```  
 // C2733.cpp  

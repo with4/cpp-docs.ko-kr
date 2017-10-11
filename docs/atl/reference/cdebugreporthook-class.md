@@ -26,25 +26,11 @@ caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1de883341e0a53a1520fa44d99e7907ee1fe10b6
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 72790fca5fbfb2856d4da780f276b9cfdc53a26a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 클래스
@@ -75,7 +61,7 @@ class CDebugReportHook
 |[CDebugReportHook::SetPipeName](#setpipename)|컴퓨터 및 디버그 보고서를 보내지 파이프의 이름을 설정 하려면이 메서드를 호출 합니다.|  
 |[CDebugReportHook::SetTimeout](#settimeout)|이 클래스는 명명 된 파이프를 사용할 수 있을 때까지 대기 하는 시간 (밀리초)의 시간을 설정 하려면이 메서드를 호출 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  서비스 또는 명명된 된 파이프에 디버그 보고서를 보내도록 응용 프로그램의 디버그 빌드에이 클래스의 인스턴스를 만듭니다. 호출 하 여 생성 된 디버그 보고 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 또는 같은이 함수에 대 한 래퍼를 사용 하는 [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) 및 [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) 매크로입니다.  
   
  이 클래스의 사용을 사용 하면 비 대화형 데스크톱에서 실행 하는 구성 요소를 대화형으로 디버깅 하 [창 스테이션](http://msdn.microsoft.com/library/windows/desktop/ms687096)합니다.  
@@ -135,7 +121,7 @@ static int __cdecl CDebugReportHookProc(
 ### <a name="return-value"></a>반환 값  
  더 이상 보고 하지 않으려면 검사가 필요 하도록 후크 요청한 메시지를 완전히 처리 하는 경우 FALSE를 반환 합니다. TRUE를 반환 합니다 `_CrtDbgReport` 일반적인 방법으로 메시지를 보고 해야 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  보고 함수를 명명된 된 파이프를 열고 다른 쪽 끝에서 프로세스와 통신 하려고 합니다. 파이프 사용 중인 경우 보고 함수는 파이프는 무료 또는 제한 시간이 만료 될 때까지 대기 합니다. 호출이 생성자 나 여 제한 시간을 설정할 수 있습니다 [CDebugReportHook::SetTimeout](#settimeout)합니다.  
   
  이 함수에서 코드 호출 스레드의 기본 보안 컨텍스트에서 실행 되 고,이 함수의 지속 시간에 대 한 가장을 사용할 수 없습니다, 합니다.  
@@ -147,7 +133,7 @@ static int __cdecl CDebugReportHookProc(
 void RemoveHook() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) 이전 보고서 후크를 복원 합니다.  
   
 ##  <a name="sethook"></a>CDebugReportHook::SetHook  
@@ -157,7 +143,7 @@ void RemoveHook() throw();
 void SetHook() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) 디버그 보고서를 통해 라우팅될가 있어야 [CDebugReportHookProc](#cdebugreporthookproc) 의 명명 된 파이프 합니다. 이 클래스는 추적 하는 이전 보고서 후크 될 수 있도록 복원할 때 [RemoveHook](#removehook) 호출 됩니다.  
   
 ##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  

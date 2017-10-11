@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f5c657322e901da8658e5d7d99e3d28c3392b579
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b85138c6183598c8db2ab89099aa66940f60e8cd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3055"></a>컴파일러 오류 C3055
 'symbol': 'threadprivate' 지시문에 사용된 기호만 참조할 수 있습니다.  
   
- 기호 참조 한 다음에 사용 된는 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 절은 허용 되지 않습니다.  
+ 기호가 참조된 다음 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 절에서 사용되며 이는 허용되지 않습니다.  
   
  다음 샘플에서는 C3055를 생성합니다.  
   

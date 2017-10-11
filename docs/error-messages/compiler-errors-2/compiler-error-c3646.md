@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C3646 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3646"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3646"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3646
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C3646
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0bc9b2601a57e2be98c3a356cbd2ede69dc7be79
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'specifier' : 알 수 없는 재정의 지정자입니다.  
+---
+# <a name="compiler-error-c3646"></a>컴파일러 오류 C3646
+'specifier': 알 수 없는 재정의 지정자  
   
- 재정의 지정자가 필요한 위치에서 토큰을 발견했지만 이 토큰을 컴파일러가 인식할 수 없습니다.  
+ 컴파일러가 위치는 재정의 지정자를 찾을 것으로 예상 했지만 토큰을 컴파일러에서 인식할 수 없습니다 위치에 토큰을 찾았습니다.  
   
- 자세한 내용은 [Override 지정자](../../windows/override-specifiers-cpp-component-extensions.md)을 참조하십시오.  
+ 자세한 내용은 참조 [재정의 지정자](../../windows/override-specifiers-cpp-component-extensions.md)합니다.  
   
- 다음 샘플에서는 C3646 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3646 오류가 생성 됩니다.  
   
 ```  
 // C3646.cpp  

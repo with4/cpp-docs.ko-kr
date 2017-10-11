@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C2143 | Microsoft 문서"
+title: "컴파일러 오류 C2143 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,23 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31ea645b9dd22fd15bbf4695935482d899a13386
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2143"></a>컴파일러 오류 C2143
-구문 오류: 'token2' 이전 ' token1' 누락  
+구문 오류: 'token2' 하기 전에 1 누락  
   
  컴파일러 특정 토큰 (즉, 공백이 아닌 언어 요소)를 예상 하 고 다른 토큰이 발견 합니다.  
   
- 이 오류에 대 한 내용은 함수 try 블록을 사용 하는 경우 발생 하는 경우 참조 [기술 자료 문서 241706](http://support.microsoft.com/kb/241706)합니다.  
+ 이 오류에 대 한 정보에 대 한 함수 try 블록을 사용 하는 경우 발생할 때 참조 [기술 자료 문서 241706](http://support.microsoft.com/kb/241706)합니다.  
   
- 확인 된 [c + + 언어 참조](../../cpp/cpp-language-reference.md) 코드 구문적으로 올바르지 않은 확인 하려면. 컴파일러는 문제가 발생 하는 줄을 발견 한 이후에이 오류를 보고, 때문에 오류를 보다 앞에 있는 여러 줄의 코드를 확인 합니다.  
+ 확인은 [c + + 언어 참조](../../cpp/cpp-language-reference.md) 코드 구문이 잘못 되지 않는 확인 합니다. 문제가 발생 한 줄 발견 되어도 컴파일러가이 오류를 보고, 때문에 오류를 앞에 있는 여러 줄의 코드를 확인 합니다.  
   
- C&2143;은 다양 한 상황에서 발생할 수 있습니다.  
+ C2143 다른 상황에서 발생할 수 있습니다.  
   
  다음 예제와 같이 이름(`::`, `->` 및 `.`)을 정규화할 수 있는 연산자 다음에 키워드 `template`이 와야 하는 경우에 발생할 수 있습니다.  
   
@@ -78,7 +63,7 @@ class MyClass
   
 ```  
   
- C&2143; 발생할 수 있습니다 때 **/clr** 사용 및 `using` 지시문이 구문 오류:  
+ C2143 발생할 수 있습니다 때 **/clr** 사용 되는 및 `using` 지시문은 구문 오류:  
   
 ```cpp  
 // C2143a.cpp  
@@ -87,7 +72,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- 또한 사용 하지 않고 CLR 구문을 사용 하 여 소스 코드 파일을 컴파일하려면 하려고 시도할 때 발생할 수도 있습니다 **/clr**:  
+ 또한 사용 하지 않고 CLR 구문을 사용 하 여 소스 코드 파일을 컴파일하려고 하려고 시도할 때 발생할 수도 있습니다 **/clr**:  
   
 ```cpp  
 // C2143b.cpp  
@@ -101,7 +86,7 @@ int main() {
 }  
 ```  
   
- `if` 문 다음에 오는 첫 번째 비공백 문자는 왼쪽 괄호여야 합니다. 컴파일러는 다른 항목 변환할 수 없습니다.  
+ `if` 문 다음에 오는 첫 번째 비공백 문자는 왼쪽 괄호여야 합니다. 컴파일러는 다른 항목이 변환할 수 없습니다.  
   
 ```cpp  
 // C2143c.cpp  
@@ -139,7 +124,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- 또는 레이블이 문에 첨부되지 않은 경우. 레이블을 두어야 하면 자체적으로 예를 들어 복합 문의 끝에 연결할 null 문:  
+ 또는 레이블이 문에 첨부되지 않은 경우. 레이블을 두어야 하면 자체적으로 예를 들어 복합 문의 끝에 연결 null 문:  
   
 ```cpp  
 // C2143f.cpp  
@@ -153,7 +138,7 @@ void func1() {
 }  
 ```  
   
- C + + 표준 라이브러리의 형식에는 정규화 되지 않은 호출이 수행 될 때 오류가 발생할 수 있습니다.  
+ 정규화 되지 않은 호출이 표준 c + + 라이브러리의 형식에 만들어질 때 오류가 발생할 수 있습니다.  
   
 ```cpp  
 // C2143g.cpp  
@@ -195,7 +180,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK  
 ```  
   
- C 프로그램에서 변수를 함수 시작 부분에 선언 되어야 하며 함수가 비 선언 명령을 실행 한 후 선언할 수 없습니다.  
+ C 프로그램에서 변수는 함수 시작 부분에 선언 되어야 하며 함수 선언 이외의 명령을 실행 한 후 선언할 수 없습니다.  
   
 ```C  
 // C2143j.c  

@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2884 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2884"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2884"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2884
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2884
 ms.assetid: 8b4d43e3-3fb5-4360-86c8-de59d8736d4f
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2884
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b5916eeb4195d163cd698a9398fa411f56ad8610
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'name' : using 선언에 의해 정의되었으나 'function' 지역 함수와 충돌합니다.  
+---
+# <a name="compiler-error-c2884"></a>컴파일러 오류 C2884
+'name': 'function' 지역 함수와 충돌 using 선언으로 인해  
   
- 함수를 두 번 이상 정의하려고 했습니다.  첫째 정의는 지역 정의이며,  둘째 정의는 `using` 선언을 사용하여 네임스페이스로부터 수행되었습니다.  
+ 함수를 두 번 이상 정의 하려고 했습니다. 첫 번째 정의 로컬 정의입니다. 포함 된 네임 스페이스에서 두 번째는는 `using` 선언 합니다.  
   
- 다음 샘플에서는 C2884 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2884 오류가 생성 됩니다.  
   
 ```  
 // C2884.cpp  

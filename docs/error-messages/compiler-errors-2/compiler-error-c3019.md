@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3019 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3019"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3019"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3019
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3019
 ms.assetid: 31a6d9b6-d29f-4499-9ad8-48dd751e87c7
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3019
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fb418621a4a20fc802f22ca014c44809f80ce65b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-OpenMP 'for' 문 내부의 증가식 형식이 잘못되었습니다.  
+---
+# <a name="compiler-error-c3019"></a>컴파일러 오류 C3019
+openmp에서 'for' 문의 증분 형식이 잘못 되었습니다.  
   
- OpenMP `for` 루프의 증가식 부분에서는 연산자의 왼쪽과 오른쪽에 모두 인덱스 변수를 사용해야 합니다.  
+ OpenMP의 증가식 부분 `for` 루프는 연산자의 왼쪽 및 오른쪽에 모두 인덱스 변수를 사용 해야 합니다.  
   
- 다음 샘플에서는 C3019 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3019 오류가 생성 됩니다.  
   
 ```  
 // C3019.cpp  

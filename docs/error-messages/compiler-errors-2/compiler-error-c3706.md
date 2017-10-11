@@ -1,38 +1,41 @@
 ---
 title: "컴파일러 오류 C3706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3706"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3706
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f7e14d22e1994213624d88ccab098844aa6ac4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function': COM 이벤트를 발생시키려면 COM 인터페이스이어야 합니다.  
+---
+# <a name="compiler-error-c3706"></a>컴파일러 오류 C3706
+'function': COM 이벤트를 발생 시키려면 COM 인터페이스 이어야 합니다  
   
- COM 이벤트를 발생시키는 데 사용하는 이벤트 인터페이스는 COM 인터페이스여야 합니다.  이 경우 Visual C\+\+ 특성을 사용하여 인터페이스를 정의하거나 \#import의 embedded\_idl 특성을 사용하여 형식 라이브러리에서 [\#import](../../preprocessor/hash-import-directive-cpp.md)로 인터페이스를 가져와야 합니다.  
+ COM 이벤트를 발생 하는 데 사용 하는 이벤트 인터페이스는 COM 인터페이스 이어야 합니다. 이 경우 인터페이스 하거나 Visual c + + 특성을 사용 하 여 정의 해야 하거나 사용 하 여 가져올 [#import](../../preprocessor/hash-import-directive-cpp.md) #import의 embedded_idl 특성을 가진 형식 라이브러리에서.  
   
- COM 이벤트를 사용하는 데에는 아래 샘플에 나타나 있는 ATL 헤더 파일의 `#include` 줄이 필요합니다.  이 오류를 해결하려면 [object](../../windows/object-cpp.md), [dual](../../windows/dual.md), [dispinterface](../../windows/dispinterface.md) 특성 중 하나를 인터페이스 정의에 적용하여 `IEvents`\(이벤트 인터페이스\)를 COM 인터페이스로 만드십시오.  
+ `#include` 아래 예제에 표시 된 ATL 헤더 파일의 선은 COM 이벤트를 사용 하기 위해 필요 합니다. 이 오류를 해결 하려면 `IEvents` (이벤트 인터페이스)는 COM 인터페이스에서 다음 중 하나를 적용 하 여 인터페이스 정의 특성: [개체](../../windows/object-cpp.md), [이중](../../windows/dual.md), 또는 [ dispinterface](../../windows/dispinterface.md)합니다.  
   
- MIDL로 생성된 헤더 파일에서 인터페이스를 가져온 경우 컴파일러는 이를 COM 인터페이스로 인식하지 않습니다.  
+ MIDL에서 생성 하는 헤더 파일에서 인터페이스가 경우 컴파일러는 인식 하지 COM 인터페이스.  
   
- 다음 샘플에서는 C3706 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3706 오류가 생성 됩니다.  
   
 ```  
 // C3706.cpp  

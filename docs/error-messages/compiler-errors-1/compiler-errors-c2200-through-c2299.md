@@ -65,32 +65,18 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 07d87f9828bac1a025f9ac2375c79f29d96a89b4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>컴파일러 오류 C2200 C2299 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   
@@ -99,7 +85,7 @@ ms.lasthandoff: 04/28/2017
 |[컴파일러 오류 C2200](compiler-error-c2200.md)|'*함수*': 함수를 이미 정의|  
 |[컴파일러 오류 C2201](compiler-error-c2201.md)|'*식별자*': 가져오거나 내보내려면 외부 링크가 있어야 합니다|  
 |컴파일러 오류 C2202|'*함수*': 모든 제어 경로 값을 반환|  
-|[컴파일러 오류 C2203](compiler-error-c2203.md)|delete 연산자는 배열의 범위를 지정할 수 없습니다.|  
+|[컴파일러 오류 C2203](compiler-error-c2203.md)|delete 연산자는 배열의 범위를 지정할 수 없습니다|  
 |[컴파일러 오류 C2204](compiler-error-c2204.md)|'*형식*': 괄호 안에 형식 정의가 있습니다|  
 |[컴파일러 오류 C2205](compiler-error-c2205.md)|'*식별자*': 블록 범위를 사용 하 여 extern 변수를 초기화할 수 없습니다|  
 |[컴파일러 오류 C2206](compiler-error-c2206.md)|'*함수*': 형식 함수 정의에 사용할 수 없습니다.|  
@@ -110,12 +96,12 @@ ms.lasthandoff: 04/28/2017
 |컴파일러 오류 C2211|Public 소멸자가 있는 ref 클래스에서 파생 된 ref 클래스에서 비가상 소멸자도 public 이어야 합니다.|  
 |[컴파일러 오류 C2212](compiler-error-c2212.md)|'*식별자*': __based 함수에 대 한 포인터에 사용할 수 없습니다|  
 |[컴파일러 오류 C2213](compiler-error-c2213.md)|'*식별자*': __based에 대 한 인수가 잘못 되었습니다|  
-|컴파일러 오류 C2214|'void'에 기반한 포인터에는 :>를 사용해야 합니다.|  
+|컴파일러 오류 C2214|'void'에 기반한 포인터를 사용 해야 합니다. >|  
 |컴파일러 오류 C2215|'*키워드*' 함께 사용할 수 없습니다 ' / /arch: SSE'|  
 |[컴파일러 오류 C2216](compiler-error-c2216.md)|'*keyword1*'함께 사용할 수 없습니다'*keyword2*'|  
 |[컴파일러 오류 C2217](compiler-error-c2217.md)|'*attribute1*'필요'*attribute2*'|  
 |[컴파일러 오류 C2218](compiler-error-c2218.md)|'*calltype*' 함께 사용할 수 없습니다 ' / arch: i a 32 '|  
-|[컴파일러 오류 C2219](compiler-error-c2219.md)|구문 오류: 형식 한정자는 '*' 뒤에 있어야 합니다.|  
+|[컴파일러 오류 C2219](compiler-error-c2219.md)|구문 오류: 형식 한정자는 이후 여야 합니다. ' *'|  
 |[컴파일러 오류 C2220](compiler-error-c2220.md)|경고가 오류로 처리 되어 더 '*filetype*' 생성 된 파일|  
 |컴파일러 오류 C2221|사용되지 않습니다.|  
 |[컴파일러 오류 C2222](compiler-error-c2222.md)|예기치 않은 형식 '*형식*': 기본 클래스 또는 멤버 필요|  
@@ -148,7 +134,7 @@ ms.lasthandoff: 04/28/2017
 |[컴파일러 오류 C2249](compiler-error-c2249.md)|'*식별자*': 액세스할 수 없는 경로를 *내게 필요한 옵션* *멤버* 가상 기본에 선언 된 '*클래스*'|  
 |[컴파일러 오류 C2250](compiler-error-c2250.md)|'*식별자*':의 상속이 모호 *클래스*::*멤버*'|  
 |[컴파일러 오류 C2251](compiler-error-c2251.md)|네임 스페이스 '*네임 스페이스*'멤버를 포함 하지 않는'*식별자*'-아닌지 '*멤버*'?|  
-|[컴파일러 오류 C2252](compiler-error-c2252.md)|템플릿은 네임스페이스 범위에서만 명시적으로 인스턴스화할 수 있습니다.|  
+|[컴파일러 오류 C2252](compiler-error-c2252.md)|템플릿의 명시적 인스턴스화 네임 스페이스 범위에만 발생할 수 있습니다.|  
 |[컴파일러 오류 C2253](compiler-error-c2253.md)|'*함수*': 순수 지정자 또는 추상 재정의 지정자는 가상 함수에만 사용할 수|  
 |[컴파일러 오류 C2254](compiler-error-c2254.md)|'*함수*': 순수 지정자 또는 추상 재정의 지정자는 friend 함수에 사용할 수 없습니다|  
 |[컴파일러 오류 C2255](compiler-error-c2255.md)|'*요소*': 클래스 정의 외부에서 사용할 수 없습니다|  
@@ -175,13 +161,13 @@ ms.lasthandoff: 04/28/2017
 |[컴파일러 오류 C2276](compiler-error-c2276.md)|'*연산자*': 바인딩된 멤버 함수 식에 잘못 된 작업|  
 |[컴파일러 오류 C2277](compiler-error-c2277.md)|'*함수*':이 멤버 함수의 주소를 가져올 수 없습니다|  
 |컴파일러 오류 C2278|사용되지 않습니다.|  
-|[컴파일러 오류 C2279](compiler-error-c2279.md)|형식 정의에는 예외 사양이 나타날 수 없습니다.|  
-|[컴파일러 오류 c 2280](compiler-error-c2280.md)|'*클래스*::*함수*': 삭제 된 함수를 참조 하려고 합니다.|  
+|[컴파일러 오류 C2279](compiler-error-c2279.md)|형식 정의 선언에 예외 사양이 나타날 수 없습니다.|  
+|[컴파일러 오류 C2280](compiler-error-c2280.md)|'*클래스*::*함수*': 삭제 된 함수를 참조 하려고 합니다.|  
 |컴파일러 오류 C2281|'*클래스*::*함수*': 함수는 첫 번째 선언에만 삭제할 수 있습니다|  
 |컴파일러 오류 C2282|'*function1*'를 재정의할 수 없습니다'*function2*'|  
 |[컴파일러 오류 C2283](compiler-error-c2283.md)|'*식별자*': 순수 지정자 또는 추상 재정의 지정자는 명명 되지 않은 클래스/구조체에 사용할 수 없습니다|  
 |컴파일러 오류 C2284|'*함수*': 내장 함수에 잘못 된 인수 매개 변수 *번호*|  
-|[컴파일러 오류 C2285](compiler-error-c2285.md)|멤버에 대한 포인터 표현이 이미 결정되었습니다. pragma가 무시됩니다.|  
+|[컴파일러 오류 C2285](compiler-error-c2285.md)|멤버 표현에 대 한 포인터를 이미 확인-pragma가 무시 되었습니다|  
 |[컴파일러 오류 C2286](compiler-error-c2286.md)|멤버에 대 한 포인터 '*식별자*' 표현에 이미 설정 되어 *상속* -선언이 무시 됩니다.|  
 |[컴파일러 오류 C2287](compiler-error-c2287.md)|'*식별자*': 상속 표현: '*inheritiance*'입니다. 필요한 보다 덜 일반적'*상속*'|  
 |컴파일러 오류 C2288|사용되지 않습니다.|  
@@ -194,6 +180,6 @@ ms.lasthandoff: 04/28/2017
 |[컴파일러 오류 C2295](compiler-error-c2295.md)|이스케이프 '*문자*': 매크로 정의에서 잘못 된|  
 |[컴파일러 오류 C2296](compiler-error-c2296.md)|'*연산자*': 왼쪽 피연산자의 형식은 '*형식*'|  
 |[컴파일러 오류 C2297](compiler-error-c2297.md)|'*연산자*': 오른쪽 피연산자의 형식은 '*형식*'|  
-|[컴파일러 오류 C2298](compiler-error-c2298.md)|바인딩된 멤버 포인터 함수에 대한 호출이 누락되었습니다.|  
+|[컴파일러 오류 C2298](compiler-error-c2298.md)|멤버 함수에 포인터를 바인딩된 호출이 누락 되었습니다.|  
 |[컴파일러 오류 C2299](compiler-error-c2299.md)|'*함수*': 동작 변경: 명시적 특수화는 복사 생성자 또는 복사 할당 연산자가 될 수 없습니다|  
 

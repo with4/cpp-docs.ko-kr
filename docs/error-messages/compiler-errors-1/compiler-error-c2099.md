@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 74fdc75470600c29029c52e38ab2073e484dbde6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0378426777bc7ce831eee9ecb62170baf5e906b9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2099"></a>컴파일러 오류 C2099
@@ -57,13 +42,13 @@ j = *p;   // C2099 *p is not a constant
 ```  
   
 ## <a name="example"></a>예제  
- 컴파일러가 식에서 상수 폴딩을 수행할 수 없기 때문에 c 2099가 발생할 수도 있습니다 **/fp: strict** 부동 소수점 정밀도 환경 설정 때문에 (참조 [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) 자세한 내용은) 런타임 컴파일과에서 다를 수 있습니다.  
+ 부동 소수점 정밀도 환경 설정(자세한 내용은 **_controlfp_s** 참조)은 런타임 컴파일과는 다를 수 있기 때문에 컴파일러는 [/fp:strict](../../c-runtime-library/reference/controlfp-s.md) 의 식에서 상수 폴딩을 수행할 수 없으므로 C2099가 발생할 수도 있습니다.  
   
  상수 폴딩이 실패하면 컴파일러가 동적 초기화를 호출하는데 이는 C에서는 허용되지 않습니다.  
   
  이 오류를 해결하려면 모듈을 .cpp 파일로 컴파일하거나 식을 단순화합니다.  
   
- 자세한 내용은 [/fp(부동 소수점 동작 지정)](../../build/reference/fp-specify-floating-point-behavior.md)를 참조하세요.  
+ 자세한 내용은 [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md)을 참조하세요.  
   
  다음 샘플에서는 C2099를 생성합니다.  
   

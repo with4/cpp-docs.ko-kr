@@ -1,44 +1,49 @@
 ---
 title: "ATL OLE DB 소비자 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL OLE DB 소비자"
-  - "ATL 프로젝트, ATL OLE DB 소비자 추가"
-  - "OLE DB, 프로젝트에 ATL OLE DB 소비자 추가"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, adding ATL OLE DB consumers
+- OLE DB, adding ATL OLE DB consumer to projects
+- ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# ATL OLE DB 소비자 추가
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 41e31e82c97252a2ab5e34a78db5af1fd4e24f98
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-이 마법사를 사용하여 ATL OLE DB 소비자를 프로젝트에 추가합니다.  ATL OLE DB 소비자는 데이터 소스에 액세스하는 데 필요한 OLE DB 접근자 클래스와 데이터 바인딩으로 구성됩니다.  프로젝트는 ATL COM 응용 프로그램으로 만들거나 ATL OLE DB 소비자 마법사를 통해 자동으로 추가되는 ATL을 지원하는 MFC나 Win32 응용 프로그램으로 만들어야 합니다.  
+---
+# <a name="adding-an-atl-ole-db-consumer"></a>ATL OLE DB 소비자 추가
+이 마법사를 사용 하 여 프로젝트에 ATL OLE DB 소비자를 추가 합니다. ATL OLE DB 소비자는 데이터 원본에 액세스 하는 데 필요한 OLE DB 접근자 클래스 및 데이터 바인딩으로 구성 됩니다. 프로젝트 (ATL OLE DB 소비자 마법사를 추가 하는 자동으로) ATL 지원을 포함 하는 MFC 또는 Win32 응용 프로그램 또는 ATL COM 응용 프로그램으로 만든 것 이어야 합니다.  
   
- **참고**  OLE DB 소비자를 MFC 프로젝트에 추가할 수 있습니다.  이렇게 하면 ATL OLE DB 소비자 마법사는 필요한 COM 지원을 프로젝트에 추가합니다.  이 경우, MFC 프로젝트를 만들 때 MFC 프로젝트 응용 프로그램 마법사의 **고급 기능** 페이지에서 기본적으로 선택되어 있는 **ActiveX 컨트롤** 확인란을 선택했다고 가정합니다.  이 옵션을 선택하면 응용 프로그램에서 **CoInitialize** 및 **CoUninitialize**를 호출합니다  MFC 프로젝트를 만들 때 **ActiveX 컨트롤**을 선택하지 않은 경우에는 메인 코드에서 **CoInitialize** 및 **CoUninitialize**를 호출해야 합니다.  
+ **참고** MFC 프로젝트에 OLE DB 소비자를 추가할 수 있습니다. 이렇게 하면 ATL OLE DB 소비자 마법사는 필요한 COM 지원 프로젝트에 추가 합니다. MFC 프로젝트를 만들 때 선택 했다고 가정은 **ActiveX 컨트롤** 확인란 (에 **고급 기능** MFC 프로젝트 응용 프로그램 마법사의 페이지)를 기본적으로 선택 된 항목을 합니다. 이 옵션을 선택 하 여 응용 프로그램 호출 하면 **CoInitialize** 및 **CoUninitialize**합니다. 선택 하지 않은 경우 **ActiveX 컨트롤** 를 호출 해야 하는 MFC 프로젝트를 만들 때 **CoInitialize** 및 **CoUninitialize** 주 코드에 있습니다.  
   
-### ATL OLE DB 소비자를 프로젝트에 추가하려면  
+### <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>프로젝트에 ATL OLE DB 소비자를 추가 하려면  
   
-1.  클래스 뷰에서 프로젝트를 마우스 오른쪽 단추로 클릭합니다.  바로 가기 메뉴에서 **추가**를 클릭한 다음 **클래스 추가**를 클릭합니다.  
+1.  클래스 뷰에서 프로젝트를 마우스 오른쪽 단추로 클릭 합니다. 바로 가기 메뉴를 클릭 **추가** 클릭 하 고 **클래스 추가**합니다.  
   
-2.  Visual C\+\+ 폴더에서 **ATL OLE DB 소비자** 아이콘을 두 번 클릭하거나 아이콘을 선택한 후 **열기**를 클릭합니다.  
+2.  Visual c + + 폴더를 두 번 클릭은 **ATL OLE DB 소비자** 아이콘 또는 선택 하 고 클릭 **열려**합니다.  
   
      ATL OLE DB 소비자 마법사가 열립니다.  
   
-3.  [ATL OLE DB 소비자 마법사](../../atl/reference/atl-ole-db-consumer-wizard.md)의 설명에 따라 설정을 정의합니다.  
+3.  에 설명 된 대로 설정을 정의 [ATL OLE DB 소비자 마법사](../../atl/reference/atl-ole-db-consumer-wizard.md)합니다.  
   
-4.  **마침**을 클릭하여 마법사를 닫습니다.  새로 만들어진 OLE DB 소비자 코드가 프로젝트에 삽입됩니다.  
+4.  클릭 **마침** 마법사를 닫습니다. 새로 만든된 OLE DB 소비자 코드 프로젝트에 삽입 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코드 마법사로 기능 추가](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+

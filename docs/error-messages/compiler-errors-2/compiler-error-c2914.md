@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2914 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2914"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2914"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2914
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2914
 ms.assetid: fc6a0592-f53e-4f5a-88cb-780bbed4acf2
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 컴파일러 오류 C2914
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 67bd7d142f77012821b7e464dd73c416088bf48d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 함수 인수가 모호하기 때문에 형식 인수를 추론할 수 없습니다.  
+---
+# <a name="compiler-error-c2914"></a>컴파일러 오류 C2914
+'identifier': 함수 인수가 모호 하기 때문에 따라 형식 인수를 추론할 수 없습니다  
   
- 컴파일러가 제네릭 또는 템플릿 인수에 사용할 오버로드된 함수를 결정할 수 없습니다.  
+ 컴파일러는 제네릭 또는 템플릿 인수에 사용할 함수를 오버 로드 된 확인할 수 없습니다.  
   
- 다음 샘플에서는 C2914 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2914 오류가 생성 됩니다.  
   
 ```  
 // C2914.cpp  
@@ -41,7 +44,7 @@ void h() { g(f); }   // C2914
 // void h() { g<int>(f); }  
 ```  
   
- 제네릭을 사용하는 경우에도 C2914가 발생할 수 있습니다.  다음 샘플에서는 C2914 오류가 발생하는 경우를 보여 줍니다.  
+ C2914는 제네릭을 사용 하는 경우에 발생할 수 있습니다.  다음 샘플에서는 C2914 오류가 생성 됩니다.  
   
 ```  
 // C2914b.cpp  

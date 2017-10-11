@@ -1,32 +1,35 @@
 ---
 title: "컴파일러 오류 C3724 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3724"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3724"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3724
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3724
 ms.assetid: cab8aba7-14fc-406f-8cc6-32744c8f31c1
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3724
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ff6bbed7c54b3be98ed244b375ed05aca79c953f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-이벤트에 다중 스레딩을 사용하려면 \#include \<windows.h\>를 사용해야 합니다.  
+---
+# <a name="compiler-error-c3724"></a>컴파일러 오류 C3724
+해야 #include \<. h >를 사용 하 여 이벤트에 다중 스레딩을 사용  
   
- 이벤트에 다중 스레딩을 사용하는 경우에는 windows.h 파일이 필요합니다.  이 오류를 해결하려면 이벤트 소스 및 이벤트 수신기가 정의된 파일 위쪽에 `#include <windows.h>`를 추가하십시오.  
+ Windows.h 파일은 사용 하는 경우 필요 이벤트에 다중 스레딩을 사용 합니다. 이 오류를 해결 하려면 추가 `#include <windows.h>` 수신기가 정의 이벤트 원본 및 이벤트에 있는 파일의 맨 위로 이동 합니다.  
   
 ```  
 // C3724.cpp  

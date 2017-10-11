@@ -27,25 +27,11 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ac817cedb4c7ed67e698969b14645f5659aab2ad
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: e9d580a8027e37ce2db5e70b72c4f8cf2a99e516
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 클래스
@@ -125,7 +111,7 @@ CComContainedObject(void* pv);
 ~CComContainedObject();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다.  
   
 ##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
@@ -138,7 +124,7 @@ IUnknown* GetControllingUnknown();
 ### <a name="return-value"></a>반환 값  
  소유자 개체의 **IUnknown**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 가상 일 수 있음 경우 `Base` 가 선언 된 [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) 매크로입니다.  
   
 ##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  

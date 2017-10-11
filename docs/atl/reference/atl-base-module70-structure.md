@@ -1,5 +1,5 @@
 ---
-title: "_ATL_BASE_MODULE70 구조 | Microsoft 문서"
+title: "_ATL_BASE_MODULE70 구조 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
-ms.openlocfilehash: 7456d441d7b3fb74f404f29c893c492feab10ed9
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e824c2b85e7f80ad93a1f154be7f2e680bd00a9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 구조
-ATL.를 사용 하 여 모든 프로젝트에서 사용  
+ATL.를 사용 하는 모든 프로젝트에서 사용  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +52,7 @@ struct _ATL_BASE_MODULE70 {
  버전 관리에 사용 되는 구조체의 크기입니다.  
   
  `m_hInst`  
- **hInstance** 이 모듈 (exe 또는 dll)입니다.  
+ **hInstance** (exe 또는 dll)이이 모듈에 대 한 합니다.  
   
  `m_hInstResource`  
  기본 인스턴스 리소스 핸들입니다.  
@@ -84,9 +70,9 @@ struct _ATL_BASE_MODULE70 {
  에 대 한 액세스를 동기화 하는 데는 **m_rgResourceInstance** 배열입니다. ATL.에서 내부적으로 사용  
   
  **m_rgResourceInstance**  
- ATL 인식 되어 있는 모든 리소스 인스턴스에서 리소스를 검색 하는 데 사용 하는 배열입니다. ATL.에서 내부적으로 사용  
+ ATL를 인식 하는 모든 리소스 인스턴스에서 리소스를 검색 하는 데 사용 하는 배열입니다. ATL.에서 내부적으로 사용  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) 의 typedef로 정의 된 `_ATL_BASE_MODULE70`합니다.  
   
 ## <a name="requirements"></a>요구 사항  

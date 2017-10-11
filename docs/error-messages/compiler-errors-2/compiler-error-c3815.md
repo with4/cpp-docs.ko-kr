@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3815 | Microsoft 문서"
+title: "컴파일러 오류 C3815 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0c8c034d7d52e66bcd88c2a1046c40c68a9e0784
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4fb3b752be0767cac73c7dbfc493e1e93c0cf82b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3815"></a>컴파일러 오류 C3815
-'get_accessor' 메서드의 반환 형식에는 setter의 마지막 매개 변수 형식을 같아야 합니다.  
+'get_accessor' 메서드의 반환 형식은 setter의 마지막 매개 변수 유형의 같아야 합니다.  
   
- 속성의 반환 값을 선언 하는 경우는 `get_accessor` 메서드는 set 접근자 메서드 선언에 대 한 마지막 매개 변수를 일치 해야 합니다.  
+ 속성의 반환 값을 선언 하는 경우는 `get_accessor` 메서드는 set 접근자 메서드 선언에서 마지막 매개 변수 일치 해야 합니다.  
   
- C3815는 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
+ C3815은 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
 

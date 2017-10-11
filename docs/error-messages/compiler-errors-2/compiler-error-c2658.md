@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2658 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2658"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2658"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2658
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2658
 ms.assetid: 638368e8-7893-4a14-abec-13c768a9543a
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C2658
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 252c543b8ba4dfc470bc1641a3d91c3dfc06177d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'member': 익명 구조체\/공용 구조체에서 다시 정의했습니다.  
+---
+# <a name="compiler-error-c2658"></a>컴파일러 오류 C2658
+'member': 익명 구조체/공용 구조체에 재정의  
   
- 두 개의 익명 구조체 또는 공용 구조체에 식별자는 동일하지만 형식이 각기 다른 멤버 선언이 포함되었습니다.  [\/Za](../../build/reference/za-ze-disable-language-extensions.md)에서는 식별자와 형식이 동일한 멤버에 대해 이 오류가 발생하기도 합니다.  
+ 두 개의 익명 구조체 또는 공용 구조체 멤버 선언을 같은 식별자를 가진 했지만 다른 형식이 포함 되어 있습니다. 아래 [/Za](../../build/reference/za-ze-disable-language-extensions.md), 같은 식별자와 형식 멤버에 대해이 오류를 발생 하기도 합니다.  
   
- 다음 샘플에서는 C2658 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2658 오류가 생성 됩니다.  
   
 ```  
 // C2658.cpp  

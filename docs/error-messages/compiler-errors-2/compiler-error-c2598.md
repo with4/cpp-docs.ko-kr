@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2598 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2598"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2598"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2598
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2598
 ms.assetid: 40777c62-39ba-441e-b081-f49f94b43547
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2598
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a7876b9fccadcd8a47cc3f76fbdc7ca097afae73
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-링크 사양은 전역 범위에 있어야 합니다.  
+---
+# <a name="compiler-error-c2598"></a>컴파일러 오류 C2598
+링크 사양이 전역 범위에 있어야 합니다.  
   
- 링크 지정자가 지역 범위에서 선언되었습니다.  
+ 링크 지정자는 로컬 범위에서 선언 됩니다.  
   
- 다음 샘플에서는 C2598 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2598 오류가 생성 됩니다.  
   
 ```  
 // C2598.cpp  

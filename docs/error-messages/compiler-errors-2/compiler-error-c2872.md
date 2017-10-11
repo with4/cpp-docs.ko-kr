@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c81fc315c4bb893b96876b7b67b42806a3246583
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 03bfb79a424b1272239826abf3056a8ab6228eec
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2872"></a>컴파일러 오류 C2872
@@ -47,7 +33,7 @@ ms.lasthandoff: 04/29/2017
   
 C2872 헤더 파일을 포함 하는 경우 발생할 수 있습니다는 [지시문을 사용 하 여](../../cpp/namespaces-cpp.md#using_directives), 후속 헤더 파일을 포함 하 고에 지정 된 네임 스페이스에도 사용 되는 형식을 포함 하는 `using` 지시문입니다. 지정 된 `using` 헤더 파일을 지정할 때 사용 하는 모든 후에 지시문 `#include`합니다.  
   
- C2872에 대 한 자세한 내용은 기술 자료 문서를 참조 하십시오. [PRB: 컴파일러 오류 때 하면 XML에서 사용 #import Visual c + +.net에서](http://support.microsoft.com/kb/316317) 및 ["오류 C2872: 'Platform': 모호한 기호" Windows::Foundation::Metadata 네임 스페이스를 사용 하 여 Visual Studio 2013의 경우 오류 메시지](https://support.microsoft.com/kb/2890859)합니다.  
+ C2872에 대 한 자세한 내용은 기술 자료 문서를 참조 하십시오. [PRB: 컴파일러 오류 때 하면 XML에서 사용 #import Visual c + +.net에서](http://support.microsoft.com/kb/316317) 및 ["오류 C2872: 'Platform': 모호한 기호" 사용 하는 경우 오류 메시지는 Visual Studio 2013에서 Windows::Foundation::Metadata 네임 스페이스](https://support.microsoft.com/kb/2890859)합니다.  
   
 ## <a name="example"></a>예제  
  라는 변수가 모호한 참조 되기 때문에 다음 샘플에서는 C2872, `i`두; 이름이 같은 변수는 범위에:  

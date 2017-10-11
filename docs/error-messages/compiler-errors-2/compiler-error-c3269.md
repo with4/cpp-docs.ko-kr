@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3269 | Microsoft 문서"
+title: "컴파일러 오류 C3269 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 7349909f413d489546023da498ffdbc8fc1c450a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f1eb014e107326aa8c85b2439444c63525f26a77
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3269"></a>컴파일러 오류 C3269
-'function': '...'로 관리 되는 또는 WinRTtype 멤버 함수를 선언할 수 없습니다  
+'function': 관리 되는 또는 WinRTtype의 멤버-함수는 '...'로 선언할 수 없습니다  
   
 관리되는 클래스 멤버 함수와 WinRT 클래스 멤버 함수는 변수 길이 매개 변수 목록을 선언할 수 없습니다.  
   

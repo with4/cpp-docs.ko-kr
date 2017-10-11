@@ -1,43 +1,46 @@
 ---
 title: "컴파일러 오류 C2707 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2707"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2707"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2707
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C2707
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46ca756cf6491506cefc38e34992fa5e3fb67429
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 내장 함수의 컨텍스트가 잘못되었습니다.  
+---
+# <a name="compiler-error-c2707"></a>컴파일러 오류 C2707
+'identifier': 내장 함수에 대 한 잘못 된 컨텍스트  
   
- 특정 컨텍스트에서는 구조적 예외 처리 내장 함수를 사용할 수 없습니다.  
+ 구조적된 예외 처리 내장 함수는 특정 컨텍스트에서 유효 하지 않습니다.  
   
--   예외 필터 또는 `__except` 블록 외부에 있는 `_exception_code()`  
+-   `_exception_code()`예외 필터 외부 또는 `__except` 블록  
   
--   예외 필터 외부에 있는 `_exception_info()`  
+-   `_exception_info()`예외 필터 외부  
   
--   `__finally` 블록 외부에 있는 `_abnormal_termination()`  
+-   `_abnormal_termination()`외부는 `__finally` 블록  
   
- 이 오류를 해결하려면 예외 처리 내장 함수를 적절한 컨텍스트에 배치해야 합니다.  
+ 이 오류를 해결 하려면 예외 처리 내장 함수는 적절 한 컨텍스트에서 배치 됩니다 해야 합니다.  
   
-## 예제  
- 다음 샘플에서는 C2707 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2707 오류가 발생 합니다.  
   
 ```  
 // C2707.cpp  

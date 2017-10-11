@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3836 | Microsoft 문서"
+title: "컴파일러 오류 C3836 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0708b8c9bf59e1c2ea3751fbb91192d6b873d8ec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43f7972efc5e8b930811817f5cef9c415a60cb5d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3836"></a>컴파일러 오류 C3836
 정적 생성자에는 멤버 이니셜라이저 목록을 사용할 수 없습니다.  
   
- 관리 되는 클래스 멤버 초기화 목록에도 있는 정적 생성자를 없습니다. 정적 클래스 생성자는 클래스 초기화, 정적 데이터 멤버 초기화를 수행 하려면 공용 언어 런타임에 의해 호출 됩니다.  
+ 관리 되는 클래스 멤버 초기화 목록에도 있는 정적 생성자를 사용할 수 없습니다. 정적 클래스 생성자는 클래스 초기화, 정적 데이터 멤버 초기화를 수행 하려면 공용 언어 런타임에 의해 호출 됩니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C3836 오류가 생성 됩니다.  

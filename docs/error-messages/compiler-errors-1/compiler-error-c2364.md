@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C2364 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2364"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2364"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2364
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2364
 ms.assetid: 4f550571-94b5-42ca-84cb-663fecbead44
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 컴파일러 오류 C2364
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d7c5042d4b5984a87b52cefafd1f591ec662ab48
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'type': 사용자 지정 특성의 형식이 잘못되었습니다.  
+---
+# <a name="compiler-error-c2364"></a>컴파일러 오류 C2364
+'type': 사용자 지정 특성에 대 한 형식이 잘못 되었습니다.  
   
- 사용자 지정 특성에 대한 명명된 인수는 컴파일 타임 상수로 제한됩니다.  정수 계열 형식\(int, char 등\), System::Type^ 및 System::Object^를 예로 들 수 있습니다.  
+ 사용자 지정 특성에 대 한 명명 된 인수는 컴파일 시간 상수 제한 합니다. (Int, char 등) 예를 들어 정수 계열 형식 system:: type ^, 및 system:: object ^ 합니다.  
   
-## 예제  
- 다음 샘플에서는 C2364 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2364 오류가 발생 합니다.  
   
 ```  
 // c2364.cpp  

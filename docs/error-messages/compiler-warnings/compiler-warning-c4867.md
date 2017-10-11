@@ -19,25 +19,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: a052194893db90177b88eea8f80435777ae37773
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 352b38744d83b3dc163125ff5ec8d80165f60c9a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4867"></a>컴파일러 경고 C4867
@@ -47,7 +33,7 @@ ms.lasthandoff: 04/12/2017
   
  이 경고는 Visual c + + 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 됩니다: 멤버 포인터 규칙이 향상 되었습니다.  Visual c + + 2005 이전에 컴파일된 코드는 현재 C4867를 생성 합니다.  
   
- 항상이 경고는 오류로 발생 됩니다. 사용 하 여는 [경고](../../preprocessor/warning.md) pragma를이 경고를 비활성화 합니다. C4867 및 MFC/ATL에 대 한 자세한 내용은 참조 [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)합니다.  
+ 항상이 경고는 오류로 발생 됩니다. [warning](../../preprocessor/warning.md) pragma를 사용하여 이 경고를 사용하지 않도록 설정합니다. C4867 및 MFC/ATL에 대 한 자세한 내용은 참조 [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)합니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 c4867 오류가 발생 합니다.  

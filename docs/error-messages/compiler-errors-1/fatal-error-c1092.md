@@ -1,5 +1,5 @@
 ---
-title: "심각한 오류 C1092 | Microsoft 문서"
+title: "심각한 오류 C1092 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 6d93fd662b638126e21d5f5f034138c0e6f0e0ad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fac0a5218e1faf16d3db459567c36775acd9bb12
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1092"></a>심각한 오류 C1092
 편집하며 계속하기는 데이터 형식에 대한 변경 내용은 지원하지 않습니다. 빌드해야 합니다.  
   
- 변경 하거나 마지막으로 성공한 빌드 이후 데이터 형식을 추가 합니다.  
+ 변경 하거나 마지막으로 빌드가 성공한 이후 데이터 형식을 추가 합니다.  
   
--   편집 하며 계속 하기에는 기존 데이터 형식으로, 클래스, 구조체 또는 열거형 정의 포함 하 여 변경 내용을 지원 하지 않습니다. 디버깅을 중지 하 고 응용 프로그램을 작성 해야 합니다.  
+-   편집 하며 계속 하기를 클래스, 구조체 또는 열거형 정의 포함 하 여 기존 데이터 형식으로 변경 내용을 지원 하지 않습니다. 디버깅을 중지 하 고 응용 프로그램을 작성 해야 합니다.  
   
--   편집 하며 계속 하기에서는 새로운 데이터 형식의 경우 vc 같은 프로그램 데이터베이스 파일에 추가*x*0.pdb (여기서 *x* 는 사용 중인 주 버전의 Visual c + +)는 읽기 전용입니다. 데이터 형식을 추가 하려면 컴파일러 쓰기 모드에서.pdb 파일을 열어 해야 합니다.  
+-   편집 하며 계속 하기 새로운 데이터 형식의 경우 vc 같은 프로그램 데이터베이스 파일에 추가 지원 하지 않는*x*0 pdb (여기서 *x* 는 사용 중인 주 버전의 Visual c + +)는 읽기 전용입니다. 데이터 형식을 추가 하려면 컴파일러 쓰기 모드에서.pdb 파일을 열어 해야 합니다.  
   
 ### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>현재 디버그 세션을 끝내 지 않고이 오류를 제거 하려면  
   
@@ -61,4 +47,4 @@ ms.lasthandoff: 02/24/2017
   
 2.  **빌드** 메뉴에서 **빌드**를 선택합니다.  
   
- 자세한 내용은 참조는 [지원 되는 코드 변경](/visualstudio/debugger/supported-code-changes-cpp)합니다.
+ 자세한 내용은 [지원되는 코드 변경](/visualstudio/debugger/supported-code-changes-cpp)을 참조하세요.

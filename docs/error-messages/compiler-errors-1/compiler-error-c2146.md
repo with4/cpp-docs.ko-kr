@@ -1,41 +1,44 @@
 ---
 title: "컴파일러 오류 C2146 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2146"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2146"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2146
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 컴파일러 오류 C2146
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 92e94ae29c1a7a3fc6adfdc0b3e82f5ce4dfcaf0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-구문 오류 : 'token'이\(가\) 'identifier' 식별자 앞에 없습니다.  
+---
+# <a name="compiler-error-c2146"></a>컴파일러 오류 C2146
+구문 오류: 'token' 'identifier' 식별자 앞 누락  
   
- `token`이 필요한 위치에 `identifier`가 대신 사용되었습니다.  가능한 원인  
+ 예상 컴파일러 `token` 발견 `identifier` 대신 합니다.  가능한 원인:  
   
-1.  철자 또는 대문자 표시 오류입니다.  
+1.  대/소문자 또는 맞춤법 오류입니다.  
   
-2.  식별자의 선언 부분에 형식 지정자가 없습니다.  
+2.  식별자의 선언에서 누락 된 형식 지정자입니다.  
   
- 이 오류는 입력 오류 때문에 발생할 수도 있습니다.  일반적으로 오류 [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md)가 이 오류보다 먼저 발생합니다.  
+ 이 오류는 입력 오류 때문일 수 있습니다. 오류 [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) 일반적으로이 오류를 앞에 옵니다.  
   
-## 예제  
- 다음 샘플에서는 C2146 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 c2146 오류가 발생 합니다.  
   
 ```  
 // C2146.cpp  
@@ -52,10 +55,10 @@ int main() {
 }  
 ```  
   
-## 예제  
- Visual Studio .NET 2003에서는 컴파일러 규칙에 따라 `typename` 키워드를 사용하지 않기 때문에 이 오류가 발생할 수도 있습니다.  
+## <a name="example"></a>예제  
+ 이 오류는 Visual Studio.NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 있습니다: 누락 된 `typename` 키워드입니다.  
   
- 다음 샘플은 Visual Studio .NET 2002에서는 컴파일되지만 Visual Studio .NET 2003에서는 컴파일되지 않습니다.  
+ 다음 샘플 Visual Studio.NET 2002에서 컴파일되도록 하지만 Visual Studio.NET 2003에서는 실패 합니다.  
   
 ```  
 // C2146b.cpp  
@@ -76,12 +79,12 @@ template <typename T>
 typename X<T>::Y func() { }  
 ```  
   
-## 예제  
- Visual Studio .NET 2003에서는 컴파일러 규칙에 따라 이제 명시적 특수화를 통해 기본 템플릿에서 템플릿 매개 변수를 찾지 않기 때문에 이 오류가 발생할 수도 있습니다.  
+## <a name="example"></a>예제  
+ Visual Studio.NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로이 오류도 표시 됩니다: 명시적 특수화에는 더 이상 기본 템플릿에서 템플릿 매개 변수가 검색 합니다.  
   
- Visual Studio .NET 2003에서는 기본 템플릿의 `T`를 명시적 특수화에 사용할 수 없습니다.  Visual Studio .NET 2003과 Visual Studio .NET 버전의 Visual C\+\+ 모두에서 올바른 코드가 되도록 하려면 특수화에 사용된 모든 템플릿 매개 변수의 인스턴스를 명시적으로 특수화된 형식으로 바꾸십시오.  
+ 사용 하는 `T` 기본 템플릿에서에서 허용 되지 않는 명시적 특수화입니다. Visual c + +의 Visual Studio.NET 2003 및 Visual Studio.NET 버전에 유효한 것으로 코드에 대 한 모든 인스턴스의 한 특수화에 템플릿 매개 변수를 명시적으로 특수화 된 형식으로 대체 합니다.  
   
- 다음 샘플은 Visual Studio .NET에서는 컴파일되지만 Visual Studio .NET 2003에서는 컴파일되지 않습니다.  
+ 다음 샘플 Visual Studio.NET에서 컴파일되도록 하지만 Visual Studio.NET 2003에서는 실패 합니다.  
   
 ```  
 // C2146_c.cpp  

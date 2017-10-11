@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3887 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3887"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3887"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3887
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3887
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7dccbd3a34764eedc53c69ddd69c693cc4782d2a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'var' : 리터럴 데이터 멤버에 대한 이니셜라이저는 상수 식이어야 합니다.  
+---
+# <a name="compiler-error-c3887"></a>컴파일러 오류 C3887
+'var': 리터럴 데이터 멤버에 대 한 이니셜라이저는 상수 식 이어야 합니다.  
   
- [리터럴](../../windows/literal-cpp-component-extensions.md) 데이터 멤버는 상수 식으로만 초기화될 수 있습니다.  
+ A [리터럴](../../windows/literal-cpp-component-extensions.md) 데이터 멤버는 상수 식만 초기화 될 수 있습니다.  
   
- 다음 샘플에서는 C3887 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3887 오류가 생성 됩니다.  
   
 ```  
 // C3887.cpp  
@@ -40,7 +43,7 @@ ref struct Y1 {
 };  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C3887b.cpp  

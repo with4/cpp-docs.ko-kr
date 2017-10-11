@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3705 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3705"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3705"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3705
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3705
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ba08854d9d9ac6f0e644a64a80133b1d8b70a167
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function' : 이벤트 인터페이스를 찾을 수 없습니다.  
+---
+# <a name="compiler-error-c3705"></a>컴파일러 오류 C3705
+'function': 이벤트 인터페이스를 찾을 수 없습니다  
   
- COM 이벤트를 사용할 이벤트 인터페이스를 정의해야 합니다.  COM 이벤트를 사용하는 데에는 아래 샘플에 나타나 있는 ATL 헤더 파일의 `#include` 줄이 필요합니다.  이 오류를 해결하려면 샘플 코드에서 `IEvents` 인터페이스 정의를 주석으로 처리하지 마십시오.  
+ COM 이벤트를 사용 하는 이벤트 인터페이스를 정의 해야 합니다. `#include` 아래 예제에 표시 된 ATL 헤더 파일의 선은 COM 이벤트를 사용 하기 위해 필요 합니다. 이 오류를 해결 하려면의 정의 주석 처리 제거는 `IEvents` 샘플 코드에서 인터페이스입니다.  
   
- 다음 샘플에서는 C3705 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3705 오류가 생성 됩니다.  
   
 ```  
 // C3705.cpp  

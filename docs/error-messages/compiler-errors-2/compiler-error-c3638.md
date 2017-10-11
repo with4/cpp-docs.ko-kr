@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C3638 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3638"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3638"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3638
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3638
 ms.assetid: 8d8bc5ca-75aa-480e-b6b6-3178fab51b1d
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3638
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 51048bb46dde49f432699e620b94d62fb8f6c131
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'operator' : 기본 boxing 및 unboxing 변환 연산자는 다시 정의할 수 없습니다.  
+---
+# <a name="compiler-error-c3638"></a>컴파일러 오류 C3638
+'operator': 기본 boxing 및 unboxing 변환 연산자를 재정의할 수 없습니다  
   
- 컴파일러는 각 관리되는 클래스에 대해 암시적 boxing을 지원하기 위한 변환 연산자를 정의합니다.  이 연산자는 오버로드할 수 없습니다.  
+ 컴파일러는 암시적 boxing을 지원 하도록 각 관리 되는 클래스에 대 한 변환 연산자를 정의 합니다. 이 연산자를 재정의할 수 없습니다.  
   
- 자세한 내용은 [Implicit Boxing](../../windows/boxing-cpp-component-extensions.md)을 참조하십시오.  
+ 자세한 내용은 참조 [암시적 Boxing](../../windows/boxing-cpp-component-extensions.md)합니다.  
   
- 다음 샘플에서는 C3638 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3638 오류가 생성 됩니다.  
   
 ```  
 // C3638.cpp  

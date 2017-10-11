@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3270 | Microsoft 문서"
+title: "컴파일러 오류 C3270 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 13ef4bca19de5b1dcda8fd0c22a15d43f00257b7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 326f53f06c6cc4d93eb85f265df161c7b2b86535
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3270"></a>컴파일러 오류 C3270
 'field': FieldOffset 특성은 필요한 StructLayout(Explicit) 컨텍스트에서만 사용할 수 있습니다.  
   
-필드 라고 표시 된 **FieldOffset**때만 허용 되는 **StructLayout(Explicit)** 적용 됩니다.  
+필드에 표시 되어 **FieldOffset**때만 허용 됩니다입니다 **structlayout (explicit)** 적용 됩니다.  
   
 다음 샘플에서는 C3270을 생성합니다.  
   

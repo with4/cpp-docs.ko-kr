@@ -1,34 +1,37 @@
 ---
 title: "심각한 오류 C1191 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1191"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1191"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1191
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1191
 ms.assetid: 2888c6c4-b4e6-449e-8ee0-7917f31086df
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 심각한 오류 C1191
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 95795ddfcc27a7cd150dec565f0e52a4f7eca00e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-전역 범위에서만 'dll'을\(를\) 가져올 수 있습니다.  
+---
+# <a name="fatal-error-c1191"></a>심각한 오류 C1191
+'dll' 전역 범위 에서만 가져올 수 있습니다.  
   
- \/clr 프로그래밍을 사용하는 프로그램에 mscorlib.dll을 가져오는 명령은 네임스페이스나 함수에 표시할 수 없습니다. 전역 범위에서 표시해야 합니다.  
+ /Clr 프로그래밍을 사용 하는 프로그램에 mscorlib.dll을 가져오는 명령 없습니다 함수나 네임 스페이스에 나타나지만 전역 범위에 표시 되어야 합니다.  
   
- 다음 샘플에서는 C1191 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C1191 오류가 생성 됩니다.  
   
 ```  
 // C1191.cpp  
@@ -38,7 +41,7 @@ namespace sample {
 }  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C1191b.cpp  

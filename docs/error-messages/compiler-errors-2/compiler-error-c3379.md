@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3379 | Microsoft 문서"
+title: "컴파일러 오류 C3379 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6fa111a525d81c418d3285c05af86b700e8cb08
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3379"></a>컴파일러 오류 C3379
 'class': 중첩된 클래스 선언의 일부로 어셈블리 액세스 지정자를 사용할 수 없습니다  
   
- 클래스 또는 구조체와 같은 관리 되는 형식에 적용 된 경우는 [공용](../../cpp/public-cpp.md) 및 [개인](../../cpp/private-cpp.md) 키워드는 클래스 어셈블리 메타 데이터를 통해 노출 될 있는지 여부를 나타냅니다. `public`또는 `private` 바깥쪽 클래스의 어셈블리 액세스 권한을 상속 하는 중첩된 클래스에 적용할 수 없습니다.  
+ 클래스 또는 구조체와 같은 관리 되는 형식에 적용 될 때는 [공용](../../cpp/public-cpp.md) 및 [개인](../../cpp/private-cpp.md) 키워드는 클래스가 어셈블리 메타 데이터를 통해 노출 될 지 여부를 나타냅니다. `public`또는 `private` 바깥쪽 클래스의 어셈블리 액세스 권한을 상속 합니다 중첩된 클래스에 적용할 수 없습니다.  
   
  와 함께 사용할 경우 [/clr](../../build/reference/clr-common-language-runtime-compilation.md), `ref` 및 `value` 키워드 관리 되는 클래스를 나타냅니다 (참조 [클래스 및 구조체](../../windows/classes-and-structs-cpp-component-extensions.md)).  
   

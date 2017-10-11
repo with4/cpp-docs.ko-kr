@@ -1,41 +1,44 @@
 ---
-title: "열기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "open"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "open 함수"
+title: open | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- open
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- open
+dev_langs:
+- C++
+helpviewer_keywords:
+- open function
 ms.assetid: e3139118-4da2-434b-a551-fcf3fccf49b5
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 열기
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2fa7d6e6fe322cf37dec0322ba6db20998673717
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-이 POSIX 함수는 사용되지 않습니다.  ISO C\+\+ 규칙 [\_open](../../c-runtime-library/reference/open-wopen.md) 을 사용하십시오.
+---
+# <a name="open"></a>열기
+이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_open](../../c-runtime-library/reference/open-wopen.md)을 사용하세요.

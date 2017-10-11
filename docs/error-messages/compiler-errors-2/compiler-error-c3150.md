@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3150 | Microsoft 문서"
+title: "컴파일러 오류 C3150 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e0531a471bbaf43ad82b2c51ac11dd0a4aeff54c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 283bd2f529f465c227757da2a9ff2cd63bf878ab
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3150"></a>컴파일러 오류 C3150
-'element': 'attribute' 클래스, 인터페이스, 배열 또는 포인터에만 적용 될 수 있습니다  
+'element': 클래스, 인터페이스, 배열 또는 포인터에 'attribute'만 적용할 수  
   
 `__gc`클래스, 인터페이스 또는 배열에만 사용할 수 있습니다.  
   
- C3150는 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
+ C3150은 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
 

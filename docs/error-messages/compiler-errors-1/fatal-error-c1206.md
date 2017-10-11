@@ -19,26 +19,11 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: e656f73d5c4c788993a2ba45b0fc94c9ebb1aa91
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af67571c04b6bc8b62c408467502b2e564c1a81d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1206"></a>심각한 오류 C1206
@@ -48,4 +33,4 @@ ms.lasthandoff: 04/12/2017
   
  C1206은 최신 버전의 런타임이 컴퓨터에 설치되어 있지 않다는 것을 나타냅니다. 컴파일러와 함께 사용하게 되어 있는 공용 언어 런타임 버전을 설치합니다.  
   
- 참조 [appdomain](../../cpp/appdomain.md) 자세한 정보에 대 한 합니다.
+ 자세한 내용은 [appdomain](../../cpp/appdomain.md) 를 참조하세요.

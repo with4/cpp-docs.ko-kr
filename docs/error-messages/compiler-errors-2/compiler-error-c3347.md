@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d20934732a3b04bcd49485c3e0ba5b3562b147c5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 75d81462324690ae126938ffeab5a8eea9334426
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3347"></a>컴파일러 오류 C3347
 'arg': idl_module 특성에 필수 인수를 지정하지 않았습니다.  
   
- 필수 인수는 전달 되지 않으므로 [idl_module](../../windows/idl-module.md) 특성입니다.  
+ 필수 인수가 [idl_module](../../windows/idl-module.md) 특성에 전달되지 않았습니다.  
   
  다음 샘플에서는 C3347을 생성합니다.  
   

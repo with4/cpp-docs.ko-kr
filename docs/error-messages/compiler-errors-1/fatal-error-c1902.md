@@ -1,5 +1,5 @@
 ---
-title: "심각한 오류 C1902 | Microsoft 문서"
+title: "심각한 오류 C1902 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 79987719614dfa3075f9a9090ca1d97f6546ceb3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 89354565f67c8704eee8c8b5f9dcb94523800c63
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1902"></a>심각한 오류 C1902
 프로그램 데이터베이스 관리자 일치 하지 않습니다. 설치를 확인 하십시오  
   
-프로그램 데이터베이스 파일 (.pdb)을 최신 버전의 mspdb 사용 하 여 만든*XXX*.dll 컴파일러가 시스템에서 찾은 것입니다. 이 오류는 일반적으로 mspdbsrv.exe 또는 mspdbcore.dll이 누락 되거나 서로 다른 버전을 mspdb 나타냅니다*XXX*.dll입니다. (의 *XXX* 는 mspdb에서 자리 표시자*XXX*각 제품 릴리스에.dll 파일 이름 변경 합니다. 예를 들어, Visual Studio 2015의 파일 이름은 mspdb140.dll.)  
+프로그램 데이터베이스 파일 (.pdb) 집니다의 최신 버전을 사용 하 여 만들어진*XXX*컴파일러 시스템에서 찾은 것 보다는.dll입니다. 이 오류는 일반적으로 mspdbsrv.exe 또는 mspdbcore.dll 누락 되었거나이 서로 다른 버전을 집니다 보다 나타냅니다*XXX*.dll입니다. (의 *XXX* 자리 표시자는 집니다에*XXX*각 제품 릴리스와.dll 파일 이름 변경 합니다. 예를 들어, Visual Studio 2015의 파일 이름이 mspdb140.dll.)  
   
-버전이 일치 하는 mspdbsrv.exe, mspdbcore.dll 및 mspdb 확인*XXX*.dll 시스템에 설치 됩니다. 버전이 일치 하지 않는 대상 플랫폼에 대 한 컴파일러 및 링크 도구를 포함 하는 디렉터리에 복사 하지 않은 것을 확인 합니다. 예를 들어 있습니다 복사 했을 수 있는 파일 설정 하지 않고 명령 프롬프트에서 컴파일러 또는 링크 도구를 호출할 수 있도록는 **경로** 환경 변수 적절 하 게 합니다.
+일치 하는 버전의 mspdbsrv.exe, mspdbcore.dll, 및 집니다 확인*XXX*.dll 시스템에 설치 됩니다. 버전이 일치 하지 않는 대상 플랫폼에 대 한 컴파일러 및 연결 도구를 포함 하는 디렉터리에 복사 되지가 있는지 확인 합니다. 예를 들어 있습니다 복사 했을 수 파일 설정 하지 않고 명령 프롬프트에서 컴파일러 또는 링크 도구를 호출할 수 있도록는 **경로** 환경 변수가 적절 하 게 합니다.

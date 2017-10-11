@@ -65,32 +65,18 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: a41480c57b281c7a4fbb1e7697d11b5057b5da48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>컴파일러 오류 C2500 c 2599 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   
@@ -136,21 +122,21 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2537](compiler-error-C2537.md)|'*지정자*': 링크 사양이 올바르지 않습니다|  
 |컴파일러 오류 C2538|사용되지 않습니다.|  
 |컴파일러 오류 C2539|사용되지 않습니다.|
-|[컴파일러 오류 C2540](compiler-error-C2540.md)|배열 범위가 상수 식이 아닙니다.|  
+|[컴파일러 오류 C2540](compiler-error-C2540.md)|배열 범위가 상수가 아닌 식|  
 |[컴파일러 오류 C2541](compiler-error-C2541.md)|'*식별자*': 포인터 없는 개체를 삭제할 수 없습니다|  
 |[컴파일러 오류 C2542](compiler-error-C2542.md)|'*식별자*': 클래스 개체의 초기화에 대 한 생성자가 없습니다|  
 |[컴파일러 오류 C2543](compiler-error-C2543.md)|예상 ']' 연산자 ' '에 대 한|  
-|[컴파일러 오류 C2544](compiler-error-C2544.md)|'()' 연산자에 ')'가 필요합니다.|  
+|[컴파일러 오류 C2544](compiler-error-C2544.md)|예상 ')' (')' 연산자에 대 한|  
 |[컴파일러 오류 C2545](compiler-error-C2545.md)|'*연산자*': 오버 로드 된 찾기 연산자 수 없습니다.|  
 |컴파일러 오류 C2546|'*식별자*': 형식이 PIA와 NO-PIA PIA를 먼저 참조 해야 정의 된 경우|  
 |컴파일러 오류 C2547|'*식별자*': 선언에 게시 된 메서드의 모든 매개 변수를 명시적으로 명명 합니다|  
 |[컴파일러 오류 C2548](compiler-error-C2548.md)|'*함수*': 매개 변수에 대 한 기본 매개 변수 누락 *매개 변수*|  
-|[컴파일러 오류 C2549](compiler-error-C2549.md)|사용자 정의 변환에서 반환 형식을 지정할 수 없습니다.|  
+|[컴파일러 오류 C2549](compiler-error-C2549.md)|사용자 정의 변환에는 반환 형식을 지정할 수 없습니다.|  
 |[컴파일러 오류 C2550](compiler-error-C2550.md)|'*식별자*': 생성자 이니셜라이저 목록은 생성자 정의에 사용할 수|  
 |[컴파일러 오류 C2551](compiler-error-C2551.md)|'void *' 형식의 경우 명시적 캐스트가 필요합니다.|  
 |[컴파일러 오류 C2552](compiler-error-C2552.md)|'*식별자*': 이니셜라이저 목록을 사용 하 여 비 집합체를 초기화할 수 없습니다|  
-|[컴파일러 오류 C2553](compiler-error-C2553.md)|'*형식* *derived_class*::*함수*': 재정의 가상 함수에서 반환 형식이 다른 '*형식* *base_class*::*함수*'|  
-|[컴파일러 오류 C2555](compiler-error-C2555.md)|'*derived_class*::*함수*': 재정의 가상 함수의 반환 형식 다르며에서 공변있지 않습니다 '*base_class*::*함수*'|  
+|[컴파일러 오류 C2553](compiler-error-C2553.md)|'*형식* *derived_class*::*함수*': 재정의 가상 함수 반환 형식에서와 다른 '*형식* *base_ 클래스*::*함수*'|  
+|[컴파일러 오류 C2555](compiler-error-C2555.md)|'*derived_class*::*함수*': 재정의 가상 함수의 반환 형식 다르며 공변 (covariant)지 않습니다 '*base_class*::*함수*'|  
 |[컴파일러 오류 C2556](compiler-error-C2556.md)|'*type1* *클래스*::*함수*': 오버 로드 된 함수에서 반환 형식을 점만 다른 '*type2* *클래스*::*함수*'|  
 |[컴파일러 오류 C2557](compiler-error-C2557.md)|'*식별자*': 전용 및 보호 된 멤버는 생성자 없이 초기화할 수 없습니다|  
 |[컴파일러 오류 C2558](compiler-error-C2558.md)|클래스의*클래스*': 복사 생성자를 사용할 수 없거나 복사 생성자 'explicit' 선언|  
@@ -158,10 +144,10 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C2560|'*식별자*': ref 한정자 없이 멤버 함수를 멤버 함수를 오버 로드할 수 없습니다|  
 |[컴파일러 오류 C2561](compiler-error-C2561.md)|'*함수*': 함수는 값을 반환 해야 합니다|  
 |[컴파일러 오류 C2562](compiler-error-C2562.md)|'*함수*': 값을 반환 하는 'void' 함수|  
-|[컴파일러 오류 C2563](compiler-error-C2563.md)|정식 매개 변수 목록과 일치하지 않는 항목이 있습니다.|  
+|[컴파일러 오류 C2563](compiler-error-C2563.md)|형식 매개 변수 목록에서 일치 하지 않습니다.|  
 |컴파일러 오류 C2564|사용되지 않습니다.|  
 |컴파일러 오류 C2565|'*식별자*': ref-qualifier가 생성자/소멸자에 적합 하지|  
-|[컴파일러 오류 C2566](compiler-error-C2566.md)|조건식에 오버로드된 함수가 있습니다.|  
+|[컴파일러 오류 C2566](compiler-error-C2566.md)|조건식에 오버 로드 된 함수|  
 |[컴파일러 오류 C2567](compiler-error-C2567.md)|메타 데이터를 열 수 없습니다. '*filename*', *possible_reason*|  
 |[컴파일러 오류 C2568](compiler-error-C2568.md)|'*식별자*': 함수 오버 로드를 확인할 수 없습니다.|  
 |[컴파일러 오류 C2569](compiler-error-C2569.md)|'*식별자*': 열거형/공용 구조체를 기본 클래스로 사용할 수 없습니다|  
@@ -181,7 +167,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2583](compiler-error-C2583.md)|'*식별자*': ' const/volatile ' 'this'이 포인터는 생성자/소멸자에 적합 하지 않습니다|  
 |[컴파일러 오류 C2584](compiler-error-C2584.md)|'*클래스*': 직접 기본 '*base_class2*'; 액세스할 수 없는의 기본 이미 '*base_class1*'|  
 |[컴파일러 오류 C2585](compiler-error-C2585.md)|으로 명시적으로 변환 '*형식*' 모호 합니다.|  
-|[컴파일러 오류 C2586](compiler-error-C2586.md)|사용자 정의 변환 구문이 잘못되었습니다. 간접 참조가 잘못되었습니다.|  
+|[컴파일러 오류 C2586](compiler-error-C2586.md)|잘못 된 사용자 정의 변환 구문이: 간접 참조가 잘못 되었습니다|  
 |[컴파일러 오류 C2587](compiler-error-C2587.md)|'*식별자*': 기본 매개 변수로 잘못 된 지역 변수 사용|  
 |[컴파일러 오류 C2588](compiler-error-C2588.md)|':: ~*식별자*': 잘못 된 글로벌 소멸자/종료자|  
 |[컴파일러 오류 C2589](compiler-error-C2589.md)|'*식별자*': 오른쪽에 잘못 된 토큰 ':: '|  
@@ -193,5 +179,5 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C2595|'*식별자*' A WinRT 특성 유형은 sealed 여야|  
 |컴파일러 오류 C2596|'*식별자*' A WinRT 특성 필드에는 'public enum class', 'int', 'unsigned int', 'bool', 'platform:: type', 'platform:: string' 또는 ' Windows:: Foundation:: HResult' 수만 있습니다|  
 |[컴파일러 오류 C2597](compiler-error-C2597.md)|비정적 멤버에 대 한 잘못 된 참조 '*식별자*'|  
-|[컴파일러 오류 C2598](compiler-error-C2598.md)|링크 사양은 전역 범위에 있어야 합니다.|  
+|[컴파일러 오류 C2598](compiler-error-C2598.md)|링크 사양이 전역 범위에 있어야 합니다.|  
 |[컴파일러 오류 C2599](compiler-error-C2599.md)|'*식별자*': 관리 되 는/WinRT 열거형의 정방향 선언은 사용할 수 없습니다|  

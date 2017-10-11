@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 6eb80aa9b2aa3144d1025d7eedff25727693e494
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fc59984a3fb47d9dd00d479e771fd11f6bab242
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3037"></a>컴파일러 오류 C3037
 'var': 'reduction' 절의 변수는 바깥쪽 컨텍스트에서 shared여야 합니다.  
   
- 에 지정 된 변수는 [감소](../../parallel/openmp/reference/reduction.md) 절 컨텍스트의 각 스레드에 private 되지 않을 수 있습니다.  
+ [reduction](../../parallel/openmp/reference/reduction.md) 절에 지정된 변수는 컨텍스트의 각 스레드에 private일 수 없습니다.  
   
  다음 샘플에서는 C3037을 생성합니다.  
   

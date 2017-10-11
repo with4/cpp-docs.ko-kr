@@ -1,42 +1,45 @@
 ---
 title: "컴파일러 오류 C2530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2530"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2530
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2530
 ms.assetid: b790a312-48df-4a6a-9e27-be2c5f32f16c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C2530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9438937ad99e66d9e623e1e3703dc6496f8153a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 참조를 초기화해야 합니다.  
+---
+# <a name="compiler-error-c2530"></a>컴파일러 오류 C2530
+'identifier': 참조를 초기화 합니다  
   
- 참조가 선언되어 있지 않으면 다음 방법으로 선언할 때 초기화해야 합니다.  
+ 초기화 해야 대 한 참조를 선언할 때 이미 선언 되지 않은:  
   
--   [extern](../../cpp/using-extern-to-specify-linkage.md) 키워드를 사용하여 초기화  
+-   키워드와 함께 [extern](../../cpp/using-extern-to-specify-linkage.md)합니다.  
   
--   클래스, 구조체 또는 공용 구조체의 멤버로서 초기화\(생성자에서 초기화\)  
+-   클래스, 구조체 또는 공용 구조체의 멤버로 (및 생성자에서 초기화).  
   
--   함수 선언 또는 정의에 매개 변수로서 초기화  
+-   매개 변수로 함수 선언 또는 정의 합니다.  
   
--   함수의 반환 형식으로서 초기화  
+-   으로 함수의 반환 형식입니다.  
   
- 다음 샘플에서는 C2530 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2530 오류가 생성 됩니다.  
   
 ```  
 // C2530.cpp  

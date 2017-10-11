@@ -1,5 +1,5 @@
 ---
-title: "CFirePropNotifyEvent 클래스 | Microsoft 문서"
+title: "CFirePropNotifyEvent 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,25 +24,11 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1511a9e9ba287d12aade7c393887c6b5f8880b96
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1fb22263b877aaff3e30e56efff2a005bc024f2e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 클래스
@@ -64,12 +50,12 @@ class CFirePropNotifyEvent
 |이름|설명|  
 |----------|-----------------|  
 |[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(정적) 컨테이너의 싱크를 컨트롤 속성이 변경 되었음을 알립니다.|  
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(정적) 컨트롤 속성을 변경 하는 컨테이너의 싱크를 알립니다.|  
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(정적) 컨트롤 속성을 변경 하려고 하는 컨테이너의 싱크를에 알립니다.|  
   
-## <a name="remarks"></a>주의  
- `CFirePropNotifyEvent`에 컨트롤 속성 변경 되었거나 변경 되려고 하는 컨테이너의 싱크를 알려 주는 두 가지 방법이 있습니다.  
+## <a name="remarks"></a>설명  
+ `CFirePropNotifyEvent`에 컨트롤 속성이 변경 되거나 변경 되려고 하는 컨테이너의 싱크를 알려 주는 두 가지 방법이 있습니다.  
   
- 컨트롤을 구현 하는 클래스에서 파생 된 경우 `IPropertyNotifySink`, `CFirePropNotifyEvent` 메서드를 호출할 때 호출 됩니다 `FireOnRequestEdit` 또는 `FireOnChanged`합니다. Control 클래스에서 파생 되지 않은 경우 `IPropertyNotifySink`, 이러한 함수에 대 한 호출 반환 `S_OK`합니다.  
+ 컨트롤을 구현 하는 클래스에서 파생 된 경우 `IPropertyNotifySink`, `CFirePropNotifyEvent` 호출 하는 경우 메서드는 호출 `FireOnRequestEdit` 또는 `FireOnChanged`합니다. 컨트롤 클래스에서 파생 되지 않은 경우 `IPropertyNotifySink`, 이러한 함수에 대 한 호출은 반환 `S_OK`합니다.  
   
  컨트롤을 만드는 방법에 대 한 자세한 내용은 참조는 [ATL 자습서](../../atl/active-template-library-atl-tutorial.md)합니다.  
   
@@ -77,7 +63,7 @@ class CFirePropNotifyEvent
  **헤더:** atlctl.h  
   
 ##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
- 모든 알립니다 연결 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (개체의 모든 연결 지점)에 지정 된 개체 속성이 변경 되는 인터페이스입니다.  
+ 모두 알려 연결 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (개체의 모든 연결 지점)에 지정 된 개체 속성이 변경 하는 인터페이스입니다.  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -85,19 +71,19 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>매개 변수  
  *pUnk*  
- [in] 에 대 한 포인터는 **IUnknown** 알림을 보내는 개체입니다.  
+ [in] 에 대 한 포인터는 **IUnknown** 알림을 전송 하는 개체입니다.  
   
  *dispID*  
  [in] 변경 된 속성의 식별자입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 하나는 표준 `HRESULT` 값입니다.  
+ 표준 중 하나 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 안전 컨트롤 연결 포인트를 지원 하지 않는 경우에 호출 합니다.  
+### <a name="remarks"></a>설명  
+ 이 기능은 컨트롤 연결점을 지원 하지 않는 경우에 호출할 수 있습니다.  
   
 ##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
- 모든 알립니다 연결 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (개체의 모든 연결 지점)에 지정 된 개체 속성 변경 되려고 하는 인터페이스입니다.  
+ 모두 알려 연결 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (개체의 모든 연결 지점)에 지정 된 개체 속성 변경 되려고 하는 인터페이스입니다.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -105,16 +91,16 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>매개 변수  
  *pUnk*  
- [in] 에 대 한 포인터는 **IUnknown** 알림을 보내는 개체입니다.  
+ [in] 에 대 한 포인터는 **IUnknown** 알림을 전송 하는 개체입니다.  
   
  *dispID*  
  [in] 변경할 속성의 식별자입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 하나는 표준 `HRESULT` 값입니다.  
+ 표준 중 하나 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
- 이 함수는 안전 컨트롤 연결 포인트를 지원 하지 않는 경우에 호출 합니다.  
+### <a name="remarks"></a>설명  
+ 이 기능은 컨트롤 연결점을 지원 하지 않는 경우에 호출할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)

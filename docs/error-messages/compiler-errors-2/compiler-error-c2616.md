@@ -1,31 +1,34 @@
 ---
 title: "컴파일러 오류 C2616 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2616"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2616"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2616
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2616
 ms.assetid: 8d0c02d6-a0b0-4135-b10f-438d67da68c6
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2616
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 147bc5c9ca186bc88909aa347420ec84cdc4ac70
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'conversion': 비 lvalue 'type1'을 상수가 아닌 'type2' 로 암시적으로 변환할 수 없습니다.  
+---
+# <a name="compiler-error-c2616"></a>컴파일러 오류 C2616
+'conversion': lvalue가 아닌 'type1' 'type2'를 암시적으로 변환할 수 하는 const  
   
- 참조를 비 lvalue로부터 초기화할 수 없습니다.  
+ 대 한 참조는 lvalue가 아닌에서 초기화할 수 없습니다.  
   
- 이는 ANSI 규격\([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\)에서는 오류이고 Microsoft 확장\(**\/Ze**\)에서는 경고입니다.
+ 이것은 ANSI 규격 오류 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) 및 Microsoft 확장 경고 (**/Ze**).

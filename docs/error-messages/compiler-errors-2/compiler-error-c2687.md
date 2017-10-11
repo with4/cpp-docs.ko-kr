@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2687 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2687"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2687"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2687
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2687
 ms.assetid: 1d24b24a-cd0f-41cc-975c-b08dcfb7f402
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2687
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6e74167bcc9637d2d9f0c39d0d3d36f960db5efa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'type' : 예외 선언은 'void'일 수 없으며 불완전 형식 또는 불완전 형식에 대한 포인터 및 참조를 나타낼 수 없습니다.  
+---
+# <a name="compiler-error-c2687"></a>컴파일러 오류 C2687
+'type': 예외 선언은 'void' 수 없고는 불완전 한 형식 또는 포인터 또는 불완전 한 형식에 대 한 참조를 표시 합니다.  
   
- 예외 선언에 포함할 형식은 정의된 형식이어야 하고 void가 아니어야 합니다.  
+ 예외 선언의 일부로 형식에 대해 정의 되 고 void가 아니어야 이어야 합니다.  
   
- 다음 샘플에서는 C2687 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2687 오류가 생성 됩니다.  
   
 ```  
 // C2687.cpp  
@@ -40,7 +43,7 @@ int main() {
 }  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C2687b.cpp  

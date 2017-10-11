@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C3911 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3911"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3911"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3911
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3911
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4869cf6d5a1619aa692f3076de3e3c7d00bc7c16
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'event\_accessor\_method': 함수의 형식이 'signature'이어야 합니다.  
+---
+# <a name="compiler-error-c3911"></a>컴파일러 오류 C3911
+'event_accessor_method': 함수에는 형식 '서명'를 사용 해야 합니다.  
   
- 이벤트의 접근자 메서드를 올바르게 선언하지 않았습니다.  
+ 이벤트의 접근자 메서드를 제대로 선언 되지 않았습니다.  
   
- 자세한 내용은 [이벤트](../../windows/event-cpp-component-extensions.md)를 참조하십시오.  
+ 자세한 내용은 참조 [이벤트](../../windows/event-cpp-component-extensions.md)합니다.  
   
- 다음 샘플에서는 C3911 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3911 오류가 생성 됩니다.  
   
 ```  
 // C3911.cpp  

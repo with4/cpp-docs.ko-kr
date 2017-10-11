@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 05edbf62dfe8d5ed916ccc971b8ae9a286e1aeb8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8c1b4ac942c4b17785b57d6206cd2f5a8724bd99
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3056"></a>컴파일러 오류 C3056
 'symbol': 기호가 'threadprivate' 지시문과 같은 범위에 속하지 않습니다.  
   
- 사용 되는 기호는 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 절와 동일한 범위에 있어야 합니다.는 `threadprivate` 절.  
+ [threadprivate](../../parallel/openmp/reference/threadprivate.md) 절에서 사용되는 기호는 `threadprivate` 절과 동일한 범위에 있어야 합니다.  
   
  다음 샘플에서는 C3056을 생성합니다.  
   

@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3736 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3736"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3736"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3736
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3736
 ms.assetid: 579b773c-41e7-40ea-8382-2e3ce2667f4c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3736
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0c2d7f548a1795221a72d0ac7be01e8ed87fa6ce
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'event': 메서드이거나, 관리되는 이벤트의 경우 데이터 멤버여야 합니다.  
+---
+# <a name="compiler-error-c3736"></a>컴파일러 오류 C3736
+'event': 메서드여야 또는 관리 되는 이벤트의 경우 데이터 멤버  
   
- Native 및 COM 이벤트는 메서드여야 합니다. .NET 이벤트는 데이터 멤버도 가능합니다.  
+ 기본 모드와 COM 이벤트 메서드여야 합니다. .NET 이벤트 데이터 멤버를 수도 있습니다.  
   
- 다음 샘플에서는 C3736 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3736 오류가 생성 됩니다.  
   
 ```  
 // C3736.cpp  

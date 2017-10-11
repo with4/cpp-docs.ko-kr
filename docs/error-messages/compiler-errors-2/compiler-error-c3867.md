@@ -1,37 +1,40 @@
 ---
 title: "컴파일러 오류 C3867 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3867"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3867"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3867
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# 컴파일러 오류 C3867
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4f8e4612dc12274c689ec0d4e9406dea74c608f4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'func': 함수 호출에 인수 목록이 없습니다. '&func'을\(를\) 사용하여 멤버에 대한 포인터를 만드세요.  
+---
+# <a name="compiler-error-c3867"></a>컴파일러 오류 C3867
+'func': 함수 호출에 인수 목록이 없습니다. '&func'을(를) 사용하여 멤버에 대한 포인터를 만드세요.  
   
- 멤버 함수를 클래스 이름 및 address\-of 연산자로 한정하지 않고 멤버 함수의 이름을 사용하려고 했습니다.  
+ 멤버 함수를 클래스 이름 및 address-of 연산자로 한정하지 않고 멤버 함수의 이름을 사용하려고 했습니다.  
   
- 이 오류는 Visual C\+\+ 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성될 수도 있습니다. 멤버 포인터 규칙이 향상되었습니다.  Visual C\+\+ 2005 이전에 컴파일된 코드에서는 C3867 오류가 발생합니다.  
+ 이 오류는 Visual C++ 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성될 수도 있습니다. 멤버 포인터 규칙이 향상되었습니다. Visual C++ 2005 이전에 컴파일된 코드에서는 C3867 오류가 발생합니다.  
   
-## 예제  
- 잘못 제안된 해결 방법을 통해 컴파일러에서 C3867 오류가 발생할 수 있습니다.  가능하면 항상 최다 파생 클래스를 사용하세요.  
+## <a name="example"></a>예제  
+ 잘못 제안된 해결 방법을 통해 컴파일러에서 C3867 오류가 발생할 수 있습니다. 가능하면 항상 최다 파생 클래스를 사용하세요.  
   
  다음 샘플에서는 C3867 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   
@@ -53,7 +56,7 @@ void Derived::Bar() {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3867 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   
 ```  
@@ -84,7 +87,7 @@ int main() {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3867 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   
 ```  
@@ -102,7 +105,7 @@ int main() {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3867 오류가 발생하는 경우를 보여 줍니다.  
   
 ```  
@@ -125,7 +128,7 @@ public:
 };  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3867 오류가 발생하는 경우를 보여 줍니다.  
   
 ```  

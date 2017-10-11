@@ -1,37 +1,40 @@
 ---
 title: "컴파일러 오류 C3804 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3804"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3804"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3804
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# 컴파일러 오류 C3804
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06c9292c2da106c4a4eaeb6de07c923c973e4ce7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'property\_accessor': 속성에 대한 접근자 메서드는 모두 static이거나 모두 static이 아니어야 합니다.  
+---
+# <a name="compiler-error-c3804"></a>컴파일러 오류 C3804
+'property_accessor': 접근자 메서드에 속성 수행 해야 할 해서는 모두 static 이거나 모두 static  
   
- 특수한 속성을 정의할 때 접근자 함수는 정적이거나 인스턴스일 수 있지만 둘 다 포함할 수는 없습니다.  
+ 접근자 함수 정적 수 특수 속성을 정의할 때 또는 인스턴스를 하나만 있습니다.  
   
- 자세한 내용은 [property](../../windows/property-cpp-component-extensions.md)를 참조하십시오.  
+ 자세한 내용은 [property](../../windows/property-cpp-component-extensions.md) 를 참조하세요.  
   
-## 예제  
- 다음 샘플에서는 C3804 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3804 오류가 발생 합니다.  
   
 ```  
 // C3804.cpp  

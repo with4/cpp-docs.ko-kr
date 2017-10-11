@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3156 | Microsoft 문서"
+title: "컴파일러 오류 c 3156 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 170a76ba617396d716243e215d13c264f48cf5bf
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 793b143fa42e790610a086782c4bf99369965e1f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-error-c3156"></a>컴파일러 오류 C3156
+# <a name="compiler-error-c3156"></a>컴파일러 오류 c 3156
 'class': 관리되는 또는 WinRT 형식의 지역 정의를 사용할 수 없습니다.  
   
  함수에 관리되는 또는 WinRT 클래스, 구조체 또는 인터페이스의 정의 또는 선언을 포함할 수 없습니다.  

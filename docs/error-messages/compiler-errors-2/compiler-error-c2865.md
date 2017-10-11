@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C2865 | Microsoft 문서"
+title: "컴파일러 오류 C2865 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 3bb55d094e00400c57617857aa1ac29677f1b72a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5cbe54ebcae8753c0c5b6701ca839202ba7da533
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2865"></a>컴파일러 오류 C2865
 'function': handle_or_pointer에 대 한 잘못 된 비교  
   
- 에 대 한 참조를 비교할 수 [클래스 및 구조체](../../windows/classes-and-structs-cpp-component-extensions.md) 관리 되는 동일한 개체 (= =) 나 다른 개체를 참조 하는 경우 참조 같음에 대해서만 참조 형식 또는 (! =).  
+ 에 대 한 참조를 비교할 수 [클래스 및 구조체](../../windows/classes-and-structs-cpp-component-extensions.md) 관리 되는 동일한 개체 (= =) 또는 서로 다른 개체를 참조 하는지 참조 같음에 대 한 참조 형식 또는 (! =) 합니다.  
   
- 비교할 수 없습니다으로.NET 런타임에서 언제 든 지 관리 되는 개체를 이동할 수 있기 때문에 순서 지정에 대 한 테스트의 결과 변경 합니다.
+ 비교할 수 없으므로.NET 런타임에서 언제 든 지 관리 되는 개체를 이동할 수 있기 때문에 순서에 대 한 테스트의 결과 변경 합니다.

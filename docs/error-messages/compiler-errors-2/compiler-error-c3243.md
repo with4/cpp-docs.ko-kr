@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: bbd6363499e2c0eec0365b8e445b7d3a0f7e05f2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0539a411d6df5d9054a6530683b2809137190c4b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3243"></a>컴파일러 오류 C3243
 오버로드 함수가 'interface'에 의해 하나도 정의되지 않았습니다.  
   
- 하려고 [명시적으로 재정의](../../cpp/explicit-overrides-cpp.md) 지정된 된 인터페이스에 존재 하지 않는 멤버입니다.  
+ 지정된 인터페이스에 없는 멤버를 [명시적으로 재정의](../../cpp/explicit-overrides-cpp.md) 하려고 했습니다.  
   
  다음 샘플에서는 C3243을 생성합니다.  
   

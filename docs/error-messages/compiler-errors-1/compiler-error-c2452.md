@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2452 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2452"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2452"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2452
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2452
 ms.assetid: a4ec7642-6660-4c7a-9866-853d1cc67daf
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C2452
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06841629167a2567f33c1e731bc2b7593e58c118
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'type' : safe\_cast의 소스 형식이 잘못되었습니다.  
+---
+# <a name="compiler-error-c2452"></a>컴파일러 오류 C2452
+'type': safe_cast의 잘못 된 원본 유형  
   
- [safe\_cast](../../windows/safe-cast-cpp-component-extensions.md)의 소스 형식이 잘못되었습니다.  예를 들어, `safe_cast` 연산에서 모든 형식은 CLR 형식이어야 합니다.  
+ 소스 형식에 대 한 [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) 올바르지 않습니다.  예를 들어 모든 형식에는 `safe_cast` 작업에는 CLR 형식 이어야 합니다.  
   
- 다음 샘플에서는 C2452 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2452 오류가 생성 됩니다.  
   
 ```  
 // C2452.cpp  

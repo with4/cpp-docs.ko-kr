@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C2524 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2524"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2524"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2524
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2524
 ms.assetid: e71d17f5-2fc2-416b-8dbd-e9bed85eb33a
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C2524
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f0b80ac9029f530b68afdc379d7660bba1ff76cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'destructor' : 소멸자\/종료자에는 'void' 매개 변수 목록이 있어야 합니다.  
+---
+# <a name="compiler-error-c2524"></a>컴파일러 오류 C2524
+'소멸자': 소멸자/종료자에는 'void' 매개 변수 목록이 있어야 합니다.  
   
- 소멸자나 종료자에 [void](../../cpp/void-cpp.md)가 아닌 매개 변수 목록이 있습니다.  다른 매개 변수 형식은 사용할 수 없습니다.  
+ 소멸자 또는 종료자에 없는 매개 변수 목록이 [void](../../cpp/void-cpp.md)합니다. 다른 매개 변수 형식은 허용 되지 않습니다.  
   
-## 예제  
- 다음 코드를 실행하면 C2524가 발생합니다.  
+## <a name="example"></a>예제  
+ 다음 코드는 C2524 재현 합니다.  
   
 ```  
 // C2524.cpp  
@@ -42,8 +45,8 @@ class A {
 };  
 ```  
   
-## 예제  
- 다음 코드를 실행하면 C2524가 발생합니다.  
+## <a name="example"></a>예제  
+ 다음 코드는 C2524 재현 합니다.  
   
 ```  
 // C2524_b.cpp  

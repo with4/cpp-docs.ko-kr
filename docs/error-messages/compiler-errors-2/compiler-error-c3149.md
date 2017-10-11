@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3149 | Microsoft 문서"
+title: "컴파일러 오류 C3149 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5abf02a3210ca3d7bd858662e0c02d4f42d75d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3149"></a>컴파일러 오류 C3149
 'type': 최상위 'char' 없이 여기이 형식을 사용할 수 없습니다  
   
- 선언 올바르게 지정 되지 않았습니다.  
+ 선언이 올바르게 지정 하지 않았습니다.  
   
- 예를 들어 수 정의 전역 범위에서 CLR 형식을 하 고 정의의 일부로 형식의 변수를 만들려고 합니다. CLR 형식의 전역 변수 허용 되지 않기 때문에 컴파일러 c&3149;가 발생 합니다.  
+ 예를 들어 수 정의 전역 범위에서 CLR 형식을 하 고 정의의 일부로 형식의 변수를 만들려고 합니다. CLR 형식의 전역 변수는 허용 되지 않으므로 C3149 컴파일러에서 생성 됩니다.  
   
- 이 오류를 해결 하려면 함수 또는 형식 정의 내 CLR 형식의 변수를 선언 합니다.  
+ 이 오류를 해결 하려면 형식 또는 함수 정의 내부 CLR 형식의 변수를 선언 합니다.  
   
  다음 샘플에서는 C3149 오류가 생성 됩니다.  
   

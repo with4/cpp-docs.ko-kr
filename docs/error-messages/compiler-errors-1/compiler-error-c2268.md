@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 29a09917ab80eb536050885a3c2cd9984f82a59a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 38ac7b0aa76a16516652bfc1736826072ad473dd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2268"></a>컴파일러 오류 C2268
 'function'은 컴파일러에서 미리 정의한 라이브러리 도우미입니다. /GL 옵션을 지정하면 라이브러리 도우미가 지원되지 않습니다. /GL을 지정하지 않고 개체 파일 'file'을 컴파일하세요.  
   
- 소스 코드에 정의된 함수가 내부 컴파일러 함수와 이름이 같습니다. 없이 함수를 포함 하는 모듈을 컴파일합니다 [/GL](../../build/reference/gl-whole-program-optimization.md)합니다.  
+ 소스 코드에 정의된 함수가 내부 컴파일러 함수와 이름이 같습니다. [/GL](../../build/reference/gl-whole-program-optimization.md)없이 함수를 포함하는 모듈을 컴파일합니다.  
   
  다음 샘플에서는 C2268을 생성합니다.  
   

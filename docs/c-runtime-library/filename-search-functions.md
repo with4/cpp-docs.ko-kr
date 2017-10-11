@@ -30,26 +30,11 @@ caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c802f99eab05ea59971c69c53f999f1b8f12240f
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="filename-search-functions"></a>파일 이름 검색 함수
@@ -108,17 +93,17 @@ ms.lasthandoff: 04/04/2017
  `_A_SYSTEM`  
  시스템 파일입니다. **/A** 또는 **/A:S** 옵션을 사용하지 않는 한 일반적으로 **DIR** 명령으로 표시되지 않습니다. 값: 0x04  
   
- `_findnext`는 `_findfirst`에 대한 이전 호출에 지정된 `filespec` 인수와 일치하는 다음 이름(있는 경우)을 찾습니다. `fileinfo` 인수는 `_findfirst`에 대한 이전 호출에서 초기화되는 구조를 가리켜야 합니다. 일치하는 항목이 있으면 앞에서 설명한 대로 `fileinfo` 구조 내용이 변경됩니다. 일치하는 항목이 없으면 변경되지 않습니다. `_findclose`는 지정된 검색 핸들을 닫고 `_findfirst` 및 `_findnext` 모두에 연결된 모든 리소스를 해제합니다. `_findfirst` 또는 `_findnext` 에서 반환된 핸들을 먼저 `_findclose`에 전달해야만 전달되는 경로를 형성하는 디렉터리에서 삭제와 같은 수정 작업을 수행할 수 있습니다.  
+ `_findnext` 는 `filespec` 에 대한 이전 호출에 지정된 `_findfirst`인수와 일치하는 다음 이름(있는 경우)을 찾습니다. `fileinfo` 인수는 `_findfirst`에 대한 이전 호출에서 초기화되는 구조를 가리켜야 합니다. 일치하는 항목이 있으면 앞에서 설명한 대로 `fileinfo` 구조 내용이 변경됩니다. 일치하는 항목이 없으면 변경되지 않습니다. `_findclose` 는 지정된 검색 핸들을 닫고 `_findfirst` 및 `_findnext`모두에 연결된 모든 리소스를 해제합니다. `_findfirst` 또는 `_findnext` 에서 반환된 핸들을 먼저 `_findclose`에 전달해야만 전달되는 경로를 형성하는 디렉터리에서 삭제와 같은 수정 작업을 수행할 수 있습니다.  
   
  `_find` 함수를 중첩할 수 있습니다. 예를 들어 `_findfirst` 또는 `_findnext` 에 대한 호출에서 하위 디렉터리인 파일을 찾는 경우 `_findfirst` 또는 `_findnext`에 대한 다른 호출로 새 검색을 시작할 수 있습니다.  
   
- `_wfindfirst` 및 `_wfindnext`는 `_findfirst` 및 `_findnext`의 와이드 문자 버전입니다. 와이드 문자 버전의 구조 인수는 IO.h 및 Wchar.h에 정의된 `_wfinddata_t` 데이터 형식입니다. 이 데이터 형식의 필드는 `_finddata_t` 데이터 형식의 필드와 동일합니다. 단, `_wfinddata_t` 에서 이름 필드는 `wchar_t` 형식이 아니라 `char`형식입니다. 그 외에 `_wfindfirst` 및 `_wfindnext` 는 `_findfirst` 및 `_findnext`와 동일하게 작동합니다.  
+ `_wfindfirst` 및 `_wfindnext` 는 `_findfirst` 및 `_findnext`의 와이드 문자 버전입니다. 와이드 문자 버전의 구조 인수는 IO.h 및 Wchar.h에 정의된 `_wfinddata_t` 데이터 형식입니다. 이 데이터 형식의 필드는 `_finddata_t` 데이터 형식의 필드와 동일합니다. 단, `_wfinddata_t` 에서 이름 필드는 `wchar_t` 형식이 아니라 `char`형식입니다. 그 외에 `_wfindfirst` 및 `_wfindnext` 는 `_findfirst` 및 `_findnext`와 동일하게 작동합니다.  
   
- `_findfirst` 및 `_findnext`는 64비트 시간 형식을 사용합니다. 이전 32비트 시간 형식을 사용해야 하는 경우 `_USE_32BIT_TIME_T`를 정의할 수 있습니다. 이러한 함수 중 이름에 `32` 접미사가 있는 버전은 32비트 시간 형식을 사용하고 `64` 접미사가 있는 버전은 64비트 시간 형식을 사용합니다.  
+ `_findfirst` 및 `_findnext` 는 64비트 시간 형식을 사용합니다. 이전 32비트 시간 형식을 사용해야 하는 경우 `_USE_32BIT_TIME_T`를 정의할 수 있습니다. 이러한 함수 중 이름에 `32` 접미사가 있는 버전은 32비트 시간 형식을 사용하고 `64` 접미사가 있는 버전은 64비트 시간 형식을 사용합니다.  
   
  `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`및 `_wfindnext32i64` 함수도 64비트 파일 길이를 사용 및 반환한다는 점만 제외하고 이러한 함수의 32비트 형식 버전과 동일하게 작동합니다. `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32` 및 `_wfindnext64i32` 함수는 64비트 시간 형식을 사용하지만 32비트 파일 길이를 사용합니다. 이러한 함수는 시간과 파일 크기에 대한 필드의 형식이 다른 `_finddata_t` 형식의 적절한 변경을 사용합니다.  
   
- `_finddata_t`는 실제로 `_finddata64i32_t`(또는 `_USE_32BIT_TIME_T`가 정의된 경우 `_finddata32_t`)로 계산되는 매크로입니다. 다음 표에서는 `_finddata_t`의 변형을 요약하여 보여 줍니다.  
+ `_finddata_t` 는 실제로 `_finddata64i32_t` (또는 `_finddata32_t` 가 정의된 경우 `_USE_32BIT_TIME_T` )로 계산되는 매크로입니다. 다음 표에서는 `_finddata_t`의 변형을 요약하여 보여 줍니다.  
   
 |구조체|시간 형식|파일 크기 형식|  
 |---------------|---------------|--------------------|  

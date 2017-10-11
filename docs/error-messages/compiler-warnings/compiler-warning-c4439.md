@@ -1,37 +1,40 @@
 ---
 title: "컴파일러 경고 C4439 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4439"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4439"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4439
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 경고 C4439
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eec228922a6f5796587243fe2d1f2c6cc1cf6b1c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function' : 시그니처에 관리되는 형식이 있는 함수 정의에는 \_\_clrcall 호출 규칙이 있어야 합니다.  
+---
+# <a name="compiler-warning-c4439"></a>컴파일러 경고 C4439
+'function': 서명에 관리 되는 형식과 함수 정의는 __clrcall 호출 규칙이 있어야 합니다.  
   
- 컴파일러에서 암시적으로 호출 규칙을 [\_\_clrcall](../../cpp/clrcall.md)로 대체했습니다.  이 경고를 해결하려면 `__cdecl` 또는 `__stdcall` 호출 규칙을 제거하십시오.  
+ 컴파일러는 암시적으로 호출 규칙을 대체 [__clrcall](../../cpp/clrcall.md)합니다. 이 경고를 해결 하려면 제거의 `__cdecl` 또는 `__stdcall` 호출 규칙입니다.  
   
- C4439는 항상 오류로서 발생합니다.  `#pragma warning` 또는 **\/wd**를 사용하여 이 경고를 해제할 수 있습니다. 자세한 내용은 [경고](../../preprocessor/warning.md) 또는 [\/w, \/Wn, \/WX, \/Wall, \/wln, \/wdn, \/wen, \/won\(경고 수준\)](../../build/reference/compiler-option-warning-level.md)을 참조하십시오.  
+ C4439은 항상 오류로 실행 됩니다. 와 함께이 경고를 해제할 수 있습니다는 `#pragma warning` 또는 **/wd**; 참조 [경고](../../preprocessor/warning.md) 또는 [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, / we, /wo /Wv, /WX (경고 수준)](../../build/reference/compiler-option-warning-level.md)자세한 정보에 대 한 합니다.  
   
-## 예제  
- 다음 샘플에서는 C4439 경고가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 c4439 경고가 발생 합니다.  
   
 ```  
 // C4439.cpp  

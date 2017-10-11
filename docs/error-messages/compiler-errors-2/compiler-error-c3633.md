@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3633 | Microsoft 문서"
+title: "컴파일러 오류 C3633 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 76b98ae31e8d8416360415fd5989975533d6fb66
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 982075cdaa72ddd5b1a4fdafdeaaf433b27bcf77
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3633"></a>컴파일러 오류 C3633
-관리 되는 'type'의 구성원으로 'member'를 정의할 수 없습니다.  
+'member' 관리 되는 'type'의 멤버로 정의할 수 없습니다.  
   
-CLR 참조 클래스 데이터 멤버는 비-포드 c + + 형식이 될 수 없습니다.  POD 네이티브 형식은 CLR 형식에만 인스턴스화할 수 있습니다.  예를 들어 POD 형식과 복사 생성자 또는 대입 연산자를 포함할 수 없습니다.  
+CLR 참조 클래스 데이터 멤버는 비-POD c + + 형식이 될 수 없습니다.  POD 네이티브 형식은 CLR 형식에만 인스턴스화할 수 있습니다.  예를 들어 복사 생성자 또는 대입 연산자는 POD 형식을 포함할 수 없습니다.  
   
 ## <a name="example"></a>예제  
 다음 샘플에서는 C3633 오류가 발생 합니다.  

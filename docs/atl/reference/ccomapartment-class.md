@@ -1,5 +1,5 @@
 ---
-title: "CComApartment 클래스 | Microsoft 문서"
+title: "CComApartment 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,29 +29,15 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 9359e2ab8c4a84ab66441e3eb8cfd39520fd4e8d
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: beb2052a2dc7a8efbf6820c51dc2ff7a1f227795
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomapartment-class"></a>CComApartment 클래스
-이 클래스는 아파트 스레드 풀링 EXE 모듈에서 관리 하기 위한 지원을 제공 합니다.  
+이 클래스는 아파트 호수 스레드 풀링 EXE 모듈에서 관리 하기 위한 지원을 제공 합니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -87,7 +73,7 @@ class CComApartment
 |[CComApartment::m_hThread](#m_hthread)|스레드 핸들을 포함 합니다.|  
 |[CComApartment::m_nLockCnt](#m_nlockcnt)|스레드의 현재 잠금 수를 포함합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CComApartment`사용 하는 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) 아파트 스레드 풀링 EXE 모듈에서 관리할 수 있습니다. `CComApartment`증가 및 감소는 잠금에 대 한 메서드는 스레드에서 계산을 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -103,7 +89,7 @@ DWORD Apartment();
 ### <a name="return-value"></a>반환 값  
  항상 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자동으로 설정 하는 동안 [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init)합니다.  
   
 ##  <a name="ccomapartment"></a>CComApartment::CComApartment  
@@ -113,7 +99,7 @@ DWORD Apartment();
 CComApartment();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  초기화는 `CComApartment` 데이터 멤버 [m_nLockCnt](#m_nlockcnt) 및 [m_hThread](#m_hthread)합니다.  
   
 ##  <a name="getlockcount"></a>CComApartment::GetLockCount  
@@ -134,12 +120,12 @@ LONG Lock();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 진단에 유용 하거나 테스트 될 수 있는 값입니다.  
+ 진단에 대 한 유용한 또는 테스트 수 있는 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  에 의해 호출 [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)합니다.  
   
- 스레드에서 잠금 수 통계 용도로 사용 됩니다.  
+ 통계적 인 목적의 스레드에서 잠금 수가 사용 됩니다.  
   
 ##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
  스레드 식별자를 포함합니다.  
@@ -170,12 +156,12 @@ LONG Unlock();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 진단에 유용 하거나 테스트 될 수 있는 값입니다.  
+ 진단에 대 한 유용한 또는 테스트 수 있는 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  에 의해 호출 [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock)합니다.  
   
- 스레드에서 잠금 수 통계 용도로 사용 됩니다.  
+ 통계적 인 목적의 스레드에서 잠금 수가 사용 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)

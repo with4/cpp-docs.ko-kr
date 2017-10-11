@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3739 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3739"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3739"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3739
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3739
 ms.assetid: acffe894-08b8-4bf2-9249-9501e6e2bad3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3739
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3fa62f908f152e127669d1cd935fafdb75d413f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'class': event\_receiver의 'layout\_dependent' 매개 변수가 true인 경우에만 지원되는 구문입니다.  
+---
+# <a name="compiler-error-c3739"></a>컴파일러 오류 C3739
+'class': event_receiver의 'layout_dependent' 매개 변수 참인 경우에 구문을 사용할  
   
- 이벤트의 전체 인터페이스를 후크하려고 했지만 [event\_receiver](../../windows/event-receiver.md) 특성의 `layout_dependent`가 true가 아닙니다. 한 번에 하나의 이벤트만 후크해야 합니다.  
+ 전체 이벤트 인터페이스를 연결 하려고 하지만 `layout_dependent` 에 [event_receiver](../../windows/event-receiver.md) 특성이 true; 한 번에 하나의 이벤트를 연결 해야 합니다.  
   
- 다음 샘플에서는 C3739 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3739 오류가 생성 됩니다.  
   
 ```  
 // C3739.cpp  

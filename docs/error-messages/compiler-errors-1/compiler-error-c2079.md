@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C2079 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2079"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2079"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2079
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2079
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 236e40ed865230416ddde9511420c1cf333d2687
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'identifier'은\(는\) 정의되지 않은 클래스\/구조체\/공용 구조체 'name'을\(를\) 사용합니다.  
+---
+# <a name="compiler-error-c2079"></a>컴파일러 오류 C2079
+'identifier' 정의 되지 않은 클래스/구조체/공용 'name'를 사용합니다.  
   
- 지정한 식별자는 정의되지 않은 클래스, 구조체 또는 공용 구조체입니다.  
+ 지정 된 식별자는 정의 되지 않은 클래스, 구조체 또는 공용 구조체는.  
   
- 이 오류는 익명 공용 구조체를 초기화하는 경우에 발생할 수 있습니다.  
+ 이 오류는 익명 공용 구조체를 초기화 하 여 발생할 수 있습니다.  
   
- 다음 샘플에서는 C2079 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2079 오류가 생성 됩니다.  
   
 ```  
 // C2079.cpp  
@@ -41,7 +44,7 @@ int main() {
 }  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C2079b.cpp  
@@ -52,7 +55,7 @@ int main( ) {
 }  
 ```  
   
- C2079는 해당 전달 선언이 범위에만 있는 형식의 스택에 개체를 선언하려는 경우에도 발생할 수 있습니다.  
+ C2079 인 정방향 선언에만 범위에에서가 type 스택에서 개체를 선언 하려고 하는 경우에 발생할 수 있습니다.  
   
 ```  
 // C2079c.cpp  
@@ -65,7 +68,7 @@ class B {
 class A {};  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C2079d.cpp  

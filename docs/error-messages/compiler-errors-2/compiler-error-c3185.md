@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3185 | Microsoft 문서"
+title: "컴파일러 오류 C3185 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 8772b939def79269dd46375c1e8db5d5dacc5f74
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 10b25fa08693e4fc6c4e495c84944d79ab6e73ae
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3185"></a>컴파일러 오류 C3185
 'typeid' : 관리되는 형식 또는 WinRT 형식 'type'에 사용되었습니다. 대신 'operator'를 사용하세요.  
   
- 적용할 수 없습니다는 [typeid](../../cpp/typeid-operator.md) 를 관리 되는 연산자 또는 WinRT 이때 입력 하 고 사용 하 여 [typeid](../../windows/typeid-cpp-component-extensions.md) 대신 합니다.  
+ 적용할 수 없습니다는 [typeid](../../cpp/typeid-operator.md) 연산자를 관리 되는 또는 WinRT 형식 사용 [typeid](../../windows/typeid-cpp-component-extensions.md) 대신 합니다.  
   
  다음 샘플에서는 C3185 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   

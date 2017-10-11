@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2993 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2993"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2993"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2993
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2993
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6306b2c3c632d25ee6b37a025516f759cc126a6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 비형식 템플릿 매개 변수 'parameter'과\(와\) 맞지 않는 형식입니다.  
+---
+# <a name="compiler-error-c2993"></a>컴파일러 오류 C2993
+'identifier': 비형식 템플릿 매개 변수 'parameter'에 대 한 형식이 잘못 되었습니다.  
   
- 템플릿을 구조체 또는 공용 구조체 인수와 함께 선언할 수 없습니다.  포인터를 사용하여 구조체 및 공용 구조체를 템플릿 매개 변수로서 전달하십시오.  
+ 구조체 또는 공용 구조체 인수가 있는 템플릿을 선언할 수 없습니다. 포인터를 사용 하 여 구조체 및 공용 구조체를 템플릿 매개 변수로 전달 합니다.  
   
- 다음 샘플에서는 C2993 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2993 오류가 생성 됩니다.  
   
 ```  
 // C2993.cpp  
@@ -45,9 +48,9 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};  
 ```  
   
- Visual Studio .NET 2003에서는 컴파일러 규칙에 따라 이제 부동 소수점 비형식 템플릿 매개 변수를 사용할 수 없기 때문에 이 오류가 발생할 수도 있습니다.  C\+\+ 표준에서는 부동 소수점 비형식 템플릿 매개 변수를 허용하지 않습니다.  
+ 이 오류는 Visual Studio.NET 2003 컴파일러 규칙 작업의 결과로 생성 됩니다: 부동 소수점 비형식 템플릿 매개 변수를 더 이상 허용 합니다. C + + 표준 부동 소수점 비형식 템플릿 매개 변수 허용 하지 않습니다.  
   
- 함수 템플릿일 경우에는 함수 인수를 사용하여 부동 소수점 비형식 템플릿 매개 변수를 전달하십시오. 이렇게 하면 Visual Studio .NET 2003과 Visual Studio .NET 버전의 Visual C\+\+ 모두에서 올바른 코드가 됩니다.  클래스 템플릿일 경우에는 이 문제를 쉽게 해결할 수 있는 방법이 없습니다.  
+ 함수 템플릿이 면 부동 전달에 대 한 함수 인수를 사용 하 여 (이 코드는 Visual c + +의 Visual Studio.NET 2003 및 Visual Studio.NET 버전에서 사용할 수 있습니다) 비형식 템플릿 매개 변수를 가리킵니다. 클래스 템플릿인지 경우 쉽게 해결 방법이 없습니다.  
   
 ```  
 // C2993b.cpp  

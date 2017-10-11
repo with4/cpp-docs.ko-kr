@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2034 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2034"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2034"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2034
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2034
 ms.assetid: 953d70fa-bde9-4ce6-a55d-741e7bc63ff4
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2034
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: df3d2310a5f066fdb937900abe545c16f5526508
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'identifier' : 비트 필드의 형식이 비트 수에 비해 너무 작습니다.  
+---
+# <a name="compiler-error-c2034"></a>컴파일러 오류 C2034
+'identifier': 비트 수에 비해 너무 작음을 비트 필드의 유형  
   
- 비트 필드 선언의 비트 수가 기본 형식의 크기를 초과합니다.  
+ 비트 필드 선언에는 비트 수는 기본 형식의 크기를 초과합니다.  
   
- 다음 샘플에서는 C2034 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2034 오류가 생성 됩니다.  
   
 ```  
 // C2034.cpp  
@@ -37,7 +40,7 @@ struct A {
 };  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C2034b.cpp  

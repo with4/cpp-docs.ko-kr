@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3275 | Microsoft 문서"
+title: "컴파일러 오류 C3275 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 3d0563ea2fc9e444035ba2b1764e87fccf85e81e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: daa657ed14fc5e548babd2cec92867fb3c024a06
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3275"></a>컴파일러 오류 C3275
@@ -46,5 +31,5 @@ ms.lasthandoff: 02/24/2017
   
 관리 코드를 사용하고 두 개 이상의 열거형에 같은 이름의 식별자가 있는 경우 식별자에 대한 참조를 명시적으로 한정해야 합니다.  
   
-C3275는 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
+C3275 오류는 사용 되지 않는 컴파일러 옵션을 사용 하 여 연결할 수만 **/clr:oldSyntax**합니다.  
 

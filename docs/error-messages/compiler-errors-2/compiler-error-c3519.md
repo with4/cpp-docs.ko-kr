@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C3519 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3519"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3519"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3519
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3519
 ms.assetid: ca24b2bc-7e90-4448-ae84-3fedddf9bca7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3519
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c655c8ba0513bcf25d5bc9666d65352a7f587374
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'invalid\_param' : embedded\_idl 특성에 대한 매개 변수가 잘못되었습니다.  
+---
+# <a name="compiler-error-c3519"></a>컴파일러 오류 C3519
+'invalid_param': embedded_idl 특성에 잘못 된 매개 변수  
   
- [\#import](../../preprocessor/hash-import-directive-cpp.md)의 `embedded_idl` 특성에 매개 변수를 전달했지만 컴파일러에서 이 매개 변수를 인식하지 못했습니다.  
+ 에 전달 된 매개 변수는 `embedded_idl` 특성 [#import](../../preprocessor/hash-import-directive-cpp.md), 하지만 컴파일러가 매개 변수를 인식 하지 않았습니다.  
   
- `embedded_idl`에 사용할 수 있는 매개 변수는 `emitidl`과 `no_emitidl`뿐입니다.  
+ 에 허용 되는 유일한 매개 변수 `embedded_idl` 는 `emitidl` 및 `no_emitidl`합니다.  
   
- 다음 샘플에서는 C3519 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3519 오류가 생성 됩니다.  
   
 ```  
 // C3519.cpp  

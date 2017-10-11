@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C2133 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2133"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2133"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2133
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2133
 ms.assetid: 8942f9e8-9818-468f-97db-09dbd124fcae
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C2133
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c04452ec947adefa6b30928dc75de4edffc361fc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'identifier' : 알 수 없는 크기입니다.  
+---
+# <a name="compiler-error-c2133"></a>컴파일러 오류 C2133
+'identifier': 알 수 없는 크기  
   
- 크기를 지정하지 않은 배열은 클래스, 구조체, 공용 구조체 또는 열거형의 멤버로 선언됩니다.  크기를 지정하지 않은 멤버 배열에 \/Za\(ANSI C\) 옵션을 사용할 수 없습니다.  
+ 크기가 지정 되지 않은 배열이 클래스, 구조체, 공용 구조체 또는 열거형의 멤버로 선언 합니다. /Za (ANSI C) 옵션에는 크기가 지정 되지 않은 멤버 배열 허용 하지 않습니다.  
   
- 다음 샘플에서는 C2133 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2133 오류가 생성 됩니다.  
   
 ```  
 // C2133.cpp  
@@ -38,7 +41,7 @@ struct X {
 };  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C2133b.cpp  

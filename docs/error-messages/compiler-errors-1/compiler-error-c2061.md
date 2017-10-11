@@ -1,38 +1,41 @@
 ---
 title: "컴파일러 오류 C2061 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2061"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2061"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2061
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 컴파일러 오류 C2061
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 82518c78b49418c10cc0cd07ae59e58336af08f3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-구문 오류 : 식별자 'identifier'  
+---
+# <a name="compiler-error-c2061"></a>컴파일러 오류 C2061
+구문 오류: 'identifier' 식별자  
   
- 컴파일러가 예기치 못했던 식별자를 발견했습니다.  `identifier`를 사용하기 전에 이를 선언했는지 확인하십시오.  
+ 컴파일러가 예기치 못했던 식별자를 찾았습니다. 다음 사항을 확인 `identifier` 사용 하기 전에 선언 합니다.  
   
- 이니셜라이저를 괄호로 묶어야 할 수도 있습니다.  이 문제를 방지하려면 선언자를 괄호로 묶거나 `typedef`로 만드십시오.  
+ 이니셜라이저는 괄호로 묶을 수 있습니다. 이 문제를 방지 하려면 괄호로 묶거나 하거나 쉽게는 `typedef`합니다.  
   
- 컴파일러에서 식을 클래스 템플릿 인수로 인식할 때에도 이 오류가 발생할 수 있습니다. 이 경우 [typename](../../cpp/typename.md)을 사용하여 해당 식이 형식이라는 것을 나타내십시오.  
+ 컴파일러는 클래스 템플릿 인수로; 식을 검색 하는 경우이 오류가 발생할 수 또한 사용 하 여 [typename](../../cpp/typename.md) 형식이 컴파일러에 지시 합니다.  
   
- 다음 샘플에서는 C2061 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2061 오류가 생성 됩니다.  
   
 ```  
 // C2061.cpp  
@@ -43,7 +46,7 @@ template < A a >   // C2061
 class c{};  
 ```  
   
- C2061은 인스턴스 이름을 [typeid](../../windows/typeid-cpp-component-extensions.md)에 전달하는 경우 발생할 수 있습니다.  
+ C2061 인스턴스 이름을 전달 하는 경우 발생할 수 있습니다 [typeid](../../windows/typeid-cpp-component-extensions.md):  
   
 ```  
 // C2061b.cpp  

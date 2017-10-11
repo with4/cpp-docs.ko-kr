@@ -85,32 +85,18 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 6ef55aa655692e6ecbd1550bb1ace2eca01bdbad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>컴파일러 오류 C2900 C2999 ~
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   
@@ -140,8 +126,8 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2921](compiler-error-c2921.md)|재정의: '*형식*': 클래스 템플릿/제네릭 다시 선언 되 '*선언*'|  
 |컴파일러 오류 C2922|'*인터페이스*': WinRT 인터페이스는 정적 멤버를 포함할 수 없습니다|  
 |[컴파일러 오류 C2923](compiler-error-c2923.md)|'*형식*': '*식별자*'is 매개 변수에 대해 유효한 템플릿/제네릭 형식 인수'*매개 변수*'|  
-|컴파일러 오류 C2924|__declspec(interrupt) 루틴 인수가 R2에 없습니다.|  
-|컴파일러 오류 C2925|__declspec(interrupt) 루틴은 부동 소수점을 사용할 수 없습니다.|  
+|컴파일러 오류 C2924|__declspec (interrupt) 루틴 인수가 r 2에 없습니다|  
+|컴파일러 오류 C2925|__declspec (interrupt) 루틴 부동 소수점을 사용할 수 없습니다.|  
 |컴파일러 오류 C2926|'*식별자*':이 구조체는 공용 구조체 내의 익명 구조체의 멤버는 기본 멤버 이니셜라이저 허용 되지 않습니다.|  
 |[컴파일러 오류 C2927](compiler-error-c2927.md)|'*식별자*': 하나 이상의 인수가 있는 함수 템플릿을 호출 해야|  
 |[컴파일러 오류 C2928](compiler-error-c2928.md)|명시적 인스턴스화. '*식별자*'없는 함수 또는 템플릿 클래스의 정적 데이터 멤버'*클래스*'|  
@@ -165,17 +151,17 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2946](compiler-error-c2946.md)|명시적 인스턴스화. '*형식*' 템플릿-클래스 특수화가 아닙니다|  
 |[컴파일러 오류 C2947](compiler-error-c2947.md)|필요한 데 ' >' 템플릿 인수가 종료를 찾을 '*토큰*'|  
 |[컴파일러 오류 C2948](compiler-error-c2948.md)|명시적 인스턴스화. 저장소 클래스 지정자 '*지정자*' 특수화에 사용할 수 없습니다|  
-|컴파일러 오류 C2949|thread_local은 /kernel에서 지원되지 않습니다.|  
+|컴파일러 오류 C2949|thread_local은 /kernel에서 지원 되지 않습니다.|  
 |컴파일러 오류 C2950|사용되지 않습니다.|  
 |[컴파일러 오류 C2951](compiler-error-c2951.md)|템플릿/제네릭 선언은 전역, 네임 스페이스 에서만 허용 됩니다 또는 클래스 범위|  
-|[컴파일러 오류 C2952](compiler-error-c2952.md)|'*선언을*': 템플릿/제네릭 선언 템플릿/제네릭 매개 변수 목록이 없습니다.|  
+|[컴파일러 오류 C2952](compiler-error-c2952.md)|'*선언*': 템플릿/제네릭 선언 템플릿/제네릭 매개 변수 목록이 없습니다.|  
 |[컴파일러 오류 C2953](compiler-error-c2953.md)|'*형식*': 클래스 템플릿이 이미 정의|  
-|컴파일러 오류 C2954|명령어 인수가 범위를 벗어났습니다.|  
+|컴파일러 오류 C2954|명령어 인수가 범위에 있지 않은|  
 |[컴파일러 오류 C2955](compiler-error-c2955.md)|'*형식*': 클래스 템플릿/제네릭 사용 하려면 템플릿/제네릭 인수 목록이 있어야|  
 |컴파일러 오류 C2956|크기의 할당 해제 함수 'operator delete (void *, size_t)'이 배치 할당 해제 함수로 선택 합니다.|  
 |[컴파일러 오류 C2957](compiler-error-c2957.md)|'*토큰*': 왼쪽 구분 기호가 잘못 되었습니다: 필요 합니다. ' <'|  
 |[컴파일러 오류 C2958](compiler-error-c2958.md)|왼쪽 *구분 기호* 에서 찾은 '*파일*(*line_number*)'가 제대로 일치 하지 않는|  
-|[컴파일러 오류 C2959](compiler-error-c2959.md)|제네릭 클래스 또는 함수는 템플릿의 멤버가 될 수 없습니다.|  
+|[컴파일러 오류 C2959](compiler-error-c2959.md)|제네릭 클래스 또는 함수는 서식 파일의 구성원이 아닐 수 있습니다.|  
 |컴파일러 오류 C2960|사용되지 않습니다.|  
 |컴파일러 오류 C2961|'*함수*': 명시적 인스턴스화가 일치 하지 않는 이전 명시적 인스턴스화에서 지정 하지 않은 '*인수*'|  
 |[컴파일러 오류 C2962](compiler-error-c2962.md)|구문 오류: '*토큰*': 끝나야 템플릿-클래스 멤버 함수 정의가 '}'|  
@@ -196,7 +182,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2977](compiler-error-c2977.md)|'*형식*': 템플릿/제네릭 인수가 너무 많습니다.|  
 |[컴파일러 오류 C2978](compiler-error-c2978.md)|구문 오류: 예상 '*keyword1*'또는'*keyword2*';의 형식이'*형식*'; 형식이 아닌 제네릭의 매개 변수를 사용할 수 없습니다|  
 |[컴파일러 오류 C2979](compiler-error-c2979.md)|제네릭에서는 명시적 특수화가 지원되지 않습니다.|  
-|컴파일러 오류 C2980|C++ 예외 처리는 /kernel에서 지원되지 않습니다.|  
+|컴파일러 오류 C2980|C + + 예외 처리는 /kernel에서 지원 되지 않습니다.|  
 |컴파일러 오류 C2981|동적 형식은 '*키워드*' /kernel에서 지원 되지 않습니다|  
 |컴파일러 오류 C2982|'*선언*': 사용 되는 다른 code_seg: 되었습니다 '*identifier1*'지금'*identifier2*'|  
 |컴파일러 오류 C2983|'*선언*': 모든 선언에는 동일한 code_seg 같아야 합니다.|  
@@ -204,7 +190,7 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C2985|'*인수*': code_seg 인수는 텍스트 섹션 이어야 합니다.|  
 |컴파일러 오류 C2986|'*식별자*': code_seg 클래스 또는 함수에만 적용 될 수 있습니다|  
 |컴파일러 오류 C2987|선언 모두 __declspec를 사용할 수 없습니다 (code_seg ('*식별자*'))와 __declspec (code_seg ('*값*'))|  
-|[컴파일러 오류 C2988](compiler-error-c2988.md)|템플릿 선언/정의를 인식할 수 없습니다.|  
+|[컴파일러 오류 C2988](compiler-error-c2988.md)|인식할 수 없는 템플릿 선언/정의|  
 |[컴파일러 오류 C2989](compiler-error-c2989.md)|'*클래스*': 클래스 템플릿/제네릭 비 클래스 템플릿/제네릭으로 이미 선언 되었습니다|  
 |[컴파일러 오류 C2990](compiler-error-c2990.md)|'*클래스*': 비 클래스 템플릿/제네릭 클래스 템플릿/제네릭으로 이미 선언 되었습니다|  
 |[컴파일러 오류 C2991](compiler-error-c2991.md)|템플릿/제네릭 매개 변수 재정의 '*매개 변수*'|  

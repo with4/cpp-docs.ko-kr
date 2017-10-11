@@ -19,26 +19,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 8eb7283942a8a89fc3322983c41c68082b6c5cee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c43ddf0e336d9964d08939bb7c1dd145caf6c848
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4957"></a>컴파일러 경고 C4957
@@ -46,11 +31,11 @@ ms.lasthandoff: 04/12/2017
   
  캐스트로 인해 확인할 수 없는 이미지가 발생합니다.  
   
- 일부 캐스트는 안전합니다(예: 사용자 정의 변환을 트리거하는 `static_cast` 및 `const_cast`). A [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) 안정형 코드를 생성 하도록 보장 됩니다.  
+ 일부 캐스트는 안전합니다(예: 사용자 정의 변환을 트리거하는 `static_cast` 및 `const_cast`). [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) 는 확인할 수 있는 코드를 생성합니다.  
   
  자세한 내용은 참조 [순수형 및 안정형 코드 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)합니다.  
   
- 이 경고는 오류로 발생 하며를 비활성화할 수 있습니다는 [경고](../../preprocessor/warning.md) pragma 또는 [/wd](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션입니다.  
+ 이 경고는 오류로 발생하며 [warning](../../preprocessor/warning.md) pragma 또는 [/wd](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션과 함께 사용하지 않도록 설정할 수 있습니다.  
   
  다음 샘플에서는 C4957을 생성합니다.  
   

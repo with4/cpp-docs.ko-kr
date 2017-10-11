@@ -1,39 +1,42 @@
 ---
 title: "컴파일러 오류 C2097 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2097"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2097"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2097
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2097
 ms.assetid: 7e5b2fd4-f61c-4b8a-b265-93e987a04bd3
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C2097
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d6955a610e3109c3b16edf96913be4503ee4c647
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-초기화가 잘못되었습니다.  
+---
+# <a name="compiler-error-c2097"></a>컴파일러 오류 C2097
+초기화가 잘못 되었습니다  
   
-### 문제 해결을 위하여 확인해 볼 수 있는 원인  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>다음과 같은 가능한 원인을 확인하여 수정하려면  
   
-1.  비상수 값을 사용하여 변수 초기화  
+1.  상수가 아닌 값을 사용 하 여 변수를 초기화 합니다.  
   
-2.  긴 주소를 사용하여 짧은 주소 초기화  
+2.  긴 주소로 짧은 주소를 초기화 합니다.  
   
-3.  **\/Za**를 사용하여 컴파일할 때 비상수 식을 사용하여 로컬 구조체, 공용 구조체 또는 배열 초기화  
+3.  로컬 구조체, 공용 구조체 또는 비상수 식 사용 하 여 컴파일할 때 사용 하 여 배열 초기화 **/Za**합니다.  
   
-4.  쉼표 연산자를 포함하는 식을 사용하여 초기화  
+4.  쉼표 연산자를 포함 하는 식으로 초기화 합니다.  
   
-5.  상수나 기호가 아닌 식을 사용하여 초기화
+5.  상수 또는 기호는 식으로 초기화 합니다.

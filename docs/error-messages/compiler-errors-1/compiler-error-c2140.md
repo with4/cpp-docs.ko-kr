@@ -1,37 +1,40 @@
 ---
 title: "컴파일러 오류 C2140 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2140"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2140"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2140
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 컴파일러 오류 C2140
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cee9861b991ae853443a49e158634c7578dcb913
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'type' : 제네릭 형식 매개 변수에 종속된 형식은 컴파일러 내장 형식 특성 'trait'에 대한 인수로 사용할 수 없습니다.  
+---
+# <a name="compiler-error-c2140"></a>컴파일러 오류 C2140
+'type': 제네릭 형식 매개 변수에 종속 되는 형식의 컴파일러 내장 형식 특성 '특성'에 대 한 인수로 사용할 수 없습니다  
   
- 잘못된 형식 지정자를 형식 특성에 전달했습니다.  
+ 잘못 된 유형 지정자는 형식 특성에 전달 되었습니다.  
   
- 자세한 내용은 [Compiler Support for Type Traits](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)을 참조하십시오.  
+ 자세한 내용은 참조 [형식 특성에 대 한 컴파일러 지원](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)합니다.  
   
-## 예제  
- 다음 샘플에서는 C2140 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C2140 오류가 발생 합니다.  
   
 ```  
 // C2140.cpp  

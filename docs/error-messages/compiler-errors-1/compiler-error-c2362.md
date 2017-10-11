@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C2362 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2362"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2362"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2362
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C2362
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e3a921084d696e6cf7abebc75d02d403cbcda2be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/09/2017
 
-'identifier' 초기화가 'goto label'에 의해 생략되었습니다.  
+---
+# <a name="compiler-error-c2362"></a>컴파일러 오류 C2362
+'identifier' 초기화가 'goto 레이블' 의해 생략 되었습니다.  
   
- [\/Za](../../build/reference/za-ze-disable-language-extensions.md)를 사용하여 컴파일할 때 레이블로 점프하면 식별자를 초기화할 수 없습니다.  
+ 로 컴파일할 때 [/Za](../../build/reference/za-ze-disable-language-extensions.md), 레이블로 점프 식별자를 초기화할 수 없습니다.  
   
- 블록에서 초기 값을 포함하는 선언을 괄호로 묶지 않았거나 변수를 아직 초기화하지 않았다면 선언을 점프할 수 없습니다.  
+ 를 입력 하지 않으면 하는 블록에서 선언 둘러싸입니다 않으면 이니셜라이저와 함께 선언 점프할 수 없습니다 또는 변수가 이미 초기화 되었습니다.  
   
- 다음 샘플에서는 C2326 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2326을 생성합니다.  
   
 ```  
 // C2362.cpp  
@@ -42,7 +45,7 @@ label1:;
 }  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C2362b.cpp  

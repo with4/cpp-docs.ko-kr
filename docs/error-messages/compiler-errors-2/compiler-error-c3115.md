@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C3115 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3115"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3115"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3115
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 컴파일러 오류 C3115
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b50cf777b061f97e2243d32362c0c19247e2c97c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'attribute': 이 특성은 'construct'에 사용할 수 없습니다.  
+---
+# <a name="compiler-error-c3115"></a>컴파일러 오류 C3115
+'attribute': 'c'이 특성은 사용할 수 없습니다  
   
- 구문에 적용한 특성이 해당 구문에 사용할 수 없는 특성입니다.  자세한 내용은 [Attributes by Usage](../../windows/attributes-by-usage.md)를 참조하십시오.  
+ 특성은 의도 하지 않은 구문에 적용 되었습니다.  참조 [용도별 특성](../../windows/attributes-by-usage.md) 자세한 정보에 대 한 합니다.  
   
-## 예제  
- 다음 샘플에서는 C3115 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3115 오류가 발생 합니다.  
   
 ```  
 // C3115.cpp  

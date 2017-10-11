@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C3865 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3865"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3865"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3865
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3865
 ms.assetid: 9bc62bb0-4fb8-4856-a5cf-c7cb4029a596
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3865
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af0873d70fcb4f947e838afba130279edf705ced
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'calling\_convention' : 네이티브 멤버 함수에만 사용할 수 있습니다.  
+---
+# <a name="compiler-error-c3865"></a>컴파일러 오류 C3865
+'calling_convention': 네이티브 멤버 함수에만 사용할 수  
   
- 전역 함수 또는 관리되는 멤버 함수에 호출 규칙이 사용되었습니다.  호출 규칙은 관리되는 멤버 함수가 아닌 네이티브 멤버 함수에만 사용할 수 있습니다.  
+ 호출 규칙은 관리 되는 멤버 함수 또는 함수를 전역 함수에 사용 되었습니다. 호출 규칙 (관리 되지 않음) 네이티브 멤버 함수에만 사용할 수 있습니다.  
   
- 자세한 내용은 [호출 규칙](../../cpp/calling-conventions.md)을 참조하십시오.  
+ 자세한 내용은 참조 [호출 규칙](../../cpp/calling-conventions.md)합니다.  
   
- 다음 샘플에서는 C3865 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3865 오류가 생성 됩니다.  
   
 ```  
 // C3865.cpp  

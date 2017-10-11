@@ -1,40 +1,43 @@
 ---
 title: "컴파일러 오류 C3880 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3880"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3880"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3880
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3880
 ms.assetid: b0e05d1e-32d0-4034-9246-f37d23573ea9
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 컴파일러 오류 C3880
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5e86108e0ab2608f7f59f160d9f7a849b83ef71a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'var' : 리터럴 데이터 멤버가 될 수 없습니다.  
+---
+# <a name="compiler-error-c3880"></a>컴파일러 오류 C3880
+'var': 리터럴 데이터 멤버가 될 수 없습니다  
   
- [literal](../../windows/literal-cpp-component-extensions.md) 특성의 형식은 다음 형식 중 하나이거나 컴파일할 때 다음 형식 중 하나로 변환할 수 있어야 합니다.  
+ 유형의 [리터럴](../../windows/literal-cpp-component-extensions.md) 특성 이어야 합니다 또는 컴파일 타임 다음 유형 중 하나로 변환할:  
   
 -   정수 계열 형식  
   
 -   string  
   
--   정수 계열 형식 또는 내부 형식의 열거형  
+-   정수 계열 또는 기본 유형의 열거형  
   
- 다음 샘플에서는 C3880 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3880 오류가 생성 됩니다.  
   
 ```  
 // C3880.cpp  

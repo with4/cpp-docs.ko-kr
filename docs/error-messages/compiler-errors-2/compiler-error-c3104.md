@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3104 | Microsoft 문서"
+title: "컴파일러 오류 C3104 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 837ff564bc3b2795bce6de69caa85e1d1dcf2766
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3104"></a>컴파일러 오류 C3104
-특성 인수가 잘못되었습니다.  
+잘못 된 특성 인수입니다.  
   
  특성에 잘못 된 인수를 지정 했습니다.  
   
- 참조 [특성 매개 변수 형식](../../windows/attribute-parameter-types-cpp-component-extensions.md) 에 대 한 자세한 내용은 합니다.  
+ 참조 [특성 매개 변수 형식](../../windows/attribute-parameter-types-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
   
- 이 오류는 Visual c + + 2005에 대해 수행 된 컴파일러 규칙의 결과로 생성 될 수 없습니다: 관리 되는 배열, 사용자 지정 특성에 전달 하는 경우 배열의 형식은 집합체 초기화 목록에서 더 이상 추론 됩니다. 이제 컴파일러를 요구 이니셜라이저 목록 뿐 아니라 배열 형식을 지정할 수 있습니다.  
+ 이 오류는 Visual c + + 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 없습니다: 관리 되는 배열, 사용자 지정 특성에 전달 하는 경우 배열의 형식을 집합체 초기화 목록에서 더 이상 추론 됩니다. 이제 컴파일러에 필요으로 배열 이니셜라이저 목록 형식을 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C3104 오류가 발생 합니다.  

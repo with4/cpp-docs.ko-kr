@@ -1,37 +1,40 @@
 ---
 title: "컴파일러 오류 C3899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3899"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3899"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3899
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 컴파일러 오류 C3899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7d9d32b3063dbecde375159ad90eec5bf128d56
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'var' : 'class' 클래스의 병렬 영역 내부에서는 직접 initonly 데이터 멤버를 왼쪽 항의 값\(I\-value\)으로 사용할 수 없습니다.  
+---
+# <a name="compiler-error-c3899"></a>컴파일러 오류 C3899
+'var': 'class' 클래스에서 병렬 영역 내부에서는 직접 initonly 데이터 멤버의 l 값 사용은 사용할 수 없습니다  
   
- [initonly](../../dotnet/initonly-cpp-cli.md) 데이터 멤버는 [parallel](../../parallel/openmp/reference/parallel.md) 영역에 있는 생성자의 일부 안에서 초기화할 수 없습니다.  컴파일러에서 이 코드를 내부적으로 재배치하여 이 코드가 사실상 생성자의 일부가 아닌 결과를 가져오기 때문입니다.  
+ [initonly (C + + /cli CLI)](../../dotnet/initonly-cpp-cli.md) 해당 부분에 있는 생성자의 내부 데이터 멤버를 초기화할 수 없습니다는 [병렬](../../parallel/openmp/reference/parallel.md) 영역입니다.  생성자의 일부로 더 이상 효과적으로 되도록 컴파일러는 해당 코드의 내부는 재배치 때문입니다.  
   
- 이 문제를 해결하려면 병렬 영역 외부가 아닌 생성자에서 initonly 데이터 멤버를 초기화합니다.  
+ 를 해결 하려면 병렬 영역 외부에 있으면 서 생성자에는 initonly 데이터 멤버를 초기화 합니다.  
   
-## 예제  
- 다음 샘플에서는 C3899 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3899 오류가 발생 합니다.  
   
 ```  
 // C3899.cpp  

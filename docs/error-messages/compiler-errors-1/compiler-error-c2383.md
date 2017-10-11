@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: faa2aa2c29ea34009f0812a3796d450a6877ca48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f6fa7626541f5fcd06bc2c2c513f52ec443ba4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2383"></a>컴파일러 오류 C2383
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
  C + + 컴파일러는 함수에 대 한 포인터에 기본 인수를 허용 하지 않습니다.  
   
- 이 코드는 Visual Studio 2005 이전 버전의 Visual c + + 컴파일러에 의해 수락 되었습니다 하지만 이제 오류가 발생 합니다. 모든 버전의 Visual c + +에서 작동 하는 코드에 대 한 함수에 포인터 인수를 기본 값을 할당 하지 마십시오.  
+ 이 코드의 Visual Studio 2005 이전 버전의 Visual c + + 컴파일러에서 수락한 하지만 이제 오류가 발생 합니다. 모든 버전의 Visual c + +에서 작동 하는 코드에 대 한 함수에 포인터 인수를 기본 값을 할당 하지 마십시오.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 C2383, 오류가 발생 하는 경우 및 가능한 해결 방법을 보여 줍니다.  

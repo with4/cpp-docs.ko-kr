@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C2715 | Microsoft 문서"
+title: "컴파일러 오류 C2715 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ecd5056d656865c893c60f63afbf7a558a839785
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8d396830b31e0d46781c3f008847f4cc9bd7bcc5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2715"></a>컴파일러 오류 C2715
-'type': throw 수 없거나이 형식을 catch  
+'type': throw 또는이 형식을 catch 할 수 없습니다  
   
- 관리 코드에서 예외 처리를 사용 하는 경우 값 형식은 유효한 인수가 아닙니다 (참조 [예외 처리](../../windows/exception-handling-cpp-component-extensions.md) 에 대 한 자세한 내용은).  
+ 관리 코드에서 예외 처리를 사용 하는 경우 값 형식은 올바른 인수가 아닙니다 (참조 [예외 처리](../../windows/exception-handling-cpp-component-extensions.md) 자세한 정보에 대 한).  
   
 ```  
 // C2715a.cpp  

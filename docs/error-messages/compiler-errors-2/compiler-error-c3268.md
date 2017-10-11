@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3268 | Microsoft 문서"
+title: "컴파일러 오류 C3268 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 13f7af86f70cb1d8539db593cbf0170a71f66498
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bab3adb4d6fd916eedaec36d455252b6a5ade454
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3268"></a>컴파일러 오류 C3268
 'function': 제네릭 함수 또는 제네릭 클래스의 멤버 함수는 가변 매개 변수 목록을 사용할 수 없습니다.  
   
- **/clr: pure** 및 **/clr: safe** 컴파일러 옵션은 Visual Studio 2015에서는 사용 되지 않습니다.  
+ **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
   
- 참조 [제네릭](../../windows/generics-cpp-component-extensions.md) 에 대 한 자세한 내용은 합니다.  
+ 참조 [제네릭](../../windows/generics-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C3268을 생성합니다.  

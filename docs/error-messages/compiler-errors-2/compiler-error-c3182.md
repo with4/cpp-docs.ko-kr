@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3182 | Microsoft 문서"
+title: "컴파일러 오류 C3182 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 3dfd76788c55e74625172dedf2ceb5b8bdfaa061
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7af33bd1854525bebd5d0cb423558d6077366431
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3182"></a>컴파일러 오류 C3182
-'class': 멤버를 사용 하 여 선언 또는 액세스 선언 내에서 관리 되는 또는 WinRTtype 올바르지 않습니다.  
+'class': using 선언 또는 액세스 선언 멤버 내에서 또는 관리 되는 WinRTtype 올바르지 않습니다.  
   
- A [를 사용 하 여](../../cpp/using-declaration.md) 선언이 관리 되는 클래스의 모든 형식 내에서 올바르지 않습니다.  
+ A [를 사용 하 여](../../cpp/using-declaration.md) 선언은 모든 형식의 관리 되는 클래스 내에서 올바르지 않습니다.  
   
  다음 샘플에서는 C3182 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   

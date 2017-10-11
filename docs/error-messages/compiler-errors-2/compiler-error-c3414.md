@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3414 | Microsoft 문서"
+title: "컴파일러 오류 C3414 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0aee8d8860183f73f638e1ec41c6841ad45573d7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dff7fc5162fb84a4878553ec74953d8b7d42ddea
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3414"></a>컴파일러 오류 C3414
-'member': 가져온된 멤버 함수를 정의할 수 없습니다  
+'member': 가져온된 멤버 함수를 정의할 수 없습니다.  
   
- 멤버는 참조 된 어셈블리에 정의 된 코드에서 정의 되었습니다.  
+ 멤버는 참조 된 어셈블리에 정의 된 코드에 정의 되었습니다.  
   
  다음 샘플에서는 C3414 오류가 생성 됩니다.  
   

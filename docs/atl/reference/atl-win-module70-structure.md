@@ -1,5 +1,5 @@
 ---
-title: "_ATL_WIN_MODULE70 구조 | Microsoft 문서"
+title: "_ATL_WIN_MODULE70 구조 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 383384c8f08b98592f92b5d38850137c1c0c6d54
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 7f521b418b7d179eb506a5e9df2887addec059ef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 구조
-기간 이동 코드 ATL.에 의해 사용 되는  
+Atl에서 창 작업 코드에서 사용 하는  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +48,7 @@ struct _ATL_WIN_MODULE70 {
  버전 관리에 사용 되는 구조체의 크기입니다.  
   
  `m_csWindowCreate`  
- 등록 코드 창에 대 한 액세스를 serialize 하는 데 사용 합니다. ATL.에서 내부적으로 사용  
+ 창 등록 코드에 대 한 액세스를 serialize 하는 데 사용 합니다. ATL.에서 내부적으로 사용  
   
  **m_pCreateWndList**  
  해당 개체에 windows를 바인딩하는 데 사용 합니다. ATL.에서 내부적으로 사용  
@@ -70,8 +56,8 @@ struct _ATL_WIN_MODULE70 {
  **m_rgWindowClassAtoms**  
  종료 시 제대로 등록 되지 될 수 있도록 창 클래스 등록을 추적 하는 데 사용 합니다. ATL.에서 내부적으로 사용  
   
-## <a name="remarks"></a>주의  
- [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) 의 typedef 정의 `_ATL_WIN_MODULE70`합니다.  
+## <a name="remarks"></a>설명  
+ [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) 의 typedef로 정의 된 `_ATL_WIN_MODULE70`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
