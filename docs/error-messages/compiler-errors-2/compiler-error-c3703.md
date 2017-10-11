@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3703 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3703"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3703"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3703
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 오류 C3703
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6ef53628f3a24dd3e6f7f387491fc959d70aa04
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'event handler': 이벤트 처리기 메서드는 소스 'event'과\(와\) 같은 저장소 클래스를 사용해야 합니다.  
+---
+# <a name="compiler-error-c3703"></a>컴파일러 오류 C3703
+'이벤트 처리기': 이벤트 처리기 메서드는 'event' 소스로 같은 저장소 클래스 있어야  
   
- [event](../../cpp/event-handling.md)가 후크된 이벤트 처리기와는 다른 저장소 클래스를 사용합니다.  예를 들어, 이 오류는 이벤트 처리기가 정적 멤버 함수이고 이벤트는 정적이 아닌 경우에 발생합니다.  이 오류를 해결하려면 이벤트 및 이벤트 처리기에 동일한 저장소 클래스를 제공하십시오.  
+ [이벤트](../../cpp/event-handling.md) 가 연결 되어 있는 이벤트 처리기는 다른 저장소 클래스입니다. 예를 들어이 오류는 이벤트 처리기는 정적 멤버 함수는 이벤트가 고정 되지 않습니다. 경우에 발생 합니다. 이 오류를 해결 하려면 이벤트 및 이벤트 처리기에 동일한 저장소 클래스를 제공 합니다.  
   
- 다음 샘플에서는 C3703 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3703 오류가 생성 됩니다.  
   
 ```  
 // C3703.cpp  

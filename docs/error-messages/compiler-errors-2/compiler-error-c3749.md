@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3749 | Microsoft 문서"
+title: "컴파일러 오류 C3749 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 20072ae0bdb55a6ee9cbac9d1ce0269991b839af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 49c231ed1337b683e501dd145055775867f6e2fc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3749"></a>컴파일러 오류 C3749
-'attribute': 함수 내 사용자 지정 특성을 사용할 수 없습니다  
+'attribute': 사용자 지정 특성은 함수 안에서 사용할 수 없습니다  
   
- 함수 내 사용자 지정 특성을 사용할 수 없습니다. 사용자 지정 특성에 대 한 자세한 내용은 항목을 참조 하십시오. [특성](../../windows/attribute.md)합니다.  
+ 사용자 지정 특성은 함수 안에서 사용할 수 없습니다. 사용자 지정 특성에 대 한 자세한 내용은 항목을 참조 하십시오. [특성](../../windows/attribute.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C3749 오류가 생성 됩니다.  

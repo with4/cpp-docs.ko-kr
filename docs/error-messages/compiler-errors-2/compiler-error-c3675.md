@@ -1,37 +1,40 @@
 ---
 title: "컴파일러 오류 C3675 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3675"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3675"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3675
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 컴파일러 오류 C3675
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d45236fc32fd0d10e9617b6946683d8ebd73ef0e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function' : 'property'이\(가\) 정의되어서 예약어입니다.  
+---
+# <a name="compiler-error-c3675"></a>컴파일러 오류 C3675
+'function': 'property' 정의 되었기 때문에 예약 되어  
   
- 사용자가 간단한 속성을 정의하면 컴파일러는 get 및 set 접근자 메서드를 생성하고 이들 이름이 프로그램의 범위에 표시됩니다.  컴파일러에서 생성한 이름은 속성 이름 앞에 get\_ 및 set\_가 추가되어 구성됩니다.  따라서 컴파일러가 생성한 접근자와 이름이 동일한 함수는 선언할 수 없습니다.  
+ Get 및 set 접근자 메서드를 권한과 컴파일러 생성 간단한 속성을 선언 하는 경우 이름이 프로그램의 범위에 표시 되어 있습니다.  컴파일러에서 생성 한 이름이 get_ 및 set_를 속성 이름 앞에 추가 하 여 구성 됩니다.  따라서 컴파일러에서 생성 된 접근자와 같은 이름 사용 하 여 함수를 선언할 수 없습니다.  
   
- 자세한 내용은 [property](../../windows/property-cpp-component-extensions.md)를 참조하십시오.  
+ 자세한 내용은 [property](../../windows/property-cpp-component-extensions.md) 를 참조하세요.  
   
-## 예제  
- 다음 샘플에서는 C3675 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3675 오류가 발생 합니다.  
   
 ```  
 // C3675.cpp  

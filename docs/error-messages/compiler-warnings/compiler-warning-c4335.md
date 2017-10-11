@@ -19,29 +19,15 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: dc8436664038d3f53f3a01d5006c41c3d0e4c8f0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ab7406a9c161d47e431cb0af8183d99eac7bfe86
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4335"></a>컴파일러 경고 C4335
-Mac 파일 형식이 발견되었습니다. 소스 파일을 DOS나 UNIX 형식으로 변환하십시오.  
+Mac 파일 형식이 발견 되었습니다: 하십시오 소스 파일을 DOS 나 UNIX 형식 변환  
   
  소스 파일의 첫 번째 줄의 줄 종결 문자는 UNIX ('\n') 또는 DOS ('\r\n')이 아니라 Macintosh 스타일 ('\r').  
   

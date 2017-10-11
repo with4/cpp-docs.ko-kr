@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3825 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3825"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3825"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3825
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C3825
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c3f8547cee8638fe5cda6c5b0a3d3ff375850406
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'class': 관리되는 또는 WinRT 클래스는 관리되는 또는 WinRT 이벤트만 지원할 수 있습니다.  
+---
+# <a name="compiler-error-c3825"></a>컴파일러 오류 C3825
+'class': 관리 되는 지원 또는 WinRTevents WinRTclass 또는 관리 되는 수  
   
- 관리되는 클래스에서는 .NET 이벤트만 지원됩니다.  Windows 런타임 클래스에서는 Windows 런타임 이벤트만 지원됩니다.  관리 코드에서 이 오류를 해결하려면 `event_source` 및 `event_receiver`의 형식 매개 변수를 `native`에서 `managed`로 변경합니다.  또는 특성을 제거합니다.  
+ 관리되는 클래스에서는 .NET 이벤트만 지원됩니다. Windows 런타임 클래스에서는 Windows 런타임 이벤트만 지원됩니다. 관리 코드에서 이 오류를 해결하려면 `event_source` 및 `event_receiver`의 형식 매개 변수를 `native`에서 `managed`로 변경합니다. 또는 특성을 제거합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3825를 생성하고 해결 방법을 보여 줍니다.  
   
 ```  

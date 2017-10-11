@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3708 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3708"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3708"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3708
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3708
 ms.assetid: 45e71564-9c7f-437f-98d8-a735ce162ed0
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3708
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8cc63e34c42f2c8d91c787530680d76e81192569
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'interface' : 'keyword'을\(를\) 잘못 사용했습니다. 호환되는 이벤트 소스의 멤버여야 합니다.  
+---
+# <a name="compiler-error-c3708"></a>컴파일러 오류 C3708
+'interface': 잘못 사용 하면 'keyword'; 호환 되는 이벤트 소스의 멤버 여야 합니다.  
   
- 인터페이스를 이벤트로 선언하려면 이벤트 선언을 이벤트 소스 내에 위치시켜야 합니다.  
+ 이벤트 인터페이스를 선언 하려면 이벤트 선언 이벤트 소스에 있어야 합니다.  
   
- 다음 샘플에서는 C3708 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3708 오류가 생성 됩니다.  
   
 ```  
 // C3708.cpp  

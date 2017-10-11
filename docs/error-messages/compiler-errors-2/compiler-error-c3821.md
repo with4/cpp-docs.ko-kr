@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3821 | Microsoft 문서"
+title: "컴파일러 오류 C3821 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 24212b0df7b665f8c8ab2614b9a23e66f19586af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 47e0a2ed3c824ed1598f7e998d4966b95cc9233b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3821"></a>컴파일러 오류 C3821
-'function': 관리 되는 함수에서 관리 되는 형식 또는 함수를 사용할 수 없습니다  
+'function': 관리 되지 않는 함수에 관리 되는 형식 또는 함수를 사용할 수 없습니다  
   
  인라인 어셈블리로 함수 또는 [setjmp](../../c-runtime-library/reference/setjmp.md) 값 형식 또는 관리 되는 클래스를 포함할 수 없습니다. 이 오류를 해결 하려면 인라인 어셈블리를 제거 하 고 `setjmp` 또는 관리 되는 개체를 제거 합니다.  
   
- C3821은 vararg 함수에 자동 저장소를 사용 하려는 경우에 발생할 수 있습니다.  자세한 내용은 참조 [가변 인수 목록 (...) (C + + /CLI CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) 및 [참조 형식에 대 한 c + + 스택 의미 체계](../../dotnet/cpp-stack-semantics-for-reference-types.md)합니다.  
+ C3821은 vararg 함수에서 자동 저장소를 사용 하려는 경우에 발생할 수 있습니다.  자세한 내용은 참조 [가변 인수 목록 (...) (C + + /CLI CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) 및 [참조 형식에 대 한 c + + 스택 의미 체계](../../dotnet/cpp-stack-semantics-for-reference-types.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C3821 오류가 발생 합니다.  

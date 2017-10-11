@@ -1,41 +1,44 @@
 ---
 title: "컴파일러 오류 C3798 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3798"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3798"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3798
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3798
 ms.assetid: b2f8b1d8-8812-49b8-a346-28e48f02ba5c
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# 컴파일러 오류 C3798
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8841ad9429fb9561952cce1320e030c64eb3a74b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'specifier': 속성 선언에는 재정의 지정자를 사용할 수 없습니다. 재정의 지정자는 속성 get\/set 메서드에 사용해야 합니다.  
+---
+# <a name="compiler-error-c3798"></a>컴파일러 오류 C3798
+'specifier': 속성 선언 (속성 get/set 메서드 대신에 배치 해야) 재정의 지정자를 사용할 수 없습니다  
   
- 속성이 잘못 선언되었습니다.  자세한 내용은 다음을 참조하십시오.  
+ 속성이 잘못 선언되었습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [property](../../windows/property-cpp-component-extensions.md)  
+-   [속성](../../windows/property-cpp-component-extensions.md)  
   
 -   [abstract](../../windows/abstract-cpp-component-extensions.md)  
   
 -   [sealed](../../windows/sealed-cpp-component-extensions.md)  
   
-## 예제  
- 다음 샘플에서는 C3798 경고가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3798  
   
 ```  
 // C3798.cpp  

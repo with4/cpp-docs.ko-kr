@@ -1,36 +1,39 @@
 ---
 title: "컴파일러 오류 C3849 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3849"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3849"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3849
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3849
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'type' 형식의 식에서 함수 형식을 호출할 때 모든 number이\(가\) 사용 가능한 연산자 오버로드에 대해 const 및\/또는 volatile 한정자가 손실됩니다.  
+---
+# <a name="compiler-error-c3849"></a>컴파일러 오류 C3849
+함수 형식을 호출할 'type' 형식의 식에는 모든 숫자의 사용 가능한 연산자 오버 로드에 대 한 const 및/또는 volatile 한정자가 손실  
   
- 지정된 const\-volatile 형식의 변수는 const\-volatile 한정이 같거나 더 큰 멤버 함수만 호출할 수 있습니다.  
+ 지정 된 const volatile 형식의 변수에 호출할 수 있습니다 멤버 이상 const-volatile 한정자 사용 함수를 정의 합니다.  
   
- 이 오류를 해결하려면 적절한 멤버 함수를 제공하십시오.  변환으로 인해 한정이 손실될 경우에는 const 또는 volatile로 한정된 개체에 대해 변환을 수행할 수 없습니다.  한정자를 얻을 수는 있지만 변환 중 한정자가 손실될 수 있습니다.  
+ 이 오류를 해결 하려면 적절 한 멤버 함수를 제공 합니다. 변환으로 인해 자격이 손실 변환을 const 또는 volatile 한정 된 개체에서 실행할 수 없습니다. 한정자를 얻을 수 있지만 경우 변환에는 한정자를 비워 둘 수 없는 합니다.  
   
- 다음 샘플에서는 C3849 경고가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 c3849:  
   
 ```  
 // C3849.cpp  

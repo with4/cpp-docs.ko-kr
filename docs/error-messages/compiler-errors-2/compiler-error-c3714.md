@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3714 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3714"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3714"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3714
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 컴파일러 오류 C3714
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7d58e06d99975fd4ccff9ea4bace755ff1d758cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'method': 이벤트 처리기 메서드는 'method' 소스와 같은 호출 규칙을 사용해야 합니다.  
+---
+# <a name="compiler-error-c3714"></a>컴파일러 오류 C3714
+'method': '이벤트 처리기 메서드 같은 호출 규칙 소스로 method' 해야  
   
- 소스 이벤트 메서드와 동일한 호출 규칙을 사용하지 않는 이벤트 처리기 메서드를 정의했습니다.  이 오류를 해결하려면 이벤트 처리기 메서드에 소스 이벤트 메서드와 동일한 호출 규칙을 제공하십시오.  예를 들어, 아래 코드에서 `handler1`과 `event1`의 호출 규칙을 일치시키십시오\([\_\_cdecl](../../cpp/cdecl.md) 또는 [\_\_stdcall](../../cpp/stdcall.md) 또는 다른 호출 규칙\).  두 선언 모두에서 호출 규칙 키워드를 제거하면 문제가 해결되며 `event1`과 `handler1` 호출 규칙이 기본적으로 [thiscall](../../cpp/thiscall.md)로 정의됩니다.  자세한 내용은 [변환](../../cpp/calling-conventions.md)을 참조하십시오.  
+ 원본 이벤트 메서드와 같은 호출 규칙을 사용 하지 않은 이벤트 처리기 메서드를 정의 합니다. 이 오류를 해결 하려면 이벤트 처리기 메서드를 소스 이벤트 메서드와와 동일한 호출 규칙을 부여 합니다. 예를 들어 아래 코드에서의 호출 규칙을 확인 `handler1` 및 `event1` 일치 ([__cdecl](../../cpp/cdecl.md) 또는 [__stdcall](../../cpp/stdcall.md) 나 다른 사용자). 제거 규칙 키워드 선언 모두에서 호출 하 여 문제가 해결 및도 발생 `event1` 및 `handler1` 을 기본값으로 설정 된 [thiscall](../../cpp/thiscall.md) 호출 규칙입니다. 참조 [호출 규칙](../../cpp/calling-conventions.md) 자세한 정보에 대 한 합니다.  
   
- 다음 샘플에서는 C3714 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3714 오류가 생성 됩니다.  
   
 ```  
 // C3714.cpp  

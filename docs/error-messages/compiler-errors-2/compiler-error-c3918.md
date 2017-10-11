@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C3918 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3918"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3918"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3918
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3918
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bf9cf676cf7435eaf1f0b924fbadcaddef842b4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'member'은\(는\) 데이터 멤버여야 합니다.  
+---
+# <a name="compiler-error-c3918"></a>컴파일러 오류 C3918
+사용 현황 데이터 멤버를 ' member' 필요  
   
- C3918 오류는 이벤트와 관련된 여러 가지 원인으로 인해 발생할 수 있습니다.  
+ C3918은 이벤트와 관련 된 여러 가지 이유로 발생할 수 있습니다.  
   
-## 예제  
- C3918 오류는 현재 컨텍스트에서 클래스 멤버가 필요하기 때문에 발생할 수 있습니다.  다음 샘플에서는 C3918 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ C3918은 클래스 멤버가 현재 컨텍스트에서 필요 하기 때문에 발생할 수 있습니다. 다음 샘플에서는 C3918 오류가 발생 합니다.  
   
 ```  
 // C3918.cpp  
@@ -49,10 +52,10 @@ public:
 };  
 ```  
   
-## 예제  
- 또한 trivial 이벤트가 null인지 확인하려고 하는 경우에도 C3918이 발생할 수 있습니다. 즉, 이벤트 이름으로 이벤트에 대한 지원 저장소 대리자에 더 이상 직접 액세스할 수 없습니다.  
+## <a name="example"></a>예제  
+ C3918는 null (이벤트 이름을 더 이상에 직접 액세스할 지원 저장소 대리자는 이벤트에 대 한)에 대 한 trivial 이벤트를 확인 하려고 하는 경우에 발생 합니다.  
   
- 다음 샘플에서는 C3918 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3918 오류가 발생 합니다.  
   
 ```  
 // C3918_2.cpp  
@@ -73,8 +76,8 @@ ref struct EventSource : public IEFace {
 };  
 ```  
   
-## 예제  
- C3918은 이벤트에 대한 알림 신청을 잘못한 경우에도 발생할 수 있습니다.  다음 샘플에서는 C3918 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ C3918 올바르게 구독 하는 경우 하지 이벤트에도 발생할 수 있습니다. 다음 샘플에서는 C3918 오류가 발생 합니다.  
   
 ```  
 // C3918_3.cpp  

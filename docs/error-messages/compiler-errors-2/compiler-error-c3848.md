@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3848 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3848"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3848"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3848
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3848
 ms.assetid: 32d3ccef-01ec-4f8b-bbff-fb9b1a76b4c4
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3848
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3220d3d278c0b5d877273b96defc23ac5852e066
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'type' 형식의 식에서 'function'을\(를\) 호출하면 const\-volatile 한정자가 손실됩니다.  
+---
+# <a name="compiler-error-c3848"></a>컴파일러 오류 C3848
+식 형식 't y'는 'function'를 호출 하기 위해 일부 const-volatile 한정자 손실  
   
- 지정된 const\-volatile 형식의 변수는 const\-volatile 한정이 같거나 더 큰 멤버 함수만 호출할 수 있습니다.  
+ 지정 된 const volatile 형식의 변수에 호출할 수 있습니다 멤버 이상 const-volatile 한정자 사용 함수를 정의 합니다.  
   
- 다음 샘플에서는 C3848 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 c3848:  
   
 ```  
 // C3848.cpp  

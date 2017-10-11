@@ -1,34 +1,37 @@
 ---
-title: "컴파일러 경고(수준 1 및 수준 4) C4700 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4700"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4700"
+title: "컴파일러 경고 (수준 1 및 수준 4) C4700 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4700
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 컴파일러 경고(수준 1 및 수준 4) C4700
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f41e519a9dbcff3cc5ad4b718003e5964bfc3e85
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-초기화되지 않은 'name' 지역 변수를 사용했습니다.  
+---
+# <a name="compiler-warning-level-1-and-level-4-c4700"></a>컴파일러 경고(수준 1 및 수준 4) C4700
+'name'가 사용 되는 초기화 되지 않은 지역 변수  
   
- 값을 할당하지 않은 *name* 지역 변수를 사용했으므로 예기치 않은 결과가 발생할 수 있습니다.  
+ 지역 변수를 사용한 *이름* 예기치 않은 결과가 발생할 수 있는 값을 할당 하지 않고 있습니다.  
   
- 다음 샘플에서는 C4700 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4700 오류가 생성 됩니다.  
   
 ```  
 // C4700.cpp  
@@ -39,7 +42,7 @@ int main() {
 }  
 ```  
   
- [\/clr:safe](../../build/reference/clr-common-language-runtime-compilation.md)가 지정된 경우 이 경고는 수준 4입니다.  다음 샘플에서는 C4700 오류가 발생하는 경우를 보여 줍니다.  
+ 아래 [/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md) 수준 4 경고입니다.  다음 샘플에서는 C4700 오류가 생성 됩니다.  
   
 ```  
 // C4700b.cpp  

@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 c&3767; | Microsoft 문서"
+title: "컴파일러 오류 C3767 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,37 +19,22 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ebbcbe30a0c9359116d259c36d702a968b333c9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3767"></a>컴파일러 오류 C3767
 'function' 후보 함수에 액세스할 수 없습니다.  
   
- Friend 함수는 클래스에 정의 된 경우 정의 되 고 전역 네임 스페이스 범위에서 선언 된 것으로 처리 해서는 안 됩니다. 그러나 인수 종속성 조회에서 찾을 수, 그 수 있습니다.  
+ 클래스에 정의 된 friend 함수 정의 하며, 전역 네임 스페이스 범위에서 선언 된 경우 처럼 처리 해서는 안 됩니다. 그러나 인수 종속 조회에서 찾을 수, 그 수 있습니다.  
   
- C&3767; 주요 변경에 의해서도 발생할 수 있습니다: 네이티브 형식은 이제 전용 형식에 기본적으로는 **/clr** 컴파일; 참조 [가시성 입력](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 에 대 한 자세한 내용은 합니다.  
+ C3767 주요 변경 내용으로 발생할 수 있습니다: 네이티브 형식에 기본적으로 private 됩니다는 **/clr** 컴파일 시 참조 [표시 유형 입력](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 에 대 한 자세한 내용은 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 샘플에서는 c&3767; 오류가 생성 됩니다.  
+ 다음 샘플에서는 C3767 오류가 생성 됩니다.  
   
 ```  
 // C3767a.cpp  
@@ -80,7 +65,7 @@ int main() {
 };  
 ```  
   
- 다음 샘플에서는 c&3767; 오류가 생성 됩니다.  
+ 다음 샘플에서는 C3767 오류가 생성 됩니다.  
   
 ```  
 // C3767c.cpp  
@@ -102,9 +87,9 @@ ref class Der : public Base {
 };  
 ```  
   
- Visual c + +.NET 2002 컴파일러 기호를 조회 하는 방법을 변경 합니다. 경우에 따라 것은 자동으로 알아보았습니다 지정된 된 네임 스페이스의 기호에 대 한 합니다. 이제, 인수 종속성 조회를 사용합니다.  
+ Visual c + +.NET 2002에서 컴파일러 기호를 조회 하는 방법을 변경 합니다. 경우에 따라 것은 자동으로 보지 못했을 기호 지정된 된 네임 스페이스에 대 한 합니다. 이제 인수 종속 조회를 사용 합니다.  
   
- 다음 샘플에서는 c&3767; 오류가 생성 됩니다.  
+ 다음 샘플에서는 C3767 오류가 생성 됩니다.  
   
 ```  
 // C3767e.cpp  
@@ -123,7 +108,7 @@ int main() {
 }  
 ```  
   
- Visual c + +.NET 2003 및 Visual c + +.NET 2002에서 유효한 코드에 대 한 friend 클래스 범위에서 선언 하 고 네임 스페이스 범위에 정의 합니다.  
+ Visual c + +.NET 2002 및 Visual c + +.NET 2003에 적용 되는 코드의 경우 클래스 범위에서 friend를 선언 하 고 네임 스페이스 범위에서 정의:  
   
 ```  
 // C3767f.cpp  

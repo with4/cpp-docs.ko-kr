@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 15bb9910d689cd9b8f05ed6df306f3bdf1f79195
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bb1e3512074b2767977367b30ac5d01dc5758b0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4002"></a>컴파일러 경고(수준 1) C4002
@@ -46,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
  매크로의 실제 매개 변수 개수가 매크로 정의의 정식 매개 변수 개수를 초과합니다. 전처리기는 추가 매개 변수를 수집하지만 매크로 확장 중에 무시합니다.  
   
- C 4002 잘못 사용 하는 경우 발생할 수 있습니다 [Variadic 매크로](../../preprocessor/variadic-macros.md)합니다.  
+ C4002는 [Variadic Macros](../../preprocessor/variadic-macros.md)를 잘못 사용하는 경우에 발생할 수 있습니다.  
   
  다음 샘플에서는 C4002를 생성합니다.  
   

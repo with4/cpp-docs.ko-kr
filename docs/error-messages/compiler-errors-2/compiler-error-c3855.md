@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3855 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3855"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3855"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3855
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3855
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 76d9101fd58d419db227803d3964198523ce3630
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'class': 형식 매개 변수 'param'이\(가\) 선언과 호환되지 않습니다.  
+---
+# <a name="compiler-error-c3855"></a>컴파일러 오류 C3855
+'class': 형식 매개 변수 'param' 선언과 호환 되지 않습니다.  
   
- 컴파일러에서 서로 다른 이름을 사용하는 형식 없는 템플릿 또는 제네릭 매개 변수를 발견했습니다.  이 오류는 템플릿 특수화의 정의에 지정된 템플릿 매개 변수가 해당 선언과 호환되지 않을 때 발생합니다.  
+ 컴파일러는 비형식 템플릿 또는 다른 이름으로는 제네릭 매개 변수를 찾았습니다. 이 템플릿 특수화의 정의에 지정 된 템플릿 매개 변수 선언 호환 되지 않는 경우 발생할 수 있습니다.  
   
- 다음 샘플에서는 C3855 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3855 오류가 생성 됩니다.  
   
 ```  
 // C3855.cpp  
@@ -41,7 +44,7 @@ template <char N>
 void C<N>::f() {}   // C3855  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C3855b.cpp  
@@ -55,7 +58,7 @@ template <int N>
 void C<N>::f() {}  
 ```  
   
- 제네릭을 사용하는 경우에도 C3855가 발생할 수 있습니다.  
+ C3855는 제네릭을 사용 하는 경우에 발생할 수 있습니다.  
   
 ```  
 // C3855c.cpp  
@@ -72,7 +75,7 @@ generic <class V>
 ref struct GC1<T>::GC2 { };   // C3855  
 ```  
   
- 다음과 같이 해결할 수 있습니다.  
+ 해결 방법:  
   
 ```  
 // C3855d.cpp  

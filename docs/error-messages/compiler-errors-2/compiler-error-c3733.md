@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3733 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3733"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3733"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3733
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3733
 ms.assetid: 0cc1a9fe-1400-4be3-b35a-16435cba7a5a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3733
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dedd36afd3b0211148c61ee3279d77eb25273c50
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'event': COM 이벤트를 지정하기 위한 구문이 잘못되었습니다. '\_\_interface'가 있습니까?  
+---
+# <a name="compiler-error-c3733"></a>컴파일러 오류 C3733
+'event': COM 이벤트를 지정 하기 위한 부적절 한 구문 '__interface'가 있습니까?  
   
- COM 이벤트에 잘못된 구문이 사용되었습니다.  이 오류를 해결하려면 이벤트 형식을 변경하거나 구문을 수정하여 COM 이벤트 규칙에 따르도록 하십시오.  
+ COM 이벤트에 대 한 잘못 된 구문이 사용 되었습니다. 이 오류를 해결 하려면 이벤트 형식을 변경 하거나 COM 이벤트 규칙을 준수 하도록 구문을 수정 합니다.  
   
- 다음 샘플에서는 C3733 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3733 오류가 생성 됩니다.  
   
 ```  
 #define _ATL_ATTRIBUTES 1  

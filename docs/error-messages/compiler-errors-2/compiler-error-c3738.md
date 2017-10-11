@@ -1,35 +1,38 @@
 ---
 title: "컴파일러 오류 C3738 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3738"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3738"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3738
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3738
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c143168981ed269a7bf830b4d5f345c1a063c425
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'calling\_convention': 명시적 인스턴스화의 호출 규칙은 인스턴스화되는 템플릿의 호출 규칙과 일치해야 합니다.  
+---
+# <a name="compiler-error-c3738"></a>컴파일러 오류 C3738
+'calling_convention': 명시적 인스턴스화의 호출 규칙 인스턴스화할 서식 파일의 이름과 일치 해야 합니다  
   
- 명시적 인스턴스화에 대한 호출 규칙은 지정하지 않는 것이 좋습니다.  이를 지정해야 하는 경우에는 호출 규칙이 일치해야 합니다.  
+ 명시적 인스턴스화에서 호출 규칙을 지정 하지 않으면 것이 좋습니다. 그러나 필요한 경우 호출 규칙이 일치 해야 합니다.  
   
-## 예제  
- 다음 샘플에서는 C3738 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C3738 오류가 발생 합니다.  
   
 ```  
 // C3738.cpp  

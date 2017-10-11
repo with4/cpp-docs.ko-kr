@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3719 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3719"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3719"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3719
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3719
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06cdce1925470ce8af8df78e50f069763addb150
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'interface': 이벤트 소스에 기반한 인터페이스는 COM 이벤트에만 사용될 수 있습니다.  
+---
+# <a name="compiler-error-c3719"></a>컴파일러 오류 C3719
+'interface': COM 이벤트 인터페이스 기반된 이벤트 소스 에서만 사용할 수 있습니다  
   
- 인터페이스를 비 COM 컨텍스트에 선언했습니다.  
+ COM이 아닌 컨텍스트에서 인터페이스를 선언 합니다.  
   
- 다음 샘플에서는 C3719 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3719 오류가 생성 됩니다.  
   
 ```  
 // C3719a.cpp  
@@ -55,7 +58,7 @@ int main() {
 }  
 ```  
   
- 이 오류를 해결하려면 [object](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event\_source](../../windows/event-source.md) 및 [event\_receiver](../../windows/event-receiver.md) 특성을 적절하게 적용하여 인터페이스 COM 클래스를 사용하고 있는 클래스를 만드십시오.  예를 들면 다음과 같습니다.  
+ 이 오류를 해결 하려면 적용는 [개체](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md), 및 [event_receiver](../../windows/event-receiver.md) 특성을 적절 하 게 확인 하는 COM 인터페이스 클래스를 사용 하는 클래스입니다. 예:  
   
 ```  
 // C3719b.cpp  

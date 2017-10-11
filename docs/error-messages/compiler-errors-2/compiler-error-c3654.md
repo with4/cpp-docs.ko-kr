@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3654 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3654"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3654"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3654
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3654
 ms.assetid: 57d96e3f-6bbb-4eaa-934b-26c23b4ceb2e
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 컴파일러 오류 C3654
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e7f96f3e1703c0d43964ba8e5941000e227bde52
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'text' : 명시적 재정의에 구문 오류가 있습니다.  
+---
+# <a name="compiler-error-c3654"></a>컴파일러 오류 C3654
+'text': 명시적 재정의에 구문 오류  
   
- 명시적 재정의에 예기치 않은 문자열이 있습니다.  자세한 내용은 [명시적으로 재정의](../../windows/explicit-overrides-cpp-component-extensions.md)를 참조하십시오.  
+ 예기치 않은 문자열 명시적 재정의 했습니다. 자세한 내용은 참조 [명시적으로 재정의](../../windows/explicit-overrides-cpp-component-extensions.md)합니다.  
   
- 다음 샘플에서는 C3654 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3654 오류가 생성 됩니다.  
   
 ```  
 // C3654.cpp  

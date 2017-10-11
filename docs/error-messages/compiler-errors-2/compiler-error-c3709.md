@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3709 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3709"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3709"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3709
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3709
 ms.assetid: d5576b04-2f93-420a-8f3e-8b8e987e8dab
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3709
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d56a4c18543ad71e524a4cc08eecd35ab6e7e2e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'function': \_\_hook\/\_\_unhook의 이벤트 지정 구문이 잘못되었습니다.  
+---
+# <a name="compiler-error-c3709"></a>컴파일러 오류 C3709
+'function': __hook의 이벤트 지정 구문이 잘못 /\__unhook  
   
- [\_\_hook](../../cpp/hook.md) 또는 [\_\_unhook](../../cpp/unhook.md)를 사용하여 이벤트 소스를 지정하는 경우 첫째 매개 변수는 올바른 이벤트 메서드이고 둘째 매개 변수는 올바른 이벤트 소스 개체\(메서드가 아님\)여야 합니다.  
+ 이벤트 소스를 지정 하는 경우 [__hook](../../cpp/hook.md) 또는 [__unhook](../../cpp/unhook.md), 첫 번째 매개 변수 메서드여야 유효한 이벤트 및 두 번째 매개 변수는 올바른 이벤트 소스 개체 (메서드 아님) 이어야 합니다.  
   
- 다음 샘플에서는 C3709 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3709 오류가 생성 됩니다.  
   
 ```  
 // C3709.cpp  

@@ -113,32 +113,18 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: cd62452e19eb25e4b5911a44cc3558a3fd154c6f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>컴파일러 오류 C3300 c 3399 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   
@@ -155,7 +141,7 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C3308|' *함수*': 직접 가져온된 클래스를 통한 호출은 지원 되지 않습니다|  
 |[컴파일러 오류 C3309](compiler-error-c3309.md)|'*매크로*/*키워드*': 모듈 이름은 매크로 또는 키워드일 수 없습니다|  
 |컴파일러 오류 C3310|'*식별자*': 모듈 이름이 충돌|  
-|컴파일러 오류 C3311|모듈 특성은 전역 범위에서 정의해야 합니다.|  
+|컴파일러 오류 C3311|모듈 특성은 전역 범위에서 정의 되어야 합니다.|  
 |컴파일러 오류 C3312|호출 가능한 '*식별자*'형식에 대 한 찾을 수 함수'*형식*'|  
 |컴파일러 오류 C3313|'*식별자*': 변수 형식을 사용할 수 없습니다 '*형식*'|  
 |컴파일러 오류 C3314|'*기호*': 지원 되는 IDL 모듈 형식이 아닙니다|  
@@ -165,9 +151,9 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C3318|'*형식*': 배열에는 'auto' 포함 하는 요소 형식을 사용할 수 없습니다|  
 |컴파일러 오류 C3319|사용되지 않습니다.|  
 |[컴파일러 오류 C3320](compiler-error-c3320.md)|'*형식*': 형식 모듈의 'name' 속성과 같은 이름을 사용할 수 없습니다|  
-|컴파일러 오류 C3321|이 컨텍스트에 예기치 않은 이니셜라이저 목록이 있습니다.|  
+|컴파일러 오류 C3321|이니셜라이저 목록을이 컨텍스트에 예기치 않은|  
 |[컴파일러 오류 C3322](compiler-error-c3322.md)|'*속성*': 특성에 대 한 올바른 속성이 아닙니다 '*특성*'|  
-|컴파일러 오류 C3323|'alignas'와 '__declspec(align)'는 함수 선언에 사용할 수 없습니다.|  
+|컴파일러 오류 C3323|'alignas' 및 '__declspec (align)' 함수 선언에서 허용 되지 않습니다.|  
 |컴파일러 오류 C3324|'*속성*': 속성이 특성에 두 번 이상 발생 '*특성*'|  
 |컴파일러 오류 C3325|'*특성*': 특성에 인수가 너무 많습니다.|  
 |컴파일러 오류 C3326|'*값*': 속성에 대 한 유효한 값이 아닙니다 '*속성*'의 특성'*특성*'|  
@@ -180,10 +166,10 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3333](compiler-error-c3333.md)|'*라이브러리*': #import 손상 된 형식 라이브러리를 가져올 수 없습니다.|  
 |[컴파일러 오류 C3334](compiler-error-c3334.md)|손상된 형식 라이브러리를 #import 할 수 없습니다.|  
 |컴파일러 오류 C3335|'*식별자*': 있을 수 최대 coclass'에 대 한 기본 인터페이스를 둘*클래스*'|  
-|컴파일러 오류 C3336|이 작업은 클래스 범위에서 수행해야 합니다.|  
+|컴파일러 오류 C3336|클래스 범위에서이 작업을 수행 해야 합니다.|  
 |컴파일러 오류 C3337|'*식별자*': defaultvtable은 coclass의 이벤트 소스 이어야 합니다*클래스*'|  
 |컴파일러 오류 C3338|'*식별자*': 있을 수 최대 하나의 기본 인터페이스는 coclass'에 대 한 이벤트 소스 이기도*클래스*'|  
-|컴파일러 오류 C3339|템플릿 템플릿 매개 변수는 매개 변수 목록 뒤에 'class' 또는 'typename'이 필요합니다.|  
+|컴파일러 오류 C3339|template 템플릿 매개 변수는 'class' 또는 'typename' 매개 변수 목록 뒤 필요|  
 |[컴파일러 오류 C3340](compiler-error-c3340.md)|'*식별자*': 인터페이스 서에서는 안 'restricted'와 '기본값' coclass'*클래스*'|  
 |컴파일러 오류 C3341|'*인터페이스*': defaultvtable 인터페이스는 'dual' 또는 '사용자 지정' 이어야 합니다|  
 |[컴파일러 오류 C3342](compiler-error-c3342.md)|'*식별자*': 모호한 특성|  
@@ -212,7 +198,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3365](compiler-error-c3365.md)|연산자 '*연산자*': 형식의 피연산자를 다른 '*형식*'및'*형식*'|  
 |[컴파일러 오류 C3366](compiler-error-c3366.md)|'*멤버*': 클래스 정의 내에서 관리 되 는/WinRT 형식의 정적 데이터 멤버를 정의 해야 합니다|  
 |[컴파일러 오류 C3367](compiler-error-c3367.md)|' *함수*': 바인딩되지 않은 대리자를 만들 정적 함수를 사용할 수 없습니다|  
-|[컴파일러 오류 C3368](compiler-error-c3368.md)|'*declarator*': IDL에 대 한 잘못 된 호출 규칙|  
+|[컴파일러 오류 C3368](compiler-error-c3368.md)|'*선언 자*': IDL에 대 한 잘못 된 호출 규칙|  
 |[컴파일러 오류 C3369](compiler-error-c3369.md)|'*모듈*': idl_module이 이미 정의 되었습니다.|  
 |[컴파일러 오류 C3370](compiler-error-c3370.md)|'*모듈*': idl_module이 아직 정의 되지 않았습니다|  
 |[컴파일러 오류 C3371](compiler-error-c3371.md)|'idl_module': 여기서는 'name' 속성만 사용할 수 있습니다.|  
@@ -221,7 +207,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3374](compiler-error-c3374.md)|주소를 가져올 수 없습니다 ' *함수*' 대리자 인스턴스를 만들지 않으면|  
 |[컴파일러 오류 C3375](compiler-error-c3375.md)|'*함수*': 대리자 함수가 모호|  
 |컴파일러 오류 C3376|'*템플릿*': 정적 데이터 멤버 템플릿만 허용 됩니다|  
-|컴파일러 오류 C3377|'decltype(자동)'은 new-expression에서 사용할 수 없습니다.|  
+|컴파일러 오류 C3377|'decltype (auto)'은 new-expression에서 사용할 수 없습니다.|  
 |컴파일러 오류 C3378|모듈 인터페이스 단위 에서만에서 선언을 내보낼 수 있습니다.|  
 |[컴파일러 오류 C3379](compiler-error-c3379.md)|'*클래스*': 중첩된 클래스 선언의 일부로 어셈블리 액세스 지정자를 사용할 수 없습니다|  
 |[컴파일러 오류 C3380](compiler-error-c3380.md)|'*지정자*': 잘못 된 어셈블리 액세스 지정 자가 'public' 또는 'private' 허용|  
@@ -240,7 +226,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3393](compiler-error-c3393.md)|제약 조건 절의 구문 오류: '*식별자*' 형식이 아닙니다|  
 |[컴파일러 오류 C3394](compiler-error-c3394.md)|제약 조건 절의 구문 오류: 찾을 '*기호*' 형식이 필요한 데|  
 |[컴파일러 오류 C3395](compiler-error-c3395.md)|' *함수*': __clrcall 호출 규칙이 있는 함수에 __declspec (dllexport)를 적용할 수 없습니다|  
-|[컴파일러 오류 C3396](compiler-error-c3396.md)|'*class*. *멤버*': 사용자 지정 특성에서 찾을 수 없습니다 '*네임 스페이스*'|  
+|[컴파일러 오류 C3396](compiler-error-c3396.md)|'*클래스*. *멤버*': 사용자 지정 특성에서 찾을 수 없습니다 '*네임 스페이스*'|  
 |[컴파일러 오류 C3397](compiler-error-c3397.md)|기본 인수에서는 집합체 초기화가 허용되지 않습니다.|  
 |[컴파일러 오류 C3398](compiler-error-c3398.md)|'*연산자*':에서 변환할 수 없습니다 '*형식*'to'*형식*'. 소스 식은 함수 기호여야 합니다.|  
 |[컴파일러 오류 C3399](compiler-error-c3399.md)|'*형식*': 제네릭 매개 변수의 인스턴스를 만들 때는 인수를 제공할 수 없습니다|  

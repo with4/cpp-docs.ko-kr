@@ -47,32 +47,18 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1d63e4faaafe9ba208e17857a8ac60723c6c5cf5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87910db946d51d740c93134b7085e5af7d3ccadc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>컴파일러 오류 C3200 c 3299 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   
@@ -100,7 +86,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3219](compiler-error-c3219.md)|'*매개 변수*': 여러 개의 비 인터페이스에서 제네릭 매개 변수를 제한할 수 없습니다: '*형식*'|  
 |컴파일러 오류 C3220|'*인터페이스*': 인터페이스에 progid를 사용할 수 없습니다|  
 |컴파일러 오류 C3221|'*멤버*': 여러 'default' 및 'case' 특성 멤버에 사용할 수 없습니다|  
-|[컴파일러 오류 C3222](compiler-error-c3222.md)|'*함수*': 제네릭 함수 또는 함수는 관리 되는 WinRT 형식의 멤버에 대 한 기본 인수를 선언할 수 없습니다|  
+|[컴파일러 오류 C3222](compiler-error-c3222.md)|'*함수*': 제네릭 함수 또는 함수는 관리 되 는/WinRT 형식의 멤버에 대 한 기본 인수를 선언할 수 없습니다|  
 |[컴파일러 오류 C3223](compiler-error-c3223.md)|'*속성*': 'typeid' 속성에 적용할 수 없습니다|  
 |[컴파일러 오류 C3224](compiler-error-c3224.md)|'*형식*': 오버 로드 된 제네릭 클래스는 없음*번호*' 제네릭 형식 인수|  
 |[컴파일러 오류 C3225](compiler-error-c3225.md)|에 대 한 제네릭 형식 인수 '*인수*'수 없습니다'*형식*', 값 형식 또는 참조 형식에 대 한 핸들 이어야 합니다|  
@@ -127,7 +113,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3246](compiler-error-c3246.md)|'*클래스*':에서 상속할 수 없습니다 '*base_class*로 선언 되었으므로' 있는 그대로'*상속*'|  
 |[컴파일러 오류 C3247](compiler-error-c3247.md)|'*coclass*': coclass는 다른 coclass'에서 상속할 수 없습니다*base_class*'|  
 |[컴파일러 오류 C3248](compiler-error-c3248.md)|사용되지 않습니다. '*함수*': 'sealed'로 선언 된 함수에서 재정의할 수 없습니다 '*함수*'|  
-|컴파일러 오류 C3249|'constexpr' 함수에 대한 잘못된 구문 또는 하위 식입니다.|  
+|컴파일러 오류 C3249|잘못 된 구문 또는 'constexpr' 함수에 대 한 하위 식|  
 |컴파일러 오류 C3250|'*선언*': 선언은 'constexpr' 함수 본문에 허용 되지 않습니다|  
 |[컴파일러 오류 C3251](compiler-error-c3251.md)|값 형식 인스턴스의 기본 클래스 메서드를 호출할 수 없습니다.|  
 |[컴파일러 오류 C3252](compiler-error-c3252.md)|'*함수*': 관리 되 는/WinRT 형식에서 가상 메서드의 액세스 가능성을 줄일 수 없습니다.|  
@@ -137,7 +123,7 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C3256|'*함수*': 변수 사용에는 상수 식 생성 하지 않으므로|  
 |컴파일러 오류 C3257|사용되지 않습니다.|  
 |컴파일러 오류 C3258|사용되지 않습니다.|  
-|컴파일러 오류 C3259|'constexpr' 함수는 하나의 반환 구문만 가질 수 있습니다.|  
+|컴파일러 오류 C3259|'constexpr' 함수는 단일 return 문이 하나만 사용할 수 있습니다.|  
 |컴파일러 오류 C3260|'*토큰*': 람다 본문 전에 예상치 않은 토큰을 건너뛰는 중|  
 |컴파일러 오류 C3261|관리 되 는/WinRT 배열에 반환 하는 함수 선언의 끝에 배열 대괄호가 있어야: '*식별자*(...) []'|  
 |[컴파일러 오류 C3262](compiler-error-c3262.md)|잘못 된 배열 인덱싱: *번호* 에 대해 지정 된 차원의 *번호*-차원 '*형식*'|  
@@ -169,13 +155,13 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3288](compiler-error-c3288.md)|'*형식*': 핸들 형식의 역참조가 잘못 되었습니다|  
 |[컴파일러 오류 C3289](compiler-error-c3289.md)|'*식별자*': trivial 속성은 인덱싱할 수 없습니다.|  
 |[컴파일러 오류 C3290](compiler-error-c3290.md)|'*형식*': trivial 속성 참조 형식에 사용할 수 없습니다|  
-|[컴파일러 오류 C3291](compiler-error-c3291.md)|'default': trivial 속성의 이름이 될 수 없습니다.|  
+|[컴파일러 오류 C3291](compiler-error-c3291.md)|'default': trivial 속성의 이름이 될 수 없습니다|  
 |[컴파일러 오류 C3292](compiler-error-c3292.md)|cli 네임스페이스를 다시 열 수 없습니다.|  
 |[컴파일러 오류 C3293](compiler-error-c3293.md)|'*식별자*': 'default'를 사용 하 여 클래스의에 대 한 기본 속성 (인덱서)에 액세스 하려면*클래스*'|  
 |컴파일러 오류 C3294|사용되지 않습니다.|  
 |[컴파일러 오류 C3295](compiler-error-c3295.md)|' #pragma *지정자*' 전역에 사용할 수 있습니다 또는 네임 스페이스 범위|  
 |[컴파일러 오류 C3296](compiler-error-c3296.md)|'*식별자*':이 이름의 속성이 이미 있습니다.|  
 |[컴파일러 오류 C3297](compiler-error-c3297.md)|' *constraint2*': 사용할 수 없습니다 ' *t 1*' 제약 조건으로 하기 때문에 ' *t 1*'에 값 제약 조건이|  
-|[컴파일러 오류 C3298](compiler-error-c3298.md)|' *t 1*': 사용할 수 없습니다 ' *constraint2*' 제약 조건으로 하기 때문에 ' *constraint2*'에 ref 제약 조건이 및 ' *t 1*'에 값 제약 조건이|  
+|[컴파일러 오류 C3298](compiler-error-c3298.md)|' *t 1*': 사용할 수 없습니다 ' *constraint2*' 제약 조건으로 하기 때문에 ' *constraint2*'에 ref 제약 조건이 및 ' *t 1*' 에 값 제약 조건이|  
 |[컴파일러 오류 C3299](compiler-error-c3299.md)|' *함수*': 제약 조건을 지정할 수 없습니다 기본 메서드에서 상속 됩니다|  
 

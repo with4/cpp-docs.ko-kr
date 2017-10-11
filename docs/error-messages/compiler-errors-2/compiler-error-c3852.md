@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3852 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3852"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3852"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3852
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3852
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1aef83942bb84908cd032ae9f23a7492e299e7e5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'member'\('type' 형식\): 집합체 초기화에서 이 멤버를 초기화할 수 없었습니다.  
+---
+# <a name="compiler-error-c3852"></a>컴파일러 오류 C3852
+'type' 형식이 있는 ' member': 집합체 초기화에서이 멤버를 초기화할 수 없습니다  
   
- 집합체 초기화로 기본 초기화를 받아들일 수 없는 데이터 멤버에 집합체 초기화의 일부로 기본 초기화를 할당하려고 했습니다.  
+ 집합체 초기화의 일부로 집합체 초기화에서 기본 초기화를 받을 수 없는 데이터 멤버에 게 기본 초기화를 할당 하려고 했습니다.  
   
- 다음 샘플에서는 C3852 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 c3852:  
   
 ```  
 // C3852.cpp  

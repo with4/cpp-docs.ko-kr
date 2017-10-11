@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3834 | Microsoft 문서"
+title: "컴파일러 오류 C3834 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2175483609a4c05cba7b02a2cd1693dd763e150e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8a827b2abe6352f083dbd21bdd9647af9b3b1f5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3834"></a>컴파일러 오류 C3834
-고정 포인터로 명시적으로 잘못 캐스팅했습니다. 대신 고정된 지역 변수를 사용하십시오.  
+명시적으로 잘못 캐스팅 했습니다 고정 포인터; 대신 고정된 된 지역 변수를 사용 합니다.  
   
- 고정 된 포인터에는 명시적 캐스팅이 허용 되지 않습니다.  
+ 고정 포인터로 명시적 캐스트는 허용 되지 않습니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 C3834 오류가 발생 합니다.  

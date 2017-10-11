@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3853 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3853"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3853"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3853
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 컴파일러 오류 C3853
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 54a05062cfc3f0871e16b500c8a3c4b6c3787b15
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'\=': 참조 함수를 통해 참조를 다시 할당하거나 초기화할 수 없습니다.  
+---
+# <a name="compiler-error-c3853"></a>컴파일러 오류 C3853
+'=': 참조 또는 참조-함수를 통해 할당을 다시 초기화는 사용할 수 없습니다  
   
- 함수가 lvalue가 아니므로 함수를 통해 참조를 할당할 수 없습니다.  
+ 함수가 lvalue가 함수를 통해 참조에 할당할 수 없습니다.  
   
- 다음 샘플에서는 C3853 경고가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 c3853:  
   
 ```  
 // C3853.cpp  

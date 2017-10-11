@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3866 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3866"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3866"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3866
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3866
 ms.assetid: 685870af-2440-4cdf-a6cb-284a5b96ef9d
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3866
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b1bcba6226a05379248a68f2047653333d98cdf8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-함수 호출에 인수 목록이 없습니다.  
+---
+# <a name="compiler-error-c3866"></a>컴파일러 오류 C3866
+인수 목록이 없습니다. 함수 호출  
   
- 비정적 멤버 함수 안에서 소멸자나 종료자 호출에 인수 목록이 없습니다.  
+ 비정적 멤버 함수 내에 소멸자 또는 종료자를 호출 하며 인수 목록의 아닙니다.  
   
- 다음 샘플에서는 C3866 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3866 오류가 생성 됩니다.  
   
 ```  
 // C3866.cpp  

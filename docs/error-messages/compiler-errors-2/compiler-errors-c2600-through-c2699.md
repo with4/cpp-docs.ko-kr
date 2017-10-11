@@ -67,33 +67,18 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 78e2d8ed0100bfa0ea39d0e4b2347d65153a4136
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ec696a2a1fa323850210ba87c637c07dd5577ea1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>컴파일러 오류 C2600 ~ C2699
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   
@@ -104,7 +89,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2602](compiler-error-c2602.md)|'*클래스*::*식별자*'의 기본 클래스의 구성원이 아니므로'*클래스*'|  
 |[컴파일러 오류 C2603](compiler-error-c2603.md)|'*함수*': 함수에서 생성자/소멸자가 있는 너무 많은 블록 범위 정적 개체가|  
 |컴파일러 오류 C2604|'*식별자*': 인터페이스 메서드를 여러 개 구현할 수 없습니다|  
-|[컴파일러 오류 C2605](compiler-error-c2605.md)|'*식별자*': WinRT 관리 되는 클래스 내에서이 메서드는 예약 된|  
+|[컴파일러 오류 C2605](compiler-error-c2605.md)|'*식별자*':이 메서드는 관리 되 는/WinRT 클래스에서 예약 된|  
 |컴파일러 오류 C2606|'*class1*': 다시 구현할 수 없습니다 '*멤버*'와 같이 런타임 기본에서 상속 된'*class2*'|  
 |컴파일러 오류 C2607|정적 어설션 오류|  
 |컴파일러 오류 C2608|사용되지 않습니다.|  
@@ -134,7 +119,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2632](compiler-error-c2632.md)|'*type1*'다음'*type2*'은 사용할 수 없습니다|  
 |[컴파일러 오류 C2633](compiler-error-c2633.md)|'*식별자*': e'는 생성자에 대 한 유일한 저장소 클래스|  
 |[컴파일러 오류 C2634](compiler-error-c2634.md)|'*클래스*::*멤버*': 참조 멤버에 대 한 포인터가 잘못 되었습니다|  
-|[컴파일러 오류 C2635](compiler-error-c2635.md)|변환할 수 없습니다는 '*type1*\*'에 '*type2*\*'; 암시 가상 기본 클래스에서 변환|  
+|[컴파일러 오류 C2635](compiler-error-c2635.md)|으로 변환할 수 없습니다는 '*type1*\*'에 '*type2*\*'; 암시 가상 기본 클래스에서 변환|  
 |[컴파일러 오류 C2636](compiler-error-c2636.md)|'*식별자*': 참조 멤버에 대 한 포인터가 잘못 되었습니다|  
 |[컴파일러 오류 C2637](compiler-error-c2637.md)|'*식별자*': 데이터 멤버에 대 한 포인터를 수정할 수 없습니다|  
 |[컴파일러 오류 C2638](compiler-error-c2638.md)|'*식별자*': __based 한정자를 멤버의 포인터|  
@@ -144,7 +129,7 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C2642|사용되지 않습니다.|  
 |컴파일러 오류 C2643|사용되지 않습니다.|  
 |컴파일러 오류 C2644|사용되지 않습니다.|  
-|[컴파일러 오류 C2645](compiler-error-c2645.md)|멤버에 대한 포인터의 정규화된 이름이 아닙니다. ':: *'가 있습니다.|  
+|[컴파일러 오류 C2645](compiler-error-c2645.md)|멤버의 포인터에 대 한 정규화 된 이름이 없습니다 (발견 ':: *')|  
 |[컴파일러 오류 C2646](compiler-error-c2646.md)|익명 구조체/공용 전역 또는 네임 스페이스 범위 선언 해야 정적|  
 |[컴파일러 오류 C2647](compiler-error-c2647.md)|'*연산자*': 역 참조할 수 없습니다는 '*type1*'에 '*type2*'|  
 |[컴파일러 오류 C2648](compiler-error-c2648.md)|'*식별자*': 기본 매개 변수 정적 멤버의 필요에 따라 멤버 사용|  
@@ -153,7 +138,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2651](compiler-error-c2651.md)|'*형식*': 왼쪽은 ':: ' 클래스, 구조체 또는 공용 구조체 이어야 합니다|  
 |[컴파일러 오류 C2652](compiler-error-c2652.md)|'*식별자*': 잘못 된 복사 생성자: 아니어야 첫 번째 매개 변수는 '*형식*'|  
 |[컴파일러 오류 C2653](compiler-error-c2653.md)|'*식별자*': 클래스 또는 네임 스페이스 이름이 아닙니다|  
-|[컴파일러 오류 C2654](compiler-error-c2654.md)|'*식별자*': 멤버 함수 외부 액세스 멤버에는 시도|  
+|[컴파일러 오류 C2654](compiler-error-c2654.md)|'*식별자*': 멤버 함수 외부 멤버 액세스 시도|  
 |[컴파일러 오류 C2655](compiler-error-c2655.md)|'*식별자*': 정의 또는 재선언 현재 범위에|  
 |[컴파일러 오류 C2656](compiler-error-c2656.md)|'*함수*': 함수를 비트 필드로 사용할 수 없습니다|  
 |[컴파일러 오류 C2657](compiler-error-c2657.md)|'*클래스*:: *'에서 문의 시작 찾을 (했는지 확인 한 형식을 지정 하 시겠습니까?)|  
@@ -168,12 +153,12 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2666](compiler-error-c2666.md)|'*함수*': *번호* 오버 로드에 비슷한 변환이|  
 |[컴파일러 오류 C2667](compiler-error-c2667.md)|'*함수*': 중 *번호* 오버 로드에 최적의 변환이 없습니다|  
 |[컴파일러 오류 C2668](compiler-error-c2668.md)|'*함수*': 오버 로드 된 함수에 대 한 호출이 모호 합니다|  
-|[컴파일러 오류 C2669](compiler-error-c2669.md)|멤버 함수는 익명 공용 구조체에 사용할 수 없습니다.|  
+|[컴파일러 오류 C2669](compiler-error-c2669.md)|멤버 함수를 익명 공용 구조체에 사용할 수 없습니다|  
 |[컴파일러 오류 C2670](compiler-error-c2670.md)|'*함수*': 함수 템플릿을 매개 변수를 변환할 수 없습니다 *번호* 형식에서 '*형식*'|  
 |[컴파일러 오류 C2671](compiler-error-c2671.md)|'*함수*': 정적 멤버 함수에는 'this' 포인터가 없는 합니다.|  
 |컴파일러 오류 C2672|'*함수*': 오버 로드 된 함수를 찾을 수 없는데|  
 |[컴파일러 오류 C2673](compiler-error-c2673.md)|'*함수*': 전역 함수에는 'this' 포인터가 없는 합니다.|  
-|[컴파일러 오류 C2674](compiler-error-c2674.md)|이 컨텍스트에서는 제네릭 선언이 허용되지 않습니다.|  
+|[컴파일러 오류 C2674](compiler-error-c2674.md)|제네릭 선언은이 컨텍스트에서 사용할 수 없습니다.|  
 |[컴파일러 오류 C2675](compiler-error-c2675.md)|단항 '*연산자*': '*형식*' 미리 정의 된 운영자에 게 허용 되는 형식으로 변환 또는이 연산자를 정의 하지 않습니다|  
 |[컴파일러 오류 C2676](compiler-error-c2676.md)|이진 '*연산자*': '*형식*' 미리 정의 된 운영자에 게 허용 되는 형식으로 변환 또는이 연산자를 정의 하지 않습니다|  
 |[컴파일러 오류 C2677](compiler-error-c2677.md)|이진 '*연산자*': 전역 연산자 찾을 type 사용 하는 '*형식*' (또는 허용 가능한 변환이 없는)|  
@@ -185,7 +170,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2683](compiler-error-c2683.md)|'*캐스트*': '*형식*' 다형 형식이 아닙니다|  
 |컴파일러 오류 C2684|'*선언 자*': 함수를 삭제 하 고 기본값으로 설정 된 관리 되 는/WinRT 클래스에서 지원 되지 않습니다|  
 |컴파일러 오류 C2685|'*선언 자*': 명시적 제한 지정자와 함께 삭제 및 기본값으로 설정 된 함수가 지원 되지 않습니다|  
-|컴파일러 오류 C2686|매개 변수 형식이 같은 정적 및 비정적 멤버 함수를 오버로드할 수 없습니다.|  
+|컴파일러 오류 C2686|매개 변수 형식이 같은 정적 및 비정적 멤버 함수를 오버 로드할 수 없습니다.|  
 |[컴파일러 오류 C2687](compiler-error-c2687.md)|'*형식*': 예외 선언은 'void' 수 없고는 불완전 한 형식 또는 포인터 또는 불완전 한 형식에 대 한 참조를 표시 합니다.|  
 |[컴파일러 오류 C2688](compiler-error-c2688.md)|'*형식*::*멤버*': 공변 (covariant) 반환 여러 대 인 또는 가상 상속 varargs 함수에 대해 지원 되지 않습니다|  
 |[컴파일러 오류 C2689](compiler-error-c2689.md)|'*함수*': 지역 클래스 내에서 friend 함수를 정의할 수 없습니다|  

@@ -1,34 +1,37 @@
 ---
 title: "컴파일러 오류 C3711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3711"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 컴파일러 오류 C3711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cfc4a2ffbbf65f1a1171a256ce08d5f498887a8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 10/10/2017
 
-'method': 관리되지 않는 이벤트 소스 메서드는 void 또는 정수 계열 형식을 반환해야 합니다.  
+---
+# <a name="compiler-error-c3711"></a>컴파일러 오류 C3711
+'method': 관리 되지 않는 이벤트 소스 메서드는 void 또는 정수 계열 형식을 반환 해야 합니다  
   
- void 또는 정수 계열 형식을 반환하지 않는 메서드를 이벤트 소스에 정의했습니다.  이 오류를 해결하려면 이벤트와 이벤트 처리기가 `void` 반환 형식이나 정수 계열 형식\(예: `int` 또는 `long`\)을 사용해야 합니다.  
+ Void 반환 하지 않는 이벤트 소스 또는 정수 계열 형식에 메서드를 정의 합니다. 이 오류를 해결 하려면 이벤트와 이벤트 처리기의 반환 형식이 확인 `void` 또는과 같은 정수 계열 형식을 `int` 또는 `long`합니다.  
   
- 다음 샘플에서는 C3711 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C3711 오류가 생성 됩니다.  
   
 ```  
 // C3711.cpp  

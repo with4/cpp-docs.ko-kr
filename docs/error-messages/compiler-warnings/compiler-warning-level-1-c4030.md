@@ -19,29 +19,14 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 4933afd00f4f88757b4a47beef25e68469942db2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7f1871fab717146317f97157084efa35655724a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4030"></a>컴파일러 경고(수준 1) C4030
-**첫 번째 형식 매개 변수 목록이 두 번째 목록 보다 깁니다.**  
+**첫째 정식 매개 변수 목록이 둘째 목록보다 깁니다.**  
   
  다른 형식 매개 변수를 사용하여 함수가 다시 선언되었습니다. 컴파일러는 첫 번째 선언에 지정된 형식 매개 변수를 사용합니다.

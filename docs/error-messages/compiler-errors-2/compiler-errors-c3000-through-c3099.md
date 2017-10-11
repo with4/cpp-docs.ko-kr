@@ -51,32 +51,18 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 16d0f336ec66329d0a92a151e1bc224433b0b03a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59ac61f0ae50f3a6b1d7170ea0b965c3bb8d0fe2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>컴파일러 오류 C3000 C3099 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   
@@ -101,17 +87,17 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3016](compiler-error-c3016.md)|'*식별자*': OpenMP 'for' 문의 인덱스 변수는 부호 있는 해야 정수 계열 형식|  
 |[컴파일러 오류 C3017](compiler-error-c3017.md)|OpenMP 'for' 문의 종료 테스트 형식이 잘못되었습니다.|  
 |[컴파일러 오류 C3018](compiler-error-c3018.md)|'*식별자*': OpenMP 'for' 테스트 또는 증가 인덱스 변수를 사용 해야 '*변수*'|  
-|[컴파일러 오류 C3019](compiler-error-c3019.md)|OpenMP 'for' 문 내부의 증가 식 형식이 잘못되었습니다.|  
+|[컴파일러 오류 C3019](compiler-error-c3019.md)|openmp에서 'for' 문의 증분 형식이 잘못 되었습니다.|  
 |[컴파일러 오류 C3020](compiler-error-c3020.md)|'*변수*': OpenMP 'for' 루프 인덱스 변수는 루프 본문에서 수정할 수 없습니다|  
 |[컴파일러 오류 C3021](compiler-error-c3021.md)|'*인수*': OpenMP 지시문에서 인수가 비어 '*지시문*' 지시문|  
 |[컴파일러 오류 C3022](compiler-error-c3022.md)|'*지시문*': 잘못 된 일정 종류의 '*지시문*OpenMP' '에*지시문*' 지시문|  
 |[컴파일러 오류 C3023](compiler-error-c3023.md)|'*인수*': openmp 인수에 예기치 않은 토큰 '*지시문*' 절|  
-|[컴파일러 오류 C3024](compiler-error-c3024.md)|'schedule(runtime)': chunk_size 식은 허용되지 않습니다.|  
+|[컴파일러 오류 C3024](compiler-error-c3024.md)|'schedule (runtime)': chunk_size 식은 허용 되지 않습니다|  
 |[컴파일러 오류 C3025](compiler-error-c3025.md)|'*절*': 정수 계열 식이 있어야 합니다.|  
 |[컴파일러 오류 C3026](compiler-error-c3026.md)|'*절*': 상수 식이 양수 여야 합니다.|  
 |[컴파일러 오류 C3027](compiler-error-c3027.md)|'*절*': 산술 또는 포인터 식이 필요 합니다.|  
 |[컴파일러 오류 C3028](compiler-error-c3028.md)|'*멤버*': 변수 또는 정적 데이터 멤버만 데이터 공유 절에 사용할 수|  
-|[컴파일러 오류 C3029](compiler-error-c3029.md)|'*기호*': 데이터 공유에서 한 번만 나타날 수는 OpenMP 지시문의 절|  
+|[컴파일러 오류 C3029](compiler-error-c3029.md)|'*기호*': 데이터 공유에서 한 번만 나타날 수 OpenMP 지시문의 절|  
 |[컴파일러 오류 C3030](compiler-error-c3030.md)|'*식별자*': 변수를 '*지시문*' 절/지시문에는 참조 형식이 될 수 없습니다|  
 |[컴파일러 오류 C3031](compiler-error-c3031.md)|'*식별자*': 'reduction' 절의 변수 스칼라 산술 형식 이어야 합니다.|  
 |[컴파일러 오류 C3032](compiler-error-c3032.md)|'*식별자*': 변수를 '*절*'절 불완전 한 형식을 가질 수 없습니다'*형식*'|  
@@ -126,7 +112,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3041](compiler-error-c3041.md)|'*식별자*': 'copyprivate' 절의 변수는 바깥쪽 컨텍스트에서 private 이어야 합니다.|  
 |[컴파일러 오류 C3042](compiler-error-c3042.md)|OpenMP에 'copyprivate'와 'nowait' 절을 함께 사용할 수 없습니다 '*지시문*' 지시문|  
 |[컴파일러 오류 C3043](compiler-error-c3043.md)|OpenMP 'critical' 지시문은 같은 이름의 'critical' 지시문 내부에 중첩될 수 없습니다.|  
-|[컴파일러 오류 C3044](compiler-error-c3044.md)|'section': OpenMP 'sections' 지시문 내부에 직접 중첩되어야 합니다.|  
+|[컴파일러 오류 C3044](compiler-error-c3044.md)|'section':만 사용할 수 OpenMP 'sections' 지시문 내부에 직접 중첩 되어야|  
 |[컴파일러 오류 C3045](compiler-error-c3045.md)|OpenMP 'sections' 지시문 다음에는 복합 문이 와야 합니다. '{'가 없습니다.|  
 |[컴파일러 오류 C3046](compiler-error-c3046.md)|OpenMP '#pragma omp sections' 영역에 구조화된 블록이 없습니다.|  
 |[컴파일러 오류 C3047](compiler-error-c3047.md)|OpenMP 'sections' 영역의 구조화된 블록 앞에는 '#pragma omp section'이 있어야 합니다.|  
@@ -148,7 +134,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3063](compiler-error-c3063.md)|연산자 '*연산자*': 모든 피연산자 열거형 형식이 있어야 합니다.|  
 |컴파일러 오류 C3064|'*식별자*': 단순 유형 이어야 하거나 하나로 확인 해야 합니다|  
 |[컴파일러 오류 C3065](compiler-error-c3065.md)|클래스 범위가 아닌 범위에서는 속성을 선언할 수 없습니다.|  
-|[컴파일러 오류 C3066](compiler-error-c3066.md)|이러한 인수를 사용하여 이 형식의 개체를 호출할 수 있는 방법에는 여러 가지가 있습니다.|  
+|[컴파일러 오류 C3066](compiler-error-c3066.md)|여러 가지 방법으로이 형식의 개체를 호출할 수 있습니다 이러한 인수를 사용|  
 |컴파일러 오류 C3067|이니셜라이저 목록은 built-in operator 함께 사용할 수 없습니다.|  
 |[컴파일러 오류 C3068](compiler-error-c3068.md)|'*식별자*': 'naked' 함수 해제가 필요한 c + + 예외가 발생 하는 개체를 포함할 수 없습니다|  
 |[컴파일러 오류 C3069](compiler-error-c3069.md)|연산자 '*연산자*': 열거형 형식에 사용할 수 없습니다|  
@@ -156,19 +142,19 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3071](compiler-error-c3071.md)|연산자 '*연산자*' ref 클래스 또는 값 형식 인스턴스의에 적용할 수|  
 |[컴파일러 오류 C3072](compiler-error-c3072.md)|연산자 '*연산자*' 단항 '%' 연산자는 ref의 인스턴스를 핸들 형식에 클래스를 ref 클래스 사용의 인스턴스에 적용할 수 없습니다|  
 |[컴파일러 오류 C3073](compiler-error-c3073.md)|'*식별자*': ref 클래스에는 사용자 정의 복사 생성자가 없습니다|  
-|컴파일러 오류 C3074|배열은 괄호로 묶은 이니셜라이저로 초기화할 수 없습니다.|  
+|컴파일러 오류 C3074|배열은은 괄호로 묶은 이니셜라이저로 초기화할 수 없습니다.|  
 |[컴파일러 오류 C3075](compiler-error-c3075.md)|'*식별자*': 참조 형식의 인스턴스를 포함할 수 없습니다 '*형식*', 값 형식에|  
 |[컴파일러 오류 C3076](compiler-error-c3076.md)|'*식별자*': 참조 형식의 인스턴스를 포함할 수 없습니다 '*형식*', 네이티브 형식에|  
 |[컴파일러 오류 C3077](compiler-error-c3077.md)|'*식별자*': 종료자는 참조 형식의 멤버만 될 수 있습니다|  
 |컴파일러 오류 C3078|새 식에서 배열 크기를 지정 해야 합니다.|  
-|컴파일러 오류 C3079|이니셜라이저 목록을 이 대입 연산자의 오른쪽 피연산자로 사용할 수 없습니다.|  
+|컴파일러 오류 C3079|이니셜라이저 목록은이 할당 연산자의 오른쪽 피연산자로 사용할 수 없습니다.|  
 |[컴파일러 오류 C3080](compiler-error-c3080.md)|'*종료자*': 종료자에는 저장소 클래스 지정자를 사용할 수 없습니다|  
 |컴파일러 오류 C3081|사용되지 않습니다.|  
 |컴파일러 오류 C3082|사용되지 않습니다.|  
 |[컴파일러 오류 C3083](compiler-error-c3083.md)|'*식별자*': 왼쪽의 기호는 ':: ' 형식 이어야 합니다|  
 |[컴파일러 오류 C3084](compiler-error-c3084.md)|'*식별자*': 소멸자/종료자 수 없습니다 '*키워드*'|  
 |[컴파일러 오류 C3085](compiler-error-c3085.md)|'*식별자*': 생성자 일 수 없습니다 '*키워드*'|  
-|컴파일러 오류 C3086|'std::initializer_list'를 찾을 수 없습니다. #include <initializer_list>를 사용해야 합니다.|  
+|컴파일러 오류 C3086|'std:: initializer_list'를 찾을 수 없습니다: 해야 #include < initializer_list >|  
 |[컴파일러 오류 C3087](compiler-error-c3087.md)|'*식별자*': 호출의 '*선언*' 이미이 멤버를 초기화 합니다.|  
 |컴파일러 오류 C3088|'*클래스*': 특성 생성자 형식 인수 라는 있어야|  
 |컴파일러 오류 C3089|'*식별자*': 매개 변수 이름이 모든 데이터 멤버의 이름이 일치 하지 않습니다|  

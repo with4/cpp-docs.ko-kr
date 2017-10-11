@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 오류 C3648 | Microsoft 문서"
+title: "컴파일러 오류 C3648 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: bbc097048600700592d2ebb30d939ba216434d84
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5be1886ad2404f0c0eb30cb5511111e4e8e97180
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3648"></a>컴파일러 오류 C3648
-이 명시적 재정의 구문에는 /clr:oldSyntax가 필요합니다.  
+이 명시적 재정의 구문은 /clr:oldSyntax 필요  
   
-관리 되는 최신 구문을 컴파일하는 경우 컴파일러가 명시적 찾은 더 이상 지원 되지 않는 이전 버전에 대 한 구문을 재정의 합니다.  
+최신 관리 되는 구문에 대 한를 컴파일할 때 컴파일러에서 명시적 검색에 더 이상 지원 되지 않는 이전 버전에 대 한 구문을 재정의 합니다.  
   
 자세한 내용은 참조 [명시적으로 재정의](../../windows/explicit-overrides-cpp-component-extensions.md)합니다.  
   
