@@ -1,41 +1,38 @@
 ---
-title: ".EXIT | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".EXIT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".EXIT directive"
+title: ". 종료 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .EXIT
+dev_langs: C++
+helpviewer_keywords: .EXIT directive
 ms.assetid: 5f77c281-3d65-4174-83ea-34dcc7085ecf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: da16f3a747636e14b1c1a1eeb60d355b32338f6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# .EXIT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="exit"></a>.EXIT
 종료 코드를 생성합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 .EXIT [[expression]]  
 ```  
   
-## 설명  
- 선택적 반환  *식* 셸 합니다.  
+## <a name="remarks"></a>설명  
+ 선택적 반환 *식* 셸에 있습니다.  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

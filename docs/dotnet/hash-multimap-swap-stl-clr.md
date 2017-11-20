@@ -1,45 +1,43 @@
 ---
-title: "hash_multimap::swap(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 멤버[STL/CLR]"
+title: 'hash_multimap:: swap (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 4baa60c2-865a-4e17-acd5-01b7c3c5cd44
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 522918e123a606783fc0703853bb2c9baf40ea6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::swap(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapswap-stlclr"></a>hash_multimap::swap(STL/CLR)
 두 컨테이너의 내용을 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void swap(hash_multimap<Key, Mapped>% right);  
 ```  
   
-#### 매개 변수  
- right  
- 내용을 바꿀 컨테이너입니다.  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
+ 콘텐츠와 바꿀 컨테이너입니다.  
   
-## 설명  
- The member function swaps the controlled sequences between `this` and `right`.  It does so in constant time and it throws no exceptions.  You use it as a quick way to exchange the contents of two containers.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 `this`와 `right` 간에 제어된 시퀀스를 교환합니다. 일정 한 시간에 작업을 수행 하 고 예외가 throw 됩니다. 두 컨테이너의 내용을 교환에 신속 하 게 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multimap_swap.cpp   
@@ -82,15 +80,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[d 4\] \[e 5\] \[f 6\]**  
- **\[d 4\] \[e 5\] \[f 6\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[d 4] [e 5] [f 6]  
+[d 4] [e 5] [f 6]  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::operator\=](../dotnet/hash-multimap-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::operator=(STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)

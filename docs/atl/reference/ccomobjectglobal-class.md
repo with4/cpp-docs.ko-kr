@@ -1,11 +1,10 @@
 ---
-title: "CComObjectGlobal 클래스 | Microsoft 문서"
+title: "CComObjectGlobal 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectGlobal::QueryInterface
 - ATLCOM/ATL::CComObjectGlobal::Release
 - ATLCOM/ATL::CComObjectGlobal::m_hResFinalConstruct
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObjectGlobal class
+dev_langs: C++
+helpviewer_keywords: CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 8c371eee9de660a2bb08e67f35a5a6c81d32eee0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7684f01b9d9fa3a8be434152f190e91d0dccae3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal 클래스
 이 클래스는 포함 하는 모듈에서 참조 횟수를 관리 하면 `Base` 개체입니다.  
@@ -58,7 +40,7 @@ class CComObjectGlobal : public Base
   
 #### <a name="parameters"></a>매개 변수  
  `Base`  
- 파생 된 클래스에 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 또는 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)개체에서 지원 하려는 다른 인터페이스와도 같이 합니다.  
+ 파생 된 클래스에 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 또는 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), 개체에서 지원할 하려는 다른 모든 인터페이스와도 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -81,12 +63,12 @@ class CComObjectGlobal : public Base
   
 |이름|설명|  
 |----------|-----------------|  
-|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|포함은 **HRESULT** 생성 중에 반환 되는 `CComObjectGlobal` 개체입니다.|  
+|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|포함는 **HRESULT** 생성 중에 반환 되는 `CComObjectGlobal` 개체입니다.|  
   
-## <a name="remarks"></a>주의  
- `CComObjectGlobal`포함 하는 모듈에서 참조 횟수를 관리 하 여 `Base` 개체입니다. `CComObjectGlobal`하면 모듈 해제 되지 않으면으로 개체가 삭제 되지 않습니다. 개체는 전체 모듈의 참조 횟수가&0;이 되는 경우에 제거 됩니다.  
+## <a name="remarks"></a>설명  
+ `CComObjectGlobal`포함 하는 모듈에서 참조 횟수를 관리 하 여 `Base` 개체입니다. `CComObjectGlobal`모듈은 출시으로 개체가 삭제 되지 않습니다 보장 합니다. 개체는 전체 모듈의 참조 횟수가 0이 되는 경우에 제거 됩니다.  
   
- 예를 들어를 사용 하 여 `CComObjectGlobal`, 클래스 팩토리는 모든 클라이언트에서 공유 하는 일반적인 전역 개체를 포함할 수 있습니다.  
+ 예를 들어,를 사용 하 여 `CComObjectGlobal`, 클래스 팩터리와 모든 클라이언트에서 공유 하는 일반적인 전역 개체를 보유할 수 있습니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `Base`  
@@ -97,17 +79,17 @@ class CComObjectGlobal : public Base
  **헤더:** atlcom.h  
   
 ##  <a name="addref"></a>CComObjectGlobal::AddRef  
- 개체의 참조 횟수가 1 씩 늘립니다.  
+ 개체의 참조 횟수를 1 씩 증가 시킵니다.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 진단에 유용 하 고 테스트 될 수 있는 값입니다.  
+ 진단에 대 한 유용 하 고 테스트 될 수 있는 값입니다.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 `AddRef` 호출 **_Module::Lock**여기서 **_Module** 의 인스턴스인 전역 [CComModule](../../atl/reference/ccommodule-class.md) 에서 파생 된 클래스 또는 합니다.  
+### <a name="remarks"></a>설명  
+ 기본적으로 `AddRef` 호출 **_Module::Lock**여기서 **_Module** 의 인스턴스인 전역 [CComModule](../../atl/reference/ccommodule-class.md) 여기에서 파생 된 클래스 또는 합니다.  
   
 ##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
  생성자입니다. 호출 `FinalConstruct` 다음 설정 [m_hResFinalConstruct](#m_hresfinalconstruct) 에 `HRESULT` 반환한 `FinalConstruct`합니다.  
@@ -116,8 +98,8 @@ STDMETHOD_(ULONG, AddRef)();
 CComObjectGlobal(void* = NULL));
 ```  
   
-### <a name="remarks"></a>주의  
- 기본 클래스를 파생 하지 경우 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)를 직접 제공 해야 `FinalConstruct` 메서드. 이 소멸자는 `FinalRelease`을 호출합니다.  
+### <a name="remarks"></a>설명  
+ 기본 클래스를 파생 하지 경우 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), 직접 제공 해야 `FinalConstruct` 메서드. 이 소멸자는 `FinalRelease`을 호출합니다.  
   
 ##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
  소멸자입니다.  
@@ -126,7 +108,7 @@ CComObjectGlobal(void* = NULL));
 CComObjectGlobal();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제 하는 호출 [FinalRelease](ccomobjectrootex-class.md#finalrelease)합니다.  
   
 ##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
@@ -153,25 +135,24 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `QueryInterface`에서는 COM 맵 테이블의 인터페이스만 처리됩니다.  
   
 ##  <a name="release"></a>CComObjectGlobal::Release  
- 1에서 개체의 참조 횟수를 감소 시킵니다.  
+ 1 씩 개체의 참조 횟수를 감소 시킵니다.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 디버그 빌드에서 **릴리스** 진단에 유용 하 고 테스트 될 수 있는 값을 반환 합니다. 비-디버그 빌드에서만에서 **릴리스** 항상 0을 반환 합니다.  
+ 디버그 빌드에서 **릴리스** 진단에 대 한 유용 하 고 테스트 될 수 있는 값을 반환 합니다. 디버그가 아닌 빌드에서 **릴리스** 항상 0을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
- 기본적으로 **릴리스** 호출 **_Module::Unlock**여기서 **_Module** 의 인스턴스인 전역 [CComModule](../../atl/reference/ccommodule-class.md) 에서 파생 된 클래스 또는 합니다.  
+### <a name="remarks"></a>설명  
+ 기본적으로 **릴리스** 호출 **_Module::Unlock**여기서 **_Module** 의 인스턴스인 전역 [CComModule](../../atl/reference/ccommodule-class.md) 여기에서 파생 된 클래스 또는 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CComObjectStack 클래스](../../atl/reference/ccomobjectstack-class.md)   
  [CComAggObject 클래스](../../atl/reference/ccomaggobject-class.md)   
  [CComObject 클래스](../../atl/reference/ccomobject-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

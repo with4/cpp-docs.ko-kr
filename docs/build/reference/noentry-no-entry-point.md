@@ -1,59 +1,59 @@
 ---
-title: "/NOENTRY(진입점 없음) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ResourceOnlyDLL"
-  - "/noentry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NOENTRY 링커 옵션[C++]"
-  - "DLL[C++], 만들기"
-  - "진입점[C++], 링커 지정"
-  - "NOENTRY 링커 옵션"
-  - "-NOENTRY 링커 옵션"
-  - "리소스 전용 DLL[C++], 만들기"
+title: "-NOENTRY (진입점 없음) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.ResourceOnlyDLL
+- /noentry
+dev_langs: C++
+helpviewer_keywords:
+- entry points [C++], linker specifying
+- -NOENTRY linker option
+- resource-only DLLs [C++], creating
+- NOENTRY linker option
+- /NOENTRY linker option [C++]
+- DLLs [C++], creating
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b8d3e44f3181683a7a0c2c7725e2a6567895fdd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /NOENTRY(진입점 없음)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="noentry-no-entry-point"></a>/NOENTRY(진입점 없음)
 ```  
 /NOENTRY  
 ```  
   
-## 설명  
- 실행 코드가 없는 리소스 전용 DLL을 만들려면 \/NOENTRY 옵션을 지정해야 합니다.  자세한 내용은 [리소스 전용 DLL 만들기](../../build/creating-a-resource-only-dll.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 실행 코드가 없는 리소스 전용 DLL을 만들려면 /NOENTRY 옵션을 지정해야 합니다. 자세한 내용은 참조 [Resource-Only DLL 만들기](../../build/creating-a-resource-only-dll.md)합니다.  
   
  이 옵션을 사용하면 LINK가 `_main`에 대한 참조를 DLL로 링크하는 것을 방지할 수 있습니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 선택합니다.  
+2.  선택 된 **링커** 폴더입니다.  
   
-3.  **고급** 속성 페이지를 클릭합니다.  
+3.  선택 된 **고급** 속성 페이지.  
   
-4.  **진입점 없음** 속성을 수정합니다.  
+4.  수정 된 **진입점 없음** 속성입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
-1.  <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ResourceOnlyDLL%2A>을 참조하십시오.  
+1.  <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ResourceOnlyDLL%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 전용 DLL 만들기](../../build/creating-a-resource-only-dll.md)   
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

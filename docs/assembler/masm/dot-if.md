@@ -1,33 +1,30 @@
 ---
-title: ".IF | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".IF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".IF directive"
+title: . IF | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .IF
+dev_langs: C++
+helpviewer_keywords: .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2416b73fa42f9cac629644ea624a9545f3988dc3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# .IF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-테스트 하는 코드를 생성 `condition1` \(AX, 예를 들어, \> 7\) 및 실행은  *문* 은 이 조건이 만족 되는 경우.  
+# <a name="if"></a>.IF
+테스트 하는 코드를 생성 `condition1` (예를 들어 > 7 AX,)를 실행 하 고는 *문을* 해당 조건이 true 인 경우.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -40,8 +37,8 @@ statements
 .ENDIF  
 ```  
   
-## 설명  
- If a [.다른](../../assembler/masm/dot-else.md) 원래 조건이 false 이면 다음 문을 실행 합니다.  참고 조건을 런타임 시 계산 되는.  
+## <a name="remarks"></a>설명  
+ 경우는 [합니다. 다른](../../assembler/masm/dot-else.md) 원래 상태로 되었으면 false 다음과, 해당 문이 실행 됩니다. 참고 조건이 런타임에 평가 됩니다.  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

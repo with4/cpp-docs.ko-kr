@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
-dev_langs:
-- C++
+f1_keywords: vc.codewiz.class.atl.provider.overview
+dev_langs: C++
 helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: a28a47d9af89470c63903ccc338c680361b1cada
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 170f10d06112969d9147c37b20572f0888140d0a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 공급자 마법사
 이 마법사에서 OLE DB 공급자를 구성 하는 클래스를 만듭니다.  
   
-## <a name="remarks"></a>주의  
- 부터는 [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)],이 마법사에서 생성 하는 등록 스크립트에서 COM 구성 요소를 등록 합니다 **HKEY_CURRENT_USER** 대신 **HKEY_LOCAL_MACHINE**합니다. 이 동작을 수정 하려면 설정는 **모든 사용자에 대 한 구성 요소 등록** ATL 마법사의 옵션입니다.  
+## <a name="remarks"></a>설명  
+ Visual Studio 2008부터,이 마법사에서 생성 하는 등록 스크립트는 해당 COM 구성 요소 등록에서 **HKEY_CURRENT_USER** 대신 **HKEY_LOCAL_MACHINE**합니다. 이 동작을 수정 하려면 설정는 **모든 사용자에 대 한 구성 요소 등록** ATL 마법사의 옵션입니다.  
   
  다음 표에서 ATL OLE DB 공급자 마법사에 대 한 옵션을 설명합니다.  
   
@@ -95,5 +77,4 @@ ms.lasthandoff: 04/04/2017
   
 ## <a name="see-also"></a>참고 항목  
  [ATL OLE DB 공급자](../../atl/reference/adding-an-atl-ole-db-provider.md)
-
 

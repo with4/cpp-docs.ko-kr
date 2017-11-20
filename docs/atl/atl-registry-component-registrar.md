@@ -1,45 +1,46 @@
 ---
-title: "ATL 레지스트리 구성 요소(등록자) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 등록자"
-  - "ATL, 레지스트리"
-  - "등록자 스크립트[ATL]"
-  - "레지스트리, 액세스"
-  - "레지스트리, 등록자"
-  - "스크립팅, 레지스트리 스크립팅"
-  - "스크립트, 등록자 스크립트"
+title: "ATL 레지스트리 구성 요소 (등록자) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scripting, registry scripting
+- ATL, registry
+- registrar scripts [ATL]
+- registry, accessing
+- ATL Registrar
+- scripts, Registrar scripts
+- registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f30254c1c18f49bf7e125fc855a32e9e8d2b8154
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ATL 레지스트리 구성 요소(등록자)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL 등록자는 시스템 레지스트리에 사용자 지정 인터페이스를 통해 최적화 된 액세스를 제공합니다.  등록자는 자유 스레드 이며 C\+\+ 클라이언트용 코드의 정적 링크 있습니다.  
+# <a name="atl-registry-component-registrar"></a>ATL 레지스트리 구성 요소(등록자)
+ATL 등록자는 사용자 지정 인터페이스를 통해 시스템 레지스트리로 최적화 된 액세스를 제공합니다. 등록자는 자유 스레드 및 c + + 클라이언트에 대 한 코드의 정적 링크를 허용 합니다.  
   
 > [!NOTE]
->  ATL 등록자에 대 한 소스 코드는 atlmfc\\include\\atliface.h에서 찾을 수 있습니다.  
+>  ATL 등록자에 대 한 소스 코드 atlmfc\include\atliface.h에서 찾을 수 있습니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [등록자 스크립트 만들기](../atl/creating-registrar-scripts.md)  
- 등록자 스크립트를 만들기에 가이드입니다.  BNF 구문, 구문 분석 트리, 레지스트리 스크립트 예제 대체 가능 매개 변수 사용 및 스크립트 호출에 대 한 항목이 포함 되어 있습니다.  
+ 등록자 스크립트를 생성 하는 지침입니다. BNF 구문, 구문 분석 트리, 레지스트리 스크립트 예제, 대체 가능 매개 변수를 사용 하 여 스크립트를 호출 하는 방식에 대 한 항목을 포함 합니다.  
   
- [등록자 코드 \(C\+\+만\)에 대 한 정적 링크를 설정합니다.](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
- 등록자에 정적 링크 설정 하는 단계를 나열 합니다.  
+ [등록 기관 코드 (c + + 전용)에 대 한 정적 링크가 설정](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+ 등록자에 게 정적 연결을 설정 하는 단계를 나열 합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 액티브 템플릿 라이브러리를 사용 하 여 프로그래밍 하는 방법에 개념 항목에 대 한 링크를 제공 합니다.
+ 액티브 템플릿 라이브러리를 사용하여 프로그래밍하는 방법에 대한 개념 항목의 링크를 제공합니다.
+

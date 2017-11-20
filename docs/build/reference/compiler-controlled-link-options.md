@@ -1,56 +1,55 @@
 ---
 title: "컴파일러 제어 LINK 옵션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe 컴파일러[C++], 링커 제어"
-  - "cl.exe 컴파일러[C++], 링크에 영향을 주는 기능"
-  - "LINK 도구[C++], 컴파일러 제어 옵션"
-  - "링커[C++], CL 컴파일러 제어"
-  - "링크[C++], CL 기능에 의한 영향"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: link
+dev_langs: C++
+helpviewer_keywords:
+- LINK tool [C++], compiler-controlled options
+- linker [C++], CL compiler control
+- linking [C++], affected by CL features
+- cl.exe compiler [C++], features that affect linking
+- cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a0d73d46d17e14d5ce55a171887e693c425765ce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 제어 LINK 옵션
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-CL 컴파일러에서는 \/c 옵션을 지정하지 않으면 자동으로 LINK를 호출합니다.  CL에서는 명령줄 옵션과 인수를 사용하여 링커를 제어할 수 있습니다.  다음은 링크에 영향을 주는 CL 기능입니다.  
+# <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
+/C 옵션을 지정 하지 않으면 CL 컴파일러 링크를 자동으로 호출 합니다. CL에서는 링커 명령줄 옵션 및 인수를 제어할 수 있습니다. 다음 표에서 연결에 영향을 주는 CL 기능을 요약 합니다.  
   
-|CL 사양|LINK에 영향을 주는 CL 동작|  
-|-----------|------------------------|  
-|c, .cxx, .cpp, .def 이외의 모든 파일 확장명|파일 이름을 LINK에 입력으로 전달합니다.|  
-|*filename*.def|\/DEF:*filename*.def를 전달합니다.|  
-|\/F`number`|\/STACK:`number`를 전달합니다.|  
-|\/Fd*filename*|\/PDB:*filename*을 전달합니다.|  
-|\/Fe*filename*|\/OUT:*filename*을 전달합니다.|  
-|\/Fm*filename*|\/MAP:*filename*을 전달합니다.|  
-|\/Gy|패키지 함수\(COMDAT\)를 만들어 함수 수준 링크를 활성화합니다.|  
-|\/LD|\/DLL을 전달합니다.|  
-|\/LDd|\/DLL을 전달합니다.|  
-|\/link|명령줄의 나머지 부분을 LINK에 전달합니다.|  
-|\/MD 또는 \/MT|기본 라이브러리 이름을 .obj 파일에 넣습니다.|  
-|\/MDd 또는 \/MTd|기본 라이브러리 이름을 .obj 파일에 넣고  **\_DEBUG** 기호를 정의합니다.|  
-|\/nologo|\/NOLOGO를 전달합니다.|  
-|\/Zd|\/DEBUG를 전달합니다.|  
-|\/Zi, \/Z7|\/DEBUG를 전달합니다.|  
-|\/Zl|.obj 파일에서 기본 라이브러리 이름을 생략합니다.|  
+|CL 사양|링크에 영향을 주는 CL 작업|  
+|----------------------|---------------------------------|  
+|.C,.cxx,.cpp 또는.def 이외의 모든 파일 이름 확장명|파일 이름을 링크에 대 한 입력으로 전달합니다.|  
+|*filename*.def|/DEF 전달:*filename*.def|  
+|/F*번호*|/STACK 전달:*번호*|  
+|/Fd*파일 이름*|/PDB 전달:*파일 이름*|  
+|/Fe*파일 이름*|전달/출력:*파일 이름*|  
+|/Fm*파일 이름*|전달 /MAP:*파일 이름*|  
+|/Gy|패키지 함수를 만들어 (Comdat); 함수 수준 링크 사용|  
+|/LD|/DLL 전달|  
+|/LDd|/DLL 전달|  
+|/link|명령줄의 나머지 부분을 LINK에 전달합니다.|  
+|/MD 또는 /MT|.Obj 파일에 기본 라이브러리 이름을 배치합니다|  
+|/Mdd 또는 /MTd|.Obj 파일에 기본 라이브러리 이름을 배치합니다. 기호를 정의 **_DEBUG**|  
+|/nologo|/NOLOGO 전달|  
+|/Zd|/DEBUG 전달|  
+|/Zi 또는 /Z7|/DEBUG 전달|  
+|/Zl|.Obj 파일에서 기본 라이브러리 이름 생략|  
   
- 자세한 정보는 [컴파일러 옵션](../../build/reference/compiler-options.md)을 참조하십시오.  
+ 자세한 내용은 [컴파일러 옵션](../../build/reference/compiler-options.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

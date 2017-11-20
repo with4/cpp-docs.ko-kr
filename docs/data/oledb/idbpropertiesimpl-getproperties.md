@@ -1,64 +1,63 @@
 ---
-title: "IDBPropertiesImpl::GetProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBPropertiesImpl::GetProperties"
-  - "IDBPropertiesImpl.GetProperties"
-  - "GetProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetProperties 메서드"
+title: 'Idbpropertiesimpl:: Getproperties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBPropertiesImpl::GetProperties
+- IDBPropertiesImpl.GetProperties
+- GetProperties
+dev_langs: C++
+helpviewer_keywords: GetProperties method
 ms.assetid: ab24aebd-366d-49a1-b49b-bb46c6d90f05
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6e066e525def0a983d6912774f2e27e2af045a01
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IDBPropertiesImpl::GetProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Returns the values of properties in the Data Source, Data Source Information, and Initialization property groups that are currently set on the data source object or the values of properties in the Initialization property group that are currently set on the enumerator.  
+# <a name="idbpropertiesimplgetproperties"></a>IDBPropertiesImpl::GetProperties
+데이터 원본 개체 또는에 현재 설정 된 Initialization 속성 그룹에서 속성의 값에 대해 현재 설정 되어 있는 데이터 원본, 데이터 원본 정보 및 초기화 속성 그룹에서 속성의 값을 반환 합니다.는 열거자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      STDMETHOD(GetProperties)(   
-   ULONG cPropertySets,   
-   const DBPROPIDSET rgPropertySets[],   
-   ULONG * pcProperties,   
-   DBPROPSET ** prgProperties    
+      STDMETHOD(GetProperties)(   
+   ULONG cPropertySets,   
+   const DBPROPIDSET rgPropertySets[],   
+   ULONG * pcProperties,   
+   DBPROPSET ** prgProperties    
 );  
 ```  
   
-#### 매개 변수  
- See [IDBProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms714344.aspx) in the *OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [IDBProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms714344.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
- Some parameters correspond to *OLE DB Programmer's Reference* parameters of different names, which are described in **IDBProperties::GetProperties**:  
+ 에 해당 하는 일부 매개 변수 *OLE DB Programmer's Reference* 매개 변수에서 설명 하는 다른 이름의 **IDBProperties::GetProperties**:  
   
-|OLE DB Template parameters|*OLE DB Programmer's Reference* parameters|  
+|OLE DB 템플릿 매개 변수|*OLE DB Programmer's Reference* 매개 변수|  
 |--------------------------------|------------------------------------------------|  
 |`cPropertySets`|`cPropertyIDSets`|  
 |`rgPropertySets`|`rgPropertyIDSets`|  
 |*pcProperties*|*pcPropertySets*|  
 |*prgProperties*|*prgPropertySets*|  
   
-## 설명  
- If the provider is initialized, this method returns the values of properties in the **DBPROPSET\_DATASOURCE**, **DBPROPSET\_DATASOURCEINFO**, **DBPROPSET\_DBINIT** property groups that are currently set on the data source object.  If the provider is not initialized, it returns **DBPROPSET\_DBINIT** group properties only.  
+## <a name="remarks"></a>설명  
+ 이 메서드가 반환에서 속성의 값 공급자가 초기화 하는 경우는 **DBPROPSET_DATASOURCE**, **DBPROPSET_DATASOURCEINFO**, **DBPROPSET_DBINIT** 현재 데이터 원본 개체에 설정 된 속성 그룹입니다. 공급자 초기화 되지 않은 경우 반환 **DBPROPSET_DBINIT** 만 속성을 그룹화 합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IDBPropertiesImpl 클래스](../../data/oledb/idbpropertiesimpl-class.md)   
- [IDBPropertiesImpl::GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)   
+ [Idbpropertiesimpl:: Getpropertyinfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)   
  [IDBPropertiesImpl::SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)

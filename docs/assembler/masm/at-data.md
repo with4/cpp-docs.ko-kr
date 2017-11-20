@@ -1,33 +1,30 @@
 ---
-title: "@data | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@data symbol"
+title: '@data| Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@data'
+dev_langs: C++
+helpviewer_keywords: '@data symbol'
 ms.assetid: d3e99fb0-4c9e-40a8-9e2d-15de3b01a2fe
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 59e68b8f5c5b98c761bbccb46d09d79ba5e38163
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# @data
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-기본 데이터 그룹의 이름입니다.  DGROUP에 제외한 모든 모델 계산  **플랫**.  계산  **플랫** 아래는  **플랫** 메모리 모델 \(텍스트 매크로\).  
+# <a name="data"></a>@data
+기본 데이터 그룹의 이름입니다. DGROUP 제외 하 고 모든 모델에 대 한 계산 **플랫**합니다. 계산 **플랫** 아래는 **플랫** 메모리 내 모델 (텍스트 매크로).  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,5 +32,5 @@ manager: "ghogen"
   
 ```  
   
-## 참고 항목  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [기호 참조](../../assembler/masm/symbols-reference.md)

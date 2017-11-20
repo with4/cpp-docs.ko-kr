@@ -1,29 +1,27 @@
 ---
-title: "함수 이름을 () 없이 사용하면 코드가 생성되지 않음 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "함수[C++], 괄호 없이 사용"
+title: "() 코드가 생성 되지 않음 없이 함수 이름을 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 79f360bffa4938098b4b37dd2260596c70669d12
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 함수 이름을 () 없이 사용하면 코드가 생성되지 않음
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-프로그램에서 선언된 함수 이름을 괄호 없이 사용하면 컴파일러에서 코드를 생성하지 않습니다.   이러한 결과는 매개 변수 사용 여부에 관계없이 발생하는데, 컴파일러에서 함수 주소를 계산하지만 함수 호출 연산자인 “\(\)”가 없기 때문에 호출은 이루어지지 않습니다.  이 결과는 다음과 유사합니다.  
+# <a name="using-function-name-without--produces-no-code"></a>함수 이름을 () 없이 사용하면 코드가 생성되지 않음
+프로그램에 선언 된 함수 이름, 괄호 없이 사용 하는 경우 컴파일러는 코드를 생성 하지 않습니다. 이 컴파일러; 함수 주소를 계산 하기 때문에 함수 매개 변수를 사용 하는 여부에 관계 없이 오류 발생 그러나 함수 호출 연산자 (")" 없기 때문에 대 한 호출이 이루어집니다. 이 결과 다음과 비슷합니다.  
   
 ```  
 // compile with /Wall to generate a warning  
@@ -31,9 +29,9 @@ int a;
 a;      // no code generated here either  
 ```  
   
- Visual C\+\+에서는 경고 수준 4를 사용하는 경우에도 진단 결과가 생성되지 않습니다.  경고 메시지도 나타나지 않고 코드도 생성되지 않습니다.  
+ Visual c + + 카드로 경고 수준 4를 사용 하 여 불일치 진단 출력을 생성 합니다. 경고가 발생 하지 않습니다. 코드가 생성 됩니다.  
   
- 다음 예제 코드에서는 경고와 함께 컴파일하고 오류 없이 제대로 링크되지만 `funcn( )`에 관한 코드는 생성하지 않습니다.  이 코드가 올바르게 작동되도록 하려면 함수 호출 연산자인 "\(\)"를 추가하십시오.  
+ 아래 샘플 코드에서는 (경고)와 함께 오류 없이 제대로 링크 되지만 코드가 생성 되지 않음에 대 한 참조 `funcn( )`합니다. 이 제대로 작동 하려면에 대 한 함수 호출 연산자 (")"를 추가 합니다.  
   
 ```  
 #include <stdio.h>  
@@ -49,5 +47,5 @@ void funcn() {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코드 최적화](../../build/reference/optimizing-your-code.md)

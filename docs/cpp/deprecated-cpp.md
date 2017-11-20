@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- deprecated_cpp
-dev_langs:
-- C++
+f1_keywords: deprecated_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9ac25648e2d19da82f6c213992699c237e05c01e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d3ec06d469f6fc71b23c9bdc6a67e5ed741d9f5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="deprecated-c"></a>사용되지 않음 (C++)
 이 항목은 Microsoft 전용에 대 한 declspec 선언 사용 되지 않습니다. C + + 14에 대 한 내용은 `[[deprecated]]` 특성 및 해당 특성 및 Microsoft 전용 declspec 또는 pragma를 사용 하는 경우에 대 한 지침 참조 [c + + 표준 특성](attributes2.md)합니다.

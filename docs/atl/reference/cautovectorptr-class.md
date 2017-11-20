@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,18 @@ f1_keywords:
 - ATLBASE/ATL::CAutoVectorPtr::Detach
 - ATLBASE/ATL::CAutoVectorPtr::Free
 - ATLBASE/ATL::CAutoVectorPtr::m_p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtr class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8234018b2f6faf8585186491413ecbd688a3b32f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 304f21e226e88f4c18b218ac580d82fdb2f776a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 클래스
 이 클래스는 새 벡터를 사용 하 여 스마트 포인터 개체를 나타내는 및 delete 연산자입니다.  
@@ -96,7 +78,7 @@ class CAutoVectorPtr
 |[CAutoVectorPtr::m_p](#m_p)|포인터 데이터 멤버 변수입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스는 만들고 범위에서 벗어나면 자동으로 리소스를 해제 하 여 메모리 누수를 방지 하는 데 도움이 됩니다는 스마트 포인터를 관리 하기 위한 메서드를 제공 합니다. `CAutoVectorPtr`유사한 `CAutoPtr`, 유일한 차이점은 하 `CAutoVectorPtr` 사용 하 여 [벡터 new &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) 및 [삭제 &#91; &#93; 벡터](../../standard-library/new-operators.md#op_delete_arr) 대신 c + + 메모리 할당과 해제를 **새** 및 **삭제** 연산자. 참조 [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) 경우의 컬렉션 클래스 `CAutoVectorPtr` 필요 합니다.  
+ 이 클래스는 만들고 범위에서 벗어나면 자동으로 리소스를 해제 하 여 메모리 누수를 방지 하는 데 도움이 됩니다는 스마트 포인터를 관리 하기 위한 메서드를 제공 합니다. `CAutoVectorPtr`유사한 `CAutoPtr`, 유일한 차이점은는 `CAutoVectorPtr` 사용 하 여 [벡터 new &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) 및 [삭제 &#91; &#93; 벡터](../../standard-library/new-operators.md#op_delete_arr) 대신 메모리 할당과 해제를 c + + **새** 및 **삭제** 연산자입니다. 참조 [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) 경우의 컬렉션 클래스 `CAutoVectorPtr` 필요 합니다.  
 
   
  참조 [CAutoPtr](../../atl/reference/cautoptr-class.md) 스마트 포인터 클래스를 사용 하는 예제에 대 한 합니다.  
@@ -226,4 +208,3 @@ operator T*() const throw();
 ## <a name="see-also"></a>참고 항목  
  [CAutoPtr 클래스](../../atl/reference/cautoptr-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

@@ -1,37 +1,35 @@
 ---
-title: "REAL8 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "REAL8"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "REAL8 directive"
+title: REAL8 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: REAL8
+dev_langs: C++
+helpviewer_keywords: REAL8 directive
 ms.assetid: 757244ea-e4c9-4fc9-94ec-16313578bede
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 150007a260ff62850361bcd43775e49590bf8106
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# REAL8
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\(선택 사항\) \(8 바이트\) 배정밀도 부동 소수점 숫자를 각각에 대 한 초기화를 할당 하 고  *이니셜라이저*.  
+# <a name="real8"></a>REAL8
+할당 및 각각에 대 한 이중 정밀도 (8 바이트) 부동 소수점 숫자를 선택적으로 초기화 *이니셜라이저*합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 name REAL8 initializer [[, initializer]]...  
 ```  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

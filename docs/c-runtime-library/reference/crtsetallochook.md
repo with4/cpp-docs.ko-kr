@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetAllocHook
+apiname: _CrtSetAllocHook
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetAllocHook
 - CrtSetAllocHook
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtSetAllocHook function
 - CrtSetAllocHook function
 ms.assetid: 405df37b-2fd1-42c8-83bc-90887f17f29d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: fa03fb135907d9f516544f5f4b202c9f4e779fc3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: a614e37c8fe106289d1530a9dac01daee8b8a88a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
 클라이언트 정의 할당 함수를 C 런타임 디버그 메모리 할당 프로세스에 연결함으로써 설치합니다(디버그 버전에만 해당).  

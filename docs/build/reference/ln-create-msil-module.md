@@ -1,61 +1,60 @@
 ---
-title: "/LN(MSIL 모듈 만들기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/LN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LN 컴파일러 옵션[C++]"
-  - "-LN 컴파일러 옵션[C++]"
+title: "-LN (MSIL 모듈 만들기) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /LN
+dev_langs: C++
+helpviewer_keywords:
+- -LN compiler option [C++]
+- /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 807fd762ab2780b70a395f62efbc72945228b1fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /LN(MSIL 모듈 만들기)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ln-create-msil-module"></a>/LN(MSIL 모듈 만들기)
 어셈블리 매니페스트를 출력 파일에 삽입하지 않도록 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /LN  
 ```  
   
-## 설명  
- 기본값은 **\/LN**이 적용되지 않고 어셈블리 매니페스트가 출력 파일에 삽입되는 것입니다.  
+## <a name="remarks"></a>설명  
+ 기본적으로 **/LN** (어셈블리 매니페스트는 출력 파일에 삽입 됩니다.) 적용 되지 않습니다.  
   
- **\/LN**을 사용하는 경우 [\/clr\(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md) 옵션 중 하나를 함께 사용해야 합니다.  
+ 때 **/LN** 을 사용 하는 중 하나는 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 옵션 사용 해야 합니다.  
   
- 매니페스트에 어셈블리 메타데이터가 없는 관리되는 프로그램을 모듈이라고 합니다.  [\/c\(링크 없이 컴파일\)](../../build/reference/c-compile-without-linking.md) 및 **\/LN**을 사용하여 컴파일하는 경우 링커 단계에서 [\/NOASSEMBLY\(MSIL 모듈 만들기\)](../../build/reference/noassembly-create-a-msil-module.md)를 지정하여 출력 파일을 만듭니다.  
+ 매니페스트에 어셈블리 메타 데이터가 없는 관리 되는 프로그램 모듈을 이라고 합니다. 사용 하 여 컴파일하면 [/c (컴파일 없이 링크 사용)](../../build/reference/c-compile-without-linking.md) 및 **/LN**, 지정 [/NOASSEMBLY (MSIL 모듈 만들기)](../../build/reference/noassembly-create-a-msil-module.md) 링커 단계 출력 파일을 만듭니다.  
   
- 구성 요소를 기반으로 한 방식을 사용하여 어셈블리를 빌드하려는 경우 모듈을 만들 수 있습니다.  즉, 형식을 작성하고 이를 모듈로 컴파일할 수 있습니다.  그런 다음 하나 이상의 모듈에서 어셈블리를 생성할 수 있습니다.  모듈에서 어셈블리를 만드는 방법에 대한 자세한 내용은 [링커 입력 파일로 사용하는 .netmodule 파일](../../build/reference/netmodule-files-as-linker-input.md) 또는 [Al.exe\(어셈블리 링커\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)를 참조하십시오.  
+ 원하는 하는 구성 요소 기반 방식을 사용 어셈블리를 빌드 하려는 경우 모듈을 만들 수 있습니다.  즉, 형식 제작 하 고 모듈에 컴파일할 수 있습니다.  그런 다음 하나 이상의 모듈에서 어셈블리를 생성할 수 있습니다.  모듈에서 어셈블리를 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [링커 입력 파일로.netmodule 파일](../../build/reference/netmodule-files-as-linker-input.md) 또는 [Al.exe (어셈블리 링커)](/dotnet/framework/tools/al-exe-assembly-linker)합니다.  
   
- 모듈의 기본 확장명은 .netmodule입니다.  
+ 모듈의 기본 파일 확장명은 .netmodule입니다.  
   
- Visual C\+\+ 2005 이전의 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 릴리스에서는 **\/clr:noAssembly**를 사용하여 모듈을 생성하였습니다.  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Visual c + + 2005 이전 버전에서 모듈을 사용 하 여 만든 된 **/clr:noAssembly**합니다.  
   
- Visual C\+\+ 링커 입력으로.netmodule 파일을 수락 하 고 어셈블리 또는.netmodule를 링커에 입력 된 중에 런타임에 종속 하지를 사용 하 여.netmodule 링커에 의해 생성 된 출력 파일 수 있습니다.  자세한 내용은 [링커 입력 파일로 사용하는 .netmodule 파일](../../build/reference/netmodule-files-as-linker-input.md)을 참조하십시오.  
+ Visual C++ 링커는 .netmodule 파일을 입력을 받아들이며, 링커에서 생성된 출력 파일은 링커에 입력된 .netmodules에 대해 런타임 종속성이 없는 어셈블리 또는 .netmodule입니다.  자세한 내용은 [링커 입력 파일로 사용하는 .netmodule 파일](../../build/reference/netmodule-files-as-linker-input.md)을 참조하세요.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
--   링커 단계에서 [\/NOASSEMBLY\(MSIL 모듈 만들기\)](../../build/reference/noassembly-create-a-msil-module.md)를 지정하여 출력 파일을 만듭니다.  
+-   지정 [/NOASSEMBLY (MSIL 모듈 만들기)](../../build/reference/noassembly-create-a-msil-module.md) 링커 단계 출력 파일을 만듭니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   이 컴파일러 옵션은 프로그래밍 방식으로 변경할 수 없습니다.  
+-   이 컴파일러 옵션을 프로그래밍 방식으로 변경할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

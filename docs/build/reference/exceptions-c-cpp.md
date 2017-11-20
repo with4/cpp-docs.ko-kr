@@ -1,43 +1,42 @@
 ---
-title: "예외(C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ERROR_MOD_NOT_FOUND"
-  - "vcppException"
-  - "ERROR_SEVERITY_ERROR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 예외 처리, 지연 DLL 로드"
-  - "지연 DLL 로드, 예외"
-  - "ERROR_MOD_NOT_FOUND 예외"
-  - "ERROR_SEVERITY_ERROR 예외"
-  - "vcppException"
+title: "예외 (C/c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ERROR_MOD_NOT_FOUND
+- vcppException
+- ERROR_SEVERITY_ERROR
+dev_langs: C++
+helpviewer_keywords:
+- vcppException
+- C++ exception handling, delayed loading of DLLs
+- delayed loading of DLLs, exceptions
+- ERROR_SEVERITY_ERROR exception
+- ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 40d78e9246d0bb682d63ae094f96123dd4b883e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 예외(C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-오류가 발생하면 다음과 같은 두 가지 예외 코드가 발생할 수 있습니다.  
+# <a name="exceptions-cc"></a>예외(C/C++)
+오류가 발생 한 경우 두 개의 예외 코드를 늘릴 수 있습니다.  
   
--   **LoadLibrary** 오류에 대한 예외 코드  
+-   에 대 한는 **LoadLibrary** 실패  
   
--   **GetProcAddress** 오류에 대한 예외 코드  
+-   에 대 한는 **GetProcAddress** 실패  
   
- 다음은 예외 정보입니다.  
+ 예외 정보는 다음과 같습니다.  
   
 ```  
 //  
@@ -47,11 +46,11 @@ manager: "ghogen"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- throw되는 예외 코드는 표준 VcppException\(ERROR\_SEVERITY\_ERROR, ERROR\_MOD\_NOT\_FOUND\) 및 VcppException\(ERROR\_SEVERITY\_ERROR, ERROR\_PROC\_NOT\_FOUND\) 값입니다.  이 예외는 포인터를 LPDWORD 값의 형식으로 **DelayLoadInfo** 구조체에 전달합니다. 이 값은 [EXCEPTION\_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) 구조체의 ExceptionInformation\[0\] 필드에서 **GetExceptionInformation**으로 검색할 수 있습니다.  
+ 발생 한 예외 코드는 표준 VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) 및 (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) VcppException 값입니다. 예외에 대 한 포인터를 전달 된 **DelayLoadInfo** 하 여 검색할 수 있는 LPDWORD 값에는 구조 **GetExceptionInformation** 에 [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) 구조 [0] ExceptionInformation 필드입니다.  
   
- 또한 grAttrs 필드의 비트가 잘못 설정된 경우 ERROR\_INVALID\_PARAMETER 예외가 throw됩니다.  이 예외는 치명적입니다.  
+ 또한 grAttrs 필드에 잘못 된 비트가 설정 되는 경우 예외 ERROR_INVALID_PARAMETER throw 됩니다. 이 예외는, 예 모든 용도 치명적입니다.  
   
- 자세한 내용은 [구조체 및 상수 정의](../../build/reference/structure-and-constant-definitions.md)를 참조하십시오.  
+ 참조 [구조체 및 상수 정의](../../build/reference/structure-and-constant-definitions.md) 자세한 정보에 대 한 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 처리 및 알림](../../build/reference/error-handling-and-notification.md)

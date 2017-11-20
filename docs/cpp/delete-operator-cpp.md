@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- delete_cpp
-dev_langs:
-- C++
+f1_keywords: delete_cpp
+dev_langs: C++
 helpviewer_keywords:
 - delete keyword [C++], syntax
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bfc2587b4d55ae0147adf797990139356d44cd30
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 9b12d0e20ebb355eb8422784ae0921f693279117
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="delete-operator-c"></a>delete 연산자 (C++)
 메모리 블록을 할당 취소합니다.  
@@ -105,4 +101,3 @@ int main()
  [키워드](../cpp/keywords-cpp.md)   
  [new 및 delete 연산자](../cpp/new-and-delete-operators.md)   
  
-

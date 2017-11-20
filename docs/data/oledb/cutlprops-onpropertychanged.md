@@ -1,34 +1,33 @@
 ---
-title: "CUtlProps::OnPropertyChanged | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OnPropertyChanged"
-  - "CUtlProps.OnPropertyChanged"
-  - "CUtlProps::OnPropertyChanged"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnPropertyChanged 메서드"
+title: 'Cutlprops:: Onpropertychanged | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OnPropertyChanged
+- CUtlProps.OnPropertyChanged
+- CUtlProps::OnPropertyChanged
+dev_langs: C++
+helpviewer_keywords: OnPropertyChanged method
 ms.assetid: c5924210-b685-46c4-87f8-1b81e5bd3378
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b517bfe6ef3cc93b6edf647d137491ef78c0f716
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CUtlProps::OnPropertyChanged
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Called after setting a property to handle chained properties.  
+# <a name="cutlpropsonpropertychanged"></a>CUtlProps::OnPropertyChanged
+연결 된 속성을 처리 하는 속성을 설정한 후 호출 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -38,26 +37,26 @@ Called after setting a property to handle chained properties.
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `iCurSet`  
- The index into the property\-set array; zero if there is only one property set.  
+ 속성 집합 배열;에 대 한 인덱스 하나의 속성 집합이 있는 경우 0입니다.  
   
  `pDBProp`  
- The property ID and new value in a [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx) structure.  
+ 속성 ID와에 새 값을 [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx) 구조입니다.  
   
-## 반환 값  
- A standard `HRESULT`.  The default return value is `S_OK`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다. 기본 반환 값은 `S_OK`합니다.  
   
-## 설명  
- If you want to handle chained properties, such as bookmarks or updates whose values are dependent on another property's value, you should override this function.  
+## <a name="remarks"></a>설명  
+ 책갈피나 다른 속성의 값에 의존 하는 값을 포함 하는 업데이트와 같은 연결 된 속성을 처리 하려는 경우이 함수를 재정의 해야 합니다.  
   
-## 예제  
- In this function, the user gets the property ID from the `DBPROP*` parameter.  Now, it is possible to compare the ID against a property to chain.  When the property is found, `SetProperties` is called with the property that will now be set in conjunction with the other property.  In this case, if one gets the `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, or `DBPROP_ORDEREDBOOKMARKS` property, one can set the `DBPROP_BOOKMARKS` property.  
+## <a name="example"></a>예제  
+ 이 함수를 사용자에서 속성 ID를 가져옵니다는 `DBPROP*` 매개 변수입니다. 이제 체인으로 연결 속성에 대해 ID와 비교 하는 것이 같습니다. 속성을 찾을 때 `SetProperties` 속성을 다른 속성과 함께에서 설정 될 것으로 호출 합니다. 이 경우 하나를 가져오면는 `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, 또는 `DBPROP_ORDEREDBOOKMARKS` 속성을 하나 설정할 수 있습니다는 `DBPROP_BOOKMARKS` 속성입니다.  
   
- [!CODE [NVC_OLEDB_Provider#2](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Provider#2)]  
+ [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CUtlProps 클래스](../../data/oledb/cutlprops-class.md)

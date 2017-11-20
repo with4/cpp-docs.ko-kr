@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _putenv
 - wputenv
 - tputenv
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _putenv function
 - environment variables, deleting
@@ -43,30 +41,15 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: d91f7b780c8f17fbe1e12a195b6a7cf2eaad3d2f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 5fdb0ee73b6ee289a97e3debfb7b4b5427ba003f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 환경 변수를 생성, 수정 또는 제거합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)를 참조하세요.  
@@ -92,7 +75,7 @@ int _wputenv(
 ## <a name="return-value"></a>반환 값  
  성공 하면 0 또는 오류 발생 시도-1을 반환 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `_putenv` 함수는 새 환경 변수를 추가하거나 기존 환경 변수의 값을 수정합니다. 환경 변수는 프로세스가 실행되는 환경을 정의합니다(예: 프로그램에 연결할 라이브러리의 기본 검색 경로). `_wputenv`은 `_putenv`의 와이드 문자 버전이며, `envstring`에 대한 `_wputenv` 인수는 와이드 문자열입니다.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -53,35 +52,18 @@ f1_keywords:
 - ATLPATH/ATL::CPathT::StripToRoot
 - ATLPATH/ATL::CPathT::UnquoteSpaces
 - ATLPATH/ATL::CPathT::m_strPath
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPathT class
+dev_langs: C++
+helpviewer_keywords: CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: c9abb6a20beca39e8224ab3d3724da9664f68702
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cpatht-class"></a>CPathT 클래스
 이 클래스는 경로 나타냅니다.  
@@ -127,7 +109,7 @@ class CPathT
 |[CPathT::Canonicalize](#canonicalize)|경로 정규 형식으로 변환 하려면이 메서드를 호출 합니다.|  
 |[CPathT::Combine](#combine)|디렉터리 이름을 나타내는 문자열을 한 경로로 파일 경로 이름을 나타내는 문자열을 연결 하려면이 메서드를 호출 합니다.|  
 |[CPathT::CommonPrefix](#commonprefix)|지정된 된 경로 현재 경로와 공통 접두사를 공유 하는지 여부를 확인 하려면이 메서드를 호출 합니다.|  
-|[CPathT::CompactPath](#compactpath)|경로 구성 요소는 줄임표로 대체 하 여 지정 된 픽셀 너비에 맞게 파일 경로 자르는 데이 메서드를 호출 합니다.|  
+|[CPathT::CompactPath](#compactpath)|파일 경로 줄임표로 경로 구성 요소를 대체 하 여 지정 된 픽셀 너비에 맞게 자르는 데이 메서드를 호출 합니다.|  
 |[CPathT::CompactPathEx](#compactpathex)|파일 경로 줄임표로 경로 구성 요소를 대체 하 여 지정된 된 수의 문자 내에 맞게 자르는 데이 메서드를 호출 합니다.|  
 |[CPathT::FileExists](#fileexists)|이 경로 이름에 파일이 있는지 확인 하려면이 메서드를 호출 합니다.|  
 |[CPathT::FindExtension](#findextension)|경로 내에서 파일 확장명의 위치를 찾으려면이 메서드를 호출 합니다.|  
@@ -151,7 +133,7 @@ class CPathT
 |[CPathT::RemoveBackslash](#removebackslash)|경로에서 뒤의 백슬래시를 제거 하려면이 메서드를 호출 합니다.|  
 |[CPathT::RemoveBlanks](#removeblanks)|경로에서 모든 선행 및 후행 공백을 제거 하려면이 메서드를 호출 합니다.|  
 |[CPathT::RemoveExtension](#removeextension)|있는 경우 경로에서 파일 확장명을 제거 하려면이 메서드를 호출 합니다.|  
-|[CPathT::RemoveFileSpec](#removefilespec)|에 있는 경우 경로에서 뒤에 오는 파일 이름과 백슬래시를 제거 하려면이 메서드를 호출 합니다.|  
+|[CPathT::RemoveFileSpec](#removefilespec)|에 있는 경우 경로에서 후행 파일 이름과 백슬래시를 제거 하려면이 메서드를 호출 합니다.|  
 |[CPathT::RenameExtension](#renameextension)|새 확장명과 경로에 파일 이름 확장명을 바꾸려면이 메서드를 호출 합니다. 파일 이름 확장명 없으면 확장 문자열의 끝에 연결 됩니다.|  
 |[CPathT::SkipRoot](#skiproot)|드라이브 문자나 UNC 서버/공유 경로 부분을 무시 합니다. 경로 구문 분석 하려면이 메서드를 호출 합니다.|  
 |[CPathT::StripPath](#strippath)|정규화 된 경로 파일 이름을의 경로 부분을 제거 하려면이 메서드를 호출 합니다.|  
@@ -162,9 +144,9 @@ class CPathT
   
 |이름|설명|  
 |----------|-----------------|  
-|[CPathT::operator const StringType / /](#operator_const_stringtype_amp)|이 연산자는 문자열 처럼 처리 개체 수 있습니다.|  
+|[CPathT::operator const StringType &](#operator_const_stringtype_amp)|이 연산자는 문자열 처럼 처리 개체 수 있습니다.|  
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|이 연산자는 문자열 처럼 처리 개체 수 있습니다.|  
-|[CPathT::operator StringType / /](#operator_stringtype)|이 연산자는 문자열 처럼 처리 개체 수 있습니다.|  
+|[CPathT::operator StringType &](#operator_stringtype)|이 연산자는 문자열 처럼 처리 개체 수 있습니다.|  
 |[CPathT::operator + =](#operator_add_eq)|이 연산자는 경로에 문자열을 추가 합니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
@@ -192,7 +174,7 @@ class CPathT
 void AddBackslash();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561)합니다.  
   
 ##  <a name="addextension"></a>CPathT::AddExtension  
@@ -240,7 +222,7 @@ void BuildRoot(int iDrive);
  *iDrive*  
  드라이브 번호 (0은 a:, 1은 b:, 및 등).  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)합니다.  
   
 ##  <a name="canonicalize"></a>CPathT::Canonicalize  
@@ -267,7 +249,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  *pszFile*  
  파일 경로입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571)합니다.  
   
 ##  <a name="commonprefix"></a>CPathT::CommonPrefix  
@@ -284,11 +266,11 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 ### <a name="return-value"></a>반환 값  
  공통 접두사를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  접두사는 이러한 형식 중 하나: "c:\\\\",".","..","... \\\\". 자세한 내용은 참조 [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)합니다.  
   
 ##  <a name="compactpath"></a>CPathT::CompactPath  
- 경로 구성 요소는 줄임표로 대체 하 여 지정 된 픽셀 너비에 맞게 파일 경로 자르는 데이 메서드를 호출 합니다.  
+ 파일 경로 줄임표로 경로 구성 요소를 대체 하 여 지정 된 픽셀 너비에 맞게 자르는 데이 메서드를 호출 합니다.  
   
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -304,7 +286,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 ### <a name="return-value"></a>반환 값  
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)합니다.  
   
 ##  <a name="compactpathex"></a>CPathT::CompactPathEx  
@@ -353,7 +335,7 @@ BOOL FileExists() const;
 ### <a name="return-value"></a>반환 값  
  파일이 있는지, false를 반환 하지 않으면 TRUE를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)합니다.  
   
 ##  <a name="findextension"></a>CPathT::FindExtension  
@@ -366,7 +348,7 @@ int FindExtension() const;
 ### <a name="return-value"></a>반환 값  
  위치를 반환 하는 "." 확장명 앞에 합니다. 확장명이 없는 경우-1을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)합니다.  
   
 ##  <a name="findfilename"></a>CPathT::FindFileName  
@@ -377,7 +359,7 @@ int FindFileName() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 파일 이름의 위치를 반환 합니다. 파일 이름은 없으므로 없으면-1을 반환 합니다.  
+ 파일 이름의 위치를 반환 합니다. 파일 이름이 없는 경우-1을 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)합니다.  
@@ -392,7 +374,7 @@ int GetDriveNumber() const;
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면 경로 드라이브 문자 또는-1부터 25 (에 해당 하는 'A'-'Z')는 0에서 정수 드라이브 수를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)합니다.  
   
 ##  <a name="getextension"></a>CPathT::GetExtension  
@@ -471,7 +453,7 @@ BOOL IsRoot() const;
 ### <a name="return-value"></a>반환 값  
  경로 루트 또는 FALSE는 그렇지 않은 경우 TRUE를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)합니다.  
   
 ##  <a name="issameroot"></a>CPathT::IsSameRoot  
@@ -501,7 +483,7 @@ BOOL IsUNC() const;
 ### <a name="return-value"></a>반환 값  
  경로가 올바른 UNC 경로 또는 FALSE 그렇지 않은 경우 TRUE를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)합니다.  
   
 ##  <a name="isuncserver"></a>CPathT::IsUNCServer  
@@ -514,7 +496,7 @@ BOOL IsUNCServer() const;
 ### <a name="return-value"></a>반환 값  
  않으면 문자열은 올바른 (공유 이름 없음)만 서버에 대 한 UNC 경로 또는 FALSE 그렇지 않으면 TRUE를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)합니다.  
   
 ##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare  
@@ -527,7 +509,7 @@ BOOL IsUNCServerShare() const;
 ### <a name="return-value"></a>반환 값  
  형태로 경로 이면 TRUE를 반환 합니다. \\ \  *서버*\ *공유*, FALSE 또는 그렇지 않은 경우.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)합니다.  
   
 ##  <a name="m_strpath"></a>CPathT::m_strPath  
@@ -537,7 +519,7 @@ BOOL IsUNCServerShare() const;
 StringType m_strPath;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `StringType`템플릿 매개 변수는 `CPathT`합니다.  
   
 ##  <a name="makepretty"></a>CPathT::MakePretty  
@@ -550,7 +532,7 @@ BOOL MakePretty();
 ### <a name="return-value"></a>반환 값  
  그렇지 않은 경우 경로 변환 하는 경우 TRUE 또는 FALSE를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)합니다.  
   
 ##  <a name="matchspec"></a>CPathT::MatchSpec  
@@ -567,7 +549,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면 문자열 일치 하는 경우 TRUE 또는 FALSE를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)합니다.  
   
 ##  <a name="operator_add_eq"></a>CPathT::operator + =  
@@ -641,7 +623,7 @@ typedef StringType::PXSTR PXSTR;
 void QuoteSpaces();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)합니다.  
   
 ##  <a name="relativepathto"></a>CPathT::RelativePathTo  
@@ -671,7 +653,7 @@ BOOL RelativePathTo(
 ### <a name="return-value"></a>반환 값  
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740)합니다.  
   
 ##  <a name="removeargs"></a>CPathT::RemoveArgs  
@@ -681,7 +663,7 @@ BOOL RelativePathTo(
 void RemoveArgs();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)합니다.  
   
 ##  <a name="removebackslash"></a>CPathT::RemoveBackslash  
@@ -701,7 +683,7 @@ void RemoveBackslash();
 void RemoveBlanks();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)합니다.  
   
 ##  <a name="removeextension"></a>CPathT::RemoveExtension  
@@ -711,11 +693,11 @@ void RemoveBlanks();
 void RemoveExtension();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)합니다.  
   
 ##  <a name="removefilespec"></a>CPathT::RemoveFileSpec  
- 에 있는 경우 경로에서 뒤에 오는 파일 이름과 백슬래시를 제거 하려면이 메서드를 호출 합니다.  
+ 에 있는 경우 경로에서 후행 파일 이름과 백슬래시를 제거 하려면이 메서드를 호출 합니다.  
   
 ```
 BOOL RemoveFileSpec();
@@ -724,7 +706,7 @@ BOOL RemoveFileSpec();
 ### <a name="return-value"></a>반환 값  
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)합니다.  
   
 ##  <a name="renameextension"></a>CPathT::RenameExtension  
@@ -754,7 +736,7 @@ int SkipRoot() const;
 ### <a name="return-value"></a>반환 값  
  루트 (드라이브 문자 또는 UNC 서버/공유) 뒤에 오는 하위 경로 시작 하는 위치를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)합니다.  
   
 ##  <a name="strippath"></a>CPathT::StripPath  
@@ -777,7 +759,7 @@ BOOL StripToRoot();
 ### <a name="return-value"></a>반환 값  
  그렇지 않은 경우 올바른 드라이브 문자가 있으면 TRUE를 반환은 경로 또는 FALSE 발견 되었습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  자세한 내용은 참조 [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)합니다.  
   
 ##  <a name="unquotespaces"></a>CPathT::UnquoteSpaces  

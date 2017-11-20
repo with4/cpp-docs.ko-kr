@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.codewiz.class.atl.control.interfaces
-dev_langs:
-- C++
-helpviewer_keywords:
-- ATL Control Wizard, interfaces
+f1_keywords: vc.codewiz.class.atl.control.interfaces
+dev_langs: C++
+helpviewer_keywords: ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: d3d93dc4e80178b1bdd90a6fe86e4a6f051f77f4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="interfaces-atl-control-wizard"></a>인터페이스, ATL 컨트롤 마법사
 마법사의이 페이지는 컨트롤이 지 원하는 인터페이스를 식별 합니다. 기본적으로 지원 되는 인터페이스는 일반적으로 대부분의 컨테이너에서 사용 하는 것입니다.  
@@ -47,5 +42,4 @@ ms.lasthandoff: 10/09/2017
   
 ## <a name="see-also"></a>참고 항목  
  [ATL 컨트롤 마법사](../../atl/reference/atl-control-wizard.md)
-
 

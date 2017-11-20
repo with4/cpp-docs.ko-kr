@@ -1,62 +1,62 @@
 ---
-title: "/LIBPATH(추가 Libpath) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/libpath"
-  - "VC.Project.VCLinkerTool.AdditionalLibraryDirectories"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LIBPATH 링커 옵션"
-  - "추가 Libpath 링커 옵션"
-  - "환경 라이브러리 경로 재정의"
-  - "LIBPATH 링커 옵션"
-  - "-LIBPATH 링커 옵션"
-  - "라이브러리 경로 링커 옵션"
+title: "-/LIBPATH (추가 Libpath) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /libpath
+- VC.Project.VCLinkerTool.AdditionalLibraryDirectories
+dev_langs: C++
+helpviewer_keywords:
+- LIBPATH linker option
+- /LIBPATH linker option
+- Additional Libpath linker option
+- environment library path override
+- -LIBPATH linker option
+- library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a2bef6a2294bab34cf9dfc59e352e1b79376b146
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /LIBPATH(추가 Libpath)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="libpath-additional-libpath"></a>/LIBPATH(추가 Libpath)
 ```  
 /LIBPATH:dir  
 ```  
   
-## 설명  
- 다음은 각 문자에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 여기서  
   
  `dir`  
- 링커에서 LIB 환경 옵션으로 지정된 경로를 검색하기 전에 먼저 검색할 경로를 지정합니다.  
+ 경로 지정 LIB 환경 옵션에 지정 된 경로 검색 하기 전에 링커가 검색 합니다.  
   
-## 설명  
- \/LIBPATH 옵션을 사용하면 환경 라이브러리 경로를 재정의할 수 있습니다.  링커에서는 이 옵션으로 지정된 경로에서 먼저 검색한 다음 LIB 환경 변수로 지정된 경로에서 검색합니다.  \/LIBPATH 옵션을 입력할 때마다 디렉터리는 하나만 지정할 수 있습니다.  디렉터리를 둘 이상 지정하려면 \/LIBPATH 옵션을 여러 개 지정해야 합니다.  링커에서는 지정된 순서대로 디렉터리를 검색합니다.  
+## <a name="remarks"></a>설명  
+ 환경 라이브러리 경로를 재정의할 /LIBPATH 옵션을 사용 합니다. 링커에서 먼저이 옵션을 지정 된 경로에서 검색 하 고 누른 다음 LIB 환경 변수에 지정 된 경로에서 검색 됩니다. 입력 하면 각 /LIBPATH 옵션에 대 한 디렉터리를 하나만 지정할 수 있습니다. 둘 이상의 디렉터리를 지정 하려는 경우에 여러 /LIBPATH 옵션을 지정 해야 합니다. 링커는 다음 순서에 지정 된 디렉터리를 검색 합니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
-3.  **일반** 속성 페이지를 클릭합니다.  
+3.  클릭는 **일반** 속성 페이지.  
   
-4.  **추가 라이브러리 디렉터리** 속성을 수정합니다.  
+4.  수정 된 **추가 라이브러리 디렉터리** 속성입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalLibraryDirectories%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalLibraryDirectories%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

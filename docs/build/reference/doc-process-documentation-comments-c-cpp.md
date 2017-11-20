@@ -1,72 +1,69 @@
 ---
-title: "/doc(문서 주석 처리)(C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles"
-  - "/doc"
-  - "VC.Project.VCCLCompilerTool.XMLDocumentationFileName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/doc 컴파일러 옵션[C++]"
-  - "주석, C++ 코드"
-  - "-doc 컴파일러 옵션[C++]"
-  - "XML 문서, 소스 파일의 주석"
+title: "-doc (문서 주석 처리) (C/c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
+- /doc
+- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
+dev_langs: C++
+helpviewer_keywords:
+- /doc compiler option [C++]
+- comments, C++ code
+- XML documentation, comments in source files
+- -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 083eb8742308f986e3261711039bbd29a914d97e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /doc(문서 주석 처리)(C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-컴파일러가 소스 코드 파일의 문서 주석을 처리할 수 있도록 하고 문서 주석이 있는 각 소스 코드 파일에 대해 .xdc 파일을 만들 수 있도록 합니다.  
+# <a name="doc-process-documentation-comments-cc"></a>/doc(문서 주석 처리)(C/C++)
+컴파일러가 문서 주석을 소스 코드 파일에서 및 문서 주석이 있는 있는 각 소스 코드 파일에 대 한.xdc 파일을 만들려면 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /doc[name]  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  `name`  
- 컴파일러가 만드는 .xdc 파일의 이름입니다.  문서에 .cpp 파일 하나를 전달한 경우에만 유효합니다.  
+ 컴파일러를 만들.xdc 파일의 이름입니다. 하나의.cpp 파일이 컴파일에 전달 될 때만 유효 합니다.  
   
-## 설명  
- .xdc 파일은 xdcmake.exe를 사용하여 .xml 파일로 처리됩니다.  자세한 내용은 [XDCMake 참조](../../ide/xdcmake-reference.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ .Xdc 파일 xdcmake.exe와.xml 파일로 처리 됩니다. 자세한 내용은 참조 [XDCMake 참조](../../ide/xdcmake-reference.md)합니다.  
   
- 소스 코드 파일에 문서 주석을 추가할 수 있습니다.  자세한 내용은 [문서 주석에 대한 권장 태그](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md)을 참조하십시오.  
+ 소스 코드 파일에 문서 주석을 추가할 수 있습니다. 자세한 내용은 참조 [문서 주석에 대 한 권장 태그](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md)합니다.  
   
- **\/doc**이 **\/clr:oldSyntax**과 호환되지 않는 경우.  자세한 내용은 [\/clr\(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md)를 참조하십시오.  
+ 생성된 된.xml 파일에서 IntelliSense를 사용 하려면 어셈블리와 같은 디렉터리에는 지원 하 고이.xml 파일을 추가 하려는 어셈블리와 동일 하 게 하는.xml 파일의 파일 이름을 확인 합니다. Visual Studio 프로젝트에 어셈블리 참조 되는.xml 파일을 찾을 됩니다. 자세한 내용은 참조 [IntelliSense를 사용 하 여](/visualstudio/ide/using-intellisense) 및 [XML 코드 주석 제공](/visualstudio/ide/supplying-xml-code-comments)합니다.  
   
- 생성된 .xml 파일을 IntelliSense와 함께 사용하려면, .xml 파일의 파일 이름을 지원하려는 어셈블리와 같도록 설정한 다음 해당 .xml 파일을 어셈블리와 같은 디렉터리에 넣습니다.  Visual Studio 프로젝트에서 이 어셈블리가 참조되는 경우에는 해당 .xml 파일도 함께 찾습니다.  자세한 내용은 [IntelliSense 사용](../Topic/Using%20IntelliSense.md) 및 [XML 코드 주석 제공](../Topic/Supplying%20XML%20Code%20Comments.md)를 참조하십시오.  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+2.  확장 된 **구성 속성** 노드.  
   
-2.  **구성 속성** 노드를 확장합니다.  
+3.  확장 된 **C/c + +** 노드.  
   
-3.  **C\/C\+\+** 노드를 확장합니다.  
+4.  선택 된 **출력 파일** 속성 페이지.  
   
-4.  **출력 파일** 속성 페이지를 선택합니다.  
+5.  수정 된 **XML 문서 파일 생성** 속성입니다.  
   
-5.  **XML 문서 파일 생성** 속성을 수정합니다.  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+1.  <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>을 참조하세요.  
   
-1.  <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>를 참조하십시오.  
-  
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

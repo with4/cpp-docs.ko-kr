@@ -1,39 +1,38 @@
 ---
-title: "/LOADCONFIG | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/loadconfig"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LOADCONFIG dumpbin 옵션"
-  - "LOADCONFIG dumpbin 옵션"
-  - "-LOADCONFIG dumpbin 옵션"
+title: -LOADCONFIG | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /loadconfig
+dev_langs: C++
+helpviewer_keywords:
+- LOADCONFIG dumpbin option
+- -LOADCONFIG dumpbin option
+- /LOADCONFIG dumpbin option
 ms.assetid: 24667afe-9bee-4f6e-ae72-f534c0050428
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4742c3c84ba7f6421bf7976544fa06106b441775
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /LOADCONFIG
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="loadconfig"></a>/LOADCONFIG
 ```  
 /LOADCONFIG  
 ```  
   
-## 설명  
- 이 옵션은 Windows NT 로더에서 사용하고 WINNT.H에 정의된 선택적 구조체인 IMAGE\_LOAD\_CONFIG\_DIRECTORY 구조체를 덤프합니다.  
+## <a name="remarks"></a>설명  
+ 이 옵션은 IMAGE_LOAD_CONFIG_DIRECTORY 구조, Windows NT 로더에 의해 사용 되 고 WINNT에 정의 하는 선택적 구조를 덤프 합니다. 8.  
   
- [\/HEADERS](../../build/reference/headers.md) DUMPBIN 옵션은 [\/GL](../../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션으로 만든 파일에만 사용할 수 있습니다.  
+ 만 [/HEADERS](../../build/reference/headers.md) DUMPBIN 옵션은으로 생성 된 파일에서 사용 하기 위해 사용할 수는 [/GL](../../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DUMPBIN 옵션](../../build/reference/dumpbin-options.md)

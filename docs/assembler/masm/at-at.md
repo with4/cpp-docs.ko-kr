@@ -1,33 +1,30 @@
 ---
-title: "@@: | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@@:"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@@: symbol"
+title: '@@: | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@@:'
+dev_langs: C++
+helpviewer_keywords: '@@: symbol'
 ms.assetid: 4c0aa730-d534-4efd-9608-54d683d78654
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f46da8128325cb92b83a1d0c8503b248d38c65aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# @@:
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-사이 에서만 인식할 수 있는 코드 레이블 정의  *label1* 및  *레이블 2*, 어디  *label1* 코드 처음 이거나 이전 `@@:` 레이블, 및  *레이블 2* 코드 이거나 다음 `@@:` 레이블.  See [@B](../../assembler/masm/at-b.md) and [@F](../../assembler/masm/at-f.md).  
+# <a name=""></a>@@:
+사이만 인식할 수 있는 코드 레이블을 정의 *label1* 및 *label2*여기서 *label1* 은 코드의 시작 또는 이전 `@@:` 레이블과 *label2* 은 코드의 끝 또는 다음 `@@:` 레이블. 참조 [ @B ](../../assembler/masm/at-b.md) 및 [ @F ](../../assembler/masm/at-f.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,5 +32,5 @@ manager: "ghogen"
   
 ```  
   
-## 참고 항목  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [기호 참조](../../assembler/masm/symbols-reference.md)

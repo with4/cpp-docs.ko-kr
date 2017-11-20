@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactory2::GetLicInfo
 - ATLCOM/ATL::CComClassFactory2::LockServer
 - ATLCOM/ATL::CComClassFactory2::RequestLicKey
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactory2 class
+dev_langs: C++
+helpviewer_keywords: CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 61026044fb5a4da7bebfe8f369c68af4c37ebf44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: ce8588ff1ca3349100b608c8ebf4085d7464a235
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 클래스
 이 클래스가 구현 하는 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) 인터페이스입니다.  
@@ -64,7 +46,7 @@ class CComClassFactory2 : public IClassFactory2,
   
 - **정적 BOOL VerifyLicenseKey (BSTR** `bstr` **);**  
   
-- **정적 BOOL GetLicenseKey (DWORD** `dwReserved` **, BSTR\*** `pBstr` **);**  
+- **정적 BOOL GetLicenseKey (DWORD** `dwReserved` **, BSTR\***  `pBstr` **);**  
   
 - **정적 BOOL IsLicenseValid ();**  
   
@@ -85,11 +67,11 @@ class CComClassFactory2 : public IClassFactory2,
   
  ATL 개체에서 파생 하 여 일반적으로 클래스 팩터리를 획득 [CComCoClass](../../atl/reference/ccomcoclass-class.md)합니다. 이 클래스는 매크로 포함 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)를 선언 하는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 기본 클래스 팩터리로 합니다. 사용 하도록 `CComClassFactory2`, 지정는 [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) 개체의 클래스 정의에 매크로입니다. 예:  
   
- [!code-cpp[NVC_ATL_COM #2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
  **CMyLicense**를 템플릿 매개 변수를 `CComClassFactory2`, 정적 함수를 구현 해야 `VerifyLicenseKey`, `GetLicenseKey`, 및 `IsLicenseValid`합니다. 다음은 간단한 라이선스 클래스의 예입니다.  
   
- [!code-cpp[NVC_ATL_COM #3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
  `CComClassFactory2`둘 다에서 파생 **CComClassFactory2Base** 및 *라이선스*합니다. **CComClassFactory2Base**,에서 파생 **IClassFactory2** 및 **CComObjectRootEx\< CComGlobalsThreadModel >**합니다.  
   
@@ -127,11 +109,11 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  완벽 하 게 사용 허가 받아야 하는 컴퓨터가 필요 합니다. 전체 컴퓨터 라이선스가 없는 경우 호출 [CreateInstanceLic](#createinstancelic)합니다.  
   
 ##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
- 유사한 [CreateInstance](#createinstance)제외 하 고 `CreateInstanceLic` 라이센스 키가 필요 합니다.  
+ 비슷한 [CreateInstance](#createinstance)제외 하 고 `CreateInstanceLic` 라이센스 키가 필요 합니다.  
   
 ```
 STDMETHOD(CreateInstanceLic)(
@@ -162,7 +144,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  라이선스 사용 하 여 키를 가져올 수 있습니다 [RequestLicKey](#requestlickey)합니다. 호출 해야 허가 되지 않은 컴퓨터에 있는 개체를 만들려면 `CreateInstanceLic`합니다.  
   
 ##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
@@ -179,7 +161,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `fRuntimeKeyAvail` 이 구조체의 멤버 수 있는지 여부를, 라이선스 키가 지정 된, 클래스 팩터리 개체를 않은 시스템에서 만들 수를 나타냅니다. *fLicVerified* 멤버는 전체 컴퓨터 라이선스 있는지 여부를 나타냅니다.  
   
 ##  <a name="lockserver"></a>CComClassFactory2::LockServer  
@@ -210,7 +192,7 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
   
 ### <a name="parameters"></a>매개 변수  
  `dwReserved`  
- [in] 사용 되지 않습니다. 0이어야 합니다.  
+ [in] 사용 되지 않습니다. 0 이어야 합니다.  
   
  `pbstrKey`  
  [out] 라이선스 키에 대 한 포인터입니다.  
@@ -229,4 +211,3 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
  [CComObjectRootEx 클래스](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

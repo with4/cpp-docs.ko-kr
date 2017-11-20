@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,20 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 76a95ed5c32b2125112b64ef4368e4a82f0acec0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: aab3048667099a698bd4aff928c7a23d7fbb01e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 클래스
 이 클래스는 모달 또는 모덜리스 대화 상자를 생성 하기 위한 메서드를 제공 합니다.  
@@ -100,8 +83,8 @@ template <class T,
 |[DialogProc](#dialogproc)|대화 상자에 전송 된 메시지를 처리 합니다.|  
 |[StartDialogProc](#startdialogproc)|대화 상자에 전송 된 메시지를 처리 하는 첫 번째 메시지를 받을 때 호출 됩니다.|  
   
-## <a name="remarks"></a>주의  
- 와 `CDialogImpl` 모달 또는 모덜리스 대화 상자를 만들 수 있습니다. `CDialogImpl`적절 한 처리기에 메시지를 보낼 기본 메시지 맵을 사용 하 여 대화 상자 프로시저를 제공 합니다.  
+## <a name="remarks"></a>설명  
+ 와 `CDialogImpl` 모달 또는 모덜리스 대화 상자를 만들 수 있습니다. `CDialogImpl`기본 메시지 맵을 메시지를 적절 한 처리기를 사용 하 여 대화 상자 프로시저를 제공 합니다.  
   
  기본 클래스 소멸자 **~ CWindowImplRoot** 하면 창 개체를 제거 하기 전에 완료 됩니다.  
   
@@ -110,7 +93,7 @@ template <class T,
 > [!NOTE]
 >  클래스를 정의 해야는 **IDD** 대화 상자 템플릿 리소스 id입니다. 지정 하는 멤버 예를 들어, ATL 프로젝트 마법사는 자동으로 클래스에 다음 줄을 추가합니다.  
   
- [!code-cpp[NVC_ATL_Windowing # 41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
   
  여기서 `MyDlg` 는 **약식 이름** 는 마법사에서 입력 한 **이름** 페이지.  
   
@@ -119,7 +102,7 @@ template <class T,
 |컨트롤 만들기|[ATL 자습서](../../atl/active-template-library-atl-tutorial.md)|  
 |Atl에서 대화 상자를 사용 하 여|[ATL 창 클래스](../../atl/atl-window-classes.md)|  
 |ATL 프로젝트 마법사|[ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)|  
-|대화 상자|[대화 상자](http://msdn.microsoft.com/library/windows/desktop/ms632588) 및 후속 항목에는[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|대화 상자|[대화 상자](http://msdn.microsoft.com/library/windows/desktop/ms632588) 및 Windows SDK의 후속 항목|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
@@ -142,7 +125,7 @@ HWND Create(
  `hWndParent`  
  [in] 소유자 창 핸들입니다.  
   
- **RECT / /**`rect`  
+ **RECT &**`rect`  
  [in] A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 대화 상자의 크기와 위치를 지정 하는 구조입니다.  
   
  `dwInitParam`  
@@ -151,7 +134,7 @@ HWND Create(
 ### <a name="return-value"></a>반환 값  
  새로 만든된 대화 상자에 대 한 핸들입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 대화 상자에 자동으로 연결 되는 `CDialogImpl` 개체입니다. 모달 대화 상자를 만들려면 호출 [DoModal](#domodal)합니다. 위의 두 번째 재정의에 사용 됩니다 [CComControl](../../atl/reference/ccomcontrol-class.md)합니다.  
   
 ##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
@@ -167,7 +150,7 @@ BOOL DestroyWindow();
 ### <a name="return-value"></a>반환 값  
  **True 이면** 대화 상자 했으면 성공적으로 제거 된 **FALSE**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 **TRUE** 대화 상자 했으면 성공적으로 제거 된 **FALSE**합니다.  
   
 ##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
@@ -200,7 +183,7 @@ static LRESULT CALLBACK DialogProc(
 ### <a name="return-value"></a>반환 값  
  **True 이면** 처리 되 고, 그렇지 않으면 메시지가 있으면 **FALSE**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `DialogProc`기본 메시지 맵을 사용 하 여 메시지를 적절 한 처리기.  
   
  재정의할 수 `DialogProc` 메시지를 처리 하기 위한 다른 메커니즘을 제공 합니다.  
@@ -243,7 +226,7 @@ BOOL EndDialog(int nRetCode);
 ### <a name="return-value"></a>반환 값  
  **True 이면** 대화 상자가 고, 그렇지 않으면 제거 된 **FALSE**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `EndDialog`대화 상자 프로시저를 통해 호출 되어야 합니다. Windows 대화 상자 소멸 되기 후의 값을 사용 `nRetCode` 에 대 한 반환 값으로 `DoModal`, 대화 상자를 생성 합니다.  
   
 > [!NOTE]

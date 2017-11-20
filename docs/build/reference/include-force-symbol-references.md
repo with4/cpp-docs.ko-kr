@@ -1,68 +1,68 @@
 ---
-title: "/INCLUDE(강제 기호 참조) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/include"
-  - "VC.Project.VCLinkerTool.ForceSymbolReferences"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/INCLUDE 링커 옵션"
-  - "강제 기호 참조 링커 옵션"
-  - "INCLUDE 링커 옵션"
-  - "-INCLUDE 링커 옵션"
-  - "강제 기호 참조 링커"
-  - "기호, 기호 테이블에 추가"
+title: "--(강제 기호 참조)를 포함 하는 중 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /include
+- VC.Project.VCLinkerTool.ForceSymbolReferences
+dev_langs: C++
+helpviewer_keywords:
+- INCLUDE linker option
+- force symbol references linker option
+- symbol references linker force
+- /INCLUDE linker option
+- symbols, add to symbol table
+- -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 85fe7b45d17ea7263ca2445aaa97cbf007532e4a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /INCLUDE(강제 기호 참조)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="include-force-symbol-references"></a>/INCLUDE(강제 기호 참조)
 ```  
 /INCLUDE:symbol  
 ```  
   
-## 설명  
- 다음은 각 문자에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 여기서  
   
  `symbol`  
- 기호 테이블에 추가할 기호를 지정합니다.  
+ 기호 테이블에 추가 하는 기호를 지정 합니다.  
   
-## 설명  
- \/INCLUDE 옵션을 사용하면 지정된 기호를 기호 테이블에 추가하도록 링커에 지시할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ /INCLUDE 옵션을 지정된 된 기호를 기호 테이블에 추가 하도록 링커에 지시 합니다.  
   
- 기호를 여러 개 지정하려면 기호 이름 사이에 쉼표\(,\), 세미콜론\(;\) 또는 공백을 입력합니다.  명령줄에서는 각 기호에 대해 \/INCLUDE:`symbol`을 한 번씩 지정합니다.  
+ 여러 기호를 지정 하려면 쉼표 (,), 세미콜론 (;) 또는 기호 이름 사이 공백을 입력 합니다. 명령줄에서 지정 /INCLUDE:`symbol` 각 기호에 대해 한 번씩입니다.  
   
- 링커는 기호 정의가 포함되어 있는 개체를 프로그램에 추가하여 `symbol`을 확인합니다.  이 기능은 프로그램에 링크되지 않는 라이브러리 개체를 포함시킬 때 유용합니다.  
+ 링커 확인 `symbol` 프로그램에 기호 정의 포함 하는 개체를 추가 하 여 합니다. 이 기능은 그렇지 않은 경우 링크 되지 프로그램에 있는 라이브러리 개체를 포함 하는 데 유용 합니다.  
   
- 이 옵션을 사용하여 기호를 지정하면 [\/OPT:REF](../../build/reference/opt-optimizations.md)에 의한 해당 기호의 제거는 무시됩니다.  
+ 이 옵션을 사용 하 여 기호를 지정 하 여 해당 기호의 제거는 무시 [/opt: ref](../../build/reference/opt-optimizations.md)합니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
-3.  **입력** 속성 페이지를 클릭합니다.  
+3.  클릭는 **입력** 속성 페이지.  
   
-4.  **강제 기호 참조** 속성을 수정합니다.  
+4.  수정 된 **강제 기호 참조** 속성입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

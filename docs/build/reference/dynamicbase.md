@@ -1,47 +1,46 @@
 ---
-title: "/DYNAMICBASE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/dynamicbase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DYNAMICBASE editbin 옵션"
-  - "DYNAMICBASE editbin 옵션"
-  - "-DYNAMICBASE editbin 옵션"
+title: -DYNAMICBASE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /dynamicbase
+dev_langs: C++
+helpviewer_keywords:
+- -DYNAMICBASE editbin option
+- DYNAMICBASE editbin option
+- /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8b5af34353db3c5b7cebaf02e8ce6b1bd9518cc8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /DYNAMICBASE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ASLR\(주소 공간 레이아웃 불규칙화\)를 사용해서 로드 시 실행 가능 이미지를 임의로 릴리스할 수 있는지 여부를 지정합니다.  
+# <a name="dynamicbase"></a>/DYNAMICBASE
+ASLR(주소 공간 레이아웃 불규칙화)를 사용해서 로드 시 실행 가능 이미지를 임의로 릴리스할 수 있는지 여부를 다시 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 /DYNAMICBASE[:NO]  
 ```  
   
-## 설명  
- 기본적으로 링커는 **\/DYNAMICBASE** 옵션을 설정합니다.  
+## <a name="remarks"></a>설명  
+ 기본적으로 링커는 설정의 **/DYNAMICBASE** 옵션입니다.  
   
  이 옵션은 실행 가능 이미지의 헤더를 수정해서 로드 시 로더가 이미지의 기준 주소를 임의로 다시 지정할 수 있는지 여부를 나타냅니다.  
   
  ASLR은 Windows Vista, Windows Server 2008, Windows 7, Windows 8 및 Windows Server 2012에서 지원됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [EDITBIN 옵션](../../build/reference/editbin-options.md)   
- [Windows ISV 소프트웨어 보안 방어 \(영문\)](http://msdn.microsoft.com/library/bb430720.aspx)
+ [Windows ISV 소프트웨어 보안 방어](http://msdn.microsoft.com/library/bb430720.aspx)

@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
-- ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::InternalAddRef
 - ATLCOM/ATL::InternalRelease
@@ -25,35 +23,18 @@ f1_keywords:
 - ATLCOM/ATL::ObjectMain
 - ATLCOM/ATL::m_dwRef
 - ATLCOM/ATL::m_pOuterUnknown
-dev_langs:
-- C++
-helpviewer_keywords:
-- reference counting
+dev_langs: C++
+helpviewer_keywords: reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ff699c5d4620de01bd1f2ed1e3b87a4d77aa8396
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 987d8fcb8464ab691b915c576194f530cb50842e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 클래스
 이 클래스는 집계 되지 않은 원시 및 집계 개체에 대 한 개체 참조 개수 관리를 처리 하는 메서드를 제공 합니다.  
@@ -106,16 +87,16 @@ class CComObjectRootEx : public CComObjectRootBase
 |[m_dwRef](#m_dwref)|와 `m_pOuterUnknown`, 공용 구조체의 부분입니다. 개체의 참조 수를 보유 하는 집계 되지 않습니다 때 사용 되는 `AddRef` 및 **릴리스**합니다.|  
 |[m_pOuterUnknown](#m_pouterunknown)|와 `m_dwRef`, 공용 구조체의 부분입니다. 개체가 집계 되는 알 수 없는 외부에 대 한 포인터를 저장할 때 사용 됩니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CComObjectRootEx`집계 되지 않은 원시 및 집계 개체에 대 한 개체 참조 개수 관리를 처리합니다. 개체가 집계 되는 개체가 집계 되는 경우 알 수 없는 외부에 포인터를 보유 하는 경우 개체 참조 횟수를 보유 합니다. 집계 개체에 대 한 `CComObjectRootEx` 내부 개체의 오류를 생성, 처리를 메서드를 사용할 수 있으며 내부 인터페이스 릴리스될 때 삭제 되지 않도록에서 외부 개체 또는 내부 개체를 보호 하기 위해 삭제 됩니다.  
   
  COM 서버를 구현 하는 클래스에서 상속 해야 `CComObjectRootEx` 또는 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)합니다.  
   
- 클래스 정의 지정 하는 경우는 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) ATL 매크로의 인스턴스를 만들고 **CComPolyObject\<CYourClass >** 때 **IClassFactory::CreateInstance** 호출 됩니다. 만드는 동안 알 수 없는 외부의 값이 확인 됩니다. 이 경우 **NULL**, **IUnknown** 집계 되지 않은 원시 개체에 대 한 구현 됩니다. 알 수 없는 외부 없으면 **NULL**, **IUnknown** 집계 개체에 대 한 구현 됩니다.  
+ 클래스 정의 지정 하는 경우는 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) ATL 매크로의 인스턴스를 만들고 **CComPolyObject\<CYourClass >** 때 **IClassFactory:: CreateInstance** 호출 됩니다. 만드는 동안 알 수 없는 외부의 값이 확인 됩니다. 이 경우 **NULL**, **IUnknown** 집계 되지 않은 원시 개체에 대 한 구현 됩니다. 알 수 없는 외부 없으면 **NULL**, **IUnknown** 집계 개체에 대 한 구현 됩니다.  
   
- 클래스를 지정 하지 않는 경우는 `DECLARE_POLY_AGGREGATABLE` ATL 매크로의 인스턴스를 만들고 **CAggComObject\<CYourClass >** 인스턴스 또는 집계 개체에 대 한 **CComObject\<CYourClass >** 집계 되지 않은 원시 개체에 대 한 합니다.  
+ 클래스를 지정 하지 않는 경우는 `DECLARE_POLY_AGGREGATABLE` ATL 매크로의 인스턴스를 만들고 **CAggComObject\<CYourClass >** 집계 된 개체 또는 인스턴스 **CComObject\<CYourClass >** 집계 되지 않은 원시 개체에 대 한 합니다.  
   
- 사용 시의 이점은 `CComPolyObject` 두는 것을 방지 하는 `CComAggObject` 및 `CComObject` 모듈 집계 및 집계 되지 않은 원시 경우를 처리 합니다. 단일 `CComPolyObject` 두 경우 모두 처리 하는 개체입니다. 따라서 vtable의 복사본이 한 개만 및 함수에의 한 복사본만 모듈에서 존재 합니다. Vtable이 큰 경우 모듈 크기가 상당히 줄어들 수 있습니다이 있습니다. 그러나 vtable 작으면를 사용 하 여 `CComPolyObject` 집계 또는 집계 되지 않은 원시 개체에 대해 최적화 되어 있지 않으므로 조금 더 큰 모듈 크기는 발생할 수 있습니다는 `CComAggObject` 및 `CComObject`합니다.  
+ 사용 시의 이점은 `CComPolyObject` 두는 것을 방지 하는 `CComAggObject` 및 `CComObject` 모듈 집계 및 집계 되지 않은 원시 경우를 처리 합니다. 단일 `CComPolyObject` 두 경우 모두 처리 하는 개체입니다. 따라서 vtable의 복사본이 한 개만 및 함수에의 한 복사본만 모듈에서 존재 합니다. Vtable이 큰 경우 모듈 크기가 상당히 줄어들 수 있습니다이 있습니다. 그러나 vtable 작으면를 사용 하 여 `CComPolyObject` 조금 더 큰 모듈 크기는 집계 또는 집계 되지 않은 원시 개체에 대 한 최적화 되어 있지 않으므로 발생할 수 있습니다는 `CComAggObject` 및 `CComObject`합니다.  
   
  개체가 집계 되는, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 구현한 `CComAggObject` 또는 `CComPolyObject`합니다. 이러한 클래스에 위임 `QueryInterface`, `AddRef`, 및 **릴리스** 에 대 한 호출이 `CComObjectRootEx`의 `OuterQueryInterface`, `OuterAddRef`, 및 `OuterRelease` 알 수 없는 외부를 전달 해야 합니다. 일반적으로, 재정의 `CComObjectRootEx::FinalConstruct` 집계 된 모든 개체를 만들고 재정의 하려면 클래스에서 `CComObjectRootEx::FinalRelease` 를 해제 하기 위해 개체를 집계 합니다.  
   
@@ -157,7 +138,7 @@ HRESULT FinalConstruct();
 ### <a name="example"></a>예제  
  파생 된 클래스에서이 메서드를 재정의 하는 일반적으로 `CComObjectRootEx` 을 만드는 개체를 집계 합니다. 예:  
   
- [!code-cpp[NVC_ATL_COM #40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
  생성에 실패 하면 오류를 반환할 수 있습니다. 매크로 사용할 수도 있습니다 [DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) 외부 개체를에서 보호 하기 위해, 만드는 동안 집계 된 내부 개체를 증가 시키는 경우 참조 횟수 다음 감소 개수를 0으로를 삭제 합니다.  
   
@@ -178,7 +159,7 @@ HRESULT FinalConstruct();
 void FinalRelease();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본적으로 `CComObjectRootEx::FinalRelease` 는 아무 작업도 수행 합니다.  
   
  에 정리를 수행 `FinalRelease` 개체가 여전히 완전 하 게 된 지점에서 생성 하므로 클래스의 소멸자에 코드를 추가 하는 것이 좋습니다 `FinalRelease` 라고 합니다. 이렇게 하면 가장 많이 파생 된 클래스에서 제공 하는 메서드를 안전 하 게 액세스할 수 있습니다. 이 집계 된 모든 개체를 삭제 하기 전에 해제에 대 한 특히 중요 합니다.  
@@ -223,7 +204,7 @@ static HRESULT InternalQueryInterface(
 ### <a name="return-value"></a>반환 값  
  표준 중 하나 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `InternalQueryInterface`에서는 COM 맵 테이블의 인터페이스만 처리됩니다. 개체를 집계 하는 경우 `InternalQueryInterface` 알 수 없는 외부를 위임 하지 않습니다. 인터페이스에서는 COM 맵 테이블에 매크로 입력할 수 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) 또는 해당 변형 중 하나입니다.  
   
 ##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
@@ -258,7 +239,7 @@ void Lock();
 long m_dwRef;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  와 `m_pOuterUnknown`, 공용 구조체의 일부:  
   
  `union`  
@@ -281,7 +262,7 @@ IUnknown*
     m_pOuterUnknown;
 ```     
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  와 `m_dwRef`, 공용 구조체의 일부:  
   
  `union`  
@@ -307,13 +288,13 @@ static void WINAPI ObjectMain(bool bStarting);
  `bStarting`  
  [out] 값은 **true** 클래스 고, 그렇지 않으면 초기화 되 고 있으면 **false**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  값은 `bStarting` 매개 변수는 모듈은 되 고 있는지 여부를 나타냅니다. 초기화 되거나 종료 합니다. 기본 구현은 `ObjectMain` 아무 것도 수행 하지만 배열을 초기화 하거나 할당할 클래스에 대 한 리소스를 정리 하려면 클래스에서이 함수를 재정의할 수 있습니다. `ObjectMain` 클래스 인스턴스의 모든 요청 전에 호출 됩니다.  
   
- `ObjectMain`진입점 함수가 수행할 수 있는 작업의 형식을 제한 되어 있으므로 해당 DLL의 진입점에서 호출 됩니다. 이러한 제한 사항에 대 한 자세한 내용은 참조 하십시오. [런타임 라이브러리 동작](../../build/run-time-library-behavior.md) 및 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)합니다.  
+ `ObjectMain`진입점 함수가 수행할 수 있는 작업의 형식을 제한 되어 있으므로 해당 DLL의 진입점에서 호출 됩니다. 이러한 제한 사항에 대 한 자세한 내용은 참조 하십시오. [Dll 및 Visual c + + 런타임 라이브러리 동작](../../build/run-time-library-behavior.md) 및 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)합니다.  
   
 ### <a name="example"></a>예제  
- [!code-cpp[NVC_ATL_COM #41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
 ##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  집계의 알 수 없는 외부의 참조 횟수를 증가 시킵니다.  
@@ -350,7 +331,7 @@ ULONG OuterRelease();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 디버그가 아닌 빌드에서 항상 0을 반환합니다. 디버그 빌드에 진단에 대 한 유용 하거나 테스트 일 수 있는 값을 반환 합니다.  
+ 디버그가 아닌 빌드에서 항상 0을 반환합니다. 디버그 빌드에 진단에 대 한 유용한 또는 테스트 일 수 있는 값을 반환 합니다.  
   
 ##  <a name="unlock"></a>CComObjectRootEx::Unlock  
  이 메서드는 Win32 API 함수를 호출 스레드 모델 이면 다중 스레드 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), 어떤 릴리스 소유권 임계 영역 개체의 전용 데이터 멤버를 통해 얻은 합니다.  
@@ -359,7 +340,7 @@ ULONG OuterRelease();
 void Unlock();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  소유권을 획득 하는 스레드에서 호출 해야 `Lock`합니다. 호출할 때마다 `Lock` 해당 호출을 `Unlock` 임계 영역 소유권을 해제 하려면.  
   
  단일 스레드 스레드 모델 있으면이 메서드는 아무 작업도 수행 하지 않습니다.  
@@ -369,4 +350,3 @@ void Unlock();
  [CComObject 클래스](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject 클래스](../../atl/reference/ccompolyobject-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

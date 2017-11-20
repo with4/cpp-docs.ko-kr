@@ -1,32 +1,31 @@
 ---
 title: "필요한 값 계산 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "도우미 함수, 필요한 값 계산"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: helper functions, calculating necessary values
 ms.assetid: 4f037d0f-881a-4a48-a9d2-9f8872dfccb7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6351de62aa9141d98c5afabe1425d4586ca54371
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 필요한 값 계산
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-지연 도우미 루틴에서 계산해야 하는 두 가지 중요한 정보가 있습니다.  delayhlp.cpp에는 이 정보를 계산하는 데 사용되는 두 개의 인라인 함수가 있습니다.  
+# <a name="calculating-necessary-values"></a>필요한 값 계산
+두 가지 중요 한 정보를 지연 도우미 루틴에 의해 계산 해야 합니다. 이 위해이 정보를 계산 하기 위한 delayhlp.cpp에 두 개의 인라인 함수 있습니다.  
   
--   첫 번째 함수는 IAT\(가져오기 주소 테이블\), BIAT\(바인딩된 가져오기 주소 테이블\) 및 UIAT\(언바인딩된 가져오기 주소 테이블\)의 세 가지 테이블에서 현재 가져오기의 인덱스를 계산합니다.  
+-   첫 번째 계산에서 현재 가져오기 (가져오기 주소 테이블 (IAT), 바인딩된 가져오기 주소 테이블 (BIAT) 및 가져오기 주소 테이블 (uiat 언바인딩 된))의 세 가지 테이블의 인덱스입니다.  
   
--   두 번째 함수는 유효한 IAT의 가져오기 수를 셉니다.  
+-   두 번째 함수는 유효한 IAT의 가져오기 수를 계산합니다.  
   
 ```  
 // utility function for calculating the index of the current import  
@@ -50,5 +49,5 @@ CountOfImports(PCImgThunkData pitdBase) {
     }  
 ```  
   
-## 참고 항목  
- [Understanding the Helper Function](http://msdn.microsoft.com/ko-kr/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>참고 항목  
+ [도우미 함수 이해](understanding-the-helper-function.md)

@@ -1,42 +1,41 @@
 ---
-title: ".Sbr 파일 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".sbr 파일"
-  - "BSCMAKE, 입력 파일"
-  - "찾아보기 정보의 로컬 기호"
-  - "SBR 파일"
-  - "소스 브라우저 파일"
-  - "기호"
+title: "만들기는 합니다. Sbr 파일 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SBR files
+- BSCMAKE, input files
+- .sbr files
+- source browser files
+- local symbols in browse information
+- symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1fb3638f70d19d88228b8ff65eb78c479868f1b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# .Sbr 파일 만들기
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-BSCMAKE의 입력 파일은 .sbr 파일입니다.  컴파일러는 컴파일하는 각 개체 파일\(.obj\)에 대해 .sbr 파일을 만듭니다.  찾아보기 정보 파일을 빌드하거나 업데이트하는 경우 프로젝트의 모든 .sbr 파일이 디스크에 있어야 합니다.  
+# <a name="creating-an-sbr-file"></a>.Sbr 파일 만들기
+BSCMAKE에 대 한 입력된 파일은.sbr 파일입니다. 컴파일러는.sbr 파일을 컴파일하는 각 개체 파일 (.obj)을 만듭니다. 빌드하거나 찾아보기 정보 파일을 업데이트할 때 프로젝트에 대 한 모든.sbr 파일이 디스크에 제공 해야 합니다.  
   
- 가능한 모든 정보를 포함하여 .sbr 파일을 만들려면 [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)를 지정합니다.  
+ 지정 가능한 모든 정보를 사용 하 여.sbr 파일을 만들려면 [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)합니다.  
   
- 로컬 기호를 포함하지 않는 .sbr 파일을 만들려면 [\/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)를 지정합니다.  .sbr 파일에 로컬 기호가 있는 경우 BSCMAKE의 [\/El 옵션](../../build/reference/bscmake-options.md)을 사용하여 .bsc 파일에서 로컬 기호를 생략할 수 있습니다`.`  
+ 로컬 기호를 포함 하지 않는.sbr 파일을 만들려면 지정 [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)합니다. .Sbr 파일을 로컬 기호를 포함 하는 경우 생략할 수 있습니다 여전히.bsc 파일에서 BSCMAKE의를 사용 하 여 [/El 옵션](../../build/reference/bscmake-options.md)`.`  
   
- 전체 컴파일을 수행하지 않고 .sbr 파일을 만들 수 있습니다.  예를 들어 컴파일러에 \/Zs 옵션을 지정하여 구문 검사를 수행하고 \/FR 또는 \/Fr를 지정하면 전체 컴파일과 마찬가지로 .sbr 파일을 만들 수 있습니다.  
+ 전체 컴파일을 수행 하지 않고.sbr 파일을 만들 수 있습니다. 예를 들어 /Zs 옵션 구문 검사를 수행 하 고 여전히 /FR 또는 /Fr.를 지정 하는 경우.sbr 파일을 생성 하도록 컴파일러에에 지정할 수 있습니다.  
   
- .sbr 파일을 처음 패킹하여 참조되지 않은 정의를 제거하면 빌드 과정을 더 효율적으로 진행할 수 있습니다.  컴파일러는 .sbr 파일을 자동으로 패킹합니다.  
+ 빌드 프로세스 참조 되지 않은 정의 제거 하려면 먼저 압축 되는 모든.sbr 파일이 더 효율적일 수 있습니다. 컴파일러는 자동으로.sbr 파일을 압축합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [.Bsc 파일 빌드](../../build/reference/building-a-dot-bsc-file.md)

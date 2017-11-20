@@ -1,34 +1,34 @@
 ---
-title: "인라인 어셈블리에서 C++ 함수 호출 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 키워드[C++], 함수 호출"
-  - "함수 호출, C++ 함수"
-  - "함수 호출, 인라인 어셈블리"
-  - "함수[C++], 인라인 어셈블리에서 호출"
-  - "인라인 어셈블리, 함수 호출"
-  - "Visual C++, 함수"
+title: "인라인 어셈블리의 함수를 호출한 C | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- function calls, C functions
+- function calls, in inline assembly
+- functions [C], calling in inline assembly
+- Visual C, functions
+- inline assembly, calling functions
+- __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3cd162026792bf8458c3725011b583d1eeb00772
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 인라인 어셈블리에서 C 함수 호출
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 전용  
- `__asm` 블록은 C 라이브러리 루틴을 비롯한 C 함수를 호출할 수 있습니다.  다음 예제에서는 `printf` 라이브러리 루틴을 호출합니다.  
+# <a name="calling-c-functions-in-inline-assembly"></a>인라인 어셈블리에서 C 함수 호출
+## <a name="microsoft-specific"></a>Microsoft 전용  
+ `__asm` 블록은 C 라이브러리 루틴을 비롯한 C 함수를 호출할 수 있습니다. 다음 예제에서는 `printf` 라이브러리 루틴을 호출합니다.  
   
 ```  
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp  
@@ -58,7 +58,7 @@ int main( void )
 }  
 ```  
   
- 함수 인수가 스택에 전달되기 때문에 함수를 호출하기 전에 필요한 인수\(이전 예제에서는 문자열 포인터\)를 푸시하기만 하면 됩니다.  인수는 역순으로 푸시되므로 원하는 순서로 스택에서 나옵니다.  다음 C 문을 에뮬레이트하기 위해  
+ 함수 인수가 스택에 전달되기 때문에 함수를 호출하기 전에 필요한 인수(이전 예제에서는 문자열 포인터)를 푸시하기만 하면 됩니다. 인수는 역순으로 푸시되므로 원하는 순서로 스택에서 나옵니다. 다음 C 문을 에뮬레이트하기 위해  
   
 ```  
 printf( format, hello, world );  
@@ -68,5 +68,5 @@ printf( format, hello, world );
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [인라인 어셈블러](../../assembler/inline/inline-assembler.md)

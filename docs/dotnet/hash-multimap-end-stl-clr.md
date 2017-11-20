@@ -1,41 +1,39 @@
 ---
-title: "hash_multimap::end(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 멤버[STL/CLR]"
+title: 'hash_multimap:: end (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: e9354c40-6d48-4882-aaed-ccd9987f24a9
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 51a085f8a32024e17ebcce2f12033d5ed5b5be0f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::end(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapend-stlclr"></a>hash_multimap::end(STL/CLR)
 제어되는 시퀀스의 끝을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator end();  
 ```  
   
-## 설명  
- The member function returns a bidirectional iterator that points just beyond the end of the controlled sequence.  You use it to obtain an iterator that designates the end of the controlled sequence; its status doesn not change if the length of the controlled sequence changes.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어 된 시퀀스의 끝 바로 다음을 가리키는 양방향 반복기를 반환합니다. 제어 된 시퀀스의 끝을 지정 하는 반복기를 가져올 사용 해당 상태 대상이 제어 된 시퀀스의 길이가 변경 하는 경우 변경 되지 않습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multimap_end.cpp   
@@ -69,14 +67,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**\*\-\- \-\-end\(\) \= \[b 2\]**  
-**\*\-\-end\(\) \= \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --end() = [b 2]  
+*--end() = [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::begin(STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md)

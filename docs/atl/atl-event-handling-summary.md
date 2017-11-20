@@ -1,57 +1,59 @@
 ---
-title: "ATL Event Handling Summary | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "이벤트 처리, 구현"
+title: "ATL 이벤트 요약 처리 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8c4aec5679ae7a880bd5305037e880de9ff7d93a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ATL Event Handling Summary
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-일반적으로 COM 이벤트를 처리 하는 비교적 간단한 프로세스입니다.  세 가지 주요 단계가 있습니다.  
+# <a name="atl-event-handling-summary"></a>ATL 이벤트 처리 요약
+일반적으로 COM 이벤트를 처리 작업은 비교적 간단 합니다. 세 가지 주요 단계가 있습니다.  
   
--   개체에는 이벤트 인터페이스를 구현 합니다.  
+-   개체에 이벤트 인터페이스를 구현 합니다.  
   
--   이벤트 소스 개체가 이벤트를 수신 하려고 한다는 것을 권고 합니다.  
+-   개체 이벤트를 수신 하려는 이벤트 소스 하시기 바랍니다.  
   
--   이벤트 소스 개체는 더 이상 이벤트를 받아야 할 때에 싱.  
+-   개체가 더 이상 필요 없는 이벤트를 수신할 때 이벤트 소스가 unadvise 합니다.  
   
-## 인터페이스 구현  
- ATL을 이용해 인터페이스를 구현 하는 중 네 가지가 주  
+## <a name="implementing-the-interface"></a>인터페이스 구현  
+ 다음과 같이 네 가지 주요 ATL.를 사용 하 여 인터페이스 구현  
   
-|에서 파생|인터페이스 형식에 대 한 적절 한|모든 방법 \* 구현 해야|형식 라이브러리를 런타임에 필요|  
-|-----------|------------------------|--------------------|-----------------------|  
+|파생|인터페이스 형식에 대 한 적합 한|모든 메서드 * 구현 해야|런타임 시 형식 라이브러리가 필요|  
+|-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|  
 |인터페이스|Vtable|예|아니요|  
 |[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|이중|예|예|  
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|아니요|예|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|아니요|아니요|  
   
- \* 지원 ATL 클래스를 사용 하는 경우 절대로 구현 필수적인는  **IUnknown** 또는 `IDispatch` 방법을 수동으로.  
+ \*ATL 지원 클래스를 사용 하면 있습니다은 필요가 없으며 구현는 **IUnknown** 또는 `IDispatch` 메서드 수동으로 합니다.  
   
-## 싱 및 이벤트 소스를 바이  
- 조언 및 ATL 사용 하 여 이벤트 소스 바이 세 가지가 주  
+## <a name="advising-and-unadvising-the-event-source"></a>이벤트 소스를 바이 및 확인 하 라는  
+ 세 가지 주요 방법으로 확인 하 라는 및 바이 ATL.를 사용 하 여 이벤트 소스  
   
-|함수에 게 알리기|싱 함수|사용 하기에 가장 적합|쿠키를 추적 해야?|설명|  
-|---------------|----------|------------------|----------------|--------|  
-|[AtlAdvise](../Topic/AtlAdvise.md),  [CComPtrBase::Advise](../Topic/CComPtrBase::Advise.md)|[AtlUnadvise](../Topic/AtlUnadvise.md)|Vtable 또는 이중 인터페이스|예|`AtlAdvise`전역 ATL 함수가입니다.  `CComPtrBase::Advise`사용 하 여  [CComPtr](../atl/reference/ccomptr-class.md) 및  [CComQIPtr](../atl/reference/ccomqiptr-class.md).|  
-|[IDispEventSimpleImpl::DispEventAdvise](../Topic/IDispEventSimpleImpl::DispEventAdvise.md)|[IDispEventSimpleImpl::DispEventUnadvise](../Topic/IDispEventSimpleImpl::DispEventUnadvise.md)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) 또는  [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|아니요|보다 적은 매개 변수가 `AtlAdvise` 기본 클래스를 더 많은 작업 수행 하기 때문입니다.|  
-|[CComCompositeControl::AdviseSinkMap\(TRUE\)](../Topic/CComCompositeControl::AdviseSinkMap.md)|[CComCompositeControl::AdviseSinkMap\(FALSE\)](../Topic/CComCompositeControl::AdviseSinkMap.md)|합성 컨트롤에 ActiveX 컨트롤|아니요|`CComCompositeControl::AdviseSinkMap`맵 모든 엔트리를 이벤트 싱크를 권장 합니다.  동일한 함수가 항목 unadvises.  이 메서드가 자동으로 호출 되는 `CComCompositeControl` 클래스입니다.|  
-|[CAxDialogImpl::AdviseSinkMap\(TRUE\)](../Topic/CAxDialogImpl::AdviseSinkMap.md)|[CAxDialogImpl::AdviseSinkMap\(FALSE\)](../Topic/CAxDialogImpl::AdviseSinkMap.md)|ActiveX 컨트롤 대화 상자|아니요|`CAxDialogImpl::AdviseSinkMap`조언 및 모든 ActiveX 컨트롤을 대화 상자 리소스를 unadvises.  이 자동으로 수행 됩니다.|  
+|Advise 함수|Unadvise 함수|사용에 가장 적합 한|쿠키를 추적 하기 위해 해야 합니다.|설명|  
+|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
+
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable 또는 이중 인터페이스 | 예 | `AtlAdvise` 전역 ATL 함수입니다. `CComPtrBase::Advise`사용 하는 [CComPtr](../atl/reference/ccomptr-class.md) 및 [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
+
+|[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) 또는 [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| 더 | 매개 변수가 보다 적습니다 `AtlAdvise` 이후 기본 클래스는 더 많은 작업을 수행 합니다. |  
+|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| 복합 컨트롤의 ActiveX 컨트롤 | 더 | `CComCompositeControl::AdviseSinkMap` 모든 항목에 지도 이벤트 싱크 조언 합니다. 동일한 기능 unadvises 항목입니다. 이 메서드는 자동으로 `CComCompositeControl` 클래스입니다. |  
+|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)| 대화 상자에서 ActiveX 컨트롤 | 더 | `CAxDialogImpl::AdviseSinkMap` unadvises 대화 상자 리소스의 모든 ActiveX 컨트롤 및 조언 합니다. 이를 자동으로 수행 됩니다. |  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [이벤트 처리](../atl/event-handling-and-atl.md)   
- [Supporting IDispEventImpl](../atl/supporting-idispeventimpl.md)
+ [IDispEventImpl 지원](../atl/supporting-idispeventimpl.md)
+

@@ -1,48 +1,45 @@
 ---
-title: "MessageHandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MessageHandler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MessageHandler function"
+title: MessageHandler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MessageHandler
+dev_langs: C++
+helpviewer_keywords: MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cd6828f5c6b4f89b7d939e4fd909e72e3039b69f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# MessageHandler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**MessageHandler** 의 두 번째 매개 변수에 의해 식별 된 함수 이름이 있는 `MESSAGE_HANDLER` 메시지 맵의 매크로.  
+# <a name="messagehandler"></a>MessageHandler
+**MessageHandler** 의 두 번째 매개 변수에 의해 식별 된 함수 이름에서 `MESSAGE_HANDLER` 메시지 맵에서 매크로입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
-      LRESULT   
-      MessageHandler  
-      (  
-   UINT uMsg,  
-   WPARAM wParam,  
-   LPARAM lParam,  
-   BOOL& bHandled  
-);  
+ 
+    LRESULT 
+    MessageHandler 
+ (
+    UINT uMsg,  
+    WPARAM wParam,  
+    LPARAM lParam,  
+    BOOL& bHandled);
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `uMsg`  
- 메시지를 지정합니다.  
+ 메시지를 지정 합니다.  
   
  `wParam`  
  추가 메시지 관련 정보입니다.  
@@ -51,15 +48,16 @@ caps.handback.revision: 6
  추가 메시지 관련 정보입니다.  
   
  `bHandled`  
- 메시지 맵 세트 `bHandled` 에  **TRUE** 전에 `MessageHandler` 라고 합니다.  경우 `MessageHandler` 메시지를 완전히 처리 하지 않는 설정 해야 `bHandled` 에  **FALSE** 필요 합니다 라는 메시지가 더 이상 처리를 나타냅니다.  
+ 메시지 맵 집합 `bHandled` 를 **TRUE** 전에 `MessageHandler` 호출 됩니다. 경우 `MessageHandler` 메시지를 완전히 처리 하지 않는 설정 해야 `bHandled` 를 **FALSE** 를 나타내는 메시지에 추가 처리가 필요 합니다.  
   
-## 반환 값  
- 메시지 처리의 결과입니다.  성공한 경우 0입니다.  
+## <a name="return-value"></a>반환 값  
+ 메시지 처리의 결과입니다. 성공 하면 0입니다.  
   
-## 설명  
- 이 메시지 처리기에서 메시지 맵을 사용 하는 예제를 보려면  [MESSAGE\_HANDLER](../Topic/MESSAGE_HANDLER.md).  
+## <a name="remarks"></a>설명  
+ 이 메시지 처리기를 사용 하 여 메시지 맵에서 예제를 보려면 [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)합니다.  
   
-## 참고 항목  
- [Implementing a Window](../atl/implementing-a-window.md)   
- [Message Maps](../atl/message-maps-atl.md)   
- [WM\_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+## <a name="see-also"></a>참고 항목  
+ [창 구현](../atl/implementing-a-window.md)   
+ [메시지 맵](../atl/message-maps-atl.md)   
+ [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+

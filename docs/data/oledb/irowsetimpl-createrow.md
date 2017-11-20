@@ -1,36 +1,35 @@
 ---
-title: "IRowsetImpl::CreateRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl.CreateRow"
-  - "ATL.IRowsetImpl.CreateRow"
-  - "ATL::IRowsetImpl::CreateRow"
-  - "CreateRow"
-  - "IRowsetImpl::CreateRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateRow 메서드"
+title: 'Irowsetimpl:: Createrow | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetImpl.CreateRow
+- ATL.IRowsetImpl.CreateRow
+- ATL::IRowsetImpl::CreateRow
+- CreateRow
+- IRowsetImpl::CreateRow
+dev_langs: C++
+helpviewer_keywords: CreateRow method
 ms.assetid: b01c430c-9484-4fef-a6cf-a2e8d9d99130
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2f455935a1736eae2c70d95f4528d216a80e782a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::CreateRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A helper method called by [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) to allocate a new **HROW**.  
+# <a name="irowsetimplcreaterow"></a>IRowsetImpl::CreateRow
+호출 하는 도우미 메서드입니다 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 할당할 새 **HROW**합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -41,21 +40,21 @@ A helper method called by [GetNextRows](../../data/oledb/irowsetimpl-getnextrows
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *lRowsOffset*  
- Cursor position of the row being created.  
+ 만들고 있는 행의 커서 위치입니다.  
   
  *cRowsObtained*  
- A reference passed back to the user indicating the number of rows created.  
+ 대 한 참조가 생성 된 행의 수를 나타내는 사용자에 게 다시 전달 합니다.  
   
  *rgRows*  
- An array of **HROW**s returned to the caller with the newly created row handles.  
+ 배열을 **HROW**s 새로 만든된 행 핸들을 사용 하 여 호출자에 반환 합니다.  
   
-## 설명  
- If the row exists, this method calls [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) and returns.  Otherwise, it allocates a new instance of the RowClass template variable and adds it to [m\_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).  
+## <a name="remarks"></a>설명  
+ 이 메서드를 호출 하는 행이 있으면 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 를 반환 합니다. 그렇지 않으면, RowClass 템플릿 변수의 새 인스턴스를 할당를에 추가 [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IRowsetImpl 클래스](../../data/oledb/irowsetimpl-class.md)

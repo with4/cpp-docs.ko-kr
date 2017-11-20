@@ -1,30 +1,29 @@
 ---
-title: "ODBC를 사용하여 다른 사용자와 작업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC, 다른 사용자와 작업"
+title: "다른 사용자와 작업에는 ODBC를 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: ODBC, working with other users
 ms.assetid: 8ff18684-f62b-4027-b9b2-7c3b5d52bd89
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d4d324e16a40db6da5bef20ed5190cdac4f2279
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ODBC를 사용하여 다른 사용자와 작업
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-여러 사용자가 동일한 ODBC 데이터베이스로 작업하는 환경에서 ODBC를 사용합니다.  
+# <a name="use-odbc-to-work-with-other-users"></a>ODBC를 사용하여 다른 사용자와 작업
+여러 사용자가 같은 ODBC 데이터베이스는 사용 환경에서 ODBC를 사용 합니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
   
-## 참고 항목  
- [ODBC\(Open Database Connectivity\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>참고 항목  
+ [ODBC(Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

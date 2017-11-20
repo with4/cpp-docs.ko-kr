@@ -33,40 +33,24 @@ f1_keywords:
 - complex/casin
 - complex/casinf
 - complex/casinl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - casin function
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: dd48583e157389f23f9912d08f00abd80daca745
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 5a059d34110e064a6e945d02bf83d39e6b5af637
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
-실제 축 간격 [-1, + 1] 외부 분기 컷 복소수의 아크사인 값을 검색합니다.  
+실제 축 따라 [-1, + 1] 간격 외부 분기 컷 복소수의 아크사인 값을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -93,7 +77,7 @@ _Lcomplex casinl(
  라디안으로 각도를 나타내는 복소수입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `z`의 아크사인입니다(라디안). 결과 허수 축과 구간에서에 제한 [-π/2 + π/2] 실제 축.  
+ `z`의 아크사인입니다(라디안). 결과 허수 축을 따라 및 간격 내에 제한 [-π/2 + 2 π /] 실제 축을 따라 합니다.  
   
 ## <a name="remarks"></a>설명  
  C++에서는 오버로드를 허용하므로 `casin` 및 `_Fcomplex` 값을 사용 및 반환하는 `_Lcomplex`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `casin` 는 항상 `_Dcomplex` 값을 사용 및 반환합니다.  

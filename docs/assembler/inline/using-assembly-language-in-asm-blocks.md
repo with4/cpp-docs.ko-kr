@@ -1,33 +1,33 @@
 ---
-title: "__asm 블록에서 어셈블리 언어 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 키워드[C++], 어셈블리 언어"
-  - "어셈블리 언어[C++]"
-  - "어셈블리 언어[C++], 기능"
+title: "__Asm 블록에서 어셈블리 언어 사용 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assembly language [C++], features
+- assembly language [C++]
+- __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: de48f28b1a31ebece26d6b39286fb6edb065db0b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __asm 블록에서 어셈블리 언어 사용
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 전용  
- 인라인 어셈블러에는 다른 어셈블러와 많은 공통점이 있습니다.  예를 들어, MASM에서 유효한 많은 식을 받아들입니다.  이 단원에서는 `__asm` 블록의 어셈블리 언어 기능 사용을 설명합니다.  
+# <a name="using-assembly-language-in-asm-blocks"></a>__asm 블록에서 어셈블리 언어 사용
+## <a name="microsoft-specific"></a>Microsoft 전용  
+ 인라인 어셈블러에는 다른 어셈블러와 많은 공통점이 있습니다. 예를 들어, MASM에서 유효한 많은 식을 받아들입니다. 이 단원에서는 `__asm` 블록의 어셈블리 언어 기능 사용을 설명합니다.  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>추가 정보  
   
 -   [인라인 어셈블리의 명령 집합](../../assembler/inline/instruction-set-for-inline-assembly.md)  
   
@@ -45,7 +45,7 @@ caps.handback.revision: 8
   
 -   [어셈블리 언어 설명](../../assembler/inline/assembly-language-comments.md)  
   
--   [\_emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md)  
+-   [_Emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md)  
   
 -   [인라인 어셈블리의 디버깅 및 목록](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)  
   
@@ -53,5 +53,5 @@ caps.handback.revision: 8
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [인라인 어셈블러](../../assembler/inline/inline-assembler.md)

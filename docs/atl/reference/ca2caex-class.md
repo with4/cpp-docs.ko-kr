@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLCONV/ATL::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::m_psz
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2CAEX class
+dev_langs: C++
+helpviewer_keywords: CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 9185bc18981898d699aa3f3eeb490c76bf5138fb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 0ae0db059d092feb1a24a3c7c635817250f2813b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 클래스
 이 클래스는 사용 하 여 문자열 변환 매크로 `CA2CTEX` 및 `CT2CAEX`, 및 typedef **CA2CA**합니다.  
@@ -81,7 +63,7 @@ class CA2CAEX
 |----------|-----------------|  
 |[CA2CAEX::m_psz](#m_psz)|소스 문자열을 저장 하는 데이터 멤버입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  추가 기능은 필요 하지 않는 한 사용할 `CA2CTEX`, `CT2CAEX`, 또는 **CA2CA** 사용자 코드에서.  
   
  이 클래스는 루프에서 사용 하기에 안전 하며 스택이 오버플로되지 않습니다. 기본적으로 ATL 변환 클래스와 매크로는 현재 스레드의 ANSI 코드 페이지를 변환에 사용합니다.  
@@ -119,7 +101,7 @@ CA2CAEX(LPCSTR psz) throw(...);
  `nCodePage`  
  이 클래스에서는 사용 되지 않습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  번역에 필요한 버퍼를 만듭니다.  
   
 ##  <a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
@@ -129,7 +111,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ~CA2CAEX() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  할당된 된 버퍼를 해제합니다.  
   
 ##  <a name="m_psz"></a>CA2CAEX::m_psz  
@@ -156,4 +138,3 @@ operator LPCSTR() const throw();
  [CW2CWEX 클래스](../../atl/reference/cw2cwex-class.md)   
  [CW2WEX 클래스](../../atl/reference/cw2wex-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

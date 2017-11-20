@@ -1,28 +1,27 @@
 ---
 title: "메이크파일의 주석 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "메이크파일, 주석"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7edfd0759c91adc75b77b0b320e2469722f5efc7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 메이크파일의 주석
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-주석 앞에는 숫자 기호\(\#\)를 사용합니다.  NMAKE는 숫자 기호와 줄 바꿈 문자 사이의 텍스트를 무시합니다.  예를 들면 다음과 같습니다.  
+# <a name="comments-in-a-makefile"></a>메이크파일의 주석
+앞에 숫자 기호를 사용 하 여 주석을 (#). NMAKE 다음 줄 바꿈 문자로 숫자 기호에서 텍스트를 무시합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 # Comment on line by itself  
@@ -42,11 +41,11 @@ my.exe : my.obj ; link my.obj  # Err: cannot comment this
 .obj.exe: ; link $<  # Error: cannot comment this  
 ```  
   
- 리터럴 숫자 기호를 지정하려면 다음과 같이 숫자 표시 앞에 캐럿\(**^**\)을 사용합니다.  
+ 리터럴 숫자 기호를 지정 하려면 앞에 캐럿 (**^**), 다음과 같습니다.  
   
 ```  
 DEF = ^#define  #Macro for a C preprocessing directive  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메이크파일의 내용](../build/contents-of-a-makefile.md)

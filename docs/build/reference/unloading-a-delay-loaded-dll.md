@@ -1,31 +1,31 @@
 ---
-title: "지연 로드된 DLL 언로드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__FUnloadDelayLoadedDLL2"
-  - "지연 DLL 로드, 언로드"
+title: "지연 로드 된 DLL 언로드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0962059e6e55ce68133960cc9f8d1de8c7f0ef61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 지연 로드된 DLL 언로드
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-기본적으로 제공되는 지연 로드 도우미는 지연 로드 설명자에 포인터가 있는지와 pUnloadIAT 필드에 원본 IAT\(가져오기 주소 테이블\)의 복사본이 있는지 여부를 확인합니다.  포인터 및 복사본이 있는 경우 도우미는 포인터를 가져오기 지연 설명자에 목록으로 저장합니다.  이렇게 하면 도우미 함수가 이름으로 DLL을 찾을 수 있으므로 해당 DLL을 명시적으로 언로드할 수 있게 됩니다.  
+# <a name="unloading-a-delay-loaded-dll"></a>지연 로드된 DLL 언로드
+기본적으로 제공 되는 지연 로드 도우미 지연 로드 설명자는 포인터가 되 고 원래 가져오기 주소 테이블 (IAT)의 사본을 pUnloadIAT 필드에 있어야 하는 경우를 확인 합니다. 이 경우은 가져오기 지연 설명자를 목록에 대 한 포인터를 저장 합니다. 이렇게 하면 DLL을 찾을 해당 DLL의 명시적 언로드를 지원 하기 위해 이름별 도우미 함수입니다.  
   
- 다음은 지연 로드된 DLL을 명시적으로 언로드하는 데 사용되는 관련 구조체 및 함수입니다.  
+ 다음은 연결 된 구조 및 지연 로드 된 DLL의 명시적 언로드에 대 한 함수입니다.  
   
 ```  
 //  
@@ -52,21 +52,21 @@ ExternC
 PUnloadInfo __puiHead;  
 ```  
   
- UnloadInfo 구조체는 **LocalAlloc** 및 **LocalFree** 구현을 각각 **new** 연산자와 **delete** 연산자로 사용하는 C\+\+ 클래스로 구현되었습니다.  이 옵션은 \_\_puiHead를 목록의 헤드로 사용하는 표준 링크 목록으로 유지됩니다.  
+ 사용 하는 c + + 클래스를 사용 하 여 UnloadInfo 구조는 구현 **LocalAlloc** 및 **LocalFree** 해당 연산자로 구현 **새** and 연산자  **삭제** 각각. 이 옵션은 목록으로 __puiHead를 사용 하는 표준 연결 된 목록에 유지 됩니다.  
   
- \_\_FUnloadDelayLoadedDLL을 호출하면 이 함수는 로드된 DLL의 목록에서 사용자가 지정한 이름을 찾습니다. 이 경우 정확히 일치하는 이름만 찾습니다.  이름을 찾으면 썽크 포인터를 복원하기 위해 pUnloadIAT의 IAT 복사본이 실행 중인 IAT의 맨 위에 복사되고 **FreeLibrary**를 사용하여 라이브러리가 해제되며 일치하는 **UnloadInfo** 레코드의 링크가 목록에서 끊겨 레코드가 삭제된 다음 TRUE가 반환됩니다.  
+ 호출 __FUnloadDelayLoadedDLL 이름을 찾으려고 시도 합니다 (정확히 일치 하는 필수)는 로드 된 Dll 목록에 제공 합니다. 발견 pUnloadIAT의 IAT의 복사본은 복사로 해제 하는 라이브러리 썽크 포인터를 복원 하려면 실행 중인 IAT의 위에 **FreeLibrary**, 일치 하는 **UnloadInfo** 레코드는에서 연결을 끊었습니다. 목록 삭제 된 및 TRUE 반환 됩니다.  
   
- \_\_FUnloadDelayLoadedDLL2 함수의 인수는 대\/소문자를 구분합니다.  예를 들어, 다음과 같이 지정합니다.  
+ 함수 __FUnloadDelayLoadedDLL2 하 인수는 대/소문자 구분입니다. 예를 들어 사용자 지정 합니다.  
   
 ```  
 __FUnloadDelayLoadedDLL2("user32.DLL");  
 ```  
   
- 다음은 잘못 지정한 경우입니다.  
+ 및 not을 추가 합니다.  
   
 ```  
 __FUnloadDelayLoadedDLL2("User32.DLL");.  
 ```  
   
-## 참고 항목  
- [Understanding the Helper Function](http://msdn.microsoft.com/ko-kr/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>참고 항목  
+ [도우미 함수 이해](understanding-the-helper-function.md)

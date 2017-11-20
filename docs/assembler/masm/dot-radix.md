@@ -1,38 +1,35 @@
 ---
-title: ".RADIX | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".RADIX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".RADIX directive"
+title: ". 기 수 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .RADIX
+dev_langs: C++
+helpviewer_keywords: .RADIX directive
 ms.assetid: 3f7c2717-fd41-4aff-820d-3f40fd9280a0
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 89359ca5fef89e7790ab96621965e6c105dcfbb9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# .RADIX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-기본 기 수, 범위에 16, 2의 값을 설정 하는  *식*.  
+# <a name="radix"></a>.RADIX
+값에 2-16 범위에 기본 기 수 설정 *식*합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 .RADIX expression  
 ```  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

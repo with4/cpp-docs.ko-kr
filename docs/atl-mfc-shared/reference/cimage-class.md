@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -51,8 +50,7 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -63,30 +61,15 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3f208b2937f2f19d87777b7158e5b765b784bb5d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: bd493619bc8117a67670f1c4bc820ed00c7be165
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cimage-class"></a>CImage 클래스
 `CImage`향상 된 비트맵 지원, 로드 및 이미지를 JPEG, GIF, BMP, 및 PNG 이동식 네트워크 그래픽 () 형식으로 저장 하는 기능을 포함 하 여 제공 합니다.  
@@ -114,7 +97,7 @@ class CImage
 |----------|-----------------|  
 |[CImage::AlphaBlend](#alphablend)|투명 하 게 또는 반투명 픽셀로 있는 비트맵을 표시 합니다.|  
 |[CImage::Attach](#attach)|연결 된 `HBITMAP` 에 `CImage` 개체입니다. 비 DIB 섹션 비트맵 또는 DIB 섹션 비트맵과 함께 사용할 수 있습니다.|  
-|[CImage::BitBlt](#bitblt)|이 현재 장치 컨텍스트를 소스 장치 컨텍스트에서 비트맵을 복사합니다.|  
+|[CImage::BitBlt](#bitblt)|이 현재 장치 컨텍스트를 소스 장치 컨텍스트에에서 비트맵을 복사합니다.|  
 |[CImage::Create](#create)|DIB 섹션 비트맵을 만들고에 이전에 생성 된 연결 `CImage` 개체입니다.|  
 |[CImage::CreateEx](#createex)|추가 매개 변수) (사용 하 여 DIB 섹션 비트맵을 만들고이를 이전에 생성 된 연결 `CImage` 개체입니다.|  
 |[CImage::Destroy](#destroy)|비트맵을 분리는 `CImage` 개체 하 고 비트맵을 제거 합니다.|  
@@ -195,7 +178,7 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```  
   
- 사용 하는 경우 `CImage` MFC 프로젝트를 프로젝트에는 멤버 함수에 대 한 포인터를 기대 사항을 유의 [CBitmap](../../mfc/reference/cbitmap-class.md) 개체입니다. 사용 하려는 경우 `CImage` 이러한 함수 처럼 [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)를 사용 하 여 [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), 전달 프로그램 `CImage` `HBITMAP`, 사용 하 여 반환 된 `CBitmap*`합니다.  
+ 사용 하는 경우 `CImage` MFC 프로젝트를 프로젝트에는 멤버 함수에 대 한 포인터를 기대 사항을 유의 [CBitmap](../../mfc/reference/cbitmap-class.md) 개체입니다. 사용 하려는 경우 `CImage` 이러한 함수 처럼 [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)를 사용 하 여 [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), 전달 프로그램 `CImage` `HBITMAP`, 반환 된 를사용하여`CBitmap*`.  
 
   
 ## <a name="example"></a>예제  
@@ -218,7 +201,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 > [!NOTE]
 >  다음 `CImage` 메서드 사용에 대 한 제한이 있습니다.  
   
-|메서드|한계|  
+|메서드|제한|  
 |------------|----------------|  
 |[PlgBlt](#plgblt)|만 Windows NT 4.0 이상 작동 합니다. 이상 Windows 95/98에서 실행 중인 응용 프로그램에서 작동 하지 않습니다.|  
 |[MaskBlt](#maskblt)|만 Windows NT 4.0 이상 작동 합니다. 이상 Windows 95/98에서 실행 중인 응용 프로그램에서 작동 하지 않습니다.|  
@@ -320,7 +303,7 @@ BOOL AlphaBlend(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  알파 혼합 비트맵 픽셀 단위로에서 색 혼합을 지원 합니다.  
   
  때 `bBlendOp` 기본값인으로 설정 되어 **AC_SRC_OVER**, 소스 비트맵 소스 픽셀의 알파 값을 기반으로 대상 비트맵을 통해 배치 됩니다.  
@@ -345,11 +328,11 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
   
 - **DIBOR_TOPDOWN** 비트맵 선은 위에서 아래 순입니다. 이 인해 [CImage::GetBits](#getbits) 비트맵 버퍼의 첫 번째 바이트에 대 한 포인터를 반환 하 고 [CImage::GetPitch](#getpitch) 으로 양의 숫자를 반환 하 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  비트맵 아닌 DIB 섹션 비트맵 또는 DIB 섹션 비트맵 수 있습니다. 참조 [IsDIBSection](#isdibsection) DIB 에서만 사용할 수 있는 메서드의 목록에 대 한 비트맵 섹션.  
   
 ##  <a name="bitblt"></a>CImage::BitBlt  
- 이 현재 장치 컨텍스트를 소스 장치 컨텍스트에서 비트맵을 복사합니다.  
+ 이 현재 장치 컨텍스트를 소스 장치 컨텍스트에에서 비트맵을 복사합니다.  
   
 ```
 BOOL BitBlt(
@@ -391,7 +374,7 @@ BOOL BitBlt(
  대상 사각형의 왼쪽된 위 모퉁이의 논리적 y 좌표입니다.  
   
  `dwROP`  
- 수행할 래스터 연산을 합니다. 래스터 작업 코드 (현재 선택 된 브러시에 의해 정의 됨) 처럼 대상 만들기 위해 원본, 대상 및 패턴의 비트를 결합 하는 방법에 정의 합니다. 참조 [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)] 다른 래스터 연산을 코드와 해당 설명의 목록에 대 한 합니다.  
+ 수행할 래스터 연산을 합니다. 래스터 작업 코드 (현재 선택 된 브러시에 의해 정의 됨) 처럼 대상 만들기 위해 원본, 대상 및 패턴의 비트를 결합 하는 방법에 정의 합니다. 참조 [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) 다른 래스터 연산을 코드 목록과 해당 설명을 보려면 Windows sdk에서입니다.  
   
  `pointDest`  
  A [지점](http://msdn.microsoft.com/library/windows/desktop/dd162805) 대상 사각형의 왼쪽된 위 모퉁이 나타내는 구조입니다.  
@@ -417,8 +400,8 @@ BOOL BitBlt(
 ### <a name="return-value"></a>반환 값  
  성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
- 자세한 내용은 참조 [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>설명  
+ 자세한 내용은 참조 [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows sdk에서입니다.  
   
 ##  <a name="cimage"></a>CImage::CImage  
  `CImage` 개체를 생성합니다.  
@@ -497,7 +480,7 @@ BOOL CreateEx(
 - **BI_BITFIELDS** 형식은 압축 된 고 색 테이블은 3 개의 이루어져 `DWORD` 빨간색으로 지정 하는 색 마스크, 녹색 및 파랑 구성 요소의 시작 각각 각 픽셀의 합니다. 16 및 32 bpp 비트맵와 함께 사용할 경우에 유효 합니다.  
   
  *pdwBitfields*  
- 경우에 사용 `eCompression` 로 설정 된 **BI_BITFIELDS**, 그렇지 않으면 이어야 합니다 **NULL**합니다. 세 개인 배열에 대 한 포인터 `DWORD` 빨강, 비트를 각 픽셀의 사용은 지정 하는 비트 마스크 녹색, 표시 되는 색의 구성 요소는 각각 및 파랑입니다. 비트 필드에 대 한 제한 사항에 대 한 자세한 내용은 참조 하십시오. [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
+ 경우에 사용 `eCompression` 로 설정 된 **BI_BITFIELDS**, 그렇지 않으면 이어야 합니다 **NULL**합니다. 세 개인 배열에 대 한 포인터 `DWORD` 빨강, 비트를 각 픽셀의 사용은 지정 하는 비트 마스크 녹색, 표시 되는 색의 구성 요소는 각각 및 파랑입니다. 비트 필드에 대 한 제한 사항에 대 한 자세한 내용은 참조 하십시오. [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) Windows sdk에서입니다.  
   
  `dwFlags`  
  Bitmap 개체 알파 채널이 있는지 여부를 지정 합니다. 0 개 이상의 다음 값의 조합 될 수 있습니다.  
@@ -537,7 +520,7 @@ HBITMAP Detach() throw();
  분리 비트맵에 대 한 핸들 또는 **NULL** 비트맵이 없습니다 연결 된 경우.  
   
 ##  <a name="draw"></a>CImage::Draw  
- 현재 장치 컨텍스트를 소스 장치 컨텍스트에서 비트맵을 복사합니다.  
+ 현재 장치 컨텍스트를 소스 장치 컨텍스트에에서 비트맵을 복사합니다.  
   
 ```
 BOOL Draw(
@@ -617,7 +600,7 @@ BOOL Draw(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  **그리기** 와 동일한 작업을 수행 [StretchBlt](#stretchblt)이미지 투명색 또는 알파 채널이 포함 되어 있지 않으면입니다. 이 경우 **그리기** 으로 동일한 작업을 수행 [지연 해야](#transparentblt) 또는 [로드](#alphablend) 필요에 따라 합니다.  
   
  버전에 대 한 **그리기** 소스 사각형을 지정 하지 않으면, 전체 원본 이미지의 크기는 기본값입니다. 버전에 대 한 **그리기** 대상 사각형에 대 한 크기를 지정 하지 않는, 기본 및 확장 하지 않는 원본 이미지의 크기는 또는 발생을 축소 합니다.  
@@ -630,9 +613,9 @@ void* GetBits() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 비트맵 버퍼에 대 한 포인터입니다. 비트맵 상향식 DIB 이면 포인터가 가리키는 버퍼의 끝을 부분입니다. 이면 비트맵 하향식 DIB 버퍼의 첫 번째 바이트를 가리키는 포인터입니다.  
+ 비트맵 버퍼에 대 한 포인터입니다. 비트맵 상향식 DIB 이면 포인터가 가리키는 버퍼의 끝을 부분입니다. 이면 비트맵 상-DIB 버퍼의 첫 번째 바이트를 가리키는 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 된 값과 함께이 포인터를 사용 하 여 [GetPitch](#getpitch)를 찾아 하 고 개별 픽셀 이미지에서 변경할 수 있습니다.  
   
 > [!NOTE]
@@ -648,10 +631,10 @@ int GetBPP() const throw();
 ### <a name="return-value"></a>반환 값  
  픽셀 당 비트 수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 값 각 픽셀을 정의 하는 비트 수와 비트맵에서 색의 최대 수를 결정 합니다.  
   
- 1, 4, 8, 16, 24 또는 32 비트 / 픽셀 일반적으로 합니다. 참조는 **biBitCount** 소속 [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)] 이 값에 대 한 자세한 내용은 합니다.  
+ 1, 4, 8, 16, 24 또는 32 비트 / 픽셀 일반적으로 합니다. 참조는 **biBitCount** 소속 [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) 이 값에 대 한 자세한 내용은 Windows sdk입니다.  
   
 ##  <a name="getcolortable"></a>CImage::GetColorTable  
  DIB 섹션의 팔레트에 있는 항목의 범위에서 빨간색, 녹색, 파란색 (RGB) 색 값을 검색 합니다.  
@@ -682,7 +665,7 @@ HDC GetDC() const throw();
 ### <a name="return-value"></a>반환 값  
  장치 컨텍스트에 대한 핸들입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  각 호출에 대 한 `GetDC`, 한 후속 호출에 있어야 [ReleaseDC](#releasedc)합니다.  
   
 ##  <a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
@@ -704,7 +687,7 @@ static HRESULT GetExporterFilterString(CSimpleString& strExporters,
  문자열에는 파일 형식 중 하나에 해당 하는 각 요소와 배열 Guid입니다. 예제에서 `pszAllFilesDescription` 아래 `aguidFileTypes`[0]은 `GUID_NULL` 나머지 배열 값은 현재 운영 체제에서 지 원하는 이미지 파일 형식 및 합니다.  
   
 > [!NOTE]
->  상수 목록은 전체 참조 **이미지 파일 형식 상수** 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
+>  상수 목록은 전체 참조 **이미지 파일 형식 상수** Windows sdk에서입니다.  
   
  `pszAllFilesDescription`  
  이 매개 변수가 없으면 **NULL**, 필터 문자열 목록 맨 앞에 하나의 추가 필터를 갖습니다. 이 필터의 현재 값을 갖습니다 `pszAllFilesDescription` 해당 설명에 대 한 하 고 목록에서 다른 내보내기에서에서 지 원하는 모든 확장명의 파일을 허용 합니다.  
@@ -733,7 +716,7 @@ CImage::GetExporterFilterString(
   
 - **excludeJPEG** = 0x10 제외 JPEG 파일입니다.  
   
-- **excludePNG** = 0x20 제외 PNG 파일입니다.  
+- **excludePNG** = 0x20 제외 하는 PNG 파일입니다.  
   
 - **excludeTIFF** = 0x40 제외 TIFF 파일입니다.  
   
@@ -743,7 +726,7 @@ CImage::GetExporterFilterString(
   
 - **excludeDefaultLoad** = 부하, 형식이 기본적으로 포함 된 모든 파일에 대 한 0  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF** 저장에 대 한 이러한 파일은 기본적으로 제외 일반적으로 특별 한 요구 사항이 했기 때문에 있습니다.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** 저장에 대 한 이러한 파일은 기본적으로 제외 일반적으로 특별 한 요구 사항이 했기 때문에 있습니다.  
   
  `chSeparator`  
  이미지 형식 간에 사용 되는 구분 기호입니다. 참조 **주의** 자세한 정보에 대 한 합니다.  
@@ -751,18 +734,18 @@ CImage::GetExporterFilterString(
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT`입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  MFC 프로그램에 결과 형식 문자열을 전달할 수 있습니다 [CFileDialog](../../mfc/reference/cfiledialog-class.md) 다른 이름으로 저장 대화 상자에서 사용할 수 있는 이미지의 파일 확장명을 노출 하는 개체 형식을 지정 합니다.  
   
  매개 변수 *strExporter* 형식은 같습니다.  
   
- description0 파일 | \*.ext0 | filedescription1 | \*.ext1 |... 파일 설명 *n*|\*합니다. ext *n*||  
+ 파일 description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... 파일 설명  *n* &#124;\*합니다. ext  *n* &#124; &#124;  
   
- 여기서 ' |'은으로 지정 된 구분 기호 문자 `chSeparator`합니다. 예:  
+ 여기서 ' &#124;'에서 지정 하는 구분 기호 `chSeparator`합니다. 예:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 기본 구분 기호를 사용 하 여 ' |'는 MFC에이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 일반 파일 저장 대화 상자에이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 합니다.  
+ 기본 구분 기호를 사용 하 여 ' &#124;'에 MFC이이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 일반 파일 저장 대화 상자에이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 합니다.  
   
 ##  <a name="getheight"></a>CImage::GetHeight  
  픽셀 이미지의 높이 검색합니다.  
@@ -793,7 +776,7 @@ static HRESULT GetImporterFilterString(CSimpleString& strImporters,
  문자열에는 파일 형식 중 하나에 해당 하는 각 요소와 배열 Guid입니다. 예제에서 `pszAllFilesDescription` 아래 `aguidFileTypes`[0]은 `GUID_NULL` 나머지 배열 값은 현재 운영 체제에서 지 원하는 이미지 파일 형식입니다.  
   
 > [!NOTE]
->  상수 목록은 전체 참조 **이미지 파일 형식 상수** 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
+>  상수 목록은 전체 참조 **이미지 파일 형식 상수** Windows sdk에서입니다.  
   
  `pszAllFilesDescription`  
  이 매개 변수가 없으면 **NULL**, 필터 문자열 목록 맨 앞에 하나의 추가 필터를 갖습니다. 이 필터의 현재 값을 갖습니다 `pszAllFilesDescription` 해당 설명에 대 한 하 고 목록에서 다른 내보내기에서에서 지 원하는 모든 확장명의 파일을 허용 합니다.  
@@ -822,7 +805,7 @@ CImage::GetImporterFilterString(
   
 - **excludeJPEG** = 0x10 제외 JPEG 파일입니다.  
   
-- **excludePNG** = 0x20 제외 PNG 파일입니다.  
+- **excludePNG** = 0x20 제외 하는 PNG 파일입니다.  
   
 - **excludeTIFF** = 0x40 제외 TIFF 파일입니다.  
   
@@ -832,23 +815,23 @@ CImage::GetImporterFilterString(
   
 - **excludeDefaultLoad** = 부하, 형식이 기본적으로 포함 된 모든 파일에 대 한 0  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF** 저장에 대 한 이러한 파일은 기본적으로 제외 일반적으로 특별 한 요구 사항이 했기 때문에 있습니다.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** 저장에 대 한 이러한 파일은 기본적으로 제외 일반적으로 특별 한 요구 사항이 했기 때문에 있습니다.  
   
  `chSeparator`  
  이미지 형식 간에 사용 되는 구분 기호입니다. 참조 **주의** 자세한 정보에 대 한 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  MFC 프로그램에 결과 형식 문자열을 전달할 수 있습니다 [CFileDialog](../../mfc/reference/cfiledialog-class.md) 의 사용 가능한 이미지의 파일 확장명을 노출 하는 개체 형식은 **파일 열기** 대화 상자.  
   
  매개 변수 *strImporter* 형식은 같습니다.  
   
- description0 파일 | \*.ext0 | filedescription1 | \*.ext1 |... 파일 설명 *n*|\*합니다. ext *n*||  
+ 파일 description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... 파일 설명  *n* &#124;\*합니다. ext  *n* &#124; &#124;  
   
- 여기서 ' |'은으로 지정 된 구분 기호 문자 `chSeparator`합니다. 예:  
+ 여기서 ' &#124;'에서 지정 하는 구분 기호 `chSeparator`합니다. 예:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 기본 구분 기호를 사용 하 여 ' |'는 MFC에이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 공용으로이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 하 여 **파일 열기** 대화 상자.  
+ 기본 구분 기호를 사용 하 여 ' &#124;'에 MFC이이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 공용으로이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 하 여 **파일 열기** 대화 상자.  
   
 ##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
  색상표에 있는 항목의 최대 수를 검색 합니다.  
@@ -860,7 +843,7 @@ int GetMaxColorTableEntries() const throw();
 ### <a name="return-value"></a>반환 값  
  색상표에 있는 항목의 수입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 방법은 DIB 섹션 비트맵만 지원합니다.  
   
 ##  <a name="getpitch"></a>CImage::GetPitch  
@@ -873,7 +856,7 @@ int GetPitch() const throw();
 ### <a name="return-value"></a>반환 값  
  이미지의 피치 합니다. 반환 값이 음수 이면 비트맵 상향식 DIB 이며 원점은 왼쪽된 아래 모서리 합니다. 반환 값이 양수 이면 비트맵 상-DIB 이며 원점은 왼쪽된 위 모퉁이입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  피치 한 비트맵 줄의 시작 부분을 나타내는 두 개의 메모리 주소 및 다음 비트맵 줄의 시작 사이의 바이트 단위의 거리입니다. 피치, 바이트 단위로 측정 하기 때문에 이미지의 피치를 사용 하는 픽셀 형식을 확인할 수 있습니다. 피치 비트맵용으로 예약 하는 추가 메모리를 포함할 수도 있습니다.  
   
  사용 하 여 `GetPitch` 와 [GetBits](#getbits) 개별 이미지 픽셀을 찾을 수 있습니다.  
@@ -977,7 +960,7 @@ bool IsIndexed() const throw();
 ### <a name="return-value"></a>반환 값  
  **true 이면** 인덱싱된 되지 않으면 **false**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드가 반환 **true** 비트맵 8 비트 일 경우에 (256 색)이 있습니다.  
   
 > [!NOTE]
@@ -990,7 +973,7 @@ bool IsIndexed() const throw();
 bool IsNull() const throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드가 반환 **True** 비트맵 있지 않으면 현재 로드 된 경우 **False**합니다.  
   
 ##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
@@ -1003,7 +986,7 @@ static BOOL IsTransparencySupported() throw();
 ### <a name="return-value"></a>반환 값  
  현재 플랫폼에서 투명도 지원 하는 경우에 0이 아닙니다. 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 값은 0이 아닌 경우 및 투명도 지원 되는 경우에 대 한 호출 [로드](#alphablend), [지연 해야](#transparentblt), 또는 [그리기](#draw) 투명 색상을 처리 합니다.  
   
  응용 프로그램이 Windows 2000 또는 Windows 98 이전 운영 체제와 함께 사용할 컴파일될, 하는 경우이 메서드는 0, 최신 운영 체제에도 항상 반환 됩니다.  
@@ -1055,7 +1038,7 @@ void LoadFromResource(
  `nIDResource`  
  로드할 리소스의 ID입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  리소스 형식 이어야 합니다 `BITMAP`합니다.  
   
 ##  <a name="maskblt"></a>CImage::MaskBlt  
@@ -1129,7 +1112,7 @@ BOOL MaskBlt(
  로 지정 된 마스크 비트맵에 대 한 세로 픽셀 오프셋의 `hbmMask` 매개 변수입니다.  
   
  `dwROP`  
- 한 원본 및 대상 데이터를 제어 하는 메서드에서 사용 하는 삼항 래스터 연산 코드 둘 다 전경색과 배경색을 지정 합니다. 배경 래스터 연산 코드는이 값;의 상위 단어의 상위 바이트에 저장 됩니다. 전경 래스터 연산 코드는이 값;의 상위 단어의 낮은 순서 바이트에 저장 됩니다. 이 값의 하위 단어는 무시 되 고 0 이어야 합니다. 전경색과 배경색이 메서드의 컨텍스트에서 논의 알려면 `MaskBlt` 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다. 목록이 공통 래스터 연산 코드에 대 한 참조 `BitBlt` 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
+ 한 원본 및 대상 데이터를 제어 하는 메서드에서 사용 하는 삼항 래스터 연산 코드 둘 다 전경색과 배경색을 지정 합니다. 배경 래스터 연산 코드는이 값;의 상위 단어의 상위 바이트에 저장 됩니다. 전경 래스터 연산 코드는이 값;의 상위 단어의 낮은 순서 바이트에 저장 됩니다. 이 값의 하위 단어는 무시 되 고 0 이어야 합니다. 전경색과 배경색이 메서드의 컨텍스트에서 논의 알려면 `MaskBlt` Windows sdk에서입니다. 목록이 공통 래스터 연산 코드에 대 한 참조 `BitBlt` Windows sdk에서입니다.  
   
  `rectDest`  
  에 대 한 참조는 `RECT` 구조, 대상을 식별 합니다.  
@@ -1146,7 +1129,7 @@ BOOL MaskBlt(
 ### <a name="return-value"></a>반환 값  
  성공 하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 Windows NT 4.0 이상만 해당 버전에 적용 됩니다.  
   
 ##  <a name="operator_hbitmap"></a>HBITMAP CImage::operator  
@@ -1220,7 +1203,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>설명  
  경우 `hbmMask` 유효한 단색 비트맵을 식별 **PlgBit** 소스 사각형의 색 데이터 비트를 마스크 하기 위해이 비트맵을 사용 합니다.  
   
- 이 메서드는 Windows NT 4.0 이상만 해당 버전에 적용 됩니다. 참조 [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)] 대 한 자세한 내용은 합니다.  
+ 이 메서드는 Windows NT 4.0 이상만 해당 버전에 적용 됩니다. 참조 [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) 자세한 내용을 보려면 Windows sdk에서입니다.  
   
 ##  <a name="releasedc"></a>CImage::ReleaseDC  
  장치 컨텍스트를 해제 합니다.  
@@ -1229,7 +1212,7 @@ BOOL PlgBlt(
 void ReleaseDC() const throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  한 번에 하나의 비트맵 장치 컨텍스트로 선택할 수 있습니다, 때문에 호출 해야 `ReleaseDC` 호출에 대해 각각 [GetDC](#getdc)합니다.  
   
 ##  <a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
@@ -1272,7 +1255,7 @@ HRESULT Save(LPCTSTR pszFileName,
 - **ImageFormatGIF** A GIF 압축 된 이미지입니다.  
   
 > [!NOTE]
->  상수 목록은 전체 참조 **이미지 파일 형식 상수** 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
+>  상수 목록은 전체 참조 **이미지 파일 형식 상수** Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT`입니다.  
@@ -1300,7 +1283,7 @@ void SetColorTable(
  `prgbColors`  
  배열에 대 한 포인터 [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) 구조 색을 설정 하려면 테이블 항목입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 방법은 DIB 섹션 비트맵만 지원합니다.  
   
 ##  <a name="setpixel"></a>CImage::SetPixel  
@@ -1320,7 +1303,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
  `color`  
  픽셀 설정한 색입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 픽셀을 선택 된 클립 영역 외부에 같고 조정 하는 경우 실패 합니다.  
   
 ##  <a name="setpixelindexed"></a>CImage::SetPixelIndexed  
@@ -1368,7 +1351,7 @@ void SetPixelRGB(
  *b*  
  파랑 색의 강도입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  빨간색, 녹색 및 파란색 매개 변수는 각각 0과 255 사이의 숫자 표시 합니다. 모든 세 개의 매개 변수를 0으로 설정 하면 결합 된 결과 색은 검정입니다. 세 매개 변수 모두를 255로 설정 하면 결합 된 결과 색상은 흰색입니다.  
   
 ##  <a name="settransparentcolor"></a>CImage::SetTransparentColor  
@@ -1386,7 +1369,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
  색의 인덱스는 이전에 투명 하 게 설정 합니다.  
   
 ##  <a name="stretchblt"></a>CImage::StretchBlt  
- 이 현재 장치 컨텍스트를 소스 장치 컨텍스트에서 비트맵을 복사합니다.  
+ 이 현재 장치 컨텍스트를 소스 장치 컨텍스트에에서 비트맵을 복사합니다.  
   
 ```
 BOOL StretchBlt(
@@ -1438,7 +1421,7 @@ BOOL StretchBlt(
  대상 사각형의 논리 단위에서 높이입니다.  
   
  `dwROP`  
- 수행할 래스터 연산을 합니다. 래스터 작업 코드 (현재 선택 된 브러시에 의해 정의 됨) 처럼 대상 만들기 위해 원본, 대상 및 패턴의 비트를 결합 하는 방법에 정의 합니다. 참조 [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)] 다른 래스터 연산을 코드와 해당 설명의 목록에 대 한 합니다.  
+ 수행할 래스터 연산을 합니다. 래스터 작업 코드 (현재 선택 된 브러시에 의해 정의 됨) 처럼 대상 만들기 위해 원본, 대상 및 패턴의 비트를 결합 하는 방법에 정의 합니다. 참조 [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) 다른 래스터 연산을 코드 목록과 해당 설명을 보려면 Windows sdk에서입니다.  
   
  `rectDest`  
  에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조, 대상을 식별 합니다.  
@@ -1462,10 +1445,10 @@ BOOL StretchBlt(
  성공 하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 참조 [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) 에 [!INCLUDE[winSDK](./includes/winsdk_md.md)]합니다.  
+ 자세한 내용은 참조 [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) Windows sdk에서입니다.  
   
 ##  <a name="transparentblt"></a>CImage::TransparentBlt  
- 이 현재 장치 컨텍스트를 소스 장치 컨텍스트에서 비트맵을 복사합니다.  
+ 이 현재 장치 컨텍스트를 소스 장치 컨텍스트에에서 비트맵을 복사합니다.  
   
 ```
 BOOL TransparentBlt(
@@ -1580,10 +1563,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
  [SimpleImage 샘플](../../visual-cpp-samples.md)   
  [장치 독립적 비트맵](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md)
- [장치 독립적 비트맵](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
+ [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md) [장치 독립적 비트맵](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
-
 
 
 

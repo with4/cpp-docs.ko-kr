@@ -1,11 +1,10 @@
 ---
-title: "CSimpleMap 클래스 | Microsoft 문서"
+title: "CSimpleMap 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,35 +26,18 @@ f1_keywords:
 - ATLSIMPCOLL/ATL::CSimpleMap::ReverseLookup
 - ATLSIMPCOLL/ATL::CSimpleMap::SetAt
 - ATLSIMPCOLL/ATL::CSimpleMap::SetAtIndex
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSimpleMap class
+dev_langs: C++
+helpviewer_keywords: CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: c02ef1d9d3fafebf38abaaa55d77511f4476a02f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 998001954d24d100fefb18e3a1849654204f0876
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csimplemap-class"></a>CSimpleMap 클래스
 이 클래스는 단순한 매핑 배열에 대 한 지원을 제공합니다.  
@@ -75,7 +57,7 @@ class CSimpleMap
  값 요소 형식입니다.  
   
  `TEqual`  
- 형식의 요소에 대 한 같음 테스트를 정의 하는 특성 개체 `T`합니다.  
+ 형식의 요소에 대 한 같음 테스트를 정의 하는 특성 개체를 `T`합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -111,20 +93,20 @@ class CSimpleMap
 |[CSimpleMap::SetAt](#setat)|지정된 된 키와 연결 된 값을 설정 합니다.|  
 |[CSimpleMap::SetAtIndex](#setatindex)|특정 키와 값을 설정합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CSimpleMap`지정 된 형식의 단순 매핑 배열에 대 한 지원을 제공 `T`, 주요 요소와 연결 된 값의 순서가 지정 되지 않은 배열을 관리 합니다.  
   
- 매개 변수 `TEqual` 형식의 두 가지 요소에 대 한 같음 함수를 정의 하는 수단을 제공 `T`합니다. 클래스를 만들어 비슷합니다 [CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md), 모든 지정 된 배열에 대 한 같음 테스트의 동작을 변경 하는 것이 불가능 합니다. 예를 들어 포인터의 배열을 처리할 때 포인터 참조 값에 따라으로 같음을 정의에 유용할 수 있습니다. 기본 구현에서는 **operator==()**합니다.  
+ 매개 변수 `TEqual` 형식의 두 가지 요소에 대 한 같음 함수를 정의 하는 방법을 제공 `T`합니다. 클래스를 만들어 비슷합니다 [CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md), 모든 지정 된 배열에 대 한 같음 테스트의 동작을 변경 하는 것이 불가능 합니다. 예를 들어 포인터의 배열로 처리할 때에 포인터를 참조할 값에 따라 일치로 정의 유용할 수 있습니다. 기본 구현은 활용 **operator==()**합니다.  
   
- 둘 다 `CSimpleMap` 및 [CSimpleArray](../../atl/reference/csimplearray-class.md) 호환성 이전 ATL 해제 하 고 완전 하 고 효율적인 컬렉션 구현에서 제공 하는 [CAtlArray](../../atl/reference/catlarray-class.md) 및 [CAtlMap](../../atl/reference/catlmap-class.md)합니다.  
+ 둘 다 `CSimpleMap` 및 [CSimpleArray](../../atl/reference/csimplearray-class.md) 이전 ATL와의 호환성을 해제 하 고 완전 하 고 효율적인 컬렉션 구현은에서 제공 됩니다에 대 한 제공 [CAtlArray](../../atl/reference/catlarray-class.md) 및 [ CAtlMap](../../atl/reference/catlmap-class.md)합니다.  
   
- ATL 및 MFC에서 다른 맵 컬렉션 달리이 클래스는 간단한 배열 통해 구현 하 고 조회 검색 선형 검색은에 필요 합니다. `CAtlMap`배열 요소를 많이 포함 되어 있는 경우 사용 해야 합니다.  
+ ATL 및 MFC에서 다른 맵 컬렉션와 달리 단순 배열을 사용 하 여이 클래스가 구현 되는 및 lookup 검색 선형 검색을 요구 합니다. `CAtlMap`배열 많은 수의 요소를 포함 하는 경우 사용 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpcoll.h  
   
 ## <a name="example"></a>예제  
- [!code-cpp[NVC_ATL_Utilities #&91;](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#91](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]  
   
 ##  <a name="add"></a>CSimpleMap::Add  
  맵 배열에 키와 연결 된 값을 추가합니다.  
@@ -141,10 +123,10 @@ BOOL Add(const TKey& key, const TVal& val);
  연결 된 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 키와 값 자가 경우 FALSE로 설정 추가 했습니다. 그렇지 않으면 TRUE를 반환 합니다.  
+ 키와 값 했는데이 성공적으로 추가 된이 고, FALSE 그렇지 않으면 TRUE를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
- 각 키 / 값 쌍 매핑을 해제 하 고 다시 할당 하려면, 각각에 대 한 데이터는 인접 하 여 항상 저장을 보장 하기 위해 메모리를 배열 하는 원인은 추가 합니다. 즉, 두 번째 주요 요소 항상 바로 뒤에 오는 첫 번째 키 요소를 메모리에 등입니다.  
+### <a name="remarks"></a>설명  
+ 각 키 / 값 쌍의 매핑을 해제 하 고 다시 할당 하려면, 각각에 대 한 데이터는 항상 연속적으로 저장을 보장 하기 위해 메모리 배열 원인을 추가 합니다. 즉, 두 번째 키 요소 항상 바로 뒤에 오는 첫 번째 키 요소를 메모리에 등입니다.  
   
 ##  <a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
  키 형식에 대 한 typedef입니다.  
@@ -167,7 +149,7 @@ typedef TKey _ArrayKeyType;
 CSimpleMap();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  데이터 멤버를 초기화합니다.  
   
 ##  <a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
@@ -177,7 +159,7 @@ CSimpleMap();
 ~CSimpleMap();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다.  
   
 ##  <a name="findkey"></a>CSimpleMap::FindKey  
@@ -192,7 +174,7 @@ int FindKey(const TKey& key) const;
  검색할 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 키 if의 인덱스를 찾을 그렇지 않으면-1을 반환 합니다.  
+ 그렇지 않은 경우는 키의 인덱스를 찾을 수를 반환-1을 반환 합니다.  
   
 ##  <a name="findval"></a>CSimpleMap::FindVal  
  특정 값을 찾습니다.  
@@ -217,12 +199,12 @@ TKey& GetKeyAt(int nIndex) const;
   
 ### <a name="parameters"></a>매개 변수  
  `nIndex`  
- 인덱스를 반환 하는 키입니다.  
+ 반환할 키의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 참조 하는 키를 반환 합니다. `nIndex`합니다.  
+ 키에서 참조를 반환 `nIndex`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  로 전달 하는 인덱스 `nIndex` 의미 있는 반환 값에 대해 유효 해야 합니다.  
   
 ##  <a name="getsize"></a>CSimpleMap::GetSize  
@@ -233,7 +215,7 @@ int GetSize() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 매핑 배열의 (키와 값은 하나의 항목) 항목의 수를 반환 합니다.  
+ 매핑 배열에 있는 항목 (키와 값은 하나의 항목)의 수를 반환 합니다.  
   
 ##  <a name="getvalueat"></a>CSimpleMap::GetValueAt  
  특정 인덱스에 있는 값을 검색합니다.  
@@ -249,7 +231,7 @@ TVal& GetValueAt(int nIndex) const;
 ### <a name="return-value"></a>반환 값  
  참조 하는 값을 반환 `nIndex`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  로 전달 하는 인덱스 `nIndex` 의미 있는 반환 값에 대해 유효 해야 합니다.  
   
 ##  <a name="lookup"></a>CSimpleMap::Lookup  
@@ -264,7 +246,7 @@ TVal Lookup(const TKey& key) const;
  키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 값은 관련된 값을 반환합니다. Null 일치 하는 키가 없으면 반환 됩니다.  
+ 연결 된 값을 반환합니다. Null 일치 하는 키가 없으면 반환 됩니다.  
   
 ##  <a name="remove"></a>CSimpleMap::Remove  
  키와 일치 하는 값을 제거 합니다.  
@@ -278,7 +260,7 @@ BOOL Remove(const TKey& key);
  키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 키 및 일치 하는 값&3; 자가 경우 제거 되 고, FALSE 그렇지 않으면 TRUE를 반환 합니다.  
+ 키 및 일치 하는 값 했는데이 성공적으로 제거, FALSE 그렇지 않으면 TRUE를 반환 합니다.  
   
 ##  <a name="removeall"></a>CSimpleMap::RemoveAll  
  모든 키와 값을 제거합니다.  
@@ -287,11 +269,11 @@ BOOL Remove(const TKey& key);
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  매핑 배열 개체에서 모든 키와 값을 제거합니다.  
   
 ##  <a name="removeat"></a>CSimpleMap::RemoveAt  
- 키와 지정된 된 인덱스에 연결 된 값을 제거합니다.  
+ 키와 지정된 된 인덱스에 연결 된 값을 제거 합니다.  
   
 ```
 BOOL RemoveAt(int nIndex);
@@ -299,7 +281,7 @@ BOOL RemoveAt(int nIndex);
   
 ### <a name="parameters"></a>매개 변수  
  `nIndex`  
- 인덱스 키 및 관련된 값을 제거 합니다.  
+ 키와 키를 제거 하려면 연결 된 값의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  TRUE를 반환 성공, FALSE에 지정 된 인덱스에 잘못 된 인덱스인 경우.  
@@ -330,7 +312,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
  키입니다.  
   
  *val*  
- 새 할당할 값입니다.  
+ 할당할 새 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면 값이 성공적으로 변경 된이 고, FALSE를 키 발견 하는 경우 TRUE를 반환 합니다.  
@@ -356,11 +338,10 @@ BOOL SetAtIndex(
  새 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 경우 TRUE를 반환 성공적이 고, FALSE 인덱스가 잘못 되었습니다.  
+ 경우 TRUE를 반환 성공이 고, FALSE 인덱스가 잘못 되었습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  키와 값을 가리키는 업데이트 `nIndex`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)
-

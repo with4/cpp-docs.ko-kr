@@ -1,110 +1,111 @@
 ---
-title: "/Og(전역 최적화) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.GlobalOptimizations"
-  - "/og"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Og 컴파일러 옵션[C++]"
-  - "자동 레지스터 할당"
-  - "공용 부분식 제거"
-  - "전역 최적화 컴파일러 옵션[C++]"
-  - "루프 구조, 최적화"
-  - "Og 컴파일러 옵션[C++]"
-  - "-Og 컴파일러 옵션[C++]"
+title: "-Og (전역 최적화) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/22/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.GlobalOptimizations
+- /og
+dev_langs: C++
+helpviewer_keywords:
+- -Og compiler option [C++]
+- global optimizations compiler option [C++]
+- automatic register allocation
+- /Og compiler option [C++]
+- loop structures, optimizing
+- common subexpression elimination
+- Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a48d01437ad72bcc239de0465b62732efb805dd1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /Og(전역 최적화)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="og-global-optimizations"></a>/Og(전역 최적화)
 
-로컬 및 전역 최적화, 자동 레지스터 할당 및 루프 최적화를 제공합니다.  사용되지 않습니다.  
-  
-## 구문  
-  
-```  
-/Og  
-```  
-  
-## 설명  
- 사용할 수 있는 최적화는 다음과 같습니다.  
-  
--   로컬 및 전역 공통 부분식 제거  
-  
-     이 최적화에서는 공통 부분식의 값이 한 번 계산됩니다.  다음 예제에서 세 식 사이에 `b`와 `c`의 값이 변경되지 않으면 컴파일러는 `b + c` 계산을 임시 변수에 할당하여 이 변수를 `b + c` 대신 사용할 수 있습니다.  
-  
-    ```  
-    a = b + c;  
-    d = b + c;  
-    e = b + c;  
-    ```  
-  
-     로컬 공통 부분식 최적화의 경우에는 컴파일러가 짧은 코드 섹션에서 공통 부분식을 검사합니다.  전역 공통 부분식 최적화의 경우에는 컴파일러가 전체 함수에서 공통 부분식을 검색합니다.  
-  
--   자동 레지스터 할당  
-  
-     이 최적화를 사용하면 컴파일러에서 자주 사용하는 변수와 부분식을 레지스터에 저장할 수 있습니다. `register` 키워드는 무시됩니다.  
-  
--   루프 최적화  
-  
-     이 최적화는 루프 본문에서 불변 부분식을 제거합니다.  최적 루프에는 루프를 실행할 때마다 값이 변경되는 식만 포함됩니다.  다음 예제의 루프 본문에서 `x + y` 식은 변경되지 않습니다.  
-  
-    ```  
-    i = -100;  
-    while( i < 0 ) {  
-        i += x + y;  
-    }  
-    ```  
-  
-     최적화하면 `x + y` 식은 루프가 실행될 때마다 계산되지 않고 한 번만 계산됩니다.  
-  
-    ```  
-    i = -100;  
-    t = x + y;  
-    while( i < 0 ) {  
-        i += t;  
-    }  
-    ```  
-  
-     루프 최적화는 컴파일러에서 별칭을 사용할 수 없는 경우에 훨씬 더 효율적입니다. 이는 [\_\_restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md) 또는 [restrict](../../cpp/restrict.md)를 사용하여 설정합니다.  
-  
+더 이상 사용되지 않습니다. 로컬 및 전역 최적화를 제공 자동 레지스터 할당 및 루프 최적화 합니다. 하나를 사용 하는 것이 좋습니다 [/O1 (크기 최소화)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) 또는 [/O2 (속도 최대화)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) 대신 합니다.
+
+## <a name="syntax"></a>구문
+
+> /Og
+
+## <a name="remarks"></a>설명
+
+**/Og** 는 사용 되지 않습니다. 이제 이러한 최적화는 기본적으로 일반적으로 사용 됩니다. 최적화에 대 한 자세한 내용은 참조 하십시오. [/O1, /O2 (크기 최소화, 속도 최대화)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) 또는 [/Ox (활성화 가장 속도 최적화)](../../build/reference/ox-full-optimization.md)합니다.
+
+사용 가능한 최적화는 **/Og**:
+
+- 로컬 및 전역 공통 하위 식 제거
+
+     이러한 최적화는 공통 하위 식의 값 한 번 계산 됩니다. 다음 예에서 경우의 값 `b` 및 `c` 세 식 사이 변경 되지 않으면, 컴파일러에 대 한 계산을 할당할 수 `b + c` 임시 변수에 대 한 변수를 대체 `b + c`:
+
+    ```C
+    a = b + c;
+    d = b + c;
+    e = b + c;
+    ```
+
+     로컬 공통 하위 식 최적화 컴파일러 공통 하위 식에 대 한 코드의 짧은 섹션을 검사합니다. 전역 공통 하위 식 최적화 컴파일러는 공통 하위 식에 대 한 전체 함수를 검색 합니다.
+
+- 자동 레지스터 할당
+
+     이 최적화 레지스터;에 저장소 자주 사용 되는 변수 및 하위 식에 컴파일러가 수 있습니다. `register` 키워드는 무시 됩니다.
+
+- 루프 최적화
+
+     이 최적화는 루프의 본문에서 고정 부분식을 제거합니다. 최적 루프에 루프의 각 실행을 통해 해당 값을 변경 하는 식만 포함 합니다. 다음 예제에서는 식에서에서 `x + y` 루프 본문에서 변경 되지 않습니다.
+
+    ```C
+    i = -100;
+    while( i < 0 ) {
+        i += x + y;
+    }
+    ```
+
+     최적화 후 `x + y` 루프가 실행 될 때마다 하는 대신에 한 번 계산 됩니다.
+
+    ```C
+    i = -100;
+    t = x + y;
+    while( i < 0 ) {
+        i += t;
+    }
+    ```
+
+     컴파일러가 수 없는 경우, 사용 설정 루프 최적화는 훨씬 더 효율적 [__restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), 또는 [제한](../../cpp/restrict.md)합니다.
+
     > [!NOTE]
-    >  `optimize` pragma에 `g` 옵션을 사용하면 함수별로 전역 최적화를 활성화하거나 비활성화할 수 있습니다.  
-  
- **\/Og**를 사용하여 명명된 반환 값 최적화를 활성화할 수도 있습니다. 이렇게 하면 반환 값을 기반으로 스택의 복사 생성자와 소멸자가 제거됩니다.  자세한 내용은 [\/O1, \/O2\(크기 최소화, 속도 최대화\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)를 참조하십시오.  
-  
- 자세한 내용은 [내장 함수 만들기\(\/Oi\)](../../build/reference/oi-generate-intrinsic-functions.md) 및 [최대 최적화\(\/Ox\)](../../build/reference/ox-full-optimization.md)를 참조하십시오.  
-  
- **\/Og**는 사용되지 않습니다. [\/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) 또는 **\/O2**를 사용하십시오.  자세한 내용은 [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/ko-kr/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce)을 참조하십시오.  
-  
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
-  
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
-  
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
-  
-3.  **명령줄** 속성 페이지를 클릭합니다.  
-  
-4.  **추가 옵션** 상자에 컴파일러 옵션을 입력합니다.  
-  
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
-  
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>를 참조하십시오.  
-  
-## 참고 항목  
- [\/O 옵션\(코드 최적화\)](../../build/reference/o-options-optimize-code.md)   
- [컴파일러 옵션](../../build/reference/compiler-options.md)   
- [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)
+    > 사용 하 여 함수에서 함수 별로 전역 최적화를 사용 하지 않도록 설정 하거나 설정할 수 있습니다는 `optimize` 와 함께 pragma는 `g` 옵션입니다.
+
+ 관련된 정보를 참조 하십시오. [/Oi (내장 함수 생성)](../../build/reference/oi-generate-intrinsic-functions.md) 및 [/Ox (활성화 가장 속도 최적화)](../../build/reference/ox-full-optimization.md)합니다.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
+
+1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.
+
+1. **C/C++** 폴더를 클릭합니다.
+
+1. **명령줄** 속성 페이지를 클릭합니다.
+
+1. 입력에 컴파일러 옵션은 **추가 옵션** 상자입니다.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면
+
+- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>을 참조하세요.
+
+## <a name="see-also"></a>참고 항목
+
+[/O 옵션 (코드 최적화)](../../build/reference/o-options-optimize-code.md)
+
+[컴파일러 옵션](../../build/reference/compiler-options.md)
+
+[컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

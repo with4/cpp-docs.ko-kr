@@ -1,45 +1,43 @@
 ---
-title: "hash_map::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator[] 멤버[STL/CLR]"
+title: hash_map::operator(STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::operator[]
+dev_langs: C++
+helpviewer_keywords: operator[] member [STL/CLR]
 ms.assetid: b0b8c1bd-4250-447d-9c69-3f8c34e9b6af
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ae7a414f08a0bc40ab39c3835084a4456e02b685
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Maps a key to its associated mapped value.  
+# <a name="hashmapoperatorstlclr"></a>hash_map::operator(STL/CLR)
+키를 연결 된 매핑된 값에 매핑합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 mapped_type operator[](key_type key);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  key  
- Key value to search for.  
+ 검색할 키 값입니다.  
   
-## 설명  
- The member functions endeavors to find an element with equivalent ordering to `key`.  If it finds one, it returns the associated mapped value; otherwise, it inserts `value_type(``key``, mapped_type())` and returns the associated \(default\) mapped value.  You use it to look up a mapped value given its associated key, or to ensure that an entry exists for the key if none is found.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 해당 하는 순서를 가진 요소를 찾으려고 노력 `key`합니다. 연결된 된 매핑된 값 반환, 발견 되 면 삽입, `value_type(key, mapped_type())` 하 고 연결 된 반환 (기본값) 매핑된 값입니다. 사용 하 여 것는 관련 된 키를 지정 된 매핑된 값을 조회 하거나 없는 경우 키에 대 한 항목이 있는지 확인 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_map_operator_sub.cpp   
@@ -80,17 +78,20 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**c1\[A\] \= 0**  
-**c1\[b\] \= 2**  
- **\[a 1\] \[A 0\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[A 10\] \[b 2\] \[c 13\]**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [a 1] [A 0] [b 2] [c 3]  
+ [a 1] [A 10] [b 2] [c 13]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::find](../dotnet/hash-map-find-stl-clr.md)   
- [hash\_map::insert](../dotnet/hash-map-insert-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
+ [hash_map::insert(STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)
