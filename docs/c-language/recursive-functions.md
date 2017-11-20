@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - functions [C], recursive
 - function calls, recursive
 - functions [C], calling recursively
 - recursive function calls
 ms.assetid: 59739040-3081-4006-abbc-9d8423992bce
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: cca28b41b15ae14504ac5692a3e8a7063a11e862
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="recursive-functions"></a>재귀 함수
 C 프로그램의 모든 함수를 재귀적으로 호출할 수 있습니다. 즉, 함수가 자신을 호출할 수 있습니다. 재귀적 호출 수는 스택의 크기로 제한됩니다. 스택 크기를 설정하는 링커 옵션에 대한 자세한 내용은 [/STACK(스택 할당)](../build/reference/stack-stack-allocations.md)(/STACK) 링크 옵션을 참조하세요. 함수가 호출될 때마다 완료되지 않은 이전 호출의 값이 덮어쓰이지 않도록 새로운 저장소가 매개 변수와 **auto** 및 **register** 변수에 대해 할당됩니다. 매개 변수는 생성된 함수의 인스턴스에 의해서만 직접 액세스될 수 있습니다. 이전 매개 변수는 함수의 다음 인스턴스에 의해 직접 액세스될 수 없습니다.  

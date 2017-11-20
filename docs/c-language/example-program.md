@@ -4,23 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 976b3c21e24a8e1e6c99664b31d32f85985d7f55
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="example-program"></a>예제 프로그램
 다음 C 소스 프로그램은 두 개의 소스 파일로 구성됩니다. 이 프로그램에서는 C 프로그램에서 가능한 다양한 선언 및 정의 중 몇 가지를 간략하게 보여 줍니다. 이 설명서의 이후 섹션에서는 이러한 선언, 정의 및 초기화를 작성하는 방법과 **static** 및 `extern` 등의 C 키워드를 사용하는 방법을 설명합니다. `printf` 함수는 C 헤더 파일 STDIO.H에서 선언됩니다.  

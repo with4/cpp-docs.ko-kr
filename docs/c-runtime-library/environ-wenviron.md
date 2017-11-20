@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,8 +12,7 @@ f1_keywords:
 - wenviron
 - _wenviron
 - _environ
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - environ function
 - _environ function
@@ -22,30 +20,15 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: a1f9ed6ee3b0ee97dd71358790796de5bc9ca586
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: f20054dac02857187ef4507b0b4ebfd6b7c6fe0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 `_environ` 변수는 프로세스 환경을 구성하는 멀티바이트 문자열에 대한 포인터 배열의 포인터입니다. 이 전역 변수는 전역 변수 대신 사용되어야 할 보안 기능이 보다 강화된 버전인 [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 및 [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)에 대해서는 더 이상 사용되지 않습니다. `_environ`은 Stdlib.h에서 선언됩니다.  

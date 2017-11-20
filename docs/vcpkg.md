@@ -5,22 +5,18 @@ keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/30/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
 ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/30/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Windows용 C++ 패키지 관리자 
 vcpkg는 Windows에서 타사 라이브러리 획득 및 설치를 크게 간소화하는 명령줄 패키지 관리자입니다. 프로젝트에서 타사 라이브러리를 사용하는 경우 vcpkg를 사용하여 설치하는 것이 좋습니다. vcpkg는 오픈 소스와 독점 라이브러리를 모두 지원합니다. vcpkg 공용 카탈로그의 모든 라이브러리가 Visual Studio 2015 및 Visual Studio 2017과의 호환성 테스트를 거쳤습니다. 2017년 5월 현재 카탈로그에는 238개 이상의 라이브러리가 있으며 C++ 커뮤니티는 지속해서 더 많은 라이브러리를 추가하고 있습니다.
 
@@ -158,4 +154,3 @@ Vcpkg 인스턴스의 내용:
   **`--triplet <t>`** 대상 아키텍처 세 개를 지정합니다. (기본값: `%VCPKG_DEFAULT_TRIPLET%`, `vcpkg help triplet` 참조)
 
   **`--vcpkg-root <path>`**Vcpkg 루트 디렉터리 지정(기본값: `%VCPKG_ROOT%`)
-

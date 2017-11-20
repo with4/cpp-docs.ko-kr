@@ -4,41 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - constant expressions, syntax
 - constant expressions
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0e3323c85ce7668adfe5b4a297ac8bab930c3ae6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: e7b9beac4d87e0580279190cca005fc56c951af8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-constant-expressions"></a>C 상수 식
 상수 식은 런타임이 아닌 컴파일 타임에 계산되며, 상수를 사용할 수 있는 모든 위치에서 사용될 수 있습니다. 상수 식은 해당 형식에 대한 표현 가능한 값의 범위에 있는 상수로 계산되어야 합니다. 상수 식의 피연산자는 정수 상수, 문자 상수, 부동 소수점 상수, 열거형 상수, 형식 캐스트, `sizeof` 식 및 기타 상수 식일 수 있습니다.  

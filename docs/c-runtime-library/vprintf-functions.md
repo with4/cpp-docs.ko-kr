@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -16,38 +15,21 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr80.dll
 apitype: DLLExport
-f1_keywords:
-- vprintf
-dev_langs:
-- C++
+f1_keywords: vprintf
+dev_langs: C++
 helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: a9cf253e0d22ee539ff7d49d46b34f984e883e7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="vprintf-functions"></a>vprintf 함수
 이러한 `vprintf` 함수는 각각 인수 목록에 대한 포인터를 가져오며 지정된 데이터의 형식을 지정하고 특정 대상에 지정된 데이터를 씁니다. 이러한 함수는 수행되는 매개 변수 유효성 검사, 함수가 와이드 문자를 사용하는지 또는 싱글바이트 문자열을 사용하는지, 출력 대상 및 형식 문자열에 매개 변수가 사용되는 순서를 지정하는 기능에 대한 지원 측면에서 다릅니다.  

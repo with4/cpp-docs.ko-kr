@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - static variables, lifetime
 - storage classes
@@ -18,30 +16,15 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: f62910c5bd1ede1a54345488896e0abfe6c748b4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: afec3ea0d88ff7ede9c498a270e2806a4ceb79e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-storage-classes"></a>C 저장소 클래스
 변수의 "저장소 클래스"는 항목에 "전역" 또는 "로컬" 수명을 사용할지 여부를 결정합니다. C에서는 "정적" 수명과 "자동" 수명을 호출합니다. 프로그램 실행 전체에 전역 수명을 가진 항목이 존재하고 값을 갖습니다. 모든 함수는 전역 수명을 갖습니다.  

@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.strings
-dev_langs:
-- C++
+f1_keywords: c.strings
+dev_langs: C++
 helpviewer_keywords:
 - strings [C++], manipulating
 - string manipulation
 - manipulating strings
 ms.assetid: 6545861a-59e7-408d-9d29-2ec9134fc91a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 5fca1b898f43670499c9dace3f912b207f5b7933
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="string-manipulation-crt"></a>문자열 조작(CRT)
 이러한 루틴은 null로 종료되는 싱글바이트 문자, 와이드 문자 및 멀티바이트 문자 문자열에서 작동합니다. [버퍼 조작](../c-runtime-library/buffer-manipulation.md)에 설명된 버퍼 조작 루틴을 사용하여 null 문자로 끝나지 않는 문자 배열을 사용합니다.  

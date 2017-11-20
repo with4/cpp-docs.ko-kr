@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - code comments, C code
 - comments, documenting code
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - /* */ comment delimiters
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 78c3e97530198b6685e402237bda5cdaf9a0754a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-comments"></a>C 주석
 "주석"은 정방향 슬래시/별표 조합(<b>/\*</b>)으로 시작하는 문자 시퀀스로, 컴파일러에 의해 단일 공백 문자로 처리되거나 무시됩니다. 주석은 줄 바꿈 문자를 비롯하여 표현 가능한 문자 집합의 모든 문자 조합을 포함할 수 있습니다. 단, "종료 주석" 구분 기호(<b>\*/</b>)는 제외됩니다. 주석은 두 줄 이상을 차지할 수 있지만 중첩될 수는 없습니다.  
@@ -94,4 +91,3 @@ printf( "Hello\n" );  /* Comments can go here */
   
 ## <a name="see-also"></a>참고 항목  
  [C 토큰](../c-language/c-tokens.md)
-

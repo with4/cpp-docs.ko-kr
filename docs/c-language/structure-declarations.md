@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structure declarations
 - anonymous structures
@@ -17,31 +15,15 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: f1f50b709f8d44a4575f061a367e3a3efef589a7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: c91c3834b5a4647f7c9cd41820dc04e5597277f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="structure-declarations"></a>구조체 선언
 "구조체 선언"은 형식의 이름을 지정하고 다른 형식이 포함될 수 있는 변수 값의 시퀀스(구조체의 "멤버" 또는 "필드")를 지정합니다. "태그"라는 선택적 식별자는 구조체 형식의 이름을 제공하며 구조체 형식에 대한 향후 참조에 사용될 수 있습니다. 해당 구조체 형식의 변수는 해당 형식으로 정의된 전체 시퀀스를 보유합니다. C의 구조체는 다른 언어에서 "레코드"로 알려진 형식과 비슷합니다.  

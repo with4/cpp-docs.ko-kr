@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- __RTDynamicCast
+apiname: __RTDynamicCast
 apilocation:
 - msvcr90.dll
 - msvcr110.dll
@@ -19,38 +17,19 @@ apilocation:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 apitype: DLLExport
-f1_keywords:
-- __RTDynamicCast
-dev_langs:
-- C++
-helpviewer_keywords:
-- __RTDynamicCast
+f1_keywords: __RTDynamicCast
+dev_langs: C++
+helpviewer_keywords: __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: ee7eea2815f3e836f862c9797ab46b909fef8cf8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: b648d2f0f63a13451d5625c99e5bf614c8402017
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 [dynamic_cast](../cpp/dynamic-cast-operator.md) 연산자의 런타임 구현입니다.  
@@ -81,7 +60,7 @@ PVOID __RTDynamicCast (
  캐스트의 의도된 결과입니다.  
   
  `isReference`  
-입력이 참조인 경우  `true`이며, 입력이 포인터인 경우 `false`입니다.  
+ 입력이 참조인 경우 `true`이며, 입력이 포인터인 경우 `false`입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공한 경우 적절한 하위 개체에 대한 포인터입니다. 그렇지 않으면 NULL입니다.  

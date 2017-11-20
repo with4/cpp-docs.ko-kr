@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>부동 소수점 형식에서 변환
 **double**이나 `long double`로 변환된 **float** 값 또는 `long double`로 변환된 **double** 값은 변경되지 않습니다. **float** 값으로 변환된 **double** 값은 가능할 경우 정확하게 표현됩니다. 값을 정확하게 표현할 수 없는 경우 정밀도가 손실될 수 있습니다. 결과가 범위를 벗어나면 동작이 정의되지 않습니다. 부동 소수점 형식의 범위에 대해서는 [부동 소수점 상수에 대한 제한](../c-language/limits-on-floating-point-constants.md)을 참조하세요.  

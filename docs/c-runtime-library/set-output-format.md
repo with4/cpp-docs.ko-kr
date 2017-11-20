@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_output_format
+apiname: _set_output_format
 apilocation:
 - msvcrt.dll
 - msvcr120.dll
@@ -22,8 +20,7 @@ apitype: DLLExport
 f1_keywords:
 - set_output_format
 - _set_output_format
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _TWO_DIGIT_EXPONENT constant
 - output formatting
@@ -31,31 +28,15 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 602f4460af0e08e6515fb4559bec2d49bbc56e75
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/07/2017
-
+ms.openlocfilehash: 937a452b145fd3d30518f8c4b786ab79b46d5cea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setoutputformat"></a>_set_output_format
 형식이 지정된 I/O 함수에서 사용되는 출력 형식을 사용자 지정합니다.  
@@ -81,7 +62,7 @@ unsigned int _set_output_format(
 ## <a name="remarks"></a>설명  
  `_set_output_format`은 [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)와 같은 형식이 지정된 I/O 함수의 출력을 구성하는 데 사용됩니다. 현재, 이 함수에 의해 변경될 수 있는 형식 규칙은 부동 소수점 숫자의 출력에서 지수에 표시되는 자릿수뿐입니다.  
   
- 기본적으로 `printf_s`, `wprintf_s`및 Visual C++ 표준 C 라이브러리의 관련 함수와 같은 함수에 의한 부동 소수점 숫자의 출력은 지수의 값을 나타내는 데 세 자리 숫자가 필요하지 않은 경우에도 지수에 대해 세 자리 숫자를 출력합니다. 0을 사용하여 값을 3자리까지 채웁니다. `_set_output_format`을 사용하면 지수의 크기에 따라 세 번째 숫자가 필요한 경우가 아닌 한 지수에 두 자리 숫자만 인쇄되도록 이 동작을 변경할 수 있습니다.  
+ 기본적으로 `printf_s`, `wprintf_s`및 Visual C++ 표준 C 라이브러리의 관련 함수와 같은 함수에 의한 부동 소수점 숫자의 출력은 지수의 값을 나타내는 데 세 자리 숫자가 필요하지 않은 경우에도 지수에 대해 세 자리 숫자를 출력합니다. 0을 사용하여 값을 3자리까지 채웁니다. `_set_output_format` 을 사용하면 지수의 크기에 따라 세 번째 숫자가 필요한 경우가 아닌 한 지수에 두 자리 숫자만 인쇄되도록 이 동작을 변경할 수 있습니다.  
   
  두 자리 지수를 사용하도록 설정하려면 예제와 같이 `_TWO_DIGIT_EXPONENT`매개 변수를 사용하여 이 함수를 호출합니다. 두 자리 지수를 사용하지 않도록 설정하려면 인수 0을 사용하여 이 함수를 호출합니다.  
   

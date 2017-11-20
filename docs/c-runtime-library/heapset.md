@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _heapset
+apiname: _heapset
 apilocation:
 - msvcr90.dll
 - msvcr80.dll
@@ -22,8 +20,7 @@ apitype: DLLExport
 f1_keywords:
 - _heapset
 - heapset
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - checking heap
 - heapset function
@@ -31,31 +28,15 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 0bcd8094d0b07927c8f85baf81d6ae834d283d9d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: e9449637887a05c64179c6b9d31712c8becfa87b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="heapset"></a>_heapset
 힙에서 최소한의 일관성을 검사하고 사용 가능한 항목을 지정된 값으로 설정합니다.  
@@ -95,7 +76,7 @@ int _heapset(
 ## <a name="remarks"></a>설명  
  `_heapset` 함수는 실수로 덮어쓴 사용 가능한 메모리 위치 또는 노드를 표시합니다.  
   
- `_heapset`는 힙에서 최소한의 일관성을 검사한 다음 힙에서 사용 가능한 항목의 각 바이트를 `fill` 값으로 설정합니다. 이 알려진 값은 사용 가능한 노드를 포함하는 힙의 메모리 위치와 해제된 메모리에 실수로 기록된 데이터를 포함하는 메모리 위치를 표시합니다. 운영 체제가 `_heapset`(예: Windows 98)을 지원하지 않는 경우 함수에서 `_HEAPOK`를 반환하고 `errno`를 `ENOSYS`로 설정합니다.  
+ `_heapset` 는 힙에서 최소한의 일관성을 검사한 다음 힙에서 사용 가능한 항목의 각 바이트를 `fill` 값으로 설정합니다. 이 알려진 값은 사용 가능한 노드를 포함하는 힙의 메모리 위치와 해제된 메모리에 실수로 기록된 데이터를 포함하는 메모리 위치를 표시합니다. 운영 체제가 `_heapset`(예: Windows 98)을 지원하지 않는 경우 함수에서 `_HEAPOK`를 반환하고 `errno`를 `ENOSYS`로 설정합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

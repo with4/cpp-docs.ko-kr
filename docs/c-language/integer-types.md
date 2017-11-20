@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - integer data type, integer types in C++
 - integer constants
 - integer types
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7b03bfad7912aa74c5520f6dfc23f70856188f0e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 4b5ce16963e027771bd82a8e2820e0b9ba319806
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="integer-types"></a>정수 형식
 모든 정수 상수에는 값과 표현 방식에 따라 형식이 제공됩니다. **l** 또는 **L** 문자를 상수 끝에 추가하여 모든 정수 상수를 **long** 형식으로 지정할 수 있으며, **u** 또는 **U**를 값에 추가하여 `unsigned` 형식으로 지정할 수 있습니다. 소문자 **l**은 숫자 1과 혼동할 수 있으므로 사용하지 않아야 합니다. **long** 정수 상수의 몇 가지 형태는 다음과 같습니다.  

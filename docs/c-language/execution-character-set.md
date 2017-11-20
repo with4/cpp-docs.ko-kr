@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - execution character set [C++]
 - character sets [C++], execution and source
 - source character set [C++]
 ms.assetid: 39ffbb55-11c1-4b6d-a105-327c0fceb449
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: fc380109f228077e9ee2a928202bf7514a7c2ebd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="execution-character-set"></a>실행 문자 집합
 이 콘텐츠에는 "실행 문자 집합"에 대한 언급이 자주 있습니다. 실행 문자 집합이 C 프로그램을 작성하는 데 사용되는 소스 문자 집합과 동일할 필요는 없습니다. 실행 문자 집합에는 소스 문자 집합의 모든 문자뿐 아니라 null 문자, 줄 바꿈 문자, 백스페이스, 가로 탭, 세로 탭, 캐리지 리턴 및 이스케이프 시퀀스가 포함되어 있습니다. 소스 및 실행 문자 집합은 다른 구현에서 달라질 수 있습니다.  

@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.programs
-dev_langs:
-- C++
+f1_keywords: c.programs
+dev_langs: C++
 helpviewer_keywords:
 - CRT, compatibility
 - backward compatibility [C++], C run-time libraries
@@ -20,30 +17,15 @@ helpviewer_keywords:
 - operating systems [C++]
 - Unicode [C++], Win32 platforms
 ms.assetid: 0aacaf45-6dc4-4908-bd52-57abac7b39f6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 15794df0948622e6f3c584c881d1c42b96f1e9e0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 0798263caee416d3ce020104a6ac9bbb711fd22c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="windows-platforms-crt"></a>Windows 플랫폼(CRT)
 [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)]에 대한 C 런타임 라이브러리는 x86에 대해서는 [!INCLUDE[win8](../build/reference/includes/win8_md.md)], [!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)], Windows Vista, [!INCLUDE[winxp](../build/includes/winxp_md.md)] 서비스 팩 3(SP3)을, x64에 대해서는 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 서비스 팩 2(SP2)를, x86과 x64 모두에 대해서는 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] 서비스 팩 2(SP2)를 지원합니다. 이러한 운영 체제는 모두 Windows API(응용 프로그래밍 인터페이스) 및 유니코드를 지원합니다. 또한 모든 Win32 응용 프로그램에서 MBCS(멀티바이트 문자 집합)를 사용할 수 있습니다.  

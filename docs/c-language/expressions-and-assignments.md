@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - assignment statements, values in expressions
 - expressions [C]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - assigning values in C
 - Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 6ab58e3e787afa24114c1bbad2713a7ab2e51a99
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="expressions-and-assignments"></a>식 및 할당
 이 단원에서는 C 언어로 식을 구성하고 값을 할당하는 방법을 설명합니다. 상수, 식별자, 문자열 및 함수 호출은 모두 식에서 조작되는 피연산자입니다. C 언어에는 일반적인 언어 연산자가 모두 포함됩니다. 이 섹션에서는 이러한 연산자는 물론, C 또는 Microsoft C의 고유한 연산자를 다룹니다. 다음과 같은 항목에 대해 설명됩니다.  

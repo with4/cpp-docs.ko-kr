@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -24,8 +23,7 @@ f1_keywords:
 - cgetws
 - _cgetws
 - _cgets
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _cgetws function
 - strings [C++], getting from console
@@ -34,31 +32,15 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 57e2d4bf3c84c44917ccfea8ca6584f1c94f5200
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: ced8ca3ec392caf29cd3cbc41fe462bd24546f26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 콘솔에서 문자열을 가져옵니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)를 참조하세요.  
@@ -98,9 +80,9 @@ wchar_t *_cgetws(
 ## <a name="remarks"></a>설명  
  이러한 함수는 콘솔에서 문자열을 읽고 문자열과 해당 길이를 `buffer`가 가리키는 위치에 저장합니다. `buffer` 매개 변수는 문자 배열에 대한 포인터여야 합니다. 배열의 첫 번째 요소인 `buffer[0]`에는 읽을 문자열의 최대 길이(문자)가 포함되어야 합니다. 배열에 문자열, 종료 null 문자('\0') 및 추가 2바이트를 저장하는 데 충분한 요소가 포함되어야 합니다. 함수는 CR-LF(캐리지 리턴-줄 바꿈) 조합이나 지정된 개수의 문자를 읽을 때까지 문자를 읽습니다. `buffer[2]`부터 시작하여 문자열이 저장됩니다. 함수는 CR-LF를 읽을 경우 null 문자('\0')를 저장합니다. 그런 다음 문자열의 실제 길이를 두 번째 배열 요소인 `buffer[1]`에 저장합니다.  
   
- 콘솔 창에 있는 동안 `_cgets` 또는`_cgetws`를 호출한 경우 모든 편집 키가 활성 상태이기 때문에 F3 키를 누르면 마지막으로 입력한 항목이 반복됩니다.  
+ 콘솔 창에 있는 동안 `_cgets` 또는 `_cgetws` 를 호출한 경우 모든 편집 키가 활성 상태이기 때문에 F3 키를 누르면 마지막으로 입력한 항목이 반복됩니다.  
   
- C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   

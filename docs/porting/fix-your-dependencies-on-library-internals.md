@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 05/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - library internals in an upgraded Visual C++ project
 - _Hash_seq in an upgraded Visual C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e775744188a895a11c09de03848f621b6e3ecee8
-ms.openlocfilehash: c2cc376776b79b4a20d8d98e9d97a56db008d433
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: c356e5f7a8bdd9441e506c9ca30c34fa3c8d5144
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>라이브러리 내부 요소에 대한 종속성 해결
 
@@ -92,4 +89,3 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 [이전 버전의 Visual C++에서 프로젝트 업그레이드](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
 [잠재적인 업그레이드 문제 개요(Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
 [코드를 유니버설 CRT로 업그레이드](upgrade-your-code-to-the-universal-crt.md)  
-

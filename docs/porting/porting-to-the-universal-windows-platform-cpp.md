@@ -4,38 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>유니버설 Windows 플랫폼으로 포팅(C++)
 이 항목에서는 Windows 10 앱 플랫폼인 유니버설 Windows 플랫폼에 기존 C++ 코드를 이식하는 방법에 대한 정보를 찾을 수 있습니다. *유니버설* 이라는 용어는 코드가 데스크톱, 휴대폰, 태블릿 및 앞으로 제공될 장치(Windows 10 실행)를 비롯하여 Windows 10을 실행하는 모든 장치에서 실행될 수 있음을 의미합니다. Windows 10을 실행하는 모든 장치에서 제대로 작동하는 단일 XAML 기반 사용자 인터페이스 및 단일 프로젝트를 만듭니다. XAML의 동적 레이아웃 기능을 사용하여 앱 UI를 다른 디스플레이 크기에 맞출 수 있습니다.  
@@ -44,9 +26,9 @@ ms.lasthandoff: 02/24/2017
   
  이 항목에는 코드를 UWP로 포팅하기 위한 다음 절차가 포함되어 있습니다.  
   
-1.  [Windows 8.1 스토어 앱을 UWP에 포팅](#BK_81StoreApp)  
+1.  [Windows 8.1 스토어 앱을 UWP에 이식](#BK_81StoreApp)  
   
-2.  [Windows 8.1 런타임 구성 요소를 UWP에 포팅](#BK_81Component)  
+2.  [Windows 8.1 런타임 구성 요소를 UWP에 이식](#BK_81Component)  
   
  클래식 데스크톱 Win32 DLL이 있는 상태에서 UWP 응용 프로그램에서 이 파일을 호출하려는 경우에도 이 작업을 수행할 수 있습니다. 이러한 절차를 사용하여 기존 클래식 Windows 데스크톱 C++ 응용 프로그램에 대한 UWP 사용자 인터페이스 레이어 또는 플랫폼 간 표준 C++ 코드를 만들 수 있습니다. [방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)을 참조하세요.  
   
@@ -94,7 +76,7 @@ ms.lasthandoff: 02/24/2017
   
 11. 앱이 지원하는 각 장치 종류에 대해 에뮬레이터 또는 실제 장치에서 앱을 실행하고 디버그합니다. 에뮬레이터를 실행하려면 가상 컴퓨터가 아닌 실제 컴퓨터에서 Visual Studio를 실행해야 합니다.  
   
-##  <a name="BK_81Component"></a> Windows 8.1 런타임 구성 요소를 UWP에 포팅  
+##  <a name="BK_81Component"></a> Windows 8.1 런타임 구성 요소를 UWP에 이식  
  Windows 8.1 스토어 앱에서 이미 작동되는 DLL 또는 Windows 런타임 구성 요소가 있는 경우 다음 절차에 따라 구성 요소 또는 DLL이 UWP 및 Windows 10에서 작동되도록 할 수 있습니다. 기본 절차는 새 프로젝트를 만들고 코드를 복사하는 것입니다.  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Windows 8.1 런타임 구성 요소를 UWP에 포팅하려면  
@@ -133,4 +115,3 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>참고 항목  
  [Visual C++ 포팅 가이드](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [UWP(유니버설 Windows 플랫폼)용 앱 개발](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-

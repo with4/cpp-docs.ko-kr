@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - local declarations
 - function definitions, function declarations
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - external linkage, function declarations
 - declaring functions
 ms.assetid: 43fd98eb-7441-4473-a5d9-fc88c75577f7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ea315c065e6f76215939bc4ccd70bcc907361ff4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="function-declarations-and-definitions"></a>함수 선언 및 정의
 함수 프로토타입은 함수 이름, 해당 반환 형식 및 해당 정식 매개 변수의 형식 및 개수를 설정합니다. 함수 정의에는 함수 본문이 포함됩니다.  

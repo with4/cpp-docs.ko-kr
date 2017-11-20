@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.headers
-dev_langs:
-- C++
+f1_keywords: c.headers
+dev_langs: C++
 helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 45e9d2e6940955b07624b89cafd09b7d89d9cd2c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="required-and-optional-header-files"></a>필수 및 선택적 헤더 파일
 각 런타임 루틴에 대한 설명에는 해당 루틴의 필수 및 선택적 포함 또는 헤더(.H) 파일의 목록이 포함됩니다. 루틴에 대한 함수 선언 또는 내부적으로 호출되는 다른 루틴에 사용되는 정의를 가져오려면 필수 헤더 파일을 포함해야 합니다. 선택적 헤더 파일은 미리 정의된 상수, 형식 정의 또는 인라인 매크로를 활용하기 위해 일반적으로 포함됩니다. 다음 표에서는 선택적 헤더 파일 콘텐츠의 몇 가지 예를 나열합니다.  

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function definitions, blocks in code
 - blocks
 - compound statements
 - statements, compound
 ms.assetid: be231a92-c712-464e-ae25-a4becb20f7f5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 18d04884bacf2cbc03fd68c8ec0489595eb0f4d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="blocks"></a>블록
 중괄호(**{ }**)로 묶인 선언, 정의 및 문의 시퀀스를 "블록"이라고 합니다. 하나 이상의 문으로 구성된 "복합 문"([복합 문](../c-language/compound-statement-c.md) 참조)이 블록의 형식 중 하나입니다. 블록의 다른 형식인 "함수 정의"는 복합 문(함수 본문)과 함수의 관련 "헤더"(함수 이름, 반환 형식 및 정식 매개 변수)로 구성됩니다. 다른 블록 안에 있는 블록을 "중첩"된 블록이라고 합니다.  

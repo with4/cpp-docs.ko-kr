@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f342fb51cf2a1e97afa28db710fbb966b31a386b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stream-io"></a>스트림 I/O
 이러한 함수는 단일 문자에서 대형 데이터 구조체에 이르기까지 다양한 크기 및 형식의 데이터를 처리합니다. 또한 버퍼링을 제공하여 성능을 향상시킬 수 있습니다. 스트림 버퍼의 기본 크기는 4K입니다. 이러한 루틴은 런타임 라이브러리 루틴에 의해 생성된 버퍼에만 영향을 주며 운영 체제에서 생성된 버퍼에는 영향을 주지 않습니다.  
@@ -52,7 +33,7 @@ ms.lasthandoff: 03/30/2017
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|스트림 오류 표시기를 지웁니다.|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|스트림을 닫습니다.|  
-|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|`stdin`, `stdout` 및 `stderr`을 제외하고 열려 있는 모든 스트림을 닫습니다.|  
+|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|`stdin`, `stdout`및 `stderr`을 제외하고 열려 있는 모든 스트림을 닫습니다.|  
 |[_fdopen, wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|열려 있는 파일의 파일 설명자에 스트림을 연결합니다.|  
 |[feof](../c-runtime-library/reference/feof.md)|스트림에서 파일의 끝을 테스트합니다.|  
 |[ferror](../c-runtime-library/reference/ferror.md)|스트림에서 오류를 테스트합니다.|  
@@ -118,7 +99,7 @@ ms.lasthandoff: 03/30/2017
   
  `c` 또는 `n` 플래그를 사용하여 구체적으로 열린 파일은 전역 커밋/커밋 안 함 플래그 상태에 관계없이 플래그에 따라 동작합니다.  
   
- 프로그램이 명시적으로 스트림을 닫지 않을 경우 프로그램이 종료되면 스트림이 자동으로 닫힙니다. 그러나 한 번에 열려 있을 수 있는 스트림 수가 제한되므로 프로그램이 작업을 마치면 스트림을 닫아야 합니다. 이 제한에 대한 자세한 내용은 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)를 참조하세요.  
+ 프로그램이 명시적으로 스트림을 닫지 않을 경우 프로그램이 종료되면 스트림이 자동으로 닫힙니다. 그러나 한 번에 열려 있을 수 있는 스트림 수가 제한되므로 프로그램이 작업을 마치면 스트림을 닫아야 합니다. 이 제한에 대한 자세한 내용은 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) 를 참조하세요.  
   
  `fflush` 또는 파일 위치 지정 함수(`fseek`, `fsetpos`또는 `rewind`)에 대한 중간 호출을 사용해야만 입력이 출력을 직접 따를 수 있습니다. 입력 작업이 파일의 끝을 발견할 경우 파일 위치 지정 함수에 대한 중간 호출 없이 출력이 입력을 따를 수 있습니다.  
   

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - type float
 - exponent length
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="type-float"></a>float 형식
 부동 소수점 수는 IEEE(Institute of Electrical and Electronics Engineers) 형식을 사용합니다. float 형식의 단정밀도 값은 부호 비트, -127승 이진 지수 8비트 및 가수 23비트로 구성된 4바이트를 사용합니다. 가수는 1.0에서 2.0 사이의 수를 의미합니다. 가수의 상위 비트가 항상 1이기 때문에 가수의 상위 비트는 수에 저장되지 않습니다. 이 표현은 float 형식에 대한 약 3.4E–38 ~ 3.4E+38의 범위를 제공합니다.  

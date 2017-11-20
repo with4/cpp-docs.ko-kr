@@ -4,23 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 554134b71c4dc45a828595c0c7dfb639940494df
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>포팅 및 업그레이드: 예제 및 사례 연구
 성공적인 마이그레이션 스토리를 검토하여 이전 버전의 Visual C++에서 현재 버전으로 마이그레이션하는 동안 발생할 수 있는 문제 종류에 대한 아이디어를 얻을 수 있습니다.  

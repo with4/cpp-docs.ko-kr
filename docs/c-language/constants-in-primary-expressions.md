@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- constants, primary expressions
+dev_langs: C++
+helpviewer_keywords: constants, primary expressions
 ms.assetid: 11af9f60-ed5d-4860-b3e7-b91d88a05706
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 11b316ce00dd961c2c7d0dbd91a95d9a71df6f69
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="constants-in-primary-expressions"></a>기본 식의 상수
 상수 피연산자에는 자신이 나타내는 상수 값의 값과 형식이 있습니다. 문자 상수의 형식은 `int`입니다. 정수 상수는 정수 크기 및 값 지정 방법에 따라 `int`, **long**, `unsigned int` 또는 `unsigned long` 형식을 가집니다. 자세한 내용은 [상수](../c-language/c-constants.md)를 참조하세요.  

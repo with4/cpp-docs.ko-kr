@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - pointers, converting
 - conversions, pointer
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 1751c19ba222bbdf9dfc30a290201289db1af850
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>포인터 형식과의 변환
 값의 한 형식에 대한 포인터는 다른 형식에 대한 포인터로 변환될 수 있습니다. 그러나 저장소의 정렬 요구 사항 및 여러 형식의 크기 때문에 결과가 정의되지 않을 수 있습니다. 개체에 대한 포인터는 형식이 덜 엄격하거나 동일하게 엄격한 저장소 정렬을 요구하는 개체에 대한 포인터로 변환된 다음 다시 변경 없이 되돌릴 수 있습니다.  

@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - statements, C
 - Visual C, statements
 - statements
 ms.assetid: df3891cd-6195-4663-aecf-7fe7dc3ed9c3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: d3b5a5adbb2b02c7d7ecf34545feae8a31024e02
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="statements-c"></a>문 (C)
 C 프로그램의 문은 프로그램 실행의 흐름을 제어합니다. 다른 프로그래밍 언어와 마찬가지로 C에서는 몇 가지 종류의 문을 사용하여 루프를 수행하고, 실행할 다른 문을 선택하고, 제어를 전달할 수 있습니다. 간략한 [문 구문 개요](../c-language/overview-of-c-statements.md) 다음에 이 섹션에서는 사전순으로 C 문에 대해 설명합니다.  

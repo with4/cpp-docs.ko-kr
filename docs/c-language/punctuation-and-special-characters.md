@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - number sign
 - characters, special
@@ -17,30 +15,15 @@ helpviewer_keywords:
 - '# preprocessor operator'
 - special characters
 ms.assetid: e239633e-36f6-4967-939c-bf2799323778
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d4843e8b9fe1374286255e7cd574ebf1bb3e9c28
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: aeea920579ddf6af71e3c3c9988c6315931f37f4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="punctuation-and-special-characters"></a>문장 부호 및 특수 문자
 C 문자 집합의 문장 부호와 특수 문자는 프로그램 텍스트의 구성에서 컴파일러 또는 컴파일된 프로그램이 수행하는 작업의 정의에 이르기까지 다양한 용도로 사용됩니다. 이러한 특수 문자는 수행할 작업을 지정하지 않습니다. 일부 문장 부호 기호는 연산자이기도 합니다([연산자](../c-language/c-operators.md) 참조). 컴파일러는 컨텍스트에서 이러한 기호의 사용을 확인합니다.  
@@ -53,4 +36,3 @@ C 문자 집합의 문장 부호와 특수 문자는 프로그램 텍스트의 �
   
 ## <a name="see-also"></a>참고 항목  
  [C 요소](../c-language/elements-of-c.md)
-

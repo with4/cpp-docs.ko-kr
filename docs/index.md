@@ -1,13 +1,12 @@
---- 
+---
 layout: HubPage
 title: "Visual C++ 설명서 | Microsoft 문서"
 description: "C++를 사용하여 플랫폼과 장치용 응용 프로그램, 서비스 및 도구를 개발하는 방법을 알아봅니다."
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fa2cdbf2d54994784bfc8a0bd0e542b3f5de309b
-ms.openlocfilehash: a4623b2ccb2ea1f10b8060afa691c20d22a9c181
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: d74ee013980d77131f6513063ad3d16ee55cc891
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 <div id="main" class="v2">
     <div class="container">

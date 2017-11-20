@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __z annotation
 - ref annotation
@@ -56,16 +54,15 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 91ed1da73fc6d104e89da9cd928d3d91cfb704f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sal-annotations"></a>SAL 주석
 라이브러리 헤더 파일에서 `_In_z` 및 `_Out_z_cap_(_Size)`와 같은 특수한 주석을 볼 수 있습니다. 이러한 주석은 Microsoft SAL(소스 코드 주석 언어)의 예로서 가정과 완료에 대한 보장 등 함수에서 매개 변수를 사용하는 방법을 설명하는 주석 모음을 제공합니다. 헤더 파일 \<sal.h>는 주석을 정의합니다.  

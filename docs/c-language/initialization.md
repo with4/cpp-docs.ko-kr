@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - initializers, variable
 - types [C], initializing
 - initializing variables
 - initializers
 ms.assetid: f009ee12-3df6-4260-b7e4-a6149ebb95aa
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 599052b4515c4d297996d7afa329f508673edd33
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="initialization"></a>초기화
 "이니셜라이저"는 선언되는 변수에 할당할 값 또는 값의 시퀀스입니다. 변수 선언에서 선언자에 이니셜라이저를 적용하여 변수를 초기 값으로 설정할 수 있습니다. 이니셜라이저의 값이 변수에 할당됩니다.  

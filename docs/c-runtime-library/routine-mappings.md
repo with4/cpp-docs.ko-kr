@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.mappings
-dev_langs:
-- C++
+f1_keywords: c.mappings
+dev_langs: C++
 helpviewer_keywords:
 - _tWinMain
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 1b716aacca01e72f917fe4b4083c79d39546b6c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: f7b85af65da564f7231d606933ff1ebbb90d5af0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="routine-mappings"></a>루틴 매핑
 제네릭 텍스트 루틴 매핑은 TCHAR.H에 정의되어 있습니다. `_tccpy` 및 `_tclen`은 MBCS 모델의 함수에 매핑됩니다. 이러한 함수는 완전성을 위해 SBCS 및 유니코드 모델의 매크로 또는 인라인 함수에 매핑됩니다. 제네릭 텍스트 루틴에 대한 자세한 내용은 `SBCS`, `_MBCS` 또는 `_UNICODE` 관련 루틴에 대한 도움말 항목을 참조하십시오.  

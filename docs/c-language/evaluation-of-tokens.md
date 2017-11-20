@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- tokens, evaluating
+dev_langs: C++
+helpviewer_keywords: tokens, evaluating
 ms.assetid: 28870b62-dff6-4644-8b75-d58f340b48d2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 38fe88ba1db7e602844569733046cca99c86d4b3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="evaluation-of-tokens"></a>토큰 계산
 컴파일러는 토큰을 해석할 때 다음 토큰으로 이동하기 전에 단일 토큰에 최대한 많은 문자를 포함합니다. 이러한 동작 때문에 토큰을 공백으로 적절하게 구분하지 않으면 컴파일러가 토큰을 올바르게 해석하지 못할 수 있습니다. 다음 식을 살펴보십시오.  

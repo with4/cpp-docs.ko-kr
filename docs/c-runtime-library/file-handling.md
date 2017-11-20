@@ -4,49 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.files
-dev_langs:
-- C++
+f1_keywords: c.files
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], handling
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: fde5ffecc3046d181e5a0b6cfcd42ee3115fce97
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="file-handling"></a>파일 처리
 이러한 루틴을 사용하여 파일을 만들고 삭제하고 조작하며 파일 액세스 권한을 설정하고 확인합니다.  
   
- C 런타임 라이브러리에서는 한 번에 열 수 있는 파일의 수가 512개로 제한됩니다. 최대 파일 수보다 많이 열려고 하면 설명자 또는 파일 스트림에서 프로그램 오류가 발생합니다. [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)를 사용하여 이 숫자를 변경합니다.  
+ C 런타임 라이브러리에서는 한 번에 열 수 있는 파일의 수가 512개로 제한됩니다. 최대 파일 수보다 많이 열려고 하면 설명자 또는 파일 스트림에서 프로그램 오류가 발생합니다. [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) 를 사용하여 이 숫자를 변경합니다.  
   
 ### <a name="file-handling-routines-file-descriptor"></a>파일 처리 루틴(파일 설명자)  
   

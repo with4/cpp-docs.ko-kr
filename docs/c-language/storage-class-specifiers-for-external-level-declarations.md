@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - external definitions
 - linkage [C++], external
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>외부 수준 선언에 대한 저장소 클래스 지정자
 외부 변수는 파일 범위의 변수이며, 함수 외부에서 정의되고 잠재적으로 많은 함수에서 사용될 수 있습니다. 함수는 외부 수준에서만 정의될 수 있으므로 중첩될 수 없습니다. 기본적으로 이름이 같은 외부 변수와 함수에 대한 모든 참조는 같은 개체에 대한 참조이며, 이는 "외부 링크"를 갖고 있다는 의미입니다. **static** 키워드를 사용하여 이를 재정의할 수 있습니다. **static**에 대한 자세한 내용은 이 섹션 뒤에 나오는 정보를 참조하세요.  

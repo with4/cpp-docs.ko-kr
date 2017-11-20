@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - increment operators, types of
 - decrement operators, syntax
 - decrement operators
 ms.assetid: 9a441bb9-d94a-4b6a-9db2-0d0d76bc480d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: f5a6c98d53c73a6913c9ed8e63b2a1fce43b97d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>접두사 증가 및 감소 연산자
 증가 또는 감소 연산자가 피연산자 앞에 올 때 단항 연산자(`++` 및 **--**)를 "접두사" 증가 또는 감소 연산자라고 합니다. 후위 증가 및 감소는 전위 증가 및 감소보다 우선 순위가 높습니다. 피연산자는 정수, 부동 및 포인터 형식이어야 하며 수정할 수 있는 l-value 식(**const** 특성이 없는 식)이어야 합니다. 결과는 l-value입니다.  

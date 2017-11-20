@@ -4,46 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 507270783542ca0f76632c180b23330653b0018f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 04eae2c263c8b26e44e8c1b05736061ad9291ef0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="secure-template-overloads"></a>안전한 템플릿 오버로드
 Microsoft는 여러 CRT(C 런타임) 라이브러리 함수를 보안이 강화된 버전으로 대체했습니다. 예를 들어 `strcpy_s`가 `strcpy`보다 더 안전합니다. 사용되지 않는 함수는 메모리를 덮어쓸 수 있는 작업을 차단하지 않기 때문에 보안 버그의 일반적인 원인입니다. 기본적으로 컴파일러는 이러한 함수 중 하나를 사용할 때 사용 중단 경고를 생성합니다. CRT는 더 안전한 변형으로 쉽게 전환할 수 있도록 이러한 함수에 대한 C++ 템플릿 오버로드를 제공합니다.  

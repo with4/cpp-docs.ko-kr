@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 01/10/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
-ms.openlocfilehash: d2707321719e5ff6afa84203fd79d975bb696960
-ms.contentlocale: ko-kr
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: cdcfd815f520ff5d9e3931945eeb7b3597ec2393
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="porting-third-party-libraries"></a>타사 라이브러리 포팅
 
 현재 버전의 Visual C++로 프로젝트를 업그레이드하는 경우 프로젝트에 사용되는 모든 라이브러리도 업그레이드하여 라이브러리와 프로젝트가 동일한 버전과 특성의 컴파일러로 빌드되도록 해야 합니다. 자세한 내용은 [잠재적인 업그레이드 문제 개요](overview-of-potential-upgrade-issues-visual-cpp.md)를 참조하세요. 
@@ -42,4 +38,3 @@ vcpkg 카탈로그에 해당 라이브러리가 없는 경우 [GitHub 리포지�
   
 ## <a name="see-also"></a>참고 항목  
  [Visual C++ 포팅 및 업그레이드 가이드](visual-cpp-porting-and-upgrading-guide.md)
-

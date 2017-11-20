@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - extern keyword [C]
 - storage class specifiers, extern
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="extern-storage-class-specifier"></a>extern 저장소 클래스 지정자
 `extern` 저장소 클래스 지정자를 사용하여 선언된 변수는 프로그램 소스 파일의 외부 수준에서 정의된 것과 같은 이름이 지정된 변수에 대한 참조입니다. 내부 `extern` 선언은 블록 내에서 외부 수준 변수 정의를 표시하는 데 사용됩니다. 외부 수준에서 다른 방식으로 선언되지 않는 한 `extern` 키워드를 사용하여 선언된 변수는 자신이 선언된 블록에서만 표시됩니다.  

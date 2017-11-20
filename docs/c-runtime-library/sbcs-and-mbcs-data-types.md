@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - MBCS
 - SBCS
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: ac4c3f7273adf9e373484f24fbb7a56ebea5903a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS 및 MBCS 데이터 형식
 하나의 멀티바이트 문자 또는 1바이트의 멀티바이트 문자만 처리하는 모든 Microsoft `MBCS` 런타임 라이브러리 루틴에는 `unsigned int` 인수가 필요합니다. 여기서 0x00 <= 문자 값 <= 0xFFFF이고 0x00 <= 바이트 값 <= 0xFF입니다. 문자열 컨텍스트의 문자 또는 멀티바이트 바이트를 처리하는 `MBCS` 루틴에서는 멀티바이트 문자열을 `unsigned char` 포인터로 표현해야 합니다.  

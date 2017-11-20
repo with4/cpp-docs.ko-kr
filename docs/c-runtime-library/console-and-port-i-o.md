@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - routines, console and port I/O
 - routines
@@ -20,30 +17,15 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: f252a10b0d340b6fceac2c2372cdf991764c83c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="console-and-port-io"></a>콘솔 및 포트 I/O
 이러한 루틴은 콘솔 또는 지정된 포트에서 읽고 씁니다. 콘솔 I/O 루틴은 스트림 I/O 또는 하위 수준 I/O 라이브러리 루틴과 호환되지 않습니다. I/O가 수행되기 전에 콘솔 또는 포트를 열거나 닫지 않아야 합니다. 따라서 이 범주에 열기 또는 닫기 루틴이 없습니다. Windows 운영 체제에서 이러한 함수의 출력은 항상 콘솔로 보내지고 리디렉션될 수 없습니다.  
