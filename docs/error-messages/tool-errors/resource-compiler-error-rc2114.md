@@ -1,29 +1,27 @@
 ---
 title: "리소스 컴파일러 오류 RC2114 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2114"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2114"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2114
+dev_langs: C++
+helpviewer_keywords: RC2114
 ms.assetid: abdfdc46-6601-451f-8e81-81e92bcd2208
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a3867fce7a71d8cc9c00d8fda29bf2b61d85273c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 리소스 컴파일러 오류 RC2114
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-컨트롤 클래스 이름이 있어야 합니다.  
+# <a name="resource-compiler-error-rc2114"></a>리소스 컴파일러 오류 RC2114
+예상된 컨트롤 클래스 이름  
   
- **DIALOG** 문에서 CONTROL 문의 `class` 필드는 BUTTON, COMBOBOX, EDIT, LISTBOX, SCROLLBAR, STATIC 또는 사용자 정의 형식 중 하나여야 합니다.  클래스를 제대로 입력했는지 확인하십시오.
+ `class` 에서 제어 문의 필드는 **대화** 문은 다음 형식 중 하나 이어야 합니다: 단추, 콤보 상자, 편집, 목록 상자, 스크롤 막대, STATIC, 또는 사용자 정의 합니다. 클래스는 제대로 입력 했는지 확인 합니다.

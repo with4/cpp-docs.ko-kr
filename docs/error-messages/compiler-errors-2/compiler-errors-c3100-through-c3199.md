@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -72,19 +71,17 @@ helpviewer_keywords:
 - C3188
 - C3191
 - C3193
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 7060d03845cf81aeaedc5eff48db3aec59716112
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3100-through-c3199"></a>컴파일러 오류 C3100 C3199 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
@@ -196,4 +193,3 @@ ms.lasthandoff: 10/10/2017
 |[컴파일러 오류 C3197](compiler-error-c3197.md)|'*키워드*': 정의에 사용할 수|  
 |[컴파일러 오류 C3198](compiler-error-c3198.md)|부동 소수점 pragma 잘못 사용 했습니다: fenv_access pragma는 precise 모드 에서만에서 작동|  
 |[컴파일러 오류 C3199](compiler-error-c3199.md)|부동 소수점 pragma 잘못 사용 했습니다.: 예외가 명확 하지 않은 모드에서 지원 되지 않습니다|  
-

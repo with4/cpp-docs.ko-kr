@@ -1,33 +1,32 @@
 ---
-title: "CDynamicStringAccessor::GetString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor.GetString"
-  - "CDynamicStringAccessor::GetString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetString 메서드"
+title: 'Cdynamicstringaccessor:: Getstring | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicStringAccessor.GetString
+- CDynamicStringAccessor::GetString
+dev_langs: C++
+helpviewer_keywords: GetString method
 ms.assetid: 4af27f27-7589-49f5-93d8-6ef05c023c8a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5b77819f0d9314518b4e7afd4ca8769bf001c48d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicStringAccessor::GetString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retrieves the specified column data as a string.  
+# <a name="cdynamicstringaccessorgetstring"></a>CDynamicStringAccessor::GetString
+지정된 열 데이터를 문자열로 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -42,21 +41,21 @@ BaseType* GetString(
 ) const throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nColumn`  
- \[in\] The column number.  Column numbers start with 1.  A value of 0 refers to the bookmark column, if any.  
+ [in] 열 번호입니다. 열 번호는 1부터 시작 합니다. 0 값이 있는 경우 책갈피 열을 참조 합니다.  
   
  `pColumnName`  
- \[in\] A pointer to a character string that contains the column name.  
+ [in] 열 이름이 포함 된 문자열에 대 한 포인터입니다.  
   
-## 반환 값  
- A pointer to the string value retrieved from the specified column.  The value is of type ***BaseType***, which will be **CHAR** or **WCHAR** depending on whether \_UNICODE is defined or not.  Returns NULL if the specified column is not found.  
+## <a name="return-value"></a>반환 값  
+ 문자열 값에 대 한 포인터는 지정된 된 열에서 검색 합니다. 형식의 값은 ***BaseType***, 될 **CHAR** 또는 **WCHAR** _UNICODE가 정의 되었는지에 따라 합니다. 지정된 된 열을 찾을 수 없는 경우 NULL을 반환 합니다.  
   
-## 설명  
- The second override form takes the column name as an ANSI string.  The third override form takes the column name as a Unicode string.  
+## <a name="remarks"></a>설명  
+ 두 번째는 ANSI 문자열로 폼은 열 이름을 재정의 합니다. 세 번째 폼은 열 이름을 유니코드 문자열로 재정의 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
- [CDynamicStringAccessor 클래스](../../data/oledb/cdynamicstringaccessor-class.md)
+## <a name="see-also"></a>참고 항목  
+ [CDynamicStringAccessor Class](../../data/oledb/cdynamicstringaccessor-class.md)

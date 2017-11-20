@@ -1,32 +1,30 @@
 ---
 title: "ArgTraitsHelper 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::ArgTraitsHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ArgTraitsHelper 구조체"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::ArgTraitsHelper
+dev_langs: C++
+helpviewer_keywords: ArgTraitsHelper structure
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8c42db196836a4a618003bfa14cd08d53105a04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ArgTraitsHelper 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-WRL 인프라구조체를 지원하고 코드에서 직접적으로 사용되는 것을 의도하지 않습니다.  
+# <a name="argtraitshelper-structure"></a>ArgTraitsHelper 구조체
+WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<  
@@ -35,35 +33,35 @@ template<
 struct ArgTraitsHelper;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `TDelegateInterface`  
  대리자 인터페이스입니다.  
   
-## 설명  
- 대리자 인수의 공통적인 특성을 정의하는 것을 돕습니다.  
+## <a name="remarks"></a>설명  
+ 대리자 인수의 공통 특성을 정의 하는 데 도움이 됩니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 공용 Typedefs  
+### <a name="public-typedefs"></a>공용 Typedefs  
   
-|Name|설명|  
-|----------|--------|  
-|`methodType`|이 `decltype(&TDelegateInterface::Invoke)` 의 동의어입니다.|  
-|`Traits`|이 `ArgTraits<methodType>` 의 동의어입니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|`methodType`|`decltype(&TDelegateInterface::Invoke)`의 동의어입니다.|  
+|`Traits`|`ArgTraits<methodType>`의 동의어입니다.|  
   
-### 공용 상수  
+### <a name="public-constants"></a>공용 상수  
   
-|Name|설명|  
-|----------|--------|  
-|[ArgTraitsHelper::args 상수](../windows/argtraitshelper-args-constant.md)|[ArgTraits::args](../windows/argtraits-args-constant.md) 를 대리자 인퍼페이스의 호출 메소드에서 매개변수의 수를 계산하는 것을 돕습니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[ArgTraitsHelper::args 상수](../windows/argtraitshelper-args-constant.md)|사용 하면 [argtraits:: Args](../windows/argtraits-args-constant.md) 대리자 인터페이스의 Invoke 메서드에 매개 변수 수를 유지 합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `ArgTraitsHelper`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  
   
- **네임스페이스:** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

@@ -1,69 +1,68 @@
 ---
 title: "다중 스레딩: 스레드 종료 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CREATE_SUSPENDED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AfxEndThread 메서드"
-  - "다중 스레딩[C++], 스레드 종료"
-  - "스레드 완전 종료"
-  - "스레드 시작"
-  - "스레드 중지"
-  - "스레드 종료"
-  - "스레딩[C++], 스레드 중지"
-  - "스레딩[MFC], 스레드 종료"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CREATE_SUSPENDED
+dev_langs: C++
+helpviewer_keywords:
+- premature thread termination
+- starting threads
+- threading [MFC], terminating threads
+- multithreading [C++], terminating threads
+- threading [C++], stopping threads
+- terminating threads
+- stopping threads
+- AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 942f34f8ef34a14a2e59e5a4a7e7ca9c3356f62b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 다중 스레딩: 스레드 종료
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-제어 함수가 끝나거나 스레드 실행을 완료할 수 없는 경우 스레드는 정상적으로 종료됩니다.  워드 프로세서에서 백그라운드 인쇄를 수행하는 데 스레드를 사용한 경우 인쇄가 성공적으로 완료되면 제어 함수는 정상적으로 종료됩니다.  그러나 인쇄 작업을 취소하면 백그라운드 인쇄 스레드가 완전 종료되어야 합니다.  이 항목에서는 각 상황을 구현하는 방법과 스레드가 종료된 후 스레드의 종료 코드를 가져오는 방법에 대해 설명합니다.  
+# <a name="multithreading-terminating-threads"></a>다중 스레딩: 스레드 종료
+두 가지 일반적인 문제 때문 스레드가 종료: 제어 함수 종료 또는 스레드 실행을 완료할 수 없습니다. 백그라운드 인쇄를 위해 스레드를 사용 하는 워드 프로세서를 제어 하는 함수는 정상적으로 종료 성공적으로 완료 된 인쇄 하는 경우. 그러나 사용자가 인쇄 작업을 취소, 백그라운드 인쇄 스레드가 완전히 종료 되어야 합니다. 이 항목에는 각 상황을 구현 하는 방법 및 종료 된 후 스레드 종료 코드를 가져오는 방법을 모두 설명 합니다.  
   
 -   [정상적인 스레드 종료](#_core_normal_thread_termination)  
   
 -   [스레드 완전 종료](#_core_premature_thread_termination)  
   
--   [스레드의 종료 코드 검색](#_core_retrieving_the_exit_code_of_a_thread)  
+-   [스레드 종료 코드를 검색합니다.](#_core_retrieving_the_exit_code_of_a_thread)  
   
-##  <a name="_core_normal_thread_termination"></a> 정상적인 스레드 종료  
- 작업자 스레드의 경우 정상적인 스레드 종료는 간단합니다. 제어 함수를 끝내고 종료 이유를 나타내는 값을 반환하면 됩니다.  [AfxEndThread](../Topic/AfxEndThread.md) 함수 또는 `return` 문을 사용할 수 있습니다.  일반적으로 0을 사용하여 제대로 완료된 경우를 나타내지만 이 값은 사용자가 변경할 수도 있습니다.  
+##  <a name="_core_normal_thread_termination"></a>정상적인 스레드 종료  
+ 작업자 스레드에 대 한 일반 스레드 종료는 간단: 제어 함수를 종료 하 고 종료 이유를 나타내는 값을 반환 합니다. 하나를 사용할 수는 [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) 함수 또는 `return` 문. 일반적으로 0을 성공적으로 완료를 사용 하지만 사용자의 책임입니다.  
   
- 사용자 인터페이스 스레드의 경우도 프로세스는 간단합니다. 사용자 인터페이스 스레드 내에서 [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)]의 [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945)를 호출합니다.  **PostQuitMessage**가 사용하는 매개 변수는 스레드의 종료 코드뿐입니다.  작업자 스레드와 마찬가지로 0을 사용하여 제대로 완료된 경우를 나타냅니다.  
+ 사용자 인터페이스 스레드는 프로세스를 단순하게:에서 호출 하는 사용자 인터페이스 스레드 내에서 [경우도](http://msdn.microsoft.com/library/windows/desktop/ms644945) 에 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]합니다. 유일한 매개 변수는 **경우도** 하나 스레드 종료 코드입니다. 작업자 스레드 마찬가지로 0을 사용 하 여 성공적으로 완료 된 경우를 나타냅니다.  
   
-##  <a name="_core_premature_thread_termination"></a> 스레드 완전 종료  
- 스레드를 완전히 종료시키는 프로세스도 간단합니다. 스레드에서 [AfxEndThread](../Topic/AfxEndThread.md)를 호출하면 됩니다.  원하는 종료 코드를 단일 매개 변수에 전달합니다.  이렇게 하면 스레드 실행이 중단되고, 스레드의 스택이 할당 해제되고, 스레드에 링크된 모든 DLL이 분리되고, 스레드 개체가 메모리에서 삭제됩니다.  
+##  <a name="_core_premature_thread_termination"></a>스레드 완전 종료  
+ 스레드를 완전히 종료 하는 것은 간단: 호출 [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) 에서 스레드 내에서. 원하는 종료 코드를 유일한 매개 변수로 전달 합니다. 이 스레드의 실행이 중지 되, 스레드의 스택 할당을 취소, 분리 하는 스레드에 연결 된 모든 Dll 및 스레드 개체가 메모리에서 삭제 합니다.  
   
- `AfxEndThread`는 종료될 스레드 내에서 호출해야 합니다.  스레드를 다른 스레드에서 종료시키려면 두 스레드 사이에 통신 방법을 설정해야 합니다.  
+ `AfxEndThread`스레드 종료 내에서 호출 되어야 합니다. 다른 스레드의 스레드를 종료 하려면 두 스레드 간의 통신 방법을 설정 해야 합니다.  
   
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> 스레드의 종료 코드 검색  
- 작업자 스레드 또는 사용자 인터페이스 스레드의 종료 코드를 가져오려면 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) 함수를 호출합니다.  이 함수에 대한 자세한 내용은 [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)]를 참조하십시오.  이 함수는 `CWinThread` 개체의 `m_hThread` 데이터 멤버에 저장된 스레드에 대한 핸들과 `DWORD` 주소를 사용합니다.  
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>스레드 종료 코드를 검색합니다.  
+ 사용자 인터페이스 스레드 또는 작업자의 종료 코드를 가져오려면 호출는 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) 함수입니다. 이 함수에 대 한 정보를 참조 하십시오.는 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]합니다. 이 함수는 스레드에 대 한 핸들을 사용 (에 저장 된는 `m_hThread` 데이터 멤버의 `CWinThread` 개체)의 주소는 `DWORD`합니다.  
   
- 스레드가 여전히 활성 상태이면 **GetExitCodeThread**는 제공된 `DWORD` 주소에 **STILL\_ACTIVE**를 표시합니다. 그렇지 않으면 종료 코드가 이 주소에 표시됩니다.  
+ 스레드가 아직 활성 상태인 경우 **GetExitCodeThread** 배치 **STILL_ACTIVE** 에 제공 된 `DWORD` 주소; 이외에 종료 코드는이 주소에 배치 합니다.  
   
- [CWinThread](../mfc/reference/cwinthread-class.md) 개체의 종료 코드를 검색하려면 한 단계를 추가로 수행합니다.  기본적으로 `CWinThread` 스레드가 종료되면 스레드 개체는 삭제됩니다.  이것은 `CWinThread` 개체가 더 이상 존재하지 않으므로 `m_hThread` 데이터 멤버에 액세스할 수 없음을 의미합니다.  이 상황을 방지하려면 다음 중 하나를 수행하십시오.  
+ 검색의 종료 코드 [CWinThread](../mfc/reference/cwinthread-class.md) 개체는 추가 단계를 사용 합니다. 기본적으로 때는 `CWinThread` 스레드가 종료, 스레드 개체를 삭제 합니다. 즉, 액세스할 수 없습니다는 `m_hThread` 데이터 멤버 때문에 `CWinThread` 개체가 없습니다. 이러한 상황을 방지 하려면 다음 중 하나를 수행 합니다.  
   
--   `m_bAutoDelete` 데이터 멤버를 **FALSE**로 설정합니다.  이렇게 하면 스레드가 종료된 후에도 `CWinThread` 개체가 계속 존재할 수 있으므로  `m_hThread` 데이터 멤버에 액세스할 수 있습니다.  그러나 이 기법을 사용하면 프레임워크에서 자동으로 `CWinThread` 개체를 삭제하지 않으므로 사용자가 직접 소멸시켜야 합니다.  이것이 더 좋은 방법입니다.  
+-   설정의 `m_bAutoDelete` 데이터 멤버를 **FALSE**합니다. 이 통해는 `CWinThread` 스레드가 종료 된 후 생존 하는 개체입니다. 에 액세스할 수 있습니다는 `m_hThread` 스레드가 종료 된 후 데이터 멤버입니다. 하지만이 기법을 사용 모르는 경우 제거 해야는 `CWinThread` 프레임 워크는 삭제 하지 않으므로 자동으로 사용자에 대 한 개체입니다. 이것은 기본 방법입니다.  
   
--   스레드의 핸들을 별도로 저장합니다.  스레드를 만든 다음 **::DuplicateHandle**로 `m_hThread` 데이터 멤버를 다른 변수에 복사하여 이 변수를 통해 액세스합니다.  이렇게 하면 스레드가 종료할 때 자동으로 개체가 삭제되지만 스레드가 종료된 이유를 알 수 있습니다.  핸들을 복제하기 전에 스레드가 종료되지 않도록 주의하십시오.  이 작업을 가장 안전하게 수행하는 방법은 **CREATE\_SUSPENDED**를 [AfxBeginThread](../Topic/AfxBeginThread.md)에 전달하고 핸들을 저장한 다음 [ResumeThread](../Topic/CWinThread::ResumeThread.md)를 호출하여 스레드를 다시 시작하는 것입니다.  
+-   스레드 핸들을 별도로 저장 합니다. 스레드를 만든 후 복사 해당 `m_hThread` 데이터 멤버 (사용 하 여 **:: DuplicateHandle**)를 다른 변수에 해당 변수를 통해 액세스 합니다. 이러한 방식으로 개체 있습니다 수 이유를 알에 스레드가 종료 종료할 때 자동으로 삭제 됩니다. 스레드 핸들을 복제 하기 전에 종료 되지 않도록 주의 해야 합니다. 이 작업을 수행 하는 가장 안전한 방법은 전달 하는 **CREATE_SUSPENDED** 를 [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), 핸들을 저장 하 고 호출 하 여 스레드가 다시 [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread)합니다.  
   
- 두 방법 중 하나를 사용하여 `CWinThread` 개체가 종료된 이유를 확인할 수 있습니다.  
+ 두 방법 중 하나를 사용 하면 이유를 확인 하는 `CWinThread` 개체가 종료 된 합니다.  
   
-## 참고 항목  
- [C\+\+ 및 MFC에서 다중 스레딩](../parallel/multithreading-with-cpp-and-mfc.md)   
- [\_endthread, \_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
- [\_beginthread, \_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+## <a name="see-also"></a>참고 항목  
+ [C + + 및 MFC를 사용한 다중 스레딩](../parallel/multithreading-with-cpp-and-mfc.md)   
+ [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
+ [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

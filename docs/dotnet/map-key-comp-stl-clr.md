@@ -1,41 +1,39 @@
 ---
-title: "map::key_comp(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_comp 멤버[STL/CLR]"
+title: 'map:: key_comp (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: 42607057-d0d7-48b9-aadf-f3336fcc50b4
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5e565cf9ad0c333d13e606f3d7408eee5842ed83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# map::key_comp(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copies the ordering delegate for two keys.  
+# <a name="mapkeycomp-stlclr"></a>map::key_comp(STL/CLR)
+두 키에 대 한 순서 지정 대리자를 복사합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## 설명  
- The member function returns the ordering delegate used to order the controlled sequence.  이를 통해 두 키를 비교할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 정렬 대리자를 반환 합니다. 두 키를 비교할를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_key_comp.cpp   
@@ -71,18 +69,22 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**  
-**compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= False**  
-**compare\(L'b', L'a'\) \= True**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)   
- [map::key\_compare](../dotnet/map-key-compare-stl-clr.md)   
- [map::key\_type](../dotnet/map-key-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)   
+ [map::key_type(STL/CLR)](../dotnet/map-key-type-stl-clr.md)

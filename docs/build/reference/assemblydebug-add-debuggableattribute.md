@@ -1,89 +1,89 @@
 ---
-title: "/ASSEMBLYDEBUG(DebuggableAttribute 추가) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.AssemblyDebug"
-  - "/ASSEMBLYDEBUG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ASSEMBLYDEBUG 링커 옵션"
-  - "ASSEMBLYDEBUG 링커 옵션"
-  - "-ASSEMBLYDEBUG 링커 옵션"
+title: "-ASSEMBLYDEBUG (DebuggableAttribute 추가) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.AssemblyDebug
+- /ASSEMBLYDEBUG
+dev_langs: C++
+helpviewer_keywords:
+- /ASSEMBLYDEBUG linker option
+- -ASSEMBLYDEBUG linker option
+- ASSEMBLYDEBUG linker option
 ms.assetid: 94443af3-470c-41d7-83a0-7434563d7982
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 77cb4209c9f90388c83a69d01b5ad7467d7e7c58
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# /ASSEMBLYDEBUG(DebuggableAttribute 추가)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="assemblydebug-add-debuggableattribute"></a>/ASSEMBLYDEBUG(DebuggableAttribute 추가)
 ```  
 /ASSEMBLYDEBUG[:DISABLE]  
 ```  
   
- \/ASSEMBLYDEBUG는 **DebuggableAttribute** 특성을 생성하고 디버그 정보 추적을 사용하며 JIT 최적화를 비활성화합니다.  이 옵션은 소스에서 다음 특성을 지정하는 것과 같습니다.  
+ /ASSEMBLYDEBUG 내보내는 **DebuggableAttribute** 디버그 정보 추적은 사용 하 고 JIT 최적화를 사용 하 여 특성입니다. 원본에는 다음 특성이 지정과 같습니다.  
   
 ```  
 [assembly:Debuggable(true, true)];   // same as /ASSEMBLYDEBUG  
 ```  
   
- \/ASSEMBLYDEBUG:DISABLE은 **DebuggableAttribute** 특성을 생성하지만 디버그 정보 추적을 해제하고 JIT 최적화를 활성화합니다.  이 옵션은 소스에서 다음 특성을 지정하는 것과 같습니다.  
+ /Assemblydebug: disable 내보내는 **DebuggableAttribute** 특성 디버그 정보 추적을 해제 하지만 JIT 최적화를 활성화 합니다. 원본에는 다음 특성이 지정과 같습니다.  
   
 ```  
 [assembly:Debuggable(false, false)];   // same as /ASSEMBLYDEBUG:DISABLE  
 ```  
   
- 기본 동작은 **DebuggableAttribute** 특성을 생성하지 않는 것입니다.  
+ 기본값은 출력 하지는 **DebuggableAttribute** 특성입니다.  
   
- 소스 코드에서 직접 DebuggableAttribute를 어셈블리에 추가할 수도 있습니다.  예를 들면 다음과 같습니다.  
+ DebuggableAttribute 소스 코드에서 직접 어셈블리에 추가할 수도 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 [assembly:Debuggable(true, true)];   // same as /ASSEMBLYDEBUG  
 ```  
   
-## 설명  
- Visual C\+\+ .NET 2003 이후 버전에서는 관리되는 이미지의 디버깅 가능 여부를 명시적으로 지정해야 합니다.  [\/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)만 사용하는 것으로는 충분하지 않습니다.  
+## <a name="remarks"></a>설명  
+ 명시적으로 관리 되는 이미지를 디버깅할 수를 지정 하는 데 필요한 경우 사용 하 여 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) 만으로는 충분 하지 않습니다.  
   
- 다음은 어셈블리 생성에 사용하는 기타 링커 옵션입니다.  
+ 어셈블리 생성에 영향을 주는 다른 링커 옵션은:  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
+-   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
+-   [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [\/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
--   [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
-3.  **디버그** 속성 페이지를 클릭합니다.  
+3.  클릭는 **디버그** 속성 페이지.  
   
-4.  **디버깅 가능한 어셈블리** 속성을 수정합니다.  
+4.  수정 된 **디버깅 가능한 어셈블리** 속성입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AssemblyDebug%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AssemblyDebug%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

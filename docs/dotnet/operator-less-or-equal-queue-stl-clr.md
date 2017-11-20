@@ -1,33 +1,30 @@
 ---
-title: "operator&lt;= (queue)(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= 멤버[STL/CLR]"
+title: "연산자&lt;= (queue) (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: 63b7f908-4f6b-40d6-bcc6-22970760789d
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d147d57d3858d34091d66cdd602bf150eb8f2761
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# operator&lt;= (queue)(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Queue less than or equal comparison.  
+# <a name="operatorlt-queue-stlclr"></a>연산자&lt;= (queue) (STL/CLR)
+보다 작거나 같은 큐 비교 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Value,  
@@ -36,17 +33,17 @@ template<typename Value,
         queue<Value, Container>% right);  
 ```  
   
-#### 매개 변수  
- left  
- Left container to compare.  
+#### <a name="parameters"></a>매개 변수  
+ 왼쪽  
+ 비교할 왼쪽 컨테이너입니다.  
   
- right  
- Right container to compare.  
+ 오른쪽  
+ 비교할 오른쪽 컨테이너입니다.  
   
-## 설명  
- The operator function returns `!(``right` `<` `left``)`.  You use it to test whether `left` is not ordered after `right` when the two queues are compared element by element.  
+## <a name="remarks"></a>설명  
+ 연산자 함수 반환 `!(right < left)`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 되지 않은 `right` 때 두 개의 큐는 요소 별로 비교 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_queue_operator_le.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \<\= \[a b c\] is True**  
-**\[a b d\] \<\= \[a b c\] is False**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [queue](../dotnet/queue-stl-clr.md)   
- [operator\=\= \(queue\)](../dotnet/operator-equality-queue-stl-clr.md)   
- [operator\!\= \(queue\)](../dotnet/operator-inequality-queue-stl-clr.md)   
- [operator\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)   
- [operator\>\= \(queue\)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
- [operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [연산자 = = (queue) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)   
+ [operator! = (queue) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   
+ [연산자\< (queue) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)   
+ [연산자 > = (queue) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
+ [operator> (queue)(STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)

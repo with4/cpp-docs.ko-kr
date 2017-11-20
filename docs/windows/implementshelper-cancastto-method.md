@@ -1,32 +1,30 @@
 ---
-title: "ImplementsHelper::CanCastTo 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsHelper::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CanCastTo 메서드"
+title: "Implementshelper:: Cancastto 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsHelper::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: 9ae6fa17-d0b1-4e31-9ae5-da6ae4026e32
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 85efecee06794badaa155a988234aa602ba7fd6a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ImplementsHelper::CanCastTo 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -41,27 +39,27 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `riid`  
- 인터페이스 ID에 대한 참조  
+ 인터페이스 ID에 대 한 참조  
   
  `ppv`  
- 이 작업이 성공적이면, 인터페이스에 대한 포인터는 `riid` 또는 `iid` 에 의해 지정됩니다.  
+ 인터페이스에 대 한 포인터를 지정 하 여이 작업을 완료 하는 경우 `riid` 또는 `iid`합니다.  
   
  `iid`  
- 인터페이스 ID에 대한 참조  
+ 인터페이스 ID에 대 한 참조  
   
-## 반환 값  
- 성공 하면 S\_OK 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
   
-## 설명  
- 지정한 인터페이스ID에 대한 포인터를 검색합니다.  
+## <a name="remarks"></a>설명  
+ 지정 된 인터페이스 id와 같습니다. 한 포인터를 가져옵니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
   
- **네임스페이스**Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ImplementsHelper 구조체](../windows/implementshelper-structure.md)   
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

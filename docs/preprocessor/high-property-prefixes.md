@@ -1,54 +1,52 @@
 ---
-title: "high_property_prefixes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "high_property_prefixes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "high_property_prefixes 특성"
+title: high_property_prefixes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: high_property_prefixes
+dev_langs: C++
+helpviewer_keywords: high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d7678ee6da96c26090d529f8f4b4bfd9b6a7c1bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# high_property_prefixes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**C\+\+ 전용**  
+# <a name="highpropertyprefixes"></a>high_property_prefixes
+**C + + 전용**  
   
  세 가지 속성 메서드의 대체 접두사를 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `GetPrefix`  
- **propget** 메서드에 사용되는 접두사입니다.  
+ 에 사용할 접두사는 **propget** 메서드.  
   
  `PutPrefix`  
- **propput** 메서드에 사용되는 접두사입니다.  
+ 에 사용할 접두사는 **propput** 메서드.  
   
  `PutRefPrefix`  
- **propputref** 메서드에 사용되는 접두사입니다.  
+ 에 사용할 접두사는 **propputref** 메서드.  
   
-## 설명  
- 기본적으로 높은 수준의 오류 처리 **propget**, **propput** 및 **propputref** 메서드는 각각 **Get**, `Put` 및 **PutRef** 접두사로 명명된 멤버 함수에 의해 노출됩니다.  
+## <a name="remarks"></a>설명  
+ 기본적으로 상위 수준 오류 처리 **propget**, **propput**, 및 **propputref** 메서드가 접두사로 명명 된 멤버 함수에 의해 노출 되 **가져오기** , `Put`, 및 **PutRef**각각.  
   
- **C\+\+ 전용 종료**  
+ **C + + 전용 종료**  
   
-## 참고 항목  
- [\#import 특성](../preprocessor/hash-import-attributes-cpp.md)   
- [\#import 지시문](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [#import 특성](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import 지시문](../preprocessor/hash-import-directive-cpp.md)

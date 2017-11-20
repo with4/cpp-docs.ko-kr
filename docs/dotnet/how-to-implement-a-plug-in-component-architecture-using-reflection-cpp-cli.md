@@ -1,39 +1,38 @@
 ---
-title: "방법: 리플렉션을 사용하여 플러그 인 구성 요소 아키텍처 구현(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "플러그인[C++]"
-  - "리플렉션[C++}, 플러그 인"
+title: "플러그 인 아키텍처 구현 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- plug-ins [C++]
+- reflection [C++}, plug-ins
 ms.assetid: 4f31e42b-78d1-48b9-8fdc-f28c75e8e77e
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8d959702a7de8df9d90ca6dd855725901543dc92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 리플렉션을 사용하여 플러그 인 구성 요소 아키텍처 구현(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 리플렉션을 사용하여 간단한 "플러그 인" 아키텍처를 구현하는 방법을 보여 줍니다.  코드의 첫 번째 부분은 응용 프로그램이고 두 번째 부분은 플러그 인입니다.  이 응용 프로그램은 명령줄 인수로 지정된 플러그 인 DLL에 있는 폼 기반 클래스를 사용하여 내용을 채우는 다중 문서 폼입니다.  
+# <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>방법: 리플렉션을 사용하여 플러그 인 구성 요소 아키텍처 구현(C++/CLI)
+다음 코드 예제는 간단한 "플러그 인" 아키텍처를 구현 하는 리플렉션 사용을 보여 줍니다. 첫 번째 부분은 응용 프로그램을이 고 두 번째 플러그 인 합니다. 응용 프로그램에 명령줄 인수로 제공 되는 플러그 인 DLL에는 양식 기반 클래스를 사용 하 여 자신을 채우는 여러 문서 형태입니다.  
   
- 이 응용 프로그램은 제공된 어셈블리를 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 메서드를 사용하여 로드합니다.  어셈블리가 제대로 로드되면 어셈블리 내에 있는 형식을 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> 메서드를 사용하여 열거합니다.  그런 다음 <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> 메서드를 사용하여 각 형식의 호환성 여부를 검사합니다.  이 예제의 경우 제공된 어셈블리에 있는 클래스는 플러그 인 역할을 위해 <xref:System.Windows.Forms.Form> 클래스에서 파생되어야 합니다.  
+ 응용 프로그램에서 사용 하 여 제공 된 어셈블리를 로드 하려고는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 메서드. 성공 하는 경우 사용 하 여 어셈블리 내의 형식이 열거는 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> 메서드. 각 형식에 다음 사용 하 여 호환성에 대 한 확인란이 <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> 메서드. 이 예제에서는 제공 된 어셈블리의 클래스에서 파생 되어야 합니다는 <xref:System.Windows.Forms.Form> 클래스는 플러그 인으로 처리 합니다.  
   
- 호환되는 클래스는 <xref:System.Type>을 인수로 사용하고 새 인스턴스에 대한 포인터를 반환하는 <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 메서드를 사용하여 인스턴스화됩니다.  그런 다음 각각의 새 인스턴스가 폼에 연결되고 표시됩니다.  
+ 호환 되는 클래스는 사용 하 여 인스턴스화됩니다는 <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 메서드를 허용 하는 <xref:System.Type> 인수로 서 새 인스턴스에 대 한 포인터를 반환 합니다. 그런 다음 각각의 새 인스턴스에 폼에 연결 되 고 표시 합니다.  
   
- <xref:System.Reflection.Assembly.Load%2A> 메서드에 사용되는 어셈블리 이름에는 파일 확장명이 포함되지 않습니다.  응용 프로그램의 주 함수는 제공되는 모든 확장명을 트리밍하므로 다음 코드 예제는 두 경우 모두 작동합니다.  
+ <xref:System.Reflection.Assembly.Load%2A> 메서드는 파일 확장명을 포함 하는 어셈블리 이름을 허용 하지 않습니다. 다음 코드 예제에서는 두 경우 모두에서 작동 하므로 응용 프로그램의 주 기능은 제공 된 모든 확장을 삭제 합니다.  
   
-## 예제  
- 다음 코드에서는 플러그 인을 사용하는 응용 프로그램을 정의합니다.  어셈블리 이름은 첫 번째 인수로 제공해야 합니다.  이 어셈블리에는 public <xref:System.Windows.Forms.Form> 파생 형식이 적어도 하나 이상 포함되어야 합니다.  
+## <a name="example"></a>예제  
+ 다음 코드는 응용 프로그램에서는 플러그 인을 정의 합니다. 어셈블리 이름이 첫 번째 인수로 제공 되어야 합니다. 이 어셈블리에는 public이 하나 이상 포함 해야 <xref:System.Windows.Forms.Form> 파생 형식입니다.  
   
 ```  
 // plugin_application.cpp  
@@ -77,8 +76,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 코드에서는 <xref:System.Windows.Forms.Form>에서 파생된 클래스 세 개를 정의합니다.  결과 어셈블리의 이름을 위 응용 프로그램 코드의 실행 파일에 전달하면 컴파일할 때 이러한 세 클래스가 호스팅 응용 프로그램에 알려져 있지 않더라도 각 클래스가 검색 및 인스턴스화됩니다.  
+## <a name="example"></a>예제  
+ 다음 코드에서 파생 된 세 개의 클래스를 정의 <xref:System.Windows.Forms.Form>합니다. 결과 어셈블리 이름의 이름을 이전 샘플의 실행 파일에 전달 될 때 각 세 가지 클래스는 검색 되며도 컴파일 타임에 호스팅 응용 프로그램에 알려진 모든 것을 인스턴스화할 합니다.  
   
 ```  
 // plugin_assembly.cpp  
@@ -128,5 +127,5 @@ protected:
 };  
 ```  
   
-## 참고 항목  
- [리플렉션](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>참고 항목  
+ [리플렉션(C++/CLI)](../dotnet/reflection-cpp-cli.md)

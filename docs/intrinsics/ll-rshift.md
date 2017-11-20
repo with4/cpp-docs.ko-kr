@@ -1,36 +1,36 @@
 ---
-title: "__ll_rshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ll_rshift_cpp"
-  - "__ll_rshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__ll_rshift 내장 함수"
-  - "ll_rshift 내장 함수"
+title: __ll_rshift | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __ll_rshift_cpp
+- __ll_rshift
+dev_langs: C++
+helpviewer_keywords:
+- __ll_rshift intrinsic
+- ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b247be12c40746cb8662093518be1eb8eeff2fa1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __ll_rshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="llrshift"></a>__ll_rshift
 **Microsoft 전용**  
   
- 두 번째 매개 변수에 의해 지정 된 비트 수 오른쪽 첫 번째 매개 변수에 의해 지정 된 64 비트 값을 이동 합니다.  
+ 오른쪽에 첫 번째 매개 변수로 지정 된 64 비트 값을 두 번째 매개 변수로 지정 된 비트 수 만큼 이동 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 __int64 __ll_rshift(  
@@ -39,28 +39,28 @@ __int64 __ll_rshift(
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `Mask`  
- 오른쪽으로 이동 하는 64 비트 정수 값입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `Mask`  
+ 오른쪽으로 이동 하려면 64 비트 정수 값입니다.  
   
- \[in\] `nBit`  
- 이동할 64 x 64의 나머지와 나머지 x 86 32 비트 개수입니다.  
+ [in] `nBit`  
+ X64, 64로 나눈 나머지 및 x86 32 모듈로 이동할 비트 수입니다.  
   
-## 반환 값  
- 마스크를 이동 하 여 `nBit` 비트.  
+## <a name="return-value"></a>반환 값  
+ / / 마스크 하 여 이동 된 `nBit` 비트입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__ll_rshift`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 두 번째 매개 변수 \(32\) x 86에서 x 64에서 64 보다 크면 해당 번호 모듈러스 64 \(32 x 86\) 이동할 비트 수를 확인 하지 않습니다.  `ll` 접두사가 작업에서 임을 나타냅니다 `long long`, 다른 이름 `__int64`, 64 비트 부호 있는 정수 계열 형식입니다.  
+## <a name="remarks"></a>설명  
+ 두 번째 매개 변수 64 x64 (x86 32) 보다 큰 경우 해당 개수 계산 된 것 (x86 32) 64로 나눈 나머지 이동할 비트 수를 결정 합니다. `ll` 접두사에는 작업 임을 나타냅니다. `long long`, 다른 이름을 `__int64`, 64 비트 부호 있는 정수 형식입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // ll_rshift.cpp  
@@ -84,7 +84,7 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 ffffffffffffff00  
@@ -93,11 +93,11 @@ fffffffffffffff0
  - 10  
 ```  
   
- **참고** 경우 `_ull_rshift` 되었습니다 원하는 결과가 음수 값의 경우 가져온 것 없습니다 있도록 사용 하면 MSB 오른쪽 이동 값을 0, 했을 것입니다.  
+ **참고** 경우 `_ull_rshift` 되었습니다을 사용 하는 오른쪽 이동 된 값의 MSB 있었을 0 되므로 원하는 결과 하지 얻은 음수 값의 경우.  
   
-### Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)   
- [\_\_ll\_lshift](../intrinsics/ll-lshift.md)   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)
+ [__ll_lshift](../intrinsics/ll-lshift.md)   
+ [__ull_rshift](../intrinsics/ull-rshift.md)

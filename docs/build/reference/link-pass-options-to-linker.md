@@ -1,63 +1,62 @@
 ---
-title: "/link(옵션을 링커로 전달) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/link 컴파일러 옵션[C++]"
-  - "cl.exe 컴파일러[C++], 링커에 옵션 전달"
-  - "link 컴파일러 옵션[C++]"
-  - "-link 컴파일러 옵션[C++]"
-  - "링커[C++], 옵션 전달"
-  - "링커에 옵션 전달"
+title: "-링크 (전달 옵션을 링커로) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /link
+dev_langs: C++
+helpviewer_keywords:
+- /link compiler option [C++]
+- pass options to linker
+- link compiler option [C++]
+- linker [C++], passing options to
+- -link compiler option [C++]
+- cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2e2a193ff5f1e76d4e7ceb160325c1e748634c3a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /link(옵션을 링커로 전달)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-하나 이상의 링커 옵션을 링커에 전달할 수 있습니다.  
+# <a name="link-pass-options-to-linker"></a>/link(옵션을 링커로 전달)
+하나 이상의 링커 옵션을 링커에 전달 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /link linkeroptions  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  `linkeroptions`  
- 링커로 전달할 링커 옵션입니다.  
+ 링커 옵션 또는 옵션을 링커로 전달 합니다.  
   
-## 설명  
- **\/link** 옵션과 이 옵션의 링커 옵션은 파일 이름과 CL 옵션 뒤에 사용해야 합니다.  **\/link**와 `linkeroptions` 사이에는 공백이 하나 있어야 합니다.  자세한 내용은 [링커 옵션 설정](../../build/reference/setting-linker-options.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ **/link** 옵션 및 링커 옵션 파일 이름과 CL 옵션 뒤에 나타나야 합니다. 사이 공백을 않습니다 **/link** 및 `linkeroptions`합니다. 자세한 내용은 참조 [링커 옵션 설정](../../build/reference/setting-linker-options.md)합니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
-3.  링커 속성 페이지를 클릭합니다.  
+3.  링커 속성 페이지를 클릭 합니다.  
   
-4.  하나 이상의 속성을 수정합니다.  
+4.  하나 이상의 속성을 수정 합니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   이 컴파일러 옵션은 프로그래밍 방식으로 변경할 수 없습니다.  
+-   이 컴파일러 옵션을 프로그래밍 방식으로 변경할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

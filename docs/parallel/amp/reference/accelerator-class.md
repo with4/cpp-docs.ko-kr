@@ -1,11 +1,10 @@
 ---
-title: "accelerator 클래스 | Microsoft 문서"
+title: "accelerator 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -44,38 +43,21 @@ f1_keywords:
 - AMPRT/Concurrency::accelerator::supports_double_precision
 - AMPRT/Concurrency::accelerator::supports_limited_double_precision
 - AMPRT/Concurrency::accelerator::version
-dev_langs:
-- C++
-helpviewer_keywords:
-- accelerator class
+dev_langs: C++
+helpviewer_keywords: accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d1e68b3533452ec1e47053086c59654337c995fa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 5bdb3d081e9f7f1c2333d8bc577401b95ab0f858
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="accelerator-class"></a>accelerator 클래스
-액셀러레이터 키에는 데이터 병렬 컴퓨팅을 위한 최적화 된 하드웨어 기능입니다. 액셀러레이터 키 (예: GPU), PCIe 버스에 연결 된 장치 이거나 주 CPU에 설정 하는 확장 된 명령 수 있습니다.  
+액셀러레이터 키에는 데이터 병렬 컴퓨팅을 위한 최적화 된 하드웨어 기능입니다. 액셀러레이터 키 (예: GPU), PCIe 버스에 연결 된 장치 이거나 확장된 명령 주 CPU에 설정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -89,67 +71,67 @@ class accelerator;
   
 |이름|설명|  
 |----------|-----------------|  
-|[엑셀 러 레이 터 생성자](#ctor)|`accelerator` 클래스의 새 인스턴스를 초기화합니다.|  
-|[~ accelerator 소멸자](#ctor)|소멸은 `accelerator` 개체입니다.|  
+|[accelerator 생성자](#ctor)|`accelerator` 클래스의 새 인스턴스를 초기화합니다.|  
+|[~ accelerator 소멸자](#ctor)|소멸 된 `accelerator` 개체입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[create_view](#create_view)|만들고 반환는 `accelerator_view` 이 액셀러레이터의 개체입니다.|  
-|[get_all](#get_all)|벡터를 반환 `accelerator` 사용 가능한 모든 액셀러레이터를 나타내는 개체입니다.|  
+|[create_view](#create_view)|만들고 반환 된 `accelerator_view` 이 액셀러레이터에서 개체입니다.|  
+|[get_all](#get_all)|벡터의 반환 `accelerator` 사용 가능한 모든 액셀러레이터 키를 나타내는 개체입니다.|  
 |[get_auto_selection_view](#get_auto_selection_view)|자동 선택 반환 `accelerator_view`합니다.|  
 |[get_dedicated_memory](#get_dedicated_memory)|반환에 대 한 전용된 된 메모리는 `accelerator`, (킬로바이트)에서입니다.|  
-|[get_default_cpu_access_type](#get_default_cpu_access_type)|기본 반환 [access_type](concurrency-namespace-enums-amp.md#access_type) 이 액셀러레이터에서 생성 하는 버퍼에 대 한 합니다.|  
-|[get_default_view](#get_default_view)|기본 반환 `accelerator_view` 와 연결 된 개체는 `accelerator`합니다.|  
+|[get_default_cpu_access_type](#get_default_cpu_access_type)|기본 [access_type](concurrency-namespace-enums-amp.md#access_type) 이 액셀러레이터에서 생성 된 버퍼에 대 한 합니다.|  
+|[get_default_view](#get_default_view)|기본 `accelerator_view` 연결 된 개체에는 `accelerator`합니다.|  
 |[get_description](#get_description)|에 대 한 간단한 설명을 반환는 `accelerator` 장치입니다.|  
 |[get_device_path](#get_device_path)|장치 경로 반환합니다.|  
-|[get_has_display](#get_has_display)|결정 여부는 `accelerator` 디스플레이에 연결 됩니다.|  
-|[get_is_debug](#get_is_debug)|결정 여부는 `accelerator` 에 DEBUG 레이어가 확장 오류 보고에 사용할 수 있습니다.|  
-|[get_is_emulated](#get_is_emulated)|확인 여부는 `accelerator` 에뮬레이트됩니다.|  
-|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|확인 여부는 `accelerator` 공유 메모리 지원|  
-|[get_supports_double_precision](#get_supports_double_precision)|결정 여부는 `accelerator` 디스플레이에 연결 됩니다.|  
-|[get_supports_limited_double_precision](#get_supports_limited_double_precision)|확인 여부는 `accelerator` 이중 정밀도 수치를 제한적으로 지원 합니다.|  
+|[get_has_display](#get_has_display)|결정 여부는 `accelerator` 를 디스플레이 연결 합니다.|  
+|[get_is_debug](#get_is_debug)|결정 여부는 `accelerator` 에 디버그 레이어가 확장 오류 보고에 대 한 활성화 합니다.|  
+|[get_is_emulated](#get_is_emulated)|결정 여부는 `accelerator` 에뮬레이트됩니다.|  
+|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|결정 여부는 `accelerator` 공유 메모리 지원|  
+|[get_supports_double_precision](#get_supports_double_precision)|결정 여부는 `accelerator` 를 디스플레이 연결 합니다.|  
+|[get_supports_limited_double_precision](#get_supports_limited_double_precision)|결정 여부는 `accelerator` 이중 정밀도 수치를 제한적으로 지원 합니다.|  
 |[get_version](#get_version)|버전을 반환 된 `accelerator`합니다.|  
-|[set_default](#set_default)|기본 액셀러레이터의 경로 반환합니다.|  
-|[set_default_cpu_access_type](#set_default_cpu_access_type)|기본 CPU 설정 [access_type](concurrency-namespace-enums-amp.md#access_type)배열 및이 만든 암시적 메모리 할당에 대 한 `accelerator`합니다.|  
+|[set_default](#set_default)|기본 액셀러레이터의 경로 반환 합니다.|  
+|[set_default_cpu_access_type](#set_default_cpu_access_type)|기본 CPU 설정 [access_type](concurrency-namespace-enums-amp.md#access_type)배열과이 만든 암시적 메모리 할당에 대 한 `accelerator`합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|비교 하 여 `accelerator` 반환 하 고 개체와 다른 `false` 않으면는 동일 합니다; 그렇지 않으면 반환 `true`합니다.|  
-|[operator=](#operator_eq)|지정 된 내용을 복사 `accelerator` 여기에 개체입니다.|  
-|[operator==](#operator_eq_eq)|비교 하 여 `accelerator` 반환 하 고 개체와 다른 `true` 않으면는 동일 합니다; 그렇지 않으면 반환 `false`합니다.|  
+|[operator!=](#operator_neq)|비교 하 여 `accelerator` 반환 하 고 개체를 다른 `false` 않으면는 동일 합니다; 그렇지 않으면 반환 `true`합니다.|  
+|[operator=](#operator_eq)|지정 된의 내용을 복사 `accelerator` 여기에 개체입니다.|  
+|[operator==](#operator_eq_eq)|비교 하 여 `accelerator` 반환 하 고 개체를 다른 `true` 않으면는 동일 합니다; 그렇지 않으면 반환 `false`합니다.|  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
 |이름|설명|  
 |----------|-----------------|  
-|[cpu_accelerator](#cpu_accelerator)|CPU에 대 한 문자열 상수를 가져옵니다 `accelerator`합니다.|  
+|[cpu_accelerator](#cpu_accelerator)|CPU에 대 한 상수 문자열을 가져옵니다 `accelerator`합니다.|  
 |[dedicated_memory](#dedicated_memory)|에 대 한 전용된 된 메모리를 가져옵니다는 `accelerator`, (킬로바이트)에서입니다.|  
-|[default_accelerator](#default_accelerator)|기본값에는 문자열 상수를 가져옵니다 `accelerator`합니다.|  
-|[default_cpu_access_type](#default_cpu_access_type)|기본 CPU를 가져오거나 설정 합니다. [access_type](concurrency-namespace-enums-amp.md#access_type)배열 및이 만든 암시적 메모리 할당에 대 한 `accelerator`합니다.|  
-|[default_view](#default_view)|기본 가져옵니다 `accelerator_view` 와 연결 된 개체는 `accelerator`합니다.|  
-|[설명](#description)|에 대 한 간단한 설명을 가져옵니다는 `accelerator` 장치입니다.|  
+|[default_accelerator](#default_accelerator)|기본값에 대 한 상수 문자열을 가져옵니다 `accelerator`합니다.|  
+|[default_cpu_access_type](#default_cpu_access_type)|기본 CPU를 가져오거나 설정 합니다. [access_type](concurrency-namespace-enums-amp.md#access_type)배열과이 만든 암시적 메모리 할당에 대 한 `accelerator`합니다.|  
+|[default_view](#default_view)|기본 가져옵니다 `accelerator_view` 연결 된 개체에는 `accelerator`합니다.|  
+|[description](#description)|에 대 한 간단한 설명을 가져옵니다는 `accelerator` 장치입니다.|  
 |[device_path](#device_path)|장치 경로 가져옵니다.|  
-|[direct3d_ref](#direct3d_ref)|Direct3D 참조에 대 한 문자열 상수를 가져옵니다 `accelerator`합니다.|  
-|[direct3d_warp](#direct3d_warp)|문자열에 대 한 상수를 가져옵니다는 `accelerator` SSE 스트리밍 SIMD 확장 ()를 사용 하는 다중 코어 Cpu에서 c + + AMP 실행에 사용할 수 있는 개체입니다.|  
-|[has_display](#has_display)|나타내는 부울 값을 가져옵니다 여부는 `accelerator` 디스플레이에 연결 됩니다.|  
+|[direct3d_ref](#direct3d_ref)|Direct3D 참조에 대 한 상수 문자열을 가져옵니다 `accelerator`합니다.|  
+|[direct3d_warp](#direct3d_warp)|문자열에 대 한 상수를 가져옵니다는 `accelerator` SSE 스트리밍 SIMD 확장명 ()를 사용 하는 다중 코어 Cpu에서 c + + AMP 코드를 실행 하는 데 사용할 수 있는 개체입니다.|  
+|[has_display](#has_display)|나타내는 부울 값을 가져옵니다 여부는 `accelerator` 를 디스플레이 연결 합니다.|  
 |[is_debug](#is_debug)|나타냅니다 여부는 `accelerator` 에 디버그 레이어가 확장 오류 보고에 대 한 활성화 합니다.|  
 |[is_emulated](#is_emulated)|나타냅니다 여부는 `accelerator` 에뮬레이트됩니다.|  
 |[supports_cpu_shared_memory](#supports_cpu_shared_memory)|나타냅니다 여부는 `accelerator` 공유 메모리를 지원 합니다.|  
 |[supports_double_precision](#supports_double_precision)|액셀러레이터가 이중 정밀도 수치를 지원 하는지 여부를 나타냅니다.|  
-|[supports_limited_double_precision](#supports_limited_double_precision)|액셀러레이터는 제한적으로 이중 정밀도 수치를 지원 하는지 여부를 나타냅니다.|  
+|[supports_limited_double_precision](#supports_limited_double_precision)|액셀러레이터 키 엑셀러레이터가 이중 정밀도 수치 지원이 제한 여부를 나타냅니다.|  
 |[version](#version)|버전을 가져옵니다는 `accelerator`합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `accelerator`  
   
 ## <a name="remarks"></a>설명  
- 액셀러레이터 키에는 데이터 병렬 컴퓨팅을 위한 최적화 된 하드웨어 기능입니다. 액셀러레이터 불연속 GPU가 쉽지만 WARP (CPU 쪽 장치 SSE 명령을 사용 하 여 가속화), 또는 자체 CPU DirectX REF 장치와 같은 가상 호스트 측 엔터티입니다 일 수도 있습니다.  
+ 액셀러레이터 키에는 데이터 병렬 컴퓨팅을 위한 최적화 된 하드웨어 기능입니다. 액셀러레이터 키는 불연속 GPU가 주로 발생 하지만 WARP (CPU 쪽 장치 sse 명령을 사용 하 여 가속화), 또는 자체 CPU DirectX REF 장치와 같은 가상 호스트 측 엔터티 일 수도 있습니다.  
   
- 생성할 수는 `accelerator` 기본 장치, 참조 장치 또는 WARP 장치 또는 사용 가능한 장치를 열거 하 여 개체입니다.  
+ 생성할 수 있습니다는 `accelerator` 기본 장치, 참조 장치 또는 WARP 장치 또는 사용 가능한 장치를 열거 하 여 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** amprt.h  
@@ -158,7 +140,7 @@ class accelerator;
   
 ##  <a name="dtor"></a></a> ~ accelerator 
 
- 소멸은 `accelerator` 개체입니다.  
+ 소멸 된 `accelerator` 개체입니다.  
   
 ```  
 ~accelerator();
@@ -168,7 +150,7 @@ class accelerator;
   
 ##  <a name="ctor"></a>액셀러레이터 키 
 
- 새 인스턴스를 초기화는 [엑셀 러 레이 터 클래스](accelerator-class.md)합니다.  
+ 새 인스턴스를 초기화는 [accelerator 클래스](accelerator-class.md)합니다.  
   
 ```  
 accelerator();
@@ -182,10 +164,10 @@ accelerator(const accelerator& _Other);
   
 ### <a name="parameters"></a>매개 변수  
  `_Device_path`  
- 물리적 장치와의 경로입니다.  
+ 물리적 장치의 경로입니다.  
   
  `_Other`  
- 복사할 가속기를 지정 합니다.  
+ 복사할 가속기입니다.  
   
 ##  <a name="cpu_accelerator"></a>cpu_accelerator 
 
@@ -197,7 +179,7 @@ static const wchar_t cpu_accelerator[];
   
 ##  <a name="create_view"></a>create_view 
 
- 지정된 큐 모드를 사용하여 이 액셀러레이터에서 `accelerator_view` 개체를 만들고 반환합니다. 큐 모드가 지정 하지 않으면, 새 `accelerator_view` 사용 하는 [queuing_mode:: immediate](concurrency-namespace-enums-amp.md#queuing_mode) 큐 모드입니다.  
+ 지정된 큐 모드를 사용하여 이 액셀러레이터에서 `accelerator_view` 개체를 만들고 반환합니다. 큐 모드 지정 되지 않은 경우, 새로운 `accelerator_view` 사용 하 여는 [queuing_mode:: immediate](concurrency-namespace-enums-amp.md#queuing_mode) 큐 모드입니다.  
   
 ```  
 accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
@@ -220,7 +202,7 @@ __declspec(property(get= get_dedicated_memory)) size_t dedicated_memory;
   
 ##  <a name="default_accelerator"></a>default_accelerator 
 
- 기본값에는 문자열 상수를 가져옵니다 `accelerator`합니다.  
+ 기본값에 대 한 상수 문자열을 가져옵니다 `accelerator`합니다.  
   
 ```  
 static const wchar_t default_accelerator[];  
@@ -228,7 +210,7 @@ static const wchar_t default_accelerator[];
   
 ##  <a name="default_cpu_access_type"></a>default_cpu_access_type 
 
- 기본 cpu [access_type](concurrency-namespace-enums-amp.md#access_type)배열 및이이 만든 암시적 메모리 할당에 대 한 `accelerator`합니다.  
+ 기본 cpu [access_type](concurrency-namespace-enums-amp.md#access_type)배열과이이 만든 암시적 메모리 할당에 대 한 `accelerator`합니다.  
   
 ```  
 __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_access_type;  
@@ -236,7 +218,7 @@ __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_a
   
 ##  <a name="default_view"></a>default_view 
 
- 와 연결 된 기본 엑셀 러 레이 터 보기를 가져옵니다는 `accelerator`합니다.  
+ 연결 된 기본 엑셀 러 레이 터 보기를 가져옵니다는 `accelerator`합니다.  
   
 ```  
 __declspec(property(get= get_default_view)) accelerator_view default_view;  
@@ -268,7 +250,7 @@ static const wchar_t direct3d_ref[];
   
 ##  <a name="direct3d_warp"></a>direct3d_warp 
 
- 문자열에 대 한 상수를 가져옵니다는 `accelerator` SSE 스트리밍 SIMD 확장 ()를 사용 하 여 다중 코어 Cpu에서 c + + AMP 코드를 실행 하는 데 사용할 수 있는 개체입니다.  
+ 문자열에 대 한 상수를 가져옵니다는 `accelerator` SSE 스트리밍 SIMD 확장명 ()를 사용 하 여 다중 코어 Cpu에서 c + + AMP 코드를 실행 하는 데 사용할 수 있는 개체입니다.  
   
 ```  
 static const wchar_t direct3d_warp[];  
@@ -276,7 +258,7 @@ static const wchar_t direct3d_warp[];
   
 ##  <a name="get_all"></a>get_all 
 
- 벡터를 반환 `accelerator` 사용 가능한 모든 액셀러레이터를 나타내는 개체입니다.  
+ 벡터의 반환 `accelerator` 사용 가능한 모든 액셀러레이터 키를 나타내는 개체입니다.  
   
 ```  
 static inline std::vector<accelerator> get_all();
@@ -287,7 +269,7 @@ static inline std::vector<accelerator> get_all();
   
 ##  <a name="get_auto_selection_view"></a>get_auto_selection_view 
 
- 자동 선택 accelerator_view 반환 되는 런타임에 의해 자동으로 선택 될 parallel_for_each 커널을 실행 하기 위한 대상 accelerator_view parallel_for_each 대상 결과 사용 하 여로 지정 합니다. 다른 모든 용도 대 한이 메서드에서 반환 된 accelerator_view가 같습니다는 기본 액셀러레이터의 기본 accelerator_view  
+ 자동 선택 accelerator_view, 반환 되는 런타임에 의해 자동으로 선택 될 parallel_for_each 커널을 실행 하기 위한 대상 accelerator_view parallel_for_each 대상 결과 사용 하는로 지정 합니다. 기타 모든 목적을 위해가 메서드에서 반환 된 accelerator_view은 기본 액셀러레이터의 기본 accelerator_view와 같습니다.  
   
 ```  
 static accelerator_view __cdecl get_auto_selection_view();
@@ -311,7 +293,7 @@ size_t get_dedicated_memory() const;
   
 ##  <a name="get_default_cpu_access_type"></a>get_default_cpu_access_type 
 
- 이 액셀러레이터에서 생성 하는 버퍼에 대 한 기본 cpu access_type를 가져옵니다.  
+ 이 액셀러레이터에서 생성 된 버퍼에 대 한 기본 cpu access_type를 가져옵니다.  
   
 ```  
 access_type get_default_cpu_access_type() const;
@@ -320,11 +302,11 @@ access_type get_default_cpu_access_type() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 이 액셀러레이터에서 생성 하는 버퍼에 대 한 기본 cpu access_type 합니다.  
+ 이 액셀러레이터에서 생성 된 버퍼에 대 한 기본 cpu access_type 합니다.  
   
 ##  <a name="get_default_view"></a>get_default_view 
 
- 기본 반환 `accelerator_view` 와 연결 된 개체는 `accelerator`합니다.  
+ 기본 `accelerator_view` 연결 된 개체에는 `accelerator`합니다.  
   
 ```  
 accelerator_view get_default_view() const;
@@ -359,11 +341,11 @@ std::wstring get_device_path() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 시스템 차원의 고유한 장치 인스턴스 경로입니다.  
+ 시스템 차원의 고유 장치 인스턴스 경로가 있습니다.  
   
 ##  <a name="get_has_display"></a>get_has_display 
 
- 나타내는 부울 값을 반환 여부는 `accelerator` 표시에 출력할 수 있습니다.  
+ 나타내는 부울 값을 반환 여부는 `accelerator` 를 디스플레이 프로젝션 출력할 수 있습니다.  
   
 ```  
 bool get_has_display() const;
@@ -372,11 +354,11 @@ bool get_has_display() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`하는 경우는 `accelerator` 디스플레이;에 출력할 수 그렇지 `false`합니다.  
+ `true`경우는 `accelerator` 를 디스플레이 프로젝션; 출력할 수, `false`합니다.  
   
 ##  <a name="get_is_debug"></a>get_is_debug 
 
- 결정 여부는 `accelerator` 에 DEBUG 레이어가 확장 오류 보고에 사용할 수 있습니다.  
+ 결정 여부는 `accelerator` 에 디버그 레이어가 확장 오류 보고에 대 한 활성화 합니다.  
   
 ```  
 bool get_is_debug() const;
@@ -385,11 +367,11 @@ bool get_is_debug() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`하는 경우는 `accelerator` 에 DEBUG 레이어가 확장 오류 보고에 사용할 수 있습니다. 그렇지 않으면 `false`입니다.  
+ `true`경우는 `accelerator` DEBUG 레이어가 활성화 광범위 한 오류 보고 했습니다. 그렇지 않으면 `false`입니다.  
   
 ##  <a name="get_is_emulated"></a>get_is_emulated 
 
- 확인 여부는 `accelerator` 에뮬레이트됩니다.  
+ 결정 여부는 `accelerator` 에뮬레이트됩니다.  
   
 ```  
 bool get_is_emulated() const;
@@ -398,11 +380,11 @@ bool get_is_emulated() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`하는 경우는 `accelerator` 에뮬레이트됩니다. 그렇지 않으면 `false`입니다.  
+ `true`경우는 `accelerator` 에뮬레이트됩니다. 그렇지 않으면 `false`입니다.  
   
 ##  <a name="get_supports_cpu_shared_memory"></a>get_supports_cpu_shared_memory 
 
- 가속기 가속기와 CPU에서 모두 액세스할 수 있는 메모리를 지원 하는지 여부를 나타내는 부울 값을 반환 합니다.  
+ 액셀러레이터 키 액셀러레이터와 CPU 둘 다에서 액세스할 수 있는 메모리를 지원 하는지 여부를 나타내는 부울 값을 반환 합니다.  
   
 ```  
 bool get_supports_cpu_shared_memory() const;
@@ -424,7 +406,7 @@ bool get_supports_double_precision() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`액셀러레이터가 이중 정밀도 수치; 지원 되는 경우 그렇지 않으면 `false`합니다.  
+ `true`액셀러레이터가 이중 정밀도 수치; 지 원하는 경우 그렇지 않으면 `false`합니다.  
   
 ##  <a name="get_supports_limited_double_precision"></a>get_supports_limited_double_precision 
 
@@ -450,11 +432,11 @@ unsigned int get_version() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 버전은 `accelerator`합니다.  
+ 버전의는 `accelerator`합니다.  
   
 ##  <a name="has_display"></a>has_display 
 
- 나타내는 부울 값을 가져옵니다 여부는 `accelerator` 표시에 출력할 수 있습니다.  
+ 나타내는 부울 값을 가져옵니다 여부는 `accelerator` 를 디스플레이 프로젝션 출력할 수 있습니다.  
   
 ```  
 __declspec(property(get= get_has_display)) bool has_display;  
@@ -462,7 +444,7 @@ __declspec(property(get= get_has_display)) bool has_display;
   
 ##  <a name="is_debug"></a>is_debug 
 
- 나타내는 부울 값을 가져옵니다 여부는 `accelerator` 에 디버그 레이어가 확장 오류 보고에 대 한 활성화 합니다.  
+ 나타내는 부울 값을 가져옵니다 여부는 `accelerator` DEBUG 레이어가 활성화 광범위 한 오류 보고에 있습니다.  
   
 ```  
 __declspec(property(get= get_is_debug)) bool is_debug;  
@@ -476,9 +458,9 @@ __declspec(property(get= get_is_debug)) bool is_debug;
 __declspec(property(get= get_is_emulated)) bool is_emulated;  
 ```  
   
-##  <a name="operator_neq"></a>연산자! = 
+##  <a name="operator_neq"></a>operator! = 
 
- 비교 하 여 `accelerator` 반환 하 고 개체와 다른 `false` 않으면는 동일 합니다; 그렇지 않으면 반환 `true`합니다.  
+ 비교 하 여 `accelerator` 반환 하 고 개체를 다른 `false` 않으면는 동일 합니다; 그렇지 않으면 반환 `true`합니다.  
   
 ```  
 bool operator!= (const accelerator& _Other) const;
@@ -491,11 +473,11 @@ bool operator!= (const accelerator& _Other) const;
  이것과 비교할 `accelerator` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `false`하는 경우 두 `accelerator` 개체가 동일한 지 고, 그렇지 않으면 `true`합니다.  
+ `false`하는 경우 두 `accelerator` 개체가 동일한 지 고, 그렇지 않으면, `true`합니다.  
   
 ##  <a name="operator_eq"></a>연산자 = 
 
- 지정 된 내용을 복사 `accelerator` 여기에 개체입니다.  
+ 지정 된의 내용을 복사 `accelerator` 여기에 개체입니다.  
   
 ```  
 accelerator& operator= (const accelerator& _Other);
@@ -510,7 +492,7 @@ accelerator& operator= (const accelerator& _Other);
   
 ##  <a name="operator_eq_eq"></a>연산자 = = 
 
- 비교 하 여 `accelerator` 반환 하 고 개체와 다른 `true` 않으면는 동일 합니다; 그렇지 않으면 반환 `false`합니다.  
+ 비교 하 여 `accelerator` 반환 하 고 개체를 다른 `true` 않으면는 동일 합니다; 그렇지 않으면 반환 `false`합니다.  
   
 ```  
 bool operator== (const accelerator& _Other) const;
@@ -523,11 +505,11 @@ bool operator== (const accelerator& _Other) const;
  이것과 비교할 `accelerator` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`하는 경우 다른 `accelerator` 개체는이 같은 `accelerator` 그렇지 그렇지 `false`합니다.  
+ `true`하는 경우 다른 `accelerator` 개체는 이와 동일한 `accelerator` 개체; 그렇지 않으면 `false`합니다.  
   
 ##  <a name="set_default"></a>set_default 
 
- 암시적으로 기본 액셀러레이터를 사용 하는 모든 작업에 사용할 기본 액셀러레이터를 설정 합니다. 이 메서드는 런타임 선택한 기본 액셀러레이터 이미 암시적으로 기본 액셀러레이터를 사용 하는 작업에 사용 되지 않은 경우에 성공  
+ 암시적으로 기본 액셀러레이터를 사용 하는 모든 작업에 사용할 기본 액셀러레이터를 설정 합니다. 이 메서드는 런타임 선택한 기본 액셀러레이터 암시적으로 기본 액셀러레이터를 사용 하는 작업에서 이미 사용 하지 않은 경우에 성공  
   
 ```  
 static inline bool set_default(std::wstring _Path);
@@ -535,14 +517,14 @@ static inline bool set_default(std::wstring _Path);
   
 ### <a name="parameters"></a>매개 변수  
  `_Path`  
- 액셀러레이터의 경로입니다.  
+ 액셀러레이터 키에 대 한 경로입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`기본 액셀러레이터 설정 호출이 성공 하면 됩니다. 그렇지 않으면 `false`입니다.  
+ `true`기본 액셀러레이터 설정 호출이 성공 합니다. 그렇지 않으면 `false`입니다.  
   
 ##  <a name="set_default_cpu_access_type"></a>set_default_cpu_access_type 
 
- 이 액세스 array_views의 일부는이 액셀러레이터가이 액셀러레이터에서 또는 암시적 메모리 할당에 대 한 만든 배열에 대 한 기본 cpu access_type를 설정 합니다. 이 메서드는이 엑셀 러 레이이 터에 대 한 런타임 선택한 default_cpu_access_type 사용 되지 않은 아직이 액셀러레이터에서 액세스 하는 array_view를 백업 하는 암시적 메모리 할당 또는 배열 할당에 대 한 가속기 default_cpu_access_type가 아직이 메서드에 대 한 이전 호출에서 재정의 된 경우에 성공 합니다.  
+ 이 액세스 array_views의 일부가이 액셀러레이터가 액셀러레이터 또는 암시적 메모리 할당에 만든 배열에 대 한 기본 cpu access_type를 설정 합니다. 이 메서드는 액셀러레이터 키에 대 한 default_cpu_access_type 하지 이미이 메서드에 대 한 이전 호출으로 재정의 되었으며이 엑셀 러 레이이 터에 대 한 런타임 선택 default_cpu_access_type가 아직 사용 되지 또는 배열 할당에 대 한 경우에 성공 이 액셀러레이터에서 액세스 하는 array_view를 백업 하는 암시적 메모리 할당 합니다.  
   
 ```  
 bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
@@ -553,7 +535,7 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
  이 액셀러레이터에서 배열/array_view 메모리 할당에 사용할 기본 cpu access_type 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 액셀러레이터 키에 대 한 기본 cpu access_type 성공적으로 설정 된 경우를 나타내는 부울 값.  
+ 액셀러레이터 키에 대 한 기본 cpu access_type 성공적으로 설정 된 경우를 나타내는 부울 값입니다.  
   
 ##  <a name="supports_cpu_shared_memory"></a>supports_cpu_shared_memory 
 
@@ -573,7 +555,7 @@ __declspec(property(get= get_supports_double_precision)) bool supports_double_pr
   
 ##  <a name="supports_limited_double_precision"></a>supports_limited_double_precision 
 
- 액셀러레이터 키 이중 정밀도 수치에 대 한 지원이 제한적으로 하는지 여부를 나타내는 부울 값을 가져옵니다. 액셀러레이터에서 제한적으로만 지원하는 경우 FMA(Fused Multiply Add), 나누기, 역수 및 `int` 및 `double` 사이의 캐스팅은 지원되지 않습니다.  
+ 액셀러레이터 키 엑셀러레이터가 이중 정밀도 수치 지원이 제한 여부를 나타내는 부울 값을 가져옵니다. 액셀러레이터에서 제한적으로만 지원하는 경우 FMA(Fused Multiply Add), 나누기, 역수 및 `int` 및 `double` 사이의 캐스팅은 지원되지 않습니다.  
   
 ```  
 __declspec(property(get= get_supports_limited_double_precision)) bool supports_limited_double_precision;  
@@ -589,7 +571,7 @@ __declspec(property(get= get_version)) unsigned int version;
   
 ##  <a name="dtor"></a></a> ~ accelerator_view 
 
- 소멸은 [accelerator_view](accelerator-view-class.md) 개체입니다.  
+ 소멸 된 [accelerator_view](accelerator-view-class.md) 개체입니다.  
   
 ```  
 ~accelerator_view();
@@ -607,7 +589,7 @@ __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;
   
 ##  <a name="ctor"></a>accelerator_view 
 
- 새 인스턴스를 초기화는 [accelerator_view](accelerator-view-class.md) 클래스는 기존 복사 하 여 `accelerator_view` 개체입니다.  
+ 새 인스턴스를 초기화는 [accelerator_view](accelerator-view-class.md) 기존 복사 하 여 클래스 `accelerator_view` 개체입니다.  
   
 ```  
 accelerator_view(const accelerator_view& _Other);
@@ -630,7 +612,7 @@ concurrency::completion_future create_marker();
   
 ##  <a name="flush"></a>플러시 
 
- 모든 보류 중인 명령은 큐에 대기 중인 전송에서 [accelerator_view](accelerator-view-class.md) 실행을 위한 엑셀 러 레이 터에는 개체입니다.  
+ 모든 보류 중인 명령은 큐에 대기 중인 전송에서 [accelerator_view](accelerator-view-class.md) accelerator 실행에 대 한 개체입니다.  
   
 ```  
 void flush();
@@ -654,7 +636,7 @@ accelerator get_accelerator() const;
   
 ##  <a name="get_is_auto_selection"></a>get_is_auto_selection 
 
- 여부를 런타임에서 자동으로 선택 됩니다 적절 한 가속기는 accelerator_view로 전달 될 때를 나타내는 부울 값을 반환 된 [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)합니다.  
+ 있는지 여부를 런타임에서 자동으로 선택 합니다 적절 한 액셀러레이터의 accelerator_view 전달 될 때를 나타내는 부울 값을 반환 된 [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)합니다.  
   
 ```  
 bool get_is_auto_selection() const;
@@ -663,7 +645,7 @@ bool get_is_auto_selection() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`런타임에서 적절 한 가속기; 자동으로 선택 하는 경우 그렇지 않으면 `false`합니다.  
+ `true`런타임에서 적절 한 액셀러레이터; 자동으로 선택 하는 경우 그렇지 않으면 `false`합니다.  
   
 ##  <a name="get_is_debug"></a>get_is_debug 
 
@@ -702,11 +684,11 @@ unsigned int get_version() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 버전은 `accelerator_view`합니다.  
+ 버전의는 `accelerator_view`합니다.  
   
 ##  <a name="is_auto_selection"></a>is_auto_selection 
 
- 여부를 런타임에서 자동으로 선택 됩니다 적절 한 가속기는 accelerator_view로 전달 될 때를 나타내는 부울 값을 가져옵니다는 [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)합니다.  
+ 있는지 여부를 런타임에서 자동으로 선택 합니다 적절 한 액셀러레이터의 accelerator_view 전달 될 때를 나타내는 부울 값을 가져옵니다는 [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)합니다.  
   
 ```  
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;  
@@ -720,9 +702,9 @@ __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 __declspec(property(get= get_is_debug)) bool is_debug;  
 ```  
   
-##  <a name="operator_neq"></a>연산자! = 
+##  <a name="operator_neq"></a>operator! = 
 
- 비교 하 여 [accelerator_view](accelerator-view-class.md) 반환 하 고 개체와 다른 `false` 않으면는 동일 합니다; 그렇지 않으면 반환 `true`합니다.  
+ 비교 하 여 [accelerator_view](accelerator-view-class.md) 반환 하 고 개체를 다른 `false` 않으면는 동일 합니다; 그렇지 않으면 반환 `true`합니다.  
   
 ```  
 bool operator!= (const accelerator_view& _Other) const;
@@ -739,7 +721,7 @@ bool operator!= (const accelerator_view& _Other) const;
   
 ##  <a name="operator_eq"></a>연산자 = 
 
- 지정 된 내용을 복사 [accelerator_view](accelerator-view-class.md) 을 여기에 개체입니다.  
+ 지정 된의 내용을 복사 [accelerator_view](accelerator-view-class.md) 을 여기에 개체입니다.  
   
 ```  
 accelerator_view& operator= (const accelerator_view& _Other);
@@ -754,7 +736,7 @@ accelerator_view& operator= (const accelerator_view& _Other);
   
 ##  <a name="operator_eq_eq"></a>연산자 = = 
 
- 비교 하 여 [accelerator_view](accelerator-view-class.md) 반환 하 고 개체와 다른 `true` 않으면는 동일 합니다; 그렇지 않으면 반환 `false`합니다.  
+ 비교 하 여 [accelerator_view](accelerator-view-class.md) 반환 하 고 개체를 다른 `true` 않으면는 동일 합니다; 그렇지 않으면 반환 `false`합니다.  
   
 ```  
 bool operator== (const accelerator_view& _Other) const;
@@ -787,7 +769,7 @@ __declspec(property(get= get_version)) unsigned int version;
   
 ##  <a name="wait"></a>대기 
 
- 제출 된 모든 명령이 대기는 [accelerator_view](accelerator-view-class.md) 완료 하는 개체입니다.  
+ 로 전송 하는 모든 명령에 대 한 대기는 [accelerator_view](accelerator-view-class.md) 개체를 완료 합니다.  
   
 ```  
 void wait();
@@ -798,4 +780,3 @@ void wait();
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)
-

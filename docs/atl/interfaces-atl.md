@@ -1,37 +1,38 @@
 ---
-title: "Interfaces (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM 인터페이스"
-  - "인터페이스, COM"
+title: "인터페이스 (ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM interfaces
+- interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28fb749a705ed01b4c10d22cea0062c2f0d799c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Interfaces (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-인터페이스는 개체 기능을 외부로 노출 하는 방식입니다.  COM에서 인터페이스 테이블 개체에 의해 구현 되는 함수 포인터 \(예: C\+\+ vtable\)입니다.  테이블 인터페이스를 나타내며 가리키는 함수는 해당 인터페이스의 메서드입니다.  개체는 선택한 만큼의 인터페이스를 노출할 수 있습니다.  
+# <a name="interfaces-atl"></a>인터페이스 (ATL)
+인터페이스는 개체는 외부 기능을 노출 하는 방법입니다. COM 인터페이스에는 개체에 의해 구현 되는 함수 (예: c + + vtable) 포인터의 테이블입니다. 테이블 인터페이스를 나타내고 가리키는 함수는 해당 인터페이스의 메서드입니다. 개체는 선택한 만큼의 인터페이스를 노출할 수 있습니다.  
   
- 각 인터페이스에서 기본 COM 인터페이스를 기반으로  [IUnknown](../atl/iunknown.md).  메서드를  **IUnknown** 개체에서 노출 하는 다른 인터페이스에 대 한 탐색을 허용 합니다.  
+ 기본 COM 인터페이스를 기반으로 하는 각 인터페이스 [IUnknown](../atl/iunknown.md)합니다. 메서드 **IUnknown** 개체에서 노출 하는 다른 인터페이스를 탐색할 수 있습니다.  
   
- 또한, 각 인터페이스는 고유한 IID \(인터페이스 ID\) 지정 됩니다.  이 고유성 쉽게 인터페이스 버전 관리를 지원할 수 있습니다.  새 버전의 인터페이스는 새로운 IID 가진 새 인터페이스 간단 하 게 됩니다.  
+ 또한 각 인터페이스에는 고유한 ID IID (인터페이스) 제공 됩니다. 이 고유성을 사용 하면 인터페이스 버전 관리를 지원 하기가 쉬워졌습니다. 인터페이스의 새 버전을 새 IID 가진 새로운 인터페이스 하기만 합니다.  
   
 > [!NOTE]
->  표준 COM 및 OLE 인터페이스 Iid 미리 정의 됩니다.  
+>  표준 COM 및 OLE 인터페이스에 대 한 Iid는 미리 정의 되어 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [COM 소개](../atl/introduction-to-com.md)   
- [COM Objects and Interfaces](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [COM 개체 및 인터페이스](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+

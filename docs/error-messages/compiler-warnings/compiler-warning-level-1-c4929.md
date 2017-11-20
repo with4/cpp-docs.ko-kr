@@ -1,35 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 1) C4929 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4929"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4929"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4929
+dev_langs: C++
+helpviewer_keywords: C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e51b5ba70e486126575c6f25492d4e2cc37b0b7a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4929
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'file': 형식 라이브러리에 공용 구조체가 있습니다. 'embedded\_idl' 한정자가 무시됩니다.  
+# <a name="compiler-warning-level-1-c4929"></a>컴파일러 경고(수준 1) C4929
+'file': 형식 라이브러리로 있습니다. 'embedded_idl' 한정자를 무시합니다.  
   
- 공용 구조체가 형식 라이브러리에 존재하므로 [\#import](../../preprocessor/hash-import-directive-cpp.md)의 embedded\_idl 특성이 형식 라이브러리에 적용되지 않습니다.  이 경고를 해결하려면 embedded\_idl을 사용하지 마십시오.  
+ Embedded_idl 특성 [#import](../../preprocessor/hash-import-directive-cpp.md) 되었으므로 공용 구조체 형식 라이브러리에 있는 형식 라이브러리에 적용할 수 없습니다. 이 경고를 해결 하려면 embedded_idl을 사용 하지 마십시오.  
   
-## 예제  
- 다음 샘플에서는 구성 요소를 정의합니다.  
+## <a name="example"></a>예제  
+ 다음 샘플 구성 요소를 정의 합니다.  
   
 ```  
 // C4929a.cpp  
@@ -61,8 +59,8 @@ struct C : I {
 };  
 ```  
   
-## 예제  
- 다음 샘플에서는 C4929 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4929 경고가 발생 합니다.  
   
 ```  
 // C4929b.cpp  

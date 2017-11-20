@@ -1,33 +1,32 @@
 ---
-title: "CCommand::Create | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Create"
-  - "CCommand::Create"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Create 메서드[C++]"
+title: 'Ccommand:: Create | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Create
+- CCommand::Create
+dev_langs: C++
+helpviewer_keywords: Create method [C++]
 ms.assetid: e4bede7a-68bd-491a-97f4-89b03d45cd24
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 425e86008b97defe50e2c47e099b3b21c900bc1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Create
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Calls [CCommand::CreateCommand](../../data/oledb/ccommand-createcommand.md) to create a command for the specified session, then calls [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) to specify the command text.  
+# <a name="ccommandcreate"></a>CCommand::Create
+호출 [ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md) 지정된 된 세션에 대 한 명령을 만들려면 다음 호출 [icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709825.aspx) 명령 텍스트를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -43,27 +42,27 @@ HRESULT CCommandBase::Create(
 ) throw ( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `session`  
- \[in\] A session on which to create the command.  
+ [in] 명령을 만드는 세션입니다.  
   
  `wszCommand`  
- \[in\] A pointer to the Unicode text of the command string.  
+ [in] 명령 문자열의 유니코드 텍스트에 대 한 포인터입니다.  
   
  `szCommand`  
- \[in\] A pointer to the ANSI text of the command string.  
+ [in] 명령 문자열의 ANSI 텍스트에 대 한 포인터입니다.  
   
  `guidCommand`  
- \[in\] A GUID that specifies the syntax and general rules for the provider to use in parsing the command text.  For a description of dialects, see [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) in the *OLE DB Programmer's Reference*.  
+ [in] 명령 텍스트를 구문 분석의 구문 및 사용 하도록 공급자에 대 한 일반 규칙을 지정 하는 GUID입니다. 언어에 대 한 참조 [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 설명  
- The first form of **Create** takes a Unicode command string.  The second form of **Create** takes an ANSI command string \(provided for backward compatibility with existing ANSI applications\).  
+## <a name="remarks"></a>설명  
+ 첫 번째 형태 **만들기** 유니코드 명령 문자열을 사용 합니다. 두 번째 형식의 **만들기** (기존 ANSI 응용 프로그램과 함께 이전 버전과 호환성을 위해 제공) 하는 ANSI 명령 문자열을 사용 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CCommand 클래스](../../data/oledb/ccommand-class.md)

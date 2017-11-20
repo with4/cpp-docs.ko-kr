@@ -1,46 +1,28 @@
 ---
-title: "cancellation_token_registration 클래스 | Microsoft 문서"
+title: "cancellation_token_registration 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - cancellation_token_registration
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration::cancellation_token_registration
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token_registration class
+dev_langs: C++
+helpviewer_keywords: cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 1dd55aff292926b930271257bda583a2f93aba92
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: c2d80255803c4d2ca2aec05af8115ac887f7258b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration 클래스
 `cancellation_token_registration` 클래스는 `cancellation_token`의 콜백 알림을 나타냅니다. 취소 발생 시 알림을 받는 데 `register`의 `cancellation_token` 메서드를 사용하면 `cancellation_token_registration` 메서드 사용을 통해 더 이상 만들어지지 않는 특정 콜백을 호출자가 요청할 수 있도록 `deregister` 개체가 콜백에 대한 핸들로 반환됩니다.  
@@ -95,7 +77,7 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ### <a name="parameters"></a>매개 변수  
  `_Src`  
   
-##  <a name="operator_neq"></a>연산자! = 
+##  <a name="operator_neq"></a>operator! = 
 
 ```
 bool operator!= (const cancellation_token_registration& _Rhs) const;
@@ -132,4 +114,3 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
   
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)
-

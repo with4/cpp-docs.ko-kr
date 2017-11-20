@@ -4,47 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - errors [C++]
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 55a178e48f6189a0159943c36a26c5179456343f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: d1c6b1b4a84dcdcc10f387f885726b51faa25535
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-errors-and-warnings"></a>링커 도구 오류 및 경고
 링크, LIB, DUMPBIN, 및 EDITBIN 이러한 오류 및 경고를 생성합니다. 특정 오류 메시지에 도움말을 보려면 출력 창의 오류 번호를 마우스로 F1 키를 입력에 오류 번호는 **찾아보십시오** 인덱스 상자로 하거나 아래 링크를 클릭 합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류 또는 경고는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류 또는 경고는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
 MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   

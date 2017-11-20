@@ -1,42 +1,41 @@
 ---
-title: "이름 대신 서수를 사용하여 DLL에서 함수 내보내기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NONAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL 내보내기[C++], 서수 값"
-  - "함수 내보내기[C++], 서수 값"
-  - "NONAME 특성"
-  - "서수 내보내기[C++]"
+title: "이름 대신 서 수로 DLL에서 함수를 내보내면 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NONAME
+dev_langs: C++
+helpviewer_keywords:
+- exporting functions [C++], ordinal values
+- ordinal exports [C++]
+- exporting DLLs [C++], ordinal values
+- NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4d5420a426f0dc1244ede19fc4abddf56469608d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 이름 대신 서수를 사용하여 DLL에서 함수 내보내기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-DLL에서 함수를 내보내는 가장 간단한 방법은 이름을 사용하여 함수를 내보내는 것입니다.  예를 들어, **\_\_declspec\(dllexport\)**을 사용할 때 이 방법이 사용됩니다.  그러나 이름 대신 서수를 사용하여 함수를 내보낼 수도 있습니다.  이 방법을 사용할 경우에는 **\_\_declspec\(dllexport\)** 대신 .def 파일을 사용해야 합니다.  함수의 서수 값을 지정하려면 .def 파일에서 함수 이름에 서수를 추가합니다.  서수 지정에 대한 자세한 내용은 [.def 파일을 사용하여 DLL에서 내보내기](../build/exporting-from-a-dll-using-def-files.md)를 참조하십시오.  
+# <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>이름 대신 서수를 사용하여 DLL에서 함수 내보내기
+가장 간단한 방법은 DLL에서 내보내기 함수를 이름으로 내보내는 하는 것입니다. 이 사용 하는 경우 발생 **__declspec (dllexport)**, 예를 들어 있습니다. 하지만 대신 서 수로 함수를 내보낼 수 있습니다. 이 기술을 사용 하 여 대신.def 파일을 사용 해야 **__declspec (dllexport)**합니다. 함수의 서 수 값을 지정 하려면.def 파일의 함수 이름에 서 수를 추가 합니다. 서 수를 지정 하는 방법에 대 한 정보를 참조 하십시오. [.def 파일을 사용 하 여 DLL에서 내보내기](../build/exporting-from-a-dll-using-def-files.md)합니다.  
   
 > [!TIP]
->  DLL의 파일 크기를 최적화하려면 내보내는 각 함수에 **NONAME** 특성을 사용합니다.  **NONAME** 특성을 사용하면 DLL의 내보내기 테이블에 함수 이름 대신 서수가 저장됩니다.  따라서 많은 함수를 내보내는 경우에 파일 크기를 상당히 줄일 수 있습니다.  
+>  DLL의 파일 크기를 최적화 하려는 경우 사용 하 여는 **NONAME** 내보내는 각 함수에는 특성입니다. 와 **NONAME** 특성, 서 수에 저장 된 함수 이름 대신 테이블 DLL의 내보내기. 여러 함수를 내보내는 경우 크기를 상당히 줄일 수 있습니다.  
   
-## 수행할 작업  
+## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   
--   [.def 파일을 사용하여 서수로 내보내기](../build/exporting-from-a-dll-using-def-files.md)  
+-   [서 수로 내보낼 수 있도록.def 파일을 사용 하 여](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [\_\_declspec\(dllexport\) 사용](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [__Declspec (dllexport)를 사용 하 여](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DLL에서 내보내기](../build/exporting-from-a-dll.md)

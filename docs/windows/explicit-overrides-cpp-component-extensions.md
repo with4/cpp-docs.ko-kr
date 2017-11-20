@@ -1,76 +1,74 @@
 ---
-title: "Explicit Overrides  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "overriding, override [C++]"
+title: "명시적 재정의 (c + + 구성 요소 확장명) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 387141945882bf3c491c55a4a8ab8ab3804e876a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Explicit Overrides  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 항목에 명시적으로 기본 클래스 또는 인터페이스의 멤버를 재정의 하는 방법을 설명합니다.  명명된 된 \(명시적\) 재정의는 이름이 다른 파생 메서드로 메서드를 재정의하기 위해 사용해야 합니다.  
+# <a name="explicit-overrides--c-component-extensions"></a>명시적 재정의(C++ 구성 요소 확장명)
+이 항목에서는 기본 클래스 또는 인터페이스의 멤버를 명시적으로 재정의 하는 방법을 설명 합니다. 명명 된 명시적 재정의 다른 이름이 있는 파생 메서드로 메서드를 재정의 하만 사용 해야 합니다.  
   
-## 모든 런타임  
+## <a name="all-runtimes"></a>모든 런타임  
  **구문**  
   
 ```  
   
-        overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
   
  **매개 변수**  
   
- *overriding\-function\-declarator*  
- 재정의 함수의 반환 형식, 이름 및 인수 목록입니다.  재정의 함수는 재정의 된 함수와 같은 이름을 가지고 있지 않은 점을 참고하십시오.  
+ *함수 재정의-선언*  
+ 재정의 함수의 반환 형식, 이름 및 인수 목록입니다.  참고는 재정의 함수를 재정의 하는 함수와 같은 이름을 사용할 필요가 없습니다.  
   
  *type*  
- 재정의하는 함수를 포함하는 기본 형식입니다.  
+ 재정의 하는 함수를 포함 하는 기본 형식입니다.  
   
  *function*  
- 재정의를 하기 위한 하나 이상의 함수이름을 쉼표로 구분한 목록입니다.  
+ 재정의 하려면 하나 이상의 함수 이름의 쉼표로 구분 된 목록.  
   
- *overriding\-function\-definition*  
- 재정의 함수를 정의하는 함수 본문입니다.  
+ *함수 재정의-정의*  
+ 재정의 함수를 정의 하는 함수 본문 문입니다.  
   
- **설명**  
+ **주의**  
   
- 명시적 재정의를 사용하여 메서드 시그니처에 대한 별칭을 만들거나 같은 시그니처 메서드에 대한 다른 구현을 제공합니다.  
+ 사용 하 여 명시적 메서드 서명에 대 한 별칭을 만들려면 또는 메서드에 동일한 서명이 witht에 대 한 다른 구현을 제공 하기를 재정의 합니다.  
   
- 상속된 형식 및 상속된 형식 멤버의 동작을 수정하는 방법에 대한 내용은 [Override 지정자](../windows/override-specifiers-cpp-component-extensions.md)을 참고하십시오.  
+ 상속 된 형식과 상속 된 형식 멤버의 동작을 수정 하는 방법에 대 한 정보를 참조 하십시오. [재정의 지정자](../windows/override-specifiers-cpp-component-extensions.md)합니다.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 런타임  
   
-### 요구 사항  
- 컴파일러 옵션: **\/ZW**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **설명**  
+## <a name="common-language-runtime"></a>공용 언어 런타임 
+ **주의**  
   
- **\/clr:oldSyntax** 로 컴파일된 코드 또는 네이티브 코드의 명시적 재정의에 대한 자세한 정보는 [명시적 재정의](../cpp/explicit-overrides-cpp.md)에서 확인하십시오.  
+ 네이티브 코드에서 명시적에 대 한 정보를 재정의 하거나로 컴파일된 코드 **/clr:oldSyntax**, 참조 [명시적으로 재정의](../cpp/explicit-overrides-cpp.md)합니다.  
   
-### 요구 사항  
- 컴파일러 옵션: **\/clr**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/clr**  
   
-### 예제  
+### <a name="examples"></a>예제  
  **예제**  
   
- 다음 코드 예제에서는 단순하고 암시적인 재정의와 재정의를 사용하지 않고 기본 인터페이스의 멤버를 구현하는 방법을 보여줍니다.  
+ 다음 코드 예제에서는 간단 하 고 암시적 override 및 멤버의 구현을 기본 인터페이스에서 명시적으로 재정의 사용 하지  
   
 ```  
 // explicit_override_1.cpp  
@@ -92,11 +90,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **I1::f의 X::f 재정의** **예제**  
+```Output  
+X::f override of I1::f  
+```  
   
- 다음 코드 예제에서는 명시적 재정의 구문을 사용하여 공용 시그니처의 모든 인터페이스 멤버를 구현하는 방법을 보여줍니다.  
+ **예제**  
+  
+ 다음 코드 예제에서는 모든 인터페이스 멤버 일반적인 서명 사용 하 여 명시적 재정의 구문은 사용 하 여 구현 하는 방법을 보여 줍니다.  
   
 ```  
   
@@ -124,12 +126,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **X::f 재정의 I1::f 와 I2::f**  
- **X::f 재정의 I1::f 와 I2::f** **예제**  
+```Output  
+X::f override of I1::f and I2::f  
+X::f override of I1::f and I2::f  
+```  
   
- 다음 코드 예제에서는 함수 재정의가 구현 하는 함수로부터 다른 이름을 가질 수 있는 방법에 대해 보여줍니다.  
+ **예제**  
+  
+ 다음 코드 예제에서는 방식 함수 재정의 구현 하는 함수에서 다른 이름으로 사용할 수를 보여 줍니다.  
   
 ```  
 // explicit_override_3.cpp  
@@ -151,11 +157,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **X::g** **예제**  
+```Output  
+X::g  
+```  
   
- 다음 코드 예제에서는 형식 안전 컬렉션을 구현 하는 명시적 인터페이스 구현을 보여줍니다.  
+ **예제**  
+  
+ 다음 코드 예제에서는 형식 안전 컬렉션을 구현 하는 명시적 인터페이스 구현을 보여 줍니다.  
   
 ```  
 // explicit_override_4.cpp  
@@ -180,5 +190,5 @@ public:
 };  
 ```  
   
-## 참고 항목  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>참고 항목  
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,58 +1,56 @@
 ---
-title: "list::erase(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase 멤버[STL/CLR]"
+title: 'list:: erase (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 78705058-1e83-441d-b267-d4fb56451c0b
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0cd17daf073485f0e2aebaa7bb7d1594eeeec4cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::erase(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listerase-stlclr"></a>list::erase(STL/CLR)
 지정된 위치에 있는 요소를 제거합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
-#### 매개 변수  
- first  
- Beginning of range to erase.  
+#### <a name="parameters"></a>매개 변수  
+ 첫 번째  
+ 범위를 지우려면의 시작입니다.  
   
  last  
- End of range to erase.  
+ 범위를 지우려면의 끝입니다.  
   
- where  
- Element to erase.  
+ 형식에 대한 설명  
+ 지울 요소입니다.  
   
-## 설명  
- The first member function removes the element of the controlled sequence pointed to by `where`.  You use it to remove a single element.  
+## <a name="remarks"></a>설명  
+ 첫 번째 멤버 함수는 `where`로 지정된 제어 시퀀스의 요소를 제거합니다. 단일 요소를 제거 하려면 사용 합니다.  
   
- The second member function removes the elements of the controlled sequence in the range `[``first``,` `last``)`.  You use it to remove zero or more contiguous elements.  
+ 두 번째 멤버 함수는 [`first`, `last`]의 범위에서 제어되는 시퀀스의 요소를 제거합니다. 0 개 이상의 연속 요소를 제거 하려면 사용 합니다.  
   
- Both member functions return an iterator that designates the first element remaining beyond any elements removed, or [list::end](../dotnet/list-end-stl-clr.md)`()` if no such element exists.  
+ 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하는 두 멤버 함수 또는 [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` 이러한 요소가 없을 경우.  
   
- When erasing elements, the number of element copies is linear in the number of elements between the end of the erasure and the nearer end of the sequence. \(When erasing one or more elements at either end of the sequence, no element copies occur.\)  
+ 요소를 지운 경우에 요소 복사본의 수는 시퀀스의 할수록 끝과 여 지우기의 끝 간 요소 수에 비례 합니다. (시퀀스의 끝에 하나 이상의 요소를 지우는 중 요소 복사본이 발생 합니다.)  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_erase.cpp   
@@ -92,16 +90,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\) \= b**  
- **b c d e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::clear(STL/CLR)](../dotnet/list-clear-stl-clr.md)

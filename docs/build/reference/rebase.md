@@ -1,48 +1,47 @@
 ---
-title: "/REBASE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/rebase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/REBASE editbin 옵션[C++]"
-  - "기준 주소[C++]"
-  - "DLL[C++], 링크"
-  - "실행 파일[C++], 기준 주소"
-  - "REBASE editbin 옵션"
-  - "-REBASE editbin 옵션"
+title: -REBASE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /rebase
+dev_langs: C++
+helpviewer_keywords:
+- base addresses [C++]
+- -REBASE editbin option
+- REBASE editbin option
+- DLLs [C++], linking
+- executable files [C++], base address
+- /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 05b718b20ad941764158f2de461614885b0627fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /REBASE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rebase"></a>/다시 지정
 ```  
 /REBASE[:modifiers]  
 ```  
   
-## 설명  
- 이 옵션은 지정된 파일의 기준 주소를 설정합니다.  EDITBIN은 각 파일의 크기에 따라 연속적인 주소 공간에서 가장 가까운 64KB 메모리 블록으로 반올림하여 새 기준 주소를 할당합니다.  기준 주소에 대한 자세한 내용은 [기준 주소](../../build/reference/base-base-address.md)\(\/BASE\) 링커 옵션을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 옵션의 기본 주소를 지정된 된 파일을 설정합니다. EDITBIN 가장 가까운 64 KB로 반올림 각 파일의 크기에 따라 연속적인 주소 공간에 새 기본 주소를 할당 합니다. 기본 주소에 대 한 세부 정보를 참조 하십시오.는 [기준 주소](../../build/reference/base-base-address.md) (/base) 링커 옵션입니다.  
   
- EDITBIN 명령줄에서 기준 주소의 순서에 따라 *files* 인수에 프로그램의 실행 파일 및 DLL을 지정합니다.  선택적으로 하나 이상의 *modifiers*를 쉼표\(**,**\)로 구분하여 지정할 수 있습니다.  
+ 프로그램의 실행 파일과 Dll에 지정 된 *파일* EDITBIN 명령줄을 사용 하려면 되는 순서에서에 인수입니다. 하나 이상의 선택적으로 지정할 수 *한정자*쉼표로 구분 하는, (**,**):  
   
 |한정자|작업|  
-|---------|--------|  
-|BASE**\=***address*|파일에 기준 주소를 다시 할당하기 위해 시작 주소를 제공합니다.  10진법 또는 C 언어 표기법으로 *address*를 지정합니다.  BASE를 지정하지 않은 경우 기본적으로 시작하는 기준 주소는 0x400000입니다.  DOWN을 사용한다면 반드시 BASE를 지정해야 하며 *address*는 기준 주소 범위의 끝을 설정합니다.|  
-|BASEFILE|이름이 COFFBASE.TXT인 파일을 만듭니다. 이 파일은 LINK의 \/BASE 옵션에서 필요한 형식의 텍스트 파일입니다.|  
-|아래쪽 화살표|끝 주소에서 아래쪽으로 기준 주소를 다시 할당하도록 EDITBIN에 지시합니다.  첫 번째 파일이 주소 범위의 끝 이하에서 사용할 수 있는 최상위 주소에 배치되는 순서로 파일을 다시 할당합니다.  파일의 기준 주소 배치에 충분한 주소 공간을 보장하려면 DOWN과 함께 BASE를 사용해야 합니다.  지정된 파일에 필요한 주소 공간을 결정하려면 파일에 \/REBASE를 지정하여 EDITBIN을 실행하고 나타난 전체 크기에 64KB를 더합니다.|  
+|--------------|------------|  
+|자료**=***주소*|파일에 기본 주소를 다시 할당 하기 위해 시작 주소를 제공 합니다. 지정 *주소* 10 진수 또는 C 언어 표기법입니다. BASE를 지정 하지 않은 경우 기본적으로 시작 하는 기본 주소는 0x400000입니다. DOWN이 사용 되는, 기본 사람은 및 *주소* 의 기본 주소 범위의 끝을 설정 합니다.|  
+|BASEFILE|COFFBASE 라는 파일을 만듭니다. TXT 옵션 /base는 링크의 필요한 형식에 있는 텍스트 파일입니다.|  
+|아래로|끝 주소에서 아래쪽으로 기준 주소 다시 할당 하도록 EDITBIN 지시 합니다. 파일은 가능한 가장 높은 주소 주소 범위의 끝 부분 아래에 있는 첫 번째 파일이 지정 된 순서로 다시 할당 됩니다. BASE는 아래쪽에 있는 파일의 기준에 대 한 충분 한 주소 공간을 위해 사용 해야 합니다. 지정된 된 파일에 필요한 주소 공간을 확인 하려면 /REBASE EDITBIN 파일에 대해 실행 하 고 표시 된 전체 크기를 64KB를 추가 합니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [EDITBIN 옵션](../../build/reference/editbin-options.md)

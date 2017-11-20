@@ -1,31 +1,30 @@
 ---
-title: "A.14   Using the flush Directive without a List | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "목록 없이 플러시 지시문을 사용 하 여 A.14 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9e63141a-d0c6-43a5-ac16-b0bd7c89b871
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb948476b52cdf76e0a114bed5c95f46bb6ba86e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# A.14   Using the flush Directive without a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음 예제에서는 \(에 대 한  [2.6.5 섹션](../../parallel/openmp/2-6-5-flush-directive.md) 20 페이지\) 공유 객체에 영향을 구별는 `flush` 지시문에서 영향을 받지 않습니다 공유 개체 목록에:  
+# <a name="a14---using-the-flush-directive-without-a-list"></a>A.14   목록이 없는 flush 지시문 사용
+다음 예제에서는 (에 대 한 [섹션 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) 페이지 20) 영향을 받는 공유 개체를 구별는 `flush` 영향을 받지 않는 공유 개체와에서 목록이 없는 지시문:  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // omp_flush_without_list.c  

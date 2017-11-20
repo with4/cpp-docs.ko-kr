@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -43,8 +42,7 @@ f1_keywords:
 - _mbsnicoll
 - strinicoll
 - _tcsncicoll
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - ftcsncicoll function
@@ -69,36 +67,21 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7ec663519e02eebc92809be336f285a5629190b0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: c6a7c5b22cac52e8bf9494796b5fe7abdbf0f546
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 로캘별 정보를 사용하여 문자열을 비교합니다.  
   
 > [!IMPORTANT]
-> Windows 런타임에서 실행되는 응용 프로그램에서는  `_mbsnicoll` 및 `_mbsnicoll_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbsnicoll` 및 `_mbsnicoll_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   

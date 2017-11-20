@@ -1,34 +1,33 @@
 ---
-title: "C++의 전역 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "상수, global"
-  - "전역 상수"
+title: "C + +의 전역 상수 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
+helpviewer_keywords:
+- global constants
+- constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f47be9bad6cf7c8ccafac5dc8ce3786f8ada0dfb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# C++의 전역 상수
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-C\+\+ 전역 상수에는 정적 링크가 포함된다는 점에서  C\+\+와 C는 다릅니다.  여러 파일에서 C\+\+의 전역 상수를 사용하려고 하면 확인할 수 없는 외부 오류가 발생합니다.  컴파일러는 전역 상수를 최적화하여 변수에 대한 공간을 예약해 두지 않습니다.  
+# <a name="global-constants-in-c"></a>C++의 전역 상수
+C + +의 전역 상수는 고정 링크가 있습니다. 3. 다릅니다. 전역 사용 하려고 하면 여러 파일의 c + +에서 상수 오류가 해결 되지 않은 외부 합니다. 컴파일러는 변수에 대 한 예약 된 공간이 없습니다 out, 전역 상수를 최적화 합니다.  
   
- 이 오류를 해결하기 위한 방법 중 하나로 함수 프로토타입에서와 마찬가지로, 필요한 경우 헤더 파일에 const 초기화를 포함한 다음 이 헤더를 CPP 파일에 포함할 수 있습니다.  변수를 비상수로 만든 다음 이에 액세스할 때 상수 참조를 사용해도 됩니다.  
+ 이 오류를 해결 하는 한 가지 방법은 const 초기화 헤더 파일에 포함할를 함수 프로토타입에서 마찬가지로, 필요한 경우를 CPP 파일에 해당 헤더를 포함 하는 것입니다. 또 다른 원인은 변수를 비상수 것을 평가할 때 상수 참조를 사용 합니다.  
   
- 다음 샘플에서는 C2019 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C2019 오류가 생성 됩니다.  
   
 ```  
 // global_constants.cpp  
@@ -41,7 +40,7 @@ int main() {
 }  
 ```  
   
- 두 번째 코드 파일:  
+ 그리고  
   
 ```  
 // global_constants_2.cpp  
@@ -53,5 +52,5 @@ void test() {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 도구 오류 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

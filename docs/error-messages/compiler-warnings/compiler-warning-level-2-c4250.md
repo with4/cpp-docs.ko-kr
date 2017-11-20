@@ -1,36 +1,34 @@
 ---
 title: "컴파일러 경고 (수준 2) C4250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4250"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4250"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4250
+dev_langs: C++
+helpviewer_keywords: C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 123bac1ee6bc50249c272120351281258419bf6c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 2) C4250
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'class1' : 우위에 따라 'class2::member'을\(를\) 상속합니다.  
+# <a name="compiler-warning-level-2-c4250"></a>컴파일러 경고(수준 2) C4250
+'class1': 'class2::member' 우위를 통해 상속  
   
- 두 개 이상의 멤버 이름이 동일합니다.  `class2`은\(는\) 이 멤버를 포함하고 있는 다른 클래스에 대한 기본 클래스이므로 해당 클래스에 있는 멤버 중 하나는 상속된 것입니다.  
+ 둘 이상의 멤버가 이름이 같은 합니다. `class2` 이 멤버를 포함 하는 다른 클래스에 대 한 기본 클래스 이기 때문에 상속 됩니다.  
   
- C4250을 비활성화하려면 [경고](../../preprocessor/warning.md) pragma를 사용하십시오.  
+ C4250 하지 않으려면는 [경고](../../preprocessor/warning.md) pragma입니다.  
   
- 가상 기본 클래스는 여러 파생 클래스 사이에 공유되므로 파생 클래스의 이름은 기본 클래스의 이름보다 우위를 차지합니다.  예를 들어, 클래스 계층 구조가 다음과 같은 경우 diamond 내에서 상속되는 함수의 정의는 두 가지입니다. vbc::func\(\) 인스턴스는 약한 클래스를 통해 상속되고 dominant::func\(\)는 우위 클래스를 통해 상속됩니다.  diamond 클래스 개체를 통한 func\(\)의 비정규화된 호출은 항상 dominate::func\(\) 인스턴스를 호출합니다.  약한 클래스에서 func\(\)의 인스턴스를 정의해야 하는 경우 어떠한 정의도 우위를 차지하지 않으며 이 호출은 모호한 것으로 플래그가 지정됩니다.  
+ 가상 기본 클래스에서 파생된 되는 여러 클래스 간에 공유 파생된 클래스에서 이름이 기본 클래스에는 이름 보다 우위를 차지 합니다. 예를 들어 다음과 같은 클래스 계층 구조를 지정 된 경우 두 가지 방법이 다이아몬드에서 상속 하는 f: 약한 클래스 및 기준 클래스를 통해 되 통해 vbc::func() 인스턴스. 다이아몬드 클래스 개체를 통해 되는 정규화 되지 않은 호출 dominate 되 인스턴스를 항상 호출 합니다.  약한 클래스 되의 인스턴스, 모두 정의 우위를 차지 하는 경우 호출 모호한 것으로 플래그가 지정 됩니다.  
   
 ```  
 // C4250.cpp  
@@ -54,8 +52,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 샘플에서는 C4250 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4250 오류가 발생 합니다.  
   
 ```  
 // C4250_b.cpp  
@@ -86,8 +84,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 이 샘플에서는 더 복잡한 상황을 보여 줍니다.  다음 샘플에서는 C4250 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 이 예제에는 더 복잡 한 상황을 보여 줍니다. 다음 샘플에서는 C4250 오류가 발생 합니다.  
   
 ```  
 // C4250_c.cpp  

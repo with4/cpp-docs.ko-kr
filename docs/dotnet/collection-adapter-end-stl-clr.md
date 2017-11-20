@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::end(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 멤버[STL/CLR]"
+title: 'collection_adapter:: end (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: f953a734-2f17-4b68-9ca4-34f980d08887
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c08a9c08ed4fc1ae6501a5c935e769995644eebd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::end(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadapterend-stlclr"></a>collection_adapter::end(STL/CLR)
 제어되는 시퀀스의 끝을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator end();  
 ```  
   
-## 설명  
- The member function returns an input iterator that points just beyond the end of the controlled sequence.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어 된 시퀀스의 끝 바로 다음을 가리키는 입력된 반복기를 반환합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_collection_adapter_end.cpp   
@@ -63,12 +61,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/adapter\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/어댑터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::begin](../dotnet/collection-adapter-begin-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::begin(STL/CLR)](../dotnet/collection-adapter-begin-stl-clr.md)

@@ -1,56 +1,54 @@
 ---
-title: "/WINMD(Windows 메타데이터 생성) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.GenerateWindowsMetadata"
-dev_langs: 
-  - "C++"
+title: "-WINMD (Windows 메타 데이터 생성) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.GenerateWindowsMetadata
+dev_langs: C++
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7e9c8a0c13256f83e4418d754d11fc69b060e034
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /WINMD(Windows 메타데이터 생성)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Windows 런타임 메타데이터 \(.winmd\)파일을 생성할 수 있도록 설정합니다.  
+# <a name="winmd-generate-windows-metadata"></a>/WINMD(Windows 메타데이터 생성)
+Windows 런타임 메타데이터(.winmd) 파일을 생성할 수 있게 해줍니다.  
   
 ```  
-  
 /WINMD[:{NO|ONLY}]  
 ```  
   
-## 설명  
- \/WINMD  
- 기본적으로 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램입니다.  링커가 이진 실행 파일 및.winmd 메타 데이터 파일이 모두 생성 됩니다.  
+## <a name="remarks"></a>설명  
+ /WINMD  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램의 기본 설정입니다. 링커가 바이너리 실행 파일 및 .winmd 메타데이터 파일을 모두 생성합니다.  
   
- \/WINMD:NO  
- 링커는.winmd 파일이 아니라 하지만 이진 실행 파일을 생성합니다.  
+ /WINMD:NO  
+ 링커가 바이너리 실행 파일만 생성하고 .winmd 파일은 생성하지 않습니다.  
   
- \/WINMD:ONLY  
- 링커는.winmd 파일이 아니라 하지만 이진 실행 파일을 생성합니다.  
+ /WINMD:ONLY  
+ 링커가 .winmd 파일만 생성하고 바이너리 실행 파일은 생성하지 않습니다.  
   
- 기본적으로 출력 파일 이름에는  `binaryname` .winmd 형식이 있습니다.  다른 파일 이름을 지정하는 [\/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) 옵션입니다.  
+ 기본적으로 출력 파일 이름의 형식은 `binaryname`.winmd입니다. 다른 파일 이름을 지정 하려면는 [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) 옵션입니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [프로젝트 속성 사용](../../ide/working-with-project-properties.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 선택합니다.  
+2.  선택 된 **링커** 폴더입니다.  
   
-3.  **Windows 메타데이터** 속성 페이지를 선택합니다.  
+3.  선택 된 **Windows 메타 데이터** 속성 페이지.  
   
-4.  **Windows 메타 데이터 서명 생성** 드롭 다운 목록 상자에서 원하는 옵션을 선택 합니다.  
+4.  에 **일반 Windows 메타 데이터** 드롭다운 목록 상자에서 원하는 옵션을 선택 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

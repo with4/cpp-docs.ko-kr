@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - ATLCONV/ATL::CW2WEX::CW2WEX
 - ATLCONV/ATL::CW2WEX::m_psz
 - ATLCONV/ATL::CW2WEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2WEX class
+dev_langs: C++
+helpviewer_keywords: CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 16b9cb286f71fa01da4b763188ff120f31ad9de7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 61dbd4e59671ef2a17ba53eff4e864c43f3575b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cw2wex-class"></a>CW2WEX 클래스
 이 클래스는 문자열 변환 매크로 사용 `CW2TEX` 및 `CT2WEX`, 및 typedef `CW2W`합니다.  
@@ -83,7 +65,7 @@ class CW2WEX
 |[CW2WEX::m_psz](#m_psz)|소스 문자열을 저장 하는 데이터 멤버입니다.|  
 |[CW2WEX::m_szBuffer](#m_szbuffer)|변환된 된 문자열을 저장 하는 데 정적 버퍼입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  추가 기능은 필요 하지 않는 한 사용할 `CW2TEX`, `CT2WEX`, 또는 `CW2W` 코드에서입니다.  
   
  이 클래스는 변환의 결과 저장 하는 데 사용 되는 고정 크기 정적 버퍼를 포함 합니다. 결과가 너무 커서 정적 버퍼에 포함할 수 없는 경우 클래스는 `malloc`를 사용하여 메모리를 할당함으로써 개체가 범위를 벗어나면 메모리를 해제합니다. 이렇게 하면, 텍스트와 달리이 클래스는 루프에서 사용 하기에 안전 하 고 있는지 스택이 오버플로되지 않습니다 것 ATL의 이전 버전에서 사용할 수 있는 변환 매크로입니다.  
@@ -125,7 +107,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
  `nCodePage`  
  코드 페이지입니다. 이 클래스에서 사용 되지 않습니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  번역에 필요한 버퍼를 만듭니다.  
   
 ##  <a name="dtor"></a>CW2WEX:: ~ CW2WEX  
@@ -135,7 +117,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ~CW2WEX() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  할당된 된 버퍼를 해제합니다.  
   
 ##  <a name="m_psz"></a>CW2WEX::m_psz  
@@ -169,4 +151,3 @@ operator LPWSTR() const throw();
  [CW2AEX 클래스](../../atl/reference/cw2aex-class.md)   
  [CW2CWEX 클래스](../../atl/reference/cw2cwex-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

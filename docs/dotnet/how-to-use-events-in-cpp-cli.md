@@ -1,32 +1,30 @@
 ---
-title: "방법: C++/CLI에서 이벤트 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "이벤트[C++], 인터페이스에서 액세스"
+title: "방법: 이벤트를 사용 하 여 C + + /cli CLI | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5a2d6a1ae0443b7c1ec66f5ca0d0fa057cf9041
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: C++/CLI에서 이벤트 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-This article shows how to use an interface that declares an event and a function to invoke that event, and the class and event handler that implement the interface.  
+# <a name="how-to-use-events-in-ccli"></a>방법: C++/CLI에서 이벤트 사용
+이 문서에서는 이벤트 및 해당 이벤트를 호출 하는 함수를 선언 하는 인터페이스 및 인터페이스를 구현 하는 클래스와 이벤트 처리기를 사용 하는 방법을 보여 줍니다.  
   
-## Interface events  
- The following code example adds an event handler, invokes the event—which causes the event handler to write its name to the console—and then removes the event handler.  
+## <a name="interface-events"></a>인터페이스 이벤트  
+ 다음 코드 예제에서는 이벤트 처리기를 추가, 이벤트를 호출-이름을 콘솔에 작성 하는 이벤트 처리기에 이르게-다음 이벤트 처리기를 제거 합니다.  
   
 ```  
 // mcppv2_events2.cpp  
@@ -74,11 +72,14 @@ int main () {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **EventReceiver::Handler**   
-## Custom accessor methods  
- The following sample shows how to define an event's behavior when handlers are added or removed, and when an event is raised.  
+```Output  
+EventReceiver::Handler  
+```  
+  
+## <a name="custom-accessor-methods"></a>사용자 지정 접근자 메서드  
+ 다음 샘플 처리기가 추가 되거나 제거 되 고 이벤트가 발생할 때 이벤트의 동작을 정의 하는 방법을 보여 줍니다.  
   
 ```  
 // mcppv2_events6.cpp  
@@ -161,12 +162,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **In event handler H1**  
-**In event handler H2 with args 1 and 2.2**   
-## Override default access on add, remove, and raise accessors  
- This sample shows how to override the default access on the add, remove, and raise events methods:  
+```Output  
+In event handler H1  
+In event handler H2 with args 1 and 2.2  
+```  
+  
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>에 대 한 기본 액세스 재정의 추가, 제거 및 접근자를 발생 시킵니다.  
+ 이 샘플에는 add, remove 및 raise 이벤트 메서드의 대 한 기본 액세스 재정의 하는 방법을 보여 줍니다.  
   
 ```  
 // mcppv2_events3.cpp  
@@ -216,11 +220,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **17**   
-## Multiple event handlers  
- An event receiver, or any other client code, can add one or more handlers to an event.  
+```Output  
+17  
+```  
+  
+## <a name="multiple-event-handlers"></a>여러 이벤트 처리기  
+ 이벤트 수신기, 또는 다른 클라이언트 코드에서 이벤트에 하나 이상의 처리기를 추가할 수 있습니다.  
   
 ```  
 // mcppv2_events4.cpp  
@@ -289,13 +296,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **Click\(x\=7,y\=3.14159\)**  
-**DblClick\(s\=System.Char\[\]\)**  
-**DblClickAgain\(s\=System.Char\[\]\)**   
-## Static events  
- The following sample shows how to define and use static events.  
+```Output  
+Click(x=7,y=3.14159)  
+DblClick(s=System.Char[])  
+DblClickAgain(s=System.Char[])  
+```  
+  
+## <a name="static-events"></a>정적 이벤트  
+ 다음 샘플에 정의 및 정적 이벤트를 사용 하는 방법을 보여 줍니다.  
   
 ```  
 // mcppv2_events7.cpp  
@@ -374,14 +384,17 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **In event handler H1**  
-**In event handler H2 with args 11 and 11.11**  
-**In event handler H1**  
-**In event handler H2 with args 22 and 22.22**   
-## Virtual events  
- This sample implements virtual, managed events in an interface and class:  
+```Output  
+In event handler H1  
+In event handler H2 with args 11 and 11.11  
+In event handler H1  
+In event handler H2 with args 22 and 22.22  
+```  
+  
+## <a name="virtual-events"></a>가상 이벤트  
+ 이 예제는 인터페이스 및 클래스에서 관리 되는 가상 이벤트를 구현합니다.  
   
 ```  
 // mcppv2_events5.cpp  
@@ -458,10 +471,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **In handler H1**  
-**In handler H2 with args 1 and 2.2** A simple event cannot be specified to override or hide a base class event.  You must define all of the event's accessor functions, and then specify the `new` or `override` keyword on each accessor function.  
+```Output  
+In handler H1  
+In handler H2 with args 1 and 2.2  
+```  
+  
+ 단순 이벤트를 재정의 하거나 기본 클래스 이벤트를 숨기려면 지정할 수 없습니다.  모든 이벤트의 접근자 함수를 정의 하 고 다음을 지정 해야는 `new` 또는 `override` 각 접근자 함수에는 키워드입니다.  
   
 ```  
 // mcppv2_events5_a.cpp  
@@ -493,8 +510,8 @@ ref struct C : B {
 };  
 ```  
   
-## Abstract events  
- The following sample shows how to implement an abstract event.  
+## <a name="abstract-events"></a>추상 이벤트  
+ 다음 샘플에는 추상 이벤트를 구현 하는 방법을 보여 줍니다.  
   
 ```  
 // mcppv2_events10.cpp  
@@ -570,12 +587,15 @@ int main () {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **hi**  
-**hello from Event2**   
-## Raising events that are defined in a different assembly  
- An event and event handler can be defined in one assembly, and consumed by another assembly.  
+```Output  
+hi  
+hello from Event2  
+```  
+  
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>다른 어셈블리에 정의 된 이벤트를 발생 시키기  
+ 이벤트와 이벤트 처리기 수 하나의 어셈블리에 정의 되어 있고 다른 어셈블리에서 사용 합니다.  
   
 ```  
 // mcppv2_events8.cpp  
@@ -593,7 +613,7 @@ public:
 };  
 ```  
   
- This client code consumes the event:  
+ 이 클라이언트 코드는 이벤트를 사용 합니다.  
   
 ```  
 // mcppv2_events9.cpp  
@@ -620,9 +640,12 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **hello**  
-**hello**   
-## 참고 항목  
+```Output  
+hello  
+hello  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [event](../windows/event-cpp-component-extensions.md)

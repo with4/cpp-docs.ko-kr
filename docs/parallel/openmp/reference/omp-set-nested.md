@@ -1,32 +1,30 @@
 ---
-title: "omp_set_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_nested OpenMP function"
+title: omp_set_nested | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_nested
+dev_langs: C++
+helpviewer_keywords: omp_set_nested OpenMP function
 ms.assetid: fa1cb08c-7b8b-42c9-8654-2c33dcffb5b6
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3b0d04a0eb9813a3829b0f435972c7922bf77d07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# omp_set_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-중첩 된 병렬 처리 가능 합니다.  
+# <a name="ompsetnested"></a>omp_set_nested
+중첩 된 병렬 처리가 가능 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void omp_set_nested(  
@@ -34,24 +32,24 @@ void omp_set_nested(
 );  
 ```  
   
-## 설명  
- 다음은 각 매개 변수에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 다음은 각 문자에 대한 설명입니다.  
   
  `val`  
- 0이 아닌 경우 중첩 된 병렬 처리 수 있습니다.  0 이면 중첩 된 병렬 처리를 사용할 수 없습니다.  
+ 0이 아니면 중첩 된 병렬 처리가 가능 합니다. 0 이면 중첩 된 병렬 처리를 해제 합니다.  
   
-## 설명  
- 중첩 OMP 병렬 처리 수 있습니다이 설정 되어 있는 `omp_set_nested`, 또는 설정의 [OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md) 환경 변수.  
+## <a name="remarks"></a>설명  
+ OMP 중첩 된 병렬 처리 수준으로 설정할 수 있습니다 `omp_set_nested`, 하거나 설정 하는 [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) 환경 변수입니다.  
   
- 설정에 대 한 `omp_set_nested` 의 설정 보다 우선 합니다는 `OMP_NESTED` 환경 변수입니다.  
+ 에 대 한 설정을 `omp_set_nested` 의 설정을 재정의 합니다는 `OMP_NESTED` 환경 변수입니다.  
   
- 병렬 영역을 중첩 시키는 경우 스레드 수를 엄청나게 증가 하기 때문에 사용 하는 경우 환경 변수 그렇지 않으면 작동 하는 프로그램을 중단할 수 있습니다.  예를 들어 일반적 OMP 스레드 4에 설정할 6 회와를 재귀적으로 검색 \(4 6의\) 4, 096을 필요로 하는 함수를 스레드, 스레드 수가 프로세서 수를 초과 하는 경우 응용 프로그램의 성능이 저하 됩니다.  한 가지 예외는 응용 프로그램이 I\/O 바인딩 될 것입니다.  
+ 를 사용 하는 경우에 환경 변수 병렬 영역을 중첩할 때 스레드 수가 기하급수적으로 증가 하기 때문에 그렇지 않으면 operational 프로그램에 중단할 수 있습니다.  예를 들어 일반적 스레드 수를 4로 설정 하는 OMP 스레드의 수와 6 회를 재귀적 4096 (6의 4)이 필요 하다는 함수, 스레드 수의 프로세서 수를 초과 하는 경우 응용 프로그램의 성능이 저하 됩니다. 이 한 가지 예외는 I/O 바운드 응용 프로그램 것입니다.  
   
- 사용 [omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md) 의 현재 설정을 표시 하려면 `omp_set_nested`.  
+ 사용 하 여 [omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) 의 현재 설정을 표시 하려면 `omp_set_nested`합니다.  
   
- 자세한 내용은 [3.1.9 omp\_set\_nested Function](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)를 참조하십시오.  
+ 자세한 내용은 참조 [3.1.9 omp_set_nested 함수](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // omp_set_nested.cpp  
@@ -72,7 +70,10 @@ int main( )
 }  
 ```  
   
-  **1**  
-**1**   
-## 참고 항목  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [함수](../../../parallel/openmp/reference/openmp-functions.md)

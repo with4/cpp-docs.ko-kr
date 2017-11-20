@@ -1,53 +1,34 @@
 ---
-title: "컴파일러 경고 (수준 1) C4503 | Microsoft 문서"
+title: "컴파일러 경고 (수준 1) C4503 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4503
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4503
+f1_keywords: C4503
+dev_langs: C++
+helpviewer_keywords: C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f999fcb73860bfd2fabb3484e78f313a32240dee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b174ac92abb0f095895eb587afcba860f4abbe0d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4503"></a>컴파일러 경고(수준 1) C4503
-'identifier': 데코레이팅된 이름 길이 초과 이름을 잘렸습니다.  
+'identifier': 데코레이팅된 이름 길이 초과 했으므로 이름이 잘립니다  
   
- 데코레이팅된 이름은 컴파일러 한계 (4096) 보다 오래 되어 잘렸습니다. 이 경고와는 잘림을 방지, 하려면 인수 개수 또는 사용 되는 식별자의 이름 길이 줄이십시오.  
+ 데코 레이트 된 이름 (4096) 컴파일러 한계를 초과 하 고 잘렸습니다. 이 경고와는 잘림을 방지, 하려면 인수의 수 나 사용 되는 식별자 이름 길이 줄입니다.  
   
- 여기서이 경고가 발생 합니다 한 경우 템플릿 특수화 된 반복 해 서으로 코드를 포함 하는 경우입니다.  예를 들어, (c + + 표준 라이브러리)에서 맵의 맵.  이 경우 형식 정의 해당 맵을 포함 하는 형식 (예: 구조체)를 만들 수 있습니다.  
+ 한 가지 상황은 여기서이 경고가 발생 합니다는 코드에 포함 된 경우 템플릿 특수화 된 반복 해 서 합니다.  예를 들어 지도 (표준 c + + 라이브러리)에서 맵.  이 경우 프로그램 typedefs 해당 맵을 포함 하는 형식 (예: 구조체)를 만들 수 있습니다.  
   
- 그러나 코드를 재구성 하지 결정할 수 있습니다.  C4503를 생성 하는 응용 프로그램을 제공할 수 있지만 잘린된 기호에서 링크 타임 오류를 발생 하는 경우 오류에 기호의 형식을 확인 하는 것이 어려울 수 됩니다.  디버깅도 더 어려워집니다. 디버거는 문제가 많은 것 매핑 이름 형식으로 기호 이름이 제공 됩니다.  그러나 프로그램의 정확성은 이름이 잘린된 영향을 받지.  
+ 그러나 코드를 재구성 하지 결정할 수도 있습니다.  C4503을 생성 하는 응용 프로그램 수 있지만 잘린된 기호에 링크 타임 오류를 발생 한 경우 오류에 기호의 형식을 결정 하는 것이 어려울 수 됩니다.  디버깅도 더 어렵습니다. 디버거가 기호 이름을 입력 하는 이름을 문제가 많은 것 매핑 제공 됩니다.  그러나 프로그램의 정확성 영향을 받지 않습니다 잘린된 이름입니다.  
   
  다음 샘플에서는 C4503 오류가 생성 됩니다.  
   
@@ -67,7 +48,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;  
 ```  
   
- 다음 샘플 C4503를 해결 하려면 코드를 다시 작성 하는 방법을 보여 줍니다.  
+ 다음 샘플에서는 C4503를 해결 하려면 코드를 다시 작성 하는 방법을 보여 줍니다.  
   
 ```  
 // C4503b.cpp  

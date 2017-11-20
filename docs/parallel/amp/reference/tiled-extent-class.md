@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,33 +18,17 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e295b56290435a1d87ac2f0dbc0951850600534d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: a73a29a7cdcd20c969680e1dbb69b6a6ede4dbb6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tiledextent-class"></a>tiled_extent 클래스
 A `tiled_extent` 개체가 `extent` 익스텐트 공간 1, 2 또는 3 차원 타일으로 세분 하는 1 ~ 3 차원 개체입니다.  
@@ -166,7 +149,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  `extent` 개체의이 크기를 캡처하는 `tiled_extent` 인스턴스.  
   
 
-## <a name="pad"></a>  pad   
+## <a name="pad"></a> 채움   
 새 반환 `tiled_extent` 익스텐트 개체 타일 크기에 따라 균등 하 게 나눌 수를 조정 합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -243,4 +226,3 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)
-

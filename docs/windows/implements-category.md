@@ -1,32 +1,30 @@
 ---
-title: "implements_category | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.implements_category"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "implements_category attribute"
+title: implements_category | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.implements_category
+dev_langs: C++
+helpviewer_keywords: implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c2d350b673d23e308a8403674a3df7c42fc76388
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# implements_category
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-대상 클래스에 의해 구현 되는 구성 요소 범주를 지정 합니다.  
+# <a name="implementscategory"></a>implements_category
+대상 클래스에서 구현 되는 구성 요소 범주를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,17 +33,17 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 매개 변수  
- **implements\_category**  
- 구현 된 범주 ID입니다.  
+#### <a name="parameters"></a>매개 변수  
+ **implements_category**  
+ 구현 된 범주의 ID입니다.  
   
-## 설명  
- 해당  **implements\_category** C\+\+ 특성은 대상 클래스에 의해 구현 된 구성 요소 범주를 지정 합니다.  카테고리 맵 만들기에서 지정한 별도 항목을 추가 하 여 이렇게 되는  **implements\_category** 특성.  자세한 내용은  [구성 요소 범주와 방법을 수행 하는 작업은 무엇입니까?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
+## <a name="remarks"></a>설명  
+ **implements_category** c + + 특성 대상 클래스에서 구현 되는 구성 요소 범주를 지정 합니다. 범주 맵을 만들고에서 지정한 별도 항목을 추가 하 여 이렇게는 **implements_category** 특성입니다. 자세한 내용은 참조 [구성 요소 범주 및 어떻게 수행 될 작업 이란?](http://msdn.microsoft.com/library/windows/desktop/ms694322)합니다.  
   
- 필요로 하는이 특성에  [coclass](../windows/coclass.md),  [progid](../windows/progid.md), 또는  [vi\_progid](../windows/vi-progid.md) 특성 \(또는이 중 하나를 의미 하는 다른 특성\)도 적용 될 같은 요소를 합니다.  다른 두 가지는 단일 특성을 사용 하는 경우에 자동으로 적용 됩니다.  예를 들어, 경우  **progid** 적용 된  **vi\_progid** 및  **coclass** 적용 됩니다.  
+ 이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다. 단일 특성을 사용하는 경우 다른 두 특성도 자동으로 적용됩니다. 예를 들어 **progid** 를 적용하면 **vi_progid** 및 **coclass** 도 적용됩니다.  
   
-## 예제  
- 다음과 같은 개체의 컨트롤 범주를 구현 다음 코드를 지정 합니다.  
+## <a name="example"></a>예제  
+ 다음 코드는 다음과 같은 개체 컨트롤 범주를 구현 함을 지정 합니다.  
   
 ```  
 // cpp_attr_ref_implements_category.cpp  
@@ -60,21 +58,21 @@ caps.handback.revision: 10
 class CMyClass {};  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**,`struct`|  
+|**적용 대상**|**class**, `struct`|  
 |**반복 가능**|예|  
-|**필수 특성**|다음:  **coclass**,  **progid**, 또는  **vi\_progid**|  
-|**잘못 된 특성**|없음|  
+|**필수 특성**|다음 중 하나: **coclass**, **progid**, 또는 **vi_progid**|  
+|**잘못된 특성**|없음|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [IMPLEMENTED\_CATEGORY](../Topic/IMPLEMENTED_CATEGORY.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [COM 특성](../windows/com-attributes.md)   
+ [클래스 특성](../windows/class-attributes.md)   
+ [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)   
+ 

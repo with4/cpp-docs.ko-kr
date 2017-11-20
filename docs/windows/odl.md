@@ -1,32 +1,30 @@
 ---
-title: "odl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.odl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "odl attribute"
+title: odl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.odl
+dev_langs: C++
+helpviewer_keywords: odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 179d645bde978a9eafb21961d1400aa7282f558e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# odl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-인터페이스와 개체 설명 언어 \(ODL\) 인터페이스를 식별합니다.  MIDL 컴파일러에 필요 하지 않은 여  **odl** 특성입니다. 오래 된.odl 파일 호환에 대 한 인식.  
+# <a name="odl"></a>odl
+개체 설명 언어 ODL () 인터페이스는 인터페이스를 식별합니다. MIDL 컴파일러 필요 하지 않습니다는 **odl** 특성; 이전.odl 파일의 호환에만 인식 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,10 +32,10 @@ caps.handback.revision: 9
   
 ```  
   
-## 설명  
- **Odl** C\+\+ 특성을 동일한 기능을가지고 있는  [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **odl** c + + 특성에 동일한 기능을는 [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL 특성입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cpp_attr_ref_odl.cpp  
@@ -59,20 +57,19 @@ public:
 };  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
 |**적용 대상**|`interface`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [인터페이스 특성](../windows/interface-attributes.md)   

@@ -1,29 +1,28 @@
 ---
-title: "A.19   Examples Showing Incorrect Nesting of Work-sharing Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "작업 공유 지시문의 잘못 된 중첩 보여 주는 A.19 예 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 906e900d-9259-44d6-a095-c1ba9135d269
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1cc5ed3a3a5ddd4117a3332703613a8d525853a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# A.19   Examples Showing Incorrect Nesting of Work-sharing Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-중첩 지시문 규칙을 설명 하는이 절에 있는 예제입니다.  중첩 지시문에 대 한 자세한 내용은  [2.9 절](../../parallel/openmp/2-9-directive-nesting.md) 33 페이지에 있습니다.  
+# <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   작업 공유 지시문의 잘못된 중첩을 보여 주는 예제
+이 섹션의 예는 지시문 중첩 규칙을 설명 합니다. 지시문 중첩에 대 한 자세한 내용은 참조 하십시오. [섹션 2.9](../../parallel/openmp/2-9-directive-nesting.md) 33 페이지입니다.  
   
- 다음 예제에서는 정책을 준수 하지 않는 것 때문에 내부 및 외부 `for` 지시문에 중첩 된 및 동일한 바인딩 `parallel` 지시문:  
+ 다음 예제에서는 호환 되지 않는 때문에 내부 및 외부 `for` 지시문이 중첩 되어 있고 동일한 바인딩할 `parallel` 지시문:  
   
 ```  
 void wrong1(int n)  
@@ -41,7 +40,7 @@ void wrong1(int n)
 }  
 ```  
   
- 또한 다음 동적으로 중첩 된 버전은 위의 예제 정책 위반입니다.  
+ 위 예의 다음 동적으로 중첩된 버전 비규격 이기도합니다.  
   
 ```  
 void wrong2(int n)  
@@ -64,7 +63,7 @@ void work1(int i, int n)
 }  
 ```  
   
- 다음 예제에서는 정책을 준수 하지 않는 것 때문에 `for` 및 `single` 지시문을 중첩 하 고 같은 병렬 영역에 바인딩할.  
+ 다음 예제에서는 호환 되지 않는 때문에 `for` 및 `single` 지시문 중첩 되어 있고 동일한 병렬 영역 바인딩할 때:  
   
 ```  
 void wrong3(int n)  
@@ -81,7 +80,7 @@ void wrong3(int n)
 }  
 ```  
   
- 다음은 정책을 준수 하지 않는 것 때문에 `barrier` 지시문 내에 `for` 교착 상태가 발생할 수 있습니다.  
+ 다음 예제에서는 호환 되지 않는 때문에 `barrier` 내 지시문는 `for` 교착 상태가 발생할 수 있습니다:  
   
 ```  
 void wrong4(int n)  
@@ -99,7 +98,7 @@ void wrong4(int n)
 }  
 ```  
   
- 다음은 정책을 준수 하지 않는 것 때문에 `barrier` 한 번에 하나의 스레드가 임계 섹션에 들어갈 수 있습니다 때문에 교착 상태가 발생 합니다.  
+ 다음 예제에서는 호환 되지 않는 때문에 `barrier` 교착 상태에서 발생 때문을 한 번에 하나만 스레드 임계 영역을 시작할 수 있습니다.  
   
 ```  
 void wrong5()  
@@ -116,7 +115,7 @@ void wrong5()
 }  
 ```  
   
- 다음 예제에서는 정책을 준수 하지 않는 것 때문에 `barrier` 하나의 스레드로 실행 때문에 교착 상태가 발생의 `single` 섹션:  
+ 다음 예제에서는 호환 되지 않는 때문에 `barrier` 때문을 하나의 스레드가 실행 교착 상태에 결과 `single` 섹션:  
   
 ```  
 void wrong6()  

@@ -1,37 +1,35 @@
 ---
 title: "컴파일러 경고 (수준 1) C4965 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4965"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4965"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4965
+dev_langs: C++
+helpviewer_keywords: C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cde1b35dc183065461d1a2e59c77089256774ab4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4965
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-정수 0을 암시적으로 boxing했습니다. nullptr 또는 명시적 캐스팅을 사용하십시오.  
+# <a name="compiler-warning-level-1-c4965"></a>컴파일러 경고(수준 1) C4965
+암시적 상자 정수 0; nullptr 또는 명시적 캐스트를 사용 하 여  
   
- Visual C\+\+에서 값 형식을 암시적으로 boxing합니다.  Managed Extensions for C\+\+를 사용하여 null 할당이라는 결과를 가져오던 명령이 이제는 boxing된 정수에 대한 할당으로 변경되었습니다.  
+ Visual c + + 기능을 값 형식 명시적 boxing 합니다. C + + 표현 됩니다. boxed 없는 정수에 대 한 할당에 대 한 Managed Extensions를 사용 하 여 null 할당에 발생 하는 명령  
   
- 자세한 내용은 [Boxing](../../windows/boxing-cpp-component-extensions.md)을 참조하십시오.  
+ 자세한 내용은 참조 [Boxing](../../windows/boxing-cpp-component-extensions.md)합니다.  
   
-## 예제  
- 다음 샘플에서는 C4965 경고가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4965 경고가 발생 합니다.  
   
 ```  
 // C4965.cpp  

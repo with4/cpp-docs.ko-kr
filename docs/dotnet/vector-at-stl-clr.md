@@ -1,45 +1,43 @@
 ---
-title: "vector::at(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::at"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "at 멤버[STL/CLR]"
+title: 'vector:: at (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::at
+dev_langs: C++
+helpviewer_keywords: at member [STL/CLR]
 ms.assetid: 9af9f829-48b8-4906-ba4a-b43454acb2c7
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 902652b8b74c11f79aad09079ea3ebb42d0d2ff0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# vector::at(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accesses an element at a specified position.  
+# <a name="vectorat-stlclr"></a>vector::at(STL/CLR)
+지정된 위치에 있는 요소에 액세스합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 reference at(size_type pos);  
 ```  
   
-#### 매개 변수  
- pos  
+#### <a name="parameters"></a>매개 변수  
+ 위치  
  액세스할 요소의 위치입니다.  
   
-## 설명  
- The member function returns a reference to the element of the controlled sequence at position `pos`.  You use it to read or write an element whose position you know.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 위치에서 제어 된 시퀀스의 요소에 대 한 참조를 반환 `pos`합니다. 읽기 또는 쓰기 요소 위치를 알아야 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_at.cpp   
@@ -68,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a x c**   
-## 요구 사항  
- **Header:** \<cliext\/vector\>  
+```Output  
+a b c  
+a x c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/벡터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::operator](../dotnet/vector-operator-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::operator(STL/CLR)](../dotnet/vector-operator-stl-clr.md)

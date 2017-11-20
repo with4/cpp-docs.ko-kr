@@ -1,35 +1,34 @@
 ---
-title: "변경 사항 개요(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "변경 사항 개요 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c0bbbd6b-c5c4-44cf-a6ca-c1010c377e9d
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a17ad8aca031d6345f3ded4839dbb543c1edf133
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 변경 사항 개요(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 개요에서는 Managed Extensions for C\+\+와 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]의 언어 변경 사항 중 일부에 대한 예제를 보여 줍니다.  자세한 내용은 각 항목의 해당 링크를 참조하십시오.  
+# <a name="outline-of-changes-ccli"></a>변경 사항 개요(C++/CLI)
+이 개요 예를 보여 줍니다 하면 일부 변경 Managed Extensions에서 언어의 Visual c + + c + +에 대 한 합니다. 자세한 내용은 각 항목을 함께 제공 되는 링크를 따라 이동 합니다.  
   
-## 두 개의 밑줄이 있는 키워드 사용 안 함  
- 하나의 예외를 제외하고 모든 키워드 앞에 나오는 두 개의 밑줄이 제거되었습니다.  따라서 `__value`는 `value`가 되고 `__interface`는 `interface`가 됩니다.  사용자 코드의 식별자와 키워드 간에 이름이 충돌하지 않게 하기 위해 키워드는 주로 상황에 맞게 처리됩니다.  
+## <a name="no-double-underscore-keywords"></a>두 개의 밑줄 키워드 없음  
+ 한 가지 예외로 모든 키워드 앞에 이중 밑줄, 없어졌습니다. 따라서 `__value` 됩니다 `value`, 및 `__interface` 되 `interface`등입니다. 키워드와 사용자 코드에서 식별자 간의 이름 충돌을 방지 하려면 키워드 상황에 맞게 처리 주로 됩니다.  
   
- 자세한 내용은 [언어 키워드\(C\+\+\/CLI\)](../dotnet/language-keywords-cpp-cli.md)를 참조하십시오.  
+ 참조 [언어 키워드 (C + + /cli CLI)](../dotnet/language-keywords-cpp-cli.md) 자세한 정보에 대 한 합니다.  
   
-## 클래스 선언  
- Managed Extensions 구문  
+## <a name="class-declarations"></a>클래스 선언  
+ 관리 되는 확장 구문을 사용 하십시오.  
   
 ```  
 __gc class Block {};                           // reference class  
@@ -39,7 +38,7 @@ __gc __abstract class Shape {};                // abstract class
 __gc __sealed class Shape2D : public Shape {}; // derived class  
 ```  
   
- 새 구문  
+ 새 구문:  
   
 ```  
 ref class Block {};                // reference class  
@@ -49,10 +48,10 @@ ref class Shape abstract {};       // abstract class
 ref class Shape2D sealed: Shape{}; // derived class  
 ```  
   
- 자세한 내용은 [관리되는 형식\(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)를 참조하십시오.  
+ 참조 [관리 되는 형식 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md) 자세한 정보에 대 한 합니다.  
   
-## 개체 선언  
- Managed Extensions 구문  
+## <a name="object-declaration"></a>개체 선언  
+ 관리 되는 확장 구문을 사용 하십시오.  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -64,7 +63,7 @@ private:
 };  
 ```  
   
- 새 구문  
+ 새 구문:  
   
 ```  
 public ref class Form1 : System::Windows::Forms::Form {  
@@ -75,10 +74,10 @@ public ref class Form1 : System::Windows::Forms::Form {
 };  
 ```  
   
- 자세한 내용은 [CLR 참조 클래스 개체 선언](../dotnet/declaration-of-a-clr-reference-class-object.md)를 참조하십시오.  
+ 참조 [CLR 참조 클래스 개체의 선언](../dotnet/declaration-of-a-clr-reference-class-object.md) 자세한 정보에 대 한 합니다.  
   
-### 관리되는 힙 할당  
- Managed Extensions 구문  
+### <a name="managed-heap-allocation"></a>관리 되는 힙 할당  
+ 관리 되는 확장 구문을 사용 하십시오.  
   
 ```  
 Button* button1 = new Button; // managed heap  
@@ -86,7 +85,7 @@ int *pi1 = new int;           // native heap
 Int32 *pi2 = new Int32;       // managed heap  
 ```  
   
- 새 구문  
+ 새 구문:  
   
 ```  
 Button^ button1 = gcnew Button;        // managed heap  
@@ -94,10 +93,10 @@ int * pi1 = new int;                   // native heap
 Int32^ pi2 = gcnew Int32;              // managed heap  
 ```  
   
- 자세한 내용은 [CLR 참조 클래스 개체 선언](../dotnet/declaration-of-a-clr-reference-class-object.md)를 참조하십시오.  
+ 참조 [CLR 참조 클래스 개체의 선언](../dotnet/declaration-of-a-clr-reference-class-object.md) 자세한 정보에 대 한 합니다.  
   
-### 어떠한 개체도 가리키지 않는 추적 참조  
- Managed Extensions 구문  
+### <a name="a-tracking-reference-to-no-object"></a>없는 개체에 대 한 추적 참조  
+ 관리 되는 확장 구문을 사용 하십시오.  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -107,7 +106,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- 새 구문  
+ 새 구문:  
   
 ```  
 // Incorrect Translation  
@@ -123,15 +122,15 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- 자세한 내용은 [CLR 참조 클래스 개체 선언](../dotnet/declaration-of-a-clr-reference-class-object.md)를 참조하십시오.  
+ 참조 [CLR 참조 클래스 개체의 선언](../dotnet/declaration-of-a-clr-reference-class-object.md) 자세한 정보에 대 한 합니다.  
   
-## 배열 선언  
- CLR 배열이 다시 디자인되었습니다.  이는 stl `vector` 템플릿 컬렉션과 비슷하지만 내부 `System::Array` 클래스에 매핑되므로 템플릿 구현은 아닙니다.  
+## <a name="array-declaration"></a>배열 선언  
+ CLR 배열은 다시 디자인 되었습니다. Stl 비슷합니다 `vector` 템플릿 컬렉션 하지만 기본 지도 `System::Array` 클래스 즉, 되지 않습니다.-템플릿 구현 합니다.  
   
- 자세한 내용은 [CLR 배열 선언](../dotnet/declaration-of-a-clr-array.md)를 참조하십시오.  
+ 참조 [CLR 배열 선언](../dotnet/declaration-of-a-clr-array.md) 자세한 정보에 대 한 합니다.  
   
-### 배열을 매개 변수로 사용  
- Managed Extensions 배열 구문  
+### <a name="array-as-parameter"></a>배열을 매개 변수로  
+ 관리 되는 확장 배열 구문을 사용 하십시오.  
   
 ```  
 void PrintValues( Object* myArr __gc[]);   
@@ -145,8 +144,8 @@ void PrintValues( array<Object^>^ myArr );
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
-### 배열을 반환 형식으로 사용  
- Managed Extensions 배열 구문  
+### <a name="array-as-return-type"></a>반환 형식으로 배열  
+ 관리 되는 확장 배열 구문을 사용 하십시오.  
   
 ```  
 Int32 f() [];   
@@ -160,8 +159,8 @@ array<Int32>^ f();
 array<int>^ GetArray();  
 ```  
   
-### 로컬 CLR 배열의 약식 초기화  
- Managed Extensions 배열 구문  
+### <a name="shorthand-initialization-of-local-clr-array"></a>로컬 CLR 배열의 약식 초기화  
+ 관리 되는 확장 배열 구문을 사용 하십시오.  
   
 ```  
 int GetArray() __gc[] {  
@@ -184,8 +183,8 @@ array<int>^ GetArray() {
 }  
 ```  
   
-### 명시적 CLR 배열 선언  
- Managed Extensions 배열 구문  
+### <a name="explicit-clr-array-declaration"></a>명시적 CLR 배열 선언  
+ 관리 되는 확장 배열 구문을 사용 하십시오.  
   
 ```  
 Object* myArray[] = new Object*[2];  
@@ -199,7 +198,7 @@ array<Object^>^ myArray = gcnew array<Object^>(2);
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- 새로운 언어 기능: gcnew 다음에 오는 명시적 배열 초기화  
+ 새로운 언어: gcnew를 뒤에 오는 명시적 배열 초기화  
   
 ```  
 // explicit initialization list follow gcnew   
@@ -208,8 +207,8 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## 스칼라 속성  
- Managed Extensions 속성 구문  
+## <a name="scalar-properties"></a>스칼라 속성  
+ 관리 되는 확장 속성 구문:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -232,11 +231,11 @@ public:
    {  
       double get()             { return _x; }  
       void   set( double newx ){ _x = newx; }  
-   } // Note: no semi-colon …  
+   } // Note: no semi-colon  
 };  
 ```  
   
- 새로운 언어 기능: trivial 속성  
+ 새로운 언어: trivial 속성  
   
 ```  
 public ref class Vector sealed {   
@@ -247,10 +246,10 @@ public:
 };  
 ```  
   
- 자세한 내용은 [속성 선언](../dotnet/property-declaration.md)를 참조하십시오.  
+ 참조 [속성 선언](../dotnet/property-declaration.md) 자세한 정보에 대 한 합니다.  
   
-## 인덱싱된 속성  
- Managed Extensions 인덱싱된 속성 구문  
+## <a name="indexed-properties"></a>인덱싱된 속성  
+ 관리 되는 확장 속성 구문이 인덱싱됩니다.  
   
 ```  
 public __gc class Matrix {  
@@ -262,7 +261,7 @@ public:
 };  
 ```  
   
- 새 인덱싱된 속성 구문  
+ 새로운 인덱싱된 속성 구문:  
   
 ```  
 public ref class Matrix {  
@@ -276,7 +275,7 @@ public:
 };  
 ```  
   
- 새로운 언어 기능: 클래스 수준의 인덱싱된 속성  
+ 새로운 언어: 클래스 수준 인덱싱된 속성  
   
 ```  
 public ref class Matrix {  
@@ -296,10 +295,10 @@ public:
 };  
 ```  
   
- 자세한 내용은 [속성 인덱스 선언](../dotnet/property-index-declaration.md)를 참조하십시오.  
+ 참조 [속성 인덱스 선언](../dotnet/property-index-declaration.md) 자세한 정보에 대 한 합니다.  
   
-## 오버로드된 연산자  
- Managed Extensions 연산자 오버로드 구문  
+## <a name="overloaded-operators"></a>오버로드된 연산자  
+ 관리 되는 확장명 연산자 오버 로드 구문:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -321,7 +320,7 @@ int main() {
 }  
 ```  
   
- 새 연산자 오버로드 구문  
+ 새 연산자 오버 로드 구문  
   
 ```  
 public ref class Vector sealed {  
@@ -342,10 +341,10 @@ int main() {
 }  
 ```  
   
- 자세한 내용은 [오버로드된 연산자](../dotnet/overloaded-operators.md)를 참조하십시오.  
+ 참조 [오버 로드 된 연산자](../dotnet/overloaded-operators.md) 자세한 정보에 대 한 합니다.  
   
-## 변환 연산자  
- Managed Extensions 변환 연산자 구문  
+## <a name="conversion-operators"></a>변환 연산자  
+ 관리 되는 확장 변환 연산자 구문  
   
 ```  
 __gc struct MyDouble {  
@@ -355,7 +354,7 @@ __gc struct MyDouble {
 };  
 ```  
   
- 새 변환 연산자 구문  
+ 새 변환 연산자 구문:  
   
 ```  
 ref struct MyDouble {  
@@ -366,10 +365,10 @@ public:
 };  
 ```  
   
- 자세한 내용은 [변환 연산자의 변경 내용](../dotnet/changes-to-conversion-operators.md)를 참조하십시오.  
+ 참조 [변환 연산자를 변경](../dotnet/changes-to-conversion-operators.md) 자세한 정보에 대 한 합니다.  
   
-## 인터페이스 멤버 명시적 재정의  
- Managed Extensions 명시적 재정의 구문  
+## <a name="explicit-override-of-an-interface-member"></a>인터페이스 멤버 명시적 재정의  
+ 관리 되는 확장 명시적 재정의 구문:  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -381,7 +380,7 @@ public __gc class R : public ICloneable {
 };  
 ```  
   
- 새 명시적 재정의 구문  
+ 새 명시적 재정의 구문은:  
   
 ```  
 public ref class R : public ICloneable {  
@@ -393,10 +392,10 @@ public ref class R : public ICloneable {
 };  
 ```  
   
- 자세한 내용은 [인터페이스 멤버 명시적 재정의](../dotnet/explicit-override-of-an-interface-member.md)를 참조하십시오.  
+ 참조 [인터페이스 멤버 명시적 재정의](../dotnet/explicit-override-of-an-interface-member.md) 자세한 정보에 대 한 합니다.  
   
-## 전용 가상 함수  
- Managed Extensions 전용 가상 함수 구문  
+## <a name="private-virtual-functions"></a>전용 가상 함수  
+ 관리 되는 확장 전용 가상 함수 구문:  
   
 ```  
 __gc class Base {  
@@ -428,10 +427,10 @@ public:
 };  
 ```  
   
- 자세한 내용은 [전용 가상 함수](../dotnet/private-virtual-functions.md)를 참조하십시오.  
+ 참조 [개인 가상 함수](../dotnet/private-virtual-functions.md) 자세한 정보에 대 한 합니다.  
   
-## CLR 열거형 형식  
- Managed Extensions 열거형 구문  
+## <a name="clr-enum-type"></a>CLR 열거형 형식  
+ 관리 되는 확장 열거형 구문  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -451,33 +450,33 @@ public enum class e2 : unsigned short {
 };  
 ```  
   
- 이와 같은 구문 상의 작은 변화 이외에도 CLR 열거형 형식의 동작이 여러 측면에서 변경되었습니다.  
+ 이 작은 구문 변경 외에도 여러 가지 방법으로 CLR 열거형 형식의 동작이 변경 되었습니다.  
   
--   CLR 열거형의 전방 선언이 더 이상 지원되지 않습니다.  
+-   CLR 열거형의 정방향 선언 더 이상 지원 합니다.  
   
--   기본 제공 산술 형식과 Object 클래스 계층 구조 사이의 오버로드 확인이 Managed Extensions와 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 사이에서 서로 뒤바뀌었습니다.  이로 인해 CLR 열거형이 더 이상 암시적으로 산술 형식으로 변환되지 않는 부작용이 있습니다.  
+-   Managed Extensions 사이의 Visual c + + 기본 제공 산술 형식 및 개체 클래스 계층 구조 사이의 오버 로드 확인이 바뀌었습니다. 파생 작업으로 CLR 열거형 산술 형식으로 더 이상 암시적으로 변환 됩니다.  
   
--   새 구문에서는 Managed Extensions에서와 달리 CLR 열거형이 자체 범위를 유지합니다.  이전에는 열거형을 포함하는 범위에서 열거자를 볼 수 있었지만 이제는 열거자가 열거형의 범위 내에서 캡슐화됩니다.  
+-   새 구문에서 CLR 열거형에는 그렇지 않은 경우 관리 되는 확장에는 자체 범위를 유지 관리 합니다. 이전에 열거자는 열거형; 포함 하는 범위 내에 표시 되었습니다. 이제, 열거자가 열거형의 범위 내에서 캡슐화 됩니다.  
   
- 자세한 내용은 [CLR 열거형 형식](../dotnet/clr-enum-type.md)를 참조하십시오.  
+ 참조 [CLR 열거형 형식](../dotnet/clr-enum-type.md) 자세한 정보에 대 한 합니다.  
   
-## \_\_box 키워드 제거  
- Managed Extensions boxing 구문  
+## <a name="removal-of-box-keyword"></a>__Box 키워드 제거  
+ 관리 되는 확장 boxing 구문:  
   
 ```  
 Object *o = __box( 1024 ); // explicit boxing  
 ```  
   
- 새 boxing 구문  
+ 새 한 boxing 구문:  
   
 ```  
 Object ^o = 1024; // implicit boxing  
 ```  
   
- 자세한 내용은 [boxed 값에 대한 추적 핸들](../dotnet/a-tracking-handle-to-a-boxed-value.md)를 참조하십시오.  
+ 참조 [A 추적 Boxed 값에 대 한 핸들](../dotnet/a-tracking-handle-to-a-boxed-value.md) 자세한 정보에 대 한 합니다.  
   
-## 고정 포인터  
- Managed Extensions 고정 포인터 구문  
+## <a name="pinning-pointer"></a>고정 포인터  
+ 관리 되는 확장 프로그램을 고정 포인터 구문:  
   
 ```  
 __gc struct H { int j; };  
@@ -488,7 +487,7 @@ int main() {
 };  
 ```  
   
- 새 고정 포인터 구문  
+ 새 고정 포인터 구문:  
   
 ```  
 ref struct H { int j; };  
@@ -499,26 +498,27 @@ int main() {
 }  
 ```  
   
- 자세한 내용은 [값 형식 의미](../dotnet/value-type-semantics.md)를 참조하십시오.  
+ 참조 [값 형식 의미](../dotnet/value-type-semantics.md) 자세한 정보에 대 한 합니다.  
   
-## \_\_typeof 키워드 대신 typeid 사용  
- Managed Extensions typeof 구문  
+## <a name="typeof-keyword-becomes-typeid"></a>__typeof 키워드는 typeid  
+ 관리 되는 확장 typeof 구문을 사용 하십시오.  
   
 ```  
 Array* myIntArray =   
    Array::CreateInstance( __typeof(Int32), 5 );  
 ```  
   
- 새 typeid 구문  
+ 새 typeid 구문:  
   
 ```  
 Array^ myIntArray =   
    Array::CreateInstance( Int32::typeid, 5 );  
 ```  
   
- 자세한 내용은 [typeof 대신 T::typeid 사용](../dotnet/typeof-goes-to-t-typeid.md)를 참조하십시오.  
+ 참조 [Typeof T::typeid](../dotnet/typeof-goes-to-t-typeid.md) 자세한 정보에 대 한 합니다.  
   
-## 참고 항목  
- [C\+\+\/CLI 마이그레이션 입문](../dotnet/cpp-cli-migration-primer.md)   
- [\(NOTINBUILD\)Managed Extensions for C\+\+ Syntax Upgrade Checklist](http://msdn.microsoft.com/ko-kr/edbded88-7ef3-4757-bd9d-b8f48ac2aada)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>참고 항목  
+ [C + + /CLI 마이그레이션 입문](../dotnet/cpp-cli-migration-primer.md)   
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)
+
+

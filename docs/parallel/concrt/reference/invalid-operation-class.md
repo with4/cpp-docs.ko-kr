@@ -1,46 +1,28 @@
 ---
-title: "invalid_operation 클래스 | Microsoft 문서"
+title: "invalid_operation 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_operation
 - CONCRT/concurrency::invalid_operation
 - CONCRT/concurrency::invalid_operation::invalid_operation
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_operation class
+dev_langs: C++
+helpviewer_keywords: invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 85821bbbe62fe5da93165065cb6f17ae4e938f4e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 32053eaadc80a69b2ecdcf8887092ac8fadbdf8b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="invalidoperation-class"></a>invalid_operation 클래스
 이 클래스는 잘못된 작업이 수행될 때 throw되는 예외로, 동시성 런타임에서 throw된 다른 예외 형식으로 보다 정확하게 설명되지 않은 예외를 설명합니다.  
@@ -88,4 +70,3 @@ invalid_operation() throw();
   
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)
-

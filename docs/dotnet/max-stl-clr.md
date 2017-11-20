@@ -1,32 +1,30 @@
 ---
-title: "max(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::max"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max 함수[STL/CLR]"
+title: max (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::max
+dev_langs: C++
+helpviewer_keywords: max function [STL/CLR]
 ms.assetid: bf51aedc-b7a0-4b6c-a76e-fdbc4af042fa
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 609e27f35aa1e80a90a9ae5e66ffc230dcc18d0a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# max(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-두 개체를 비교하고 이진 예측에 의해 정렬 기준이 지정된 곳의 둘 중에서 더 큰 값을 반환합니다.  
+# <a name="max-stlclr"></a>max(STL/CLR)
+두 개체를 비교하고 둘 중 큰 개체를 반환합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _Ty> inline  
@@ -35,13 +33,13 @@ template<class _Ty, class _Pr> inline
     const _Ty max(const _Ty% _Left, const _Ty% _Right, _Pr _Pred);  
 ```  
   
-## 설명  
- This function behaves the same as the STL function `max`.  자세한 내용은 [max](../Topic/max.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 함수 동일 하 게 동작 `max`합니다. 자세한 내용은 참조 [max](../standard-library/algorithm-functions.md#max)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<알고리즘 cliext/>  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [algorithm(STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,33 +1,30 @@
 ---
-title: "ref (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ref"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ref attribute"
+title: ref (c + +) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ref
+dev_langs: C++
+helpviewer_keywords: ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 43c81346f7d92d75aade9b5cfc9ae845ce51c8f2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ref (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ref-c"></a>ref(C++)
 참조 포인터를 식별합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,11 +32,11 @@ manager: "ghogen"
   
 ```  
   
-## 설명  
- `ref` C \+ \+ 특성을 동일한 기능을가지고 있는  [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ `ref` c + + 특성에 동일한 기능을는 [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL 특성입니다.  
   
-## 예제  
- 다음 코드를 사용 하는 방법을 보여 줍니다 있는 `ref` 특성:  
+## <a name="example"></a>예제  
+ 다음 코드에서는 사용 하 여 `ref` 특성:  
   
 ```  
 // cpp_attr_ref_ref.cpp  
@@ -53,21 +50,20 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|`typedef`인터페이스 매개 변수, 인터페이스 메서드|  
+|**적용 대상**|`typedef`를 인터페이스 매개 변수, 인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [Typedef, Enum, Union 및 Struct 특성](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [매개 변수 특성](../windows/parameter-attributes.md)   

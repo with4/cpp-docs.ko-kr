@@ -1,48 +1,47 @@
 ---
-title: "메서드 추가(Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "메서드 추가 마법사[C++]"
-  - "메서드[C++], 추가"
+title: "(Visual c + +) 메서드 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Add Method Wizard [C++]
+- methods [C++], adding
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2b9ae6b2b922a3d3d70cf49ca5ee80283e9fc218
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 메서드 추가(Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[메서드 추가 마법사](../ide/add-method-wizard.md)를 사용하면 프로젝트의 인터페이스에 메서드를 추가할 수 있습니다.  프로젝트에 이 인터페이스에 연관된 클래스가 있으면 마법사에서는 해당 클래스도 수정합니다.  
+# <a name="adding-a-method--visual-c"></a>메서드 추가(Visual C++)
+사용할 수는 [메서드 추가 마법사](../ide/add-method-wizard.md) 프로젝트에는 인터페이스 메서드를 추가 하 합니다. 인터페이스에 연결 된 클래스를 포함 하는 프로젝트, 클래스, 너무 수정 됩니다.  
   
-### 메서드를 개체에 추가하려면  
+### <a name="to-add-a-method-to-your-object"></a>개체에는 메서드를 추가 하려면  
   
-1.  클래스 뷰에서 프로젝트 노드를 확장하여 메서드를 추가할 인터페이스를 표시합니다.  
+1.  클래스 뷰에서 메서드를 추가 하려면 인터페이스를 표시 하려면 프로젝트 노드를 확장 합니다.  
   
     > [!NOTE]
-    >  프로젝트에서 특성을 사용하지 않으면 라이브러리 노드에 위치한 dispinterface에도 메서드를 추가할 수 있습니다.  
+    >  Dispinterface 프로젝트 특성을 사용 하지 않는 한 라이브러리 노드 아래에 있는에 메서드를 추가할 수 있습니다.  
   
-2.  인터페이스의 이름을 마우스 오른쪽 단추로 클릭합니다.  
+2.  인터페이스의 이름을 마우스 오른쪽 단추로 클릭 합니다.  
   
-3.  바로 가기 메뉴에서 **추가**를 클릭한 다음 **메서드 추가**를 클릭합니다.  
+3.  바로 가기 메뉴를 클릭 **추가**, 클릭 하 고 **메서드 추가**합니다.  
   
-4.  메서드 추가 마법사에서 메서드를 만들 때 필요한 정보를 지정합니다.  
+4.  메서드 추가 마법사에서 메서드를 만드는 데 필요한 정보를 제공 합니다.  
   
-5.  마법사의 [IDL 특성](../ide/idl-attributes-add-method-wizard.md) 페이지에서 이 메서드의 인터페이스 정의 언어 설정을 지정합니다.  
+5.  이 메서드에 대 한 인터페이스 정의 언어 설정을 지정는 [IDL 특성](../ide/idl-attributes-add-method-wizard.md) 마법사의 페이지입니다.  
   
-6.  **마침**을 클릭하여 메서드를 추가합니다.  
+6.  클릭 **마침** 여 메서드를 추가 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [COM 인터페이스 만들기](../ide/creating-a-com-interface-visual-cpp.md)   
  [COM 인터페이스 편집](../ide/editing-a-com-interface.md)

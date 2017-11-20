@@ -1,67 +1,65 @@
 ---
-title: "참조 형식에 대한 C++ 스택 의미 체계 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "참조 형식, C++ 스택 의미 체계"
+title: "참조 형식에 대 한 c + + 스택 의미 체계 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 182478ffdd0175fc2b5f80b4a534b85bb97190a1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 참조 형식에 대한 C++ 스택 의미 체계
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prior to Visual C\+\+ 2005, an instance of a reference type could only be created using the `new` operator, which created the object on the garbage collected heap.  However, you can now create an instance of a reference type using the same syntax that you would use to create an instance of a native type on the stack.  So, you do not need to use [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) to create an object of a reference type.  And when the object goes out of scope, the compiler calls the object's destructor.  
+# <a name="c-stack-semantics-for-reference-types"></a>참조 형식에 대한 C++ 스택 의미 체계
+Visual c + + 2005 이전 참조 형식의 인스턴스만 만들 수를 사용 하는 `new` 수집 되는 힙에 가비지에 개체를 생성 하는 연산자입니다. 그러나 스택에 네이티브 형식의 인스턴스를 만드는 데 사용할 수 있는 동일한 구문을 사용 하는 참조 형식의 인스턴스를 지금 만들 수 있습니다. 사용할 필요가 없습니다 따라서 [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 참조 형식의 개체를 만듭니다. 및이 개체가 범위를 벗어나면 컴파일러가 개체의 소멸자가 호출 합니다.  
   
-## 설명  
- When you create an instance of a reference type using stack semantics, the compiler does internally create the instance on the garbage collected heap \(using `gcnew`\).  
+## <a name="remarks"></a>설명  
+ 컴파일러 내부적으로 가비지 수집 된 힙에 인스턴스를 만듭니까 스택 의미 체계를 사용 하 여 참조 형식의 인스턴스를 만들 때 (사용 하 여 `gcnew`).  
   
- When the signature or return type of a function includes an instance of a by\-value reference type, the function will be marked in the metadata as requiring special handling \(with modreq\).  This special handling is currently only provided by Visual C\+\+ clients; other languages do not currently support consuming functions or data that use reference types created with stack semantics.  
+ 함수 시그니처 또는 반환 형식 값에 의해 참조 형식의 인스턴스를 포함 하는 경우에 함수 (modreq)와 특수 처리를 필요로 하는 컨트롤로 메타 데이터에 표시 됩니다. 이 특수 처리는 현재 Visual c + + 클라이언트;에서 제공 스택 의미 체계를 사용 하 여 만든 참조 형식을 사용 하는 데이터 또는 함수를 사용 중인 다른 언어는 현재 지원 하지 않습니다.  
   
- One reason to use `gcnew` \(dynamic allocation\) instead of stack semantics would be if the type has no destructor.  Also, using reference types created with stack semantics in function signatures would not be possible if you want your functions to be consumed by languages other than Visual C\+\+.  
+ 사용 하는 한 가지 이유 `gcnew` (동적 할당) 스택 대신 의미 형식에 소멸자가 되지 않은 경우 될 것입니다. 또한 참조 형식 함수 서명이 스택 의미 체계를 사용 하 여 만든를 사용 하 여 가능 하지 않습니다 함수 Visual c + + 이외의 언어에서 사용할 수 있도록 하려는 경우.  
   
- The compiler will not generate a copy constructor for a reference type.  Therefore, if you define a function that uses a by\-value reference type in the signature, you must define a copy constructor for the reference type.  A copy constructor for a reference type has a signature of the following form: `R(R%){}`.  
+ 컴파일러는 참조 형식에 대 한 복사 생성자를 생성 하지 않습니다. 따라서 값에 의해 참조 형식 서명에 사용 하는 함수를 정의 하는 경우 참조 형식에 대 한 복사 생성자를 정의 해야 합니다. 참조 형식에 대 한 복사 생성자에 다음과 같은 형식의 서명이: `R(R%){}`합니다.  
   
- The compiler will not generate a default assignment operator for a reference type.  An assignment operator allows you to create an object using stack semantics and initialize it with an existing object created using stack semantics.  An assignment operator for a reference type has a signature of the following form: `void operator=( R% ){}`.  
+ 컴파일러는 참조 형식에 대 한 기본 할당 연산자를 생성 하지 않습니다. 할당 연산자를 사용 하면 스택 의미 체계를 사용 하 여 만든 기존 개체를 사용 하 여 초기화 및 스택 의미 체계를 사용 하 여 개체를 만들 수 있습니다. 참조 형식에 대 한 할당 연산자는 다음과 같은 형식의 서명이: `void operator=( R% ){}`합니다.  
   
- If your type's destructor releases critical resources and you use stack semantics for reference types, you do not need to explicitly call the destructor \(or call `delete`\).  For more information on destructors in reference types, see [Visual C\+\+의 소멸자 및 종료자](../misc/destructors-and-finalizers-in-visual-cpp.md).  
+ 해당 형식의 소멸자 중요 한 리소스를 해제 하는 경우 스택 의미 체계를 사용 하 여 참조 형식에 대 한 필요가 없습니다 소멸자를 명시적으로 호출 (호출 또는 `delete`). 참조 형식에서 소멸자에 대 한 자세한 내용은 참조 하십시오. [소멸자 및 종료자에서 하는 방법: 클래스 및 구조체 정의 및 사용 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)합니다.  
   
- A compiler\-generated assignment operator will follow the usual standard C\+\+ rules with the following additions:  
+ 컴파일러에서 생성 된 할당 연산자는 다음 항목이 추가 된 일반적인 표준 c + + 규칙을 따릅니다.  
   
--   Any non\-static data members whose type is a handle to a reference type will be shallow copied \(treated like a non\-static data member whose type is a pointer\).  
+-   모든 비정적 데이터 멤버는 참조 형식에 대 한 핸들 형식의 됩니다 shallow 복사 된 (형식이 포인터는 비정적 데이터 멤버 처럼 처리 됨).  
   
--   Any non\-static data member whose type is a value type will be shallow copied.  
+-   값 형식을 단순 됩니다는 형식의 모든 비정적 데이터 멤버에 복사 합니다.  
   
--   Any non\-static data member whose type is an instance of a reference type will invoke a call to the reference type’s copy constructor.  
+-   참조 형식이 복사 생성자에 대 한 호출 되는 참조 형식의 인스턴스는 형식의 모든 비정적 데이터 멤버를 호출 합니다.  
   
- The compiler also provides a `%` unary operator to convert an instance of a reference type created using stack semantics to its underlying handle type.  
+ 컴파일러가 제공는 `%` 내부 핸들 형식으로 스택 의미 체계를 사용 하 여 만든 참조 형식의 인스턴스를 변환 하는 단항 연산자입니다.  
   
- The following reference types are not available for use with stack semantics:  
+ 다음 참조 유형 스택 의미 체계에 사용 하기 위해 사용할 수 없습니다.  
   
--   [delegate](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate(C++ 구성 요소 확장)](../windows/delegate-cpp-component-extensions.md)  
   
--   [Arrays](../windows/arrays-cpp-component-extensions.md)  
+-   [배열](../windows/arrays-cpp-component-extensions.md)  
   
 -   <xref:System.String>  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- The following code sample shows how to declare instances of reference types with stack semantics, how the assignment operator and copy constructor works, and how to initialize a tracking reference with reference type created using stack semantics.  
+### <a name="description"></a>설명  
+ 다음 코드 샘플에서는 스택 의미 체계를 사용 하 여 참조 형식의 인스턴스를 선언 하는 방법을 보여 줍니다. 방법을 할당 연산자 및 복사 생성자 작동 및 스택 의미 체계를 사용 하 여 만든 참조 형식이 있는 추적 참조를 초기화 하는 방법입니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // stack_semantics_for_reference_types.cpp  
@@ -109,7 +107,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>출력  
   
 ```  
 98  
@@ -119,5 +117,5 @@ int main() {
 13  
 ```  
   
-## 참고 항목  
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)

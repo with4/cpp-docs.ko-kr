@@ -1,62 +1,61 @@
 ---
-title: "__readpmc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readpmc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "읽기 성능 모니터링 카운터 명령"
-  - "__readpmc 내장 함수"
-  - "rdpmc 명령"
+title: __readpmc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __readpmc
+dev_langs: C++
+helpviewer_keywords:
+- Read Performance Monitoring Counters instruction
+- __readpmc intrinsic
+- rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 323ad8624db725a779110c89f1e8972f74da5060
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __readpmc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="readpmc"></a>__readpmc
 **Microsoft 전용**  
   
- 생성 하는 `rdpmc` 읽기 성능 모니터링 카운터를 지정 하는 명령, `counter`.  
+ 생성 된 `rdpmc` 성능 카운터로 지정 된 모니터링을 읽는 명령 `counter`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-unsigned __int64 __readpmc(   
-   unsigned long counter   
+unsigned __int64 __readpmc(   
+   unsigned long counter   
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `counter`  
- 성능 카운터를 읽으려면입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `counter`  
+ 읽기 성능 카운터입니다.  
   
-## 반환 값  
- 지정 된 성능 카운터 값입니다.  
+## <a name="return-value"></a>반환 값  
+ 지정된 된 성능 카운터의 값입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__readpmc`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 내장이 커널 모드로 가능 하며 루틴만 내장로 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 이 내장 함수는 커널 모드 에서만 사용할 수 및 루틴은 내장 함수로 사용할 수만 있습니다.  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

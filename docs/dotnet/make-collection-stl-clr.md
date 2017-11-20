@@ -1,54 +1,52 @@
 ---
-title: "make_collection(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::make_collection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_collection 함수[STL/CLR]"
+title: make_collection (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::make_collection
+dev_langs: C++
+helpviewer_keywords: make_collection function [STL/CLR]
 ms.assetid: c25fb0cb-ebd8-4198-a565-bad28d32ee19
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 08c0730567b327896ee3e5b5d7ed86b8de4b391a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# make_collection(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Make a `range_adapter` from an iterator pair.  
+# <a name="makecollection-stlclr"></a>make_collection(STL/CLR)
+확인 된 `range_adapter` 반복기 쌍에서입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Iter>  
     range_adapter<Iter> make_collection(Iter first, Iter last);  
 ```  
   
-#### 매개 변수  
- Iter  
- The type of the wrapped iterators.  
+#### <a name="parameters"></a>매개 변수  
+ `Iter`  
+ 래핑된 반복기의 형식입니다.  
   
- first  
- First iterator to wrap.  
+ `first`  
+ 래핑할 첫 번째 반복기입니다.  
   
- last  
- Second iterator to wrap.  
+ `last`  
+ 줄 바꿈 두 번째 반복기입니다.  
   
-## 설명  
- The template function returns `gcnew range_adapter<Iter>(``first``,` `last``)`.  You use it to construct a `range_adapter``<Iter>` object from a pair of iterators.  
+## <a name="remarks"></a>설명  
+ 템플릿 함수가 `gcnew range_adapter<Iter>(first, last)`을 반환합니다. 생성에 사용 된 `range_adapter<Iter>` 반복기의 쌍에서 개체입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```  
+```cpp  
 // cliext_make_collection.cpp   
 // compile with: /clr   
 #include <cliext/adapter>   
@@ -91,15 +89,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**Count \= 3**  
-**IsSynchronized \= False**  
-**SyncRoot not nullptr \= True**  
- **&#124; a b c &#124;**   
-## 요구 사항  
- **Header:** \<cliext\/adapter\>  
+```Output  
+ a b c  
+Count = 3  
+IsSynchronized = False  
+SyncRoot not nullptr = True  
+ | a b c |  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/어댑터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [range_adapter(STL/CLR)](../dotnet/range-adapter-stl-clr.md)

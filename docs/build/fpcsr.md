@@ -1,44 +1,44 @@
 ---
-title: "FpCsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: FpCsr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: dff95d5d-7589-4432-82db-64b459c24352
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b97573e6d92465eea0f646a3c000f5677b73e486
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# FpCsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-레지스터 상태에는 x87 FPU 제어 단어도 포함됩니다.  호출 규칙에 따라 이 레지스터는 비volatile로 설정됩니다.  
+# <a name="fpcsr"></a>FpCsr
+레지스터 상태에도 x87 FPU 제어 단어입니다. 호출 규칙 비휘발성 되도록이 레지스터를 결정 합니다.  
   
- x87 FPU 제어 단어 레지스터는 프로그램 실행을 시작할 때 다음과 같은 표준 값으로 설정됩니다.  
+ 프로그램 실행을는 x87 FPU 제어 단어 레지스터의 시작 부분에 다음과 같은 표준 값으로 설정 됩니다.  
   
 ```  
 FPCSR[0:6]: Exception masks all 1's (all exceptions masked)  
-FPCSR[7]: Reserved – 0  
-FPCSR[8:9]: Precision Control – 10B (double precision)  
+FPCSR[7]: Reserved - 0  
+FPCSR[8:9]: Precision Control - 10B (double precision)  
 FPCSR[10:11]: Rounding  control - 0 (round to nearest)  
-FPCSR[12]: Infinity control – 0 (not used)  
+FPCSR[12]: Infinity control - 0 (not used)  
 ```  
   
- FPCSR 내의 필드를 수정하는 호출 수신자는 이를 호출자에 반환하기 전에 복원해야 합니다.  또한 이러한 필드를 수정한 호출자는 호출 수신자에 수정된 값을 전달하도록 승인되지 않은 한 호출 수신자를 호출하기 전에 이를 표준 값으로 복원해야 합니다.  
+ FPCSR 내의 필드를 수정 하는 호출 수신자는 호출자에 반환 하기 전에 복원 해야 합니다. 또한가 이러한 필드를 수정 하는 호출자가 해야 복원할 표준 값으로 계약에 의해 호출 수신자는 수정 된 값이 필요 하지 않는 한 호출 수신자를 호출 하기 전에.  
   
- 제어 플래그의 비volatile 특성과 관련된 규칙에는 두 가지 예외가 있습니다.  
+ 제어 플래그의 비-변동성에 대 한 규칙을 두 가지 예외가 있습니다.  
   
-1.  비volatile FpCsr 플래그를 수정하도록 문서화된 함수의 경우  
+1.  비휘발성 FpCsr 수정 하려면 지정 된 함수의 문서화 된 목적은 함수 플래그 지정 합니다.  
   
-2.  전체 프로그램 분석 등을 통해 이러한 규칙을 위반한 프로그램이 해당 규칙을 위반하지 않은 프로그램과 동일한 동작을 수행하거나 의미를 갖는 경우  
+2.  갖는 경우에 이러한 규칙 위반에 없는 이러한 규칙을 위반 하지 않은 예를 들어 전체 프로그램 분석을 통해 프로그램와 동일 하 게 작동/의미는 프로그램에서 결과 수정 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [호출 규칙](../build/calling-convention.md)

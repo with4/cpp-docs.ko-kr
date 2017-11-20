@@ -1,43 +1,41 @@
 ---
 title: "프로젝트 빌드 오류 PRJ0009 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0009"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0009"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0009
+dev_langs: C++
+helpviewer_keywords: PRJ0009
 ms.assetid: 89291778-cda4-495d-983f-ddcc06dfc98b
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4793a4541c133372e7833853caad174303f2a9dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 프로젝트 빌드 오류 PRJ0009
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-빌드 로그를 열 수 없습니다.  
+# <a name="project-build-error-prj0009"></a>프로젝트 빌드 오류 PRJ0009
+빌드 로그 쓰기 위해 열 수 없습니다.  
   
- **파일이 열려 있거나 쓰기 금지되어 있는지 확인하십시오.**  
+ **파일이 다른 프로세스에서 열려 있지 않으면 및 쓰기 금지 되어 있는지 확인 합니다.**  
   
- **빌드 로깅** 속성을 **예**로 설정하고 빌드 또는 재빌드를 수행한 후 Visual C\+\+에서 빌드 로그를 단독 모드로 열 수 없습니다.  
+ 설정한 후의 **빌드 로깅** 속성을 **예** 작성 또는 다시 작성을 수행할 Visual c + + 없습니다 배타 모드에 빌드 로그를 열 수 있습니다.  
   
- **도구** 메뉴에서 **옵션** 명령을 클릭하여 **옵션** 대화 상자를 연 다음 **프로젝트** 폴더의 **VC\+\+ 빌드**를 선택하여 **빌드 로깅** 설정을 확인합니다.  빌드 파일은 BuildLog.htm이라고 하며 중간 디렉터리 $\(IntDir\)에 저장됩니다.  
+ 검사는 **빌드 로깅** 열어 설정는 **옵션** 대화 상자 (에 **도구** 메뉴를 클릭 **옵션** 명령) 한 다음 선택 하면 **VC + + 빌드** 에 **프로젝트** 폴더입니다. 빌드 파일 BuildLog.htm 라고 하 고 중간 디렉터리 $(IntDir)에 기록 됩니다.  
   
- 이 오류의 가능한 이유는 다음과 같습니다.  
+ 이 오류의 원인은 다음과 같습니다.  
   
--   두 가지 Visual C\+\+ 프로세스를 실행하고 있으며 같은 프로젝트의 동일한 구성을 동시에 빌드하려고 했습니다.  
+-   Visual c + +의 두 프로세스를 실행 하 고 동시에 둘 다에서 동일한 프로젝트의 구성이 동일을 빌드하려고 합니다.  
   
--   파일을 잠그는 프로세스에 따라 빌드 로그 파일을 열었습니다.  
+-   빌드 로그 파일의 파일을 잠그는 프로세스에서 열립니다.  
   
--   사용자에게 파일을 만들 수 있는 권한이 없습니다.  
+-   사용자에가 파일을 만들 수 있는 권한이 없습니다.  
   
--   현재 사용자에게 BuildLog.htm 파일에 대한 쓰기 권한이 없습니다.
+-   현재 사용자 BuildLog.htm 파일에 대 한 쓰기 권한이 없습니다.

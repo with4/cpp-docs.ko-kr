@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- nullptr_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- nullptr keyword [C++]
+f1_keywords: nullptr_cpp
+dev_langs: C++
+helpviewer_keywords: nullptr keyword [C++]
 ms.assetid: e9d80ea6-2506-4eb5-b47b-2349df085832
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 16bbbc38c61b2b6ff0539b2c71a0457b38465acb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e9d032653b004e0960922efee59924ab120793fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="nullptr"></a>nullptr
 어떠한 원시 포인터 형식으로도 변환될 수 있는 `std::nullptr_t` 형식의 null 포인터 상수를 지정합니다.  헤더를 포함하지 않고 `nullptr` 키워드를 사용할 수 있지만, 코드에서 `std::nullptr_t` 형식을 사용하는 경우 `<cstddef>` 헤더를 포함하여 정의해야 합니다.  

@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '::'
-dev_langs:
-- C++
+f1_keywords: '::'
+dev_langs: C++
 helpviewer_keywords:
 - scope, scope resolution operator
 - operators [C++], scope resolution
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 715eb7c5e004d7e0731ef599e54beb5fc6690e50
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: ff57d6012fd4a3a98ec29fe58072711654b3ab23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scope-resolution-operator-"></a>범위 해결 연산자: ::
 범위 확인 연산자 `::`는 여러 범위에 사용된 식별자를 식별하고 구분하는 데 사용됩니다. 범위에 대 한 자세한 내용은 참조 [범위](../cpp/scope-visual-cpp.md)합니다.  

@@ -1,45 +1,43 @@
 ---
-title: "map::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatormember [][STL/CLR]"
+title: map::operator(STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator[]
+dev_langs: C++
+helpviewer_keywords: operatormember [] [STL/CLR]
 ms.assetid: 50e494c5-62d4-4469-8da3-7432ee4dff97
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9851c754186ebc5e30cd0757cf9f1723625bdd92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# map::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Maps a key to its associated mapped value.  
+# <a name="mapoperatorstlclr"></a>map::operator(STL/CLR)
+키를 연결 된 매핑된 값에 매핑합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 mapped_type operator[](key_type key);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  key  
- Key value to search for.  
+ 검색할 키 값입니다.  
   
-## 설명  
- The member functions endeavors to find an element with equivalent ordering to `key`.  If it finds one, it returns the associated mapped value; otherwise, it inserts `value_type(``key``, mapped_type())` and returns the associated \(default\) mapped value.  You use it to look up a mapped value given its associated key, or to ensure that an entry exists for the key if none is found.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 해당 하는 순서를 가진 요소를 찾으려고 노력 `key`합니다. 연결된 된 매핑된 값 반환, 발견 되 면 삽입, `value_type(key, mapped_type())` 하 고 연결 된 반환 (기본값) 매핑된 값입니다. 사용 하 여 것는 관련 된 키를 지정 된 매핑된 값을 조회 하거나 없는 경우 키에 대 한 항목이 있는지 확인 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_operator_sub.cpp   
@@ -80,17 +78,20 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**c1\[A\] \= 0**  
-**c1\[b\] \= 2**  
- **\[A 0\] \[a 1\] \[b 2\] \[c 3\]**  
- **\[A 10\] \[a 1\] \[b 2\] \[c 13\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [A 0] [a 1] [b 2] [c 3]  
+ [A 10] [a 1] [b 2] [c 13]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)   
- [map::find](../dotnet/map-find-stl-clr.md)   
- [map::insert](../dotnet/map-insert-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map:: find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [map::insert(STL/CLR)](../dotnet/map-insert-stl-clr.md)

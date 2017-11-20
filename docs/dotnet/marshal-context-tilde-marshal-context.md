@@ -1,53 +1,51 @@
 ---
-title: "marshal_context::~marshal_context | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "marshal_context::~marshal_context"
-  - "msclr.interop.marshal_context.~marshal_context"
-  - "marshal_context.~marshal_context"
-  - "msclr::interop::marshal_context::~marshal_context"
-  - "~marshal_context"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshal_context 클래스[C++], 작업"
+title: 'marshal_context:: ~ marshal_context | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- marshal_context::~marshal_context
+- msclr.interop.marshal_context.~marshal_context
+- marshal_context.~marshal_context
+- msclr::interop::marshal_context::~marshal_context
+- ~marshal_context
+dev_langs: C++
+helpviewer_keywords: marshal_context class [C++], operations
 ms.assetid: 34c41b38-4c33-4f61-b74e-831ac46b4ab5
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cb052c27888bf168206c80fc06edd24034880433
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# marshal_context::~marshal_context
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`marshal_context` 개체를 소멸시킵니다.  
+# <a name="marshalcontextmarshalcontext"></a>marshal_context::~marshal_context
+`marshal_context` 개체를 제거합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 ~marshal_context();  
 ```  
   
-## 설명  
- Some data conversions require a marshal context.  See [C\+\+ 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md) for more information about which translations require a context and which marshaling file has to be included in your application.  
+## <a name="remarks"></a>설명  
+ 데이터 변환 중 일부는 마샬링 컨텍스트가 필요합니다. 참조 [개요의 c + + 마샬링](../dotnet/overview-of-marshaling-in-cpp.md) 어떤 번역 컨텍스트에 필요한 및 응용 프로그램에 포함할 어떤 마샬링 파일에 대 한 자세한 내용은 합니다.  
   
- Deleting a `marshal_context` object will invalidate the data converted by that context.  If you want to preserve your data after a `marshal_context` object is destroyed, you must manually copy the data to a variable that will persist.  
+ 삭제 한 `marshal_context` 개체는 해당 컨텍스트에서 변환 된 데이터를 무효화 합니다. 이후에 데이터를 보존 하려는 경우는 `marshal_context` 개체가 소멸, 지속 되는 변수에 데이터를 수동으로 복사 해야 합니다.  
   
-## 요구 사항  
- **헤더 파일:**\<msclr\\marshal.h\>, \<msclr\\marshal\_windows.h\>, \<msclr\\marshal\_cppstd.h\>, 또는 \<msclr\\marshal\_atl.h \>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, 또는 \<msclr\marshal_atl.h >  
   
- **네임 스페이스:** msclr::interop  
+ **Namespace:** msclr::interop  
   
-## 참고 항목  
- [C\+\+ 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal\_as](../dotnet/marshal-as.md)   
- [marshal\_context 클래스](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>참고 항목  
+ [C + + 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [marshal_as](../dotnet/marshal-as.md)   
+ [marshal_context 클래스](../dotnet/marshal-context-class.md)

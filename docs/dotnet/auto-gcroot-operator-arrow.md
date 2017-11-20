@@ -1,45 +1,43 @@
 ---
-title: "auto_gcroot::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator->"
-  - "msclr::auto_gcroot::operator->"
-  - "auto_gcroot::operator->"
-  - "msclr.auto_gcroot.operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator->"
+title: auto_gcroot::operator-&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator->
+- msclr::auto_gcroot::operator->
+- auto_gcroot::operator->
+- msclr.auto_gcroot.operator->
+dev_langs: C++
+helpviewer_keywords: operator->
 ms.assetid: 2c77bc53-5f77-4544-9485-c950cd8e0bb1
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ab60b6cdb0d1718784a9ad3c3c47f3d60909af5c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The member access operator.  
+# <a name="autogcrootoperator-gt"></a>auto_gcroot::operator-&gt;
+멤버 액세스 연산자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 _element_type operator->() const;  
 ```  
   
-## 반환 값  
- `auto_gcroot`로 래핑되는 개체입니다.  
+## <a name="return-value"></a>반환 값  
+ 개체에서 래핑된 `auto_gcroot`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // msl_auto_gcroot_op_arrow.cpp  
@@ -71,13 +69,16 @@ int main() {
 }  
 ```  
   
-  **Hello from first A\!**  
-**a\-\>m\_i \= 5**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_gcroot.h\>  
+```Output  
+Hello from first A!  
+a->m_i = 5  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::get](../dotnet/auto-gcroot-get.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::get](../dotnet/auto-gcroot-get.md)

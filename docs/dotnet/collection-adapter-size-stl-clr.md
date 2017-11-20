@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::size(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size 멤버[STL/CLR]"
+title: 'collection_adapter:: size (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 71866719-9e29-4572-bfb9-60321f2937c5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b74565b2c002730b25e7464395b259dfc4f01a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::size(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-요소의 수를 셉니다.  
+# <a name="collectionadaptersize-stlclr"></a>collection_adapter::size(STL/CLR)
+요소 수를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 size_type size();  
 ```  
   
-## 설명  
- The member function returns the length of the controlled sequence.  It is not defined in a specialization for `IEnumerable` or `IEnumerable<Value>`.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 에 대 한 특수화에 정의 되지 않은 `IEnumerable` 또는 `IEnumerable<Value>`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_collection_adapter_size.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **x x x x x x**  
-**size\(\) \= 6**   
-## 요구 사항  
- **Header:** \<cliext\/adapter\>  
+```Output  
+ x x x x x x  
+size() = 6  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/어댑터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [collection_adapter(STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

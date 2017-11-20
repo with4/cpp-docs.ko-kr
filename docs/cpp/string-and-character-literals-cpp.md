@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- R
-dev_langs:
-- C++
+f1_keywords: R
+dev_langs: C++
 helpviewer_keywords:
 - L constant
 - escape sequences
@@ -25,16 +22,15 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c7254d4cc8dcbbaa0916a77ee6c52da05dc8ec9c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 181cd7dd55a41d5452ae02f48db9012e02a41041
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="string-and-character-literals--c"></a>문자열 및 문자 리터럴 (c + +)
 C++를 사용하면 다양한 문자열 및 문자 형식이 지원되며 이러한 각 형식의 리터럴 값을 표현할 수 있습니다. 소스 코드에서는 문자 집합을 사용하여 문자 및 문자열 리터럴의 내용을 표현합니다. 유니버설 문자 이름 및 이스케이프 문자를 사용하면 기본 소스 문자 집합만 사용하여 모든 문자열을 표현할 수 있습니다. 원시 문자열 리터럴을 사용하면 이스케이프 문자를 사용하지 않아도 되며 원시 문자열 리터럴을 사용하여 모든 유형의 문자열 리터럴을 표현할 수 있습니다. 또한 추가 생성이나 변환 단계를 수행하지 않고도 std:: string 리터럴을 만들 수 있습니다.  

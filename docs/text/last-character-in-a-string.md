@@ -1,42 +1,42 @@
 ---
-title: "문자열의 마지막 문자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "문자열의 마지막 문자"
-  - "MBCS[C++], 문자열의 마지막 문자"
+title: "문자열에서 마지막 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- last character in string
+- MBCS [C++], last character in string
 ms.assetid: 0a180376-4e55-41e8-9c64-539c7b6d8047
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 30ac02e96786682a61ac44a8de9cefa24e2ead7e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 문자열의 마지막 문자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 팁을 사용하십시오.  
+# <a name="last-character-in-a-string"></a>문자열의 마지막 문자
+다음 팁을 사용 합니다.  
   
--   대부분의 경우 후행 바이트 범위는 ASCII 문자 집합과 겹칩니다.  32자 미만의 모든 컨트롤 문자에 대해 안전하게 바이트 단위 검색을 사용할 수 있습니다.  
+-   후행 바이트 범위는 ASCII 문자를 집합 대부분의 경우에서 겹칩니다. 모든 제어 문자 (32 보다 작거나)에 대 한 바이트 단위 검색을 안전 하 게 사용할 수 있습니다.  
   
--   다음 코드를 보면 문자열의 마지막 문자가 백슬래시 문자인지를 확인할 수 있습니다.  
+-   문자열의 마지막 문자는 백슬래시 문자 있는지를 확인할 수 있습니다는 코드의 다음 줄을 고려 합니다.  
   
     ```  
     if ( sz[ strlen( sz ) - 1 ] == '\\' )    // Is last character a '\'?  
         // . . .  
     ```  
   
-     `strlen`은 MBCS를 인식하지 않으므로 멀티바이트 문자열에서 문자 수가 아니라 바이트 수를 반환합니다.  또한 일부 코드 페이지\(예: 932\)에서 '\\'\(0x5c\)는 유효한 후행 바이트입니다. 여기서 `sz`는 C 문자열입니다.  
+     때문에 `strlen` MBCS 인식 하지 않는 멀티 바이트 문자열의 문자 수가 바이트 수를 반환 합니다. 또한, 이때 일부 코드 페이지 (예:: 932), '\\' (0x5c)는 유효한 후행 바이트 (`sz` 는 C 문자열)입니다.  
   
-     한 가지 가능한 방법은 다음과 같이 코드를 다시 작성하는 것입니다.  
+     이러한 방식으로 코드를 다시 작성 한 가지 가능한 해결책이입니다.  
   
     ```  
     char *pLast;  
@@ -45,8 +45,8 @@ caps.handback.revision: 7
         // . . .  
     ```  
   
-     위 코드는 MBCS 함수인 `_mbsrchr`와 `_mbsinc`를 사용합니다.  이들 함수는 MBCS를 인식하기 때문에 '\\' 문자와 후행 바이트 '\\'를 구별할 수 있습니다.  이 코드는 문자열의 마지막 문자가 Null\('\\0'\)인 경우에 동작을 수행합니다.  
+     이 코드는 MBCS 함수를 사용 하 여 `_mbsrchr` 및 `_mbsinc`합니다. 이러한 함수에서 MBCS 인식 되므로 구별할 수 있습니다는 '\\'문자에는 후행 바이트와 '\\'. 코드는 문자열의 마지막 문자 ('\0') null 인 경우 특별 한 조치를 수행 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [MBCS 프로그래밍 팁](../text/mbcs-programming-tips.md)   
  [문자 할당](../text/character-assignment.md)

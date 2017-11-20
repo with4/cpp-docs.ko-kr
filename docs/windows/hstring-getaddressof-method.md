@@ -1,45 +1,44 @@
 ---
-title: "HString::GetAddressOf 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf"
-dev_langs: 
-  - "C++"
+title: "Hstring:: Getaddressof 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
+dev_langs: C++
 ms.assetid: 6050decf-5f99-49f0-9497-1c8192c485ae
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0432a8f5966f6544808ffa4668777d2900ee5066
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# HString::GetAddressOf 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-기본 HSTRING 핸들에 대한 포인터를 검색합니다.  
+# <a name="hstringgetaddressof-method"></a>HString::GetAddressOf 메서드
+기본 HSTRING 핸들에 대 한 포인터를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 HSTRING* GetAddressOf() throw()  
 ```  
   
-## 반환 값  
- 기본 HSTRING 핸들에 대한 포인터를 검색합니다.  
+## <a name="return-value"></a>반환 값  
+ 기본 HSTRING 핸들에 대한 포인터입니다.  
   
-## 설명  
- 이 작업이 끝나면 내부 HSTRING 핸들의 문자열 값이 소멸됩니다.  
+## <a name="remarks"></a>설명  
+ 이 작업 후에 기본 HSTRING 핸들의 문자열 값이 제거됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
   
- **네임스페이스:** Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [HString 클래스](../windows/hstring-class.md)

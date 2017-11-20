@@ -33,37 +33,21 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 1620eb200723fe4b2cd6553e7ba50405b026d53c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 975a940760678ac06b7de1e7623b717860031da8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 간격에서 벗어난 분기 컷 복소수 역 하이퍼볼릭 사인 값 검색 [-i, + i] 허수 축을 따라 합니다.  

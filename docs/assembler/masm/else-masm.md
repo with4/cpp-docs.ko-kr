@@ -1,32 +1,30 @@
 ---
-title: "ELSE (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "else"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ELSE directive"
+title: ELSE (MASM) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: else
+dev_langs: C++
+helpviewer_keywords: ELSE directive
 ms.assetid: c43af707-4567-4489-97ca-f14982d84e88
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fe8a8fd725b0ee90f9a9bc2ab2dba47071498a7e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ELSE (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-조건부 블록 안에 대체 블록의 시작을 표시 합니다.  
+# <a name="else-masm"></a>ELSE (MASM)
+조건부 블록 내에서 대체 된 블록의 시작을 표시 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,8 +32,8 @@ ELSE
   
 ```  
   
-## 설명  
- See [IF](../../assembler/masm/if-masm.md).  
+## <a name="remarks"></a>설명  
+ 참조 [IF](../../assembler/masm/if-masm.md)합니다.  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

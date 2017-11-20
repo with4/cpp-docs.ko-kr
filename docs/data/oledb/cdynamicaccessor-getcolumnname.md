@@ -1,53 +1,52 @@
 ---
-title: "CDynamicAccessor::GetColumnName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::GetColumnName"
-  - "GetColumnName"
-  - "ATL.CDynamicAccessor.GetColumnName"
-  - "CDynamicAccessor::GetColumnName"
-  - "CDynamicAccessor.GetColumnName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnName 메서드"
+title: 'Cdynamicaccessor:: Getcolumnname | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::GetColumnName
+- GetColumnName
+- ATL.CDynamicAccessor.GetColumnName
+- CDynamicAccessor::GetColumnName
+- CDynamicAccessor.GetColumnName
+dev_langs: C++
+helpviewer_keywords: GetColumnName method
 ms.assetid: 96a7452a-1f5b-41e9-ab37-88dac026f961
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9b8c48e7a33d413b494d662c4354c2aeb60b5f53
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::GetColumnName
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retrieves the name of the specified column.  
+# <a name="cdynamicaccessorgetcolumnname"></a>CDynamicAccessor::GetColumnName
+지정 된 열 이름을 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      LPOLESTR GetColumnName(   
-   DBORDINAL nColumn    
+      LPOLESTR GetColumnName(   
+   DBORDINAL nColumn    
 ) const throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nColumn`  
- \[in\] The column number.  Column numbers start with 1.  A value of 0 refers to the bookmark column, if any.  
+ [in] 열 번호입니다. 열 번호는 1부터 시작 합니다. 0 값이 있는 경우 책갈피 열을 참조 합니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  지정된 열의 이름입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)

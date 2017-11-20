@@ -1,41 +1,39 @@
 ---
-title: "multiset::size(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size 멤버[STL/CLR]"
+title: 'multiset:: size (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 29338f4f-c13e-4eb6-844d-1d94769553c8
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1fb3ec48a865a6a7fea38a73832ccf3386932080
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::size(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-요소의 수를 셉니다.  
+# <a name="multisetsize-stlclr"></a>multiset::size(STL/CLR)
+요소 수를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 size_type size();  
 ```  
   
-## 설명  
- 멤버 함수는 제어된 시퀀스의 길이를 반환합니다.  현재 제어 시퀀스의 요소 수를 결정하기 위해 사용합니다.  시퀀스가 0 크기가 아닌지 확인이 필요할 때 [multiset::empty](../dotnet/multiset-empty-stl-clr.md)  `()` 를 확인합니다.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 제어 되는 시퀀스의 현재 요소 수를 확인 하려면 사용 합니다. 모든 경우에 중요 한 여부 시퀀스 크기가 0이 아닌 참조 [multiset:: empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)`()`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multiset_size.cpp   
@@ -69,15 +67,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3 starting with 3**  
-**size\(\) \= 0 after clearing**  
-**size\(\) \= 2 after adding 2**   
-## 요구 사항  
- **Header:** \<cliext\/set\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::empty](../dotnet/multiset-empty-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::empty(STL/CLR)](../dotnet/multiset-empty-stl-clr.md)

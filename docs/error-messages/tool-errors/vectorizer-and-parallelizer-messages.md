@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -14,36 +13,20 @@ f1_keywords:
 - C5021
 - C5001
 - C5012
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5c466510a00079f04ee5871b41364fff552ecf70
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 5ce85d60f0a3dc7f7ec88e480fb17289aaaf9fa1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>벡터화 도우미 및 병렬화 도우미 메시지
-Visual c + + 컴파일러 옵션을 사용할 수 [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 및 [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) 설정 하는 [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) 출력 이유 코드 및 해당 작업에 대 한 정보 메시지입니다. 이 문서는 이유 코드 및 메시지를 설명합니다.  
+Visual c + + 컴파일러 옵션을 사용할 수 [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 및 [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) 설정 하는 [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) 출력 이유 코드를 하 고 해당 작업에 대 한 정보 메시지입니다. 이 문서는 이유 코드 및 메시지를 설명합니다.  
   
 -   [정보 메시지](#BKMK_InformationalMessages)  
   

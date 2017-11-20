@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3268
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3268
+f1_keywords: C3268
+dev_langs: C++
+helpviewer_keywords: C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: bab3adb4d6fd916eedaec36d455252b6a5ade454
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3268"></a>컴파일러 오류 C3268
 'function': 제네릭 함수 또는 제네릭 클래스의 멤버 함수는 가변 매개 변수 목록을 사용할 수 없습니다.  

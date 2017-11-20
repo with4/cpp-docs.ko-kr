@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -78,19 +77,17 @@ helpviewer_keywords:
 - C2987
 - C2997
 - C2999
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>컴파일러 오류 C2900 C2999 ~
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
@@ -202,4 +199,3 @@ ms.lasthandoff: 10/10/2017
 |컴파일러 오류 C2997|'*함수*': 배열 범위는 기본 멤버 이니셜라이저에서 추론할 수 없습니다|  
 |[컴파일러 오류 C2998](compiler-error-c2998.md)|'*선언 자*': 템플릿 정의 일 수 없습니다|  
 |컴파일러 오류 C2999|알 수 없는 오류 하십시오 Visual c + + 도움말 메뉴에서 [기술 지원] 명령을 선택 하거나 기술 지원 도움말 파일에 대 한 자세한 내용은|  
-

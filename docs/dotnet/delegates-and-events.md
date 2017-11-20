@@ -1,35 +1,35 @@
 ---
 title: "대리자 및 이벤트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delegate 키워드"
-  - "__event 키워드[C++]"
-  - "delegate 키워드[C++]"
-  - "대리자[C++], Managed Extensions for C++에서 업그레이드"
-  - "event 키워드[C++]"
-  - "이벤트[C++], Managed Extensions for C++에서 업그레이드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __event keyword [C++]
+- delegate keyword [C++]
+- delegates [C++], upgrading from Managed Extensions for C++
+- __delegate keyword
+- events [C++], upgrading from Managed Extensions for C++
+- event keyword [C++]
 ms.assetid: 3505c626-7e5f-4492-a947-0e2248f7b84a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28abb6daf5d778cf2cc7c904440808fd7ca7e48e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 대리자 및 이벤트
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]에서는 대리자와 이벤트를 선언하는 방법이 Managed Extensions for C\+\+와 다르게 변경되었습니다.  
+# <a name="delegates-and-events"></a>대리자 및 이벤트
+대리자 및 이벤트를 선언 하는 방법은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
   
- 다음 샘플에서 볼 수 있듯이 두 개의 밑줄은 더 이상 필요하지 않습니다.  다음은 Managed Extensions의 샘플 코드입니다.  
+ 여기서 이중 밑줄이 더 이상 필요 다음 샘플과 같이 합니다. 여기에서 관리 되는 확장 샘플 코드:  
   
 ```  
 __delegate void ClickEventHandler(int, double);  
@@ -41,7 +41,7 @@ __gc class EventSource {
 };  
 ```  
   
- 새 구문에서는 같은 코드가 다음과 같이 사용됩니다.  
+ 새 구문에서 동일한 코드의 모양은 다음과 같습니다.  
   
 ```  
 delegate void ClickEventHandler( int, double );  
@@ -53,9 +53,9 @@ ref class EventSource {
 };  
 ```  
   
- 이벤트와 대리자는 참조 형식이며, 새 구문에서는 캐럿\(`^`\)이 사용되어 이를 분명히 알 수 있습니다.  이벤트의 경우에는 명시적 선언 구문과 위 코드의 간편한 형식이 모두 지원됩니다.  명시적 형식에서 사용자는 이벤트와 관련된 `add`, `raise` 및 `remove` 메서드를 지정합니다. `add` 및 `remove` 메서드만 필수 요소이고 `raise` 메서드는 선택 요소입니다.  
+ 이벤트 및 대리자는 참조 형식에는 hat 사용 했기 때문에 새 구문 분명 변수인 (`^`).  이벤트에는 명시적 선언 구문 및 앞 코드 에서처럼 사소한 형식을 모두 지원 합니다. 명시적 형식에서 사용자 지정의 `add`, `raise`, 및 `remove` 이벤트와 연결 된 메서드. (만 `add` 및 `remove` 메서드는; `raise` 메서드는 선택 사항입니다.)  
   
- Managed Extensions에서는 이러한 메서드를 제공하는 경우 명시적 이벤트 선언을 함께 제공하지 않지만, 존재하지 않는 이벤트의 이름을 결정해야 합니다.  Managed Extensions 사양에서 발췌한 다음 예제와 같이 각 메서드는 `add_EventName`, `raise_EventName` 및 `remove_EventName` 형식으로 지정됩니다.  
+ Managed extensions 이러한 메서드를 제공 하는 경우는 명시적 이벤트 선언도 제공 하지 않지만 존재 하지 않는 이벤트의 이름을 결정 해야 합니다. 폼에 각 방법이 지정 되어 `add_EventName`, `raise_EventName`, 및 `remove_EventName`Managed Extensions 사양에서 가져온 다음 예제와 같이,:  
   
 ```  
 // explicit implementations of add, remove, raise  
@@ -88,7 +88,7 @@ protected:
 };  
 ```  
   
- 아래의 변환된 코드에서 알 수 있듯이 새 구문에서는 선언이 간소화됩니다.  이벤트는 다음과 같이 이벤트 및 관련 대리자 형식 선언 바로 뒤에서 중괄호로 묶인 두 세 개의 메서드를 지정할 수 있습니다.  
+ 새 구문 다음 변환에서 보여 주듯이 선언을 간소화 합니다. 이벤트를 지정 하는 두 또는 세 가지 메서드는 한 쌍의 중괄호 포함 하 고 다음과 같이 이벤트 및 해당 관련된 대리자 형식이 선언 바로 뒤에 배치:  
   
 ```  
 public delegate void f( int );  
@@ -130,7 +130,7 @@ public:
 };  
 ```  
   
-## 참고 항목  
- [클래스 또는 인터페이스 내에서 멤버 선언\(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [delegate](../windows/delegate-cpp-component-extensions.md)   
+## <a name="see-also"></a>참고 항목  
+ [클래스 또는 인터페이스 내에서 멤버 선언 (C + + /cli CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [대리자 (c + + 구성 요소 확장명)](../windows/delegate-cpp-component-extensions.md)   
  [event](../windows/event-cpp-component-extensions.md)

@@ -1,116 +1,122 @@
 ---
 title: "동기화 데이터 구조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "동기화 데이터 구조체"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aee9abf10646df6395984607544755dcb0ed802a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 동기화 데이터 구조
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-동시성 런타임에서는 여러 스레드로부터 공유 데이터에 대한 액세스를 동기화할 수 있는 몇 가지 데이터 구조를 제공합니다.  이러한 데이터 구조는 공유 데이터를 자주 수정하지 않는 경우에 유용합니다.  예를 들어 임계 영역과 같은 동기화 개체를 사용하면 공유 리소스를 사용할 수 있을 때까지 다른 스레드가 기다립니다.  따라서 자주 사용하는 데이터에 대한 액세스를 동기화할 때 이러한 개체를 사용하면 응용 프로그램에서 확장성이 저하될 수 있습니다.  [PPL\(병렬 패턴 라이브러리\)](../../parallel/concrt/parallel-patterns-library-ppl.md)에서는 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) 클래스를 제공합니다. 이 클래스를 사용하면 동기화할 필요 없이 여러 스레드 또는 작업 간에 리소스를 공유할 수 있습니다.  `combinable` 클래스에 대한 자세한 내용은 [병렬 컨테이너 및 개체](../../parallel/concrt/parallel-containers-and-objects.md)를 참조하십시오.  
+# <a name="synchronization-data-structures"></a>동기화 데이터 구조
+동시성 런타임은 여러 스레드에서 공유 데이터에 대 한 액세스를 동기화 할 수 있는 몇 가지 데이터 구조를 제공 합니다. 이러한 데이터 구조는 공유 데이터를 자주 수정 하는 경우에 유용 합니다. 예를 들어 임계 영역 개체를 동기화 하면 다른 스레드가 공유 리소스를 사용할 수 있는 될 때까지 기다립니다. 따라서 이러한 개체를 사용 하 여 자주 사용 되는 데이터에 대 한 액세스를 동기화 하는 경우 응용 프로그램에서 확장성을 잃을 수 있습니다. [라이브러리 PPL (병렬 패턴)](../../parallel/concrt/parallel-patterns-library-ppl.md) 제공는 [concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) 클래스를 통해 여러 개의 스레드 또는 동기화 할 필요가 없는 작업 사이에서 리소스를 공유할 수 있습니다. 에 대 한 자세한 내용은 `combinable` 클래스를 참조 하십시오. [병렬 컨테이너 및 개체](../../parallel/concrt/parallel-containers-and-objects.md)합니다.  
   
-##  <a name="top"></a> 단원  
- 이 항목에서는 다음과 같은 비동기 메시지 블록 형식에 대해 자세히 설명합니다.  
+##  <a name="top"></a> 섹션  
+ 이 다음 비동기 메시지 블록 형식인을 자세히 설명합니다.  
   
--   [critical\_section](#critical_section)  
+-   [critical_section](#critical_section)  
   
--   [reader\_writer\_lock](#reader_writer_lock)  
+-   [reader_writer_lock](#reader_writer_lock)  
   
--   [scoped\_lock 및 scoped\_lock\_read](#scoped_lock)  
+-   [scoped_lock 및 scoped_lock_read](#scoped_lock)  
   
 -   [event](#event)  
   
-##  <a name="critical_section"></a> critical\_section  
- [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md) 클래스는 다른 작업을 선점하는 대신 이러한 작업에 양보하는 협조적 상호 제외 개체를 나타냅니다.  임계 영역은 여러 스레드에서 공유 데이터에 대해 단독으로 읽고 쓸 수 있는 권한이 필요한 경우에 유용합니다.  
+##  <a name="critical_section"></a>critical_section  
+ [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) 클래스 선점 하는 대신 다른 작업에 양보 하는 협조적 상호 제외 개체를 나타냅니다. 임계 영역은 여러 스레드가 단독 읽기 및 공유 데이터에 대 한 쓰기 액세스를 필요로 할 때 유용 합니다.  
+
+ `critical_section` 클래스는 재진입 성이 아닌 합니다. [concurrency::critical_section::lock](reference/critical-section-class.md#lock) 형식의 예외를 throw [concurrency:: improper_lock](../../parallel/concrt/reference/improper-lock-class.md) 는 잠금을 이미 소유한 스레드에 의해 호출 되 면입니다.  
+
+
   
- `critical_section` 클래스는 재진입성이 아닙니다.  [concurrency::critical\_section::lock](../Topic/critical_section::lock%20Method.md) 메서드는 잠금을 이미 소유한 스레드에 의해 호출될 경우 [concurrency::improper\_lock](../../parallel/concrt/reference/improper-lock-class.md) 형식의 예외를 throw합니다.  
-  
-### 메서드 및 기능  
- 다음 표에서는 `critical_section` 클래스에 정의된 중요한 메서드를 보여 줍니다.  
+### <a name="methods-and-features"></a>메서드 및 기능  
+ 다음 표에서 여 정의 된 중요 한 메서드는 `critical_section` 클래스입니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[잠금](../Topic/critical_section::lock%20Method.md)|임계 영역을 가져옵니다.  호출 컨텍스트는 잠금을 가져올 때까지 차단합니다.|  
-|[try\_lock](../Topic/critical_section::try_lock%20Method.md)|임계 영역을 가져오려고 하지만 차단하지 않습니다.|  
-|[unlock](../Topic/critical_section::unlock%20Method.md)|임계 영역을 해제합니다.|  
+|------------|-----------------|  
+|[lock](reference/critical-section-class.md#lock)|임계 영역을 가져옵니다. 호출 컨텍스트 될 때까지 차단 잠금을 획득 합니다.|  
+|[try_lock](reference/critical-section-class.md#try_lock)|임계 영역을 가져오려고 시도 하지만 차단 하지 않습니다.|  
+|[unlock](reference/critical-section-class.md#unlock)|임계 영역을 해제합니다.|  
   
- \[[맨 위](#top)\]  
+ [[맨 위로 이동](#top)]  
   
-##  <a name="reader_writer_lock"></a> reader\_writer\_lock  
- [concurrency::reader\_writer\_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) 클래스는 스레드로부터 안전한 공유 데이터 읽기\/쓰기 작업을 제공합니다.  여러 스레드에서 공유 리소스에 대한 동시 읽기 권한이 필요하지만 해당 공유 리소스에 쓰기 작업은 거의 하지 않는 경우 판독기\/작성기 잠금을 사용합니다.  이 클래스는 개체에 대한 쓰기 권한을 한 스레드에만 제공합니다.  
+##  <a name="reader_writer_lock"></a>reader_writer_lock  
+ [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) 클래스는 공유 데이터에 스레드로부터 안전한 읽기/쓰기 작업을 제공 합니다. 여러 스레드가 공유 리소스에 대 한 동시 읽기 액세스를 필요 하지만 거의 해당 공유 리소스에 쓸 때 판독기/작성기 잠금을 사용 합니다. 이 클래스는 개체에 언제 든 지 하나의 스레드만 쓰기 액세스를 제공합니다.  
   
- `critical_section` 개체는 공유 리소스에 대한 단독 액세스 권한을 가져와 동시에 읽을 수 없게 하므로 `reader_writer_lock` 클래스가 `critical_section` 클래스보다 효율적입니다.  
+ `reader_writer_lock` 클래스 수행할 수 있습니다 보다는 `critical_section` 클래스는 `critical_section` 동시 읽기 액세스 권한을 제한 하는 공유 리소스에 대 한 단독 액세스를 획득 하는 개체입니다.  
   
- `critical_section` 클래스와 마찬가지로 `reader_writer_lock` 클래스는 다른 작업을 선점하는 대신 이러한 작업에 양보하는 협조적 상호 제외 개체를 나타냅니다.  
+ 마찬가지로 `critical_section` 클래스는 `reader_writer_lock` 클래스 선점 하는 대신 다른 작업에 양보 하는 협조적 상호 제외 개체를 나타냅니다.  
   
- 공유 리소스에 써야 하는 스레드에서 판독기\/작성기 잠금을 가져오면 해당 리소스에 액세스해야 하는 다른 스레드는 작성기에서 잠금을 해제할 때까지 차단됩니다.  `reader_writer_lock` 클래스는 대기 중인 판독기의 차단을 해제하기 전에 대기 중인 작성기의 차단을 해제하는 *쓰기 기본 설정* 잠금의 한 유형입니다.  
+ 공유 리소스에 써야 하는 스레드에서 판독기/작성기 잠금을 가져오면 작성기 잠금을 해제할 때까지 리소스에 액세스 해야 하는 다른 스레드는 차단 됩니다. `reader_writer_lock` 클래스의 예는 한 *쓰기 기본 설정* 잠금 대기 중인 판독기 차단을 해제 하기 전에 대기 기록기를 차단 해제 하는 잠금입니다.  
   
- `critical_section` 클래스와 마찬가지로 `reader_writer_lock` 클래스는 재진입성이 아닙니다.  [concurrency::reader\_writer\_lock::lock](../Topic/reader_writer_lock::lock%20Method.md) 및 [concurrency::reader\_writer\_lock::lock\_read](../Topic/reader_writer_lock::lock_read%20Method.md) 메서드는 잠금을 이미 소유한 스레드에 의해 호출될 경우 `improper_lock` 형식의 예외를 throw합니다.  
+ 마찬가지로 `critical_section` 클래스는 `reader_writer_lock` 클래스는 재진입 성이 아닌 합니다. [concurrency::reader_writer_lock::lock](reference/reader-writer-lock-class.md#lock) 및 [concurrency::reader_writer_lock::lock_read](reference/reader-writer-lock-class.md#lock_read) 메서드 형식의 예외를 throw `improper_lock` 이미 소유한 스레드에 의해 호출 되는 경우 잠금입니다.  
+
+
   
 > [!NOTE]
->  `reader_writer_lock` 클래스는 재진입성이 아니기 때문에 읽기 전용 잠금을 판독기\/작성기 잠금으로 업그레이드하거나 판독기\/작성기 잠금을 읽기 전용 잠금으로 다운그레이드할 수 없습니다.  이러한 작업 중 하나를 수행하면 지정되지 않은 동작이 발생합니다.  
+>  때문에 `reader_writer_lock` 클래스는 재진입 성이 아닌, 판독기/작성기 잠금을 읽기 전용 잠금을 업그레이드 하거나 읽기 전용 잠금에 판독기/기록기 잠금으로 다운 그레이드할 수 없습니다. 이러한 작업 중 하나를 수행 하면 지정 되지 않은 동작이 발생 합니다.  
   
-### 메서드 및 기능  
- 다음 표에서는 `reader_writer_lock` 클래스에 정의된 중요한 메서드를 보여 줍니다.  
+### <a name="methods-and-features"></a>메서드 및 기능  
+ 다음 표에서 여 정의 된 중요 한 메서드는 `reader_writer_lock` 클래스입니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[잠금](../Topic/reader_writer_lock::lock%20Method.md)|잠금에 대한 읽기\/쓰기 권한을 가져옵니다.|  
-|[try\_lock](../Topic/reader_writer_lock::try_lock%20Method.md)|잠금에 대한 읽기\/쓰기 권한을 가져오려고 하지만 차단하지 않습니다.|  
-|[lock\_read](../Topic/reader_writer_lock::lock_read%20Method.md)|잠금에 대한 읽기 전용 권한을 가져옵니다.|  
-|[try\_lock\_read](../Topic/reader_writer_lock::try_lock_read%20Method.md)|잠금에 대한 읽기 전용 권한을 가져오려고 하지만 차단하지 않습니다.|  
-|[unlock](../Topic/reader_writer_lock::unlock%20Method.md)|잠금을 해제합니다.|  
+|------------|-----------------|  
+|[lock](reference/reader-writer-lock-class.md#lock)|잠금에 대 한 읽기/쓰기 권한을 가져옵니다.|  
+|[try_lock](reference/reader-writer-lock-class.md#try_lock)|잠금에 대 한 읽기/쓰기 권한 획득 하려고 시도 하지만 차단 하지 않습니다.|  
+|[lock_read](reference/reader-writer-lock-class.md#lock_read)|잠금에 대 한 읽기 전용 권한을 가져옵니다.|  
+|[try_lock_read](reference/reader-writer-lock-class.md#try_lock_read)|잠금에 대 한 읽기 전용 액세스를 가져오려고 하지만 차단 하지 않습니다.|  
+|[unlock](reference/reader-writer-lock-class.md#unlock)|잠금을 해제합니다.|  
   
- \[[맨 위](#top)\]  
+ [[맨 위로 이동](#top)]  
   
-##  <a name="scoped_lock"></a> scoped\_lock 및 scoped\_lock\_read  
- `critical_section` 및 `reader_writer_lock` 클래스는 상호 제외 개체를 사용하는 방법을 간소화하는 중첩 도우미 클래스를 제공합니다.  이러한 도우미 클래스를 *범위 지정 잠금*이라고 합니다.  
+##  <a name="scoped_lock"></a>scoped_lock 및 scoped_lock_read  
+ `critical_section` 및 `reader_writer_lock` 클래스 상호 제외 개체를 사용 하는 방식을 단순화 하는 중첩 된 도우미 클래스를 제공 합니다. 이러한 도우미 클래스 라고 *범위 지정 잠금*합니다.  
   
- `critical_section` 클래스는 [concurrency::critical\_section::scoped\_lock](../Topic/critical_section::scoped_lock%20Class.md) 클래스를 포함합니다.  생성자는 제공된 `critical_section` 개체에 대한 액세스 권한을 얻고 소멸자는 해당 개체에 대한 액세스를 해제합니다.  `reader_writer_lock` 클래스는 `critical_section::scoped_lock`과 유사하지만 제공된 `reader_writer_lock` 개체에 대한 쓰기 권한을 관리한다는 차이점이 있는 [concurrency::reader\_writer\_lock::scoped\_lock](../Topic/reader_writer_lock::scoped_lock%20Class.md) 클래스를 포함합니다.  또한 `reader_writer_lock` 클래스는 [concurrency::reader\_writer\_lock::scoped\_lock\_read](../Topic/reader_writer_lock::scoped_lock_read%20Class.md) 클래스도 포함합니다.  이 클래스는 제공된 `reader_writer_lock` 개체에 대한 읽기 권한을 관리합니다.  
+ `critical_section` 클래스에 포함 되어는 [concurrency::critical_section::scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class) 클래스입니다. 제공 된에 대 한 액세스를 획득 하는 생성자 `critical_section` 개체가; 해당 개체에 대 한 소멸자 릴리스 액세스 합니다. `reader_writer_lock` 클래스에 포함 되어는 [scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class) 클래스와 유사한 `critical_section::scoped_lock`제외 하 고 제공 된에 대 한 쓰기 액세스를 관리, `reader_writer_lock` 개체입니다. `reader_writer_lock` 클래스도 포함 되어는 [concurrency::reader_writer_lock::scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class) 클래스입니다. 이 클래스는 제공 된에 대 한 읽기 액세스를 관리 `reader_writer_lock` 개체입니다.  
+
   
- 범위 지정 잠금은 `critical_section` 및 `reader_writer_lock` 개체를 수동으로 사용하는 경우에 몇 가지 이점을 제공합니다.  일반적으로 스택에서 범위 지정 잠금을 할당합니다.  범위 지정 잠금은 상호 제외 개체가 소멸될 때 해당 개체에 대한 액세스를 자동으로 해제하므로 내부 개체의 잠금을 수동으로 해제하지 않습니다.  이는 함수에 `return` 문이 여러 개 포함된 경우에 유용합니다.  또한 범위 지정 잠금을 사용하면 예외로부터 안전한 코드를 작성할 수 있습니다.  `throw` 문으로 인해 스택이 해제되면 활성화된 범위 지정 잠금의 소멸자가 호출되므로 상호 제외 개체가 항상 올바르게 해제됩니다.  
+ 범위가 지정 된 잠금을 사용 하는 경우 몇 가지 이점을 제공 `critical_section` 및 `reader_writer_lock` 수동으로 개체입니다. 일반적으로 스택에 범위가 지정 된 잠금을 할당 합니다. 범위가 지정 된 잠금 해제의 상호 제외 개체에 대 한 자동으로; 소멸 될 때 따라서 있습니다 않으면 수동으로 잠금 해제 하지는 기본 개체. 함수에는 여러 개 포함 된 경우에 유용 `return` 문. 범위가 지정 된 잠금의 사용 예외 로부터 안전한 코드를 작성 하는 데 유용할 수 있습니다. 경우는 `throw` 문을 사용 하면 스택이 해제 하 고 활성 상태인 모든 범위가 지정 된 잠금에 대 한 소멸자가 호출 되므로 상호 제외 개체를 사용 하 여 항상 올바르게 해제 합니다.  
   
 > [!NOTE]
->  `critical_section::scoped_lock`, `reader_writer_lock::scoped_lock` 및 `reader_writer_lock::scoped_lock_read` 클래스를 사용하는 경우에는 내부 상호 제외 개체에 대한 액세스를 수동으로 해제하지 마십시오.  그렇지 않으면 런타임이 잘못된 상태가 될 수 있습니다.  
+>  사용 하는 경우는 `critical_section::scoped_lock`, `reader_writer_lock::scoped_lock`, 및 `reader_writer_lock::scoped_lock_read` 클래스, 기본 상호 제외 개체에 대 한 액세스를 수동으로 해제 하지 마십시오. 런타임에 줄이 잘못 된 상태에 수 있습니다.  
   
-##  <a name="event"></a> event  
- [concurrency::event](../../parallel/concrt/reference/event-class.md) 클래스는 상태에서 신호를 받을 수 있거나 받을 수 없는 동기화 개체를 나타냅니다.  공유 데이터에 대한 액세스를 보호하는 것이 목적인 동기화 개체\(예: 임계 영역\)와 달리 이벤트는 실행 흐름을 동기화합니다.  
+##  <a name="event"></a>이벤트  
+ [concurrency:: event](../../parallel/concrt/reference/event-class.md) 클래스 동기화 개체를 해당 상태를 신호 또는 신호 수를 나타냅니다. 공유 데이터에 대 한 액세스를 보호 하는 것이 목적인 임계 영역 등의 동기화 개체와는 달리 이벤트 실행 흐름을 동기화 합니다.  
   
- `event` 클래스는 한 작업\(task\)에서 다른 작업\(task\)에 필요한 작업\(work\)을 완료한 경우에 유용합니다.  예를 들어 한 작업에서 네트워크 연결 또는 파일의 데이터를 읽었음을 다른 작업에 알릴 수 있습니다.  
+ `event` 클래스는 한 작업이 다른 작업에 대 한 작업을 완료 하는 경우 유용 합니다. 예를 들어 파일 또는 네트워크 연결에서 데이터 읽기는 다른 작업이 하나 이상의 태스크 알릴 수 있습니다.  
   
-### 메서드 및 기능  
- 다음 표에서는 `event` 클래스에 정의된 중요한 메서드 중 몇 가지를 보여 줍니다.  
+### <a name="methods-and-features"></a>메서드 및 기능  
+ 다음 표에서 몇 가지에 정의 된 중요 한 메서드는 `event` 클래스입니다.  
   
 |메서드|설명|  
-|---------|--------|  
-|[wait](../Topic/event::wait%20Method.md)|이벤트에서 신호를 보내게 될 때까지 기다립니다.|  
-|[set](../Topic/event::set%20Method.md)|이벤트를 신호된 상태로 설정합니다.|  
-|[reset](../Topic/event::reset%20Method.md)|이벤트를 신호되지 않은 상태로 설정합니다.|  
-|[wait\_for\_multiple](../Topic/event::wait_for_multiple%20Method.md)|여러 이벤트에서 신호를 보내게 될 때까지 기다립니다.|  
+|------------|-----------------|  
+|[대기](reference/event-class.md#wait)|이벤트가 신호를 받을 때까지 기다립니다.|  
+|[set](reference/event-class.md#set)|이벤트 신호 된 상태로 설정합니다.|  
+|[reset](reference/event-class.md#reset)|이벤트 신호 되지 않은 상태로 설정합니다.|  
+|[wait_for_multiple](reference/event-class.md#wait_for_multiple)|여러 이벤트 신호를 받을 때까지 기다립니다.|  
+
   
-### 예제  
- `event` 클래스를 사용하는 방법을 보여 주는 예제를 보려면 [동기화 데이터 구조와 Windows API의 비교](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)를 참조하십시오.  
+### <a name="example"></a>예제  
+ 사용 하는 방법을 보여 주는 예제는 `event` 클래스를 참조 하십시오. [동기화 데이터 구조는 Windows API와 비교](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)합니다.  
   
- \[[맨 위](#top)\]  
+ [[맨 위로 이동](#top)]  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [동기화 데이터 구조와 Windows API의 비교](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)  
- Windows API에서 제공하는 동기화 데이터 구조와 해당 동기화 데이터 구조의 동작을 비교합니다.  
+ 동기화 데이터 구조와 Windows API에서 제공 하는 것의 동작을 비교 합니다.  
   
  [동시성 런타임](../../parallel/concrt/concurrency-runtime.md)  
- 병렬 프로그래밍을 단순화하는 동시성 런타임에 대해 설명하고 관련 항목에 대한 링크를 포함합니다.
+ 병렬 프로그래밍을 간소화하는 동시성 런타임에 대해 설명하고 관련 항목의 링크를 제공합니다.
+

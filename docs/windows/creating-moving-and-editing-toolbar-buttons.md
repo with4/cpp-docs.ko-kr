@@ -1,52 +1,53 @@
 ---
-title: "Creating, Moving, and Editing Toolbar Buttons | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "buttons, custom toolbars"
-  - "toolbar buttons (in Toolbar editor), editing"
-  - "buttons"
-  - "toolbar buttons (in Toolbar editor), creating"
+title: "만들기, 이동 및 편집 도구 모음 단추 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- buttons, custom toolbars
+- toolbar buttons (in Toolbar editor), editing
+- buttons
+- toolbar buttons (in Toolbar editor), creating
 ms.assetid: d0f0c6c6-9d7e-42b5-a86a-7558127386e7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b5142cc8408577a66931b3e7ff9443998352eef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Creating, Moving, and Editing Toolbar Buttons
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-도구 모음 단추를 쉽게 만들고 이동하고 복사하고 편집할 수 있습니다.  
+# <a name="creating-moving-and-editing-toolbar-buttons"></a>도구 모음 단추 만들기, 이동 및 편집
+수 쉽게, 이동, 복사, 만들고 편집 도구 모음 단추입니다.  
   
- 기본값으로 새 단추나 빈 단추가 도구 모음 오른쪽 끝에 표시됩니다.  표시된 단추를 편집하기 전에 이동할 수 있습니다.  새 단추를 만들 때, 편집되는 단추 오른쪽에 빈 단추 하나가 나타납니다.  도구 모음을 저장해도 빈 단추는 저장되지 않습니다.  
+ 기본적으로 도구 모음의 오른쪽 끝에 새로 추가 되거나 빈 단추가 표시 됩니다. 편집 하기 전에이 단추를 이동할 수 있습니다. 새 단추를 만들 때 다른 빈 단추 편집된 되는 단추 오른쪽에 나타납니다. 도구 모음을 저장 하면 빈 단추 저장 되지 않습니다.  
   
--   [새 도구 모음 단추 만들기](../mfc/creating-a-new-toolbar-button.md)  
+-   [새 도구 모음 단추 만들기](creating-a-new-toolbar-button.md)  
   
--   [도구 모음 단추 이동](../mfc/moving-a-toolbar-button.md)  
+-   [도구 모음 단추 이동](moving-a-toolbar-button.md)  
   
--   [도구 모음에서 단추 복사](../mfc/copying-buttons-from-a-toolbar.md)  
+-   [도구 모음 리소스에서 단추 복사](../windows/copying-buttons-from-a-toolbar.md)  
   
--   [도구 모음 단추 삭제](../mfc/deleting-a-toolbar-button.md)  
+-   [도구 모음 단추 삭제](deleting-a-toolbar-button.md)  
   
--   [도구 모음의 단추 사이에 공백 삽입](../mfc/inserting-a-space-between-buttons-on-a-toolbar.md)  
+-   [도구 모음 리소스에서 단추 사이의 공백을 삽입 합니다.](../windows/inserting-a-space-between-buttons-on-a-toolbar.md)  
   
--   [도구 모음에서 단추 사이의 공백 제거](../mfc/removing-space-between-buttons-on-a-toolbar.md)  
+-   [도구 모음에서 단추 사이의 공백 축소 합니다.](../windows/removing-space-between-buttons-on-a-toolbar.md)  
   
--   [도구 모음 단추의 속성 변경](../mfc/changing-the-properties-of-a-toolbar-button.md)  
+-   [편집 도구 모음의 속성 페이지](../windows/changing-the-properties-of-a-toolbar-button.md)  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](https://msdn.microsoft.com/library/f45fce5x.aspx) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](https://msdn.microsoft.com/library/xbx3z216.aspx)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](https://msdn.microsoft.com/library/h6270d0z.aspx)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  MFC 또는 ATL  
   
-## 참고 항목  
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>참고 항목  
+ [도구 모음 편집기](../windows/toolbar-editor.md)
+

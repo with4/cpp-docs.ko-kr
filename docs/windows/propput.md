@@ -1,32 +1,30 @@
 ---
-title: "propput | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.propput"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "propput attribute"
+title: propput | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.propput
+dev_langs: C++
+helpviewer_keywords: propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0a818bac1ab812fc92e87374db309ef60de6ad71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# propput
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="propput"></a>propput
 속성 설정 함수를 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,15 +32,15 @@ caps.handback.revision: 10
   
 ```  
   
-## 설명  
- **propput** C\+\+ 특성에는 [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) MIDL 특성과 동일한 기능이 있습니다.  
+## <a name="remarks"></a>설명  
+ **propput** c + + 특성에 동일한 기능을는 [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) MIDL 특성입니다.  
   
-## 예제  
- **propput**의 샘플 사용에 대해서는 [bindable](../windows/bindable.md)에 대한 예제를 참조하세요.  
+## <a name="example"></a>예제  
+ 예를 참조 [바인딩 가능한](../windows/bindable.md) 의 샘플 사용에 대 한 **propput**합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 특성 컨텍스트  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
@@ -53,8 +51,8 @@ caps.handback.revision: 10
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [메서드 특성](../windows/method-attributes.md)   
  [propget](../windows/propget.md)   
  [propputref](../windows/propputref.md)

@@ -1,32 +1,30 @@
 ---
-title: "COLUMN_ENTRY_TYPE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_TYPE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_ENTRY_TYPE 매크로"
+title: COLUMN_ENTRY_TYPE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_TYPE
+dev_langs: C++
+helpviewer_keywords: COLUMN_ENTRY_TYPE macro
 ms.assetid: ac424261-ff6c-443b-a197-2cec8d78d738
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 425f7e38002976d5510707768774f924f3627bc0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# COLUMN_ENTRY_TYPE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Represents a binding to the specific column in the database.  Supports `type` parameter.  
+# <a name="columnentrytype"></a>COLUMN_ENTRY_TYPE
+데이터베이스의 특정 열에 대 한 바인딩을 나타냅니다. 지원 `type` 매개 변수입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -40,23 +38,23 @@ data
   
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nOrdinal`  
- \[in\] The column number.  
+ [in] 열 번호입니다.  
   
  `wType`  
- \[in\] Data type of column entry.  
+ [in] 데이터 형식 열 항목입니다.  
   
  `data`  
- \[in\] The corresponding data member in the user record.  
+ [in] 사용자 레코드에서 해당 데이터 멤버입니다.  
   
-## 설명  
- This macro is a specialized variant of the [COLUMN\_ENTRY](../../data/oledb/column-entry.md) macro that provides a means of specifying data type.  
+## <a name="remarks"></a>설명  
+ 이 매크로 라는 특수 한 유형의 [COLUMN_ENTRY](../../data/oledb/column-entry.md) 데이터 형식을 지정 하는 방법을 제공 하는 매크로입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
- [OLE DB 소비자 템플릿에 대한 매크로 및 전역 함수](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)
+## <a name="see-also"></a>참고 항목  
+ [매크로 및 전역 함수에 대 한 OLE DB 소비자 템플릿](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)

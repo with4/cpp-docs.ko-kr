@@ -1,32 +1,30 @@
 ---
-title: "adjacent_difference(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::adjacent_difference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "adjacent_difference 함수"
+title: adjacent_difference (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::adjacent_difference
+dev_langs: C++
+helpviewer_keywords: adjacent_difference function
 ms.assetid: 2b462e2e-b8f2-4b2e-9b87-5f688d8da9f4
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0be63f7032de5f6d3def4ba74f24a346785b7391
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# adjacent_difference(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-입력 범위의 각 요소 및 그 이전의 연속적인 차이를 계산하고, 대상 범위에 결과를 출력 또는 차분 연산이 서로에 의해 대체되는 일반화 된 절차, 지정된 이진 연산 결과를 연산합니다.  
+# <a name="adjacentdifference-stlclr"></a>adjacent_difference(STL/CLR)
+각 요소와 입력 범위의 해당 선행 작업간 연속 차이를 계산하고 결과를 대상 범위로 출력하거나 차이 연산을 지정된 다른 이진 연산으로 대체한 일반화된 절차 결과를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _InIt, class _OutIt> inline  
@@ -37,13 +35,13 @@ template<class _InIt, class _OutIt, class _Fn2> inline
         _OutIt _Dest, _Fn2 _Func);  
 ```  
   
-## 설명  
- 이 함수는 STI 숫자 함수 `adjacent_difference`와 같이 작동합니다.  자세한 내용은 [adjacent\_difference](../Topic/adjacent_difference.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 숫자 함수와 동일 하 게 작동 `adjacent_difference`합니다. 자세한 내용은 참조 [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/numeric\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/숫자 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [numeric](../dotnet/numeric-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [numeric(STL/CLR)](../dotnet/numeric-stl-clr.md)

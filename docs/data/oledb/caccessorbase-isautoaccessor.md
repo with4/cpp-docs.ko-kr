@@ -1,34 +1,33 @@
 ---
-title: "CAccessorBase::IsAutoAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IsAutoAccessor"
-  - "CAccessorBase.IsAutoAccessor"
-  - "CAccessorBase::IsAutoAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsAutoAccessor 메서드"
+title: 'Caccessorbase:: Isautoaccessor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IsAutoAccessor
+- CAccessorBase.IsAutoAccessor
+- CAccessorBase::IsAutoAccessor
+dev_langs: C++
+helpviewer_keywords: IsAutoAccessor method
 ms.assetid: c330da15-2947-4050-ad00-8f776adc58fb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a08251ddf32f815390c28677f03536e1c2cec7d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessorBase::IsAutoAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Returns true if data is automatically retrieved for the accessor during a Move operation.  
+# <a name="caccessorbaseisautoaccessor"></a>CAccessorBase::IsAutoAccessor
+이동 작업 중 접근자에 대 한 데이터를 자동으로 검색 하는 경우 true를 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -37,15 +36,15 @@ Returns true if data is automatically retrieved for the accessor during a Move o
 ) const;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nAccessor`  
- \[in\] The zero\-offset number for the accessor.  
+ [in] 접근자에 대한 0 오프셋의 수입니다.  
   
-## 반환 값  
- Returns **true** if the accessor is an autoaccessor.  그렇지 않으면 F**alse**를 반환합니다.  
+## <a name="return-value"></a>반환 값  
+ 반환 **true** 접근자가 자동 하는 경우. 그렇지 않으면 **false**를 반환합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CAccessorBase 클래스](../../data/oledb/caccessorbase-class.md)

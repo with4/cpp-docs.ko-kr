@@ -1,73 +1,72 @@
 ---
 title: "CArrayRowset 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CArrayRowset<TAccessor>"
-  - "ATL.CArrayRowset"
-  - "CArrayRowset"
-  - "ATL::CArrayRowset"
-  - "ATL::CArrayRowset<TAccessor>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArrayRowset 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CArrayRowset<TAccessor>
+- ATL.CArrayRowset
+- CArrayRowset
+- ATL::CArrayRowset
+- ATL::CArrayRowset<TAccessor>
+dev_langs: C++
+helpviewer_keywords: CArrayRowset class
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 82c209938c7d124e787310cb859aeb6191f32c8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CArrayRowset 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Accesses elements of a rowset using array syntax.  
+# <a name="carrayrowset-class"></a>CArrayRowset 클래스
+배열 구문을 사용 하 여 행 집합의 요소를 액세스 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template < class TAccessor >  
 class CArrayRowset :   
-   public CVirtualBuffer <TAccessor>,   
+   public CVirtualBuffer <TAccessor>,   
    protected CBulkRowset <TAccessor>  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `TAccessor`  
- The type of accessor class that you want the rowset to use.  
+ 접근자 클래스를 사용 하는 행 집합의 형식입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
 |[CArrayRowset](../../data/oledb/carrayrowset-carrayrowset.md)|생성자입니다.|  
-|[스냅숏](../../data/oledb/carrayrowset-snapshot.md)|Reads the entire rowset into memory.|  
+|[스냅숏](../../data/oledb/carrayrowset-snapshot.md)|메모리에 전체 행 집합을 읽습니다.|  
   
-### 연산자  
-  
-|||  
-|-|-|  
-|[Operator&#91;&#93;](../../data/oledb/carrayrowset-operator.md)|Accesses an element of the rowset.|  
-  
-### 데이터 멤버  
+### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[CArrayRowset::m\_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|The number of rows already read.|  
+|[연산자 &#91; &#93;](../../data/oledb/carrayrowset-operator.md)|행 집합의 요소에 액세스합니다.|  
   
-## 요구 사항  
- **Header:** atldbcli.h  
+### <a name="data-members"></a>데이터 멤버  
   
-## 참고 항목  
+|||  
+|-|-|  
+|[CArrayRowset::m_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|이미 읽은 행 수를 지정 합니다.|  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbcli.h  
+  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CRowset 클래스](../../data/oledb/crowset-class.md)

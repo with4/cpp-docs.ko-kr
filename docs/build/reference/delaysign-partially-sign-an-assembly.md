@@ -1,79 +1,79 @@
 ---
-title: "/DELAYSIGN(어셈블리에 부분적으로 서명) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/delaysign"
-  - "VC.Project.VCLinkerTool.DelaySign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DELAYSIGN 링커 옵션"
-  - "DELAYSIGN 링커 옵션"
-  - "-DELAYSIGN 링커 옵션"
+title: "-DELAYSIGN (부분적으로 어셈블리 서명) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /delaysign
+- VC.Project.VCLinkerTool.DelaySign
+dev_langs: C++
+helpviewer_keywords:
+- /DELAYSIGN linker option
+- DELAYSIGN linker option
+- -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6867806907ba16114895381a9795cff0f072b25c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /DELAYSIGN(어셈블리에 부분적으로 서명)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN(어셈블리에 부분적으로 서명)
 ```  
 /DELAYSIGN[:NO]  
 ```  
   
-## 설명  
+## <a name="remarks"></a>설명  
  다음은 각 문자에 대한 설명입니다.  
   
- NO  
- 어셈블리가 부분적으로 서명되지 않도록 지정합니다.  
+ 아니요  
+ 어셈블리가 부분적으로 서명 되지를 지정 합니다.  
   
-## 설명  
- 어셈블리에 공개 키만 넣으려는 경우에는 **\/DELAYSIGN**을 사용하십시오.  기본값은 **\/DELAYSIGN:NO**입니다.  
+## <a name="remarks"></a>설명  
+ 사용 하 여 **/DELAYSIGN** 어셈블리의 공개 키를 저장 하려는 경우. 기본값은 **/delaysign: no**합니다.  
   
- **\/DELAYSIGN** 옵션은 [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) 또는 [\/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)와 함께 사용해야만 적용됩니다.  
+ **/DELAYSIGN** 옵션은 효과가 없습니다 함께 사용 해야 [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) 또는 [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)합니다.  
   
- 완전히 서명된 어셈블리를 요청하면 컴파일러가 매니페스트\(어셈블리 메타데이터\)가 포함된 파일을 해시한 후 해당 해시를 개인 키로 서명합니다.  결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다.  어셈블리의 서명이 연기된 경우에는 링커에서 서명을 계산하여 저장하지 않지만 나중에 서명을 추가할 수 있도록 파일에 공간을 예약합니다.  
+ 완전히 서명된 어셈블리를 요청할 경우 컴파일러는 매니페스트(어셈블리 메타데이터)가 포함된 파일을 해시하고 개인 키로 해당 해시에 서명합니다. 결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다. 어셈블리 서명이 연기 되 면 링커 계산 및 나중에 서명을 추가할 수 있도록 파일에 서명을 하지만 공간을 예약을 저장 하지 않습니다.  
   
- 예를 들어, **\/DELAYSIGN**을 사용하면 테스트하는 사람이 어셈블리를 전역 캐시에 넣을 수 있으며,  테스트를 마친 후 어셈블리에 개인 키를 넣으면 어셈블리에 완전히 서명할 수 있습니다.  
+ 예를 들어,를 사용 하 여 **/DELAYSIGN** 하면 테스터가 어셈블리를 전역 캐시에 넣을 수 있습니다. 테스트를 마친 후에 어셈블리에 개인 키를 배치 하 여 어셈블리에 완전히 서명할 수 있습니다.  
   
- 어셈블리에 서명하는 데 대한 자세한 내용은 [강력한 이름 어셈블리\(어셈블리 서명\)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) 및 [어셈블리 서명 연기](../Topic/Delay%20Signing%20an%20Assembly.md)를 참조하십시오.  
+ 참조 [강력한 이름 어셈블리 (어셈블리 서명) (C + + /cli CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) 및 [어셈블리 서명 연기](/dotnet/framework/app-domains/delay-sign-assembly) 어셈블리 서명에 대 한 자세한 내용은 합니다.  
   
- 다음은 어셈블리 생성에 사용하는 기타 링커 옵션입니다.  
+ 어셈블리 생성에 영향을 주는 다른 링커 옵션은:  
   
--   [\/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
+-   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
 3.  **명령줄** 속성 페이지를 클릭합니다.  
   
-4.  **추가 옵션** 상자에 옵션을 입력합니다.  
+4.  에 옵션을 입력에서 **추가 옵션** 상자입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

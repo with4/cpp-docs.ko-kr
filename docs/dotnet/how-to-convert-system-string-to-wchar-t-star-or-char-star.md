@@ -1,35 +1,34 @@
 ---
-title: "방법: System::String을 wchar_t* 또는 char*로 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "char 데이터 형식, System::String 변환"
-  - "PtrToStringChars 메서드"
-  - "System::String"
-  - "System::String, char 또는 wchar_t로 변환"
-  - "wchart 형식, System::String 변환"
+title: "방법: system:: string을 wchar_t * 또는 char *로 변환 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- System::String, converting to char or wchar_t
+- PtrToStringChars method
+- System::String
+- wchart type, converting System::String
+- char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d0616e76985a06f9525a300c318fe1518cd6a70c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: System::String을 wchar_t* 또는 char*로 변환
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vcclr.h에서 `PtrToStringChars`를 사용하여 <xref:System.String>을 네이티브 `wchar_t *` 또는 `char *`로 변환할 수 있습니다.  이렇게 하면 항상 와이드 유니코드 문자열 포인터가 반환됩니다. CLR 문자열은 내부적으로 유니코드이기 때문입니다.  그런 다음 아래 예제에서와 같이 와이드 문자열을 변환할 수 있습니다.  
+# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>방법: System::String을 wchar_t* 또는 char*로 변환
+사용할 수 있습니다 `PtrToStringChars` 변환할 Vcclr.h에서 <xref:System.String> 네이티브로 `wchar_t *` 또는 `char *`합니다.  이 항상 CLR 문자열은 내부적으로 유니코드 때문에 넓은 유니코드 문자열 포인터를 반환 합니다. 다음 예제와 같이 전체에서 변환할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // convert_string_to_wchar.cpp  
@@ -68,7 +67,10 @@ int main() {
 }  
 ```  
   
-  **Hello**  
-**Hello**   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+Hello  
+Hello  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

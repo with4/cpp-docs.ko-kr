@@ -1,41 +1,39 @@
 ---
-title: "queue::container_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::container_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "container_type 멤버[STL/CLR]"
+title: 'queue:: container_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::container_type
+dev_langs: C++
+helpviewer_keywords: container_type member [STL/CLR]
 ms.assetid: 118168f9-e5ed-47e2-a4f5-26b0b56e41e1
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b29c55cd182538b9d44706086b8ffbd09777bf4a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# queue::container_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuecontainertype-stlclr"></a>queue::container_type(STL/CLR)
 기본 컨테이너의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef Container value_type;  
 ```  
   
-## 설명  
- 형식은 템플릿 매개 변수 `Container`와 동의어입니다.  
+## <a name="remarks"></a>설명  
+ 이 형식은 템플릿 매개 변수 `Container`의 동의어입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_queue_container_type.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::get\_container](../dotnet/queue-get-container-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::get_container(STL/CLR)](../dotnet/queue-get-container-stl-clr.md)

@@ -1,50 +1,50 @@
 ---
 title: "단순 소비자 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "클라이언트., 만들기"
-  - "OLE DB 소비자, 구현"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- clients, creating
+- OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7dc97c0e64558f066250a54098f7316ac8b33076
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 단순 소비자 구현
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음 항목에서는 MFC 응용 프로그램 마법사 및 ATL OLE DB 소비자 마법사가 만든 파일을 편집하여 간단한 소비자를 만드는 방법을 보여 줍니다.  이 예제는 다음과 같은 부분으로 이루어집니다.  
+# <a name="implementing-a-simple-consumer"></a>단순 소비자 구현
+다음 항목에는 단순 소비자를 만드는 MFC 응용 프로그램 마법사 및 ATL OLE DB 소비자 마법사에서 생성 된 파일을 편집 하는 방법을 보여 줍니다. 이 예제에는 다음과 같은 부분이 있습니다.  
   
--   "소비자로 데이터 검색"에서는 데이터베이스 테이블에서 행 단위로 모든 데이터를 읽는 소비자에서 코드를 구현하는 방법을 보여 줍니다.  
+-   "소비자를 사용 하 여 데이터 검색" 데이터베이스 테이블에서 모든 데이터를 행 단위로 읽는 소비자의 코드를 구현 하는 방법을 보여 줍니다.  
   
--   "책갈피 지원을 소비자에 추가"에서는 책갈피 지원을 소비자에 추가하는 방법을 설명합니다.  
+-   "책갈피 지원을 소비자에 게 추가" 소비자에 게 책갈피 지원을 추가 하는 방법을 보여 줍니다.  
   
--   "XML 지원을 소비자에 추가"에서는 소비자 코드를 수정하여 조회한 행 집합을 XML 데이터로 출력하는 방법을 설명합니다.  
+-   "소비자에 게 XML 지원을 추가" 소비자 코드 출력 XML 데이터 형식으로 검색 된 행 집합 데이터를 수정 하는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  이 단원에서 설명하는 소비자 응용 프로그램을 사용하여 MyProv 및 Provider 샘플 공급자를 테스트할 수 있습니다.  
+>  MyProv 및 공급자 샘플 공급자를 테스트 하려면이 섹션에서 설명 하는 소비자 응용 프로그램을 사용할 수 있습니다.  
   
 > [!NOTE]
->  [단순한 읽기 전용 공급자의 기능 향상](../../data/oledb/enhancing-the-simple-read-only-provider.md)에 설명된 것과 동일한 공급자인 MyProv를 테스트하기 위해 소비자 응용 프로그램을 작성하려면, "책갈피 지원을 소비자에 추가"에 설명된 것과 같이 책갈피 지원을 포함해야 합니다.  
+>  테스트할 MyProv 소비자 응용 프로그램을 빌드하 (에 설명 된 동일한 공급자 [단순한 읽기 전용 공급자 기능 향상](../../data/oledb/enhancing-the-simple-read-only-provider.md)), 책갈피 지원을 추가"소비자에 게."에 설명 된 대로 책갈피 지원을 포함 해야 합니다  
   
 > [!NOTE]
->  공급자를 테스트하는 소비자 응용 프로그램을 작성하려면 "책갈피 지원을 소비자에 추가"에 설명된 책갈피 지원은 건너뛰고 "XML 지원을 소비자에 추가"로 가십시오.  
+>  공급자를 테스트 하는 소비자 응용 프로그램을 빌드하려면 "책갈피 지원 소비자에 추가"에 설명 된 책갈피 지원 건너뛰고 지원을 추가"로 XML 소비자에 게."  
   
-## 소비자로 데이터 검색  
+## <a name="retrieving-data-with-the-consumer"></a>소비자를 사용 하 여 데이터를 검색합니다.  
   
-#### OLE DB 소비자를 사용하여 콘솔 응용 프로그램을 수정하려면  
+#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>OLE DB 소비자를 사용 하는 콘솔 응용 프로그램을 수정 하려면  
   
-1.  MyCons.cpp에서 다음과 같이 굵은 텍스트를 삽입하여 main 코드를 변경합니다.  
+1.  MyCons.cpp에서 같이 굵은 텍스트를 삽입 하 여 주 코드를 변경 합니다.  
   
     ```  
     // MyCons.cpp : Defines the entry point for the console application.  
@@ -54,37 +54,37 @@ caps.handback.revision: 7
     ...  
     int main(int argc, char* argv[])  
     {  
-       HRESULT hr = CoInitialize(NULL);        // Instantiate rowset    CProducts rs;        hr = rs.OpenAll();    ATLASSERT( SUCCEEDED( hr ) );    hr = rs.MoveFirst();        // Iterate through the rowset    while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )    {       // Print out the column information for each row       printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",              rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );       hr = rs.MoveNext();    }        rs.Close();    rs.ReleaseCommand();        CoUninitialize();  
+       HRESULT hr = CoInitialize(NULL);   // Instantiate rowset   CProducts rs;   hr = rs.OpenAll();   ATLASSERT( SUCCEEDED( hr ) );   hr = rs.MoveFirst();   // Iterate through the rowset   while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )   {      // Print out the column information for each row      printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",             rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );      hr = rs.MoveNext();   }   rs.Close();   rs.ReleaseCommand();   CoUninitialize();  
   
        return 0;  
     }  
     ```  
   
-## 책갈피 지원을 소비자에 추가  
- 책갈피는 테이블의 행을 고유하게 구별하는 열입니다.  일반적으로 키 열이 책갈피가 되지만 항상 그런 것은 아니고 공급자에 따라 다릅니다.  이 단원에서는 책갈피 지원을 추가하는 방법을 보여 줍니다.  이를 위해 사용자 레코드 클래스에서 다음 작업을 수행해야 합니다.  
+## <a name="adding-bookmark-support-to-the-consumer"></a>소비자에 책갈피 지원 추가  
+ 책갈피는 테이블의 행을 고유 하 게 식별 하는 열입니다. 일반적으로 키 열을는 되는 경우가 있습니다. 것은 공급자별으로 다릅니다. 이 섹션 책갈피 지원을 추가 하는 방법을 보여 줍니다. 이렇게 하려면 사용자 레코드 클래스에 다음 실행:  
   
--   책갈피를 인스턴스화합니다.  [CBookmark](../../data/oledb/cbookmark-class.md) 형식의 개체입니다.  
+-   책갈피를 인스턴스화하십시오. 형식의 개체 [CBookmark](../../data/oledb/cbookmark-class.md)합니다.  
   
--   **DBPROP\_IRowsetLocate** 속성을 설정하여 공급자에서 책갈피 열을 요청합니다.  
+-   책갈피 열을 설정 하 여 공급자 로부터 요청는 **DBPROP_IRowsetLocate** 속성입니다.  
   
--   [BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md) 매크로를 사용하여 열 맵에 책갈피 엔트리를 추가합니다.  
+-   책갈피 항목을 사용 하 여 열 지도에 추가 된 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) 매크로입니다.  
   
- 위의 단계는 작업할 책갈피 개체 및 책갈피 지원을 제공합니다.  이 코드 예제는 다음과 같이 책갈피를 설명합니다.  
+ 이전 단계에는 작업할 책갈피 개체 및 지원을 제공 합니다. 이 코드 예제에서는 책갈피를 다음과 같이 보여 줍니다.  
   
 -   쓰기 위해 파일을 엽니다.  
   
--   행 단위로 행 집합 데이터를 파일에 출력합니다.  
+-   행 집합 파일의 데이터를 행을 출력 합니다.  
   
--   [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)를 호출하여 행 집합 커서를 책갈피로 이동합니다.  
+-   행 집합 커서를 호출 하 여 책갈피로 이동 [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)합니다.  
   
--   책갈피가 있는 행을 파일의 끝에 추가하면서 출력합니다.  
+-   파일의 끝에 추가 하 여 책갈피가 표시 된 행을 출력 합니다.  
   
 > [!NOTE]
->  이 소비자 응용 프로그램을 사용하여 Provider 샘플 공급자 응용 프로그램을 테스트하려면 이 단원에서 설명한 책갈피 지원을 건너뛰십시오.  
+>  이 소비자 응용 프로그램을 사용 하 여 공급자 샘플 공급자 응용 프로그램을 테스트 하는 경우에이 섹션에 설명 된 책갈피 지원은 둡니다.  
   
-#### 책갈피를 인스턴스화하려면  
+#### <a name="to-instantiate-the-bookmark"></a>책갈피를 인스턴스화  
   
-1.  접근자는 [CBookmark](../../data/oledb/cbookmark-class.md) 형식의 개체를 포함해야 합니다.  `nSize` 매개 변수는 책갈피 버퍼의 크기를 바이트 단위로 지정합니다. 일반적으로 32비트 플랫폼에서는 4바이트이고, 64비트 플랫폼에서는 8바이트입니다.  다음 선언을 사용자 레코드 클래스의 열 데이터 멤버에 추가합니다.  
+1.  형식의 개체를 포함 해야 하는 접근자 [CBookmark](../../data/oledb/cbookmark-class.md)합니다. `nSize` 매개 변수 (일반적으로 32 비트 플랫폼에 대 한 4) 및 64 비트 플랫폼에 대 한 8 바이트에는 책갈피 버퍼의 크기를 지정 합니다. 사용자 레코드 클래스의 열 데이터 멤버에 다음 선언을 추가 합니다.  
   
     ```  
     //////////////////////////////////////////////////////////////////////  
@@ -97,9 +97,9 @@ caps.handback.revision: 7
        ...  
     ```  
   
-#### 공급자에게 책갈피 열을 요청하려면  
+#### <a name="to-request-a-bookmark-column-from-the-provider"></a>책갈피 열은 공급자를 요청 하려면  
   
-1.  다음 코드를 사용자 레코드 클래스의 `GetRowsetProperties` 메서드에 추가합니다.  
+1.  다음 코드에 추가 `GetRowsetProperties` 사용자 레코드 클래스에 메서드:  
   
     ```  
     // Set the DBPROP_IRowsetLocate property.  
@@ -107,13 +107,13 @@ caps.handback.revision: 7
     {  
        pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
        pPropSet->AddProperty(DBPROP_CANSCROLLBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
-       // Add DBPROP_IRowsetLocate property to support bookmarks    pPropSet->AddProperty(DBPROP_IRowsetLocate, true);  
+       // Add DBPROP_IRowsetLocate property to support bookmarks   pPropSet->AddProperty(DBPROP_IRowsetLocate, true);  
     }  
     ```  
   
-#### 책갈피 엔트리를 열 맵에 추가하려면  
+#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>책갈피 항목 열 지도에 추가 하려면  
   
-1.  다음 엔트리를 사용자 레코드 클래스의 열 맵에 추가합니다.  
+1.  사용자 레코드 클래스에 열 지도에 다음 항목을 추가 합니다.  
   
     ```  
     // Set a bookmark entry in the column map.  
@@ -125,9 +125,9 @@ caps.handback.revision: 7
     END_COLUMN_MAP()  
     ```  
   
-#### main 코드에서 책갈피를 사용하려면  
+#### <a name="to-use-a-bookmark-in-your-main-code"></a>주 코드에 책갈피를 사용 하려면  
   
-1.  앞에서 만든 콘솔 응용 프로그램의 mycons.cpp 파일에서 다음과 같이 main 코드를 변경합니다.  책갈피를 사용하려면 main 코드에서 해당 책갈피 개체\(`myBookmark`\)를 인스턴스화해야 합니다. 이 개체는 접근자에 있는 책갈피 개체\(`m_bookmark`\)와는 다릅니다.  
+1.  이전에 만든 콘솔 응용 프로그램에서 MyCons.cpp 파일에서 다음과 같이 주 코드를 변경 합니다. 책갈피를 사용 하려면 주 코드 자체 책갈피 개체를 인스턴스화할 해야 (`myBookmark`);이 접근자의 것과에서 다른 책갈피 (`m_bookmark`).  
   
     ```  
     ///////////////////////////////////////////////////////////////////////  
@@ -196,22 +196,22 @@ caps.handback.revision: 7
     }  
     ```  
   
- 책갈피에 대한 자세한 내용은 [책갈피 사용](../../data/oledb/using-bookmarks.md)을 참조하십시오.  책갈피에 대한 다른 예제를 보려면 [행 집합 업데이트](../../data/oledb/updating-rowsets.md)를 참고하십시오.  
+ 책갈피에 대 한 자세한 내용은 참조 [책갈피를 사용 하 여](../../data/oledb/using-bookmarks.md)합니다. 책갈피의 예에 표시 됩니다 [행 집합 업데이트](../../data/oledb/updating-rowsets.md)합니다.  
   
-## XML 지원을 소비자에 추가  
- [XML 데이터 액세스](../../data/oledb/accessing-xml-data.md)에서 설명한 것처럼 데이터 소스에서 XML 데이터를 검색하는 방법에는 두 가지가 있습니다. [CStreamRowset](../../data/oledb/cstreamrowset-class.md)을 사용하거나 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)를 사용하는 것입니다.  이 예제에서는 `CStreamRowset`을 사용하는데, 이 방법이 더 효율적이지만 이 샘플 응용 프로그램을 실행할 컴퓨터에 SQL Server 2000이 실행되고 있어야 합니다.  
+## <a name="adding-xml-support-to-the-consumer"></a>소비자에 게 XML 지원 추가  
+ 에 설명 된 대로 [XML 데이터 액세스](../../data/oledb/accessing-xml-data.md), 데이터 원본에서 XML 데이터를 검색 하는 방법은 두 가지가:를 사용 하 여 [CStreamRowset](../../data/oledb/cstreamrowset-class.md) 또는 사용 하 여 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)합니다. 이 예에서는 `CStreamRowset`, 더 효율적인 되지만이 샘플 응용 프로그램 실행 컴퓨터에서 실행 되는 SQL Server 2000을 사용할 수 있습니다.  
   
-#### CStreamRowset에서 상속된 명령 클래스를 수정하려면  
+#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>CStreamRowset 상속할 명령 클래스를 수정 하려면  
   
-1.  이전에 만든 소비자 응용 프로그램에서 `CCommand` 선언 부분을 변경하여 `CStreamRowset`을 다음과 같이 행 집합 클래스로 지정합니다.  
+1.  이전에 만든 소비자 응용 프로그램에서 변경 하면 `CCommand` 지정 하려면 선언을 `CStreamRowset` 행 집합으로 클래스를 다음과 같이:  
   
     ```  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### XML 데이터를 검색하고 출력하도록 main 코드를 수정하려면  
+#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>검색 하 고 XML 데이터를 출력 하는 기본 코드를 수정 하려면  
   
-1.  앞에서 만든 콘솔 응용 프로그램의 MyCons.cpp 파일에서 다음과 같이 main 코드를 변경합니다.  
+1.  이전에 만든 콘솔 응용 프로그램에서 MyCons.cpp 파일에서 기본 코드를 다음과 같이 변경 합니다.  
   
     ```  
     ///////////////////////////////////////////////////////////////////////  
@@ -266,5 +266,5 @@ caps.handback.revision: 7
     }  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [마법사를 사용하여 OLE DB 소비자 만들기](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

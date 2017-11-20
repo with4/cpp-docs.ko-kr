@@ -1,33 +1,30 @@
 ---
-title: "operator&gt;= (map)(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator>="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator>= 멤버[STL/CLR]"
+title: "연산자&gt;= (map) (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator>=
+dev_langs: C++
+helpviewer_keywords: operator>= member [STL/CLR]
 ms.assetid: 9f39fbd2-ead6-4451-ad4e-b9cb077fb442
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 08aff712f74b31825724f68ef32b8cc2e6c92601
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# operator&gt;= (map)(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-List greater than or equal comparison.  
+# <a name="operatorgt-map-stlclr"></a>연산자&gt;= (map) (STL/CLR)
+보다 큰 목록 또는 같은지 비교 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Key,  
@@ -36,17 +33,17 @@ template<typename Key,
         map<Key, Mapped>% right);  
 ```  
   
-#### 매개 변수  
- left  
- Left container to compare.  
+#### <a name="parameters"></a>매개 변수  
+ 왼쪽  
+ 비교할 왼쪽 컨테이너입니다.  
   
- right  
- Right container to compare.  
+ 오른쪽  
+ 비교할 오른쪽 컨테이너입니다.  
   
-## 설명  
- The operator function returns `!(``left` `<` `right``)`.  You use it to test whether `left` is not ordered before `right` when the two maps are compared element by element.  
+## <a name="remarks"></a>설명  
+ 연산자 함수 반환 `!(left` `<` `right)`합니다. 테스트를 사용 하는지 여부를 `left` 하기 전에 정렬 되지 않은 `right` 두 개의 맵이 경우 요소 별로 비교 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_operator_ge.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[d 4\]**  
-**\[a b c\] \>\= \[a b c\] is True**  
-**\[a b c\] \>\= \[a b d\] is False**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] >= [a b c] is True  
+[a b c] >= [a b d] is False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)   
- [operator\=\= \(map\)](../dotnet/operator-equality-map-stl-clr.md)   
- [operator\!\= \(map\)](../dotnet/operator-inequality-map-stl-clr.md)   
- [operator\< \(map\)](../dotnet/operator-less-than-map-stl-clr.md)   
- [operator\> \(map\)](../dotnet/operator-greater-than-map-stl-clr.md)   
- [operator\<\= \(map\)](../dotnet/operator-less-or-equal-map-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [연산자 = = (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)   
+ [operator! = (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)   
+ [연산자\< (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)   
+ [연산자 > (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)   
+ [operator<= (map)(STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)

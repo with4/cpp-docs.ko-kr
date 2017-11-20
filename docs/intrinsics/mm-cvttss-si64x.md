@@ -1,63 +1,62 @@
 ---
-title: "_mm_cvttss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvttss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mm_cvttss_si64x 내장 함수"
-  - "cvttss2si 명령"
+title: _mm_cvttss_si64x | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvttss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- _mm_cvttss_si64x intrinsic
+- cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fa5dee3ee67678f561a80042c1dc0aab2403a555
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvttss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Microsoft 전용**  
   
- X64 확장된 버전 잘라내기 단 정밀도 부동 소수점 숫자를 64 비트 정수를 변환의 방출 \(`cvttss2si`\) 명령.  
+ 내보내는 확장 x64 버전의 64 비트 정수 잘림 단 정밀도 부동 소수점 숫자로 변환 (`cvttss2si`) 명령입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-__int64 _mm_cvttss_si64x(   
-   __m128 value   
+__int64 _mm_cvttss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `value`  
+#### <a name="parameters"></a>매개 변수  
+ [in] `value`  
  `__m128` 단 정밀도 부동 소수점 값이 포함 된 구조입니다.  
   
-## 반환 값  
- 64 비트 정수 처음 부동 소수점 값의 변환의 결과입니다.  
+## <a name="return-value"></a>반환 값  
+ 첫 번째 부동 소수점 값을 64 비트 정수로 변환의 결과입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 내장 다릅니다 `_mm_cvtss_si64x` 는 0으로 정확 하지 않습니다 변환만 잘립니다.  때문에 `__m128` 구조는 XMM 레지스터를 나타내는, 생성 된 명령의 데이터는 XMM 레지스터에서 시스템 메모리로 이동 합니다.  
+## <a name="remarks"></a>설명  
+ 내장 다른 `_mm_cvtss_si64x` 만 있다는 점에서 부정확 한 변환을 0으로 잘립니다. 때문에 `__m128` 구조체 나타냅니다 XMM 레지스터, 생성 된 명령 XMM 레지스터에서 시스템 메모리에 데이터를 이동 합니다.  
   
- 이 루틴에만 내장로 사용할 수 있습니다.  
+ 이 루틴은 내장 루틴으로만 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // _mm_cvttss_si64x.cpp  
@@ -87,9 +86,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## Microsoft 특정 끝  
+```Output  
+101  
+```  
   
-## 참고 항목  
- [\_\_m128](../cpp/m128.md)   
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
+ [__m128](../cpp/m128.md)   
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

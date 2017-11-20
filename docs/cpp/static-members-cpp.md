@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - class members [C++], static
 - instance constructors, static members
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 568ceedfcc3cd470cdd9003dfb41c691f9986f25
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cb2597352fcc4a263dc2ceb93121a95dcd493f44
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="static-members-c"></a>정적 멤버(C++)
 클래스는 정적 멤버 데이터와 멤버 함수를 포함할 수 있습니다. 로 데이터 멤버가 선언 되는 경우 **정적**, 클래스의 모든 개체에 대 한 데이터의 복사본을 하나만 유지 됩니다.
@@ -75,7 +72,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- 정적 멤버가 존재하기 위해 클래스 형식의 개체가 있어야 하는 것은 아닙니다. 멤버 선택을 사용 하 여 정적 멤버 액세스할 수도 있습니다 (**합니다.** 및 ** -> **) 연산자. 예:  
+ 정적 멤버가 존재하기 위해 클래스 형식의 개체가 있어야 하는 것은 아닙니다. 멤버 선택을 사용 하 여 정적 멤버 액세스할 수도 있습니다 (**합니다.** 및  **->** ) 연산자. 예:  
   
 ```  
 BufferedOutput Console;  

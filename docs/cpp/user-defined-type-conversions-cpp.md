@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- explicit_cpp
-dev_langs:
-- C++
+f1_keywords: explicit_cpp
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++], and constants
 - conversion functions [C++]
@@ -31,16 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 778c5a659755b5c79f79e9b846441c3e0665995e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 155afe7c785b111a49a19545e47d175a9b22f7d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="user-defined-type-conversions-c"></a>사용자 정의 형식 변환(C++)
 A *변환* 다른 형식의 값에서 일부 형식의 새 값을 생성 합니다. *표준 변환* 없으며 해당 기본 제공 형식, 만들 c + + 언어 및 지원에는 기본 제공 *사용자 정의 변환* , 또는 사용자 정의 형식 간의 변환을 수행 하기 위해 합니다.  
@@ -234,4 +230,3 @@ void display_balance(const Money balance)
   
  이 예제에서는 변환 함수 `operator double`이 명시적 변환 함수로 지정되어 있고 `double` 형식으로의 명시적 캐스트가 변환을 수행하기 위해 `display_balance` 함수에 지정되어 있습니다. 이 캐스트가 생략되었다면 컴파일러는 `<<` 형식에 대한 적절한 스트림 삽입 연산자 `Money`를 찾지 못하고 오류가 발생됩니다.  
   
-

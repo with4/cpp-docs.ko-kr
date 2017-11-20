@@ -1,32 +1,30 @@
 ---
-title: "RuntimeClassBaseT::GetImplementedIIDS 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetImplementedIIDS 메서드"
+title: "Runtimeclassbaset:: Getimplementediids 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS
+dev_langs: C++
+helpviewer_keywords: GetImplementedIIDS method
 ms.assetid: adae54da-521d-4add-87f5-242fbd85f33b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f2eb153220c6c0b46948f6d52ebe15857e999c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# RuntimeClassBaseT::GetImplementedIIDS 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-WRL 인프라구조체를 지원하고 코드에서 직접적으로 사용되는 것을 의도하지 않습니다.  
+# <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS 메서드
+WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<  
@@ -39,29 +37,29 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
  `implements` 매개 변수의 형식입니다.  
   
  `implements`  
- 매개변수 `T` 로 지정된 형식에 대한 포인터입니다.  
+ 매개 변수로 지정 된 형식에 대 한 포인터 `T`합니다.  
   
  `iidCount`  
- 최대 인터페이스 Id 검색 합니다.  
+ 검색할 인터페이스 Id의 최대 수입니다.  
   
  `iids`  
- 이 작업이 성공적으로 완료된 경우, 형식 `T` 에 의해 구현된 인터페이스 ID의 배열입니다.  
+ 이 작업이 완료 되는 경우 성공적으로, 인터페이스 형식에서 구현 된 Id의 배열을 `T`합니다.  
   
-## 반환 값  
- 성공 하면 S\_OK 그렇지 않으면 오류를 암시하는 HRESULT입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고 그렇지 않으면 오류를 설명 하는 HRESULT입니다.  
   
-## 설명  
- Id가 지정된 형식에 의해 구현되는 인터페이스의 배열을 검색합니다.  
+## <a name="remarks"></a>설명  
+ 인터페이스를 지정 된 형식에서 구현 되는 Id의 배열을 검색 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
   
- **네임스페이스:** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [RuntimeClassBaseT 구조체](../windows/runtimeclassbaset-structure.md)

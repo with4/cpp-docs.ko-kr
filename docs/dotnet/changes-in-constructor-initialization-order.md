@@ -1,49 +1,48 @@
 ---
-title: "생성자 초기화 순서 변경 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "생성자, C++"
+title: "생성자 초기화 순서에서 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: constructors, C++
 ms.assetid: 8892c38d-6bf7-4cf7-ac8f-15e052135a79
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bdcfea2339bfe7aac93192e88a6ec39ce919c596
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 생성자 초기화 순서 변경 사항
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]에서는 클래스 생성자의 초기화 순서가 Managed Extensions for C\+\+와 다르게 변경되었습니다.  
+# <a name="changes-in-constructor-initialization-order"></a>생성자 초기화 순서 변경 사항
+클래스 생성자에 대 한 초기화 순서에 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
   
-## 생성자 초기화 순서 비교  
- Managed Extensions for C\+\+에서는 생성자 초기화가 다음과 같은 순서로 수행되었습니다.  
+## <a name="comparison-of-constructor-initialization-order"></a>생성자 초기화 순서 비교  
+ Managed extensions for c + + 생성자 초기화는 다음과 같은 순서로 발생 했습니다.  
   
-1.  기본 클래스 생성자가 있는 경우 이 생성자가 호출됩니다.  
+1.  기본 클래스의 생성자 있는 경우 호출 됩니다.  
   
-2.  클래스의 초기화 목록이 확인됩니다.  
+2.  클래스의 초기화 목록 평가 됩니다.  
   
-3.  클래스 생성자의 코드 본문이 실행됩니다.  
+3.  클래스 생성자의 코드 본문이 실행 됩니다.  
   
- 이 실행 순서는 네이티브 C\+\+ 프로그래밍과 같은 규칙을 따릅니다.  새로운 Visual C\+\+ 언어에서는 CLR 클래스의 경우 다음과 같은 실행 순서가 적용됩니다.  
+ 이 실행 순서는 네이티브 c + + 프로그래밍에서와 같이 동일한 규칙을 따릅니다. CLR 클래스에 대 한 다음 실행 순서를 규정 하는 새 Visual c + + 언어:  
   
-1.  클래스의 초기화 목록이 확인됩니다.  
+1.  클래스의 초기화 목록 평가 됩니다.  
   
-2.  기본 클래스 생성자가 있는 경우 이 생성자가 호출됩니다.  
+2.  기본 클래스의 생성자 있는 경우 호출 됩니다.  
   
-3.  클래스 생성자의 코드 본문이 실행됩니다.  
+3.  클래스 생성자의 코드 본문이 실행 됩니다.  
   
- 이러한 변경 내용은 CLR 클래스에만 적용되며 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]의 네이티브 클래스는 이전 규칙을 계속 따릅니다.  두 경우 모두 특정 클래스의 전체 계층 구조 체인을 거슬러 올라가면서 이러한 규칙이 적용됩니다.  
+ 참고가이 변경; CLR 클래스에만 적용 됩니다. Visual c + +에서 네이티브 클래스는 여전히 이전 규칙을 따릅니다. 두 경우 모두 이러한 규칙이 특정된 클래스의 전체 계층 구조 체인 전체에서 위쪽으로 적용 합니다.  
   
- Managed Extensions for C\+\+를 사용하는 다음 코드 예제를 살펴 봅니다.  
+ Managed Extensions for c + + 사용 하 여 다음 코드 예를 살펴보십시오.  
   
 ```  
 __gc class A  
@@ -68,15 +67,15 @@ private:
 };  
 ```  
   
- 위에서 설명한 생성자 초기화 순서에 따르면 `B` 클래스의 새 인스턴스를 만들 때 다음과 같은 실행 순서를 확인할 수 있습니다.  
+ 위에서 설명한 생성자 초기화 순서에 따르면 때 새 실행의 다음 순서를 확인할 클래스의 인스턴스 `B` 생성 됩니다.  
   
-1.  기본 클래스 `A`의 생성자가 호출됩니다.  `_n` 멤버가 `1`로 초기화됩니다.  
+1.  기본 클래스의 생성자 `A` 가 호출 됩니다. `_n` 멤버가 초기화 `1`합니다.  
   
-2.  `B` 클래스의 초기화 목록이 확인됩니다.  `_m` 멤버가 `1`로 초기화됩니다.  
+2.  클래스에 대 한 초기화 목록 `B` 평가 됩니다. `_m` 멤버가 초기화 `1`합니다.  
   
-3.  `B` 클래스의 코드 본문이 실행됩니다.  
+3.  클래스의 코드 본문 `B` 실행 됩니다.  
   
- 이제 동일한 코드를 새로운 Visual C\+\+ 구문으로 표현하면 다음과 같습니다.  
+ 이제 새 Visual c + + 구문에서 동일한 코드를 살펴보세요.  
   
 ```  
 ref class A  
@@ -101,20 +100,20 @@ private:
 };  
 ```  
   
- 새 구문에서 `B` 클래스의 새 인스턴스를 만들면 다음과 같은 실행 순서가 적용됩니다.  
+ 새 실행 순서는 클래스의 인스턴스 `B` 새에서 구문은:  
   
-1.  `B` 클래스의 초기화 목록이 확인됩니다.  `_m` 멤버가 `0`으로 초기화됩니다. `0`은 `_m` 클래스 멤버의 초기화되지 않은 값입니다.  
+1.  클래스에 대 한 초기화 목록 `B` 평가 됩니다. `_m` 멤버가 초기화 `0` (`0` 의 초기화 되지 않은 값이는 `_m` 클래스 멤버).  
   
-2.  기본 클래스 `A`의 생성자가 호출됩니다.  `_n` 멤버가 `1`로 초기화됩니다.  
+2.  기본 클래스의 생성자 `A` 가 호출 됩니다. `_n` 멤버가 초기화 `1`합니다.  
   
-3.  `B` 클래스의 코드 본문이 실행됩니다.  
+3.  클래스의 코드 본문 `B` 실행 됩니다.  
   
- 두 코드 예제의 구문은 비슷하지만 실행 결과는 서로 다릅니다.  `B` 클래스의 생성자는 기본 클래스 `A`의 값에 따라 해당 멤버를 초기화합니다.  그러나 `A` 클래스의 생성자가 아직 호출되지 않았습니다.  특히 기본 클래스 생성자에서 메모리 또는 리소스를 할당해야 상속된 클래스가 작동하는 경우 이러한 종속성으로 인해 문제가 발생할 수 있습니다.  
+ 참고과 유사한 구문을 이러한 코드 예제에 대 한 서로 다른 결과 생성 합니다. 클래스의 생성자 `B` 기본 클래스의 값에 따라 달라 집니다 `A` 해당 멤버를 초기화 합니다. 그러나 클래스의 생성자 `A` 가 아직 호출 되지 않았습니다. 상속 된 클래스는 기본 클래스 생성자에서 발생 하는 메모리 또는 리소스를 할당에 의존 하는 경우 이러한 종속성은 특히 위험할 수 있습니다.  
   
-## Managed Extensions for C\+\+에서 Visual C\+\+ 2005로 전환  
- 기본 클래스에서는 상속된 클래스의 동작을 알 수 없으므로 많은 경우 클래스 생성자의 실행 순서가 변경되어도 프로그래머에게는 별다른 영향이 없습니다.  그러나 위 코드 예제에서 볼 수 있듯이 상속된 클래스의 초기화 목록이 기본 클래스 멤버의 값에 의존하는 경우 상속된 클래스의 생성자가 크게 영향을 받을 수 있습니다.  코드를 Managed Extensions for C\+\+에서 새 구문으로 전환하는 경우 이러한 생성 코드를 클래스 생성자의 본문으로 옮기는 것이 좋습니다. 이렇게 하면 코드를 항상 마지막에 실행할 수 있습니다.  
+## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>Visual c + + 2010 Managed Extensions for c + + 이동이 의미  
+ 대부분의 경우에서 클래스 생성자의 실행 순서를 변경 해야 때문일 프로그래머에 게 기본 클래스는 상속 된 클래스의 동작의 개념이 없습니다. 그러나 이러한 코드 예제에서 알 수 있듯이 상속 된 클래스의 생성자 크게 영향을 받을 수 때 해당 초기화 목록을 기본 클래스 멤버의 값에 따라 달라 집니다. 에서 이동할 때 코드 Managed Extensions for c + + 새 구문으로, 여기서 실행 반드시 발생 마지막 클래스 생성자의 본문에 이러한 구문을 이동 하는 것이 좋습니다.  
   
-## 참고 항목  
- [관리되는 형식\(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
+## <a name="see-also"></a>참고 항목  
+ [관리 되는 형식 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)   
  [생성자](../cpp/constructors-cpp.md)   
- [생성자 이니셜라이저](../misc/constructor-initializers.md)
+ 

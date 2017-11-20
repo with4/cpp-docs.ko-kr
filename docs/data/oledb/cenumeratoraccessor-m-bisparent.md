@@ -1,36 +1,35 @@
 ---
-title: "CEnumeratorAccessor::m_bIsParent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CEnumeratorAccessor.m_bIsParent"
-  - "ATL::CEnumeratorAccessor::m_bIsParent"
-  - "m_bIsParent"
-  - "ATL.CEnumeratorAccessor.m_bIsParent"
-  - "CEnumeratorAccessor::m_bIsParent"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bIsParent"
+title: 'Cenumeratoraccessor:: M_bisparent | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CEnumeratorAccessor.m_bIsParent
+- ATL::CEnumeratorAccessor::m_bIsParent
+- m_bIsParent
+- ATL.CEnumeratorAccessor.m_bIsParent
+- CEnumeratorAccessor::m_bIsParent
+dev_langs: C++
+helpviewer_keywords: m_bIsParent
 ms.assetid: ab267905-d7d9-41cb-96ff-7be4d8875657
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 787a235e77059f719afa8a14f4119cc968728ecc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CEnumeratorAccessor::m_bIsParent
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A variable indicating whether the enumerator is a parent enumerator, if the row is an enumerator.  
+# <a name="cenumeratoraccessormbisparent"></a>CEnumeratorAccessor::m_bIsParent
+행이 있는 경우 열거자 열거자 부모 열거자 인지를 나타내는 변수입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -38,11 +37,11 @@ VARIANT_BOOL m_bIsParent;
   
 ```  
   
-## 설명  
- See [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx) in the *OLE DB Programmer's Reference* for more information.  
+## <a name="remarks"></a>설명  
+ 참조 [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx) 에 *OLE DB Programmer's Reference* 자세한 정보에 대 한 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CEnumeratorAccessor 클래스](../../data/oledb/cenumeratoraccessor-class.md)

@@ -1,39 +1,38 @@
 ---
-title: "/DIRECTIVES | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/directives"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DIRECTIVES dumpbin 옵션"
-  - "DIRECTIVES dumpbin 옵션"
-  - "-DIRECTIVES dumpbin 옵션"
+title: -DIRECTIVES | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /directives
+dev_langs: C++
+helpviewer_keywords:
+- /DIRECTIVES dumpbin option
+- DIRECTIVES dumpbin option
+- -DIRECTIVES dumpbin option
 ms.assetid: cb85d679-6d20-4244-ba0b-6f495228e970
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6c7248f5cc0a0df4f50d7616734832b910aaff82
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /DIRECTIVES
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="directives"></a>/DIRECTIVES
 ```  
 /DIRECTIVES  
 ```  
   
-## 설명  
- 이 옵션은 컴파일러가 생성한 이미지의 .drective 섹션을 덤프합니다.  
+## <a name="remarks"></a>설명  
+ 이 옵션에는 이미지의 컴파일러에서 생성 된.drective 섹션을 덤프합니다.  
   
- [\/HEADERS](../../build/reference/headers.md) DUMPBIN 옵션은 [\/GL](../../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션으로 만든 파일에만 사용할 수 있습니다.  
+ 만 [/HEADERS](../../build/reference/headers.md) DUMPBIN 옵션은으로 생성 된 파일에서 사용 하기 위해 사용할 수는 [/GL](../../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DUMPBIN 옵션](../../build/reference/dumpbin-options.md)

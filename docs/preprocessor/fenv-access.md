@@ -1,43 +1,43 @@
 ---
-title: "fenv_access | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.fenv_access"
-  - "fenv_access_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenv_access pragma"
-  - "pragma, fenv_access"
+title: fenv_access | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.fenv_access
+- fenv_access_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, fenv_access
+- fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d2f95187be09177fea573181f1e3a827409fb77c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# fenv_access
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-플래그 테스트 및 모드 변경 내용을 변경할 수 있는 최적화를 비활성화\(ON\)하거나 활성화\(OFF\)합니다.  
+# <a name="fenvaccess"></a>fenv_access
+플래그 테스트 및 모드 변경 내용을 변경할 수 있는 최적화를 비활성화(ON)하거나 활성화(OFF)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 #pragma fenv_access [ON | OFF]  
 ```  
   
-## 설명  
+## <a name="remarks"></a>설명  
  기본적으로 `fenv_access`는 OFF로 설정됩니다.  
   
- 부동 소수점 동작에 대한 자세한 내용은 [\/fp\(부동 소수점 동작 지정\)](../build/reference/fp-specify-floating-point-behavior.md)를 참조하십시오.  
+ 부동 소수점 동작에 대 한 자세한 내용은 참조 하십시오. [/fp (부동 소수점 동작 지정)](../build/reference/fp-specify-floating-point-behavior.md)합니다.  
   
  `fenv_access`를 적용할 수 있는 최적화 종류는 다음과 같습니다.  
   
@@ -49,11 +49,11 @@ caps.handback.revision: 10
   
  다른 부동 소수점 pragma는 다음과 같습니다.  
   
--   [float\_control](../preprocessor/float-control.md)  
+-   [float_control](../preprocessor/float-control.md)  
   
--   [fp\_contract](../preprocessor/fp-contract.md)  
+-   [fp_contract](../preprocessor/fp-contract.md)  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // pragma_directive_fenv_access_x86.cpp  
@@ -79,9 +79,12 @@ int main() {
 }  
 ```  
   
-  **out\=9.999999776482582e\-003**   
-## 예제  
- 다음 샘플은 Itanium 프로세서에 대한 출력 파일을 생성하는 컴파일러용입니다.  **\/fp:precise**는 중간 결과를 확장된 정밀도로 유지합니다. 여기서는 FLT\_MAX\(3.402823466e\+38F\)보다 큰 값을 계산할 수 있으며, 해당 합계의 결과는 수동으로 계산할 때와 같이 1.0이 됩니다.  **\/fp:strict**는 중간 결과를 소스 정밀도\(부동\)로 유지하므로 첫 번째 더하기에서 무한 값이 생성되어 식 전체에서 유지됩니다.  
+```Output  
+out=9.999999776482582e-003  
+```  
+  
+## <a name="example"></a>예제  
+ 다음 샘플은 Itanium 프로세서에 대한 출력 파일을 생성하는 컴파일러용입니다. **/fp: 정확한** 수동으로 계산할 예상 대로 확장 된 정밀도 큰 값 보다 FLT_MAX (3.402823466 e + 38F)가 되어 계산할 수 및 해당 합계는 1.0 결과에서 중간 결과 유지 합니다. **/fp: strict** 첫 번째 더하기 식 전체에서 유지 되는 무한 값이 생성 되므로 중간를 소스 정밀도 (부동 소수점) 결과 유지 합니다.  
   
 ```  
 // pragma_directive_fenv_access_IPF.cpp  
@@ -104,9 +107,12 @@ int main() {
 }  
 ```  
   
-  **1.000000**   
-## 예제  
- 위의 샘플에서 `#pragma fenv_access (on)`을 주석 처리할 때는 컴파일러가 컴파일 타임 계산\(컨트롤 모드를 사용하지 않음\)을 수행하므로 출력이 달라진다는 점에 주의해야 합니다.  
+```Output  
+1.000000  
+```  
+  
+## <a name="example"></a>예제  
+ 위의 샘플에서 `#pragma fenv_access (on)`을 주석 처리할 때는 컴파일러가 컴파일 타임 계산(컨트롤 모드를 사용하지 않음)을 수행하므로 출력이 달라진다는 점에 주의해야 합니다.  
   
 ```  
 // pragma_directive_fenv_access_2.cpp  
@@ -129,6 +135,9 @@ int main() {
 }  
 ```  
   
-  **out\=1.000000000000000e\-002**   
-## 참고 항목  
- [Pragma 지시문 및 \_\_Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+out=1.000000000000000e-002  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [Pragma 지시문 및 __Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

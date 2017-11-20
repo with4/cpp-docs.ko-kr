@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xloctime/std::time_put_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- time_put_byname class
+f1_keywords: xloctime/std::time_put_byname
+dev_langs: C++
+helpviewer_keywords: time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 0ecbdfb78c0a37f7d261b60ecb4ebd8b92aee2db
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ba50414643d430798912e6a7a25d3fe9c49c1b9a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="timeputbyname-class"></a>time_put_byname 클래스
 `time_put`\< CharType, OutputIterator > 형식의 로캘 패싯으로 사용할 수 있는 개체에 대해 설명하는 파생된 템플릿 클래스입니다.  
@@ -67,7 +62,6 @@ protected:
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

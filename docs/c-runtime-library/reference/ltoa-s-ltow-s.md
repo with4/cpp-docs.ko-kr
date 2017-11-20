@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _ltoa_s
 - ltoa_s
 - ltow_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - converting integers
 - _ltoa_s function
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - ltoa_s function
 - _ltow_s function
 ms.assetid: d7dc61ea-1ccd-412d-b262-555a58647386
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 098bb1dcf673931ab4c0d3682fafcc442835d76f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: a9a6bc0bc74463ad38cc43a0adb514d9eb722783
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltoas-ltows"></a>_ltoa_s, _ltow_s
 long 정수를 문자열로 변환합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_ltoa, _ltow](../../c-runtime-library/reference/ltoa-ltow.md)의 버전입니다.  
@@ -132,7 +115,7 @@ errno_t _ltow_s(
 |`_ltoa_s`|\<stdlib.h>|  
 |`_ltow_s`|\<stdlib.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 변환](../../c-runtime-library/data-conversion.md)   

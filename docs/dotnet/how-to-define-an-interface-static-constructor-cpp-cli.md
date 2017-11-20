@@ -1,35 +1,32 @@
 ---
-title: "방법: 인터페이스 정적 생성자 정의(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "생성자[C++]"
-  - "인터페이스 정적 생성자"
-  - "정적 생성자, interface"
+title: "방법: 인터페이스 정적 생성자 정의 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- constructors [C++]
+- static constructors, interface
+- interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9d2df4610cdc0e7b7bcf579c6280cbc00961409f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 인터페이스 정적 생성자 정의(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-An interface can have a static constructor, which can be used to initialize static data members.  A static constructor will be called at most once, and will be called before the first time a static interface member is accessed.  
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>방법: 인터페이스 정적 생성자 정의(C++/CLI)
+인터페이스는 정적 데이터 멤버를 초기화 하는 데 사용할 수 있는 정적 생성자를 가질 수 있습니다.  정적 생성자는 한 번만 호출 하 고 처음 정적 인터페이스 멤버에 액세스 하기 전에 호출 됩니다.  
   
- For more information on static constructors, see [방법: 클래스 또는 구조체에 정적 생성자 정의](../misc/how-to-define-static-constructors-in-a-class-or-struct.md).  
-  
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // mcppv2_interface_class2.cpp  
@@ -59,9 +56,12 @@ int main() {
 }  
 ```  
   
-  **in MyInterface static constructor**  
-**99**  
-**99**  
-**99**   
-## 참고 항목  
- [interface class](../windows/interface-class-cpp-component-extensions.md)
+```Output  
+in MyInterface static constructor  
+99  
+99  
+99  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [인터페이스 클래스입니다.](../windows/interface-class-cpp-component-extensions.md)

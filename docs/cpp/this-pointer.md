@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- this_cpp
-dev_langs:
-- C++
+f1_keywords: this_cpp
+dev_langs: C++
 helpviewer_keywords:
 - nonstatic member functions [C++]
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4e77139cdf93d385b92eb87483c1b03541b18650
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="this-pointer"></a>this 포인터
 **이** 포인터는 포인터의 비정적 멤버 함수 내 에서만 액세스할 수는 **클래스**, `struct`, 또는 **union** 유형입니다. 멤버 함수가 호출되는 개체를 가리킵니다. 정적 멤버 함수를 포함 하지 않습니다는 **이** 포인터입니다.  
@@ -182,7 +178,7 @@ int main()
   
  유형의 **이** 멤버 함수는 다음 구문을 사용 하 여 설명 되어 있는 *cv 한정자-목록* 수 및 멤버 함수 선언 자에서 결정 됩니다 **const**또는 **휘발성** (또는 둘 다) 및 *클래스 형식* 클래스의 이름입니다.  
   
- *클래스 유형 [cv 한정자 목록]* ** \* const이  **  
+ *클래스 유형 [cv 한정자 목록]*  **\* const이**   
   
  즉, **이** 는 항상 const 포인터 이며 다시 할당할 수 없습니다.  **const** 또는 `volatile` 멤버 함수 선언에서 사용 되는 한정자가 가리키는 클래스 인스턴스에 적용 **이** 해당 함수의 범위에 있습니다.  
   

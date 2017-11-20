@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2f1e30ce63374a3b8fddb52f7d2afa3f219287d4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="temporary-objects"></a>임시 개체
 경우에 따라 컴파일러가 임시 개체를 만들어야 합니다. 다음과 같은 이유로 이 임시 개체를 만들 수 있습니다.  
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/25/2017
 |식 계산 결과|식 계산 결과로 만들어진 모든 임시 개체는 식 문의 끝(즉, 세미콜론) 또는 `for`, `if`, `while`, `do` 및 `switch` 문에 대한 제어 식의 끝에서 소멸됩니다.|  
 |`const` 참조 초기화|이니셜라이저가 초기화되고 있는 참조와 동일한 형식의 l-value가 아닌 경우 기본 개체 형식의 임시 개체가 만들어지고 초기화 식을 사용하여 초기화됩니다. 이 임시 개체는 이 개체가 바인딩된 참조 개체가 제거된 후 즉시 제거됩니다.|  
   
-

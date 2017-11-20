@@ -1,37 +1,37 @@
 ---
 title: "메이크파일 전처리 식 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "식[C++], 메이크파일 전처리"
-  - "메이크파일, 전처리"
-  - "메이크파일 전처리"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessing makefiles
+- expressions [C++], makefile preprocessing
+- makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 32de1d1eb3262e1fca0a00048a61d3129347cb19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 메이크파일 전처리 식
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**\!IF** 또는 **\!ELSE IF** `constantexpression`은 정수형 상수\(십진수나 C 언어 표기법으로 표기됨\), 문자열 또는 명령으로 구성됩니다.  식을 그룹으로 묶으려면 괄호를 사용합니다.  식은 C 스타일의 부호 있는 long integer 산술 형식이며 숫자는 범위가 2147483648 \- 2147483647인 32비트 2의 보수 형식입니다.  
+# <a name="expressions-in-makefile-preprocessing"></a>메이크파일 전처리 식
+**! IF** 또는 **! ELSE IF** `constantexpression` 10 진수 또는 C 언어 표기법으로 정수 상수, 문자열 상수 또는 명령으로 구성 됩니다. 그룹 식에 괄호를 사용 합니다. 식을 사용 하 여 C 스타일 부호 있는 정수 (long) 산술; 숫자는 32 비트 2의 보수 형식 범위-2147483648에서 2147483647입니다.  
   
- 식에 상수 값에 적용되는 연산자, 명령의 종료 코드, 문자열, 매크로 및 파일 시스템 경로를 사용할 수 있습니다.  
+ 식 상수 값, 명령, 문자열, 매크로 및 파일 시스템 경로에서 종료 코드에 대해 작동 하는 연산자를 사용할 수 있습니다.  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>추가 정보  
  [메이크파일 전처리 연산자](../build/makefile-preprocessing-operators.md)  
   
  [전처리에서 프로그램 실행](../build/executing-a-program-in-preprocessing.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메이크파일 전처리](../build/makefile-preprocessing.md)

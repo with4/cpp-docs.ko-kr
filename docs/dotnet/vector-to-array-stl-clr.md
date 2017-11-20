@@ -1,41 +1,39 @@
 ---
-title: "vector::to_array(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 멤버[STL/CLR]"
+title: 'vector:: to_array (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 00e1f1c6-6ef5-4238-b95a-411059e0b69b
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 47904e1845d4f2d9abb8e289bfe5337bd25892aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# vector::to_array(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-제어 되는 시퀀스를 새 배열에 복사합니다.  
+# <a name="vectortoarray-stlclr"></a>vector::to_array(STL/CLR)
+제어 되는 새 배열에 복사합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## 설명  
- 멤버 함수가 제어된 시퀀스를 포함하는 배열을 반환합니다.  배열 형태로 제어 되는 시퀀스의 복사본을 구하는데 사용합니다.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 배열 형식으로 제어 되는 시퀀스의 복사본을 사용 하면 됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_to_array.cpp   
@@ -66,12 +64,15 @@ int main()
   
 ```  
   
-  **a b c d**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/vector\>  
+```Output  
+a b c d  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/벡터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [vector](../dotnet/vector-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [vector(STL/CLR)](../dotnet/vector-stl-clr.md)

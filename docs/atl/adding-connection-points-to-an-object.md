@@ -1,73 +1,74 @@
 ---
-title: "Adding Connection Points to an Object | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "연결 지점[C++], ATL 개체에 추가"
-  - "Implement Connection Point ATL wizard"
+title: "개체에 연결 지점 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- connection points [C++], adding to ATL objects
+- Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: af5c5c4ee2a794c05443eb3deeccd4792cbfd098
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Adding Connection Points to an Object
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[ATL 자습서](../atl/active-template-library-atl-tutorial.md) 연결 지점 지 원하는 컨트롤을 만드는 방법, 이벤트를 추가 하는 방법 및 연결 지점을 구현 하는 방법을 보여 줍니다.  ATL 연결 지점으로 구현 된  [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) 클래스입니다.  
+# <a name="adding-connection-points-to-an-object"></a>개체에 연결 지점 추가
+[ATL 자습서](../atl/active-template-library-atl-tutorial.md) 컨트롤을 만드는 방법을 연결 지점에 대 한 지원, 이벤트를 추가 하는 방법 및 연결 지점을 구현 하는 방법을 보여 줍니다. ATL 연결 지점을 구현 하는 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) 클래스입니다.  
   
- 연결 지점을 구현 하려면 두 가지 방법이 있습니다.  
+ 연결점을 구현 하려면 두 가지 옵션이 있습니다.  
   
--   컨트롤이 나 개체에 연결 지점을 추가 하 여 직접 나가는 이벤트 소스를 구현 합니다.  
+-   컨트롤이 나 개체에 연결 지점을 추가 하 여 사용자 지정 송신 이벤트 소스를 구현 합니다.  
   
 -   다른 형식 라이브러리에 정의 된 연결 지점 인터페이스를 다시 사용 합니다.  
   
- 두 경우 모두 작업 수행을 위해 형식 라이브러리 연결 지점 구현 마법사를 사용 합니다.  
+ 두 경우 모두 연결 지점 구현 마법사 형식 라이브러리를 사용 하 여 작업을 수행 합니다.  
   
-### 컨트롤이 나 개체에 연결 지점을 추가 하려면  
+### <a name="to-add-a-connection-point-to-a-control-or-object"></a>컨트롤 또는 개체에 연결 요소를 추가 하려면  
   
-1.  Dispinterface를.idl 파일 라이브러리 블록에서 정의 합니다.  ATL 컨트롤 마법사에서 컨트롤을 만들 때 연결 지점 지원을 사용 하면 dispinterface 이미 만들어집니다.  컨트롤을 만들 때 연결 지점 지원을 사용 하도록 설정 하지 않으면 수동으로 dispinterface를.idl 파일에 추가 해야 합니다.  다음 예제는 dispinterface의입니다.  나가는 인터페이스 디스패치 인터페이스가 아니어도 되지만 두 dispinterfaces이이 예제를 사용 하 여 여러 스크립트 언어를 VBScript 및 JScript 등이 필요 하므로:  
+1.  .Idl 파일의 라이브러리 블록에는 인터페이스를 정의 합니다. ATL 컨트롤 마법사를 사용 하 여 컨트롤을 만든 연결점에 대 한 지원을 설정한 경우 dispinterface 이미 만들어질 수 있습니다. 컨트롤을 만들 때 연결 지점에 대 한 지원을 설정 하지 않은,.idl 파일에는 dispinterface을 수동으로 추가 해야 합니다. 다음은 dispinterface의 예입니다. 송신 인터페이스가 디스패치 인터페이스 될 필요가 없지만 VBScript 및 JScript와 같은 여러 스크립트 언어 필요 하므로이 예에서는 두 개의 dispinterface이를 합니다.  
   
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/CPP/adding-connection-points-to-an-object_1.idl)]  
+     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]  
   
-     Uuidgen.exe 또는 guidgen.exe 유틸리티를 사용 하는 GUID를 생성 합니다.  
+     Uuidgen.exe 또는 guidgen.exe 유틸리티를 사용 하 여 여 GUID를 생성 합니다.  
   
-2.  Dispinterface로 추가 된 `[default,source]` 개체는 프로젝트의.idl 파일의 coclass에 대 한 인터페이스.  ATL 컨트롤 마법사는 컨트롤을 만들 때 연결 지점 지원을 사용 하는 경우 다시 만들어집니다를 `[default,source`\] 항목.  이 항목을 수동으로 추가 하려면 굵게 줄을 추가 합니다.  
+2.  으로 dispinterface 추가 `[default,source]` coclass 프로젝트의.idl 파일에서 개체에 대 한 인터페이스입니다. 다시 사용 하도록 설정한 연결 지점에 대 한 지원 컨트롤을 만들 때, ATL 컨트롤 마법사 만들어집니다는 `[default,source`] 항목입니다. 이 항목을 수동으로 추가 하려면 굵게 표시 된 줄을 추가 합니다.  
   
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/CPP/adding-connection-points-to-an-object_2.idl)]  
+     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]  
   
-     .Idl 파일을 참조 하십시오의  [Circ](../top/visual-cpp-samples.md) 예제 ATL 샘플.  
+     .Idl 파일을 참조는 [Circ](../visual-cpp-samples.md) 예에 대 한 ATL 샘플입니다.  
   
-3.  이벤트 인터페이스에 메서드와 속성을 추가 하려면 클래스 뷰를 사용 합니다.  클래스 뷰에서 클래스를 마우스 오른쪽 단추로 클릭 하 고  **추가** 클릭 하 고 바로 가기 메뉴에서  **추가연결 지점**.  
+3.  클래스 뷰를 사용 하 여 이벤트 인터페이스에 메서드 및 속성을 추가 합니다. 클래스 뷰에서 클래스를 마우스 오른쪽 단추로 클릭, 가리킨 **추가** 를 바로 가기 메뉴를 클릭 한 **연결 지점 추가**합니다.  
   
-4.  에  **원본 인터페이스** 의 연결 지점 구현 마법사, 선택 목록 상자  **프로젝트의 인터페이스**.  인터페이스를 제어 하 고 키를 눌러 선택 하면  **확인**를 사용 합니다:  
+4.  에 **소스 인터페이스** 연결 지점 구현 마법사, 선택 목록 상자 **프로젝트의 인터페이스**합니다. 제어 및 키를 눌러에 대 한 인터페이스를 선택 하는 경우 **확인**를 수행 합니다.  
   
-    -   이벤트에 대 한 나가는 호출 하는 코드를 구현 하는 이벤트 프록시 클래스의 헤더 파일을 생성 합니다.  
+    -   이벤트에 대 한 보내는 호출에 있도록 코드를 구현 하는 이벤트 프록시 클래스 헤더 파일을 생성 합니다.  
   
-    -   연결 지점 맵에 항목을 추가 합니다.  
+    -   연결 지점 맵은에 항목을 추가 합니다.  
   
-     모든 형식 라이브러리는 컴퓨터에도 표시 됩니다.  사용자만 이러한 형식 라이브러리 중 하나를 다른 형식 라이브러리에 동일한 정확한 나가는 인터페이스를 구현 하려면 연결점을 정의 하려면 사용 해야 합니다.  
+     또한 컴퓨터에 형식 라이브러리의 모든 목록이 나타납니다. 다른 형식 라이브러리에 정확히 동일한 송신 인터페이스를 구현 하려는 경우 연결 지점을 정의 하려면 이러한 다른 형식 라이브러리 중 하나를 사용 해야 합니다.  
   
-### 연결 지점 인터페이스를 다시 사용 하려면 다른 형식 라이브러리에서 정의  
+### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>다른 형식 라이브러리에 정의 된 연결 지점 인터페이스를 다시 사용 하려면  
   
-1.  클래스 뷰에서 구현 클래스를 마우스 오른쪽 단추로 클릭 한  **BEGIN\_COM\_MAP** 매크로 지점으로  **추가** 클릭 하 고 바로 가기 메뉴에서  **추가연결점**.  
+1.  구현 하는 클래스를 마우스 오른쪽 단추로 클릭 클래스 뷰에서 **BEGIN_COM_MAP** 매크로 가리키고 **추가** 를 바로 가기 메뉴를 클릭 한 **연결 지점 추가**합니다.  
   
-2.  연결 지점 구현 마법사, 인터페이스 및 형식 라이브러리에서 형식 라이브러리를 선택 하 고 클릭  **추가**.  
+2.  연결 지점 구현 마법사에서 형식 라이브러리의 형식 라이브러리와 인터페이스를 선택 하 고 클릭 **추가**합니다.  
   
-3.  하도록.idl 파일을 편집 합니다.  
+3.  .Idl 파일을 편집 합니다.  
   
-    -   Dispinterface를.idl 파일에 사용 되는 이벤트 소스 개체를 복사 합니다.  
+    -   이벤트 소스를 사용 하는 개체에 대 한.idl 파일에서 dispinterface를 복사 합니다.  
   
-    -   사용 된  **importlib** 해당 형식 라이브러리를.  
+    -   사용 하 여 **importlib** 지침을 보려면 해당 형식 라이브러리.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [연결 지점](../atl/atl-connection-points.md)
+

@@ -1,32 +1,30 @@
 ---
-title: "search(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::search"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "search 함수[STL/CLR]"
+title: "검색 (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::search
+dev_langs: C++
+helpviewer_keywords: search function [STL/CLR]
 ms.assetid: 3317c7f4-9f47-44b8-a7c7-73948a2f83e1
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1b7228bc8c44c9cb6996a65aa4c558d8e4f99e32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# search(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Searches for the first occurrence of a sequence within a target range whose elements are equal to those in a given sequence of elements or whose elements are equivalent in a sense specified by a binary predicate to the elements in the given sequence.  
+# <a name="search-stlclr"></a>search(STL/CLR)
+대상 범위 내에서 시퀀스의 요소가 지정된 요소 시퀀스와 동일하거나 이진 조건자가 지정한 의미에 따라 지정된 시퀀스의 요소와 동일한 첫 번째 시퀀스를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _FwdIt1, class _FwdIt2> inline  
@@ -37,13 +35,13 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
         _FwdIt2 _First2, _FwdIt2 _Last2, _Pr _Pred);  
 ```  
   
-## 설명  
- This function behaves the same as the STL function `search`.  자세한 내용은 [search](../Topic/search.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 함수 동일 하 게 동작 `search`합니다. 자세한 내용은 참조 [검색](../standard-library/algorithm-functions.md#search)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<알고리즘 cliext/>  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [algorithm(STL/CLR)](../dotnet/algorithm-stl-clr.md)

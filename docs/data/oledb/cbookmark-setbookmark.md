@@ -1,40 +1,39 @@
 ---
-title: "CBookmark::SetBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBookmark<0>::SetBookmark"
-  - "ATL.CBookmark<0>.SetBookmark"
-  - "CBookmark<0>.SetBookmark"
-  - "SetBookmark"
-  - "ATL::CBookmark::SetBookmark"
-  - "ATL::CBookmark<0>::SetBookmark"
-  - "CBookmark.SetBookmark"
-  - "ATL.CBookmark.SetBookmark"
-  - "CBookmark::SetBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetBookmark 메서드"
+title: 'Cbookmark:: Setbookmark | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBookmark<0>::SetBookmark
+- ATL.CBookmark<0>.SetBookmark
+- CBookmark<0>.SetBookmark
+- SetBookmark
+- ATL::CBookmark::SetBookmark
+- ATL::CBookmark<0>::SetBookmark
+- CBookmark.SetBookmark
+- ATL.CBookmark.SetBookmark
+- CBookmark::SetBookmark
+dev_langs: C++
+helpviewer_keywords: SetBookmark method
 ms.assetid: bcd26831-6045-4e69-96d6-abf8037fc18d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c265eaf2103f895198d029c231bf29755ea2c17
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CBookmark::SetBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Copies the bookmark value referenced by `pBuffer` to the `CBookmark` buffer and sets the buffer size to `nSize`.  
+# <a name="cbookmarksetbookmark"></a>CBookmark::SetBookmark
+참조 하는 책갈피 값 복사 `pBuffer` 에 `CBookmark` 버퍼링 및 버퍼 크기를 설정 `nSize`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -44,21 +43,21 @@ Copies the bookmark value referenced by `pBuffer` to the `CBookmark` buffer and 
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *nSize*  
- \[in\] The size of the bookmark buffer.  
+ [in] 책갈피 버퍼의 크기입니다.  
   
  `pBuffer`  
- \[in\] A pointer to the byte array containing the bookmark value.  
+ [in] 책갈피 값을 포함 하는 바이트 배열에 대 한 포인터입니다.  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 설명  
- This function is only available in **CBookmark\<0\>**.  
+## <a name="remarks"></a>설명  
+ 이 함수는 영어로 **CBookmark\<0 >**합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CBookmark 클래스](../../data/oledb/cbookmark-class.md)

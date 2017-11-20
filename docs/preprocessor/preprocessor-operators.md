@@ -1,38 +1,38 @@
 ---
-title: "전처리 연산자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "연산자[C++], 전처리기"
-  - "전처리 연산자"
+title: "전처리기 연산자 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor operators
+- operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c0eaa2a5c689dbe63957e5a0d5dcb8bbd1959949
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 전처리 연산자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-4개의 특정 전처리기 연산자는 `#define` 지시문 컨텍스트에 사용됩니다\(요약은 각각 다음 목록 참조\).  stringizing, charizing 및 토큰 전달 연산자는 다음 세 단원에서 설명합니다.  **defined** 연산자에 대한 자세한 내용은 [\#if, \#elif, \#else 및 \#endif 지시문](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)을 참조하십시오.  
+# <a name="preprocessor-operators"></a>전처리 연산자
+네 가지 전처리기 관련 연산자가의 컨텍스트에서 사용 되는 `#define` 지시문 (각각에 대 한 요약에 대 한 다음 목록 참조). 문자열 화, charizing, 및 토큰 붙여넣기 연산자는 다음 3 개의 섹션에 설명 되어 있습니다. 에 대 한 내용은 **정의** 연산자 참조 [#if, #elif, #else, 및 #endif 지시문](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)합니다.  
   
 |연산자|작업|  
-|---------|--------|  
-|[문자열화 연산자\(\#\)](../preprocessor/stringizing-operator-hash.md)|해당하는 실제 인수가 큰따옴표로 묶이도록 합니다.|  
-|[Charizing 연산자\(\#@\)](../preprocessor/charizing-operator-hash-at.md)|해당 인수를 작은 따옴표로 묶고 문자로 취급하는 것이 원인입니다\(Microsoft 전용\)|  
-|[토큰 붙여넣기 연산자\(\#\#\)](../preprocessor/token-pasting-operator-hash-hash.md)|실제 인수로 사용되는 토큰이 다른 토큰을 형성하기 위해 연결될 수 있도록 합니다.|  
-|[사용자 정의 연산자](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|특정 매크로 지시문으로 복합 식 작성을 단순화합니다.|  
+|--------------|------------|  
+|[문자열 화 연산자 (#)](../preprocessor/stringizing-operator-hash.md)|큰따옴표로 묶지 않아도 해당 실제 인수|  
+|[Charizing 연산자 (#@)](../preprocessor/charizing-operator-hash-at.md)|해당 인수를 작은따옴표로 묶어야 하 고 (Microsoft 전용) 문자로 처리|  
+|[토큰 붙여넣기 연산자 (#)](../preprocessor/token-pasting-operator-hash-hash.md)|다른 토큰을 구성 하기 위해 연결 하 여 실제 인수로 사용 되는 토큰을 허용|  
+|[정의 된 연산자](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|특정 매크로 지시문에 복합 식 작성을 단순화|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [전처리기 지시문](../preprocessor/preprocessor-directives.md)   
- [미리 정의된 매크로](../preprocessor/predefined-macros.md)   
- [C\/C\+\+ 전처리기 참조](../preprocessor/c-cpp-preprocessor-reference.md)
+ [미리 정의 된 매크로](../preprocessor/predefined-macros.md)   
+ [ 전처리기 참조](../preprocessor/c-cpp-preprocessor-reference.md)

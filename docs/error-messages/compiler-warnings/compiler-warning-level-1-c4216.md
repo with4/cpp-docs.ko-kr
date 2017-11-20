@@ -1,32 +1,30 @@
 ---
 title: "컴파일러 경고 (수준 1) C4216 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4216"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4216"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4216
+dev_langs: C++
+helpviewer_keywords: C4216
 ms.assetid: 211079dc-59d0-42a7-801c-2ddab21d7232
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 02f43c2dda11b765becf0b9244a0887a99df9b33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4216
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-비표준 확장을 사용했습니다 : float long입니다.  
+# <a name="compiler-warning-level-1-c4216"></a>컴파일러 경고(수준 1) C4216
+비표준 확장이 사용 됨: long float  
   
- 기본 Microsoft 확장\(\/Ze\)에서는 **float long**을 **double**로 간주합니다.  그러나, ANSI 규격\([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\)에서는 다르게 간주합니다.  **double**을 사용하여 호환성을 유지하십시오.  다음 샘플에서는 C4216 오류가 발생하는 경우를 보여 줍니다.  
+ 기본 Microsoft 확장 (/Ze) 처리 **long float** 으로 **double**합니다. ANSI 호환성 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) 하지 않습니다. 사용 하 여 **double** 의 호환성을 유지 합니다. 다음 샘플에서는 C4216 오류가 생성 됩니다.  
   
 ```  
 // C4216.cpp  

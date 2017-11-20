@@ -1,36 +1,34 @@
 ---
 title: "컴파일러 경고 (수준 4) C4706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4706"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4706
+dev_langs: C++
+helpviewer_keywords: C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b128a60ce35bc6ec7cce7e10c257fe63d926fa46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 4) C4706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-조건식 내에 할당이 있습니다.  
+# <a name="compiler-warning-level-4-c4706"></a>컴파일러 경고(수준 4) C4706
+조건식 내에서 할당  
   
- 조건식의 테스트 값이 할당의 결과입니다.  
+ 조건식의 테스트 값은 할당의 결과임 합니다.  
   
- 테스트 식을 포함하여 적합하게 다른 식에 사용할 수 있는 값이 할당의 왼쪽에 있습니다.  
+ 합법적으로 테스트 식을 포함 하는 다른 식에 사용할 수 있는 값 (할당의 왼쪽에 값)이 있습니다.  
   
- 다음 샘플에서는 C4706 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4706 오류가 생성 됩니다.  
   
 ```  
 // C4706a.cpp  
@@ -44,7 +42,7 @@ int main()
 }  
 ```  
   
- 테스트 조건에 괄호를 두 개 사용해도 경고가 발생합니다.  
+ 테스트 조건 주위에 괄호를 두 번 하는 경우에 경고가 발생 합니다.  
   
 ```  
 // C4706b.cpp  
@@ -58,7 +56,7 @@ int main()
 }  
 ```  
   
- 할당이 아니라 관계를 테스트하는 게 목적이라면 `==` 연산자를 사용하십시오.  예를 들어, 다음 줄에서는 a와 b가 같은지 여부를 테스트합니다.  
+ 의도 라면와 관계를 테스트 하 고 사용 하도록 할당을 설정 하지는 `==` 연산자입니다. 예를 들어 다음 줄에서는 테스트 여부는 고 b가 같은 경우:  
   
 ```  
 // C4706c.cpp  
@@ -72,7 +70,7 @@ int main()
 }  
 ```  
   
- 테스트 값을 할당의 결과로 만들려면 할당이 0 또는 null이 아니어야 합니다.  예를 들어, 다음 코드에서는 이 경고가 발생하지 않습니다.  
+ 테스트는 할당의 결과 값을 확인 하려는 경우 할당 된 0이 아닌 값 또는 null이 아닌 확인을 테스트 합니다. 예를 들어 다음 코드는이 경고를 생성 하지 않습니다.  
   
 ```  
 // C4706d.cpp  

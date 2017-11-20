@@ -1,31 +1,30 @@
 ---
-title: "방법: for each로 제네릭 컬렉션 반복 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "제네릭 컬렉션, 반복 처리"
+title: "방법: for each로 제네릭 컬렉션을 반복 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: generic collection, iterating over
 ms.assetid: 00288d53-3d41-44d0-be5b-b3033456ceaa
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d4d01ef87b51195f7ff7a05acbdad4a34ca566c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: for each로 제네릭 컬렉션 반복
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[Generics](../windows/generics-cpp-component-extensions.md) Visual C\+\+ 기능을 사용 하면 제네릭 컬렉션을 만들 수 있습니다.  
+# <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>방법: for each로 제네릭 컬렉션 반복
+[제네릭](../windows/generics-cpp-component-extensions.md) Visual c + +의 기능을 사용 하면 제네릭 컬렉션을 만들 수 있습니다.  
   
-## 예제  
- 이 샘플에서는 사용 하는 방법을 보여 줍니다.  `for each`  간단한 제네릭 값 형식의 컬렉션입니다.  
+## <a name="example"></a>예제  
+ 이 샘플에서는 간단한 제네릭 값 형식 컬렉션에서 `for each`를 사용하는 방법을 보여줍니다.  
   
 ```  
 // for_each_generics.cpp  
@@ -92,8 +91,11 @@ int main() {
 }  
 ```  
   
-  **10**  
-**20**  
-**30**   
-## 참고 항목  
+```Output  
+10  
+20  
+30  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [for each, in](../dotnet/for-each-in.md)

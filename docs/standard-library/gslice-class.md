@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,24 +12,22 @@ f1_keywords:
 - valarray/std::gslice::size
 - valarray/std::gslice::start
 - valarray/std::gslice::stride
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::gslice [C++]
 - std::gslice [C++], size
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6928fd3aa902b5ed0ab4e942950af76448e16e5e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: bc5a8795d145832a476bb26bdc9928065e09ca64
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="gslice-class"></a>gslice 클래스
 valarray의 다차원 하위 집합을 정의하는 데 사용되는 valarray에 대한 유틸리티 클래스입니다. valarray가 배열의 모든 요소를 포함하는 다차원 행렬로 간주되는 경우 조각은 다차원 배열에서 벡터를 추출합니다.  
@@ -348,5 +345,4 @@ The strides of vaResult are:
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

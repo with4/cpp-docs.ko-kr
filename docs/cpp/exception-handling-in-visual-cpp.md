@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- try-catch keyword [C++], exception handling
+dev_langs: C++
+helpviewer_keywords: try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b4b2087debb416305ff44966607031c96ead80b9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 622bf0194cbf5c3207d161edefcf7da23238fb85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-handling-in-visual-c"></a>Visual C++에서 예외 처리
 예외는 프로그램이 일반적인 실행 경로를 따라 계속 진행하는 것을 방해하며 프로그램의 제어를 벗어날 수 있는 오류 상태입니다. 개체 생성, 파일 입/출력 및 다른 모듈에서 함수 호출 등 특정 작업은 프로그램이 제대로 실행되는 경우에도 모두 예외의 잠재적 원인입니다. 강력한 코드는 예외를 예상하고 처리합니다.  

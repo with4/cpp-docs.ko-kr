@@ -1,33 +1,32 @@
 ---
-title: "collection_adapter::collection_adapter(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter"
-  - "cliext::collection_adapter::collection_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection_adapter 멤버[STL/CLR]"
+title: 'collection_adapter:: collection_adapter (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::collection_adapter
+- cliext::collection_adapter::collection_adapter
+dev_langs: C++
+helpviewer_keywords: collection_adapter member [STL/CLR]
 ms.assetid: 7e2bb75b-d735-4135-9523-719683e06fe9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b7f913ffb323bcfdb61d9d181f71297ec119e1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::collection_adapter(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Constructs an adapter object.  
+# <a name="collectionadaptercollectionadapter-stlclr"></a>collection_adapter::collection_adapter(STL/CLR)
+어댑터 개체를 생성 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 collection_adapter();  
@@ -36,39 +35,39 @@ collection_adapter(collection_adapter<Coll>^ right);
 collection_adapter(Coll^ collection);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  컬렉션  
- BCL handle to wrap.  
+ 래핑할 BCL 핸들입니다.  
   
- right  
- Object to copy.  
+ 오른쪽  
+ 복사할 개체입니다.  
   
-## 설명  
- The constructor:  
+## <a name="remarks"></a>설명  
+ 생성자:  
   
  `collection_adapter();`  
   
- initializes the stored handle with `nullptr`.  
+ 저장 된 핸들을 초기화 `nullptr`합니다.  
   
- The constructor:  
+ 생성자:  
   
  `collection_adapter(collection_adapter<Coll>% right);`  
   
- initializes the stored handle with `right``.`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ 저장 된 핸들을 초기화 `right.` [collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`합니다.  
   
- The constructor:  
+ 생성자:  
   
  `collection_adapter(collection_adapter<Coll>^ right);`  
   
- initializes the stored handle with `right``->`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ 저장 된 핸들을 초기화 `right->` [collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`합니다.  
   
- The constructor:  
+ 생성자:  
   
  `collection_adapter(Coll^ collection);`  
   
- initializes the stored handle with with `collection`.  
+ 사용 된 저장된 핸들 초기화 `collection`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_collection_adapter_construct.cpp   
@@ -109,15 +108,18 @@ int main()
   
 ```  
   
-  **base\(\) null \= True**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## 요구 사항  
- **Header:** \<cliext\/adapter\>  
+```Output  
+base() null = True  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/어댑터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::operator\=](../dotnet/collection-adapter-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::operator=(STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)

@@ -1,43 +1,41 @@
 ---
 title: "컴파일러 경고 (수준 1) C4747 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4747"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4747"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4747
+dev_langs: C++
+helpviewer_keywords: C4747
 ms.assetid: af37befd-ba1f-4bdc-96e1-a953f7a2ad9c
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 23c0598c97bf0f2ab05169cb7bf72b9efd5a3f7c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4747
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-관리되는 'entrypoint' 호출: DLL 진입점 및 DLL 진입점에서 접근하는 호출을 포함하는 관리 코드는 로더 잠금이 있으면 실행되지 않을 수 있습니다.  
+# <a name="compiler-warning-level-1-c4747"></a>컴파일러 경고(수준 1) C4747
+관리 되는 '진입점' 호출: DLL 진입점 및 DLL 진입점에서 접근 하는 호출을 포함 하 여 로더 잠금 상태에서 관리 되는 코드는 실행 되지 않을 수 있습니다  
   
- 컴파일러에서 MSIL로 컴파일된 예상 DLL 진입점을 발견했습니다.  진입점이 MSIL로 컴파일된 DLL을 로드하는 동안 문제가 발생할 수 있으므로 DLL 진입점 함수를 MSIL로 컴파일하지 않는 것이 좋습니다.  
+ 컴파일러 (예상) DLL 진입점을 MSIL로 컴파일된 발견 했습니다.  해당 진입점 MSIL로 컴파일된 DLL을 로드으로 잠재적인 문제 커지므로 한 DLL 진입점 함수를 MSIL로 컴파일 해서는 안 되는 합니다.  
   
- 자세한 내용은 [혼합형 어셈블리 초기화](../../dotnet/initialization-of-mixed-assemblies.md) 및 [링커 도구 오류 LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md)를 참조하십시오.  
+ 자세한 내용은 참조 [혼합형 어셈블리 초기화](../../dotnet/initialization-of-mixed-assemblies.md) 및 [링커 도구 오류 LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md)합니다.  
   
-### 이 오류를 해결하려면  
+### <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  모듈을 **\/clr**로 컴파일하지 마십시오.  
+1.  사용 하 여 모듈을 컴파일하지 않거나 **/clr**합니다.  
   
-2.  진입점 함수를 `#pragma unmanaged`로 표시하십시오.  
+2.  표시 된 진입점 함수가 `#pragma unmanaged`합니다.  
   
-## 예제  
- 다음 샘플에서는 C4747 경고가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4747 경고가 발생 합니다.  
   
 ```  
 // C4747.cpp  

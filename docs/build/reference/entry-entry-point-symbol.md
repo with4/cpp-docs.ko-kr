@@ -1,78 +1,78 @@
 ---
-title: "/ENTRY(진입점 기호) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/entry"
-  - "VC.Project.VCLinkerTool.EntryPointSymbol"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ENTRY 링커 옵션"
-  - "ENTRY 링커 옵션"
-  - "-ENTRY 링커 옵션"
-  - "시작 주소"
+title: "입력 (진입점 기호) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /entry
+- VC.Project.VCLinkerTool.EntryPointSymbol
+dev_langs: C++
+helpviewer_keywords:
+- starting address
+- -ENTRY linker option
+- /ENTRY linker option
+- ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6daafeba4376cdab679d7e93dce0605fae97a98e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /ENTRY(진입점 기호)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="entry-entry-point-symbol"></a>/ENTRY(진입점 기호)
 ```  
 /ENTRY:function  
 ```  
   
-## 설명  
- 다음은 각 문자에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 여기서  
   
- *함수*  
- .exe 파일이나 DLL의 사용자 정의 시작 주소를 지정하는 함수입니다.  
+ *function*  
+ 사용자 정의 시작을 지정 하는 함수를.exe 파일이 나 DLL에 대 한 해결 합니다.  
   
-## 설명  
- \/ENTRY 옵션은 진입점 함수를 .exe 파일이나 DLL의 시작 주소로 지정합니다.  
+## <a name="remarks"></a>설명  
+ /ENTRY 옵션은.exe 파일 또는 DLL에 대 한 시작 주소와 진입점 함수를 지정합니다.  
   
- 이 함수는 `__stdcall` 호출 규칙으로 정의해야 합니다.  매개 변수 및 반환 값은 프로그램이 콘솔 응용 프로그램인지 Windows 응용 프로그램인지 DLL인지에 따라 달라집니다.   링커에서 진입점을 설정하여 C 런타임 라이브러리가 올바르게 초기화되고 정적 개체에 대한 C\+\+ 생성자가 실행되도록 하는 것이 좋습니다.  
+ 사용 하도록 함수를 정의 해야 합니다는 `__stdcall` 호출 규칙입니다. 매개 변수 및 반환 값에 종속 프로그램 콘솔 응용 프로그램, windows 응용 프로그램 또는 DLL 인지 합니다. C 런타임 라이브러리를 올바르게 초기화 되 고 정적 개체에 대 한 c + + 생성자가 실행 되도록 진입점을 설정 하는 링커 하도록 하는 것이 좋습니다.  
   
- 기본적으로 시작 주소는 C 런타임 라이브러리의 함수 이름입니다.  링커에서는 다음 표에서 보여 주는 것처럼 프로그램 특성에 따라 함수를 선택합니다.  
+ 기본적으로 시작 주소는 C 런타임 라이브러리의 함수 이름입니다. 링커는 다음 표에 나와 있는 것 처럼 해당 프로그램의 특성에 따라 선택 합니다.  
   
-|함수 이름|이 함수를 기본값으로 사용하는 프로그램|  
-|-----------|---------------------------|  
-|**mainCRTStartup**\(또는 **wmainCRTStartup**\)|\/SUBSYSTEM:**CONSOLE**을 사용하는 응용 프로그램. **main**\(또는 **wmain**\)을 호출합니다.|  
-|**WinMainCRTStartup**\(또는 **wWinMainCRTStartup**\)|\/SUBSYSTEM:**WINDOWS**를 사용하는 응용 프로그램. `__stdcall`을 사용하여 정의해야 하는 `WinMain`\(또는 **wWinMain**\)을 호출합니다.|  
-|**\_DllMainCRTStartup**|DLL. `__stdcall`이 있는 경우 이를 사용하여 정의해야 하는 `DllMain`을 호출합니다.|  
+|함수 이름|에 대 한 기본값|  
+|-------------------|-----------------|  
+|**mainCRTStartup** (또는 **wmainCRTStartup**)|/SUBSYSTEM:CONSOLE;를 사용 하는 응용 프로그램 호출 `main` (또는 `wmain`)|  
+|**WinMainCRTStartup** (또는 **wWinMainCRTStartup**)|/SUBSYSTEM을 사용 하는 응용 프로그램:**WINDOWS**; 호출 `WinMain` (또는 `wWinMain`)를 사용 하도록 정의 해야 합니다`__stdcall`|  
+|**_DllMainCRTStartup**|DLL; 호출 `DllMain` 이 특성이 있으면를 정의 해야 사용 하려면`__stdcall`|  
   
- [\/DLL](../../build/reference/dll-build-a-dll.md) 또는 [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) 옵션을 지정하지 않으면 링커에서는 **main** 또는 `WinMain`의 정의 여부에 따라 하위 시스템과 진입점을 선택합니다.  
+ 경우는 [/DLL](../../build/reference/dll-build-a-dll.md) 또는 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) 옵션 지정 하지 않으면, 인지 여부에 따라 하위 시스템 및 항목 요소를 선택 하는 링커 `main` 또는 `WinMain` 정의 됩니다.  
   
- **main**, `WinMain` 및 `DllMain` 함수는 세 가지 형식의 사용자 정의 진입점입니다.  
+ 함수 `main`, `WinMain`, 및 `DllMain` 사용자 정의 진입점의 세 가지입니다.  
   
- 관리되는 이미지를 만들 때 \/ENTRY를 사용하여 지정한 함수에는 LPVOID *var1*, DWORD *var2*, LPVOID *var3* 중 한 가지 시그니처가 있어야 합니다.  
+ /ENTRY에 지정 된 함수의 서명이 있어야 관리 되는 이미지를 만들 때 (LPVOID *var1*, DWORD *var2*, LPVOID *var3*).  
   
- DllMain 진입점을 직접 정의하는 방법에 대한 자세한 내용은 [런타임 라이브러리 동작](../../build/run-time-library-behavior.md)을 참조하십시오.  
+ 직접를 정의 하는 방법에 대 한 내용은 `DllMain` 진입점 참조 [Dll 및 Visual c + + 런타임 라이브러리 동작](../../build/run-time-library-behavior.md) 합니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
-3.  **고급** 속성 페이지를 클릭합니다.  
+3.  클릭는 **고급** 속성 페이지.  
   
-4.  **진입점** 속성을 수정합니다.  
+4.  수정 된 **진입점** 속성입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

@@ -1,32 +1,31 @@
 ---
-title: "방법: Windows 버전 검색(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows[C++], Visual C++를 사용하여 버전 검색"
-  - "Windows[C++], 버전"
+title: "방법: Windows 버전 검색 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows [C++], version
+- Windows [C++], retrieving version using Visual C++
 ms.assetid: 7e6f567b-d378-49bb-aa59-2240f69a022d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 65e2c342b1c7be86035955cf2d22fde838c0c3ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: Windows 버전 검색(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 현재 운영 체제의 플랫폼 및 버전 정보를 검색하는 방법을 보여 줍니다.  이 정보는 <xref:System.Environment.OSVersion%2A?displayProperty=fullName> 속성에 저장되어 있고, 넓은 의미에서의 Windows 버전을 설명하는 열거형과 운영 체제의 정확한 빌드가 포함된 <xref:System.Environment.Version%2A> 개체로 구성되어 있습니다.  
+# <a name="how-to-retrieve-the-windows-version-ccli"></a>방법: Windows 버전 검색(C++/CLI)
+다음 코드 예제에서는 현재 운영 체제의 플랫폼 및 버전 정보를 검색 하는 방법을 보여 줍니다. 이 정보에 저장 되는 <xref:System.Environment.OSVersion%2A?displayProperty=fullName> 속성 넓은 의미에서의 Windows 버전을 설명 하는 열거형의 구성 되어 및 <xref:System.Environment.Version%2A> 운영 체제의 정확한 빌드를 포함 하는 개체입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // os_ver.cpp  
@@ -64,6 +63,6 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [Windows 작업](../dotnet/windows-operations-cpp-cli.md)   
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [Windows 작업 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

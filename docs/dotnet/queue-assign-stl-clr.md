@@ -1,45 +1,43 @@
 ---
-title: "queue::assign(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign 멤버[STL/CLR]"
+title: 'queue:: assign (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 5bec8a84-9561-43f7-ad7f-f845d0edef41
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bb8391ddeee73e5a5f4b2ce63b7034079b64897
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# queue::assign(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Replaces all elements.  
+# <a name="queueassign-stlclr"></a>queue::assign(STL/CLR)
+모든 요소를 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void assign(queue<Value, Container>% right);  
 ```  
   
-#### 매개 변수  
- right  
- Container adapter to insert.  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
+ 삽입할 컨테이너 어댑터입니다.  
   
-## 설명  
- The member function assigns `right``.get_container()` to the underlying container.  You use it to change the entire contents of the queue.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 할당 `right.get_container()` 기본 컨테이너에 있습니다. 큐의 전체 내용을 변경 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_queue_assign.cpp   
@@ -70,13 +68,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::operator\=](../dotnet/queue-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::operator=(STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)

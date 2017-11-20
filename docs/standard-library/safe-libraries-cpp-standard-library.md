@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
-dev_langs:
-- C++
+f1_keywords: _SCL_SECURE_NO_DEPRECATE
+dev_langs: C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: b8cc4b94534845901a900a8c0ecff1d89c6bb600
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 62c5e582773f534aa046eeaeda439b43358e07c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="safe-libraries-c-standard-library"></a>안전한 라이브러리: C++ 표준 라이브러리
 C++ 표준 라이브러리를 포함하여 보안을 강화하기 위해 Visual C++와 함께 제공되는 라이브러리의 여러 가지 기능이 향상되었습니다.  
@@ -56,5 +52,4 @@ C++ 표준 라이브러리를 포함하여 보안을 강화하기 위해 Visual 
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)
-
 

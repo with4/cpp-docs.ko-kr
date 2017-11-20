@@ -1,11 +1,10 @@
 ---
-title: "sampler 클래스 | Microsoft 문서"
+title: "sampler 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,36 +17,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f81208e40cb2a211b714af1efe801e81cd567374
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a925f476d67ac4bc5abd2270f6c0b96df67c4466
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sampler-class"></a>sampler 클래스
-Sampler 클래스 텍스처 샘플링에 사용할 샘플링 구성 정보를 집계 합니다.  
+샘플러 클래스 텍스처 샘플링에 사용할 샘플링 구성 정보를 집계 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,7 +44,7 @@ class sampler;
   
 |이름|설명|  
 |----------|-----------------|  
-|[sampler 생성자](#ctor)|오버로드됨. 샘플러 인스턴스를 생성 합니다.|  
+|[샘플러 생성자](#ctor)|오버로드됨. 샘플러 인스턴스를 생성 합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -135,20 +118,20 @@ sampler(// [6] move constructor
   
 ### <a name="parameters"></a>매개 변수  
  `_Filter_mode`  
- 샘플링 하는 데 사용 되는 필터 모드입니다.  
+ 샘플링에 사용할 필터 모드입니다.  
   
  `_Address_mode`  
  모든 차원에 대 한 샘플링에 사용할 주소 지정 모드입니다.  
   
  `_Border_color`  
- 주소 모드가 address_border 경우에 사용할 테두리 색입니다. 기본값은 `float_4(0.0f, 0.0f, 0.0f, 0.0f)`입니다.  
+ 주소 모드가 address_border 이면 사용할 테두리 색입니다. 기본값은 `float_4(0.0f, 0.0f, 0.0f, 0.0f)`입니다.  
   
  `_Other`  
  [5] 복사 생성자  
- `sampler` 개체를 새를 `sampler` 인스턴스.  
+ `sampler` 새 복사할 개체를 `sampler` 인스턴스.  
   
  [6] 이동 생성자  
- `sampler` 개체를 새 이동 `sampler` 인스턴스.  
+ `sampler` 새 이동할 개체가 `sampler` 인스턴스.  
   
 ##  <a name="address_mode"></a>address_mode 
 
@@ -176,7 +159,7 @@ __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode fi
   
 ##  <a name="get_address_mode"></a>get_address_mode 
 
- 이 위해 구성 된 필터 모드 반환 `sampler`합니다.  
+ 이 위해 구성 된 필터 모드가 반환 `sampler`합니다.  
   
 ```  
 Concurrency::graphics::address_mode get_address_mode() const __GPU;  
@@ -198,18 +181,18 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
   
 ##  <a name="get_filter_mode"></a>get_filter_mode 
 
- 이 위해 구성 된 필터 모드 반환 `sampler`합니다.  
+ 이 위해 구성 된 필터 모드가 반환 `sampler`합니다.  
   
 ```  
 Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 샘플러에 대해 구성 되는 필터 모드입니다.  
+ 필터 모드는 샘플러에 대 한 구성입니다.  
   
 ##  <a name="operator_eq"></a>연산자 = 
 
- 기존 샘플러를 다른 샘플러 개체의 값을 할당합니다.  
+ 기존 샘플러에 다른 샘플러 개체의 값을 할당합니다.  
   
 ```  
 sampler& operator= (// [1] copy assignment operator const sampler& _Other) restrict(amp,
@@ -223,14 +206,13 @@ sampler& operator= (// [2] move assingment operator sampler&& _Other) restrict(a
 ### <a name="parameters"></a>매개 변수  
  `_Other`  
  [1] 복사 할당 연산자  
- `sampler` 여기에 복사할 개체를 `sampler`합니다.  
+ `sampler` 이에 복사할 개체 `sampler`합니다.  
   
  [2] 이동 할당 연산자  
- `sampler` 개체를이 이동 `sampler`합니다.  
+ `sampler` 을이 이동할 개체가 `sampler`합니다.  
   
 ### <a name="return-value"></a>반환 값  
  이 샘플러 인스턴스에 대 한 참조입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
-

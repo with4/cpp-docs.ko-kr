@@ -1,32 +1,30 @@
 ---
-title: "binder1st(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binder1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder1st 함수[STL/CLR]"
+title: binder1st (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binder1st
+dev_langs: C++
+helpviewer_keywords: binder1st function [STL/CLR]
 ms.assetid: a989c9cc-a485-45d9-bd19-519018e6974b
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ae786f50700d59c5f4a24ed0ec7de1c11718f352
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# binder1st(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The template class describes a one\-argument functor that, when called, returns its stored two\-argument functor called with its stored first argument and the supplied second argument.  You use it specify a function object in terms of its stored functor.  
+# <a name="binder1st-stlclr"></a>binder1st(STL/CLR)
+인수가 한 개인 함수를 설명 하는 템플릿 클래스는를 호출할 때는 저장된 첫 번째 인수 및 제공 된 두 번째 인수를 사용 하 여 호출 해당 저장된 인수가 두 개인 함수를 반환 합니다. 사용 하면 해당 저장된 함수 측면에서 함수 개체를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Fun>  
@@ -49,35 +47,35 @@ public:
     };  
 ```  
   
-#### 매개 변수  
- Fun  
- The type of the stored functor.  
+#### <a name="parameters"></a>매개 변수  
+ 재미  
+ 저장 된 함수의 형식입니다.  
   
-## 멤버 함수  
+## <a name="member-functions"></a>멤버 함수  
   
-|Type Definition|설명|  
-|---------------------|--------|  
-|delegate\_type|The type of the generic delegate.|  
-|first\_argument\_type|The type of the functor first argument.|  
-|result\_type|The type of the functor result.|  
-|second\_argument\_type|The type of the functor second argument.|  
-|stored\_function\_type|The type of the functor.|  
+|형식 정의|설명|  
+|---------------------|-----------------|  
+|delegate_type|제네릭 대리자의 형식입니다.|  
+|first_argument_type|구조 함수의 첫 번째 인수의 형식입니다.|  
+|result_type|함수 결과의 형식입니다.|  
+|second_argument_type|두 번째 함수 인수 형식입니다.|  
+|stored_function_type|함수의 형식입니다.|  
   
 |멤버|설명|  
-|--------|--------|  
-|binder1st|Constructs the functor.|  
+|------------|-----------------|  
+|binder1st|함수를 생성합니다.|  
   
 |연산자|설명|  
-|---------|--------|  
-|operator\(\)|Computes the desired function.|  
-|operator delegate\_type^\(\)|Casts the functor to a delegate.|  
+|--------------|-----------------|  
+|operator()|원하는 함수를 계산합니다.|  
+|연산자 delegate_type^()|대리자에 함수를 캐스팅합니다.|  
   
-## 설명  
- The template class describes a one\-argument functor that stores a two\-argument functor and a first argument.  It defines the member operator `operator()` so that, when the object is called as a function, it returns the result of calling the stored functor with the stored first argument and the supplied second argument.  
+## <a name="remarks"></a>설명  
+ 인수가 두 개인 함수 및 첫 번째 인수를 저장 하는 단일 인수 함수를 설명 하는 템플릿 클래스입니다. 멤버 연산자 정의 `operator()` 저장 첫 번째 인수와 제공 된 두 번째 인수 저장된 함수를 호출의 결과 반환 개체를 함수로 호출 될 때 되도록 합니다.  
   
- You can also pass the object as a function argument whose type is `delegate_type^` and it will be converted appropriately.  
+ 함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_binder1st.cpp   
@@ -120,13 +118,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## 요구 사항  
- **Header:** \<cliext\/functional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [bind1st](../dotnet/bind1st-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [bind1st(STL/CLR)](../dotnet/bind1st-stl-clr.md)

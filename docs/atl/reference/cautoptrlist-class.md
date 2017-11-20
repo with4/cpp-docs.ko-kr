@@ -1,46 +1,28 @@
 ---
-title: "CAutoPtrList 클래스 | Microsoft 문서"
+title: "CAutoPtrList 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAutoPtrList
 - ATLCOLL/ATL::CAutoPtrList
 - ATLCOLL/ATL::CAutoPtrList::CAutoPtrList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoPtrList class
+dev_langs: C++
+helpviewer_keywords: CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b39c3c08cf2970036bf8690c46a4f3518a7a55e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 79ca570b8f4534287ae4ec40167de3bc3d947139
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 클래스
 이 클래스는 스마트 포인터의 목록을 구성할 때 유용한 메서드를 제공 합니다.  
@@ -68,8 +50,8 @@ class CAutoPtrList :
 |----------|-----------------|  
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|생성자입니다.|  
   
-## <a name="remarks"></a>주의  
- 이 클래스 생성자를 제공 하 고 메서드를 파생 [CAtlList](../../atl/reference/catllist-class.md) 및 [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) 스마트 포인터를 저장 하는 목록 개체의 생성을 지원 하기 위해. 클래스 [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) 배열 개체에 대 한 비슷한 기능을 제공 합니다.  
+## <a name="remarks"></a>설명  
+ 이 클래스는 생성자를 제공 하 고 메서드를 파생 [CAtlList](../../atl/reference/catllist-class.md) 및 [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) 스마트 포인터를 저장 하는 목록 개체 만들기를 지원할 수 있습니다. 클래스 [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) 배열 개체에 대 한 유사한 기능을 제공 합니다.  
   
  자세한 내용은 참조 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.  
   
@@ -92,11 +74,10 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
  `nBlockSize`  
  블록 크기 기본값은 10입니다.  
   
-### <a name="remarks"></a>주의  
- 블록 크기는 새 요소를 필요할 때 할당 된 메모리의 양에 대비 합니다. 블록 크기가 클수록 메모리 할당 루틴에 대 한 호출 줄어들지만 더 많은 리소스를 사용 합니다.  
+### <a name="remarks"></a>설명  
+ 블록 크기는 새 요소가 필요한 경우 할당 된 메모리의 업무량을 측정 합니다. 블록 크기는 메모리 할당 루틴에 대 한 호출 줄어들지만 더 많은 리소스를 사용 하 여 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CAtlList 클래스](../../atl/reference/catllist-class.md)   
  [CAutoPtrElementTraits 클래스](../../atl/reference/cautoptrelementtraits-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

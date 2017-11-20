@@ -1,32 +1,31 @@
 ---
-title: "방법: 전역 예외 처리기 정의 및 설치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "처리기, global"
+title: "방법: 정의 및 전역 예외 처리기 설치 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 970ecd355b42c83102c034c4639f152b1971dae6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 전역 예외 처리기 정의 및 설치
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The following code example demonstrates how unhandled exceptions can be captured.  The example form contains a button that, when pressed, performs a null reference, causing an exception to be thrown.  This functionality represents a typical code failure.  The resulting exception is caught by the application\-wide exception handler installed by the main function.  
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>방법: 전역 예외 처리기 정의 및 설치
+다음 코드 예제에서는 어떻게 처리 되지 않은 예외를 보여 줍니다. 캡처할 수 있습니다. 폼 예제는 단추를 포함 하는를 누를 때 예외를 throw 하는 null 참조를 수행 합니다. 이 기능은 일반적인 코드 오류를 나타냅니다. Main 함수에 의해 설치 된 응용 프로그램 수준 예외 핸들러에서 예외가 발생 검색 되었습니다.  
   
- This is accomplished by binding a delegate to the <xref:System.Windows.Forms.Application.ThreadException> event.  In this case, subsequent exceptions are then sent to the `App::OnUnhandled` method.  
+ 대리자를 바인딩하여 이렇게는 <xref:System.Windows.Forms.Application.ThreadException> 이벤트입니다. 이 경우 후속 예외 전송 됩니다는 `App::OnUnhandled` 메서드.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // global_exception_handler.cpp  
@@ -80,5 +79,5 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [예외 처리](../windows/exception-handling-cpp-component-extensions.md)

@@ -1,41 +1,41 @@
 ---
-title: "__incfsbyte, __incfsword, __incfsdword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__incfsword"
-  - "__incfsbyte_cpp"
-  - "__incfsbyte"
-  - "__incfsdword"
-  - "__incfsword_cpp"
-  - "__incfsdword_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__incfsword 내장 함수"
-  - "__incfsdword 내장 함수"
-  - "__incfsbyte 내장 함수"
+title: __incfsbyte, __incfsword, __incfsdword | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __incfsword
+- __incfsbyte_cpp
+- __incfsbyte
+- __incfsdword
+- __incfsword_cpp
+- __incfsdword_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __incfsword intrinsic
+- __incfsdword intrinsic
+- __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 353a51385a81ee5f86897f1a05840d1312f5c125
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __incfsbyte, __incfsword, __incfsdword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 **Microsoft 전용**  
   
- 오프셋 시작 부분을 기준으로 하 여 지정 된 메모리 위치에 값 추가 `FS` 세그먼트.  
+ 시작 부분에 상대적인 오프셋으로 지정 된 메모리 위치에 값에 추가 `FS` 세그먼트입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void __incfsbyte(   
@@ -49,25 +49,25 @@ void __incfsdword(
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `Offset`  
- 시작 부분에서 오프셋 `FS`.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `Offset`  
+ 시작 부분에서 오프셋 `FS`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`__incfsbyte`|x86|  
 |`__incfsword`|x86|  
 |`__incfsdword`|x86|  
   
-## 설명  
- 이러한 내장 커널 모드로 가능 하 고 루틴만 내장으로 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 이러한 내장 함수는 커널 모드에서 사용할 수만 이며 루틴은 내장 함수로 사용할 수만 있습니다.  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_\_addfsbyte, \_\_addfsword, \_\_addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
- [\_\_readfsbyte, \_\_readfsdword, \_\_readfsqword, \_\_readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [\_\_writefsbyte, \_\_writefsdword, \_\_writefsqword, \_\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
+## <a name="see-also"></a>참고 항목  
+ [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
+ [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
+ [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

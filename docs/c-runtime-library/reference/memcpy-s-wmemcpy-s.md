@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,36 +26,20 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 44d9ecb713c0fa85f11c3d01b5a15707b0bfaf57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: ac0b4cd7783cd41d480777fe8116a0facea58a28
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 버퍼 간에 바이트를 복사합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)의 버전입니다.  
@@ -98,7 +81,7 @@ errno_t wmemcpy_s(
   
 |`dest`|`destSize`|`src`|`count`|반환 값|`dest`의 내용|  
 |------------|----------------|-----------|---|------------------|------------------------|  
-|any|any|모두|0|0|수정 안 됨|  
+|any|모두|모두|0|0|수정 안 됨|  
 |`NULL`|모두|모두|0이 아닌 값|`EINVAL`|수정 안 됨|  
 |모두|모두|`NULL`|0이 아닌 값|`EINVAL`|`dest`가 0이 됨|  
 |모두|< `count`|모두|0이 아닌 값|`ERANGE`|`dest`가 0이 됨|  

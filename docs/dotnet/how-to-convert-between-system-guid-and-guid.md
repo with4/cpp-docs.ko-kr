@@ -1,32 +1,32 @@
 ---
-title: "방법: System::Guid 및 _GUID 사이에 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GUID, System::GUID로 변환"
-  - "System::GUID"
-  - "System::GUID, GUID로 변환"
+title: "방법: system:: guid 및 _GUID 사이 변환 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- System::GUID
+- GUID, converting to System::GUID
+- System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 31a3857169ad27ad75ed3ef38022048420d1bf0f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: System::Guid 및 _GUID 사이에 변환
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 <xref:System.Guid>와 `_GUID` 사이에서 변환하는 방법을 보여 줍니다.  
+# <a name="how-to-convert-between-systemguid-and-guid"></a>방법: System::Guid 및 _GUID 사이에 변환
+다음 코드 예제에서는 간에 변환 하는 방법을 보여 줍니다.는 <xref:System.Guid> 및 `_GUID`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // convert_guids.cpp  
@@ -68,7 +68,10 @@ int main() {
 }  
 ```  
   
-  **11111111\-2222\-3333\-4455\-555555555555**  
-**11111111\-2222\-3333\-4455\-555555555555**   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+11111111-2222-3333-4455-555555555555  
+11111111-2222-3333-4455-555555555555  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

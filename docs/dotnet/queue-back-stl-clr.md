@@ -1,41 +1,39 @@
 ---
-title: "queue::back(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back 멤버[STL/CLR]"
+title: 'queue:: back (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::back
+dev_langs: C++
+helpviewer_keywords: back member [STL/CLR]
 ms.assetid: 983a5c0f-0a2f-475f-932b-e7dec9eaffbb
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c6badb225d57295931aac7ba6fe6d6e6ec747f6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# queue::back(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accesses the last element.  
+# <a name="queueback-stlclr"></a>queue::back(STL/CLR)
+마지막 요소에 액세스합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 reference back();  
 ```  
   
-## 설명  
- The member function returns a reference to the last element of the controlled sequence, which must be non\-empty.  You use it to access the last element, when you know it exists.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 마지막 요소에 대 한 참조를 반환 합니다. 존재 하는 것을 알고 있는 경우 마지막 요소를 액세스 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_queue_back.cpp   
@@ -68,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**back\(\) \= c**  
- **a b x**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+ a b c  
+back() = c  
+ a b x  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::back\_item](../dotnet/queue-back-item-stl-clr.md)   
- [queue::front](../dotnet/queue-front-stl-clr.md)   
- [queue::front\_item](../dotnet/queue-front-item-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue:: back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)   
+ [queue:: front (STL/CLR)](../dotnet/queue-front-stl-clr.md)   
+ [queue::front_item(STL/CLR)](../dotnet/queue-front-item-stl-clr.md)

@@ -1,35 +1,34 @@
 ---
-title: "auto_gcroot::reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::reset"
-  - "auto_gcroot::reset"
-  - "msclr.auto_gcroot.reset"
-  - "auto_gcroot.reset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reset 메서드"
+title: auto_gcroot::reset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::reset
+- auto_gcroot::reset
+- msclr.auto_gcroot.reset
+- auto_gcroot.reset
+dev_langs: C++
+helpviewer_keywords: reset method
 ms.assetid: dd58467f-3885-4a15-99fb-ed6dd5d19622
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 066ebb82b8a583351cb8a902750ec14071f0612b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::reset
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Destroy the current owned object and optionally take possession of a new object.  
+# <a name="autogcrootreset"></a>auto_gcroot::reset
+현재 소유한 개체를 삭제 하 고 필요에 따라 새 개체를 소유한을 수행 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void reset(  
@@ -37,11 +36,11 @@ void reset(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_new_ptr`  
- \(Optional\) The new object.  
+ (선택 사항) 새 개체입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // msl_auto_gcroot_reset.cpp  
@@ -81,19 +80,22 @@ int main()
 }  
 ```  
   
-  **ClassA constructor: first**  
-**Hello from first A\!**  
-**ClassA constructor: second**  
-**ClassA destructor: first**  
-**Hello from second A\!**  
-**ClassA destructor: second**  
-**done**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_gcroot.h\>  
+```Output  
+ClassA constructor: first  
+Hello from first A!  
+ClassA constructor: second  
+ClassA destructor: first  
+Hello from second A!  
+ClassA destructor: second  
+done  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::release](../dotnet/auto-gcroot-release.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::release](../dotnet/auto-gcroot-release.md)   
+ [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

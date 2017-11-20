@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
 - '-'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], addition
 - subtraction operator [C++], additive operators
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a1017985934cbe871617b76f3e5959121b810602
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 02909b9b42ca781f7a178aa4b9dc7440bd89f2a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="additive-operators--and--"></a>가감 연산자: + 및 -
 ## <a name="syntax"></a>구문  
@@ -120,10 +117,9 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>포인터 빼기  
  두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식은 표준 include 파일 STDDEF.H에 정의된 ptrdiff_t 형식의 부호 있는 정수 계열 결과를 생성합니다.  
   
- 피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기 값은에 대 한 포인터는 (*n* - *i*) 번째 배열 요소 여기서 * n * 요소를 가리키고 원래 포인터와 *i* 두 번째 피연산자의 정수 값입니다.  
+ 피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기 값은에 대 한 포인터는 (*n* - *i*) 번째 배열 요소 여기서  *n*  요소를 가리키고 원래 포인터와 *i* 두 번째 피연산자의 정수 값입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)   
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 가감 연산자](../c-language/c-additive-operators.md)
-

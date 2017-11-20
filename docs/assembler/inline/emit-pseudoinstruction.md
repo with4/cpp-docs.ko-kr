@@ -1,32 +1,31 @@
 ---
-title: "_emit Pseudoinstruction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_emit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_emit pseudoinstruction"
-  - "바이트 정의(인라인 어셈블리)"
+title: _emit pseudoinstruction | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _emit
+dev_langs: C++
+helpviewer_keywords:
+- byte defining (inline assembly)
+- _emit pseudoinstruction
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 00cd8425b4c6a9f7333f77f8bab4dc210528a352
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# _emit Pseudoinstruction
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 전용  
- **\_emit** pseudoinstruction은 현재 텍스트 세그먼트의 현재 위치에 1바이트를 정의합니다.  **\_emit** pseudoinstruction은 MASM의 [DB](../../assembler/masm/db.md) 지시문과 비슷합니다.  
+# <a name="emit-pseudoinstruction"></a>_emit Pseudoinstruction
+## <a name="microsoft-specific"></a>Microsoft 전용  
+ **_emit** pseudoinstruction은 현재 텍스트 세그먼트의 현재 위치에 1 바이트를 정의 합니다. **_emit** pseudoinstruction 유사한는 [DB](../../assembler/masm/db.md) MASM 지시문입니다.  
   
  다음 조각은 0x4A, 0x43, 0x4B 바이트를 코드에 추가합니다.  
   
@@ -41,9 +40,9 @@ __asm {
 ```  
   
 > [!CAUTION]
->  `_emit`이 레지스터를 수정하는 명령을 생성하는 경우 최적화 기능을 사용하여 응용 프로그램을 컴파일하면 컴파일러는 영향을 받는 레지스터를 확인할 수 없습니다.  예를 들어 `_emit`이 **rax** 레지스터를 수정하는 명령을 생성하는 경우 컴파일러는 **rax**가 변경되었음을 알 수 없습니다.  이 때문에 컴파일러는 인라인 어셈블러 코드가 실행된 후 해당 레지스터에 포함된 값을 잘못 가정할 수 있습니다.  따라서 응용 프로그램이 실행될 때 예기치 않은 동작이 발생할 수 있습니다.  
+>  `_emit`이 레지스터를 수정하는 명령을 생성하는 경우 최적화 기능을 사용하여 응용 프로그램을 컴파일하면 컴파일러는 영향을 받는 레지스터를 확인할 수 없습니다. 예를 들어 경우 `_emit` 수정 하는 명령을 생성는 **rax** 레지스터 컴파일러 되었음을 알 수 없습니다 **rax** 변경 되었습니다. 이 때문에 컴파일러는 인라인 어셈블러 코드가 실행된 후 해당 레지스터에 포함된 값을 잘못 가정할 수 있습니다. 따라서 응용 프로그램이 실행될 때 예기치 않은 동작이 발생할 수 있습니다.  
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_\_asm 블록에서 어셈블리 언어 사용](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>참고 항목  
+ [__asm 블록에서 어셈블리 언어 사용](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

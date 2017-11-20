@@ -1,33 +1,31 @@
 ---
 title: "컴파일러 경고 (수준 1) C4124 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4124"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4124"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4124
+dev_langs: C++
+helpviewer_keywords: C4124
 ms.assetid: c08c3a65-9584-47a1-a147-44f00c4b230e
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3de13cb50444530fc0917330771b693f60a7e5f5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4124
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\_\_fastcall과 함께 스택 검사를 수행하는 것은 비효율적입니다.  
+# <a name="compiler-warning-level-1-c4124"></a>컴파일러 경고 (수준 1) C4124
+__fastcall 스택 검사과 함께 효율적입니다.  
   
- 스택 검사가 설정된 상태에서 `__fastcall` 키워드가 사용되었습니다.  
+ `__fastcall` 스택 검사를 사용할 수 있는 키워드를 사용 했습니다.  
   
- `__fastcall` 규칙은 빠른 코드를 생성하지만 스택 검사는 느린 코드를 생성합니다.  `__fastcall`을 사용할 경우에는 **check\_stack** pragma 또는 \/Gs로 스택 검사를 해제시키십시오.  
+ `__fastcall` 규칙 생성 빠른 코드를 생성 하지만 느린 코드 스택 검사는 합니다. 사용 하는 경우 `__fastcall`, 스택 검사 해제는 **check_stack** pragma 또는 /Gs 합니다.  
   
- 이 경고는 이러한 조건으로 선언된 첫째 함수에 대해서만 발생됩니다.
+ 이 경고는 이러한 조건에서 선언 된 첫 번째 함수에 대해서만 발생 합니다.

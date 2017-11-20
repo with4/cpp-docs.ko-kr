@@ -1,41 +1,39 @@
 ---
-title: "hash_multiset::empty(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 멤버[STL/CLR]"
+title: 'hash_multiset:: empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: e1c738eb-9ac9-426b-88b0-2997c9476001
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf7f561d241d408c0f29ea295a83a296d3dfa6b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::empty(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tests whether no elements are present.  
+# <a name="hashmultisetempty-stlclr"></a>hash_multiset::empty(STL/CLR)
+요소가 있는지 여부를 테스트합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 bool empty();  
 ```  
   
-## 설명  
- The member function returns true for an empty controlled sequence.  It is equivalent to [hash\_multiset::size](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`.  You use it to test whether the hash\_multiset is empty.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`합니다. Hash_multiset 비어 있는지 여부를 테스트 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multiset_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::size](../dotnet/hash-multiset-size-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::size(STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)

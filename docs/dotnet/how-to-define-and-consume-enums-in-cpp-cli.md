@@ -1,32 +1,30 @@
 ---
-title: "방법: C++/CLI에서 열거형 정의 및 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enum 클래스, 기본 형식 지정"
+title: "방법: C + 열거형 정의 및 사용 + CLI | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f4243400f20ae30fe1a2bc3826f052eb534297b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: C++/CLI에서 열거형 정의 및 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-This topic discusses enums in C\+\+\/CLI.  
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>방법: C++/CLI에서 열거형 정의 및 사용
+이 항목에서는 열거형 C + + /cli CLI 합니다.  
   
-## Specifying the underlying type of an enum  
- By default, the underlying type of an enumeration is `int`.  However, you can specify the type to be signed or unsigned forms of `int`, `short`, `long`, `__int32`, or `__int64`.  You can also use `char`.  
+## <a name="specifying-the-underlying-type-of-an-enum"></a>열거형의 내부 형식을 지정  
+ 기본적으로 기본 유형의 열거형은 `int`합니다.  그러나 서명 되거나 서명 되지 않은 형태의 되도록 형식을 지정할 수 있습니다 `int`, `short`, `long`, `__int32`, 또는 `__int64`합니다.  사용할 수도 있습니다 `char`합니다.  
   
 ```  
 // mcppv2_enum_3.cpp  
@@ -47,14 +45,17 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **sun**  
-**0**  
-**1**  
-**2**   
-## How to convert between managed and standard enumerations  
- There is no standard conversion between an enum and an integral type; a cast is required.  
+```Output  
+sun  
+0  
+1  
+2  
+```  
+  
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>관리 되는 및 표준 열거형 간에 변환 하는 방법  
+ 열거형과 정수 계열 형식; 간의 표준 변환은 없습니다. 캐스트가 필요 합니다.  
   
 ```  
 // mcppv2_enum_4.cpp  
@@ -74,26 +75,29 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **a and day2 are the same**   
-## Operators and enums  
- The following operators are valid on enums in C\+\+\/CLI:  
+```Output  
+a and day2 are the same  
+```  
+  
+## <a name="operators-and-enums"></a>연산자 및 열거형  
+ 다음 연산자는 C + 열거형에서 사용할 + CLI:  
   
 |연산자|  
-|---------|  
-|\=\= \!\= \< \> \<\= \>\=|  
-|\+ \-|  
+|--------------|  
+|== != \< > \<= >=|  
+|+ -|  
 |&#124; ^ & ~|  
-|\+\+ \-\-|  
+|++ --|  
 |sizeof|  
   
- Operators &#124; ^ & ~ \+\+ \-\- are defined only for enumerations with integral underlying types, not including bool.  Both operands must be of the enumeration type.  
+ 연산자 &#124; ^ & ~ + +-기본 bool을 포함 하지 않는 형식은 정수 계열 열거형에 대해서만 정의 됩니다.  두 피연산자 모두 열거형 형식 이어야 합니다.  
   
- The compiler does no static or dynamic checking of the result of an enum operation; an operation may result in a value not in the range of the enum's valid enumerators.  
+ 컴파일러는 확인 하지 않고 정적 또는 동적; enum 연산의 결과의 열거형의 유효한 열거자의 범위에 없는 값을 작업이 발생할 수 있습니다.  
   
 > [!NOTE]
->  C\+\+11 introduces enum class types in unmanaged code which are significantly different than managed enum classes in C\+\+\/CLI.  In particular, the C\+\+11 enum class type does not support the same operators as the managed enum class type in C\+\+\/CLI, and C\+\+\/CLI source code must provide an accessibility specifier in managed enum class declarations in order to distinguish them from unmanaged \(C\+\+11\) enum class declarations.  For more information about enum classes in C\+\+\/CLI, C\+\+\/CX, and C\+\+11, see [enum class](../windows/enum-class-cpp-component-extensions.md).  
+>  C + + 11의 C + 관리 되는 enum 클래스와 크게 다르게 비관리 코드의 열거형 클래스 형식이 소개 + CLI 합니다. 특히, C + + 11 enum 클래스 형식을 지원 하지 않습니다 관리 되는 열거형 클래스 형식으로 동일한 연산자 C + + /CLI, 및 C + + /CLI 소스 코드 제공 해야 관리 되는 열거형의 액세스 가능성 한정자는 클래스 선언 (c이 + 관리 되지 않는 + 구별할 11) enum 클래스를 선언 합니다. C + enum 클래스에 대 한 자세한 내용은 + CLI, C + + /CX, 및 C + + 11에서는 참조 [enum 클래스](../windows/enum-class-cpp-component-extensions.md)합니다.  
   
 ```  
 // mcppv2_enum_5.cpp  
@@ -128,10 +132,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **4**  
-**1**  
-**True**   
-## 참고 항목  
- [enum class](../windows/enum-class-cpp-component-extensions.md)
+```Output  
+4  
+1  
+True  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [enum 클래스](../windows/enum-class-cpp-component-extensions.md)

@@ -1,48 +1,46 @@
 ---
-title: "hash_map::make_value(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value 멤버[STL/CLR]"
+title: 'hash_map:: make_value (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: 1fcdcacc-5edf-46b7-9481-9a4aef32b025
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89dc5ee04dc0edfd55e23c64b7a2fb6879bd5cc0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::make_value(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Constructs a value object.  
+# <a name="hashmapmakevalue-stlclr"></a>hash_map::make_value(STL/CLR)
+값 개체를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  key  
- Key value to use.  
+ 사용할 키 값입니다.  
   
- mapped  
- Mapped value to search for.  
+ 매핑된  
+ 매핑된 검색할 값입니다.  
   
-## 설명  
- The member function returns a `value_type` object whose key is `key` and whose mapped value is `mapped`.  You use it to compose an object suitable for use with several other member functions.  
+## <a name="remarks"></a>설명  
+ 멤버 함수가 반환 하는 `value_type` 개체 키가 `key` 고 매핑된 값이 `mapped`합니다. 여러 다른 멤버 함수 사용에 적합 한 개체를 작성 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_map_make_value.cpp   
@@ -66,14 +64,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::key\_type](../dotnet/hash-map-key-type-stl-clr.md)   
- [hash\_map::mapped\_type](../dotnet/hash-map-mapped-type-stl-clr.md)   
- [hash\_map::value\_type](../dotnet/hash-map-value-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: key_type (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)   
+ [hash_map:: mapped_type (STL/CLR)](../dotnet/hash-map-mapped-type-stl-clr.md)   
+ [hash_map::value_type(STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)

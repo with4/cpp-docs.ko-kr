@@ -1,41 +1,39 @@
 ---
-title: "multimap::const_reverse_iterator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::const_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reverse_iterator 멤버[STL/CLR]"
+title: 'multimap:: const_reverse_iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::const_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: const_reverse_iterator member [STL/CLR]
 ms.assetid: edc5129e-f2ca-4d3a-a898-365ad0a587e4
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21133ce741255f0dda5fe9d9940f56de23e9fba5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::const_reverse_iterator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of a constant reverse iterator for the controlled sequence..  
+# <a name="multimapconstreverseiterator-stlclr"></a>multimap::const_reverse_iterator(STL/CLR)
+제어 되는 시퀀스에 대 한 상수 역방향 반복기의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef T4 const_reverse_iterator;  
 ```  
   
-## 설명  
- The type describes an object of unspecified type `T4` that can serve as a constant reverse iterator for the controlled sequence.  
+## <a name="remarks"></a>설명  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T4` 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용할 수 있는 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_const_reverse_iterator.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **\[c 3\] \[b 2\] \[a 1\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::reverse\_iterator](../dotnet/multimap-reverse-iterator-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::reverse_iterator(STL/CLR)](../dotnet/multimap-reverse-iterator-stl-clr.md)

@@ -1,65 +1,64 @@
 ---
-title: "/CLRUNMANAGEDCODECHECK(SupressUnmanagedCodeSecurityAttribute 추가) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLRUNMANAGEDCODECHECK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRUNMANAGEDCODECHECK 링커 옵션"
-  - "-CLRUNMANAGEDCODECHECK 링커 옵션"
+title: "-CLRUNMANAGEDCODECHECK (Supressunmanagedcodesecurityattribute 추가) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /CLRUNMANAGEDCODECHECK
+dev_langs: C++
+helpviewer_keywords:
+- -CLRUNMANAGEDCODECHECK linker option
+- /CLRUNMANAGEDCODECHECK linker option
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f4810da2a1dd24893a1e69a35091b3a7c89b527e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRUNMANAGEDCODECHECK(SupressUnmanagedCodeSecurityAttribute 추가)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/CLRUNMANAGEDCODECHECK**는 링커가 관리 코드에서 네이티브 DLL로의 링커 생성 `PInvoke` 호출에 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>를 적용할지 여부를 지정합니다.  
+# <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK(SupressUnmanagedCodeSecurityAttribute 추가)
+**/CLRUNMANAGEDCODECHECK** 링커 적용 되는지 여부를 지정 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 링커 생성 `PInvoke` 관리 코드에서 네이티브 Dll로 호출 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /CLRUNMANAGEDCODECHECK[:NO]  
 ```  
   
-## 설명  
- 기본적으로 링커는 링커 생성 `PInvoke` 호출에 SuppressUnmanagedCodeSecurityAttribute를 적용합니다.  **\/CLRUNMANAGEDCODECHECK**가 적용된 경우 SuppressUnmanagedCodeSecurityAttribute는 적용되지 않습니다.  
+## <a name="remarks"></a>설명  
+ SuppressUnmanagedCodeSecurityAttribute는 링커 생성 링커 기본적으로 적용 `PInvoke` 호출 합니다. 때 **/CLRUNMANAGEDCODECHECK** 가 적용 된 경우 SuppressUnmanagedCodeSecurityAttribute가 적용 되지 않았습니다.  
   
- 링커는 **\/clr** 또는 **\/clr:pure**를 사용하여 컴파일되는 개체에만 이 특성을 추가합니다.  링커는 **\/clr:safe**를 사용하여 컴파일된 개체에는 `PInvoke` 호출을 생성하지 않습니다.  자세한 내용은 [\/clr\(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하십시오.  
+ 링커로 컴파일된 개체에 특성 추가 **/clr** 또는 **/clr: pure**합니다. 링커 생성 하지 않습니다 `PInvoke` 로 컴파일한 개체에서 호출 **/clr: safe**합니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
   
- 링커가 관리되는 호출자의 참조에 맞는 관리되는 기호를 찾을 수 없지만 참조에 맞는 네이티브 기호를 찾을 수 있는 경우 링커는 `PInvoke` 호출을 생성합니다.  `PInvoke`에 대한 자세한 내용은 [관리 코드에서 네이티브 함수 호출](../../dotnet/calling-native-functions-from-managed-code.md)을 참조하십시오.  
+ A `PInvoke` 관리 되는 호출자에 대 한 참조를 충족 하기 위해 관리 되는 기호를 찾을 수 없지만 해당 참조를 충족 하기 위해 네이티브 기호 찾을 수 있는 경우 링커에 의해 호출을 생성 합니다. 에 대 한 자세한 내용은 `PInvoke`, 참조 [관리 코드에서 네이티브 함수 호출](../../dotnet/calling-native-functions-from-managed-code.md)합니다.  
   
- 코드에 <xref:System.Security.AllowPartiallyTrustedCallersAttribute>를 사용하는 경우에는 **\/CLRUNMANAGEDCODECHECK**를 명시적으로 설정해야 합니다.  이미지에 SuppressUnmanagedCodeSecurity와 AllowPartiallyTrustedCallers 특성이 모두 있으면 보안 취약점이 생길 수 있습니다.  
+ 사용 하는 경우 유의 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 코드를 명시적으로 설정 해야 **/CLRUNMANAGEDCODECHECK**합니다. 이미지 SuppressUnmanagedCodeSecurity와 AllowPartiallyTrustedCallers 특성을 포함 하는 경우 잠재적 보안 취약점입니다.  
   
- SuppressUnmanagedCodeSecurityAttribute를 사용할 때의 관련 사항에 대한 자세한 내용은 [Security Optimizations](http://msdn.microsoft.com/ko-kr/cf255069-d85d-4de3-914a-e4625215a7c0)를 참조하십시오.  
+ 참조 [보안 코딩 지침 비관리 코드에 대 한](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) SuppressUnmanagedCodeSecurityAttribute 사용의 의미에 대 한 자세한 내용은 합니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **구성 속성** 노드를 확장합니다.  
+2.  확장 된 **구성 속성** 노드.  
   
-3.  **링커** 노드를 확장합니다.  
+3.  확장 된 **링커** 노드.  
   
-4.  **고급** 속성 페이지를 선택합니다.  
+4.  선택 된 **고급** 속성 페이지.  
   
-5.  **CLR 비관리 코드 검사** 속성을 수정합니다.  
+5.  수정 된 **CLR 비관리 코드 검사** 속성입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
-1.  <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>를 참조하십시오.  
+1.  <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

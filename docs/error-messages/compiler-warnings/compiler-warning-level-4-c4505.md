@@ -1,31 +1,29 @@
 ---
 title: "컴파일러 경고 (수준 4) C4505 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4505"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4505"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4505
+dev_langs: C++
+helpviewer_keywords: C4505
 ms.assetid: 068716a0-7dd2-40af-abf4-478f893b48c5
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 49a15aa4e94097c3ae7c88de41bab3af3887c8ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 4) C4505
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 참조되지 않은 지역 함수를 제거했습니다.  
+# <a name="compiler-warning-level-4-c4505"></a>컴파일러 경고(수준 4) C4505
+'function': 참조 되지 않은 로컬 함수를 제거 했습니다  
   
- 주어진 함수는 지역 함수이고 모듈의 본문에서 참조하지 않았으므로 이는 불필요한 코드입니다.  
+ 지정된 된 함수는 로컬 및 모듈의 본문에서 참조 하지 않았으므로 따라서 함수는 데드 코드가 있음.  
   
- 컴파일러에서 이 불필요한 함수에 대해 코드를 생성하지 않았습니다.
+ 컴파일러는이 불필요 한 함수에 대 한 코드를 생성 하지 않았습니다.

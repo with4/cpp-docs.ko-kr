@@ -1,39 +1,36 @@
 ---
-title: "방법: C# 인덱서 사용(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++, 인덱서"
-  - "인덱서, C# 사용"
+title: "방법: C# 인덱서 사용 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++, indexers
+- indexers, consuming C#
 ms.assetid: 5a11850c-a1a2-4a0a-b95e-f6dc5a87f439
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e7938022bfe2ba1a8f97420a217590de659d9e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: C# 인덱서 사용(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+에는 인덱서가 포함되어 있지 않으며, 인덱싱된 속성이 있습니다.  C\# 인덱서를 사용하려면 인덱싱된 속성과 마찬가지로 인덱서에 액세스합니다.  
+# <a name="how-to-consume-a-c-indexer-ccli"></a>방법: C# 인덱서 사용(C++/CLI)
+Visual c + + 인덱서가; 포함 되어 있지 않습니다. 인덱싱된 속성에 해당 합니다. C# 인덱서를 사용 하려면 인덱싱된 속성 처럼 인덱서를 액세스 합니다.  
   
- 인덱서에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+ 인덱서에 대 한 자세한 내용은 다음을 참조 합니다.  
   
--   [인덱서](../Topic/Indexers%20\(C%23%20Programming%20Guide\).md)  
+-   [인덱서](https://msdn.microsoft.com/library/6x16t2tx.aspx)  
   
--   [방법: 인덱싱된 속성 사용](../misc/how-to-use-indexed-properties.md)  
-  
-## 예제  
- 다음 C\# 프로그램에서는 인덱서를 정의합니다.  
+## <a name="example"></a>예제  
+ 다음 C# 프로그램 인덱서를 정의합니다.  
   
 ```  
 // consume_cs_indexers.cs  
@@ -71,8 +68,8 @@ public class MainClass {
 */  
 ```  
   
-## 예제  
- 다음 Visual C\+\+ 프로그램에서는 인덱서를 사용합니다.  
+## <a name="example"></a>예제  
+ 이 Visual c + + 프로그램에서는 인덱서를 사용 합니다.  
   
 ```  
 // consume_cs_indexers_2.cpp  
@@ -88,16 +85,19 @@ int main() {
 }  
 ```  
   
-  **Element \#0 \= 21**  
-**Element \#1 \= 0**  
-**Element \#2 \= 0**  
-**Element \#3 \= 0**  
-**Element \#4 \= 0**  
-**Element \#5 \= 0**  
-**Element \#6 \= 0**  
-**Element \#7 \= 0**  
-**Element \#8 \= 0**  
-**Element \#9 \= 0**  
-**Element \#10 \= 0**   
-## 참고 항목  
- [다른 .NET 언어와의 상호 운용성](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+Element #0 = 21  
+Element #1 = 0  
+Element #2 = 0  
+Element #3 = 0  
+Element #4 = 0  
+Element #5 = 0  
+Element #6 = 0  
+Element #7 = 0  
+Element #8 = 0  
+Element #9 = 0  
+Element #10 = 0  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [다른 .NET 언어와의 상호 운용성(C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

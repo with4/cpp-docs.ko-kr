@@ -1,73 +1,70 @@
 ---
-title: "SECTIONS(C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SECTIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SECTIONS .def 파일 문"
+title: "섹션 (C/C + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SECTIONS
+dev_langs: C++
+helpviewer_keywords: SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9d1564d068f4d69c3190b8bb24a32e7efb01dbef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# SECTIONS(C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-프로젝트의 출력 파일에 있는 섹션에 대한 액세스 지정자인 하나 이상의 `definitions`로 이루어진 섹션을 파생시킵니다.  
+# <a name="sections-cc"></a>SECTIONS(C/C++)
+하나 이상의 섹션이 `definitions` 프로젝트의 출력 파일 섹션에에서 대 한 액세스 지정자는입니다.  
   
 ```  
 SECTIONS  
 definitions  
 ```  
   
-## 설명  
- 각 정의는 서로 다른 줄에 있어야 합니다.  `SECTIONS` 키워드는 첫 번째 정의와 같은 줄 또는 앞의 줄에 있을 수 있습니다.  .def 파일에는 하나 이상의 `SECTIONS` 문이 들어 있을 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 각 정의는 별도의 줄에 있어야 합니다. `SECTIONS` 키워드는 앞의 줄 또는 첫 번째 정의와 동일한 줄에 있을 수 있습니다. .Def 파일 하나 이상 포함할 수 있습니다 `SECTIONS` 문.  
   
- 이 `SECTIONS` 문은 이미지 파일에 있는 하나 이상의 섹션에 대한 특성을 설정하며, 각 형식의 섹션에 대해 기본 특성을 재정의하는 데 사용될 수 있습니다.  
+ 이 `SECTIONS` 문은 이미지 파일에 하나 이상의 섹션에 대 한 특성을 설정 하며는 섹션의 각 형식에 대 한 기본 특성을 재정의 하는 데 사용할 수 있습니다.  
   
- `definitions`의 형식은 다음과 같습니다.  
+ 형식은 `definitions` 됩니다.  
   
  `.section_name specifier`  
   
- 여기에서 `.section_name`은 프로그램 이미지의 섹션 이름이고 `specifier`는 다음과 같은 하나 이상의 액세스 한정자입니다.  
+ 여기서 `.section_name` 프로그램 이미지의 섹션의 이름 및 `specifier` 하나 이상의 다음 액세스 한정자:  
   
 |한정자|설명|  
-|---------|--------|  
-|`EXECUTE`|해당 섹션을 실행할 수 있습니다.|  
-|`READ`|데이터를 읽을 수 있습니다.|  
-|`SHARED`|이미지를 로드하는 모든 프로세스에서 해당 섹션을 공유합니다.|  
-|`WRITE`|데이터를 쓸 수 있습니다.|  
+|--------------|-----------------|  
+|`EXECUTE`|섹션을 실행할 수 있습니다.|  
+|`READ`|데이터에서 읽을 수 있습니다.|  
+|`SHARED`|이미지를 로드 하는 모든 프로세스에서 섹션을 공유 합니다.|  
+|`WRITE`|데이터에 쓸 수 있습니다.|  
   
- 식별자 이름은 공백으로 구분합니다.  예를 들면 다음과 같습니다.  
+ 식별자 이름은 공백으로 구분 합니다. 예:  
   
 ```  
 SECTIONS  
 .rdata READ WRITE  
 ```  
   
- `SECTIONS`는 섹션 `definitions` 목록의 처음 부분을 표시합니다.  각 `definition`는 서로 다른 줄에 있어야 합니다.  `SECTIONS` 키워드는 첫 번째 `definition` 또는 이전 줄에서와 같은 줄이 될 수 있습니다.  .def 파일에는 하나 이상의 `SECTIONS` 문이 들어 있을 수 있습니다.  `SEGMENTS` 키워드는 `SECTIONS`에 대한 동의어로 지원됩니다.  
+ `SECTIONS`섹션의 목록의 시작을 표시 `definitions`합니다. 각 `definition` 별도 줄에 있어야 합니다. `SECTIONS` 키워드 첫 번째와 같은 줄에 있을 수 있습니다 `definition` 앞의 줄 또는 합니다. .Def 파일 하나 이상 포함할 수 있습니다 `SECTIONS` 문. `SEGMENTS` 키워드는의 동의어로 지원 `SECTIONS`합니다.  
   
- 이전 버전의 Visual C\+\+에서는 다음과 같은 형식을 지원했습니다.  
+ 이전 버전의 Visual c + + 지원 됩니다.  
   
 ```  
 section [CLASS 'classname'] specifier  
 ```  
   
- `CLASS` 키워드는 호환성을 위해 지원되지만 무시됩니다.  
+ `CLASS` 키워드 호환성을 위해 지원 되지만 무시 됩니다.  
   
- 이와 동일한 섹션 특성 지정 방법은 [\/SECTION](../../build/reference/section-specify-section-attributes.md) 옵션을 사용하는 것입니다.  
+ 섹션 특성 지정 하는 해당 하는 방법은 [/section](../../build/reference/section-specify-section-attributes.md) 옵션입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [모듈 정의 문의 규칙](../../build/reference/rules-for-module-definition-statements.md)

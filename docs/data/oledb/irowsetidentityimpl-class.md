@@ -1,34 +1,33 @@
 ---
 title: "IRowsetIdentityImpl 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IRowsetIdentityImpl"
-  - "ATL.IRowsetIdentityImpl"
-  - "IRowsetIdentityImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetIdentityImpl 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IRowsetIdentityImpl
+- ATL.IRowsetIdentityImpl
+- IRowsetIdentityImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetIdentityImpl class
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cef373c7ddafe17a7843f8559588d5f0da9ee270
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetIdentityImpl 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implements the OLE DB [IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx) interface, which enables testing for row identity.  
+# <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 클래스
+OLE DB 구현 [IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx) 행 id에 대 한 테스트 수 있도록 하는 인터페이스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <class T, class RowClass = CSimpleRow>  
@@ -36,24 +35,24 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
    : public IRowsetIdentity  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- A class derived from `IRowsetIdentityImpl`.  
+ 클래스에서 파생 `IRowsetIdentityImpl`합니다.  
   
  `RowClass`  
- The storage unit for the **HROW**.  
+ 에 대 한 저장소 단위는 **HROW**합니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[IsSameRow](../../data/oledb/irowsetidentityimpl-issamerow.md)|Compares two row handles to see if they refer to the same row.|  
+|[IsSameRow](../../data/oledb/irowsetidentityimpl-issamerow.md)|동일한 행을 참조 하는 경우를 확인 하려면 두 개의 행 핸들을 비교 합니다.|  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

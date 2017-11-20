@@ -1,29 +1,27 @@
 ---
-title: "Module::GetClassObject 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GetClassObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetClassObject 메서드"
+title: "Module:: getclassobject 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GetClassObject
+dev_langs: C++
+helpviewer_keywords: GetClassObject method
 ms.assetid: 95b0de1b-f728-4f96-9f44-f6ea71ce56e4
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1ad48700b1a7d2a4ca516e5df98a6ac2e0dd0b78
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Module::GetClassObject 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulegetclassobject-method"></a>Module::GetClassObject 메서드
 클래스 팩터리의 캐시를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -53,7 +51,7 @@ caps.handback.revision: 5
 ## <a name="return-value"></a>반환 값  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]가 아닌 COM에만 이 메서드를 사용합니다. 이 메서드는 IClassFactory 메서드만 노출합니다.  
+ Windows 런타임에서 COM에만이 방법을 사용 합니다. 이 메서드는 IClassFactory 메서드만 노출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  
@@ -61,4 +59,4 @@ caps.handback.revision: 5
  **네임스페이스:** Microsoft::WRL
  
  ## <a name="see-also"></a>참고 항목
- [모듈 클래스](../windows/module-class.md)
+ [Module 클래스](../windows/module-class.md)

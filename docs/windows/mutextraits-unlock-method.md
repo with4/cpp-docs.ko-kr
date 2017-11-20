@@ -1,32 +1,30 @@
 ---
-title: "MutexTraits::Unlock 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unlock 메서드"
+title: "Mutextraits:: Unlock 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock
+dev_langs: C++
+helpviewer_keywords: Unlock method
 ms.assetid: 7c4e5664-6d95-498a-95bb-d30b5e866c2c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6691f756817eb2b7d7ab97113fa06ae908c0b102
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# MutexTraits::Unlock 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-공유 리소스의 독점 컨트롤입니다.  
+# <a name="mutextraitsunlock-method"></a>MutexTraits::Unlock 메서드
+공유 리소스의 한 독점적인 제어권을 해제합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 inline static void Unlock(  
@@ -34,16 +32,16 @@ inline static void Unlock(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `h`  
- 뮤텍스 개체를 처리 합니다.  
+ 뮤텍스 개체에 대 한 핸들입니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
   
- **네임스페이스**Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [MutexTraits 구조체](../windows/mutextraits-structure.md)

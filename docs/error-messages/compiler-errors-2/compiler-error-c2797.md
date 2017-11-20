@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2797
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2797
+f1_keywords: C2797
+dev_langs: C++
+helpviewer_keywords: C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 09c5a26a1a7bb594419d2db211f86074d01da84e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2797"></a>컴파일러 오류 C2797
 (사용 되지 않음) 멤버 이니셜라이저 또는 비정적 데이터 멤버 이니셜라이저 내의 목록 초기화가 구현 되지 않았습니다.  

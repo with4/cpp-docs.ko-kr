@@ -1,33 +1,30 @@
 ---
-title: "operator&lt;= (multimap)(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= 멤버[STL/CLR]"
+title: "연산자&lt;= (multimap) (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: f23cdacd-fb1b-4e87-8e32-497226841871
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e628a37c2099dcc9287139b457fb98f2f9602b08
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# operator&lt;= (multimap)(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-List less than or equal comparison.  
+# <a name="operatorlt-multimap-stlclr"></a>연산자&lt;= (multimap) (STL/CLR)
+목록 보다 작거나 같은지 비교 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Key,  
@@ -36,17 +33,17 @@ template<typename Key,
         multimap<Key, Mapped>% right);  
 ```  
   
-#### 매개 변수  
- left  
- Left container to compare.  
+#### <a name="parameters"></a>매개 변수  
+ 왼쪽  
+ 비교할 왼쪽 컨테이너입니다.  
   
- right  
- Right container to compare.  
+ 오른쪽  
+ 비교할 오른쪽 컨테이너입니다.  
   
-## 설명  
- The operator function returns `!(``right` `<` `left``)`.  You use it to test whether `left` is not ordered after `right` when the two multimaps are compared element by element.  
+## <a name="remarks"></a>설명  
+ 연산자 함수 반환 `!(right < left)`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 되지 않은 `right` 두 multimap 경우 요소 별로 비교 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_operator_le.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[d 4\]**  
-**\[a b c\] \<\= \[a b c\] is True**  
-**\[a b d\] \<\= \[a b c\] is False**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [operator\=\= \(multimap\)](../dotnet/operator-equality-multimap-stl-lr.md)   
- [operator\!\= \(multimap\)](../dotnet/operator-inequality-multimap-stl-clr.md)   
- [operator\< \(multimap\)](../dotnet/operator-less-than-multimap-stl-clr.md)   
- [operator\>\= \(multimap\)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)   
- [operator\> \(multimap\)](../dotnet/operator-greater-than-multimap-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [연산자 = = (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)   
+ [operator! = (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)   
+ [연산자\< (multimap) (STL/CLR)](../dotnet/operator-less-than-multimap-stl-clr.md)   
+ [연산자 > = (multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)   
+ [operator> (multimap)(STL/CLR)](../dotnet/operator-greater-than-multimap-stl-clr.md)

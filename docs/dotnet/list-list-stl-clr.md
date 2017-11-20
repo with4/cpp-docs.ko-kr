@@ -1,32 +1,30 @@
 ---
-title: "list::list(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::list"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "list 멤버[STL/CLR]"
+title: 'list:: list (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::list
+dev_langs: C++
+helpviewer_keywords: list member [STL/CLR]
 ms.assetid: 51b58f63-c65a-4d54-b746-0c10635b123b
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f5ed413ec892ebdf89fc903ac9a9f06e4f2d917a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::list(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listlist-stlclr"></a>list::list(STL/CLR)
 컨테이너 개체를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 list();  
@@ -39,70 +37,71 @@ template<typename InIt>
 list(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 매개 변수  
- count  
- Number of elements to insert.  
+#### <a name="parameters"></a>매개 변수  
+ `count`  
+ 삽입할 요소의 수입니다.  
   
- first  
- Beginning of range to insert.  
+ `first`  
+ 삽입할 범위의의 시작입니다.  
   
- last  
- End of range to insert.  
+ `last`  
+ 삽입할 범위의 끝입니다.  
   
- right  
- Object or range to insert.  
+ `right`  
+ 삽입할 개체 또는 범위입니다.  
   
- val  
- Value of the element to insert.  
+ `val`  
+ 삽입할 요소의 값입니다.  
   
-## 설명  
- The constructor:  
+## <a name="remarks"></a>설명  
+  
+ 생성자:  
   
  `list();`  
   
- initializes the controlled sequence with no elements.  You use it to specify an empty initial controlled sequence.  
+ 요소가 없는 제어 되는 시퀀스를 초기화합니다. 초기는 빈 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `list(list<Value>% right);`  
   
- initializes the controlled sequence with the sequence `[``right``.`[list::begin](../dotnet/list-begin-stl-clr.md)`(),` `right``.`[list::end](../dotnet/list-end-stl-clr.md)`())`.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the list object `right`.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`right.begin()`, `right.end()`). 목록 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`합니다.  
   
- The constructor:  
+ 생성자:  
   
  `list(list<Value>^ right);`  
   
- initializes the controlled sequence with the sequence `[``right``->`[list::begin](../dotnet/list-begin-stl-clr.md)`(),` `right``->`[list::end](../dotnet/list-end-stl-clr.md)`())`.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the list object whose handle is `right`.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`right->begin()`, `right->end()`). 핸들은 목록 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`합니다.  
   
- The constructor:  
+ 생성자:  
   
  `explicit list(size_type count);`  
   
- initializes the controlled sequence with `count` elements each with value `value_type()`.  You use it to fill the container with elements all having the default value.  
+ 이 있는 제어 된 시퀀스를 초기화 `count` 각 요소 값을 가진 `value_type()`합니다. 있습니다을 채우는 데 사용할 컨테이너 요소와 모든 기본 값이 포함 됩니다.  
   
- The constructor:  
+ 생성자:  
   
  `list(size_type count, value_type val);`  
   
- initializes the controlled sequence with `count` elements each with value `val`.  You use it to fill the container with elements all having the same value.  
+ 이 있는 제어 된 시퀀스를 초기화 `count` 각 요소 값을 가진 `val`합니다. 하면을 채우는 데 사용할 컨테이너 요소와 동일한 값이 모두 포함 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `template<typename InIt>`  
   
  `list(InIt first, InIt last);`  
   
- initializes the controlled sequence with the sequence `[``first``,` `last``)`.  You use it to make the controlled sequence a copy of another sequence.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`). 제어 되는 시퀀스의 사본을 다른 시퀀스를 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `list(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- initializes the controlled sequence with the sequence designated by the enumerator `right`.  You use it to make the controlled sequence a copy of another sequence described by an enumerator.  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`합니다. 제어 되는 시퀀스의 사본을 열거자에서 설명 하는 다른 시퀀스를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```  
+```cpp  
 // cliext_list_construct.cpp   
 // compile with: /clr   
 #include <cliext/list>   
@@ -156,20 +155,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::generic\_container](../dotnet/list-generic-container-stl-clr.md)   
- [list::operator\=](../dotnet/list-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [list:: generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
+ [list::operator=(STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

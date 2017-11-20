@@ -1,31 +1,29 @@
 ---
-title: "Callback 함수(Windows Runtime C++ 템플릿 라이브러리) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Callback"
-dev_langs: 
-  - "C++"
+title: "콜백 함수 (Windows 런타임 c + + 템플릿 라이브러리) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Callback
+dev_langs: C++
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 49d97371b351abdac85767853c034ada9b1fa116
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Callback 함수(Windows Runtime C++ 템플릿 라이브러리)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="callback-function-windows-runtime-c-template-library"></a>Callback 함수(Windows Runtime C++ 템플릿 라이브러리)
 멤버 함수가 콜백 메서드인 개체를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<  
@@ -198,7 +196,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `TDelegateInterface`  
  이벤트가 발생할 때 호출할 대리자의 인터페이스를 지정하는 템플릿 매개 변수입니다.  
   
@@ -244,16 +242,16 @@ ComPtr<TDelegateInterface> Callback(
  `method`  
  이벤트가 발생할 때 호출할 멤버 함수입니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  멤버 함수가 지정된 콜백 메서드인 개체입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  대리자 개체의 기본은 IInspectable이 아닌 IUnknown이어야 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  
   
  **네임스페이스:** Microsoft::WRL  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft::WRL 네임스페이스](../windows/microsoft-wrl-namespace.md)

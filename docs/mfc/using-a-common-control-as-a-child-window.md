@@ -1,43 +1,44 @@
 ---
-title: "공용 컨트롤을 자식 창으로 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "자식 창, 공용 컨트롤"
-  - "공용 컨트롤[C++], 자식 창"
-  - "컨트롤[MFC], 자식 창으로 사용"
-  - "창[C++], 공용 컨트롤"
-  - "Windows 공용 컨트롤[C++], 자식 창"
+title: "공용 컨트롤을 사용 하 여 자식 창으로 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [MFC], using as child windows
+- windows [MFC], common controls as
+- child windows [MFC], common controls as
+- common controls [MFC], child windows
+- Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 116b844f9ecc270d31fe3731c38a63e64b2541fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 공용 컨트롤을 자식 창으로 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Any of the Windows common controls can be used as a child window of any other window.  The following procedure describes how to create a common control dynamically and then work with it.  
+# <a name="using-a-common-control-as-a-child-window"></a>공용 컨트롤을 자식 창으로 사용
+다른 모든 창의 자식 창으로 사용할 수는 Windows 공용 컨트롤 중 하나입니다. 다음 절차에는 공용 컨트롤을 동적으로 만들고 다음 작업을 하는 방법을 설명 합니다.  
   
-### To use a common control as a child window  
+### <a name="to-use-a-common-control-as-a-child-window"></a>공용 컨트롤을 자식 창으로 사용 하려면  
   
-1.  Define the control in the related class or handler.  
+1.  관련된 클래스 또는 처리기에서 컨트롤을 정의 합니다.  
   
-2.  Use the control's override of the [CWnd::Create](../Topic/CWnd::Create.md) method to create the Windows control.  
+2.  컨트롤의 재정의 사용 하 여는 [CWnd::Create](../mfc/reference/cwnd-class.md#create) 메서드 Windows 컨트롤을 만들 수 있습니다.  
   
-3.  After the control has been created \(as early as the `OnCreate` handler if you subclass the control\), you can manipulate the control using its member functions.  See the descriptions of individual controls at [컨트롤](../mfc/controls-mfc.md) for details on methods.  
+3.  컨트롤을 만든 후 (만큼는 `OnCreate` 처리기 경우 하위 컨트롤), 해당 멤버 함수를 사용 하 여 컨트롤을 조작할 수 있습니다. 개별 컨트롤의 설명을 참조 [컨트롤](../mfc/controls-mfc.md) 메서드에 대 한 자세한 내용은 합니다.  
   
-4.  When you are finished with the control, use [CWnd::DestroyWindow](../Topic/CWnd::DestroyWindow.md) to destroy the control.  
+4.  사용 하 여 컨트롤을 마쳤으면 [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) 컨트롤을 제거할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컨트롤 만들기 및 사용](../mfc/making-and-using-controls.md)   
  [컨트롤](../mfc/controls-mfc.md)
+

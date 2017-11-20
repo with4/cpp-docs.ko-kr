@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,35 +29,18 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs:
-- C++
-helpviewer_keywords:
-- array_view class
+dev_langs: C++
+helpviewer_keywords: array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e921ae841aa1eade25fdf2ec272039cc41007a9e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d0378e35d182409cd4077b3f7c6fc270d116f18c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="arrayview-class"></a>array_view 클래스
 다른 컨테이너에 보관 된 데이터를 통해 N 차원 보기를 나타냅니다.  
@@ -136,7 +118,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[source_accelerator_view](#source_accelerator_view)|가져옵니다는 [accelerator_view](accelerator-view-class.md) 여기서의 데이터 소스는 `array_view` 위치한|  
 |[value_type](#value_type)|값 유형이 `array_view` 및 바운드 배열입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `array_view` 클래스에 포함 된 데이터에 대 한 뷰를 나타냅니다.는 [배열](array-class.md) 개체나의 하위 섹션은 `array` 개체입니다.  
   
  에 액세스할 수 있습니다는 `array_view` 여기서 원본 데이터는 로컬 위치 또는 서로 다른 액셀러레이터 또는 일관성이 도메인에 개체 (원격). 개체를 원격으로 액세스 하는 경우 뷰는 복사 하 고 필요에 따라 캐시 됩니다. 자동 캐싱의 효과 제외 하 고 `array_view` 개체와 비슷한 성능 프로필을 한 `array` 개체입니다. 뷰를 통해 데이터에 액세스 하는 성능이 약간 저하가 됩니다.  
@@ -696,7 +678,7 @@ array_view section(
  [인덱스](index-class.md) 출처의 위치를 지정 하는 개체입니다. 하위 섹션은 범위의 나머지입니다.  
   
  `_I0`  
- 이 섹션의 시작 가장 중요 한 구성 요소입니다.  
+ 이 섹션의 원점의 가장 중요 한 구성 요소입니다.  
   
  `_I1`  
  이 섹션의 시작 다음-에-가장 중요 한 구성 요소입니다.  
@@ -844,4 +826,3 @@ array_view<const value_type,_New_rank> view_as(
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)
-

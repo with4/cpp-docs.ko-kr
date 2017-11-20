@@ -1,53 +1,34 @@
 ---
-title: "컴파일러 경고 (수준 1) C4803 | Microsoft 문서"
+title: "컴파일러 경고 (수준 1) C4803 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4803
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4803
+f1_keywords: C4803
+dev_langs: C++
+helpviewer_keywords: C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2581d4240306e88d75fe5fcc0249371005853b7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 43353a5a86bbd7c8e185fed925506ac1ae0fbfe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4803"></a>컴파일러 경고(수준 1) C4803
-'method': raise 메서드는 이벤트의 구현과 다른 저장소 클래스는 'event'  
+'method': raise 메서드에 이벤트의 다른 저장소 클래스는 'event'  
   
-이벤트 메서드의 같은 저장소 클래스의 이벤트 선언 해야 합니다. 컴파일러는 저장소 클래스는 동일한 있도록 이벤트의 메서드를 조정 합니다.  
+이벤트 메서드는 이벤트 선언 같은 저장소 클래스를 같아야 합니다. 컴파일러에서 이벤트의 메서드에 조정 하는 저장소 클래스가입니다.  
   
-이 경고는 이벤트 인터페이스에서를 구현 하는 클래스가 있는 경우에 발생할 수 있습니다. 컴파일러가 생성 하지 않습니다 암시적으로 이벤트에 대 한 raise 메서드를 인터페이스에. 클래스에서 해당 인터페이스를 구현 하는 경우 컴파일러에서 암시적으로 raise 메서드를 생성 하 고 해당 메서드에 됩니다 가상, 따라서 경고 합니다. 이벤트에 대 한 자세한 내용은 참조 하십시오. [이벤트](../../windows/event-cpp-component-extensions.md)합니다.  
+이 경고는 인터페이스에서 이벤트를 구현 하는 클래스가 있는 경우에 발생할 수 있습니다. 컴파일러가 생성 하지 않습니다 암시적으로 이벤트에 raise 메서드가 인터페이스에서. 컴파일러에서 암시적으로 raise 메서드가 생성 및 해당 메서드에 됩니다 가상, 따라서 클래스에서 해당 인터페이스를 구현 하는 경우 경고 합니다. 자세한 내용은 다음을 참조 하십시오. [이벤트](../../windows/event-cpp-component-extensions.md)합니다.  
   
-참조 [경고](../../preprocessor/warning.md) pragma는 경고를 해제 하는 방법에 대 한 내용은 합니다.  
+참조 [경고](../../preprocessor/warning.md) pragma 경고를 해제 하는 방법에 대 한 내용은 합니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 c4803 오류가 발생 합니다.  
@@ -89,4 +70,3 @@ int main() {
    ep->E1();  
 }  
 ```  
-

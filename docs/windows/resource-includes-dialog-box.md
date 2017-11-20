@@ -1,60 +1,59 @@
 ---
 title: "리소스 내용 대화 상자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.resourceincludes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "리소스 내용 대화 상자"
-  - "rc 파일, 저장소 변경"
-  - "기호 헤더 파일, 변경"
-  - "소스 코드 컴파일, 리소스 포함"
-  - ".rc 파일, 저장소 변경"
-  - "기호 헤더 파일, 읽기 전용"
-  - "기호, 기호 헤더 파일"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.resourceincludes
+dev_langs: C++
+helpviewer_keywords:
+- Resource Includes dialog box
+- rc files, changing storage
+- symbol header files, changing
+- compiling source code, including resources
+- .rc files, changing storage
+- symbol header files, read-only
+- symbols, symbol header files
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: be954451335deef88ad459b9de6b865ff45ed909
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 리소스 내용 대화 상자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**리소스 내용** 대화 상자를 사용하여, 환경에서 프로젝트 .rc 파일에 모든 리소스를 저장하고 Resource.h에 [기호](../mfc/symbols-resource-identifiers.md)를 저장하는 것을 정상 작업이 되도록 수정할 수 있습니다.  
+# <a name="resource-includes-dialog-box"></a>리소스 내용 대화 상자
+사용할 수는 **리소스 내용** 작업 수정할 수는 환경의 일반 프로젝트의.rc 파일 및 모든 모든 리소스를 저장할 경우의 대화 상자 [기호](../windows/symbols-resource-identifiers.md) Resource.h에 있습니다.  
   
- **리소스 내용** 대화 상자를 열려면 [리소스 뷰](../windows/resource-view-window.md)에서 .rc 파일을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **리소스 내용**을 선택합니다.  
+ 열려는 **리소스 내용** 대화 상자에서 마우스 오른쪽 단추로 클릭.rc 파일을 [리소스 뷰](../windows/resource-view-window.md)를 눌러 **리소스 내용** 바로 가기 메뉴에서 합니다.  
   
  **기호 헤더 파일**  
- 리소스 파일에 대한 기호 정의가 저장되는 헤더 파일의 이름을 변경할 수 있습니다.  자세한 내용은 [기호 헤더 파일의 이름 변경](../windows/changing-the-names-of-symbol-header-files.md)을 참조하세요.  
+ 리소스 파일에 대한 기호 정의가 저장되는 헤더 파일의 이름을 변경할 수 있습니다. 자세한 내용은 참조 [기호 헤더 파일의 이름을 변경](../windows/changing-the-names-of-symbol-header-files.md)합니다.  
   
  **읽기 전용 기호 지시문**  
- 편집 세션 동안 수정해서는 안 되는 기호가 들어 있는 헤더 파일을 포함할 수 있습니다.  예를 들어 여러 프로젝트 간에 공유되는 기호 파일을 포함할 수 있습니다.  MFC .h 파일을 포함할 수도 있습니다.  자세한 내용은 [공유\(읽기 전용\) 또는 계산된 기호 포함](../windows/including-shared-read-only-or-calculated-symbols.md)을 참조하세요.  
+ 편집 세션 동안 수정해서는 안 되는 기호가 들어 있는 헤더 파일을 포함할 수 있습니다. 예를 들어 여러 프로젝트 간에 공유되는 기호 파일을 포함할 수 있습니다. MFC .h 파일을 포함할 수도 있습니다. 자세한 내용은 참조 [비롯 한 공유 (읽기 전용) 또는 계산 된 기호](../windows/including-shared-read-only-or-calculated-symbols.md)합니다.  
   
  **컴파일 타임 지시문**  
- 기본 리소스 파일에 있는 리소스와 별도로 생성 및 편집되는 리소스 파일을 포함하거나, 컴파일 타임 지시문\(예: 특정 조건에 따라 리소스를 포함하는 지시문\)을 포함하거나, 사용자 지정 형식에 리소스를 포함할 수 있습니다.  컴파일 타임 지시문 상자를 사용하여 표준 MFC 리소스 파일을 포함할 수도 있습니다.  자세한 내용은 [컴파일 타임에 리소스 포함](../windows/how-to-include-resources-at-compile-time.md)을 참조하세요.  
+ 기본 리소스 파일에 있는 리소스와 별도로 생성 및 편집되는 리소스 파일을 포함하거나, 컴파일 시간 지시문(예: 특정 조건에 따라 리소스를 포함하는 지시문)을 포함하거나, 사용자 지정 형식에 리소스를 포함할 수 있습니다. 컴파일 시간 지시문 상자를 사용하여 표준 MFC 리소스 파일을 포함할 수도 있습니다. 자세한 내용은 참조 [컴파일 타임에 리소스를 포함 하 여](../windows/how-to-include-resources-at-compile-time.md)합니다.  
   
 > [!NOTE]
->  이 텍스트 상자의 항목은 .rc 파일에서 각각  `TEXTINCLUDE 1`, `TEXTINCLUDE 2` 및 `TEXTINCLUDE 3`으로 표시됩니다.  자세한 내용은 [TN035: Visual C\+\+에서 여러 개의 리소스 파일 및 헤더 파일 사용](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)을 참조하세요.  
+>  이 텍스트 상자의 항목 표시 하는.rc 파일에 표시 `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, 및 `TEXTINCLUDE 3` 각각. 자세한 내용은 참조 [TN035:를 사용 하 여 여러 리소스 파일과 헤더 파일 Visual c + +](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)합니다.  
   
- **리소스 내용** 대화 상자를 사용하여 리소스 파일을 변경한 후에는 하고 나면  .rc 파일을 닫았다가 다시 열어야 변경 내용이 적용됩니다.  자세한 내용은 [컴파일 타임에 리소스 포함](../windows/how-to-include-resources-at-compile-time.md)을 참조하세요.  
+ 사용 하 여 리소스 파일에 변경 내용을 적용 하 고 나면는 **리소스 내용** .rc 파일을 닫은 다음 변경 내용을 적용 하려면에 대 한 필요 대화 상자. 자세한 내용은 참조 [컴파일 타임에 리소스를 포함 하 여](../windows/how-to-include-resources-at-compile-time.md)합니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하세요. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하세요.  
+
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  Win32  
   
-## 참고 항목  
- [How to: Specify Include Directories for Resources](../windows/how-to-specify-include-directories-for-resources.md)   
- [Symbols: Resource Identifiers](../mfc/symbols-resource-identifiers.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>참고 항목  
+ [방법: 지정 리소스에 대 한 포함 디렉터리](../windows/how-to-specify-include-directories-for-resources.md)   
+ [기호: 리소스 식별자](../windows/symbols-resource-identifiers.md)   
+ [리소스 파일](../windows/resource-files-visual-studio.md)   
+ [리소스 편집기](../windows/resource-editors.md)

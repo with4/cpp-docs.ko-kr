@@ -1,37 +1,36 @@
 ---
-title: "How to: Declare and Use Interior Pointers and Managed Arrays (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, interior"
-  - "arrays [C++], managed"
+title: "방법: 선언 및 내부 포인터 및 관리 되는 배열 사용 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- pointers, interior
+- arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 83cd51bbba64a9b28e8b3cf7f9a1ecadd369d16b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Declare and Use Interior Pointers and Managed Arrays (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] 샘플에서는 선언 내부 배열 포인터를 사용하는 방법을 보여줍니다.  
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>방법: 내부 포인터 및 관리되는 배열 선언 및 사용(C++/CLI)
+다음 C + + /cli CLI 샘플 선언 배열에 내부 포인터를 사용 하는 방법을 보여 줍니다.  
   
 > [!IMPORTANT]
->  이 언어 기능은   **\/clr**  컴파일러 옵션을 지원하지만  **\/ZW**  컴파일러 옵션은 지원하지 않습니다.  
+>  이 언어 기능으로 사용할 수는 **/clr** 컴파일러 옵션을 하지만 하지는 **/ZW** 컴파일러 옵션입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // interior_ptr_arrays.cpp  
@@ -57,7 +56,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>출력  
   
 ```  
 1st element in arr holds: 1  
@@ -65,5 +64,5 @@ ipi points to memory address whose value is: 1
 after incrementing ipi, it points to memory address whose value is: 2  
 ```  
   
-## 참고 항목  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>참고 항목  
+ [interior_ptr(C++/CLI)](../windows/interior-ptr-cpp-cli.md)

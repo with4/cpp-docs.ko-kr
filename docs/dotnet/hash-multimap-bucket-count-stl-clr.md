@@ -1,41 +1,39 @@
 ---
-title: "hash_multimap::bucket_count(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::bucket_count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bucket_count 멤버[STL/CLR]"
+title: 'hash_multimap:: bucket_count (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::bucket_count
+dev_langs: C++
+helpviewer_keywords: bucket_count member [STL/CLR]
 ms.assetid: 63b7e08e-16fb-42e5-b592-d1fd29c47637
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 988284714d42c5b39ffc77debb986805f5bd0af4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::bucket_count(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Counts the number of buckets.  
+# <a name="hashmultimapbucketcount-stlclr"></a>hash_multimap::bucket_count(STL/CLR)
+버킷 수를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int bucket_count();  
 ```  
   
-## 설명  
- The member functions returns the current number of buckets.  You use it to determine the size of the hash table.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 현재 버킷 수를 반환 합니다. 해시 테이블의 크기를 확인 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multimap_bucket_count.cpp   
@@ -81,22 +79,27 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 0.25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0.0234375**  
-**max\_load\_factor\(\) \= 0.25**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::load\_factor](../dotnet/hash-multimap-load-factor-stl-clr.md)   
- [hash\_multimap::max\_load\_factor](../dotnet/hash-multimap-max-load-factor-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md)   
+ [hash_multimap::max_load_factor(STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md)

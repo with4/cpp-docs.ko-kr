@@ -1,31 +1,29 @@
 ---
 title: "링커 도구 오류 LNK1000 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1000"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1000"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1000
+dev_langs: C++
+helpviewer_keywords: LNK1000
 ms.assetid: 86421b9a-460a-4285-8dce-9b8257d78122
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9c1cc88fa7e604dd1676634bb02bbe5a6dd63be0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 링커 도구 오류 LNK1000
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-알 수 없는 오류입니다. 기술 지원 옵션을 보려면 설명서를 참조하십시오.  
+# <a name="linker-tools-error-lnk1000"></a>링커 도구 오류 LNK1000
+알 수 없는 오류입니다. 기술 지원 옵션에 대 한 설명서를 참조 하십시오.  
   
- 오류가 발생한 상황을 기록하고 문제점을 파악하여 재현할 수 있는 테스트 사례를 만듭니다. `Microsoft Product Support Services`를 참조하십시오.  자세한 내용은 [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650)을 참조하십시오.  
+ 오류에 대 한 환경을 기록, 문제를 파악 하 여 재현 가능한 테스트 사례를 문의 한 다음 `Microsoft Product Support Services`합니다. 조사 하 고 이러한 오류를 보고 하는 방법에 대 한 정보를 참조 하십시오. [http://support.microsoft.com/default.aspx?scid=kb;en-us;134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650)합니다.  
   
- 표준 헤더 파일\(dos.h 등\)과 자체 파일이 뒤섞인 경우 이 오류가 발생할 수 있습니다.  `#include`를 사용하여 표준 헤더 파일을 먼저 포함한 다음 자체 헤더 파일을 포함하십시오.
+ 표준 헤더 파일 (예를 들어 dos.h)과 사용자의 파일을 혼합 하면이 오류가 발생할 수 있습니다. `#include`먼저, 헤더 파일을 직접 표준 헤더에 옵니다.

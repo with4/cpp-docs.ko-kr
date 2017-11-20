@@ -1,34 +1,33 @@
 ---
-title: "IOpenRowsetImpl::OpenRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OpenRowset"
-  - "IOpenRowsetImpl::OpenRowset"
-  - "IOpenRowsetImpl.OpenRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenRowset 메서드"
+title: 'Iopenrowsetimpl:: Openrowset | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OpenRowset
+- IOpenRowsetImpl::OpenRowset
+- IOpenRowsetImpl.OpenRowset
+dev_langs: C++
+helpviewer_keywords: OpenRowset method
 ms.assetid: 2ece8d6c-d165-4f1d-b155-8609bbb60eb6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 168b9a8e73ea1c9c365ba87b2b8900e710de8bcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IOpenRowsetImpl::OpenRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Opens and returns a rowset that includes all rows from a single base table or index.  
+# <a name="iopenrowsetimplopenrowset"></a>IOpenRowsetImpl::OpenRowset
+페이지를 열고 단일 기본 테이블 또는 인덱스에서 모든 행을 포함 하는 행 집합을 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -43,14 +42,14 @@ Opens and returns a rowset that includes all rows from a single base table or in
 );  
 ```  
   
-#### 매개 변수  
- See [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx) in the *OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [iopenrowset:: Openrowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
-## 설명  
- This method is not found in ATLDB.H.  It is created by the ATL Object Wizard when you create a provider.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 ATLDB에서 찾을 수 없습니다. 8. 공급자를 만들 때 ATL 개체 마법사가 생성 됩니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IOpenRowsetImpl 클래스](../../data/oledb/iopenrowsetimpl-class.md)

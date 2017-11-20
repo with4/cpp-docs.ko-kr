@@ -1,50 +1,31 @@
 ---
-title: "out_of_memory 클래스 | Microsoft 문서"
+title: "out_of_memory 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - out_of_memory
 - AMPRT/out_of_memory
 - AMPRT/Concurrency::out_of_memory::out_of_memory
-dev_langs:
-- C++
-helpviewer_keywords:
-- out_of_memory class
+dev_langs: C++
+helpviewer_keywords: out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b593f8f85d4e36496f2ec2fc7bbadf8f2bfd742e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 95694c3566ef7700d30e40c1a89af56d1e70d05b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="outofmemory-class"></a>out_of_memory 클래스
-시스템 또는 장치 메모리 부족으로 인해 메서드가 실패할 때 throw 되는 예외입니다.  
+메서드가 시스템이 나 장치 메모리 부족으로 인해 실패할 경우 throw 되는 예외입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -93,5 +74,4 @@ out_of_memory () throw();
   
   
 ## <a name="see-also"></a>참고 항목  
- [동시성 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
-
+ [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)

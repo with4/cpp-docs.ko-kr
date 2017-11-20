@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- getpid
+apiname: getpid
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- getpid
-dev_langs:
-- C++
-helpviewer_keywords:
-- getpid function
+f1_keywords: getpid
+dev_langs: C++
+helpviewer_keywords: getpid function
 ms.assetid: 4eaabab4-362b-429f-854e-ae4941919824
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 3cef7df2213d601dfe4eb8d2b7292e94d34fa7b8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getpid"></a>getpid
 이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_getpid](../../c-runtime-library/reference/getpid.md)를 사용하세요.  

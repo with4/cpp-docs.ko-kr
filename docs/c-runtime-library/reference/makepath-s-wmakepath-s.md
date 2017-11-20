@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - makepath_s
 - _makepath_s
 - wmakepath_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _makepath_s function
 - wmakepath_s function
@@ -38,31 +36,15 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0d3ac02a0ac8dfa7f681c8585be7e1b6f41f0f82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 0e3a2885adffda35b4e55117b5ffa591ecf487c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 구성 요소에서 경로 이름을 만듭니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)의 버전입니다.  

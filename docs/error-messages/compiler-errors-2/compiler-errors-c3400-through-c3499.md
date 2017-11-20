@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -104,38 +103,23 @@ helpviewer_keywords:
 - C3486
 - C3494
 - C3497
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 79b672c07429526ccbf7f5d5f9553956bf1f01e0
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 40bf082b95fd39af44605927189d0977c065a3b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>컴파일러 오류 C3400 c 3499 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   
@@ -144,7 +128,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3400](compiler-error-c3400.md)|와 관련 된 순환 제약 조건 종속성 '*t 1*'및'*constraint2*'|  
 |컴파일러 오류 C3401|'*지정자*': 클래스 템플릿에 잘못 된 어셈블리 액세스 지정 자가 'private'만 허용 됩니다|  
 |컴파일러 오류 C3402|'*함수*': 현재 범위에서 제외 하 고 오버 로드를 확인할 수 없습니다|  
-|컴파일러 오류 C3403|thread_local은 /clr:pure 또는 /clr:safe와 함께 사용할 수 없습니다.|  
+|컴파일러 오류 C3403|thread_local은 /clr으로 사용할 수 없습니다: pure 또는 /clr: safe|  
 |컴파일러 오류 C3404|'*생성*': 예기치 않은 구문 오류가 있습니다.|  
 |컴파일러 오류 C3405|'*함수*': 완전 한 설명자 없이 오버 로드를 확인할 수 없습니다|  
 |컴파일러 오류 c 3406이 발생|'*키워드*': 상세 형식 지정자에 사용할 수 없습니다|  
@@ -171,14 +155,14 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C3427|'*컨텍스트*': '*키워드*' layout_version 함께 사용할 수 없습니다 (*번호*)|  
 |컴파일러 오류 C3428|'*컨텍스트*': '*키워드*' 클래스 선언 또는 정의에 적용할 수|  
 |컴파일러 오류 C3429|'*컨텍스트*': '*키워드*' 공용 구조체에 적용할 수 없습니다|  
-|컴파일러 오류 C3430|범위가 지정된 열거형에는 이름이 있어야 합니다.|  
+|컴파일러 오류 C3430|범위가 지정 된 열거형에는 이름이 있어야 합니다.|  
 |컴파일러 오류 C3431|'*식별자*': *type1* 로 다시 선언할 수 없습니다 *유형 2*|  
 |컴파일러 오류 C3432|'*식별자*': 범위가 지정 되지 않은 열거형의 정방향 선언에는 내부 형식이 있어야 합니다.|  
 |컴파일러 오류 C3433|'*식별자*': 열거형의 모든 선언은 동일한 내부 형식이 있어야 합니다., '*type1*'지금'*type2*'|  
 |컴파일러 오류 C3434|'*컨텍스트*': 열거자 값 '*번호*'로 나타낼 수 없습니다'*형식*', 값은 '*번호*'|  
 |컴파일러 오류 C3435|문자 집합 '*이름*' 지원 되지 않습니다|  
-|컴파일러 오류 C3436|#/source-charset, /execution-charset 또는 /utf-8이 지정 된 경우에 pragma setlocale 지원 되지 않습니다.|  
-|컴파일러 오류 C3437|#/source-charset, /execution-charset 또는 /utf-8이 지정 된 경우에 pragma execution_character_set 지원 되지 않습니다.|  
+|컴파일러 오류 C3436|/source-charset, /execution-charset 또는 /utf-8이 지정 된 경우 #pragma setlocale 지원 되지 않습니다.|  
+|컴파일러 오류 C3437|/source-charset, /execution-charset 또는 /utf-8이 지정 된 경우 #pragma execution_character_set 지원 되지 않습니다.|  
 |컴파일러 오류 C3438|'*컨텍스트*': '*값*' managed/WinRT 클래스에 적용할 수 없습니다|  
 |컴파일러 오류 C3439|layout_version (*번호*): 잘못 된 버전 번호|  
 |컴파일러 오류 C3440|'*선언*': layout_version (*번호*) 이전 선언과 호환 되지 않는|  
@@ -187,7 +171,7 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C3443|에 대 한 기본 멤버 이니셜라이저 '*클래스*' 재귀적입니다.|  
 |컴파일러 오류 C3444|집계 클래스의 빈*클래스*' '{}'를 사용 하 여 초기화 해야 합니다|  
 |컴파일러 오류 C3445|초기화-복사-목록 '*형식*' 명시적 생성자를 사용할 수 없습니다|  
-|컴파일러 오류 C3446|'*클래스*': 값 클래스의 멤버는 기본 멤버 이니셜라이저 허용 되지 않습니다.|  
+|[컴파일러 오류 C3446](compiler-error-c3446.md)|'*클래스*': 값 클래스의 멤버는 기본 멤버 이니셜라이저 허용 되지 않습니다.|  
 |컴파일러 오류 C3447|사용되지 않습니다.|  
 |컴파일러 오류 C3448|사용되지 않습니다.|  
 |컴파일러 오류 C3449|사용되지 않습니다.|  
@@ -197,7 +181,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3453](compiler-error-c3453.md)|'*특성*': 특성 때문에 적용 되지 한정자 '*한정자*'와 일치 하지 않습니다|  
 |[컴파일러 오류 C3454](compiler-error-c3454.md)|[attribute]는 클래스 선언에 사용할 수 없습니다.|  
 |[컴파일러 오류 C3455](compiler-error-c3455.md)|'*특성*': 해당 인수와 일치 하는 특성 생성자 없음|  
-|[컴파일러 오류 C3456](compiler-error-c3456.md)|[소스\_annotation_attribute] managed WinRT 클래스 선언에 사용할 수 없습니다|  
+|[컴파일러 오류 C3456](compiler-error-c3456.md)|[소스\_annotation_attribute] managed/WinRT 클래스 선언에 사용할 수 없습니다|  
 |[컴파일러 오류 C3457](compiler-error-c3457.md)|'*특성*': 특성 명명 되지 않은 인수를 지원 하지 않습니다|  
 |[컴파일러 오류 C3458](compiler-error-c3458.md)|' [*특성*]': 특성 ' [*특성*]'에 이미 지정 된 '*식별자*'|  
 |[컴파일러 오류 C3459](compiler-error-c3459.md)|' [*특성*]': 특성 클래스 인덱서 에서만 허용 됩니다 (인덱싱된 기본 속성)|  
@@ -218,14 +202,14 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C3474|출력 파일을 열 수 없습니다 '*filename*'|  
 |컴파일러 오류 C3475|입력된 파일에 구문 오류가 '*filename*'|  
 |컴파일러 오류 C3476|파일을 열 수 없습니다 '*filename*' 입력에 대 한|  
-|컴파일러 오류 C3477|확인되지 않은 컨텍스트에서 람다가 나타날 수 없습니다.|  
+|컴파일러 오류 C3477|확인 되지 않은 컨텍스트에서 람다 나타날 수 없습니다.|  
 |컴파일러 오류 C3478|'*식별자*': 배열을 복사 하 여 캡처할 수 없습니다|  
-|컴파일러 오류 C3479|람다에 대한 SAL 주석은 지원되지 않습니다.|  
+|컴파일러 오류 C3479|람다에 대 한 SAL 주석은 지원 되지 않습니다.|  
 |[컴파일러 오류 C3480](compiler-error-c3480.md)|'*변수*': 람다 캡처 변수가 바깥쪽 함수 범위에서 가져와야 합니다.|  
 |[컴파일러 오류 C3481](compiler-error-c3481.md)|'*식별자*': 람다 캡처 변수가 없습니다|  
 |[컴파일러 오류 C3482](compiler-error-c3482.md)|비정적 멤버 함수 내에서는 'this'는 람다 캡처로만 사용할 수 있습니다.|  
 |[컴파일러 오류 C3483](compiler-error-c3483.md)|'*식별자*' 이미 람다 캡처 목록의의 일부인|  
-|[컴파일러 오류 C3484](compiler-error-c3484.md)|구문 오류: 반환 형식 앞에 '->'가 필요합니다.|  
+|[컴파일러 오류 C3484](compiler-error-c3484.md)|구문 오류: '->' 반환 형식 앞 필요 합니다.|  
 |[컴파일러 오류 C3485](compiler-error-c3485.md)|람다 정의에 cv 한정자를 사용할 수 없습니다.|  
 |컴파일러 오류 C3486|사용되지 않습니다.|  
 |[컴파일러 오류 C3487](compiler-error-c3487.md)|'*형식*': 모든 반환 식은 같은 형식으로 추론 합니다:가 이전에 '*형식*'|  
@@ -235,11 +219,10 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C3491](compiler-error-c3491.md)|'*식별자*':는 복사를 통해 캡처에서에서 수정할 수는 변경할 수 없는 람다|  
 |[컴파일러 오류 C3492](compiler-error-c3492.md)|'*식별자*': 익명 공용 구조체의 멤버를 캡처할 수 없습니다|  
 |[컴파일러 오류 C3493](compiler-error-c3493.md)|'*식별자*' 지정 된 기본 캡처 모드가 없기 때문에 암시적으로 캡처할 수 없습니다.|  
-|컴파일러 오류 C3494|바깥쪽 캡처 모드에서 허용하지 않으므로 'this'를 명시적으로 캡처할 수 없습니다.|  
+|컴파일러 오류 C3494|'this' 캡처할 수 없습니다 명시적으로 바깥쪽 캡처 모드에서 허용 하지 않으므로|  
 |[컴파일러 오류 C3495](compiler-error-c3495.md)|'*식별자*': 캡처의 식별자는 람다의 연결 범위에 선언 된 자동 저장 기간이 있는 변수 여야 합니다|  
 |[컴파일러 오류 C3496](compiler-error-c3496.md)|'this'는 항상 값으로 캡처됩니다. '&'가 무시되었습니다.|  
 |컴파일러 오류 C3497|람다의 인스턴스를 생성할 수 없습니다.|  
 |[컴파일러 오류 C3498](compiler-error-c3498.md)|'*식별자*': 관리 되 는/WinRT 형식이 있는 변수를 캡처할 수 없습니다|  
 |[컴파일러 오류 C3499](compiler-error-c3499.md)|반환 형식이 void로 지정된 람다가 값을 반환할 수 없습니다.|  
-
 

@@ -1,59 +1,58 @@
 ---
-title: "/Zs(구문만 검사) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zs 컴파일러 옵션[C++]"
-  - "구문만 검사 컴파일러 옵션"
-  - "Zs 컴파일러 옵션"
-  - "-Zs 컴파일러 옵션[C++]"
+title: "-Zs (구문만 검사) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /zs
+dev_langs: C++
+helpviewer_keywords:
+- -Zs compiler option [C++]
+- Syntax Check Only compiler option
+- Zs compiler option
+- /Zs compiler option [C++]
 ms.assetid: b4b41e6a-3f41-4d09-9cb6-fde5aa2cfecf
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: eb23032f7c0cd4b59a510c632b3311a09b520301
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /Zs(구문만 검사)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-명령줄에서 소스 파일의 구문만 검사하도록 컴파일러에 지시합니다.  
+# <a name="zs-syntax-check-only"></a>/Zs(구문만 검사)
+명령줄에서 소스 파일의 구문만 검사 하도록 컴파일러에 지시 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /Zs  
 ```  
   
-## 설명  
- 이 옵션을 사용하면 출력 파일이 작성되지 않고 오류 메시지가 표준 출력에 기록됩니다.  
+## <a name="remarks"></a>설명  
+ 이 옵션을 사용할 경우 출력 파일이 생성 되, 하 고 오류 메시지를 표준 출력에 기록 됩니다.  
   
- **\/Zs** 옵션은 소스 파일을 컴파일 및 링크하기 전에 구문 오류를 찾아 수정할 수 있는 가장 빠른 방법입니다.  
+ **/Zs** 옵션 찾고 컴파일 및 소스 파일을 연결 하기 전에 구문 오류를 해결 하는 빠른 방법을 제공 합니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
+2.  **C/C++** 폴더를 클릭합니다.  
   
 3.  **명령줄** 속성 페이지를 클릭합니다.  
   
 4.  **추가 옵션** 상자에 컴파일러 옵션을 입력합니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

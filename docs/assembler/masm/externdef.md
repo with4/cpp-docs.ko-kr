@@ -1,40 +1,38 @@
 ---
-title: "EXTERNDEF | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EXTERNDEF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EXTERNDEF directive"
+title: EXTERNDEF | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: EXTERNDEF
+dev_langs: C++
+helpviewer_keywords: EXTERNDEF directive
 ms.assetid: 95a10de6-c345-4428-a2f2-90f7d411dc86
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 64aa9cc69825ef1f932024bc45c051e16c99e2eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# EXTERNDEF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-하나 이상의 외부 변수, 레이블 또는 호출 된 기호를 정의  *이름* 는 `type`.  
+# <a name="externdef"></a>EXTERNDEF
+하나 이상의 외부 변수, 레이블 또는 이라는 기호 정의 *이름* 형식이 변수인 `type`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 EXTERNDEF [[langtype]] name:type [[, [[langtype]] name:type]]...  
 ```  
   
-## 설명  
- 경우  *이름* 정의 된 모듈을 것으로 처리 됩니다  [PUBLIC](../../assembler/masm/public-masm.md).  경우  *이름* 참조 하는 모듈에서 해당으로 처리 됩니다  [EXTERN](../../assembler/masm/extern-masm.md).  경우  *이름* 입니다 참조 않은 무시 됩니다.  `type` 수 있습니다  [ABS](../../assembler/masm/operator-abs.md), imports  *이름* 상수는.  일반적으로 사용 되는 파일에 포함 됩니다.  
+## <a name="remarks"></a>설명  
+ 경우 *이름* 정의로 처리 되는 모듈 [공용](../../assembler/masm/public-masm.md)합니다. 경우 *이름* 참조로 처리 되는 모듈 [EXTERN](../../assembler/masm/extern-masm.md)합니다. 경우 *이름* 가 참조 되지 않으면는 무시 됩니다. `type` 수 [ABS](../../assembler/masm/operator-abs.md)를 가져오는 *이름* 상수입니다. 일반적으로 사용 되는에서 파일을 포함 합니다.  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

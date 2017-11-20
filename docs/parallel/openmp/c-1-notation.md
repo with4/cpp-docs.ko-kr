@@ -1,36 +1,35 @@
 ---
-title: "C.1 Notation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "C.1 표기법 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a23b2631-8096-4bf3-ac23-ba4f4bd7a52a
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 20ad99729f526cd9cb5f1e4e6c239272341462e7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# C.1 Notation
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이름에 대 한 비\-터미널, 문법 규칙 구성 대체 방법으로 별도 줄에 콜론, 다음에.  
+# <a name="c1-notation"></a>C.1 표기법
+문법 규칙은 비 단말에 대 한 이름으로 구성 별도 줄에 대체 대안 뒤에 오는 콜론, 옵니다.  
   
- 식 구문 용어선택  라는 용어는 교체 내에서 선택적입니다.  
+ 구문상 식 termopt 용어 교체 내 옵션 임을 나타냅니다.  
   
- 구문 식  *용어*optseq    동일 합니다  *용어 seq*선택  다음 추가 규칙:  
+ 구문상 식 *용어*optseq 같습니다 *용어 seq*다음 추가 규칙으로 선택:  
   
  *용어 seq* :  
   
  *용어*  
   
- *seq 용어 용어*  
+ *용어 seq 용어*  
   
- *용어 seq* ,  *용어*
+ *용어 seq* , *용어*

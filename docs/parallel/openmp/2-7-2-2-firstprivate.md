@@ -1,38 +1,37 @@
 ---
-title: "2.7.2.2 firstprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.2 firstprivate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ece6ff12-2be1-4e4f-866c-d39345fd87b5
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac868b33e8a53778faa3fba9724974e4af6ffb90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.2 firstprivate
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Firstprivate** 절 상위 집합에서 제공 하는 기능을 제공는  **개인** 절.  구문에는  **firstprivate** 절은 다음과 같습니다:  
+# <a name="2722-firstprivate"></a>2.7.2.2 firstprivate
+**firstprivate** 절에서 제공 하는 기능의 상위 집합을 제공 된 **개인** 절. 구문은 **firstprivate** 절은 다음과 같습니다.  
   
 ```  
 firstprivate(variable-list)  
 ```  
   
- 지정 된 변수  *변수 목록* 가  **개인** 절 구문에 설명 된 대로,  [섹션 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) 25 페이지.  초기화 또는 생성 구문에는 스레드를 실행 하기 전에 스레드 당 한 번만 수행 됩니다 경우에 발생 합니다.  에 있는  **firstprivate** 절을 병렬 구문에 새 private 개체의 초기 값입니다 발견 한 스레드에 대 한 병렬 구문 바로 이전에 있는 원래 개체의 값입니다.  에 있는  **firstprivate** 절 작업 공유 생성자에서 작업 공유 생성자를 실행 하는 각 스레드에 대 한 개인 새 개체의 초기 값은 시간에 동일한 스레드에서 작업 공유 생성자를 발견 한 시점 이전에 원래 개체의 값입니다.  또한 C\+\+ 개체에 대 한 새 개인 개체 각 스레드에 대 한 원본 개체에서 생성 된 복사본입니다.  
+ 에 지정 된 변수 *변수 목록* 가 **개인** 절에서 의미 체계에 설명 된 대로 [섹션 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) 페이지 25입니다. 초기화 또는 생성 하는 구문에서 스레드의 실행 전에 스레드당 한 번 수행 된 하는 경우 발생 합니다. 에 대 한는 **firstprivate** 병렬 구문에 절을 새 전용 개체의 초기 값은 처리할 스레드는 병렬 구문 바로 앞에 있는 원래 개체의 값입니다. 에 대 한는 **firstprivate** 작업 공유 구문에 절을 작업 공유 생성자를 실행 하는 각 스레드에 대 한 새 전용 개체의 초기 값은 시간에 지점 이전의 존재 하는 원래 개체의 값입니다 동일한 스레드에서 작업 공유 생성자에서 발생 합니다. 또한 c + + 개체에 대 한 각 스레드에 대 한 새 전용 개체는 원본 개체에서 복사 생성 합니다.  
   
- 제한에는  **firstprivate** 절은 다음과 같습니다:  
+ 시의 제한 된 **firstprivate** 절은 다음과 같습니다.  
   
--   지정 된 변수를  **firstprivate** 절 되었습니다 형식 또는 참조 형식입니다.  
+-   에 지정 된 변수는 **firstprivate** 절 불완전 한 형식 또는 참조 형식이 있어야 합니다.  
   
--   지정한 클래스 형식의 변수  **firstprivate** 액세스할 수 있는, 분명 복사 생성자가 있어야 합니다.  
+-   으로 지정 된 클래스 형식의 변수에 **firstprivate** 액세스 가능 하며 명확한 복사 생성자가 있어야 합니다.  
   
--   변수는 병렬 영역 내부에서는 개인 또는 해당 표시를  **감소** 절에  **병렬** 지시문에 지정 될 수 없습니다는  **firstprivate** 병렬 구문에 바인딩되는 작업 공유 지시문의 절.
+-   변수 또는 개인 병렬 영역 내부에 표시 되는 **감소** 절은 **병렬** 지시문에 지정할 수 없습니다는 **firstprivate** 절에는 병렬 구문에 바인딩하는 작업 공유 지시문입니다.

@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ATL._U_STRINGorID
 - ATL::_U_STRINGorID
 - _U_STRINGorID
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: b02d539ae2a067c015988a847407bf631b6e8c1a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 클래스
 이 인수 어댑터 클래스 리소스 이름 중 하나를 사용 하면 ( `LPCTSTR`s) 또는 리소스 Id ( **UINT**s) 호출자 ID를 사용 하 여 문자열을 변환할 필요 없이 함수에 전달할는 **MAKEINTRESOURCE** 매크로입니다.  
@@ -90,4 +87,3 @@ _U_STRINGorID(LPCTSTR lpString);
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)
-

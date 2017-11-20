@@ -1,60 +1,61 @@
 ---
-title: "Creating a Tool Tip for a Toolbar Button | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tool tips [C++], adding to toolbar buttons"
-  - "\n in tool tip"
-  - "toolbar buttons [C++], tool tips"
-  - "buttons [C++], tool tips"
-  - "Toolbar editor, creating tool tips"
+title: "도구 모음 단추에 대 한 도구 설명 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- tool tips [C++], adding to toolbar buttons
+- "\nin tool tip"
+- toolbar buttons [C++], tool tips
+- buttons [C++], tool tips
+- Toolbar editor, creating tool tips
 ms.assetid: 0af65342-fd78-4e78-8d0d-dc68f7fc462e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e9399341f19a614783c0f8f873051ed048d89b35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Creating a Tool Tip for a Toolbar Button
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 도구 설명을 만들려면  
+# <a name="creating-a-tool-tip-for-a-toolbar-button"></a>도구 모음 단추에 대한 도구 설명 만들기
+### <a name="to-create-a-tool-tip"></a>도구 설명을 만들려면  
   
-1.  도구 모음 단추를 선택합니다.  
+1.  도구 모음 단추를 선택 합니다.  
   
-2.  [속성 창](../Topic/Properties%20Window.md)의 **Prompt** 속성 필드에서 상태 표시줄에 표시할 단추에 대한 설명을 추가하고, 메시지 뒤에 \\n과 도구 설명 이름을 추가합니다.  
+2.  에 [속성 창](/visualstudio/ide/reference/properties-window)에 **프롬프트** 속성 필드를 메시지 이후에; 상태 표시줄에 대 한 단추에 대 한 설명을 추가 \n 및 도구 설명 이름 추가 합니다.  
   
- 일반적인 도구 설명의 예로는 워드패드의 인쇄 단추에 대한 도구 설명이 있습니다.  
+ 도구 설명의 일반적인 예로 워드 패드에서 인쇄 단추:  
   
- 1.  워드패드를 엽니다.  
+ 1. 워드 패드를 엽니다.  
   
- 2.  마우스 포인터로 **인쇄** 도구 모음 단추를 가리킵니다.  
+ 2. 마우스 포인터를 올려는 **인쇄** 도구 모음 단추입니다.  
   
- 3.  마우스 포인터 아래에 '인쇄'라는 단어가 표시되는지 확인합니다.  
+ 3. 마우스 포인터 아래에 단어 '' 지금 인쇄는 부동 창인 합니다.  
   
- 4.  워드패드 창의 맨 아래에 있는 상태 표시줄에 "활성 문서를 인쇄합니다."라는 텍스트가 표시되는지 확인합니다.  
+ 4. (워드 패드 창 맨 아래)에 있는 상태 표시줄 살펴봅니다-아래 텍스트 "활성 문서를 인쇄" 확인 합니다.  
   
- 3단계에서 '인쇄'라는 단어는 "도구 설명 이름"이고 4단계에서 '활성 문서를 인쇄합니다'라는 텍스트는 "상태 표시줄에 표시되는 단추에 대한 설명"입니다.  
+ 3 단계에서에서 '인쇄' 라는 단어는 "도구 설명 이름"이 고은 4 단계에서에서 '활성 문서를 인쇄 합니다 '라는 텍스트에 대 한 설명에 대 한 상태 표시줄 단추입니다."  
   
- **도구 모음** 편집기에서 이러한 결과를 얻으려면 **Prompt** 속성을 **활성 문서를 인쇄합니다.\\n인쇄**로 설정하십시오.  
+ 이 효과 사용 하는 경우는 **도구 모음** 설정 편집기는 **프롬프트** 속성을 **활성 문서를 인쇄**합니다.  
   
 > [!NOTE]
->  [속성 창](../Topic/Properties%20Window.md)을 사용하여 프롬프트 텍스트를 편집할 수 있습니다.  
+>  프롬프트 텍스트를 사용 하 여 편집할 수는 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](https://msdn.microsoft.com/library/f45fce5x.aspx) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](https://msdn.microsoft.com/library/xbx3z216.aspx)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](https://msdn.microsoft.com/library/h6270d0z.aspx)합니다.  
   
  요구 사항  
   
  MFC 또는 ATL  
   
-## 참고 항목  
- [Creating, Moving, and Editing Toolbar Buttons](../mfc/creating-moving-and-editing-toolbar-buttons.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>참고 항목  
+ [만들기, 이동 및 편집 도구 모음 단추](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [도구 모음 편집기](../windows/toolbar-editor.md)
+

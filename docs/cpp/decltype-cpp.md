@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- decltype_cpp
-dev_langs:
-- C++
+f1_keywords: decltype_cpp
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], decltype
 - decltype operator
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f07590275ca6e2b65d6f3d58bcea825acc71f73
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 472b09b268fe9f493a4df025950a3565fd6c944c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="decltype--c"></a>decltype (c + +)
 `decltype` 형식 지정자는 지정된 식의 형식을 생성합니다. `decltype` 형식 지정자와 함께 [auto 키워드](../cpp/auto-cpp.md), 템플릿 라이브러리를 작성 하는 개발자에 게 주로 유용 합니다. 반환 형식이 해당 템플릿 인수의 형식에 종속되는 템플릿 함수를 선언하려면 `auto` 및 `decltype`을 사용하세요. 또는 다른 함수에 대한 호출을 래핑한 다음 래핑된 함수의 반환 형식을 반환하는 템플릿 함수를 선언하려면 `auto` 및 `decltype`을 사용하세요.  
@@ -90,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  다음 프로토타입에서는 대체 함수 선언의 구문을 보여 줍니다. `const` 및 `volatile` 한정자 및 `throw` [예외 사양이](../cpp/exception-specifications-throw-cpp.md) 는 선택 사항입니다. *function_body* 자리 표시자 함수에서 수행 하는 작업을 지정 하는 복합 문을 나타냅니다. 모범 코딩 사례는 *식* 에서 자리 표시자는 `decltype` 문의 하 여 지정 된 식이 일치 해야는 `return` 문, 있는 경우에 *function_body*합니다.  
   
- **자동** *function_name* **(** *매개 변수*<sub>opt</sub> **)** ** const**<sub>opt</sub> **휘발성**<sub>opt</sub> ** -> ** **decltype (** *식* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
+ **자동** *function_name* **(** *매개 변수*<sub>opt</sub> **)**  **const**<sub>opt</sub> **휘발성**<sub>opt</sub>  **->**  **decltype (** *식* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
   
  다음 코드 예제에서는 `myFunc` 템플릿 함수의 컴파일하면 지정되는 반환 형식이 `t` 및 `u` 템플릿 인수의 형식에 따라 결정됩니다. 모범 코딩 사례, 코드 예제에서는 또한 사용 하 여 rvalue 참조 및 `forward` 지원 함수 템플릿을 *완벽 전달*합니다. 자세한 내용은 [RValue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조하세요.  
   
@@ -214,4 +210,3 @@ static_assert(test2, "PASS2");
   
  `decltype(auto)`Visual Studio 2015 이상이 필요합니다.  
   
-

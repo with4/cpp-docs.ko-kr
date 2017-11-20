@@ -1,45 +1,43 @@
 ---
-title: "multiset::find(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find 멤버[STL/CLR]"
+title: 'multiset:: find (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: 162c9002-fb34-44f9-8e42-6bacecd0ebbc
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cc04dba0a9638047ea199cefdbcd3851d45c432e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::find(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetfind-stlclr"></a>multiset::find(STL/CLR)
 지정된 키와 일치하는 요소를 찾습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  key  
  검색할 키 값입니다.  
   
-## 설명  
- 만일 제어되는 시퀀스의 적어도 하나의 원소가 `key`를 사용하는 순서와 동일하다면, 멤버 함수는 이들 요소들의 하나를 지정하는 반복기를 반환합니다; 그렇지 않으면 이것은 [multiset::end](../dotnet/multiset-end-stl-clr.md)`()`를 반환합니다.  지정된 키와 일치하는 제어된 시퀀스에서 현재 요소를 위치시키기 위해 이것을 사용합니다.  
+## <a name="remarks"></a>설명  
+ 동일 하 게 정렬 된 제어 되는 시퀀스에 요소가 하나 이상 있으면 `key`, 이러한 요소 중 하나를 지정 하는 반복기를 반환 하는 멤버 함수, 그렇지 않으면 반환 [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()`. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소를 찾을 수 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multiset_find.cpp   
@@ -70,20 +68,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**find A \= False**  
-**find b \= b**  
-**find C \= False**   
-## 설명  
- `find` 는 이것을 찾는 여러 요소를 보증하지 않는 것을 주목하세요.  
+```Output  
+ a b c  
+find A = False  
+find b = b  
+find C = False  
+```  
   
-## 요구 사항  
- **Header:** \<cliext\/set\>  
+## <a name="description"></a>설명  
+ `find` 발견 하는 여러 가지 요소는 보장 하지 않습니다.  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::equal\_range](../dotnet/multiset-equal-range-stl-clr.md)   
- [multiset::lower\_bound](../dotnet/multiset-lower-bound-stl-clr.md)   
- [multiset::upper\_bound](../dotnet/multiset-upper-bound-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)   
+ [multiset:: lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)   
+ [multiset::upper_bound(STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)

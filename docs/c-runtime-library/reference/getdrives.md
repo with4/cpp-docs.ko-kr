@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _getdrives
+apiname: _getdrives
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,43 +24,27 @@ apitype: DLLExport
 f1_keywords:
 - getdrives
 - _getdrives
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _getdrives function
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: 314c8633ce43a154533873efadc7f3a0006a1aff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/28/2017
-
+ms.openlocfilehash: 21f9c1a5668e15da6ca55fd1d28c038dd7d8c81e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getdrives"></a>_getdrives
 현재 사용 가능한 디스크 드라이브를 나타내는 비트 마스크를 반환합니다.  
   
 > [!IMPORTANT]
->  이 API는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   

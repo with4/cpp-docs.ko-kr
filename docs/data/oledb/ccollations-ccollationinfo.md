@@ -1,80 +1,80 @@
 ---
-title: "CCollations, CCollationInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLLATION_CATALOG"
-  - "m_szCatalog"
-  - "CCollationInfo"
-  - "CCollations"
-  - "CHARACTER_SET_NAME"
-  - "CHARACTER_SET_SCHEMA"
-  - "m_szCharSetName"
-  - "m_szSchema"
-  - "CHARACTER_SET_CATALOG"
-  - "m_szCharSetSchema"
-  - "m_szCharSetCatalog"
-  - "m_szPadAttribute"
-  - "COLLATION_NAME"
-  - "COLLATION_SCHEMA"
-  - "m_szName"
-  - "COLLATIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCollationInfo 매개 변수 클래스"
-  - "CCollations typedef 클래스"
-  - "CHARACTER_SET_CATALOG"
-  - "CHARACTER_SET_NAME"
-  - "CHARACTER_SET_SCHEMA"
-  - "COLLATION_CATALOG"
-  - "COLLATION_NAME"
-  - "COLLATION_SCHEMA"
-  - "COLLATIONS 레코드 집합"
-  - "m_szCatalog"
-  - "m_szCharSetCatalog"
-  - "m_szCharSetName"
-  - "m_szCharSetSchema"
-  - "m_szName"
-  - "m_szPadAttribute"
-  - "m_szSchema"
+title: CCollations, CCollationInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COLLATION_CATALOG
+- m_szCatalog
+- CCollationInfo
+- CCollations
+- CHARACTER_SET_NAME
+- CHARACTER_SET_SCHEMA
+- m_szCharSetName
+- m_szSchema
+- CHARACTER_SET_CATALOG
+- m_szCharSetSchema
+- m_szCharSetCatalog
+- m_szPadAttribute
+- COLLATION_NAME
+- COLLATION_SCHEMA
+- m_szName
+- COLLATIONS
+dev_langs: C++
+helpviewer_keywords:
+- m_szSchema
+- COLLATION_SCHEMA
+- m_szCharSetCatalog
+- m_szCatalog
+- COLLATIONS recordset
+- COLLATION_CATALOG
+- CCollationInfo parameter class
+- m_szName
+- COLLATION_NAME
+- m_szPadAttribute
+- CHARACTER_SET_NAME
+- m_szCharSetName
+- CHARACTER_SET_SCHEMA
+- CHARACTER_SET_CATALOG
+- m_szCharSetSchema
+- CCollations typedef class
 ms.assetid: d8b43c4d-9dd5-4043-b4c8-38c03bfa0c72
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99bf8120d048298ca570ea4b318c7ae9c04da811
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CCollations, CCollationInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Call the typedef class **CCollations** to implement its parameter class **CCollationInfo**.  
+# <a name="ccollations-ccollationinfo"></a>CCollations, CCollationInfo
+Typedef 클래스 호출 **CCollations** 해당 매개 변수 클래스를 구현 하려면 **CCollationInfo**합니다.  
   
-## 설명  
- See [Schema Rowset Classes and Typedef Classes](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) for more information on using typedef classes.  
+## <a name="remarks"></a>설명  
+ 참조 [스키마 행 집합 클래스 및 Typedef 클래스](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) typedef 클래스 사용에 대 한 자세한 내용은 합니다.  
   
- This class identifies the character collations, defined in the catalog, that are accessible to a given user.  
+ 이 클래스는 문자 데이터 정렬을 카탈로그에 정의 된 지정된 된 사용자에 액세스할 수 있는 식별 합니다.  
   
- The following table lists the class data members and their corresponding OLE DB Columns.  See [COLLATIONS Rowset](https://msdn.microsoft.com/en-us/library/ms715783.aspx) in the *OLE DB Programmer's Reference* for more information about the schema and columns.  
+ 다음 표에는 클래스 데이터 멤버 및 해당 OLE DB 열이 나열됩니다. 참조 [데이터 정렬은 행 집합](https://msdn.microsoft.com/en-us/library/ms715783.aspx) 에 *OLE DB Programmer's Reference* 스키마 및 열에 대 한 자세한 내용은 합니다.  
   
-|Data members|OLE DB columns|  
+|데이터 멤버|OLE DB 열|  
 |------------------|--------------------|  
-|m\_szCatalog|COLLATION\_CATALOG|  
-|m\_szSchema|COLLATION\_SCHEMA|  
-|m\_szName|COLLATION\_NAME|  
-|m\_szCharSetCatalog|CHARACTER\_SET\_CATALOG|  
-|m\_szCharSetSchema|CHARACTER\_SET\_SCHEMA|  
-|m\_szCharSetName|CHARACTER\_SET\_NAME|  
-|m\_szPadAttribute|PAD\_ATTRIBUTE|  
+|m_szCatalog|COLLATION_CATALOG|  
+|m_szSchema|COLLATION_SCHEMA|  
+|m_szName|COLLATION_NAME|  
+|m_szCharSetCatalog|CHARACTER_SET_CATALOG|  
+|m_szCharSetSchema|CHARACTER_SET_SCHEMA|  
+|m_szCharSetName|CHARACTER_SET_NAME|  
+|m_szPadAttribute|PAD_ATTRIBUTE|  
   
-## 요구 사항  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbsch.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRestrictions 클래스](../../data/oledb/crestrictions-class.md)

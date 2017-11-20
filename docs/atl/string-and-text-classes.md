@@ -1,46 +1,47 @@
 ---
-title: "String and Text Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string classes [ATL]"
-  - "문자열 변환, ATL"
+title: "ATL 문자열 및 텍스트 클래스 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- string conversion, ATL
+- string classes [ATL]
 ms.assetid: aa0cdc41-c953-4b17-82b6-59b908545571
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7c494da428dedcf5a326acacbec006e9d9efd8d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# String and Text Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="string-and-text-classes"></a>문자열 및 텍스트 클래스
 이러한 클래스는 문자열 및 텍스트 문자열 변환에 대 한 지원을 제공합니다.  
   
--   [CA2AEX](../atl/reference/ca2aex-class.md) 이 클래스를 사용 하 여 문자열 변환 매크로에서 `CA2TEX` 및 `CT2AEX`, 및 typedef  **CA2A**.  
+-   [CA2AEX](../atl/reference/ca2aex-class.md) 문자열 변환 매크로에서이 클래스는 사용 `CA2TEX` 및 `CT2AEX`, 및 typedef **CA2A**합니다.  
   
--   [CA2CAEX](../atl/reference/ca2caex-class.md) 이 클래스를 사용 하 여 문자열 변환 매크로에서 `CA2CTEX` 및 `CT2CAEX`, 및 typedef  **CA2CA**.  
+-   [CA2CAEX](../atl/reference/ca2caex-class.md) 문자열 변환 매크로에서이 클래스는 사용 `CA2CTEX` 및 `CT2CAEX`, 및 typedef **CA2CA**합니다.  
   
--   [CA2WEX](../atl/reference/ca2wex-class.md) 이 클래스를 사용 하 여 문자열 변환 매크로에서 `CA2TEX`, `CA2CTEX`, `CT2WEX`, 및 `CT2CWEX`, 및 typedef  **CA2W**.  
+-   [CA2WEX](../atl/reference/ca2wex-class.md) 문자열 변환 매크로에서이 클래스는 사용 `CA2TEX`, `CA2CTEX`, `CT2WEX`, 및 `CT2CWEX`, 및 typedef **CA2W**합니다.  
   
--   [CW2AEX](../atl/reference/cw2aex-class.md) 이 클래스를 사용 하 여 문자열 변환 매크로에서 `CT2AEX`, `CW2TEX`, `CW2CTEX`, 및 `CT2CAEX`, 및 typedef  **CW2A**.  
+-   [CW2AEX](../atl/reference/cw2aex-class.md) 문자열 변환 매크로에서이 클래스는 사용 `CT2AEX`, `CW2TEX`, `CW2CTEX`, 및 `CT2CAEX`, 및 typedef **CW2A**합니다.  
   
--   [CW2CWEX](../atl/reference/cw2cwex-class.md) 이 클래스를 사용 하 여 문자열 변환 매크로에서 `CW2CTEX` 및 `CT2CWEX`, 및 typedef  **CW2CW**.  
+-   [CW2CWEX](../atl/reference/cw2cwex-class.md) 문자열 변환 매크로에서이 클래스는 사용 `CW2CTEX` 및 `CT2CWEX`, 및 typedef **CW2CW**합니다.  
   
--   [CW2WEX](../atl/reference/cw2wex-class.md) 이 클래스를 사용 하 여 문자열 변환 매크로에서 `CW2TEX` 및 `CT2WEX`, 및 typedef `CW2W`.  
+-   [CW2WEX](../atl/reference/cw2wex-class.md) 문자열 변환 매크로에서이 클래스는 사용 `CW2TEX` 및 `CT2WEX`, 및 typedef `CW2W`합니다.  
   
--   [CComBSTR](../atl/reference/ccombstr-class.md) 에 대 한 래퍼 클래스인 `BSTR`s.  
+-   [CComBSTR](../atl/reference/ccombstr-class.md) 이 클래스에 대 한 래퍼는 `BSTR`s입니다.  
   
--   [\_U\_STRINGorID](../atl/reference/u-stringorid-class.md) 이 인수 어댑터 클래스 두 리소스 이름이 있습니다 \(`LPCTSTR`s\) 또는 리소스 Id \(**UINT**s\) 호출자 ID를 사용 하 여 문자열에 변환할 필요 없이 함수에 전달 하는  **MAKEINTRESOURCE** 매크로.  
+-   [_U_STRINGorID](../atl/reference/u-stringorid-class.md) 이 인수 어댑터 클래스 리소스 이름 중 하나를 사용 하면 (`LPCTSTR`s) 또는 리소스 Id (**UINT**s) ID는 를사용하여문자열로변환하려면호출자에게요구하지않고함수에전달할 **MAKEINTRESOURCE** 매크로입니다.  
   
-## 참고 항목  
- [Class Overview](../atl/atl-class-overview.md)   
- [ATL and MFC String Conversion Macros](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)
+## <a name="see-also"></a>참고 항목  
+ [클래스 개요](../atl/atl-class-overview.md)   
+ [ATL 및 MFC 문자열 변환 매크로](reference/string-conversion-macros.md)
+

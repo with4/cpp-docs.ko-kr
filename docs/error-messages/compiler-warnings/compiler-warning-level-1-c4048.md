@@ -1,31 +1,29 @@
 ---
 title: "컴파일러 경고 (수준 1) C4048 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4048"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4048"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4048
+dev_langs: C++
+helpviewer_keywords: C4048
 ms.assetid: 8429f513-4732-40f1-8e56-4c224e723bcb
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 294e6b9d31f5740ee70e0d5fb67ad35215dea85b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4048
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-배열 첨자가 다르게 선언되었습니다 : 'identifier1과\(와\) 'identifier2'  
+# <a name="compiler-warning-level-1-c4048"></a>컴파일러 경고 (수준 1) C4048
+배열 첨자를 다른 선언: 'identifier1' 및 'identifier2'  
   
- 식에 크기가 다른 배열에 대한 포인터가 들어 있습니다.  이 포인터가 변환되지 않고 사용되었습니다.  
+ 식에는 크기가 다른 배열에 대 한 포인터가 포함 됩니다. 포인터 변환 없이 사용 됩니다.  
   
- 배열을 동일한 형식이나 동등한 형식으로 명시적으로 캐스팅하면 이 경고를 해결할 수 있습니다.
+ 배열 동일 하거나 동등한 형식으로 명시적으로 캐스팅 하는 경우이 경고를 해결할 수 있습니다.

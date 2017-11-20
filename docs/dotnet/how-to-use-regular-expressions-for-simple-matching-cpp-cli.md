@@ -1,35 +1,34 @@
 ---
-title: "방법: 단순 일치에 정규식 사용(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsMatch 메서드"
-  - "정규식[C++], 단순 일치"
-  - "검색, 부분 문자열 정확히 일치"
-  - "문자열[C++], 부분 문자열 정확히 일치"
-  - "부분 문자열, 단순 일치"
+title: "방법: 단순 일치에 정규식 사용 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- substrings, simple matches
+- searching, exact substring matches
+- strings [C++], exact substring matching
+- regular expressions [C++], simple matching
+- IsMatch method
 ms.assetid: 4661f6f3-0f6d-48f2-abe4-cb4770bf9bd5
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c0765dde0ee0e910fe9bc865f68e0d4edeeb67e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 단순 일치에 정규식 사용(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 정규식을 사용하여 정확하게 일치하는 부분 문자열을 찾습니다.  두 개의 문자열을 입력으로 사용하는 정적 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 메서드를 통해 검색을 수행합니다.  첫 번째 문자열은 검색할 문자열이고, 두 번째 문자열은 검색할 패턴입니다.  
+# <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>방법: 단순 일치에 정규식 사용(C++/CLI)
+다음 코드 예제에서는 부분 문자열 정확히 일치 항목을 찾을 정규식을 사용 합니다. 정적 검색은 수행 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 메서드를 두 개의 문자열을 입력으로 사용 합니다. 첫 번째 문자열을 검색할 수이 고 두 번째 하기 위해 검색할 패턴입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // regex_simple.cpp  
@@ -63,6 +62,6 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [.NET Framework 정규식](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [.NET Framework 정규식](/dotnet/standard/base-types/regular-expressions)   
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

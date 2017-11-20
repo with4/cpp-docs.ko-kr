@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.activex.container
-dev_langs:
-- C++
+f1_keywords: vc.appwiz.activex.container
+dev_langs: C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], containers
 - ActiveX control containers [MFC], creating
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: c9ac70acd706237cfeb40e709d2562883263c687
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>MFC ActiveX 컨트롤 컨테이너 만들기
 ActiveX 컨트롤 컨테이너는 실행 하기 위해 (이전의 OLE) ActiveX 컨트롤에 대 한 환경을 제공 하는 부모 프로그램. 상관 없이, MFC ActiveX 컨트롤을 포함할 수 있는 응용 프로그램을 만들 수 있지만 MFC로 수행할 작업을 훨씬 쉽습니다.  
@@ -48,5 +44,4 @@ ActiveX 컨트롤 컨테이너는 실행 하기 위해 (이전의 OLE) ActiveX �
   
 ## <a name="see-also"></a>참고 항목  
  [Visual C++ 프로젝트 형식](../../ide/visual-cpp-project-types.md)
-
 

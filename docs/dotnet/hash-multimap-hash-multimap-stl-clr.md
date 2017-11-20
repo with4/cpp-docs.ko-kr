@@ -1,32 +1,30 @@
 ---
-title: "hash_multimap::hash_multimap(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::hash_multimap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_multimap 멤버[STL/CLR]"
+title: 'hash_multimap:: hash_multimap (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::hash_multimap
+dev_langs: C++
+helpviewer_keywords: hash_multimap member [STL/CLR]
 ms.assetid: a1d576a7-5dc7-4ad9-abef-ee7a13caaec3
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d09f0fd54625d5f6df87305771991c65340309f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::hash_multimap(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimaphashmultimap-stlclr"></a>hash_multimap::hash_multimap(STL/CLR)
 컨테이너 개체를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 hash_multimap();  
@@ -49,104 +47,90 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### 매개 변수  
- first  
- Beginning of range to insert.  
+#### <a name="parameters"></a>매개 변수  
+ 첫 번째  
+ 삽입할 범위의의 시작입니다.  
   
  hashfn  
- Hash function for mapping keys to buckets.  
+ 해시 버킷에 매핑 키에 대 한 함수입니다.  
   
  last  
- End of range to insert.  
+ 삽입할 범위의 끝입니다.  
   
  pred  
- Ordering predicate for the controlled sequence.  
+ 제어 되는 시퀀스에 대 한 조건자를 정렬 합니다.  
   
- right  
- Object or range to insert.  
+ 오른쪽  
+ 삽입할 개체 또는 범위입니다.  
   
-## 설명  
- The constructor:  
+## <a name="remarks"></a>설명  
+ 생성자:  
   
  `hash_multimap();`  
   
- initializes the controlled sequence with no elements, with the default ordering predicate `key_compare()`, and with the default hash function.  You use it to specify an empty initial controlled sequence, with the default ordering predicate and hash function.  
+ 기본 조건자를 정렬 된 요소가 없는 제어 되는 시퀀스를 초기화 `key_compare()`, 및 기본 해시 함수가 있습니다. 기본 조건자 및 해시 함수를 정렬 된 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `explicit hash_multimap(key_compare^ pred);`  
   
- initializes the controlled sequence with no elements, with the ordering predicate `pred`, and with the default hash function.  You use it to specify an empty initial controlled sequence, with the specified ordering predicate and the default hash function.  
+ 정렬 조건자가 있는 요소가 없는 제어 되는 시퀀스를 초기화 `pred`, 및 기본 해시 함수로 합니다. 지정된 된 정렬 조건자와 기본 해시 함수는 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `hash_multimap(key_compare^ pred, hasher^ hashfn);`  
   
- initializes the controlled sequence with no elements, with the ordering predicate `pred`, and with the hash function `hashfn`.  You use it to specify an empty initial controlled sequence, with the specified ordering predicate and hash function.  
+ 정렬 조건자가 있는 요소가 없는 제어 되는 시퀀스를 초기화 `pred`, 및 해시 함수가 `hashfn`합니다. 지정 된 정렬 조건자 및 해시 함수는 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `hash_multimap(hash_multimap<Key, Mapped>% right);`  
   
- initializes the controlled sequence with the sequence `[``right``.`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``.`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`, with the default ordering predicate, and with the default hash function.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the hash\_multimap object `right`, with the default ordering predicate and hash function.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`right.begin()`, `right.end()`), 기본 조건자를 정렬 및 기본 해시 함수입니다. Hash_multimap 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`된 기본 정렬 조건자 및 해시 함수입니다.  
   
- The constructor:  
+ 생성자:  
   
  `hash_multimap(hash_multimap<Key, Mapped>^ right);`  
   
- initializes the controlled sequence with the sequence `[``right``->`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``->`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`, with the default ordering predicate, and with the default hash function.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the hash\_multimap object `right`, with the default ordering predicate and hash function.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`right->begin()`, `right->end()`), 기본 조건자를 정렬 및 기본 해시 함수입니다. Hash_multimap 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`된 기본 정렬 조건자 및 해시 함수입니다.  
   
- The constructor:  
+ 생성자:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last);`  
   
- `hash_multimap(InIter first, InIter last);`  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 기본 조건자를 정렬 및 기본 해시 함수입니다. 기본 조건자 및 해시 함수를 정렬 된 제어 되는 다른 시퀀스의 복사본을 확인을 사용 합니다.  
   
- initializes the controlled sequence with the sequence `[``first``,` `last``)`, with the default ordering predicate, and with the default hash function.  You use it to make the controlled sequence a copy of another sequence, with the default ordering predicate and hash function.  
+ 생성자:  
   
- The constructor:  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 정렬 조건부와 함께 `pred`, 및 기본 해시 함수로 합니다. 제어 되는 시퀀스의 사본이 지정된 된 정렬 조건자 및 기본 해시 함수와 다른 시퀀스를 사용 합니다.  
   
- `hash_multimap(InIter first, InIter last,`  
+ 생성자:  
   
- `key_compare^ pred);`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- initializes the controlled sequence with the sequence `[``first``,` `last``)`, with the ordering predicate `pred`, and with the default hash function.  You use it to make the controlled sequence a copy of another sequence, with the specified ordering predicate and the default hash function.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 정렬 조건부와 함께 `pred`, 및 해시 함수가 `hashfn`합니다. 제어 되는 시퀀스의 사본을 지정한 정렬 조건자 및 해시 함수가 있는 다른 시퀀스를 사용 합니다.  
   
- The constructor:  
-  
- `template<typename InIter>`  
-  
- `hash_multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- initializes the controlled sequence with the sequence `[``first``,` `last``)`, with the ordering predicate `pred`, and with the hash function `hashfn`.  You use it to make the controlled sequence a copy of another sequence, with the specified ordering predicate and hash function.  
-  
- The constructor:  
+ 생성자:  
   
  `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- initializes the controlled sequence with the sequence designated by the enumerator `right`, with the default ordering predicate, and with the default hash function.  You use it to make the controlled sequence a copy of another sequence described by an enumerator, with the default ordering predicate and hash function.  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 기본 조건자를 정렬 및 기본 해시 함수입니다. 제어 되는 시퀀스의 사본을 설명 하는 열거자에 따라 기본 조건자 및 해시 함수를 정렬 하는 다른 시퀀스를 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 정렬 조건부와 함께 `pred`, 및 기본 해시 함수로 합니다. 제어 되는 시퀀스에서 지정 된 정렬 조건자 및 기본 해시 함수가 열거자를 설명 하는 다른 시퀀스의 복사본을 확인 하려면 사용 합니다.  
   
- initializes the controlled sequence with the sequence designated by the enumerator `right`, with the ordering predicate `pred`, and with the default hash function.  You use it to make the controlled sequence a copy of another sequence described by an enumerator, with the specified ordering predicate and default hash function.  
+ 생성자:  
   
- The constructor:  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 정렬 조건부와 함께 `pred`, 및 해시 함수가 `hashfn`합니다. 제어 되는 시퀀스의 사본을 열거자를 지정한 순서 지정 조건자 및 해시 함수가 있는 설명 하는 다른 시퀀스를 사용 합니다.  
   
- `key_compare^ pred, hasher^ hashfn);`  
-  
- initializes the controlled sequence with the sequence designated by the enumerator `right`, with the ordering predicate `pred`, and with the hash function `hashfn`.  You use it to make the controlled sequence a copy of another sequence described by an enumerator, with the specified ordering predicate and hash function.  
-  
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multimap_construct.cpp   
@@ -258,26 +242,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::generic\_container](../dotnet/hash-multimap-generic-container-stl-clr.md)   
- [hash\_multimap::operator\=](../dotnet/hash-multimap-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: generic_container (STL/CLR)](../dotnet/hash-multimap-generic-container-stl-clr.md)   
+ [hash_multimap::operator=(STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)

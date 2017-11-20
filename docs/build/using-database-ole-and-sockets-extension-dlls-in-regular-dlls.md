@@ -1,71 +1,71 @@
 ---
-title: "기본 DLL에서 데이터베이스, OLE 및 소켓 확장 DLL 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL[C++], 확장"
-  - "DLL[C++], 초기화"
-  - "DLL[C++], 기본"
+title: "기본 MFC Dll에서 데이터베이스, OLE 및 소켓 MFC 확장 Dll을 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], initializing
+- DLLs [C++], extension
+- DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5fda176229d8f6bea5a586c6f6f538a40d7ed8a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 기본 DLL에서 데이터베이스, OLE 및 소켓 확장 DLL 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-기본 DLL에서 확장 DLL을 사용하는 경우, 확장 DLL이 기본 DLL의 **CDynLinkLibrary** 개체 체인에 연결되어 있지 않으면 이와 관련된 문제가 하나 이상 발생할 수 있습니다.  MFC 데이터베이스, OLE 및 소켓 지원 DLL의 디버그 버전은 확장 DLL로 구현되기 때문에, 이러한 MFC 기능을 사용하는 경우에는 사용자의 확장 DLL을 명시적으로 사용하지 않아도 이와 유사한 문제가 발생할 수 있습니다.  이러한 문제는 다음과 같습니다.  
+# <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>기본 MFC Dll에서 데이터베이스, OLE 및 소켓 MFC 확장명 Dll 사용
+MFC 확장 DLL 연결 되어 있지 않습니다에 MFC 확장 DLL 기본 MFC DLL에서 사용 하는 경우는 **CDynLinkLibrary** 체인 개체 기본 MFC dll에 일련의 관련된 문제를 하나 이상에 실행할 수 있습니다. MFC 데이터베이스, OLE 및 소켓의 디버그 버전을 지원 하기 때문에 Dll이 MFC 확장 Dll로 구현 됩니다, 그리고 사용자의 MFC 확장 Dll 명시적으로 사용 하지 않아도 하는 경우에 이러한 MFC를 사용 하는 경우 비슷한 문제가 기능 발생할 수 있습니다. 이러한 문제는:  
   
--   확장 DLL에정의된 클래스 형식의 개체를 deserialize하려고 하면 "경고: 보관 저장소에서 CYourClass를 로드할 수 없습니다.  클래스가 정의되지 않았습니다."라는 메시지가 TRACE 디버그 창에 나타나고 개체를 serialize할 수 없습니다.  
+-   때 MFC 확장 DLL 메시지에에서 정의 된 클래스 형식의 개체를 deserialize 하려고 했습니다. "경고: CYourClass 보관 파일에서 로드할 수 없습니다. 클래스 정의 되지 않았습니다. " 추적 디버그 창 및 개체에 serialize 하는 데 실패 하면 나타납니다.  
   
--   잘못된 클래스임을 나타내는 예외가 throw됩니다.  
+-   잘못 된 클래스를 나타내는 예외가 throw 될 수 있습니다.  
   
--   `AfxFindResourceHandle`이 **NULL** 또는 올바르지 않은 리소스 핸들을 반환하기 때문에 확장 DLL에 저장된 리소스를 로드할 수 없습니다.  
+-   MFC 확장 DLL에에서 저장 된 리소스 때문에 로드 되지 `AfxFindResourceHandle` 반환 **NULL** 또는 잘못 된 리소스 핸들입니다.  
   
--   `DllGetClassObject`, `DllCanUnloadNow`와 `COleObjectFactory`의 멤버 함수인 `UpdateRegistry`, `Revoke`, `RevokeAll` 및 `RegisterAll`이 확장 DLL에 정의된 클래스 팩터리를 찾지 못합니다.  
+-   `DllGetClassObject``DllCanUnloadNow`, 및 `UpdateRegistry`, `Revoke`, `RevokeAll`, 및 `RegisterAll` 의 멤버 함수 `COleObjectFactory` MFC 확장 DLL에에서 정의 된 클래스 팩터리를 찾지 못합니다.  
   
--   `AfxDoForAllClasses`가 확장 DLL의 모든 클래스에 대해서 작동하지 않습니다.  
+-   `AfxDoForAllClasses`모든 클래스는 MFC 확장 DLL에에서 대해서는 작동 하지 않습니다.  
   
--   표준 MFC 데이터베이스, 소켓 또는 OLE 리소스가 로드되지 않습니다.  예를 들어, 기본 DLL이 MFC 데이터베이스 클래스를 올바르게 사용하고 있는 경우에도 **AfxLoadString**\(**AFX\_IDP\_SQL\_CONNECT\_FAIL**\)이 빈 문자열을 반환합니다.  
+-   표준 MFC 데이터베이스, 소켓 또는 / / OLE 리소스 로드 하지 못했습니다. 예를 들어 **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) 기본 MFC DLL은 MFC 데이터베이스 클래스를 사용 하 여 제대로 하는 경우에 빈 문자열을 반환 합니다.  
   
- 이러한 문제를 해결하려면 **CDynLinkLibrary** 개체를 만드는 확장 DLL에서 초기화 함수를 만들고 내보냅니다.  이 초기화 함수는 해당 확장 DLL을 사용하는 각 기본 DLL에서 한 번만 호출됩니다.  
+ 이러한 문제에 솔루션을 만들고 MFC 확장 DLL 만드는에 초기화 함수를 내보내려면은 한 **CDynLinkLibrary** 개체입니다. 각 기본 MFC DLL에서 MFC 확장 DLL을 사용 하는 정확히 한 번이 초기화 함수를 호출 합니다.  
   
-## MFC OLE, MFC 데이터베이스\(또는 DAO\) 또는 MFC 소켓 지원  
- 기본 DLL에서 MFC OLE, MFC 데이터베이스\(또는 DAO\) 또는 MFC 소켓을 지원하는 경우에는 각각 MFC 디버그 확장 DLL인 MFCOxxD.dll, MFCDxxD.dll 및 MFCNxxD.dll\(xx는 버전 번호\)이 자동으로 링크됩니다.  사용자는 사용 중인 각 DLL에 대해 미리 정의된 초기화 함수를 호출해야 합니다.  
+## <a name="mfc-ole-mfc-database-or-dao-or-mfc-sockets-support"></a>MFC OLE, MFC 데이터베이스 (또는 DAO) 또는 MFC 소켓 지원  
+ 모든 MFC OLE, MFC 데이터베이스 또는 (DAO)를 사용 하는 각각 기본 MFC DLL에서 MFC 소켓 지원, MFC 디버그 MFC 확장 Dll MFCOxxD.dll, MFCDxxD.dll, 및 MFCNxxD.dll (여기서 xx는 버전 번호) 자동으로 연결 됩니다. 각 사용 중인이 Dll에 대 한 미리 정의 된 초기화 함수를 호출 해야 합니다.  
   
- 데이터베이스가 지원되는 경우에는 `AfxDbInitModule` 호출을 기본 DLL의 `CWinApp::InitInstance` 함수에 추가합니다.  이 호출은 기본 클래스 호출이나 MFCDxxD.dll에 액세스하는 추가 코드 앞에 위치해야 합니다.  이 함수는 매개 변수를 사용하지 않으며 void를 반환합니다.  
+ 데이터베이스 지원에 대 한 호출을 추가 `AfxDbInitModule` 일반 MFC DLL에 `CWinApp::InitInstance` 함수입니다. 이 호출은 기본 클래스 호출이 나 추가 MFCDxxD.dll에 액세스 하는 코드에 있는지 확인 합니다. 이 함수는 매개 변수를 사용 하 고 void를 반환 합니다.  
   
- OLE 지원을 사용하는 경우에는 `AfxOleInitModule` 호출을 기본 DLL의 `CWinApp::InitInstance` 함수에 추가합니다.  **COleControlModule InitInstance** 함수가 `AfxOleInitModule`을 이미 호출했을 수도 있으므로 OLE 컨트롤을 빌드하고 `COleControlModule`을 사용하는 경우에는 이러한 `AfxOleInitModule` 호출을 추가할 필요가 없습니다.  
+ OLE 지원에 대 한 호출을 추가 `AfxOleInitModule` 일반 MFC DLL에 `CWinApp::InitInstance`합니다. **COleControlModule InitInstance** 함수 호출 `AfxOleInitModule` 이미 사용 하 고 OLE 컨트롤을 작성 하는 경우 `COleControlModule`,이 호출을 추가 하지 말아야 `AfxOleInitModule`합니다.  
   
- 소켓 지원을 사용하는 경우에는 `AfxNetInitModule` 호출을 기본 DLL의 `CWinApp::InitInstance` 함수에 추가합니다.  
+ 소켓 지원에 대 한 호출을 추가 `AfxNetInitModule` 일반 MFC DLL에 `CWinApp::InitInstance`합니다.  
   
- MFC DLL 및 응용 프로그램의 릴리스 빌드에서는 데이터베이스, 소켓 또는 OLE 지원을 위해 별도의 DLL을 사용하지 않습니다.  그러나 릴리스 모드에서는 이 초기화 함수를 호출하는 것이 안전합니다.  
+ Note는 MFC Dll의 릴리스 빌드를 및 응용 프로그램 데이터베이스, 소켓에 대 한 별도 Dll를 사용 하지 않거나 OLE를 지원 합니다. 그러나 릴리스 모드의 이러한 초기화 함수를 호출 해도 안전 합니다.  
   
-## CDynLinkLibrary 개체  
- 이 항목의 처음 부분에 언급한 각 작업을 수행하는 동안 MFC에서 필요한 값 또는 개체를 검색해야 합니다.  예를 들어, deserialization을 수행하는 동안 MFC에서 현재 사용 가능한 모든 런타임 클래스를 검색하여 보관 저장소에 있는 개체를 해당 개체의 올바른 런타임 클래스와 일치시켜야 합니다.  
+## <a name="cdynlinklibrary-objects"></a>CDynLinkLibrary 개체가  
+ 각이 항목의 앞부분에 언급 한 작업 중 MFC를 원하는 값 이나 개체를 검색 해야 합니다. 예를 들어 deserialization을 수행 하는 동안 MFC의 적절 한 런타임 클래스와 함께 보관 파일에는 개체와 일치 하도록 모든 현재 사용할 수 있는 런타임 클래스를 검색 해야 합니다.  
   
- 이러한 검색 과정의 일부로 MFC에서는 **CDynLinkLibrary** 개체 체인을 차례대로 이동하여 사용되는 모든 확장 DLL을 검색합니다.  **CDynLinkLibrary** 개체는 생성될 때 자동으로 체인에 연결되며 초기화 시 각 확장 DLL에 의해 차례대로 만들어집니다.  또한 모든 모듈\(응용 프로그램 또는 기본 DLL\)에는 자체의 **CDynLinkLibrary** 개체 체인이 있습니다.  
+ 이러한 검색의 일부로 MFC를 통해 검색 모든 MFC 확장 Dll 사용에서의 체인을 탐색 하 여 **CDynLinkLibrary** 개체입니다. **CDynLinkLibrary** 개체의 생성 되는 동안 체인에 자동으로 연결 하 고 초기화 하는 동안에 각 MFC 확장 DLL에 의해 생성 됩니다. 또한 모든 모듈 (응용 프로그램 또는 일반 MFC DLL)에의 한 체인과 **CDynLinkLibrary** 개체입니다.  
   
- 확장 DLL을 **CDynLinkLibrary** 체인에 연결하기 위해 확장 DLL을 사용하는 모든 모듈의 컨텍스트에서 **CDynLinkLibrary** 개체를 만들어야 합니다.  따라서 기본 DLL에서 확장 DLL을 사용하면 해당 확장 DLL에서 **CDynLinkLibrary** 개체를 만드는 초기화 함수를 내보내야 합니다.  또한 이렇게 내보내진 초기화 함수는 확장 DLL을 사용하는 모든 기본 DLL에서 호출되어야 합니다.  
+ MFC 확장 DLL에 유선 가져오기에 대 한는 **CDynLinkLibrary** 만들어야 하 체인은 **CDynLinkLibrary** MFC 확장 DLL을 사용 하는 모든 모듈의 컨텍스트에서 개체입니다. 따라서 MFC 확장 DLL 기본 MFC Dll에서 사용할 것인지, 하는 경우는 내보낸된 초기화를 만드는 함수를 제공 해야는 **CDynLinkLibrary** 개체입니다. MFC 확장을 사용 하는 모든 기본 MFC DLL DLL 내보낸된 초기화 함수를 호출 해야 합니다.  
   
- 확장 DLL을 MFC 응용 프로그램\(.exe\)에서만 사용하고 기본 DLL에서는 사용하지 않으려면 확장 DLL의 `DllMain` 함수에서 **CDynLinkLibrary** 개체를 만듭니다.  이 작업은 MFC DLL 마법사의 확장 DLL 코드에서 수행됩니다.  확장 DLL을 암시적으로 로드하는 경우, `DllMain`은 응용 프로그램이 시작되기 전에 로드되고 실행됩니다.  생성된 모든 **CDynLinkLibrary**는 MFC DLL이 MFC 응용 프로그램을 위해 예약한 기본 체인에 연결됩니다.  
+ MFC 확장 DLL에서 MFC 응용 프로그램 (.exe) 및 기본 MFC DLL에서 하지 사용할 예정일 뿐 이라고 경우 만들기에 충분는 **CDynLinkLibrary** MFC 확장 DLL에의 한 개체 `DllMain`합니다. MFC DLL 마법사 MFC 확장 DLL 코드에서 수행 하는 작업입니다. 암시적으로 MFC 확장 DLL을 로드할 때 `DllMain` 로드 하 고 응용 프로그램이 시작 되기 전에 실행 됩니다. 모든 **CDynLinkLibrary** 만들기 MFC DLL이 MFC 응용 프로그램에 대 한 예약 하는 기본 체인에 다음과 같은 합니다.  
   
- 특히, 확장 DLL이 메모리에서 동적으로 언로드되는 경우, 하나의 확장 DLL에서 여러 개의 **CDynLinkLibrary** 개체가 하나의 체인에 연결되는 것은 좋지 않습니다.  초기화 함수는 모든 모듈에서 한 번만 호출해야 합니다.  
+ 여러 개 바람직하지는 **CDynLinkLibrary** 개체는 하나의 체인의 한 MFC 확장 DLL에서에서 특히 MFC 확장 DLL을 메모리에서 동적으로 로드 됩니다. 모든 모듈에서 초기화 함수가 두 번 이상는 호출 하지 마십시오.  
   
-## 샘플 코드  
- 이 샘플 코드에서는 기본 DLL이 확장 DLL에 암시적으로 링크하는 것으로 가정합니다.  이 작업은 기본 DLL을 빌드할 때 확장 DLL의 가져오기 라이브러리\(.lib\)에 링크함으로써 수행됩니다.  
+## <a name="sample-code"></a>샘플 코드  
+ 이 샘플 코드에서는 기본 MFC DLL이 MFC 확장 DLL에 암시적으로 링크를 가정 합니다. 이 기본 MFC DLL을 빌드할 때 MFC 확장 DLL 가져오기 라이브러리 (.lib)에 연결 하 여 수행 됩니다.  
   
- 확장 DLL의 소스에 다음 줄이 포함되어야 합니다.  
+ 다음 줄은 MFC 확장 DLL의 소스 여야 합니다.  
   
 ```  
 // YourExtDLL.cpp:  
@@ -80,7 +80,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 {  
     if (dwReason == DLL_PROCESS_ATTACH)  
     {  
-        // extension DLL one-time initialization  
+        // MFC extension DLL one-time initialization  
         if (!AfxInitExtensionModule(extensionDLL, hInstance))  
            return 0;  
     }  
@@ -88,7 +88,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 }  
   
 // Exported DLL initialization is run in context of  
-// application or regular DLL  
+// application or regular MFC DLL  
 extern "C" void WINAPI InitYourExtDLL()  
 {  
     // create a new CDynLinkLibrary for this app  
@@ -98,7 +98,7 @@ extern "C" void WINAPI InitYourExtDLL()
 }  
 ```  
   
- **InitYourExtDLL** 함수는 내보내야 합니다.  **\_\_declspec\(dllexport\)**을 사용하거나 해당 DLL의 .def 파일에 다음 줄을 추가하면 이 함수를 내보낼 수 있습니다.  
+ 에 가져올 수는 **InitYourExtDLL** 함수입니다. 수행할 수 있습니다 사용 하 여 **__declspec (dllexport)** 또는 다음과 같이 DLL의.def 파일에:  
   
 ```  
 // YourExtDLL.Def:  
@@ -109,7 +109,7 @@ EXPORTS
     InitYourExtDLL  
 ```  
   
- 다음과 같이 확장 DLL을 사용할 각 기본 DLL에서 `CWinApp` 파생 개체의 `InitInstance` 멤버에 대한 호출을 추가합니다.  
+ 에 대 한 호출 추가 `InitInstance` 의 멤버는 `CWinApp`-파생 MFC 확장 DLL을 사용 하 여 각 기본 MFC DLL에 대 한 개체:  
   
 ```  
 // YourRegularDLL.cpp:  
@@ -127,32 +127,32 @@ public:
 BOOL CYourRegularDLL::InitInstance()  
 {  
     // any DLL initialization goes here  
-    TRACE0("YOUR regular DLL initializing\n");  
+    TRACE0("YOUR regular MFC DLL initializing\n");  
   
-    // wire any extension DLLs into CDynLinkLibrary chain  
+    // wire any MFC extension DLLs into CDynLinkLibrary chain  
     InitYourExtDLL();  
   
     return TRUE;  
 }  
 ```  
   
-### 수행할 작업  
+### <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   
--   [확장 DLL 초기화](../build/initializing-extension-dlls.md)  
+-   [MFC 확장 DLL 초기화](../build/run-time-library-behavior.md#initializing-extension-dlls)  
   
--   [기본 DLL 초기화](../build/initializing-regular-dlls.md)  
+-   [일반 MFC Dll 초기화](../build/run-time-library-behavior.md#initializing-regular-dlls)  
   
-### 추가 정보  
+### <a name="what-do-you-want-to-know-more-about"></a>추가 정보  
   
--   [확장 DLL](../build/extension-dlls.md)  
+-   [MFC 확장명 DLL](../build/extension-dlls.md)  
   
--   [정적으로 MFC에 링크된 기본 DLL](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [정적으로 MFC에 링크된 기본 MFC DLL](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [동적으로 MFC에 링크하는 기본 DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [동적으로 MFC에 링크된 기본 MFC DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
 -   [DLL의 일부로 MFC 사용](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   
 -   [MFC의 DLL 버전](../mfc/tn033-dll-version-of-mfc.md)  
   
-## 참고 항목  
- [확장 DLL](../build/extension-dlls.md)
+## <a name="see-also"></a>참고 항목  
+ [MFC 확장명 DLL](../build/extension-dlls.md)

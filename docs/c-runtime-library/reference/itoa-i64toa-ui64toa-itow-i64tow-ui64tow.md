@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -42,8 +41,7 @@ f1_keywords:
 - i64tow
 - itow
 - _ui64toa
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _itot function
 - ui64toa function
@@ -63,30 +61,15 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 22226de878058c7c35307e47b76973eaaebcd552
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 8f740e23a8fa9213a58770420854ed88c6e24a30
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="itoa-i64toa-ui64toa-itow-i64tow-ui64tow"></a>_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow
 정수를 문자열로 변환합니다. 이러한 함수의 보다 안전한 버전을 사용할 수 있습니다. [_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)를 참조하세요.  
@@ -181,7 +164,7 @@ wchar_t * _ui64tow(
 > [!IMPORTANT]
 >  버퍼 오버런을 방지하려면 `str` 버퍼가 변환된 숫자와 후행 null 문자 및 부호 문자를 포함할 만큼 충분히 커야 합니다.  
   
- C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   

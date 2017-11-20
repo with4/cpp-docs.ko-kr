@@ -1,32 +1,30 @@
 ---
 title: "ArgTraits 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::ArgTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ArgTraits 구조체"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::ArgTraits
+dev_langs: C++
+helpviewer_keywords: ArgTraits structure
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d95fc547d9c755adad58c1ddcd8de5a8e40a863c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ArgTraits 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-WRL 인프라구조체를 지원하고 코드에서 직접적으로 사용되는 것을 의도하지 않습니다.  
+# <a name="argtraits-structure"></a>ArgTraits 구조체
+WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<  
@@ -120,72 +118,72 @@ template<
 struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `TMemberFunction`  
- 일치 될 수 없는 ArgTratis 구조체에 대한 형식이름 매개변수는 메서드 서명을 호출합니다.  
+ 어떤 Invoke 메서드 시그니처를 일치 시킬 수 없는 ArgTraits 구조체에 대 한 매개 변수를 형식 이름입니다.  
   
  `TDelegateInterface`  
  대리자 인터페이스입니다.  
   
  `TArg1`  
- 호출 메서드의 첫 번째 인수의 형식  
+ Invoke 메서드의 첫 번째 인수의 형식입니다.  
   
  `TArg2`  
- 호출 메서드의 두 번째 인수의 형식  
+ Invoke 메서드의 두 번째 인수의 형식입니다.  
   
  `TArg3`  
- 호출 메서드의 세 번째 인수의 형식  
+ Invoke 메서드의 세 번째 인수의 형식입니다.  
   
  `TArg4`  
- 호출 메서드의 네 번째 인수의 형식  
+ Invoke 메서드의 네 번째 인수의 형식입니다.  
   
  `TArg5`  
- 호출 메서드의 다섯 번째 인수의 형식  
+ Invoke 메서드의 다섯 번째 인수의 형식입니다.  
   
  `TArg6`  
- 호출 메서드의 여섯 번째 인수의 형식  
+ 형식 Invoke 메서드의 여섯 번째 인수입니다.  
   
  `TArg7`  
- 호출 메서드의 일곱 번째 인수의 형식  
+ 형식 Invoke 메서드의 일곱 번째 인수입니다.  
   
  `TArg8`  
- 호출 메서드의 여덟 번째 인수의 형식  
+ 형식 Invoke 메서드의 여덟 번째 인수입니다.  
   
  `TArg9`  
- 호출 메서드의 아홉 번째 인수의 형식  
+ 아홉 번째 인수는 호출 메서드의 형식입니다.  
   
-## 설명  
- `ArgTraits` 구조체 인터페이스 및 익명 멤버 함수는 지정된 개수의 매개 변수로 지정된 대리자를 선언 합니다.  
+## <a name="remarks"></a>설명  
+ `ArgTraits` 구조 인터페이스 및 지정된 된 수의 매개 변수를 가진 익명 멤버 함수는 지정 된 대리자를 선언 합니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 공용 Typedefs  
+### <a name="public-typedefs"></a>공용 Typedefs  
   
-|Name|설명|  
-|----------|--------|  
-|`Arg1Type`|TArg1는 형식 정의입니다.|  
-|`Arg2Type`|TArg2는 형식 정의입니다.|  
-|`Arg3Type`|TArg3는 형식 정의입니다.|  
-|`Arg4Type`|TArg4는 형식 정의입니다.|  
-|`Arg5Type`|TArg5는 형식 정의입니다.|  
-|`Arg6Type`|TArg6는 형식 정의입니다.|  
-|`Arg7Type`|TArg7는 형식 정의입니다.|  
-|`Arg8Type`|TArg8는 형식 정의입니다.|  
-|`Arg9Type`|TArg9는 형식 정의입니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|`Arg1Type`|TArg1에 대 한 typedef입니다.|  
+|`Arg2Type`|TArg2에 대 한 typedef입니다.|  
+|`Arg3Type`|TArg3에 대 한 typedef입니다.|  
+|`Arg4Type`|TArg4에 대 한 typedef입니다.|  
+|`Arg5Type`|TArg5에 대 한 typedef입니다.|  
+|`Arg6Type`|TArg6에 대 한 typedef입니다.|  
+|`Arg7Type`|TArg7에 대 한 typedef입니다.|  
+|`Arg8Type`|TArg8에 대 한 typedef입니다.|  
+|`Arg9Type`|TArg9에 대 한 typedef입니다.|  
   
-### 공용 상수  
+### <a name="public-constants"></a>공용 상수  
   
-|Name|설명|  
-|----------|--------|  
-|[ArgTraits::args 상수](../windows/argtraits-args-constant.md)|호출 메서드는 대리자 인터페이스에 매개 변수의 수를 유지합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[ArgTraits::args 상수](../windows/argtraits-args-constant.md)|Invoke 메서드를 대리자 인터페이스에 대 한 매개 변수 개수의 수를 유지 합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `ArgTraits`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** event.h  
   
- **네임스페이스**Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

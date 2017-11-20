@@ -1,49 +1,48 @@
 ---
 title: "auto_handle 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle, msclr::auto_handle"
-  - "msclr.auto_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle, msclr::auto_handle
+- msclr.auto_handle
+dev_langs: C++
+helpviewer_keywords: auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b8301c1f6eb3a5d178dad0502b83fae01c8d9afc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Automatic resource management which can be used to embed a virtual handle into a managed type.  
+# <a name="autohandle-class"></a>auto_handle 클래스
+관리 되는 형식에 가상 핸들을 포함 하는 데 사용할 수 있는 자동 리소스 관리.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename _element_type>  
 ref class auto_handle;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_element_type`  
- The managed type to be embedded.  
+ 포함할 관리 되는 형식입니다.  
   
-## 요구 사항  
- **Header file** \<msclr\\auto\_handle.h\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_handle](../dotnet/auto-handle.md)   
- [auto\_handle 멤버](../dotnet/auto-handle-members.md)   
- [auto\_gcroot 클래스](../dotnet/auto-gcroot-class.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_handle](../dotnet/auto-handle.md)   
+ [auto_handle 멤버](../dotnet/auto-handle-members.md)   
+ [auto_gcroot 클래스](../dotnet/auto-gcroot-class.md)

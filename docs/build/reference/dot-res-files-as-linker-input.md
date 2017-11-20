@@ -1,33 +1,32 @@
 ---
-title: "링커 입력 파일로 사용하는 .Res 파일 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "링커 입력 파일로 사용하는 .res 파일"
-  - "링크[C++], 리소스 파일"
-  - "링커 입력으로 사용하는 RES 파일"
-  - "리소스 파일, 링크"
+title: ". 링커 입력 파일로 res 파일 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- RES files as linker input
+- .res files as linker input
+- linking [C++], resource files
+- resource files, linking
 ms.assetid: 9c37ab00-97df-4d9a-91cd-6bf132970683
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b8b4a1b69887033ca0c8cccf3e4b9eb193ee41d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 링커 입력 파일로 사용하는 .Res 파일
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-프로그램을 링크할 때 .res 파일을 지정할 수 있습니다.  .res 파일은 RC\(리소스 컴파일러\)에서 만듭니다.  LINK에서는 .res 파일을 자동으로 COFF로 변환합니다.  CVTRES.exe 도구는 LINK.exe가 있는 디렉터리나 PATH 환경 변수로 지정된 디렉터리에 있어야 합니다.  
+# <a name="res-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Res 파일
+프로그램을 링크할 때.res 파일을 지정할 수 있습니다. 리소스 컴파일러 (RC)에 의해.res 파일이 만들어집니다. 링크를 COFF.res 파일을 자동으로 변환합니다. CVTRES.exe 도구는 PATH 환경 변수에 지정 된 디렉터리 또는 LINK.exe와 같은 디렉터리에 이어야 합니다.  
   
-## 참고 항목  
- [LINK 입력 파일](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>참고 항목  
+ [LINK 입력된 파일](../../build/reference/link-input-files.md)   
  [링커 옵션](../../build/reference/linker-options.md)

@@ -1,40 +1,40 @@
 ---
 title: "공급자의 속성 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 공급자, 속성"
-  - "참조, 공급자 속성"
-  - "공급자 속성 참조"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, properties
+- references, to properties in providers
+- referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9ccd06ab229f5bf6643145c03d8396d48c45a303
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 공급자의 속성 참조
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-원하는 속성의 속성 그룹과 속성 ID를 찾습니다.  자세한 내용은 *OLE DB Programmer's Reference*의 [OLE DB Properties](https://msdn.microsoft.com/en-us/library/ms722734.aspx)를 참조하십시오.  
+# <a name="referencing-a-property-in-your-provider"></a>공급자의 속성 참조
+원하는 속성에 대 한 속성 그룹과 속성 ID를 찾습니다. 자세한 내용은 참조 [OLE DB 속성](https://msdn.microsoft.com/en-us/library/ms722734.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
- 다음 예제에서는 행 집합에서 속성을 가져온다고 가정합니다.  세션이나 명령을 사용하는 것에 대한 코드는 비슷하지만 서로 다른 인터페이스를 사용합니다.  
+ 다음 예에서는 행 집합에서 속성 가져오기 하려는 가정 합니다. 세션 또는 명령에 대 한 코드는 유사 하지만 서로 다른 인터페이스를 사용 합니다.  
   
- 속성 그룹을 생성자에 대한 매개 변수로 사용하여 [CDBPropSet](../../data/oledb/cdbpropset-class.md) 개체를 만듭니다.  예를 들면 다음과 같습니다.  
+ 만들기는 [CDBPropSet](../../data/oledb/cdbpropset-class.md) 개체 생성자에 매개 변수로 속성 그룹을 사용 하 여 합니다. 예:  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 ```  
   
- 속성 ID와 속성에 할당할 값을 전달하여 [AddProperty](../../data/oledb/cdbpropset-addproperty.md)를 호출합니다.  값 형식은 사용하는 속성에 따라 다릅니다.  
+ 호출 [AddProperty](../../data/oledb/cdbpropset-addproperty.md), 속성에 할당할 속성 ID와 값을 전달 합니다. 값의 형식을 사용 하는 속성에 따라 달라 집니다.  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
@@ -43,7 +43,7 @@ propset.AddProperty(DBPROP_UPDATABILITY,
 DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
 ```  
   
- `IRowset` 인터페이스를 사용하여 **GetProperties**를 호출하고  속성 집합을 매개 변수로 전달합니다.  다음은 최종 코드입니다.  
+ 사용 하 여는 `IRowset` 호출할 인터페이스 **GetProperties**합니다. 매개 변수로 설정할 속성을 전달 합니다. 최종 코드는 다음과 같습니다.  
   
 ```  
 CAgentRowset<CMyProviderCommand>* pRowset = (CAgentRowset<CMyProviderCommand>*) pThis;  
@@ -72,5 +72,5 @@ if (pPropSet)
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿을 사용하여 작업](../../data/oledb/working-with-ole-db-provider-templates.md)

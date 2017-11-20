@@ -1,56 +1,56 @@
 ---
-title: "CDynamicParameterAccessor::CDynamicParameterAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::CDynamicParameterAccessor"
-  - "CDynamicParameterAccessor.CDynamicParameterAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicParameterAccessor 클래스, 생성자"
-  - "CDynamicParameterAccessor 메서드"
+title: 'Cdynamicparameteraccessor:: Cdynamicparameteraccessor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::CDynamicParameterAccessor
+- CDynamicParameterAccessor.CDynamicParameterAccessor
+dev_langs: C++
+helpviewer_keywords:
+- CDynamicParameterAccessor class, constructor
+- CDynamicParameterAccessor method
 ms.assetid: a1cce5e4-dfb9-43a2-bfb8-0435c653674a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 20678f94348774fbb816c75e884b328a1f4b4ae8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicParameterAccessor::CDynamicParameterAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a>CDynamicParameterAccessor::CDynamicParameterAccessor
 생성자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
       typedef CDynamicParameterAccessor _ParamClass;  
 CDynamicParameterAccessor(   
-   DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
-   DBLENGTH nBlobSize = 8000 )   
-   : CDynamicAccessor( eBlobHandling, nBlobSize )  
+   DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
+   DBLENGTH nBlobSize = 8000 )   
+   : CDynamicAccessor( eBlobHandling, nBlobSize )  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `eBlobHandling`  
- Specifies how the BLOB data is to be handled.  The default value is **DBBLOBHANDLING\_DEFAULT**.  See [CDynamicAccessor::SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) for a description of the **DBBLOBHANDLINGENUM** values.  
+ BLOB 데이터의 처리 방법을 지정 합니다. 기본값은 **DBBLOBHANDLING_DEFAULT**합니다. 참조 [cdynamicaccessor:: Setblobhandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) 에 대 한 설명은 **DBBLOBHANDLINGENUM** 값입니다.  
   
  `nBlobSize`  
- The maximum BLOB size in bytes; column data over this value is treated as a BLOB.  The default value is 8,000.  See [CDynamicAccessor::SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) for details.  
+ 최대 BLOB 크기 (바이트) 이 값에 대 한 열 데이터를 BLOB로 처리 됩니다. 기본값은 8000입니다. 참조 [cdynamicaccessor:: Setblobsizelimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) 대 한 자세한 내용은 합니다.  
   
-## 설명  
- See the [CDynamicAccessor::CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) constructor for more information on BLOB handling.  
+## <a name="remarks"></a>설명  
+ 참조는 [cdynamicaccessor:: Cdynamicaccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) BLOB 처리에 대 한 자세한 정보에 대 한 생성자입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicParameterAccessor 클래스](../../data/oledb/cdynamicparameteraccessor-class.md)

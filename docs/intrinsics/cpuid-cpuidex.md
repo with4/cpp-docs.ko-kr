@@ -1,37 +1,37 @@
 ---
-title: "__cpuid, __cpuidex | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__cpuid_cpp"
-  - "__cpuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__cpuid 내장"
-  - "cpuid 명령"
-  - "cpuid 내장"
+title: __cpuid, __cpuidex | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __cpuid_cpp
+- __cpuid
+dev_langs: C++
+helpviewer_keywords:
+- __cpuid intrinsic
+- cpuid instruction
+- cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-caps.latest.revision: 38
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 36
+caps.latest.revision: "38"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e986b471f10ed53b7428c498b5ec802f81e368f1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __cpuid, __cpuidex
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 **Microsoft 전용**  
   
- x86 및 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]에서 사용할 수 있는 `cpuid` 명령을 생성합니다.  이 명령은 지원되는 기능 및 CPU 형식에 대한 정보의 프로세서를 쿼리합니다.  
+ x86 및 `cpuid`에서 사용할 수 있는 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 명령을 생성합니다. 이 명령은 지원되는 기능 및 CPU 형식에 대한 정보의 프로세서를 쿼리합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void __cpuid(  
@@ -46,42 +46,42 @@ void __cpuidex(
 );  
 ```  
   
-#### 매개 변수  
- \[out\] `cpuInfo`  
+#### <a name="parameters"></a>매개 변수  
+ [out] `cpuInfo`  
  EAX, EBX, ECX 및 EDX에서 CPU의 지원되는 기능에 대해 반환되는 정보가 포함된 4개 정수의 배열입니다.  
   
- \[in\] `function_id`  
+ [in] `function_id`  
  검색할 정보를 지정하는 코드로서 EAX에서 전달되었습니다.  
   
- \[in\] `subfunction_id`  
+ [in] `subfunction_id`  
  검색할 정보를 지정하는 추가 코드로서 ECX에서 전달되었습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |내장 함수|아키텍처|  
-|-----------|----------|  
+|---------------|------------------|  
 |`__cpuid`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__cpuidex`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 이러한 내장 함수는 `cpuInfo`에서 EAX, EBX, ECX 및 EDX 레지스터의 값의 이 순서대로 채워진 32비트 정수 4개의 배열인 `cpuid` 명령이 반환한 지원되는 기능 및 CPU 정보를 저장합니다.  반환되는 정보는 `function_id` 매개 변수로 전달된 값에 따라 의미가 다릅니다.  `function_id`의 다양한 값으로 반환되는 정보는 프로세서에 따라 다릅니다.  
+## <a name="remarks"></a>설명  
+ 이러한 내장 함수는 `cpuid`에서 EAX, EBX, ECX 및 EDX 레지스터의 값의 이 순서대로 채워진 32비트 정수 4개의 배열인 `cpuInfo` 명령이 반환한 지원되는 기능 및 CPU 정보를 저장합니다. 반환되는 정보는 `function_id` 매개 변수로 전달된 값에 따라 의미가 다릅니다. `function_id`의 다양한 값으로 반환되는 정보는 프로세서에 따라 다릅니다.  
   
- `__cpuid` 내장 함수는 `cpuid` 명령을 호출하기 전에 ECX 레지스터를 지웁니다.  `__cpuidex` 내장 함수는 `cpuid` 명령을 생성하기 전에 ECX 레지스터의 값을 `subfunction_id`로 설정합니다.  따라서 프로세서에 대한 추가 정보를 수집할 수 있습니다.  
+ `__cpuid` 내장 함수는 `cpuid` 명령을 호출하기 전에 ECX 레지스터를 지웁니다. `__cpuidex` 내장 함수는 `subfunction_id` 명령을 생성하기 전에 ECX 레지스터의 값을 `cpuid`로 설정합니다. 따라서 프로세서에 대한 추가 정보를 수집할 수 있습니다.  
   
- Intel 프로세서에서 사용할 특정 매개 변수 및 이러한 내장 함수가 반환하는 값에 대한 자세한 내용은 [Intel 64 및 IA\-32 아키텍처 소프트웨어 개발자 설명서 2권: 명령 집합 참조](http://go.microsoft.com/fwlink/p/?LinkID=510021) 및 [Intel 아키텍처 명령 집합 확장 프로그래밍 참조](http://go.microsoft.com/fwlink/p/?LinkID=506627)에서 `cpuid` 명령의 설명서를 참조하세요.  Intel 설명서에서는 EAX 및 ECX에서 전달하는 `function_id` 및 `subfunction_id` 매개 변수에 대해 "leaf" 및 "subleaf"라는 용어를 사용합니다.  
+ 특정 매개 변수를 사용 하 여 및 Intel 프로세서에서 이러한 내장 함수에서 반환 된 값에 대 한 자세한 내용은 참조에 대 한 설명서는 `cpuid` 명령 [Intel 64 및 ia-32 아키텍처 소프트웨어 개발자 설명서 볼륨 2: 명령 집합 참조](http://go.microsoft.com/fwlink/p/?LinkID=510021) 및 [Intel 아키텍처 명령 집합 확장명 프로그래밍 참조](http://go.microsoft.com/fwlink/p/?LinkID=506627)합니다. Intel 설명서에서는 EAX 및 ECX에서 전달하는 `function_id` 및 `subfunction_id` 매개 변수에 대해 "leaf" 및 "subleaf"라는 용어를 사용합니다.  
   
- AMD 프로세서에서 사용할 특정 매개 변수 및 이러한 내장 함수가 반환하는 값에 대한 자세한 내용은 특정 프로세서 제품군에 대한 [AMD64 아키텍처 프로그래머 설명서 3권: 범용 및 시스템 명령](http://go.microsoft.com/fwlink/p/?LinkId=510023)과 [개정 가이드](http://go.microsoft.com/fwlink/p/?LinkId=510023)에서 `cpuid` 명령의 설명서를 참조하세요.  AMD 설명서에서는 EAX 및 ECX에서 전달하는 `function_id` 및 `subfunction_id` 매개 변수에 대해 "function number" 및 "subfunction number"라는 용어를 사용합니다.  
+ 특정 매개 변수를 사용 하 여 및 AMD 프로세서에서 이러한 내장 함수에서 반환 된 값에 대 한 자세한 내용은 참조에 대 한 설명서는 `cpuid` 명령 [AMD64 아키텍처 프로그래머용 설명서 볼륨 3: 범용 및 시스템 지침](http://go.microsoft.com/fwlink/p/?LinkId=510023) 및는 [수정 지침](http://go.microsoft.com/fwlink/p/?LinkId=510023) 특정 프로세서 제품군에 대 한 합니다. AMD 설명서에서는 EAX 및 ECX에서 전달하는 `function_id` 및 `subfunction_id` 매개 변수에 대해 "function number" 및 "subfunction number"라는 용어를 사용합니다.  
   
- `function_id` 인수가 0이면 `cpuInfo[0]`는 프로세서가 지원하는 사용 가능한 최대 비확장 `function_id`를 반환합니다.  프로세서 제조업체는 `cpuInfo[1]`, `cpuInfo[2]` 및 cpuInfo\[3\]에서 인코딩됩니다.  
+ `function_id` 인수가 0이면 `cpuInfo[0]`는 프로세서가 지원하는 사용 가능한 최대 비확장 `function_id`를 반환합니다. 프로세서 제조업체는 `cpuInfo[1]`, `cpuInfo[2]` 및 cpuInfo[3]에서 인코딩됩니다.  
   
- 특정 명령 집합 확장 및 CPU 기능에 대한 지원은 상위 function\_id 값에 대해 반환되는 `cpuInfo` 결과에서 인코딩됩니다.  자세한 내용은 위에 링크되어 있는 설명서와 다음 예제 코드를 참조하세요.  
+ 특정 명령 집합 확장 및 CPU 기능에 대한 지원은 상위 function_id 값에 대해 반환되는 `cpuInfo` 결과에서 인코딩됩니다. 자세한 내용은 위에 링크되어 있는 설명서와 다음 예제 코드를 참조하세요.  
   
- 일부 프로세서에서는 확장 함수 CPUID 정보를 지원합니다.  지원되는 경우 정보를 반환하는 데 0x80000000부터의 `function_id` 값이 사용될 수 있습니다.  허용되는 의미 있는 최대값을 확인하려면 `function_id`를 0x80000000으로 설정합니다.  확장 함수에 대해 지원되는 `function_id`의 최대값은 `cpuInfo[0]`에 기록됩니다.  
+ 일부 프로세서에서는 확장 함수 CPUID 정보를 지원합니다. 지원되는 경우 정보를 반환하는 데 0x80000000부터의 `function_id` 값이 사용될 수 있습니다. 허용되는 의미 있는 최대값을 확인하려면 `function_id`를 0x80000000으로 설정합니다. 확장 함수에 대해 지원되는 `function_id`의 최대값은 `cpuInfo[0]`에 기록됩니다.  
   
-## 예제  
- 이 예제에서는 `__cpuid` 및 `__cpuidex` 내장 함수를 통해 제공되는 일부 정보를 보여 줍니다.  앱은 현재 프로세서가 지원하는 명령 집합 확장을 나열합니다.  출력에는 특정 프로세서에 대해 반환될 수 있는 결과가 표시됩니다.  
+## <a name="example"></a>예제  
+ 이 예제에서는 `__cpuid` 및 `__cpuidex` 내장 함수를 통해 제공되는 일부 정보를 보여 줍니다. 앱은 현재 프로세서가 지원하는 명령 집합 확장을 나열합니다. 출력에는 특정 프로세서에 대해 반환될 수 있는 결과가 표시됩니다.  
   
 ```  
 // InstructionSet.cpp   
@@ -346,60 +346,64 @@ int main()
 }  
 ```  
   
-  **GenuineIntel**  
- **Intel\(R\) Core\(TM\) i5\-2500 CPU @ 3.30GHz**  
-**3DNOW not supported**  
-**3DNOWEXT not supported**  
-**ABM not supported**  
-**ADX not supported**  
-**AES supported**  
-**AVX supported**  
-**AVX2 not supported**  
-**AVX512CD not supported**  
-**AVX512ER not supported**  
-**AVX512F not supported**  
-**AVX512PF not supported**  
-**BMI1 not supported**  
-**BMI2 not supported**  
-**CLFSH supported**  
-**CMPXCHG16B supported**  
-**CX8 supported**  
-**ERMS not supported**  
-**F16C not supported**  
-**FMA not supported**  
-**FSGSBASE not supported**  
-**FXSR supported**  
-**HLE not supported**  
-**INVPCID not supported**  
-**LAHF supported**  
-**LZCNT not supported**  
-**MMX supported**  
-**MMXEXT not supported**  
-**MONITOR not supported**  
-**MOVBE not supported**  
-**MSR supported**  
-**OSXSAVE supported**  
-**PCLMULQDQ supported**  
-**POPCNT supported**  
-**PREFETCHWT1 not supported**  
-**RDRAND not supported**  
-**RDSEED not supported**  
-**RDTSCP supported**  
-**RTM not supported**  
-**SEP supported**  
-**SHA not supported**  
-**SSE supported**  
-**SSE2 supported**  
-**SSE3 supported**  
-**SSE4.1 supported**  
-**SSE4.2 supported**  
-**SSE4a not supported**  
-**SSSE3 supported**  
-**SYSCALL supported**  
-**TBM not supported**  
-**XOP not supported**  
-**XSAVE supported**   
-## Microsoft 전용 종료  
+```Output  
+GenuineIntel  
+        Intel(R) Core(TM) i5-2500 CPU @ 3.30GHz  
+3DNOW not supported  
+3DNOWEXT not supported  
+ABM not supported  
+ADX not supported  
+AES supported  
+AVX supported  
+AVX2 not supported  
+AVX512CD not supported  
+AVX512ER not supported  
+AVX512F not supported  
+AVX512PF not supported  
+BMI1 not supported  
+BMI2 not supported  
+CLFSH supported  
+CMPXCHG16B supported  
+CX8 supported  
+ERMS not supported  
+F16C not supported  
+FMA not supported  
+FSGSBASE not supported  
+FXSR supported  
+HLE not supported  
+INVPCID not supported  
+LAHF supported  
+LZCNT not supported  
+MMX supported  
+MMXEXT not supported  
+MONITOR not supported  
+MOVBE not supported  
+MSR supported  
+OSXSAVE supported  
+PCLMULQDQ supported  
+POPCNT supported  
+PREFETCHWT1 not supported  
+RDRAND not supported  
+RDSEED not supported  
+RDTSCP supported  
+RTM not supported  
+SEP supported  
+SHA not supported  
+SSE supported  
+SSE2 supported  
+SSE3 supported  
+SSE4.1 supported  
+SSE4.2 supported  
+SSE4a not supported  
+SSSE3 supported  
+SYSCALL supported  
+TBM not supported  
+XOP not supported  
+XSAVE supported  
   
-## 참고 항목  
+```  
+  
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

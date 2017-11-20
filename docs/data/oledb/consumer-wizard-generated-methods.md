@@ -1,59 +1,59 @@
 ---
 title: "소비자 마법사 생성 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "특성 삽입 클래스 및 메서드"
-  - "CloseAll 메서드"
-  - "CloseDataSource 메서드"
-  - "소비자의 마법사 생성 클래스 및 메서드"
-  - "GetRowsetProperties 메서드"
-  - "메서드[C++], OLE DB 소비자 마법사 생성"
-  - "OLE DB 소비자, 마법사 생성 클래스 및 메서드"
-  - "OpenAll 메서드"
-  - "OpenDataSource 메서드"
-  - "OpenRowset 메서드"
-  - "마법사 생성 클래스 및 메서드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OpenAll method
+- attribute-injected classes and methods
+- wizard-generated classes and methods
+- OLE DB consumers, wizard-generated classes and methods
+- methods [C++], OLE DB Consumer Wizard-generated
+- CloseDataSource method
+- consumer wizard-generated classes and methods
+- OpenDataSource method
+- CloseAll method
+- OpenRowset method
+- GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7be8bbf011964411431d754afa058763e70e3265
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 소비자 마법사 생성 메서드
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ATL OLE DB 소비자 마법사 및 MFC 응용 프로그램 마법사는 다음과 같은 특정 함수를 생성하는데, 이에 대해 알고 있어야 합니다.  일부 메서드는 특성을 사용하는 프로젝트에서 다르게 구현될 수 있으므로 주의해야 합니다. 각 경우에 대해서는 아래에서 설명합니다.  삽입된 코드를 보는 방법은 [삽입한 코드 디버깅](../Topic/How%20to:%20Debug%20Injected%20Code.md)을 참조하십시오.  
+# <a name="consumer-wizard-generated-methods"></a>소비자 마법사 생성 메서드
+ATL OLE DB 소비자 마법사 및 MFC 응용 프로그램 마법사는 알고 있어야 하는 특정 기능을 생성 합니다. 참고는 몇 가지 방법을 다르게 구현 됩니다 특성 사용된 프로젝트에 있으므로 더 몇 가지 주의 해야 합니다. 각 사례는 아래에 자세히 설명 합니다. 삽입된 코드를 보는 방법에 대한 자세한 내용은 [삽입된 코드 디버그](/visualstudio/debugger/how-to-debug-injected-code)를 참조하세요.  
   
--   `OpenAll` 데이터 소스, 행 집합을 열고, 책갈피가 제공되는 경우 이를 설정합니다.  
+-   `OpenAll`데이터 원본의 행 집합을 열고 사용할 수 있는 책갈피 설정 합니다.  
   
--   `CloseAll` 열려진 모든 행 집합을 닫고 모든 명령 실행을 해제합니다.  
+-   `CloseAll`열려 있는 모든 행 집합을 닫고 모든 명령 실행을 해제 합니다.  
   
--   `OpenRowset` OpenAll에 의해 호출되어 소비자 행 집합을 엽니다.  
+-   `OpenRowset`OpenAll 소비자의 행 집합 또는 행 집합 열에 의해 호출 됩니다.  
   
--   `GetRowsetProperties` 속성을 설정할 수 있는 행 집합의 속성 집합을 가리키는 포인터를 검색합니다.  
+-   `GetRowsetProperties`행 집합의 속성을 설정할 수 있는 속성이 있는 설정에 대 한 포인터를 검색 합니다.  
   
--   `OpenDataSource` **데이터 연결 속성** 대화 상자에서 지정한 초기화 문자열을 사용하여 데이터 소스를 엽니다.  
+-   `OpenDataSource`에 지정 된 초기화 문자열을 사용 하 여 데이터 원본이 열립니다는 **데이터 연결 속성** 대화 상자.  
   
--   `CloseDataSource` 적절한 방법으로 데이터 소스를 닫습니다.  
+-   `CloseDataSource`적절 한 방식으로 데이터 소스를 닫습니다.  
   
-## OpenAll 및 CloseAll  
+## <a name="openall-and-closeall"></a>OpenAll 및 CloseAll  
   
 ```  
-HRESULT OpenAll();   
+HRESULT OpenAll();   
 void CloseAll();  
 ```  
   
- 다음 예제는 같은 명령을 반복적으로 실행할 때 `OpenAll` 및 `CloseAll` 을 호출하는 방법을 보여 줍니다.  `CloseAll` 대신 **Close** 및 `ReleaseCommand`를 호출하는 [CCommand::Close](../../data/oledb/ccommand-close.md)의 코드 예제와 비교해 보십시오.  
+ 다음 예제에서는 호출 하는 방법을 보여 줍니다. `OpenAll` 및 `CloseAll` 반복 해 서 동일한 명령을 실행할 때. 코드 예제에서는 비교 [ccommand:: Close](../../data/oledb/ccommand-close.md)를 호출 하는 변형을 보여 주는 **닫기** 및 `ReleaseCommand` 대신 `CloseAll`합니다.  
   
 ```  
 int main(int argc, char* argv[])  
@@ -86,19 +86,19 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## 설명  
- `HasBookmark` 메서드를 정의하면 `OpenAll`  코드에서는 DBPROP\_IRowsetLocate 속성을 설정합니다. 공급자에서 해당 속성을 지원하는 경우에만 이 메서드를 정의하십시오.  
+## <a name="remarks"></a>설명  
+ 정의 하는 경우 유의 `HasBookmark` 메서드는 `OpenAll` DBPROP_IRowsetLocate 속성을 설정 하는 코드; 지만이 공급자에서 지원할 경우 해당 속성을 확인 합니다.  
   
-## OpenRowset  
+## <a name="openrowset"></a>OpenRowset  
   
 ```  
-// OLE DB Template version:   
+// OLE DB Template version:   
 HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll**은 이 메서드를 호출하여 소비자에서 행집합을 엽니다.  여러 데이터 소스\/세션\/행 집합을 사용하여 작업하려는 경우가 아니면 일반적으로 `OpenRowset`을 호출할 필요가 없습니다.  `OpenRowset`은 명령 또는 테이블 클래스 헤더 파일에 선언됩니다.  
+ **OpenAll** 소비자에서 행 집합 열에이 메서드를 호출 합니다. 호출할 필요가 없습니다 일반적으로 `OpenRowset` 여러 데이터 원본/세션/행 집합으로 작업 하는 경우가 있습니다. `OpenRowset`명령 또는 테이블 클래스 헤더 파일에 선언 됩니다.  
   
 ```  
 // OLE DB Template version:  
@@ -113,7 +113,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
- 이 특성은 이 메서드를 다르게 구현합니다.  이 버전에서는 사용자가 다른 매개 변수를 전달해도, db\_command에 지정된 명령 문자열을 기본으로 하는 명령 문자열과 세션 개체를 받아들입니다.  `HasBookmark` 메서드를 정의하면 `OpenRowset` 코드에서 DBPROP\_IRowsetLocate 속성을 설정합니다. 공급자가 해당 속성을 지원하는 경우에만 이 메서드를 정의하십시오.  
+ 특성이이 메서드를 다르게 구현 합니다. 이 버전에서는 세션 개체를 명령 문자열 db_command에 지정 된 명령 문자열을 다른 전달할 수 있지만 기본으로 합니다. 정의 하는 경우 유의 `HasBookmark` 메서드는 `OpenRowset` DBPROP_IRowsetLocate 속성을 설정 하는 코드; 지만이 공급자에서 지원할 경우 해당 속성을 확인 합니다.  
   
 ```  
 // Attribute-injected version:  
@@ -132,13 +132,13 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 }  
 ```  
   
-## GetRowsetProperties  
+## <a name="getrowsetproperties"></a>GetRowsetProperties  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- 이 메서드는 행 집합의 속성 집합을 가리키는 포인터를 검색합니다. 이 포인터를 사용하여 DBPROP\_IRowsetChange 등의 속성을 설정할 수 있습니다.  다음과 같이 사용자 레코드 클래스에 `GetRowsetProperties`를 사용할 수 있습니다.  이 코드를 수정하여 추가 행 집합 속성을 설정할 수 있습니다.  
+ 이 메서드는 행 집합의 속성 집합에 대 한 포인터를 검색합니다. DBPROP_IRowsetChange 등의 속성을 설정 하려면이 포인터를 사용할 수 있습니다. `GetRowsetProperties`사용자 레코드 클래스에 다음과 같이 사용 됩니다. 추가 행 집합 속성을 설정 하는이 코드를 수정할 수 있습니다.  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -150,18 +150,18 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }  
 ```  
   
-## 설명  
- 전역 `GetRowsetProperties` 메서드를 사용자가 정의하면 마법사가 정의하는 메서드와 충돌될 수 있으므로 사용자가 정의하면 안 됩니다.  이 메서드는 특성을 사용하는 템플릿 기반 프로젝트에서 가져온 마법사 생성 메서드이므로 특성이 이 코드에 삽입되지 않습니다.  
+## <a name="remarks"></a>설명  
+ 정의 하면 안 전역 `GetRowsetProperties` 마법사에 의해 정의 한 경우에 충돌할 수 있으므로 메서드. 이 템플릿으로 만들고 특성 사용 프로젝트; 얻을 수 있는 하는 마법사에서 생성 된 방법 note 이 코드를 삽입 하지 않습니다.  
   
-## OpenDataSource 및 CloseDataSource  
+## <a name="opendatasource-and-closedatasource"></a>OpenDataSource 및 CloseDataSource  
   
 ```  
-HRESULT OpenDataSource();   
+HRESULT OpenDataSource();   
 void CloseDataSource();  
 ```  
   
-## 설명  
- 마법사는 `OpenDataSource` 및 `CloseDataSource`메서드를 정의합니다. `OpenDataSource`는 [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)을 호출합니다.  
+## <a name="remarks"></a>설명  
+ 메서드를 정의 하는 마법사 `OpenDataSource` 및 `CloseDataSource`; `OpenDataSource` 호출 [cdatasource:: Openfrominitializationstring](../../data/oledb/cdatasource-openfrominitializationstring.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [마법사를 사용하여 OLE DB 소비자 만들기](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

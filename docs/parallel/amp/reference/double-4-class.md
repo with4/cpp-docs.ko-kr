@@ -1,11 +1,10 @@
 ---
-title: "double_4 클래스 | Microsoft 문서"
+title: "double_4 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,36 +273,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::set_xwyz
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7a55f3f39562481ba7a4b189293dfe59891740fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: f1c1750c7c2e372bf296311cdd13467aaa98a888
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="double4-class"></a>double_4 클래스
-4 개의 double의 short 벡터를 나타냅니다.  
+4 개의 double 값의 short 벡터를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -323,7 +306,7 @@ class double_4;
   
 |이름|설명|  
 |----------|-----------------|  
-|[double_4 생성자](#ctor)|오버로드됨. 기본 생성자를 0부터 모든 요소를 초기화 합니다.|  
+|[double_4 생성자](#ctor)|오버로드됨. 기본 생성자, 0 인 모든 요소를 초기화 합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -628,7 +611,7 @@ class double_4;
   
 ##  <a name="ctor"></a>double_4 
 
- 기본 생성자를 0부터 모든 요소를 초기화 합니다.  
+ 기본 생성자, 0 인 모든 요소를 초기화 합니다.  
   
 ```  
 double_4() restrict(amp,
@@ -680,16 +663,16 @@ explicit inline double_4(
   
 ### <a name="parameters"></a>매개 변수  
  `_V0`  
- 0 요소를 초기화할 값입니다.  
+ 값 초기화 요소 0입니다.  
   
  `_V1`  
- 1 요소를 초기화할 값입니다.  
+ 1 요소를 초기화 값입니다.  
   
  `_V2`  
- 2 요소를 초기화할 값입니다.  
+ 값 2 요소를 초기화 하는입니다.  
   
  `_V3`  
- 3 요소를 초기화할 값입니다.  
+ 3 요소를 초기화 값입니다.  
   
  `_V`  
  초기화에 대 한 값입니다.  
@@ -705,4 +688,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
-

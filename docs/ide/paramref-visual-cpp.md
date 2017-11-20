@@ -1,48 +1,47 @@
 ---
-title: "&lt;paramref&gt;(Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "paramref"
-  - "<paramref>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<paramref> C++ XML 태그"
-  - "paramref C++ XML 태그"
+title: '&lt;paramref&gt; (Visual c + +) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- paramref
+- <paramref>
+dev_langs: C++
+helpviewer_keywords:
+- paramref C++ XML tag
+- <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e1212116611273bd0abd20169e3b25201f356bd7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;paramref&gt;(Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<paramref\> 태그를 사용 하면 특정 단어가 매개 변수임을 나타낼 수 있습니다.  이 매개 변수를 다른 방식으로 서식화 서식을 지정 하는.xml 파일을 처리할 수 있습니다.  
+# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual c + +)
+\<paramref > 태그는 단어는 매개 변수를 표시 하는 방식이 제공 합니다. 다른 방식으로이 매개 변수 형식을 지정 하는.xml 파일을 처리할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <paramref name="name"/>  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `name`  
- 참조할 매개 변수의 이름입니다.  이름을 단일 또는 이중 따옴표로 묶어야 합니다.  검색 되지 않는 경우에 컴파일러에서 경고가 발생 `name`.  
+ 참조할 매개 변수의 이름입니다.  이름을 단일 또는 이중 따옴표로 묶습니다.  `name`가 검색되지 않는 경우 컴파일러에서 경고가 발생합니다.  
   
-## 설명  
- [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 저장합니다.  
+## <a name="remarks"></a>설명  
+ [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // xml_paramref_tag.cpp  
@@ -57,5 +56,5 @@ public ref class MyClass {
 };  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 문서](../ide/xml-documentation-visual-cpp.md)

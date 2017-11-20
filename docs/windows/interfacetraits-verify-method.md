@@ -1,47 +1,45 @@
 ---
-title: "InterfaceTraits::Verify 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::Verify"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verify 메서드"
+title: "Interfacetraits:: Verify 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::Verify
+dev_langs: C++
+helpviewer_keywords: Verify method
 ms.assetid: 46edd67f-7952-4552-a157-55e823f616c8
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 85f6ef3e927b91af055ff7152e1e6cd468a143d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# InterfaceTraits::Verify 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 __forceinline static void Verify();  
 ```  
   
-## 설명  
- 기본이 올바르게 도출됬는지 확인합니다.  
+## <a name="remarks"></a>설명  
+ 자료 제대로 파생 된 것을 확인 합니다.  
   
- `Base` 에 대한 더 자세한 내용은 Public Typedefs 섹션 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)를 참조하십시오.  
+ 에 대 한 자세한 내용은 `Base`, 공용 Typedefs 섹션을 참조 [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
   
- **네임스페이스**Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [InterfaceTraits 구조체](../windows/interfacetraits-structure.md)   
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

@@ -4,32 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- partial ordering of function templates
+dev_langs: C++
+helpviewer_keywords: partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: 252f80416f581ecc2c126bc44ab22c1b63c50130
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d211a3ab33377b817c23734f01947cde92f8aad7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="partial-ordering-of-function-templates-c"></a>함수 템플릿의 부분 순서 지정 (C++)
 
 함수 호출의 인수 목록과 일치하는 다양한 함수 템플릿을 사용할 수 있습니다. C++에서는 호출해야 하는 함수를 지정하는 함수 템플릿의 부분 정렬을 정의합니다. 정렬이 부분적인 이유는 동일하게 특수화된 것으로 간주되는 일부 템플릿이 있을 수 있기 때문입니다.
 
-컴파일러는 가능한 일치 함수 템플릿 중에서 가장 특수화된 것을 선택합니다. 예를 들어, 형식이 사용 하는 함수 템플릿을 __T__, 및 다른 함수 템플릿에서도 __T\* __ 를 사용할 수는 __T\* __ 버전 이라고 특수 및 제네릭 보다 선호 됩니다 되도록 __T__ 버전 인수 포인터 형식, 허용 가능한 일치 항목 간주 합니다.
+컴파일러는 가능한 일치 함수 템플릿 중에서 가장 특수화된 것을 선택합니다. 예를 들어, 형식이 사용 하는 함수 템플릿을 __T__, 및 다른 함수 템플릿에서도 __T\*__  를 사용할 수는 __T\*__  버전 이라고 특수 및 제네릭 보다 선호 됩니다 되도록 __T__ 버전 인수 포인터 형식, 허용 가능한 일치 항목 간주 합니다.
 
 더욱 특수화된 함수 템플릿 후보를 확인하려면 다음 프로세스를 사용합니다.
 
@@ -47,11 +42,11 @@ ms.lasthandoff: 09/25/2017
 
      1. 특정 형식으로 특수화된 템플릿은 제네릭 형식 인수를 사용한 템플릿보다 특수화됩니다.
 
-     2. 만 템플릿에서도 __T\* __ 은 하나의 라인만 보다 더 특수 한 __T__가상 입력 하기 때문에, __X\* __ 에 대 한 인수는 유효한는 __T__ 템플릿 인수에 있지만 __X__ 이 대 한 올바른 인수가 아닙니다는 __T\* __ 템플릿 인수를 사용 합니다.
+     2. 만 템플릿에서도 __T\*__  은 하나의 라인만 보다 더 특수 한 __T__가상 입력 하기 때문에, __X\*__  에 대 한 인수는 유효한는 __T__ 템플릿 인수에 있지만 __X__ 이 대 한 올바른 인수가 아닙니다는 __T\*__  템플릿 인수를 사용 합니다.
 
      3. __const T__ 은 보다 더 특수 한 __T__때문에, __const X__ 에 대 한 인수는 유효한는 __T__ 템플릿 인수에 있지만 __X__ 이 대 한 올바른 인수가 아닙니다는 __const T__ 템플릿 인수를 사용 합니다.
 
-     4. __const T\* __ 은 보다 더 특수 한 __T\*__때문에, __const X\* __ 에 대 한 유효한 인수는 __T\* __ 템플릿 인수에 있지만 __X\* __ 이 대 한 올바른 인수가 아닙니다는 __const T\* __ 템플릿 인수를 사용 합니다.
+     4. __const T\*__  은 보다 더 특수 한 __T\*__때문에, __const X\*__  에 대 한 유효한 인수는 __T\*__  템플릿 인수에 있지만 __X\*__  이 대 한 올바른 인수가 아닙니다는 __const T\*__  템플릿 인수를 사용 합니다.
 
 ## <a name="example"></a>예제
 
@@ -99,4 +94,3 @@ Even more specialized function for const T*
 ## <a name="see-also"></a>참고 항목
 
 [함수 템플릿](../cpp/function-templates.md)
-

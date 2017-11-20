@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -39,36 +37,21 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: cad572e3b312ad29878486c9f40dafc2e96917f9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: b2763bdf1c3efd4571b6bfbe68b26ef46c941aed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 콘솔에서 문자열을 가져옵니다. 이러한 버전의 [_cgets 및 _cgetws](../../c-runtime-library/cgets-cgetws.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 향상된 보안 기능이 포함되어 있습니다.  
   
 > [!IMPORTANT]
->  이 API는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   

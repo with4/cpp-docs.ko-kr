@@ -1,46 +1,46 @@
 ---
 title: "링커 명령줄 구문 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LINK 도구[C++], 명령줄 구문"
-  - "링커[C++], 구문"
-  - "링커 명령줄 구문[C++]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- linker [C++], syntax
+- linker command line [C++]
+- LINK tool [C++], command-line syntax
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 905ef180c2212e2efd708bb795162627b60ced79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 링커 명령줄 구문
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-LINK.EXE를 실행하려면 다음 명령 구문을 사용합니다.  
+# <a name="linker-command-line-syntax"></a>링커 명령줄 구문
+링크를 실행 합니다. EXE를 다음 명령 구문을 사용 합니다.  
   
 ```  
 LINK arguments  
 ```  
   
- `arguments`에는 옵션과 파일 이름이 포함되며 지정 순서는 상관 없습니다.  옵션이 먼저 처리되고 그 다음에 파일이 처리됩니다.  각 인수 사이에는 공백이나 탭을 사용하여 구분합니다.  
+ `arguments` 옵션과 파일 이름이 포함 및 순서에 관계 없이 지정할 수 있습니다. 처리 된 가장 먼저 다음 파일은 옵션입니다. 하나 이상의 공백이 나 탭을 사용 하 여 인수를 구분 합니다.  
   
 > [!NOTE]
->  이 도구는 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 명령 프롬프트에서만 시작할 수 있습니다.  시스템 명령 프롬프트 또는 파일 탐색기에서는 시작할 수 없습니다.  
+>  [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 명령 프롬프트에서만 이 도구를 시작할 수 있습니다. 시스템 명령 프롬프트 또는 파일 탐색기에서는 시작할 수 없습니다.  
   
- 명령줄의 옵션은 옵션 지정자인 대시\(\-\) 또는 슬래시\(\/\)와 옵션 이름으로 구성됩니다.  옵션 이름은 약식으로 표기할 수 없습니다.  일부 옵션의 경우에는 콜론\(:\) 뒤에 인수를 지정합니다.  옵션을 지정할 때 공백이나 탭은 \/COMMENT 옵션에서 따옴표로 묶은 문자열에만 사용할 수 있습니다.  숫자 인수는 십진수나 C 언어 표기법으로 지정합니다.  옵션 이름과 해당 키워드 또는 파일 이름 인수는 대\/소문자를 구분하지 않지만 인수로 지정되는 식별자는 대\/소문자를 구분합니다.  
+ 명령줄 옵션은 옵션 지정자 이루어집니다 대시 (-) 또는 슬래시 (/) 옵션의 이름이 차례로 나옵니다. 옵션 이름은 축약 될 수 없습니다. 일부 옵션이 콜론 (:) 다음에 지정 된 인수를 사용 합니다. 공백 또는 탭 옵션 사양에를 제외한 허용 되지 /COMMENT 옵션에 따옴표로 묶은 문자열입니다. 10 진수 또는 C 언어 표기법에서 숫자 인수를 지정 합니다. 옵션 이름 및 키워드 또는 파일 이름 인수는 대/소문자를 구분 하지 않는 식별자 인수로 대/소문자 구분.  
   
- 파일을 링커에 전달하려면 명령줄에서 LINK 명령 뒤에 파일 이름을 지정합니다.  파일 이름이 포함된 절대 경로나 상대 경로를 지정할 수 있으며 파일 이름에 와일드카드를 사용할 수도 있습니다.  마침표\(.\)와 파일 확장명을 생략하면 .obj로 가정하여 해당 파일을 찾게 됩니다.  LINK에서는 파일 확장명을 사용하지 않으며, 파일 확장명이 없으면 해당 파일로 가정합니다. 파일 내용을 검사하여 파일 형식을 결정하고 그 결과에 따라 처리합니다.  
+ 파일을 링커로 전달 하려면 링크 명령 실행 후 명령줄에서 파일 이름을 지정 합니다. 절대 또는 상대 경로 파일 이름으로 지정할 수 있습니다 및 파일 이름에 와일드 카드를 사용할 수 있습니다. 점 (.) 및 파일 이름 확장명을 생략 하면 링크.obj 파일을 찾기 위해 가정 합니다. 링크 또는 사용 하지 않는 파일 이름 확장명의 부족을 통해 파일의 내용에 대해 가정 검사 하 여 파일의 형식을 결정 하 고 적절 하 게 처리 합니다.  
   
- link.exe는 오류가 발생하지 않고 작업에 성공하는 경우 0을 반환합니다.  그렇지 않으면 링크를 중지한 오류의 해당 번호가 링커에서 반환됩니다.  예를 들어, 링커에서 LNK1104 생성, 링커가 1104를 반환 합니다. 따라서 링커 오류가 반환 가장 낮은 오류 번호는 1000입니다. 반환 값 128은 운영 체제나.config 파일에 구성 문제가 나타냅니다. 로더는 link.exe 나 c2.dll 로드 하지 않습니다.  
+ link.exe는 성공 (오류 없음)에 0을 반환합니다.  그렇지 않은 경우 링커는 링크 중지 된 오류 번호를 반환 합니다.  예를 들어 링커 LNK1104를 생성 하는 경우 링커 1104를 반환 합니다.  따라서 가장 낮은 링커에서 오류 발생 시 반환 된 오류 번호는 1000입니다.  반환 값이 128 운영 체제 또는;.config 파일에 구성 문제가 나타냅니다. 로더는 link.exe 또는 c2.dll 로드 하지 못했습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

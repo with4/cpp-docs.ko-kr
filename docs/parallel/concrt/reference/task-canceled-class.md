@@ -1,49 +1,31 @@
 ---
-title: "task_canceled 클래스 | Microsoft 문서"
+title: "task_canceled 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - task_canceled
 - CONCRT/concurrency::task_canceled
 - CONCRT/concurrency::task_canceled::task_canceled
-dev_langs:
-- C++
-helpviewer_keywords:
-- task_canceled class
+dev_langs: C++
+helpviewer_keywords: task_canceled class
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 8f84564a96557c14eb9491b9d1a1d369326751fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 8e2779354c164a05cfaa47d4d3a25815cc250955
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="taskcanceled-class"></a>task_canceled 클래스
-이 클래스는 현재 작업을 강제 취소하도록 PPL 작업 레이어에서 throw된 예외를 설명합니다. 또한 의해 throw 되는 `get()` 메서드를 [작업](/visualstudio/extensibility/debugger/task-class-internal-members), 취소 된 작업에 대 한 합니다.  
+이 클래스는 현재 작업을 강제 취소하도록 PPL 작업 레이어에서 throw된 예외를 설명합니다. throw 됩니다는 `get()` 메서드를 [작업](/visualstudio/extensibility/debugger/task-class-internal-members), 취소 된 작업에 대 한 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -85,4 +67,3 @@ task_canceled() throw();
   
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)
-

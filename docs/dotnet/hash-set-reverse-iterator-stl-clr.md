@@ -1,41 +1,39 @@
 ---
-title: "hash_set::reverse_iterator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator 멤버[STL/CLR]"
+title: 'hash_set:: reverse_iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 24180a51-7426-4319-9e59-65a5957de54e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3e3204dff0adc4a2879a2ab5807171529548f27f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::reverse_iterator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of a reverse iterator for the controlled sequence.  
+# <a name="hashsetreverseiterator-stlclr"></a>hash_set::reverse_iterator(STL/CLR)
+제어되는 시퀀스에 대한 반대 반복기의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## 설명  
- The type describes an object of unspecified type `T3` that can serve as a reverse iterator for the controlled sequence.  
+## <a name="remarks"></a>설명  
+ 이 형식은 제어된 시퀀스에 대해 반대 반복기로 사용될 수 있는 지정되지 않은 `T3` 형식의 개체를 설명합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_reverse_iterator.cpp   
@@ -60,14 +58,17 @@ int main()
   
 ```  
   
-  **c b a**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::const\_iterator](../dotnet/hash-set-const-iterator-stl-clr.md)   
- [hash\_set::const\_reverse\_iterator](../dotnet/hash-set-const-reverse-iterator-stl-clr.md)   
- [hash\_set::iterator](../dotnet/hash-set-iterator-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: const_iterator (STL/CLR)](../dotnet/hash-set-const-iterator-stl-clr.md)   
+ [hash_set:: const_reverse_iterator (STL/CLR)](../dotnet/hash-set-const-reverse-iterator-stl-clr.md)   
+ [hash_set::iterator(STL/CLR)](../dotnet/hash-set-iterator-stl-clr.md)

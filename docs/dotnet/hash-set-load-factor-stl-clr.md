@@ -1,41 +1,39 @@
 ---
-title: "hash_set::load_factor(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "load_factor 멤버[STL/CLR]"
+title: 'hash_set:: load_factor (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::load_factor
+dev_langs: C++
+helpviewer_keywords: load_factor member [STL/CLR]
 ms.assetid: 84fbcdd8-0457-4a20-9f54-0a7c9612f4dd
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3339db591810713b3016222d525eaa9cdf4334a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::load_factor(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Counts the average elements per bucket.  
+# <a name="hashsetloadfactor-stlclr"></a>hash_set::load_factor(STL/CLR)
+버킷당 평균 요소 수를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 float load_factor();  
 ```  
   
-## 설명  
- The member function returns `(float)`[hash\_set::size](../dotnet/hash-set-size-stl-clr.md)`() /` [hash\_set::bucket\_count](../dotnet/hash-set-bucket-count-stl-clr.md)`()`.  You use it to determine the average bucket size.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 반환 `(float)` [hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set:: bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`합니다. 평균 버킷 크기를 확인 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_load_factor.cpp   
@@ -81,22 +79,27 @@ int main()
   
 ```  
   
-  **a b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 0.25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0.0234375**  
-**max\_load\_factor\(\) \= 0.25**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::bucket\_count](../dotnet/hash-set-bucket-count-stl-clr.md)   
- [hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)   
+ [hash_set::max_load_factor(STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)

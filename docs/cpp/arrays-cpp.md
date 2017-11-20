@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="arrays-c"></a>배열 (C++)
 배열은 서로 유사한 개체의 컬렉션입니다. 가장 간단한 배열은 다음과 같은 시퀀스로 선언될 수 있는 벡터입니다.  
@@ -56,7 +53,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. 선택적 이니셜라이저입니다.  참조 [이니셜라이저](../cpp/initializers.md)합니다.  
   
- 배열의 요소 수는 상수 식으로 지정됩니다. 배열의 첫 번째 요소는 0 번째 요소가 고 마지막 요소는는 (*n*-1) 요소를 여기서 * n * 수의 요소를 배열에 포함 될 수 있습니다. *문* 정수 계열 형식 이어야 하며 0 보다 커야 합니다. 크기가 0 인 배열이 배열에서 마지막 필드가 경우에 법적는 `struct` 또는 **union** 있고 Microsoft 확장명 (/Ze)을 사용 합니다.  
+ 배열의 요소 수는 상수 식으로 지정됩니다. 배열의 첫 번째 요소는 0 번째 요소가 고 마지막 요소는는 (*n*-1) 요소를 여기서  *n*  수의 요소를 배열에 포함 될 수 있습니다. *문* 정수 계열 형식 이어야 하며 0 보다 커야 합니다. 크기가 0 인 배열이 배열에서 마지막 필드가 경우에 법적는 `struct` 또는 **union** 있고 Microsoft 확장명 (/Ze)을 사용 합니다.  
   
  다음 예제에서는 런타임에 배열을 정의하는 방법을 보여 줍니다.  
   
@@ -91,7 +88,7 @@ int i2[5][7];
   
  이는 다음 그림과 같이 5개의 행과 7개의 열로 된 2차원 행렬에 개념적으로 정렬된 `int` 형식의 배열을 지정합니다.  
   
- ![다중 & #45 개념적 레이아웃; 차원 배열](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![다중 &#45;개념적 레이아웃; 차원 배열](../cpp/media/vc38rc1.gif "vc38RC1")  
 다차원 배열의 개념적 레이아웃  
   
  이니셜라이저 목록이 있는 다차원 배열의 선언에서 (에 설명 된 대로 [이니셜라이저](../cpp/initializers.md)), 첫 번째 차원에 대 한 범위를 지정 하는 상수 식을 생략할 수 있습니다. 예:  

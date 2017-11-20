@@ -1,47 +1,45 @@
 ---
 title: "링커 도구 경고 LNK4253 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4253"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4253"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4253
+dev_langs: C++
+helpviewer_keywords: LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fe7e60c3066e2981f1b826381691950b2ccd46d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 링커 도구 경고 LNK4253
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'section1' 섹션이 'section2'에 병합되지 않았습니다. 이미 'section3'에 병합되었습니다.  
+# <a name="linker-tools-warning-lnk4253"></a>링커 도구 경고 LNK4253
+섹션 '사항 구역 1' 'section2;'에 병합 되지 않았습니다 'section3'에 이미 병합  
   
- 링커에서 서로 충돌하는 여러 병합 요청을 발견했습니다.  링커가 이러한 요청 중 하나를 무시합니다.  
+ 충돌 하는 병합 요청 링커 여러를 검색 합니다. 링커는 요청 중 하나를 무시 합니다.  
   
- **\/MERGE** 옵션 또는 지시문을 발견했으나 링커의 암시적 변환 작업이나 이전의 **\/MERGE** 옵션 또는 지시문을 통해 `from` 섹션이 이미 다른 섹션에 병합되어 있습니다.  
+ A **병합/** 옵션 또는 지시문 및 `from` 섹션은 이미 다른 섹션으로 인해 이전에 병합 되었습니다 **병합/** 옵션 또는 지시문 (또는에서 암시적 병합으로 인해 링커)입니다.  
   
- LNK4253을 해결하려면 병합 요청 중 하나를 제거해야 합니다.  
+ LNK4253를 해결 하려면 병합 요청 중 하나를 제거 합니다.  
   
- Visual C\+\+를 사용하여 x86 컴퓨터 및 Windows CE 대상\(ARM, MIPS, SH4 및 Thumb\)을 대상으로 지정하는 경우 이제 .CRT 섹션이 읽기 전용입니다.  코드가 이전 동작\(.CRT 섹션이 읽기\/쓰기 가능\)에 의존하는 경우 예기치 않은 동작이 발생할 수 있습니다.  
+ X86 대상으로 할 때 컴퓨터와 Visual c + +로 Windows CE 대상 (예: ARM, MIPS, SH4, 및 Thumb)는입니다. CRT 섹션 읽기 전용 이제입니다. 이전 동작에 종속 되는 코드 (합니다. CRT 섹션은 읽기/쓰기), 예기치 않은 동작이 수행 될 수 있습니다.  
   
- 자세한 내용은 다음 항목을 참조하십시오.  
+ 자세한 내용은 다음 항목을 참조하세요.  
   
--   [\/MERGE\(섹션 결합\)](../../build/reference/merge-combine-sections.md)  
+-   [/ 병합 (섹션 결합)](../../build/reference/merge-combine-sections.md)  
   
--   [주석](../../preprocessor/comment-c-cpp.md)  
+-   [C 주석(C/C++)](../../preprocessor/comment-c-cpp.md)  
   
-## 예제  
- 다음 샘플에서는 `.rdata` 섹션을 서로 다른 섹션에 두 번 병합하도록 링커에 지시합니다.  다음 샘플에서는 LNK4253 경고가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 링커에 지시에 병합 하는 `.rdata` 섹션을 두 번 서로 다른 섹션에 있습니다. 다음 샘플에서는 LNK4253 경고가 발생 합니다.  
   
 ```  
 // LNK4253.cpp  

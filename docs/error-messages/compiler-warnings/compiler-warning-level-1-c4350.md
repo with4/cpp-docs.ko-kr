@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4350
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4350
+f1_keywords: C4350
+dev_langs: C++
+helpviewer_keywords: C4350
 ms.assetid: 4cc8ed67-64c4-4da5-a7a5-a639232baa23
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 141f5552c4b86e170587f42ebabf5e2e597b4e96
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 5484c1cb82230eb2bb26004af8a81dcdde1177e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4350"></a>컴파일러 경고(수준 1) C4350
 동작 변경: 'member1'이(가) 'member2' 대신 호출됩니다.  
@@ -52,7 +32,7 @@ ms.lasthandoff: 04/12/2017
   
  이 경고를 발생 하는 경우 비 const 참조에 대 한 rvalue에 종속 된 경우를 확인 하기 위해 코드를 검사 합니다. 상수 참조를 추가 하거나 추가 const 참조 오버 로드를 제공 하는 문제를 해결할 수 있습니다.  
   
- 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 참조 [기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md)합니다.  
+ 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)을 참조하세요.  
   
  다음 샘플에서는 C4350 오류가 생성 됩니다.  
   

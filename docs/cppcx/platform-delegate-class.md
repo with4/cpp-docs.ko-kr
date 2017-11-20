@@ -1,49 +1,49 @@
 ---
-title: "Platform::Delegate 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Delegate 클래스"
+title: "Platform:: delegate 클래스 | Microsoft Docs"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Delegate
+dev_langs: C++
+helpviewer_keywords: Platform::Delegate Class
 ms.assetid: 82b21271-768f-4193-9ca2-be68ddfd546e
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: d7bdd03cef8aab0344cf3fa72ef40341c11287d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::Delegate 클래스
+# <a name="platformdelegate-class"></a>Platform::Delegate 클래스
 함수 개체를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 public delegate void delegate_name();  
 ```  
   
-## 멤버  
- Delegate 클래스에는 [Platform::Object 클래스](../cppcx/platform-object-class.md)에서 파생된 Equals\(\), GetHashCode\(\) 및 ToString\(\) 메서드가 있습니다.  
+### <a name="members"></a>멤버  
+ Delegate 클래스에는 [Platform::Object Class](../cppcx/platform-object-class.md)에서 파생된 Equals(), GetHashCode() 및 ToString() 메서드가 있습니다.  
   
-## 설명  
- [delegate](~/windows/delegate-cpp-component-extensions.md) 키워드를 사용하여 대리자를 만듭니다. Platform::Delegate를 명시적으로 사용하지 마세요. 자세한 내용은 [대리자](../cppcx/delegates-c-cx.md)을 참조하세요. 대리자를 만들고 사용하는 방법에 대한 예제는 [C\+\+로 Windows Runtime 구성 요소 만들기](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)를 참조하세요.  
+### <a name="remarks"></a>설명  
+ [delegate](../windows/delegate-cpp-component-extensions.md) 키워드를 사용하여 대리자를 만듭니다. Platform::Delegate를 명시적으로 사용하지 마세요. 자세한 내용은 [대리자](../cppcx/delegates-c-cx.md)를 참조하세요. 대리자를 만들고 사용하는 방법에 대한 예제는 [Creating Windows Runtime Components in C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)를 참조하세요.  
   
-## 요구 사항  
- **지원되는 최소 클라이언트:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>요구 사항  
+ **지원 되는 최소 클라이언트:** Windows 8  
   
- **지원되는 최소 서버:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **지원 되는 최소 서버:** Windows Server 2012  
   
  **네임스페이스:** Platform  
   
  **메타데이터:** platform.winmd  
   
-## 참고 항목  
- [Platform 네임스페이스](../cppcx/platform-namespace-c-cx.md)
+## <a name="see-also"></a>참고 항목  
+ [Platform 네임 스페이스](../cppcx/platform-namespace-c-cx.md)

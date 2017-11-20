@@ -1,63 +1,62 @@
 ---
-title: "__segmentlimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__segmentlimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__segmentlimit 내장 함수"
-  - "lsl 명령"
+title: __segmentlimit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __segmentlimit
+dev_langs: C++
+helpviewer_keywords:
+- __segmentlimit intrinsic
+- lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4b23b988069064e938db9f9f87921df901effd1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __segmentlimit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="segmentlimit"></a>__segmentlimit
 **Microsoft 전용**  
   
- 생성 하는 `lsl` \(로드 세그먼트 제한을\) 명령.  
+ 생성 된 `lsl` (부하 세그먼트 제한) 명령입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-unsigned long __segmentlimit(   
-   unsigned long a   
+unsigned long __segmentlimit(   
+   unsigned long a   
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `a`  
+#### <a name="parameters"></a>매개 변수  
+ [in] `a`  
  세그먼트 선택기를 지정 하는 상수입니다.  
   
-## 반환 값  
- 세그먼트 제한을 지정한 세그먼트 선택기의 `a,` 선택기는 현재 사용 권한 수준에서 유효 하 고 표시 되는.  
+## <a name="return-value"></a>반환 값  
+ 로 지정 된 세그먼트 선택기의 세그먼트 제한을 `a`, 선택기 값은 현재 사용 권한 수준에서 유효 하 고 표시 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__segmentlimit`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 세그먼트 제한을 검색할 수 없는 경우이 명령은 실패 합니다.  오류가 발생 하면이 명령 ZF 플래그를 지우고 반환 값이 정의 되지 않았습니다.  
+## <a name="remarks"></a>설명  
+ 세그먼트 제한을 검색할 수 없는 경우이 명령은 실패 합니다. 실패 한 경우,이 명령은 ZF 플래그를 지웁니다 및 반환 값이 정의 되지 않습니다.  
   
- 이 루틴에만 내장로 사용할 수 있습니다.  
+ 이 루틴은 내장 루틴으로만 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 #include <stdio.h>  
@@ -104,9 +103,14 @@ int main(void)
 }  
 ```  
   
-  **이전: 세그먼트 제한을 0xbaadbabe eflags \= \= 0x0 후: 세그먼트 제한을 0xffffffff eflags \= 0x256 eflags.zf \= \= 설정 성공\!**  
- **sl 변경 되었습니다.**   
-## Microsoft 특정 끝  
+```Output  
+Before: segment limit =0xbaadbabe eflags =0x0  
+After: segment limit =0xffffffff eflags =0x256 eflags.zf = set  
+Success!  
+sl was changed  
+```  
   
-## 참고 항목  
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

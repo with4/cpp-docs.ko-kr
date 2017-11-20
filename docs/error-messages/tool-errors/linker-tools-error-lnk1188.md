@@ -1,29 +1,27 @@
 ---
 title: "링커 도구 오류 LNK1188 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1188"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1188"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1188
+dev_langs: C++
+helpviewer_keywords: LNK1188
 ms.assetid: 4af574b0-5b41-4580-9a37-52a634add995
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a77f769aed208c557b72e12572d170482d2538ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 링커 도구 오류 LNK1188
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-BADFIXUPSECTION:: 'symbol' 픽스업 대상이 잘못되었습니다. 길이 섹션이 0입니다.  
+# <a name="linker-tools-error-lnk1188"></a>링커 도구 오류 LNK1188
+잘못 된 fixup 대상 BADFIXUPSECTION:: 'symbol'; 가능한 길이 섹션이 0  
   
- VxD 링크 중에 재배치의 대상에 섹션이 없었습니다.  LINK386\(이전 버전\)에서는 길이가 0인 섹션을 길이가 0이 아닌 섹션과 결합하는 데 OMF GROUP 레코드\(MASM GROUP 지시문에 의해 생성\)를 사용할 수 있었습니다.  COFF 형식은 GROUP 지시문과 길이가 0인 섹션을 지원하지 않습니다.  LINK가 이 형식의 OMF 개체를 COFF로 자동 변환할 때 이 오류가 발생할 수 있습니다.
+ VxD 링크 중에 재배치의 대상 섹션을 아닙니다. Link386 (이전 버전), 다른 길이가 0이 아닌 섹션 0 길이 섹션을 결합 하는 OMF 그룹 기록 (MASM 그룹 지시문에서 생성) 사용 합니다. GROUP 지시문 및 빈 섹션 COFF 형식은 지원 하지 않습니다. 링크 자동으로 해당이 유형의 OMF 개체 COFF로 변환 하는 경우이 오류가 발생할 수 있습니다.

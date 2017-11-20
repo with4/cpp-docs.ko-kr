@@ -1,45 +1,44 @@
 ---
-title: "/Zc:trigraphs(삼중자 대체) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Zc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc 컴파일러 옵션(C++)"
-  - "규칙 컴파일러 옵션"
-  - "Zc 컴파일러 옵션(C++)"
-  - "-Zc 컴파일러 옵션(C++)"
+title: "-Zc: trigraphs (삼중 자 대체) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Zc
+dev_langs: C++
+helpviewer_keywords:
+- -Zc compiler options (C++)
+- /Zc compiler options (C++)
+- Conformance compiler options
+- Zc compiler options (C++)
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 56068f6cb630ac12b9c8417940411616cec65c69
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /Zc:trigraphs(삼중자 대체)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/Zc:trigraphs**를 지정하면 컴파일러가 해당 문장 부호 문자를 사용하여 삼중자 문자 시퀀스를 바꿉니다.  삼중자 대체 기능을 해제하려면 **\/Zc:trigraphs\-**를 지정합니다.  **\/Zc:trigraphs**는 기본적으로 사용되지 않습니다.  
+# <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs(삼중자 대체)
+때 **/zc: trigraphs** 지정, 컴파일러가 해당 문장 부호 문자를 사용 하 여 삼중 자는 문자 시퀀스를 바꿉니다. 삼중 자 대체를 해제 하려면 지정 **/Zc:trigraphs-**합니다. 기본적으로 **/zc: trigraphs** 꺼져 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /Zc:trigraphs[-]  
 ```  
   
-## 설명  
- 삼중자는 연속되는 두 개의 물음표\(??\)와 물음표 이외의 세 번째 문자로 이루어집니다.  예를 들어, 컴파일러는 '\#' 문자를 사용하여 "??\=" 삼중자를 바꿉니다.  삼중자는 특정 문장 부호 문자에 대한 편리한 그래픽 표현을 포함하지 않는 문자 집합이 사용되는 C 소스 파일에서 사용합니다.  
+## <a name="remarks"></a>설명  
+ 삼중자는 두 개의 연속 물음표("??")와 고유한 세 번째 문자로 구성됩니다. 예를 들어, 컴파일러 대체는 "?? = "'#' 문자를 사용 하 여 삼중 자입니다. 삼중자는 특정 문장 부호 문자에 대한 편리한 그래픽 표현을 포함하지 않는 문자 집합이 사용되는 C 소스 파일에서 사용합니다.  
   
- C\/C\+\+ 삼중자 및 삼중자를 사용하는 방법을 보여주는 예제는 [삼중자](../../c-language/trigraphs.md)를 참조하십시오.  
+ C/c + + 삼중 자 및 삼중 자를 사용 하는 방법을 보여 주는 예제 목록 참조 [삼중 자](../../c-language/trigraphs.md)합니다.  
   
-## 참고 항목  
- [\/Zc\(규칙\)](../../build/reference/zc-conformance.md)   
+## <a name="see-also"></a>참고 항목  
+ [/Zc (규칙)](../../build/reference/zc-conformance.md)   
  [삼중자](../../c-language/trigraphs.md)

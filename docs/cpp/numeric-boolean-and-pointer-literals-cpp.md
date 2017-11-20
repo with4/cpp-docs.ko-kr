@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5c4a9a7aca2f11956e0ba47cced37a86733dcce8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>숫자, 부울 및 포인터 리터럴 (c + +)
 리터럴은 값을 직접 나타내는 프로그램 요소입니다. 이 문서에서는 정수, 부동 소수점, 부울 및 포인터 형식의 리터럴에 대해 설명합니다. 문자열 및 문자 리터럴에 대 한 정보를 참조 하십시오. [문자열 및 문자 리터럴 (c + +)](../cpp/string-and-character-literals-cpp.md)합니다. 이러한 범주;에 따라 고유한 리터럴을 정의할 수도 있습니다. 자세한 내용은 참조 하십시오. [사용자 정의 리터럴 (c + +)](../cpp/user-defined-literals-cpp.md)  
@@ -108,7 +105,7 @@ long long i = 24'847'458'121
   
  사용 하 여 지 수를 지정할 수 있습니다 **e** 또는 **E**는 의미가 동일한, 그 뒤에 선택적 부호 (+ 또는-) 및 숫자 시퀀스입니다.  지수가 있는 경우 `18E0`과 같은 정수에는 뒤에 오는 소수점이 필요하지 않습니다.  
   
- 부동 소수점 리터럴은 기본적으로 입력 **double**합니다. 접미사를 사용 하 여 **f** 또는 **l** (또는 **F** 또는 **L** -접미사 대/소문자 구분은.), 리터럴으로 지정할 수 있습니다 ** float** 또는 `long double`각각.  
+ 부동 소수점 리터럴은 기본적으로 입력 **double**합니다. 접미사를 사용 하 여 **f** 또는 **l** (또는 **F** 또는 **L** -접미사 대/소문자 구분은.), 리터럴으로 지정할 수 있습니다  **float** 또는 `long double`각각.  
   
  하지만 `long double` 및 **double** 는 동일한 표현의 동일한 형식이 하지 않습니다. 예를 들어 다음과 같은 오버로드된 함수를 사용할 수 있습니다.  
   

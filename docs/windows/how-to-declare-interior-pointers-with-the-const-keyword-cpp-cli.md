@@ -1,34 +1,32 @@
 ---
-title: "How to: Declare Interior Pointers with the const Keyword (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, interior"
+title: "방법: const 키워드와 함께 내부 포인터 선언 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db90a74bc73c548dcc3cca71cf3631bd9499ac27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Declare Interior Pointers with the const Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 샘플에서는 내부 포인터의 선언에서  `const` 을 사용하는 방법에 대해 보여줍니다.  
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>방법: const 키워드(C++/CLI)를 사용하여 내부 포인터 선언
+다음 샘플에서는 사용 하는 방법을 보여 줍니다. `const` 내부 포인터의 선언에 있습니다.  
   
 > [!IMPORTANT]
->  이 언어 기능은   **\/clr**  컴파일러 옵션을 지원하지만  **\/ZW**  컴파일러 옵션은 지원하지 않습니다.  
+>  이 언어 기능으로 사용할 수는 **/clr** 컴파일러 옵션을 하지만 하지는 **/ZW** 컴파일러 옵션입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // interior_ptr_const.cpp  
@@ -87,5 +85,5 @@ int main() {
 };  
 ```  
   
-## 참고 항목  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>참고 항목  
+ [interior_ptr(C++/CLI)](../windows/interior-ptr-cpp-cli.md)

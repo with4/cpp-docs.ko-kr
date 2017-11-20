@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -38,8 +37,7 @@ f1_keywords:
 - _tctime64_s
 - ctime_s
 - ctime32_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wctime32_s function
 - ctime64_s function
@@ -60,30 +58,15 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 371ca59a6002cd5936771f1ac9cea7c39b192cee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: aa59a7855942b9a67db41038261cc8eb5f7da71d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 시간 값을 문자열로 변환하고 현지 표준 시간대 설정에 맞게 조정합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [ctime, _ctime64, _wctime, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)의 버전입니다.  

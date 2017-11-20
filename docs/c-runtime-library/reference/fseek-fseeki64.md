@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,8 +25,7 @@ apitype: DLLExport
 f1_keywords:
 - fseek
 - _fseeki64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _fseeki64 function
 - fseeki64 function
@@ -36,30 +34,15 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0d0c0bf620f1b89b9decceed3db9434dae4f9437
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 723dbef32f053bd522dcb25c78d6ed805bce6ee5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 파일 포인터를 지정된 위치로 이동합니다.  
@@ -108,7 +91,7 @@ int _fseeki64(
   
  데이터를 추가하기 위해 파일이 열리면 현재 파일 위치는 다음 쓰기가 수행되는 위치가 아니라 마지막 I/O 작업에 의해 결정됩니다. 추가를 위해 열린 파일에서 I/O 작업이 아직 수행되지 않은 경우 파일 위치는 파일의 시작입니다.  
   
- 텍스트 모드에서 열린 스트림의 `fseek` 및 `_fseeki64` 제한적으로 사용 캐리지 리턴-줄 바꿈 번역 될 수 있기 때문 `fseek` 및 `_fseeki64` 예기치 않은 결과를 생성 합니다. 유일한 `fseek` 및 `_fseeki64` 텍스트 모드에서 열린 스트림의에서 작동 하는 작업은:  
+ 텍스트 모드에서 열린 스트림의 `fseek` 및 `_fseeki64` 제한적으로 사용 캐리지 리턴-줄 바꿈 번역 될 수 있으므로 `fseek` 및 `_fseeki64` 예기치 않은 결과를 생성 합니다. 유일한 `fseek` 및 `_fseeki64` 텍스트 모드에서 열린 스트림의에서 작동 하는 작업은:  
   
 -   원점 값을 기준으로 한 0 오프셋을 사용하여 검색  
   

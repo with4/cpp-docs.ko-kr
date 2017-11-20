@@ -1,45 +1,43 @@
 ---
-title: "map::upper_bound(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound 멤버[STL/CLR]"
+title: 'map:: upper_bound (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: d772b4a8-d0dc-439a-8b5b-3c91836d9256
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cc82213acbc0fa2e6871b9a08119b37186652628
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# map::upper_bound(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Finds end of range that matches a specified key.  
+# <a name="mapupperbound-stlclr"></a>map::upper_bound(STL/CLR)
+지정된 된 키와 일치 하는 범위의 끝을 찾습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  key  
- Key value to search for.  
+ 검색할 키 값입니다.  
   
-## 설명  
- The member function determines the last element `X` in the controlled sequence that has equivalent ordering to `key`.  If no such element exists, or if `X` is the last element in the controlled sequence, it returns [map::end](../dotnet/map-end-stl-clr.md)`()`; otherwise it returns an iterator that designates the first element beyond `X`.  You use it to locate the end of a sequence of elements currently in the controlled sequence that match a specified key.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 마지막 요소를 결정 `X` 과 순서가 제어 된 시퀀스의 `key`합니다. 이러한 요소가 존재 하거나 `X` 는 제어 된 시퀀스의 마지막 요소 반환 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; 의첫번째요소를지정하는반복기를반환하지않으면`X`. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소 시퀀스의 끝으로 이동 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_upper_bound.cpp   
@@ -73,18 +71,21 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*upper\_bound\(L'a'\) \= \[b 2\]**  
-**\*upper\_bound\(L'b'\) \= \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)   
- [map::count](../dotnet/map-count-stl-clr.md)   
- [map::equal\_range](../dotnet/map-equal-range-stl-clr.md)   
- [map::find](../dotnet/map-find-stl-clr.md)   
- [map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map:: count (STL/CLR)](../dotnet/map-count-stl-clr.md)   
+ [map:: equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)   
+ [map:: find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [map::lower_bound(STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)

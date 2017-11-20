@@ -1,61 +1,60 @@
 ---
 title: "CDBPropIDSet 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropIDSet"
-  - "ATL.CDBPropIDSet"
-  - "ATL::CDBPropIDSet"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDBPropIDSet 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropIDSet
+- ATL.CDBPropIDSet
+- ATL::CDBPropIDSet
+dev_langs: C++
+helpviewer_keywords: CDBPropIDSet class
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 996e1a04e9870a9cd3cf02ca6a8c7c05a1dc3e56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CDBPropIDSet 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Inherits from the **DBPROPIDSET** structure and adds a constructor that initializes key fields as well as the [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) access method.  
+# <a name="cdbpropidset-class"></a>CDBPropIDSet 클래스
+상속 되는 **DBPROPIDSET** 구조체를 추가 하는 키 필드를 초기화 하는 생성자와 [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) 메서드에 액세스 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CDBPropIDSet : public tagDBPROPIDSET  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|Adds a property to the property ID set.|  
+|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|속성 ID 집합에는 속성을 추가합니다.|  
 |[CDBPropIDSet](../../data/oledb/cdbpropidset-cdbpropidset.md)|생성자입니다.|  
-|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|Sets the GUID of the property ID set.|  
+|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|속성 ID의 GUID 집합를 설정 합니다.|  
   
-### 연산자  
+### <a name="operators"></a>연산자  
   
 |||  
 |-|-|  
-|[연산자 \=](../../data/oledb/cdbpropidset-operator-equal.md)|Assigns the contents of one property ID set to another.|  
+|[연산자 =](../../data/oledb/cdbpropidset-operator-equal.md)|할당 한 속성 ID의 내용을 다른로 설정합니다.|  
   
-## 설명  
- OLE DB consumers use **DBPROPIDSET** structures to pass an array of property IDs for which the consumer wants to get property information.  The properties identified in a single [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) structure belong to one property set.  
+## <a name="remarks"></a>설명  
+ OLE DB 소비자가 사용 하 여 **DBPROPIDSET** 는 소비자가 속성 정보를 가져올 속성 Id의 배열을 전달 하는 구조입니다. 단일에서 식별 된 속성 [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) 구조 한 속성 집합에 속합니다.  
   
-## 요구 사항  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)

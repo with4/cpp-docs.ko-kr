@@ -1,146 +1,146 @@
 ---
-title: "CIndexes, CIndexInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "INITIAL_SIZE"
-  - "NULL_COLLATION"
-  - "m_szFilterCondition"
-  - "m_bPrimaryKey"
-  - "m_szTableSchema"
-  - "m_bSortBookmarks"
-  - "m_szIndexSchema"
-  - "m_nColumnPropID"
-  - "ORDINAL_POSITION"
-  - "INDEX_CATALOG"
-  - "m_nOrdinalPosition"
-  - "COLUMN_GUID"
-  - "m_bAutoUpdate"
-  - "m_nNullCollation"
-  - "CLUSTERED"
-  - "NULLS"
-  - "m_szColumnName"
-  - "m_nFillFactor"
-  - "m_nPages"
-  - "INDEX_NAME"
-  - "m_szTableCatalog"
-  - "m_szIndexName"
-  - "m_szIndexCatalog"
-  - "m_nCardinality"
-  - "m_nInitialSize"
-  - "m_bUnique"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "m_nNulls"
-  - "m_szTableName"
-  - "FILL_FACTOR"
-  - "m_nType"
-  - "m_bClustered"
-  - "COLLATION"
-  - "FILTER_CONDITION"
-  - "m_nCollation"
-  - "CIndexes"
-  - "INDEX_SCHEMA"
-  - "CIndexInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CIndexes typedef 클래스"
-  - "CIndexInfo 매개 변수 클래스"
-  - "CLUSTERED"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "FILL_FACTOR"
-  - "FILTER_CONDITION"
-  - "INDEX_CATALOG"
-  - "INDEX_NAME"
-  - "INDEX_SCHEMA"
-  - "INITIAL_SIZE"
-  - "m_bAutoUpdate"
-  - "m_bClustered"
-  - "m_bPrimaryKey"
-  - "m_bSortBookmarks"
-  - "m_bUnique"
-  - "m_guidColumn"
-  - "m_nCardinality"
-  - "m_nCollation"
-  - "m_nColumnPropID"
-  - "m_nFillFactor"
-  - "m_nInitialSize"
-  - "m_nNullCollation"
-  - "m_nNulls"
-  - "m_nOrdinalPosition"
-  - "m_nPages"
-  - "m_nType"
-  - "m_szColumnName"
-  - "m_szFilterCondition"
-  - "m_szIndexCatalog"
-  - "m_szIndexName"
-  - "m_szIndexSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "NULL_COLLATION"
-  - "NULLS"
-  - "ORDINAL_POSITION"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CIndexes, CIndexInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- INITIAL_SIZE
+- NULL_COLLATION
+- m_szFilterCondition
+- m_bPrimaryKey
+- m_szTableSchema
+- m_bSortBookmarks
+- m_szIndexSchema
+- m_nColumnPropID
+- ORDINAL_POSITION
+- INDEX_CATALOG
+- m_nOrdinalPosition
+- COLUMN_GUID
+- m_bAutoUpdate
+- m_nNullCollation
+- CLUSTERED
+- NULLS
+- m_szColumnName
+- m_nFillFactor
+- m_nPages
+- INDEX_NAME
+- m_szTableCatalog
+- m_szIndexName
+- m_szIndexCatalog
+- m_nCardinality
+- m_nInitialSize
+- m_bUnique
+- COLUMN_PROPID
+- m_guidColumn
+- m_nNulls
+- m_szTableName
+- FILL_FACTOR
+- m_nType
+- m_bClustered
+- COLLATION
+- FILTER_CONDITION
+- m_nCollation
+- CIndexes
+- INDEX_SCHEMA
+- CIndexInfo
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- ORDINAL_POSITION
+- INDEX_CATALOG
+- NULLS
+- CIndexInfo parameter class
+- m_szFilterCondition
+- m_szIndexCatalog
+- CLUSTERED
+- m_nType
+- FILL_FACTOR
+- m_nPages
+- m_nCardinality
+- m_szTableSchema
+- TABLE_CATALOG
+- TABLE_NAME
+- INDEX_SCHEMA
+- m_nInitialSize
+- m_nOrdinalPosition
+- m_nColumnPropID
+- FILTER_CONDITION
+- TABLE_SCHEMA
+- m_szColumnName
+- INDEX_NAME
+- NULL_COLLATION
+- m_bUnique
+- m_bSortBookmarks
+- m_bAutoUpdate
+- COLUMN_NAME
+- INITIAL_SIZE
+- m_szTableCatalog
+- m_nNullCollation
+- m_bClustered
+- m_szTableName
+- CIndexes typedef class
+- m_nCollation
+- COLUMN_GUID
+- m_guidColumn
+- m_nNulls
+- m_bPrimaryKey
+- m_szIndexName
+- m_nFillFactor
+- m_szIndexSchema
 ms.assetid: 592fa773-fd23-4332-8d47-d76101f9ddd7
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 928593dad87ba12affe4d54aa2d69075e5a480ed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CIndexes, CIndexInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Call the typedef class **CIndexes** to implement its parameter class **CIndexInfo**.  
+# <a name="cindexes-cindexinfo"></a>CIndexes, CIndexInfo
+Typedef 클래스 호출 **CIndexes** 해당 매개 변수 클래스를 구현 하려면 **CIndexInfo**합니다.  
   
-## 설명  
- See [Schema Rowset Classes and Typedef Classes](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) for more information on using typedef classes.  
+## <a name="remarks"></a>설명  
+ 참조 [스키마 행 집합 클래스 및 Typedef 클래스](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) typedef 클래스 사용에 대 한 자세한 내용은 합니다.  
   
- This class identifies the indexes, defined in the catalog, that are owned by a given user.  
+ 이 클래스는 인덱스는 카탈로그에 정의 된 지정된 된 사용자가 소유 하 고 있는 식별 합니다.  
   
- The following table lists the class data members and their corresponding OLE DB Columns.  See [INDEXES Rowset](https://msdn.microsoft.com/en-us/library/ms709712.aspx) in the *OLE DB Programmer's Reference* for more information about the schema and columns.  
+ 다음 표에는 클래스 데이터 멤버 및 해당 OLE DB 열이 나열됩니다. 참조 [인덱스 행 집합](https://msdn.microsoft.com/en-us/library/ms709712.aspx) 에 *OLE DB Programmer's Reference* 스키마 및 열에 대 한 자세한 내용은 합니다.  
   
-|Data members|OLE DB columns|  
+|데이터 멤버|OLE DB 열|  
 |------------------|--------------------|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szIndexCatalog|INDEX\_CATALOG|  
-|m\_szIndexSchema|INDEX\_SCHEMA|  
-|m\_szIndexName|INDEX\_NAME|  
-|m\_bPrimaryKey|PRIMARY\_KEY|  
-|m\_bUnique|UNIQUE|  
-|m\_bClustered|CLUSTERED|  
-|m\_nType|TYPE|  
-|m\_nFillFactor|FILL\_FACTOR|  
-|m\_nInitialSize|INITIAL\_SIZE|  
-|m\_nNulls|NULLS|  
-|m\_bSortBookmarks|SORT\_BOOKMARKS|  
-|m\_bAutoUpdate|AUTO\_UPDATE|  
-|m\_nNullCollation|NULL\_COLLATION|  
-|m\_nOrdinalPosition|ORDINAL\_POSITION|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_nCollation|COLLATION|  
-|m\_nCardinality|CARDINALITY|  
-|m\_nPages|PAGES|  
-|m\_szFilterCondition|FILTER\_CONDITION|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szIndexCatalog|INDEX_CATALOG|  
+|m_szIndexSchema|INDEX_SCHEMA|  
+|m_szIndexName|INDEX_NAME|  
+|m_bPrimaryKey|PRIMARY_KEY|  
+|m_bUnique|UNIQUE|  
+|m_bClustered|CLUSTERED|  
+|m_nType|TYPE|  
+|m_nFillFactor|FILL_FACTOR|  
+|m_nInitialSize|INITIAL_SIZE|  
+|m_nNulls|NULLS|  
+|m_bSortBookmarks|SORT_BOOKMARKS|  
+|m_bAutoUpdate|AUTO_UPDATE|  
+|m_nNullCollation|NULL_COLLATION|  
+|m_nOrdinalPosition|ORDINAL_POSITION|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_nCollation|COLLATION|  
+|m_nCardinality|CARDINALITY|  
+|m_nPages|PAGES|  
+|m_szFilterCondition|FILTER_CONDITION|  
   
-## 요구 사항  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbsch.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRestrictions 클래스](../../data/oledb/crestrictions-class.md)

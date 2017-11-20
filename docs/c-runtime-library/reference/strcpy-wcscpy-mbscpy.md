@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -46,36 +44,21 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 940983d8bb5795d44a78f9049c351941db41afb7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 466565dcb957e98efccc9f2037f98c869775e36f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 문자열을 복사합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)를 참조하세요.  
   
 > [!IMPORTANT]
->  `_mbscpy`는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbscpy`를 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -127,7 +110,7 @@ unsigned char *_mbscpy(
   
  `wcscpy` 및 `_mbscpy`는 각각 `strcpy`의 와이드 문자 및 멀티바이트 문자 버전입니다. `wcscpy`의 인수 및 반환 값은 와이드 문자열이며 `_mbscpy`의 인수와 반환 값은 멀티바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.  
   
- C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   

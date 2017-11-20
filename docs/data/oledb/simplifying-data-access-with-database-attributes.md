@@ -1,71 +1,71 @@
 ---
-title: "데이터베이스 특성을 사용하여 데이터 액세스 단순화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-attr.db_param"
-  - "vc-attr.db_column"
-  - "vc-attr.db_accessor"
-  - "vc-attr.db_command"
-  - "vc-attr.db_table"
-  - "vc-attr.db_source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "특성[C++], 데이터 액세스"
-  - "특성[C++], 데이터베이스"
-  - "특성[C++], OLE DB 소비자"
-  - "데이터[C++], 액세스 단순화"
-  - "데이터 액세스[C++], 데이터베이스 특성"
-  - "데이터베이스 특성[C++]"
-  - "데이터베이스[C++], 특성"
-  - "OLE DB 소비자[C++], 데이터베이스 특성"
+title: "데이터베이스 특성을 가진 데이터 액세스 단순화 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-attr.db_param
+- vc-attr.db_column
+- vc-attr.db_accessor
+- vc-attr.db_command
+- vc-attr.db_table
+- vc-attr.db_source
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], database
+- attributes [C++], data access
+- databases [C++], attributes
+- data [C++], simplifying access
+- data access [C++], database attributes
+- database attributes [C++]
+- OLE DB consumers [C++], database attributes
+- attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ca857a5d304d137009161618bddeed49886233b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 데이터베이스 특성을 사용하여 데이터 액세스 단순화
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-여기에서는 데이터베이스 작업을 단순화하기 위한 데이터베이스 특성 사용에 대해 설명합니다.  
+# <a name="simplifying-data-access-with-database-attributes"></a>데이터베이스 특성을 사용하여 데이터 액세스 단순화
+이 항목에서는 데이터베이스 작업을 간소화 하기 위해 데이터베이스 특성의 사용을 보여 줍니다.  
   
- 데이터베이스의 정보에 액세스하는 기본 방식은 데이터베이스의 특정 테이블에 대해 명령\(또는 테이블\) 클래스와 사용자 레코드 클래스를 만드는 것입니다.  데이터베이스 특성을 사용하면 이전에 사용자가 수행해야 했던 일부 템플릿 선언을 단순화할 수 있습니다.  
+ 데이터베이스에서 정보에 액세스 하는 기본적인 방법은 데이터베이스의 명령 (또는 테이블) 클래스 및 특정 테이블에 대 한 사용자 레코드 클래스를 만드는 것입니다. 데이터베이스 특성에는 일부 이전에 사용 했던 작업을 수행 하는 템플릿 선언을 단순화 합니다.  
   
- 데이터베이스 특성의 사용을 설명하기 위해 다음 섹션에는 대응되는 두 개의 테이블 및 사용자 레코드 클래스 선언이 나옵니다. 첫 번째 섹션에서는 특성을 사용하고 두 번째 섹션에서는 OLE DB 템플릿을 사용합니다.  이러한 선언 코드는 일반적으로 Authors.h처럼 테이블이나 명령 개체의 이름으로 지정된 헤더 파일에 들어 있습니다.  
+ 데이터베이스 특성의 사용을 보여 주기 위해 다음 섹션에서는 두 개의 동일한 테이블 및 사용자 레코드 클래스 선언이 보여: 특성을 사용 하는 첫 번째 및 두 번째 OLE DB 템플릿을 사용 합니다. 이러한 선언 코드는 일반적으로 authors.h 예를 들어 테이블이 나 명령 개체에 대 한 명명 된 헤더 파일에 들어 있습니다.  
   
- 두 파일을 비교하면 특성을 사용하는 것이 얼마나 간단한 방법인지 알 수 있습니다.  다음은 두 파일의 차이점입니다.  
+ 두 파일을 비교 하 여 특성을 사용 하는 방법을 보다 간단 하 게 볼 수 있습니다. 차이점 중:  
   
--   특성을 사용하는 경우에는 하나의 클래스 `CAuthors`만 선언하면 되지만, 템플릿을 사용하는 경우에는 두 개의 클래스 `CAuthorsNoAttrAccessor`와 `CAuthorsNoAttr`를 선언해야 합니다.  
+-   특성을 사용 해야 할 하나의 클래스를 선언: `CAuthors`템플릿으로 두 개를 선언 해야 하는 반면,: `CAuthorsNoAttrAccessor` 및 `CAuthorsNoAttr`합니다.  
   
--   특성 사용 버전에서의 `db_source` 호출은 템플릿 선언에서의 `OpenDataSource()` 호출에 해당합니다.  
+-   `db_source` 특성이 지정 된 버전에서 호출 하는 것은 `OpenDataSource()` 템플릿 선언에서 호출 합니다.  
   
--   특성 사용 버전에서의 **db\_table** 호출은 다음 템플릿 선언에 해당합니다.  
+-   **db_table** 특성이 지정 된 버전에서 호출은 다음 템플릿 선언과 같습니다.  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
     ```  
   
--   특성 사용 버전에서의 **db\_column** 호출은 템플릿 선언에서의 열 맵\(`BEGIN_COLUMN_MAP ... END_COLUMN_MAP` 참조\)에 해당합니다.  
+-   **db_column** 호출 특성 사용된 하는 버전에서 열 지도 같습니다 (참조 `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 템플릿 선언에 있습니다.  
   
- 특성은 사용자 레코드 클래스 선언을 삽입합니다.  사용자 레코드 클래스는 템플릿 선언에서의 `CAuthorsNoAttrAccessor`에 해당합니다.  테이블 클래스가 `CAuthors`인 경우 삽입된 사용자 레코드 클래스의 이름은 `CAuthorsAccessor`가 되며 삽입된 코드에서만 선언을 볼 수 있습니다.  자세한 내용은 [사용자 레코드](../../data/oledb/user-records.md)의 "특성 삽입 사용자 레코드 클래스"를 참조하십시오.  
+ 사용자에 대 한 사용자 레코드 클래스 선언을 삽입 합니다. 사용자 레코드 클래스에 해당 하는 `CAuthorsNoAttrAccessor` 템플릿 선언에 있습니다. 테이블 클래스 경우 `CAuthors`, 삽입 된 사용자 레코드 클래스의 이름은 `CAuthorsAccessor`, 해당 선언이 삽입 된 코드에만 볼 수 있습니다. 자세한 내용은 "특성 삽입 사용자 레코드 클래스"를 참조 [사용자 레코드](../../data/oledb/user-records.md)합니다.  
   
- 특성 사용 코드 및 템플릿 기반 코드 모두에서 `CDBPropSet::AddProperty`를 사용하여 행 집합 속성을 설정해야 한다는 점에 주의하십시오.  
+ 특성 사용와 템플릿 기반 코드에서 사용 하 여 행 집합 속성 설정 해야 합니다 `CDBPropSet::AddProperty`합니다.  
   
- 여기에 나온 특성에 대한 자세한 내용은 [OLE DB 소비자 특성](../../windows/ole-db-consumer-attributes.md)을 참조하십시오.  
+ 이 항목에서 설명 하는 특성에 대 한 정보를 참조 하십시오. [OLE DB 소비자 특성](../../windows/ole-db-consumer-attributes.md)합니다.  
   
-## 특성을 사용한 테이블 및 접근자 선언  
- 다음 코드에서는 테이블 클래스에서 `db_source`와 **db\_table**을 호출합니다.  `db_source`는 사용될 데이터 소스와 연결을 지정하고  **db\_table**은 테이블 클래스를 선언하는 데 알맞은 템플릿 코드를 삽입합니다.  **db\_column**은 열 맵을 지정하고 접근자 선언을 삽입합니다.  ATL을 지원하는 모든 프로젝트에서 OLE DB 소비자 특성을 사용할 수 있습니다.  
+## <a name="table-and-accessor-declaration-using-attributes"></a>테이블 및 특성을 사용 하는 접근자 선언  
+ 다음 호출 코드 `db_source` 및 **db_table** 테이블 클래스에 있습니다. `db_source`데이터 원본 및 연결을 사용할 수를 지정 합니다. **db_table** 테이블 클래스 선언에 대 한 적절 한 템플릿 코드를 삽입 합니다. **db_column** 열 지도 지정 하 고 접근자 선언에 삽입 합니다. Atl이 지원 하는 프로젝트에서 OLE DB 소비자 특성을 사용할 수 있습니다.  
   
- 다음은 특성을 사용한 테이블 및 접근자 선언입니다.  
+ 테이블 및 접근자 선언 특성을 사용 하는 다음과 같습니다.  
   
 ```  
 //////////////////////////////////////////////////////////////////////  
@@ -100,8 +100,8 @@ public:
 };  
 ```  
   
-## 템플릿을 사용한 테이블 및 접근자 선언  
- 다음은 템플릿을 사용한 테이블 및 접근자 선언입니다.  
+## <a name="table-and-accessor-declaration-using-templates"></a>테이블 및 템플릿을 사용 하 여 접근자 선언  
+ 템플릿을 사용 하 여 테이블 및 접근자 선언에는 다음과 같습니다.  
   
 ```  
 //////////////////////////////////////////////////////////////////////  
@@ -204,6 +204,6 @@ public:
 };  
 ```  
   
-## 참고 항목  
- [OLE DB Consumer Attributes](../../windows/ole-db-consumer-attributes.md)   
- [Attributes Walkthroughs](http://msdn.microsoft.com/ko-kr/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+## <a name="see-also"></a>참고 항목  
+ [OLE DB 소비자 특성](../../windows/ole-db-consumer-attributes.md)   
+ [특성 연습](http://msdn.microsoft.com/en-us/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)

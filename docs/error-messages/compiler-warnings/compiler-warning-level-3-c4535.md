@@ -1,35 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 3) C4535 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4535"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4535"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4535
+dev_langs: C++
+helpviewer_keywords: C4535
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e4d7b5d38d9de4f258b2dc27170734757025ebb5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 3) C4535
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\_set\_se\_translator\(\)를 호출하려면 \/EHa를 지정해야 합니다.  
+# <a name="compiler-warning-level-3-c4535"></a>컴파일러 경고(수준 3) C4535
+호출 _set_se_translator() /EHa 필요  
   
- [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md)를 사용하려면 **\/EHs** 대신 [\/EHa](../../build/reference/eh-exception-handling-model.md) 컴파일러 옵션을 사용해야 합니다.  
+ 사용 [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) 필요는 [/EHa](../../build/reference/eh-exception-handling-model.md) 컴파일러 옵션 및 not **/EHs**합니다.  
   
-## 예제  
- 다음 샘플에서는 C4535 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4535 오류가 발생 합니다.  
   
 ```  
 // C4535.cpp  

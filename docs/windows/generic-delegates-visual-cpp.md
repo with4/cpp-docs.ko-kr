@@ -1,32 +1,31 @@
 ---
-title: "Generic Delegates (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic delegates"
-  - "delegates, generic [C++]"
+title: "제네릭 대리자 (Visual c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generic delegates
+- delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-caps.latest.revision: 20
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d09aa9d2ea4df90ad8a74b426942d21ea1d2f6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Generic Delegates (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-대리자가 있는 제네릭 형식 매개 변수를 사용할 수 있습니다.  대리자에 대한 자세한 내용은 다음을 참조하십시오. [delegate](../windows/delegate-cpp-component-extensions.md).  
+# <a name="generic-delegates-visual-c"></a>제네릭 대리자(Visual C++)
+대리자에 제네릭 형식 매개 변수를 사용할 수 있습니다. 대리자에 대 한 자세한 내용은 참조 하십시오. [대리자 (c + + 구성 요소 확장명)](../windows/delegate-cpp-component-extensions.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 [attributes]   
@@ -36,30 +35,30 @@ generic < [class | typename] type-parameter-identifiers >
 ([formal-parameters]);  
 ```  
   
-#### 매개 변수  
- `attributes`\(옵션\)  
- 추가 선언 정보입니다.  특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조 하십시오.  
+#### <a name="parameters"></a>매개 변수  
+ `attributes`(선택 사항)  
+ 추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조하십시오.  
   
- *형식\-매개 변수\-식별자*  
- 형식 매개 변수 식별자의 쉼표로 구분 된 목록입니다.  
+ *형식-매개 변수-식별자*  
+ 형식 매개 변수에 대한 식별자의 쉼표로 구분된 목록입니다.  
   
  `type-parameter-constraints-clauses`  
- [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) 에 지정된 형식을 가져옵니다.  
+ 에 지정 된 형식을 취합니다 [제네릭 형식 매개 변수에 대 한 제약 조건 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *액세스 가능성\-한정자* \(선택 사항\)  
- 액세스 가능성 한정자 \(예:  **공용**, `private`\).  
+ *액세스 가능성 한정자* (선택 사항)  
+ 액세스 가능성 한정자 (예: **공용**, `private`).  
   
- *결과\-형식*  
+ *결과 형식*  
  대리자의 반환 형식입니다.  
   
  *identifier*  
- 대리자 이름입니다.  
+ 대리자의 이름입니다.  
   
- *형식\-매개변수* \(선택 사항\)  
- 대리자의 매개 변수 목록.  
+ *정식 매개 변수* (선택 사항)  
+ 대리자의 매개 변수 목록입니다.  
   
-## 예제  
- 대리자 형식 매개 변수는 대리자 개체가 만들어진 위치에 지정 됩니다.  대리자와 연결된 메서드는 동일한 서명이 있어야 합니다.  다음 예제는 이벤트 대리자 선언의 예 입니다.  
+## <a name="example"></a>예제  
+ 대리자 형식 매개 변수는 대리자 개체가 만들어진 위치에 지정됩니다. 대리자 및 연결된 메서드의 시그니처는 둘 다 같아야 합니다. 다음 예제는 제네릭 대리자 선언을 보여 줍니다.  
   
 ```  
 // generics_generic_delegate1.cpp  
@@ -68,14 +67,14 @@ generic < class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);  
 ```  
   
-## 예제  
- 다음 예제에서는 다음을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플은 다음을 보여 줍니다.  
   
--   다른 구성된 형식을 사용 하여 동일한 대리자 개체를 사용할 수 없습니다.  형식 마다 다른 대리자 개체를 만듭니다.  
+-   서로 다른 생성된 형식에 동일한 대리자 개체를 사용할 수 없습니다. 형식마다 다른 대리자 개체를 만듭니다.  
   
 -   제네릭 대리자를 제네릭 메서드에 연결할 수 있습니다.  
   
--   제네릭 메서드의 형식 인수를 지정 하지 않고 호출 되면, 컴파일러는 호출에 대한 형식 인수를 유추 하려고 합니다.  
+-   형식 인수를 지정하지 않고 제네릭 메서드를 호출하면 컴파일러는 호출에 대한 형식 인수를 유추하려고 합니다.  
   
 ```  
 // generics_generic_delegate2.cpp  
@@ -111,8 +110,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 예제에서는 제네릭 대리자`GenDelegate<ItemType>`를 선언한 다음, `ItemType` 형식 매개 변수를 사용 하여 `MyMethod` 메서드를 연결하여 인스턴스화 합니다.  \(정수 및 double\) 대리자의 인스턴스 두 개를 만들고 호출 합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 제네릭 대리자 `GenDelegate<ItemType>`를 선언한 다음, `MyMethod` 형식 매개 변수를 사용하는 `ItemType` 메서드를 연결하여 인스턴스화합니다. 대리자의 두 인스턴스(정수 및 double)를 만들고 호출합니다.  
   
 ```  
 // generics_generic_delegate.cpp  
@@ -162,7 +161,10 @@ int main() {
 }  
 ```  
   
-  **정수 대리자 호출: i \= 123, j \= 123**  
-**더블 대리자 호출: m \= 0.123, n \= 0.123**   
-## 참고 항목  
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+Invoking the integer delegate: i = 123, j = 123  
+Invoking the double delegate: m = 0.123, n = 0.123  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [제네릭](../windows/generics-cpp-component-extensions.md)

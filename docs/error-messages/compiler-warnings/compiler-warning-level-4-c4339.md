@@ -1,34 +1,32 @@
 ---
 title: "컴파일러 경고 (수준 4) C4339 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4339"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4339"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4339
+dev_langs: C++
+helpviewer_keywords: C4339
 ms.assetid: 5b83353d-7777-4afb-8476-3c368349028c
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 48906dbea56c3408384a31e9855a8ac31abd5f37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 4) C4339
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4339"></a>컴파일러 경고(수준 4) C4339
 'type' : WinRT 또는 CLR 메타데이터에 정의되지 않은 형식이 사용되었습니다. 이 형식을 사용하면 런타임 예외가 발생할 수 있습니다.  
   
- Windows 런타임 또는 공용 언어 런타임에 대해 컴파일된 코드에서 형식이 정의되지 않았습니다.  가능한 런타임 예외가 발생하지 않도록 형식을 정의합니다.  
+ Windows 런타임 또는 공용 언어 런타임에 대해 컴파일된 코드에서 형식이 정의되지 않았습니다. 가능한 런타임 예외가 발생하지 않도록 형식을 정의합니다.  
   
- 기본적으로 이 경고는 해제되어 있습니다.  자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md)를 참조하세요.  
+ 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 를 참조하세요.  
   
  다음 샘플에서는 C4339 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   

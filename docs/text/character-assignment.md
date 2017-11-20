@@ -1,29 +1,29 @@
 ---
 title: "문자 할당 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "문자[C++], 할당"
-  - "MBCS[C++], 문자 할당"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], assignments
+- MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-caps.latest.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: c40e7d0c6861f4815d98ad4388aade8227b43dcb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 문자 할당
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 예제는 `while` 루프에서 문자열을 검색하고 'X'를 제외한 모든 문자를 다른 문자열에 복사합니다.  
+# <a name="character-assignment"></a>문자 할당
+다음 예제는 `while` 루프 다른 문자열에 'X'를 제외한 모든 문자를 복사 하는 문자열을 검색 합니다.  
   
 ```  
 while( *sz2 )  
@@ -35,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- 위 코드는 `sz2`의 바이트를 `sz1`이 가리키는 위치로 복사한 후 다음 바이트를 받기 위해 `sz1`을 증가시킵니다.  그러나 `sz2`의 다음 문자가 더블바이트 문자이면 `sz1`에 할당할 때 첫째 바이트만 복사됩니다.  다음 코드는 해당 문자를 안전하게 복사하는 이식 가능 함수와 `sz1`및 `sz2`를 제대로 증가시키는 다른 함수를 사용합니다.  
+ 코드에 바이트를 복사 `sz2` 가 가리키는 위치에 `sz1`를 증가 시킵니다 `sz1` 다음 바이트를 수신 하도록 합니다. 그러나의 다음 문자가 `sz2` 더블 바이트 문자에 대 한 할당 `sz1` 만 첫 번째 바이트를 복사 합니다. 다음 코드에서는 문자를 안전 하 게 복사 하는 이식 가능한 함수 및 증가 시키는 다른 `sz1` 및 `sz2` 올바르게:  
   
 ```  
 while( *sz2 )  
@@ -51,6 +51,6 @@ while( *sz2 )
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [MBCS 프로그래밍 팁](../text/mbcs-programming-tips.md)   
  [문자 비교](../text/character-comparison.md)

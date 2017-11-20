@@ -1,57 +1,58 @@
 ---
-title: "nearbyint, nearbyintf, nearbyintl1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nerabyintl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nearbyintl"
-  - "math/nearbyint"
-  - "math/narbyintf"
-  - "math/narbyintl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nearbyint 함수"
-  - "nearbyintf 함수"
-  - "nearbyintl 함수"
+title: nearbyint, nearbyintf, nearbyintl1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- nearbyint
+- nearbyintf
+- nerabyintl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- nearbyint
+- nearbyintf
+- nearbyintl
+- math/nearbyint
+- math/narbyintf
+- math/narbyintl
+dev_langs: C++
+helpviewer_keywords:
+- nearbyint function
+- nearbyintf function
+- nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 205381e315cf703a9fded4b24812a32c4aef4a9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# nearbyint, nearbyintf, nearbyintl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-지정된 된 부동 소수점 값을 정수로 반올림 하 고 부동 소수점 형식에서 해당 값을 반환 합니다.  
+# <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
+지정된 부동 소수점 값을 정수로 반올림하고 부동 소수점 형식으로 해당 값을 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 double nearbyint(  
@@ -76,33 +77,33 @@ long double nearbyintl(
   
 ```  
   
-#### 매개 변수  
- \[in\] `x`  
+#### <a name="parameters"></a>매개 변수  
+ [in] `x`  
  반올림할 값입니다.  
   
-## 반환 값  
- 성공 하면 반환 `x`, fegetround로 정의 된 현재 반올림 형식을 사용 하는 가장 가까운 정수로 반올림 합니다. 그렇지 않으면 함수에서 다음 값 중 하나를 반환할 수 있습니다.  
+## <a name="return-value"></a>반환 값  
+ 함수가 정상적으로 실행되면 fegetround로 정의된 현재 반올림 형식을 사용하여 가장 가까운 정수로 반올림된 `x`가 반환됩니다. 그렇지 않은 경우에는 함수가 다음 값 중 하나를 반환할 수 있습니다.  
   
 |문제|반환|  
-|--------|--------|  
-|`x` ±INFINITY \=|수정 되지 않은 상태로 ±INFINITY|  
-|`x` \= ±0|수정 되지 않은 상태로 ±0|  
-|`x` \= NaN|NaN|  
+|-----------|------------|  
+|`x` = ±INFINITY|수정되지 않은 ±INFINITY|  
+|`x` = ±0|수정되지 않은 ±0|  
+|`x` = NaN|NaN|  
   
- 통해 오류가 보고 되지 않습니다 [\_matherr](../../c-runtime-library/reference/matherr.md)특히이 함수는 모든 FE\_INEXACT 예외를 보고 하지 않습니다.  
+ 오류는 [_matherr](../../c-runtime-library/reference/matherr.md)을 통해 보고되지 않습니다. 구체적으로 설명하자면, 이 함수는 FE_INEXACT 예외를 보고하지 않습니다.  
   
-## 주의  
- 이 함수가 사이의 주요 차이점 및 `rint` 는이 함수는 정확 하지 않습니다 부동 소수점 예외가 발생 하지 않습니다.  
+## <a name="remarks"></a>설명  
+ 이 함수와 `rint`의 가장 큰 차이점은, 이 함수를 사용하는 경우 부정확한 부동 소수점 예외가 발생하지 않는다는 것입니다.  
   
- 최대 부동 소수점 값에는 정확한 정수는 이기 때문에이 함수는 되지 오버플로가 발생 했습니다. 자체로; 대신, 출력 반환 값을 사용 하는 함수의 버전에 따라 오버플로 일으킬 수 있습니다.  
+ 최대 부동 소수점 값은 정확한 정수이므로 이 함수 자체는 오버플로되지 않으며, 사용하는 함수의 버전에 따라 출력이 반환 값을 오버플로할 수는 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|함수|C 헤더|C\+\+ 헤더|  
-|--------|----------|--------------|  
-|`nearbyint`, `nearbyintf`,  `nearbyintl`|\<math.h\>|\<cmath\>|  
+|함수|C 헤더|C++ 헤더|  
+|--------------|--------------|------------------|  
+|`nearbyint`,                `nearbyintf`,  `nearbyintl`|\<math.h>|\<cmath>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

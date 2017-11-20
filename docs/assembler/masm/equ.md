@@ -1,32 +1,30 @@
 ---
-title: "EQU | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EQU"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EQU directive"
+title: "같음 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: EQU
+dev_langs: C++
+helpviewer_keywords: EQU directive
 ms.assetid: 96db466a-1eab-45bd-a3c2-5a59bd754eab
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bc466f35b06790fd503c3b4684714e84f6ebac6a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# EQU
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-첫 번째 지시문의 숫자 값을 할당  *식* 에  *이름*.  
+# <a name="equ"></a>EQU
+첫 번째 지시문의 숫자 값을 할당 *식* 를 *이름*합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,10 +32,10 @@ caps.handback.revision: 7
 name EQU <text>  
 ```  
   
-## 설명  
- 해당  *이름* 나중에 재정의할 수 없습니다.  
+## <a name="remarks"></a>설명  
+ *이름* 나중에 다시 정의할 수 없습니다.  
   
- 지정 된에 두 번째 지시문 할당  *텍스트* 에  *이름*.  *이름* 다른 할당 될 수 있습니다  *텍스트* 나중에.  참조 하십시오  [TEXTEQU](../../assembler/masm/textequ.md).  
+ 지정 된 두 번째 지시문 할당 하는 *텍스트* 를 *이름*합니다. *이름* 다른 지정할 수 있는 *텍스트* 나중입니다. 참조 [TEXTEQU](../../assembler/masm/textequ.md)합니다.  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

@@ -1,68 +1,67 @@
 ---
 title: "CNoRowset 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CNoRowset"
-  - "ATL::CNoRowset<TAccessor>"
-  - "CNoRowset"
-  - "ATL.CNoRowset<TAccessor>"
-  - "ATL::CNoRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CNoRowset 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CNoRowset
+- ATL::CNoRowset<TAccessor>
+- CNoRowset
+- ATL.CNoRowset<TAccessor>
+- ATL::CNoRowset
+dev_langs: C++
+helpviewer_keywords: CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 678c2483a3ac22999ba0219b4f87392d81e03ea7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CNoRowset 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Can be used as a template argument \(`TRowset`\) for [CCommand](../../data/oledb/ccommand-class.md) or [CTable](../../data/oledb/ctable-class.md).  
+# <a name="cnorowset-class"></a>CNoRowset 클래스
+템플릿 인수로 사용할 수 있습니다 (`TRowset`)에 대 한 [CCommand](../../data/oledb/ccommand-class.md) 또는 [CTable](../../data/oledb/ctable-class.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <class TAccessor = CAccessorBase>  
 class CNoRowset  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `TAccessor`  
- An accessor class.  기본값은 `CAccessorBase`입니다.  
+ 접근자 클래스입니다. 기본값은 `CAccessorBase`입니다.  
   
-## 설명  
- Use `CNoRowset` as a template argument if the command does not return a rowset.  
+## <a name="remarks"></a>설명  
+ 사용 하 여 `CNoRowset` 명령 행 집합을 반환 하지 않는 경우 템플릿 인수와 합니다.  
   
- `CNoRowset` implements the following stub methods, each of which correspond to other accessor class methods:  
+ `CNoRowset`다른 클래스 속성에 해당 하는 각각 다음 스텁 메서드를 구현 합니다.  
   
--   **BindFinished** \- Indicates when binding is complete \(returns `S_OK`\).  
+-   **BindFinished** -바인딩이 완료 되었을 때를 나타냅니다 (반환 `S_OK`).  
   
--   **Close** \- Releases rows and the current IRowset interface.  
+-   **닫기** -행과 현재 IRowset 인터페이스를 해제 합니다.  
   
--   `GetIID` \- Retrieves the interface ID of a connection point.  
+-   `GetIID`-연결 지점의 인터페이스 ID를 검색합니다.  
   
--   **GetInterface** \- Retrieves an interface.  
+-   **GetInterface** -인터페이스를 검색 합니다.  
   
--   `GetInterfacePtr` \- Retrieves an encapsulated interface pointer.  
+-   `GetInterfacePtr`캡슐화 된 인터페이스 포인터를 검색합니다.  
   
--   **SetAccessor** \- Sets a pointer to the accessor.  
+-   **SetAccessor** -접근자에 대 한 포인터를 설정 합니다.  
   
--   **SetupOptionalRowsetInterfaces** \- Sets up optional interfaces for the rowset.  
+-   **SetupOptionalRowsetInterfaces** -행 집합에 대 한 선택적 인터페이스를 설정 합니다.  
   
-## 요구 사항  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)

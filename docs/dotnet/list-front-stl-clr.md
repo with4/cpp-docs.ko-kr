@@ -1,41 +1,39 @@
 ---
-title: "list::front(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front 멤버[STL/CLR]"
+title: 'list:: front (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::front
+dev_langs: C++
+helpviewer_keywords: front member [STL/CLR]
 ms.assetid: ead6aaaa-b518-4a9c-af80-7189bf872cad
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 02cfcf5df078472cf9edeb9e0a30c893b17c4438
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::front(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accesses the first element.  
+# <a name="listfront-stlclr"></a>list::front(STL/CLR)
+첫 번째 요소에 액세스합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 reference front();  
 ```  
   
-## 설명  
- The member function returns a reference to the first element of the controlled sequence, which must be non\-empty.  You use it to read or write the first element, when you know it exists.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 읽기 또는 존재 하는 것을 알고 있는 경우 첫 번째 요소를 쓰기를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_front.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\(\) \= a**  
- **x b c**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::back](../dotnet/list-back-stl-clr.md)   
- [list::back\_item](../dotnet/list-back-item-stl-clr.md)   
- [list::front\_item](../dotnet/list-front-item-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: back (STL/CLR)](../dotnet/list-back-stl-clr.md)   
+ [list:: back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [list::front_item(STL/CLR)](../dotnet/list-front-item-stl-clr.md)

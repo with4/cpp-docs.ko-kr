@@ -1,89 +1,89 @@
 ---
-title: "/ASSEMBLYMODULE(MSIL 모듈을 어셈블리에 추가) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/assemblymodule"
-  - "VC.Project.VCLinkerTool.AddModuleNamesToAssembly"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ASSEMBLYMODULE 링커 옵션"
-  - "어셈블리[C++]"
-  - "어셈블리[C++], 모듈 추가"
-  - "ASSEMBLYMODULE 링커 옵션"
-  - "-ASSEMBLYMODULE 링커 옵션"
+title: "-ASSEMBLYMODULE (MSIL 모듈을 어셈블리에 추가) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /assemblymodule
+- VC.Project.VCLinkerTool.AddModuleNamesToAssembly
+dev_langs: C++
+helpviewer_keywords:
+- ASSEMBLYMODULE linker option
+- assemblies [C++], adding modules to
+- assemblies [C++]
+- /ASSEMBLYMODULE linker option
+- -ASSEMBLYMODULE linker option
 ms.assetid: 67357da8-e4b6-49fd-932c-329a5777f143
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9709a98ee6528a2081f98351126cc84529b0733b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /ASSEMBLYMODULE(MSIL 모듈을 어셈블리에 추가)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="assemblymodule-add-a-msil-module-to-the-assembly"></a>/ASSEMBLYMODULE(MSIL 모듈을 어셈블리에 추가)
 ```  
 /ASSEMBLYMODULE:filename  
 ```  
   
-## 설명  
- 다음은 각 문자에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 여기서  
   
  *filename*  
- 이 어셈블리에 포함시킬 모듈입니다.  
+ 이 어셈블리에 포함 하려는 모듈입니다.  
   
-## 설명  
- \/ASSEMBLYMODULE 옵션을 사용하면 어셈블리에 모듈 참조를 추가할 수 있습니다.  모듈 참조를 추가한 어셈블리 프로그램에서는 모듈의 형식 정보를 사용할 수 없습니다.  하지만 해당 어셈블리를 참조하는 모든 프로그램에서 모듈의 형식 정보를 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ /ASSEMBLYMODULE 옵션을 사용 하면 어셈블리에 대 한 모듈 참조를 추가할 수 있습니다. 모듈의 형식 정보는 모듈 참조를 추가한 어셈블리 프로그램을 사용할 수 없습니다. 그러나 모듈의 형식 정보는 어셈블리를 참조 하는 프로그램에서 사용할 수 있는 됩니다.  
   
- 모듈 참조를 어셈블리에 추가하고 이 모듈의 형식 정보를 어셈블리 프로그램에서 사용할 수 있도록 하려면 [\#using](../../preprocessor/hash-using-directive-cpp.md)을 사용합니다.  
+ 사용 하 여 [#using](../../preprocessor/hash-using-directive-cpp.md) 어셈블리에 대 한 모듈 참조를 추가 하는 모듈의 형식 정보를 어셈블리 프로그램에 사용할 수 있도록 합니다.  
   
- 예를 들어, 다음 시나리오를 확인해 보십시오.  
+ 예를 들어 다음 시나리오를 고려할 수 있습니다.  
   
-1.  [\/LN](../../build/reference/ln-create-msil-module.md)을 사용하여 모듈을 만듭니다.  
+1.  사용 하 여 모듈을 만들 [/LN](../../build/reference/ln-create-msil-module.md)합니다.  
   
-2.  다른 프로젝트에 \/ASSEMBLYMODULE을 사용하여, 어셈블리를 만드는 현재 컴파일에 해당 모듈을 포함시킵니다.  이 프로젝트에서는 `#using`을 사용하여 모듈을 참조하지 않습니다.  
+2.  다른 프로젝트에 /ASSEMBLYMODULE를 사용 하 여 어셈블리 만듭니다는 현재 컴파일에서 모듈을 포함 합니다. 이 프로젝트를 사용 하 여 모듈 참조 하지 않으므로 `#using`합니다.  
   
-3.  또한 이 어셈블리를 참조하는 모든 프로젝트에서는 해당 모듈의 형식을 사용할 수 있습니다.  
+3.  이 어셈블리를 참조 하는 프로젝트 수 현재 사용 하 여 모듈에서 형식입니다.  
   
- 다음은 어셈블리 생성에 사용하는 기타 링커 옵션입니다.  
+ 어셈블리 생성에 영향을 주는 다른 링커 옵션은:  
   
--   [\/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
+-   [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
--   [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [\/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
- Visual C\+\+ 링커 입력으로.netmodule 파일을 수락 하 고 어셈블리 또는.netmodule를 링커에 입력 된 중에 런타임에 종속 하지를 사용 하 여.netmodule 링커에 의해 생성 된 출력 파일 수 있습니다.  자세한 내용은 [링커 입력 파일로 사용하는 .netmodule 파일](../../build/reference/netmodule-files-as-linker-input.md)을 참조하십시오.  
+ Visual C++ 링커는 .netmodule 파일을 입력을 받아들이며, 링커에서 생성된 출력 파일은 링커에 입력된 .netmodules에 대해 런타임 종속성이 없는 어셈블리 또는 .netmodule입니다.  자세한 내용은 [링커 입력 파일로 사용하는 .netmodule 파일](../../build/reference/netmodule-files-as-linker-input.md)을 참조하세요.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
-3.  **입력** 속성 페이지를 클릭합니다.  
+3.  클릭는 **입력** 속성 페이지.  
   
-4.  **어셈블리에 모듈 추가** 속성을 수정합니다.  
+4.  수정 된 **어셈블리에 모듈 추가** 속성입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AddModuleNamesToAssembly%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AddModuleNamesToAssembly%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

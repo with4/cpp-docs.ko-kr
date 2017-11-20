@@ -1,34 +1,32 @@
 ---
 title: "링커 도구 오류 LNK1313 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1313"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1313"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1313
+dev_langs: C++
+helpviewer_keywords: LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3b051cff464a7aa7736b8ff7ac9f9e1a33731832
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 링커 도구 오류 LNK1313
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ijw\/native 모듈이 발견되었습니다. 순수 모듈에 링크할 수 없습니다.  
+# <a name="linker-tools-error-lnk1313"></a>링커 도구 오류 LNK1313
+ijw/native 모듈이 발견되었습니다. 순수 모듈에 링크할 수 없습니다.  
   
- 현재 Visual C\+\+ 버전에서는 네이티브 또는 혼합 관리\/네이티브 .obj 파일을 **\/clr:pure**로 컴파일된 .obj 파일에 링크할 수 없습니다.  
+ 현재 버전의 Visual c + + 네이티브 또는 혼합 관리/네이티브.obj 파일을 사용 하 여 컴파일된.obj 파일에 연결을 지원 하지 않습니다 **/clr: pure**합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // LNK1313.cpp  
@@ -37,7 +35,7 @@ ijw\/native 모듈이 발견되었습니다. 순수 모듈에 링크할 수 없�
 int main() {}  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // LNK1313_b.cpp  
@@ -46,7 +44,7 @@ int main() {}
 void test(){}  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 샘플에서는 LNK1313을 생성합니다.  
   
 ```  

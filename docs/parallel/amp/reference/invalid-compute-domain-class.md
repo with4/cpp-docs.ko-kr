@@ -1,47 +1,28 @@
 ---
-title: "invalid_compute_domain 클래스 | Microsoft 문서"
+title: "invalid_compute_domain 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_compute_domain
 - AMPRT/invalid_compute_domain
 - AMPRT/Concurrency::invalid_compute_domain::invalid_compute_domain
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_compute_domain class
+dev_langs: C++
+helpviewer_keywords: invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: e37012f62a40649876d043c3a0e89a1655c40455
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a6b41017563a7bd3c6e5ebfd3fc3752ea1e97c3a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain 클래스
 런타임에에서 지정 된 계산 도메인을 사용 하 여 커널을 시작할 수 없는 경우 throw 되는 예외는 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) 호출 사이트입니다.  
@@ -95,5 +76,4 @@ invalid_compute_domain() throw();
  인스턴스는 `invalid_compute_domain` 클래스  
     
 ## <a name="see-also"></a>참고 항목  
- [동시성 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
-
+ [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)

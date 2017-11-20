@@ -1,72 +1,71 @@
 ---
-title: "/SECTION(EDITBIN) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/section"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SECTION editbin 옵션"
-  - "섹션의 맞춤 문자"
-  - "SECTION editbin 옵션"
-  - "-SECTION editbin 옵션"
+title: -SECTION (EDITBIN) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /section
+dev_langs: C++
+helpviewer_keywords:
+- -SECTION editbin option
+- SECTION editbin option
+- alignment characters in sections
+- /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cac5ba6baf821e7e9450ec01e7851edf625b8bd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /SECTION(EDITBIN)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="section-editbin"></a>/SECTION(EDITBIN)
 ```  
 /SECTION:name[=newname][,attributes][alignment]  
 ```  
   
-## 설명  
- 이 옵션은 섹션의 개체 파일을 컴파일하거나 링크할 때 설정한 특성을 재정의하여 섹션 특성을 변경합니다.  
+## <a name="remarks"></a>설명  
+ 이 옵션의 섹션에 대 한 개체 파일을 컴파일하거나 링크할 때 설정 된 특성을 재정의 하 여 섹션의 특성을 변경 합니다.  
   
- 콜론\(**:**\) 다음에 섹션의 *name*을 지정합니다.  섹션 이름을 변경하려면 *name* 다음에 등호\(\=\)와 섹션의 *newname*을 입력합니다.  
+ 콜론 뒤 ( **:** ), 지정 된 *이름* 섹션의 합니다. 섹션 이름을 변경 하려면 다음과 *이름* 등호 (=) 및 *newname* 섹션에 대 한 합니다.  
   
- 섹션의 `attributes`를 설정하거나 변경하려면 쉼표\(**,**\) 다음에 하나 이상의 특성 문자를 지정합니다.  특성을 부정하려면 특성 문자 앞에 느낌표\(\!\)를 붙입니다.  다음 문자는 메모리 특성을 지정합니다.  
+ 설정 하거나 섹션의 변경 하려면 `attributes`, 쉼표 지정 (**,**) 다음에 하나 이상의 특성 문자입니다. 특성을 부정 하 느낌표 (!)와 함께 해당 문자 앞에 야 합니다. 다음 문자는 메모리 속성을 지정합니다.  
   
-|특성|설정값|  
-|--------|---------|  
+|특성|설정|  
+|---------------|-------------|  
 |c|코드|  
-|d|discardable|  
+|일|삭제 가능한|  
 |e|executable|  
-|i|initialized data|  
-|k|cached virtual memory|  
-|m|link remove|  
-|o|link info|  
-|p|paged virtual memory|  
+|i|초기화 된 데이터|  
+|k|캐시 된 가상 메모리|  
+|분|링크 제거|  
+|o|링크 정보|  
+|p|가상 메모리 페이징된|  
 |r|read|  
-|s|shared|  
-|u|uninitialized data|  
-|w|write|  
+|초|공유|  
+|u|초기화 되지 않은 데이터|  
+|주|쓰기|  
   
- *alignment*를 제어하려면 **A** 문자 다음에 바이트 단위로 맞춤 크기를 설정하는 다음과 같은 문자 중 하나를 지정합니다.  
+ 컨트롤에 *맞춤*, 문자 지정 **A** 맞춤 크기 바이트를 다음과 같이 설정 하는 다음 문자 중 하나:  
   
-|문자|바이트 단위 맞춤 크기|  
-|--------|------------------|  
+|문자|맞춤 크기 (바이트)|  
+|---------------|-----------------------------|  
 |1|1|  
 |2|2|  
 |4|4|  
-|8|8|  
+|8|9|  
 |p|16|  
 |t|32|  
-|s|64|  
-|x|맞춤 안 함|  
+|초|64|  
+|x|맞춤 없음|  
   
- 여러 개의 `attributes` 및 *alignment* 문자는 공백 없이 하나의 문자열로 지정합니다.  문자는 대\/소문자를 구분하지 않습니다.  
+ 지정 된 `attributes` 및 *맞춤* 공백이 없는 문자열 문자입니다. 문자는 대/소문자 구분 되지 않습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [EDITBIN 옵션](../../build/reference/editbin-options.md)

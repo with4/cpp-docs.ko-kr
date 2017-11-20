@@ -1,38 +1,38 @@
 ---
-title: "종속 파일의 경로 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "종속 파일, NMAKE"
-  - "NMAKE 프로그램, 종속 파일"
+title: "종속 항목에 대 한 경로 검색 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, dependents
+- dependents, NMAKE
 ms.assetid: bf998e47-da74-48b5-891d-d3d8ce57264b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cf777c89c78ab844b61138c30a5a9a25ca6b91d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 종속 파일의 경로 검색
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-각 종속 파일에는 아래에 지정된 것과 같이 선택적 검색 경로가 있습니다.  
+# <a name="search-paths-for-dependents"></a>종속 파일의 경로 검색
+각 종속 다음과 같이 지정 하는 선택적 검색 경로, 파일에:  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 {directory[;directory...]}dependent  
 ```  
   
-## 설명  
- NMAKE는 먼저 현재 디렉터리에서 종속 파일을 찾은 다음 지정된 순서로 다른 디렉터리에서 찾습니다.  매크로를 사용하여 전부 또는 일부 검색 경로를 지정할 수 있습니다.  디렉터리 이름은 중괄호\({ }\)로 묶고 디렉터리가 여러 개인 경우 세미콜론\(;\)으로 구분합니다.  공백이나 탭은 사용할 수 없습니다.  
+## <a name="remarks"></a>설명  
+ NMAKE 종속 먼저 현재 디렉터리에서에서 찾은 다음 지정한 순서에 따라 디렉터리에서 찾습니다. 매크로 일부 또는 전체 검색 경로를 지정할 수 있습니다. 디렉터리 이름을 중괄호 ({})로 묶습니다. 여러 디렉터리를 세미콜론 (;)으로 구분 합니다. 공백 또는 탭 없음 허용 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [종속 파일](../build/dependents.md)

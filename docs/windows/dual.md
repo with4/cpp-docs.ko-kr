@@ -1,32 +1,30 @@
 ---
-title: "dual | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.dual"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dual attribute"
+title: "이중 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.dual
+dev_langs: C++
+helpviewer_keywords: dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7213f6d784c0591531a3f6141aa34eb39122c30c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# dual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-인터페이스를 이중 인터페이스로.idl 파일에서를 배치합니다.  
+# <a name="dual"></a>dual
+.Idl 파일에는 이중 인터페이스로 인터페이스를 배치합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 9
   
 ```  
   
-## 설명  
- 경우는  **듀얼** C\+\+ 특성 앞에 있는 인터페이스, 인터페이스에서 생성 된.idl 파일 라이브러리 블록 내부에 배치 됩니다.  
+## <a name="remarks"></a>설명  
+ 경우는 **이중** c + + 특성 인터페이스 앞, 생성된 된.idl 파일에 있는 라이브러리 블록 안에 배치 될 인터페이스를 수행 합니다.  
   
-## 예제  
- 다음 코드를 사용 하 여 특성 블록입니다  **듀얼** 인터페이스 정의 하기 전에:  
+## <a name="example"></a>예제  
+ 다음 코드는를 사용 하는 특성 블록 **이중** 인터페이스 정의 하기 전에:  
   
 ```  
 // cpp_attr_ref_dual.cpp  
@@ -72,24 +70,23 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
 |**적용 대상**|`interface`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|**dispinterface**|  
+|**잘못된 특성**|**dispinterface**|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes by Usage](../windows/attributes-by-usage.md)   
- [custom](../windows/custom-cpp.md)   
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [용도별 특성](../windows/attributes-by-usage.md)   
+ [사용자 지정](../windows/custom-cpp.md)   
  [dispinterface](../windows/dispinterface.md)   
  [object](../windows/object-cpp.md)   
- [\_\_interface](../cpp/interface.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [__interface](../cpp/interface.md)   

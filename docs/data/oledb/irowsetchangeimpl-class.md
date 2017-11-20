@@ -1,36 +1,36 @@
 ---
 title: "IRowsetChangeImpl 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IRowsetChangeImpl"
-  - "IRowsetChangeImpl"
-  - "ATL.IRowsetChangeImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetChangeImpl 클래스"
-  - "공급자, 업데이트 가능"
-  - "업데이트 가능 공급자, 직접 업데이트"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IRowsetChangeImpl
+- IRowsetChangeImpl
+- ATL.IRowsetChangeImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, updatable
+- updatable providers, immediate update
+- IRowsetChangeImpl class
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4dc31fc66f28f6fd9a8d9e9bc7122bf2aa7b2b73
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetChangeImpl 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB 구현에서 [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) 인터페이스의 OLE DB 템플릿 구현입니다.  
+# <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 클래스
+OLE DB 템플릿 구현의 [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) OLE DB 사양에 대 한 인터페이스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <  
@@ -43,57 +43,57 @@ template <
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- `IRowsetChangeImpl` 로부터 파생된 클래스입니다.  
+ 클래스에서 파생 `IRowsetChangeImpl`합니다.  
   
  `Storage`  
- 사용자 레코드  
+ 사용자 레코드입니다.  
   
  `BaseInterface`  
- `IRowsetChange` 같은, 인터페이스에 대한 기본클래스입니다.  
+ 기본 클래스는 인터페이스에 대 한 같은 `IRowsetChange`합니다.  
   
  `RowClass`  
- 행 핸들에 대한 저장소 단위입니다.  
+ 행 핸들에 대 한 저장소 단위입니다.  
   
  `MapClass`  
- 공급자로 유지되는 모든 행 핸들들에 대한 저장소 단위입니다.  
+ 공급자가 보유 하는 모든 행 핸들에 대 한 저장소 단위입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 인터페이스 메서드 \(IRowsetChange 사용\)  
+### <a name="interface-methods-used-with-irowsetchange"></a>인터페이스 메서드 (IRowsetChange와 함께 사용)  
   
 |||  
 |-|-|  
 |[DeleteRows](../../data/oledb/irowsetchangeimpl-deleterows.md)|행 집합에서 행을 삭제합니다.|  
-|[InsertRow](../../data/oledb/irowsetchangeimpl-insertrow.md)|행 집합에 행을 삽입합니다.|  
-|[SetData](../../data/oledb/irowsetchangeimpl-setdata.md)|하나 이상의 열에서 데이터 값을 설정합니다.|  
+|[InsertRow](../../data/oledb/irowsetchangeimpl-insertrow.md)|행 집합에 행을 삽입 합니다.|  
+|[SetData](../../data/oledb/irowsetchangeimpl-setdata.md)|하나 이상의 열에 데이터 값을 설정합니다.|  
   
-### 구현 메서드 \(콜백\)  
+### <a name="implementation-method-callback"></a>구현 메서드 (콜백)  
   
 |||  
 |-|-|  
-|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|저장소에 데이터를 커밋하기 위해 공급자가 재정의되었습니다.|  
+|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|데이터 저장소에 커밋하는 공급자에 의해 재정의 되 면입니다.|  
   
-## 설명  
- 이 인터페이스는 데이터 저장소에 즉시 쓰기 작업을 담당합니다. "즉시"는 최종 사용자\(소비자를 사용하는사람\)가 모두 변경할때, 이 변화가 즉시 데이터 저장소로 전송되는 것을 의미합니다.\(그리고 취소할 수 없게 됩니다.\)  
+## <a name="remarks"></a>설명  
+ 이 인터페이스는 데이터 저장소에 즉시 쓰기 작업을 담당 합니다. "즉시" 의미는 최종 사용자 (소비자를 사용 하 여 person)를 모두 변경 하면 해당 변경 내용이 즉시 전송 됩니다 데이터 저장 (하 고은 취소할 수 없습니다).  
   
- `IRowsetChangeImpl` 은 OLE DB `IRowsetChange` 인터페이스를 구현하고, 이것은 기존의 행들, 제거되는 행들, 새로 추가되는 행들에서 열의 값들의 업데이트를 활성화합니다.  
+ `IRowsetChangeImpl`OLE DB 구현 `IRowsetChange` 행을 삭제 하 고 새 행을 삽입의 기존 행의 열 값의 업데이트 수 있도록 하는 인터페이스입니다.  
   
- OLE DB 템플릿 구현은 모든 기본 메서드들을 지원합니다.\(`SetData`, `InsertRow`, 와 `DeleteRows`\)  
+ OLE DB 템플릿 구현은 모든 기본 메서드를 지원 (`SetData`, `InsertRow`, 및 `DeleteRows`).  
   
 > [!IMPORTANT]
->  다음 부분은 당신의 공급자를 구현하기 전에 다음 문서를 읽어 보는 것이 좋습니다:  
+>  공급자를 구현 하기 전에 다음 문서를 읽는 것이 가장 좋습니다.  
   
 -   [업데이트 가능 공급자 만들기](../../data/oledb/creating-an-updatable-provider.md)  
   
--   챕터 6 *OLE DB Programmer's Reference*  
+-   6 장은 *OLE DB 프로그래머 참조*  
   
--   UpdatePV 예제에서 어떻게 `RUpdateRowset` 클래스가 사용되는지 역시 보여줍니다.  
+-   또한 참조 방법을 `RUpdateRowset` 클래스는 UpdatePV 샘플에서 사용  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

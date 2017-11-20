@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - language reference
 - C++, language reference
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 241ae5abb680d6d8142fca93661c413bde57ace1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5421447cfbe1e1bd8f5d25d80c492d10b1469e0f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-language-reference"></a>C++ 언어 참조
 이 참조는 Microsoft Visual C++에서 구현되는 것처럼 C++ 프로그래밍 언어를 설명합니다. 조직에 따라 *The Annotated c + + Reference Manual* 구성은 Margaret Ellis와 Bjarne Stroustrup이 만든 및 ANSI/ISO c + + 국제 표준 (FDIS ISO/IEC 14882). C++ 언어 기능의 Microsoft 전용 구현이 포함되어 있습니다.  

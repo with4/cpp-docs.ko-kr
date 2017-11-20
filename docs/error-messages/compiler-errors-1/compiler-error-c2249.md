@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2249
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2249
+f1_keywords: C2249
+dev_langs: C++
+helpviewer_keywords: C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 5878c28ed0b4fc2663c17021aa9e277ccaa8ad4e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2249"></a>컴파일러 오류 C2249
 'member': 가상 기본 'class'에 선언 된 액세스 멤버에 액세스할 수 있는 경로가 없는  

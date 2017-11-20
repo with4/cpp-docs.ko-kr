@@ -1,31 +1,30 @@
 ---
-title: "/APPCONTAINER | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/APPCONTAINER"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/APPCONTAINER editbin 옵션"
-  - "APPCONTAINER editbin 옵션"
-  - "-APPCONTAINER editbin 옵션"
+title: -APPCONTAINER | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /APPCONTAINER
+dev_langs: C++
+helpviewer_keywords:
+- APPCONTAINER editbin option
+- -APPCONTAINER editbin option
+- /APPCONTAINER editbin option
 ms.assetid: 0ca4f1ec-c8de-4a37-b3e2-deda7af0bb88
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 62b23ed04783971bf37442237e4db770b7427a8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /APPCONTAINER
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="appcontainer"></a>/APPCONTAINER
 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 또는 유니버설 Windows 앱과 같은 앱 컨테이너에서 실행되어야 하는 실행 파일을 표시합니다.  
   
 ```  
@@ -33,9 +32,9 @@ caps.handback.revision: 8
 /APPCONTAINER[:NO]  
 ```  
   
-## 설명  
- **\/APPCONTAINER** 옵션이 설정된 실행 파일은 Windows 8에서 도입된 프로세스 격리 환경인 앱 컨테이너에서만 실행할 수 있습니다.[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 및 유니버설 Windows 앱의 경우 이 옵션을 설정해야 합니다.  
+## <a name="remarks"></a>설명  
+ **/APPCONTAINER** 옵션이 설정된 실행 파일은 Windows 8에서 도입된 프로세스 격리 환경인 앱 컨테이너에서만 실행할 수 있습니다. [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 및 유니버설 Windows 앱의 경우 이 옵션을 설정해야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [EDITBIN 옵션](../../build/reference/editbin-options.md)   
- [유니버설 Windows 앱이란?](http://go.microsoft.com/fwlink/p/?LinkID=522074)
+ [유니버설 Windows 앱 이란 무엇 인가요?](http://go.microsoft.com/fwlink/p/?LinkID=522074)

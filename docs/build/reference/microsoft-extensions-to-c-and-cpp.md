@@ -1,63 +1,63 @@
 ---
-title: "C 및 C++에 대한 Microsoft 확장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "! operator, C++ 확장"
-  - "!= 연산자"
-  - "& 연산자, C/C++ 확장"
-  - "&amp;&amp; 연산자"
-  - "&= 연산자"
-  - "^ 연산자, C/C++ 확장"
-  - "^= 연산자, C++ 확장"
-  - "| 연산자, 확장"
-  - "|| 연산자"
-  - "|= 연산자"
-  - "~ 연산자, C/C++ 확장"
-  - "And 연산자, C/C++ 확장"
-  - "and_eq 연산자"
-  - "compl 메서드"
-  - "확장"
-  - "확장, C 언어"
-  - "iso646.h 헤더"
-  - "C/C++에 대한 Microsoft 확장"
-  - "NOT 연산자"
-  - "not_eq 연산자"
-  - "Or 연산자, C/C++에 대한 Microsoft 확장"
-  - "or_eq 연산자"
-  - "Visual C, Microsoft 확장"
-  - "Visual C++, C/C++ 확장"
-  - "Xor 연산자, C/C++에 대한 Microsoft 확장"
-  - "xor_eq 연산자"
+title: "C 및 c + +에 대 한 Microsoft 확장 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- or_eq operator
+- ~ operator, extensions to C/C++
+- '& operator, extensions to C/C++'
+- '&= operator'
+- iso646.h header
+- Xor operator, Microsoft extensions to C/C++
+- '!= operator'
+- '! operator, extension to C++'
+- Or operator, Microsoft extensions to C/C++
+- ^ operator, extensions to C/C++
+- ^= operator, C++ extensions
+- xor_eq operator
+- and_eq operator
+- Microsoft extensions to C/C++
+- '|= operator'
+- '|| operator'
+- And operator, extensions to C/C++
+- NOT operator
+- '&& operator'
+- extensions, C language
+- Visual C++, extensions to C/C++
+- '| operator, extensions'
+- not_eq operator
+- Visual C, Microsoft extensions
+- extensions
+- compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e349f9656a6ae0d7f1ae78abbee13ca4bed5f52d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# C 및 C++에 대한 Microsoft 확장
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 다음과 같이 ANSI C 및 c \+ \+ ANSI 표준을 확장합니다.  
+# <a name="microsoft-extensions-to-c-and-c"></a>C 및 C++에 대한 Microsoft 확장명
+Visual C++는 다음과 같이 ANSI C 및 ANSI C++ 표준을 확장합니다.  
   
-## 키워드  
- 여러 키워드가 추가됩니다.  다음 [C\+\+ 키워드](../../cpp/keywords-cpp.md)의 목록에서, 두 선행 밑줄이 있는 키워드는 Visual C\+\+ 확장입니다.  
+## <a name="keywords"></a>키워드가  
+ 여러 키워드가 추가되었습니다. 목록에서 [키워드](../../cpp/keywords-cpp.md), 두 개의 선행 밑줄이 있는 키워드는 Visual c + + 확장 합니다.  
   
-## static const 정수 계열\(또는 열거형\) 멤버의 Out\-of\-Class 정의  
- 표준\(**\/Za**\) 옵션에서는 여기서 보여지는 것과 같이 데이터 멤버에 대해 out\-of\-class를 정의해야 합니다.  
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>멤버 클래스 또는 정의의 정적 const 정수 계열 (enum)를 벗어났습니다  
+ 표준에서 (**/Za**)를 다음과 같이 데이터 멤버에 대 한 한 클래스 정의 확인 해야 합니다.  
   
 ```  
-class CMyClass  {  
+  
+      class CMyClass  {  
    static const int max = 5;  
    int m_array[max];  
 }  
@@ -65,18 +65,18 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition  
 ```  
   
- **\/Ze**를 사용하면 static const 정수 계열 및 const 열거형 데이터 멤버에 대해 선택적으로 out\-of\-class를 정의할 수도 있고 정의하지 않을 수도 있습니다.  static 및 const인 정수 계열과 열거형만이 클래스 내부에서 초기 값을 가질 수 있으며, 초기화 식은 const 식이어야 합니다.  
+ 아래 **/Ze**, 한 클래스 정의 static, const 정수 계열, 및 const 열거형 데이터 멤버에 대 한 선택 사항입니다. static 및 const인 열거형 및 정수만 클래스에서 이니셜라이저를 포함할 수 있습니다. 초기화 식은 const 식이어야 합니다.  
   
- 헤더 파일에서 아웃 클래스 정의가 제공되고 여러 소스 파일에 헤더 파일이 포함된 경우 오류가 발생하지 않으려면, [selectany](../../cpp/selectany.md)을 사용합니다.  예를 들면 다음과 같습니다.  
+ 한 클래스 정의 헤더에서 파일 및 헤더 파일은 여러 소스 파일에 포함 하는 제공 하는 경우 오류를 방지 하기 위해 사용 하 여 [selectany](../../cpp/selectany.md)합니다. 예:  
   
 ```  
 __declspec(selectany) const int CMyClass::max = 5;  
 ```  
   
-## 캐스트  
- C 컴파일러와 C \+ \+ 컴파일러는 이러한 유형의 비 ANSI 캐스트를 지원합니다.  
+## <a name="casts"></a>캐스트  
+ C++ 컴파일러 및 C 컴파일러는 모두 이러한 종류의 비ANSI 캐스트를 지원합니다.  
   
--   l\-values를 산출하기 위한 비ANSI 캐스트입니다.  예를 들면 다음과 같습니다.  
+-   l-value를 생성하기 위한 비ANSI 캐스트. 예:  
   
     ```  
     char *p;  
@@ -84,15 +84,15 @@ __declspec(selectany) const int CMyClass::max = 5;
     ```  
   
     > [!NOTE]
-    >  이 확장은 C 언어만 사용할 수 있습니다.  다른 형식을 지정하는 포인터를 수정하기 위한 C \+ \+ 코드에서 ANSI C 표준 형식을 사용할 수 있습니다.  
+    >  이 확장은 C 언어에서만 사용할 수 있습니다. C++ 코드에서 다음 ANSI C 표준 형식을 사용해서 다른 형식에 대한 포인터인 것처럼 포인터를 수정할 수 있습니다.  
   
-     앞의 예제를 다음과 같이 ANSI C 표준에 맞게 다시 작성할 수 있습니다.  
+     앞의 예제는 ANSI C 표준을 따르도록 다음과 같이 다시 작성할 수 있습니다.  
   
     ```  
     p = ( char * )(( int * )p + 1 );  
     ```  
   
--   함수 포인터를 데이터 포인터로 캐스팅하는 비ANSI  예를 들면 다음과 같습니다.  
+-   데이터 포인터에 대한 함수 포인터의 비ANSI 캐스트. 예:  
   
     ```  
     int ( * pfunc ) ();   
@@ -100,14 +100,14 @@ __declspec(selectany) const int CMyClass::max = 5;
     pdata = ( int * ) pfunc;  
     ```  
   
-     ANSI 규격을 유지하면서 동일한 캐스트를 수행하려면, 함수 포인터를 데이터 포인터로 캐스팅하기 전에 `uintptr_t` 로 캐스팅해야 합니다.  
+     동일한 캐스트를 수행하고 ANSI 호환성을 유지 관리하려면 데이터 포인터로 캐스팅하기 전에 함수 포인터를 `uintptr_t`로 캐스팅할 수 있습니다.  
   
     ```  
     pdata = ( int * ) (uintptr_t) pfunc;  
     ```  
   
-## 가변 길이 인수 목록  
- C \+ \+컴파일러와 C 컴파일러는 다양한 수의 인수가 지정되는 함수 선언자 사용을 지원하며, 대신 이 뒤에는 형식을 제공하는 함수 정의가 옵니다.  
+## <a name="variable-length-argument-lists"></a>가변 길이 인수 목록  
+ C++ 컴파일러와 C 컴파일러는 모두 대신 형식을 제공하는 함수 정의 다음에 인수의 변수 수를 지정하는 함수 선언자를 지정합니다.  
   
 ```  
 void myfunc( int x, ... );  
@@ -115,17 +115,17 @@ void myfunc( int x, char * c )
 { }  
 ```  
   
-## 한 줄로 된 주석  
- C 컴파일러는 앞에 두 개의 슬래시\(\/\/\) 문자가 있는 한 줄로 된 주석을 지원합니다.  
+## <a name="single-line-comments"></a>한 줄 주석  
+ C 컴파일러는 2개의 슬래시(//) 문자를 사용해서 시작되는 한 줄로 된 주석을 지원합니다.  
   
 ```  
 // This is a single-line comment.  
 ```  
   
-## 범위  
+## <a name="scope"></a>범위  
  C 컴파일러는 다음과 같은 범위 관련 기능을 지원합니다.  
   
--   extern 항목을 static으로 재정의  
+-   Extern 항목 static으로 재정의:  
   
     ```  
     extern int clip();  
@@ -133,14 +133,14 @@ void myfunc( int x, char * c )
     {}  
     ```  
   
--   같은 범위 내에서 typedef 재정의 사용  
+-   같은 범위에서 typedef 재정의 사용:  
   
     ```  
     typedef int INT;  
     typedef int INT;  
     ```  
   
--   파일 범위의 함수 선언자  
+-   함수 선언 자에 파일 범위가:  
   
     ```  
     void func1()  
@@ -153,7 +153,7 @@ void myfunc( int x, char * c )
     }                  //  /Za passes 4 as type int  
     ```  
   
--   비상수 식을 사용하여 초기화 된 블록 범위의 변수를 사용:  
+-   비상수 식을 사용해서 초기화된 블록 범위 변수의 사용:  
   
     ```  
     int clip( int );  
@@ -172,18 +172,18 @@ void myfunc( int x, char * c )
     }  
     ```  
   
-## 데이터 선언 및 정의  
+## <a name="data-declarations-and-definitions"></a>데이터 선언 및 정의  
  C 컴파일러는 다음과 같은 데이터 선언 및 정의 기능을 지원합니다.  
   
--   이니셜라이저에서 문자 및 문자열 상수 혼합 사용  
+-   혼합 된 문자 및 문자열 상수 이니셜라이저에:  
   
     ```  
     char arr[5] = {'a', 'b', "cde"};  
     ```  
   
--   비트 필드는 기본 형식 이외의 **unsigned int** 또는 **signed int**를 갖습니다.  
+-   이외의 기본 형식을 포함 하는 비트 필드 **부호 없는 int** 또는 **int 서명**합니다.  
   
--   형식을 사용하지 않는 선언자.  
+-   형식을 포함하지 않는 선언자:  
   
     ```  
     x;  
@@ -193,7 +193,7 @@ void myfunc( int x, char * c )
     }  
     ```  
   
--   구조체와 공용 구조체의 마지막 필드로 크기를 지정하지 않은 배열 사용  
+-   구조체 및 공용 구조체의 마지막 필드와 크기가 지정 되지 않은 배열:  
   
     ```  
     struct zero  
@@ -203,7 +203,7 @@ void myfunc( int x, char * c )
     };  
     ```  
   
--   명명되지 않은\(익명\) 구조체  
+-   명명 되지 않은 (익명) 구조체  
   
     ```  
     struct  
@@ -213,7 +213,7 @@ void myfunc( int x, char * c )
     };  
     ```  
   
--   명명되지 않은\(익명\) 공용 구조체  
+-   명명 되지 않은 (익명) 공용 구조체  
   
     ```  
     union  
@@ -223,7 +223,7 @@ void myfunc( int x, char * c )
     };  
     ```  
   
--   명명되지 않은 멤버  
+-   명명 되지 않은 멤버:  
   
     ```  
     struct s  
@@ -233,11 +233,11 @@ void myfunc( int x, char * c )
     }  
     ```  
   
-## 내장 부동 소수점 함수  
- **\/Oi** 이 지정된 경우, C \+ \+ 컴파일러와 C 컴파일러는 `atan`, `atan2`, `cos`, `exp`, `log`, `log10`, `sin`, `sqrt`, 및 `tan` 함수 **END x86 Specific** 의 인라인 생성 **x87 Specific \>** 을 지원합니다.  C 컴파일러의 경우, ANSI 규칙은 `errno` 변수를 설정하지 않기 때문에 이러한 내장 함수가 사용될 때 적용되지 않습니다.  
+## <a name="intrinsic-floating-point-functions"></a>내장 부동 소수점 함수  
+ C + + 컴파일러와 C 컴파일러는 모두 인라인 생성을 지원 합니다. **x86 특정 >** 의 `atan`, `atan2`, `cos`, `exp`, `log`, `log10`, `sin`, `sqrt`, 및 `tan` 함수 **끝 x86 특정** 때 **/Oi** 지정 됩니다. C 컴파일러의 경우, 이러한 내장 함수는 `errno` 변수를 설정하지 않기 때문에 이러한 내장 함수가 사용될 경우 ANSI 규칙을 준수할 수 없게 됩니다.  
   
-## 비 Const 포인터 매개 변수를 Const 포인터 매개 변수 참조를 원하는 함수에 전달  
- 이는 C\+\+에 대한 확장입니다.  이 코드는 **\/Ze**를 사용하여 컴파일합니다:  
+## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Const 포인터 매개 변수에 대 한 참조를 필요한 함수에 Const 이외의 포인터 매개 변수 전달  
+ C + +에 대 한 확장입니다. 와이 코드는 컴파일되지 **/Ze**:  
   
 ```  
 typedef   int   T;  
@@ -259,33 +259,33 @@ void func ()
 }  
 ```  
   
-## ISO646.H를 사용할 수 없음  
- **\/Ze** 옵션을 사용할 경우 텍스트 서식의 다음 연산자를 사용하려면 iso646.h를 포함해야 합니다.  
+## <a name="iso646h-not-enabled"></a>ISO646 합니다. H를 사용할 수 없습니다  
+ 아래 **/Ze**, 텍스트 서식의 다음과 같은 연산자를 사용 하려는 경우 iso646.h 포함 해야 합니다.  
   
--   && \(and\)  
+-   && (and)  
   
--   &\= \(and\_eq\)  
+-   &= (and_eq)  
   
--   & \(bitand\)  
+-   & (bitand)  
   
--   &#124; \(bitor\)  
+-   &#124; (bitor)  
   
--   ~ \(compl\)  
+-   ~ (compl)  
   
--   \! \(not\)  
+-   ! (not)  
   
--   \!\= \(not\_eq\)  
+-   ! = (not_eq)  
   
--   &#124;&#124; \(or\)  
+-   &#124; &#124; (또는)  
   
--   &#124;\= \(or\_eq\)  
+-   &#124; (or_eq) =  
   
--   ^ \(xor\)  
+-   ^ (배타적 or)  
   
--   ^\= \(xor\_eq\)  
+-   ^ = (xor_eq)  
   
-## 문자열 리터럴 주소 형식은 const char \(\*\) \[\]가 아닌 const char \[\]이다.  
- 다음 예제 코드는 **\/Za**가 지정된 경우에는 char const \(\*\)\[4\]를 출력하지만 **\/Ze**가 지정된 경우에는 char const \[4\]를 출력합니다.  
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>Address of String Literal Has Type const char [], not const char (*) []  
+ 다음 예제에서는 출력 const char (\*) [4]에서 **/Za**, 하지만 char const [4]에서 **/Ze**합니다.  
   
 ```  
 #include <stdio.h>  
@@ -297,7 +297,7 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [\/Za, \/Ze\(언어 확장 사용 안 함\)](../../build/reference/za-ze-disable-language-extensions.md)   
+## <a name="see-also"></a>참고 항목  
+ [/Za, /Ze (언어 확장명 사용 안 함)](../../build/reference/za-ze-disable-language-extensions.md)   
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

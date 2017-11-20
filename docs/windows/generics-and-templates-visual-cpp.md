@@ -1,66 +1,65 @@
 ---
-title: "Generics and Templates (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++], vs. templates"
-  - "templates, C++"
+title: "템플릿 (Visual c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generics [C++], vs. templates
+- templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0ea175a0f71c412583065eb2df4e04928ffe57ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Generics and Templates (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-제네릭과 템플릿은 모두 매개 변수가 있는 형식을 지원하는 언어 기능입니다.  그러나 다양하고 여러 용도를 가집니다.  이 항목에서는 이 다양성에 대해 간략하게 설명합니다.  
+# <a name="generics-and-templates-visual-c"></a>제네릭 및 템플릿(Visual C++)
+제네릭과 템플릿의 지 매개 변수가 있는 형식에 대 한 지원을 제공 하는 두 언어 기능. 그러나 다른 되며 다른 용도로 사용 합니다. 이 항목에서는 많은 차이점에 대 한 개요를 제공 합니다.  
   
- 자세한 내용은 [Windows Runtime and Managed Templates](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) 및 [템플릿 개요](../Topic/Templates%20Overview.md)를 참조하십시오.  
+ 자세한 내용은 참조 [Windows 런타임 및 관리 되는 템플릿](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)합니다.  
   
-## 제네릭과 템플릿 비교  
- C\+\+ 템플릿과 제네릭의 중요한 차이점:  
+## <a name="comparing-templates-and-generics"></a>템플릿과 제네릭 비교  
+ C + + 템플릿 간의 주요 차이점:  
   
--   제네릭은 런타임에 형식으로 대체될 때까지 제네릭됩니다.  템플릿은 컴파일 타임에 특수화 됩니다. 그래서 런타임엔 여전히 매개 변수가 있는 형식이 아니게 됩니다.  
+-   제네릭은 형식을 대신 사용 됩니다 하 런타임에 제네릭 됩니다. 런타임에 여전히 매개 변수가 있는 형식이 되기 때문에 컴파일 타임에 템플릿 특수화 된  
   
--   특히 공용 언어 런타임에서 MSIL에서 제네릭을 지원합니다.  런타임에서 제네릭 정보 때문에 제네릭 형식이 포함된 어셈블리를 참조 하는 경우 제네릭 형식에 대한 특정 형식은 대체할 수 있습니다.  템플릿, 반대로 해결 일반적인 형식으로 컴파일 타임에 한 다른 어셈블리에 있는 결과 형식을 특수화할 수 있습니다.  
+-   공용 언어 런타임에서 특히 msil에서 제네릭을 지원합니다. 런타임에서 제네릭에 대 한 때문에 제네릭 형식을 포함 하는 어셈블리를 참조할 때 제네릭 형식에 대 한 특정 유형은 대체할 수 있습니다. 템플릿, 반면, 해결 일반 형식으로 컴파일 타임에 하 고 결과 형식에서 다른 어셈블리의에서 특수화 될 수 있습니다.  
   
--   두 명의 서로 다른 어셈블리에 특수화 된 제네릭 형식이 같은 인수는 같은 형식입니다.  인수 형식으로 간주 런타임에서 형식이 같은 두 명의 서로 다른 어셈블리에 특수화 된 템플릿이 있습니다.  
+-   두 명의 다른 어셈블리 특수 제네릭 형식이 같은 인수는 같은 형식입니다. 템플릿은 특수화 두 명의 다른 어셈블리와 동일한 형식 인수는 런타임에서 서로 다른 형식으로 간주 됩니다.  
   
--   제네릭 \(값 유형 마다 구현 하는 고유한 값, 형식에 적용 되지 않음\)은 모든 참조 형식 인수에 사용되는 실행 코드의 한 부분으로 생성됩니다.  JIT 컴파일러 제네릭에 대한 정보 및 형식 인수로 사용되는 참조 또는 값 형식에 대한 코드를 최적화할 수 있습니다.  템플릿은 각 특수화에 대한 별도의 런타임 코드를 생성합니다.  
+-   제네릭 (사실이 아닙니다 값 유형 마다 고유한 구현 하는 값 형식)는 모든 참조 형식 인수에 사용 되는 실행 코드의 한 부분으로 생성 됩니다. JIT 컴파일러가 제네릭에 대 한 알고 있고 형식 인수로 사용 되는 참조 또는 값 형식에 대 한 코드를 최적화 수입니다. 템플릿은 각 특수화에 대 한 별도 런타임 코드를 생성합니다.  
   
--   제네릭은 `template <int i> C {}` 같은 비형식 템플릿 매개 변수를 허용하지 않습니다.  템플릿은 그것들을 허용합니다.  
+-   제네릭 비형식 템플릿 매개 변수를 같은 허용 하지 않습니다 `template <int i> C {}`합니다. 템플릿 수 있습니다.  
   
--   제네릭에서는 명시적 특수화를 허용하지 않습니다. \(즉, 특정 형식에 대한 템플릿을 사용자 지정하여 구현할 수 없습니다\)  템플릿 또한 그렇습니다.  
+-   제네릭을 명시적 특수화 (즉, 특정 형식에 대 한 템플릿 사용자 지정 구현)를 허용 하지 않습니다. 서식 파일을 수행합니다.  
   
--   제네릭에서는 부분 특수화를 허용하지 않습니다. \(즉, 형식 인수의 하위 집합을 사용자 지정하여 구현할 수 없습니다\)  템플릿 또한 그렇습니다.  
+-   제네릭 부분 특수화 (하위 집합에 대 한 형식 인수 중 사용자 지정 구현)를 허용 하지 않습니다. 서식 파일을 수행합니다.  
   
--   제네릭에서는 형식 매개 변수를 제네릭 형식에 대한 기본 클래스로 사용할 수 없습니다.  템플릿 또한 그렇습니다.  
+-   제네릭 형식 매개 변수는 제네릭 형식에 대 한 기본 클래스로 사용할 수 없습니다. 서식 파일을 수행합니다.  
   
--   서식 파일은 템플릿\-템플릿 매개 변수를 지원합니다. \(예,  `template<template<class T> class X> class MyClass`\), 그러나 제네릭은 지원하지 않습니다.  
+-   템플릿 템플릿 템플릿 매개 변수를 지원 (예: `template<template<class T> class X> class MyClass`)을 포함 하지만 제네릭 하지 않습니다.  
   
-## 제네릭과 템플릿의 결합  
+## <a name="combining-templates-and-generics"></a>템플릿과 제네릭 결합  
   
--   제네릭의 기본적인 차이점은 템플릿과 제네릭 결합하는 응용 프로그램을 구축하는 것입니다.  예를 들어, 제네릭으로 해당 서식 파일을 다른 언어에 노출하게 만드는 제네릭 래퍼를 만들 수 있는 템플릿 클래스를 가지고 있습니다.  제네릭 템플릿은 컴파일 타임에 해당 형식 매개 변수를 가질 필요가 있기 때문에 그 다음, 템플릿에 불구하고 전달하는 형식 매개 변수를 가질 수 있지만, 제네릭은 런타임까지 형식 매개 변수가 해결되지 않습니다.  런타임에 인스턴스화 할 수 모든 제네릭 형식의 경우 컴파일 타임에 템플릿을 확장하는 방법이 없기 때문에 제네릭 내부 템플릿을 중첩하는 것 중 하나가 작동하지 않습니다.  
+-   제네릭의 기본적인 차이점은 템플릿과 제네릭 결합 하는 응용 프로그램을 빌드하기 위한 영향을 줍니다. 예를 들어 제네릭으로 다른 언어에 해당 서식 파일을 노출 하는 일반 래퍼에 대 한 만들려고 한다고 하는 템플릿 클래스를 있다고 가정 합니다. 제네릭 take 템플릿을 컴파일 타임에 해당 형식 매개 변수가 해야 하므로 다음 하도록 서식 파일을 전달 하는 형식 매개 변수 없지만 런타임이 될 때까지 제네릭 형식 매개 변수를 해결 하지 않습니다. 제네릭 안의 템플릿에 중첩 하거나 수 없으므로 작동 하지 템플릿을 런타임에 인스턴스화할 수 있는 임의의 제네릭 형식에 대 한 컴파일 타임에 확장 방식은 없습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- 다음 예제에서는 템플릿과 제네릭 함께 사용하는 간단한 예제를 보여줍니다.  이 예제에서는 템플릿 클래스가 매개 변수를 제네릭 형식으로 통해 전달합니다.  반대는 불가능합니다.  
+### <a name="description"></a>설명  
+ 다음 예제에서는 템플릿과 제네릭을 함께 사용 하 여의 간단한 예를 보여 줍니다. 이 예제에서는 템플릿 클래스는 제네릭 형식에을 통해 해당 매개 변수를 전달합니다. 반대로 수는 없습니다.  
   
- 이 방법은 Visual C\+\+ 어셈블리를 로컬 템플릿 코드를 사용하여 기존 일반 API를 빌드 하려는 경우 또는 템플릿에서 제네릭을 지원하지 않는 특정 기능을 사용하는 제네릭 형식에는 추가적인 매개 변수화를 추가해야 할 때 사용할 수 있습니다.  
+ Visual c + + 어셈블리에 로컬인 템플릿 코드와 함께 기존 제네릭 API에 빌드 하려는 경우 또는 하지 supporte 서식 파일의 특정 기능을 활용 하는 제네릭 형식에 매개 변수화의 추가 계층을 추가 해야 할 때이 관용구를 사용할 수 있습니다. 제네릭 하 여 d입니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // templates_and_generics.cpp  
@@ -95,11 +94,11 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>출력  
   
 ```  
 F  
 ```  
   
-## 참고 항목  
- [Generics](../windows/generics-cpp-component-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [제네릭](../windows/generics-cpp-component-extensions.md)

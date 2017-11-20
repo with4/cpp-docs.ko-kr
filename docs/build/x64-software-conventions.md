@@ -1,29 +1,29 @@
 ---
 title: "x64 소프트웨어 규칙 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Visual C++, x64 호출 규칙"
-  - "x64 코드 규칙"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- x64 coding conventions
+- Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1a61d2d7679542059a40c8ae6b2c3eb03910ec2b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# x64 소프트웨어 규칙
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 단원에서는 x86 아키텍처의 64비트 확장인 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]에 대한 Visual C\+\+ 호출 규칙을 설명합니다.  
+# <a name="x64-software-conventions"></a>x64 소프트웨어 규칙
+이 섹션에서는 Visual c + +에 대 한 호출 규칙을 설명 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], 64 비트 확장 x86 아키텍처.  
   
 -   [x64 호출 규칙 개요](../build/overview-of-x64-calling-conventions.md)  
   
@@ -43,9 +43,9 @@ caps.handback.revision: 13
   
 -   [이미지 형식](../build/image-format.md)  
   
- 다음 컴파일러 옵션을 사용하면 응용 프로그램을 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]에 대해 최적화할 수 있습니다.  
+ 다음 컴파일러 옵션을 사용 하도록 응용 프로그램을 최적화 하는 데 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [\/favor\(아키텍처에 맞게 최적화\)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor에 (아키텍처에 대 한 최적화)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [호출 규칙](../cpp/calling-conventions.md)

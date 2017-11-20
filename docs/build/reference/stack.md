@@ -1,42 +1,41 @@
 ---
-title: "/STACK | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/STACK editbin 옵션"
-  - "STACK editbin 옵션"
-  - "-STACK editbin 옵션"
-  - "스택, 크기 설정"
+title: "-스택 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /stack
+dev_langs: C++
+helpviewer_keywords:
+- -STACK editbin option
+- STACK editbin option
+- stack, setting size
+- /STACK editbin option
 ms.assetid: a39bcff0-c945-4355-80cc-8e4f24a5f142
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ae6696123ffa016a1c3f64ed2310efe571b55978
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /STACK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stack"></a>/STACK
 ```  
 /STACK:reserve[,commit]  
 ```  
   
-## 설명  
- 이 옵션은 바이트 단위로 스택 크기를 설정하고 10진법 또는 C 언어 표기법으로 인수를 사용합니다.  \/STACK 옵션은 실행 파일에만 적용됩니다.  
+## <a name="remarks"></a>설명  
+ 이 옵션 스택 크기를 바이트 단위로 설정 하 고 10 진수 또는 C 언어 표기법 인수를 사용 합니다. /STACK 옵션 실행 파일에만 적용 됩니다.  
   
- *reserve* 인수는 가상 메모리에서 전체 스택 할당을 지정합니다.  EDITBIN은 지정된 값을 4바이트 단위의 가장 가까운 값으로 반올림합니다.  
+ *예약* 인수 가상 메모리의 총 스택 할당을 지정 합니다. EDITBIN 가장 가까운 4 바이트에 지정된 된 값으로 반올림합니다.  
   
- 선택적인 `commit` 인수는 운영 체제에서 해석됩니다.  Windows NT, Windows 95 및 Windows 98에서 `commit`은 한 번에 할당할 실제 메모리 양을 지정합니다.  커밋된 가상 메모리는 페이징 파일에 공간을 예약합니다.  `commit` 값이 크면 응용 프로그램에 더 많은 스택 공간이 필요할 때 시간을 절약할 수 있지만 메모리 요구량과 시작 시간이 늘어날 수 있습니다.  
+ 선택적 `commit` 인수는 운영 체제에서 해석 합니다. Windows NT, Windows 95 및 Windows 98에서 `commit` 한 번에 할당할 실제 메모리 양을 지정 합니다. 커밋된 가상 메모리 공간을 예약 하는 페이징 파일에서 발생 합니다. 더 높은 `commit` 값 시간 때 응용 프로그램이 더 많은 스택 공간이 필요할 수 있지만 늘어나고의 메모리 요구 사항을 시작 시간을 절약할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [EDITBIN 옵션](../../build/reference/editbin-options.md)

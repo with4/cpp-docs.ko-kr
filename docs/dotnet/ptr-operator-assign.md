@@ -1,36 +1,34 @@
 ---
-title: "ptr::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.operator="
-  - "msclr.com.ptr.operator="
-  - "msclr::com::ptr::operator="
-  - "ptr::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator="
+title: ptr::operator = | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.operator=
+- msclr.com.ptr.operator=
+- msclr::com::ptr::operator=
+- ptr::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 58619910-46c0-4db8-b183-c811b23b2df1
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89d26c7011c31e5f4aad66589192ac38e2244e1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Attaches a COM object to a `com::ptr`.  
+# <a name="ptroperator"></a>ptr::operator=
+COM 개체에 연결 된 `com::ptr`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 ptr<_interface_type> % operator=(  
@@ -38,23 +36,23 @@ ptr<_interface_type> % operator=(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_right`  
- The COM interface pointer to attach.  
+ 연결할 COM 인터페이스 포인터입니다.  
   
-## 반환 값  
- A tracking reference on the `com::ptr`.  
+## <a name="return-value"></a>반환 값  
+ 에 대 한 추적 참조는 `com::ptr`합니다.  
   
-## 예외  
- If the `com::ptr` already owns a reference to a COM object, `operator=` throws <xref:System.InvalidOperationException>.  
+## <a name="exceptions"></a>예외  
+ 경우는 `com::ptr` COM 개체에 대 한 참조를 이미 소유한 `operator=` throw <xref:System.InvalidOperationException>합니다.  
   
-## 설명  
- Assigning a COM object to a `com::ptr` references the COM object but does not release the caller's reference to it.  
+## <a name="remarks"></a>설명  
+ COM 개체를 할당 한 `com::ptr` COM 개체를 참조 하지만 호출자의에 대 한 참조를 해제 하지 않습니다.  
   
- This operator has the same effect as `Attach`.  
+ 이 연산자는 것과 동일한 결과가 `Attach`합니다.  
   
-## 예제  
- This example implements a CLR class that uses a `com::ptr` to wrap its private member `IXMLDOMDocument` object.  The `ReplaceDocument` member function first calls `Release` on any previously owned object and then uses `operator=` to attach a new document object.  
+## <a name="example"></a>예제  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `ReplaceDocument` 멤버 함수에 대 한 첫 번째 호출 `Release` 에서 이전에 소유 하 고 개체와 사용 하 여 `operator=` 새 문서 개체를 연결 합니다.  
   
 ```  
 // comptr_op_assign.cpp  
@@ -128,12 +126,12 @@ int main() {
 }  
 ```  
   
-## 요구 사항  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ptr 멤버](../dotnet/ptr-members.md)   
  [ptr::Attach](../dotnet/ptr-attach.md)   
  [ptr::Detach](../dotnet/ptr-detach.md)   

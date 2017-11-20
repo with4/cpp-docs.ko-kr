@@ -1,65 +1,65 @@
 ---
-title: "/Os, /Ot(크기 우선 코드, 속도 우선 코드) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed"
-  - "/os"
-  - "VC.Project.VCCLCompilerTool.FavorSizeOrSpeed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Os 컴파일러 옵션[C++]"
-  - "/Ot 컴파일러 옵션[C++]"
-  - "빠른 코드"
-  - "속도 우선 코드 컴파일러 옵션[C++]"
-  - "크기 우선 코드 컴파일러 옵션[C++]"
-  - "Os 컴파일러 옵션[C++]"
-  - "-Os 컴파일러 옵션[C++]"
-  - "Ot 컴파일러 옵션[C++]"
-  - "-Ot 컴파일러 옵션[C++]"
-  - "작은 컴퓨터 코드"
+title: "-Os-Ot (크기 우선 코드, 속도 우선 코드) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
+- /os
+- VC.Project.VCCLCompilerTool.FavorSizeOrSpeed
+dev_langs: C++
+helpviewer_keywords:
+- favor fast code compiler option [C++]
+- /Os compiler option [C++]
+- Ot compiler option [C++]
+- /Ot compiler option [C++]
+- small machine code
+- -Ot compiler option [C++]
+- fast code
+- favor small code compiler option [C++]
+- Os compiler option [C++]
+- -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5663f71ff6e8654312e3d8c8f76d8acfd9988e3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /Os, /Ot(크기 우선 코드, 속도 우선 코드)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-EXE와 DLL의 크기를 최소화하거나 최대화합니다.  
+# <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /OT(크기 우선 코드, 속도 우선 코드)
+최소화 또는 Exe 및 Dll의 크기를 최대화 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /Os  
 /Ot  
 ```  
   
-## 설명  
- **\/Os**\(코드 크기 우선\) 옵션은 속도보다 크기를 우선적으로 처리하도록 컴파일러에 지시하여 EXE 파일과 DLL의 크기를 최소화합니다.  그러면 컴파일러는 여러 C 및 C\+\+ 구문을 기능이 유사한 기계어 코드 시퀀스로 만들 수 있습니다.  이러한 차이 때문에 크기와 속도를 상대적으로 조정해야 하는 경우가 있습니다.  **\/Os** 및 **\/Ot** 옵션을 사용하면 크기와 속도 중에서 어떤 것을 우선적으로 고려할 것인지 지정할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ **/Os** (크기 우선 코드) 컴파일러에 속도 보다 크기를 우선 하도록 지시 하 여 Exe 및 Dll의 크기를 최소화 합니다. 컴파일러 많은 C 및 c + + 구문을 기능이 비슷한 기계어 코드 시퀀스를 축소할 수 있습니다. 경우에 따라 이러한 차이 크기와 속도의 균형을 제공합니다. **/Os** 및 **/Ot** 옵션 각각에 대해 한 기본 설정을 지정할 수 있습니다.  
   
- **\/Ot**\(코드 속도 우선\) 옵션은 크기보다 속도를 우선적으로 처리하도록 컴파일러에 지시하여 EXE 파일과 DLL의 속도를 최대화합니다. 이 옵션이 기본값입니다. 그러면 컴파일러는 여러 C 및 C\+\+ 구문을 기능이 유사한 기계어 코드 시퀀스로 만들 수 있습니다.  이러한 차이 때문에 크기와 속도를 상대적으로 조정해야 하는 경우가 있습니다.  \/Ot 옵션은 속도 최대화 옵션\([\/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)\)에 포함되어 있습니다.  **\/O2** 옵션은 여러 옵션을 결합하여 상당히 속도가 빠른 코드를 만듭니다.  
+ **/Ot** (우선 코드 속도) 컴파일러에 크기 보다 속도 우선 하도록 지시 하 여 Exe 및 Dll의 속도 최대화 합니다. (기본값입니다.) 컴파일러 많은 C 및 c + + 구문을 기능이 비슷한 기계어 코드 시퀀스를 축소할 수 있습니다. 경우에 따라서는 이러한 차이 크기와 속도의 균형을 제공합니다. 속도 최대화 /Ot 옵션도 포함 됩니다 ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) 옵션입니다. **/O2** 옵션 매우 빠르게 코드를 생성 하는 몇 가지 옵션을 결합 합니다.  
   
- **\/Os** 또는 **\/Ot**를 사용하는 경우 코드를 최적화하려면 [\/Og](../../build/reference/og-global-optimizations.md)를 지정해야 합니다.  
-  
-> [!NOTE]
->  프로파일링 테스트 실행에서 수집되는 정보는 **\/Ob**, **\/Os** 또는 **\/Ot**를 지정할 때 적용되는 최적화를 재정의합니다.  자세한 내용은 [프로필 기반 최적화](../../build/reference/profile-guided-optimizations.md)을 참조하십시오.  
-  
- **x86 전용**  
-  
- 다음 예제 코드에서는 코드 크기 우선 옵션\(**\/Os**\)과 코드 속도 우선 옵션\(**\/Ot**\) 사이의 차이점을 보여 줍니다.  
+ 사용 하는 경우 **/Os** 또는 **/Ot**를 지정 해야 합니다 [/Og](../../build/reference/og-global-optimizations.md) 는 코드를 최적화 합니다.  
   
 > [!NOTE]
->  아래에서는 **\/Os** 또는 **\/Ot**를 사용하는 경우 예상되는 동작에 대해 설명합니다.  그러나 아래 코드를 사용할 경우에는 컴파일러에서 코드를 최적화하는 방식이 릴리스에 따라 다를 수 있습니다.  
+>  프로 파일링 테스트 실행에서 수집 되는 정보는 될 수 있는 효과에 지정 하는 경우 최적화를 재정의 합니다 **/Ob**, **/Os**, 또는 **/Ot**합니다. 자세한 내용은 [프로필 기반 최적화](../../build/reference/profile-guided-optimizations.md)합니다.  
+  
+ **x86 특정**  
+  
+ 다음 코드 예제에서는 코드 크기 우선 차이점을 보여 줍니다 (**/Os**) 옵션 및 속도 우선 코드 (**/Ot**) 옵션:  
+  
+> [!NOTE]
+>  다음 사용 하는 경우 예상 되는 동작에 설명 **/Os** 또는 **/Ot**합니다. 그러나 컴파일러 동작 릴리스 간 아래 코드에 대 한 서로 다른 최적화 될 수 있습니다.  
   
 ```  
 /* differ.c  
@@ -73,14 +73,14 @@ int differ(int x)
 }  
 ```  
   
- 아래 기계어 코드처럼 DIFFER.c가 크기 우선 코드\(**\/Os**\)로 컴파일될 경우, 컴파일러는 return 문의 곱셈 식을 짧지만 느린 코드 시퀀스를 만드는 곱셈으로 구현합니다.  
+ 아래 기계어 코드 조각에 나와 있는 것 처럼 DIFFER.c를 컴파일할 때 크기에 대 한 (**/Os**), 컴파일러 구현 하는 곱하기 return 문의 식으로 명시적으로 한 코드의 짧지만 느린 시퀀스:  
   
 ```  
 mov    eax, DWORD PTR _x$[ebp]  
 imul   eax, 71                  ; 00000047H  
 ```  
   
- 반대로, DIFFER.c가 코드 속도 우선\(**\/Ot**\)으로 컴파일될 경우, 컴파일러는 return 문의 곱셈 식을 빠르지만 긴 코드 시퀀스를 만드는 일련의 shift와 `LEA` 명령으로 구현합니다.  
+ DIFFER.c를 속도 대해 컴파일할 때에 또는 (**/Ot**), 컴파일러 구현 하는 곱하기를 일련의 전환이 return 문의 식 및 `LEA` 빠르지만 긴 시퀀스의 코드를 생성 하는 지침은:  
   
 ```  
 mov    eax, DWORD PTR _x$[ebp]  
@@ -90,23 +90,23 @@ lea    eax, DWORD PTR [eax+eax*8]
 sub    eax, ecx  
 ```  
   
- **END x86 Specific**  
+ **최종 x86 특정**  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
+2.  **C/C++** 폴더를 클릭합니다.  
   
-3.  **최적화** 속성 페이지를 클릭합니다.  
+3.  클릭는 **최적화** 속성 페이지.  
   
-4.  **크기 또는 속도** 속성을 변경합니다.  
+4.  수정 된 **크기 또는 속도** 속성입니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>을 참조하세요.  
   
-## 참고 항목  
- [\/O 옵션\(코드 최적화\)](../../build/reference/o-options-optimize-code.md)   
+## <a name="see-also"></a>참고 항목  
+ [/O 옵션 (코드 최적화)](../../build/reference/o-options-optimize-code.md)   
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

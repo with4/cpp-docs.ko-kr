@@ -1,41 +1,39 @@
 ---
-title: "deque::pop_front(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::pop_front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_front 멤버[STL/CLR]"
+title: 'deque:: pop_front (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::pop_front
+dev_langs: C++
+helpviewer_keywords: pop_front member [STL/CLR]
 ms.assetid: 5042df47-b226-4b16-982e-6a4543b8e00b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c948e6ccd47882f440120a53bad09c77c87c9faf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::pop_front(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Removes the first element.  
+# <a name="dequepopfront-stlclr"></a>deque::pop_front(STL/CLR)
+첫 번째 요소를 제거합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void pop_front();  
 ```  
   
-## 설명  
- The member function removes the first element of the controlled sequence, which must be non\-empty.  You use it to shorten the deque by one element at the front.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소를 제거 합니다. 앞에 한 요소 deque를 줄이기 위해 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_deque_pop_front.cpp   
@@ -64,15 +62,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **b c**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+a b c  
+b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::pop\_back](../dotnet/deque-pop-back-stl-clr.md)   
- [deque::push\_back](../dotnet/deque-push-back-stl-clr.md)   
- [deque::push\_front](../dotnet/deque-push-front-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)   
+ [deque:: push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)   
+ [deque::push_front(STL/CLR)](../dotnet/deque-push-front-stl-clr.md)

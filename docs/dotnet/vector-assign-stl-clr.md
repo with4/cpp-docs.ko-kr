@@ -1,32 +1,30 @@
 ---
-title: "vector::assign(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign 멤버[STL/CLR]"
+title: 'vector:: assign (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 945e2048-6c61-4701-b13c-8241cbee3fa1
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28fac42db05f1540bcae677402fee58520b154ed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# vector::assign(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Replaces all elements.  
+# <a name="vectorassign-stlclr"></a>vector::assign(STL/CLR)
+모든 요소를 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void assign(size_type count, value_type val);  
@@ -35,30 +33,30 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  count  
- Number of elements to insert.  
+ 삽입할 요소의 수입니다.  
   
- first  
- Beginning of range to insert.  
+ 첫 번째  
+ 삽입할 범위의의 시작입니다.  
   
  last  
- End of range to insert.  
+ 삽입할 범위의 끝입니다.  
   
- right  
- Enumeration to insert.  
+ 오른쪽  
+ 삽입 하는 열거형입니다.  
   
  val  
- Value of the element to insert.  
+ 삽입할 요소의 값입니다.  
   
-## 설명  
- The first member function replaces the controlled sequence with a repetition of `count` elements of value `val`.  You use it to fill the container with elements all having the same value.  
+## <a name="remarks"></a>설명  
+ 첫 번째 멤버 함수는 반복 된 제어 되는 시퀀스 바꿉니다 `count` 값의 요소 `val`합니다. 하면을 채우는 데 사용할 컨테이너 요소와 동일한 값이 모두 포함 합니다.  
   
- If `InIt` is an integer type, the second member function behaves the same as `assign((size_type)``first``, (value_type)``last``)`.  Otherwise, it replaces the controlled sequence with the sequence `[``first``,` `last``)`.  You use it to make the controlled sequence a copy another sequence.  
+ 경우 `InIt` 정수 형식, 두 번째 멤버 함수는 동일 하 게 동작 `assign((size_type)first, (value_type)last)`합니다. 제어 되는 순서와 대체 그렇지 않으면 [`first`, `last`). 사용할 있습니다 제어 된 시퀀스 복사본 되도록 다른 시퀀스.  
   
- The third member function replaces the controlled sequence with the sequence designated by the enumerator `right`.  You use it to make the controlled sequence a copy of a sequence described by an enumerator.  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 대체 하는 세 번째 멤버 함수 `right`합니다. 제어 되는 시퀀스의 사본을 열거형에서 설명 하는 순서를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_assign.cpp   
@@ -96,14 +94,17 @@ int main()
   
 ```  
   
-  **x x x x x x**  
- **a b**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/vector\>  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/벡터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::operator\=](../dotnet/vector-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::operator=(STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)

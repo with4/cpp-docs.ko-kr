@@ -1,45 +1,43 @@
 ---
-title: "reverse_copy(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::reverse_copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_copy 함수[STL/CLR]"
+title: reverse_copy (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::reverse_copy
+dev_langs: C++
+helpviewer_keywords: reverse_copy function [STL/CLR]
 ms.assetid: 694e577a-0fa8-44f7-adde-6dd9f45adefd
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 69dbf8a9ff6c240d02e5f38ed4ed4d5f6bfcf072
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# reverse_copy(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Reverses the order of the elements within a source range while copying them into a destination range.  
+# <a name="reversecopy-stlclr"></a>reverse_copy(STL/CLR)
+소스 범위 내의 요소의 순서를 바꾸는 동시에 대상 범위로 복사 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _BidIt, class _OutIt> inline  
     _OutIt reverse_copy(_BidIt _First, _BidIt _Last, _OutIt _Dest);  
 ```  
   
-## 설명  
- This function behaves the same as the STL function `reverse_copy`.  자세한 내용은 [reverse\_copy](../Topic/reverse_copy.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 함수 동일 하 게 동작 `reverse_copy`합니다. 자세한 내용은 참조 [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<알고리즘 cliext/>  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [algorithm(STL/CLR)](../dotnet/algorithm-stl-clr.md)

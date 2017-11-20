@@ -1,38 +1,37 @@
 ---
 title: "메이크파일 프로젝트 마법사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.makefile.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "메이크파일 프로젝트 마법사[Visual Studio]"
-  - "메이크파일 프로젝트, 메이크파일 프로젝트 마법사"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.makefile.overview
+dev_langs: C++
+helpviewer_keywords:
+- Makefile projects, Makefile Project Wizard
+- MakeFile Project Wizard [Visual Studio]
 ms.assetid: 38219802-320d-4c48-a118-4792de8f3b2d
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6a36cfa6c0171f7f05d308aef2cd2c84e62ce296
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 메이크파일 프로젝트 마법사
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 마법사를 사용하여 빌드 엔진에서 실행할 명령줄을 만듭니다.  프로젝트를 만든 후에는 [속성 페이지](../ide/working-with-project-properties.md)에서 프로젝트의 속성을 보고 편집할 수 있습니다.  
+# <a name="makefile-project-wizard"></a>메이크파일 프로젝트 마법사
+이 마법사를 사용 하 여 실행 하는 빌드 엔진에 대 한 명령줄을 만듭니다. 프로젝트를 만든 후이 확인 및 프로젝트의 프로젝트 속성을 편집할 수 있습니다 [속성 페이지](../ide/working-with-project-properties.md)합니다.  
   
-## 개요  
- 이 마법사 페이지에서는 만들고 있는 프로젝트의 현재 프로젝트 설정을 설명합니다.  기본적으로 프로젝트는 *ProjName*.exe의 디버깅 및 릴리스 구성을 모두 빌드하도록 설정됩니다.  
+## <a name="overview"></a>개요  
+ 이 마법사 페이지에서는 만들려는 프로젝트에 대 한 현재 프로젝트 설정을 설명 합니다. 기본적으로는 프로젝트가 디버그 빌드 및 릴리스의 구성을 설정 되었으므로 *ProjName*.exe입니다.  
   
- 기본값을 변경하려면 마법사의 왼쪽 열에 있는 [응용 프로그램 설정](../ide/application-settings-makefile-project-wizard.md) 탭을 클릭하고 필요한 사항을 변경합니다.  
+ 이러한 기본값을 변경 하려면 클릭는 [응용 프로그램 설정](../ide/application-settings-makefile-project-wizard.md) 마법사의 왼쪽에 있는 탭을 원하는 대로 변경 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메이크파일 프로젝트 만들기](../ide/creating-a-makefile-project.md)   
  [NMAKE 참조](../build/nmake-reference.md)   
  [메이크파일의 특수 문자](../build/special-characters-in-a-makefile.md)   

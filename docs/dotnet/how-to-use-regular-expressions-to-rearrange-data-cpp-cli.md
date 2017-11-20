@@ -1,34 +1,33 @@
 ---
-title: "방법: 정규식을 사용하여 데이터 다시 정렬(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터[C++], 다시 정렬"
-  - "정규식[C++], 데이터 다시 정렬"
+title: "방법: 정규식을 사용 하 여 데이터를 다시 정렬 하려면 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular expressions [C++], rearranging data
+- data [C++], rearranging
 ms.assetid: 5f91e777-9471-424e-ba75-dca3d1b49e42
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 62154cf33ba3705c89a5ad5a520b678e3f516498
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 정규식을 사용하여 데이터 다시 정렬(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 .NET Framework 정규식 지원을 사용하여 데이터를 다시 정렬하거나 형식을 바꾸는 방법을 보여 줍니다.  다음 코드 예제에서는 <xref:System.Text.RegularExpressions.Regex> 및 <xref:System.Text.RegularExpressions.Match> 클래스를 사용하여 문자열에서 이름과 성을 추출한 다음 이러한 이름 요소의 순서를 바꿔 표시합니다.  
+# <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>방법: 정규식을 사용하여 데이터 다시 정렬(C++/CLI)
+다음 코드 예제를 다시 정렬 하거나 데이터를 다시.NET Framework 정규식 지원을 사용할 수 있는 방법을 보여 줍니다. 다음 코드 예제에서는 <xref:System.Text.RegularExpressions.Regex> 및 <xref:System.Text.RegularExpressions.Match> 문자열에서 성과 이름을 추출 하 고 다음 이러한 이름 요소를 반대 순서로 표시 하는 클래스입니다.  
   
- <xref:System.Text.RegularExpressions.Regex> 클래스는 데이터의 현재 형식을 설명하는 정규식을 생성하는 데 사용됩니다.  두 이름은 쉼표로 구분되는 것으로 가정하고 쉼표 앞뒤에 공백을 그 수에 상관없이 추가할 수 있는 것으로 가정합니다.  <xref:System.Text.RegularExpressions.Match> 메서드는 각 문자열을 분석하는 데 사용됩니다.  문자열이 분석되면 <xref:System.Text.RegularExpressions.Match> 개체에서 이름과 성을 검색하여 표시합니다.  
+ <xref:System.Text.RegularExpressions.Regex> 클래스는 현재 데이터 형식을 설명 하는 정규식을 생성 하는 데 사용 합니다. 두 이름이 쉼표로 구분 하는 양의 쉼표 앞뒤에 공백을 사용할 수 있습니다. <xref:System.Text.RegularExpressions.Match> 메서드는 다음 각 문자열을 분석 하는 데 사용 됩니다. ְ ּ ¸에서 검색 됩니다 성공적으로 실행 되는 <xref:System.Text.RegularExpressions.Match> 개체를 표시 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // regex_reorder.cpp  
@@ -66,6 +65,6 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [.NET Framework 정규식](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [.NET Framework 정규식](/dotnet/standard/base-types/regular-expressions)   
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

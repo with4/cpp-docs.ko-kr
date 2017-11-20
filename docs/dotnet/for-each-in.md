@@ -1,40 +1,39 @@
 ---
-title: "for each, in | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::foreach"
-  - "for"
-  - "each"
-  - "in"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for each 키워드[C++]"
+title: "각 항목에 대해에서 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::foreach
+- for
+- each
+- in
+dev_langs: C++
+helpviewer_keywords: for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a1d89552bd299edc778b06bd01ee185c275c45db
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# for each, in
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-배열 또는 컬렉션을 반복합니다.  이 비표준 키워드는 C\+\+\/CLI 및 네이티브 C\+\+ 프로젝트에서 사용할 수 있습니다.  그러나 사용하지 않는 것이 좋습니다.  대신 표준 [범위 기반 for 문\(C\+\+\)](../cpp/range-based-for-statement-cpp.md)를 사용하십시오.  
+# <a name="for-each-in"></a>for each, in
+배열 또는 컬렉션을 반복합니다. 이 비표준 키워드는 C++/CLI 및 네이티브 C++ 프로젝트에서 사용할 수 있습니다. 그러나 사용하지 않는 것이 좋습니다. 표준을 사용 하는 것이 좋습니다 [범위 기반에 대 한 문 (c + +)](../cpp/range-based-for-statement-cpp.md) 대신 합니다.  
   
-## 모든 런타임  
+## <a name="all-runtimes"></a>모든 런타임  
  **구문**  
   
 ```  
   
-        for each (type identifier in expression) {  
+      for each (typeidentifierinexpression) {  
    statements  
 }  
   
@@ -46,25 +45,25 @@ caps.handback.revision: 22
  `identifier`의 형식입니다.  
   
  `identifier`  
- 반복 변수는 컬렉션 요소를 나타냅니다.  `identifier`가 [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md)인 경우 요소를 수정할 수 있습니다.  
+ 반복 변수는 컬렉션 요소를 나타냅니다.  때 `identifier` 는 [추적 참조 연산자](../windows/tracking-reference-operator-cpp-component-extensions.md), 요소를 수정할 수 있습니다.  
   
  `expression`  
- 배열 식 또는 컬렉션입니다.  컬렉션 요소는 컴파일러가 `identifier` 형식으로 변환할 수 있어야 합니다.  
+ 배열 식 또는 컬렉션입니다. 컬렉션 요소는 컴파일러가 `identifier` 형식으로 변환할 수 있어야 합니다.  
   
  `statements`  
  실행할 하나 이상의 문입니다.  
   
- **설명**  
+ **주의**  
   
- `for each` 문은 컬렉션을 반복하는 데 사용됩니다.  컬렉션의 요소를 수정할 수 있지만 요소를 추가하거나 삭제할 수 없습니다.  
+ `for each` 문은 컬렉션을 반복하는 데 사용됩니다. 컬렉션의 요소를 수정할 수 있지만 요소를 추가하거나 삭제할 수 없습니다.  
   
- *statements*는 배열 또는 컬렉션의 각 요소에 대해 실행됩니다.  컬렉션의 모든 요소에 대해 반복이 완료된 후 제어가 `for each` 블록 다음 문으로 전달됩니다.  
+ *문을* 배열 또는 컬렉션의 각 요소에 대해 실행 됩니다. 컬렉션의 모든 요소에 대해 반복이 완료된 후 제어가 `for each` 블록 다음 문으로 전달됩니다.  
   
- `for each` 및 `in`은 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md)입니다.  
+ `for each`및 `in` 는 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md)합니다.  
   
  추가 정보  
   
--   [for each를 사용하여 STL 컬렉션 반복](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
+-   [for each를 사용하여 C++ 표준 라이브러리 컬렉션 반복](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
   
 -   [방법: for each로 배열 반복](../dotnet/how-to-iterate-over-arrays-with-for-each.md)  
   
@@ -72,12 +71,12 @@ caps.handback.revision: 22
   
 -   [방법: for each로 사용자 정의 컬렉션 반복](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 런타임  
   
-### 요구 사항  
- 컴파일러 옵션: **\/ZW**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/ZW**  
   
-### 예제  
+### <a name="example"></a>예제  
  이 예제는 `for each`를 사용해서 문자열을 반복하는 방법을 보여줍니다.  
   
 ```  
@@ -106,24 +105,28 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **abcd**  
- **테스트**   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **설명**  
+```Output  
+abcd  
   
- CLR 구문은 다음을 제외한 **모든 런타임** 구문과 같습니다.  
+Testing  
+```  
   
- *expression*  
- 관리되는 배열 식 또는 컬렉션입니다.  컬렉션 요소는 컴파일러가 <xref:System.Object>에서 *identifier* 형식으로 변환할 수 있는 형식이어야 합니다.  
+## <a name="common-language-runtime"></a>공용 언어 런타임 
+ **주의**  
   
- *expression*은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 형식 또는 <xref:System.Collections.IEnumerator>를 구현하거나 `IEnumerator`에 정의된 모든 메서드를 선언하는 형식을 반환하는 `GetEnumerator` 메서드를 정의하는 형식으로 평가합니다.  
+ CLR 구문은 동일는 **모든 런타임** 구문을 다음과 같이 제외 하 고 있습니다.  
   
-### 요구 사항  
- 컴파일러 옵션: **\/clr**  
+ *식*  
+ 관리되는 배열 식 또는 컬렉션입니다. 컬렉션 요소는 컴파일러에서 변환할 수 있도록 있어야 <xref:System.Object> 에 *식별자* 유형입니다.  
   
-### 예제  
+ *식* 구현 하는 형식으로 계산 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, 또는 형식이 정의 하는 `GetEnumerator` 형식을 반환 하거나 메서드를 구현 하는 <xref:System.Collections.IEnumerator> 하거나 모든 에정의된메서드를선언`IEnumerator`.  
+  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/clr**  
+  
+### <a name="example"></a>예제  
  이 예제는 `for each`를 사용해서 문자열을 반복하는 방법을 보여줍니다.  
   
 ```  
@@ -151,9 +154,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **abcd**  
- **테스트**    
-## 참고 항목  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+abcd  
+  
+Testing   
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,68 +1,67 @@
 ---
 title: "HStringReference 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference
+dev_langs: C++
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d09ba7fff2426f58f72b26a2c7e7681cecde8b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# HStringReference 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-기존 문자열에서 생성된 HSTRING을 나타냅니다.  
+# <a name="hstringreference-class"></a>HStringReference 클래스
+기존 문자열에서 만든 HSTRING를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
 class HStringReference;  
 ```  
   
-## 설명  
- 새 HSTRING의 백업 버퍼의 수명은 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]가 관리하지 않습니다.  호출자는 힙 할당을 피하고 메모리 누수의 위험을 제거하기 위해 스택 프레임에 소스 문자열을 할당합니다.  또한 호출자는 연결된 HSTRING의 수명 동안 소스 문자열이 변경되지 않는지 확인해야 합니다.  자세한 내용은 [WindowsCreateStringReference function](http://msdn.microsoft.com/ko-kr/0361bb7e-da49-4289-a93e-de7aab8712ac)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 새 HSTRING에서 백업 버퍼의 수명은 Windows 런타임에서 관리 되지 않습니다. 호출자는 소스 문자열 힙 할당을 방지 하 고 메모리 누수 위험 제거 하려면 스택 프레임에 할당 합니다. 또한 호출자는 소스 문자열은 연결 된 HSTRING의 수명 동안 변경 되지 않은 확인 해야 합니다. 자세한 내용은 참조 [WindowsCreateStringReference 함수](http://msdn.microsoft.com/en-us/0361bb7e-da49-4289-a93e-de7aab8712ac)합니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
+|이름|설명|  
+|----------|-----------------|  
 |[HStringReference::HStringReference 생성자](../windows/hstringreference-hstringreference-constructor.md)|HStringReference 클래스의 새 인스턴스를 초기화합니다.|  
   
-### 멤버  
+### <a name="members"></a>멤버  
   
 |멤버|설명|  
-|--------|--------|  
-|[HStringReference::CopyTo 메서드](../windows/hstringreference-copyto-method.md)|현재 HStringReference 개체를 HSTRING 개체로 복사합니다.|  
-|[HStringReference::Get 메서드](../windows/hstringreference-get-method.md)|기본 HSTRING 핸들의 값을 검색합니다.|  
+|------------|-----------------|  
+|[HStringReference::CopyTo 메서드](../windows/hstringreference-copyto-method.md)|복사본은 현재 HStringReference 개체 HSTRING 개체입니다.|  
+|[HStringReference::Get 메서드](../windows/hstringreference-get-method.md)|기본 HSTRING 핸들의 값을 검색 합니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[HStringReference::Operator\= 연산자](../windows/hstringreference-operator-assign-operator.md)|다른 HStringReference 개체의 값을 현재 HStringReference 개체로 이동합니다.|  
-|[HStringReference::Operator\=\= 연산자](../windows/hstringreference-operator-equality-operator.md)|두 매개 변수가 같은지 여부를 나타냅니다.|  
-|[HStringReference::Operator\!\= 연산자](../windows/hstringreference-operator-inequality-operator.md)|두 매개 변수가 같지 않은지 여부를 나타냅니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[HStringReference::Operator= 연산자](../windows/hstringreference-operator-assign-operator.md)|다른 HStringReference 개체의 값은 현재 HStringReference 개체를 이동합니다.|  
+|[HStringReference::Operator== 연산자](../windows/hstringreference-operator-equality-operator.md)|두 개의 매개 변수가 같은지 여부를 나타냅니다.|  
+|[HStringReference::Operator!= 연산자](../windows/hstringreference-operator-inequality-operator.md)|두 개의 매개 변수가 같지 않은지를 나타냅니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `HStringReference`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
   
- **네임스페이스:** Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft::WRL::Wrappers 네임스페이스](../windows/microsoft-wrl-wrappers-namespace.md)

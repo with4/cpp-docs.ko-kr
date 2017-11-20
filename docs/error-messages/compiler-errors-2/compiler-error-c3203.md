@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3203
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3203
+f1_keywords: C3203
+dev_langs: C++
+helpviewer_keywords: C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: eb8a9272a62080bd567989d90502d0ca2d003a57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3203"></a>컴파일러 오류 C3203
 'type' : 특수화되지 않은 클래스 템플릿 또는 제네릭은 템플릿 또는 제네릭 매개 변수 'param'에 대한 템플릿 또는 제네릭 인수로 사용할 수 없습니다. 실제 형식이 필요합니다.  

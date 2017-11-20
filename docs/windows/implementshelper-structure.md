@@ -1,32 +1,30 @@
 ---
 title: "ImplementsHelper 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ImplementsHelper 구조체"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsHelper
+dev_langs: C++
+helpviewer_keywords: ImplementsHelper structure
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5bb328b93231646cd3b0ceeea42382d8f8857e21
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ImplementsHelper 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-WRL 인프라구조체를 지원하고 코드에서 직접적으로 사용되는 것을 의도하지 않습니다.  
+# <a name="implementshelper-structure"></a>ImplementsHelper 구조체
+WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <  
@@ -37,31 +35,31 @@ template <
 friend struct Details::ImplementsHelper;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `RuntimeClassFlagsT`  
- 하나 이상의 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거자의 지정된 플래그의 필드입니다.  
+ 플래그의 하나 이상 지정 하는 필드 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거자입니다.  
   
  `ILst`  
- 인터페이스 ID의 목록입니다.  
+ 인터페이스 Id의 목록입니다.  
   
  `IsDelegateToClass`  
- 구현의 현재 인스턴스가 `ILst` 에서 첫 번째 인터페이스 ID의 기본 클래스이면 `true` 를 지정합니다, 그렇지 않으면 `false`  
+ 지정 `true` 구현의 현재 인스턴스는 기본 클래스에 있는 첫 번째 인터페이스 ID의 경우 `ILst`, 그렇지 않으면 `false`합니다.  
   
-## 설명  
- [구현](../windows/implements-structure.md) 구초제를 구현하는 것을 돕습니다.  
+## <a name="remarks"></a>설명  
+ 구현에 유용한는 [구현](../windows/implements-structure.md) 구조입니다.  
   
- 이 서식 파일 인터페이스 목록을 트래버스 및 기본 클래스 및 QueryInterface를 사용하도록 설정하는 데 필요한 정보를 추가합니다.  
+ 이 템플릿은 인터페이스의 목록을 트래버스로 기본 클래스로 및 QueryInterface를 사용 하도록 설정 하는 데 필요한 정보로 추가 합니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `ImplementsHelper`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
   
- **네임스페이스:** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
- [Reference \(Windows Runtime Library\)](http://msdn.microsoft.com/ko-kr/00000000-0000-0000-0000-000000000000)   
+## <a name="see-also"></a>참고 항목  
+ [참조 (Windows 런타임 라이브러리)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

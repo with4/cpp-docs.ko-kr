@@ -1,5 +1,5 @@
 ---
-title: "동시성 네임 스페이스 열거형 | Microsoft 문서"
+title: "동시성 네임 스페이스 열거형 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,18 +16,17 @@ f1_keywords:
 - CONCRT/concurrency::WinRTInitializationType
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7589f0054e9393f938bf69d4e1751202cbc02456
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 4603b01f7daa4573035f57b520dcb1dc5d4eab66
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-enums"></a>동시성 네임 스페이스 열거형
 ||||  
@@ -52,7 +51,7 @@ enum agent_status;
 |`agent_created`|`agent` 생성 되었지만 시작 되지 않았습니다.|  
 |`agent_done`|`agent` 취소 되지 않고 완료 합니다.|  
 |`agent_runnable`|`agent` 시작 되었지만 입력 되지 않은 해당 `run` 메서드.|  
-|`agent_started`|`agent` 시작 했습니다.|  
+|`agent_started`|`agent` 저장 했습니다.|  
 
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [비동기 에이전트](../../../parallel/concrt/asynchronous-agents.md)합니다.  
@@ -98,13 +97,13 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_DETACH`|스케줄러에서 분리 하는 작업을 나타내는 이벤트 형식입니다.|  
 |`CONCRT_EVENT_END`|시작/종료 이벤트 쌍의 시작을 표시 하는 이벤트 유형입니다.|  
 |`CONCRT_EVENT_GENERIC`|기타 이벤트에 사용 되는 이벤트 유형입니다.|  
-|`CONCRT_EVENT_IDLE`|유휴 상태로 전환 하는 컨텍스트의 동작을 나타내는 이벤트 형식입니다.|  
+|`CONCRT_EVENT_IDLE`|유휴 상태가 되는 컨텍스트의 동작을 나타내는 이벤트 형식입니다.|  
 |`CONCRT_EVENT_START`|시작/종료 이벤트 쌍의 시작을 표시 하는 이벤트 유형입니다.|  
 |`CONCRT_EVENT_UNBLOCK`|컨텍스트의 차단을 해제 하는 작업을 나타내는 이벤트 형식입니다.|  
 |`CONCRT_EVENT_YIELD`|컨텍스트 생성 하는 작업을 나타내는 이벤트 형식입니다.|  
   
 ### <a name="requirements"></a>요구 사항  
- **헤더:** concrt.h  **Namespace:** 동시성
+ **헤더:** concrt.h **Namespace:** 동시성
 
 ##  <a name="concrt_traceflags"></a>Concrt_TraceFlags 열거형  
  이벤트 형식에 대한 추적 플래그입니다.  
@@ -137,9 +136,9 @@ enum CriticalRegionType;
   
 |이름|설명|  
 |----------|-----------------|  
-|`InsideCriticalRegion`|컨텍스트가 중요 영역 내에 있음을 나타냅니다. 중요 영역 내에 있을 때 비동기 보류 스케줄러에서 숨겨집니다. 이런 보류 일어나지, 리소스 관리자 실행 가능 하 게 하 고 스케줄러를 다시 호출 하는 대신 다시 시작 하는 스레드 대기. 이러한 영역 내에서 잠금은 가져올 아주 조심 스럽게 고려해 야 합니다.|  
-|`InsideHyperCriticalRegion`|컨텍스트가 매우 중요 한 영역 내에 있음을 나타냅니다. 매우 중요 한 영역 내에 있는 경우 동기 및 비동기 보류 스케줄러에서 숨겨집니다. 이런 보류 하거나 차단이 발생 하는 리소스 관리자 대기 스레드를 실행 가능 하 게 하 고 스케줄러를 다시 호출 하는 대신 다시 시작 합니다. 이러한 영역 내에 있는 잠금은 영역 외부에서 실행 되는 코드와 공유 해서는 안 됩니다. 이렇게 하면 예측할 수 없는 교착 상태가 발생 합니다.|  
-|`OutsideCriticalRegion`|중요 영역 밖에 컨텍스트 임을 나타냅니다.|  
+|`InsideCriticalRegion`|컨텍스트가 중요 한 영역 내에 있음을 나타냅니다. 중요 한 영역 내에 있을 때 비동기 보류 스케줄러에서 숨겨집니다. 이런 보류 동작, 리소스 관리자는 스레드는 실행 가능 하 게 한 스케줄러를 다시 호출 하는 대신 다시 시작할 때까지 대기 합니다. 이러한 영역 내에서 잠금은 가져올 상당한 주의를 기울여야 합니다.|  
+|`InsideHyperCriticalRegion`|컨텍스트가 매우 중요 한 영역 내에 있음을 나타냅니다. 매우 중요 한 영역 내에 있는 경우 동기 및 비동기 보류 스케줄러에서 숨겨집니다. 이런 보류 하거나 차단이 발생 하는 리소스 관리자는 스레드는 실행 가능 하 게 한 스케줄러를 다시 호출 하는 대신 다시 시작할 때까지 대기 합니다. 이러한 영역 내에서 잠금은 가져올이 영역 외부에서 실행 되는 코드와 공유 해서는 안 됩니다. 이렇게 하면 예측할 수 없는 교착 상태가 발생 합니다.|  
+|`OutsideCriticalRegion`|컨텍스트 중요 영역 밖에 임을 나타냅니다.|  
   
 ### <a name="requirements"></a>요구 사항  
  **헤더:** concrtrm.h 
@@ -155,7 +154,7 @@ enum DynamicProgressFeedbackType;
 |이름|설명|  
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|스케줄러에서 진행률 정보를 수집 하지 않습니다. 균형 조정 기본 하드웨어 스레드의 구독 수준에 따라 수행 됩니다. 구독 수준에 대 한 자세한 내용은 참조 하십시오. [iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)합니다.<br /><br /> 이 값은 런타임에서 사용 하기 위해 예약 되어 있습니다.|  
-|`ProgressFeedbackEnabled`|진행률 정보를 수집 하 고 리소스 관리자에 게 전달 하는 스케줄러 합니다. 리소스 관리자는 리소스를 다시 기본 하드웨어 스레드의 구독 수준 외에도 스케줄러를 대신 하 여이 통계 정보를 사용 합니다. 구독 수준에 대 한 자세한 내용은 참조 하십시오. [iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)합니다.|  
+|`ProgressFeedbackEnabled`|스케줄러는 진행률 정보를 수집 하 고 리소스 관리자에 게 전달 합니다. 리소스 관리자는 리소스를 다시 분산 기본 하드웨어 스레드의 구독 수준 외에도 스케줄러를 대신 하 여이 통계 정보를 사용 합니다. 구독 수준에 대 한 자세한 내용은 참조 하십시오. [iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)합니다.|  
 ##  <a name="join_type"></a>join_type 열거형  
  `join` 메시징 블록의 형식입니다.  
   
@@ -166,8 +165,8 @@ enum join_type;
   
 |이름|설명|  
 |----------|-----------------|  
-|`greedy`|Greedy `join` 메시징 블록 전파 시 메시지를 즉시 적용 됩니다. 이 더 효율적 이지만 네트워크 구성에 따라 라이브 잠금 가능성이 있습니다.|  
-|`non_greedy`|Non-greedy `join` 메시징 블록 메시지를 연기 하 고 해 모두 도착 한 후이 사용 합니다. 이러한 동작은 하지만 느려집니다 보장 됩니다.|  
+|`greedy`|Greedy `join` 메시징 블록 전파 시 메시지를 즉시 적용 합니다. 이 더 효율적 이지만 네트워크 구성에 따라 라이브 잠금 가능성이 있습니다.|  
+|`non_greedy`|Non-greedy `join` 메시징 블록 메시지를 연기 하 고 시도 및 모두 도착 한 후 사용 합니다. 이러한 동작은 하지만 느려집니다 보장 됩니다.|  
   
 ### <a name="requirements"></a>요구 사항  
  **헤더:** agents.h  
@@ -183,15 +182,15 @@ enum message_status;
 |이름|설명|  
 |----------|-----------------|  
 |`accepted`|대상 메시지를 수락 합니다.|  
-|`declined`|대상에서 메시지를 수락 하지 않았습니다.|  
-|`missed`|대상 메시지를 수락 하 려 했지만 더 이상 사용할 수 있습니다.|  
+|`declined`|대상 메시지를 수락 하지 않았습니다.|  
+|`missed`|대상 메시지를 수락 하려고 했으나를 더 이상 사용할 수 없습니다.|  
 |`postponed`|대상 메시지를 연기 합니다.|  
   
 ### <a name="requirements"></a>요구 사항  
  **헤더:** agents.h  
 
 ##  <a name="policyelementkey"></a>PolicyElementKey 열거형  
- 스케줄러 동작의 측면을 설명하는 정책 키입니다. 각 정책 요소는 키-값 쌍으로 설명됩니다. 스케줄러에 스케줄러 정책 및 그 영향에 대 한 자세한 내용은 참조 [작업 스케줄러](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.  
+ 스케줄러 동작의 측면을 설명하는 정책 키입니다. 각 정책 요소는 키-값 쌍으로 설명됩니다. 스케줄러에 미치는 영향 및 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [작업 스케줄러](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.  
   
 ```
 enum PolicyElementKey;
@@ -200,16 +199,16 @@ enum PolicyElementKey;
   
 |이름|설명|  
 |----------|-----------------|  
-|`ContextPriority`|스케줄러에서 각 컨텍스트의 운영 체제 스레드 우선 순위입니다. 이 키 값으로 설정 되어 있으면 `INHERIT_THREAD_PRIORITY` 스케줄러에서 컨텍스트 스케줄러를 생성 하는 스레드의 우선 순위를 상속 합니다.<br /><br /> 유효한 값: Windows에 대 한 유효한 값이 하나라도 `SetThreadPriority` 함수 및 특수 값`INHERIT_THREAD_PRIORITY`<br /><br /> 기본값:`THREAD_PRIORITY_NORMAL`|  
-|`ContextStackSize`|각 컨텍스트 (킬로바이트)에서 스케줄러에서 예약 된 스택 크기입니다.<br /><br /> 유효한 값: 양의 정수<br /><br /> 기본값: `0`, 나타내는 된 스택 크기에 대 한 프로세스의 기본 값이 사용 됩니다.|  
-|`DynamicProgressFeedback`|스케줄러에 대 한 리소스가 스케줄러에서 수집한 또는 내부 하드웨어 스레드의 구독 수준에 따라만 통계 정보에 따라 균형 조정 수 있는지 여부를 결정 합니다. 자세한 내용은 참조 [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)합니다.<br /><br /> 유효한 값:의 멤버는 `DynamicProgressFeedbackType` 열거형 중 하나, `ProgressFeedbackEnabled` 또는`ProgressFeedbackDisabled`<br /><br /> 기본값:`ProgressFeedbackEnabled`|  
-|`LocalContextCacheSize`|때는 `SchedulingProtocol` 정책 키 값으로 설정 되어 `EnhanceScheduleGroupLocality`,이 가상 프로세서 로컬 큐에 캐시 될 수는 실행 가능한 컨텍스트에의 최대 수를 지정 합니다. 이러한 컨텍스트는 일반적으로 실행 가능 하 게를 유발한 가상 프로세서에서 마지막에-선입 선출 (후입선출) 순서 대로 실행 됩니다. 이 정책 키에 의미가 없습니다 시기는 `SchedulingProtocol` 키가 값으로 설정 `EnhanceForwardProgress`합니다.<br /><br /> 유효한 값: 음수가 아닌 정수<br /><br /> 기본값:`8`|  
-|`MaxConcurrency`|필요한 최대 동시성 수준 스케줄러가 있습니다. 리소스 관리자는 처음에 많은 가상 프로세서를 할당 하려고 합니다. 특수 값 [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) 원하는 동시성 수준이 동일한 시스템에 있는 하드웨어 스레드 수가 임을 나타냅니다. 에 대 한 지정 된 값이 `MinConcurrency` 시스템에 있는 하드웨어 스레드 수보다 크면 및 `MaxConcurrency` 로 지정 된 `MaxExecutionResources`에 대 한 값 `MaxConcurrency` 는에 설정 된 것과 일치 하기 위해 발생 `MinConcurrency`합니다.<br /><br /> 유효한 값: 양의 정수 및 특수 값`MaxExecutionResources`<br /><br /> 기본값:`MaxExecutionResources`|  
+|`ContextPriority`|각 컨텍스트는 스케줄러에서 운영 체제 스레드 우선 순위입니다. 이 키가 값으로 설정 하는 경우 `INHERIT_THREAD_PRIORITY` 컨텍스트 스케줄러에서 스케줄러를 만든 스레드의 우선 순위를 상속 합니다.<br /><br /> 유효한 값: Windows에 대 한 유효한 값이 하나라도 `SetThreadPriority` 함수 및 특수 값`INHERIT_THREAD_PRIORITY`<br /><br /> 기본값:`THREAD_PRIORITY_NORMAL`|  
+|`ContextStackSize`|각 컨텍스트 (킬로바이트)에서 스케줄러에서 예약 된 스택 크기입니다.<br /><br /> 유효한 값: 양의 정수<br /><br /> 기본값: `0`, 사용할 스택 크기에 대 한 프로세스의 기본값을 나타내는입니다.|  
+|`DynamicProgressFeedback`|스케줄러에 대 한 리소스가 기본 하드웨어 스레드 구독 수준에 따라만 또는 스케줄러에서 수집한 통계 정보에 따라 균형 조정 수 있는지 여부를 결정 합니다. 자세한 내용은 참조 [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)합니다.<br /><br /> 유효한 값:의 멤버는 `DynamicProgressFeedbackType` 열거형 중 하나, `ProgressFeedbackEnabled` 또는`ProgressFeedbackDisabled`<br /><br /> 기본값:`ProgressFeedbackEnabled`|  
+|`LocalContextCacheSize`|경우는 `SchedulingProtocol` 정책 키가 값으로 설정 `EnhanceScheduleGroupLocality`,이 가상 프로세서 로컬 큐에 캐시 될 수 있는 실행 가능한 컨텍스트에의 최대 수를 지정 합니다. 일반적으로 이러한 컨텍스트 실행 가능 하 게를 유발한 가상 프로세서에서 마지막에 첫 번째 아웃 (후입선출) 순서로 실행 됩니다. 이 정책 키에 의미가 없습니다 시기는 `SchedulingProtocol` 키가 값으로 설정 `EnhanceForwardProgress`합니다.<br /><br /> 유효한 값: 음수가 아닌 정수<br /><br /> 기본값:`8`|  
+|`MaxConcurrency`|스케줄러에서 필요한 수준이 최대 동시성 합니다. 리소스 관리자는 처음에 많은 가상 프로세서를 할당 하려고 합니다. 특수 값 [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) 원하는 동시성 수준과 동일한 컴퓨터 하드웨어 스레드 수가 임을 나타냅니다. 에 대 한 지정 된 값 `MinConcurrency` 컴퓨터 하드웨어 스레드 수보다 크면 및 `MaxConcurrency` 로 지정 된 `MaxExecutionResources`에 대 한 값 `MaxConcurrency` 는 대해 설정 된 것과 일치 하기 위해 발생 `MinConcurrency`합니다.<br /><br /> 유효한 값: 특수 값 및 양의 정수`MaxExecutionResources`<br /><br /> 기본값:`MaxExecutionResources`|  
 |`MaxPolicyElementKey`|최대 정책 요소 키입니다. 유효한 요소 키가 없습니다.|  
-|`MinConcurrency`|리소스 관리자가 스케줄러에 제공 해야 하는 최소 동시성 수준입니다. 스케줄러에 할당 된 가상 프로세서 수가 최소 이동 하지 않습니다. 특수 값 [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) 최소 동시성 수준 시스템에 있는 하드웨어 스레드 수가 동일 임을 나타냅니다. 에 대 한 지정 된 값이 `MaxConcurrency` 시스템에 있는 하드웨어 스레드 수보다 작으면 및 `MinConcurrency` 로 지정 된 `MaxExecutionResources`에 대 한 값 `MinConcurrency` 에 대해 설정 된 것과 일치 하도록 낮아집니다은 `MaxConcurrency`합니다.<br /><br /> 유효한 값: 음수가 아닌 정수 및 특수 값 `MaxExecutionResources`합니다. 동시성 런타임이 스케줄러의 생성에 사용되는 스케줄러 정책의 경우에는 값 `0`이 유효하지 않습니다.<br /><br /> 기본값:`1`|  
-|`SchedulerKind`|스레드 스케줄러 기본 실행 컨텍스트를 활용 하는 형식입니다. 자세한 내용은 참조 [SchedulerType](#schedulertype)합니다.<br /><br /> 유효한 값: `SchedulerType` 열거형의 멤버. 예: `ThreadScheduler`<br /><br /> 기본값: `ThreadScheduler`합니다. 이 모든 운영 체제에서 Win32 스레드를 변환 합니다.|  
-|`SchedulingProtocol`|스케줄러에서 사용할 예약 알고리즘을 설명 합니다. 자세한 내용은 참조 [SchedulingProtocolType](#schedulingprotocoltype)합니다.<br /><br /> 유효한 값:의 멤버는 `SchedulingProtocolType` 열거형 중 하나, `EnhanceScheduleGroupLocality` 또는`EnhanceForwardProgress`<br /><br /> 기본값:`EnhanceScheduleGroupLocality`|  
-|`TargetOversubscriptionFactor`|하드웨어 스레드 당 가상 프로세서의 미정 수입니다. 필요할 경우 시스템의 하드웨어 스레드로 `MaxConcurrency`를 만족시키기 위해 리소스 관리자에서 대상 초과 구독 비율을 증가시킬 수 있습니다.<br /><br /> 유효한 값: 양의 정수<br /><br /> 기본값:`1`|  
+|`MinConcurrency`|리소스 관리자가 스케줄러에 제공 해야 하는 최소 동시성 수준입니다. 스케줄러에 할당 된 가상 프로세서 수가 최소값 아래로 이동 하지 않습니다. 특수 값 [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) 최소 동시성 수준 컴퓨터 하드웨어 스레드 수와 같은 임을 나타냅니다. 에 대 한 지정 된 값 `MaxConcurrency` 컴퓨터 하드웨어 스레드 개수 보다 작으면 및 `MinConcurrency` 로 지정 된 `MaxExecutionResources`에 대 한 값 `MinConcurrency` 일치에 대해 설정 된 것을 낮추면 `MaxConcurrency`합니다.<br /><br /> 유효한 값: 특수 값과 음수가 아닌 정수 `MaxExecutionResources`합니다. 동시성 런타임이 스케줄러의 생성에 사용되는 스케줄러 정책의 경우에는 값 `0`이 유효하지 않습니다.<br /><br /> 기본값:`1`|  
+|`SchedulerKind`|스레드 스케줄러 기본 실행 컨텍스트에 활용 하는 형식입니다. 자세한 내용은 참조 [SchedulerType](#schedulertype)합니다.<br /><br /> 유효한 값: `SchedulerType` 열거형의 멤버. 예: `ThreadScheduler`<br /><br /> 기본값: `ThreadScheduler`합니다. 이 모든 운영 체제에서 Win32 스레드를 변환 합니다.|  
+|`SchedulingProtocol`|스케줄러에서 사용할 예약 알고리즘에 설명 합니다. 자세한 내용은 참조 [SchedulingProtocolType](#schedulingprotocoltype)합니다.<br /><br /> 유효한 값:의 멤버는 `SchedulingProtocolType` 열거형 중 하나, `EnhanceScheduleGroupLocality` 또는`EnhanceForwardProgress`<br /><br /> 기본값:`EnhanceScheduleGroupLocality`|  
+|`TargetOversubscriptionFactor`|임시 하드웨어 스레드당 가상 프로세서 수입니다. 필요할 경우 시스템의 하드웨어 스레드로 `MaxConcurrency`를 만족시키기 위해 리소스 관리자에서 대상 초과 구독 비율을 증가시킬 수 있습니다.<br /><br /> 유효한 값: 양의 정수<br /><br /> 기본값:`1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>요구 사항  
@@ -242,8 +241,8 @@ enum SchedulingProtocolType;
   
 |이름|설명|  
 |----------|-----------------|  
-|`EnhanceForwardProgress`|스케줄러는 라운드 로빈 일정 그룹을 통해 각 작업을 실행 합니다. 차단 되지 않은 컨텍스트는 일반적으로 선입 선출 (FIFO) 방식으로 예약 됩니다. 가상 프로세서는 차단 되지 않은 컨텍스트를 캐시 하지 않습니다.|  
-|`EnhanceScheduleGroupLocality`|스케줄러는 다른 일정 그룹으로 이동 하기 전에 현재 일정 그룹 내에서 작업을 계속 합니다. 차단 되지 않은 컨텍스트 가상 프로세서 당 캐시 되 고 차단 하지 않는 있는 가상 프로세서를 마지막에-선입 선출 (후입선출) 방식으로 일반적으로 예약 됩니다.|  
+|`EnhanceForwardProgress`|스케줄러는 라운드 로빈 일정 그룹을 통해 각 작업을 실행 한 후 합니다. 차단 되지 않은 컨텍스트는 일반적으로 선입 선출 (FIFO) 방식으로 예약 됩니다. 가상 프로세서 차단 되지 않은 컨텍스트를 캐시 하지 않습니다.|  
+|`EnhanceScheduleGroupLocality`|스케줄러는 다른 일정 그룹으로 이동 하기 전에 현재 일정 그룹 내에서 작업을 계속 합니다. 차단 되지 않은 컨텍스트 가상 프로세서당 캐시 되 고 차단 하지 않는 있는 가상 프로세서 일반적으로 마지막에서 첫 번째 아웃 (후입선출) 방식으로 예약 됩니다.|  
   
 ### <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h  
@@ -259,11 +258,11 @@ enum SwitchingProxyState;
 |이름|설명|  
 |----------|-----------------|  
 |`Blocking`|호출 스레드가 협조적으로 차단 하 고 단독으로 소유 해야 호출자가 이후에 다시 실행 하 고 다른 작업을 수행 될 때까지 나타냅니다.|  
-|`Idle`|호출 스레드 스케줄러에서 더 이상 필요 없는 리소스 관리자에서 반환 되는 있음을 나타냅니다. 디스패치 중인 하는 컨텍스트를 더 이상 리소스 관리자에서 사용할 수 없습니다.|  
-|`Nesting`|호출 스레드가 자식 스케줄러를 중첩 되 고 다른 스케줄러를 연결 하려면 호출자가 필요한 나타냅니다.|  
+|`Idle`|호출 스레드가 스케줄러에서 더 이상 필요 하 고 반환 되는 리소스 관리자를 나타냅니다. 디스패치 중인 하는 컨텍스트를 더 이상 리소스 관리자가 사용할 수 없습니다.|  
+|`Nesting`|호출 스레드가 자식 스케줄러를 중첩 하 고 다른 스케줄러에 연결 하기 위해 호출자가 필요를 나타냅니다.|  
 
-### <a name="remarks"></a>주의  
- 형식의 매개 변수가 `SwitchingProxyState` 메서드에 전달 `IThreadProxy::SwitchTo` 리소스 관리자는 호출 스레드 프록시를 처리 하는 방법을 알려 줍니다.  
+### <a name="remarks"></a>설명  
+ 형식의 매개 변수 `SwitchingProxyState` 메서드에 전달 `IThreadProxy::SwitchTo` 리소스 관리자에 게 호출 하는 스레드 프록시를 처리 하는 방법을 지시할 수 있습니다.  
   
  이 형식은 사용 방법에 대 한 자세한 내용은 참조 하십시오. [ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)합니다.  
   
@@ -302,4 +301,3 @@ enum WinRTInitializationType;
 
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)
-

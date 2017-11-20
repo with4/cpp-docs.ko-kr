@@ -1,32 +1,30 @@
 ---
 title: "call_in_appdomain 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "call_in_appdomain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_in_appdomain 함수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: call_in_appdomain
+dev_langs: C++
+helpviewer_keywords: call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 648dda2bf13e6e1193ffbd90613253c6d763a89d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# call_in_appdomain 함수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Executes a function in a specified application domain.  
+# <a name="callinappdomain-function"></a>call_in_appdomain 함수
+지정 된 응용 프로그램 도메인에서 함수를 실행 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <typename ArgType1, ...typename ArgTypeN>  
@@ -47,26 +45,26 @@ RetType call_in_appdomain(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `appdomainId`  
- The appdomain in which to call the function.  
+ 함수를 호출 하는 appdomain 합니다.  
   
  `voidFunc`  
- Pointer to a `void` function that takes N parameters \(0 \<\= N \<\= 15\).  
+ 에 대 한 포인터는 `void` N 매개 변수를 사용 하는 함수 (0 < = N < = 15).  
   
  `nonvoidFunc`  
- Pointer to a non\-`void` function that takes N parameters \(0 \<\= N \<\= 15\).  
+ 이외에 대 한 포인터`void` N 매개 변수를 사용 하는 함수 (0 < = N < = 15).  
   
  `arg1...argN`  
- Zero to 15 parameters to be passed to `voidFunc` or `nonvoidFunc` in the other appdomain.  
+ 0 ~ 15 매개 변수를 전달 하도록 `voidFunc` 또는 `nonvoidFunc` 다른 appdomain에서 합니다.  
   
-## 반환 값  
- The result of executing `voidFunc` or `nonvoidFunc` in the specified application domain.  
+## <a name="return-value"></a>반환 값  
+ 실행 결과 `voidFunc` 또는 `nonvoidFunc` 지정 된 응용 프로그램 도메인에 있습니다.  
   
-## 설명  
- The arguments of the function passed to `call_in_appdomain` must not be CLR types.  
+## <a name="remarks"></a>설명  
+ 함수의 인수에 전달 된 `call_in_appdomain` CLR 형식 되지 않아야 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // msl_call_in_appdomain.cpp  
@@ -112,7 +110,7 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 default appdomain: msl_call_in_appdomain.exe  
@@ -121,7 +119,7 @@ default appdomain id = 1
 appDomain1 id = 2  
 ```  
   
-## 요구 사항  
- **Header file** \<msclr\\appdomain.h\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\appdomain.h >  
   
  **Namespace** msclr

@@ -1,34 +1,32 @@
 ---
-title: "방법: C++/CLI에서 추적 참조 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CLR 형식, 참조로 전달"
+title: "방법: 사용 하 여 추적 참조를 C + + /cli CLI | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7e03106c9a4e49e727e278538ca984b740ad446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: C++/CLI에서 추적 참조 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-This article shows how to use a tracking reference \(%\) in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] to pass common language runtime \(CLR\) types by reference.  
+# <a name="how-to-use-tracking-references-in-ccli"></a>방법: C++/CLI에서 추적 참조 사용
+이 문서에서는 C + 추적 참조 (%)를 사용 하는 방법을 보여 줍니다. + CLI 공용 언어 런타임 (CLR) 형식 참조로 전달할 수 있습니다.  
   
-## To pass CLR types by reference  
- The following sample shows how to use a tracking reference to pass CLR types by reference.  
+## <a name="to-pass-clr-types-by-reference"></a>CLR 형식 참조로 전달 하려면  
+ 다음 예제에는 CLR 형식을 참조로 전달 하는 추적 참조를 사용 하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // tracking_reference_handles.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -75,11 +73,13 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **zip \=\= 20100** The next sample shows that taking the address of a tracking reference returns an [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md), and shows how to modify and access data through a tracking reference.  
-  
+```Output  
+zip == 20100  
 ```  
+  
+ 다음 예제에서는 해당 주소를 가져오는 추적 참조 반환을 보여 줍니다.는 [interior_ptr (C + + /cli CLI)](../windows/interior-ptr-cpp-cli.md), 수정 및 추적 참조를 통해 데이터에 액세스 하는 방법을 보여 줍니다.  
+  
+```cpp  
 // tracking_reference_data.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -124,14 +124,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **ctor: R\(int\)**  
-**ctor: N\(int i\)**   
-## Tracking references and interior pointers  
- The following code sample shows that you can convert between tracking references and interior pointers.  
-  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
+  
+## <a name="tracking-references-and-interior-pointers"></a>추적 참조 및 내부 포인터  
+ 다음 코드 예제를 보여 줍니다 추적 참조 및 내부 포인터 간에 변환할 수 있습니다.  
+  
+```cpp  
 // tracking_reference_interior_ptr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -177,20 +178,30 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **ctor: R\(int\)**  
-**ctor: N\(int i\)**   
-## Tracking references and value types  
- This sample shows simple boxing through a tracking reference to a value type:  
-  
-```  
-// tracking_reference_valuetypes_1.cpp// compile with: /clrusing namespace System;int main() {   int i = 10;   int % j = i;   Object ^ o = j;   // j is implicitly boxed and assigned to o}  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
   
- The next sample shows that you can have both tracking references and native references to value types.  
+## <a name="tracking-references-and-value-types"></a>추적 참조 및 값 형식  
+ 이 샘플에서는 값 형식에 추적 참조를 통해 간단한 boxing을 보여 줍니다.  
   
+```cpp  
+// tracking_reference_valuetypes_1.cpp
+// compile with: /clr
+
+using namespace System;
+
+int main() {
+   int i = 10;   
+   int % j = i;   
+   Object ^ o = j;   // j is implicitly boxed and assigned to o
+}  
 ```  
+  
+ 다음 샘플에서는 추적 참조 및 값 형식에 대 한 기본 참조를 둘 다 가질 수 있습니다를 보여 줍니다.  
+  
+```cpp  
 // tracking_reference_valuetypes_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -207,13 +218,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **13**  
-**13**  
-**13** The following sample shows that you can use tracking references together with value types and native types.  
-  
+```Output  
+13  
+13  
+13  
 ```  
+  
+ 다음 샘플에서는 값 형식 및 네이티브 형식와 함께 추적 참조를 사용할 수 있는 보여 줍니다.  
+  
+```cpp  
 // tracking_reference_valuetypes_3.cpp  
 // compile with: /clr  
 value struct G {  
@@ -239,14 +252,16 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **4**  
-**4**  
-**5**  
-**5** This sample shows that you can bind a tracking reference to a value type on the garbage\-collected heap:  
-  
+```Output  
+4  
+4  
+5  
+5  
 ```  
+  
+ 이 샘플에서는 가비지 수집 힙에 값 형식에 대 한 추적 참조를 바인딩할 수를 보여 줍니다.  
+  
+```cpp  
 // tracking_reference_valuetypes_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -275,16 +290,17 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **Original V: 2, Tracking reference to boxed V: 1**  
-**Tracking reference to boxed V: 3**  
-**Boxed new copy V: 1**  
-**Original V: 4, Reference to handle of originally boxed V: 1**   
-## Template functions that take native, value, or reference parameters  
- By using a tracking reference in the signature of a template function, you ensure that the function can be called by a parameter whose type is native, CLR value, or CLR reference.  
-  
+```Output  
+Original V: 2, Tracking reference to boxed V: 1  
+Tracking reference to boxed V: 3  
+Boxed new copy V: 1  
+Original V: 4, Reference to handle of originally boxed V: 1  
 ```  
+  
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>네이티브를 사용 하는 템플릿 함수, 값 또는 참조 매개 변수  
+ 추적 참조를 사용 하는 템플릿 함수 서명에, 시키면 매개 변수는 네이티브 형식이, CLR 값 또는 CLR 참조에서 함수를 호출할 수 있습니다.  
+  
+```cpp  
 // tracking_reference_template.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -305,7 +321,7 @@ public:
    }  
 };  
   
-// Class Defintions  
+// Class Definitions  
 ref struct R {  
    int i;  
 };  
@@ -323,10 +339,11 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+T %  
+T %  
+T &  
+```  
   
-  **T %**  
-**T %**  
-**T &**   
-## 참고 항목  
- [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [추적 참조 연산자](../windows/tracking-reference-operator-cpp-component-extensions.md)

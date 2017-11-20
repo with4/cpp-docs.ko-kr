@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bebd757f304de2377ab2337e5b41a577a2b492b6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: ebf8d12c7c3b0f9578724fe772f24c0bc8c845ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="const-and-volatile-pointers"></a>const 및 volatile 포인터
 [const](../cpp/const-cpp.md) 및 [휘발성](../cpp/volatile-cpp.md) 키워드는 포인터 처리 방법을 변경 합니다. **const** 키워드 지정 초기화 된 후 포인터를 수정할 수 없습니다 5d; 포인터 이후에 수정 되지 않도록에서 보호 됩니다.  
@@ -99,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  위의 문은 함수를 선언 [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)형식의 포인터가 있는 세 개의 인수 중 두 개, `char`합니다. 참조로 인수 전달 하 고 하지 값별로 함수는 모두 수정할 수 있으므로 `strDestination` 및 `strSource` 경우 `strSource` 로 선언 되지 않은 **const**합니다. 선언 `strSource` 으로 **const** 호출자에 게를 보장 `strSource` 호출된 된 함수에서 변경할 수 없습니다.  
   
 > [!NOTE]
->  표준 변환 되기 때문에 *typename* ** \* ** 를 **const** *typename* ** \* **는 형식의 인수를 전달할 수 **char \* ** 를 [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)합니다. 그러나 하지도 마찬가지입니다. 제거 하는 암시적 변환이 존재는 **const** 개체 또는 포인터에서 특성입니다.  
+>  표준 변환 되기 때문에 *typename*  **\***  를 **const** *typename*  **\*** 는 형식의 인수를 전달할 수 **char \***  를 [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)합니다. 그러나 하지도 마찬가지입니다. 제거 하는 암시적 변환이 존재는 **const** 개체 또는 포인터에서 특성입니다.  
   
  A **const** 지정 된 형식의 포인터는 동일한 형식의 포인터에 할당할 수 있습니다. 그러나 한가 아닌 포인터 **const** 에 할당할 수 없습니다는 **const** 포인터입니다. 다음 코드는 올바른 할당과 잘못된 할당을 보여 줍니다.  
   

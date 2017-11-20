@@ -1,11 +1,10 @@
 ---
-title: "concurrent_queue 클래스 | Microsoft 문서"
+title: "concurrent_queue 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,34 +19,18 @@ f1_keywords:
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
-dev_langs:
-- C++
-helpviewer_keywords:
-- concurrent_queue class
+dev_langs: C++
+helpviewer_keywords: concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d2af8483f38a14454e3aa1aecf28864bab1c6a1a
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 9cb1f1618f140ad9183d50d8aaacc8e9cc59c75d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 클래스
 `concurrent_queue` 클래스는 해당 요소에 대해 선입 선출 액세스를 허용하는 시퀀스 컨테이너 클래스입니다. `push` 및 `try_pop`과 같은 동시성으로부터 안전한 작업의 제한된 집합을 사용할 수 있게 합니다.  
@@ -64,7 +47,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
  큐에 저장 될 요소의 데이터 형식입니다.  
   
  `_Ax`  
- 할당 및이 동시 큐에 대 한 메모리 할당 취소 하는 방법에 대 한 세부 정보를 캡슐화 하는 저장 된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `allocator<``T``>`입니다.  
+ 할당 및이 동시 큐에 대 한 메모리 할당 취소에 대 한 세부 정보를 캡슐화 하는 저장 된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `allocator<T>`입니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -73,10 +56,10 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |이름|설명|  
 |----------|-----------------|  
 |`allocator_type`|동시 큐에 대 한 할당자 클래스를 나타내는 형식입니다.|  
-|`const_iterator`|비-스레드로부터 안전한 나타내는 형식을 `const` 동시 큐에 있는 요소를 통해 반복기입니다.|  
+|`const_iterator`|비-스레드로부터 안전한을 나타내는 형식을 `const` 동시 큐에 요소를 마우스로 반복기입니다.|  
 |`const_reference`|에 대 한 참조를 제공 하는 형식은 `const` 읽고 수행 하기 위해 동시 큐에 저장 된 요소 `const` 작업 합니다.|  
-|`difference_type`|동시 큐의 두 요소 사이의 부호가 있는 거리를 제공 하는 형식입니다.|  
-|`iterator`|동시 큐에 있는 요소는 스레드로부터 안전 하지 않은 반복기를 나타내는 형식입니다.|  
+|`difference_type`|동시 큐에 두 요소 사이의 부호가 있는 거리를 제공 하는 형식입니다.|  
+|`iterator`|동시 큐에 요소를 마우스로 스레드로부터 안전 하지 않은 반복기를 나타내는 형식입니다.|  
 |`reference`|동시 큐에 저장 된 요소에 대 한 참조를 제공 하는 형식입니다.|  
 |`size_type`|동시 큐에 있는 요소의 수를 계산 하는 형식입니다.|  
 |`value_type`|동시 큐에 저장 된 데이터 형식을 나타내는 형식입니다.|  
@@ -86,22 +69,22 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |이름|설명|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|오버로드됨. 동시 큐를 생성 합니다.|  
-|[~ concurrent_queue 소멸자](#dtor)|동시 큐를 삭제합니다.|  
+|[~ concurrent_queue 소멸자](#dtor)|동시 큐를 제거합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[clear](#clear)|파괴 하는 동시 큐를 지웁니다 현재 큐에 배치 된 요소입니다. 이 메서드는 동시성이 보장 되지 않습니다.|  
-|[empty](#empty)|테스트는 순간 동시 큐가 비어 있으면이 메서드를 호출 됩니다. 이 메서드는 동시성이 보장 합니다.|  
-|[get_allocator](#get_allocator)|동시 큐를 생성 하는 데 사용 되는 할당자 복사본을 반환 합니다. 이 메서드는 동시성이 보장 합니다.|  
-|[push](#push)|오버로드됨. 동시 큐의 비상 로그에 있는 항목 큐에 넣습니다. 이 메서드는 동시성이 보장 합니다.|  
-|[try_pop](#try_pop)|사용 가능한 경우 큐에서 항목을 제거 합니다. 이 메서드는 동시성이 보장 합니다.|  
-|[unsafe_begin](#unsafe_begin)|오버로드됨. 형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 큐의 시작 부분에 있습니다. 이 메서드는 동시성이 보장 되지 않습니다.|  
-|[unsafe_end](#unsafe_end)|오버로드됨. 형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 큐의 끝에 있습니다. 이 메서드는 동시성이 보장 되지 않습니다.|  
-|[unsafe_size](#unsafe_size)|큐에 있는 항목의 수를 반환합니다. 이 메서드는 동시성이 보장 되지 않습니다.|  
+|[clear](#clear)|동시 큐를 파괴 지웁니다 현재 큐에 배치 된 요소입니다. 이 메서드는 동시성 으로부터 안전한 없습니다.|  
+|[empty](#empty)|이 메서드가 호출 될 때 현재 동시 큐가 비어 있는지 테스트 합니다. 이 메서드는 동시성 으로부터 안전한.|  
+|[get_allocator](#get_allocator)|동시 큐를 생성 하는 데 사용 되는 할당자 복사본을 반환 합니다. 이 메서드는 동시성 으로부터 안전한.|  
+|[push](#push)|오버로드됨. 동시 큐의 비상 로그에 있는 항목 큐에 넣습니다. 이 메서드는 동시성 으로부터 안전한.|  
+|[try_pop](#try_pop)|사용 가능한 경우 큐에서 항목을 제거 합니다. 이 메서드는 동시성 으로부터 안전한.|  
+|[unsafe_begin](#unsafe_begin)|오버로드됨. 형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 큐의 시작 부분에 있습니다. 이 메서드는 동시성 으로부터 안전한 없습니다.|  
+|[unsafe_end](#unsafe_end)|오버로드됨. 형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 큐의 끝에 있습니다. 이 메서드는 동시성 으로부터 안전한 없습니다.|  
+|[unsafe_size](#unsafe_size)|큐에 있는 항목의 수를 반환합니다. 이 메서드는 동시성 으로부터 안전한 없습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  자세한 내용은 참조 [병렬 컨테이너 및 개체](../../../parallel/concrt/parallel-containers-and-objects.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -112,9 +95,9 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
  **네임스페이스:** 동시성  
   
-##  <a name="clear"></a>지우기 
+##  <a name="clear"></a>선택을 취소합니다 
 
- 파괴 하는 동시 큐를 지웁니다 현재 큐에 배치 된 요소입니다. 이 메서드는 동시성이 보장 되지 않습니다.  
+ 동시 큐를 파괴 지웁니다 현재 큐에 배치 된 요소입니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
 ```
 void clear();
@@ -160,17 +143,17 @@ concurrent_queue(_InputIterator _Begin,
 ### <a name="remarks"></a>설명  
  모든 생성자는 할당자 개체를 저장할 `_Al` 는 큐를 초기화 합니다.  
   
- 첫 번째 생성자는 빈 초기 큐를 지정 하 고 사용할 할당자 형식을 명시적으로 지정 합니다.  
+ 첫 번째 생성자는 비어 있는 초기 큐를 지정 하 고 사용할 할당자 형식을 명시적으로 지정 합니다.  
   
  동시 큐의 복사본을 지정 하는 두 번째 생성자는 `_OtherQ`합니다.  
   
  세 번째 생성자는 동시 큐 `_OtherQ`의 이동을 지정합니다.  
   
- 네 번째 생성자는 반복기 범위에서 제공 하는 값을 지정 [ `_Begin`, `_End`).  
+ 반복기 범위에서 제공 하는 값을 지정 하는 네 번째 생성자는 [ `_Begin`, `_End`).  
   
 ##  <a name="dtor"></a>~ concurrent_queue 
 
- 동시 큐를 삭제합니다.  
+ 동시 큐를 제거합니다.  
   
 ```
 ~concurrent_queue();
@@ -178,7 +161,7 @@ concurrent_queue(_InputIterator _Begin,
   
 ##  <a name="empty"></a>빈 
 
- 테스트는 순간 동시 큐가 비어 있으면이 메서드를 호출 됩니다. 이 메서드는 동시성이 보장 합니다.  
+ 이 메서드가 호출 될 때 현재 동시 큐가 비어 있는지 테스트 합니다. 이 메서드는 동시성 으로부터 안전한.  
   
 ```
 bool empty() const;
@@ -188,11 +171,11 @@ bool empty() const;
  `true`순간에 동시 큐가 비어 있으면 `false` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 동시성이 보장 하는 동안 메서드 호출에 대해 `push`, `try_pop`, 및 `empty`, 반환 되는 값 올바르지 않을 호출 스레드에 의해 검사 되는 시점입니다.  
+ 이 메서드는 동시성 으로부터 안전한 동안 메서드 호출에 대해 `push`, `try_pop`, 및 `empty`, 반환 되는 값 올바르지 않을 호출 스레드에 의해 검사 되는 시점입니다.  
   
 ##  <a name="get_allocator"></a>get_allocator 
 
- 동시 큐를 생성 하는 데 사용 되는 할당자 복사본을 반환 합니다. 이 메서드는 동시성이 보장 합니다.  
+ 동시 큐를 생성 하는 데 사용 되는 할당자 복사본을 반환 합니다. 이 메서드는 동시성 으로부터 안전한.  
   
 ```
 allocator_type get_allocator() const;
@@ -203,7 +186,7 @@ allocator_type get_allocator() const;
   
 ##  <a name="push"></a>푸시 
 
- 동시 큐의 비상 로그에 있는 항목 큐에 넣습니다. 이 메서드는 동시성이 보장 합니다.  
+ 동시 큐의 비상 로그에 있는 항목 큐에 넣습니다. 이 메서드는 동시성 으로부터 안전한.  
   
 ```
 void push(const T& _Src);
@@ -215,12 +198,12 @@ void push(T&& _Src);
  `_Src`  
  큐에 추가할 항목입니다.  
   
-### <a name="remarks"></a>주의  
- `push`동시성이 메서드 호출에 대해 `push`, `try_pop`, 및 `empty`합니다.  
+### <a name="remarks"></a>설명  
+ `push`동시성 으로부터 안전한은 메서드 호출에 대해 `push`, `try_pop`, 및 `empty`합니다.  
   
 ##  <a name="try_pop"></a>try_pop 
 
- 사용 가능한 경우 큐에서 항목을 제거 합니다. 이 메서드는 동시성이 보장 합니다.  
+ 사용 가능한 경우 큐에서 항목을 제거 합니다. 이 메서드는 동시성 으로부터 안전한.  
   
 ```
 bool try_pop(T& _Dest);
@@ -233,14 +216,14 @@ bool try_pop(T& _Dest);
 ### <a name="return-value"></a>반환 값  
  `true`항목이 성공적으로 큐에서 제거 되었으면 `false` 그렇지 않은 경우.  
   
-### <a name="remarks"></a>주의  
- 항목이 성공적으로 큐에서 제거 되었으면 매개 변수 `_Dest` 큐에서 제거 되는 값을 받고 큐에 저장 된 원래 값은 소멸 되며이 함수는 반환 `true`합니다. 이 함수를 반환 하는 경우 큐에서 제거할 대상 항목이 발생 한 `false` 의 내용을 차단 없이 `_Dest` 매개 변수가 정의 되지 않습니다.  
+### <a name="remarks"></a>설명  
+ 항목이 성공적으로 큐에서 제거 된 경우 매개 변수 `_Dest` 큐에서 제거 된 값을 받는 큐에 저장 된 원래 값을 제거 하 고이 함수는 반환 `true`합니다. 이 함수를 반환 하는 경우 큐에서 제거할 대상 항목이 했습니다, `false` 내용의 차단 없이 `_Dest` 매개 변수가 정의 되지 않습니다.  
   
- `try_pop`동시성이 메서드 호출에 대해 `push`, `try_pop`, 및 `empty`합니다.  
+ `try_pop`동시성 으로부터 안전한은 메서드 호출에 대해 `push`, `try_pop`, 및 `empty`합니다.  
   
 ##  <a name="unsafe_begin"></a>unsafe_begin 
 
- 형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 큐의 시작 부분에 있습니다. 이 메서드는 동시성이 보장 되지 않습니다.  
+ 형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 큐의 시작 부분에 있습니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
 ```
 iterator unsafe_begin();
@@ -249,14 +232,14 @@ const_iterator unsafe_begin() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 형식의 반복기 `iterator` 또는 `const_iterator` 동시 큐 개체의 시작 부분에 있습니다.  
+ 반복기 형식의 `iterator` 또는 `const_iterator` 동시 큐 개체의 시작 부분에 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 반복기의 `concurrent_queue` 클래스는 디버깅을 위해 주로 느리기 및 반복은 다른 큐 작업에 대해 동시성이 보장 되지 않습니다.  
+ 에 대 한 반복기의 `concurrent_queue` 클래스는 디버깅을 위해 주로 느리기와 반복은 동시성 으로부터 안전한 다른 큐 작업에 관해 되지 않습니다.  
   
 ##  <a name="unsafe_end"></a>unsafe_end 
 
- 형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 큐의 끝에 있습니다. 이 메서드는 동시성이 보장 되지 않습니다.  
+ 형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 큐의 끝에 있습니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
 ```
 iterator unsafe_end();
@@ -265,14 +248,14 @@ const_iterator unsafe_end() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 형식의 반복기 `iterator` 또는 `const_iterator` 동시 큐의 끝에 있습니다.  
+ 반복기 형식의 `iterator` 또는 `const_iterator` 동시 큐의 끝에 있습니다.  
   
-### <a name="remarks"></a>주의  
- 에 대 한 반복기의 `concurrent_queue` 클래스는 디버깅을 위해 주로 느리기 및 반복은 다른 큐 작업에 대해 동시성이 보장 되지 않습니다.  
+### <a name="remarks"></a>설명  
+ 에 대 한 반복기의 `concurrent_queue` 클래스는 디버깅을 위해 주로 느리기와 반복은 동시성 으로부터 안전한 다른 큐 작업에 관해 되지 않습니다.  
   
 ##  <a name="unsafe_size"></a>unsafe_size 
 
- 큐에 있는 항목의 수를 반환합니다. 이 메서드는 동시성이 보장 되지 않습니다.  
+ 큐에 있는 항목의 수를 반환합니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
 ```
 size_type unsafe_size() const;
@@ -281,9 +264,8 @@ size_type unsafe_size() const;
 ### <a name="return-value"></a>반환 값  
  동시 큐의 크기입니다.  
   
-### <a name="remarks"></a>주의  
- `unsafe_size`동시성 안전 하지 않으며 잘못 된 경우 결과가 메서드에 대 한 호출을 동시에 호출할 `push`, `try_pop`, 및 `empty`합니다.  
+### <a name="remarks"></a>설명  
+ `unsafe_size`동시성 으로부터 안전한 아니며 잘못 된 경우 결과가 메서드에 대 한 호출을 동시에 호출할 `push`, `try_pop`, 및 `empty`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)
-

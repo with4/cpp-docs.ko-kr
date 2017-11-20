@@ -1,40 +1,40 @@
 ---
 title: "출력 매개 변수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, 저장 프로시저"
-  - "프로시저 호출"
-  - "프로시저 호출, 저장 프로시저"
-  - "저장 프로시저, 호출"
-  - "저장 프로시저, 매개 변수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, calling
+- stored procedures, parameters
+- procedure calls
+- procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3d1f1a4c84c4567b325bb19e3696170f7960b46b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 출력 매개 변수
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-저장 프로시저를 호출하는 것은 SQL 명령을 호출하는 것과 비슷합니다.  이들의 주된 차이점은 저장 프로시저에서는 출력 매개 변수\(또는 "outparameters"\)와 반환 값을 사용한다는 점입니다.  
+# <a name="output-parameters"></a>출력 매개 변수
+저장된 프로시저를 호출 하는 것은 SQL 명령을 호출 하는 것과 비슷합니다. 주요 차이점에는 저장된 프로시저 출력 매개 변수 (또는 "outparameter")를 사용 및 반환 값은입니다.  
   
- 다음 저장 프로시저에서 첫 번째 '?'는 반환 값\(phone\)이고 두 번째 '?'는 입력 매개 변수\(name\)입니다.  
+ 다음 저장 프로시저를 첫 번째 '? '입니다. 반환 값 (phone) 및 두 번째'?'는 입력 매개 변수 (이름):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- 매개 변수 맵에서 입력과 출력 매개 변수를 지정합니다.  
+ 매개 변수 맵의 입력 및 출력 매개 변수를 지정합니다.  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,12 +45,12 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- 응용 프로그램은 저장 프로시저에서 반환된 출력을 처리해야 합니다.  다른 OLE DB 공급자는 결과를 처리하는 동안 서로 다른 시기에 출력 매개 변수와 반환 값을 반환합니다.  예를 들어, SQL Server용 Microsoft OLE DB 공급자\(SQLOLEDB\)는 저장 프로시저에서 반환된 결과 집합을 소비자가 검색 또는 취소할 때까지 출력 매개 변수와 반환 코드를 제공하지 않습니다.  출력은 서버로부터 마지막 TDS 패킷에 반환됩니다.  
+ 응용 프로그램이 저장된 프로시저에서 반환 되는 출력을 처리 해야 합니다. 다른 OLE DB 공급자는 출력 매개 변수를 반환 하 고 결과 처리 하는 동안 서로 다른 시간에 값을 반환 합니다. 예를 들어 Microsoft OLE DB 공급자 SQL Server (SQLOLEDB)에 대 한 않습니다 하지 출력 매개 변수를 제공 및 소비자가 검색 또는 저장된 프로시저에서 반환 된 결과 집합을 취소 한 후 반환 될 때까지 코드입니다. 출력은 서버에서 보내는 마지막 TDS 패킷에서 반환 됩니다.  
   
-## 행 개수  
- OLE DB 소비자 템플릿을 사용하여 outparameter가 있는 저장 프로시저를 실행하는 경우, 사용자가 행 집합을 닫아야만 행 개수가 설정됩니다.  
+## <a name="row-count"></a>행 개수  
+ OLE DB 소비자 템플릿을 사용 하 여 outparameter가 저장된 프로시저를 실행 하는 행 집합을 닫을 때까지 행 수 설정 되지 않았습니다.  
   
- 예를 들어, 다음과 같이 행 집합과 outparameter가 있는 저장 프로시저의 경우를 살펴봅시다.  
+ 예를 들어 행 집합 및는 outparameter 있는 저장된 프로시저:  
   
 ```  
 create procedure sp_test  
@@ -61,7 +61,7 @@ as
 return 0  
 ```  
   
- @\_rowcount outparameter는 테스트 테이블에서 실제로 반환된 행의 수를 보고합니다.  그러나 이 저장 프로시저는 행의 수를 최대 50으로 제한합니다.  따라서 테스트에 100개의 행이 있는 경우, 이 코드는 상위 50개의 행만 검색하므로 rowcount는 50이 됩니다.  테이블에 30개의 행만 있는 경우, rowcount는 30이 됩니다.  **Close** 또는 **CloseAll**을 호출하여 값을 페치하기 전에 outparameter를 채워야 합니다.  
+ @_rowcount outparameter 테스트 테이블에서 실제로 반환 된 행 수를 보고 합니다. 그러나이 저장된 프로시저는 최대 50 행 수를 제한합니다. 예를 들어 테스트에 100 개의 행이 있는 경우 행 개수가 것 50 (하기 때문에이 코드는 상위 50 행만 검색)입니다. 테이블에 30 개 행만 있었습니다 하는 경우 행 개수가 30입니다. 호출 해야 **닫기** 또는 **CloseAll** 해당 값을 인출 하기 전에 outparameter를 채우는 데 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저 사용](../../data/oledb/using-stored-procedures.md)

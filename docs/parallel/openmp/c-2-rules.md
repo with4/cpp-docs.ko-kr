@@ -1,33 +1,32 @@
 ---
 title: "C.2 규칙 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f0b9c7a74c74f014c9ce8e3873635786fe1e560
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# C.2 규칙
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-표기법은 6.1 C 표준의 섹션에 설명 되어 있습니다. 이 문법 부록 OpenMP C 및 c + + 지시문에 대 한 기본 언어 문법을 확장을 보여 줍니다.  
+# <a name="c2-rules"></a>C.2 규칙
+표기법은 6.1 C 표준의 섹션에 설명 되어 있습니다. 이 문법 부록 OpenMP C 및 c + + 지시문에 대 한 기본 언어 문법에 대 한 확장을 보여 줍니다.  
   
- **/\* c + + (ISO/IEC 14882:1998) \*/**  
+ **/\*c + + (ISO/IEC 14882:1998)\*/**  
   
  *문-seq*:  
   
- *문*  
+ *statement*  
   
  *openmp 지시문*  
   
@@ -35,47 +34,47 @@ manager: "ghogen"
   
  *문-seq openmp 지시문*  
   
- **/\* C90에서 (ISO/IEC 9899:1990) \*/**  
+ **/\*C90에서 (ISO/IEC 9899:1990)\*/**  
   
- *문 목록*:  
+ *statement-list*:  
   
- *문*  
+ *statement*  
   
  *openmp 지시문*  
   
- *문 목록 문*  
+ *statement-list statement*  
   
  *문 목록 openmp 지시문*  
   
- **/\* C99에서 (ISO/IEC 9899:1999) \*/**  
+ **/\*C99 (ISO/IEC 9899: 1999)\*/**  
   
  *블록 항목*:  
   
- *선언*  
+ *declaration*  
   
- *문*  
+ *statement*  
   
  *openmp 지시문*  
   
- *문*:  
+ *statement*:  
   
- **/\* 표준 문 \*/**  
+ **/\*표준 문\*/**  
   
  *openmp 구문*  
   
- *openmp 구문을*:  
+ *openmp 구문이*:  
   
  *병렬 구문*  
   
- *구문에 대 한*  
+ *에 대 한 구문*  
   
  *구문 섹션*  
   
- *단일 생성자*  
+ *단일 구문*  
   
  *구문에 대 한 병렬*  
   
- *병렬 섹션 생성자*  
+ *병렬-섹션 생성*  
   
  *마스터 construc*  
   
@@ -83,7 +82,7 @@ manager: "ghogen"
   
  *atomic 구문*  
   
- *정렬 된 구문*  
+ *순서가 지정 된 구문*  
   
  *openmp 지시문*:  
   
@@ -93,15 +92,15 @@ manager: "ghogen"
   
  *구조화 된 블록*:  
   
- *문*  
+ *statement*  
   
- *병렬 구문*:  
+ *병렬 구문을*:  
   
  *병렬 지시문 구조화 된 블록*  
   
  *병렬 지시문*:  
   
- **# pragma omp 병렬**  *병렬 절*optseq *줄 바꿈*  
+ **# pragma omp***병렬 절*optseq *줄 바꿈*   
   
  *병렬 절*:  
   
@@ -125,7 +124,7 @@ manager: "ghogen"
   
  *절에 대 한*:  
   
- *절에 대 한 고유*  
+ *절에 대 한 고유한*  
   
  *데이터 절*  
   
@@ -135,15 +134,15 @@ manager: "ghogen"
   
  **정렬**  
   
- **일정 (** *일정 종류* **)**  
+ **일정 (** *예약 종류가* **)**  
   
- **일정 (** *일정 종류* **,** *식* **)**  
+ **일정 (** *예약 종류가* **,** *식* **)**  
   
- *일정 종류*:  
+ *예약 종류가*:  
   
- **정적**  
+ **static**  
   
- **동적**  
+ **dynamic**  
   
  **문제 해결**  
   
@@ -151,9 +150,9 @@ manager: "ghogen"
   
  *구문 섹션*:  
   
- *sections 지시문 섹션 범위*  
+ *섹션 지시문 섹션 범위*  
   
- *sections 지시문*:  
+ *섹션 지시문*:  
   
  **# pragma omp 섹션** *섹션 절*optseq *줄 바꿈*  
   
@@ -171,11 +170,11 @@ manager: "ghogen"
   
  *섹션 지시문*opt *구조화 된 블록*  
   
- *블록-구조 섹션 시퀀스 섹션 지시문*  
+ *섹션 시퀀스 섹션 지시문 구조화 된 블록*  
   
  *섹션 지시문*:  
   
- **# pragma omp 섹션** *줄 바꿈*  
+ **# pragma omp s** *줄 바꿈*  
   
  *단일 구문을*:  
   
@@ -197,17 +196,17 @@ manager: "ghogen"
   
  *지시문에 대 한 병렬*:  
   
- **# pragma omp에 대 한 병렬** *절에 대 한 병렬*optseq *줄 바꿈*  
+ **# pragma omp p a에 대 한** *절에 대 한 병렬*optseq *줄 바꿈*  
   
  *절에 대 한 병렬*:  
   
  *고유 병렬 절*  
   
- *절에 대 한 고유*  
+ *절에 대 한 고유한*  
   
  *데이터 절*  
   
- *병렬 섹션 생성자*:  
+ *병렬-섹션 생성*:  
   
  *병렬 섹션 지시문 섹션 범위*  
   
@@ -223,9 +222,9 @@ manager: "ghogen"
   
  *마스터 구문을*:  
   
- *master 지시문 구조화 된 블록*  
+ *마스터 지시문 구조화 된 블록*  
   
- *master 지시문*:  
+ *마스터 지시문*:  
   
  **# pragma omp 마스터** *줄 바꿈*  
   
@@ -235,7 +234,7 @@ manager: "ghogen"
   
  *critical 지시문*:  
   
- **# pragma omp 중요 한** *지역 구*opt *줄 바꿈*  
+ **# pragma omp 중요** *지역 구*opt *줄 바꿈*  
   
  *지역 구*:  
   
@@ -247,11 +246,11 @@ manager: "ghogen"
   
  *atomic 구문*:  
   
- *atomic 지시문 식 문*  
+ *원자성 지시문 식 문*  
   
- *atomic 지시문*:  
+ *원자성 지시문*:  
   
- **# pragma omp 원자성** *줄 바꿈*  
+ **# pragma omp atomic** *줄 바꿈*  
   
  *flush 지시문*:  
   
@@ -261,33 +260,33 @@ manager: "ghogen"
   
  *(변수 목록)*  
   
- *순서가 지정 된 구문을*:  
+ *순서가 지정 된 구문*:  
   
- *정렬 된 지시문 구조화 된 블록*  
+ *순서가 지정 된 지시문 구조화 된 블록*  
   
- *정렬 된 지시문*:  
+ *순서가 지정 된 지시문*:  
   
  **# pragma omp 정렬** *줄 바꿈*  
   
  *선언*:  
   
- **/\* 표준 선언 \*/**  
+ **/\*표준 선언\*/**  
   
  *threadprivate 지시문*  
   
  *threadprivate 지시문*:  
   
- **# pragma omp threadprivate (** *변수 목록*  **)** *줄 바꿈*  
+ **# pragma omp threadprivate (** *변수 목록***)** *줄 바꿈*   
   
  *데이터 절*:  
   
  **개인 (** *변수 목록* **)**  
   
- **copyprivate (**  *변수 목록*  **)**  
+ **copyprivate (***변수 목록***)**   
   
- **firstprivate (**  *변수 목록*  **)**  
+ **firstprivate (***변수 목록***)**   
   
- **lastprivate (** *변수 목록*  **)**  
+ **lastprivate (** *변수 목록***)**   
   
  **공유 (** *변수 목록* **)**  
   
@@ -295,23 +294,23 @@ manager: "ghogen"
   
  **기본값 (없음)**  
   
- **환산 (**  *감소 연산자*  **:**  *변수 목록*  **)**  
+ **감소 (***reduction 연산자***:***변수 목록***)**   
   
- **copyin (**  *변수 목록*  **)**  
+ **copyin (***변수 목록***)**   
   
  *감소 연산자*:  
   
- *중 하나*: **+ \* -& ^ & #124; (& a) (& a) (& a) #124; & #124;**  
+ *중 하나*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
   
- **/\* C에서 \*/**  
+ **/\*C에서\*/**  
   
  *변수 목록*:  
   
- *식별자*  
+ *identifier*  
   
  *변수 목록* **,** *식별자*  
   
- **/\* c + + \*/**  
+ **/\*c + +\*/**  
   
  *변수 목록*:  
   

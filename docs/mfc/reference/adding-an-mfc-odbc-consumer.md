@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC ODBC consumers
+dev_langs: C++
+helpviewer_keywords: MFC ODBC consumers
 ms.assetid: 2dc97909-1f7e-43ee-9d47-99e612727058
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: bb3cfd8a2f8f4c28892962f451501245f14aa41c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>MFC ODBC 소비자 추가
 MFC ODBC 소비자 데이터 원본에 액세스 하는 데 필요한 ODBC 레코드 집합 클래스 및 데이터 바인딩으로 구성 됩니다.  
@@ -41,5 +37,4 @@ MFC ODBC 소비자 데이터 원본에 액세스 하는 데 필요한 ODBC 레�
   
 ## <a name="see-also"></a>참고 항목  
  [코드 마법사로 기능 추가](../../ide/adding-functionality-with-code-wizards-cpp.md)
-
 

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- reinterpret_cast_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- reinterpret_cast keyword [C++]
+f1_keywords: reinterpret_cast_cpp
+dev_langs: C++
+helpviewer_keywords: reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 71218dc713b24669dc1648b748a0326da0c03152
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b3ad3912c9046e877da0913a34cb1b3253baa454
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast 연산자
 포인터가 다른 포인터 형식으로 변환될 수 있도록 합니다. 또한 정수 계열 형식이 포인터 형식으로 변환될 수 있도록 하고 그 반대로도 변환될 수 있도록 합니다.  

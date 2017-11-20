@@ -1,34 +1,33 @@
 ---
-title: "방법: 파일 정보 검색(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FileInfo 클래스"
-  - "파일[C++], 정보 검색"
+title: "방법: 파일 정보 검색 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], retrieving information about
+- FileInfo class
 ms.assetid: 8b67f7ad-a048-4437-ac5c-b41809a6018d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2cf196fe21c70bbceec90acf3242a995548fe845
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 파일 정보 검색(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 <xref:System.IO.FileInfo> 클래스를 보여 줍니다.  파일의 이름을 알고 있으면 이 클래스를 사용하여 파일 크기, 디렉터리, 전체 이름, 파일을 만들거나 마지막으로 수정한 날짜 및 시간 같은 파일 관련 정보를 검색할 수 있습니다.  
+# <a name="how-to-retrieve-file-information-ccli"></a>방법: 파일 정보 검색(C++/CLI)
+다음 코드 예제는 <xref:System.IO.FileInfo> 클래스입니다. 파일의 이름이 있는 경우를 생성 및 마지막으로 수정한 파일 크기, 디렉터리, 전체 이름 및 날짜 및 시간과 같은 파일에 대 한 정보를 검색 합니다.이 클래스를 사용할 수 있습니다.  
   
- 이 코드에서는 Notepad.exe에 대한 파일 정보를 검색합니다.  
+ 이 코드는 Notepad.exe에 대 한 파일 정보를 검색합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // file_info.cpp  
@@ -63,6 +62,6 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [파일 및 스트림 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [파일 및 스트림 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

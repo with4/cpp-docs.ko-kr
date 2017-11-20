@@ -1,79 +1,82 @@
 ---
 title: "메시지 전달 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "메시지 전달 함수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4139068c8871fe69f43168fe925011a48411a74b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 메시지 전달 함수
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-비동기 에이전트 라이브러리에서는 구성 요소 간에 메시지를 전달할 수 있는 몇 가지 함수를 제공합니다.  
+# <a name="message-passing-functions"></a>메시지 전달 함수
+비동기 에이전트 라이브러리 구성 요소 간에 메시지를 전달할 수 있는 여러 함수를 제공 합니다.  
   
- 이러한 메시지 전달 함수는 다양한 메시지 블록 형식과 함께 사용됩니다.  동시성 런타임에 정의된 메시지 블록 형식에 대한 자세한 내용은 [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)을 참조하십시오.  
+ 이러한 메시지 전달 함수는 다양 한 메시지 블록 형식으로 사용 됩니다. 동시성 런타임에 의해 정의 된 메시지 블록 형식에 대 한 자세한 내용은 참조 [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)합니다.  
   
-##  <a name="top"></a> 단원  
- 이 항목에서는 다음과 같은 메시지 전달 함수에 대해 설명합니다.  
+##  <a name="top"></a> 섹션  
+ 이 항목에서는 다음과 같은 메시지 전달 함수를 설명합니다.  
   
 -   [send 및 asend](#send)  
   
--   [receive 및 try\_receive](#receive)  
+-   [수신 및 try_receive](#receive)  
   
 -   [예제](#examples)  
   
-##  <a name="send"></a> send 및 asend  
- [concurrency::send](../Topic/send%20Function.md) 함수는 지정된 대상에 동기적으로 메시지를 보내고 [concurrency::asend](../Topic/asend%20Function.md) 함수는 지정된 대상에 비동기적으로 메시지를 보냅니다.  `send`와 `asend` 함수 둘 다 대상에서 메시지를 최종적으로 수락할지 아니면 거부할지를 나타낼 때까지 기다립니다.  
+##  <a name="send"></a>send 및 asend  
+
+ [concurrency:: send](reference/concurrency-namespace-functions.md#send) 함수 지정된 된 대상에 동기적으로 메시지를 보냅니다 및 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend) 함수 지정된 된 대상에 비동기적으로 메시지를 보냅니다. 둘 다는 `send` 및 `asend` 함수는 것은 결국 수락 또는 거부 메시지 대상 나타냅니다 될 때까지 기다립니다.  
   
- `send` 함수는 대상에서 메시지를 수락하거나 거부할 때까지 기다린 후 반환합니다.  `send` 함수는 메시지가 배달되었으면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  `send` 함수는 동기적으로 동작합니다. 따라서 `send` 함수는 대상에서 메시지를 받을 때까지 기다린 후 반환합니다.  
+ `send` 함수 대상을 수락 하거나 반환 하기 전에 메시지를 거부 될 때까지 대기 합니다. `send` 함수에서 반환 `true` 메시지가 배달 하는 경우 및 `false` 그렇지 않은 경우. 때문에 `send` 함수를 동기적으로 작동 하는 `send` 함수를 반환 하기 전에 메시지를 받는 대상을 때까지 대기 합니다.  
   
- 반대로 `asend` 함수는 대상에서 메시지를 수락하거나 거부할 때까지 기다리지 않고 반환합니다.  대신 `asend` 함수는 대상에서 메시지를 수락하고 최종적으로 배달될 예정이면 `true`를 반환합니다.  그렇지 않으면 `asend`에서는 `false`를 반환하여 대상에서 메시지를 거부했거나, 메시지를 받을지 여부에 대한 결정을 연기했음을 나타냅니다.  
+ 반대로,는 `asend` 함수를 허용 하거나 반환 하기 전에 메시지를 거부할 대상 기다리지 않습니다. 대신,는 `asend` 함수에서 반환 `true` 대상 메시지를 수락 하 고 최종적 합니다. 그렇지 않으면 `asend` 반환 `false` 되었음을 나타내려면 대상 중 하나에서 메시지를 거부 메시지를 받을지 여부에 대 한 결정을 연기 합니다.  
   
- \[[맨 위](#top)\]  
+ [[맨 위로 이동](#top)]  
   
-##  <a name="receive"></a> receive 및 try\_receive  
- [concurrency::receive](../Topic/receive%20Function.md) 및 [concurrency::try\_receive](../Topic/try_receive%20Function.md) 함수는 지정된 소스에서 데이터를 읽습니다.  `receive` 함수는 데이터를 사용할 수 있을 때까지 기다리지만 `try_receive` 함수는 즉시 반환합니다.  
+##  <a name="receive"></a>수신 및 try_receive  
+
+ [concurrency:: receive](reference/concurrency-namespace-functions.md#receive) 및 [concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) 함수는 지정 된 소스에서 데이터를 읽습니다. `receive` 함수에 데이터를 사용할 수 있을 때까지 대기 반면는 `try_receive` 함수는 즉시 반환 합니다.  
   
- 데이터가 있어야 계속할 수 있는 경우 `receive` 함수를 사용합니다.  현재 컨텍스트를 차단해야 하거나, 데이터가 없어도 계속할 수 있는 경우에는 `try_receive` 함수를 사용합니다.  
+ 사용 된 `receive` 데이터를 계속 해야 합니다. 경우에 작동 합니다. 사용 된 `try_receive` 함수는 현재 컨텍스트를 차단 해야 하거나 데이터를 계속 하려면 필요가 없습니다.  
   
- \[[맨 위](#top)\]  
+ [[맨 위로 이동](#top)]  
   
 ##  <a name="examples"></a> 예제  
- `send`, `asend` 및 `receive` 함수를 사용하는 예제를 보려면 다음 항목을 참조하십시오.  
+ 사용 하는 예는 `send` 및 `asend`, 및 `receive` 함수는 다음 항목을 참조 합니다.  
   
 -   [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [방법: 다양한 공급자\/소비자 패턴 구현](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
+-   [방법: 다양한 공급자-소비자 패턴 구현](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
   
 -   [방법: call 및 transformer 클래스에 작업 함수 제공](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
   
 -   [방법: 데이터 파이프라인에서 transformer 사용](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)  
   
--   [방법: 완료된 작업 중에서 선택](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
+-   [방법: 완료된 작업 간 선택](../../parallel/concrt/how-to-select-among-completed-tasks.md)  
   
 -   [방법: 정기적으로 메시지 보내기](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)  
   
 -   [방법: 메시지 블록 필터 사용](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
- \[[맨 위](#top)\]  
+ [[맨 위로 이동](#top)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md)   
  [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)   
- [send 함수](../Topic/send%20Function.md)   
- [asend 함수](../Topic/asend%20Function.md)   
- [receive 함수](../Topic/receive%20Function.md)   
- [try\_receive 함수](../Topic/try_receive%20Function.md)
+ [send 함수](reference/concurrency-namespace-functions.md#send)   
+ [asend 함수](reference/concurrency-namespace-functions.md#asend)   
+ [receive 함수](reference/concurrency-namespace-functions.md#receive)   
+ [try_receive 함수](reference/concurrency-namespace-functions.md#try_receive)
+
+

@@ -1,34 +1,32 @@
 ---
 title: "컴파일러 경고 (수준 4) C4673 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4673"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4673"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4673
+dev_langs: C++
+helpviewer_keywords: C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8242a083fbf7a9f94c419c1cf142c7c1ada65009
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 4) C4673
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identifier'을\(를\) Throw하면 다음 형식이 Catch 쪽에서 고려되지 않습니다.  
+# <a name="compiler-warning-level-4-c4673"></a>컴파일러 경고(수준 4) C4673
+'identifier' 다음 형식 발생 고려 되지 않습니다. catch 쪽에서  
   
- throw 개체는 **catch** 블록에서 처리할 수 없습니다.  이 경고 다음 줄에 처리할 수 없는 각 형식이 오류 출력 목록으로 작성되고  처리할 수 없는 각 형식에 각각의 경고가 포함되어 있습니다.  자세한 내용은 각 특정 형식에 대한 경고를 참조하십시오.  
+ throw 개체를 처리할 수 없는 **catch** 블록입니다. 처리할 수 없는 각 유형에이 경고를 포함 하는 줄 바로 다음 오류 출력에 나열 됩니다. 처리 되지 않은 각 형식에는 자체 경고 합니다. 자세한 내용은 각 특정 형식에 대 한 경고를 읽습니다.  
   
- 다음 샘플에서는 C4673 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4673 오류가 생성 됩니다.  
   
 ```  
 // C4673.cpp  

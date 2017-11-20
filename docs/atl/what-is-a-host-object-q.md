@@ -1,31 +1,30 @@
 ---
-title: "What Is a Host Object? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "host objects"
+title: "호스트 개체는 무엇입니까? (ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: host objects
 ms.assetid: 4f8da992-b27e-45e8-b5e0-c8b1dcae4fac
-caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ab37e9a9d3a19f250f52d5f5c60de41968012625
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# What Is a Host Object?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-호스트 개체를 특정 창에 대 한 ATL에서 제공한 ActiveX 컨트롤 컨테이너를 나타내는 COM 개체가입니다.  호스트 서브 클래스는 컨테이너 컨트롤에 메시지를 반영할 수 있습니다, 필요한 컨테이너 컨트롤에서 사용할 인터페이스를 제공 하 고 노출 개체 창에서  [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) 및  [IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) 컨트롤의 환경을 구성할 수 있도록 하는 인터페이스.  
+# <a name="what-is-a-host-object"></a>호스트 개체는 무엇입니까?
+호스트 개체는 특정 창에 대 한 ATL에서 제공 하는 ActiveX 컨트롤 컨테이너를 나타내는 COM 개체. 호스트 개체 하위 클래스 컨테이너 창 컨트롤에 대 한 메시지를 반영할 수는 컨트롤을 사용 하는 데 필요한 컨테이너 인터페이스를 제공 하 고 노출 하는 [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) 및 [ IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) 인터페이스 컨트롤의 환경을 구성할 수 있도록 합니다.  
   
- 호스트 개체 컨테이너의 앰비언트 속성을 설정할 수 있습니다.  
+ 컨테이너의 앰비언트 속성을 설정 하는 호스트 개체를 사용할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컨트롤 포함 FAQ](../atl/atl-control-containment-faq.md)
+

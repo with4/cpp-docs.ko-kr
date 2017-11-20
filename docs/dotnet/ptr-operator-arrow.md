@@ -1,52 +1,50 @@
 ---
-title: "ptr::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.com.ptr.operator->"
-  - "ptr.operator->"
-  - "ptr::operator->"
-  - "msclr::com::ptr::operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::operator->"
+title: ptr::operator-&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.com.ptr.operator->
+- ptr.operator->
+- ptr::operator->
+- msclr::com::ptr::operator->
+dev_langs: C++
+helpviewer_keywords: ptr::operator->
 ms.assetid: e752b549-74ed-430d-9a60-6c8e0e441998
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d3f8cf68815d5c3ad21767b721b2b3570bbb7119
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Member access operator, used to call methods on the owned COM object.  
+# <a name="ptroperator-gt"></a>ptr::operator-&gt;
+멤버 액세스 연산자를 소유 하는 COM 개체에서 메서드를 호출 하는 데 사용 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 _detail::smart_com_ptr<_interface_type> operator->();  
 ```  
   
-## 반환 값  
- A `smart_com_ptr` to the COM object.  
+## <a name="return-value"></a>반환 값  
+ A `smart_com_ptr` COM 개체에 있습니다.  
   
-## 예외  
- Internally, `QueryInterface` is called on the owned COM object and any error `HRESULT` is converted to an exception by <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+## <a name="exceptions"></a>예외  
+ 내부적으로 `QueryInterface` 소유한 COM 개체 및 모든 오류를 호출할 `HRESULT` 여 예외로 변환 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>합니다.  
   
-## 설명  
- This operator allows you to call methods of the owned COM object.  It returns a temporary `smart_com_ptr` that automatically handles its own `AddRef` and `Release`.  
+## <a name="remarks"></a>설명  
+ 이 연산자를 사용 하면 소유한 COM 개체의 메서드를 호출할 수 있습니다. 임시 반환 `smart_com_ptr` 자동으로 처리 하는 자체 `AddRef` 및 `Release`합니다.  
   
-## 예제  
- This example implements a CLR class that uses a `com::ptr` to wrap its private member `IXMLDOMDocument` object.  The `WriteDocument` functions uses `operator->` to call the `get_firstChild` member of the document object.  
+## <a name="example"></a>예제  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `WriteDocument` 사용 하 여 함수 `operator->` 호출 하 여 `get_firstChild` 문서 개체의 멤버입니다.  
   
 ```  
 // comptr_op_member.cpp  
@@ -162,11 +160,14 @@ int main() {
 }  
 ```  
   
-  **\<word\>persnickety\<\/word\>**   
-## 요구 사항  
- **Header file** \<msclr\\com\\ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
   
- **Namespace** msclr::com  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
-## 참고 항목  
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>참고 항목  
  [ptr 멤버](../dotnet/ptr-members.md)

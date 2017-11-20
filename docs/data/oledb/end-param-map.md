@@ -1,32 +1,30 @@
 ---
-title: "END_PARAM_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "END_PARAM_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "END_PARAM_MAP 매크로"
+title: END_PARAM_MAP | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: END_PARAM_MAP
+dev_langs: C++
+helpviewer_keywords: END_PARAM_MAP macro
 ms.assetid: b7b3dc5d-0f45-44f8-8509-1d5de7aec165
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e7a6aad126312809e2964cf227cb59769292156d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# END_PARAM_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marks the end of the parameter map entries.  
+# <a name="endparammap"></a>END_PARAM_MAP
+매개 변수가 맵 항목의 끝을 표시 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,13 +32,13 @@ END_PARAM_MAP( )
   
 ```  
   
-## 예제  
- See the example for the [BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md) macro.  
+## <a name="example"></a>예제  
+ 예를 참조는 [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) 매크로입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
- [OLE DB 소비자 템플릿에 대한 매크로 및 전역 함수](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md)   
- [SET\_PARAM\_TYPE](../../data/oledb/set-param-type.md)
+## <a name="see-also"></a>참고 항목  
+ [매크로 및 전역 함수에 대 한 OLE DB 소비자 템플릿](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)   
+ [SET_PARAM_TYPE](../../data/oledb/set-param-type.md)

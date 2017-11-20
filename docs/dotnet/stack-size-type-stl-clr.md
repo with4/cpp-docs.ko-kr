@@ -1,41 +1,39 @@
 ---
-title: "stack::size_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type 멤버[STL/CLR]"
+title: 'stack:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 713ba8c5-41e5-422a-a334-cfeab16b4496
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 75d26ff5b656b7a710fe695d55af563012aef3c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# stack::size_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of a signed distance between two element.  
+# <a name="stacksizetype-stlclr"></a>stack::size_type(STL/CLR)
+두 요소 사이의 부호가 있는 거리의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef int size_type;  
 ```  
   
-## 설명  
- The type describes a non\-negative element count.  
+## <a name="remarks"></a>설명  
+ 형식은은 음수가 아닌 요소 수를 설명 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_stack_size_type.cpp   
@@ -66,13 +64,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**size difference \= 2**   
-## 요구 사항  
- **Header:** \<cliext\/stack\>  
+```Output  
+ a b c  
+size difference = 2  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/스택 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::empty](../dotnet/stack-empty-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::empty(STL/CLR)](../dotnet/stack-empty-stl-clr.md)

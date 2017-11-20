@@ -1,41 +1,39 @@
 ---
-title: "hash_set::value_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type 멤버[STL/CLR]"
+title: 'hash_set:: value_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: a83724eb-496a-43ef-b969-b441f258e3be
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e0a0b2abf28a821f916907a72513fa78c811ffb9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::value_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetvaluetype-stlclr"></a>hash_set::value_type(STL/CLR)
 요소의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef generic_value value_type;  
 ```  
   
-## 설명  
- The type is a synonym for `generic_value`.  
+## <a name="remarks"></a>설명  
+ 이 형식은 `generic_value`의 동의어입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_value_type.cpp   
@@ -63,14 +61,17 @@ int main()
   
 ```  
   
-  **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::const\_reference](../dotnet/hash-set-const-reference-stl-clr.md)   
- [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md)   
- [hash\_set::reference](../dotnet/hash-set-reference-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: const_reference (STL/CLR)](../dotnet/hash-set-const-reference-stl-clr.md)   
+ [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)   
+ [hash_set::reference(STL/CLR)](../dotnet/hash-set-reference-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "list::unique(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique 멤버[STL/CLR]"
+title: 'list:: unique (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::unique
+dev_langs: C++
+helpviewer_keywords: unique member [STL/CLR]
 ms.assetid: c3a29e4e-0ec1-4472-b050-7a9511037132
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ca78fcc1de8b579a647dd9080dc64db0fde54e9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::unique(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listunique-stlclr"></a>list::unique(STL/CLR)
 지정된 테스트를 통과하는 인접 요소를 제거합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void unique();  
@@ -34,16 +32,16 @@ template<typename Pred2>
     void unique(Pred2 pred);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  pred  
- Comparer for element pairs.  
+ 요소 쌍에 대 한 비교자입니다.  
   
-## 설명  
- The first member function removes from the controlled sequence \(erases\) every element that compares equal to its preceding element \-\- if element `X` precedes element `Y` and `X == Y`, the member function removes `Y`.  You use it to remove all but one copy of every subsequence of adjacent elements that compare equal.  Note that if the controlled sequence is ordered, such as by calling [list::sort](../dotnet/list-sort-stl-clr.md)`()`, the member function leaves only elements with unique values. \(Hence the name\).  
+## <a name="remarks"></a>설명  
+ 첫 번째 멤버 함수는 제어 된 시퀀스 (지우기로 적용)에서 제거 하는 경우를 비교 하는 모든 요소가 이전 요소-같음 요소 `X` 요소 앞에 오는 `Y` 및 `X == Y`, 멤버 함수를 제거 `Y`합니다. 사용할 있습니다 인접 요소의 모든 하위 시퀀스의 복사본을 하나만 남기고 모두 제거 하려면 해당 비교 같음. 되는 경우 제어 되는 시퀀스 정렬 되는 경우 등으로 호출 하 여 [list:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, 멤버 함수는 고유 값이 있는 요소를 둡니다. (그래서 이러한 이름을 갖습니다.)  
   
- The second member function behaves the same as the first, except that it removes each element `Y` following an element `X` for which `pred``(X, Y)`.  You use it to remove all but one copy of every subsequence of adjacent elements that satisfy a predicate function or delegate that you specify.  Note that if the controlled sequence is ordered, such as by calling `sort(``pred``)`, the member function leaves only elements that do not have equivalent ordering with any other elements.  
+ 두 번째 멤버 함수는 동일 하 게 동작 첫 번째, 각 요소를 제거 한다는 점을 제외 하면 `Y` 요소는 다음에 오는 `X` 입니다 `pred(X, Y)`합니다. 조건자 함수 또는 사용자가 지정한 대리자를 충족 하는 인접 요소의 모든 하위 시퀀스의 복사본을 하나만 남기고 모두 제거 하려면 사용 합니다. 되는 경우 제어 되는 시퀀스 정렬 되는 경우 등으로 호출 하 여 `sort(pred)`, 멤버 함수는 다른 요소와 순서 지정이 동일할 갖지 않는 요소만를 둡니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_unique.cpp   
@@ -81,16 +79,19 @@ int main()
   
 ```  
   
-  **a a b c**  
- **a b c**  
- **a a**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+a a b c  
+a b c  
+a a  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::remove](../dotnet/list-remove-stl-clr.md)   
- [list::remove\_if](../dotnet/list-remove-if-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)   
+ [list:: remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)   
+ [list::sort(STL/CLR)](../dotnet/list-sort-stl-clr.md)

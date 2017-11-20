@@ -1,38 +1,35 @@
 ---
-title: ".ERRE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".ERRE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ERRE directive"
+title: . ERRE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .ERRE
+dev_langs: C++
+helpviewer_keywords: .ERRE directive
 ms.assetid: cfb5a4bb-4488-4101-bd06-63ba43b1473e
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5731e27bd5b0df485e477104f967d20b509c3c5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# .ERRE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-경우 오류를 생성 합니다.  *식* false \(0\).  
+# <a name="erre"></a>.ERRE
+오류가 생성 *식* 가 false (0).  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 .ERRE expression [[, message]]  
 ```  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

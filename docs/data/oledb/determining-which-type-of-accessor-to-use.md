@@ -1,44 +1,44 @@
 ---
 title: "사용할 접근자 형식 결정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "접근자[C++], 형식"
-  - "행 집합[C++], 데이터 형식"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rowsets [C++], data types
+- accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6eebc119186a5a57fa1cf2c5e0c80479ef4cdcf3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 사용할 접근자 형식 결정
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-컴파일 타임이나 런타임에 행 집합의 데이터 형식을 결정할 수 있습니다.  
+# <a name="determining-which-type-of-accessor-to-use"></a>사용할 접근자 형식 결정
+컴파일 시 또는 런타임에 행 집합에서 데이터 형식을 확인할 수 있습니다.  
   
- 컴파일 타임에 데이터 형식을 결정해야 하는 경우, `CAccessor` 같은 정적 접근자를 사용합니다.  사용자는 수동으로 데이터 형식을 결정하거나 ATL OLE DB 소비자 마법사를 사용하여 데이터 형식을 결정할 수 있습니다.  
+ 정적 접근자를 사용 하 여 컴파일 타임에 데이터 형식을 결정 해야 할 경우 (예: `CAccessor`). 수동으로 또는 ATL OLE DB 소비자 마법사를 사용 하 여 데이터 형식을 확인할 수 있습니다.  
   
- 런타임에 데이터 형식을 결정해야 하는 경우, 동적 접근자\(`CDynamicAccessor` 또는 그 자식 접근자\)나 수동 접근자\(`CManualAccessor`\)를 사용합니다.  이런 경우 행 집합에서 `GetColumnInfo`를 호출하여 형식을 결정할 수 있는 열 바인딩 정보를 반환할 수 있습니다.  
+ 런타임 시 데이터 형식을 결정 해야 할 경우 사용 하 여 동적 (`CDynamicAccessor` 또는 해당 자식) 또는 수동 접근자 (`CManualAccessor`). 이러한 경우에 호출할 수 있습니다 `GetColumnInfo` 형식을 결정할 수 있습니다 열 바인딩 정보를 반환 하는 행 집합에 있습니다.  
   
- 다음 표에는 소비자 템플릿의 접근자 형식이 나열되어 있습니다.  접근자마다 장점과 단점이 있으므로,  상황에 따라 적합한 접근자를 사용해야 합니다.  
+ 다음 표에서 소비자 서식 파일에서 제공 하는 접근자의 목록을 표시 합니다. 각 접근자 장점 및 단점에 있습니다. 상황에 따라 하나의 접근자 유형이 요구 사항에 맞게 해야 합니다.  
   
-|접근자 클래스|바인딩|Parameter|주석|  
-|-------------|---------|---------------|--------|  
-|`CAccessor`|`COLUMN_ENTRY` 매크로로 사용자 레코드를 만듭니다.  매크로는 해당 레코드의 데이터 맴버를 접근자에 바인딩합니다.  행 집합이 만들어지면 열의 바인딩은 해제될 수 없습니다.|예\(**PARAM\_MAP** 매크로 엔트리 사용\).  바인딩되면 매개 변수의 바인딩은 해제될 수 없습니다.|코드의 양이 적으므로 가장 빠른 접근자입니다.|  
-|`CDynamicAccessor`|자동|아니요.|행 집합에서 데이터 형식을 모르는 경우 유용합니다.|  
-|`CDynamicParameterAccessor`|자동이지만 [재정의](../../data/oledb/overriding-a-dynamic-accessor.md)될 수 있습니다.|예\(공급자가 `ICommandWithParameters`를 지원하는 경우\).  매개 변수는 자동으로 바인딩됩니다.|`CDynamicAccessor`보다 느리지만 일반 저장 프로시저 호출에 유용합니다.|  
-|**CDynamicStringAccessor\[A,W\]**|자동|아니요.|데이터 저장소에서 액세스되는 데이터를 문자열 데이터로 검색합니다.|  
-|`CManualAccessor`|수동\(`AddBindEntry` 사용\)|수동\(`AddParameterEntry` 사용\)|매우 빠름. 매개 변수와 열은 한 번만 바인딩됩니다.  사용할 데이터 형식을 결정하십시오. 예제로 [DBViewer](http://msdn.microsoft.com/ko-kr/07620f99-c347-4d09-9ebc-2459e8049832) 샘플을 참조하십시오. `CDynamicAccessor` 또는 `CAccessor` 보다 더 많은 코드가 필요합니다.  OLE DB를 직접 호출하는 것과 유사합니다.|  
-|`CXMLAccessor`|자동|아니요.|데이터 저장소에서 액세스되는 데이터를 문자열 데이터로 검색하여 형식을 XML 태그 지정 데이터로 지정합니다.|  
+|접근자 클래스|바인딩|매개 변수|주석|  
+|--------------------|-------------|---------------|-------------|  
+|`CAccessor`|사용자 레코드를 만듭니다 `COLUMN_ENTRY` 매크로입니다. 매크로 접근자에 해당 레코드에서 데이터 멤버를 바인딩합니다. 행 집합을 만들면 열 바인딩을 해제할 수 없습니다.|사용 하 여 예, 한 **param_map이** 매크로 항목입니다. 바인딩되면 매개 변수 바인딩을 해제할 수 없습니다.|가장 빠른 적은 양의 코드 접근자입니다.|  
+|`CDynamicAccessor`|자동 번역.|아니요.|행 집합의 데이터 형식을 확인할 수 없는 경우에 유용 합니다.|  
+|`CDynamicParameterAccessor`|자동으로 가능 하지만 [재정의](../../data/oledb/overriding-a-dynamic-accessor.md)합니다.|예, 공급자가 지 원하는 경우 `ICommandWithParameters`합니다. 매개 변수는 자동으로 바인딩됩니다.|방식 보다 속도가 느립니다 `CDynamicAccessor` 일반 저장된 프로시저 호출에 유용 합니다.|  
+|**CDynamicStringAccessor [A, W]**|자동 번역.|아니요.|문자열 데이터로 데이터 저장소에서 액세스 되는 데이터를 검색 합니다.|  
+|`CManualAccessor`|사용 하 여 수동 `AddBindEntry`합니다.|사용 하 여 수동으로 `AddParameterEntry`합니다.|매우 빠릅니다. 매개 변수 및 열 한 번만 바인딩됩니다. 사용할 데이터의 형식을 확인할 수 있습니다. (참조 [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) 예제를 보려면 샘플.) 보다 더 많은 코드가 필요 `CDynamicAccessor` 또는 `CAccessor`합니다. 와 더 비슷하게 OLE DB를 직접 호출 됩니다.|  
+|`CXMLAccessor`|자동 번역.|아니요.|문자열 데이터로 데이터 저장소에서 액세스 되는 데이터를 검색 하 고 같이 XML 태그가 지정 된 데이터 형식을 지정 합니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [접근자 사용](../../data/oledb/using-accessors.md)

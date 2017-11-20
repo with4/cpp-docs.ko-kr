@@ -1,38 +1,36 @@
 ---
 title: "컴파일러 경고 (수준 1) C4291 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4291"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4291"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4291
+dev_langs: C++
+helpviewer_keywords: C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 38308fb0932bb3a62c6fe9611e8b973b2819753d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4291
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'declaration' : 일치하는 delete 연산자가 없습니다. 초기화할 때 예외가 Throw되지 않으면 메모리가 확보되지 않습니다.  
+# <a name="compiler-warning-level-1-c4291"></a>컴파일러 경고(수준 1) C4291
+'declaration':를 찾을 수 없는 일치 하는 연산자 삭제 초기화는 예외를 throw 하는 경우 메모리를 해제 되지 않습니다.  
   
- [new](../../cpp/new-operator-cpp.md)를 [delete](../../cpp/delete-operator-cpp.md)가 없는 상태에서 사용했습니다.  
+ 배치 [새](../../cpp/new-operator-cpp.md) 사용 없음 배치 된에 대 한 [삭제](../../cpp/delete-operator-cpp.md)합니다.  
   
- **new** 연산자를 사용하여 개체에 메모리가 할당될 때 개체의 생성자가 호출됩니다.  생성자가 예외를 throw하면 개체에 할당된 모든 메모리는 할당 취소되어야 합니다.  이렇게 하기 위해서는 **new** 연산자에 일치하는 **delete** 연산자 함수가 있어야 합니다.  
+ 연산자와 함께 개체에 대 한 메모리를 할당 하는 경우 **새**, 개체의 생성자에서 호출 됩니다. 생성자에서 예외를 throw 하는 개체에 할당 된 메모리를 할당 취소 합니다. 이렇게 하기 위해서는 연산자 **삭제** 연산자와 일치 하는 함수가 존재 **새**합니다.  
   
- **new** 연산자를 추가 인수 없이 사용한 상태에서 [\/GX](../../build/reference/gx-enable-exception-handling.md), [\/EH](../../build/reference/eh-exception-handling-model.md) 또는 \/EHa 옵션을 통해 컴파일하여 예외 처리를 가능하게 만들면 생성자가 예외를 throw한 경우 컴파일러에서 **delete** 연산자를 호출하기 위한 코드를 생성합니다.  
+ 연산자를 사용 하는 경우 **새** 추가 인수 없이 포함 된 컴파일을 [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHs](../../build/reference/eh-exception-handling-model.md), 또는 예외 처리, 컴파일러를 사용 하도록 설정 하려면 /EHa 옵션에 코드를 생성 합니다 연산자를 호출 **삭제** 생성자에서 예외가 발생 합니다.  
   
- 할당 크기와 인수를 사용하는 **new** 연산자의 배치 형식을 사용한 상태에서 개체의 생성자가 예외를 throw하면 컴파일러에서 **delete** 연산자를 호출하기 위한 코드를 생성합니다. 그러나 이러한 작업은 **delete** 연산자의 배치 형식이 메모리를 할당한 **new** 연산자의 배치 형식에 일치하는 경우에만 이루어집니다.  예를 들면 다음과 같습니다.  
+ 배치 형태를 사용 하는 경우는 **새** (크기 인수를 갖는 형태는 할당) 연산자와 개체의 생성자가 예외를 throw 컴파일러에서 연산자를호출하는코드를생성**삭제**; 것은 작업을 수행 하는 경우 연산자의 배치 형태 하지만 **삭제** 연산자의 배치 형태에 일치 하는 **새** 메모리를 할당 합니다. 예:  
   
 ```  
 // C4291.cpp  
@@ -83,7 +81,7 @@ int main(void)
 }  
 ```  
   
- 위의 예제에서는 **new** 연산자의 배치 형식에 일치하는 **delete** 연산자의 배치 형식을 정의하지 않았으므로 C4291 경고가 발생합니다.  이 문제를 해결하려면 다음 코드를 **main** 위에 넣으십시오.  다음 코드에서는 첫 번째 매개 변수를 제외한 모든 오버로드된 **delete** 연산자의 함수 매개 변수가 오버로드된 **new** 연산자의 함수 매개 변수와 일치합니다.  
+ 위의 예제에서는 경고가 발생 C4291 때문에 연산자의 배치 형태 없는 **삭제** 정의 된 연산자의 배치 형태를 일치 하는 **새**합니다. 이 문제를 해결 하려면 위에 다음 코드를 삽입 **주**합니다. 오버 로드 된 연산자의 모든 **삭제** 함수 매개 변수 값과 동일 오버 로드 된 연산자의 **새**, 첫 번째 매개 변수를 제외 하 고 있습니다.  
   
 ```  
 void operator delete(void* pMem, char* pszFilename, int nLine)  

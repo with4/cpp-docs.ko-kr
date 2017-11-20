@@ -1,32 +1,30 @@
 ---
-title: "equal_range(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range 함수[STL/CLR]"
+title: equal_range (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range function [STL/CLR]
 ms.assetid: 1b2e76c3-6b52-486d-9785-2639b54277fd
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b94388f233c8ffb6577d88e137245475c3656de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# equal_range(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-정렬된 범위에서 한쌍의 위치를 검색하고, 첫번째로 지정된 요소의 위치보다 더 적거나 같은 것을 찾고, 두번째로 요소의 위치보다 더 큰것을 찾으며, 동등한 양식 또는 순서에서 위치를 설정하기위해 사용되는 순서가 이진 술어로써 지정될 수 있습니다.  
+# <a name="equalrange-stlclr"></a>equal_range(STL/CLR)
+정렬된 범위에서 위치의 쌍을 찾습니다. 첫 번째는 지정된 요소의 위치보다 작거나 같으며 두 번째는 요소의 위치보다 큽니다. 여기서 시퀀스의 위치를 정하는 데 사용된 동등성 또는 순서 지정의 의미는 이진 조건자로 지정할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
@@ -37,13 +35,13 @@ template<class _FwdIt, class _Ty, class _Pr> inline
         const _Ty% _Val, _Pr _Pred);  
 ```  
   
-## 설명  
- 이 함수는 STI 함수 `equal_range`와 같이 작동합니다.  자세한 내용은 [equal\_range](../Topic/equal_range.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 함수 동일 하 게 동작 `equal_range`합니다. 자세한 내용은 참조 [equal_range](../standard-library/algorithm-functions.md#equal_range)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<알고리즘 cliext/>  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [algorithm(STL/CLR)](../dotnet/algorithm-stl-clr.md)

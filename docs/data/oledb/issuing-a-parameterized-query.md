@@ -1,28 +1,27 @@
 ---
-title: "매개 변수가 있는 쿼리 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "매개 변수 쿼리, CCommand 클래스를 사용하여 실행"
+title: "매개 변수가 있는 쿼리를 실행 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 매개 변수가 있는 쿼리 실행
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음 예제는 Microsoft Access 데이터베이스의 테이블에서 나이 필드 값이 30 이상인 레코드를 검색하는 단순 매개 변수가 있는 쿼리를 실행합니다.  매개 변수를 지원하려면 사용자 레코드에 추가 맵이 있어야 합니다.  다음 ATL 프로젝트의 코드에서는 이전 예제 [단순 행 집합 검색](../../data/oledb/traversing-a-simple-rowset.md)에서 사용된 `CTable` 클래스 대신 `CCommand` 클래스를 사용합니다.  
+# <a name="issuing-a-parameterized-query"></a>매개 변수가 있는 쿼리 실행
+다음 예제에서는 Microsoft Access 데이터베이스의 테이블에서 레코드 (즉, 30 보다 큰) 나이 필드를 검색 하는 단순 매개 변수가 있는 쿼리를 발급 합니다. 매개 변수를 지원 하려면 사용자 레코드에 추가 맵이 있어야 합니다. 다음 코드는 ATL 프로젝트에서 사용 된 `CCommand` 클래스 대신는 `CTable` 앞의 예에서 사용 되는 클래스 [단순 행 집합 검색](../../data/oledb/traversing-a-simple-rowset.md)합니다.  
   
 ```  
 #include <atldbcli.h>  
@@ -50,7 +49,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- 사용자 레코드 `CArtists`는 다음과 같습니다.  
+ 사용자 레코드 `CArtists`, 다음과 같습니다.  
   
 ```  
 class CArtists  
@@ -76,5 +75,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿 작업](../../data/oledb/working-with-ole-db-consumer-templates.md)

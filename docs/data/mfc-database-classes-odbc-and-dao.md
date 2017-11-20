@@ -1,46 +1,41 @@
 ---
-title: "MFC 데이터베이스 클래스(ODBC 및 DAO) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO(Data Access Objects), 및 MFC"
-  - "MFC, DAO 및"
-  - "MFC, 데이터베이스 응용 프로그램"
-  - "ODBC, ODBC 클래스"
+title: "MFC 데이터베이스 클래스 (ODBC 및 DAO) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC, ODBC classes
+- MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8b2da7c45875ed78d40873cbbd481cdcd38f2d5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# MFC 데이터베이스 클래스(ODBC 및 DAO)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mfc-database-classes"></a>MFC 데이터베이스 클래스 
 > [!NOTE]
->  새로운 프로젝트에는 OLE DB나 ODBC를 사용하는 것이 좋습니다.  DAO는 기존 응용 프로그램을 관리하는 경우에만 사용해야 합니다.  
-  
- MFC는 DAO와 ODBC를 다른 방식으로 구현하므로 각 클래스에 대한 설명서는 별도로 제공됩니다.  DAO SDK는 Visual C\+\+ CD\-ROM에 포함되어 있고, ODBC SDK는 MSDN Library CD\-ROM에 포함되어 있습니다.  다음 표에서는 MFC DAO 클래스나 MFC ODBC 클래스를 처음 공부하는 사용자가 읽어야 할 항목을 보여 줍니다.  
-  
- 자세한 내용은 다음 항목을 참조하십시오.  
+>  Microsoft ODBC를 통해 Microsoft ODBC Driver 13 (또는 이상)를 사용 하는 것이 좋습니다. 새 프로젝트에 대 한 SQL Server에 대 한 합니다. DAO 더 이상 지원 합니다.    
+
+ 자세한 내용은 다음 항목을 참조하세요.  
+-   [데이터 액세스 기술 로드맵](https://msdn.microsoft.com/en-us/library/ms810810.aspx) 
+
+-   [SQL Server 출시에 대 한 ODBC Driver 13.1](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 for SQL Server 새 응용 프로그램을 만들 하거나 새 SQL Server 2016 기능 활용 하는 기존 응용 프로그램을 향상 시키는 데 사용 해야 합니다.
   
 -   [ODBC 및 MFC](../data/odbc/odbc-and-mfc.md)  
   
--   [MFC 데이터베이스 설명서](../data/mfc-database-documentation.md)  
-  
 -   [문서 및 뷰를 이용한 데이터베이스 클래스 사용](../data/mfc-using-database-classes-with-documents-and-views.md)  
   
--   [문서 및 뷰를 이용하지 않는 데이터베이스 클래스 사용](../data/mfc-using-database-classes-without-documents-and-views.md)  
+-   [문서 및 뷰를 이용 하지 않는 데이터베이스 클래스를 사용 하 여](../data/mfc-using-database-classes-without-documents-and-views.md)  
   
--   Check the Microsoft Universal Data Access Web site at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=121548](http://go.microsoft.com/fwlink/?LinkId=121548) for updates to and news about ODBC and DAO.  
-  
-## 참고 항목  
- [데이터 엑세스 프로그래밍 \(MFC\/ATL\)](../data/data-access-programming-mfc-atl.md)
+## <a name="see-also"></a>참고 항목  
+ [데이터 액세스 프로그래밍 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- template_cpp
-dev_langs:
-- C++
+f1_keywords: template_cpp
+dev_langs: C++
 helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6ce40029e40906441ebd7c64ff9011a61f26045b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 32c65fc68bc9e7be2770e951de466e48f482af90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="templates-c"></a>템플릿 (C++)
 서식 파일에는 c + +의 제네릭 프로그래밍을 위한 기반이 됩니다. 강력한 형식의 언어가 c + +는 특정 형식에서 프로그래머가 선언 명시적으로 또는 컴파일러에 의해 추론 된 모든 변수가 필요 합니다. 그러나 많은 데이터 구조 및 알고리즘 확인에 적용 될 형식에 관계 없이 동일 합니다. 이러한 작업 형식을 클래스 또는 함수를의 작업을 정의 하 여 사용자가 어떤 콘크리트 지정 템플릿 사용에서 작동 해야 합니다.  

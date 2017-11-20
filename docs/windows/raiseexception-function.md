@@ -1,56 +1,53 @@
 ---
 title: "RaiseException 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::RaiseException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RaiseException 함수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::RaiseException
+dev_langs: C++
+helpviewer_keywords: RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f64d0e38bb92f9ebe3954b47ece29184cbf1a73
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# RaiseException 함수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-WRL 인프라구조체를 지원하고 코드에서 직접적으로 사용되는 것을 의도하지 않습니다.  
+# <a name="raiseexception-function"></a>RaiseException 함수
+WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-inline void __declspec(noreturn)  
-   RaiseException(  
+inline void __declspec(noreturn)   RaiseException(  
       HRESULT hr,   
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `hr`  
- 예외 코드는 예외 발생. 즉, 실패 한 작업의 HRESULT입니다.  
+ 발생 중인; 예외의 예외 코드 즉, 작업 실패의 HRESULT입니다.  
   
  `dwExceptionFlags`  
- 비연속적 예외가 \(플래그 값은 0\), 또는 \(flag 값은 0이 아닌\) noncontinuable 예외를 나타내는 플래그입니다.  기본적으로 예외가 계속할입니다.  
+ 비연속적 예외가 (플래그 값은 0), 또는 (플래그 값은 0이 아닌) noncontinuable 예외를 나타내는 플래그입니다. 기본적으로는 예외는 계속할 수 없는입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  호출 스레드에서 예외가 발생합니다.  
   
- Windows **RaiseException** 함수에 대하여 참조하십시오.  
+ 자세한 내용은 참조는 Windows **RaiseException** 함수입니다.  
   
-## 요구 사항  
- **헤더:**  internal.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** internal.h  
   
- **네임스페이스:** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

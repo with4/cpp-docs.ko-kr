@@ -1,69 +1,68 @@
 ---
 title: "CTable 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CTable"
-  - "ATL.CTable"
-  - "CTable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTable 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CTable
+- ATL.CTable
+- CTable
+dev_langs: C++
+helpviewer_keywords: CTable class
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8398b53e4af21333adf60f2fa44296a35caf2ce9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CTable 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Provides a means to directly access a simple rowset \(one with no parameters\).  
+# <a name="ctable-class"></a>CTable 클래스
+단순 행 집합 (매개 변수 없이 하나)에 직접 액세스할 수 있는 방법을 제공 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-template <   
-   class TAccessor = CNoAccessor,    
-   template <typename T> class TRowset = CRowset    
+template <   
+   class TAccessor = CNoAccessor,    
+   template <typename T> class TRowset = CRowset    
 >  
-class CTable :    
-   public CAccessorRowset <   
-      TAccessor,    
-      TRowset    
+class CTable :    
+   public CAccessorRowset <   
+      TAccessor,    
+      TRowset    
    >  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `TAccessor`  
- An accessor class.  
+ 접근자 클래스입니다.  
   
  `TRowset`  
- A rowset class.  
+ 행 집합 클래스입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[를 엽니다.](../../data/oledb/ctable-open.md)|Opens the table.|  
+|[열기](../../data/oledb/ctable-open.md)|테이블을 엽니다.|  
   
-## 설명  
- See [CCommand](../../data/oledb/ccommand-class.md) for information on how to execute a command to access a rowset.  
+## <a name="remarks"></a>설명  
+ 참조 [CCommand](../../data/oledb/ccommand-class.md) 행 집합에 액세스 하는 명령을 실행 하는 방법에 대 한 내용은 합니다.  
   
-## 요구 사항  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)
+ [Iopenrowset:: Openrowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)

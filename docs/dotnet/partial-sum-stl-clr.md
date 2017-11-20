@@ -1,32 +1,30 @@
 ---
-title: "partial_sum(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::partial_sum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "partial_sum 함수[STL/CLR]"
+title: partial_sum (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::partial_sum
+dev_langs: C++
+helpviewer_keywords: partial_sum function [STL/CLR]
 ms.assetid: 845badae-8519-4ac8-9ea7-2b921bac7c51
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d8a92858303af5050706849f7e688d08ad36f321
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# partial_sum(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Computes a series of sums in an input range from the first element through the `i`th element and stores the result of each such sum in `i`th element of a destination range or computes the result of a generalized procedure where the sum operation is replaced by another specified binary operation.  
+# <a name="partialsum-stlclr"></a>partial_sum(STL/CLR)
+일련의 첫 번째 요소를 통해 입력 범위의 합계를 계산 합니다.는 `i`th 요소 각 합계의 결과 저장 하 고 `i`번째 요소를 대상 범위로 하거나 일반화 된 절차 결과를 계산 합니다. 여기서 합 연산을 지정 된 다른 이진 연산으로 대체 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _InIt, class _OutIt> inline  
@@ -36,13 +34,13 @@ template<class _InIt, class _OutIt, class _Fn2> inline
         _OutIt _Dest, _Fn2 _Func);  
 ```  
   
-## 설명  
- This function behaves the same as the STL numeric function `partial_sum`.  자세한 내용은 [partial\_sum](../Topic/partial_sum.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 숫자 함수와 동일 하 게 작동 `partial_sum`합니다. 자세한 내용은 참조 [partial_sum](../standard-library/numeric-functions.md#partial_sum)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/numeric\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/숫자 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [numeric](../dotnet/numeric-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [numeric(STL/CLR)](../dotnet/numeric-stl-clr.md)

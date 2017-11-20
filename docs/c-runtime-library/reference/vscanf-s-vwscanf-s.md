@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,33 +26,17 @@ f1_keywords:
 - _vtscanf_s
 - vscanf_s
 - vwscanf_s
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e403758253afd8778f9b9c2d96f56773cf0eb44a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 8ade32b1b8ad47fdffd38c5a27ecb6500add00ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
 표준 입력 스트림에서 형식이 지정된 데이터를 읽습니다. 이러한 버전의 [vscanf, vwscanf](../../c-runtime-library/reference/vscanf-vwscanf.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 포함되어 있습니다.  

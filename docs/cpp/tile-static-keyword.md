@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- tile_static_CPP
-dev_langs:
-- C++
-helpviewer_keywords:
-- tile_static keyword
+f1_keywords: tile_static_CPP
+dev_langs: C++
+helpviewer_keywords: tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1259fb7731e188bdb5a02a7a573b5eddd6a47df5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tilestatic-keyword"></a>tile_static 키워드
 `tile_static` 키워드는 스레드의 타일에 있는 모든 스레드에서 액세스할 수 있는 변수를 선언하는 데 사용됩니다. 변수의 수명은 실행이 선언 지점에 도달할 때 시작되고 커널 함수가 반환될 때 종료됩니다. 타일 사용에 대 한 자세한 내용은 참조 하십시오. [를 사용 하 여 타일](../parallel/amp/using-tiles.md)합니다.  

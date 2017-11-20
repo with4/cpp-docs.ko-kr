@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_nothrow_destructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_nothrow_destructible
+f1_keywords: type_traits/std::is_nothrow_destructible
+dev_langs: C++
+helpviewer_keywords: is_nothrow_destructible
 ms.assetid: 0bbd8a28-e312-4d72-bd28-aac027f974d3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 37f085f0a330af04c4167b381ea43608c693a02a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 857d37d89ff61dd7e6f0768796024565b03c920f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isnothrowdestructible-class"></a>is_nothrow_destructible 클래스
 형식이 소멸 가능하며 소멸자가 throw되지 않는 것으로 컴파일러에 알려져 있는지 테스트합니다.  
@@ -51,7 +47,6 @@ struct is_nothrow_destructible;
   
 ## <a name="see-also"></a>참고 항목  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

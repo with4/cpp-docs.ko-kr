@@ -1,35 +1,35 @@
 ---
 title: "명령 한정자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "명령 한정자"
-  - "NMAKE 프로그램, 명령 한정자"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, command modifiers
+- command modifiers
 ms.assetid: b661c432-210f-4f05-bc56-744a46e0fc0b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c1790a89381219191f273cfacb16e69b1495171a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 명령 한정자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-명령 앞에 하나 이상의 명령 한정자를 지정할 수 있으며 공백이나 탭으로 구분할 수도 있습니다.  명령과 같이 한정자도 들여써야 합니다.  
+# <a name="command-modifiers"></a>명령 한정자
+명령 앞에 공백이 나 탭으로 구분 된 필요에 따라 하나 이상의 명령 한정자를 지정할 수 있습니다. 명령과 마찬가지로 한정자를 써야 합니다.  
   
 |한정자|용도|  
-|---------|--------|  
-|@*command*|명령을 표시하지 않습니다.  명령으로 표시할 수는 있습니다.  기본적으로, NMAKE는 실행된 모든 명령을 화면에 표시합니다.  메이크파일 전체를 표시하지 않으려면 \/S를 사용하고 메이크파일의 일부를 표시하지 않으려면 **.SILENT**를 사용합니다.|  
-|**–**\[`number` \]*command*|*command*에 대한 오류 확인을 해제합니다.  기본적으로 명령이 0이 아닌 종료 코드를 반환하면 NMAKE가 중지됩니다.  –`number`를 사용한 경우 종료 코드가 `number` 보다 크면 NMAKE가 중지됩니다.  대시와 숫자 사이에 공백이나 탭을 사용할 수 없습니다.`number`와 *command* 사이에 공백이나 탭을 하나 이상 사용해야 합니다.  메이크파일 전체에 대한 오류 확인을 해제하려면 \/I를 사용하고 메이크파일의 일부에 대한 오류 확인을 해제하려면 **.IGNORE**를 사용합니다.|  
-|**\!** *command*|*command*가 **$\*\***\(종속 줄의 모든 종속 파일\) 또는 **$?**\(타임스탬프가 대상보다 이후인 종속 줄의 모든 종속 파일\)를 사용하는 경우 각 종속 파일에 대한 *command*를 실행합니다.|  
+|--------------|-------------|  
+|@*명령*|명령 표시를 하지 않습니다. 명령 사용 하 여 디스플레이 표시 됩니다. NMAKE는 기본적으로 실행 된 모든 명령을 표시합니다. /S를 사용 하 여 전체 메이크파일; 표시 하지 않으려면 사용 하 여 **합니다. 자동** 메이크파일의 부분에 대 한 표시 하지 않으려면입니다.|  
+|**-**[`number` ]*명령*|오류에 대 한 검사를 해제 *명령*합니다. 기본적으로 NMAKE 명령이 0이 아닌 종료 코드를 반환 하면 중지 됩니다. If-`number` 는 종료 코드를 초과 하는 경우 NMAKE 중지을 사용 하는 `number`합니다. 공백이 나 탭에 대시를 사이 사용할 수 없습니다 및 *번호입니다.* 하나 이상의 공백 또는 탭 사이 나타나야 합니다 `number` 및 *명령*합니다. /I를 사용 하 여 오류 전체 메이크파일;에 대 한 검사를 해제 하려면 사용 하 여 **합니다. 무시** 오류 메이크파일의 부분에 대 한 검사를 해제 하려면.|  
+|**!** *command*|실행 *명령* 각 종속 파일에 대 한 경우 *명령* 사용 하 여  **$ \* \***  (종속성의 모든 종속 파일) 또는 **$?** (모든 종속 파일에 대 한 타임 스탬프가).|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메이크파일의 명령](../build/commands-in-a-makefile.md)

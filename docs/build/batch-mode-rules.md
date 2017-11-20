@@ -1,46 +1,46 @@
 ---
-title: "일괄 처리 모드 규칙 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE의 일괄 처리 모드 유추 규칙"
-  - "NMAKE의 유추 규칙"
-  - "NMAKE 프로그램, 유추 규칙"
+title: "배치 모드 규칙 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- NMAKE program, inference rules
+- batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: be8c00009e285ec84f42ae6f53c578a3084432de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 일괄 처리 모드 규칙
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="batch-mode-rules"></a>일괄 처리 모드 규칙
 ```  
 {frompath}.fromext{topath}.toext::  
    commands  
 ```  
   
- 일괄 처리 모드 유추 규칙은 N 개의 명령에 유추 규칙이 적용되는 경우 이 유추 규칙을 한 번만 호출합니다.  일괄 처리 모드 유추 규칙을 사용하지 않는 경우 N 개의 명령을 호출해야 합니다.  N은 유추 규칙을 트리거하는 종속 파일의 수입니다.  
+ 일괄 처리 모드 유추 규칙 N 명령을이 유추 규칙을 통해 이동 하는 경우 한 번만 호출의 유추 규칙을 제공 합니다. 일괄 처리 모드 유추 규칙 없이 N 명령을를 호출 해야 합니다. N은 유추 규칙을 트리거하는 종속 항목 수입니다.  
   
- 일괄 처리 모드 유추 규칙이 포함된 메이크파일은 NMAKE 버전 1.62 이상을 사용해야 합니다.  NMAKE 버전을 확인하려면 NMAKE 버전 1.62 이상에서 사용할 수 있는 \_NMAKE\_VER 매크로를 실행합니다.  이 매크로는 Visual C\+\+ 제품 버전을 나타내는 문자열을 반환합니다.  
+ 일괄 처리 모드 유추 규칙을 포함 하는 메이크파일 NMAKE 버전 1.62 이상을 사용 해야 합니다. NMAKE 버전을 확인 하려면 1.62 이상을 사용할 수 있는 _NMAKE_VER 매크로와 NMAKE 버전 실행 합니다. 이 매크로 Visual c + + 제품 버전을 나타내는 문자열을 반환 합니다.  
   
- 일괄 처리 모드 유추 규칙 구문이 표준 유추 규칙과 다른 점은 이중 콜론\(::\)으로 끝난다는 것입니다.  
+ 표준 유추 규칙에서만 구문 차이점은 일괄 처리 모드 유추 규칙 이중 콜론 (:)으로 종료 됩니다.  
   
 > [!NOTE]
->  호출되는 도구는 여러 개의 파일을 처리할 수 있어야 합니다.  일괄 처리 모드 유추 규칙은 `$<`를 매크로로 사용하여 종속 파일에 액세스해야 합니다.  
+>  호출 되는 도구는 여러 파일을 처리할 수 있어야 합니다. 일괄 처리 모드 유추 규칙을 사용 해야 `$<` 종속 파일에 액세스 매크로로 합니다.  
   
- 일괄 처리 모드 유추 규칙은 빌드 프로세스를 단축할 수 있습니다.  컴파일러에 파일을 일괄 공급하면 컴파일러 드라이버가 한 번만 호출되므로 프로세스가 빨라집니다.  예를 들어, C와 C\+\+ 컴파일러는 파일 세트를 처리하는 경우 성능이 향상됩니다. 프로세스 수행 중에 컴파일러가 메모리에 상주할 수 있기 때문입니다.  
+ 일괄 처리 모드 유추 규칙 빌드 프로세스를 가속화할 수 있습니다. 되므로 더 빠르게 일괄 처리에 컴파일러에 파일을 제공 하 컴파일러 드라이버가 한 번만 호출 됩니다. 예를 들어, C 및 c + + 컴파일러가 성능이 프로세스 중에 상주 하기 때문에 파일 집합을 처리할 때 더 잘 수행 합니다.  
   
- 다음 예제는 일괄 처리 모드 유추 규칙을 사용하는 방법을 보여 줍니다.  
+ 다음 예에서는 일괄 처리 모드 유추 규칙을 사용 하는 방법을 보여 줍니다.  
   
 ```  
 #  
@@ -65,7 +65,7 @@ $(Objs) :
 #end of makefile  
 ```  
   
- 일괄 처리 모드 유추 규칙을 사용하지 않는 경우 NMAKE에서 생성하는 다음과 같이 출력됩니다.  
+ NMAKE 일괄 처리 모드 유추 규칙 없이 다음과 같은 출력을 생성합니다.  
   
 ```  
 E:\tmp> nmake -f test.mak -a NOBatch=1  
@@ -82,7 +82,7 @@ foo3.cpp
 foo4.cpp  
 ```  
   
- 일괄 처리 모드 유추 규칙을 사용하는 경우 NMAKE에서 생성하는 다음과 같이 출력됩니다.  
+ NMAKE는 일괄 처리 모드 유추 규칙은 다음 결과 생성합니다.  
   
 ```  
 E:\tmp> nmake -f test.mak -a  
@@ -98,5 +98,5 @@ foo4.cpp
 Generating Code...  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [유추 규칙](../build/inference-rules.md)

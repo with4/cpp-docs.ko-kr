@@ -1,38 +1,37 @@
 ---
-title: "방법: C++ Interop를 사용하여 구조체 마샬링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Interop, 구조체"
-  - "데이터 마샬링[C++], 구조체"
-  - "interop[C++], 구조체"
-  - "마샬링[C++], 구조체"
-  - "구조체[C++], 마샬링"
+title: "방법: c + + Interop를 사용 하 여 구조체 마샬링 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Interop, structures
+- structures [C++], marshaling
+- data marshaling [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 640b3cdbfe9bd88faa337737b0423e3f759b41dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: C++ Interop를 사용하여 구조체 마샬링
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 항목은 Visual C\+\+ 상호 운용성의 한 측면을 보여 줍니다.  자세한 내용은 [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)을 참조하십시오.  
+# <a name="how-to-marshal-structures-using-c-interop"></a>방법: C++ Interop를 사용하여 구조체 마샬링
+이 항목에서는 Visual c + + 상호 운용성의 한 측면을 보여 줍니다. 자세한 내용은 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)합니다.  
   
- 다음 코드 예제에서는 [관리되는, 관리되지 않는](../preprocessor/managed-unmanaged.md) \#pragma 지시문을 사용하여 동일한 파일에서 관리되는 함수와 관리되지 않는 함수를 구현합니다. 그러나 이러한 함수는 서로 다른 파일에 정의된 경우 동일한 방식으로 상호 운용됩니다.  관리되지 않는 함수만 포함된 파일은 [\/clr\(공용 언어 런타임 컴파일\)](../build/reference/clr-common-language-runtime-compilation.md)를 사용하여 컴파일할 필요가 없습니다.  
+ 다음 코드 예제에서 사용 된 [관리, 관리 되지 않는](../preprocessor/managed-unmanaged.md) #pragma 지시문을 구현 하 관리는 관리 되지 않는 함수에서 동일한 파일에 별도 파일에 정의 된 경우 이러한 함수가 동일한 방식으로 상호 운용 합니다. 관리 되지 않는 함수만 포함 된 파일 사용 하 여 컴파일할 필요가 없습니다 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
   
-## 예제  
- 다음 예제에서는 값으로 전달 및 참조로 전달 방법을 둘 다 사용하여 관리되는 함수에서 관리되지 않는 함수로 구조체를 전달하는 방법을 보여 줍니다.  이 구조체에는 단순한 내장 데이터 형식\([Blittable 형식 및 비 Blittable 형식](../Topic/Blittable%20and%20Non-Blittable%20Types.md) 참조\)만 포함되어 있으므로 특별한 마샬링이 필요하지 않습니다.  포인터가 포함된 구조체와 같은 비 blittable 구조체를 마샬링하는 방법은 [방법: C\+\+ Interop를 사용하여 포함 포인터 마샬링](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)을 참조하십시오.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 값 및 참조에 의해 관리 되는 구조체를 관리 되지 않는 함수에 전달 하는 방법을 보여 줍니다. 이 예에서 구조만 간단 하 고 기본 데이터 형식에 포함 하기 때문에 (참조 [blittable 형식 및 비 Blittable 형식](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), 특별 한 마샬링가 필요 합니다. 참조 포인터를 포함 하는 등의 비 blittable 구조 마샬링하 [하는 방법: 마샬링 포함 된 포인터를 사용 하 여 c + + Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)합니다.  
   
 ```  
 // PassStruct1.cpp  
@@ -88,8 +87,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 예제에서는 값으로 전달 및 참조로 전달 방법을 둘 다 사용하여 관리되지 않는 함수에서 관리되는 함수로 구조체를 전달하는 방법을 보여 줍니다.  이 구조체에는 단순한 내장 데이터 형식\([Blittable 형식 및 비 Blittable 형식](../Topic/Blittable%20and%20Non-Blittable%20Types.md) 참조\)만 포함되어 있으므로 특별한 마샬링이 필요하지 않습니다.  포인터가 포함된 구조체와 같은 비 blittable 구조체를 마샬링하는 방법은 [방법: C\+\+ Interop를 사용하여 포함 포인터 마샬링](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)을 참조하십시오.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 값 및 참조에 의해 관리 되지 않는 구조체를 관리 되는 함수에 전달 하는 방법을 보여 줍니다. 이 예에서 구조만 간단 하 고 기본 데이터 형식에 포함 하기 때문에 (참조 [blittable 형식 및 비 Blittable 형식](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), 특별 한 마샬링가 필요 합니다. 참조 포인터를 포함 하는 등의 비 blittable 구조 마샬링하 [하는 방법: 마샬링 포함 된 포인터를 사용 하 여 c + + Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)합니다.  
   
 ```  
 // PassStruct2.cpp  
@@ -154,5 +153,5 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

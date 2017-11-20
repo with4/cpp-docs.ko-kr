@@ -1,32 +1,30 @@
 ---
 title: "컴파일러 경고 (수준 3) C4554 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4554"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4554"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4554
+dev_langs: C++
+helpviewer_keywords: C4554
 ms.assetid: 55bb68f0-2e80-4330-8921-51083c4f8d53
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 063c317e25be808c14b65c08fe005bbbac7109e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 3) C4554
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operator' : 연산자 우선 순위에 오류가 있는지 확인하십시오. 괄호를 사용하여 우선 순위를 명확하게 지정하십시오.  
+# <a name="compiler-warning-level-3-c4554"></a>컴파일러 경고(수준 3) C4554
+'operator': 연산자 우선 순위에 오류가; 확인 우선 순위를 명확 하 게 괄호를 사용 합니다.  
   
- 다음 샘플에서는 C4554 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4554 오류가 생성 됩니다.  
   
 ```  
 // C4554.cpp  

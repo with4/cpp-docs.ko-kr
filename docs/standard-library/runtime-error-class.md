@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- stdexcept/std::runtime_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- runtime_error class
+f1_keywords: stdexcept/std::runtime_error
+dev_langs: C++
+helpviewer_keywords: runtime_error class
 ms.assetid: 4d0227bf-847b-45a2-a320-2351ebf98368
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 25153052fff20635069340e3d0c9f46f3d56280c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: fffdedc184df2de8956341015345bf2f6fb16e80
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="runtimeerror-class"></a>runtime_error 클래스
 이 클래스는 프로그램이 실행되는 경우에만 검색될 수 있는 오류를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.  
@@ -82,5 +77,4 @@ Type class std::runtime_error
 
     
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

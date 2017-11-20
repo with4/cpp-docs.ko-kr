@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _tzset
+apiname: _tzset
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _tzset
-dev_langs:
-- C++
+f1_keywords: _tzset
+dev_langs: C++
 helpviewer_keywords:
 - _tzset function
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 494d8908660913396fb86f4cbbcfcc577a3f3166
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tzset"></a>_tzset
 시간 환경 변수를 설정합니다.  
@@ -72,7 +53,7 @@ void _tzset( void );
 ## <a name="remarks"></a>설명  
  `_tzset` 함수는 환경 변수 `TZ` 의 현재 설정을 사용하여 세 개의 전역 변수 `_daylight`, `_timezone`및 `_tzname`에 값을 할당합니다. 이러한 변수는 [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 및 [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 함수에서 UTC(협정 세계시)를 현지 시간으로 수정하는 데 사용되며, `time` 함수가 시스템 시간에서 UTC를 계산하는 데 사용됩니다. 다음 구문을 사용하여 `TZ` 환경 변수를 설정합니다.  
   
- `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:mm`[`:ss`] ][`dzn`]  
   
  `tzn`  
  3자의 표준 시간대 이름(예: PST)입니다. 현지 시간에서 UTC로의 올바른 오프셋을 지정해야 합니다.  

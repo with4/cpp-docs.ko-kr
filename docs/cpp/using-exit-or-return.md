@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Exit
-dev_langs:
-- C++
+f1_keywords: Exit
+dev_langs: C++
 helpviewer_keywords:
 - exit function
 - return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9fc6588a6593559314774e30a4d65c5a60779eb5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 666f9c5cbb111e90b0902ab6ec0954355e5678dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="using-exit-or-return"></a>exit 또는 return 사용
 호출 하는 경우 **종료** 하거나 실행 한 `return` 에서 문을 **주**, 정적 개체 초기화의 역순으로 제거 됩니다. 다음 예제에서는 이러한 초기화 및 정리가 작동하는 방법을 보여 줍니다.  

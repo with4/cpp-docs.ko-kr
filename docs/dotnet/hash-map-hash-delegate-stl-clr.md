@@ -1,41 +1,39 @@
 ---
-title: "hash_map::hash_delegate(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::hash_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_delegate 멤버[STL/CLR]"
+title: 'hash_map:: hash_delegate (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::hash_delegate
+dev_langs: C++
+helpviewer_keywords: hash_delegate member [STL/CLR]
 ms.assetid: ae451fbe-a10c-457f-9b54-94dd9d93e8c4
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f233c01642c49fa98de5371c5f3fc14574ef1fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::hash_delegate(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmaphashdelegate-stlclr"></a>hash_map::hash_delegate(STL/CLR)
 지정된 키와 일치하는 요소를 찾습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 hasher^ hash_delegate();  
 ```  
   
-## 설명  
- The member function returns the delegate used to convert a key value to an integer.  You use it to hash a key.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 키 값을 정수로 변환 하는 데 사용 되는 대리자를 반환 합니다. 키 해시를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_map_hash_delegate.cpp   
@@ -55,13 +53,16 @@ int main()
   
 ```  
   
-  **hash\(L'a'\) \= 1616896120**  
-**hash\(L'b'\) \= 570892832**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::hasher](../dotnet/hash-map-hasher-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::hasher(STL/CLR)](../dotnet/hash-map-hasher-stl-clr.md)

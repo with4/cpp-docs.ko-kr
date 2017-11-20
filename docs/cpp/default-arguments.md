@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - function declarators
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b14cd3b6ff1386ab2484b8a424c6ef2ceee1cd85
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: f62806dd07860a6cf1c4d49f10885c0856d8c11f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="default-arguments"></a>기본 인수
 많은 경우에 함수에는 기본값이면 충분할 정도로 가끔 사용되는 인수가 있습니다. 이러한 경우 기본 인수 기능을 사용하면 지정된 호출에서 의미가 있는 인수만 함수에 지정할 수 있습니다. 이 개념을 설명 하는 것이 좋습니다에 제시 된 예에서는 [함수 오버 로드](../cpp/function-overloading.md)합니다.  

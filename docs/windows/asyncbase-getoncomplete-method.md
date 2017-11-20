@@ -1,32 +1,30 @@
 ---
-title: "AsyncBase::GetOnComplete 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::GetOnComplete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetOnComplete 메서드"
+title: "Asyncbase:: Getoncomplete 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::GetOnComplete
+dev_langs: C++
+helpviewer_keywords: GetOnComplete method
 ms.assetid: f06ae02d-9a88-41d2-b749-bdc1a7ff8748
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3367832ec7dea157e5a0132b7ff10c5a4338bdd2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# AsyncBase::GetOnComplete 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-지정된 된 변수를 현재 완료된 이벤트 처리기의 주소에 복사합니다.  
+# <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete 메서드
+지정된 된 변수를 현재 완료 이벤트 처리기의 주소를 복사합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 STDMETHOD(  
@@ -34,17 +32,17 @@ STDMETHOD(
 )(TComplete** completeHandler);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `completeHandler`  
- 현재 완료된 이벤트 처리기의 주소가 저장되어 있는 위치입니다.  
+ 현재 완료 이벤트 처리기의 주소가 저장 되어 있는 위치입니다.  
   
-## 반환 값  
- 성공 하면 S\_OK 그렇지 않으면 E\_ILLEGAL\_METHOD\_CALL입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고 그렇지 않으면 E_ILLEGAL_METHOD_CALL 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** async.h  
   
  **네임스페이스:** Microsoft::WRL  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [AsyncBase 클래스](../windows/asyncbase-class.md)

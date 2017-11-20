@@ -1,41 +1,39 @@
 ---
-title: "multiset::rbegin(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin 멤버[STL/CLR]"
+title: 'multiset:: rbegin (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: beec0024-9565-4809-86f9-8b2c4e533923
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f33266931a2a66b4e349da76625523bb15449e0b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::rbegin(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-역방향 제어되는 시퀀스의 시작을 지정합니다.  
+# <a name="multisetrbegin-stlclr"></a>multiset::rbegin(STL/CLR)
+제어되는 역방향 시퀀스의 시작을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## 설명  
- The member function returns a reverse iterator that designates the last element of the controlled sequence, or just beyond the beginning of an empty sequence.  따라서 역방향 시퀀스의 `beginning`을 지정합니다.  이를 통해 역순으로 표시된 제어되는 시퀀스의 `current` 시작을 지정하는 반복기를 가져올 수 있지만 제어되는 시퀀스의 길이가 변경되면 상태가 변경될 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 빈 시퀀스의 시작 부분 바로 다음 또는 제어 된 시퀀스의 마지막 요소를 지정 하는 역방향 반복기를 반환 합니다. 따라서을 지정 된 `beginning` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 하지만 해당 상태의 시작 부분 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multiset_rbegin.cpp   
@@ -64,16 +62,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*rbegin\(\) \= c**  
-**\*\+\+rbegin\(\) \= b**   
-## 요구 사항  
- **Header:** \<cliext\/set\>  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::begin](../dotnet/multiset-begin-stl-clr.md)   
- [multiset::end](../dotnet/multiset-end-stl-clr.md)   
- [multiset::rend](../dotnet/multiset-rend-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)   
+ [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)   
+ [multiset::rend(STL/CLR)](../dotnet/multiset-rend-stl-clr.md)

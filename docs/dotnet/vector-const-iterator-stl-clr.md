@@ -1,41 +1,39 @@
 ---
-title: "vector::const_iterator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_iterator 멤버[STL/CLR]"
+title: 'vector:: const_iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: 09c0ae0b-248b-463c-8f57-59c77eba1eaa
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99e90dcac5893136a95feedbd3b8fae8780ccc11
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# vector::const_iterator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorconstiterator-stlclr"></a>vector::const_iterator(STL/CLR)
 제어되는 시퀀스에 대한 상수 반복기의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## 설명  
- 형식은 제어된 시퀀스를 위해 상수 랜덤 액세스 반복기의 역할을 할 수 있는 지정되지 않은 형식 `T2`의 개체를 설명합니다.  
+## <a name="remarks"></a>설명  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T2` 제어 되는 시퀀스에 대 한 상수 임의 액세스 반복기로 사용할 수 있는 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_const_iterator.cpp   
@@ -59,12 +57,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/vector\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/벡터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::iterator](../dotnet/vector-iterator-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::iterator(STL/CLR)](../dotnet/vector-iterator-stl-clr.md)

@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.mfc.structures
-dev_langs:
-- C++
+f1_keywords: vc.mfc.structures
+dev_langs: C++
 helpviewer_keywords:
 - callback functions, MFC
 - styles, MFC
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: c3531ab24116cd64778f43604fa6196b9ffd67f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>구조체, 스타일, 콜백 및 메시지 맵
 이 단원에서는 MFC 라이브러리와 MFC 메시지 맵에 사용되는 구조체, 스타일 및 콜백 함수를 설명합니다.  
@@ -51,7 +47,6 @@ ms.lasthandoff: 10/09/2017
   
  [MFC 샘플](../../visual-cpp-samples.md)  
  MFC 라이브러리를 사용하는 방법을 보여 주는 샘플에 대한 링크를 제공합니다.
-
 
 
 

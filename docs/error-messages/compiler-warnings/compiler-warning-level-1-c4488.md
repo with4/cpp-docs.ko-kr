@@ -1,35 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 1) C4488 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4488"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4488"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4488
+dev_langs: C++
+helpviewer_keywords: C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1312d279eb9174e0863cae413a0014cc58710131
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4488
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 인터페이스 메서드 'interface\_method'을\(를\) 구현하려면 'keyword' 키워드가 있어야 합니다.  
+# <a name="compiler-warning-level-1-c4488"></a>컴파일러 경고(수준 1) C4488
+'function': 인터페이스 메서드 'interface_method'를 구현 하는 'keyword' 키워드를 필요 합니다.  
   
- 클래스에서는 이 클래스가 직접 파생된 대상 인터페이스의 모든 멤버를 구현해야 합니다.  구현된 멤버는 공용으로 액세스할 수 있어야 하고 가상 멤버로 표시되어야 합니다.  
+ 클래스는 직접 상속 된 인터페이스의 모든 멤버를 구현 해야 합니다. 구현 된 멤버 public 액세스 가능성이 있어야 하 고 가상 표시 되어야 합니다.  
   
-## 예제  
- C4488은 구현된 멤버가 공용이 아닌 경우 발생할 수 있습니다.  다음 샘플에서는 C4488 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 구현 된 멤버가 public이 아니기 때문에 C4488 발생할 수 있습니다. 다음 샘플에서는 C4488 오류가 발생 합니다.  
   
 ```  
 // C4488.cpp  
@@ -48,8 +46,8 @@ public:
 };  
 ```  
   
-## 예제  
- C4488은 구현된 멤버가 가상 멤버로 표시되지 않은 경우 발생할 수 있습니다.  다음 샘플에서는 C4488 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ C4488 구현 된 멤버 가상 표시 되지 않은 경우에 발생할 수 있습니다. 다음 샘플에서는 C4488 오류가 발생 합니다.  
   
 ```  
 // C4488_b.cpp  

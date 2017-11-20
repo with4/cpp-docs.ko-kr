@@ -1,41 +1,39 @@
 ---
-title: "stack::pop(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop 멤버[STL/CLR]"
+title: 'stack:: pop (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: b7565385-9e6b-432d-8c71-c62c9c6ad90d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e461a312c75cdb6c9d33a1bfd59925372f60d5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# stack::pop(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Removes the last element.  
+# <a name="stackpop-stlclr"></a>stack::pop(STL/CLR)
+마지막 요소를 제거 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void pop();  
 ```  
   
-## 설명  
- The member function removes the last element of the controlled sequence, which must be non\-empty.  You use it to shorten the stack by one element at the back.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 마지막 요소를 제거 합니다. 스택의 한 요소 뒤에 여 축소를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_stack_pop.cpp   
@@ -65,13 +63,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b**   
-## 요구 사항  
- **Header:** \<cliext\/stack\>  
+```Output  
+a b c  
+a b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/스택 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::push](../dotnet/stack-push-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::push(STL/CLR)](../dotnet/stack-push-stl-clr.md)

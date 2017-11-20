@@ -1,41 +1,39 @@
 ---
-title: "stack::container_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::container_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "container_type 멤버[STL/CLR]"
+title: 'stack:: container_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::container_type
+dev_langs: C++
+helpviewer_keywords: container_type member [STL/CLR]
 ms.assetid: ca0e862d-e57d-4638-b0ba-b4c206de38ed
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e318d21321783a03182bb6cd9844eaa2641989db
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# stack::container_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackcontainertype-stlclr"></a>stack::container_type(STL/CLR)
 기본 컨테이너의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef Container value_type;  
 ```  
   
-## 설명  
- The type is a synonym for the template parameter `Container`.  
+## <a name="remarks"></a>설명  
+ 이 형식은 템플릿 매개 변수 `Container`의 동의어입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_stack_container_type.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/stack\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/스택 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::get\_container](../dotnet/stack-get-container-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::get_container(STL/CLR)](../dotnet/stack-get-container-stl-clr.md)

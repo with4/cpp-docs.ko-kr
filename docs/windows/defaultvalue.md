@@ -1,47 +1,45 @@
 ---
-title: "defaultvalue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvalue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvalue attribute"
+title: defaultvalue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvalue
+dev_langs: C++
+helpviewer_keywords: defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 16f75743010087eb13ab38186b6326b4bcc38688
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# defaultvalue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-입력 된 선택적 매개 변수에 대 한 기본값을 지정할 수 있습니다.  
+# <a name="defaultvalue"></a>defaultvalue
+형식화 된 선택적 매개 변수 기본값을의 지정을 허용 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 [ defaultvalue= value ]  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *value*  
- 매개 변수에 대한 기본값입니다.  
+ 매개 변수에 대해 기본 값입니다.  
   
-## 설명  
- **Defaultvalue** C\+\+ 특성을 동일한 기능을가지고 있는  [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **defaultvalue** c + + 특성에 동일한 기능을는 [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 특성입니다.  
   
-## 예제  
- 다음 코드 사용 하 여 인터페이스 메서드를 보여 줍니다 있는  **defaultvalue** 특성:  
+## <a name="example"></a>예제  
+ 다음 코드에서는 사용 하 여 인터페이스 메서드는 **defaultvalue** 특성:  
   
 ```  
 // cpp_attr_ref_defaultvalue.cpp  
@@ -65,25 +63,24 @@ __interface IFireTabCtrl : IDispatch {
       version="1.0", helpstring="ATLFire 1.0 Type Library") ];  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
 |**적용 대상**|인터페이스 매개 변수|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [아웃](../windows/out-cpp.md)   
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [매개 변수 특성](../windows/parameter-attributes.md)   
+ [out](../windows/out-cpp.md)   
  [retval](../windows/retval.md)   
  [in](../windows/in-cpp.md)   
- [pointer\_default](../windows/pointer-default.md)   
+ [pointer_default](../windows/pointer-default.md)   
  [unique](../windows/unique-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

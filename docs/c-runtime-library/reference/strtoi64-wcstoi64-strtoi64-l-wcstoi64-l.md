@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - _wcstoi64
 - wcstoi64
 - strtoi64_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strtoi64 function
 - _wcstoi64 function
@@ -48,30 +46,15 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: d6a3924d92cd13e8c70485d9bd288836d66aab05
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 3933746bf3197d51869a5e32ada78ae5383604b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 문자열을 `__int64` 값으로 변환합니다.  
@@ -125,7 +108,7 @@ __int64 _wcstoi64_l(
   
  이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `_strtoi64` 함수는 `nptr`을 `__int64`로 변환합니다. 이 두 함수는 숫자의 일부분으로 인식할 수 없는 첫 문자에서 문자열 `nptr` 읽기를 중지합니다. 이 문자는 종료 null 문자일 수도 있고 `base`보다 크거나 같은 첫 번째 숫자 문자일 수도 있습니다. `_wcstoi64`는 `_strtoi64`의 와이드 문자 버전입니다. 이 함수의 `nptr` 인수는 와이드 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  

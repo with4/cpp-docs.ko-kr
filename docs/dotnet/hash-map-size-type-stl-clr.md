@@ -1,41 +1,39 @@
 ---
-title: "hash_map::size_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type 멤버[STL/CLR]"
+title: 'hash_map:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 062901e1-b52b-41e4-81be-b6646879e22a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8659a30ef17811c84984c2e61866e3a879ad3a6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::size_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapsizetype-stlclr"></a>hash_map::size_type(STL/CLR)
 두 요소 사이의 부호가 있는 거리의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef int size_type;  
 ```  
   
-## 설명  
- 형식은 음이 아닌 요소 수를 설명합니다.  
+## <a name="remarks"></a>설명  
+ 형식은은 음수가 아닌 요소 수를 설명 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_map_size_type.cpp   
@@ -65,13 +63,16 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**end\(\)\-begin\(\) \= 3**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::empty](../dotnet/hash-map-empty-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::empty(STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)

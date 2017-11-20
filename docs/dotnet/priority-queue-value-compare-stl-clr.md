@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::value_compare(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare 멤버[STL/CLR]"
+title: 'priority_queue:: value_compare (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: 40832c80-426f-42af-b4a3-bab27d2abd7e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bfa61ac20d5d09a3f5e9ed30aa2b328aab5efe10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::value_compare(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The ordering delegate for two values.  
+# <a name="priorityqueuevaluecompare-stlclr"></a>priority_queue::value_compare(STL/CLR)
+두 값에 대 한 순서 지정 하는 대리자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 binary_delegate<value_type, value_type, int> value_compare;  
 ```  
   
-## 설명  
- The type is a synonym for the delegate that determines whether the first argument is ordered before the second.  
+## <a name="remarks"></a>설명  
+ 형식은 첫 번째 인수는 초가 되기 전에 정렬 여부를 결정 하는 대리자에 대 한 동의어입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_priority_queue_value_compare.cpp   
@@ -71,18 +69,22 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**  
-**compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= False**  
-**compare\(L'b', L'a'\) \= True**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::value\_comp](../dotnet/priority-queue-value-comp-stl-clr.md)   
- [priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue:: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)   
+ [priority_queue::value_type(STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)

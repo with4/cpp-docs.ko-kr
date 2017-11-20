@@ -1,49 +1,47 @@
 ---
-title: "copyprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "copyprivate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "copyprivate OpenMP clause"
+title: copyprivate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: copyprivate
+dev_langs: C++
+helpviewer_keywords: copyprivate OpenMP clause
 ms.assetid: 02c0209d-abe8-4797-8365-a82b53c3f15d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 45b9e6ab273f80c2f19516933e6cac5bf9f1a739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# copyprivate
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-하나 이상의 변수 모든 스레드 간에 공유 하도록 지정 합니다.  
+# <a name="copyprivate"></a>copyprivate
+하나 이상의 변수 모든 스레드 간에 공유 되지 않아야 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 copyprivate(var)  
 ```  
   
-## 설명  
- 다음은 각 매개 변수에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 다음은 각 문자에 대한 설명입니다.  
   
  `var`  
- 공유 하려면 하나 이상의 변수입니다.  변수가 두 개 이상 지정 된 경우 변수 이름을 쉼표로 구분 합니다.  
+ 하나 이상의 변수를 공유 합니다. 둘 이상의 변수를 지정 하는 경우 변수 이름을 쉼표로 구분 합니다.  
   
-## 설명  
- `copyprivate`적용 되는 [single](../../../parallel/openmp/reference/single.md) 지시문입니다.  
+## <a name="remarks"></a>설명  
+ `copyprivate`에 적용 된 [단일](../../../parallel/openmp/reference/single.md) 지시문입니다.  
   
- 자세한 내용은 [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)를 참조하십시오.  
+ 자세한 내용은 참조 [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // omp_copyprivate.cpp  
@@ -92,19 +90,22 @@ int main() {
 }  
 ```  
   
-  **CopyPrivate 단일 스레드에서 호출**  
-**값 1.001000, 스레드 \= 0 \=**  
-**값 1.002000, 스레드 \= 0 \=**  
-**값 1.003000, 스레드 \= 0 \=**  
-**값 1.004000, 스레드 \= 0 \=**  
-**CopyPrivate 병렬 영역에서 호출**  
-**값 1.005000, 스레드 \= 0 \=**  
-**값 1.005000, 스레드 \= \= 1**  
-**값 1.006000, 스레드 \= 0 \=**  
-**값 1.006000, 스레드 \= \= 1**  
-**값 1.007000, 스레드 \= 0 \=**  
-**값 1.007000, 스레드 \= \= 1**  
-**값 1.008000, 스레드 \= 0 \=**  
-**값 1.008000, 스레드 \= \= 1**   
-## 참고 항목  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+call CopyPrivate from a single thread  
+Value = 1.001000, thread = 0  
+Value = 1.002000, thread = 0  
+Value = 1.003000, thread = 0  
+Value = 1.004000, thread = 0  
+call CopyPrivate from a parallel region  
+Value = 1.005000, thread = 0  
+Value = 1.005000, thread = 1  
+Value = 1.006000, thread = 0  
+Value = 1.006000, thread = 1  
+Value = 1.007000, thread = 0  
+Value = 1.007000, thread = 1  
+Value = 1.008000, thread = 0  
+Value = 1.008000, thread = 1  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [절](../../../parallel/openmp/reference/openmp-clauses.md)

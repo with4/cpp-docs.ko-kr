@@ -1,32 +1,30 @@
 ---
-title: "SafeCast | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeCast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeCast 함수"
+title: SafeCast | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeCast
+dev_langs: C++
+helpviewer_keywords: SafeCast function
 ms.assetid: 55316729-8456-403a-9f96-59d4038f67af
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 24b1d0c99ebc4ea543ef9d3fd1bc269d4874f706
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# SafeCast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Casts one type of number to another type.  
+# <a name="safecast"></a>SafeCast
+한 가지 형식의 숫자를 다른 형식으로 캐스팅합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename T, typename U>  
@@ -36,30 +34,30 @@ inline bool SafeCast (
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `From`  
- The source number to convert.  This must be of type T.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `From`  
+ 변환할 원본 숫자입니다. T 형식이어야 합니다.  
   
- \[out\] `To`  
- A reference to the new number type.  This must be of type U.  
+ [out] `To`  
+ 새 숫자 형식에 대 한 참조입니다. U 형식이어야 합니다.  
   
-## 반환 값  
- `true` if no error occurs; `false` if an error occurs.  
+## <a name="return-value"></a>반환 값  
+ `true`오류가 발생 하지 않으면; `false` 오류가 발생 합니다.  
   
-## 설명  
- This method is part of [SafeInt 라이브러리](../windows/safeint-library.md) and is designed for a single casting operation without creating an instance of the [SafeInt 클래스](../windows/safeint-class.md).  
+## <a name="remarks"></a>설명  
+ 이 메서드는의 일부 [SafeInt 라이브러리](../windows/safeint-library.md) 용인지 단일 캐스팅 작업의 인스턴스를 만들지 않고 및는 [SafeInt 클래스](../windows/safeint-class.md)합니다.  
   
 > [!NOTE]
->  This method should only be used when a single operation must be protected.  If there are multiple operations, you should use the `SafeInt` class instead of calling the individual stand\-alone functions.  
+>  이 메서드는 한 번의 작업을 보호 해야 하는 경우에 사용 해야 합니다. 작업이 여러 개 있으면 개별 독립 실행형 함수를 호출하는 대신 `SafeInt` 클래스를 사용해야 합니다.  
   
- For more information about the template types T and U, see [SafeInt 함수](../windows/safeint-functions.md).  
+ T와 U 템플릿 형식에 대 한 자세한 내용은 참조 [SafeInt 함수](../windows/safeint-functions.md)합니다.  
   
-## 요구 사항  
- **Header:** safeint.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** safeint.h  
   
- **Namespace:** Microsoft::Utilities  
+ **Namespace:** microsoft:: utilities  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SafeInt 함수](../windows/safeint-functions.md)   
  [SafeInt 라이브러리](../windows/safeint-library.md)   
  [SafeInt 클래스](../windows/safeint-class.md)

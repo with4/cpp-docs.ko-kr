@@ -1,32 +1,30 @@
 ---
-title: "ALIAS (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Alias"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ALIAS directive"
+title: "별칭 (MASM) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Alias
+dev_langs: C++
+helpviewer_keywords: ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 39f539c18ce23fb3ef9630e4bfdfca8f265beb33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ALIAS (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-해당  **별칭** 지시문의 함수에 대 한 대체 이름을 만듭니다.  함수에 여러 개의 이름 또는 링커 \(LINK.exe\) 이전에 함수의 새 함수에 매핑할 수 있도록 라이브러리를 만들 수 있습니다.  
+# <a name="alias-masm"></a>ALIAS (MASM)
+**별칭** 지시문 함수에 대해 다른 이름이 만들어집니다.  이 함수에 대 한 이름을 여러 개 만들거나 링커 (LINK.exe) 이전 함수는 새 함수에 매핑할 수 있는 라이브러리를 만들 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -38,12 +36,12 @@ actual-name
   
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `actual-name`  
- 함수 또는 프로시저의 실제 이름입니다.  꺾쇠 괄호는 필수입니다.  
+ 함수 또는 프로시저의 실제 이름입니다.  꺾쇠 괄호는 반드시 있어야 합니다.  
   
  `alias`  
- 대체 또는 별칭 이름입니다.  꺾쇠 괄호는 필수입니다.  
+ 대체 또는 별칭 이름입니다.  꺾쇠 괄호는 반드시 있어야 합니다.  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

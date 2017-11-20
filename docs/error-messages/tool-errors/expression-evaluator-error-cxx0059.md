@@ -1,32 +1,31 @@
 ---
 title: "식 계산기 오류 CXX0059 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0059"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0059"
-  - "CXX0059"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0059
+dev_langs: C++
+helpviewer_keywords:
+- CXX0059
+- CAN0059
 ms.assetid: e8bdcb74-1315-4083-b24d-e47eac7d1ec0
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 505726cac8053f1956c1dafb38d53991a103fdfb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 식 계산기 오류 CXX0059
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-왼쪽 피연산자는 함수 이름이 아닌 클래스입니다.  
+# <a name="expression-evaluator-error-cxx0059"></a>식 계산기 오류 CXX0059
+함수 이름이 아닌 클래스입니다.  
   
- 함수 호출의 왼쪽 피연산자가 클래스 이름이며 함수 호출로 확인될 수 없습니다.  이 오류는 식에 멤버 함수의 이름을 생략하면 발생합니다.  
+ 함수 호출의 왼쪽된 피연산자는 클래스 이름이 및 함수 호출으로 확인할 수 없습니다. 식에서 멤버 함수 이름을 생략 하면이 오류가 발생할 수 있습니다.  
   
- 이 오류는 CAN0059와 동일합니다.
+ 이 오류는 can0059와 동일 합니다.

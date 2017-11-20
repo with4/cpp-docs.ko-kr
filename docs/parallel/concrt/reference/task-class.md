@@ -1,11 +1,10 @@
 ---
-title: "작업 클래스 (동시성 런타임) | Microsoft 문서"
+title: "task 클래스 (동시성 런타임) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,38 +17,21 @@ f1_keywords:
 - PPLTASKS/concurrency::task::scheduler
 - PPLTASKS/concurrency::task::then
 - PPLTASKS/concurrency::task::wait
-dev_langs:
-- C++
-helpviewer_keywords:
-- task class
+dev_langs: C++
+helpviewer_keywords: task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a44245ea212a770902787e01d1896612b7cb37b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="task-class-concurrency-runtime"></a>작업 클래스(동시성 런타임)
-PPL(병렬 패턴 라이브러리) `task` 클래스입니다. `task` 개체는 비동기식으로 실행할 수 있으며 동시성 런타임의 병렬 알고리즘을 통해 생성되는 기타 작업 및 병렬 작업과 동시에 실행할 수 있는 작업을 나타냅니다. 이러한 작업이 정상적으로 완료되면 `_ResultType` 형식의 결과가 생성됩니다. `task<void>` 형식의 작업에서는 결과가 생성되지 않습니다. 작업은 다른 작업과 관계없이 대기 및 취소할 수 있으며 연속 작업을 사용 하 여 다른 작업으로 구성 될 수도 있습니다 ( `then`), 조인 ( `when_all`) 및 선택 ( `when_any`) 패턴.  
+PPL(병렬 패턴 라이브러리) `task` 클래스입니다. `task` 개체는 비동기식으로 실행할 수 있으며 동시성 런타임의 병렬 알고리즘을 통해 생성되는 기타 작업 및 병렬 작업과 동시에 실행할 수 있는 작업을 나타냅니다. 이러한 작업이 정상적으로 완료되면 `_ResultType` 형식의 결과가 생성됩니다. `task<void>` 형식의 작업에서는 결과가 생성되지 않습니다. 작업은 다른 작업과 관계없이 대기 및 취소할 수 있으며 연속을 사용 하 여 다른 작업으로 구성 될 수도 있습니다 ( `then`), 조인 ( `when_all`) 및 선택 ( `when_any`) 패턴.  
   
 ## <a name="syntax"></a>구문  
   
@@ -103,7 +85,7 @@ class task;
 |[operator=](#operator_eq)|오버로드됨. 하나의 `task` 개체 콘텐츠를 다른 개체 콘텐츠로 바꿉니다.|  
 |[operator==](#operator_eq_eq)|오버로드됨. 두 `task` 개체가 동일한 내부 작업을 나타내는지 여부를 확인합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  자세한 내용은 참조 [작업 병렬 처리](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -127,11 +109,11 @@ void get() const;
 ### <a name="return-value"></a>반환 값  
  작업의 결과입니다.  
   
-### <a name="remarks"></a>주의  
- 작업이 취소 되는 경우에 대 한 호출 `get` 시킵니다는 [task_canceled](task-canceled-class.md) 예외입니다. 작업에서 다른 예외가 발생하거나 예외가 선행 작업에서 전파된 경우 `get`에 대한 호출은 해당 예외를 throw합니다.  
+### <a name="remarks"></a>설명  
+ 작업이 취소 되는 경우에 대 한 호출 `get` throw 됩니다는 [task_canceled](task-canceled-class.md) 예외입니다. 작업에서 다른 예외가 발생하거나 예외가 선행 작업에서 전파된 경우 `get`에 대한 호출은 해당 예외를 throw합니다.  
   
 > [!IMPORTANT]
->  에 [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] 앱을 호출 하지 않으면 [concurrency::task::wait](#wait) 또는 `get` ( `wait` 호출 `get`) STA에서 실행 되는 코드에서 그렇지 않으면 런타임에 throw [concurrency:: invalid_operation](invalid-operation-class.md) 하므로 이러한 메서드는 현재 스레드를 차단 하 고 응용 프로그램에서 응답 하지 않을 발생할 수 있습니다. 그러나 호출할 수는 `get` 결과 즉시 사용할 수 있는 작업 기반 연속에서 선행 작업의 결과 받는 방법.  
+>  에 [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] 앱을 호출 하지 마십시오 [concurrency::task::wait](#wait) 또는 `get` ( `wait` 호출 `get`) STA에서 실행 되는 코드에서 그렇지 않으면 런타임에서 throw [concurrency:: invalid_operation](invalid-operation-class.md) 때문에 이러한 메서드는 현재 스레드를 차단 하 고 응용 프로그램에서 응답 하지 않게 발생할 수 있습니다. 호출할 수 있습니다는 `get` 메서드 결과 즉시 사용할 수 없으므로 작업 기반 연속에서 선행 작업의 결과 받을 수 있습니다.  
   
 ##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
@@ -152,12 +134,12 @@ bool is_done() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 작업이 완료 되 면 false 그렇지 않은 경우 true입니다.  
+ 작업이 완료, false 그렇지 않은 경우 true입니다.  
   
-### <a name="remarks"></a>주의  
- 작업이 완료 되거나 (포함 또는 제외 사용자 예외)를 취소 하는 경우 true를 반환 합니다.  
+### <a name="remarks"></a>설명  
+ 작업이 완료 되거나 (포함 또는 사용자 예외 제외)를 취소 하는 경우 true를 반환 합니다.  
   
-##  <a name="operator_neq"></a>연산자! = 
+##  <a name="operator_neq"></a>operator! = 
 
  두 `task` 개체가 서로 다른 내부 작업을 나타내는지 여부를 확인합니다.  
   
@@ -189,7 +171,7 @@ task& operator= (task&& _Other);
   
 ### <a name="return-value"></a>반환 값  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `task`가 스마트 포인터와 같이 작동할 경우, 복사 할당 후 이 `task` 개체는 `_Other`와 동일한 실제 작업을 나타냅니다.  
   
 ##  <a name="operator_eq_eq"></a>연산자 = = 
@@ -253,8 +235,8 @@ task(
  `_Other`  
  소스 `task` 개체입니다.  
   
-### <a name="remarks"></a>주의  
- `task`에 대한 기본 생성자는 컨테이너 내에서 사용할 수 있는 작업을 허용하기 위해서만 존재합니다. 유효한 작업을 할당할 때까지 기본 생성 작업을 사용할 수 없습니다. 와 같은 메서드 `get`, `wait` 또는 `then` 를 발생 시킵니다는 [invalid_argument](../../../standard-library/invalid-argument-class.md) 는 기본 생성 작업에서 호출 하는 경우에 예외입니다.  
+### <a name="remarks"></a>설명  
+ `task`에 대한 기본 생성자는 컨테이너 내에서 사용할 수 있는 작업을 허용하기 위해서만 존재합니다. 유효한 작업을 할당할 때까지 기본 생성 작업을 사용할 수 없습니다. 와 같은 메서드 `get`, `wait` 또는 `then` throw 됩니다는 [invalid_argument](../../../standard-library/invalid-argument-class.md) 기본 생성 작업에서 호출 하는 동안 예외가 발생 했습니다.  
   
  `task_completion_event`에서 만든 작업은 작업 완료 이벤트가 설정되면 완료됩니다(연속 실행되도록 예약되어 있음).  
   
@@ -327,7 +309,7 @@ __declspec(
 ### <a name="remarks"></a>설명  
  Windows::Foundation::IAsyncInfo 인터페이스를 반환하는 람다 또는 구조 함수를 사용하는 `then`의 오버로드는 Windows 스토어 응용 프로그램에서만 사용할 수 있습니다.  
   
- 작업 연속을 사용 하 여 비동기 작업을 작성 하는 방법에 대 한 자세한 내용은 참조 하십시오. [작업 병렬 처리](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)합니다.  
+ 작업 연속을 사용 하 여 비동기 작업을 작성 하려면 하는 방법에 대 한 자세한 내용은 참조 하십시오. [작업 병렬 처리](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)합니다.  
   
 ##  <a name="wait"></a>대기 
 
@@ -343,8 +325,7 @@ task_status wait() const;
 ### <a name="remarks"></a>설명  
   
 > [!IMPORTANT]
->  에 [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] 앱을 호출 하지 않으면 `wait` STA에서 실행 되는 코드에서 그렇지 않으면 런타임에 throw [concurrency:: invalid_operation](invalid-operation-class.md) 이 메서드는 현재 스레드를 차단 하 고 응용 프로그램에서 응답 하지 않을 발생할 수 있습니다. 그러나 호출할 수는 [concurrency::task::get](#get) 작업 기반 연속에서 선행 작업의 결과 받는 방법입니다.  
+>  에 [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] 앱을 호출 하지 마십시오 `wait` STA에서 실행 되는 코드에서 그렇지 않으면 런타임에서 throw [concurrency:: invalid_operation](invalid-operation-class.md) 이 메서드는 현재 스레드를 차단 하 고 응용 프로그램에서 응답 하지 않게 발생할 수 있습니다. 호출할 수 있습니다는 [concurrency::task::get](#get) 메서드가 작업 기반 연속에서 선행 작업의 결과 받을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)
-

@@ -1,34 +1,33 @@
 ---
-title: "CCommand::SetParameterInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SetParameterInfo"
-  - "CCommand.SetParameterInfo"
-  - "CCommand::SetParameterInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetParameterInfo 메서드"
+title: 'Ccommand:: Setparameterinfo | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SetParameterInfo
+- CCommand.SetParameterInfo
+- CCommand::SetParameterInfo
+dev_langs: C++
+helpviewer_keywords: SetParameterInfo method
 ms.assetid: a70e92f4-1e73-41d7-a5b7-c6ebb45a6477
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 34a1bb0349b99bbc23d5ec588c9f7b7f50e1f19d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::SetParameterInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Specifies the native type of each command parameter.  
+# <a name="ccommandsetparameterinfo"></a>CCommand::SetParameterInfo
+각 명령 매개 변수의 네이티브 유형을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -39,14 +38,14 @@ Specifies the native type of each command parameter.
 ) throw( );  
 ```  
   
-#### 매개 변수  
- See [ICommandWithParameters::SetParameterInfo](https://msdn.microsoft.com/en-us/library/ms725393.aspx) in the *OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [icommandwithparameters:: Setparameterinfo](https://msdn.microsoft.com/en-us/library/ms725393.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CCommand 클래스](../../data/oledb/ccommand-class.md)

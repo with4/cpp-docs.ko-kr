@@ -1,64 +1,64 @@
 ---
 title: "상호 가져오기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AFXEXT 전처리기 기호"
-  - "AFX_DATA"
-  - "AFX_EXT_CLASS 매크로"
-  - "순환 가져오기"
-  - "DLL[C++], 가져오기"
-  - "실행 파일[C++], 가져오기"
-  - "DLL 내보내기[C++], 상호 가져오기"
-  - "확장 DLL[C++], 상호 가져오기"
-  - "importing DLL[C++], 상호 가져오기"
-  - "상호 DLL 가져오기[C++]"
-  - "실행 파일 상호 가져오기[C++]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- mutual DLL imports [C++]
+- AFX_DATA
+- importing DLLs [C++], mutual imports
+- mutually importing executable files [C++]
+- AFX_EXT_CLASS macro
+- circular imports
+- _AFXEXT preprocessor symbol
+- DLLs [C++], importing
+- executable files [C++], importing
+- extension DLLs [C++], mutual imports
+- exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 65b930cece9dd940da3171811fb027fccc3074b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 상호 가져오기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-가져오기가 상호 간에 즉 순환적으로 수행되는 경우에는 다른 실행 파일에 대해 내보내기 또는 가져오기를 수행하는 것이 복잡해집니다.  예를 들어 두 개의 DLL이 상호 재귀 함수와 비슷하게 상호 간에 기호를 가져올 수 있습니다.  
+# <a name="mutual-imports"></a>상호 가져오기
+Import에는 상호 (또는 순환) 내보내기 또는 가져오기를 다른 실행 파일에 대해 복잡해 집니다. 예를 들어 두 개의 Dll 상호 재귀 함수를 유사한 다른 기호를 가져옵니다.  
   
- 실행 파일\(대개 DLL\)의 상호 가져오기와 관련된 문제는 다른 실행 파일이 먼저 빌드되지 않으면 어떤 실행 파일도 빌드되지 않는다는 것입니다.  즉, 각 빌드 과정에는 다른 빌드 과정에서 생성된 가져오기 라이브러리를 입력으로 사용해야 합니다.  
+ 다른 첫 번째 작성 하지 않고 작성할 수 있는지 둘 다는 실행 파일 (대개 Dll) 상호 가져오기 문제가 발생 합니다. 각 빌드 프로세스의 다른 빌드 프로세스에서 생성 된 가져오기 라이브러리를 입력으로 필요 합니다.  
   
- 이 문제에 대한 해결책은 LIB 유틸리티를 \/DEF 옵션과 함께 사용하여 실행 파일을 빌드하지 않고도 가져오기 라이브러리를 생성하는 것입니다.  이 유틸리티를 사용하면 관련된 DLL의 수 또는 종속성의 복잡도와 상관 없이 필요한 모든 가져오기 라이브러리를 빌드할 수 있습니다.  
+ 솔루션은 LIB 유틸리티를 실행 파일을 작성 하지 않고 가져오기 라이브러리를 생성 하는 /DEF 옵션을 사용 하는 것입니다. 이 유틸리티를 사용 하 여 필요한 모든 가져오기 라이브러리를 빌드할 수 관련 된 Dll에 관계 없이 또는 복잡 한 정도 종속성의 합니다.  
   
- 상호 가져오기를 처리하기 위한 일반적인 해결책은 다음과 같습니다.  
+ 상호 가져오기를 처리 하기 위한 일반적인 해결책은입니다.  
   
-1.  각 DLL을 차례로 가져옵니다. 이 때 보다 적합한 순서가 있을 수는 있지만 어떤 순서든지 사용할 수 있습니다. 현재 필요한 모든 가져오기 라이브러리가 있으면 LINK를 실행하여 실행 파일\(DLL\)을 빌드합니다.  이렇게 하면 가져오기 라이브러리가 생성됩니다.  또는, LIB를 실행하여 가져오기 라이브러리를 생성합니다.  
+1.  차례로 각 DLL을 가져옵니다. (일부 순서는 적합 하지만 순서에 관계 없이 불가능.) 모든 필요한 가져오기 라이브러리가 존재 하 고 최신인 실행 파일 (DLL)를 작성 하는 링크를 실행 합니다. 가져오기 라이브러리를 생성 합니다. LIB 가져오기 라이브러리를 생성, 실행 합니다.  
   
-     \/DEF 옵션을 사용하여 LIB를 실행하면 확장명이 .EXP인 추가 파일이 생성됩니다.  이 .EXP 파일은 나중에 해당 실행 파일을 빌드하는 데 사용해야 합니다.  
+     /DEF 옵션으로 LIB 실행에서 추가 파일을 생성 합니다.는 합니다. EXP 확장입니다. 합니다. EXP 파일을 실행 파일을 빌드합니다 나중에 사용 해야 합니다.  
   
-2.  LINK 또는 LIB 중 하나를 사용하여 가져오기 라이브러리를 모두 빌드한 다음에는 이전 단계로 돌아가 LINK를 실행하여 아직 빌드되지 않은 실행 파일을 빌드합니다.  LINK 줄에 해당 .exp 파일을 지정해야 합니다.  
+2.  링크 또는 LIB를 사용 하 여 모든 가져오기 라이브러리를 빌드를 뒤로 돌아가서 링크 실행 파일을 이전 단계에서 빌드되지 않은 빌드를 실행 합니다. 참고 링크 줄에 해당.exp 파일을 지정 해야 합니다.  
   
-     이전에 LIB 유틸리티를 실행하여 DLL1에 대한 가져오기 라이브러리를 생성한 적이 있는 경우에는 DLL1.exp도 이미 생성되어 있을 것입니다.  DLL1.dll을 빌드할 때에는 DLL1.exp를 LINK에 대한 입력으로 사용해야 합니다.  
+     가져오기 라이브러리 DLL1을 생성 하 고 이전 LIB 유틸리티를 실행 하는 경우 생성 되어 있을 것은 dll1.exp 합니다. DLL1.exp DLL1.dlll 빌드할 때 링크에 대 한 입력으로 사용 해야 합니다.  
   
- 아래 그림에서는 두 개의 상호 가져오기 DLL인 DLL1과 DLL2에 대한 해결책을 보여 줍니다.  1단계는 DLL1에 대해 \/DEF 옵션을 설정하여 LIB를 실행하는 것입니다.  1단계에서는 DLL1.lib, 가져오기 라이브러리 및 DLL1.exp를 생성합니다.  2단계에서는 이 가져오기 라이브러리를 사용하여 DLL2를 빌드하고, DLL2의 기호에 대한 가져오기 라이브러리를 생성합니다.  3단계에서는 DLL1.exp 및 DLL2.lib를 입력으로 사용하여 DLL1을 빌드합니다.  DLL2의 가져오기 라이브러리를 빌드할 때에는 LIB가 사용되지 않았으므로 DLL2에 대한 .exp 파일은 필요하지 않습니다.  
+ 다음 그림에서는 두 개의 상호 가져오기 Dll, DLL1 및 d l l 2에 대 한 솔루션을 보여 줍니다. 1 단계 /DEF 옵션 집합을 DLL1 LIB를 실행 하는 것입니다. 1 단계 DLL1.lib, 한 가져오기 라이브러리 및 DLL1.exp를 생성합니다. 2 단계에서는 가져오기 라이브러리를 사용 하 여 빌드하려면 d l l 2, d l l 2의 기호에 대 한 가져오기 라이브러리를 생성 합니다. 3 단계 DLL1.exp 및 DLL2.lib 입력으로 사용 하 여 DLL1를 작성 합니다. LIB d l l 2의 가져오기 라이브러리를 빌드를 사용 하지 않았으므로 d l l 2에 대 한.exp 파일 필요한 아닌지 확인 합니다.  
   
- ![두 개의 DLL을 상호 가져오기로 링크](../build/media/vc37yj1.png "vc37YJ1")  
-두 개의 DLL을 상호 가져오기로 링크  
+ ![상호 가져오기를 사용 하 여 두 개의 Dll 연결](../build/media/vc37yj1.gif "vc37YJ1")  
+상호 가져오기를 사용하여 두 개의 DLL 연결  
   
-## \_AFXEXT의 제한 사항  
- 전처리기 기호 `_AFXEXT`는 여러 계층의 확장 DLL이 없는 경우에만 확장 DLL에 사용될 수 있습니다.  사용자의 확장 DLL에 있는 클래스에서 호출 또는 파생되고 MFC 클래스에서 파생되는 확장 DLL이 있는 경우에는 모호성을 피하기 위해 사용자 고유의 전처리기 기호를 사용해야 합니다.  
+## <a name="limitations-of-afxext"></a>_AFXEXT의 제한 사항  
+ 사용할 수는 `_AFXEXT` MFC 확장 Dll 오지 않아도 MFC 확장 Dll의 여러 계층에 전처리기 기호입니다. MFC 확장 호출 또는 사용자의 MFC 확장 Dll MFC 클래스에서 다음 파생 되는 클래스에서 파생 되는 Dll이 있는 경우에 모호성을 피하기 위해 사용자 고유의 전처리기 기호를 사용 해야 합니다.  
   
- Win32에서는 모든 데이터를 명시적으로 **\_\_declspec\(dllexport\)**\(DLL에서 내보내는 경우\) 및 **\_\_declspec\(dllimport\)**\(DLL에서 가져오는 경우\)으로 선언해야 합니다.  `_AFXEXT`를 정의할 때 MFC 헤더에서 **AFX\_EXT\_CLASS**가 올바르게 정의되는지 확인합니다.  
+ 이 문제는 해당에 Win32, 모든 데이터를 명시적으로 선언 해야 **__declspec (dllexport)** DLL에서 가져와야 하는 경우 및 **__declspec (dllimport)** DLL에서 가져와야 하는 경우. 정의 하는 경우 `_AFXEXT`, MFC 헤더 되도록 **AFX_EXT_CLASS** 제대로 정의 됩니다.  
   
- 여러 계층이 있는 경우에는 확장 DLL이 또 다른 확장 DLL에서 다른 클래스를 가져올 뿐만 아니라 새 클래스를 내보낼 수도 있으므로 **AFX\_EXT\_CLASS** 같은 하나의 기호만으로는 충분하지 않습니다.  이 문제를 해결하려면 사용자가 해당 DLL을 빌드 및 사용하고 있는지를 나타내는 특별한 전처리기 기호를 사용합니다.  예를 들어 A.dll과 B.dll이라는 두 개의 확장 DLL이 있는데,  이 두 개의 DLL은 각각 A.h와 B.h에서 일부 클래스를 내보내며  B.dll은 A.dll의 클래스를 사용한다고 가정할 경우,  헤더 파일은 다음과 같습니다.  
+ 있는 경우 여러 개의 레이어, 하나의 기호와 같은 **AFX_EXT_CLASS** MFC 확장 DLL이 다른 MFC 확장 DLL에서에서 다른 클래스를 가져올 뿐만 아니라 새 클래스를 내보낼 수 있으므로 충분 하지 않습니다. 이 문제를 해결 하기 위해 작성할 수 있도록 DLL 자체 DLL을 사용 하 여 비교를 나타내는 특수 전처리기 기호를 사용 합니다. 예를 들어 두 개의 MFC 확장 Dll, A.dll 및 B.dll 한다고 가정 합니다. 구성 파일은 각각의 일부 클래스 A.h와 B.h에 각각 내보냅니다. B.dll은 A.dll에서 클래스를 사용 합니다. 헤더 파일 모양은 다음과 같습니다.  
   
 ```  
 /* A.H */  
@@ -83,14 +83,14 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- A.dll의 경우 `/D A_IMPL`을 사용하여 빌드되며, B.dll의 경우 `/D B_IMPL`을 사용하여 빌드됩니다.  각 DLL에 대해 별도의 기호를 사용하면 B.dll이 빌드될 때 `CExampleB`는 내보내고 `CExampleA`는 가져오게 됩니다.  `CExampleA`는 A.dll이 빌드될 때 내보내고 B.dll 또는 다른 클라이언트에 의해 사용될 때 가져오게 됩니다.  
+ 사용 하 여 빌드 A.dll를 빌드할 때 `/D A_IMPL` 사용 하 여 빌드 B.dll를 빌드할 때 및 `/D B_IMPL`합니다. 각 DLL에 대 한 별도 기호를 사용 하 여 `CExampleB` 내보낸 및 `CExampleA` B.dll를 빌드할 때 가져온 합니다. `CExampleA`A.dll 빌드될 때 이며 B.dll (또는 다른 클라이언트)가 사용 될 때 가져오게 됩니다.  
   
- 내장 전처리기 기호인 **AFX\_EXT\_CLASS**와 `_AFXEXT`를 사용할 때에는 이러한 형식의 계층이 형성될 수 없습니다.  위에서 설명된 방법을 사용하면 MFC 자체가 액티브 기술, 데이터베이스 및 네트워크 확장 DLL을 빌드할 때 사용하는 메커니즘과 같은 방식으로 이 문제를 해결할 수 있습니다.  
+ 기본 제공을 사용 하는 경우 이러한 유형의 쌓기를 수행할 수 없는 **AFX_EXT_CLASS** 및 `_AFXEXT` 전처리기 기호입니다. 위에서 설명한 기술을 액티브 기술, 데이터베이스 및 네트워크 MFC 확장 Dll을 빌드할 때 메커니즘은 MFC를 직접 사용 하 여 방식으로이 문제를 해결 합니다.  
   
-## 전체 클래스를 내보내지 않는 경우  
- 전체 클래스를 내보내지 않는 경우에는 MFC 매크로에서 만드는 필수 데이터 항목을 올바르게 내보낼 수 있도록 해야 합니다.  `AFX_DATA`를 특정 클래스의 매크로에 맞게 다시 정의하여 이를 수행할 수 있습니다.  전체 클래스를 내보내지 않는 경우에는 이 작업을 반드시 수행해야 합니다.  
+## <a name="not-exporting-the-entire-class"></a>전체 클래스를 내보내지 않는 경우  
+ 전체 클래스를 내보내지 않는 경우에 MFC 매크로에서 만든 필요한 데이터 항목 내보내집니다 확인 해야 합니다. 다시 정의 하 여이 작업을 수행할 수 있습니다 `AFX_DATA` 특정 클래스의 매크로를 합니다. 이렇게 해야 전체 클래스를 내보내지 않는 언제 든 지 합니다.  
   
- 예를 들면 다음과 같습니다.  
+ 예:  
   
 ```  
 /* A.H */  
@@ -114,25 +114,25 @@ class CExampleA : public CObject
 #define AFX_DATA  
 ```  
   
-### 수행할 작업  
+### <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   
 -   [DLL에서 내보내기](../build/exporting-from-a-dll.md)  
   
--   [.DEF 파일을 사용하여 DLL에서 내보내기](../build/exporting-from-a-dll-using-def-files.md)  
+-   [사용 하 여 DLL에서 내보냅니다. DEF 파일](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [\_\_declspec\(dllexport\)을 사용하여 DLL에서 내보내기](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [__Declspec (dllexport)를 사용 하 여 DLL에서 내보내기](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [AFX\_EXT\_CLASS를 사용하여 내보내기 및 가져오기](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [AFX_EXT_CLASS를 사용 하 여 가져오기 및 내보내기](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [C\+\+ 함수를 C 언어 실행 파일에서 사용할 수 있도록 내보내기](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [C 언어 실행 파일에서 사용 하기 위해 c + + 함수 내보내기](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
 -   [사용할 내보내기 방법 결정](../build/determining-which-exporting-method-to-use.md)  
   
--   [\_\_declspec\(dllimport\)을 사용하여 응용 프로그램으로 가져오기](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [__Declspec (dllimport)을 사용 하 여 응용 프로그램으로 가져오기](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
-### 추가 정보  
+### <a name="what-do-you-want-to-know-more-about"></a>추가 정보  
   
--   [LIB 유틸리티 및 \/DEF 옵션](../build/reference/lib-reference.md)  
+-   [LIB 유틸리티 및 /DEF 옵션](../build/reference/lib-reference.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [가져오기 및 내보내기](../build/importing-and-exporting.md)

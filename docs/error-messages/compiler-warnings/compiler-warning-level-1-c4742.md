@@ -1,39 +1,37 @@
 ---
 title: "컴파일러 경고 (수준 1) C4742 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4742"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4742"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4742
+dev_langs: C++
+helpviewer_keywords: C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 934c7d14d95d0b90cfdcdb694f743e6b13abd0e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4742
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'var'의 맞춤이 'file1'과\(와\) 'file2'에서 서로 다릅니다\(number \- number\).  
+# <a name="compiler-warning-level-1-c4742"></a>컴파일러 경고(수준 1) C4742
+'var'에 'file1' 및 'file2'에서 서로 다른 맞춤: 번호와 번호  
   
- 두 파일에서 참조하거나 정의한 외부 변수의 맞춤이 각 파일에서 서로 다릅니다.  이 경고는 *file1*의 변수에 대한 `__alignof`가 *file2*의 변수에 대한 `__alignof`와 다르다는 사실을 컴파일러가 발견한 경우에 발생합니다.  이러한 상황은 다른 파일에서 변수를 선언할 때 호환되지 않는 형식을 사용하거나 서로 다른 파일에서 일치하지 않는 `#pragma pack`을 사용하는 경우에 발생할 수 있습니다.  
+ 외부 변수가 참조 하거나 두 파일에 정의 된 해당 파일에 다른 맞춤을 있습니다. 이 경고는 컴파일러 있음을 발견 될 때 내보내집니다 `__alignof` 에서 변수의 *file1* 에서 다른 `__alignof` 에서 변수의 *file2*합니다. 다른 파일에서 변수를 선언 하는 경우 호환 되지 않는 형식을 사용 하 여 또는 일치 하지 않는 사용 하 여이 발생할 수 있습니다 `#pragma pack` 서로 다른 파일에 있습니다.  
   
- 이 경고를 해결하려면 변수에 서로 다른 이름을 사용하거나 동일한 형식 정의를 사용해야 합니다.  
+ 이 경고를 해결 하려면 같은 형식 정의 사용 하거나 변수에 대 한 서로 다른 이름을 사용 합니다.  
   
- 자세한 내용은 [pack](../../preprocessor/pack.md) 및 [\_\_alignof 연산자](../../cpp/alignof-operator.md)를 참조하십시오.  
+ 자세한 내용은 참조 [팩](../../preprocessor/pack.md) 및 [__alignof 연산자](../../cpp/alignof-operator.md)합니다.  
   
-## 예제  
- 다음은 형식을 정의하는 첫 번째 파일입니다.  
+## <a name="example"></a>예제  
+ 형식을 정의 하는 첫 번째 파일입니다.  
   
 ```  
 // C4742a.c  
@@ -43,8 +41,8 @@ struct X {
 } global;  
 ```  
   
-## 예제  
- 다음 샘플에서는 C4742 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4742 오류가 발생 합니다.  
   
 ```  
 // C4742b.c  

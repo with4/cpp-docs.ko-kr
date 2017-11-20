@@ -1,85 +1,86 @@
 ---
-title: "Changing the Tab Order of Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], tab order"
-  - "focus, tab order"
-  - "tab controls, tab order"
-  - "Tabstop property for controls"
-  - "controls [C++], focus"
-  - "dialog box controls, tab order"
+title: "컨트롤의 탭 순서 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], tab order
+- focus, tab order
+- tab controls, tab order
+- Tabstop property for controls
+- controls [C++], focus
+- dialog box controls, tab order
 ms.assetid: e2cee764-4367-42d7-9563-65a68f76f5ff
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74fd31583c1b319b036e97330b342f6e6cde3647
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Changing the Tab Order of Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-탭 순서는 Tab 키를 눌렀을 때 대화 상자의 한 컨트롤에서 다음 컨트롤로 입력 포커스가 이동하는 순서입니다.  일반적으로 대화 상자에서 탭 순서는 왼쪽에서 오른쪽으로, 위쪽에서 아래쪽으로 진행됩니다.  각 컨트롤에는 입력 포커스를 받을 것인지 결정하는 **Tabstop** 속성이 있습니다.  
+# <a name="changing-the-tab-order-of-controls"></a>컨트롤의 탭 순서 변경
+탭 순서는 TAB 키 대화 상자 내에서 다음 단계로 한 컨트롤에서 입력된 포커스가 이동는 순서입니다. 일반적으로 탭 순서는 왼쪽에서 오른쪽, 위쪽에서 대화 상자에서 아래쪽으로 진행 됩니다. 각 컨트롤에는 **Tabstop** 입력된 포커스를 받을 것인지를 결정 하는 속성입니다.  
   
-### 컨트롤에 입력 포커스를 설정하려면  
+### <a name="to-set-input-focus-for-a-control"></a>컨트롤에 대 한 입력된 포커스를 설정 하려면  
   
-1.  [속성 창](../Topic/Properties%20Window.md)의 **Tabstop** 속성에서 **True** 또는 **False**를 선택합니다.  
+1.  에 [속성 창](/visualstudio/ide/reference/properties-window)선택, **True** 또는 **False** 에 **Tabstop** 속성입니다.  
   
- Tabstop 속성이 True로 설정되지 않은 컨트롤도 탭 순서에 포함되어야 합니다.  이것은 캡션이 없는 컨트롤에 대해 [니모닉\(선택키\)을 정의](../mfc/defining-mnemonics-access-keys.md)할 경우에 중요할 수 있습니다.  관련 컨트롤에 대한 선택키가 포함된 정적 텍스트는 탭 순서에서 관련 컨트롤 바로 앞에 와야 합니다.  
+ Tabstop 속성 탭 순서에 포함 될 필요가 True로 설정 되지 않은 제어 합니다. 이 중요할 수 있습니다, 예를 들어 있습니다 [(니모닉 선택) 키 정의](../windows/defining-mnemonics-access-keys.md) 캡션이 없는 컨트롤에 대 한 합니다. 관련된 컨트롤에 대 한 선택 키를 포함 하는 정적 텍스트 바로 앞에 있어야 관련된 컨트롤 탭 순서에서입니다.  
   
 > [!NOTE]
->  대화 상자에 겹치는 컨트롤이 있을 경우에 탭 순서를 변경하면 컨트롤 표시 방법이 변경될 수도 있습니다.  탭 순서가 뒤쪽인 컨트롤은 항상 탭 순서가 앞인 겹치는 컨트롤 위에 표시됩니다.  
+>  대화 상자에 겹치는 컨트롤이 있으면 탭 순서 변경 컨트롤이 표시 되는 방식을 변경할 수 있습니다. 탭 순서에서 나중에 제공 하는 컨트롤은 항상 탭 순서에서이 앞에 있는 겹치는 컨트롤 위에 표시 됩니다.  
   
-#### 대화 상자에서 모든 컨트롤의 현재 탭 순서를 보려면  
+#### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>대화 상자에서 모든 컨트롤에 대 한 현재 탭 순서를 보려면  
   
-1.  **서식** 메뉴에서 **탭 순서**를 선택합니다.  
+1.  에 **형식** 메뉴를 클릭 하 여 **탭 순서**합니다.  
   
- \-또는\-  
+ \- 또는 -  
   
--   Ctrl\+D를 누릅니다.  
+-   CTRL + 4.  
   
-#### 대화 상자에서 모든 컨트롤의 탭 순서를 변경하려면  
+#### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>대화 상자에서 모든 컨트롤의 탭 순서를 변경 하려면  
   
-1.  **서식** 메뉴에서 **탭 순서**를 선택합니다.  
+1.  에 **형식** 메뉴를 클릭 하 여 **탭 순서**합니다.  
   
-     그러면 각 컨트롤의 왼쪽 위 모퉁이에 현재 탭 순서가 숫자로 표시됩니다.  
+     각 컨트롤의 왼쪽 위 모서리에 번호 현재 탭 순서에서 그 위치를 보여 줍니다.  
   
-2.  Tab 키를 눌렀을 때 이동할 순서대로 각 컨트롤을 클릭하여 탭 순서를 설정합니다.  
+2.  TAB 키에 따라 원하는 순서 대로 각 컨트롤을 클릭 하 여 탭 순서를 설정 합니다.  
   
-3.  **Enter** 키를 눌러 **탭 순서** 모드를 종료합니다.  
+3.  키를 눌러 **ENTER** 나가려면 **탭 순서** 모드입니다.  
   
     > [!TIP]
-    >  탭 순서 모드에서 Esc 키나 Enter 키를 누르면 탭 순서 변경 기능을 비활성화할 수 있습니다.  
+    >  탭 순서 모드를 입력 하면 탭 순서를 변경 하는 기능을 사용 하지 않도록 설정 하려면 ESC 키 또는 ENTER를 눌러 수 있습니다.  
   
-#### 두 개 이상의 컨트롤에 대한 탭 순서를 변경하려면  
+#### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>두 개 이상의 컨트롤의 탭 순서를 변경 하려면  
   
-1.  **서식** 메뉴에서 **탭 순서**를 선택합니다.  
+1.  **형식** 메뉴 선택 **탭 순서**합니다.  
   
-2.  순서 변경을 시작할 위치를 지정합니다.  위치를 지정하려면 **Ctrl** 키를 누른 채로 변경된 순서를 시작할 위치 앞의 컨트롤을 클릭합니다.  
+2.  지정 순서로 변경 시작 됩니다. 이 위해 키를 누른 채는 **CTRL** 키 변경된 순서를 시작할 원하는 앞의 컨트롤을 클릭 합니다.  
   
-     예를 들어, 7부터 9 컨트롤의 순서를 변경하려면 Ctrl 키를 누른 채로 6 컨트롤을 먼저 선택합니다.  
+     예를 들어 7-9 컨트롤의 순서를 변경 하려면 ctrl 키를 길게 누른 다음 6 컨트롤을 먼저 선택 합니다.  
   
     > [!NOTE]
-    >  특정 컨트롤을 숫자 1\(탭 순서에서 첫 번째\)로 설정하려면 해당 컨트롤을 두 번 클릭합니다.  
+    >  특정 컨트롤 (순서 탭)에서 첫 번째 숫자 1 설정 하려면 컨트롤을 두 번 클릭 합니다.  
   
-3.  Ctrl 키를 놓고 Tab 키에 따라 이동할 순서대로 컨트롤을 클릭합니다.  
+3.  CTRL 키를 해제 한 다음 해당 지점에 따라 TAB 키를 원하는 순서 대로 컨트롤을 클릭 합니다.  
   
-4.  **Enter** 키를 눌러 **탭 순서** 모드를 종료합니다.  
+4.  키를 눌러 **ENTER** 나가려면 **탭 순서** 모드입니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](https://msdn.microsoft.com/library/f45fce5x.aspx) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](https://msdn.microsoft.com/library/xbx3z216.aspx)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](https://msdn.microsoft.com/library/h6270d0z.aspx)합니다.  
   
-### 요구 사항  
+### <a name="requirements"></a>요구 사항  
  Win32  
   
-## 참고 항목  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>참고 항목  
+ [대화 상자에 컨트롤 배치](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [대화 상자의 컨트롤](../windows/controls-in-dialog-boxes.md)   
  [컨트롤](../mfc/controls-mfc.md)
+

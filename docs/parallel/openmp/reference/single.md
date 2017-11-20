@@ -1,46 +1,44 @@
 ---
-title: "single | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Single"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "single OpenMP directive"
+title: "단일 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Single
+dev_langs: C++
+helpviewer_keywords: single OpenMP directive
 ms.assetid: 85cf94fb-cb9c-4d82-8609-adffa9f552e1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 898a175963698d1f44f90f08c21015a765892017
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# single
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-코드 섹션을 마스터 스레드가 아닌 단일 스레드에서 실행 되도록 지정할 수 있습니다.  
+# <a name="single"></a>단일
+코드의 섹션을 마스터 스레드에 반드시 단일 스레드에서 실행할지 지정할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-#pragma omp single [clauses]   
+#pragma omp single [clauses]   
 {  
    code_block   
 }  
 ```  
   
-#### 매개 변수  
- `clause`\(선택적 요소\)  
- 0 개 이상의 절입니다.  목록에 대 한 설명 부분에서 지원 절을 참조 하십시오.  **단일**.  
+#### <a name="parameters"></a>매개 변수  
+ `clause`(선택 사항)  
+ 0 개 이상의 절입니다. 지 원하는 절을 목록에 대 한 설명 섹션을 참조 **단일**합니다.  
   
-## 설명  
- 해당  **단일** 지시문 다음 OpenMP 절을 지원 합니다.  
+## <a name="remarks"></a>설명  
+ **단일** 지시문 다음 OpenMP 절을 지원 합니다.  
   
 -   [copyprivate](../../../parallel/openmp/reference/copyprivate.md)  
   
@@ -50,11 +48,11 @@ caps.handback.revision: 11
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- [master](../../../parallel/openmp/reference/master.md) 지시문을 사용 하면 코드 부분 마스터 스레드에서만 실행 되도록 지정 합니다.  
+ [마스터](../../../parallel/openmp/reference/master.md) 지시문을 사용 하면 코드의 섹션 마스터 스레드에 대해서만 실행 않아야 함을 지정할 수 있습니다.  
   
- 자세한 내용은 [2.4.3 single Construct](../../../parallel/openmp/2-4-3-single-construct.md)를 참조하십시오.  
+ 자세한 내용은 참조 [2.4.3 single 생성](../../../parallel/openmp/2-4-3-single-construct.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // omp_single.cpp  
@@ -79,9 +77,12 @@ int main() {
 }  
 ```  
   
-  **입력을 읽기**  
-**결과 계산 합니다.**  
-**결과 계산 합니다.**  
-**출력 작성**   
-## 참고 항목  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+read input  
+compute results  
+compute results  
+write output  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [지시문](../../../parallel/openmp/reference/openmp-directives.md)

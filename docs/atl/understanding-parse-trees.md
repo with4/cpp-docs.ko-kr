@@ -1,28 +1,27 @@
 ---
-title: "Understanding Parse Trees | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parse trees"
+title: "ATL 등록자 및 구문 분석 트리 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 091ad40625c85f465e3989dd2dff790c630f6538
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Understanding Parse Trees
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-각 구문 분석 트리는 있는 등록자 스크립트에 하나 이상의 구문 분석 트리를 정의할 수 있습니다.  
+# <a name="understanding-parse-trees"></a>구문 분석 트리 이해
+각 구문 분석 트리의 형식은 등록자 스크립트에서 하나 이상의 구문 분석 트리를 정의할 수 있습니다.  
   
 ```  
 <root key>{<registry expression>}+  
@@ -31,15 +30,15 @@ caps.handback.revision: 7
  다음은 각 문자에 대한 설명입니다.  
   
 ```  
-<root key> ::=  HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
-               HKEY_LOCAL_MACHINE | HKEY_USERS |  
-               HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
-               HKEY_CURRENT_CONFIG | HKCR | HKCU |  
-               HKLM | HKU | HKPD | HKDD | HKCC  
+<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
+    HKEY_LOCAL_MACHINE | HKEY_USERS |  
+    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
+    HKEY_CURRENT_CONFIG | HKCR | HKCU |  
+    HKLM | HKU | HKPD | HKDD | HKCC  
 <registry expression> ::= <Add Key> | <Delete Key>  
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
-              [<Key Value>][{< Add Key>}]  
-<Delete Key> ::=  Delete<Key Name>  
+ [<Key Value>][{<Add Key>}]  
+<Delete Key> ::= Delete<Key Name>  
 <Key Name> ::= '<AlphaNumeric>+'  
 <AlphaNumeric> ::= any character not NULL, i.e. ASCII 0  
 <Key Value> ::== <Key Type><Key Name>  
@@ -48,24 +47,25 @@ caps.handback.revision: 7
 ```  
   
 > [!NOTE]
->  `HKEY_CLASSES_ROOT`및 `HKCR` 같습니다.  `HKEY_CURRENT_USER`및 `HKCU` 같습니다. 합니다.  
+> `HKEY_CLASSES_ROOT`및 `HKCR` 동일 합니다. `HKEY_CURRENT_USER` 및 `HKCU` ; 동일 하며 까지입니다.  
   
- 구문 분석 트리는 \< 루트 \> 키를 여러 키와 하위 키를 추가할 수 있습니다.  파서가 모든 하위 구문 분석 완료 될 때까지 과정에서 하위 키의 핸들을 열어 둡니다.  이 방법은 다음 예제와 같이 한 번에 하나의 키를 운영 체제 보다 더 효율적입니다.  
+ 구문 분석 트리 여러 키와 하위 키에 추가할 수는 \<루트 키 >입니다. 이 과정에서 유지 하위 키의 핸들 열기 파서가 모든 하위 키를 구문 분석을 완료 될 때까지 됩니다. 다음 예제와 같이이 방법은 한 번에 단일 키에서 작동 하는 보다 더 효율적입니다.  
   
 ```  
 HKEY_CLASSES_ROOT  
 {  
-   'MyVeryOwnKey'  
-   {  
-      'HasASubKey'  
-      {  
-         'PrettyCool?'  
-      }  
-   }  
+ 'MyVeryOwnKey'  
+ {  
+ 'HasASubKey'  
+ {  
+ 'PrettyCool'  
+ }  
+ }  
 }  
 ```  
   
- 여기에서 등록 자가 처음에 열립니다 \(만듭니다\) `HKEY_CLASSES_ROOT\MyVeryOwnKey`.  다음은 표시 `MyVeryOwnKey` 하위 키에 있습니다.  키를 닫을 것이 아니라 `MyVeryOwnKey`, 등록자 핸들을 유지 하 고 열립니다 \(만듭니다\) `HasASubKey` 이 상위 핸들을 사용 하 여.  \(부모 핸들이 없습니다 열려 있을 때 시스템 레지스트리 느려질 수 있습니다.\) 따라서 열기 `HKEY_CLASSES_ROOT\MyVeryOwnKey` 하 고 여 `HasASubKey` 와 `MyVeryOwnKey` 부모 열기 보다 빠른 이므로 `MyVeryOwnKey`를 `MyVeryOwnKey`, 및 다음 열기 `MyVeryOwnKey\HasASubKey`.  
+ 여기에서 등록자를 처음 열 (만듭니다) `HKEY_CLASSES_ROOT\MyVeryOwnKey`합니다. 그런 다음 발견 하는 `MyVeryOwnKey` 하위 키가 있습니다. 키를 닫을 것이 아니라 `MyVeryOwnKey`, 등록자 핸들 유지 되 고 열립니다 (만듭니다) `HasASubKey` 이 부모 핸들을 사용 합니다. (시스템 레지스트리에 낮아질 수 있습니다 부모 핸들이 없으면 열릴 때.) 따라서 열기 `HKEY_CLASSES_ROOT\MyVeryOwnKey` 을 여는 경우 및 `HasASubKey` 와 `MyVeryOwnKey` 부모 여 보다 빠르게 그대로 `MyVeryOwnKey`닫는, `MyVeryOwnKey`, 고을 여는 `MyVeryOwnKey\HasASubKey`합니다.  
   
-## 참고 항목  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
+## <a name="see-also"></a>참고 항목  
+ [등록자 스크립트 만들기](../atl/creating-registrar-scripts.md)
+

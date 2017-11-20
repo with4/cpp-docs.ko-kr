@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- operator overloading [C++], rules
+dev_langs: C++
+helpviewer_keywords: operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 882c3777d2744a8a693512f564d7c3b1f1c1a46e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 92bcbc85a3edf683d00818a4c1da76849dbc29cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="general-rules-for-operator-overloading"></a>연산자 오버로드에 대한 일반 규칙
 다음 규칙은 오버로드된 연산자를 구현하는 방법을 제한합니다. 그러나에 적용 되지 않습니다는 [새](../cpp/new-operator-cpp.md) 및 [삭제](../cpp/delete-operator-cpp.md) 은 별도로 다루는 연산자.  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/25/2017
   
 -   멤버 함수로 선언된 이항 연산자는 인수를 한 개 사용합니다. 전역 함수로 선언된 경우 인수를 두 개 사용합니다.  
   
--   단항 또는 이항 연산자는 연산자를 사용할 수 있으면 (**&**, ** \* **, ** + **, 및 ** - **)를 별도로 각각 사용을 오버 로드할 수 있습니다.  
+-   단항 또는 이항 연산자는 연산자를 사용할 수 있으면 (**&**,  **\*** ,  **+** , 및  **-** )를 별도로 각각 사용을 오버 로드할 수 있습니다.  
   
 -   오버로드된 연산자는 기본 인수를 사용할 수 없습니다.  
   

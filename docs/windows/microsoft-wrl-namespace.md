@@ -1,37 +1,36 @@
 ---
-title: "Microsoft::WRL 네임스페이스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL"
-  - "module/Microsoft::WRL"
-  - "async/Microsoft::WRL"
-  - "internal/Microsoft::WRL"
-  - "event/Microsoft::WRL"
-  - "ftm/Microsoft::WRL"
-  - "client/Microsoft::WRL"
-  - "corewrappers/Microsoft::WRL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WRL 네임스페이스"
+title: 'Microsoft:: wrl Namespace | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- implements/Microsoft::WRL
+- module/Microsoft::WRL
+- async/Microsoft::WRL
+- internal/Microsoft::WRL
+- event/Microsoft::WRL
+- ftm/Microsoft::WRL
+- client/Microsoft::WRL
+- corewrappers/Microsoft::WRL
+dev_langs: C++
+helpviewer_keywords: WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b3c3bef713bd63b7b82761ce36ab039556e63c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Microsoft::WRL 네임스페이스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]을 구성하는 기본 형식을 정의합니다.  
+# <a name="microsoftwrl-namespace"></a>Microsoft::WRL 네임스페이스
+Windows 런타임 c + + 템플릿 라이브러리를 구성 하는 기본 형식을 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,11 +57,11 @@ namespace Microsoft::WRL;
 |[DeferrableEventArgs 클래스](../windows/deferrableeventargs-class.md)|지연에 대한 이벤트 인수 형식에 사용되는 템플릿 클래스입니다.|  
 |[EventSource 클래스](../windows/eventsource-class.md)|이벤트를 나타냅니다. `EventSource` 멤버 함수는 이벤트 처리기를 추가, 삭제 및 호출합니다.|  
 |[FtmBase 클래스](../windows/ftmbase-class.md)|자유 스레드된 마샬러 개체를 나타냅니다.|  
-|[모듈 클래스](../windows/module-class.md)|관련된 개체의 컬렉션을 나타냅니다.|  
+|[Module 클래스](../windows/module-class.md)|관련된 개체의 컬렉션을 나타냅니다.|  
 |[RuntimeClass 클래스](../windows/runtimeclass-class.md)|지정된 수의 인터페이스를 상속하는 인스턴스화된 클래스를 나타내고 지정된 Windows 런타임, 클래식 COM 및 약한 참조 지원을 제공합니다.|  
 |[SimpleActivationFactory 클래스](../windows/simpleactivationfactory-class.md)|Windows 런타임 또는 클래식 COM 기본 클래스를 만드는 기본적인 메커니즘을 제공합니다.|  
 |[SimpleClassFactory 클래스](../windows/simpleclassfactory-class.md)|기본 클래스를 만드는 기본적인 메커니즘을 제공합니다.|  
-|[WeakRef 클래스](../windows/weakref-class.md)|나타냅니다는 *약한 참조* 하지 클래식 COM. Windows 런타임으로 사용할 수 있는 약한 참조는 액세스할 수 있거나 액세스할 수 없는 개체를 나타냅니다.|  
+|[WeakRef 클래스](../windows/weakref-class.md)|클래식 COM이 아닌 Windows 런타임에서만 사용할 수 있는 *약한 참조* 를 나타냅니다. 약한 참조는 액세스할 수 있거나 액세스할 수 없는 개체를 나타냅니다.|  
   
 ### <a name="structures"></a>구조체  
   
@@ -90,7 +89,7 @@ namespace Microsoft::WRL;
 |[콜백 함수](../windows/callback-function-windows-runtime-cpp-template-library.md)|멤버 함수가 콜백 메서드인 개체를 만듭니다.|  
 |[CreateActivationFactory 함수](../windows/createactivationfactory-function.md)|Windows 런타임으로 활성화할 수 있는 지정된 클래스의 인스턴스를 생성하는 팩터리를 만듭니다.|  
 |[CreateClassFactory 함수](../windows/createclassfactory-function.md)|지정된 클래스의 인스턴스를 생성하는 팩터리를 만듭니다.|  
-|[Make 함수](../windows/make-function.md)|지정된 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 클래스를 초기화합니다.|  
+|[Make 함수](../windows/make-function.md)|지정된 된 Windows 런타임 클래스를 초기화합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h  
@@ -98,4 +97,4 @@ namespace Microsoft::WRL;
  **네임스페이스:** Microsoft::WRL  
   
 ## <a name="see-also"></a>참고 항목  
- [Microsoft::WRL::Wrappers 네임 스페이스](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Microsoft::WRL::Wrappers 네임스페이스](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -1,32 +1,30 @@
 ---
-title: "binary_search(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_search"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_search 함수[STL/CLR]"
+title: binary_search (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_search
+dev_langs: C++
+helpviewer_keywords: binary_search function [STL/CLR]
 ms.assetid: 520869cc-7cd3-4c81-b439-05f042474416
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e927620259befd53dacbd6b666414a43bd6feaf5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# binary_search(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-지정된 값과 같거나 이진 조건자가 지정되었다는 의미에서 동일한 정렬된 범위에 요소가 있는지 여부를 테스트합니다.  
+# <a name="binarysearch-stlclr"></a>binary_search(STL/CLR)
+정렬된 범위에 지정된 값과 같거나 이진 조건자가 지정한 의미에 따라 지정된 값과 같은 요소가 있는지 여부를 테스트합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
@@ -36,13 +34,13 @@ template<class _FwdIt, class _Ty, class _Pr> inline
         const _Ty% _Val, _Pr _Pred);  
 ```  
   
-## 설명  
- This function behaves the same as the STL function `binary_search`.  자세한 내용은 [binary\_search](../Topic/binary_search.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 함수 동일 하 게 동작 `binary_search`합니다. 자세한 내용은 참조 [binary_search](../standard-library/algorithm-functions.md#binary_search)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<알고리즘 cliext/>  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [algorithm(STL/CLR)](../dotnet/algorithm-stl-clr.md)

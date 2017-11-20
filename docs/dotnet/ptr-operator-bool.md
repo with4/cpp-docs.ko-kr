@@ -1,51 +1,50 @@
 ---
-title: "ptr::operator bool | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::operator bool"
-  - "ptr.operator bool"
-  - "operator bool"
-  - "msclr::com::ptr::operator bool"
-  - "msclr.com.ptr.operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::operator bool"
+title: ptr::operator bool | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::operator bool
+- ptr.operator bool
+- operator bool
+- msclr::com::ptr::operator bool
+- msclr.com.ptr.operator bool
+dev_langs: C++
+helpviewer_keywords: ptr::operator bool
 ms.assetid: 31123377-6ecd-4cef-9b75-3db3996fbcd1
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f197eb8c1370598695dde72d802e02153258ed8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::operator bool
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Operator for using `com::ptr` in a conditional expression.  
+# <a name="ptroperator-bool"></a>ptr::operator bool
+사용 하 여에 대 한 연산자 `com::ptr` 조건식에서입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 operator bool();  
 ```  
   
-## 반환 값  
- `true` if the owned COM object is valid; `false` otherwise.  
+## <a name="return-value"></a>반환 값  
+ `true`소유 COM 개체가 잘못 되었습니다. `false` 그렇지 않은 경우.  
   
-## 설명  
- The owned COM object is valid if it is not `nullptr`.  
+## <a name="remarks"></a>설명  
+ 소유 된 COM 개체는이 아닌 경우 유효 `nullptr`합니다.  
   
- This operator actually converts to `_detail_class::_safe_bool` which is safer than `bool` because it cannot be converted to an integral type.  
+ 이 연산자를 실제로 변환 `_detail_class::_safe_bool` 보다 더 안전 하 게 되 `bool` 정수 계열 형식으로 변환할 수 없기 때문입니다.  
   
-## 예제  
- This example implements a CLR class that uses a `com::ptr` to wrap its private member `IXMLDOMDocument` object.  The `CreateInstance` member function uses `operator bool` after creating the new document object to determine if it is valid and writes to the console if it is.  
+## <a name="example"></a>예제  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `CreateInstance` 멤버 함수를 사용 하 여 `operator bool` 올바른지와 경우 콘솔에 쓰는 것을 확인 하려면 새 문서 개체를 만든 후 합니다.  
   
 ```  
 // comptr_op_bool.cpp  
@@ -92,12 +91,15 @@ int main() {
 }  
 ```  
   
-  **DOM Document created.**   
-## 요구 사항  
- **Header file** \<msclr\\com\\ptr.h\>  
+```Output  
+DOM Document created.  
+```  
   
- **Namespace** msclr::com  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
-## 참고 항목  
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>참고 항목  
  [ptr 멤버](../dotnet/ptr-members.md)   
- [ptr::operator\!](../dotnet/ptr-operator-logical-not.md)
+ [ptr::operator!](../dotnet/ptr-operator-logical-not.md)

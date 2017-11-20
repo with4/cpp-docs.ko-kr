@@ -1,41 +1,39 @@
 ---
-title: "deque::clear(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear 멤버[STL/CLR]"
+title: 'deque:: clear (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 1d9a3d11-b3fa-43a7-a508-7a05cbcd91bf
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d5bb9f4c00976ce60901148509d9390b85412ab7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::clear(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeclear-stlclr"></a>deque::clear(STL/CLR)
 모든 요소를 제거합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void clear();  
 ```  
   
-## 설명  
- 멤버함수는 효율적으로 [deque::erase](../dotnet/deque-erase-stl-clr.md)`(` [deque::begin](../dotnet/deque-begin-stl-clr.md)`(),` [deque::end](../dotnet/deque-end-stl-clr.md)`())`을 호출합니다.  제어되는 시퀀스 비어 있는지 확인하기 위해 사용합니다.  
+## <a name="remarks"></a>설명  
+ 멤버 함수 시그니처 [deque:: erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md) `(` [deque:: begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md) `(),` [deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md) `())`. 제어 되는 시퀀스 비어 있는지 확인 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_deque_clear.cpp   
@@ -72,15 +70,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 0**  
- **a b**  
-**size\(\) \= 0**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::erase](../dotnet/deque-erase-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::erase(STL/CLR)](../dotnet/deque-erase-stl-clr.md)

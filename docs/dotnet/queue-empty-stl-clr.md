@@ -1,41 +1,39 @@
 ---
-title: "queue::empty(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 멤버[STL/CLR]"
+title: 'queue:: empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 318ccff9-23eb-4045-8c12-d3ea89159e87
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2240da6f19354144a9b0967fe1e91e9b03d13333
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# queue::empty(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tests whether no elements are present.  
+# <a name="queueempty-stlclr"></a>queue::empty(STL/CLR)
+요소가 있는지 여부를 테스트합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 bool empty();  
 ```  
   
-## 설명  
- The member function returns true for an empty controlled sequence.  It is equivalent to [queue::size](../dotnet/queue-size-stl-clr.md)`() == 0`.  You use it to test whether the queue is empty.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`합니다. 큐가 비어 있는지 여부를 테스트 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_queue_empty.cpp   
@@ -68,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::size](../dotnet/queue-size-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::size(STL/CLR)](../dotnet/queue-size-stl-clr.md)

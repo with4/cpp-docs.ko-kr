@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __cdecl_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __cdecl keyword [C++]
+f1_keywords: __cdecl_cpp
+dev_langs: C++
+helpviewer_keywords: __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5216462ad00d332aec2d00eba78f5d84cdfd7c82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: f11414914bb1682c0bd5e05d80ab2ebbbe3ae72a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdecl"></a>__cdecl
 **Microsoft 전용**  
@@ -41,7 +36,7 @@ ms.lasthandoff: 09/25/2017
 > [!NOTE]
 >  관련된 정보를 참조 하십시오. [데코 레이트 된 이름](../build/reference/decorated-names.md)합니다.  
   
- 변수나 함수 이름 앞에 `__cdecl` 한정자를 넣습니다. C 명명 및 호출 규칙은 기본값을 사용 해야에 `__cdecl` x86 코드를 지정 했을 때의 **/Gv** (vectorcall), **/Gz** (stdcall) 또는 ** /Gr** (fastcall) 컴파일러 옵션입니다. [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) 컴파일러 옵션 강제로 `__cdecl` 호출 규칙입니다.  
+ 변수나 함수 이름 앞에 `__cdecl` 한정자를 넣습니다. C 명명 및 호출 규칙은 기본값을 사용 해야에 `__cdecl` x86 코드를 지정 했을 때의 **/Gv** (vectorcall), **/Gz** (stdcall) 또는  **/Gr** (fastcall) 컴파일러 옵션입니다. [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) 컴파일러 옵션 강제로 `__cdecl` 호출 규칙입니다.  
   
  ARM 및 x64 프로세서에서는 컴파일러가 `__cdecl`을 수락하지만 일반적으로 무시합니다. ARM 및 x64에서는 규칙에 따라 인수는 가능한 경우 레지스터로 전달되고 이후 인수는 스택에 전달됩니다. X64에서 코드를 사용 하 여 `__cdecl` 재정의 하는 **/Gv** 컴파일러 옵션 및 기본 x64 호출 규칙을 사용 합니다.  
   

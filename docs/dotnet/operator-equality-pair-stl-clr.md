@@ -1,33 +1,30 @@
 ---
-title: "operator== (pair)(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator== 멤버[STL/CLR]"
+title: "연산자 = = (pair) (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: 2b4879a1-f326-4fb3-b113-bd8d457f9802
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c795f872b972d490dac483b2656ad3cf7ba4d74c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# operator== (pair)(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-쌍 비교와 동일합니다.  
+# <a name="operator-pair-stlclr"></a>operator== (pair)(STL/CLR)
+쌍 같은지 비교 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Value1,  
@@ -36,17 +33,17 @@ template<typename Value1,
         pair<Value1, Value2>% right);  
 ```  
   
-#### 매개 변수  
- left  
- 비교 왼쪽 쌍입니다.  
+#### <a name="parameters"></a>매개 변수  
+ 왼쪽  
+ 비교할 왼쪽된 쌍입니다.  
   
- right  
- 비교 오른쪽 쌍입니다.  
+ 오른쪽  
+ 비교할 오른쪽 쌍입니다.  
   
-## 설명  
- 연산자 함수는 `left``.first ==` `right``.first &&` `left``.second ==` `right``.second`을 반환합니다.   두 쌍의 요소에서 요소를 비교할 때  `left` 가  `right` 와 순서가 같은지 여부의 테스트에 사용합니다.  
+## <a name="remarks"></a>설명  
+ 연산자 함수 반환 `left.first ==` `right.first &&` `left.second ==` `right.second`합니다. 테스트를 사용 하는지 여부를 `left` 정렬 되는 동일 `right` 때 두 쌍은 요소 별로 비교 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_pair_operator_eq.cpp   
@@ -69,19 +66,22 @@ int main()
   
 ```  
   
-  **\[x, 3\]**  
-**\[x, 4\]**  
-**\[x 3\] \=\= \[x 3\] 은  True 입니다.**  
-**\[x 3\] \=\= \[x 4\] 은 False입니다.**   
-## 요구 사항  
- **Header:** \<cliext\/utility\>  
+```Output  
+[x, 3]  
+[x, 4]  
+[x 3] == [x 3] is True  
+[x 3] == [x 4] is False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/유틸리티 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [pair](../dotnet/pair-stl-clr.md)   
- [operator\!\= \(pair\)](../dotnet/operator-inequality-pair-stl-clr.md)   
- [operator\< \(pair\)](../dotnet/operator-less-than-pair-stl-clr.md)   
- [operator\>\= \(pair\)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
- [operator\> \(pair\)](../dotnet/operator-greater-than-pair-stl-clr.md)   
- [operator\<\= \(pair\)](../dotnet/operator-less-or-equal-pair-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [pair (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [operator! = (pair) (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)   
+ [연산자\< (pair) (STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)   
+ [연산자 > = (pair) (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
+ [연산자 > (pair) (STL/CLR)](../dotnet/operator-greater-than-pair-stl-clr.md)   
+ [operator<= (pair)(STL/CLR)](../dotnet/operator-less-or-equal-pair-stl-clr.md)

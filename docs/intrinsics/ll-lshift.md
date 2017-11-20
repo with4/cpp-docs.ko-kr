@@ -1,36 +1,36 @@
 ---
-title: "__ll_lshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ll_lshift_cpp"
-  - "__ll_lshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ll_lshift 내장 함수"
-  - "__ll_lshift 내장 함수"
+title: __ll_lshift | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __ll_lshift_cpp
+- __ll_lshift
+dev_langs: C++
+helpviewer_keywords:
+- ll_lshift intrinsic
+- __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0d827b375cd382ff4f298f2933fc8a3109d2f846
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __ll_lshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lllshift"></a>__ll_lshift
 **Microsoft 전용**  
   
- 지정한 비트 수 만큼 왼쪽으로 이동 하는 제공 된 64 비트 값입니다.  
+ 제공 된 64 비트 값 왼쪽에 지정 된 비트 수 만큼 이동합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 unsigned __int64 __ll_lshift(  
@@ -39,30 +39,30 @@ unsigned __int64 __ll_lshift(
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `Mask`  
- 왼쪽 시프트 64 비트 정수 값입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `Mask`  
+ 왼쪽으로 이동 하려면 64 비트 정수 값입니다.  
   
- \[in\] `nBit`  
- 이동할 비트 수가 있습니다.  
+ [in] `nBit`  
+ 이동할 비트 수입니다.  
   
-## 반환 값  
- 마스크 왼쪽으로 시프트 `nBit` 비트.  
+## <a name="return-value"></a>반환 값  
+ / / 마스크 41을 왼쪽으로 이동 `nBit` 비트입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__ll_lshift`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 64 비트 아키텍처를 사용 하 여 프로그램을 컴파일할 경우 및 `nBit` , 63 보다 크고 이동할 비트 수입니다 `nBit` 모듈러스 64.  32 비트 아키텍처를 사용 하 여 프로그램을 컴파일할 경우 및 `nBit` 31 보다 큰 이동할 비트 수가 `nBit` 모듈로 32.  
+## <a name="remarks"></a>설명  
+ 64 비트 아키텍처를 사용 하 여 프로그램을 컴파일하는 경우 및 `nBit` 63 보다 크면 이동할 비트 수는 `nBit` 64로 나눈 나머지입니다. 32 비트 아키텍처를 사용 하 여 프로그램을 컴파일하는 경우 및 `nBit` 31 보다 큽니다. 이동할 비트 수는 `nBit` 32 모듈로 합니다.  
   
- `ll` 이름에서이 작업에 임을 나타내는 `long long` \(`__int64`\).  
+ `ll` 이름에서에 작업 임을 나타냅니다 `long long` (`__int64`).  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // ll_lshift.cpp  
@@ -83,17 +83,17 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 10000  
 ```  
   
- **참고** 왼쪽된 시프트 연산을 없음 서명 되지 않은 버전입니다.  이 때문에 `__ll_lshift` 이미 서명 되지 않은 입력된 매개 변수를 사용 하 여.  오른쪽 shift 키와는 달리, 없어 없음 기호 종속성에 왼쪽된 시프트, 최하위 비트 결과 항상 이동 값의 부호에 관계 없이 0으로 설정 됩니다.  
+ **참고** 왼쪽된 시프트 연산의 서명 되지 않은 버전이 없습니다. 때문에 이것이 `__ll_lshift` 이미 서명 되지 않은 입력된 매개 변수를 사용 합니다. 오른쪽 시프트 달리 종속 하지 않습니다 기호 왼쪽된 시프트에 대 한 결과의 가장 덜 중요 한 비트 0을 향해 이동 하는 값의 부호에 관계 없이 항상 설정 되어 있으므로 합니다.  
   
-### Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_\_ll\_rshift](../intrinsics/ll-rshift.md)   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)   
+## <a name="see-also"></a>참고 항목  
+ [__ll_rshift](../intrinsics/ll-rshift.md)   
+ [__ull_rshift](../intrinsics/ull-rshift.md)   
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

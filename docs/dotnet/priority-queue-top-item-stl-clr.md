@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::top_item(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::top_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "top_item 멤버[STL/CLR]"
+title: 'priority_queue:: top_item (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::top_item
+dev_langs: C++
+helpviewer_keywords: top_item member [STL/CLR]
 ms.assetid: d497403b-6b1d-4c6e-a0f4-c744cc5fad75
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4196146afe7f72ed9d72d4fb5696492079da9673
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::top_item(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accesses the highest\-priority element.  
+# <a name="priorityqueuetopitem-stlclr"></a>priority_queue::top_item(STL/CLR)
+우선 순위가 가장 높은 요소에 액세스 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 property value_type back_item;  
 ```  
   
-## 설명  
- The property accesses the top \(highest\-priority\) element of the controlled sequence, which must be non\-empty.  You use it to read or write the highest\-priority element, when you know it exists.  
+## <a name="remarks"></a>설명  
+ 비어 있는 제어 된 시퀀스의 최상위 (가장 높은 우선 순위) 요소를 액세스 하는 속성입니다. 읽기 또는 존재 하는 것을 알고 있는 경우 우선 순위가 가장 높은 요소를 쓰기 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_priority_queue_top_item.cpp   
@@ -68,14 +66,17 @@ int main()
   
 ```  
   
-  **c a b**  
-**top\_item \= c**  
- **x a b**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+ c a b  
+top_item = c  
+ x a b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::top](../dotnet/priority-queue-top-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::top(STL/CLR)](../dotnet/priority-queue-top-stl-clr.md)

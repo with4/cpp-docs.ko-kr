@@ -1,47 +1,45 @@
 ---
-title: "ptr::~ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.com.ptr.~ptr"
-  - "ptr.~ptr"
-  - "msclr::com.ptr::~ptr"
-  - "~ptr"
-  - "ptr::~ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::~ptr"
+title: 'ptr:: ~ ptr | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.com.ptr.~ptr
+- ptr.~ptr
+- msclr::com.ptr::~ptr
+- ~ptr
+- ptr::~ptr
+dev_langs: C++
+helpviewer_keywords: ptr::~ptr
 ms.assetid: 5f644aa5-fe66-4992-a5f8-13ec1292c949
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8633acbb24ccaff19a8e15e78a09d7d6773576b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::~ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Destructs a `com::ptr`.  
+# <a name="ptrptr"></a>ptr::~ptr
+소멸 된 `com::ptr`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 ~ptr();  
 ```  
   
-## 설명  
- On destruction, the `com::ptr` releases all references it owns to its COM object.  Assuming that there are no other references held to the COM object, the COM object will be deleted and its memory freed.  
+## <a name="remarks"></a>설명  
+ 소멸 된 `com::ptr` 해당 COM 개체를 소유 하는 모든 참조를 해제 합니다. COM 개체를 보유 하는 다른 참조 인 이라고 가정할 COM 개체가 삭제 되 고 해당 메모리를 해제 합니다.  
   
-## 예제  
- This example implements a CLR class that uses a `com::ptr` to wrap its private member `IXMLDOMDocument` object.  In the `main` function, the two `XmlDocument` objects' destructors will be called when they go out of the scope of the `try` block, resulting in the underlying `com::ptr` destructor being called, releasing all owned references to the COM object.  
+## <a name="example"></a>예제  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  에 `main` 함수, 두 개의 `XmlDocument` 개체의 소멸자의 범위를 벗어날 때 호출 되는 `try` 블록에는 기본 결과 `com::ptr` 소멸자가 호출 되 고 COM에 대 한 모든 소유 참조를 해제 합니다. 개체입니다.  
   
 ```  
 // comptr_dtor.cpp  
@@ -102,12 +100,12 @@ int main() {
 }  
 ```  
   
-## 요구 사항  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ptr 멤버](../dotnet/ptr-members.md)   
  [ptr::ptr](../dotnet/ptr-ptr.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)

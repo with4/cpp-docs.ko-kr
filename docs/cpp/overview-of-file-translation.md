@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file translation [C++], about file translation
 - translation [C++]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 188574c43ca3650599fae58c0da1306ab49b5007
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 37b10254ca101bcf19aff3c84abac4a122f242eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="overview-of-file-translation"></a>파일 변환 개요
 C 프로그램과 같은 C++ 프로그램은 하나 이상의 파일로 구성됩니다. 이러한 각 파일은 다음 개념적 순서로 변환됩니다. 실제 순서는 "as if" 규칙을 따릅니다. 변환은 이러한 단계를 수행한 것처럼 발생해야 합니다.  
@@ -57,7 +54,7 @@ C 프로그램과 같은 C++ 프로그램은 하나 이상의 파일로 구성�
   
 -   단일 미리 정의 된 매크로 **__cplusplus**, c + +에 대해서만 정의 됩니다. 참조 [미리 정의 된 매크로](../preprocessor/predefined-macros.md) 에 *전처리기 참조* 자세한 정보에 대 한 합니다.  
   
--   C 전처리기는 c + + 연산자를 인식 하지 않으므로: **.\* **, ** -> \* **, 및 `::`합니다. 참조 [연산자](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 및 [식](../cpp/expressions-cpp.md), 연산자에 대 한 자세한 내용은 합니다.  
+-   C 전처리기는 c + + 연산자를 인식 하지 않으므로: **.\*** ,  **-> \*** , 및 `::`합니다. 참조 [연산자](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 및 [식](../cpp/expressions-cpp.md), 연산자에 대 한 자세한 내용은 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [어휘 규칙](../cpp/lexical-conventions.md)

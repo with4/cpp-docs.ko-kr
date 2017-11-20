@@ -1,32 +1,30 @@
 ---
-title: "master | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "master"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "master OpenMP directive"
+title: "마스터 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: master
+dev_langs: C++
+helpviewer_keywords: master OpenMP directive
 ms.assetid: 559ed974-e02a-486e-a23f-31556429b2c4
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 405c5f6cfba3ab60abac30fdb8a0ac730f1ab8b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# master
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-마스터 threadshould만의 프로그램을 실행을 지정 합니다.  
+# <a name="master"></a>master
+마스터 threadshould만 실행할 프로그램의 한 섹션을 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 #pragma omp master  
@@ -35,14 +33,14 @@ caps.handback.revision: 11
 }  
 ```  
   
-## 설명  
- 해당  **마스터** 지시문 OpenMP 절을 지원 합니다.  
+## <a name="remarks"></a>설명  
+ **마스터** 지시문 OpenMP 절을 지원 합니다.  
   
- [single](../../../parallel/openmp/reference/single.md) 지시문을 사용 하면 코드 부분 마스터 스레드가 아닌 단일 스레드에서 실행 되도록 지정 합니다.  
+ [단일](../../../parallel/openmp/reference/single.md) 지시문을 사용 하면 코드의 섹션을 마스터 스레드에 반드시 단일 스레드에서 실행할지 지정할 수 있습니다.  
   
- 자세한 내용은 [2.6.1 master Construct](../../../parallel/openmp/2-6-1-master-construct.md)를 참조하십시오.  
+ 자세한 내용은 참조 [2.6.1 master 구문](../../../parallel/openmp/2-6-1-master-construct.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // omp_master.cpp  
@@ -77,10 +75,13 @@ int main( )
 }  
 ```  
   
-  **\[0\] \= 0**  
-**\[1\] \= 1**  
-**\[2\] \= 4**  
-**\[3\] \= 9**  
-**\[4\] \= 16**   
-## 참고 항목  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+a[0] = 0  
+a[1] = 1  
+a[2] = 4  
+a[3] = 9  
+a[4] = 16  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [지시문](../../../parallel/openmp/reference/openmp-directives.md)

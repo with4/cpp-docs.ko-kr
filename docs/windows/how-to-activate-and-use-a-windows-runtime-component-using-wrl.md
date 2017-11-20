@@ -1,91 +1,91 @@
 ---
-title: "방법: WRL을 사용하여 Windows 런타임 구성 요소 활성화 및 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "방법: WRL을 사용 하 여 Windows 런타임 구성 요소를 사용 하 고 활성화 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bbf7c85079afe75789a7a20e04573c3d79524940
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: WRL을 사용하여 Windows 런타임 구성 요소 활성화 및 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 문서는 어떻게 [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) 를 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 을 초기화하는 데 사용하는지와 어떻게 활성화 하고 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 구성요소를 사용하는지를 보여줍니다.  
+# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>방법: WRL을 사용하여 Windows 런타임 구성 요소 활성화 및 사용
+이 문서에서는 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하 여 Windows 런타임을 초기화 하는 방법과 활성화 하 고 Windows 런타임 구성 요소를 사용 하는 방법을 보여 줍니다.  
   
 > [!NOTE]
->  이 예제는 내재된 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 구성요소를 활성화합니다.  비슷한 방법으로 활성화할 수 있는 구성 요소를 직접 만드는 방법에 대한 자세한 내용은 [연습: 기본 Windows Runtime 구성 요소 만들기](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)를 참조하십시오.  
+>  이 예제에서는 기본 제공 Windows 런타임 구성 요소를 활성화합니다. 비슷한 방식으로 활성화할 수 있는 구성 요소를 직접 만드는 방법을 알아보려면 참조 [연습: 기본 Windows 런타임 구성 요소 만들기](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)합니다.  
   
- 구성요소를 사용하기 위하여, 구성요소에 의해 구현된 형식에 대한 인터페이스 포인터를 가져와야만 합니다.  [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 의 기본 기술은 구성요소 개체 모델\(COM\)이기 때문에, 형식의 인스턴스를 유지하기 위한 COM 규칙을 따라야만 합니다.  예를 들어, 메모리로부터 삭제된 형식을 결정하는 *참조 횟수* 를 유지해야만 합니다.  
+ 구성 요소를 사용 하려면 구성 요소에 의해 구현 되는 형식에 대 한 인터페이스 포인터를 획득 해야 합니다. 및의 Windows 런타임이 기본 기술 구성 요소 개체 모델 (COM) 이기 때문에 형식의 인스턴스를 유지 하기 위해 COM 규칙을 따라야 합니다. 예를 들어 유지 해야 합니다는 *참조 횟수* 결정 하는 메모리에서 유형을 삭제 하는 경우.  
   
- [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 의 사용을 단순화하기 위하여, [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] 는 스마트 포인터 템플릿과 자동으로 참조 횟수가 실행되는 [ComPtr\<T\>](../windows/comptr-class.md) 을 제공합니다.  변수를 선언할 때, `ComPtr<`*interface\-name*`>` *identifier*을 지정합니다.  인터페이스 멤버에 액세스 하려면 화살표 멤버 액세스 연산자를 \(`->`\) 식별자에 적용합니다.  
+ Windows 런타임 c + + 템플릿 라이브러리를 간소화 하기 위해 Windows 런타임을 사용 스마트 포인터 서식 파일을 제공 [ComPtr\<T >](../windows/comptr-class.md), 참조 횟수를 자동으로 수행 합니다. 변수를 선언할 때 지정 `ComPtr<` *인터페이스 이름이* `>` *식별자*합니다. 인터페이스 멤버에 액세스 하려면 화살표 멤버 액세스 연산자를 적용할 (`->`) 식별자입니다.  
   
 > [!IMPORTANT]
 >  인터페이스 함수를 호출 하면 항상 테스트는 `HRESULT` 값을 반환 합니다.  
   
-## Windows 런타임 구성 요소를 사용하여 활성화합니다.  
- 다음 단계는 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 구성요소에 대한 정품인증 팩터리를 어떻게 만드는지 보여주기 위한 `Windows::Foundation::IUriRuntimeClass` 인터페이스를 사용합니다, 구성요소 인스턴스를 만들고 속성 값을 검색합니다.  또한 어떻게 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 를 초기화할지를 보여줍니다.  다음은 완성된 예제입니다.  
+## <a name="activating-and-using-a-windows-runtime-component"></a>활성화 하 고 Windows 런타임 구성 요소를 사용 하 여  
+ 다음 단계를 사용 하 여는 `Windows::Foundation::IUriRuntimeClass` 인터페이스를 Windows 런타임 구성 요소에 대 한 활성화 팩터리를 만들어 해당 구성의 인스턴스를 만들고, 속성 값을 검색 하는 방법을 보여 줍니다. 또한 Windows 런타임을 초기화 하는 방법을 보여 줍니다. 전체 예제와 같습니다.  
   
 > [!IMPORTANT]
->  일반[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 응용프로그램에서, [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] 를 일반적으로 사용하더라도, 이 예제는 설명을 위해 콘솔 응용프로그램을 사용합니다.  `wprintf_s` 와 같은 함수는 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 응용프로그램으로부터 사용가능 하지 않습니다.  [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 응용프로그램에서 사용할 수 있는 형식과 함수에 대한 자세한 설명은, [\/ZW를 사용한 CRT 함수 를 지원하지 않습니다.](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) 및 [윈도우 스토어 앱에 대한 Win32 및 COM](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)을 참조하십시오.  
+>  유니버설 Windows 플랫폼 앱에서 Windows 런타임 c + + 템플릿 라이브러리를 일반적으로 사용 되지만이 예제에 대 한 예시는 콘솔 응용 프로그램을 사용 합니다. 와 같은 함수가 `wprintf_s` 는 유니버설 Windows 플랫폼 앱에서 사용할 수 없습니다. 형식 및 유니버설 Windows 플랫폼 앱에서 사용할 수 있는 함수에 대 한 자세한 내용은 참조 [CRT 함수는 /zw에서 지원 되지 않습니다](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) 및 [Win32 및 COM에 대 한 Windows 스토어 앱](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)합니다.  
   
-#### Windows 런타임 구성요소를 사용하고 활성화시킵니다.  
+#### <a name="to-activate-and-use-a-windows-runtime-component"></a>활성화 하 고 Windows 런타임 구성 요소를 사용 하 여  
   
-1.  모든 필수 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] 또는 표준 C\+\+ 라이브러리 헤더를 포함\(`#include`\)합니다.  
+1.  포함 (`#include`) Windows 런타임, Windows 런타임 c + + 템플릿 라이브러리 또는 c + + 표준 라이브러리 헤더 필수입니다.  
   
      [!code-cpp[wrl-consume-component#2](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]  
   
      .cpp 파일의 `using namespace` 지시문을 활용하여 코드를 보다 읽기 쉽게 만드는 것이 좋습니다.  
   
-2.  응용 프로그램이 실행되는 스레드를 초기화합니다.  모든 응용 프로그램의 스레드 및 스레딩 모델로 초기화해야 합니다.  이 예제는 [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) 클래스를 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 을 초기화하기 위해 사용하고 [RO\_INIT\_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) 를 스레드 모델로서 지정합니다.  이 `RoInitializeWrapper` 클래스는 `Windows::Foundation::Initialize` 와 `Windows::Foundation::Uninitialize` 을 구조체에서 호출하는데, 이는 삭제될 때입니다.  
+2.  앱이 실행 되는 스레드를 초기화 합니다. 모든 앱은 해당 스레드 및 스레딩 모델 초기화 해야 합니다. 사용 하 여이 예제는 [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) 클래스는 Windows 런타임을 초기화를 하 고 지정 [RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) 스레딩 모델로 합니다. `RoInitializeWrapper` 클래스가 호출 `Windows::Foundation::Initialize` 생성 시 및 `Windows::Foundation::Uninitialize` 때 소멸 됩니다.  
   
      [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]  
   
-     두 번째 명세서에서, 이 [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md) 연산자를 `HRESULT` 으로 반환합니다. 이는 `Windows::Foundation::Initialize` 호출로 부터입니다.  
+     두 번째 문에 [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md) 연산자는 반환 된 `HRESULT` 를 호출 하 여 `Windows::Foundation::Initialize`합니다.  
   
-3.  `ABI::Windows::Foundation::IUriRuntimeClassFactory` 인터페이스에 대한 *정품인증 팩터리* 를 만듭니다.  
+3.  만들기는 *활성화 팩터리* 에 대 한는 `ABI::Windows::Foundation::IUriRuntimeClassFactory` 인터페이스입니다.  
   
      [!code-cpp[wrl-consume-component#4](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]  
   
-     [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 정규화 된 이름을 사용하여 형식을 식별 합니다.  `RuntimeClass_Windows_Foundation_Uri` 매개 변수가 제공하는 문자열은 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 필요한 런타임 클래스 이름을 포함 합니다.  
+     Windows 런타임 정규화 된 이름을 사용 하 여 형식을 식별 합니다. `RuntimeClass_Windows_Foundation_Uri` 매개 변수는 Windows 런타임에서 제공 하 고 필요한 런타임 클래스 이름을 포함 하는 문자열입니다.  
   
-4.  URI `"http://www.microsoft.com"` 을 나타내는 [Microsoft::WRL::Wrappers::HString](../windows/hstring-class.md) 변수를 초기화합니다.  
+4.  초기화는 [Microsoft::WRL::Wrappers::HString](../windows/hstring-class.md) URI를 나타내는 변수 `"http://www.microsoft.com"`합니다.  
   
      [!code-cpp[wrl-consume-component#6](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]  
   
-     [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 에서, [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 를 사용할 문자열에 대한 메모리를 할당하지 않습니다.  대신에, [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 는 작업을 유지하고 사용하는 버퍼에서 문자열의 복사본을 만들고 만들어진 버퍼에서 핸들을 반환합니다.  
+     Windows 런타임에서 Windows 런타임에서 사용 하는 문자열에 대 한 메모리를 할당 하지 않습니다. 대신, Windows 런타임 버퍼를 유지 관리 하 고 작업을 위해 사용 하 여를 다음 핸들을 반환 버퍼 자신이 만들어진 문자열의 복사본을 만듭니다.  
   
-5.  `IUriRuntimeClassFactory::CreateUri` 팩터리 메서드를 `ABI::Windows::Foundation::IUriRuntimeClass` 개체를 만들기 위해 사용합니다.  
+5.  사용 하 여는 `IUriRuntimeClassFactory::CreateUri` 를 만드는 팩터리 메서드입니다는 `ABI::Windows::Foundation::IUriRuntimeClass` 개체입니다.  
   
      [!code-cpp[wrl-consume-component#7](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_5.cpp)]  
   
-6.  `IUriRuntimeClass::get_Domain` 메서드를 `Domain` 속성의 값을 검색하기 위해 호출합니다.  
+6.  호출 된 `IUriRuntimeClass::get_Domain` 의 값을 검색 하는 메서드는 `Domain` 속성입니다.  
   
      [!code-cpp[wrl-consume-component#8](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_6.cpp)]  
   
-7.  도메인 이름을 콘솔에 출력하고 반환합니다.  모든 `ComPtr` 및 RAII 개체는 범위를 벗어나면 자동으로 릴리스됩니다.  
+7.  도메인 이름을 콘솔에 출력을 반환 합니다. 모든 `ComPtr` 및 RAII 개체는 범위를 벗어나면 자동으로 릴리스됩니다.  
   
      [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]  
   
-     이 [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) 함수는 URI 문자열의 형식 기본 유니코드를 검색합니다.  
+     [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) 함수 기본 유니코드 형식의 URI 문자열을 검색 합니다.  
   
- 전체 예제는 다음과 같습니다:  
+ 전체 예제는 다음과 같습니다.  
   
  [!code-cpp[wrl-consume-component#1](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_8.cpp)]  
   
-## 코드 컴파일  
- 코드를 컴파일하기 위하여, 복사하고 그때 Visual Studio 프로젝트에서 복사합니다, 또는 `wrl-consume-component.cpp` 이름의 파일에서 복사하고 그때 Visual Studio 명령어 프롬트 창에서 다음 명령어를 실행합니다.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 코드를 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 하거나 라는 파일에 붙여 `wrl-consume-component.cpp` 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
   
- **cl.exe wrl\-consume\-component.cpp runtimeobject.lib**  
+ **cl.exe wrl 소비 component.cpp runtimeobject.lib**  
   
-## 참고 항목  
- [Windows 런타임 C\+\+ 템플릿 라이브러리\(WRL\)](../windows/windows-runtime-cpp-template-library-wrl.md)
+## <a name="see-also"></a>참고 항목  
+ [Windows 런타임 C++ 템플릿 라이브러리(WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

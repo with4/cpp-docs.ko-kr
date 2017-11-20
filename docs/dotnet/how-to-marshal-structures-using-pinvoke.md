@@ -1,54 +1,54 @@
 ---
-title: "방법: PInvoke를 사용하여 구조체 마샬링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터 마샬링[C++], 구조체"
-  - "interop[C++], 구조체"
-  - "마샬링[C++], 구조체"
-  - "플랫폼 호출[C++], 구조체"
+title: "방법: PInvoke를 사용 하 여 구조체 마샬링 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], structures
+- platform invoke [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: 30
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
+caps.latest.revision: "30"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 52fa9aece3f31cf20029e58352d459f91bb56526
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: PInvoke를 사용하여 구조체 마샬링
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 문서에서는 P\/Invoke를 사용하여 <xref:System.String> 인스턴스를 제공하는 관리되는 함수에서 C 스타일 문자열에 액세스하는 네이티브 함수를 호출하는 방법에 대해 설명합니다.  P\/Invoke는 컴파일 타임 오류 보고를 거의 제공하지 않고, 형식이 안전하지 않으며, 구현하기 번거로울 수도 있으므로 P\/Invoke 대신 C\+\+ Interop 기능을 사용하는 것이 좋지만 관리되지 않는 API가 DLL로 패키징되었으며 소스 코드를 사용할 수 없는 경우 P\/Invoke가 유일한 옵션입니다.  또는 다음 문서를 참조하십시오.  
+# <a name="how-to-marshal-structures-using-pinvoke"></a>방법: PInvoke를 사용하여 구조체 마샬링
+이 문서에서는 C 스타일 문자열의 인스턴스를 제공 하는 관리 되는 함수에서 호출할 수 있는 허용 하는 방법을 네이티브 함수를 설명 <xref:System.String> P/Invoke를 사용 하 여 합니다. 있지만 대신 c + + Interop 기능을 사용 하는 것이 좋습니다 P/Invoke P/Invoke 거의 컴파일 타임 오류 보고를 제공 하기 때문에 형식이 안전한 아니며 관리 되지 않는 API는 DLL로 패키지와 소스 코드를 없는 경우 구현 하는 것 P/Invoke를 사용할 수 있는 유일한 옵션입니다. 다음 문서를 참조 하십시오.  
   
--   [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [How to: Marshal Structures Using PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
+-   [방법: PInvoke를 사용하여 구조체 마샬링](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
   
- 기본적으로 네이티브 및 관리되는 구조체는 메모리에 서로 다른 방식으로 배치되므로 관리\/비관리 경계를 지나 구조체를 전달하려면 데이터 무결성을 유지하기 위한 단계가 추가로 필요합니다.  
+ 기본적으로 네이티브 및 관리 되는 구조에에서으로 배치 된 다르게 메모리 성공적 데이터 무결성을 유지 하기 위해 추가 단계를 필요로 하는 관리 되 는/관리 되지 않는 경계의 구조체를 전달 합니다.  
   
- 이 문서에서는 네이티브 구조체에 상응하는 관리되는 구조체를 정의하는 데 필요한 과정과 결과 구조체를 관리되지 않는 함수에 전달하는 방법에 대해 설명합니다.  이 문서에서는 문자열이나 포인터를 포함하지 않는 간단한 구조체가 사용된다고 가정합니다.  blittable 형식이 아닌 상호 운용성에 대한 자세한 내용은 [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)을 참조하십시오.  P\/Invoke에서는 blittable이 아닌 형식을 반환 값으로 사용할 수 없습니다.  blittable 형식의 표현은 관리 코드와 비관리 코드에서 동일합니다.  자세한 내용은 [Blittable 형식 및 비 Blittable 형식](../Topic/Blittable%20and%20Non-Blittable%20Types.md)을 참조하십시오.  
+ 이 문서에서는 기본 구조와 관리 되지 않는 함수에 결과 구조체를 전달 하는 방법의 관리 되는 해당 항목을 정의 하는 데 필요한 단계를 설명 합니다. 이 문서에서는 가정 하는 간단한 구조-문자열이 나 포인터를 포함 하지 않는 것-사용 됩니다. 비 blittable 상호 운용성에 대 한 정보를 참조 하십시오. [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)합니다. P/Invoke의 반환 값으로 비 blittable 형식을 가질 수 없습니다. Blittable 형식 코드와 비관리 코드에서 표현이 동일한. 자세한 내용은 참조 [blittable 형식 및 비 Blittable 형식](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)합니다.  
   
- 관리\/비관리 경계를 지나 단순한 blittable 구조체를 마샬링하려면 먼저 각 네이티브 구조체의 관리되는 버전을 정의해야 합니다.  이러한 구조체는 유효한 어떤 이름이나 사용할 수 있습니다. 두 구조체의 네이티브 버전과 관리되는 버전 사이에는 데이터 레이아웃을 제외한 어떠한 관계도 없습니다.  따라서 관리되는 버전에는 네이티브 버전과 크기 및 순서가 동일한 필드가 포함되어 있어야 합니다. 구조체의 관리되는 버전과 네이티브 버전이 동일한지 확인하는 메커니즘은 없으므로 두 버전이 호환되지 않더라도 런타임 이전에는 이 문제가 드러나지 않습니다.  두 구조체의 데이터 레이아웃을 동일하게 만드는 작업은 프로그래머가 직접 수행해야 합니다.  
+ 단순 마샬링, 관리 되 는/관리 되지 않는 경계를 넘어 blittable 구조 먼저 필요 각 네이티브 구조체의 관리 되는 버전을 정의 하는 것 합니다. 이러한 구조 이름에는 제한이 법적; 두 개의 구조는 데이터 레이아웃 이외의 네이티브 및 관리 되는 버전 간의 관계가 없습니다. 따라서이 관리 되는 버전 크기 및 네이티브 것과 동일한 순서로 동일한 필드가 포함 되어 있음을 중요 합니다. (메커니즘은 없습니다 구조체의 관리 및 네이티브 버전 모두 동일 하므로 비 호환성 드러나지 않습니다 런타임이 될 때까지 보장 합니다. 이 두 구조체는 동일한 데이터 레이아웃을 갖도록 하는 데 프로그래머의 책임입니다.)  
   
- 때로는 성능을 향상시키기 위해 관리되는 구조체의 멤버가 다시 정렬되므로 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 사용하여 구조체를 순차적으로 배치하도록 지정해야 합니다.  구조체 압축 설정을 네이티브 구조체에 사용되는 것과 동일하게 명시적으로 지정하는 것도 좋은 방법입니다. Visual C\+\+의 경우 기본적으로 두 관리 코드 모두에 대해 8바이트 구조체 압축을 사용합니다.  
+ 사용 해야 하는 성능 향상을 위해 관리 되는 구조체의 멤버를 다시 정렬할 경우에 따라, 때문에 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 나타내는 구조 순차적으로 배치 됩니다. 또한 구조체 압축 네이티브 구조체에서 사용 하는 것과 동일 하 게 설정을 명시적으로 설정 하는 것이 좋습니다. (기본적으로 Visual c + + 사용는 8 바이트 구조체 모두 관리 되는 코드에 대 한 압축 합니다.)  
   
-1.  그런 다음 <xref:System.Runtime.InteropServices.DllImportAttribute>를 사용하여 구조체를 허용하는 관리되지 않는 함수에 상응하는 진입점을 선언하고 함수 시그니처에는 구조체의 관리되는 버전을 사용합니다. 두 버전의 구조체에 동일한 이름을 사용하는 경우 이는 모의 지점으로 사용됩니다.  
+1.  를 사용 하 여 <xref:System.Runtime.InteropServices.DllImportAttribute> 구조를 사용 하는 모든 관리 되지 않는 함수에 해당 하는 진입점을 선언 하지만의 두 버전 모두에 동일한 이름을 사용 하는 경우 함수 서명이 있는 구조체의 관리 되는 버전을 사용 하는 구조입니다.  
   
-2.  이제 관리 코드에서 관리되는 버전의 구조체를 관리되지 않는 함수에 전달할 수 있습니다. 이러한 관리되지 않는 함수는 실제로 관리되는 함수인 것처럼 간주됩니다.  이 구조체는 아래 예제에서와 같이 값이나 참조로 전달될 수 있습니다.  
+2.  이제 관리 되는 코드 관리 되지 것으로 관리 되지 않는 함수에 구조체의 관리 되는 버전을 전달할 수 있습니다. 이러한 구조는 다음 예제와 같이 값 이나 참조로 전달할 수 있습니다.  
   
-## 예제  
- 다음 코드는 관리되지 않는 모듈과 관리되는 모듈로 구성되어 있습니다.  관리되지 않는 모듈은 Location이라는 구조체와 Location 구조체의 두 인스턴스를 사용하는 GetDistance라는 함수를 정의하는 DLL입니다.  두 번째 모듈은 GetDistance 함수를 가져오고 이를 관리되는 버전의 Location 구조체인 MLocation을 사용하여 정의하는 관리되는 명령줄 응용 프로그램입니다.  실제로는 두 버전의 구조체에 모두 동일한 이름을 사용할 수 있지만 이 예제에서는 관리되는 버전을 사용하여 DllImport 프로토타입을 정의하는 방법을 보여 주기 위해 서로 다른 이름을 사용합니다.  
+## <a name="example"></a>예제  
+ 다음 코드는 관리 되지 않는 관리 되는 모듈 구성 됩니다. 관리 되지 않는 모듈에는 위치 및 위치 구조의 두 인스턴스를 허용 하는 GetDistance를 호출 하는 함수를 호출 하는 구조를 정의 하는 DLL은입니다. 두 번째 모듈은 GetDistance 함수 가져오지만 MLocation 위치 구조체의 관리 되는 항목 측면에서 정의 하는 관리 되는 명령줄 응용 프로그램. 연습; 구조체의 두 버전에 대해 동일한 이름을 사용할 것은 그러나 다른 이름은 DllImport 프로토타입 관리 되는 버전 측면에서 정의 됨을 보여 주기 위해 여기 사용 됩니다.  
   
- 관리되는 모듈은 \/CLR을 사용하여 컴파일되지만 \/clr:pure를 사용해도 컴파일됩니다.  
+ 관리 되는 모듈, /clr 하지만 /clr을 사용 하 여 컴파일되며: pure 합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
   
- DLL의 어떠한 부분도 일반적인 \#include 지시문을 사용하여 관리 코드에 노출되지 않습니다.  실제로는 런타임이 되어야 DLL에 액세스하게 되므로 DllImport를 사용하여 가져온 함수에 문제가 있더라도 컴파일할 때는 문제가 발견되지 않습니다.  
+ DLL의 없는 일부는 기존 사용 하 여 관리 코드에 노출 되지 #include 지시문입니다. 사실, 컴파일 타임에 DllImport를 사용 하 여 가져온 기능에서 문제가 검색 되지 하므로 런타임 시만 DLL 액세스 됩니다.  
   
 ```  
 // TraditionalDll3.cpp  
@@ -94,7 +94,7 @@ void InitLocation(Location* lp) {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // MarshalStruct_pi.cpp  
@@ -133,9 +133,12 @@ int main() {
 }  
 ```  
   
-  **\[unmanaged\] loc1\(0,0\) loc2\(100,100\)**  
-**\[managed\] distance \= 141.42135623731**  
-**\[unmanaged\] Initializing location...**  
-**\[managed\] x\=50 y\=50**   
-## 참고 항목  
- [C\+\+에서 명시적 PInvoke 사용\(DllImport 특성\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+```Output  
+[unmanaged] loc1(0,0) loc2(100,100)  
+[managed] distance = 141.42135623731  
+[unmanaged] Initializing location...  
+[managed] x=50 y=50  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [C++에서 명시적 PInvoke 사용(DllImport 특성)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

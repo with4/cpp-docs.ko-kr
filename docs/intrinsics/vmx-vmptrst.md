@@ -1,61 +1,60 @@
 ---
-title: "__vmx_vmptrst | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmptrst"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmptrst 내장 함수"
-  - "VMPTRST 명령"
+title: __vmx_vmptrst | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmptrst
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmptrst intrinsic
+- VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ebd990da1520af7d15d4c993050eaefd92c48e26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_vmptrst
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Microsoft 전용**  
   
- 지정한 주소에서 현재 가상 컴퓨터 제어 구조 \(VMCS\)에 대 한 포인터를 저장합니다.  
+ 지정된 된 주소에서 현재 가상 컴퓨터 제어 구조 (VMCS)에 대 한 포인터를 저장합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-void __vmx_vmptrst(   
-   unsigned __int64 *VmcsPhysicalAddress   
+void __vmx_vmptrst(   
+   unsigned __int64 *VmcsPhysicalAddress   
 );  
 ```  
   
-#### 매개 변수  
- \[in\] \*`VmcsPhysicalAddress`  
- 현재 VMCS 포인터가 저장 되는 위치는 주소입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] *`VmcsPhysicalAddress`  
+ 현재 VMCS 포인터 저장 되는 주소입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  VMCS 포인터는 64 비트 물리적 주소입니다.  
   
- `__vmx_vmptrst` 함수는 해당 하는 `VMPTRST` 컴퓨터 명령.  이 기능은 상호 작용 하는 호스트의 가상 컴퓨터 모니터의 게스트 운영 체제와 응용 프로그램을 지원 합니다.  검색 문서, "인텔 가상화 기술 사양에는 ia\-32 인텔 아키텍처"에 대 한 자세한 내용은 번호 C97063\-002에서를 문서는 [인텔사](http://go.microsoft.com/fwlink/?LinkId=127) 사이트.  
+ `__vmx_vmptrst` 함수는 동일는 `VMPTRST` 컴퓨터 명령입니다. 이 함수는 게스트 운영 체제 및 해당 응용 프로그램과 호스트 가상 컴퓨터 모니터의 상호 작용을 지원합니다. 문서 번호 C97063-002, 자세한 내용은 "Intel 가상화 기술 사양에 대 한 the ia-32 Intel 아키텍처" 문서에 대 한 검색에 대 한는 [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) 사이트입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__vmx_vmptrst`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmptrld](../intrinsics/vmx-vmptrld.md)
+ [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

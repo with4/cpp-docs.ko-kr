@@ -1,32 +1,30 @@
 ---
-title: "ComPtr::AsWeak 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::AsWeak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsWeak 메서드"
+title: "Comptr:: Asweak 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::AsWeak
+dev_langs: C++
+helpviewer_keywords: AsWeak method
 ms.assetid: 23e29dcd-39cb-423f-abe6-6df4428213bf
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d4bdf9e6f2e3a484af825cea7facc78830b0cc48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::AsWeak 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="comptrasweak-method"></a>ComPtr::AsWeak 메서드
 현재 개체에 대한 약한 참조를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 HRESULT AsWeak(  
@@ -34,17 +32,17 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pWeakRef`  
- 이 작업을 완료 시, 약한 참조 개체에 대한 포인터입니다.  
+ 이 작업이 완료 될 때, 약한 참조 개체에 대 한 포인터입니다.  
   
-## 반환 값  
- 성공 하면 S\_OK 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  
   
  **네임스페이스:** Microsoft::WRL  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ComPtr 클래스](../windows/comptr-class.md)

@@ -4,46 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
 - ATLWIN/ATL::CSimpleDialog
 - ATLWIN/ATL::CSimpleDialog::DoModal
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CSimpleDialog class
 - CSimpleDialog class, modal dialog boxes in ATL
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2448f2fcd0547e2344dde51392873e3276f2bd09
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 0196d5e0e1516b47936837e1282471161a191365
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 클래스
 이 클래스는 기본 모달 대화 상자를 구현합니다.  
@@ -71,7 +54,7 @@ class CSimpleDialog : public CDialogImplBase
 |----------|-----------------|  
 |[CSimpleDialog::DoModal](#domodal)|모달 대화 상자를 만듭니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  기본 기능으로 모달 대화 상자를 구현 합니다. `CSimpleDialog`Windows 공용 컨트롤만 지원을 합니다. 을 만들고 모달 대화 상자를 표시 하려면 대화 상자에 대 한 기존 리소스 템플릿 이름을 제공 하는이 클래스의 인스턴스를 만듭니다. 대화 상자 개체 (예: IDOK 또는 IDCANCEL) 미리 정의 된 값을 가진 모든 컨트롤을 마우스 오른쪽 단추로 클릭할 때 닫힙니다.  
   
  `CSimpleDialog`모달 대화 상자만 만들 수 있습니다. `CSimpleDialog`기본 메시지 맵을 메시지를 적절 한 처리기를 사용 하 여 대화 상자 프로시저를 제공 합니다.  
@@ -102,9 +85,8 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
   
  함수가 실패 하면 반환 값은-1입니다. 확장 오류 정보를 가져오려면 `GetLastError`를 호출합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 대화 상자가 활성화 되어 있는 동안 사용자와 모든 상호 작용을 처리 합니다. 이 대화 상자 모달; 사용 즉, 사용자는 대화 상자를 닫을 때까지 다른 창 상호 작용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)
-

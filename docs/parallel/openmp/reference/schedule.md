@@ -1,40 +1,38 @@
 ---
-title: "schedule | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "schedule"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "schedule OpenMP clause"
+title: "일정 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: schedule
+dev_langs: C++
+helpviewer_keywords: schedule OpenMP clause
 ms.assetid: 286f1fc3-6598-4837-b4c8-8b1fa3193965
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30023c9e994300b9dcdb09509e7d0c2218aa26f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# schedule
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-적용 되는 [for](../../../parallel/openmp/reference/for-openmp.md) 지시문입니다.  
+# <a name="schedule"></a>일정
+에 적용 된 [에 대 한](../../../parallel/openmp/reference/for-openmp.md) 지시문입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 schedule(type[,size])  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `type`  
- 일정 관리의 종류:  
+ 일정의 종류:  
   
 -   `dynamic`  
   
@@ -44,13 +42,13 @@ schedule(type[,size])
   
 -   `static`  
   
- `size`\(선택적 요소\)  
- 반복의 크기를 지정합니다.  `size`정수 여야 합니다.  Not valid when `type` is `runtime`.  
+ `size`(선택 사항)  
+ 반복의 크기를 지정합니다. `size`정수 여야 합니다. 경우에 유효 하지 않은 `type` 은 `runtime`합니다.  
   
-## 설명  
- 자세한 내용은 [2.4.1 for Construct](../../../parallel/openmp/2-4-1-for-construct.md)를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 자세한 내용은 참조 [2.4.1 for 구문](../../../parallel/openmp/2-4-1-for-construct.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // omp_schedule.cpp  
@@ -136,30 +134,34 @@ int main( )
 }  
 ```  
   
-  **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**  
-**&#124; 정적 &#124; 정적 &#124; 동적 &#124; 동적 &#124; 안내 &#124;**  
-**&#124;    1   &#124;    5   &#124;    1    &#124;    5    &#124;        &#124;**  
-**\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**  
-**&#124;    0   &#124;    0   &#124;    0    &#124;    2    &#124;    1   &#124;**  
-**&#124;    1   &#124;    0   &#124;    3    &#124;    2    &#124;    1   &#124;**  
-**&#124;    2   &#124;    0   &#124;    3    &#124;    2    &#124;    1   &#124;**  
-**&#124;    3   &#124;    0   &#124;    3    &#124;    2    &#124;    1   &#124;**  
-**&#124;    0   &#124;    0   &#124;    2    &#124;    2    &#124;    1   &#124;**  
-**&#124;    1   &#124;    1   &#124;    2    &#124;    3    &#124;    3   &#124;**  
-**&#124;    2   &#124;    1   &#124;    2    &#124;    3    &#124;    3   &#124;**  
-**&#124;    3   &#124;    1   &#124;    0    &#124;    3    &#124;    3   &#124;**  
-**&#124;    0   &#124;    1   &#124;    0    &#124;    3    &#124;    3   &#124;**  
-**&#124;    1   &#124;    1   &#124;    0    &#124;    3    &#124;    2   &#124;**  
-**&#124;    2   &#124;    2   &#124;    1    &#124;    0    &#124;    2   &#124;**  
-**&#124;    3   &#124;    2   &#124;    1    &#124;    0    &#124;    2   &#124;**  
-**&#124;    0   &#124;    2   &#124;    1    &#124;    0    &#124;    3   &#124;**  
-**&#124;    1   &#124;    2   &#124;    2    &#124;    0    &#124;    3   &#124;**  
-**&#124;    2   &#124;    2   &#124;    2    &#124;    0    &#124;    0   &#124;**  
-**&#124;    3   &#124;    3   &#124;    2    &#124;    1    &#124;    0   &#124;**  
-**&#124;    0   &#124;    3   &#124;    3    &#124;    1    &#124;    1   &#124;**  
-**&#124;    1   &#124;    3   &#124;    3    &#124;    1    &#124;    1   &#124;**  
-**&#124;    2   &#124;    3   &#124;    3    &#124;    1    &#124;    1   &#124;**  
-**&#124;    3   &#124;    3   &#124;    0    &#124;    1    &#124;    3   &#124;**  
-**\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**   
-## 참고 항목  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+------------------------------------------------  
+| static | static | dynamic | dynamic | guided |  
+|    1   |    5   |    1    |    5    |        |  
+------------------------------------------------  
+|    0   |    0   |    0    |    2    |    1   |  
+|    1   |    0   |    3    |    2    |    1   |  
+|    2   |    0   |    3    |    2    |    1   |  
+|    3   |    0   |    3    |    2    |    1   |  
+|    0   |    0   |    2    |    2    |    1   |  
+|    1   |    1   |    2    |    3    |    3   |  
+|    2   |    1   |    2    |    3    |    3   |  
+|    3   |    1   |    0    |    3    |    3   |  
+|    0   |    1   |    0    |    3    |    3   |  
+|    1   |    1   |    0    |    3    |    2   |  
+|    2   |    2   |    1    |    0    |    2   |  
+|    3   |    2   |    1    |    0    |    2   |  
+|    0   |    2   |    1    |    0    |    3   |  
+|    1   |    2   |    2    |    0    |    3   |  
+|    2   |    2   |    2    |    0    |    0   |  
+|    3   |    3   |    2    |    1    |    0   |  
+|    0   |    3   |    3    |    1    |    1   |  
+|    1   |    3   |    3    |    1    |    1   |  
+|    2   |    3   |    3    |    1    |    1   |  
+|    3   |    3   |    0    |    1    |    3   |  
+------------------------------------------------  
+  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [절](../../../parallel/openmp/reference/openmp-clauses.md)

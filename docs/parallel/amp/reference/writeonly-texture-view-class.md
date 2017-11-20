@@ -1,11 +1,10 @@
 ---
-title: "writeonly_texture_view 클래스 | Microsoft 문서"
+title: "writeonly_texture_view 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,33 +13,17 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 5a051b8db98e36ced89783bfa1de2ab5f514c6bc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 5f81e7c2e3f07074f451446d9ccc1796e1c393bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view 클래스
 Writeonly 질감에 대 한 액세스를 제공합니다.  
@@ -82,7 +65,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 |이름|설명|  
 |----------|-----------------|  
 |[writeonly_texture_view 생성자](#ctor)|`writeonly_texture_view` 클래스의 새 인스턴스를 초기화합니다.|  
-|[~ writeonly_texture_view 소멸자](#ctor)|소멸은 `writeonly_texture_view` 개체입니다.|  
+|[~ writeonly_texture_view 소멸자](#ctor)|소멸 된 `writeonly_texture_view` 개체입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -100,7 +83,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |이름|설명|  
 |----------|-----------------|  
-|[rank 상수](#rank)|차수를 가져옵니다는 `writeonly_texture_view` 개체입니다.|  
+|[rank 상수](#rank)|순위를 가져옵니다는 `writeonly_texture_view` 개체입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `_Texture_base`  
@@ -114,7 +97,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="dtor"></a>~ writeonly_texture_view 
 
- 소멸은 `writeonly_texture_view` 개체입니다.  
+ 소멸 된 `writeonly_texture_view` 개체입니다.  
   
 ```  
 ~writeonly_texture_view() restrict(amp,cpu);
@@ -138,7 +121,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
   
 ##  <a name="rank"></a>순위 
 
- 차수를 가져옵니다는 `writeonly_texture_view` 개체입니다.  
+ 순위를 가져옵니다는 `writeonly_texture_view` 개체입니다.  
   
 ```  
 static const int rank = _Rank;  
@@ -188,4 +171,3 @@ writeonly_texture_view(
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
-

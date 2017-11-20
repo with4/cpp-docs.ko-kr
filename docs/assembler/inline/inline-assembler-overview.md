@@ -1,39 +1,39 @@
 ---
 title: "인라인 어셈블러 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 키워드[C++], 인라인 어셈블러 호출"
-  - "인라인 어셈블러"
-  - "인라인 어셈블리, 인라인 어셈블러"
-  - "인라인 어셈블러 호출"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembler
+- __asm keyword [C++], invoking inline assembler
+- invoking inline assembler
+- inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7733398f5a444fa5e7461ea52295624d6d16f9a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 인라인 어셈블러 개요
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 관련**  
+# <a name="inline-assembler-overview"></a>인라인 어셈블러 개요
+**Microsoft 전용**  
   
- 인라인 어셈블러 어셈블리 및 링크의 추가 단계 없이 C 및 c \+ \+ 소스 프로그램에서 어셈블리 언어 지침을 포함할 수 있습니다.  인라인 어셈블러 컴파일러에 기본 제공\-별도 어셈블러 Microsoft 매크로 어셈블러 \(MASM\) 등 필요는 없습니다.  
+ 인라인 어셈블러를 사용하면 추가 어셈블리 및 링크 단계를 수행하지 않고 C 및 C++ 소스 프로그램에 어셈블리 언어 명령을 포함할 수 있습니다. 컴파일러에 인라인 어셈블러가 기본 제공되므로 MASM(Microsoft Macro Assembler)과 같은 별도의 어셈블러가 필요 없습니다.  
   
- 인라인 어셈블러는 별도 어셈블리 및 링크 단계 필요 하지 않습니다, 이므로 별도 어셈블러 보다 편리 합니다.  인라인 어셈블리 코드가 모든 C 또는 c \+ \+ 변수 또는 함수에에서 이름이 있는 범위를 프로그램의 C 및 c \+ \+ 코드와 통합 하기 쉽게 사용할 수 있습니다.  및 C 및 c \+ \+ 문으로 어셈블리 코드를 혼합할 수 있기 때문에 불편 하거나 C 또는 c \+ \+ 만으로는 불가능 한 작업을 수행할 수 있습니다 것입니다.  
+ 인라인 어셈블러에는 별도의 어셈블리 및 링크 단계가 필요 없으므로 별도의 어셈블리보다 편리합니다. 인라인 어셈블리 코드는 범위에 있는 임의의 C/C++ 변수 또는 함수 이름을 사용할 수 있으므로 프로그램의 C 및 C++ 코드와 쉽게 통합될 수 있습니다. 어셈블리 코드는 C 및 C++ 문과 혼합될 수 있으므로 C 또는 C++만 사용하는 경우 다루기 어렵거나 불가능한 작업을 수행할 수 있습니다.  
   
- [\_\_asm](../../assembler/inline/asm.md) 키워드 호출 인라인 어셈블러와 C 또는 c \+ \+ 문의 어디에 사용할 수 있습니다.  단독으로 나타날 수 없습니다.  어셈블리 명령을 중괄호 또는, 적어도, 사이 있는 명령 그룹으로 따라야 할 빈 중괄호 쌍.  용어 " `__asm` 블록" 여기 모든 명령 또는 명령의 중괄호 안에 여부 그룹을 참조합니다.  
+ [__asm](../../assembler/inline/asm.md) 키워드는 인라인 어셈블러를 호출 하 고 C 또는 c + + 문을 아무 곳에 나 나타날 수 있습니다. 이 키워드는 자체적으로 표시할 수 없습니다. 이 키워드 다음에는 어셈블리 명령, 중괄호로 묶은 명령 그룹 또는 최소한 빈 괄호의 쌍이 와야 합니다. 여기서 "`__asm` 블록"이라는 용어는 중괄호에 상관없이 명령 또는 명령 그룹을 참조합니다.  
   
- 다음 코드는 간단한  `__asm`블록 중괄호로 묶습니다.  \(코드는 사용자 지정 함수 프롤로그 순서입니다.\)  
+ 다음 코드는 중괄호로 묶여 있는 간단한 `__asm` 블록입니다. 이 코드는 사용자 지정 함수 프롤로그 시퀀스입니다.  
   
 ```  
 // asm_overview.cpp  
@@ -55,7 +55,7 @@ void __declspec(naked) main()
 }  
 ```  
   
- 넣을 수 있습니다  `__asm`각 어셈블리 명령 앞에:  
+ 또는 `__asm`을 각 어셈블리 명령 앞에 배치할 수 있습니다.  
   
 ```  
 __asm push ebp  
@@ -63,13 +63,13 @@ __asm mov  ebp, esp
 __asm sub  esp, __LOCAL_SIZE  
 ```  
   
- 이후에  `__asm`키워드는 문을 구분, 같은 줄에는 어셈블리 지침을 전환할 수도 있습니다:  
+ `__asm` 키워드는 문 구분 기호이므로 같은 줄에 어셈블리 명령을 포함할 수 있습니다.  
   
 ```  
 __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE  
 ```  
   
- **Microsoft 특정 끝**  
+ **Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [인라인 어셈블러](../../assembler/inline/inline-assembler.md)

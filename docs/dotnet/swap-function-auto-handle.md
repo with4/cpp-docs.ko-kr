@@ -1,33 +1,32 @@
 ---
-title: "swap 함수(auto_handle) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::swap"
-  - "msclr.swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 함수"
+title: "swap 함수 (auto_handle) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::swap
+- msclr.swap
+dev_langs: C++
+helpviewer_keywords: swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dfa449e16e6f2f28a857150220b4b710f7a75bc9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# swap 함수(auto_handle)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Swaps objects between one `auto_handle` and another.  
+# <a name="swap-function-autohandle"></a>swap 함수(auto_handle)
+개체 하나를 바꿉니다 `auto_handle` 또 다른 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename _element_type>  
@@ -37,14 +36,14 @@ void swap(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_left`  
  `auto_handle`입니다.  
   
  `_right`  
- 다른 `auto_handle`입니다.  
+ 다른 `auto_handle`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // msl_swap_auto_handle.cpp  
@@ -66,13 +65,16 @@ int main() {
 }  
 ```  
   
-  **s1 \= 'string one', s2 \= 'string two'**  
-**s1 \= 'string two', s2 \= 'string one'**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_handle.h\>  
+```Output  
+s1 = 'string one', s2 = 'string two'  
+s1 = 'string two', s2 = 'string one'  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_handle](../dotnet/auto-handle.md)   
- [auto\_handle::swap](../dotnet/auto-handle-swap.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_handle](../dotnet/auto-handle.md)   
+ [auto_handle::swap](../dotnet/auto-handle-swap.md)
