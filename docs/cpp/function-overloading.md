@@ -4,32 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9076fdd48e466d68d5dcecec2c339a98f39a8bb1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="function-overloading"></a>함수 오버로드
 C++에서는 동일한 범위에서 이름이 같은 함수를 둘 이상 지정할 수 있습니다. 이러한 함수는 오버로드된 함수라고 하며 오버로드에 자세히 설명되어 있습니다. 프로그래머가 오버로드된 함수를 사용하면 인수의 형식 및 수에 따라 함수에 대한 서로 다른 의미 체계를 제공할 수 있습니다.  
   
- 예를 들어 한 **인쇄** 문자열을 사용 하는 함수 (또는 **char \* **) 인수는 형식의 인수를 사용 하는 1 보다 상당히 다른 작업을 수행 **double** . 오버로드를 사용하면 일관된 이름을 지정할 수 있으며 프로그래머가 `print_sz` 또는 `print_d` 같은 이름을 만들 필요가 없습니다. 다음 표에서는 C++에서 동일한 범위에서 이름이 동일한 함수 그룹 간을 구별하는 데 사용하는 함수 선언 부분을 보여 줍니다.  
+ 예를 들어 한 **인쇄** 문자열을 사용 하는 함수 (또는 **char \*** ) 인수는 형식의 인수를 사용 하는 1 보다 상당히 다른 작업을 수행 **double** . 오버로드를 사용하면 일관된 이름을 지정할 수 있으며 프로그래머가 `print_sz` 또는 `print_d` 같은 이름을 만들 필요가 없습니다. 다음 표에서는 C++에서 동일한 범위에서 이름이 동일한 함수 그룹 간을 구별하는 데 사용하는 함수 선언 부분을 보여 줍니다.  
   
 ### <a name="overloading-considerations"></a>오버로드 고려 사항  
   
@@ -183,7 +180,7 @@ F1 = Add( 3, 6 );
   
  이 두 집합의 공통 영역이 비어 있습니다. 따라서 컴파일러가 오류 메시지를 생성합니다.  
   
- 인수 일치의 경우 사용 하는 함수에 대 한 * n * 기본 인수로 처리 됩니다 * n *각각 인수의 개수가 다른 + 1 개의 별도 작동 합니다.  
+ 인수 일치의 경우 사용 하는 함수에 대 한  *n*  기본 인수로 처리 됩니다  *n* 각각 인수의 개수가 다른 + 1 개의 별도 작동 합니다.  
   
  줄임표(...)는 와일드카드로 사용되어 실제 인수와 일치합니다. 오버로드된 함수 집합을 설계할 때 주의하지 않으면 모호한 집합이 여러 개 생길 수 있습니다.  
   
@@ -259,7 +256,7 @@ volatile Over&
 |*형식 이름*|*형식 이름***&**|  
 |*형식 이름***&**|*형식 이름*|  
 |*형식-이름이* ****|*형식 이름\**|  
-|*형식-이름이* **(** *인수 목록* **)**|**(** * \*형식-이름이* **) (** *인수 목록* **)**|  
+|*형식-이름이* **(** *인수 목록* **)**|**(**  *\*형식-이름이* **) (** *인수 목록* **)**|  
 |*형식 이름*|**const** *형식 이름*|  
 |*형식 이름*|`volatile`*형식 이름*|  
 |*형식 이름\**|**const** *형식 이름\**|  
@@ -269,19 +266,19 @@ volatile Over&
   
 1.  정확한 일치. 함수가 호출되는 형식과 함수 프로토타입에서 선언된 형식 간 정확한 일치는 항상 가장 좋은 일치입니다. trivial 변환 시퀀스는 정확히 일치하는 항목으로 분류됩니다. 하지만 이러한 변환 중 어느 것도 수행하지 않는 시퀀스는 변환시키는 시퀀스보다 나은 것으로 간주됩니다.  
   
-    -   에 대 한 포인터를 포인터에서 **const** (`type` ** \* ** 를 **const** `type` ** \* ** ).  
+    -   에 대 한 포인터를 포인터에서 **const** (`type`  **\***  를 **const** `type`  **\***  ).  
   
-    -   에 대 한 포인터를 포인터에서 `volatile` (`type` ** \* ** 를 `volatile` `type` ** \* **).  
+    -   에 대 한 포인터를 포인터에서 `volatile` (`type`  **\***  를 `volatile` `type`  **\*** ).  
   
-    -   참조에 대 한 참조에서 **const** (`type` ** & ** 를 **const** `type` ** & **).  
+    -   참조에 대 한 참조에서 **const** (`type`  **&**  를 **const** `type`  **&** ).  
   
-    -   참조에 대 한 참조에서 `volatile` (`type` ** & ** 를 `volatile` `type` ** & **).  
+    -   참조에 대 한 참조에서 `volatile` (`type`  **&**  를 `volatile` `type`  **&** ).  
   
 2.  승격을 통한 일치. 만 정수 계열 승격, 포함 된 정확 하 게 일치로 분류 되지 않은 모든 시퀀스 **float** 를 **double**, 및 trivial 변환이 승격을 통한 일치로 분류 됩니다. 승격을 통한 일치는 정확한 일치만큼 양호하지는 않지만 표준 변환을 통한 일치에 비해 좋습니다.  
   
 3.  표준 변환을 통한 일치. 표준 변환과 trivial 변환만 포함 포함하는, 정확한 일치 또는 승격을 통한 일치로 분류되지 않은 시퀀스는 표준 변환을 통한 일치로 분류됩니다. 이 범주에는 다음 규칙이 적용됩니다.  
   
-    -   직접 또는 간접 기본 클래스에 대 한 포인터를 파생된 클래스에 대 한 포인터에서 변환 시 문자열이를 변환 하는 것이 좋습니다 **void \* ** 또는 **const void \* **합니다.  
+    -   직접 또는 간접 기본 클래스에 대 한 포인터를 파생된 클래스에 대 한 포인터에서 변환 시 문자열이를 변환 하는 것이 좋습니다 **void \***  또는 **const void \*** 합니다.  
   
     -   파생 클래스에 대한 포인터에서 기본 클래스에 대한 포인터로 변환할 경우 기본 클래스가 직접 기본 클래스에 가까울수록 더 잘 일치합니다. 클래스 계층 구조가 다음 그림과 같다고 가정합니다.  
   
@@ -426,7 +423,7 @@ obj.name
     void Print( PSTR szToPrint );  
     ```  
   
-     위의 두 함수에는 동일한 인수 목록이 있습니다. `PSTR`형식에 대 한 동의어 **char \* **합니다. 멤버 범위에서 이 코드를 사용하면 오류가 발생합니다.  
+     위의 두 함수에는 동일한 인수 목록이 있습니다. `PSTR`형식에 대 한 동의어 **char \*** 합니다. 멤버 범위에서 이 코드를 사용하면 오류가 발생합니다.  
   
 -   열거 형식은 고유한 형식이며 오버로드된 함수 사이를 구분하는 데 사용할 수 있습니다.  
   
