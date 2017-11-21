@@ -1,45 +1,44 @@
 ---
-title: "ImplementsHelper::IidCount 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsHelper::IidCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IidCount 상수"
+title: "Implementshelper:: Iidcount 상수 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsHelper::IidCount
+dev_langs: C++
+helpviewer_keywords: IidCount constant
 ms.assetid: 214cde76-8d2f-4f74-97e6-1af7ee8a08a4
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 786d9003028048ddef3c51a9dc4672c1991a6f46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ImplementsHelper::IidCount 상수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-WRL 인프라구조체를 지원하고 코드에서 직접적으로 사용되는 것을 의도하지 않습니다.  
+# <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount 상수
+WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
+  
 static const unsigned long IidCount;  
 ```  
   
-## 설명  
- 현재 구현 개체에 구현된 인터페이스 Id 저장합니다.  
+## <a name="remarks"></a>설명  
+ 구현 된 구현 된 인터페이스 Id의 수를 보유합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
   
- **네임스페이스**Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ImplementsHelper 구조체](../windows/implementshelper-structure.md)   
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

@@ -1,70 +1,70 @@
 ---
-title: "레코드 집합: 대형 데이터 항목 작업(ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "이진 대형 개체"
-  - "BLOB(이진 대형 개체), 레코드 집합"
-  - "CLongBinary 클래스, 레코드 집합에서 사용"
-  - "ODBC 레코드 집합, 이진 대형 개체"
-  - "레코드 집합, 이진 대형 개체"
+title: "레코드 집합: 대형 데이터 항목 (ODBC) 작업 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BLOB (binary large object), recordsets
+- ODBC recordsets, binary large objects
+- recordsets, binary large objects
+- binary large objects
+- CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7ad1ba9120575840ac833a20061b3e1c5a547412
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 레코드 집합: 대형 데이터 항목 작업(ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이 항목의 내용은 MFC ODBC 클래스와 MFC DAO 클래스 모두에 적용됩니다.  
+# <a name="recordset-working-with-large-data-items-odbc"></a>레코드 집합: 대형 데이터 항목 작업(ODBC)
+이 항목 MFC ODBC 클래스와 MFC DAO 클래스에 적용 됩니다.  
   
 > [!NOTE]
->  MFC DAO 클래스를 사용하는 경우 [CLongBinary](../../mfc/reference/clongbinary-class.md) 클래스가 아니라 [CByteArray](../../mfc/reference/cbytearray-class.md) 클래스를 사용하여 대형 데이터 항목을 관리합니다.  대량 행 페치에 MFC ODBC 클래스를 사용하고 있으면 `CByteArray` 대신 `CLongBinary`를 사용하는 것이 좋습니다.  대량 행 페치에 대한 자세한 내용은 [레코드 집합: 대량 레코드 페치\(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)를 참조하십시오.  
+>  MFC DAO 클래스를 사용 하는 경우 클래스가 있는 대형 데이터 항목을 관리 [CByteArray](../../mfc/reference/cbytearray-class.md) 클래스 대신 [CLongBinary](../../mfc/reference/clongbinary-class.md)합니다. 대량 행 페치와 MFC ODBC 클래스를 사용 하는 경우 사용 하 여 `CLongBinary` 대신 `CByteArray`합니다. 대량 행 페치에 대 한 자세한 내용은 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
   
- 여기에서는 사용자의 데이터베이스에서 비트맵\(직원 사진, 지도, 제품 그림, OLE 개체 등\)과 같은 대형 데이터를 저장할 수 있다고 가정합니다.  이런 종류의 데이터는 다음과 같은 특성이 있으므로 BLOB\(이진 대형 개체\)라고 합니다.  
+ 사용자의 데이터베이스 대형 비트맵 (직원 사진을, 지도, 제품 그림, OLE 개체)과 같은 데이터를 저장할 수 있다고 가정 합니다. 이러한 종류의 데이터는 라고도 Binary Large Object (또는 BLOB) 때문에:  
   
 -   각 필드 값이 큽니다.  
   
--   숫자나 다른 단순한 데이터 형식과 달리 크기를 예측할 수 없습니다.  
+-   숫자 및 다른 단순한 데이터 형식과 달리 크기를 예측할 수 없습니다.  
   
--   프로그램 상에서 데이터의 형식이 일정치 않습니다.  
+-   데이터는 프로그램의 일정치 합니다.  
   
- 이 항목에서는 이러한 개체 작업을 위해 데이터베이스 클래스에서 제공하는 지원 기능에 대해 설명합니다.  
+ 이 항목에서는 이러한 개체로 작업 하기 위한 데이터베이스 클래스에서 제공 하는 지원 기능에 대해 설명 합니다.  
   
-##  <a name="_core_managing_large_objects"></a> 대형 개체 관리  
- 레코드 집합에는 이진 대형 개체를 쉽게 관리할 수 있는 두 가지 방법이 제공됩니다.  [CByteArray](../../mfc/reference/cbytearray-class.md) 클래스나 [CLongBinary](../../mfc/reference/clongbinary-class.md) 클래스를 사용할 수 있습니다.  대개 `CByteArray`를 사용하여 대형 이진 개체를 관리합니다.  
+##  <a name="_core_managing_large_objects"></a>대형 개체 관리  
+ 레코드 집합에는 이진 대형 개체 관리를 쉽게 해결 하기 위해 다음의 두 가지입니다. 클래스를 사용할 수 [CByteArray](../../mfc/reference/cbytearray-class.md) 클래스를 사용할 수 있습니다 또는 [CLongBinary](../../mfc/reference/clongbinary-class.md)합니다. 일반적으로 `CByteArray` 은 큰 이진 데이터를 관리 하는 것이 좋습니다.  
   
- [CByteArray 클래스](#_core_the_cbytearray_class)에서 설명한 것처럼 `CByteArray`는 `CLongBinary`보다 오버헤드가 더 많이 발생하지만 성능은 더 좋습니다.  `CLongBinary`에 대한 간략한 설명은 [CLongBinary 클래스](#_core_the_clongbinary_class)를 참조하십시오.  
+ `CByteArray`보다 더 많은 오버 헤드가 필요 `CLongBinary` 성능은 더에 설명 된 대로 하지만 [CByteArray 클래스](#_core_the_cbytearray_class)합니다. `CLongBinary`간단히 설명 [CLongBinary 클래스](#_core_the_clongbinary_class)합니다.  
   
- `CByteArray`를 사용한 대형 데이터 항목 작업에 대한 자세한 내용은 [Technical Note 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) 문서를 참조하십시오.  
+ 사용에 대 한 자세한 내용은 `CByteArray` 대형 데이터 항목을 사용 하려면 참조 [기술 참고 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)합니다.  
   
-##  <a name="_core_the_cbytearray_class"></a> CByteArray 클래스  
- `CByteArray`는 MFC 컬렉션 클래스 중 하나입니다.  `CByteArray` 개체는 바이트의 동적 배열을 저장하며 배열은 필요에 따라 커질 수도 있습니다.  이 클래스는 기본 제공 C\+\+ 배열의 경우와 같이 인덱스를 사용하여 액세스 속도를 향상시킵니다.  진단을 목적으로 `CByteArray` 개체를 serialize하고 덤프할 수 있습니다.  이 클래스는 지정된 바이트를 가져오거나 설정하는 멤버 함수, 바이트를 삽입하거나 추가하는 멤버 함수 및 한 바이트나 모든 바이트를 제거하는 멤버 함수를 제공합니다.  이러한 기능을 이용하여 좀더 쉽게 이진 데이터를 구문 분석할 수 있습니다.  예를 들어 이진 개체가 OLE 개체인 경우 실제 개체에 도달하려면 일부 헤더 바이트를 통해 작업해야 합니다.  
+##  <a name="_core_the_cbytearray_class"></a>CByteArray 클래스  
+ `CByteArray`MFC 컬렉션 클래스 중 하나입니다. A `CByteArray` 개체 바이트의 동적 배열을 저장-필요에 따라 배열 커질 수 있습니다. 클래스는 기본 제공 c + + 배열와 마찬가지로 인덱스로 빠른 액세스를 제공 합니다. `CByteArray`개체를 serialize 및 진단용으로 덤프할 수 있습니다. 가져오기 및 지정 된 바이트를 설정, 삽입 및 바이트를 추가 및 1 바이트 또는 바이트를 모두 제거 하기 위한 멤버 함수를 제공 하는 클래스입니다. 이러한 시설은 이진 데이터를 보다 쉽게 구문 분석을 확인 합니다. 예를 들어 이진 개체가 OLE 개체 이면에 실제 개체에 도달 하기 위해 일부 헤더 바이트를 진행 해야 합니다.  
   
-##  <a name="_core_using_cbytearray_in_recordsets"></a> 레코드 집합에서 CByteArray 사용  
- 레코드 집합의 필드 데이터 멤버에 `CByteArray` 형식을 지정하면, [RFX](../../data/odbc/record-field-exchange-rfx.md)를 통해 레코드 집합과 데이터 소스 간의 개체 전송을 관리하고 개체 내의 데이터를 조작하는 데 유용하게 사용할 수 있습니다.  RFX는 검색된 데이터를 위한 고유 사이트가 필요하고 사용자는 내부 데이터에 액세스하기 위한 방법이 필요합니다.  
+##  <a name="_core_using_cbytearray_in_recordsets"></a>CByteArray 레코드 집합에서 사용  
+ 레코드 집합의 필드 데이터 멤버 유형을 지정 하 여 `CByteArray`, 고정된 한 자료를 제공 [RFX](../../data/odbc/record-field-exchange-rfx.md) 조작할 수 있습니다 및 레코드 집합 및 데이터 원본 간에 이러한 개체 전송을 관리는 개체 내의 데이터입니다. RFX에 대 한 검색 된 데이터를 특정 사이트를 필요 하 고 기본 데이터에 액세스 하는 방법이 필요 합니다.  
   
- `CByteArray`를 사용한 대형 데이터 항목 작업에 대한 자세한 내용은 [Technical Note 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) 문서를 참조하십시오.  
+ 사용에 대 한 자세한 내용은 `CByteArray` 대형 데이터 항목을 사용 하려면 참조 [기술 참고 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)합니다.  
   
-##  <a name="_core_the_clongbinary_class"></a> CLongBinary 클래스  
- [CLongBinary](../../mfc/reference/clongbinary-class.md) 개체는 힙에 할당된 저장소 블록에 대한 `HGLOBAL` 핸들과 관련되어 있는 간단한 셸입니다.  이 개체가 이진 대형 개체를 포함하는 테이블 열을 바인딩할 때 데이터를 레코드 집합에 전송해야 하면 RFX는 `HGLOBAL` 핸들을 할당하고 레코드 집합의 `CLongBinary` 필드에 핸들을 저장합니다.  
+##  <a name="_core_the_clongbinary_class"></a>CLongBinary 클래스  
+ A [CLongBinary](../../mfc/reference/clongbinary-class.md) 개체는 주위 간단한 셸은 `HGLOBAL` 힙에 할당 된 저장소의 블록에 대 한 핸들입니다. 이진 대형 개체를 포함 하는 테이블 열을 바인딩할 때 RFX 할당는 `HGLOBAL` 레코드 집합에 데이터를 전송 해야 하 고에 핸들을 저장 하는 경우 처리는 `CLongBinary` 레코드 집합의 필드입니다.  
   
- 그런 다음 다른 핸들 데이터와 마찬가지로 `HGLOBAL` 핸들의 `m_hData`를 사용하여 데이터 자체에 대한 작업을 수행합니다.  이 경우 [CByteArray](../../mfc/reference/cbytearray-class.md)가 유용합니다.  
+ 를 사용 하 여는 `HGLOBAL` 처리, `m_hData`,으로 처리할 수 있습니다에 데이터에 연산을 자체 데이터로 작업 하 합니다. 여기에 [CByteArray](../../mfc/reference/cbytearray-class.md) 기능을 추가 합니다.  
   
 > [!CAUTION]
->  CLongBinary 개체는 함수 호출 시 매개 변수로 사용할 수 없습니다.  뿐만 아니라 이 개체를 구현하면 **::SQLGetData**가 호출되므로 스크롤 가능한 스냅숏의 스크롤 속도가 느려집니다.  이 문제는 동적 스키마 열을 검색하기 위해 직접 **::SQLGetData** 호출을 사용하는 경우에도 발생할 수 있습니다.  
+>  CLongBinary 개체 함수 호출에 매개 변수로 사용할 수 없습니다. 또한를 호출 하는 구현 **:: SQLGetData**, 반드시 스크롤 스크롤 가능한 스냅숏의 속도가 느려집니다. 이 경우도 마찬가지 사용 하는 경우는 **:: SQLGetData** 동적 스키마 열을 검색 하기 위해 직접 호출 합니다.  
   
-## 참고 항목  
- [레코드 집합\(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [레코드 집합: 합계 및 다른 집계 결과 구하기\(ODBC\)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)   
- [RFX](../../data/odbc/record-field-exchange-rfx.md)
+## <a name="see-also"></a>참고 항목  
+ [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [레코드 집합: 합계 및 다른 집계 결과 (ODBC) 구하기](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)   
+ [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)

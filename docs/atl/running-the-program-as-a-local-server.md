@@ -1,29 +1,30 @@
 ---
-title: "Running the Program as a Local Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 서비스, running as local servers"
-  - "디버깅[ATL], running services as local server"
+title: "로컬 서버로 프로그램을 실행 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- debugging [ATL], running services as local server
+- ATL services, running as local servers
 ms.assetid: eb9701e6-e2a8-4666-897f-0c893aec8ac7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 131bfefb35164b2d1e53f5671016235e5426c096
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Running the Program as a Local Server
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-프로그램을 서비스로 실행 하는 것이 편리 하지 않으면 프로그램이 표준 로컬 서버로 실행 되도록 레지스트리를 일시적으로 변경할 수 있습니다.  단순히 이름 바꾸기는 `LocalService` 해당 AppID 값 `_LocalService` 하 고는 `LocalServer32` 키 아래에 CLSID 올바르게 설정.  \(참고 DCOMCNFG를 사용 하 여 응용 프로그램을 다른 컴퓨터에서 실행 되도록 지정 하는 변경 하면 `LocalServer32` 키를 `_LocalServer32`.\) 때문에 몇 초 동안 시작 시 로컬 서버를 취하는 프로그램 실행 호출을  **StartServiceCtrlDispatcher** 에서 `CAtlServiceModuleT::Start` 실패 하기 전에 몇 초 정도 걸립니다.  
+# <a name="running-the-program-as-a-local-server"></a>로컬 서버로 프로그램을 실행합니다.
+프로그램을 서비스로 실행를 편리 하 게 없는 경우 프로그램이 정상 로컬 서버로 실행 될 수 있도록 레지스트리를 일시적으로 변경할 수 있습니다. 단순히 이름 바꾸기는 `LocalService` 프로그램 AppID 아래의 값 `_LocalService` 확인는 `LocalServer32` 프로그램 CLSID 아래 키가 올바르게 설정 합니다. (참고는 DCOMCNFG를 사용 하 여 다른 컴퓨터에 응용 프로그램을 실행 해야 함을 지정 하려면 이름을 변경 하면 `LocalServer32` 키를 `_LocalServer32`.) 때문에 로컬 서버 시작 시에 몇 초를 사용 하면 프로그램 실행에 대 한 호출 **StartServiceCtrlDispatcher** 에 `CAtlServiceModuleT::Start` 실패 하기 전에 몇 초입니다.  
   
-## 참고 항목  
- [Debugging Tips](../atl/debugging-tips.md)
+## <a name="see-also"></a>참고 항목  
+ [디버깅 팁](../atl/debugging-tips.md)
+

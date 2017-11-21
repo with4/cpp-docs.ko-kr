@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - envp argument
 - main function, arguments
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d50e32a54cdb10af4adbfb3cfda64b8f1b21b2eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4bb50f4471aed2af6de0ae20e2e3c85ab0cb5d9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="argument-definitions"></a>인수 정의
 프로토타입의 인수를 사용하면  
@@ -43,7 +40,7 @@ argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar
  `argv` 뒤에 오는 인수의 수를 포함하는 정수입니다. `argc` 매개 변수는 항상 1보다 크거나 같습니다.  
   
  `argv`  
- 프로그램의 사용자가 입력한 명령줄 인수를 나타내는 null로 끝나는 문자열의 배열입니다. 규칙에 따라 `argv` **[0]** 된 프로그램을 호출, 명령 `argv` **[1]** 될 때까지 이런 식으로 확인 하 고 첫 번째 명령줄 인수는 `argv` ** [**`argc`**]**, 항상 **NULL**합니다. 참조 [명령줄 처리 사용자 지정](../cpp/customizing-cpp-command-line-processing.md) 명령줄 처리 억제에 대 한 내용은 합니다.  
+ 프로그램의 사용자가 입력한 명령줄 인수를 나타내는 null로 끝나는 문자열의 배열입니다. 규칙에 따라 `argv` **[0]** 된 프로그램을 호출, 명령 `argv` **[1]** 될 때까지 이런 식으로 확인 하 고 첫 번째 명령줄 인수는 `argv`  **[**`argc`**]**, 항상 **NULL**합니다. 참조 [명령줄 처리 사용자 지정](../cpp/customizing-cpp-command-line-processing.md) 명령줄 처리 억제에 대 한 내용은 합니다.  
   
  첫 번째 명령줄 인수는 항상 `argv` **[1]** 마지막 트랜잭션이 및 `argv` **[** `argc` -1**]**합니다.  
   

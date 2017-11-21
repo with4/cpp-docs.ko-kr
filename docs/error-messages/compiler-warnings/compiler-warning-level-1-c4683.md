@@ -1,43 +1,41 @@
 ---
 title: "컴파일러 경고 (수준 1) C4683 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4683"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4683"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4683
+dev_langs: C++
+helpviewer_keywords: C4683
 ms.assetid: e6e77364-dba1-46dd-ae1d-03da23070bce
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 120da429e4f296b6be1881da806434f7548383ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4683
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4683"></a>컴파일러 경고(수준 1) C4683
 **'**   
- ***function* ': 이벤트 소스에 'out' 매개 변수가 있으므로 이벤트 처리기를 여러 개 후크하는 경우 주의해야 합니다.**  
+ ***함수* ': 이벤트 소스에 'out'-여러 이벤트 처리기를 후크 하는 경우 주의 해야 합니다; 매개 변수**  
   
- 두 개 이상의 이벤트 싱크가 COM 이벤트 소스를 수신하는 경우 out 매개 변수의 값이 무시됩니다.  
+ 둘 이상의 이벤트 싱크를 COM 이벤트 소스를 수신 하는 경우 out 매개 변수 값 무시 될 수 있습니다.  
   
- 다음과 같은 상황에서 메모리 누수가 발생합니다.  
+ 다음과 같은 상황에서 메모리 누수가 발생 하는지 고려해 야 합니다.  
   
-1.  메서드에 예를 들어 BSTR\*와 같이 내부적으로 할당된 out 매개 변수가 있는 경우  
+1.  메서드에 out 매개 변수는 내부적으로 할당 된 예를 들어 BSTR 변수가 경우 *입니다.  
   
-2.  이벤트에 둘 이상의 처리기가 있는 경우\(멀티캐스트 이벤트인 경우\)  
+2.  이벤트에는 여러 명의 처리기 하는 경우 (멀티 캐스트 이벤트는)  
   
- 누수의 원인은 out 매개 변수가 둘 이상의 처리기에 의해 설정되지만 마지막 처리기에 의해서만 호출 사이트로 반환되기 때문입니다.  
+ 누수 원인은 out 매개 변수는 둘 이상의 처리기에 의해 설정 하지만 마지막 처리기가 호출 사이트에 반환 됩니다.  
   
- 다음 샘플에서는 C4683 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4683 오류가 생성 됩니다.  
   
 ```  
 // C4683.cpp  

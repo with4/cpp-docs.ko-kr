@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,21 +20,18 @@ f1_keywords:
 - ATLCOMCLI/ATL::CComPtrBase::Release
 - ATLCOMCLI/ATL::CComPtrBase::SetSite
 - ATLCOMCLI/ATL::CComPtrBase::p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComPtrBase class
+dev_langs: C++
+helpviewer_keywords: CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: cabfa7dc4731c4ff3ca4fbf041bf89f2228eb8e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 클래스
 이 클래스는 메모리 COM 기반 루틴을 사용 하 여 스마트 포인터 클래스에 대 한 기본 사항을 제공 합니다.  
@@ -375,4 +371,3 @@ HRESULT SetSite(IUnknown* punkParent) throw();
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)
-

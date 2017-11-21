@@ -1,41 +1,40 @@
 ---
-title: "CDynamicAccessor::GetStatus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::GetStatus"
-  - "CDynamicAccessor.GetStatus"
-  - "ATL.CDynamicAccessor.GetStatus"
-  - "CDynamicAccessor::GetStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetStatus 메서드"
+title: 'Cdynamicaccessor:: Getstatus | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::GetStatus
+- CDynamicAccessor.GetStatus
+- ATL.CDynamicAccessor.GetStatus
+- CDynamicAccessor::GetStatus
+dev_langs: C++
+helpviewer_keywords: GetStatus method
 ms.assetid: 8f1aba69-5c2c-4ca7-ad84-7b4b27995eb8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fd1c55e78cdc4a0ec8bd5c24c7010ec133b043bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::GetStatus
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retrieves the status of the specified column.  
+# <a name="cdynamicaccessorgetstatus"></a>CDynamicAccessor::GetStatus
+지정 된 열 상태를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      bool GetStatus(   
-   DBORDINAL nColumn,   
-   DBSTATUS* pStatus    
+      bool GetStatus(   
+   DBORDINAL nColumn,   
+   DBSTATUS* pStatus    
 ) const throw( );  
 bool GetStatus(  
    const CHAR* pColumnName,  
@@ -47,22 +46,22 @@ bool GetStatus(
 ) const throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nColumn`  
- \[in\] The column number.  Column numbers start with 1.  A value of 0 refers to the bookmark column, if any.  
+ [in] 열 번호입니다. 열 번호는 1부터 시작 합니다. 0 값이 있는 경우 책갈피 열을 참조 합니다.  
   
  `pColumnName`  
- \[in\] A pointer to a character string containing the column name.  
+ [in] 열 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
  `pStatus`  
- \[out\] A pointer to the variable containing the column status.  See [DBSTATUS](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in the *OLE DB Programmer's Reference* for more information.  
+ [out] 열 상태를 포함 하는 변수에 대 한 포인터입니다. 참조 [DBSTATUS](https://msdn.microsoft.com/en-us/library/ms722617.aspx) 에 *OLE DB Programmer's Reference* 자세한 정보에 대 한 합니다.  
   
-## 반환 값  
- Returns **true** if the specified column is found.  Otherwise, this function returns **false**.  
+## <a name="return-value"></a>반환 값  
+ 반환 **true** 지정된 된 열이 있으면 합니다. 그렇지 않으면이 함수가 반환 **false**합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicAccessor::SetStatus](../../data/oledb/cdynamicaccessor-setstatus.md)

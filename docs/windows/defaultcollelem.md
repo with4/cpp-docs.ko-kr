@@ -1,32 +1,30 @@
 ---
-title: "defaultcollelem | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultcollelem"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultcollelem attribute"
+title: defaultcollelem | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultcollelem
+dev_langs: C++
+helpviewer_keywords: defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8bfb6fb41e61fded3994beb6c9a31fd7661c5e2f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# defaultcollelem
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual Basic 코드 최적화에 사용 됩니다.  
+# <a name="defaultcollelem"></a>defaultcollelem
+Visual Basic 코드 최적화를 위해 사용 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,11 +32,11 @@ Visual Basic 코드 최적화에 사용 됩니다.
   
 ```  
   
-## 설명  
- **Defaultcollelem** C\+\+ 특성을 동일한 기능을가지고 있는  [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **defaultcollelem** c + + 특성에 동일한 기능을는 [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL 특성입니다.  
   
-## 예제  
- 다음 코드 사용 하 여 인터페이스 메서드를 보여 줍니다 있는  **defaultcollelem** 특성:  
+## <a name="example"></a>예제  
+ 다음 코드에서는 사용 하 여 인터페이스 메서드는 **defaultcollelem** 특성:  
   
 ```  
 // cpp_attr_ref_defaultcollelem.cpp  
@@ -55,20 +53,19 @@ __interface IMyForm
 };  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
 |**적용 대상**|인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [메서드 특성](../windows/method-attributes.md)   

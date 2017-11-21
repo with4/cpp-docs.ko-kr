@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,36 +25,20 @@ apitype: DLLExport
 f1_keywords:
 - memchr
 - wmemchr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: aad3d578cececad6af6a6f4aaf1107460a23d784
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: dd7a16cb35257104b79d0347fe415c5b17cd4bb4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 버퍼에서 문자를 찾습니다.  
@@ -111,7 +94,7 @@ const wchar_t *wmemchr(
 ## <a name="remarks"></a>설명  
  `memchr` 및 `wmemchr`은 `buf`의 처음 `count` 바이트에서 처음 나타나는 `c`를 찾습니다. `c`를 찾거나 첫 번째 `count` 바이트를 검사하면 중지됩니다.  
   
- C에서 이러한 함수는 첫 번째 인수에 대한 `const` 포인터를 갖습니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. `const`에 대한 포인터를 갖는 오버로드는 `const`에 대한 포인터를 반환합니다. 비`const`에 대한 포인터를 갖는 버전은 비`const`에 대한 포인터를 반환합니다. 이러한 함수의 `const` 및 비`const` 버전을 모두 사용할 수 있는 경우 매크로 _CONST_CORRECT_OVERLOADS가 정의됩니다. 두 C++ 오버로드에 대한 비`const` 동작이 필요한 경우 기호 _CONST_RETURN을 정의합니다.  
+ C에서 이러한 함수는 첫 번째 인수에 대한 `const` 포인터를 갖습니다. C++에서는 두 오버로드를 모두 사용할 수 있습니다. `const`에 대한 포인터를 갖는 오버로드는 `const`에 대한 포인터를 반환합니다. 비`const`에 대한 포인터를 갖는 버전은 비`const`에 대한 포인터를 반환합니다. 매크로 _CRT_CONST_CORRECT_OVERLOADS 모두에 정의 된는 `const` 및 비-`const` 이러한 함수의 버전을 사용할 수 있습니다. 두 C++ 오버로드에 대한 비`const` 동작이 필요한 경우 기호 _CONST_RETURN을 정의합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

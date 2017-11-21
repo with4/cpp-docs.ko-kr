@@ -1,65 +1,65 @@
 ---
-title: "MFC 응용 프로그램의 지역화된 리소스: 위성 DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL[C++], MFC 지역화"
-  - "지역화[C++], MFC 리소스"
-  - "지역화된 리소스[C++]"
-  - "MFC DLL[C++], 지역화"
-  - "여러 언어 지원[C++]"
-  - "리소스 전용 DLL[C++]"
-  - "리소스 전용 DLL[C++], MFC 응용 프로그램"
-  - "리소스[MFC], 지역화"
-  - "위성 DLL[C++]"
+title: "MFC 응용 프로그램의 지역화 된 리소스: 위성 Dll | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- multiple language support [C++]
+- localization [C++], MFC resources
+- localized resources [C++]
+- MFC DLLs [C++], localizing
+- DLLs [C++], localizing MFC
+- resources [MFC], localizing
+- resource-only DLLs [C++]
+- resource-only DLLs [C++], MFC applications
+- satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8f601c32a1fe2accec2663246a56830fda5ed930
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# MFC 응용 프로그램의 지역화된 리소스: 위성 DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-MFC 버전 7.0 이상에서는 여러 언어로 지역화된 응용 프로그램을 만들도록 도와주는 기능인 위성 DLL을 지원합니다.  위성 DLL이란 특정 언어로 지역화된 응용 프로그램의 리소스가 포함된 [리소스 전용 DLL](../build/creating-a-resource-only-dll.md)입니다.  응용 프로그램이 실행될 때 MFC는 환경에 가장 적합한 지역화된 리소스를 자동으로 로드합니다.  예를 들어, 위성 DLL이 두 개인 영어 리소스를 사용하는 응용 프로그램의 경우, 한 DLL에는 프랑스어로 번역된 리소스가 포함되어 있고 다른 DLL에는 독일어로 번역된 리소스가 포함되어 있을 수 있습니다.  응용 프로그램이 영어 시스템에서 실행될 경우에는 영어 리소스를 사용합니다.  그러나 프랑스어 시스템에서 실행되면 프랑스어 리소스를 사용하여 독일어 시스템에서 실행되면 독일어 리소스를 사용합니다.  
+# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC 응용 프로그램의 지역화된 리소스: 위성 DLL
+MFC 버전 7.0 이상 위성 Dll에 여러 언어로 지역화 된 응용 프로그램을 만드는 데 도움이 되는 기능에 대 한 향상 된 지원을 제공 합니다. 위성 DLL이는 [리소스 전용 DLL](../build/creating-a-resource-only-dll.md) 특정 언어에 대 한 지역화 된 응용 프로그램의 리소스를 포함 하 합니다. 응용 프로그램이 실행, MFC는 환경에 대 한 가장 적절 한 지역화 된 리소스를 자동으로 로드 합니다. 예를 들어 영어 리소스 두 위성 Dll에 코드 및 기타는 독일어로 번역을 포함 하 여 리소스의 프랑스어 번역이 포함 된 하나를 사용 하는 응용 프로그램에 있을 수 있습니다. 응용 프로그램은 영어 언어 시스템에서 실행 되는 영어 리소스 사용 합니다. 프랑스 리소스만 사용 하 여 시스템 프랑스어인을 실행 하는 경우 독일어 시스템을 실행 하는 경우에 독일 리소스 사용 합니다.  
   
- To support localized resources in an MFC 응용 프로그램에서 지역화된 리소스를 지원하기 위해 MFC는 특정 언어로 지역화된 리소스를 포함하는 위성 DLL을 로드합니다.  위성 DLL의 이름은 *ApplicationNameXXX*.dll입니다. 여기서 *ApplicationName* 은 MFC를 사용하는 .exe나 .dll이며 *XXX*는 리소스 언어를 나타내는 세 문자 코드입니다\(예: 'ENU' 또는 'DEU'\).  
+ 위성 DLL을 로드 하려고 하는 MFC MFC 응용 프로그램에서 지역화 된 리소스를 지원 하기 위해이 특정 언어로 지역화 된 리소스가 들어 있는입니다. 위성 Dll 이름이 지정 된 *ApplicationNameXXX*.dll, 여기서 *ApplicationName* .exe 또는.dll이 MFC를 사용 하 여의 이름 및 *XXX* 언어에 대 한 세 문자로 된 코드는 리소스 (예를 들어 '한국어' 또는 'DEU').  
   
- MFC는 다음 언어 순서로 리소스 DLL을 로드하려고 시도하다가 하나를 찾으면 중단합니다.  
+ MFC 발견할 때 중지 순서로 다음 언어에 대 한 리소스 DLL을 로드 하려고 했습니다.  
   
-1.  \(Windows 2000 이상만 해당\)현재 사용자의 기본 UI 언어\(GetUserDefaultUILanguage\(\) Win32 API가 반환한 값\).  
+1.  (Windows 2000 또는 그 이상에 해당) 현재 사용자의 기본 UI 언어를 GetUserDefaultUILanguage() Win32 API에서 반환 합니다.  
   
-2.  \(Windows 2000 이상만 해당\)특정 보조 언어 없이, 현재 사용자의 기본 UI 언어\(즉, ENC\[영어\(캐나다\)\]는 ENU\[미국 영어\]가  됩니다.\)  
+2.  (Windows 2000 또는 그 이상에 해당) 특정 보조 언어 없이 현재 사용자의 기본 UI 언어 (즉, [캐나다 영어] ENC 됨 [미국 한국어 영어])입니다.  
   
-3.  시스템의 기본 UI 언어.  Windows 2000 이상 버전의 경우 GetSystemDefaultUILanguage\(\) API가 반환하는 값입니다.  다른 플랫폼의 경우에는 OS 자체의 언어입니다.  
+3.  시스템의 기본 UI 언어입니다. Windows 2000 이상에서 GetSystemDefaultUILanguage() API에서 반환 됩니다. 다른 플랫폼에서 자체 운영 체제의 언어입니다.  
   
-4.  특정 보조 언어 없이, 시스템의 기본 UI 언어.  
+4.  시스템의 기본 UI 언어를 특정 보조 언어 없이입니다.  
   
-5.  3문자 코드 LOC를 사용한 가장 언어.  
+5.  3 자로 코드 LOC. 가장 언어  
   
- MFC는 위성 DLL을 찾지 못하면 응용 프로그램에 포함된 리소스를 사용합니다.  
+ MFC 위성 Dll을 찾을 수 없는 경우 응용 프로그램 자체에 포함 된 리소스를 사용 합니다.  
   
- 예를 들어 응용 프로그램 LangExample.exe가 MFC를 사용하며 Windows 2000 다중 사용자 인터페이스 시스템에서 실행되고 있을 경우 시스템 UI 언어는  ENU\[미국 영어\]이며 현재 사용자의 UI 언어는 FRC\[프랑스어\(캐나다\)\]로 설정됩니다.  MFC는 다음 순서로 DLL을 찾습니다.  
+ 예를 들어, 응용 프로그램 LangExample.exe MFC를 사용 및 여러 사용자 인터페이스 s; Windows 2000에서 실행 되는 가정 시스템 UI 언어는 한국어 [미국 영어] 현재 사용자의 UI 언어 FRC [캐나다 프랑스어]로 설정 됩니다. MFC는 다음 순서 대로 다음 Dll을 찾습니다.  
   
-1.  LangExampleFRC.dll\(사용자의 UI 언어\).  
+1.  LangExampleFRC.dll (사용자의 UI 언어)입니다.  
   
-2.  LangExampleFRA.dll\(보조 언어 없이 사용자의 UI 언어. 이 예에서는 프랑스어\(프랑스\)입니다.  
+2.  LangExampleFRA.dll (이 예에서는 프랑스어 (프랑스)에 보조 언어 없이 사용자의 UI 언어입니다.  
   
-3.  LangExampleENU.dll\(시스템의 UI 언어\).  
+3.  LangExampleENU.dll (시스템의 UI 언어)입니다.  
   
-4.  LangExampleLOC.dll.  
+4.  LangExampleLOC.dll 합니다.  
   
- 위의 DLL이 하나도 없으면 MFC는 LangExample.exe의 리소스를 사용합니다.  
+ 이러한 dll은 없는 경우, MFC LangExample.exe의 리소스를 사용 합니다.  
   
-## 참고 항목  
- [Visual C\+\+의 DLL](../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual c + +의 Dll](../build/dlls-in-visual-cpp.md)   
  [TN057: MFC 구성 요소 지역화](../mfc/tn057-localization-of-mfc-components.md)

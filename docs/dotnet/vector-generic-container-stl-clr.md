@@ -1,32 +1,30 @@
 ---
-title: "vector::generic_container(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container 멤버[STL/CLR]"
+title: 'vector:: generic_container (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: f291493f-dbdd-4240-935e-ce7432b59872
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0079adf049d1db78d3e01b338e886d778a150e02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# vector::generic_container(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of the generic interface for the container.  
+# <a name="vectorgenericcontainer-stlclr"></a>vector::generic_container(STL/CLR)
+컨테이너에 대 한 제네릭 인터페이스의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## 설명  
- The type describes the generic interface for this template container class.  
+## <a name="remarks"></a>설명  
+ 이 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_generic_container.cpp   
@@ -81,18 +79,21 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c d**  
- **a b c d e**   
-## 요구 사항  
- **Header:** \<cliext\/vector\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/벡터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualC.StlClr.IVector%601>   
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::generic\_iterator](../dotnet/vector-generic-iterator-stl-clr.md)   
- [vector::generic\_reverse\_iterator](../dotnet/vector-generic-reverse-iterator-stl-clr.md)   
- [vector::generic\_value](../dotnet/vector-generic-value-stl-clr.md)
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)   
+ [vector:: generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)   
+ [vector::generic_value(STL/CLR)](../dotnet/vector-generic-value-stl-clr.md)

@@ -1,41 +1,39 @@
 ---
-title: "deque::front(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front 멤버[STL/CLR]"
+title: 'deque:: front (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::front
+dev_langs: C++
+helpviewer_keywords: front member [STL/CLR]
 ms.assetid: eb8cb5f2-346d-4d7a-bb7b-cf67fe4318e8
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bcf649af1b9b1b3bbd3442a7d957eab89dc80118
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::front(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accesses the first element.  
+# <a name="dequefront-stlclr"></a>deque::front(STL/CLR)
+첫 번째 요소에 액세스합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 reference front();  
 ```  
   
-## 설명  
- The member function returns a reference to the first element of the controlled sequence, which must be non\-empty.  You use it to read or write the first element, when you know it exists.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 읽기 또는 존재 하는 것을 알고 있는 경우 첫 번째 요소를 쓰기를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_deque_front.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\(\) \= a**  
- **x b c**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::back](../dotnet/deque-back-stl-clr.md)   
- [deque::back\_item](../dotnet/deque-back-item-stl-clr.md)   
- [deque::front\_item](../dotnet/deque-front-item-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
+ [deque:: back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)   
+ [deque::front_item(STL/CLR)](../dotnet/deque-front-item-stl-clr.md)

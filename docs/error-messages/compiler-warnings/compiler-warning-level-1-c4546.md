@@ -1,37 +1,35 @@
 ---
 title: "컴파일러 경고 (수준 1) C4546 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4546"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4546"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4546
+dev_langs: C++
+helpviewer_keywords: C4546
 ms.assetid: 071e1709-3841-46c1-8e71-96109cd22041
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a9b424c640f889f694f002c35033afd4a611396e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4546
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4546"></a>컴파일러 경고(수준 1) C4546
 쉼표 앞의 함수에 인수 목록이 없습니다.  
   
- 컴파일러에서 형식이 올바르지 않은 쉼표 식을 발견했습니다.  
+ 컴파일러가 쉼표 잘못 된 형식의 식을 발견 했습니다.  
   
- 이 경고는 기본적으로 해제되어 있습니다.  자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md)를 참조하십시오.  
+ 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)을 참조하세요.  
   
-## 예제  
- 다음 샘플에서는 C4546 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4546 오류가 생성 됩니다.  
   
 ```  
 // C4546.cpp  

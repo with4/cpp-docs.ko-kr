@@ -1,45 +1,43 @@
 ---
-title: "for_each(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::for_each"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for_each 함수[STL/CLR]"
+title: for_each (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::for_each
+dev_langs: C++
+helpviewer_keywords: for_each function [STL/CLR]
 ms.assetid: 4c391ecf-cd35-499e-a3f5-35b965e0da9b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fd29816817230c89f309340daf298569a16d0a8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# for_each(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Applies a specified function object to each element in a forward order within a range and returns the function object.  
+# <a name="foreach-stlclr"></a>for_each(STL/CLR)
+범위 내에서 정방향으로 각 요소에 지정된 함수 개체를 적용하고 함수 개체를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _InIt, class _Fn1> inline  
     _Fn1 for_each(_InIt _First, _InIt _Last, _Fn1 _Func);  
 ```  
   
-## 설명  
- This function behaves the same as the STL function `for_each`.  자세한 내용은 [for\_each](../Topic/for_each.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 함수 동일 하 게 동작 `for_each`합니다. 자세한 내용은 참조 [for_each](../standard-library/algorithm-functions.md#for_each)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<알고리즘 cliext/>  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [algorithm(STL/CLR)](../dotnet/algorithm-stl-clr.md)

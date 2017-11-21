@@ -1,45 +1,43 @@
 ---
-title: "deque::at(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::at"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "at 멤버[STL/CLR]"
+title: 'deque:: at (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::at
+dev_langs: C++
+helpviewer_keywords: at member [STL/CLR]
 ms.assetid: 9af83d8a-c519-4b2a-a25f-d3dc8bbb87fb
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf07c109bfd80fb34af007b0a66dd6f7a2dbd3af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::at(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accesses an element at a specified position.  
+# <a name="dequeat-stlclr"></a>deque::at(STL/CLR)
+지정된 위치에 있는 요소에 액세스합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 reference at(size_type pos);  
 ```  
   
-#### 매개 변수  
- pos  
+#### <a name="parameters"></a>매개 변수  
+ 위치  
  액세스할 요소의 위치입니다.  
   
-## 설명  
- The member function returns a reference to the element of the controlled sequence at position `pos`.  You use it to read or write an element whose position you know.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 위치에서 제어 된 시퀀스의 요소에 대 한 참조를 반환 `pos`합니다. 읽기 또는 쓰기 요소 위치를 알아야 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_deque_at.cpp   
@@ -68,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a x c**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+a b c  
+a x c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::operator](../dotnet/deque-operator-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)

@@ -1,40 +1,38 @@
 ---
 title: "방법: MSBuild 프로젝트에 사용자 지정 빌드 도구 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "msbuild.cpp.howto.addcustombuildtools"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "msbuild(c++), 방법: 사용자 지정 빌드 도구 추가"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: msbuild.cpp.howto.addcustombuildtools
+dev_langs: C++
+helpviewer_keywords: 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f9dd91f7f4d28db62b8c74f087784ce1dbc8afd9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: MSBuild 프로젝트에 사용자 지정 빌드 도구 추가
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-사용자 지정 빌드 도구는 사용자가 정의한 명령줄 도구이며 특정 파일과 연결되어 있습니다.  
+# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>방법: MSBuild 프로젝트에 사용자 지정 빌드 도구 추가
+사용자 지정 빌드 도구는 특정 파일에 연관 된 사용자 정의 명령줄 도구입니다.  
   
- 실행할 명령줄, 추가 입력 또는 출력 파일 및 표시할 메시지는 특정 파일에 대해 프로젝트 파일\(.vcxproj\)에서 지정합니다.  **MSBuild**에서 출력 파일이 해당 입력 파일보다 이전 버전임을 확인하면 지정한 메시지가 표시되고 명령줄 도구가 실행됩니다.  
+ 특정 파일을 실행 하려면 프로젝트 파일 (.vcxproj) 명령줄, 추가 입력 또는 출력 파일 및 표시할 메시지를 지정 합니다. 경우 **MSBuild** 출력 파일은 해당 입력된 파일 보다 이전 버전임, 메시지를 표시 하 고 실행 명령줄 도구를 결정 합니다.  
   
- 사용자 지정 빌드 도구가 실행되는 시점을 지정하려면 프로젝트 파일에 있는 `CustomBuildBeforeTargets` 및 `CustomBuildAfterTargets` XML 요소 중 하나 또는 모두를 사용합니다.  예를 들어, 사용자 지정 빌드 도구가 MIDL 컴파일러 이후 및 C\/C\+\+ 컴파일러 이전에 실행되도록 지정할 수 있습니다.  특정 대상이 실행되기 전에 도구를 실행하려면 `CustomBuildBeforeTargets` 요소를 지정하고, 특정 대상이 실행된 후에 도구를 실행하려면 `CustomBuildAfterTargets` 요소를 지정하고, 두 대상의 실행 사이에서 도구를 실행하려면 두 요소를 모두 지정합니다.  두 요소 모두 지정하지 않으면 사용자 지정 빌드 도구가 기본 위치, 즉 **MIDL** 대상 이전에 실행됩니다.  
+ 사용자 지정 빌드 도구 실행 될 때를 지정 하려면 하나 또는 둘 다의 사용은 `CustomBuildBeforeTargets` 및 `CustomBuildAfterTargets` 프로젝트 파일의 XML 요소입니다. 예를 들어 사용자 지정 빌드 도구 실행 MIDL 컴파일러와 C/c + + 컴파일러는 지정할 수 있습니다. 지정 된 `CustomBuildBeforeTargets` 특정 대상 실행 하기 전에 도구를 실행 하는 요소는 `CustomBuildAfterTargets` 특정 대상; 후 도구를 실행 하는 요소 또는 두 대상의 실행 간의 도구를 실행 하려면 두 요소입니다. 기본 위치를 앞에 있는 사용자 지정 빌드 도구 실행 두 요소를 지정 하는 경우는 **MIDL** 대상입니다.  
   
- 사용자 지정 빌드 단계 및 사용자 지정 빌드 도구는 `CustomBuildBeforeTargets` 및 `CustomBuildAfterTargets` XML 요소에 지정된 정보를 공유합니다.  이러한 대상은 프로젝트 파일에서 한 번만 지정합니다.  
+ 사용자 지정 빌드 단계와 사용자 지정 빌드 도구에 지정 된 정보를 공유는 `CustomBuildBeforeTargets` 및 `CustomBuildAfterTargets` XML 요소입니다. 프로젝트 파일의 해당 대상으로 한 번만 지정 합니다.  
   
-### 사용자 지정 빌드 도구를 추가하려면  
+### <a name="to-add-a-custom-build-tool"></a>사용자 지정 빌드 도구를 추가 하려면  
   
-1.  항목 그룹을 프로젝트 파일에 추가하고 각 입력 파일의 항목을 추가합니다.  명령, 추가 입력 및 출력, 메시지를 다음과 같이 항목 메타데이터로 지정합니다.  이 예제에서는 "faq.txt" 파일이 해당 프로젝트와 동일한 디렉터리에 있는 것으로 가정합니다.  
+1.  프로젝트 파일에 항목 그룹을 추가 하 고 각 입력된 파일에 대 한 항목을 추가 합니다. 다음과 같이 항목 메타 데이터와 명령을, 추가 입력, 출력 및 메시지를 지정 합니다. 이 예제에서는 "faq.txt" 파일을 프로젝트와 동일한 디렉터리에 있다고 가정 합니다.  
   
     ```  
     <ItemGroup>  
@@ -46,9 +44,9 @@ caps.handback.revision: 8
     </ItemGroup>  
     ```  
   
-### 빌드에서 사용자 지정 빌드 도구가 실행될 위치를 정의하려면  
+### <a name="to-define-where-in-the-build-the-custom-build-tools-will-execute"></a>빌드에 사용자 지정 빌드 도구가 실행할 위치를 정의 하려면  
   
-1.  프로젝트 파일에 다음 속성 그룹을 추가합니다.  대상 중 하나 이상을 지정해야 하지만 빌드 단계가 특정 대상 이전 또는 이후에 실행되도록 하는 데만 관심이 있으면 나머지 대상은 생략할 수 있습니다.  이 예제에서는 컴파일이 끝나고 링크가 시작되기 전에 사용자 지정 단계를 수행합니다.  
+1.  프로젝트 파일에 다음 속성 그룹을 추가 합니다. 대상 중 하나 이상을 지정 해야 하지만 빌드 단계가 (전이나 후)를 실행 하려는 경우 다른 생략할 수는 특정 대상입니다. 이 예에서는 컴파일한 후 하지만 연결 하기 전에 사용자 지정 단계를 수행 합니다.  
   
     ```  
     <PropertyGroup>  
@@ -57,7 +55,7 @@ caps.handback.revision: 8
     </PropertyGroup>  
     ```  
   
-## 참고 항목  
- [연습: MSBuild를 사용하여 Visual C\+\+ 프로젝트 만들기](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)   
+## <a name="see-also"></a>참고 항목  
+ [연습: MSBuild를 사용 하 여 Visual c + + 프로젝트 만들기](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)   
  [방법: MSBuild 프로젝트에서 빌드 이벤트 사용](../build/how-to-use-build-events-in-msbuild-projects.md)   
  [방법: MSBuild 프로젝트에 사용자 지정 빌드 단계 추가](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)

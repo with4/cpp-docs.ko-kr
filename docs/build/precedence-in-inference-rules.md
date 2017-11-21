@@ -1,36 +1,36 @@
 ---
 title: "유추 규칙의 우선 순위 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE의 유추 규칙"
-  - "우선 순위, 유추 규칙"
-  - "규칙, 유추"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- rules, inference
+- precedence, inference rule
 ms.assetid: 69e3dc02-0815-4c3a-b02b-1cb85fceaf24
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d22db9de1fc1941798c73c3c1c05a8ccd8571525
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 유추 규칙의 우선 순위
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-유추 규칙이 여러 개 정의되어 있는 경우 NMAKE는 우선 순위가 최상위인 정의를 사용합니다.  다음 목록은 우선 순위를 최상위에서 최하위 순으로 나타냅니다.  
+# <a name="precedence-in-inference-rules"></a>유추 규칙의 우선 순위
+NMAKE 유추 규칙 정의 된 경우 곱하기, 우선 순위가 가장 높은 정의 사용 합니다. 다음 목록은 내림차순으로 최고 우선 순위를 나타냅니다.  
   
-1.  메이크파일에 정의된 유추 규칙, 뒤에 오는 정의가 우선합니다.  
+1.  메이크파일;에 정의 된 유추 규칙 이후 정의 우선 순위를 가집니다.  
   
-2.  Tools.ini에 정의된 유추 규칙, 뒤에 오는 정의가 우선합니다.  
+2.  Tools.ini;에 정의 된 유추 규칙 이후 정의 우선 순위를 가집니다.  
   
-3.  미리 정의된 유추 규칙  
+3.  미리 정의 된 규칙입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [유추 규칙](../build/inference-rules.md)

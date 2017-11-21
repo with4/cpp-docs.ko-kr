@@ -1,43 +1,34 @@
 ---
-title: "Consuming Generics (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++], consuming from .NET languages"
+title: "제네릭 사용 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e1abb5cdebca8c19aeeb4ec00fbc46b3120170d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Consuming Generics (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-한 .NET 언어로 작성 된 제네릭은 다른.NET 언어에서 사용할 수 있습니다.  템플릿과는 달리, 컴파일 된 어셈블리에서 제네릭은 여전히 제네릭으로 남아있습니다.  따라서 다른 제네릭 형식이 정의 된 어셈블리 언어 및 다른 어셈블리에서 제네릭 형식을 인스턴스화할 수 있습니다.  
+# <a name="consuming-generics-ccli"></a>제네릭 사용(C++/CLI)
+한 .NET 언어로 작성된 제네릭은 다른 .NET 언어에서 사용할 수 있습니다. 템플릿과는 달리, 컴파일된 어셈블리의 제네릭은 여전히 제네릭으로 남아있습니다. 따라서 제네릭 형식이 정의된 어셈블리보다 다른 어셈블리 및 다른 언어로 제네릭 형식을 인스턴스화할 수 있습니다.  
   
-## 설명  
- 자세한 내용은 다음을 참조하십시오.  
+## <a name="example"></a>예제  
   
--   [제네릭 소개](../Topic/Introduction%20to%20Generics%20\(C%23%20Programming%20Guide\).md)  
+### <a name="description"></a>설명  
+ 이 예제에서는 C#에 정의된 제네릭 클래스를 보여 줍니다.  
   
--   [Visual Basic의 제네릭 형식](../Topic/Generic%20Types%20in%20Visual%20Basic%20\(Visual%20Basic\).md)  
-  
-## 예제  
-  
-### 설명  
- 이 예제에서는 C\#에 정의된 제네릭 클래스를 보여 줍니다.  
-  
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // consuming_generics_from_other_NET_languages.cs  
@@ -95,12 +86,12 @@ public class CircularList<ItemType> {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- 이 예제에서는 C\#에서 만든 어셈블리를 사용합니다.  
+### <a name="description"></a>설명  
+ 이 예제에서는 C#에서 작성된 어셈블리를 사용합니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // consuming_generics_from_other_NET_languages_2.cpp  
@@ -121,7 +112,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>출력  
   
 ```  
 90  
@@ -134,5 +125,5 @@ int main() {
 10  
 ```  
   
-## 참고 항목  
- [Generics](../windows/generics-cpp-component-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [제네릭](../windows/generics-cpp-component-extensions.md)

@@ -1,36 +1,35 @@
 ---
-title: "IRowsetImpl::m_bCanFetchBack | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetImpl.m_bCanFetchBack"
-  - "ATL::IRowsetImpl::m_bCanFetchBack"
-  - "IRowsetImpl.m_bCanFetchBack"
-  - "IRowsetImpl::m_bCanFetchBack"
-  - "m_bCanFetchBack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bCanFetchBack"
+title: 'Irowsetimpl:: M_bcanfetchback | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetImpl.m_bCanFetchBack
+- ATL::IRowsetImpl::m_bCanFetchBack
+- IRowsetImpl.m_bCanFetchBack
+- IRowsetImpl::m_bCanFetchBack
+- m_bCanFetchBack
+dev_langs: C++
+helpviewer_keywords: m_bCanFetchBack
 ms.assetid: cfa007b0-7ba5-48a3-9d05-9f1916305fb7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 09440f8453fe0ee13297c600b148927bacafc5da
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::m_bCanFetchBack
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Indicates whether a provider supports backward fetching.  
+# <a name="irowsetimplmbcanfetchback"></a>IRowsetImpl::m_bCanFetchBack
+공급자는 이전 버전과 인출 지원 하는지 여부를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -38,12 +37,12 @@ unsigned m_bCanFetchBack:1;
   
 ```  
   
-## 설명  
- Linked to the **DBPROP\_CANFETCHBACKWARDS** property in the **DBPROPSET\_ROWSET** group.  The provider must support **DBPROP\_CANFETCHBACKWARDS** for **m\_bCanFetchBackwards** to be true.  
+## <a name="remarks"></a>설명  
+ 에 연결 하는 **DBPROP_CANFETCHBACKWARDS** 속성에는 **DBPROPSET_ROWSET** 그룹입니다. 공급자 지원 해야 **DBPROP_CANFETCHBACKWARDS** 에 대 한 **m_bCanFetchBackwards** 를 true로 설정 합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IRowsetImpl 클래스](../../data/oledb/irowsetimpl-class.md)   
- [IRowsetImpl::m\_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)
+ [IRowsetImpl::m_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)

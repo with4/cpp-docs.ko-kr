@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,20 @@ f1_keywords:
 - ATLBASE/ATL::m_Allocator
 - ATLBASE/ATL::m_nThreads
 - ATLBASE/ATL::m_pApartments
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 8e3ad5333d684daff5d8baf462ae805ef8b4b51d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d07a29ff12edcd590379f9bb30cdc122806a83c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 클래스
 ATL 7.0부터 `CComAutoThreadModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 내용을 확인 합니다.  
@@ -91,7 +74,7 @@ class CComAutoThreadModule : public CComModule
 |[m_nThreads](#m_nthreads)|모듈에 있는 스레드의 수를 포함합니다.|  
 |[m_pApartments](#m_papartments)|모듈의 아파트를 관리합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
 >  이 클래스는 사용 되지 않는으로 바뀌는 것은 [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) 및 [CAtlModule](../../atl/reference/catlmodule-class.md) 파생 클래스입니다. 다음에 나오는 정보는 이전 릴리스의 ATL. 사용  
@@ -102,7 +85,7 @@ class CComAutoThreadModule : public CComModule
   
  ATL COM AppWizard (Visual Studio.NET에서 ATL 프로젝트 마법사)이 모듈에서 기본적으로 가치 `CComModule`합니다. 사용 하도록 `CComAutoThreadModule`를 클래스 정의 수정 합니다. 예:  
   
- [!code-cpp[NVC_ATL_AxHost # 2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -145,7 +128,7 @@ HRESULT CreateInstance(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  스레드를 선택 하 고 관련된 아파트에 있는 개체를 만듭니다.  
   
 ##  <a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
@@ -195,7 +178,7 @@ HRESULT Init(
  `nThreads`  
  [in] 만들 스레드의 수입니다. 기본적으로 `nThreads` 에서 반환한 값은 [GetDefaultThreads](#getdefaultthreads)합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  데이터 멤버를 초기화 하 고 지정 된 스레드 수를 만듭니다 `nThreads`합니다.  
   
 ##  <a name="lock"></a>CComAutoThreadModule::Lock  
@@ -238,7 +221,7 @@ int m_nThreads;
 CComApartment* m_pApartments;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  배열을 가리키는 [CComApartment](../../atl/reference/ccomapartment-class.md) 모듈의 아파트를 관리 하는 개체입니다. 배열의 요소 수에 따라는 [m_nThreads](#m_nthreads) 멤버입니다.  
   
 ##  <a name="unlock"></a>CComAutoThreadModule::Unlock  
@@ -251,7 +234,7 @@ LONG Unlock();
 ### <a name="return-value"></a>반환 값  
  진단에 대 한 유용한 또는 테스트 수 있는 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  모듈에 대 한 현재 스레드에 대 한 잠금 수에 원자성 감소를 수행합니다. `CComAutoThreadModule`모듈 잠금 횟수를 사용 하 여 모든 클라이언트는 모듈에 액세스 하는 지 여부를 결정 합니다. 현재 스레드에 대 한 잠금 개수 통계적 인 목적의 사용 됩니다.  
   
  모듈의 잠금 수가 0에 도달 하면 모듈 로드할 수 있습니다.  
@@ -259,4 +242,3 @@ LONG Unlock();
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)   
  [모듈 클래스](../../atl/atl-module-classes.md)
-

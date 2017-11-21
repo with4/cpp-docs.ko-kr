@@ -1,42 +1,40 @@
 ---
-title: "hash_multimap::value_compare(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare 멤버[STL/CLR]"
+title: 'hash_multimap:: value_compare (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: 64daa1b6-3019-4850-9ec5-ae63c01fe819
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c6738717f2718a1552237d3c77aa563c123e66b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::value_compare(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The ordering delegate for two element values.  
+# <a name="hashmultimapvaluecompare-stlclr"></a>hash_multimap::value_compare(STL/CLR)
+두 요소 값에 대 한 순서 지정 하는 대리자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## 설명  
- The type is a synonym for the delegate that determines the ordering of its value arguments.  
+## <a name="remarks"></a>설명  
+ 유형 인수 값의 순서를 결정 하는 대리자에 대 한 동의어입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multimap_value_compare.cpp   
@@ -64,16 +62,19 @@ int main()
   
 ```  
   
-  **compare\(\[L'a', 1\], \[L'a', 1\]\) \= True**  
-**compare\(\[L'a', 1\], \[L'b', 2\]\) \= True**  
-**compare\(\[L'b', 2\], \[L'a', 1\]\) \= False**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = True  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::key\_compare](../dotnet/hash-multimap-key-compare-stl-clr.md)   
- [hash\_multimap::value\_comp](../dotnet/hash-multimap-value-comp-stl-clr.md)   
- [hash\_multimap::value\_type](../dotnet/hash-multimap-value-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: key_compare (STL/CLR)](../dotnet/hash-multimap-key-compare-stl-clr.md)   
+ [hash_multimap:: value_comp (STL/CLR)](../dotnet/hash-multimap-value-comp-stl-clr.md)   
+ [hash_multimap::value_type(STL/CLR)](../dotnet/hash-multimap-value-type-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "plus(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::plus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "더하기 함수[STL/CLR]"
+title: plus (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::plus
+dev_langs: C++
+helpviewer_keywords: plus function [STL/CLR]
 ms.assetid: 7ec8228a-72c7-4e47-9e63-23525d4a5416
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e9bb76e3d4d96cea13c59222de42c3bcc20d517
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# plus(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The template class describes a functor that, when called, returns the first argument plus the second.  You use it specify a function object in terms of its argument type.  
+# <a name="plus-stlclr"></a>plus(STL/CLR)
+함수를 설명 하는 템플릿 클래스는 호출 되 면 첫 번째 인수 더한 두 번째 값을 반환 합니다. 사용 하면 해당 인수 형식 기준으로 함수 개체를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  Arg  
- The type of the arguments and return value.  
+ 인수 및 반환 값의 형식입니다.  
   
-## 멤버 함수  
+## <a name="member-functions"></a>멤버 함수  
   
-|Type Definition|설명|  
-|---------------------|--------|  
-|delegate\_type|The type of the generic delegate.|  
-|first\_argument\_type|The type of the functor first argument.|  
-|result\_type|The type of the functor result.|  
-|second\_argument\_type|The type of the functor second argument.|  
+|형식 정의|설명|  
+|---------------------|-----------------|  
+|delegate_type|제네릭 대리자의 형식입니다.|  
+|first_argument_type|구조 함수의 첫 번째 인수의 형식입니다.|  
+|result_type|함수 결과의 형식입니다.|  
+|second_argument_type|두 번째 함수 인수 형식입니다.|  
   
 |멤버|설명|  
-|--------|--------|  
-|더하기|Constructs the functor.|  
+|------------|-----------------|  
+|plus|함수를 생성합니다.|  
   
 |연산자|설명|  
-|---------|--------|  
-|operator\(\)|Computes the desired function.|  
-|operator delegate\_type^|Casts the functor to a delegate.|  
+|--------------|-----------------|  
+|operator()|원하는 함수를 계산합니다.|  
+|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|  
   
-## 설명  
- The template class describes a two\-argument functor.  It defines the member operator `operator()` so that, when the object is called as a function, it returns the first argument plus the second.  
+## <a name="remarks"></a>설명  
+ 두 인수 함수를 설명 하는 템플릿 클래스입니다. 멤버 연산자 정의 `operator()` 첫 번째 인수 및 두 번째 반환 된 개체를 함수로 호출 될 때 되도록 합니다.  
   
- You can also pass the object as a function argument whose type is `delegate_type^` and it will be converted appropriately.  
+ 함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_plus.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **2 1**  
- **6 4**   
-## 요구 사항  
- **Header:** \<cliext\/functional\>  
+```Output  
+4 3  
+2 1  
+6 4  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [minus](../dotnet/minus-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [minus(STL/CLR)](../dotnet/minus-stl-clr.md)

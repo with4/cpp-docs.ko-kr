@@ -1,33 +1,30 @@
 ---
-title: "com_interface_entry (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.com_interface_entry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "com_interface_entry attribute"
+title: com_interface_entry (c + +) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.com_interface_entry
+dev_langs: C++
+helpviewer_keywords: com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 67b6fd116f75ddc35ac1d3095ebfcbb1973b9d20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# com_interface_entry (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-대상 클래스의 COM 맵 인터페이스 항목을 추가합니다.  
+# <a name="cominterfaceentry-c"></a>com_interface_entry(C++)
+대상 클래스의 COM 맵에 인터페이스 항목을 추가합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -36,28 +33,28 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 매개 변수  
- *com\_interface\_entry*  
- 항목의 실제 텍스트를 포함 하는 문자열입니다.  사용 가능한 값 목록을 보려면을 참조 하십시오.  [COM\_INTERFACE\_ENTRY 매크로](../Topic/COM_INTERFACE_ENTRY%20Macros.md).  
+#### <a name="parameters"></a>매개 변수  
+ *com_interface_entry*  
+ 항목의 실제 텍스트를 포함 하는 문자열입니다. 가능한 값 목록은 참조 [COM_INTERFACE_ENTRY 매크로](../atl/reference/com-interface-entry-macros.md)합니다.  
   
-## 설명  
- `com_interface_entry` C \+ \+ 특성에 있는 대상 개체의 COM 인터페이스 맵이 통화할된 문자열의 내용을 삽입 합니다.  특성 대상 개체에 한 번 적용 되는 경우 기존 인터페이스 맵 부분에 항목이 삽입 됩니다.  특성 반복적으로 같은 대상 개체에 적용 되는 경우 항목이 인터페이스 맵 수신 된 순서 대로 시작 부분에 삽입 됩니다.  
+## <a name="remarks"></a>설명  
+ `com_interface_entry` c + + 특성 COM 인터페이스 맵을 대상 개체의 문자열의 통화할된 내용을 삽입 합니다. 특성이 두 번 대상 개체에 적용 하는 경우 항목의 기존 인터페이스 맵 시작 부분에 삽입 됩니다. 특성을 적용 하면 반복 해 서 동일한 대상 개체에 있는 항목 인터페이스 맵 수신 된 순서에서 맨 앞에 삽입 됩니다.  
   
- 필요로 하는이 특성에  [coclass](../windows/coclass.md),  [progid](../windows/progid.md), 또는  [vi\_progid](../windows/vi-progid.md) 특성 \(또는이 중 하나를 의미 하는 다른 특성\)도 적용 될 같은 요소를 합니다.  다른 두 가지는 단일 특성을 사용 하는 경우에 자동으로 적용 됩니다.  예를 들어, 경우  **progid** 적용 된  **vi\_progid** 및  **coclass** 적용 됩니다.  
+ 이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다. 단일 특성을 사용하는 경우 다른 두 특성도 자동으로 적용됩니다. 예를 들어 **progid** 를 적용하면 **vi_progid** 및 **coclass** 도 적용됩니다.  
   
- 때문에 가장 먼저 사용 하는 `com_interface_entry` 인터페이스 맵 시작 부분에 삽입 되는 새 인터페이스 COM\_INTERFACE\_ENTRY 다음 형식 중 하나 여야 합니다.  
+ 때문에의 첫 번째 사용 `com_interface_entry` 인터페이스 맵 맨 앞에 삽입 될 새 인터페이스 다음 COM_INTERFACE_ENTRY 유형 중 하나 여야 합니다.  
   
--   COM\_INTERFACE\_ENTRY  
+-   COM_INTERFACE_ENTRY  
   
--   COM\_INTERFACE\_ENTRY\_IID  
+-   COM_INTERFACE_ENTRY_IID  
   
--   COM\_INTERFACE\_ENTRY2  
+-   COM_INTERFACE_ENTRY2  
   
--   COM\_INTERFACE\_ENTRY2\_IID  
+-   COM_INTERFACE_ENTRY2_IID  
   
- 자세한 사용법은 `com_interface_entry` 특성 지원 되는 모든 COM\_INTERFACE\_ENTRY 형식을 사용할 수 있습니다.  
+ 다른 용도 `com_interface_entry` 특성에는 지원 되는 모든 COM_INTERFACE_ENTRY 형식을 사용할 수 있습니다.  
   
- ATL 인터페이스 맵에서 첫 번째 항목을 id로 사용 하기 때문에이 제한이 필요는  **IUnknown**. 따라서 사용할 인터페이스를 입력 해야 합니다.  실제 COM 인터페이스 인터페이스 구조에서 첫 번째 항목을 지정 하지 않기 때문 예를 들어, 다음 코드 샘플에서는 올바르지 않습니다.  
+ 이 제한은 ATL 인터페이스 맵에 첫 번째 항목은 id로 사용 하기 때문에 필요한 **IUnknown**이므로, 유효한 인터페이스를 입력 해야 합니다. 예를 들어 다음 코드 샘플 올바르지 인터페이스 맵에 첫 번째 항목은 실제 COM 인터페이스를 지정 하지 않으므로 합니다.  
   
 ```  
 [ coclass, com_interface_entry =  
@@ -68,8 +65,8 @@ manager: "ghogen"
    };  
 ```  
   
-## 예제  
- 두 항목의 기존 COM 인터페이스 맵이 다음 코드를 추가  **CMyBaseClass**.  첫 번째는 표준 인터페이스 이며 숨깁니다. 두 번째는  **IDebugTest** 인터페이스입니다.  
+## <a name="example"></a>예제  
+ 다음 코드는 두 항목의 기존 COM 인터페이스 지도에 추가 **CMyBaseClass**합니다. 첫 번째는 표준 인터페이스가 고 두 번째 숨기는 **IDebugTest** 인터페이스입니다.  
   
 ```  
 // cpp_attr_ref_com_interface_entry.cpp  
@@ -99,7 +96,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };  
 ```  
   
- 결과 COM 개체 구조에 대 한  **CMyBaseClass** 는 다음과 같습니다.  
+ 에 대 한 결과 COM 개체 맵 **CMyBaseClass** 는 다음과 같습니다.  
   
 ```  
 BEGIN_COM_MAP(CMyClass)  
@@ -112,21 +109,20 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**,`struct`|  
+|**적용 대상**|**class**, `struct`|  
 |**반복 가능**|예|  
-|**필수 특성**|하나 이상의 다음:  **coclass**,  **progid**, 또는  **vi\_progid**.|  
-|**잘못 된 특성**|없음|  
+|**필수 특성**|다음 중 하나 이상: **coclass**, **progid**또는 **vi_progid**.|  
+|**잘못된 특성**|없음|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [COM 특성](../windows/com-attributes.md)   
+ [클래스 특성](../windows/class-attributes.md)   
+ [Typedef, Enum, Union 및 Struct 특성](../windows/typedef-enum-union-and-struct-attributes.md)   

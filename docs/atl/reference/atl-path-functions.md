@@ -1,22 +1,21 @@
 ---
-title: "ATL 경로 함수 | Microsoft 문서"
+title: "ATL 경로 함수 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "ATL, 경로"
+keywords: "ATL, 경로"
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 97d585eb8bbe59a8ccd92b866819fb869d35f64c
-ms.lasthandoff: 02/24/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-path-functions"></a>ATL 경로 함수
 
@@ -28,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[CPathT 클래스](cpatht-class.md)|이 클래스는 경로 나타냅니다.|  
 
-### <a name="related-typedefs"></a>관련된 형식 정의  
+### <a name="related-typedefs"></a>관련된 Typedefs  
   
 |||  
 |-|-|  
@@ -80,7 +79,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlpath.h  
 
-## <a name="a-nameaddbackslasha-atlpathaddbackslash"></a><a name="addbackslash"></a>ATLPath::AddBackSlash
+## <a name="addbackslash"></a>ATLPath::AddBackSlash
 
 이 함수는 오버 로드 된 래퍼입니다 [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561)합니다.  
   
@@ -91,13 +90,13 @@ inline char* AddBackslash(char* pszPath);
 inline wchar_t* AddBackslash(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameaddextensiona-atlpathaddextension"></a><a name="addextension"></a>ATLPath::AddExtension
+## <a name="addextension"></a>ATLPath::AddExtension
  이 함수는 오버 로드 된 래퍼입니다 [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -107,10 +106,10 @@ inline BOOL AddExtension(char* pszPath, const char* pszExtension);
 inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) 대 한 자세한 내용은 합니다. 
   
-## <a name="a-nameappenda-atlpathappend"></a><a name="append"></a>ATLPath::Append
+## <a name="append"></a>ATLPath::Append
  이 함수는 오버 로드 된 래퍼입니다 [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -120,13 +119,13 @@ inline BOOL Append(char* pszPath, const char* pszMore);
 inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namebuildroota-atlpathbuildroot"></a><a name="buildroot"></a>ATLPath::BuildRoot
+## <a name="buildroot"></a>ATLPath::BuildRoot
  이 함수는 오버 로드 된 래퍼입니다 [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -136,13 +135,13 @@ inline char* BuildRoot(char* pszPath, int iDrive);
 inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namecanonicalizea-atlpathcanonicalize"></a><a name="canonicalize"></a>ATLPath::Canonicalize
+## <a name="canonicalize"></a>ATLPath::Canonicalize
  이 함수는 오버 로드 된 래퍼입니다 [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -152,13 +151,13 @@ inline BOOL Canonicalize(char* pszDest, const char* pszSrc);
 inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namecombinea-atlpathcombine"></a><a name="combine"></a>ATLPath::Combine 
+## <a name="combine"></a>ATLPath::Combine 
 이 함수는 오버 로드 된 래퍼입니다 [PathCombine](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773571)합니다.  
 
 ### <a name="syntax"></a>구문  
@@ -174,11 +173,11 @@ inline wchar_t* Combine(
    const wchar_t* pszDir,
    const wchar_t* pszFile);
 ```
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 자세한 내용은 PathCombine를 참조 하십시오.
 
 
-## <a name="a-namecommonprefixa-atlpathcommonprefix"></a><a name="commonprefix"></a>ATLPath::CommonPrefix
+## <a name="commonprefix"></a>ATLPath::CommonPrefix
  이 함수는 오버 로드 된 래퍼입니다 [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -195,13 +194,13 @@ inline int CommonPrefix(
    wchar_t* pszDest);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namecompactpatha-atlpathcompactpath"></a><a name="compactpath"></a>ATLPath::CompactPath
+## <a name="compactpath"></a>ATLPath::CompactPath
  이 함수는 오버 로드 된 래퍼입니다 [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -218,13 +217,13 @@ inline BOOL CompactPath(
    UINT dx);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namecompactpathexa-atlpathcompactpathex"></a><a name="compactpathex"></a>ATLPath::CompactPathEx
+## <a name="compactpathex"></a>ATLPath::CompactPathEx
  이 함수는 오버 로드 된 래퍼입니다 [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -243,13 +242,13 @@ inline BOOL CompactPathEx(
    DWORD dwFlags);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namefileexistsa-atlpathfileexists"></a><a name="fileexists"></a>ATLPath::FileExists
+## <a name="fileexists"></a>ATLPath::FileExists
  이 함수는 오버 로드 된 래퍼입니다 [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -259,13 +258,13 @@ inline BOOL FileExists(const char* pszPath);
 inline BOOL FileExists(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namefindextensiona-atlpathfindextension"></a><a name="findextension"></a>ATLPath::FindExtension
+## <a name="findextension"></a>ATLPath::FindExtension
  이 함수는 오버 로드 된 래퍼입니다 [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -275,13 +274,13 @@ inline char* FindExtension(const char* pszPath);
 inline wchar_t* FindExtension(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namefindfilenamea-atlpathfindfilename"></a><a name="findfilename"></a>ATLPath::FindFileName
+## <a name="findfilename"></a>ATLPath::FindFileName
  이 함수는 오버 로드 된 래퍼입니다 [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -291,13 +290,13 @@ inline char* FindFileName(const char* pszPath);
 inline wchar_t* FindFileName(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namegetdrivenumbera-atlpathgetdrivenumber"></a><a name="getdrivenumber"></a>ATLPath::GetDriveNumber  
+## <a name="getdrivenumber"></a>ATLPath::GetDriveNumber  
  이 함수는 오버 로드 된 래퍼입니다 [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -307,23 +306,23 @@ inline int GetDriveNumber(const char* pszPath);
 inline int GetDriveNumber(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612) 대 한 자세한 내용은 합니다.  
   
  
 
 
-## <a name="a-nameisdirectorya--atlpathisdirectory"></a><a name="isdirectory"></a>ATLPath::IsDirectory 
+## <a name="isdirectory"></a>ATLPath::IsDirectory 
 이 함수는 오버 로드 된 래퍼입니다 [PathIsDirectory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773621)합니다.
 
 ```  
 inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```  
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 자세한 내용은 PathIsDirectory를 참조 하십시오.  
 
-## <a name="a-nameisfilespeca-atlpathisfilespec"></a><a name="isfilespec"></a>ATLPath::IsFileSpec
+## <a name="isfilespec"></a>ATLPath::IsFileSpec
  이 함수는 오버 로드 된 래퍼입니다 [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -333,13 +332,13 @@ inline BOOL IsFileSpec(const char* pszPath);
 inline BOOL IsFileSpec(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameisprefixa-atlpathisprefix"></a><a name="isprefix"></a>ATLPath::IsPrefix
+## <a name="isprefix"></a>ATLPath::IsPrefix
  이 함수는 오버 로드 된 래퍼입니다 [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -349,13 +348,13 @@ inline BOOL IsPrefix(const char* pszPrefix, const char* pszPath);
 inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameisrelativea-atlpathisrelative"></a><a name="isrelative"></a>ATLPath::IsRelative
+## <a name="isrelative"></a>ATLPath::IsRelative
  이 함수는 오버 로드 된 래퍼입니다 [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -365,13 +364,13 @@ inline BOOL IsRelative(const char* pszPath);
 inline BOOL IsRelative(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameisroota-atlpathisroot"></a><a name="isroot"></a>ATLPath::IsRoot
+## <a name="isroot"></a>ATLPath::IsRoot
  이 함수는 오버 로드 된 래퍼입니다 [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -381,13 +380,13 @@ inline BOOL IsRoot(const char* pszPath);
 inline BOOL IsRoot(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameissameroota-atlpathissameroot"></a><a name="issameroot"></a>ATLPath::IsSameRoot
+## <a name="issameroot"></a>ATLPath::IsSameRoot
  이 함수는 오버 로드 된 래퍼입니다 [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -397,13 +396,13 @@ inline BOOL IsSameRoot(const char* pszPath1, const char* pszPath2);
 inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameisunca-atlpathisunc"></a><a name="isunc"></a>ATLPath::IsUNC
+## <a name="isunc"></a>ATLPath::IsUNC
  이 함수는 오버 로드 된 래퍼입니다 [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -413,13 +412,13 @@ inline BOOL IsUNC(const char* pszPath);
 inline BOOL IsUNC(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameisuncservera-atlpathisuncserver"></a><a name="isuncserver"></a>ATLPath::IsUNCServer
+## <a name="isuncserver"></a>ATLPath::IsUNCServer
  이 함수는 오버 로드 된 래퍼입니다 [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -429,13 +428,13 @@ inline BOOL IsUNCServer(const char* pszPath);
 inline BOOL IsUNCServer(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameisuncserversharea-atlpathisuncservershare"></a><a name="isuncservershare"></a>ATLPath::IsUNCServerShare
+## <a name="isuncservershare"></a>ATLPath::IsUNCServerShare
  이 함수는 오버 로드 된 래퍼입니다 [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -445,13 +444,13 @@ inline BOOL IsUNCServerShare(const char* pszPath);
 inline BOOL IsUNCServerShare(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namemakeprettya-atlpathmakepretty"></a><a name="makepretty"></a>ATLPath::MakePretty
+## <a name="makepretty"></a>ATLPath::MakePretty
  이 함수는 오버 로드 된 래퍼입니다 [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -461,13 +460,13 @@ inline BOOL MakePretty(char* pszPath);
 inline BOOL MakePretty(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namematchspeca-atlpathmatchspec"></a><a name="matchspec"></a>ATLPath::MatchSpec  
+## <a name="matchspec"></a>ATLPath::MatchSpec  
  이 함수는 오버 로드 된 래퍼입니다 [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -477,13 +476,13 @@ inline BOOL MatchSpec(const char* pszPath, const char* pszSpec);
 inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namequotespacesa-atlpathquotespaces"></a><a name="quotespaces"></a>ATLPath::QuoteSpaces  
+## <a name="quotespaces"></a>ATLPath::QuoteSpaces  
  이 함수는 오버 로드 된 래퍼입니다 [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -493,13 +492,13 @@ inline void QuoteSpaces(char* pszPath);
 inline void QuoteSpaces(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namerelativepathtoa-atlpathrelativepathto"></a><a name="relativepathto"></a>ATLPath::RelativePathTo
+## <a name="relativepathto"></a>ATLPath::RelativePathTo
  이 함수는 오버 로드 된 래퍼입니다 [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -520,13 +519,13 @@ inline BOOL RelativePathTo(
    DWORD dwAttrTo);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameremoveargsa-atlpathremoveargs"></a><a name="removeargs"></a>ATLPath::RemoveArgs  
+## <a name="removeargs"></a>ATLPath::RemoveArgs  
  이 함수는 오버 로드 된 래퍼입니다 [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -536,13 +535,13 @@ inline void RemoveArgs(char* pszPath);
 inline void RemoveArgs(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameremovebackslasha-atlpathremovebackslash"></a><a name="removebackslash"></a>ATLPath::RemoveBackslash
+## <a name="removebackslash"></a>ATLPath::RemoveBackslash
  이 함수는 오버 로드 된 래퍼입니다 [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -552,13 +551,13 @@ inline char* RemoveBackslash(char* pszPath);
 inline wchar_t* RemoveBackslash(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameremoveblanksa-atlpathremoveblanks"></a><a name="removeblanks"></a>ATLPath::RemoveBlanks
+## <a name="removeblanks"></a>ATLPath::RemoveBlanks
  이 함수는 오버 로드 된 래퍼입니다 [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -568,13 +567,13 @@ inline void RemoveBlanks(char* pszPath);
 inline void RemoveBlanks(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameremoveextensiona-atlpathremoveextension"></a><a name="removeextension"></a>ATLPath::RemoveExtension
+## <a name="removeextension"></a>ATLPath::RemoveExtension
  이 함수는 오버 로드 된 래퍼입니다 [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -584,13 +583,13 @@ inline void RemoveExtension(char* pszPath);
 inline void RemoveExtension(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameremovefilespeca-atlpathremovefilespec"></a><a name="removefilespec"></a>ATLPath::RemoveFileSpec
+## <a name="removefilespec"></a>ATLPath::RemoveFileSpec
  이 함수는 오버 로드 된 래퍼입니다 [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -600,13 +599,13 @@ inline BOOL RemoveFileSpec(char* pszPath);
 inline BOOL RemoveFileSpec(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namerenameextensiona-atlpathrenameextension"></a><a name="renameextension"></a>ATLPath::RenameExtension
+## <a name="renameextension"></a>ATLPath::RenameExtension
  이 함수는 오버 로드 된 래퍼입니다 [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -616,13 +615,13 @@ inline BOOL RenameExtension(char* pszPath, const char* pszExt);
 inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameskiproota-atlpathskiproot"></a><a name="skiproot"></a>ATLPath::SkipRoot
+## <a name="skiproot"></a>ATLPath::SkipRoot
  이 함수는 오버 로드 된 래퍼입니다 [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -632,13 +631,13 @@ inline char* SkipRoot(const char* pszPath);
 inline wchar_t* SkipRoot(const wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-namestrippatha-atlpathstrippath"></a><a name="strippath"></a>ATLPath::StripPath
+## <a name="strippath"></a>ATLPath::StripPath
  이 함수는 오버 로드 된 래퍼입니다 [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -648,14 +647,14 @@ inline void StripPath(char* pszPath);
 inline void StripPath(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756) 대 한 자세한 내용은 합니다.  
   
  
   
 
 
-## <a name="a-namestriptoroota-atlpathstriptoroot"></a><a name="striptoroot"></a>ATLPath::StripToRoot
+## <a name="striptoroot"></a>ATLPath::StripToRoot
  이 함수는 오버 로드 된 래퍼입니다 [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -665,13 +664,13 @@ inline BOOL StripToRoot(char* pszPath);
 inline BOOL StripToRoot(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757) 대 한 자세한 내용은 합니다.  
   
  
   
 
-## <a name="a-nameunquotespacesa-atlpathunquotespaces"></a><a name="unquotespaces"></a>ATLPath::UnquoteSpaces
+## <a name="unquotespaces"></a>ATLPath::UnquoteSpaces
  이 함수는 오버 로드 된 래퍼입니다 [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -681,10 +680,9 @@ inline void UnquoteSpaces(char* pszPath);
 inline void UnquoteSpaces(wchar_t* pszPath);  
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763) 대 한 자세한 내용은 합니다.  
   
  
   
  
-

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - text output [C++]
 - text [C++], formatting
@@ -26,30 +24,15 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 58f49647766d21369145474d908bd3c0436deae8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: c817ab67fecb1479971d729977ad55d6b3e506fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iostream-programming"></a>iostream 프로그래밍
 이 섹션에서는 iostream 클래스에 대한 [일반적인 설명](../standard-library/what-a-stream-is.md)을 제공한 다음 [출력 스트림](../standard-library/output-streams.md), [입력 스트림](../standard-library/input-streams.md) 및 [입력/출력 스트림](../standard-library/input-output-streams.md)에 대해 설명합니다. 이 섹션의 끝에서는 고급 iostream 프로그래밍에 대한 정보를 제공합니다.  
@@ -70,5 +53,4 @@ ms.lasthandoff: 02/24/2017
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)   
  [iostreams 규칙](../standard-library/iostreams-conventions.md)
-
 

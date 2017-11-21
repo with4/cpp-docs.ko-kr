@@ -1,37 +1,35 @@
 ---
 title: "컴파일러 경고 (수준 1) C4906 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4906"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4906"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4906
+dev_langs: C++
+helpviewer_keywords: C4906
 ms.assetid: 05318e74-799b-412a-9dce-f02b8161d762
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 784bce01aa18991a28e4410f9fbaf3eb502ddd60
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4906
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4906"></a>컴파일러 경고(수준 1) C4906
 문자열 리터럴을 'LPWSTR'로 캐스팅했습니다.  
   
- 컴파일러에서 안전하지 않은 캐스트를 발견했습니다.  캐스트가 성공했지만 변환 루틴을 사용해야 합니다.  
+ 컴파일러는 안전 하지 않은 캐스트를 발견 했습니다. 캐스트가 성공 했지만 있지만 변환 루틴을 사용 해야 합니다.  
   
- 이 경고는 기본적으로 해제되어 있습니다.  자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md)를 참조하십시오.  
+ 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 를 참조하세요.  
   
-## 예제  
- 다음 샘플에서는 C4906 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4906 오류가 생성 됩니다.  
   
 ```  
 // C4906.cpp  

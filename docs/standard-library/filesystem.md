@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,36 +14,20 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
-경로, 파일 및 디렉터리에 대한 정보를 조작하고 검색하는 클래스 및 함수에 액세스할 수 있도록 \<filesystem> 헤더를 포함합니다.  
+경로, 파일 및 디렉터리에 대한 정보를 조작하고 검색하는 클래스 및 함수에 액세스할 수 있도록 &lt;filesystem> 헤더를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +38,7 @@ using namespace std::experimental::filesystem::v1;
 ```  
   
 > [!IMPORTANT]
->  Visual Studio 2017 릴리스의 경우 \<experimental/filesystem> 헤더가 C++ 표준이 아니었습니다. Visual C++ 2017에서는 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)에 있는 최종 초안 표준을 구현합니다.  
+>  현재 Visual Studio 2017 릴리스에서 \<파일 시스템 > 머리글을 아직 c + + 표준입니다. Visual C++ 2017에서는 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)에 있는 최종 초안 표준을 구현합니다.  
   
  이 헤더는 Microsoft Windows 및 Posix의 광범위한 두 호스트 운영 체제 클래스 중 하나에 대해 파일 시스템을 지원합니다.  
   
@@ -73,15 +56,15 @@ using namespace std::experimental::filesystem::v1;
   
 -   클래스 경로의 개체는 경로 이름을 네이티브 형식으로 저장하지만 이 저장된 형식과 여러 가지 외부 형식 간에 쉽게 변환할 수 있습니다.  
   
-    -   운영 체제에서 선호하는 방식으로 인코드된, null 종료 char 시퀀스  
+-   운영 체제에서 선호하는 방식으로 인코드된, null 종료 char 시퀀스  
   
-    -   UTF-8로 인코드된, null 종료 char 시퀀스  
+-   UTF-8로 인코드된, null 종료 char 시퀀스  
   
-    -   운영 체제에서 선호하는 방식으로 인코드된, null 종료 wchar_t 시퀀스  
+-   운영 체제에서 선호하는 방식으로 인코드된, null 종료 wchar_t 시퀀스  
   
-    -   UTF-16으로 인코드된, null 종료 char16_t 시퀀스  
+-   UTF-16으로 인코드된, null 종료 char16_t 시퀀스  
   
-    -   UTF-32로 인코드된, null 종료 char32_t 시퀀스  
+-   UTF-32로 인코드된, null 종료 char32_t 시퀀스  
   
  이러한 표시 간의 상호 변환은 하나 이상의 `codecvt` 패싯을 사용하여 필요에 따라 조정됩니다. 특정 로캘 개체를 지정하지 않은 경우 전역 로캘에서 이러한 패싯을 가져옵니다.  
   
@@ -142,14 +125,13 @@ using namespace std::experimental::filesystem::v1;
   
 |이름|설명|  
 |----------|-----------------|  
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 과 함께 사용되는 열거형이며 대상 파일이 이미 있는 경우의 동작을 결정합니다.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60)과 함께 사용되는 열거형이며 대상 파일이 이미 있는 경우의 동작을 결정합니다.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|디렉터리 반복기에 대한 옵션을 지정하는 열거형입니다.|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|파일 형식에 대한 열거형입니다.|  
 |[사용 권한을 확인 하십시오](../standard-library/filesystem-enumerations.md#perms)|사용 권한 및 사용 권한에 대한 옵션을 전달하는 데 사용되는 비트 마스크 형식입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

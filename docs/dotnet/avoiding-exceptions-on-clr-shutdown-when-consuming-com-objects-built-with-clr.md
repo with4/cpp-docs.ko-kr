@@ -1,35 +1,35 @@
 ---
-title: "/clr로 빌드한 COM 개체를 사용할 때 CLR 종료 시 예외 방지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 컴파일러 옵션[C++], CLR 종료 예외"
-  - "/clr 컴파일러 옵션[C++], COM 개체"
-  - "CLR 종료 예외[C++]"
-  - "interop[C++], CLR 종료 예외"
-  - "상호 운용성[C++], CLR 종료 예외"
-  - "혼합형 어셈블리[C++], CLR 종료 예외"
+title: "-Clr과 빌드한 COM 개체에서 발생 한 예외를 방지 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], CLR shutdown exceptions
+- /clr compiler option [C++], CLR shutdown exceptions
+- mixed assemblies [C++], CLR shutdown exceptions
+- /clr compiler option [C++], COM objects
+- interoperability [C++], CLR shutdown exceptions
+- CLR shutdown exceptions [C++]
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 430420a62915d3378dae863c20c00e3b398ecb3c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /clr로 빌드한 COM 개체를 사용할 때 CLR 종료 시 예외 방지
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-CLR\(공용 언어 런타임\)의 종료 모드가 시작되면 CLR 서비스에 대한 네이티브 함수의 액세스가 제한됩니다.  **\/clr**를 사용하여 컴파일한 COM 개체에 대해 Release를 호출하려고 하면 관리 코드에 정의되어 있는 IUnknown::Release 호출을 수행하기 위해 CLR가 네이티브 코드로 변환된 다음 관리 코드로 다시 변환됩니다.  종료 모드가 시작되면 CLR는 호출이 관리 코드에 다시 전달되지 않도록 막습니다.  
+# <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>/clr로 빌드한 COM 개체를 사용할 때 CLR 종료 시 예외 방지
+공용 언어 런타임 (CLR) 종료 모드로 설정 되 면 네이티브 함수를 CLR 서비스에 대 한 액세스를 제한 됩니다. COM 개체를 사용 하 여 컴파일된에서 릴리스를 호출 하려고 할 때 **/clr**, 네이티브 코드에 CLR 전환 되 고 다음 관리 코드에 서비스 (관리 코드에서 정의 됨)는 iunknown:: Release 호출으로 다시 전환 합니다. CLR 종료 모드 이므로 관리 코드로 다시 호출을 방지 합니다.  
   
- 이 문제를 해결하려면 Release 메서드에서 호출하는 소멸자에 네이티브 코드만 포함되어야 합니다.  
+ 이 문제를 해결 하려면 릴리스 메서드에서 호출 된 소멸자에만 네이티브 코드가 들어를 확인 합니다.  
   
-## 참고 항목  
- [혼합형\(네이티브 및 관리\) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>참고 항목  
+ [혼합형(네이티브 및 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)

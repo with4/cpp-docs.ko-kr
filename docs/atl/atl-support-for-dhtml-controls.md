@@ -1,62 +1,63 @@
 ---
-title: "DHTML 컨트롤에 대한 ATL 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML 컨트롤"
-  - "DHTML 컨트롤, ATL 지원"
-  - "HTML 컨트롤, ATL 지원"
+title: "DHTML 컨트롤에 대 한 ATL 지원 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, ATL support
+- DHTML controls, ATL support
+- DHTML controls
 ms.assetid: 4ba98098-da5d-4362-96ad-8372f816c307
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 16848150802ec3fb097f6d19f0b1b4f8b11c8f69
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# DHTML 컨트롤에 대한 ATL 지원
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL을 사용 하 여 동적 HTML \(DHTML\) 기능을 가진 컨트롤을 만들 수 있습니다.  ATL DHTML 컨트롤은.  
+# <a name="atl-support-for-dhtml-controls"></a>DHTML 컨트롤에 대한 ATL 지원
+ATL을 사용 하 여 DHTML (동적 HTML) 기능이 있는 컨트롤을 만들 수 있습니다. ATL DHTML 컨트롤:  
   
 -   WebBrowser 컨트롤을 호스팅합니다.  
   
--   HTML, DHTML 컨트롤의 사용자 인터페이스 \(UI\)를 사용 하 여 지정 합니다.  
+-   HTML, DHTML 컨트롤의 사용자 인터페이스 (UI) 사용 여부를 지정 합니다.  
   
--   WebBrowser 개체와 해당 메서드는 인터페이스를 통해 액세스 하는  [IWebBrowser2](https://msdn.microsoft.com/en-us/library/aa752127.aspx).  
+-   WebBrowser 개체 및 해당 메서드는 인터페이스를 통해 액세스 하는 [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)합니다.  
   
--   C \+ \+ 코드와 HTML 간의 통신을 관리합니다.  
+-   C + + 코드와 HTML 간의 통신을 관리합니다.  
   
- DHTML 컨트롤 추가 디스패치 인터페이스가 제외 DHTML 컨트롤은 다른 ATL 컨트롤과 비슷합니다.  그림에서 볼  [DHTML 컨트롤 프로젝트의 요소를 나타내는](../atl/identifying-the-elements-of-the-dhtml-control-project.md) 예는 기본 DHTML 프로젝트에서 제공 하는 인터페이스.  
+ DHTML 컨트롤 DHTML 컨트롤에는 추가 디스패치 인터페이스 점을 제외 하 고 다른 ATL 컨트롤와 비슷합니다. 그림을 참조 [DHTML 컨트롤 프로젝트의 요소를 식별](../atl/identifying-the-elements-of-the-dhtml-control-project.md) 기본 DHTML 프로젝트에서 제공 하는 인터페이스에 대 한 예제입니다.  
   
- 웹 브라우저 또는 ActiveX 컨트롤 테스트 컨테이너 같은 다른 컨테이너에서 ATL DHTML 컨트롤을 볼 수 있습니다.  
+ 웹 브라우저 또는 ActiveX Control Test Container 같은 다른 컨테이너에서 ATL DHTML 컨트롤을 볼 수 있습니다.  
   
-## 단원 내용  
- [DHTML 컨트롤 프로젝트의 요소를 식별합니다.](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [DHTML 컨트롤 프로젝트의 요소 식별](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
  DHTML 컨트롤 프로젝트의 요소에 설명 합니다.  
   
- [DHTML에서 C\+\+ 코드를 호출합니다.](../atl/calling-cpp-code-from-dhtml.md)  
- DHTML 컨트롤에서 호출 하는 C\+\+ 코드 예제를 제공 합니다.  
+ [DHTML에서 C++ 코드 호출](../atl/calling-cpp-code-from-dhtml.md)  
+ DHTML 컨트롤에서 c + + 코드를 호출 하는 예를 제공 합니다.  
   
  [ATL DHTML 컨트롤 만들기](../atl/creating-an-atl-dhtml-control.md)  
  DHTML 컨트롤을 만드는 단계를 나열 합니다.  
   
  [ATL DHTML 컨트롤 테스트](../atl/testing-the-atl-dhtml-control.md)  
- 빌드 및 초기 DHTML 컨트롤 프로젝트를 테스트 하는 방법을 보여 줍니다.  
+ 빌드하고 초기 DHTML 컨트롤 프로젝트를 테스트 하는 방법을 보여 줍니다.  
   
  [ATL DHTML 컨트롤 수정](../atl/modifying-the-atl-dhtml-control.md)  
- 일부 기능을 컨트롤에 추가 하는 방법을 보여 줍니다.  
+ 컨트롤에 일부 기능을 추가 하는 방법을 보여 줍니다.  
   
- [ATL DHTML 컨트롤 변경된 테스트](../atl/testing-the-modified-atl-dhtml-control.md)  
- 빌드 및 컨트롤의 추가 기능을 테스트 하는 방법을 보여 줍니다.  
+ [변경 된 ATL DHTML 컨트롤 테스트](../atl/testing-the-modified-atl-dhtml-control.md)  
+ 빌드하고 컨트롤의 추가 기능을 테스트 하는 방법을 보여 줍니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 액티브 템플릿 라이브러리를 사용 하 여 프로그래밍 하는 방법에 개념 항목에 대 한 링크를 제공 합니다.
+ 액티브 템플릿 라이브러리를 사용하여 프로그래밍하는 방법에 대한 개념 항목의 링크를 제공합니다.
+

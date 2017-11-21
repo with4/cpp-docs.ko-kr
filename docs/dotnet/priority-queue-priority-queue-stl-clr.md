@@ -1,32 +1,30 @@
 ---
-title: "priority_queue::priority_queue(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "priority_queue 멤버[STL/CLR]"
+title: 'priority_queue:: priority_queue (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::priority_queue
+dev_langs: C++
+helpviewer_keywords: priority_queue member [STL/CLR]
 ms.assetid: aab423d7-959e-48fd-9028-e9f45f43cb8a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 77486fdadaafe9b98e93998b73a4f5eb42f7865b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::priority_queue(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Constructs a container adapter object.  
+# <a name="priorityqueuepriorityqueue-stlclr"></a>priority_queue::priority_queue(STL/CLR)
+컨테이너 어댑터 개체를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 priority_queue();  
@@ -44,84 +42,74 @@ template<typename InIt>
         value_compare^ pred, container_type% cont);  
 ```  
   
-#### 매개 변수  
- cont  
- Container to copy.  
+#### <a name="parameters"></a>매개 변수  
+ 계속  
+ 복사할 컨테이너입니다.  
   
- first  
- Beginning of range to insert.  
+ 첫 번째  
+ 삽입할 범위의의 시작입니다.  
   
  last  
- End of range to insert.  
+ 삽입할 범위의 끝입니다.  
   
  pred  
- Ordering predicate for the controlled sequence.  
+ 제어 되는 시퀀스에 대 한 조건자를 정렬 합니다.  
   
- right  
- Object or range to insert.  
+ 오른쪽  
+ 삽입할 개체 또는 범위입니다.  
   
-## 설명  
- The constructor:  
+## <a name="remarks"></a>설명  
+ 생성자:  
   
  `priority_queue();`  
   
- creates an empty wrapped container, with the default ordering predicate.  You use it to specify an empty initial controlled sequence, with the default ordering predicate.  
+ 기본 조건자를 정렬 된 빈 래핑된 컨테이너를 만듭니다. 기본 조건자를 정렬 된는 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `priority_queue(priority_queue<Value, Container>% right);`  
   
- creates a wrapped container that is a copy of `right.get_container()`, with the ordering predicate `right.value_comp()`.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the queue object `right`, with the same ordering predicate.  
+ 복사본 인 래핑된 컨테이너를 만들고 `right.get_container()`, 정렬 조건부와 함께 `right.value_comp()`합니다. 큐 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`, 동일한 정렬 조건부와 함께 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `priority_queue(priority_queue<Value, Container>^ right);`  
   
- creates a wrapped container that is a copy of `right->get_container()`, with the ordering predicate `right->value_comp()`.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the queue object `*right`, with the same ordering predicate.  
+ 복사본 인 래핑된 컨테이너를 만들고 `right->get_container()`, 정렬 조건부와 함께 `right->value_comp()`합니다. 큐 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `*right`, 동일한 정렬 조건부와 함께 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `explicit priority_queue(value_compare^ pred);`  
   
- creates an empty wrapped container, with the ordering predicate `pred`.  You use it to specify an empty initial controlled sequence, with the specified ordering predicate.  
+ 정렬 조건자가 있는 빈 래핑된 컨테이너를 만들고 `pred`합니다. 지정 된 정렬 조건부와 함께 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `priority_queue(value_compare^ pred, container_type cont);`  
   
- creates an empty wrapped container, with the ordering predicate `pred`, then pushes all the elements of `cont` You use it to specify an initial controlled sequence from an existing container, with the specified ordering predicate.  
+ 정렬 조건자가 있는 빈 래핑된 컨테이너를 만들고 `pred`, 다음의 모든 요소를 푸시합니다 `cont` 사용 하면 지정 된 정렬 조건부와 함께 기존 컨테이너에서 제어 되는 초기 시퀀스를 지정할 수 있습니다.  
   
- The constructor:  
+ 생성자:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last);`  
   
- `priority_queue(InIt first, InIt last);`  
+ 기본 정렬 조건부와 함께 빈 래핑된 컨테이너를 만든 다음이 푸시 시퀀스 [`first`, `last`). 지정 된 정렬 조건부와 함께 지정된 eqeuence에서 제어 되는 초기 시퀀스를 지정 하려면 사용 합니다.  
   
- creates an empty wrapped container, with the default ordering predicate, then pushes the sequence `[``first``,` `last``)`.  You use it to specify an initial controlled sequence from a specified eqeuence, with the specified ordering predicate.  
+ 생성자:  
   
- The constructor:  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`  
   
- `template<typename InIt>`  
+ 정렬 조건자가 있는 빈 래핑된 컨테이너를 만들고 `pred`, 시퀀스 푸시합니다 [`first`, `last`). 지정 된 정렬 조건부와 함께 지정된 seqeuence에서 제어 되는 초기 시퀀스를 지정 하려면 사용 합니다.  
   
- `priority_queue(InIt first, InIt last,`  
+ 생성자:  
   
- `value_compare^ pred);`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`  
   
- creates an empty wrapped container, with the ordering predicate `pred`, then pushes the sequence `[``first``,` `last``)`.  You use it to specify an initial controlled sequence from a specified seqeuence, with the specified ordering predicate.  
+ 정렬 조건자가 있는 빈 래핑된 컨테이너를 만들고 `pred`, 다음의 모든 요소를 푸시합니다 `cont` 시퀀스 더하기 [`first`, `last`). 지정 된 정렬 조건부와 함께 기존 컨테이너를 지정 된 seqeuence는 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+## <a name="example"></a>예제  
   
- `template<typename InIt>`  
-  
- `priority_queue(InIt first, InIt last,`  
-  
- `value_compare^ pred, container_type% cont);`  
-  
- creates an empty wrapped container, with the ordering predicate `pred`, then pushes all the elements of `cont` plus the sequence `[``first``,` `last``)`.  You use it to specify an initial controlled sequence from an existing container and a specified seqeuence, with the specified ordering predicate.  
-  
-## 예제  
-  
-```  
+```cpp  
 // cliext_priority_queue_construct.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -204,24 +192,27 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **c a b**  
-**size\(\) \= 0**  
- **a c b**  
- **a c b**  
- **c a b**  
- **a c b**  
- **a a b c c b**  
- **c a b**  
- **c a b**  
- **a c b**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+size() = 0  
+ c a b  
+size() = 0  
+ a c b  
+ a c b  
+ c a b  
+ a c b  
+ a a b c c b  
+ c a b  
+ c a b  
+ a c b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue:: assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)   
+ [priority_queue:: generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::operator=(STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

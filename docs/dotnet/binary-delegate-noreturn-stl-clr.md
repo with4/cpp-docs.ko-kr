@@ -1,32 +1,30 @@
 ---
-title: "binary_delegate_noreturn(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_delegate_noreturn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_delegate_noreturn 함수[STL/CLR]"
+title: binary_delegate_noreturn (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_delegate_noreturn
+dev_langs: C++
+helpviewer_keywords: binary_delegate_noreturn function [STL/CLR]
 ms.assetid: 055c7e9d-e5c3-48fe-9327-3f6316e8a51e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ee1ac1ddbd78bba8a6d01f29d45f94e63644dc5a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# binary_delegate_noreturn(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-일반 클래스는 `void` 를 반환하는 두 인수 대리자를 설명합니다.  해당 인수에서 대리자를 지정합니다.  
+# <a name="binarydelegatenoreturn-stlclr"></a>binary_delegate_noreturn(STL/CLR)
+반환 하는 두 인수 대리자를 설명 하는 genereic 클래스 `void`합니다. 사용 하면 대리자를 해당 인수를 기준으로 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 generic<typename Arg1,  
@@ -34,31 +32,31 @@ generic<typename Arg1,
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
-#### 매개 변수  
- Arg1  
+#### <a name="parameters"></a>매개 변수  
+ arg1  
  첫 번째 인수의 형식입니다.  
   
- Arg2  
- 둘째 인수의 형식 입니다.  
+ arg2  
+ 두 번째 인수의 형식입니다.  
   
-## 설명  
- 일반 대리자는 `void`를 반환하는 두 인수 함수를 설명합니다.  
+## <a name="remarks"></a>설명  
+ Genereic 대리자에 반환 하는 두 인수 함수에 설명 `void`합니다.  
   
- Note that for:  
+ 에 대 한는 note:  
   
  `binary_delegate_noreturn<int, int> Fun1;`  
   
  `binary_delegate_noreturn<int, int> Fun2;`  
   
- `Fun1` 및 `Fun2` 형식은 동의어입니다. 동안에 :  
+ 형식을 `Fun1` 및 `Fun2` 은 동의어 이며에 대 한 동안:  
   
  `delegate void Fun1(int, int);`  
   
  `delegate void Fun2(int, int);`  
   
- 같은 종류가 아닙니다.  
+ 형식이 같은 하지 않습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_binary_delegate_noreturn.cpp   
@@ -85,15 +83,18 @@ int main()
   
 ```  
   
-  **compare\(a, a\) \= False**  
-**compare\(a, b\) \= True**  
-**compare\(b, a\) \= False**   
-## 요구 사항  
- **Header:** \<cliext\/functional\>  
+```Output  
+compare(a, a) = False  
+compare(a, b) = True  
+compare(b, a) = False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [binary\_delegate](../dotnet/binary-delegate-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)   
+ [unary_delegate_noreturn(STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

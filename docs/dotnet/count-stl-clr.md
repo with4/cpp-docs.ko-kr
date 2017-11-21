@@ -1,32 +1,30 @@
 ---
-title: "count(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count 함수[STL/CLR]"
+title: count (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::count
+dev_langs: C++
+helpviewer_keywords: count function [STL/CLR]
 ms.assetid: 6d10abb4-3c48-469c-804c-281015b12865
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 960e220032cf817465ce421677914968fe8c07b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# count(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Returns the number of elements in a range whose values match a specified value.  
+# <a name="count-stlclr"></a>count(STL/CLR)
+해당 값이 지정된 값과 일치하는 요소의 개수를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _InIt, class _Ty> inline  
@@ -34,13 +32,13 @@ template<class _InIt, class _Ty> inline
         count(_InIt _First, _InIt _Last, const _Ty% _Val);  
 ```  
   
-## 설명  
- This function behaves the same as the STL function `count`.  자세한 내용은 [count](../Topic/count.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 함수 동일 하 게 동작 `count`합니다. 자세한 내용은 참조 [count](../standard-library/algorithm-functions.md#count)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<알고리즘 cliext/>  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [algorithm(STL/CLR)](../dotnet/algorithm-stl-clr.md)

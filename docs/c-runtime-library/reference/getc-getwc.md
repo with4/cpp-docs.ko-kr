@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - getwc
 - _gettchar
 - getc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - characters, reading
 - _gettc function
@@ -41,30 +39,15 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9c49c803ade49a5434599690902856fd1f76d742
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 78a94d954631dfffbdcdc4bcad252599c673f44b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getc-getwc"></a>getc, getwc
 스트림에서 문자를 읽습니다.  
@@ -85,7 +68,7 @@ wint_t getwc(
  입력 스트림입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 읽은 문자를 반환합니다. 읽기 오류 또는 파일 끝 조건을 표시하기 위해 `getc`는 `EOF`를 반환하고 `getwc`는 `WEOF`를 반환합니다. `getc`의 경우 `ferror` 또는 `feof`를 사용하여 오류 또는 파일 끝이 있는지 확인합니다. `stream`이 `NULL`인 경우 `getc` 및 `getwc`는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 실행을 계속 허용 된 경우 이러한 함수가 반환 `EOF` (또는 `WEOF` 에 대 한 `getwc`) 설정 `errno` 를 `EINVAL`합니다.  
+ 읽은 문자를 반환합니다. 읽기 오류 또는 파일 끝 조건을 표시하기 위해 `getc`는 `EOF`를 반환하고 `getwc`는 `WEOF`를 반환합니다. `getc`의 경우 `ferror` 또는 `feof`를 사용하여 오류 또는 파일 끝이 있는지 확인합니다. `stream`이 `NULL`인 경우 `getc` 및 `getwc`는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 실행을 계속 허용 된 경우 이러한 함수가 반환 `EOF` (또는 `WEOF` 에 대 한 `getwc`) 설정 하 고 `errno` 를 `EINVAL`합니다.  
   
  이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   

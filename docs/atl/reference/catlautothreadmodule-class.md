@@ -4,42 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAtlAutoThreadModule
 - atlbase/ATL::CAtlAutoThreadModule
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlAutoThreadModule class
+dev_langs: C++
+helpviewer_keywords: CAtlAutoThreadModule class
 ms.assetid: 3be834aa-55ef-403e-94ae-41979691b15f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 159b2f13dc573262bfab3a2e19209b29e3eaf5a5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: ceff548fe53ff317eaca432a5e0c223cdc0a4e6d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule 클래스
 이 클래스는 COM 서버를 스레드 풀, 아파트 모델을 구현합니다.  
@@ -78,4 +60,3 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
  [IAtlAutoThreadModule 클래스](../../atl/reference/iatlautothreadmodule-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)   
  [모듈 클래스](../../atl/atl-module-classes.md)
-

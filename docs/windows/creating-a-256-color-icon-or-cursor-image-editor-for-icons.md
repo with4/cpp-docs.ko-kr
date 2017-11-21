@@ -1,52 +1,53 @@
 ---
-title: "Creating a 256-Color Icon or Cursor (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "256-color palette"
-  - "cursors, color"
-  - "colors, icons"
-  - "colors, cursors"
-  - "icons, color"
+title: "256 색 아이콘이 나 커서 (아이콘에 대 한 이미지 편집기) 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- 256-color palette
+- cursors, color
+- colors, icons
+- colors, cursors
+- icons, color
 ms.assetid: 2738089b-4fd3-4c45-96ae-6a15e4c6b780
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 12baf092d432aff4ac16d00f1877128eef629e14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Creating a 256-Color Icon or Cursor (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이미지 편집기를 사용하면 원하는 색을 선택할 수 있는 256 색상표를 가진 크기가 큰\(64 × 64\) 아이콘과 커서를 만들 수 있습니다.  리소스를 만들고 나면 장치 이미지 스타일이 선택됩니다.  
+# <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>256색 아이콘 또는 커서 만들기(아이콘에 대한 이미지 편집기)
+이미지 편집기를 사용 하 여 256 색상표에서 선택할 수 있는 크기의 큰 (64 × 64) 아이콘 및 커서를 만들 수 있습니다. 리소스를 만든 후 장치 이미지 스타일 선택 되어 있습니다.  
   
-### 256색 아이콘이나 커서를 만들려면  
+### <a name="to-create-a-256-color-icon-or-cursor"></a>256 색 아이콘이 나 커서를 만들려면  
   
-1.  [리소스 뷰](../windows/resource-view-window.md)에서 .rc 파일을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **리소스 삽입**을 선택합니다.  .rc 파일에 커서 같은 기존 이미지 리소스가 있으면 **Cursor** 폴더를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **Cursor  삽입**을 선택합니다.  
+1.  [리소스 뷰](../windows/resource-view-window.md),.rc 파일을 마우스 오른쪽 단추로 클릭 한 다음 선택 **리소스 삽입** 바로 가기 메뉴에서. (단추로 하기만 하면 cursor와 같은.rc 파일에 기존 이미지 리소스를 이미 있는 경우는 **커서** 폴더와 선택 **커서 삽입** 바로 가기 메뉴에서.)  
   
-     **참고** 프로젝트에 .rc 파일이 없으면 [새 리소스 스크립트 파일 만들기](../windows/how-to-create-a-resource-script-file.md)를 참조하십시오.  
+     **참고** 프로젝트에 .rc 파일이 아직 없는 경우 [새 리소스 스크립트 파일 만들기](../windows/how-to-create-a-resource-script-file.md)를 참조하세요.  
   
-2.  [리소스 삽입 대화 상자](../windows/add-resource-dialog-box.md)에서 **아이콘**이나 **커서**를 선택하고 **새로 만들기**를 클릭합니다.  
+2.  에 [리소스 삽입 대화 상자](../windows/add-resource-dialog-box.md)선택, **아이콘** 또는 **커서** 클릭 **새로**합니다.  
   
-3.  **이미지** 메뉴에서 **새 장치 이미지**를 클릭합니다.  
+3.  에 **이미지** 메뉴를 클릭 하 여 **새 장치 이미지**합니다.  
   
-4.  원하는 256색 이미지 스타일을 선택합니다.  
+4.  원하는 256 색 이미지 스타일을 선택 합니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](https://msdn.microsoft.com/library/f45fce5x.aspx) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](https://msdn.microsoft.com/library/xbx3z216.aspx)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](https://msdn.microsoft.com/library/h6270d0z.aspx)합니다.  
   
- **요구 사항**  
+ **Requirements**  
   
  없음  
   
-## 참고 항목  
- [Using the 256\-Color Palette](../mfc/using-the-256-color-palette-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>참고 항목  
+ [256 색상표를 사용 하 여](../windows/using-the-256-color-palette-image-editor-for-icons.md)   
+ [액셀러레이터 키](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [아이콘 및 커서: 디스플레이 장치용 이미지 리소스](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+

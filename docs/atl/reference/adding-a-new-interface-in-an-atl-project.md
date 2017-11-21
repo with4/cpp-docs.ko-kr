@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.appwiz.ATL.interface
-dev_langs:
-- C++
+f1_keywords: vc.appwiz.ATL.interface
+dev_langs: C++
 helpviewer_keywords:
 - interfaces, adding to ATL objects
 - Implement Interface ATL wizard
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 10b252047a7bae1bbd54e854445dcd90db06a341
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 21aeda51a917bcb48b16ff8f9c2bc505adc18f1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 프로젝트에 새 인터페이스 추가
 개체 또는 컨트롤에는 인터페이스를 추가 하면 해당 인터페이스의 각 메서드에 대 한 스텁 아웃 함수를 만듭니다. 개체 또는 컨트롤에서 현재 기존의 형식 라이브러리에서 찾은 인터페이스만 추가할 수 있습니다. 또한 인터페이스를 추가할 클래스 구현 해야 합니다는 [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) 매크로 프로젝트 특성을 사용 하는 경우에 있어야 하거나는 `coclass` 특성입니다.  
@@ -73,5 +55,4 @@ ms.lasthandoff: 03/31/2017
  [ATL 및 C 런타임 코드를 사용한 프로그래밍](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [ATL COM 개체의 기본 사항](../../atl/fundamentals-of-atl-com-objects.md)   
  [기본 ATL 프로젝트 구성](../../atl/reference/default-atl-project-configurations.md)
-
 

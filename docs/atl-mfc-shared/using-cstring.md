@@ -1,42 +1,42 @@
 ---
-title: "Using CString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CString class (Visual C++)"
-  - "CString objects, C++ string manipulation"
-  - "CString objects, reference counting"
+title: "CString을 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- CString objects, C++ string manipulation
+- CString objects, reference counting
+- CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92992278f0f5395c843ef6623a02e6294786ea24
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Using CString
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 섹션의 항목에서는 `CString`을 사용한 프로그래밍 방법에 대해 설명합니다.  `CString` 클래스에 대한 참조 설명서는 [CStringT](../atl-mfc-shared/reference/cstringt-class.md) 설명서를 참조하세요.  
+# <a name="using-cstring"></a>CString을 사용 하 여
+이 섹션의 항목에서는 `CString`을 사용한 프로그래밍 방법에 대해 설명합니다. 에 대 한 참조 설명서는 `CString` 클래스에 대 한 설명서를 참조 하십시오. [CStringT](../atl-mfc-shared/reference/cstringt-class.md)합니다.  
   
  `CString`을 사용하려면 `atlstr.h` 헤더를 포함합니다.  
   
- `CString`, `CStringA` 및 `CStringW` 클래스는 지원하는 문자 데이터 유형을 기반으로 하는 특수화된 [CStringT](../atl-mfc-shared/reference/cstringt-class.md) 클래스 템플릿입니다.  
+ `CString`, `CStringA`, 및 `CStringW` 클래스 호출 클래스 템플릿의 특수화는 [CStringT](../atl-mfc-shared/reference/cstringt-class.md) 지 원하는 문자 데이터의 형식을 기반으로 합니다.  
   
- `CStringW` 개체는 `wchar_t` 형식을 포함하며 유니코드 문자열을 지원합니다.  `CStringA` 개체는 `char` 형식을 포함하며 싱글바이트 및 멀티바이트\(MBCS\) 문자열을 지원합니다.  `CString` 개체는 컴파일 시간에 정의되는 기호\(`MBCS` 기호 또는 `UNICODE` 기호\)에 따라 `char` 형식 또는 `wchar_t` 형식을 지원합니다.  
+ `CStringW` 개체는 `wchar_t` 형식을 포함하며 유니코드 문자열을 지원합니다. `CStringA` 개체는 `char` 형식을 포함하며 싱글바이트 및 멀티바이트(MBCS) 문자열을 지원합니다. `CString` 개체는 컴파일 시간에 정의되는 기호(`char` 기호 또는 `wchar_t` 기호)에 따라 `MBCS` 형식 또는 `UNICODE` 형식을 지원합니다.  
   
- `CString` 개체는 `CStringData` 개체에 문자 데이터를 보관합니다.  `CString`은 `null`로 종료되는 C 스타일 문자열을 허용하지만 저장된 문자 데이터에 `null` 문자를 보존하지는 않습니다.  대신 `CString`은 문자열 길이를 추적합니다.  `CString`은 C 스타일 문자열을 내보낼 때 null 종결자를 제공합니다.  `CString`에 `null`을 삽입할 수는 있지만 이렇게 하면 예기치 않은 결과가 발생할 수 있습니다.  
+ `CString` 개체는 `CStringData` 개체에 문자 데이터를 보관합니다. `CString`은 `null`로 종료되는 C 스타일 문자열을 허용하지만 저장된 문자 데이터에 `null` 문자를 보존하지는 않습니다. 대신 `CString`은 문자열 길이를 추적합니다. `CString`은 C 스타일 문자열을 내보낼 때 null 종결자를 제공합니다. `null`에 `CString`을 삽입할 수는 있지만 이렇게 하면 예기치 않은 결과가 발생할 수 있습니다.  
   
- `CAtlString`, `CAtlStringA` 및 `CAtlStringW` 문자열 클래스 집합은 MFC 라이브러리에 연결하지 않고 사용할 수 있습니다\(CRT 지원 포함\/미포함\).  
+ `CAtlString`, `CAtlStringA` 및 `CAtlStringW` 문자열 클래스 집합은 MFC 라이브러리에 연결하지 않고 사용할 수 있습니다(CRT 지원 포함/미포함).  
   
- `CString`은 네이티브 프로젝트에 사용됩니다.  관리 코드\(C\+\+\/CLI\) 프로젝트에는 `System::String`을 사용합니다.  
+ `CString`은 네이티브 프로젝트에 사용됩니다. 관리 코드(C++/CLI) 프로젝트에는 `System::String`을 사용합니다.  
   
  `CString`, `CStringA` 또는 `CStringW`에서 현재 제공하는 것보다 많은 기능을 추가하려면 추가 기능이 포함된 `CStringT`를 만들어야 합니다.  
   
@@ -51,7 +51,7 @@ int main() {
 }  
 ```  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [기본 CString 작업](../atl-mfc-shared/basic-cstring-operations.md)  
  C 리터럴 문자열에서 개체를 만들고, `CString`의 개별 문자에 액세스하고, 두 개체를 연결하고, `CString` 개체를 비교하는 작업을 포함한 기본 `CString` 작업을 설명합니다.  
   
@@ -73,19 +73,19 @@ int main() {
  [CString 인수 전달](../atl-mfc-shared/cstring-argument-passing.md)  
  CString 개체를 함수에 전달하고 함수에서 `CString` 개체를 반환하는 방법을 설명합니다.  
   
- [유니코드 및 MBCS\(멀티바이트 문자 집합\) 지원](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
+ [유니코드 및 MBCS(멀티바이트 문자 집합) 지원](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
  유니코드 및 MBCS가 지원되도록 MFC를 설정하는 방법을 설명합니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
  [CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
  `CStringT` 클래스에 대한 참조 정보를 제공합니다.  
   
- [CSimpleStringT Class](../atl-mfc-shared/reference/csimplestringt-class.md)  
+ [CSimpleStringT 클래스](../atl-mfc-shared/reference/csimplestringt-class.md)  
  `CSimpleStringT` 클래스에 대한 참조 정보를 제공합니다.  
   
-## 관련 단원  
- [문자열](../atl-mfc-shared/strings-atl-mfc.md)  
+## <a name="related-sections"></a>관련 단원  
+ [문자열 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
  문자열 데이터를 관리하는 여러 방법을 설명하는 항목에 대한 링크를 제공합니다.  
   
- [템플릿 클래스 인스턴스화](../Topic/Class%20Template%20Instantiation.md)  
- `CString`은 클래스 템플릿의 특수화된 인스턴스인 `CStringT`를 기반으로 하는 `typedef`입니다.
+ [문자열 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+

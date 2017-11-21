@@ -1,32 +1,30 @@
 ---
-title: "map::map(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "map 멤버[STL/CLR]"
+title: 'map:: map (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::map
+dev_langs: C++
+helpviewer_keywords: map member [STL/CLR]
 ms.assetid: c91f699a-4742-4859-b2b3-c2a01a750bea
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d8fe3e0dd20ae07f3378bd528d7e19986c2aed6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# map::map(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapmap-stlclr"></a>map::map(STL/CLR)
 컨테이너 개체를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 map();  
@@ -43,79 +41,71 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### 매개 변수  
- first  
- Beginning of range to insert.  
+#### <a name="parameters"></a>매개 변수  
+ 첫 번째  
+ 삽입할 범위의의 시작입니다.  
   
  last  
- End of range to insert.  
+ 삽입할 범위의 끝입니다.  
   
  pred  
- Ordering predicate for the controlled sequence.  
+ 제어 되는 시퀀스에 대 한 조건자를 정렬 합니다.  
   
- right  
- Object or range to insert.  
+ 오른쪽  
+ 삽입할 개체 또는 범위입니다.  
   
-## 설명  
- The constructor:  
+## <a name="remarks"></a>설명  
+ 생성자:  
   
  `map();`  
   
- initializes the controlled sequence with no elements, with the default ordering predicate `key_compare()`.  You use it to specify an empty initial controlled sequence, with the default ordering predicate.  
+ 기본 조건자를 정렬 된 요소가 없는 제어 되는 시퀀스를 초기화 `key_compare()`합니다. 기본 조건자를 정렬 된는 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `explicit map(key_compare^ pred);`  
   
- initializes the controlled sequence with no elements, with the ordering predicate `pred`.  You use it to specify an empty initial controlled sequence, with the specified ordering predicate.  
+ 정렬 조건자가 있는 요소가 없는 제어 되는 시퀀스를 초기화 `pred`합니다. 지정 된 정렬 조건부와 함께 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `map(map<Key, Mapped>% right);`  
   
- initializes the controlled sequence with the sequence `[``right``.`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``.`[map::end](../dotnet/map-end-stl-clr.md)`())`, with the default ordering predicate.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the map object `right`, with the default ordering predicate.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`right.begin()`, `right.end()`), 조건자 순서 기본값입니다. 지도 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`, 조건자 순서 기본값입니다.  
   
- The constructor:  
+ 생성자:  
   
  `map(map<Key, Mapped>^ right);`  
   
- initializes the controlled sequence with the sequence `[``right``->`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``->`[map::end](../dotnet/map-end-stl-clr.md)`())`, with the default ordering predicate.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the map object `right`, with the default ordering predicate.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`right->begin()`, `right->end()`), 조건자 순서 기본값입니다. 지도 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`, 조건자 순서 기본값입니다.  
   
- The constructor:  
+ 생성자:  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last);`  
   
- `map(InIter first, InIter last);`  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 조건자 순서 기본값입니다. 기본 조건자를 정렬 된 제어 되는 다른 시퀀스의 복사본을 확인을 사용 합니다.  
   
- initializes the controlled sequence with the sequence `[``first``,` `last``)`, with the default ordering predicate.  You use it to make the controlled sequence a copy of another sequence, with the default ordering predicate.  
+ 생성자:  
   
- The constructor:  
+ `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 정렬 조건부와 함께 `pred`합니다. 제어 되는 시퀀스의 사본을 지정 된 정렬 조건부와 함께 다른 시퀀스를 사용 합니다.  
   
- `map(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- initializes the controlled sequence with the sequence `[``first``,` `last``)`, with the ordering predicate `pred`.  You use it to make the controlled sequence a copy of another sequence, with the specified ordering predicate.  
-  
- The constructor:  
+ 생성자:  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- initializes the controlled sequence with the sequence designated by the enumerator `right`, with the default ordering predicate.  You use it to make the controlled sequence a copy of another sequence described by an enumerator, with the default ordering predicate.  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 조건자 순서 기본값입니다. 제어 되는 시퀀스의 사본을 설명 하는 열거자에 따라 기본 조건자를 정렬 하는 다른 시퀀스를 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
- `map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 정렬 조건부와 함께 `pred`합니다. 제어 되는 시퀀스에서 지정 된 정렬 조건부와 함께 열거자를 설명 하는 다른 시퀀스의 복사본 수 있도록 사용 합니다.  
   
- initializes the controlled sequence with the sequence designated by the enumerator `right`, with the ordering predicate `pred`.  You use it to make the controlled sequence a copy of another sequence described by an enumerator, with the specified ordering predicate.  
+## <a name="example"></a>예제  
   
-## 예제  
-  
-```  
+```cpp  
 // cliext_map_construct.cpp   
 // compile with: /clr   
 #include <cliext/map>   
@@ -189,22 +179,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)   
- [map::generic\_container](../dotnet/map-generic-container-stl-clr.md)   
- [map::operator\=](../dotnet/map-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map:: generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)   
+ [map::operator=(STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)

@@ -1,45 +1,48 @@
 ---
-title: "Windows 데스크톱 응용 프로그램(C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vcplatformsdk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows 응용 프로그램[C++]"
-  - "응용 프로그램[C++], Windows"
-  - "Visual C++, Windows 응용 프로그램"
-  - "Windows 응용 프로그램[C++], Windows 응용 프로그램 만들기 정보"
+title: "Windows 데스크톱 응용 프로그램 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vcplatformsdk
+dev_langs: C++
+helpviewer_keywords:
+- Windows applications [C++]
+- applications [C++], Windows
+- Visual C++, Windows applications
+- Windows applications [C++], about creating Windows applications
 ms.assetid: be15855a-fa3f-41e9-89cd-41b9484ebfdb
-caps.latest.revision: 15
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c826d3999ac1f044bcc0ffc25e58f86ec7b7e881
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Windows 데스크톱 응용 프로그램(C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="windows-desktop-applications-c"></a>Windows 데스크톱 응용 프로그램(C++)
+이 섹션에는 창에서를 실행 하는 c + + 데스크톱 응용 프로그램을 만드는 방법을 설명 합니다.  
+> [!TIP]  
+> Windows 10 용 Windows 스토어를 통해 배포에 대 한 기존 데스크톱 응용 프로그램을 패키지 하는 데스크톱 앱 변환기를 사용할 수 있습니다. 자세한 내용은 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)(Centennial 프로젝트에서 Visual C++ 런타임 사용) 및 [데스크톱 브리지를 사용하여 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져오기](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)를 참조하세요.
+  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이러한 항목은 c + + 언어의 기본적인 사항을 이해 해야 가정 합니다.  
+  
+## <a name="in-this-section"></a>단원 내용  
+  
+-   [Win32 응용 프로그램 마법사](../windows/win32-application-wizard.md)  
+  
+-   [연습: Windows 데스크톱 응용 프로그램 만들기(C++)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)  
+  
+-   [빈 Windows 데스크톱 응용 프로그램 만들기](../windows/creating-an-empty-windows-desktop-application.md)  
+  
+-   [리소스 파일 작업](../windows/working-with-resource-files.md)  
+  
+## <a name="see-also"></a>참고 항목  
+ [Visual Studio에서 visual c + +](../visual-cpp-in-visual-studio.md)
 
-Visual Studio IDE 및 명령줄 응용 프로그램에 대해 배웠으므로 이제 Windows 응용 프로그램을 만드는 방법을 배울 차례입니다.  Visual C\+\+에서는 Win32 API라고도 알려진 [Windows API](https://msdn.microsoft.com/en-us/library/cc433218.aspx) 및 .NET Framework 같은 여러 가지 기술을 사용하여 Windows 응용 프로그램을 만들 수 있습니다.  
-  
- 이 단원에서는 Win32 API 및 .NET Framework를 사용하여 두 개의 간단한 Windows 응용 프로그램을 만듭니다.  또한 .NET Framework를 사용하여 Windows Forms 컨트롤을 만들고, 마지막으로 DirectX를 사용하여 간단한 게임을 만듭니다.  
-  
-## 사전 요구 사항  
- 이 항목에서는 사용자가 C\+\+ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
-  
-## 단원 내용  
-  
--   [연습: Windows 데스크톱 응용 프로그램 만들기\(C\+\+\)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)  
-  
--   [DirectX를 사용하여 게임을 만들기 위한 리소스\(C\+\+\)](../windows/resources-for-creating-a-game-using-directx.md)  
-  
-## 참고 항목  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/ko-kr/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)

@@ -1,35 +1,33 @@
 ---
-title: "컴파일러 경고(수준 1) C4376 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4376"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4376"
+title: "컴파일러 경고 (수준 1) C4376 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4376
+dev_langs: C++
+helpviewer_keywords: C4376
 ms.assetid: 5f202c74-9489-48fe-b36f-19cd882b1589
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b78407a29ade4c6792afbd8e15295199b7d6b2c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고(수준 1) C4376
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-액세스 지정자 'old\_specifier:'은\(는\) 더 이상 지원되지 않습니다. 대신 'new\_specifier:'을\(를\) 사용하십시오.  
+# <a name="compiler-warning-level-1-c4376"></a>컴파일러 경고(수준 1) C4376
+액세스 지정자 ' old_specifier:'은 더 이상 지원:를 사용 하십시오 ' new_specifier:' 대신  
   
- 형식 및 멤버 액세스를 지정 하는 메타 데이터에 대한 자세한 내용은 다음을 참조 하십시오.  [형식 표시](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 및 [멤버 표시](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility). 이것은 [방법: 클래스 및 구조체 정의 및 사용](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)에 있습니다.  
+ 형식 및 멤버 내게 필요한 옵션 메타 데이터의 지정에 대 한 자세한 내용은 참조 하십시오. [표시 유형 입력](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 및 [멤버 표시 유형](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility) 에 [하는 방법: 정의 사용할 클래스 및 구조체 및 (C + + /cli CLI) ](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
   
-## 예제  
- 다음 샘플에서는 C4376 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4376 오류가 발생 합니다.  
   
 ```  
 // C4376.cpp  

@@ -4,39 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- macros, error reporting
+f1_keywords:
+- atldef/ATL::_ATL_DEBUG_INTERFACES
+- atldef/ATL::_ATL_DEBUG_QI
+- atldef/ATL::ATLASSERT
+- afx/ATL::ATLENSURE
+- atltrace/ATL::ATLTRACENOTIMPL
+- atltrace/ATL::ATLTRACE
+dev_langs: C++
+helpviewer_keywords: macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f59c09b7eb1621094b170d3bed31b5891081194e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: e14ffb58ba19c6c3c8d3e59181a045532f5cfb92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>디버깅 및 오류 보고 매크로
 이러한 매크로 유용한 디버깅 및 추적 기능을 제공 합니다.  
@@ -87,7 +76,7 @@ ms.lasthandoff: 03/31/2017
 #define _ATL_DEBUG_QI
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 하는 경우 `QueryInterface` 실패, 출력 창 표시 됩니다.  
   
  *인터페이스 이름* - `failed`  
@@ -103,7 +92,7 @@ ATLASSERT(booleanExpression);
  `booleanExpression`  
  0이 아닌 값 또는 0으로 계산되는 식(포인터 포함)입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  디버그 빌드에서 `ATLASSERT` 평가 `booleanExpression` 결과 false 디버그 보고서를 생성 합니다.  
 
 ## <a name="requirements"></a>요구 사항  
@@ -124,7 +113,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  `hr`  
  반환할 오류 코드를 지정 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이러한 매크로 감지 하 여 잘못 된 매개 변수 사용의 사용자에 게 알리는 메커니즘을 제공 합니다.  
   
  매크로 호출이 `ATLASSERT` 고 조건이 호출에 실패 하면 `AtlThrow`합니다.  
@@ -136,7 +125,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  차이 **ATLENSURE** 및 `ATLASSERT` 은 **ATLENSURE** 릴리스에서 예외 디버그 빌드 에서처럼도 빌드 throw 합니다.  
   
 ### <a name="example"></a>예제  
- [!code-cpp[NVC_ATL_Utilities # 108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
@@ -156,7 +145,7 @@ ATLTRACENOTIMPL(funcname);
  릴리스 빌드에서 반환 **E_NOTIMPL**합니다.  
   
 ### <a name="example"></a>예제  
- [!code-cpp[NVC_ATL_Utilities # 127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltrace.h 
@@ -186,7 +175,7 @@ ATLTRACE(
  `lpszFormat`  
  [in] 덤프 장치에 보내도록 서식이 지정 된 문자열입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  참조 [ATLTRACE2](#atltrace2) 에 대 한 설명은 **ATLTRACE**합니다. **ATLTRACE** 및 `ATLTRACE2` 동일한 동작 **ATLTRACE** 이전 버전과 호환성을 위해 포함 되었습니다.  
   
 ##  <a name="atltrace2"></a>ATLTRACE2  
@@ -254,13 +243,13 @@ ATLTRACE2(
   
  사용자 지정 추적 범주를 선언 하려면의 전역 인스턴스를 선언에서 `CTraceCategory` 클래스를 다음과 같이 합니다.  
   
- [!code-cpp[NVC_ATL_Utilities # 109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
   
  범주 이름 `MY_CATEGORY` 이 예제는 이름을 지정 하는 `category` 매개 변수입니다. 첫 번째 매개 변수는 ATL/MFC 추적 도구에 표시 되는 범주 이름입니다. 두 번째 매개 변수는 기본 추적 수준입니다. 이 매개 변수는 선택적 이며 기본 추적 수준은 0입니다.  
   
  사용 하려면 사용자 정의 범주:  
   
- [!code-cpp[NVC_ATL_Utilities # 110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
   
  추적 메시지를 필터링 하려면를 지정 하려면 이러한 매크로 대 한 정의 하기 전에 Stdafx.h에 삽입 된 `#include <atlbase.h>` 문.  
   
@@ -275,9 +264,8 @@ ATLTRACE2(
  **ATLTRACE** 및 `ATLTRACE2` 동일한 동작 **ATLTRACE** 이전 버전과 호환성을 위해 포함 되었습니다.  
   
 ### <a name="example"></a>예제  
- [!code-cpp[NVC_ATL_Utilities # 111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  
  [매크로](../../atl/reference/atl-macros.md)   
  [디버깅 및 오류 보고 전역 함수](../../atl/reference/debugging-and-error-reporting-global-functions.md)
-

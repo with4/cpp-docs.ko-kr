@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 590022e41c13031e6ef5c78d4672521713002af1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 85f26c61e1e4fa996f73b4f61f4f961ba59dec98
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="casting"></a>캐스팅
 C++ 언어에서는 클래스가 가상 함수를 포함하는 기본 클래스에서 파생되는 경우 해당 기본 클래스 형식에 대한 포인터를 사용하여 파생 클래스 개체에 있는 가상 함수의 구현을 호출할 수 있습니다. 가상 함수를 포함하는 클래스를 "다형 클래스"라고도 합니다.  
@@ -40,7 +37,7 @@ C++ 언어에서는 클래스가 가상 함수를 포함하는 기본 클래스�
   
  `C` 형식의 개체는 다음 그림과 같이 시각화될 수 있습니다.  
   
- ![Sub & #45 포함 클래스 C; 개체 B 및 A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
+ ![Sub &#45;포함 클래스 C; 개체 B 및 A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
 B 하위 개체 및 A 하위 개체를 포함하는 C 클래스  
   
  `C` 클래스의 인스턴스를 제공하면 `B` 하위 개체 및 `A` 하위 개체가 있습니다. `C` 및 `A` 하위 개체를 포함한 `B`의 인스턴스는 "완전한 개체"입니다.  

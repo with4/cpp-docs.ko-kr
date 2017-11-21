@@ -1,33 +1,32 @@
 ---
-title: "BEGIN_ACCESSOR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_ACCESSOR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_ACCESSOR 매크로"
-  - "BEGIN_ACCESSOR 매크로, 구문"
+title: BEGIN_ACCESSOR | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_ACCESSOR
+dev_langs: C++
+helpviewer_keywords:
+- BEGIN_ACCESSOR macro, syntax
+- BEGIN_ACCESSOR macro
 ms.assetid: 59d0ff3e-7cfd-4ce8-9a1c-d664c0892a52
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74d8d2197553f9fd2b1f5452236b343424d29148
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_ACCESSOR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marks the beginning of an accessor entry.  
+# <a name="beginaccessor"></a>BEGIN_ACCESSOR
+접근자 항목의 시작을 표시 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -39,24 +38,24 @@ bAuto
   
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *num*  
- \[in\] The zero\-offset number for the accessor in this accessor map.  
+ [in] 이 접근자 맵에 있는 접근자에 대 한 0 오프셋 수입니다.  
   
- *bAuto*  
- \[in\] Specifies if this accessor is an auto accessor or a manual accessor.  If **true**, the accessor is auto; if **false**, the accessor is manual.  An auto accessor means data is fetched for you on move operations.  
+ *한*  
+ [in] 이 접근자 자동 접근자 또는 수동 접근자 인지 여부를 지정 합니다. 경우 **true**, 접근자 이면 자동; **false**, 접근자는 수동입니다. 자동 접근자 이동 작업에 데이터를 인출 되 의미 합니다.  
   
-## 설명  
- In the case of multiple accessors on a rowset, you need to specify `BEGIN_ACCESSOR_MAP` and use the `BEGIN_ACCESSOR` macro for each individual accessor.  The `BEGIN_ACCESSOR` macro is completed with the `END_ACCESSOR` macro.  The `BEGIN_ACCESSOR_MAP` macro is completed with the `END_ACCESSOR_MAP` macro.  
+## <a name="remarks"></a>설명  
+ 행 집합에서 여러 접근자가 있는 경우 지정 해야 `BEGIN_ACCESSOR_MAP` 사용 하는 `BEGIN_ACCESSOR` 각 접근자에 대 한 매크로입니다. `BEGIN_ACCESSOR` 매크로는 `END_ACCESSOR` 매크로로 완료됩니다. `BEGIN_ACCESSOR_MAP` 매크로로 완료 됩니다는 `END_ACCESSOR_MAP` 매크로입니다.  
   
-## 예제  
- See [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md).  
+## <a name="example"></a>예제  
+ 참조 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
- [OLE DB 소비자 템플릿에 대한 매크로 및 전역 함수](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)
+## <a name="see-also"></a>참고 항목  
+ [매크로 및 전역 함수에 대 한 OLE DB 소비자 템플릿](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)

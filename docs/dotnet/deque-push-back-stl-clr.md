@@ -1,41 +1,39 @@
 ---
-title: "deque::push_back(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::push_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_back 멤버[STL/CLR]"
+title: 'deque:: push_back (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::push_back
+dev_langs: C++
+helpviewer_keywords: push_back member [STL/CLR]
 ms.assetid: dafd5a4d-1fc7-434c-b129-a523099f8701
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f8da63a1b1ee8734a6e767acbe4a6a2f2d304f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# deque::push_back(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adds a new last element.  
+# <a name="dequepushback-stlclr"></a>deque::push_back(STL/CLR)
+새 마지막 요소를 추가 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void push_back(value_type val);  
 ```  
   
-## 설명  
- The member function inserts an element with value `val` at the end of the controlled sequence.  You use it to append another element to the deque.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 값을 가진 요소를 삽입 `val` 제어 된 시퀀스의 끝입니다. Deque에 다른 요소를 추가 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_deque_push_back.cpp   
@@ -58,14 +56,17 @@ int main()
   
 ```  
   
-  **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::pop\_back](../dotnet/deque-pop-back-stl-clr.md)   
- [deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)   
- [deque::push\_front](../dotnet/deque-push-front-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)   
+ [deque:: pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)   
+ [deque::push_front(STL/CLR)](../dotnet/deque-push-front-stl-clr.md)

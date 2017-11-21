@@ -1,34 +1,32 @@
 ---
 title: "컴파일러 경고 (수준 1) C4358 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4358"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4358"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4358
+dev_langs: C++
+helpviewer_keywords: C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8f09125123ea075c1d0c9fbce5fdd432dfa64407
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4358
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operator': 결합 대리자의 반환 형식이 'void'가 아닙니다. 반환된 값이 정의되지 않습니다.  
+# <a name="compiler-warning-level-1-c4358"></a>컴파일러 경고(수준 1) C4358
+'operator': 반환 결합된 대리자의 형식이 'void'; 반환 되는 값 정의 되지 않습니다.  
   
- 두 대리자가 결합되었으며 반환 값이 void가 아닙니다.  반환 값이 void가 아닌 두 대리자를 결합하면 대리자의 반환 값이 사용되는 경우 컴파일러에서 할당을 올바르게 수행할 수 없습니다.  
+ 두 명의 대리자 결합 되었습니다 및 반환 값은 void 되지 않습니다. Void가 아닌 반환 값이 두 대리자를 결합 하는 경우 컴파일러는 대리자의 반환 값을 사용 하는 경우 적절 한 할당을 수행할 수 있게 됩니다.  
   
- 다음 샘플에서는 C4358 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4358 오류가 생성 됩니다.  
   
 ```  
 // C4358.cpp  

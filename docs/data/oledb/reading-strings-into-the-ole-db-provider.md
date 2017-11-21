@@ -1,37 +1,36 @@
 ---
 title: "OLE DB 공급자로 문자열 읽어들이기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 공급자, 문자열 읽어들이기"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c4c88f29cd0ad7989c079a17f66f1f48e4874a6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# OLE DB 공급자로 문자열 읽어들이기
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`RMyProviderRowset::Execute` 함수가 파일을 열고 문자열을 읽습니다.  소비자는 [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx)를 호출하여 파일 이름을 공급자에게 전달합니다.  공급자는 파일 이름을 받아 `m_szCommandText` 멤버 변수에 저장하고,  `Execute`가 `m_szCommandText`에서 파일 이름을 읽습니다.  파일 이름이 올바르지 않거나 파일을 사용할 수 없는 경우에는 `Execute`가 오류를 반환합니다.  또는 파일을 열고 `fgets`를 호출하여 문자열을 검색합니다.  `Execute`는 읽은 각 문자열 집합에 대해 사용자 레코드\(`CAgentMan`\)의 인스턴스를 만들어 배열에 넣습니다.  
+# <a name="reading-strings-into-the-ole-db-provider"></a>OLE DB 공급자로 문자열 읽어들이기
+`RMyProviderRowset::Execute` 함수에서 파일을 열고 문자열 읽습니다. 소비자는 공급자에 파일 이름을 호출 하 여 전달 [icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)합니다. 공급자 파일의 이름을 받는 멤버 변수에 저장 합니다. `m_szCommandText`합니다. `Execute`파일 이름을 읽고 `m_szCommandText`합니다. 파일 이름이 잘못 되었거나 파일 언어가 없는 경우 `Execute` 에서 오류를 반환 합니다. 을 열고 파일 및 호출 `fgets` 문자열을 검색 합니다. 각 문자열 집합에, 읽기에 대 한 `Execute` 사용자 레코드의 인스턴스를 만듭니다 (`CAgentMan`) 배열에 넣습니다.  
   
- 파일을 열 수 없는 경우에는 `Execute`가 **DB\_E\_NOTABLE**을 반환해야 합니다.  **DB\_E\_NOTABLE**을 반환하지 않고 **E\_FAIL**을 반환하면 공급자가 대부분의 소비자와 작동하지 않게 되어 OLE DB [규칙 테스트](../../data/oledb/testing-your-provider.md)를 통과하지 못합니다.  
+ 파일을 열 수 없는 경우 `Execute` 반환 해야 **DB_E_NOTABLE**합니다. 반환 하는 경우 **E_FAIL** 공급자 많은 소비자와 함께 작동 하지 않으며 OLE DB를 통과 하지 못하는 대신 [규칙 테스트](../../data/oledb/testing-your-provider.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- 다음은 `Execute` 함수를 편집한 것입니다.  
+### <a name="description"></a>설명  
+ 편집한 `Execute` 함수는 다음과 같습니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -105,5 +104,5 @@ public:
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [단순한 읽기 전용 공급자 구현](../../data/oledb/implementing-the-simple-read-only-provider.md)

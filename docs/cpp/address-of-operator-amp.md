@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&'
-dev_langs:
-- C++
+f1_keywords: '&'
+dev_langs: C++
 helpviewer_keywords:
 - address-of operator (&)
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 56e2606759cc381c1ae6f6f4f1f7cbc1d9d2d810
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d542c508b84da14d4f628796ae5fd42983db0114
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="address-of-operator-amp"></a>주소 연산자:&amp;
 ## <a name="syntax"></a>구문  
@@ -40,7 +36,7 @@ ms.lasthandoff: 09/25/2017
   
  주소 연산자는 파일 범위 수준에서 선언된 기본, 구조체, 클래스 또는 공용 구조체 형식의 변수 또는 첨자된 배열 참조에만 적용될 수 있습니다. 이러한 식에서는 주소 연산자가 없는 상수 식을 주소 식에 추가하거나 뺄 수 있습니다.  
   
- 함수 또는 l-value에 적용된 식의 결과는 피연산자의 형식에서 파생된 포인터 형식(r-value)입니다. 예를 들어, 피연산자의 형식이 `char`인 경우 식의 결과 형식은 `char`의 포인터 형식입니다. 에 적용 된 address-of 연산자 **const** 또는 `volatile` 개체, 조건이 **const** `type` ** \* ** 또는 `volatile` `type` ** \* **여기서 `type` 원래 개체의 형식입니다.  
+ 함수 또는 l-value에 적용된 식의 결과는 피연산자의 형식에서 파생된 포인터 형식(r-value)입니다. 예를 들어, 피연산자의 형식이 `char`인 경우 식의 결과 형식은 `char`의 포인터 형식입니다. 에 적용 된 address-of 연산자 **const** 또는 `volatile` 개체, 조건이 **const** `type`  **\***  또는 `volatile` `type`  **\*** 여기서 `type` 원래 개체의 형식입니다.  
   
  Address-of 연산자에 적용 된 경우는 [정규화 된 이름](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), 여부에 따라 결과가 결정는 *정규화 된 이름이* 정적 멤버를 지정 합니다. 그럴 경우 결과는 멤버의 선언에 지정된 형식의 포인터입니다. 결과 멤버가 정적 인지, 멤버에 대 한 포인터는 *이름* 으로 표시 되는 클래스의 *정규화 된 클래스 이름*합니다. (참조 [기본 식](../cpp/primary-expressions.md) 에 대 한 자세한 *정규화 된 클래스 이름*.) 다음 코드는 멤버가 정적인지 여부에 따라 결과가 달라지는 방식을 보여 줍니다.  
   
@@ -121,4 +117,3 @@ int main() {
  [C + + 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Lvalue 참조 선언 자: &](../cpp/lvalue-reference-declarator-amp.md)   
  [연산자 주소 및 간접 참조](../c-language/indirection-and-address-of-operators.md)
-

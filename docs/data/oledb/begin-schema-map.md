@@ -1,32 +1,30 @@
 ---
-title: "BEGIN_SCHEMA_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_SCHEMA_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_SCHEMA_MAP 매크로"
+title: BEGIN_SCHEMA_MAP | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_SCHEMA_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_SCHEMA_MAP macro
 ms.assetid: 4e751023-35bc-4efd-9018-5448dd1ad751
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ab6caf2e84f84731439b899b271817b57c550c77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_SCHEMA_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Denotes the beginning of a schema map.  
+# <a name="beginschemamap"></a>BEGIN_SCHEMA_MAP
+스키마 맵의 시작 부분을 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,18 +33,18 @@ Denotes the beginning of a schema map.
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *SchemaClass*  
- The class that contains the MAP.  Typically this will be the session class.  
+ 해당 맵을 포함 하는 클래스입니다. 일반적으로이 세션 클래스 됩니다.  
   
-## 설명  
- See [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] for more information about schema rowsets.  
+## <a name="remarks"></a>설명  
+ 참조 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 스키마 행 집합에 대 한 자세한 내용은 Windows sdk입니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
- [OLE DB 공급자 템플릿에 대한 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [SCHEMA\_ENTRY](../../data/oledb/schema-entry.md)   
- [END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)   
+## <a name="see-also"></a>참고 항목  
+ [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)   
+ [END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)   
  [IDBSchemaRowsetImpl 클래스](../../data/oledb/idbschemarowsetimpl-class.md)

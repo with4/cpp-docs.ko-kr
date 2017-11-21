@@ -1,47 +1,48 @@
 ---
-title: "Cropping or Extending an Entire Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], cropping"
-  - "images [C++], extending"
-  - "Image editor [C++], cropping or extending images"
+title: "(아이콘에 대 한 이미지 편집기)는 전체 이미지 자르기 또는 확장 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], cropping
+- images [C++], extending
+- Image editor [C++], cropping or extending images
 ms.assetid: 21cdaff5-6636-4ad9-a2f0-ca2228321927
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a23b8dd9a7705a18b46432c8cb504c3402cafd31
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Cropping or Extending an Entire Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 절차에서는 전체 이미지를 자르거나 확장하는 방법을 보여 줍니다.  
+# <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>전체 이미지 자르기 또는 확장(아이콘에 대한 이미지 편집기)
+다음 절차 자르거나 전체 이미지를 확장 하는 방법을 보여 줍니다.  
   
-### 전체 이미지를 자르거나 확장하려면  
+### <a name="to-crop-or-extend-an-entire-image"></a>자르거나 전체 이미지를 확장 하려면  
   
-1.  전체 이미지를 선택합니다.  
+1.  전체 이미지를 선택 합니다.  
   
-     현재 이미지의 일부를 선택한 상태에서 전체 이미지를 선택하려면 현재 선택 영역 테두리 외부에 있는 이미지 부분을 클릭합니다.  
+     이미지의 일부 선택 된 경우 전체 이미지를 선택 하려면 현재 선택 영역 경계 외부에 있는 이미지 아무 곳 이나 클릭 합니다.  
   
-2.  이미지가 원하는 크기가 될 때까지 크기 조정 핸들을 끕니다.  
+2.  원하는 크기가 이미지 될 때까지 크기 조정 핸들을 끕니다.  
   
- 크기 조정 핸들을 이동하여 이미지 크기를 조정할 경우 일반적으로 이미지 편집기에서 이미지를 자르거나 확대합니다.  Shift 키를 누른 채로 크기 조정 핸들을 이동하면 이미지 편집기에서 이미지를 [줄이거나 늘입니다](../mfc/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md).  
+ 일반적으로 이미지 편집기를 잘라냅니다 하거나 크기 조정 핸들을 이동 하 여 그 크기를 조정할 때 이미지를 확대 합니다. 이미지 편집기는 크기 조정 핸들을 이동 하면 SHIFT 키를 누른 채 [축소 하거나 확장](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md) 이미지입니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](https://msdn.microsoft.com/library/f45fce5x.aspx) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](https://msdn.microsoft.com/library/xbx3z216.aspx)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](https://msdn.microsoft.com/library/h6270d0z.aspx)합니다.  
   
  요구 사항  
   
  없음  
   
-## 참고 항목  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Resizing an Image](../mfc/resizing-an-image-image-editor-for-icons.md)
+## <a name="see-also"></a>참고 항목  
+ [액셀러레이터 키](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [이미지 크기 조정](../windows/resizing-an-image-image-editor-for-icons.md)
+

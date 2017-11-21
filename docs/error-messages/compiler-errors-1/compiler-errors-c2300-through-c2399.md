@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -62,39 +61,23 @@ helpviewer_keywords:
 - C2367
 - C2398
 - C2399
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8d8925a68ffbb7ba607e37be8db5eca33300ef23
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: f8e1dcf350c974f5be96b971d3d70e69b95ebc9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2300-through-c2399"></a>컴파일러 오류s C2300 Through C2399
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
   
 > [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
+>  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
   
@@ -108,10 +91,10 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C2305|'*파일*'에이 모듈에 대 한 디버깅 정보가 없습니다|  
 |컴파일러 오류 C2306|'*파일*'이 모듈에 대 한 가장 최근의 디버깅 정보를 포함 하지 않습니다|  
 |[컴파일러 오류 C2307](compiler-error-c2307.md)|pragma *지시문* 이동 해야 하는 함수 외부에 증분 컴파일이 활성화 된 경우|  
-|[컴파일러 오류 C2308](compiler-error-c2308.md)|일치하지 않는 문자열을 연결하고 있습니다.|  
+|[컴파일러 오류 C2308](compiler-error-c2308.md)|일치 하지 않는 문자열 연결|  
 |[컴파일러 오류 C2309](compiler-error-c2309.md)|catch 처리기에 괄호로 묶은 예외 선언이 필요합니다.|  
-|[컴파일러 오류 C2310](compiler-error-c2310.md)|catch 처리기는 형식을 하나 지정해야 합니다.|  
-|[컴파일러 오류 C2311](compiler-error-c2311.md)|'*형식*': '...'를 통해 걸러진 줄에 *번호*|  
+|[컴파일러 오류 C2310](compiler-error-c2310.md)|catch 처리기 유형임을 지정 해야 합니다.|  
+|[컴파일러 오류 C2311](compiler-error-c2311.md)|'*형식*': 줄에 '...'를 통해 걸러진 *번호*|  
 |[컴파일러 오류 C2312](compiler-error-c2312.md)|'*type1*': 통해 걸러진 '*type2*' 줄에 *번호*|  
 |[컴파일러 오류 C2313](compiler-error-c2313.md)|'*type1*': 참조에 의해 검색 되었습니다 ('*type2*') 선에 *번호*|  
 |컴파일러 오류 C2314|키워드 '*keyword1*'는 사용 되지 않습니다: 사용 하 여 '*keyword2*' 대신|  
@@ -130,7 +113,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2327](compiler-error-c2327.md)|'*식별자*': 형식 이름, 정적 또는 열거자가 아닙니다|  
 |컴파일러 오류 C2328|'*키워드*': 키워드 아직 지원 되지 않습니다|  
 |컴파일러 오류 C2329|'*식별자*': __ptr64 함수에 대 한 포인터에 사용할 수 없음|  
-|컴파일러 오류 C2330|'implementation_key( )'는 #pragma start_map_region/stop_map_region에 의해 제한된 영역에서만 유효합니다.|  
+|컴파일러 오류 C2330|'implementation_key ()'만 유효 #pragma start_map_region/stop_map_region으로 둘러싸인 영역에서|  
 |컴파일러 오류 C2331|에 대 한 액세스 '*식별자*'되도록 정의 되어 이제'*accessibility1*', 이전에 것으로 정의 된'*accessibility2*'|  
 |[컴파일러 오류 C2332](compiler-error-c2332.md)|'*typedef*': 태그 이름이 없습니다.|  
 |[컴파일러 오류 C2333](compiler-error-c2333.md)|'*함수*': 함수 선언에 오류가 있습니다; 함수 본문을 건너뜁니다.|  
@@ -142,7 +125,7 @@ ms.lasthandoff: 04/24/2017
 |컴파일러 오류 C2339|'*식별자*': 포함 IDL에 형식이 잘못 되었습니다.|  
 |컴파일러 오류 C2340|'*식별자*': 'static'만 사용할 수는 클래스 정의 내에서|  
 |[컴파일러 오류 C2341](compiler-error-c2341.md)|'*섹션*': 사용 하도록 #pragma data_seg, code_seg 또는 section을 사용 하 여 세그먼트를 정의 해야 합니다|  
-|컴파일러 오류 C2342|구문 오류: 형식 한정자가 충돌합니다.|  
+|컴파일러 오류 C2342|구문 오류: 형식 한정자가 충돌|  
 |컴파일러 오류 C2343|'*섹션*': 섹션 특성이 충돌|  
 |[컴파일러 오류 C2344](compiler-error-c2344.md)|맞춤 (*번호*): 맞춤 2의 거듭제곱 이어야 합니다.|  
 |[컴파일러 오류 C2345](compiler-error-c2345.md)|맞춤 (*번호*): 잘못 된 맞춤 값|  
@@ -151,11 +134,11 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2348](compiler-error-c2348.md)|'*형식*': 포함 IDL에서 내보낼 수 없습니다, C 스타일 집합체가 아닙니다.|  
 |[컴파일러 오류 C2349](compiler-error-c2349.md)|'*함수*'는 관리 함수로 컴파일할 수 없습니다: '*설명*'; #pragma 관리 되지 않는 리소스를 사용 하 여|  
 |[컴파일러 오류 C2350](compiler-error-c2350.md)|'*식별자*' 정적 구성원이 아닙니다|  
-|[컴파일러 오류 C2351](compiler-error-c2351.md)|사용되지 않는 C++ 생성자 초기화 구문입니다.|  
+|[컴파일러 오류 C2351](compiler-error-c2351.md)|사용 되지 않는 c + + 생성자 초기화 구문입니다.|  
 |[컴파일러 오류 C2352](compiler-error-c2352.md)|'*식별자*': 비정적 멤버 함수를 잘못 호출 했습니다.|  
-|[컴파일러 오류 C2353](compiler-error-c2353.md)|예외 사양이 허용되지 않습니다.|  
+|[컴파일러 오류 C2353](compiler-error-c2353.md)|예외 사양이 허용 되지 않습니다.|  
 |컴파일러 오류 C2354|사용되지 않습니다.|  
-|[컴파일러 오류 C2355](compiler-error-c2355.md)|'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서만 참조할 수 있습니다.|  
+|[컴파일러 오류 C2355](compiler-error-c2355.md)|'this': 비정적 멤버 함수 또는 비정적 데이터 멤버 이니셜라이저 안에서 참조할 수 있습니다|  
 |[컴파일러 오류 C2356](compiler-error-c2356.md)|초기화 세그먼트는 변환 단위 동안 바뀌지 않아야 합니다.|  
 |[컴파일러 오류 C2357](compiler-error-c2357.md)|'*식별자*': 형식 함수 여야 합니다. '*형식*'|  
 |컴파일러 오류 C2358|'*식별자*': 클래스 정의 외부에서 정적 속성을 정의할 수 없습니다.|  
@@ -184,7 +167,7 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2381](compiler-error-c2381.md)|'*식별자*': 재정의. '__declspec (noreturn)' 또는 '[[noreturn]]' 달라 집니다.|  
 |[컴파일러 오류 C2382](compiler-error-c2382.md)|'*식별자*': 재정의; 예외 사양이 다릅니다.|  
 |[컴파일러 오류 C2383](compiler-error-c2383.md)|'*식별자*':이 기호에 기본 인수를 사용할 수 없습니다|  
-|[컴파일러 오류 C2384](compiler-error-c2384.md)|'*멤버*': 관리 되는 WinRT 클래스의 멤버에 thread_local 또는 __declspec (thread) 적용할 수 없습니다|  
+|[컴파일러 오류 C2384](compiler-error-c2384.md)|'*멤버*': 관리 되 는/WinRT 클래스의 멤버에 thread_local 또는 __declspec (thread)을 적용할 수 없습니다|  
 |[컴파일러 오류 C2385](compiler-error-c2385.md)|모호한 액세스 '*멤버*'|  
 |[컴파일러 오류 C2386](compiler-error-c2386.md)|'*식별자*':이 이름 가진 같은 기호가 현재 범위에 이미 있습니다.|  
 |[컴파일러 오류 C2387](compiler-error-c2387.md)|'*식별자*': 모호한 기본 클래스|  
@@ -200,4 +183,3 @@ ms.lasthandoff: 04/24/2017
 |[컴파일러 오류 C2397](compiler-error-c2397.md)|변환에서 '*type1*'to'*type2*' 범위가 좁은|  
 |컴파일러 오류 C2398|요소 '*번호*': 변환할 '*type1*'to'*type2*' 범위가 좁은|  
 |컴파일러 오류 C2399|사용되지 않습니다.|  
-

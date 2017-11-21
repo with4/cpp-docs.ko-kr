@@ -1,29 +1,27 @@
 ---
-title: "Module::UnregisterObjects 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::UnregisterObjects"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UnregisterObjects 메서드"
+title: "Module:: unregisterobjects 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::UnregisterObjects
+dev_langs: C++
+helpviewer_keywords: UnregisterObjects method
 ms.assetid: 3d8119a7-991d-45e9-b8c5-ed36c0be0332
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6f62ae76b0ff86c11ab0bc347550fe27b406acb5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Module::UnregisterObjects 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects 메서드
 다른 응용 프로그램에서 지정된 모듈의 개체에 연결할 수 없도록 이 개체의 등록을 취소합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -50,4 +48,4 @@ HRESULT UnregisterObjects(
  **네임스페이스:** Microsoft::WRL
  
  ## <a name="see-also"></a>참고 항목
- [모듈 클래스](../windows/module-class.md)
+ [Module 클래스](../windows/module-class.md)

@@ -1,33 +1,30 @@
 ---
-title: "threading (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.threading"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "threading attribute"
+title: "스레딩 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.threading
+dev_langs: C++
+helpviewer_keywords: threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c85287a590dfa9cf3c931ce358dca8b303f4737a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# threading (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-COM 개체의 스레딩 모델을 지정합니다.  
+# <a name="threading-c"></a>threading(C++)
+COM 개체에 대 한 스레딩 모델을 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -36,49 +33,48 @@ COM 개체의 스레딩 모델을 지정합니다.
 ) ]  
 ```  
   
-#### 매개 변수  
- ***모델*** \(옵션\)  
- 다음과 같은 스레딩 모델 중 하나:  
+#### <a name="parameters"></a>매개 변수  
+ ***모델*** (선택 사항)  
+ 다음 스레딩 모델 중 하나입니다.  
   
--   **아파트** \(아파트 스레딩\)  
+-   **아파트** (아파트 스레딩)  
   
--   **중립** \(.NET Framework 구성 요소와 사용자 인터페이스는 없습니다\)  
+-   **중립** (사용자 인터페이스 없이.NET Framework 구성 요소)  
   
--   **단일** \(단순 스레딩\)  
+-   **단일** (단순 스레딩)  
   
--   **사용할 수 있는** \(자유 스레딩\)  
+-   **무료** (자유 스레딩)  
   
--   **둘 다** \(아파트 및 자유 스레딩을\)  
+-   **둘 다** (아파트 및 자유 스레딩)  
   
- 기본값은  **아파트**.  
+ 기본값은 **아파트**합니다.  
   
-## 설명  
- 해당  **스레딩** C\+\+ 특성은 생성 된.idl 파일에 표시 되지만 COM 개체의 구현에서 사용 됩니다.  
+## <a name="remarks"></a>설명  
+ **스레딩** c + + 특성 생성된 된.idl 파일에 표시 되지 않지만 COM 개체의 구현에 사용 됩니다.  
   
- ATL 프로젝트의 경우는  [coclass](../windows/coclass.md) 특성이 수도 있는 경우 스레딩 모델이 지정 된  *모델* 템플릿 매개 변수로 전달 되는  [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) 클래스를 삽입는  **coclass** 특성.  
+ ATL 프로젝트의 경우는 [coclass](../windows/coclass.md) 특성이 있으면도에서 지정한 스레딩 모델 *모델* 를 템플릿 매개 변수로 전달 되는 [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) 클래스 의해 삽입 된 **coclass** 특성입니다.  
   
- **스레딩** 특성에도 액세스할 수 보호 된  [event\_source](../windows/event-source.md).  
+ **스레딩** 특성에 대 한 액세스를 보호도 [event_source](../windows/event-source.md)합니다.  
   
-## 예제  
- 참조는  [사용이 허가 된](../windows/licensed.md) 샘플 사용을 예를 들어  **스레딩**.  
+## <a name="example"></a>예제  
+ 참조는 [사용이 허가 된](../windows/licensed.md) 의 샘플 사용에 대 한 예제 **스레딩**합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**,`struct`|  
+|**적용 대상**|**class**, `struct`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|**coclass**|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [COM Attributes](../windows/com-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [이전 코드를 위한 다중 스레드 지원\(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [Neutral Apartments](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [COM 특성](../windows/com-attributes.md)   
+ [Typedef, Enum, Union 및 Struct 특성](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [클래스 특성](../windows/class-attributes.md)   
+ [이전 코드 (Visual c + +)를 위한 다중 스레딩 지원](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [중립 아파트](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
