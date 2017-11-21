@@ -1,72 +1,72 @@
 ---
-title: "__fastfail | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: __fastfail | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f7a9fe4f4a70f55061addab05f90bda389fd8949
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __fastfail
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fastfail"></a>__fastfail
 **Microsoft 전용**  
   
  최소한의 오버헤드로 호출 프로세스를 즉시 종료합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void __fastfail(unsigned int code);  
 ```  
   
-#### 매개 변수  
- \[in\] `code`  
+#### <a name="parameters"></a>매개 변수  
+ [in] `code`  
  프로세스 종료 이유를 나타내는 winnt.h 또는 wdm.h의 `FAST_FAIL_<description>` 기호화된 상수입니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  `__fastfail` 내장 함수는 결과를 반환하지 않습니다.  
   
-## 설명  
- `__fastfail` 내장 함수는 *빠른 실패* 요청을 위한 메커니즘을 제공하며 이 방법을 통해 손상 가능성이 있는 프로세스가 즉각적인 프로세스 종료를 요청할 수 있습니다.  프로그램 상태와 스택을 복구할 수 없을 정도로 손상시켰을 수 있는 심각한 오류는 일반적인 예외 처리 기능을 통해 처리할 수 없습니다.  최소한의 오버헤드로 프로세스를 종료하려면 `__fastfail`을 사용합니다.  
+## <a name="remarks"></a>설명  
+ `__fastfail` 내장 함수에 대 한 메커니즘을 제공 된 *빠른 실패* 요청-손상 가능성이 있는 프로세스가 즉각적인 프로세스 종료를 요청 하는 방법을 합니다. 프로그램 상태와 스택을 복구할 수 없을 정도로 손상시켰을 수 있는 심각한 오류는 일반적인 예외 처리 기능을 통해 처리할 수 없습니다. 최소한의 오버헤드로 프로세스를 종료하려면 `__fastfail`을 사용합니다.  
   
  내부적으로 `__fastfail`은 다양한 아키텍처별 메커니즘을 사용하여 구현됩니다.  
   
 |아키텍처|명령|코드 인수의 위치|  
-|----------|--------|---------------|  
+|------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
 |[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
 |ARM|Opcode 0xDEFB|r0|  
   
- 빠른 실패 요청은 독립적이며 대개 두 가지 명령만 있으면 실행할 수 있습니다.  빠른 실패 요청이 실행되면 커널이 적절한 작업을 수행합니다.  사용자 모드 코드에서는 빠른 실패 이벤트 발생 시 명령 포인터 자체 이외의 메모리 종속성이 없습니다.  따라서 메모리가 심각하게 손상되어도 안정성을 최대화할 수 있습니다.  
+ 빠른 실패 요청은 독립적이며 대개 두 가지 명령만 있으면 실행할 수 있습니다. 빠른 실패 요청이 실행되면 커널이 적절한 작업을 수행합니다. 사용자 모드 코드에서는 빠른 실패 이벤트 발생 시 명령 포인터 자체 이외의 메모리 종속성이 없습니다. 따라서 메모리가 심각하게 손상되어도 안정성을 최대화할 수 있습니다.  
   
- winnt.h 또는 wdm.h의 `FAST_FAIL_<description>` 기호화된 상수 중 하나인 `code` 인수는 오류 상태 유형을 설명하며 환경별 방식으로 오류 보고서에 통합됩니다.  
+ winnt.h 또는 wdm.h의 `code` 기호화된 상수 중 하나인 `FAST_FAIL_<description>` 인수는 오류 상태 유형을 설명하며 환경별 방식으로 오류 보고서에 통합됩니다.  
   
- 사용자 모드 빠른 실패 요청은 2차 비연속적 예외로 표시됩니다\(예외 코드 0xC0000409, 예외 매개 변수 하나 이상 포함\).  첫 번째 예외 매개 변수는 `code` 값입니다.  이 예외 코드는 프로세스가 손상되었으며 오류에 대한 응답으로 최소한의 In\-Process 작업을 수행해야 함을 WER\(Windows 오류 보고\) 및 디버깅 인프라에 알립니다.  커널 모드 빠른 실패 요청은 전용 버그 검사 코드인 `KERNEL_SECURITY_CHECK_FAILURE`\(0x139\)를 사용하여 구현됩니다.  두 경우 모두 프로그램이 손상된 상태로 간주되므로 예외 처리기가 호출되지 않습니다.  디버거가 있으면 종료 전에 프로그램 상태를 검사합니다.  
+ 사용자 모드 빠른 실패 요청은 2차 비연속적 예외로 표시됩니다(예외 코드 0xC0000409, 예외 매개 변수 하나 이상 포함). 첫 번째 예외 매개 변수는 `code` 값입니다. 이 예외 코드는 프로세스가 손상되었으며 오류에 대한 응답으로 최소한의 In-Process 작업을 수행해야 함을 WER(Windows 오류 보고) 및 디버깅 인프라에 알립니다. 커널 모드 빠른 실패 요청은 전용 버그 검사 코드인 `KERNEL_SECURITY_CHECK_FAILURE`(0x139)를 사용하여 구현됩니다. 두 경우 모두 프로그램이 손상된 상태로 간주되므로 예외 처리기가 호출되지 않습니다. 디버거가 있으면 종료 전에 프로그램 상태를 검사합니다.  
   
- Windows 8부터는 빠른 실패 메커니즘이 기본적으로 지원됩니다.  빠른 실패 명령을 기본적으로 지원하지 않는 Windows 운영 체제는 보통 빠른 실패 요청을 액세스 위반 또는 `UNEXPECTED_KERNEL_MODE_TRAP` 버그 검사로 처리합니다.  이러한 경우에도 프로그램은 종료되지만 종료 속도는 느려질 수 있습니다.  
+ Windows 8부터는 빠른 실패 메커니즘이 기본적으로 지원됩니다. 빠른 실패 명령을 기본적으로 지원하지 않는 Windows 운영 체제는 보통 빠른 실패 요청을 액세스 위반 또는 `UNEXPECTED_KERNEL_MODE_TRAP` 버그 검사로 처리합니다. 이러한 경우에도 프로그램은 종료되지만 종료 속도는 느려질 수 있습니다.  
   
  `__fastfail`은 내장 함수로만 사용할 수 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |내장 함수|아키텍처|  
-|-----------|----------|  
+|---------------|------------------|  
 |`__fastfail`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], ARM|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## Microsoft 전용 종료  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

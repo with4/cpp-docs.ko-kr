@@ -1,32 +1,30 @@
 ---
-title: "import | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.import"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "import attribute"
+title: "가져오기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.import
+dev_langs: C++
+helpviewer_keywords: import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 82556f4af2f47c209685b377e94e62ea56a2cb6c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# import
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-여 주 IDL에서 참조 하려는 정의 포함 하는 다른.idl,.odl, 또는 머리글 파일을 지정 합니다.  
+# <a name="import"></a>import
+주 프로그램 IDL에서 참조 하려는 정의 포함 하는 다른.idl,.odl, 또는 헤더 파일을 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,17 +33,17 @@ caps.handback.revision: 9
 ) ];  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `idl_file`  
- 현재 프로젝트의 형식 라이브러리를 가져온된 된.idl 파일의 이름입니다.  
+ 현재 프로젝트의 형식 라이브러리로 가져오려는.idl 파일의 이름입니다.  
   
-## 설명  
- **가져오기** C\+\+ 특성는 `#import` 문을 아래에 배치 하는 `import "docobj.idl"` 생성 된.idl 파일에서 문을.  **가져오기** 특성을 동일한 기능을 가진의  [가져오기](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL 속성.  
+## <a name="remarks"></a>설명  
+ **가져올** c + + 특성을 사용 하면는 `#import` 문 아래에 배치 하는 `import "docobj.idl"` 생성 된.idl 파일의 문입니다. **가져올** 특성와 동일한 기능에는 [가져올](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL 특성과 합니다.  
   
- 해당  **가져오기** 특성만 표시 지정한 파일이 생성 됩니다; 프로젝트의.idl 파일에  **가져오기** 특성 하지 않습니다 사용 하면 지정 된 파일에서 프로젝트의 소스 코드에서 호출 하는 구문입니다.  지정 된 파일에서 프로젝트의 소스 코드에서 호출 하는 구문에 사용할  [\# import](../preprocessor/hash-import-directive-cpp.md) 및 `embedded_idl` 특성 또는.h 파일을 포함할 수 있습니다는 `idl_file`,.h 파일이 있는 경우.  
+ **가져올** 만 특성; 프로젝트에 의해 생성 되는.idl 파일에 지정된 된 파일을 배치는 **가져올** 특성 사용 소스 코드에서 지정한 파일에 구문 호출 프로젝트입니다.  구문에 지정된 된 파일에서 프로젝트의 소스 코드를 호출 하려면 사용 하거나 [#import](../preprocessor/hash-import-directive-cpp.md) 및 `embedded_idl` 특성 또는 있습니다.h 파일을 포함할 수는 `idl_file`.h 파일이 있는 경우, 합니다.  
   
-## 예제  
- 다음 코드는  
+## <a name="example"></a>예제  
+ 다음 예를 참조하십시오.  
   
 ```  
 // cpp_attr_ref_import.cpp  
@@ -54,7 +52,7 @@ caps.handback.revision: 9
 [import(import.idl)];  
 ```  
   
- 생성 된.idl 파일에 다음 코드를 생성합니다.  
+ 생성된 된.idl 파일에 다음 코드를 생성합니다.  
   
 ```  
 import "docobj.idl";  
@@ -67,24 +65,23 @@ library MyLib {
 ...  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|원하는 위치에|  
+|**적용 대상**|원하는 위치|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [독립 실행형 특성](../windows/stand-alone-attributes.md)   
  [importidl](../windows/importidl.md)   
  [importlib](../windows/importlib.md)   
- [include](../windows/include-cpp.md)   
+ [포함](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

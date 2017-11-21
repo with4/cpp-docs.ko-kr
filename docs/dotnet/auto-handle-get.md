@@ -1,44 +1,43 @@
 ---
-title: "auto_handle::get | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::get"
-  - "msclr::auto_handle::get"
-  - "auto_handle.get"
-  - "msclr.auto_handle.get"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::get"
+title: auto_handle::get | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::get
+- msclr::auto_handle::get
+- auto_handle.get
+- msclr.auto_handle.get
+dev_langs: C++
+helpviewer_keywords: auto_handle::get
 ms.assetid: 8c75727b-8f21-44b3-be3e-7eb8858da4f7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3b8442ec99e19099e5f77ec6f9010e0f8fc235f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::get
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gets the contained object.  
+# <a name="autohandleget"></a>auto_handle::get
+포함 된 개체를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 _element_type ^ get();  
 ```  
   
-## 반환 값  
- The contained object.  
+## <a name="return-value"></a>반환 값  
+ 포함 된 개체입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // msl_auto_handle_get.cpp  
@@ -78,15 +77,18 @@ int main() {
 }  
 ```  
   
-  **in ClassA constructor:first**  
-**Hello from first A\!**  
-**Hello from first A\!**  
-**Hello from first A\!**  
-**in ClassA destructor:first**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_handle.h\>  
+```Output  
+in ClassA constructor:first  
+Hello from first A!  
+Hello from first A!  
+Hello from first A!  
+in ClassA destructor:first  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_handle 멤버](../dotnet/auto-handle-members.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_handle 멤버](../dotnet/auto-handle-members.md)

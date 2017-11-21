@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbsrtowcs_s
+apiname: mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbsrtowcs_s
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsrtowcs_s function
+f1_keywords: mbsrtowcs_s
+dev_langs: C++
+helpviewer_keywords: mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72489315ad23bf65086105c5d76da1edea48674d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 현재 로캘의 멀티바이트 문자열을 와이드 문자열 표현으로 변환합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md) 버전입니다.  
@@ -124,13 +104,13 @@ errno_t mbsrtowcs_s(
   
  `count`가 특수 값 [_TRUNCATE](../../c-runtime-library/truncate.md)이면 `mbsrtowcs_s`는 대상 버퍼에 포함할 수 있을 만큼 문자열을 최대한 변환하지만 null 종결자를 포함할 공간은 남겨 둡니다.  
   
- `mbsrtowcs_s`는 소스 문자열을 정상적으로 변환하는 경우 변환된 문자열의 와이드 문자 크기와 null 종결자를 `*``pReturnValue`에 배치합니다. 이 경우 `pReturnValue`는 null 포인터가 아니어야 합니다. 이 작업은 `wcstr` 인수가 null 포인터인 경우에도 수행되므로 필요한 버퍼 크기를 결정할 수 있습니다. `wcstr`이 null 포인터이면 `count`는 무시됩니다.  
+ `mbsrtowcs_s`는 소스 문자열을 정상적으로 변환하는 경우 변환된 문자열의 와이드 문자 크기와 null 종결자를 `*pReturnValue`에 배치합니다. 이 경우 `pReturnValue`는 null 포인터가 아니어야 합니다. 이 작업은 `wcstr` 인수가 null 포인터인 경우에도 수행되므로 필요한 버퍼 크기를 결정할 수 있습니다. `wcstr`이 null 포인터이면 `count`는 무시됩니다.  
   
  `wcstr`이 null 포인터가 아닌 경우 종결 null 문자에 도달하여 변환이 중지된 경우 `mbstr`이 가리키는 포인터 개체에는 null 포인터가 할당됩니다. 그렇지 않으면 변환된 마지막 멀티바이트 문자 바로 다음의 주소(있는 경우)가 할당됩니다. 그러므로 후속 함수에서 이 호출이 중지된 변환을 다시 시작할 수 있습니다.  
   
  `mbstate`가 null 포인터이면 라이브러리 내부 `mbstate_t` 변환 상태 정적 개체가 사용됩니다. 이 내부 정적 개체가 스레드로부터 안전하지 않으면 고유한 `mbstate` 값을 전달하는 것이 좋습니다.  
   
- `mbsrtowcs_s`는 현재 로캘에서 잘못된 멀티바이트 문자를 발견하면 `*``pReturnValue`에 -1을 배치하고, 대상 버퍼 `wcstr`을 빈 문자열로 설정하며, `errno`를 `EILSEQ`로 설정하고 `EILSEQ`를 반환합니다.  
+ `mbsrtowcs_s`는 현재 로캘에서 잘못된 멀티바이트 문자를 발견하면 `*pReturnValue`에 -1을 배치하고, 대상 버퍼 `wcstr`을 빈 문자열로 설정하며, `errno`를 `EILSEQ`로 설정하고 `EILSEQ`를 반환합니다.  
   
  `mbstr`이 가리키는 시퀀스와 `wcstr`이 가리키는 시퀀스가 겹치는 경우 `mbsrtowcs_s`의 동작이 정의되지 않습니다. 현재 로캘의 LC_TYPE 범주가 `mbsrtowcs_s`에 영향을 줍니다.  
   

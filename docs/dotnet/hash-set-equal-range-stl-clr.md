@@ -1,45 +1,43 @@
 ---
-title: "hash_set::equal_range(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range 멤버[STL/CLR]"
+title: 'hash_set:: equal_range (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: 502af4c5-f71e-44cf-a180-21e9da4b50ff
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dc9a81639da3bcd4aa7ba866f5efb5da39163818
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::equal_range(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Finds range that matches a specified key.  
+# <a name="hashsetequalrange-stlclr"></a>hash_set::equal_range(STL/CLR)
+지정된 키와 일치하는 범위를 찾습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  key  
- Key value to search for.  
+ 검색할 키 값입니다.  
   
-## 설명  
- The member function returns a pair of iterators `cliext::pair<iterator, iterator>(` [hash\_set::lower\_bound](../dotnet/hash-set-lower-bound-stl-clr.md)`(``key``),` [hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)`(``key``))`.  You use it to determine the range of elements currently in the controlled sequence that match a specified key.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 한 쌍의 반복기를 반환 `cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set:: upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소의 범위를 확인 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_equal_range.cpp   
@@ -75,17 +73,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**equal\_range\(L'x'\) empty \= True**  
- **b**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+equal_range(L'x') empty = True  
+ b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::count](../dotnet/hash-set-count-stl-clr.md)   
- [hash\_set::find](../dotnet/hash-set-find-stl-clr.md)   
- [hash\_set::lower\_bound](../dotnet/hash-set-lower-bound-stl-clr.md)   
- [hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
+ [hash_set:: find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)   
+ [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)   
+ [hash_set::upper_bound(STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)

@@ -1,41 +1,39 @@
 ---
-title: "map::empty(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 멤버[STL/CLR]"
+title: 'map:: empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: ce41d37a-2896-48df-87ea-d3f3b3e5ab45
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5838e1daba1cbc6181d7fba4fc6df117850c9552
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# map::empty(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tests whether no elements are present.  
+# <a name="mapempty-stlclr"></a>map::empty(STL/CLR)
+요소가 있는지 여부를 테스트합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 bool empty();  
 ```  
   
-## 설명  
- The member function returns true for an empty controlled sequence.  It is equivalent to [map::size](../dotnet/map-size-stl-clr.md)`() == 0`.  You use it to test whether the map is empty.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [map:: size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`합니다. 맵이 비어 있는 여부를 테스트 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)   
- [map::size](../dotnet/map-size-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::size(STL/CLR)](../dotnet/map-size-stl-clr.md)

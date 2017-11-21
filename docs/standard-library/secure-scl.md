@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- _SECURE_SCL
-dev_langs:
-- C++
-helpviewer_keywords:
-- _SECURE_SCL
+f1_keywords: _SECURE_SCL
+dev_langs: C++
+helpviewer_keywords: _SECURE_SCL
 ms.assetid: 4ffbc788-cc12-4c6a-8cd7-490081675086
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: d06ea79b3dd5ca960ba57d0d27416acffe51c632
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 191cdecc193466982bc0808d517b7ad4d53c4b8d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="securescl"></a>_SECURE_SCL
   
@@ -54,5 +49,4 @@ ms.lasthandoff: 10/03/2017
 [확인된 반복기](../standard-library/checked-iterators.md)   
 [디버그 반복기 지원](../standard-library/debug-iterator-support.md)   
 [안전한 라이브러리: C++ 표준 라이브러리](../standard-library/safe-libraries-cpp-standard-library.md)
-
 

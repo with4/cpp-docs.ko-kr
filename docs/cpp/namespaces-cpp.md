@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- namespace_CPP
-dev_langs:
-- C++
+f1_keywords: namespace_CPP
+dev_langs: C++
 helpviewer_keywords:
 - namespaces [C++], C++
 - namespaces [C++]
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5c7098727052ec9ef19614d011ace5981b54ce15
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="namespaces-c"></a>네임스페이스 (C++)
 네임스페이스는 내부 식별자(형식, 함수, 변수 등의 이름)에 범위를 제공하는 선언적 영역입니다. 네임스페이스는 코드를 논리 그룹으로 구성하고 특히 코드베이스에 여러 라이브러리가 포함된 경우 발생할 수 있는 이름 충돌을 방지하는 데 사용됩니다. 네임스페이스 범위에 있는 모든 식별자는 한정 없이 서로에게 표시됩니다. 네임 스페이스 외부 식별자 예를 들어 각 식별자에 대 한 정규화 된 이름을 사용 하 여 멤버에 액세스할 수 `std::vector<std::string> vec;`, 또는 [선언을 사용 하 여](../cpp/using-declaration.md) 단일 식별자에 대 한 (`using std::string`), 또는 [지시문을 사용 하 여](../cpp/namespaces-cpp.md#using_directives) 네임 스페이스의 모든 식별자에 대 한 (`using namespace std;`). 헤더 파일의 코드는 항상 정규화된 네임스페이스 이름을 사용해야 합니다.  
@@ -281,4 +277,3 @@ namespace
   
 ## <a name="see-also"></a>참고 항목  
  [선언 및 정의](declarations-and-definitions-cpp.md)
-

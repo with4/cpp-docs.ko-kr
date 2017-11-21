@@ -1,42 +1,42 @@
 ---
 title: "공급자의 책갈피 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "책갈피, OLE DB"
-  - "IRowsetLocate 클래스"
-  - "IRowsetLocate 클래스, 공급자의 책갈피 지원"
-  - "OLE DB 공급자 템플릿, 책갈피"
-  - "OLE DB 공급자, 책갈피 지원"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- IRowsetLocate class, provider support for bookmarks
+- OLE DB provider templates, bookmarks
+- bookmarks, OLE DB
+- IRowsetLocate class
+- OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 445aa5a2a609c3cf2da83e9ff876195a05a33d6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 공급자의 책갈피 지원
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이 항목의 예제는 `CMyProviderRowset` 클래스에 `IRowsetLocate` 인터페이스를 추가합니다.  대부분의 경우 기존 COM 개체에 인터페이스를 추가하여 시작한 다음  소비자 템플릿의 호출을 추가하여 테스트할 수 있습니다.  예제에서는 다음 방법을 보여 줍니다.  
+# <a name="provider-support-for-bookmarks"></a>공급자의 책갈피 지원
+추가 하는이 항목의 예제는 `IRowsetLocate` 인터페이스는 `CMyProviderRowset` 클래스입니다. 대부분의 경우 기존 COM 개체에는 인터페이스를 추가 하 여 시작 합니다. 소비자 템플릿에서 많은 호출을 추가 하 여 테스트할 수 있습니다. 예제에 나오는 하는 방법:  
   
--   공급자에 인터페이스 추가  
+-   공급자에 인터페이스를 추가 합니다.  
   
--   소비자에게 반환할 열을 동적으로 결정  
+-   소비자에 게 반환할 열을 결정 합니다.  
   
--   책갈피 지원 추가  
+-   책갈피 지원을 추가 합니다.  
   
- `IRowsetLocate` 인터페이스는 `IRowset` 인터페이스에서 상속합니다.  `IRowsetLocate` 인터페이스를 추가하려면 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)에서 `CMyProviderRowset`을 상속합니다.  
+ `IRowsetLocate` 인터페이스는 `IRowset` 인터페이스에서 상속됩니다. 추가 하는 `IRowsetLocate` 인터페이스, 상속 `CMyProviderRowset` 에서 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)합니다.  
   
- `IRowsetLocate` 인터페이스를 추가하는 것은 대부분의 다른 인터페이스를 추가하는 것과 약간 다릅니다.  VTABLE을 정렬하기 위해 OLE DB 공급자 템플릿에는 파생된 인터페이스를 처리하기 위한 템플릿 매개 변수가 있습니다.  다음 코드는 새로운 상속 목록을 보여 줍니다.  
+ 추가 `IRowsetLocate` 인터페이스는 대부분의 인터페이스에서 약간 다릅니다. 하려면 vtable, OLE DB 공급자 템플릿은 파생된 된 인터페이스를 처리 하는 템플릿 매개 변수를 보유 합니다. 다음 코드에는 새 상속 목록을 보여 줍니다.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,9 +49,9 @@ class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,
           IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
 ```  
   
- 네 번째, 다섯 번째 및 여섯 번째 매개 변수가 모두 추가됩니다.  이 예제에서는 네 번째 및 다섯 번째 매개 변수에 기본값을 사용하지만 여섯 번째 매개 변수로는 `IRowsetLocateImpl`을 지정합니다.  `IRowsetLocateImpl`은 두 개의 템플릿 매개 변수를 사용하는 OLE DB 템플릿 클래스입니다. 이 두 개의 템플릿 매개 변수는 `IRowsetLocate` 인터페이스를 `CMyProviderRowset` 클래스에 후크합니다.  대부분의 인터페이스를 추가할 때는 이 단계를 건너 뛰고 다음 단계로 이동하고,  `IRowsetLocate`과 `IRowsetScroll` 인터페이스만 이런 방법으로 처리하면 됩니다.  
+ 네 번째, 다섯 번째 및 여섯 번째 매개 변수 모두 추가 됩니다. 이 예제에서는 네 번째 작업에 대 한 기본값을 사용 하 고 5 번째 매개 변수를 지정 하지만 `IRowsetLocateImpl` 여섯 번째 매개 변수로 합니다. `IRowsetLocateImpl`두 개의 템플릿 매개 변수를 사용 하는 OLE DB 템플릿 클래스: 이러한 연결는 `IRowsetLocate` 인터페이스는 `CMyProviderRowset` 클래스. 대부분의 인터페이스를 추가 하려면이 단계는 하 한 다음 이동할 수 있습니다. 만 `IRowsetLocate` 및 `IRowsetScroll` 인터페이스에서 이러한 방식으로 처리 해야 합니다.  
   
- 그런 다음 `CMyProviderRowset`에 `IRowsetLocate` 인터페이스에 대해 `QueryInterface`를 호출하라고 알려야 합니다.  맵에 `COM_INTERFACE_ENTRY(IRowsetLocate)` 줄을 추가합니다.  `CMyProviderRowset`에 대한 인터페이스는 다음 코드에 나타난 것과 같습니다.  
+ 다음 지시 해야는 `CMyProviderRowset` 호출할 `QueryInterface` 에 대 한는 `IRowsetLocate` 인터페이스입니다. 줄 추가 `COM_INTERFACE_ENTRY(IRowsetLocate)` 맵에 있습니다. 에 대 한 인터페이스 맵을 `CMyProviderRowset` 다음 코드와 같이 표시 됩니다.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -65,11 +65,11 @@ BEGIN_COM_MAP(CMyProviderRowset)
 END_COM_MAP()  
 ```  
   
- 또한 맵을 `CRowsetImpl` 클래스에 후크해야 합니다.  COM\_INTERFACE\_ENTRY\_CHAIN 매크로를 추가하여 `CRowsetImpl` 맵을 후크합니다.  또한 상속 정보로 구성된 `RowsetBaseClass`라는 typedef를 만듭니다.  이 typedef는 임의로 만드는 것으로 무시할 수 있습니다.  
+ 지도에 후크 해야는 `CRowsetImpl` 클래스입니다. 에 후크 할 COM_INTERFACE_ENTRY_CHAIN 매크로에 추가 `CRowsetImpl` 지도입니다. 또한 호출 형식 정의 만든 `RowsetBaseClass` 상속 정보 구성 됩니다. 이 임의의 형식 정의와 무시 될 수 있습니다.  
   
- 마지막으로 **IColumnsInfo::GetColumnsInfo** 호출을 처리합니다.  일반적으로 PROVIDER\_COLUMN\_ENTRY 매크로를 사용하여 처리하면 되지만,  소비자에서 책갈피를 사용하는 경우도 있습니다.  따라서 소비자가 책갈피를 요청하는지에 따라 공급자가 반환하는 열을 변경할 수 있어야 합니다.  
+ 마지막으로 처리는 **icolumnsinfo:: Getcolumnsinfo** 호출 합니다. 일반적으로이 작업을 수행 하려면 PROVIDER_COLUMN_ENTRY 매크로 사용 합니다. 하지만, 소비자는 책갈피를 사용 해야 할 수 있습니다. 소비자는 책갈피를 요청 하는 여부에 따라 공급자를 반환 하는 열을 변경할 수 있어야 합니다.  
   
- **IColumnsInfo::GetColumnsInfo** 호출을 처리하려면 `CTextData` 클래스에서 **PROVIDER\_COLUMN** 맵을 삭제합니다.  PROVIDER\_COLUMN\_MAP 매크로는 `GetColumnInfo` 함수를 정의합니다.  사용자 고유의 `GetColumnInfo` 함수를 정의해야 합니다.  이 함수는 다음과 비슷합니다.  
+ 처리 하는 **icolumnsinfo:: Getcolumnsinfo** 호출, 삭제는 **PROVIDER_COLUMN** 에 매핑하는 `CTextData` 클래스입니다. 함수를 정의 하는 PROVIDER_COLUMN_MAP 매크로 `GetColumnInfo`합니다. 정의 하면 사용자 고유의 `GetColumnInfo` 함수입니다. 함수 선언은 다음과 같이 표시 됩니다.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -87,7 +87,7 @@ class CTextData
 };  
 ```  
   
- 그런 다음 MyProviderRS.cpp 파일에 다음과 같이 `GetColumnInfo` 함수를 구현합니다.  
+ 그런 다음 구현는 `GetColumnInfo` MyProviderRS.cpp 파일에서 다음과 같이 작동 합니다.  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -158,11 +158,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo`는 먼저 **DBPROP\_IRowsetLocate** 속성이 설정되어 있는지 확인합니다.  OLE DB에는 행 집합 개체의 각 선택적 인터페이스에 대한 속성이 있습니다.  소비자가 이러한 선택적 인터페이스 중 하나를 사용하려고 하면 해당 속성을 true로 설정합니다.  그런 다음 공급자가 이 속성을 확인하고 설정 여부에 따라 특별한 작업을 수행합니다.  
+ `GetColumnInfo`이라는 속성 있는지 여부를 확인 하려면 첫 번째 확인 **DBPROP_IRowsetLocate** 설정 됩니다. OLE DB의 각 행 집합 개체는 선택적 인터페이스에 대 한 속성이 있습니다. 소비자가 이러한 선택적 인터페이스 중 하나를 사용 하려는 경우에 속성이 true로 설정 합니다. 공급자 수이 속성을 선택 하 고에 따라 특별 한 조치를 취합니다.  
   
- 사용자 구현에서는 명령 개체에 대한 포인터를 사용하여 속성을 가져옵니다.  `pThis` 포인터는 행 집합이나 명령 클래스를 나타냅니다.  여기서는 템플릿을 사용하므로 이 포인터를 `void` 포인터로 전달해야 하며, 이렇게 하지 않으면 코드가 컴파일되지 않습니다.  
+ 구현에 명령 개체에 대 한 포인터를 사용 하 여 속성을 가져옵니다. `pThis` 포인터 행 집합이 나 명령 클래스를 나타냅니다. 로이 작업에 전달 해야 하는 여기서 서식 파일을 사용 하므로 `void` 포인터 또는 코드는 컴파일되지 않습니다.  
   
- 열 정보를 포함할 정적 배열을 지정합니다.  소비자가 책갈피 열을 필요로 하지 않을 경우에는 배열의 항목 하나가 낭비됩니다.  이 배열을 동적으로 할당할 수 있지만 그렇게 하려면 할당을 적절히 삭제할 수 있어야 합니다.  이 예제에서는 ADD\_COLUMN\_ENTRY와 ADD\_COLUMN\_ENTRY\_EX 매크로를 정의하고 사용하여 배열에 정보를 삽입합니다.  다음 코드에서와 같이 MyProviderRS.H 파일에 매크로를 추가할 수 있습니다.  
+ 열 정보를 포함 하도록 정적 배열을 지정 합니다. 소비자는 책갈피 열을 원하지 않는 경우 배열에 항목이 낭비 됩니다. 이 배열에 동적으로 할당할 수 있지만 제대로 소멸 되었는지 확인 해야 합니다. 이 예제에서는 정의 하 고 배열에 정보를 삽입 하는 ADD_COLUMN_ENTRY 및 ADD_COLUMN_ENTRY_EX 매크로 사용 합니다. 다음 코드에 나와 있는 것 처럼 MyProviderRS.H 파일에 매크로 추가할 수 있습니다.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -193,7 +193,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- 소비자에서 코드를 테스트하려면 `OnRun` 처리기에 몇 가지 변경을 해야 합니다.  함수에 대해 가장 먼저 변경해야 하는 사항은 속성 집합에 속성을 추가하는 코드를 추가하는 것입니다.  이 코드는 **DBPROP\_IRowsetLocate** 속성을 true로 설정하여 책갈피 열이 필요하다는 것을 공급자에게 알립니다.  `OnRun` 처리기 코드는 다음과 같습니다.  
+ 소비자의 코드를 테스트 하려면 몇 가지 변경에 `OnRun` 처리기입니다. 함수에 첫 번째 변경 내용이 속성은 속성 집합을 추가 하는 코드를 추가 합니다. 코드 집합은 **DBPROP_IRowsetLocate** 속성을 true로, 따라서 공급자 라는 책갈피 열이 필요 합니다. `OnRun` 처리기 코드는 다음과 같이 나타납니다.  
   
 ```  
 //////////////////////////////////////////////////////////////////////  
@@ -244,9 +244,9 @@ void CTestProvDlg::OnRun()
 }  
 ```  
   
- while 루프에는 `IRowsetLocate` 인터페이스의 `Compare` 메서드를 호출하기 위한 코드가 포함되어 있습니다.  정확히 같은 책갈피를 비교하기 때문에 항상 이 코드를 전달해야 합니다.  또한 while 루프가 소비자 템플릿의 `MoveToBookmark` 함수를 호출하는 것을 마친 후 사용할 수 있도록 임시 변수에 책갈피를 하나 저장합니다.  `MoveToBookmark` 함수는 `IRowsetLocate`의 `GetRowsAt` 메서드를 호출합니다.  
+ While 루프 포함 코드를 호출할 수는 `Compare` 에서 메서드는 `IRowsetLocate` 인터페이스입니다. 코드를 정확히 동일한 책갈피를 비교 하기 때문에 항상 전달 해야 합니다. 또한 하나의 책갈피가 임시 변수에 저장 while 후 사용할 수 있도록 루프를 호출 하는 완료는 `MoveToBookmark` 소비자 템플릿 함수입니다. `MoveToBookmark` 함수 호출의 `GetRowsAt` 메서드에서 `IRowsetLocate`합니다.  
   
- 또한 소비자의 사용자 레코드를 업데이트해야 합니다.  책갈피를 처리하는 항목을 클래스에 추가하고 **COLUMN\_MAP**에 항목을 추가합니다.  
+ 소비자의 사용자 레코드를 업데이트 해야 할 수도 있습니다. 항목 책갈피 및에서 항목을 처리 하는 클래스에 추가 하는 **COLUMN_MAP**:  
   
 ```  
 ///////////////////////////////////////////////////////////////////////  
@@ -271,7 +271,7 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- 코드를 업데이트한 다음 `IRowsetLocate` 인터페이스를 사용하여 공급자를 빌드하고 실행할 수 있어야 합니다.  
+ 작성 하 고 사용 하 여 공급자를 실행 하는 수 있어야 코드를 업데이트 하는 경우는 `IRowsetLocate` 인터페이스입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [고급 공급자 기술](../../data/oledb/advanced-provider-techniques.md)

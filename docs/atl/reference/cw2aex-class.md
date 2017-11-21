@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - ATLCONV/ATL::CW2AEX::CW2AEX
 - ATLCONV/ATL::CW2AEX::m_psz
 - ATLCONV/ATL::CW2AEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2AEX class
+dev_langs: C++
+helpviewer_keywords: CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 007dc4a40f0784984981c9b2741ec79ce6f12d9b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: da63f817ab5e6b867d76d59248f5f887d0a7aea5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cw2aex-class"></a>CW2AEX 클래스
 이 클래스는 문자열 변환 매크로 사용 `CT2AEX`, `CW2TEX`, `CW2CTEX`, 및 `CT2CAEX`, 및 typedef **CW2A**합니다.  
@@ -83,7 +65,7 @@ class CW2AEX
 |[CW2AEX::m_psz](#m_psz)|소스 문자열을 저장 하는 데이터 멤버입니다.|  
 |[CW2AEX::m_szBuffer](#m_szbuffer)|변환된 된 문자열을 저장 하는 데 정적 버퍼입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  추가 기능은 필요 하지 않는 한 사용할 `CT2AEX`, `CW2TEX`, `CW2CTEX`, `CT2CAEX`, 또는 **CW2A** 코드에서입니다.  
   
  이 클래스는 변환의 결과 저장 하는 데 사용 되는 고정 크기 정적 버퍼를 포함 합니다. 결과가 너무 커서 정적 버퍼에 포함할 수 없는 경우 클래스는 `malloc`를 사용하여 메모리를 할당함으로써 개체가 범위를 벗어나면 메모리를 해제합니다. 이렇게 하면, 텍스트와 달리이 클래스는 루프에서 사용 하기에 안전 하 고 있는지 스택이 오버플로되지 않습니다 것 ATL의 이전 버전에서 사용할 수 있는 변환 매크로입니다.  
@@ -127,9 +109,9 @@ CW2AEX(LPCWSTR psz) throw(...);
  변환할 텍스트 문자열입니다.  
   
  `nCodePage`  
- 코드 페이지 변환을 수행 하는 데 사용 합니다. 코드 페이지 매개 변수 설명에 대 한 참조는 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 함수 [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) 자세한 세부 정보에 대 한 합니다.  
+ 코드 페이지 변환을 수행 하는 데 사용 합니다. Windows SDK 함수에 대 한 코드 페이지 매개 변수 설명을 참조 [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) 내용을 확인 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  변환 프로세스에서 사용 되는 버퍼를 할당 합니다.  
   
 ##  <a name="dtor"></a>CW2AEX:: ~ CW2AEX  
@@ -139,7 +121,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ~CW2AEX() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  할당된 된 버퍼를 해제합니다.  
   
 ##  <a name="m_psz"></a>CW2AEX::m_psz  
@@ -173,4 +155,3 @@ operator LPSTR() const throw();
  [CW2CWEX 클래스](../../atl/reference/cw2cwex-class.md)   
  [CW2WEX 클래스](../../atl/reference/cw2wex-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

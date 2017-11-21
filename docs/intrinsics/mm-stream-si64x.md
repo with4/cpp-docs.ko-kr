@@ -1,64 +1,66 @@
 ---
-title: "_mm_stream_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_stream_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movnti 명령"
-  - "_mm_stream_si64x 내장 함수"
+title: _mm_stream_si64x | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_stream_si64x
+dev_langs: C++
+helpviewer_keywords:
+- movnti instruction
+- _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 93f36c623f8abaa84ed0f9b08250c8f50273ebeb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_stream_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmstreamsi64x"></a>_mm_stream_si64x  
+  
 **Microsoft 전용**  
   
- MOVNTI 명령을 생성합니다.  데이터 기록 `Source` 에 의해 지정 된 메모리 위치 `Dest`, 캐시를 오염 시 키 지 않고.  
+ MOVNTI 명령을 생성합니다. 에 데이터를 기록 `Source` 로 지정 된 메모리 위치에 `Dest`, 오염 캐시 하지 않고 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-void _mm_stream_si64x(   
-   __int64 * Dest,   
-   __int64 Source   
+void _mm_stream_si64x(   
+   __int64 * Dest,   
+   __int64 Source   
 );  
 ```  
   
-#### 매개 변수  
- \[out\] `Dest`  
+#### <a name="parameters"></a>매개 변수  
+  
+ [out] `Dest`  
  원본 데이터를 쓸 위치에 대 한 포인터입니다.  
   
- \[in\] `Source`  
+ [in] `Source`  
  쓸 데이터입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 이 루틴에만 내장로 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
   
-## 예제  
+ 이 루틴은 내장 루틴으로만 사용할 수 있습니다.  
   
-```  
+## <a name="example"></a>예제  
+  
+```C  
 // _mm_stream_si64x.c  
 // processor: x64  
   
@@ -78,9 +80,11 @@ int main()
 }  
 ```  
   
-  **0 0 0 ffffffffffff**   
-## Microsoft 특정 끝  
+```Output  
+0 ffffffffffff 0 0  
+```  
   
-## 참고 항목  
- [Cache Support for Streaming SIMD Extensions 2 Integer Operations](http://msdn.microsoft.com/ko-kr/a9c9b42f-de9e-4374-aeb6-5f65bfb669b6)   
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

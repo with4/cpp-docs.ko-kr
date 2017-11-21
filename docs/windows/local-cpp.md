@@ -1,33 +1,30 @@
 ---
-title: "local (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.local"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "local attribute"
+title: "로컬 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.local
+dev_langs: C++
+helpviewer_keywords: local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 007d95d5db0785deae08744b46738d7188e4da70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# local (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-인터페이스 헤더에서 사용 하는 경우 MIDL 컴파일러는 헤더 생성기로 사용할 수 있습니다.  개별 함수에서 사용 하는 경우에 대 한 없음 스텁이 생성 되는 로컬 프로시저를 지정 합니다.  
+# <a name="local-c"></a>local(C++)
+인터페이스 헤더를 사용할 경우 MIDL 컴파일러 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,28 +32,27 @@ manager: "ghogen"
   
 ```  
   
-## 설명  
- `local` C \+ \+ 특성을 동일한 기능을가지고 있는  [로컬](http://msdn.microsoft.com/library/windows/desktop/aa367071) MIDL 특성.  
+## <a name="remarks"></a>설명  
+ `local` c + + 특성에 동일한 기능을는 [로컬](http://msdn.microsoft.com/library/windows/desktop/aa367071) MIDL 특성입니다.  
   
-## 예제  
- 참조 하십시오  [call\_as](../windows/call-as.md) 예를 사용 하는 방법에 대 한 `local`.  
+## <a name="example"></a>예제  
+ 참조 [call_as](../windows/call-as.md) 사용 하는 방법의 예 `local`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|`interface`인터페이스 메서드|  
+|**적용 대상**|`interface`를 인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|**dispinterface**|  
+|**잘못된 특성**|**dispinterface**|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [call\_as](../windows/call-as.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [인터페이스 특성](../windows/interface-attributes.md)   
+ [메서드 특성](../windows/method-attributes.md)   
+ [call_as](../windows/call-as.md)   

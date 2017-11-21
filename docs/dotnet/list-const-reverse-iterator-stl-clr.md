@@ -1,41 +1,39 @@
 ---
-title: "list::const_reverse_iterator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::const_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reverse_iterator 멤버[STL/CLR]"
+title: 'list:: const_reverse_iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::const_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: const_reverse_iterator member [STL/CLR]
 ms.assetid: d9a9a1ec-df5f-411f-9918-beb5838ffa63
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d200ae6d8092520f08504734459220d36fe750e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::const_reverse_iterator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of a constant reverse iterator for the controlled sequence..  
+# <a name="listconstreverseiterator-stlclr"></a>list::const_reverse_iterator(STL/CLR)
+제어 되는 시퀀스에 대 한 상수 역방향 반복기의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef T4 const_reverse_iterator;  
 ```  
   
-## 설명  
- The type describes an object of unspecified type `T4` that can serve as a constant reverse iterator for the controlled sequence.  
+## <a name="remarks"></a>설명  
+ 이 형식은 지정 되지 않은 형식의 개체를 설명 `T4` 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용할 수 있는 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_const_reverse_iterator.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **c b a**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::reverse\_iterator](../dotnet/list-reverse-iterator-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::reverse_iterator(STL/CLR)](../dotnet/list-reverse-iterator-stl-clr.md)

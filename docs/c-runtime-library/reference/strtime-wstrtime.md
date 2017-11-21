@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - wstrtime
 - strtime
 - _tstrtime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strtime function
 - _strtime function
@@ -42,30 +40,15 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: d442d5d1d32fe7ab1a6dfe4e16e64b3dd994b73e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 9554272eda10c77dcbb464904897f47729b45f44
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 버퍼에 시간을 복사합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_strtime_s, _wstrtime_s](../../c-runtime-library/reference/strtime-s-wstrtime-s.md)를 참조하세요.  
@@ -101,7 +84,7 @@ wchar_t *_wstrtime(
   
  `_wstrtime`는 `_strtime`의 와이드 문자 버전이고, `_wstrtime`의 인수와 반환 값은 와이드 문자 문자열입니다. 이러한 함수는 그 외의 경우에는 동일하게 동작합니다. `timestr`이 `NULL`이거나 `timestr`의 형식이 잘못된 경우에는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 예외가 계속되도록 허용되는 경우 이러한 함수는 NULL을 반환하며, `timestr`이 NULL이면 `errno`를 `EINVAL`로 설정하고 `timestr`의 형식이 잘못된 경우에는 `errno`를 `ERANGE`로 설정합니다.  
   
- C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   

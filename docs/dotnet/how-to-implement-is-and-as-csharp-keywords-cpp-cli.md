@@ -1,34 +1,31 @@
 ---
-title: "방법: is 및 as C# 키워드 구현(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "as C# 키워드[C++]"
-  - "is C# 키워드[C++]"
+title: "방법: 구현은 및 as C# 키워드 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- as C# keyword [C++]
+- is C# keyword [C++]
 ms.assetid: bc66c0d1-696b-480d-977c-5d9d1ad1ece6
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ae9753a30e513a237d658e3110b9174072ccd25b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: is 및 as C# 키워드 구현(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 항목에서는 `is` 및 `as` C\# 키워드의 기능을 Visual C\+\+에서 구현하는 방법을 보여 줍니다.  
+# <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>방법: is 및 as C# 키워드 구현(C++/CLI)
+이 항목에서는의 기능을 구현 하는 방법을 보여 줍니다.는 `is` 및 `as` Visual c + +의 C# 키워드입니다.  
   
- 자세한 내용은 [is](../Topic/is%20\(C%23%20Reference\).md) 및 [as](../Topic/as%20\(C%23%20Reference\).md)를 참조하십시오.  
-  
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // CS_is_as.cpp  
@@ -61,6 +58,9 @@ int main() {
 }  
 ```  
   
-  **o는 문자열**   
-## 참고 항목  
- [다른 .NET 언어와의 상호 운용성](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+o is a string  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [다른 .NET 언어와의 상호 운용성(C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

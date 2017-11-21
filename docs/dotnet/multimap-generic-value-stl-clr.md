@@ -1,41 +1,39 @@
 ---
-title: "multimap::generic_value(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value 멤버[STL/CLR]"
+title: 'multimap:: generic_value (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: e403233f-5132-45ca-be04-2c85e923f37d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 18fa41591af7cc86a6ad85b998ddb398681010f5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::generic_value(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of an element for use with the generic interface for the container.  
+# <a name="multimapgenericvalue-stlclr"></a>multimap::generic_value(STL/CLR)
+컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 요소의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## 설명  
- The type describes an object of type `GValue` that describes the stored element value for use with the generic interface for this template container class.  
+## <a name="remarks"></a>설명  
+ 이 형식은 형식의 개체를 설명 `GValue` 이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 저장 된 요소 값을 설명 하는 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_generic_value.cpp   
@@ -70,16 +68,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::generic\_container](../dotnet/multimap-generic-container-stl-clr.md)   
- [multimap::generic\_iterator](../dotnet/multimap-generic-iterator-stl-clr.md)   
- [multimap::generic\_reverse\_iterator](../dotnet/multimap-generic-reverse-iterator-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: generic_container (STL/CLR)](../dotnet/multimap-generic-container-stl-clr.md)   
+ [multimap:: generic_iterator (STL/CLR)](../dotnet/multimap-generic-iterator-stl-clr.md)   
+ [multimap::generic_reverse_iterator(STL/CLR)](../dotnet/multimap-generic-reverse-iterator-stl-clr.md)

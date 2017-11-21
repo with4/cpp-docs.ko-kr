@@ -1,92 +1,90 @@
 ---
 title: "IRowsetImpl 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetImpl 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetImpl class
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c934ce36ae20727340ea9d2e6bd4d95272c908f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetimpl-class"></a>IRowsetImpl 클래스
 `IRowset` 인터페이스의 구현을 제공합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <  
-   class T,   
+   class T,   
    class RowsetInterface,  
    class RowClass = CSimpleRow,  
    class MapClass = CAtlMap <  
       RowClass::KeyType,  
-      RowClass*   
+      RowClass*   
    >  
 >  
 class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- Your class, derived from `IRowsetImpl`.  
+ 파생 된 클래스에 `IRowsetImpl`합니다.  
   
  `RowsetInterface`  
- A class derived from `IRowsetImpl`.  
+ 클래스에서 파생 `IRowsetImpl`합니다.  
   
  `RowClass`  
- Storage unit for the **HROW**.  
+ 에 대 한 저장소 단위는 **HROW**합니다.  
   
  `MapClass`  
- Storage unit for all row handles held by the provider.  
+ 공급자가 보유 하는 모든 행 핸들에 대 한 저장소 단위입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)|기존 행 핸들에 참조 횟수를 추가합니다.|  
-|[CreateRow](../../data/oledb/irowsetimpl-createrow.md)|Called by [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) to allocate a new **HROW**.  Not called directly by user.|  
-|[GetData](../../data/oledb/irowsetimpl-getdata.md)|행 집합의 행 복사본에서 데이터를 검색합니다.|  
-|[GetDBStatus](../../data/oledb/irowsetimpl-getdbstatus.md)|Returns the status for the specified field.|  
-|[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)|이전 위치를 기억하여 행을 순서대로 페치합니다.|  
-|[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|생성자입니다.  Not called directly by user.|  
-|[RefRows](../../data/oledb/irowsetimpl-refrows.md)|Called by [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) and [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md).  Not called directly by user.|  
+|[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)|기존 행 핸들에 대 한 참조 횟수를 추가합니다.|  
+|[CreateRow](../../data/oledb/irowsetimpl-createrow.md)|에 의해 호출 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 할당할 새 **HROW**합니다. 사용자가 직접 호출 되지 않습니다.|  
+|[GetData](../../data/oledb/irowsetimpl-getdata.md)|행의 행 집합의 복사본에서 데이터를 검색합니다.|  
+|[GetDBStatus](../../data/oledb/irowsetimpl-getdbstatus.md)|지정된 된 필드에 대 한 상태를 반환합니다.|  
+|[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)|행을 순차적으로 인출에서 이전 위치로 기억|  
+|[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|생성자입니다. 사용자가 직접 호출 되지 않습니다.|  
+|[RefRows](../../data/oledb/irowsetimpl-refrows.md)|에 의해 호출 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 및 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)합니다. 사용자가 직접 호출 되지 않습니다.|  
 |[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|행을 해제합니다.|  
-|[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|Repositions the next fetch position to its initial position; that is, its position when the rowset was first created.|  
-|[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|Sets the status flags for the specified field.|  
+|[Restartposition이](../../data/oledb/irowsetimpl-restartposition.md)|다음 인출 위치를 초기 위치로; 위치 변경 즉, 행 집합을 첫 번째 경우에 해당 위치에 만들어집니다.|  
+|[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|지정된 된 필드에 대 한 상태 플래그를 설정합니다.|  
   
-### 데이터 멤버  
+### <a name="data-members"></a>데이터 멤버  
   
 |||  
 |-|-|  
-|[m\_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)|Indicates whether a provider supports backward fetching.|  
-|[m\_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)|Indicates whether a provider can have its cursor scroll backwards.|  
-|[m\_bReset](../../data/oledb/irowsetimpl-m-breset.md)|Indicates whether a provider has reset its cursor position.  This has special meaning when scrolling backwards or fetching backwards in [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md).|  
-|[m\_iRowset](../../data/oledb/irowsetimpl-m-irowset.md)|An index to the rowset, representing the cursor.|  
-|[m\_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)|A list of row handles.|  
+|[m_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)|공급자는 이전 버전과 인출 지원 하는지 여부를 나타냅니다.|  
+|[m_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)|공급자는 커서 스크롤을 이전 버전과 가질 수 있는지 여부를 나타냅니다.|  
+|[m_bReset](../../data/oledb/irowsetimpl-m-breset.md)|공급자가 해당 커서 위치를 다시 설정 하는지 여부를 나타냅니다. 이 뒤로 스크롤 또는 뒤로 인출 하는 경우 특별 한 의미 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)합니다.|  
+|[m_iRowset](../../data/oledb/irowsetimpl-m-irowset.md)|커서를 나타내는 행 집합에는 인덱스입니다.|  
+|[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)|목록 행 핸들입니다.|  
   
-## 설명  
- [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) is the base rowset interface.  
+## <a name="remarks"></a>설명  
+ [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) 기본 행 집합 인터페이스입니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

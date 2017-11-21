@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_new_mode
+apiname: _set_new_mode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - set_new_mode
 - _set_new_mode
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - handler modes
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 57a578f8accf7244d71c0d8791a6e898ead7d242
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 31a738319507f13dc26346b237447b37ee60ce0c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setnewmode"></a>_set_new_mode
 `malloc`에 대해 새 처리기 모드를 설정합니다.  
@@ -74,7 +56,7 @@ int _set_new_mode(
  `malloc`에 대한 새 처리기 모드입니다. 유효한 값은 0 또는 1입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `malloc`에 대해 설정된 이전 처리기 모드를 반환합니다. 반환 값이 1이면 메모리 할당이 실패하는 경우 `malloc`가 이전에 새 처리기 루틴을 호출했음을 나타내며, 반환 값이 0이면 해당 루틴을 호출하지 않았음을 나타냅니다. 경우는 `newhandlermode` 인수는 0 또는 1을 같지 않음,-1을 반환 합니다.  
+ `malloc`에 대해 설정된 이전 처리기 모드를 반환합니다. 반환 값이 1이면 메모리 할당이 실패하는 경우 `malloc`가 이전에 새 처리기 루틴을 호출했음을 나타내며, 반환 값이 0이면 해당 루틴을 호출하지 않았음을 나타냅니다. 경우는 `newhandlermode` 인수는 0 또는 1 같지 않음,-1을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  C++ `_set_new_mode` 함수는 [malloc](../../c-runtime-library/reference/malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 `malloc`가 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md)에서 설정한 대로 새 처리기 루틴을 호출하는지를 나타냅니다. 기본적으로 `malloc`는 메모리 할당 실패 시 새 처리기 루틴을 호출하지 않습니다. `malloc`가 메모리 할당에 실패한 경우 `malloc`가 `new` 연산자가 같은 이유로 실패했을 때 수행하는 것과 동일한 방식으로 새 처리기 루틴을 호출하도록 이 기본 동작을 재정의할 수 있습니다. 자세한 내용은 *C++ 언어 참조*의 [new](../../cpp/new-operator-cpp.md) 및 [delete](../../cpp/delete-operator-cpp.md) 연산자를 참조하세요. 기본값을 재정의하려면 다음을  
@@ -93,7 +75,7 @@ _set_new_mode(1)
 |-------------|---------------------|  
 |`_set_new_mode`|\<new.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 할당](../../c-runtime-library/memory-allocation.md)   

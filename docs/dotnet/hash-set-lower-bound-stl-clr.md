@@ -1,45 +1,43 @@
 ---
-title: "hash_set::lower_bound(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound 멤버[STL/CLR]"
+title: 'hash_set:: lower_bound (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: 54fe8ee5-1977-4192-9cc6-b51e84b03a16
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ee6c0cbea5a6e4b2d4730de7bb55564bb8200e85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::lower_bound(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Finds beginning of range that matches a specified key.  
+# <a name="hashsetlowerbound-stlclr"></a>hash_set::lower_bound(STL/CLR)
+지정된 된 키와 일치 하는 범위의 시작 부분을 찾습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  key  
- Key value to search for.  
+ 검색할 키 값입니다.  
   
-## 설명  
- The member function determines the first element `X` in the controlled sequence that hashes to the same bucket as `key` and has equivalent ordering to `key`.  If no such element exists, it returns [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`()`; otherwise it returns an iterator that designates `X`.  You use it to locate the beginning of a sequence of elements currently in the controlled sequence that match a specified key.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 첫 번째 요소를 결정 `X` 동일한 버킷으로 해시 제어 된 시퀀스의 `key` 과 순서가 및 `key`합니다. 이러한 요소가 있는 경우 반환 [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; 그렇지 않으면 지정 하는 반복기를 반환 `X`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 요소 시퀀스의 시작 부분을 현재 찾을 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_lower_bound.cpp   
@@ -71,18 +69,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**lower\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*lower\_bound\(L'a'\) \= a**  
-**\*lower\_bound\(L'b'\) \= b**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = a  
+*lower_bound(L'b') = b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::count](../dotnet/hash-set-count-stl-clr.md)   
- [hash\_set::equal\_range](../dotnet/hash-set-equal-range-stl-clr.md)   
- [hash\_set::find](../dotnet/hash-set-find-stl-clr.md)   
- [hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
+ [hash_set:: equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   
+ [hash_set:: find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)   
+ [hash_set::upper_bound(STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)

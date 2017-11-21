@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- hash_set/stdext::hash_compare
-- hash_compare
-dev_langs:
-- C++
-helpviewer_keywords:
-- hash_compare class
+f1_keywords: hash_set/stdext::hash_compare
+dev_langs: C++
+helpviewer_keywords: hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 56b02a7bcafebebfb9fbb5569ad28eb2d52cf879
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: a04dd9a2c18357260a4543f7117955cc611fa001
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="hashcompare-class"></a>hash_compare 클래스
 이 템플릿 클래스는 해시 연관 컨테이너(hash_map, hash_multimap, hash_set 또는 hash_multiset) 중 하나에서 기본 **Traits** 매개 변수 개체로 사용하여 포함된 요소의 순서를 지정하고 해시할 수 있는 개체를 설명합니다.  
@@ -59,8 +39,6 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
   
 -   정수 상수 **min_buckets**는 해시 테이블에서 유지할 최소 버킷 수를 지정합니다. 0보다 큰 2의 거듭제곱이어야 합니다. hash_compare에서 제공하는 값은 8입니다.  
   
- Visual C++ .NET 2003에서 [<hash_map>](../standard-library/hash-map.md) 및 [<hash_set>](../standard-library/hash-set.md) 헤더 파일의 멤버는 더 이상 std 네임스페이스에 있지 않으며 대신 stdext 네임스페이스로 이동되었습니다. 자세한 내용은 [stdext 네임스페이스](../standard-library/stdext-namespace.md)를 참조하세요.  
-  
 ## <a name="example"></a>예제  
  hash_compare를 선언 및 사용하는 방법의 예제는 [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set) 및 [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset)에 대한 예제를 참조하세요.  
   
@@ -72,7 +50,6 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

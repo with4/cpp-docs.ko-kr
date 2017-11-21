@@ -1,27 +1,26 @@
 ---
-title: "A.17   Using Nestable Locks | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "중첩 잠금을 사용 하 여 A.17 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8ef386ed-ddc4-4d40-80aa-cc39f0fb5e4b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3464c7d183b20d2d0eb851489c8aecf86321876f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# A.17   Using Nestable Locks
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음 예제에서는 \(에 대 한  [섹션 3.2](../../parallel/openmp/3-2-lock-functions.md) 페이지 41\) 어떻게 nestable 잠금 업데이트 및 해당 멤버 중 하나에 전체 구조를 동기화 하는 방법을 보여 줍니다.  
+# <a name="a17---using-nestable-locks"></a>A.17   중첩 가능 잠금 사용
+다음 예제에서는 (에 대 한 [섹션 3.2](../../parallel/openmp/3-2-lock-functions.md) 페이지 41) 전체 구조 및 해당 멤버 중 하나에 업데이트를 동기화 하는 중첩 잠금을 사용할 수 있는 방법을 보여 줍니다.  
   
 ```  
 #include <omp.h>  

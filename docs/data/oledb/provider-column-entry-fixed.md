@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_FIXED | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_FIXED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_FIXED 매크로"
+title: PROVIDER_COLUMN_ENTRY_FIXED | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_FIXED
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_FIXED macro
 ms.assetid: 71f9c9aa-56a0-488b-96ba-5c72da9c71d0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e404e18a072650d89f3987d8e8f0e286240d022a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_FIXED
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Represents a specific column supported by the provider.  
+# <a name="providercolumnentryfixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
+공급자에서 지 원하는 특정 열을 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,30 +33,30 @@ name
 , ordinal, dbtype, member )  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *name*  
- \[in\] The column name.  
+ [in] 열 이름입니다.  
   
  `ordinal`  
- \[in\] The column number.  Unless the column is a Bookmark column, the column number must not be 0.  
+ [in] 열 번호입니다. 열이 책갈피 열, 하지 않는 한 열 번호는 0 아니어야 합니다.  
   
  `dbtype`  
- \[in\] The data type in [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
+ [in] 데이터 형식이 [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx)합니다.  
   
  `member`  
- \[in\] The member variable in `dataClass` that stores the data.  
+ [in] 멤버 변수 `dataClass` 하는 데이터를 저장 합니다.  
   
-## 설명  
- Allows you to specify the column data type.  
+## <a name="remarks"></a>설명  
+ 열 데이터 형식을 지정할 수 있습니다.  
   
-## 예제  
- See [BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md).  
+## <a name="example"></a>예제  
+ 참조 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
- [OLE DB 공급자 템플릿에 대한 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+## <a name="see-also"></a>참고 항목  
+ [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)   
  [OLE DB 공급자 만들기](../../data/oledb/creating-an-ole-db-provider.md)

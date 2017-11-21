@@ -1,42 +1,41 @@
 ---
 title: "식 계산기 오류 CXX0017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0017"
-  - "CXX0017"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0017
+dev_langs: C++
+helpviewer_keywords:
+- CAN0017
+- CXX0017
 ms.assetid: af74db02-a64d-49ca-8363-3e044a107580
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b1e7901f46aacbcac73a7d2b6a3e5f033d1526c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 식 계산기 오류 CXX0017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-기호를 찾을 수 없습니다.  
+# <a name="expression-evaluator-error-cxx0017"></a>식 계산기 오류 CXX0017
+기호를 찾을 수합니다  
   
- 식에 지정한 기호를 찾을 수 없습니다.  
+ 식에 지정 된 기호를 찾을 수 없습니다.  
   
- 이 오류의 가능한 원인 중 하나는 기호 이름에 대\/소문자가 일치하지 않기 때문입니다.  C 및 C\+\+ 언어는 대\/소문자를 구분하는 언어이므로 기호 이름은 소스에 정의된 대\/소문자와 정확하게 일치해야 합니다.  
+ 이 오류의 한 가지 가능한 원인은 기호 이름에 소문자 일치 하지 않습니다. C 및 c + +는 대/소문자 구분 언어, 때문에 정확한 경우 원본에 정의 된 기호 이름을 지정 합니다.  
   
- 이 오류는 디버깅하는 동안 변수를 감시하기 위해 변수를 형식 변환할 때 발생합니다.  `typedef`는 형식에 새 이름을 선언하지만 새 형식은 정의하지 않습니다.  디버거에서 형식을 변환하려면 정의된 형식의 이름이 있어야 합니다.  
+ 이 오류는 디버깅 하는 동안 변수를 감시 하기 위해 변수 형식을 캐스팅 하려고 할 때 발생할 수 있습니다. `typedef` 는 형식에 대 한 새 이름을 선언 되지만 새 형식을 정의 하지 않습니다. 디버거에서 디버거는 정의 된 형식 이름이 필요 합니다.  
   
- 이 오류는 CAN0017과 동일합니다.  
+ 이 오류는 can0017과 동일 합니다.  
   
-### 문제를 해결하려면 다음과 같은 해결책을 사용해 보십시오.  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>아래의 해결 방법 따라 수정합니다.  
   
-1.  이 기호가 사용되는 프로그램의 위치에서 이미 선언되어 있는지 확인하십시오.  
+1.  기호가 사용 되는 위치는 프로그램의 지점에서 이미 선언 되어 있는지 확인 합니다.  
   
-2.  디버거에서 `typedef`로 정의된 이름 대신에 실제 형식 이름을 사용하여 변수를 캐스팅하십시오.
+2.  실제 형식 이름을 사용 하 여 변수를 캐스팅 하면 디버거에서 아닌 `typedef`-정의 된 이름입니다.

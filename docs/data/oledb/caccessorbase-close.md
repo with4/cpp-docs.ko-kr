@@ -1,33 +1,32 @@
 ---
-title: "CAccessorBase::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CAccessorBase.Close"
-  - "CAccessorBase::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close 메서드"
+title: 'Caccessorbase:: Close | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CAccessorBase.Close
+- CAccessorBase::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: 342e2a12-cd0a-4c2a-8867-12d24a660c4a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 56bca01cc93c080d9628ce6b238bbb4344206fda
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessorBase::Close
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Closes the accessors.  
+# <a name="caccessorbaseclose"></a>CAccessorBase::Close
+접근자를 닫습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,11 +34,11 @@ void Close( );
   
 ```  
   
-## 설명  
- You must call [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) first.  
+## <a name="remarks"></a>설명  
+ 호출 해야 [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) 첫 번째입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CAccessorBase 클래스](../../data/oledb/caccessorbase-class.md)

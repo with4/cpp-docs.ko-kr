@@ -4,43 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::divides
-- divides
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::divides
+dev_langs: C++
 helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: a82ec380e3be786dfdac2b8ebe3b108d5776c3a9
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7e05b4acf06f17813d45b4888a1342b31a424648
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="divides-struct"></a>divides 구조체
 인수에 대해 나누기 연산(`operator/`)을 수행하는 사전 정의된 함수 개체입니다.  
@@ -75,7 +56,7 @@ struct divides<void>
  나누기 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `Left``/``Right`의 결과입니다. 특수화된 템플릿은 `operator/`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
+ `Left / Right`의 결과입니다. 특수화된 템플릿은 `operator/`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -141,7 +122,6 @@ The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -1,41 +1,39 @@
 ---
-title: "hash_map::size(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size 멤버[STL/CLR]"
+title: 'hash_map:: size (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 5eb91502-1b11-4703-b473-eb609c181b74
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3029e0a9a1177a391dada664d17cca583ec555b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::size(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-요소의 수를 셉니다.  
+# <a name="hashmapsize-stlclr"></a>hash_map::size(STL/CLR)
+요소 수를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 size_type size();  
 ```  
   
-## 설명  
- The member function returns the length of the controlled sequence.  You use it to determine the number of elements currently in the controlled sequence.  If all you care about is whether the sequence has nonzero size, see [hash\_map::empty](../dotnet/hash-map-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 제어 되는 시퀀스의 현재 요소 수를 확인 하려면 사용 합니다. 모든 경우에 중요 한 여부 시퀀스 크기가 0이 아닌 참조 [hash_map:: empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)`()`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_map_size.cpp   
@@ -68,14 +66,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0 after clearing**  
-**size\(\) \= 2 after adding 2**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::empty](../dotnet/hash-map-empty-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::empty(STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)

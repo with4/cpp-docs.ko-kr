@@ -1,46 +1,44 @@
 ---
-title: "ordered (OpenMP Directives) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ordered"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ordered OpenMP directive"
+title: "정렬 (OpenMP 지시문) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ordered
+dev_langs: C++
+helpviewer_keywords: ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 85e4b969c7cf47e2243418db52bbdf2299bdafd4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ordered (OpenMP Directives)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-아래는 병렬화 된 코드를 지정 합니다 순차 루프 다음과 같이 루프를 실행 해야 합니다.  
+# <a name="ordered-openmp-directives"></a>ordered (OpenMP 지시문)
+순차 루프와 같은 루프를 실행 해야 해당 코드는 병렬화 된에서 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 #pragma omp ordered  
    structured-block  
 ```  
   
-## 설명  
- **주문** 지시문의 동적 범위 안에 있어야는 [for](../../../parallel/openmp/reference/for-openmp.md) 또는  **에 대 한 병렬** 로 구성는  **주문** 절.  
+## <a name="remarks"></a>설명  
+ **정렬** 지시문의 동적 범위 내에 있어야 합니다.는 [에 대 한](../../../parallel/openmp/reference/for-openmp.md) 또는 **에 대 한 병렬** 를 생성 한 **정렬** 절.  
   
- **주문** 지시문 OpenMP 절을 지원 합니다.  
+ **정렬** 지시문 OpenMP 절을 지원 합니다.  
   
- 자세한 내용은 [2.6.6 ordered Construct](../../../parallel/openmp/2-6-6-ordered-construct.md)를 참조하십시오.  
+ 자세한 내용은 참조 [2.6.6 ordered 구문](../../../parallel/openmp/2-6-6-ordered-construct.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // omp_ordered.cpp  
@@ -82,14 +80,17 @@ int main( )
 }  
 ```  
   
-  **test \(\) 반복 1**  
-**test \(\) 반복 3**  
-**test \(\) 반복 5**  
-**test \(\) 반복 7**  
-**test2\(\) 반복 0**  
-**test2\(\) 반복 1**  
-**test2\(\) 반복 2**  
-**test2\(\) 반복 3**  
-**test2\(\) 반복 4**   
-## 참고 항목  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+test() iteration 1  
+test() iteration 3  
+test() iteration 5  
+test() iteration 7  
+test2() iteration 0  
+test2() iteration 1  
+test2() iteration 2  
+test2() iteration 3  
+test2() iteration 4  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [지시문](../../../parallel/openmp/reference/openmp-directives.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- locale/std::time_base
-dev_langs:
-- C++
-helpviewer_keywords:
-- time_base class
+f1_keywords: locale/std::time_base
+dev_langs: C++
+helpviewer_keywords: time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: a1e7fca06a16cf879ab46a132a6f35b79532cc6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c1c7c6c708087827c853234dcbd4519c79fba2bf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="timebase-class"></a>time_base 클래스
 이 클래스는 템플릿 클래스 time_get의 패싯에 대한 기본 클래스로 사용되며 열거형 **dateorder**와 이 형식의 여러 상수만 정의합니다.  
@@ -66,7 +61,6 @@ public:
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

@@ -1,32 +1,32 @@
 ---
 title: "동적 접근자 재정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "접근자[C++], 동적"
-  - "동적 접근자"
-  - "재정의, 동적 접근자"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
+- overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4dcec1f501d2f05018410fcd293a4ed649e607b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 동적 접근자 재정의
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`CDynamicAccessor` 같은 동적 접근자를 사용할 때, 명령 **Open** 메서드는 열린 행 집합의 열 정보를 기반으로 하여 사용자에 대한 접근자를 자동으로 만듭니다.  동적 접근자를 재정의하면 열이 바인딩되는 방법을 정확하게 제어할 수 있습니다.  
+# <a name="overriding-a-dynamic-accessor"></a>동적 접근자 재정의
+사용 하는 경우 동적 접근자와 같은 `CDynamicAccessor`, 명령 **열려** 열린된 행 집합의 열 정보를 자동으로 기반 메서드는 접근자를 만듭니다. 열 바인딩된 방식을 정확 하 게 제어 하려면 동적 접근자를 재정의할 수 있습니다.  
   
- 동적 접근자를 재정의하려면 **false**를 마지막 매개 변수로서 `CCommand::Open` 메서드에 전달합니다.  이렇게 하면 **Open**은 접근자를 자동으로 만들 수 없습니다.  그런 다음 `GetColumnInfo`를 호출한 후 바인딩할 각 열에 대해 `AddBindEntry`를 호출합니다.  다음 코드는 이 작업을 수행하는 방법에 대해 보여 줍니다.  
+ 동적 접근자를 재정의 하려면 전달 **false** 에 대 한 마지막 매개 변수로 `CCommand::Open` 메서드. 이렇게 하면 **열려** 접근자를 자동으로 만들지 못하도록 합니다. 호출할 수 있습니다 `GetColumnInfo` 호출 `AddBindEntry` 바인딩할 각 열에 대 한 합니다. 다음 코드에는 작업을 수행 하는 방법을 보여 줍니다.  
   
 ```  
 USES_CONVERSION;  
@@ -76,5 +76,5 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [접근자 사용](../../data/oledb/using-accessors.md)

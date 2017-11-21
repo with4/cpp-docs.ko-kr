@@ -1,11 +1,10 @@
 ---
-title: "위치 클래스 | Microsoft 문서"
+title: "위치 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs:
-- C++
-helpviewer_keywords:
-- location class
+dev_langs: C++
+helpviewer_keywords: location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: aafe0500568cd9d4c9419345560272e18008df83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="location-class"></a>위치 클래스
 하드웨어의 실제 위치에 대한 추상화입니다.  
@@ -143,10 +125,10 @@ location(
  `_BindingId`  
  `_PBinding`  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본적으로 생성되는 위치는 시스템 전체를 나타냅니다.  
   
-##  <a name="operator_neq"></a>연산자! = 
+##  <a name="operator_neq"></a>operator! = 
 
  두 `location` 개체가 서로 다른 위치를 나타내는지 여부를 확인합니다.  
   
@@ -186,8 +168,7 @@ bool operator== (const location& _Rhs) const;
  `_Rhs`  
   
 ### <a name="return-value"></a>반환 값  
- `true`두 위치가 동일 하면 및 `false` 그렇지 않은 경우.  
+ `true`두 위치 동일 하 고 `false` 그렇지 않은 경우.  
   
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)
-

@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
-helpviewer_keywords:
-- expressions [C++]
+dev_langs: C++
+helpviewer_keywords: expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3348fe95cec36108a05e61dee61cad66da5b51bf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2f47c0de0a4bbfec89fa91b04d7894c6f1daf968
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="expressions-c"></a>식 (C++)
 이 단원에서는 C++ 식에 대해 설명합니다. 식은 다음과 같은 용도 중 하나 이상으로 사용되는 일련의 연산자와 피연산자입니다.  

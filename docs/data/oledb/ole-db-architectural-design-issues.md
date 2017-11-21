@@ -1,53 +1,52 @@
 ---
 title: "OLE DB 아키텍처 설계 문제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, 응용 프로그램 디자인 고려 사항"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 085c658fff3d387019c6e8574ebafcd347400823
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# OLE DB 아키텍처 설계 문제
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB 응용 프로그램을 시작하기 전에 먼저 다음 문제에 대해 고려해야 합니다.  
+# <a name="ole-db-architectural-design-issues"></a>OLE DB 아키텍처 설계 문제
+OLE DB 응용 프로그램을 시작 하기 전에 다음과 같은 문제를 고려해 야 합니다.  
   
- **OLE DB 응용 프로그램을 작성하기 위해 어떤 프로그래밍 구현을 사용할 예정입니까?**  
- Microsoft에서는 이러한 구현을 위해 OLE DB 템플릿 라이브러리, OLE DB 특성, OLE DB SDK의 원시 OLE DB 인터페이스 같은 여러 라이브러리를 제공하고 있습니다.  또한 프로그램 작성에 도움이 되는 마법사도 제공됩니다.  이러한 구현에 대해 [OLE DB 템플릿, 특성 및 기타 구현](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)에서 설명합니다.  
+ **OLE DB 응용 프로그램을 작성 하는 데 어떤 프로그래밍 구현을 사용?**  
+ Microsoft는이를 위해 여러 개의 라이브러리: OLE DB 템플릿 라이브러리, OLE DB 특성 및 OLE DB SDK에는 원시 OLE DB 인터페이스입니다. 또한 마법사가 프로그램을 작성 하는 데 도움이 되도록 합니다. 이러한 구현은에 설명 된 [OLE DB 템플릿, 특성 및 기타 구현](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)합니다.  
   
- **스스로 공급자를 작성해야 합니까?**  
- 대부분의 개발자는 고유한 공급자를 직접 작성할 필요가 없습니다.  Microsoft에서는 여러 공급자를 제공하고 있습니다.  예를 들어, 데이터 연결을 만들 때마다 ATL OLE DB 소비자 마법사를 사용하여 프로젝트에 소비자를 추가할 때, **데이터 연결 속성** 대화 상자에는 시스템에 등록된 사용할 수 있는 모든 공급자의 목록이 나타나게 됩니다.  이들 공급자 중 하나가 데이터 저장소와 데이터 액세스 응용 프로그램에 알맞은 경우에는 간단하게 해당 공급자를 사용하면 됩니다.  그러나 데이터 저장소가 이들 카테고리 중 하나에 맞지 않은 경우에는 스스로 공급자를 만들어야 합니다.  공급자를 만드는 데 대한 자세한 내용은 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)을 참조하십시오.  
+ **사용자 고유의 공급자를 작성 해야 합니까?**  
+ 대부분의 개발자는 자신의 공급자를 작성할 필요가 없습니다. Microsoft는 여러 공급자를 제공합니다. (예: 소비자 ATL OLE DB 소비자 마법사를 사용 하 여 프로젝트를 추가할 때), 데이터 연결을 만들 때마다는 **데이터 연결 속성** 대화 상자는 시스템에 등록 된 모든 사용 가능한 공급자를 나열 합니다. 사용자의 데이터 저장소 및 데이터 액세스 응용 프로그램에 대 한 적절 한 경우 이러한 공급자 중 하나는 가장 쉬운 방법은 중 하나를 사용 합니다. 그러나 데이터 저장소에 이러한 범주 중 하나를 벗어나는 경우 공급자를 만들 해야 합니다. 공급자를 만드는 방법은 참조 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)합니다.  
   
- **소비자에 대해서는 어떤 수준의 지원이 필요합니까?**  
- 어떤 소비자는 매우 기본적이고 어떤 소비자는 매우 복잡할 수 있습니다.  OLE DB 개체의 기능은 속성에 의해 지정됩니다.  ATL OLE DB 소비자 마법사를 사용하여 소비자를 만들거나 데이터베이스 공급자 마법사를 사용하여 공급자를 만들 때, 기능의 표준 집합을 제공하기 위해 사용자에게 알맞은 개체 속성을 설정합니다.  그러나 사용자가 원하는 모든 작업을 마법사로 생성된 소비자 및 공급자 클래스가 지원하지 않을 경우에는 [OLE DB 템플릿 라이브러리](../../data/oledb/ole-db-templates.md)에서 해당 클래스에 대한 인터페이스를 참조해야 합니다.  이들 인터페이스는 쉬운 원시 OLE DB 인터페이스를 사용하여 여분의 구현을 제공하면서, 원시 OLE DB 인터페이스를 래핑합니다.  
+ **소비자에 대 한 지원의 수준이 필요 한가요?**  
+ 소비자가 매우 기본적인; 수 있습니다. 반면 다른 매우 복잡할 수 있습니다. OLE DB 개체의 기능 속성으로 지정 됩니다. ATL OLE DB 소비자 마법사를 사용 하 여 공급자를 만들려면 소비자 또는 공급자 마법사를 만들 때 기능의 표준 집합을 부여할 수에 대 한 적절 한 개체 속성을 설정 합니다. 그러나 마법사 생성 소비자 또는 공급자 클래스 작업 수 필요한 모든 지원 하지 않는 경우 해야 해당 클래스에 대 한 인터페이스를 참조 하는 [OLE DB 템플릿 라이브러리](../../data/oledb/ole-db-templates.md)합니다. 이러한 인터페이스를 사용 하 여 보다 쉽게 있습니다에 대 한 추가 구현을 제공 하는 원시 OLE DB 인터페이스를 래핑합니다.  
   
- 예를 들어, 행 집합의 데이터를 업데이트하려고 하지만 마법사로 소비자를 만들었을 때 기능을 지정하는 것을 잊은 경우, 명령 개체에서 **DBPROP\_IRowsetChange** 및 **DBPROP\_UPDATABILITY** 속성을 설정하여 팩트 후에 기능을 지정할 수 있습니다.  그러면 행 집합이 작성되었을 때 `IRowsetChange` 인터페이스를 갖게 됩니다.  
+ 예를 들어 행 집합의 데이터를 업데이트 하지만 마법사를 사용 하 여 소비자를 만든 경우이 값을 지정 하지 않았습니다 수 기능 사후 설정 하 여 지정 된 **DBPROP_IRowsetChange** 및  **DBPROP_UPDATABILITY** 명령 개체의 속성입니다. 그런 다음 행 집합을 만든 경우에 `IRowsetChange` 인터페이스입니다.  
   
- **Do you have older code using another data access technology \(ADO, ODBC, or DAO\)?**  
- 기술의 조합\(ADO 구성 요소를 OLE DB 구성 요소와 함께 사용하거나, ODBC 코드를 OLE DB에 마이그레이션하는 등\)을 가정하여 볼 때 Visual C\+\+ 설명서만으로는 모든 상황에 대해 설명할 수 없습니다.  그러나 다음 Microsoft 웹 사이트에서 다양한 시나리오에 대한 많은 기사를 참조할 수 있습니다.  
+ **다른 데이터 액세스 기술 (예: ADO, ODBC 또는 DAO)를 사용 하 여 이전 코드 있습니까?**  
+ 기술 (예: ADO 구성 요소를 사용 하 여 OLE DB 구성 요소와 및 OLE DB로 ODBC 코드 마이그레이션)의 가능한 조합을 지정 된 경우 Visual c + + 설명서의 범위를 벗어납니다 모든 상황을 포함 합니다. 그러나 많은 기사 다양 한 시나리오는 다음 Microsoft 웹 사이트에서 사용할 수 있습니다.  
   
--   [Microsoft Help and Support](http://go.microsoft.com/fwlink/?LinkId=148218)  
+-   [Microsoft 도움말 및 지원](http://go.microsoft.com/fwlink/?linkid=148218)  
   
--   [Microsoft Data Access Technical Articles Overview](http://go.microsoft.com/fwlink/?LinkId=148217)  
+-   [Microsoft 데이터 액세스 기술 문서 개요](http://go.microsoft.com/fwlink/?linkid=148217)  
   
--   [Visual Studio Solution Center](http://go.microsoft.com/fwlink/?LinkId=148215)  
+-   [Visual Studio 솔루션 센터](http://go.microsoft.com/fwlink/?linkid=148215)  
   
--   [Search Microsoft.com](http://search.microsoft.com/)  
+-   [Microsoft.com 검색](http://search.microsoft.com/)  
   
- 검색을 수행하려면 시나리오에 가장 알맞은 키워드 조합을 입력하십시오. 예를 들어 OLE DB 공급자에서 ADO 개체를 사용하는 경우에는 **ADO AND "OLE DB"**로 부울 검색을 시도하십시오.  If you wanted to migrate older DAO code to ODBC, select "all words" and specify strings such as **migrating DAO**.  
+ 검색을 수행 하면 시나리오;에 가장 잘 맞는 키워드의 조합의 입력 하십시오. 예: ADO 개체는 OLE DB 공급자와 함께 사용할 때 부울 검색을 시도와 **ADO 및 "OLE DB"**합니다. 이전 DAO 코드 ODBC 마이그레이션하려는 경우 "모든 단어"를 선택 하 고 문자열을와 같은 지정 **마이그레이션 DAO**합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 프로그래밍](../../data/oledb/ole-db-programming.md)   
  [OLE DB 프로그래밍 개요](../../data/oledb/ole-db-programming-overview.md)

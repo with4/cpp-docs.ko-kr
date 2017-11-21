@@ -1,35 +1,35 @@
 ---
-title: "방법: 네이티브 코드에서 MSIL이 throw한 예외 catch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "예외 catch, MSIL에서 throw"
-  - "예외, catch"
-  - "MSIL, 네이티브 코드에서 예외 catch"
+title: "방법: MSIL에서 Throw 되는 네이티브 코드에서 예외를 Catch | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exceptions, catching
+- catching exceptions, thrown from MSIL
+- MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dbb17c9ed16f771f60054bcde1f8ea5145047c35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 네이티브 코드에서 MSIL이 throw한 예외 catch
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In native code, you can catch native C\+\+ exception from MSIL.  You can catch CLR exceptions with `__try` and `__except`.  
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>방법: 네이티브 코드에서 MSIL이 throw한 예외 catch
+네이티브 코드에서 MSIL에서 네이티브 c + + 예외를 catch 할 수 있습니다.  와 CLR 예외를 catch 할 수 있습니다 `__try` 및 `__except`합니다.  
   
- 자세한 내용은 [구조적 예외 처리](../cpp/structured-exception-handling-c-cpp.md) 및 [C\+\+ 예외 처리](../cpp/cpp-exception-handling.md)를 참조하십시오.  
+ 자세한 내용은 참조 [구조적 예외 처리 (C/c + +)](../cpp/structured-exception-handling-c-cpp.md) 및 [c + + 예외 처리](../cpp/cpp-exception-handling.md)합니다.  
   
-## 예제  
- The following sample defines a module with two functions, one that throws a native exception, and another that throws an MSIL exception.  
+## <a name="example"></a>예제  
+ 다음 샘플 MSIL 예외를 throw 하는 두 함수는 네이티브 예외를 throw 하 고 다른을 사용 하 여 모듈을 정의 합니다.  
   
 ```  
 // catch_MSIL_in_native.cpp  
@@ -43,8 +43,8 @@ void Test2() {
 }  
 ```  
   
-## 예제  
- The following sample defines a module that catches a native and MSIL exception.  
+## <a name="example"></a>예제  
+ 다음 샘플 네이티브와 MSIL 예외를 catch 하는 모듈을 정의 합니다.  
   
 ```  
 // catch_MSIL_in_native_2.cpp  
@@ -79,7 +79,10 @@ int main() {
 }  
 ```  
   
-  **error**  
-**caught an exception**   
-## 참고 항목  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+```Output  
+error  
+caught an exception  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [예외 처리](../windows/exception-handling-cpp-component-extensions.md)

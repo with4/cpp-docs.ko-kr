@@ -1,41 +1,39 @@
 ---
-title: "list::to_array(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 멤버[STL/CLR]"
+title: 'list:: to_array (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 3ea7b90c-127b-43cd-804b-019b86b77582
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 113c6330e9fd3e82c83e2d4bf018e4ea101c64c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::to_array(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copies the controlled sequence to a new array.  
+# <a name="listtoarray-stlclr"></a>list::to_array(STL/CLR)
+제어 되는 새 배열에 복사합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## 설명  
- The member function returns an array containing the controlled sequence.  You use it to obtain a copy of the controlled sequence in array form.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 배열 형식으로 제어 되는 시퀀스의 복사본을 사용 하면 됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_to_array.cpp   
@@ -66,12 +64,15 @@ int main()
   
 ```  
   
-  **a b c d**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+a b c d  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list(STL/CLR)](../dotnet/list-stl-clr.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3832
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3832
+f1_keywords: C3832
+dev_langs: C++
+helpviewer_keywords: C3832
 ms.assetid: 9a41df82-42e1-4908-958c-76cff9235de0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 643334b93baf814f5b43958f574b0e25d8821e04
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3832"></a>컴파일러 오류 C3832
 'type library': 형식 라이브러리 처럼 보입니다. 32 비트 포인터 용으로 작성 된 'ptrsize' 한정자를 변경 하십시오.  

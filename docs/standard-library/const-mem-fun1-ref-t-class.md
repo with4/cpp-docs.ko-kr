@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::const_mem_fun1_ref_t
-- const_mem_fun1_ref_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- const_mem_fun1_ref_t class
+f1_keywords: xfunctional/std::const_mem_fun1_ref_t
+dev_langs: C++
+helpviewer_keywords: const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: d66879ccf3c8fdf572b3f636706b0128a489df5c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
-
+ms.openlocfilehash: 935584fd4033bfaadc0b47a1ddad15d1d20f6b6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t 클래스
 참조 인수를 사용하여 초기화할 때 단일 인수를 사용하는 **const** 멤버 함수를 이항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다.  
@@ -83,7 +63,6 @@ class const_mem_fun1_ref_t
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -1,34 +1,33 @@
 ---
 title: "IErrorRecordsImpl 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IErrorRecordsImpl"
-  - "ATL.IErrorRecordsImpl"
-  - "IErrorRecordsImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IErrorRecordsImpl 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IErrorRecordsImpl
+- ATL.IErrorRecordsImpl
+- IErrorRecordsImpl
+dev_langs: C++
+helpviewer_keywords: IErrorRecordsImpl class
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6bd2b342f2e7b29103b08c67fa973ed4a8c64869
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IErrorRecordsImpl 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implements the OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interface, adding records to and retrieving records from a data member \([m\_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)\) of type **CAtlArray\<**`RecordClass`**\>**.  
+# <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 클래스
+OLE DB 구현 [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) 레코드를 추가 하 고 데이터 멤버에서 레코드를 검색 하는 인터페이스 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 형식의 **CAtlArray <** `RecordClass`**>**.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <  
@@ -38,45 +37,45 @@ template <
 class IErrorRecordsImpl : public IErrorRecords  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- A class derived from `IErrorRecordsImpl`.  
+ 클래스에서 파생 `IErrorRecordsImpl`합니다.  
   
  `RecordClass`  
- A class that represents an OLE DB error object.  
+ OLE DB 오류 개체를 나타내는 클래스입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
-  
-|||  
-|-|-|  
-|[GetErrorDescriptionString](../../data/oledb/ierrorrecordsimpl-geterrordescriptionstring.md)|Gets the error description string from an error record.|  
-|[GetErrorGUID](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|Gets the error GUID from an error record.|  
-|[GetErrorHelpContext](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|Gets the help context ID from an error record.|  
-|[GetErrorHelpFile](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|Gets the full pathname of the help file from an error record.|  
-|[GetErrorSource](../../data/oledb/ierrorrecordsimpl-geterrorsource.md)|Gets the error source code from an error record.|  
-  
-### Interface Methods  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[AddErrorRecord](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|Adds a record to the OLE DB error object.|  
-|[GetBasicErrorInfo](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|Returns basic information about the error, such as the return code and provider\-specific error number.|  
-|[GetCustomErrorObject](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|Returns a pointer to an interface on a custom error object.|  
-|[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|Returns an [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interface pointer on the specified record.|  
-|[GetErrorParameters](../../data/oledb/cdberrorinfo-geterrorparameters.md)|Returns the error parameters.|  
-|[GetRecordCount](../Topic/CDaoRecordset::GetRecordCount.md)|Returns the number of records in the OLE DB record object.|  
+|[GetErrorDescriptionString](../../data/oledb/ierrorrecordsimpl-geterrordescriptionstring.md)|오류 레코드에서 오류 설명 문자열을 가져옵니다.|  
+|[GetErrorGUID](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|오류 레코드에서 오류를 GUID를 가져옵니다.|  
+|[GetErrorHelpContext](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|오류 레코드에서 도움말 컨텍스트 ID를 가져옵니다.|  
+|[GetErrorHelpFile](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|오류 레코드에서 도움말 파일의 전체 경로 이름을 가져옵니다.|  
+|[GetErrorSource](../../data/oledb/ierrorrecordsimpl-geterrorsource.md)|오류 레코드에서 오류 소스 코드를 가져옵니다.|  
   
-### 데이터 멤버  
+### <a name="interface-methods"></a>인터페이스 메서드  
   
 |||  
 |-|-|  
-|[m\_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|An array of error records.|  
+|[AddErrorRecord](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|OLE DB 오류 개체에 레코드를 추가합니다.|  
+|[GetBasicErrorInfo](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|반환 코드 및 공급자 특정 오류 번호와 같은 오류에 대 한 기본 정보를 반환 합니다.|  
+|[GetCustomErrorObject](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|사용자 지정 오류 개체에는 인터페이스에 대 한 포인터를 반환합니다.|  
+|[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|반환 된 [IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx) 지정된 된 레코드에 대 한 인터페이스 포인터입니다.|  
+|[GetErrorParameters](../../data/oledb/cdberrorinfo-geterrorparameters.md)|오류 매개 변수를 반환합니다.|  
+|[GetRecordCount](../../mfc/reference/cdaorecordset-class.md#getrecordcount)|OLE DB 레코드 개체의 레코드 수를 반환 합니다.|  
   
-## 요구 사항  
- **Header:** atldb.h  
+### <a name="data-members"></a>데이터 멤버  
   
-## 참고 항목  
+|||  
+|-|-|  
+|[m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|오류 레코드의 배열입니다.|  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
+  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

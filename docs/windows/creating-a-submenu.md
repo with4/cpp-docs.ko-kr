@@ -1,30 +1,30 @@
 ---
-title: "Creating a Submenu | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "submenus"
-  - "submenus, creating"
-  - "menus, creating"
+title: "하위 메뉴 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- submenus
+- submenus, creating
+- menus, creating
 ms.assetid: fb95fdfd-0a80-459d-8c5c-a4e8bac9f56a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fad2e10a8e6a06069bfb4bda269962aa4268e39a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Creating a Submenu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 하위 메뉴를 만들려면  
+# <a name="creating-a-submenu"></a>하위 메뉴 만들기
+### <a name="to-create-a-submenu"></a>하위 메뉴를 만들려면  
   
 1.  하위 메뉴를 만들려는 메뉴 명령을 클릭합니다.  
   
@@ -32,11 +32,11 @@ caps.handback.revision: 11
   
 3.  하위 메뉴에 메뉴 명령을 더 추가합니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 *.NET Framework 개발자 가이드*에서 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하세요.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.*  
   
- **요구 사항**  
+ **Requirements**  
   
  Win32  
   
-## 참고 항목  
- [Menu Editor](../mfc/menu-editor.md)
+## <a name="see-also"></a>참고 항목  
+ [메뉴 편집기](../windows/menu-editor.md)

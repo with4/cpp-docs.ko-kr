@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocale/std::ctype_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- ctype_byname class
+f1_keywords: xlocale/std::ctype_byname
+dev_langs: C++
+helpviewer_keywords: ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: f1fb3ef836361a4d98ac8c7ab764da5e3fd43c7a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 5f57ef8eadf5ea963ef4a8b8c1eaa7b6ec48ee6d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ctypebyname-class"></a>ctype_byname 클래스
 이 파생 템플릿 클래스는 지정된 로캘의 ctype 패싯으로 사용할 수 있는 개체를 설명합니다. 이 클래스를 사용하여 문자를 분류하고 대/소문자와 네이티브 및 로캘 지정 문자 집합 사이에서 문자를 변환할 수 있습니다.  
@@ -60,7 +55,6 @@ protected:
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

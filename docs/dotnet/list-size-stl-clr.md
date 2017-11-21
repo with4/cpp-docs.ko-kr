@@ -1,41 +1,39 @@
 ---
-title: "list::size(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size 멤버[STL/CLR]"
+title: 'list:: size (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 409e39fb-4468-44bb-b179-52c90e2fa293
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a2bca897bb349b032224639e6b5196582e7feff4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::size(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-요소의 수를 셉니다.  
+# <a name="listsize-stlclr"></a>list::size(STL/CLR)
+요소 수를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 size_type size();  
 ```  
   
-## 설명  
- The member function returns the length of the controlled sequence.  You use it to determine the number of elements currently in the controlled sequence.  If all you care about is whether the sequence has nonzero size, see [list::empty](../dotnet/list-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 제어 되는 시퀀스의 현재 요소 수를 확인 하려면 사용 합니다. 모든 경우에 중요 한 여부 시퀀스 크기가 0이 아닌 참조 [list:: empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_size.cpp   
@@ -68,15 +66,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3 starting with 3**  
-**size\(\) \= 0 after clearing**  
-**size\(\) \= 2 after adding 2**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::empty](../dotnet/list-empty-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::empty(STL/CLR)](../dotnet/list-empty-stl-clr.md)

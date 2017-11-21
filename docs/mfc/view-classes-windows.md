@@ -1,93 +1,93 @@
 ---
-title: "뷰 클래스(Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.view"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "폼 및 레코드 뷰"
-  - "분할 창 클래스"
-  - "뷰 클래스, Windows"
+title: "클래스 (Windows) 보기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.classes.view
+dev_langs: C++
+helpviewer_keywords:
+- form and record views [MFC]
+- splitter window classes [MFC]
+- view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0148ead7a978389f763efbe9ee6306ec7a5839cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 뷰 클래스(Windows)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`CView` and its derived classes are child windows that represent the client area of a frame window.  Views show data and accept input for a document.  
+# <a name="view-classes-windows"></a>뷰 클래스(Windows)
+`CView`및 그 파생된 클래스는 프레임 창의 클라이언트 영역을 나타내는 자식 창. 뷰는 데이터를 표시 및 문서에 대 한 입력을 허용 합니다.  
   
- A view class is associated with a document class and a frame window class using a document\-template object.  
+ 뷰 클래스 문서 클래스 및 문서 템플릿 개체를 사용 하 여 프레임 창 클래스와 관련이 있습니다.  
   
  [CView](../mfc/reference/cview-class.md)  
- The base class for application\-specific views of a document's data.  Views display data and accept user input to edit or select the data.  Derive your view class or classes from `CView`.  
+ 문서 데이터의 응용 프로그램 관련 보기에 대 한 기본 클래스입니다. 뷰는 데이터를 표시 및 편집 하거나 데이터를 선택 하려면 사용자 입력을 허용 합니다. 뷰 클래스 또는 클래스에서 파생 `CView`합니다.  
   
  [CScrollView](../mfc/reference/cscrollview-class.md)  
- The base class for views with scrolling capabilities.  Derive your view class from `CScrollView` for automatic scrolling.  
+ 스크롤 기능이 뷰에 대 한 기본 클래스입니다. 뷰 클래스를 파생 `CScrollView` 자동 스크롤할 수 있도록 합니다.  
   
-## Form and Record Views  
- Form views are also scrolling views.  They are based on a dialog box template.  
+## <a name="form-and-record-views"></a>폼 및 레코드 뷰  
+ 폼 뷰 뷰 스크롤도 됩니다. 대화 상자 템플릿에 기반 합니다.  
   
- Record views are derived from form views.  In addition to the dialog box template, they also have a connection to a database.  
+ 레코드 뷰는 폼 보기에서 파생 됩니다. 대화 상자 템플릿 외에 갖게 데이터베이스에 연결 됩니다.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- A scroll view whose layout is defined in a dialog box template.  Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
+ 레이아웃에 대화 상자 템플릿을 정의 하는 스크롤 보기입니다. 클래스를 파생 `CFormView` 대화 상자 템플릿을 기반으로 사용자 인터페이스를 구현 합니다.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Provides a form view directly connected to a Data Access Object \(DAO\) recordset object.  Like all form views, a `CDaoRecordView` is based on a dialog box template.  
+ 폼을 제공 보기 개체 DAO (Data Access) 레코드 집합 개체에 직접 연결 합니다. 모든 폼 보기와 같은 한 `CDaoRecordView` 대화 상자 템플릿을 기반으로 합니다.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- Provides a form view directly connected to an Open Database Connectivity \(ODBC\) recordset object.  Like all form views, a `CRecordView` is based on a dialog box template.  
+ 폼을 제공 ODBC Open Database Connectivity () 레코드 집합 개체에 직접 연결 된입니다. 모든 폼 보기와 같은 한 `CRecordView` 대화 상자 템플릿을 기반으로 합니다.  
   
  [CHtmlEditView](../mfc/reference/chtmleditview-class.md)  
- A form view that provides the functionality of the WebBrowser HTML editing platform.  
+ HTML WebBrowser 편집 플랫폼의 기능을 제공 하는 폼 보기입니다.  
   
-## Control Views  
- Control views display a control as their view.  
+## <a name="control-views"></a>컨트롤 뷰  
+ 뷰 컨트롤의 보기도 컨트롤을 표시합니다.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  
- The base class for all views associated with Windows controls.  The views based on controls are described below.  
+ Windows 컨트롤과 관련 된 모든 보기에 대 한 기본 클래스입니다. 컨트롤에 따라 보기에 대 한 설명은 다음과 같습니다.  
   
  [CEditView](../mfc/reference/ceditview-class.md)  
- A view that contains a Windows standard edit control \(see [CEdit](../mfc/reference/cedit-class.md)\).  Edit controls support text editing, searching, replacing, and scrolling capabilities.  
+ Windows 표준에 포함 된 보기 편집 컨트롤 (참조 [CEdit](../mfc/reference/cedit-class.md)). 지원 텍스트 편집 컨트롤, 검색, 교체 및 스크롤 기능을 편집 합니다.  
   
  [CRichEditView](../mfc/reference/cricheditview-class.md)  
- A view that contains a Windows rich edit control \(see [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\).  In addition to the capabilities of an edit control, rich edit controls support fonts, colors, paragraph formatting, and embedded OLE objects.  
+ 풍부한 Windows를 포함 하는 뷰 편집 컨트롤 (참조 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). 편집 컨트롤의 기능 외에 서식 있는 편집 컨트롤 지원 글꼴, 색, 단락 서식 지정 및 포함 된 OLE 개체입니다.  
   
  [CListView](../mfc/reference/clistview-class.md)  
- A view that contains a Windows list control \(see [CListCtrl](../mfc/reference/clistctrl-class.md)\).  A list control displays a collection of items, each consisting of an icon and a label, in a manner similar to the right pane of File Explorer.  
+ Windows 목록 컨트롤을 포함 하는 뷰 (참조 [CListCtrl](../mfc/reference/clistctrl-class.md)). 목록 컨트롤 아이콘 및 레이블 파일 탐색기의 오른쪽 창에 비슷한 방식으로 구성 된 각 항목의 컬렉션을 표시 합니다.  
   
  [CTreeView](../mfc/reference/ctreeview-class.md)  
- A view that contains a Windows tree control \(see [CTreeCtrl](../mfc/reference/ctreectrl-class.md)\).  A tree control displays a hierarchical list of icons and labels arranged in a manner similar to the left pane of File Explorer.  
+ Windows 트리 컨트롤을 포함 하는 뷰 (참조 [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). 트리 컨트롤에 아이콘과 레이블을 파일 탐색기의 왼쪽된 창에 비슷한 방식으로 정렬의 계층 목록을 표시 합니다.  
   
-## Related Classes  
- `CSplitterWnd` allows you to have multiple views within a single frame window.  `CPrintDialog` and `CPrintInfo` support the print and print preview ability of views.  `CRichEditDoc` and `CRichEditCntrItem` are used with `CRichEditView` to implement OLE container capabilities.  
+## <a name="related-classes"></a>관련된 클래스  
+ `CSplitterWnd`단일 한 프레임 창 내에서 여러 뷰를 포함할 수 있습니다. `CPrintDialog`및 `CPrintInfo` 뷰의 인쇄 및 인쇄 미리 보기 기능을 지원 합니다. `CRichEditDoc`및 `CRichEditCntrItem` 와 함께 사용 됩니다 `CRichEditView` OLE 컨테이너 기능을 구현 하 합니다.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
- A window that the user can split into multiple panes.  These panes can be resizable by the user or fixed size.  
+ 사용자를 여러 개의 창으로 분할할 수 있는 창입니다. 이러한 창이 고 사용자 또는 고정된 크기가 크기 조정할 수 있습니다.  
   
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
- Provides a standard dialog box for printing a file.  
+ 파일 인쇄를 위한 표준 대화 상자를 제공 합니다.  
   
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
- A structure containing information about a print or print preview job.  Used by `CView`'s printing architecture.  
+ 인쇄 또는 인쇄 미리 보기 작업에 대 한 정보를 포함 하는 구조입니다. 사용 하는 `CView`의 아키텍처를 인쇄 합니다.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Maintains the list of OLE client items that are in a `CRichEditView`.  
+ 에 있는 OLE 클라이언트 항목의 목록을 유지 관리는 `CRichEditView`합니다.  
   
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- Provides client\-side access to an OLE item stored in a `CRichEditView`.  
+ 항목에 저장 하는 OLE에 클라이언트 액세스를 제공는 `CRichEditView`합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [클래스 개요](../mfc/class-library-overview.md)
+

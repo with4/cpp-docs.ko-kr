@@ -1,39 +1,37 @@
 ---
 title: "BSCMAKE 오류 BK1506 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "BK1506"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BK1506"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: BK1506
+dev_langs: C++
+helpviewer_keywords: BK1506
 ms.assetid: f51f8cea-f8fc-4323-bcf2-b7bd119792ee
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c792f28b29ca9abf8594fbe6e351c4782b149a61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# BSCMAKE 오류 BK1506
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'filename' 파일을 열 수 없습니다. \[: reason\]  
+# <a name="bscmake-error-bk1506"></a>BSCMAKE 오류 BK1506
+'filename' 파일을 열 수 없습니다 [: 이유]  
   
- BSCMAKE가 파일을 열 수 없습니다.  
+ BSCMAKE는 파일을 열 수 없습니다.  
   
-### 문제 해결을 위하여 확인해 볼 수 있는 원인  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>다음과 같은 가능한 원인을 확인하여 수정하려면  
   
-1.  파일이 다른 프로세스에서 잠겼습니다.  `reason` 내용이 **사용 권한이 거부되었습니다**이면 브라우저가 해당 파일을 사용 중일 수도 있습니다.  찾아보기 창을 닫고 다시 빌드하십시오.  
+1.  다른 프로세스에 의해 잠겨 파일입니다. 경우 `reason` 에 따르면 **사용 권한이 거부**, 브라우저가 파일을 사용 중일 수 있습니다. 찾아보기 창을 닫고 다시 빌드하십시오.  
   
 2.  디스크가 꽉 찼습니다.  
   
-3.  하드웨어 오류입니다.  
+3.  하드웨어 오류가 발생 합니다.  
   
-4.  지정한 출력 파일 이름은 기존 하위 디렉터리의 이름과 동일합니다.
+4.  지정된 된 출력 파일 이름이 같은 기존 하위 디렉터리에 있습니다.

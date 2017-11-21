@@ -1,31 +1,31 @@
 ---
-title: "소비자에게 반환되는 열을 동적으로 결정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "책갈피[C++], 동적으로 열 결정"
-  - "동적으로 열 결정[C++]"
+title: "소비자에 게 반환 동적으로 열 결정 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bookmarks [C++], dynamically determining columns
+- dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ec9ba16d4d600a06cdc5e4fa3de5bf40a67de8d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 소비자에게 반환되는 열을 동적으로 결정
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-PROVIDER\_COLUMN\_ENTRY 매크로는 일반적으로 **IColumnsInfo::GetColumnsInfo** 호출을 처리합니다.  그러나 소비자는 책갈피를 사용하도록 선택할 수도 있으므로 공급자는 소비자가 책갈피를 요청하는지 여부에 따라 반환되는 열을 변경할 수 있어야 합니다.  
+# <a name="dynamically-determining-columns-returned-to-the-consumer"></a>소비자에게 반환되는 열을 동적으로 결정
+PROVIDER_COLUMN_ENTRY 매크로 정상적으로 처리는 **icolumnsinfo:: Getcolumnsinfo** 호출 합니다. 그러나 소비자는 책갈피를 사용 하도록 선택할 수도, 때문에 공급자는 소비자는 책갈피를 요청 하는 여부에 따라 반환 되는 열을 변경 하려면 수 있어야 합니다.  
   
- **IColumnsInfo::GetColumnsInfo** 호출을 처리하려면 MyProviderRS.h의 `CAgentMan` 사용자 레코드에서 `GetColumnInfo` 함수를 정의하는 PROVIDER\_COLUMN\_MAP을 삭제하고 이를 사용자의 `GetColumnInfo` 함수에 대한 정의로 바꿉니다.  
+ 처리 하는 **icolumnsinfo:: Getcolumnsinfo** 호출, 삭제 하는 함수를 정의 하는 PROVIDER_COLUMN_MAP `GetColumnInfo`에서 `CAgentMan` 사용자 MyProviderRS.h의 기록 및 직접에 대 한 정의로 바꾸기 `GetColumnInfo` 함수:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -48,11 +48,11 @@ public:
 };  
 ```  
   
- 그런 다음 다음의 코드와 같이 MyProviderRS.cpp에 `GetColumnInfo` 함수를 구현합니다.  
+ 그런 다음 구현는 `GetColumnInfo` 다음 코드에 나와 있는 것 처럼 MyProviderRS.cpp에서 작동 합니다.  
   
- `GetColumnInfo`는 먼저 **DBPROP\_BOOKMARKS** OLE DB 속성이 설정되었는지 확인합니다.  `GetColumnInfo`는 이 속성을 가져오기 위해 행 집합 개체에 대한 포인터\(`pRowset`\)를 사용합니다.  `pThis` 포인터는 행 집합을 만든 클래스를 나타내고, 이 클래스는 속성 맵이 저장된 클래스입니다.  `GetColumnInfo`는 `pThis` 포인터를 `RMyProviderRowset` 포인터로 변환합니다.  
+ `GetColumnInfo`먼저 확인 하는 경우 OLE DB 속성인 **DBPROP_BOOKMARKS** 설정 됩니다. 속성을 가져오려면 `GetColumnInfo` 포인터를 사용 하 여 (`pRowset`) 행 집합 개체에 있습니다. `pThis` 포인터는 클래스 속성 맵에 저장 된 클래스는 행 집합을 생성 하는 클래스를 나타냅니다. `GetColumnInfo`대입문에서 `pThis` 에 대 한 포인터는 `RMyProviderRowset` 포인터입니다.  
   
- `GetColumnInfo`는 **DBPROP\_BOOKMARKS** 속성을 확인하기 위해 `IRowsetInfo` 인터페이스를 사용합니다. 이 인터페이스는 `pRowset` 인터페이스에 `QueryInterface`를 호출하여 확보할 수 있습니다.  또는 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) 메서드를 대신 사용해도 됩니다.  
+ 확인 하려면는 **DBPROP_BOOKMARKS** 속성을 `GetColumnInfo` 사용 하 여는 `IRowsetInfo` 인터페이스를 호출 하 여 얻을 수 있는 `QueryInterface` 에 `pRowset` 인터페이스입니다. ATL을 사용할 수는 대신 [CComQIPtr](../../atl/reference/ccomqiptr-class.md) 메서드 대신 합니다.  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -113,7 +113,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- 이 예제는 정적 배열을 사용하여 열 정보를 포함합니다.  소비자에게 책갈피 열이 필요하지 않는 경우 배열의 항목 하나가 사용되지 않습니다.  이 정보를 처리하려면 ADD\_COLUMN\_ENTRY와 ADD\_COLUMN\_ENTRY\_EX라는 두 배열 매크로를 만듭니다.  ADD\_COLUMN\_ENTRY\_EX는 책갈피 열을 지정할 경우 필요한 `flags`라는 추가 매개 변수를 가져옵니다.  
+ 이 예제에서는 정적 배열을 사용 하 여 열 정보를 포함 하도록 합니다. 소비자는 책갈피 열을 원하지 않는 경우 배열에 있는 하나의 항목을 사용 하지 않습니다. 정보를 처리 하려면 두 배열 매크로 만들면: ADD_COLUMN_ENTRY 및 ADD_COLUMN_ENTRY_EX 합니다. 추가 매개 변수를 사용 하는 ADD_COLUMN_ENTRY_EX `flags`, 즉 책갈피 열을 지정 하는 경우에 필요 합니다.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -146,7 +146,7 @@ precision, scale, guid, dataClass, member, flags) \
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- `GetColumnInfo` 함수에서 책갈피 매크로는 다음과 같이 사용됩니다.  
+ 에 `GetColumnInfo` 책갈피 매크로 함수를 다음과 같이 사용 됩니다.  
   
 ```  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
@@ -154,7 +154,7 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- 이제 향상된 공급자를 컴파일하고 실행할 수 있습니다.  공급자를 테스트하려면 [단순 소비자 구현](../../data/oledb/implementing-a-simple-consumer.md)에서 설명하는 대로 테스트 소비자를 수정합니다.  공급자와 함께 테스트 소비자를 실행합니다.  **Test Consumer** 대화 상자의 **Run** 단추를 클릭하여 테스트 소비자가 공급자에서 적절한 문자열을 검색하는지 확인합니다.  
+ 이제 컴파일 및 향상 된 공급자를 실행할 수 있습니다. 에 설명 된 대로 공급자를 테스트 하려면 테스트 소비자를 수정 [단순 소비자 구현](../../data/oledb/implementing-a-simple-consumer.md)합니다. 테스트 소비자는 공급자와 함께 실행 합니다. 클릭할 때 테스트 소비자의 공급자에서 적절 한 문자열 검색 있는지 확인 하십시오.는 **실행** 단추는 **테스트 소비자** 대화 상자.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [단순한 읽기 전용 공급자의 기능 향상](../../data/oledb/enhancing-the-simple-read-only-provider.md)

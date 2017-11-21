@@ -1,80 +1,89 @@
 ---
-title: "방법: parallel_invoke를 사용하여 병렬 작업 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parallel_invoke 함수, 예제"
-  - "여러 함수를 병렬로 호출[동시성 런타임]"
+title: "방법: parallel_invoke 병렬 작업 실행을 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parallel_invoke function, example
+- calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2190d7809791fbc66f6070eb3ae721ec1bc0a04f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: parallel_invoke를 사용하여 병렬 작업 실행
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>방법: parallel_invoke를 사용하여 병렬 작업 실행
+사용 하는 방법을 보여 주는이 예제는 [concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) 공유 데이터 원본에 여러 작업을 수행 하는 프로그램의 성능을 향상 시키기 위해 알고리즘입니다. 소스를 수정 하는 작업을 하기 때문에 이러한 수 병렬 실행 간단 하 게에서 합니다.  
 
-이 예제에서는 [concurrency::parallel\_invoke](../Topic/parallel_invoke%20Function.md) 알고리즘을 사용하여 공유 데이터 소스에 대해 여러 작업을 수행하는 프로그램의 성능을 향상시키는 방법을 보여 줍니다.  어느 작업도 소스를 수정하지는 않으므로 간단한 방법으로 작업을 병렬로 실행할 수 있습니다.  
   
-## 예제  
- `MyDataType` 형식의 변수를 만들고 함수를 호출하여 해당 변수를 초기화한 다음 해당 데이터에 대해 여러 개의 긴 작업을 수행하는 다음 코드 예제를 살펴봅니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 형식 변수를 만들고를 `MyDataType`해당 변수를 초기화 하는 함수를 호출 하 고 다음 해당 데이터에 대해 여러 개의 긴 작업을 수행 합니다.  
   
- [!code-cpp[concrt-parallel-word-mining#1](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-invoke-to-execute-parallel-operations_1.cpp)]  
+ [!code-cpp[concrt-parallel-word-mining#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_1.cpp)]  
   
- `lengthy_operation1`, `lengthy_operation2` 및 `lengthy_operation3` 함수가 `MyDataType` 변수를 수정하지 않는 경우 이러한 함수를 추가로 수정하지 않고 병렬로 실행할 수 있습니다.  
+ 경우는 `lengthy_operation1`, `lengthy_operation2`, 및 `lengthy_operation3` 함수를 수정 하지 마십시오는 `MyDataType` 변수, 이러한 함수 수 병렬로 실행 될 추가로 수정 하지 않고 있습니다.  
   
-## 예제  
- 다음 예제에서는 이전 예제를 병렬로 실행하도록 수정합니다.  `parallel_invoke` 알고리즘은 각 작업을 병렬로 실행하고 모든 작업이 끝난 후 반환됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 동시에 실행 되도록 이전 예제를 수정 합니다. `parallel_invoke` 알고리즘 동시에 각 작업을 실행 하 고 모든 작업이 완료 된 후를 반환 합니다.  
   
- [!code-cpp[concrt-parallel-word-mining#2](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-invoke-to-execute-parallel-operations_2.cpp)]  
+ [!code-cpp[concrt-parallel-word-mining#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_2.cpp)]  
   
-## 예제  
- 다음 예제에서는 gutenberg.org의 Homer가 만든 *The Iliad*를 다운로드하고 해당 파일에 대해 여러 작업을 수행합니다.  이 예제에서는 먼저 이러한 작업을 연속으로 수행한 다음 동일한 작업을 병렬로 수행합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 다운로드 *The Iliad* gutenberg.org에서 Homer 하 여 해당 파일에 대해 여러 작업을 수행 하 고 있습니다. 이 예제에서는 먼저 이러한 작업을 순차적으로 수행 하 고 동시에 동일한 작업을 수행 합니다.  
   
- [!code-cpp[concrt-parallel-word-mining#3](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-invoke-to-execute-parallel-operations_3.cpp)]  
+ [!code-cpp[concrt-parallel-word-mining#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_3.cpp)]  
   
- 이 예제를 실행하면 다음과 같은 샘플 결과가 출력됩니다.  
+ 이 예제는 다음과 같은 샘플 출력을 생성합니다.  
   
-  **'The Iliad' 다운로드....**  
-**직렬 버전을 실행 하는 중... 953 ms 걸렸습니다.**  
-**병렬 버전을 실행 하는 중... 656 ms 걸렸습니다.**  
-**가장 일반적인 단어를 5 개 이상의 문자는 다음과 같습니다.**  
- **their \(953\)**  
- **shall \(444\)**  
- **which \(431\)**  
- **great \(398\)**  
- **Hector \(349\)**  
- **Achilles \(309\)**  
- **through \(301\)**  
- **these \(268\)**  
- **chief \(259\)**  
-**같은 첫 번째 문자는 단어의 긴 시퀀스입니다.**  
- **tented에 tempest를 통해**  
-**다음 감사 텍스트에 표시 됩니다.**  
- **반점 중지**  
- **속도 깊이**  
- **매끄러운 추락** 이 예제에서는 `parallel_invoke` 알고리즘을 사용하여 동일한 데이터 소스에 대해 동작하는 여러 함수를 호출합니다.  `parallel_invoke` 알고리즘을 사용하여 동일한 데이터에 대해 동작하는 함수뿐 아니라 임의의 함수 집합을 병렬로 호출할 수 있습니다.  
+```Output  
+Downloading 'The Iliad'...  
+ 
+Running serial version... took 953 ms.  
+Running parallel version... took 656 ms.  
+ 
+The most common words that have five or more letters are:  
+    their (953)  
+    shall (444)  
+    which (431)  
+    great (398)  
+    Hector (349)  
+    Achilles (309)  
+    through (301)  
+    these (268)  
+    chief (259)  
+The longest sequence of words that have the same first letter is:  
+    through the tempest to the tented  
+The following palindromes appear in the text:  
+    spots stops  
+    speed deeps  
+    keels sleek  
+```  
   
- `parallel_invoke` 알고리즘은 각 작업 함수를 병렬로 호출하므로 완료하는 데 가장 오랜 시간이 소요되는 함수에 의해 성능이 정해집니다. 즉, 런타임에서는 각 함수를 별도의 프로세서에서 처리합니다.  이 예제에서 사용 가능한 프로세서 수보다 많은 작업을 병렬로 수행하는 경우 각 프로세서에서 여러 작업을 실행할 수 있습니다.  이 경우에는 완료하는 데 가장 오랜 시간이 소요되는 작업 그룹에 의해 성능이 정해집니다.  
+ 사용 하 여이 예제는 `parallel_invoke` 알고리즘 여러 호출을 동일한 데이터 원본에 대해 작동 하는 함수입니다. 사용할 수는 `parallel_invoke` 뿐 아니라 동일한 데이터에서 작동 하는 동시에 모든 일련의 함수를 호출 하는 알고리즘입니다.  
   
- 이 예제에서는 세 개의 작업을 병렬로 수행하기 때문에 프로세서가 세 개를 초과하는 컴퓨터에서는 성능이 향상되지 않습니다.  성능을 향상시키기 위해서는 최장 실행 작업을 작은 작업으로 분할한 다음 해당 작업을 병렬로 실행하면 됩니다.  
+ 때문에 `parallel_invoke` 동시에 각 작업 함수를 호출 하는 알고리즘, 성능이 (즉, 처리 하는 경우 런타임에서 각 함수는 별도 프로세서에서)를 완료 하는 데 오랜 시간이 소요 하는 함수에 의해 제한 됩니다. 병렬 사용 가능한 프로세서 수보다 더 많은 작업을 수행 하는이 예제, 하는 경우 각 프로세서에서 여러 작업을 실행할 수 있습니다. 이 경우 성능은 완료 하는 데 오랜 시간이 소요 하는 작업 그룹으로 제한 됩니다.  
   
- 취소에 대한 지원이 필요하지 않은 경우에는 [concurrency::task\_group](../Topic/task_group%20Class.md) 및 [concurrency::structured\_task\_group](../../parallel/concrt/reference/structured-task-group-class.md) 클래스 대신 `parallel_invoke` 알고리즘을 사용할 수 있습니다.  `parallel_invoke` 알고리즘과 작업 그룹의 사용법을 비교하는 예제를 보려면 [방법: parallel\_invoke를 사용하여 병렬 정렬 루틴 작성](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)을 참조하십시오.  
+ 이 예에서는 세 가지 작업을 병렬로 수행, 때문에 성능이 향상 세 개 이상의 프로세서가 있는 컴퓨터 기대할 수 없습니다. 더 많은 성능 향상을 위해 더 작은 작업으로 가장 긴 실행 작업을 중단 하 고 동시에 해당 작업을 실행할 수 있습니다.  
   
-## 코드 컴파일  
- 코드를 컴파일하려면 해당 코드를 복사하여 Visual Studio 프로젝트 또는 `parallel-word-mining.cpp` 파일에 붙여 넣고 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.  
+ 사용할 수는 `parallel_invoke` 대신 알고리즘에서 [concurrency:: task_group](reference/task-group-class.md) 및 [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) 취소에 대 한 지원이 필요 없는 경우 클래스입니다. 사용법을 비교 하는 예제는 `parallel_invoke` 알고리즘과 작업 그룹 참조 [하는 방법: parallel_invoke를 사용 하 여 병렬 정렬 루틴 작성](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)합니다.  
   
- **cl.exe \/EHsc \/MD \/DUNICODE \/D\_AFXDLL parallel\-word\-mining.cpp**  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 코드를 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 하거나 라는 파일에 붙여 `parallel-word-mining.cpp` 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
   
-## 참고 항목  
+ **cl.exe /EHsc /MD/DUNICODE /D_AFXDLL 병렬 단어 mining.cpp**  
+  
+## <a name="see-also"></a>참고 항목  
  [병렬 알고리즘](../../parallel/concrt/parallel-algorithms.md)   
- [parallel\_invoke 함수](../Topic/parallel_invoke%20Function.md)
+ [parallel_invoke 함수](reference/concurrency-namespace-functions.md#parallel_invoke)
+
+

@@ -1,55 +1,57 @@
 ---
-title: "ilogb, ilogbf, ilogbl2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "ilogb"
-  - "ilogbf"
-  - "ilogbl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ilogb"
-  - "ilogbf"
-  - "ilogbl"
-  - "math/ilogb"
-  - "math/ilogbf"
-  - "math/ilogbl"
-helpviewer_keywords: 
-  - "ilogb 함수"
-  - "ilogbf 함수"
-  - "ilogbl 함수"
+title: "ilogb, ilogbf, ilogbl2 | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ilogb
+- ilogbf
+- ilogbl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ilogb
+- ilogbf
+- ilogbl
+- math/ilogb
+- math/ilogbf
+- math/ilogbl
+helpviewer_keywords:
+- ilogb function
+- ilogbf function
+- ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f0b2e084e27b951676fddfb20b53d5f74944089e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ilogb, ilogbf, ilogbl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-지정된 된 값의 비편향된 밑이 2 인 지 수를 나타내는 정수를 검색 합니다.  
+# <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
+지정된 값의 밑이 2인 비편향 지수를 나타내는 정수를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int ilogb(  
@@ -74,36 +76,36 @@ int ilogbl(
   
 ```  
   
-#### 매개 변수  
- \[in\] `x`  
+#### <a name="parameters"></a>매개 변수  
+ [in] `x`  
  지정된 값입니다.  
   
-## 반환 값  
- 성공 하는 경우의 밑이 2 인 지 수를 반환 `x` signed로 `int` 값입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공하면 `x`의 밑이 2인 지수를 부호 있는 `int` 값으로 반환합니다.  
   
- 그렇지 않으면 \< h. h \>에 정의 된 다음 값 중 하나를 반환 합니다.  
+ 그렇지 않으면 \<math.h>에 정의된 다음 값 중 하나를 반환합니다.  
   
 |입력|결과|  
-|--------|--------|  
-|±0|FP\_ILOGB0|  
-|±inf, ±nan 정해 지지 않은|FP\_ILOGBNAN|  
+|-----------|------------|  
+|±0|FP_ILOGB0|  
+|±inf, ±nan, indefinite|FP_ILOGBNAN|  
   
- 오류를 보고에 지정 된 대로 [\_matherr](../../c-runtime-library/reference/matherr.md)합니다.  
+ 오류는 [_matherr](../../c-runtime-library/reference/matherr.md)에 지정된 대로 보고됩니다.  
   
-## 주의  
- C \+ \+에서는 오버 로드를 허용 하므로의 오버 로드를 호출할 수 있습니다 `ilogb` 및 float 및 long double 형식을 반환 하 합니다. C 프로그램에서 `ilogb` 항상 걸리고 double 값을 반환 합니다.  
+## <a name="remarks"></a>설명  
+ C++는 오버로드를 허용하기 때문에 float 및 long double 형식을 사용하고 반환하는 `ilogb`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `ilogb`는 항상 Double을 사용하고 반환합니다.  
   
- 이 함수를 호출 하는 것은 해당 하는 호출 비슷합니다 `logb` 함수를 다음 반환 값을 캐스팅 `int`합니다.  
+ 이 함수를 호출하는 것은 해당 `logb` 함수를 호출한 다음 반환 값을 `int`로 캐스팅하는 것과 유사합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|루틴|C 헤더|C\+\+ 헤더|  
-|--------|----------|--------------|  
-|`ilogb`, `ilogbf`,  `ilogbl`|\<math.h\>|\<cmath\>|  
+|루틴|C 헤더|C++ 헤더|  
+|-------------|--------------|------------------|  
+|`ilogb`,                `ilogbf`,  `ilogbl`|\<math.h>|\<cmath>|  
   
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)를 참조하세요.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [frexp](../../c-runtime-library/reference/frexp.md)   
- [logb, logbf, logbl, \_logb, \_logbf](../../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)
+ [logb, logbf, logbl, _logb, _logbf](../../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)

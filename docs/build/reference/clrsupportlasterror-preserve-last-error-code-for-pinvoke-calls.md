@@ -1,95 +1,94 @@
 ---
-title: "/CLRSUPPORTLASTERROR(PInvoke 호출의 마지막 오류 코드 유지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLRSUPPORTLASTERROR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRSUPPORTLASTERROR 링커 옵션"
-  - "-CLRSUPPORTLASTERROR 링커 옵션"
+title: "-CLRSUPPORTLASTERROR (마지막 오류 코드 유지 PInvoke 호출의) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /CLRSUPPORTLASTERROR
+dev_langs: C++
+helpviewer_keywords:
+- /CLRSUPPORTLASTERROR linker option
+- -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 23f8215e94139417c6bd098b669904783fb88b36
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRSUPPORTLASTERROR(PInvoke 호출의 마지막 오류 코드 유지)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-기본적으로 활성화되어 있는 **\/CLRSUPPORTLASTERROR**를 사용하면 P\/Invoke 메커니즘을 통해 호출한 함수의 마지막 오류 코드를 저장할 수 있습니다. 이렇게 하면 **\/clr**를 사용하여 컴파일한 코드에서 DLL의 네이티브 함수를 호출할 수 있습니다.  
+# <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR(PInvoke 호출의 마지막 오류 코드 유지)
+**/CLRSUPPORTLASTERROR**, 기본적으로 켜져 있는, 사용 하 여 컴파일한 DLL에 코드에서 네이티브 함수를 호출할 수 있는 P/Invoke 메커니즘을 통해 호출 함수의 마지막 오류 코드는 전처리 **/clr**합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /CLRSUPPORTLASTERROR{:NO | SYSTEMDLL}  
 ```  
   
-## 설명  
- 마지막 오류 코드를 저장하면 성능이 저하될 수 있습니다.  마지막 오류 코드를 저장하는 데 따른 성능 저하를 방지하려면 **\/CLRSUPPORTLASTERROR:NO**를 사용하여 링크합니다.  
+## <a name="remarks"></a>설명  
+ 성능이 저하를 의미 마지막 오류 코드를 유지 합니다.  마지막 오류 코드를 유지 하면서의 성능에 영향이 발생 하지 않을 경우 사용 하 여 링크 **/CLRSUPPORTLASTERROR:NO**합니다.  
   
- 시스템 DLL의 함수에 대한 마지막 오류 코드만 저장하는 **\/CLRSUPPORTLASTERROR:SYSTEMDLL**을 사용하여 링크하면 성능에 미치는 영향을 최소화할 수 있습니다.  시스템 DLL은 다음 중 하나로 정의됩니다.  
+ 연결 하 여 성능에 미치는 영향을 최소화할 수 있습니다 **/CLRSUPPORTLASTERROR:SYSTEMDLL**, 저장 하는 함수에 대 한 마지막 오류 코드 시스템 Dll에에서 있습니다.  시스템 DLL은 다음 중 하나로 정의 됩니다.  
   
 |||||  
 |-|-|-|-|  
-|ACLUI.DLL|ACTIVEDS.DLL|ADPTIF.DLL|ADVAPI32.DLL|  
-|ASYCFILT.DLL|AUTHZ.DLL|AVICAP32.DLL|AVIFIL32.DLL|  
-|CABINET.DLL|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|  
-|COMSVCS.DLL|CREDUI.DLL|CRYPT32.DLL|CRYPTNET.DLL|  
-|CRYPTUI.DLL|D3D8THK.DLL|DBGENG.DLL|DBGHELP.DLL|  
-|DCIMAN32.DLL|DNSAPI.DLL|DSPROP.DLL|DSUIEXT.DLL|  
-|GDI32.DLL|GLU32.DLL|HLINK.DLL|ICM32.DLL|  
-|IMAGEHLP.DLL|IMM32.DLL|IPHLPAPI.DLL|IPROP.DLL|  
-|KERNEL32.DLL|KSUSER.DLL|LOADPERF.DLL|LZ32.DLL|  
-|MAPI32.DLL|MGMTAPI.DLL|MOBSYNC.DLL|MPR.DLL|  
-|MPRAPI.DLL|MQRT.DLL|MSACM32.DLL|MSCMS.DLL|  
-|MSI.DLL|MSIMG32.DLL|MSRATING.DLL|MSTASK.DLL|  
-|MSVFW32.DLL|MSWSOCK.DLL|MTXEX.DLL|NDDEAPI.DLL|  
-|NETAPI32.DLL|NPPTOOLS.DLL|NTDSAPI.DLL|NTDSBCLI.DLL|  
-|NTMSAPI.DLL|ODBC32.DLL|ODBCBCP.DLL|OLE32.DLL|  
-|OLEACC.DLL|OLEAUT32.DLL|OLEDLG.DLL|OPENGL32.DLL|  
-|PDH.DLL|POWRPROF.DLL|QOSNAME.DLL|QUERY.DLL|  
-|RASAPI32.DLL|RASDLG.DLL|RASSAPI.DLL|RESUTILS.DLL|  
-|RICHED20.DLL|RPCNS4.DLL|RPCRT4.DLL|RTM.DLL|  
-|RTUTILS.DLL|SCARDDLG.DLL|SECUR32.DLL|SENSAPI.DLL|  
-|SETUPAPI.DLL|SFC.DLL|SHELL32.DLL|SHFOLDER.DLL|  
-|SHLWAPI.DLL|SISBKUP.DLL|SNMPAPI.DLL|SRCLIENT.DLL|  
-|STI.DLL|TAPI32.DLL|TRAFFIC.DLL|URL.DLL|  
-|URLMON.DLL|USER32.DLL|USERENV.DLL|USP10.DLL|  
-|UXTHEME.DLL|VDMDBG.DLL|VERSION.DLL|WINFAX.DLL|  
-|WINHTTP.DLL|WININET.DLL|WINMM.DLL|WINSCARD.DLL|  
-|WINTRUST.DLL|WLDAP32.DLL|WOW32.DLL|WS2\_32.DLL|  
-|WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP.DLL|  
+|ACLUI 합니다. DLL|ACTIVEDS 합니다. DLL|ADPTIF 합니다. DLL|ADVAPI32 합니다. DLL|  
+|ASYCFILT 합니다. DLL|AUTHZ 합니다. DLL|AVICAP32 합니다. DLL|AVIFIL32 합니다. DLL|  
+|캐비닛입니다. DLL|CLUSAPI 합니다. DLL|COMCTL32 합니다. DLL|COMDLG32 합니다. DLL|  
+|COMSVCS 합니다. DLL|CREDUI 합니다. DLL|CRYPT32 합니다. DLL|CRYPTNET 합니다. DLL|  
+|CRYPTUI 합니다. DLL|D3D8THK 합니다. DLL|DBGENG 합니다. DLL|DBGHELP 합니다. DLL|  
+|DCIMAN32 합니다. DLL|DNSAPI 합니다. DLL|DSPROP 합니다. DLL|DSUIEXT 합니다. DLL|  
+|GDI32 합니다. DLL|GLU32 합니다. DLL|HLINK 합니다. DLL|ICM32 합니다. DLL|  
+|IMAGEHLP 합니다. DLL|IMM32 합니다. DLL|IPHLPAPI 합니다. DLL|IPROP 합니다. DLL|  
+|KERNEL32 합니다. DLL|KSUSER 합니다. DLL|LOADPERF 합니다. DLL|LZ32 합니다. DLL|  
+|MAPI32 합니다. DLL|MGMTAPI 합니다. DLL|고 MOBSYNC 합니다. DLL|MPR 합니다. DLL|  
+|MPRAPI 합니다. DLL|MQRT 합니다. DLL|MSACM32 합니다. DLL|MSCMS 합니다. DLL|  
+|MSI 합니다. DLL|MSIMG32 합니다. DLL|MSRATING 합니다. DLL|MSTASK 합니다. DLL|  
+|MSVFW32 합니다. DLL|MSWSOCK 합니다. DLL|MTXEX 합니다. DLL|NDDEAPI 합니다. DLL|  
+|NETAPI32 합니다. DLL|NPPTOOLS 합니다. DLL|NTDSAPI 합니다. DLL|NTDSBCLI 합니다. DLL|  
+|NTMSAPI 합니다. DLL|ODBC32 합니다. DLL|ODBCBCP 합니다. DLL|OLE32 합니다. DLL|  
+|OLEACC 합니다. DLL|OLEAUT32 합니다. DLL|OLEDLG 합니다. DLL|OPENGL32 합니다. DLL|  
+|PDH 합니다. DLL|POWRPROF 합니다. DLL|QOSNAME 합니다. DLL|쿼리입니다. DLL|  
+|RASAPI32 합니다. DLL|RASDLG 합니다. DLL|RASSAPI 합니다. DLL|RESUTILS 합니다. DLL|  
+|RICHED20 합니다. DLL|RPCNS4 합니다. DLL|RPCRT4 합니다. DLL|RTM 합니다. DLL|  
+|RTUTILS 합니다. DLL|SCARDDLG 합니다. DLL|SECUR32 합니다. DLL|SENSAPI 합니다. DLL|  
+|SETUPAPI 합니다. DLL|SFC 합니다. DLL|SHELL32 합니다. DLL|SHFOLDER 합니다. DLL|  
+|SHLWAPI 합니다. DLL|SISBKUP 합니다. DLL|SNMPAPI 합니다. DLL|SRCLIENT 합니다. DLL|  
+|STI 합니다. DLL|TAPI32 합니다. DLL|트래픽이입니다. DLL|URL입니다. DLL|  
+|URLMON 합니다. DLL|USER32 합니다. DLL|USERENV 합니다. DLL|USP10 합니다. DLL|  
+|UXTHEME 합니다. DLL|VDMDBG 합니다. DLL|버전. DLL|WINFAX 합니다. DLL|  
+|WINHTTP 합니다. DLL|WININET 합니다. DLL|WINMM 합니다. DLL|WINSCARD 합니다. DLL|  
+|WINTRUST 합니다. DLL|WLDAP32 합니다. DLL|WOW32 합니다. DLL|WS2_32.DLL|  
+|WSNMP32 합니다. DLL|WSOCK32.DLL|WTSAPI32 합니다. DLL|XOLEHLP 합니다. DLL|  
   
 > [!NOTE]
->  동일한 모듈에서 CLR 코드에 사용되는 관리되지 않는 함수에 대해서는 마지막 오류를 저장할 수 없습니다.  
+>  마지막 오류 유지는 동일한 모듈의 CLR 코드에서 사용 하는 관리 되지 않는 함수에 대 한 지원 되지 않습니다.  
   
--   자세한 내용은 [\/clr\(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하십시오.  
+-   자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
 3.  **명령줄** 속성 페이지를 클릭합니다.  
   
-4.  **추가 옵션** 상자에 옵션을 입력합니다.  
+4.  에 옵션을 입력에서 **추가 옵션** 상자입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## 예제  
- 다음 샘플에서는 마지막 오류를 수정하는 내보낸 함수 하나와 함께 네이티브 DLL을 정의합니다.  
+## <a name="example"></a>예제  
+ 다음 샘플 마지막 오류를 수정 하는 내보낸 함수를 하나의 네이티브 DLL을 정의 합니다.  
   
 ```  
 // CLRSUPPORTLASTERROR_dll.cpp  
@@ -104,8 +103,8 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 }  
 ```  
   
-## 예제  
- 다음 샘플에서는 DLL을 사용하여 **\/CLRSUPPORTLASTERROR**를 적용하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에 사용 하는 방법을 보여 주는 DLL 사용 **/CLRSUPPORTLASTERROR**합니다.  
   
 ```  
 // CLRSUPPORTLASTERROR_client.cpp  
@@ -151,8 +150,11 @@ int main() {
 }  
 ```  
   
-  **GetLastError \(127\)의 응용 프로그램 호출에 실패했습니다.**   
-**GetLastError \(183\)의 시스템 호출에 성공했습니다.**   
-## 참고 항목  
+```Output  
+GetLastError for application call failed (127).  
+GetLastError for system call succeeded (183).  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

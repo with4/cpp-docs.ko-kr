@@ -1,45 +1,43 @@
 ---
-title: "OMP_SCHEDULE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OMP_SCHEDULE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OMP_SCHEDULE OpenMP environment variable"
+title: OMP_SCHEDULE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: OMP_SCHEDULE
+dev_langs: C++
+helpviewer_keywords: OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2295a801-e584-4d2f-826f-7ca4c88846a6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c29ec07f9a912fb66adc391465885da8030cc466
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# OMP_SCHEDULE
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-동작을 수정 하는 [schedule](../../../parallel/openmp/reference/schedule.md) 절 때 `schedule(runtime)` 에 지정 된는 `for` 또는 `parallel for` 지시문.  
+# <a name="ompschedule"></a>OMP_SCHEDULE
+동작을 수정 하는 [일정](../../../parallel/openmp/reference/schedule.md) 절 때 `schedule(runtime)` 에 지정 된 한 `for` 또는 `parallel for` 지시문입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 set OMP_SCHEDULE[=type[,size]]  
 ```  
   
-## 설명  
- 다음은 각 매개 변수에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 다음은 각 문자에 대한 설명입니다.  
   
- `size`\(선택적 요소\)  
- 반복의 크기를 지정합니다.  `size`양의 정수 여야 합니다.  기본 경우를 제외 하 고 1이 `type` 정적입니다.  Not valid when `type` is `runtime`.  
+ `size`(선택 사항)  
+ 반복의 크기를 지정합니다. `size`양의 정수 여야 합니다. 기본값은 1의 경우는 제외 `type` 는 정적입니다. 경우에 유효 하지 않은 `type` 은 `runtime`합니다.  
   
  `type`  
- 일정 관리의 종류:  
+ 일정의 종류:  
   
 -   `dynamic`  
   
@@ -49,23 +47,23 @@ set OMP_SCHEDULE[=type[,size]]
   
 -   `static`  
   
-## 설명  
- OpenMP 표준은 Visual C\+\+ 구현에서 기본값은 `OMP_SCHEDULE=static,0`.  
+## <a name="remarks"></a>설명  
+ OpenMP 표준의 Visual c + + 구현에서 기본값은 `OMP_SCHEDULE=static,0`합니다.  
   
- 자세한 내용은 [4.1 OMP\_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md)를 참조하십시오.  
+ 자세한 내용은 참조 [4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md)합니다.  
   
-## 예제  
- 다음 명령 집합을  **OMP\_SCHEDULE** 환경 변수:  
+## <a name="example"></a>예제  
+ 다음 명령 집합의 **OMP_SCHEDULE** 환경 변수:  
   
 ```  
 set OMP_SCHEDULE="guided,2"  
 ```  
   
- 다음 명령을 한 현재 설정을 표시 하는  **OMP\_SCHEDULE** 환경 변수:  
+ 다음 명령은의 현재 설정을 표시는 **OMP_SCHEDULE** 환경 변수:  
   
 ```  
 set OMP_SCHEDULE  
 ```  
   
-## 참고 항목  
- [Environment Variables](../../../parallel/openmp/reference/openmp-environment-variables.md)
+## <a name="see-also"></a>참고 항목  
+ [환경 변수](../../../parallel/openmp/reference/openmp-environment-variables.md)

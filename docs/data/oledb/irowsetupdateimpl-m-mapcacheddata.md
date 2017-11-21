@@ -1,53 +1,52 @@
 ---
-title: "IRowsetUpdateImpl::m_mapCachedData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetUpdateImpl.m_mapCachedData"
-  - "IRowsetUpdateImpl::m_mapCachedData"
-  - "m_mapCachedData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_mapCachedData"
+title: 'Irowsetupdateimpl:: M_mapcacheddata | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetUpdateImpl.m_mapCachedData
+- IRowsetUpdateImpl::m_mapCachedData
+- m_mapCachedData
+dev_langs: C++
+helpviewer_keywords: m_mapCachedData
 ms.assetid: 65131743-8580-48c8-bb22-68f17c9dfa13
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6007498d85160124484860726d09523b9340bd14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetUpdateImpl::m_mapCachedData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-A map containing the original data for the deferred operation.  
+# <a name="irowsetupdateimplmmapcacheddata"></a>IRowsetUpdateImpl::m_mapCachedData
+지연 된 작업에 대 한 원본 데이터를 포함 하는 지도입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      CAtlMap<   
-   HROW hRow,    
-   Storage* pData   
->   
+      CAtlMap<   
+   HROW hRow,    
+   Storage* pData   
+>   
 m_mapCachedData;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `hRow`  
- Handle to the rows for the data.  
+ 데이터에 대 한 행에 대 한 핸들입니다.  
   
  `pData`  
- A pointer to the data to be cached.  The data is of type *Storage* \(the user record class\).  See the *Storage* template argument in [IRowsetUpdateImpl Class](../../data/oledb/irowsetupdateimpl-class.md).  
+ 데이터를 캐시에 대 한 포인터입니다. 데이터 형식의 *저장소* (사용자 레코드 클래스). 참조는 *저장소* 에 템플릿 인수 [IRowsetUpdateImpl 클래스](../../data/oledb/irowsetupdateimpl-class.md)합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IRowsetUpdateImpl 클래스](../../data/oledb/irowsetupdateimpl-class.md)

@@ -1,45 +1,43 @@
 ---
-title: "multimap::upper_bound(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound 멤버[STL/CLR]"
+title: 'multimap:: upper_bound (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: bfb8cf64-cecf-4685-8ac9-e7228ecee809
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 64d02e102e17abae64367778f9de7ac5d51ca8be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::upper_bound(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Finds end of range that matches a specified key.  
+# <a name="multimapupperbound-stlclr"></a>multimap::upper_bound(STL/CLR)
+지정된 된 키와 일치 하는 범위의 끝을 찾습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  key  
- Key value to search for.  
+ 검색할 키 값입니다.  
   
-## 설명  
- The member function determines the last element `X` in the controlled sequence that has equivalent ordering to `key`.  If no such element exists, or if `X` is the last element in the controlled sequence, it returns [multimap::end](../dotnet/multimap-end-stl-clr.md)`()`; otherwise it returns an iterator that designates the first element beyond `X`.  You use it to locate the end of a sequence of elements currently in the controlled sequence that match a specified key.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 마지막 요소를 결정 `X` 과 순서가 제어 된 시퀀스의 `key`합니다. 이러한 요소가 존재 하거나 `X` 는 제어 된 시퀀스의 마지막 요소 반환 [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; 그렇지 않으면 의첫번째요소를지정하는반복기를반환`X`. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소 시퀀스의 끝으로 이동 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_upper_bound.cpp   
@@ -73,18 +71,21 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*upper\_bound\(L'a'\) \= \[b 2\]**  
-**\*upper\_bound\(L'b'\) \= \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::count](../dotnet/multimap-count-stl-clr.md)   
- [multimap::equal\_range](../dotnet/multimap-equal-range-stl-clr.md)   
- [multimap::find](../dotnet/multimap-find-stl-clr.md)   
- [multimap::lower\_bound](../dotnet/multimap-lower-bound-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)   
+ [multimap:: equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)   
+ [multimap:: find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)   
+ [multimap::lower_bound(STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md)

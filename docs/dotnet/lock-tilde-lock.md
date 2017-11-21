@@ -1,47 +1,45 @@
 ---
-title: "lock::~lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "~lock"
-  - "msclr.lock.~lock"
-  - "lock.~lock"
-  - "msclr::lock::~lock"
-  - "lock::~lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~lock 소멸자"
+title: "lock:: ~ 잠금 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ~lock
+- msclr.lock.~lock
+- lock.~lock
+- msclr::lock::~lock
+- lock::~lock
+dev_langs: C++
+helpviewer_keywords: ~lock destructor
 ms.assetid: 55fa9f6c-d7a6-48ef-9236-ee03342c1d20
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2fe737a0e40c1b45e7c5622ee377663e997e87ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# lock::~lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Destructs a `lock` object.  
+# <a name="locklock"></a>lock::~lock
+소멸 된 `lock` 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 ~lock();  
 ```  
   
-## 설명  
- The destructor calls [lock::release](../dotnet/lock-release.md).  
+## <a name="remarks"></a>설명  
+ 소멸자 호출 [lock::release](../dotnet/lock-release.md)합니다.  
   
-## 예제  
- This example uses a single instance of a class across multiple threads.  The class uses a lock on itself to ensure that accesses to its internal data are consistent for each thread.  The main application thread uses a lock on the same instance of the class to periodically check to see if any worker threads still exist, and waits to exit until all worker threads have completed their tasks.  
+## <a name="example"></a>예제  
+ 이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스를 사용 하 여 잠금을 자체에서 내부 데이터에 대 한 액세스가 각 스레드에 대해 일관적인 지 확인 합니다.  기본 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드 여전히 존재 하며, 해당 작업을 완료 될 때까지 모든 작업자 스레드가 끝나기를 대기 하는 클래스의 동일한 인스턴스에 잠금을 사용 합니다.  
   
 ```  
 // msl_lock_dtor.cpp  
@@ -115,22 +113,25 @@ int main() {
 }  
 ```  
   
-  **In thread 3, Counter \= 0**  
-**In thread 3, Counter \= 10**  
-**In thread 5, Counter \= 0**  
-**In thread 5, Counter \= 10**  
-**In thread 7, Counter \= 0**  
-**In thread 7, Counter \= 10**  
-**In thread 4, Counter \= 0**  
-**In thread 4, Counter \= 10**  
-**In thread 6, Counter \= 0**  
-**In thread 6, Counter \= 10**  
-**All threads completed.**   
-## 요구 사항  
- **Header file** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [lock 멤버](../dotnet/lock-members.md)   
  [lock::lock](../dotnet/lock-lock.md)

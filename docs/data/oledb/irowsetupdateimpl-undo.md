@@ -1,35 +1,34 @@
 ---
-title: "IRowsetUpdateImpl::Undo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetUpdateImpl.Undo"
-  - "ATL::IRowsetUpdateImpl::Undo"
-  - "IRowsetUpdateImpl::Undo"
-  - "IRowsetUpdateImpl.Undo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Undo 메서드"
+title: 'Irowsetupdateimpl:: Undo | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetUpdateImpl.Undo
+- ATL::IRowsetUpdateImpl::Undo
+- IRowsetUpdateImpl::Undo
+- IRowsetUpdateImpl.Undo
+dev_langs: C++
+helpviewer_keywords: Undo method
 ms.assetid: f3dc7764-050c-4322-9b2f-9ca772a0fb88
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a0ad20f5d326d89ce004254713c861bec784b3d5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetUpdateImpl::Undo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Undoes any changes to the row since the last fetch or update.  
+# <a name="irowsetupdateimplundo"></a>IRowsetUpdateImpl::Undo
+마지막 페치 또는 업데이트 이후 행에 변경 내용을 실행 취소합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -43,20 +42,20 @@ Undoes any changes to the row since the last fetch or update.
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `hReserved`  
- \[in\] Corresponds to the `hChapter` parameter in [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx).  
+ [in] 에 해당 하는 `hChapter` 매개 변수에서 [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)합니다.  
   
  *pcRowsUndone*  
- \[out\] Corresponds to the `pcRows` parameter in [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx).  
+ [out] 에 해당 하는 `pcRows` 매개 변수에서 [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)합니다.  
   
  *prgRowsUndone*  
- \[in\] Corresponds to the *prgRows* parameter in [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx).  
+ [in] 에 해당 하는 *prgRows* 매개 변수에서 [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)합니다.  
   
- For other parameters, see [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx) in the *OLE DB Programmer's Reference*.  
+ 다른 매개 변수를 참조 하십시오. [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IRowsetUpdateImpl 클래스](../../data/oledb/irowsetupdateimpl-class.md)

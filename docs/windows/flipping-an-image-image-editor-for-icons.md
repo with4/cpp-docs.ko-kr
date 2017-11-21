@@ -1,58 +1,59 @@
 ---
-title: "Flipping an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], flipping and rotating images"
-  - "images [C++], flipping"
-  - "images [C++], rotating"
+title: "(아이콘에 대 한 이미지 편집기) 이미지 대칭 이동 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], flipping and rotating images
+- images [C++], flipping
+- images [C++], rotating
 ms.assetid: a63d251c-7343-4ad6-9442-1faa04a9a2a1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e8f31e29d955d54231b25d09f79ecfcf73595a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Flipping an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음과 같은 방법으로 이미지를 대칭 이동하거나 회전할 수 있습니다.  
+# <a name="flipping-an-image-image-editor-for-icons"></a>이미지 대칭 이동(아이콘에 대한 이미지 편집기)
+대칭 이동 하거나 이미지를 회전할 수 있습니다.  
   
--   원본의 미러 이미지를 만듭니다.  
+-   원래의 미러 이미지를 만듭니다.  
   
--   이미지를 거꾸로 뒤집습니다.  
+-   180도 회전 이미지를 설정 합니다.  
   
--   이미지를 한 번에 90도씩 오른쪽으로 회전합니다.  
+-   한 번에 이미지를 오른쪽 90도 회전 합니다.  
   
-### 이미지를 좌우 대칭 이동\(미러 이미지\)하려면  
+### <a name="to-flip-the-image-horizontally-mirror-image"></a>이미지를 가로로 대칭 이동 하려면 (미러 이미지)  
   
-1.  **이미지** 메뉴에서 **좌우 대칭**을 선택합니다.  
+1.  **이미지** 메뉴 선택 **좌우 대칭**합니다.  
   
-### 이미지를 상하 대칭 이동\(거꾸로 뒤집기\)하려면  
+### <a name="to-flip-the-image-vertically-turn-upside-down"></a>이미지를 세로로 대칭 이동 하려면 (뒤집어)  
   
-1.  **이미지** 메뉴에서 **상하 대칭**을 선택합니다.  
+1.  **이미지** 메뉴 선택 **상하**합니다.  
   
-### 이미지를 90도 회전하려면  
+### <a name="to-rotate-the-image-90-degrees"></a>이미지 90도 회전 하려면  
   
-1.  **이미지** 메뉴에서 **90도 회전**을 선택합니다.  
+1.  **이미지** 메뉴 선택 **90도 회전**합니다.  
   
     > [!NOTE]
-    >  [액셀러레이터 키](../mfc/accelerator-keys-image-editor-for-icons.md)를 사용하여 이 명령을 수행할 수도 있고 이미지 편집기에서 이미지 외부를 클릭하여 표시되는 바로 가기 메뉴에서 이 명령을 사용할 수도 있습니다.  
+    >  사용할 수도 있습니다는 [액셀러레이터 키](../windows/accelerator-keys-image-editor-for-icons.md) 이러한 명령에 대 한 바로 가기 메뉴 (외부 이미지 편집기에서 이미지를 클릭)에서 명령을 액세스 또는 합니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](https://msdn.microsoft.com/library/f45fce5x.aspx) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](https://msdn.microsoft.com/library/xbx3z216.aspx)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](https://msdn.microsoft.com/library/h6270d0z.aspx)합니다.  
   
  요구 사항  
   
  없음  
   
-## 참고 항목  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>참고 항목  
+ [그래픽 리소스 편집](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [아이콘에 대한 이미지 편집기](../windows/image-editor-for-icons.md)
+

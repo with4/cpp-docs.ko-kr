@@ -1,36 +1,34 @@
 ---
 title: "컴파일러 경고 (수준 1) C4566 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4566"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4566"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4566
+dev_langs: C++
+helpviewer_keywords: C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7d2755a8e4220f45ef243153b0d0da7b95ec15b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4566
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-유니버설 문자 이름 'char'\(으\)로 표현되는 문자는 현재 코드 페이지\(page\)에서 표현할 수 없습니다.  
+# <a name="compiler-warning-level-1-c4566"></a>컴파일러 경고(수준 1) C4566
+현재 코드 페이지 (페이지)에서 유니버설 문자 이름 'char' 문자를 나타낼 수 없습니다.  
   
- 일부 유니코드 문자는 현재 ANSI 코드 페이지에서 표현할 수 없습니다.  
+ 현재 ANSI 코드 페이지에서 모든 유니코드 문자를 나타낼 수 있습니다.  
   
- 좁은 문자열\(1바이트 문자\)은 멀티바이트 문자로 변환되는 반면 넓은 문자열\(2바이트 문자\)은 변환되지 않습니다.  
+ 좁은 문자열 (1 바이트 문자) (2 바이트 문자) 와이드 문자열은 반면 멀티 바이트 문자 변환 됩니다.  
   
- 다음 샘플에서는 C4566 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4566 오류가 생성 됩니다.  
   
 ```  
 // C4566.cpp  

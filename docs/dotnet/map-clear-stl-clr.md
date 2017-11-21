@@ -1,41 +1,39 @@
 ---
-title: "map::clear(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear 멤버[STL/CLR]"
+title: 'map:: clear (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 2a6a01fe-2998-447d-9ae8-6cb6343d0dfa
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cfdaf126ee093819df14bae679100d37d5f3ea59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# map::clear(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapclear-stlclr"></a>map::clear(STL/CLR)
 모든 요소를 제거합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void clear();  
 ```  
   
-## 설명  
- 멤버함수는 효율적으로 [map::erase](../dotnet/map-erase-stl-clr.md)`(` [map::begin](../dotnet/map-begin-stl-clr.md)`(),` [map::end](../dotnet/map-end-stl-clr.md)`())`을 호출합니다.  제어되는 시퀀스 비어 있는지 확인하기 위해 사용합니다.  
+## <a name="remarks"></a>설명  
+ 멤버 함수 시그니처 [map:: erase (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [map:: begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())`. 제어 되는 시퀀스 비어 있는지 확인 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_clear.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[a 1\] \[b 2\]**  
-**size\(\) \= 0**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)   
- [map::erase](../dotnet/map-erase-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::erase(STL/CLR)](../dotnet/map-erase-stl-clr.md)

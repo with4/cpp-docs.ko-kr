@@ -1,31 +1,30 @@
 ---
-title: "방법: for each로 사용자 정의 컬렉션 반복 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "컬렉션, 반복 처리"
+title: "방법: for each 사용 하 여 사용자 정의 컬렉션 반복 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: collections, iterating over
 ms.assetid: 0efd9e3c-d7bb-4f6c-9938-e0e65d191433
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 297d11731a16ecbe69793f2a29944470206acc18
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: for each로 사용자 정의 컬렉션 반복
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-관리되는 컬렉션 클래스는 열거자 클래스 또는 인터페이스에 대한 핸들을 반환하는 private가 아닌 GetEnumerator function함수를 필요로 합니다.  열거자 클래스는 고정적이지 않은 MoveNext 함수와 현재 속성에 대한 선언을 포함해야 합니다.  
+# <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>방법: for each로 사용자 정의 컬렉션 반복
+클래스가 관리되는 컬렉션이 되려면 열거자 클래스 또는 인터페이스에 대한 핸들을 반환하는 private가 아닌 GetEnumerator 함수가 필요합니다.  열거자 클래스는 정적이 아닌 MoveNext 함수 및 Current 속성에 대한 선언을 포함해야 합니다.  
   
-## 예제  
- 참조 형식을 사용한 간단한 사용자 정의 컬렉션입니다.  
+## <a name="example"></a>예제  
+ 참조 형식을 포함하는 간단한 사용자 정의 컬렉션입니다.  
   
 ```  
 // for_each_user_defined_collections.cpp  
@@ -99,6 +98,9 @@ int main() {
 }  
 ```  
   
-  **Return Code: 0**   
-## 참고 항목  
+```Output  
+Return Code: 0  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [for each, in](../dotnet/for-each-in.md)

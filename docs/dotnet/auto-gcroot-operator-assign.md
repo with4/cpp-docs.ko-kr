@@ -1,36 +1,34 @@
 ---
-title: "auto_gcroot::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator="
-  - "msclr::auto_gcroot::operator="
-  - "msclr.auto_gcroot.operator="
-  - "auto_gcroot::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator="
+title: auto_gcroot::operator = | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator=
+- msclr::auto_gcroot::operator=
+- msclr.auto_gcroot.operator=
+- auto_gcroot::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 99eba5eb-5a2c-4edf-b3d5-c903f818233d
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8cd87111bf28cc758094936b0fb586fce2e475f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-할당 연산자입니다.  
+# <a name="autogcrootoperator"></a>auto_gcroot::operator=
+대입 연산자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 auto_gcroot<_element_type> & operator=(  
@@ -45,14 +43,14 @@ auto_gcroot<_element_type> & operator=(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_right`  
- The object or `auto_gcroot` to be assigned to the current `auto_gcroot`.  
+ 개체 또는 `auto_gcroot` 현재에 할당할 `auto_gcroot`합니다.  
   
-## 반환 값  
- The current `auto_gcroot`, now owning `_right`.  
+## <a name="return-value"></a>반환 값  
+ 현재 `auto_gcroot`, 이제 소유 `_right`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // msl_auto_gcroot_operator_equals.cpp  
@@ -105,21 +103,24 @@ int main()
 }  
 ```  
   
-  **in ClassA constructor: first**  
-**Hello from first A\!**  
-**in ClassA constructor: second**  
-**in ClassA destructor: first**  
-**in ClassA constructor: third**  
-**Hello from third B\!**  
-**in ClassA destructor: second**  
-**Hello from third A\!**  
-**done**  
-**in ClassA destructor: third**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_gcroot.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+in ClassA destructor: first  
+in ClassA constructor: third  
+Hello from third B!  
+in ClassA destructor: second  
+Hello from third A!  
+done  
+in ClassA destructor: third  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

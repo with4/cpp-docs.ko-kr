@@ -1,34 +1,33 @@
 ---
 title: "IRowsetLocateImpl 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "책갈피, OLE DB"
-  - "IRowsetLocateImpl 클래스"
-  - "공급자, 책갈피"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetLocateImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, bookmarks
+- IRowsetLocateImpl class
+- bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ff76d78cd3f624e3bdb0d21af550a340a2aa498e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implements the OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interface, which fetches arbitrary rows from a rowset.  
+# <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 클래스
+OLE DB 구현 [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) 인터페이스에는 행 집합에서 임의의 행을 인출 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <  
@@ -48,60 +47,60 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 >  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- A class derived from `IRowsetLocateImpl`.  
+ 클래스에서 파생 `IRowsetLocateImpl`합니다.  
   
  `RowsetInterface`  
- A class derived from `IRowsetImpl`.  
+ 클래스에서 파생 `IRowsetImpl`합니다.  
   
  `RowClass`  
- The storage unit for the **HROW**.  
+ 에 대 한 저장소 단위는 **HROW**합니다.  
   
  `MapClass`  
- The storage unit for all row handles held by the provider.  
+ 공급자가 보유 하는 모든 행 핸들에 대 한 저장소 단위입니다.  
   
  `BookmarkKeyType`  
- The type of the bookmark, such as a LONG or a string.  Ordinary bookmarks must have a length of at least two bytes. \(Single\-byte length is reserved for the OLE DB [standard bookmarks](https://msdn.microsoft.com/en-us/library/ms712954.aspx) **DBBMK\_FIRST**, **DBBMK\_LAST**, and **DBBMK\_INVALID**.\)  
+ 책갈피, LONG 또는 문자열 등의 형식입니다. 일반 책갈피 최소한 2 바이트의 길이 있어야 합니다. (OLE DB에 대 한 단일 바이트 길이 예약 되어 [표준 책갈피](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK_FIRST**, **DBBMK_LAST**, 및 **DBBMK_INVALID**.)  
   
  `BookmarkType`  
- The mapping mechanism for maintaining bookmark\-to\-data relationships.  
+ 책갈피-데이터 관계를 유지 관리 하기 위한 매핑 메커니즘입니다.  
   
  `BookmarkMapClass`  
- The storage unit for all row handles held by the bookmark.  
+ 책갈피에서 보유 하는 모든 행 핸들에 대 한 저장소 단위입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Interface Methods  
-  
-|||  
-|-|-|  
-|[비교](../../data/oledb/irowsetlocateimpl-compare.md)|Compares two bookmarks.|  
-|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Fetches rows starting with the row specified by an offset from a bookmark.|  
-|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Fetches the rows that match the specified bookmarks.|  
-|[해시](../../data/oledb/irowsetlocateimpl-hash.md)|Returns hash values for the specified bookmarks.|  
-  
-### 데이터 멤버  
+### <a name="interface-methods"></a>인터페이스 메서드  
   
 |||  
 |-|-|  
-|[m\_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|An array of bookmarks.|  
+|[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|두 개의 책갈피를 비교합니다.|  
+|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|책갈피에서의 오프셋으로 지정 된 행부터 시작 하는 행을 인출 합니다.|  
+|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|지정 된 책갈피를 일치 하는 행을 인출 합니다.|  
+|[해시](../../data/oledb/irowsetlocateimpl-hash.md)|지정 된 책갈피에 대 한 값을 해시 하는 반환 합니다.|  
   
-## 설명  
- `IRowsetLocateImpl` is the OLE DB Templates implementation of the [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interface.  `IRowsetLocate` is used to fetch arbitrary rows from a rowset.  A rowset that does not implement this interface is a `sequential` rowset.  When `IRowsetLocate` is present on a rowset, column 0 is the bookmark for the rows; reading this column will obtain a bookmark value that can be used to reposition to the same row.  
+### <a name="data-members"></a>데이터 멤버  
   
- `IRowsetLocateImpl` is used to implement bookmark support in providers.  Bookmarks are placeholders \(indices on a rowset\) that enable the consumer to return quickly to a row, allowing high\-speed access to data.  The provider determines what bookmarks can uniquely identify a row.  Using `IRowsetLocateImpl` methods, you can compare bookmarks, fetch rows by offset, fetch rows by bookmark, and return hash values for bookmarks.  
+|||  
+|-|-|  
+|[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|책갈피의 배열입니다.|  
   
- To support OLE DB bookmarks in a rowset, make the rowset inherit from this class.  
+## <a name="remarks"></a>설명  
+ `IRowsetLocateImpl`OLE DB 템플릿 구현인는 [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) 인터페이스입니다. `IRowsetLocate`행 집합에서 임의의 행을 인출 하는 데 사용 됩니다. 이 인터페이스를 구현 하지 않는 행 집합은 한 `sequential` 행 집합입니다. 때 `IRowsetLocate` 있으면 행 집합에 열 0이 행에 대 한 책갈피;이 열을 읽는 동일한 행에 위치를 변경 하는 데 사용할 수 있는 책갈피 값을 가져옵니다.  
   
- For information on implementing bookmark support, see [Provider Support for Bookmarks](../../data/oledb/provider-support-for-bookmarks.md) in the *Visual C\+\+ Programmer's Guide* and [Bookmarks](https://msdn.microsoft.com/en-us/library/ms709728.aspx) in the *OLE DB Programmer's Reference* in the `Platform``SDK`.  
+ `IRowsetLocateImpl`공급자의 책갈피 지원을 구현 하는 데 사용 됩니다. 책갈피는 자리 표시자 (인덱스 행 집합에서) 소비자는 행에 신속 하 게 반환할 수 있도록 하는 고속 데이터 액세스를 허용 합니다. 공급자 책갈피 수 있는 고유 하 게 결정 한 행을 식별 합니다. 사용 하 여 `IRowsetLocateImpl` 메서드, 책갈피를 비교할 수 있습니다, by 인출 행 오프셋, 책갈피에서 행 인출 및 책갈피에 대 한 해시 값을 반환 합니다.  
   
-## 요구 사항  
- **Header**: atldb.h  
+ 행 집합에 OLE DB 책갈피를 지원 하려면이 클래스에서 상속 하는 행 집합을 확인 합니다.  
   
-## 참고 항목  
+ 책갈피 지원 구현에 대 한 자세한 내용은 참조 하십시오. [공급자의 책갈피 지원](../../data/oledb/provider-support-for-bookmarks.md) 에 *Visual c + + 프로그래머 가이드* 및 [책갈피](https://msdn.microsoft.com/en-us/library/ms709728.aspx) 는 에서*OLE DB Programmer's Reference* 플랫폼 SDK에에서 있습니다.  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더**: atldb.h  
+  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)   
  [IRowsetLocate:IRowset](https://msdn.microsoft.com/en-us/library/ms721190.aspx)   
  [공급자의 책갈피 지원](../../data/oledb/provider-support-for-bookmarks.md)   
- [Bookmarks](https://msdn.microsoft.com/en-us/library/ms709728.aspx)
+ [책갈피](https://msdn.microsoft.com/en-us/library/ms709728.aspx)

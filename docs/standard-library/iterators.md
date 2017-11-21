@@ -4,40 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: ffeaf473155d0a24bd0e1b14c4191d276bed5190
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: c0a9b850100d78a18e39e5cc552cb8461b3726a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iterators"></a>반복기
 반복기는 C++ 표준 라이브러리 컨테이너에 있는 요소를 반복하고 개별 요소에 대한 액세스를 제공할 수 있는 개체입니다. C++ 표준 라이브러리 컨테이너는 모두 반복기를 제공하므로 요소가 저장되는 컨테이너 형식을 확인하지 않고도 알고리즘에서 표준 방식으로 해당 요소에 액세스할 수 있습니다.  
@@ -68,7 +51,7 @@ for (auto num : vec)
  }  
 ```  
   
- 반복기에는&5;가지 범주가 있습니다. 범주는 증가하는 거듭제곱 순으로 다음과 같습니다.  
+ 반복기에는 5가지 범주가 있습니다. 범주는 증가하는 거듭제곱 순으로 다음과 같습니다.  
   
 - **출력**. 출력 반복기 `X`는 ++ 연산자를 사용하여 시퀀스를 순방향으로 반복하고, * 연산자를 사용하여 요소를 한 번만 쓸 수 있습니다.  
   
@@ -121,10 +104,9 @@ forward iterator
 > [!NOTE]
 >  range-for 루프를 사용하여 반복기를 명시적으로 사용하지 않도록 할 수 있습니다. 자세한 내용은 [루프(최신 C++)](http://msdn.microsoft.com/en-us/b1b2779c-750e-4576-a514-a84178eae9da)를 참조하세요.  
   
- [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]은 이제 확인된 반복기 및 디버그 반복기를 제공하여 컨테이너의 경계를 덮어쓰지 않도록 합니다. 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md) 및 [디버그 반복기 지원](../standard-library/debug-iterator-support.md)을 참조하세요.  
+ 이제 visual c + + 컨테이너 경계를 덮어쓰지 않도록 하려면 확인 된 반복기 및 디버그 반복기를 제공 합니다. 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md) 및 [디버그 반복기 지원](../standard-library/debug-iterator-support.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)   
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

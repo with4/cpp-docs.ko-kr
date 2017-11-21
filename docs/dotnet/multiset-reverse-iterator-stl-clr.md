@@ -1,41 +1,39 @@
 ---
-title: "multiset::reverse_iterator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator 멤버[STL/CLR]"
+title: 'multiset:: reverse_iterator (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: dde6ad36-ca59-4728-aa53-e3d117eb4f48
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e700c02a9ed6ff267c113e79f82eccdb25ae813b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::reverse_iterator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of a reverse iterator for the controlled sequence.  
+# <a name="multisetreverseiterator-stlclr"></a>multiset::reverse_iterator(STL/CLR)
+제어되는 시퀀스에 대한 반대 반복기의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## 설명  
- The type describes an object of unspecified type `T3` that can serve as a reverse iterator for the controlled sequence.  
+## <a name="remarks"></a>설명  
+ 이 형식은 제어된 시퀀스에 대해 반대 반복기로 사용될 수 있는 지정되지 않은 `T3` 형식의 개체를 설명합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multiset_reverse_iterator.cpp   
@@ -60,14 +58,17 @@ int main()
   
 ```  
   
-  **c b a**   
-## 요구 사항  
- **Header:** \<cliext\/set\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::const\_iterator](../dotnet/multiset-const-iterator-stl-clr.md)   
- [multiset::const\_reverse\_iterator](../dotnet/multiset-const-reverse-iterator-stl-clr.md)   
- [multiset::iterator](../dotnet/multiset-iterator-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: const_iterator (STL/CLR)](../dotnet/multiset-const-iterator-stl-clr.md)   
+ [multiset:: const_reverse_iterator (STL/CLR)](../dotnet/multiset-const-reverse-iterator-stl-clr.md)   
+ [multiset::iterator(STL/CLR)](../dotnet/multiset-iterator-stl-clr.md)

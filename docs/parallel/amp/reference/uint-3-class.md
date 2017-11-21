@@ -1,11 +1,10 @@
 ---
-title: "uint_3 클래스 | Microsoft 문서"
+title: "uint_3 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,36 +77,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::yxz
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 034478144d77abcc9dba8bf1a1909c4711f7119c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 12e2e25dd6a1ba2a31130196f04f336cecf6b34e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="uint3-class"></a>uint_3 클래스
-세 개의 부호 없는 정수 짧은 벡터를 나타냅니다.  
+세 개의 부호 없는 정수는 short 벡터를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -127,7 +110,7 @@ class uint_3;
   
 |이름|설명|  
 |----------|-----------------|  
-|[uint_3 생성자](#ctor)|오버로드됨. 기본 생성자를 0부터 모든 요소를 초기화 합니다.|  
+|[uint_3 생성자](#ctor)|오버로드됨. 기본 생성자, 0 인 모든 요소를 초기화 합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -176,15 +159,15 @@ class uint_3;
 |----------|-----------------|  
 |uint_3::operator-||  
 |uint_3::operator % =||  
-|uint_3::operator = / /||  
+|uint_3::operator & =||  
 |uint_3::operator * =||  
 |uint_3::operator / =||  
 |uint_3::operator ^ =||  
-|uint_3::operator | =||  
+|uint_3::operator &#124; =||  
 |uint_3::operator ~||  
 |uint_3::operator + +||  
 |uint_3::operator + =||  
-|uint_3::operator\<=||  
+|uint_3::operator <\<=||  
 |uint_3::operator =||  
 |-= uint_3::operator||  
 |uint_3::operator >> =||  
@@ -240,7 +223,7 @@ class uint_3;
   
 ##  <a name="ctor"></a>uint_3 
 
- 기본 생성자를 0부터 모든 요소를 초기화 합니다.  
+ 기본 생성자, 0 인 모든 요소를 초기화 합니다.  
   
 ```  
 uint_3() restrict(amp,
@@ -291,13 +274,13 @@ explicit inline uint_3(
   
 ### <a name="parameters"></a>매개 변수  
  `_V0`  
- 0 요소를 초기화할 값입니다.  
+ 값 초기화 요소 0입니다.  
   
  `_V1`  
- 1 요소를 초기화할 값입니다.  
+ 1 요소를 초기화 값입니다.  
   
  `_V2`  
- 2 요소를 초기화할 값입니다.  
+ 값 2 요소를 초기화 하는입니다.  
   
  `_V`  
  초기화에 대 한 값입니다.  
@@ -313,4 +296,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
-

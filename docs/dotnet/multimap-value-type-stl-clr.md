@@ -1,41 +1,39 @@
 ---
-title: "multimap::value_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type 멤버[STL/CLR]"
+title: 'multimap:: value_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: c10d75f9-2efe-41f7-babc-655c68c14a4f
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e5413f692555910cbdeafe8721eb7b2caa2f757
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::value_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapvaluetype-stlclr"></a>multimap::value_type(STL/CLR)
 요소의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef generic_value value_type;  
 ```  
   
-## 설명  
- The type is a synonym for `generic_value`.  
+## <a name="remarks"></a>설명  
+ 이 형식은 `generic_value`의 동의어입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_value_type.cpp   
@@ -62,14 +60,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::const\_reference](../dotnet/multimap-const-reference-stl-clr.md)   
- [multimap::key\_type](../dotnet/multimap-key-type-stl-clr.md)   
- [multimap::reference](../dotnet/multimap-reference-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: const_reference (STL/CLR)](../dotnet/multimap-const-reference-stl-clr.md)   
+ [multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)   
+ [multimap::reference(STL/CLR)](../dotnet/multimap-reference-stl-clr.md)

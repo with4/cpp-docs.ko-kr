@@ -1,26 +1,26 @@
 ---
 title: "C의 해제 데이터 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 93cb6430-e4cf-43f5-ab60-3b57d1273b2c
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e69571209cdfd1a12d99d79dd14840481ac872ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# C의 해제 데이터 정의
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음은 해제 데이터에 대한 C 설명입니다.  
+# <a name="unwind-data-definitions-in-c"></a>C의 해제 데이터 정의
+다음은 C 설명은 해제 데이터입니다.  
   
 ```  
 typedef enum _UNWIND_OP_CODES {  
@@ -86,5 +86,5 @@ typedef struct _RUNTIME_FUNCTION {
     ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)  
 ```  
   
-## 참고 항목  
- [예외 처리\(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>참고 항목  
+ [예외 처리(x64)](../build/exception-handling-x64.md)

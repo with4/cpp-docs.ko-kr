@@ -1,63 +1,62 @@
 ---
-title: "_mm_cvtss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtss2si 내장 함수"
-  - "_mm_cvtss_si64x 내장 함수"
+title: _mm_cvtss_si64x | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- cvtss2si intrinsic
+- _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 19d39aa8219321e372a2cd8b669c83b606646122
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvtss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Microsoft 전용**  
   
- 생성 하는 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 확장된 버전을 변환 스칼라 단일 정밀도 부동 소수점 숫자로 64 비트 정수 \(`cvtss2si`\) 명령.  
+ 생성 된 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 된 변환 스칼라 단일 정밀도 부동 소수점 숫자의 64 비트 정수로 확장 된 버전 (`cvtss2si`) 명령입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
+__int64 _mm_cvtss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `value`  
- `__m128` 부동 소수점 값이 포함 된 구조입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `value`  
+ `__m128` 부동 소수점 값을 포함 하는 구조입니다.  
   
-## 반환 값  
- 64 비트 정수, 부동 소수점 첫 번째 값의 정수 변환의 결과입니다.  
+## <a name="return-value"></a>반환 값  
+ 64 비트 정수를 첫 번째 부동 소수점 값을 정수로 변환의 결과입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 구조체 값의 첫 번째 요소 정수로 변환 되 고 반환 합니다.  MXCSR 제어 비트 반올림 반올림 동작을 결정 하는 데 사용 됩니다.  기본 반올림 모드는 소수 부분이 0.5 인 경우는 짝수로 반올림 하에서 가장 가까운 라운드입니다.  때문에 `__m128` 구조이 내장 된 XMM 레지스터 XMM 레지스터의 값을 가져와 시스템 메모리에 기록 된 나타냅니다.  
+## <a name="remarks"></a>설명  
+ 구조 값의 첫 번째 요소는 정수로 변환 하 고 반환 됩니다. MXCSR에서 반올림 제어 비트는 반올림 동작을 결정 하는 데 사용 됩니다. 반올림 모드에는 기본값이 round를 가장 가까운, 소수 부분은 0.5 경우 숫자를 반올림 합니다. 때문에 `__m128` 구조 XMM 레지스터에서 XMM 레지스터는이 내장 함수는 값을 나타내는 시스템 메모리에 기록 합니다.  
   
- 이 루틴에만 내장로 사용할 수 있습니다.  
+ 이 루틴은 내장 루틴으로만 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // _mm_cvtss_si64x.cpp  
@@ -87,9 +86,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## Microsoft 특정 끝  
+```Output  
+101  
+```  
   
-## 참고 항목  
- [\_\_m128d](../cpp/m128d.md)   
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
+ [__m128d](../cpp/m128d.md)   
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

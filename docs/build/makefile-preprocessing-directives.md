@@ -1,104 +1,104 @@
 ---
 title: "메이크파일 전처리 지시문 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "!UNDEF"
-  - "!INCLUDE"
-  - "!IFNDEF"
-  - "!MESSAGE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "!CMDSWITCHES 지시문"
-  - "!ELSE 지시문"
-  - "!ELSEIF 지시문"
-  - "!ELSEIFDEF 지시문"
-  - "!ELSEIFNDEF 지시문"
-  - "!ENDIF 지시문"
-  - "!ERROR 지시문"
-  - "!IF 지시문"
-  - "!IFDEF 지시문"
-  - "!IFNDEF 지시문"
-  - "!INCLUDE 지시문"
-  - "!MESSAGE 지시문"
-  - "!UNDEF 지시문"
-  - "CMDSWITCHES 지시문"
-  - "지시문, 메이크파일 전처리"
-  - "ELSE 지시문"
-  - "ELSEIF 지시문"
-  - "ELSEIFDEF 지시문"
-  - "ELSEIFNDEF 지시문"
-  - "ENDIF 지시문"
-  - "ERROR 지시문"
-  - "IF 지시문"
-  - "IFDEF 지시문"
-  - "IFNDEF 지시문"
-  - "INCLUDE 지시문"
-  - "메이크파일, 전처리 지시문"
-  - "MESSAGE 지시문"
-  - "NMAKE 프로그램, 식"
-  - "NMAKE 프로그램, 전처리기 지시문"
-  - "전처리 지시문, 메이크파일"
-  - "UNDEF 지시문"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- '!UNDEF'
+- '!INCLUDE'
+- '!IFNDEF'
+- '!MESSAGE'
+dev_langs: C++
+helpviewer_keywords:
+- ERROR directive
+- '!MESSAGE directive'
+- IF directive
+- '!UNDEF directive'
+- IFDEF directive
+- '!ELSEIF directive'
+- '!IFDEF directive'
+- '!IF directive'
+- UNDEF directive
+- '!CMDSWITCHES directive'
+- ENDIF directive
+- directives, makefile preprocessing
+- INCLUDE directive
+- IFNDEF directive
+- preprocessing directives, makefiles
+- '!IFNDEF directive'
+- ELSEIFNDEF directive
+- NMAKE program, expressions
+- ELSEIF directive
+- '!ERROR directive'
+- '!ENDIF directive'
+- MESSAGE directive
+- '!INCLUDE directive'
+- '!ELSEIFNDEF directive'
+- CMDSWITCHES directive
+- '!ELSEIFDEF directive'
+- '!ELSE directive'
+- NMAKE program, preprocessor directives
+- makefiles, preprocessing directives
+- ELSE directive
+- ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 742faea629cb085c203e231c29ab9e512b9c2812
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 메이크파일 전처리 지시문
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-전처리 지시문은 대\/소문자를 구분하지 않습니다.  맨 앞의 느낌표\(\!\)는 줄의 시작 부분에 표시되어야 합니다.  느낌표 뒤에 공백이나 탭을 0개 이상 표시하여 들여쓸 수 있습니다.  
+# <a name="makefile-preprocessing-directives"></a>메이크파일 전처리 지시문
+전처리 지시문은 대/소문자 구분 하지 않습니다. 느낌표 (!)은 줄의 시작 부분에 표시 되어야 합니다. 공백이 나 탭을 0 이상 들여쓰기에 느낌표 뒤에 나타날 수 있습니다.  
   
- **\!CMDSWITCHES**  
- {**\+**&#124; **–**}*option*...  나열된 각 *option*을 설정 또는 해제합니다.  공백이나 탭은 \+나 – 연산자 앞에 표시해야 하며 연산자와 [옵션 문자](../build/nmake-options.md) 사이에는 표시할 수 없습니다.  옵션 문자는 대\/소문자를 구분하지 않으며 슬래시\( \/ \)를 사용하지 않고 지정합니다.  일부 옵션만 설정하고 나머지는 해제하려면 별도의 **\!CMDSWITCHES** 사양을 사용합니다.  
+ **! CMDSWITCHES**  
+ {**+**&#124;  **-** }*옵션*... 각 설정 *옵션* 또는 해제를 나열 합니다. 공백이 나 탭 앞에 나와야 합니다는 + 또는-현재 연산자 연산자 사이 나타날 수 없음 및 [문자 옵션](../build/nmake-options.md)합니다. 문자는 대/소문자 구분 하지 않으며 없이 슬래시 (/)가 지정 되었습니다. 일부 옵션을 지정 하 고 나머지는 해제를 설정 하려면 별도 사양에 사용 하 여 **! CMDSWITCHES**합니다.  
   
- 메이크파일에는 \/D, \/I, \/N 및 \/S만 사용할 수 있습니다.  Tools.ini에는 \/F, \/HELP, \/NOLOGO, \/X 및 \/?를 제외한 모든 옵션을 사용할 수 있습니다.  설명 블록에 지정된 변경 내용은 다음 설명 블록 이후에 적용됩니다.  이 지시문은 **MAKEFLAGS**를 업데이트하므로 **MAKEFLAGS**가 지정된 경우 재귀하는 동안 변경 내용이 상속됩니다.  
+ 만 /D, I, /N 및 /S 메이크파일의 사용할 수 있습니다. Tools.ini에서 모든 옵션은 /F, /HELP, /NOLOGO를 제외 하 고 허용/X, 및 /?. 설명 블록에 지정 된 변경 내용이 적용 될 때까지 다음 설명 블록 하지 않습니다. 이 지시어 업데이트 **MAKEFLAGS**; 재귀 하는 동안 변경 내용을 상속 되므로 경우 **MAKEFLAGS** 지정 됩니다.  
   
- **\!ERROR**  *text*  
- 오류 U1050에 *text*를 표시한 다음 NMAKE를 중지합니다. \/K, \/I, **.IGNORE**, **\!CMDSWITCHES** 또는 대시\(–\) 명령 한정자가 사용된 경우에도 적용됩니다.  *text* 앞에 사용된 공백이나 탭은 무시됩니다.  
+ **! 오류***텍스트*   
+ 표시 *텍스트* 오류 U1050, 다음 NMAKE, 중단 되어도에 /K / I, **합니다. 무시**, **! CMDSWITCHES**, 또는 대시 (-) 명령 한정자 사용 됩니다. 공백 또는 탭 하기 전에 *텍스트* 무시 됩니다.  
   
- **\!MESSAGE**  *text*  
- *text*를 표준 출력에 표시합니다.  *text* 앞에 사용된 공백이나 탭은 무시됩니다.  
+ **! 메시지***텍스트*   
+ 표시 *텍스트* 을 표준 출력 합니다. 공백 또는 탭 하기 전에 *텍스트* 무시 됩니다.  
   
- **\!INCLUDE** \[**\<\<\]**filename*\[*\>**\>**\]  
- *filename*을 메이크파일로 읽은 다음 현재 메이크파일을 계속 처리합니다.  NMAKE는 먼저 현재 디렉터리나 지정된 디렉터리에서 *filename*을 찾은 다음 재귀적으로 모든 부모 메이크파일에서 찾습니다. 그런 다음 *filename*이 꺾쇠괄호\(\< \>\)로 묶여 있으면 \<\> **INCLUDE**매크로를 사용하여 지정한 디렉터리에서 찾습니다. 이 매크로는 처음에 INCLUDE 환경 변수로 설정됩니다.  이 지시문은 **.SUFFIXES** 설정, **.PRECIOUS** 및 유추 규칙을 재귀적 메이크파일로 전달하는 데 유용합니다.  
+ **! 포함**[  **\<** ] *filename*[  **>** ]  
+ 읽고 *filename* 을 메이크파일으로 현재 메이크파일을 계속 합니다. Nmake는 *filename* 먼저 지정 된 열 또는 현재 디렉터리에서 다음 재귀적으로 모든 부모 메이크파일에 그런 다음 경우 *filename* 꺾쇠 괄호로 묶여 (\<>), 지정 된 경로에 **포함** 매크로 처음에 INCLUDE 환경 변수 설정 합니다. 이 지시문은 **합니다. 접미사** 설정, **합니다. 소중한**, 및 유추 규칙을 재귀 메이크파일입니다.  
   
- **\!IF**  `constantexpression`  
- `constantexpression`이 0이 아닌 값으로 계산된 경우 **\!IF**와 다음 **\!ELSE** 또는 `!ENDIF` 사이의 문을 처리합니다.  
+ **! IF**  `constantexpression`  
+ 이전 **! IF** 와 다음 **! 다른** 또는 `!ENDIF` 경우 `constantexpression` 0이 아닌 값으로 계산 합니다.  
   
- **\!IFDEF**  *macroname*  
- *macroname*이 정의된 경우 `!IFDEF`와 다음 **\!ELSE** 또는 `!ENDIF` 사이의 문을 처리합니다.  null 매크로는 정의된 것으로 간주합니다.  
+ **! IFDEF***매크로 이름*   
+ 이전 `!IFDEF` 와 다음 **! 다른** 또는 `!ENDIF` 경우 *매크로 이름* 정의 됩니다. Null 매크로 정의로 간주 됩니다.  
   
- **\!IFNDEF**  *macroname*  
- *macroname*이 정의되지 않은 경우 **\!IFNDEF**와 다음 **\!ELSE** 또는 `!ENDIF` 사이의 문을 처리합니다.  
+ **! IFNDEF***매크로 이름*   
+ 이전 **! IFNDEF** 와 다음 **! 다른** 또는 `!ENDIF` 경우 *매크로 이름* 정의 되어 있지 않습니다.  
   
- **\!ELSE**\[**IF** *constantexpression* &#124; **IFDEF** *macroname*&#124; **IFNDEF** *macroname*\]  
- 이전 **\!IF**, `!IFDEF` 또는 **\!IFNDEF** 문이 0으로 계산된 경우 **\!ELSE**와 다음 `!ENDIF` 사이의 문을 처리합니다.  선택적 키워드를 사용하면 전처리를 다양하게 제어할 수 있습니다.  
+ **! 다른**[**IF** *constantexpression* &#124; **IFDEF** *매크로 이름*&#124; **IFNDEF** *매크로 이름*]  
+ 이전 **! 다른** 와 다음 `!ENDIF` 경우 이전 **! IF**, `!IFDEF`, 또는 **! IFNDEF** 문을 처리 합니다. 선택적 키워드 게 전처리 제어할 수 있습니다.  
   
- **\!ELSEIF**  
- **\!ELSE IF**의 동의어입니다.  
+ **! ELSEIF**  
+ 에 대 한 동의어 **! ELSE IF**합니다.  
   
- **\!ELSEIFDEF**  
- **\!ELSE IFDEF**의 동의어입니다.  
+ **! ELSEIFDEF**  
+ 에 대 한 동의어 **! 다른 IFDEF**합니다.  
   
- **\!ELSEIFNDEF**  
- **\!ELSE IFNDEF**의 동의어입니다.  
+ **! ELSEIFNDEF**  
+ 에 대 한 동의어 **! ELSE IFNDEF**합니다.  
   
  `!ENDIF`  
- **\!IF**, `!IFDEF` 또는 **\!IFNDEF** 블록의 끝을 표시합니다.  같은 줄에서 `!ENDIF` 뒤에 오는 텍스트는 무시됩니다.  
+ 끝을 표시 한 **! IF**, `!IFDEF`, 또는 **! IFNDEF** 블록입니다. 같은 줄에서 `!ENDIF` 같은 줄에는 무시 됩니다.  
   
- **\!UNDEF**  *macroname*  
- *macroname*을 정의하지 않습니다.  
+ **! UNDEF***매크로 이름*   
+ 정의 해제 *매크로 이름*합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메이크파일 전처리](../build/makefile-preprocessing.md)

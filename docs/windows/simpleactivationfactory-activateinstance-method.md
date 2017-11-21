@@ -1,53 +1,57 @@
 ---
-title: "SimpleActivationFactory::ActivateInstance 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivateInstance 메서드"
+title: "Simpleactivationfactory:: Activateinstance 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance
+dev_langs: C++
+helpviewer_keywords: ActivateInstance method
 ms.assetid: 4f836e51-5a6c-4bad-b871-9f25199298b4
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f1e28afad17f4fdc593e6dea4bebddf27f1548f7
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# SimpleActivationFactory::ActivateInstance 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance 메서드
 
-지정된 인터페이스의 인스턴스를 만듭니다.  
-  
-## 구문  
-  
-```  
-STDMETHOD(  
-   ActivateInstance  
-)(_Deref_out_ IInspectable **ppvObject);  
-```  
-  
-#### 매개 변수  
- `ppvObject`  
- 이 작업이 완료되면, `Base` 클래스 템플릿 매개 변수에 의해 지정된 개체의 인스턴스에 대한 포인터입니다.  
-  
-## 반환 값  
- 성공 하면 S\_OK 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
-  
-## 설명  
- 클래스 템플릿 매개 변수에 지정 된 기본 클래스에서 파생 되지 않은 경우 어설션 오류가 발생 \_\_WRL\_STRICT\_\_를 정의하는 경우 [RuntimeClass](../windows/runtimeclass-class.md), WinRt 또는 WinRtClassicComMix를 사용하여 구성되지 않은 또는 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.  
-  
-## 요구 사항  
- **헤더:** module.h  
-  
- **네임스페이스:** Microsoft::WRL  
-  
-## 참고 항목  
- [SimpleActivationFactory 클래스](../windows/simpleactivationfactory-class.md)
+지정된 된 인터페이스의 인스턴스를 만듭니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
+STDMETHOD( ActivateInstance )(
+    _Deref_out_ IInspectable **ppvObject
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*ppvObject*  
+이 작업이 완료 될 때, 지정 된 개체의 인스턴스로에 대 한 포인터는 `Base` 클래스 템플릿 매개 변수입니다.
+
+## <a name="return-value"></a>반환 값
+
+성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
+
+## <a name="remarks"></a>설명
+
+경우 &#95; &#95; WRL_STRICT &#95; #95 정의 assert 오류가 면 내보내집니다 클래스 템플릿 매개 변수에서 지정 된 기본 클래스에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), WinRt 또는 WinRtClassicComMix 구성 되지 않았습니다 또는 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
+
+## <a name="requirements"></a>요구 사항
+
+**헤더:** module.h
+
+**네임스페이스:** Microsoft::WRL
+
+## <a name="see-also"></a>참고 항목
+
+[SimpleActivationFactory 클래스](../windows/simpleactivationfactory-class.md)

@@ -1,11 +1,10 @@
 ---
-title: "float_3 클래스 | Microsoft 문서"
+title: "float_3 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,35 +77,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::gbr
 - amp_short_vectors/Concurrency::graphics::float_3::operator*=
 - amp_short_vectors/Concurrency::graphics::float_3::get_xy
-dev_langs:
-- C++
-helpviewer_keywords:
-- amp_short_vectors/Concurrency::graphics::float_3
+dev_langs: C++
+helpviewer_keywords: amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2cd5e44d60ce02a1acf781812a0cc72e1e7657cf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 713f3545ea2604db1313abab729ec726cce3cd75
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="float3-class"></a>float_3 클래스
 세 개의 부동 소수점의 short 벡터를 나타냅니다.  
@@ -129,7 +111,7 @@ class float_3;
   
 |이름|설명|  
 |----------|-----------------|  
-|[float_3 생성자](#ctor)|오버로드됨. 기본 생성자를 0부터 모든 요소를 초기화 합니다.|  
+|[float_3 생성자](#ctor)|오버로드됨. 기본 생성자, 0 인 모든 요소를 초기화 합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -236,7 +218,7 @@ class float_3;
   
 ##  <a name="ctor"></a>float_3 
 
- 기본 생성자를 0부터 모든 요소를 초기화 합니다.  
+ 기본 생성자, 0 인 모든 요소를 초기화 합니다.  
   
 ```  
 float_3() restrict(amp,
@@ -287,13 +269,13 @@ explicit inline float_3(
   
 ### <a name="parameters"></a>매개 변수  
  `_V0`  
- 0 요소를 초기화할 값입니다.  
+ 값 초기화 요소 0입니다.  
   
  `_V1`  
- 1 요소를 초기화할 값입니다.  
+ 1 요소를 초기화 값입니다.  
   
  `_V2`  
- 2 요소를 초기화할 값입니다.  
+ 값 2 요소를 초기화 하는입니다.  
   
  `_V`  
  초기화에 대 한 값입니다.  
@@ -309,4 +291,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
-

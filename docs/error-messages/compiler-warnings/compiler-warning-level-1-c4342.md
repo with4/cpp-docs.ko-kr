@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4342
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4342
+f1_keywords: C4342
+dev_langs: C++
+helpviewer_keywords: C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: c4a2afbc3ced186b0db63b22b3cc5c2b27204c71
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: faea23fcfa1e323ec28d81aa5abeb27f3c87cef1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4342"></a>컴파일러 경고(수준 1) C4342
 동작 변경: '*함수*' 호출 되었지만 이전 버전에서는 멤버 연산자가 호출  
@@ -49,7 +30,7 @@ ms.lasthandoff: 04/12/2017
   
  이 경고는 코드를 현재 버전으로 올바르게 이식 해제 되어야 합니다.  컴파일러는 코드에 대 한이 경고를 생성 하는 거짓 긍정을 제공할 수 있습니다는 동작이 변경 되지 않습니다.  
   
- 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 참조 [기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md)합니다.  
+ 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)을 참조하세요.  
   
  다음 샘플에서는 C4342 오류가 생성 됩니다.  
   

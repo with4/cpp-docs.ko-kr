@@ -1,33 +1,33 @@
 ---
-title: "How to: Pin Pointers and Arrays | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, pinning"
-  - "arrays [C++], pinning"
+title: "방법: 포인터 및 배열 고정 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- pointers, pinning
+- arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 02c0f42042f5cdda0898e7d2c74754e68fb67113
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Pin Pointers and Arrays
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-관리되는 개체에 정의 된 하위 개체를 고정하면 전체 개체를 고정하는 효과가 있습니다.  예를 들어, 모든 배열 요소가 고정 되어 있는 경우 다음 전체 배열도 고정됩니다.  고정 된 배열을 선언하는 언어에 더이상 확장이 없습니다.  핀 배열, 요소 형식 및 해당 요소 중 하나는 핀 고정 포인터를 선언합니다.  
+# <a name="how-to-pin-pointers-and-arrays"></a>방법: 포인터 및 배열 고정
+관리되는 개체에 정의된 하위 개체를 고정하면 전체 개체를 고정하는 효과가 있습니다.  예를 들어, 모든 배열 요소가 고정되어 있는 경우 전체 배열도 고정됩니다. 고정된 배열을 선언하기 위한 언어 확장은 없습니다. 배열을 고정하려면 해당 요소 형식에 대한 고정 포인터를 선언하고 이러한 요소 중 하나를 고정합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // pin_ptr_array.cpp  
@@ -49,11 +49,11 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>출력  
   
 ```  
 ++  
 ```  
   
-## 참고 항목  
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+## <a name="see-also"></a>참고 항목  
+ [pin_ptr(C++/CLI)](../windows/pin-ptr-cpp-cli.md)

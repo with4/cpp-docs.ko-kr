@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __hook_cpp
-dev_langs:
-- C++
+f1_keywords: __hook_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 21bb75853d8664ad46bc48fc907946ae5a147f9a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 98a18a7e145a2b23b13e38bd07d5b29c5a397d6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="hook"></a>__hook
 처리기 메서드를 이벤트와 연결합니다.  
@@ -86,7 +82,7 @@ long __hook(
 ## <a name="remarks"></a>설명  
  이벤트 수신기에서 `__hook` 내장 함수를 사용하여 처리기 메서드를 이벤트 메서드와 연결하거나 후크할 수 있습니다. 이렇게 하면 소스에서 지정된 이벤트를 발생시킬 때 지정된 처리기가 호출됩니다. 여러 처리기를 단일 이벤트에 후크하거나 여러 이벤트를 단일 처리기에 후크할 수 있습니다.  
   
- 두 가지 형태의 `__hook`가 있습니다. COM 이벤트 수신기에 대 한 구체적으로, 대부분의 경우에서 첫 번째 형태 (인수 4)을 사용할 수 있습니다는 *layout_dependent* 의 매개 변수는 [event_receiver](../windows/event-receiver.md) 특성은 **false **.  
+ 두 가지 형태의 `__hook`가 있습니다. COM 이벤트 수신기에 대 한 구체적으로, 대부분의 경우에서 첫 번째 형태 (인수 4)을 사용할 수 있습니다는 *layout_dependent* 의 매개 변수는 [event_receiver](../windows/event-receiver.md) 특성은 **false** .  
   
  이러한 경우 메서드 중 하나에서 이벤트를 발생시키기 전에 인터페이스에서 모든 메서드를 후크할 필요는 없습니다. 이벤트를 처리하는 메서드만 후크해야 합니다. 두 번째 (인수 2 개) 형식을 사용할 수 있습니다 `__hook` 인 COM 이벤트 수신기에 대해서만 *layout_dependent***= true**합니다.  
   

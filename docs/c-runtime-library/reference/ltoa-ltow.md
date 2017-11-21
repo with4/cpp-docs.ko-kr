@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _ltot
 - _ltoa
 - _ltow
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - converting integers
 - _ltoa function
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - long integer conversion to string
 - converting numbers, to strings
 ms.assetid: 14036104-2c25-4759-87c0-918ed8521e47
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5e67ca683ac8946f88389e9ca2323f1255da6695
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 135c082e4d972b18af057bf22a718ac9c4170718
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltoa-ltow"></a>_ltoa, _ltow
 long 정수를 문자열로 변환합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_ltoa_s, _ltow_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md)를 참조하세요.  
@@ -108,7 +91,7 @@ wchar_t *_ltow(
  이러한 각 함수는 `str`에 대한 포인터를 반환합니다. 반환되는 오류가 없습니다.  
   
 ## <a name="remarks"></a>설명  
- `_ltoa` 함수는 `value`의 숫자를 null로 끝나는 문자열로 변환하고 결과(최대 33바이트)를 `str`에 저장합니다. `radix` 인수 기본을 지정 `value`, 2-36 범위에 이어야 합니다. 경우 `radix` 이 10 및 `value` 가 음수인 경우 저장된 된 문자열의 첫 번째 문자는 빼기 기호 (-). `_ltow`는 `_ltoa`의 와이드 문자 버전입니다. `_ltow`의 두 번째 인수 및 반환 값은 와이드 문자열입니다. 이러한 각 함수는 Microsoft 지정입니다.  
+ `_ltoa` 함수는 `value`의 숫자를 null로 끝나는 문자열로 변환하고 결과(최대 33바이트)를 `str`에 저장합니다. `radix` 인수 기본을 지정 `value`, 2-36 범위에 이어야 합니다. 경우 `radix` 이 10 및 `value` 가 음수인 경우 저장된 된 문자열의 첫 번째 문자는 음수 기호 (-). `_ltow`는 `_ltoa`의 와이드 문자 버전입니다. `_ltow`의 두 번째 인수 및 반환 값은 와이드 문자열입니다. 이러한 각 함수는 Microsoft 지정입니다.  
   
 > [!IMPORTANT]
 >  버퍼 오버런을 방지하려면 `str` 버퍼가 변환된 숫자와 후행 null 문자 및 부호 문자를 포함할 만큼 충분히 커야 합니다.  

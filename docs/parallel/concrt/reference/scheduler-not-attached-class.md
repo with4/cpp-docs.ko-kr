@@ -1,46 +1,28 @@
 ---
-title: "scheduler_not_attached 클래스 | Microsoft 문서"
+title: "scheduler_not_attached 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached::scheduler_not_attached
-dev_langs:
-- C++
-helpviewer_keywords:
-- scheduler_not_attached class
+dev_langs: C++
+helpviewer_keywords: scheduler_not_attached class
 ms.assetid: 26001970-b400-463b-be3d-8623359c399a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 5e0ec52a5b204d33f391d367d36d6ab3e9af6d74
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 6e18171f3984a7021884586ec519512a49dc6fbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached 클래스
 이 클래스는 스케줄러가 현재 컨텍스트에 연결되어야 하는 작업을 수행하는데 연결된 스케줄러가 없는 경우 발생하는 예외를 설명합니다.  
@@ -86,4 +68,3 @@ scheduler_not_attached() throw();
 ## <a name="see-also"></a>참고 항목  
  [Namespace 동시성](concurrency-namespace.md)   
  [Scheduler 클래스](scheduler-class.md)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,23 @@ f1_keywords:
 - vector/std::vector::pointer
 - vector/std::vector::flip
 - vector/std::vector::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- vector<bool> class
+- std::vector [C++], const_pointer
+- std::vector [C++], const_reference
+- std::vector [C++], pointer
+- std::vector [C++], flip
+- std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 535ce75fb600b919b5e255bc580a93e448e81d59
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 718cb52bbc06645ec40fe5e35ba0a8cc55ff1778
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 클래스
 `vector<bool>` 클래스는 `bool` 형식의 요소에 대한 [vector](../standard-library/vector-class.md)의 부분적 특수화입니다. 특수화(비트당 하나의 `bool` 값을 저장하여 공간 최적화 제공)에서 사용하는 기본 형식에 대한 할당자가 있습니다.  
@@ -386,5 +373,4 @@ static void swap(
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 

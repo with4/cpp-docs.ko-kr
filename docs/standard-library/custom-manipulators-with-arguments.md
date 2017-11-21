@@ -4,41 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - custom stream manipulators
 - streams, custom stream manipulators
 - output streams, custom stream manipulators
 ms.assetid: fa4655a7-d68f-4fea-a26e-73c3ad5c90a5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7960fb03bfb13324888191be755596e1b3debe4b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 5848e4f200f528261a135e38e1898a256433871b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="custom-manipulators-with-arguments"></a>인수 포함 사용자 지정 조작자
 이 섹션에서는 하나 이상의 인수를 포함하는 출력 스트림 조작자를 만드는 방법 및 비출력 스트림에 대해 조작자를 사용하는 방법을 설명합니다.  
@@ -50,5 +33,4 @@ ms.lasthandoff: 02/24/2017
   
 ## <a name="see-also"></a>참고 항목  
  [iostream 프로그래밍](../standard-library/iostream-programming.md)
-
 

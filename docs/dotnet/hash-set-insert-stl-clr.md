@@ -1,32 +1,30 @@
 ---
-title: "hash_set::insert(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert 멤버[STL/CLR]"
+title: 'hash_set:: insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 0a9bc9aa-012e-4101-9e8c-f1f4b6b76af7
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8aa213c24886951f57cf6c8d670fb430a8da530
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::insert(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetinsert-stlclr"></a>hash_set::insert(STL/CLR)
 요소를 추가합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 cliext::pair<iterator, bool> insert(value_type val);  
@@ -36,36 +34,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### 매개 변수  
- first  
- 삽입할 범위의 시작입니다.  
+#### <a name="parameters"></a>매개 변수  
+ 첫 번째  
+ 삽입할 범위의의 시작입니다.  
   
  last  
  삽입할 범위의 끝입니다.  
   
- right  
- 삽입할 열거형입니다.  
+ 오른쪽  
+ 삽입 하는 열거형입니다.  
   
  val  
- 삽입할 키입니다.  
+ 삽입할 키 값입니다.  
   
- where  
- \(참고만\)삽입할 컨테이너에 위치 합니다.  
+ 형식에 대한 설명  
+ (힌트에만 해당)를 삽입할 컨테이너의 위치입니다.  
   
-## 설명  
- 각 멤버 함수는 나머지 피연산자에 지정된 시퀀스를 삽입 합니다.  
+## <a name="remarks"></a>설명  
+ 각 멤버 함수는 나머지 피연산자에서 지정 된 시퀀스를 삽입 합니다.  
   
- 첫 번째 멤버 함수는 `val` 값에 요소를 삽입합니다. 그리고 `X` 값의 쌍을 반환합니다.  `X.second`가 true이면 `X.first`는 새로 삽입되는 요소를 지정하고, 그렇지 않으면 `X.first`는 이미 있는 요소를 동일한 순서로 지정하며 새 요소가 삽입되지 않습니다.  단일 요소를 삽입 하려면 사용 합니다.  
+ 첫 번째 멤버 함수는 값을 가진 요소를 삽입할 노력 `val`, 한 쌍의 값을 반환 하 고 `X`합니다. 경우 `X.second` 가 true 이면 `X.first` 새로 삽입된 된 요소를 지정 고, 그렇지 않으면 `X.first` 해당 키와 요소를 지정 순서 이미 존재 하 고 새 요소가 삽입 됩니다. 단일 요소를 삽입 하려면 사용 합니다.  
   
- 두 번째 멤버 함수는 `where` 를 힌트로\(성능 향상\) 요소에 `val` 값을 사용하여 삽입하고 새로 삽입된 요소를 지정하는 반복기를 반환합니다.  알고 있는 요소에 인접할 수 있는 단일 요소에 집어넣기 위해 사용합니다.  
+ 두 번째 멤버 함수는 값을 가진 요소를 삽입 `val`를 사용 하 여 `where` (성능을 향상 시키기) 힌트로 새로 삽입된 된 요소를 지정 하는 반복기를 반환 합니다. 알고 있는 요소에 인접 한 될 수 있는 단일 요소를 삽입 하려면 사용 합니다.  
   
- 세 번째 멤버 함수는 다음 순서로 삽입합니다. `[``first``,` `last``)` 다른 시퀀스에서 복사 된 0 개 이상의 요소를 삽입 하려면 사용 합니다.  
+ 세 번째 멤버 함수는 시퀀스를 삽입 [`first`, `last`). 다른 시퀀스에서 복사 된 0 개 이상의 요소를 삽입 하려면 사용 합니다.  
   
- 지정 된 시퀀스를 삽입 하는 네 번째 멤버 함수는 `right` 입니다.  열거형에서 설명 하는 순서를 삽입 하려면 사용 합니다.  
+ 로 지정 된 시퀀스를 삽입 하는 네 번째 멤버 함수는 `right`합니다. 열거자에서 설명 하는 시퀀스를 삽입 하려면 사용 합니다.  
   
- 각 요소를 삽입은 제어 되는 시퀀스의 요소 수의 로그에 비례 하는 시간입니다.  그러나 삽입은 요소 옆에 삽입 포인터를 지정하는 힌트를 제공하는 상환 일정 시간에서 발생할 수 있습니다.  
+ 제어 된 시퀀스의 요소 수 로그 비례 하는 시간을 사용 하는 각 요소를 삽입 합니다. 그러나 삽입 발생할 수 있습니다 분할 상환된 상수 시간에 삽입 지점에 인접 하는 요소를 지정 하는 힌트를 제공 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_insert.cpp   
@@ -126,18 +124,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**insert\(L'x'\) \= \[x True\]**  
-**insert\(L'b'\) \= \[b False\]**  
- **a b c x**  
-**insert\(begin\(\), L'y'\) \= y**  
- **a b c x y**  
- **a b c x**  
- **a b c x y**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+insert(L'x') = [x True]  
+insert(L'b') = [b False]  
+ a b c x  
+insert(begin(), L'y') = y  
+ a b c x y  
+ a b c x  
+ a b c x y  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_set](../dotnet/hash-set-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_set(STL/CLR)](../dotnet/hash-set-stl-clr.md)

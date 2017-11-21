@@ -1,66 +1,65 @@
 ---
-title: "/V(버전 번호) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/v"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/V 컴파일러 옵션[C++]"
-  - "버전 문자열 포함"
-  - "V 컴파일러 옵션[C++]"
-  - "-V 컴파일러 옵션[C++]"
-  - "버전 번호, .obj 지정"
+title: "-V (버전 번호) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /v
+dev_langs: C++
+helpviewer_keywords:
+- embedding version strings
+- /V compiler option [C++]
+- version numbers, specifying for .obj
+- V compiler option [C++]
+- -V compiler option [C++]
 ms.assetid: 3e93fb7a-5dfd-49a6-bd49-3dca8052e0f3
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8d206db7699b955d1440da53731d4c8574fdf81c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /V(버전 번호)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-텍스트 문자열을 .obj 파일에 포함합니다.  사용되지 않습니다.  
+# <a name="v-version-number"></a>/V(버전 번호)
+더 이상 사용되지 않습니다. .Obj 파일에 텍스트 문자열을 포함 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /Vstring  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  `string`  
- obj 파일에 포함될 버전 번호나 저작권 표시를 지정하는 문자열  
+ .Obj 파일에 포함할 버전 번호 또는 저작권 표시를 지정 하는 문자열입니다.  
   
-## 설명  
- 이 문자열을 사용하여 .obj 파일에 버전 번호나 저작권 정보를 표시할 수 있습니다.  공백이나 탭 문자를 문자열의 일부로 사용하는 경우에는 큰따옴표\("\)로 묶어야 합니다.  큰따옴표가 문자열의 일부로 사용되는 경우에는 백슬래시\(\\\)를 모든 큰따옴표 앞에 넣어야 합니다.  **\/V**와 `string` 사이에는 공백을 넣어도 되고 넣지 않아도 됩니다.  
+## <a name="remarks"></a>설명  
+ Stringcan 레이블.obj 파일 버전 번호 또는 저작권 표시 합니다. 문자열의 일부인 경우 공백이 나 탭 문자를 큰따옴표 (")에 묶어야 합니다. 백슬래시 (\\) 문자열의 일부인 경우 모든 큰따옴표 앞에 야 합니다. 사이 공백을 **/V** 및 `string` 선택 사항입니다.  
   
- 사용자는 또한 [주석](../../preprocessor/comment-c-cpp.md)를 컴파일러 주석 형식 인수와 함께 사용하여 컴파일러의 이름과 버전 번호를 .obj 파일에 포함할 수 있습니다.  
+ 사용할 수도 있습니다 [주석 (C/c + +)](../../preprocessor/comment-c-cpp.md) .obj 파일에는 컴파일러의 이름 및 버전 번호를 배치 하는 컴파일러 주석 형식 인수를 사용 합니다.  
   
- **\/V**는 더 이상 사용되지 않습니다. **\/V**는 주로 가상 장치 드라이버\(VxDs\) 빌드를 지원하는 데 사용되었으나, [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 도구 집합에서는 VxDs 빌드를 더 이상 지원하지 않습니다.  자세한 내용은 [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/ko-kr/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce)을 참조하십시오.  
+ **/V** 옵션은 Visual Studio 2005;에서 시작 하 고 거부 **/V** 는 주로 가상 장치 드라이버 (Vxd) 빌드를 지 원하는 데 사용 하 고 Visual c + + 도구 집합에서 더 이상 지원 Vxd 구축 합니다. 목록이 사용 되지 않는 컴파일러 옵션에 대 한 참조 **사용 되지 않음 및 컴파일러 옵션 제거** 에 [컴파일러 옵션 범주별 목록](../../build/reference/compiler-options-listed-by-category.md)합니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
+2.  **C/C++** 폴더를 클릭합니다.  
   
 3.  **명령줄** 속성 페이지를 클릭합니다.  
   
 4.  **추가 옵션** 상자에 컴파일러 옵션을 입력합니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

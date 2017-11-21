@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- stdexcept/std::invalid_argument
-- invalid_argument
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_argument class
+f1_keywords: stdexcept/std::invalid_argument
+dev_langs: C++
+helpviewer_keywords: invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3cb196cc07756d9af9193c9c04a56a67f627530a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 03dfdda0c3304364381fca2c53eb373ab3a86286
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="invalidargument-class"></a>invalid_argument 클래스
 이 클래스는 잘못된 인수를 보고하기 위해 발생하는 모든 예외에 대한 기본 클래스로 사용됩니다.  
@@ -95,5 +75,4 @@ Type class std::invalid_argument
 ## <a name="see-also"></a>참고 항목  
  [logic_error 클래스](../standard-library/logic-error-class.md)   
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

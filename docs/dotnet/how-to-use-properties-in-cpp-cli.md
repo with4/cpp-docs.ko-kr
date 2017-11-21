@@ -1,35 +1,34 @@
 ---
-title: "방법: C++/CLI에서 속성 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "속성[C++], 소규모"
-  - "단순 속성"
+title: "방법: 속성을 사용 하 여 C + + /cli CLI | Microsoft Docs"
+ms.custom: 
+ms.date: 07/21/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- simple properties
+- properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 70a048669aeba007ee0ca50459f7bbb4b090ea79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: C++/CLI에서 속성 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-This article shows how to use properties in C\+\+\/CLI.  
+# <a name="how-to-use-properties-in-ccli"></a>방법: C++/CLI에서 속성 사용
+이 문서에서는 C + 속성을 사용 하는 방법을 보여 줍니다. + CLI 합니다.  
   
-## Basic properties  
- For basic properties—those that merely assign and retrieve a private data member—you don't have to explicitly define the get and set accessor functions because the compiler automatically provides them when given just the data type of the property.  This code demonstrates a basic property:  
+## <a name="basic-properties"></a>기본 속성  
+ 기본 속성에 대 한-단지 할당 및 전용 데이터 멤버를 검색 하는-컴파일러에만 데이터 형식 속성을 지정할 때 항목을 자동으로 제공 하기 때문에 set 접근자 함수 및 명시적으로 get를 정의할 필요가 없습니다. 이 코드는 기본 속성을 보여 줍니다.  
   
-```  
+```cpp  
 // SimpleProperties.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -46,13 +45,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **c\-\>Size \= 111**   
-## Static properties  
- This code sample shows how to declare and use a static property.  A static property can only access static members of its class.  
-  
+```Output  
+c->Size = 111  
 ```  
+  
+## <a name="static-properties"></a>정적 속성  
+ 이 코드 예제에는 선언 및 정적 속성을 사용 하는 방법을 보여 줍니다.  정적 속성에는 해당 클래스의 정적 멤버만 액세스할 수 있습니다.  
+  
+```cpp  
 // mcppv2_property_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,22 +84,21 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **96**  
-**47**   
-## Indexed properties  
- An indexed property typically exposes a data structure that's accessed by using a subscript operator.  
-  
- If you use a default indexed property, you can access the data structure just by referring to the class name, but if you use a user\-defined indexed property, you must to specify the property name to access the data structure.  
-  
- For information about how to access a default indexer by using the `this` pointer, see [값 형식 및 참조 형식에서 this 포인터의 의미](../misc/semantics-of-the-this-pointer-in-value-and-reference-types.md).  
-  
- For information about how to consume an indexer that's written in C\#, see [방법: C\# 인덱서 사용](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).  
-  
- This code sample shows how to use default and user\-defined indexed properties:  
-  
+```Output  
+96  
+47  
 ```  
+  
+## <a name="indexed-properties"></a>인덱싱된 속성  
+ 일반적으로 인덱싱된 속성 아래 첨자 연산자를 사용 하 여 액세스 하는 데이터 구조를 노출 합니다.  
+  
+ 기본 인덱싱된 속성이 사용 하는 경우 클래스 이름을 참조 하 여 데이터 구조를 액세스할 수 있지만 데이터 구조에 액세스 하려면 속성 이름을 지정 해야 하는 사용자 정의 된 인덱싱된 속성을 사용 하는 경우.  
+  
+ C#으로 작성 되는 인덱서를 사용 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: C# 인덱서 사용 (C + + /cli CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)합니다.  
+  
+ 이 코드 예제에는 기본 및 사용자 정의 인덱싱된 속성을 사용 하는 방법을 보여 줍니다.  
+  
+```cpp  
 // mcppv2_property_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -155,12 +154,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **\[ 0 1 2 3 4 \]**  
-**\[ 0 2 4 6 8 \]** The next sample shows how to call the default indexer by using the `this` pointer.  
-  
+```Output  
+[ 0 1 2 3 4 ]  
+[ 0 2 4 6 8 ]  
 ```  
+  
+ 다음 샘플에서는 기본 인덱서를 사용 하 여 호출 하는 방법을 보여 줍니다.는 `this` 포인터입니다.  
+  
+```cpp  
 // call_default_indexer_through_this_pointer.cpp  
 // compile with: /clr /c  
 value class Position {  
@@ -182,9 +183,9 @@ private:
 };  
 ```  
   
- This sample shows how to use <xref:System.Reflection.DefaultMemberAttribute> to specify the default indexer:  
+ 이 예제에서는 사용 하는 방법을 보여 줍니다. <xref:System.Reflection.DefaultMemberAttribute> 기본 인덱서를 지정 하려면:  
   
-```  
+```cpp  
 // specify_default_indexer.cpp  
 // compile with: /LD /clr  
 using namespace System;  
@@ -198,9 +199,9 @@ public ref struct Squares {
 };  
 ```  
   
- The next sample consumes the metadata that's created in the previous example.  
+ 다음 예제는 앞의 예에서 만든 메타 데이터를 사용 합니다.  
   
-```  
+```cpp  
 // consume_default_indexer.cpp  
 // compile with: /clr  
 #using "specify_default_indexer.dll"  
@@ -210,13 +211,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
- **9**   
-## Virtual properties  
- This code sample shows how to declare and use virtual properties:  
-  
+```Output  
+9  
 ```  
+  
+## <a name="virtual-properties"></a>가상 속성  
+ 이 코드 예제에는 가상 속성 선언 및 사용 하는 방법을 보여 줍니다.  
+  
+```cpp  
 // mcppv2_property_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -255,16 +257,17 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **93**  
-**43**   
-## Abstract and sealed properties  
- Although the [abstract](../windows/abstract-cpp-component-extensions.md) and [sealed](../windows/sealed-cpp-component-extensions.md) keywords are specified as valid in the ECMA C\+\+\/CLI specification, for the Visual C\+\+ compiler, you cannot specify them on trivial properties, nor on the property declaration of a non\-trivial property.  
-  
- To declare a sealed or abstract property, you must define a non\-trivial property and then specify the `abstract` or `sealed` keyword on the get and set accessor functions.  
-  
+```Output  
+93  
+43  
 ```  
+  
+## <a name="abstract-and-sealed-properties"></a>추상 및 봉인 된 속성  
+ 하지만 [추상](../windows/abstract-cpp-component-extensions.md) 및 [봉인](../windows/sealed-cpp-component-extensions.md) 키워드는 지정 된 유효한 것으로에서 ECMA C + + CLI 사양을 Visual c + + 컴파일러에 대 한 지정할 수 없습니다 하는 속성에 설정 및 간단한 속성 trivial이 아닌 속성의 선언입니다.  
+  
+ 봉인 또는 추상 속성을 선언 하는 특수 속성을 정의 하 고 다음 지정 해야는 `abstract` 또는 `sealed` 키워드 get 및 set 접근자 함수입니다.  
+  
+```cpp  
 // properties_abstract_sealed.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -320,14 +323,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **86**  
-**87**   
-## Multidimensional properties  
- You can use multidimensional properties to define property accessor methods that take a non\-standard number of parameters.  
-  
+```Output  
+86  
+87  
 ```  
+  
+## <a name="multidimensional-properties"></a>다차원 속성  
+ 사용할 수 없는 개수의 매개 변수를 사용 하는 속성 접근자 메서드를 정의 하려면 다차원 속성을 사용할 수 있습니다.  
+  
+```cpp  
 // mcppv2_property_5.cpp  
 // compile with: /clr  
 ref class X {  
@@ -363,13 +367,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **1.1**   
-## Overloading property accessors  
- The following example shows how to overload indexed properties.  
-  
+```Output  
+1.1  
 ```  
+  
+## <a name="overloading-property-accessors"></a>속성 접근자의 오버 로드  
+ 다음 예제에서는 인덱싱된 속성을 오버 로드 하는 방법을 보여 줍니다.  
+  
+```cpp  
 // mcppv2_property_6.cpp  
 // compile with: /clr  
 ref class X {  
@@ -399,9 +404,10 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+3.4  
+6.8  
+```  
   
-  **3.4**  
-**6.8**   
-## 참고 항목  
- [property](../windows/property-cpp-component-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [속성](../windows/property-cpp-component-extensions.md)

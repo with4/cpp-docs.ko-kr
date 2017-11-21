@@ -1,32 +1,30 @@
 ---
 title: "AsWeak 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::AsWeak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsWeak 함수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::AsWeak
+dev_langs: C++
+helpviewer_keywords: AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 36cf91b969ac1c180f7060c2518e626a22a08284
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# AsWeak 함수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-지정된 인스턴스에 대한 약한 참조를 검색합니다.  
+# <a name="asweak-function"></a>AsWeak 함수
+지정된 인스턴스에 대한 약한 참조를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<  
@@ -38,23 +36,23 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- 매개변수 `p`의 형식에 대한 포인터.  
+ 매개 변수 형식에 대 한 포인터 `p`합니다.  
   
  `p`  
  형식의 인스턴스입니다.  
   
  `pWeak`  
- 이 작업이 완료되면, 약한 참조 매개 변수 `p` 에 대한 포인터입니다.  
+ 이 작업이 완료 될 때 매개 변수에 대 한 약한 참조에 대 한 포인터 `p`합니다.  
   
-## 반환 값  
- 이 작업에 성공 하면 S\_OK 그렇지 않은 경우 실패의 원인을 나타내는 오류입니다.  
+## <a name="return-value"></a>반환 값  
+ 이 작업에 성공 하면 s_ok이 고 그렇지 않으면 실패의 원인을 나타내는 HRESULT 오류가 발생 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  
   
  **네임스페이스:** Microsoft::WRL  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft::WRL 네임스페이스](../windows/microsoft-wrl-namespace.md)

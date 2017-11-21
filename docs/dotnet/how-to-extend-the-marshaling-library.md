@@ -1,50 +1,49 @@
 ---
-title: "방법: 마샬링 라이브러리 확장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "마샬링 라이브러리, 확장"
+title: "방법: 마샬링 라이브러리 확장명 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords: Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3133a8329dac0e20eeb5c3b3c8141e15a65aefe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 마샬링 라이브러리 확장
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 항목에서는 마샬링 라이브러리를 확장하여 데이터 형식 사이에 더 많은 변환을 제공하는 방법을 설명합니다.  사용자는 라이브러리에서 현재 지원되지 않는 데이터 변환에 대해 마샬링 라이브러리를 확장할 수 있습니다.  
+# <a name="how-to-extend-the-marshaling-library"></a>방법: 마샬링 라이브러리 확장명
+이 데이터 형식 사이 더 많은 변환을 수 있도록 마샬링 라이브러리를 확장 하는 방법을 설명 합니다. 사용자는 현재 지원 하지 않는 라이브러리에서 데이터 변환에 대 한 마샬링 라이브러리를 확장할 수 있습니다.  
   
- [marshal\_context 클래스](../dotnet/marshal-context-class.md)를 사용하거나 사용하지 않는 두 가지 방법 중에서 하나로 마샬링 라이브러리를 확장할 수 있습니다.  새 변환에 컨텍스트가 필요한지 여부를 확인하려면 [C\+\+ 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md) 항목을 검토하십시오.  
+ 여부에 관계 없이 두 가지 방법 중 하나에 마샬링 라이브러리를 확장할 수 있습니다는 [marshal_context 클래스](../dotnet/marshal-context-class.md)합니다. 검토는 [개요의 c + + 마샬링](../dotnet/overview-of-marshaling-in-cpp.md) 새 변환을 컨텍스트가 필요 여부를 결정 하는 항목입니다.  
   
- 두 경우 모두 먼저 새 마샬링 변환을 위한 파일을 만듭니다.  이는 표준 마샬링 라이브러리 파일의 무결성을 보존하기 위한 것입니다.  프로젝트를 다른 컴퓨터 또는 다른 프로그래머에게 이식하려면 새 마샬링 파일을 프로젝트 나머지 부분과 함께 복사해야 합니다.  이렇게 하면 프로젝트를 받는 사용자가 새 변환을 확실히 받게 되므로 라이브러리 파일을 수정할 필요가 없습니다.  
+ 두 경우 모두, 먼저 새 마샬링 변환에 대 한 파일을 만듭니다. 이렇게 하면 표준 마샬링 라이브러리 파일의 무결성을 유지 합니다. 프로젝트 또는 다른 프로그래머를 다른 컴퓨터로 이식 하려는 경우에 나머지 프로젝트와 함께 새 마샬링 파일을 복사 해야 합니다. 이러한 방식으로 프로젝트를 받은 사용자 새 변환을 수신 하도록 보장할 수 및 라이브러리 파일을 수정 하지 않아도 됩니다.  
   
-### 컨텍스트가 필요 없는 변환으로 마샬링 라이브러리를 확장하려면  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>컨텍스트를 필요 하지 않은 변환을 마샬링 라이브러리를 확장 하려면  
   
-1.  새 마샬링 함수를 저장할 파일을 만듭니다\(예: MyMarshal.h\).  
+1.  예를 들어 MyMarshal.h 새로운 마샬링 작업을 저장할 파일을 만듭니다.  
   
-2.  다음과 같은 마샬 라이브러리 파일을 하나 이상 포함합니다.  
+2.  마샬링 라이브러리 파일 중 하나 이상 포함 합니다.  
   
-    -   기본 형식을 위한 marshal.h  
+    -   기본 형식에 대 한 marshal.h 합니다.  
   
-    -   Windows 데이터 형식을 위한 marshal\_windows.h  
+    -   windows 데이터 형식에 대 한 marshal_windows.h 합니다.  
   
-    -   STL 데이터 형식을 위한 marshal\_cppstd.h  
+    -   c + + 표준 라이브러리 데이터 형식에 대 한 marshal_cppstd.h 합니다.  
   
-    -   ATL 데이터 형식을 위한 marshal\_atl.h  
+    -   ATL 데이터 형식에 대 한 marshal_atl.h 합니다.  
   
-3.  이 단계의 끝에 있는 코드를 사용하여 변환 함수를 작성합니다.  이 코드에서 TO는 변환된 후의 형식이고 FROM은 변환되기 전의 형식입니다. `from`은 변환될 매개 변수입니다.  
+3.  이러한 단계의 끝에 코드를 사용 하 여 변환 함수를 작성 합니다. 이 코드에서는 TO는, FROM에서 변환 하는 형식이 고 `from` 변환할 매개 변수입니다.  
   
-4.  변환 논리에 대한 주석을 `from` 매개 변수를 TO 형식의 개체로 변환하고 변환된 개체를 반환하는 코드로 바꿉니다.  
+4.  변환 하는 코드로 변환 논리에 대 한 주석을 바꿉니다는 `from` to 개체에 대 한 매개 변수 입력 하 고 변환 된 개체를 반환 합니다.  
   
 ```  
 namespace msclr {  
@@ -57,29 +56,29 @@ namespace msclr {
 }  
 ```  
   
-### 컨텍스트가 필요한 변환으로 마샬링 라이브러리를 확장하려면  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>컨텍스트를 필요로 하는 변환을 마샬링 라이브러리 확장명  
   
-1.  새 마샬링 함수를 저장할 파일을 만듭니다\(예: MyMarshal.h\).  
+1.  예를 들어 MyMarshal.h 새로운 마샬링 작업을 저장할 파일 만들기  
   
-2.  다음과 같은 마샬 라이브러리 파일을 하나 이상 포함합니다.  
+2.  마샬링 라이브러리 파일 중 하나 이상 포함 합니다.  
   
-    -   기본 형식을 위한 marshal.h  
+    -   기본 형식에 대 한 marshal.h 합니다.  
   
-    -   Windows 데이터 형식을 위한 marshal\_windows.h  
+    -   windows 데이터 형식에 대 한 marshal_windows.h 합니다.  
   
-    -   STL 데이터 형식을 위한 marshal\_cppstd.h  
+    -   c + + 표준 라이브러리 데이터 형식에 대 한 marshal_cppstd.h 합니다.  
   
-    -   ATL 데이터 형식을 위한 marshal\_atl.h  
+    -   ATL 데이터 형식에 대 한 marshal_atl.h 합니다.  
   
-3.  이 단계의 끝에 있는 코드를 사용하여 변환 함수를 작성합니다.  이 코드에서 TO는 변환된 후의 형식이고 FROM은 변환되기 전의 형식입니다. `toObject`는 결과를 저장할 포인터이고, `fromObject`는 변환될 매개 변수입니다.  
+3.  이러한 단계의 끝에 코드를 사용 하 여 변환 함수를 작성 합니다. 이 코드에서는 TO는, FROM에서 변환 하는 형식이 `toObject` 하면 결과 저장 하는 포인터 및 `fromObject` 변환할 매개 변수입니다.  
   
-4.  초기화에 대한 주석을 `toPtr`을 적절한 빈 값으로 초기화하는 코드로 바꿉니다.  예를 들어 포인터인 경우에는 `NULL`로 설정합니다.  
+4.  초기화 코드를 사용 하 여 초기화 하는 방법에 대 한 주석을 `toPtr` 을 적절 한 빈 값입니다. 예를 들어 대 한 포인터인 경우로 설정 `NULL`합니다.  
   
-5.  Replace the comment about conversion logic with code to convert the `from` parameter into an object of *TO* type.  이 변환된 개체는 `toPtr`에 저장됩니다.  
+5.  변환 논리에 대 한 주석을 변환 하는 코드로 바꿉니다는 `from` 매개 변수 개체로 *TO* 유형입니다. 이 변환 된 개체에 저장 될 `toPtr`합니다.  
   
-6.  `toObject` 설정에 대한 주석을 `toObject`를 변환된 개체로 설정하는 코드로 바꿉니다.  
+6.  설정에 대 한 주석을 `toObject` 설정 하는 코드와 `toObject` 변환 된 개체에 있습니다.  
   
-7.  네이티브 리소스 지우기에 대한 주석을 `toPtr`에 할당된 메모리를 비우는 코드로 바꿉니다.  `toPtr`가 `new`를 사용하여 메모리를 할당한 경우에는 `delete`를 사용하여 메모리를 비웁니다.  
+7.  할당 한 메모리를 확보 하는 코드를 사용 하 여 네이티브 리소스를 정리 하는 방법에 대 한 주석을 `toPtr`합니다. 경우 `toPtr` 할당 된 메모리를 사용 하 여 `new`를 사용 하 여 `delete` 메모리를 해제 합니다.  
   
 ```  
 namespace msclr {  
@@ -110,8 +109,8 @@ namespace msclr {
 }   
 ```  
   
-## 예제  
- 다음 예제는 컨텍스트가 필요 없는 변환으로 마샬링 라이브러리를 확장합니다.  이 예제에서 코드는 직원 정보를 네이티브 데이터 형식에서 관리되는 데이터 형식으로 변환합니다.  
+## <a name="example"></a>예제  
+ 다음 예제는 컨텍스트를 필요 하지 않은 변환을 마샬링 라이브러리를 확장 합니다. 이 예제에서는 코드 네이티브 데이터 형식에서 직원 정보를 관리 되는 데이터 형식으로 변환합니다.  
   
 ```  
 // MyMarshalNoContext.cpp  
@@ -163,13 +162,16 @@ int main() {
 }  
 ```  
   
- 이전 예제에서 `marshal_as` 함수는 변환된 데이터에 대한 핸들을 반환합니다.  이는 데이터의 추가 복사본이 작성되는 것을 방지하기 위해 수행된 것입니다.  변수를 직접 반환하면 이와 관련하여 불필요한 성능 비용이 발생합니다.  
+ 이전 예에서 `marshal_as` 함수 변환 된 데이터에 대 한 핸들을 반환 합니다. 이 작업은 데이터의 추가 복사본 생성을 방지 하기 위해 수행 되었습니다. 변수를 직접 반환은 불필요 한 성능 비용 관련 된 합니다.  
   
-  **Managed name: Jeff Smith**  
-**Managed address: 123 Main Street**  
-**Managed zip code: 98111**   
-## 예제  
- 다음 예제에서는 직원 정보를 관리되는 데이터 형식에서 네이티브 데이터 형식으로 변환합니다.  이 변환에는 마샬링 컨텍스트가 필요합니다.  
+```Output  
+Managed name: Jeff Smith  
+Managed address: 123 Main Street  
+Managed zip code: 98111  
+```  
+  
+## <a name="example"></a>예제  
+ 다음 예제에서는 네이티브 데이터 형식으로 관리 되는 데이터 형식에서 직원 정보를 변환합니다. 이 변환은 마샬링 컨텍스트가 필요합니다.  
   
 ```  
 // MyMarshalContext.cpp  
@@ -263,8 +265,11 @@ int main() {
 }  
 ```  
   
-  **Native name: Jeff Smith**  
-**Native address: 123 Main Street**  
-**Native zip code: 98111**   
-## 참고 항목  
- [C\+\+ 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md)
+```Output  
+Native name: Jeff Smith  
+Native address: 123 Main Street  
+Native zip code: 98111  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [C++ 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md)

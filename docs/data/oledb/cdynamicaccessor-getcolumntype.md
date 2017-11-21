@@ -1,58 +1,57 @@
 ---
-title: "CDynamicAccessor::GetColumnType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.GetColumnType"
-  - "CDynamicAccessor::GetColumnType"
-  - "GetColumnType"
-  - "CDynamicAccessor.GetColumnType"
-  - "ATL::CDynamicAccessor::GetColumnType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnType 메서드"
+title: 'Cdynamicaccessor:: Getcolumntype | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.GetColumnType
+- CDynamicAccessor::GetColumnType
+- GetColumnType
+- CDynamicAccessor.GetColumnType
+- ATL::CDynamicAccessor::GetColumnType
+dev_langs: C++
+helpviewer_keywords: GetColumnType method
 ms.assetid: ac96a2e9-6049-4eb5-9718-9f5f5446b74e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c205d11cd71d717bd2ad67d2d271aa421534505a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::GetColumnType
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retrieves the data type of a specified column.  
+# <a name="cdynamicaccessorgetcolumntype"></a>CDynamicAccessor::GetColumnType
+지정 된 열의 데이터 형식을 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      bool GetColumnType(   
-   DBORDINAL nColumn,   
-   DBTYPE* pType    
+      bool GetColumnType(   
+   DBORDINAL nColumn,   
+   DBTYPE* pType    
 ) const throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nColumn`  
- \[in\] The column number.  Column numbers start with 1.  A value of 0 refers to the bookmark column, if any.  
+ [in] 열 번호입니다. 열 번호는 1부터 시작 합니다. 0 값이 있는 경우 책갈피 열을 참조 합니다.  
   
  `pType`  
- \[out\] A pointer to the data type of the specified column.  
+ [out] 지정 된 열의 데이터 형식에 대 한 포인터입니다.  
   
-## 반환 값  
- Returns **true** on success or **false** on failure.  
+## <a name="return-value"></a>반환 값  
+ 반환 **true** 성공 또는 **false** 실패 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)   
  [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx)

@@ -1,33 +1,33 @@
 ---
-title: "MASM에 대한 해제 도우미 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "해제 MASM에 대 한 도우미 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 36591f9d-43d5-47b1-ae09-e45cf127204c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 83519f28361505b9c227c7db5522bfffcc5133a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# MASM에 대한 해제 도우미
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-어셈블리 루틴을 올바르게 작성하기 위해 제공되는 여러 가지 의사 작업을 실제 어셈블리 명령과 함께 사용하여 적절한 .pdata 및 .xdata를 만들 수 있습니다.  가장 일반적인 작업을 간편하게 수행할 수 있도록 마련된 의사 작업을 제공하는 매크로 집합도 있습니다.  
+# <a name="unwind-helpers-for-masm"></a>MASM에 대한 해제 도우미
+적절 한 어셈블리 루틴을 작성 하려면 적절 한.pdata 및.xdata 만들려는 실제 어셈블리 명령 동시에 사용할 수 있는 의사 (pseudo) 작업 집합이 있습니다. 또한 매크로 제공 하는 가장 일반적인 용도에 의사 (pseudo) 작업의 사용을 간소화 합니다.  
   
-## 설명  
- 이 단원에서는 아래와 같은 항목을 설명합니다.  
+## <a name="remarks"></a>설명  
+ 이 섹션의 항목은 다음 항목:  
   
 -   [원시 의사 작업](../build/raw-pseudo-operations.md)  
   
 -   [MASM 매크로](../build/masm-macros.md)  
   
-## 참고 항목  
- [예외 처리\(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>참고 항목  
+ [예외 처리(x64)](../build/exception-handling-x64.md)

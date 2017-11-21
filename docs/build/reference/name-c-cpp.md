@@ -1,40 +1,37 @@
 ---
-title: "NAME(C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "name"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NAME .def 파일 문"
+title: "이름 (C/C + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: name
+dev_langs: C++
+helpviewer_keywords: NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 46bbbef9df3f68f322196962042039b32b4e0113
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# NAME(C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-주 출력 파일의 이름을 지정합니다.  
+# <a name="name-cc"></a>NAME(C/C++)
+기본 출력 파일에 대 한 이름을 지정합니다.  
   
 ```  
 NAME [application][BASE=address]  
 ```  
   
-## 설명  
- 이와 동일한 출력 파일 지정 방법은 링커 옵션 [\/OUT](../../build/reference/out-output-file-name.md)을 사용하는 것이고 이와 동일한 기준 주소 설정 방법은 링커 옵션 [\/BASE](../../build/reference/base-base-address.md)를 사용하는 것입니다.  두 옵션이 모두 지정된 경우에는 \/OUT이 **NAME**을 재정의합니다.  
+## <a name="remarks"></a>설명  
+ 출력 파일 이름을 지정 하는 해당 하는 방법은 [/out](../../build/reference/out-output-file-name.md) 링커 옵션 및 기본 주소를 설정 하는 해당 하는 방법에 됩니다는 [/base](../../build/reference/base-base-address.md) 링커 옵션입니다. 둘 다 지정 하면 아웃 재정의 / **이름**합니다.  
   
- DLL을 빌드하는 경우 NAME은 DLL 이름에만 영향을 줍니다.  
+ DLL을 작성 하는 경우 이름 DLL 이름에만 적용 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [모듈 정의 문의 규칙](../../build/reference/rules-for-module-definition-statements.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - = operator [C++], copying objects
 - assignment statements [C++], copying objects
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: cf4bda1b14450a5be3ffa9a95661db7d1ad360d2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b84bb6f0558b58bd83819fbef7e8e9e9c392bd94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>복사 생성자 및 복사 할당 연산자(C++)
 > [!NOTE]
@@ -82,14 +79,14 @@ int main()
 ```  
   
 > [!NOTE]
->  복사 생성자의 인수 형식을 쉽게 *const 클래스 이름* ** & ** 가능 합니다. 이는 복사 생성자가 복사 중인 개체를 실수로 변경하는 것을 방지합니다. 복사도 가능 **const** 개체입니다.  
+>  복사 생성자의 인수 형식을 쉽게 *const 클래스 이름*  **&**  가능 합니다. 이는 복사 생성자가 복사 중인 개체를 실수로 변경하는 것을 방지합니다. 복사도 가능 **const** 개체입니다.  
   
 ## <a name="compiler-generated-copy-constructors"></a>컴파일러에서 생성된 복사 생성자  
  사용자 정의 복사 생성자와 마찬가지로 컴파일러 생성 복사 생성자가 형식의 단일 인수 "에 대 한 참조 *클래스 이름*." 예외는 모든 기본 클래스와 멤버 클래스 형식의 단일 인수를 사용 하도록 선언 된 복사 생성자가 있는 경우 **const** *클래스 이름***&**합니다. 이 경우 컴파일러 생성 복사 생성자의 인수는 또한 **const**합니다.  
   
  인수 형식이 복사 생성자에 없는 경우 **const**를 복사 하 여 초기화 한 **const** 개체에 오류가 발생 합니다. 반대는 성립 하지 않습니다: 인수가 **const**를 하지 않은 개체를 복사 하 여 초기화할 수 있습니다 **const**합니다.  
   
- 컴파일러에서 생성 된 할당 연산자는 동일한와 관련 된 패턴에 따라 **const 합니다.** 형식의 단일 인수 *클래스 이름* ** & ** 모든 기본 및 멤버 클래스의 할당 연산자 형식의 인수를 사용 하지 않는 한 **const** *클래스 이름 & 합니다.* 이 경우 클래스의 생성 된 할당 연산자는 **const** 인수입니다.  
+ 컴파일러에서 생성 된 할당 연산자는 동일한와 관련 된 패턴에 따라 **const 합니다.** 형식의 단일 인수 *클래스 이름*  **&**  모든 기본 및 멤버 클래스의 할당 연산자 형식의 인수를 사용 하지 않는 한 **const** *클래스 이름 & 합니다.* 이 경우 클래스의 생성 된 할당 연산자는 **const** 인수입니다.  
   
 > [!NOTE]
 >  가상 기본 클래스가 복사 생성자에 의해 초기화되고 컴파일러에서 생성되거나 사용자 정의되는 경우 생성되는 시점에 한 번만 초기화됩니다.  
@@ -98,4 +95,3 @@ int main()
   
  오버 로드 된 할당 연산자에 대 한 자세한 내용은 참조 [할당](../cpp/assignment.md)합니다.  
   
-

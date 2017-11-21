@@ -1,57 +1,55 @@
 ---
-title: "__writecr8 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_writecr8"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_writecr8 내장 함수"
+title: __writecr8 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _writecr8
+dev_langs: C++
+helpviewer_keywords: _writecr8 intrinsic
 ms.assetid: 6f8bd632-dddb-4335-971e-1acee24aa2b9
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9285d2c9c47b260f9cfc9dd9b62e5d278422adee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __writecr8
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="writecr8"></a>__writecr8
 **Microsoft 전용**  
   
- 값을 씁니다 `Data` CR8 등록 합니다.  
+ 값이 기록 `Data` CR8 레지스터에 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-void writecr8(   
-   unsigned __int64 Data   
+void writecr8(   
+   unsigned __int64 Data   
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `Data`  
+#### <a name="parameters"></a>매개 변수  
+ [in] `Data`  
  CR8 레지스터에 쓸 값입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`__writecr8`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 이 내장만 커널 모드에서 사용할 수 있으며 루틴만 내장로 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 이 내장 함수는 커널 모드에서만 사용할 수 있으며 루틴은 내장 함수로만 사용할 수 있습니다.  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

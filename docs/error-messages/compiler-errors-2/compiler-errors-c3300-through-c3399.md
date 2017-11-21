@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -106,19 +105,17 @@ helpviewer_keywords:
 - C3376
 - C3377
 - C3378
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>컴파일러 오류 C3300 c 3399 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
@@ -230,4 +227,3 @@ ms.lasthandoff: 10/10/2017
 |[컴파일러 오류 C3397](compiler-error-c3397.md)|기본 인수에서는 집합체 초기화가 허용되지 않습니다.|  
 |[컴파일러 오류 C3398](compiler-error-c3398.md)|'*연산자*':에서 변환할 수 없습니다 '*형식*'to'*형식*'. 소스 식은 함수 기호여야 합니다.|  
 |[컴파일러 오류 C3399](compiler-error-c3399.md)|'*형식*': 제네릭 매개 변수의 인스턴스를 만들 때는 인수를 제공할 수 없습니다|  
-

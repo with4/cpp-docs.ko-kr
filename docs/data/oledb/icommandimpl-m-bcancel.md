@@ -1,36 +1,35 @@
 ---
-title: "ICommandImpl::m_bCancel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::m_bCancel"
-  - "ICommandImpl.m_bCancel"
-  - "m_bCancel"
-  - "ATL::ICommandImpl::m_bCancel"
-  - "ATL.ICommandImpl.m_bCancel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bCancel"
+title: 'Icommandimpl:: M_bcancel | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::m_bCancel
+- ICommandImpl.m_bCancel
+- m_bCancel
+- ATL::ICommandImpl::m_bCancel
+- ATL.ICommandImpl.m_bCancel
+dev_langs: C++
+helpviewer_keywords: m_bCancel
 ms.assetid: f3b6fb60-4de4-4d81-a5d2-4052c41be0de
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e19b81818d564b3b6e3f7a1623482ef6458defd5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::m_bCancel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Indicates whether the command is canceled.  
+# <a name="icommandimplmbcancel"></a>ICommandImpl::m_bCancel
+명령이 취소 되었는지를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -38,12 +37,12 @@ unsigned m_bCancel:1;
   
 ```  
   
-## 설명  
- You can retrieve this variable in the **Execute** method of your command class and cancel as appropriate.  
+## <a name="remarks"></a>설명  
+ 이 변수를 검색할 수 있습니다는 **Execute** 하는 명령 클래스 및 취소를 적절 하 게 합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ICommandImpl 클래스](../../data/oledb/icommandimpl-class.md)   
- [ICommandImpl::m\_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)
+ [ICommandImpl::m_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)

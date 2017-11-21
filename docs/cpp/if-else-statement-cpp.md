@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
 - if_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 7f6d2a553e34b5f15e53fa142241af83d8e91255
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 32fbc99ab51736b5950ce7982457dd0f2f1bc1b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="if-else-statement-c"></a>if-else 문 (C++)
 조건부 분기를 제어 합니다. *if 블록* 경우에 실행 되는 *if 식을* 0이 아닌 값으로 계산 (또는 `true`). 하는 경우의 값 *식* 이 값은 0 *statement1* 및 블록의 다른 문이 실행 되 고 블록에서는 다른 있는 경우를 건너뜁니다. 하는 경우의 값 *식* 가 0 이면 다음 if 블록이 생략 되 고 다른-블록이 있는 경우 실행 됩니다. 0이 아닌 값을 평가 하는 식은

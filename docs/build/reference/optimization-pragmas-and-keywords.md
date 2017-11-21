@@ -1,52 +1,52 @@
 ---
-title: "최적화 pragma 및 키워드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "키워드[C++], 최적화"
-  - "최적화, 키워드 및 pragma"
-  - "pragma, 최적화"
+title: "최적화 Pragma 및 키워드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- keywords [C++], for optimization
+- pragmas, for optimization
+- optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 39dbce247116b434f9083f19ce23607d2212d2c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 최적화 pragma 및 키워드
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-C 또는 C\+\+ 코드에서 사용하는 다음 몇 가지 키워드와 pragma는 최적화에 영향을 줍니다.  
+# <a name="optimization-pragmas-and-keywords"></a>최적화 pragma 및 키워드
+몇 가지 키워드와 C 또는 c + + 코드에서 사용 하는 pragma 최적화를 영향을 줍니다.  
   
--   [\_\_asm](../../assembler/inline/asm.md)  
+-   [__asm](../../assembler/inline/asm.md)  
   
--   [\_\_assume](../../intrinsics/assume.md)  
+-   [__assume](../../intrinsics/assume.md)  
   
--   [inline, \_inline 또는 \_\_forceinline](../../misc/inline-inline-forceinline.md)  
+-   [인라인 _inline, 또는 \__forceinline](../../cpp/inline-functions-cpp.md)  
   
--   [\#pragma auto\_inline](../../preprocessor/auto-inline.md)  
+-   [#pragma auto_inline](../../preprocessor/auto-inline.md)  
   
--   [\#pragma check\_stack](../../preprocessor/check-stack.md)  
+-   [#pragma check_stack](../../preprocessor/check-stack.md)  
   
--   [\#pragma function](../../preprocessor/function-c-cpp.md)  
+-   [#pragma 함수](../../preprocessor/function-c-cpp.md)  
   
--   [\#pragma inline\_depth](../../preprocessor/inline-depth.md)  
+-   [#pragma inline_depth](../../preprocessor/inline-depth.md)  
   
--   [\#pragma inline\_recursion](../../preprocessor/inline-recursion.md)  
+-   [#pragma inline_recursion](../../preprocessor/inline-recursion.md)  
   
--   [\#pragma intrinsic](../../preprocessor/intrinsic.md)  
+-   [#pragma 내장 함수](../../preprocessor/intrinsic.md)  
   
--   [\#pragma optimize](../../preprocessor/optimize.md)  
+-   [#pragma 최적화](../../preprocessor/optimize.md)  
   
--   [register 키워드](http://msdn.microsoft.com/ko-kr/5b66905a-2f7f-4918-bb55-5e66d4bc50f9)  
+-   [register 키워드](../../cpp/storage-classes-cpp.md#register)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코드 최적화](../../build/reference/optimizing-your-code.md)

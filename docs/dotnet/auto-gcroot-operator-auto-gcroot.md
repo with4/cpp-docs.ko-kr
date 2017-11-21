@@ -1,45 +1,44 @@
 ---
-title: "auto_gcroot::operator auto_gcroot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator auto_gcroot"
-  - "auto_gcroot::operator auto_gcroot"
-  - "msclr.auto_gcroot.operator auto_gcroot"
-  - "msclr::auto_gcroot::operator auto_gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot 연산자"
+title: auto_gcroot::operator auto_gcroot | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator auto_gcroot
+- auto_gcroot::operator auto_gcroot
+- msclr.auto_gcroot.operator auto_gcroot
+- msclr::auto_gcroot::operator auto_gcroot
+dev_langs: C++
+helpviewer_keywords: auto_gcroot operator
 ms.assetid: 43e3f27a-9f68-444f-9149-a9282a9b935a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 339df92e4b5085dfcfbc1eea1025612106dad6e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator auto_gcroot
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Type\-cast operator between `auto_gcroot` and compatible types.  
+# <a name="autogcrootoperator-autogcroot"></a>auto_gcroot::operator auto_gcroot
+사이 형식 캐스팅 연산자 `auto_gcroot` 와 호환 되는 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename _other_type>  
 operator auto_gcroot<_other_type>();  
 ```  
   
-## 반환 값  
- The current `auto_gcroot` cast to `auto_gcroot<_other_type>`.  
+## <a name="return-value"></a>반환 값  
+ 현재 `auto_gcroot` 캐스팅 `auto_gcroot<_other_type>`합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // msl_auto_gcroot_op_auto_gcroot.cpp  
@@ -76,12 +75,15 @@ int main() {
 }  
 ```  
   
-  **Hello from first B\!**  
-**Hello from first A\!**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_gcroot.h\>  
+```Output  
+Hello from first B!  
+Hello from first A!  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_gcroot 멤버](../dotnet/auto-gcroot-members.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_gcroot 멤버](../dotnet/auto-gcroot-members.md)

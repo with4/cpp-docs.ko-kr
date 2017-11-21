@@ -1,31 +1,31 @@
 ---
-title: "OLE DB 공급자 템플릿을 사용하여 작업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 공급자, 템플릿"
-  - "OLE DB, 공급자 템플릿"
-  - "참조, OLE DB 공급자 템플릿"
-  - "템플릿, OLE DB 공급자"
+title: "OLE DB 공급자 템플릿 작업 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reference, OLE DB provider templates
+- OLE DB, provider templates
+- templates, OLE DB provider
+- OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d9158351892c8a8d097f0eccd498c05b2833d862
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# OLE DB 공급자 템플릿을 사용하여 작업
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB 공급자 템플릿을 사용하여 작업하는 방법에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+# <a name="working-with-ole-db-provider-templates"></a>OLE DB 공급자 템플릿을 사용하여 작업
+OLE DB 공급자 템플릿을 사용 하는 방법을 알아보려면 다음 항목을 참조 합니다.  
   
 -   [공급자에 인터페이스 추가](../../data/oledb/adding-an-interface-to-your-provider.md)  
   
@@ -43,6 +43,6 @@ OLE DB 공급자 템플릿을 사용하여 작업하는 방법에 대한 자세�
   
 -   [공급자가 지원하지 않는 데이터 변환](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿 참조](../../data/oledb/ole-db-provider-templates-reference.md)   
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0ba1075095381229667c7164aa7de7f3e4537486
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 077da64dbcad46357e52e49f9e006e49456615aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>예외 처리에서의 타이밍: 요약
 종료 처리기는 `__try` 문 블록이 종료되는 방법과 관계없이 실행됩니다. `__try` 블록 밖으로의 점프, 제어를 블록 밖으로 전송하는 `longjmp` 문, 예외 처리로 인한 스택 해제 등이 원인입니다.  

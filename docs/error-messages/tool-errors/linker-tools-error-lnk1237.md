@@ -1,39 +1,37 @@
 ---
 title: "링커 도구 오류 LNK1237 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1237"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1237"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1237
+dev_langs: C++
+helpviewer_keywords: LNK1237
 ms.assetid: 8722ffa8-096a-4bb0-85f9-f3aa0e10872a
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 43ab77f153b6e53709422a1826a6beee25d65b2a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 링커 도구 오류 LNK1237
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-코드를 생성하는 동안 컴파일러가 \/GL로 컴파일된 'module' 모듈에 정의된 'symbol' 기호를 참조했습니다.  
+# <a name="linker-tools-error-lnk1237"></a>링커 도구 오류 LNK1237
+코드를 생성 하는 동안 컴파일러 'symbol' /GL으로 컴파일된 ' module' 모듈에 정의 된 기호 참조를 했습니다.  
   
- 코드를 생성하는 동안 컴파일러는 이후 **\/GL**로 컴파일된 정의로 확인되는 기호를 파생시킬 수 없습니다.  여기서 `symbol`은 파생된 후 **\/GL**로 컴파일된 정의로 확인되는 기호입니다.  
+ 코드를 생성 하는 동안 컴파일러 파생 시킬 수 없습니다 이후에 컴파일된 정의로 확인 되는 기호 **/GL**합니다. `symbol`가 도입 되어 나중에 사용 하 여 컴파일된 정의로 확인 된 기호 **/GL**합니다.  
   
- 자세한 내용은 [\/GL\(전체 프로그램 최적화\)](../../build/reference/gl-whole-program-optimization.md)을 참조하십시오.  
+ 자세한 내용은 [/GL(전체 프로그램 최적화)](../../build/reference/gl-whole-program-optimization.md)을 참조하세요.  
   
- LNK1237 오류를 해결하려면 **\/GL**을 사용하여 기호를 컴파일하거나  [\/INCLUDE\(강제 기호 참조\)](../../build/reference/include-force-symbol-references.md)를 사용하여 기호를 참조하도록 하지 말아야 합니다.  
+ LNK1237를 해결 하려면 컴파일하지 않는 기호 너비 **/GL** 사용 또는 [/INCLUDE (강제 기호 참조)](../../build/reference/include-force-symbol-references.md) 기호에 대 한 참조를 되도록 합니다.  
   
-## 예제  
- 다음 샘플에서는 LNK1237 오류가 발생하는 경우를 보여 줍니다.  이 오류를 해결하려면 LNK1237\_a.cpp에서 배열을 초기화하지 말고 링크 명령에 **\/include:\_\_chkstk**를 추가하십시오.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 lnk1237 오류가 발생 합니다. 이 오류를 해결 하려면 하지 LNK1237_a.cpp 배열을 초기화 않으며 추가 **/include: __chkstk** 링크 명령입니다.  
   
 ```  
 // LNK1237_a.cpp  

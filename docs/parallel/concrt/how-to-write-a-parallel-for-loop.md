@@ -1,56 +1,61 @@
 ---
 title: "방법: parallel_for 루프 작성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parallel_for 루프 작성[동시성 런타임]"
-  - "parallel_for 함수, 예제"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- writing a parallel_for loop [Concurrency Runtime]
+- parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 678f5cef343157378f159157906888af517dc74a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: parallel_for 루프 작성
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이 예제에서는 [concurrency::parallel\_for](../Topic/parallel_for%20Function.md)를 사용하여 두 매트릭스의 곱을 계산하는 방법을 보여 줍니다.  
+# <a name="how-to-write-a-parallelfor-loop"></a>방법: parallel_for 루프 작성
+사용 하는 방법을 보여 주는이 예제 [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) 두 행렬의 곱을 계산 합니다.  
   
-## 예제  
- 다음 예제에서는 두 정방 매트릭스의 곱을 계산하는 `matrix_multiply` 함수를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제와 `matrix_multiply` 함수는 두 개의 사각형 매트릭스의 곱을 계산 합니다.  
   
- [!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/CPP/how-to-write-a-parallel-for-loop_1.cpp)]  
+ [!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_1.cpp)]  
   
-## 예제  
- 다음 예제에서는 `parallel_for` 알고리즘을 사용하여 외부 루프를 병렬로 수행하는 `parallel_matrix_multiply` 함수를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제와 `parallel_matrix_multiply` 함수를 사용 하는 `parallel_for` 외부 루프를 병렬로 수행 하는 알고리즘이 있습니다.  
   
- [!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/CPP/how-to-write-a-parallel-for-loop_2.cpp)]  
+ [!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_2.cpp)]  
   
- 이 예제에서는 외부 루프에서 수행하는 작업의 양이 충분하여 병렬 처리의 오버헤드로부터 이점을 얻을 수 있으므로 외부 루프만 병렬화합니다.  내부 루프를 병렬화할 경우에는 병렬 처리의 오버헤드보다 내부 루프에서 수행하는 작업의 양이 적다는 것이 더 문제가 되므로 성능상의 이점을 얻을 수 없습니다.  따라서 대부분의 시스템에서 동시성의 이점을 최대화하려면 외부 루프만 병렬화하는 것이 가장 좋은 방법입니다.  
+ 이 예제에서는 병렬 처리에 대 한 오버 헤드를 활용할 수 있는 충분 한 작업을 수행 하기 때문에만 외부 루프를 병렬로 실행 합니다. 내부 루프를 평행 화 하면 받지 못합니다 향상 된 성능이 약간 내부 루프를 수행 하는 작업의 병렬 처리에 대 한 오버 헤드 보다 크지 않습니다 때문에 합니다. 따라서 외부 루프만 병렬 처리하는 것이 대부분의 시스템에서 동시성의 이점을 극대화하는 가장 좋은 방법입니다.  
   
-## 예제  
- 다음에 나오는 더 자세한 예제에서는 `matrix_multiply` 함수와 `parallel_matrix_multiply` 함수의 성능을 비교합니다.  
+## <a name="example"></a>예제  
+ 다음 자세한 예제의 성능을 비교는 `matrix_multiply` 함수와 `parallel_matrix_multiply` 함수입니다.  
   
- [!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/CPP/how-to-write-a-parallel-for-loop_3.cpp)]  
+ [!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_3.cpp)]  
   
- 다음 샘플은 프로세서가 4개인 컴퓨터에 대한 출력입니다.  
+ 프로세서가 4개인 컴퓨터의 샘플 출력은 다음과 같습니다.  
   
-  **직렬: 3853**  
-**parallel: 1311**   
-## 코드 컴파일  
- 코드를 컴파일하려면 코드를 복사한 다음, Visual Studio 프로젝트 또는 `parallel-matrix-multiply.cpp` 파일에 붙여넣고 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.  
+```Output  
+serial: 3853  
+parallel: 1311  
+```  
   
- **cl.exe \/EHsc parallel\-matrix\-multiply.cpp**  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 코드를 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 하거나 라는 파일에 붙여 `parallel-matrix-multiply.cpp` 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
   
-## 참고 항목  
+ **cl.exe /EHsc 병렬-매트릭스-multiply.cpp**  
+  
+## <a name="see-also"></a>참고 항목  
  [병렬 알고리즘](../../parallel/concrt/parallel-algorithms.md)   
- [parallel\_for 함수](../Topic/parallel_for%20Function.md)
+ [parallel_for 함수](reference/concurrency-namespace-functions.md#parallel_for)
+
+

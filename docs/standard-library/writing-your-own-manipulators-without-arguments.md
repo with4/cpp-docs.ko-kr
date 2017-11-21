@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- manipulators
+dev_langs: C++
+helpviewer_keywords: manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 276bba3dd5ce5debd926ebbc4ccfaf52c6b92097
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9ccdd1222335cba8ba3169903f8a05e064801ccd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>인수 없이 고유 조작자 작성
 인수를 사용하지 않는 조작자를 작성할 때는 클래스 파생이 필요하지 않으며 복잡한 매크로를 사용할 필요도 없습니다. 프린터에서 \<ESC>[ 쌍을 굵은 글꼴 모드로 입력해야 한다고 가정해 보겠습니다. 이 경우 스트림에 이 쌍을 직접 삽입할 수 있습니다.  
@@ -70,5 +52,4 @@ _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
   
 ## <a name="see-also"></a>참고 항목  
  [출력 스트림](../standard-library/output-streams.md)
-
 

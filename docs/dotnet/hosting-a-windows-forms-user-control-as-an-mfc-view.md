@@ -1,44 +1,44 @@
 ---
-title: "Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows Forms 컨트롤 호스팅[C++]"
-  - "MFC[C++], Windows Forms 지원"
-  - "Windows Forms 컨트롤[C++], MFC 뷰로 호스팅"
+title: "호스팅하는 Windows Forms 사용자 컨트롤을 MFC 뷰로 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], Windows Forms support
+- Windows Forms controls [C++], hosting as an MFC view
+- hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4a8ee337c6e647f88fc4ef8730f100681c37a170
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-MFC에서는 CWinFormsView 클래스를 사용하여 MFC 뷰에 Windows Forms 사용자 정의 컨트롤을 호스팅합니다.  MFC Windows Forms 뷰는 ActiveX 컨트롤입니다.  사용자 정의 컨트롤은 네이티브 뷰의 자식으로 호스팅되고 네이티브 뷰의 전체 클라이언트 영역을 차지합니다.  
+# <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅
+MFC을 MFC 뷰로에서 Windows Forms 사용자 정의 컨트롤을 호스팅할 CWinFormsView 클래스를 사용 합니다. MFC Windows Forms 뷰는 ActiveX 컨트롤입니다. 사용자 정의 컨트롤 기본 보기의 자식으로 호스트 되 고 기본 보기의 전체 클라이언트 영역을 차지 하지만 40gb.  
   
- 최종 결과는 [CFormView Class](../mfc/reference/cformview-class.md)에 사용되는 모델과 비슷합니다.  따라서 Windows Forms 디자이너를 사용할 수 있고 런타임에 리치 폼 기반 뷰를 만들 수 있습니다.  
+ 최종 결과에서 사용 하는 모델과 비슷합니다는 [CFormView 클래스](../mfc/reference/cformview-class.md)합니다. Windows Forms 디자이너 및 런타임 풍부한 양식 기반 뷰를 활용할 수 있습니다.  
   
- MFC Windows Forms 뷰는 ActiveX 컨트롤이므로 MFC 뷰와 동일한 `hwnd`가 없습니다.  또한 이를 [CView](../mfc/reference/cview-class.md) 뷰에 포인터로 전달할 수 없습니다.  일반적으로 .NET Framework 메서드를 사용하여 Windows Forms 뷰 작업을 수행하고 Win32는 자주 사용하지 않습니다.  
+ 뷰 MFC Windows Forms ActiveX 컨트롤 이기 때문에 없는 동일한 `hwnd` MFC 뷰로 합니다. 에 대 한 포인터를 변수로 전달할 수 없습니다도 [CView](../mfc/reference/cview-class.md) 보기. 일반적으로.NET Framework 메서드를 사용 하 여 Windows Forms 뷰를 사용 하 여 Win32에 크게 의존 합니다.  
   
- MFC와 함께 사용 하는 Windows Forms을 보여 주는 샘플 응용 프로그램은 [MFC 및 Windows Forms 통합](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)을 참조하십시오.  
+ MFC와 함께 사용 되는 Windows Forms를 보여 주는 샘플 응용 프로그램을 참조 하십시오. [MFC 및 Windows Forms 통합](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)합니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [방법: 사용자 정의 컨트롤 및 호스트 MDI 뷰 만들기](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)  
   
  [방법: Windows Forms 컨트롤에 명령 라우팅 추가](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)  
   
  [방법: Windows Forms 컨트롤의 속성 및 메서드 호출](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)  
   
-## 참고 항목  
- [MFC에서 Windows Form 사용자 정의 컨트롤 사용](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [방법: 합성 컨트롤 제작](../Topic/How%20to:%20Author%20Composite%20Controls.md)
+## <a name="see-also"></a>참고 항목  
+ [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
+ [방법: 복합 컨트롤 작성](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

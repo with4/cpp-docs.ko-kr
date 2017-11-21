@@ -1,32 +1,32 @@
 ---
 title: "단순 행 집합 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "접근자[C++], 행 집합"
-  - "데이터 액세스[C++], 행 집합"
-  - "OLE DB 소비자[C++], 데이터베이스 특성"
-  - "행 집합[C++], 액세스"
-  - "단순 행 집합"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], rowsets
+- rowsets [C++], accessing
+- simple rowsets
+- OLE DB consumers [C++], database attributes
+- accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5f4204027d52a5dfd4d7968732fb4d08328f12ce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 단순 행 집합 검색
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음 예제에서는 명령을 사용하지 않고 데이터베이스에 빠르고 쉽게 액세스하는 방법을 보여 줍니다.  다음 ATL 프로젝트의 소비자 코드는 ODBC 드라이버용 Microsoft OLE DB 공급자를 사용하여 Microsoft Access 데이터베이스의 *Artists*라는 테이블에서 레코드를 검사합니다.  이 코드는 사용자 레코드 클래스 `CArtists`를 기반으로 접근자를 가진 [CTable](../../data/oledb/ctable-class.md) 테이블 개체를 만듭니다.  이 코드는 연결을 열고, 연결된 세션을 열며 세션 상의 테이블을 엽니다.  
+# <a name="traversing-a-simple-rowset"></a>단순 행 집합 검색
+다음 예에서는 명령을 포함 하지 않는 쉽고 빠르게 데이터베이스 액세스를 보여 줍니다. 라는 테이블에서 레코드를 검색 하는 다음 소비자 코드는 ATL 프로젝트에서 *예술가* Microsoft Access에서 Microsoft OLE DB Provider for ODBC 사용 하 여 데이터베이스입니다. 코드는 만듭니다는 [CTable](../../data/oledb/ctable-class.md) table 개체 접근자를 가진 사용자 레코드 클래스에 따라 `CArtists`합니다. 연결을 엽니다, 그리고 연결에서 세션을 열고 세션에 있는 테이블을 엽니다.  
   
 ```  
 #include <atldbcli.h>  
@@ -51,7 +51,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- 사용자 레코드 `CArtists`는 다음과 같습니다.  
+ 사용자 레코드 `CArtists`, 다음과 같습니다.  
   
 ```  
 class CArtists  
@@ -70,5 +70,5 @@ BEGIN_COLUMN_MAP(CArtists)
 END_COLUMN_MAP()  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿 작업](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -1,46 +1,44 @@
 ---
-title: "list::remove_if(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::remove_if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove_if 멤버[STL/CLR]"
+title: 'list:: remove_if (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::remove_if
+dev_langs: C++
+helpviewer_keywords: remove_if member [STL/CLR]
 ms.assetid: cbc66192-751b-41c5-b557-d5d7bbc2a840
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0707efbf12782336d74d6e0012146cc1b2b4a01b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::remove_if(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Removes elements that pass a specified test.  
+# <a name="listremoveif-stlclr"></a>list::remove_if(STL/CLR)
+지정 된 테스트를 통과 하는 요소를 제거 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Pred1>  
     void remove_if(Pred1 pred);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  pred  
- Test for elements to remove.  
+ 제거할 요소에 대 한 테스트 합니다.  
   
-## 설명  
- The member function removes from the controlled sequence \(erases\) every element `X` for which `pred``(X)` is true.  You use it to remove all elements that satisfy a condition you specify as a function or delegate.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어 된 시퀀스 (지우기로 적용)에서 제거 모든 요소가 `X` 를 `pred(X)` 그렇습니다. 함수 또는 대리자도 지정 하는 조건을 만족 하는 모든 요소를 제거 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_remove_if.cpp   
@@ -79,17 +77,20 @@ int main()
   
 ```  
   
-  **a b b b c**  
- **a b b b c**  
- **b b b**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+a b b b c  
+a b b b c  
+b b b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)   
- [list::remove](../dotnet/list-remove-stl-clr.md)   
- [list::unique](../dotnet/list-unique-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)   
+ [list:: erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)   
+ [list:: remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)   
+ [list::unique(STL/CLR)](../dotnet/list-unique-stl-clr.md)

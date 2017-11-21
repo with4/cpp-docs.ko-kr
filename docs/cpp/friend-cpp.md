@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- friend_cpp
-dev_langs:
-- C++
+f1_keywords: friend_cpp
+dev_langs: C++
 helpviewer_keywords:
 - member access, from friend functions
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2d8dd1c80e9b006b3689b6d17ad9d7635670cc98
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b30b49825d14e72c06f569c343f96c7cf091a62f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="friend-c"></a>friend (C++)
 이 경우에 따라 개별 클래스의 모든 멤버 또는 클래스의 멤버가 아닌 함수에 멤버 수준 액세스 권한을 부여할 간편 합니다. 클래스 구현자만 이 클래스의 friend를 선언할 수 있습니다. 함수 또는 클래스는 자신을 클래스의 friend로 선언할 수 없습니다. 클래스 정의에서 사용 된 `friend` 키워드 및 비멤버 함수 또는 클래스의 private 컨트롤과 protected 멤버에 액세스 권한을 부여 다른 클래스의 이름입니다.         템플릿 정의에 형식 매개 변수는 friend로 선언할 수 있습니다.  

@@ -1,40 +1,40 @@
 ---
-title: "방법: PInvoke를 사용하여 문자열 마샬링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터 마샬링[C++], 문자열"
-  - "interop[C++], 문자열"
-  - "마샬링[C++], 문자열"
-  - "플랫폼 호출[C++], 문자열"
+title: "방법: PInvoke를 사용 하 여 문자열 마샬링 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- data marshaling [C++], strings
+- platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0047c76000d336ce18d2bbbab741dc965c1fbc59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: PInvoke를 사용하여 문자열 마샬링
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 항목에서는 .NET Framework 플랫폼 호출 지원으로 System::String CLR 문자열 형식을 사용하여 C 스타일 문자열이 허용되는 네이티브 함수를 호출하는 방법에 대해 설명합니다.  Visual C\+\+ 프로그래머는 가능한 한 C\+\+ Interop 기능을 대신 사용하는 것이 좋습니다. P\/Invoke는 컴파일 타임 오류 보고를 거의 제공하지 않으며 형식이 안전하지 않을 뿐만 아니라 구현 작업이 번거로울 수 있기 때문입니다.  관리되지 않는 API가 DLL로 패키지되어 있고 소스 코드를 사용할 수 없는 경우에는 P\/Invoke만 사용할 수 있습니다. 그렇지 않으면 [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)을 참조하십시오.  
+# <a name="how-to-marshal-strings-using-pinvoke"></a>방법: PInvoke를 사용하여 문자열 마샬링
+이 항목에서는 CLR 문자열을 사용 하 여 C 스타일 문자열을 호출할 수를 허용 하는 방법을 네이티브 함수를 설명 지원을.NET Framework 플랫폼 호출을 사용 하 여 system:: string을 입력 합니다. Visual c + + 프로그래머는 P/Invoke는 작은 컴파일 타임 오류를 보고, 형식 안전 하지 않은 및는 것을 제공 하므로 (가능한 경우) 대신 c + + Interop 기능을 사용 하는 것이 좋습니다. 관리 되지 않는 API는 DLL로 패키지 되어 소스 코드를 사용할 수 없는 경우 다음 P/Invoke 유일한 옵션은 있지만 그렇지 않은 경우 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)합니다.  
   
- 관리되는 문자열과 관리되지 않는 문자열은 메모리에 서로 다른 방식으로 배치되므로 관리되는 함수에서 관리되지 않는 함수로 문자열을 전달하려면 문자열 데이터를 올바르고 안전하게 마샬링하기 위해 필요한 변환 메커니즘을 삽입하도록 컴파일러에 지시하는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성이 필요합니다.  
+ 필요 하므로 관리 되는 관리 되지 않는 함수에서 문자열을 전달 스레드와 관리 되지 않는 문자열은 메모리에 다른 방식으로 배치 된을 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 문자열 데이터를 마샬링하기 위한 필요한 변환 메커니즘을 삽입 하도록 컴파일러에 지시 하는 특성 올바르고 안전 하 게 합니다.  
   
- 내장 데이터 형식만 사용하는 함수의 경우 <xref:System.Runtime.InteropServices.DllImportAttribute>를 사용하여 네이티브 함수에 대한 관리되는 진입점을 선언해야 하지만, 문자열을 전달할 때는 C 스타일 문자열을 사용하도록 이러한 진입점을 정의하는 대신 <xref:System.String> 형식에 대한 핸들을 사용할 수 있습니다.  이 경우 필요한 변환을 수행하는 코드를 삽입하라는 메시지가 컴파일러에 표시됩니다.  문자열을 입력받는 관리되지 않는 함수의 각 함수 인수에 대해 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 String 개체를 C 스타일 문자열로서 네이티브 함수로 마샬링하도록 지정해야 합니다.  
+ 내장 데이터 형식만 사용 하는 함수의 <xref:System.Runtime.InteropServices.DllImportAttribute> 는 네이티브 함수에 하지만 C 스타일 문자열에 대 한 핸들을 사용 하도록 이러한 진입점을 정의 하는 대신 문자열을 전달 하기 위한 관리 되는 진입점을 선언 하는 데 사용 되는 <xref:System.String> 유형 대신 사용할 수 있습니다. 이 메시지는 필요한 변환을 수행 하는 코드를 삽입 하도록 컴파일러에 표시 합니다. 각 함수 인수는 문자열을 사용 하는 관리 되지 않는 함수에 대해는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 문자열 개체를 C 스타일 문자열로 네이티브 함수에 마샬링되어야 한다는 것을 나타내기 위해 사용 해야 합니다.  
   
-## 예제  
- 다음 코드는 관리되지 않는 모듈과 관리되는 모듈로 구성되어 있습니다.  관리되지 않는 모듈은 C 스타일 ANSI 문자열을 char\*의 형태로 전달받는 TakesAString이라는 함수를 정의하는 DLL입니다.  관리되는 모듈은 TakesAString 함수를 가져오지만 이 함수를 char\* 대신 관리되는 System.String으로 가져오도록 정의하는 명령줄 응용 프로그램입니다.  TakesAString을 호출할 때 관리되는 문자열을 어떻게 마샬링할지 지정하는 데는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성이 사용됩니다.  
+## <a name="example"></a>예제  
+ 다음 코드는 관리 되지 않는 관리 되는 모듈 구성 됩니다. 관리 되지 않는 모듈은 TakesAString char *의 형태로 ANSI C 스타일 문자열을 수락 하는 호출 하는 함수를 정의 하는 DLL입니다. 관리 되는 모듈 TakesAString 함수 가져오지만 char 대신 관리 되는 System.String를 사용 하도록 정의 하는 명령줄 응용 프로그램은\*합니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성 TakesAString 호출 될 때 관리 되는 문자열을 마샬링하는 방법을 나타내는 데 사용 됩니다.  
   
- 관리되는 모듈은 \/CLR을 사용하여 컴파일되지만 \/clr:pure를 사용해도 컴파일됩니다.  
+ 관리 되는 모듈, /clr 하지만 /clr을 사용 하 여 컴파일되며: pure 합니다.  
   
 ```  
 // TraditionalDll2.cpp  
@@ -82,9 +82,9 @@ int main() {
 }  
 ```  
   
- 이 방법을 사용하면 관리되지 않는 힙에 문자열의 복사본이 생성되므로 네이티브 함수로 문자열을 변경한 내용은 문자열의 관리되는 복사본에 반영되지 않습니다.  
+ 이 방법을 사용 하면 네이티브 함수에서 문자열에 변경한 문자열의 관리 되는 복사본에 반영 되지 것입니다 하므로 관리 되지 않는 힙에서 생성 되는 문자열의 복사본입니다.  
   
- 일반적인 \#include 지시문을 통해서는 DLL의 어떠한 부분도 관리 코드에 노출되지 않습니다.  실제로는 런타임에만 DLL에 액세스하므로 `DllImport`를 사용하여 가져온 함수에 문제가 있더라도 컴파일할 때는 그러한 문제가 발견되지 않습니다.  
+ DLL의 없는 일부는 기존를 통해 관리 되는 코드에 노출 되지 #include 지시문입니다. 사실, DLL은 액세스할 런타임에만 문제 함수를 사용 하 여 가져온 `DllImport` 컴파일 타임에 문제가 발견 되지 것입니다.  
   
-## 참고 항목  
- [C\+\+에서 명시적 PInvoke 사용\(DllImport 특성\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>참고 항목  
+ [C++에서 명시적 PInvoke 사용(DllImport 특성)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

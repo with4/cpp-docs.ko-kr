@@ -1,46 +1,43 @@
 ---
-title: "multimap::operator=(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 멤버[STL/CLR]"
+title: 'multimap:: operator = (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 9bef7dc5-591d-443b-88b1-e68286422fe6
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eafafa245e9de81ce21f0be01b43795a78ef0ba5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::operator=(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Replaces the controlled sequence.  
+# <a name="multimapoperator-stlclr"></a>multimap::operator=(STL/CLR)
+제어되는 시퀀스를 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 multimap<Key, Mapped>% operator=(multimap<Key, Mapped>% right);  
 ```  
   
-#### 매개 변수  
- right  
- Container to copy.  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
+ 복사할 컨테이너입니다.  
   
-## 설명  
- The member operator copies `right` to the object, then returns `*this`.  You use it to replace the controlled sequence with a copy of the controlled sequence in `right`.  
+## <a name="remarks"></a>설명  
+ 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 이를 사용하여 제어되는 시퀀스를 `right`의 제어되는 시퀀스 복사본으로 대체합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_operator_as.cpp   
@@ -72,12 +69,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multimap](../dotnet/multimap-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multimap(STL/CLR)](../dotnet/multimap-stl-clr.md)

@@ -1,33 +1,32 @@
 ---
-title: "방법: 현재 사용자 이름 검색(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "현재 사용자 이름"
-  - "사용자 이름, 검색"
-  - "UserName 문자열"
+title: "방법: 현재 사용자 이름 검색 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- current user names
+- user names, retrieving
+- UserName string
 ms.assetid: 91679571-d029-41f5-b657-1460c81c608a
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c4738c829f346126dfed7990c50186a7c267df1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 현재 사용자 이름 검색(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 현재 사용자 이름\(Windows에 로그인한 사용자의 이름\)을 검색하는 방법을 보여 줍니다.  이 이름은 <xref:System.Environment> 네임스페이스에 정의된 <xref:System.Environment.UserName%2A> 문자열에 저장되어 있습니다.  
+# <a name="how-to-retrieve-the-current-username-ccli"></a>방법: 현재 사용자 이름 검색(C++/CLI)
+다음 코드 예제에서는 현재 사용자 이름 (Windows에 로그인 한 사용자 이름)을 검색 하는 방법을 보여 줍니다. 이름에 저장 됩니다는 <xref:System.Environment.UserName%2A> 문자열에서 정의 되는 <xref:System.Environment> 네임 스페이스입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // username.cpp  
@@ -41,6 +40,6 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [Windows 작업](../dotnet/windows-operations-cpp-cli.md)   
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [Windows 작업 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

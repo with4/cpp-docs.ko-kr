@@ -1,44 +1,43 @@
 ---
-title: "링커의 지연 로드된 DLL 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "지연 DLL 로드, 링커 지원"
+title: "링커의 지연 로드 된 Dll 지원 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c44c2ed7962ab3be94af435eda6114688f9260d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 링커의 지연 로드된 DLL 지원
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 링커는 현재 DLL의 지연 로드를 지원합니다.  이 기능을 사용하면 [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)] 함수 **LoadLibrary** 및 **GetProcAddress**를 사용하여 지연 로드하는 DLL을 구현할 필요가 없습니다.  
+# <a name="linker-support-for-delay-loaded-dlls"></a>링커의 지연 로드된 DLL 지원
+이제 Visual c + + 링커는 Dll의 지연된 로드를 지원합니다. 이 방식으로 제공 절약 Windows SDK 함수를 사용할 필요가 **LoadLibrary** 및 **GetProcAddress** DLL 지연 로드를 구현 하 합니다.  
   
- Visual C\+\+ 6.0 이전에는 **LoadLibrary** 및 **GetProcAddress**를 사용해야지만 런타임에 DLL을 로드할 수 있었습니다. 운영 체제는 실행 파일이나 실행 파일을 사용하는 DLL이 로드되었을 때 DLL을 로드합니다.  
+ 이전 Visual c + + 6.0 실행 시 DLL을 로드 하는 유일한 방법은 사용 했습니다 **LoadLibrary** 및 **GetProcAddress**; 운영 체제 DLL을 로드 하면 실행 파일 또는 로드 된 DLL를 사용 하 여 합니다.  
   
- Visual C\+\+ 6.0부터는 DLL과 정적으로 링크할 경우 프로그램이 해당 DLL의 함수를 호출할 때까지 링커가 DLL 로드를 지연하는 옵션이 제공됩니다.  
+ Visual c + + 6.0 부터는 DLL에 정적으로 링크 하는 경우 링커는 프로그램이 해당 DLL의 함수를 호출할 때까지 지연 하는 옵션이 DLL을 로드할 제공 합니다.  
   
- 응용 프로그램에서 [\/DELAYLOAD\(가져오기 로드 지연\)](../../build/reference/delayload-delay-load-import.md) 링커 옵션을 도우미 함수\(Visual C\+\+에서 제공되는 기본 구현\)와 함께 사용하여 DLL을 지연 로드할 수 있습니다.  도우미 함수는 **LoadLibrary** 및 **GetProcAddress**를 호출하여 런타임에 DLL을 로드합니다.  
+ 응용 프로그램을 지연 시킬 수 사용 하 여 DLL 로드는 [/DELAYLOAD (가져오기 로드 지연)](../../build/reference/delayload-delay-load-import.md) 링커 옵션을 도우미 함수 (Visual c + +에서 제공 되는 기본 구현)입니다. 도우미 함수를 호출 하 여 런타임 시 DLL을 로드할 됩니다 **LoadLibrary** 및 **GetProcAddress** 드립니다.  
   
- 다음과 같은 경우 DLL 지연 로드를 고려해야 합니다.  
+ 지연 DLL 로드 하는 경우 고려해 야 합니다.  
   
--   프로그램이 DLL의 함수를 호출하지 않는 경우  
+-   프로그램은 DLL의 함수를 호출할 수 있습니다.  
   
--   프로그램 실행이 거의 종료될 때까지 DLL의 함수를 호출하지 않아도 되는 경우  
+-   프로그램 실행 후반부에 DLL의 함수를 호출 될 수 있습니다.  
   
- DLL 지연 로드는 .EXE 또는 .DLL 프로젝트를 빌드하는 동안 지정될 수 있습니다.  하나 이상의 DLL 로드를 지연시키는 .DLL 프로젝트는 Dllmain에서 지연 로드 진입점을 호출하지 않아야 합니다.  
+ DLL의 지연된 로드의 빌드 중 지정할 수는 있습니다. EXE 또는 합니다. DLL 프로젝트입니다. A입니다. 하나 이상의 Dll의 로드를 지연 시키는 DLL 프로젝트 호출 해서는 안 자체 지연 로드 된 진입점 Dllmain에 있습니다.  
   
- 다음 항목에서 DLL의 지연 로드에 대해 설명합니다.  
+ 다음 항목에서는 Dll의 지연 로드:  
   
 -   [지연 로드할 DLL 지정](../../build/reference/specifying-dlls-to-delay-load.md)  
   
@@ -54,10 +53,10 @@ Visual C\+\+ 링커는 현재 DLL의 지연 로드를 지원합니다.  이 기�
   
 -   [DLL 지연 로드의 제약 조건](../../build/reference/constraints-of-delay-loading-dlls.md)  
   
--   [도우미 함수 이해](http://msdn.microsoft.com/ko-kr/6279c12c-d908-4967-b0b3-cabfc3e91d3d)  
+-   [도우미 함수 이해](understanding-the-helper-function.md)  
   
 -   [사용자 도우미 함수 개발](../../build/reference/developing-your-own-helper-function.md)  
   
-## 참고 항목  
- [Visual C\+\+의 DLL](../../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual c + +의 Dll](../../build/dlls-in-visual-cpp.md)   
  [링크](../../build/reference/linking.md)

@@ -1,48 +1,47 @@
 ---
-title: "CDBPropIDSet::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropIDSet.operator="
-  - "ATL.CDBPropIDSet.operator="
-  - "ATL::CDBPropIDSet::operator="
-  - "CDBPropIDSet::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= 연산자, OLE DB 템플릿"
-  - "operator =, 속성 집합"
-  - "operator=, 속성 집합"
+title: 'Cdbpropidset:: Operator = | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropIDSet.operator=
+- ATL.CDBPropIDSet.operator=
+- ATL::CDBPropIDSet::operator=
+- CDBPropIDSet::operator=
+dev_langs: C++
+helpviewer_keywords:
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
 ms.assetid: 8741fca9-201e-4821-af61-71ba998d0886
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 20fa125fcfe238aef222f1d471c44821fc7e0c32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CDBPropIDSet::operator =
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Assigns the contents of one property ID set to another ID property set.  
+# <a name="cdbpropidsetoperator-"></a>CDBPropIDSet::operator =
+다른 ID 속성 집합으로 설정 하는 하나의 속성 ID의 콘텐츠를 할당 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      CDBPropIDSet& operator =(   
-   CDBPropIDSet& propset    
+      CDBPropIDSet& operator =(   
+   CDBPropIDSet& propset    
 ) throw( );  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDBPropIDSet 클래스](../../data/oledb/cdbpropidset-class.md)

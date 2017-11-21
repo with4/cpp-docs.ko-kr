@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH 매크로"
+title: PROVIDER_COLUMN_ENTRY_TYPE_LENGTH | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_TYPE_LENGTH macro
 ms.assetid: a60b1a8b-0903-4ff4-91ec-ed62126449fb
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8b7f072c2a83bb476c4e088d36643e21bd075473
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Represents a specific column supported by the provider.  
+# <a name="providercolumnentrytypelength"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+공급자에서 지 원하는 특정 열을 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,31 +33,31 @@ name
 , ordinal, dbtype, size, member )  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *name*  
   
- \[in\] The column name.  
+ [in] 열 이름입니다.  
   
  `ordinal`  
- \[in\] The column number.  Unless the column is a Bookmark column, the column number must not be 0.  
+ [in] 열 번호입니다. 열이 책갈피 열, 하지 않는 한 열 번호는 0 아니어야 합니다.  
   
  `dbtype`  
- \[in\] The data type in [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
+ [in] 데이터 형식이 [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx)합니다.  
   
  `size`  
- \[in\] The column size in bytes.  
+ [in] 열 크기 (바이트)입니다.  
   
  `member`  
- \[in\] The member variable in the data class that stores the data.  
+ [in] 데이터를 저장 하는 데이터 클래스의 멤버 변수입니다.  
   
-## 설명  
- Similar to [PROVIDER\_COLUMN\_ENTRY\_LENGTH](../../data/oledb/provider-column-entry-length.md) but also allows you to specify the column's data type as well as size.  
+## <a name="remarks"></a>설명  
+ 비슷한 [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) 하지만 열의 데이터 형식 및 크기를 지정할 수 있습니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
- [OLE DB 공급자 템플릿에 대한 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+## <a name="see-also"></a>참고 항목  
+ [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)   
  [OLE DB 공급자 만들기](../../data/oledb/creating-an-ole-db-provider.md)

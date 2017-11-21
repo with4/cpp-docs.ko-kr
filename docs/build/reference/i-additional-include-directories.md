@@ -1,83 +1,83 @@
 ---
-title: "/I(추가 포함 디렉터리) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories"
-  - "VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories"
-  - "/I"
-  - "VC.Project.VCNMakeTool.IncludeSearchPath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/I 컴파일러 옵션[C++]"
-  - "추가 포함 디렉터리 컴파일러 옵션"
-  - "I 컴파일러 옵션[C++]"
-  - "-I 컴파일러 옵션[C++]"
-  - "포함 디렉터리, 컴파일러 옵션[C++]"
-  - "포함 디렉터리 설정"
+title: "-I (추가 포함 디렉터리) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
+- VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories
+- /I
+- VC.Project.VCNMakeTool.IncludeSearchPath
+dev_langs: C++
+helpviewer_keywords:
+- /I compiler option [C++]
+- Additional Include Directories compiler option
+- I compiler option [C++]
+- -I compiler option [C++]
+- set include directories
+- include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 91868a657e4b537c286378276701915c1e160a77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /I(추가 포함 디렉터리)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-포함 파일을 찾기 위해 검색할 디렉터리 목록에 디렉터리를 추가합니다.  
+# <a name="i-additional-include-directories"></a>/I(추가 포함 디렉터리)
+Include 파일을 검색할 디렉터리 목록에 디렉터리를 추가 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /I[ ]directory  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  `directory`  
- 포함 파일을 찾기 위해 검색할 디렉터리 목록에 추가될 디렉터리입니다.  
+ 디렉터리 목록에 추가할 디렉터리는 포함 파일에 대 한 검색 합니다.  
   
-## 설명  
- 두 개 이상의 디렉터리를 추가하려면 이 옵션을 두 번 이상 사용합니다.  지정한 포함 파일을 찾을 때까지만 디렉터리를 검색합니다.  
+## <a name="remarks"></a>설명  
+ 둘 이상의 디렉터리를 추가 하려면이 옵션을 두 번 이상 사용 합니다. 디렉터리를 지정된 된 포함 파일을 찾을 때까지 검색 합니다.  
   
- 표준 포함 경로 무시\([\/X\(표준 포함 경로 무시\)](../../build/reference/x-ignore-standard-include-paths.md)\) 옵션과 함께 이 옵션을 사용할 수 있습니다.  
+ 표준 포함 경로 무시 함께이 옵션을 사용할 수 있습니다 ([/X (표준 포함 경로 무시)](../../build/reference/x-ignore-standard-include-paths.md)) 옵션입니다.  
   
- 컴파일러는 다음과 같은 순서로 디렉터리를 검색합니다.  
+ 컴파일러는 다음 순서 대로 디렉터리를 검색 합니다.  
   
-1.  소스 파일이 포함된 디렉터리  
+1.  소스 파일을 포함 하는 디렉터리입니다.  
   
-2.  **\/I** 옵션을 사용하여 지정한 디렉터리\(CL에 나타나는 순서대로 검색\)  
+2.  지정 된 디렉터리는 **/I** CL 대로 검색 순서로 옵션입니다.  
   
-3.  **INCLUDE** 환경 변수에 지정한 디렉터리  
+3.  에 지정 된 디렉터리는 **INCLUDE** 환경 변수입니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
+2.  **C/C++** 폴더를 클릭합니다.  
   
-3.  **일반** 속성 페이지를 클릭합니다.  
+3.  클릭는 **일반** 속성 페이지.  
   
-4.  **추가 포함 디렉터리** 속성을 수정합니다.  
+4.  수정 된 **추가 포함 디렉터리** 속성입니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>을 참조하세요.  
   
-## 예제  
- 다음은 MAIN.c에서 요청한 포함 파일을 검색하는 명령입니다. 검색 순서는 MAIN.c가 포함된 디렉터리, \\INCLUDE 디렉터리, \\MY\\INCLUDE 디렉터리, INCLUDE 환경 변수에 할당된 디렉터리입니다.  
+## <a name="example"></a>예제  
+ 다음 명령은 다음과 같은 순서로 MAIN.c 요청한 포함 파일에 대 한 찾습니다: \INCLUDE 디렉터리에서 다음 다음 \MY\INCLUDE 디렉터리에서 MAIN.c를 포함 하 고 마지막으로 디렉터리에서에 할당 된 포함 된 디렉터리에서 첫 번째 환경 변수입니다.  
   
 ```  
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

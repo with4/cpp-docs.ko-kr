@@ -1,27 +1,26 @@
 ---
-title: "A.11   Specifying a Fixed Number of Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "고정된 개수의 스레드를 지정 하는 A.11 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1d06b142-4c35-44b8-994b-20f2aed5462b
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5a397789958e229363f535ed9b39f83ed928cb6a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# A.11   Specifying a Fixed Number of Threads
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-일부 프로그램이 제대로 실행 스레드 수를 고정, 미리 지정한 숫자에 의존 합니다.  구현이 정의 된 스레드의 수를 동적 조정에 대 한 기본 설정 이기 때문에 동적 스레드 기능을 해제 하 고 명시적으로 이식성을 보장 하는 스레드 수를 설정 하려면 이러한 프로그램을 선택할 수 있습니다.  다음 예제를 사용 하 여이 작업을 수행 하는 방법을 보여 줍니다. `omp_set_dynamic` \([섹션 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 39 페이지에\), 및 `omp_set_num_threads` \([3.1.1 구역](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) 36 페이지\):  
+# <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   고정된 수의 스레드 지정
+일부 응용 프로그램 스레드를 제대로 실행할 고정, 미리 지정한 숫자에 의존 합니다.  구현에서 정의 된 스레드 수를 동적으로 조정에 대 한 기본 설정 이기 때문에 이러한 프로그램 동적 스레드 기능을 해제 하 고 명시적으로 이동성을 보장 하는 스레드 수를 설정 하도록 선택할 수 있습니다. 사용 하는 방법을 보여 주는 다음 예제 `omp_set_dynamic` ([섹션 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 페이지 39), 및 `omp_set_num_threads` ([섹션 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) 페이지 36):  
   
 ```  
 omp_set_dynamic(0);  
@@ -36,6 +35,6 @@ omp_set_num_threads(16);
 }  
 ```  
   
- 이 예제에서는 16 스레드에 의해 실행 되는 경우 정확 하 게 프로그램을 실행 합니다.  구현 16 스레드를 지원할 수 없는 경우 동작이 예제에는 구현 시 정의 됩니다.  
+ 이 예제에서는 프로그램 16 스레드에 의해 실행 된 경우에 올바르게를 실행 합니다. 구현은 16 스레드를 지원할 수 없는 경우이 예제에서는 동작은 구현 시 정의 합니다.  
   
- 병렬 영역 실행 스레드 수를 동적 스레드 설정에 관계 없이 병렬 영역에는 동안 그대로 유지 됩니다.  동적 스레드 메커니즘 병렬 영역을 시작할 때 사용 하는 스레드 수를 결정 하 고 일정 기간 동안 지역 유지 합니다.
+ 병렬 영역 실행 되는 스레드 수를 설정 하는 동적 스레드에 관계 없이 병렬 영역 중 일관적으로 유지 되는 참고 합니다. 동적 스레드 메커니즘 병렬 영역의 시작 부분에 사용할 스레드 수를 결정 영역의 기간에 대 한 상수 유지 합니다.

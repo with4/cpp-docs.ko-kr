@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 980be1e393fab633f3417dcc250c1820def3ff90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="primary-expressions"></a>기본 식
 기본 식은 더 복잡한 식의 구성 요소이며 리터럴, 이름 및 범위 결정 연산자(`::`)로 정규화된 이름입니다.  기본 식의 형식은 다음 중 하나입니다.  
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/25/2017
   
  **이** 키워드는 클래스 개체에 대 한 포인터입니다. 비정적 멤버 함수 안에 사용할 수 있으며 함수가 호출된 인스턴스에 대한 클래스의 인스턴스를 가리킵니다. **이** 키워드 클래스 멤버 함수의 본문 밖에 사용할 수 없습니다.  
   
- 유형의 **이** 포인터가 `type` ** \*const** (여기서 `type` 클래스 이름) 수정 되지 않은 함수는 **이** 포인터입니다. 함수 선언 및 종류의 다음 예제에서는 멤버 **이**:  
+ 유형의 **이** 포인터가 `type`  **\*const** (여기서 `type` 클래스 이름) 수정 되지 않은 함수는 **이** 포인터입니다. 함수 선언 및 종류의 다음 예제에서는 멤버 **이**:  
   
 ```  
 // expre_Primary_Expressions.cpp  

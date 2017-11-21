@@ -1,41 +1,39 @@
 ---
-title: "multimap::empty(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 멤버[STL/CLR]"
+title: 'multimap:: empty (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 6214279b-289a-4843-a52a-2034667a2ba3
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a0b4380feebf5e2e3875dc8e21c3f3cbb1894050
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::empty(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tests whether no elements are present.  
+# <a name="multimapempty-stlclr"></a>multimap::empty(STL/CLR)
+요소가 있는지 여부를 테스트합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 bool empty();  
 ```  
   
-## 설명  
- The member function returns true for an empty controlled sequence.  It is equivalent to [multimap::size](../dotnet/multimap-size-stl-clr.md)`() == 0`.  You use it to test whether the multimap is empty.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [multimap:: size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`합니다. Multimap이 비어 있는지 여부를 테스트 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::size](../dotnet/multimap-size-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::size(STL/CLR)](../dotnet/multimap-size-stl-clr.md)

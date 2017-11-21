@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - codecvt
 - <codecvt>
-dev_langs:
-- C++
-helpviewer_keywords:
-- codecvt header
+dev_langs: C++
+helpviewer_keywords: codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 81a40835fc5122d6384578e1b6e48e81a70db18b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: d35597d8d0c39a15aead1e7c35c512bc8dc7fafe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 템플릿 클래스 [codecvt](../standard-library/codecvt-class.md)를 기반으로 하는 개체를 설명하는 여러 템플릿 클래스를 정의합니다. 이러한 개체는 `Elem` 형식의 값 시퀀스와 `char` 형식의 값 시퀀스 간의 변환을 제어하는 [로캘 패싯](../standard-library/locale-class.md#facet_class)으로 사용할 수 있습니다.  
@@ -88,7 +84,6 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

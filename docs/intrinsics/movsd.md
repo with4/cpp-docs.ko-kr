@@ -1,69 +1,68 @@
 ---
-title: "__movsd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep movsd 명령"
-  - "__movsd 내장 함수"
-  - "movsd 명령"
+title: __movsd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsd
+dev_langs: C++
+helpviewer_keywords:
+- rep movsd instruction
+- __movsd intrinsic
+- movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 38771656be017cadf9d12dd1279e6b0a53d29d37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# __movsd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="movsd"></a>__movsd
 **Microsoft 전용**  
   
- 이동 문자열이 생성 \(`rep movsd`\) 명령.  
+ 이동 문자열을 생성 (`rep movsd`) 명령입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-void __movsd(   
-   unsigned long* Dest,   
-   unsigned long* Source,   
-   size_t Count   
+void __movsd(   
+   unsigned long* Dest,   
+   unsigned long* Source,   
+   size_t Count   
 );  
 ```  
   
-#### 매개 변수  
- \[out\] `Dest`  
- 대상 작업입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [out] `Dest`  
+ 작업의 대상입니다.  
   
- \[in\] `Source`  
- 소스 작업입니다.  
+ [in] `Source`  
+ 작업의 원본입니다.  
   
- \[in\] `Count`  
- 복사할 더블 워드 개 개수입니다.  
+ [in] `Count`  
+ 복사할 2 배 워드의 수입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__movsd`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__movsd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 따라서 첫 번째 `Count` 더블 워드 개 여를 가리키는 `Source` 복사 되는 `Dest` 문자열.  
+## <a name="remarks"></a>설명  
+ 결과 첫 번째 `Count` 가리키는 2 배 워드 `Source` 복사 되는 `Dest` 문자열입니다.  
   
- 이 루틴에만 내장로 사용할 수 있습니다.  
+ 이 루틴은 내장 루틴으로만 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // movsd.cpp  
@@ -86,8 +85,11 @@ int main()
 }  
 ```  
   
-  **950 850 750 650 550 450 350 250 150 50**    
-## Microsoft 특정 끝  
+```Output  
+950 850 750 650 550 450 350 250 150 50   
+```  
   
-## 참고 항목  
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

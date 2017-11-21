@@ -1,59 +1,57 @@
 ---
-title: "Event 클래스(Windows Runtime C++ 템플릿 라이브러리) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Event"
-dev_langs: 
-  - "C++"
+title: "이벤트 클래스 (Windows 런타임 c + + 템플릿 라이브러리) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Event
+dev_langs: C++
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df791e5ef12dfeef72ebf48e673b774ddfd6aee5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Event 클래스(Windows Runtime C++ 템플릿 라이브러리)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="event-class-windows-runtime-c-template-library"></a>Event 클래스(Windows Runtime C++ 템플릿 라이브러리)
 이벤트를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class Event : public HandleT<HandleTraits::EventTraits>;  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[Event::Event 생성자\(Windows Runtime C\+\+ 템플릿 라이브러리\)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|이벤트 클래스의 새 인스턴스를 초기화합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[Event::Event 생성자(Windows Runtime C++ 템플릿 라이브러리)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|이벤트 클래스의 새 인스턴스를 초기화합니다.|  
   
-### Public 연산자  
+### <a name="public-operators"></a>Public 연산자  
   
-|Name|설명|  
-|----------|--------|  
-|[Event::operator\= 연산자](../windows/event-operator-assign-operator.md)|현재 이벤트 인스턴스를 지정된 이벤트 참조를 할당합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[Event::operator= 연산자](../windows/event-operator-assign-operator.md)|현재 이벤트 인스턴스를 지정된 이벤트 참조를 할당합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `HandleT`  
   
  `Event`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
   
- **네임스페이스:** Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft::WRL::Wrappers 네임스페이스](../windows/microsoft-wrl-wrappers-namespace.md)

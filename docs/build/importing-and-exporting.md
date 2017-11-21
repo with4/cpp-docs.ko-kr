@@ -1,56 +1,56 @@
 ---
 title: "가져오기 및 내보내기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec(dllimport) 키워드[C++]"
-  - "DLL[C++], 내보내기"
-  - "DLL[C++], 가져오기"
-  - "DLL 내보내기[C++]"
-  - "importing DLL[C++]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], importing
+- exporting DLLs [C++]
+- importing DLLs [C++]
+- DLLs [C++], exporting from
+- __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b22332e9d8e31b631cf4e93f8ee6860498d64144
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 가져오기 및 내보내기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음과 같은 두 가지 방법을 사용하여 공용 기호를 응용 프로그램으로 가져오거나 함수를 DLL에서 내보낼 수 있습니다.  
+# <a name="importing-and-exporting"></a>가져오기 및 내보내기
+응용 프로그램으로 공용 기호를 가져올 하거나 두 개의 메서드를 사용 하 여 DLL에서 함수를 내보낼 수 있습니다.  
   
--   DLL 빌드 시 모듈 정의\(.def\) 파일 사용  
+-   DLL을 빌드할 때 모듈 정의 (.def) 파일을 사용 하 여  
   
--   기본 응용 프로그램의 함수 정의에 **\_\_declspec\(dllimport\)** 또는 **\_\_declspec\(dllexport\)** 키워드 사용  
+-   키워드를 사용 하 여 **__declspec (dllimport)** 또는 **__declspec (dllexport)** 주 응용 프로그램의 함수 정의  
   
-## .def 파일 사용  
- 모듈 정의\(.def\) 파일은 DLL의 여러 가지 특성을 설명하는 하나 이상의 모듈 문이 들어 있는 텍스트 파일입니다.  **\_\_declspec\(dllimport\)** 또는 **\_\_declspec\(dllexport\)**을 사용하여 DLL의 함수를 내보내지 않는 경우에는 해당 DLL에 대한 .def 파일이 있어야 합니다.  
+## <a name="using-a-def-file"></a>.Def 파일  
+ 모듈 정의 (.def) 파일은 DLL의 다양 한 특성을 설명 하는 하나 이상의 모듈 문을 포함 하는 텍스트 파일. 사용 하지 않는 경우 **__declspec (dllimport)** 또는 **__declspec (dllexport)** DLL DLL의 함수를 내보내려면.def 파일을 필요 합니다.  
   
- .def 파일을 사용하면 [응용 프로그램으로 가져오기](../build/importing-using-def-files.md) 또는 [DLL에서 내보내기](../build/exporting-from-a-dll-using-def-files.md)도 가능합니다.  
+ .Def 파일을 사용할 수 있습니다 [응용 프로그램으로 가져올](../build/importing-using-def-files.md) 또는 [DLL에서 내보내기](../build/exporting-from-a-dll-using-def-files.md)합니다.  
   
-## \_\_declspec 사용  
- Visual C\+\+에서는 이전에 16비트 버전의 Visual C\+\+에서 사용되었던 **\_\_export** 키워드 대신 **\_\_declspec\(dllimport\)** 및 **\_\_declspec\(dllexport\)**을 사용합니다.  
+## <a name="using-declspec"></a>__Declspec를 사용 하 여  
+ Visual c + + 사용 하 여 **__declspec (dllimport)** 및 **__declspec (dllexport)** 바꾸려면는 **__export** 16 비트 버전의 Visual c + +에서 이전에 사용 된 키워드입니다.  
   
- 코드가 올바르게 컴파일되도록 하기 위해 **\_\_declspec\(dllimport\)**을 사용할 필요는 없지만 이렇게 하면 컴파일러가 보다 나은 코드를 생성할 수 있게 됩니다.  컴파일러에서 더 나은 코드를 생성할 수 있는 이유는 함수가 DLL에 존재하는지 여부를 알 수 있기 때문입니다. 따라서 컴파일러에서는 일반적으로 DLL 경계를 넘는 함수 호출에서 지정되는 간접 참조 수준을 생략하도록 코드를 생성할 수 있습니다.  그러나 DLL에 사용되는 변수를 가져오려면 **\_\_declspec\(dllimport\)**을 사용해야 합니다.  
+ 사용할 필요가 없습니다 **__declspec (dllimport)** 있으며 올바르게 컴파일되도록 하는 코드에 대 한 컴파일러가를 보다 효율적인 코드를 생성 합니다. 컴파일러는 함수에에서 있는지 여부를 DLL, 일반적으로 DLL 경계를 교차 하는 함수 호출에 수 간접 참조 수준을 컴파일러가 결정할 수 없기 때문에 보다 효율적인 코드를 생성할 수 있습니다. 하지만 사용 해야 **__declspec (dllimport)** DLL에서 사용 되는 변수를 가져오려는 합니다.  
   
- 올바른 .def 파일의 EXPORTS 섹션에는 **\_\_declspec\(dllexport\)**이 필요하지 않습니다.  이 경우에는 .def 파일을 사용하지 않고도 .exe 또는 .dll 파일에서 함수를 쉽게 내보낼 수 있도록 하기 위해 **\_\_declspec\(dllexport\)**이 추가되어 있습니다.  
+ 적절 한.def 파일의 EXPORTS 섹션으로 **__declspec (dllexport)** 필요 하지 않습니다. **__declspec (dllexport)** 쉽게.def 파일을 사용 하지 않고.exe 또는.dll 파일에서 함수를 내보낼 수 있는 방법을 제공 하기 위해 추가 되었습니다.  
   
- Win32의 이식 가능한 실행 파일 형식은 가져오기를 수정하기 위한 페이지의 수를 최소화하도록 디자인되어 있습니다.  이렇게 하려면 Win32의 이식 가능한 실행 파일 형식은 프로그램에 대한 모든 가져오기 주소를 가져오기 주소 테이블이라는 하나의 장소에 보관합니다.  이렇게 하면 로더에서 가져오기에 액세스할 때 한 개 또는 두 개의 페이지만 수정하면 됩니다.  
+ Win32 이식 가능한 실행 파일 형식이 가져오기를 수정 하기 위한 페이지 수를 최소화 하도록 설계 되었습니다. 이렇게 하려면 가져오기 주소 테이블 이라는 한 곳에서 모든 프로그램에 대 한 모든 가져오기 주소를 파악할 수 있습니다. 이렇게 하면 로더를이 가져오기에 액세스할 때만 하나 또는 두 개의 페이지를 수정할 수 있습니다.  
   
-## 수행할 작업  
+## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   
 -   [응용 프로그램으로 가져오기](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
 -   [DLL에서 내보내기](../build/exporting-from-a-dll.md)  
   
-## 참고 항목  
- [Visual C\+\+의 DLL](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [Visual C++의 DLL](../build/dlls-in-visual-cpp.md)

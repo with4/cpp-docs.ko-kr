@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSacl class
+dev_langs: C++
+helpviewer_keywords: CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: bd9ef9932938cfe5ec65965b3a40116da7f43b90
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 72949601269dea510ba7b9078b022a28905349c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csacl-class"></a>CSacl 클래스
 이 클래스는 SACL (시스템 액세스 제어 목록) 구조에 대 한 래퍼입니다.  
@@ -89,7 +71,7 @@ class CSacl : public CAcl
   
  추가, 제거,를 만들고 삭제 하에서 Ace가 제공 하는 클래스 메서드를 사용 하 여는 **SACL** 개체입니다. 참고 항목 [AtlGetSacl](security-global-functions.md#atlgetsacl) 및 [AtlSetSacl](security-global-functions.md#atlsetsacl)합니다.  
   
- Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) Windows sdk에서입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -172,7 +154,7 @@ CSacl(const ACL& rhs) throw(...);
 ~CSacl() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  소멸자는 모든 액세스 제어 (Ace) 항목을 포함 하는 개체에 의해 획득 하는 모든 리소스를 해제 합니다.  
   
 ##  <a name="getacecount"></a>CSacl::GetAceCount  
@@ -210,7 +192,7 @@ void RemoveAce(UINT nIndex) throw();
  `nIndex`  
  제거 하려면 ACE 항목 인덱스입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는에서 파생 된 [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)합니다.  
   
 ##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
@@ -229,4 +211,3 @@ void RemoveAllAces() throw();
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [클래스 개요](../../atl/atl-class-overview.md)   
  [보안 전역 함수](../../atl/reference/security-global-functions.md)
-

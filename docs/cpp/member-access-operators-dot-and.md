@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - .
 - ->
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - member access, expressions
 - operators [C++], member access
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 7c4e69727c474cb89f931832da2dbde6e20c16b9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 367fcdae26b66cce06fd6086a21d3212c7ac17ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="member-access-operators--and--gt"></a>멤버 액세스 연산자:. 매개 변수와-&gt;
 ## <a name="syntax"></a>구문  
@@ -43,13 +40,13 @@ postfix-expression -> name
 ```  
   
 ## <a name="remarks"></a>설명  
- 멤버 액세스 연산자 **합니다.** 및 ** -> ** 구조체, 공용 구조체 및 클래스의 멤버를 참조 하는 데 사용 됩니다. 멤버 액세스 식에는 선택한 멤버의 값과 형식이 있습니다.  
+ 멤버 액세스 연산자 **합니다.** 및  **->**  구조체, 공용 구조체 및 클래스의 멤버를 참조 하는 데 사용 됩니다. 멤버 액세스 식에는 선택한 멤버의 값과 형식이 있습니다.  
   
  다음 두 가지 형태의 멤버 액세스 식이 있습니다.  
   
 1.  첫 번째 형태에서 *후 위 식* 구조체, 클래스 또는 공용 구조체 형식의 값을 나타내는 및 *이름* 지정된 구조체, 공용 구조체 또는 클래스의 멤버 이름을 지정 합니다. 작업의 값은의 *이름* 경우 l-value는 *후 위 식* l-value는 합니다.  
   
-2.  두 번째 형태에서 *후 위 식* 구조체, 공용 구조체 또는 클래스에 대 한 포인터를 나타내는 및 *이름* 지정된 구조체, 공용 구조체 또는 클래스의 멤버 이름을 지정 합니다. 값은 *이름* 이며 l-value입니다. ** -> ** 연산자는 포인터를 역참조 합니다. 따라서 *e* ** -> ** `member` 및 **(\****e***)**.`member` (여기서 *e* 포인터 나타냅니다) 동일한 결과 생성 (경우는 제외 연산자 ** -> ** 또는 ** \* ** 는 오버 로드).  
+2.  두 번째 형태에서 *후 위 식* 구조체, 공용 구조체 또는 클래스에 대 한 포인터를 나타내는 및 *이름* 지정된 구조체, 공용 구조체 또는 클래스의 멤버 이름을 지정 합니다. 값은 *이름* 이며 l-value입니다. **->**  연산자는 포인터를 역참조 합니다. 따라서 *e*  **->**  `member` 및 **(\****e***)**.`member` (여기서 *e* 포인터 나타냅니다) 동일한 결과 생성 (경우는 제외 연산자  **->**  또는  **\***  는 오버 로드).  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 두 가지 형태의 멤버 액세스 연산자를 보여 줍니다.  

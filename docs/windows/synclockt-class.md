@@ -1,32 +1,30 @@
 ---
 title: "SyncLockT 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SyncLockT 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT
+dev_langs: C++
+helpviewer_keywords: SyncLockT class
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 70e50f4ab18cdfddc3330e5c23e5808040c354bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# SyncLockT 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-WRL 인프라구조체를 지원하고 코드에서 직접적으로 사용되는 것을 의도하지 않습니다.  
+# <a name="synclockt-class"></a>SyncLockT 클래스
+WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <  
@@ -35,51 +33,51 @@ template <
 class SyncLockT;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `SyncTraits`  
- 리소스의 소유권을 가져올 수 있는 형식입니다.  
+ 리소스의 소유권을 사용할 수 있는 형식입니다.  
   
-## 설명  
- 단독으로 사용할 수 있는 형식을 나타내는 리소스의 소유권을 공유 합니다.  
+## <a name="remarks"></a>설명  
+ 단독으로 사용할 수 있는 형식을 나타내는 또는 리소스의 소유권을 공유 합니다.  
   
- SyncLockT 클래스는, 예를 들어, [SRWLock](../windows/srwlock-class.md) 클래스를 구현을 돕습니다.  
+ SyncLockT 클래스는 사용, 예를 들어 구현할 수 있도록는 [SRWLock](../windows/srwlock-class.md) 클래스입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[SyncLockT::SyncLockT 생성자](../windows/synclockt-synclockt-constructor.md)|SyncLockT 클래스의 새 인스턴스를 초기화합니다.|  
-|[SyncLockT::~SyncLockT 소멸자](../windows/synclockt-tilde-synclockt-destructor.md)|SyncLockT 클래스의 인스턴스를 초기화하지 않습니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[SyncLockT::SyncLockT 구조체](../windows/synclockt-synclockt-constructor.md)|SyncLockT 클래스의 새 인스턴스를 초기화합니다.|  
+|[SyncLockT::~SyncLockT 소멸자](../windows/synclockt-tilde-synclockt-destructor.md)|SyncLockT 클래스의 인스턴스 초기화를 취소 합니다.|  
   
-### Protected 생성자  
+### <a name="protected-constructors"></a>Protected 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[SyncLockT::SyncLockT 생성자](../windows/synclockt-synclockt-constructor.md)|SyncLockT 클래스의 새 인스턴스를 초기화합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[SyncLockT::SyncLockT 구조체](../windows/synclockt-synclockt-constructor.md)|SyncLockT 클래스의 새 인스턴스를 초기화합니다.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[SyncLockT::IsLocked 메서드](../windows/synclockt-islocked-method.md)|현재 SyncLockT 개체 리소스이면 소유하고 있는지 여부를 나타냅니다. 즉, SyncLockT 개체는 *잠금*입니다.|  
-|[SyncLockT::Unlock 메서드](../windows/synclockt-unlock-method.md)|모든 경우에, 현재 syncLockT 개체에 의해 보유된 리소스의 컨트롤을 릴리스합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[SyncLockT::IsLocked 메서드](../windows/synclockt-islocked-method.md)|현재 SyncLockT 개체는 리소스를 소유 하는지 여부를 나타냅니다. SyncLockT 개체 즉, *잠긴*합니다.|  
+|[SyncLockT::Unlock 메서드](../windows/synclockt-unlock-method.md)|있는 경우 현재 SyncLockT 개체에서 보유 하는 리소스의 제어를 해제 합니다.|  
   
-### 보호된 데이터 멤버  
+### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|Name|설명|  
-|----------|--------|  
-|[SyncLockT::sync\_ 데이터 멤버](../windows/synclockt-sync-data-member.md)|SyncLockT 클래스에 의해 표시 되는 기본 리소스를 포함 합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[SyncLockT::sync_ 데이터 멤버](../windows/synclockt-sync-data-member.md)|SyncLockT 클래스에 의해 표시 되는 기본 리소스를 보유 합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `SyncLockT`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
   
- **네임스페이스:** Microsoft::WRL::Wrappers::Details  
+ **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## 참고 항목  
- [Microsoft::WRL::Wrappers::Details 네임스페이스](../windows/microsoft-wrl-wrappers-details-namespace.md)   
+## <a name="see-also"></a>참고 항목  
+ [Microsoft::WRL::Wrappers::Details Namespace](../windows/microsoft-wrl-wrappers-details-namespace.md)   
  [SRWLock 클래스](../windows/srwlock-class.md)

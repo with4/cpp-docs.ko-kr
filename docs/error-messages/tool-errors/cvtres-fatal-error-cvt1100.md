@@ -1,31 +1,29 @@
 ---
 title: "CVTRES 심각한 오류 CVT1100 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CVT1100"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CVT1100"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CVT1100
+dev_langs: C++
+helpviewer_keywords: CVT1100
 ms.assetid: 886e88dd-5818-4b5f-84f2-d2a3d75f0aaf
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ba8ea3fdfdea9ca5aa142a1f2a8f15c5d3ac536a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CVTRES 심각한 오류 CVT1100
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-리소스가 중복되었습니다. 형식::type, 이름:name, 언어:language, 플래그:flags, 크기:size  
+# <a name="cvtres-fatal-error-cvt1100"></a>CVTRES 심각한 오류 CVT1100
+중복 리소스-유형: 유형, 이름: 이름, 언어: 언어, 플래그: 플래그, 크기: 크기,  
   
- 리소스가 두 번 이상 지정되었습니다.  
+ 지정 된 리소스를 두 번 이상 지정 되었습니다.  
   
- 링커가 형식 라이브러리를 만들고 있으며 사용자가 [\/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)를 지정하지 않은 경우에 프로젝트의 리소스가 이미 1을 사용하고 있으면 이 오류가 발생합니다.  이런 경우 \/TLBID를 지정한 다음 65535까지의 다른 숫자를 지정합니다.
+ 링커는 형식 라이브러리를 만들고 지정 하지 않은 경우이 오류를 얻을 수 있습니다 [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) 1에 이미 사용 하 여 프로젝트에 리소스입니다. 이 경우 /TLBID를 지정 하 고 65535 까지의 다른 숫자를 지정 합니다.

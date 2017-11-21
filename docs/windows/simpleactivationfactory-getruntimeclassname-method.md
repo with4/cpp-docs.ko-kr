@@ -1,51 +1,56 @@
 ---
-title: "SimpleActivationFactory::GetRuntimeClassName 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName"
-dev_langs: 
-  - "C++"
+title: "Simpleactivationfactory:: Getruntimeclassname 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName
+dev_langs: C++
 ms.assetid: 3aa07487-9a42-46f8-8893-37ba6315e50b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 22cb09115938da3d90bbe7feac0aac490971ffd1
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
-# SimpleActivationFactory::GetRuntimeClassName 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName 메서드
 
-런타임 클래스 이름에 지정된 클래스의 인스턴스를 `Base` 클래스 탬플릿 매개변수에 의해 가져옵니다.  
-  
-## 구문  
-  
-```  
-STDMETHOD(  
-   GetRuntimeClassName  
-)(_Out_ HSTRING* runtimeName);  
-```  
-  
-#### 매개 변수  
- `runtimeName`  
- 이 작업이 완료되면, 런타임 클래스 이름입니다.  
-  
-## 반환 값  
- 성공 하면 S\_OK 그렇지 않으면 오류를 나타내는 HRESULT입니다.  
-  
-## 설명  
- 만일 \_\_WRL\_STRICT\_\_가 정의된 경우, 어설트 오류를 발생합니다. 만일 `Base` 클래스 탬플릿 매개변수에 의해 지정된 클래스가 [런타임클래스](../windows/runtimeclass-class.md) 로부터 도출되지 않았을 경우, 또는 WinRt 혹은 WinRtClaasicComMix [런타임클래스형식](../windows/runtimeclasstype-enumeration.md) 열거 값으로 구성되지 않았을 경우 입니다.  
-  
-## 요구 사항  
- **헤더:** module.h  
-  
- **네임스페이스:** Microsoft::WRL  
-  
-## 참고 항목  
- [SimpleActivationFactory 클래스](../windows/simpleactivationfactory-class.md)
+런타임 클래스 이름에서 지정 된 클래스의 인스턴스를 가져옵니다는 `Base` 클래스 템플릿 매개 변수입니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*runtimeName*  
+이 작업이 완료 될 때, 런타임 클래스 이름이 있습니다.
+
+## <a name="return-value"></a>반환 값
+
+성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
+
+## <a name="remarks"></a>설명
+
+경우 &#95; &#95; WRL_STRICT &#95; #95 정의 어설션 오류가 발생 하 여 지정 된 클래스가 `Base` 클래스 템플릿 매개 변수에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), WinRt 또는 WinRtClassicComMix 구성 되지 않았습니다 또는 [ RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
+
+## <a name="requirements"></a>요구 사항
+
+**헤더:** module.h
+
+**네임스페이스:** Microsoft::WRL
+
+## <a name="see-also"></a>참고 항목
+
+[SimpleActivationFactory 클래스](../windows/simpleactivationfactory-class.md)

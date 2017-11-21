@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLCOM/ATL::CComObject::CreateInstance
 - ATLCOM/ATL::CComObject::QueryInterface
 - ATLCOM/ATL::CComObject::Release
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObject class
+dev_langs: C++
+helpviewer_keywords: CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1fbf6a09b4085df4ac6918d261e2b9d625c98c08
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 7735c80e293bc6534700cf31715fdfdd8ab8e461
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobject-class"></a>CComObject 클래스
 이 클래스는 구현 **IUnknown** 집계 되지 않은 원시 개체에 대 한 합니다.  
@@ -78,7 +60,7 @@ class CComObject : public Base
 |[CComObject::QueryInterface](#queryinterface)|요청된 인터페이스에 대한 포인터를 검색합니다.|  
 |[CComObject::Release](#release)|개체에 대 한 참조 횟수를 줄입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CComObject`구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 집계 되지 않은 원시 개체에 대 한 합니다. 그러나에 대 한 호출이 `QueryInterface`, `AddRef`, 및 **릴리스** 에 위임 되며 `CComObjectRootEx`합니다.  
   
  사용에 대 한 자세한 내용은 `CComObject`, 문서를 참조 [ATL COM 개체 기본 사항](../../atl/fundamentals-of-atl-com-objects.md)합니다.  
@@ -112,7 +94,7 @@ CComObject(void* = NULL);
  **void\***  
  [in] 이 명명 되지 않은 매개 변수가 사용 되지 않습니다. 대응 하 여 다른 있는 **CCom***XXX*`Object`*XXX* 생성자입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  소멸자 감소 것입니다.  
   
  경우는 `CComObject`-파생 된 개체를 사용 하 여 성공적으로 생성 되는 **새** 연산자, 초기 참조 횟수는 0입니다. 호출 하 여 참조 횟수가 적절 한 값 (1)을 설정 하려면는 [AddRef](#addref) 함수입니다.  
@@ -129,7 +111,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>CComObject::CreateInstance  
- 이 정적 함수를 사용 하면 새 **CComObject** `Base` **>** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
+ 이 정적 함수를 사용 하면 새 **CComObject <** `Base`  **>**  개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -137,20 +119,20 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>매개 변수  
  `pp`  
- [out] 에 대 한 포인터는 **CComObject** `Base` **>** 포인터입니다. 경우 `CreateInstance` 실패 `pp` 로 설정 된 **NULL**합니다.  
+ [out] 에 대 한 포인터는 **CComObject <** `Base`  **>**  포인터입니다. 경우 `CreateInstance` 실패 `pp` 로 설정 된 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 되는 개체에는 참조 횟수가 0, 없으므로 호출 `AddRef` 즉시을 사용 하 여 **릴리스** 를 마치면 개체 포인터에 대 한 참조를 해제 합니다.  
   
  직접 필요 않는 개체에 액세스할 수 있지만 여전히 오버 헤드 없이 새 개체를 만들려고 할 경우 `CoCreateInstance`를 사용 하 여 [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 대신 합니다.  
   
 ### <a name="example"></a>예제  
- [!code-cpp[NVC_ATL_COM #38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
   
- [!code-cpp[#39 NVC_ATL_COM](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
 ##  <a name="queryinterface"></a>CComObject::QueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
@@ -190,4 +172,3 @@ STDMETHOD_(ULONG, Release)();
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

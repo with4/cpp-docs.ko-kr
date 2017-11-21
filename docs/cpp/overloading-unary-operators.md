@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unary operators [C++], plus
 - increment operators [C++], overloaded
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - pointer dereference operator overloading
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9ec200fecdebb1c39929882c6fbe4ad09eddc812
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 54c3e7eff420c5ed562e71235d204800eff5019a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="overloading-unary-operators"></a>단항 연산자 오버로드
 오버로드할 수 있는 단항 연산자는 다음과 같습니다.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 09/25/2017
   
 9. conversion operators  
   
- 후 위 증가 및 감소 연산자 (`++` 및 ** -- **)에서 별도로 처리 됩니다 [증가 및 감소](../cpp/increment-and-decrement-operator-overloading-cpp.md)합니다.  
+ 후 위 증가 및 감소 연산자 (`++` 및  **--** )에서 별도로 처리 됩니다 [증가 및 감소](../cpp/increment-and-decrement-operator-overloading-cpp.md)합니다.  
   
  변환 연산자는 별도 항목; 에서도 설명 참조 [사용자 정의 형식 변환](../cpp/user-defined-type-conversions-cpp.md)합니다.  
   

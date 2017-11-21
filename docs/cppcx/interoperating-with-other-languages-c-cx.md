@@ -1,24 +1,27 @@
 ---
-title: "다른 언어와의 상호 운용(C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "다른 언어와의 상호 운용 (C + + /cli CX) | Microsoft Docs"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: aac27465e486dc4bd02fd5e35b4c037862343a31
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 다른 언어와의 상호 운용(C++/CX)
-설명서의 이 부분에서는 [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)]\([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\)를 사용하여 기타 프로그래밍 언어 및 라이브러리에서 사용될 수 있는 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 구성 요소를 작성하는 방법을 설명합니다. 일부 언어에서 사용될 수 없는 구성 요소를 작성할 수도 있습니다. 이 섹션에서는 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 응용 프로그램이 JavaScript, .NET Framework 관리 언어 또는 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] C\+\+ 템플릿 라이브러리를 사용하여 작성된 구성 요소와 상호 운용될 때 고려할 다양한 측면을 설명합니다.  
+# <a name="interoperating-with-other-languages-ccx"></a>다른 언어와의 상호 운용(C++/CX)
+이 부분의 설명서에는 C +를 사용 하는 방법을 설명 + /CX를 다른 프로그래밍 언어 및 라이브러리에서 사용할 수 있는 Windows 런타임 구성 요소를 작성 합니다. 일부 언어에서 사용될 수 없는 구성 요소를 작성할 수도 있습니다. 이 섹션에서는 할 때 고려할 다양 한 측면을 설명 C + + /CX 응용 프로그램 JavaScript,.NET Framework 관리 언어에서 또는 Windows 런타임 c + + 템플릿 라이브러리를 사용 하 여 작성 된 구성 요소와 상호 운용 합니다.  
   
-## 관련 항목  
+## <a name="related-topics"></a>관련 항목  
   
 -   [JavaScript 통합](../cppcx/javascript-integration-c-cx.md)  
   
@@ -26,4 +29,4 @@ caps.handback.revision: 7
   
 -   [WRL 통합](../cppcx/wrl-integration-c-cx.md)  
   
--   [Visual C\+\+ 언어 참조](../cppcx/visual-c-language-reference-c-cx.md)
+-   [Visual c + + 언어 참조](../cppcx/visual-c-language-reference-c-cx.md)

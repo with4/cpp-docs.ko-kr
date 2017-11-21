@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- declarators, about declarators
+dev_langs: C++
+helpviewer_keywords: declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4a8f795a23f4e93f02d5d6b5ce98d60555a432d6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d64e375375deac828689f37475d9bfe04b08925b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="overview-of-declarators"></a>선언자 개요
 선언자는 개체 또는 함수 이름을 지정하는 선언의 구성 요소입니다. 선언자는 명명된 개체가 개체, 포인터, 참조 또는 배열인지 여부도 지정합니다.  선언자는 기본 형식을 지정하지는 않지만, 포인터, 참조 및 배열과 같은 파생 형식을 지정하는 기본 형식의 형식 정보를 수정합니다.  함수에 적용되는 선언자는 형식 지정자와 함께 작동하여 개체, 포인터 또는 참조가 될 함수의 반환 형식을 완전히 지정합니다. (에 설명 된 지정자 [선언 및 정의](declarations-and-definitions-cpp.md), 형식 및 저장소 클래스와 같은 속성을 전달 합니다. 및이 섹션에 설명 된 한정자 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md), 선언 자를 수정 합니다.) 다음 그림에서는 `MyFunction`의 전체 선언과 선언의 구성 요소를 보여 줍니다.  
@@ -56,7 +52,7 @@ const char *pch, ch;
   
  **포인터, 참조 및 배열에 대 한 선언 자**  
   
- 이름 앞에 포인터 연산자가 삽입된 개체는 포인터 또는 참조가 됩니다.  ** \* ** 연산자는 이름을 포인터로, 선언는 ** & ** 연산자는 참조로 선언 합니다.  
+ 이름 앞에 포인터 연산자가 삽입된 개체는 포인터 또는 참조가 됩니다.  **\***  연산자는 이름을 포인터로, 선언는  **&**  연산자는 참조로 선언 합니다.  
   
 ```  
 int *i; // declarator is *i  

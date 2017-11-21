@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -49,30 +47,15 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 06afe4f945413ae1f45ff9249dcec0cb87cab987
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 12b5799c9471ffaf8328d4f8aa6a994319e4f30f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 문자열에 서식이 지정된 데이터를 씁니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)의 버전입니다.  
@@ -148,7 +131,7 @@ int swprintf_s(
   
  `sprintf_s` 와 `sprintf` 의 주요 차이점은 `sprintf_s` 는 유효한 서식 문자에 대한 서식 문자열을 검사하고, `sprintf` 는 서식 문자열 또는 버퍼가 `NULL` 포인터인지 여부만 검사한다는 점입니다. 검사에 실패할 경우 [Parameter Validation](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 함수는 -1을 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
   
- `sprintf_s` 와 `sprintf` 의 다른 주요 차이점은 `sprintf_s` 는 출력 버퍼의 크기(문자 수)를 지정하는 길이 매개 변수를 사용한다는 점입니다. 종료 null을 포함하여 서식 있는 텍스트에 대해 버퍼가 너무 작은 경우 `buffer``[0]`에 null 문자를 배치하여 버퍼를 빈 문자열로 설정하면 잘못된 매개 변수 처리기가 호출됩니다. `_snprintf`와 달리 `sprintf_s` 는 버퍼 크기가 0이 아닌 한 버퍼를 null로 종료합니다.  
+ `sprintf_s` 와 `sprintf` 의 다른 주요 차이점은 `sprintf_s` 는 출력 버퍼의 크기(문자 수)를 지정하는 길이 매개 변수를 사용한다는 점입니다. 종료 null을 포함하여 서식 있는 텍스트에 대해 버퍼가 너무 작은 경우 `buffer[0]`에 null 문자를 배치하여 버퍼를 빈 문자열로 설정하면 잘못된 매개 변수 처리기가 호출됩니다. `_snprintf`와 달리 `sprintf_s` 는 버퍼 크기가 0이 아닌 한 버퍼를 null로 종료합니다.  
   
  `swprintf_s` 는 `sprintf_s`의 와이드 문자 버전이며, `swprintf_s` 에 대한 포인터 인수는 와이드 문자 문자열입니다. `swprintf_s` 에서 인코딩 오류의 탐지 방식은 `sprintf_s`와 다를 수 있습니다. `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   

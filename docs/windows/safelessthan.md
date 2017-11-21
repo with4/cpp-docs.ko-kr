@@ -1,32 +1,30 @@
 ---
-title: "SafeLessThan | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeLessThan"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeLessThan 함수"
+title: SafeLessThan | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeLessThan
+dev_langs: C++
+helpviewer_keywords: SafeLessThan function
 ms.assetid: 9d85bc0d-8d94-4d59-9b72-ef3c63a120a0
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 3dbcec30858e5a56521d56c4f87b79f88b2c13d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# SafeLessThan
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Determines whether one number is less than another.  
+# <a name="safelessthan"></a>SafeLessThan
+한 숫자가 다른 노드보다 작은지 여부를 결정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename T, typename U>  
@@ -36,32 +34,32 @@ inline bool SafeLessThan (
 ) throw ();  
 ```  
   
-#### 매개 변수  
- \[in\] `t`  
- The first number.  This must be of type T.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `t`  
+ 첫 번째 숫자입니다. T 형식이어야 합니다.  
   
- \[in\] `u`  
- The second numer.  This must be of type U.  
+ [in] `u`  
+ 두 번째 번호입니다. U 형식이어야 합니다.  
   
-## 반환 값  
- `true` if `t` is less than `u`; otherwise `false`.  
+## <a name="return-value"></a>반환 값  
+ `true`경우 `t` 는 보다 작은 `u`고, 그렇지 않으면 `false`합니다.  
   
-## 설명  
- This method enhances the standard comparison operator because `SafeLessThan` enables you to compare two different types of number.  
+## <a name="remarks"></a>설명  
+ 때문에이 메서드는 표준 비교 연산자를 향상 `SafeLessThan` 을 두 가지 다른 형식의 숫자를 비교할 수 있습니다.  
   
- This method is part of [SafeInt 라이브러리](../windows/safeint-library.md) and is designed for a single comparison operation without creating an instance of the [SafeInt 클래스](../windows/safeint-class.md).  
+ 이 메서드는의 일부 [SafeInt 라이브러리](../windows/safeint-library.md) 용인지 단일 비교 작업의 인스턴스를 만들지 않고 및는 [SafeInt 클래스](../windows/safeint-class.md)합니다.  
   
 > [!NOTE]
->  This method should only be used when a single mathematical operation must be protected.  If there are multiple operations, you should use the `SafeInt` class rather than calling the individual stand\-alone functions.  
+>  이 메서드는 단일 수학 연산을 보호해야 하는 경우에만 사용해야 합니다. 여러 작업 인 경우 사용 해야는 `SafeInt` 개별 독립 실행형 함수를 호출 하는 것이 아니라 클래스입니다.  
   
- For more information about the template types T and U, see [SafeInt 함수](../windows/safeint-functions.md).  
+ T와 U 템플릿 형식에 대 한 자세한 내용은 참조 [SafeInt 함수](../windows/safeint-functions.md)합니다.  
   
-## 요구 사항  
- **Header:** safeint.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** safeint.h  
   
- **Namespace:** Microsoft::Utilities  
+ **Namespace:** microsoft:: utilities  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SafeInt 함수](../windows/safeint-functions.md)   
  [SafeInt 라이브러리](../windows/safeint-library.md)   
  [SafeInt 클래스](../windows/safeint-class.md)   

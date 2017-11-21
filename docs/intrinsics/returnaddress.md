@@ -1,43 +1,42 @@
 ---
-title: "_ReturnAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ReturnAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ReturnAddress 내장 함수"
-  - "ReturnAddress 내장 함수"
+title: _ReturnAddress | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _ReturnAddress
+dev_langs: C++
+helpviewer_keywords:
+- _ReturnAddress intrinsic
+- ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7cc2682aa4c6d4662e188911dab0d0a61baf49ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# _ReturnAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 전용  
- `_ReturnAddress` 내장 명령의 호출자에 게 컨트롤이 반환 된 후에 실행 될 함수 호출에 주소를 제공 합니다.  
+# <a name="returnaddress"></a>_ReturnAddress
+## <a name="microsoft-specific"></a>Microsoft 전용  
+ `_ReturnAddress` 내장 컨트롤 호출자에 게 반환 된 후 실행 되는 함수 호출에서 명령의 주소를 제공 합니다.  
   
- 다음 프로그램 및 디버거에서 단계를 작성 합니다.  프로그램을 단계별로 실행 하는 것에서 반환 되는 주소를 확인 합니다. `_ReturnAddress`.  함수에서 반환 후 즉시 다음 위치 `_ReturnAddress` 되었습니다 사용 되는, 열려 있는 [방법: 디스어셈블리 창 사용](../Topic/How%20to:%20Use%20the%20Disassembly%20Window.md) 다음 명령 실행할 수 있는 주소에서 반환 된 주소와 일치 하는지 확인 합니다. `_ReturnAddress`.  
+ 다음 프로그램 및 단계를 실행 하면 디버거에서 생성 합니다. 프로그램을 통해 실행 함에 따라에서 반환 되는 주소를 기록해 둡니다. `_ReturnAddress`합니다. 다음 함수에서 반환 된 후 즉시 여기서 `_ReturnAddress` 사용 되는, 열기는 [하는 방법: 디스어셈블리 창을 사용 하 여](/visualstudio/debugger/how-to-use-the-disassembly-window) 실행할 다음 명령의 주소 에서반환되는주소와일치하는지확인`_ReturnAddress`.  
   
- 최적화 인라이닝 월 같은 반송 주소에 영향을 줍니다.  예를 들어, 다음 샘플 프로그램을 컴파일하는 경우  [\/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` 를 호출 하는 함수를 인라인 하지 것입니다 `main`.  따라서 호출을 `_ReturnAddress` 에서 `inline_func` 및 `main` 각각 동일한 값이 생성 됩니다.  
+ 인라인 처리 년 5 월 등의 최적화 반송 주소에 영향을 줍니다. 예를 들어 아래 샘플 프로그램은으로 컴파일된 [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` 호출 함수의 경우에 줄이 그어진 됩니다 `main`합니다. 따라서에 대 한 호출 `_ReturnAddress` 에서 `inline_func` 및 `main` 동일한 값이 각각 생성 됩니다.  
   
- 때 `_ReturnAddress` 함께 컴파일되는 프로그램에서 사용 되는  [\/clr](../build/reference/clr-common-language-runtime-compilation.md), 포함 하는 함수는 `_ReturnAddress` 호출을 네이티브 함수로 컴파일할 수.  함수는 컴파일할 때 관리 되는 호출을 포함 하는 함수에 `_ReturnAddress`, `_ReturnAddress` 예상 대로 동작 하지 않을 수 없습니다.  
+ 때 `_ReturnAddress` 로 컴파일된 프로그램에서 사용 되는 [/clr](../build/reference/clr-common-language-runtime-compilation.md)를 포함 하는 함수는 `_ReturnAddress` 네이티브 함수 호출 식이 컴파일됩니다. 관리 되는 포함 하는 함수를 호출 하는 함수를 컴파일할 때 `_ReturnAddress`, `_ReturnAddress` 예상 대로 작동 하지 않을 수 있습니다.  
   
-## 요구 사항  
- **헤더 파일** \<intrin.h\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<. h >  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // compiler_intrinsics__ReturnAddress.cpp  
@@ -68,9 +67,9 @@ int main(void)
 }  
 ```  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
+## <a name="see-also"></a>참고 항목  
+ [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)
+ [키워드](../cpp/keywords-cpp.md)

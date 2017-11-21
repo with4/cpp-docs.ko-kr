@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - throw keyword [C++], throw() vs. throw(...)
 - throw keyword [C++], exception specifications
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6577cf489ee1c9d64689938bb8a12660cec96893
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>예외 사양 (throw, noexcept) (c + +)
 예외 사양은 함수에 의해 전파 될 수 있는 예외 형식에 대해 프로그래머의 의도 표시 하는 c + + 언어 기능. 하는 함수 되거나 예외를 사용 하 여 종료 되지 않을 지정할 수는 *예외 사양이*합니다. 컴파일러는 함수에 대 한 호출을 최적화 하기 위해이 정보를 사용 하 고 예외가 발생된 하는 경우 프로그램을 종료 하려면 함수를 이스케이프 합니다. 예외 사양는 다음과 같은 두 종류가 있습니다. *noexcept 사양* 새로운 C + + 11 기능입니다. 함수를 이스케이프 될 수 있는 잠재적인 예외 집합이 비어 있는지 여부를 지정 합니다. *동적 예외 사양은*, 또는 `throw(optional_type_list)` C + + 11에서 사용 되지 않는 사양과 Visual Studio에서 부분적 으로만 지원 됩니다. 이 예외 사양은 함수에서 예외를 throw 할 수 하는 방법에 대 한 요약 정보를 제공 하는데 실제로 문제가 있는 것으로 발견 된 합니다. 어느 정도 유용한 것으로 입증 된 하나의 동적 예외 사양을는 무조건 `throw()` 사양입니다. 예를 들어 함수 선언 합니다.  

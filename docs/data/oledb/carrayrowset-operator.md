@@ -1,57 +1,57 @@
 ---
-title: "CArrayRowset::operator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CArrayRowset::operator[]"
-  - "CArrayRowset.operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "연산자 [], 배열"
-  - "[] 연산자"
-  - "operator[], 배열"
+title: 'Carrayrowset:: Operator | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CArrayRowset::operator[]
+- CArrayRowset.operator[]
+dev_langs: C++
+helpviewer_keywords:
+- operator [], arrays
+- '[] operator'
+- operator[], arrays
 ms.assetid: 3bb8c310-cc1e-46e8-9711-9b565488acaa
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 14d0c07f8d1b8ff5cef19620fc00d156e251bf80
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CArrayRowset::operator
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Provides array\-like syntax for accessing a row in the rowset.  
+# <a name="carrayrowsetoperator"></a>CArrayRowset::operator
+행 집합의 행 액세스에 대 한 배열 유사 구문을 제공 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
       TAccessor  
-      & operator[](int nRow);  
+      & operator[](int nrow);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `TAccessor`  
- A templated parameter that specifies the type of accessor stored in the rowset.  
+ 행 집합에 저장 하는 접근자의 형식을 지정 하는 템플릿 매개 변수입니다.  
   
  `nRow`  
- \[in\] Number of the row \(array element\) you want to access.  
+ [in] 액세스 하려는 행 (배열 요소)의 수입니다.  
   
-## 반환 값  
- The contents of the requested row.  
+## <a name="return-value"></a>반환 값  
+ 요청한 행의 내용입니다.  
   
-## 설명  
- If `nRow` exceeds the number of rows in the rowset, an exception is thrown.  
+## <a name="remarks"></a>설명  
+ 경우 `nRow` 행 집합의 행 수를 초과, 예외가 throw 됩니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CArrayRowset 클래스](../../data/oledb/carrayrowset-class.md)

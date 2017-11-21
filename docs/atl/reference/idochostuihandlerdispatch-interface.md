@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IDocHostUIHandlerDispatch
 - atlbase/ATL::IDocHostUIHandlerDispatch
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDocHostUIHandlerDispatch interface
+dev_langs: C++
+helpviewer_keywords: IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 8232df949d3bdcbaab16af1802d7275a9a8642f3
-ms.openlocfilehash: a8765f5191ea2101dc20985e8112e3e06ccd6da0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: da373672c51dd47b67ee4457bd0d21f82a09c540
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch 인터페이스
 Microsoft HTML 구문 분석 및 렌더링 엔진에 대 한 인터페이스입니다.  
   
 > [!IMPORTANT]
->  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -78,7 +60,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 |[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|호스트가 로드할 URL을 수정할 수 있도록 MSHTML에 의해 호출 됩니다.|  
 |[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|명령 상태가 변경되었음을 호스트에 알립니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  호스트 메뉴, 도구 모음 및이 인터페이스를 구현 하 여 Microsoft HTML 구문 분석 및 렌더링 엔진 (MSHTML)에서 사용 하는 상황에 맞는 메뉴를 바꿀 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -91,7 +73,6 @@ interface IDocHostUIHandlerDispatch : IDispatch
   
 ## <a name="see-also"></a>참고 항목  
  [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)
-
 
 
 

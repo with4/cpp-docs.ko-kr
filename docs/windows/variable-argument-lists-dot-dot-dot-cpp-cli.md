@@ -1,39 +1,38 @@
 ---
-title: "Variable Argument Lists (...) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variable argument lists"
-  - "parameter arrays"
+title: "가변 인수 목록 (...) (C + + /CLI CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- variable argument lists
+- parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: af3742ae4c8f22dd2b5cef8189d02e8f19f7c9fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# Variable Argument Lists (...) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 예제는 Visual C\+\+에서 `...` 구문을 사용하여 여러 인수를 갖는 함수를 구현하는 방법을 보여 줍니다.  
+# <a name="variable-argument-lists--ccli"></a>가변 인수 목록(...)(C++/CLI)
+사용 하는 방법을 보여 주는이 예제는 `...` Visual c + + 가변 개수의 인수는 함수를 구현 하는 구문입니다.  
   
 > [!NOTE]
->  이 항목은 C\+\+\/CLI에 적용됩니다.  ISO Standard C\+\+에서 `...`를 사용하는 방법은 [Ellipses 및 Variadic 템플릿](../cpp/ellipses-and-variadic-templates.md) 및 [줄임표 및 기본 인수](../misc/ellipses-and-default-arguments.md)를 참조하십시오.  
+>  이 항목 관련 C + + /cli CLI 합니다. 사용 하는 방법에 대 한 내용은 `...` ISO 표준 c + +에서 참조 [Ellipses 및 Variadic 템플릿](../cpp/ellipses-and-variadic-templates.md) 줄임표 및 기본 인수에 및 [후 위 식](../cpp/postfix-expressions.md)합니다.  
   
- `...`를 사용하는 매개 변수는 매개 변수 목록에서 마지막 매개 변수여야 합니다.  
+ 매개 변수를 사용 하 여 `...` 매개 변수 목록의 마지막 매개 변수 여야 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // mcppv2_paramarray.cpp  
@@ -54,14 +53,14 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>출력  
   
 ```  
 3  
 ```  
   
-## 코드 예제  
- 다음 예제는 C\#에서 다양한 수의 인수를 갖는 Visual C\+\+를 호출하는 방법을 보여 줍니다.  
+## <a name="code-example"></a>코드 예제  
+ 다음 예제에서는 C#에서 가변 개수의 인수를 사용 하는 Visual c + + 함수를 호출 하는 방법을 보여 줍니다.  
   
 ```  
 // mcppv2_paramarray2.cpp  
@@ -74,9 +73,9 @@ public:
 };  
 ```  
   
- `f` 함수는 다양한 수의 인수를 사용할 수 있는 함수처럼 C\# 또는 Visual Basic에서 호출할 수 있습니다.  
+ 함수 `f` 에서 호출할 수 있는 C# 또는 Visual Basic의 경우 예를 들어 가변 개수의 인수를 사용할 수 있는 함수를 것 처럼 합니다.  
   
- C\#에서 `ParamArray` 매개 변수로 전달되는 인수는 인수의 변수 번호로 호출할 수 있습니다.  다음은 C\#의 코드 샘플입니다.  
+ C#에서에 전달 되는 인수는 `ParamArray` 가변 개수의 인수에서 매개 변수를 호출할 수 있습니다. 다음 코드 예제는 C#입니다.  
   
 ```  
 // mcppv2_paramarray3.cs  
@@ -93,7 +92,7 @@ public class X {
 }  
 ```  
   
- Visual C\+\+에서 `f`에 대한 호출은 초기화된 배열 또는 가변 길이 배열을 전달할 수 있습니다.  
+ 에 대 한 호출 `f` Visual c + +에서는 초기화 된 배열 또는 가변 길이 배열을 전달할 수 있습니다.  
   
 ```  
 // mcpp_paramarray4.cpp  
@@ -111,5 +110,5 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [배열](../windows/arrays-cpp-component-extensions.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- malloc
+apiname: malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,21 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- malloc
-dev_langs:
-- C++
+f1_keywords: malloc
+dev_langs: C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72dd949aa8d894ba49f53a6440de20beea070e2b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="malloc"></a>malloc
 메모리 블록을 할당합니다.  
@@ -72,7 +53,7 @@ void *malloc(
  할당할 바이트입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `malloc`는 할당된 공간에 대한 void 포인터를 반환하거나 사용 가능한 메모리가 부족한 경우 `NULL`을 반환합니다. `void`가 아닌 형식에 대한 포인터를 반환하려면 반환 값에 형식 캐스팅을 사용하세요. 반환 값이 가리키는 저장소 공간은 맞춤 요구 사항이 기본 맞춤보다 작거나 같은 모든 형식의 개체 저장소에 적절하게 맞춰지도록 보장됩니다. Visual C++에서 기본 맞춤은 `double`에 필요한 맞춤이거나 8바이트입니다. 64비트 플랫폼을 대상으로 하는 코드에서는 16바이트입니다. [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)를 사용하여 맞춤 요구 사항이 더 큰 개체에 대해 저장소를 할당합니다. 예를 들어 SSE 형식 [__m128](../../cpp/m128.md) 및 `__m256`과 `__declspec(align(``n``))`를 사용하여 선언된 형식(여기서 `n`은 8보다 큼)이 있습니다. `size`가 0이면 `malloc`는 힙에서 길이가 0인 항목을 할당하고 해당 항목에 대한 유효한 포인터를 반환합니다. 요청된 메모리의 양이 작은 경우에도 `malloc`의 반환 값을 항상 확인하세요.  
+ `malloc`는 할당된 공간에 대한 void 포인터를 반환하거나 사용 가능한 메모리가 부족한 경우 `NULL`을 반환합니다. `void`가 아닌 형식에 대한 포인터를 반환하려면 반환 값에 형식 캐스팅을 사용하세요. 반환 값이 가리키는 저장소 공간은 맞춤 요구 사항이 기본 맞춤보다 작거나 같은 모든 형식의 개체 저장소에 적절하게 맞춰지도록 보장됩니다. Visual C++에서 기본 맞춤은 `double`에 필요한 맞춤이거나 8바이트입니다. 64비트 플랫폼을 대상으로 하는 코드에서는 16바이트입니다. [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)를 사용하여 맞춤 요구 사항이 더 큰 개체에 대해 저장소를 할당합니다. 예를 들어 SSE 형식 [__m128](../../cpp/m128.md) 및 `__m256`과 `__declspec(align( n ))`를 사용하여 선언된 형식(여기서 `n`은 8보다 큼)이 있습니다. `size`가 0이면 `malloc`는 힙에서 길이가 0인 항목을 할당하고 해당 항목에 대한 유효한 포인터를 반환합니다. 요청된 메모리의 양이 작은 경우에도 `malloc`의 반환 값을 항상 확인하세요.  
   
 ## <a name="remarks"></a>설명  
  `malloc` 함수는 `size`바이트 이상의 메모리 블록을 할당합니다. 이 블록은 맞춤 및 유지 관리 정보에 필요한 공간이기 때문에 `size`보다 클 수 있습니다.  
@@ -154,4 +135,3 @@ Memory freed
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)
-

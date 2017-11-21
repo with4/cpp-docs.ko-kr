@@ -1,38 +1,37 @@
 ---
-title: "방법: 대리자 정의 및 사용(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "대리자"
+title: "방법: 대리자 정의 및 사용 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 22483b1b1e90c406d1a2f6bd1731f15008b58daa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 대리자 정의 및 사용(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 문서는 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] 에서 대리자가 사용되고 정의되는 방법을 보여줍니다.  
+# <a name="how-to-define-and-use-delegates-ccli"></a>방법: 대리자 정의 및 사용(C++/CLI)
+이 문서에서는 C + 대리자 정의 및 사용 하는 방법을 보여 줍니다. + CLI 합니다.  
   
- .NET Framework 는 대리자의 수를 제공하지만, 때로는 새로운 대리자들을 정의해야 할 수 도 있습니다.  
+ .NET Framework 대리자의 수를 제공 하지만 때로는 해야할 새 대리자를 정의 합니다.  
   
- 다음 예제 코드에서는 `MyCallback` 라는 대리자를 정의합니다.  이벤트 처리 코드\- 이 함수는 새로운 대리자가 발생될때 호출됩니다\- 는 `void` 의 형식을 반환해야하고 <xref:System.String> 참조를 받습니다.  
+ 다음 코드 예제에서는 명명 된 대리자를 정의 `MyCallback`합니다. 이벤트 처리 코드-이 새 대리자가 실행 될 때 호출 되는 함수-의 반환 형식이 있어야 합니다. `void` 알아본는 <xref:System.String> 참조 합니다.  
   
- Main 함수는 `MyCallback` 대리자를 인스턴스로 하는 `SomeClass` 에 의해 정의되는 정적인 메서드를 사용합니다.  대리자 개체로 "단일" 문자열을 보내는 것을 설명하는 것처럼, 대리자는 이 함수 호출의 대체 메서드가 됩니다.  그 다음, `MyCallback` 의 추가 인스턴스는 함께 연결되고 대리자 개체를 한 번 호출함으로써 실행됩니다.  
+ Main 함수에 정의 된 정적 메서드를 사용 하 여 `SomeClass` 를 인스턴스화하는 `MyCallback` 위임 합니다. 그러면 대리자 대리자 개체를 문자열을 "단일" 전송 하 여 볼 수 있듯이이 함수를 호출 하는 다른 방법을 됩니다. 다음, 추가 인스턴스 `MyCallback` 함께 연결 되어 있고 다음 대리자 개체를 한 번 호출 하 여 실행 합니다.  
   
 ```  
-// use_delegate.cpp  
+  
+      // use_delegate.cpp  
 // compile with: /clr  
 using namespace System;  
   
@@ -83,13 +82,17 @@ int main( )
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **정적 SomeClass::Func \- single**  
-**정적 SomeClass::Func \- chained**  
-**정적 SomeClass::Func \- chained**  
-**OtherClass::Method \- chained, num \= 99**  
-**OtherClass::Method \- chained, num \= 100** 다음 코드 예제는 값 클래스의 멤버를 사용하여 대리자를 연결하는 방법을 보여줍니다.  
+```Output  
+static SomeClass::Func - single  
+static SomeClass::Func - chained  
+static SomeClass::Func - chained  
+OtherClass::Method - chained, num = 99  
+OtherClass::Method - chained, num = 100  
+```  
+  
+ 다음 코드 예제에는 값 클래스의 멤버와 함께 대리자를 연결 하는 방법을 보여 줍니다.  
   
 ```  
 // mcppv2_del_mem_value_class.cpp  
@@ -114,12 +117,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **테스트**  
-**테스트**   
-## 대리자를 구성하는 방법  
- 구성된 대리자로부터 구성요소 대리자를 제거하기 위해 "`-`" 연산자를 사용할 수 있습니다.  
+```Output  
+test  
+test  
+```  
+  
+## <a name="how-to-compose-delegates"></a>대리자를 구성 하는 방법  
+ 사용할 수는 "`-`" 구성 요소 대리자 구성 된 대리자에서 제거 하는 연산자입니다.  
   
 ```  
 // mcppv2_compose_delegates.cpp  
@@ -157,21 +163,24 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **대리자 a 호출:**  
-**Hello, A\!**  
-**대리자 b 호출:**  
- **Goodbye, B\!**  
-**대리자c 호출 :**  
-**Hello, C\!**  
- **Goodbye, C\!**  
-**대리자d 호출:**  
- **Goodbye, D\!**   
-## 함수포인터를 제외한 원래 함수에 대한 대리자^를 전달합니다.  
- 관리되는 구성요소로부터 원래 함수가 있는 함수 포인터 매개변수를 사용하여 원래 함수를 호출 할 수 있고, 그다음 관리되는 구성요소의 대리자의 멤버 함수를 호출할 수 있습니다.  
+```Output  
+Invoking delegate a:  
+Hello, A!  
+Invoking delegate b:  
+  Goodbye, B!  
+Invoking delegate c:  
+Hello, C!  
+  Goodbye, C!  
+Invoking delegate d:  
+  Goodbye, D!  
+```  
   
- 이 샘플은 원래 함수를 내보내는 .dll을 만듭니다.  
+## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>대리자를 전달 ^ 함수 포인터를 필요로 하는 네이티브 함수에  
+ 관리 되는 구성 요소에서 호출할 수 있습니다 함수를 사용 하는 네이티브 함수 포인터 매개 변수 있는 네이티브 함수 그런 후 호출할 수는 관리 되는 구성 요소의 대리자의 멤버 함수입니다.  
+  
+ 이 샘플은 네이티브 함수를 내보내는.dll을 만듭니다.  
   
 ```  
 // delegate_to_native_function.cpp  
@@ -185,7 +194,7 @@ extern "C" {
 }  
 ```  
   
- 다음 샘플은 .dll을 사용하고 팜수 포인터를 제외한 원래 함수의 대리자 핸들을 전달합니다.  
+ 다음 샘플.dll을 사용 하며 함수 포인터를 필요로 하는 네이티브 함수에 대리자 핸들을 전달 합니다.  
   
 ```  
 // delegate_to_native_function_2.cpp  
@@ -211,11 +220,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **관리되는 함수를 호출합니다.**   
-## 관리되지 않는 함수를 사용하여 대리자를 연결하는 것.  
- 원래 함수를 사용하여 대리자를 연결하는 것은, 관리되는 형식에서 원래 함수를 래핑해야하고 `PInvoke` 통해 호출되는 함수를 선언해야합니다.  
+```Output  
+Call to Managed Function  
+```  
+  
+## <a name="to-associate-delegates-with-unmanaged-functions"></a>관리 되지 않는 함수와 함께 대리자를 연결 하려면  
+ 대리자를 네이티브 함수를 연결 하려면 네이티브 함수를에서 래핑하는 관리 되는 형식 및 함수를 통해 호출할 수를 선언 해야 `PInvoke`합니다.  
   
 ```  
 // mcppv2_del_to_umnangd_func.cpp  
@@ -251,23 +263,26 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **hello**   
-## 바인딩 되지 않은 대리자들을 사용하는 것.  
- 대리자가 호출될 때 호출하길 원하는 함수 형식의 인스턴스를 전달하기 위해 바인딩되지 않은 대리자를 사용할 수 있습니다.  
+```Output  
+hello  
+```  
   
- 만일 컬렉션\-[for each, in](../dotnet/for-each-in.md) 을 사용하는 키워드\-에서 개체를 통해 반복적으로 하길 원한다면, 바인딩되지 않은 대리자는 특히 유용하고 각 인스턴스에서 멤버 함수를 호출합니다.  
+## <a name="to-use-unbound-delegates"></a>바인딩되지 않은 대리자를 사용 하려면  
+ 함수를 호출 하는 대리자를 호출할 때 형식의 인스턴스를 전달 하려면 바인딩되지 않은 대리자를 사용할 수 있습니다.  
   
- 선언하고 인스턴스화하며 바인딩된 대리자와 그렇지 않은 대리자를 사용하는 방법.  
+ 바인딩되지 않은 대리자는 컬렉션의 개체를 반복 하려는 경우에 특히 유용-를 사용 하 여 [각 항목에 대해에서](../dotnet/for-each-in.md) 키워드-각 인스턴스에서 멤버 함수를 호출 합니다.  
   
-|작업|바인딩된 대리자|바인딩되지 않은 대리자|  
-|--------|--------------|------------------|  
-|Declare|대리자 시그니처는 대리자를 통해 호출을 원하는 함수의 시그니처와 일치해야합니다.|대리자 시그니처의 첫 번째 매개 변수는 호출하기 원하는 개체에 대한 `this` 의 형식입니다.<br /><br /> 첫 번째 매개 변수이후, 대리자 시그니처는 대리자를 통해 호출하려는 함수의 시그니처와 일치 해야합니다.|  
-|Instantiate|바인딩된 대리자를 인스턴스화 할때, 인스턴스 함수를 지정하거나 전역 또는 정적 멤버함수를 지정할 수 있습니다.<br /><br /> 인스턴스 함수를 지정하기 위해, 첫 번째 매개변수는 호출하길 원하는 멤버 함수에 대한 형식의 인스턴스이고, 두 번째 매개변수는 호출하길 원하는 함수의 주소입니다.<br /><br /> 만일 전역 또는 정적 멤버 함수를 호출하려면, 정적 멤버 함수의 이름 또는 전역 함수의 이름을 전달합니다.|바인딩되지 않은 대리자를 인스턴스화할 때, 호출 하려는 함수의 주소를 전달합니다.|  
-|Call|바인딩된 대리자를 호출할 때, 대리자 시그니처를 필요로하는 매개변수를 전달합니다.|동일한 바인딩된 매개변수지만, 첫 번째 매개변수는 호출하길 원하는 함수를 포함하는 개체의 인스턴스여야 한다는 부분을 기억해야 합니다.|  
+ 인스턴스화를 선언 하는 방법은 및 호출 바인딩되며 대리자에 바인딩되지 않은:  
   
- 이 샘플은 선언하는 것과 인스턴스화하는 것, 바인딩되지 않은 대리자들을 호출하는 방법을 설명합니다:  
+|작업|대리자 연결|바인딩되지 않은 대리자|  
+|------------|---------------------|-----------------------|  
+|선언|대리자 서명 대리자를 통해 호출 하려는 함수의 서명이 일치 해야 합니다.|대리자 서명의 첫 번째 매개 변수는 가장 유형의 `this` 호출 하려는 개체에 대 한 합니다.<br /><br /> 후 첫 번째 매개 변수는 대리자 서명 대리자를 통해 호출 하려는 함수의 서명이 일치 해야 합니다.|  
+|인스턴스화합니다|바운드 대리자를 인스턴스화하는 인스턴스 함수 또는 전역 또는 정적 멤버 함수를 지정할 수 있습니다.<br /><br /> 인스턴스 함수를 지정 하려면 첫 번째 매개 변수 형식의 멤버 함수를 호출할 인스턴스 이며 두 번째 매개 변수를 호출 하려는 함수의 주소입니다.<br /><br /> 전역 또는 정적 멤버 함수를 호출 하려는 경우 전역 함수 이름 또는 정적 멤버 함수의 이름을 전달 됩니다.|바인딩되지 않은 대리자를 인스턴스화하면 호출할 함수의 주소로 전달 됩니다.|  
+|호출|바운드 대리자를 호출할 때 대리자 서명에 따라 필요한 매개 변수에 전달 됩니다.|경계로 동일 대리자 설명 하지만 첫 번째 매개 변수를 호출 하려면 함수를 포함 하는 개체의 인스턴스를 이어야 합니다.|  
+  
+ 이 샘플에는 선언, 인스턴스화 및 바인딩되지 않은 대리자를 호출 하는 방법을 보여 줍니다.  
   
 ```  
 // unbound_delegates.cpp  
@@ -330,18 +345,22 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **2**  
-**3**  
-**2**  
-**3**  
-**2**  
-**7**  
-**8**  
-**7**  
-**8**  
-**7** 다음 예제는 바인딩되지 않은 대리자를 사용 하는 방법과 각 인스턴스에서 멤버 함수를 호출하고 컬렉션에서 개체를 통해 반복하기 위해 [for each, in](../dotnet/for-each-in.md) 를 사용하는 방법을 보여줍니다.  
+```Output  
+2  
+3  
+2  
+3  
+2  
+7  
+8  
+7  
+8  
+7  
+```  
+  
+ 다음 샘플에서는 바인딩되지 않은 대리자를 사용 하는 방법을 보여 줍니다. 및 [각 항목에 대해에서](../dotnet/for-each-in.md) 키워드를 컬렉션의 개체를 반복 하 고 각 인스턴스에서 멤버 함수를 호출 합니다.  
   
 ```  
 // unbound_delegates_2.cpp  
@@ -373,7 +392,7 @@ int main() {
 }  
 ```  
   
- 이 샘플은 속성의 접근자 함수들에 대해 바인딩되지 않은 대리자를 만듭니다.  
+ 이 샘플은 속성의 접근자 함수에 바인딩되지 않은 대리자를 만듭니다.  
   
 ```  
 // unbound_delegates_3.cpp  
@@ -402,9 +421,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **11** 다음 샘플에서는 멀티캐스트 대리자를 호출하는 방법을 보여는데, 하나의 인스턴스를 바인딩한 장소에서 인스턴스의 바인딩을 해제합니다.  
+```Output  
+11  
+```  
+  
+ 다음 샘플에 있는 하나의 인스턴스만 바인딩되어 있고 하나의 인스턴스만 바인딩되어 있지 않습니다. 멀티 캐스트 대리자를 호출 하는 방법을 보여 줍니다.  
   
 ```  
 // unbound_delegates_4.cpp  
@@ -437,10 +460,14 @@ int main() {
 };  
 ```  
   
- **Output**  
+ **출력**  
   
-  **in f\(R ^ r\)**  
-**in f\(\)** 다음 예제는 바인딩되지 않은 제네릭 대리자를 호출하고 만드는 방법을 보여줍니다.  
+```Output  
+in f(R ^ r)  
+in f()  
+```  
+  
+ 다음 샘플에는 만들어 바인딩되지 않은 제네릭 대리자를 호출 하는 방법을 보여 줍니다.  
   
 ```  
 // unbound_delegates_5.cpp  
@@ -477,9 +504,12 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **12**  
-**14**   
-## 참고 항목  
- [delegate](../windows/delegate-cpp-component-extensions.md)
+```Output  
+12  
+14  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [delegate(C++ 구성 요소 확장)](../windows/delegate-cpp-component-extensions.md)

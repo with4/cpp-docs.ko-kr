@@ -1,32 +1,30 @@
 ---
-title: "FactoryCache::cookie 데이터 멤버 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::FactoryCache::cookie"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cookie 데이터 멤버"
+title: "Factorycache:: Cookie 데이터 멤버 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::FactoryCache::cookie
+dev_langs: C++
+helpviewer_keywords: cookie data member
 ms.assetid: b1bc79af-a896-4e3b-8afa-64733022eddf
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c3cca7b708f7fc2a0fdaa5b975396958b967210a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# FactoryCache::cookie 데이터 멤버
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
+# <a name="factorycachecookie-data-member"></a>FactoryCache::cookie 데이터 멤버
+Windows 런타임 c + + 템플릿 라이브러리 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 union {   
@@ -35,14 +33,14 @@ union {
 } cookie;  
 ```  
   
-## 설명  
- 등록을 식별하는 값이 포함된 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 또는 COM 클래스 개체를 나중에 개체의 등록을 취소하는 데 사용합니다.  
+## <a name="remarks"></a>설명  
+ 등록된 된 Windows 런타임 또는 COM 클래스 개체를 식별 하 고 나중에 개체를 등록 취소를 사용 하는 값을 포함 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** module.h  
   
- **네임스페이스:** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FactoryCache 구조체](../windows/factorycache-structure.md)   
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

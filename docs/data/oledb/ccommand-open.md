@@ -1,35 +1,34 @@
 ---
-title: "CCommand::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CCommand.Open"
-  - "ATL::CCommand::Open"
-  - "CCommand.Open"
-  - "CCommand::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open 메서드"
+title: 'Ccommand:: Open | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CCommand.Open
+- ATL::CCommand::Open
+- CCommand.Open
+- CCommand::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 4c9b8f31-faf3-452d-9a29-3d3e5f54d6f8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 13945181ac92ec35e0b252f31382202414333bc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Executes and optionally binds the command.  
+# <a name="ccommandopen"></a>CCommand::Open
+실행 하 고 필요에 따라 명령을 바인딩합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -68,56 +67,56 @@ HRESULT Open(
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `session`  
- \[in\] The session in which to execute the command.  
+ [in] 세션에 명령을 실행 합니다.  
   
  `wszCommand`  
- \[in\] The command to execute, passed as a Unicode string.  Can be **NULL** when using `CAccessor`, in which case the command will be retrieved from the value passed to the [DEFINE\_COMMAND](../../data/oledb/define-command.md) macro.  See [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) in the *OLE DB Programmer's Reference* for details.  
+ [in] 명령이 실행을 유니코드 문자열로 전달 합니다. 수 **NULL** 사용 하는 경우 `CAccessor`, 전달 되는 값에서 명령을 검색할 수는 경우는 [DEFINE_COMMAND](../../data/oledb/define-command.md) 매크로입니다. 참조 [icommand:: Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) 에 *OLE DB Programmer's Reference* 대 한 자세한 내용은 합니다.  
   
  `szCommand`  
- \[in\] Same as `wszCommand` except that this parameter takes an ANSI command string.  The fourth form of this method can take a NULL value.  See "Remarks" later in this topic for details.  
+ [in] 와 동일 `wszCommand` 제외 하 고이 매개 변수에 ANSI 명령 문자열을 사용 합니다. 이 메서드의 네 번째 형식에 NULL 값을 걸릴 수 있습니다. 자세한 내용은이 항목의 뒷부분에 나오는 "주의"를 참조 하십시오.  
   
  *pPropSet*  
- \[in\] A pointer to an array of [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) structures containing properties and values to be set.  See [Property Sets and Property Groups](https://msdn.microsoft.com/en-us/library/ms713696.aspx) in the *OLE DB Programmer's Reference* in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] 배열에 대 한 포인터 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 속성 및 값을 설정할 수를 포함 하는 구조체입니다. 참조 [속성 집합 및 속성 그룹](https://msdn.microsoft.com/en-us/library/ms713696.aspx) 에 *OLE DB Programmer's Reference* in the Windows SDK입니다.  
   
  `pRowsAffected`  
- \[in\/out\] A pointer to memory where the count of rows affected by a command is returned.  If *\*pRowsAffected* is **NULL**, no row count is returned.  Otherwise, **Open** sets \*`pRowsAffected` according to the following conditions:  
+ [/ 출력] 명령에 의해 영향을 받는 행 수가 반환 되는 메모리에 대 한 포인터입니다. 경우  *\*pRowsAffected* 은 **NULL**, 없습니다 행 수가 반환 됩니다. 그렇지 않으면 **열려** 설정 *`pRowsAffected` 다음 조건에 따라:  
   
-|상태|결과|  
-|--------|--------|  
-|The **cParamSets** element of `pParams` is greater than 1|\*`pRowsAffected` represents the total number of rows affected by all of the parameter sets specified in the execution.|  
-|The number of affected rows is not available|\*`pRowsAffected` is set to –1.|  
-|The command does not update, delete, or insert rows|\*`pRowsAffected` is undefined.|  
+|조건|결과|  
+|--------|----------|  
+|**cParamSets** 요소의 `pParams` 1 보다 큰 경우|*`pRowsAffected`실행에 지정 된 매개 변수 집합의 모든 영향을 받는 행의 총 수를 나타냅니다.|  
+|영향을 받는 행 수를 사용할 수 없는 경우|*`pRowsAffected`-1로 설정 됩니다.|  
+|업데이트 되지 않습니다, 삭제 또는 행 삽입|*`pRowsAffected`정의 되지 않습니다.|  
   
  `guidCommand`  
- \[in\] A GUID that specifies the syntax and general rules for the provider to use in parsing the command text.  See [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) and [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx) in the *OLE DB Programmer's Reference* for details.  
+ [in] 명령 텍스트를 구문 분석의 구문 및 사용 하도록 공급자에 대 한 일반 규칙을 지정 하는 GUID입니다. 참조 [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) 및 [icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx) 에 *OLE DB Programmer's Reference* 대 한 자세한 내용은 합니다.  
   
  `bBind`  
- \[in\] Specifies whether to bind the command automatically after being executed.  The default is **true**, which causes the command to be bound automatically.  Setting `bBind` to **false** prevents the automatic binding of the command so that you can bind manually. \(Manual binding is of particular interest to OLAP users.\)  
+ [in] 실행 되 고 후 명령을 자동으로 바인딩할 것인지 지정 합니다. 기본값은 **true**, 때문에 명령을 자동으로 바인딩할 수 있습니다. 설정 `bBind` 를 **false** 수동으로 바인딩할 수 있도록 명령 자동 바인딩 방지 합니다. (수동 바인딩은 OLAP 사용자에 게 특히 중요 합니다.)  
   
  `ulPropSets`  
- \[in\] The number of [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) structures passed in the *pPropSet* argument.  
+ [in] 수가 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 구조체에 전달 된 *pPropSet* 인수입니다.  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 설명  
- The first three forms of **Open** take a session, create a command, and execute the command, binding any parameters as necessary.  
+## <a name="remarks"></a>설명  
+ 에 처음 세 가지 **열려** 세션 걸릴 명령을 만들고 필요에 따라 매개 변수 바인딩 명령을 실행 합니다.  
   
- The first form of **Open** takes a Unicode command string and has no default value.  
+ 첫 번째 형태 **열려** 유니코드 명령 문자열을 사용 하며 기본값은 없습니다.  
   
- The second form of **Open** takes an ANSI command string and no default value \(provided for backward compatibility with existing ANSI applications\).  
+ 두 번째 형식의 **열려** ANSI 명령 문자열을 취하고 (기존 ANSI 응용 프로그램과 함께 이전 버전과 호환성을 위해 제공) 기본값이 없습니다.  
   
- The third form of **Open** allows the command string to be NULL, because of type `int` with a default value of NULL.  It is provided for calling `Open(session, NULL);` or `Open(session);` because NULL is of type `int`.  This version requires and asserts that the `int` parameter be NULL.  
+ 세 번째 형태의 **열려** 명령 문자열 형식 때문에 NULL을 허용 `int` 이며 기본값은 NULL입니다. 호출을 위해 제공 됩니다 `Open(session, NULL);` 또는 `Open(session);` NULL 형식 이므로 `int`합니다. 이 버전을 차지 하며를 어설션하는 `int` 매개 변수가 NULL 이어야 합니다.  
   
- Use the fourth form of **Open** when you have already created a command and you want to perform a single [Prepare](../../data/oledb/ccommand-prepare.md) and multiple executions.  
+ 네 번째 양식을 사용 하 여 **열려** 명령을 이미 만든 시점과 단일 수행 하려는 [준비](../../data/oledb/ccommand-prepare.md) 및 실행이 여러 개 있습니다.  
   
 > [!NOTE]
->  **Open** calls **Execute**, which in turn calls `GetNextResult`.  
+>  **열기** 호출 **Execute**를 호출 하 `GetNextResult`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CCommand 클래스](../../data/oledb/ccommand-class.md)

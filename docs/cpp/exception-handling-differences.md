@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 191b59d21f56ee810a981082806a6775bc6ea40d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-handling-differences"></a>예외 처리 차이점
 구조적 예외 처리와 C++ 예외 처리의 가장 큰 차이점은 C 구조적 예외 처리 모델은 한 형식(`unsigned int`)의 예외만 처리하는 반면에 C++ 예외 처리 모델은 여러 형식을 다룬다는 점입니다. 즉, C 예외는 부호 없는 정수 값으로 식별되지만 C++ 예외는 데이터 형식으로 식별됩니다. C에서 예외가 발생하는 경우 각각의 가능한 처리기는 C 예외 컨텍스트를 조사하고 예외를 허용할지, 다른 처리기로 전달할지 아니면 무시할지를 결정하는 필터를 실행합니다. C++에서 예외가 발생하는 경우 예외는 어떤 형식이든 가능합니다.  
@@ -71,7 +68,7 @@ Caught a C exception.
 ```  
   
 ##  <a name="_core_c_exception_wrapper_class"></a>C 예외 래퍼 클래스  
- 위와 같은 간단한 예제에서는 C 예외는 줄임표에 의해서만 낼 수 있습니다 (**... **) **catch** 처리기입니다. 예외의 형식이나 특성에 대한 정보가 처리기로 전달되지 않습니다. 이 메서드가 작동하는 동안 각 C 예외가 특정 클래스에 연결되도록 두 가지 예외 처리 모델 간에 변환을 정의해야 하는 경우가 있습니다. 이렇게 하려면 C 예외에 특정 클래스 형식을 특성으로 지정하기 위해 사용하거나 파생시킬 수 있는 C 예외 "래퍼" 클래스를 정의할 수 있습니다. 이렇게 함으로써 각 C 예외가 c + +에서 처리 수 **catch** 처리기 보다 개별적으로 앞의 예제입니다.  
+ 위와 같은 간단한 예제에서는 C 예외는 줄임표에 의해서만 낼 수 있습니다 (**...** ) **catch** 처리기입니다. 예외의 형식이나 특성에 대한 정보가 처리기로 전달되지 않습니다. 이 메서드가 작동하는 동안 각 C 예외가 특정 클래스에 연결되도록 두 가지 예외 처리 모델 간에 변환을 정의해야 하는 경우가 있습니다. 이렇게 하려면 C 예외에 특정 클래스 형식을 특성으로 지정하기 위해 사용하거나 파생시킬 수 있는 C 예외 "래퍼" 클래스를 정의할 수 있습니다. 이렇게 함으로써 각 C 예외가 c + +에서 처리 수 **catch** 처리기 보다 개별적으로 앞의 예제입니다.  
   
  래퍼 클래스에는 예외 값을 결정하는 멤버 함수로 구성되며 C 예외 모델에서 제공하는 확장된 예외 컨텍스트 정보에 액세스하는 인터페이스가 있을 수 있습니다. 기본 생성자와 `unsigned int` 인수(기본 C 예외 표현을 위해 제공)를 받아들이는 생성자 및 비트 복사 생성자를 정의하려고 할 수도 있습니다. 다음은 가능한 C 예외 래퍼 클래스의 구현입니다.  
   

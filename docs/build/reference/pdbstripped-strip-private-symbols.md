@@ -1,79 +1,79 @@
 ---
-title: "/PDBSTRIPPED(전용 기호 제거) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdbstripped"
-  - "VC.Project.VCLinkerTool.StripPrivateSymbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".pdb 파일, 전용 기호 제거"
-  - "/PDBSTRIPPED 링커 옵션"
-  - "PDB 파일, 전용 기호 제거"
-  - "PDBSTRIPPED 링커 옵션"
-  - "-PDBSTRIPPED 링커 옵션"
+title: "-PDBSTRIPPED (전용 기호 제거) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /pdbstripped
+- VC.Project.VCLinkerTool.StripPrivateSymbols
+dev_langs: C++
+helpviewer_keywords:
+- /PDBSTRIPPED linker option
+- -PDBSTRIPPED linker option
+- .pdb files, stripping private symbols
+- PDB files, stripping private symbols
+- PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 73288ef6bf6881d946e4ec4bdd94e9b85cc0e81a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /PDBSTRIPPED(전용 기호 제거)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED(전용 기호 제거)
 ```  
 /PDBSTRIPPED:pdb_file_name  
 ```  
   
-## 설명  
- 다음은 각 문자에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 여기서  
   
- *pdb\_file\_name*  
- 링커에서 만든 스트리핑된 PDB\(프로그램 데이터베이스\)의 사용자 지정 이름입니다.  
+ *pdb_file_name*  
+ 링커가 만드는 프로그램 데이터베이스 (PDB)에 대 한 사용자 지정 이름입니다.  
   
-## 설명  
- \/PDBSTRIPPED 옵션을 사용하면 PDB 파일을 생성하는 컴파일러 또는 링커 옵션\([\/DEBUG](../../build/reference/debug-generate-debug-info.md), [\/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), \/Zd 또는 \/Zi\)으로 프로그램 이미지를 빌드할 때 두 번째 PDB\(프로그램 데이터베이스\)가 만들어집니다.  이 두 번째 PDB 파일에서는 고객에게 제공하지 않을 기호가 생략됩니다.  두 번째 PDB 파일에는 다음 내용만 포함됩니다.  
+## <a name="remarks"></a>설명  
+ /PDBSTRIPPED 옵션은 프로그램 이미지를 사용 하 여 컴파일러 또는 링커는 PDB 파일을 생성 하는 옵션을 빌드할 때 두 번째 프로그램 데이터베이스 (PDB) 파일을 만듭니다 ([/debug](../../build/reference/debug-generate-debug-info.md), [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), /Zd 또는 /Zi). 이 두 번째 PDB 파일에서는 고객에게 제공하지 않을 기호가 생략됩니다. 두 번째 PDB 파일의 내용만 포함 됩니다.  
   
 -   공용 기호  
   
--   개체 파일의 목록과 개체 파일에서 제공하는 실행 파일의 일부  
+-   개체 파일 및 제공 하는 실행 파일의 부분 목록  
   
--   스택을 통과시키는데 사용된 FPO\(프레임 포인터 최적화\) 디버그 레코드  
+-   프레임 포인터 최적화 (FPO) 디버그 레코드 스택을 통과 하는 데 사용  
   
- 스트립된 PDB 파일에는 다음 내용이 포함되지 않습니다.  
+ 스트립 된 PDB 파일 포함 되지 않습니다.  
   
 -   형식 정보  
   
 -   줄 번호 정보  
   
--   개체 파일별 CodeView 기호\(함수, 지역 및 정적 데이터에 대한 기호 등\)  
+-   예: 함수, 지역 및 정적 데이터를 위한 개체당 파일 CodeView 기호  
   
- \/PDBSTRIPPED를 사용하는 경우에도 완전한 PDB 파일이 생성됩니다.  
+ 전체 PDB 파일 /PDBSTRIPPED를 사용 하는 경우에 생성 됩니다.  
   
- PDB 파일을 만들지 않으면 \/PDBSTRIPPED는 무시됩니다.  
+ PDB 파일을 만들지 않으면 /PDBSTRIPPED는 무시 됩니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
-3.  **디버그** 속성 페이지를 클릭합니다.  
+3.  클릭는 **디버그** 속성 페이지.  
   
-4.  **전용 기호 제거** 속성을 수정합니다.  
+4.  수정 된 **전용 기호 제거** 속성입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

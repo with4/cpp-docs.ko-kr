@@ -1,37 +1,35 @@
 ---
 title: "명령줄 오류 D8016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D8016"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D8016"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D8016
+dev_langs: C++
+helpviewer_keywords: D8016
 ms.assetid: eec51312-7471-4f92-94b2-d517cafc8ef5
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: dccba5491919c2a5623f7c566a88c1388746e49e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 명령줄 오류 D8016
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'option1'과\(와\) 'option2' 명령줄 옵션이 호환되지 않습니다.  
+# <a name="command-line-error-d8016"></a>명령줄 오류 D8016
+'옵션 1' 및 '옵션 2' 명령줄 옵션이 호환 되지 않습니다.  
   
- 이들 명령줄 옵션을 함께 지정할 수 없습니다.  
+ 명령줄 옵션을 함께 지정할 수 없습니다.  
   
- CL 같은 환경 변수에서 옵션 사양을 확인하십시오.  
+ 환경 변수, CL 같은 옵션 사양에 대 한을 확인 합니다.  
   
- **\/clr**은 **\/EHa**를 암시하며 다른 **\/EH** 컴파일러 옵션을 **\/clr**과 함께 지정할 수 없습니다.  자세한 내용은 [\/clr\(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하십시오.  
+ **/clr** 의미 **/EHa**, 다른를 지정할 수 없습니다 **/EH** 컴파일러 옵션을 **/clr**합니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 6.0 프로젝트로 업데이트한 후에 D8016이 발생할 수도 있습니다. 프로젝트 업데이트 마법사는 프로젝트의 각 소스 코드 파일에 대해 **\/RTC**를 활성화하므로 프로젝트의 **\/RTC** 설정이 재정의될 수 있습니다.  이 문제를 해결하려면 프로젝트의 각 소스 코드 파일에 대한 **\/RTC** 설정을 기본 설정으로 변경하여 **\/RTC**  프로젝트 설정이 각 파일에 적용되도록 합니다.  
+ 8016 업데이트 한 후 한 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 6.0 프로젝트: 프로젝트 업데이트 마법사 프로세스를 수행할 수 있게 해 **/RTC** 재정의 하는 프로젝트에 각 소스 코드 파일에 대 한는 **/RTC** 에 대 한 설정의 프로젝트입니다.  를 해결 하려면 변경 된 **/RTC** 기본 설정으로 프로젝트의 각 소스 코드 파일에 대 한 설정, 즉에 대 한 프로젝트 설정 **/RTC** 각 파일에 대해 적용 됩니다.  
   
- **\/RTC** 프로젝트 설정 변경에 대한 자세한 내용은 [\/RTC\(런타임 오류 검사\)](../../build/reference/rtc-run-time-error-checks.md)를 참조하십시오.
+ 참조 [/RTC (런타임 오류 검사)](../../build/reference/rtc-run-time-error-checks.md) 변경에 대 한 내용은 **/RTC** 속성을 설정 합니다.

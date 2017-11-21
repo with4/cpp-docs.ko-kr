@@ -1,76 +1,75 @@
 ---
-title: "/Fe(EXE 파일 이름 지정) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/fe"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Fe 컴파일러 옵션[C++]"
-  - "실행 파일, 이름 바꾸기"
-  - "Fe 컴파일러 옵션[C++]"
-  - "-Fe 컴파일러 옵션[C++]"
-  - "파일 이름 바꾸기 컴파일러 옵션[C++]"
+title: "-Fe (EXE 파일 이름) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /fe
+dev_langs: C++
+helpviewer_keywords:
+- -Fe compiler option [C++]
+- executable files, renaming
+- rename file compiler option [C++]
+- /Fe compiler option [C++]
+- Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b66c473c49527dff395d206594a314b527c4f914
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /Fe(EXE 파일 이름 지정)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-컴파일러에서 만든 .exe 파일이나 DLL 파일의 이름과 디렉터리를 지정합니다.  
+# <a name="fe-name-exe-file"></a>/Fe(EXE 파일 이름 지정)
+이름 및.exe 파일 또는 컴파일러에서 만든 DLL에 대 한 디렉터리를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /Fepathname  
 ```  
   
-## 설명  
- 이 옵션을 지정하지 않으면 컴파일러가 명령줄에 지정된 첫 번째 소스나 개체 파일의 기본 이름과 .exe 또는 .dll 확장명을 사용하여 파일에 기본 이름을 지정합니다.  
+## <a name="remarks"></a>설명  
+ 이 옵션이 없으면 컴파일러 사용 하면 파일 확장명이.exe 또는.dll 및 명령줄에 지정 된 첫 번째 소스 또는 개체 파일의 기본 이름을 사용 하 여 기본 이름입니다.  
   
- 링크하지 않고 컴파일하는 [\/c\(링크 없이 컴파일\)](../../build/reference/c-compile-without-linking.md) 옵션을 지정하면 **\/Fe** 옵션이 적용되지 않습니다.  
+ 지정 하는 경우는[(컴파일 없이 링크 사용) /c](../../build/reference/c-compile-without-linking.md), 링크 하지 않고 컴파일할 **/Fe** 영향을 주지 않습니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
-3.  **일반** 속성 페이지를 클릭합니다.  
+3.  클릭는 **일반**속성 페이지.  
   
-4.  **출력 파일** 속성을 수정합니다.  
+4.  수정 된 **출력 파일** 속성입니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>을 참조하세요.  
   
-## 예제  
- 다음 명령줄을 실행하면 현재 디렉터리에 있는 모든 C 소스 파일을 컴파일하고 링크합니다.  그러면 PROCESS.exe라는 실행 파일이 C:\\BIN 디렉터리에 만들어집니다.  
+## <a name="example"></a>예제  
+ 다음 명령줄을 컴파일하고 현재 디렉터리의 모든 C 소스 파일을 연결 합니다. 결과 실행 파일 PROCESS.exe 라는 고 C:\BIN 디렉터리에 생성 됩니다.  
   
 ```  
 CL /FeC:\BIN\PROCESS *.C  
 ```  
   
-## 예제  
- 다음 명령줄을 실행하면 첫 번째 소스나 개체 파일과 기본 이름이 동일한 실행 파일이 `C:\BIN` 디렉터리에 만들어집니다.  
+## <a name="example"></a>예제  
+ 다음 명령줄의 실행 파일을 만듭니다 `C:\BIN` 첫 번째 소스 나 개체 파일과 동일한 기본 이름을 가진:  
   
 ```  
 CL /FeC:\BIN\ *.C  
 ```  
   
-## 참고 항목  
- [출력 파일\(\/F\) 옵션](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>참고 항목  
+ [출력 파일 (/ F) 옵션](../../build/reference/output-file-f-options.md)   
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)   
  [경로 이름 지정](../../build/reference/specifying-the-pathname.md)

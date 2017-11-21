@@ -1,47 +1,47 @@
 ---
-title: "방법: Windows Forms 컨트롤의 속성 및 메서드 호출 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "메서드 호출, Windows Forms 컨트롤"
-  - "속성 호출"
-  - "속성 호출, Windows Forms 컨트롤"
-  - "메서드 호출, Windows Forms"
-  - "Windows Forms 컨트롤[C++], 메서드"
-  - "Windows Forms 컨트롤[C++], 속성"
+title: "방법: 속성 및 Windows Forms의 메서드 호출을 제어 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- method calls, Windows Forms
+- calling methods, Windows Forms control
+- calling properties, Windows Forms control
+- Windows Forms controls [C++], methods
+- calling properties
+- Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28e6d025d6c2aa485b5687117d64afeb7e402a79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: Windows Forms 컨트롤의 속성 및 메서드 호출
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[CWinFormsView::GetControl](../Topic/CWinFormsView::GetControl.md)은 `WindowsControlLibrary1::UserControl1`에 대한 포인터가 아니라 <xref:System.Windows.Forms.Control?displayProperty=fullName>에 대한 포인터를 반환하므로 사용자 정의 컨트롤 형식의 멤버를 추가하고 이를 [IView::OnInitialUpdate](../Topic/IView::OnInitialUpdate.md)에서 초기화하는 것이 좋습니다.  이제 `m_ViewControl`을 사용하여 메서드와 속성을 호출할 수 있습니다.  
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>방법: Windows Forms 컨트롤의 속성 및 메서드 호출
+때문에 [CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) 에 대 한 포인터를 반환 <xref:System.Windows.Forms.Control?displayProperty=fullName>에 대 한 포인터가 아니라 `WindowsControlLibrary1::UserControl1`, 사용자 정의 컨트롤 형식과의 구성원을 추가 하 고 초기화 하는 것이 좋습니다 [IView::OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). 메서드 및 속성을 사용 하 여 호출할 수 이제 `m_ViewControl`합니다.  
   
- 이 항목에서는 [방법: 대화 상자에 사용자 정의 컨트롤 및 호스트 만들기](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) 및 [방법: 사용자 정의 컨트롤 및 호스트 MDI 뷰 만들기](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)를 이미 완료한 것으로 간주합니다.  
+ 이 항목에서는 이전에 완료 된 [하는 방법: 대화 상자에 사용자 정의 컨트롤 및 호스트 만들기](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) 및 [하는 방법: 사용자 정의 컨트롤 및 호스트 MDI 뷰 만들기](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)합니다.  
   
-### MFC 호스트 응용 프로그램을 만들려면  
+### <a name="to-create-the-mfc-host-application"></a>MFC 호스트 응용 프로그램을 만들려면  
   
-1.  [방법: 사용자 정의 컨트롤 및 호스트 MDI 뷰 만들기](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)에서 만든 MFC 응용 프로그램을 엽니다.  
+1.  만든 MFC 응용 프로그램을 열고 [하는 방법: 사용자 정의 컨트롤 및 호스트 MDI 뷰 만들기](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)합니다.  
   
-2.  MFC02View.h에서 `CMFC02View` 클래스 선언의 public overrides 섹션에 다음 줄을 추가합니다.  
+2.  다음 줄의 공용 재정의 섹션을 추가 `CMFC02View` 클래스 MFC02View.h에서 선언 합니다.  
   
      `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`  
   
-3.  OnInitialupdate에 대한 재정의를 추가합니다.  
+3.  OnInitialupdate에 대 한 재정의 추가 합니다.  
   
-     F4 키를 눌러 **속성** 창을 표시합니다.  **클래스 뷰**\(Ctrl\+Shift\+C\)에서 CMFC02View 클래스를 선택합니다.  **속성** 창에서 재정의를 나타내는 아이콘을 선택합니다.  OnInitialUpdate가 표시될 때까지 목록을 아래로 스크롤합니다.  Click on the drop down list and select \<Add\>.  In MFC02View.cpp. make sure the body of the OnInitialUpdate function is as follows:  
+     표시는 **속성** 창 (F4). **클래스 뷰** (CTRL + SHIFT + C) CMFC02View 클래스를 선택 합니다. 에 **속성** 창, 재정의 대 한 아이콘을 선택 합니다. OnInitialUpdate 목록을 Scoll 합니다. 클릭 하 고 드롭다운 목록 및 선택 \<추가 > 합니다. MFC02View.cpp에. 확인 OnInitialUpdate 함수 본문은 다음과 같습니다.  
   
     ```  
     CWinFormsView::OnInitialUpdate();  
@@ -53,9 +53,9 @@ caps.handback.revision: 9
   
      **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
   
-     **디버그** 메뉴에서 **디버깅하지 않고 시작**을 클릭합니다.  
+     에 **디버그** 메뉴를 클릭 하 여 **디버깅 하지 않고 시작**합니다.  
   
-     텍스트 상자가 초기화됩니다.  
+     입력란은 이제 초기화를 확인 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

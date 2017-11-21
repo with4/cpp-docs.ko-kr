@@ -1,58 +1,58 @@
 ---
 title: "수동 접근자 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "접근자[C++], 수동"
-  - "명령 처리, OLE DB 템플릿"
-  - "수동 접근자"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- command handling, OLE DB Templates
+- manual accessors
+- accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3a37f721c372f3ad11000aec023ef74fb1fb1097
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 수동 접근자 사용
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-알 수 없는 명령을 처리해야 하는 경우 다음과 같은 네 가지 작업을 수행해야 합니다.  
+# <a name="using-manual-accessors"></a>수동 접근자 사용
+알 수 없는 명령을 처리할 때 작업을 수행 하는 4 가지 가지가 있습니다.  
   
--   매개 변수 결정  
+-   매개 변수를 확인 합니다.  
   
 -   명령 실행  
   
--   출력 열 결정  
+-   출력 열을 결정  
   
--   반환 행 집합이 여러 개인지 확인  
+-   여러 반환 행 집합 확인  
   
- OLE DB 소비자 템플릿으로 이 작업을 수행하려면, `CManualAccessor` 클래스를 사용하여 다음 단계를 수행하십시오.  
+ 이를 위해 OLE DB 소비자 템플릿 사용는 `CManualAccessor` 클래스 및 다음이 단계를 수행 합니다.  
   
-1.  템플릿 매개 변수로 `CManualAccessor`를 사용하여 `CCommand` 개체를 엽니다.  
+1.  열기는 `CCommand` 개체 `CManualAccessor` 템플릿 매개 변수로 합니다.  
   
     ```  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  **IDBSchemaRowset** 인터페이스에 대한 세션을 쿼리하고 프로시저 매개 변수 행 집합을 사용합니다.  **IDBSchemaRowset** 인터페이스를 사용할 수 없는 경우, `ICommandWithParameters` 인터페이스를 쿼리합니다.  `GetParameterInfo`를 호출하여 정보를 얻습니다.  두 인터페이스 모두 사용할 수 없는 경우, 매개 변수가 없다고 가정할 수 있습니다.  
+2.  세션에 대 한 쿼리는 **IDBSchemaRowset** 인터페이스 및 프로시저 매개 변수 행 집합을 사용 합니다. 경우는 **IDBSchemaRowset** 인터페이스를 사용할 수 없으면에 대 한 쿼리는 `ICommandWithParameters` 인터페이스입니다. 호출 `GetParameterInfo` 정보에 대 한 합니다. 두 인터페이스 모두를 사용할 수 있는 경우 매개 변수가 없는 가정할 수 있습니다.  
   
-3.  각각의 매개 변수에 대해 `AddParameterEntry`를 호출하여 매개 변수를 추가하고 설정합니다.  
+3.  각 매개 변수에 대 한 호출 `AddParameterEntry` 하는 매개 변수를 추가 하 고 설정 합니다.  
   
-4.  행 집합을 열지만, 바인딩 매개 변수를 **false**로 설정합니다.  
+4.  행 집합을 열고 바인딩 매개 변수를 설정 하지만 **false**합니다.  
   
-5.  `GetColumnInfo`를 호출하여 출력 열을 검색합니다.  `AddBindEntry`를 사용하여 출력 열을 바인딩에 추가합니다.  
+5.  호출 `GetColumnInfo` 출력 열을 검색할 수 있습니다. 사용 하 여 `AddBindEntry` 바인딩에 출력 열을 추가 합니다.  
   
-6.  `GetNextResult`를 호출하여 더 많은 행 집합을 사용할 수 있는지 확인합니다.  단계 2에서 단계 5까지 반복합니다.  
+6.  호출 `GetNextResult` 행 집합이 더 이상 사용할 수 있는 되는지 확인할 수 있습니다. 2 ~ 5 단계를 반복 합니다.  
   
- 수동 접근자에 대한 예제를 보려면 [DBVIEWER](http://msdn.microsoft.com/ko-kr/07620f99-c347-4d09-9ebc-2459e8049832) 샘플에서 **CDBListView::CallProcedure**를 참조하십시오.  
+ 수동 접근자의 예제를 보려면 **CDBListView::CallProcedure** 에 [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) 샘플.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [접근자 사용](../../data/oledb/using-accessors.md)

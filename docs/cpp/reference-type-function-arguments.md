@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - functions [C++], paramters
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e74cbde44cad618720983fbda4a6cf9ce8b75dc1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 63eb2b4c7415dc463b38346909bd2b6fd902c332
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="reference-type-function-arguments"></a>참조 형식 함수 인수
 보통은 큰 개체보다 참조를 함수에 전달하는 것이 더 효율적입니다. 이렇게 하면 개체에 액세스하는 데 사용된 구문을 유지하면서 컴파일러가 개체의 주소를 전달할 수 있습니다. `Date` 구조체를 사용하는 다음 예제를 살펴보십시오.  
@@ -80,7 +77,7 @@ long JulianFromGregorian( const Date& GDate );
   
  이 프로토타입은 `JulianFromGregorian` 함수가 인수를 변경하지 않도록 합니다.  
   
- 참조 형식으로 프로토타입 모든 함수에서 표준 변환 되기 때문에 해당 위치에 동일한 형식의 개체를 허용할 수 *typename* 를 *typename* ** & **.  
+ 참조 형식으로 프로토타입 모든 함수에서 표준 변환 되기 때문에 해당 위치에 동일한 형식의 개체를 허용할 수 *typename* 를 *typename*  **&** .  
   
 ## <a name="see-also"></a>참고 항목  
  [참조](../cpp/references-cpp.md)

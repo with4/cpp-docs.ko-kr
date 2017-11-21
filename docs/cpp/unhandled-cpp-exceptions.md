@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - event handlers [C++], unhandled exceptions
 - catch keyword [C++], handler not found
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 590dc46e5cf761f02ba85dba950c04a2da4df022
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 6954c3eecfb3e6048a653401f4238b950e3aecf0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unhandled-c-exceptions"></a>처리되지 않은 C++ 예외
 경우 일치 하는 처리기 (또는 줄임표 **catch** 처리기)에 대 한 미리 정의 된 현재 예외를 찾을 수 없습니다 `terminate` 런타임 함수를 호출 합니다. `terminate`는 모든 처리기에서 명시적으로 호출할 수도 있습니다. `terminate`의 기본 작업은 `abort`를 호출하는 것입니다. 응용 프로그램을 종료하기 전에 `terminate`로 프로그램의 몇 가지 다른 함수를 호출하려면 단일 인수로 호출되는 함수 이름을 사용하여 `set_terminate` 함수를 호출합니다. `set_terminate`는 프로그램에서 언제든지 호출할 수 있습니다. `terminate` 루틴에 대 한 인수로 주어진 마지막 함수를 항상 호출 `set_terminate`합니다.  

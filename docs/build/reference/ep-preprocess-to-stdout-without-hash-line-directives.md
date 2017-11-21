@@ -1,77 +1,76 @@
 ---
-title: "/EP(#line 지시문 없이 stdout로 전처리) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ep"
-  - "VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/EP 컴파일러 옵션[C++]"
-  - "전처리기 출력을 표준 출력에 복사"
-  - "EP 컴파일러 옵션[C++]"
-  - "-EP 컴파일러 옵션[C++]"
-  - "전처리기 출력, 표준 출력에 복사"
+title: "-EP (#line 지시문 없이 stdout로 전처리) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ep
+- VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines
+dev_langs: C++
+helpviewer_keywords:
+- copy preprocessor output to stdout
+- preprocessor output, copy to stdout
+- -EP compiler option [C++]
+- EP compiler option [C++]
+- /EP compiler option [C++]
 ms.assetid: 6ec411ae-e33d-4ef5-956e-0054635eabea
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0f57a4fb9fb35c60f051642120e2fc62d2306da7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /EP(#line 지시문 없이 stdout로 전처리)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-C와 C\+\+ 소스 파일을 전처리하고 전처리된 파일을 표준 출력 장치에 복사합니다.  
+# <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP(#line 지시문 없이 stdout로 전처리)
+C 및 c + + 소스 파일을 전처리 하 고 표준 출력 장치 전처리 파일을 복사 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /EP  
 ```  
   
-## 설명  
- 처리할 때 모든 전처리기 지시문이 실행되고 매크로가 확장되며 주석이 제거됩니다.  전처리된 결과에 주석을 보존하려면 **\/EP** 옵션과 함께 [\/C\(전처리 중에 주석 유지\)](../../build/reference/c-preserve-comments-during-preprocessing.md) 옵션을 사용하십시오.  
+## <a name="remarks"></a>설명  
+ 프로세스에서 모든 전처리기 지시문이 실행 되 매크로 확장이 수행 및 주석이 제거 됩니다. 전처리 된 출력에 메모를 유지 하기 위해 사용 하 여는 [(보존 설명 하는 동안 전처리) /C](../../build/reference/c-preserve-comments-during-preprocessing.md) 옵션과 함께 **/EP**합니다.  
   
- **\/EP** 옵션을 사용하면 컴파일이 수행되지 않습니다.  컴파일에 필요한 사전 처리된 파일을 다시 전송해야 합니다.  또한 **\/EP**를 사용하면 **\/FA**, **\/Fa** 및 **\/Fm** 옵션을 사용해도 출력 파일이 생성되지 않습니다.  자세한 내용은 [\/FA, \/Fa\(목록 파일\)](../../build/reference/fa-fa-listing-file.md) 및 [\/Fm\(맵 파일 이름 지정\)](../../build/reference/fm-name-mapfile.md)를 참조하십시오.  
+ **/EP** 옵션은 컴파일을 억제 합니다. 컴파일에 대 한 전처리 파일을 전송 해야 합니다. **/EP** 출력 파일이 표시는 **/FA**, **/Fa**, 및 **/Fm** 옵션입니다. 자세한 내용은 참조 [/FA, /Fa (목록 파일)](../../build/reference/fa-fa-listing-file.md) 및 [/Fm (맵 파일 이름)](../../build/reference/fm-name-mapfile.md)합니다.  
   
- 처리 후반 단계에서 발생하는 오류는 원래 소스 파일 대신 전처리된 파일의 줄 번호를 참조합니다.  원래 소스 파일의 줄 번호를 참조하려면 대신 [\/E\(stdout으로 전처리\)](../../build/reference/e-preprocess-to-stdout.md) 옵션을 사용하십시오.  **\/E** 옵션을 사용하면 원래 소스 파일의 줄 번호를 참조하도록 `#line` 지시문이 출력에 추가됩니다.  
+ 처리의 이후 단계 동안 발생 한 오류는 원래 원본 파일 보다는 전처리 된 파일의 줄 번호를 참조 하십시오. 줄 번호를 원본 소스 파일을 참조 하려는 경우 사용할 [/E (stdout으로 전처리)](../../build/reference/e-preprocess-to-stdout.md) 대신 합니다. **/E** 옵션 추가 `#line` 지시문이이 용도 대 한 출력입니다.  
   
- `#line` 지시문과 함께 전처리된 출력을 파일로 보내려면 대신 [\/P\(파일 전처리\)](../../build/reference/p-preprocess-to-a-file.md) 옵션을 사용하십시오.  
+ 전처리 된 출력으로 보낼 `#line` 지시문을 파일에 사용 된 [/P (파일 전처리)](../../build/reference/p-preprocess-to-a-file.md) 옵션을 사용 합니다.  
   
- `#line` 지시문과 함께 전처리된 출력을 stdout로 보내려면 **\/P** 옵션과 **\/EP** 옵션을 함께 사용하십시오.  
+ 와 함께 stdout으로 전처리 된 출력을 보낼 `#line` 지시문을 사용 하 여 **/P** 및 **/EP** 함께 합니다.  
   
- **\/EP** 옵션을 사용할 경우에는 미리 컴파일된 헤더를 사용할 수 없습니다.  
+ 미리 컴파일된 헤더를 사용할 수 없습니다는 **/EP** 옵션입니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
+2.  **C/C++** 폴더를 클릭합니다.  
   
-3.  **전처리기** 속성 페이지를 클릭합니다.  
+3.  클릭는 **전처리기** 속성 페이지.  
   
-4.  **전처리 파일 생성** 속성을 변경합니다.  
+4.  수정 된 **전처리 파일 생성** 속성입니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>을 참조하세요.  
   
-## 예제  
- 다음 명령줄을 실행하면 `ADD.C` 파일을 전처리하고 주석을 그대로 유지하고 표준 출력 장치에 결과를 표시합니다.  
+## <a name="example"></a>예제  
+ 다음 명령줄을 실행 하면 `ADD.C`, 의견, 유지 및 표준 출력 장치에 결과 표시 합니다.  
   
 ```  
 CL /EP /C ADD.C  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

@@ -1,32 +1,30 @@
 ---
 title: "컴파일러 경고 (수준 3) C4101 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4101"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4101"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4101
+dev_langs: C++
+helpviewer_keywords: C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: edd99402978a41a115afa2d96f86abd63d72afa4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 3) C4101
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identifier' :참조되지 않은 지역 변수입니다.  
+# <a name="compiler-warning-level-3-c4101"></a>컴파일러 경고 (수준 3) C4101
+'identifier': 참조 되지 않은 지역 변수  
   
- 지역 변수가 사용되지 않습니다.  이 경고는 명백한 상황에서 발생합니다.  
+ 지역 변수 사용 되지 않습니다. 이 경고는 확실 한 경우에 발생 합니다.  
   
 ```  
 // C4101a.cpp  
@@ -36,7 +34,7 @@ int i;   // C4101
 }  
 ```  
   
- 하지만 이 경고는 **정적** 멤버 함수가 클래스의 인스턴스를 통해 호출되는 경우에도 발생합니다.  
+ 그러나이 경고는도 발생를 호출할 때는 **정적** 멤버 함수가 클래스의 인스턴스를 통해:  
   
 ```  
 // C4101b.cpp  
@@ -55,10 +53,10 @@ int main() {
 }  
 ```  
   
- 이러한 경우에는 컴파일러가 `si`에 대한 정보를 사용하여 **정적** 함수에 액세스하지만 **정적** 함수를 호출하는 데에는 클래스의 인스턴스가 필요하지 않으므로 경고가 발생합니다.  이 경고를 해결하려면 다음을 수행하십시오.  
+ 이 경우 컴파일러에 대 한 정보를 사용 `si` 액세스로는 **정적** 함수가 있지만 클래스의 인스턴스를 호출 하는 데 필요 하지 않으므로 **정적** 함수; 따라서 경고 합니다. 이 경고를 해결 하려면 하면 다음과 같은 작업을 수행할 수 있습니다.  
   
--   컴파일러가 `func`에 대한 호출에서 `si`의 인스턴스를 사용할 수 있는 생성자를 추가합니다.  
+-   컴파일러의 인스턴스를 사용 하는 생성자를 추가 `si` 에 대 한 호출에서 `func`합니다.  
   
--   `func` 정의에서 **static** 키워드를 제거합니다.  
+-   제거는 **정적** 키워드의 정의를 `func`합니다.  
   
--   **정적** 함수를 명시적으로 호출합니다. `int y = S::func();`
+-   호출 된 **정적** 명시적으로 함수: `int y = S::func();`합니다.

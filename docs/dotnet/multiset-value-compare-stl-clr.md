@@ -1,42 +1,40 @@
 ---
-title: "multiset::value_compare(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare 멤버[STL/CLR]"
+title: 'multiset:: value_compare (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: 962e5a3b-5841-4b44-8801-5f5349e95c8f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6242987926e45d0e944f66e64c39f38a95016b37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::value_compare(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The ordering delegate for two element values.  
+# <a name="multisetvaluecompare-stlclr"></a>multiset::value_compare(STL/CLR)
+두 요소 값에 대 한 순서 지정 하는 대리자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## 설명  
- The type is a synonym for the delegate that determines the ordering of its value arguments.  
+## <a name="remarks"></a>설명  
+ 유형 인수 값의 순서를 결정 하는 대리자에 대 한 동의어입니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multiset_value_compare.cpp   
@@ -61,16 +59,19 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**   
-## 요구 사항  
- **Header:** \<cliext\/set\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::key\_compare](../dotnet/multiset-key-compare-stl-clr.md)   
- [multiset::value\_comp](../dotnet/multiset-value-comp-stl-clr.md)   
- [multiset::value\_type](../dotnet/multiset-value-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)   
+ [multiset:: value_comp (STL/CLR)](../dotnet/multiset-value-comp-stl-clr.md)   
+ [multiset::value_type(STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

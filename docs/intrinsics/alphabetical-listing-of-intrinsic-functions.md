@@ -1,286 +1,286 @@
 ---
-title: "내장 함수의 사전순 목록 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe 컴파일러 내장"
-  - "내장 함수"
-  - "내장 함수, 알파벳순 목록"
+title: "내장 함수 목록 사전순 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- cl.exe compiler intrinsics
+- intrinsics, alphabetical list
+- intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a07e596531957294be304efb6a95cc05ce75aec4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 내장 함수의 사전순 목록
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 섹션에서는 일부 또는 모든 아키텍처에서 사용할 수 있는 Microsoft 관련 내장 함수에 대해 설명합니다.  지원되는 기타 내장 함수에 대한 설명은 프로세서 제조업체에서 제공하는 헤더 파일이나 제조업체 웹 사이트에 나와 있습니다.  제조업체 설명서의 링크는 [ARM 내장 함수](../intrinsics/arm-intrinsics.md), [x86 내장 함수](../intrinsics/x86-intrinsics-list.md) 및 [x64 내장 함수](../intrinsics/x64-amd64-intrinsics-list.md) 섹션을 참조하세요.  내장 함수가 구현된 CRT\(C 런타임 라이브러리\) 함수에 대해서는 여기서 설명하지 않습니다. 이러한 함수에 대한 설명은 [C 런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md)에 나와 있습니다.  
+# <a name="alphabetical-listing-of-intrinsic-functions"></a>내장 함수의 알파벳순 목록
+다음 섹션에서는 일부 또는 모든 아키텍처에서 사용할 수 있는 Microsoft 관련 내장 함수에 대해 설명합니다. 지원되는 기타 내장 함수에 대한 설명은 프로세서 제조업체에서 제공하는 헤더 파일이나 제조업체 웹 사이트에 나와 있습니다. 참조는 [ARM 내장 함수](../intrinsics/arm-intrinsics.md), [x86 내장 함수](../intrinsics/x86-intrinsics-list.md), 및 [x64 내장 함수](../intrinsics/x64-amd64-intrinsics-list.md) 섹션 제조업체 설명서에 대 한 링크입니다. 내장 함수가을 구현 하는 C 런타임 라이브러리 (CRT) 함수; 여기 설명 하지 않습니다. 이러한 함수는에 설명 되어는 [C 런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md)합니다.  
   
- [\_\_addfsbyte, \_\_addfsword, \_\_addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)  
+ [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)  
   
- [\_\_addgsbyte, \_\_addgsword, \_\_addgsdword, \_\_addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)  
+ [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)  
   
- [\_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)  
+ [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)  
   
- [\_\_assume](../intrinsics/assume.md)  
+ [__assume](../intrinsics/assume.md)  
   
- [\_BitScanForward, \_BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)  
+ [_BitScanForward, _BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)  
   
- [\_BitScanReverse, \_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)  
+ [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)  
   
- [\_bittest, \_bittest64](../intrinsics/bittest-bittest64.md)  
+ [_bittest, _bittest64](../intrinsics/bittest-bittest64.md)  
   
- [\_bittestandcomplement, \_bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)  
+ [_bittestandcomplement, _bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)  
   
- [\_bittestandreset, \_bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)  
+ [_bittestandreset, _bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)  
   
- [\_bittestandset, \_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)  
+ [_bittestandset, _bittestandset64](../intrinsics/bittestandset-bittestandset64.md)  
   
- [\_\_cpuid, \_\_cpuidex](../intrinsics/cpuid-cpuidex.md)  
+ [__cpuid, \__cpuidex](../intrinsics/cpuid-cpuidex.md)  
   
- [\_\_debugbreak](../intrinsics/debugbreak.md)  
+ [__debugbreak](../intrinsics/debugbreak.md)  
   
- [\_disable](../intrinsics/disable.md)  
+ [_disable](../intrinsics/disable.md)  
   
- [\_\_emul, \_\_emulu](../intrinsics/emul-emulu.md)  
+ [__emul, \__emulu](../intrinsics/emul-emulu.md)  
   
- [\_enable](../intrinsics/enable.md)  
+ [_enable](../intrinsics/enable.md)  
   
- [\_\_fastfail](../intrinsics/fastfail.md)  
+ [__fastfail](../intrinsics/fastfail.md)  
   
- [\_\_faststorefence](../intrinsics/faststorefence.md)  
+ [__faststorefence](../intrinsics/faststorefence.md)  
   
- [\_\_getcallerseflags](../intrinsics/getcallerseflags.md)  
+ [__getcallerseflags](../intrinsics/getcallerseflags.md)  
   
- [\_\_halt](../intrinsics/halt.md)  
+ [__halt](../intrinsics/halt.md)  
   
- [\_\_inbyte](../intrinsics/inbyte.md)  
+ [__inbyte](../intrinsics/inbyte.md)  
   
- [\_\_inbytestring](../intrinsics/inbytestring.md)  
+ [__inbytestring](../intrinsics/inbytestring.md)  
   
- [\_\_incfsbyte, \_\_incfsword, \_\_incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)  
+ [__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)  
   
- [\_\_incgsbyte, \_\_incgsword, \_\_incgsdword, \_\_incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)  
+ [__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)  
   
- [\_\_indword](../intrinsics/indword.md)  
+ [__indword](../intrinsics/indword.md)  
   
- [\_\_indwordstring](../intrinsics/indwordstring.md)  
+ [__indwordstring](../intrinsics/indwordstring.md)  
   
- [\_\_int2c](../intrinsics/int2c.md)  
+ [__int2c](../intrinsics/int2c.md)  
   
- [\_InterlockedAdd Intrinsic Functions](../intrinsics/interlockedadd-intrinsic-functions.md)  
+ [_InterlockedAdd 내장 함수](../intrinsics/interlockedadd-intrinsic-functions.md)  
   
- [\_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)  
+ [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)  
   
- [\_InterlockedAnd Intrinsic Functions](../intrinsics/interlockedand-intrinsic-functions.md)  
+ [_InterlockedAnd 내장 함수](../intrinsics/interlockedand-intrinsic-functions.md)  
   
- [\_interlockedbittestandreset Intrinsic Functions](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)  
+ [_interlockedbittestandreset 내장 함수](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)  
   
- [\_interlockedbittestandset Intrinsic Functions](../intrinsics/interlockedbittestandset-intrinsic-functions.md)  
+ [_interlockedbittestandset 내장 함수](../intrinsics/interlockedbittestandset-intrinsic-functions.md)  
   
- [\_InterlockedCompareExchange 내장 함수](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)  
+ [_InterlockedCompareExchange 내장 함수](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)  
   
- [\_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)  
+ [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)  
   
- [\_InterlockedCompareExchangePointer Intrinsic Functions](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)  
+ [_InterlockedCompareExchangePointer 내장 함수](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)  
   
- [\_InterlockedDecrement Intrinsic Functions](../intrinsics/interlockeddecrement-intrinsic-functions.md)  
+ [_InterlockedDecrement 내장 함수](../intrinsics/interlockeddecrement-intrinsic-functions.md)  
   
- [\_InterlockedExchangePointer Intrinsic Functions](../intrinsics/interlockedexchange-intrinsic-functions.md)  
+ [_InterlockedExchange 내장 함수](../intrinsics/interlockedexchange-intrinsic-functions.md)  
   
- [\_InterlockedExchangeAdd Intrinsic Functions](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)  
+ [_InterlockedExchangeAdd 내장 함수](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)  
   
- [\_InterlockedExchangePointer Intrinsic Functions](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)  
+ [_InterlockedExchangePointer 내장 함수](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)  
   
- [\_InterlockedIncrement Intrinsic Functions](../intrinsics/interlockedincrement-intrinsic-functions.md)  
+ [_InterlockedIncrement 내장 함수](../intrinsics/interlockedincrement-intrinsic-functions.md)  
   
- [\_InterlockedOr Intrinsic Functions](../intrinsics/interlockedor-intrinsic-functions.md)  
+ [_InterlockedOr 내장 함수](../intrinsics/interlockedor-intrinsic-functions.md)  
   
- [\_InterlockedXor Intrinsic Functions](../intrinsics/interlockedxor-intrinsic-functions.md)  
+ [_InterlockedXor 내장 함수](../intrinsics/interlockedxor-intrinsic-functions.md)  
   
- [\_\_invlpg](../intrinsics/invlpg.md)  
+ [__invlpg](../intrinsics/invlpg.md)  
   
- [\_\_inword](../intrinsics/inword.md)  
+ [__inword](../intrinsics/inword.md)  
   
- [\_\_inwordstring](../intrinsics/inwordstring.md)  
+ [__inwordstring](../intrinsics/inwordstring.md)  
   
- [\_\_lidt](../intrinsics/lidt.md)  
+ [__lidt](../intrinsics/lidt.md)  
   
- [\_\_ll\_lshift](../intrinsics/ll-lshift.md)  
+ [__ll_lshift](../intrinsics/ll-lshift.md)  
   
- [\_\_ll\_rshift](../intrinsics/ll-rshift.md)  
+ [__ll_rshift](../intrinsics/ll-rshift.md)  
   
- [\_\_lzcnt16, \_\_lzcnt, \_\_lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)  
+ [__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)  
   
- [\_mm\_cvtsi64x\_ss](../intrinsics/mm-cvtsi64x-ss.md)  
+ [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)  
   
- [\_mm\_cvtss\_si64x](../intrinsics/mm-cvtss-si64x.md)  
+ [_mm_cvtss_si64x](../intrinsics/mm-cvtss-si64x.md)  
   
- [\_mm\_cvttss\_si64x](../intrinsics/mm-cvttss-si64x.md)  
+ [_mm_cvttss_si64x](../intrinsics/mm-cvttss-si64x.md)  
   
- [\_mm\_extract\_si64, \_mm\_extracti\_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)  
+ [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)  
   
- [\_mm\_insert\_si64, \_mm\_inserti\_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)  
+ [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)  
   
- [\_mm\_stream\_sd](../intrinsics/mm-stream-sd.md)  
+ [_mm_stream_sd](../intrinsics/mm-stream-sd.md)  
   
- [\_mm\_stream\_si64x](../intrinsics/mm-stream-si64x.md)  
+ [_mm_stream_si64x](../intrinsics/mm-stream-si64x.md)  
   
- [\_mm\_stream\_ss](../intrinsics/mm-stream-ss.md)  
+ [_mm_stream_ss](../intrinsics/mm-stream-ss.md)  
   
- [\_\_movsb](../intrinsics/movsb.md)  
+ [__movsb](../intrinsics/movsb.md)  
   
- [\_\_movsd](../intrinsics/movsd.md)  
+ [__movsd](../intrinsics/movsd.md)  
   
- [\_\_movsq](../intrinsics/movsq.md)  
+ [__movsq](../intrinsics/movsq.md)  
   
- [\_\_movsw](../intrinsics/movsw.md)  
+ [__movsw](../intrinsics/movsw.md)  
   
- [\_\_mul128](../intrinsics/mul128.md)  
+ [__mul128](../intrinsics/mul128.md)  
   
- [\_\_mulh](../intrinsics/mulh.md)  
+ [__mulh](../intrinsics/mulh.md)  
   
- [\_\_noop](../intrinsics/noop.md)  
+ [__noop](../intrinsics/noop.md)  
   
- [\_\_nop](../intrinsics/nop.md)  
+ [__nop](../intrinsics/nop.md)  
   
- [\_\_outbyte](../intrinsics/outbyte.md)  
+ [__outbyte](../intrinsics/outbyte.md)  
   
- [\_\_outbytestring](../intrinsics/outbytestring.md)  
+ [__outbytestring](../intrinsics/outbytestring.md)  
   
- [\_\_outdword](../intrinsics/outdword.md)  
+ [__outdword](../intrinsics/outdword.md)  
   
- [\_\_outdwordstring](../intrinsics/outdwordstring.md)  
+ [__outdwordstring](../intrinsics/outdwordstring.md)  
   
- [\_\_outword](../intrinsics/outword.md)  
+ [__outword](../intrinsics/outword.md)  
   
- [\_\_outwordstring](../intrinsics/outwordstring.md)  
+ [__outwordstring](../intrinsics/outwordstring.md)  
   
- [\_\_popcnt16, \_\_popcnt, \_\_popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)  
+ [__popcnt16, \__popcnt, \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)  
   
- [\_\_rdtsc](../intrinsics/rdtsc.md)  
+ [__rdtsc](../intrinsics/rdtsc.md)  
   
- [\_\_rdtscp](../intrinsics/rdtscp.md)  
+ [__rdtscp](../intrinsics/rdtscp.md)  
   
- [\_ReadBarrier](../intrinsics/readbarrier.md)  
+ [_ReadBarrier](../intrinsics/readbarrier.md)  
   
- [\_\_readcr0](../intrinsics/readcr0.md)  
+ [__readcr0](../intrinsics/readcr0.md)  
   
- [\_\_readcr2](../intrinsics/readcr2.md)  
+ [__readcr2](../intrinsics/readcr2.md)  
   
- [\_\_readcr3](../intrinsics/readcr3.md)  
+ [__readcr3](../intrinsics/readcr3.md)  
   
- [\_\_readcr4](../intrinsics/readcr4.md)  
+ [__readcr4](../intrinsics/readcr4.md)  
   
- [\_\_readcr8](../intrinsics/readcr8.md)  
+ [__readcr8](../intrinsics/readcr8.md)  
   
- [\_\_readdr](../intrinsics/readdr.md)  
+ [__readdr](../intrinsics/readdr.md)  
   
- [\_\_readeflags](../intrinsics/readeflags.md)  
+ [__readeflags](../intrinsics/readeflags.md)  
   
- [\_\_readfsbyte, \_\_readfsdword, \_\_readfsqword, \_\_readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)  
+ [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)  
   
- [\_\_readgsbyte, \_\_readgsdword, \_\_readgsqword, \_\_readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)  
+ [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)  
   
- [\_\_readmsr](../intrinsics/readmsr.md)  
+ [__readmsr](../intrinsics/readmsr.md)  
   
- [\_\_readpmc](../intrinsics/readpmc.md)  
+ [__readpmc](../intrinsics/readpmc.md)  
   
- [\_ReadWriteBarrier](../intrinsics/readwritebarrier.md)  
+ [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)  
   
- [\_ReturnAddress](../intrinsics/returnaddress.md)  
+ [_ReturnAddress](../intrinsics/returnaddress.md)  
   
- [\_rotl8, \_rotl16](../intrinsics/rotl8-rotl16.md)  
+ [_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)  
   
- [\_rotr8, \_rotr16](../intrinsics/rotr8-rotr16.md)  
+ [_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)  
   
- [\_\_segmentlimit](../intrinsics/segmentlimit.md)  
+ [__segmentlimit](../intrinsics/segmentlimit.md)  
   
- [\_\_shiftleft128](../intrinsics/shiftleft128.md)  
+ [__shiftleft128](../intrinsics/shiftleft128.md)  
   
- [\_\_shiftright128](../intrinsics/shiftright128.md)  
+ [__shiftright128](../intrinsics/shiftright128.md)  
   
- [\_\_sidt](../intrinsics/sidt.md)  
+ [__sidt](../intrinsics/sidt.md)  
   
- [\_\_stosb](../intrinsics/stosb.md)  
+ [__stosb](../intrinsics/stosb.md)  
   
- [\_\_stosd](../intrinsics/stosd.md)  
+ [__stosd](../intrinsics/stosd.md)  
   
- [\_\_stosq](../intrinsics/stosq.md)  
+ [__stosq](../intrinsics/stosq.md)  
   
- [\_\_stosw](../intrinsics/stosw.md)  
+ [__stosw](../intrinsics/stosw.md)  
   
- [\_\_svm\_clgi](../intrinsics/svm-clgi.md)  
+ [__svm_clgi](../intrinsics/svm-clgi.md)  
   
- [\_\_svm\_invlpga](../intrinsics/svm-invlpga.md)  
+ [__svm_invlpga](../intrinsics/svm-invlpga.md)  
   
- [\_\_svm\_skinit](../intrinsics/svm-skinit.md)  
+ [__svm_skinit](../intrinsics/svm-skinit.md)  
   
- [\_\_svm\_stgi](../intrinsics/svm-stgi.md)  
+ [__svm_stgi](../intrinsics/svm-stgi.md)  
   
- [\_\_svm\_vmload](../intrinsics/svm-vmload.md)  
+ [__svm_vmload](../intrinsics/svm-vmload.md)  
   
- [\_\_svm\_vmrun](../intrinsics/svm-vmrun.md)  
+ [__svm_vmrun](../intrinsics/svm-vmrun.md)  
   
- [\_\_svm\_vmsave](../intrinsics/svm-vmsave.md)  
+ [__svm_vmsave](../intrinsics/svm-vmsave.md)  
   
- [\_\_ud2](../intrinsics/ud2.md)  
+ [__ud2](../intrinsics/ud2.md)  
   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)  
+ [__ull_rshift](../intrinsics/ull-rshift.md)  
   
- [\_umul128](../intrinsics/umul128.md)  
+ [_umul128](../intrinsics/umul128.md)  
   
- [\_\_umulh](../intrinsics/umulh.md)  
+ [__umulh](../intrinsics/umulh.md)  
   
- [\_\_vmx\_off](../intrinsics/vmx-off.md)  
+ [__vmx_off](../intrinsics/vmx-off.md)  
   
- [\_\_vmx\_on](../intrinsics/vmx-on.md)  
+ [__vmx_on](../intrinsics/vmx-on.md)  
   
- [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md)  
+ [__vmx_vmclear](../intrinsics/vmx-vmclear.md)  
   
- [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md)  
+ [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)  
   
- [\_\_vmx\_vmptrld](../intrinsics/vmx-vmptrld.md)  
+ [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)  
   
- [\_\_vmx\_vmptrst](../intrinsics/vmx-vmptrst.md)  
+ [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)  
   
- [\_\_vmx\_vmread](../intrinsics/vmx-vmread.md)  
+ [__vmx_vmread](../intrinsics/vmx-vmread.md)  
   
- [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md)  
+ [__vmx_vmresume](../intrinsics/vmx-vmresume.md)  
   
- [\_\_vmx\_vmwrite](../intrinsics/vmx-vmwrite.md)  
+ [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)  
   
- [\_\_wbinvd](../intrinsics/wbinvd.md)  
+ [__wbinvd](../intrinsics/wbinvd.md)  
   
- [\_WriteBarrier](../intrinsics/writebarrier.md)  
+ [_WriteBarrier](../intrinsics/writebarrier.md)  
   
- [\_\_writecr0](../intrinsics/writecr0.md)  
+ [__writecr0](../intrinsics/writecr0.md)  
   
- [\_\_writecr3](../intrinsics/writecr3.md)  
+ [__writecr3](../intrinsics/writecr3.md)  
   
- [\_\_writecr4](../intrinsics/writecr4.md)  
+ [__writecr4](../intrinsics/writecr4.md)  
   
- [\_\_writecr8](../intrinsics/writecr8.md)  
+ [__writecr8](../intrinsics/writecr8.md)  
   
- [\_\_writedr](../intrinsics/writedr.md)  
+ [__writedr](../intrinsics/writedr.md)  
   
- [\_\_writeeflags](../intrinsics/writeeflags.md)  
+ [__writeeflags](../intrinsics/writeeflags.md)  
   
- [\_\_writefsbyte, \_\_writefsdword, \_\_writefsqword, \_\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)  
+ [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)  
   
- [\_\_writegsbyte, \_\_writegsdword, \_\_writegsqword, \_\_writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)  
+ [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)  
   
- [\_\_writemsr](../intrinsics/writemsr.md)  
+ [__writemsr](../intrinsics/writemsr.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

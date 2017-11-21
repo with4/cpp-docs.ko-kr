@@ -1,37 +1,37 @@
 ---
-title: "_mm_extract_si64, _mm_extracti_si64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_extracti_si64"
-  - "_mm_extract_si64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "extrq 명령"
-  - "_mm_extracti_si64 내장 함수"
-  - "_mm_extract_si64 내장 함수"
+title: _mm_extract_si64, _mm_extracti_si64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _mm_extracti_si64
+- _mm_extract_si64
+dev_langs: C++
+helpviewer_keywords:
+- extrq instruction
+- _mm_extracti_si64 intrinsic
+- _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 33467ac3a4397c3f446abe370dca5dc16c1a92ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_extract_si64, _mm_extracti_si64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
 **Microsoft 전용**  
   
- 생성 하는 `extrq` 의 낮은 64 비트에서 첫 번째 인수를 지정한 비트 압축을 풀려면 명령.  
+ 생성 된 `extrq` 하위 64 비트의 첫 번째 인수에서 지정 된 비트를 추출 하는 명령입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 __m128i _mm_extract_si64(  
@@ -45,41 +45,41 @@ __m128i _mm_extracti_si64(
 );  
 ```  
   
-#### 매개 변수  
- \[in\]`Source`  
- 입력된 데이터의 하위 64 비트와 128 비트 필드입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `Source`  
+ 입력된 데이터의 하위 64 비트를 128 비트 필드입니다.  
   
- \[in\] `Descriptor`  
+ [in]`Descriptor`  
  추출 하는 비트 필드를 설명 하는 128 비트 필드입니다.  
   
- \[in\] `Length`  
- 추출할 필드의 길이 지정 하는 정수입니다.  
+ [in]`Length`  
+ 추출 하는 필드의 길이 지정 하는 정수입니다.  
   
- \[in\] `Index`  
- 추출할 필드의 인덱스를 지정 하는 정수입니다.  
+ [in]`Index`  
+ 추출 하는 필드의 인덱스를 지정 하는 정수  
   
-## 반환 값  
- 해당 lsb에서 추출 된 필드를 사용 하는 128 비트 필드입니다.  
+## <a name="return-value"></a>반환 값  
+ 최하위 비트에서 추출 된 필드와 128 비트 필드입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`_mm_extract_si64`|SSE4a|  
 |`_mm_extracti_si64`|SSE4a|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 내장이 생성 하는 `extrq` 에서 비트 압축을 풀려면 명령 `Source`.두 가지 버전의이 내장: `_mm_extracti_si64` 즉시 버전인 및 `_mm_extract_si64` \-직접 실행 됩니다.  각 버전 추출 `Source` 비트 필드 길이 및 인덱스의 최하위 비트를 정의 합니다.  값의 길이 인덱스가 64 mod 가져옵니다, 그리고 따라서\-1과 127\-63로 해석 됩니다.  \(감소\) 인덱스 및 길이 \(감소\) 필드의 합계 64 보다 큰 경우 결과 정의 되지 않습니다.  필드 길이 대 한 0 값을 64로 해석 됩니다.  필드 길이 비트 인덱스를 모두 0으로 비트 63:0의 경우 `Source` 추출 됩니다.  0이 아닌 비트 인덱스 된 필드 길이가 0 인 경우 결과 정의 되지 않습니다.  
+## <a name="remarks"></a>설명  
+ 이 내장 함수 생성의 `extrq` 의 비트를 추출 하는 명령을 `Source`합니다. 두 가지 버전의이 내장: `_mm_extracti_si64` 은 즉시 버전 및 `_mm_extract_si64` 즉시 라는 것입니다.  각 버전에서 추출 `Source` 비트 필드는 최하위 비트의 인덱스 및 길이 의해 정의 됩니다. 길이 인덱스의 값은 64 mod를-1 및 127 모두 63로 해석 되는 따라서 합니다. (감소) 인덱스와 (감소) 필드 길이 합하면 64 보다 큰 경우 결과가 정의 되지 않습니다. 필드 길이 0 값을 64로 해석 됩니다. 필드 길이 비트 인덱스의 비트 0 개, 두 63:0 경우 `Source` 추출 됩니다. 필드 길이 0 비트 인덱스는 0이 아닌 경우 결과가 정의 되지 않습니다.  
   
- 호출에 \_mm\_extract\_si64의 `Descriptor` 13: 8 비트 및 비트 5: 0에서 추출할 데이터 길이 필드의 인덱스를 포함 합니다.  
+ _Mm_extract_si64에 대 한 호출에는 `Descriptor` 13:8 비트 및 비트 5: 0에서 추출할 데이터의 필드 길이 내 인덱스를 포함...  
   
- 호출 하는 경우 `_mm_extracti_si64` 컴파일러는 정수 상수 여야 정하지 인수와 함께 컴파일러는 XMM 레지스터를 이러한 값을 압축 하는 코드를 생성 합니다 \(`Descriptor`\)를 호출 하 고 `_mm_extract_si64`.  
+ 호출 하는 경우 `_mm_extracti_si64` 컴파일러에서는 XMM 레지스터에 해당 값을 압축 하는 코드 인수는 컴파일러가 정수 상수를 확인할 수 없습니다 (`Descriptor`)를 호출 하 고 `_mm_extract_si64`합니다.  
   
- 하드웨어 지원을 확인 하는 `extrq` 명령, 호출의 `__cpuid` 와 내장 `InfoType=0x80000001` 6 비트를 확인 하 고 `CPUInfo[2] (ECX)`.  이 비트 명령이 지원 되지 않으면 1, 0 그렇지 않으면 됩니다.  내장 지원 하지 않는 하드웨어를 사용 하는 코드를 실행 하는 경우는 `extrq` 명령의 결과 없는 예측할 수 있습니다.  
+ 에 대 한 하드웨어 지원을 확인 하는 `extrq` 명령, 호출의 `__cpuid` 포함 된 내장 함수 `InfoType=0x80000001` 의 6 비트를 확인 하 고 `CPUInfo[2] (ECX)`합니다. 그렇지 않으면이 비트는 명령의 지원 되 면 1과 0 수 있습니다. 지원 하지 않는 내장이 하드웨어를 사용 하는 코드를 실행 하는 경우는 `extrq` 명령 결과 예측할 수 없습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -108,10 +108,15 @@ main()
 }  
 ```  
   
-  **result1 \= 0x30eca86 result2 result3 0x30eca86 \= 0x30eca86 \=**   
-## Microsoft 특정 끝  
- 저작권 2007 고급 마이크로 장치, Inc의. 모든 권리는 유보 됩니다.  사용 권한에서 고급 마이크로 장치, Inc를 재현.  
+```Output  
+result1 = 0x30eca86  
+result2 = 0x30eca86  
+result3 = 0x30eca86  
+```  
   
-## 참고 항목  
- [\_mm\_insert\_si64, \_mm\_inserti\_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
+**Microsoft 전용 종료**  
+ 고급 마이크로 장치, inc 2007 저작권 All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
+  
+## <a name="see-also"></a>참고 항목  
+ [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

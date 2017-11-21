@@ -1,11 +1,10 @@
 ---
-title: "SchedulerPolicy 클래스 | Microsoft 문서"
+title: "SchedulerPolicy 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - concrt/concurrency::SchedulerPolicy::GetPolicyValue
 - concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
 - concrt/concurrency::SchedulerPolicy::SetPolicyValue
-dev_langs:
-- C++
-helpviewer_keywords:
-- SchedulerPolicy class
+dev_langs: C++
+helpviewer_keywords: SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a00f7d9cafbd84fc3bbf6b10f322fad6166110cd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 289c505cc66e70a9634e3c183ae9511d99276940
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 클래스
 `SchedulerPolicy` 클래스에는 정책 요소마다 하나씩, 스케줄러 인스턴스의 동작을 제어하는 키/값 쌍 집합을 포함합니다.  
@@ -60,8 +42,8 @@ class SchedulerPolicy;
   
 |이름|설명|  
 |----------|-----------------|  
-|[SchedulerPolicy](#ctor)|오버로드됨. 새 스케줄러 정책을 생성 하 고에 대 한 값으로 채웁니다 [정책 키](concurrency-namespace-enums.md) 동시성 런타임이 스케줄러와 리소스 관리자에서 지원 합니다.|  
-|[~ SchedulerPolicy 소멸자](#dtor)|스케줄러 정책을 삭제합니다.|  
+|[SchedulerPolicy](#ctor)|오버로드됨. 새 스케줄러 정책을 생성 하 고에 대 한 값으로 채웁니다 [정책 키](concurrency-namespace-enums.md) 동시성 런타임 및 리소스 관리자에서 지원 합니다.|  
+|[~ SchedulerPolicy 소멸자](#dtor)|스케줄러 정책을 제거합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -69,7 +51,7 @@ class SchedulerPolicy;
 |----------|-----------------|  
 |[GetPolicyValue](#getpolicyvalue)|제공 된 정책 키 값 검색은 `key` 매개 변수입니다.|  
 |[SetConcurrencyLimits](#setconcurrencylimits)|동시에 설정 된 `MinConcurrency` 및 `MaxConcurrency` 에 정책을 `SchedulerPolicy` 개체입니다.|  
-|[SetPolicyValue](#setpolicyvalue)|제공 된 정책 키 값 집합은 `key` 매개 변수 하 고 이전 값을 반환 합니다.|  
+|[SetPolicyValue](#setpolicyvalue)|제공 된 정책 키 값 집합은 `key` 매개 변수 이전 값을 반환 합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -77,8 +59,8 @@ class SchedulerPolicy;
 |----------|-----------------|  
 |[operator=](#operator_eq)|다른 스케줄러 정책에서 스케줄러 정책을 할당합니다.|  
   
-## <a name="remarks"></a>주의  
- 사용 하 여 제어할 수 있는 정책에 대 한 자세한 내용은 `SchedulerPolicy` 클래스를 참조 하십시오 [PolicyElementKey](concurrency-namespace-enums.md)합니다.  
+## <a name="remarks"></a>설명  
+ 사용 하 여 제어할 수 있는 정책에 대 한 자세한 내용은 `SchedulerPolicy` 클래스를 참조 하십시오. [PolicyElementKey](concurrency-namespace-enums.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `SchedulerPolicy`  
@@ -98,13 +80,13 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
   
 ### <a name="parameters"></a>매개 변수  
  `key`  
- 정책 키에 대 한 값입니다.  
+ 에 대 한 값을 검색 하는 정책 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정 된 키의 경우는 `key` 매개 변수는 지원, 키에 대 한 정책 값으로 캐스팅 한 `unsigned int`합니다.  
+ 지정 된 키의 경우는 `key` 매개 변수는 지원, 키에 대 한 정책 값 캐스팅는 `unsigned int`합니다.  
   
 ### <a name="remarks"></a>설명  
- 메서드를 발생 시킵니다 [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) 는 잘못 된 정책 키에 대 한 합니다.  
+ 합니다 [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) 잘못 된 정책 키에 대 한 합니다.  
   
 ##  <a name="operator_eq"></a>연산자 = 
 
@@ -121,12 +103,12 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="return-value"></a>반환 값  
  스케줄러 정책에 대 한 참조입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  대부분의 경우 새로운 스케줄러 정책을 정의하는 가장 편리한 방법은 기존 정책을 복사한 후 `SetPolicyValue` 또는 `SetConcurrencyLimits` 메서드를 사용하여 수정하는 것입니다.  
   
 ##  <a name="ctor"></a>SchedulerPolicy 
 
- 새 스케줄러 정책을 생성 하 고에 대 한 값으로 채웁니다 [정책 키](concurrency-namespace-enums.md) 동시성 런타임이 스케줄러와 리소스 관리자에서 지원 합니다.  
+ 새 스케줄러 정책을 생성 하 고에 대 한 값으로 채웁니다 [정책 키](concurrency-namespace-enums.md) 동시성 런타임 및 리소스 관리자에서 지원 합니다.  
   
 ```
 SchedulerPolicy();
@@ -141,21 +123,21 @@ SchedulerPolicy(
   
 ### <a name="parameters"></a>매개 변수  
  `_PolicyKeyCount`  
- 키/값 쌍의 수 따르는 `_PolicyKeyCount` 매개 변수입니다.  
+ 다음에 나오는 쌍 하는 키/값의 수는 `_PolicyKeyCount` 매개 변수입니다.  
   
  `_SrcPolicy`  
- 복사할 소스 정책입니다.  
+ 복사할 원본 정책입니다.  
   
-### <a name="remarks"></a>주의  
- 첫 번째 생성자는 모든 정책을 기본값으로 초기화 될 경우 새로운 스케줄러 정책을 만듭니다.  
+### <a name="remarks"></a>설명  
+ 첫 번째 생성자는 모든 정책이를 기본값으로 초기화 될 경우 새로운 스케줄러 정책을 만듭니다.  
   
- 두 번째 생성자는 초기화의 명명 된 매개 변수 스타일을 사용 하는 경우 새로운 스케줄러 정책을 만듭니다. 완료 후의 값은 `_PolicyKeyCount` 매개 변수는 키/값 쌍으로 제공 됩니다. 이 생성자에 지정 되지 않은 모든 정책 키는 기본 값을 갖게 됩니다. 이 생성자는 예외를 throw 할 수 [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) 또는 [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)합니다.  
+ 두 번째 생성자는 초기화의 명명 된 매개 변수 스타일을 사용 하는 경우 새로운 스케줄러 정책을 만듭니다. 완료 후의 값은 `_PolicyKeyCount` 매개 변수는 키/값 쌍으로 제공 됩니다. 이 생성자에 지정 되지 않은 모든 정책 키는 기본 값을 갖게 됩니다. 이 생성자는 예외를 throw 할 수 있습니다 [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) 또는 [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).  
   
  세 번째 생성자는 복사 생성자입니다. 대부분의 경우 새로운 스케줄러 정책을 정의하는 가장 편리한 방법은 기존 정책을 복사한 후 `SetPolicyValue` 또는 `SetConcurrencyLimits` 메서드를 사용하여 수정하는 것입니다.  
   
 ##  <a name="dtor"></a>~ SchedulerPolicy 
 
- 스케줄러 정책을 삭제합니다.  
+ 스케줄러 정책을 제거합니다.  
   
 ```
 ~SchedulerPolicy();
@@ -178,14 +160,14 @@ void SetConcurrencyLimits(
  `_MaxConcurrency`  
  에 대 한 값은 `MaxConcurrency` 정책 키입니다.  
   
-### <a name="remarks"></a>주의  
- 메서드를 발생 시킵니다 [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) 에 대 한 지정 된 값은 `MinConcurrency` 정책에 대 한 지정 된 것 보다 크면는 `MaxConcurrency` 정책입니다.  
+### <a name="remarks"></a>설명  
+ 합니다 [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) 에 대 한 지정 된 값은 `MinConcurrency` 정책에 대 한 지정 된 것 보다 크면는 `MaxConcurrency` 정책입니다.  
   
- 메서드가 throw 할 수 있습니다 [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) 에 다른 잘못 된 값입니다.  
+ 메서드가 throw 할 수 있습니다 [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) 다른 잘못 된 값에 대 한 합니다.  
   
 ##  <a name="setpolicyvalue"></a>SetPolicyValue 
 
- 제공 된 정책 키 값 집합은 `key` 매개 변수 하 고 이전 값을 반환 합니다.  
+ 제공 된 정책 키 값 집합은 `key` 매개 변수 이전 값을 반환 합니다.  
   
 ```
 unsigned int SetPolicyValue(
@@ -201,14 +183,14 @@ unsigned int SetPolicyValue(
  정책 키를 설정할 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정 된 키의 경우는 `key` 매개 변수는 지원, 키에 대 한 오래 된 정책 값으로 캐스팅 한 `unsigned int`합니다.  
+ 지정 된 키의 경우는 `key` 매개 변수는 지원, 키에 대 한 오래 된 정책 값 캐스팅는 `unsigned int`합니다.  
   
-### <a name="remarks"></a>주의  
- 메서드를 발생 시킵니다 [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) 잘못 된 정책 키 또는 값으로 설정할 수 없습니다 모든 정책 키에 대해는 `SetPolicyValue` 메서드.  
+### <a name="remarks"></a>설명  
+ 합니다 [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) 잘못 된 정책 키 또는 값으로 설정할 수 있는 정책 키에 대 한는 `SetPolicyValue` 메서드.  
   
- 메서드를 발생 시킵니다 [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) 하 여 지정 된 키에 대 한 지원 되지 않는 값에 대 한는 `key` 매개 변수입니다.  
+ 합니다 [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) 으로 지정 된 키에 대 한 지원 되지 않는 값에 대 한는 `key` 매개 변수입니다.  
   
- 이 메서드는 설정할 수 없습니다는 `MinConcurrency` 또는 `MaxConcurrency` 정책. 이러한 값을 설정 하려면는 [SetConcurrencyLimits](#setconcurrencylimits) 메서드.  
+ 이 메서드가 설정 하는 허용 되지 않습니다는 `MinConcurrency` 또는 `MaxConcurrency` 정책입니다. 이러한 값을 설정 하려면는 [SetConcurrencyLimits](#setconcurrencylimits) 메서드.  
   
 ## <a name="see-also"></a>참고 항목  
  [Namespace 동시성](concurrency-namespace.md)   
@@ -216,7 +198,6 @@ unsigned int SetPolicyValue(
  [CurrentScheduler 클래스](currentscheduler-class.md)   
  [Scheduler 클래스](scheduler-class.md)   
  [작업 스케줄러](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
 
 
 

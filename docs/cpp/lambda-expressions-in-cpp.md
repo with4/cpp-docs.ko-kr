@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 07/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: eaf06a81979294b20f3b9b2f15cfcaab6be0008b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b7af430bd8c509713d5be76ea0f64601a91c35cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lambda-expressions-in-c"></a>C++의 람다 식
 C + + 11 이상 버전에서는 람다 식을-라고도 *람다*-익명 함수 개체를 정의 하는 편리한 방법 (한 *클로저*) 여기서은 호출 되었거나 인수로 서 전달 된 위치에서 바로 에 함수입니다. 일반적으로 람다는 알고리즘이나 비동기 메서드에 전달되는 몇 줄의 코드를 캡슐화하는 데 사용됩니다. 이 문서에서는 람다가 무엇인지 정의하고 다른 프로그래밍 기법과 비교하고 그 장점을 설명하며 기본 예제를 제공합니다.  
@@ -141,7 +138,7 @@ pNums = make_unique<vector<int>>(nums);
  변수를 캡처하는 것 외에도, 람다는 입력 매개 변수를 사용할 수 있습니다. 매개 변수 목록 (*람다 선언 자* 표준 구문에서는)는 선택 사항이 며 대부분의 측면에서 함수에 대 한 매개 변수 목록와 유사 합니다.  
   
 ```cpp  
-int y = [] (int first, int second)  
+auto y = [] (int first, int second)  
 {  
     return first + second;  
 };  
@@ -159,7 +156,7 @@ auto y = [] (auto first, auto second)
   
  람다 식은 다른 람다 식을 인수로 사용할 수 있습니다. 자세한 내용은 항목의 "고차 람다 식" 참조 [람다 식의 예](../cpp/examples-of-lambda-expressions.md)합니다.  
   
- 람다 식에 인수를 전달 하지 않으면 람다-선언에 없는 경우 빈 괄호를 생략할 수 매개 변수 목록은 선택 사항 이므로 *예외 사양이*, * 후행 반환 형식당*, 또는 `mutable`합니다.  
+ 람다 식에 인수를 전달 하지 않으면 람다-선언에 없는 경우 빈 괄호를 생략할 수 매개 변수 목록은 선택 사항 이므로 *예외 사양이*,  *후행 반환 형식당*, 또는 `mutable`합니다.  
   
 ### <a name="mutable-specification"></a>변경 가능한 사양  
  일반적으로 람다 함수 호출 연산자는 값 단위 상수이지만 `mutable` 키워드를 사용할 경우 이를 취소합니다. 변경 가능 데이터 멤버가 생성되지 않습니다. 변경 가능한 사양을 사용하면 람다 식의 본문이 값별로 캡처되는 변수를 수정할 수 있습니다. 이 문서의 뒷부분에 나오는 몇 가지 예제는 `mutable` 키워드 사용 방법에 대해 설명합니다.  

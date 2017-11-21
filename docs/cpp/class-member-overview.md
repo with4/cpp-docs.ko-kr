@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - members [C++], types of class members
 - members [C++]
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0a5a62edf0e71b4fecf25cf10731af7d7c515da7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 82daf0ecf506d55a6067b30ee568e11bf3e82364
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="class-member-overview"></a>클래스 멤버 개요
 클래스 또는 구조체는 멤버로 구성됩니다. 클래스가 수행하는 작업은 해당 멤버 함수에 의해 수행됩니다. 클래스가 유지하는 상태는 해당 데이터 멤버에 저장됩니다. 생성자 및 메모리와 같은 정리 작업에서 멤버의 초기화가 수행 하 고 소멸자를 통해 이루어집니다 리소스 해제 키를 누릅니다. C++11 이상에서는 선언 지점에 데이터 멤버를 초기화할 수 있으며 일반적으로 초기화해야 합니다.  
@@ -113,11 +110,11 @@ int TestRun::_instances{ 0 };
   
 2.  복사 생성자  
   
-3.  **(C + + 11) ** 이동 생성자  
+3.  **(C + + 11)**  이동 생성자  
   
 4.  복사 할당 연산자  
   
-5.  **(C + + 11) ** 이동 할당 연산자  
+5.  **(C + + 11)**  이동 할당 연산자  
   
 6.  소멸자  
   
@@ -179,4 +176,3 @@ int CanInit2::j = i;
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)
-

@@ -1,32 +1,30 @@
 ---
-title: "list::sort(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::sort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sort 멤버[STL/CLR]"
+title: 'list:: sort (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::sort
+dev_langs: C++
+helpviewer_keywords: sort member [STL/CLR]
 ms.assetid: f811d5f4-a19e-4194-8765-1e68097c52f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6531459f26605aa63eccbe69c84959b2abe70493
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::sort(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-제어되는 시퀀스를 정렬합니다.  
+# <a name="listsort-stlclr"></a>list::sort(STL/CLR)
+제어 된 시퀀스를 정렬 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void sort();  
@@ -34,18 +32,18 @@ template<typename Pred2>
     void sort(Pred2 pred);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  pred  
- Comparer for element pairs.  
+ 요소 쌍에 대 한 비교자입니다.  
   
-## 설명  
- The first member function rearranges the elements in the controlled sequence so that they are ordered by `operator<` \-\- elements do not decrease in value as you progress through the sequence.  You use this member function to sort the sequence in increasing order.  
+## <a name="remarks"></a>설명  
+ 첫 번째 멤버 함수 다시 제어 된 시퀀스의 요소 정렬로 정렬 됩니다 있는 `operator<` -시퀀스를 진행 하면서 값 요소 줄어들지 않습니다. 이 멤버 함수를 사용 하 여 오름차순으로 정렬 순서를 정렬 합니다.  
   
- The second member function behaves the same as the first, except that the sequence is ordered by `pred` \-\- `pred``(X, Y)` is false for any element `X` that follows element `Y` in the resultant sequence.  You use it to sort the sequence in an order that you specify by a predicate function or delegate.  
+ 두 번째 멤버 함수는 동일 하 게 동작 첫 번째 시퀀스는 기준으로 정렬 한다는 점을 제외 하면 `pred`  --  `pred(X, Y)` 모든 요소에 대해 false가 `X` 요소 다음에 오는 `Y` 결과 시퀀스에서 합니다. 조건자 함수 또는 대리자에 의해 지정 된 순서에 따라 시퀀스를 정렬 하려면 사용 합니다.  
   
- Both functions perform a stable sort \-\- no pair of elements in the original controlled sequence is reversed in the resulting controlled sequence.  
+ 모두 안정적인 정렬 수행 하는 기능이-결과 제어 된 시퀀스에서 제어 되는 원래 시퀀스의 요소 쌍 없는 속도가 반대로 바뀝니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_sort.cpp   
@@ -80,17 +78,20 @@ int main()
   
 ```  
   
-  **a b c**  
- **c b a**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+a b c  
+c b a  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::merge](../dotnet/list-merge-stl-clr.md)   
- [list::reverse](../dotnet/list-reverse-stl-clr.md)   
- [list::splice](../dotnet/list-splice-stl-clr.md)   
- [list::unique](../dotnet/list-unique-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)   
+ [list:: reverse (STL/CLR)](../dotnet/list-reverse-stl-clr.md)   
+ [list:: splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)   
+ [list::unique(STL/CLR)](../dotnet/list-unique-stl-clr.md)

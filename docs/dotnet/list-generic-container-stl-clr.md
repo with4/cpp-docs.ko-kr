@@ -1,32 +1,30 @@
 ---
-title: "list::generic_container(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container 멤버[STL/CLR]"
+title: 'list:: generic_container (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 1a8b708e-3c75-4551-a86e-5b50d6be706a
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7be6b4fa0f8c5d3c9c22487ad29b7a4d874c6d71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# list::generic_container(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-컨테이너에 대한 제네릭 인터페이스의 형식입니다.  
+# <a name="listgenericcontainer-stlclr"></a>list::generic_container(STL/CLR)
+컨테이너에 대 한 제네릭 인터페이스의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## 설명  
- 형식은이 템플릿 컨테이너 클래스에 대한 제네릭 인터페이스를 설명합니다.  
+## <a name="remarks"></a>설명  
+ 이 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_generic_container.cpp   
@@ -81,18 +79,21 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c d**  
- **a b c d e**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualC.StlClr.IList%601>   
- [list](../dotnet/list-stl-clr.md)   
- [list::generic\_iterator](../dotnet/list-generic-iterator-stl-clr.md)   
- [list::generic\_reverse\_iterator](../dotnet/list-generic-reverse-iterator-stl-clr.md)   
- [list::generic\_value](../dotnet/list-generic-value-stl-clr.md)
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)   
+ [list:: generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)   
+ [list::generic_value(STL/CLR)](../dotnet/list-generic-value-stl-clr.md)

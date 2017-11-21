@@ -1,34 +1,31 @@
 ---
-title: "ComPtrRef::operator!= 연산자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator!="
-dev_langs: 
-  - "C++"
+title: "Comptrref:: Operator! = 연산자 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator!=
+dev_langs: C++
 ms.assetid: ab3093cc-6fbd-4039-890a-6df1cde992b6
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a61ed97ffd3caad6d254d3258711a7b45ad3c0dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtrRef::operator!= 연산자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-WRL 인프라구조체를 지원하고 코드에서 직접적으로 사용되는 것을 의도하지 않습니다.  
+# <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= 연산자
+WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
-  
 bool operator!=(  
    const Details::ComPtrRef<ComPtr<T>>& a,  
    const Details::ComPtrRef<ComPtr<U>>& b  
@@ -55,28 +52,28 @@ bool operator!=(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `a`  
- ComPtrRef개체에 대한 참조를 가져옵니다.  
+ ComPtrRef 개체에 대 한 참조입니다.  
   
  `b`  
- 익명 개체에 대한 포인터 또는 다른 ComPtrRef 개체에 대한 참조 \(`void*`\).  
+ 다른 ComPtrRef 개체 또는 익명 개체에 대 한 포인터에 대 한 참조 (`void*`).  
   
-## 반환 값  
- 만일 개체 `a` 가 개체 `b` 과 동일하지 않다면, 첫번째 연산자는 `true` 를 산출합니다. 그렇지 않으면 `false` 을 산출합니다.  
+## <a name="return-value"></a>반환 값  
+ 첫 번째 연산자 수확량 `true` 경우 개체 `a` 개체과 같지 않은 `b`, 그렇지 않으면 `false`합니다.  
   
- 만일 개체 `a` 가 `nullptr` 과 동일하지 않다면, 두 번째와 세 번째 연산자는 `true`를 산출합니다. 그렇지 않으면, `false` 을 산출합니다.  
+ 두 번째 및 세 번째 연산자에서 생성 `true` 경우 개체 `a` 과 같지 않은 `nullptr`, 그렇지 않으면 `false`합니다.  
   
- 개체 `a` 가 개체 `b` 과 동일하지 않다면, 네 번째 와 다섯 번째 연산자는 `true` 입니다, 그렇지 않으면, `false` 입니다.  
+ 네 번째와 다섯 번째 연산자에서 생성 `true` 경우 개체 `a` 개체과 같지 않은 `b`, 그렇지 않으면 `false`합니다.  
   
-## 설명  
- 두 ComPtrRef 개체가 같지 않은지 여부를 나타냅니다.  
+## <a name="remarks"></a>설명  
+ 두 개의 ComPtrRef 개체가 같지 않은지 여부를 나타냅니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  
   
  **네임스페이스:** Microsoft::WRL  
   
-## 참고 항목  
- [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)   
+## <a name="see-also"></a>참고 항목  
+ [Microsoft::WRL::Details Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [ComPtrRef 클래스](../windows/comptrref-class.md)

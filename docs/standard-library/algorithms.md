@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -17,30 +15,15 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5b5ffafb841fcb883dc66880933e8d123256e575
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: c660170872662a72a8f4f48b6d6ee81ed0d2b8d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="algorithms"></a>알고리즘
 알고리즘은 C++ 표준 라이브러리의 기본적인 부분입니다. 알고리즘은 컨테이너 자체가 아니라 반복기에서 작동합니다. 따라서 모두는 아니지만 대부분의 C++ 표준 라이브러리 컨테이너에서 동일한 알고리즘을 사용할 수 있습니다. 이 섹션에서는 C++ 표준 라이브러리 알고리즘의 규칙 및 용어를 설명합니다.  
@@ -48,9 +31,9 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>설명  
  알고리즘 템플릿 함수에 대한 설명은 다음과 같은 여러 약어 구를 사용합니다.  
   
--   "[*A*, *B*) 범위" 구는 *A*부터 *B*까지(포함 안 함)&0;개 이상 불연속 값의 시퀀스를 의미합니다. 범위는 *A;*에서 *B*에 연결할 수 있는 경우에만 유효합니다. *N* (*N* = *A*) 개체에 *A*를 저장하고, 개체를&0;번 이상(++*N*) 증가시키고, 유한 증분 수(N == B*)* 후에 개체가 *B*와 같도록 할 수 있습니다.  
+-   "[*A*, *B*) 범위" 구는 *A*부터 *B*까지(포함 안 함) 0개 이상 불연속 값의 시퀀스를 의미합니다. 범위는 *A;*에서 *B*에 연결할 수 있는 경우에만 유효합니다. *N* (*N* = *A*) 개체에 *A*를 저장하고, 개체를 0번 이상(++*N*) 증가시키고, 유한 증분 수(N == B*)* 후에 개체가 *B*와 같도록 할 수 있습니다.  
   
--   "[*A*, *B*) 범위의 각 *N*" 구는 *N*이 *A* 값으로 시작하고 *B* 값과 같을 때까지&0;번 이상 증분됨을 의미합니다. *N* == *B*의 경우는 범위에 포함되지 않습니다.  
+-   "[*A*, *B*) 범위의 각 *N*" 구는 *N*이 *A* 값으로 시작하고 *B* 값과 같을 때까지 0번 이상 증분됨을 의미합니다. *N* == *B*의 경우는 범위에 포함되지 않습니다.  
   
 -   "*X*인 [*A*, *B*) 범위의 가장 낮은 값 *N*"은 *X* 조건이 충족될 때까지 *X* 조건이 [*A*, *B*) 범위의 각 *N*에 대해 확인됨을 의미합니다.  
   
@@ -79,5 +62,4 @@ ms.lasthandoff: 02/24/2017
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)   
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

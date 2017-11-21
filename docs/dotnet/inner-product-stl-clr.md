@@ -1,32 +1,30 @@
 ---
-title: "inner_product(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::inner_product"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inner_product 함수[STL/CLR]"
+title: inner_product (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::inner_product
+dev_langs: C++
+helpviewer_keywords: inner_product function [STL/CLR]
 ms.assetid: 97d7a507-7494-4216-aedf-0546ed0edb3f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d10b4b3b62c135e110f63acb555691c256450491
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# inner_product(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Computes the sum of the element\-wise product of two ranges and adds it to a specified initial value or computes the result of a generalized procedure where the sum and product binary operations are replaced by other specified binary operations.  
+# <a name="innerproduct-stlclr"></a>inner_product(STL/CLR)
+두 범위의 요소 전체의 곱의 합을 계산하여 지정된 초기값에 추가하거나 합 및 곱 이진 연산을 지정된 다른 이진 연산으로 대체한 일반화된 절차의 결과를 계산합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _InIt1, class _InIt2, class _Ty> inline  
@@ -38,13 +36,13 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
         _Ty _Val, _Fn21 _Func1, _Fn22 _Func2);  
 ```  
   
-## 설명  
- This function behaves the same as the STL numeric function `inner_product`.  자세한 내용은 [inner\_product](../Topic/inner_product.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 숫자 함수와 동일 하 게 작동 `inner_product`합니다. 자세한 내용은 참조 [inner_product](../standard-library/numeric-functions.md#inner_product)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/numeric\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/숫자 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [numeric](../dotnet/numeric-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [numeric(STL/CLR)](../dotnet/numeric-stl-clr.md)

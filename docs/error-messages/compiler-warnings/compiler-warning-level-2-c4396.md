@@ -1,50 +1,30 @@
 ---
-title: "컴파일러 경고 (수준 2) C4396 | Microsoft 문서"
+title: "컴파일러 경고 (수준 2) C4396 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4396
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4396
+f1_keywords: C4396
+dev_langs: C++
+helpviewer_keywords: C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 84f0628de933344eb23dc6325679abdcd3699c3a
-ms.openlocfilehash: 8e0538cc5a1ec9279c4d84cb9e23e0d6fabfd77e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 5bee2614d479ec54bf9d49c92deb336eee05d285
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-2-c4396"></a>컴파일러 경고(수준 2) C4396
 "name": friend 선언이 함수 템플릿의 특수화를 참조하는 경우 인라인 지정자를 사용할 수 없습니다.  
   
- 함수 템플릿의 특수화를 지정할 수 없으므로 [인라인](../../cpp/inline-functions-cpp.md) 지정자입니다. 컴파일러가 C4396 경고를 실행하고 인라인 지정자를 무시합니다.  
+ 함수 템플릿의 특수화 중 하나를 지정할 수 없습니다는 [인라인](../../cpp/inline-functions-cpp.md) 지정자입니다. 컴파일러가 C4396 경고를 실행하고 인라인 지정자를 무시합니다.  
   
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   

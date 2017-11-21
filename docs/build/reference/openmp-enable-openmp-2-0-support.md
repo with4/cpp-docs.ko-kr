@@ -1,81 +1,80 @@
 ---
-title: "/openmp(OpenMP 2.0 지원 활성화) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/openmp"
-  - "VC.Project.VCCLCompilerTool.OpenMP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/openmp 컴파일러 옵션[C++]"
-  - "-openmp 컴파일러 옵션[C++]"
+title: "-openmp (OpenMP 2.0 지원 활성화) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /openmp
+- VC.Project.VCCLCompilerTool.OpenMP
+dev_langs: C++
+helpviewer_keywords:
+- /openmp compiler option [C++]
+- -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-caps.latest.revision: 21
-caps.handback.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 61f0617a07d71624e11f2c9adaceac7691192585
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# /openmp(OpenMP 2.0 지원 활성화)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-컴파일러가 `#pragma` [omp](../../preprocessor/omp.md)를 처리하도록 합니다.  
+# <a name="openmp-enable-openmp-20-support"></a>/openmp(OpenMP 2.0 지원 활성화)
+컴파일러에서 처리 하도록 `#pragma` [omp](../../preprocessor/omp.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /openmp  
 ```  
   
-## 설명  
- `#pragma omp`는 [Directives](../../parallel/openmp/reference/openmp-directives.md) 및 [Clauses](../../parallel/openmp/reference/openmp-clauses.md)를 지정하는데 사용됩니다.  컴파일할 때 **\/openmp**를 지정하지 않으면 컴파일러는 OpenMP 절 및 지시문을 무시합니다.  **\/openmp**를 지정하지 않은 경우에도 컴파일러는 [OpenMP Function](../../parallel/openmp/reference/openmp-functions.md) 호출을 처리합니다.  
+## <a name="remarks"></a>설명  
+ `#pragma omp`지정 하는 데 사용 되 [지시문](../../parallel/openmp/reference/openmp-directives.md) 및 [절](../../parallel/openmp/reference/openmp-clauses.md)합니다. 경우 **/openmp** 지정 하지 않으면 컴파일, 컴파일러 OpenMP 절과 지시문을 무시 합니다. [OpenMP 함수](../../parallel/openmp/reference/openmp-functions.md) 경우에도 해당 컴파일러에서 호출을 처리 **/openmp** 지정 되지 않았습니다.  
   
- [Libraries](../../parallel/openmp/reference/openmp-libraries.md)를 사용하여 **\/openmp**로 컴파일된 응용 프로그램은 Windows 2000 이상의 운영 체제에서만 실행할 수 있습니다.  
+ 응용 프로그램을 컴파일하면 **/openmp** 를 사용 하 고는 [라이브러리](../../parallel/openmp/reference/openmp-libraries.md) Windows 2000 이상의 운영 체제에서 실행할 수 있습니다.  
   
- **\/openmp** 및 **\/clr**로 컴파일된 응용 프로그램은 단일 응용 프로그램 도메인 프로세스에서만 실행될 수 있습니다. 여러 응용 프로그램 도메인은 지원되지 않습니다.  즉, 모듈 생성자\(.cctor\)가 실행되면 모듈 생성자는 프로세스가 **\/openmp**로 컴파일되었는지 여부 및 응용 프로그램이 기본이 아닌 런타임으로 로드되고 있는지 여부를 감지합니다.  자세한 내용은 [appdomain](../../cpp/appdomain.md), [\/clr\(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md) 및 [혼합형 어셈블리 초기화](../../dotnet/initialization-of-mixed-assemblies.md)를 참조하십시오.  
+ 로 컴파일된 응용 프로그램 **/openmp** 및 **/clr** 단일 응용 프로그램 도메인 프로세스에서 실행할 수 있습니다; 여러 응용 프로그램 도메인을 지원 하지 않습니다. 즉, (.cctor) 모듈 생성자를 실행 검색 하는 프로세스를 사용 하 여 컴파일되며 **/openmp** 응용 프로그램 기본이 아닌 런타임으로 로드 되 면 하 고 있습니다. 자세한 내용은 참조 [appdomain](../../cpp/appdomain.md), [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md), 및 [혼합형 어셈블리 초기화](../../dotnet/initialization-of-mixed-assemblies.md)합니다.  
   
- **\/openmp** 및 **\/clr**로 컴파일된 응용 프로그램을 기본이 아닌 응용 프로그램 도메인으로 로드하려고 하면 디버거 외부에서는 <xref:System.TypeInitializationException> 예외가 throw되고 디버거에서는 OpenMPWithMultipleAppdomainsException 예외가 throw됩니다.  
+ 사용 하 여 컴파일된 응용 프로그램을 로드 하려고 하면 **/openmp** 및 **/clr** 기본이 아닌 응용 프로그램 도메인에 <xref:System.TypeInitializationException> 디버거 외부에서 예외가 throw 됩니다 및 디버거에서 OpenMPWithMultipleAppdomainsException 예외가 throw 됩니다.  
   
- 이들 예외는 다음과 같은 경우에도 발생할 수 있습니다.  
+ 이러한 예외는 다음과 같은 경우에도 발생할 수 있습니다.  
   
--   **\/clr**로 컴파일되었지만 **\/openmp**는 지정되지 않은 응용 프로그램이 기본이 아닌 응용 프로그램 도메인으로 로드되었고 프로세스에 **\/openmp**로 컴파일된 응용 프로그램이 포함된 경우  
+-   응용 프로그램으로 컴파일할 경우 **/clr**, 익숙하지 않습니다 **/openmp**, 기본이 아닌 응용 프로그램 도메인에 있지만 프로세스도 컴파일된 응용 프로그램을 포함 하는 위치에 로드 되 **/ openmp**합니다.  
   
--   대상 어셈블리를 기본이 아닌 응용 프로그램 도메인으로 로드하는 regasm.exe\([Regasm.exe\(어셈블리 등록 도구\)](../Topic/Regasm.exe%20\(Assembly%20Registration%20Tool\).md)\)와 같은 유틸리티에 **\/clr** 응용 프로그램을 전달하는 경우  
+-   전달 하는 경우 프로그램 **/clr** regasm.exe 등의 유틸리티에 대 한 응용 프로그램 ([Regasm.exe (어셈블리 등록 도구)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)), 기본이 아닌 응용 프로그램 도메인에 대상 어셈블리 로드 합니다.  
   
- OpenMP 영역에서는 공용 언어 런타임의 코드 액세스 보안이 작동하지 않습니다.  병렬 영역 외부에서 CLR 코드 액세스 보안 특성을 적용하면 병렬 영역에는 적용되지 않습니다.  
+ 공용 언어 런타임 코드 액세스 보안 OpenMP 지역에서 작동 하지 않습니다. 병렬 영역 외부 CLR 코드 액세스 보안 특성을 적용 하는 경우 병렬 영역에 적용할 수 없습니다.  
   
- <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 또는 기타 CLR 코드 액세스 보안 특성을 통해 부분적으로 신뢰할 수 있는 호출자를 허용하는 **\/openmp** 응용 프로그램은 작성하지 않는 것이 좋습니다.  
+ Microsoft 작성 하지 않으면 조언 **/openmp** 신뢰할 수 있는 호출자를 사용 하 여 부분적으로 허용 하는 응용 프로그램 <xref:System.Security.AllowPartiallyTrustedCallersAttribute>, 또는 모든 CLR 코드 액세스 보안 특성입니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **구성 속성** 노드를 확장합니다.  
+2.  확장 된 **구성 속성** 노드.  
   
-3.  **C\/C\+\+** 노드를 확장합니다.  
+3.  확장 된 **C/c + +** 노드.  
   
-4.  **언어** 속성 페이지를 클릭합니다.  
+4.  선택 된 **언어** 속성 페이지.  
   
-5.  **OpenMP 지원** 속성을 수정합니다.  
+5.  수정 된 **OpenMP 지원** 속성입니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OpenMP%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OpenMP%2A>을 참조하세요.  
   
-## 예제  
- 다음 샘플에서는 threadpool 시작과 threadpool이 시작된 다음 사용하는 것의 효과를 비교하여 보여 줍니다.  x64, 단일 코어, 이중 프로세서의 경우 threadpool이 시작되는 데 약 16밀리초가 걸립니다.  시작된 다음에는 threadpool을 부하가 거의 없이 사용할 수 있습니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 threadpool 시작 시작 된 후 스레드 풀을 사용 하 여 비교 결과 중 일부를 보여 줍니다. X64, 단일 코어 가정 듀얼 프로세서 threadpool 이동 약 되 시작 합니다. 그 후 하지만 비용은 거의 threadpool에 대 한 합니다.  
   
- **\/openmp**로 컴파일하면 threadpool이 시작되지 않으므로 test2에 대한 두 번째 호출의 실행 시간은 **\/openmp\-**로 컴파일할 때보다 길어질 수 없습니다.  백만번 반복한 결과에서는 test2에 대한 두 번째 호출에서 **\/openmp** 버전이 **\/openmp\-** 버전보다 빠릅니다. 25번 반복한 결과에서는 **\/openmp\-**와 **\/openmp** 모두 측정 가능한 최소 시간 이하로 실행됩니다.  
+ 로 컴파일할 때 **/openmp**, 두 번째 호출 test2로 사용 하 여 컴파일하는 경우 보다 더 이상 실행 되지 않도록 **/openmp-**threadpool 시작 되지 않으므로 합니다. 백만 반복에는 **/openmp** 버전 보다 빠릅니다.이 **/openmp-** test2 하 고 두 번째 호출에 대 한 버전 **/openmp-** 및 **/openmp** 클록 세분성 보다 작은 버전 레지스터입니다.  
   
- 따라서 응용 프로그램에 루프가 한 개만 있고 이 루프의 실행 시간이 15밀리초\(컴퓨터의 대략적인 부하에 따라 조정\) 미만인 경우 **\/openmp**는 적합하지 않습니다. 그러나 실행 시간이 이보다 긴 경우 **\/openmp**를 사용할 수도 있습니다.  
+ 따라서 응용 프로그램에서 하나의 루프가 있고 실행 시간이 (컴퓨터에 대략적인 부하에 따라 조정) 미만인 경우 **/openmp** 적절 하 게 되지 않을 수 있습니다 하지만 사용해볼가리키려는그이상의아무것도인경우**/openmp**합니다.  
   
 ```  
 // cpp_compiler_options_openmp.cpp  
@@ -121,6 +120,6 @@ int main(int argc, char* argv[]) {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

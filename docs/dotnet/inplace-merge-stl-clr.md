@@ -1,32 +1,30 @@
 ---
-title: "inplace_merge(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::inplace_merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inplace_merge 함수[STL/CLR]"
+title: inplace_merge (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::inplace_merge
+dev_langs: C++
+helpviewer_keywords: inplace_merge function [STL/CLR]
 ms.assetid: e6948c03-8c5b-4a7c-915c-0a531946a321
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ad06f2b7917413617adef6a151e75fb848e8da3e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# inplace_merge(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Combines the elements from two consecutive sorted ranges into a single sorted range, where the ordering criterion may be specified by a binary predicate.  
+# <a name="inplacemerge-stlclr"></a>inplace_merge(STL/CLR)
+두 연속 정렬 범위의 요소를 단일 정렬 범위로 결합합니다. 정렬 기준은 이진 조건자로 지정할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _BidIt> inline  
@@ -36,13 +34,13 @@ template<class _BidIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## 설명  
- This function behaves the same as the STL function `inplace_merge` For more information, see [inplace\_merge](../Topic/inplace_merge.md).  
+## <a name="remarks"></a>설명  
+ 이 함수는 c + + 표준 라이브러리 함수 동일 하 게 동작 `inplace_merge` 자세한 내용은 참조 [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<알고리즘 cliext/>  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [algorithm(STL/CLR)](../dotnet/algorithm-stl-clr.md)

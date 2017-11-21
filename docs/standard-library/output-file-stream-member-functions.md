@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- output streams [C++], member functions
+dev_langs: C++
+helpviewer_keywords: output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: dec5db670afd169093125f2830551aec85b61e35
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="output-file-stream-member-functions"></a>Output File Stream Member 함수
 출력 스트림 구성원 함수에는 조작자와 동일한 형식, 서식 없는 쓰기 작업을 수행하는 형식 및 그 외의 스트림 상태를 수정하며 동일한 조작자 또는 삽입 연산자를 포함하지 않는 형식의 세 가지 형식이 있습니다. 서식 있는 순차적 출력을 생성하려는 경우 삽입 연산자 및 조작자만 사용할 수 있습니다. 임의 액세스 이진 디스크 출력의 경우에는 필요에 따라 삽입 연산자를 포함하여 다른 구성원 함수를 사용합니다.  
@@ -150,5 +146,4 @@ if(!cout.fail())...
   
 ## <a name="see-also"></a>참고 항목  
  [출력 스트림](../standard-library/output-streams.md)
-
 

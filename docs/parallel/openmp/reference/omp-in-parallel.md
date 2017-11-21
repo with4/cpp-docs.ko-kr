@@ -1,41 +1,39 @@
 ---
-title: "omp_in_parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_in_parallel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_in_parallel OpenMP function"
+title: omp_in_parallel | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_in_parallel
+dev_langs: C++
+helpviewer_keywords: omp_in_parallel OpenMP function
 ms.assetid: 1f01a1b4-78c5-496a-afb7-a43ecdad83d6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 808efbaf0d59850550d5c47d64bd7aa8594e90eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# omp_in_parallel
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-병렬 영역 내에서 호출 하는 경우 0이 아닌 값을 반환 합니다.  
+# <a name="ompinparallel"></a>omp_in_parallel
+병렬 영역 내부에서 호출 된 경우 0이 아닌 값을 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int omp_in_parallel( );  
 ```  
   
-## 설명  
- 자세한 내용은 [3.1.6 omp\_in\_parallel Function](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md)를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 자세한 내용은 참조 [3.1.6 omp_in_parallel 함수](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // omp_in_parallel.cpp  
@@ -56,7 +54,10 @@ int main( )
 }  
 ```  
   
-  **0**  
-**1**   
-## 참고 항목  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+0  
+1  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [함수](../../../parallel/openmp/reference/openmp-functions.md)

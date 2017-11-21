@@ -1,32 +1,30 @@
 ---
-title: "hash_set::hash_set(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::hash_set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_set 멤버[STL/CLR]"
+title: 'hash_set:: hash_set (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::hash_set
+dev_langs: C++
+helpviewer_keywords: hash_set member [STL/CLR]
 ms.assetid: 006414ed-db5a-4c08-ac81-4a8ae57d0aad
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e4a7e2975402183c0cabf46ce786bf3877fe6d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::hash_set(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsethashset-stlclr"></a>hash_set::hash_set(STL/CLR)
 컨테이너 개체를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 hash_set();  
@@ -49,104 +47,90 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### 매개 변수  
- first  
- 삽입할 범위의 시작입니다.  
+#### <a name="parameters"></a>매개 변수  
+ 첫 번째  
+ 삽입할 범위의의 시작입니다.  
   
  hashfn  
- 버핏에 대한 매핑키를 위한 해시 함수입니다.  
+ 해시 버킷에 매핑 키에 대 한 함수입니다.  
   
  last  
  삽입할 범위의 끝입니다.  
   
  pred  
- 제어된 시퀀스를 위한 술부의 정렬입니다.  
+ 제어 되는 시퀀스에 대 한 조건자를 정렬 합니다.  
   
- right  
- 삽입할 범위 또는 개체입니다.  
+ 오른쪽  
+ 삽입할 개체 또는 범위입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  생성자:  
   
  `hash_set();`  
   
- 요소가 없고, 기본 순서는 `key_compare()`을 사용하고, 기본 해시함수를 이용하는 제어되는 시퀀스를 초기화합니다.  빈 초기 제어된 시퀀스를 기본 술어 정렬과 해시 함수와 함께 지정하기 위해 사용할 수 있습니다.  
+ 기본 조건자를 정렬 된 요소가 없는 제어 되는 시퀀스를 초기화 `key_compare()`, 및 기본 해시 함수가 있습니다. 기본 조건자 및 해시 함수를 정렬 된 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
  생성자:  
   
  `explicit hash_set(key_compare^ pred);`  
   
- 요소가 없고, 순서는 `'pred`을 사용하고, 기본 해시함수를 이용하는 제어되는 순서를 초기화합니다.  빈 초기 제어된 시퀀스를 지정된 술어 정렬과 기본 해시 함수와 함께 지정하기 위해 사용할 수 있습니다.  
+ 정렬 조건자가 있는 요소가 없는 제어 되는 시퀀스를 초기화 `pred`, 및 기본 해시 함수로 합니다. 지정된 된 정렬 조건자와 기본 해시 함수는 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
  생성자:  
   
  `hash_set(key_compare^ pred, hasher^ hashfn);`  
   
- 요소가 없고, 순서는 `'pred`을 사용하고, 해시함수 `hashfn`를 이용하는 제어되는 순서를 초기화합니다.  빈 초기 제어된 시퀀스를 지정된 술어 정렬과 해시 함수와 함께 지정하기 위해 사용할 수 있습니다.  
+ 정렬 조건자가 있는 요소가 없는 제어 되는 시퀀스를 초기화 `pred`, 및 해시 함수가 `hashfn`합니다. 지정 된 정렬 조건자 및 해시 함수는 빈 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
  생성자:  
   
  `hash_set(hash_set<Key>% right);`  
   
- 순서 `[``right``.`[hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)`(),` `right``.`[hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`())` 와 기본 순서를 사용하며 기본 해시함수를 사용하는 제어된 시퀀스를 초기화합니다.  사용자는 초기의 명령된 시퀀스를 지정하기 위해 사용합니다. hash\_set object `right`, default와 함께 hash function을 사용합니다.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`right.begin()`, `right.end()`), 기본 조건자를 정렬 및 기본 해시 함수입니다. Hash_set 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`된 기본 정렬 조건자 및 해시 함수입니다.  
   
  생성자:  
   
  `hash_set(hash_set<Key>^ right);`  
   
- 순서 `[``right``->`[hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)`(),` `right``->`[hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`())` 와 기본 순서를 사용하며 기본 해시함수를 사용하는 제어된 시퀀스를 초기화합니다.  사용자는 초기의 명령된 시퀀스를 지정하기 위해 사용합니다. hash\_set object `right`, default와 함께 hash function을 사용합니다.  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`right->begin()`, `right->end()`), 기본 조건자를 정렬 및 기본 해시 함수입니다. Hash_set 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`된 기본 정렬 조건자 및 해시 함수입니다.  
   
  생성자:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last);`  
   
- `hash_set(InIter first, InIter last);`  
-  
- 순서 `[``first``,` `last``)` 순서를 사용하고, 기본 술어 정렬과 기본 해시 함수를 사용하는 제어된 시퀀스를 초기화합니다.  기본 술어 정렬과 해시함수를 사용하여 다른 시퀀스의 제어된 시퀀스 복사본을 만드는데 사용합니다..  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 기본 조건자를 정렬 및 기본 해시 함수입니다. 기본 조건자 및 해시 함수를 정렬 된 제어 되는 다른 시퀀스의 복사본을 확인을 사용 합니다.  
   
  생성자:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`  
   
- `hash_set(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- 시퀀스 `[``first``,` `last``)`와, `pred`술어 정렬과 기본 해시함수를 사용하여 제어된 시퀀스를 초기화합니다.  명시된 술어 정렬과 기본 해시함수를 사용하여 다른 시퀀스의 제어된 시퀀스 복사본을 만드는데 사용합니다..  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 정렬 조건부와 함께 `pred`, 및 기본 해시 함수로 합니다. 제어 되는 시퀀스의 사본이 지정된 된 정렬 조건자 및 기본 해시 함수와 다른 시퀀스를 사용 합니다.  
   
  생성자:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_set(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- 시퀀스 `[``first``,` `last``)`와, `pred`술어 정렬과 기본 해시함수 `hashfn`를 사용하여 제어된 시퀀스를 초기화합니다.  명시된 술어 정렬과 해시함수를 사용하여 다른 시퀀스의 제어된 시퀀스 복사본을 만드는데 사용합니다..  
+ 순서와 제어 된 시퀀스를 초기화 합니다. [`first`, `last`), 정렬 조건부와 함께 `pred`, 및 해시 함수가 `hashfn`합니다. 제어 되는 시퀀스의 사본을 지정한 정렬 조건자 및 해시 함수가 있는 다른 시퀀스를 사용 합니다.  
   
  생성자:  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 열거자 `right` 에 의해 지정된 시퀀스와 기본 술어 정렬, 기본 해시함수를 사용하여 제어된 시퀀스를 초기화합니다.  기본 술어 정렬과 해시함수를 통해 제어된 시퀀스를 열거자에 의해 기술된 다른 시퀀스의 복사본으로 만들기 위해 사용합니다.  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 기본 조건자를 정렬 및 기본 해시 함수입니다. 제어 되는 시퀀스의 사본을 설명 하는 열거자에 따라 기본 조건자 및 해시 함수를 정렬 하는 다른 시퀀스를 사용 합니다.  
   
  생성자:  
   
- `hash_set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
-  
- 열거자 `right` 에 의해 지정된 시퀀스와 술어 정렬 `pred`, 기본 해시함수를 사용하여 제어된 시퀀스를 초기화합니다.  명시된 술어 정렬과 기본 해시함수를 통해 제어된 시퀀스를 열거자에 의해 기술된 다른 시퀀스의 복사본으로 만들기 위해 사용합니다.  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 정렬 조건부와 함께 `pred`, 및 기본 해시 함수로 합니다. 제어 되는 시퀀스에서 지정 된 정렬 조건자 및 기본 해시 함수가 열거자를 설명 하는 다른 시퀀스의 복사본을 확인 하려면 사용 합니다.  
   
  생성자:  
   
- `hash_set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `key_compare^ pred, hasher^ hashfn);`  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 정렬 조건부와 함께 `pred`, 및 해시 함수가 `hashfn`합니다. 제어 되는 시퀀스의 사본을 열거자를 지정한 순서 지정 조건자 및 해시 함수가 있는 설명 하는 다른 시퀀스를 사용 합니다.  
   
- 열거자 `right` 에 의해 지정된 시퀀스와 술어 정렬 `pred`, 기본 해시함수 `hashfn`를 사용하여 제어된 시퀀스를 초기화합니다.  명시된 술어 정렬과 해시함수를 통해 제어된 시퀀스를 열거자에 의해 기술된 다른 시퀀스의 복사본으로 만들기 위해 사용합니다.  
-  
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_construct.cpp   
@@ -255,26 +239,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
+  
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::generic\_container](../dotnet/hash-set-generic-container-stl-clr.md)   
- [hash\_set::operator\=](../dotnet/hash-set-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: generic_container (STL/CLR)](../dotnet/hash-set-generic-container-stl-clr.md)   
+ [hash_set::operator=(STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)

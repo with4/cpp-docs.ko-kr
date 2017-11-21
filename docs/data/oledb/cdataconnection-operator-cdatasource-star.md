@@ -1,37 +1,36 @@
 ---
-title: "CDataConnection::operator CDataSource* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource*"
-  - "CDataConnection::operatorCDataSource*"
-  - "CDataConnection.operatorCDataSource*"
-  - "operatorCDataSource*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataSource* 연산자"
-  - "연산자 * (CDataSource)"
+title: 'Cdataconnection:: Operator CDataSource * | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource*
+- CDataConnection::operatorCDataSource*
+- CDataConnection.operatorCDataSource*
+- operatorCDataSource*
+dev_langs: C++
+helpviewer_keywords:
+- CDataSource* operator
+- operator * (CDataSource)
 ms.assetid: 9118e324-e68d-45c5-a791-03f041d420ed
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3010f0774224cd02a35aeaa185bca32f370d5ba0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# CDataConnection::operator CDataSource*
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Returns a pointer to the contained `CDataSource` object.  
+# <a name="cdataconnectionoperator-cdatasource"></a>CDataConnection::operator CDataSource*
+포함된 `CDataSource` 개체에 대한 포인터를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -39,14 +38,14 @@ operator const CDataSource*() throw( );
   
 ```  
   
-## 설명  
- This operator returns a pointer to the contained `CDataSource` object, allowing you to pass a `CDataConnection` object where a `CDataSource` pointer is expected.  
+## <a name="remarks"></a>설명  
+ 이 연산자는 `CDataSource` 포인터가 예상되는 위치에 `CDataConnection` 개체를 전달할 수 있게 해주는, 포함된 `CDataSource` 개체에 대한 포인터를 반환합니다.  
   
- See [operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) for a usage example.  
+ 참조 [operator CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) 사용 예입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDataConnection 클래스](../../data/oledb/cdataconnection-class.md)   
  [CDataConnection::operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)

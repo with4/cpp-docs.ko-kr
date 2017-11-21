@@ -1,71 +1,69 @@
 ---
-title: "WeakReference 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WeakReference 클래스"
+title: WeakReference Class1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference
+dev_langs: C++
+helpviewer_keywords: WeakReference class
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb8e05ca3ef52515af58db455ed83da593d6bdfb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# WeakReference 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="weakreference-class1"></a>WeakReference Class1
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class WeakReference;  
 ```  
   
-## 설명  
- Windows 런타입 또는 클래식 COM을 사용하는 *약한 참조* 를 나타냅니다.  약한 참조에 액세스할 수 없는 개체를 나타냅니다.  
+## <a name="remarks"></a>설명  
+ 나타냅니다는 *약한 참조* Windows 런타임 또는 클래식 COM.와 함께 사용할 수 있는 약한 참조는 액세스할 수 있거나 액세스할 수 없는 개체를 나타냅니다.  
   
- `WeakReference` 개체는 개체에 대한 포인터인 *강한 참조* 및 Resolve\(\) 메서드에 의해 분배된 강한 참조의 복사 수인 *강한 참조 횟수* 를 유지합니다.   강한 참조 개수가 0이 아닌 동안 강력한 참조는 유효하고 개체를 액세스할 수 있습니다.  강력한 참조 횟수가 0이 되면 강력한 참조가 잘못 되었고 및 해당 개체를 액세스할 수 없습니다.  
+ A `WeakReference` 개체를 유지 관리는 *강력한 참조*, 되는 개체에 대 한 포인터와 *강력한 참조 횟수*, 배포 된 강력한 참조의 복사본 개수는 Resolve() 메서드입니다. 강력한 참조 횟수가 0이 아닌 이지만, 강력한 참조가 유효 하며 액세스할 수 있는 개체입니다. 강력한 참조 횟수가 0 인 경우 강력한 참조가 유효 하며 개체를 액세스할 수 없습니다.  
   
- 약한 참조 개체는 일반적으로 외부 스레드 또는 응용프로구램에 의해 제어되는 존재인 개체를 사용하곤 합니다.  예를 들어, 파일 개체에 대한 참조는 약한 참조 개체를 생성합니다.  파일이 열려 있을 때에 강력한 참조는 유효합니다.  하지만 파일이 닫혀있는 경우, 강한 참조는 잘못된 것입니다.  
+ WeakReference 개체는 일반적으로 외부 스레드나 응용 프로그램에서 제어 하는 개체를 나타내는 데 사용 됩니다. 예를 들어 파일 개체에 대 한 참조에서 WeakReference 개체를 생성 합니다. 파일이 열려 있는 동안 강력한 참조는 유효합니다. 그러나 파일이 닫히면 강력한 참조는 유효하지 않게 됩니다.  
   
- 약한 참조 메서드는 안전 스레드 입니다.  
+ WeakReference 메서드는 스레드로부터 안전 합니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Public 생성자  
+### <a name="public-constructors"></a>Public 생성자  
   
-|Name|설명|  
-|----------|--------|  
-|[WeakReference::WeakReference 생성자](../windows/weakreference-weakreference-constructor.md)|약한 참조 클래스의 새로운 인스터스를 초기화합니다.|  
-|[WeakReference::~WeakReference 소멸자](../windows/weakreference-tilde-weakreference-destructor.md)|약한 참조 클래스의 현재 인스턴스를 초기화하지 않습니다.\(소멸시킵니다.\)|  
+|이름|설명|  
+|----------|-----------------|  
+|[WeakReference::WeakReference 생성자](../windows/weakreference-weakreference-constructor.md)|WeakReference 클래스의 새 인스턴스를 초기화합니다.|  
+|[WeakReference::~WeakReference 소멸자](../windows/weakreference-tilde-weakreference-destructor.md)|초기화를 취소 (제거) WeakReference 클래스의 현재 인스턴스.|  
   
-### Public 메서드  
+### <a name="public-methods"></a>Public 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[WeakReference::DecrementStrongReference 메서드](../windows/weakreference-decrementstrongreference-method.md)|현재 약한 참조 개체의 강한 참조 수를 감소시킵니다.|  
-|[WeakReference::IncrementStrongReference 메서드](../windows/weakreference-incrementstrongreference-method.md)|현재 약한 참조 개체의 강한 참조 수를 증가시킵니다.|  
-|[WeakReference::Resolve 메서드](../windows/weakreference-resolve-method.md)|강한 참조 횟수가 0이 아니면 고정 참조가 현재 값으로 지정된 된 포인터를 설정 합니다.|  
-|[WeakReference::SetUnknown 메서드](../windows/weakreference-setunknown-method.md)|지정한 인터페이스 포인터를 현재 약한 참조 개체에 대한 강한 참조를 설정합니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[WeakReference::DecrementStrongReference 메서드](../windows/weakreference-decrementstrongreference-method.md)|현재 WeakReference 개체의 강력한 참조 횟수를 줄입니다.|  
+|[WeakReference::IncrementStrongReference 메서드](../windows/weakreference-incrementstrongreference-method.md)|현재 WeakReference 개체의 강력한 참조 횟수를 증가 시킵니다.|  
+|[WeakReference::Resolve 메서드](../windows/weakreference-resolve-method.md)|강력한 참조 개수가 0이 아닌 경우 현재 강력한 참조 값으로 지정된 된 포인터를 설정 합니다.|  
+|[WeakReference::SetUnknown 메서드](../windows/weakreference-setunknown-method.md)|지정 된 인터페이스 포인터를 현재 WeakReference 개체의 강력한 참조를 설정합니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `WeakReference`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
   
- **네임스페이스**Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft::WRL::Details 네임스페이스](../windows/microsoft-wrl-details-namespace.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -58,19 +57,17 @@ helpviewer_keywords:
 - C2591
 - C2595
 - C2596
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e66a789de4a1b5cfd64ff73f6dbecd4e85bfdffd
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>컴파일러 오류 C2500 c 2599 통해
 설명서의 이 항목에는 Visual C++ 컴파일러 오류의 하위 단원에 대한 정보가 수록되어 있습니다. 여기 또는 Visual Studio의 **출력** 창에서 이 정보에 액세스할 수 있습니다. 오류 번호를 선택할 수 있으며, 그런 다음 F1 키를 선택합니다.  
@@ -90,7 +87,7 @@ ms.lasthandoff: 10/10/2017
 |[컴파일러 오류 C2505](compiler-error-C2505.md)|'*기호*': ' __declspec (*지정자*)' 선언 또는 전역 개체 또는 정적 데이터 멤버의 정의에 적용할 수|  
 |[컴파일러 오류 C2506](compiler-error-C2506.md)|'*멤버*': ' __declspec (*지정자*)'이 기호에 적용할 수 없습니다|  
 |[컴파일러 오류 C2507](compiler-error-C2507.md)|'*식별자*': 기본 클래스에 가상 한정자가 너무 많은|  
-|컴파일러 오류 C2508|'*식별자*': '\_\_declspec (*specifier1*)' 함께 사용할 수 없는 '\_\_declspec (*specifier2*)'|  
+|컴파일러 오류 C2508|'*식별자*': ' __declspec (*specifier1*)' 함께 사용할 수 없는 ' __declspec (*specifier2*)'|  
 |[컴파일러 오류 C2509](compiler-error-C2509.md)|'*식별자*': 멤버 함수에서 선언 되지 '*클래스*'|  
 |[컴파일러 오류 C2510](compiler-error-C2510.md)|'*식별자*': 왼쪽은 ':: '은 클래스/구조체/공용 이어야 합니다|  
 |[컴파일러 오류 C2511](compiler-error-C2511.md)|'*식별자*': 오버 로드 된 멤버 함수에서 찾을 수 없습니다 '*클래스*'|  

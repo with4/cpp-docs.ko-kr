@@ -1,36 +1,35 @@
 ---
-title: "lock::try_acquire | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "try_acquire"
-  - "lock.try_acquire"
-  - "msclr.lock.try_acquire"
-  - "lock::try_acquire"
-  - "msclr::lock::try_acquire"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::try_acquire"
+title: lock::try_acquire | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- try_acquire
+- lock.try_acquire
+- msclr.lock.try_acquire
+- lock::try_acquire
+- msclr::lock::try_acquire
+dev_langs: C++
+helpviewer_keywords: lock::try_acquire
 ms.assetid: ef0649a9-e611-4495-84bd-2784533221d9
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c63d6a9161eab707b0eab2b831d02210c57a25d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# lock::try_acquire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Acquires a lock on an object, waiting for a specified amount of time and returning a `bool` to report the success of acquisition instead of throwing an exception.  
+# <a name="locktryacquire"></a>lock::try_acquire
+지정 된 시간 동안 대기 하 고 반환 하는 개체에 대 한 잠금을 획득 한 `bool` 예외를 throw 하는 대신 취득의 성공 여부를 보고 하기 위해 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 bool try_acquire(  
@@ -41,18 +40,18 @@ bool try_acquire(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_timeout`  
- Timeout value in milliseconds or as a <xref:System.TimeSpan>.  
+ 제한 시간 값 (밀리초) 또는 <xref:System.TimeSpan>합니다.  
   
-## 반환 값  
- `true` if lock was acquired, `false` otherwise.  
+## <a name="return-value"></a>반환 값  
+ `true`잠금을 획득 하는 경우 `false` 그렇지 않은 경우.  
   
-## 설명  
- If a lock has already been acquired, this function does nothing.  
+## <a name="remarks"></a>설명  
+ 잠금을 이미 가져온 경우이 함수는 아무 작업도 수행 하지 않습니다.  
   
-## 예제  
- This example uses a single instance of a class across multiple threads.  The class uses a lock on itself to ensure that accesses to its internal data are consistent for each thread.  The main application thread uses a lock on the same instance of the class to periodically check to see if any worker threads still exist, and waits to exit until all worker threads have completed their tasks.  
+## <a name="example"></a>예제  
+ 이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스를 사용 하 여 잠금을 자체에서 내부 데이터에 대 한 액세스가 각 스레드에 대해 일관적인 지 확인 합니다.  기본 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드 여전히 존재 하며, 해당 작업을 완료 될 때까지 모든 작업자 스레드가 끝나기를 대기 하는 클래스의 동일한 인스턴스에 잠금을 사용 합니다.  
   
 ```  
 // msl_lock_try_acquire.cpp  
@@ -126,22 +125,25 @@ int main() {
 }  
 ```  
   
-  **In thread 3, Counter \= 0**  
-**In thread 3, Counter \= 10**  
-**In thread 5, Counter \= 0**  
-**In thread 5, Counter \= 10**  
-**In thread 7, Counter \= 0**  
-**In thread 7, Counter \= 10**  
-**In thread 4, Counter \= 0**  
-**In thread 4, Counter \= 10**  
-**In thread 6, Counter \= 0**  
-**In thread 6, Counter \= 10**  
-**All threads completed.**   
-## 요구 사항  
- **Header file** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [lock 멤버](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

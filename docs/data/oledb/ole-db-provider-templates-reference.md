@@ -1,120 +1,118 @@
 ---
 title: "OLE DB 공급자 템플릿 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 공급자 템플릿"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords: OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b8271e7a5a69c91612a3bda13ad4b1cc817f012
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# OLE DB 공급자 템플릿 참조
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-The classes and interfaces for the OLE DB Provider Templates can be grouped into the following categories.  The reference material also includes information about the [macros for OLE DB Provider Templates](../../data/oledb/macros-for-ole-db-provider-templates.md).  
+# <a name="ole-db-provider-templates-reference"></a>OLE DB 공급자 템플릿 참조
+클래스와 OLE DB 공급자 템플릿에 대 한 인터페이스는 다음과 같은 범주로 그룹화 할 수 있습니다. 또한 참조 자료에 대 한 정보를 포함 된 [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)합니다.  
   
- The classes use the following naming convention: a class named with the pattern **IWidgetImpl** would provide an implementation of the interface **IWidget**.  
+ 다음 명명 규칙을 사용 하는 클래스: 패턴으로 라는 클래스 **IWidgetImpl** 인터페이스의 구현을 제공 하는 **IWidget**합니다.  
   
-## Session Classes  
+## <a name="session-classes"></a>세션 클래스  
  [IDBCreateSessionImpl](../../data/oledb/idbcreatesessionimpl-class.md)  
- Creates a new session from the data source object and returns the requested interface on the newly created session.  Mandatory interface on data source objects.  
+ 데이터 원본 개체에서 새 세션을 만들고 새로 만들어진된 세션의 요청 된 인터페이스를 반환 합니다. 데이터 원본 개체에 필수 인터페이스입니다.  
   
  [ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)  
- Implements session properties by calling a static function defined by the property set map.  The property set map should be specified in your session class.  Mandatory interface on sessions.  
+ 속성 집합 맵에 정의 된 정적 함수를 호출 하 여 세션 속성을 구현 합니다. 세션 클래스의 속성 집합 지도 지정 해야 합니다. 세션에 대해 필수 인터페이스입니다.  
   
-## 행 집합 클래스  
+## <a name="rowset-classes"></a>행 집합 클래스  
  [CRowsetImpl](../../data/oledb/crowsetimpl-class.md)  
   
- Provides a standard OLE DB rowset implementation without requiring multiple inheritance of many implementation interfaces.  The only method for which you must provide implementation is **Execute**.  
+ 많은 구현 인터페이스의 여러 상속을 요구 하지 않고 표준 OLE DB 행 집합 구현을 제공 합니다. 구현이 제공 해야 하는 유일한 방법은 **Execute**합니다.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Provides a default implementation for the row handle, which is used in the `IRowsetImpl` class.  A row handle is logically a unique tag for a result row.  `IRowsetImpl` creates a new `CSimpleRow` for every row requested in `IRowsetImpl::GetNextRows`.  
+ 에 사용 되는 행 핸들에 대 한 기본 구현을 제공는 `IRowsetImpl` 클래스입니다. 행 핸들은 논리적으로 결과 행에 대 한 고유 태그입니다. `IRowsetImpl`새 `CSimpleRow` 에서 요청 된 모든 행에 대 한 `IRowsetImpl::GetNextRows`합니다.  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
- OLE DB requires providers to implement an **HACCESSOR**, which is a tag to an array of **DBBINDING** structures.  Provides **HACCESSOR**s that are addresses of the **BindType** structures.  Mandatory on rowsets and commands.  
+ OLE DB 공급자를 구현할 필요는 **HACCESSOR**, 하는 배열에 태그 **DBBINDING** 구조입니다. 제공 **HACCESSOR**는 주소입니다. s는 **BindType** 구조입니다. 행 집합 및 명령에 대해 필수 항목입니다.  
   
  [IColumnsInfoImpl](../../data/oledb/icolumnsinfoimpl-class.md)  
- Delegates to a static function defined by the provider column map.  Mandatory interface on rowsets and commands.  
+ 공급자 열의 맵에 정의 된 정적 함수 대리자입니다. 행 집합 및 명령에 대해 필수 인터페이스입니다.  
   
  [IConvertTypeImpl](../../data/oledb/iconverttypeimpl-class.md)  
- Gives information on the availability of type conversions on a command or on a rowset.  Mandatory on commands, rowsets, and index rowsets.  Implements the **IConvertType** interface by delegating to the conversion object supplied by OLE DB.  
+ 명령에 또는 행 집합에서 형식 변환의 가용성에 대 한 정보를 제공합니다. 명령, 행 집합 및 인덱스 행 집합에 필수 항목입니다. 구현 된 **IConvertType** OLE DB에서 제공 된 변환 개체에 위임 하 여 인터페이스입니다.  
   
  [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)  
- Implements the **IDBSchemaRowset** interface and the templatized creator function `CreateSchemaRowset`.  
+ 구현 된 **IDBSchemaRowset** 인터페이스 및 템플릿 화 된 작성자 함수 `CreateSchemaRowset`합니다.  
   
  [IOpenRowsetImpl](../../data/oledb/iopenrowsetimpl-class.md)  
- Opens and returns a rowset that includes all rows from a single base table or index.  Mandatory interface for a session object.  
+ 페이지를 열고 단일 기본 테이블 또는 인덱스에서 모든 행을 포함 하는 행 집합을 반환 합니다. 세션 개체에 대 한 필수 인터페이스입니다.  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Implements the OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interface, which enables updating of the values of columns in existing rows, deleting rows, and inserting new rows.  
+ OLE DB 구현 [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) 행을 삭제 하 고 새 행을 삽입의 기존 행의 열 값의 업데이트 수 있도록 하는 인터페이스입니다.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- This class inherits from [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) and overrides [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  `IRowsetCreatorImpl` performs the same functions as `IObjectWithSite` but also enables the OLE DB properties **DBPROPCANSCROLLBACKWARDS** and **DBPROPCANFETCHBACKWARDS**.  
+ 이 클래스에서 상속 [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) 재정의 [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)합니다. `IRowsetCreatorImpl`동일한 기능을 수행 `IObjectWithSite` 하지만 또한 OLE DB 속성을 사용 하면 **DBPROPCANSCROLLBACKWARDS** 및 **DBPROPCANFETCHBACKWARDS**합니다.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
- Implements the **IRowsetIdentity** interface, which allows you to compare whether two rows of data are identical or not.  
+ 구현 된 **IRowsetIdentity** 인터페이스를 통해 두 행의 데이터가 동일한 지 여부를 비교할 수 있습니다.  
   
  [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)  
- Provides an implementation of the `IRowset` interface, which is the base rowset interface.  
+ 구현을 제공는 `IRowset` 인터페이스에 기본 행 집합 인터페이스입니다.  
   
  [IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)  
- Implements the rowset properties by using the property set map defined in your command class.  Mandatory interface on rowsets.  
+ 속성을 사용 하 여 행 집합 속성 구현 명령 클래스에 정의 된 지도 설정 합니다. 필수 행 집합 인터페이스입니다.  
   
  [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
- Implements the OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interface, which fetches arbitrary rows from a rowset.  To support OLE DB bookmarks in a rowset, make the rowset inherit from this class.  
+ OLE DB 구현 [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) 인터페이스에는 행 집합에서 임의의 행을 인출 합니다. 행 집합에 OLE DB 책갈피를 지원 하려면이 클래스에서 상속 하는 행 집합을 확인 합니다.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Implements broadcast functions to advise listeners on the connection point **IID\_IRowsetNotify** of changes to the contents of the rowset.  Consumers that handle notifications implement [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) and register it on that connection point.  
+ 구현 브로드캐스트 수신기 연결 지점에 대해 알리기 위해 함수 **IID_IRowsetNotify** 행 집합의 내용 변경 합니다. 알림을 처리 하는 소비자 구현 [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) 해당 연결 지점에 등록 하십시오.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Implements the OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) interface, which enables consumers to delay the transmission of changes made with [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) to the data source and undo changes before transmission.  
+ OLE DB 구현 [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) 소비자가 변경 된 내용을 전송 지연 시킬 수 있는 인터페이스 [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) 를 데이터 소스 및 전송 하기 전에 변경 내용을 취소 합니다.  
   
-## Command Classes  
+## <a name="command-classes"></a>명령 클래스  
  [ICommandImpl](../../data/oledb/icommandimpl-class.md)  
- `ICommand` 인터페이스의 구현을 제공합니다.  This interface is not visible, but is handled by **ICommandTextImpl**.  A mandatory interface on the command object.  
+ `ICommand` 인터페이스의 구현을 제공합니다. 이 인터페이스는 표시 되지 않지만 의해 처리 됩니다 **ICommandTextImpl**합니다. 명령 개체에서 필수 인터페이스입니다.  
   
  [ICommandPropertiesImpl](../../data/oledb/icommandpropertiesimpl-class.md)  
- This implementation of the **ICommandProperties** interface is provided by a static function defined by the `BEGIN_PROPSET_MAP` macro.  Mandatory on commands.  
+ 이 구현에서 **ICommandProperties** 인터페이스에 정의 된 정적 함수에 의해 제공 됩니다는 `BEGIN_PROPSET_MAP` 매크로입니다. 명령에서 필수 항목입니다.  
   
  [ICommandTextImpl](../../data/oledb/icommandtextimpl-class.md)  
- Sets, stores, and returns the command text.  Mandatory on commands.  
+ 설정 하 고 저장 하 고, 명령 텍스트를 반환 합니다. 명령에서 필수 항목입니다.  
   
  [IDBCreateCommandImpl](../../data/oledb/idbcreatecommandimpl-class.md)  
- Creates a new command from the session object and returns the requested interface on the newly created command.  Optional interface on session objects.  
+ 세션 개체의 새 명령을 만들고 새로 만든된 명령에 요청된 된 인터페이스를 반환 합니다. 세션 개체에 대 한 선택적 인터페이스입니다.  
   
- Other command classes are `IColumnsInfoImpl` and `IAccessorImpl`, described in the Rowset Classes section above.  
+ 다른 명령 클래스는 `IColumnsInfoImpl` 및 `IAccessorImpl`위의 행 집합 클래스 섹션에 설명 된 대로 합니다.  
   
-## Data Source Classes  
+## <a name="data-source-classes"></a>데이터 소스 클래스  
  [IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)  
- Creates and deletes the connection with the consumer.  Mandatory interface on data source objects and optional interface on enumerators.  
+ 만들고 소비자와의 연결을 삭제 합니다. 데이터 원본 개체와 열거자에 대해 선택적 인터페이스에서 필수 인터페이스입니다.  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties` is a mandatory interface for data source objects and an optional interface for enumerators.  However, if an enumerator exposes **IDBInitialize**, it must expose `IDBProperties` \(properties on the data source\).  
+ `IDBProperties`데이터 원본 개체에 대 한 필수 인터페이스 및 열거자에 대 한 선택적 인터페이스 이며 그러나는 열거자를 노출 하는 경우 **IDBInitialize**를 노출 해야 `IDBProperties` (데이터 원본에 속성).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
- Obtains an interface pointer to the data source object.  Mandatory interface on the session.  
+ 데이터 원본 개체에 대 한 인터페이스 포인터를 가져옵니다. 세션에서 필수 인터페이스입니다.  
   
-## Other Classes  
+## <a name="other-classes"></a>다른 클래스  
  [CUtlProps](../../data/oledb/cutlprops-class.md)  
- Implements properties for a variety of OLE DB property interfaces \(for example, `IDBProperties`, **ISessionProperties**, and `IRowsetInfo`\).  
+ 다양 한 OLE DB 속성 인터페이스에 대 한 속성 구현 (예를 들어 `IDBProperties`, **ISessionProperties**, 및 `IRowsetInfo`).  
   
  [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Implements the OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interface, adding records to and retrieving records from a data member.  
+ OLE DB 구현 [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) 인터페이스를 레코드를 추가 및 데이터 멤버에서 레코드를 검색 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [OLE DB 템플릿](../../data/oledb/ole-db-templates.md)

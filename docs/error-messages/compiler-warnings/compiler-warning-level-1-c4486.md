@@ -1,35 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 1) C4486 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4486"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4486"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4486
+dev_langs: C++
+helpviewer_keywords: C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d8819029a9fc5a40281f875ab12595c7a73f0e09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 컴파일러 경고 (수준 1) C4486
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : ref 클래스 또는 값 클래스의 전용 가상 메서드는 'sealed'로 표시되어야 합니다.  
+# <a name="compiler-warning-level-1-c4486"></a>컴파일러 경고(수준 1) C4486
+'function': ref 클래스 또는 값 클래스의 전용 가상 메서드를 'sealed'으로 표시  
   
- 관리되는 클래스나 구조체의 전용 가상 멤버 함수는 액세스하거나 재정의할 수 없으므로 [sealed](../../windows/sealed-cpp-component-extensions.md)로 표시해야 합니다.  
+ 이후 전용 가상 멤버 함수는 관리 되는 클래스 또는 구조체의 액세스 또는 재정의 될 수 없습니다, 표시 해야 [봉인](../../windows/sealed-cpp-component-extensions.md)합니다.  
   
-## 예제  
- 다음 샘플에서는 C4486 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 C4486 오류가 발생 합니다.  
   
 ```  
 // C4486.cpp  
@@ -41,8 +39,8 @@ private:
 };  
 ```  
   
-## 예제  
- 다음 샘플에서는 sealed로 표시된 전용 가상 함수를 사용하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 샘플에서는 사용 하는 전용 sealed로 표시 된 가상 함수를 보여 줍니다.  
   
 ```  
 // C4486_b.cpp  

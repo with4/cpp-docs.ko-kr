@@ -1,39 +1,38 @@
 ---
 title: "방법: 네이티브 형식으로 핸들 선언 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gcroot 키워드[C++]"
-  - "핸들, 선언"
-  - "형식[C++], 핸들 선언"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords: gcroot
+dev_langs: C++
+helpviewer_keywords:
+- handles, declaring
+- gcroot keyword [C++]
+- types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b7507a0c941fa651f55fdf462b9d832cfd929632
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
-# 방법: 네이티브 형식으로 핸들 선언
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-You cannot declare a handle type in a native type. vcclr.h provides the type\-safe wrapper template `gcroot` to refer to a CLR object from the C\+\+ heap.  이 템플릿을 사용하여 가상 핸들을 네이티브 형식에서 포함시키고 내부 형식인 것으로 취급할 수 있습니다.  대부분의 경우 캐스팅 없이 `gcroot` 개체를 포함된 형식으로 사용할 수 있습니다.  그러나 [for each, in](../dotnet/for-each-in.md)을 사용할 경우 기본 관리되는 참조를 검색하려면 `static_cast`를 사용해야 합니다.  
+# <a name="how-to-declare-handles-in-native-types"></a>방법: 네이티브 형식으로 핸들 선언
+네이티브 형식에 핸들 형식을 선언할 수 없습니다. vcclr.h 형식이 안전한 래퍼 템플릿을 제공 `gcroot` c + + 힙에서 CLR 개체를 참조 하려면. 이 서식 파일을 사용 하 여 네이티브 형식에 가상 핸들을 포함 하 고 기본 형식인 것으로 취급할 수 있습니다. 대부분의 경우에서 사용할 수 있습니다는 `gcroot` 캐스팅 없이 포함 된 형식으로 개체입니다. 그러나 [각 항목에 대해에서](../dotnet/for-each-in.md)를 사용 해야 `static_cast` 를 기본 관리 되는 참조를 검색 합니다.  
   
- `gcroot` 템플릿은 가비지 수집되는 힙에 "핸들"을 제공하는 값 클래스인 System::Runtime::InteropServices::GCHandle의 기능을 사용하여 구현됩니다.  핸들 자체는 가비지 수집되지 않으며 더 이상 사용되지 않을 때 `gcroot` 클래스의 소멸자에 의해 해제됩니다. 이 소멸자는 직접 호출할 수 없습니다.  네이티브 힙에 `gcroot` 개체를 인스턴스화하는 경우 해당 리소스에 대해 delete를 호출해야 합니다.  
+ `gcroot` 서식 파일은 가비지 수집 힙의 System::Runtime::InteropServices::GCHandle "핸들"를 제공 하는 값 클래스의 기능을 사용 하 여 구현 됩니다. 핸들 자체는 가비지 수집 되지 및 소멸자에 의해 더 이상 사용 중이 경우 해제 되 고 `gcroot` 클래스 (이 소멸자 수동으로 호출할 수 없습니다). 인스턴스화하는 경우는 `gcroot` 호출 해야 개체를 네이티브 힙에 해당 리소스를 삭제 합니다.  
   
- 런타임에서는 핸들과 핸들이 참조하는 CLR 개체 간의 연결을 유지합니다.  CLR 개체가 가비지 수집되는 힙과 함께 이동하면 핸들은 개체의 새 주소를 반환합니다.  변수를 `gcroot` 템플릿에 할당하기 전에 고정할 필요는 없습니다.  
+ 런타임 핸들 및 참조 하는 CLR 개체 간의 연결을 유지 합니다. 가비지 수집 힙을 사용 하 여 CLR 개체를 움직이면 핸들 개체의 새 주소를 반환 합니다. 변수를 할당 하기 전에 고정 될 필요는 없습니다는 `gcroot` 서식 파일입니다.  
   
-## 예제  
- 이 샘플에서는 네이티브 스택에 `gcroot` 개체를 만드는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 이 샘플을 만드는 방법을 보여 줍니다는 `gcroot` 네이티브 스택에 개체입니다.  
   
 ```  
 // mcpp_gcroot.cpp  
@@ -54,9 +53,12 @@ int main() {
 }  
 ```  
   
-  **hello**   
-## 예제  
- 이 샘플에서는 네이티브 힙에 `gcroot` 개체를 만드는 방법을 보여 줍니다.  
+```Output  
+hello  
+```  
+  
+## <a name="example"></a>예제  
+ 이 샘플을 만드는 방법을 보여 줍니다는 `gcroot` 네이티브 힙에 있는 개체입니다.  
   
 ```  
 // mcpp_gcroot_2.cpp  
@@ -80,9 +82,12 @@ int main() {
 }  
 ```  
   
-  **hello**   
-## 예제  
- 이 샘플에서는 boxed 형식에 `gcroot`를 사용하여 참조 형식이 아닌 값 형식에 대한 참조를 네이티브 형식에 저장하는 `gcroot` 사용법을 보여 줍니다.  
+```Output  
+hello  
+```  
+  
+## <a name="example"></a>예제  
+ 이 예제에서는 사용 하는 방법을 보여 줍니다. `gcroot` 참조 형식이 아닌 값 형식에 대 한 참조를 네이티브 형식에서 사용 하 여 유지 하기 위해 `gcroot` boxed 형식에 대해 합니다.  
   
 ```  
 // mcpp_gcroot_3.cpp  
@@ -108,6 +113,9 @@ int main() {
 }  
 ```  
   
-  **String in V: Hello**   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+String in V: Hello  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
