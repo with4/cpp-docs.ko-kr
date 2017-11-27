@@ -4,60 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- __wchar_t_cpp
-- long_double_cpp
-- unsigned
-- wchar_t_cpp
-- float_cpp
-- wchar_t
-- char
-- char_cpp
-- signed
-- __wchar_t
-- signed_cpp
-- short
-- double_cpp
-- int_cpp
-- long
-- __intn_cpp
-- short_cpp
-- double
-- unsigned_cpp
-- float
-- __intn
-- long_cpp
-- int
-- long_double
-- unsigned_int
-- __int8
-- __int8_cpp
-- __int16
-- __int16_cpp
-- __int32
-- __int32_cpp
-- __int64
-- __int64_cpp
-- __int128
 - __int128_cpp
-dev_langs:
-- C++
+- __wchar_t_cpp
+- char_cpp
+- double_cpp
+- float_cpp
+- int_cpp
+- long_cpp
+- long_double_cpp
+- short_cpp
+- signed_cpp
+- unsigned_cpp
+- unsigned_int_cpp
+- wchar_t_cpp
+dev_langs: C++
 helpviewer_keywords:
 - specifiers [C++], type
 - float keyword [C++]
 - char keyword [C++]
 - __wchar_t keyword [C++]
 - signed types [C++], summary of data types
-- Integer data type, C++ data types
+- Integer data type [C++], C++ data types
 - arithmetic operations [C++], types
 - int data type
 - unsigned types [C++], summary of data types
-- short data type
-- double data type, summary of types
+- short data type [C++]
+- double data type [C++], summary of types
 - long long keyword [C++]
 - long double keyword [C++]
 - unsigned types [C++]
@@ -66,7 +42,7 @@ helpviewer_keywords:
 - storage [C++], basic type
 - integral types, C++
 - wchar_t keyword [C++]
-- floating-point numbers, C++ data types
+- floating-point numbers [C++], C++ data types
 - long keyword [C++]
 - type specifiers [C++]
 - integral types
@@ -74,31 +50,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 595c2d84ad18cae0c15ddba36388f66f10fecd49
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: f30f680449ee0eee1d25f1705d2c98adfe88c312
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fundamental-types--c"></a>기본 형식 (C++)
 C++의 기본 형식은 정수 계열, 부동 소수점 및 void의 세 가지 범주로 구분됩니다. 정수 계열 형식은 정수를 처리할 수 있습니다. 부동 소수점 형식은 소수 부분이 있을 수 있는 값을 지정할 수 있습니다.  
@@ -123,7 +83,7 @@ C++의 기본 형식은 정수 계열, 부동 소수점 및 void의 세 가지 �
 ||`int`|`int` 형식은 `short` `int`형식의 크기보다 크거나 같고 `long`형식의 크기보다 짧거나 같은 정수 계열 형식입니다.<br /><br /> `int` 형식의 개체를 `signed` `int` 또는 `unsigned` `int`로 선언할 수 있습니다. `Signed` `int` 와 `int`는 동의어입니다.|  
 ||`__int8`, `__int16`, `__int32`, `__int64`|크기가 지정된 정수 `__int n`입니다. 여기서 `n` 은 정수 변수의 크기(비트)입니다. `__int8`, `__int16`, `__int32` 과 `__int64` 은 Microsoft 전용 키워드입니다. 일부 아키텍처에서 모든 형식을 사용할 수 있습니다. `(__int128`지원 되지 않습니다.)|  
 ||`long`|`long` 형식(또는 `long` `int`)은 `int`형식의 크기보다 크거나 같은 정수 계열 형식입니다.<br /><br /> `long` 형식의 개체를 `signed` `long` 또는 `unsigned` `long`로 선언할 수 있습니다. `Signed` `long` 와 `long`는 동의어입니다.|  
-||`long` `long`|부호 없는 `long`보다 큽니다.<br /><br /> `long long` 형식의 개체를 `signed` `long long` 또는 `unsigned` `long long`로 선언할 수 있습니다. `Signed` `long long` 와 `long long`는 동의어입니다.|  
+||`long` `long`|부호 없는 `long`보다 큽니다.<br /><br /> `long long` 형식의 개체를 `signed` `long long` 또는 `unsigned` `long long`로 선언할 수 있습니다. `signed``long long` 에 대 한 동의어 `long long`합니다.|  
 ||`wchar_t`, `__wchar_t`|`wchar_t` 형식의 변수는 와이드 문자 또는 멀티바이트 문자 형식을 지정합니다. 기본적으로 `wchar_t` 는 네이티브 형식이지만, [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 를 사용하여 `wchar_t` 를 `unsigned short`에 대한 typedef로 만들 수 있습니다. `__wchar_t` 형식은 네이티브 `wchar_t` 형식의 Microsoft 전용 동의어입니다.<br /><br /> 문자 또는 문자열 리터럴 앞에 L 접두사를 사용하여 와이드 문자 형식을 지정합니다.|  
 |부동 소수점|`float`|`float` 형식은 가장 작은 부동 소수점 형식입니다.|  
 ||`double`|`double` 형식은 `float`형식보다 크거나 같지만 `long` `double`형식의 크기보다 짧거나 같은 부동 소수점 형식입니다.<br /><br /> Microsoft 전용: `long double` 과 `double` 의 표현은 동일합니다. 그러나 `long double` 및 `double` 은 별개 형식입니다.|  

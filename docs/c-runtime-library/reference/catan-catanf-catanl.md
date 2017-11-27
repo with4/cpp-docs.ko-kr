@@ -33,40 +33,24 @@ f1_keywords:
 - complex/catan
 - complex/catanf
 - complex/catanl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - catan function
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 840e4fd2231d9eca61dc508b15a11ed75822bb6b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 11cfea77d86795070f4f679ff69636974e1234b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
-복소수의 허수 축 따라 [-1; + 1] 간격 외부 컷 분기와의 아크탄젠트 값을 검색합니다.  
+복소수의 허수 축 따라 [-1; +1] 간격 외부 컷 분기와의 아크탄젠트 값을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
