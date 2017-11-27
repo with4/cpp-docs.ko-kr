@@ -1,9 +1,16 @@
 # [Linux 개발 작업 다운로드, 설치, 설정](download-install-and-setup-the-linux-development-workload.md)
 # [새 Linux 프로젝트 만들기](create-a-new-linux-project.md)
 # [Linux 프로젝트 구성](configure-a-linux-project.md)
+# [Linux CMake 프로젝트 구성](cmake-linux-project.md)
 # [원격 Linux 컴퓨터에 연결](connect-to-your-remote-linux-computer.md)
 # [Linux 프로젝트 배포, 실행 및 디버그](deploy-run-and-debug-your-linux-project.md)
-
-<!--HONumber=Feb17_HO4-->
-
-
+# [Linux 프로젝트 속성 페이지 참조](prop-pages-linux.md)
+## [일반 속성(Linux)](prop-pages/general-linux.md)
+## [디버깅 속성(Linux)](prop-pages/debugging-linux.md)
+## [VC++ 디렉터리 속성(Linux)](prop-pages/directories-linux.md)
+## [소스 복사 속성(Linux)](prop-pages/copy-sources-project.md)
+## [C/C++ 속성(Linux)](prop-pages/c-cpp-linux.md)
+## [링커 속성(Linux)](prop-pages/linker-linux.md)
+## [빌드 이벤트 속성(Linux)](prop-pages/build-events-linux.md)
+## [사용자 지정 빌드 단계 속성(Linux)](prop-pages/custom-build-step-linux.md) 
+## [메이크파일 프로젝트 속성(Linux)](prop-pages/makefile-linux.md)

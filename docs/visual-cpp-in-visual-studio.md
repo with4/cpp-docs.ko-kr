@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - visual c++
 - visual c
 - vc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -21,7 +19,7 @@ helpviewer_keywords:
 - Visual C++
 - Visual C++, reference
 ms.assetid: e8dcc44c-a3e2-4ffe-887c-fd15b18dc458
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -35,17 +33,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/15/2017
-
+ms.openlocfilehash: bd4ac59b539b972a50a192e116e536598c03ed63
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio의 Visual C++
 Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Windows 앱, 네이티브 데스크톱 및 서버 응용 프로그램, Windows, Android, iOS에서 실행되는 플랫폼 간 라이브러리 및 .NET Framework에서 실행되는 관리되는 앱 개발에 도움이 될 수 있습니다.  
@@ -64,8 +56,7 @@ Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Wind
  [Visual C++의 새로운 기능](what-s-new-for-visual-cpp-in-visual-studio.md)  
  Visual C++의 새로운 기능을 알아봅니다.  
 
- [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md) 
- Visual Studio 2017의 C++ 규칙 향상에 대해 알아봅니다. 
+ [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md) Visual Studio 2017의 C++ 규칙 향상에 대해 알아봅니다. 
 
  [Visual C++ 언어 규칙](visual-cpp-language-conformance.md)  
  Visual C++의 기능별 규칙 상태 목록입니다.
@@ -97,7 +88,7 @@ Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Wind
  [Visual C++ 샘플](visual-cpp-samples.md)  
  샘플에 대한 내용입니다.  
   
- [Visual Studio Community](http://go.microsoft.com/fwlink/?LinkId=235296)  
+ [Visual Studio 커뮤니티](http://go.microsoft.com/fwlink/?LinkId=235296)  
  Visual Studio에 대한 도움말을 보고 버그를 제출하고 제안을 하는 방법에 대해 알아봅니다.  
   
 ## <a name="writing-applications-in-c"></a>C++에서 응용 프로그램 작성  
@@ -129,9 +120,9 @@ Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Wind
  프로젝트 만들기, 소스 코드 파일 사용, 라이브러리에 연결, 컴파일, 디버그, 프로파일링, 배포 등을 수행하는 방법을 알아보려면 [IDE 및 개발 도구](ide/ide-and-tools-for-visual-cpp-development.md)를 참조하세요.  
   
 ## <a name="c-language-reference"></a>C++ 언어 참조  
- C++ 언어에 대한 자세한 내용은 [C++ 언어 참조](cpp/cpp-language-reference.md)를 참조하세요.  
+ C++ 언어에 대한 자세한 내용은 [C++ Language Reference](cpp/cpp-language-reference.md)를 참조하세요.  
   
- C++ 전처리기에 대한 자세한 내용은 [C/C++ 전처리기 참조](preprocessor/c-cpp-preprocessor-reference.md)를 참조하세요.  
+ C++ 전처리기에 대한 자세한 내용은 [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md)를 참조하세요.  
   
 ## <a name="c-libraries-in-visual-studio"></a>Visual Studio의 C++ 라이브러리  
  다음 섹션에서는 Visual C++와 함께 제공되는 다양한 C++ 라이브러리에 대한 정보를 제공합니다.  
@@ -160,7 +151,7 @@ Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Wind
  [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
  CLR(공용 언어 런타임)에 대한 프로그래밍입니다.  
   
- [STL/CLR](dotnet/stl-clr-library-reference.md) 설명서 및 [C++ 지원 라이브러리](dotnet/cpp-support-library.md)를 참조하세요.  
+ [STL/CLR](dotnet/stl-clr-library-reference.md) 설명서 및 [C++ Support Library](dotnet/cpp-support-library.md)를 참조하세요.  
   
 ## <a name="other-c-libraries"></a>기타 C++ 라이브러리  
  이 섹션에는 Visual Studio와 함께 제공되지 않고 다운로드하여 Visual C++와 함께 사용할 수 있는 라이브러리에 대한 링크가 있습니다.  
@@ -185,4 +176,3 @@ Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Wind
  [C 언어 참조](c-language/c-language-reference.md)   
  [C 런타임 라이브러리 참조](c-runtime-library/c-run-time-library-reference.md)   
  [컴파일러 내장 및 어셈블리 언어](intrinsics/compiler-intrinsics-and-assembly-language.md)
-

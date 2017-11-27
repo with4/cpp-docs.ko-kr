@@ -1,0 +1,88 @@
+---
+title: "링커 속성(Linux C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 9/26/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+f1_keywords:
+- VC.Project.VCLinkerTool.OutputFile
+- VC.Project.VCLinkerTool.ShowProgress
+- VC.Project.VCLinkerTool.Version
+- VC.Project.VCLinkerTool.VerboseOutput
+- VC.Project.VCLinkerTool.UnresolvedReferences
+- VC.Project.VCLinkerTool.OptimizeForMemory
+- VC.Project.VCLinkerTool.SharedLibrarySearchPath
+- VC.Project.VCLinkerTool.AdditionalLibraryDirectories
+- VC.Project.VCConfiguration.BuildLogFile
+- VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames
+- VC.Project.VCLinkerTool.ForceSymbolReferences
+- VC.Project.VCLinkerTool.LibraryDependencies
+- VC.Project.VCLinkerTool.ForceFileOutput
+- VC.Project.VCLinkerTool.GenerateMapFile
+- VC.Project.VCLinkerTool.Relocation
+- VC.Project.VCLinkerTool.FunctionBinding
+- VC.Project.VCLinkerTool.NoExecStackRequired
+- VC.Project.WholeArchive
+- VC.Project.AdditionalOptionsPage
+- VC.Project.VCLinkerTool.AdditionalDependencies
+ms.openlocfilehash: 963d73e73e42930f0245c0fef443da27bf451bc6
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
+---
+# <a name="linker-properties-linux-c"></a>링커 속성(Linux C++)
+
+## <a name="general"></a>일반
+속성 | 설명 | 선택 항목
+--- | ---| ---
+출력 파일 | 이 옵션은 링커가 만드는 프로그램의 기본 이름 및 위치를 재정의합니다. (-o)
+진행률 표시 | 링커 진행 메시지를 출력합니다.
+버전 | -version 옵션을 사용하면 실행 파일의 헤더에 버전 번호를 삽입하도록 링커에 지시할 수 있습니다.
+자세한 출력 사용 | -verbose 옵션을 사용하면 디버깅에 대한 자세한 메시지를 출력하도록 링커에 지시할 수 있습니다.
+추적 | --trace 옵션은 입력 파일을 처리된 것으로 출력하도록 링커에 지시합니다.
+기호 추적 | 기호가 표시되는 파일의 목록을 인쇄합니다. (--trace-symbol=symbol)
+맵 인쇄 | --print-map 옵션은 링크 맵을 출력하도록 링커에 지시합니다.
+확인되지 않은 기호 참조 보고 | 이 옵션을 사용하도록 설정하면 확인되지 않은 기호 참조가 보고됩니다.
+메모리 사용량 최적화 | 필요할 경우 기호 테이블을 다시 읽어서 메모리 사용량을 최적화합니다.
+공유 라이브러리 검색 경로 | 사용자가 공유 라이브러리 검색 경로를 채울 수 있도록 허용합니다. (-rpath-link=path)
+추가 라이브러리 디렉터리 | 사용자가 환경의 라이브러리 경로를 재정의할 수 있습니다. (-L folder).
+링커 | 원격 시스템에서 링크하는 동안 호출할 프로그램 또는 링커 경로를 지정합니다.
+연결 시간 제한 | 원격 연결 시간 제한(밀리초)입니다.
+출력 복사 | 원격 시스템에서 로컬 컴퓨터로 빌드 출력 파일을 복사할지 여부를 지정합니다.
+
+## <a name="input"></a>입력
+속성 | 설명 | 선택 항목
+--- | ---| ---
+특정 기본 라이브러리 무시 | 무시할 하나 이상의 기본 라이브러리 이름을 지정합니다. (-exclude libs lib, lib)
+기본 라이브러리 무시 | 기본 라이브러리를 무시하고 명시적으로 지정한 라이브러리만 검색합니다.
+기호 참조 정의 강제 해제 | 기호를 출력 파일에 정의되지 않은 기호로 강제 입력합니다. (-u symbol --undefined=symbol)
+라이브러리 종속성 | 이 옵션을 사용하여 링커 명령줄에 추가할 추가 라이브러리를 지정할 수 있습니다. 추가 라이브러리는 링커 명령줄의 끝에 추가되며 'lib' 접두사로 시작하고 '.a' 확장명으로 끝납니다.  (-lFILE)
+추가 종속성 | 링크 명령줄에 추가할 추가 항목을 지정합니다.
+
+## <a name="debugging"></a>디버깅
+속성 | 설명 | 선택 항목
+--- | ---| ---
+디버거 기호 정보 | 출력 파일의 디버거 기호 정보 | **모두 포함**<br>**디버거 기호 정보만 생략**<br>**모든 기호 정보 생략**<br>
+맵 파일 이름 | [맵] 옵션을 사용하면 사용자가 지정한 이름으로 맵 파일을 만들도록 링커에 지시할 수 있습니다. (-Map=)
+
+## <a name="advanced"></a>고급
+속성 | 설명 | 선택 항목
+--- | ---| ---
+재배치 후 변수를 ReadOnly로 표시 | 이 옵션을 사용하면 재배치 후 변수가 ReadOnly로 표시됩니다.
+직접 함수 바인딩 사용 | 이 옵션을 사용하면 직접 함수 바인딩에 대한 개체가 표시됩니다.
+실행 가능한 스택 필요 없음 | 이 옵션을 사용하면 실행 가능한 스택 필요 없음으로 출력이 표시됩니다.
+전체 보관 파일 | 전체 보관 파일이 소스와 추가 종속성의 모든 코드를 사용합니다.
+
+
+## <a name="additional-options"></a>추가 옵션
+
+
+

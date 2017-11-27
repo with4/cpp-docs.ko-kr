@@ -1,53 +1,33 @@
 ---
 title: "Visual C++ 언어 규칙 | Microsoft Docs"
-ms.custom: 
-ms.date: 3/1/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- cpp-language
-ms.tgt_pltfrm: 
+ms.date: 11/15/2017
+ms.technology: cpp-language
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8e9d4d86abd15f59e94ce7e51d40e119f8ebd336
+ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
 ms.translationtype: HT
-ms.sourcegitcommit: 76cd1737728b60a720c0aa8bbc5218ecb66416f2
-ms.openlocfilehash: 7f5bb05bf5912dafa99877ed7c9ff6bc4393b28f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="visual-c-language-conformance"></a>Visual C++ 언어 규칙 
-이 항목에서는 Visual Studio 2017 및 이전 버전의 Visual C++용 컴파일러 기능 및 표준 라이브러리 기능에 대한 ISO C++03, C++11, C++14, C++17 및 초안 C++20 언어 표준 규칙을 요약하고 있습니다. 각 컴파일러 및 표준 라이브러리 기능 이름은 기능을 설명하는 ISO C++ 표준 제안 문서에 연결됩니다(게시 시점에 사용 가능한 경우). [지원됨] 열에는 기능에 대한 지원이 먼저 표시되는 Visual Studio 버전이 나열됩니다.  
-  
+# <a name="visual-c-language-conformance"></a>Visual C++ 언어 규칙
+
+이 항목에서는 Visual Studio 2017 및 이전 버전의 Visual C++용 컴파일러 기능 및 표준 라이브러리 기능에 대한 ISO C++03, C++11, C++14, C++17 및 초안 C++20 언어 표준 규칙을 요약하고 있습니다. 각 컴파일러 및 표준 라이브러리 기능 이름은 기능을 설명하는 ISO C++ 표준 제안 문서에 연결됩니다(게시 시점에 사용 가능한 경우). [지원됨] 열에는 기능에 대한 지원이 먼저 표시되는 Visual Studio 버전이 나열됩니다.
+
 Visual Studio 2017의 규칙 향상 및 기타 변경 사항에 대한 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md) 및 [Visual Studio 2017의 Visual C++에 대한 새로운 기능 ](what-s-new-for-visual-cpp-in-visual-studio.md)을 참조하세요. 이전 버전의 규칙 변경 내용에 대해서는 [Visual C++ change history](porting/visual-cpp-change-history-2003-2015.md)(Visual C++ 주요 변경 내용) 및 [2003~ 2015 Visual C++ 주요 변경 내용](porting/visual-cpp-what-s-new-2003-through-2015.md)을 참조하세요. C++ 팀의 최신 뉴스를 보려면 [Visual C++ 팀 블로그](https://blogs.msdn.microsoft.com/vcblog/)를 방문하세요.  
 
  > [!NOTE]
  > Visual Studio 2015 ~ Visual Studio 2017에서 새로운 이진 변경 내용이 없습니다.
-  
-## <a name="compiler-features"></a>컴파일러 기능  
-  
-|기능 영역| |  
-|----|---|  
+
+## <a name="compiler-features"></a>컴파일러 기능
+
+|기능 영역| |
+|----|---|
 |__C++03/11 핵심 언어 기능__|__지원됨__|
 |&nbsp;&nbsp;그 밖의 모든 항목|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;2단계 이름 조회|부분 <sup>[B](#note_B)</sup>|
@@ -89,15 +69,17 @@ Visual Studio 2017의 규칙 향상 및 기타 변경 사항에 대한 자세한
 |&nbsp;&nbsp;[P0217R3 구조적 바인딩](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0292R2 constexpr if 문](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0292r2.html)|VS 2017 15.3 <sup>[G](#note_G)</sup>|
 |&nbsp;&nbsp;[P0305R1 이니셜라이저를 사용하는 선택 문](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0245R1 Hexfloat 리터럴](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0245r1.html)|아니요|
+|&nbsp;&nbsp;[P0245R1 Hexfloat 리터럴](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0245r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4268 더 많은 비형식 템플릿 인수 허용](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4295 식 폴딩](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0003R5 동적 예외 사양 제거](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0012R1 형식 시스템에 noexcept 추가](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0012r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0035R4 과다 정렬된 동적 메모리 할당](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0035r4.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0386R2 인라인 변수](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0522R0 template-parameters 템플릿을 호환되는 인수와 일치](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0036R0 일부 비어 있는 단항 폴드 제거](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0036r0.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[N4261 한정 변환 수정](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)|아니요|
-|&nbsp;&nbsp;[N4268 더 많은 비형식 템플릿 인수 허용](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html)|아니요|
-|&nbsp;&nbsp;[N4295 식 폴딩](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html)|아니요|
-|&nbsp;&nbsp;[P0003R5 동적 예외 사양 제거](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|아니요|
-|&nbsp;&nbsp;[P0012R1 형식 시스템에 noexcept 추가](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0012r1.html)|아니요|
 |&nbsp;&nbsp;[P0017R1 확장된 집계 초기화](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|아니요|
-|&nbsp;&nbsp;[P0035R4 과다 정렬된 동적 메모리 할당](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0035r4.html)|아니요|
-|&nbsp;&nbsp;[P0036R0 일부 비어 있는 단항 폴드 제거](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0036r0.pdf)|아니요|
 |&nbsp;&nbsp;[P0091R3 클래스 템플릿에 대한 템플릿 인수 추론](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[P0512R0 클래스 템플릿 인수 추론 문제(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf)|아니요|
 |&nbsp;&nbsp;[P0127R2 자동으로 비형식 템플릿 매개 변수 선언](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|아니요|
 |&nbsp;&nbsp;[P0135R1 보장된 복사 생략](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|아니요 <sup>[H](#note_H)</sup>|
@@ -105,11 +87,9 @@ Visual Studio 2017의 규칙 향상 및 기타 변경 사항에 대한 자세한
 |&nbsp;&nbsp;[P0145R3 식 계산 순서 구체화](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 함수 인수 평가 순서(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|아니요|
 |&nbsp;&nbsp;[P0195R2 using 선언의 팩 확장](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|아니요|
 |&nbsp;&nbsp;[P0283R2 인식할 수 없는 특성 무시](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|아니요|
-|&nbsp;&nbsp;[P0386R2 인라인 변수](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf)|아니요|
-|&nbsp;&nbsp;[P0522R0 template-parameters 템플릿을 호환되는 인수와 일치](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html)|아니요|
 |&nbsp;&nbsp;[P0702R1 이니셜라이저 목록 작업자(initializer-list actors)에 대한 클래스 템플릿 인수 추론 문제 해결(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|아니요|
 |__C++20 핵심 언어 기능__|__지원됨__|
-|&nbsp;&nbsp;[P0306R4 쉼표 생략 및 쉼표 삭제에 \_\_VA_OPT\_\_ 추가(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|아니요|
+|&nbsp;&nbsp;[P0306R4 쉼표 생략 및 쉼표 삭제에&#95;&#95;VA_OPT&#95;&#95; 추가(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|아니요|
 |&nbsp;&nbsp;[P0329R4 지정된 초기화(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|아니요|
 |&nbsp;&nbsp;[P0409R2 [=, this] 람다 캡처 허용(영문)](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|아니요|
 |&nbsp;&nbsp;[P0428R2 일반 람다에 대한 친숙한 템플릿 구문(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|아니요|
@@ -127,24 +107,24 @@ Visual Studio 2017의 규칙 향상 및 기타 변경 사항에 대한 자세한
 |&nbsp;&nbsp;[P0674R1 배열에 대한 make_shared()(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|아니요|
 |__C++17 표준 라이브러리 기능__|__지원됨__|
 |&nbsp;&nbsp;[P0433R2 클래스 템플릿에 대한 템플릿 추론을 표준 라이브러리에 통합(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[P0739R0 표준 라이브러리에 클래스 템플릿 인수 추론 통합 향상(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|아니요|
-|&nbsp;&nbsp;[P0607R0 표준 라이브러리에 대한 인라인 변수(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|아니요|
 |&nbsp;&nbsp;[P0426R1 char_traits에 대한 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|아니요|
 |&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|아니요|
-|&nbsp;&nbsp;[P0033R1 enable_shared_from_this 다시 표시](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|아니요|
 |&nbsp;&nbsp;[P0220R1 라이브러리 기본 사항 V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|부분 <sup>[J](#note_J)</sup>|
-|&nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>, shared_ptr\<T[N]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[P0497R0 배열에 대한 shared_ptr 해결](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|아니요|
-|&nbsp;&nbsp;[P0083R3 맵 및 집합 스플라이스](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)<br />&nbsp;&nbsp;[P0508R0 명확히 insert_return_type 설명](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html)|아니요|
-|&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 not_fn()에 대한 수정 사항](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|아니요|
 |&nbsp;&nbsp;[P0067R5 기본 문자열 변환](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|아니요|
-|&nbsp;&nbsp;[P0618R0 \<codecvt> 사용 중단(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|아니요|
-|&nbsp;&nbsp;[P0521R0 shared_ptr::unique() 사용 중단](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|아니요|
-|&nbsp;&nbsp;[P0174R2 남아 있는 라이브러리 파트 사용 중단](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html)|아니요|
-|&nbsp;&nbsp;[P0003R5 동적 예외 사양 제거](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|아니요|
-|&nbsp;&nbsp;[P0302R1 std::function에서 할당자 지원 제거](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html)|아니요|
 |&nbsp;&nbsp;[N4562 라이브러리 기본 사항: \<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[P0337R0 polymorphic_allocator 할당 삭제](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|아니요|
 |&nbsp;&nbsp;[P0024R2 병렬 알고리즘](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 병렬 실행 정책 이름 바꾸기](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[P0394R4 예외가 발생할 경우 병렬 알고리즘을 종료()해야 함](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 \<numeric> 병렬 알고리즘 통합(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html)|아니요|
 |&nbsp;&nbsp;[P0226R1 수학 특수 함수](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|아니요|
 |&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 파일 시스템에 대한 상대 경로](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 파일 시스템에 대한 디렉터리 항목 캐싱(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html)<br />&nbsp;&nbsp;[P0392R0 파일 시스템 경로에서 string_view 지원](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 비POSIX 파일 시스템 지원(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 파일 시스템에 대한 NB 주석 해석(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|아니요 <sup>[K](#note_K)</sup>|
+|&nbsp;&nbsp;[P0003R5 동적 예외 사양 제거](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 not_fn()에 대한 수정 사항](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0033R1 enable_shared_from_this 다시 표시](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0083R3 맵 및 집합 스플라이스](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)<br />&nbsp;&nbsp;[P0508R0 명확히 insert_return_type 설명](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0174R2 남아 있는 라이브러리 파트 사용 중단](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0302R1 std::function에서 할당자 지원 제거](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>, shared_ptr\<T[N]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[P0497R0 배열에 대한 shared_ptr 해결](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0521R0 shared_ptr::unique() 사용 중단](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0607R0 표준 라이브러리에 대한 인라인 변수(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0618R0 \<codecvt> 사용 중단(영문)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[N4562 라이브러리 기본 사항: Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 검색자 반환 형식 수정](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0031R0 \<array>(다시 실행) 및 \<iterator>에 대한 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0040R3 메모리 관리 도구 확장](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
@@ -230,11 +210,12 @@ Visual Studio 2017의 규칙 향상 및 기타 변경 사항에 대한 자세한
 |&nbsp;&nbsp;[N3421 투명 연산자 함수(less\<> 등)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3421.htm)|VS 2013|
 |&nbsp;&nbsp;[N3655 \<type_traits>에 대한 별칭 템플릿(decay_t 등)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3655.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3656 make_unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3656.htm)|VS 2013|
-|&nbsp;&nbsp;[N3924 rand() 권장 안 함](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3924.pdf)|N/A|  
-  
-함께 나열된 문서 그룹은 기능이 표준으로 선출되고 해당 기능을 개선하거나 확장하기 위한 문서도 하나 이상 선출되었음을 나타냅니다. 이러한 기능은 함께 구현됩니다.  
-  
-### <a name="supported-values"></a>지원되는 값  
+|&nbsp;&nbsp;[N3924 rand() 권장 안 함](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3924.pdf)|N/A|
+
+함께 나열된 문서 그룹은 기능이 표준으로 선출되고 해당 기능을 개선하거나 확장하기 위한 문서도 하나 이상 선출되었음을 나타냅니다. 이러한 기능은 함께 구현됩니다.
+
+### <a name="supported-values"></a>지원되는 값
+
 __아니요__는 아직 구현되지 않은 것을 의미합니다.  
 __부분__은 Visual Studio 2017에서 부분적으로 구현되었음을 의미합니다. 자세한 내용은 참고 섹션을 참조하세요.  
 __해당 없음__은 제안 문서에서 해당 기능을 설명하지 않음을 의미합니다. 이러한 문서에서는 표준 언어를 변경했지만 구현자를 위한 작업을 만들지 않았습니다. 이 기능은 목록의 완전성을 위해 표시됩니다.  
@@ -244,8 +225,10 @@ __VS 2015__은 Visual Studio 2015 RTM에서 지원되는 기능을 나타냅니�
 __VS 2015.2__ 및 __VS 2015.3__은 각각 Visual Studio 2015 업데이트 2와 Visual Studio 2015 업데이트 3에서 지원되는 기능을 나타냅니다.  
 __VS 2017__은 Visual Studio 2017 RTM에서 지원되는 기능을 나타냅니다.  
 __VS 2017 15.3__은 Visual Studio 2017 버전 15.3에서 지원되는 기능을 나타냅니다.  
-  
-### <a name="notes"></a>참고  
+__VS 2017 15.5__는 Visual Studio 2017 버전 15.5에서 지원되는 기능을 나타냅니다.
+
+### <a name="notes"></a>참고
+
 <a name="note_A"></a>__A__ C++11에서 사용되지 않는 C++03의 동적 예외 사양을 무시합니다. 이러한 사양은 구현할 계획이 없으며 향후 C++ 표준에서 제거할 예정입니다.  
 <a name="note_B"></a>__B__ 2단계 이름 조회에 대한 컴파일러의 지원은 향상되었지만 여전히 불완전합니다.  
 <a name="note_C"></a>__C__ Expression SFINAE에 대한 컴파일러의 지원은 Visual Studio 2015 업데이트 2 이후로 표준 라이브러리에는 충분했지만 지원은 여전히 불완전합니다.  
@@ -263,7 +246,8 @@ __VS 2017 15.3__은 Visual Studio 2017 버전 15.3에서 지원되는 기능을 
 <a name="note_C11"></a>__C11__ 유니버셜 CRT에서는 C99 `strftime()` E/O 대체 변환 지정자, C11 `fopen()` 단독 모드 및 C11 `aligned_alloc()`을 제외하고는 C++17에 필요한 C11 표준 라이브러리의 일부를 구현했습니다. 후자는 C11에서 `free()`의 Microsoft 구현과 호환되지 않는 방식으로 `free()`에서 고도로 정렬된 할당을 처리할 수 있어야 하는 `aligned_alloc()`을 지정했기 때문에 구현되지 않을 것입니다.  
 <a name="note_rem"></a>__rem__ [/std:c++17](./build/reference/std-specify-language-standard-version.md)(또는 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) 컴파일러 옵션이 지정되면 기능이 제거됩니다. 이러한 기능에는 `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` 및 `_HAS_UNEXPECTED` 옵트아웃 매크로가 있습니다.
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
 [C++ 언어 참조](cpp/cpp-language-reference.md)  
 [C++ 표준 라이브러리](standard-library/cpp-standard-library-reference.md)   
 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md)  
@@ -271,4 +255,3 @@ __VS 2017 15.3__은 Visual Studio 2017 버전 15.3에서 지원되는 기능을 
 [2003~ 2015 Visual C++ 주요 변경 내용](porting/visual-cpp-change-history-2003-2015.md)  
 [Visual C++ 2003 ~ 2015의 새로운 기능](porting/visual-cpp-what-s-new-2003-through-2015.md)  
 [Visual C++ 팀 블로그](https://blogs.msdn.microsoft.com/vcblog/)  
-

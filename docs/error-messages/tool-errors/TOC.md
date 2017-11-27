@@ -186,6 +186,7 @@
 ## [링커 도구 경고 LNK4010](linker-tools-warning-lnk4010.md)
 ## [링커 도구 경고 LNK4014](linker-tools-warning-lnk4014.md)
 ## [링커 도구 경고 LNK4022](linker-tools-warning-lnk4022.md)
+## [링커 도구 경고 LNK4037](linker-tools-warning-lnk4037.md)
 ## [링커 도구 경고 LNK4039](linker-tools-warning-lnk4039.md)
 ## [링커 도구 경고 LNK4044](linker-tools-warning-lnk4044.md)
 ## [링커 도구 경고 LNK4049](linker-tools-warning-lnk4049.md)

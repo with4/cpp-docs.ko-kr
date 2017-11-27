@@ -1,25 +1,22 @@
 ---
-title: "Linux 작업 다운로드, 설치, 설정 | Microsoft 문서"
+title: "Linux 작업 다운로드, 설치, 설정 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: d2e19ee03483dce82846e7e7bbb0ab103e01203f
+ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 338f1bd87dbaaf4caf6a788cd45b3d011bbf40f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="download-install-and-setup-the-linux-workload"></a>Linux 작업 다운로드, 설치, 설정
 
 ## <a name="visual-studio-setup"></a>Visual Studio 설치
@@ -29,7 +26,7 @@ ms.lasthandoff: 10/09/2017
 
 2. **설치**를 클릭하여 설치를 계속합니다.
 
-## <a name="linux-setup"></a>Linux 설정
+## <a name="linux-setup"></a>Linux 설치
 대상 Linux 컴퓨터에 **openssh-server**, **g++**, **gdb** 및 **gdbserver**가 설치되어 있고 ssh 데몬이 실행되고 있어야 합니다.  이러한 항목이 없다면 다음과 같이 설치할 수 있습니다.
  
 1. Linux 컴퓨터의 셸 프롬프트에서 다음을 실행합니다.
@@ -43,4 +40,3 @@ ms.lasthandoff: 10/09/2017
    `sudo service ssh start`
    
    그러면 서비스가 시작되고 백그라운드에서 실행되므로 연결을 허용할 준비가 됩니다.
-

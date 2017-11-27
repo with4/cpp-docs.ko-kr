@@ -1,55 +1,53 @@
 ---
 title: "인라인 함수 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 10/16/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fast code
 - inline functions, __inline keyword
 - functions [C++], inline functions
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 1583e12613db9d53c0d1fc7be75e21ba377ab940
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 1ef83efdde0a8227ce1a5aa76f2b38816bc96023
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="inline-functions"></a>인라인 함수
-**Microsoft 전용**  
-  
- `__inline` 키워드는 컴파일러가 모든 함수 호출 건에 대해 함수 정의 내에서 코드를 대체하라고 말합니다. 하지만 코드 대체는 컴파일러의 판단하에서만 발생합니다. 예를 들어, 컴파일러는 해당 주소를 가져온 경우나 인라인에 비해 너무 클 경우에는 함수를 인라인하지 않습니다.  
-  
- 인라이닝의 후보로 간주되는 함수의 경우 새 스타일 함수 정의를 사용해야 합니다.  
-  
- 이 양식을 사용하여 인라인 함수를 지정합니다.  
-  
- `__inline` *type*opt*function-definition*`;`  
-  
- 인라인 함수를 사용하면 보다 빨리 코드를 생성할 수 있고 동등한 함수 호출이 생성하는 코드보다 더 작은 코드를 생성하는 경우도 있습니다. 그 이유는 다음과 같습니다.  
-  
--   함수 호출을 실행하는 데 필요한 시간을 저장합니다.  
-  
--   3줄 이하의 작은 인라인 함수는 컴파일러 인수가 인수 및 반환 값을 처리하는 코드를 생성하지 않으므로 해당 함수 호출보다 적은 코드를 만듭니다.  
-  
--   인라인으로 생성된 함수에서는 컴파일러가 프로시저 간 최적화를 수행하지 않기 때문에 일반 함수에 사용할 수 없는 코드 최적화가 진행됩니다.  
-  
- `__inline`을 사용하는 함수는 인라인 어셈블러 코드와 혼동해서는 안 됩니다. 자세한 내용은 [인라인 어셈블러](../c-language/inline-assembler-c.md)를 참조하세요.  
-  
- **Microsoft 전용 종료**  
-  
-## <a name="see-also"></a>참고 항목  
- [inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md)
 
+**Microsoft 전용**
+
+`__inline` 키워드는 컴파일러가 모든 함수 호출 건에 대해 함수 정의 내에서 코드를 대체하라고 말합니다. 하지만 코드 대체는 컴파일러의 판단하에서만 발생합니다. 예를 들어, 컴파일러는 해당 주소를 가져온 경우나 인라인에 비해 너무 클 경우에는 함수를 인라인하지 않습니다.
+
+인라이닝의 후보로 간주되는 함수의 경우 새 스타일 함수 정의를 사용해야 합니다.
+
+이 양식을 사용하여 인라인 함수를 지정합니다.
+
+> **__inline** *type*<sub>opt</sub> *function-definition*
+
+인라인 함수를 사용하면 보다 빨리 코드를 생성할 수 있고 동등한 함수 호출이 생성하는 코드보다 더 작은 코드를 생성하는 경우도 있습니다. 그 이유는 다음과 같습니다.
+
+- 함수 호출을 실행하는 데 필요한 시간을 저장합니다.
+
+- 3줄 이하의 작은 인라인 함수는 컴파일러 인수가 인수 및 반환 값을 처리하는 코드를 생성하지 않으므로 해당 함수 호출보다 적은 코드를 만듭니다.
+
+- 인라인으로 생성된 함수에서는 컴파일러가 프로시저 간 최적화를 수행하지 않기 때문에 일반 함수에 사용할 수 없는 코드 최적화가 진행됩니다.
+
+`__inline`을 사용하는 함수는 인라인 어셈블러 코드와 혼동해서는 안 됩니다. 자세한 내용은 [인라인 어셈블러](../c-language/inline-assembler-c.md)를 참조하세요.
+
+**Microsoft 전용 종료**  
+
+## <a name="see-also"></a>참고 항목
+
+[inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md)
 

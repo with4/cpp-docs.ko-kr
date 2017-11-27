@@ -1,25 +1,22 @@
 ---
-title: "원격 Linux 컴퓨터에 연결 | Microsoft 문서"
+title: "원격 Linux 컴퓨터에 연결 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6dce0c1c190854b7927c6e023edd76c9d1cb5645
+ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: dd817a7d9fad4946cd0aa9f641f9e8f495f1be9a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="connect-to-your-remote-linux-computer"></a>원격 Linux 컴퓨터에 연결
 
 빌드할 때 Linux 코드가 원격 Linux 컴퓨터에 복사되어 Visual Studio에서 선택한 설정에 따라 해당 시스템에서 컴파일됩니다.  이 원격 연결을 설정하려면

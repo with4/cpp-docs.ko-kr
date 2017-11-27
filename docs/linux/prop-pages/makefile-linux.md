@@ -1,0 +1,100 @@
+---
+title: "일반 속성(Linux C++ 메이크파일 프로젝트)| Microsoft Docs"
+ms.custom: 
+ms.date: 9/26/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+f1_keywords:
+- VC.Project.VCConfiguration.OutputDirectory
+- VC.Project.VCConfiguration.IntermediateDirectory
+- VC.Project.VCConfiguration.ConfigurationType
+- VC.Project.VCConfiguration.BuildLogFile
+ms.openlocfilehash: 9507ab2ed54d8160afdd8071b0779b51d6802bef
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2017
+---
+# <a name="makefile-project-properties-linux-c"></a>메이크파일 프로젝트 속성(Linux C++)
+Linux 메이크파일 프로젝트에서 사용할 수 있는 속성의 부분 목록입니다. 대다수의 메이크파일 프로젝트 속성은 다음과 동일합니다. 
+
+## <a name="general"></a>일반
+속성 | 설명 | 선택 항목
+--- | ---| ---
+출력 디렉터리 | 출력 파일 디렉터리에 대한 상대 경로를 지정하며 환경 변수를 포함할 수 있습니다.
+중간 디렉터리 | 중간 파일 디렉터리에 대한 상대 경로를 지정하며 환경 변수를 포함할 수 있습니다.
+빌드 로그 파일 | 빌드 로깅을 사용하도록 설정된 경우 작성할 빌드 로그 파일을 지정합니다.
+구성 형식 | 이 구성에서 생성하는 출력 형식을 지정합니다. | **동적 라이브러리(.so)** - 동적 라이브러리(.so)<br>**정적 라이브러리(.a)** - 정적 라이브러리(.a)<br>**응용 프로그램(.out)** - 응용 프로그램(.out)<br>**메이크파일** - 메이크파일<br>
+원격 빌드 컴퓨터 | 원격 빌드, 배포 및 디버그에 사용할 대상 컴퓨터 또는 장치입니다.
+원격 빌드 루트 디렉터리 | 원격 컴퓨터 또는 장치의 디렉터리에 대한 경로를 지정합니다.
+원격 빌드 프로젝트 디렉터리 | 원격 컴퓨터 또는 장치의 디렉터리에 대한 경로를 지정합니다.
+
+## <a name="debugging"></a>디버깅
+[디버거 속성(Linux C++)](debugging-linux.md) 참조
+
+## <a name="copy-sources"></a>소스 복사
+[소스 복사 프로젝트 속성(Linux C++)](copy-sources-project.md) 참조
+
+## <a name="build-events"></a>빌드 이벤트
+
+### <a name="pre-build-event"></a>빌드 전 이벤트
+속성 | 설명
+--- | ---
+명령줄 | 빌드 전 이벤트 도구가 실행할 명령줄을 지정합니다.
+설명 | 빌드 전 이벤트 도구가 표시할 설명을 지정합니다.
+빌드에 사용 | 이 빌드 이벤트가 현재 구성의 빌드에서 제외되는지 여부를 지정합니다.
+복사할 추가 파일 | 원격 시스템에 복사할 추가 파일을 지정합니다. 필요에 따라 구문(예: fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2)을 사용하여 로컬-원격 매핑 쌍으로 목록을 제공할 수 있습니다. 이 경우 로컬 파일이 원격 시스템의 지정된 원격 위치에 복사될 수 있습니다.
+
+### <a name="post-build-event"></a>빌드 후 이벤트
+명령줄 | 실행할 빌드 후 이벤트 도구에 대한 명령줄을 지정합니다.
+설명 | 빌드 후 이벤트 도구가 표시할 설명을 지정합니다.
+빌드에서 사용 | 현재 구성의 빌드에서 이 빌드 이벤트가 제외되는지 여부를 지정합니다.
+복사할 추가 파일 | 원격 시스템에 복사할 추가 파일을 지정합니다. 필요에 따라 구문(예: fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2)을 사용하여 로컬-원격 매핑 쌍으로 목록을 제공할 수 있습니다. 이 경우 로컬 파일이 원격 시스템의 지정된 원격 위치에 복사될 수 있습니다.
+
+### <a name="remote-pre-build-event"></a>원격 빌드 전 이벤트
+명령줄 | 빌드 전 이벤트 도구가 원격 시스템에서 실행할 명령줄을 지정합니다.
+설명 | 빌드 전 이벤트 도구가 표시할 설명을 지정합니다.
+빌드에서 사용 | 현재 구성의 빌드에서 이 빌드 이벤트가 제외되는지 여부를 지정합니다.
+복사할 추가 파일 | 원격 시스템에서 복사할 추가 파일을 지정합니다. 필요에 따라 구문(예: fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2)을 사용하여 원격-로컬 매핑 쌍으로 목록을 제공할 수 있습니다. 이 경우 원격 파일이 로컬 컴퓨터의 지정된 위치에 복사될 수 있습니다.
+
+### <a name="remote-post-build-event"></a>원격 빌드 후 이벤트
+명령줄 | 빌드 후 이벤트 도구가 원격 시스템에서 실행할 명령줄을 지정합니다.
+설명 | 빌드 후 이벤트 도구가 표시할 설명을 지정합니다.
+빌드에서 사용 | 현재 구성의 빌드에서 이 빌드 이벤트가 제외되는지 여부를 지정합니다.
+복사할 추가 파일 | 원격 시스템에서 복사할 추가 파일을 지정합니다. 필요에 따라 구문(예: fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2)을 사용하여 원격-로컬 매핑 쌍으로 목록을 제공할 수 있습니다. 이 경우 원격 파일이 로컬 컴퓨터의 지정된 위치에 복사될 수 있습니다.
+
+## <a name="cc"></a>C/C++
+
+### <a name="intellisense"></a>IntelliSense
+프로젝트 또는 파일 수준에서 IntelliSense 속성을 설정하여 IntelliSense 엔진에 대한 단서를 제공할 수 있습니다. 컴파일에는 영향을 주지 않습니다.
+
+속성 | 설명
+--- | ---
+포함 검색 경로 | 포함 파일을 확인하는 데 사용할 포함 검색 경로를 지정합니다.
+강제 포함 | 강제 포함 파일을 지정합니다.
+전처리기 정의 | 소스 파일에서 사용하는 전처리기 정의를 지정합니다.
+전처리기 정의 해제 | 전처리기 정의 해제를 하나 이상 지정합니다.     (/U[macro])
+추가 옵션 | C++ 파일을 구문 분석할 때 Intellisense에서 사용하는 추가 컴파일러 스위치를 지정합니다.
+
+### <a name="build"></a>빌드
+속성 | 설명
+--- | ---
+빌드 명령줄 | '빌드' 명령을 실행할 명령줄을 지정합니다.
+모두 다시 빌드 명령줄 | '모두 다시 빌드' 명령을 실행할 명령줄을 지정합니다.
+정리 명령줄 | '정리' 명령을 실행할 명령줄을 지정합니다.
+
+### <a name="remote-build"></a>원격 빌드
+속성 | 설명
+--- | ---
+빌드 명령줄 | '빌드' 명령을 실행할 명령줄을 지정합니다. 원격 시스템에서 실행됩니다.
+모두 다시 빌드 명령줄 | '모두 다시 빌드' 명령을 실행할 명령줄을 지정합니다. 원격 시스템에서 실행됩니다.
+정리 명령줄 | '정리' 명령을 실행할 명령줄을 지정합니다. 원격 시스템에서 실행됩니다.
+출력 | 원격 시스템의 원격 빌드에서 생성되는 출력을 지정합니다.
+

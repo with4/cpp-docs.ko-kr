@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.conversions
-dev_langs:
-- C++
+f1_keywords: c.conversions
+dev_langs: C++
 helpviewer_keywords:
 - data conversion routines [C++]
 - converting data
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: a711a8087fef7978eceaadece317d4aac95d6340
+ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: a0d117cd042a685b2a208f96b31e0a8f09c84e83
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="data-conversion"></a>데이터 변환
 이러한 루틴은 다른 한 양식에서 다른 양식으로 데이터를 변환합니다. 일반적으로 이러한 루틴은 사용자가 작성할 수 있는 변환보다 더 빠르게 실행됩니다. `to` 접두사로 시작하는 각 루틴은 함수 및 매크로로 구현됩니다. 구현 선택에 대한 자세한 내용은 [함수와 매크로 중 선택](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)을 참조하세요.  
@@ -39,6 +35,7 @@ ms.lasthandoff: 10/09/2017
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|문자열을 `int`로 변환|  
 |[_atoi64, _atoi64_l, _wtoi64, _wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|문자열을 `__int64`로 변환|  
 |[atol, _atol_l, _wtol, _wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|문자열을 `long`로 변환|  
+|[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|UTF-16 또는 UTF-32 문자를 해당 멀티 바이트 문자로 변환|  
 |[_ecvt](../c-runtime-library/reference/ecvt.md), [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|`double`을 지정된 길이의 문자열로 변환|  
 |[_fcvt](../c-runtime-library/reference/fcvt.md), [_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|`double`을 소수점 뒤의 자릿수를 지정하는 문자열로 변환|  
 |[_gcvt](../c-runtime-library/reference/gcvt.md), [_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|`double` 수를 문자열로 변환하고 문자열을 버퍼에 저장|  
@@ -52,6 +49,7 @@ ms.lasthandoff: 10/09/2017
 |[_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)|멀티바이트 문자를 1바이트 히라가나 코드로 변환|  
 |[_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)|멀티바이트 문자를 1바이트 가타카나 코드로 변환|  
 |[_mbctombb, _mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)|2바이트 멀티바이트 문자를 해당 1바이트 멀티바이트 문자로 변환|  
+|[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|멀티바이트 문자를 해당하는 UTF-16 또는 UTF-32 문자로 변환|  
 |[mbstowcs, _mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md), [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|멀티바이트 문자의 시퀀스를 해당되는 와이드 문자 시퀀스로 변환합니다.|  
 |[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|멀티바이트 문자를 해당되는 와이드 문자로 변환합니다.|  
 |[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|문자열을 `double`로 변환|  
