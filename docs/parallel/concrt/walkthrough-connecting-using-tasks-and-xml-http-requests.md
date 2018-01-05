@@ -1,124 +1,127 @@
 ---
-title: "연습: 작업 및 XML HTTP 요청을 사용하여 연결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "웹 서비스에 연결, Windows 스토어 앱[C++]"
-  - "IXMLHTTPRequest2 및 작업, 예제"
-  - "IXHR2 및 작업, 예제"
+title: "연습: 작업 및 XML HTTP 요청을 사용 하 여 연결 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- connecting to web services, Windows Store apps [C++]
+- IXMLHTTPRequest2 and tasks, example
+- IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5fef2e682f8e2036eb2919c20879c60e879ec845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 연습: 작업 및 XML HTTP 요청을 사용하여 연결
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이 예제는 [IXMLHTTPRequest2](http://msdn.microsoft.com/ko-kr/bbc11c4a-aecf-4d6d-8275-3e852e309908) 및 [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/ko-kr/aa4b3f4c-6e28-458b-be25-6cce8865fc71) 인터페이스를 작업과 함께 사용하여 HTTP GET 및 POST 요청을 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램의 웹 서비스에 보내는 방법을 살펴봅니다.  `IXMLHTTPRequest2` 을 함께 작업과 조합하여 다른 작업을 작성하는 코드를 작성할 수 있습니다.  예를 들어, 일련의 작업의 일환으로 다운로드 작업을 사용할 수 있습니다.  다운로드 작업은 작업이 취소 되는 경우에 응답할 수 있습니다.  
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>연습: 작업 및 XML HTTP 요청을 사용하여 연결
+사용 하는 방법을 보여 주는이 예제는 [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) 및 [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) 함께 HTTP GET 및 POST 요청을 웹 서비스에 대 한 인터페이스는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱. `IXMLHTTPRequest2`를 작업과 함께 결합하여 다른 작업을 사용하여 구성되는 코드를 작성할 수 있습니다. 예를 들어 일련의 작업 중 일부로 다운로드 작업을 사용할 수 있습니다. 다운로드 작업은 작업이 취소되는 경우에도 응답할 수 있습니다.  
   
 > [!TIP]
->  데스크톱 C\+\+앱에서 또는 C\+\+앱을 사용하는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 로 부터 C\+\+ REST SDK를 사용하여 HTTP 요청을 수행할 수 있습니다.  자세한 내용은 [C\+\+ REST SDK\(코드명 "Casablanca"\)](../../top/cpp-rest-sdk-codename-casablanca.md)을 참조하십시오.  
+>  또한 C++ REST SDK를 사용하여 C++ 응용 프로그램 또는 데스크톱 C++ 응용 프로그램을 사용하는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램의 HTTP 요청을 수행할 수도 있습니다. 자세한 내용은 참조 하십시오. [c + + REST SDK (코드명 "Casablanca")](https://github.com/Microsoft/cpprestsdk)합니다.  
   
- 작업에 대한 자세한 내용은 [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md)을 참조하십시오.  [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 에서 미디어 파일을 사용하는 방법에 대한 자세한 내용은 [Asynchronous programming in C\+\+](http://msdn.microsoft.com/ko-kr/512700b7-7863-44cc-93a2-366938052f31) 및 [C\+\+로 Windows 스토어 앱용 비동기 작업 만들기](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)을 참조하십시오.  
+ 작업에 대 한 자세한 내용은 참조 [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md)합니다. 작업을 사용 하는 방법에 대 한 자세한 내용은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱 참조 [c + +의 비동기 프로그래밍](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31) 및 [c + +로 Windows 스토어 앱 용 비동기 작업 만들기](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)합니다.  
   
- 이 문서는 먼저 `HttpRequest` 및 해당 지원 클래스를 생성하는 방법을 보여줍니다.  C\+\+ 및 XAML을 사용하는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱으로 부터 이 클래스를 사용하는 방법을 보여줍니다.  
+ 이 문서에서는 먼저 `HttpRequest` 및 해당 지원 클래스를 만드는 방법을 보여 줍니다. 그런 다음 C++ 및 XAML을 사용하는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 이 클래스를 사용하는 방법을 보여 줍니다.  
   
- 이 문서에 설명된 `HttpReader` 클래스를 사용하는 완성된 예제에 대한 설명은 [JavaScript 및 C\+\+로 Windows 스토어 앱, Bing Maps Trip Optimizer 개발](../Topic/Developing%20Bing%20Maps%20Trip%20Optimizer,%20a%20Windows%20Store%20app%20in%20JavaScript%20and%20C++.md)을 참고하십시오.  `IXMLHTTPRequest2` 를 사용하지만 작업을 사용하지 않는 다른 예제는 [Quickstart: Connecting using XML HTTP Request \(IXMLHTTPRequest2\)](http://msdn.microsoft.com/ko-kr/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)에서 참조하십시오.  
+ 사용 하는 전체 예제는 `HttpReader` 참조 클래스는이 문서에 설명 된 [개발 Bing Maps Trip Optimizer, JavaScript 및 c + + Windows 스토어 앱](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30)합니다. 사용 하는 또 다른 예에 대 한 `IXMLHTTPRequest2` 않습니다 작업 사용을 제외한 참조 [빠른 시작: XML HTTP 요청 (IXMLHTTPRequest2)를 사용 하 여 연결](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)합니다.  
   
 > [!TIP]
->  `IXMLHTTPRequest2`및 `IXMLHTTPRequest2Callback` 는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱에서 사용하기 위한 인터페이스입니다.  데스크톱 앱에서 사용하기 위해 이 예제를 적용할 수도 있습니다.  
+>  `IXMLHTTPRequest2` 및 `IXMLHTTPRequest2Callback`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 사용하기에 적합한 인터페이스입니다. 데스크톱 응용 프로그램에서 사용할 수 있도록 이 예제를 조정할 수도 있습니다.  
   
-## 사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
-## HttpRequest, HttpRequestBuffersCallback 및 HttpRequestStringCallback 클래스 정의  
- `IXMLHTTPRequest2` 인터페이스를 HTTP를 통해 웹 요청을 만들기 위해 사용하는 경우, 서버 응답을 수신하고 다른 이벤트에 반응하기 위해 `IXMLHTTPRequest2Callback` 인터페이스를 구현합니다.  이 예제는 웬 요청을 만들기 위해 `HttpRequest` 를 정의하고 응답을 처리하기 위해 `HttpRequestBuffersCallback` 및 `HttpRequestStringCallback` 클래스를 정의합니다.  `HttpRequestBuffersCallback` 및 `HttpRequestStringCallback` 클래스는 `HttpRequest` 클래스를 지원합니다; 응용 프로그램 코드에서 `HttpRequest` 클래스만으로 작업할 수 있습니다.  
+## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>HttpRequest, HttpRequestBuffersCallback 및 HttpRequestStringCallback 클래스 정의  
+ `IXMLHTTPRequest2` 인터페이스를 사용하여 HTTP를 통한 웹 요청을 만드는 경우 서버 응답을 받고 다른 이벤트에 대응하는 `IXMLHTTPRequest2Callback` 인터페이스를 구현합니다. 이 예제에서는 웹 요청을 만들기 위해 `HttpRequest` 클래스를 정의하고, 응답을 처리하기 위해 `HttpRequestBuffersCallback` 및 `HttpRequestStringCallback` 클래스를 정의합니다. `HttpRequestBuffersCallback` 및 `HttpRequestStringCallback` 클래스는 `HttpRequest` 클래스를 지원합니다. 응용 프로그램 코드에서 `HttpRequest` 클래스만 사용하여 작업할 수 있습니다.  
   
- `GetAsync`, `HttpRequest` 클래스의 `PostAsync` 메서드는 각각 HTTP GET 및 POST 작업을 시작하도록 합니다.  이러한 메서드는 `HttpRequestStringCallback` 클래스를 사용하여 문자열로 서버의 응답을 읽을 수 있습니다.  `SendAsync` 및 `ReadAsync` 메서드는 청크에서 큰 콘텐츠를 스트리밍하도록 합니다.  이 메서드는 각각 작업을 나타내기 위해 [concurrency::task](../../parallel/concrt/reference/task-class-concurrency-runtime.md) 를 반환합니다.  `GetAsync` 및 `PostAsync` 메서드는 `wstring` 일부가 서버의 응답을 나타내는 곳에서 `task<std::wstring>` 값을 생성합니다.  `SendAsync` 및 `ReadAsync` 메서드는 `task<void>` 값을 생성합니다; 이 과정은 작업 완료를 보내고 읽을 때 완료됩니다.  
+ `GetAsync` 클래스의 `PostAsync` 및 `HttpRequest` 메서드는 각각 HTTP GET 및 POST 작업을 시작할 수 있도록 합니다. 이러한 메서드는 `HttpRequestStringCallback` 클래스를 사용하여 서버 응답을 문자열로 읽습니다. `SendAsync` 및 `ReadAsync` 메서드를 사용하면 큰 콘텐츠를 청크로 스트리밍할 수 있습니다. 이러한 메서드는 각각 반환 [concurrency:: task](../../parallel/concrt/reference/task-class.md) 작업을 나타내는입니다. `GetAsync` 및 `PostAsync` 메서드는 `task<std::wstring>` 부분이 서버의 응답을 나타내는 `wstring` 값을 생성합니다. `SendAsync` 및 `ReadAsync` 메서드는 `task<void>` 값을 생성합니다. 이러한 작업은 보내기 및 읽기 작업이 끝날 때 완료됩니다.  
   
- `IXMLHTTPRequest2` 인터페이스는 비동기적으로 작동하기 때문에,이 예제에서는 [concurrency::task\_completion\_event](../../parallel/concrt/reference/task-completion-event-class.md) 를 사용하여 콜백 개체가 완료 또는 다운로드 작업을 취소 한 후 완료 되는 작업을 만듭니다.  `HttpRequest` 클래스는 최종 결과를 설정하기 위한 이 작업으로 부터 작업 기반 연속 작업을 만듭니다.  `HttpRequest` 클래스는 이전 작업에서 오류가 발생 되거나 취소 되는 경우에 연속 작업이 실행되는지를 확인하기 위해 작업 기반 연속 작업을 사용합니다.  작업 기반 연속에 대한 자세한 내용은 [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md)를 참조하십시오.  
+ 때문에 `IXMLHTTPRequest2` 인터페이스가 비동기적으로 작동, 사용 하 여이 예제 [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) 콜백 개체가 완료 하거나 다운로드 작업을 취소 한 후 완료 되는 작업을 만들려고 합니다. `HttpRequest` 클래스는 최종 결과를 설정하기 위해 이 작업에서 작업 기반 연속 작업을 만듭니다. `HttpRequest` 클래스는 작업 기반 연속 작업을 사용하여 이전 작업이 오류를 생성하거나 취소되는 경우에도 연속 작업이 실행되도록 합니다. 작업 기반 연속에 대 한 자세한 내용은 참조 [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
   
- 취소를 지원하기 위해, `HttpRequest`, `HttpRequestBuffersCallback`, 및 `HttpRequestStringCallback` 클래스는 취소 토큰을 사용합니다.  `HttpRequestBuffersCallback` 및 `HttpRequestStringCallback` 클래스는 [concurrency::cancellation\_token::register\_callback](../Topic/cancellation_token::register_callback%20Method.md) 메서드를 사용하여 작업 완료 이벤트 취소에 응답할 수 있도록 합니다.  취소 콜백은 다운로드를 중단합니다.  취소에 대한 자세한 내용은 [취소](../../parallel/concrt/cancellation-in-the-ppl.md)를 참조하십시오.  
+ 취소를 지원하기 위해 `HttpRequest`, `HttpRequestBuffersCallback` 및 `HttpRequestStringCallback` 클래스는 취소 토큰을 사용합니다. `HttpRequestBuffersCallback` 및 `HttpRequestStringCallback` 사용 하는 클래스는 [concurrency::cancellation_token::register_callback](reference/cancellation-token-class.md#register_callback) 메서드가 작업 완료 이벤트가 취소에 응답할 수 있도록 합니다. 이 취소 콜백은 다운로드를 중단합니다. 취소에 대 한 자세한 내용은 참조 하십시오. [취소](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)합니다.  
   
-#### HttpRequest 클래스를 정의하려면  
+#### <a name="to-define-the-httprequest-class"></a>HttpRequest 클래스를 정의하려면  
   
-1.  Visual C\+\+ **빈 응용 프로그램 \(XAML\)** 템플릿을 사용하여 빈 XAML 앱 프로젝트를 만듭니다.  이 예제에서는 프로젝트의 이름을 `UsingIXMLHTTPRequest2`로 합니다.  
+1.  Visual c + +를 사용 하 여 **새 응용 프로그램 (XAML)** 템플릿을 빈 XAML 응용 프로그램 프로젝트를 만듭니다. 이 예에서는 프로젝트 이름을 `UsingIXMLHTTPRequest2`로 지정합니다.  
   
-2.  HttpRequest.h 라는 헤더 파일 및 HttpRequest.cpp 라는 소스 파일을 프로젝트에 추가합니다.  
+2.  HttpRequest.h라는 헤더 파일과 HttpRequest.cpp라는 소스 파일을 프로젝트에 추가합니다.  
   
-3.  Pch.h에서, 이 코드를 추가합니다.  
+3.  pch.h에서 다음 코드를 추가합니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#1](concrt-using-IXMLHTTPRequest2#1)]  
+     [!code-cpp[concrt-using-ixhr2#1](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_1.h)]  
   
-4.  HttpRequest.h에서, 이 코드를 추가 합니다.  
+4.  HttpRequest.h에서 다음 코드를 추가합니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#2](concrt-using-IXMLHTTPRequest2#2)]  
+     [!code-cpp[concrt-using-ixhr2#2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_2.h)]  
   
-5.  HttpRequest.h에서, 이 코드를 추가 합니다.  
+5.  HttpRequest.cpp에서 다음 코드를 추가합니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#3](concrt-using-IXMLHTTPRequest2#3)]  
+     [!code-cpp[concrt-using-ixhr2#3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_3.cpp)]  
   
-## [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 HttpRequest 클래스 사용  
- 이 섹션은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱에서 `HttpRequest` 클래스를 사용하는 방법을 증명합니다.  앱은 URL 리소스를 정의하는 입력 상자 및 GET 과 POST 작업을 수행하는 단추 명령 및 현재 작업을 취소 하는 단추 명령을 제공합니다.  
+## <a name="using-the-httprequest-class-in-a-includewin8appnamelongbuildincludeswin8appnamelongmdmd-app"></a>[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 HttpRequest 클래스 사용  
+ 이 단원에서는 `HttpRequest` 응용 프로그램에서 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 클래스를 사용하는 방법을 보여 줍니다. 응용 프로그램은 URL 리소스를 정의하는 입력 상자, GET 및 POST 작업을 수행하는 단추 명령 및 현재 작업을 취소하는 단추 명령을 제공합니다.  
   
-#### HttpRequest 클래스를 사용하려면  
+#### <a name="to-use-the-httprequest-class"></a>HttpRequest 클래스를 사용하려면  
   
-1.  MainPage.xaml에서 다음과 같이 [StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) 을 정의합니다.  
+1.  MainPage.xaml에서 정의 된 [StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) 다음과 같이 요소입니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A1](concrt-using-IXMLHTTPRequest2#A1)]  
+     [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]  
   
-2.  MainPage.xaml.h에, 이 `#include` 지시문을 추가합니다:  
+2.  MainPage.xaml.h에서 다음 `#include` 지시문을 추가합니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A2](concrt-using-IXMLHTTPRequest2#A2)]  
+     [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]  
   
-3.  MainPage.xaml.h에서, `MainPage` 클레스에 `private` 멤버 변수를 추가합니다.  
+3.  MainPage.xaml.h에서 다음 `private` 멤버 변수를 `MainPage` 클래스에 추가합니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A3](concrt-using-IXMLHTTPRequest2#A3)]  
+     [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]  
   
-4.  MainPage.xaml.h에서, `private` 메서드 `ProcessHttpRequest`를 선언합니다.  
+4.  MainPage.xaml.h에서 `private` 메서드 `ProcessHttpRequest`를 선언합니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A4](concrt-using-IXMLHTTPRequest2#A4)]  
+     [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]  
   
-5.  MainPage.xaml.cpp에서, 이러한 `using` 문을 추가합니다.  
+5.  MainPage.xaml.cpp에서 다음 `using` 문을 추가합니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A5](concrt-using-IXMLHTTPRequest2#A5)]  
+     [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]  
   
-6.  MainPage.xaml.cpp에서, `GetButton_Click`, `PostButton_Click`, 및 `MainPage` 클래스의 `CancelButton_Click` 메서드를 실행합니다.  
+6.  MainPage.xaml.cpp에서 `GetButton_Click` 클래스의 `PostButton_Click`, `CancelButton_Click` 및 `MainPage` 메서드를 구현합니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A6](concrt-using-IXMLHTTPRequest2#A6)]  
+     [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]  
   
     > [!TIP]
-    >  앱이 취소에 대한 지원이 칠효하지 않으면, [concurrency::cancellation\_token::없음](../Topic/cancellation_token::none%20Method.md) 을 `HttpRequest::GetAsync` 및 `HttpRequest::PostAsync` 메서드에 전달합니다.  
+
+
+    >  응용 프로그램에 취소에 대 한 지원이 필요 하지 않으면, 전달 [concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) 에 `HttpRequest::GetAsync` 및 `HttpRequest::PostAsync` 메서드.  
+
+
   
-7.  MainPage.xaml.cpp에서, `MainPage::ProcessHttpRequest` 메서드를 구현합니다.  
+7.  MainPage.xaml.cpp에서 `MainPage::ProcessHttpRequest` 메서드를 구현합니다.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A7](concrt-using-IXMLHTTPRequest2#A7)]  
+     [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]  
   
-8.  프로젝트 속성에서, **링커**, **입력**에서, `shcore.lib` 및 `msxml6.lib`을 지정합니다.  
+8.  프로젝트 속성에서 아래 **링커**, **입력**, 지정 `shcore.lib` 및 `msxml6.lib`합니다.  
   
- 다음은 실행 중인 앱입니다.  
+ 다음은 실행 중인 응용 프로그램입니다.  
   
- ![실행 중인 Windows 스토어 앱](../../parallel/concrt/media/concrt_usingixhr2.png "ConcRT\_UsingIXHR2")  
+ ![실행 중인 Windows 스토어 응용 프로그램](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  [동시성 런타임 연습](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
- [취소](../../parallel/concrt/cancellation-in-the-ppl.md)   
- [Asynchronous programming in C\+\+](http://msdn.microsoft.com/ko-kr/512700b7-7863-44cc-93a2-366938052f31)   
- [C\+\+로 Windows 스토어 앱용 비동기 작업 만들기](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [Quickstart: Connecting using XML HTTP Request \(IXMLHTTPRequest2\)](http://msdn.microsoft.com/ko-kr/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
- [작업 클래스\(동시성 런타임\)](../../parallel/concrt/reference/task-class-concurrency-runtime.md)   
- [task\_completion\_event 클래스](../../parallel/concrt/reference/task-completion-event-class.md)   
- [IXMLHTTPRequest2](http://msdn.microsoft.com/ko-kr/bbc11c4a-aecf-4d6d-8275-3e852e309908)   
- [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/ko-kr/aa4b3f4c-6e28-458b-be25-6cce8865fc71)
+ [PPL에서의 취소](cancellation-in-the-ppl.md)   
+ [C + +의 비동기 프로그래밍](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)   
+ [C + + Windows 스토어 앱 용 비동기 작업 만들기](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
+ [빠른 시작: XML HTTP 요청 (IXMLHTTPRequest2)를 사용 하 여 연결](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [task 클래스 (동시성 런타임)](../../parallel/concrt/reference/task-class.md)   
+ [task_completion_event 클래스](../../parallel/concrt/reference/task-completion-event-class.md)

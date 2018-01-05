@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1304cd827e80328857571552201601f0e453c1dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18fb141ab1000d8befda2370f993a5d5ee06d973
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-ccx"></a>속성(C++/CX)
 공용 데이터를 속성으로 노출 하는 Windows 런타임 형식입니다. 클라이언트 코드는 공용 데이터 멤버처럼 속성에 액세스합니다. 내부적으로 속성은 get 접근자 메서드, set 접근자 메서드 또는 둘 다 포함된 블록으로 구현됩니다. 접근자 메서드를 사용하면 값을 검색하기 전이나 후에 추가 작업을 수행할 수 있습니다. 예를 들어 이벤트를 발생시키거나 유효성 검사를 수행할 수 있습니다.  

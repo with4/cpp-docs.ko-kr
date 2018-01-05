@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: e4f3b0186d3a7d1aa30ea71f6d80abd5d614e255
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e122f84bff2b815a00e50950b90230a9d50907a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial-classes-ccx"></a>Partial 클래스(C++/CX)
 partial 클래스는 사용자가 클래스 정의의 한 부분을 수정할 때 자동 코드 생성 소프트웨어(예: XAML 디자이너)도 동일한 클래스의 코드를 수정하는 시나리오를 지원하는 생성자입니다. partial 클래스를 사용하면 디자이너가 코드를 덮어쓰지 않게 할 수 있습니다. Visual Studio 프로젝트에서는 생성된 파일에 `partial` 한정자가 자동으로 적용됩니다.  

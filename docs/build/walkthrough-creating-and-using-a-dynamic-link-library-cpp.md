@@ -16,11 +16,12 @@ caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9e95ae2929800729b4036136bd65254026be697e
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>연습: 만들기 및 사용자 고유의 동적 연결 라이브러리 (c + +)를 사용 합니다.
 
@@ -107,7 +108,7 @@ DLL 프로젝트를 만드는 작업의이 집합에 코드를 추가 빌드합�
 
    ![Win32 응용 프로그램 마법사 개요](media/mathlibrary-project-wizard-1.png "Win32 응용 프로그램 마법사 개요")
 
-1. 선택 된 **다음** 단추입니다. 에 **응용 프로그램 설정** 페이지의 **응용 프로그램 종류**선택, **DLL**합니다.
+1. **다음** 단추를 선택합니다. 에 **응용 프로그램 설정** 페이지의 **응용 프로그램 종류**선택, **DLL**합니다.
 
    ![Win32 응용 프로그램 마법사에서 DLL을 만들고](media/mathlibrary-project-wizard-2.png "Win32 응용 프로그램 마법사에서 DLL 만들기")
 
