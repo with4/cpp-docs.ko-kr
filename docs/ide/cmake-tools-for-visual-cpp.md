@@ -13,11 +13,12 @@ ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 770b7f70e52859b1489b984d8aef3c3876a9ca83
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: d38538ce929410782eee7a0a6540bb62a05b7669
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual c + +에서 CMake 프로젝트
 이 문서에서는 CMake, 여러 플랫폼에서 실행 되는 빌드 프로세스를 정의 하기 위한 플랫폼 간, 오픈 소스 도구에 익숙한 가정 합니다.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/15/2017
 
 **Visual Studio 2017 버전 15.3**: 닌자와 Visual Studio 생성기에 대 한 지원이 제공 됩니다.
 
-**Visual Studio 2017 버전 15.4**: Linux에서 CMake에 대 한 지원이 추가 됩니다. 자세한 내용은 참조 [Linux CMake 프로젝트 구성](../linux/cmake-linux-project.md)합니다.
+**Visual Studio 2017 버전 15.4**: Linux에서 CMake에 대 한 지원이 추가 됩니다. 자세한 내용은 [Linux CMake 프로젝트 구성](../linux/cmake-linux-project.md)을 참조하세요.
 
 ## <a name="installing"></a>설치
 CMake에 대 한 visual c + + 도구는 작업의 c + + 데스크톱 개발의 일부로 기본적으로 설치 됩니다.

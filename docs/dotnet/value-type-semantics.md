@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d04f84fa98c61161bc7f03eb5b38004e6d6659cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-type-semantics"></a>값 형식 의미
 값 형식 의미 체계 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
@@ -197,7 +200,7 @@ void f( G * g ) {
 };  
 ```  
   
- 새 구문에서 전체 개체를 고정 반환한는 `new` 식은 지원 되지 않습니다. 대신, 내부 멤버의 주소를 고정 해야 합니다. 예를 들면 다음과 같습니다.  
+ 새 구문에서 전체 개체를 고정 반환한는 `new` 식은 지원 되지 않습니다. 대신, 내부 멤버의 주소를 고정 해야 합니다. 예를 들어 개체에 적용된  
   
 ```  
 ref class G {  

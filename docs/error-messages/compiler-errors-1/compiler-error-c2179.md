@@ -15,18 +15,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0f311bcdbbdaa721e3897eae0a90ae892cf75d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7a14231f02983151936947c6ed0f880a5a8dabb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2179"></a>컴파일러 오류 C2179
 'type': 특성 인수에서 형식 매개 변수를 사용할 수 없습니다  
   
  제네릭 형식 매개 변수는 런타임에 확인 됩니다. 그러나 특성 매개 변수는 컴파일 타임에 확인 되어야 합니다. 따라서 특성에 대 한 인수로 제네릭 형식 매개 변수를 사용할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2179 오류가 발생 합니다.  
   
 ```  

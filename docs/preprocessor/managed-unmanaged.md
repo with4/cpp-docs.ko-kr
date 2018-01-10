@@ -1,69 +1,70 @@
 ---
-title: "관리되는, 관리되지 않는 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.unmanaged"
-  - "managed_CPP"
-  - "unmanaged_CPP"
-  - "vc-pragma.managed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "관리되는 pragma"
-  - "pragma, 관리"
-  - "pragma, 관리되지 않는"
-  - "관리되지 않는 pragma"
+title: "관리 되는, 관리 되지 않는 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.unmanaged
+- managed_CPP
+- unmanaged_CPP
+- vc-pragma.managed
+dev_langs: C++
+helpviewer_keywords:
+- managed pragma
+- pragmas, unmanaged
+- pragmas, managed
+- unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d8e2b50f7d505a4e262559b6cb69b0bab81ffcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 관리되는, 관리되지 않는
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="managed-unmanaged"></a>관리되는, 관리되지 않는
 함수를 관리되거나 관리되지 않는 것으로 컴파일하기 위해 함수 수준 제어를 사용하도록 설정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-        #pragma managed  
+      #pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
-## 설명  
- [\/clr](../build/reference/clr-common-language-runtime-compilation.md) 컴파일러 옵션은 함수를 관리되거나 관리되지 않는 것으로 컴파일하기 위한 모듈 수준 제어를 제공합니다.  
+## <a name="remarks"></a>설명  
+ [/clr](../build/reference/clr-common-language-runtime-compilation.md) 컴파일러 옵션은 함수를 관리 되거나 관리 되지 않는 것으로 컴파일하기 위해 모듈 수준 제어를 제공 합니다.  
   
  관리되지 않는 함수는 네이티브 플랫폼용으로 컴파일되고 프로그램의 해당 부분을 실행하면 공용 언어 런타임에 의해 네이티브 플랫폼으로 전달됩니다.  
   
- 함수는 **\/clr**이 사용되는 경우 기본적으로 관리되는 것으로 컴파일됩니다.  
+ 기본적으로 관리 하는 함수가 컴파일된 경우 **/clr** 사용 됩니다.  
   
  다음 pragma를 적용할 때  
   
 -   함수 본문 내부가 아니라 함수 앞에 pragma를 추가합니다.  
   
--   `#include` 문 다음에 pragma를 추가합니다.  이러한 pragma를 `#include` 문 앞에는 사용하지 않도록 합니다.  
+-   `#include` 문 다음에 pragma를 추가합니다. 이러한 pragma를 `#include` 문 앞에는 사용하지 않도록 합니다.  
   
- 컴파일러는 `managed`이 컴파일에서 사용되지 않는 경우 `unmanaged` 및 **\/clr** pragma를 무시합니다.  
+ 컴파일러에서 무시 된 `managed` 및 `unmanaged` pragma 경우 **/clr** 컴파일에서 사용 되지 않습니다.  
   
  템플릿 함수가 인스턴스화되는 경우 템플릿 정의 시점의 pragma 상태에 따라 함수가 관리되는지 아니면 관리되지 않는지가 결정됩니다.  
   
- 자세한 내용은 [혼합형 어셈블리 초기화](../dotnet/initialization-of-mixed-assemblies.md)를 참조하세요.  
+ 자세한 내용은 참조 [혼합형 어셈블리 초기화](../dotnet/initialization-of-mixed-assemblies.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // pragma_directives_managed_unmanaged.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -92,6 +93,10 @@ int main() {
 }  
 ```  
   
-  **In managed function.  In unmanaged function.**    
-## 참고 항목  
- [Pragma 지시문 및 \_\_Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+In managed function.  
+In unmanaged function.  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [Pragma 지시문 및 __Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

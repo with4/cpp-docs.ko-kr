@@ -1,34 +1,36 @@
 ---
-title: "방법: 텍스트 파일 읽기(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "텍스트 파일 읽기"
-  - "텍스트 파일, 읽기"
+title: "방법: 텍스트 파일 읽기 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reading text files
+- text files, reading
 ms.assetid: 80551c01-d769-4b6d-8db7-fd53bde21b62
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a1924a918d8a3255ca4a8488adc366155c1110dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: 텍스트 파일 읽기(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 <xref:System.IO?displayProperty=fullName> 네임스페이스에 정의된 <xref:System.IO.StreamReader> 클래스를 사용하여 텍스트 파일을 열고 한 번에 한 줄씩 읽는 방법을 보여 줍니다.  이 클래스의 인스턴스는 텍스트 파일을 여는 데 사용되고 각 줄을 검색하는 데는 <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> 메서드가 사용됩니다.  
+# <a name="how-to-read-a-text-file-ccli"></a>방법: 텍스트 파일 읽기(C++/CLI)
+다음 코드 예제에서는 열고 사용 하 여 한 번에는 한 줄씩 텍스트 파일을 읽는 방법을 보여 줍니다.는 <xref:System.IO.StreamReader> 에 정의 된 클래스는 <xref:System.IO?displayProperty=fullName> 네임 스페이스입니다. 텍스트 파일을이 클래스의 인스턴스는 다음의 <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> 각 줄을 검색 메서드를 사용 합니다.  
   
- 이 코드 예제에서는 텍스트가 포함된 textfile.txt라는 파일을 읽습니다.  이런 종류의 파일에 대한 자세한 내용은 [방법: 텍스트 파일 쓰기](../dotnet/how-to-write-a-text-file-cpp-cli.md)를 참조하십시오.  
+ 이 코드 예제에서 명명 된 textfile.txt 및 텍스트를 포함 하는 파일을 읽습니다. 이런이 종류의 파일에 대 한 정보를 참조 하십시오. [하는 방법: 텍스트 파일 쓰기 (C + + /cli CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // text_read.cpp  
@@ -65,6 +67,6 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [파일 및 스트림 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [파일 및 스트림 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

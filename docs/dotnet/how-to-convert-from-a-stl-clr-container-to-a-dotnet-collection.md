@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 817f04af0f6d2c24296b5775a9863b8c34dccd30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aa58c8db46d1443ca5b39449222cc22e31eafb5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>방법: STL/CLR 컨테이너에서 .NET 컬렉션으로 변환
 이 항목에서는 STL/CLR 컨테이너의 해당 하는.NET 컬렉션으로 변환 하는 방법을 보여 줍니다. 예를 들어, STL/CLR을 변환 하는 방법을 알아보겠습니다 [벡터](../dotnet/vector-stl-clr.md) .net <xref:System.Collections.Generic.ICollection%601> STL/CLR을 변환 하는 방법 및 [지도](../dotnet/map-stl-clr.md) .net <xref:System.Collections.Generic.IDictionary%602>만 프로시저는 모든 컬렉션에 대 한 유사 하 고 다시 설정 합니다.  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
     -   전체 컨테이너를 변환 하려면 적절 한.NET 컬렉션 인터페이스 또는 인터페이스 컬렉션에 컨테이너를 캐스팅 합니다. 두 번째 예제에서는이 메서드를 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예에서는 STL/CLR 만들 `vector` 5 개 요소를 추가 합니다. 그런 다음 호출 하 여.NET 컬렉션 만듭니다는 `make_collection` 함수입니다. 마지막으로 새로 만든된 컬렉션의 내용을 표시 합니다.  
   
 ```  
@@ -76,7 +79,7 @@ The contents of the System::Collections::Generic::ICollection are:
 7  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예에서는 STL/CLR 만들 `map` 5 개 요소를 추가 합니다. 그런 다음.NET 만듭니다 <xref:System.Collections.Generic.IDictionary%602> 할당는 `map` 에 직접 합니다. 마지막으로 새로 만든된 컬렉션의 내용을 표시 합니다.  
   
 ```  

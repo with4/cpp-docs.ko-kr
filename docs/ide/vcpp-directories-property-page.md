@@ -1,7 +1,7 @@
 ---
 title: "VC + + 디렉터리 속성 페이지 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-ide
@@ -23,48 +23,87 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30a54b1d90585e6433f059acf30991ca53948d60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c92a97ccd28a1bc7d1fae518cf499b45d339dae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="vc-directories-property-page"></a>VC++ 디렉터리 속성 페이지
-Visual Studio 프로젝트를 빌드하는 데 사용할 디렉터리를 지정합니다. 이 속성 페이지에 액세스 하려면 **솔루션 탐색기**를 프로젝트에 대 한 바로 가기 메뉴를 열고 선택 **속성**, 한 다음의 왼쪽된 창에서 **속성 페이지** 대화 상자에서 **구성 속성** 선택 **VC + + 디렉터리**합니다.  
+# <a name="vc-directories-property-page-windows"></a>VC + + 디렉터리 속성 페이지 (Windows)
+
+Visual Studio는 현재 선택한 프로젝트를 빌드할 때 사용 하는 디렉터리를이 속성 페이지를 사용 합니다. 솔루션의 여러 프로젝트에 대 한 디렉터리를 설정 하려면 사용 하 여 사용자 지정 속성 시트에 설명 된 대로 [재사용 가능 속성 구성을 만드는](working-with-project-properties.md#bkmkPropertySheets)합니다.
+
+이 페이지의 Linux 버전에 대 한 참조 [VC + + 디렉터리 (Linux c + +)](../linux/prop-pages/directories-linux.md)합니다.   
+
+액세스는 **VC + + 디렉터리** 속성 페이지:
+
+1. 주 메뉴에서 선택 **보기 | 솔루션 탐색기**
+1. (최상위 솔루션 아님)에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**
+1. 왼쪽된 창에는 **속성 페이지** 대화 상자에서 **구성 속성** 선택 **VC + + 디렉터리**합니다.  
+
+VC + + 디렉터리 속성을 프로젝트에는 최상위 솔루션 노드가 아니라에 적용 됩니다.
+
+![프로젝트 노드를 선택](media/vcppdir.png "VC + + 디렉터리 속성을 보려면 프로젝트 노드를 선택 합니다.")
+
+속성 페이지에 표시 되지 않으면, 프로젝트 노드를 선택한 했는지 확인 **솔루션 탐색기**합니다. 한 **VC + + 디렉터리** 플랫폼 간 프로젝트에 대 한 속성 페이지를 다르게 보입니다. 비 Windows 프로젝트에 대 한 참조 [VC + + 디렉터리 (Linux c + +)](../linux/prop-pages/directories-linux.md) 또는 합니다. 
+ 
+에 익숙한 경우 *프로젝트 속성* Visual Studio에서 있습니다 수 도움이 될 첫 번째 읽기 [프로젝트 속성 작업](working-with-project-properties.md)합니다. 
+ 
+VC + + 디렉터리에 대 한 기본 설정을 프로젝트 형식에 따라 달라 집니다. 데스크톱 프로젝트에 대 한 특정 플랫폼 도구 집합에 대 한 VC + + 도구 위치 및 Windows SDK 위치로 포함 됩니다. 변경할 수는 **플랫폼 도구 집합** 및 **Windows SDK 버전** 에 **구성 속성-일반** 페이지. 디렉터리에 대 한 값을 보려면:
+
+1. 오른쪽 창에는 **VC + + 디렉터리** 페이지에서 행을 선택 합니다. 예를 들어 **라이브러리 디렉터리**
+1. 오른쪽에서 아래쪽 화살표 단추를 선택 합니다.
+1. 선택 **편집**합니다.
+
+![라이브러리 디렉터리를 편집](media/vcppdir_libdir_edit.png "라이브러리 경로 편집할 수 대화 상자")
+
+이제 다음과 같은 대화 상자가 표시: 
+
+![라이브러리 디렉터리 표시](media/vcppdir_libdir.png "대화 상자를 추가 하거나 라이브러리 경로 제거 합니다.")
+
+이 대화 상자를 사용 하 여 현재 디렉터리를 볼 수 있습니다. 그러나 디렉터리를 추가 하거나 변경 하려면 원하는 있는지 사용 하 여 **속성 관리자** 속성 시트를 만들거나 기본 사용자 속성 시트를 수정 합니다. 자세한 내용은 참조 [재사용 가능 속성 구성을 만드는](working-with-project-properties.md#bkmkPropertySheets)합니다.
+
+위와 같이 매크로로 지정 됩니다 다양 한 상속 된 경로입니다.  매크로의 현재 값을 검사 하려면 선택은 **매크로** 대화 상자의 오른쪽 아래에는 단추입니다. 참고 많은 매크로 구성 형식에 따라 달라 집니다. 디버그 빌드에서 매크로 릴리스 빌드에서 같은 매크로 다른 경로를 평가할 수 있습니다. 
+
+편집 상자에 일치 하는 일부 또는 전체를 검색할 수 있습니다. 다음 그림은 "WindowsSDK" 문자열이 포함 된 모든 매크로 보여주며, 매크로로 계산 되는 현재 경로 보여 줍니다.
+
+![매크로 값 참조](media/vcppdir_libdir_macros.png "매크로 편집 대화 상자")
+
+참고: 목록에 입력할 때 표시 됩니다. 누르지 마세요 **Enter**합니다.
+
+매크로 및 하드 코드 된 경로 가능 하면 대신에 사용 해야 하는 방법에 대 한 자세한 내용은 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros)합니다. 
+
+자주 사용 되는 매크로의 목록이 참조 [빌드 명령 및 속성에 대 한 일반적인 매크로](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties)합니다.
+
+두 가지 방법으로 사용자 고유의 매크로 정의할 수 있습니다.
+-   개발자 명령 프롬프트에서 환경 변수를 설정 합니다. 모든 환경 변수는 MSBuild 속성/매크로로 처리 됩니다.
+-   .Props 파일에서 사용자 매크로 정의 합니다. 자세한 내용은 참조 [속성 페이지 매크로](working-with-project-properties.md#bkmkPropertiesVersusMacros)합니다. 
+
+자세한 내용은 다음 블로그 게시물을 참조 하십시오.: [VC + + 디렉터리](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [상속 된 속성 및 속성 시트](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), 및 [Visual Studio 2010 c + + 프로젝트 업그레이드 가이드](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx)합니다.  
   
- Visual Studio를 사용하여 프로젝트를 만들 때, 특정 디렉터리를 상속합니다. 이들 중 대부분은 매크로로 지정됩니다. 오른쪽 창에서 매크로의 현재 값을 검사 하는 **VC + + 디렉터리** 페이지에서 행을 선택-예를 들어 **포함 디렉터리**-오른쪽에서 아래쪽 화살표 단추를 선택, 선택  **편집**, 한 후 표시 되는 대화 상자에서 선택 된 **매크로** 단추입니다. 자세한 내용은 다음 블로그 게시물을 참조 하십시오.: [VC + + 디렉터리](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [상속 된 속성 및 속성 시트](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), 및 [Visual Studio 2010 c + + 프로젝트 업그레이드 가이드](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx)합니다.  
+## <a name="directory-types"></a>디렉터리 형식
+
+다음과 같이 다른 디렉터리를 지정할 수도 있습니다.  
   
-## <a name="directory-types"></a>디렉터리 형식  
- 다음과 같이 다른 디렉터리를 지정할 수도 있습니다.  
-  
- **실행 가능 디렉터리**  
- 실행 파일을 검색할 디렉터리입니다. 에 해당 하는 **경로** 환경 변수입니다.  
-  
- **포함 디렉터리**  
- 소스 코드에서 참조되는 포함 파일을 검색할 디렉터리입니다. 에 해당 하는 **INCLUDE** 환경 변수입니다.  
-  
- **참조 디렉터리**  
- 디렉터리를 검색 하 여 소스 코드에서 참조 되는 어셈블리 및 모듈 (메타 데이터)에 [#using](../preprocessor/hash-using-directive-cpp.md) 지시문입니다. 에 해당 하는 **LIBPATH** 환경 변수입니다.  
-  
- **라이브러리 디렉터리**  
- 라이브러리(.lib) 파일을 검색할 디렉터리입니다. 여기에는 런타임 라이브러리가 포함됩니다. 에 해당 하는 **LIB** 환경 변수입니다. 이 설정은.obj 파일에 적용 되지 않습니다. .obj 파일에 연결 하는 [링커](../ide/linker-property-pages.md)**일반** 속성 페이지 **추가 라이브러리 종속성** 한 다음 파일의 상대 경로 지정 합니다.  
-  
- **원본 디렉터리**  
- IntelliSense에 사용할 소스 파일을 검색할 디렉터리입니다.  
-  
- **디렉터리 제외**  
- 빌드 종속성을 확인할 때 검색하지 않을 디렉터리입니다.  
-  
-#### <a name="to-specify-or-modify-directory-settings"></a>디렉터리 설정을 지정 또는 수정하려면  
-  
-1.  **솔루션 탐색기**, 다음을 선택 하 고 변경 하려는 프로젝트에 대 한 바로 가기 메뉴를 열고 **속성**합니다.  
-  
-2.  왼쪽된 창에는 **속성 페이지** 대화 상자에서 **구성 속성** 선택한 후 **VC + + 디렉터리**합니다.  
-  
-3.  디렉터리 목록 중 하나를 수정, 선택 하 고, 오른쪽에서 아래쪽 화살표 단추를 선택 하 고 다음 선택 하려면 **편집**합니다.  
-  
-     나타나는 대화 상자에서 값을 추가하거나 제거할 수 있고 값이 나타나는 순서를 다시 정렬할 수 있습니다. 프로젝트 선택 하거나 선택 취소 하 여 모든 설정을 상속 하는지를 변경할 수도 있습니다 **부모 또는 프로젝트 기본값에서 상속**합니다.  
-  
-## <a name="sharing-the-settings"></a>설정 공유  
- 프로젝트 속성을 다른 사용자 또는 여러 컴퓨터와 공유할 수 있습니다. 자세한 내용은 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.  
-  
+**실행 가능 디렉터리**  
+실행 파일을 검색할 디렉터리입니다. 에 해당 하는 **경로** 환경 변수입니다.
+
+**포함 디렉터리**  
+소스 코드에서 참조되는 포함 파일을 검색할 디렉터리입니다. 에 해당 하는 **INCLUDE** 환경 변수입니다.
+
+**참조 디렉터리**  
+ 디렉터리를 검색 하 여 소스 코드에서 참조 되는 어셈블리 및 모듈 (메타 데이터)에 [#using](../preprocessor/hash-using-directive-cpp.md) 지시문입니다. 에 해당 하는 **LIBPATH** 환경 변수입니다.
+
+**라이브러리 디렉터리**  
+라이브러리(.lib) 파일을 검색할 디렉터리입니다. 여기에는 런타임 라이브러리가 포함됩니다. 에 해당 하는 **LIB** 환경 변수입니다. 이 설정은.obj 파일에 적용 되지 않습니다. .obj 파일에 연결 하는 [링커](../ide/linker-property-pages.md)**일반** 속성 페이지 **추가 라이브러리 종속성** 한 다음 파일의 상대 경로 지정 합니다.
+
+**원본 디렉터리**  
+IntelliSense에 사용할 소스 파일을 검색할 디렉터리입니다.
+
+**디렉터리 제외**  
+빌드 종속성을 확인할 때 검색하지 않을 디렉터리입니다.
+
+## <a name="sharing-the-settings"></a>설정 공유
+
+프로젝트 속성을 다른 사용자 또는 여러 컴퓨터와 공유할 수 있습니다. 자세한 내용은 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.

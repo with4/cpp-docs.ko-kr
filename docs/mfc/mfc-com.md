@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 652e299ad7dc01f070e3fe4ed9738fc9ed47a493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-com"></a>MFC COM
 액티브 템플릿 라이브러리 (ATL)의 대부분이 설계 된 반면 MFC의 하위 집합 COM 지원 하도록 되어 COM 프로그래밍에 대 한 합니다. 이 항목의이 단원 com MFC의 지원을 설명합니다  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
   
  참고: 기술 자료 문서 Q248019: 방법: 방지 서버 사용 중 대화 상자에서 표시 되는 동안 정도 시간이 오래 걸리는 COM 작업 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [활성 문서 포함](../mfc/active-document-containment.md)  
   
  [자동화](../mfc/automation.md)  

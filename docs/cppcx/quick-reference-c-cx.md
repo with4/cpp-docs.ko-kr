@@ -12,14 +12,15 @@ caps.latest.revision: "31"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7c6e36d00d27f5fcf32faec666871ced1d9d0ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b34c0d36c33652ecbef3a1af745015d92fc05f3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="quick-reference-ccx"></a>빠른 참조(C++/CX)
-Windows 런타임 지원 권한 있는 함수, 데이터 형식 및 장치를 사용 하 여를 통해 배포 되는 신뢰할 수 있는 운영 체제 환경 에서만에서 실행 하는 유니버설 Windows 플랫폼 앱에서 [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]합니다. C + + /cli CX Windows 런타임에 대 한 앱의 작성을 단순화 합니다. 이 문서는 빠른 참조입니다. 전체 설명서를 참조 하십시오. [형식 시스템](../cppcx/type-system-c-cx.md) 및 [런타임 플랫폼용 구성 요소 확장명](http://go.microsoft.com/fwlink/?LinkId=228720)합니다.  
+Windows 런타임 지원 권한 있는 함수, 데이터 형식 및 장치를 사용 하 여를 통해 배포 되는 신뢰할 수 있는 운영 체제 환경 에서만에서 실행 하는 유니버설 Windows 플랫폼 앱에서 [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]합니다. C + + /cli CX Windows 런타임에 대 한 앱의 작성을 단순화 합니다. 이 문서는 빠른 참조입니다. 전체 설명서를 참조 하십시오. [형식 시스템](../cppcx/type-system-c-cx.md) 및 [런타임 플랫폼용 구성 요소 확장명](http://go.microsoft.com/fwlink/p/?linkid=228720)합니다.  
   
  명령줄에서 빌드할 때 사용 된 **/ZW** 컴파일러 옵션을 유니버설 Windows 플랫폼 앱 또는 Windows 런타임 구성 요소입니다. Windows 런타임 메타 데이터 (.winmd) 파일에 정의 된 Windows 런타임 선언에 액세스 하려면 지정 된 `#using` 지시문 또는 **/FU** 컴파일러 옵션입니다. 유니버설 Windows 플랫폼 앱 용 프로젝트를 만들 때 Visual Studio는 기본적으로 이러한 옵션을 설정 하 고 모든 Windows 런타임 라이브러리에 대 한 참조를 추가 합니다.  
   

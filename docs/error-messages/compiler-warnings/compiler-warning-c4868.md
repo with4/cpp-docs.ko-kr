@@ -7,11 +7,12 @@ ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0a8c1cf8b7057d9f817daffad5f26e8aad4785d
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 261e826043a4f922902de91573a16707897ae6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4868"></a>컴파일러 경고 (수준 4) C4868
 
@@ -27,7 +28,7 @@ Visual c + + 2015 업데이트 2에 대해 수행한 컴파일러 규칙 작업�
 
 계산 순서는 왼쪽에서 오른쪽 수 있어야 할 경우 고려 하 여 요소를 전달할 수는 `const` 대신 참조 해야 합니다. 이 변경 된 다음 코드 예제에서이 경고를 제거합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 샘플에서는 C4868, 및이 해결 하는 방법을 보여 줍니다.
 

@@ -1,74 +1,76 @@
 ---
-title: "Generic Interfaces (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic interfaces"
-  - "interfaces, generic [C++}"
+title: "제네릭 인터페이스 (Visual c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generic interfaces
+- interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b08ab6585cd4d8c7a4da93273f99d47c0265608c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Generic Interfaces (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-클래스에 대한 매개 변수를 입력에 적용되는 제한은 인터페이스에 대한 매개 변수를 입력에 적용되는 것과 동일합니다 \([Generic Classes \(C\+\+\/CLI\)](../windows/generic-classes-cpp-cli.md)를 참조하십시오\).  
+# <a name="generic-interfaces-visual-c"></a>제네릭 인터페이스(Visual C++)
+클래스에 매개 변수를 형식에 적용 되는 제한 사항을 인터페이스에 형식 매개 변수를 적용 하는 것과 동일 (참조 [제네릭 클래스 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md)).  
   
- 함수 오버 로드를 제어 하는 규칙은 제네릭 클래스 또는 제네릭 인터페이스 내의 함수와 동일합니다.  
+ 함수 오버 로드를 제어 하는 규칙이 제네릭 인터페이스 또는 제네릭 클래스 내의 기능에 대해 동일 합니다.  
   
- 명시 적 인터페이스 멤버 구현에서는 \(다음 예 참조\) 간단한 인터페이스 유형과 마찬가지로 생성 된 인터페이스 종류를 사용합니다.  
+ 명시적 인터페이스 멤버 구현에서는 생성 된 인터페이스 형식에서 (다음 예제 참조)는 간단한 인터페이스 형식과 동일한 방식으로 작동 합니다.  
   
- 인터페이스에 대한 자세한 내용은 [interface class](../windows/interface-class-cpp-component-extensions.md)을 참조하십시오.  
+ 인터페이스에 대 한 자세한 내용은 참조 하십시오. [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
-## 설명  
- *특성* \(선택 사항\)  
- 추가 선언 정보입니다.  특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조 하십시오.  
+## <a name="remarks"></a>설명  
+ *특성* (선택 사항)  
+ 추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조하십시오.  
   
  *클래스 키*  
- **클래스** 또는  **typename**  
+ **클래스** 또는 **typename**  
   
  `type-parameter-identifier(s)`  
- 쉼표로 구분된 식별자 목록입니다.  
+ 쉼표로 구분 된 식별자 목록입니다.  
   
  `type-parameter-constraints-clauses`  
- [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) 에 지정된 형식을 가져옵니다.  
+ 에 지정 된 형식을 취합니다 [제네릭 형식 매개 변수에 대 한 제약 조건 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *accessibility\-modifiers*  \(선택 사항\)  
- 액세스 가능성 한정자 \(예:  **공개 \/ 개인**\).  
+ *액세스 가능성 한정자* (선택 사항)  
+ 액세스 가능성 한정자 (예: **공개 / 개인**).  
   
  *identifier*  
  인터페이스 이름입니다.  
   
- *base\-list* \(선택 사항\)  
- 쉼표로 구분 된 하나 이상의 명시 적 기본 인터페이스를 포함하는 목록입니다.  
+ *자료 목록* (선택 사항)  
+ 하나 이상의 명시적 기본 인터페이스 쉼표로 구분 하 여 포함 된 목록입니다.  
   
  *인터페이스 본문*  
  인터페이스 멤버를 선언 합니다.  
   
- *선언 자*  \(선택 사항\)  
- 이 형식을 기반으로 변수를 선언합니다.  
+ *선언 자* (선택 사항)  
+ 이 형식에 기반 하 여 변수를 선언 합니다.  
   
-## 예제  
- 다음은 선언하고 제네릭 인터페이스를 인스턴스화하는 방법을 보여줍니다.  예제에서는 제네릭 인터페이스  `IList<ItemType>`  를 선언합니다.  그런 다음 서로 다른 구현으로  `List1<ItemType>`  및  `List2<ItemType>`  두 제네릭 클래스에 의해 구현됩니다.  
+## <a name="example"></a>예  
+ 다음 예제에는 선언 하 고 제네릭 인터페이스를 인스턴스화하는 방법을 보여 줍니다. 예제에서는 제네릭 인터페이스 `IList<ItemType>` 선언 됩니다. 다음 두 개의 제네릭 클래스에 의해 구현 되며 `List1<ItemType>` 및 `List2<ItemType>`, 다른 구현으로 합니다.  
   
 ```  
 // generic_interface.cpp  
@@ -236,12 +238,15 @@ int main() {
 }  
 ```  
   
-  **연결 리스트**  
-**List1**  
-**배열 목록**  
-**List2**   
-## 예제  
- 이 예제에서는  제네릭 인터페이스 `IMyGenIface`  및  `IMyGenIface` 을 전문으로 하는 두 개의 제네릭이 아닌 인터페이스  `IMySpecializedInt`  및  `ImySpecializedString`  선언합니다..  두 가지 특수 인터페이스는  `MyIntClass`  및  `MyStringClass`  두 개의 클래스에 의해 구현됩니다.  이 예는, 일반적인 인터페이스를 전문으로 일반 및 제네릭이 아닌 인터페이스를 인스턴스화하고 인터페이스에 명시 적으로 구현 멤버를 호출하는 방법을 보여줍니다.  
+```Output  
+Linked List  
+List1  
+Array List  
+List2  
+```  
+  
+## <a name="example"></a>예  
+ 이 예제에서는 제네릭 인터페이스를 선언 `IMyGenIface`, 및 두 개의 제네릭이 아닌 인터페이스 `IMySpecializedInt` 및 `ImySpecializedString`을 특수화 하는 `IMyGenIface`합니다. 두 개의 특수 인터페이스는 다음 두 개의 클래스에서 구현 `MyIntClass` 및 `MyStringClass`합니다. 제네릭 인터페이스를 특수화할 제네릭 및 제네릭이 아닌 인터페이스를 인스턴스화하고 인터페이스에 명시적으로 구현 된 멤버를 호출 하는 방법을 보여 줍니다.  
   
 ```  
 // generic_interface2.cpp  
@@ -311,7 +316,10 @@ int main() {
 }  
 ```  
   
-  **정수 필드 포함: 1234**  
-**문자열 필드 포함: 내 문자열**   
-## 참고 항목  
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+The integer field contains: 1234  
+The String field contains: My string  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [제네릭](../windows/generics-cpp-component-extensions.md)

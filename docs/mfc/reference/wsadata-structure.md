@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f74980fdecc1a3ed0045aad969bb7c015f64d80d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24cfbeb0e917914881587cb70fd345a903a08ecc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wsadata-structure"></a>WSADATA 구조체
 `WSADATA` 구조는에 대 한 호출에서 반환 된 Windows 소켓 초기화 정보를 저장 하는 데 사용 되는 `AfxSocketInit` 전역 함수입니다.  

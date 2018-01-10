@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b310fce347423075b1c3d23244a5059151ac87fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3849"></a>컴파일러 오류 C3849
 함수 형식을 호출할 'type' 형식의 식에는 모든 숫자의 사용 가능한 연산자 오버 로드에 대 한 const 및/또는 volatile 한정자가 손실  

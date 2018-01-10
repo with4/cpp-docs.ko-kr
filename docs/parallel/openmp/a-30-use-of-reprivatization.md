@@ -1,27 +1,27 @@
 ---
-title: "A.30   Use of Reprivatization | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A. 30 Reprivatization 사용 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 26529090-6c39-40f2-b806-e12374d6b5f8
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1b8a6bedad37e9edd70edd014a9dd8f70143bbe5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# A.30   Use of Reprivatization
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음은 reprivatization 변수를 보여 줍니다.  Private 변수를 표시할 수 있습니다 `private` 중첩 된 지시문을 다시 합니다.  이들은 바깥쪽 병렬 영역에 공유 될 필요가 없습니다.  
+# <a name="a30---use-of-reprivatization"></a>A.30   재전용화 사용
+다음 예제에서는 변수 reprivatization 보여 줍니다. Private 변수를 표시할 수 있습니다 `private` 중첩 된 지시문에서 다시 합니다. 병렬 영역 바깥쪽에서 공유할 수 필요가 없습니다.  
   
 ```  
 int i, a;  

@@ -1,36 +1,37 @@
 ---
-title: "auto_handle::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::operator="
-  - "msclr.auto_handle.operator="
-  - "msclr::auto_handle::operator="
-  - "auto_handle.operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator="
+title: auto_handle::operator = | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::operator=
+- msclr.auto_handle.operator=
+- msclr::auto_handle::operator=
+- auto_handle.operator=
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator=
 ms.assetid: 503ca172-e766-4a78-af98-36fd48c931ee
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d7f4e8ef0408f6358b8e7978d4327d6836cc722
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-할당 연산자입니다.  
+# <a name="autohandleoperator"></a>auto_handle::operator=
+대입 연산자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 auto_handle<_element_type> % operator=(  
@@ -42,14 +43,14 @@ auto_handle<_element_type> % operator=(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_right`  
- The `auto_handle` to be assigned to the current `auto_handle`.  
+ `auto_handle` 현재에 할당할 `auto_handle`합니다.  
   
-## 반환 값  
- The current `auto_handle`, now owning `_right`.  
+## <a name="return-value"></a>반환 값  
+ 현재 `auto_handle`, 이제 소유 `_right`합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // msl_auto_handle_op_assign.cpp  
@@ -99,18 +100,21 @@ int main()
 }  
 ```  
   
-  **in ClassA constructor: first**  
-**Hello from first A\!**  
-**in ClassA constructor: second**  
-**Hello from second B\!**  
-**in ClassA destructor: first**  
-**Hello from second A\!**  
-**done**  
-**in ClassA destructor: second**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_handle.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+Hello from second B!  
+in ClassA destructor: first  
+Hello from second A!  
+done  
+in ClassA destructor: second  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_handle 멤버](../dotnet/auto-handle-members.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_handle 멤버](../dotnet/auto-handle-members.md)

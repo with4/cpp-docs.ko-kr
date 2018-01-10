@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dc3e9639fa83524e797c22edd771c847046f0e3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1f552eee7ac20c086240a4ce79fd3616127268b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3771"></a>컴파일러 오류 C3771
 "identifier": 가장 가까운 네임스페이스 범위에서 friend 선언을 찾을 수 없습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 -   템플릿 식별자에 대한 클래스 템플릿 선언이 현재 네임스페이스에 정의되어 있는지 또는 템플릿 식별자가 정규화된 이름인지 확인합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 코드 예제에서는 `NA`네임스페이스의 클래스 템플릿 및 함수를 선언하지만 `NB`네임스페이스의 friend 함수 템플릿을 선언하려고 합니다.  
   
 ```cpp  

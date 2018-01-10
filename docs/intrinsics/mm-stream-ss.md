@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 17d20339a311b65aef6d15c32d7c0517b7dcd9df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4b9f4f8334552acde7b8a18fa3d3b6110183234
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
@@ -64,7 +65,7 @@ void _mm_stream_ss(
   
 사용 하는 코드를 실행 하는 경우는 `_mm_stream_ss` 지원 하지 않는 하드웨어에 내장 된 `movntss` 명령 결과 예측할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // Compile this sample with: /EHsc  

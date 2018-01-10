@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85f26c61e1e4fa996f73b4f61f4f961ba59dec98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9974b86f99164257e854bffd07393b96998040ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casting"></a>캐스팅
 C++ 언어에서는 클래스가 가상 함수를 포함하는 기본 클래스에서 파생되는 경우 해당 기본 클래스 형식에 대한 포인터를 사용하여 파생 클래스 개체에 있는 가상 함수의 구현을 호출할 수 있습니다. 가상 함수를 포함하는 클래스를 "다형 클래스"라고도 합니다.  

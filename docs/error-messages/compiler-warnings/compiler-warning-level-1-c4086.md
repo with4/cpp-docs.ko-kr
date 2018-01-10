@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d34694f2f991e31ee7a896e128881ff6f09c54d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 120c8cf15cc4d4c320c422feffed908276c52d3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4086"></a>컴파일러 경고(수준 1) C4086
 pragma 매개 변수는 '1', '2', '4', '8' 또는 '16'이어야 합니다.  
   
  pragma 매개 변수에 필수 값(1, 2, 4, 8 또는 16)이 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // C4086.cpp  

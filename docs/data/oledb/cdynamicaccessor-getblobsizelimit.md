@@ -1,36 +1,38 @@
 ---
-title: "CDynamicAccessor::GetBlobSizeLimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::GetBlobSizeLimit"
-  - "CDynamicAccessor.GetBlobSizeLimit"
-  - "CDynamicAccessor::GetBlobSizeLimit"
-  - "GetBlobSizeLimit"
-  - "ATL.CDynamicAccessor.GetBlobSizeLimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetBlobSizeLimit 메서드"
+title: 'Cdynamicaccessor:: Getblobsizelimit | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::GetBlobSizeLimit
+- CDynamicAccessor.GetBlobSizeLimit
+- CDynamicAccessor::GetBlobSizeLimit
+- GetBlobSizeLimit
+- ATL.CDynamicAccessor.GetBlobSizeLimit
+dev_langs: C++
+helpviewer_keywords: GetBlobSizeLimit method
 ms.assetid: 7131e7c4-6e05-42f3-9d87-110301b672f2
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3162ee335902b887facbc6e3aec33523622be5f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetBlobSizeLimit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retrieves the maximum BLOB size in bytes.  
+# <a name="cdynamicaccessorgetblobsizelimit"></a>CDynamicAccessor::GetBlobSizeLimit
+최대 BLOB 크기 (바이트) 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -38,11 +40,11 @@ const DBLENGTH GetBlobSizeLimit( ) const;
   
 ```  
   
-## 설명  
- Returns the BLOB handling value `nBlobSize` as set by [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).  
+## <a name="remarks"></a>설명  
+ 반환 값을 처리 하는 BLOB `nBlobSize` 의해 설정 [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)

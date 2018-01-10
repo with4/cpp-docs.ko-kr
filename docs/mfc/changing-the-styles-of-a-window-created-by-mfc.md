@@ -32,11 +32,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7745054066a928c414360a215605cf343971ddf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d17f49535078261669841ea502c6af821aa5e29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>MFC에서 만든 창 스타일 변경
 해당 버전에는 `WinMain` 함수, MFC 있습니다에 대 한 몇 가지 표준 창 클래스를 등록 합니다. MFC의 일반적으로 편집 하지 않은 때문에 `WinMain`는 함수를 사용 하면 MFC 기본 창 스타일을 변경할 수 없도록 합니다. 이 문서에서는 기존 응용 프로그램에서 이러한 미리 등록된 창 클래스 스타일을 변경 하는 방법을 설명 합니다.  

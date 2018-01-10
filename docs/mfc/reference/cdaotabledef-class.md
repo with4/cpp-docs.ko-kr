@@ -83,11 +83,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51fad5e7890ce311e46c07c9505cb889bf252376
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b140d61689672f9d27b8078ad7d2eab732c1582
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 클래스
 기본 테이블 또는 연결된 테이블의 저장된 정의를 나타냅니다.  
@@ -315,10 +316,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbByte**|1|BYTE|  
 |**dbInteger**|2|int|  
 |**dbLong**|4|long|  
-|**dbCurrency**|9|통화 ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|  
+|**dbCurrency**|8|통화 ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|  
 |**dbSingle**|4|float|  
-|**dbDouble**|9|double|  
-|**dbDate**|9|날짜/시간 ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
+|**dbDouble**|8|double|  
+|**dbDate**|8|날짜/시간 ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
 |**dbText**|1 - 255|텍스트 ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
 |**dbLongBinary**|0|긴 이진 (OLE 개체), [CLongBinary](../../mfc/reference/clongbinary-class.md) 또는 [CByteArray](../../mfc/reference/cbytearray-class.md)|  
 |**dbMemo**|0|메모 ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  

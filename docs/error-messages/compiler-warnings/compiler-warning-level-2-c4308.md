@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 74a17ce1df422e476a8485537fbb284dda8bc830
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb72f8df68917b9297a0e0e397ffcfddfccb910d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-2-c4308"></a>컴파일러 경고(수준 2) C4308
 음의 정수 상수가 부호 없는 형식으로 변환  
   
  식 부호 없는 형식에는 음의 정수 상수를 변환합니다. 식의 결과 의미가입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // C4308.cpp  

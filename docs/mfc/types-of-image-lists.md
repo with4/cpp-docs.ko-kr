@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 430bc574fdb35fca08dcbe3a3ea503f809d08985
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84a2118978d5ebd722d4fe56cdeec2aa0f74a94e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-image-lists"></a>이미지 목록 형식
 이미지 목록에 두 가지 ([CImageList](../mfc/reference/cimagelist-class.md)): 마스크 되지 않은 및 마스크입니다. "마스크 되지 않은 이미지 목록" 하나 이상의 이미지를 포함 하는 색 비트맵으로 이루어져 있습니다. "마스크 된 이미지 목록" 동일한 크기의 두 개의 비트맵으로 이루어져 있습니다. 첫 번째 색 비트맵 이미지를 포함 하 고 두 번째는 일련의 마스크를 포함 하는 단색 비트맵-각 이미지는 첫 번째 비트맵에 대해 하나씩입니다.  

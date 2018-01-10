@@ -1,56 +1,54 @@
 ---
-title: "&lt;Projectname&gt; 속성 페이지 대화 상자, 구성 속성, 매니페스트 도구, 격리 COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.RegistrarScriptFile"
-  - "VC.Project.VCManifestTool.ComponentFileName"
-  - "VC.Project.VCManifestTool.TypeLibraryFile"
-  - "VC.Project.VCManifestTool.ReplacementsFile"
-dev_langs: 
-  - "C++"
+title: "매니페스트 도구 속성 (Visual c + +) COM 격리 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.RegistrarScriptFile
+- VC.Project.VCManifestTool.ComponentFileName
+- VC.Project.VCManifestTool.TypeLibraryFile
+- VC.Project.VCManifestTool.ReplacementsFile
+dev_langs: C++
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe2098c4caead6ebc9ad4747354ae96f093f2c91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;Projectname&gt; 속성 페이지 대화 상자, 구성 속성, 매니페스트 도구, 격리 COM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 대화 상자를 사용하여 [Mt.exe](http://msdn.microsoft.com/library/aa375649)에 대한 **격리 COM** 옵션을 지정할 수 있습니다.  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>구성 속성, 매니페스트 도구, COM 격리 &lt;Projectname&gt; 속성 페이지 대화 상자
+이 대화 상자를 사용 하 여 지정 **격리 COM** 에 대 한 옵션 [Mt.exe](http://msdn.microsoft.com/library/aa375649)합니다.  
   
- 이 속성 페이지 대화 상자에 액세스하려면 프로젝트에 대한 속성 페이지 또는 속성 시트를 엽니다.  **구성 속성**에서 **매니페스트 도구** 노드를 확장한 다음 **격리 COM**을 선택합니다.  
+ 이 속성 페이지 대화 상자에 액세스 하려면 프로젝트 또는 속성 시트에 대 한 속성 페이지를 엽니다. 확장 된 **매니페스트 도구** 노드 아래의 **공용 속성**를 선택한 후 **격리 COM**합니다.  
   
-## 작업 목록  
+## <a name="task-list"></a>작업 목록  
   
 -   [방법: COM 구성 요소를 사용하는 격리된 응용 프로그램 빌드](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
-## UI 요소 목록  
+## <a name="uielement-list"></a>UI 요소 목록  
  **형식 라이브러리 파일**  
- \/tlb 옵션을 사용하여 매니페스트 도구가 매니페스트 파일을 생성하는 데 사용할 형식 라이브러리 파일\(.tlb 파일\)의 이름을 지정합니다.  
+ 매니페스트 도구를 사용 하 여을 매니페스트 파일을 생성 하는 형식 라이브러리 파일 (.tlb 파일)의 이름을 지정 하려면 /tlb 옵션을 사용 합니다.  
   
  **등록자 스크립트 파일**  
- \/rgs 옵션을 사용하여 매니페스트 도구가 매니페스트 파일을 생성하는 데 사용할 등록자 스크립트 파일\(.rgs 파일\)의 이름을 지정합니다.  
+ 매니페스트 도구 하는 매니페스트 파일을 생성 하는 데 사용할 등록자 스크립트 파일 (.rgs 파일)의 이름을 지정 하려면 /rgs 옵션을 사용 합니다.  
   
  **구성 요소 파일 이름**  
- \/dll 옵션을 사용하여 매니페스트 도구가 생성할 리소스의 이름을 지정합니다.  **형식 라이브러리 파일** 또는 **등록자 스크립트 파일**에 대해 값을 지정한 경우 이 속성의 값을 입력해야 합니다.  
+ /Dll 옵션을 사용 하 여 매니페스트 도구가 생성 하는 리소스의 이름을 지정 하려면. 이 속성에 대 한 값을 입력 해야 경우 중 하나에 대 한 값 **형식 라이브러리 파일** 또는 **등록자 스크립트 파일** 지정 됩니다.  
   
  **대체 파일**  
- \/replacements 옵션을 사용하여 .rgs 파일에 있는 대체 가능 문자열의 값이 들어 있는 파일에 대한 전체 경로를 지정합니다.  
+ /Replacements 옵션을 사용 하 여.rgs 파일에서 대체 가능한 문자열 값이 포함 된 파일의 전체 경로 지정 합니다.  
   
-## 참고 항목  
- [격리된 응용 프로그램](http://msdn.microsoft.com/library/aa375190)   
- [Side\-by\-side 어셈블리](_win32_side_by_side_assemblies)   
- [ClickOnce 응용 프로그램 매니페스트](../Topic/ClickOnce%20Application%20Manifest.md)   
+## <a name="see-also"></a>참고 항목  
+ [격리 된 응용 프로그램](http://msdn.microsoft.com/library/aa375190)   
+ [ClickOnce 응용 프로그램 매니페스트](/visualstudio/deployment/clickonce-application-manifest)   
  [매니페스트 도구 속성 페이지](../ide/manifest-tool-property-pages.md)   
- [방법: 프로젝트 속성 페이지 열기](../misc/how-to-open-project-property-pages.md)   
- [방법: 프로젝트 속성 시트 편집](../misc/how-to-edit-project-property-sheets.md)
+ [프로젝트 속성 사용](../ide/working-with-project-properties.md)   

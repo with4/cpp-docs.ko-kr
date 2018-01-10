@@ -129,11 +129,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c79b909df39a9e27b4b66c03df4f700a6aac2d54
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 941a496d52dbf38401484bd6ddcd857875849dc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 클래스
 `CWinAppEx`응용 프로그램 상태를 처리, 레지스트리에 상태를 저장, 레지스트리에서 상태를 로드, 응용 프로그램 관리자를 초기화 및 이러한 동일한 응용 프로그램 관리자에 대 한 링크를 제공 합니다.  
@@ -204,7 +205,7 @@ class CWinAppEx : public CWinApp
 |[CWinAppEx::WriteSectionString](#writesectionstring)|지정된 된 레지스트리 키의 값에 문자열 데이터를 씁니다.|  
 |[CWinAppEx::WriteString](#writestring)|지정 된 레지스트리 값에 문자열 데이터를 씁니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -219,7 +220,7 @@ class CWinAppEx : public CWinApp
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|도구 모음을 포함 하는 프레임 창을 로드 될 때 프레임 워크에서 모든 도구 모음 이미지를 다시 됩니다 있는지 여부를 지정 합니다.|  
   

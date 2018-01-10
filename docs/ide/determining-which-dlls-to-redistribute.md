@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ae47ec92ecea46aba5f0e1bf144a34fd5532af9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>재배포할 DLL 확인
 
@@ -39,7 +40,7 @@ Visual Studio에서 제공 하는 라이브러리 Dll을 사용 하는 응용 �
 
 응용 프로그램과 함께 다시 배포해야 하는 DLL을 결정하려면 응용 프로그램에서 사용되는 DLL 목록을 수집합니다. 이러한 라이브러리 입력 링커로 가져올 때 일반적으로 나열 됩니다. 특정 라이브러리 vcruntime 및 유니버설 C 런타임 라이브러리 (UCRT), 예: 기본적으로 포함 됩니다. 응용 프로그램 또는 해당 종속성 중 하나가 DLL을 동적으로 로드 하려면 LoadLibrary를 사용 하 여, 해당 DLL 링커에 대 한 입력에 나열 되지 않을 수 있습니다. 에 설명 된 대로 Dependency Walker (depends.exe) 응용 프로그램을 실행 하는 동적으로 로드 된 Dll 목록을 수집 하는 한 가지 방법은입니다 [Visual c + + 응용 프로그램의 종속성 이해](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)합니다. 그러나이 도구는 오래 된 하 고 특정 Dll을 찾을 수 없다고 보고할 수 있습니다.
 
-종속성 목록이 있는 경우 비교 "REDIST 목록" 재배포 가능 Dll의 "배포 가능 코드 파일" 섹션에서 참조 되는 또는 Microsoft Visual Studio 설치 디렉터리에서 찾은 Redist.txt 파일에서 연결 된 목록에 Visual Studio에 대 한 Microsoft 소프트웨어 사용 조건. Visual Studio 2017 참조 [Microsoft Visual Studio 2017 (포함 유틸리티, 확장성 및 BuildServer 파일) 용 배포 가능 코드](http://go.microsoft.com/fwlink/?LinkId=823098)합니다. Visual Studio 2015에 대 한 참조 [Microsoft Visual Studio 2015 및 Microsoft Visual Studio 2015 SDK (포함 유틸리티 및 BuildServer 파일)에 대 한 배포 가능한 코드](http://go.microsoft.com/fwlink/?LinkId=799794)합니다. Visual Studio 2013에 대 한 목록 중인 사용 가능한 온라인 [Microsoft Visual Studio 2013 및 Microsoft Visual Studio 2013 SDK 용 배포 가능 코드](http://go.microsoft.com/fwlink/p/?LinkId=313603)합니다.
+종속성 목록이 있는 경우 비교 "REDIST 목록" 재배포 가능 Dll의 "배포 가능 코드 파일" 섹션에서 참조 되는 또는 Microsoft Visual Studio 설치 디렉터리에서 찾은 Redist.txt 파일에서 연결 된 목록에 Visual Studio에 대 한 Microsoft 소프트웨어 사용 조건. Visual Studio 2017 참조 [Microsoft Visual Studio 2017 (포함 유틸리티, 확장성 및 BuildServer 파일) 용 배포 가능 코드](http://go.microsoft.com/fwlink/p/?linkid=823098)합니다. Visual Studio 2015에 대 한 참조 [Microsoft Visual Studio 2015 및 Microsoft Visual Studio 2015 SDK (포함 유틸리티 및 BuildServer 파일)에 대 한 배포 가능한 코드](http://go.microsoft.com/fwlink/p/?linkid=799794)합니다. Visual Studio 2013에 대 한 목록 중인 사용 가능한 온라인 [Microsoft Visual Studio 2013 및 Microsoft Visual Studio 2013 SDK 용 배포 가능 코드](http://go.microsoft.com/fwlink/p/?LinkId=313603)합니다.
 
 Visual Studio 2015 이전 버전 Visual Studio에서는 C 런타임 라이브러리 (CRT) msvc에서 재배포 가능 DLL로 포함 되어*버전*.dll입니다. Visual Studio 2015부터 CRT에서 함수 UCRT 및 vcruntime 개로 리팩터링 되었습니다. UCRT는 이제 Windows 10에서 Windows 업데이트에 의해 관리 되는 시스템 구성 요소입니다. 모든 Windows 10 운영 체제에서 제공 됩니다. 이전 운영 체제에 응용 프로그램을 배포 하려면도 UCRT를 재배포 합니다. UCRT의 초기 버전을만 설치 되는 운영 체제에서 Windows 10 이전, Visual Studio 재배포 가능 파일에 포함 UCRT의 버전이 이미 설치 된 경우만 합니다. Microsoft System 업데이트 패키지로 하위 시스템을 위한 UCRT의 설치 가능한 버전을 참조 하십시오. [Windows 10 유니버설 C 런타임](https://www.microsoft.com/en-us/download/details.aspx?id=48234) Microsoft 다운로드 센터에서.
 

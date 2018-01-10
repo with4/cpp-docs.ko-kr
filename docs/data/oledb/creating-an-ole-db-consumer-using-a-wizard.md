@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52b1780d9553de049ee02d13ea8f8fbe9535fe8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e6b8a3b0c41c3a387779254d6605b6599bf7f1f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>마법사를 사용하여 OLE DB 소비자 만들기
 이 절차는 OLE DB 템플릿 소비자를 생성 하 고 다음 검색 하 고 데이터베이스 테이블에서 데이터를 표시 하는 콘솔 응용 프로그램의 기본 코드를 수정할 ATL 프로젝트 마법사 및 ATL OLE DB 소비자 마법사를 사용 하는 방법을 보여 줍니다.  

@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5cec2f70dfa6781c237cc1c08079904c7b48e171
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44aae61190b20bf1ef93b586c02e88837d487324
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4532"></a>컴파일러 경고(수준 1) C4532
 '계속': 종료 처리 하는 동안 __finally/finally 블록 밖으로 점프 동작이 정의 되지 않았습니다  

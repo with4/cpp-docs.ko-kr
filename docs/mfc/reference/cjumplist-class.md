@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - AFXADV/CJumpList::GetRemovedItems
 - AFXADV/CJumpList::InitializeList
 - AFXADV/CJumpList::SetAppID
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CJumpList [MFC], CJumpList
 - CJumpList [MFC], AbortList
@@ -45,16 +43,16 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 11b28199155c0ac3bd90cda8fb830ea6f8894dde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 02e170248a2d33fda195daeb1094d70daee12fb0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cjumplist-class"></a>CJumpList 클래스
 A `CJumpList` 클릭할 작업 표시줄에서 아이콘에서 마우스 오른쪽 단추로 클릭할 때 표시 되는 바로 가기 목록입니다.  
@@ -74,7 +72,7 @@ class CJumpList;
 |[CJumpList::CJumpList](#cjumplist)|`CJumpList` 개체를 생성합니다.|  
 |[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|`CJumpList` 개체를 제거합니다.|  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CJumpList::AbortList](#abortlist)|목록 작성 트랜잭션을 커밋하지 않고 중단 합니다.|  
 |[CJumpList::AddDestination](#adddestination)|오버로드됨. 대상 목록에 추가합니다.|  
@@ -338,4 +336,3 @@ void SetAppID(LPCTSTR strAppID);
   
 ## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
-

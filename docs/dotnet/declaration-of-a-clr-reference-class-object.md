@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 973500cc276d95e523859a5fcc1b9a5f7a707bb0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>CLR 참조 클래스 개체 선언
 선언 하 고 참조 클래스 형식의 개체를 인스턴스화하는 구문 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
@@ -73,7 +76,7 @@ private:
 ```  
   
 ## <a name="dynamic-allocation-of-an-object-on-the-clr-heap"></a>CLR 힙에 있는 개체의 동적 할당  
- Managed extensions에서 두 개의 존재 `new` 네이티브 및 관리 되는 힙 간에 할당 하는 식 대부분 투명 하 게 되었습니다. 거의 모든 경우에는 컴파일러는 네이티브 또는 관리 되는 힙에서 메모리를에서 할당 여부를 결정 하는 컨텍스트를 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
+ Managed extensions에서 두 개의 존재 `new` 네이티브 및 관리 되는 힙 간에 할당 하는 식 대부분 투명 하 게 되었습니다. 거의 모든 경우에는 컴파일러는 네이티브 또는 관리 되는 힙에서 메모리를에서 할당 여부를 결정 하는 컨텍스트를 사용할 수 있습니다. 예를 들어 개체에 적용된  
   
 ```  
 Button *button1 = new Button; // OK: managed heap  

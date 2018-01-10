@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2bd077c1c657b79cc8b32b3ede075eb5311271e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cce595095600769743a1320d75b00ec1109275c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collate-class"></a>collate 클래스
 문자열 내 문자의 정렬 및 그룹화, 문자열 간의 비교, 문자열 해싱을 제어하는 로캘 패싯으로 사용할 수 있는 개체를 설명하는 템플릿 클래스입니다.  
@@ -62,7 +63,7 @@ class collate : public locale::facet;
 |-|-|  
 |[collate](#collate)|문자열 정렬 규칙을 처리할 로캘 패싯으로 사용할 `collate` 클래스 개체의 생성자입니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -164,7 +165,7 @@ int compare(const CharType* first1,
   
  멤버 함수는 [do_compare](#do_compare)(`first1`, `last1`, `first2`, `last2`)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // collate_compare.cpp  
@@ -224,7 +225,7 @@ virtual int do_compare(const CharType* first1,
 ### <a name="remarks"></a>설명  
  보호 된 가상 멤버 함수에 시퀀스를 비교 [* first1, Last1) *에서 순서와 *[first2, last2*). 이 함수는 **CharType** 형식의 해당 요소 쌍 사이에 **operator<**을 사용하여 값을 비교합니다. 시퀀스 내에서 가장 앞의 서로 다른 쌍에 더 작은 요소가 있는 경우 또는 서로 다른 쌍이 없지만 첫 번째 시퀀스가 더 짧은 경우 첫 번째 시퀀스는 더 작은 것으로 비교됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_compare`를 호출하는 [collate::compare](#compare)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_hash"></a>  collate::do_hash  
@@ -247,7 +248,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 ### <a name="remarks"></a>설명  
  해시 값은 목록의 배열에 의사(pseudo) 임의로 시퀀스를 분산하는 경우 등에 유용할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_hash`를 호출하는 [hash](#hash)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_transform"></a>  collate::do_transform  
@@ -270,7 +271,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 ### <a name="remarks"></a>설명  
  보호된 가상 멤버 함수는 제어된 시퀀스가 시퀀스 [`first`, `last`)의 복사본인 [string_type](#string_type) 클래스의 개체를 반환합니다. collate\< **CharType**>에서 파생된 클래스가 [do_compare](#do_compare)를 재정의하는 경우 `do_transform`도 일치하도록 재정의해야 합니다. `collate::compare`에 전달된 경우 두 개의 변형된 문자열은 파생된 클래스에서 비교할 변환되지 않은 문자열을 전달하여 얻을 수 있는 것과 동일한 결과를 생성해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_transform`을 호출하는 [transform](#transform)에 대한 예제를 참조하세요.  
   
 ##  <a name="hash"></a>  collate::hash  
@@ -295,7 +296,7 @@ long hash(const CharType* first, const CharType* last) const;
   
  해시 값은 목록의 배열에 의사(pseudo) 임의로 시퀀스를 분산하는 경우 등에 유용할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // collate_hash.cpp  
@@ -333,7 +334,7 @@ typedef basic_string<CharType> string_type;
 ### <a name="remarks"></a>설명  
  이 형식은 개체가 소스 시퀀스의 복사본을 저장할 수 있는 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 특수화를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `string_type`의 선언 및 사용 방법의 예는 [transform](#transform)을 참조하세요.  
   
 ##  <a name="transform"></a>  collate::transform  
@@ -356,7 +357,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 [do_transform](#do_transform)(`first`, `last`)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // collate_transform.cpp  

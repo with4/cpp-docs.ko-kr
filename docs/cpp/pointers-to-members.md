@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declarations, pointers
 - class members [C++], pointers to
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 98a6db086443c15964a1dcf0a345b2fbaccfa233
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointers-to-members"></a>pointers_to_members
 멤버에 대한 포인터 선언은 포인터 선언의 특별한 경우입니다.  이러한 함수는 다음 시퀀스를 사용하여 선언됩니다.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 09/25/2017
   
     -   :: 연산자  
   
-    -   ** \* ** 연산자입니다.  
+    -    **\***  연산자입니다.  
   
     -   선택적 **const** 및/또는 `volatile` 지정자입니다.  
   
@@ -60,9 +58,9 @@ ms.lasthandoff: 09/25/2017
   
     -   선택적 이니셜라이저:  
   
- ** = ** 연산자입니다.  
+  **=**  연산자입니다.  
   
- ** & ** 연산자입니다.  
+  **&**  연산자입니다.  
   
  클래스의 정규화된 이름  
   
@@ -116,9 +114,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 차이 **.\* ** 및 ** -> \* ** 연산자 (멤버 포인터 연산자)의 **.\* ** 연산자 멤버를 선택 하는 동안 개체 또는 개체 참조에 따라는 ** -> \* ** 연산자는 포인터를 통해 멤버를 선택 합니다. (이러한 연산자에 대 한 자세한 내용은 [멤버 포인터 연산자가 있는 식](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ 차이 **.\***  및  **-> \***  연산자 (멤버 포인터 연산자)의 **.\***  연산자 멤버를 선택 하는 동안 개체 또는 개체 참조에 따라는  **-> \***  연산자는 포인터를 통해 멤버를 선택 합니다. (이러한 연산자에 대 한 자세한 내용은 [멤버 포인터 연산자가 있는 식](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- 멤버 포인터 연산자의 결과 멤버의 유형을-이 경우 **char \* **합니다.  
+ 멤버 포인터 연산자의 결과 멤버의 유형을-이 경우 **char \*** 합니다.  
   
  다음 코드에서는 멤버에 대한 포인터를 사용하여 `GetCaption` 및 `SetCaption` 멤버 함수를 호출합니다.  
   

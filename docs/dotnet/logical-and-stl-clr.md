@@ -1,32 +1,33 @@
 ---
-title: "logical_and(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_and"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_and 함수[STL/CLR]"
+title: logical_and (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_and
+dev_langs: C++
+helpviewer_keywords: logical_and function [STL/CLR]
 ms.assetid: ae103802-11e0-4060-a4f3-4f6fdc209e7c
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 62707fbcb0fd78c019fea886f4975973abbcc5aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# logical_and(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The template class describes a functor that, when called, returns true only if both the first argument and the second test as true.  You use it specify a function object in terms of its argument type.  
+# <a name="logicaland-stlclr"></a>logical_and(STL/CLR)
+함수를 설명 하는 템플릿 클래스, 호출 되 면 true를 반환 하는 첫 번째 인수와 두 번째 테스트는 모두 true 일 경우에 합니다. 사용 하면 해당 인수 형식 기준으로 함수 개체를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Arg>  
@@ -49,34 +50,34 @@ public:
     };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  Arg  
- The type of the arguments.  
+ 형식 인수입니다.  
   
-## 멤버 함수  
+## <a name="member-functions"></a>멤버 함수  
   
-|Type Definition|설명|  
-|---------------------|--------|  
-|delegate\_type|The type of the generic delegate.|  
-|first\_argument\_type|The type of the functor first argument.|  
-|result\_type|The type of the functor result.|  
-|second\_argument\_type|The type of the functor second argument.|  
+|형식 정의|설명|  
+|---------------------|-----------------|  
+|delegate_type|제네릭 대리자의 형식입니다.|  
+|first_argument_type|구조 함수의 첫 번째 인수의 형식입니다.|  
+|result_type|함수 결과의 형식입니다.|  
+|second_argument_type|두 번째 함수 인수 형식입니다.|  
   
 |멤버|설명|  
-|--------|--------|  
-|logical\_and|Constructs the functor.|  
+|------------|-----------------|  
+|logical_and|함수를 생성합니다.|  
   
 |연산자|설명|  
-|---------|--------|  
-|operator\(\)|Computes the desired function.|  
-|operator delegate\_type^|Casts the functor to a delegate.|  
+|--------------|-----------------|  
+|operator()|원하는 함수를 계산합니다.|  
+|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|  
   
-## 설명  
- The template class describes a two\-argument functor.  It defines the member operator `operator()` so that, when the object is called as a function, it returns true only if both the first argument and the second test as true.  
+## <a name="remarks"></a>설명  
+ 두 인수 함수를 설명 하는 템플릿 클래스입니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 될 때 있도록 true를 반환 하는지만 첫 번째 인수 및 두 번째 테스트는 모두 true입니다.  
   
- You can also pass the object as a function argument whose type is `delegate_type^` and it will be converted appropriately.  
+ 함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_logical_and.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **2 0**  
- **3 0**  
- **1 0**   
-## 요구 사항  
- **Header:** \<cliext\/functional\>  
+```Output  
+2 0  
+3 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [logical\_or](../dotnet/logical-or-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [logical_or(STL/CLR)](../dotnet/logical-or-stl-clr.md)

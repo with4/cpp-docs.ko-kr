@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a545935e06d958502fb3b97cb8969f92172ca6b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9587151175c593e4b1d9d30f45a19ce807c24990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2785"></a>컴파일러 오류 C2785
 'declaration1' 및 'declaration2'는 다른 반환 형식  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 1.  일관성에 대 한 함수 템플릿의 모든 특수화를 확인 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2785 오류가 생성 됩니다.  
   
 ```  

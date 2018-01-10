@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f47be9bad6cf7c8ccafac5dc8ce3786f8ada0dfb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 766e1a6f48ecf3f64110e64d916c50d92c89345d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-constants-in-c"></a>C++의 전역 상수
 C + +의 전역 상수는 고정 링크가 있습니다. 3. 다릅니다. 전역 사용 하려고 하면 여러 파일의 c + +에서 상수 오류가 해결 되지 않은 외부 합니다. 컴파일러는 변수에 대 한 예약 된 공간이 없습니다 out, 전역 상수를 최적화 합니다.  

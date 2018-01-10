@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a0549f553d7e458fa3499bea758cb0c4a5179eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 458a35e708db41ee393da70aedd653aca44cf802
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 클래스
 팝업 메뉴 애니메이션 사용 하지 않도록 설정 합니다.  
@@ -54,7 +55,7 @@ class CMFCDisableMenuAnimation
   
 |||  
 |-|-|  
-|이름|설명|  
+|name|설명|  
 |`CMFCDisableMenuAnimation::m_animType`|이전 팝업 메뉴 애니메이션 형식을 저장합니다.|  
   
 ### <a name="remarks"></a>설명  
@@ -64,7 +65,7 @@ class CMFCDisableMenuAnimation
   
  만들 수는 `CMFCDisableMenuAnimation` 단일 함수 전체에서 팝업 메뉴 애니메이션 사용 하지 않으려면 스택에 개체입니다. 팝업 메뉴 애니메이션 함수 사이 사용 하지 않도록 설정 하려는 경우 만들기는 `CMFCDisableMenuAnimation` 개체 힙에 대 한 다음 팝업 메뉴 애니메이션 복원 하려는 경우 삭제 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 스택 메뉴 애니메이션을 일시적으로 사용 하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]  

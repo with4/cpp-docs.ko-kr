@@ -16,16 +16,17 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c5c10ba2a1fee400ef99799c7c83a3bdcacd084f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f12d9f8af028d1e2e1fc149eeb77181c2f6b1730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-send-a-message-at-a-regular-interval"></a>방법: 정기적으로 메시지 보내기
 이 예제에는 동시성을 사용 하는 방법을 보여 줍니다::[timer 클래스](../../parallel/concrt/reference/timer-class.md) 정기적으로 메시지를 보내려고 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 `timer` 긴 작업 중 진행 상황을 보고 하는 개체입니다. 이 예제에서는 링크는 `timer` 개체는 [concurrency:: call](../../parallel/concrt/reference/call-class.md) 개체입니다. `call` 개체는 일정 한 간격으로 진행률 표시기를 콘솔에 출력 합니다. [concurrency::timer::start](reference/timer-class.md#start) 메서드 타이머는 별도 컨텍스트를 실행 합니다. `perform_lengthy_operation` 함수 호출의 [concurrency:: wait](reference/concurrency-namespace-functions.md#wait) 에 시간이 많이 걸리는 작업을 시뮬레이션 하는 주 컨텍스트에서 함수입니다.  
 

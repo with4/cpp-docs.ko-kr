@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 915baebbcc2b9b18b277d78f32868374c194d6ef
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: ff89bb3635936ae0f797438d73f71adf1ef08de7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2457"></a>컴파일러 오류 C2457
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/31/2017
 
 와 같은 미리 정의 된 매크로 사용 하려고 했습니다. [&#95; &#95; 함수 &#95; #95 ](../../preprocessor/predefined-macros.md), 전역 공간에서 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 샘플에서는 C2457 오류가 발생 하 고 올바른 사용법을 보여 줍니다.
 

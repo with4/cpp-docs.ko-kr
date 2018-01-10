@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b071564cc6c5059d8978d45f80ce3e008622ec2f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c9a4d66789a94e30c2562c5a6d071cab1012b32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompgetwtime"></a>omp_get_wtime
 특정 시점에서 경과 된 시간 (초)에서 값을 반환 합니다.  
@@ -38,7 +39,7 @@ double omp_get_wtime( );
   
  자세한 내용은 참조 [3.3.1 omp_get_wtime 함수](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // omp_get_wtime.cpp  

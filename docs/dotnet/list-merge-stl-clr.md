@@ -1,32 +1,33 @@
 ---
-title: "list::merge(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "merge 멤버[STL/CLR]"
+title: 'list:: merge (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::merge
+dev_langs: C++
+helpviewer_keywords: merge member [STL/CLR]
 ms.assetid: f8e93cd3-bd08-4086-859b-08a2899cc9a6
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0fdf7ee26bdb465e8a86109a4450353c4dc642a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# list::merge(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-순서가 지정된 두 개의 제어되는 시퀀스를 병합합니다.  
+# <a name="listmerge-stlclr"></a>list::병합(STL/CLR)
+제어 된 시퀀스를 정렬 된 두 개의 병합 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void merge(list<Value>% right);  
@@ -34,21 +35,21 @@ template<typename Pred2>
     void merge(list<Value>% right, Pred2 pred);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  pred  
- Comparer for element pairs.  
+ 요소 쌍에 대 한 비교자입니다.  
   
- right  
- Container to merge in.  
+ 오른쪽  
+ 컨테이너에서의 merge입니다.  
   
-## 설명  
- The first member function removes all elements from the sequence controlled by `right` and insert them in the controlled sequence.  Both sequences must be previously ordered by `operator<` \-\- elements must not decrease in value as you progress through either sequence.  The resulting sequence is also ordered by `operator<`.  You use this member function to merge two sequences that increase in value into a sequence that also increases in value.  
+## <a name="remarks"></a>설명  
+ 첫 번째 멤버 함수에 의해 제어 되는 시퀀스에서 요소를 모두 제거 `right` 제어 되는 시퀀스에 삽입 합니다. 두 시퀀스에서 이전에 정렬 되어야 합니다 `operator<` -시퀀스를 진행 하면서 요소 값에서 감소 하지 해야 합니다. 결과 시퀀스로 정렬 `operator<`합니다. 이 멤버 함수를 사용 하 여 값에도 증가 하는 시퀀스에 값이 증가 하는 두 개의 시퀀스를 병합 합니다.  
   
- The second member function behaves the same as the first, except that the sequences are ordered by `pred` \-\- `pred``(X, Y)` must be false for any element `X` that follows element `Y` in the sequence.  You use it to merge two sequences ordered by a predicate function or delegate that you specify.  
+ 두 번째 멤버 함수는 동일 하 게 동작 첫 번째 시퀀스의 기준으로 정렬 된 한다는 점을 제외 하면 `pred`  --  `pred(X, Y)` 모든 요소에 대해 false 이어야 합니다 `X` 요소 다음에 오는 `Y` 시퀀스에서 합니다. 병합 조건자 함수 또는 사용자가 지정한 대리자에 의해 정렬 된 두 개의 시퀀스를 사용 합니다.  
   
- Both functions perform a stable merge \-\- no pair of elements in either of the original controlled sequences is reversed in the resulting controlled sequence.  Also, if a pair of elements `X` and `Y` in the resulting controlled sequence has equivalent ordering \-\- `!(X < Y) && !(X < Y)` \-\- an element from the original controlled sequence appears before an element from the sequence controlled by `right`.  
+ 모두 안정적인 병합을 수행 하는 함수에 결과 제어 된 시퀀스에서 원래 제어 된 시퀀스 중 하나에 있는 요소의 없는 쌍 속도가 반대로 바뀝니다. 또한 경우 요소의 쌍 `X` 및 `Y` 순서 지정이 동일할-결과 제어 되는 시퀀스에 `!(X < Y) && !(X < Y)` -제어 되는 원래 시퀀스에서 요소 에의해제어되는시퀀스에서요소앞에표시되`right`.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_list_merge.cpp   
@@ -107,20 +108,23 @@ int main()
   
 ```  
   
-  **a c e**  
- **b d f**  
- **a b c d e f**  
-**c2.size\(\) \= 0**  
- **e c a**  
- **f e d c b a**  
- **f e e d c c b a a**  
-**c1.size\(\) \= 0**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+ a c e  
+ b d f  
+ a b c d e f  
+c2.size() = 0  
+ e c a  
+ f e d c b a  
+ f e e d c c b a a  
+c1.size() = 0  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)   
- [list::splice](../dotnet/list-splice-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)   
+ [list::splice(STL/CLR)](../dotnet/list-splice-stl-clr.md)

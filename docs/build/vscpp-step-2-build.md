@@ -1,8 +1,8 @@
 ---
-title: "2 단계-빌드 및 실행 c + + 콘솔 응용 프로그램 프로젝트 | Microsoft Docs"
+title: "C + + 콘솔 응용 프로그램 프로젝트 빌드 및 실행 | Microsoft Docs"
 description: "Visual c + +에 대 한 Visual Studio 지원 설치"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20a8bafa69631ef8df1fb20f613dfbb81578f94a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>C + + 콘솔 응용 프로그램 프로젝트 빌드 및 실행
 
@@ -23,9 +24,9 @@ C + + 콘솔 응용 프로그램 프로젝트를 만들고 코드를 입력 했�
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- 설치 하 고 컴퓨터에서 실행 중인 작업의 c + + 데스크톱 개발을 사용한 Visual Studio가 있습니다. 아직 설치 되지 않은 경우의 단계에 따라 [단계 0-Visual Studio에서 c + + 설치 지원](../build/vscpp-step-0-installation.md)합니다.
+- 설치 하 고 컴퓨터에서 실행 중인 작업의 c + + 데스크톱 개발을 사용한 Visual Studio가 있습니다. 아직 설치 되지 않은 경우의 단계에 따라 [Visual Studio에서 c + + 설치 지원](../build/vscpp-step-0-installation.md)합니다.
 
-- "Hello, World!" 만들기 프로젝트 및 해당 소스 코드를 입력 합니다. 아직이 경우의 단계에 따라 [1 단계-c + + 콘솔 응용 프로그램 프로젝트를 만들](../build/vscpp-step-1-create.md)합니다.
+- "Hello, World!" 만들기 프로젝트 및 해당 소스 코드를 입력 합니다. 아직이 경우의 단계에 따라 [c + + 콘솔 응용 프로그램 프로젝트를 만들](../build/vscpp-step-1-create.md)합니다.
 
 Visual Studio는 다음과 같이 표시 하는 경우에 빌드하고 응용 프로그램 실행을 수행할 수 있습니다.
 
@@ -41,7 +42,7 @@ Visual Studio는 다음과 같이 표시 하는 경우에 빌드하고 응용 �
 
    ![프로젝트 시작](../build/media/vscpp-start-without-debugging.gif "프로젝트 시작")
 
-    콘솔 창이 열리고 응용 프로그램을 실행 합니다. Visual Studio에서 콘솔 응용 프로그램을 시작 하는 경우 코드를 실행 한 다음 인쇄 "계속 하려면 아무 키나 누르십시오. 입니다. ." 사용자에 게 결과 볼 수 있습니다.
+    콘솔 창이 열리고 응용 프로그램을 실행 합니다. Visual Studio에서 콘솔 응용 프로그램을 시작 하는 경우 코드를 실행 한 다음 인쇄 "계속 하려면 아무 키나 누르십시오. 이어야 합니다. ." 사용자에 게 결과 볼 수 있습니다.
 
 지금까지 첫 번째 만든 "Hello, world!" Visual Studio에서 콘솔 응용 프로그램! 콘솔 창을 닫고 Visual Studio로 되돌아가려면에 키를 누릅니다.
 
@@ -67,7 +68,7 @@ Visual Studio는 다음과 같이 표시 하는 경우에 빌드하고 응용 �
 
 ## <a name="next-steps"></a>다음 단계
 
-작성 하 고이 간단한 응용 프로그램을 실행 한 보다 복잡 한 프로젝트에 대 한 준비가 됩니다. 퀵 스타트, 자습서 및 예제 코드를 Visual Studio를 사용 하 여 c + +에서 수행할 수 있는 항목을 참조 하십시오.
+작성 하 고이 간단한 응용 프로그램을 실행 한 보다 복잡 한 프로젝트에 대 한 준비가 됩니다. 참조 [c + + 데스크톱 개발을 위한 Visual Studio IDE를 사용 하 여](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) 자세한 연습 Visual Studio에서 Visual c + +의 기능을 합니다.
 
 ## <a name="troubleshooting-guide"></a>문제 해결 가이드
 

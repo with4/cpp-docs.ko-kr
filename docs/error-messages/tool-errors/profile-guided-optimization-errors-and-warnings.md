@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3704330eba9a668c3a46f0efead7c86a54b465d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2da1911c291c4d052d380cfd3d63c5b25bda5010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>프로필 기반 최적화 오류 및 경고
 이 섹션은 빌드 도구에 의해 생성된 오류에 대한 참조입니다. 에 대 한 도움말 특정 오류 메시지를 출력 창에 오류 번호를 F1 키를 입력에 오류 번호는 **찾아보십시오** 인덱스 상자로 하거나 적절 한 링크를 클릭 합니다.  

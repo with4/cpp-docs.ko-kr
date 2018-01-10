@@ -1,81 +1,82 @@
 ---
-title: "사용자 정의 연산자(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr에서의 사용자 정의 연산자"
+title: "사용자 정의 연산자 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 사용자 정의 연산자(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-User\-defined operators for managed types are allowed as static members or instance members, or at global scope.  However, only static operators are accessible through metadata to clients that are written in a language other than Visual C\+\+.  
+# <a name="user-defined-operators-ccli"></a>사용자 정의 연산자(C++/CLI)
+정적 멤버 또는 인스턴스 멤버 또는 전역 범위에서 관리 되는 형식에 대 한 사용자 정의 연산자는 허용 됩니다. 그러나 정적 연산자만는 Visual c + + 이외의 언어로 작성 된 클라이언트에 메타 데이터를 통해 액세스할 수 있습니다.  
   
- In a reference type, one of the parameters of a static user\-defined operator must be one of these:  
+ 참조 형식에서 다음 중 하나 여야 합니다 정적 사용자 정의 연산자의 매개 변수 중 하나:  
   
--   A handle \(`type` ^\) to an instance of the enclosing type.  
+-   핸들 (`type` ^) 바깥쪽 형식의 인스턴스로.  
   
--   A reference type indirection \(`type`^& or type^%\) to a handle to an instance of the enclosing type.  
+-   참조 형식 간접 참조 (`type`^ & 또는 형식 ^ %) 바깥쪽 형식의 인스턴스에 대 한 핸들을 합니다.  
   
- In a value type, one of the parameters of a static user\-defined operator must be one of these:  
+ 값 형식에서 다음 중 하나 여야 합니다 정적 사용자 정의 연산자의 매개 변수 중 하나:  
   
--   Of the same type as the enclosing value type.  
+-   바깥쪽 값 형식으로 동일한 형식이 아닙니다.  
   
--   A pointer type indirection \(`type`^\) to the enclosing type.  
+-   포인터 유형 간접 참조 (`type`^) 바깥쪽 형식입니다.  
   
--   A reference type indirection \(`type`% or `type`&\) to the enclosing type.  
+-   참조 형식 간접 참조 (`type`% 또는 `type`&)를 바깥쪽 형식입니다.  
   
--   A reference type indirection \(`type`^% or `type`^&\) to the handle.  
+-   참조 형식 간접 참조 (`type`^ % 또는 `type`^ &)를 핸들입니다.  
   
- You can define the following operators:  
+ 다음과 같은 연산자를 정의할 수 있습니다.  
   
-|연산자|Unary\/Binary Forms?|  
-|---------|--------------------------|  
-|\!|단항|  
-|\!\=|Binary|  
-|%|Binary|  
+|연산자|단항/이항 Forms?|  
+|--------------|--------------------------|  
+|!|단항|  
+|!=|이항|  
+|%|이항|  
 |&|단항 및 이항|  
-|&&|Binary|  
-|\*|단항 및 이항|  
-|\+|단항 및 이항|  
-|\+\+|단항|  
-|,|Binary|  
-|\-|단항 및 이항|  
-|\-\-|단항|  
-|\-\>|단항|  
-|\/|Binary|  
-|\<|Binary|  
-|\<\<|Binary|  
-|\<\=|Binary|  
-|\=|Binary|  
-|\=\=|Binary|  
-|\>|Binary|  
-|\>\=|Binary|  
-|\>\>|Binary|  
-|^|Binary|  
-|false|단항|  
+|&&|이항|  
+|*|단항 및 이항|  
+|+|단항 및 이항|  
+|++|단항|  
+|,|이항|  
+|-|단항 및 이항|  
+|--|단항|  
+|->|단항|  
+|/|이항|  
+|<|이항|  
+|<<|이항|  
+|\<=|이항|  
+|=|이항|  
+|==|이항|  
+|>|이항|  
+|>=|이항|  
+|>>|이항|  
+|^|이항|  
+|False|단항|  
 |true|단항|  
-|&#124;|Binary|  
-|&#124;&#124;|Binary|  
+|&#124;|이항|  
+|&#124;&#124;|이항|  
 |~|단항|  
   
-## 예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // mcppv2_user-defined_operators.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -135,17 +136,20 @@ int main() {
 }  
 ```  
   
-  **\-5**  
-**\-4**  
-**\-3**  
-**\-2**  
-**\-1**  
-**\-2**  
-**\-3**   
-## 예제  
- The following sample demonstrates operator synthesis, which is only available when you use **\/clr** to compile.  Operator synthesis creates the assignment form of a binary operator, if one is not defined, where the left\-hand side of the assignment operator has a CLR type.  
-  
+```Output  
+-5  
+-4  
+-3  
+-2  
+-1  
+-2  
+-3  
 ```  
+  
+## <a name="example"></a>예  
+ 다음 샘플을 사용할 때만 사용할 수 있는 연산자 통합 **/clr** 컴파일할 수 있습니다. 연산자를 통합 이항 연산자의 할당 양식을 만들고, 한 경우 정의 되지 않은 할당 연산자의 왼쪽에는 CLR 형식이 합니다.  
+  
+```cpp  
 // mcppv2_user-defined_operators_2.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -165,6 +169,9 @@ int main() {
 }  
 ```  
   
-  **30**   
-## 참고 항목  
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+```Output  
+30  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)

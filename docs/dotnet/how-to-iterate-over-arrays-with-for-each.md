@@ -1,31 +1,33 @@
 ---
-title: "방법: for each로 배열 반복 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "배열[C++], for each로 반복 처리"
+title: "방법: 각로 배열 반복 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: arrays [C++], iterating with for each
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 437e9134e489d9ca91f95979ad5165798d90cdef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: for each로 배열 반복
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-This topic shows how to use the [for each, in](../dotnet/for-each-in.md) keyword on different types of arrays.  
+# <a name="how-to-iterate-over-arrays-with-for-each"></a>방법: for each로 배열 반복
+이 항목에서는 사용 하는 방법을 보여 줍니다.는 [각 항목에 대해에서](../dotnet/for-each-in.md) 여러 형식의 배열에는 키워드입니다.  
   
-## 예제  
- This sample shows how to use `for each` on array of reference types.  Note that if any dimension of a multi dimensional array is zero, the `for each` loop will not iterate over the array.  
+## <a name="example"></a>예  
+ 이 예제에서는 사용 하는 방법을 보여 줍니다. `for each` 참조 형식의 배열에 있습니다.  경우에 모든 차원 다중 차원 배열에는 0, `for each` 사이 배열 루프 반복 되지 않습니다.  
   
 ```  
 // for_each_arrays.cpp  
@@ -66,14 +68,18 @@ int main() {
 }  
 ```  
   
-  **0 \= in MyClass**  
-**1 \= in MyClass**  
-**0 \= in MyClass2**  
-**1 \= in MyClass2**  
-**2 \= in MyClass2**  
-**3 \= in MyClass2**   
-## 예제  
- This sample shows for each iterating over a <xref:System.Collections.ArrayList>, which implements <xref:System.Collections.IEnumerable>.  
+```Output  
+0 = in MyClass  
+1 = in MyClass  
+  
+0 = in MyClass2  
+1 = in MyClass2  
+2 = in MyClass2  
+3 = in MyClass2  
+```  
+  
+## <a name="example"></a>예  
+ 이 샘플에 대 한 각 반복은 <xref:System.Collections.ArrayList>를 구현 하는 <xref:System.Collections.IEnumerable>합니다.  
   
 ```  
 // for_each_arrays_2.cpp  
@@ -95,9 +101,12 @@ int main() {
 }  
 ```  
   
-  **60**   
-## 예제  
- This sample shows how to iterate over an array of arrays.  
+```Output  
+60  
+```  
+  
+## <a name="example"></a>예  
+ 이 예제에는 배열의 배열을 통해 반복 하는 방법을 보여 줍니다.  
   
 ```  
 // for_each_arrays_3.cpp  
@@ -129,13 +138,17 @@ int main() {
 }  
 ```  
   
-  **IntArray\[0\] \= 10**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**IntArray\[1\] \= 11**  
-**10**  
-**10**  
-**11**  
-**11**   
-## 참고 항목  
+```Output  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
+  
+10  
+10  
+11  
+11  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [for each, in](../dotnet/for-each-in.md)

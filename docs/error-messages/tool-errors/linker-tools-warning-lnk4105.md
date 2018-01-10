@@ -1,39 +1,38 @@
 ---
 title: "링커 도구 경고 LNK4105 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4105"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4105"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4105
+dev_langs: C++
+helpviewer_keywords: LNK4105
 ms.assetid: 6c7bebf4-4ea6-4533-a6ed-e563d43abbd7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 913a6da056908def8df5aab1c2425ef9a187c1e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 링커 도구 경고 LNK4105
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'option' 옵션에 지정된 인수가 없습니다. 옵션이 무시됩니다.  
+# <a name="linker-tools-warning-lnk4105"></a>링커 도구 경고 LNK4105
+'option'; 옵션에 지정 된 인수 없음 옵션을 무시합니다.  
   
- 이 경고는 [\/LIBPATH](../../build/reference/libpath-additional-libpath.md) 옵션이 설정된 경우에만 발생합니다.  이 옵션으로 지정된 디렉터리가 없으면 링커가 옵션을 무시하며 이 경고 메시지를 발생시킵니다.  
+ 이 경고에만 발생 때는 [/LIBPATH](../../build/reference/libpath-additional-libpath.md) 옵션을 설정 합니다. 디렉터리를 지정 하지이 옵션을 링커 옵션 무시 및이 경고 메시지를 생성 합니다.  
   
- 기존 환경 라이브러리 설정을 재정의하지 않아도 되는 경우에는 링커 명령줄에서 \/LIBPATH 옵션을 제거하십시오.  라이브러리에 대한 대체 검색 경로를 사용하려면 \/LIBPATH 옵션 다음에 대체 경로를 지정하십시오.  
+ 기존 환경 라이브러리 설정을 다시 정의 하도록 필요 하지 않은 경우 링커 명령줄에서 /LIBPATH 옵션을 제거 합니다. 라이브러리에 대 한 대체 검색 경로 사용 하려는 경우 /LIBPATH 옵션 다음에 대체 경로 지정 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 link /libpath:c:\filepath\lib bar.obj  
 ```  
   
- 위의 구문을 사용하면 링커가 필수 라이브러리를 기본 위치에서 검색하기 전에 `c:\filepath\lib`에서 검색합니다.
+ 구문을 사용 하면 링커가에 필요한 라이브러리를 검색할 `c:\filepath\lib` 기본 위치를 검색 하기 전에.

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2268
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2268
+f1_keywords: C2268
+dev_langs: C++
+helpviewer_keywords: C2268
 ms.assetid: 0ed055c9-3c6f-4df2-a5b6-85cf0e01a249
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b67ed29d083284a714fece22c36e09ec7aa0b66f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 38ac7b0aa76a16516652bfc1736826072ad473dd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2268"></a>컴파일러 오류 C2268
 'function'은 컴파일러에서 미리 정의한 라이브러리 도우미입니다. /GL 옵션을 지정하면 라이브러리 도우미가 지원되지 않습니다. /GL을 지정하지 않고 개체 파일 'file'을 컴파일하세요.  

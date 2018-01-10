@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7559bdf725727b79f99ed3bfcd4d6b7301528110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>예외 사양 (throw, noexcept) (c + +)
 예외 사양은 함수에 의해 전파 될 수 있는 예외 형식에 대해 프로그래머의 의도 표시 하는 c + + 언어 기능. 하는 함수 되거나 예외를 사용 하 여 종료 되지 않을 지정할 수는 *예외 사양이*합니다. 컴파일러는 함수에 대 한 호출을 최적화 하기 위해이 정보를 사용 하 고 예외가 발생된 하는 경우 프로그램을 종료 하려면 함수를 이스케이프 합니다. 예외 사양는 다음과 같은 두 종류가 있습니다. *noexcept 사양* 새로운 C + + 11 기능입니다. 함수를 이스케이프 될 수 있는 잠재적인 예외 집합이 비어 있는지 여부를 지정 합니다. *동적 예외 사양은*, 또는 `throw(optional_type_list)` C + + 11에서 사용 되지 않는 사양과 Visual Studio에서 부분적 으로만 지원 됩니다. 이 예외 사양은 함수에서 예외를 throw 할 수 하는 방법에 대 한 요약 정보를 제공 하는데 실제로 문제가 있는 것으로 발견 된 합니다. 어느 정도 유용한 것으로 입증 된 하나의 동적 예외 사양을는 무조건 `throw()` 사양입니다. 예를 들어 함수 선언 합니다.  
@@ -68,7 +69,7 @@ Visual c + +에서 완벽 하 게 지원 하지만 `noexcept` 동적 예외 사�
 |C + + 함수 `noexcept`, `noexcept(true)`, 또는 `throw()` 예외 사양|아니요|아니요|예|예|  
 |C + + 함수 `noexcept(false)`, `throw(...)`, 또는 `throw(type)` 예외 사양|예|예|예|예|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // exception_specification.cpp  

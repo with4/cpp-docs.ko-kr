@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7a51023f167eee5fbd4082486409f4e11a15547
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 059d88673fe26dd1381818c474a440309dcafa73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 클래스
 에 대 한 구현을 제공는 [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx) 인터페이스입니다.  
@@ -52,7 +55,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
   
 |||  
 |-|-|  
-|[초기화](../../data/oledb/idbinitializeimpl-initialize.md)|공급자를 시작합니다.|  
+|[Initialize](../../data/oledb/idbinitializeimpl-initialize.md)|공급자를 시작합니다.|  
 |[초기화를 취소합니다](../../data/oledb/idbinitializeimpl-uninitialize.md)|공급자를 중지합니다.|  
   
 ### <a name="data-members"></a>데이터 멤버  

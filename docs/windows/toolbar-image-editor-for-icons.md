@@ -1,58 +1,62 @@
 ---
-title: "Toolbar (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Graphics toolbar"
-  - "Image editor [C++], toolbar"
-  - "Image editor [C++], Option selector"
-  - "Properties window"
-  - "Option selector, Image editor"
+title: "도구 모음 (아이콘에 대 한 이미지 편집기) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.bitmap
+- vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- Graphics toolbar
+- Image editor [C++], toolbar
+- Image editor [C++], Option selector
+- Properties window
+- Option selector, Image editor
 ms.assetid: a0af4209-6273-4106-a7c1-0edecc9b5755
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 800fb1007076902703abd3d3185c398dbf40fdb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Toolbar (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**이미지 편집기** 도구 모음에는 그리기, 칠하기, 텍스트 입력, 지우기 및 보기 조작 등을 할 수 있는 도구가 있습니다.  또한 각 도구 사용 옵션을 선택할 수 있는 옵션 선택기도 있습니다.  예를 들어, 다양한 브러시 너비, 확대 비율 및 선 스타일을 선택할 수 있습니다.  
+# <a name="toolbar-image-editor-for-icons"></a>도구 모음(아이콘에 대한 이미지 편집기)
+**이미지 편집기** 도구 모음에 그리기, 그리기, 텍스트를 입력, 지우기, 및 뷰를 조작 하는 도구가 있습니다. 또한 각 도구를 사용 하기 위한 옵션을 선택할 수 있는 옵션 선택기를 포함 합니다. 예를 들어 다양 한 브러시 너비, 배율 요소 및 선 스타일에서 선택할 수 있습니다.  
   
 > [!NOTE]
->  **이미지 편집기** 도구 모음에서 사용할 수 있는 모든 도구는 **이미지** 메뉴\(**도구** 명령 아래\)에도 있습니다.  
+>  사용할 수 있는 모든 도구는 **이미지 편집기** 도구 모음에서 사용할 수 있습니다.는 **이미지** 메뉴 (아래에서 **도구** 명령).  
   
  ![이미지 편집기 도구 모음](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
 이미지 편집기 도구 모음  
   
- **이미지 편집기** 도구 모음과 **옵션** 선택기를 사용하려면 원하는 도구와 옵션을 클릭합니다.  
+ 사용 하는 **이미지 편집기** 도구 모음 및 **옵션** 선택기 도구 또는 원하는 옵션입니다.  
   
 > [!TIP]
->  도구 모음 단추 위에 커서를 두면 도구 설명이 표시됩니다.  이 팁을 보면 각 단추의 기능을 확인할 수 있습니다.  
+>  도구 모음 단추 위로 커서를 올려 놓으면 도구 설명이 표시 됩니다. 이러한 팁은 각 단추의 기능을 식별할 수 있습니다.  
   
- **옵션** 선택기를 사용하면 선 두께, 브러시 스트로크 등을 지정할 수 있습니다.  **옵션** 선택기 단추의 아이콘은 선택한 도구에 따라 달라집니다.  
+ 와 **옵션** 선택기 줄, 브러시 스트로크 등의 너비를 지정할 수 있습니다. 에 있는 아이콘은 **옵션** 도구에 따라 선택한 선택기 단추 변경 합니다.  
   
- ![이미지 편집기 도구 모음의 도형 그리기 선택기](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-이미지 편집기 도구 모음의 옵션 선택기  
+ ![그리기 &#45; 이미지 편집기 도구 모음의 도형 선택기](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
+이미지 편집기 도구 모음에서 옵션 선택기  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  없음  
   
-## 참고 항목  
- [Displaying or Hiding the Toolbar](../mfc/displaying-or-hiding-the-toolbar-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>참고 항목  
+ [표시 또는 숨기기 도구 모음](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)   
+ [액셀러레이터 키](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [아이콘에 대한 이미지 편집기](../windows/image-editor-for-icons.md)
+

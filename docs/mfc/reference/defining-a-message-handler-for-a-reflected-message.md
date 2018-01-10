@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a576ffdc7fcd637873045ee44e3a13a0a9647942
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d9f5e1c472cdbca177b91851f9b8104094c41047
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>리플렉트된 메시지의 메시지 처리기 정의
 새 MFC 컨트롤 클래스를 만든 후에 대 한 메시지 처리기를 정의할 수 있습니다. 리플 렉 트 된 메시지 처리기는 부모는 메시지를 받기 전에 자체 메시지를 처리 하도록 컨트롤 클래스를 허용 합니다. MFC를 사용할 수 있습니다 [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) 함수를 부모 창에 사용자 컨트롤에서 메시지를 전송 합니다.  

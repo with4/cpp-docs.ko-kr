@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 741c7a62083680c434f7eaa1c415441449525344
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fa0b0b31d76c55851d69f4c528f11e7d23ff0d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="where-to-find-message-maps"></a>메시지 맵을 찾을 장소
 응용 프로그램 마법사로 새로운 기초 응용 프로그램을 만들 때 응용 프로그램 마법사를 생성 하는 각 명령 대상 클래스에 대 한 메시지 맵을 작성 합니다. 파생된 응용 프로그램, 문서, 뷰 및 프레임 창 클래스를 포함 합니다. 이러한 메시지 맵 중 일부 특정 메시지와 미리 정의 된 명령에 대 한 응용 프로그램 마법사에서 제공 하는 항목은 이미 고 추가할 처리기에 대 한 자리 표시자 일 뿐입니다.  

@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 94e1978c5c0188410cf8d6d6bfdfe08d9af620e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Visual C++ 응용 프로그램의 종속성 이해
 응용 프로그램에 의존 하는 Visual c + + 라이브러리를 확인 하려면 프로젝트 속성을 볼 수 있습니다. (솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성** 열려는 **속성 페이지** 대화 상자.) 종속성을 더욱 포괄적으로 파악할 수 있는 Dependency Walker(depends.exe)를 사용할 수도 있습니다.  

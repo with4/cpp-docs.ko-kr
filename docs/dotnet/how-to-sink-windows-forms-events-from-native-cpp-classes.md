@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d51cc4caa7a1018e85cc880cf45894abc861d250
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2dd3778dad837ffe23d17b58b4e579844dc71f40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>방법: 네이티브 C++ 클래스에서 Windows Forms 이벤트 싱크
 Windows Forms 컨트롤 또는 MFC 매크로 맵 형식의 다른 폼에서 발생 하는 관리 되는 이벤트의 콜백을 받을 수 있는 네이티브 c + + 클래스를 사용할 수 있습니다. 뷰 및 대화 상자에 이벤트 싱크 컨트롤에 대 한 동일한 작업을 수행 하는 것과 비슷합니다.  

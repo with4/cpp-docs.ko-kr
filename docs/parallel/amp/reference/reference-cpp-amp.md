@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84b68f4fa5ba207a9cb615877936ca08bdc2259b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae039aec64d761a82ccf71ee12965c0deb9c7aed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-c-amp"></a>참조(C++ AMP)
 이 섹션에는 c + + Accelerated Massive Parallelism (c + + AMP) 런타임에 대 한 참조 정보가 포함 되어 있습니다.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  C++ 언어 표준에는 라이브러리와 같은 구현을 위해 밑줄(`_`) 문자로 시작하는 식별자의 사용이 예약되어 있습니다. 코드에 밑줄로 시작하는 이름을 사용하지 마세요. 해당 이름이 이 규칙을 따르는 코드 요소의 동작은 보장되지 않으며 이후 릴리스에서 변경될 수 있습니다. 이러한 이유로 이 설명서에서는 해당 코드 요소가 생략되었습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)  
  클래스와 c + + 코드에서 데이터 병렬 하드웨어 가속을 사용 하도록 설정 하는 함수를 제공 합니다.  
   

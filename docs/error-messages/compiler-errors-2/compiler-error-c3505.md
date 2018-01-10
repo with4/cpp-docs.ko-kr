@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 47ca6c4e8e8c01e97ed0098c84c8ea8c64f387a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7b13350ea7a2ffaf232e990bd3ade42d0c44a6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3505"></a>컴파일러 오류 C3505
 
@@ -33,4 +34,4 @@ C3505는 32 비트, x86 호스트 크로스 컴파일러 64 비트를 실행 하
   
 -   [방법: 명령줄에서 64비트 Visual C++ 도구 집합 사용](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
   
--   [방법: Visual c + + 프로젝트를 대상 64 비트 x64 구성 플랫폼](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+-   [방법: 64비트, x64 플랫폼을 대상으로 한 Visual C++ 프로젝트 구성](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)

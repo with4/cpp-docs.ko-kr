@@ -1,63 +1,65 @@
 ---
-title: "CDataSource::GetProperty | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDataSource::GetProperty"
-  - "ATL.CDataSource.GetProperty"
-  - "CDataSource.GetProperty"
-  - "CDataSource::GetProperty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetProperty 메서드"
+title: 'Cdatasource:: Getproperty | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDataSource::GetProperty
+- ATL.CDataSource.GetProperty
+- CDataSource.GetProperty
+- CDataSource::GetProperty
+dev_langs: C++
+helpviewer_keywords: GetProperty method
 ms.assetid: 6531147c-b164-4ab5-a4a7-509634b85b4d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 304a96ef9bb5e918dccaf473577f49b6b8d5d78f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDataSource::GetProperty
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Returns the value of a specified property for the connected data source object.  
+# <a name="cdatasourcegetproperty"></a>CDataSource::GetProperty
+연결 된 데이터 원본 개체에 대해 지정된 된 속성의 값을 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      HRESULT GetProperty(   
-   const GUID& guid,   
-   DBPROPID propid,   
-   VARIANT* pVariant    
+      HRESULT GetProperty(   
+   const GUID& guid,   
+   DBPROPID propid,   
+   VARIANT* pVariant    
 ) const throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `guid`  
- \[in\] A GUID identifying the property set for which to return the property.  
+ [in] 반환할 속성에 대해 설정할 속성을 식별 하는 GUID입니다.  
   
  `propid`  
- \[in\] Property ID for the property to return.  
+ [in] ID 속성에 대해 반환할 속성입니다.  
   
  *pVariant*  
- \[out\] A pointer to the variant where **GetProperty** returns the value of the property.  
+ [out] Variant에 대 한 포인터를 **GetProperty** 속성의 값을 반환 합니다.  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 설명  
- To get multiple properties, use [GetProperties](../../data/oledb/cdatasource-getproperties.md).  
+## <a name="remarks"></a>설명  
+ 여러 속성을 사용 [GetProperties](../../data/oledb/cdatasource-getproperties.md)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDataSource 클래스](../../data/oledb/cdatasource-class.md)

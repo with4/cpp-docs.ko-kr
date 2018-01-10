@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4221702df42bc82d1a0573f9a8b10252017b282a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05acbc14af8daec265cf705ac4605e9606cb0696
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="path-class"></a>path 클래스
 **path** 클래스는 string\_type 형식의 개체(여기서는 표시 편의상 이름이 myname으로 지정됨)를 저장하며 경로 이름으로 사용하는 데 적합합니다. string\_type은 basic\_string\<value_type>과 동일한 의미이며, 여기서 value\_type은 Windows에서는 char와, Posix에서는 wchar_t와 동일한 의미입니다.  

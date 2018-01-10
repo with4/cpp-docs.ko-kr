@@ -1,88 +1,91 @@
 ---
-title: "CColumnDomainUsage, CColumnDomainUsageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_szCatalog"
-  - "m_nColumnPropID"
-  - "CColumnDomainUsageInfo"
-  - "COLUMN_GUID"
-  - "DOMAIN_NAME"
-  - "m_szColumnName"
-  - "DOMAIN_SCHEMA"
-  - "DOMAIN_CATALOG"
-  - "m_szTableCatalog"
-  - "m_szSchema"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "CColumnDomainUsage"
-  - "m_szTableName"
-  - "m_szName"
-  - "COLUMN_DOMAIN_USAGE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CColumnDomainUsage typedef 클래스"
-  - "CColumnDomainUsageInfo 매개 변수 클래스"
-  - "COLUMN_DOMAIN_USAGE"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "DOMAIN_CATALOG"
-  - "DOMAIN_NAME"
-  - "DOMAIN_SCHEMA"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_szCatalog"
-  - "m_szColumnName"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CColumnDomainUsage, CColumnDomainUsageInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_szCatalog
+- m_nColumnPropID
+- CColumnDomainUsageInfo
+- COLUMN_GUID
+- DOMAIN_NAME
+- m_szColumnName
+- DOMAIN_SCHEMA
+- DOMAIN_CATALOG
+- m_szTableCatalog
+- m_szSchema
+- COLUMN_PROPID
+- m_guidColumn
+- CColumnDomainUsage
+- m_szTableName
+- m_szName
+- COLUMN_DOMAIN_USAGE
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- m_szSchema
+- DOMAIN_NAME
+- DOMAIN_SCHEMA
+- m_szTableSchema
+- TABLE_CATALOG
+- m_szCatalog
+- TABLE_NAME
+- m_nColumnPropID
+- CColumnDomainUsageInfo parameter class
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szName
+- m_szTableCatalog
+- m_szTableName
+- COLUMN_DOMAIN_USAGE
+- COLUMN_GUID
+- CColumnDomainUsage typedef class
+- m_guidColumn
+- DOMAIN_CATALOG
 ms.assetid: 5ff331f1-b99c-4002-9e04-367708c5759f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d6f60436d0ae412489862d07a79f4d42e6c568ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CColumnDomainUsage, CColumnDomainUsageInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Call the typedef class **CColumnDomainUsage** to implement its parameter class **CColumnDomainUsageInfo**.  
+# <a name="ccolumndomainusage-ccolumndomainusageinfo"></a>CColumnDomainUsage, CColumnDomainUsageInfo
+Typedef 클래스 호출 **CColumnDomainUsage** 해당 매개 변수 클래스를 구현 하려면 **CColumnDomainUsageInfo**합니다.  
   
-## 설명  
- See [Schema Rowset Classes and Typedef Classes](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) for more information on using typedef classes.  
+## <a name="remarks"></a>설명  
+ 참조 [스키마 행 집합 클래스 및 Typedef 클래스](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) typedef 클래스 사용에 대 한 자세한 내용은 합니다.  
   
- This class identifies the columns, defined in the catalog, that are dependent on a domain defined in the catalog and owned by a given user.  
+ 이 클래스는 열에는 카탈로그에 정의 된 지정된 된 사용자가 소유 하 고 카탈로그에 정의 된 도메인에 의존 하는 식별 합니다.  
   
- The following table lists the class data members and their corresponding OLE DB Columns.  See [COLUMN\_DOMAIN\_USAGE Rowset](https://msdn.microsoft.com/en-us/library/ms711240.aspx) in the *OLE DB Programmer's Reference* for more information about the schema and columns.  
+ 다음 표에는 클래스 데이터 멤버 및 해당 OLE DB 열이 나열됩니다. 참조 [COLUMN_DOMAIN_USAGE 행 집합](https://msdn.microsoft.com/en-us/library/ms711240.aspx) 에 *OLE DB Programmer's Reference* 스키마 및 열에 대 한 자세한 내용은 합니다.  
   
-|Data members|OLE DB columns|  
+|데이터 멤버|OLE DB 열|  
 |------------------|--------------------|  
-|m\_szCatalog|DOMAIN\_CATALOG|  
-|m\_szSchema|DOMAIN\_SCHEMA|  
-|m\_szName|DOMAIN\_NAME|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
+|m_szCatalog|DOMAIN_CATALOG|  
+|m_szSchema|DOMAIN_SCHEMA|  
+|m_szName|DOMAIN_NAME|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
   
-## 요구 사항  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbsch.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRestrictions 클래스](../../data/oledb/crestrictions-class.md)

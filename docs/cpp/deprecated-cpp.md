@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3ec06d469f6fc71b23c9bdc6a67e5ed741d9f5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deprecated-c"></a>사용되지 않음 (C++)
 이 항목은 Microsoft 전용에 대 한 declspec 선언 사용 되지 않습니다. C + + 14에 대 한 내용은 `[[deprecated]]` 특성 및 해당 특성 및 Microsoft 전용 declspec 또는 pragma를 사용 하는 경우에 대 한 지침 참조 [c + + 표준 특성](attributes2.md)합니다.
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
  컴파일러는 사용 되지 않는 식별자 또는 표준의 사용을 발견 하는 경우 [ `[[deprecated]]` ](attributes2.md) 특성에는 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) 경고가 throw 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 함수를 사용되지 않는 것으로 표시하는 방법과 사용되지 않는 함수가 사용되는 경우 컴파일 타임에 표시될 메시지를 지정하는 방법을 보여 줍니다.  
   
 ```  
@@ -56,7 +57,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 클래스를 사용되지 않는 것으로 표시하는 방법과 사용되지 않는 클래스가 사용되는 경우 컴파일 타임에 표시될 메시지를 지정하는 방법을 보여 줍니다.  
   
 ```  

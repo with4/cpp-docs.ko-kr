@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77486fdadaafe9b98e93998b73a4f5eb42f7865b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 03d0054f3c755c3dd6e4bd653c972a0f7aa6735d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueuepriorityqueue-stlclr"></a>priority_queue::priority_queue(STL/CLR)
 컨테이너 어댑터 개체를 만듭니다.  
@@ -107,7 +110,7 @@ template<typename InIt>
   
  정렬 조건자가 있는 빈 래핑된 컨테이너를 만들고 `pred`, 다음의 모든 요소를 푸시합니다 `cont` 시퀀스 더하기 [`first`, `last`). 지정 된 정렬 조건부와 함께 기존 컨테이너를 지정 된 seqeuence는 초기 제어 시퀀스를 지정 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // cliext_priority_queue_construct.cpp   

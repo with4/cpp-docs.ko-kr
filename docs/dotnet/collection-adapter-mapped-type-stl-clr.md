@@ -1,41 +1,42 @@
 ---
-title: "collection_adapter::mapped_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::mapped_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapped_type 멤버[STL/CLR]"
+title: 'collection_adapter:: mapped_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::mapped_type
+dev_langs: C++
+helpviewer_keywords: mapped_type member [STL/CLR]
 ms.assetid: eece6a47-611a-47d4-8dfc-cfbbc4aeb67b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3b3e9f01c99333a292e934535785c695df2b9668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::mapped_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of a dictionary value.  
+# <a name="collectionadaptermappedtype-stlclr"></a>collection_adapter::mapped_type(STL/CLR)
+사전 값의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef Value mapped_type;  
 ```  
   
-## 설명  
- The type is a synonym for the template parameter `Value`, in a specialization for `IDictionary` or `IDictionary<Value>`; otherwise it is not defined.  
+## <a name="remarks"></a>설명  
+ 형식은 템플릿 매개 변수에 대 한 동의어 `Value`에 대 한 특수화에 `IDictionary` 또는 `IDictionary<Value>`; 정의 되지 않은 그렇지 않은 경우.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_collection_adapter_mapped_type.cpp   
@@ -68,12 +69,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/adapter\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/어댑터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::key\_type](../dotnet/collection-adapter-key-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::key_type(STL/CLR)](../dotnet/collection-adapter-key-type-stl-clr.md)

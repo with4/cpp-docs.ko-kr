@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 696765451079301e2a25cc831c34e41802dd33f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b63f6d05415b163e523589756ba2eb67ab2c61a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-clients-using-type-libraries"></a>자동화 클라이언트: 형식 라이브러리 사용
 자동화 클라이언트는 클라이언트에서 서버의 개체를 조작 하는 경우 서버 개체의 속성 및 메서드에 대 한 정보가 있어야 합니다. 속성에는 데이터 형식입니다. 메서드 반환 값을 매개 변수를 허용 합니다. 클라이언트에는 서버 개체 유형에 정적 바인딩하기 위해서는 모든 속성 및 메서드의 데이터 형식에 대 한 정보를 필요 합니다.  

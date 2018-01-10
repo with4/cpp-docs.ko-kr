@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6dd4e24b36811a96e0d09ae58e7573d57065e2fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93585337ae34e7c95d1c11b0a970afc8b36987bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="super"></a>__super
 **Microsoft 전용**  
@@ -45,7 +46,7 @@ member_function
   
  도입으로 [특성](../windows/cpp-attributes-reference.md) 코드를 삽입 하 여 코드 이름 해당 모를 수에 포함 된 메서드를 호출 하려는 하나 이상의 기본 클래스가 포함 될 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // deriv_super.cpp  

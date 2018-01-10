@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45178f653871aea85071aa5df643ebd579f05419
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b844429b0264eea109c1757b192f596a6366d1ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2092"></a>컴파일러 오류 C2092
 '배열 이름' 배열 요소 형식은 함수 일 수 없습니다.  
   
  함수의 배열은 허용 되지 않습니다. 함수 포인터의 배열을 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2092 오류가 생성 됩니다.  
   
 ```  
@@ -35,7 +36,7 @@ typedef void (F) ();
 typedef F AT[10];   // C2092  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  해결 방법:  
   
 ```  

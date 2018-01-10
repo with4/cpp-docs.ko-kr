@@ -1,34 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 1) C4526 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4526"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4526"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4526
+dev_langs: C++
+helpviewer_keywords: C4526
 ms.assetid: 490f8916-5fdc-4cad-b412-76c3382a5976
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a74d7d2e2c745a4c8e29736c1e3a7fc38892d5f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4526
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 정적 멤버 함수가 'virtual function' 가상 함수를 재정의할 수 없습니다. 재정의가 무시되고 가상 함수는 숨겨집니다.  
+# <a name="compiler-warning-level-1-c4526"></a>컴파일러 경고(수준 1) C4526
+'function': 정적 멤버 함수는 가상 함수를 재정의할 수 없습니다 ' 무시 되는 가상 function'override 가상 함수는 숨겨집니다.  
   
- 멤버 함수는 가상이면서 동시에 정적으로 만들 수 없으므로 정적 멤버 함수에서 가상 함수를 재정의하라는 조건을 충족할 수 없습니다.  
+ 정적 멤버 함수는 가상 및 정적 멤버 함수를 사용 하면 가상 함수를 재정의 하는 조건을 충족 합니다.  
   
- 다음 코드에서는 C4526 경고가 발생하는 경우를 보여 줍니다.  
+ 다음 코드에서는 C4526 오류가 생성 됩니다.  
   
 ```  
 // C4526.cpp  
@@ -43,8 +42,8 @@ struct myStruct2: public myStruct1 {
 };  
 ```  
   
- 문제를 해결할 수 있는 방법은 다음과 같습니다.  
+ 다음은 가능한 해결 방법입니다.  
   
--   함수에서 기본 클래스 가상 함수를 재정의하려고 했다면 static 지정자를 제거합니다.  
+-   함수를 기본 클래스 가상 함수를 재정의 하려고, static 지정자를 제거 합니다.  
   
--   함수를 정적 멤버 함수로 만들려고 했다면 이름을 변경하여 기본 클래스 가상 함수와 충돌하지 않도록 합니다.
+-   함수는 정적 멤버 함수 원래, 이름을 기본 클래스 가상 함수와 함께 충돌 하지 않도록 합니다.

@@ -1,32 +1,33 @@
 ---
-title: "size_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.size_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_is attribute"
+title: size_is | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.size_is
+dev_langs: C++
+helpviewer_keywords: size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dfddd72ed6db154868bd058f0e0e3ef9963a255
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# size_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-메모리의 크기에 대 한 크기의 포인터를 할당, 크기의 포인터와 단일\-또는 다차원 배열에 대 한 포인터의 크기를 지정 합니다.  
+# <a name="sizeis"></a>size_is
+메모리의 크기에 대 한 크기의 포인터에 할당 된, 크기의 포인터 및 단일 또는 다차원 배열에 대 한 포인터 크기의 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,35 +36,34 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 매개 변수  
- *expression*  
- 포인터에 대 한 할당 된 메모리의 크기를 조정 합니다.  
+#### <a name="parameters"></a>매개 변수  
+ *식*  
+ 크기의 포인터에 할당 된 메모리의 크기입니다.  
   
-## 설명  
- **Size\_is** C\+\+ 특성을 동일한 기능을가지고 있는  [size\_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **size_is** c + + 특성에 동일한 기능을는 [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL 특성입니다.  
   
-## 예제  
- 예제를 보려면  [first\_is](../windows/first-is.md) 의 배열 부분을 지정 하는 방법에 대 한.  
+## <a name="example"></a>예  
+ 예를 참조 [first_is](../windows/first-is.md) 배열 섹션을 지정 하는 방법의 예입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|필드에 `struct` 또는  **union**, 매개 변수를 인터페이스를 인터페이스 메서드|  
+|**적용 대상**|필드에 `struct` 또는 **union**, 매개 변수 인터페이스, 인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|**max\_is**|  
+|**잘못된 특성**|**max_is**|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [first\_is](../windows/first-is.md)   
- [last\_is](../windows/last-is.md)   
- [max\_is](../windows/max-is.md)   
- [length\_is](../windows/length-is.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [Typedef, Enum, Union 및 Struct 특성](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [매개 변수 특성](../windows/parameter-attributes.md)   
+ [first_is](../windows/first-is.md)   
+ [last_is](../windows/last-is.md)   
+ [max_is](../windows/max-is.md)   
+ [length_is](../windows/length-is.md)   

@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74d8d2197553f9fd2b1f5452236b343424d29148
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f9461c508fe13a2930a39a2632d5a5a80f01c385
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginaccessor"></a>BEGIN_ACCESSOR
 접근자 항목의 시작을 표시 합니다.  
@@ -48,7 +51,7 @@ bAuto
 ## <a name="remarks"></a>설명  
  행 집합에서 여러 접근자가 있는 경우 지정 해야 `BEGIN_ACCESSOR_MAP` 사용 하는 `BEGIN_ACCESSOR` 각 접근자에 대 한 매크로입니다. `BEGIN_ACCESSOR` 매크로는 `END_ACCESSOR` 매크로로 완료됩니다. `BEGIN_ACCESSOR_MAP` 매크로로 완료 됩니다는 `END_ACCESSOR_MAP` 매크로입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  

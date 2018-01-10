@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc2caea6fc67fbbcda7713fcda21c01a5f03d958
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fd68bfc788231ddc954b1f6e8a70d63dbcf02592
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 클래스
 초기화되지 않은 메모리에 결과를 저장하는 알고리즘을 사용할 수 있도록 제공되는 어댑터 클래스입니다.  
@@ -57,7 +58,7 @@ class raw_storage_iterator
 |-|-|  
 |[raw_storage_iterator](#raw_storage_iterator)|지정된 기본 출력 반복기를 사용하여 원시 저장소 반복기를 생성합니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -110,7 +111,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator*();
 ### <a name="remarks"></a>설명  
  원시 저장소 반복기가 충족해야 하는 **ForwardIterator**에 대한 요구 사항은 \* *ii* = *t* 식만 유효해야 한다는 것과 해당 반복기 자체는 **operator** 또는 `operator=`에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이 구현의 구성원 연산자는 [operator=](#op_eq)( **constType**&)이 \* *ptr* = `val`과 같이 식에서 실제 저장을 수행할 수 있도록 **\*this**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // raw_storage_iterator_op_deref.cpp  
@@ -181,7 +182,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
   
  대입 연산자는 placement new 식 **new** ( ( `void` \*)&\* **first**) **Type**( `val`)을 평가하여 저장된 반복기 값을 먼저 사용해 출력 시퀀스에서 다음 개체를 생성합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // raw_storage_iterator_op_assign.cpp  
@@ -251,7 +252,7 @@ raw_storage_iterator<ForwardIterator, Type> operator++(int);
   
  생성자는 출력 반복기 개체로 **first**를 저장합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // raw_storage_iterator_op_incr.cpp  
@@ -294,7 +295,7 @@ explicit raw_storage_iterator(ForwardIterator first);
  `first`  
  생성 중인 `raw_storage_iterator`의 기준으로 사용할 정방향 반복기입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // raw_storage_iterator_ctor.cpp  

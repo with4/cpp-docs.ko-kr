@@ -35,16 +35,17 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1e302fb7003358a75cb0b3022c4264c1e63518e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a911b3a4547be409047004969043943b54bb2480
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++의 텍스트 및 문자열
 국제 시장을 겨냥 한 응용 프로그램을 개발 하는 중요 한 요소에는 로컬 문자 집합의 적절 한 표현입니다. ASCII 문자 집합 0x00-0x7F 범위의 문자를 정의합니다. 주로 유럽 0x00-0x7F 범위 내 문자를 동일 하 게 ASCII 문자 집합을 정의 하 고 또한 확장된 문자 0xff 0x80에서 집합을 정의 하는 다른 문자 집합입니다. 따라서 (SBCS)는 8 비트, 단일 바이트 문자 집합은 ASCII 문자 집합은 물론 많은 유럽 언어에 대 한 문자 집합 표현 하기에 충분 합니다. 그러나 일본어 간지 같은 일부 비 유럽 문자 집합 싱글바이트 코드 구성표로 나타내고 수 때문에 멀티 바이트 문자 집합 (MBCS) 인코딩이 필요 보다 훨씬 더 많은 문자를 포함 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [유니코드 및 MBCS](../text/unicode-and-mbcs.md)  
  유니코드 및 MBCS 프로그래밍에 대 한 Visual c + + 지원에 설명 합니다.  
   

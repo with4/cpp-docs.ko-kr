@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2084
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2084
+f1_keywords: C2084
+dev_langs: C++
+helpviewer_keywords: C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cf9e0888e0f959d77198efe036c0234c985ea365
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: a1fe070ffe0988b22484d3eb162377a8723c72ee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2084"></a>컴파일러 오류 C2084
 함수 '*함수*' 이미 본문이  
@@ -37,7 +33,7 @@ ms.lasthandoff: 10/09/2017
   
 -   `__int32`및 `int` 별도 형식으로 간주 되었습니다. 컴파일러가 이제 처리 `__int32` 동의어로 `int`합니다. 즉, 컴파일러는 함수는 모두에 대해 오버 로드 하는 경우 정의가 여러 개 검색 하는지 `__int32` 및 `int` 오류가 발생 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2084 오류가 생성 됩니다.  
   
 ```cpp  

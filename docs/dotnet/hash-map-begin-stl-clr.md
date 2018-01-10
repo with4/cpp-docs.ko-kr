@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4dc84169f037bc5fd6879c8dfd6edef0f167a249
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1cd1b7dc96e0d2dce90ddfbefd3ba120cfb3ff27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmapbegin-stlclr"></a>hash_map::begin(STL/CLR)
 제어되는 시퀀스의 시작을 지정합니다.  
@@ -33,7 +36,7 @@ iterator begin();
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 되는 시퀀스 또는 빈 시퀀스의 끝 바로 다음의 첫 번째 요소를 지정 하는 양방향 반복기를 반환 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스의 길이가 변경 하는 경우의 상태 제어 된 시퀀스의 시작 부분을 변경할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_map_begin.cpp   

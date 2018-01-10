@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81964c410f01505ef49c75b51ef2629daed2f6ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adb4ba4fdcc141438b2eeb87b4e3c9151bb9a5c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 프로그램 또는 컨트롤 소스 및 헤더 파일
 만들 프로젝트에 대 한 선택 옵션에 따라 Visual Studio에서 MFC 프로젝트를 만들 때에 다음 파일이 생성 됩니다. 프로젝트에 포함 된 예를 들어 *Projname*dlg.cpp 및 *Projname*dlg.h 파일 대화 상자 기반 프로젝트 또는 클래스를 만드는 경우에 합니다.  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/24/2017
 |Childfrm.cpp, Childfrm.h|파생 된 **CChildFrame** 에서 클래스 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)합니다. **CChildFrame** 클래스 MDI 문서 프레임 창에 사용 됩니다. 이러한 파일은 MDI 옵션을 선택 하는 경우에 항상 만들어집니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual c + + 프로젝트용으로 만들어지는 파일 형식](../ide/file-types-created-for-visual-cpp-projects.md)   
+ [Visual C++ 프로젝트용 파일 형식](../ide/file-types-created-for-visual-cpp-projects.md)   
  [ATL 프로그램 또는 컨트롤 소스 및 헤더 파일](../ide/atl-program-or-control-source-and-header-files.md)   
  [CLR 프로젝트](../ide/files-created-for-clr-projects.md)

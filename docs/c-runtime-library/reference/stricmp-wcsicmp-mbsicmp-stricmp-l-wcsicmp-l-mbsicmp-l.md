@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -42,8 +41,7 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -65,36 +63,22 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3502f864ce5450e86acd673d2911ed7f5393e5fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 15b581d0d47da824f1faaade1214d1320e29bb03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 대소문자를 구분하지 않는 문자열 비교를 수행합니다.  
   
 > [!IMPORTANT]
-> Windows 런타임에서 실행되는 응용 프로그램에서는  `_mbsicmp` 및 `_mbsicmp_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbsicmp` 및 `_mbsicmp_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -147,7 +131,7 @@ int _mbsicmp_l(
  오류 발생 시 `_mbsicmp`는 \<string.h> 및 \<mbstring.h>에 정의된 `_NLSCMPERROR`를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- `_stricmp` 함수는 각 문자를 소문자로 변환한 다음 `string1` 및 `string2`를 서수로 비교하여 해당 관계를 나타내는 값을 반환합니다. `_stricmp` 비교에는 대문자와 소문자를 결정하는 `_stricoll`만 적용된다는 점에서 `_stricmp`와 `LC_CTYPE`은 서로 다릅니다. `_stricoll` 함수는 로캘의 `LC_CTYPE` 및 `LC_COLLATE` 범주 둘 다에 따라 문자열을 비교합니다. 여기에는 대소문자 및 데이터 정렬 순서가 모두 포함됩니다. `LC_COLLATE` 범주에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [로캘 범주](../../c-runtime-library/locale-categories.md)를 참조하세요. `_l` 접미사가 없는 이러한 함수의 버전은 로캘 종속 동작에 현재 로캘을 사용합니다. 접미사가 있는 버전은 전달된 로캘을 사용한다는 점만 제외하면 동일합니다. 로캘이 설정되지 않은 경우에는 C 로캘이 사용됩니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_stricmp` 함수는 각 문자를 소문자로 변환한 다음 `string1` 및 `string2`를 서수로 비교하여 해당 관계를 나타내는 값을 반환합니다. `_stricmp` 비교에는 대문자와 소문자를 결정하는 `_stricoll`만 적용된다는 점에서 `_stricmp`와 `LC_CTYPE`은 서로 다릅니다. `_stricoll` 함수는 로캘의 `LC_CTYPE` 및 `LC_COLLATE` 범주 둘 다에 따라 문자열을 비교합니다. 여기에는 대소문자 및 데이터 정렬 순서가 모두 포함됩니다. `LC_COLLATE` 범주에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [로캘 범주](../../c-runtime-library/locale-categories.md)를 참조하세요. `_l` 접미사가 없는 이러한 함수의 버전은 로캘 종속 동작에 현재 로캘을 사용합니다. 접미사가 있는 버전은 전달된 로캘을 사용한다는 점만 제외하면 동일합니다. 로캘이 설정되지 않은 경우에는 C 로캘이 사용됩니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 > [!NOTE]
 >  `_stricmp`는 `_strcmpi`와 같습니다. 이 두 항목은 서로 바꿔 사용할 수 있지만 기본적으로 사용되는 표준은 `_stricmp`입니다.  
@@ -192,7 +176,7 @@ int main() {
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_stricmp`, `_stricmp_l`|\<string.h>|  
 |`_wcsicmp`, `_wcsicmp_l`|\<string.h> 또는 \<wchar.h>|  
@@ -200,7 +184,7 @@ int main() {
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_stricmp.c  

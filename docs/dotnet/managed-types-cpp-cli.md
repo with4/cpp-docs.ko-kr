@@ -18,16 +18,19 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b32cc69cfa9758ac13d54326e2c6ff6574f237be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1329cb6dd799d44d7810de22479638a105a8538f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managed-types-ccli"></a>관리되는 형식(C++/CLI)
 Visual c + +에는 공용 언어 런타임의 기능에 대 한 지원을 제공 하 고 장점 및 런타임 제한 될 수 있는 관리 되는 형식 기능을 통해.NET 기능에 액세스할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [관리 되는 형식 및 main 함수](../dotnet/managed-types-and-the-main-function-cpp-cli.md)  
   

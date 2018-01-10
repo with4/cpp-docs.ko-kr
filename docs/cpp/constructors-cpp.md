@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ece3414dbc7f4d362fa7dcc6f060e408b50e54e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 57854ec15d3104d80e8dbba68ebc33937222172f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructors-c"></a>생성자 (C++)
 생성자는 해당 클래스의 인스턴스를 초기화하는 일종의 멤버 함수입니다. 생성자는 클래스와 같은 이름을 사용하며 반환 값이 없습니다. 생성자는 원하는 수의 매개 변수를 사용할 수 있으며 클래스는 원하는 수의 오버로드된 생성자를 사용할 수 있습니다. 생성자에는 접근성, public, protected 또는 private이 있을 수 있습니다. 생성자를 정의하지 않는 경우 컴파일러는 매개 변수를 사용하지 않는 기본 생성자를 생성합니다. 기본 생성자를 삭제된 것으로 선언하여 이 동작을 재정의할 수 있습니다.  
@@ -613,7 +611,7 @@ class Derived : T {
   
  컴파일러에서 생성되는 복사 생성자는 새 개체를 설정하고 복사할 개체의 콘텐츠에 대해 멤버 방식으로 복사를 수행합니다. 기본 클래스 또는 멤버 생성자가 있으면 호출되고, 그렇지 않으면 비트 복사가 수행됩니다.  
   
- 경우 클래스의 모든 기본 및 멤버 클래스 `type` 허용 하는 복사 생성자는 **const** 형식의 단일 인수를 허용 하는 컴파일러 생성 복사 생성자 인수 **const** `type` **&**. 컴파일러 생성 복사 생성자가 형식의 단일 인수를 허용 하는 그렇지 않은 경우 `type` ** & **합니다.  
+ 경우 클래스의 모든 기본 및 멤버 클래스 `type` 허용 하는 복사 생성자는 **const** 형식의 단일 인수를 허용 하는 컴파일러 생성 복사 생성자 인수 **const** `type` **&**. 컴파일러 생성 복사 생성자가 형식의 단일 인수를 허용 하는 그렇지 않은 경우 `type`  **&** 합니다.  
   
  초기화 하는 생성자를 사용할 수는 **const** 또는 `volatile` 개체가 아니라 생성자 자체으로 선언할 수 없습니다 **const** 또는 `volatile`합니다. 생성자에 대 한 유일한 저장소 클래스는 **인라인**; 다른 저장소 클래스 한정자를 사용 하 여 포함 하는 `__declspec` 키워드를 생성자를 사용 하면 컴파일러 오류가 발생 합니다.  
   
@@ -699,4 +697,3 @@ int main()
   
  `Base::Base`는 가상 함수인 `f` 함수를 호출합니다. 일반적으로 `Derived::f` 개체가 `d` 형식이기 때문에 `Derived`가 호출됩니다. `Base::Base` 함수가 생성자이므로 개체는 아직 `Derived` 형식이 아니며, `Base::f`가 호출됩니다.  
   
-

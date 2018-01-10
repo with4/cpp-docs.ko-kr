@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae7a414f08a0bc40ab39c3835084a4456e02b685
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1bb6b9a9a1a3fbdeb3c8efc572c81cdef7876957
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmapoperatorstlclr"></a>hash_map::operator(STL/CLR)
 키를 연결 된 매핑된 값에 매핑합니다.  
@@ -37,7 +40,7 @@ mapped_type operator[](key_type key);
 ## <a name="remarks"></a>설명  
  멤버 함수는 해당 하는 순서를 가진 요소를 찾으려고 노력 `key`합니다. 연결된 된 매핑된 값 반환, 발견 되 면 삽입, `value_type(key, mapped_type())` 하 고 연결 된 반환 (기본값) 매핑된 값입니다. 사용 하 여 것는 관련 된 키를 지정 된 매핑된 값을 조회 하거나 없는 경우 키에 대 한 항목이 있는지 확인 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_map_operator_sub.cpp   

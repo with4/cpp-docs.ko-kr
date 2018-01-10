@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a0b4380feebf5e2e3875dc8e21c3f3cbb1894050
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23083cdeab16cfc48e2bc14fd7ca96e85022e0e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimapempty-stlclr"></a>multimap::empty(STL/CLR)
 요소가 있는지 여부를 테스트합니다.  
@@ -33,7 +36,7 @@ bool empty();
 ## <a name="remarks"></a>설명  
  멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [multimap:: size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`합니다. Multimap이 비어 있는지 여부를 테스트 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_multimap_empty.cpp   

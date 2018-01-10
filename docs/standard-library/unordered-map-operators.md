@@ -9,17 +9,15 @@ ms.topic: article
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 9825a0073355700edbe1906e8b2cad4535085bf4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 연산자
 |||||  
@@ -46,7 +44,7 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 ### <a name="remarks"></a>설명  
  unordered_map 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_map은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // unordered_map_op_ne.cpp  
@@ -107,7 +105,7 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 ### <a name="remarks"></a>설명  
  unordered_map 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_map은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // unordered_map_op_eq.cpp  
@@ -168,7 +166,7 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 ### <a name="remarks"></a>설명  
  unordered_multimap 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multimap은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 두 unordered_multimap은 같지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // unordered_multimap_op_ne.cpp  
@@ -230,7 +228,7 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 ### <a name="remarks"></a>설명  
  unordered_multimap 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multimap은 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // unordered_multimap_op_eq.cpp  
@@ -274,7 +272,6 @@ int main( )
   
 ## <a name="see-also"></a>참고 항목  
  [<unordered_map>](../standard-library/unordered-map.md)
-
 
 
 

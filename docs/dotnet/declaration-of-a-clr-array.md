@@ -1,58 +1,60 @@
 ---
 title: "CLR 배열 선언 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array 키워드[C++]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: array keyword [C++]
 ms.assetid: 36a8883c-2663-43f0-a90c-28f27035e036
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3f263227d437ddafb65ac3da0829414e4af05855
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CLR 배열 선언
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]에서는 관리되는 배열을 선언, 인스턴스화 및 초기화하는 구문이 Managed Extensions for C\+\+와 다르게 변경되었습니다.  
+# <a name="declaration-of-a-clr-array"></a>CLR 배열 선언
+선언 구문은 인스턴스화하고 관리 되는 배열 초기화에서 변경 되었습니다 Managed Extensions for c + + Visual c + +.  
   
- Managed Extensions에서 CLR 배열 개체를 선언하려면 아래 예제와 같이 표준 배열 선언을 확장하여 `__gc` 키워드를 배열 개체의 이름과 쉼표로 채워진 차원 사이에 배치해야 했습니다.  
+ Managed extensions에서 CLR 배열 개체의 선언 된는 표준 배열 선언의 확장 된 `__gc` 배열 개체의 이름 및 그 다음 쌍에서와 같이 쉼표로 채워진 차원 사이 키워드 배치 되었습니다 예제:  
   
 ```  
 void PrintValues( Object* myArr __gc[]);  
 void PrintValues( int myArr __gc[,,]);  
 ```  
   
- 새 구문에서는 이러한 방식이 간소화되어 STL `vector` 선언과 비슷한 템플릿 스타일의 선언을 사용합니다.  첫 번째 매개 변수는 요소 형식을 나타냅니다.  두 번째 매개 변수는 배열 차원을 지정합니다. 기본값은 1이므로 두 번째 인수는 다중 차원에만 사용하면 됩니다.  배열 개체 자체는 추적 핸들이므로 캐럿을 사용해야 합니다.  요소 형식도 참조 형식인 경우에는 요소 형식에도 캐럿을 사용해야 합니다.  예를 들어, 위 예제를 새 구문으로 표현하면 다음과 같습니다.  
+ 이러한 방식이 c + + 표준 라이브러리 비슷한 템플릿 선언을 사용할 수 있는 새 구문에서 간소화 되어 `vector` 선언 합니다. 첫 번째 매개 변수 요소 형식을 나타냅니다. 두 번째 매개 변수는 배열 차원 지정 (기본 값 1의 여러 차원에만 필요 두 번째 인수). Array 개체 자체는 추적 핸들 및 하므로 해야 캐럿을 사용 합니다. 요소 형식은 참조 형식 이기도 한 경우에 hat도 필요 합니다. 예를 들어 위의 예제에서는 새 구문에서 표시 될 때 모양은 다음과 같습니다.  
   
 ```  
 void PrintValues( array<Object^>^ myArr );  
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
- 참조 형식은 개체가 아닌 추적 핸들이므로 함수의 반환 형식으로 CLR 배열을 지정할 수 있습니다. 반면 네이티브 배열을 함수의 반환 형식으로 지정할 수는 없습니다. Managed Extensions에서 이 작업을 수행하기 위한 구문은 다소 직관적이지 못했습니다.  예를 들면 다음과 같습니다.  
+ 되기 때문에 참조 형식은 개체가 아니라 추적 핸들을 함수 반환 형식으로 CLR 배열을 지정할 수 있습니다. (반대로 네이티브 배열을 함수 반환 형식으로 지정할 수 있습니다.) Managed extensions에서이 작업을 수행 하는 구문은 약간 비 직관적 했습니다. 예:  
   
 ```  
 Int32 f() [];  
 int GetArray() __gc[];  
 ```  
   
- [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]에서는 훨씬 간단하게 선언할 수 있습니다.  예를 들면 다음과 같습니다.  
+ Visual c + +에서는 declaration은 훨씬 더 간단 합니다. 예를 들어 개체에 적용된  
   
 ```  
 array<Int32>^ f();  
 array<int>^ GetArray();  
 ```  
   
- 관리되는 지역 배열을 간단하게 줄여서 초기화하는 방법은 두 버전의 언어에서 모두 지원됩니다.  예를 들면 다음과 같습니다.  
+ 로컬 관리 되는 배열의 줄임 초기화 언어의 두 버전에서 지원 됩니다. 예:  
   
 ```  
 int GetArray() __gc[] {  
@@ -64,7 +66,7 @@ int GetArray() __gc[] {
 }  
 ```  
   
- 위 코드는 새 구문에서 훨씬 더 간단하게 줄일 수 있습니다. 새 구문에서는 boxing이 암시적이므로 `__box` 연산자가 사용되지 않습니다. 자세한 내용은 [값 형식 및 동작\(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)을 참조하십시오.  
+ 새 구문 크게 간소화 됩니다 (새 구문에서 암시적 boxing 이므로 유의 `__box` 연산자가 제거 되어-참조 [값 형식 및 해당 동작 (C + + /cli CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md) 토론에 대 한):  
   
 ```  
 array<int>^ GetArray() {  
@@ -74,21 +76,21 @@ array<int>^ GetArray() {
 }  
 ```  
   
- 배열은 CLR 참조 형식이므로 각 배열 개체의 선언은 추적 핸들입니다.  따라서 배열 개체는 CLR 힙에 할당해야 합니다. 간략한 표기법에서는 관리되는 힙 할당이 숨겨집니다. 다음은 Managed Extensions에서 배열 개체를 명시적으로 초기화하는 구문입니다.  
+ 배열 CLR 참조 형식을 이기 때문에 각 배열 개체의 선언에는 추적 핸들입니다. 따라서 배열 개체는 CLR 힙으로부터에 할당 해야 합니다. (관리 되는 힙 할당 줄임 표기를 숨깁니다.) 명시적 형식의 Managed extensions 배열 개체 초기화는 다음과 같습니다.  
   
 ```  
 Object* myArray[] = new Object*[2];  
 String* myMat[,] = new String*[4,4];  
 ```  
   
- 새 구문에서는 `new` 식이 `gcnew`로 대체되었습니다.  차원 크기는 다음과 같이 `gcnew` 식에 매개 변수로 전달됩니다.  
+ 새 구문에서 `new` 식으로 대체 됩니다 `gcnew`합니다. 차원 크기를 매개 변수로 전달 되는 `gcnew` 다음과 같이 식:  
   
 ```  
 array<Object^>^ myArray = gcnew array<Object^>(2);  
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- 새 구문에서는 `gcnew` 식 다음에 명시적 초기화 목록을 사용할 수 있지만, Managed Extensions에서는 이러한 방식이 지원되지 않습니다.  예를 들면 다음과 같습니다.  
+ 새 구문에서 명시적 초기화 목록을 따를 수는 `gcnew` 식; Managed extensions에서이 지원 되지 않습니다. 예:  
   
 ```  
 // explicit initialization list following gcnew   
@@ -97,6 +99,6 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## 참고 항목  
- [관리되는 형식\(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [관리 되는 형식 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)   
+ [배열](../windows/arrays-cpp-component-extensions.md)

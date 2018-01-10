@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d84314d20ea00e880981e418c2b5b11008f74229
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 344e76f5d146e6bc715619bce7e68c80ffda211f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3480"></a>컴파일러 오류 C3480
 'var': 람다 캡처 변수는 바깥쪽 함수 범위에 속해야 합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 -   람다 식의 캡처 목록에서 변수를 제거합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `global` 변수가 바깥쪽 함수 범위에 속하지 않으므로 다음 예제에서는 C3480을 생성합니다.  
   
 ```  
@@ -43,7 +44,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 람다 식의 캡처 목록에서 `global` 변수를 제거하여 C3480을 해결합니다.  
   
 ```  

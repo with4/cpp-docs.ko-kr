@@ -1,36 +1,37 @@
 ---
-title: "_InterlockedAddLargeStatistic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedAddLargeStatistic"
-  - "_InterlockedAddLargeStatistic_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_InterlockedAddLargeStatistic 내장 함수"
-  - "InterlockedAddLargeStatistic 내장 함수"
+title: _InterlockedAddLargeStatistic | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedAddLargeStatistic
+- _InterlockedAddLargeStatistic_cpp
+dev_langs: C++
+helpviewer_keywords:
+- _InterlockedAddLargeStatistic intrinsic
+- InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1d9e61abc6ac531fe489465b1d81e167bdde5242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# _InterlockedAddLargeStatistic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 **Microsoft 전용**  
   
- 64 비트 값의 첫 번째 피연산자는 연동된 추가 수행 합니다.  
+ 첫 번째 피연산자의 64 비트 값에 연관된 추가 수행 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 long _InterlockedAddLargeStatistic(  
@@ -39,31 +40,31 @@ long _InterlockedAddLargeStatistic(
 );  
 ```  
   
-#### 매개 변수  
- \[in, out\]`Addend`  
- 작업을 추가 하려면 첫 번째 피연산자에 대 한 포인터입니다.  가리키는 값 추가의 결과로 대체 됩니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in, out] `Addend`  
+ 추가 작업의 첫 번째 피연산자에 대 한 포인터입니다. 가리키는 값 수의 결과로 대체 됩니다.  
   
- \[in\] `Value`  
+ [in] `Value`  
  두 번째 피연산자입니다. 첫 번째 피연산자에 추가할 값입니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  두 번째 피연산자의 값입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`_InterlockedAddLargeStatistic`|x86|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 별도 두 잠긴된 지침으로 구현 되기 때문에 내장 원자 아닙니다.  다른 스레드에서 내장이 실행 중에 발생 하는 원자 64 비트 읽기 읽고에 일관성 없는 값을 발생할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 별도 두 잠긴된 지침으로 구현 되기 때문에 내장 함수는 원자성 되지 않습니다. 다른 스레드에서 실행 중에 발생이 내장 함수는 원자성 64 비트 읽기 읽혀질는 일관 되지 않은 값 될 수 있습니다.  
   
- 이 함수는 읽기\-쓰기 장벽으로 동작합니다.  자세한 내용은  [\_ReadWriteBarrier](../intrinsics/readwritebarrier.md).  
+ 이 함수는 읽기 / 쓰기 장벽으로 작동합니다. 자세한 내용은 참조 [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)합니다.  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)   
  [x86 컴파일러와 충돌](../build/conflicts-with-the-x86-compiler.md)

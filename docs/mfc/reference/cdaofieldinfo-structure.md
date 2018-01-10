@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c673f82b452abc87b7eb79811ccec81ac424403
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 구조체
 `CDaoFieldInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 field 개체에 대 한 정보를 포함 합니다.  
@@ -91,10 +92,10 @@ struct CDaoFieldInfo
 |**dbByte**|1|Byte|  
 |**dbInteger**|2|정수|  
 |**dbLong**|4|Long|  
-|**dbCurrency**|9|통화 ([COleCurrency](../../mfc/reference/colecurrency-class.md))|  
+|**dbCurrency**|8|통화 ([COleCurrency](../../mfc/reference/colecurrency-class.md))|  
 |**dbSingle**|4|Single|  
-|**dbDouble**|9|Double|  
-|**dbDate**|9|날짜/시간 ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
+|**dbDouble**|8|Double|  
+|**dbDate**|8|날짜/시간 ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
 |**dbText**|1 - 255|텍스트 ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
 |**dbLongBinary**|0|긴 이진 (OLE 개체입니다. [CByteArray](../../mfc/reference/cbytearray-class.md); 대신 사용 하 여 `CLongBinary`)|  
 |**dbMemo**|0|메모 ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  

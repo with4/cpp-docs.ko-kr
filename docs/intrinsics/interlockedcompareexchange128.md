@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 62810da5c0f90006fd6024f973d12eb0bc4d29e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cbf4e29e02670b4532a4be82864cf3cf040df73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 **Microsoft 전용**  
@@ -79,7 +80,7 @@ unsigned char _InterlockedCompareExchange128(
   
  이 루틴은 내장 함수로 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예에서는 `_InterlockedCompareExchange128` 두 개의 64 비트 정수 배열의 높은 단어는 고가 및 저가 단어의 합으로 컨트롤러를 바꾸려면 낮은 단어 증가 합니다. BigInt.Int 배열에 대 한 액세스가 원자성을 하지만이 예제에서는 단일 스레드를 사용 하 고 단순성에 대 한 잠금을 무시 합니다.  
   
 ```  

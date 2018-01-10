@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_PROPSET_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROPSET_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROPSET_MAP 매크로"
+title: BEGIN_PROPSET_MAP | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROPSET_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROPSET_MAP macro
 ms.assetid: c3a30618-6025-4d49-8688-a171294d2e93
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 24fe8ed41888ab2b3d303a29cd9d004f26b6c6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_PROPSET_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marks the beginning of the property set map entries.  
+# <a name="beginpropsetmap"></a>BEGIN_PROPSET_MAP
+표시 된 속성의 시작 부분 맵 항목을 설정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -36,26 +37,26 @@ Class
   
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *클래스*  
- \[in\] The class in which this property set is specified.  A property set can be specified in the following OLE DB objects:  
+ [in] 이 속성 집합이 지정 된 클래스입니다. 다음 OLE DB 개체의 속성 집합을 지정할 수 있습니다.  
   
--   [\<caps:sentence id\="tgt4" sentenceid\="75bbb794f21139fcd243c18fff6050d2" class\="tgtSentence"\>Data Source Objects\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
+-   [데이터 원본 개체](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
   
--   [\<caps:sentence id\="tgt5" sentenceid\="e423b0fba10fc83bd76e01e3eee2fd69" class\="tgtSentence"\>Session Objects\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
+-   [세션 개체](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
   
--   [\<caps:sentence id\="tgt6" sentenceid\="5f6bc08c46cee6f21bfcdd08aff6e8aa" class\="tgtSentence"\>명령\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
+-   [명령](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
   
-## 예제  
- Here is a sample property set map:  
+## <a name="example"></a>예  
+ 샘플 속성 집합 맵에 다음과 같습니다.  
   
- [!CODE [NVC_OLEDB_Provider#3](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Provider#3)]  
+ [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
- [OLE DB 공급자 템플릿에 대한 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+## <a name="see-also"></a>참고 항목  
+ [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)   
  [OLE DB 공급자 만들기](../../data/oledb/creating-an-ole-db-provider.md)

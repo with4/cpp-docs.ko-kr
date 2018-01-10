@@ -15,18 +15,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a2fec9194858127ca08ecc0a891a81a91de48fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f5b9713a665b97738178ef1ec488cf71017b5a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2027"></a>컴파일러 오류 C2027
 정의 되지 않은 'type' 형식을 사용 하 여  
   
  형식 정의 될 때까지 사용할 수 없습니다. 이 오류를 해결 하려면 참조 하기 전에 형식을 완전히 정의 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2027 오류가 발생 합니다.  
   
 ```  
@@ -47,7 +48,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  선언 되지만 정의 되지 않은 형식에 대 한 포인터를 선언 하는 것이 불가능 합니다.  하지만 Visual c + + 정의 되지 않은 형식에 대 한 참조를 허용 하지 않습니다.  
   
  다음 샘플에서는 C2027 오류가 발생 합니다.  

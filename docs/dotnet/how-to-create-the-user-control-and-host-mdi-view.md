@@ -16,11 +16,14 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 298a08689d6c4aa69d4a52af5fad965e3e353b5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>방법: 사용자 정의 컨트롤 및 호스트 MDI 뷰 만들기
 다음 단계에는.NET Framework 사용자 정의 컨트롤을 만들고, 컨트롤 클래스 라이브러리 (특히, Windows 컨트롤 라이브러리 프로젝트의 경우)에서 사용자 정의 컨트롤을 작성 한 다음 프로젝트를 어셈블리로 컴파일합니다 방법을 보여 줍니다. 컨트롤에서 파생 된 클래스를 사용 하 여 MFC 응용 프로그램에서 사용 될 수 [CView 클래스](../mfc/reference/cview-class.md) 및 [CWinFormsView 클래스](../mfc/reference/cwinformsview-class.md)합니다.  

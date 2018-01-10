@@ -1,34 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 4) C4626 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4626"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4626"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4626
+dev_langs: C++
+helpviewer_keywords: C4626
 ms.assetid: 7f822ff4-a4a3-4f17-b45b-e8b7b4659a14
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9d7f0206125a9f210db860cee95fc47c49413a89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 4) C4626
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4626"></a>컴파일러 경고(수준 4) C4626
 'derived class' : 기본 클래스의 할당 연산자에 액세스할 수 없거나 이러한 연산자가 삭제되었으므로 할당 연산자가 암시적으로 삭제된 것으로 정의됩니다.  
   
- 할당 연산자가 삭제되었거나 기본 클래스에서 액세스할 수 없으므로 파생 클래스에 대해 생성되지 않았습니다.  이 형식의 개체를 할당하려고 하면 컴파일러 오류가 발생합니다.  
+ 할당 연산자가 삭제되었거나 기본 클래스에서 액세스할 수 없으므로 파생 클래스에 대해 생성되지 않았습니다. 이 형식의 개체를 할당하려고 하면 컴파일러 오류가 발생합니다.  
   
- 기본적으로 이 경고는 해제되어 있습니다.  자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md)를 참조하세요.  
+ 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 를 참조하세요.  
   
  다음 샘플에서는 C4626 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   

@@ -1,36 +1,38 @@
 ---
 title: "IDBPropertiesImpl 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBPropertiesImpl"
-  - "ATL.IDBPropertiesImpl"
-  - "ATL.IDBPropertiesImpl<T>"
-  - "ATL::IDBPropertiesImpl<T>"
-  - "ATL::IDBPropertiesImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDBPropertiesImpl 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBPropertiesImpl
+- ATL.IDBPropertiesImpl
+- ATL.IDBPropertiesImpl<T>
+- ATL::IDBPropertiesImpl<T>
+- ATL::IDBPropertiesImpl
+dev_langs: C++
+helpviewer_keywords: IDBPropertiesImpl class
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 47034968c4e8e336b348565208d1a9ffed551d15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# IDBPropertiesImpl 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Provides an implementation for the `IDBProperties` interface.  
+# <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 클래스
+에 대 한 구현을 제공는 `IDBProperties` 인터페이스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <class T>   
@@ -38,26 +40,26 @@ class ATL_NO_VTABLE IDBPropertiesImpl
    : public IDBProperties, public CUtlProps<T>  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- Your class, derived from `IDBPropertiesImpl`.  
+ 파생 된 클래스에 `IDBPropertiesImpl`합니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Interface Methods  
+### <a name="interface-methods"></a>인터페이스 메서드  
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)|Returns the values of properties in the Data Source, Data Source Information, and Initialization property groups that are currently set on the data source object or the values of properties in the Initialization property group that are currently set on the enumerator.|  
-|[GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)|Returns information about all properties supported by the provider.|  
-|[SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)|Sets properties in the Data Source and Initialization property groups, for data source objects, or the Initialization property group, for enumerators.|  
+|[GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)|데이터 원본 개체 또는에 현재 설정 된 Initialization 속성 그룹에서 속성의 값에 대해 현재 설정 되어 있는 데이터 원본, 데이터 원본 정보 및 초기화 속성 그룹에서 속성의 값을 반환 합니다.는 열거자입니다.|  
+|[GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)|공급자가 지 원하는 모든 속성에 대 한 정보를 반환 합니다.|  
+|[SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)|열거자에 대 한 데이터 원본 개체에 대 한 데이터 원본 및 초기화 속성 그룹 또는 Initialization 속성 그룹의 속성을 설정 합니다.|  
   
-## 설명  
- [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx) is a mandatory interface for data source objects and an optional interface for enumerators.  However, if an enumerator exposes [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx), it must expose `IDBProperties`.  `IDBPropertiesImpl` implements `IDBProperties` by using a static function defined by [BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md).  
+## <a name="remarks"></a>설명  
+ [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx) 데이터 원본 개체에 대 한 필수 인터페이스 이며 열거자에 대 한 선택적 인터페이스입니다. 그러나는 열거자를 노출 하는 경우 [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx)를 노출 해야 `IDBProperties`합니다. `IDBPropertiesImpl`구현 `IDBProperties` 정의 된 정적 함수를 사용 하 여 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

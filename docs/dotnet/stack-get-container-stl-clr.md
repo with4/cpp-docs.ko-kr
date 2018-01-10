@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f6b0d984559c82fb283bfb563c3309936ede9b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 721cd51a268a487e9fe18f988e98bfcf5e9d714b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stackgetcontainer-stlclr"></a>stack::get_container(STL/CLR)
 기본 컨테이너에 액세스합니다.  
@@ -33,7 +36,7 @@ container_type^ get_container();
 ## <a name="remarks"></a>설명  
  멤버 함수는 기본 컨테이너에 대 한 핸들을 반환합니다. 컨테이너 래퍼가 설정 된 제한을 사용 하지 않으려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_stack_get_container.cpp   

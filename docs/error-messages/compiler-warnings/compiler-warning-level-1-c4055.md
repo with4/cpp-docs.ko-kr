@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>컴파일러 경고(수준 1) C4055  
   
 'conversion': 'type1' 데이터 포인터에서 'type2' 함수 포인터로 캐스팅되었습니다.  

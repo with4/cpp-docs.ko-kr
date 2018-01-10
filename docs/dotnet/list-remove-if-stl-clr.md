@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0707efbf12782336d74d6e0012146cc1b2b4a01b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 39cdd5fe6f7bf143b6e46b8fcde1a34f919be191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listremoveif-stlclr"></a>list::remove_if(STL/CLR)
 지정 된 테스트를 통과 하는 요소를 제거 합니다.  
@@ -38,7 +41,7 @@ template<typename Pred1>
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 된 시퀀스 (지우기로 적용)에서 제거 모든 요소가 `X` 를 `pred(X)` 그렇습니다. 함수 또는 대리자도 지정 하는 조건을 만족 하는 모든 요소를 제거 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_list_remove_if.cpp   

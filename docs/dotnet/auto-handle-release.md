@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f010429904df409b1514dc811d160182f2291227
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 99268be928fe7b5018a36520e517a2f1b7eca5af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autohandlerelease"></a>auto_handle::release
 개체를 해제 `auto_handle` 관리 합니다.  
@@ -37,7 +40,7 @@ _element_type ^ release();
 ## <a name="return-value"></a>반환 값  
  출시 된 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // msl_auto_handle_release.cpp  

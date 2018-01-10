@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90edebe8e57e6720ad1cb7a83b59f478532c16c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL에서의 취소
 이 문서에서는 PPL(병렬 패턴 라이브러리)에서 취소의 역할, 병렬 작업을 취소하는 방법 및 병렬 작업이 취소될 경우를 확인하는 방법에 대해 설명합니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
 
 -   취소 토큰을 사용 하는 경우 사용 된 [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) 취소를 시작 하는 메서드 및 [concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) 에 응답 하는 함수 취소 합니다. 사용 하 여는 [is_canceled](reference/cancellation-token-class.md#is_canceled) 다른 작업에서 취소를 요청 하는지 여부를 검사 하도록 합니다.
   
--   취소는 즉시 일어나지 않습니다. 작업 또는 작업 그룹이 취소되면 새 작업이 시작되지 않지만 활성 작업에서는 취소가 있는지 확인하고 취소에 응답해야 합니다.  
+-   취소는 즉시 발생하지 않습니다. 작업 또는 작업 그룹이 취소되면 새 작업이 시작되지 않지만 활성 작업에서는 취소가 있는지 확인하고 취소에 응답해야 합니다.  
   
 -   값 기반 연속은 선행 작업의 취소 토큰을 상속합니다. 작업 기반 연속은 선행 작업의 취소 토큰을 상속하지 않습니다.  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/24/2017
  병렬 작업을 취소 하는 더 많은 예제를 참조 하십시오. [연습:를 사용 하 여 작업 연결 및 XML HTTP 요청](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [하는 방법: 병렬 루프에서 중단에 취소를 사용 하 여](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), 및 [하는 방법: 사용 예외 처리를 중단 병렬 루프에서](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)합니다.  
   
 ###  <a name="tokens"></a>병렬 작업을 취소할 취소 토큰을 사용 하 여  
- `task`, `task_group` 및 `structured_task_group` 클래스는 취소 토큰을 사용하는 방법으로 취소 기능을 지원합니다. PPL이 정의 [concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) 및 [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) 이 용도 대 한 클래스입니다. 취소 토큰을 사용하여 작업을 취소하면 런타임에서 해당 토큰을 구독하는 새 작업을 시작하지 않습니다. 이미 활성화 되어 있는 작업 [is_canceled] צ ְ ײ ((... /.. / parallel/concrt/reference/cancellation-token-class.md#is_canceled) 멤버 함수는 취소 토큰을 모니터링 하 고 수 있는 경우 중지 합니다.  
+ `task`, `task_group` 및 `structured_task_group` 클래스는 취소 토큰을 사용하는 방법으로 취소 기능을 지원합니다. PPL이 정의 [concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) 및 [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) 이 용도 대 한 클래스입니다. 취소 토큰을 사용하여 작업을 취소하면 런타임에서 해당 토큰을 구독하는 새 작업을 시작하지 않습니다. 활성화 된 작업은 이미 사용할 수는 [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) 멤버 함수는 취소 토큰을 모니터링 하 고 수 있는 경우 중지 합니다.  
   
 
  취소를 시작 하려면 호출는 [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) 메서드. 다음 방법으로 취소에 응답합니다.  
