@@ -4,26 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a604c95bb21ad0098a3d4563738971791fc94a07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 594ec49242e919f1ea9bd059588b21292af55409
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transfers-of-control"></a>컨트롤 전송
 사용할 수 있습니다는 `goto` 문 또는 **대/소문자** 이라는 레이블이 `switch` 이니셜라이저 지난 분기 하는 프로그램을 지정 하는 문입니다. 이 같은 코드는 이니셜라이저를 포함한 선언이 점프 명령문이 있는 블록이 둘러싼 블록에 없는 경우 올바르지 않습니다.  
@@ -64,4 +62,3 @@ int main()
   
  개체 `total` 및 `ch`역할을 하는 블록에 선언 된는 *문을* 의 `while` 문을 사용 하 여 해당 블록을 종료할 때 삭제 됩니다는 `break` 문.  
   
-

@@ -1,43 +1,43 @@
 ---
 title: "ASSERT 대신 VERIFY 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "assert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ASSERT 문"
-  - "어설션, 디버깅"
-  - "어설션, ASSERT 문 문제 해결"
-  - "디버깅[MFC], ASSERT 문"
-  - "디버깅 어설션"
-  - "VERIFY 매크로"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: assert
+dev_langs: C++
+helpviewer_keywords:
+- ASSERT statements
+- debugging [MFC], ASSERT statements
+- VERIFY macro
+- assertions, troubleshooting ASSERT statements
+- debugging assertions
+- assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffe046a281bbbbefc251b48df55ecd275515e60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ASSERT 대신 VERIFY 사용
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-MFC 응용 프로그램의 디버그 버전을 실행할 때는 아무런 문제가 없지만,  동일한 응용 프로그램의 릴리스 버전에서는 충돌이 발생하거나, 올바르지 않은 결과가 반환되거나, 그 밖의 다른 비정상적인 동작이 나타날 수 있습니다.  
+# <a name="using-verify-instead-of-assert"></a>ASSERT 대신 VERIFY 사용
+MFC 응용 프로그램의 디버그 버전을 실행 하면 문제가 없는지를 가정 합니다. 그러나 동일한 응용 프로그램의 릴리스 버전 충돌, 잘못 된 결과 반환 및/또는 일부 다른 비정상적인 동작을 수행 합니다.  
   
- 이런 문제는 중요한 코드가 올바르게 실행되는지 확인하기 위해 해당 코드를 ASSERT 문에 포함시키는 경우에 발생할 수 있습니다.  MFC 응용 프로그램의 릴리스 빌드에서는 ASSERT 문이 주석 처리되기 때문에 해당 코드가 릴리스 빌드에서 실행되지 않습니다.  
+ 이 문제는 제대로 실행 되는지 확인 하는 ASSERT 문이에 중요 한 코드를 배치할 때 발생할 수 있습니다. ASSERT 문을 MFC 프로그램의 릴리스 빌드에 주석 때문에 릴리스 빌드에서 코드가 실행 되지 않습니다.  
   
- 따라서 함수 호출의 성공 여부를 확인하기 위해 ASSERT를 사용 중인 경우에는 대신 [VERIFY](../Topic/VERIFY.md)를 사용하는 것이 좋습니다.  VERIFY 매크로는 응용 프로그램의 디버그 빌드와 릴리스 빌드 모두에서 자체의 인수를 계산합니다.  
+ ASSERT 함수 호출에 성공 했는지 확인 하려면를 사용 하는 경우를 사용해 [확인](../../mfc/reference/diagnostic-services.md#verify) 대신 합니다. VERIFY 매크로 모두 디버그에서 자신의 인수를 평가 하 고 응용 프로그램의 릴리스 빌드를 합니다.  
   
- 그 밖의 좋은 방법은 함수의 반환 값을 임시 변수에 할당한 다음 ASSERT 문에서 해당 변수를 테스트하는 것입니다.  
+ 다른 좋은 방법은 함수의 반환 값을 임시 변수에 할당 한 다음 ASSERT 문에서 변수를 테스트 합니다.  
   
- 다음 코드 부분을 검사하십시오.  
+ 다음 코드 조각에 없는지 확인 합니다.  
   
 ```  
 enum {  
@@ -49,15 +49,15 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
- 이 코드는 MFC 응용 프로그램의 디버그 버전에서 완벽하게 실행됩니다.  `calloc( )`에 대한 호출이 실패하는 경우 해당 파일 및 줄 번호를 포함하는 진단 메시지가 나타납니다.  하지만 MFC 응용 프로그램의 정식 빌드 버전에서는 다음과 같은 동작이 일어납니다.  
+ 이 코드는 MFC 응용 프로그램의 디버그 버전에서 완벽 하 게 실행 됩니다. 경우에 대 한 호출 `calloc( )` 실패 하면 파일 및 줄 번호를 포함 하는 진단 메시지가 나타납니다. 그러나 일반 정품 빌드에서 MFC 응용 프로그램의:  
   
--   `calloc( )`에 대한 호출이 발생하지 않으며, `buf`는 초기화되지 않은 상태로 남아 있습니다.  
+-   에 대 한 호출 `calloc( )` 발생 하지 않으며, 두면 `buf` 초기화 되지 않음, 또는  
   
--   `strcpy_s( )`에서는 "`Hello, World`"를 메모리의 임의 부분에 복사합니다. 이 때 응용 프로그램에 충돌이 일어나거나 시스템의 작동이 중단될 수 있습니다.  
+-   `strcpy_s( )`복사본 "`Hello, World`" 메모리, 가능한 응용 프로그램 충돌 또는 시스템 응답 하지 않고을 임의 부분에 또는  
   
--   또는 `free()`로 아직 할당되지 않은 메모리를 비우려고 시도합니다.  
+-   `free()`할당 되지 않은 메모리를 해제 하려고 합니다.  
   
- ASSERT를 올바르게 사용하려면 코드 샘플이 다음과 같이 변경되어야 합니다.  
+ ASSERT를 올바르게 사용 하려면 다음과 코드 예제를 변경 해야 합니다.  
   
 ```  
 enum {  
@@ -70,7 +70,7 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
- 또는 VERIFY를 대신 사용할 수 있습니다.  
+ 또는 확인을 대신 사용할 수 있습니다.  
   
 ```  
 enum {  
@@ -82,5 +82,5 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [릴리스 빌드 문제 해결](../../build/reference/fixing-release-build-problems.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6dc816dfa46e905dc8e9d0badb5fc54b53cbf043
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ea081d3868c1226638d01be9505eb9d0e01ed10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplearray-class"></a>CSimpleArray 클래스
 이 클래스는 1 차원 배열의 관리를 위한 메서드를 제공 합니다.  
@@ -89,7 +90,7 @@ class CSimpleArray
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpcoll.h  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CSimpleArray::Add  
@@ -106,7 +107,7 @@ BOOL Add(const T& t);
 ### <a name="return-value"></a>반환 값  
  경우 성공적으로 추가 되는 배열에 FALSE 그렇지 않으면 TRUE를 반환 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
 ##  <a name="csimplearray"></a>CSimpleArray::CSimpleArray  
@@ -148,7 +149,7 @@ int Find(const T& t) const;
 ### <a name="return-value"></a>반환 값  
  요소가 없는 경우에 찾은 요소의 또는-1의 인덱스를 반환 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
 ##  <a name="getdata"></a>CSimpleArray::GetData  
@@ -185,7 +186,7 @@ T& operator[](int nindex);
 ### <a name="return-value"></a>반환 값  
  참조 하는 배열의 요소를 반환 `nIndex`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
   
 ##  <a name="operator_eq"></a>CSimpleArray::operator =  
@@ -207,7 +208,7 @@ CSimpleArray<T, TEqual>
 ### <a name="remarks"></a>설명  
  요소를 모두 복사는 `CSimpleArray` 개체에서 참조 *src* 현재 배열 개체에 모든 기존 데이터를 바꿉니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
 ##  <a name="remove"></a>CSimpleArray::Remove  

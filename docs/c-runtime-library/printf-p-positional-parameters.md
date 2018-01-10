@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83b3630addfe94c438be21ca2470ade01193a997
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 10d48a899b2d2e6ad644c385c2b2116353c20f8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printfp-positional-parameters"></a>printf_p 위치 매개 변수
 위치 매개 변수를 사용하면 형식 문자열의 필드로 대체되는 인수의 기준 숫자를 지정할 수 있습니다. 다음 위치 매개 변수 `printf` 함수를 사용할 수 있습니다.  
@@ -72,7 +73,7 @@ _printf_p("%2$s %1$s", "November", "10");
 10 November  
 ```  
   
-기존의 형식 문자열과 달리, 위치 매개 변수는 한 형식 문자열에 두 번 이상 사용될 수 있습니다. 예를 들면 다음과 같습니다.  
+기존의 형식 문자열과 달리, 위치 매개 변수는 한 형식 문자열에 두 번 이상 사용될 수 있습니다. 예를 들어 개체에 적용된  
   
 ```C  
 _printf_p("%1$d times %1$d is %2$d", 10, 100);  
@@ -87,7 +88,7 @@ _printf_p("%1$d times %1$d is %2$d", 10, 100);
 모든 인수를 형식 문자열에서 한 번 이상 사용해야 합니다. 형식 문자열에 허용되는 위치 매개 변수의 최대 수는 `_ARGMAX`로 지정합니다.  
   
 ### <a name="width-and-precision"></a>너비 및 전체 자릿수  
-`*n$`를 사용하여 위치 매개 변수를 너비 또는 전체 자릿수로 지정할 수 있습니다. 여기서 `n`은 매개 변수 목록에서 너비 또는 전체 자릿수 매개 변수의 위치입니다. 너비 또는 전체 자릿수 값의 위치는 \* 기호 바로 다음에 나와야 합니다. 예를 들면 다음과 같습니다.  
+`*n$`를 사용하여 위치 매개 변수를 너비 또는 전체 자릿수로 지정할 수 있습니다. 여기서 `n`은 매개 변수 목록에서 너비 또는 전체 자릿수 매개 변수의 위치입니다. 너비 또는 전체 자릿수 값의 위치는 \* 기호 바로 다음에 나와야 합니다. 예를 들어 개체에 적용된  
   
 ```C  
 _printf_p("%1$*2$s","Hello", 10);  
@@ -102,7 +103,7 @@ _printf_p("%2$*1$s", 10, "Hello");
 ### <a name="mixing-positional-and-non-positional-arguments"></a>위치 인수 및 비위치 인수 혼합  
 위치 매개 변수는 동일한 형식 문자열에서 비 위치 매개 변수와 함께 혼합할 수 없습니다. 위치 형식이 사용되는 경우 모든 형식 지정자는 위치 서식을 사용해야 합니다. 그러나 `printf_p` 및 관련 함수는 비 위치 매개 변수를 포함하는 형식 문자열에서 계속해서 비 위치 매개 변수를 지합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C  
 // positional_args.c  

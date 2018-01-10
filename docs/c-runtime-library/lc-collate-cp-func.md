@@ -25,11 +25,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36eed0a5592b41dd4f9f57c1f2f6c395d0bb784a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe7ff6ce073f84a87e2243ab98d3b99af0dfd22c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lccollatecpfunc"></a>___lc_collate_cp_func
 내부 CRT 함수입니다. 스레드의 현재 데이터 정렬 코드 페이지를 검색합니다.  
@@ -50,7 +51,7 @@ UINT ___lc_codepage_func(void);
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`___lc_collate_cp_func`|crt\src\setlocal.h|  
   

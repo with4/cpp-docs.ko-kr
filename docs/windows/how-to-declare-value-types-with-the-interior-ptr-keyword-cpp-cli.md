@@ -1,40 +1,42 @@
 ---
-title: "How to: Declare Value Types with the interior_ptr Keyword (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ptr keyword"
-  - "value types, declaring"
+title: "방법: interior_ptr 키워드를 값 형식 선언 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- _ptr keyword
+- value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4b42cbbbc175b3d48baa7b7b2e1c1a5b0e4cbf15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Declare Value Types with the interior_ptr Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`interior_ptr` 는 값 형식을 사용할 수 있습니다.  
+# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>방법: interior_ptr 키워드를 사용하여 값 형식 선언(C++/CLI)
+`interior_ptr`은 값 형식에 사용할 수 있습니다.  
   
 > [!IMPORTANT]
->  이 언어 기능은   **\/clr**  컴파일러 옵션을 지원하지만  **\/ZW**  컴파일러 옵션은 지원하지 않습니다.  
+>  이 언어 기능으로 사용할 수는 **/clr** 컴파일러 옵션을 하지만 하지는 **/ZW** 컴파일러 옵션입니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
-### 설명  
- 다음 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] 예제는 값 형식과  `interior_ptr` 의 사용하는 방법을 보여줍니다.  
+### <a name="description"></a>설명  
+ 다음 C + + /cli CLI 샘플에서는 사용 하는 방법을 보여 줍니다.는 `interior_ptr` 값 형식을 사용 합니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // interior_ptr_value_types.cpp  
@@ -64,7 +66,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>출력  
   
 ```  
 1  
@@ -75,14 +77,14 @@ int main() {
 3  
 ```  
   
-## 예제  
+## <a name="example"></a>예  
   
-### 설명  
- 값 형식에는  `this`  포인터를 가져와 interior\_ptr로 계산합니다.  
+### <a name="description"></a>설명  
+ 값 형식에서 `this` 포인터는 interior_ptr로 계산됩니다.  
   
- `V`  값 형식의 비정적 멤버 함수 본문에서,  `this` 는 함수를 호출 하는 개체의 주소 값을 갖는   `interior_ptr<V>`  형식의 표현입니다.  
+ `V` 값 형식의 비정적 멤버 함수 본문에서 `this`는 함수를 호출하는 개체의 주소 값을 갖는 `interior_ptr<V>` 형식의 표현입니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // interior_ptr_value_types_this.cpp  
@@ -96,14 +98,14 @@ value struct V {
 };  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- 다음 샘플에 정적 멤버를 사용하여 주소 연산자를 사용하는 방법을 보여줍니다.  
+### <a name="description"></a>설명  
+ 다음 샘플은 정적 멤버에 주소 연산자를 사용하는 방법을 보여 줍니다.  
   
- Visual C\+\+ 형식의 정적 멤버의 주소는 네이티브 포인터를 생성합니다.  정적 값 형식 멤버의 주소는 값 형식 멤버 런타임 힙에 할당되고 가비지 수집기에서 이동할 수 있기 때문에 관리되는 포인터입니다.  
+ 정적 Visual C++ 형식 멤버의 주소는 네이티브 포인터를 생성합니다.  정적 값 형식 멤버의 주소는 값 형식 멤버가 런타임 힙에 할당되고 가비지 수집기에서 이동할 수 있기 때문에 관리되는 포인터입니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // interior_ptr_value_static.cpp  
@@ -129,7 +131,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>출력  
   
 ```  
 22  
@@ -137,5 +139,5 @@ int main() {
 hello  
 ```  
   
-## 참고 항목  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>참고 항목  
+ [interior_ptr(C++/CLI)](../windows/interior-ptr-cpp-cli.md)

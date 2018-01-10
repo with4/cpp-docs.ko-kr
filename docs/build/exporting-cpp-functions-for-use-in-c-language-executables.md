@@ -1,60 +1,61 @@
 ---
-title: "C++ 함수를 C 언어 실행 파일에서 사용할 수 있도록 내보내기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL 내보내기[C++], C 실행 파일의 C++ 함수"
-  - "함수 내보내기[C++], C 실행 파일의 C++ 함수"
-  - "함수[C++], C 실행 파일의 C++ 함수"
-  - "함수[C++], 내보내기"
+title: "C 언어 실행 파일에서 사용 하기 위해 c + + 함수를 내보내는 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], C++ functions in C executables
+- exporting DLLs [C++], C++ functions in C executables
+- exporting functions [C++], C++ functions in C executables
+- functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0511ae4c16332b2a8e98c2319e148249b66c8461
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# C++ 함수를 C 언어 실행 파일에서 사용할 수 있도록 내보내기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-DLL에 포함된 C\+\+로 작성된 함수를 C 언어 모듈에서 액세스하려는 경우에는 C\+\+ 링크 대신 C 링크를 사용하여 해당 함수를 선언해야 합니다.  별도로 지정되지 않은 경우, C\+\+ 컴파일러는 C에서는 호출하기 어려울 수 있는 C\+\+의 형식 안전 명명 규칙\(이름 데코레이션이라고도 함\)과 호출 규칙을 사용합니다.  
+# <a name="exporting-c-functions-for-use-in-c-language-executables"></a>C++ 함수를 C 언어 실행 파일에서 사용할 수 있도록 내보내기  
   
- C 링크를 지정하려면 함수 선언에 대해 **extern** "**C**"를 지정합니다.  예를 들면 다음과 같습니다.  
+C 언어 모듈에서 액세스 하려면, c + + 링크 하는 대신 C 링크가 있는 이러한 함수를 선언 해야 c + +로 작성 된 DLL에 함수를 포함 하는 경우. C + + 컴파일러 다르게 지정 되지 않은 경우 형식이 안전한 명명 규칙 (이름 데코레이션이 라고도 함)를 c + + 및 c + + 호출 규칙 3. 호출 하기 어려울 수 있는 사용  
+  
+C 링크를 지정 하려면 지정 `extern "C"` 함수 선언에 대 한 합니다. 예:  
   
 ```  
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);  
 ```  
   
-## 수행할 작업  
+## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   
--   [.def 파일을 사용하여 DLL에서 내보내기](../build/exporting-from-a-dll-using-def-files.md)  
+-   [.Def 파일을 사용 하 여 DLL에서 내보내기](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [\_\_declspec\(dllexport\)을 사용하여 DLL에서 내보내기](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [__Declspec (dllexport)를 사용 하 여 DLL에서 내보내기](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [AFX\_EXT\_CLASS를 사용하여 내보내기 및 가져오기](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [AFX_EXT_CLASS를 사용 하 여 가져오기 및 내보내기](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [C 함수를 C 또는 C\+\+ 언어 실행 파일에서 사용할 수 있도록 내보내기](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [C 또는 c + + 언어 실행 파일에서 사용 하기 위해 내보내기 C 함수](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
 -   [사용할 내보내기 방법 결정](../build/determining-which-exporting-method-to-use.md)  
   
--   [\_\_declspec\(dllimport\)을 사용하여 응용 프로그램으로 가져오기](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [__Declspec (dllimport)을 사용 하 여 응용 프로그램으로 가져오기](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [DLL 초기화](../build/initializing-a-dll.md)  
+-   [DLL 초기화](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>추가 정보  
   
 -   [데코레이팅된 이름](../build/reference/decorated-names.md)  
   
--   [링크 사양](http://msdn.microsoft.com/ko-kr/d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)  
+-   [extern을 사용하여 링크 지정](../cpp/using-extern-to-specify-linkage.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DLL에서 내보내기](../build/exporting-from-a-dll.md)

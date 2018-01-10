@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 00194acd1aa72db73f75a2cb5aa5700df02be0a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60f0c14382190cb724c4e4a84488006c54813558
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-c-command-line-processing"></a>C 명령줄 처리 사용자 지정
 프로그램에서 명령줄 인수를 사용하지 않는 경우 명령줄 처리를 수행하는 라이브러리 루틴의 사용을 억제하여 약간의 공간을 절약할 수 있습니다. 이 루틴을 **_setargv**(또는 와이드 문자 환경에서는 **_wsetargv**)라고 합니다([와일드카드 인수 확장명](../c-language/expanding-wildcard-arguments.md) 참조). 이 루틴의 사용을 억제하려면 **main** 함수를 포함하는 파일에서 아무 작업도 수행하지 않는 루틴을 정의하고 **_setargv**(또는 와이드 문자 환경에서는 **_wsetargv**)라는 이름을 지정합니다. **_setargv** 또는 **_wsetargv**를 호출하면 정의한 **_setargv** 또는 **_wsetargv**가 실행되며 라이브러리 버전이 로드되지 않습니다.  

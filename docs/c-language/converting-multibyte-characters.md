@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a7eccca8949a724538d9c92d790d2dced48e2e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 051f419c37ef8a769f10b97620d2a0b1e0b475d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-multibyte-characters"></a>멀티바이트 문자 변환
 **ANSI 3.1.3.4** 멀티바이트 문자를 와이드 문자 상수에 대한 해당 와이드 문자(코드)로 변환하는 데 사용되는 현재 로캘  

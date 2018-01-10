@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44c2ed7962ab3be94af435eda6114688f9260d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83e75df963889730e4514c38d0551af241a788fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>링커의 지연 로드된 DLL 지원
 이제 Visual c + + 링커는 Dll의 지연된 로드를 지원합니다. 이 방식으로 제공 절약 Windows SDK 함수를 사용할 필요가 **LoadLibrary** 및 **GetProcAddress** DLL 지연 로드를 구현 하 합니다.  

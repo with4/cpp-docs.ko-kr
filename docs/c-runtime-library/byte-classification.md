@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 129e549b4151d913cf0ad026faff967d30f87e44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8465a467ddfe799c64ee89ff30bd3c1f969aa07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="byte-classification"></a>바이트 분류
 이러한 각 루틴은 지정된 바이트의 멀티바이트 문자가 조건을 충족하는지 테스트합니다. 별도로 지정된 경우를 제외하고 출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="multibyte-character-byte-classification-routines"></a>멀티바이트 문자의 바이트 분류 루틴  
   
-|루틴|바이트 테스트 조건|  
+|루틴에서 반환된 값|바이트 테스트 조건|  
 |-------------|-------------------------|  
 |[isleadbyte, _isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|선행 바이트입니다. 테스트 결과는 현재 로캘의 `LC_CTYPE` 범주 설정에 따라 달라집니다.|  
 |[_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum &#124;&#124; _ismbbkalnum`|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
 |[_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|문장 부호 이외에 ASCII가 아닌 텍스트 기호. 예를 들어 코드 페이지 932에 한해 `_ismbbkalnum`은 가타카나 영숫자를 테스트합니다.|  
 |[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|가타카나(0xA1-0xDF), 코드 페이지 932만|  
 |[_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|ASCII가 아닌 텍스트 또는 ASCII가 아닌 문장 부호 기호. 예를 들어 코드 페이지 932에 한해 `_ismbbkprint`는 가타카나 영숫자 또는 가타카나 문장 부호를 테스트합니다(범위: 0xA1 – 0xDF).|  
-|[_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|ASCII가 아닌 문장 부호. 예를 들어 코드 페이지 932에 한해 `_ismbbkpunct`는 가타카나 문장 부호를 테스트합니다.|  
+|[_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|ASCII가 아닌 문장 부호. 예를 들어 코드 페이지 932에 한해 `_ismbbkpunct` 는 가타카나 문장 부호를 테스트합니다.|  
 |[_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|멀티바이트 문자의 첫 번째 바이트. 예를 들어 코드 페이지 932에 한해 유효한 범위는 0x81 ~ 0x9F, 0xE0 ~ 0xFC입니다.|  
 |[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint &#124;&#124; _ismbbkprint. ismbbprint`에는 공백 문자(0x20)가 포함됩니다.|  
 |[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|`ispunct &#124;&#124; _ismbbkpunct`|  

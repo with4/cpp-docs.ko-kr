@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1846d2177cea18d8bbfbeb3ba6a7994fa3a9d191
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23cdff4d0e2eb213a98b2e90d7df41af226edd86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="abstract-classes-c"></a>추상 클래스 (C++)
 추상 클래스는 보다 구체적인 클래스가 파생될 수 있는 일반 개념의 식 역할을 합니다. 추상 클래스 형식의 개체를 만들 수는 없지만, 추상 클래스 형식에 대한 포인터와 참조를 사용할 수 있습니다.  

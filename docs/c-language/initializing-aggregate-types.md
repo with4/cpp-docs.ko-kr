@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a50d9624c617904144ba9173a5e7fa0ce2064508
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8656d1c9f5f08e8736ee83705ea2daf9031c2446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-aggregate-types"></a>집합체 형식 초기화
 "집합체" 형식은 구조체, 공용 구조체 또는 배열 형식입니다. 집합체 형식은 집합체 형식 멤버를 포함하며 초기화 규칙이 재귀적으로 적용됩니다.  

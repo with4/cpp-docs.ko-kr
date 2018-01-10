@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1fda4b8a6c530d494640d486227d3bdda25ea728
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51587ea864faa11372fc07fd4e1e0b1d7333aaaf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementation-defined-behavior"></a>구현 정의 동작
 ANSI X3.159-1989, *American National Standard for Information Systems* - *프로그래밍 언어* - *C*에는 "이식성 문제"라는 섹션이 포함되어 있습니다. 이 ANSI 섹션에는 ANSI에서 각각의 특정 구현에 열어 놓은 C 언어의 영역이 나열되어 있습니다. 이 단원에서는 Microsoft C에서 이러한 구현 시 정의되는 C 언어의 영역을 처리하는 방식을 설명합니다.  

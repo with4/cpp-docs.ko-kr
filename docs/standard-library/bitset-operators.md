@@ -12,10 +12,9 @@ f1_keywords:
 - bitset/std::operator&lt;&lt;
 - bitset/std::operator^
 - bitset/std::operator|
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -23,12 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 연산자
 ||||  
@@ -57,7 +56,7 @@ operator&(
 ### <a name="return-value"></a>반환 값  
  요소가 `left` 및 `right`의 해당 요소에 대한 `AND` 연산을 수행한 결과인 bitset입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_and.cpp  
@@ -106,9 +105,9 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>설명  
  템플릿 함수는 **operator<<**를 오버로드하여, bitset을 먼저 문자열로 변환하지 않고 기록할 수 있게 합니다. 템플릿 함수는 다음을 효과적으로 실행합니다.  
   
- **ostr** << _ *Right*. [to_string](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
+ **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_insert.cpp  
@@ -163,7 +162,7 @@ _Istr,
  템플릿 함수는 `_Istr` 문자열을 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 템플릿 함수는 **operator>>**를 오버로드하여 bitset( `str`) 값을 bitset _ *Right*에 저장합니다. 여기서 `str`은 `_Istr`에서 추출된 [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** 형식의 개체입니다.  
+ 템플릿 함수는 **operator>>**를 오버로드하여 bitset( `str`) 값을 bitset _ *Right*에 저장합니다. 여기서 `str`은 `_Istr`에서 추출된 [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** 형식의 개체입니다.  
   
  템플릿 함수는 `_Istr`에서 요소를 추출하여 다음이 발생할 때까지 bitset에 삽입합니다.  
   
@@ -173,7 +172,7 @@ _Istr,
   
 -   0 또는 1이 아닌 입력 요소가 발견될 때까지  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <bitset>  
@@ -243,7 +242,7 @@ operator^(
 ### <a name="return-value"></a>반환 값  
  요소가 `left` 및 `right`의 해당 요소에 대한 `EXCLUSIVE-OR` 연산을 수행한 결과인 bitset입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_xor.cpp  
@@ -292,7 +291,7 @@ operator|(
 ### <a name="return-value"></a>반환 값  
  요소가 `left` 및 `right`의 해당 요소에 대한 `OR` 연산을 수행한 결과인 bitset입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_or.cpp  
@@ -322,5 +321,4 @@ bitset 3: 0111
   
 ## <a name="see-also"></a>참고 항목  
  [\<bitset>](../standard-library/bitset.md)
-
 

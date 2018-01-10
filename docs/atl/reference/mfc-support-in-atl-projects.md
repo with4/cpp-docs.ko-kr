@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0217c62ff207ad706dbcb1cd172e878c2b96daee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 399f9fcea216adf5480bf38b8aba051c60eed496
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-support-in-atl-projects"></a>ATL 프로젝트에 대 한 MFC 지원
 선택 하는 경우 **MFC 지원** ATL 프로젝트 마법사에서 프로젝트는 응용 프로그램을 MFC 응용 프로그램 개체 (클래스)로 선언 합니다. 프로젝트 MFC 라이브러리를 초기화 하 고 클래스를 인스턴스화하며 (클래스 *ProjName*)에서 파생 된 [CWinApp](../../mfc/reference/cwinapp-class.md)합니다.  

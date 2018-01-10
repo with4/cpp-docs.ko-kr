@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7050def4c0350e4bdbba3baf348fe5b971e0b20a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba5024590a0682f8d65c7d21ca2cb15d2f481b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 표준 라이브러리의 함수 개체
 *함수 개체*또는 *함수*는 operator()를 구현하는 형식입니다. 이 연산자는 *호출 연산자* 또는 경우에 따라 *응용 프로그램 연산자*라고 합니다. C++ 표준 라이브러리는 기본적으로 함수 개체를 컨테이너의 정렬 기준 및 알고리즘에서 사용합니다.  
@@ -50,15 +33,17 @@ ms.lasthandoff: 04/04/2017
 ## <a name="creating-a-function-object"></a>함수 개체 만들기  
  함수 개체를 만들려면 다음과 같이 형식을 만들고 operator()를 구현합니다.  
   
+```
 class Functor  
-   {  
-   public:  
-   int operator()(int a, int b)  
-   {  
-   return a <b;  
-   }  
-   };  
-  
+{  
+public:  
+    int operator()(int a, int b)  
+    {  
+        return a < b;  
+    }  
+};  
+```
+
  `main` 함수의 마지막 줄은 함수 개체를 호출하는 방법을 보여 줍니다. 이 호출은 함수 호출처럼 보이지만 실제로 Functor 형식의 operator()를 호출하고 있습니다. 함수 개체 호출과 함수의 이러한 유사성은 함수 개체라는 용어가 나타난 방식입니다.  
   
 ## <a name="function-objects-and-containers"></a>함수 개체 및 컨테이너  
@@ -88,5 +73,4 @@ ForwardIterator remove_if(
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 

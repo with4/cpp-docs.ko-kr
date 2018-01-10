@@ -1,46 +1,29 @@
 ---
-title: "nested_scheduler_missing_detach 클래스 | Microsoft 문서"
+title: "nested_scheduler_missing_detach 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - nested_scheduler_missing_detach
 - CONCRT/concurrency::nested_scheduler_missing_detach
 - CONCRT/concurrency::nested_scheduler_missing_detach::nested_scheduler_missing_detach
-dev_langs:
-- C++
-helpviewer_keywords:
-- nested_scheduler_missing_detach class
+dev_langs: C++
+helpviewer_keywords: nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7ab8dc3761c6f11529b70ec4d71bbaebdfea0493
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5a499467962c8393cc8fe64136fea422a85ef8aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach 클래스
 이 클래스는 동시성 런타임에서 `Scheduler` 개체의 `Attach` 메서드를 사용하여 두 번째 스케줄러에 연결된 컨텍스트에 대해 `CurrentScheduler::Detach` 메서드를 호출하지 않은 것을 감지하는 경우 발생하는 예외를 설명합니다.  
@@ -60,7 +43,7 @@ class nested_scheduler_missing_detach : public std::exception;
 |[nested_scheduler_missing_detach](#ctor)|오버로드됨. `nested_scheduler_missing_detach` 개체를 생성합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 예외는 다른 스케줄러에서 이미 소유하고 있거나 다른 스케줄러에 연결된 컨텍스트에서 `Attach` 개체의 `Scheduler` 메서드를 호출함으로써 다른 컨텍스트 내에 한 스케줄러를 중첩할 때만 throw됩니다. 동시성 런타임 시나리오 문제를 찾기 위해 발견 하면 선택적이 예외를 throw 합니다. 호출을 무시 하는 모든 인스턴스가 `CurrentScheduler::Detach` 메서드는 항상이 예외를 throw 합니다.  
+ 이 예외는 다른 스케줄러에서 이미 소유하고 있거나 다른 스케줄러에 연결된 컨텍스트에서 `Attach` 개체의 `Scheduler` 메서드를 호출함으로써 다른 컨텍스트 내에 한 스케줄러를 중첩할 때만 throw됩니다. 동시성 런타임 문제에 도움이 되는 시나리오를 검색할 수 있는 경우 선택적이 예외를 throw 합니다. 호출을 무시 하는 모든 인스턴스가 `CurrentScheduler::Detach` 메서드는 항상이 예외를 throw 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
@@ -89,4 +72,3 @@ nested_scheduler_missing_detach() throw();
 ## <a name="see-also"></a>참고 항목  
  [Namespace 동시성](concurrency-namespace.md)   
  [Scheduler 클래스](scheduler-class.md)
-

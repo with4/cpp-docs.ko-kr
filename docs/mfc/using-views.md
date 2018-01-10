@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 633bd52b64ba6c4c507867320585b8bc513e80c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99493657313d480559d232bf9033dfb7a7a585c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-views"></a>뷰 사용
 뷰는 사용자에 게 문서의 데이터를 그래픽으로 표시 하를 수락 하 고 문서에 대 한 작업으로 사용자 입력 해석 합니다. 뷰 클래스를 작성할에서 작업에는 것입니다.  

@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f9014233631eda9d1f3576382e71e377a3f7fcfd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f436a3661f027ba1026a60982cb18b48a2c48cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbtree-class"></a>CRBTree 클래스
 이 클래스를 만들고 빨간색 검정 트리를 활용 하는 메서드를 제공 합니다.  
@@ -183,7 +184,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
  `key`  
  키를 수신 하는 변수입니다.  
   
- *value*  
+ *값*  
  값을 받는 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -269,7 +270,7 @@ void GetNextAssoc(
  `key`  
  템플릿 매개 변수를 트리의 키의 형식을 지정 합니다.  
   
- *value*  
+ *값*  
  템플릿 매개 변수를 트리의 값의 형식을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -415,7 +416,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
  `pos`  
  와 같은 메서드에 대 한 이전 호출에서 반환 하는 위치 카운터 [CRBTree::GetHeadPosition](#getheadposition) 또는 [CRBTree::FindFirstKeyAfter](#findfirstkeyafter)합니다.  
   
- *value*  
+ *값*  
  에 추가할 값의 `CRBTree` 개체입니다.  
   
 ### <a name="remarks"></a>설명  

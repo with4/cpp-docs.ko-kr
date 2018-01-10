@@ -16,28 +16,29 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 678f5cef343157378f159157906888af517dc74a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60ae6b7f496f86bde91801e486315587fb693436
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-a-parallelfor-loop"></a>방법: parallel_for 루프 작성
 사용 하는 방법을 보여 주는이 예제 [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) 두 행렬의 곱을 계산 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제와 `matrix_multiply` 함수는 두 개의 사각형 매트릭스의 곱을 계산 합니다.  
   
  [!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_1.cpp)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제와 `parallel_matrix_multiply` 함수를 사용 하는 `parallel_for` 외부 루프를 병렬로 수행 하는 알고리즘이 있습니다.  
   
  [!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_2.cpp)]  
   
  이 예제에서는 병렬 처리에 대 한 오버 헤드를 활용할 수 있는 충분 한 작업을 수행 하기 때문에만 외부 루프를 병렬로 실행 합니다. 내부 루프를 평행 화 하면 받지 못합니다 향상 된 성능이 약간 내부 루프를 수행 하는 작업의 병렬 처리에 대 한 오버 헤드 보다 크지 않습니다 때문에 합니다. 따라서 외부 루프만 병렬 처리하는 것이 대부분의 시스템에서 동시성의 이점을 극대화하는 가장 좋은 방법입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 자세한 예제의 성능을 비교는 `matrix_multiply` 함수와 `parallel_matrix_multiply` 함수입니다.  
   
  [!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_3.cpp)]  

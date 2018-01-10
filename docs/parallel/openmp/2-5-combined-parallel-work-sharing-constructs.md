@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8bacf3ebdf975c1065242b7f88e110c3b6c9c5c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 423524c407f829200684e55130df4472e70cbe5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 결합된 병렬 작업 공유 구문
 결합 된 병렬 작업 공유 생성자는 하나의 작업 공유 생성자를 포함 하는 병렬 영역의 지정 하기 위한 바로 가기 키입니다. 이러한 지시문의 의미 체계는 동일 합니다 명시적으로 지정 하는 **병렬** 지시문 뒤에 단일 작업 공유 구문입니다.  

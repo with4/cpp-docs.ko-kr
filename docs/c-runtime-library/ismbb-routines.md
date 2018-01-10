@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f326ec0ed43463d0d2ca15103c77bb914a11592
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad7e454af3ff8923d60315cd74d48daf9bd665a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbb-routines"></a>_ismbb 루틴
 현재 로캘 또는 지정된 LC_CTYPE 변환 상태 범주를 사용하여 지정된 정수 값 `c` 를 특정 조건에 대해 테스트합니다.  
@@ -46,14 +47,14 @@ ms.lasthandoff: 10/24/2017
 |[_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|  
 |[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `_ismbb` 패밀리의 모든 루틴은 지정된 정수 값 `c` 를 특정 조건에 대해 테스트합니다. 테스트 결과는 적용되는 멀티바이트 코드 페이지에 따라 다릅니다. 기본적으로 멀티바이트 코드 페이지는 프로그램 시작 시 운영 체제에서 가져온 ANSI 코드 페이지로 설정됩니다. [_getmbcp](../c-runtime-library/reference/getmbcp.md)를 사용하여 사용 중인 멀티바이트 코드 페이지를 쿼리하거나 [_setmbcp](../c-runtime-library/reference/setmbcp.md)를 사용하여 변경합니다.  
   
  출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용하고 **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다.  
   
  `_ismbb` 패밀리의 루틴은 지정된 정수 `c` 를 다음과 같이 테스트합니다.  
   
-|루틴|바이트 테스트 조건|  
+|루틴에서 반환된 값|바이트 테스트 조건|  
 |-------------|-------------------------|  
 |[_ismbbalnum](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum` &#124;&#124; `_ismbbkalnum`.|  
 |[_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md)|`isalpha` &#124;&#124; `_ismbbkalnum`.|  

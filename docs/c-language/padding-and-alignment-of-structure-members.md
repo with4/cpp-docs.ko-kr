@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c3a87f1277abb9d5cf3b9d87c6713104ba8e108
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd8dc389f4a4140b78a78753f7f5a91168bd984
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>구조체 멤버 채우기 및 맞춤
 **ANSI 3.5.2.1** 구조체 멤버의 채우기 및 맞춤과 비트 필드가 저장소 단위 경계에 걸쳐 있을 수 있는지 여부  

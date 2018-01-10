@@ -15,11 +15,12 @@ caps.latest.revision: "58"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e89416c18fce65f19ff63c73ef441ee0bdb6165
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bef9205fd583dd66a0f3cfe791ff95a861435c0
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 난수 생성을 위한 기능을 정의하여 균등하게 분포된 난수를 생성할 수 있도록 합니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
 -   대부분의 응용 프로그램의 경우 가장 유용한 연결은 이 문서 뒷부분의 [코드 예제](#code)에 나와 있는 `uniform_int_distribution`을 사용하는 `mt19937` 엔진입니다.  
   
- `<random>`에서 선택할 수 있는 여러 옵션이 있으며 오래된 C 런타임 함수 `rand()`보다는 이 중 하나를 사용하는 것이 좋습니다. `rand()`의 문제와 `<random>`에서 이러한 문제를 해결하는 방법에 대한 자세한 내용은 [이 비디오](http://go.microsoft.com/fwlink/?LinkId=397615)를 참조하세요.  
+ `<random>`에서 선택할 수 있는 여러 옵션이 있으며 오래된 C 런타임 함수 `rand()`보다는 이 중 하나를 사용하는 것이 좋습니다. `rand()`의 문제와 `<random>`에서 이러한 문제를 해결하는 방법에 대한 자세한 내용은 [이 비디오](http://go.microsoft.com/fwlink/p/?linkid=397615)를 참조하세요.  
   
 ##  <a name="code"></a> 예제  
  다음 코드 예제에서는 명확하지 않은 시드로 만든 생성기를 사용하여 난수 몇 개(여기서는 5개)를 생성하는 방법을 보여 줍니다.  
@@ -250,13 +251,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 - `mt19937_64` 64비트 메르센 트위스터 엔진입니다(Matsumoto 및 Nishimura, 2000).   
  `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`  
   
-- `ranlux24` 24비트 RANLUX 엔진입니다(Martin Lüscher 및 Fred James, 1994).   
+- `ranlux24`24 비트 RANLUX 엔진 (Martin Lüscher 및 Fred James, 1994).   
  `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`  
   
 - `ranlux24_base` `ranlux24`에 대한 기준으로 사용됩니다.   
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
-- `ranlux48` 48비트 RANLUX 엔진입니다(Martin Lüscher 및 Fred James, 1994).   
+- `ranlux48`48 비트 RANLUX 엔진 (Martin Lüscher 및 Fred James, 1994).   
  `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`  
   
 - `ranlux48_base` `ranlux48`에 대한 기준으로 사용됩니다.   
@@ -451,7 +452,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  <sup>* 알려진 시드와 함께 제공되는 경우</sup>  
   
- ISO C++ 표준에서는 `random_device`를 암호로 보호하도록 요구하지 않지만 Visual Studio에서 이 URNG는 암호로 보호되도록 구현되었습니다. "암호로 보호"라는 용어는 보증을 암시하지는 않지만 지정된 불규칙화 알고리즘이 제공하는 최소 수준의 엔트로피, 즉 예측성 수준을 나타냅니다. 자세한 내용은 Wikipedia 문서 [암호로 의사 난수 생성기 보](http://go.microsoft.com/fwlink/LinkId=398017)를 참조하세요. ISO C++ 표준에서는 암호로 보호를 요구하지 않기 때문에 다른 플랫폼이 `random_device`를 암호로 보호되지 않은 단일 의사 난수 생성기로 구현할 수 있어 다른 생성기에서는 시드 소스로만 적절할 수 있습니다. 플랫폼 간 코드에서 `random_device`를 사용하는 경우 이러한 플랫폼의 설명서를 참조하세요.  
+ ISO C++ 표준에서는 `random_device`를 암호로 보호하도록 요구하지 않지만 Visual Studio에서 이 URNG는 암호로 보호되도록 구현되었습니다. "암호로 보호"라는 용어는 보증을 암시하지는 않지만 지정된 불규칙화 알고리즘이 제공하는 최소 수준의 엔트로피, 즉 예측성 수준을 나타냅니다. 자세한 내용은 Wikipedia 문서 [암호로 의사 난수 생성기 보](http://go.microsoft.com/fwlink/p/?linkid=398017)를 참조하세요. ISO C++ 표준에서는 암호로 보호를 요구하지 않기 때문에 다른 플랫폼이 `random_device`를 암호로 보호되지 않은 단일 의사 난수 생성기로 구현할 수 있어 다른 생성기에서는 시드 소스로만 적절할 수 있습니다. 플랫폼 간 코드에서 `random_device`를 사용하는 경우 이러한 플랫폼의 설명서를 참조하세요.  
   
  정의된 대로 `random_device`의 결과는 재현될 수 없으며 다른 URNG보다 훨씬 느리게 실행되는 부작용이 발생할 수 있습니다. [코드 예제](#code)에 나와 있는 것처럼, `random_device`에 대한 호출을 통해 시드하려고 하더라도 암호로 보호할 필요가 없는 대부분의 응용 프로그램에서는 `mt19937` 또는 유사한 엔진을 사용합니다.  
   

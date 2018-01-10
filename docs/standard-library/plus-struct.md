@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::plus
-- plus
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::plus
+dev_langs: C++
 helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 65dd34958f89d80608cf21b360d76f0c26cda38a
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c5ada1bbac90f9ea190ffefbafe12916717411c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="plus-struct"></a>plus 구조체
 인수에 대해 더하기 연산(이진 `operator+`)을 수행하는 미리 정의된 함수 개체입니다.  
@@ -75,9 +57,9 @@ struct plus<void>
  더하기 연산의 오른쪽 피연산자입니다. 특수화되지 않은 템플릿은 `Type` 형식의 lvalue 참조 인수를 사용합니다. 특수화된 템플릿은 유추 형식 `U`의 lvalue 및 rvalue 참조 인수를 완벽하게 전달합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `Left``+``Right`의 결과입니다. 특수 템플릿은 이진 `operator+`에 의해 반환되는 형식을 포함하는 결과를 완벽하게 전달합니다.  
+ `Left + Right`의 결과입니다. 특수 템플릿은 이진 `operator+`에 의해 반환되는 형식을 포함하는 결과를 완벽하게 전달합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // functional_plus.cpp  
@@ -135,7 +117,6 @@ The element-wise sums are: ( -4 -2 0 2 4 6 )
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

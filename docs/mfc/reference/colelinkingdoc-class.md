@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9d02d128a96550cce393fc439ef7fdabcccd293
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 611d09a12da1d2ebf6fcae8d7573cc48a5318f97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 클래스
 포함된 항목에 대한 연결을 지원하는 OLE 컨테이너 문서의 기본 클래스입니다.  
@@ -57,7 +58,7 @@ class COleLinkingDoc : public COleDocument
 |[COleLinkingDoc::Register](#register)|문서 OLE 시스템 Dll에 등록합니다.|  
 |[COleLinkingDoc::Revoke](#revoke)|문서의 등록을 취소합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  

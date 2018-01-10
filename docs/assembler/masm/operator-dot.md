@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 79a7115e3e84fcac0da2605da3a700717569fb3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65bf4e239ea7c80e9032be6a555ac6598eb3f0b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-"></a>연산자 .
 첫 번째 연산자는 반환 *식* 의 오프셋 더하기 *필드* 해당 구조체 또는 공용 구조체 내에서. 가 가리키는 위치에 값을 반환 하는 두 번째 연산자 *등록* 의 오프셋 더하기 *필드* 해당 구조체 또는 공용 구조체 내에서.  

@@ -1,11 +1,10 @@
 ---
-title: "source_link_manager 클래스 | Microsoft 문서"
+title: "source_link_manager 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,35 +20,19 @@ f1_keywords:
 - AGENTS/concurrency::source_link_manager::release
 - AGENTS/concurrency::source_link_manager::remove
 - AGENTS/concurrency::source_link_manager::set_bound
-dev_langs:
-- C++
-helpviewer_keywords:
-- source_link_manager class
+dev_langs: C++
+helpviewer_keywords: source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 8e875fdd02a42e1cb1c144b0b7da07a1f4e9a184
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 클래스
 `source_link_manager` 개체는 `ISource` 블록에 대한 메시징 블록 네트워크 연결을 관리합니다.  
@@ -63,7 +46,7 @@ class source_link_manager;
   
 #### <a name="parameters"></a>매개 변수  
  `_LinkRegistry`  
- 네트워크 연결 레지스트리입니다.  
+ 네트워크 연결 레지스트리 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -72,33 +55,33 @@ class source_link_manager;
 |이름|설명|  
 |----------|-----------------|  
 |`const_pointer`|에 대 한 포인터를 제공 하는 형식은 `const` 요소에는 `source_link_manager` 개체입니다.|  
-|`const_reference`|에 대 한 참조를 제공 하는 형식은 `const` 에 저장 된 요소는 `source_link_manager` 읽고 const 작업을 수행 하기 위해 개체입니다.|  
+|`const_reference`|에 대 한 참조를 제공 하는 형식은 `const` 에 저장 된 요소는 `source_link_manager` 읽고 const 작업 수행에 대 한 개체입니다.|  
 |`iterator`|반복기를 제공 하는 형식 읽거나에 있는 모든 요소를 수정할 수는 `source_link_manager` 개체입니다.|  
-|`type`|관리 되는 링크 레지스트리 유형의 `source_link_manager` 개체입니다.|  
+|`type`|관리 되는 링크 레지스트리에서 유형의 `source_link_manager` 개체입니다.|  
   
 ### <a name="public-constructors"></a>Public 생성자  
   
 |이름|설명|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|`source_link_manager` 개체를 생성합니다.|  
-|[~ source_link_manager 소멸자](#dtor)|소멸은 `source_link_manager` 개체입니다.|  
+|[~ source_link_manager 소멸자](#dtor)|소멸 된 `source_link_manager` 개체입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[add](#add)|소스 링크를 추가 하는 `source_link_manager` 개체입니다.|  
+|[add](#add)|소스 링크를 추가 하 고 `source_link_manager` 개체입니다.|  
 |[begin](#begin)|첫 번째 요소에 반복기를 반환 합니다.는 `source_link_manager` 개체입니다.|  
 |[포함](#contains)|검색 된 `network_link_registry` 이 `source_link_manager` 지정된 된 블록에 대 한 개체입니다.|  
 |[count](#count)|에 연결 된 블록의 개수는 `source_link_manager` 개체입니다.|  
-|[reference](#reference)|에 대 한 참조를 얻습니다는 `source_link_manager` 개체입니다.|  
-|[register_target_block](#register_target_block)|이 보유 하는 대상 블록을 등록 `source_link_manager` 개체입니다.|  
+|[reference](#reference)|에 대 한 참조를 획득 하 고 `source_link_manager` 개체입니다.|  
+|[register_target_block](#register_target_block)|이 보유 하는 대상 블록 등록 `source_link_manager` 개체입니다.|  
 |[release](#release)|참조를 해제는 `source_link_manager` 개체입니다.|  
 |[remove](#remove)|링크를 제거는 `source_link_manager` 개체입니다.|  
 |[set_bound](#set_bound)|이에 추가할 수 있는 소스 링크의 최대 수를 설정 `source_link_manager` 개체입니다.|  
   
-## <a name="remarks"></a>주의  
- 현재 소스 블록에는 참조 횟수가 계산 됩니다. 이 래퍼는 `network_link_registry` 링크에 대 한 동시 액세스 가능 하며 콜백을 통해 링크를 참조 하는 기능을 제공 하는 개체입니다. 메시지 블록 ( `target_block`s 또는 `propagator_block`s)은 소스 연결에 대 한이 클래스를 사용 해야 합니다.  
+## <a name="remarks"></a>설명  
+ 현재 소스 블록은 참조를 계산 합니다. 이 한 래퍼는 `network_link_registry` 링크에 대 한 동시 액세스 가능 하며 콜백을 통해 링크를 참조 하는 기능을 제공 하는 개체입니다. 메시지 블록 ( `target_block`s 또는 `propagator_block`s)의 소스 링크에 대 한이 클래스를 사용 해야 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `source_link_manager`  
@@ -110,7 +93,7 @@ class source_link_manager;
   
 ##  <a name="add"></a>추가 
 
- 소스 링크를 추가 하는 `source_link_manager` 개체입니다.  
+ 소스 링크를 추가 하 고 `source_link_manager` 개체입니다.  
   
 ```
 void add(_EType _Link);
@@ -144,7 +127,7 @@ bool contains(_EType _Link);
   
 ### <a name="parameters"></a>매개 변수  
  `_Link`  
- 검색 한 블록에 대 한 포인터는 `source_link_manager` 개체입니다.  
+ 에 대 한 검색할 블록에 대 한 포인터는 `source_link_manager` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `true`지정한 블록이 있으면 `false` 그렇지 않은 경우.  
@@ -162,7 +145,7 @@ size_t count();
   
 ##  <a name="reference"></a>참조 
 
- 에 대 한 참조를 얻습니다는 `source_link_manager` 개체입니다.  
+ 에 대 한 참조를 획득 하 고 `source_link_manager` 개체입니다.  
   
 ```
 void reference();
@@ -170,7 +153,7 @@ void reference();
   
 ##  <a name="register_target_block"></a>register_target_block 
 
- 이 보유 하는 대상 블록을 등록 `source_link_manager` 개체입니다.  
+ 이 보유 하는 대상 블록 등록 `source_link_manager` 개체입니다.  
   
 ```
 void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
@@ -225,7 +208,7 @@ source_link_manager();
   
 ##  <a name="dtor"></a>~ source_link_manager 
 
- 소멸은 `source_link_manager` 개체입니다.  
+ 소멸 된 `source_link_manager` 개체입니다.  
   
 ```
 ~source_link_manager();
@@ -235,4 +218,3 @@ source_link_manager();
  [Namespace 동시성](concurrency-namespace.md)   
  [single_link_registry 클래스](single-link-registry-class.md)   
  [multi_link_registry 클래스](multi-link-registry-class.md)
-

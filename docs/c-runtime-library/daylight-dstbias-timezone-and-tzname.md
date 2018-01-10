@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c14f4bf492b18107aefc744d6e443fdeef3fec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81ab3701ac99aece4710208a0a5d19ce645d287a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone 및 _tzname
 `_daylight`, `_dstbias`, `_timezone` 및 `_tzname`은 일부 시간 및 날짜 루틴에서 현지 시간을 조정하는 데 사용됩니다. 이러한 전역 변수는 전역 변수 대신 사용되어야 할 보안 기능이 보다 강화된 버전에 대해서는 더 이상 사용되지 않습니다.  

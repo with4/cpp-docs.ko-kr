@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 787f9eb4b7c058c7a6f4e43eaba781546627fa04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: baabba60ffaf886b7a34acfbff5b923a4495fa1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idle-loop-processing"></a>유휴 루프 처리
 대부분의 응용 프로그램 "에서"배경입니다. 시간이 오래 걸리는 처리를 수행합니다. 경우에 따라 성능 고려 사항에 따라 이러한 작업에 다중 스레딩을 사용할. 스레드 관련 별도 개발 오버 헤드 하므로 MFC가 유휴 시간 작업 등의 간단한 작업에 대 한 권장 되지 않습니다는 [OnIdle](../mfc/reference/cwinthread-class.md#onidle) 함수입니다. 이 문서는 유휴 프로세스에 중점을 둡니다. 다중 스레딩, 참조에 대 한 자세한 내용은 [다중 스레딩 항목](../parallel/multithreading-support-for-older-code-visual-cpp.md)합니다.  

@@ -1,57 +1,57 @@
 ---
-title: "__identifier (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__identifier"
-  - "__identifier_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__identifier keyword [C++]"
+title: __identifier (C + + /cli CLI) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __identifier
+- __identifier_cpp
+dev_langs: C++
+helpviewer_keywords: __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4d68d21fc9436bff0e39fa474b97ec54138e15b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# __identifier (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-식별자로 Visual C\+\+ 키워드를 사용할 수 있습니다.  
+# <a name="identifier-ccli"></a>__identifier(C++/CLI)
+식별자로 Visual c + + 키워드를 사용 하도록 설정 합니다.  
   
-## 모든 플랫폼  
- **구문**  
+## <a name="all-platforms"></a>모든 플랫폼  
+**구문**  
   
 ```  
-  
 __identifier(  
 Visual_C++_keyword  
 )  
   
 ```  
   
- **설명**  
+**주의**  
   
- 키워드가 아닌 식별자에 대한  `__identifier`  키워드를 사용할 수 있지만 스타일 상의 문제가 있습니다.  
+사용은 `__identifier` 키워드가 아닌 식별자에 대 한 키워드는 허용 되지 않지만 스타일 문제도 좋습니다.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 런타임  
   
-### 요구 사항  
- 컴파일러 옵션: **\/ZW**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/ZW**  
   
-### 예제  
+### <a name="examples"></a>예제  
  **예제**  
   
- 다음 예제에서는  `template`  라는 이름의 클래스가 C\#를 만들고 DLL로 배포합니다.    `template`  클래스를 사용하는 Visual C\+\+ 프로그램에서,   `__identifier`  키워드는  `template` 가 표준 c \+ \+ 키워드라는 사실을 숨깁니다.  
+ 다음 예제에서는 클래스 이름이 `template` C#에서 만들어진 및 DLL로 분산 됩니다. 사용 하는 Visual c + + 프로그램에서는 `template` 클래스는 `__identifier` 키워드는 팩트를 숨깁니다는 `template` 는 표준 c + + 키워드입니다.  
   
 ```  
 // identifier_template.cs  
@@ -71,18 +71,18 @@ int main() {
 }  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **설명**  
+## <a name="common-language-runtime"></a>공용 언어 런타임 
+ **주의**  
   
- `__identifier`  키워드는  **\/clr**  및  **\/clr:oldSyntax**  컴파일러 옵션을 함께 사용할 수 있습니다.  
+ `__identifier` 키워드는 사용할 수는 **/clr** 컴파일러 옵션입니다.  
   
-### 요구 사항  
- 컴파일러 옵션: **\/clr**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/clr**  
   
-### 예제  
+### <a name="examples"></a>예제  
  **예제**  
   
- 다음 예제에서는  `template`  라는 이름의 클래스가 C\#를 만들고 DLL로 배포합니다.    `template`  클래스를 사용하는 Visual C\+\+ 프로그램에서,   `__identifier`  키워드는  `template` 가 표준 c \+ \+ 키워드라는 사실을 숨깁니다.  
+ 다음 예제에서는 클래스 이름이 `template` C#에서 만들어진 및 DLL로 분산 됩니다. 사용 하는 Visual c + + 프로그램에서는 `template` 클래스는 `__identifier` 키워드는 팩트를 숨깁니다는 `template` 는 표준 c + + 키워드입니다.  
   
 ```  
 // identifier_template.cs  
@@ -103,6 +103,6 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>참고 항목  
+ [런타임 플랫폼의 구성 요소 확장명](../windows/component-extensions-for-runtime-platforms.md)   
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,69 +1,69 @@
 ---
-title: "CDynamicParameterAccessor::GetParamIO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetParamIO"
-  - "CDynamicParameterAccessor::GetParamIO"
-  - "ATL.CDynamicParameterAccessor.GetParamIO"
-  - "CDynamicParameterAccessor.GetParamIO"
-  - "ATL::CDynamicParameterAccessor::GetParamIO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamIO 메서드"
+title: 'Cdynamicparameteraccessor:: Getparamio | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetParamIO
+- CDynamicParameterAccessor::GetParamIO
+- ATL.CDynamicParameterAccessor.GetParamIO
+- CDynamicParameterAccessor.GetParamIO
+- ATL::CDynamicParameterAccessor::GetParamIO
+dev_langs: C++
+helpviewer_keywords: GetParamIO method
 ms.assetid: 9c485e39-c67e-4df7-a707-c773019c4d1e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 340153a86584483f61ae4d6dd8a8becefbcd91d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParamIO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Determines whether the specified parameter is an input or output parameter.  
+# <a name="cdynamicparameteraccessorgetparamio"></a>CDynamicParameterAccessor::GetParamIO
+지정된 매개 변수가 입력 매개 변수인지 출력 매개 변수인지를 결정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      bool GetParamIO(   
-   DBORDINAL nParam,   
-   DBPARAMIO * pParamIO    
+      bool GetParamIO(   
+   DBORDINAL nParam,   
+   DBPARAMIO * pParamIO    
 ) const throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nParam`  
- \[in\] The parameter number \(offset from 1\).  Parameter 0 is reserved for return values.  The parameter number is the index of the parameter based on its order in the SQL or stored procedure call.  See [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) for an example.  
+ [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 참조 [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 예에 대 한 합니다.  
   
  *pParamIO*  
- A pointer to the variable containing the **DBPARAMIO** type \(input or output\) of the specified parameter.  It is defined as follows:  
+ 포함 하는 변수가에 대 한 포인터는 **DBPARAMIO** 지정된 된 매개 변수의 형식 (input 또는 output). 다음과 같이 정의 됩니다.  
   
- `typedef DWORD DBPARAMIO;`  
+```  
+typedef DWORD DBPARAMIO;  
   
- `enum DBPARAMIOENUM`  
+enum DBPARAMIOENUM {  
+    DBPARAMIO_NOTPARAM   = 0,  
+    DBPARAMIO_INPUT      = 0x1,  
+    DBPARAMIO_OUTPUT     = 0x2  
+};  
+```  
   
- `{   DBPARAMIO_NOTPARAM   = 0,`  
+## <a name="return-value"></a>반환 값  
+ 반환 **true** 성공 또는 **false** 실패 합니다.  
   
- `DBPARAMIO_INPUT      = 0x1,`  
-  
- `DBPARAMIO_OUTPUT     = 0x2`  
-  
- `};`  
-  
-## 반환 값  
- Returns **true** on success or **false** on failure.  
-  
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicParameterAccessor 클래스](../../data/oledb/cdynamicparameteraccessor-class.md)

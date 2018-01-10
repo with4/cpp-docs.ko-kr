@@ -1,32 +1,33 @@
 ---
-title: "defaultvtable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvtable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvtable attribute"
+title: defaultvtable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvtable
+dev_langs: C++
+helpviewer_keywords: defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 90c3fb3d72d71f4d61aebcef657b71bfaff87efd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# defaultvtable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-기본 vtable 인터페이스는 COM 개체에 대 한 인터페이스를 정의합니다.  
+# <a name="defaultvtable"></a>defaultvtable
+COM 개체에 대 한 기본 vtable 인터페이스로 인터페이스를 정의합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,15 +36,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `interface`  
- 원하는 기본 vtable을 COM 개체에 대해 지정 된 인터페이스입니다.  
+ COM 개체에 대 한 기본 vtable 하려는 하는 지정 된 인터페이스입니다.  
   
-## 설명  
- **Defaultvtable** C\+\+ 특성을 동일한 기능을가지고 있는  [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **defaultvtable** c + + 특성에 동일한 기능을는 [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 특성입니다.  
   
-## 예제  
- 다음 코드 사용 하 여 클래스에 특성을 보여 줍니다.  **defaultvtable** 는 기본 인터페이스를 지정 합니다.  
+## <a name="example"></a>예  
+ 다음 코드를 사용 하는 클래스에 특성을 보여 줍니다. **defaultvtable** 기본 인터페이스를 지정 하려면:  
   
 ```  
 // cpp_attr_ref_defaultvtable.cpp  
@@ -71,20 +72,19 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**,`struct`|  
+|**적용 대상**|**class**, `struct`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|**coclass**|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [클래스 특성](../windows/class-attributes.md)   

@@ -22,6 +22,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
@@ -39,11 +40,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 124ddd7ec5f6cbef9f4f3a9a01f04533fe8d977b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4831b9f6f046dbc1a5d337f22e6be3dc3f4a5662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 값의 최대 한계를 계산합니다.  
@@ -86,13 +88,13 @@ long double ceill(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`ceil`, `ceilf`, `ceill`|\<math.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [floor](../../c-runtime-library/reference/floor-floorf-floorl.md)의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -25,35 +24,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSid class
+dev_langs: C++
+helpviewer_keywords: CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f1e731c82892c5622dcb437498d2d318086f66d8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csid-class"></a>CSid 클래스
 이 클래스는에 대 한 래퍼는 `SID` (보안 식별자) 구조입니다.  
@@ -122,7 +105,7 @@ class CSid
   
  응용 프로그램을 수정 해서는 안는 `SID` 구조를 직접 않고 대신 사용 하 여이 래퍼 클래스에서 제공 하는 방법입니다. 참고 항목 [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), 및 [AtlSetOwnerSid](security-global-functions.md#atlsetownersid)합니다.  
   
- Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) Windows sdk에서입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
@@ -183,7 +166,7 @@ explicit CSid(
  `pSid`  
  에 대 한 포인터는 `SID` 구조입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  생성자가 초기화 하는 `CSid` 개체, 내부 데이터 멤버 설정 *SidTypeInvalid*, 또는 기존 설정을 복사 하 여 `CSid`, `SID`, 또는 기존 계정.  
   
  초기화에 실패 하면 생성자에서 throw 한 [CAtlException 클래스](../../atl/reference/catlexception-class.md)합니다.  
@@ -195,7 +178,7 @@ explicit CSid(
 virtual ~CSid() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  소멸자는 개체에 의해 획득 하는 모든 리소스를 해제 합니다.  
   
 ##  <a name="csidarray"></a>CSid::CSidArray  
@@ -205,7 +188,7 @@ virtual ~CSid() throw();
 typedef CAtlArray<CSid> CSidArray;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 형식 정의 ACL (액세스 제어 목록)에서 보안 식별자를 검색 하는 데 사용할 수 있는 배열 형식을 지정 합니다. 참조 [CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries)합니다.  
   
 ##  <a name="domain"></a>CSid::Domain  
@@ -218,7 +201,7 @@ LPCTSTR Domain() const throw(...);
 ### <a name="return-value"></a>반환 값  
  반환 된 `LPCTSTR` 도메인을 가리키는 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 지정 된 이름을 찾으려고 `SID` (보안 식별자)입니다. 자세한 내용은 참조 하십시오. [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166)합니다.  
   
  경우에 대 한 계정 이름이 `SID` 를 찾을 수 있는 **도메인** 도메인 빈 문자열로 반환 합니다. 이 네트워크 제한 시간이이 메서드는 이름을 찾는 것을 방지 한 경우에 발생할 수 있습니다. 예: 해당 계정 이름이 없는 보안 식별자에도 마찬가지 `SID` 로그온 세션을 식별 하는입니다.  
@@ -238,8 +221,8 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 성공 **false** 실패 합니다.  
   
-### <a name="remarks"></a>주의  
- 참조 [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 내용을 확인 합니다.  
+### <a name="remarks"></a>설명  
+ 참조 [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) 자세한 내용을 보려면 Windows sdk에서입니다.  
   
 ##  <a name="getlength"></a>CSid::GetLength  
  길이 반환 된 `CSid` 개체입니다.  
@@ -251,7 +234,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>반환 값  
  바이트의 길이 반환 된 `CSid` 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  경우는 `CSid` 구조가 잘못 되었습니다, 반환 값이 정의 되지 않습니다. 호출 하기 전에 `GetLength`를 사용 하 여는 [CSid::IsValid](#isvalid) 되었는지 확인 하는 멤버 함수 `CSid` 유효 합니다.  
   
 > [!NOTE]
@@ -294,7 +277,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 ### <a name="return-value"></a>반환 값  
  참조 subauthority 반환 *nSubAuthority 합니다.* Subauthority 기간은 RID (상대 식별자)입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  *nSubAuthority* 매개 변수는 메서드는 반환 subauthority 배열 요소를 식별 하는 인덱스 값을 지정 합니다. 이 값에 대해 유효성 검사 테스트가 수행 하는 메서드. 응용 프로그램에서 호출할 수 [CSid::GetSubAuthorityCount](#getsubauthoritycount) 를 사용할 수 있는 값의 범위를 검색 합니다.  
   
 > [!NOTE]
@@ -325,7 +308,7 @@ bool IsValid() const throw();
 ### <a name="return-value"></a>반환 값  
  반환 **true** 경우는 `CSid` 개체가 올바른지 **false** 그렇지 않은 경우. 이 메서드;에 대 한 확장된 오류 정보가 없습니다. 호출 하지 마십시오 `GetLastError`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `IsValid` 메서드의 유효성 검사는 `CSid` 하위 권한 수는 최대 길이 보다 작으면 및 수정 번호는 알려진된 범위 이내 인지 확인 하 여 개체입니다.  
   
 ##  <a name="loadaccount"></a>CSid::LoadAccount  
@@ -354,7 +337,7 @@ bool LoadAccount(
 ### <a name="return-value"></a>반환 값  
  반환 **true** 성공 **false** 실패 합니다. 확장 오류 정보를 가져오려면 `GetLastError`를 호출합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `LoadAccount`지정 된 이름에 대 한 보안 식별자를 찾으려고 시도 합니다. 참조 [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) 내용을 확인 합니다.  
   
 ##  <a name="operator_eq"></a>CSid::operator =  
@@ -493,7 +476,7 @@ bool operator>=(
 operator const SID *() const throw(...);
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  주소를 반환 하는 `SID` 구조입니다.  
   
 ##  <a name="sid"></a>CSid::Sid  
@@ -504,7 +487,7 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 반환 된 `SID` 표시, 저장 또는 전송에 적합 한 형식에서 문자열로 구조입니다. 같음 [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399), 하지만이 함수는만 이상 Windows 2000에서 사용할 수 있고 따라서 이전 버전의 운영 체제에 대 한 에뮬레이트됩니다.  
+ 반환 된 `SID` 표시, 저장 또는 전송에 적합 한 형식에서 문자열로 구조입니다. 에 해당 [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399), 하지만이 함수는만 이상 Windows 2000에서 사용할 수 있고 따라서 이전 버전의 운영 체제에 대 한 에뮬레이트됩니다.  
   
 ##  <a name="sidnameuse"></a>CSid::SidNameUse  
  상태에 대 한 설명을 반환는 `CSid` 개체입니다.  
@@ -528,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeUnknown|알 수 없는 나타냅니다 `SID` 유형입니다.|  
 |SidTypeComputer|나타냅니다는 `SID` 컴퓨터에 대 한 합니다.|  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 [CSid::LoadAccount](#loadaccount) 업데이트 하는 `CSid` 호출 하기 전에 개체 `SidNameUse` 해당 상태를 반환할 수 있습니다. `SidNameUse`개체의 상태를 변경 하지 않습니다 (을 호출 하 여 **LookupAccountName** 또는 **LookupAccountSid**), 하지만 현재 상태를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
@@ -536,4 +519,3 @@ SID_NAME_USE SidNameUse() const throw();
  [클래스 개요](../../atl/atl-class-overview.md)   
  [보안 전역 함수](../../atl/reference/security-global-functions.md)   
  [연산자](../../atl/reference/atl-operators.md)
-

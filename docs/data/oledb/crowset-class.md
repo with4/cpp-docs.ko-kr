@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4e36523d2fffd4f90897daf2fd22c4dba66c8fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3b0d46ac3164f7f609e8a8a8099d500d04d91bf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowset-class"></a>CRowset 클래스
 OLE DB 행 집합 개체와 관련 된 몇 가지 캡슐화 인터페이스를 만들고 행 집합 데이터 조작 메서드를 제공 합니다.  

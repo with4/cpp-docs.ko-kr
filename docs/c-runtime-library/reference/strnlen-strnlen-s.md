@@ -68,11 +68,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0dfc872694485262386d0858e97b9835a2d507b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59c9d1f893dbc024a0645e70119d1069c3383ed8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 현재 로캘이나 전달된 로캘을 사용하여 문자열 길이를 가져옵니다. 이러한 함수는 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)의 더 안전한 버전입니다.  
@@ -157,11 +158,11 @@ size_t _mbstrnlen_l(
   
  `_mbsnlen` 및 `_mbstrnlen`은 멀티바이트 문자열의 멀티바이트 문자 수를 반환합니다. `_mbsnlen`은 현재 사용 중인 멀티바이트 코드 페이지 또는 전달된 로캘에 따라 멀티바이트 문자 시퀀스를 인식합니다. 멀티바이트 문자의 유효성에 대한 테스트는 수행하지 않습니다. `_mbstrnlen`은 멀티바이트 문자의 유효성을 테스트하고 멀티바이트 문자 시퀀스를 인식합니다. `_mbstrnlen`에 전달된 문자열에 잘못된 멀티바이트 문자가 포함된 경우 `errno`는 `EILSEQ`로 설정됩니다.  
   
- 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. 이러한 함수 버전은 `_l` 접미사가 없는 함수는 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 함수는 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. 이러한 함수 버전은 `_l` 접미사가 없는 함수는 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 함수는 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`strnlen`, `strnlen_s`|\<string.h>|  
 |`wcsnlen`, `wcsnlen_s`|\<string.h> 또는 \<wchar.h>|  
@@ -170,7 +171,7 @@ size_t _mbstrnlen_l(
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C  
 // crt_strnlen.c  

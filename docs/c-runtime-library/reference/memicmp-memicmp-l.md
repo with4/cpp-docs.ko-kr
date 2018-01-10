@@ -38,11 +38,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 569191999535054aaf90239daefe89bcafd3eedd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adfbab425e5765ce23522612c628b5b83da444b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 두 개의 버퍼에서 문자를 비교합니다(소문자).  
@@ -91,18 +92,18 @@ int _memicmp_l(
   
  `buf1` 또는 `buf2`가 null 포인터인 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 함수가 `_NLSCMPERROR`를 반환하며 `errno`를 `EINVAL`로 설정합니다.  
   
- `_memicmp`는 로캘 종속 동작의 현재 로캘을 사용하고 `_memicmp_l`은 전달된 로캘을 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_memicmp`는 로캘 종속 동작의 현재 로캘을 사용하고 `_memicmp_l`은 전달된 로캘을 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_memicmp`|\<memory.h> 또는 \<string.h>|  
 |`_memicmp_l`|\<memory.h> 또는 \<string.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_memicmp.c  

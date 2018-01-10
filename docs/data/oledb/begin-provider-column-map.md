@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b93a08a709f09010187a1ed46552c291ecbe166
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 05b70429c127927c7b436980f573efedee14707e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginprovidercolumnmap"></a>BEGIN_PROVIDER_COLUMN_MAP
 공급자 열 지도 항목의 시작을 표시 합니다.  
@@ -38,7 +41,7 @@ theClass
  `theClass`  
  [in] 이 맵은 속한 클래스의 이름입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  샘플 공급자 열 지도 다음과 같습니다.  
   
  [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]  

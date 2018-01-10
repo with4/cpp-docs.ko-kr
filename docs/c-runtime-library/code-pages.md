@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 02c1b7de9a8ed5f560a5999af453970785c487f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0899f5f617fd28d121b85183280bd28fe91ee46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="code-pages"></a>코드 페이지
 `code page`는 숫자, 문장 부호 및 기타 문자를 포함할 수 있는 문자 집합입니다. 언어 및 로캘마다 다른 코드 페이지를 사용할 수 있습니다. 예를 들어 ANSI 코드 페이지 1252는 미국 영어와 대부분의 유럽 언어에 사용되고, OEM 코드 페이지 932는 일본어 간지에 사용됩니다.  

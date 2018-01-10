@@ -1,32 +1,33 @@
 ---
-title: "requires_category | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.requires_category"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "requires_category attribute"
+title: requires_category | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.requires_category
+dev_langs: C++
+helpviewer_keywords: requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 677e3c94a5db69dafb66a5cd33749c129cb35afb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# requires_category
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-필수 구성 요소 범주는 대상 클래스를 지정합니다.  
+# <a name="requirescategory"></a>requires_category
+대상 클래스의 필수 구성 요소 범주를 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,17 +36,17 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 매개 변수  
- *requires\_category*  
- ID는 필수 항목입니다.  
+#### <a name="parameters"></a>매개 변수  
+ *requires_category*  
+ 필요한 범주의 ID입니다.  
   
-## 설명  
- **Requires\_category** C\+\+ 특성의 대상 클래스에 필요한 구성 요소 범주를 지정 합니다.  자세한 내용은  [REQUIRED\_CATEGORY](../Topic/REQUIRED_CATEGORY.md).  
+## <a name="remarks"></a>설명  
+ **requires_category** c + + 특성 대상 클래스에 필요한 구성 요소 범주를 지정 합니다. 자세한 내용은 참조 [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category)합니다.  
   
- 필요로 하는이 특성에  [coclass](../windows/coclass.md),  [progid](../windows/progid.md), 또는  [vi\_progid](../windows/vi-progid.md) 특성 \(또는이 중 하나를 의미 하는 다른 특성\)도 적용 될 같은 요소를 합니다.  
+ 이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다.  
   
-## 예제  
- 다음 코드 컨트롤 범주를 구현 하는 개체가 필요 합니다.  
+## <a name="example"></a>예  
+ 다음 코드는 개체가 컨트롤 범주를 구현 해야 합니다.  
   
 ```  
 // cpp_attr_ref_requires_category.cpp  
@@ -61,20 +62,19 @@ caps.handback.revision: 10
 class CMyClass {};  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**,`struct`|  
+|**적용 대상**|**class**, `struct`|  
 |**반복 가능**|아니요|  
-|**필수 특성**|하나 이상의 다음:  **coclass**,  **progid**, 또는  **vi\_progid**.|  
-|**잘못 된 특성**|없음|  
+|**필수 특성**|다음 중 하나 이상: **coclass**, **progid**또는 **vi_progid**.|  
+|**잘못된 특성**|없음|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [COM Attributes](../windows/com-attributes.md)   
- [implements\_category](../windows/implements-category.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [COM 특성](../windows/com-attributes.md)   
+ [implements_category](../windows/implements-category.md)   

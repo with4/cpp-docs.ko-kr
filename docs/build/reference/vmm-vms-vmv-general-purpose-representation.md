@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1de5d46375a48b3d0a97ee76486a11e8a6e71b6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv(일반적인 용도 표시)
 경우에 사용 [/vmb, /vmg (표시 메서드)](../../build/reference/vmb-vmg-representation-method.md) 으로 선택한는 [표시 메서드](../../build/reference/vmb-vmg-representation-method.md)합니다. 이러한 옵션 아직 발생 하지 않은 클래스 정의의 상속 모델을 나타냅니다.  

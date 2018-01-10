@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tcsftime
 - strftime
 - wcsftime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strftime_l function
 - strftime function
@@ -41,31 +39,16 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1a5331b77e218c5fe5796b2df6d0f61578657758
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 785ad16e8f86f74252c4391044d2def96091fe61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 시간 문자열 서식을 지정합니다.  
@@ -130,15 +113,15 @@ size_t _wcsftime_l(
 > [!NOTE]
 >  Visual C++ 2005 이전 버전의 설명서에서는 `wcsftime`의 `format` 매개 변수 데이터 형식이 `const wchar_t *`인 것으로 설명되어 있었으나 실제 `format` 데이터 형식의 구현은 `const char *`였습니다. 구현에서 `format` 데이터 형식을 이전 및 현재 설명서, 즉, 반영 하도록 업데이트 되었습니다 `const wchar_t *`합니다.  
   
- 이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 `strDest`, `format`, 또는 `timeptr` 가 null 포인터인 경우는 `tm` 데이터 구조에서 해결 `timeptr` (예를 들어 시간 또는 날짜 범위를 벗어난 값 포함), 유효 하지 또는 경우에는 `format` 잘못 된 형식 지정 코드를 포함 하는 문자열에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 계속해서 실행하도록 허용한 경우 함수는 0을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
+ 이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 `strDest`, `format`, 또는 `timeptr` 가 null 포인터인 경우는 `tm` 데이터 구조에서 해결 `timeptr` (예를 들어 시간 또는 날짜 범위를 벗어난 값 포함), 유효 하지 또는 경우에는 `format` 문자열 잘못 된 형식 지정 코드를 보려면 포함에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 계속해서 실행하도록 허용한 경우 함수는 0을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
   
- `format` 인수는 하나 이상의 코드로 구성됩니다. `printf`에서와 같이 서식 코드 앞에는 퍼센트 기호(`%`)가 붙습니다. 로 시작 하지 않는 문자 `%` 에 변경 되지 않은 복사 `strDest`합니다. 현재 로캘의 `LC_TIME` 범주가 `strftime`의 출력 서식에 영향을 줍니다. `LC_TIME`에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 함수는 현재 설정된 로캘을 사용합니다. 이러한 함수의 `_l` 접미사가 있는 버전은 로캘을 매개 변수로 사용하며 현재 설정된 로캘 대신 해당 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `format` 인수는 하나 이상의 코드로 구성됩니다. `printf`에서와 같이 서식 코드 앞에는 퍼센트 기호(`%`)가 붙습니다. 로 시작 하지 않는 문자 `%` 에 변경 되지 않은 복사 `strDest`합니다. 현재 로캘의 `LC_TIME` 범주가 `strftime`의 출력 서식에 영향을 줍니다. `LC_TIME`에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 함수는 현재 설정된 로캘을 사용합니다. 이러한 함수의 `_l` 접미사가 있는 버전은 로캘을 매개 변수로 사용하며 현재 설정된 로캘 대신 해당 로캘을 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  아래에는 `strftime`의 서식 코드가 나와 있습니다.  
   
@@ -219,16 +202,16 @@ size_t _wcsftime_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`strftime`|\<time.h>|  
 |`wcsftime`|\<time.h> 또는 \<wchar.h>|  
 |`_strftime_l`|\<time.h>|  
 |`_wcsftime_l`|\<time.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [time](../../c-runtime-library/reference/time-time32-time64.md)의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

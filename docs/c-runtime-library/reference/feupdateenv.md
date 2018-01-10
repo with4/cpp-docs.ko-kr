@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- feupdateenv
+apiname: feupdateenv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,35 +25,19 @@ apitype: HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
-dev_langs:
-- C++
-helpviewer_keywords:
-- feupdateenv function
+dev_langs: C++
+helpviewer_keywords: feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 0bc689cdf4a76412afd44c88357321cdc0778b40
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c84e829876282a43fb9a8a17713a612e387f5216
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="feupdateenv"></a>feupdateenv
 현재 발생한 부동 소수점 예외를 저장하고, 지정된 부동 소수점 환경 상태를 복원하고 나서, 저장된 부동 소수점 예외를 발생시킵니다.  
@@ -77,7 +60,7 @@ int feupdateenv(
 ## <a name="remarks"></a>설명  
  `feupdateenv` 함수는 여러 작업을 수행합니다. 먼저, 현재 발생한 부동 소수점 예외 상태 플래그를 자동 저장소에 저장합니다. 그런 다음 `penv`가 가리키는 `fenv_t` 개체에 저장된 값에 따라 현재 부동 소수점 환경을 설정합니다. `penv`가 FE_DFL_ENV가 아니거나 유효한 `fenv_t` 개체를 가리키지 않을 경우 후속 동작이 정의 해제됩니다. 마지막으로 `feupdateenv`는 로컬에 저장된 부동 소수점 예외를 발생시킵니다.  
   
- 이 함수를 사용하려면 호출 전에 `#pragma fenv_access(on)` 지시문을 사용하여 액세스를 방지할 수 있는 부동 소수점 최적화를 꺼야 합니다. 자세한 내용은 [fenv_access](../../preprocessor/fenv-access.md)를 참조하세요.  
+ 이 함수를 사용하려면 호출 전에 `#pragma fenv_access(on)` 지시문을 사용하여 액세스를 방지할 수 있는 부동 소수점 최적화를 꺼야 합니다. 자세한 내용은 [fenv_access](../../preprocessor/fenv-access.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   

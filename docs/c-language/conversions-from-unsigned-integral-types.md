@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15e1bc61e9b15293290098b9414642d8edf46707
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2ecc7c4a0308a1a7d182cc0bdaf04c2ed6b6e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>부호 없는 정수 계열 형식에서 변환
 부호 없는 정수는 상위 비트를 잘라 더 짧은 부호 없는 정수 또는 부호 있는 정수로 변환되거나 0 확장을 통해 더 긴 부호 없는 정수 또는 부호 있는 정수로 변환됩니다([부호 없는 정수 계열 형식에서 변환](#_clang_table_4..3) 표 참조).  
@@ -46,7 +47,7 @@ printf_s( "%hd\n", j );   // Prints -3
   
 ### <a name="conversions-from-unsigned-integral-types"></a>부호 없는 정수 계열 형식에서 변환  
   
-|시작|후|메서드|  
+|시작|대상|메서드|  
 |----------|--------|------------|  
 |`unsigned char`|`char`|비트 패턴 유지(상위 비트가 부호 비트가 됨)|  
 |`unsigned char`|**short**|0 확장|  

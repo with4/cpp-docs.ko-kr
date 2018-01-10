@@ -35,11 +35,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e8c08ed0ccffb7196133de89d4b9588333e1bfa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3445aab4a7ca4407d1a6913de2bcea3f5ec274a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 C 런타임 시스템에서 사용되는 힙의 핸들을 반환합니다.  
@@ -58,7 +59,7 @@ intptr_t _get_heap_handle( void );
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_get_heap_handle`|\<malloc.h>|  
   

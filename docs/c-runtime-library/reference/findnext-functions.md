@@ -103,11 +103,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b095eabd6c0875bad0b3b42f488e36451f02bb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fbb76781c04afb1de970cde3d233d54909b64a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 [_findfirst](../../c-runtime-library/reference/findfirst-functions.md)에 대한 이전 호출에서 `filespec` 인수와 일치하는 다음 이름(있는 경우)을 찾고 이에 따라 `fileinfo` 구조체 콘텐츠를 변경합니다.  
@@ -208,7 +209,7 @@ int _wfindnext64i32(
 |`_findnext32i64`, `_wfindnext32i64`|매크로 정의의 영향을 받지 않음|32비트|64비트|  
 |`_findnext64i32`, `_wfindnext64i32`|매크로 정의의 영향을 받지 않음|64비트|32비트|  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -236,7 +237,7 @@ int _wfindnext64i32(
 |`_wfindnext32i64`|\<io.h> 또는 \<wchar.h>|  
 |`_wfindnext64i32`|\<io.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  

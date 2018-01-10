@@ -14,18 +14,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fcb72c4e001a087b49967c64b10974ee41cc49ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02a6cc8ffcb5748544191673de8f07e87449e806
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definitions-and-conventions"></a>정의 및 규칙
 구문 정의에서 단말은 끝점입니다. 다른 확인은 가능하지 않습니다. 단말에는 예약어와 사용자 정의 식별자의 집합이 포함됩니다.  
   
  비단말은 구문의 자리 표시자이며 이 구문 요약의 다른 곳에서 정의됩니다. 정의는 재귀적일 수 있습니다.  
   
- 선택적 구성 요소는 첨자 opt로 나타냅니다. 예를 들면 다음과 같습니다.  
+ 선택적 구성 요소는 첨자 opt로 나타냅니다. 예를 들어 개체에 적용된  
   
 ```  
   

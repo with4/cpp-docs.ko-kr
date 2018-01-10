@@ -13,18 +13,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 111dd4bd08cda48b0830c000fedf7354a7d7d21e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2460632e058283b0e2a41d1347713a49d243061a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-library-reference"></a>OpenMP 라이브러리 참조
 OpenMP API에서 사용 되는 구문에 대 한 링크를 제공 합니다.  
   
  OpenMP 표준의 Visual c + + 구현에는 다음과 같은 구문이 포함 됩니다.  
   
-|구성|설명|  
+|구문|설명|  
 |---------------|-----------------|  
 |[라이브러리](../../../parallel/openmp/reference/openmp-libraries.md)|Visual c + +의 OpenMP 런타임 라이브러리를 구성 하는.lib 파일에 설명 합니다.|  
 |[데이터 형식](../../../parallel/openmp/reference/openmp-data-types.md)|OpenMP API에서 사용 되는 데이터 형식에 대 한 링크를 제공 합니다.|  

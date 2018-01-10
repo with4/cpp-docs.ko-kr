@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d65dc3b8d7dd62994eb0a8b546e290d1b6e47b9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-strings"></a>Language Strings
 `setlocale` 및 `_create_locale` 함수는 유니코드 코드 페이지를 사용하지 않는 운영 체제에서 Windows NLS API를 지원하는 언어를 사용할 수 있습니다. 운영 체제 버전에서 지원되는 언어 목록은 [NLS(국가별 언어 지원) API 참조](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)를 참조하세요. 언어 문자열은 지원되는 언어 목록의 **언어** 및 **언어 이름 약어** 열에 있는 임의의 값일 수 있습니다. 운영 체제 버전별 언어 지원에 대한 자세한 내용은 [MS-LCID]: Windows LCID(언어 코드 식별자) 참조의 [부록 A: 제품 동작(영문)](http://msdn.microsoft.com/goglobal/bb896001.aspx)을 참조하세요.   

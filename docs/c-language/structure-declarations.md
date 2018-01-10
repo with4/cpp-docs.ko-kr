@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c91c3834b5a4647f7c9cd41820dc04e5597277f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-declarations"></a>구조체 선언
 "구조체 선언"은 형식의 이름을 지정하고 다른 형식이 포함될 수 있는 변수 값의 시퀀스(구조체의 "멤버" 또는 "필드")를 지정합니다. "태그"라는 선택적 식별자는 구조체 형식의 이름을 제공하며 구조체 형식에 대한 향후 참조에 사용될 수 있습니다. 해당 구조체 형식의 변수는 해당 형식으로 정의된 전체 시퀀스를 보유합니다. C의 구조체는 다른 언어에서 "레코드"로 알려진 형식과 비슷합니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
  *struct-or-union identifier*  
   
  *struct-or-union*:  
- **truct**  
+ **struct**  
   
  **union**  
   

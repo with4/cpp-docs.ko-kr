@@ -1,11 +1,10 @@
 ---
-title: "single_link_registry 클래스 | Microsoft 문서"
+title: "single_link_registry 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - AGENTS/concurrency::single_link_registry::contains
 - AGENTS/concurrency::single_link_registry::count
 - AGENTS/concurrency::single_link_registry::remove
-dev_langs:
-- C++
-helpviewer_keywords:
-- single_link_registry class
+dev_langs: C++
+helpviewer_keywords: single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: fc99e9af586520d60c20302e8b828a188df9efda
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 11e02e4adb2e2bdb79f275537047199f434a57c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry 클래스
 `single_link_registry` 개체는 단일 소스 또는 대상 블록만 관리하는 `network_link_registry`입니다.  
@@ -68,13 +51,13 @@ class single_link_registry : public network_link_registry<_Block>;
 |이름|설명|  
 |----------|-----------------|  
 |[single_link_registry](#ctor)|`single_link_registry` 개체를 생성합니다.|  
-|[~ single_link_registry 소멸자](#dtor)|소멸은 `single_link_registry` 개체입니다.|  
+|[~ single_link_registry 소멸자](#dtor)|소멸 된 `single_link_registry` 개체입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[add](#add)|추가에 대 한 링크는 `single_link_registry` 개체입니다. (재정의 [network_link_registry:: add](network-link-registry-class.md#add).)|  
+|[add](#add)|한 링크를 추가 하는 `single_link_registry` 개체입니다. (재정의 [network_link_registry:: add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|첫 번째 요소에 반복기를 반환 합니다.는 `single_link_registry` 개체입니다. (재정의 [network_link_registry:: begin](network-link-registry-class.md#begin).)|  
 |[포함](#contains)|검색 된 `single_link_registry` 지정된 된 블록에 대 한 개체입니다. (재정의 [network_link_registry:: contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|에 있는 항목의 개수는 `single_link_registry` 개체입니다. (재정의 [network_link_registry:: count](network-link-registry-class.md#count).)|  
@@ -92,7 +75,7 @@ class single_link_registry : public network_link_registry<_Block>;
   
 ##  <a name="add"></a>추가 
 
- 추가에 대 한 링크는 `single_link_registry` 개체입니다.  
+ 한 링크를 추가 하는 `single_link_registry` 개체입니다.  
   
 ```
 virtual void add(_EType _Link);
@@ -102,8 +85,8 @@ virtual void add(_EType _Link);
  `_Link`  
  추가할 블록에 대 한 포인터입니다.  
   
-### <a name="remarks"></a>주의  
- 메서드에서 throw 한 [invalid_link_target](invalid-link-target-class.md) 이미 링크에에서 있으면이 레지스트리는 예외입니다.  
+### <a name="remarks"></a>설명  
+ 메서드에서 throw 된 [invalid_link_target](invalid-link-target-class.md) 이미 있는 경우 링크에서 레지스트리를 이와이 같이 예외입니다.  
   
 ##  <a name="begin"></a>시작 
 
@@ -116,8 +99,8 @@ virtual iterator begin();
 ### <a name="return-value"></a>반환 값  
  첫 번째 요소를 주소 지정 하는 반복기는 `single_link_registry` 개체입니다.  
   
-### <a name="remarks"></a>주의  
- 최종 상태 하 여 표시 되는 `NULL` 링크 합니다.  
+### <a name="remarks"></a>설명  
+ 최종 상태도 표시 됩니다는 `NULL` 링크 합니다.  
   
 ##  <a name="contains"></a>포함 
 
@@ -129,7 +112,7 @@ virtual bool contains(_EType _Link);
   
 ### <a name="parameters"></a>매개 변수  
  `_Link`  
- 검색 한 블록에 대 한 포인터는 `single_link_registry` 개체입니다.  
+ 에 대 한 검색할 블록에 대 한 포인터는 `single_link_registry` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `true`링크를 찾을 수 있으면 `false` 그렇지 않은 경우.  
@@ -170,16 +153,15 @@ single_link_registry();
   
 ##  <a name="dtor"></a>~ single_link_registry 
 
- 소멸은 `single_link_registry` 개체입니다.  
+ 소멸 된 `single_link_registry` 개체입니다.  
   
 ```
 virtual ~single_link_registry();
 ```  
   
-### <a name="remarks"></a>주의  
- 메서드에서 throw 한 [invalid_operation](invalid-operation-class.md) 링크를 제거 하기 전에 메서드를 호출 하는 예외입니다.  
+### <a name="remarks"></a>설명  
+ 메서드에서 throw 한 [invalid_operation](invalid-operation-class.md) 예외 링크를 제거 하기 전에 메서드를 호출 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Namespace 동시성](concurrency-namespace.md)   
  [multi_link_registry 클래스](multi-link-registry-class.md)
-

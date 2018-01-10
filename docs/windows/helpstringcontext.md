@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2dfaba68c2bc7ebec646ffe7ada6f682ee50f1c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3c5492d18085d78e20d6654898a6c66647e3bbe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 .Hlp 또는.chm 파일 도움말 항목의 ID를 지정합니다.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  **helpstringcontext** c + + 특성에 동일한 기능을는 [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cpp_attr_ref_helpstringcontext.cpp  

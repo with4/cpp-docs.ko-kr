@@ -1,32 +1,33 @@
 ---
-title: "SCHEMA_ENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SCHEMA_ENTRY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SCHEMA_ENTRY 매크로"
+title: SCHEMA_ENTRY | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SCHEMA_ENTRY
+dev_langs: C++
+helpviewer_keywords: SCHEMA_ENTRY macro
 ms.assetid: e8bee479-80f3-417e-8f41-cdaddd49690c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 12a4026e94ea5fe5e310e0aeec7cdad10d33d2bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# SCHEMA_ENTRY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Associates a GUID with a class.  
+# <a name="schemaentry"></a>SCHEMA_ENTRY
+GUID는 클래스와 연결합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -36,34 +37,37 @@ Associates a GUID with a class.
 );   
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `guid`  
- A schema rowset GUID.  See [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) in the *OLE DB Programmer's Reference* for a list of schema rowsets and their GUIDs.  
+ 스키마 행 집합 GUID입니다. 참조 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 에 *OLE DB Programmer's Reference* 스키마 행 집합 및 Guid 목록에 대 한 합니다.  
   
  *rowsetClass*  
- The class that will be created to represent the schema rowset.  
+ 스키마 행 집합을 나타내기 위해 생성 되는 클래스입니다.  
   
-## 설명  
- [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) can then query the map for a list of GUIDs, or it can create a rowset if it is given a GUID.  The schema rowset `IDBSchemaRowsetImpl` creates is similar to a standard `CRowsetImpl`\-derived class, except it must provide an **Execute** method that has the following signature:  
+## <a name="remarks"></a>설명  
+ [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 그런 다음 지도 Guid, 목록에 대 한 쿼리 또는 GUID를 지정 하는 경우 행 집합을 만들 수 있습니다. 스키마 행 집합 `IDBSchemaRowsetImpl` 만듭니다 표준 비슷합니다 `CRowsetImpl`-파생 클래스를 제공 해야 하는 단 한 **Execute** 에 다음 서명이 메서드:  
   
- `HRESULT Execute (LONG* pcRowsAffected, ULONG cRestrictions,`  
+```  
+HRESULT Execute (
+    LONG* pcRowsAffected,  
+    ULONG cRestrictions,  
+    const VARIANT* rgRestrictions);  
+```  
   
- `const VARIANT* rgRestrictions)`  
-  
- This **Execute** function populates the rowset's data.  The ATL Project Wizard creates, as described in [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) in the *OLE DB Programmer's Reference*, three initial schema rowsets in the project for each of the three mandatory OLE DB schemas:  
+ 이 **Execute** 함수는 행 집합의 데이터를 채웁니다. 에 설명 된 대로 ATL 프로젝트 마법사 만듭니다 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 에 *OLE DB Programmer's Reference*, 프로젝트에서 스키마 행 집합의 각 3 개 필수 OLE DB 스키마에 대 한 초기 3:  
   
 -   `DBSCHEMA_TABLES`  
   
--   **DBSCHEMA\_COLUMNS**  
+-   **DBSCHEMA_COLUMNS**  
   
--   **DBSCHEMA\_PROVIDER\_TYPES**  
+-   **DBSCHEMA_PROVIDER_TYPES**  
   
- The wizard also adds three corresponding entries in the schema map.  See [Creating an OLE DB Template Provider](../../data/oledb/creating-an-ole-db-provider.md) for more information about using the wizard to create a provider.  
+ 마법사는 또한 스키마 맵에 해당 하는 세 가지 항목이 추가 합니다. 참조 [OLE DB 템플릿 공급자 만들기](../../data/oledb/creating-an-ole-db-provider.md) 공급자를 만들려면 마법사를 사용 하는 방법에 대 한 자세한 내용은 합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
- [OLE DB 공급자 템플릿에 대한 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [BEGIN\_SCHEMA\_MAP](../../data/oledb/begin-schema-map.md)   
- [END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)
+## <a name="see-also"></a>참고 항목  
+ [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)   
+ [END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)

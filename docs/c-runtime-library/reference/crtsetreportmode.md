@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetReportMode
+apiname: _CrtSetReportMode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetReportMode
 - CrtSetReportMode
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtSetReportMode function
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 75d71ae4df727df1dd82ff88a793dc4e9c462b76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 3b5e6aedfb1cc216c621a18c74d45cdf084c5d11
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 [_ASSERT, _ASSERTE, _ASSERT_EXPR 매크로](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [_ASSERT, _ASSERTE, _ASSERT_EXPR 매크로](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [_RPT, _RPTF, _RPTW, _RPTFW 매크로](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 및 [_RPT, _RPTF, _RPTW, _RPTFW 매크로](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)와 같이 [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)를 호출하는 매크로 및 `_CrtDbgReport`에 의해 생성된 특정 보고서 형식의 대상을 지정합니다(디버그 버전에만 해당).  
@@ -62,7 +59,7 @@ int _CrtSetReportMode(
  `reportType`에 대한 새 보고서 모드입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공적으로 완료되면 `_CrtSetReportMode`는 `reportType`에 지정된 보고서 형식에 대한 이전 보고서 모드를 반환합니다. `reportType`으로 잘못된 값이 전달되거나 `reportMode`에 대해 잘못된 모드가 지정된 경우 `_CrtSetReportMode`는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL` 로 설정하고 -1을 반환합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 성공적으로 완료되면 `_CrtSetReportMode`는 `reportType`에 지정된 보고서 형식에 대한 이전 보고서 모드를 반환합니다. `reportType`으로 잘못된 값이 전달되거나 `reportMode`에 대해 잘못된 모드가 지정된 경우 `_CrtSetReportMode`는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL` 로 설정하고 -1을 반환합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  `_CrtSetReportMode`는 `_CrtDbgReport`에 대한 출력 대상을 지정합니다. `_ASSERT`, `_ASSERTE`, `_RPT` 및 `_RPTF` 매크로가 `_CrtDbgReport`를 호출하므로 `_CrtSetReportMode`는 해당 매크로에서 지정한 텍스트의 출력 대상을 지정합니다.  
@@ -105,11 +102,11 @@ _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_CrtSetReportMode`|\<crtdbg.h>|\<errno.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
  **라이브러리:** 디버그 버전의 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)만 해당합니다.  
   

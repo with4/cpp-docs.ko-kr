@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __interface_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __interface keyword [C++]
+f1_keywords: __interface_cpp
+dev_langs: C++
+helpviewer_keywords: __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e502574b9d55238d6f9aed33949e06db3ec6349d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6fc53310c492c424c3d97aecec965ba03553dd8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interface"></a>__interface
 **Microsoft 전용**  
@@ -73,7 +69,7 @@ virtual HRESULT CommitX() = 0;
   
  `__interface`의미는 [novtable](../cpp/novtable.md) `__declspec` 한정자입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 인터페이스에서 선언된 속성을 사용하는 방법을 보여 줍니다.  
   
 ```  

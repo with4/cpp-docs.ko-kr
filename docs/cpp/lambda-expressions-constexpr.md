@@ -14,11 +14,12 @@ caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e33918193e92e432845052f875cba2e4baf22600
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 307ce6ab87ca36de561ebcf1ad8bd30eb73e4192
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>constexpr c + +의 람다 식
 **Visual Studio 2017 버전 15.3 이상** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 람다 식으로 선언할 수 있습니다 `constexpr` contant 식에서 사용할 때 각 데이터 멤버의 초기화 한다는 캡처하거나 소개 상수 식 내에 허용 됩니다.  

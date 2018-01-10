@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,8 +13,7 @@ f1_keywords:
 - type_traits/std::integer_sequence
 - type_traits/std::make_integer_sequence
 - type_traits/std::index_sequence_for
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::index_sequence
 - std::make_index_sequence
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1765d6852248727e808cd9d8a98b56427abd6273
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e2502b627a40b40ee6942a24fdc1b8c0d16ecc31
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integersequence-class"></a>integer_sequence 클래스
 정수 시퀀스를 나타냅니다. std::tuple\<T...>과 같이 인수로 함수에 전달되는 variadic 형식의 매개 변수 팩을 추론하고 확장하는 데 사용할 수 있습니다.  
@@ -61,7 +59,7 @@ struct integer_sequence
 ## <a name="remarks"></a>설명  
  함수로 직접 전달되는 매개 변수 팩은 특별한 라이브러리 도우미 없이 압축을 풀 수 있습니다. 매개 변수 팩이 함수로 전달되는 형식의 일부이고 요소에 액세스하는 데 인덱스가 필요한 경우 `integer_sequence`와 관련 형식 별칭 `make_integer_sequence`, `index_sequence`, `make_index_sequence` 및 `index_sequence_for`를 사용하면 가장 쉽게 압축을 풀 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제는 최초 제안 [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html)을 기반으로 합니다. 이 예제에서는 `integer_sequence`를 사용하여 `std::array<T,N>`에서 `std::tuple`을 만드는 방법 및 `integer_sequence`를 사용하여 튜플 멤버를 얻는 방법을 보여 줍니다.  
   
  `a2t` 함수에서 `index_sequence`는 `size_t` 정수 계열 형식을 기반으로 하는 `integer_sequence`의 별칭입니다. `make_index_sequence`는 컴파일 시간에 호출자에 의해 전달되는 배열과 동일한 수의 요소로 0부터 시작하는 `index_sequence`를 만드는 별칭입니다. `a2t`는 값별로 `index_sequence`를 `a2t_`에 전달합니다. 여기서 `a[I]...` 식은 `I`의 압축을 풉니다. 그러면 요소는 개별 인수로 사용되는 `make_tuple`에 공급됩니다. 예를 들어 시퀀스에 세 개의 요소가 포함되어 있으면 `make_tuple`이 make_tuple(a[0], a[1], a[2])로 호출됩니다. 물론 배열 요소 자체는 임의 형식일 수 있습니다.  
@@ -135,5 +133,4 @@ int main()
   
 ## <a name="see-also"></a>참고 항목  
  [Ellipses 및 Variadic 템플릿](../cpp/ellipses-and-variadic-templates.md)
-
 

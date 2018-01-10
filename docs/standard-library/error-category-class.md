@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - system_error/std::error_category::equivalent
 - system_error/std::error_category::message
 - system_error/std::error_category::name
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::error_category
 - std::error_category::value_type
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 927711e5ad87be2a8c4683cb960cc02015de2316
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 3e1b51db369a5f36b4c7428083d7dde4728642c3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcategory-class"></a>error_category 클래스
 오류 코드 범주를 설명하는 개체에 대한 추상, 공통 기본을 나타냅니다.  
@@ -187,7 +185,7 @@ bool operator!=(const error_category& right) const;
  `error_category` 개체가 `right`에 전달된 `error_category` 개체와 같지 않으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자는 `(!*this == right)`를 반환합니다.  
+ 멤버 연산자는 `(!*this == right)`을 반환합니다.  
   
 ##  <a name="op_lt"></a>  error_category::operator&lt;  
  [error_category](../standard-library/error-category-class.md) 개체가 비교를 위해 전달된 `error_category` 개체보다 작은지 테스트합니다.  
@@ -206,7 +204,7 @@ bool operator<(const error_category& right) const;
  `error_category` 개체가 비교를 위해 전달된 `error_category` 개체보다 작으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자는 `this < &right`를 반환합니다.  
+ 멤버 연산자는 `this < &right`을 반환합니다.  
   
 ##  <a name="value_type"></a>  error_category::value_type  
  저장된 오류 코드 값을 나타내는 형식입니다.  
@@ -220,7 +218,6 @@ typedef int value_type;
   
 ## <a name="see-also"></a>참고 항목  
  [<system_error>](../standard-library/system-error.md)
-
 
 
 

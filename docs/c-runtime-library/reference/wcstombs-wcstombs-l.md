@@ -40,11 +40,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fa142902722ac5df6ac93b28daf9e76b99f54f5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ee05d4e8c8b36d92794293679992cb2c5ad5c36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 와이드 문자의 시퀀스를 멀티바이트 문자의 해당 시퀀스로 변환합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [wcstombs_s, _wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)를 참조하세요.  
@@ -101,22 +102,22 @@ size_t _wcstombs_l(
   
  `mbstr` 인수가 `NULL`이면 `wcstombs`는 대상 문자열에 필요한 바이트 크기를 반환합니다.  
   
- `wcstombs`은 매개 변수의 유효성을 검사합니다. 경우 `wcstr` 은 `NULL`, if 또는 `count` 보다 크면 `INT_MAX`의 설명 대로 잘못 된 매개 변수 처리기를 호출 하는이 함수 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 합니다. 계속해서 실행하도록 허용된 경우 함수가 `errno`를 `EINVAL`로 설정하고 -1을 반환합니다.  
+ `wcstombs`는 매개 변수의 유효성을 검사합니다. 경우 `wcstr` 은 `NULL`, if 또는 `count` 보다 크면 `INT_MAX`의 설명 대로 잘못 된 매개 변수 처리기를 호출 하는이 함수 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 합니다. 계속해서 실행하도록 허용된 경우 함수가 `errno`를 `EINVAL`로 설정하고 -1을 반환합니다.  
   
- `wcstombs`는 로캘 종속 동작을 수행해야 하는 경우 현재 로캘을 사용합니다. `_wcstombs_l`도 이와 동일하지만 전달된 로캘을 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `wcstombs`는 로캘 종속 동작을 수행해야 하는 경우 현재 로캘을 사용합니다. `_wcstombs_l`도 이와 동일하지만 전달된 로캘을 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
- C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`wcstombs`|\<stdlib.h>|  
 |`_wcstombs_l`|\<stdlib.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 `wcstombs` 함수의 동작을 보여 줍니다.  
   
 ```  

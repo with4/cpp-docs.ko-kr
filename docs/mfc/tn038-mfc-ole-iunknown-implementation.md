@@ -28,11 +28,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ef848d5b00df1140850e19611a426d289539ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE IUnknown 구현
 > [!NOTE]
@@ -78,7 +79,7 @@ ULONG CMyObj::Release()
 }  
 ```  
   
- [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 멤버 함수는 약간 더 흥미롭습니다. 유일한 멤버 함수가 개체 그리 흥미롭지 않습니다 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) 및 [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317) -있다면 좋을 것 보다 많은 작업을 수행 하도록 개체를 구별 하 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 제공합니다. 여기에 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 유용 합니다. 동일한 개체에서 다른 "인터페이스"를 가져올 수 있습니다. 일반적으로 이러한 인터페이스에서 파생 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 새 멤버 함수를 추가 하 여 추가 기능을 추가 합니다. COM 인터페이스는 인터페이스에 선언된 멤버 변수를 사용하지 않으며, 모든 멤버 함수가 pure-virtual로 선언됩니다. 예를 들면 다음과 같습니다.  
+ [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 멤버 함수는 약간 더 흥미롭습니다. 유일한 멤버 함수가 개체 그리 흥미롭지 않습니다 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) 및 [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317) -있다면 좋을 것 보다 많은 작업을 수행 하도록 개체를 구별 하 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 제공합니다. 여기에 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 유용 합니다. 동일한 개체에서 다른 "인터페이스"를 가져올 수 있습니다. 일반적으로 이러한 인터페이스에서 파생 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 새 멤버 함수를 추가 하 여 추가 기능을 추가 합니다. COM 인터페이스는 인터페이스에 선언된 멤버 변수를 사용하지 않으며, 모든 멤버 함수가 pure-virtual로 선언됩니다. 예를 들어 개체에 적용된  
   
 ```  
 class IPrintInterface : public IUnknown  

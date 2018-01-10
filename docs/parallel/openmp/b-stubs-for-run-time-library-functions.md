@@ -1,32 +1,32 @@
 ---
-title: "B. Stubs for Run-time Library Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "B. 런타임 라이브러리 함수에 대 한 스텁을 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# B. Stubs for Run-time Library Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이 단원에서는 스텁 OpenMP C 및 C\+\+ API에 정의 된 런타임 라이브러리 함수를 제공 합니다.  이식성에 OpenMP C 및 C\+\+ API를 지원 하지 않는 플랫폼을 사용 하는 스텁은 제공 합니다.  이러한 플랫폼에서는 OpenMP 프로그램이 스텁 함수를 포함 하는 라이브러리와 연결 되어야 합니다.  지시문에 OpenMP 프로그램 무시 하도록 스텁 함수를 가정 합니다.  는 직렬 의미를 에뮬레이션 합니다.  
+# <a name="b-stubs-for-run-time-library-functions"></a>B. 런타임 라이브러리 함수에 대 한 스텁
+이 섹션에서는 OpenMP C 및 c + + API에 정의 된 런타임 라이브러리 함수에 대 한 스텁을 제공 합니다. 스텁이는 이식성 OpenMP C 및 c + + API를 지원 하지 않는 플랫폼에 사용할 수 있도록 제공 됩니다. 이러한 플랫폼에서 OpenMP 프로그램 이러한 스텁 함수를 포함 하는 라이브러리와 연결 되어야 합니다. 스텁 함수도 가정 OpenMP 프로그램에서 지시문이 무시 됩니다. 따라서 에뮬레이트할 직렬 의미 합니다.  
   
 > [!NOTE]
->  잠금 함수에 나타나는 잠금 변수 이러한 함수를 단독으로 액세스 해야 합니다.  이 해야 없습니다 수 초기화 되거나 사용자 프로그램에서 수정 합니다.  사용자가 OpenMP C 및 C\+\+ 구현에서 사용 되는 잠금 스텁 함수에 의해 사용 된 스키마를 기반으로 구현 하는 메커니즘에 대 한 가정을 합니다.  
+>  Lock 함수에 표시 되는 잠금 변수 이러한 함수를 통해 배타적으로 액세스 해야 합니다. 이 초기화 하거나 안 사용자 프로그램에서 수정 합니다. 사용자는 스텁 함수에 의해 사용 되는 체계에 따라 잠금을 구현 하기 OpenMP C 및 c + + 구현에서 사용 하는 메커니즘에 대 한가 정도 해서는 안 됩니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 #include <stdio.h>  

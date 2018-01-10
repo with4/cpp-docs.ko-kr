@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 79f360bffa4938098b4b37dd2260596c70669d12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c03706be0b9853cbbdebe79b58e410f7237692ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-function-name-without--produces-no-code"></a>함수 이름을 () 없이 사용하면 코드가 생성되지 않음
 프로그램에 선언 된 함수 이름, 괄호 없이 사용 하는 경우 컴파일러는 코드를 생성 하지 않습니다. 이 컴파일러; 함수 주소를 계산 하기 때문에 함수 매개 변수를 사용 하는 여부에 관계 없이 오류 발생 그러나 함수 호출 연산자 (")" 없기 때문에 대 한 호출이 이루어집니다. 이 결과 다음과 비슷합니다.  

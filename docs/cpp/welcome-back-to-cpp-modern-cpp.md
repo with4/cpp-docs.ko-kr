@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45cb4bb1537f7d897b1dd53ada413e73a54162ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++의 진화(최신 C++)
 C++는 전세계적으로 가장 널리 사용되는 프로그래밍 언어 중 하나입니다. 잘 작성된 C++ 프로그램은 빠르고 효율적입니다. 이 언어는 재미있고 흥미로운 게임에서 고성능 과학 소프트웨어, 장치 드라이버, 포함 프로그램 및 Windows 클라이언트 응용 프로그램에 이르기까지 다양한 응용 프로그램을 만드는 데 사용할 수 있으며 유연성이 다른 언어보다 훨씬 더 뛰어납니다. C++는 20년 이상 이러한 문제와 기타 문제를 해결하는 데 사용되었습니다. 여러분은 모르겠지만, 오래된 C 스타일 프로그래밍을 접고 대신 최신 C++를 사용하는 C++ 프로그래머의 수가 점점 증가하고 있습니다.  
@@ -116,7 +117,7 @@ for( auto& s : v ) {
   
 -   [ABI 경계의 이식성](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- 자세한 내용은 StackOverflow 문서 참조 [어떤 c + + 관용구는 C + + 11에서 사용 되지 않습니다](http://go.microsoft.com/fwlink/?LinkId=402836)  
+ 자세한 내용은 StackOverflow 문서 참조 [어떤 c + + 관용구는 C + + 11에서 사용 되지 않습니다](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>참고 항목  
  [C + + 언어 참조](../cpp/cpp-language-reference.md)   

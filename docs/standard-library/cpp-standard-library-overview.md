@@ -4,42 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 3faa0bab0d49eb45ea340528ffc859bc53764d67
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2285c2237001aa02c77b17241e6de62804d6b700
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-overview"></a>C++ 표준 라이브러리 개요
 모든 C++ 라이브러리 엔터티가 하나 이상의 표준 헤더에서 선언되거나 정의됩니다. 이 구현에는 C++ 표준에서는 필요 없는 두 개의 추가 헤더, 즉 `<hash_map>` 및 `<hash_set>`가 포함됩니다. 이 구현에서 지원되는 헤더의 전체 목록을 보려면 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)를 참조하세요.  
@@ -72,7 +56,7 @@ ms.lasthandoff: 02/24/2017
   
 -   [확인된 반복기](../standard-library/checked-iterators.md)  
   
--   [디버그 반복기 지원](../standard-library/debug-iterator-support.md)  
+-   [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
 -   [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)  
   
@@ -86,5 +70,4 @@ ms.lasthandoff: 02/24/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)
-
 

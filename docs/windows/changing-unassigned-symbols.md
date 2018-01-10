@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07703a0c2a7951da317478e15f461c6dcab923ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 443b77c35496c5870c19975ede165fbf59e17f2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-unassigned-symbols"></a>할당되지 않은 기호 변경
 에 있는 동안는 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md), 리소스 또는 개체에 아직 할당 되지 않은 기존 기호를 삭제 하거나 편집할 수 있습니다.  

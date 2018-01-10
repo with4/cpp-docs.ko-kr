@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b64b1dfd342598735124940d01b1bb4939242e10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ba42921f1e192c90e302b437b9a7d1b4e5eb34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-linker-options"></a>링커 옵션 설정
 내부 또는 개발 환경 외부에서 링커 옵션을 설정할 수 있습니다. 각 링커 옵션에 대 한 알아봅니다 방법을 개발 환경에서 설정할 수 있습니다. 참조 [링커 옵션](../../build/reference/linker-options.md) 전체 목록은 합니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c6309b85946849faf9b1193a29a5684dbfd7f738
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ac5f22a22ad64e137a56be964068229a6ed0958
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bidirectionaliteratortag-struct"></a>bidirectional_iterator_tag 구조체
 양방향 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.  
@@ -37,7 +38,7 @@ struct bidirectional_iterator_tag    : public forward_iterator_tag {};
   
  **Iter**가 출력 반복기로 사용될 수 있는 개체를 설명할 경우 이 형식은 **iterator**\< **Iter**>:: **iterator_category**와 같습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `bidirectional_iterator_tag` 사용 방법의 예는 [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  

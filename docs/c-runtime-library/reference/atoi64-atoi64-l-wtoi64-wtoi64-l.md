@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -38,8 +37,7 @@ f1_keywords:
 - wtoi64_l
 - _atoi64_l
 - atoi64_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tstoi64 function
 - wtoi64 function
@@ -55,31 +53,16 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 749ce35fdb4ed530bf301539b13ba3cb0471b996
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 33337f0db51e81da06c193cc42cac1e5df085218
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 문자열을 64비트 정수로 변환합니다.  
@@ -132,7 +115,7 @@ __int64 _wtoi64_l(
   
  `_wtoi64`은 와이드 문자를 매개 변수로 사용한다는 점을 제외하고 `_atoi64`과 동일합니다.  
   
- `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
@@ -148,7 +131,7 @@ __int64 _wtoi64_l(
 |`_atoi64`, `_atoi64_l`|\<stdlib.h>|  
 |`_wtoi64`, `_wtoi64_l`|\<stdlib.h> 또는 \<wchar.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 `_atoi64` 함수를 사용하여 문자열로 저장된 수가 숫자 값으로 변환되는 방법을 보여 줍니다.  
   
 ```  

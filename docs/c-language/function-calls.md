@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f04acfe9458b8a10142ef7bc12155bc8e2a9a52
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5c314fb66a6bd45d1e9ce22b9d88195dce27b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-calls"></a>함수 호출
 *함수 호출*은 컨트롤 및 인수(있는 경우)를 함수에 전달하는 다음 형식의 식입니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  함수 호출의 요구 사항은 괄호 앞의 식이 함수 주소로 계산되어야 한다는 것뿐입니다. 즉, 함수 포인터 식을 통해 함수를 호출할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `switch` 문에서 호출되는 함수 호출을 보여 줍니다.  
   
 ```  

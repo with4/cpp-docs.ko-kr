@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -20,37 +19,20 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- _STATIC_ASSERT
-dev_langs:
-- C++
-helpviewer_keywords:
-- _STATIC_ASSERT macro
+f1_keywords: _STATIC_ASSERT
+dev_langs: C++
+helpviewer_keywords: _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 265796cdebbed1c0a067c44bbe6b71077be44a2b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ec3d90f9bfcf51b3a5f48baea1c6e3cf06e7d72f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT 매크로
 컴파일 시 식을 계산하고 결과가 `FALSE`인 경우 오류를 생성합니다.  
@@ -70,7 +52,7 @@ _STATIC_ASSERT(
 ## <a name="remarks"></a>설명  
  이 매크로는 `booleanExpression`이 런타임이 아닌 컴파일 시간에 계산된다는 점을 제외하고 [_ASSERT 및 _ASSERTE 매크로](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)와 비슷합니다. `booleanExpression`이 `FALSE`(0)로 계산되면 [컴파일러 오류 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)가 생성됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예에서는 `sizeof`의 `int` 값이 2바이트 이상인지의 여부와 `sizeof`의 `long` 값이 1바이트인지 여부를 검사합니다. `long`은 1바이트보다 크므로 프로그램은 컴파일되지 않으며 [컴파일러 오류 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)이 생성됩니다.  
   
 ```  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6533c0a1adecd29807ae49921ff6bb279271a208
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8dcf28dc593b36464bf093cf7cd8a065112054e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="renaming-with-a-name-that-exists"></a>이미 있는 이름으로 바꾸기
 **ANSI 4.9.4.2** **rename** 함수를 호출하기 전에 새 이름의 파일이 존재하는 경우의 효과  

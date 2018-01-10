@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e1d9ddd5c719bffe8fec9c77c3495e7d170eaeb0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e6a457323d99ec36c019e099ebcd5fef4ab2f0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 클래스
 `void` 형식에 대한 템플릿 클래스 할당자의 특수화로, 이 컨텍스트에 맞는 형식을 정의합니다.  

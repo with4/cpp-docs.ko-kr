@@ -71,11 +71,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88362cf0100a7b8d118f38632e9751afa79ae4e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f211a64dca335433c8da779f6d3674f47ba33ce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 문자열을 대문자로 변환합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)을 참조하세요.  
@@ -147,7 +148,7 @@ unsigned char *_mbsupr_l(
  변경된 문자열에 대한 포인터를 반환합니다. 수정은 현재 위치에서 수행되므로 반환되는 포인터는 입력 인수로 전달되는 포인터와 같습니다. 반환 값 없음은 오류를 나타내는 데 예약되어 있습니다.  
   
 ## <a name="remarks"></a>설명  
- `_strupr` 함수는 현재 위치에서 `str`의 각 소문자를 대문자로 변환합니다. 변환은 로캘의 `LC_CTYPE` 범주 설정에 따라 결정됩니다. 다른 문자는 영향을 받지 않습니다. `LC_CTYPE`에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_strupr` 함수는 현재 위치에서 `str`의 각 소문자를 대문자로 변환합니다. 변환은 로캘의 `LC_CTYPE` 범주 설정에 따라 결정됩니다. 다른 문자는 영향을 받지 않습니다. `LC_CTYPE`에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `_wcsupr` 및 `_mbsupr`는 `_strupr`의 와이드 문자 및 멀티바이트 문자 버전입니다. `_wcsupr`의 인수 및 반환 값은 와이드 문자열이며 `_mbsupr`의 인수와 반환 값은 멀티바이트 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.  
   
@@ -155,7 +156,7 @@ unsigned char *_mbsupr_l(
   
  C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -164,7 +165,7 @@ unsigned char *_mbsupr_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_strupr`, `_strupr_l`|\<string.h>|  
 |`_wcsupr`, `_wcsupr_l`|\<string.h> 또는 \<wchar.h>|  
@@ -172,7 +173,7 @@ unsigned char *_mbsupr_l(
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [_strlwr](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

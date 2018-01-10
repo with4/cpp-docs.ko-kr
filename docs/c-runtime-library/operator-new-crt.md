@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 84ec608a6bd8d5e2d55622325008599b852dc0f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 417bf53973fff3771283bce628b8445cdfa974de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-new-crt"></a>operator new(CRT)
 Visual Studio 2013부터 UCRT(유니버설 C 런타임)에서 C++ 관련 연산자 new 및 연산자 delete 함수를 더 이상 지원하지 않습니다. 이러한 함수는 이제 C++ 표준 라이브러리에 속합니다. 자세한 내용은 C++ 언어 참조의 [new 및 delete 연산자](../cpp/new-and-delete-operators.md) 및 [new 연산자](../cpp/new-operator-cpp.md)를 참조하세요. 

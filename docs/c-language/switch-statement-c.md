@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b66e9f40e3fb7f4c9a6c9f6fcb9bcd9c2a45fdd3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84594f668d0fc807ebb815cc519c7d45f62e8b12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="switch-statement-c"></a>switch 문 (C)
 `switch` 및 **case** 문은 복잡한 조건부 및 분기 작업을 제어하는 데 도움이 됩니다. `switch` 문은 해당 본문 내의 문으로 제어를 전달합니다.  
@@ -43,9 +44,9 @@ ms.lasthandoff: 10/24/2017
   
  *declarations*  
   
- 입니다.  
+ 이어야 합니다.  
   
- 을 발생시킵니다.  
+ 이어야 합니다.  
   
  입니다.  
   
@@ -55,11 +56,11 @@ ms.lasthandoff: 10/24/2017
   
  *value of this constant-expression*  
   
- 입니다.  
+ 이어야 합니다.  
   
- 을 발생시킵니다.  
+ 이어야 합니다.  
   
- 입니다.  
+ 이어야 합니다.  
   
  **break;**  
   

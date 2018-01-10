@@ -42,11 +42,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15546fc6c5eda56da53fd39581e6d101d014fa51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 614091f3e1a36bdc907bbdb1b299a53f4bb6d13c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 두 멀티바이트 문자열의 처음 `n`바이트를 비교합니다.  
@@ -96,7 +97,7 @@ int _mbsnbcmp_l(
   
  `_mbsnbcmp`는 `_mbsncmp`와 비슷합니다. 단, `_mbsncmp`는 문자열을 바이트가 아닌 문자로 비교합니다.  
   
- 출력 값에는 로캘의 `LC_CTYPE` 범주 설정이 적용됩니다. 이 설정은 멀티바이트 문자의 선행 바이트 및 후행 바이트를 지정합니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbsnbcmp` 함수는 이 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_mbsnbcmp_l` 함수는 `locale` 매개 변수를 대신 사용한다는 점을 제외하면 이 함수와 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 출력 값에는 로캘의 `LC_CTYPE` 범주 설정이 적용됩니다. 이 설정은 멀티바이트 문자의 선행 바이트 및 후행 바이트를 지정합니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbsnbcmp` 함수는 이 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_mbsnbcmp_l` 함수는 `locale` 매개 변수를 대신 사용한다는 점을 제외하면 이 함수와 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `string1` 또는 `string2`가 null 포인터이면 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 이 함수는 `_NLSCMPERROR`를 반환하며 `errno`를 `EINVAL`로 설정합니다.  
   
@@ -109,14 +110,14 @@ int _mbsnbcmp_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_mbsnbcmp`|\<mbstring.h>|  
 |`_mbsnbcmp_l`|\<mbstring.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_mbsnbcmp.c  

@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67b6fd116f75ddc35ac1d3095ebfcbb1973b9d20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 58c74602c4170cbe0816dcdf14e0196cca44af42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry(C++)
 대상 클래스의 COM 맵에 인터페이스 항목을 추가합니다.  
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/24/2017
    };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 두 항목의 기존 COM 인터페이스 지도에 추가 **CMyBaseClass**합니다. 첫 번째는 표준 인터페이스가 고 두 번째 숨기는 **IDebugTest** 인터페이스입니다.  
   
 ```  

@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0c217824496f0cf4e69c8fba89fd614a8049a8c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 353649f63a8e5522329459b1c9f740450818a3af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode 열거형
 기본 제공 형식을 나타내는 숫자 범주를 지정합니다.  
@@ -44,7 +45,7 @@ enum class TypeCode {};
 |Int32|default::int32 형식입니다.|  
 |Int64|default::int64 형식입니다.|  
 |Int8|default::int8 형식입니다.|  
-|개체|Platform::Object 형식입니다.|  
+|Object|Platform::Object 형식입니다.|  
 |Single|default::float32 형식입니다.|  
 |문자열|Platform::String 형식입니다.|  
 |UInt16|default::uint16 형식입니다.|  

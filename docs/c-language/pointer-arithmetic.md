@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d74dfdf716065384a1c0a65a6a2bf0e5437dc1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94f18b8a81cfde8d45a4e9e0256dd99a21bdd6a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointer-arithmetic"></a>포인터 산술 연산
 포인터와 정수가 포함된 가감 연산은 포인터 피연산자가 배열 멤버의 주소를 지정하고 정수 값이 동일한 배열의 경계 내에서 오프셋을 생성하는 경우에만 의미 있는 결과를 제공합니다. 정수 값이 주소 오프셋으로 변환될 때 컴파일러는 동일한 크기의 메모리 위치만 원래 주소와 오프셋을 더한 주소 사이에 있다고 가정합니다.  

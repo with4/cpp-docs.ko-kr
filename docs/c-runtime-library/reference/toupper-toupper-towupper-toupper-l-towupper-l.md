@@ -52,11 +52,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a40472922e61cbcc6c5788d575305613ae300e1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0414cd211cb9b833f24d2aac9ad9a82758c4efcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 문자를 대문자로 변환합니다.  
@@ -100,7 +101,7 @@ int _towupper_l(
  `toupper`가 필요한 값을 제공하려면 [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) 및 [islower](../../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)가 둘 다 0이 아닌 값을 반환해야 합니다.  
   
 ## <a name="remarks"></a>설명  
- 이러한 각 루틴은 가능하며 적절한 경우 지정된 소문자를 대문자로 변환합니다. `towupper`의 대/소문자 변환은 로캘에 따라 다릅니다. 현재 로캘에서 유효한 문자의 대/소문자만 변경됩니다. `_l` 접미사가 없는 함수는 현재 설정된 로캘을 사용합니다. 이러한 함수의 `_l` 접미사가 있는 버전은 로캘을 매개 변수로 사용하며 현재 설정된 로캘 대신 해당 로캘을 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 이러한 각 루틴은 가능하며 적절한 경우 지정된 소문자를 대문자로 변환합니다. `towupper`의 대/소문자 변환은 로캘에 따라 다릅니다. 현재 로캘에서 유효한 문자의 대/소문자만 변경됩니다. `_l` 접미사가 없는 함수는 현재 설정된 로캘을 사용합니다. 이러한 함수의 `_l` 접미사가 있는 버전은 로캘을 매개 변수로 사용하며 현재 설정된 로캘 대신 해당 로캘을 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `toupper`가 필요한 값을 제공하려면 [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) 및 [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)가 둘 다 0이 아닌 값을 반환해야 합니다.  
   
@@ -118,15 +119,15 @@ int _towupper_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`toupper`|\<ctype.h>|  
 |`_toupper`|\<ctype.h>|  
 |`towupper`|\<ctype.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [to 함수](../../c-runtime-library/to-functions.md)의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,24 +26,23 @@ apitype: DLLExport
 f1_keywords:
 - _swab
 - stdlib/_swab
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _swab function
 - swapping bytes
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 42515208c2c94e28ee5d6a5fab586d4ab747cc6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: a3043abf425055d8cb21108a30db2e6382e19c1a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="swab"></a>_swab
 바이트를 교환합니다.  
@@ -78,13 +76,13 @@ void _swab(
  `n`이 짝수인 경우 `_swab` 함수는 `n`에서 `src`바이트를 복사하고, 인접한 각 바이트 쌍을 교환하고, 결과를 `dest`에 저장합니다. `n`이 홀수인 경우 `_swab`은 `src`의 첫 `n-1`바이트를 복사 및 교환하며 마지막 바이트는 복사되지 않습니다. `_swab` 함수는 일반적으로 다른 바이트 순서를 사용하는 컴퓨터에 전송할 이진 데이터를 준비하는 데 사용됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_swab`|C: \<stdlib.h> C++: \<cstdlib> 또는 \<stdlib.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 ```C 
 // crt_swab.c  
   

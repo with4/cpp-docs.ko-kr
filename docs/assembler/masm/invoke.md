@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9bc7191c85baa2162cb06b6baa1c81329f8481d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4e17298c59a1c8620eb2261c44e5bd9c3aaceb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invoke"></a>INVOKE
 프로시저를 호출 하 여 주어진 주소에서 *식*, 스택에 또는 언어 형식의 표준 호출 규칙에 따라 레지스터에 인수를 전달 합니다.  

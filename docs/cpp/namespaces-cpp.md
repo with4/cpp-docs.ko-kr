@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c7098727052ec9ef19614d011ace5981b54ce15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-c"></a>네임스페이스 (C++)
 네임스페이스는 내부 식별자(형식, 함수, 변수 등의 이름)에 범위를 제공하는 선언적 영역입니다. 네임스페이스는 코드를 논리 그룹으로 구성하고 특히 코드베이스에 여러 라이브러리가 포함된 경우 발생할 수 있는 이름 충돌을 방지하는 데 사용됩니다. 네임스페이스 범위에 있는 모든 식별자는 한정 없이 서로에게 표시됩니다. 네임 스페이스 외부 식별자 예를 들어 각 식별자에 대 한 정규화 된 이름을 사용 하 여 멤버에 액세스할 수 `std::vector<std::string> vec;`, 또는 [선언을 사용 하 여](../cpp/using-declaration.md) 단일 식별자에 대 한 (`using std::string`), 또는 [지시문을 사용 하 여](../cpp/namespaces-cpp.md#using_directives) 네임 스페이스의 모든 식별자에 대 한 (`using namespace std;`). 헤더 파일의 코드는 항상 정규화된 네임스페이스 이름을 사용해야 합니다.  

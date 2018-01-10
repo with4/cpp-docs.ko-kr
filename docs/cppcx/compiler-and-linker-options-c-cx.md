@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 868e167e68cf2fba6a8252ba390ab73268a78005
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dc7610b56d55fc5d42a0c4b73a5405be3d4dda9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-and-linker-options-ccx"></a>컴파일러 및 링커 옵션(C++/CX)
 환경 변수를 C + + /cli CX 컴파일러 옵션 및 링커 옵션 Windows 런타임에 대 한 앱의 빌드를 지원 합니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 |/WINMDKEYCONTAINER:*name*|어셈블리에 서명할 키 컨테이너를 지정합니다. *name* 매개 변수는 메타데이터 파일에 서명하는 데 사용되는 키 컨테이너에 해당합니다.|  
 |/WINMDKEYFILE:*filename*|어셈블리에 서명할 키 또는 키 쌍을 지정합니다. *filename* 매개 변수는 메타데이터 파일에 서명하는 데 사용되는 키에 해당합니다.|  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  **/ZW**를 사용하면 컴파일러는 CRT(C 런타임)의 DLL 버전에 자동으로 연결됩니다. 정적 라이브러리 버전에 연결할에 허용 되지 않습니다 및 유니버설 Windows 플랫폼 앱에서 허용 되지 않는 CRT 함수를 사용 하면 컴파일 타임 오류가 발생 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

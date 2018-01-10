@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9f7f9cfe98e243cb9eaa0252889b61e6c6019d89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1ee6738d55f2a925c510ff342cd289f26bc8669
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>싱글바이트 및 멀티바이트 문자 집합
 ASCII 문자 집합은 0x00 - 0x7F 범위의 문자를 정의합니다. 주로 유럽의 많은 문자 집합은 ASCII 문자 집합과 동일하게 0x00 - 0x7F 범위 내 문자를 정의할 뿐만 아니라 0x80 - 0xFF 범위의 확장명 문자 집합도 정의합니다. 따라서 ASCII 문자 집합은 물론 많은 유럽 언어의 문자 집합을 표현하는 데에는 8비트의 `SBCS`(싱글바이트 문자 집합)만으로도 충분합니다. 그러나 한국어와 같은 일부 비유럽 문자 집합에는 싱글바이트 코드 구성표로 표현할 수 있는 것보다 더 많은 문자가 있기 때문에 `MBCS`(멀티바이트 문자 집합) 인코딩이 필요합니다.  

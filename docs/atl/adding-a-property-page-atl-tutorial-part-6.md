@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90023486dd8e34195b2dd9f8a788f3f76235d407
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>속성 페이지 추가(ATL 자습서, 6부)
 속성 페이지는 필요한 경우를 공유할 수 있도록 별도 COM 개체로 구현 됩니다. 이 단계에서는 컨트롤에 속성 페이지를 추가 하려면 다음 작업을 수행 합니다.  

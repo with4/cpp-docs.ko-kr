@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,37 +23,22 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ab2b20591ded82dd17a38f5258dfe593f7e88fc8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 클래스
 이 클래스는 다른 개체에 포함 된 창을 구현 합니다.  
@@ -109,7 +93,7 @@ class CContainedWindowT : public TBase
 |[CContainedWindowT::m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|창 클래스의 원본 창 프로시저를 가리킵니다.|  
 |[CContainedWindowT::m_pObject](#m_pobject)|포함 하는 개체를 가리킵니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CContainedWindowT`다른 개체에 포함 된 창을 구현 합니다. `CContainedWindowT`창 프로시저는 메시지를 적절 한 처리기에 직접 메시지를 포함 하는 개체에 매핑합니다. 생성할 때는 `CContainedWindowT` 개체를 사용 해야 하는 어떤 메시지 맵을 지정 합니다.  
   
  `CContainedWindowT`기존 창 클래스 슈퍼 클 래 싱 하 여 새 창을 만들 수 있습니다. **만들기** 메서드는 먼저 기존 클래스에 기반 하는 창 클래스 등록 `CContainedWindowT::WindowProc`합니다. **만들** 그런 다음이 새 창 클래스를 기반으로 창을 만듭니다. 각 인스턴스에 `CContainedWindowT` 슈퍼 클래스는 다양 한 창 클래스를 수 있습니다.  
@@ -121,18 +105,18 @@ class CContainedWindowT : public TBase
   
  사용 하는 경우는 **컨트롤 추가 기준** 옵션 ATL 프로젝트 마법사에서 마법사가 자동으로 추가 `CContainedWindowT` 컨트롤을 구현 하는 클래스 데이터 멤버입니다. 다음 예제에서는 포함된 된 창의 선언 하는 방법을 보여 줍니다.  
   
- [!code-cpp[NVC_ATL_Windowing # 38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
   
- [!code-cpp[NVC_ATL_Windowing # 39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
   
- [!code-cpp[NVC_ATL_Windowing # 40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
   
-|추가 정보|참조|  
+|추가 정보|보기|  
 |--------------------------------|---------|  
 |컨트롤 만들기|[ATL 자습서](../../atl/active-template-library-atl-tutorial.md)|  
 |ATL에서 창 사용하기|[ATL 창 클래스](../../atl/atl-window-classes.md)|  
 |ATL 프로젝트 마법사|[ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)|  
-|창|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) 및 후속 항목에는[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) 및 Windows SDK의 후속 항목|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `TBase`  
@@ -237,10 +221,10 @@ HWND Create(
  [in] 창 이름을 지정합니다. 기본값은 **NULL**합니다.  
   
  `dwStyle`  
- [in] 창 스타일입니다. 기본값은 **WS_CHILD | WS_VISIBLE**합니다. 가능한 값 목록은 참조 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ [in] 창 스타일입니다. 기본값은 **WS_CHILD &#124; WS_VISIBLE**합니다. 가능한 값 목록은 참조 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows sdk에서입니다.  
   
  `dwExStyle`  
- [in] 확장된 창 스타일입니다. 기본값은 0, 의미 없는 확장된 스타일입니다. 가능한 값 목록은 참조 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ [in] 확장된 창 스타일입니다. 기본값은 0, 의미 없는 확장된 스타일입니다. 가능한 값 목록은 참조 하십시오. [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
   
  `MenuOrID`  
  [in] 에 대 한 자식 창, 창 식별자입니다. 최상위 창에 대 한 메뉴 창에 대 한 처리 합니다. 기본값은 **0U**합니다.  
@@ -251,7 +235,7 @@ HWND Create(
 ### <a name="return-value"></a>반환 값  
  성공 하면 새로 만든된 창에 핸들 그렇지 않으면 **NULL**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기존 창 클래스 이름에 저장 됩니다 [m_lpszClassName](#m_lpszclassname)합니다. **만들** 그런 다음이 새 클래스를 기반으로 창을 만듭니다. 새로 만든된 창에 자동으로 연결 되는 `CContainedWindowT` 개체입니다.  
   
 > [!NOTE]
@@ -304,7 +288,7 @@ const _ATL_MSG* GetCurrentMessage();
 DWORD m_dwMsgMapID;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메시지 맵은 포함 하는 개체에 선언 되어야 합니다.  
   
  기본 메시지 맵을 사용 하 여 선언 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), 항상 0으로 식별 됩니다. 대체 메시지 맵을 사용 하 여 선언 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map),으로 식별 되 `msgMapID`합니다.  
@@ -318,7 +302,7 @@ DWORD m_dwMsgMapID;
 LPTSTR m_lpszClassName;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  창을 만들 때 [만들기](#create) 이 기존 클래스에 기반 하는 새 창 클래스 등록 [CContainedWindowT::WindowProc](#windowproc)합니다.  
   
  `m_lpszClassName`생성자에 의해 초기화 됩니다. 예를 들어 참조는 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) 개요입니다.  
@@ -342,7 +326,7 @@ WNDPROC m_pfnSuperWindowProc;
 CMessageMap* m_pObject;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  해당 클래스에서 파생 되어야이 컨테이너 [CMessageMap](../../atl/reference/cmessagemap-class.md), 포함 된 창에서 사용 하는 메시지 맵을 선언 합니다.  
   
  `m_pObject`생성자에 의해 초기화 됩니다. 예를 들어 참조는 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) 개요입니다.  
@@ -374,7 +358,7 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="return-value"></a>반환 값  
  **True 이면** 창이 서브클래싱된 않으면 고, 그렇지 않으면 **FALSE**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  서브클래싱된 창을 사용 하 여 이제 [CContainedWindowT::WindowProc](#windowproc)합니다. 원본 창 프로시저에 저장 된 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)합니다.  
   
 > [!NOTE]
@@ -391,7 +375,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
  `dwMsgMapID`  
  [in] 메시지 맵 식별자입니다. 기본 메시지 맵을 사용 하려면 사용 하 여 선언 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), 0을 전달 합니다. 대체 메시지 맵을 사용 하려면 사용 하 여 선언 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), 전달 `msgMapID`합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  메시지 맵은 포함 하는 개체에 정의 되어야 합니다.  
   
  처음 생성자에 메시지 맵 식별자를 지정 합니다.  
@@ -440,7 +424,7 @@ static LRESULT CALLBACK WindowProc(
 ### <a name="return-value"></a>반환 값  
  메시지 처리의 결과입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `WindowProc`메시지 맵에 식별 되는 메시지를 보냅니다 [m_dwMsgMapID](#m_dwmsgmapid)합니다. 필요한 경우 `WindowProc` 호출 [DefWindowProc](#defwindowproc) 추가 메시지 처리에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
@@ -450,4 +434,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

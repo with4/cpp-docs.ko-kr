@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -22,8 +21,7 @@ f1_keywords:
 - ATLTIME/ATL::CTimeSpan::GetTotalMinutes
 - ATLTIME/ATL::CTimeSpan::GetTotalSeconds
 - ATLTIME/ATL::CTimeSpan::Serialize64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - elapsed time, CTimeSpan object
 - timespan
@@ -32,30 +30,16 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: b82b12f33ee3cad1da9acad0fb2cd81c6dcb6e82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cedf05bd8f5af198569891b4d6d59610d5098eb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctimespan-class"></a>CTimeSpan 클래스
 시간 범위의 시간 (초)의 수로 내부적으로 저장 된 시간의 양입니다.  
@@ -95,7 +79,7 @@ class CTimeSpan
 |-|-|  
 |[연산자 +-](#operator_add_-)|추가 하 고 뺍니다 `CTimeSpan` 개체입니다.|  
 |[operator + = =](#operator_add_eq_-_eq)|추가 하 고 뺍니다는 `CTimeSpan` 개체와이 `CTimeSpan`합니다.|  
-|[연산자 = =<>](#ctimespan_comparison_operators)|두 개의 상대 시간 값을 비교합니다.|  
+|[연산자 = = < 등입니다.](#ctimespan_comparison_operators)|두 개의 상대 시간 값을 비교합니다.|  
   
 ## <a name="remarks"></a>설명  
  `CTimeSpan`기본 클래스는 없습니다.  
@@ -133,8 +117,8 @@ bool operator>=(CTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  이러한 연산자는 두 개의 상대 시간 값을 비교합니다. 반환 **true** 조건이 true이 고, 그렇지 않으면 **false**합니다.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_ATLMFC_Utilities # 169](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_1.cpp)]  
+### <a name="example"></a>예  
+ [!code-cpp[NVC_ATLMFC_Utilities#169](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_1.cpp)]  
   
 ##  <a name="ctimespan"></a>CTimeSpan::CTimeSpan  
  생성 `CTimeSpan` 다양 한 방법으로 개체입니다.  
@@ -155,19 +139,19 @@ CTimeSpan(
  A `CTimeSpan` 이미 있는 개체입니다.  
   
  `time`  
- A **__time64_t** 수 시간 (초)는 시간 범위에서 수 시간 값입니다. Visual c + + 버전 6.0 및 이전 버전을 `time` 의 값이 `time_t`합니다. Visual c + +.NET 나중에 자동으로 변환 하거나 한 `time_t` 매개 변수를 **__time64_t**합니다.  
+ A **__time64_t** 수 시간 (초)는 시간 범위에서 수 시간 값입니다.  
   
  `lDays`, `nHours`, `nMins`, `nSecs`  
  일, 시간, 분 및 초, 각각.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이러한 모든 생성자는 새 만들 `CTimeSpan` 개체가 지정된 된 상대 시간을 사용 하 여 초기화 합니다. 다음은 각 생성자에 대 한 설명입니다.  
   
-- **CTimeSpan ();** 초기화 되지 않은 생성 `CTimeSpan` 개체입니다.  
+- **CTimeSpan ();**  초기화 되지 않은 생성 `CTimeSpan` 개체입니다.  
   
-- **CTimeSpan (const CTimeSpan / /);** 생성 한 `CTimeSpan` 개체에서 다른 `CTimeSpan` 값입니다.  
+- **CTimeSpan (const CTimeSpan & a);**  생성 한 `CTimeSpan` 개체에서 다른 `CTimeSpan` 값입니다.  
   
-- **CTimeSpan (__time64_t);** 생성 한 `CTimeSpan` 에서 개체는 **__time64_t** 유형입니다.  
+- **CTimeSpan (__time64_t);**  생성 한 `CTimeSpan` 에서 개체는 **__time64_t** 유형입니다.  
   
 - **CTimeSpan (긴**, **int, int, int);** 생성 한 `CTimeSpan` 각 구성 요소와 구성 요소에서 개체는 다음 범위를 제한 합니다.  
   
@@ -180,8 +164,8 @@ CTimeSpan(
   
  시간 구성 요소 중 하나 하는 경우 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션하는 이상의 범위를 벗어났습니다. 프로그램을 호출 하기 전에 인수의 유효성을 검사 합니다.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_ATLMFC_Utilities # 162](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_2.cpp)]  
+### <a name="example"></a>예  
+ [!code-cpp[NVC_ATLMFC_Utilities#162](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_2.cpp)]  
   
 ##  <a name="format"></a>CTimeSpan::Format  
  에 해당 하는 형식이 지정 된 문자열을 생성 `CTimeSpan`합니다.  
@@ -215,8 +199,8 @@ CString Format(UINT nID) const;
 ### <a name="remarks"></a>설명  
  라이브러리의 디버그 버전 형식 지정 코드를 확인 하 고 코드 위 목록에 없으면 어설션 합니다.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_ATLMFC_Utilities # 163](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_3.cpp)]  
+### <a name="example"></a>예  
+ [!code-cpp[NVC_ATLMFC_Utilities#163](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_3.cpp)]  
   
 ##  <a name="getdays"></a>CTimeSpan::GetDays  
  두 일 수를 나타내는 값을 반환 `CTimeSpan`합니다.  
@@ -231,8 +215,8 @@ LONGLONG GetDays() const throw();
 ### <a name="remarks"></a>설명  
  일광 절약 시간으로 지정 하면 참고 `GetDays` 잠재적으로 놀라운 결과를 반환 합니다. 예를 들어 DST 경우 실제로 **GetDays** 4 월에서 1 일 한 시간 단축 및 전체 일으로 계산 하지 않습니다 때문에 30이 아닌 29로 사이의 년 4 월 1에서 5 월 1 일 수를 보고 합니다.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_ATLMFC_Utilities # 164](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_4.cpp)]  
+### <a name="example"></a>예  
+ [!code-cpp[NVC_ATLMFC_Utilities#164](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_4.cpp)]  
   
 ##  <a name="gethours"></a>CTimeSpan::GetHours  
  (23 23 까지입니다)은 현재 날짜의 시간 수를 나타내는 값을 반환 합니다.  
@@ -244,8 +228,8 @@ LONG GetHours() const throw();
 ### <a name="return-value"></a>반환 값  
  현재 날짜에 시간 수를 반환합니다. 범위는 23 23 까지입니다.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_ATLMFC_Utilities # 165](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_5.cpp)]  
+### <a name="example"></a>예  
+ [!code-cpp[NVC_ATLMFC_Utilities#165](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_5.cpp)]  
   
 ##  <a name="getminutes"></a>CTimeSpan::GetMinutes  
  현재 시간 (-59에서 59 사이)에 분 수를 나타내는 값을 반환 합니다.  
@@ -257,7 +241,7 @@ LONG GetMinutes() const throw();
 ### <a name="return-value"></a>반환 값  
  현재 시간에서 분 수를 반환합니다. 범위는-59에서 59 사이입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [GetHours](#gethours)합니다.  
   
 ##  <a name="getseconds"></a>CTimeSpan::GetSeconds  
@@ -270,7 +254,7 @@ LONG GetSeconds() const throw();
 ### <a name="return-value"></a>반환 값  
  현재 분의 시간 (초) 수를 반환 합니다. 범위는-59에서 59 사이입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [GetHours](#gethours)합니다.  
   
 ##  <a name="gettimespan"></a>CTimeSpan::GetTimeSpan  
@@ -293,8 +277,8 @@ LONGLONG GetTotalHours() const throw();
 ### <a name="return-value"></a>반환 값  
  이 전체 시간 총 수를 반환 합니다. `CTimeSpan`합니다.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_ATLMFC_Utilities # 166 증가](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_6.cpp)]  
+### <a name="example"></a>예  
+ [!code-cpp[NVC_ATLMFC_Utilities#166](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_6.cpp)]  
   
 ##  <a name="gettotalminutes"></a>CTimeSpan::GetTotalMinutes  
  이 분의 총 수를 나타내는 값을 반환 `CTimeSpan`합니다.  
@@ -306,7 +290,7 @@ LONGLONG GetTotalMinutes() const throw();
 ### <a name="return-value"></a>반환 값  
  이 분의 총 수를 반환 합니다. `CTimeSpan`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [GetTotalHours](#gettotalhours)합니다.  
   
 ##  <a name="gettotalseconds"></a>CTimeSpan::GetTotalSeconds  
@@ -319,7 +303,7 @@ LONGLONG GetTotalSeconds() const throw();
 ### <a name="return-value"></a>반환 값  
  이 총 경과 된 초 수를 반환 합니다. `CTimeSpan`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [GetTotalHours](#gettotalhours)합니다.  
   
 ##  <a name="operator_add_-"></a>CTimeSpan::operator +,-  
@@ -337,11 +321,11 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 ### <a name="return-value"></a>반환 값  
  A `CTimeSpan` 작업의 결과 나타내는 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이러한 두 연산자를 사용 하면 추가 하 고 빼는 `CTimeSpan` 개체와 다른 합니다.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_ATLMFC_Utilities # 167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]  
+### <a name="example"></a>예  
+ [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]  
   
 ##  <a name="operator_add_eq_-_eq"></a>CTimeSpan::operator + =, =  
  추가 하 고 뺍니다는 `CTimeSpan` 개체와이 `CTimeSpan`합니다.  
@@ -361,8 +345,8 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 ### <a name="remarks"></a>설명  
  이러한 연산자를 사용 하면 추가 하 고 빼는 `CTimeSpan` 개체와이 `CTimeSpan`합니다.  
   
-### <a name="example"></a>예제  
- [!code-cpp[NVC_ATLMFC_Utilities # 168](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_8.cpp)]  
+### <a name="example"></a>예  
+ [!code-cpp[NVC_ATLMFC_Utilities#168](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_8.cpp)]  
   
 ##  <a name="serialize64"></a>CTimeSpan::Serialize64  
   
@@ -391,6 +375,5 @@ CArchive& Serialize64(CArchive& ar);
  [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 공유 클래스](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
 
 

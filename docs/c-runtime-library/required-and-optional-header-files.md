@@ -17,16 +17,17 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45e9d2e6940955b07624b89cafd09b7d89d9cd2c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dde09f2125b595ffb3d79a69b4755353a0116bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="required-and-optional-header-files"></a>필수 및 선택적 헤더 파일
 각 런타임 루틴에 대한 설명에는 해당 루틴의 필수 및 선택적 포함 또는 헤더(.H) 파일의 목록이 포함됩니다. 루틴에 대한 함수 선언 또는 내부적으로 호출되는 다른 루틴에 사용되는 정의를 가져오려면 필수 헤더 파일을 포함해야 합니다. 선택적 헤더 파일은 미리 정의된 상수, 형식 정의 또는 인라인 매크로를 활용하기 위해 일반적으로 포함됩니다. 다음 표에서는 선택적 헤더 파일 콘텐츠의 몇 가지 예를 나열합니다.  
   
-|정의|예제|  
+|정의|예|  
 |----------------|-------------|  
 |매크로 정의|라이브러리 루틴이 매크로로 구현되는 경우 원래 루틴에 대한 헤더 파일이 아닌 다른 헤더 파일에 매크로 정의가 있을 수 있습니다. 예를 들어 `_toupper` 매크로는 헤더 파일 CTYPE.H에 정의되고 `toupper` 함수는 STDLIB.H에 선언됩니다.|  
 |미리 정의된 상수|많은 라이브러리 루틴이 헤더 파일에 정의된 상수를 참조합니다. 예를 들어 `_open` 루틴은 헤더 파일 FCNTL.H에 정의된 `_O_CREAT`와 같은 상수를 사용합니다.|  

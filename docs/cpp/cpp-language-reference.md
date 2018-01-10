@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5421447cfbe1e1bd8f5d25d80c492d10b1469e0f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-reference"></a>C++ 언어 참조
 이 참조는 Microsoft Visual C++에서 구현되는 것처럼 C++ 프로그래밍 언어를 설명합니다. 조직에 따라 *The Annotated c + + Reference Manual* 구성은 Margaret Ellis와 Bjarne Stroustrup이 만든 및 ANSI/ISO c + + 국제 표준 (FDIS ISO/IEC 14882). C++ 언어 기능의 Microsoft 전용 구현이 포함되어 있습니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [C++ 연산자](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
 
  [어휘 규칙](../cpp/lexical-conventions.md)  
  C++ 프로그램의 기본적인 어휘 요소에는 토큰, 주석, 연산자, 키워드, 문장 부호, 리터럴이 있습니다. 또한 파일 변환, 연산자 우선 순위/결합성이 있습니다.  

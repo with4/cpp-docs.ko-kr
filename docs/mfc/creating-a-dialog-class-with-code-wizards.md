@@ -18,18 +18,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 99a1784de9385e39d79168f7532f7da64489bfc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c4df515940500fd81d1d85c793d77a35785832d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>코드 마법사로 대화 상자 클래스 만들기
 다음 표에서 관리 코드 마법사 데 도움이 되는 대화 관련 태스크를 나열 합니다.  
   
 ### <a name="dialog-related-tasks"></a>대화 상자 관련 작업  
   
-|작업|에 적용 됩니다. 입니다. 입니다.|  
+|작업|에 적용 됩니다. 이어야 합니다. 이어야 합니다.|  
 |----------|--------------------|  
 |[CDialog에서 파생 된 새 클래스 만들기](../mfc/creating-your-dialog-class.md) 대화 상자를 관리 하기.|각 대화 상자입니다.|  
 |[Windows 메시지 매핑](../mfc/handling-windows-messages-in-your-dialog-box.md) 대화 상자 클래스에 있습니다.|각 메시지를 처리 합니다.|  

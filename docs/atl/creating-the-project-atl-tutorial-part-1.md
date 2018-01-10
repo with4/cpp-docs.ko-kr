@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d10aa6a3f7220103ae6a3b9e57b9b3c42cd8739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a9a5fc9a0d2175a419bbc0fb1aacbc9ea25006c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>프로젝트 만들기(ATL 자습서, 1부)
 이 자습서에서는 다각형을 표시 하는 ActiveX 개체를 생성 하지 않는 ATL 프로젝트를 단계별로 합니다. 개체는 화면을 새로 고치려면 다각형, 및 코드를 구성 하는 양쪽의 수를 변경 하 고 사용자에 대 한 옵션을 포함 합니다.  

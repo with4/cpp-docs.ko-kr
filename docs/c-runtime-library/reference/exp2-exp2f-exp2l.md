@@ -33,37 +33,22 @@ f1_keywords:
 - math/exp2f
 - exp2l
 - math/exp2l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exp2 function
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 4c3e31359c096dddfc7d71dcd7887c405b9aa0af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2ceff966e289fd3118cdd515fb4fbc288080b0f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 지정된 된 값으로 2를 계산 합니다.  
@@ -115,7 +100,7 @@ long double exp2l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|C 헤더|C++ 헤더|  
+|루틴에서 반환된 값|C 헤더|C++ 헤더|  
 |-------------|--------------|------------------|  
 |`exp`, `expf`, `expl`|\<math.h>|\<cmath>|  
   

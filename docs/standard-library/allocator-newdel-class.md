@@ -4,30 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - allocators/stdext::allocators::allocator_newdel
 - allocators/stdext::allocator_newdel
 - stdext::allocators::allocator_newdel
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 430e55c1252eb1f1dabbdd39a6a72c76a14459a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 9a86e9f1939c455e4dd9a3bb5c0c2fd252438fba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatornewdel-class"></a>allocator_newdel 클래스
 `operator delete`를 사용하여 메모리 블록의 할당을 취소하고 `operator new`를 사용하여 메모리 블록을 할당하는 할당자를 구현합니다.  
@@ -55,7 +53,6 @@ class allocator_newdel;
   
 ## <a name="see-also"></a>참고 항목  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

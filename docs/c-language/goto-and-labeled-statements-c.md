@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab5bfa5b145f698b1c93c4a494802cd63bbcfb04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea0543a13d16850be4259d2d93f763dd0edcbda3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 및 레이블 문 (C)
 `goto` 문은 레이블에 제어를 전송합니다. 지정된 레이블은 동일한 함수에 있어야 하며 동일한 함수에서 하나의 문 앞에만 나타날 수 있습니다.  

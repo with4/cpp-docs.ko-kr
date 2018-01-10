@@ -16,17 +16,18 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6787786022d0cc58fae6b4510a3675f0da21ba6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 298fc14c57ad006228da39d1eb7d664debebd904
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-winver-and-win32winnt"></a>WINVER 및 _WIN32_WINNT 수정
 
 Visual C++에서는 더 이상 Windows 95, Windows 98, Windows ME, Windows NT 또는 Windows 2000을 대상으로 지정할 수 없습니다. **WINVER** 또는 **_WIN32_WINNT** 매크로가 이러한 Windows 버전 중 하나에 할당되어 있으면 해당 매크로를 수정해야 합니다. **WINVER** 또는 **_WIN32_WINNT** 매크로가 더 이상 지원되지 않는 Windows 버전에 할당되어 있는 경우 이전 버전의 Visual C++를 사용하여 만든 프로젝트를 업그레이드하면 해당 매크로와 관련된 컴파일 오류가 표시될 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
 
 매크로를 수정하려면 헤더 파일(예: Windows를 대상으로 하는 프로젝트를 만들 때 포함된 targetver.h)에서 다음 줄을 추가합니다.  
   

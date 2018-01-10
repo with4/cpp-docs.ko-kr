@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator!=
-- random/std::discrete_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::discrete_distribution [C++]
 - std::discrete_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dbd82957b213a88792d7dba8a7e7dc17b8b28bb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 092185d577b28b0507be554d48e4dacf0439e60c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 클래스
 각 간격의 확률이 균일하고 폭이 균등한 간격이 있는 이산 정수 분포를 생성합니다.  
@@ -84,7 +81,7 @@ public:
 ```   
 #### <a name="parameters"></a>매개 변수  
 *IntType*  
- 정수 결과 형식으로, 기본적으로 `int`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ 정수 결과 형식으로, 기본적으로 `int`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  이 표본 분포에는 각 간격의 확률이 균일하고 폭이 균등한 간격이 있습니다. 샘플링 분포에 대한 자세한 내용은 [piecewise_linear_distribution 클래스](../standard-library/piecewise-linear-distribution-class.md) 및 [piecewise_constant_distribution 클래스](../standard-library/piecewise-constant-distribution-class.md)를 참조하세요.  
@@ -98,9 +95,9 @@ public:
   
  속성 함수 `vector<double> probabilities()`는 생성된 각 정수에 대한 개별 확률을 반환합니다.  
   
- 분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ 분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -299,7 +296,6 @@ struct param_type {
   
 ## <a name="see-also"></a>참고 항목  
  [\<random>](../standard-library/random.md)
-
 
 
 

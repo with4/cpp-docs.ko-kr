@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec77e462b357708153f26b5289f35c2ee7b7a104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 두 값을 함께 곱하고, 세 번째 값을 더하고 나서, 결과를 반올림하면 중간 반올림으로 인한 정밀도 손실이 없습니다.  
@@ -105,10 +106,10 @@ long double fmal(
 |문제|반환|  
 |-----------|------------|  
 |`x` = INFINITY, `y` = 0 또는<br /><br /> `x` = 0, `y` = INFINITY|NaN|  
-|`x` 또는 `y` = 정확히 ± INFINITY, `z` = INFINITY(부호가 반대임)|NaN|  
+|`x`또는 `y` 정확한 ± 무한대 = `z` 부호가 다른 무한대 =|NaN|  
 |`x` 또는 `y` = NaN|NaN|  
 |not (`x` = 0, `y`= indefinite) 및 `z` = NaN<br /><br /> not (`x`=indefinite, `y`=0) 및 `z` = NaN|NaN|  
-|오버플로 범위 오류|±HUGE_VAL, ±HUGE_VALF 또는 ±HUGE_VALL|  
+|오버플로 범위 오류|±HUGE_VAL, ±HUGE_VALF, 또는 ±HUGE_VALL|  
 |언더플로 범위 오류|올바른 값, 반올림 후.|  
   
  오류는 [_matherr](../../c-runtime-library/reference/matherr.md)에 지정된 대로 보고됩니다.  

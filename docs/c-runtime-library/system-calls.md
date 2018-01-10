@@ -17,18 +17,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4de63e6ded4e2bd4b0aaf29d3e934db00ba0e2cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aee53285b2953ae5eac63737f1854f9b01dbd5b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-calls"></a>시스템 호출
 다음 함수는 Windows 운영 체제 호출입니다.  
   
 ### <a name="system-call-functions"></a>시스템 호출 함수  
   
-|함수|기능|  
+|함수|사용|  
 |--------------|---------|  
 |[_findclose](../c-runtime-library/reference/findclose.md)|이전 찾기 작업에서 리소스를 해제합니다.|  
 |[_findfirst, _findfirst32, _findfirst64, _findfirsti64, _findfirst32i64, _findfirst64i32, _wfindfirst, _wfindfirst32, _wfindfirst64, _wfindfirsti64, _wfindfirst32i64, _wfindfirst64i32](../c-runtime-library/reference/findfirst-functions.md)|지정된 특성의 파일을 찾습니다.|  

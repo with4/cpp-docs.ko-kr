@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0ad9b7eba172a5ff5c88c2848d54a14af229526
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39d234b4184565057d2925a1aa44369c2d1c3e2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-variables-and-standard-types"></a>전역 변수 및 표준 형식
 Microsoft 런타임 라이브러리에는 라이브러리 루틴에 사용되는 [전역 변수](../c-runtime-library/global-variables.md), [제어 플래그](../c-runtime-library/control-flags.md) 및 [표준 형식](../c-runtime-library/standard-types.md)에 대한 정의가 포함됩니다. 이러한 변수, 플래그 및 형식에 액세스하려면 프로그램에서 선언하거나 적절한 헤더 파일을 포함하십시오.  

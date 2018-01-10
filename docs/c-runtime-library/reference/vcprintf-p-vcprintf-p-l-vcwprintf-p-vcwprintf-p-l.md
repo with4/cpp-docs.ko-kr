@@ -52,11 +52,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a04c78f70f1d1338e1c5578b4cb9a641aea30c73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0909838cb526212d52d156f9af0366bcdcb7f4f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 인수 목록에 대한 포인터를 사용하여 서식 있는 출력을 콘솔에 기록하고 형식 문자열에서 위치 매개 변수를 지원합니다.  
@@ -116,7 +117,7 @@ int _vcwprintf_p_l(
   
  이 함수는 입력 포인터와 형식 문자열의 유효성을 검사합니다. `format` 또는 `argument`가 `NULL`이거나 형식 문자열에 잘못된 형식 지정 문자가 포함되어 있는 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 이러한 함수가 -1을 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -125,14 +126,14 @@ int _vcwprintf_p_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_vcprintf_p`, `_vcprintf_p_l`|\<conio.h> 및 \<stdarg.h>|  
 |`_vcwprintf_p`, `_vcwprintf_p_l`|\<conio.h> 및 \<stdarg.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_vcprintf_p.c  

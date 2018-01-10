@@ -38,11 +38,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ff8aa3f62a50ae544de61953054bd8906ed5971
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 814145a5efade94da53830bf6448d7e5422027bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 문자열을 long 배정밀도 부동 소수점 값으로 변환합니다.  
@@ -88,7 +89,7 @@ long double wcstold_l(
  반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- 각 함수는 입력 문자열 `nptr`을 `long double`로 변환합니다. `strtold` 함수는 `nptr`을 long 배정밀도 값으로 변환합니다. `strtold`는 숫자의 일부분으로 인식할 수 없는 첫 문자에서 문자열 `nptr` 읽기를 중지합니다. 이 문자는 종료 null 문자일 수 있습니다. `strtold`의 와이드 문자 버전은 `wcstold`입니다. 이 함수의 `nptr` 인수는 와이드 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 동작합니다.  
+ 각 함수는 입력 문자열 `nptr`을 `long double`로 변환합니다. `strtold` 함수는 `nptr`을 long 배정밀도 값으로 변환합니다. `strtold`은 숫자의 일부분으로 인식할 수 없는 첫 문자에서 문자열 `nptr` 읽기를 중지합니다. 이 문자는 종료 null 문자일 수 있습니다. `strtold`의 와이드 문자 버전은 `wcstold`입니다. 이 함수의 `nptr` 인수는 와이드 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 동작합니다.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
@@ -97,7 +98,7 @@ long double wcstold_l(
 |`_tcstold`|`strtold`|`strtold`|`wcstold`|  
 |`_tcstold_l`|`_strtold_l`|`_strtold_l`|`_wcstold_l`|  
   
- 현재 로캘의 `LC_NUMERIC` 범주 설정에 따라 `nptr`의 기수 문자 인식이 결정됩니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 함수는 현재 로캘을 사용합니다. `_strtold_l` 및 `_wcstold_l`은 전달된 로캘을 대신 사용한다는 점을 제외하면 `_strtold` 및 `_wcstold`와 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 현재 로캘의 `LC_NUMERIC` 범주 설정에 따라 `nptr`의 기수 문자 인식이 결정됩니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 함수는 현재 로캘을 사용합니다. `_strtold_l` 및 `_wcstold_l`은 전달된 로캘을 대신 사용한다는 점을 제외하면 `_strtold` 및 `_wcstold`와 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `endptr`이 `NULL`이 아니면 검색을 중지한 문자에 대한 포인터가 `endptr`에서 가리키는 위치에 저장됩니다. 올바른 숫자를 찾을 수 없거나 잘못된 밑을 지정하여 변환을 수행할 수 없는 경우에는 `nptr`의 값이 `endptr`에서 가리키는 위치에 저장됩니다.  
   
@@ -109,14 +110,14 @@ long double wcstold_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`strtold`, `_strtold_l`|\<stdlib.h>|  
 |`wcstold`, `_wcstold_l`|\<stdlib.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_strtold.c  

@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 01d200e716ce4291350584ac7e2f388cca30cedf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e96e9a692622d17c24d4d73b7249f70a1593bf61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-validation"></a>매개 변수 유효성 검사
 대부분의 보안이 강화된 CRT 함수 및 여러 기존 함수는 해당 매개 변수의 유효성을 검사합니다. 여기에는 NULL에 대한 포인터 검사, 정수가 올바른 범위에 포함되어 있는지 검사 또는 열거형 값이 올바른지 검사가 포함될 수 있습니다. 잘못된 매개 변수가 검색되면 잘못된 매개 변수 처리기가 실행됩니다.  

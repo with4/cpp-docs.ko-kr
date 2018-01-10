@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d369c2e3a0d326ab4c835a30681f3dbe50f789f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db7decc4efb1a3f6bb457623489c84e0ad1ae1f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8   Parallel Sections 지정
 다음 예에서 (에 대 한 [섹션 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) 페이지 14) 함수 *xaxis*, *yaxis*, 및 *zaxis* 동시에 실행할 수 있습니다. 첫 번째 `section` 지시문은 선택 사항입니다.  모든 `section` 지시문의 어휘 범위에 표시할 필요는 `parallel sections` 생성 합니다.  

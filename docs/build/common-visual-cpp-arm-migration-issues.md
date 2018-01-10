@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 458272a769fd1ce2076b6d80f5b3977a7c2ea7b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39902d953702703a4367be24bf6c1cd011863289
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>일반적인 Visual C++ ARM 마이그레이션 문제
 
@@ -67,7 +68,7 @@ ARM 아키텍처에서 값으로 이동할 수 왼쪽 또는 오른쪽 최대 25
   
 ### <a name="variable-arguments-varargs-behavior"></a>가변 인수 (varargs) 동작  
 
-ARM 아키텍처에서 스택에 전달 되는 가변 인수 목록에서 매개 변수 맞춤 적용 됩니다. 예를 들어 64 비트 매개 변수는 64 비트 경계에 정렬 됩니다. X86 및 x64에서 인수는 스택에 전달 되는 적용 되지 않습니다 맞춤 및 팩 긴밀 하 게. 이러한 차이 같은 variadic 함수 하면 `printf` 메모리 주소를 ARM에 안쪽 여백으로 가변 인수 목록의 예상 되는 레이아웃 정확 하 게 일치 하지 않는 경우 x86 일부 값의 하위 집합에 대 한 못할 경우에 읽을 수 또는 x64 아키텍처. 다음 예제를 고려해 보십시오.  
+ARM 아키텍처에서 스택에 전달 되는 가변 인수 목록에서 매개 변수 맞춤 적용 됩니다. 예를 들어 64 비트 매개 변수는 64 비트 경계에 정렬 됩니다. X86 및 x64에서 인수는 스택에 전달 되는 적용 되지 않습니다 맞춤 및 팩 긴밀 하 게. 이러한 차이 같은 variadic 함수 하면 `printf` 메모리 주소를 ARM에 안쪽 여백으로 가변 인수 목록의 예상 되는 레이아웃 정확 하 게 일치 하지 않는 경우 x86 일부 값의 하위 집합에 대 한 못할 경우에 읽을 수 또는 x64 아키텍처. 다음 예제를 고려해 보세요.  
   
 ```C  
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.  
@@ -113,4 +114,4 @@ Microsoft c + + 컴파일러의 서로 다른 두 가지로 해석 지원는 `vo
   
 ## <a name="see-also"></a>참고 항목  
 
-[ARM 프로세서에 대 한 Visual c + + 구성](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[ARM 프로세서에 대한 Visual C++ 구성](../build/configuring-programs-for-arm-processors-visual-cpp.md)

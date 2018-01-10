@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 977c13eabe0f25081b1bfe6b25e615002f0e6987
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1a727920ffe5e79bd62fd877e191dc6f6f3cc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>잠재적인 업그레이드 문제 개요(Visual C++)
 지난 몇 년 동안 C++ 언어 자체, C++ 표준 라이브러리, C 런타임(CRT) 및 MFC, ATL 등의 기타 라이브러리의 변경과 함께 Visual C++ 컴파일러에서 많은 변화가 있었습니다. 결과적으로, 이전 버전의 Visual C++에서 응용 프로그램을 업그레이드할 때 이전에는 정상적으로 컴파일된 코드에서 컴파일러 및 링커 오류와 경고가 발생할 수 있습니다. 원래 코드베이스가 오래될수록 이러한 오류 가능성이 커집니다. 이 개요에서는 발생할 수 있는 가장 일반적인 문제 클래스를 요약하고 자세한 정보 링크를 제공합니다.  

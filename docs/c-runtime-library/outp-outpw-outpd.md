@@ -44,11 +44,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac8f0cd386d8fece71f47b5c3d2048bead7cca1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edcb3f8da6252705fe494acaa64c623b8a22ed3b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 포트에서 바이트(`_outp`), 워드(`_outpw`) 또는 2배 워드(`_outpd`)를 출력합니다.  
@@ -94,7 +95,7 @@ unsigned long dataword
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_outp`|\<conio.h>|  
 |`_outpw`|\<conio.h>|  

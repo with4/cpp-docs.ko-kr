@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc3f87c5841ce99219ba0d5bac55e70852df632d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 981e8c04b305ccef12a463b0a4defd3017916b82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-time-error-checking"></a>런타임 오류 검사
 C 런타임 라이브러리에는 RTC(런타임 오류 검사)를 지원하는 함수가 포함되어 있습니다. 런타임 오류 검사를 사용하면 특정 런타임 오류 종류가 보고되도록 프로그램을 빌드할 수 있습니다. 오류가 보고되는 방법과 보고되는 오류 종류를 지정합니다. 자세한 내용은 [방법: 네이티브 런타임 검사 기능 사용](/visualstudio/debugger/how-to-use-native-run-time-checks)을 참조하세요.  
@@ -30,7 +31,7 @@ C 런타임 라이브러리에는 RTC(런타임 오류 검사)를 지원하는 �
   
 ### <a name="run-time-error-checking-functions"></a>런타임 오류 검사 함수  
   
-|함수|기능|  
+|함수|사용|  
 |--------------|---------|  
 |[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|런타임 오류 검사 형식에 대한 간단한 설명을 반환합니다.|  
 |[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|런타임 오류 검사에서 발견될 수 있는 총 오류 수를 반환합니다.|  

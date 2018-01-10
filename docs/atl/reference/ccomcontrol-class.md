@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ddbd18ac39721dd80eb547e53c7708891b94aa9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae81e2b6beac11f94f8d117b004da2f8d0db8724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcontrol-class"></a>CComControl 클래스
 이 클래스는 만들고 ATL 컨트롤을 관리 하기 위한 메서드를 제공 합니다.  
@@ -119,7 +120,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="remarks"></a>설명  
  에서는 COM 맵 테이블의 인터페이스만 처리 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
 ##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
@@ -139,7 +140,7 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="remarks"></a>설명  
  되돌리기 작업을 수행 하려는 경우이 메서드를 재정의 합니다. 이외의 다른 단일 창을 만들고, 예를 들어 두 개의 창을 만들려면 중 하나는 되는 도구 모음 컨트롤에 대 한 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
 ##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
@@ -161,7 +162,7 @@ HRESULT FireOnChanged(DISPID dispID);
   
  이 메서드는 안전 컨트롤 연결 지점을 지원 하지 않는 경우에 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
 ##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
@@ -184,7 +185,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
   
  이 메서드는 안전 컨트롤 연결 지점을 지원 하지 않는 경우에 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
 ##  <a name="messagebox"></a>CComControl::MessageBox  

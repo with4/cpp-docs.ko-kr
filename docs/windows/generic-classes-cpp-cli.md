@@ -1,35 +1,37 @@
 ---
-title: "Generic Classes (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes [C++], generic"
-  - "generic classes [C++], about generic classes"
-  - "data types [C++], generic"
-  - "generic classes"
-  - "generics [C++], declaring generic classes"
+title: "제네릭 클래스 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- classes [C++], generic
+- generic classes [C++], about generic classes
+- data types [C++], generic
+- generic classes
+- generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 33
-caps.handback.revision: 31
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "33"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Generic Classes (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-제네릭 클래스는 다음 형식을 사용하여 선언됩니다.  
+# <a name="generic-classes-ccli"></a>제네릭 클래스(C++/CLI)
+제네릭 클래스는 다음과 같은 형식을 사용 하 여 선언 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 [attributes]  
@@ -38,49 +40,49 @@ generic <class-key type-parameter-identifier(s)>
 [accessibility-modifiers] ref class identifier  [modifiers]  
 [: base-list]   
 {  
-   class-body  
+class-body  
 } [declarators] [;]  
 ```  
   
-## 설명  
- 위의 구문에는 다음과 같은 용어가 사용 됩니다.  
+## <a name="remarks"></a>설명  
+ 위의 구문에서 다음과 같은 용어가 사용 됩니다.  
   
- `attributes`\(선택적 요소\)  
- 추가 선언 정보입니다.  특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조 하십시오.  
+ `attributes`(선택 사항)  
+ 추가 선언 정보입니다. 특성 및 특성 클래스에 대한 자세한 내용은 특성을 참조하십시오.  
   
  *클래스 키*  
- `class` 또는 `typename` 입니다.  
+ 중 하나 `class` 또는`typename`  
   
- *형식\-매개 변수\-식별자*,  
+ *형식-매개 변수-식별자*,  
  형식 매개 변수의 이름을 지정 하는 식별자의 쉼표로 구분 된 목록입니다.  
   
  *제약 조건 절*  
- 형식 매개 변수에 대한 제약 조건을 지정 하는 **where** 절\(쉼표 구분 없습니다\) .  이 형식을 사용합니다.  
+ 목록 (쉼표로 분리 되지) **여기서** 형식 매개 변수에 대 한 제약 조건을 지정 하는 절. 형식을 사용 합니다.  
   
- `where`  *type\-parameter\-identifier*  `:`  *constraint\-list*  `...`  
+ `where`  *형식 매개 변수 식별자*`:`*제약 조건 목록*   `...`  
   
  *제약 조건 목록*  
- *class\-or\-interface*\[`,` *...*\]  
+ *클래스 또는 인터페이스*[`,` *...* ]  
   
- *표시 한정자*  
- 제네릭 클래스에 대한 액세스가능성 한정자입니다.  [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]인 경우에, 사용할 수 있는 유일한 한정자는 `private`입니다.  공용 언어 런타임에서, 허용된 한정자는 `private` 와 `public`입니다.  
+ *액세스 가능성 한정자*  
+ 제네릭 클래스에 대 한 액세스 가능성 한정자입니다. 유일한 허용된 한정자는 Windows 런타임용 `private`합니다. 허용 된 한정자는 공용 언어 런타임에 대해 `private` 및 `public`합니다.  
   
  *identifier*  
- 제네릭 클래스의 이름은 유효한 C\+\+ 식별자입니다.  
+ 제네릭 클래스는 올바른 c + + 식별자의 이름입니다.  
   
- *한정자*\(선택적\)  
- 허용된 한정자는 `sealed` 및  **추상**을 포함합니다.  
+ *한정자* (선택 사항)  
+ 한정자를 포함 하는 허용 된 `sealed` 및 **추상**합니다.  
   
  *기본 목록*  
- 하나의 기본 클래스와 포함 하는 목록의 인터페이스 목록이며 모두 쉼표로 구분됩니다.  
+ 와 하나의 기본 클래스를 포함 하는 목록을 모두 쉼표로 인터페이스를 구현 합니다.  
   
  *클래스 본문*  
- 클래스 본문, 포함하는 필드, 멤버 함수 등.  
+ 필드, 멤버 함수 등을 포함 하는 클래스의 본문입니다.  
   
- *선언자*  
- 이 형식의 변수를 선언 합니다.  For example: `^`*identifier*`,` ...\]  
+ *선언 자*  
+ 이 형식의 모든 변수를 선언 합니다. 예를 들어: `^` *식별자*[`,` ...]  
   
- 이러한 제네릭 클래스를 선언할 수 있습니다 \(키워드 **class**는 **typename** 대신 사용할 수 있습니다\).  이 예제에서,  `ItemType`, `KeyType` 및 `ValueType` 은 지점에 지정된 형식을 알 수 없는 형식입니다.  `HashTable<int, int>` 는 `HashTable<KeyType, ValueType>`의 제너릭 형식의 생성 형식입니다.  단일 제네릭 형식에서 생성된 다른 형식의 숫자를 생성할 수 있습니다.  제네릭 클래스에서 생성된 생성된 형식은 다른 ref 클래스 형식과 마찬가지로 취급 됩니다.  
+ 이와 같은 제네릭 클래스를 선언할 수 있습니다 (유의 키워드 **클래스** 대신 사용할 수 있습니다 **typename**). 이 예제에서는 `ItemType`, `KeyType` 및 `ValueType` 지점에 지정 된 알 수 없는 형식이 있는 형식입니다. `HashTable<int, int>`제네릭 형식의 생성 된 형식인 `HashTable<KeyType, ValueType>`합니다. 단일 제네릭 형식에서 서로 다른 생성 된 형식의 숫자를 생성할 수 있습니다. 생성 된 형식 제네릭 클래스에서 생성 된 다른 ref 클래스 형식 처럼 취급 됩니다.  
   
 ```  
 // generic_classes_1.cpp  
@@ -104,9 +106,9 @@ int main() {
 }  
 ```  
   
- 값 형식 \(`int` 또는 `double`, 또는 사용자 정의 값 형식과 같은 기본 제공 형식\) 및 참조 형식은 제네릭 형식 인수로 사용할 수 있습니다.  제네릭 정의에서 구문 같은 관계입니다.  구문적으로, 알 수 없는 형식은 참조 형식 처럼 취급 됩니다.  그러나, 런타임은 형식이 실제로 값 형식으로 사용되고 멤버에게 직접 액세스하는 적절한 생성된 코드를 대신할 지 결정할 수 있습니다.  제네릭 형식 인수로 사용 되는 값 형식은 boxed 되지 않았고 따라서 boxing과 관련된 성능 저하를 발생 하지 않습니다.  제네릭의 본문에서 사용 된 구문은 **.** 대신 **T^** 과 '**\-\>**' 이어야 합니다.  형식 매개 변수로 [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 사용은 만약 형식 인수가 값 형식이라면 값 형식의 간단한 생성으로서 런타임을 적절하게 해석할 수 있습니다.  
+ 둘 다 값 형식 (같은 기본 제공 형식은 `int` 또는 `double`, 또는 사용자 정의 값 형식) 하며 참조 형식을 제네릭 형식 인수로 사용할 수 있습니다. 제네릭 정의 내에서 구문은 관계 없이 동일 합니다. 구문적으로 알 수 없는 형식이 참조 형식 처럼 처리 됩니다. 그러나 런타임에 실제로 사용 되는 형식이 값 형식인 경우를 확인 하 고 멤버에 직접 액세스 하기 위해 적절 한 생성 된 코드를 대체 하는 작업을 수 있습니다. 값 형식을 제네릭 형식 인수로 사용 되는 boxed 되지 및 따라서 boxing와 관련 된 성능 저하가 발생 하지 않습니다. 제네릭의 본문 내에서 사용 되는 구문 해야 **T ^** 및 '**->**' 대신의 '**.**'. 사용 하려면 [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 형식에 대 한 매개 변수 적절 하 게 해석 됩니다 런타임에서 간단한 만들기는 값 형식으로 형식 인수가 값 형식입니다.  
   
- 제네릭 클래스를 형식 매개변수로 쓰이는 형식에 [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) 로 선언될 수 있습니다.  다음 예제에서는  \\`ItemType` 의 어느 형식도 `IItem` 인터페이스를 구현해야 합니다.  예를 들어  `IItem`  을 구현 하지 않는 `int` 사용 시도는 제약 조건을 만족하지 않는 형식 인수이기 때문에 컴파일 타임 오류가 발생합니다.  
+ 사용 하는 제네릭 클래스를 선언할 수도 있습니다 [제네릭 형식 매개 변수에 대 한 제약 조건 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) 형식 매개 변수에 대해 사용할 수 있는 형식에 있습니다. 다음 예제에서는 모든 형식에 대 한 사용 `ItemType` 구현 해야 합니다는 `IItem` 인터페이스입니다. 사용 하려고 하면 `int`, 예를 들어를 구현 하지 않은 `IItem`, 형식 인수는 제약 조건을 만족 하지 않는 때문에 컴파일 타임 오류가 발생 합니다.  
   
 ```  
 // generic_classes_2.cpp  
@@ -117,7 +119,7 @@ where ItemType : IItem
 ref class Stack {};  
 ```  
   
- 동일한 네임 스페이스의 제네릭 클래스는 형식 매개변수의 종류 또는 수만 변경하여 오버 로드 할 수 없습니다.  그러나, 다른 네임 스페이스에 거주 하는 각 클래스인 경우, 오버 로드 할 수 있습니다.  예를 들어, 다음 두 클래스를 생각해봅니다. `A` 및 `B`의 `MyClass` 및 `MyClass<ItemType>`.  두 개의 클래스는 세 번째 네임 스페이스 C에서 오버 로드될 수 있습니다.  
+ 제네릭 클래스는 동일한 네임 스페이스에서만 수 또는 형식 매개 변수 형식을 변경 하 여 오버 로드할 수 없습니다. 그러나 각 클래스는 다른 네임 스페이스에 거주 하 고, 경우 이러한 오버 로드할 수 있습니다. 예를 들어 다음 두 클래스 `MyClass` 및 `MyClass<ItemType>`, 네임 스페이스에서 `A` 및 `B`합니다. 두 클래스 c: 세 번째 네임 스페이스에 오버 로드할 수 있습니다.  
   
 ```  
 // generic_classes_3.cpp  
@@ -144,7 +146,7 @@ namespace C {
 }  
 ```  
   
- 기본 인터페이스와 기본 클래스는 형식 매개변수가 될 수 없습니다.  그러나, 다음과 같은 경우 인수로 기본 클래스는 형식 매개 변수를 포함할 수 있습니다.  
+ 기본 클래스 및 기본 인터페이스 형식 매개 변수가 될 수 없습니다. 그러나 기본 클래스를 인수로 다음과 같은 경우 처럼 형식 매개 변수를 포함할 수 있습니다.:  
   
 ```  
 // generic_classes_4.cpp  
@@ -156,16 +158,16 @@ generic <typename ItemType>
 ref class MyClass : IInterface<ItemType> {};  
 ```  
   
- 생성자와 소멸자는 각 개체 인스턴스에 대해 한 번만 실행 됩니다 \(일반적으로\). 정적 생성자는 생성 된 각 형식에 대해 한 번씩 실행 됩니다.  
+ 생성자 및 소멸자 한 번씩 실행 됩니다 각 개체 인스턴스 (일반적으로); 정적 생성자는 생성 된 각 형식에 대 한 한 번 실행 됩니다.  
   
-## 제네릭 클래스의 필드  
- 이 단원에서는 제네릭 클래스에 있는 정적 필드와 인스턴스의 사용을 설명합니다.  
+## <a name="fields-in-generic-classes"></a>제네릭 클래스의 필드  
+ 이 섹션 인스턴스와 제네릭 클래스의 정적 필드의 사용을 보여 줍니다.  
   
-### 인스턴스 변수  
- 제네릭 클래스의 인스턴스 변수는 형식과 바깥쪽 클래스의 형식 매개 변수를 포함 하는 변수 이니셜라이저를 가질 수 있습니다.  
+### <a name="instance-variables"></a>인스턴스 변수  
+ 제네릭 클래스의 인스턴스 변수 형식 및 바깥쪽 클래스의 모든 형식 매개 변수를 포함 하는 변수 이니셜라이저를 가질 수 있습니다.  
   
-## 예제  
- 다음 예제에서는 제네릭 클래스 MyClass\<ItemType\> 의 세 가지 다른 인스턴스를 적절한 형식 인수로 사용 하여 만들어집니다 \(`int`, **double**, 및 **string**\).  
+## <a name="example"></a>예  
+ 다음 예제에서는 제네릭 클래스인 MyClass의 세 가지 서로 다른 인스턴스\<ItemType >를 적절 한 형식 인수를 사용 하 여 생성 됩니다 (`int`, **double**, 및 **문자열**).  
   
 ```  
 // generics_instance_fields1.cpp  
@@ -199,16 +201,19 @@ int main() {
    }  
 ```  
   
-  **정수 필드 \= 123**  
-**이중 필드 \= 1.23**  
-**문자열 필드 \= ABC**   
-## 정적 변수  
- 새 제네릭 형식 만들기에서, 정적 변수의 모든 인스턴스를 새로 만들고 해당 형식에 대한 정적 생성자가 실행 됩니다.  
+```Output  
+Integer field = 123  
+Double field = 1.23  
+String field = ABC  
+```  
   
- 정적 변수는 바깥쪽 클래스의 형식 매개 변수를 사용할 수 있습니다.  
+## <a name="static-variables"></a>정적 변수  
+ 새 제네릭 형식의 생성 시 모든 정적 변수가의 새 인스턴스를 만들 하 고 해당 형식에 대 한 모든 정적 생성자 실행 됩니다.  
   
-## 예제  
- 다음 예제에서는 제네릭 클래스에는 정적 생성자 및 정적 필드 사용 하는 방법을 보여 줍니다.  
+ 정적 변수는 바깥쪽 클래스의 모든 형식 매개 변수를 사용할 수 있습니다.  
+  
+## <a name="example"></a>예  
+ 다음 예제에서는 정적 필드 및 제네릭 클래스 내의 정적 생성자를 사용 하 여 보여 줍니다.  
   
 ```  
 // generics_static2.cpp  
@@ -256,30 +261,33 @@ int main() {
 }  
 ```  
   
-  **정적 생성자가 호출 됩니다.**  
-**정적 생성자가 호출 됩니다.**  
-**정적 생성자가 호출 됩니다.**  
-**테스트 1**   
-## 제네릭 클래스의 메서드  
- 제네릭 클래스의 메서드는 제네릭이 스스로 될 수 있습니다. 제네릭이 아닌 메서드 클래스 형식 매개 변수로 암시적으로 매개 변수화 됩니다.  
+```Output  
+Static constructor called.  
+Static constructor called.  
+Static constructor called.  
+Test1  
+```  
   
- 제네릭 클래스에서 해당 메서드는 다음과 같은 특별한 규칙이 적용 됩니다.  
+## <a name="methods-in-generic-classes"></a>제네릭 클래스의 메서드  
+ 제네릭 클래스의 메서드는 제네릭이 될 수 있습니다; 자체 클래스 형식 매개 변수에 의해 제네릭이 아닌 메서드를 암시적으로 매개 변수화 됩니다.  
   
--   제네릭 클래스의 메서드는 매개 변수, 반환 형식 또는 로컬 변수 형식 매개 변수를 사용할 수 있습니다.  
+ 제네릭 클래스 내의 메서드는 다음과 같은 특별 한 규칙이 적용 됩니다.  
   
--   제네릭 클래스의 메서드는 매개 변수, 반환 형식 또는 로컬 변수 개방형 이나 폐쇄형 생성된 형식을 사용할 수 있습니다.  
+-   제네릭 클래스의 메서드 매개 변수, 반환 형식 또는 지역 변수 형식 매개 변수를 사용할 수 있습니다.  
   
-### 제네릭 클래스의 제네릭이 아닌 메서드  
- 추가 형식 매개 변수가 있는 제네릭 클래스의 메서드는 바깥쪽 제네릭 클래스의 매개 변수가 암시적으로 되어 있지만 일반적으로 제네릭이 아닌 라고 합니다.  
+-   제네릭 클래스의 메서드 매개 변수, 반환 형식, 나 지역 변수 개방형 또는 폐쇄형의 생성 된 형식을 사용할 수 있습니다.  
   
- 직접 또는 개방형 생성된 형식이 제네릭이 아닌 메서드의 시그니처와 바깥쪽 클래스의 하나 이상의 형식 매개 변수를 포함할 수 있습니다.  예를 들면 다음과 같습니다.  
+### <a name="non-generic-methods-in-generic-classes"></a>제네릭 클래스의 제네릭이 아닌 메서드  
+ 추가 형식 매개 변수가 없는 제네릭 클래스의 메서드는 바깥쪽 제네릭 클래스에 의해 암시적으로 변수 있지만 일반적으로 제네릭이 아닌 라고 합니다.  
+  
+ 제네릭이 아닌 메서드 시그니처 직접적으로 또는 개방형 생성된 형식에는 바깥쪽 클래스의 하나 이상의 형식 매개 변수를 포함할 수 있습니다. 예:  
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
- 이러한 메서드의 본문에서 이러한 형식 매개 변수를 사용할 수도 있습니다.  
+ 이러한 메서드의 본문 이러한 형식 매개 변수를 사용할 수도 있습니다.  
   
-## 예제  
- 다음 예제에서는 제네릭이 아닌 메서드 `ProtectData` 를 제네릭 클래스 `MyClass<ItemType>` 안에서 선언합니다.  메서드는 개방형 생성된 형식에서 해당 시그니처에게 클래스 형식 매개 변수 `ItemType`를 사용합니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 비 제네릭 메서드를 선언 `ProtectData`, 제네릭 클래스, `MyClass<ItemType>`합니다. 메서드 클래스 형식 매개 변수를 사용 하 여 `ItemType` 개방형 생성된 형식에 서명 부분에 있습니다.  
   
 ```  
 // generics_non_generic_methods1.cpp  
@@ -329,12 +337,15 @@ int main() {
 }  
 ```  
   
-  **Name: Jeff Smith**  
-**Amount: $123.00\*\***   
-## 제네릭 클래스의 제네릭 메서드  
- 제네릭과 비 제네릭 클래스에서 제너릭 메서드를 선언할 수 있습니다.  예를 들면 다음과 같습니다.  
+```Output  
+Name: Jeff Smith  
+Amount: $123.00**  
+```  
   
-## 예제  
+## <a name="generic-methods-in-generic-classes"></a>제네릭 클래스의 제네릭 메서드  
+ 제네릭 및 제네릭이 아닌 클래스의 제네릭 메서드를 선언할 수 있습니다. 예:  
+  
+## <a name="example"></a>예  
   
 ```  
 // generics_method2.cpp  
@@ -356,12 +367,12 @@ public:
 };  
 ```  
   
- 제네릭이 아닌 메서드는 여전히 클래스의 형식 매개 변수로 매개 변수화 되지만 추가 형식 매개 변수는 갖고 있지 않습니다.  
+ 제네릭이 아닌 메서드는 클래스의 형식 매개 변수에 의해 매개 변수화 된 하지만 추가 형식 개이고 의미에서 여전히 일반적입니다.  
   
- 제네릭 클래스의 모든 메서드 타입은 정적, 인스턴스 및 가상 메서드를 포함해서 제너릭이 될 수 있습니다.  
+ 모든 유형의 제네릭 클래스의 메서드는 제네릭를 포함 하 여 정적, 인스턴스 및 가상 메서드 수 있습니다.  
   
-## 예제  
- 다음 예제에서는 제네릭 클래스 내에서 제네릭 메서드를 사용하고 선언하는 것을 설명합니다.  
+## <a name="example"></a>예  
+ 다음 예제에는 선언 및 제네릭 클래스 내에서 제네릭 메서드를 사용 하 여 보여 줍니다.  
   
 ```  
 // generics_generic_method2.cpp  
@@ -402,11 +413,14 @@ int main() {
 }  
 ```  
   
-  **MyMethod 반환: 12**  
-**MyMethod 반환: Hello \#1**  
-**MyMethod 반환: Hello World\!**   
-## 제네릭 클래스에서 중첩 된 형식을 사용  
- 일반 클래스와 마찬가지로 제네릭 클래스 내부에 다른 형식을 선언할 수 있습니다.  중첩된 클래스 선언은 외부 클래스 선언의 형식 매개 변수에 의해 암시적으로 매개변수화 됩니다.  따라서 각 중첩 된 클래스는 생성된 각 외부 형식에 대해 정의 됩니다.  에를 들어 선언에서.  
+```Output  
+MyMethod returned: 12  
+MyMethod returned: Hello #1  
+MyMethod returned: Hello World!  
+```  
+  
+## <a name="using-nested-types-in-generic-classes"></a>제네릭 클래스에서 중첩 된 형식 사용  
+ 일반 클래스와 마찬가지로 제네릭 클래스 내의 다른 형식을 선언할 수 있습니다. 중첩된 클래스 선언은 암시적으로 외부 클래스 선언의 형식 매개 변수로 매개 변수화 됩니다. 따라서 별도 중첩 된 클래스는 생성 된 각 외부 형식에 대해 정의 됩니다. 선언에서 예를 들어  
   
 ```  
 // generic_classes_5.cpp  
@@ -417,9 +431,9 @@ ref struct Outer {
 };  
 ```  
   
- Outer\<int\>::Inner 형식은 Outer\<double\>::Inner 형식과 다릅니다.  
+ 외부 형식\<int >:: 내부 형식을 외부 동일 않습니다\<double >:: 내부 합니다.  
   
- 제네릭 클래스의 제네릭 메서드의 경우와 마찬가지로 중첩된 형식에 대해 추가 형식 매개 변수를 정의할 수 있습니다.  형식 매개 변수 이름이 동일한 내부 및 외부 클래스를 사용 하면 내부 형식 매개 변수가 외부 형식 매개 변수가 숨겨집니다.  
+ 제네릭 클래스의 제네릭 메서드의 경우와 마찬가지로 중첩 된 형식에 대 한 추가 형식 매개 변수를 정의할 수 있습니다. 내부 및 외부 클래스에서 동일한 형식 매개 변수 이름을 사용 하는 경우 내부 형식 매개 변수가 외부 형식 매개 변수가 숨겨집니다.  
   
 ```  
 // generic_classes_6.cpp  
@@ -435,13 +449,13 @@ ref class Outer {
 };  
 ```  
   
- 바깥쪽 형식 매개 변수를 참조할 수 없으므로 컴파일러는 이 상황에서 경고를 생성 합니다.  
+ 외부 형식 매개 변수를 참조할 수 없으므로 이므로 컴파일러는 이러한 상황에서는 경고를 만듭니다.  
   
- 생성 된 중첩 된 제네릭 형식에 이름을 지정 하는 경우, 내부 형식이 바깥쪽 형식의 형식 매개 변수로 암시적으로 매개 변수화 되더라도, 바깥쪽 형식의 형식 매개 변수는 내부 형식에 대한 형식 매개 변수 목록에 포함 되지 않습니다.  위의 경우, 생성 된 형식의 이름은  Outer\<int\>::Inner\<string\> 입니다.  
+ 생성 된 중첩 된 제네릭 형식을 이름을 지정 하는 경우 내부 형식이 암시적으로 외부 형식의 형식 매개 변수에 의해 매개 변수화 하는 경우에 외부 형식에 대 한 형식 매개 변수는 내부 형식에 대 한 형식 매개 변수 목록에 포함 되지 않습니다. 위의 경우에 생성 된 형식의 이름 것 Outer\<int >:: 내부\<문자열 > 합니다.  
   
- 다음 예제는 제네릭 클래스에서 중첩 형식을 사용하여 연결된 목록을 읽고 빌드하는 방법을 설명합니다.  
+ 다음 예제에서는 작성 및 읽기 제네릭 클래스에서 중첩 된 형식을 사용 하 여 연결된 된 목록을 보여 줍니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // generics_linked_list.cpp  
@@ -517,30 +531,33 @@ int main() {
 }  
 ```  
   
-  **목록 작성:**  
-**0.1**  
-**0.2**  
-**0.3**  
-**0.4**  
-**0.5**  
-**노드 읽기:**  
-**0.5**  
-**0.4**  
-**0.3**  
-**0.2**  
-**0.1**   
-## 제네릭 클래스의 속성, 이벤트, 인덱서 및 연산자  
+```Output  
+Building the list:  
+0.1  
+0.2  
+0.3  
+0.4  
+0.5  
+Reading nodes:  
+0.5  
+0.4  
+0.3  
+0.2  
+0.1  
+```  
   
--   속성, 이벤트, 인덱서 및 연산자는 `ItemType`가 클래스의 형식 매개변수 일 때, 반환 값, 매개 변수, 및 지역 변수로 제네릭 클래스를 포함하는 형식 매개 변수를 사용합니다.  
+## <a name="properties-events-indexers-and-operators-in-generic-classes"></a>속성, 이벤트, 인덱서 및 제네릭 클래스 연산자  
+  
+-   속성, 이벤트, 인덱서 및 연산자 반환 값, 매개 변수, 또는 예를 들어 지역 변수는 바깥쪽 제네릭 클래스의 형식 매개 변수를 사용할 수 `ItemType` 클래스의 형식 매개 변수:  
   
     ```  
     public ItemType MyProperty {}  
     ```  
   
--   속성, 이벤트, 인덱서 및 연산자는 자체 매개 변수화 될 수 없습니다.  
+-   속성, 이벤트, 인덱서 및 연산자를 자체 매개 사용할 수 없습니다.  
   
-## 예제  
- 이 예제에는 제네릭 클래스 내에서 인스턴스 속성의 선언을 보여 줍니다.  
+## <a name="example"></a>예  
+ 이 예제에는 제네릭 클래스 내의 인스턴스 속성의 선언을 보여 줍니다.  
   
 ```  
 // generics_generic_properties1.cpp  
@@ -574,9 +591,12 @@ int main() {
 }  
 ```  
   
-  **John, 234**   
-## 예제  
- 다음 예제에서는 이벤트를 사용 하여 제네릭 클래스를 보여 줍니다.  
+```Output  
+John, 234  
+```  
+  
+## <a name="example"></a>예  
+ 다음 예제에서는 이벤트와 제네릭 클래스를 보여 줍니다.  
   
 ```  
 // generics_generic_with_event.cpp  
@@ -637,11 +657,11 @@ int main() {
 }  
 ```  
   
-## 제네릭 구조체  
- 제네릭 구조체를 선언하고 이용하는 규칙은 Visual C\+\+ 언어 참조에서 설명한 차이점을 제외 하면 제네릭 클래스와 동일 합니다.  
+## <a name="generic-structs"></a>제네릭 구조체  
+ 규칙을 선언 하 고 제네릭 구조체를 사용 하 여 Visual c + + 언어 참조에서에 명시 된 차이점을 제외 하면 일반 클래스에 대 한 것과 동일 합니다.  
   
-## 예제  
- 다음 예제에서는 필드 하나를 사용하여 제네릭 구조체, `MyGenStruct`, `myField`을 선언하고, 이 필드에 다양한 형식의 값 \(`int`, **double**, **String^**\)을 할당합니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 제네릭 구조체를 선언 `MyGenStruct`, 필드가 하나 있는 `myField`, 서로 다른 형식의 값을 할당 하 고 (`int`, **double**, **문자열 ^**)이이 필드에 있습니다.  
   
 ```  
 // generics_generic_struct1.cpp  
@@ -680,8 +700,11 @@ int main() {
 }  
 ```  
   
-  **정수 값 123이 필드에 할당 됩니다.**  
-**더블 값 0.123이 필드에 할당 됩니다.**  
-**문자열 Hello Generics\! 가 필드에 할당 됩니다.**   
-## 참고 항목  
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+The field is assigned the integer value: 123  
+The field is assigned the double value: 0.123  
+The field is assigned the string: Hello Generics!  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [제네릭](../windows/generics-cpp-component-extensions.md)

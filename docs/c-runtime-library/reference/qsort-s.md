@@ -33,11 +33,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 834441e90cb6656f308673e8475b1cc2e38fd3a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 333473d0b0b7e50e2b0faebef02835dcaf577440
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsorts"></a>qsort_s
 빠른 정렬을 수행합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안이 향상된 [qsort](../../c-runtime-library/reference/qsort.md) 버전입니다.  
@@ -93,24 +94,24 @@ compare( context, (void *) & elem1, (void *) & elem2 );
   
 |key|base|compare|num|너비|errno|  
 |---------|----------|-------------|---------|-----------|-----------|  
-|`NULL`|모두|모두|모두|모두|`EINVAL`|  
-|모두|`NULL`|모두|!= 0|모두|`EINVAL`|  
-|모두|모두|모두|any|<= 0|`EINVAL`|  
-|모두|모두|`NULL`|모두|모두|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|<= 0|`EINVAL`|  
+|any|any|`NULL`|any|any|`EINVAL`|  
   
  `qsort_s`의 경우 동작은 `qsort`와 동일하지만 `context` 매개 변수를 포함하며 `errno`를 설정합니다. `context` 매개 변수를 전달하면 비교 함수가 개체 포인터를 사용하여 요소 포인터를 통해서는 액세스할 수 없는 기타 정보나 개체 기능에 액세스할 수 있습니다. 추가 `context` 매개 변수를 사용 하면 `qsort_s` 되므로 더욱 안전한 `context` 는 공유 정보를 사용할 수 있도록 정적 변수를 사용 하 여 도입 하는 재진입 버그를 방지 하는 데 사용할 수는 `compare` 함수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`qsort_s`|\<stdlib.h> 및 \<search.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
  **라이브러리:** 모든 버전의 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 사용 하는 방법을 `context` 에서 매개 변수는 `qsort_s` 함수입니다. `context` 매개 변수를 사용하면 스레드로부터 안전한 정렬을 보다 쉽게 수행할 수 있습니다. 스레드 보안을 유지하기 위해 동기화해야 하는 정적 변수를 사용하는 대신 각 정렬에서 다른 `context` 매개 변수를 전달합니다. 이 예제에서는 로캘 개체가 `context` 매개 변수로 사용됩니다.  
   
 ```  

@@ -1,50 +1,51 @@
 ---
-title: "/HIGHENTROPYVA(64비트 ASLR 지원) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "-HIGHENTROPYVA (64 비트 ASLR 지원) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 059f6169cafc48fc67587ae2f5827966269e6ac7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /HIGHENTROPYVA(64비트 ASLR 지원)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-실행 가능 이미지가 높은 엔트로피 64비트 ASLR\(Address Space Layout Randomization\)을 지원하도록 지정합니다.  
+# <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA(64비트 ASLR 지원)
+실행 가능 이미지가 높은 엔트로피 64비트 ASLR(Address Space Layout Randomization)을 지원하도록 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /HIGHENTROPYVA[:NO]  
 ```  
   
-## 설명  
- 기본적으로는 \/HIGHENTROPYVA는 64비트 실행 가능 이미지에 대해 설정되며  32비트 실행 가능 이미지에는 적용되지 않습니다.  이 옵션을 사용하도록 설정하려면 \/DYNAMICBASE가 설정되어 있어야 합니다.  
+## <a name="remarks"></a>설명  
+ 기본적으로는 /HIGHENTROPYVA는 64비트 실행 가능 이미지에 대해 설정되며 32비트 실행 가능 이미지에는 적용되지 않습니다. 이 옵션을 사용하도록 설정하려면 /DYNAMICBASE가 설정되어 있어야 합니다.  
   
- \/HIGHENTROPYVA는 64비트 주소를 사용하는 ASLR이 지원되는지 여부를 나타내기 위해 .dll 파일 또는 .exe 파일의 헤더를 수정합니다.  실행 파일과 해당 파일이 종속된 모든 모듈에 대해 이 옵션을 설정하면 64비트 ASLR을 지원하는 운영 체제가 64비트 가상 주소 공간에서 임의 주소를 사용하여 로그 시에 실행 가능 이미지의 세그먼트 기준 주소를 다시 지정할 수 있습니다.  이처럼 큰 주소 공간을 사용하는 경우 공격자가 특정 메모리 영역의 위치를 추측하기가 어려워집니다.  
+ /HIGHENTROPYVA는 64비트 주소를 사용하는 ASLR이 지원되는지 여부를 나타내기 위해 .dll 파일 또는 .exe 파일의 헤더를 수정합니다. 실행 파일과 해당 파일이 종속된 모든 모듈에 대해 이 옵션을 설정하면 64비트 ASLR을 지원하는 운영 체제가 64비트 가상 주소 공간에서 임의 주소를 사용하여 로그 시에 실행 가능 이미지의 세그먼트 기준 주소를 다시 지정할 수 있습니다. 이처럼 큰 주소 공간을 사용하는 경우 공격자가 특정 메모리 영역의 위치를 추측하기가 어려워집니다.  
   
-### Visual Studio에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Visual Studio에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)을 참조하십시오.  
+1.  프로젝트 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **구성 속성** 노드를 확장합니다.  
+2.  확장 된 **구성 속성** 노드.  
   
-3.  **링커** 노드를 확장합니다.  
+3.  확장 된 **링커** 노드.  
   
-4.  **명령줄** 속성 페이지를 선택합니다.  
+4.  선택 된 **명령줄** 속성 페이지.  
   
-5.  **추가 옵션**에서 `/HIGHENTROPYVA` 또는 `/HIGHENTROPYVA:NO`를 입력합니다.  
+5.  **추가 옵션**, 입력 `/HIGHENTROPYVA` 또는 `/HIGHENTROPYVA:NO`합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

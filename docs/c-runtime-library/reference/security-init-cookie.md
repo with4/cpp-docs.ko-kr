@@ -34,11 +34,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 249fc38a36ee0f3a61b6347b48219154bada7d22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee0657393ec8322889b527c21a36c13b9e032325
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 전역 보안 쿠키를 초기화합니다.  
@@ -56,16 +57,16 @@ void __security_init_cookie(void);
   
  `__security_init_cookie`는 오버런 방지 함수에 진입하기 전에 호출해야 합니다. 그렇지 않으면 가상 버퍼 오버런이 검색됩니다. 자세한 내용은 [C 런타임 오류 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [C 런타임 오류 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)의 예제를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`__security_init_cookie`|\<process.h>|  
   
  `__security_init_cookie`는 표준 C 런타임 라이브러리에 대한 Microsoft 확장입니다. 호환성에 대한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [컴파일러 보안 심층 검사](http://go.microsoft.com/fwlink/?linkid=7260)
+ [컴파일러 보안 심층 검사](http://go.microsoft.com/fwlink/p/?linkid=7260)

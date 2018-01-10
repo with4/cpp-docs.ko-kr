@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c54b6e9716e7f0aee9a0b211148b76804d9520bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS 및 MBCS 데이터 형식
 하나의 멀티바이트 문자 또는 1바이트의 멀티바이트 문자만 처리하는 모든 Microsoft `MBCS` 런타임 라이브러리 루틴에는 `unsigned int` 인수가 필요합니다. 여기서 0x00 <= 문자 값 <= 0xFFFF이고 0x00 <= 바이트 값 <= 0xFF입니다. 문자열 컨텍스트의 문자 또는 멀티바이트 바이트를 처리하는 `MBCS` 루틴에서는 멀티바이트 문자열을 `unsigned char` 포인터로 표현해야 합니다.  

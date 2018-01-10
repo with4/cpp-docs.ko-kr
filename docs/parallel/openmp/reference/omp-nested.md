@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 911ccd3e03b2d9d7f7fa14f01a8cbf0d166832d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d90d43727227593cccbd3d885f71f5cabaf10429
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompnested"></a>OMP_NESTED
 중첩 된 병렬 처리 하지 않을 지와 사용 하지 않도록 설정 하지 않으면 중첩 된 병렬 처리는 활성화 여부를 지정 `omp_set_nested`합니다.  
@@ -37,7 +38,7 @@ set OMP_NESTED[=TRUE | =FALSE]
   
  자세한 내용은 참조 [4.4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령 집합의 `OMP_NESTED` 환경 변수를 true로:  
   
 ```  

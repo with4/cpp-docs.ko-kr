@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea3d4c2461579fcafc4f9ff7ba5071572229c640
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 033d772a40ddf55474ca845c9c5708423bcf5e90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="one-dimensional-arrays"></a>1차원 배열
 대괄호(**[ ]**) 안의 식이 뒤따르는 후위 식은 배열 개체 요소의 첨자가 있는 표현입니다. 첨자식은 다음과 같이 표현될 때 *postfix-expression*을 벗어나는 *expression* 위치의 주소에 있는 값을 나타냅니다.  

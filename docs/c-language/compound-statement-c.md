@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 369ff1b3097e79fa0da50a82647bbf6ac62464e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9422e3229aa5e800859f50e1ca058e32a4120074
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compound-statement-c"></a>복합 문 (C)
 "블록"이라고도 하는 복합 문은 일반적으로 **if** 문 같은 다른 문의 본문으로 나타납니다. [선언 및 형식](../c-language/declarations-and-types.md)에서는 복합 문 헤드에 나타날 수 있는 선언의 형태와 의미에 대해 설명합니다.  

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb39b5089b7cd4849e5afd3eaac239c0c2ab3adf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04619ee7851d2e2d6ad569583dfbb2e619d37026
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-objects-and-data-sources-ole"></a>데이터 개체 및 데이터 소스(OLE)
 클립보드 또는 끌어 놓기를 사용 하 여 데이터 전송을 수행 하는 경우 데이터 원본 및 대상에 있습니다. 응용 프로그램 하나를 복사 하기 위한 데이터를 제공 하 고 다른 응용 프로그램 붙여 넣기 위해 수락 키를 누릅니다. 전송의 양쪽에 성공 하려면 전송에 대 한 동일한 데이터에서 다른 작업을 수행 해야 합니다. Microsoft Foundation 클래스 (MFC) 라이브러리에서는이 전송의 양쪽을 나타내는 두 개의 클래스를 제공 합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [데이터 개체 및 데이터 소스: 조작](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [끌어서 놓기](../mfc/drag-and-drop-ole.md)  
   
  [클립보드](../mfc/clipboard.md)  

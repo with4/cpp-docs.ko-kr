@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0355b1c6a2731c9ca82e7ced37ad28f30a881eca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>DLL 경계를 넘어 CRT 개체를 전달할 때 발생할 수 있는 오류
 파일 핸들, 로캘 및 환경 변수와 같은 CRT(C 런타임) 개체를 DLL 내외로 전달하면(DLL 경계를 넘어선 함수 호출) DLL과 DLL로 호출되는 파일에 다른 CRT 라이브러리 복사본이 사용될 경우 예기치 않은 동작이 발생할 수 있습니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  또한 CRT 라이브러리 복사본마다 자체 힙 관리자가 있기 때문에 한 CRT 라이브러리에서 메모리를 할당한 다음 다른 CRT 라이브러리 복사본에 의해 해제되도록 DLL 경계를 넘어 포인터를 전달하는 것은 힙 손상의 잠재적 원인이 될 수 있습니다. DLL이 경계를 넘어 CRT 개체를 전달하거나 메모리를 할당한 다음 DLL 외부에서 해제되도록 DLL을 디자인하면 DLL과 동일한 CRT 라이브러리 복사본을 사용하도록 DLL의 앱 클라이언트를 제한하게 됩니다. DLL 및 해당 클라이언트는 일반적으로 로드 타임에 둘 다 동일한 버전의 CRT DLL에 연결된 경우에만 동일한 CRT 라이브러리 복사본을 사용합니다. Windows 10의 Visual Studio 2015 이상에서 사용되는 유니버설 CRT 라이브러리의 DLL 버전은 이제 중앙에서 배포된 Windows 구성 요소인 ucrtbase.dll이므로 Visual Studio 2015 및 이상 버전으로 빌드한 앱에 대해 동일합니다. 그러나 CRT 코드가 동일하더라도 한 힙에 할당된 메모리를 다른 힙을 사용하는 구성 요소로 전달할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  이 예제에서는 DLL 경계를 넘어 파일 핸들을 전달합니다.  
@@ -75,7 +76,7 @@ int main(void)
 this is a string  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  이 예제에서는 DLL 경계를 넘어 환경 변수를 전달합니다.  

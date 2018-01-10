@@ -1,36 +1,38 @@
 ---
-title: "CDynamicParameterAccessor::GetParamStatus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::GetParamStatus"
-  - "CDynamicParameterAccessor.GetParamStatus"
-  - "ATL.CDynamicParameterAccessor.GetParamStatus"
-  - "ATL::CDynamicParameterAccessor::GetParamStatus"
-  - "GetParamStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamStatus 메서드"
+title: 'Cdynamicparameteraccessor:: Getparamstatus | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::GetParamStatus
+- CDynamicParameterAccessor.GetParamStatus
+- ATL.CDynamicParameterAccessor.GetParamStatus
+- ATL::CDynamicParameterAccessor::GetParamStatus
+- GetParamStatus
+dev_langs: C++
+helpviewer_keywords: GetParamStatus method
 ms.assetid: 9300225a-616c-4a7d-82d0-8c2ecd4d8185
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ecee1f92e1b8e5e185e1c193ae52161ab9032df8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParamStatus
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retrieves the status of the specified parameter stored in the buffer.  
+# <a name="cdynamicparameteraccessorgetparamstatus"></a>CDynamicParameterAccessor::GetParamStatus
+버퍼에 저장된 지정된 매개 변수의 상태를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -38,23 +40,23 @@ Retrieves the status of the specified parameter stored in the buffer.
    DBORDINAL nParam,  
    DBSTATUS* pStatus  
 );  
-DBSTATUS* GetParamStatus(   
-   DBORDINAL nParam    
+DBSTATUS* GetParamStatus(   
+   DBORDINAL nParam    
 ) const throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nParam`  
- \[in\] The parameter number \(offset from 1\).  Parameter 0 is reserved for return values.  The parameter number is the index of the parameter based on its order in the SQL or stored procedure call.  See [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) for an example.  
+ [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 참조 [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 예에 대 한 합니다.  
   
  `pStatus`  
- \[out\] A pointer to the variable containing the `DBSTATUS` status of the specified parameter.  For information on `DBSTATUS` values, see [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in the *OLE DB Programmer's Reference*, or search for `DBSTATUS` in oledb.h.  
+ [out] 포함 하는 변수가에 대 한 포인터는 `DBSTATUS` 지정된 된 매개 변수의 상태입니다. 에 대 한 내용은 `DBSTATUS` 값, 참조 [상태](https://msdn.microsoft.com/en-us/library/ms722617.aspx) 에 *OLE DB Programmer's Reference*, 검색 또는 `DBSTATUS` oledb.h에서 합니다.  
   
-## 설명  
- The first override returns **true** on success or **false** on failure.  The second override points to the memory containing the status of the specified parameter.  
+## <a name="remarks"></a>설명  
+ 첫 번째 재정의 반환 **true** 성공 또는 **false** 실패 합니다. 두 번째 재정의 지정된 된 매개 변수의 상태를 포함 하는 메모리를 가리킵니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicParameterAccessor 클래스](../../data/oledb/cdynamicparameteraccessor-class.md)

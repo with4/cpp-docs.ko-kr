@@ -851,11 +851,12 @@ ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2b3dea72647bc4c4f0d49b0af1de9d6bcb0f116
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: bab5e5e8316ff181ce8b2a190c721336fb5032cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-crt-globals-and-functions"></a>내부 CRT 전역 및 함수  
   
@@ -865,7 +866,7 @@ CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를
   
 다음 전역 변수 및 매크로 정의는 CRT를 구현하는 데 사용됩니다.  
   
-|이름|  
+|name|  
 |----------|  
 |__badioinfo|  
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|  
@@ -884,7 +885,7 @@ CRT(C 런타임) 라이브러리에는 공용 라이브러리 인터페이스를
 
 다음 함수 및 함수 매크로는 CRT 및 C++ 표준 라이브러리를 구현하는 데 사용됩니다.  
   
-|이름|  
+|name|  
 |----------|  
 |__acrt_iob_func|  
 |__AdjustPointer|  

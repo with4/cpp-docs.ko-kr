@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 987691d2eaf8ae2f6c8f724fb8bcf4f26ad68dcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 835c396c36a23d05a1e3512fa7ad5e4c4e81c795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale"></a>로캘
 *로캘*은 프로그램을 사용자 지정하는 데 사용할 수 있는 국가/지역 및 언어 설정을 참조합니다. 일부 로캘 종속 범주는 날짜 및 통화 값의 표시 형식을 포함합니다. 자세한 내용은 [로캘 범주](../c-runtime-library/locale-categories.md)를 참조하세요.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="locale-dependent-routines"></a>로캘 종속 루틴  
   
-|루틴|기능|`setlocale` 범주 설정 종속성|  
+|루틴|사용|`setlocale` 범주 설정 종속성|  
 |-------------|---------|---------------------------------------------|  
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|문자를 부동 소수점 값으로 변환합니다.|`LC_NUMERIC`|  
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|문자를 정수 값으로 변환합니다.|`LC_NUMERIC`|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
 |[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|멀티바이트 문자를 해당되는 와이드 문자로 변환합니다.|`LC_CTYPE`|  
 |[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 함수|형식이 지정된 출력을 씁니다.|`LC_NUMERIC`(기수 문자 출력 여부 결정)|  
 |[scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 함수|형식이 지정된 입력을 읽습니다.|`LC_NUMERIC`(기수 문자 인식 여부 결정)|  
-|[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)|프로그램에 대한 로캘을 선택합니다.|해당 없음|  
+|[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)|프로그램에 대한 로캘을 선택합니다.|적용할 수 없음|  
 |[strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|두 문자열의 문자를 비교합니다.|`LC_COLLATE`|  
 |[_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)|대/소문자에 상관없이 두 문자열을 비교합니다.|`LC_CTYPE`|  
 |[_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|두 문자열의 문자를 비교합니다(대/소문자 구분 없음).|`LC_COLLATE`|  

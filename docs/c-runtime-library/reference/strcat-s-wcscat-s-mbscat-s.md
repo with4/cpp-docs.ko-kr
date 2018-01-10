@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -40,36 +38,22 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 37cb584538c51844cbd23eb0853ef48f548600ca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a66bafa2fa032b069a0e34cf6831ac2e6f6ed13d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 문자열을 추가합니다. 이러한 버전의 [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 포함되어 있습니다.  
   
 > [!IMPORTANT]
-> Windows 런타임에서 실행되는 응용 프로그램에서는  `_mbscat_s`를 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbscat_s`를 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -123,9 +107,9 @@ errno_t _mbscat_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|반환 값|`strDestination`의 내용|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` 또는 종료되지 않음|any|모두|`EINVAL`|수정 안 됨|  
-|any|모두|`NULL`|`EINVAL`|`strDestination`[0]을 0으로 설정합니다.|  
-|모두|0 또는 너무 작음|모두|`ERANGE`|`strDestination`[0]을 0으로 설정합니다.|  
+|`NULL` 또는 종료되지 않음|any|any|`EINVAL`|수정 안 됨|  
+|any|any|`NULL`|`EINVAL`|`strDestination`[0]을 0으로 설정합니다.|  
+|any|0 또는 너무 작음|any|`ERANGE`|`strDestination`[0]을 0으로 설정합니다.|  
   
 ## <a name="remarks"></a>설명  
  `strcat_s` 함수는 `strSource`를 `strDestination`에 추가하고 결과 문자열을 null 문자로 종료합니다. `strSource`의 초기 문자가 `strDestination`의 종료 null 문자를 덮어씁니다. 소스 문자열과 대상 문자열이 겹치는 경우 `strcat_s`의 동작이 정의되지 않습니다.  
@@ -143,11 +127,11 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
  `strDestination`이 null 포인터이거나 null로 종료되지 않는 경우, `strSource`가 `NULL` 포인터인 경우 또는 대상 문자열이 너무 작은 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `EINVAL`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
- C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
  이러한 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -155,7 +139,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`strcat_s`|\<string.h>|  
 |`wcscat_s`|\<string.h> 또는 \<wchar.h>|  
@@ -163,7 +147,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)의 코드 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

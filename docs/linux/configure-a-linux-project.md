@@ -11,11 +11,14 @@ ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e727f4588c425e3a6c94d7ceb09ebc8d494e24cf
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 893194b3e08b56e4abe892033193b167b46dab27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-a-linux-project"></a>Linux 프로젝트 구성
 이 항목에서는 Visual Studio Linux 프로젝트를 구성하는 방법을 설명합니다. CMake Linux 프로젝트에 대한 자세한 내용은 [Linux CMake 프로젝트 구성](cmake-linux-project.md)을 참조하세요.

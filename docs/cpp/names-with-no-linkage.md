@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - functions [C++], parameters
 - typedef names, linkage
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - names [C++], with no linkage
 - function parameters [C++]
 ms.assetid: 7174c500-12d2-4572-8c16-63c27c758fb1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 161698d01e9cc9aeaac8f2b9bdc491343555880d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 13acb94022caf7ad9ddbf2fe94ad2fa95a70dc80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="names-with-no-linkage"></a>링크가 없는 이름
 링크가 없는 유일한 이름은 다음과 같습니다.  
@@ -74,7 +72,7 @@ extern INT myInt;
   
  앞의 코드에서 링크 타임에 "확인되지 않은 외부" 오류를 생성합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C++ 함수는 파일 또는 클래스 범위에서만 정의할 수 있습니다. 다음 예제에서는 함수를 정의하는 방법 및 잘못된 함수 정의를 보여 줍니다.  
   
 ```  

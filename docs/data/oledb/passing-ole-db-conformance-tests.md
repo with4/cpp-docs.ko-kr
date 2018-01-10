@@ -1,42 +1,45 @@
 ---
 title: "OLE DB 적합성 테스트 통과 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "적합성 테스트"
-  - "규칙 테스트[OLE DB]"
-  - "OLE DB 공급자, 테스트"
-  - "공급자 테스트"
-  - "테스트, OLE DB 공급자"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- conformance testing
+- conformance testing [OLE DB]
+- OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0df51ea0086104a45385673b310b5717bfa1c9ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# OLE DB 적합성 테스트 통과
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-공급자를 보다 일관되게 만들기 위해 Data Access SDK는 OLE DB 규칙 테스트 집합을 제공합니다.  이 테스트는 공급자의 모든 측면을 테스트하므로 공급자가 예상대로 작동하는지 적절히 확인할 수 있습니다.  Microsoft Data Access SDK에서 OLE DB 규칙 테스트를 찾을 수 있습니다.  이 단원에서는 규칙 테스트를 통과하기 위해 수행해야 할 작업에 중점을 두고 설명합니다.  OLE DB 규칙 테스트 실행에 대한 자세한 내용은 SDK를 참조하십시오.  
+# <a name="passing-ole-db-conformance-tests"></a>OLE DB 적합성 테스트 통과
+Data Access SDK 공급자를 보다 일관 되 게 하려면 OLE DB 적합성 테스트 집합이 제공 합니다. 테스트는 공급자의 모든 측면을 확인 하 고 예상 대로 프로그램 공급자 작동 하는지 적절히 제공 합니다. Microsoft Data Access SDK에 OLE DB 적합성 테스트를 찾을 수 있습니다. 이 섹션 규칙 테스트를 통과 하기 위해 수행 해야 하는 것에 중점을 둡니다. OLE DB 적합성 테스트를 실행 하는 방법에 대 한 정보, SDK를 참조 하십시오.  
   
-## 규칙 테스트 실행  
- Visual C\+\+ 6.0에서는 OLE DB 공급자 템플릿에 다양한 후크 함수가 추가되어 값과 속성을 확인할 수 있습니다.  이러한 대부분의 함수는 규칙 테스트를 위해 추가된 것입니다.  
+## <a name="running-the-conformance-tests"></a>규칙 테스트 실행  
+ Visual c + + 6.0 OLE DB 공급자 템플릿 값과 속성을 확인할 수 있도록 후크 함수가 여러를 추가 합니다. 이러한 기능의 대부분 규칙 테스트에 대 한 응답에 추가 되었습니다.  
   
 > [!NOTE]
->  OLE DB 규칙 테스트를 통과하려면 몇 가지 유효성 검사 함수를 추가해야 합니다.  
+>  OLE DB 적합성 테스트 통과 하 여 공급자에 대 한 여러 가지 유효성 검사 기능을 추가 해야 합니다.  
   
- 이 공급자는 두 가지 유효성 검사 루틴을 필요로 합니다.  첫 번째 루틴은 `CRowsetImpl::ValidateCommandID`이며, 행 집합 클래스의 일부입니다.  이 루틴은 공급자 템플릿이 행 집합을 만드는 동안 호출됩니다.  샘플에서는 이 루틴을 사용하여 소비자에게 인덱스를 지원하지 않는다는 것을 알립니다.  첫 번째 호출은 `CRowsetImpl::ValidateCommandID`로 호출됩니다. 공급자는 [공급자의 책갈피 지원](../../data/oledb/provider-support-for-bookmarks.md)의 `CMyProviderRowset`에 대한 인터페이스 맵에 추가된 **\_RowsetBaseClass** 형식 정의를 사용하므로 긴 템플릿 인수 줄을 직접 입력할 필요가 없습니다.  그런 다음 인덱스 매개 변수가 **NULL**이 아니면 **DB\_E\_NOINDEX**를 반환합니다. 이는 소비자가 인덱스를 사용하려 한다는 것을 나타냅니다.  명령 ID에 대한 자세한 내용은 OLE DB 사양에서 **IOpenRowset::OpenRowset**을 참조하십시오.  
+ 이 공급자는 두 가지 유효성 검사 루틴을 필요로합니다. 첫 번째 루틴 `CRowsetImpl::ValidateCommandID`, 행 집합 클래스의 일부입니다. 행 집합을 만드는 동안 공급자 템플릿에 의해 호출 됩니다. 이 샘플에 인덱스를 지원 하지 않는 소비자에 게 알릴이 루틴을 사용 합니다. 첫 번째 호출 하는 것 `CRowsetImpl::ValidateCommandID` (공급자를 사용 하는 **호출** typedef에 대 한 인터페이스 맵에 추가 `CMyProviderRowset` 에 [공급자의 책갈피 지원](../../data/oledb/provider-support-for-bookmarks.md)를 않아도 되므로 템플릿 인수 번째 입력). 그런 다음 반환 **DB_E_NOINDEX** 인덱스 매개 변수가 없으면 **NULL** (나타냅니다 소비자에서 우리는 인덱스를 사용 하려는). 명령 Id에 대 한 자세한 내용은 OLE DB 사양을 참조를 찾아서 **iopenrowset:: Openrowset**합니다.  
   
- 다음 코드는 **ValidateCommandID** 유효성 검사 루틴입니다.  
+ 다음 코드는는 **ValidateCommandID** 유효성 검사 루틴:  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -56,30 +59,30 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }  
 ```  
   
- 공급자 템플릿은 누군가가 **DBPROPSET\_ROWSET** 그룹의 속성을 변경할 때마다 `OnPropertyChanged` 메서드를 호출합니다.  다른 그룹의 속성을 처리하려면 적절한 개체에 그룹을 추가합니다. 즉, **DBPROPSET\_SESSION**을 검사하면 `CMyProviderSession` 클래스를 검사하게 됩니다.  
+ 공급자 템플릿 호출의 `OnPropertyChanged` 에서 속성을 변경 될 때마다 메서드는 **DBPROPSET_ROWSET** 그룹입니다. 적절 한 개체에 추가할 다른 그룹에 대 한 정보를 저장 하려는 경우 (즉, **DBPROPSET_SESSION** 에 `CMyProviderSession` 클래스).  
   
- 코드는 먼저 속성이 다른 속성에 연결되었는지 확인합니다.  속성이 다른 속성에 연결되어 있으면 **DBPROP\_BOOKMARKS** 속성을 True로 설정합니다.  OLE DB 사양의 부록 C에서 속성에 대한 자세한 내용을 참조할 수 있습니다.  이 정보를 보고 속성이 다른 속성에 연결되었는지 알 수도 있습니다.  
+ 코드는 먼저 속성에 다른 연결 되었는지 여부를 확인 합니다. 속성을 연결 하는 경우에 설정 된 **DBPROP_BOOKMARKS** 속성을 True로 합니다. OLE DB 사양의 부록 C 속성에 대 한 정보를 포함 합니다. 이 정보 또한 알려 속성에 다른 연결 되었는지 여부.  
   
- 코드에 `IsValidValue` 루틴을 추가할 수도 있습니다.  템플릿은 속성을 설정하려고 할 때 `IsValidValue`를 호출합니다.  속성 값을 설정할 때 추가 처리가 필요할 경우에는 이 메서드를 재정의합니다.  각 속성 집합에 이러한 메서드 중 하나를 사용할 수 있습니다.  
+ 추가할 수도 있습니다는 `IsValidValue` 코드에 일상적인 합니다. 템플릿 호출 `IsValidValue` 속성을 설정 하려고 할 때입니다. 속성 값을 설정할 때 추가 처리가 필요한 경우이 메서드를 재정의 합니다. 각 속성 집합에 대 한 이러한 방법 중 하나를 사용할 수 있습니다.  
   
-## 스레딩 문제  
- 기본적으로 ATL OLE DB 공급자 마법사의 ATL OLE DB 공급자 마법사는 공급자가 아파트 모델에서 실행될 수 있도록 코드를 생성합니다.  이 코드를 규칙 테스트와 함께 실행하려고 하면 처음에는 실패합니다.  이는 OLE DB 규칙 테스트를 실행하는 데 사용되는 Ltm.exe 도구가 기본적으로 자유 스레드로 설정되어 있기 때문입니다.  ATL OLE DB 공급자 마법사의 코드는 성능 및 사용상의 편의를 위해 기본적으로 아파트 모델로 설정되어 있습니다.  
+## <a name="threading-issues"></a>스레딩 문제  
+ 기본적으로는 OLE DB 공급자 마법사 ATL OLE DB 공급자 마법사의 아파트 모델에서 실행 하도록 공급자에 대 한 코드를 생성 합니다. 규칙 테스트와이 코드를 실행 하려고 하면 오류가 처음 발생 합니다. 이 Ltm.exe, OLE DB 적합성 테스트를 실행 하는 데 도구 기본적으로 해제 하기 때문에 스레드입니다. OLE DB 공급자 마법사 코드의 사용 편이성과 성능에 대 한 아파트 모델 기본값으로 사용 됩니다.  
   
- 이 문제를 해결하려면 LTM을 변경하거나 공급자를 변경합니다.  
+ 이 문제를 해결 하려면 LTM를 변경 하거나 공급자를 변경할 수 있습니다.  
   
-#### LTM을 변경하여 아파트 스레드 모드에서 실행하려면  
+#### <a name="to-change-ltm-to-run-in-apartment-threaded-mode"></a>모드를 스레드 아파트에서 실행 되도록 LTM를 변경 하려면  
   
-1.  LTM의 기본 메뉴에서 **Tools**를 클릭한 다음 **Options**를 클릭합니다.  
+1.  LTM 주 메뉴에서 클릭 **도구**, 클릭 하 고 **옵션**합니다.  
   
-2.  **General** 탭에서 스레딩 모델을 **Free Threaded**에서 **Apartment Threaded**로 변경합니다.  
+2.  에 **일반** 탭에서 스레딩 모델을 변경 합니다 **자유 스레드** 를 **Apartment Threaded**합니다.  
   
- 공급자를 변경하여 자유 스레드 모드에서 실행하려면  
+ 변경 하려면 공급자 스레드 무료 모드에서 실행 하려면:  
   
--   공급자 프로젝트에서 `CComSingleThreadModel`의 모든 인스턴스를 검색한 다음 데이터 소스, 세션 개체 및 행 집합 헤더에 있는 `CComMultiThreadModel`과 바꿉니다.  
+-   공급자 프로젝트에서의 모든 인스턴스에 대 한 검색 `CComSingleThreadModel` 로 바꿉니다 `CComMultiThreadModel`, 데이터 원본, 세션 및 행 집합 헤더에 있습니다.  
   
--   .rgs 파일에서 스레딩 모델을 **Apartment**에서 **Both**로 변경합니다.  
+-   .Rgs 파일에에서 스레딩 모델을 변경 **아파트** 를 **둘 다**합니다.  
   
--   자유 스레드 프로그래밍에서는 정확한 프로그래밍 규칙\(작성 시 잠금\)을 따릅니다.  
+-   에 따라 올바른 프로그래밍 프로그래밍 규칙 자유 스레드 (즉, 잠금 쓰기 중에).  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [고급 공급자 기술](../../data/oledb/advanced-provider-techniques.md)

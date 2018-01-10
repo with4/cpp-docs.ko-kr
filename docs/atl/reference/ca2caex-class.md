@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ae0db059d092feb1a24a3c7c635817250f2813b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f579716cff70d0c9f20ea0fa0133dcb4d86c8db3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 클래스
 이 클래스는 사용 하 여 문자열 변환 매크로 `CA2CTEX` 및 `CT2CAEX`, 및 typedef **CA2CA**합니다.  
@@ -80,7 +81,7 @@ class CA2CAEX
   
  이러한 텍스트 변환 매크로의 논의 알려면 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md) 이러한 문자열 변환 매크로 사용의 예입니다.  
   
 ## <a name="requirements"></a>요구 사항  

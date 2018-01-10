@@ -16,16 +16,17 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d27371a994f13ebe8c91452d44645c5d3f5eac29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffabd4c9ebb3f439fa1e1e70b06def3506b1227d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 데스크톱 구성 요소
 ATL 참조는 ATL 액티브 템플릿 라이브러리 (), 모델 COM (Component Object) 개체의 프로그래밍을 단순화 하는 템플릿 기반 c + + 클래스 집합인에 설명 합니다. 완전히 활용 하기 위해 ATL를 COM에 대 한 작업 지식이 가장 좋습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ATL 클래스 개요](../atl/atl-class-overview.md)  
  범주별으로 구성 하는 ATL 클래스에 간략하게 설명 및 링크를 제공 합니다.  
   

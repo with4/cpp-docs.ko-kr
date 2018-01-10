@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f30254c1c18f49bf7e125fc855a32e9e8d2b8154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43eff661ff9a72ca72554a87b2177cbe07ad10f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-registry-component-registrar"></a>ATL 레지스트리 구성 요소(등록자)
 ATL 등록자는 사용자 지정 인터페이스를 통해 시스템 레지스트리로 최적화 된 액세스를 제공합니다. 등록자는 자유 스레드 및 c + + 클라이언트에 대 한 코드의 정적 링크를 허용 합니다.  
@@ -33,7 +34,7 @@ ATL 등록자는 사용자 지정 인터페이스를 통해 시스템 레지스�
 > [!NOTE]
 >  ATL 등록자에 대 한 소스 코드 atlmfc\include\atliface.h에서 찾을 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [등록자 스크립트 만들기](../atl/creating-registrar-scripts.md)  
  등록자 스크립트를 생성 하는 지침입니다. BNF 구문, 구문 분석 트리, 레지스트리 스크립트 예제, 대체 가능 매개 변수를 사용 하 여 스크립트를 호출 하는 방식에 대 한 항목을 포함 합니다.  
   

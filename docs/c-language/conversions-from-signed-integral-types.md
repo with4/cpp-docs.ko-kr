@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ccda8d6fa2573245f34a38f327395955bf92fdc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8977c70fc2ebdc6e9fccf22e44a04afaceae1392
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-signed-integral-types"></a>부호 있는 정수 계열 형식에서 변환
 부호 있는 정수를 크기가 같거나 더 큰 부호 없는 정수로 변환하는데 부호 있는 정수의 값이 음수가 아니면 값이 변경되지 않습니다. 변환은 부호 있는 정수를 부호 확장하여 수행됩니다. 부호 있는 정수는 상위 비트를 잘라 더 짧은 부호 있는 정수로 변환됩니다. 결과는 이 예제에서 볼 수 있는 것과 같이 부호 없는 값으로 해석됩니다.  
@@ -43,7 +44,7 @@ printf_s( "%hu\n", u );  // Prints 65533
   
 ### <a name="conversions-from-signed-integral-types"></a>부호 있는 정수 계열 형식에서 변환  
   
-|시작|후|메서드|  
+|시작|대상|메서드|  
 |----------|--------|------------|  
 |**char**1|**short**|부호 확장|  
 |**char**|**long**|부호 확장|  

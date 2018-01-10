@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b043dab2232e9cdfb0eb9fa90a59dab267b4e1af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54819766da9ebd002fa4990ca0b9650626b89015
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arguments"></a>인수
 함수 호출의 인수는 다음과 같은 형식입니다.  
@@ -50,7 +51,7 @@ expression-list <SUB>opt</SUB> )  /* Function call */
   
  프로토타입의 매개 변수 목록에 `void` 키워드만 포함되어 있으면 컴파일러는 함수 호출의 인수 수와 정의의 매개 변수 수를 0으로 가정합니다. 인수가 발견되면 진단 메시지가 표시됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 포인터를 인수로 사용합니다.  
   
 ```  

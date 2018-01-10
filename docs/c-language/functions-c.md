@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d37cfce894d3a08f8429e37f1365e70e8bc4d4d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7935b355042ed7221684fe60a69b5286cd39f00d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-c"></a>함수 (C)
 함수는 C의 기본 모듈 단위입니다. 함수는 일반적으로 특정 작업을 수행하도록 설계되었으며 함수 이름은 흔히 해당 작업을 의미합니다. 함수에는 선언과 문이 포함되어 있습니다. 이 단원에서는 C 함수 선언, 정의, 호출 방법에 대해 설명합니다. 그 외의 설명 항목은 다음과 같습니다.  

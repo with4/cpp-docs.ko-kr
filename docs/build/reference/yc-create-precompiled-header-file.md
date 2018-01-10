@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c73f7f4c0061a16d9a3696067eee6fcf28de115a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 865b5e0fa7039a0b60f524c2f13a367569757d92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc(미리 컴파일된 헤더 파일 만들기)
 컴파일 특정 지점에서 상태를 나타내는 미리 컴파일된 헤더 (.pch) 파일을 만들도록 컴파일러에 지시 합니다.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/24/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> 및 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드를 살펴보세요.  
   
 ```cpp  

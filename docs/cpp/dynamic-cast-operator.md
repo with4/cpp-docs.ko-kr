@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- dynamic_cast_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- dynamic_cast keyword [C++]
+f1_keywords: dynamic_cast_cpp
+dev_langs: C++
+helpviewer_keywords: dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3137207566a6df16c420493afa93269540de2bae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 29add795c7adeca67fc85c7cf3b1b90d17f804fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 연산자
 피연산자를 변환 `expression` 유형의 개체로 `type-id`합니다.  
@@ -222,7 +218,7 @@ void f() {
   
  참조 [typeid](../cpp/typeid-operator.md) 에 대 한 설명은 `__non_rtti_object` 예외입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플 기본 클래스 (구조체 A) 포인터 (C 구조체) 개체를 만듭니다.  이 더한 없는 팩트는 가상 함수, 런타임 다형성을 사용 하도록 설정 합니다.  
   
  또한 샘플 계층 구조에서 비가상 함수를 호출합니다.  

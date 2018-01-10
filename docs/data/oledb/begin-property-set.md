@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_PROPERTY_SET | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROPERTY_SET"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROPERTY_SET 매크로"
+title: BEGIN_PROPERTY_SET | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROPERTY_SET
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROPERTY_SET macro
 ms.assetid: 5995f21a-5161-4ecf-b9da-e2ff6754d40e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1b392647920b29c10579bcb8465a290ee68487ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_PROPERTY_SET
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marks the beginning of a property set in a property set map.  
+# <a name="beginpropertyset"></a>BEGIN_PROPERTY_SET
+속성에는 속성의 시작 부분을 설정 하는 부호 맵을 설정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -36,18 +37,18 @@ guid
   
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `guid`  
- \[in\] The property GUID.  
+ [in] GUID 속성입니다.  
   
-## 예제  
- See [BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md).  
+## <a name="example"></a>예  
+ [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)을 참조하세요.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
- [OLE DB 공급자 템플릿에 대한 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+## <a name="see-also"></a>참고 항목  
+ [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)   
  [OLE DB 공급자 만들기](../../data/oledb/creating-an-ole-db-provider.md)

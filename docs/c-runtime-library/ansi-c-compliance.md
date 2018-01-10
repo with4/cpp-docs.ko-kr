@@ -23,11 +23,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bd98d80c2fcbf3c684aa185b783f164d6b14f0a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f9c8831ef19e14d5d65ae39abde9af8ed669bb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ansi-c-compliance"></a>ANSI C 규격
 런타임 시스템(예: 함수, 매크로, 상수, 변수 및 형식 정의)의 모든 Microsoft 고유의 식별자에 대한 명명 규칙은 ANSI 규격입니다. 이 설명서에서는 ANSI/ISO C 표준을 따르는 모든 런타임 함수를 ANSI 호환으로 기록합니다. ANSI 호환 응용 프로그램은 이러한 ANSI 호환 함수를 사용해야 합니다.  

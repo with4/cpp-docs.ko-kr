@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _putts
 - _putws
 - puts
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strings [C++], writing
 - _putts function
@@ -39,31 +37,16 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 458fab534fa8bf6c92771d8f4fb42377ece4300e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e05b0560032d79e5e69a1cafe8669c79160b8e1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="puts-putws"></a>puts, _putws
 **stdout**에 문자열을 씁니다.  
@@ -85,7 +68,7 @@ int _putws(
  출력 문자열입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 정상적으로 실행되면 음수가 아닌 값을 반환합니다. `puts`가 실패하면 `EOF`를 반환하고 `_putws`가 실패하면 **WEOF**를 반환합니다. `str`이 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EOF` 또는 **WEOF**.를 반환합니다.  
+ 정상적으로 실행되면 음수가 아닌 값을 반환합니다. `puts`가 실패하면 `EOF`를 반환하고 `_putws`가 실패하면 **WEOF**를 반환합니다. `str`가 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EOF` 또는 **WEOF**.를 반환합니다.  
   
  이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
@@ -96,7 +79,7 @@ int _putws(
   
  Windows 2000 이상 버전에서 **_putwch**는 현재 CONSOLE LOCALE 설정을 사용하여 유니코드 문자를 씁니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -104,7 +87,7 @@ int _putws(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`puts`|\<stdio.h>|  
 |`_putws`|\<stdio.h>|  
@@ -114,7 +97,7 @@ int _putws(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_puts.c  

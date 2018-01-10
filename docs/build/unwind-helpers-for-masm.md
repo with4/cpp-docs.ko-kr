@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83519f28361505b9c227c7db5522bfffcc5133a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7c80606f72e8c9ebfbd14290de1128a982433a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unwind-helpers-for-masm"></a>MASM에 대한 해제 도우미
 적절 한 어셈블리 루틴을 작성 하려면 적절 한.pdata 및.xdata 만들려는 실제 어셈블리 명령 동시에 사용할 수 있는 의사 (pseudo) 작업 집합이 있습니다. 또한 매크로 제공 하는 가장 일반적인 용도에 의사 (pseudo) 작업의 사용을 간소화 합니다.  

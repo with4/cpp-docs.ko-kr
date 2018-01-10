@@ -1,71 +1,72 @@
 ---
 title: "OLE DB 템플릿 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 템플릿"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords: OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 40ada455ffa5318e280860504705e1f8fb5ea4b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# OLE DB 템플릿
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-The OLE DB templates make OLE DB data access easier.  Visual C\+\+ provides template classes that implement many of the commonly used OLE DB interfaces.  You can use the Visual C\+\+ consumer templates to write an OLE DB client \(consumer\) application and the provider templates to write a server \(provider\) application.  
+# <a name="ole-db-templates"></a>OLE DB 템플릿
+OLE DB 템플릿 쉽게 OLE DB 데이터 액세스를 확인합니다. Visual c + +는 여러 가지 자주 사용 되는 OLE DB 인터페이스를 구현 하는 템플릿 클래스를 제공 합니다. OLE DB (소비자) 클라이언트 응용 프로그램을 작성 하려면 Visual c + + 소비자 템플릿과 공급자 템플릿으로 서버 (공급자) 응용 프로그램을 작성을 사용할 수 있습니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-reference.md)  
- Provides links to the OLE DB Consumer Template classes listed by usage.  
+ 사용 하 여 나열 된 OLE DB 소비자 템플릿 클래스에 대 한 링크를 제공 합니다.  
   
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-reference.md)  
- Provides links to the OLE DB Provider Template classes listed by usage.  
+ 사용 하 여 나열 된 OLE DB 공급자 템플릿 클래스에 대 한 링크를 제공 합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [OLE DB 프로그래밍 개요](../../data/oledb/ole-db-programming-overview.md)  
- Describes what OLE DB is and discusses Universal Data Access in OLE DB.  
+ OLE DB의는 설명 하 고 OLE db에서 범용 데이터 액세스에 설명 합니다.  
   
- [OLE DB Programmer's Reference](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
- Provides links to the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] documentation on OLE DB.  
+ [OLE DB 프로그래머 참조](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
+ OLE DB에는 Windows SDK 설명서에 대 한 링크를 제공합니다.  
   
- [OLE DB Templates Samples](../../top/visual-cpp-samples.md)  
- Provides links to the OLE DB Templates samples that show how to use OLE DB in your projects.  
+ [OLE DB 템플릿 샘플](../../visual-cpp-samples.md)  
+ 프로젝트에 OLE DB를 사용 하는 방법을 보여 주는 OLE DB 템플릿 샘플에 대 한 링크를 제공 합니다.  
   
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)  
- Discusses conceptual material about the OLE DB Consumer Templates.  
+ OLE DB 소비자 템플릿에 대 한 개념 자료를 설명합니다.  
   
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)  
- Discusses conceptual material about the OLE DB Provider Templates.  
+ OLE DB 공급자 템플릿 개념 자료에 설명 합니다.  
   
  [OLE DB 소비자 만들기](../../data/oledb/creating-an-ole-db-consumer.md)  
- Describes creating an OLE DB Templates consumer either with or without the ATL OLE DB Consumer Wizard.  
+ 또는 ATL OLE DB 소비자 마법사 비 OLE DB 템플릿 소비자를 만드는 방법을 설명 합니다.  
   
- [Creating a Simple Read\-Only Provider](../../data/oledb/creating-a-simple-read-only-provider.md)  
- Describes creating a simple read\-only provider that reads a pair of strings.  
+ [단순한 읽기 전용 공급자 만들기](../../data/oledb/creating-a-simple-read-only-provider.md)  
+ 문자열 쌍을 읽을 수 있는 단순한 읽기 전용 공급자 만들기에 대해 설명 합니다.  
   
- [Creating an Updatable Provider](../../data/oledb/creating-an-updatable-provider.md)  
- Describes creating providers that can write to the data store.  
+ [업데이트 가능 공급자 만들기](../../data/oledb/creating-an-updatable-provider.md)  
+ 데이터 저장소에 쓸 수 있는 만드는 공급자에 설명 합니다.  
   
- [OLE DB Consumer Attributes](../../windows/ole-db-consumer-attributes.md)  
- Discusses a simplified interface to inject code based on the OLE DB Consumer Templates to create working OLE DB consumers.  
+ [OLE DB 소비자 특성](../../windows/ole-db-consumer-attributes.md)  
+ OLE DB 소비자 템플릿은 OLE DB 소비자 작업을 만들려는 따라 코드를 삽입 하는 간단한 인터페이스를 설명 합니다.  
   
- [Active Template Library \(ATL\) Reference](../../atl/atl-com-desktop-components.md)  
- COM 개체를 손쉽게 프로그래밍할 수 있게 하는 템플릿 기반 C\+\+ 클래스 집합인 ATL 라이브러리에 대한 참고 자료를 제공합니다.  
+ [액티브 템플릿 라이브러리 (ATL) 참조](../../atl/atl-com-desktop-components.md)  
+ COM 개체를 손쉽게 프로그래밍할 수 있게 하는 템플릿 기반 C++ 클래스 집합인 ATL 라이브러리에 대한 참고 자료를 제공합니다.  
   
- [Visual C\+\+ 라이브러리](http://msdn.microsoft.com/ko-kr/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- ATL, MFC, OLE DB 템플릿, C 런타임 라이브러리, 표준 C\+\+ 라이브러리를 포함하여 Visual C\+\+에 제공되는 다양한 라이브러리에 대한 링크를 제공합니다.  
+ [Visual C++ 라이브러리](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ ATL, MFC, OLE DB 템플릿, C 런타임 라이브러리, C++ 표준 라이브러리를 포함하여 Visual C++에 제공되는 다양한 라이브러리에 대한 링크를 제공합니다.  
   
- [디버깅](../Topic/Debugging%20in%20Visual%20Studio.md)  
+ [디버깅](/visualstudio/debugger/debugging-in-visual-studio)  
  Visual Studio 디버거를 사용하여 응용 프로그램이나 저장 프로시저의 논리적 오류를 수정하는 방법을 설명하는 항목의 링크를 제공합니다.

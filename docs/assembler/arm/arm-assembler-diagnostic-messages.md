@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6457e82928a5a705377b90e2acc0989768fcd9f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f49ce6bed9e77680017b0aa26b677fd18e3efc1a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>ARM 어셈블러 진단 메시지
 Microsoft ARM 어셈블러 (*armasm*)가 발견 될 때 진단 경고와 오류를 내보냅니다. 이 문서에서는 가장 일반적으로 발생 한 메시지를 설명 합니다.  
@@ -33,7 +34,7 @@ filename(lineno) : [error|warning] Anum: message
   
 ### <a name="errors"></a>오류  
  이 명령은 A2193: 예기치 않은 동작이 생성  
- ARM 아키텍처는이 명령이 실행 될 때 수행 되는 작업을 보장할 수 없습니다.  이 명령의 잘 정의 된 형식에 대 한 세부 정보를 참조 하십시오.는 [ARM 아키텍처 참조 설명서](http://go.microsoft.com/fwlink/?LinkId=246464)합니다.  
+ ARM 아키텍처는이 명령이 실행 될 때 수행 되는 작업을 보장할 수 없습니다.  이 명령의 잘 정의 된 형식에 대 한 세부 정보를 참조 하십시오.는 [ARM 아키텍처 참조 설명서](http://go.microsoft.com/fwlink/p/?linkid=246464)합니다.  
   
 ```  
   
@@ -115,7 +116,7 @@ ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecat
 ```  
   
  A4509: 조건부 명령의이 형태는 사용 되지 않습니다.  
- 이러한 형태의 조건부 명령 되지 ARMv8 아키텍처의 ARM입니다. 조건부 분기를 사용 하도록 코드를 변경 하는 것이 좋습니다. 어떤 조건부 명령을 계속 지원를 보려면 참조는 [ARM 아키텍처 참조 설명서](http://go.microsoft.com/fwlink/?LinkId=246464)합니다.  
+ 이러한 형태의 조건부 명령 되지 ARMv8 아키텍처의 ARM입니다. 조건부 분기를 사용 하도록 코드를 변경 하는 것이 좋습니다. 어떤 조건부 명령을 계속 지원를 보려면 참조는 [ARM 아키텍처 참조 설명서](http://go.microsoft.com/fwlink/p/?linkid=246464)합니다.  
   
  이 경고가 때 내보낸는 `-oldit` 명령줄 스위치를 사용 합니다.  
   

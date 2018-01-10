@@ -1,33 +1,33 @@
 ---
-title: "includelib (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.includelib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "includelib attribute"
+title: includelib (c + +) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.includelib
+dev_langs: C++
+helpviewer_keywords: includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: df6c38889db24cc1b4f28ce0bfe4cf96eb6b03a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# includelib (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-생성 된.idl 파일에 포함 될.idl 또는.h 파일이 됩니다.  
+# <a name="includelib-c"></a>includelib(C++)
+.idl or.h 파일 생성된 된.idl 파일에 포함 하면 됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -36,15 +36,15 @@ manager: "ghogen"
 ) ];  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *name.idl*  
- 생성 된.idl 파일의 일부로 포함 하려는.idl 파일의 이름입니다.  
+ 원하는 생성된 된.idl 파일의 일부로 포함 하는.idl 파일의 이름입니다.  
   
-## 설명  
- `includelib` 로 인해 생성 된.idl 파일에 다음 포함 될.idl 또는.h 파일 C\+\+ 특성은 `importlib` 문입니다.  
+## <a name="remarks"></a>설명  
+ `includelib` c + + 특성으로 인해 이후 생성 된.idl 파일에 포함 되어야 하는.idl 또는.h 파일의 `importlib` 문.  
   
-## 예제  
- 다음 코드에.cpp 파일에 표시 됩니다.  
+## <a name="example"></a>예  
+ 다음 코드는.cpp 파일에 표시 됩니다.  
   
 ```  
 // cpp_attr_ref_includelib.cpp  
@@ -53,24 +53,23 @@ manager: "ghogen"
 [includelib("includelib.idl")];  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|원하는 위치에|  
+|**적용 대상**|원하는 위치|  
 |**반복 가능**|예|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [독립 실행형 특성](../windows/stand-alone-attributes.md)   
+ [가져오기](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [include](../windows/include-cpp.md)   
+ [포함](../windows/include-cpp.md)   
  [importlib](../windows/importlib.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

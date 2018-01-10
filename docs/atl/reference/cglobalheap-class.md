@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 693a0ce139c35b804325e9ef5dcb7beb1e4da6a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 566d9fac60f082b8dbf46724b463a9ac07732449
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap 클래스
 이 클래스는 구현 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) Win32 글로벌 힙 함수를 사용 합니다.  
@@ -56,7 +57,7 @@ class CGlobalHeap : public IAtlMemMgr
 > [!NOTE]
 >  전역 힙 함수 다른 메모리 관리 기능이 보다 속도가 느립니다와 많은 기능을 제공 하지 않습니다. 따라서 새 응용 프로그램을 사용 해야는 [함수 힙](http://msdn.microsoft.com/library/windows/desktop/aa366711)합니다. 사용할 수는 [CWin32Heap](../../atl/reference/cwin32heap-class.md) 클래스입니다. 전역 함수 DDE 및 클립보드 함수에서 계속 사용 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  예를 참조 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  

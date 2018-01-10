@@ -21,18 +21,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b60b1544e277ef4fece8368b6913cf686960dcaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cee24f0e5142af37681bd293a3be3600ddbd1cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process-and-environment-control"></a>프로세스 및 환경 제어
 프로세스 제어 루틴을 사용하여 프로그램 내에서 프로세스를 시작, 중지 및 관리합니다. 환경 제어 루틴을 사용하여 운영 체제 환경에 대한 정보를 가져오고 변경합니다.  
   
 ### <a name="process-and-environment-control-functions"></a>프로세스 및 환경 제어 함수  
   
-|루틴|기능|  
+|루틴에서 반환된 값|사용|  
 |-------------|---------|  
 |[abort](../c-runtime-library/reference/abort.md)|버퍼를 플러시하거나 `atexit` 및`_onexit`에 의해 등록된 함수를 호출하지 않고 프로세스를 중단합니다.|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|논리 오류를 테스트합니다.|  

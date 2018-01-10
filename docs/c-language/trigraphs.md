@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a480a38411536266c8cd4c23f8b29190550d3444
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d96088102cafe1b3bbdb7222cec33fc313774f41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trigraphs"></a>삼중자
 C 소스 프로그램의 소스 문자 집합은 7비트 ASCII 문자 집합에 포함되지만 ISO 646-1983 고정 코드 집합의 상위 집합입니다. 삼중자 시퀀스를 사용하면 C 프로그램을 ISO(International Standards Organization) 고정 코드 집합만을 사용하여 쓸 수 있습니다. 삼중자는 컴파일러가 해당 문장 부호 문자로 대체하는 세 문자(두 개의 연속된 물음표로 시작)의 시퀀스입니다. 삼중자는 특정 문장 부호 문자에 대한 편리한 그래픽 표현을 포함하지 않는 문자 집합이 사용되는 C 소스 파일에서 사용할 수 있습니다.  

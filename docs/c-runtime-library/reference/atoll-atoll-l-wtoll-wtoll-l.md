@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,38 +33,23 @@ f1_keywords:
 - _tstoll
 - _wtoll_l
 - atoll
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - atoll function
 - _wtoll_l function
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e707c06f06015a684e968367f61e7e763ff87a6d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1b308c6a86fd4f60be19fd3a95d935e6932d0079
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 문자열을 `long long` 정수로 변환합니다.  
@@ -135,7 +119,7 @@ long long _wtoll_l(
 |`atoll`, `_atoll_l`|\<stdlib.h>|  
 |`_wtoll`, `_wtoll_l`|\<stdlib.h> 또는 \<wchar.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 `atoll` 함수를 사용하여 문자열로 저장된 숫자를 숫자 값으로 변환하는 방법을 보여 줍니다.  
   
 ```  

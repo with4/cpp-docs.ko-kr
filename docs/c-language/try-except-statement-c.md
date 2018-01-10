@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea7526648d5879a224c3bc1ffd6c76dfc986c0c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9896e8a348a70ff6e27342f53f627097ef15dfa8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="try-except-statement-c"></a>try-except 문 (C)
 **Microsoft 전용**  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/24/2017
   
  `longjmp` 런타임 함수를 사용하여 **try-except** 문을 종료하는 것은 비정상 종료로 간주됩니다. `__try` 문 안으로 이동할 수 없지만 이 문 밖으로 이동할 수는 있습니다. **try-except** 문을 실행하는 도중에 프로세스가 강제로 종료되는 경우 예외 처리기가 호출되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 예외 처리기와 종료 처리기의 예제입니다. 종료 처리기에 대한 자세한 내용은 [try-finally 문](../c-language/try-finally-statement-c.md)을 참조하세요.  
   
 ```  

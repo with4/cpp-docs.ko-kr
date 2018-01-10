@@ -13,10 +13,9 @@ f1_keywords:
 - queue/std::operator&lt;
 - queue/std::operator&lt;=
 - queue/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7c435b48-175c-45b0-88eb-24561044019c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (queue)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: c3d30f04ad3b8f330c70b75ca21bdab44913f336
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltqueuegt-operators"></a>&lt;queue&gt; 연산자
 ||||  
@@ -58,7 +56,7 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 ### <a name="remarks"></a>설명  
  queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 큐는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // queue_op_ne.cpp  
@@ -121,7 +119,7 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 ### <a name="remarks"></a>설명  
  queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 queue 개체 간의 보다 작음 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // queue_op_lt.cpp  
@@ -180,7 +178,7 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 ### <a name="remarks"></a>설명  
  queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 queue 개체 간의 작거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // queue_op_le.cpp  
@@ -241,7 +239,7 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 ### <a name="remarks"></a>설명  
  queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 큐는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // queue_op_eq.cpp  
@@ -303,7 +301,7 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 ### <a name="remarks"></a>설명  
  queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 queue 개체 간의 보다 큼 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // queue_op_gt.cpp  
@@ -365,7 +363,7 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 ### <a name="remarks"></a>설명  
  queue 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 큐는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // queue_op_ge.cpp  
@@ -408,5 +406,4 @@ The queue q1 is greater than or equal to the queue q3.
   
 ## <a name="see-also"></a>참고 항목  
  [\<queue>](../standard-library/queue.md)
-
 

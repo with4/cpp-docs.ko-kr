@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 960ded27c68e5e22825375f7242cbaef08f4b5c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b64f00a805fc54f295d4cf86df6c4a780bb7bdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct, _ismbbpunct_l
 특정 문자가 문장 부호인지 여부를 결정합니다.  
@@ -68,11 +69,11 @@ int _ismbbpunct_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 정수 `_ismbbpunct`가 ASCII가 아닌 문장 부호인 경우 `c`는 0이 아닌 값을 반환합니다. `_ismbbpunct` 는 모든 로캘 종속 문자 설정에 대한 현재 로캘을 사용합니다. `_ismbbpunct_l` 은 전달된 로캘을 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 정수 `_ismbbpunct`가 ASCII가 아닌 문장 부호인 경우 `c`는 0이 아닌 값을 반환합니다. `_ismbbpunct` 는 모든 로캘 종속 문자 설정에 대한 현재 로캘을 사용합니다. `_ismbbpunct_l` 은 전달된 로캘을 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_ismbbpunct`|\<mbctype.h>|  
 |`_ismbbpunct_l`|\<mbctype.h>|  

@@ -42,11 +42,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d3243155fa99ec01e5401d0e5aac77d75807b6c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 525b0f0877471b5bfd6d9fa16551b21908f229a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="realloc"></a>realloc
 메모리 블록을 다시 할당합니다.  
@@ -81,9 +82,9 @@ void *realloc(
   
  `size` 인수는 블록의 새 크기(바이트)를 제공합니다. 블록의 내용은 새 크기와 이전 크기 중 더 짧은 쪽까지는 변경되지 않습니다. 그러나 새 블록은 다른 위치에 있을 수 있습니다. 새 블록은 새 메모리 위치에 있을 수 있으므로, `realloc`에서 반환하는 포인터가 `memblock` 인수를 통해 전달되는 포인터임이 보장되지 않습니다. `realloc`는 버퍼가 증가해도 새로 할당된 메모리를 비우지 않습니다.  
   
- 메모리 할당이 실패하거나 요청된 메모리의 양이 `_HEAP_MAXREQ`를 초과하는 경우 `realloc`는 `errno`를 `ENOMEM`으로 설정합니다. 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
+ 메모리 할당이 실패하거나 요청된 메모리의 양이 `_HEAP_MAXREQ`를 초과하는 경우 `realloc`는 `errno`를 `ENOMEM`으로 설정합니다. 이 오류 코드 및 기타 오류 코드에 대한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
- `realloc`는 C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 함수를 사용하여 새 처리기 모드를 설정하기 위해 `malloc`를 호출합니다. 새 처리기 모드는 실패 시 `malloc`가 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md)에서 설정한 대로 새 처리기 루틴을 호출하는지를 나타냅니다. 기본적으로 `malloc`는 메모리 할당 실패 시 새 처리기 루틴을 호출하지 않습니다. `realloc`가 메모리 할당에 실패한 경우 `malloc`이 `new` 연산자가 같은 이유로 실패했을 때 수행하는 것과 동일한 방식으로 새 처리기 루틴을 호출하도록 이 기본 동작을 재정의할 수 있습니다. 기본값을 재정의하려면 다음 코드를  
+ `realloc`는 C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 함수를 사용하여 새 처리기 모드를 설정하기 위해 `malloc`를 호출합니다. 새 처리기 모드는 실패 시 `malloc`가 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md)에서 설정한 대로 새 처리기 루틴을 호출하는지를 나타냅니다. 기본적으로 `malloc`는 메모리 할당 실패 시 새 처리기 루틴을 호출하지 않습니다. `realloc`가 메모리 할당에 실패한 경우 `malloc`이 `new` 연산자가 같은 이유로 실패했을 때 수행하는 것과 동일한 방식으로 새 처리기 루틴을 호출하도록 이 기본 동작을 재정의할 수 있습니다. 기본값을 재정의하려면 다음을  
   
 ```  
 _set_new_mode(1)  
@@ -97,13 +98,13 @@ _set_new_mode(1)
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`realloc`|\<stdlib.h> 및 \<malloc.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_realloc.c  

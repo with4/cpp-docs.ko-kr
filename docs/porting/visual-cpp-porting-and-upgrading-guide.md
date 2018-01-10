@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 274154eb0688bc974a34b511d0aa39d08bb27b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba7e3f139aa9956cd9d2587522dc2d0ac1f2ff7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 포팅 및 업그레이드 가이드
 이 항목에서는 Visual C++ 코드를 업그레이드하기 위한 가이드를 제공합니다. 여기에는 최신 릴리스의 도구에서 코드가 올바르게 컴파일 및 실행되도록 하고 새로운 언어와 Visual Studio 기능을 활용하는 방법이 포함됩니다. 또한 이 항목에는 레거시 앱을 최신 플랫폼으로 마이그레이션하는 방법에 대한 정보가 포함되어 있습니다.  

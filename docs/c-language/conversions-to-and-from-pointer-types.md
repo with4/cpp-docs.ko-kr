@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1751c19ba222bbdf9dfc30a290201289db1af850
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca8507d8890b1f1865ccefd6ce56a1b6f069d0f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>포인터 형식과의 변환
 값의 한 형식에 대한 포인터는 다른 형식에 대한 포인터로 변환될 수 있습니다. 그러나 저장소의 정렬 요구 사항 및 여러 형식의 크기 때문에 결과가 정의되지 않을 수 있습니다. 개체에 대한 포인터는 형식이 덜 엄격하거나 동일하게 엄격한 저장소 정렬을 요구하는 개체에 대한 포인터로 변환된 다음 다시 변경 없이 되돌릴 수 있습니다.  

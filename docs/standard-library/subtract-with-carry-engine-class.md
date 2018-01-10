@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c1a284af52195db1c25d6175876d732da7255962
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8de1c19ac793dd78ee55a15bc1156408936174bc
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 클래스
 subtract-with-carry(지연된 피보나치) 알고리즘을 사용하여 임의 시퀀스를 생성합니다.  
@@ -45,7 +46,7 @@ class subtract_with_carry_engine;
   
 #### <a name="parameters"></a>매개 변수  
  `UIntType`  
- 부호가 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ 부호가 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
  `W`  
  **단어 크기**. 상태 시퀀스의 각 단어 크기입니다(비트). **사전 조건**: `0 < W ≤ numeric_limits<UIntType>::digits`  
@@ -81,7 +82,7 @@ class subtract_with_carry_engine;
  `ranlux48_base`: `ranlux48`에 대한 기준으로 사용됩니다.                   
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
- subtract_with_carry_engine 알고리즘에 대한 자세한 내용은 Wikipedia 문서 [지연된 피보나치 생성기](http://go.microsoft.com/fwlink/LinkId=402445)를 참조하세요.  
+ subtract_with_carry_engine 알고리즘에 대한 자세한 내용은 Wikipedia 문서 [지연된 피보나치 생성기](http://go.microsoft.com/fwlink/p/?linkid=402445)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<random>  

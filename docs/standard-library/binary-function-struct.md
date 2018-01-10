@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- functional/std::binary
-- binary
-dev_langs:
-- C++
-helpviewer_keywords:
-- binary_function class
+f1_keywords: functional/std::binary
+dev_langs: C++
+helpviewer_keywords: binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 7fa7e543bbf51583c34ade759112a6e101a06f46
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5ebaf90c090ed276914a02f2e459dd506ed1b95b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binaryfunction-struct"></a>binary_function 구조체
 이항 함수 개체를 제공하는 파생 클래스에 상속될 수 있는 형식을 정의하는 빈 기본 구조체입니다.  
@@ -61,7 +42,7 @@ struct binary_function {
   
  이러한 모든 이항 함수는 첫 번째 인수 형식을 **first_argument_type**, 두 번째 인수 형식을 **second_argument_type**, 반환 형식을 ***result_type***으로 참조할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // functional_binary_function.cpp  
@@ -130,7 +111,6 @@ The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

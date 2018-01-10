@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 225535055f05fa8d6eeb08476004fbc5074e86b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e342df8bee9b69d0d84e3096f727d2c260b7493
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 컨트롤: 다른 사용자 지정 속성 페이지 추가
 경우에 따라서는 ActiveX 컨트롤 한 속성 페이지에 표시 될 수 있는 보다 더 많은 속성을 갖습니다. 이 경우 이러한 속성을 표시 하려면 ActiveX 컨트롤에 속성 페이지를 추가할 수 있습니다.  

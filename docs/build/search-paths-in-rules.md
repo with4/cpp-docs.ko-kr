@@ -1,40 +1,41 @@
 ---
-title: "규칙에서 경로 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE의 유추 규칙"
-  - "규칙, 유추"
-  - "NMAKE 유추 규칙으로 경로 검색"
+title: "규칙으로 경로 검색 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search paths in NMAKE inference rules
+- inference rules in NMAKE
+- rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d62ab17831afec4cc1f8e424766925529dd8e1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 규칙에서 경로 검색
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="search-paths-in-rules"></a>규칙에서 경로 검색
 ```  
 {frompath}.fromext{topath}.toext:  
    commands  
 ```  
   
-## 설명  
- 유추 규칙은 종속 줄에 지정된 경로가 유추 규칙 경로와 정확히 일치하는 경우에만 종속 줄에 적용됩니다.  종속 파일의 디렉터리는 *frompath*에 지정하고 대상의 디렉터리는 *topath*에 지정합니다. 공백은 사용할 수 없습니다.  각 확장명에 하나의 경로만 지정합니다.  하나의 확장명에 대한 경로를 지정하려면 다른 확장명에 대한 경로가 필요합니다.  현재 디렉터리를 지정하려면 마침표\(.\)나 빈 중괄호\({ }\)를 사용합니다.  매크로를 사용하여 *frompath*와 *topath*를 나타낼 수 있습니다. 이 매크로는 전처리 중에 호출됩니다.  
+## <a name="remarks"></a>설명  
+ 유추 규칙의 종속성에 정확 하 게 지정 된 경로는 유추 규칙 경로 일치 하는 경우에 종속성에 적용 됩니다. 종속 항목의 디렉터리 지정 *frompath* 및 대상의 디렉터리에 *topath*; 공백이 있어서는 안 됩니다. 각 확장에 대 한 하나의 경로 지정 합니다. 경로 확장은 한 번에 다른 경로 필요합니다. 현재 디렉터리를 지정 하려면 마침표 (.) 또는 빈 중괄호 ({})를 사용 합니다. 매크로 나타낼 수 *frompath* 및 *topath*; 전처리 중에 호출 됩니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 {dbi\}.cpp{$(ODIR)}.obj::  
@@ -65,5 +66,5 @@ caps.handback.revision: 7
         $(CC) $(CFLAGS) $<  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [규칙 정의](../build/defining-a-rule.md)

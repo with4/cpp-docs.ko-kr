@@ -1,50 +1,52 @@
 ---
-title: "사용되지 않음 (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.deprecated"
-  - "deprecated_CPP"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "deprecated pragma"
-  - "pragma, deprecated"
+title: "(C/c + +) 사용 되지 않습니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.deprecated
+- deprecated_CPP
+dev_langs: C++
+helpviewer_keywords:
+- deprecated pragma
+- pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7ee6f8c77c1596789fcb731833a1fb432e77d7e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 사용되지 않음 (C/C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**deprecated** pragma를 사용하면 함수, 형식 또는 다른 식별자가 향후 릴리스에서 더 이상 지원되지 않거나 더 이상 사용되지 않음을 나타낼 수 있습니다.  
+# <a name="deprecated-cc"></a>사용되지 않음 (C/C++)
+**사용 되지 않는** pragma는 함수, 형식 또는 다른 식별자 더 이상 지원 되지 않을 이후에서 표시를 사용 하면 임대 해제 또는 더 이상 사용 해야 합니다.  
+> [!NOTE]
+> C + + 14에 대 한 내용은 `[[deprecated]]` Microsoft declspec 또는 pragma vs 특성, 참조 특성을 포함 하며 해당 복사본을 사용 하는 시기에 대 한 지침 [c + + 표준 특성](../cpp/attributes2.md) 특성입니다.
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-  
 #pragma deprecated( identifier1 [,identifier2, ...] )  
 ```  
   
-## 설명  
- 컴파일러가 사용되지 않는 기호를 발견하면 [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)가 발생합니다.  
+## <a name="remarks"></a>설명  
+ 컴파일러는 식별자가 지정 하 여 발생 했을 때는 **사용 되지 않는** pragma를 사용 하면 컴파일러 경고 발급 [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)합니다.   
   
- 매크로 이름을 사용하지 않을 수 있습니다.  매크로 이름을 따옴표로 묶지 않으면 매크로 확장이 발생합니다.  
+ 매크로 이름을 사용하지 않을 수 있습니다. 매크로 이름을 따옴표로 묶지 않으면 매크로 확장이 발생합니다.  
   
- [deprecated](../cpp/deprecated-cpp.md) `__declspec` 한정자를 사용하면 특정 형식의 오버로드된 함수에 사용되지 않음 상태를 지정할 수 있습니다.  
+ 때문에 **사용 되지 않는** , 특정 버전의 오버 로드 된 함수를 사용 되지 않도록 지정 하는 가장 좋은 방법은 없는 pragma 모든 일치 하는 식별자에서 작동 하며 서명을에 고려 되지 않습니다. 범위에가 일치 하는 함수 이름이 모두 경고를 트리거합니다.
+
+  C + + 14를 사용 하는 것이 좋습니다 `[[deprecated]]` 특성 대신 가능 하면는 **사용 되지 않는** pragma입니다. Microsoft 전용 [__declspec (deprecated)](../cpp/deprecated-cpp.md) 선언 한정자도 하는 것이 보다 많은 경우에는 **사용 되지 않는** pragma입니다. `[[deprecated]]` 특성 및 `__declspec(deprecated)` 한정자를 사용 하면 특정 형태의 오버 로드 된 함수에 대 한 사용 되지 않는 상태를 지정할 수 있습니다. 진단 경고에만 표시 하는 특정 오버 로드 된 함수에 대 한 참조 특성 또는 한정자에 적용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // pragma_directive_deprecated.cpp  
@@ -81,5 +83,5 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [Pragma 지시문 및 \_\_Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>참고 항목  
+ [Pragma 지시문 및 __Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

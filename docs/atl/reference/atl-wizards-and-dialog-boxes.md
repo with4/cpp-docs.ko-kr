@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c335d5146e28d3331fac8b0073a6bd6c7d1def5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7197ce84098961623ea95ccf22a7cec47ac6cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 마법사와 대화 상자
 액티브 템플릿 라이브러리 (ATL) 마법사는 다양 한 종류의 COM 개체에 대 한 상용구 코드를 생성합니다. 프로젝트의 바로 가기 메뉴를 열고 마법사를 실행할 수 있습니다 **솔루션 탐색기** 선택한 **추가**, **클래스**합니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 554134b71c4dc45a828595c0c7dfb639940494df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 212b51f417fc84b602e6231f2e769cb73c9a1460
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>포팅 및 업그레이드: 예제 및 사례 연구
 성공적인 마이그레이션 스토리를 검토하여 이전 버전의 Visual C++에서 현재 버전으로 마이그레이션하는 동안 발생할 수 있는 문제 종류에 대한 아이디어를 얻을 수 있습니다.  

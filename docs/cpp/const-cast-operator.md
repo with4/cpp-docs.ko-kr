@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a468091b1563c016982f512e46d47183472b147
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79c4aa00038f2d4d7e5cc3d1c86d2e28c6d44229
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constcast-operator"></a>const_cast 연산자
 제거는 **const**, `volatile`, 및 **__unaligned** 클래스에서 특성입니다.  
@@ -43,7 +44,7 @@ expression
   
  `const_cast` 연산자는 null 포인터 값을 대상 형식의 null 포인터 값으로 변환합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // expre_const_cast_Operator.cpp  

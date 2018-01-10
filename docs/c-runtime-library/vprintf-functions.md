@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-functions"></a>vprintf 함수
 이러한 `vprintf` 함수는 각각 인수 목록에 대한 포인터를 가져오며 지정된 데이터의 형식을 지정하고 특정 대상에 지정된 데이터를 씁니다. 이러한 함수는 수행되는 매개 변수 유효성 검사, 함수가 와이드 문자를 사용하는지 또는 싱글바이트 문자열을 사용하는지, 출력 대상 및 형식 문자열에 매개 변수가 사용되는 순서를 지정하는 기능에 대한 지원 측면에서 다릅니다.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/24/2017
 |`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|*buffer*로 가리키는 메모리|Null인지 확인합니다.|아니요|  
 |`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|*buffer*로 가리키는 메모리|Null인지 확인합니다.|아니요|  
 |`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|*buffer*로 가리키는 메모리|Null인지 확인합니다.|아니요|  
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|*buffer*로 가리키는 메모리|Null인지 확인합니다.|no|  
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|*buffer*로 가리키는 메모리|Null인지 확인합니다.|아니요|  
   
  `argptr` 인수 형식은 VARARGS.H 및 STDARG.H에 정의된 `va_list`입니다. `argptr` 변수는 **va_start**에 의해 초기화되어야 하고 후속 `va_arg` 호출로 다시 초기화할 수 있습니다. `argptr`은 인수 목록의 맨 처음을 가리킵니다. 이러한 인수는 *format* 인수에 지정된 해당 사양에 따라 출력을 위해 변환 및 전송됩니다. *format*은 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)에 대한 *format* 인수와 같은 양식 및 함수를 갖습니다. 이러한 함수는 `va_end`를 호출하지 않습니다. 각 `vprintf` 함수에 대한 자세한 설명을 보려면 앞의 표에 나열된 상대 함수에 대한 설명을 참조하세요.  
   

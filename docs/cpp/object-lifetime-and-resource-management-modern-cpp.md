@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0da7872ab6a93b737bf402ded085a4fb18551798
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e2b48630fab9d27bf5db442617a5184bd26de5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>개체 수명 및 리소스 관리(최신 C++)
 관리 되는 언어와 달리 c + +는 프로그램이 실행 될 때 자동으로 no 긴-사용 되는 메모리 리소스를 해제 하는 가비지 수집 (GC) 되어 있지 않습니다. C + +에서는 리소스 관리 개체 수명 직접 관련 되어 있습니다. 이 문서에서는 c + +에서 개체 수명 및 관리 방법에 영향을 주는 요소에 설명 합니다.  

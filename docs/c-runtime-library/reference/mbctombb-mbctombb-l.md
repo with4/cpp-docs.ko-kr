@@ -39,11 +39,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f358376a16d811274978ccc730268e7cbe806df7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 327c55d92b9d23644807ecd52dbecf0fd0b62375
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 더블바이트 멀티바이트 문자를 해당 싱글바이트 멀티바이트 문자로 변환합니다.  
@@ -76,13 +77,13 @@ unsigned int _mbctombb_l(
 ## <a name="remarks"></a>설명  
  `_mbctombb` 및 `_mbctombb_l` 함수는 주어진된 멀티 바이트 문자를 해당 싱글바이트 멀티 바이트 문자로 변환 합니다. 문자 변환 될 0xDF 범위 0x20-0x7E 또는 0xA1-내의 단일 바이트 문자를 일치 해야 합니다.  
   
- 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
- 이전 버전에서는 `_mbctombb`를 `zentohan`이라고 했습니다. 대신 `_mbctombb` 를 사용하세요.  
+ 이전 버전에서는 `_mbctombb`를 `zentohan`이라고 했습니다. 대신 `_mbctombb`를 사용하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_mbctombb`|\<mbstring.h>|  
 |`_mbctombb_l`|\<mbstring.h>|  

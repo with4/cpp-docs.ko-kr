@@ -34,11 +34,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2353929ea112777561697928c4f12b3e8f80a47a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e6ff28df1645446e159e4fc3b0658a8b209ba2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seterrno"></a>_set_errno
 `errno` 전역 변수의 값을 설정합니다.  
@@ -61,7 +62,7 @@ errno_t _set_errno(
 ## <a name="remarks"></a>설명  
  가능한 값은 Errno.h에서 정의됩니다. [errno 상수](../../c-runtime-library/errno-constants.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_set_errno.c  
@@ -81,11 +82,11 @@ Oops: Illegal byte sequence
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_set_errno`|\<stdlib.h>|\<errno.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [_get_errno](../../c-runtime-library/reference/get-errno.md)   

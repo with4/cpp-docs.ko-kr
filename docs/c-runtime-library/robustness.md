@@ -15,18 +15,19 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 27412403fe6ce0f1884a2ea99790376acb1c5236
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb071b615d87ab1b605c78e5ba0645be139fba1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="robustness"></a>견고성
 다음 C 런타임 라이브러리 함수를 사용하여 프로그램의 견고성을 높입니다.  
   
 ### <a name="run-time-robustness-functions"></a>런타임 견고성 함수  
   
-|함수|기능|  
+|함수|사용|  
 |--------------|---------|  
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|`new` 연산자가 메모리 할당에 실패하면 오류 처리 메커니즘에 제어를 전달합니다.|  
 |[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Win32 예외(C 구조적 예외)를 C++ 형식 예외로 처리합니다.|  

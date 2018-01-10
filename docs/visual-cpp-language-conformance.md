@@ -9,11 +9,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e9d4d86abd15f59e94ce7e51d40e119f8ebd336
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: fa79bfc63a3906b3f7eb698c3d44ee8136db2c14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 언어 규칙
 
@@ -227,7 +228,7 @@ __VS 2017__은 Visual Studio 2017 RTM에서 지원되는 기능을 나타냅니�
 __VS 2017 15.3__은 Visual Studio 2017 버전 15.3에서 지원되는 기능을 나타냅니다.  
 __VS 2017 15.5__는 Visual Studio 2017 버전 15.5에서 지원되는 기능을 나타냅니다.
 
-### <a name="notes"></a>참고
+### <a name="notes"></a>노트
 
 <a name="note_A"></a>__A__ C++11에서 사용되지 않는 C++03의 동적 예외 사양을 무시합니다. 이러한 사양은 구현할 계획이 없으며 향후 C++ 표준에서 제거할 예정입니다.  
 <a name="note_B"></a>__B__ 2단계 이름 조회에 대한 컴파일러의 지원은 향상되었지만 여전히 불완전합니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57e7db99e90e68e71dae4fc00f271b3831a5fc39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4088aea4025e7c51aba75efe28978d05c0e48730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="union-declarations"></a>공용 구조체 선언
 "공용 구조체 선언"은 변수 값의 집합을 지정하고 공용 구조체 이름을 지정하는 태그를 선택적으로 지정합니다. 변수 값을 공용 구조체의 "멤버"라고 하며 변수 값은 다른 형식이 될 수 있습니다. 공용 구조체는 다른 언어의 "가변 레코드"와 비슷합니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
  *struct-or-union identifier*  
   
  *struct-or-union*:  
- **truct**  
+ **struct**  
   
  **union**  
   

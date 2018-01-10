@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8b4a1b69887033ca0c8cccf3e4b9eb193ee41d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ac4dedc419c28b4e68d7dcc1772f176738580b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="res-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Res 파일
 프로그램을 링크할 때.res 파일을 지정할 수 있습니다. 리소스 컴파일러 (RC)에 의해.res 파일이 만들어집니다. 링크를 COFF.res 파일을 자동으로 변환합니다. CVTRES.exe 도구는 PATH 환경 변수에 지정 된 디렉터리 또는 LINK.exe와 같은 디렉터리에 이어야 합니다.  

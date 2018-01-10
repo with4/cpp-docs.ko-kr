@@ -30,11 +30,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ae382ff8f7a37754951327eafdad0cec2239faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 767b7623a231ad01b51bfc60212a23593544df8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist 및 _sys_nerr
 프로그램을 실행하는 동안 설정된 오류 코드를 보유한 전역 매크로와 표시용 오류 코드의 문자열에 해당하는 값입니다.  

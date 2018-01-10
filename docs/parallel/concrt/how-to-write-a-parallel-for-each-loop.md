@@ -16,16 +16,17 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3d641fe0437e371fdd45e2d497fbf865e41fa3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 179fa4b055b4743303f5d72ebec851a1d10def93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-a-parallelforeach-loop"></a>방법: parallel_for_each 루프 작성
 사용 하는 방법을 보여 주는이 예제는 [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) 알고리즘에서 소수의 수를 계산 하는 [std:: array](../../standard-library/array-class-stl.md) 병렬로 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 번 배열에서 소수의 수를 계산 합니다. 이 예제에서는 먼저 사용 하 여는 [for_each](../../standard-library/algorithm-functions.md#for_each) 알고리즘의 수를 연속으로 계산을 합니다. 이 예제에서는 다음 사용 하 여는 `parallel_for_each` 알고리즘을 동시에 동일한 작업을 수행 합니다. 또한 이 예제에서는 두 계산을 모두 수행하는 데 필요한 시간을 콘솔에 출력합니다.  
   
  [!code-cpp[concrt-parallel-count-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-each-loop_1.cpp)]  

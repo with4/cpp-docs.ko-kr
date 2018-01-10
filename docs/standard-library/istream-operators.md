@@ -6,21 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- istream/std::operator&gt;&gt;
-dev_langs:
-- C++
+f1_keywords: istream/std::operator&gt;&gt;
+dev_langs: C++
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a33a333cc9e70ee57cd1d5612e6de008d49b1d72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 30cb2b182d8047eb1b2a5eaa384b01c719799043
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 연산자
  
@@ -83,7 +81,7 @@ basic_istream<Elem, Tr>& operator>>(
 ### <a name="remarks"></a>설명  
  `basic_istream` 클래스도 여러 가지 추출 연산자를 정의합니다. 자세한 내용은 [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt)를 참조하세요.  
   
- 템플릿 함수는 다음과 같습니다.  
+ 다음 템플릿 함수는  
   
 ```cpp  
 template <class Elem, class Tr>  
@@ -95,7 +93,7 @@ basic_istream<Elem, Tr>& operator>>(
   
  **보안 정보** 입력 스트림에서 추출할 null로 끝나는 문자열은 대상 버퍼 `str`의 크기를 초과해서는 안 됩니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
   
- 템플릿 함수는 다음과 같습니다.  
+ 다음 템플릿 함수는  
   
 ```cpp  
 template <class Elem, class Tr>  
@@ -105,7 +103,7 @@ basic_istream<Elem, Tr>& operator>>(
   
  가능한 경우 요소를 추출하여 `Ch`에 저장합니다. 그렇지 않으면 **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다. 어떤 경우든 `Istr`을 반환합니다.  
   
- 템플릿 함수는 다음과 같습니다.  
+ 다음 템플릿 함수는  
   
 ```cpp  
 template <class Tr>  
@@ -115,7 +113,7 @@ basic_istream<char, Tr>& operator>>(
   
  `Istr` >> ( `char`**\***) `str`을 반환합니다.  
   
- 템플릿 함수는 다음과 같습니다.  
+ 다음 템플릿 함수는  
   
 ```cpp  
 template <class Tr>  
@@ -125,7 +123,7 @@ basic_istream<char, Tr>& operator>>(
   
  `Istr` >> ( **char&**) `Ch`를 반환합니다.  
   
- 템플릿 함수는 다음과 같습니다.  
+ 다음 템플릿 함수는  
   
 ```cpp  
 template <class Tr>  
@@ -145,7 +143,7 @@ basic_istream<char, Tr>& operator>>(
   
  `Istr` >> ( **char&**) `Ch`를 반환합니다.  
   
- 템플릿 함수는 다음과 같습니다.  
+ 다음 템플릿 함수는  
   
 ```cpp  
 template <class Elem, class Tr, class Type>  
@@ -156,7 +154,7 @@ basic_istream<Elem, Tr>& operator>>(
   
  `Istr` `>>` `val`을 반환하고 프로세스에서 `Istr`에 대한 `rvalue reference`를 `lvalue`로 변환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // istream_op_extract.cpp  
@@ -177,5 +175,4 @@ int main( )
   
 ## <a name="see-also"></a>참고 항목  
  [\<istream>](../standard-library/istream.md)
-
 

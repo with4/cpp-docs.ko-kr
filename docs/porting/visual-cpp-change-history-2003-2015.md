@@ -14,11 +14,12 @@ caps.latest.revision: "124"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89b02c277faa3da102909ce88f33aea0c653ea50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
 이 문서에서는 Visual C++ 2015에서 Visual Studio 2003까지 모든 주요 변경 내용을 설명하며, 이 문서에서 사용된 “새 동작" 또는 “현재"라는 용어는 Visual Studio 2015 이상 버전을 가리킵니다. "이전 동작" 및 "이전"은 Visual Studio 2013 이하 릴리스를 나타냅니다. 
@@ -2431,7 +2432,7 @@ C c;
   
      이 변경과 관련된 컴파일러 진단은 없습니다.  
   
-     예제  
+     예  
   
     ```cpp  
     #include <type_traits>  

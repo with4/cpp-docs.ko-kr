@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e9dca1b95af3971045a1ce86807ef28be096546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-and-visibility"></a>범위 및 표시 영역
 식별자의 "표시 유형"은 "범위"를 참조할 수 있는 프로그램의 위치를 결정합니다. 식별자는 "범위"로 포함된 프로그램 부분에서만 표시되며(예: 사용 가능) 나타나는 파일, 함수, 블록 또는 함수 프로토타입으로 제한될 수 있습니다(제한이 증가하는 순서). 식별자의 범위는 이름을 사용할 수 있는 프로그램의 일부입니다. 이를 "어휘 범위"라고도 합니다. 범위에는 함수, 파일, 블록 및 함수 프로토타입과 같은 네 가지 종류가 있습니다.  

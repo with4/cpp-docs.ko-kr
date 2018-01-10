@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8666e0ecfd1b2f81236766a1a32baea7a939cd19
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 277eb151fabc62a5d6cd44ba34bac7c230cec39f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setframe"></a>.SETFRAME
 채우기 프레임에서 레지스터에 지정된 된 레지스터를 사용 하 여 해제 정보 필드와 오프셋 (`reg`) 및 오프셋 (`offset`). 오프셋은 16의 배수 여야 합니다. 및 240 합니다. 이 지시문도 생성 한 `UWOP_SET_FPREG` 현재 프롤로그 오프셋을 사용 하 여 지정 된 등록에 대 한 코드 항목을 해제 합니다.  

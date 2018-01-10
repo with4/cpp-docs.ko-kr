@@ -1,27 +1,27 @@
 ---
-title: "A.13   Using the flush Directive with a List | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "목록으로 플러시 지시문을 사용 하는 a. 13 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6c9d0736-07c2-47b1-a216-5293f03b6397
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: da5a7f10abe03364e4de9bdd2bd0258ea8a5e1a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# A.13   Using the flush Directive with a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음 예제는 `flush` 지점 간 동기화 스레드 쌍 사이의 특정 개체에 대 한 지시문:  
+# <a name="a13---using-the-flush-directive-with-a-list"></a>A.13   목록이 있는 flush 지시문 사용
+다음 예제에서는 `flush` 스레드 쌍 간에 특정 개체의 지점 간 동기화에 대 한 지시문:  
   
 ```  
 int   sync[NUMBER_OF_THREADS];  

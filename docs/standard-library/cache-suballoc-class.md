@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_suballoc
 - allocators/stdext::cache_suballoc::allocate
 - allocators/stdext::cache_suballoc::deallocate
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::cache_suballoc
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d53e0438d73aa73a32f26d417ea60c4540162125
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ab861704bfb44546a3dcb5a4a3b2f4210dbe8774
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc 클래스
 단일 크기의 메모리 블록을 할당하고 할당 취소하는 [블록 할당자](../standard-library/allocators-header.md)를 정의합니다.  
@@ -114,7 +112,6 @@ void deallocate(void* ptr, std::size_t count);
   
 ## <a name="see-also"></a>참고 항목  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

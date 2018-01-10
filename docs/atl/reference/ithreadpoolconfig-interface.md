@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ae9aea7c6517e2369901ea7e435627eff180c69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d967720778305eace4eff9ad8b2163456fb4bb46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig 인터페이스
 이 인터페이스는 스레드 풀을 구성 하기 위한 메서드를 제공 합니다.  
@@ -71,7 +72,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
 ##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
@@ -88,7 +89,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [IThreadPoolConfig::GetSize](#getsize)합니다.  
   
 ##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
@@ -109,7 +110,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [IThreadPoolConfig::GetSize](#getsize)합니다.  
   
 ##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
@@ -126,7 +127,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [IThreadPoolConfig::GetSize](#getsize)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

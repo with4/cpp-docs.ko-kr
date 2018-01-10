@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 19269ab7961c0fa496ae8fa56b2cd62b2c8ca957
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2edb40d2fc204b6b949e7616a7ef5579c95fdd6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="issigned-class"></a>is_signed 클래스
 형식이 부호 있는 정수인지 테스트합니다.  
@@ -40,7 +41,7 @@ struct is_signed;
 ## <a name="remarks"></a>설명  
  형식 조건자의 인스턴스는 `Ty` 형식이 부호 있는 정수계열 형식 또는 `cv-qualified` 부호 있는 정수 계열 형식인 경우 true이고, 그렇지 않은 경우 false입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // std__type_traits__is_signed.cpp   

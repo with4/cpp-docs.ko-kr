@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 경로, 파일 및 디렉터리에 대한 정보를 조작하고 검색하는 클래스 및 함수에 액세스할 수 있도록 &lt;filesystem> 헤더를 포함합니다.  
@@ -123,7 +124,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="enumerations"></a>열거형  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60)과 함께 사용되는 열거형이며 대상 파일이 이미 있는 경우의 동작을 결정합니다.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|디렉터리 반복기에 대한 옵션을 지정하는 열거형입니다.|  

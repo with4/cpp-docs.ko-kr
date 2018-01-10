@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <future>
-dev_langs:
-- C++
+f1_keywords: <future>
+dev_langs: C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: fa19a2df51eb53d7cbd66b13b650580df61d9877
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 표준 헤더 \<future>를 포함하여 함수 실행(가능하면 별도의 스레드에서) 및 해당 결과 검색을 간소화하는 템플릿 클래스 및 지원 템플릿을 정의합니다. 결과는 함수에서 반환되는 값 또는 함수에서 발생했지만 함수에 catch되지 않은 예외 중 하나입니다.  
@@ -85,7 +82,7 @@ ms.lasthandoff: 10/03/2017
   
 ### <a name="enumerations"></a>열거형  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[future_errc](../standard-library/future-enums.md#future_errc)|`future_error` 클래스에서 보고한 오류에 대해 기호화된 이름을 제공합니다.|  
 |[future_status](../standard-library/future-enums.md#future_status)|timed wait 함수가 반환할 수 있는 이유에 대해 기호화된 이름을 제공합니다.|  
@@ -93,7 +90,6 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

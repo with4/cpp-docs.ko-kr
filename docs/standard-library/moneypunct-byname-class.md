@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b876a62bc2646c1131f92cabe806ec662a58aa8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fd5c4774da1ea1c0afc25e1538351dad4decbe6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneypunctbyname-class"></a>moneypunct_byname 클래스
 지정된 로캘의 `moneypunct` 패싯으로 사용하여 통화 입력 필드 또는 통화 출력 필드의 서식을 지정할 수 있는 개체에 대해 설명하는 파생된 템플릿 클래스입니다.  

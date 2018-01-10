@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,21 +16,19 @@ f1_keywords:
 - ATLUTIL/ATL::CDebugReportHook::SetHook
 - ATLUTIL/ATL::CDebugReportHook::SetPipeName
 - ATLUTIL/ATL::CDebugReportHook::SetTimeout
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDebugReportHook class
+dev_langs: C++
+helpviewer_keywords: CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: df098ee80bcd8fa81b5503cc21b08ded86945a72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 72790fca5fbfb2856d4da780f276b9cfdc53a26a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 클래스
 이 클래스를 사용 하 여 명명된 된 파이프에 디버그 보고서를 보내도록 합니다.  
@@ -178,4 +175,3 @@ void SetTimeout(DWORD dwTimeout);
   
 ## <a name="see-also"></a>참고 항목  
  [클래스](../../atl/reference/atl-classes.md)
-

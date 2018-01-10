@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7288b343563056f6e1daa4f0cb61b43fb263792f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6445f07c8adff13a65bde46cc9e1cefd789b97ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-guide-mfc-scribble"></a>포팅 가이드: MFC Scribble
 이 항목은 이전 버전의 Visual Studio에서 만든 Visual C++ 프로젝트를 Visual Studio 2017로 업그레이드하는 절차를 소개하는 여러 항목 중 첫 번째입니다. 이러한 항목에서는 예를 들어 매우 간단한 프로젝트부터 좀더 복잡한 프로젝트로 이동하는 업그레이드 프로세스를 소개합니다. 이 항목에서는 MFC Sribble이라는 특정 프로젝트에 대한 업그레이드 프로세스를 안내합니다. C++ 프로젝트에 대한 업그레이드 프로세스의 기본 사항을 소개하는 데 적합합니다.  

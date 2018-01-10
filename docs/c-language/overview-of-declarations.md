@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f0ac465ec20d0893add63d8b5791b9445b17f8fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-declarations"></a>선언자 개요
 "선언"은 식별자 집합에 대한 해석 및 특성을 지정합니다. 식별자에 의해 이름이 지정된 개체나 함수용으로 저장소를 예약하는 선언은 "정의"라고도 합니다. 변수, 함수 및 형식에 대한 C 선언에는 다음과 같은 구문이 사용됩니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
  선언에는 *attribute-seq*에 나열된 선택적 특성이 하나 이상 포함될 수 있습니다. *seq*는 시퀀스의 약어입니다. 이러한 Microsoft 전용 특성은 이 설명서 전반에 설명되어 있는 다양한 기능을 수행합니다.  
   
- 변수 선언에 대한 일반적인 양식에서 *type-specifier*는 변수의 데이터 형식을 제공합니다. *type-specifier*는 형식이 **const** 또는 `volatile`에 의해 수정될 때처럼 복합형이 될 수 있습니다. `declarator`는 변수 이름을 제공합니다. 이러한 변수 이름은 배열이나 포인터 형식을 선언하기 위해 수정할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 변수 선언에 대한 일반적인 양식에서 *type-specifier*는 변수의 데이터 형식을 제공합니다. *type-specifier*는 형식이 **const** 또는 `volatile`에 의해 수정될 때처럼 복합형이 될 수 있습니다. `declarator`는 변수 이름을 제공합니다. 이러한 변수 이름은 배열이나 포인터 형식을 선언하기 위해 수정할 수 있습니다. 예를 들어 개체에 적용된  
   
 ```  
 int const *fp;  

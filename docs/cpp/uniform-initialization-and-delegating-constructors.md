@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ac0de591f894aa7f29d4999de1931508c6152b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68d8f9724ba7f26ac9df9b81c1e4c3f6213f76a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>균일 초기화 및 생성자 위임
 최신 c + +에서 사용할 수 있습니다 *중괄호 초기화* 등호 없이 모든 형식에 대 한 합니다. 또한 코드를 단순화 하 여 비슷한 작업을 수행 하는 생성자를 여러 개 있는 경우 위임 생성자를 사용할 수 있습니다.  

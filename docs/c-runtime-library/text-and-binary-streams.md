@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd9cfcc54e672d16b631662d9d41c02327ac2a57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-binary-streams"></a>텍스트 및 이진 스트림
 텍스트 스트림은 읽을 수 있도록 텍스트 기반 표시에 쓸 수 있는 하나 이상의 텍스트 줄로 구성됩니다. 텍스트 스트림을 읽을 때 프로그램은 각 줄의 끝에서 `NL`(줄 바꿈)을 읽습니다. 텍스트 스트림에 쓸 때 프로그램은 줄의 끝을 알리기 위해 `NL`을 씁니다. 파일의 텍스트를 표현하도록 대상 환경의 서로 다른 규칙을 일치시키기 위해 라이브러리 함수가 프로그램과 텍스트 스트림 간에 전송된 문자의 수와 표현을 변경할 수 있습니다.  

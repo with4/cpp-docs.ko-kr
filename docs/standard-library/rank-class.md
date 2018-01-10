@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 395666c2ae0e9f86ba76f88b0fcb245731bd9ab1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d74e8c7e35516468b935542199c8f1b4cbd3d7e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rank-class"></a>rank 클래스
 배열 차원 수를 가져옵니다.  
@@ -40,7 +41,7 @@ struct rank;
 ## <a name="remarks"></a>설명  
  형식 쿼리는 배열 형식 `Ty`의 차원 수 값이거나, `Ty`가 배열 형식이 아니면 0입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // std__type_traits__rank.cpp   

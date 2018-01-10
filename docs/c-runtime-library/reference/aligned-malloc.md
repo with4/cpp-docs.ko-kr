@@ -33,11 +33,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e81ecad3276abc34243f18a8df367d82122a1064
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7e16801bed2063d60e9151e2afc22a128aeed97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 지정된 맞춤 경계에 메모리를 할당합니다.  
@@ -56,7 +57,7 @@ void * _aligned_malloc(
  요청된 메모리 할당의 크기입니다.  
   
  `alignment`  
- 2의 정수 제곱이어야 하는 맞춤 값입니다.  
+ 맞춤 값으로 2의 정수 거듭제곱이어야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  할당된 메모리 블록에 대한 포인터로 작업 실패 시 `NULL`입니다. 포인터는 `alignment`의 배수입니다.  
@@ -70,11 +71,11 @@ void * _aligned_malloc(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_aligned_malloc`|\<malloc.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_aligned_malloc.c  

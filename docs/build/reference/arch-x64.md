@@ -1,60 +1,61 @@
 ---
-title: "/arch(x64) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: -arch (x64) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 27a453601988c22ed03ae9cb267480d88d6a1cc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /arch(x64)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-x64에서 코드 생성 아키텍처를 지정합니다.  [\/arch\(x86\)](../../build/reference/arch-x86.md) 및 [\/arch\(ARM\)](../../build/reference/arch-arm.md)를 참조하세요.  
+# <a name="arch-x64"></a>/arch(x64)
+x64에서 코드 생성 아키텍처를 지정합니다. 또한 참조 [(x86) /arch](../../build/reference/arch-x86.md) 및 [/arch (ARM)](../../build/reference/arch-arm.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /arch:[AVX|AVX2]  
 ```  
   
-## 인수  
- **\/arch:AVX**  
+## <a name="arguments"></a>인수  
+ **/arch: avx**  
  Intel Advanced Vector Extensions 명령을 사용하도록 설정합니다.  
   
- **\/arch:AVX2**  
- Intel 고급 벡터 확장 2 명령을 사용하도록 설정합니다.  
+ **/arch: avx2**  
+ Intel 고급 벡터 확장명 2 명령을 사용하도록 설정합니다.  
   
-## 설명  
- **\/arch**는 네이티브 함수에 대한 코드 생성에만 영향을 미칩니다.  [\/clr](../../build/reference/clr-common-language-runtime-compilation.md)을 사용하여 컴파일하는 경우 **\/arch**는 관리되는 함수의 코드 생성에 영향을 주지 않습니다.  
+## <a name="remarks"></a>설명  
+ **/arch** 만 코드를 네이티브 함수에 대 한 생성에 영향을 줍니다. 사용 하는 경우 [/clr](../../build/reference/clr-common-language-runtime-compilation.md) 를 컴파일하려면 **/arch** 관리 되는 함수에 대 한 코드 생성에는 아무 효과가 없습니다.  
   
- `__AVX__` 전처리기 기호는 **\/arch:AVX** 컴파일러 옵션을 지정한 경우 정의됩니다.  `__AVX2__` 전처리기 기호는 **\/arch:AVX2** 컴파일러 옵션을 지정한 경우 정의됩니다.  자세한 내용은 [미리 정의된 매크로](../../preprocessor/predefined-macros.md)를 참조하세요.  **\/arch:AVX2** 옵션은 Visual Studio 2013 업데이트 2 버전 12.0.34567.1에서 도입되었습니다.  
+ `__AVX__` 전처리기 기호가 정의 된 경우는 **/arch: avx** 컴파일러 옵션을 지정 합니다. `__AVX2__` 전처리기 기호가 정의 된 경우는 **/arch: avx2** 컴파일러 옵션을 지정 합니다. 자세한 내용은 [Predefined Macros](../../preprocessor/predefined-macros.md)을 참조하십시오. **/arch: avx2** 옵션은 Visual Studio 2013 업데이트 2 버전 12.0.34567.1에서에서 도입 되었습니다.  
   
-### Visual Studio에서 \/arch:AVX 또는 \/arch:AVX2 컴파일러 옵션을 설정하려면  
+### <a name="to-set-the-archavx-or-archavx2-compiler-option-in-visual-studio"></a>Visual Studio에서 /arch:AVX 또는 /arch:AVX2 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하세요.  
+1.  열기는 **속성 페이지** 프로젝트에 대 한 대화 상자. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **구성 속성**, **C\/C\+\+** 폴더를 선택합니다.  
+2.  선택 된 **구성 속성**, **C/c + +** 폴더입니다.  
   
-3.  **코드 생성** 속성 페이지를 선택합니다.  
+3.  선택 된 **코드 생성** 속성 페이지.  
   
-4.  **고급 명령 집합 사용** 드롭다운 상자에서 **고급 벡터 확장\(\/arch:AVX\)** 또는 **고급 벡터 확장 2\(\/arch:\/AVX2\)**를 선택합니다.  
+4.  에 **고급 명령 집합 사용** 드롭 다운 상자 **Advanced Vector Extensions (/ /arch: AVX)** 또는 **고급 벡터 확장 2 (/ /arch: AVX2)**합니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>을 참조하세요.  
   
-## 참고 항목  
- [\/arch\(최소 CPU 아키텍처\)](../../build/reference/arch-minimum-cpu-architecture.md)   
+## <a name="see-also"></a>참고 항목  
+ [/arch (최소 CPU 아키텍처)](../../build/reference/arch-minimum-cpu-architecture.md)   
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,33 +13,19 @@ f1_keywords:
 - chrono/std::chrono::time_point::max
 - chrono/std::chrono::time_point::min
 - chrono/std::chrono::time_point::time_since_epoch
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1c4d02cf83401e6a6dce3fa079d43dea0fce6270
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords: std::chrono [C++], time_point
+ms.workload: cplusplus
+ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timepoint-class"></a>time_point 클래스
 `time_point`는 시점을 나타내는 형식을 설명합니다. 이 클래스는 템플릿 인수 `Clock`으로 표시되는 epoch 이후 경과된 시간을 저장하는 [duration](../standard-library/duration-class.md) 형식의 개체를 포함합니다.  
@@ -75,7 +60,7 @@ class time_point;
 |이름|설명|  
 |----------|-----------------|  
 |[max](#max)|`time_point::ref`의 상한을 지정합니다.|  
-|[min](#min)|`time_point::ref`의 하한을 지정합니다.|  
+|[분](#min)|`time_point::ref`의 하한을 지정합니다.|  
 |[time_since_epoch](#time_since_epoch)|저장된 `duration` 값을 반환합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
@@ -174,5 +159,4 @@ constexpr duration time_since_epoch() const;
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
-
 

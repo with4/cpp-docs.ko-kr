@@ -28,11 +28,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8098fd126f51e0d9a01f1219f99ec392a9f4029f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 783beddf9ec2218a42478ae78456e6be6177dbc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltoa"></a>ltoa
 이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_ltoa](../../c-runtime-library/reference/ltoa-ltow.md) 또는 보안이 강화된 [_ltoa_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md)를 사용하세요.

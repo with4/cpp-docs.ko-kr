@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaab86ab72ef41bfe97a67c6d8845e8ce3d3c899
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-property-page-wizard"></a>ATL 속성 페이지 마법사
 이 마법사 [ATL 프로젝트에 속성 페이지를 추가](../../atl/reference/adding-an-atl-property-page.md) 또는 MFC 프로젝트에 ATL 지원 합니다. 속성을 설정 하기 위한 사용자 인터페이스를 제공 하는 ATL 속성 페이지 (또는 메서드를 호출할) 하나 이상의 COM 개체입니다.  

@@ -30,11 +30,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b4c5a5a76a56567e0c0dd41a70b569327eda1cd4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0a2810a8d6602efb689896cfe35cf61338eb24f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable, _set_FMA3_enable
 초월수 수식 부동 소수점 라이브러리 함수에서에서 사용 하 여 FMA3 지침 컴파일된 코드 x64 지정 하는 플래그를 가져오거나 설정 합니다. 플랫폼입니다.  
@@ -62,7 +63,7 @@ FMA3 구현은 서로 다른 알고리즘을 사용 하므로 계산의 결과�
   
 `_set_FMA3_enable` 및 `_get_FMA3_enable` 함수에에서만 제공 되는 X64 버전의 CRT 합니다.  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_set_FMA3_enable` <br /><br /> `_get_FMA3_enable`| C: \<math.h><br /><br /> C + +: \<cmath > 또는 \<math.h >|  
   

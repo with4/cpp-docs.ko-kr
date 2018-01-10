@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6766b2fcc5d277b86f979252bf22e6ae343e608e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4a82b26a1e6c208a584dfd19ebfd4530b4bdf76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-does-remote-automation-provide"></a>원격 자동화의 기능은 무엇입니까?
 원격 자동화를 사용하면 프로그램은 다른 한 컴퓨터에서 `IDispatch` 구현을 호출할 수 있습니다. 또한 구체적으로, 자동화가 필요한 다른 인터페이스를 지원 **IEnumVARIANT** 컬렉션 지원에 대 한 합니다. 다른 COM 인터페이스를 배포 하는 기능은 제공 하지 않습니다 (제외 하 고 **IUnknown**, 물론) 및 일반적인 자동화와 같이 자동화에 의해 지원 되는 데이터 형식에 대 한 마샬링 지원 포함 합니다.  

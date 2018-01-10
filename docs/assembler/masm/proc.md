@@ -1,32 +1,31 @@
 ---
-title: "PROC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROC directive"
+title: PROC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROC
+dev_langs: C++
+helpviewer_keywords: PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b4b8b5259e3a7e42e7eb08cb4832496a6f3c35c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# PROC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-호출 하는 프로시저 블록의 시작과 끝을 표시  *레이블*.  문 블록에서을 호출할 수 있는  **호출** 명령 또는  [INVOKE](../../assembler/masm/invoke.md) 지시문.  
+# <a name="proc"></a>PROC
+호출 하는 프로시저 블록의 시작 및 끝 표시 *레이블*합니다. 블록의 문이 호출할 수는 **호출** 명령 또는 [INVOKE](../../assembler/masm/invoke.md) 지시문입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -37,14 +36,14 @@ statements
 label ENDP  
 ```  
   
-## 설명  
- 프레임 \[:*ehandler 주소*\] ml64.exe에만 유효 하 고 MASM으로.pdata에서 함수 테이블 엔트리를 생성 하 고 함수의 구조적 위해.xdata에서 정보를 해제로 인해 예외 처리 해제 동작 합니다.  
+## <a name="remarks"></a>설명  
+ [프레임 [:*ehandler 주소*]]는 에서만 ml64.exe, 사용할 및 MASM.pdata에서 함수 테이블 항목을 생성 하는 함수의 구조적에 대 한.xdata에서 정보를 해제 하면 예외 처리 동작을 해제 합니다.  
   
- 때의  **프레임** 특성 사용, 여와 야는 [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) 지시문입니다.  
+ 경우는 **프레임** 특성을 사용 하 여 따라야 할는 [합니다. 프롤로그 끝](../../assembler/masm/dot-endprolog.md) 지시문입니다.  
   
- 참조 하십시오 [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md) ml64.exe 사용에 대 한 자세한 내용은.  
+ 참조 [MASM (ml64.exe) x64](../../assembler/masm/masm-for-x64-ml64-exe.md) ml64.exe를 사용 하 여 대 한 자세한 내용은 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 ; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
@@ -66,7 +65,7 @@ _text ENDS
 END  
 ```  
   
- 위의 코드 다음 함수 표를 내보내고 정보를 해제 합니다.  
+ 위의 코드는 다음 함수 표 내보내고 정보를 해제 됩니다.  
   
 ```  
 FileHeader->Machine 34404  
@@ -89,5 +88,5 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp  
 ```  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

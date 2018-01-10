@@ -16,31 +16,18 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 78fac089c9b21825bfb014fe6f26776bac58bd93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4080fa1bac30ac88edca33f6de32b0a6490f4341
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-platforms-visual-c"></a>지원되는 플랫폼(Visual C++)
 
 [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)]를 사용하여 빌드한 응용 프로그램은 다음과 같이 다양한 플랫폼을 대상으로 할 수 있습니다.  
   
-|운영 체제|x86|x64|ARM|  
+|운영 체제|x86|X64|ARM|  
 |----------------------|---------|---------|---------|  
 |Windows XP|X*|X*||  
 |[!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]|X*|X*||  

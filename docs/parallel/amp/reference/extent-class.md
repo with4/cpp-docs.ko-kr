@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 22b7a25d0695b7e12a4fbecbf47bbc7feb32148f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f93bcd69a6f0b05f9566fe3a2ffb6025729b63de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extent-class-c-amp"></a>extent 클래스(C++ AMP)
 벡터를 나타냅니다 *N* 의 범위를 지정 하는 정수 값은 *N*-0 원점이 차원 공간입니다. 벡터의 값은 가장 덜 중요 한에 가장 중요 한에서 정렬 됩니다.  

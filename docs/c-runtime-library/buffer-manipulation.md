@@ -17,18 +17,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1c74c3b9f98f40b87224ae1c12da06ec55207567
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 942d0f881ed6453921f6082024be5247a1bb1b65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffer-manipulation"></a>버퍼 조작
 다음 루틴을 사용하여 바이트 단위별로 메모리 영역을 사용할 수 있습니다.  
   
 ### <a name="buffer-manipulation-routines"></a>버퍼 조작 루틴  
   
-|루틴|기능|  
+|루틴에서 반환된 값|사용|  
 |-------------|---------|  
 |[_memccpy](../c-runtime-library/reference/memccpy.md)|제공된 문자 또는 지정된 수의 문자가 복사될 때까지 한 버퍼에서 다른 버퍼로 문자를 복사합니다.|  
 |[memchr, wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|지정된 문자 수 내에서 버퍼의 지정된 문자가 처음 나오는 경우에 대한 포인터를 반환합니다.|  

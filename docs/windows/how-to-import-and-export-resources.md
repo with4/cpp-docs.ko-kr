@@ -27,11 +27,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21f596996d090d9d41146c6f8ea9cb24884dd4c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a01269928d0e5b52cca6e2301ad681db61289f80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-import-and-export-resources"></a>방법: 리소스 가져오기 및 내보내기
 Visual C++에서 사용하도록 그래픽 리소스(비트맵, 아이콘, 커서 및 도구 모음), HTML 파일 및 사용자 지정 리소스를 가져올 수 있습니다. Visual C++ 프로젝트에서 동일한 형식의 파일을 개발 환경 외부에서 사용할 수 있는 별도의 파일로 내보낼 수 있습니다.  

@@ -18,18 +18,19 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6a0c3fe1a85028f4b4220f8e2f111afa1012121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stream-io"></a>스트림 I/O
 이러한 함수는 단일 문자에서 대형 데이터 구조체에 이르기까지 다양한 크기 및 형식의 데이터를 처리합니다. 또한 버퍼링을 제공하여 성능을 향상시킬 수 있습니다. 스트림 버퍼의 기본 크기는 4K입니다. 이러한 루틴은 런타임 라이브러리 루틴에 의해 생성된 버퍼에만 영향을 주며 운영 체제에서 생성된 버퍼에는 영향을 주지 않습니다.  
   
 ### <a name="stream-io-routines"></a>스트림 I/O 루틴  
   
-|루틴|기능|  
+|루틴에서 반환된 값|사용|  
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|스트림 오류 표시기를 지웁니다.|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|스트림을 닫습니다.|  
@@ -60,9 +61,9 @@ ms.lasthandoff: 10/24/2017
 |[getc, getwc](../c-runtime-library/reference/getc-getwc.md)|스트림에서 문자를 읽습니다( `fgetc` 및 `fgetwc`의 매크로 버전).|  
 |[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|`stdin` 에서 문자를 읽습니다( `fgetchar` 및 `fgetwchar`의 매크로 버전).|  
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|스트림 I/O 수준에서 허용되는 동시에 열리는 파일 수를 반환합니다.|  
-|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|`stdin`에서 줄을 읽습니다.|  
+|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|`stdin`|  
 |[_getw](../c-runtime-library/reference/getw.md)|스트림에서 이진 `int` 를 읽습니다.|  
-|[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`stdout`에 형식이 지정된 데이터를 씁니다.|  
+|[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`stdout`|  
 |[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|스트림에 문자를 씁니다( `fputc` 및 `fputwc`의 매크로 버전).|  
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|`stdout` 에 문자를 씁니다( `fputchar` 및 `fputwchar`의 매크로 버전).|  
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|스트림에 줄을 씁니다.|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 10/24/2017
 |[ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)|스트림으로 문자를 다시 푸시합니다.|  
 |[_vcprintf, _vcwprintf](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md), [_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l](../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)|콘솔에 형식이 지정된 데이터를 씁니다.|  
 |[vfprintf, vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md), [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)|스트림에 형식이 지정된 데이터를 씁니다.|  
-|[vprintf, vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md), [vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|`stdout`에 형식이 지정된 데이터를 씁니다.|  
+|[vprintf, vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md), [vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|`stdout`|  
 |[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|버퍼에 지정된 길이의 형식이 지정된 데이터를 씁니다.|  
 |[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|버퍼에 형식이 지정된 데이터를 씁니다.|  
   

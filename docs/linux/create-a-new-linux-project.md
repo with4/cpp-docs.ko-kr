@@ -11,11 +11,14 @@ ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 31309f961b392cb7548c3114e1af8604ac872cf3
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 8b9eda4c238ae1a3ea3e59d0e5c39ee6b59cff02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-linux-project"></a>새 Linux 프로젝트 만들기
 Linux용 코드를 작성할 때 Visual Studio 프로젝트 또는 CMake 프로젝트를 만들도록 선택할 수 있습니다. 이 항목에서는 Visual Studio 프로젝트를 만드는 방법을 설명합니다. CMake 프로젝트에 대한 자세한 내용은 [Linux CMake 프로젝트 구성](cmake-linux-project.md)을 참조하세요.

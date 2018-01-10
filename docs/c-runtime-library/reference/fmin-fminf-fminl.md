@@ -1,5 +1,5 @@
 ---
-title: "fmin, fminf, fminl | Microsoft 문서"
+title: fmin, fminf, fminl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,29 +38,16 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: b7fd6a2b91c1bc7cd973d2ac60f2d6fc39d322bb
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3428afcdcf403c733e5282b2b3c4347ba94497d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 지정된 두 값 중 더 작은 값을 확인합니다.  
@@ -113,11 +100,11 @@ long double fminl(
  이 함수는 [_matherr](../../c-runtime-library/reference/matherr.md)를 호출하거나, 부동 소수점 예외를 발생시키거나, `errno` 값을 변경하지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- C++는 오버로드를 허용하기 때문에 float 및 long double 형식을 사용하고 반환하는 `fmin`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `fmin`은 항상 Double을 사용하고 반환합니다.  
+ C++는 오버로드를 허용하기 때문에 float 및 long double 형식을 사용하고 반환하는 `fmin`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `fmin`는 항상 double을 사용하고 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`fmin`, `fminf`, `fminl`|C: \<math.h><br />C++: \<math.h> 또는 \<cmath>|  
   

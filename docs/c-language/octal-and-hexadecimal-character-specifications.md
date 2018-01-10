@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f9ff802a63aed2484407b7e5fe82848ecd69cea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf3a27dc61543482d1d6484d0edd4b5e1bb04373
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>8진 및 16진 문자 사양
 **\\***ooo* 시퀀스는 ASCII 문자 집합의 문자를 세 자리 8진수 문자 코드로 지정할 수 있음을 의미합니다. 8진수 정수의 숫자 값은 원하는 문자 또는 와이드 문자의 값을 지정합니다.  

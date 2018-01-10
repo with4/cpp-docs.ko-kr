@@ -30,11 +30,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a77c4b80dc83f64b61fdd3b98f7971b5ef6e5e27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef97b5e5ab2c21b375814cf117d6155b4a502795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="to-functions"></a>to 함수
 각 **to** 함수와 이 함수에 연결된 매크로가 있는 경우에는 단일 문자를 다른 문자로 변환합니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  **to** 함수 및 매크로 변환은 다음과 같이 수행됩니다.  
   
-|루틴|매크로|설명|  
+|루틴에서 반환된 값|매크로|설명|  
 |-------------|-----------|-----------------|  
 |`__toascii`|`__toascii`|`c`를 ASCII 문자로 변환|  
 |`tolower`|`tolower`|해당하는 경우 `c`를 소문자로 변환|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 10/24/2017
   
 -   대상 대/소문자에 해당하는 와이드 문자가 있는 경우(즉, `iswlower` 또는 **iswupper**이 각각 0이 아닌 경우)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_toupper.c  

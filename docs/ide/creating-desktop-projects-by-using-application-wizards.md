@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c79a01e5c6724ab37a29e8f3b80ca9a3346f1440
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 919573139ee8bd37c210d91f223a1c41d28d7b3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>응용 프로그램 마법사를 사용하여 데스크톱 프로젝트 만들기
 모든 형식의 Visual C++ 프로젝트에는 프로젝트 템플릿에서 모델링한 새 프로젝트를 빠르고 쉽게 만들 수 있도록 도와주는 응용 프로그램 마법사가 있습니다.  응용 프로그램 마법사를 열려면 사용는 **새 프로젝트** 프로젝트가 위치할 디렉터리 및 솔루션 또는 프로젝트의 이름과 같은 프로젝트 속성을 지정 하려면 대화 상자.  
@@ -46,6 +47,6 @@ ms.lasthandoff: 10/24/2017
  프로젝트를 만들 경우 솔루션을 새로 만들거나 프로젝트를 기존 솔루션에 추가할 수 있습니다. 자세한 내용은 [방법: 기존 코드로 C++ 프로젝트 만들기](../ide/how-to-create-a-cpp-project-from-existing-code.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual c + + 프로젝트 만들기 및 관리](../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Visual C++ 프로젝트 만들기 및 관리](../ide/creating-and-managing-visual-cpp-projects.md)   
  [MFC 마법사 및 대화 상자](../mfc/reference/mfc-wizards-and-dialog-boxes.md)   
  [ATL 마법사 및 대화 상자](../atl/reference/atl-wizards-and-dialog-boxes.md)

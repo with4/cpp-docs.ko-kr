@@ -51,11 +51,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50250a1f8716ba4caac7f57b3ae7938286a2aec6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c42a0ba40797312a2108a288fecdea55c6873f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 클래스
 속성 시트(탭 대화 상자라고도 함)의 개별 페이지를 나타냅니다.  
@@ -133,7 +134,7 @@ void CancelToClose();
   
  `CancelToClose` 멤버 함수는 아무 작업도 수행 모덜리스 속성 시트에서 모덜리스 속성 시트를 기본적으로 "취소" 단추가 없기 때문입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertyPage::QuerySiblings](#querysiblings)합니다.  
   
 ##  <a name="construct"></a>CPropertyPage::Construct  
@@ -193,7 +194,7 @@ void Construct(
   
  사용 해야 `Construct` 배열 작업 시점과 호출 해야 **생성** 배열의 각 멤버에 대 한 데이터 멤버는 적절 한 값을 할당 되도록 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
   
 ##  <a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
@@ -259,7 +260,7 @@ CPropertyPage(
   
  사용 하 여 (예: 배열을 사용 하는 경우) 여러 매개 변수를 설정한 경우 [CPropertySheet::Construct](../../mfc/reference/cpropertysheet-class.md#construct) 대신 `CPropertyPage`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
 ##  <a name="getpsp"></a>CPropertyPage::GetPSP  
@@ -286,7 +287,7 @@ PROPSHEETPAGE m_psp;
   
  해당 멤버의 목록을 포함 하 여이 구조에 대 한 자세한 내용은 참조 **PROPSHEETPAGE** Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#128](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]  
   
 ##  <a name="onapply"></a>CPropertyPage::OnApply  
@@ -308,7 +309,7 @@ virtual BOOL OnApply();
   
  사용자가 속성 시트에는 지금 적용 또는 확인 단추를 누를 때 전송 되는 알림 메시지에 대 한 자세한 내용은 참조 [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertyPage::OnOK](#onok)합니다.  
   
 ##  <a name="oncancel"></a>CPropertyPage::OnCancel  
@@ -321,7 +322,7 @@ virtual void OnCancel();
 ### <a name="remarks"></a>설명  
  취소 단추 동작을 수행 하려면이 멤버 함수를 재정의 합니다. 기본값에 적용 된 변경 내용을 부정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]  
   
 ##  <a name="onkillactive"></a>CPropertyPage::OnKillActive  
@@ -341,7 +342,7 @@ virtual BOOL OnKillActive();
   
  이 멤버 함수를 성공적으로 반환 된 후 프레임 워크의 페이지를 호출 합니다 [OnOK](#onok) 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
 ##  <a name="onok"></a>CPropertyPage::OnOK  
@@ -358,7 +359,7 @@ virtual void OnOK();
   
  이 멤버 함수의 기본 구현은 페이지에서 데이터를 업데이트를 반영 하도록 "정리"로 표시 된 `OnKillActive` 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#116](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]  
   
 ##  <a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
@@ -376,7 +377,7 @@ virtual BOOL OnQueryCancel();
   
  기본 구현은 `OnQueryCancel` 반환 **TRUE**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#117](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]  
   
 ##  <a name="onreset"></a>CPropertyPage::OnReset  
@@ -393,7 +394,7 @@ virtual void OnReset();
   
  기본 구현은 `OnReset` 는 아무 작업도 수행 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertyPage::OnCancel](#oncancel)합니다.  
   
 ##  <a name="onsetactive"></a>CPropertyPage::OnSetActive  
@@ -411,7 +412,7 @@ virtual BOOL OnSetActive();
   
  기본 구현은 페이지에 대 한 창을 만듭니다. 그렇지 않은 경우 이전에 만든 고 활성 페이지가 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext)합니다.  
   
 ##  <a name="onwizardback"></a>CPropertyPage::OnWizardBack  
@@ -429,7 +430,7 @@ virtual LRESULT OnWizardBack();
   
  마법사 형식의 속성 시트를 확인 하는 방법에 대 한 자세한 내용은 참조 하십시오. [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#118](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]  
   
 ##  <a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
@@ -451,7 +452,7 @@ virtual BOOL OnWizardFinish();
   
  마법사 형식의 속성 시트를 확인 하는 방법에 대 한 자세한 내용은 참조 하십시오. [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#119](../../mfc/codesnippet/cpp/cpropertypage-class_9.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#120](../../mfc/codesnippet/cpp/cpropertypage-class_10.cpp)]  
@@ -475,7 +476,7 @@ virtual LRESULT OnWizardNext();
   
  마법사 형식의 속성 시트를 확인 하는 방법에 대 한 자세한 내용은 참조 하십시오. [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#123](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]  
   
 ##  <a name="querysiblings"></a>CPropertyPage::QuerySiblings  
@@ -500,7 +501,7 @@ LRESULT QuerySiblings(
 ### <a name="remarks"></a>설명  
  속성 시트는 0이 아닌 값을 반환 하는 페이지의 후속 페이지에 메시지를 보내지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#124](../../mfc/codesnippet/cpp/cpropertypage-class_14.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#125](../../mfc/codesnippet/cpp/cpropertypage-class_15.cpp)]  
@@ -521,7 +522,7 @@ void SetModified(BOOL bChanged = TRUE);
 ### <a name="remarks"></a>설명  
  프레임 워크 유지 트랙의 페이지는 "더티" 즉, 속성 페이지를 호출한 **SetModified (TRUE)**합니다. 지금 적용 단추 호출 하는 경우에 항상 사용할 수 **SetModified (TRUE)** 페이지 중 하나에 대 한 합니다. 호출 하는 경우 지금 적용 단추가 비활성화 됩니다 **SetModified (FALSE)** 만 하는 경우 다른 페이지는 "더티"입니다. 하지만 페이지 중 하나에 대 한  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#127](../../mfc/codesnippet/cpp/cpropertypage-class_17.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

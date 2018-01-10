@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_new_handler
+apiname: _set_new_handler
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - _set_new_handler
 - set_new_handler
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _set_new_handler function
 - set_new_handler function
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c8a3b6e7df9f46ebf299f2fe5472461f1944b055
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 581942f828bb666606b8f176ae3e2bb3454cbf98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 `new` 연산자가 메모리 할당에 실패하면 오류 처리 메커니즘에 제어를 전달합니다.  
@@ -108,7 +91,7 @@ _PNH old_handler = _set_new_handler( my_handler );
    // Code that requires old_handler  
 ```  
   
- C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 함수는 [malloc](../../c-runtime-library/reference/malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 `malloc`이 `_set_new_handler`에서 설정한 대로 새 처리기 루틴을 호출하는지 여부를 나타냅니다. 기본적으로 `malloc`는 메모리 할당 실패 시 새 처리기 루틴을 호출하지 않습니다. `malloc`가 메모리 할당에 실패한 경우 `malloc`가 `new` 연산자가 같은 이유로 실패했을 때 수행하는 것과 동일한 방식으로 새 처리기 루틴을 호출하도록 이 기본 동작을 재정의할 수 있습니다. 기본값을 재정의하려면 다음을  
+ C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 함수는 [malloc](../../c-runtime-library/reference/malloc.md)에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 `malloc`이 `_set_new_handler`에서 설정한 대로 새 처리기 루틴을 호출하는지 여부를 나타냅니다. 기본적으로 `malloc`는 메모리 할당 실패 시 새 처리기 루틴을 호출하지 않습니다. `malloc`가 메모리 할당에 실패한 경우 `malloc`이 `new` 연산자가 같은 이유로 실패했을 때 수행하는 것과 동일한 방식으로 새 처리기 루틴을 호출하도록 이 기본 동작을 재정의할 수 있습니다. 기본값을 재정의하려면 다음을  
   
 ```  
 _set_new_mode(1)  
@@ -124,13 +107,13 @@ _set_new_mode(1)
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_set_new_handler`|\<new.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 할당이 실패하면 컨트롤이 MyNewHandler로 전송됩니다. MyNewHandler에 전달된 인수는 요청된 바이트 수입니다. MyNewHandler에서 반환된 값은 할당을 다시 시도해야 하는지 여부를 나타내는 플래그입니다. 0이 아닌 값은 할당을 다시 시도해야 함을 나타내며 값 0은 할당에 실패했음을 나타냅니다.  
   
 ```  

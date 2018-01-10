@@ -101,11 +101,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 173be0b50b0a69f10e48abac9b4018b809e96991
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb8cb38c8ad5f744cab49c25d8de9c7cea58959a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow 클래스
 도크 사이트의 동일한 수평 또는 수직 행(열)에 위치한 창 목록을 관리합니다.  
@@ -176,7 +177,7 @@ class CDockingPanesRow : public CObject
 ## <a name="remarks"></a>설명  
  `CDockingPanesRow` 개체는 도킹 사이트 개체에 의해 내부적으로 만들어집니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCAutoHideBar` 개체에서 `CDockingPanesRow` 개체를 가져오는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cdockingpanesrow-class_1.cpp)]  

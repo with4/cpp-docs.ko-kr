@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 74e4d0a87976017deda146274947d98a76002004
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fec44138379e3510f353f0fdd99f7a6a1905f9cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-variables"></a>전역 변수
 Microsoft C 런타임 라이브러리는 다음 전역 변수 또는 매크로를 제공합니다. 이러한 전역 변수 또는 매크로 중 일부는 보다 안전한 함수 버전으로 인해 사용되지 않고 있으므로 전역 변수 대신 이러한 함수 버전을 사용하는 것이 좋습니다.  

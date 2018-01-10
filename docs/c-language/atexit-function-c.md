@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fed4acd2ad200b47524801c83be459ac8e07ebc5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fdfa6bd17fb9cd584d138f0fbd219b2352a1858e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atexit-function-c"></a>atexit 함수 (C)
 **ANSI 4.10.4.3** 인수의 값이 0이 아니거나 EXIT_SUCCESS이거나 EXIT_FAILURE인 경우 `atexit` 함수에서 반환하는 상태입니다.  

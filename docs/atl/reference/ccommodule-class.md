@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -34,36 +33,21 @@ f1_keywords:
 - ATLBASE/ATL::CComModule::m_hInstResource
 - ATLBASE/ATL::CComModule::m_hInstTypeLib
 - ATLBASE/ATL::CComModule::m_pObjMap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 893efea83bd0d84813a70ec39e5d50fde47dd732
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5b86e1f082b7be844afe3b1a84d182d1c722f500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommodule-class"></a>CComModule 클래스
 ATL 7.0부터 `CComModule` 는 사용 되지 않습니다: 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 내용을 확인 합니다.  
@@ -112,7 +96,7 @@ class CComModule : public _ATL_MODULE
 |[CComModule::m_hInstTypeLib](#m_hinsttypelib)|기본적으로 모듈 인스턴스에 대 한 핸들을 포함합니다.|  
 |[CComModule::m_pObjMap](#m_pobjmap)|개체 맵의 모듈 인스턴스에 의해 유지 관리를 가리킵니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
 >  이 클래스는 더 이상 ATL 코드 생성 마법사 사용 하 여 이제는 [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) 및 [CAtlModule](../../atl/reference/catlmodule-class.md) 파생 클래스입니다. 참조 [ATL 모듈 클래스](../../atl/atl-module-classes.md) 자세한 정보에 대 한 합니다. ATL.의 이전 릴리스를 사용 하 여 만든 응용 프로그램과 함께 사용 하기 위해 다음에 나오는 정보는 `CComModule`여전히에 대 한 ATL의 일부 이전 버전과 기능입니다.  
@@ -183,7 +167,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="return-value"></a>반환 값  
  `HINSTANCE` 이 모듈을 식별 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 된 [m_hInst](#m_hinst) 데이터 멤버입니다.  
   
 ##  <a name="getresourceinstance"></a>CComModule::GetResourceInstance  
@@ -196,7 +180,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="return-value"></a>반환 값  
  `HINSTANCE`입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 된 [m_hInstResource](#m_hinstresource) 데이터 멤버입니다.  
   
 ##  <a name="gettypelibinstance"></a>CComModule::GetTypeLibInstance  
@@ -275,7 +259,7 @@ CRITICAL_SECTION m_csWindowCreate;
 HINSTANCE m_hInst;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  모듈 인스턴스에 대 한 핸들을 포함합니다.  
   
  [Init](#init) 메서드 집합 `m_hInst` 에 전달 된 핸들에 **DLLMain** 또는 `WinMain`합니다.  
@@ -315,7 +299,7 @@ HINSTANCE m_hInstTypeLib;
 _ATL_OBJMAP_ENTRY* m_pObjMap;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  개체 맵의 모듈 인스턴스에 의해 유지 관리를 가리킵니다.  
   
 ##  <a name="registerclasshelper"></a>CComModule::RegisterClassHelper  
@@ -349,7 +333,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  개체의 표준 클래스 등록 시스템 레지스트리에 입력합니다.  
   
  [UpdateRegistryClass](#updateregistryclass) 메서드 호출 `RegisterClassHelper`합니다.  
@@ -363,15 +347,15 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>매개 변수  
  `dwClsContext`  
- [in] 클래스 개체를 실행할의 컨텍스트를 지정 합니다. 가능한 값은 **위해 CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, 또는 **CLSCTX_LOCAL_SERVER**합니다. 이러한 값에 대 한 참조 [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ [in] 클래스 개체를 실행할의 컨텍스트를 지정 합니다. 가능한 값은 **위해 CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, 또는 **CLSCTX_LOCAL_SERVER**합니다. 이러한 값에 대 한 참조 [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) Windows sdk에서입니다.  
   
  `dwFlags`  
- [in] 클래스 개체에 연결 형식을 결정합니다. 가능한 값은 **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, 또는 **REGCLS_MULTI_SEPARATE**합니다. 이러한 값에 대 한 참조 [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ [in] 클래스 개체에 연결 형식을 결정합니다. 가능한 값은 **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, 또는 **REGCLS_MULTI_SEPARATE**합니다. 이러한 값에 대 한 참조 [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  다른 응용 프로그램 데이터베이스에 연결할 수 있도록 ole EXE 클래스 개체를 등록 합니다. 이 메서드는 Exe를 사용할 수만 있습니다.  
   
 ##  <a name="registerserver"></a>CComModule::RegisterServer  
@@ -393,7 +377,7 @@ HRESULT RegisterServer(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  에 따라는 `pCLSID` 매개 변수를 단일 클래스 개체 또는 개체 맵의 모든 개체에 대 한 시스템 레지스트리를 업데이트 합니다.  
   
  경우 `bRegTypeLib` 은 **TRUE**, 형식 라이브러리 정보도 업데이트 됩니다.  
@@ -412,12 +396,12 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
   
 ### <a name="parameters"></a>매개 변수  
  `lpszIndex`  
- [in] 숫자 형식의 문자열 `"\\N"`여기서 `N` TYPELIB 리소스의 정수 인덱스입니다.  
+ [in] 숫자 형식의 문자열 `"\\N"`여기서 `N` 정수 인덱스 형식 라이브러리 리소스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  시스템 레지스트리를 형식 라이브러리에 대 한 정보를 추가합니다.  
   
  모듈 인스턴스에 여러 개의 형식 라이브러리가 있으면 상위 형식 라이브러리를 사용할지 지정 하려면이 메서드의 두 번째 버전을 사용 합니다.  
@@ -442,7 +426,7 @@ HRESULT RevokeClassObjects() throw();
 void Term() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  모든 데이터 멤버를 해제합니다.  
   
 ##  <a name="unregisterclasshelper"></a>CComModule::UnregisterClassHelper  
@@ -468,7 +452,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  시스템 레지스트리에서 개체의 표준 클래스 등록을 제거 합니다.  
   
  [UpdateRegistryClass](#updateregistryclass) 메서드 호출 `UnregisterClassHelper`합니다.  
@@ -491,7 +475,7 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  에 따라는 `pCLSID` 단일 클래스 개체 또는 개체 맵의 모든 개체 매개 변수를 등록 취소 합니다.  
   
  `UnregisterServer`자동으로 호출 됩니다 **DLLUnregisterServer** dll 또는 `WinMain` EXE 사용 하 여 실행에 대 한는 **프로그램이 /UnregServer** 명령줄 옵션입니다.  
@@ -631,7 +615,7 @@ virtual HRESULT UpdateRegistryFromResourceS(
  표준 HRESULT 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 유사한 [UpdateRegistryFromResourceD](#updateregistryfromresourced) 제외 하 고 `UpdateRegistryFromResourceS` ATL 레지스트리 구성 요소 (등록자)에 대 한 정적 링크를 만듭니다.  
+ 비슷한 [UpdateRegistryFromResourceD](#updateregistryfromresourced) 제외 하 고 `UpdateRegistryFromResourceS` ATL 레지스트리 구성 요소 (등록자)에 대 한 정적 링크를 만듭니다.  
   
  `UpdateRegistryFromResourceS`호출 될 자동으로 개체 맵의 처리 될 때 추가한 제공 `#define _ATL_STATIC_REGISTRY` 프로그램 stdafx.h로 합니다.  
   
@@ -642,4 +626,3 @@ virtual HRESULT UpdateRegistryFromResourceS(
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)
-

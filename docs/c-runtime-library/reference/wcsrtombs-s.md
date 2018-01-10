@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs_s
+apiname: wcsrtombs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs_s
-dev_langs:
-- C++
+f1_keywords: wcsrtombs_s
+dev_langs: C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4c32ff2061e8ce52ae193c7679b40e69515d3ab0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 025acdf18d0e5322ef43de800e3577233a93cb86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 와이드 문자열을 멀티바이트 문자열 표현으로 변환합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 향상된 [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) 버전입니다.  
@@ -124,9 +106,9 @@ errno_t wcsrtombs_s(
   
  `count`가 특수 값 [_TRUNCATE](../../c-runtime-library/truncate.md)이면 `wcsrtombs_s`는 대상 버퍼에 포함할 수 있는 만큼 문자열을 최대한 변환하지만 null 종결자를 포함한 공간은 남겨 둡니다.  
   
- `wcsrtombs_s`는 소스 문자열을 성공적으로 변환하는 경우 `pReturnValue`가 `NULL`이 아니면 null 종결자를 포함하여 변환된 문자열의 크기(바이트)를 `*``pReturnValue`에 배치합니다. `mbstr` 인수가 `NULL`이며 필요한 버퍼 크기를 결정하는 방법을 제공하는 경우에도 발생합니다. `mbstr`이 `NULL`인 경우 `count`가 무시됩니다.  
+ `wcsrtombs_s`는 소스 문자열을 성공적으로 변환하는 경우 `pReturnValue`가 `NULL`이 아니면 null 종결자를 포함하여 변환된 문자열의 크기(바이트)를 `*pReturnValue`에 배치합니다. `mbstr` 인수가 `NULL`이며 필요한 버퍼 크기를 결정하는 방법을 제공하는 경우에도 발생합니다. `mbstr`이 `NULL`인 경우 `count`가 무시됩니다.  
   
- `wcsrtombs_s`는 멀티바이트 문자로 변환할 수 없는 와이드 문자가 있으면 `*``pReturnValue`에 -1을 추가하고, 대상 버퍼를 빈 문자열로 설정하고, `errno`를 `EILSEQ`로 설정한 다음 `EILSEQ`를 반환합니다.  
+ `wcsrtombs_s`는 멀티바이트 문자로 변환할 수 없는 와이드 문자가 있으면 `*pReturnValue`에 -1을 추가하고, 대상 버퍼를 빈 문자열로 설정하고, `errno`를 `EILSEQ`로 설정한 다음 `EILSEQ`를 반환합니다.  
   
  `wcstr`이 가리키는 시퀀스와 `mbstr`이 가리키는 시퀀스가 겹치는 경우 `wcsrtombs_s`의 동작이 정의되지 않습니다. 현재 로캘의 LC_TYPE 범주가 `wcsrtombs_s`에 영향을 줍니다.  
   
@@ -135,12 +117,12 @@ errno_t wcsrtombs_s(
   
  `wcsrtombs_s` 함수는 다시 시작할 수 있다는 점에서 [wcstombs_s, _wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)과 다릅니다. 같거나 다른 다시 시작 가능 함수에 대한 후속 호출에서는 변환 상태가 `mbstate`에 저장됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다. 예를 들어 `wcstombs_s.` 대신 후속 `wcsrtombs_s` 호출을 사용하는 경우 응용 프로그램은 `wcslen` 대신 `wcsrlen`을 사용해야 합니다.  
   
- C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ## <a name="exceptions"></a>예외  
  `wcsrtombs_s` 함수는 이 함수가 실행 중인 동안 현재 스레드의 함수가 `setlocale`을 호출하지 않으며 `mbstate`가 null이면 다중 스레드로부터 안전합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_wcsrtombs_s.cpp  
@@ -189,7 +171,7 @@ The string was successfully converted.
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`wcsrtombs_s`|\<wchar.h>|  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c22164fdc2bd8236b6f4819609175c80bd472abf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc923e8c638f51720aaffbb8c26aaa65bb230731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="low-level-io"></a>하위 수준 I/O
 이러한 함수는 스트림 I/O에서 제공하는 연산보다 낮은 수준의 연산에 대해 직접적으로 운영 체제를 호출합니다. 하위 수준 입/출력 호출은 데이터를 버퍼링하지 않고 서식을 지정하지도 않습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="low-level-io-functions"></a>하위 수준 I/O 함수  
   
-|함수|기능|  
+|함수|사용|  
 |--------------|---------|  
 |[_close](../c-runtime-library/reference/close.md)|파일 닫기|  
 |[_commit](../c-runtime-library/reference/commit.md)|디스크에 파일 플러시|  

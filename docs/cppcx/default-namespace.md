@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 9d1c04acc5754627906448db9ac4f3afd65fbe7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9d538e42d4173008343df186bd2579dc088fb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-namespace"></a>default 네임스페이스
 `default` 네임 스페이스 범위에서 C + 지원 되는 기본 제공 형식 + CX 합니다.  
@@ -40,7 +41,7 @@ namespace default;
   
 ### <a name="built-in-types"></a>기본 제공 형식  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |`char16`|유니코드(UTF-16) 코드 포인트를 나타내는 숫자가 아닌 16비트 값입니다.|  
 |`float32`|32비트 IEEE 754 부동 소수점 숫자입니다.|  

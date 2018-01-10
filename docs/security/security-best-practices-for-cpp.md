@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ea4ac4e5f88df6d6e5de35377a4cf13f34abf900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++의 최선의 보안 구현 방법
 이 문서에는 보안 도구와 구현 방법에 대한 정보가 포함되어 있습니다. 이러한 정보를 사용해도 응용 프로그램이 공격으로부터 완전히 보호되는 것은 아니지만 공격 성공 가능성이 줄어듭니다.  
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/24/2017
   s
 -   응용 프로그램에서 잠재적인 보안 문제를 식별합니다.  
   
- AppVerifier에서 사용할 수 있는 Application Compatibility Toolkit의 일부인는 [응용 프로그램 호환성](http://go.microsoft.com/fwlink/?LinkId=91277) TechNet 웹 사이트에 있습니다.  
+ AppVerifier에서 사용할 수 있는 Application Compatibility Toolkit의 일부인는 [응용 프로그램 호환성](http://go.microsoft.com/fwlink/p/?linkid=91277) TechNet 웹 사이트에 있습니다.  
   
 
 ## <a name="windows-user-accounts"></a>Windows 사용자 계정  

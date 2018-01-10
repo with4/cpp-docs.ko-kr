@@ -53,11 +53,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25dbe5ba2808e0050f494e05b0ae33c42ccc96e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 057b6ee50934561662becbcf258910ee292664ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 멀티바이트 문자가 올바른 문자인지 기호 문자인지를 확인합니다.  
@@ -97,9 +98,9 @@ int _ismbcsymbol_l(
 ## <a name="remarks"></a>설명  
  이러한 각 함수는 지정한 조건에 대해 주어진 멀티바이트 문자를 테스트합니다.  
   
- `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
-|루틴|테스트 조건|932 코드 페이지 예제|  
+|루틴에서 반환된 값|테스트 조건|932 코드 페이지 예제|  
 |-------------|--------------------|---------------------------|  
 |`_ismbclegal`|유효한 멀티바이트|`c`의 첫 번째 바이트는 0x81 – 0x9F 또는 0xE0 – 0xFC 범위 내에 있고 두 번째 바이트는 0x40 - 0x7E 또는 0x80 - FC 범위 내에 있는 경우에만 0이 아닌 값을 반환합니다.|  
 |`_ismbcsymbol`|멀티바이트 기호|0x8141<=`c`<=0x81AC인 경우에만 0이 아닌 값을 반환합니다.|  
@@ -113,7 +114,7 @@ int _ismbcsymbol_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_ismbclegal,_ismbclegal_l`|\<mbstring.h>|  
 |`_ismbcsymbol,_ismbcsymbol_l`|\<mbstring.h>|  

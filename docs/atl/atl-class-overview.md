@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab4ee45f254a1b0149f05c2b8ba63f95c98fcf66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fef95bb108f6d38f6196b324360b60635b1a9b64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-class-overview"></a>ATL 클래스 개요
 클래스에는 ATL 액티브 템플릿 라이브러리 ()는 다음과 같이 분류할 수 있습니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
 |[클래스 팩터리](../atl/class-factories-classes.md)|[메모리 관리](../atl/memory-management-classes.md)|  
 |[클래스 정보](../atl/class-information-classes.md)|[MMC 스냅인](../atl/mmc-snap-in-classes.md)|  
 |[컬렉션](../atl/collection-classes.md)|[개체 보안](../atl/object-safety-classes.md)|  
-|[COM 모듈](../atl/com-modules-classes.md)|[지 속성](../atl/persistence-classes.md)|  
+|[COM 모듈](../atl/com-modules-classes.md)|[지속성](../atl/persistence-classes.md)|  
 |[복합 컨트롤](../atl/composite-controls-classes.md)|[속성 및 속성 페이지](../atl/properties-and-property-pages-classes.md)|  
 |[연결 지점](../atl/connection-points-classes.md)|[레지스트리 지원](../atl/registry-support-classes.md)|  
 |[컨트롤 포함](../atl/control-containment-classes.md)|[개체 실행](../atl/running-objects-classes.md)|  

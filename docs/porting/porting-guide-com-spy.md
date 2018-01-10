@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5e30d0664716df0f4cdf7d394d9c9a5fd7e8c798
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b3473d7cd4ec23749f95bd06a1d993abc3209df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-guide-com-spy"></a>포팅 가이드: COM Spy
 이 항목은 이전 Visual C++ 프로젝트를 최신 버전의 Visual Studio로 업그레이드하는 프로세스를 보여 주는 일련의 문서 중 두 번째입니다. 이 항목의 예제 코드는 Visual Studio 2005를 사용하여 마지막으로 컴파일되었습니다.  

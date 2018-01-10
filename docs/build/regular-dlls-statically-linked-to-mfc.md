@@ -1,93 +1,94 @@
 ---
-title: "정적으로 MFC에 링크된 기본 DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL[C++], 기본"
-  - "기본 DLL[C++]"
-  - "기본 DLL[C++], MFC에 정적으로 링크됨"
-  - "정적으로 링크된 DLL[C++]"
-  - "USRDLL"
-  - "USRDLL, MFC에 정적으로 링크됨"
+title: "일반 MFC Dll을 정적으로 MFC에 링크 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular MFC DLLs [C++]
+- DLLs [C++], regular
+- USRDLLs
+- USRDLLs, statically linked to MFC
+- statically linked DLLs [C++]
+- regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 정적으로 MFC에 링크된 기본 DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-정적으로 MFC에 링크된 기본 DLL은 MFC를 내부적으로 사용하는 DLL이며, MFC 또는 비 MFC 실행 파일에서 이러한 DLL의 내보내기 함수를 호출할 수 있습니다.  이름에서 알 수 있듯이 이러한 종류의 DLL은 MFC의 정적 연결 라이브러리 버전을 사용하여 빌드됩니다.  기본 DLL에서 함수는 대개 표준 C 인터페이스를 사용하여 내보내집니다.  기본 DLL의 작성, 빌드 및 사용 방법에 대한 예제를 보려면 [DLLScreenCap](http://msdn.microsoft.com/ko-kr/2171291d-3a50-403b-90a1-d93c2acb4f4a) 샘플을 참조하십시오.  
+# <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>일반 MFC Dll을 정적으로 MFC에 링크
+MFC DLL 정적으로 MFC에 링크 되는 일반적인 MFC를 내부적으로 사용 하는 DLL 이며 MFC 또는 비 MFC 실행 파일에서 DLL의 내보낸된 함수를 호출할 수 있습니다. 이름에서 알 수 있듯이 이러한 종류의 DLL의 MFC 정적 연결 라이브러리 버전을 사용 하 여 만들어집니다. 함수는 일반적으로 표준 C 인터페이스를 사용 하 여 MFC DLL 일반에서 내보내집니다. 작성, 빌드 및 MFC 기본 DLL을 사용 하는 방법의 예를 들어 샘플을 참조 하십시오. [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)합니다.  
   
- USRDLL이라는 용어는 Visual C\+\+ 설명서에서 더 이상 사용되지 않습니다.  정적으로 MFC에 링크한 기본 DLL의 특징은 이전 USRDLL의 특징과 같습니다.  
+ 용어 USRDLL Visual c + + 설명서에 더 이상 사용 되는 참고 합니다. 정적으로 MFC에 링크 하는 MFC 기본 DLL은 이전 USRDLL와 동일한 특성입니다.  
   
- 정적으로 MFC에 링크된 기본 DLL에는 다음과 같은 특징이 있습니다.  
+ MFC에 정적으로 링크는 기본 MFC DLL에는 다음과 같은 기능이 있습니다.  
   
--   C, C\+\+, 파스칼, Visual Basic 등 DLL 사용을 지원하는 모든 언어로 클라이언트 실행 파일을 만들 수 있으며 이 실행 파일은 MFC 응용 프로그램이 아니어도 됩니다.  
+-   클라이언트 실행 파일은 Dll (C, c + +, Pascal, Visual Basic 및 등);의 사용을 지 원하는 모든 언어로 작성할 수 있습니다. MFC 응용 프로그램 이어야 하지 않아도 됩니다.  
   
--   DLL은 응용 프로그램에서 사용하는 것과 동일한 MFC 정적 연결 라이브러리에 링크됩니다.  따라서 DLL에 대한 별도의 정적 연결 라이브러리 버전은 필요하지 않습니다.  
+-   DLL은 응용 프로그램에서 사용 하는 같은 MFC 정적 연결 라이브러리에 링크 합니다. 별도 Dll에 대 한 정적 연결 라이브러리의 버전은 더 이상.  
   
--   MFC 버전 4.0 이전에 USRDLL은 정적으로 MFC에 링크된 기본 DLL과 같은 형식의 기능을 제공했습니다.  그러나 Visual C\+\+ 버전 4.0부터는 USRDLL이라는 용어를 사용하지 않습니다.  
+-   MFC의 4.0 버전 이전 USRDLLs 동일한 유형의 기본 MFC Dll에 정적으로 MFC에 링크와 기능을 제공 합니다. Visual c + + 버전 4.0을 USRDLL 라는 용어는 사용 되지 않습니다.  
   
- 정적으로 MFC에 링크된 기본 DLL의 요구 사항은 다음과 같습니다.  
+ MFC에 정적으로 연결 하는 기본 MFC DLL에는 다음 요구 사항을 있습니다.  
   
--   이 형식의 DLL에서는 `CWinApp`에서 파생된 클래스를 인스턴스화해야 합니다.  
+-   이러한 종류의 DLL에서 파생 된 클래스를 인스턴스화해야 `CWinApp`합니다.  
   
--   이 형식의 DLL에서는 MFC에서 제공하는 `DllMain`을 사용합니다.  따라서 일반적인 MFC 응용 프로그램과 마찬가지로 모든 DLL과 관련된 초기화 코드는 `InitInstance` 멤버 함수에, 종료 코드는 `ExitInstance`에 포함시켜야 합니다.  
+-   이러한 종류의 DLL 사용의 `DllMain` MFC에서 제공 합니다. 모든 DLL 전용 초기화 코드를 추가 하는 `InitInstance` 멤버 함수, 종료 코드는 `ExitInstance` 일반적인 MFC 응용 프로그램에서와 같이 합니다.  
   
--   USRDLL이라는 용어가 더 이상 사용되지 않지만 컴파일러 명령줄에서는 "**\_USRDLL**"을 정의해야 합니다.  이 정의는 MFC 헤더 파일에서 가져올 선언을 결정합니다.  
+-   용어 USRDLL는 사용 되지 않는, 경우에 정의 해야 "**에서는 _USRDLL**" 컴파일러 명령줄에서. 이 정의 선언을 MFC 헤더 파일에서 가져올 결정 합니다.  
   
- 기본 DLL에는 MFC 응용 프로그램과 마찬가지로, `CWinApp` 파생 클래스 및 해당 응용 프로그램 클래스의 단일 개체가 있어야 합니다.  그러나 응용 프로그램의 `CWinApp` 개체와 달리 DLL의 `CWinApp` 개체에는 기본 메시지 펌프가 없습니다.  
+ 일반 MFC Dll 있어야는 `CWinApp`-파생 된 클래스 및 해당 응용 프로그램 클래스의 단일 개체는 MFC 응용 프로그램과 마찬가지로 합니다. 그러나는 `CWinApp` DLL의 개체에는 기본 메시지 펌프 마찬가지로 없는 `CWinApp` 응용 프로그램의 개체입니다.  
   
- 응용 프로그램이 기본 메시지 펌프를 소유하고 있어 `CWinApp::Run` 메커니즘은 DLL에 적용되지 않습니다.  DLL이 모덜리스 대화 상자를 열거나 자체의 기본 프레임 창을 갖는 경우, 응용 프로그램의 기본 메시지 펌프는 DLL에서 내보내는 루틴을 호출해야 합니다. 그러면 이 루틴이 DLL의 응용 프로그램 개체에 대한 `CWinApp::PreTranslateMessage` 멤버 함수를 호출하게 됩니다.  
+ `CWinApp::Run` 메커니즘 응용 프로그램 기본 메시지 펌프를 소유 하 고 DLL에 적용 되지 않습니다. 응용 프로그램의 기본 메시지 펌프 호출 하 여 해당 DLL에서 내보내기 루틴을 호출 해야 경우 DLL 모덜리스 대화 상자은 별도의 주 프레임 창는 `CWinApp::PreTranslateMessage` DLL의 응용 프로그램 개체의 멤버 함수입니다.  
   
- 이 함수의 예제를 보려면 DLLScreenCap 샘플을 참조하십시오.  
+ 이 함수의 예를 들어 DLLScreenCap 샘플을 참조 하세요.  
   
- 기호는 대개 표준 C 인터페이스를 사용하여 기본 DLL에서 내보내집니다.  기본 DLL에서 내보내기 함수의 선언 형식은 다음과 유사합니다.  
+ 기호는 일반적으로 표준 C 인터페이스를 사용 하 여 MFC DLL 일반에서 내보내집니다. 일반 MFC DLL에서 내보낸 함수 선언은 모양은 다음과 같습니다.  
   
 ```  
 extern "C" __declspec(dllexport) MyExportedFunction( );  
 ```  
   
- 기본 DLL 내의 모든 메모리 할당은 DLL 내에 존재해야 하므로 DLL에서 다음 중 어떤 것도 호출 실행 파일에 전달하거나 호출 실행 파일로부터 받아서는 안 됩니다.  
+ 일반 MFC DLL 내에서 모든 메모리 할당 DLL; 내에 존재 합니다. DLL에 전달 하거나 호출 실행에서 다음 중 하나를 수신 하면 안:  
   
--   MFC 개체에 대한 포인터  
+-   MFC 개체에 대 한 포인터  
   
--   MFC에서 할당한 메모리에 대한 포인터  
+-   MFC에서 할당 된 메모리에 대 한 포인터  
   
- 위와 같은 작업이 필요하거나 호출 실행 파일과 DLL 사이에 MFC 파생 개체를 전달해야 하는 경우에는 확장 DLL을 빌드해야 합니다.  
+ 위의 항목 중 하나를 수행 하거나 호출 실행 파일과 DLL 사이의 MFC 파생 개체를 전달 해야 할 경우에 MFC 확장 DLL 빌드해야 합니다.  
   
- C 런타임 라이브러리에서 할당한 메모리에 대한 포인터는 해당 데이터의 복사본을 만들어야만 응용 프로그램과 DLL 간에 안전하게 전달됩니다.  이러한 포인터를 삭제하거나 크기를 변경하거나 사용하려면 반드시 메모리의 복사본을 만들어야 합니다.  
+ 로 전달 하 포인터 할당 된 메모리에 C 런타임 라이브러리는 응용 프로그램과 DLL 사이의 데이터의 복사본을 만드는 경우에 안전 합니다. 삭제 하거나 이러한 포인터의 크기를 조정 하거나 않아야 메모리의 복사본을 만들지 않고이 사용 합니다.  
   
- 또한 정적으로 MFC에 링크된 DLL은 공유 MFC DLL에 동적으로 링크될 수 없습니다.  정적으로 MFC에 링크된 DLL은 다른 DLL과 마찬가지로 응용 프로그램에 동적으로 바인딩되며, 응용 프로그램은 다른 DLL과 마찬가지로 그것에 링크합니다.  
+ 정적으로 MFC에 링크 된 DLL 공유 MFC Dll에 동적으로 연결할 수 없습니다. 다른 DLL;와 마찬가지로 응용 프로그램에 동적으로 바인딩되어 정적으로 MFC에 링크 된 DLL 다른 DLL과 마찬가지로 응용 프로그램에 연결 합니다.  
   
- 표준 MFC 정적 연결 라이브러리는 [MFC DLL의 명명 규칙](../build/naming-conventions-for-mfc-dlls.md)에 설명된 규칙에 따라 이름이 지정됩니다.  그러나 MFC 버전 3.0 이상에서는 링커에 링크하려는 MFC 라이브러리 버전을 직접 지정할 필요가 없습니다.  대신 MFC 헤더 파일에서 **\_DEBUG** 또는 **\_UNICODE** 등과 같은 전처리기의 정의에 따라 링크할 올바른 버전의 MFC 라이브러리를 자동으로 결정합니다.  MFC 헤더 파일에 \/DEFAULTLIB 지시문을 추가하여 링커가 특정 버전의 MFC 라이브러리에 링크하도록 합니다.  
+ 표준 MFC 정적 연결 라이브러리에 설명 된 규칙에 따라 이름을 [MFC Dll에 대 한 명명 규칙](../build/naming-conventions-for-mfc-dlls.md)합니다. 그러나 MFC 버전 3.0 이상 이므로 더 이상에 연결 된 원하는 MFC 라이브러리의 버전을 링커로 수동으로 지정 하는 데 필요한. 대신, MFC 헤더 파일을 자동으로 확인와 같은 올바른 버전에 따라 전처리기에서 링크할 MFC 라이브러리의 정의  **\_디버그** 또는 **_UNICODE**합니다. MFC 헤더 파일 특정 버전의 MFC 라이브러리에 연결 하 여 링커가 /DEFAULTLIB 지시문을 추가 합니다.  
   
-## 수행할 작업  
+## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   
--   [기본 DLL 초기화](../build/initializing-regular-dlls.md)  
+-   [일반 MFC Dll 초기화](../build/run-time-library-behavior.md#initializing-regular-dlls)  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>추가 정보  
   
 -   [DLL의 일부로 MFC 사용](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   
--   [기본 DLL에서 데이터베이스, OLE 및 소켓 확장 DLL 사용](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
+-   [기본 MFC DLL에서 데이터베이스, OLE 및 소켓 MFC 확장명 DLL 사용](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
--   [MFC DLL 마법사](../mfc/reference/mfc-dll-wizard.md)  
+-   [MFC DLL 만들기](../mfc/reference/mfc-dll-wizard.md)  
   
--   [동적으로 MFC에 링크하는 기본 DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [동적으로 MFC에 링크된 기본 MFC DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [확장 DLL](../build/extension-dlls-overview.md)  
+-   [MFC 확장명 DLL](../build/extension-dlls-overview.md)  
   
-## 참고 항목  
- [DLL 종류](../build/kinds-of-dlls.md)
+## <a name="see-also"></a>참고 항목  
+ [DLL의 종류](../build/kinds-of-dlls.md)

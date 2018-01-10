@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c99f55bdfdec6858b521d8192f99207dfe9b0d58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fca697d5a3d8d825bdac7637e87ef78aed134b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-sets"></a>문자 집합
 **ANSI 3.1.3.4** 소스 문자 집합의 멤버 매핑  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 |\f|폼 피드|12|  
 |\n|줄 바꿈|10|  
 |\r|캐리지 리턴|13|  
-|\t|가로 탭|9|  
+|\t|가로 탭|10|  
 |\v|세로 탭|11|  
 |\\"|큰따옴표|34|  
 |\\'|작은따옴표|39|  

@@ -31,11 +31,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6973fe6639f5edfa728a862b63fc715c4e9c82fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41df8b1b8220c846e65bab6db71f6e32e023c224
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inp-inpw"></a>inp, inpw
 이러한 POSIX 함수는 더 이상 사용되지 않습니다. ISO C++ 규칙에 부합되는 [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) 를 대신 사용하세요.  

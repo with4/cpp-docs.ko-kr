@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cae6e69b62252f506136ecf8b7de03b09777ebf8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6fe5581721dec428480e3640e4875eda20a09b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="elements-of-c"></a>C 요소
 이 섹션에서는 C 프로그램을 생성하는 데 사용되는 이름, 숫자 및 문자를 비롯하여 C 프로그래밍 언어의 요소에 대해 설명합니다. ANSI C 구문은 이러한 구성 요소 토큰에 레이블을 지정합니다.  

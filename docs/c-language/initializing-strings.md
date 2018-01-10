@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 830e959e8cd9e57745d08da3d4184fbe11a5bb6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23137b593064b7ebf2a5a6cd8e7f5ddaf998259c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-strings"></a>문자열 초기화
 문자열 리터럴(또는 와이드 문자열 리터럴)로 문자(또는 와이드 문자) 배열을 초기화할 수 있습니다. 예:  

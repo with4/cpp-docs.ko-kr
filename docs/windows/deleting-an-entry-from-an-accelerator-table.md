@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d78d66b89ee7e05a44da5701eb5d1a7600cd1449
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f001250e8607497754411586ebe82d0f64d863f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table"></a>액셀러레이터 키 테이블에서 항목 삭제
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>액셀러레이터 키 테이블에서 항목을 삭제하려면  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
  관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.*  
   
- **Requirements**  
+ **요구 사항**  
   
  Win32  
   

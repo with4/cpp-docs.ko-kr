@@ -44,11 +44,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7ca72c01159a86afc151e57c451a797e21e55ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b6696e2232a6503629a203f114eea82decb32878
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
 `stdout`에 문자를 씁니다.  
@@ -76,7 +77,7 @@ wint_t _fputwchar(
 ## <a name="remarks"></a>설명  
  이러한 함수는 둘 다 단일 문자 `c`를 `stdout`에 쓰고 이에 따라 표시기를 앞으로 이동합니다. `_fputchar`는 `fputc( stdout )`와 같습니다. `putchar`와도 동일하지만 함수 및 매크로가 아닌 함수로만 구현됩니다. `fputc` 및 `putchar`와 달리 이러한 함수는 ANSI 표준과 호환되지 않습니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -91,7 +92,7 @@ wint_t _fputwchar(
   
  콘솔은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 지원되지 않습니다. 콘솔에 연결된 표준 스트림 핸들 `stdin`, `stdout` 및 `stderr`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 C 런타임 함수에서 사용되기 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_fputchar.c  

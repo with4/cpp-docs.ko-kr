@@ -28,11 +28,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0af699e61f487ba8af836a4f544ed4c338d70b4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd06518978b37705a98e4d8b7212b8dd03a2d7b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 클래스
 이 클래스가 구현 하는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 집계 개체에 대 한 인터페이스입니다. 정의 따르면 집계 개체는 외부 개체 안에 포함 됩니다. `CComAggObject` 클래스는 비슷합니다는 [CComObject 클래스](../../atl/reference/ccomobject-class.md)제외 하 고 외부 클라이언트에 직접 액세스할 수 있는 인터페이스를 노출 합니다.  

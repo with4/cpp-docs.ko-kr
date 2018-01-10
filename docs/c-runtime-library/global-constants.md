@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: afb5230ae5ee15061988f9e426393c7de16a788e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 552ce3e1e1f535cf01f458af28c44aeb5cf8980b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-constants"></a>전역 상수
 Microsoft 런타임 라이브러리에는 라이브러리 루틴에서 사용하는 전역 상수에 대한 정의가 포함됩니다. 이러한 상수를 사용하려면 각 상수에 대한 설명에 표시된 대로 적절한 헤더 파일을 포함합니다. 다음 표에서는 전역 상수를 보여 줍니다.  

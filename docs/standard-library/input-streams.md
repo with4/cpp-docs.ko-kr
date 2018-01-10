@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e708f1cbb9db3cc546aac172291facfa95acfb83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a753216cd8dfe0975d1d92451863b1ee2a88ddd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-streams"></a>Input Streams
 입력 스트림 개체는 바이트의 소스입니다. 세 가지 가장 중요한 입력 스트림 클래스는 [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md) 및 [istringstream](../standard-library/basic-istringstream-class.md)입니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  라이브러리 함수 `sscanf_s`와 같이 `istringstream` 클래스는 메모리 내 문자열에서 입력을 지원합니다. null 종결자가 있는 문자 배열에서 데이터를 추출하려면 문자열을 할당하고 초기화한 다음 `istringstream` 클래스의 개체를 생성합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [입력 스트림 개체 생성](../standard-library/constructing-input-stream-objects.md)  
   
  [추출 연산자 사용](../standard-library/using-extraction-operators.md)  

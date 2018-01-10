@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: daff74e0b25c43d89a2a45813e285a2222599a72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d5ec29b7348d858b502f292efd797020a17bfa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-statement-c"></a>return 문 (C)
 `return` 문은 함수 실행을 종료하고 호출 함수로 컨트롤을 반환합니다. 호출 바로 다음 지점의 호출 함수에서 실행을 다시 시작합니다. `return` 문은 호출 함수로 값을 반환할 수도 있습니다. 자세한 내용은 [반환 형식](../c-language/return-type.md)을 참조하세요.  

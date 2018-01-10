@@ -31,11 +31,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3834e557b4060fd214be137490580412fd2902b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d08410c68a2cff5a1c85733c4a2a2ed1775754b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicostream-class"></a>basic_ostream 클래스
 이 템플릿 클래스는 문자 특성이 **Tr**([traits_type](../standard-library/basic-ios-class.md#traits_type)이라고도 함)에 의해 결정되는 **Elem**([char_type](../standard-library/basic-ios-class.md#char_type)이라고도 함) 형식의 요소가 있는 스트림 버퍼에 요소 및 인코드된 개체의 삽입을 제어하는 개체를 설명합니다.  
@@ -111,7 +112,7 @@ return (*this);
   
  basic_istream\< **Elem**, **Tr**> 클래스의 개체는 [basic_ios](../standard-library/basic-ios-class.md)**\<Elem**, **Tr>** 클래스의 가상 공용 기준 개체만 저장합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  출력 스트림에 대한 자세한 내용은 [basic_ofstream 클래스](../standard-library/basic-ofstream-class.md)에 대한 예제를 참조하세요.  
   
 ### <a name="constructors"></a>생성자  
@@ -168,7 +169,7 @@ basic_ostream(basic_ostream&& right);
 ### <a name="remarks"></a>설명  
  첫 번째 생성자는 [init](../standard-library/basic-ios-class.md#init)(`strbuf`)를 호출하여 기본 개체를 초기화합니다. 두 번째 생성자는 [basic_ios::move](../standard-library/basic-ios-class.md#move)`(right)`를 호출하여 기본 개체를 초기화합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   출력 스트림에 대한 자세한 내용은 [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream)에 대한 예제를 참조하세요.  
   
 ##  <a name="flush"></a>  basic_ostream::flush  
@@ -184,7 +185,7 @@ basic_ostream<Elem, Tr>& flush();
 ### <a name="remarks"></a>설명  
  [rdbuf](../standard-library/basic-ios-class.md#rdbuf)가 null 포인터가 아닌 경우 함수는 **rdbuf->**[pubsync](../standard-library/basic-streambuf-class.md#pubsync)를 호출합니다. -1이 반환되는 경우 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**)를 호출합니다. 그런 다음 **\*this**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // basic_ostream_flush.cpp  
@@ -292,7 +293,7 @@ basic_ostream<Elem, Tr>& operator<<(long double val);
   
  각각 `val`을 숫자 필드로 변환하고 **use_facet<num_put\<Elem, OutIt>**(`getloc`)**. put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**)을 호출하여 삽입합니다. 여기서 **OutIt**는 **ostreambuf_iterator\<Elem, Tr>**로 정의됩니다. 함수는 **\*this**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // basic_ostream_op_write.cpp  
@@ -373,7 +374,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 ### <a name="remarks"></a>설명  
  형식이 지정되지 않은 출력 함수는 `_Ch` 요소를 삽입합니다. 그런 다음 **\*this**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // basic_ostream_put.cpp  
@@ -419,7 +420,7 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 ### <a name="remarks"></a>설명  
  경우 [실패](../standard-library/basic-ios-class.md#fail) 은 **false**, 첫 번째 멤버 함수 호출 **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf)  **->**  [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)(*_Pos*), 일부에 대 한 `pos_type` 임시 개체가 **newpos**합니다. **fail**이 false인 경우 두 번째 함수는 **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(*_Off, _Way*)를 호출합니다. 어떤 경우든 (`off_type`)**newpos ==** (`off_type`)(-1)(배치 작업 실패)이면 함수는 **istr.**[setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)를 호출합니다. 두 함수 모두 **\*this**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // basic_ostream_seekp.cpp  
@@ -488,7 +489,7 @@ pos_type tellp();
 ### <a name="remarks"></a>설명  
  [fail](../standard-library/basic-ios-class.md#fail)이 **false**인 경우 멤버 함수는 [rdbuf](../standard-library/basic-ios-class.md#rdbuf)**->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**)을 반환합니다. 아닌 경우 `pos_type`(-1)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `tellp` 사용 예제는 [seekp](#seekp)를 참조하세요.  
   
 ##  <a name="write"></a>  basic_ostream::write  
@@ -511,7 +512,7 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 ### <a name="remarks"></a>설명  
  [형식이 지정되지 않은 출력 함수](../standard-library/basic-ostream-class.md)는 `str`에서 시작하여 `count`개 요소의 시퀀스를 삽입합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `write` 사용 예제는 [streamsize](../standard-library/ios-typedefs.md#streamsize)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

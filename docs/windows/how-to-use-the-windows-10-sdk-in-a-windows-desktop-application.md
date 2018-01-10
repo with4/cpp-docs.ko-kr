@@ -13,20 +13,23 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d8aea199ff45da06d434150bb8346f24131136f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>방법: Windows 데스크톱 응용 프로그램에서 Windows 10 SDK 사용
 Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 설정은 기본적으로 c + + 데스크톱 작업 설치 또는 마지막으로 업데이트 되었을 때 설치 된 Windows 10 SDK의 버전으로 만들 수 있습니다. 이 버전의 Windows SDK의 모든 최근 Windows 릴리스와 호환 됩니다. 프로젝트를 열 수는 SDK의 이전 버전을 대상으로 하려는 경우 | 속성 하 고 Windows SDK 버전 드롭다운 목록에서 사용할 수 있는 다른 SDK 버전에서 선택 합니다.  
   
- Visual Studio 2015 및 Windows 10 SDK 부터는 CRT 라이브러리가 하나 (ucrtbase)에 사용 하 여 유니버설 Windows 앱에서 허용 되는 함수를 포함 하 고 모든 항목이 포함 된 다른 (부분 vcruntime140)의 두 부분으로 분리 되었습니다. Windows 10 SDK 이후로는 다수의 C99 함수와 같은 새로운 함수가 있으며, 이러한 함수를 사용하려면 다음 단계를 따라야 합니다. [CRT Library Features](../c-runtime-library/crt-library-features.md)을 참조하세요.  
+ Visual Studio 2015 및 Windows 10 SDK 부터는 CRT 라이브러리가 하나 (ucrtbase)에 사용 하 여 유니버설 Windows 앱에서 허용 되는 함수를 포함 하 고 모든 항목이 포함 된 다른 (부분 vcruntime140)의 두 부분으로 분리 되었습니다. Windows 10 SDK 이후로는 다수의 C99 함수와 같은 새로운 함수가 있으며, 이러한 함수를 사용하려면 다음 단계를 따라야 합니다. [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요.  
   
 ### <a name="to-target-the-windows-10-sdk"></a>Windows 10 SDK를 대상으로 하려면  
   
-1.  Windows 10 SDK가 설치되었는지 확인합니다. Windows 10 SDK는 [Windows 10용 도구](http://go.microsoft.com/fwlink/?LinkID=617631)의 일부로 설치됩니다.  
+1.  Windows 10 SDK가 설치되었는지 확인합니다. Windows 10 SDK의 일부로 설치 되는 [Windows 10 용 도구](http://go.microsoft.com/fwlink/p/?linkid=617631)합니다.  
   
 2.  프로젝트 노드에 대한 바로 가기 메뉴를 열고 **SDK 버전 대상 다시 지정**을 선택합니다.  
   

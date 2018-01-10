@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bb9bbdd6deb0a8e459f2f2b8d5b6188c7517e6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>ARM 어셈블러 명령줄 참조
 이 문서에서는 Microsoft ARM 어셈블러 명령줄 설명 *armasm*, Microsoft 구현에는 파일 형식 COFF (공용 개체) ARMv7 Thumb 어셈블리 언어를 컴파일합니다. 링커는 ARM 어셈블러 또는 라이브러리 관리자가 만든 개체 라이브러리와 함께 C 컴파일러에서 생성 되는 개체 코드를 사용 하 여 COFF 코드를 연결할 수 있습니다.  
@@ -41,7 +42,7 @@ armasm [[options]] -o objectfile sourcefile
  포함 검색 경로에 지정 된 디렉터리를 추가 합니다.  
   
  -미리 정의`directive`  
- 기호를 미리 정의할 수 SETA, SETL, 또는 집합 지시문을 지정 합니다. 예: **armasm.exe-source.asm "SETA 150 COUNT"를 미리 정의할**합니다. 자세한 내용은 참조는 [ARM 어셈블러 도구 가이드](http://go.microsoft.com/fwlink/?LinkId=246102)합니다.  
+ 기호를 미리 정의할 수 SETA, SETL, 또는 집합 지시문을 지정 합니다. 예: **armasm.exe-source.asm "SETA 150 COUNT"를 미리 정의할**합니다. 자세한 내용은 참조는 [ARM 어셈블러 도구 가이드](http://go.microsoft.com/fwlink/p/?linkid=246102)합니다.  
   
  -nowarn  
  모든 경고 메시지를 사용 하지 않도록 설정 합니다.  

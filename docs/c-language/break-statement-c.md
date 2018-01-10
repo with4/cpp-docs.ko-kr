@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a180c88fc71e4786e8512bc26421825132611ed4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 648ab54d23e22d6c6aae3022593440cb892c1ea9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="break-statement-c"></a>break 문 (C)
 `break` 문은 해당 문이 배치된 지점에서 가장 가까이에 있는 `do`, `for`, `switch` 또는 `while` 문의 실행을 종료합니다. 제어는 종료된 문 뒤의 문으로 전달됩니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4a1981d2dd22f9ed8928b1d1daf71612b057e71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aef61c580306cc40ef1a89c6a389c7fbaf64a5f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="external-linkage"></a>외부 링크
 식별자에 대한 파일 범위 수준의 첫 번째 선언이 **static** 저장소 클래스 지정자를 사용하지 않으면 개체는 외부 링크를 포함하고 있습니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aeea920579ddf6af71e3c3c9988c6315931f37f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3516f6968773f8aa866a4f2929c2c184e6ddb95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="punctuation-and-special-characters"></a>문장 부호 및 특수 문자
 C 문자 집합의 문장 부호와 특수 문자는 프로그램 텍스트의 구성에서 컴파일러 또는 컴파일된 프로그램이 수행하는 작업의 정의에 이르기까지 다양한 용도로 사용됩니다. 이러한 특수 문자는 수행할 작업을 지정하지 않습니다. 일부 문장 부호 기호는 연산자이기도 합니다([연산자](../c-language/c-operators.md) 참조). 컴파일러는 컨텍스트에서 이러한 기호의 사용을 확인합니다.  

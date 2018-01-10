@@ -17,18 +17,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e5c715c6065e8c05466bc3f09eba57606b304e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fd746124cdfc267267bc5d6803700cca507c34d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-keywords"></a>C 키워드
 "키워드"는 C 컴파일러에서 특별한 의미를 가진 단어입니다. 7번째 및 8번째 변환 단계에서는 식별자가 C 키워드와 같은 철자 및 대/소문자를 사용할 수 없습니다. 자세한 내용은 *전처리기 참조*의 [변환 단계](../preprocessor/phases-of-translation.md) 설명을 참조하세요. 식별자에 대한 자세한 내용은 [식별자](../c-language/c-identifiers.md)를 참조하세요. C 언어는 다음의 키워드를 사용합니다.  
   
 |||||  
 |-|-|-|-|  
-|**auto**|**double**|**int**|**truct**|  
+|**auto**|**double**|**int**|**struct**|  
 |**break**|**else**|**long**|**switch**|  
 |**case**|**enum**|**register**|**typedef**|  
 |**char**|**extern**|**return**|**union**|  

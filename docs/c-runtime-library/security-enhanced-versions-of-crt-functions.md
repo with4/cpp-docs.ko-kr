@@ -17,18 +17,19 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0bd0bdcdfd8f7f367c90787cb7ffdf5f888482dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 468f63d8e98dd161baec0b0db33f5dab8e750695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>보안이 강화된 CRT 함수 버전
 런타임 라이브러리 루틴의 더 안전한 버전을 사용할 수 있습니다. CRT의 강화된 보안 기능과 관련된 자세한 내용은 [CRT의 보안 기능](../c-runtime-library/security-features-in-the-crt.md)을 참조하세요.  
   
  **보안 함수**  
   
-|CRT 함수|보안이 강화된 함수|기능|  
+|CRT 함수|보안이 강화된 함수|사용|  
 |------------------|--------------------------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|파일 액세스 권한을 결정합니다.|  
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|스택에 메모리를 할당합니다.|  

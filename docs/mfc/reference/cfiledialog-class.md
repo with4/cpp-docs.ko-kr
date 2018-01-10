@@ -143,11 +143,12 @@ caps.latest.revision: "47"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2dead08eaeb525e626e9c1f02af346b0c3998260
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 611f26b07bc8ebd14fc394437ddda07cb65ab4e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 클래스
 파일 열기 또는 저장 작업 파일에 사용 되는 일반 대화 상자를 캡슐화 합니다.  
@@ -221,7 +222,7 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::StartVisualGroup](#startvisualgroup)|대화 상자에서 시각적 그룹을 선언합니다. 이 그룹에 해당 요소를 추가 하는 이후에 모든 "추가" 메서드를 호출 합니다.|  
 |[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|에 저장 된 데이터를 업데이트 하는 `m_ofn` 파일 대화 상자의 현재 상태와 일치 하는 멤버 변수입니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -503,7 +504,7 @@ void ApplyOFNToShellDialog();
   
  사용 하는 방법에 대 한 자세한 내용은 `CFileDialog` 아래 클래스 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], 참조 [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)합니다.  
   
 ##  <a name="cfiledialog"></a>CFileDialog::CFileDialog  
@@ -571,7 +572,7 @@ explicit CFileDialog(
   
  대화 상자 템플릿은 기반으로 하는 대화 상자에서 지원 되지 않습니다.`bVistaStyle`  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileDialog::DoModal](#domodal)합니다.  
   
 ##  <a name="domodal"></a>CFileDialog::DoModal  
@@ -595,7 +596,7 @@ virtual INT_PTR DoModal();
   
  `DoModal`클래스에서 재정의 된 가상 함수인 `CDialog`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#25](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_3.cpp)]  
   
 ##  <a name="enableopendropdown"></a>CFileDialog::EnableOpenDropDown  
@@ -744,7 +745,7 @@ CString GetFileTitle() const;
   
  경우 `m_ofn.Flags` 에 `OFN_ALLOWMULTISELECT` 플래그가 설정,이 문자열의 첫 번째 문자열을 파일 그룹 선택의 디렉터리 경로와 null로 끝나는 문자열의 시퀀스가 포함 된 다음에 사용자가 선택한 모든 파일의 이름을 합니다. 이러한 이유로 사용는 [GetStartPosition](#getstartposition) 및 [GetNextPathName](#getnextpathname) 멤버 함수를 목록에서 다음 파일 이름을 검색 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileDialog::DoModal](#domodal)합니다.  
   
 ##  <a name="getfolderpath"></a>CFileDialog::GetFolderPath  
@@ -777,7 +778,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
   
  에 대 한 자세한 내용은 `IFileDialogCustomize` 인터페이스를 참조 [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예에서는 내부 COM 개체를 검색합니다. 이 코드 예제를 실행 하려면 컴파일해야 아래 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]합니다.  
   
  [!code-cpp[NVC_MFC_CFileDialog#4](../../mfc/reference/codesnippet/cpp/cfiledialog-class_4.cpp)]  
@@ -797,7 +798,7 @@ IFileOpenDialog* GetIFileOpenDialog();
   
  에 대 한 자세한 내용은 `IFileOpenDialog` 인터페이스를 참조 [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예에서는 내부 COM 개체를 검색합니다. 이 코드를 실행 하려면 컴파일해야 아래 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]합니다.  
   
  [!code-cpp[NVC_MFC_CFileDialog#2](../../mfc/reference/codesnippet/cpp/cfiledialog-class_5.cpp)]  
@@ -817,7 +818,7 @@ IFileSaveDialog* GetIFileSaveDialog();
   
  에 대 한 자세한 내용은 `IFileSaveDialog` 인터페이스를 참조 [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예에서는 내부 COM 개체를 검색합니다. 이 코드 예제를 실행 하려면 컴파일해야 아래 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]합니다.  
   
  [!code-cpp[NVC_MFC_CFileDialog#3](../../mfc/reference/codesnippet/cpp/cfiledialog-class_6.cpp)]  
@@ -871,7 +872,7 @@ CString GetPathName() const;
   
  경우 `m_ofn.Flags` 에 `OFN_ALLOWMULTISELECT` 플래그가 설정,이 문자열에는 시퀀스의 null teminated는 첫 번째 문자열을 파일 그룹 선택의 디렉터리 경로 가진 문자열을 다음에 사용자가 선택한 모든 파일의 이름을 합니다. 이러한 이유로 사용는 [GetStartPosition](#getstartposition) 및 [GetNextPathName](#getnextpathname) 멤버 함수를 목록에서 다음 파일 이름을 검색 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileDialog::DoModal](#domodal)합니다.  
   
 ##  <a name="getreadonlypref"></a>CFileDialog::GetReadOnlyPref  
@@ -1485,7 +1486,7 @@ void UpdateOFNFromShellDialog();
   
  사용 하는 방법에 대 한 자세한 내용은 `CFileDialog` 아래 클래스 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], 참조 [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예에서는 업데이트는 `CFileDialog` 표시 하기 전에. 업데이트 하기 전에 `m_ofn` 멤버 변수 대화 상자의 현재 상태를 동기화 하려면 필요 합니다.  
   
  [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]  

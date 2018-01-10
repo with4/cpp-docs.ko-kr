@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0bd2eb90ad8498daa318ffecacd7b32f3f3d3eca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50387aa2512e38a4e9f13fdfb1b042c3df2de45c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-binary-mode-file-io"></a>텍스트 및 이진 모드 파일 I/O
 파일 I/O 작업은 파일이 열린 모드에 따라 두 변환 모드인 텍스트 모드와 이진 모드 중 하나에서 수행됩니다. 데이터 파일은 일반적으로 텍스트 모드에서 처리됩니다. 파일 변환 모드를 제어하려면 다음과 같은 작업을 수행합니다.  

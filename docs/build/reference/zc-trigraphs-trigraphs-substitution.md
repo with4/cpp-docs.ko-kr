@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 56068f6cb630ac12b9c8417940411616cec65c69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 739e772c87c937a552e07a32fa5bb80b1a1e2508
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs(삼중자 대체)
 때 **/zc: trigraphs** 지정, 컴파일러가 해당 문장 부호 문자를 사용 하 여 삼중 자는 문자 시퀀스를 바꿉니다. 삼중 자 대체를 해제 하려면 지정 **/Zc:trigraphs-**합니다. 기본적으로 **/zc: trigraphs** 꺼져 있습니다.  

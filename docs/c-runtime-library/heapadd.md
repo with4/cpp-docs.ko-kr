@@ -31,11 +31,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 85f13e082e25702967868d6889e575a6e261f6b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c046f9e26848edbbc609b9f3c729a0654fe3718
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapadd"></a>_heapadd
 힙에 메모리를 추가합니다.  
@@ -62,18 +63,18 @@ int _heapadd(
 ## <a name="return-value"></a>반환 값  
  성공하면 `_heapadd`에서 0을 반환합니다. 그렇지 않으면 함수에서 –1을 반환하고 `errno`를 `ENOSYS`로 설정합니다.  
   
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
   
 ## <a name="remarks"></a>설명  
  Visual C++ 버전 4.0부터 새 디버깅 기능을 지원하기 위해 기본 힙 구조가 C 런타임 라이브러리로 이동되었습니다. 따라서 `_heapadd` 는 Win32 API를 기반으로 하는 플랫폼에서 더 이상 지원되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_heapadd`|\<malloc.h>|\<errno.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 할당](../c-runtime-library/memory-allocation.md)   

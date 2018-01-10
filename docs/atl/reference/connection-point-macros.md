@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 19eb60af9da72f3c158b9eacbfbfbdf478f1382d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f98b5abd00f1d7ac3e3d69b0e22b549fdea35a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-point-macros"></a>연결 지점 매크로
 이러한 매크로 연결 지점 맵 및 항목을 정의합니다.  
@@ -52,7 +53,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
   
  Atl에서 연결 지점에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
 ##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY 및 CONNECTION_POINT_ENTRY_P  
@@ -77,7 +78,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
   
  Atl에서 연결 지점에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
 ##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
@@ -92,7 +93,7 @@ END_CONNECTION_POINT_MAP()
   
  Atl에서 연결 지점에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#128](../../atl/codesnippet/cpp/connection-point-macros_3.h)]  
   
 ## <a name="see-also"></a>참고 항목  

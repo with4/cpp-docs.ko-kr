@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 472b09b268fe9f493a4df025950a3565fd6c944c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="decltype--c"></a>decltype (c + +)
 `decltype` 형식 지정자는 지정된 식의 형식을 생성합니다. `decltype` 형식 지정자와 함께 [auto 키워드](../cpp/auto-cpp.md), 템플릿 라이브러리를 작성 하는 개발자에 게 주로 유용 합니다. 반환 형식이 해당 템플릿 인수의 형식에 종속되는 템플릿 함수를 선언하려면 `auto` 및 `decltype`을 사용하세요. 또는 다른 함수에 대한 호출을 래핑한 다음 래핑된 함수의 반환 형식을 반환하는 템플릿 함수를 선언하려면 `auto` 및 `decltype`을 사용하세요.  
@@ -65,7 +66,7 @@ const A* a = new A();
   
  다음으로 아래 표에서 4개의 `decltype` 문에 의해 반환되는 형식을 검토합니다.  
   
-|문|형식|참고|  
+|문|형식|노트|  
 |---------------|----------|-----------|  
 |`decltype(fx());`|`const int&&`|[rvalue 참조](../cpp/rvalue-reference-declarator-amp-amp.md) 에 `const int`합니다.|  
 |`decltype(var);`|`int`|`var` 변수의 형식입니다.|  
@@ -108,7 +109,7 @@ decltype(auto) myFunc(T&& t, U&& u)
   
  이 시나리오에서는 `decltype` 형식 지정자 없이 적절한 형식 식을 쓸 수 없습니다. `decltype` 형식 지정자는 함수가 참조 형식을 반환하는지 여부에 대한 필수 정보를 잃지 않기 때문에 제네릭 전달 함수를 사용할 수 있게 만듭니다. 전달 함수의 코드 예제는 이전 `myFunc` 템플릿 함수 예제를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 템플릿 함수 `Plus()`의 컴파일하면 지정되는 반환 형식을 선언합니다. `Plus` 함수는 해당 두 피연산자를 `operator+` 오버로드로 처리합니다. 따라서 `Plus` 함수의 반환 형식 및 더하기 연산자(+)에 대한 해석은 함수 인수의 형식에 따라 달라집니다.  
   
 ```cpp  
@@ -181,7 +182,7 @@ Hello, world!
 x3.Dump() = 42
 ```
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 **Visual Studio 2017 이상:** 컴파일러 템플릿을 선언 되지 않고 인스턴스화할 때 decltype 인수를 구문 분석 합니다. 따라서 decltype 인수에 독립적 특수화가 있는 경우 이 특수화는 인스턴스화 시점으로 연기되지 않고 즉시 처리되며 결과 오류가 이 시점에 진단됩니다.
 
 다음 예제에서는 선언 시점에 발생한 컴파일러 오류를 보여 줍니다.

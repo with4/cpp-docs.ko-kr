@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f9fb74dbc28235f211f24d64ef125f2cccdafc7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3e5e2f8ffab670c6e6c5eb95d37b4daced5c6b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Windows 런타임 지원되지 않는 CRT 함수
 대부분 CRT(C 런타임) API는 Windows 런타임에서 실행되는 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 앱에서 사용할 수 없습니다. 이들 앱은 /ZW 컴파일러 플래그를 사용하여 빌드합니다. 지원되지 않는 CRT 함수 목록은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  

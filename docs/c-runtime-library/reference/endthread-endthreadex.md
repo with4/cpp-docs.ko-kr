@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - endthreadex
 - _endthreadex
 - endthread
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _endthread function
 - endthread function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5abe2f0aa2f62048fefb2f79614e018fbdb51e08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 스레드를 종료합니다. `_endthread` 는 `_beginthread` 로 만든 스레드를 종료하고  `_endthreadex` 는 `_beginthreadex`로 만든 스레드를 종료합니다.  
@@ -103,9 +87,9 @@ void _endthreadex(
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
 ## <a name="libraries"></a>라이브러리  
- 다중 스레드 버전의 유일한 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
+ 다중 스레드 버전의 유일한 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md) 입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md)에 대한 예를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
