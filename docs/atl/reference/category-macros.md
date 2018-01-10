@@ -36,11 +36,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c9a34bcc230ebbb55867c1412b24f10dc5134d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 752a0c0c9de5c726a106ca08a574844369c6bdc5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="category-macros"></a>범주 매크로
 이러한 매크로 범주 맵을 정의 합니다.  
@@ -78,7 +79,7 @@ BEGIN_CATEGORY_MAP(theClass)
   
  구성 요소 범주에 대 한 자세한 내용은 참조 [무엇 구성 요소 범주 이며 어떻게 작동 합니까](http://msdn.microsoft.com/library/windows/desktop/ms694322) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
 ##  <a name="end_category_map"></a>END_CATEGORY_MAP  
@@ -88,7 +89,7 @@ BEGIN_CATEGORY_MAP(theClass)
 END_CATEGORY_MAP()
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [BEGIN_CATEGORY_MAP](#begin_category_map)합니다.  
   
 ##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
@@ -121,7 +122,7 @@ IMPLEMENTED_CATEGORY(catID)
 |창 없는 컨트롤|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
 |인터넷 인식 개체|참조 [인터넷 인식 개체](http://msdn.microsoft.com/library/windows/desktop/ms690561) 샘플 목록에 대 한 Windows sdk입니다.||  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
 ##  <a name="required_category"></a>REQUIRED_CATEGORY  
@@ -154,7 +155,7 @@ REQUIRED_CATEGORY( catID )
 |창 없는 컨트롤|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
 |인터넷 인식 개체|참조 [인터넷 인식 개체](http://msdn.microsoft.com/library/windows/desktop/ms690561) 샘플 목록에 대 한 Windows sdk입니다.||  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  
   
 ## <a name="see-also"></a>참고 항목  

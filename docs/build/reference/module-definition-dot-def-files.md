@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15dbdfcd1074b32e2a707616571484db3ced9d2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-definition-def-files"></a>모듈 정의(.Def) 파일
 모듈 정의 (.def) 파일 링커 내보내기, 특성 및 연결 될 프로그램에 대 한 기타 정보에 대 한 정보를 제공 합니다. .Def 파일 DLL을 빌드할 때 가장 유용 합니다. 있기 때문에 [링커 옵션](../../build/reference/linker-options.md) 사용할 수 있는 모듈 정의 문의 대신.def 파일은 일반적으로 불필요 합니다. 사용할 수도 있습니다 [__declspec (dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) 지정 하는 방법으로 함수를 내보냈습니다.  

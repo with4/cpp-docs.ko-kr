@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e4a8f0d4ef6e8f5ea73352f0d4a62acee1c8c89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-dialog-box"></a>대화 상자를 구현
 ATL 프로젝트에는 대화 상자를 추가 하는 방법은 두 가지가: ATL 대화 상자 마법사를 사용 하거나 수동으로 추가 합니다.  
@@ -47,7 +48,7 @@ ATL 프로젝트에는 대화 상자를 추가 하는 방법은 두 가지가: A
   
  자동으로 수행 됩니다 이벤트 싱크 [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)합니다. 처리기에서와 마찬가지로 대화 상자의 메시지 처리기를 구현는 `CWindowImpl`-클래스를 파생 합니다. 메시지 별로 반환 값 이면 반환로 `LRESULT`합니다. 반환 된 `LRESULT` 값은 Windows 대화 상자 관리자가 올바르게 처리 하기 위해 ATL으로 매핑됩니다. 자세한 내용은 소스 코드에 대 한 참조 [CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) atlwin.h에 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 클래스에는 대화 상자를 구현합니다.  
   
  [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  

@@ -14,17 +14,18 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c238aabdfee5de1896e24934edee1ebec135be4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild(Visual C++) 개요  
   
 MSBuild는 Visual c + + 프로젝트 시스템을 작성 하는 표준입니다. Visual Studio 통합된 개발 환경 (IDE)에서 프로젝트를 빌드할 때 사용 하 여 msbuild.exe 도구, XML 기반 프로젝트 파일 및 설정 (옵션) 파일입니다. Msbuild.exe 및 명령줄에서 프로젝트 파일을 사용할 수 있지만 보다 쉽게 설정을 구성 하 고 프로젝트를 빌드할 수 있도록 IDE 사용자 인터페이스를 제공 합니다. 이 개요에서는 Visual c + + MSBuild 시스템을 사용 하는 방법을 설명 합니다.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 MSBuild에 대 한 다음 문서를 참조 합니다.  
   

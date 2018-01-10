@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceb64bb71ad43dd1a6e6fd45a3a0480d68eb643a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>사용자 지정 문자열 관리자의 CFixedStringT: 예
 ATL 라이브러리 구현 클래스에서 사용 하는 사용자 지정 문자열 관리자의 한 가지 예 [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)라는 **CFixedStringMgr**합니다. `CFixedStringT`파생 된 [CStringT](../atl-mfc-shared/reference/cstringt-class.md) 의 일환으로 문자 데이터를 할당 하는 문자열을 구현 하는 `CFixedStringT` 문자열에서 지정한 길이 보다 작으면으로 개체 자체는 **t_nChars** 템플릿 매개 변수에 `CFixedStringT`합니다. 이 접근 방식는 필요 하지 않습니다 힙에 전혀 문자열의 길이가 고정된 버퍼 크기 이상 증가 하지 않는 한 합니다. 때문에 `CFixedStringT` 가 항상 사용 하 여 문자열 데이터를 할당 하기 위해 힙을 사용할 수 없습니다 **CAtlStringMgr** 해당 문자열 관리자입니다. 사용자 지정 문자열 관리자를 사용 하 여 (**CFixedStringMgr**), 구현에서 [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) 인터페이스입니다. 이 인터페이스에 대해서는 설명 [의 사용자 지정 문자열 관리자 (고급 Method) 구현을](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)합니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 013a5827af630e8190e622940c1fd3872a46a5d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: faef0ca0c1c9c4c2986a039b8b1a26517641acd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-entries"></a>레지스트리 항목
 DCOM 레지스트리에 중앙된 위치에 하나 이상의 DCOM 개체에 대 한 구성 옵션을 그룹화 하는 응용 프로그램 Id (Appid)의 개념을 도입 했습니다. AppID 명명 된 개체의 CLSID 아래 값에에서 해당 값을 지정 하 여 AppID를 지정 합니다.  

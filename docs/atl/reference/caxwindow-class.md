@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46a9a69cf584e769e6ba716b81d21ac9822e78d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8848e8ecf85b073032561e2db52a0db1889911e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caxwindow-class"></a>CAxWindow 클래스
 이 클래스는 ActiveX 컨트롤을 호스팅하는 창 조작 하기 위한 메서드를 제공 합니다.  
@@ -165,7 +166,7 @@ HRESULT CreateControl(
   
  참조 [CAxWindow2T::CreateControlLic](../../atl/reference/caxwindow2t-class.md#createcontrollic) 만들기, 초기화 및 사용 허가 받은 ActiveX 컨트롤을 호스트 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `CreateControl`합니다.  
   
 ##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx  
@@ -232,7 +233,7 @@ HRESULT CreateControlEx(
   
  참조 [CAxWindow2T::CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex) 만들기, 초기화 및 사용 허가 받은 ActiveX 컨트롤을 호스트 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `CreateControlEx`합니다.  
   
 ##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName  

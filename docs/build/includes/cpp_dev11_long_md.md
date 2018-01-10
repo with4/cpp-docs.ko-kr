@@ -1,1 +1,1 @@
-Visual Studio 2012의 Visual C\+\+
+Visual Studio 2012의 Visual C++

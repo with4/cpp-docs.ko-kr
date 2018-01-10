@@ -1,1 +1,1 @@
-Windows SDK\(소프트웨어 개발 키트\)
+Windows SDK(소프트웨어 개발 키트)

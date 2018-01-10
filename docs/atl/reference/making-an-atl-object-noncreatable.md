@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38aa9f5fae45c9d5fa1e413763bd5fa2e65ab795
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0e37779b081de457782ee59324a00cca5fedaea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="making-an-atl-object-noncreatable"></a>ATL 개체 수 없도록 설정 만들기
 클라이언트 개체를 직접 만들 수 없습니다 있도록 ATL 기반 COM 개체의 특성을 변경할 수 있습니다. 이 경우 개체는 될 다른 개체에 대 한 메서드 호출을 통해 반환 된 것이 아니라 직접 합니다.  

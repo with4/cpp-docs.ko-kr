@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 493bd7606dd837199eaa95a2e8abd5536c5f5028
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac80bdd9e38d14b53aea7b691d480272cce66e7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-property-pages"></a>속성 페이지 구현
 속성 페이지는 COM 구현 하는 개체는 `IPropertyPage` 또는 **IPropertyPage2** 인터페이스입니다. ATL 속성 페이지를 통해 구현에 대 한 지원을 제공는 [ATL 속성 페이지 마법사](../atl/reference/atl-property-page-wizard.md) 에 [클래스 추가 대화 상자](../ide/add-class-dialog-box.md)합니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
 -   필요에 따라 재정의 `IPropertyPageImpl` 아래의 지침을 사용 하 여 메서드.  
   
-    |IPropertyPageImpl 메서드|재정의 하려는 경우...|참고|  
+    |IPropertyPageImpl 메서드|재정의 하려는 경우...|노트|  
     |------------------------------|----------------------------------|-----------|  
     |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|지원 되는 인터페이스와 페이지에 전달 되는 개체의 수에 대 한 기본 온전성 검사를 수행 합니다.|기본 클래스 구현을 호출 하기 전에 사용자 고유의 코드를 실행 합니다. 설정 되 고 개체 예상과 따르지, 호출 가능한 한 빨리 실패 해야 있습니다.|  
     |[활성화](../atl/reference/ipropertypageimpl-class.md#activate)|페이지의 사용자 인터페이스 (예를 들어 개체에서 현재 속성 값을 사용 하 여 대화 상자 컨트롤을 설정, 컨트롤을 동적으로 만들 또는 다른 초기화 수행)을 초기화 합니다.|기본 클래스에 해당 키를 업데이트 하려고 하기 전에 대화 상자 창 및 모든 컨트롤을 만들 수 있도록 코드 하기 전에 기본 클래스 구현을 호출 합니다.|  

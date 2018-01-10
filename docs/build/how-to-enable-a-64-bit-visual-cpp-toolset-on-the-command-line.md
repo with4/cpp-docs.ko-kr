@@ -23,11 +23,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f776cbaec0b890959db180a373d4cb4152ac5826
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7712bcf73881d02b5d28c8a7645609be1df5e489
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-visual-c-toolset-on-the-command-line"></a>방법: 64 비트를 사용 하도록 설정, x64 호스트 명령줄에서 Visual c + + 도구 집합
 
@@ -50,4 +51,4 @@ Visual Studio가 64 비트 Windows 운영 체제에 설치, 64 비트, x64 호�
   
 ## <a name="see-also"></a>참고 항목  
 
-[64 비트 x64 Visual c + + 구성 대상](../build/configuring-programs-for-64-bit-visual-cpp.md)
+[64비트, x64 대상을 위한 Visual C++ 구성](../build/configuring-programs-for-64-bit-visual-cpp.md)

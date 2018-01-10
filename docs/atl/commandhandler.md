@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f11e9beee6df4bc4065051242d286fd2ab7dac09
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c17d9e731eaee9c6e1a1c584e61db6c9826cf8d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandhandler"></a>CommandHandler
 `CommandHandler`세 번째 매개 변수로 식별 된 함수는 `COMMAND_HANDLER` 메시지 맵에서 매크로입니다.  

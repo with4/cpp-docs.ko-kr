@@ -14,18 +14,19 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01bd114c92b7056ead29b57c70801d2cbbacb554
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7cf2568005049cfabd9178ea4c8732a5a985954
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-template-library-atl-concepts"></a>ATL(액티브 템플릿 라이브러리) 개념
 액티브 템플릿 라이브러리 (ATL)는 소형, 고속 모델 COM (Component Object) 개체를 만들 수 있도록 해 주는 템플릿 기반의 c + + 클래스의 집합입니다. 재고 구현, 이중 인터페이스, 표준 COM 열거자 인터페이스, 연결 지점, 분리 인터페이스 및 ActiveX 컨트롤을 포함 하 여 키 COM 기능에 대 한 특별 한 지원이 있습니다.  
   
  ATL 프로그래밍의 많은 수행 하는 경우 자세한 내용을 보려면 특성에 대 한 COM 프로그래밍을 간소화 하기 위해 설계 된 Visual c + +.NET의 새로운 기능 합니다. 자세한 내용은 참조 [특성 사용 프로그래밍](../windows/attributed-programming-concepts.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ATL 자습서](../atl/active-template-library-atl-tutorial.md)  
  컨트롤 생성을 안내 하 고 프로세스에서 일부 ATL 기초를 보여 줍니다.  
   

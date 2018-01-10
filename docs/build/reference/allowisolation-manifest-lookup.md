@@ -1,62 +1,63 @@
 ---
-title: "/ALLOWISOLATION(매니페스트 조회) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ALLOWISOLATION"
-  - "VC.Project.VCLinkerTool.AllowIsolation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ALLOWISOLATION 링커 옵션"
-  - "-ALLOWISOLATION 링커 옵션"
+title: "-/ALLOWISOLATION (매니페스트 조회) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ALLOWISOLATION
+- VC.Project.VCLinkerTool.AllowIsolation
+dev_langs: C++
+helpviewer_keywords:
+- -ALLOWISOLATION linker option
+- /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d0ca939021a6fc530b11c6ec66fc74cc012da1c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /ALLOWISOLATION(매니페스트 조회)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION(매니페스트 조회)
 매니페스트 조회 동작을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /ALLOWISOLATION[:NO]  
 ```  
   
-## 설명  
- **\/ALLOWISOLATION:NO**는 매니페스트가 없는 것처럼 DLL을 로드하도록 지정하고 선택적 헤더의 `DllCharacteristics` 필드에서 `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` 비트를 설정하도록 링커에 지시합니다.  
+## <a name="remarks"></a>설명  
+ **/ALLOWISOLATION:NO** 매니페스트가 없었던 마치 Dll이 로드 된 나타냅니다 링커가 설정 하 고는 `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` 선택적 헤더의 비트 `DllCharacteristics` 필드입니다.  
   
- **\/ALLOWISOLATION**을 사용하면 운영 체제에서 매니페스트를 조회하고 로드합니다.  
+ **/ALLOWISOLATION** 조회 및 로드가 매니페스트 하 운영 체제.  
   
- **\/ALLOWISOLATION**가 기본값입니다.  
+ **/ALLOWISOLATION** 값이 기본값입니다.  
   
- 실행 파일에 대한 격리가 비활성화된 경우 Windows 로더는 새로 만든 프로세스에 대해 응용 프로그램 매니페스트를 검색하지 않습니다.  새 프로세스에는 기본 활성화 컨텍스트가 제공되지 않습니다. 이는 실행 파일 안에 매니페스트가 있거나 *executable\-name***.exe.manifest**라는 이름의 실행 파일과 동일한 디렉터리에 배치된 경우에도 마찬가지입니다.  
+ 실행 파일에 대 한 격리가 비활성화 되었으면, Windows 로더가 새로 생성된 된 프로세스에 대 한 응용 프로그램 매니페스트를 찾으려고 시도 하지 않습니다. 새 프로세스는 기본 활성화 컨텍스트가 갖습니다 실행 파일 또는 이름 가진 실행 파일과 동일한 디렉터리에 배치 된 내부 매니페스트 경우에 *실행 파일 이름***. exe.manifest**합니다.  
   
- 자세한 내용은 [Manifest Files Reference](http://msdn.microsoft.com/library/aa375632)를 참조하십시오.  
+ 자세한 내용은 참조 [매니페스트 파일 참조](http://msdn.microsoft.com/library/aa375632)합니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **구성 속성** 노드를 확장합니다.  
+2.  확장 된 **구성 속성** 노드.  
   
-3.  **링커** 노드를 확장합니다.  
+3.  확장 된 **링커** 노드.  
   
-4.  **매니페스트 파일** 속성 페이지를 선택합니다.  
+4.  선택 된 **매니페스트 파일** 속성 페이지.  
   
-5.  **격리 허용** 속성을 수정합니다.  
+5.  수정 된 **격리 허용** 속성입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

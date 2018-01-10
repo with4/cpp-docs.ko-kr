@@ -4,35 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-f1_keywords:
-- vc.atl.structures
-dev_langs:
-- C++
+f1_keywords: vc.atl.structures
+dev_langs: C++
 helpviewer_keywords:
 - ATL, structures
 - structures, ATL
 ms.assetid: 622173c8-6f2e-457c-8fae-28d4e80ecdb5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c8f34a1957a4af4090d5e73a54f0ef00f8b76088
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 2546608c3c84a2228fba35bb1470064f64c2212b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-structures"></a>ATL 구조
 
 
 액티브 템플릿 라이브러리는 다음 구조체가 포함 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)  
  프린터 및 메타 파일, ActiveX 컨트롤 같은 다양 한 대상에 렌더링에 사용 되는 정보를 포함 합니다.  
   
@@ -72,4 +69,3 @@ ms.lasthandoff: 10/09/2017
   
  [ATL 클래스](../../atl/reference/atl-classes.md)  
  사전순으로 구성 하는 클래스에 참조 자료를 제공 합니다.
-

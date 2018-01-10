@@ -1,59 +1,61 @@
 ---
-title: "Strings (ATL/MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, string handling class"
-  - "char pointers"
-  - "const char pointers"
-  - "copying string objects"
-  - "C-style strings"
-  - "language portability [C++]"
-  - "literal strings [C++], class CString"
-  - "literal strings [C++], class CStringT"
-  - "MBCS[C++], CString support"
-  - "MFC[C++], string handling class"
-  - "이식성[C++], Unicode and ANSI string objects"
-  - "reference counting [C++]"
-  - "문자열[C++]"
-  - "문자열[C++], class CString"
-  - "문자열[C++], class CStringT"
-  - "문자열[C++], ATL"
-  - "문자열[C++], MFC"
-  - "문자열[C++], string operations"
+title: "문자열 (MFC ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- const char pointers
+- strings [C++], in ATL
+- MFC [C++], string handling class
+- MBCS [C++], CString support
+- strings [C++], class CStringT
+- char pointers
+- reference counting [C++]
+- strings [C++], string operations
+- portability [C++], Unicode and ANSI string objects
+- literal strings [C++], class CString
+- copying string objects
+- ATL, string handling class
+- strings [C++], in MFC
+- strings [C++]
+- C-style strings
+- language portability [C++]
+- strings [C++], class CString
+- literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6a82f0d02cc8dc9b7c487c8cd9506a4c7d0360fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Strings (ATL/MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-거의 모든 프로그램 문자열 데이터로 작업 합니다.  Visual C\+\+가 문자열 데이터를 관리 하는 여러 방법을 제공 합니다.  
+# <a name="strings-atlmfc"></a>문자열 (ATL/MFC)
+거의 모든 프로그램이 문자열 데이터를 사용 합니다. Visual c + +에는이 문자열 데이터를 관리 하는 여러 방법을 제공 합니다.  
   
-## 단원 내용  
- [Using CStringT](../atl-mfc-shared/using-cstringt.md)  
- 템플릿 클래스 Cstringt를 사용 하 여 프로그래밍에 설명 합니다.  
+## <a name="in-this-section"></a>섹션 내용  
+ [CStringT 사용](../atl-mfc-shared/using-cstringt.md)  
+ CStringT 템플릿 클래스를 사용 하는 프로그래밍에 설명 합니다.  
   
- [Using CString](../atl-mfc-shared/using-cstring.md)  
- CString, Cstringt의 기본 구현을 사용 하 여 프로그래밍에 대해 설명 합니다.  
+ [CString 사용](../atl-mfc-shared/using-cstring.md)  
+ CString, CStringT의 기본 구현을 사용 하 여 프로그래밍에 대해 설명 합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [CStringT 개요](../atl-mfc-shared/reference/cstringt-class.md)  
  공유에 대 한 참조 정보를 제공 `CStringT` 클래스입니다.  
   
- [MFC의 개념](../mfc/mfc-concepts.md)  
- 데 도움이 되는 개념과 작업 기반 항목을 제공 하면 MFC 라이브러리를 사용 하 여 프로그램.  
+ [MFC 개념](../mfc/mfc-concepts.md)  
+ 수 있도록 개념과 작업 항목을 제공 MFC 라이브러리를 사용 하 여 프로그래밍 합니다.  
   
-## 참고 항목  
- [ATL\/MFC Shared Classes](../atl-mfc-shared/atl-mfc-shared-classes.md)
+## <a name="see-also"></a>참고 항목  
+ [ATL/MFC 공유 클래스](../atl-mfc-shared/atl-mfc-shared-classes.md)
+

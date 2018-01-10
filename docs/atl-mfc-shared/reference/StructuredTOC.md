@@ -1,4 +1,4 @@
-# <a name="classes-shared-by-mfc-and-atlclasses-shared-by-mfc-and-atlmd"></a>[MFC와 ATL에서 공유 되는 클래스](classes-shared-by-mfc-and-atl.md)
+# <a name="classes-shared-by-mfc-and-atlclasses-shared-by-mfc-and-atlmd"></a>[MFC와 ATL에서 공유되는 클래스](classes-shared-by-mfc-and-atl.md)
 ## <a name="cfiletime-classcfiletime-classmd"></a>[CFileTime 클래스](cfiletime-class.md)
 ## <a name="cfiletimespan-classcfiletimespan-classmd"></a>[CFileTimeSpan 클래스](cfiletimespan-class.md)
 ## <a name="cfixedstringt-classcfixedstringt-classmd"></a>[CFixedStringT 클래스](cfixedstringt-class.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cef973849a9af88cd952be69ce9d33e7a516d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>이벤트 추가(ATL 자습서, 5부)
 이 단계에서 추가한는 `ClickIn` 및 `ClickOut` ATL 컨트롤에는 이벤트입니다. 발생는 `ClickIn` 다각형 및 화재 내부를 클릭할 경우 이벤트 `ClickOut` 바깥쪽을 클릭할 경우. 이벤트 추가 하려면 작업은 다음과 같습니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28fb749a705ed01b4c10d22cea0062c2f0d799c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf1dd68a3ca8e6735b07c5bd7247b457bd7d246d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfaces-atl"></a>인터페이스 (ATL)
 인터페이스는 개체는 외부 기능을 노출 하는 방법입니다. COM 인터페이스에는 개체에 의해 구현 되는 함수 (예: c + + vtable) 포인터의 테이블입니다. 테이블 인터페이스를 나타내고 가리키는 함수는 해당 인터페이스의 메서드입니다. 개체는 선택한 만큼의 인터페이스를 노출할 수 있습니다.  

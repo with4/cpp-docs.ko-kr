@@ -1,49 +1,65 @@
 ---
-title: "보안 식별자 전역 함수 | Microsoft 문서"
+title: "보안 식별자 전역 함수 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::Sids::AccountOps
+- atlsecurity/ATL::Sids::Admins
+- atlsecurity/ATL::Sids::AnonymousLogon
+- atlsecurity/ATL::Sids::AuthenticatedUser
+- atlsecurity/ATL::Sids::BackupOps
+- atlsecurity/ATL::Sids::Batch
+- atlsecurity/ATL::Sids::CreatorGroup
+- atlsecurity/ATL::Sids::CreatorGroupServer
+- atlsecurity/ATL::Sids::CreatorOwner
+- atlsecurity/ATL::Sids::CreatorOwnerServer
+- atlsecurity/ATL::Sids::Dialup
+- atlsecurity/ATL::Sids::Guests
+- atlsecurity/ATL::Sids::Interactive
+- atlsecurity/ATL::Sids::Local
+- atlsecurity/ATL::Sids::Network
+- atlsecurity/ATL::Sids::NetworkService
+- atlsecurity/ATL::Sids::Null
+- atlsecurity/ATL::Sids::PowerUsers
+- atlsecurity/ATL::Sids::PrintOps
+- atlsecurity/ATL::Sids::Proxy
+- atlsecurity/ATL::Sids::RasServers
+- atlsecurity/ATL::Sids::Replicator
+- atlsecurity/ATL::Sids::RestrictedCode
+- atlsecurity/ATL::Sids::Self
+- atlsecurity/ATL::Sids::ServerLogon
+- atlsecurity/ATL::Sids::Service
+- atlsecurity/ATL::Sids::System
+- atlsecurity/ATL::Sids::SystemOps
+- atlsecurity/ATL::Sids::TerminalServer
+- atlsecurity/ATL::Sids::Users
+- atlsecurity/ATL::Sids::World
+dev_langs: C++
 helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 9e51fe30b0519514df34f1a77b1e731f51047520
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6975b6b73c6d81fc9347a2395cd36747ce235b2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-identifier-global-functions"></a>보안 식별자 전역 함수
-이러한 함수는 개체 일반적인 잘 알려진 SID를 반환합니다.  
+이러한 함수 개체 일반적인 잘 알려진 SID를 반환합니다.  
   
 > [!IMPORTANT]
->  다음 표에 나열 된 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  다음 표에 나열 된 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 |||  
 |-|-|  
@@ -180,10 +196,10 @@ CSid Network() throw(...);
 CSid NetworkService() throw(...);
 ```  
   
-### <a name="remarks"></a>주의  
- NetworkService를 사용 하 여 NT AUTHORITY\NetworkService 사용자 CPerfMon 보안 개체를 읽을 수 있도록 합니다. NetworkService DLL에는 NetworkService 계정으로 로그인 할 수 있는 ATLServer 코드에는 SecurityAttribute 추가 [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] 및 큰 운영 체제입니다.  
+### <a name="remarks"></a>설명  
+ NetworkService를 사용 하 여 NT AUTHORITY\NetworkService 사용자 CPerfMon 보안 개체를 읽을 수 있도록 합니다. NetworkService DLL NetworkService 계정으로 로그인 할 수 있는 ATLServer 코드에는 SecurityAttribute 추가 [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] 및 큰 운영 체제입니다.  
   
- 사용자 지정 로그 카운터는 Perfmon mmc에서 ATLServer CPerfMon 클래스를 사용 하 여 만들어집니다, 실시간 보기에서 올바르게 표시 되도록 하지만 로그 파일을 볼 때 카운터 나타나지 않을 수 있습니다. CPerfMon 사용자 지정 성능 카운터에는 "성능 로그 및 경고" 서비스 (smlogsvc.exe)에서 실행 하는 데 필요한 권한이 없는 [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (이상) 운영 체제입니다. 이 서비스는 "NT AUTHORITY\NetworkService" 계정에서 실행 합니다.  
+ 사용자 지정 로그 카운터 Perfmon mmc에서 ATLServer CPerfMon 클래스를 사용 하 여 만들어진, 실시간 보기에서 올바르게 표시 되도록 하지만 로그 파일을 볼 때 카운터 나타나지 않을 수 있습니다. CPerfMon 사용자 지정 성능 카운터에는 "성능 로그 및 경고" 서비스 (smlogsvc.exe)에서 실행 하는 데 필요한 권한이 없는 [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (이상) 운영 체제. 이 서비스는 "NT AUTHORITY\NetworkService" 계정에서 실행 합니다.  
   
 ##  <a name="null"></a>Sids::Null  
  SECURITY_NULL_RID SID를 반환합니다.  
@@ -283,4 +299,3 @@ CSid World() throw(...);
   
 ## <a name="see-also"></a>참고 항목  
  [함수](../../atl/reference/atl-functions.md)
-

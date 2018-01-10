@@ -65,11 +65,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bd493619bc8117a67670f1c4bc820ed00c7be165
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimage-class"></a>CImage 클래스
 `CImage`향상 된 비트맵 지원, 로드 및 이미지를 JPEG, GIF, BMP, 및 PNG 이동식 네트워크 그래픽 () 형식으로 저장 하는 기능을 포함 하 여 제공 합니다.  
@@ -168,7 +169,7 @@ class CImage
   
  `CImage`새 선택할 수 없는 [CDC](../../mfc/reference/cdc-class.md)합니다. `CImage`자체 만듭니다 **HDC** 이미지에 대 한 합니다. 때문에 프로그램 `HBITMAP` 하나에 선택할 수 있습니다 **HDC** 한 번에는 `HBITMAP` 연관는 `CImage` 다른 파티션으로 선택할 수 없습니다 **HDC**합니다. 필요한 경우는 `CDC`, 검색 된 **HDC** 에서 `CImage` 되 고 나면 [CDC::FromHandle] (... /.. /mfc/reference/cdc-class.md#cdc__fromhandle 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 ```cpp  
 // Get a CDC for the image
 CDC* pDC = CDC::FromHandle(m_myImage.GetDC());
@@ -181,7 +182,7 @@ m_myImage.ReleaseDC();
  사용 하는 경우 `CImage` MFC 프로젝트를 프로젝트에는 멤버 함수에 대 한 포인터를 기대 사항을 유의 [CBitmap](../../mfc/reference/cbitmap-class.md) 개체입니다. 사용 하려는 경우 `CImage` 이러한 함수 처럼 [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)를 사용 하 여 [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), 전달 프로그램 `CImage` `HBITMAP`, 반환 된 를사용하여`CBitmap*`.  
 
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 ```cpp  
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 {
@@ -493,7 +494,7 @@ BOOL CreateEx(
 ### <a name="return-value"></a>반환 값  
  **True 이면** 성공 하는 경우. 그렇지 않으면 **FALSE**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에는 16 비트를 사용 하 여 각 픽셀을 인코딩하는 데 100 x 100 픽셀 비트맵을 만듭니다. 지정된 된 16 비트 픽셀 0-3 비트 빨강 구성 요소를 인코딩하, 4-7 비트 녹색, 인코딩 및 8-11 비트 인코딩 파랑 합니다. 나머지 4 비트가 사용 되지 않습니다.  
 
 ```cpp  
@@ -1527,7 +1528,7 @@ BOOL TransparentBlt(
  `TransparentBlt`4 비트 / 픽셀 및 픽셀 당 8 비트의 소스 비트맵에 지원 됩니다. 사용 하 여 [CImage::AlphaBlend](#alphablend) 에 투명도 사용 하 여 32 비트 / 픽셀 비트맵을 지정 합니다.  
   
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
 
 ```cpp  
 // Performs a transparent blit from the source image to the destination 

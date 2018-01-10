@@ -15,16 +15,17 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebabc94a289cf28d76903714e9440f50cc1abea2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0db569d456a85418f01dfdf3abab116d68d99dff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c"></a>MSBuild(Visual C++)
 사용할 수는 **MSBuild** 명령 프롬프트에서 Visual c + + 응용 프로그램을 빌드하는 도구입니다. 빌드 프로세스에서 정보를 만들고 편집할 수 있는 프로젝트 파일 (.vcxproj)에 의해 제어 됩니다. 프로젝트 파일에 따라 빌드 옵션 빌드 단계, 조건 및 이벤트를 지정 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |용어|정의|  
 |----------|----------------|  
@@ -38,4 +39,4 @@ ms.lasthandoff: 10/24/2017
 |[방법: 대상 프레임워크 및 플랫폼 도구 집합 수정](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|여러 프레임 워크 또는 도구 집합에 대 한 프로젝트를 컴파일하는 방법을 보여 줍니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [C/c + + 코드를 명령줄에서 빌드](../build/building-on-the-command-line.md)
+ [명령줄에서 C/C++ 코드 빌드](../build/building-on-the-command-line.md)

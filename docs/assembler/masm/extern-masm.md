@@ -1,32 +1,31 @@
 ---
-title: "EXTERN (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "extern"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EXTERN directive"
+title: EXTERN (MASM) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: extern
+dev_langs: C++
+helpviewer_keywords: EXTERN directive
 ms.assetid: 667d703d-3aaf-4139-a586-29bc5dab1aff
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 814922100d34534d51abed4cb682cc4181685066
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# EXTERN (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-하나 이상의 외부 변수, 레이블 또는 호출 된 기호를 정의  *이름* 는 `type`.  
+# <a name="extern-masm"></a>EXTERN (MASM)
+하나 이상의 외부 변수, 레이블 또는 이라는 기호 정의 *이름* 형식이 변수인 `type`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,8 +33,8 @@ caps.handback.revision: 7
 type [[, [[langtype]] name [[(altid)]] :type]]...  
 ```  
   
-## 설명  
- `type` 수 있습니다  [ABS](../../assembler/masm/operator-abs.md), imports  *이름* 상수는.  다른 이름으로 동일한  [EXTRN](../../assembler/masm/extrn.md).  
+## <a name="remarks"></a>설명  
+ `type` 수 [ABS](../../assembler/masm/operator-abs.md)를 가져오는 *이름* 상수입니다. 와 동일 [EXTRN](../../assembler/masm/extrn.md)합니다.  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

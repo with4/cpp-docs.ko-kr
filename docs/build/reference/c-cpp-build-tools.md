@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e2db4e697f50c98197041ad3470ae553371dda85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b21ebd2adf20eb0812e9a0fb5b900e657f8eddc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-tools"></a>C/C++ 빌드 도구
 Visual c + + 보거나 빌드 출력을 조작 하기 위한 다음과 같은 명령줄 도구를 제공 합니다.  

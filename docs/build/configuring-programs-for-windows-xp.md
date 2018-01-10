@@ -13,17 +13,18 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b92eb646b152a7bbd4588fe953a762389ce111dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff80109c1f3a5e03ecb85406cdaea24804f96783
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 용 프로그램 구성
 Visual Studio는 여러 플랫폼 도구 집합을 지원 하므로 운영 체제 및 런타임 라이브러리 기본 도구 집합에서 지원 되지 않는 대상 수 있습니다. 예를 들어 플랫폼 도구 집합을 전환 하 여 있습니다 사용할 수는 C + + 11, C + + 14, 및 Visual Studio에서 Visual c + + 컴파일러에서 지 원하는 향상 된 C + + 17 언어를 대상으로 하는 앱을 만드는 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]합니다. 또한 이전 플랫폼 도구 집합을 사용 하 여 이진 호환 레거시 코드를 유지 관리할 수 있으며 Visual Studio IDE의 최신 기능도 활용할 수 있습니다.  
   
 > [!NOTE]
->  사용 중인 경우 [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)]를 설치 해야 [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] 업데이트 4에 대 한 플랫폼 도구 집합 지원을 추가 하려면 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]합니다. 다운로드 하 여의 복사본을 설치 [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] 업데이트 4, 참조 [Microsoft Visual Studio Express 2012 for Windows Desktop](http://go.microsoft.com/fwlink/?LinkID=265464) Microsoft 다운로드 센터에서. 다음 설치 [Visual Studio 2012 업데이트 4](http://go.microsoft.com/fwlink/?LinkID=335900) v110_xp 플랫폼 도구 집합을 얻으려고 합니다. 설치 후에는 Windows 업데이트에서 최신 소프트웨어 업데이트를 받습니다.  
+>  사용 중인 경우 [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)]를 설치 해야 [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] 업데이트 4에 대 한 플랫폼 도구 집합 지원을 추가 하려면 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]합니다. 다운로드 하 여의 복사본을 설치 [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] 업데이트 4, 참조 [Microsoft Visual Studio Express 2012 for Windows Desktop](http://go.microsoft.com/fwlink/p/?linkid=265464) Microsoft 다운로드 센터에서. 다음 설치 [Visual Studio 2012 업데이트 4](http://go.microsoft.com/fwlink/p/?linkid=335900) v110_xp 플랫폼 도구 집합을 얻으려고 합니다. 설치 후에는 Windows 업데이트에서 최신 소프트웨어 업데이트를 받습니다.  
   
 ## <a name="windows-xp-targeting-experience"></a>Windows XP 대상 환경  
  Visual Studio에 포함 된 Windows XP 플랫폼 도구 집합의 버전이 [!INCLUDE[win7](../build/includes/win7_md.md)] SDK에 포함 된 [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], 이지만 현재 c + + 컴파일러를 사용 합니다. 또한 이 도구 집합은 프로젝트 속성을 적합한 기본값(예: 하위 수준 대상 지정을 위한 호환 링커의 사양)으로 구성합니다. Windows XP 플랫폼 도구 집합을 사용 하 여 만들어진 데스크톱 앱에서 실행 되는 창만 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], 되지만 최신 Windows 운영 체제에서 해당 앱을 실행할 수도 있습니다.  

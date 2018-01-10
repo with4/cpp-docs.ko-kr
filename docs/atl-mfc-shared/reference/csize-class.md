@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b3c708e09038c2846cfcf705dae6f59e30f44b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac18decc8a2bb6bbc2d9e9677640eba67c85077e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csize-class"></a>CSize 클래스
 상대 좌표 또는 위치를 구현하는 Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조체와 유사합니다.  
@@ -102,7 +103,7 @@ CSize( DWORD dwSize) throw();
 ### <a name="remarks"></a>설명  
  인수에 제공 하는 경우 **cx** 및 **cy** 0으로 초기화 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATLMFC_Utilities#97](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]  
   
 ##  <a name="operator_eq_eq"></a>CSize::operator = =  
@@ -115,7 +116,7 @@ BOOL operator==(SIZE size) const throw();
 ### <a name="remarks"></a>설명  
  크기가 같으면 0이 아닌 반환 하 고, otherwize 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATLMFC_Utilities#98](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]  
   
 ##  <a name="operator_neq"></a>CSize::operator! =  
@@ -128,7 +129,7 @@ BOOL operator!=(SIZE size) const throw();
 ### <a name="remarks"></a>설명  
  반환 크기가 같으면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATLMFC_Utilities#99](../../atl-mfc-shared/codesnippet/cpp/csize-class_3.cpp)]  
   
 ##  <a name="operator_add_eq"></a>CSize::operator + =  
@@ -138,7 +139,7 @@ BOOL operator!=(SIZE size) const throw();
 void operator+=(SIZE size) throw(); 
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATLMFC_Utilities#100](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]  
   
 ##  <a name="operator_-_eq"></a>-= CSize::operator  
@@ -148,7 +149,7 @@ void operator+=(SIZE size) throw();
 void operator-=(SIZE size) throw(); 
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATLMFC_Utilities#101](../../atl-mfc-shared/codesnippet/cpp/csize-class_5.cpp)]  
   
 ##  <a name="operator_add"></a>CSize::operator +  
@@ -169,7 +170,7 @@ CRect operator+(const RECT* lpRect) const throw();
   
 - **연산자 + (** `lpRect` **)**오프셋 (이동)을이 작업을 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) (또는 [CRect](../../atl-mfc-shared/reference/crect-class.md)) 값이 `CSize` 값입니다. **cx** 및 **cy** 의 멤버 `CSize` 값에 추가 되는 **왼쪽**, **top**, **오른쪽**, 및 **아래쪽** 의 데이터 멤버는 `RECT` 값입니다. 버전의 유사 [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) 를 사용 하는 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]  
   
 ##  <a name="operator_-"></a>CSize::operator-  
@@ -193,7 +194,7 @@ CSize operator-() const throw();
   
 - **연산자-()**이 작업은이의 덧셈 역 원을 반환 `CSize` 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATLMFC_Utilities#103](../../atl-mfc-shared/codesnippet/cpp/csize-class_7.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

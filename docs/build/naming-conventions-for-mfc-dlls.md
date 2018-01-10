@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b78d01405ca74acfa74f898b88d1c9b79625e99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f7702e9babcc4769136d6deab63b627f8b09bd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="naming-conventions-for-mfc-dlls"></a>MFC DLL의 명명 규칙
 Dll 및 MFC에 포함 된 라이브러리가 구조적된 명명 규칙을 따릅니다. 이렇게 하면 보다 쉽게는 DLL 또는 라이브러리를 사용 해야 각 용도 대 한 알 수 있습니다.  

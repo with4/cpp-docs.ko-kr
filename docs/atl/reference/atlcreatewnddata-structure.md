@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5b0811e88188bb29ef3153f739804cbdac66083
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99fc06e44f24b176482a6ff0b08ceed45b0f4f17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 구조
 이 구조 ATL에서 창 작업 코드에 클래스 인스턴스 데이터를 포함합니다.  

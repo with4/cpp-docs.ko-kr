@@ -1,43 +1,44 @@
 ---
-title: "operator IMAGEREL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator IMAGEREL"
-  - "IMAGEREL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator IMAGEREL"
-  - "IMAGEREL operator"
+title: "연산자 IMAGEREL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator IMAGEREL
+- IMAGEREL
+dev_langs: C++
+helpviewer_keywords:
+- operator IMAGEREL
+- IMAGEREL operator
 ms.assetid: 5b5ea425-36f0-467c-9262-62c484b7fdb4
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e8cc4c78e1bb45da5fa69d5610a7c7812f4abbf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# operator IMAGEREL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이미지 상대 오프셋을 반환 합니다. `expression`.  
+# <a name="operator-imagerel"></a>연산자 IMAGEREL
+이미지 상대 오프셋을 반환 `expression`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 IMAGEREL expression  
 ```  
   
-## 설명  
- 결과 값 종종 RVA 또는 상대 가상 주소 라고 합니다.  
+## <a name="remarks"></a>설명  
+ 결과 값은 RVA 또는 상대 가상 주소 라고도 합니다.  
   
- IMAGEREL는 COFF 개체 내보내기를 사용할 수 있습니다.  
+ COFF 개체 내보내기 작업에만 IMAGEREL ´ ù입니다.  
   
-## 참고 항목  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [연산자 참조](../../assembler/masm/operators-reference.md)

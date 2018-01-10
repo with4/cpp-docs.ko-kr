@@ -27,11 +27,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a7d7b14d67a127fadd8199f9cf9e1e209b8eea7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 클래스
 이 클래스는 합성 컨트롤을 구현 하는 데 필요한 메서드를 제공 합니다.  
@@ -91,7 +92,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 > [!NOTE]
 >  액셀러레이터 키가 제대로 작동 되려면는 `CComCompositeControl`, 컨트롤을 만들 때 액셀러레이터 키 테이블을 로드, 다시에 액셀러레이터 키의 수와 핸들을 전달 해야 하는 [IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo), 및 마지막으로 컨트롤 해제 될 때 테이블을 삭제 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#14](../../atl/codesnippet/cpp/ccomcompositecontrol-class_2.h)]  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  

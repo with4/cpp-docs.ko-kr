@@ -1,68 +1,68 @@
 ---
-title: "/FU(강제 #using 파일 이름 지정) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.ForcedUsingFiles"
-  - "/FU"
-  - "VC.Project.VCNMakeTool.ForcedUsingAssemblies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FU 컴파일러 옵션[C++]"
-  - "FU 컴파일러 옵션[C++]"
-  - "-FU 컴파일러 옵션[C++]"
+title: "-FU (Name Forced #using 파일) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.ForcedUsingFiles
+- /FU
+- VC.Project.VCNMakeTool.ForcedUsingAssemblies
+dev_langs: C++
+helpviewer_keywords:
+- -FU compiler option [C++]
+- FU compiler option [C++]
+- /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 17b62859aaf0c9dc6b3313fbb726602b5b83a82c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /FU(강제 #using 파일 이름 지정)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-소스 코드에서 [\#using 지시문](../../preprocessor/hash-using-directive-cpp.md)으로 파일 이름을 전달하는 것과는 다른 컴파일러 옵션을 제공합니다.  
+# <a name="fu-name-forced-using-file"></a>/FU(강제 #using 파일 이름 지정)
+파일 이름을 전달 하는 대신 사용할 수 있는 컴파일러 옵션 [#using 지시문](../../preprocessor/hash-using-directive-cpp.md) 소스 코드에서.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /FU file  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  `file`  
- 이 컴파일 과정에서 참조할 메타데이터 파일을 지정합니다.  
+ 이 컴파일 과정에서 참조 하는 메타 데이터 파일을 지정 합니다.  
   
-## 설명  
- \/FU 스위치에서는 하나의 파일 이름을 가져옵니다.  여러 파일을 지정 하려면 각 하나를 사용하여 \/FU를 사용 합니다.  
+## <a name="remarks"></a>설명  
+ /FU 스위치는 파일 이름을 하나만 사용합니다. 여러 파일을 지정하려면 각 항목에 대해 /FU를 사용합니다.  
   
- [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] 사용하고 메타 데이터를 참조 하는 [Friend 어셈블리](../../dotnet/friend-assemblies-cpp.md) 를 사용하는 경우 **\/FU**를 사용할 수 없습니다.  코드의 메타 데이터를 참조 해야 합니다  `#using` \-함께  `[as friend]`  특성을 참조해야 합니다.  Friend 어셈블리에서는 [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)]\([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]\)이 지원 되지 않습니다.  
+ 사용 중인 경우 [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] 및 사용 하 고 메타 데이터 참조는 [Friend 어셈블리](../../dotnet/friend-assemblies-cpp.md) 사용할 수 없는 기능을 **/FU**합니다. `#using` 특성과 함께 `[as friend]`을 사용해서 코드에서 메타데이터를 참조해야 합니다. Friend 어셈블리는 [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)]([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)])에서 지원되지 않습니다.  
   
- 공용 언어 런타임용 어셈블리나 모듈을 만드는 방법에 대한 자세한 내용은[\/clr\(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md)를 참조하십시오.  [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]에서 만드는 방법에 대한 자세한 내용은 [응용 프로그램 및 라이브러리 빌드](../Topic/Building%20apps%20and%20libraries%20\(C++-CX\).md)를 참조하십시오.  
+ 어셈블리 또는 공용 언어 런타임 (CLR)에 대 한 모듈을 만드는 방법에 대 한 정보를 참조 하십시오. [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)합니다. 작성 하는 방법에 대 한 내용은 [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], 참조 [응용 프로그램 및 라이브러리 빌드](../../cppcx/building-apps-and-libraries-c-cx.md)합니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 선택합니다.  
+2.  선택 된 **C/c + +** 폴더입니다.  
   
-3.  **고급** 속성 페이지를 선택합니다.  
+3.  선택 된 **고급** 속성 페이지.  
   
-4.  **\#using 강제** 속성을 수정합니다.  
+4.  수정 된 **강제 #using** 속성입니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedUsingFiles%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedUsingFiles%2A>을 참조하세요.  
   
-## 참고 항목  
- [출력 파일\(\/F\) 옵션](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>참고 항목  
+ [출력 파일 (/ F) 옵션](../../build/reference/output-file-f-options.md)   
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

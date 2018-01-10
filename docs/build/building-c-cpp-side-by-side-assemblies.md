@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40b8099a1159514d3ffce8cfeb9b38274c3e68b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side 어셈블리 빌드
 A [side-by-side-어셈블리](http://msdn.microsoft.com/library/windows/desktop/ff951640) 리소스의 컬렉션은-Dll, windows 클래스, COM 서버, 형식 라이브러리 또는 인터페이스 그룹-런타임 시 사용 하도록 응용 프로그램에 사용할 수 있습니다. 어셈블리에 Dll을 다시 패키지의 주요 이점은 동시에 응용 프로그램에서 여러 버전의 어셈블리를 사용할 수 있습니다 및 현재 설치 된 서비스 업데이트가 릴리스되는 어셈블리 수입니다.  

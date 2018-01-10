@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e654b2b9e60973d29f1867e777c3e5a166d3d1d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86b1d4a47d65a4c3e9b9d72c2a555156402944a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
 각 변수, 레이블 또는로 지정 하는 절대 기호를 사용 하면 *이름* 프로그램의 다른 모든 모듈을 사용할 수 있습니다.  

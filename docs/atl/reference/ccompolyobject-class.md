@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,22 @@ f1_keywords:
 - ATLCOM/ATL::CComPolyObject::QueryInterface
 - ATLCOM/ATL::CComPolyObject::Release
 - ATLCOM/ATL::CComPolyObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ee44fcec146ef8a8c68b917020ae52e2300eed5e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3518fd5936c4871e99eaf597f12fb3ab7cc8aff6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 클래스
 이 클래스는 구현 **IUnknown** 집계 또는 집계 되지 않은 원시 개체에 대 한 합니다.  
@@ -80,7 +64,7 @@ class CComPolyObject : public IUnknown,
 |이름|설명|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|개체의 참조 횟수를 증가 시킵니다.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(정적) 새로 만들 수 있습니다. **CComPolyObject** `contained` **>** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.|  
+|[CComPolyObject::CreateInstance](#createinstance)|(정적) 새로 만들 수 있습니다. **CComPolyObject <** `contained`  **>**  개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|최종 초기화를 수행 `m_contained`합니다.|  
 |[CComPolyObject::FinalRelease](#finalrelease)|최종 소멸 수행 `m_contained`합니다.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|요청된 인터페이스에 대한 포인터를 검색합니다.|  
@@ -92,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |----------|-----------------|  
 |[CComPolyObject::m_contained](#m_contained)|대리자 **IUnknown** 개체가 집계 되는 경우 또는를 알 수 없는 외부를 호출 하는 **IUnknown** 개체가 집계 되지 않은 경우 개체의 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CComPolyObject`구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 집계 또는 집계 되지 않은 원시 개체에 대 한 합니다.  
   
  인스턴스가 `CComPolyObject` 만들어지면 값 외부의 알 수 없음이 확인 됩니다. 이 경우 **NULL**, **IUnknown** 집계 되지 않은 원시 개체에 대 한 구현 됩니다. 알 수 없는 외부 없으면 **NULL**, **IUnknown** 집계 개체에 대 한 구현 됩니다.  
@@ -138,7 +122,7 @@ CComPolyObject(void* pv);
  `pv`  
  [in] 알 수 없는 외부 개체를 집계할 수 하는 경우에 대 한 포인터 또는 **NULL** 경우 개체는 개체가 집계 되지 않은 경우.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  초기화는 `CComContainedObject` 데이터 멤버 [m_contained](#m_contained), 모듈 잠금 횟수를 증가 시킵니다.  
   
  모듈 잠금 횟수를 소멸자 줄입니다.  
@@ -150,11 +134,11 @@ CComPolyObject(void* pv);
 ~CComPolyObject();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 하는 할당 된 모든 리소스를 해제 [FinalRelease](#finalrelease), 및 모듈 잠금 횟수를 줄입니다.  
   
 ##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
- 새로 만들 수 있습니다. **CComPolyObject** `contained` **>** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
+ 새로 만들 수 있습니다. **CComPolyObject <** `contained`  **>**  개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -164,12 +148,12 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>매개 변수  
  `pp`  
- [out] 에 대 한 포인터는 **CComPolyObject** `contained` **>** 포인터입니다. 경우 `CreateInstance` 실패 `pp` 로 설정 된 **NULL**합니다.  
+ [out] 에 대 한 포인터는 **CComPolyObject <** `contained`  **>**  포인터입니다. 경우 `CreateInstance` 실패 `pp` 로 설정 된 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  반환 되는 개체에는 참조 횟수가 0, 없으므로 호출 `AddRef` 즉시을 사용 하 여 **릴리스** 를 마치면 개체 포인터에 대 한 참조를 해제 합니다.  
   
  개체에 대 한 액세스를 직접 필요 하지 않지만 여전히 오버 헤드 없이 새 개체를 만들려고 할 경우 `CoCreateInstance`를 사용 하 여 [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 대신 합니다.  
@@ -202,7 +186,7 @@ CComContainedObject<contained> m_contained;
  `contained`  
  [in] 파생 된 클래스에 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 또는 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), 개체에서 지원할 하려는 다른 인터페이스와도 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  **IUnknown** 통해 호출 `m_contained` 개체가 집계 되는, 또는에 알 수 없는 외부에 위임 되며는 **IUnknown** 개체가 집계 되지 않은 경우이 개체의 합니다.  
   
 ##  <a name="queryinterface"></a>CComPolyObject::QueryInterface  
@@ -230,7 +214,7 @@ HRESULT QueryInterface(Q** pp);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  요청한 인터페이스가 집계 개체에 대 한 **IUnknown**, `QueryInterface` 집계 된 개체의 자체에 대 한 포인터를 반환 **IUnknown** 참조 횟수를 증가 시킵니다. 그렇지 않으면이 메서드를 통해 인터페이스에 대 한 쿼리는 `CComContainedObject` 데이터 멤버 [m_contained](#m_contained)합니다.  
   
 ##  <a name="release"></a>CComPolyObject::Release  
@@ -247,4 +231,3 @@ STDMETHOD_(ULONG, Release)();
  [CComObjectRootEx 클래스](../../atl/reference/ccomobjectrootex-class.md)   
  [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

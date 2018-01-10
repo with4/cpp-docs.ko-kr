@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea725b470d08688ed824991d308677970e2c8277
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11f078e6e47aa6c392de79d9811df8738ce09ed9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 세 번째 매개 변수에 의해 식별 된 함수 이름에서 `NOTIFY_HANDLER` 메시지 맵에서 매크로입니다.  

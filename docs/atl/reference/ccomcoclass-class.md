@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,36 +14,21 @@ f1_keywords:
 - ATLCOM/ATL::CComCoClass::Error
 - ATLCOM/ATL::CComCoClass::GetObjectCLSID
 - ATLCOM/ATL::CComCoClass::GetObjectDescription
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 967c919bb68890c51be6a0800db90692346e2b7d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 969370294ed3d5d2ca2fdff5f4a106b72ed77a17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 클래스
 이 클래스는 클래스의 인스턴스를 만들고 해당 속성을 가져오는 메서드를 제공 합니다.  
@@ -74,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectCLSID](#getobjectclsid)|(정적) 개체의 클래스 식별자를 반환합니다.|  
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(정적) 개체의 설명을 반환 하려면 재정의 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CComCoClass`개체의 CLSID를 검색, 오류 정보를 설정 및 클래스의 인스턴스를 만들기 위한 메서드를 제공 합니다. 에 등록 된 모든 클래스는 [개체 맵의](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f) 에서 파생 되는 `CComCoClass`합니다.  
   
  `CComCoClass`또한 사용자 개체에 대 한 기본 클래스 팩터리와 집계 모델을 정의합니다. `CComCoClass`다음 두 매크로 사용합니다.  
@@ -85,7 +69,7 @@ class CComCoClass
   
  클래스 정의에서 다른 매크로 지정 하 여 이러한 기본값 중 하나를 재정의할 수 있습니다. 예를 들어, 사용 하도록 [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) 대신 `CComClassFactory`, 지정 된 [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) 매크로:  
   
- [!code-cpp[NVC_ATL_COM #2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
@@ -112,7 +96,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out] 만들기가 성공 하면 요청 된 인터페이스 포인터를 받는 포인터 변수의 주소입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다. 참조 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 에 대 한 설명은 가능한 반환 값입니다.  
+ 표준 `HRESULT` 값입니다. 참조 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) Windows sdk에 대 한 설명은 가능한 반환 값입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수의 첫 번째 오버 로드를 사용 하 여 일반적인 개체를 만듭니다. 생성 되는 개체를 집계 하는 두 번째 오버 로드를 사용 합니다.  
@@ -123,10 +107,10 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
   
  인터페이스 `Q` 를 사용 하 여 검색할 수 있는 IID 연결 되어 있어야 합니다.는 [__uuidof](../../cpp/uuidof-operator.md) 연산자입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예에서 `CDocument` ATL 마법사에서 생성 된 클래스에서 파생 `CComCoClass` 구현 하는 **IDocument** 인터페이스입니다. 클래스는 개체 지도에 등록 되어는 `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` 매크로 클라이언트가 사용 하 여 문서 인스턴스를 만들 수 있도록 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다. `CApplication`문서 클래스의 인스턴스를 만드는 COM 인터페이스 중 하나에서 메서드를 제공 하는 CoClass를입니다. 얼마나 쉬운지 보여 줍니다 아래 코드를 사용 하 여 문서 클래스의 인스턴스를 만듭니다는 `CreateInstance` 에서 상속 된 멤버는 `CComCoClass` 기본 클래스입니다.  
   
- [!code-cpp[NVC_ATL_COM #11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
 ##  <a name="error"></a>CComCoClass::Error  
  이 정적 함수를 설정 된 `IErrorInfo` 인터페이스를 클라이언트에 게 오류 정보를 제공 합니다.  
@@ -196,7 +180,7 @@ static HRESULT Error(
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다. 자세한 내용은 설명을 참조하세요.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출할 `Error`, 개체가 구현 해야 합니다는 `ISupportErrorInfo Interface` 인터페이스입니다.  
   
  경우는 `hRes` 다음 매개 변수는 0이 아니면 `Error` 의 값을 반환 `hRes`합니다. 경우 `hRes` 가 0 인 처음 4 개 버전의 `Error` 반환 `DISP_E_EXCEPTION`합니다. 매크로의 결과 반환 하는 마지막 두 버전 **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**합니다.  
@@ -224,7 +208,7 @@ static LPCTSTR WINAPI GetObjectDescription();
 ### <a name="remarks"></a>설명  
  기본 구현은 반환 **NULL**합니다. 이 메서드를 재정의할 수 있습니다는 [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description) 매크로입니다. 예:  
   
- [!code-cpp[NVC_ATL_COM #12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
+ [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
   
  `GetObjectDescription`호출한 **IComponentRegistrar::GetComponents**합니다. **IComponentRegistrar** 등록 하 고 개별 구성 요소 DLL의 등록을 취소할 수 있는 자동화 인터페이스입니다. ATL 프로젝트 마법사를 구성 요소 등록자 개체를 만들 경우 마법사는 자동으로 구현 된 **IComponentRegistrar** 인터페이스입니다. **IComponentRegistrar** Microsoft Transaction Server에서 주로 사용 됩니다.  
   
@@ -232,4 +216,3 @@ static LPCTSTR WINAPI GetObjectDescription();
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)
-

@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16fc5c39255201285de41d927b3c93a32793304
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1aaaaf1c312c41dad6ed3030dac30c7e28b2fce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-of-atl"></a>ATL의 범위
 ATL을 사용 하면 COM 개체, 자동화 서버 및 ActiveX 컨트롤을 쉽게 만들 수 있습니다. ATL에는 여러 가지 기본 COM 인터페이스에 대 한 기본 제공 지원을 제공합니다.  

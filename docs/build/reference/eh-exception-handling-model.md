@@ -23,11 +23,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0f4177ffb0db75eb18c39aa260f0b150da9b6f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eh-exception-handling-model"></a>/EH(예외 처리 모델)
 컴파일러에서 사용하는 예외 처리의 종류, 예외 검사를 최적화할 시기 및 예외로 인해 범위를 벗어나는 C++ 개체를 삭제할지 여부를 지정합니다. **/EH** 를 지정하지 않으면 컴파일러에서 비동기 구조적 예외와 C++ 예외를 모두 catch하지만 비동기 예외로 인해 범위를 벗어나는 C++ 개체를 삭제하지 않습니다.  

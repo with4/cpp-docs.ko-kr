@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d878f0b0c30096e49a317956e083497b31ad2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e85dee126440007ac07d724e5da7b8651a1e167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stock-properties-atl-control-wizard"></a>스톡 속성, ATL 컨트롤 마법사
 마법사의이 페이지는 컨트롤에 대해 지 원하는 스톡 속성을 식별 합니다. 기본적으로 속성이 식별 됩니다.  

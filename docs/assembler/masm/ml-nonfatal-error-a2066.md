@@ -1,34 +1,33 @@
 ---
-title: "ML Nonfatal Error A2066 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2066"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2066"
+title: "ML 심각 하지 않은 오류 A2066 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2066
+dev_langs: C++
+helpviewer_keywords: A2066
 ms.assetid: 58220fdf-fb8f-47fc-a36d-737867361185
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b85402feccf4f85f2f1dd60902bb5759ed723911
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Error A2066
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**호환 되지 않는 CPU 모드 및 세그먼트 크기**  
+# <a name="ml-nonfatal-error-a2066"></a>ML 심각하지 않은 오류 A2066
+**호환 되지 않는 CPU 모드와 세그먼트 크기**  
   
- 세그먼트를 열려면 시도  **USE16**,  **USE32**, 또는  **플랫** 지정 된 cpu 또는 변경 하는 동안 32 비트 세그먼트를 16 비트 CPU에 호환 되지 않는 특성입니다.  
+ 세그먼트를 열려고 시도 **USE16**, **USE32**, 또는 **플랫** 32 비트에서 16 비트 CPU에 변경 또는 지정 된 CPU와 호환 되지 않은 특성 세그먼트입니다.  
   
- 해당  **USE32** 및  **플랫** 특성에서.386 또는 큰 프로세서 지시문으로 시작 해야 합니다.  
+ **USE32** 및 **플랫** 는.386 또는 큰 프로세서 지시문 특성 뒤에 야 합니다.  
   
-## 참고 항목  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>참고 항목  
+ [ML 오류 메시지](../../assembler/masm/ml-error-messages.md)

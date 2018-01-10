@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af5c5c4ee2a794c05443eb3deeccd4792cbfd098
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f63ec5bd9029302192e640e42a3d012df347219d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-connection-points-to-an-object"></a>개체에 연결 지점 추가
 [ATL 자습서](../atl/active-template-library-atl-tutorial.md) 컨트롤을 만드는 방법을 연결 지점에 대 한 지원, 이벤트를 추가 하는 방법 및 연결 지점을 구현 하는 방법을 보여 줍니다. ATL 연결 지점을 구현 하는 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) 클래스입니다.  

@@ -1,46 +1,45 @@
 ---
-title: "ML Fatal Error A1011 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1011"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1011"
+title: "ML 심각한 오류 A1011 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1011
+dev_langs: C++
+helpviewer_keywords: A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 470340e76897394e5b8ecb042ff97562b0c94c2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ML Fatal Error A1011
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**지시문 제어 블록에 있어야 합니다.**  
+# <a name="ml-fatal-error-a1011"></a>ML 심각한 오류 A1011
+**지시어는 제어 블록에 있어야 합니다.**  
   
- 어셈블러 하나 예상 되는 높은 수준의 지시문을 발견 했습니다.  다음 지시문 중 하나가 있습니다.  
+ 어셈블러 여기서 없어야 하는 높은 수준의 지시문을 찾을 수 있습니다. 지시문은 다음 중 하나를 찾을 수 있습니다.  
   
--   [.다른](../../assembler/masm/dot-else.md) 없이  [.IF](../../assembler/masm/dot-if.md)  
+-   [. 다른](../../assembler/masm/dot-else.md) 없이 [합니다. IF](../../assembler/masm/dot-if.md)  
   
--   [.ENDIF](../../assembler/masm/dot-endif.md) 없이  [.IF](../../assembler/masm/dot-if.md)  
+-   [. ENDIF](../../assembler/masm/dot-endif.md) 없이 [합니다. IF](../../assembler/masm/dot-if.md)  
   
--   [.ENDW](../../assembler/masm/dot-endw.md) 없이  [.반면](../../assembler/masm/dot-while.md)  
+-   [. ENDW](../../assembler/masm/dot-endw.md) 없이 [합니다. WHILE](../../assembler/masm/dot-while.md)  
   
--   [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md) 없이  [.반복](../../assembler/masm/dot-repeat.md)  
+-   [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) 없이 [합니다. 반복](../../assembler/masm/dot-repeat.md)  
   
--   [.계속](../../assembler/masm/dot-continue.md) 없이  [.WHILE](../../assembler/masm/dot-while.md) or [.반복](../../assembler/masm/dot-repeat.md)  
+-   [. 계속](../../assembler/masm/dot-continue.md) 없이 [합니다. 반면](../../assembler/masm/dot-while.md) 또는 [합니다. 반복](../../assembler/masm/dot-repeat.md)  
   
--   [.중단](../../assembler/masm/dot-break.md) 없이  [.WHILE](../../assembler/masm/dot-while.md) or [.반복](../../assembler/masm/dot-repeat.md)  
+-   [. 중단](../../assembler/masm/dot-break.md) 없이 [합니다. 반면](../../assembler/masm/dot-while.md) 또는 [합니다. 반복](../../assembler/masm/dot-repeat.md)  
   
--   [.다른](../../assembler/masm/dot-else.md) 다음`.ELSE`  
+-   [. 다른](../../assembler/masm/dot-else.md) 다음`.ELSE`  
   
-## 참고 항목  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>참고 항목  
+ [ML 오류 메시지](../../assembler/masm/ml-error-messages.md)

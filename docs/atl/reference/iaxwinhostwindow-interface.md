@@ -4,54 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
-- No header/ATL::IAxWinHostWindow
-- No header/ATL::AttachControl
-- No header/ATL::CreateControl
-- No header/ATL::CreateControlEx
-- No header/ATL::QueryControl
-- No header/ATL::SetExternalDispatch
-- No header/ATL::SetExternalUIHandler
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinHostWindow interface
+- ATLIFACE/ATL::IAxWinHostWindow
+- ATLIFACE/ATL::AttachControl
+- ATLIFACE/ATL::CreateControl
+- ATLIFACE/ATL::CreateControlEx
+- ATLIFACE/ATL::QueryControl
+- ATLIFACE/ATL::SetExternalDispatch
+- ATLIFACE/ATL::SetExternalUIHandler
+dev_langs: C++
+helpviewer_keywords: IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ecf88a3a6b115088dd605fff2b633bff86fb086a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 791ef9de69646efc82361f8afbed3e17dbe56453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 인터페이스
 이 인터페이스는 컨트롤 및 해당 호스트 개체를 조작 하기 위한 메서드를 제공 합니다.  
   
 > [!IMPORTANT]
->  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,7 +55,7 @@ interface IAxWinHostWindow : IUnknown
 |[SetExternalDispatch](#setexternaldispatch)|설정 하는 외부 `IDispatch` 인터페이스입니다.|  
 |[SetExternalUIHandler](#setexternaluihandler)|설정 하는 외부 `IDocHostUIHandlerDispatch` 인터페이스입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 인터페이스는 ATL의 ActiveX 컨트롤 호스팅 개체에 의해 노출 됩니다. 만들기 및/또는 컨트롤 호스팅된 컨트롤에서 인터페이스를 가져올 수 또는 웹 브라우저를 호스트 하는 경우 외부 dispinterface 또는 사용에 대 한 UI 처리기를 설정 하려면 호스트 개체에 연결 하려면이 인터페이스에서 메서드를 호출 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -165,7 +148,7 @@ STDMETHOD(CreateControlEx)(
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  와 달리는 `CreateControl` 메서드를 `CreateControlEx` 새로 생성된 된 컨트롤에 대 한 인터페이스 포인터를 수신 및 컨트롤에 의해 실행 되는 이벤트를 수신할 이벤트 싱크를 설정할 수 있습니다.  
   
  사용 허가 받은 ActiveX 컨트롤을 만들려면 참조 [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)합니다.  
@@ -217,14 +200,13 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수에 대 한 호스트의 사이트를 쿼리 하는 컨트롤 (예: 웹 브라우저 컨트롤)에서 사용 하 여 `IDocHostUIHandlerDispatch` 인터페이스입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [IAxWinAmbientDispatch 인터페이스](../../atl/reference/iaxwinambientdispatch-interface.md)   
  [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-
 
 
 

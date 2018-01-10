@@ -14,18 +14,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a4095ae7cccf33110e4f530c533256aba009aa6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbd1b955ae8ed3caf4f67dbcb9aa71419eb620c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-and-atl"></a>이벤트 처리 및 ATL
 이 섹션에서는 ATL.를 사용 하 여 이벤트 싱크 하는 방법을 보여 줍니다. COM 이벤트 처리 원칙과 ATL. 제공한 지원을 사용 하 여 이벤트 싱크의 세부 사항 설명  
   
  이벤트를 발생 하 고 해당 연결 지점을 구현 하는 방법에 대 한 내용은 읽을 [ATL 연결 지점](../atl/atl-connection-points.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [이벤트 처리 원리](../atl/event-handling-principles.md)  
  모든 이벤트 처리에 공통 되는 단계를 설명합니다.  
   

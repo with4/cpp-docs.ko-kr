@@ -1,54 +1,56 @@
 ---
 title: "ATL 컬렉션 및 열거자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "컬렉션 인터페이스"
-  - "컬렉션, ATL 클래스"
-  - "열거자 인터페이스"
-  - "열거자, ATL 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- enumerator interfaces
+- collections, ATL classes
+- enumerators, ATL classes
+- collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52b74f51733947ca46c0ddb1039f92ce7f69e670
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ATL 컬렉션 및 열거자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A `collection` \(원시 데이터 또는 다른 개체\) 데이터 항목의 그룹을 액세스할 수 있는 인터페이스를 제공 하는 COM 개체입니다.  그룹 개체에 액세스를 제공 하 라고에 대 한 표준을 따르는 인터페이스는  *컬렉션 인터페이스*.  
+# <a name="atl-collections-and-enumerators"></a>ATL 컬렉션 및 열거자
+A `collection` (원시 데이터 또는 기타 개체) 데이터 항목의 그룹에 대 한 액세스를 허용 하는 인터페이스를 제공 하는 COM 개체입니다. 개체의 그룹에 대 한 액세스를 제공 하 라고에 대 한 표준을 따르는 인터페이스는 *컬렉션 인터페이스*합니다.  
   
- 최소한 컬렉션 인터페이스를 제공 해야는  **수** 컬렉션의 항목 개수를 반환 하는 속성은  **항목** 인덱스를 기준으로 컬렉션에서 항목을 반환 하는 속성 a `_NewEnum` 컬렉션에 대 한 열거자를 반환 하는 속성.  컬렉션 인터페이스를 선택적으로 제공할 수 있습니다  **추가** 및  **제거** 항목을 컬렉션에서 삭제 또는 삽입 될 수 있도록 하는 메서드 a  **일반** 모든 항목을 제거 하는 방법.  
+ 여기에 최소한 컬렉션 인터페이스를 제공 해야는 **Count** 속성 컬렉션에서 항목의 수를 반환 하는 **항목** 인덱스를 기반으로 컬렉션에서 항목을 반환 하는 속성 및 `_NewEnum` 컬렉션에 대 한 열거자를 반환 하는 속성입니다. 컬렉션 인터페이스를 제공할 수 필요에 따라 **추가** 및 **제거** 에 삽입 또는 삭제 컬렉션에서 항목을 허용 하도록 메서드 및 **지우기** 제거 하는 메서드 모든 항목입니다.  
   
- `enumerator` 컬렉션에 있는 항목을 반복에 대 한 인터페이스를 제공 하는 COM 개체입니다.  열거자 인터페이스에 필요한 네 개의 메서드를 통해 컬렉션의 요소를 직렬 액세스를 제공 합니다: `Next`,  **건너뛰기**,  **재설정**, 및 `Clone`.  
+ `enumerator` 컬렉션에서 항목을 반복 하는 인터페이스를 제공 하는 COM 개체입니다. 4 개의 필요한 메서드를 통해 컬렉션의 요소에 대 한 직렬 액세스를 제공 하는 열거자 인터페이스: `Next`, **Skip**, **재설정**, 및 `Clone`합니다.  
   
- 전형적인 \(하지만 완전히 가상의\)에 대 한 읽기에서 열거자 인터페이스에 자세히 알아볼 수  [IEnumXXXX](https://msdn.microsoft.com/en-us/library/ms680089.aspx) 인터페이스.  
+ 읽어 전형적인 (않음 완전히 가상의)에 대 한 자세한 내용은 열거자 인터페이스에 대 한 [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) 인터페이스입니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ATL 컬렉션 및 열거자 클래스](../atl/atl-collection-and-enumerator-classes.md)  
- 간단 하 게 설명 하 고 연결 하는 데 도움이 되는 ATL 클래스에 컬렉션 및 열거자 구현 제공 합니다.  
+ 간략하게 설명 하 고 컬렉션 및 열거자를 구현 하는 데 도움이 되는 ATL 클래스에 대 한 링크를 제공 합니다.  
   
- [컬렉션 및 열거자 인터페이스 디자인 원칙](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
- 각 인터페이스 형식은 다른 디자인 원리에 설명 합니다.  
+ [컬렉션 및 열거자 인터페이스에 대한 디자인 원칙](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+ 각 유형의 인터페이스 뒤에 있는 다른 디자인 원칙을 설명 합니다.  
   
- [STL 기반 컬렉션을 구현](../atl/implementing-an-stl-based-collection.md)  
- 표준 템플릿 라이브러리 STL 기반 컬렉션의 구현을 통해 안내 확장된 예입니다.  
+ [C++ 표준 라이브러리 기반 컬렉션 구현](../atl/implementing-an-stl-based-collection.md)  
+ C + + 표준 라이브러리 기반 컬렉션의 구현 안내 하는 확장된 예제입니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 액티브 템플릿 라이브러리를 사용 하 여 프로그래밍 하는 방법에 개념 항목에 대 한 링크를 제공 합니다.  
+ 액티브 템플릿 라이브러리를 사용하여 프로그래밍하는 방법에 대한 개념 항목의 링크를 제공합니다.  
   
- [ATLCollections 샘플](../top/visual-cpp-samples.md)  
- 사용 하는 방법을 보여 주는 샘플 `ICollectionOnSTLImpl` 및 `CComEnumOnSTL`, 및 사용자 지정 복사 정책 클래스의 구현입니다.  
+ [ATLCollections 샘플](../visual-cpp-samples.md)  
+ 사용을 보여 주는 샘플 `ICollectionOnSTLImpl` 및 `CComEnumOnSTL`, 및 사용자 지정 복사본 정책 클래스의 구현입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [개념](../atl/active-template-library-atl-concepts.md)
+

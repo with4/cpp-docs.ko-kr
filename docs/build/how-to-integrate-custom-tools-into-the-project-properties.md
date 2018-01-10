@@ -15,18 +15,19 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 128b19c1175fb5f39599a9ccaeae66d1fc53fdab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a762fc573953bcfb09180b9b830b761448d87a0d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>방법: 사용자 지정 도구를 프로젝트 속성에 통합
 Visual Studio를 사용자 지정 도구 옵션을 추가할 수 있습니다 **속성 페이지** 기본 XML 스키마 파일을 만들어 창.  
   
  **구성 속성** 의 섹션은 **속성 페이지** 이라고 하는 설정 그룹 창에 표시 됩니다 *규칙*합니다. 모든 규칙에는 도구 또는 기능 그룹에 대 한 설정을 포함합니다. 예를 들어는 **링커** 규칙 링커 도구에 대 한 설정을 포함 합니다. 규칙의 설정을 분할할 수 있습니다 *범주*합니다.  
   
- 이 문서는 속성은 Visual Studio가 시작 될 때 로드 되도록 사용자 지정 도구에 대 한 속성을 포함 하는 디렉터리 설정에에서는 파일을 만드는 방법에 설명 합니다. 파일을 수정 하는 방법에 대 한 정보를 참조 하십시오. [플랫폼 확장성 2 부](http://go.microsoft.com/fwlink/?LinkID=191489) Visual Studio 프로젝트 팀 블로그.  
+ 이 문서는 속성은 Visual Studio가 시작 될 때 로드 되도록 사용자 지정 도구에 대 한 속성을 포함 하는 디렉터리 설정에에서는 파일을 만드는 방법에 설명 합니다. 파일을 수정 하는 방법에 대 한 정보를 참조 하십시오. [플랫폼 확장성 2 부](http://go.microsoft.com/fwlink/p/?linkid=191489) Visual Studio 프로젝트 팀 블로그.  
   
 ### <a name="to-add-or-change-project-properties"></a>추가 하거나 프로젝트 속성을 변경 하려면  
   

@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 150007a260ff62850361bcd43775e49590bf8106
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c24ef3c7374cc38eb7114d8b3f41627cf1fbe2e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="real8"></a>REAL8
 할당 및 각각에 대 한 이중 정밀도 (8 바이트) 부동 소수점 숫자를 선택적으로 초기화 *이니셜라이저*합니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b0572f4d83cfc6b098f290cda53592dbe4aa54b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d13eebbe96ba57c82e3bf1c360b0cb471a6bd975
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-services"></a>ATL 서비스
 ATL COM 개체를 만들려면 서비스에서 실행 되도록 ATL 프로젝트 마법사에서 서버 옵션의 목록에서 서비스 (EXE)를 선택 합니다. 파생 된 클래스 다음 만들어집니다 `CAtlServiceModuleT` 은 서비스 구현에 있습니다.  
