@@ -41,11 +41,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2763bdf1c3efd4571b6bfbe68b26ef46c941aed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28e35d5f2eb2f07cd1b02fa8b1edc3f41b2c2174
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 콘솔에서 문자열을 가져옵니다. 이러한 버전의 [_cgets 및 _cgetws](../../c-runtime-library/cgets-cgetws.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 향상된 보안 기능이 포함되어 있습니다.  
@@ -95,18 +96,18 @@ errno_t _cgetws_s(
   
 |`buffer`|`numberOfElements`|`pSizeRead`|반환|`buffer`의 내용|  
 |--------------|------------------------|-----------------|------------|--------------------------|  
-|`NULL`|any|any|`EINVAL`|해당 없음|  
-|`NULL` 아님|0|모두|`EINVAL`|수정 안 됨|  
-|`NULL` 아님|모두|`NULL`|`EINVAL`|빈 문자열|  
+|`NULL`|any|any|`EINVAL`|N/A|  
+|`NULL` 아님|0|any|`EINVAL`|수정 안 됨|  
+|`NULL` 아님|any|`NULL`|`EINVAL`|빈 문자열|  
   
 ## <a name="remarks"></a>설명  
  `_cgets_s` 및 `_cgetws_s`는 콘솔에서 문자열을 읽고 null 종결자를 사용하여 문자열을 `buffer`에 복사합니다. `_cgetws_s`는 함수의 와이드 문자 버전이며, 문자 크기가 아니라 이러한 두 함수의 동작이 동일합니다. 읽을 수 있는 문자열의 최대 크기는 `numberOfElements` 매개 변수로 전달됩니다. 이 크기는 종료 null에 대한 추가 문자를 포함해야 합니다. 읽은 실제 문자 수는 `pSizeRead`에 배치됩니다.  
   
  작업 중이나 매개 변수의 유효성을 검사할 때 오류가 발생하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `errno`는 `EINVAL`로 설정되고 `EINVAL`이 반환됩니다.  
   
- C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 보다 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없어지고 보안 수준이 낮은 기존 함수를 보안 수준이 높은 최신 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 보다 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없어지고 보안 수준이 낮은 기존 함수를 보안 수준이 높은 최신 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -114,7 +115,7 @@ errno_t _cgetws_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_cgets_s`|\<conio.h>|  
 |`_cgetws_s`|\<conio.h> 또는 \<wchar.h>|  

@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 367fcdae26b66cce06fd6086a21d3212c7ac17ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-operators--and--gt"></a>멤버 액세스 연산자:. 매개 변수와-&gt;
 ## <a name="syntax"></a>구문  
@@ -46,9 +47,9 @@ postfix-expression -> name
   
 1.  첫 번째 형태에서 *후 위 식* 구조체, 클래스 또는 공용 구조체 형식의 값을 나타내는 및 *이름* 지정된 구조체, 공용 구조체 또는 클래스의 멤버 이름을 지정 합니다. 작업의 값은의 *이름* 경우 l-value는 *후 위 식* l-value는 합니다.  
   
-2.  두 번째 형태에서 *후 위 식* 구조체, 공용 구조체 또는 클래스에 대 한 포인터를 나타내는 및 *이름* 지정된 구조체, 공용 구조체 또는 클래스의 멤버 이름을 지정 합니다. 값은 *이름* 이며 l-value입니다. **->**  연산자는 포인터를 역참조 합니다. 따라서 *e*  **->**  `member` 및 **(\****e***)**.`member` (여기서 *e* 포인터 나타냅니다) 동일한 결과 생성 (경우는 제외 연산자  **->**  또는  **\***  는 오버 로드).  
+2.  두 번째 형태에서 *후 위 식* 구조체, 공용 구조체 또는 클래스에 대 한 포인터를 나타내는 및 *이름* 지정된 구조체, 공용 구조체 또는 클래스의 멤버 이름을 지정 합니다. 값은 *이름* 이며 l-value입니다.  **->**  연산자는 포인터를 역참조 합니다. 따라서 *e*  **->**  `member` 및 **(\****e***)**.`member` (여기서 *e* 포인터 나타냅니다) 동일한 결과 생성 (경우는 제외 연산자  **->**  또는  **\***  는 오버 로드).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 두 가지 형태의 멤버 액세스 연산자를 보여 줍니다.  
   
 ```  

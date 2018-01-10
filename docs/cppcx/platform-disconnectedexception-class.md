@@ -1,49 +1,51 @@
 ---
-title: "Platform::DisconnectedException 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::DisconnectedException"
-  - "Platform/Platform::DisconnectedException::DisconnectedException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::DisconnectedException"
+title: "Platform:: disconnectedexception 클래스 | Microsoft Docs"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::DisconnectedException
+- VCCORLIB/Platform::DisconnectedException::DisconnectedException
+dev_langs: C++
+helpviewer_keywords: Platform::DisconnectedException
 ms.assetid: c25e0d64-5bff-4c21-88e5-c4ec2776fa7f
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e9ce20c019c022ed62c2be888617b387315731b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::DisconnectedException 클래스
+# <a name="platformdisconnectedexception-class"></a>Platform::DisconnectedException 클래스
 COM 프록시 개체가 더 이상 존재하지 않는 COM 서버를 참조하려고 할 때 throw됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 public ref class DisconnectedException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-## 주의  
- 클래스 A가 별도의 프로세스에 있는 다른 클래스\(클래스 B\)를 참조하는 경우 클래스 A에서 프록시 개체는 클래스 B를 보유하는 out\-of\-process COM 서버와 통신해야 합니다. 때때로 서버의 메모리가 부족해지지만 클래스 A가 그 사실을 알지 못할 수 있습니다. 이 경우 RPC\_E\_DISCONNECTED 예외가 throw되고 Platform::DisconnectedException으로 변환됩니다. 이러한 경우가 발생하는 한 가지 시나리오는 이벤트 소스가 자신에게 전달되는 대리자를 호출하지만 대리자가 이벤트를 구독하고 난 후 특정 시점에 제거된 경우입니다. 이 경우 이벤트 소스는 해당 대리자를 호출 목록에서 제거합니다.  
+### <a name="remarks"></a>설명  
+ 클래스 A가 별도의 프로세스에 있는 다른 클래스(클래스 B)를 참조하는 경우 클래스 A에서 프록시 개체는 클래스 B를 보유하는 out-of-process COM 서버와 통신해야 합니다. 때때로 서버의 메모리가 부족해지지만 클래스 A가 그 사실을 알지 못할 수 있습니다. 이 경우 RPC_E_DISCONNECTED 예외가 throw되고 Platform::DisconnectedException으로 변환됩니다. 이러한 경우가 발생하는 한 가지 시나리오는 이벤트 소스가 자신에게 전달되는 대리자를 호출하지만 대리자가 이벤트를 구독하고 난 후 특정 시점에 제거된 경우입니다. 이 경우 이벤트 소스는 해당 대리자를 호출 목록에서 제거합니다.  
   
  자세한 내용은 [COMException](../cppcx/platform-comexception-class.md) 클래스를 참조하세요.  
   
-## 요구 사항  
- **지원되는 최소 클라이언트:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>요구 사항  
+ **지원 되는 최소 클라이언트:** Windows 8  
   
- **지원되는 최소 서버:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **지원 되는 최소 서버:** Windows Server 2012  
   
  **네임스페이스:** Platform  
   
  **메타데이터:** platform.winmd  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Platform::COMException 클래스](../cppcx/platform-comexception-class.md)

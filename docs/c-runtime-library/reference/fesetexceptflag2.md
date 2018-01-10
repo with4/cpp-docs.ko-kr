@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fesetexceptflag
+apiname: fesetexceptflag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,35 +26,19 @@ apitype: DLLExport
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
-dev_langs:
-- C++
-helpviewer_keywords:
-- fesetexceptflag function
+dev_langs: C++
+helpviewer_keywords: fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b23c60333bee887366e11f6da29a73e940a36561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 현재 부동 소수점 환경에서 지정된 부동 소수점 상태 플래그를 설정합니다.  
@@ -93,7 +76,7 @@ int fesetexceptflag(
   
  `excepts` 인수는 0, 지원되는 부동 소수점 예외 매크로 중 하나 또는 매크로 중 두 개 이상의 비트 OR일 수 있습니다. 기타 인수 값의 결과는 정의 해제됩니다.  
   
- 이 함수를 사용하려면 호출 전에 `#pragma fenv_access(on)` 지시문을 사용하여 액세스를 방지할 수 있는 부동 소수점 최적화를 꺼야 합니다. 자세한 내용은 [fenv_access](../../preprocessor/fenv-access.md)를 참조하세요.  
+ 이 함수를 사용하려면 호출 전에 `#pragma fenv_access(on)` 지시문을 사용하여 액세스를 방지할 수 있는 부동 소수점 최적화를 꺼야 합니다. 자세한 내용은 [fenv_access](../../preprocessor/fenv-access.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   

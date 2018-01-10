@@ -40,11 +40,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90546e2eb63c2b5dd9eb16a0ececfee2629562cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19aa979cb69bdbf8d74acbd96291fac9af78c845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 클래스
 이 클래스는 `IBindStatusCallback` 인터페이스를 구현합니다.  
@@ -486,7 +487,7 @@ HRESULT StartAsyncDownload(
   
  다음 예제에서 (에서 가져온는 [비동기](../../visual-cpp-samples.md) 샘플)를 함수 `OnData` 텍스트 상자에 수신된 된 데이터를 씁니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#87](../../atl/codesnippet/cpp/cbindstatuscallback-class_2.h)]  
   
 ## <a name="see-also"></a>참고 항목  

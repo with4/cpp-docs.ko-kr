@@ -16,16 +16,19 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 365f54435c92ff464a0906cd719bd33ce28d61b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ccad9809ac7586fb94f3997e812cb5ca7245b17f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-enumerate-files-in-a-directory-ccli"></a>방법: 디렉터리의 파일 열거(C++/CLI)
 다음 코드 예제에서는 디렉터리의 파일 목록을 검색 하는 방법을 보여 줍니다. 또한 하위 디렉터리 열거 됩니다. 다음 코드 예제에서는 <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> 및 <xref:System.IO.Directory.GetDirectories%2A> C:\Windows 디렉터리의 내용을 표시 하는 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // enum_files.cpp  

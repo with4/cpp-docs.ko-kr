@@ -1,32 +1,33 @@
 ---
-title: "deque::insert(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert 멤버[STL/CLR]"
+title: 'deque:: insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: a3b86c46-e6a8-42d0-b642-5a8f05ddd68c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 79e03fe5db67162134f5267fc54fab74e4e6b20f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::insert(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adds elements at a specified position.  
+# <a name="dequeinsert-stlclr"></a>deque::insert(STL/CLR)
+지정된 된 위치에 요소를 추가합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator insert(iterator where, value_type val);  
@@ -37,41 +38,41 @@ void insert(iterator where,
     System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 매개 변수  
- count  
- Number of elements to insert.  
+#### <a name="parameters"></a>매개 변수  
+ `count`  
+ 삽입할 요소의 수입니다.  
   
- first  
- Beginning of range to insert.  
+ `first`  
+ 삽입할 범위의의 시작입니다.  
   
- last  
- End of range to insert.  
+ `last`  
+ 삽입할 범위의 끝입니다.  
   
- right  
- Enumeration to insert.  
+ `right`  
+ 삽입 하는 열거형입니다.  
   
- val  
- Value of the element to insert.  
+ `val`  
+ 삽입할 요소의 값입니다.  
   
- where  
- Where in container to insert before.  
+ `where`  
+ 앞에 삽입 하는 컨테이너의 위치입니다.  
   
-## 설명  
- Each of the member functions inserts, before the element pointed to by `where` in the controlled sequence, a sequence specified by the remaining operands.  
+## <a name="remarks"></a>설명  
+ 가 가리키는 요소 앞의 삽입, 함수는 멤버의 각 `where` 제어 된 시퀀스의 시퀀스는 나머지 피연산자에서 지정 합니다.  
   
- The first member function inserts an element with value `val` and returns an iterator that designates the newly inserted element.  You use it to insert a single element before a place designated by an iterator.  
+ 첫 번째 멤버 함수는 값을 가진 요소를 삽입 `val` 새로 삽입된 된 요소를 지정 하는 반복기를 반환 합니다. 반복기에서 지정 하는 장소 하기 전에 단일 요소를 삽입 하려면 사용 합니다.  
   
- 두 번째 멤버 함수는  `val` 의  `count`  요소의 반복을 삽입합니다.  You use it to insert zero or more contiguous elements which are all copies of the same value.  
+ 두 번째 멤버 함수는 `val` 값의 `count` 요소 반복을 삽입합니다. 같은 값의 모든 복사본 인 0 개 이상의 연속 요소를 삽입 하려면 사용 합니다.  
   
- If `InIt` is an integer type, the third member function behaves the same as `insert(``where``, (size_type)``first``, (value_type)``last``)`.  Otherwise, it inserts the sequence `[``first``,` `last``)`.  You use it to insert zero or more contiguous elements copied from another sequence.  
+ `InIt`가 정수 형식이면 세 번째 멤버 함수는 `insert(where, (size_type)first, (value_type)last)`와 동일하게 동작합니다. 시퀀스를 삽입, 그렇지 않으면 [`first`, `last`). 다른 시퀀스에서 복사 된 0 개 이상의 연속 요소를 삽입 하려면 사용 합니다.  
   
- The fourth member function inserts the sequence designated by the `right`.  You use it to insert a sequence described by an enumerator.  
+ 로 지정 된 시퀀스를 삽입 하는 네 번째 멤버 함수는 `right`합니다. 열거자에서 설명 하는 시퀀스를 삽입 하려면 사용 합니다.  
   
- When inserting a single element, the number of element copies is linear in the number of elements between the insertion point and the nearer end of the sequence. \(When inserting one or more elements at either end of the sequence, no element copies occur.\) If `InIt` is an input iterator, the third member function effectively performs a single insertion for each element in the sequence.  Otherwise, when inserting `N` elements, the number of element copies is linear in `N` plus the number of elements between the insertion point and the nearer end of the sequence.  
+ 단일 요소를 삽입할 경우에 요소 복사본의 수는 삽입 지점와 떨어진 끝 시퀀스의 요소 수에 비례 합니다. (시퀀스의 끝에 하나 이상의 요소를 삽입할 경우 요소 복사본이 발생 합니다.) 경우 `InIt` 입력 반복기, 세 번째 멤버 함수는 시퀀스의 각 요소에 대 한 단일 삽입을 효과적으로 수행 합니다. 삽입할 때 그렇지 `N` 요소, 요소 복사본 수에 비례는 `N` 삽입 포인터와 떨어진 시퀀스의 끝 간 요소 수를 더한 값입니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cliext_deque_insert.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -121,17 +122,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**insert\(begin\(\)\+1, L'x'\) \= x**  
- **a x b c**  
- **y y**  
- **y y a x b**  
- **a x b c y y a x b**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+ a b c  
+insert(begin()+1, L'x') = x  
+ a x b c  
+ y y  
+ y y a x b  
+ a x b c y y a x b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::assign](../dotnet/deque-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::assign(STL/CLR)](../dotnet/deque-assign-stl-clr.md)

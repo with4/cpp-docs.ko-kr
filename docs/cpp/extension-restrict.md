@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __restrict_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __restrict keyword [C++]
+f1_keywords: __restrict_cpp
+dev_langs: C++
+helpviewer_keywords: __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c0ed875845323d4125a97ca004bb50385f59c53d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f2c21872c5d6fe6000038a3a2f4fe39451b566dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restrict"></a>__restrict
 마찬가지로 **__declspec ( [제한](../cpp/restrict.md) )** 한정자는 `__restrict` 키워드 기호가 현재 범위에 별칭이 지정 되지 않음을 나타냅니다. `__restrict` 키워드와 `__declspec ( restrict )` 한정자의 차이점은 다음과 같습니다.  
@@ -42,7 +38,7 @@ ms.lasthandoff: 09/25/2017
 > [!NOTE]
 >  포함 된 변수에 사용 하는 경우는 [휘발성](../cpp/volatile-cpp.md) 키워드를 `volatile` 우선 적용 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // __restrict_keyword.c  

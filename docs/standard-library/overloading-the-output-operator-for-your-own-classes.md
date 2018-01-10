@@ -16,16 +16,17 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d86b9192e955e0aa42fcb7de5d472c94ffa443d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3a1a1ee84cece4babf673acd4858796adc53bc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>고유 클래스에 대해 &lt;&lt; 연산자 오버로드
 출력 스트림은 표준 형식에 대해 삽입(`<<`) 연산자를 사용합니다. 고유 클래스에 대해 `<<` 연산자를 오버로드할 수도 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `write` 함수 예제에서는 `Date` 구조체의 사용법을 살펴보았습니다. 이 예제의 C++ 클래스에 사용하기에 적합한 항목은 날짜입니다. 데이터 구성원(월, 일, 년)가 뷰에서 숨겨지기 때문입니다. 출력 스트림은 이러한 구조체를 표시하기 위한 논리적 대상이라 할 수 있습니다. 아래 코드에서는 `cout` 개체를 사용하여 날짜를 표시합니다.  
   
 ```  

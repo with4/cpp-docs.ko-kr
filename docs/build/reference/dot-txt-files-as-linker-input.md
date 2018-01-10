@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9ce3d795816de7eced1927523aa57965f43603aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61112fc5c701c7fa027d98b873332fd00df3dfad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="txt-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Txt 파일
 LINK에서는 다양 한 텍스트 파일을 추가 입력으로 사용 합니다. [명령 파일](../../build/reference/link-command-files.md) 지정자 (@) 및 [기준 주소](../../build/reference/base-base-address.md) (/ 기본) [/DEF](../../build/reference/def-specify-module-definition-file.md), 및 [/순서](../../build/reference/order-put-functions-in-order.md) 옵션은 모두 텍스트 파일을 지정 합니다. 이러한 파일은 모든 확장, 뿐 아니라.txt 있을 수 있습니다.  

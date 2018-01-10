@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b1b361bf01e067a1fe76829aa4217e87b107915
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-x64-calling-conventions"></a>x64 호출 규칙 개요
 두 가지 중요 한 차이점 x86 및 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 는 64 비트 주소 지정 기능 및 범용 레지스터 16 64 비트의 단순 집합입니다. 확장 된 레지스터 집합, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 사용 하 여는 [__fastcall](../cpp/fastcall.md) 호출 규칙 및 RISC 기반 예외 처리 모델입니다. `__fastcall` 규칙 처음 네 개의 인수가 및 스택 프레임에 대 한 레지스터를 사용 하 여 추가 인수를 전달 합니다.  

@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e72618467666a98bdda5867b23d9ef2ce37319f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14047c8143d982bc6b26bef6e46679341d9abd36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 현재 작업 디렉터리를 가져옵니다.  
@@ -76,7 +77,7 @@ wchar_t *_wgetcwd(
 ## <a name="return-value"></a>반환 값  
  `buffer`에 대한 포인터를 반환합니다. `NULL` 반환 값은 오류를 나타내고 `errno` 는 `ENOMEM`으로 설정되어 `maxlen` 바이트를 할당할 메모리가 부족함을 나타내거나( `NULL` 인수가 `buffer`로 지정된 경우) `ERANGE`로 설정되어 경로가 `maxlen` 자보다 긺을 나타냅니다. `maxlen`이 0보다 작거나 같으면 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다.  
   
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
   
 ## <a name="remarks"></a>설명  
  `_getcwd` 함수는 기본 드라이브에 대한 현재 작업 디렉터리의 전체 경로를 가져오고 `buffer`에 저장합니다. 정수 인수 `maxlen` 은 경로의 최대 길이를 지정합니다. 경로의 길이(null 종결 문자 포함)가 `maxlen`자입니다. `buffer` 인수는 `NULL`일 수 있으며, `maxlen` 크기 이상의 버퍼(필요한 경우에만)가 `malloc`를 사용하여 자동으로 할당되어 경로를 저장합니다. 나중에 이 버퍼는 `free` 를 호출하고 `_getcwd` 반환 값(할당된 버퍼에 대한 포인터)으로 전달하여 해제할 수 있습니다.  
@@ -87,7 +88,7 @@ wchar_t *_wgetcwd(
   
  `_DEBUG` 및 `_CRTDBG_MAP_ALLOC` 가 정의된 경우 `_getcwd` 및 `_wgetcwd` 호출이 `_getcwd_dbg` 및 `_wgetcwd_dbg` 호출로 대체되어 메모리 할당 디버깅을 허용합니다. 자세한 내용은 [_getcwd_dbg, _wgetcwd_dbg](../../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)를 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -95,14 +96,14 @@ wchar_t *_wgetcwd(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_getcwd`|\<direct.h>|  
 |`_wgetcwd`|\<direct.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_getcwd.c  

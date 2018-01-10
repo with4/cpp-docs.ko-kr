@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6fc90c44fde4db119a8aa6dab097e9a7bd1c7f0f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fda95e4517d2717a89310a8e49a0c5b337feebcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-window-traits"></a>창 특성 이해
 창 특성 클래스는 ATL 창 개체 만들기에 사용 되는 스타일을 표준화 하기 위한 간단한 방법을 제공 합니다. 창 특성에서 템플릿 매개 변수로 허용 됩니다 [CWindowImpl](../atl/reference/cwindowimpl-class.md) 및 기본 창 스타일 클래스 수준에서 제공 하는 방법으로 다른 ATL 창 클래스입니다.  

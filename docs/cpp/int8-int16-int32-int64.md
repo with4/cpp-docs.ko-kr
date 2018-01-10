@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54850e2ded4029c27804c5aec2c52d7f5eae7119
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 957e2483d61855c442780440ccf87441f00cb1c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -46,7 +47,7 @@ __int64 nHuge;      // Declares 64-bit integer
   
  `__int8`, `__int16` 및 `__int32` 형식은 동일한 크기를 가진 ANSI 형식에 대한 동의어이고, 여러 플랫폼에서 동일하게 동작하는 이식 가능한 코드 작성에 유용합니다. `__int8` 데이터 형식이 형식과 동의어 `char`, `__int16` 형식과 동의어 **짧은**, 및 `__int32` 형식과 동의어 `int`합니다. `__int64` 형식이 형식과 동의어 `long long`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플은 하 한 __int*xx* 매개 변수로 승격 된다는 `int`:  
   
 ```  

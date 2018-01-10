@@ -4,29 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __LIBID_cpp
 - __uuidof_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 172ed545eb2c46db8df12e3e12a2296a5f172a1f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c5d83f99b40e6eb897212fbcfb03c01b4f6b55e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uuidof-operator"></a>__uuidof 연산자
 **Microsoft 전용**  
@@ -56,7 +54,7 @@ ms.lasthandoff: 09/25/2017
 > [!NOTE]
 >  디버그 빌드에서 `__uuidof`는 항상 동적으로(런타임으로) 개체를 초기화합니다. 릴리스 빌드에서 `__uuidof`는 정적으로(컴파일 시) 개체를 초기화할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  ole32.lib를 사용하여 컴파일된 다음 코드는 module 특성을 사용하여 만든 라이브러리 블록의 uuid를 표시합니다.  
   
 ```  

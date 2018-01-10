@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30527a705d880e96620edfee5f7ad7897f9371a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 개체의 기본 사항
 다음 그림에서는 클래스 및 ATL COM 개체를 정의 하는 데 사용 되는 인터페이스 간의 관계를 보여 줍니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) 구현 하는 **ISupportErrorInfo** 인터페이스 오류 정보를 호출 체인 올바르게 전파 될 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [CComObjectRootEx 구현](../atl/implementing-ccomobjectrootex.md)  
  예제에서는 COM 맵 엔트리를 구현 하기 위한 표시 `CComObjectRootEx`합니다.  
   

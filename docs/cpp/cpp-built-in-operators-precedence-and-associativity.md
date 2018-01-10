@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C + + 기본 제공 연산자, 우선 순위 및 결합성
 
@@ -58,12 +59,12 @@ C++ 언어는 모든 C 연산자를 포함하며 몇 가지 새로운 연산자�
 |[전위 감소](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[1의 보수](../cpp/one-s-complement-operator-tilde.md)|[~](../cpp/one-s-complement-operator-tilde.md)|
 |[논리 not](../cpp/logical-negation-operator-exclpt.md)|[!](../cpp/logical-negation-operator-exclpt.md)|
-|[단항 부정 연산자](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
+|[단항 부정](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[단항 더하기](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[주소](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[간접 참조](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[개체 만들기](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
-|[개체 삭제](../cpp/delete-operator-cpp.md)|[삭제](../cpp/delete-operator-cpp.md)|
+|[개체 삭제](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[캐스트](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**왼쪽에서 오른쪽 결합성 그룹 4 우선 순위**|
 |[-멤버 포인터 (개체 또는 포인터)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; -> 또는 &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
@@ -72,16 +73,16 @@ C++ 언어는 모든 C 연산자를 포함하며 몇 가지 새로운 연산자�
 |[나누기](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[모듈러스](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**왼쪽에서 오른쪽 결합성 그룹 6 우선 순위**|
-|[추가](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
+|[더하기](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[빼기](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
 |**왼쪽에서 오른쪽 결합성 그룹 7 우선 순위**|
 |[왼쪽된 시프트](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[<<](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
 |[오른쪽 시프트](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[>>](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
 |**왼쪽에서 오른쪽 결합성 그룹 8 우선 순위**|
-|[미만](../cpp/relational-operators-equal-and-equal.md)|[<](../cpp/relational-operators-equal-and-equal.md)|
+|[보다 작음](../cpp/relational-operators-equal-and-equal.md)|[<](../cpp/relational-operators-equal-and-equal.md)|
 |[보다 큼](../cpp/relational-operators-equal-and-equal.md)|[>](../cpp/relational-operators-equal-and-equal.md)|
-|[보다 작거나 같음](../cpp/relational-operators-equal-and-equal.md)|[<=](../cpp/relational-operators-equal-and-equal.md)|
-|[보다 크거나 같음](../cpp/relational-operators-equal-and-equal.md)|[>=](../cpp/relational-operators-equal-and-equal.md)|
+|[작거나 같음](../cpp/relational-operators-equal-and-equal.md)|[<=](../cpp/relational-operators-equal-and-equal.md)|
+|[크거나 같음](../cpp/relational-operators-equal-and-equal.md)|[>=](../cpp/relational-operators-equal-and-equal.md)|
 |**왼쪽에서 오른쪽 결합성 그룹 9 우선 순위**|
 |[같음](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
 |[같지 않음](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|

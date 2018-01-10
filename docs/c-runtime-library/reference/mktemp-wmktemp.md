@@ -44,11 +44,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ade54aef0413e6db897b00f7bfa2e78c428366a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac2fd19254cce03b7cd7efc4324f5dc03c608b7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 고유한 파일 이름을 만듭니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_mktemp_s, _wmktemp_s](../../c-runtime-library/reference/mktemp-s-wmktemp-s.md)를 참조하세요.  
@@ -82,7 +83,7 @@ wchar_t *_wmktemp(
 ## <a name="remarks"></a>설명  
  `_mktemp` 함수는 `template` 인수를 수정하여 고유한 파일 이름을 만듭니다. `_mktemp`는 런타임 시스템에서 최근에 사용 중인 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하면서 자동으로 멀티바이트 문자열 인수를 적절하게 처리합니다. `_wmktemp`는 `_mktemp`의 와이드 문자 버전이고, `_wmktemp`의 인수와 반환 값은 와이드 문자 문자열입니다. `_wmktemp` 및 `_mktemp`는 동일하게 작동합니다. 단, `_wmktemp`는 멀티바이트 문자열을 처리하지 않습니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -118,18 +119,18 @@ fna12345
   
  오류 시 `errno`가 설정됩니다. `template`의 형식이 잘못된 경우(예: X의 개수가 6개보다 적은 경우) `errno`가 `EINVAL`로 설정됩니다. 사용 가능한 파일 이름 26개 모두 이미 존재하기 때문에 `_mktemp`에서 고유한 이름을 만들 수 없는 경우 `_mktemp`는 템플릿을 빈 문자열로 설정하고 `EEXIST`를 반환합니다.  
   
- C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_mktemp`|\<io.h>|  
 |`_wmktemp`|\<io.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_mktemp.c  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1db1d851e72bcce893f5e49b83b95ebf3366f15a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2ad7fc8e6d9b7fa261d7811086ef02738c77e49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="decorated-names"></a>데코레이팅된 이름
 C 및 C++ 프로그램의 함수, 데이터 및 개체는 내부적으로 데코레이트된 이름으로 표시됩니다. A *데코 레이트 된 이름* 되는 개체, 데이터 또는 함수 정의 컴파일하는 동안 컴파일러에서 생성 된 인코딩된 문자열입니다. 호출 규칙, 형식, 함수 매개 변수 및 기타 정보를 이름과 함께 기록합니다. 또한 다음 이라고 알려집니다이 이름 장식은 *이름 관리*링커가 올바른 함수 찾기 도와 실행 파일을 링크할 때 개체입니다.  

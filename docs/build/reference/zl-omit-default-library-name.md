@@ -1,54 +1,55 @@
 ---
-title: "/Zl(기본 라이브러리 이름 생략) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zi"
-  - "VC.Project.VCCLCompilerTool.OmitDefaultLibName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zl 컴파일러 옵션[C++]"
-  - "기본 라이브러리, 이름 생략"
-  - "기본 라이브러리 이름 생략 컴파일러 옵션"
-  - "ZI 컴파일러 옵션"
-  - "-Zl 컴파일러 옵션[C++]"
+title: "-Zl (기본 라이브러리 이름 생략) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /zi
+- VC.Project.VCCLCompilerTool.OmitDefaultLibName
+dev_langs: C++
+helpviewer_keywords:
+- -Zl compiler option [C++]
+- ZI compiler option
+- Omit Default Library Name compiler option
+- /Zl compiler option [C++]
+- default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2b77b9c1033be1f6144d92b6051118ca85aaaf20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /Zl(기본 라이브러리 이름 생략)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-.obj 파일에서 기본 C 런타임 라이브러리 이름을 생략합니다.  기본적으로 컴파일러는 라이브러리의 이름을 .obj 파일에 넣어 링커를 정확한 라이브러리로 안내합니다.  
+# <a name="zl-omit-default-library-name"></a>/Zl(기본 라이브러리 이름 생략)
+.Obj 파일에서 기본 C 런타임 라이브러리 이름을 생략합니다. 기본적으로 컴파일러는 올바른 라이브러리로 링커를 보내기 위해 라이브러리 이름을 .obj 파일에 넣습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /Zl  
 ```  
   
-## 설명  
- 기본 라이브러리에 대한 자세한 내용은 [런타임 라이브러리 사용](../../build/reference/md-mt-ld-use-run-time-library.md)을 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 기본 라이브러리에 대 한 자세한 내용은 참조 하십시오. [런타임 라이브러리 사용](../../build/reference/md-mt-ld-use-run-time-library.md)합니다.  
   
- **\/Zl**을 사용하면 라이브러리에 넣으려는 .obj 파일을 컴파일할 수 있습니다.  라이브러리 이름을 생략하는 경우 하나의 .obj 파일에서 보면 절약되는 공간은 얼마 되지 않지만, 많은 개체 모듈을 가지고 있는 라이브러리에서 보면 절약되는 총 공간의 양은 상당합니다.  
+ 사용할 수 있습니다 **/Zl** 라이브러리에 배치 하려는.obj 파일을 컴파일할 수 있습니다. 라이브러리 이름 생략 소량의 단일.obj 파일에 대 한 공간을 저장 하지만 저장 된 총 공간은 많은 개체 모듈을 포함 하는 라이브러리에 중요 한입니다.  
   
- 이 옵션은 고급 옵션입니다.  이 옵션을 설정하면 응용 프로그램에 필요한 특정 C 런타임 라이브러리 지원이 제거될 수 있습니다. 따라서 응용 프로그램에 이 지원이 필요한 경우 링크 타임 오류가 발생할 수 있습니다.  이 옵션을 사용하려면 필요한 구성 요소를 다른 방식으로 제공해야 합니다.  
+ 이 옵션은 고급 옵션입니다. 응용 프로그램이이 지원에 따라 링크 타임 오류가 발생 응용 프로그램에 필요할 수 있는 특정 C 런타임 라이브러리 지원을 제거이 옵션을 설정 합니다. 이 옵션을 사용 하는 경우 다른 방법으로의 필수 구성 요소를 제공 해야 합니다.  
   
- 링커가 모든 .obj 파일에서 라이브러리 참조를 무시하도록 [\/NODEFAULTLIB\(라이브러리 무시\)](../../build/reference/nodefaultlib-ignore-libraries.md) 사용을 지시할 수 있습니다.  
+ 사용 하 여 [/NODEFAULTLIB (라이브러리 무시)](../../build/reference/nodefaultlib-ignore-libraries.md)합니다. 모든.obj 파일에 라이브러리 참조를 무시 하도록 링커에 지시 합니다.  
   
- 자세한 내용은 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)을 참조하십시오.  
+ 자세한 내용은 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)을 참조하세요.  
   
- **\/Zl**을 사용하여 컴파일하면 `_VC_NODEFAULTLIB`가 정의됩니다.  예를 들면 다음과 같습니다.  
+ 로 컴파일할 때 **/Zl**, `_VC_NODEFAULTLIB` 정의 됩니다.  예:  
   
 ```  
 // vc_nodefaultlib.cpp  
@@ -62,20 +63,20 @@ void Test() {
 }  
 ```  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
+2.  **C/C++** 폴더를 클릭합니다.  
   
-3.  **고급** 속성 페이지를 클릭합니다.  
+3.  클릭는 **고급** 속성 페이지.  
   
-4.  **기본 라이브러리 이름 생략** 속성을 수정합니다.  
+4.  수정 된 **기본 라이브러리 이름 생략** 속성입니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

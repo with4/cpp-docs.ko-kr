@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1033ca0767eb84b896e641db4c5ba3b296a7fae1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a0fe8083cfc131f7e8b1f2133943a1c91f614a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
 식을 계산하고 결과가 `false`이면 진단 메시지를 출력하고 프로그램을 중단합니다.  
@@ -98,13 +99,13 @@ void _wassert(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`assert`, `_wassert`|\<assert.h>|  
   
  `_assert` 함수의 서명은 헤더 파일에서 사용할 수 없습니다. `_wassert` 함수의 서명은 `NDEBUG` 매크로가 정의되지 않았을 때만 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램에서 `analyze_string` 함수는 `assert` 매크로를 사용하여 문자열 및 길이와 관련된 여러 조건을 테스트합니다. 조건 중 하나라도 실패하면 프로그램이 실패의 원인을 나타내는 메시지를 출력합니다.  
   
 ```  

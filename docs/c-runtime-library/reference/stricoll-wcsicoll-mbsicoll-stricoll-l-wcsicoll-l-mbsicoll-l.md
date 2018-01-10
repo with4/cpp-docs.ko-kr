@@ -62,11 +62,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9508eacf1e361f3e87353f7ceb6dc00270982212
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88464cd717b11591b22f50d3df50f72ebb5fee02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 로캘별 정보를 사용하여 문자열을 비교합니다.  
@@ -128,7 +129,7 @@ int _mbsicoll_l(
 ## <a name="remarks"></a>설명  
  이러한 각 함수는 현재 사용 중인 코드 페이지에 따라 `string1`과 `string2`를 대/소문자를 구분하지 않고 비교합니다. 현재 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 문자열 비교 시 중요한 경우에만 이러한 함수를 사용해야 합니다.  
   
- `_stricmp`는 `_stricmp` 비교가 `LC_CTYPE`의 영향을 받는다는 점에서 `_stricoll`과 다릅니다. 반면 `_stricoll` 비교는 로캘의 `LC_CTYPE` 및 `LC_COLLATE` 범주에 따라 수행됩니다. `LC_COLLATE` 범주에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [로캘 범주](../../c-runtime-library/locale-categories.md)를 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_stricmp`는 `_stricmp` 비교가 `LC_CTYPE`의 영향을 받는다는 점에서 `_stricoll`과 다릅니다. 반면 `_stricoll` 비교는 로캘의 `LC_CTYPE` 및 `LC_COLLATE` 범주에 따라 수행됩니다. `LC_COLLATE` 범주에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [로캘 범주](../../c-runtime-library/locale-categories.md)를 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  이러한 모든 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `string1` 또는 `string2`가 `NULL` 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `_NLSCMPERROR`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
@@ -140,7 +141,7 @@ int _mbsicoll_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_stricoll`, `_stricoll_l`|\<string.h>|  
 |`_wcsicoll`, `_wcsicoll_l`|\<wchar.h>, \<string.h>|  

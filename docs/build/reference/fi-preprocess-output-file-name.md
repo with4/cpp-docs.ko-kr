@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a6499e3720cf6d61fa124c2fc5a43ce2ff30f249
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bc3076a529984358aed16902f509ceb01423f9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (출력 파일 이름 전처리)
 대상 출력 파일의 이름을 지정는 [/P (파일 전처리)](../../build/reference/p-preprocess-to-a-file.md) 컴파일러 옵션 전처리 된 출력을 씁니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  에 대 한 경로 지정 하는 경우는 `pathname` 매개 변수를 소스 파일의 기본 이름 전처리 된 출력 파일의 기본 이름으로 사용 됩니다. `pathname` 매개 변수는 특정 파일 이름 확장명이 필요 하지 않습니다. 그러나 ".i"의 확장 파일 이름 확장명을 지정 하지 않을 경우 사용 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령줄 PROGRAM.cpp 전처리, 주석을 유지, 추가 [#line](../../preprocessor/hash-line-directive-c-cpp.md) 지시문 MYPROCESS.i 파일에 결과 기록 합니다.  
   
 ```  

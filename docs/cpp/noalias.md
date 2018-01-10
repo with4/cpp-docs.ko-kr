@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- noalias_cpp
-dev_langs:
-- C++
+f1_keywords: noalias_cpp
+dev_langs: C++
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: cb8d3425b08984f31954df3a7cf7771e85301a5b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 92e96ce931ea5bc44e03a5803865daa66f960e92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="noalias"></a>noalias
 
@@ -35,7 +32,7 @@ ms.lasthandoff: 09/25/2017
 
 함수에 `noalias`로 주석이 지정된 경우 최적화 프로그램은 매개 변수 자체와 포인터 매개 변수의 1차 간접 참조만 함수 내에서 참조되거나 수정된다고 가정할 수 있습니다. 표시되는 전역 상태는 컴파일 범위 외부에서 정의되거나 참조되지 않는 모든 데이터의 집합이며 해당 주소는 사용되지 않습니다. 컴파일 범위는 모든 소스 파일 ([/LTCG (링크 타임 코드 생성)](../build/reference/ltcg-link-time-code-generation.md) 작성) 또는 단일 소스 파일 (비-**/LTCG** 빌드).
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 샘플 코드에서는 `__declspec(restrict)` 및 `__declspec(noalias)`의 사용을 보여 줍니다. 일반적으로에서 반환 된 메모리 `malloc` 은 `restrict` CRT 헤더가 적절 하 게 데코레이팅되기 때문에 있습니다.
 

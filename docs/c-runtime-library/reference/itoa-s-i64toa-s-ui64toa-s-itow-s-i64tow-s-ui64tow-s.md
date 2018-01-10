@@ -69,11 +69,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac2b681b605c4485ed87cecebb51afa6261cafff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 정수를 문자열로 변환합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 강화된 [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)의 버전입니다.  
@@ -151,10 +152,10 @@ errno_t _itow_s(
   
 |값|buffer|sizeInCharacters|radix|반환|  
 |-----------|------------|----------------------|-----------|------------|  
-|모두|`NULL`|모두|모두|`EINVAL`|  
-|모두|any|<=0|any|`EINVAL`|  
-|모두|any|<= length of the result string required|모두|`EINVAL`|  
-|모두|모두|any|`radix` < 2 또는 `radix` > 36|`EINVAL`|  
+|any|`NULL`|any|any|`EINVAL`|  
+|any|any|<=0|any|`EINVAL`|  
+|any|any|<= length of the result string required|any|`EINVAL`|  
+|any|any|any|`radix` < 2 또는 `radix` > 36|`EINVAL`|  
   
  **보안 문제**  
   
@@ -163,11 +164,11 @@ errno_t _itow_s(
 ## <a name="remarks"></a>설명  
  매개 변수 및 반환 값을 제외하고 `_itoa_s` 함수는 보안 수준이 낮은 해당 버전과 동일하게 동작합니다.  
   
- C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
  이러한 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -177,7 +178,7 @@ errno_t _itow_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_itoa_s`|\<stdlib.h>|  
 |`_i64toa_s`|\<stdlib.h>|  
@@ -186,9 +187,9 @@ errno_t _itow_s(
 |`_i64tow_s`|\<stdlib.h> 또는 \<wchar.h>|  
 |`_ui64tow_s`|\<stdlib.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_itoa_s.c  

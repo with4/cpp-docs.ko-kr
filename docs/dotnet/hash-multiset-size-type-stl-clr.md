@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::size_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type 멤버[STL/CLR]"
+title: 'hash_multiset:: size_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: cf4e2a5f-6d46-4ade-9bb4-407e12f310b3
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23056cd9e9bb24c5b3ffe57052f90657dcf63d55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::size_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of a signed distance between two element.  
+# <a name="hashmultisetsizetype-stlclr"></a>hash_multiset::size_type(STL/CLR)
+두 요소 사이의 부호가 있는 거리의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef int size_type;  
 ```  
   
-## 설명  
- The type describes a non\-negative element count.  
+## <a name="remarks"></a>설명  
+ 형식은은 음수가 아닌 요소 수를 설명 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_multiset_size_type.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::empty](../dotnet/hash-multiset-empty-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::empty(STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)

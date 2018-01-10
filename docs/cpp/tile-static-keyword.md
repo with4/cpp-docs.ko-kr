@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1259fb7731e188bdb5a02a7a573b5eddd6a47df5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad47c85a8815d8a1a77f15788c3b312267cb055b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tilestatic-keyword"></a>tile_static 키워드
 `tile_static` 키워드는 스레드의 타일에 있는 모든 스레드에서 액세스할 수 있는 변수를 선언하는 데 사용됩니다. 변수의 수명은 실행이 선언 지점에 도달할 때 시작되고 커널 함수가 반환될 때 종료됩니다. 타일 사용에 대 한 자세한 내용은 참조 하십시오. [를 사용 하 여 타일](../parallel/amp/using-tiles.md)합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
 -   `tile_static` 변수가 `parallel_for_each`에 대한 비타일 호출이 루트에 있는 호출 그래프에서 선언된 경우 경고가 생성되고 변수의 동작이 정의되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `tile_static` 변수를 사용하여 타일의 여러 스레드에서 데이터를 누적하는 방법을 보여 줍니다.  
   
 ```cpp  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,41 +14,25 @@ f1_keywords:
 - ATLCOM/ATL::IPersistPropertyBagImpl::InitNew
 - ATLCOM/ATL::IPersistPropertyBagImpl::Load
 - ATLCOM/ATL::IPersistPropertyBagImpl::Save
-dev_langs:
-- C++
-helpviewer_keywords:
-- IPersistPropertyBagImpl class
+dev_langs: C++
+helpviewer_keywords: IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3783d505c989b11205104cd70a9c440aa6f645f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 클래스
 이 클래스는 구현 **IUnknown** 하 고 클라이언트에서 제공한 속성 모음에 해당 속성을 저장 하는 개체를 허용 합니다.  
   
 > [!IMPORTANT]
->  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -73,7 +56,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |[IPersistPropertyBagImpl::Load](#load)|클라이언트에서 제공한 propertybag에서 해당 개체의 속성을 로드합니다.|  
 |[IPersistPropertyBagImpl::Save](#save)|클라이언트에서 제공한 속성 모음에 해당 개체의 속성을 저장합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) 인터페이스는 클라이언트에서 제공한 propertybag에 해당 속성을 저장 하는 개체를 사용 합니다. 클래스 `IPersistPropertyBagImpl` 이 인터페이스의 기본 구현을 제공 하 고 구현 **IUnknown** 디버그에서 장치 정보 덤프를 전송 하 여 빌드합니다.  
   
  **IPersistPropertyBag** 와 함께 작동 [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) 및 [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)합니다. 클라이언트에서 두 번째 인터페이스를 구현 합니다. 통해 `IPropertyBag`, 클라이언트는 저장 및 해당 개체의 개별 속성을 로드 합니다. 통해 **IErrorLog**, 개체와 클라이언트 모두에서 발생 한 오류를 보고할 수 있습니다.  
@@ -95,8 +78,8 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
-### <a name="remarks"></a>주의  
- 참조 [:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>설명  
+ 참조 [:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) in the Windows SDK입니다.  
   
 ##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  새로 만든된 개체를 초기화합니다.  
@@ -108,8 +91,8 @@ STDMETHOD(InitNew)();
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
   
-### <a name="remarks"></a>주의  
- 참조 [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>설명  
+ 참조 [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) in the Windows SDK입니다.  
   
 ##  <a name="load"></a>IPersistPropertyBagImpl::Load  
  클라이언트에서 제공한 propertybag에서 해당 개체의 속성을 로드합니다.  
@@ -121,7 +104,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ### <a name="remarks"></a>설명  
  ATL 개체의 속성 매핑이 두를 사용 하 여이 정보를 검색 합니다.  
   
- 참조 [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ 참조 [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) in the Windows SDK입니다.  
   
 ##  <a name="save"></a>IPersistPropertyBagImpl::Save  
  클라이언트에서 제공한 속성 모음에 해당 개체의 속성을 저장합니다.  
@@ -136,9 +119,8 @@ STDMETHOD(Save)(
 ### <a name="remarks"></a>설명  
  ATL 개체의 속성 매핑이 두를 사용 하 여이 정보를 저장 합니다. 기본적으로이 메서드는 값에 관계 없이 모든 속성을 저장 *fSaveAllProperties*합니다.  
   
- 참조 [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ 참조 [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) in the Windows SDK입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

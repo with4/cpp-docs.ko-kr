@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b7707234d0a1bf8abd37ae6751060ed7c7109fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 093cbd3d2ae101bbc06c45a920f8a2c108eb3bfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-stored-procedures"></a>저장 프로시저 사용
 저장된 프로시저는 실행 가능한 개체는 데이터베이스에 저장 합니다. 저장된 프로시저를 호출 하는 것은 SQL 명령을 호출 하는 것과 비슷합니다. 저장된 프로시저를 사용 하 여 실행 하거나 클라이언트 응용 프로그램에서 문 준비) 하는 것 (대신 데이터 원본에 대해 더 높은 성능, 네트워크 오버 헤드 감소, 및 향상 된 일관성 및 정확도 포함 하는 여러 가지 이점을 제공할 수 있습니다.  

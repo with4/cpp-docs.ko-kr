@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4abb20ba85407e12c71ca83af7dce96eb0f9d751
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39f2a901404a9c2c34dc9147cb4ed51f070396a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 디버그 힙의 현재 상태를 가져오고 응용 프로그램에서 제공한 `_CrtMemState` 구조에 저장합니다(디버그 버전만 해당).  
@@ -61,15 +62,15 @@ void _CrtMemCheckpoint(
   
  힙 상태 함수 및 `_CrtMemState` 구조에 대한 자세한 내용은 [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요. 기본 힙의 디버그 버전에서 메모리 블록을 할당, 초기화 및 관리하는 방법에 대한 자세한 내용은 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요.  
   
- `state`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 실행하도록 허용된 경우 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)가 `EINVAL`로 설정되고 함수가 반환됩니다.  
+ 검사점 생성 시 `state` 가 `NULL`인 경우 [Parameter Validation](../../c-runtime-library/parameter-validation.md)를 참조하세요. 계속 실행하도록 허용된 경우 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)가 `EINVAL`로 설정되고 함수가 반환됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_CrtMemCheckpoint`|\<crtdbg.h>, \<errno.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
  **라이브러리:** 디버그 버전의 UCRT만 해당합니다.  
   

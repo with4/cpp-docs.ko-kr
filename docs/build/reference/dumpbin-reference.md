@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75c1d7edac27b73bbf6fc357c5e60259f45f5cf3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce7fa9e9f559c79b4a0a99d2b444138ddb6bf56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN 참조
 Microsoft COFF Binary File Dumper (DUMPBIN 합니다. EXE) 파일 형식 COFF (공용 개체) 이진 파일에 대 한 정보를 표시합니다. COFF 개체 파일, COFF 개체, 실행 파일 및 동적 연결 라이브러리 (Dll)의 표준 라이브러리를 검사 하려면 DUMPBIN을 사용할 수 있습니다.  

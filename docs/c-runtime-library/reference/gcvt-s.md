@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ba9f1a7a77c0f9d23423906c18b05ace5b20ec8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvts"></a>_gcvt_s
 부동 소수점 값을 문자열로 변환합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 향상된 [_gcvt](../../c-runtime-library/reference/gcvt.md) 버전입니다.  
@@ -85,9 +86,9 @@ errno_t _gcvt_s(
   
 |`buffer`|`sizeInBytes`|`value`|`digits`|반환|`buffer`의 값|  
 |--------------|-------------------|-------------|--------------|------------|-----------------------|  
-|`NULL`|모두|모두|모두|`EINVAL`|수정되지 않습니다.|  
-|`NULL` 아님(유효한 메모리를 가리킴)|0|any|모두|`EINVAL`|수정되지 않습니다.|  
-|`NULL` 아님(유효한 메모리를 가리킴)|any|모두|>= `sizeInBytes`|`EINVAL`|수정되지 않습니다.|  
+|`NULL`|any|any|any|`EINVAL`|수정되지 않습니다.|  
+|`NULL` 아님(유효한 메모리를 가리킴)|0|any|any|`EINVAL`|수정되지 않습니다.|  
+|`NULL` 아님(유효한 메모리를 가리킴)|any|any|>= `sizeInBytes`|`EINVAL`|수정되지 않습니다.|  
   
  **보안 문제**  
   
@@ -96,19 +97,19 @@ errno_t _gcvt_s(
 ## <a name="remarks"></a>설명  
  `_gcvt_s` 함수는 부동 소수점 `value`를 문자열(소수점 및 가능한 부호 바이트를 포함함)로 변환하고 문자열을 `buffer`에 저장합니다. `buffer`는 변환된 값과 자동으로 추가되는 null 종결 문자를 포함할 만큼 충분히 커야 합니다. 모든 부동 소수점 값에는 `_CVTBUFSIZE` 길이의 버퍼로 충분합니다. `digits` + 1의 버퍼 크기를 사용할 경우 함수는 버퍼 끝을 덮어쓰므로 이 작업에 충분한 버퍼를 제공해야 합니다. `_gcvt_s`는 `digits` 숫자를 10진수 형식으로 생성하려고 합니다. 생성할 수 없는 경우 `digits` 숫자를 지수 형식으로 생성합니다. 변환 시 뒤에 오는 0을 표시하지 않을 수 있습니다.  
   
- C++에서는 템플릿 오버로드로 인해 이 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
  이 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_gcvt_s.c  

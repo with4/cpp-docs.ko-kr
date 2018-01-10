@@ -41,11 +41,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 57e628419bbf074418d053c755269618f480743e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c65ed3f0829370c0fe7a9f9e6a12a57688a5ca1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 파일 포인터의 위치를 가져옵니다.  
@@ -70,20 +71,20 @@ __int64 _telli64(
   
  반환 값-1l이 오류를 나타냅니다. `handle`이 잘못된 파일 설명자인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `errno`를 `EBADF`로 설정하고 -1L을 반환합니다.  
   
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
+ 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  `_tell` 함수는 `handle` 인수와 관련된 파일 포인터(있는 경우)의 현재 위치를 가져옵니다. 위치는 파일의 시작 부분에서 바이트 수로 표현됩니다. `_telli64` 함수에 대해 이 값은 64비트 정수로 표현됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_tell`, `_telli64`|\<io.h>|  
   
  호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_tell.c  

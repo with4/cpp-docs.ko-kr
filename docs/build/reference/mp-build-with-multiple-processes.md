@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4cb43b7c3535fd5e09d08e1e488cf9ea3f39631a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ad914a9aa5e7207d1b39e4917a965d755564848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP(여러 프로세스로 빌드)
 **/MP** 옵션은 명령줄에서 소스 파일을 컴파일하는 데 걸리는 총 시간을 줄일 수 있습니다. **/MP** 옵션을 사용하면 컴파일러는 별도의 프로세스에서 각각 하나 이상의 자체 복사본을 만듭니다. 그런 다음 이러한 복사본이 소스 파일을 동시에 컴파일합니다. 따라서 소스 파일을 빌드하는 총 시간을 크게 줄일 수 있습니다.  

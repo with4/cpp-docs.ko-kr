@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb74d68bb8974f820ac09a0c56930d835a3fe7f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54f237a629c4af9ea7ae30aeca21c03786abcd97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>CComObject, CComAggObject, 및 CComPolyObject 구현
 템플릿 클래스 [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), 및 [CComPolyObject](../atl/reference/ccompolyobject-class.md) 상속 체인의 가장 많이 파생 된 클래스는 항상 합니다. 책임의 메서드 중 일부를 처리 하는 **IUnknown**: `QueryInterface`, `AddRef`, 및 **릴리스**합니다. 또한 `CComAggObject` 및 `CComPolyObject` (집계 개체에 대해 사용) 하는 경우 특별 한 참조 횟수를 제공 하 고 `QueryInterface` 알 수 없는 내부에 필요한 의미 체계입니다.  

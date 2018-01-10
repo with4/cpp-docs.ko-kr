@@ -40,16 +40,17 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e349f9656a6ae0d7f1ae78abbee13ca4bed5f52d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d8453209a92b8f7485a9e7f575fb8810196d27fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>C 및 C++에 대한 Microsoft 확장명
 Visual C++는 다음과 같이 ANSI C 및 ANSI C++ 표준을 확장합니다.  
   
-## <a name="keywords"></a>키워드가  
+## <a name="keywords"></a>키워드  
  여러 키워드가 추가되었습니다. 목록에서 [키워드](../../cpp/keywords-cpp.md), 두 개의 선행 밑줄이 있는 키워드는 Visual c + + 확장 합니다.  
   
 ## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>멤버 클래스 또는 정의의 정적 const 정수 계열 (enum)를 벗어났습니다  

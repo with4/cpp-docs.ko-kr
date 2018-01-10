@@ -31,11 +31,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 61d750fce6e31923636b4eb8c0181bf405b7be39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1be3f7141a8483aa7b0d43195b08506691e34fe3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="free"></a>free
 메모리 블록을 할당 해제하거나 해제합니다.  
@@ -71,9 +72,9 @@ void free(
 |--------------|---------------------|  
 |`free`|\<stdlib.h> 및 \<malloc.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [malloc](../../c-runtime-library/reference/malloc.md)의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

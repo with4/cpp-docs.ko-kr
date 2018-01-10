@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ed251e1b937d14c42d105d98c2771ed0a2d6172
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a15294e1a63b16124d8907639fbd2e6bb705f1aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X(표준 포함 경로 무시)
 컴파일러를 PATH 및 INCLUDE 환경 변수에 지정 된 디렉터리에서 포함 파일을 검색할 수 없습니다.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/24/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령에서 `/X` PATH 및 INCLUDE 환경 변수에서 지정한 위치를 무시 하도록 컴파일러에 지시 하 고 `/I` 을 검색할 디렉터리를 지정 포함 파일:  
   
 ```  

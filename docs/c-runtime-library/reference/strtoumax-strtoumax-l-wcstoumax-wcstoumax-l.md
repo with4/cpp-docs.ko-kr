@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - _wcstoumax_l
 - _tcstoumax_l
 - strtoumax
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strtoumax_l function
 - conversion functions
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - _wcstoumax_l function
 - strtoumax function
 ms.assetid: 566769f9-495b-4508-b9c6-02217a578897
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3519fa6a5f1decc4bad385d4204188585afa1630
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 16ac81afeec1fece3f6a5039835b9f950a8b6768
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoumax-strtoumaxl-wcstoumax-wcstoumaxl"></a>strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 문자열을 지원되는 가장 큰 부호 없는 정수 형식의 정수값으로 변환합니다.  
@@ -111,14 +95,14 @@ uintmax_t _wcstoumax_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `strtoumax`은 변환된 값(있는 경우)을 반환하거나 오버플로 시에는 `UINTMAX_MAX`를 반환합니다. 변환을 수행할 수 없으면 `strtoumax`은 0을 반환합니다. `wcstoumax`은 `strtoumax`과 동일한 값을 반환합니다. 두 함수에서 모두 오버플로 또는 언더플로가 발생하면 `errno`는 `ERANGE`로 설정됩니다.  
+ `strtoumax`은 변환된 값(있는 경우)을 반환하거나 오버플로 시에는 `UINTMAX_MAX`를 반환합니다. 변환을 수행할 수 없으면 `strtoumax`은 0을 반환합니다. `wcstoumax`는 `strtoumax`와 동일한 값을 반환합니다. 두 함수에서 모두 오버플로 또는 언더플로가 발생하면 `errno`는 `ERANGE`로 설정됩니다.  
   
  반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  이러한 각 함수는 입력 문자열 `nptr`을 `uintmax_t` 정수값으로 변환합니다.  
   
- `strtoumax`는 숫자의 일부분으로 인식할 수 없는 첫 문자에서 문자열 `nptr` 읽기를 중지합니다. 이 문자는 종료 null 문자일 수도 있고 `base`보다 크거나 같은 첫 번째 숫자 문자일 수도 있습니다. 로캘의 `LC_NUMERIC` 범주 설정에 따라 `nptr`의 기수 문자 인식이 결정됩니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `strtoumax` 및 `wcstoumax`는 현재 로캘을 사용합니다. `_strtoumax_l` 및 `_wcstoumax_l`은 전달된 로캘을 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `strtoumax`는 숫자의 일부분으로 인식할 수 없는 첫 문자에서 문자열 `nptr` 읽기를 중지합니다. 이 문자는 종료 null 문자일 수도 있고 `base`보다 크거나 같은 첫 번째 숫자 문자일 수도 있습니다. 로캘의 `LC_NUMERIC` 범주 설정에 따라 `nptr`의 기수 문자 인식이 결정됩니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `strtoumax` 및 `wcstoumax`는 현재 로캘을 사용합니다. `_strtoumax_l` 및 `_wcstoumax_l`은 전달된 로캘을 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `endptr`이 `NULL`이 아니면 검색을 중지한 문자에 대한 포인터가 `endptr`에서 가리키는 위치에 저장됩니다. 올바른 숫자를 찾을 수 없거나 잘못된 밑을 지정하여 변환을 수행할 수 없는 경우에는 `nptr`의 값이 `endptr`에서 가리키는 위치에 저장됩니다.  
   
@@ -139,7 +123,7 @@ uintmax_t _wcstoumax_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`strtoumax`|\<stdlib.h>|  
 |`wcstoumax`|\<stdlib.h> 또는 \<wchar.h>|  
@@ -148,7 +132,7 @@ uintmax_t _wcstoumax_l(
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

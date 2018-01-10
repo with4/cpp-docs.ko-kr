@@ -1,34 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 4) C4211 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4211"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4211"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4211
+dev_langs: C++
+helpviewer_keywords: C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8967efb23a534f4d9d46b8e61f0045c4d1c5c3b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 4) C4211
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-비표준 확장을 사용했습니다 : extern에서 static으로 재정의되었습니다.  
+# <a name="compiler-warning-level-4-c4211"></a>컴파일러 경고(수준 4) C4211
+비표준 확장이 사용 됨: extern에서 static로 재정의 되었습니다.  
   
- 기본Microsoft 확장\(\/Ze\)을 사용하면 `extern` 식별자를 **static**으로 재정의할 수 있습니다.  
+ 기본 Microsoft 확장 (/Ze)을 재정의할 수 있습니다는 `extern` 식별자로 **정적**합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // C4211.c  
@@ -41,7 +40,8 @@ int main()
 }  
 ```  
   
- 이러한 재정의는 ANSI 규격\([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\)에서는 사용할 수 없습니다.  
+ 이러한 재정의 ANSI 규격 사용할 수 없습니다 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
   
-## 참고 항목  
- [\(NOTINBUILD\)Static Storage\-Class Specifiers](http://msdn.microsoft.com/ko-kr/3ba9289a-a412-4a17-b319-ceb2c087df48)
+## <a name="see-also"></a>참고 항목  
+
+

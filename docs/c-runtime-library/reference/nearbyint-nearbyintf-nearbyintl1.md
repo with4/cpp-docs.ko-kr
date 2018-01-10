@@ -43,11 +43,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 205381e315cf703a9fded4b24812a32c4aef4a9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d95f92d15dcf4b8baf84b762b994bdb52930346d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 지정된 부동 소수점 값을 정수로 반올림하고 부동 소수점 형식으로 해당 값을 반환합니다.  
@@ -86,8 +87,8 @@ long double nearbyintl(
   
 |문제|반환|  
 |-----------|------------|  
-|`x` = ±INFINITY|수정되지 않은 ±INFINITY|  
-|`x` = ±0|수정되지 않은 ±0|  
+|`x`±INFINITY =|수정 되지 않은 ±INFINITY|  
+|`x` = ±0|수정 되지 않은 ±0|  
 |`x` = NaN|NaN|  
   
  오류는 [_matherr](../../c-runtime-library/reference/matherr.md)을 통해 보고되지 않습니다. 구체적으로 설명하자면, 이 함수는 FE_INEXACT 예외를 보고하지 않습니다.  

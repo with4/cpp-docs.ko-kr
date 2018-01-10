@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fdb0ee73b6ee289a97e3debfb7b4b5427ba003f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 환경 변수를 생성, 수정 또는 제거합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)를 참조하세요.  
@@ -78,7 +79,7 @@ int _wputenv(
 ## <a name="remarks"></a>설명  
  `_putenv` 함수는 새 환경 변수를 추가하거나 기존 환경 변수의 값을 수정합니다. 환경 변수는 프로세스가 실행되는 환경을 정의합니다(예: 프로그램에 연결할 라이브러리의 기본 검색 경로). `_wputenv`은 `_putenv`의 와이드 문자 버전이며, `envstring`에 대한 `_wputenv` 인수는 와이드 문자열입니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -97,14 +98,14 @@ int _wputenv(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_putenv`|\<stdlib.h>|  
 |`_wputenv`|\<stdlib.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `_putenv` 사용 방법에 대한 샘플은 [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

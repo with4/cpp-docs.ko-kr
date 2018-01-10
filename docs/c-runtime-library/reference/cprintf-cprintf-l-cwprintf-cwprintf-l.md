@@ -56,11 +56,12 @@ caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30ad4a6d1ca47e8e1daa9d9d25f49bf91d50d169
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 984cb8fb3c034d19f4d171f756f2336773187976
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 형식을 지정하고 콘솔에 출력합니다. 더 안전한 버전을 사용할 수 있습니다. [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)을 참조하세요.  
@@ -121,14 +122,14 @@ int _cwprintf_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_cprintf`,`_cprintf_l`|\<conio.h>|  
 |`_cwprintf`, `_cwprintf_l`|\<conio.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_cprintf.c  

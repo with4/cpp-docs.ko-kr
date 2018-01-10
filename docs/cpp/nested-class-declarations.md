@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c48ee39a9053e098b67367d0c144fbf6e284b9d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 247be4e212efbe2b8061deed200a8350b87fc7a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nested-class-declarations"></a>중첩 클래스 선언
 클래스는 다른 클래스의 범위 내에서 선언될 수 있습니다. 이러한 클래스를 "중첩 클래스"라고 합니다. 중첩 클래스는 바깥쪽 클래스의 범위 내에 있는 것으로 간주되고 해당 범위 내에서 사용할 수 있습니다. 바로 바깥쪽 범위 이외의 범위에서 중첩 클래스를 참조하려면 정규화된 이름을 사용해야 합니다.  

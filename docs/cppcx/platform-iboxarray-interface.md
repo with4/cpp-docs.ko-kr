@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 74afe390f91227a5ebad2246f9b2ad0f8c87a7de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 421f8517b8a96c40bb44dd959eba90b1bf903113
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 인터페이스
 `IBoxArray` 는 XAML 컨트롤의 요소와 같은 `Platform::Object^` 요소의 컬렉션에 저장되거나 ABI(응용 프로그램 이진 인터페이스)를 통해 전달되는 값 형식의 배열에 대한 래퍼입니다.  

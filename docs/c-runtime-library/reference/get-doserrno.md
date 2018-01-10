@@ -33,11 +33,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67f546afa3059508787c7d3a5295d2b85651f125
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8eff0ac1a97c9a1d48b82601eb0d6dc0bb8bed0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 운영 체제에서 반환된 오류 값이 `errno` 값으로 변환되기 전에 가져옵니다.  
@@ -66,7 +67,7 @@ errno_t _get_doserrno(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_get_doserrno`|\<stdlib.h>, \<cstdlib>(C++)|\<errno.h>, \<cerrno>(C++)|  
   

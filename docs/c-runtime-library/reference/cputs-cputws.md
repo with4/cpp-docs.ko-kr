@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -39,37 +37,22 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: b773a7b9ae2ad6a7af7aa178fa277be2362c2c11
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/28/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1f90b953c8055ac2b6de59d7b41880ea6b6fe133
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 콘솔에 문자열을 배치합니다.  
   
 > [!IMPORTANT]
->  이 API는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -94,7 +77,7 @@ int _cputws(
   
  이 함수는 해당 매개 변수의 유효성을 검사합니다. `str`이 **NULL**인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno`는 `EINVAL`로 설정되고 -1이 반환됩니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -102,7 +85,7 @@ int _cputws(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_cputs`|\<conio.h>|\<errno.h>|  
 |`_cputws`|\<conio.h>|\<errno.h>|  
@@ -112,7 +95,7 @@ int _cputws(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C  
 // crt_cputs.c  

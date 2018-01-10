@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aad327c26c8684804c294fe5eb6b5bf41507f603
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d6a7806183766d96c0d106d9d9e890b046f4563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>방법: 안정형 C++ 프로젝트 만들기(C++/CLI)
 Visual c + + 응용 프로그램 마법사는 확인할 수 있는 프로젝트를 만들지 않습니다 되지만 프로젝트를 확인할 수 있으려면 변환할 수 있습니다. 이 항목에서는 프로젝트 속성을 설정 하 고 확인할 수 있는 응용 프로그램을 생성 하 여 Visual c + + 프로젝트를 변환할 프로젝트 소스 파일을 수정 하는 방법에 설명 합니다.  

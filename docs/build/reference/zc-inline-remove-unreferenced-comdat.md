@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7031a5f7a92a6775718b77ea20a69623ae3066c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c8d14f6055c96f5c9feed16d2ad0b996f0d0b94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline(참조되지 않은 COMDAT 제거)
 COMDAT이거나 내부 링크만 있는 참조되지 않은 함수 또는 데이터를 제거합니다. 때 **/zc: inline** 지정, 컴파일러에 인라인 데이터 또는 인라인 함수를 사용 하는 변환 단위 데이터 또는 함수에 대 한 정의 포함 해야 필요 합니다.  

@@ -1,34 +1,36 @@
 ---
-title: "방법: lock C# 키워드 구현(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock C# 키워드[C++]"
-  - "lock 문"
+title: "방법: lock C# 키워드 구현 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- lock statement
+- lock C# keyword [C++]
 ms.assetid: 436fe544-ffb7-49b9-9798-90794e9974de
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e016a0f481063711cb5daafe45110a1d53b16253
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: lock C# 키워드 구현(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 항목에서는 C\# `lock` 키워드를 Visual C\+\+에서 구현하는 방법을 보여 줍니다.  자세한 내용은 [lock 문](../Topic/lock%20Statement%20\(C%23%20Reference\).md)을 참조하십시오.  
+# <a name="how-to-implement-the-lock-c-keyword-ccli"></a>방법: lock C# 키워드 구현(C++/CLI)
+이 항목에서는 C# 구현 하는 방법을 보여 줍니다. `lock` Visual c + +의 키워드입니다. 
   
- C\+\+ 지원 라이브러리에서 `lock` 클래스를 사용할 수도 있습니다.  자세한 내용은 [동기화\(lock 클래스\)](../dotnet/synchronization-lock-class.md)를 참조하십시오.  
+ 사용할 수도 있습니다는 `lock` c + + 지원 라이브러리에 있는 클래스입니다. 참조 [동기화 (lock 클래스)](../dotnet/synchronization-lock-class.md) 자세한 정보에 대 한 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // CS_lock_in_CPP.cpp  
@@ -65,5 +67,5 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [다른 .NET 언어와의 상호 운용성](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+## <a name="see-also"></a>참고 항목  
+ [다른 .NET 언어와의 상호 운용성(C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

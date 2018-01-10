@@ -1,55 +1,59 @@
 ---
-title: "ODBC: ODBC API 함수 직접 호출 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "API[C++], 호출"
-  - "카탈로그 함수(ODBC)"
-  - "카탈로그 함수(ODBC), 호출"
-  - "직접 ODBC API 호출"
-  - "ODBC[C++], API 함수"
-  - "ODBC[C++], 카탈로그 함수"
-  - "ODBC API 함수[C++]"
-  - "ODBC API 함수[C++], 호출"
-  - "ODBC 클래스[C++], ODBC API와 비교"
+title: "ODBC: ODBC API를 호출 함수를 직접 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC API functions [C++], calling
+- ODBC [C++], catalog functions
+- ODBC API functions [C++]
+- APIs [C++], calling
+- ODBC classes [C++], vs. ODBC API
+- direct ODBC API calls
+- catalog functions (ODBC)
+- catalog functions (ODBC), calling
+- ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 51fde2bb7ea73a2655c0b771dabfe14d2c833fb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ODBC: ODBC API 함수 직접 호출
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-데이터베이스 클래스에서 [데이터 소스](../../data/odbc/data-source-odbc.md)에 제공하는 인터페이스는 ODBC에서 제공하는 것보다 단순합니다.  따라서 클래스에서 ODBC API의 모든 기능을 캡슐화하지 않습니다.  이 클래스에서 지원하지 않는 기능에 대해서는 ODBC API 함수를 직접 호출해야 합니다.  예를 들어 **::SQLColumns**, **::SQLProcedures**, **::SQLTables** 같은 ODBC 카탈로그 함수는 직접 호출되어야 합니다.  
+# <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: ODBC API 함수 직접 호출
+데이터베이스 클래스에서 제공 하는 간단한 인터페이스는 [데이터 소스](../../data/odbc/data-source-odbc.md) 는 ODBC 보다 합니다. 결과적으로 클래스는 모든 ODBC API를 캡슐화 하지 않습니다. 클래스의 기능 외부에 있는 모든 기능에 대 한 ODBC API 함수를 직접 호출 해야 합니다. ODBC 카탈로그 함수를 호출 해야 하는 예를 들어 (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**, 및 기타) 직접 합니다.  
   
 > [!NOTE]
->  ODBC 데이터 소스는 이 항목에서 설명하는 MFC ODBC 클래스뿐 아니라 MFC DAO\(데이터 액세스 개체\) 클래스를 통해서도 액세스할 수 있습니다.  
+>  ODBC 데이터 소스는이 항목에 설명 된 대로 MFC ODBC 클래스를 통해 또는 MFC 데이터 액세스 개체 (DAO) 클래스를 통해 액세스할 수 있습니다.  
   
- ODBC API 함수를 직접 호출하려면 프레임워크를 사용하지 않고 호출할 때와 마찬가지로 아래와 같은 단계를  지정합니다.  
+ 를 직접 ODBC API 함수를 호출 하려면 프레임 워크 없이 호출 된 경우 수행할 동일한 단계를 수행 해야 합니다. 이러한 단계는:  
   
--   호출에서 반환되는 결과를 저장할 저장소를 할당합니다.  
+-   호출에서 반환 된 결과 대 한 저장소를 할당 합니다.  
   
--   함수의 매개 변수 시그니처에 따라 ODBC **HDBC** 또는 **HSTMT** 핸들을 전달합니다.  [AFXGetHENV](../Topic/AfxGetHENV.md) 매크로를 사용하여 ODBC 핸들을 검색합니다.  
+-   ODBC 전달 **HDBC** 또는 **HSTMT** 함수의 매개 변수 시그니처에 따라 처리 합니다. 사용 하 여는 [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) ODBC 핸들을 검색 하는 매크로입니다.  
   
-     직접 할당하고 초기화할 필요 없이 멤버 변수 **CDatabase::m\_hdbc** 및 **CRecordset::m\_hstmt**를 사용할 수 있습니다.  
+     멤버 변수 **CDatabase::m_hdbc** 및 **CRecordset::m_hstmt** 를 사용 하 여 할당 하 고 이러한 직접 초기화할 필요가 없습니다.  
   
--   추가 ODBC 함수를 호출하여 주 호출을 준비하거나 주 호출의 후속 작업을 적절히 처리합니다.  
+-   아마도 준비 하거나 기본 호출을 수행 하는 추가 ODBC 함수를 호출 합니다.  
   
--   사용이 끝난 저장소의 할당을 취소합니다.  
+-   완료 하면 저장소 할당을 취소 합니다.  
   
- 이들 단계에 대한 자세한 내용은 MSDN 설명서에서 [ODBC\(Open Database Connectivity\)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK를 참조하십시오.  
+ 이러한 단계에 대 한 자세한 내용은 참조는 [ODBC Open Database Connectivity ()](https://msdn.microsoft.com/en-us/library/ms710252.aspx) MSDN 설명서에서 SDK입니다.  
   
- 이러한 단계 외에 함수의 반환 값을 확인하고, 프로그램이 비동기 호출이 종료되는 것을 기다리고 있지 않은지 확인하고 기타 작업을 위한 추가 단계가 필요합니다.  이러한 최종 단계는 `AFX_SQL_ASYNC` 및 `AFX_SQL_SYNC` 매크로를 사용하여 간단히 수행할 수 있습니다.  자세한 내용은 MFC 참조의 [매크로 및 전역](../Topic/Macros,%20Global%20Functions,%20and%20Global%20Variables.md)을 참조하십시오.  
+ 이러한 단계 외에 하 고 함수의 반환 값, 프로그램을 완료 하는 비동기 호출에 대 한 기다리고 있지 않으면 추가적인 단계가 필요 합니다. 사용 하 여이 마지막 단계를 단순화할 수 있습니다는 `AFX_SQL_ASYNC` 및 `AFX_SQL_SYNC` 매크로입니다. 자세한 내용은 참조 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md) 에 *MFC 참조*합니다.  
+
   
-## 참고 항목  
- [ODBC 기초](../../data/odbc/odbc-basics.md)
+## <a name="see-also"></a>참고 항목  
+ [ODBC 기본 사항](../../data/odbc/odbc-basics.md)

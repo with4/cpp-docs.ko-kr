@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0be66a528585bd86c4dbc39c17917229c3353bd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a46c2fa9ce553948c03cd2ab6ad20001d0021bed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>.netmodule 입력 파일 형식 선택
 MSIL.obj 파일 (사용 하 여 컴파일된 [/clr](../../build/reference/clr-common-language-runtime-compilation.md)).netmodule 파일을 사용할 수도 있습니다.  .obj 파일에는 메타 데이터 및 네이티브 기호가 포함 되어 있습니다.  .netmodules에는 메타데이터만 포함됩니다.  

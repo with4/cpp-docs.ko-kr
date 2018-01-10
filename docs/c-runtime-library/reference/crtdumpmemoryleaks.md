@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtDumpMemoryLeaks
+apiname: _CrtDumpMemoryLeaks
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -29,8 +27,7 @@ f1_keywords:
 - CrtDumpMemoryLeaks
 - _CrtDumpMemoryLeaks
 - _CRTDBG_CHECK_CRT_DF
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtDumpMemoryLeaks function
 - CRTDBG_LEAK_CHECK_DF macro
@@ -39,16 +36,16 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe47ee058f6dc4a33013e4773a7b3a057056b380
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 799cb3a867af9695fcb72ae6d681168f604d880f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
 메모리 누수가 발생한 경우 디버그 힙의 모든 메모리 블록을 덤프합니다(디버그 버전에만 해당).  
@@ -72,20 +69,20 @@ int _CrtDumpMemoryLeaks( void );
   
  기본적으로 내부 C 런타임 블록(`_CRT_BLOCK`)은 메모리 덤프 작업에 포함되지 않습니다. [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 함수는 `_CRTDBG_CHECK_CRT_DF` 비트의 `_crtDbgFlag`를 설정하여 이러한 블록을 누수 검색 프로세스에 포함하는 데 사용할 수 있습니다.  
   
- 힙 상태 함수 및 `_CrtMemState` 구조체에 대한 자세한 내용은 [힙 상태 보고 함수](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요. 기본 힙의 디버그 버전에서 메모리 블록을 할당, 초기화 및 관리하는 방법에 대한 자세한 내용은 [CRT 디버그 힙 정보](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요.  
+ 힙 상태 함수 및 `_CrtMemState` 구조에 대한 자세한 내용은 [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요. 기본 힙의 디버그 버전에서 메모리 블록을 할당, 초기화 및 관리하는 방법에 대한 자세한 내용은 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_CrtDumpMemoryLeaks`|\<crtdbg.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="libraries"></a>라이브러리  
  [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)의 디버그 버전만 해당됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `_CrtDumpMemoryLeaks`를 사용하는 방법에 대한 샘플은 [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

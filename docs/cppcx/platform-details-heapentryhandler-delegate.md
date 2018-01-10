@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: b1c3c876b050e776d1a02e1ac19ad66a3c991e7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01e13b89e964fe1803acaa8b14041a1e75eedf99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformdetailsheapentryhandler-delegate"></a>Platform::Details::HeapEntryHandler 대리자
 이 대리자는 내부 전용이며 개발용으로 사용되지 않아야 합니다.  

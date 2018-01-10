@@ -34,11 +34,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 38c00e7d7c5eb9f4a1076ae3814c17a8062fe322
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 312e4a63803f3661799c6ad832fdfee22af876c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 버퍼 간에 바이트를 복사합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [memcpy_s, wmemcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)를 참조하세요.  
@@ -98,14 +99,14 @@ wchar_t *wmemcpy(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`memcpy`|\<memory.h> 또는 \<string.h>|  
 |`wmemcpy`|\<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `memcpy`를 사용하는 방법에 대한 샘플은 [memmove](../../c-runtime-library/reference/memmove-wmemmove.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -33,11 +33,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f695cb018a09725f23fb0943f9acbef83a338314
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c89c5adba9224c11f8d5ec77e13b06a8cea4d0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 RTC(런타임 오류 검사)에서 발견된 오류를 형식에 연결합니다. 오류 처리기는 지정된 형식의 오류를 출력하는 방법을 처리합니다.  
@@ -71,7 +72,7 @@ RTC(런타임 오류 검사)에서 발견된 오류를 형식에 연결합니다
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_RTC_SetErrorType`|\<rtcapi.h>|  
   

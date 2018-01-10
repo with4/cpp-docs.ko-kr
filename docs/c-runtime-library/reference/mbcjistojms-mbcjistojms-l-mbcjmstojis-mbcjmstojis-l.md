@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - mbcjmstojis_l
 - mbcjistojms_l
 - mbcjmstojis
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbcjmstojis_l function
 - _mbcjistojms function
@@ -47,30 +45,16 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 514e00148ec34a14a7b229d5b7e226d8be66636d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3ed3aada11b5020c285ce9fb867f08b288055581
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 JIS(Japan Industry Standard)와 JMS(일본 Microsoft) 문자 간을 변환합니다.  
@@ -114,13 +98,13 @@ unsigned int _mbcjmstojis_l(
   
  `c` 값은 상위 8비트는 변환할 문자의 선행 바이트를 나타내고 하위 8비트는 후행 바이트를 나타내는 16비트 값이어야 합니다.  
   
- 출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  이전 버전에서는 `_mbcjistojms` 및 `_mbcjmstojis` 호출한 `jistojms` 및 `jmstojis`각각. `_mbcjistojms``_mbcjistojms_l`, `_mbcjmstojis` 및 `_mbcjmstojis_l` 를 대신 사용 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_mbcjistojms`|\<mbstring.h>|  
 |`_mbcjistojms_l`|\<mbstring.h>|  

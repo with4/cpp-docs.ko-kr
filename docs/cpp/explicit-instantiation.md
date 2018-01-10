@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - templates, instantiation
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ecd8f8c893abab10699a0bd43f368356335c6e10
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e272652ecc82b65d0251194f17a746ddde58fcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-instantiation"></a>명시적 인스턴스화
 명시적 인스턴스화를 통해 코드에서 실제로 사용하지 않고 템플릿 기반 클래스 또는 함수의 인스턴스를 만들 수 있습니다. 라이브러리 (.lib) 파일 배포에 대 한 템플릿을 사용 하는 만들 때 유용한 것은, 인스턴스화되지 않은 템플릿 정의 개체 (.obj) 파일에 배치 되지 않은 합니다.  

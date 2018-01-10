@@ -18,11 +18,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd7b35758caaf76904eb3144d22d747c22f02804
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b6927b25d627874f5a3d649099a4ed5e099bc6cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 양방향 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `hash_multimap` 가 양방향을 저장 하는 각 테이블 항목 연결 된 목록 노드 및 한 개의 요소 저장 노드마다의 해시 테이블로 요소의 시퀀스를 관리 합니다. 요소 순서는 시퀀스와 경험해를 따라 이동 하는 매핑된 값에 대 한 키를 구성 됩니다.  
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
   
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
  `GKey`동일 `Key` 후자 형식인 ref 하지 않는 한 경우에서 이기`Key^`  
   

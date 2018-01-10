@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - vprintf_s
 - vwprintf_s
 - _vtprintf_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - vwprintf_s_l function
 - _vwprintf_s_l function
@@ -44,30 +42,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - vprintf_s function
 ms.assetid: cf864996-a530-4b40-9c30-54c4cef439c8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 51c8be555df33252cb35465fc11fe13e06d17485
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 90a559e7fb9569289d45dcc92a9b6eb66633f4ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintfs-vprintfsl-vwprintfs-vwprintfsl"></a>vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l
 인수 목록에 대한 포인터를 사용하여 형식이 지정된 출력을 씁니다. 이러한 버전의 [vprintf, _vprintf_l, vwprintf, _vwprintf_l](../../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 향상된 보안 기능이 포함되어 있습니다.  
@@ -124,7 +108,7 @@ int _vwprintf_s_l(
 > [!IMPORTANT]
 >  `format` 이 사용자 정의 문자열이 아닌지 확인하세요. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -133,7 +117,7 @@ int _vwprintf_s_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|----------------------|  
 |`vprintf_s`, `_vprintf_s_l`|\<stdio.h> 및 \<stdarg.h>|\<varargs.h>*|  
 |`vwprintf_s`, `_vwprintf_s_l`|\<stdio.h> 또는 \<wchar.h> 및 \<stdarg.h>|\<varargs.h>*|  

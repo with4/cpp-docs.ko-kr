@@ -38,11 +38,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cb44e7b2c79b1e8719768634bfe028207b9e8d11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearchs"></a>_lsearch_s
 값에 대한 선형 검색을 수행합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_lsearch](../../c-runtime-library/reference/lsearch.md) 버전입니다.  
@@ -82,16 +83,16 @@ void *_lsearch_s(
 ## <a name="return-value"></a>반환 값  
  `key`가 있으면 `_lsearch_s`는 `base`에서 `key`와 일치하는 배열의 요소에 대한 포인터를 반환합니다. `key`가 없으면 `_lsearch_s`는 배열의 끝에서 새로 추가된 항목에 대한 포인터를 반환합니다.  
   
- 함수에 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno`는 `EINVAL`로 설정되고 함수는 `NULL`을 반환합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 함수에 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno`는 `EINVAL`로 설정되고 함수는 `NULL`을 반환합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
 |`key`|`base`|`compare`|`num`|`size`|`errno`|  
 |-----------|------------|---------------|-----------|------------|-------------|  
-|`NULL`|모두|모두|모두|모두|`EINVAL`|  
-|모두|`NULL`|모두|!= 0|모두|`EINVAL`|  
-|모두|모두|모두|any|0|`EINVAL`|  
-|any|모두|`NULL`|an|모두|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|0|`EINVAL`|  
+|any|any|`NULL`|an|모두|`EINVAL`|  
   
 ## <a name="remarks"></a>설명  
  `_lsearch_s` 함수는 각각 `width` 바이트인 `num` 요소의 배열에서 `key` 값에 대해 선형 검색을 수행합니다. `bsearch_s`와 달리 `_lsearch_s`에서는 배열을 정렬할 필요가 없습니다. `key`가 없는 경우 `_lsearch_s`는 배열의 끝에 추가하고 `num`을 늘립니다.  
@@ -102,7 +103,7 @@ void *_lsearch_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_lsearch_s`|\<search.h>|  
   

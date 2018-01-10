@@ -1,36 +1,35 @@
 ---
 title: "컴파일러 경고 (수준 1) C4096 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4096"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4096"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4096
+dev_langs: C++
+helpviewer_keywords: C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3c8fd8e18743a4cf0c9004236ab60bb30219119e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4096
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'a': 인터페이스가 COM 인터페이스가 아니므로 IDL로 내보내지 않습니다.  
+# <a name="compiler-warning-level-1-c4096"></a>컴파일러 경고 (수준 1) C4096
+'a': 인터페이스는 COM 인터페이스; 아닙니다. IDL로 내보내지 않습니다.  
   
- COM 인터페이스로 계획했던 인터페이스 정의가 COM 인터페이스로 정의되지 않았으므로 IDL 파일로 내보내지지 않습니다.  
+ COM 인터페이스 계획 했던 인터페이스 정의 COM 인터페이스로 정의 되지 않았습니다 고 따라서 내보내지지 않습니다 IDL 파일을 합니다.  
   
- 인터페이스가 COM 인터페이스인지 여부를 나타내는 목록 특성에 대한 내용은 [interface attribute](../../windows/interface-attributes.md)을 참조하십시오.  
+ 참조 [인터페이스 특성](../../windows/interface-attributes.md) 인터페이스는 COM 인터페이스를 나타내는 특성을 목록에 대 한 합니다.  
   
- 다음 샘플에서는 C4096 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4096 오류가 생성 됩니다.  
   
 ```  
 // C4096.cpp  

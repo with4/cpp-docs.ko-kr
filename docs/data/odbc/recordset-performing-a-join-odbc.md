@@ -1,50 +1,53 @@
 ---
-title: "레코드 집합: 조인 수행(ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터 바인딩[C++], 레코드 집합의 열"
-  - "데이터 바인딩[C++], 레코드 집합 열"
-  - "필터[C++], 레코드 집합에 대한 조인 조건"
-  - "조인[C++], 레코드 집합"
-  - "ODBC 레코드 집합[C++], 조인"
-  - "레코드 집합[C++], 데이터 바인딩"
-  - "레코드 집합[C++], 테이블 조인"
+title: "레코드 집합: 조인 수행 (ODBC) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- joins [C++], in recordsets
+- data binding [C++], recordset columns
+- recordsets [C++], binding data
+- data binding [C++], columns in recordsets
+- filters [C++], join conditions for recordsets
+- ODBC recordsets [C++], joins
+- recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4091cd8e60eed569782021c811f12af227e79673
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 레코드 집합: 조인 수행(ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이 항목은 MFC ODBC 클래스에 적용됩니다.  
+# <a name="recordset-performing-a-join-odbc"></a>레코드 집합: 조인 수행(ODBC)
+MFC ODBC 클래스에이 항목에 적용 됩니다.  
   
-## 조인의 정의  
- 공용 데이터 액세스 연산인 조인 연산을 통해 단일 레코드 집합 개체를 사용하는 여러 테이블에 있는 데이터를 사용하여 작업할 수 있습니다.  두 개 이상의 테이블을 조인하면 레코드 집합에는 각 테이블의 열이 포함되지만 응용 프로그램에는 단일 테이블처럼 나타납니다.  조인에서 모든 테이블의 모든 열을 사용하는 경우도 있지만 조인 연산의 SQL **SELECT** 절을 통해 각 테이블의 일부 열만을 사용하기도 합니다.  데이터베이스 클래스는 읽기 전용 조인을 지원하지만 업데이트 가능한 조인은 지원하지 않습니다.  
+## <a name="what-a-join-is"></a>어떤 조인이  
+ 조인 연산을 사용 하는 일반적인 데이터 액세스 작업을 사용 하면 단일 레코드 집합 개체를 사용 하 여 둘 이상의 테이블의 데이터를 사용할 수 있습니다. 각 테이블의 열이 포함 되지만 단일 테이블에 응용 프로그램으로 표시 된 레코드 집합을 생성 두 개 이상의 테이블을 조인 합니다. 조인에 모든 테이블 이지만 경우에 따라 SQL의 모든 열을 사용 하는 경우에 따라 **선택** 조인 절에서 각 테이블 열 중 일부만 사용 합니다. 데이터베이스 클래스에는 읽기 전용 조인 하지만 불가능 조인을 지원합니다.  
   
- 조인된 테이블의 열이 포함된 레코드를 선택하려면 다음 항목이 필요합니다.  
+ 조인 된 테이블의에서 열을 포함 하는 레코드를 선택 하려면 다음 항목이 필요 합니다.  
   
--   조인된 모든 테이블의 이름을 포함하는 테이블 목록  
+-   조인 된 모든 테이블의 이름이 포함 된 테이블 목록입니다.  
   
--   조인 연산과 관련된 모든 열의 이름이 포함되는 열 목록.  이름은 같지만 서로 다른 테이블에 있는 열은 테이블 이름에 의해 구분됩니다.  
+-   참여 하는 모든 열 이름이 포함 된 열 목록입니다. 에 이름이 같지만 서로 다른 테이블의 열은 테이블 이름으로 한정 됩니다.  
   
--   테이블 조인에 사용되는 열을 지정하는 필터\(SQL **WHERE** 절\).  이 필터는 "Table1.KeyCol \= Table2.KeyCol"의 형식이며 실제로 조인을 수행합니다.  
+-   필터 (SQL **여기서** 절)과 테이블이 조인 열을 지정 하는 합니다. 이 필터 형식은 "Table1.KeyCol Table2.KeyCol =" 실제로 조인을 수행 하 고 있습니다.  
   
- 같은 방법으로 SQL 키워드 **AND**로 조인된 여러 쌍의 열을 연결하여 두 개 이상의 테이블을 조인할 수 있습니다.  
+ SQL 키워드로 조인 된 여러 쌍의 열을 연결 하 여 같은 방식으로 두 개 이상의 테이블을 조인할 수 있습니다 **AND**합니다.  
   
-## 참고 항목  
- [레코드 집합\(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [레코드 집합: 미리 정의된 쿼리에 대한 클래스 선언\(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [레코드 집합: 테이블에 대한 클래스 선언\(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [레코드 집합: 레코드 집합 다시 쿼리\(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+## <a name="see-also"></a>참고 항목  
+ [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [레코드 집합: 미리 정의 된 쿼리 (ODBC)에 대 한 클래스 선언](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
+ [레코드 집합: 테이블 (ODBC)에 대 한 클래스 선언](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [레코드 집합: 레코드 집합 다시 쿼리(ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

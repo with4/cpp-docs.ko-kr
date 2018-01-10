@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd9bee6423c0eea98941331dcff86c002dd4ef9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f462eeea9f2bca566745d425b84bd1506f52fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-imports"></a>가져오기 바인딩
 링커의 기본 동작은 지연 로드 된 DLL에 대 한 바인딩 가능한 가져오기 주소 테이블을 만드는 것입니다. 도우미 함수의 호출 하는 대신 바인딩된 정보를 사용 하려고 합니다 DLL에 바인딩된 경우 **GetProcAddress** 각 참조 가져오기. 타임 스탬프 또는 기본 설정된 주소가 일치 하지 않으면 로드 된 DLL의 도우미 함수 것으로 간주 하 바운드 가져오기 주소 테이블 최신이 존재 하지 않는 경우에 따라 진행 됩니다.  

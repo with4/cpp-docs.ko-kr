@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs
+apiname: wcsrtombs
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,40 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs
-dev_langs:
-- C++
+f1_keywords: wcsrtombs
+dev_langs: C++
 helpviewer_keywords:
 - wcsrtombs function
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 6dfe7e2293f9544b64a0dfd7dfaa1889e65a64dc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7fb18e5f66f431afb86e86815f50217782902b8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 와이드 문자열을 멀티바이트 문자열 표현으로 변환합니다. 이 함수의 더 안전한 버전을 사용할 수 있습니다. [wcsrtombs_s](../../c-runtime-library/reference/wcsrtombs-s.md)를 참조하세요.  
@@ -104,12 +85,12 @@ size_t wcsrtombs(
   
  `mbstr` 인수가 `NULL`이면 `wcsrtombs`는 대상 문자열에 필요한 바이트 크기를 반환합니다. `mbstate`가 null이면 내부 `mbstate_t` 변환 상태가 사용됩니다. 문자 시퀀스 `wchar`에 해당하는 멀티바이트 문자 표현이 없으면 -1이 반환되며 `errno`가 `EILSEQ`로 설정됩니다.  
   
- C++에서 이 함수는 해당 최신 보안 버전을 호출하는 템플릿 오버로드를 포함합니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서 이 함수는 해당 최신 보안 버전을 호출하는 템플릿 오버로드를 포함합니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ## <a name="exceptions"></a>예외  
  `wcsrtombs` 함수는 이 함수가 실행 중인 동안 현재 스레드의 함수가 `setlocale`을 호출하지 않으며 `mbstate`가 null이 아니면 다중 스레드로부터 안전합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_wcsrtombs.cpp  
@@ -157,7 +138,7 @@ The string was successfuly converted.
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`wcsrtombs`|\<wchar.h>|  
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wperror
 - _tperror
 - perror
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tperror function
 - tperror function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f263a40a56c7f94e022a8410724a7b2f3379e5d0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bb8dc68154c9a1302fe69dd8416309bf377bdd3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="perror-wperror"></a>perror, _wperror
 오류 메시지를 인쇄합니다.  
@@ -86,7 +70,7 @@ void _wperror(
 ## <a name="remarks"></a>설명  
  `perror` 함수는 오류 메시지를 `stderr`에 인쇄합니다. `_wperror`는 **_perror**의 와이드 문자 버전이고 `_wperror`에 대한 `string` 인수는 와이드 문자열입니다. 그렇지 않으면 `_wperror` 및 **_perror**가 동일하게 작동합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -102,17 +86,17 @@ void _wperror(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`perror`|\<stdio.h> 또는 \<stdlib.h>|  
 |`_wperror`|\<stdio.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_perror.c  

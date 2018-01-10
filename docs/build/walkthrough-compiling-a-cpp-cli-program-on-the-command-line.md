@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9fc173111e2188aef8c06657844000d44bfb84f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d509bc9890f4fa5ccebbd6ae3d1e3bcb3dbb0d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>연습: 명령줄에서 C++/CLI 프로그램 컴파일
 CLR(공용 언어 런타임)을 대상으로 하는 Visual C++ 프로그램을 만들어 .NET Framework를 사용하여 명령줄에서 빌드할 수 있습니다. Visual C++은 .NET 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 C++/CLI 프로그래밍 언어를 지원합니다. 에 대 한 C + + /CLI 언어 참조 [순수 c + +: Hello, C + + CLI](http://msdn.microsoft.com/magazine/cc163681.aspx)합니다. 일반 정보를 참조 하십시오. [.NET 프로그래밍 C + + /cli CLI (Visual c + +)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)합니다.  

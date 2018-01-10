@@ -40,11 +40,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0e3a2885adffda35b4e55117b5ffa591ecf487c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b808d41bfb0d9da3f709f8f655a86c168b15e00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 구성 요소에서 경로 이름을 만듭니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)의 버전입니다.  
@@ -115,7 +116,7 @@ errno_t _wmakepath_s(
   
 |`path`|`sizeInWords` / `sizeInBytes`|반환|`path`의 내용|  
 |------------|------------------------------------|------------|------------------------|  
-|`NULL`|모두|`EINVAL`|수정 안 됨|  
+|`NULL`|any|`EINVAL`|수정 안 됨|  
 |any|<= 0|`EINVAL`|수정 안 됨|  
   
  위의 오류 조건이 발생하는 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 `errno`는 `EINVAL`로 설정되고 함수는 `EINVAL`을 반환합니다. `drive`, `fname` 및 `ext` 매개 변수에는 `NULL`이 허용됩니다. 이러한 매개 변수가 null 포인터 또는 빈 문자열일 때 동작에 대한 자세한 내용은 설명 부분을 참조하십시오.  
@@ -133,20 +134,20 @@ errno_t _wmakepath_s(
   
  경로가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 또한 `errno`는 `EINVAL`로 설정됩니다. `NULL` 값은 다른 모든 매개 변수에 대해 허용됩니다.  
   
- C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
  이러한 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_makepath_s`|\<stdlib.h>|  
 |`_wmakepath_s`|\<stdlib.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_makepath_s.c  

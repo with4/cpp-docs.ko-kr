@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -49,31 +47,16 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 5ed38a5d4c5a9ff6d976302cc52cc14672a4d60b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1f3430389002b4b68d132b1b524b98cb1f7dea1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 문자열을 정수로 변환합니다.  
@@ -118,9 +101,9 @@ int _wtoi_l(
   
  A `whitespace` ; 무시 되는 공백 또는 탭 문자로 구성 되어 `sign` 는 더하기 (+) 또는 빼기 (-); 및 `digits` 하나 이상의 숫자가 됩니다.  
   
- `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -134,7 +117,7 @@ int _wtoi_l(
 |`atoi`|\<stdlib.h>|  
 |`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h> 또는 \<wchar.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 `atoi` 함수를 사용하여 문자열로 저장된 수가 숫자 값으로 변환되는 방법을 보여 줍니다.  
   
 ```  

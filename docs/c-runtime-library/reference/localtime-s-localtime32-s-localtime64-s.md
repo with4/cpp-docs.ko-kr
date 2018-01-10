@@ -43,11 +43,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 571cb758016d3682289ee787dc8886768538d27b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddce7d73919e7e7942d8ddd7954ce6cbec4789fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 시간 값을 변환하고 현지 표준 시간대에 맞게 수정합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)의 버전입니다.  
@@ -77,13 +78,13 @@ errno_t _localtime64_s(
  저장된 시간에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공할 경우 0입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 Errno.h에서 정의됩니다. 이러한 오류의 목록은 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 정상적으로 실행되는 경우 0입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 Errno.h에서 정의됩니다. 이러한 오류의 목록은 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
 |`_tm`|`time`|반환 값|`_tm`의 값|잘못된 매개 변수 처리기 호출|  
 |-----------|------------|------------------|--------------------|---------------------------------------|  
-|`NULL`|모두|`EINVAL`|수정 안 됨|예|  
+|`NULL`|any|`EINVAL`|수정 안 됨|예|  
 |`NULL` 아님(유효한 메모리를 가리킴)|`NULL`|`EINVAL`|모든 필드가 -1로 설정됨|예|  
 |`NULL` 아님(유효한 메모리를 가리킴)|0보다 작거나 `_MAX__TIME64_T`보다 큼|`EINVAL`|모든 필드가 -1로 설정됨|아니요|  
   
@@ -99,7 +100,7 @@ errno_t _localtime64_s(
   
  `__time64_t` 구조체를 사용하는 `_localtime64_s`는 3001년 1월 18일 23:59:59(UTC - 협정 세계시)까지 날짜를 표현할 수 있습니다. 반면, `_localtime32_s`는 2038년 1월 18일 23:59:59(UTC)까지의 날짜를 나타냅니다.  
   
- `localtime_s`는 `_localtime64_s`로 계산되는 인라인 함수이며 `time_t`는 `__time64_t`와 동일합니다. 컴파일러에서 `time_t`를 이전의 32비트 `time_t`로 해석하게 해야 하는 경우 `_USE_32BIT_TIME_T`를 정의할 수 있습니다. 이렇게 하면 `localtime_s`가 `_localtime32_s`로 계산됩니다. 2038년 1월 18일 이후에는 응용 프로그램에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.  
+ `localtime_s`는 `_localtime64_s`로 계산되는 인라인 함수이며 `time_t`는 `__time64_t`와 동일합니다. 컴파일러에서 `time_t` 를 이전의 32비트 `time_t`로 해석하게 해야 하는 경우 `_USE_32BIT_TIME_T`를 정의할 수 있습니다. 이렇게 하면 `localtime_s`가 `_localtime32_s`로 계산됩니다. 2038년 1월 18일 이후에는 응용 프로그램에서 오류가 발생할 수 있으므로 이 방식은 사용하지 않는 것이 좋으며, 64비트 플랫폼에서는 이러한 방식이 허용되지 않습니다.  
   
  구조체 형식 [tm](../../c-runtime-library/standard-types.md)의 필드는 다음 값을 저장하며, 각 값은 `int`입니다.  
   
@@ -132,15 +133,15 @@ errno_t _localtime64_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`localtime_s`|\<time.h>|  
 |`_localtime32_s`|\<time.h>|  
 |`_localtime64_s`|\<time.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_localtime_s.c  

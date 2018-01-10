@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20789d226ace8ba41a9635f0039274b68d37922c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9af0a7a3a175699a4f4b738271fe0d4c5bbac4b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept(암시적 예외 지정자)
 경우는 **/zc: implicitnoexcept** 옵션을 지정한 경우 컴파일러는 암시적 추가 [noexcept](../../cpp/noexcept-cpp.md) 컴파일러가 정의한 특수 멤버 함수를 사용자 정의 소멸자를 예외 지정자 및 비 할당자입니다. 기본적으로 **/zc: implicitnoexcept** ISO C + + 11 표준에 맞게 설정 합니다. 이 옵션을 해제하면 사용자가 정의한 소멸자 및 비할당자와 컴파일러가 정의한 특수 멤버 함수에 암시적 `noexcept`를 사용하지 않습니다.  

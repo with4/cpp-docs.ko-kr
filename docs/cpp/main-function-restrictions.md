@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c444fe53719aea5c78477aa9d9f35134c44d99a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a94844a0d5636c58a764114ed6f413923d69950
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-function-restrictions"></a>main 함수 제한
 에 몇 가지 제한이 적용 된 **주** 다른 모든 c + + 함수에 적용 되지 않는 함수입니다. **주** 함수:  

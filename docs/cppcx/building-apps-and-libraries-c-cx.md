@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 10c3cd585548cf406db71b54aadabf246d0054d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae9da167a3210e704b9d8b209e601e8269311513
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-apps-and-libraries-ccx"></a>응용 프로그램 및 라이브러리 빌드(C++/CX)
 이 섹션의 항목 빌드 시스템을 사용 하 여 유니버설 Windows 플랫폼 앱 또는 Windows 런타임 구성 요소를 생성 하는 방법에 대 한 몇 가지 정보를 제공 합니다.  

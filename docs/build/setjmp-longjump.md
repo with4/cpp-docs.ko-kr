@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3617f70e7c62e1845d8d24e11cebdd7738c507f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 744b855d1b867507b54973f17e2a4f98b63e2b67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setjmplongjump"></a>setjmp/longjump
 Setjmp.h 나 setjmpex.h를 포함 하면 모든 호출 [setjmp](../c-runtime-library/reference/setjmp.md) 또는 [longjmp](../c-runtime-library/reference/longjmp.md) 소멸자를 호출 하 고 마지막으로 호출 하는 해제 됩니다.  이 점에서 차이가 x86, finally 절에서 setjmp.h 결과 포함 하 고 소멸자가 호출 되지 않습니다.  

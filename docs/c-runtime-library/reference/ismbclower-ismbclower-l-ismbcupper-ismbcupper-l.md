@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ apitype: DLLExport
 f1_keywords:
 - _ismbcupper
 - _ismbclower
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ismbcupper function
 - ismbclower function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 2d62b6859490047796d66cc2b56090a130ffd5f9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d5dc706f59672f60874a5f525bb37067c1b13ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 멀티바이트 문자가 소문자인지 대문자인지를 확인합니다.  
@@ -104,9 +88,9 @@ int _ismbcupper_l(
 ## <a name="remarks"></a>설명  
  이러한 각 함수는 지정한 조건에 대해 주어진 멀티바이트 문자를 테스트합니다.  
   
- `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
-|루틴|테스트 조건|932 코드 페이지 예제|  
+|루틴에서 반환된 값|테스트 조건|932 코드 페이지 예제|  
 |-------------|--------------------|---------------------------|  
 |`_ismbclower`|소문자 영문자|`c`가 ASCII 영어 소문자(0x61<=`c`<=0x7A)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
 |`_ismbclower_l`|소문자 영문자|`c`가 ASCII 영어 소문자(0x61<=`c`<=0x7A)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
@@ -115,7 +99,7 @@ int _ismbcupper_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_ismbclower`|\<mbstring.h>|  
 |`_ismbclower_l`|\<mbstring.h>|  

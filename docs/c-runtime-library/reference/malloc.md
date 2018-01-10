@@ -31,11 +31,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72dd949aa8d894ba49f53a6440de20beea070e2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb2ce8a8a2df102f2e455668ab798957b9ad46c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="malloc"></a>malloc
 메모리 블록을 할당합니다.  
@@ -83,7 +84,7 @@ void *malloc(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`malloc`|\<stdlib.h> 및 \<malloc.h>|  
   
@@ -92,7 +93,7 @@ void *malloc(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C  
 // crt_malloc.c  

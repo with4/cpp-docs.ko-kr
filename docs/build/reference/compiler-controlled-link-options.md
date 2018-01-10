@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a0d73d46d17e14d5ce55a171887e693c425765ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc899fc7f1fc8c1805648e72e14ef13853841c90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 /C 옵션을 지정 하지 않으면 CL 컴파일러 링크를 자동으로 호출 합니다. CL에서는 링커 명령줄 옵션 및 인수를 제어할 수 있습니다. 다음 표에서 연결에 영향을 주는 CL 기능을 요약 합니다.  

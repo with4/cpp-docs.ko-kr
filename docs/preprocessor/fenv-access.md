@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2f95187be09177fea573181f1e3a827409fb77c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 623c9cb9af1d7df137aa7ee92071e34ad99a6331
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fenvaccess"></a>fenv_access
 플래그 테스트 및 모드 변경 내용을 변경할 수 있는 최적화를 비활성화(ON)하거나 활성화(OFF)합니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [fp_contract](../preprocessor/fp-contract.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // pragma_directive_fenv_access_x86.cpp  
@@ -83,7 +84,7 @@ int main() {
 out=9.999999776482582e-003  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플은 Itanium 프로세서에 대한 출력 파일을 생성하는 컴파일러용입니다. **/fp: 정확한** 수동으로 계산할 예상 대로 확장 된 정밀도 큰 값 보다 FLT_MAX (3.402823466 e + 38F)가 되어 계산할 수 및 해당 합계는 1.0 결과에서 중간 결과 유지 합니다. **/fp: strict** 첫 번째 더하기 식 전체에서 유지 되는 무한 값이 생성 되므로 중간를 소스 정밀도 (부동 소수점) 결과 유지 합니다.  
   
 ```  
@@ -111,7 +112,7 @@ int main() {
 1.000000  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  위의 샘플에서 `#pragma fenv_access (on)`을 주석 처리할 때는 컴파일러가 컴파일 타임 계산(컨트롤 모드를 사용하지 않음)을 수행하므로 출력이 달라진다는 점에 주의해야 합니다.  
   
 ```  

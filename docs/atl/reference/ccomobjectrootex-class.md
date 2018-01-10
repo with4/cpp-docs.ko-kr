@@ -30,11 +30,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 987d8fcb8464ab691b915c576194f530cb50842e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bab27a9d8b5af8315d9d3468933ea016b12e3399
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 클래스
 이 클래스는 집계 되지 않은 원시 및 집계 개체에 대 한 개체 참조 개수 관리를 처리 하는 메서드를 제공 합니다.  
@@ -135,7 +136,7 @@ HRESULT FinalConstruct();
   
      그러나 `FinalConstruct` 클래스가 ATL.에서 제공 하는 참조 횟수 구현을 사용 하 고 가상 함수를 호출할 수 있도록 생성 완벽 하 게 될 가장 많이 파생 된 후 즉시 호출  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  파생 된 클래스에서이 메서드를 재정의 하는 일반적으로 `CComObjectRootEx` 을 만드는 개체를 집계 합니다. 예:  
   
  [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
@@ -293,7 +294,7 @@ static void WINAPI ObjectMain(bool bStarting);
   
  `ObjectMain`진입점 함수가 수행할 수 있는 작업의 형식을 제한 되어 있으므로 해당 DLL의 진입점에서 호출 됩니다. 이러한 제한 사항에 대 한 자세한 내용은 참조 하십시오. [Dll 및 Visual c + + 런타임 라이브러리 동작](../../build/run-time-library-behavior.md) 및 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
 ##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  

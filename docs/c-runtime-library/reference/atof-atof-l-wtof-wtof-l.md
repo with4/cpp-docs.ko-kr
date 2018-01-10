@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -39,8 +38,7 @@ f1_keywords:
 - corecrt_wstdlib/_wtof
 - _wtof_l
 - corecrt_wstdlib/_wtof_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tstof function
 - atof_l function
@@ -55,31 +53,16 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3bb571d759b8a6360326554f4915e60d6ab0aa93
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d3232acdfdda7cf5a9e19eeb34d4578b9443cc3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 문자열을 double로 변환합니다.  
@@ -130,7 +113,7 @@ double _wtof_l(
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -144,7 +127,7 @@ double _wtof_l(
 |`atof`, `_atof_l`|C: \<math.h> 또는 \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> 또는 \<math.h>|  
 |`_wtof`, `_wtof_l`|C: \<stdlib.h> 또는 \<wchar.h> C++: \<cstdlib>, \<stdlib.h> 또는 \<wchar.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 `atof` 및 `_atof_l` 함수를 사용하여 문자열로 저장된 수가 숫자 값으로 변환되는 방법을 보여 줍니다.  
   
 ```C  

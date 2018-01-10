@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - iswprint
 - _istprint
 - isprint
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _istprint function
 - iswprint function
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 50f17486f72a272d45c45fc3f0c6b25a7b4b6c56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6ab79ddcf6232e8c3d4345cc1bc3cda7c7deb1dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
 정수가 인쇄 가능한 문자를 나타내는지 여부를 확인합니다.  
@@ -99,7 +83,7 @@ int _iswprint_l(
 ## <a name="return-value"></a>반환 값  
  `c`가 인쇄 가능한 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isprint`0이 아닌 값을 반환 `c` 인쇄 가능한 문자-여기에 공백 문자 (0x20-0x7E). `c`가 공백 와이드 문자를 포함하여 인쇄 가능한 와이드 문자인 경우 `iswprint`는 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
   
- 이러한 함수에 대한 테스트 조건의 결과는 로캘의 `LC_CTYPE` 범주 설정에 따라 달라집니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)를 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 이러한 함수에 대한 테스트 조건의 결과는 로캘의 `LC_CTYPE` 범주 설정에 따라 달라집니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)를 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `isprint` 및 `_isprint_l`의 동작은 `c`가 EOF가 아니거나 0 - 0xFF 범위 내에 포함되지 않는 경우 정의되지 않습니다. 디버그 CRT 라이브러리가 사용되고 `c`가 이러한 값 중 하나가 아닌 경우 함수에서 어설션이 발생합니다.  
   
@@ -111,7 +95,7 @@ int _iswprint_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`isprint`|\<ctype.h>|  
 |`iswprint`|\<ctype.h> 또는 \<wchar.h>|  

@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31488cce5c45901e7d15698aeb2339f47bf48a6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f29f12401ca3f8160756dc9e921308202c980138
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashsetvaluecomp-stlclr"></a>hash_set::value_comp(STL/CLR)
 두 요소 값에 대 한 순서 지정 대리자를 복사합니다.  
@@ -33,7 +36,7 @@ value_compare^ value_comp();
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 정렬 대리자를 반환 합니다. 두 요소 값 비교를 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_set_value_comp.cpp   

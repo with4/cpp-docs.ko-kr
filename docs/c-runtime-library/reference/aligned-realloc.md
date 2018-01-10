@@ -33,11 +33,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d572e7f5fa58e354ffb571bc822d8861703b564
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 293e519cd107ef64d81d59f08cf7f8d4871e8e6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedrealloc"></a>_aligned_realloc
 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) 또는 [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md)를 사용하여 할당된 메모리 블록의 크기를 변경합니다.  
@@ -60,7 +61,7 @@ void * _aligned_realloc(
  요청된 메모리 할당 크기입니다.  
   
  [in] `alignment`  
- 2의 정수 제곱이어야 하는 맞춤 값입니다.  
+ 맞춤 값으로 2의 정수 거듭제곱이어야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  `_aligned_realloc`는 다시 할당된(그리고 이동되었을 수 있는) 메모리 블록에 대한 void 포인터를 반환합니다. 크기가 0이고 버퍼 인수가 `NULL`이 아닌 경우 또는 버퍼를 지정된 크기로 확장하는 데 사용할 수 있는 메모리가 부족한 경우 반환 값은 `NULL`입니다. 첫 번째 경우 원래 블록이 해제됩니다. 두 번째 경우 원래 블록은 변경되지 않습니다. 반환 값은 모든 형식의 개체 저장을 위해 적절하게 맞도록 보장되어 있는 저장소 공간을 가리킵니다. void가 아닌 형식의 포인터를 얻으려면 반환 값에 형식 캐스팅을 사용합니다.  
@@ -74,11 +75,11 @@ void * _aligned_realloc(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_aligned_realloc`|\<malloc.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  자세한 내용은 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -18,11 +18,12 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4eaccef4253d2b677f01801b680bb94d8a4d3516
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c01d4718bbc1781ea4705945bb90874384e09058
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
 char, wchar_t, char16_t 및 char32_t 형식은 영숫자 문자와 영숫자가 아닌 문자 모양 및 인쇄되지 않는 문자를 나타내는 기본 제공 형식입니다. char은 크기가 8비트이고 wchar_t 및 char16_t는 크기가 16비트이고 char32_t는 32비트입니다.  

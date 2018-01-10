@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4cbc1937617885e845163ed7dd307cc02b86a314
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5d0d34b3dee1fb4983f60c7e437c14025b4e3022
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rowsets"></a>행 집합 업데이트
 매우 기본적인 데이터베이스 작업은 데이터 저장소 업데이트 또는 데이터 기록입니다. OLE DB에서 업데이트 메커니즘은 간단합니다. 소비자 응용 프로그램이 바인딩된 데이터 멤버의 값을 설정하고 행 집합에 해당 값을 쓴 다음 소비자가 공급자에게 데이터 저장소를 업데이트하도록 요청합니다.  

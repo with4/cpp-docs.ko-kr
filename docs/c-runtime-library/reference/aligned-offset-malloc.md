@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _aligned_offset_malloc
+apiname: _aligned_offset_malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,22 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_offset_malloc
 - aligned_offset_malloc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 12bb22245619931732d08d3239c89380471f11b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 7322f5a3fbf7bf3d9352181a68db17fad4bc9fcb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
 지정된 맞춤 경계에 메모리를 할당합니다.  
@@ -80,11 +77,11 @@ void * _aligned_offset_malloc(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_aligned_offset_malloc`|\<malloc.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  자세한 내용은 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

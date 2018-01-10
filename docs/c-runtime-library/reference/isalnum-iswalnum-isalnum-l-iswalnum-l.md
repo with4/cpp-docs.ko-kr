@@ -47,11 +47,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25207b525ec1c5e4c19d114281a0daff2d38ea1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0c5ee9588635a50ca618a39e919661f9df08a27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 정수가 영숫자를 나타내는지 여부를 확인합니다.  
@@ -85,7 +86,7 @@ int _iswalnum_l(
 ## <a name="return-value"></a>반환 값  
  `c`가 영숫자의 특정 표현인 경우 이러한 루틴은 각각 0이 아닌 값을 반환합니다. `isalnum`경우에 0이 아닌 값을 반환 `isalpha` 또는 `isdigit` 에 대 한이 0이 아닌 `c`, 즉, 경우 `c` A-Z, 범위 내 a-z 또는 0-9입니다. `iswalnum` 또는 `iswalpha`가 `iswdigit`에 대해 0이 아닌 경우 `c`은 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
   
- `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `isalnum` 및 `_isalnum_l`의 동작은 `c`가 EOF가 아니거나 0 - 0xFF 범위 내에 포함되지 않는 경우 정의되지 않습니다. 디버그 CRT 라이브러리가 사용되고 `c`가 이러한 값 중 하나가 아닌 경우 함수에서 어설션이 발생합니다.  
   
@@ -98,7 +99,7 @@ int _iswalnum_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`isalnum`|\<ctype.h>|  
 |`iswalnum`|\<ctype.h> 또는 \<wchar.h>|  

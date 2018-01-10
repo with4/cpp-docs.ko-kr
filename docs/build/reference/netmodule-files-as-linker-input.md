@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b07e82fe8d7d191dc328645efd99ab3a9a4f6fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="netmodule-files-as-linker-input"></a>링커 입력 파일로 사용하는 .netmodule 파일
 link.exe에서는 이제 MSIL .obj 및 .netmodules가 입력으로 사용됩니다. 링커에서 생성되는 출력 파일은 링커에 입력된 .obj 또는 .netmodules에 대해 런타임 종속성이 없는 .netmodule 또는 어셈블리입니다.  
@@ -49,7 +50,7 @@ link.exe에서는 이제 MSIL .obj 및 .netmodules가 입력으로 사용됩니�
   
  MSIL 링크를 수행 하는 경우 및도 지정 하지 않으면 [/LTCG (링크 타임 코드 생성)](../../build/reference/ltcg-link-time-code-generation.md), 링크를 다시 시작 정보 메시지가 표시 됩니다. 이 메시지를 msil 링크 링커 성능이 향상 되지만 무시, 명시적으로 지정 **/LTCG**합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C + + 코드에서는 해당 try catch 블록을 비 시스템 예외에 대 한 호출 됩니다. 그러나 기본적으로 CLR 예외를 래핑합니다 비시스템와 <xref:System.Runtime.CompilerServices.RuntimeWrappedException>합니다. 어셈블리는 Visual c + +에서 만들어질 시점과 아닌 Visual c + + 모듈을 하려면 try 블록을 추가 해야 비 시스템 예외를 throw 하는 경우에 해당 try 절에서 호출 되는 c + + 코드의 catch 블록에서  
   
  [assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)] 특성 비 c + + 모듈에 대 한 소스 코드입니다.  
@@ -77,7 +78,7 @@ int main() {
 */  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  WrapNonExceptionThrows 특성의 부울 값을 변경 하 여 비 시스템 예외를 catch 하는 Visual c + + 코드의 기능을 수정 합니다.  
   
 ```  

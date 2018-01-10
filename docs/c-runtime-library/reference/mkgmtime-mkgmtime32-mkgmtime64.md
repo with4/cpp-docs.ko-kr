@@ -47,11 +47,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6353229aecc273daac03635f73761345171bd30e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f99e367d263d3ba49837b269fd04159a70cf549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 `tm struct`로 표시되는 UTC 시간을 `time_t` 형식으로 표시되는 UTC 시간으로 변환합니다.  
@@ -97,7 +98,7 @@ __time64_t _mkgmtime64(
   
  `gmtime` 및 `localtime`은 변환을 위해 고정적으로 할당된 단일 버퍼를 사용합니다. 이 버퍼를 `mkgmtime`에 제공하면 이전 내용이 제거됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_mkgmtime.c  

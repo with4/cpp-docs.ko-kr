@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf7f561d241d408c0f29ea295a83a296d3dfa6b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d8a37241c0cf9e758a6863f9e7bdf24e9f7b9db3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultisetempty-stlclr"></a>hash_multiset::empty(STL/CLR)
 요소가 있는지 여부를 테스트합니다.  
@@ -33,7 +36,7 @@ bool empty();
 ## <a name="remarks"></a>설명  
  멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`합니다. Hash_multiset 비어 있는지 여부를 테스트 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_multiset_empty.cpp   

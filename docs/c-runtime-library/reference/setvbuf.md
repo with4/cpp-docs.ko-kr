@@ -32,11 +32,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5020a0186399ec35fb42a0479f7466318c45c18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0855982627c60c51ec5753031ae932ffd430f024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setvbuf"></a>setvbuf
 스트림 버퍼링 및 버퍼 크기를 제어합니다.  
@@ -66,11 +67,11 @@ int setvbuf(
  버퍼 크기(바이트)입니다. 허용 가능한 범위는 2 <= `size` <= INT_MAX (2147483647)입니다. 내부적으로 `size`에 대해 제공되는 값은 가장 가까운 2의 배수로 내려집니다.  
   
 ## <a name="return-value"></a>반환 값  
- 정상적으로 실행되는 경우 0을 반환합니다.  
+ 성공하면 0을 반환합니다.  
   
  `stream`이 `NULL`이거나 `mode` 또는 `size`가 유효한 변경 범위 내에 없으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이 함수는 -1을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
- 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
+ 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist, 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  `setvbuf` 함수를 사용하면 프로그램이 `stream`에 대한 버퍼링 및 버퍼 크기를 모두 제어할 수 있습니다. `stream`은 열린 이후 I/O 작업이 수행되지 않은 열린 파일을 참조해야 합니다. `buffer`에서 가리키는 배열은 버퍼로 사용됩니다. 단, 배열이 `NULL`인 경우 `setvbuf`는 길이가 `size`/2 * 2바이트인 자동으로 할당된 버퍼를 사용합니다.  
@@ -88,16 +89,16 @@ int setvbuf(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`setvbuf`|\<stdio.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_setvbuf.c  

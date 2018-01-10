@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _lfind_s
+apiname: _lfind_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - lfind_s
 - _lfind_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - linear searching
 - keys, finding in arrays
@@ -36,30 +33,16 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c50893f1dc73db9f928eaea346a381d1bd991d2f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8bff33c66ebe8bdb2b5eb497aad2e3a11bc04a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lfinds"></a>_lfind_s
 지정된 키에 대해 선형 검색을 수행합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 향상된 [_lfind](../../c-runtime-library/reference/lfind.md) 버전입니다.  
@@ -105,10 +88,10 @@ void *_lfind_s(
   
 |key|base|compare|num|size|errno|  
 |---------|----------|-------------|---------|----------|-----------|  
-|`NULL`|모두|모두|모두|모두|`EINVAL`|  
-|모두|`NULL`|모두|!= 0|모두|`EINVAL`|  
-|모두|모두|모두|any|0|`EINVAL`|  
-|any|모두|`NULL`|an|모두|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|0|`EINVAL`|  
+|any|any|`NULL`|an|모두|`EINVAL`|  
   
 ## <a name="remarks"></a>설명  
  `_lfind_s` 함수는 각각 `width` 바이트인 `num` 요소의 배열에서 `key` 값에 대해 선형 검색을 수행합니다. `bsearch_s`와 달리 `_lfind_s`에서는 배열을 정렬할 필요가 없습니다. `base` 인수는 검색할 배열의 밑에 대한 포인터입니다. `compare` 인수는 두 배열 요소를 비교하여 해당 관계를 지정하는 값을 반환하는 사용자가 제공한 루틴에 대한 포인터입니다. `_lfind_s`는 검색 중에 `compare` 루틴을 한 번 이상 호출하며 각 호출에서 `context` 포인터 및 두 배열 요소에 대한 포인터를 전달합니다. `compare` 루틴은 요소를 비교한 다음 0이 아닌 값(요소가 다르다는 의미) 또는 0(요소가 동일하다는 의미)을 반환합니다.  
@@ -117,13 +100,13 @@ void *_lfind_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_lfind_s`|\<search.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_lfind_s.cpp  

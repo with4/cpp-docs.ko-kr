@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f57a4fb9fb35c60f051642120e2fc62d2306da7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d7b2a64ec8fa7565d17ab04683fec07c48aea3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP(#line 지시문 없이 stdout로 전처리)
 C 및 c + + 소스 파일을 전처리 하 고 표준 출력 장치 전처리 파일을 복사 합니다.  
@@ -64,7 +65,7 @@ C 및 c + + 소스 파일을 전처리 하 고 표준 출력 장치 전처리 �
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령줄을 실행 하면 `ADD.C`, 의견, 유지 및 표준 출력 장치에 결과 표시 합니다.  
   
 ```  

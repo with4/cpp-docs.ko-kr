@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a36cfa6c0171f7f05d308aef2cd2c84e62ce296
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33e9245654f0ec2e9af65258eb5be7b4230ad6fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makefile-project-wizard"></a>메이크파일 프로젝트 마법사
 이 마법사를 사용 하 여 실행 하는 빌드 엔진에 대 한 명령줄을 만듭니다. 프로젝트를 만든 후이 확인 및 프로젝트의 프로젝트 속성을 편집할 수 있습니다 [속성 페이지](../ide/working-with-project-properties.md)합니다.  

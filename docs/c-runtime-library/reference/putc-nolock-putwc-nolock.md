@@ -45,11 +45,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8da1041a5d719145625470aaed542cc3030bd80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad994b11cecb304bd91d357516aa7c81a7351917
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
 스레드를 잠그지 않고 스트림에 문자를 씁니다.  
@@ -83,7 +84,7 @@ wint_t _putwc_nolock(
   
  `_putwc_nolock`은 `_putc_nolock`의 와이드 문자 버전이며, 이 두 함수는 스트림이 ANSI 모드에서 열리는 경우 동일하게 작동합니다. `_putc_nolock`는 현재 UNICODE 스트림에 대한 출력을 지원하지 않습니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -91,7 +92,7 @@ wint_t _putwc_nolock(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_putc_nolock`|\<stdio.h>|  
 |`_putwc_nolock`|\<stdio.h> 또는 \<wchar.h>|  
@@ -101,7 +102,7 @@ wint_t _putwc_nolock(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_putc_nolock.c  

@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1dbf2e353ffb060a7bba2f38617e8fa86a1ab9c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a548e21e6bb485a326a2a9e34c6f47d968bbb6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="out-output-file-name"></a>/OUT(출력 파일 이름)
 ```  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
  *filename*  
  출력 파일에 대 한 사용자 지정 이름입니다. 기본 이름을 대체합니다.  

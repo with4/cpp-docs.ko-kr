@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 886669e6c6be58f02b9b8fa49468ca8b3b19c4a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3375e39120fdc8f2b0d8d5502aa6def997511ff5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t(wchar_t를 네이티브 형식으로 인식)
 C++ 표준에 따라 `wchar_t`를 기본 제공 형식으로 구문 분석합니다. 기본적으로 **/zc: wchar_t** 켜져 있습니다.  

@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3d93dc4e80178b1bdd90a6fe86e4a6f051f77f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5280f09e7d17036652acf6fc62d4d4f5ab31c758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfaces-atl-control-wizard"></a>인터페이스, ATL 컨트롤 마법사
 마법사의이 페이지는 컨트롤이 지 원하는 인터페이스를 식별 합니다. 기본적으로 지원 되는 인터페이스는 일반적으로 대부분의 컨테이너에서 사용 하는 것입니다.  

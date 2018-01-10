@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Win32ThreadTraits
 - ATLBASE/ATL::Win32ThreadTraits
 - ATLBASE/ATL::Win32ThreadTraits::CreateThread
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - threading [ATL], Windows threads
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf4fd3ffaf2fc4a035fdecf679ab507ebb557f38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: a777b3c1ae6056fe4ae414371cbed4eee1accd86
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 클래스
 이 클래스는 Windows 스레드에 대 한 만들기 함수를 제공합니다. 스레드 CRT 함수를 사용 하지 않는 경우에이 클래스를 사용 합니다.  
@@ -106,4 +104,3 @@ static HANDLE CreateThread(
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)
-

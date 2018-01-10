@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e3b0f986d4bc805a3cac1ec49193f3749f31af9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 028b31044d035def628785969a04c27af4699f65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE(계측된 빌드 프로파일링 생성)
 링커에서 PGO(프로필 기반 최적화)를 지원하기 위한 .pgd 파일의 생성을 지정합니다.  /GENPROFILE 및 /FASTGENPROFILE은 서로 다른 기본 매개 변수를 사용합니다. 프로파일링 중 속도 및 메모리 사용보다 정밀도를 우선하려면 /GENPROFILE을 사용합니다. 정밀도보다 더 작은 메모리 사용 및 속도를 우선하려면 /FASTGENPROFILE을 사용합니다.  

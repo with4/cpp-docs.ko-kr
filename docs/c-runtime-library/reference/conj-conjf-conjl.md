@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 82110e42b8cf28e3e285e0027ea31d61c8cc9370
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce33f536a97f5f78ae573a757402cc316e85f5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 복소수의 켤레 복소수를 검색합니다.  
@@ -84,11 +85,11 @@ _Lcomplex conjl(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|C 헤더|C++ 헤더|  
+|루틴에서 반환된 값|C 헤더|C++ 헤더|  
 |-------------|--------------|------------------|  
 |`conj`,               `conjf`, `conjl`|\<complex.h>|\<ccomplex>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

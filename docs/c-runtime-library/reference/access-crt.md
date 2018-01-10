@@ -28,11 +28,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4285d6797c3c84513ef77adb2b2b4d94a713b8a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 601889e385ce71af5ed70269c39381a7b3a82990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-crt"></a>access(CRT)
 이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_access](../../c-runtime-library/reference/access-waccess.md) 또는 보안이 강화된 [_access_s](../../c-runtime-library/reference/access-s-waccess-s.md)를 사용하세요.

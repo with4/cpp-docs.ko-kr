@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e776803ab6f7046b2db1f80899ee6e465deb399
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f01daff11d41263766b66ed335c60d4bf83ced45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="map-generate-mapfile"></a>/MAP(맵파일 생성)
 ```  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
  *filename*  
  맵 파일에 대 한 사용자 지정 이름입니다. 기본 이름을 대체합니다.  

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1e222e3fb78807f4c67c746677e1223c7776a41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae69cd9e88b97a31dda86648d86e143ab9bd5d40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codeseg-declspec"></a>code_seg (__declspec)
 **Microsoft 전용**  
@@ -55,7 +56,7 @@ auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
   
  여러 세그먼트에 특정 멤버 함수, 특히 가상 멤버 함수를 배치할 때 주의해야 합니다. 기본 클래스 메서드가 페이징되지 않은 세그먼트에 상주할 때 페이징된 세그먼트에 상주하는 파생된 클래스에 가상 함수를 정의하는 경우 다른 기본 클래스 메서드 또는 사용자 코드는 가상 메서드를 호출해도 페이지 오류가 트리거되지 않는다고 가정할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 암시적 및 명시적 템플릿 특수화를 사용할 때 `code_seg` 특성이 세그먼트 배치를 제어하는 방법을 보여 줍니다.  
   
 ```  

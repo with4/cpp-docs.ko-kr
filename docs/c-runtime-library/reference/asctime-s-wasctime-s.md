@@ -41,11 +41,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4b72b82e1b8c7ae2d036d35b00e8a49b7516d64b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30a48101ea2db80f7c8a37434c1fd73c9c535286
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 `tm` 시간 구조체를 문자열로 변환합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 강화된 [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)의 버전입니다.  
@@ -86,7 +87,7 @@ errno_t _wasctime_s(
  [in] 시간/날짜 구조체입니다. 이 함수는 유효한 `struct tm` 개체에 대한 포인터가 있다고 가정합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공할 경우 0입니다. 실패할 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 반환 값은 오류 코드입니다. 오류 코드는 ERRNO.H에서 정의됩니다. 자세한 내용은 [errno 상수](../../c-runtime-library/errno-constants.md)를 참조하세요. 각 오류 조건에 대해 반환되는 실제 오류 코드가 다음 표에 나와 있습니다.  
+ 정상적으로 실행되는 경우 0입니다. 실패할 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 반환 값은 오류 코드입니다. 오류 코드는 ERRNO.H에서 정의됩니다. 자세한 내용은 [errno 상수](../../c-runtime-library/errno-constants.md)를 참조하세요. 각 오류 조건에 대해 반환되는 실제 오류 코드가 다음 표에 나와 있습니다.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
@@ -128,11 +129,11 @@ errno_t _wasctime_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|  
   
- C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 더욱 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 더욱 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`asctime_s`|\<time.h>|  
 |`_wasctime_s`|\<time.h> 또는 \<wchar.h>|  
@@ -142,7 +143,7 @@ errno_t _wasctime_s(
   
  전달된 크기 인수가 버퍼의 실제 크기보다 크면 [버퍼 오버런](http://msdn.microsoft.com/library/windows/desktop/ms717795)이 발생할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 시스템 시간을 정수(Long) `aclock`에 배치하고, 이를 `newtime` 구조체로 전환한 다음, `asctime_s` 함수를 사용하여 출력용 문자열 형식으로 변환합니다.  
   
 ```  

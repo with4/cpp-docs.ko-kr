@@ -1,65 +1,66 @@
 ---
-title: "/SWAPRUN(링커 출력을 스왑 파일로 로드) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.SwapRunFromNet"
-  - "/swaprun"
-  - "VC.Project.VCLinkerTool.SwapRunFromCD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SWAPRUN 링커 옵션"
-  - "파일[C++], LINK"
-  - "LINK 도구[C++], 출력"
-  - "링커[C++], 스왑 파일에 출력 복사"
-  - "출력 파일, 링커"
-  - "링커 출력을 위한 스왑 파일"
-  - "SWAPRUN 링커 옵션"
-  - "-SWAPRUN 링커 옵션"
+title: "-SWAPRUN (부하 링커 출력을 스왑 파일로) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.SwapRunFromNet
+- /swaprun
+- VC.Project.VCLinkerTool.SwapRunFromCD
+dev_langs: C++
+helpviewer_keywords:
+- -SWAPRUN linker option
+- files [C++], LINK
+- LINK tool [C++], output
+- linker [C++], copying output to swap file
+- swap file for linker output
+- output files, linker
+- /SWAPRUN linker option
+- SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a3b6829a20e80ab8548460205169e1cd258694e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /SWAPRUN(링커 출력을 스왑 파일로 로드)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN(링커 출력을 스왑 파일로 로드)
 ```  
 /SWAPRUN:{NET|CD}  
 ```  
   
-## 설명  
- \/SWAPRUN 옵션을 사용하면 운영 체제에서는 먼저 링커 출력을 스왑 파일로 복사한 다음 스왑 파일에서 이미지를 실행합니다.  이 기능은 Windows NT 4.0 이상의 기능입니다.  
+## <a name="remarks"></a>설명  
+ /SWAPRUN 옵션 링커가 첫 번째 복사 하도록 운영 체제의 스왑 파일에 출력 한 후 여기에서 이미지를 실행 합니다. 이 기능은 Windows NT 4.0 (이상)입니다.  
   
- NET가 지정되어 있으면 운영 체제에서는 먼저 네트워크의 이진 이미지를 스왑 파일로 복사한 다음 스왑 파일에서 해당 이미지를 로드합니다.  이 옵션은 네트워크를 통해 응용 프로그램을 실행할 때 유용합니다.  CD가 지정되어 있으면 운영 체제에서는 이동식 디스크에 있는 이미지를 페이지 파일로 복사한 다음 로드합니다.  
+ NET가 지정 하는 경우 운영 체제 먼저 이진 이미지 네트워크에서 스왑 파일에 복사한 위치에서 로드 합니다. 이 옵션은 네트워크를 통해 응용 프로그램을 실행 하는 데 유용 합니다. CD가 지정 운영 체제를 복사 하는 이동식 디스크에 있는 이미지를 페이지 파일로 다음 로드 합니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
-3.  **시스템** 속성 페이지를 클릭합니다.  
+3.  클릭는 **시스템** 속성 페이지.  
   
-4.  다음 속성 중 하나를 수정합니다.  
+4.  다음 속성 중 하나를 수정 합니다.  
   
     -   **CD에서 스왑 실행**  
   
-    -   **Network에서 스왑 실행**  
+    -   **네트워크에서 스왑 실행**  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
 1.  <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromCD%2A> 및 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromNet%2A> 속성을 참조하십시오.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

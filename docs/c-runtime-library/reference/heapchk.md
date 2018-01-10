@@ -36,11 +36,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9fcbafbb98385878dbc84f300e8d2bf0dac581c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 790d887009137ccc9115484b2ace57302c94d851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapchk"></a>_heapchk
 힙에서 일관성 확인을 실행합니다.  
@@ -72,17 +73,17 @@ int _heapchk( void );
  또한 오류가 발생하는 경우 `_heapchk` 는 `errno` 를 `ENOSYS`로 설정합니다.  
   
 ## <a name="remarks"></a>설명  
- `_heapchk` 함수를 통해 힙의 최소 일관성을 확인하여 힙 관련 문제를 디버그할 수 있습니다. 운영 체제가 `_heapchk`(예: Windows 98)를 지원하지 않는 경우 함수에서 `_HEAPOK`를 반환하고 `errno`를 `ENOSYS`로 설정합니다.  
+ `_heapchk` 함수를 통해 힙의 최소 일관성을 확인하여 힙 관련 문제를 디버그할 수 있습니다. 운영 체제가 `_heapchk`(예: Windows 98)을 지원하지 않는 경우 함수에서 `_HEAPOK`를 반환하고 `errno`를 `ENOSYS`로 설정합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_heapchk`|\<malloc.h>|\<errno.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_heapchk.c  

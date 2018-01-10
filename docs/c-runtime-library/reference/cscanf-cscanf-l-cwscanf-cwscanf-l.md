@@ -1,74 +1,75 @@
 ---
-title: "_cscanf, _cscanf_l, _cwscanf, _cwscanf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cscanf_l"
-  - "_cscanf"
-  - "_cwscanf"
-  - "_cwscanf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_cwscanf"
-  - "cwscanf_l"
-  - "tcscanf_l"
-  - "_tcscanf_l"
-  - "_cscanf"
-  - "_cscanf_l"
-  - "tcscanf"
-  - "cwscanf"
-  - "_cwscanf_l"
-  - "cscanf_l"
-  - "_tcscanf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_cscanf 함수"
-  - "_cscanf_l 함수"
-  - "_cwscanf 함수"
-  - "_cwscanf_l 함수"
-  - "_tcscanf 함수"
-  - "_tcscanf_l 함수"
-  - "cscanf_l 함수"
-  - "cwscanf 함수"
-  - "cwscanf_l 함수"
-  - "데이터[C++], 콘솔에서 읽기"
-  - "데이터 읽기[C++], 콘솔에서"
-  - "tcscanf 함수"
-  - "tcscanf_l 함수"
+title: "_cscanf, _cscanf_l, _cwscanf, _cwscanf_l | Microsoft 문서"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cscanf_l
+- _cscanf
+- _cwscanf
+- _cwscanf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _cwscanf
+- cwscanf_l
+- tcscanf_l
+- _tcscanf_l
+- _cscanf
+- _cscanf_l
+- tcscanf
+- cwscanf
+- _cwscanf_l
+- cscanf_l
+- _tcscanf
+dev_langs: C++
+helpviewer_keywords:
+- _cwscanf function
+- data [C++], reading from the console
+- cscanf_l function
+- tcscanf function
+- _cscanf_l function
+- cwscanf function
+- _tcscanf_l function
+- _cscanf function
+- _tcscanf function
+- cwscanf_l function
+- tcscanf_l function
+- reading data [C++], from the console
+- _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d49421d98bc6a51c86dc23d1a05e2b5ae943df88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-읽기 콘솔에서 데이터를 포맷합니다.  이러한 기능의 더 안전한 버전을 사용할 수 있습니다. [\_cscanf\_s, \_cscanf\_s\_l, \_cwscanf\_s, \_cwscanf\_s\_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)를 참조하십시오.  
+# <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
+콘솔에서 형식이 지정된 데이터를 읽습니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)을 참조하세요.  
   
 > [!IMPORTANT]
->  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  자세한 내용은 [\/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하십시오.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 int _cscanf(   
@@ -91,7 +92,7 @@ int _cwscanf_l(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `format`  
  형식 컨트롤 문자열입니다.  
   
@@ -101,33 +102,33 @@ int _cwscanf_l(
  `locale`  
  사용할 로캘입니다.  
   
-## 반환 값  
- 성공적으로 변환되어 할당된 필드 개수입니다.  반환 값을 읽지만 할당되지 않은 필드를 포함하지 않습니다.  반환 값은 파일의 끝에 읽기 위해 시도하는 `EOF` 입니다.  이 운영 체제의 명령줄 수준에서 키보드 입력을 리디렉션할 때 발생할 수 있습니다.  반환 값 0은 어떤 필드도 할당되지 않았음을 의미합니다.  
+## <a name="return-value"></a>반환 값  
+ 성공적으로 변환되고 할당된 필드 수입니다. 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값은 파일의 끝에서 읽으려고 시도할 `EOF`입니다. 키보드 입력이 운영 체제 명령줄 수준에서 리디렉션될 때 발생할 수 있습니다. 반환 값이 0이면 할당된 필드가 없음을 의미합니다.  
   
-## 설명  
- 이 `_cscanf` 함수는 `argument` 으로 주는 지정된 위치의 콘솔에서 데이터를 바로 읽습니다.  이 [\_getche](../../c-runtime-library/reference/getch-getwch.md) 함수는 문자를 읽는데 사용합니다.  임의의 각 매개변수는 `format`에서 형식 지정자와 일치하는 특정 형식의 변수에 대한 포인터가 되어야 합니다.  형식은 입력 필드의 해석을 제어하고 [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 함수의 `format` 인수와 동일한 폼과 함수를 가집니다.  이 `_cscanf` 가 정상적으로 입력된 문자를 반영하는 동안, `_ungetch` 의 마지막 호출에 하지 않게 됩니다.  
+## <a name="remarks"></a>설명  
+ `_cscanf` 함수는 콘솔의 데이터를 `argument`에 의해 지정된 위치로 직접 읽습니다. [_getche](../../c-runtime-library/reference/getch-getwch.md) 함수는 문자를 읽는 데 사용합니다. 각 선택적 매개 변수는 `format`의 형식 지정자에 해당하는 형식의 변수에 대한 포인터여야 합니다. 이 형식은 입력 필드의 해석을 제어하고 [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 함수에 대한 `format` 매개 변수와 동일한 형식 및 기능을 가집니다. `_cscanf`는 일반적으로 입력 문자를 에코하지만, 마지막 호출이 `_ungetch`에 대한 호출인 경우에는 에코하지 않습니다.  
   
- 이 함수는 해당 매개 변수의 유효성을 검사합니다.  포멧이 NULL인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다.  계속해서 실행하도록 허용된 경우, 이러한 함수는 `errno` 를 `EINVAL` 로 설정하고 `EOF` 을 반환합니다.  
+ 이 함수는 해당 매개 변수의 유효성을 검사합니다. format이 NULL인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno`는 `EINVAL`로 설정되고 함수는 `EOF`을 반환합니다.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   
-### 제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
-|TCHAR.H 루틴|\_UNICODE 및 \_MBCS 정의되지 않음|\_MBCS 정의됨|\_UNICODE 정의됨|  
-|----------------|--------------------------------|----------------|-------------------|  
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcscanf`|`_cscanf`|`_cscanf`|`_cwscanf`|  
 |`_tcscanf_l`|`_cscanf_l`|`_cscanf_l`|`_cwscanf_l`|  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
-|--------|-----------|  
-|`_cscanf`,`_cscanf_l`|\<conio.h\>|  
-|`_cwscanf`, `_cwscanf_l`|\<conio.h\> 또는 \<wchar.h\>|  
+|루틴에서 반환된 값|필수 헤더|  
+|-------------|---------------------|  
+|`_cscanf`,`_cscanf_l`|\<conio.h>|  
+|`_cwscanf`, `_cwscanf_l`|\<conio.h> 또는 \<wchar.h>|  
   
- 호환성 정보에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하십시오.  
+ 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_cscanf.c  
@@ -155,22 +156,22 @@ int main( void )
 }  
 ```  
   
-## 입력  
+## <a name="input"></a>입력  
   
 ```  
 1 2 3  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 Enter three integers: 1 2 3  
 You entered 3 2 1  
 ```  
   
-## 참고 항목  
- [콘솔 및 포트 I\/O](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)
+## <a name="see-also"></a>참고 항목  
+ [콘솔 및 포트 I/O](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0eb123cca28fdae379b387aaf09d0a200a88287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c83f159882b9ed6fcfe5557c150413303c401dda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu(미리 컴파일된 헤더 파일 사용)
 현재 컴파일에서 기존의 미리 컴파일된 헤더 (.pch) 파일을 사용 하려면 컴파일러를 지시 합니다.  

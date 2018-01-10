@@ -1,35 +1,37 @@
 ---
-title: "CSession::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CSession::Open"
-  - "CSession::Open"
-  - "CSession.Open"
-  - "ATL.CSession.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open 메서드"
+title: 'Csession:: Open | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CSession::Open
+- CSession::Open
+- CSession.Open
+- ATL.CSession.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: c2050c2c-9817-4857-be49-189f346968f6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3aa0f6b694bc594ec00511ce39b7887bf26ecae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CSession::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Opens a new session for the data source object.  
+# <a name="csessionopen"></a>CSession::Open
+데이터 원본 개체에 대 한 새 세션을 엽니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -40,24 +42,24 @@ Opens a new session for the data source object.
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ds`  
- \[in\] The data source for which the session is to be opened.  
+ [in] 세션이 열어야 하는 데이터 원본입니다.  
   
  *pPropSet*  
- \[in\] A pointer to an array of [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) structures containing properties and values to be set.  See [Property Sets and Property Groups](https://msdn.microsoft.com/en-us/library/ms713696.aspx) in the *OLE DB Programmer's Reference* in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] 배열에 대 한 포인터 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 속성 및 값을 설정할 수를 포함 하는 구조체입니다. 참조 [속성 집합 및 속성 그룹](https://msdn.microsoft.com/en-us/library/ms713696.aspx) 에 *OLE DB Programmer's Reference* in the Windows SDK입니다.  
   
  `ulPropSets`  
- \[in\] The number of [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) structures passed in the *pPropSet* argument.  
+ [in] 수가 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 구조체에 전달 된 *pPropSet* 인수입니다.  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 설명  
- You must open the data source object using [CDataSource::Open](../../data/oledb/cdatasource-open.md) before passing it to `CSession::Open`.  
+## <a name="remarks"></a>설명  
+ 사용 하 여 데이터 원본 개체를 열어야 [cdatasource:: Open](../../data/oledb/cdatasource-open.md) 전달 하기 전에 `CSession::Open`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CSession 클래스](../../data/oledb/csession-class.md)

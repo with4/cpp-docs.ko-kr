@@ -42,11 +42,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d87ba7e23ccc50cb6debbdb91912f1ae3e90ce1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9515212418b4bd4e8d9957254b2fafaf451a3adc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 고유한 파일 이름을 만듭니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_mktemp, _wmktemp](../../c-runtime-library/reference/mktemp-wmktemp.md)의 버전입니다.  
@@ -86,8 +87,8 @@ errno_t _wmktemp_s(
   
 |`template`|`sizeInChars`|**반환 값**|**템플릿의 새 값**|  
 |----------------|-------------------|----------------------|-------------------------------|  
-|`NULL`|모두|`EINVAL`|`NULL`|  
-|잘못된 형식(올바른 형식은 `Remarks` 섹션 참조)|모두|`EINVAL`|빈 문자열|  
+|`NULL`|any|`EINVAL`|`NULL`|  
+|잘못된 형식(올바른 형식은 `Remarks` 섹션 참조)|any|`EINVAL`|빈 문자열|  
 |any|<= X의 수|`EINVAL`|빈 문자열|  
   
  위의 오류 조건 중 하나라도 발생하는 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `errno`는 `EINVAL`로 설정되고 함수는 `EINVAL`을 반환합니다.  
@@ -95,7 +96,7 @@ errno_t _wmktemp_s(
 ## <a name="remarks"></a>설명  
  `_mktemp_s` 함수는 호출 후에 `template` 포인터가 새 파일 이름을 포함하는 문자열을 가리키도록 `template` 인수를 수정하여 고유한 파일 이름을 만듭니다. `_mktemp_s`는 런타임 시스템에서 최근에 사용 중인 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하면서 자동으로 멀티바이트 문자열 인수를 적절하게 처리합니다. `_wmktemp_s`는 `_mktemp_s`의 와이드 문자 버전이며 `_wmktemp_s`의 인수는 와이드 문자열입니다. `_wmktemp_s` 및 `_mktemp_s`는 동일하게 작동합니다. 단, `_wmktemp_s`는 멀티바이트 문자열을 처리하지 않습니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -129,18 +130,18 @@ fna12345
   
  `_mktemp_s`는 기본 및 템플릿 값의 지정된 조합에 대해 최대 26개의 고유한 파일 이름을 만들 수 있습니다. 따라서 FNZ12345는 `_mktemp_s`가 이 예제에서 사용된 `base` 및 `template` 값에 대해 만들 수 있는 마지막 고유한 파일 이름입니다.  
   
- C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_mktemp_s`|\<io.h>|  
 |`_wmktemp_s`|\<io.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_mktemp_s.cpp  

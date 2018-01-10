@@ -1,28 +1,30 @@
 ---
 title: "OLE DB 공급자에 문자열 저장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "사용자 레코드, 편집"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 11c058bacee52eb2b1df771a27d8695113f1c71d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# OLE DB 공급자에 문자열 저장
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ATL OLE DB 마법사는 MyProviderRS.h에 `CWindowsFile`이라는 기본 사용자 레코드를 만듭니다.  두 문자열을 처리하려면 `CWindowsFile`을 수정하거나 다음 코드에서와 같이 사용자 고유의 레코드를 추가합니다.  
+# <a name="storing-strings-in-the-ole-db-provider"></a>OLE DB 공급자에 문자열 저장
+MyProviderRS.h, ATL OLE DB 공급자 마법사 라는 기본 사용자 레코드를 만듭니다. `CWindowsFile`합니다. 수정 하거나 두 문자열을 처리 하려면 `CWindowsFile` 또는 다음 코드에 표시 된 대로 사용자 고유의 레코드를 추가 합니다.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +51,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- 데이터 멤버 `szCommand`와 `szText`는 두 문자열을 나타내고, 필요한 경우 `szCommand2`와 `szText2`를 추가 열에 제공합니다.  `dwBookmark` 데이터 멤버는 단순한 읽기 전용 공급자에는 필요하지 않지만 나중에 `IRowsetLocate` 인터페이스를 추가하는 데 사용됩니다. [단순한 읽기 전용 공급자의 기능 향상](../../data/oledb/enhancing-the-simple-read-only-provider.md)을 참조하십시오.  `==` 연산자는 인스턴스를 비교합니다. 이 연산자를 구현하는 것은 선택 사항입니다.  
+ 데이터 멤버 `szCommand` 및 `szText` 두 문자열을 나타낼 `szCommand2` 및 `szText2` 필요한 경우 추가 열을 제공 합니다. 데이터 멤버 `dwBookmark` 이 단순한 읽기 전용 공급자에는 필요 하지 않지만 나중에 추가 하는 데 사용 되는 `IRowsetLocate` 인터페이스; 참조 [단순한 읽기 전용 공급자의 향상](../../data/oledb/enhancing-the-simple-read-only-provider.md)합니다. `==` 연산자 인스턴스를 비교 (구현이 연산자는 선택 사항).  
   
- 이 작업을 마치면 공급자를 컴파일하고 실행할 수 있습니다.  공급자를 테스트하려면 일치하는 기능이 있는 소비자가 있어야 합니다.  [단순 소비자 구현](../../data/oledb/implementing-a-simple-consumer.md)에서 테스트 소비자를 만드는 방법을 볼 수 있습니다.  공급자와 함께 테스트 소비자를 실행합니다.  **Test Consumer** 대화 상자의 **Run** 단추를 클릭하여 테스트 소비자가 공급자에서 적절한 문자열을 검색하는지 확인합니다.  
+ 이 도구를 실행 하는 경우 공급자를 컴파일 및 실행 준비가 됩니다. 공급자를 테스트 하려면이 기능을 일치 하는 소비자가 있어야 합니다. [단순 소비자 구현](../../data/oledb/implementing-a-simple-consumer.md) 에서 테스트 소비자를 만드는 방법을 보여 줍니다. 테스트 소비자는 공급자와 함께 실행 합니다. 클릭할 때 테스트 소비자의 공급자에서 적절 한 문자열 검색 있는지 확인 하십시오.는 **실행** 단추는 **테스트 소비자** 대화 상자.  
   
- 공급자를 성공적으로 테스트했으면 추가 인터페이스를 구현하여 기능을 향상시킬 수 있습니다.  [단순한 읽기 전용 공급자의 기능 향상](../../data/oledb/enhancing-the-simple-read-only-provider.md)에서 예제를 참조하십시오.  
+ 공급자를 성공적으로 테스트 하는 경우에 추가 인터페이스를 구현 하 여 기능을 향상 하는 것이 좋습니다. 예제를 [단순한 읽기 전용 공급자 향상](../../data/oledb/enhancing-the-simple-read-only-provider.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [단순한 읽기 전용 공급자 구현](../../data/oledb/implementing-the-simple-read-only-provider.md)

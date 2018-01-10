@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e77139cdf93d385b92eb87483c1b03541b18650
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 814e7518c6ed7052abc93b9e4705be93172b1e7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="this-pointer"></a>this 포인터
 **이** 포인터는 포인터의 비정적 멤버 함수 내 에서만 액세스할 수는 **클래스**, `struct`, 또는 **union** 유형입니다. 멤버 함수가 호출되는 개체를 가리킵니다. 정적 멤버 함수를 포함 하지 않습니다는 **이** 포인터입니다.  
@@ -77,7 +78,7 @@ if (&Object != this) {
   
  경우에 따라서는 **이** 포인터를 직접 사용-예를 들어 자체 참조 데이터를 조작 하기 위한 구조를 현재 개체의 주소가 필요 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // this_pointer.cpp  

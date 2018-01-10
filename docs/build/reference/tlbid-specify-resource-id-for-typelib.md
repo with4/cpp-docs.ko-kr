@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9a260882b7e4623149e9e82a3a635f7230b6985a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a552edab9f2de646de3b869bf84467924b5db348
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID(TypeLib의 리소스 ID 지정)
 ```  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
  `id`  
  링커 생성 형식 라이브러리에 대 한 사용자 지정 값입니다. 기본 리소스 id 1 대신 사용 됩니다.  

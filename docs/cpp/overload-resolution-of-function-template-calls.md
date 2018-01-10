@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- function templates overload resolution
+dev_langs: C++
+helpviewer_keywords: function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: f5c4a8e6392bc5b4338738b56099adac268e7af1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 64bc9371fcddad5f76f1474832a8d69188b60583
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>함수 템플릿 호출의 오버로드 확인
 함수 템플릿은 동일한 이름의 비템플릿 함수를 오버로드할 수 있습니다. 이 시나리오에서 함수 호출은 첫 번째 템플릿 인수 추론을 사용하여 고유한 특수화를 통해 함수 템플릿을 인스턴스화할 수 있습니다. 템플릿 인수 추론이 실패하는 경우 다른 함수 오버로드가 호출을 해결하기 위해 고려됩니다. 후보 집합이라고도 불리는 이러한 다른 오버로드는 비템플릿 함수와 다른 인스턴스화된 함수 템플릿을 포함합니다. 템플릿 인수 추론이 성공하는 경우 생성된 함수는 오버로드 확인 규칙에 따라 다른 함수와 비교하여 최상의 경우를 결정합니다. 자세한 내용은 참조 [함수 오버 로드](function-overloading.md)합니다.  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  비템플릿 함수가 템플릿 함수와 동일하게 일치하는 경우 다음 예제에서 템플릿 인수가 명시적으로 지정되지 않은 경우 비템플릿 함수가 호출 `f(1, 1)`로써 선택됩니다.  
   
@@ -60,7 +57,7 @@ void f(T1, T2)
 void f(T1, T2)  
 ```  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  다음 예제는 비템플릿 함수를 변환해야 하는 경우 정확하게 일치하는 템플릿 함수가 선호됨을 보여 줍니다.  
   
@@ -97,4 +94,3 @@ void f(T1, T2)
  [이름 확인](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   
  
-

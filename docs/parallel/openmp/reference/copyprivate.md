@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45b9e6ab273f80c2f19516933e6cac5bf9f1a739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ecbfa14b40a219d626293eff9fb602673bc194a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyprivate"></a>copyprivate
 하나 이상의 변수 모든 스레드 간에 공유 되지 않아야 지정 합니다.  
@@ -41,7 +42,7 @@ copyprivate(var)
   
  자세한 내용은 참조 [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // omp_copyprivate.cpp  

@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6d679d634d14f3a762a6ef3d32d2ca4c5d4b6f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e783413e207ff63f2b93b31af53b0b0a44ff68f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 문자가 멀티바이트 문자의 선행 바이트인지 여부를 결정합니다.  
@@ -84,7 +85,7 @@ int _isleadbyte_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`isleadbyte`|\<ctype.h>|  
 |`_isleadbyte_l`|\<ctype.h>|  

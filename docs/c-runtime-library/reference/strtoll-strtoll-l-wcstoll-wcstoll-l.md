@@ -45,11 +45,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0c0528427216f08723d67cb56018a3379562cf32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f449cd73a8536fb7dbdf46b7c7d1d45ad449cb10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 문자열을 `long long` 값으로 변환합니다.  
@@ -113,7 +114,7 @@ long long _wcstoll_l(
 |`_tcstoll`|`strtoll`|`strtoll`|`wcstoll`|  
 |`_tcstoll_l`|`_strtoll_l`|`_strtoll_l`|`_wcstoll_l`|  
   
- 로캘의 `LC_NUMERIC` 범주 설정에 따라 `nptr`의 기수 문자 인식이 결정됩니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 함수는 현재 로캘을 사용하며, `_strtoll_l` 및 `_wcstoll_l`은 전달된 로캘을 대신 사용한다는 점을 제외하면 접미사가 없는 해당 함수와 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 로캘의 `LC_NUMERIC` 범주 설정에 따라 `nptr`의 기수 문자 인식이 결정됩니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 함수는 현재 로캘을 사용하며, `_strtoll_l` 및 `_wcstoll_l`은 전달된 로캘을 대신 사용한다는 점을 제외하면 접미사가 없는 해당 함수와 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `endptr`이 `NULL`이 아니면 검색을 중지한 문자에 대한 포인터가 `endptr`에서 가리키는 위치에 저장됩니다. 올바른 숫자를 찾을 수 없거나 잘못된 밑을 지정하여 변환을 수행할 수 없는 경우에는 `nptr`의 값이 `endptr`에서 가리키는 위치에 저장됩니다.  
   
@@ -125,7 +126,7 @@ long long _wcstoll_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`strtoll`, `_strtoll_l`|\<stdlib.h>|  
 |`wcstoll`, `_wcstoll_l`|\<stdlib.h> 또는 \<wchar.h>|  

@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b4079889437af94fb5674411e140faa0ddcd403
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b5e0dd90894e052d4b9bcff08e7e12234dde8f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 클래스
 이 클래스는 메모리 매핑된 파일을 나타냅니다.  
@@ -95,7 +96,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>설명  
  필요에 따라 기존 개체를 사용 하 여 새 파일 매핑 개체를 만듭니다. 호출 해야 [CAtlFileMappingBase::MapFile](#mapfile) 특정 파일에 대 한 파일 매핑 개체를 만들거나 열 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
 ##  <a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
@@ -152,7 +153,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="return-value"></a>반환 값  
  매핑 크기를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)합니다.  
   
 ##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
@@ -189,7 +190,7 @@ HRESULT MapFile(
 ### <a name="remarks"></a>설명  
  파일 매핑 개체를 만든 후 파일의 크기 초과할 수 없습니다; 파일 매핑 개체의 크기 그렇지 않으면 모든 파일의 내용을 공유 하는 데 사용할 수 있는 됩니다. 자세한 내용은 참조 하십시오. [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) 및 [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)합니다.  
   
 ##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  

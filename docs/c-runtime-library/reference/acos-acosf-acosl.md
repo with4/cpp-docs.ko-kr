@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - acosf
 - math/acosf
 - math/acosl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - acos function
 - acosl function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5b5b2e5bca54f65a6fa54d43f92f60a704135110
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1daa54589ad1332f2cb85f7cc6fe03aa58d07a18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 아크코사인을 계산합니다.  
@@ -108,11 +92,11 @@ long double acosl(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|----------------------|  
 |`acos`, `acosf`, `acosl`|\<math.h>|\<errno.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램에서 -1에서 1 사이 범위의 값을 묻는 메시지가 나타납니다. 이 범위를 벗어나는 입력 값은 `_DOMAIN` 오류 메시지를 생성합니다. 올바른 값을 입력하는 경우 프로그램에서 해당 값의 아크사인 및 아크코사인을 인쇄합니다.  
   
 ```  

@@ -4,47 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4938
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4938
+f1_keywords: C4938
+dev_langs: C++
+helpviewer_keywords: C4938
 ms.assetid: 6acac81a-9d23-465e-b700-ed4b6e8edcd0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f4e3184d1833da65c73149eb89ab1be8b2249b4e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 102e0eeb7b682afed595be2be08c2ee8a69487f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4938"></a>컴파일러 경고(수준 4) C4938
 'var': /fp:strict 또는 #pragma fenv_access를 지정하면 부동 소수점 환산(reduction) 변수로 인해 일관성 없는 결과가 발생할 수 있습니다.  
   
- 사용 하지 않아야 [/fp: strict](../../build/reference/fp-specify-floating-point-behavior.md) 또는 [fenv_access](../../preprocessor/fenv-access.md) 으로 OpenMP 부동 소수점 많이 줄여 합계가 다른 순서로 계산 되므로 합니다. 따라서 결과가 /openmp를 사용하지 않을 경우의 결과와 다를 수 있습니다.  
+ 합계가 다른 순서로 계산되므로 OpenMP 부동 소수점 환산(reduction)과 함께 [/fp:strict](../../build/reference/fp-specify-floating-point-behavior.md) 또는 [fenv_access](../../preprocessor/fenv-access.md) 를 사용하면 안 됩니다. 따라서 결과가 /openmp를 사용하지 않을 경우의 결과와 다를 수 있습니다.  
   
  다음 샘플에서는 C4938을 생성합니다.  
   

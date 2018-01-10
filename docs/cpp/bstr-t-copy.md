@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c7a3bb2997bbec1c0e402c14985353dcf0bc768
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4bbc3c33488d2925c1a7f879adf50f015f79ec8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
 **Microsoft 전용**  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  캡슐화된 `BSTR` 개체에 새로 할당된 복사본을 반환합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  

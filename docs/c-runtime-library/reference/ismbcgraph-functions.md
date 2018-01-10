@@ -67,11 +67,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2079cb0b00513babd6dc2d5b6c91e82675acc74
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e06106db699ba98d3821cdf09bbe668f745f73fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 문자가 그래픽 문자, 표시 문자, 문장 부호 문자 또는 공백 문자인지 여부를 확인합니다.  
@@ -129,12 +130,12 @@ int _ismbcspace_l(
 ## <a name="return-value"></a>반환 값  
  이러한 각 루틴은 문자가 테스트 조건을 만족하는 경우 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. `c`가 <= 255이고 해당 `_ismbb` 루틴(예를 들어 `_ismbcalnum`은 `_ismbbalnum`에 해당됨)이 있는 경우 결과는 해당 `_ismbb` 루틴의 반환 값입니다.  
   
- `_l` 접미사가 있는 함수는 로컬 종속 동작에 대해 현재 로캘 대신 전달된 로캘을 사용한다는 점을 제외하고 이러한 함수의 버전은 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_l` 접미사가 있는 함수는 로컬 종속 동작에 대해 현재 로캘 대신 전달된 로캘을 사용한다는 점을 제외하고 이러한 함수의 버전은 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  이러한 각 함수는 지정한 조건에 대해 주어진 멀티바이트 문자를 테스트합니다.  
   
-|루틴|테스트 조건|932 코드 페이지 예제|  
+|루틴에서 반환된 값|테스트 조건|932 코드 페이지 예제|  
 |-------------|--------------------|---------------------------|  
 |`_ismbcgraph`|그래픽|`c`가 공백 ( )을 제외하고 모든 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
 |`_ismbcprint`|인쇄 가능|`c`가 공백 ( )을 포함하여 모든 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
@@ -144,7 +145,7 @@ int _ismbcspace_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_ismbcgraph`|\<mbstring.h>|  
 |`_ismbcgraph_l`|\<mbstring.h>|  

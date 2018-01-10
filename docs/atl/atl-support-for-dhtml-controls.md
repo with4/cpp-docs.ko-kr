@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16848150802ec3fb097f6d19f0b1b4f8b11c8f69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab796752cef10c48036966c2947d711a0e385032
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-support-for-dhtml-controls"></a>DHTML 컨트롤에 대한 ATL 지원
 ATL을 사용 하 여 DHTML (동적 HTML) 기능이 있는 컨트롤을 만들 수 있습니다. ATL DHTML 컨트롤:  
@@ -38,7 +39,7 @@ ATL을 사용 하 여 DHTML (동적 HTML) 기능이 있는 컨트롤을 만들 �
   
  웹 브라우저 또는 ActiveX Control Test Container 같은 다른 컨테이너에서 ATL DHTML 컨트롤을 볼 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DHTML 컨트롤 프로젝트의 요소 식별](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
  DHTML 컨트롤 프로젝트의 요소에 설명 합니다.  
   

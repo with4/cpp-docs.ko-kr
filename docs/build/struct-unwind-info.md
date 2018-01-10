@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c306e8920bb058b64133b7fec18f21a243e1f715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1effec5bc753f1b23f8d43a8406c61cb6663fa56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="struct-unwindinfo"></a>구조체 UNWIND_INFO
 해제 데이터 정보 구조체를 사용 하 여 함수에 스택 포인터 및 스택에 비휘발성 레지스터 저장 되는 효과 기록 합니다.  

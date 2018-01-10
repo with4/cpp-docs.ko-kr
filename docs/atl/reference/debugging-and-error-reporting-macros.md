@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e14ffb58ba19c6c3c8d3e59181a045532f5cfb92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>디버깅 및 오류 보고 매크로
 이러한 매크로 유용한 디버깅 및 추적 기능을 제공 합니다.  
@@ -124,7 +125,7 @@ ATLENSURE_THROW(booleanExpression, hr);
   
  차이 **ATLENSURE** 및 `ATLASSERT` 은 **ATLENSURE** 릴리스에서 예외 디버그 빌드 에서처럼도 빌드 throw 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>요구 사항  
@@ -144,7 +145,7 @@ ATLTRACENOTIMPL(funcname);
 ### <a name="remarks"></a>설명  
  릴리스 빌드에서 반환 **E_NOTIMPL**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>요구 사항  
@@ -263,7 +264,7 @@ ATLTRACE2(
   
  **ATLTRACE** 및 `ATLTRACE2` 동일한 동작 **ATLTRACE** 이전 버전과 호환성을 위해 포함 되었습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

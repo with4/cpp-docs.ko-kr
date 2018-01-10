@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0dfa6a3a2e399ff108bdd97b3dfb9a16b627aefe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74b271f56fe7c8d3345ce53de06a18a2700175f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>DHTML 컨트롤 프로젝트의 요소를 식별합니다.
 ATL 컨트롤에 대 한 대부분 DHTML 제어 코드와 같습니다 만들어집니다. 제네릭 코드의 한 기본적인 이해에 대 한 작업을 통해는 [ATL 자습서](../atl/active-template-library-atl-tutorial.md), 섹션에서 확인 하 고 [ATL 프로젝트 만들기](../atl/reference/creating-an-atl-project.md) 및 [ATL COM 개체 기본 사항](../atl/fundamentals-of-atl-com-objects.md)합니다.  

@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5912f241716bbaf9aba989dabbeb25d38ab465c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86c027a1796f42d7b2932f68aff00136ee0d217f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT(파이버 안전 스레드 로컬 저장소 지원)
 정적 스레드 로컬 저장소를 사용 하 여 할당 하는 데이터 즉,를 사용 하 여 할당 한 데이터의 파이버 안전을 지원 `__declspec(thread)`합니다.  

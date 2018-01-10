@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b99696f125b0daf1cbd183a10ec9f741d525fa0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 629ff6c3f383973b758ddb4317e43a27de0b11d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="based-pointers-c"></a>기반 포인터 (C++)
 **Microsoft 전용**  
@@ -62,7 +63,7 @@ struct llist_t {
   
  이전 버전과 호환성에 대 한 **_based** 에 대 한 동의어 `__based`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 기반 변경을 통한 기반 포인터 변경을 설명합니다.  
   
 ```  

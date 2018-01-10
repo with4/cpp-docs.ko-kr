@@ -35,11 +35,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3c18b478c83c57a8a3bfd8238b367dbe4846d025
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0f1d6153b918476e6f643f26fd913f6e601b75b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
 `stdio` 수준에서 동시에 열리는 파일 수의 최대값을 설정합니다.  
@@ -75,13 +76,13 @@ int _setmaxstdio(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_setmaxstdio`|\<stdio.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `_setmaxstdio`를 사용하는 예제는 [_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

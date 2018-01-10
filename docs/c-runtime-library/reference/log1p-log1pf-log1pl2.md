@@ -38,30 +38,16 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 99525c8b711d0774fa2b3132505a2cdbb21d5569
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f32799e2eabc54dacdc5144c59483b7a6a641110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 1을 더한 지정된 값의 자연 로그를 계산합니다.  
@@ -116,7 +102,7 @@ long double log1pl(
 ## <a name="remarks"></a>설명  
  x가 0에 가까우면 `log1p` 함수는 log(`x`+1)를 사용할 때보다 더 정확할 수 있습니다.  
   
- C++는 오버로드를 허용하기 때문에 float 및 long double 형식을 사용하고 반환하는 `log1p`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `log1p`는 항상 Double을 사용하고 반환합니다.  
+ C++는 오버로드를 허용하기 때문에 float 및 long double 형식을 사용하고 반환하는 `log1p`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `log1p`는 항상 double을 사용하고 반환합니다.  
   
  `x`가 자연수인 경우 이 함수는 (`x`-1)의 계승의 로그를 반환합니다.  
   

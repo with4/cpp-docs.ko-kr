@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tfopen
 - corecrt_wstdio/_wfopen
 - stdio/fopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - opening files, for file I/O
 - wfopen function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7d432ab9e8bdb6f386eb6fe4fbb24d218d6a2071
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 01558dfa6b28f10746c1487384bad44768b5877e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 파일을 엽니다. 추가 매개 변수 유효성 검사를 수행하고 오류 코드를 반환하는 이 함수의 더 안전한 버전을 사용할 수 있습니다. [fopen_s, _wfopen_s](../../c-runtime-library/reference/fopen-s-wfopen-s.md)를 참조하세요.  
@@ -92,14 +76,14 @@ FILE *_wfopen(
 ## <a name="return-value"></a>반환 값  
  각 함수는 열린 파일에 대한 포인터를 반환합니다. null 포인터 값은 오류를 나타냅니다. `filename` 또는 `mode`가 `NULL`이거나 빈 문자열인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 트리거합니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `NULL` 를 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
   
- 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- `fopen` 함수는 `filename`에 지정된 파일을 엽니다. 기본적으로 반각 `filename` 문자열은 ANSI 코드 페이지(CP_ACP)를 사용하여 해석됩니다. Windows 데스크톱 응용 프로그램에서 이 페이지를 [SetFileApisToOEM](https://msdn.microsoft.com/library/windows/desktop/aa365534\(v=vs.85\).aspx) 함수를 사용하여 OEM 코드 페이지(CP_OEMCP)로 변경할 수 있습니다. [AreFileApisANSI](https://msdn.microsoft.com/library/windows/desktop/aa363781\(v=vs.85\).aspx) 함수를 사용하여 `filename` 이 ANSI 코드 페이지를 사용하여 해석되는지 아니면 시스템의 기본 OEM 코드 페이지를 사용하여 해석되는지 여부를 결정할 수 있습니다. `_wfopen` 는 `fopen`의 와이드 문자 버전이며, `_wfopen` 에 대한 인수는 와이드 문자 문자열입니다. 그렇지 않으면 `_wfopen` 과 `fopen` 은 동일하게 작동합니다. `_wfopen` 만 사용할 경우 파일 스트림에 사용되는 코딩된 문자 집합에 영향을 주지 않습니다.  
+ `fopen` 함수는 `filename`에 지정된 파일을 엽니다. 기본적으로 반각 `filename` 문자열은 ANSI 코드 페이지(CP_ACP)를 사용하여 해석됩니다. Windows 데스크톱 응용 프로그램에서 이 페이지를 [SetFileApisToOEM](https://msdn.microsoft.com/library/windows/desktop/aa365534\(v=vs.85\).aspx) 함수를 사용하여 OEM 코드 페이지(CP_OEMCP)로 변경할 수 있습니다. [AreFileApisANSI](https://msdn.microsoft.com/library/windows/desktop/aa363781\(v=vs.85\).aspx) 함수를 사용하여 `filename` 이 ANSI 코드 페이지를 사용하여 해석되는지 아니면 시스템의 기본 OEM 코드 페이지를 사용하여 해석되는지 여부를 결정할 수 있습니다. `_wfopen` 는 `fopen`의 와이드 문자 버전이며, `_wfopen` 에 대한 인수는 와이드 문자 문자열입니다. 그렇지 않으면 `_wfopen` 과 `fopen` 은 동일하게 작동합니다. `_wfopen`만 사용할 경우 파일 스트림에 사용되는 코딩된 문자 집합에 영향을 주지 않습니다.  
   
  `fopen` 은 실행 시점에 파일 시스템에 유효한 경로를 허용하고, `fopen` 은 매핑된 네트워크 드라이브를 포함하는 경로 및 UNC 경로를 허용합니다(코드를 실행하는 시스템에서 실행 시점에 공유 또는 매핑된 드라이브에 액세스할 수 있는 경우). `fopen`에 대한 경로를 생성할 때 드라이브, 경로 또는 네트워크 공유를 실행 환경에서 사용할 수 있는지를 확인합니다. 슬래시(/) 또는 백슬래시(\\)를 경로의 디렉터리 구분 기호로 사용할 수 있습니다.  
   
- 파일에서 추가 작업을 수행하기 전에 항상 반환 값을 검사하여 포인터가 NULL인지 여부를 확인하세요. 오류가 발생한 경우 전역 변수 `errno` 가 설정되어 특정 오류 정보를 가져오는 데 사용할 수 있습니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 파일에서 추가 작업을 수행하기 전에 항상 반환 값을 검사하여 포인터가 NULL인지 여부를 확인하세요. 오류가 발생한 경우 전역 변수 `errno` 가 설정되어 특정 오류 정보를 가져오는 데 사용할 수 있습니다. 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="unicode-support"></a>유니코드 지원  
  `fopen` 은 유니코드 파일 스트림을 지원합니다. 유니코드 파일을 열려면 다음과 같이 `ccs` 에 원하는 인코딩을 지정하는 `fopen`플래그를 전달합니다.  
@@ -204,11 +188,11 @@ FILE *_wfopen(
 |모든 문자열의 문자|`_open`/`_sopen`에 대해 동일한 `oflag` 값|  
 |-------------------------------|----------------------------------------------------|  
 |`a`|`_O_WRONLY &#124; _O_APPEND`(일반적으로 `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
-|`a+`|`_O_RDWR &#124; _O_APPEND`(일반적으로 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT`)|  
+|`a+`|`_O_RDWR &#124; _O_APPEND` (일반적으로 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(일반적으로 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
-|`w+`|`_O_RDWR`(일반적으로 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY` (일반적으로 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w+`|`_O_RDWR` (일반적으로 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|없음|  
@@ -230,11 +214,11 @@ FILE *_wfopen(
 |`fopen`|\<stdio.h>|  
 |`_wfopen`|\<stdio.h> 또는 \<wchar.h>|  
   
- `_wfopen`는 Microsoft 확장입니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ `_wfopen` 는 Microsoft 확장입니다. 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
  `c`, `n`, `t`, `S`, `R`, `T`및 `D` `mode` 옵션은 `fopen` 및 `_fdopen` 및 should not be used where ANSI portability is desired.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 프로그램은 두 파일을 엽니다.  `fclose` 를 사용하여 첫 번째 파일을 닫고 `_fcloseall` 을 사용하여 나머지 파일을 모두 닫습니다.  
   
 ```C  
@@ -286,7 +270,7 @@ The file 'data2' was opened
 Number of files closed by _fcloseall: 1  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 프로그램은 텍스트 모드에서 유니코드 인코딩을 포함하는 파일을 만들거나 덮어씁니다(파일이 있는 경우).  그런 다음 파일에 두 문자열을 쓰고 파일을 닫습니다. 출력 파일은 _wfopen_test.xml이며, 출력 섹션의 데이터를 포함합니다.  
   
 ```C  

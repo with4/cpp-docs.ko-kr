@@ -1,39 +1,41 @@
 ---
-title: "CDynamicParameterAccessor::SetParam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicParameterAccessor::SetParam"
-  - "ATL::CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor.SetParam"
-  - "ATL.CDynamicParameterAccessor.SetParam"
-  - "SetParam"
-  - "CDynamicParameterAccessor:SetParam"
-  - "CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor::SetParam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetParam 메서드"
+title: 'Cdynamicparameteraccessor:: Setparam | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicParameterAccessor::SetParam
+- ATL::CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor.SetParam
+- ATL.CDynamicParameterAccessor.SetParam
+- SetParam
+- CDynamicParameterAccessor:SetParam
+- CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor::SetParam
+dev_langs: C++
+helpviewer_keywords: SetParam method
 ms.assetid: e2349220-545c-46ad-90da-9113ac52551a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b092dad600c1698d3cbe550f16e05a8307f030fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::SetParam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Sets the parameter buffer using the specified \(non\-string\) data.  
+# <a name="cdynamicparameteraccessorsetparam"></a>CDynamicParameterAccessor::SetParam
+지정된 된 (string이 아닌) 데이터를 사용 하 여 매개 변수 버퍼를 설정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -52,31 +54,31 @@ bool SetParam(
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `ctype`  
- A templated parameter that is the data type.  
+ 데이터 형식이 템플릿 매개 변수입니다.  
   
  `nParam`  
- \[in\] The parameter number \(offset from 1\).  Parameter 0 is reserved for return values.  The parameter number is the index of the parameter based on its order in the SQL or stored procedure call.  예를 들면 다음과 같습니다.  
+ [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 예:  
   
- [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/CPP/cdynamicparameteraccessor-setparam_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]  
   
  `pParamName`  
- \[in\] 매개 변수 이름입니다.  
+ [in] 매개 변수 이름입니다.  
   
  `pData`  
- \[in\] The pointer to the memory containing the data to be written to the buffer.  
+ [in] 버퍼에 쓸 데이터를 포함 하는 메모리 포인터입니다.  
   
  *status*  
- \[in\] The `DBSTATUS` column status.  For information on `DBSTATUS` values, see [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in the *OLE DB Programmer's Reference*, or search for `DBSTATUS` in oledb.h.  
+ [in] `DBSTATUS` 열 상태입니다. 에 대 한 내용은 `DBSTATUS` 값, 참조 [상태](https://msdn.microsoft.com/en-us/library/ms722617.aspx) 에 *OLE DB Programmer's Reference*, 검색 또는 `DBSTATUS` oledb.h에서 합니다.  
   
-## 반환 값  
- Returns **true** on success or **false** on failure.  
+## <a name="return-value"></a>반환 값  
+ 반환 **true** 성공 또는 **false** 실패 합니다.  
   
- Use `SetParam` to set nonstring parameter data in the buffer.  Use [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) to set string parameter data in the buffer.  
+ 사용 하 여 `SetParam` 버퍼에 문자열이 아닌 매개 변수 데이터를 설정할 수 있습니다. 사용 하 여 [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) 버퍼에 문자열 매개 변수 데이터를 설정할 수 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicParameterAccessor 클래스](../../data/oledb/cdynamicparameteraccessor-class.md)

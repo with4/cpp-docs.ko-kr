@@ -57,11 +57,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ad428851bd89dd2e9efd49a900ccdc28066b246
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40566a3f4f6855da3a7ee7d122357f392d234ff0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 멀티바이트 문자가 영숫자, 영문자 또는 숫자인지 검사합니다.  
@@ -114,9 +115,9 @@ int _ismbcdigit_l
 ## <a name="remarks"></a>설명  
  이러한 각 루틴은 지정된 멀티바이트 문자를 지정된 조건에 대해 테스트합니다.  
   
- `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
-|루틴|테스트 조건|932 코드 페이지 예제|  
+|루틴에서 반환된 값|테스트 조건|932 코드 페이지 예제|  
 |-------------|--------------------|---------------------------|  
 |`_ismbcalnum,_ismbcalnum_l`|영숫자|`c`가 ASCII 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcdigit` 및 `_ismbcalpha`의 예제를 참조하십시오.|  
 |`_ismbcalpha,_ismbcalpha_l`|Alphabetic|`c`가 ASCII 영어 문자(0x41=`c`=0x5A 또는 0x61<=`c`<=0x7A) 또는 가타카나 문자(0xA6<=`c`)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  
@@ -124,7 +125,7 @@ int _ismbcdigit_l
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_ismbcalnum,_ismbcalnum_l`|\<mbstring.h>|  
 |`_ismbcalpha,_ismbcalpha_l`|\<mbstring.h>|  

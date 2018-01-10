@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::push(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::push"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push 멤버[STL/CLR]"
+title: 'priority_queue:: push (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::push
+dev_langs: C++
+helpviewer_keywords: push member [STL/CLR]
 ms.assetid: 317d3feb-0688-4658-866b-a26cae060354
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d4b88448d1566076841b5f20754d02f3b62428b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::push(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adds a new element.  
+# <a name="priorityqueuepush-stlclr"></a>priority_queue::push(STL/CLR)
+새 요소를 추가 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void push(value_type val);  
 ```  
   
-## 설명  
- The member function inserts an element with value `val` into the the controlled sequence, and reorders the controlled sequence to maintain the heap discipline.  You use it to add another element to the queue.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 값을 가진 요소를 삽입 `val` 에 제어 되는 힙 분야를 유지 관리 하는 제어 되는 시퀀스의 순서를 재정렬 하 고 있습니다. 큐에 다른 요소를 추가 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_priority_queue_push.cpp   
@@ -59,12 +60,15 @@ int main()
   
 ```  
   
-  **c a b**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+c a b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::pop](../dotnet/priority-queue-pop-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::pop(STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bbd902066e86d2dbe04e4bc709a1042c40dffe8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8997741b4290214aa8f147aa7b841424467e296b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 확인된 반복기는 컨테이너 경계를 덮어쓰지 않습니다. 확인된 반복기는 릴리스 빌드 및 디버그 빌드에 모두 적용됩니다. 디버그 모드에서 컴파일할 때 디버그 반복기를 사용하는 방법에 대한 자세한 내용은 [Debug Iterator Support](../standard-library/debug-iterator-support.md)(디버그 반복기 지원)를 참조하세요.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/24/2017
   
 확인된 반복기를 지원하는 반복기 어댑터는 [checked_array_iterator 클래스](../standard-library/checked-array-iterator-class.md)와 [unchecked_array_iterator 클래스](../standard-library/unchecked-array-iterator-class.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 1 또는 2로 설정된 `_ITERATOR_DEBUG_LEVEL`을 사용하여 컴파일할 경우 특정 클래스의 인덱싱 연산자를 사용하여 컨테이너 경계 밖에 있는 요소에 액세스하려고 하면 런타임 오류가 발생합니다.  
   
@@ -94,7 +95,7 @@ int main()
   
 이 프로그램은 "67"을 인쇄한 후 실패에 대한 자세한 정보가 들어 있는 어설션 실패 대화 상자를 팝업으로 표시합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 마찬가지로, 1 또는 2로 설정된 `_ITERATOR_DEBUG_LEVEL`을 사용하여 컴파일할 경우 컨테이너가 비어 있을 때 컨테이너 클래스의 `front` 또는 `back`을 사용하여 요소에 액세스하려고 하면 런타임 오류가 발생합니다.  
   
@@ -118,7 +119,7 @@ int main()
   
 이 프로그램은 실패에 대한 자세한 정보가 들어 있는 어설션 실패 대화 상자를 팝업으로 표시합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 다음 코드에는 다양한 반복기 사용 사례 시나리오에 대한 설명과 각각에 대한 주석이 나와 있습니다. 기본적으로 `_ITERATOR_DEBUG_LEVEL`은 디버그 빌드에서 2로 설정되고 정품 빌드에서는 0으로 설정됩니다.  
   
@@ -227,5 +228,5 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)   
- [디버그 반복기 지원](../standard-library/debug-iterator-support.md)
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)
 

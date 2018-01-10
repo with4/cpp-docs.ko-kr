@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7872e01516ea7420533cccf0398164d50603dded
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3bc721131e5cb47bf17d7e683f3a6df249f4dd38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="align-c"></a>맞춤 (C++)
 Visual Studio 2015 이상 버전에서는 사용할 C + + 11 표준 `alignas` 지정자 맞춤을 제어 합니다. 자세한 내용은 참조 [맞춤](../cpp/alignment-cpp-declarations.md)합니다.  
@@ -233,7 +234,7 @@ struct S {
 |--------------|-----------|-----------|-----------|-----------|  
 |a|0|0|0|0|  
 |b|1|2|2|2|  
-|c|3|4|4|9|  
+|c|3|4|4|8|  
 |d|32|32|32|32|  
 |e|40|40|40|40|  
 |f|41|42|44|48|  

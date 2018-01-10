@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,33 +26,18 @@ f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 0c193b05dc7e8b1279343e729aa98ae5ed8bc153
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b041da3df2b745f1764440ed5afafa2cd7690b68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
 문자열에서 형식이 지정된 데이터를 읽습니다. 이러한 버전의 [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 포함되어 있습니다.  
@@ -104,7 +88,7 @@ int vswscanf_s(
   
  `vswscanf_s`는 `vsscanf_s`의 와이드 문자 버전이며, `vswscanf_s`에 대한 인수는 와이드 문자 문자열입니다. `vsscanf_s`는 멀티바이트 16진수 문자를 처리하지 않습니다. `vswscanf_s`는 유니코드 전자 16진수 또는 "호환 영역" 문자를 처리하지 않습니다. 그렇지 않으면 `vswscanf_s`과 `vsscanf_s`은 동일하게 작동합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -112,14 +96,14 @@ int vswscanf_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`vsscanf_s`|\<stdio.h>|  
 |`vswscanf_s`|\<stdio.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_vsscanf_s.c  

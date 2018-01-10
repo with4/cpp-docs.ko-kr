@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b08b5108d609deca2eed94a05d4eb01d09f10b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fbb3d19101358012df795000907a0b3e8139601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-program-startup"></a>main: 프로그램 시작
 이라는 특수 함수 `main` 모든 C 및 c + + 프로그램에 대 한 실행의 시작 지점입니다. [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] 프로그래밍 모델을 따르는 코드를 작성하는 경우 `wmain`의 와이드 문자 버전인 `main`을 사용할 수 있습니다.  

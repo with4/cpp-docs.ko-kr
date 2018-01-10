@@ -46,11 +46,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 422b8818ff0bbfaccd288b944c628371be7442c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9fc74164b44b44e9f2ed56066d91f68e232fceb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 형식이 지정된 데이터를 스트림에 출력합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)의 버전입니다.  
@@ -110,7 +111,7 @@ int _fwprintf_s_l(
   
  안전하지 않은 버전과 같이([fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) 참조) 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 해당 매개 변수의 유효성을 검사하고, `stream` 또는 `format`이 null 포인터인 경우 잘못된 매개 변수 처리기를 호출합니다. 형식 문자열 자체도 유효성이 검사 된다는 합니다. 알 수 없거나 잘못된 형식의 형식 지정자가 있는 경우 이러한 함수는 잘못된 매개 변수 예외를 생성합니다. 모든 경우에 계속 실행하도록 허용된 경우 함수는 -1을 반환하며, `errno`를 `EINVAL`로 설정합니다. 이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -126,9 +127,9 @@ int _fwprintf_s_l(
 |`fprintf_s`, `_fprintf_s_l`|\<stdio.h>|  
 |`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C  
 // crt_fprintf_s.c  

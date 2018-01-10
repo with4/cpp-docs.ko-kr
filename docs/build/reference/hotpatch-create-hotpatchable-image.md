@@ -1,65 +1,66 @@
 ---
-title: "/hotpatch(핫 패치 가능 이미지 만들기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/hotpatch"
-  - "VC.Project.VCCLCompilerTool.CreateHotpatchableImage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "핫 패치"
-  - "-hotpatch 컴파일러 옵션[C++]"
-  - "/hotpatch 컴파일러 옵션[C++]"
-  - "핫 패치"
+title: "-hotpatch (핫 패치 가능 이미지 만들기) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /hotpatch
+- VC.Project.VCCLCompilerTool.CreateHotpatchableImage
+dev_langs: C++
+helpviewer_keywords:
+- hot patching
+- -hotpatch compiler option [C++]
+- /hotpatch compiler option [C++]
+- hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad7ab4e6450d33923b728f20c8a35185edd2b05e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /hotpatch(핫 패치 가능 이미지 만들기)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-핫 패치를 위해 이미지를 준비합니다.  
+# <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch(핫 패치 가능 이미지 만들기)
+핫 패치 가능한 이미지를 준비합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /hotpatch  
 ```  
   
-## 설명  
- 컴파일에 **\/hotpatch**를 사용하는 경우, 컴파일러에서는 핫 패치에 필요한 대로 각 함수의 첫 번째 명령이 2바이트가 되도록 합니다.  
+## <a name="remarks"></a>설명  
+ 때 **/hotpatch** 사용 되는 컴파일, 컴파일러 하면 확인 각 함수의 첫 번째 명령이 최소한 2 바이트는 핫 패치 기능에 필요한 합니다.  
   
- 사용 후 핫 패치할 수 있는 이미지를 만들기 위한 준비를 완료 하려면  **\/hotpatch**  를 컴파일하는 데 사용 하여 [\/FUNCTIONPADMIN\(핫 패치 가능 이미지 만들기\)](../../build/reference/functionpadmin-create-hotpatchable-image.md) 연결 합니다.  cl.exe를 한 번 실행하여 이미지를 컴파일하고 링크하는 경우, **\/hotpatch**를 사용하면 **\/functionpadmin**이 자동으로 적용됩니다.  
+ 사용 하 여 프로그램 이미지 핫 패치 가능 하기 위한 준비를 완료 하려면 **/hotpatch** 사용 해야 컴파일할 [/FUNCTIONPADMIN (핫 패치 가능 이미지 만들기)](../../build/reference/functionpadmin-create-hotpatchable-image.md) 에 연결 합니다. 컴파일하고 cl.exe를 한 호출을 사용 하 여 이미지를 연결 하면 **/hotpatch** 의미 **/functionpadmin**합니다.  
   
- 지시는 항상 2 바이트 이상이 ARM 아키텍처에 때문에 x64 컴파일에 항상 처리 처럼  **\/hotpatch**  지정한 지정할 필요가 없습니다  **\/hotpatch**  ; 이러한 대상에 대 한 컴파일할 때 하지만 사용 하 여 계속 연결 해야  **\/functionpadmin**  핫 패치할 수 있는 이미지를 만들 수 있습니다.   **\/hotpatch**  x86 영향 컴파일 전용 컴파일러 옵션입니다.  
+ 지침 항상 2 바이트 되므로 또는 ARM 아키텍처에서 더 큰 않기 때문에 컴파일 항상 처리 x64 처럼 **/hotpatch** 지정 지정할 필요가 없습니다 **/hotpatch** 때 이러한 대상;에 대해 컴파일 하지만 사용 하 여 여전히 연결 해야 **/functionpadmin** 핫 패치 가능한 이미지를 만들려고 합니다. **/hotpatch** 컴파일러 옵션만 영향을 줌 x86 컴파일입니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 선택합니다.  
+2.  선택 된 **C/c + +** 폴더입니다.  
   
-3.  **명령줄** 속성 페이지를 선택합니다.  
+3.  선택 된 **명령줄** 속성 페이지.  
   
-4.  **추가 옵션** 상자에 컴파일러 옵션을 입력합니다.  
+4.  컴파일러 옵션을 추가 하는 **추가 옵션** 상자입니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## 지침  
- 업데이트 관리에 대한 자세한 내용은 ["업데이트 관리에 대 한 보안 지침"](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx)을 참조하십시오.  
+## <a name="guidance"></a>지침  
+ 업데이트 관리에 대 한 자세한 내용은 "업데이트 관리에 대 한 보안 지침"에서 참조 [http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

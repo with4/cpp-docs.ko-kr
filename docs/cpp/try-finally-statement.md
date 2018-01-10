@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - __finally_cpp
 - __try_cpp
 - __finally
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __try keyword [C++]
 - __finally keyword [C++]
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5bfaa7d2a2f75fa479f135a61c15f9fcf3bbf5ca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="try-finally-statement"></a>try-finally 문
 **Microsoft 전용**  
@@ -79,7 +77,7 @@ __finally {
   
  예를 들어, 일련의 함수 호출 링크에서는 함수 A를 D에 연결한다고 가정합니다(아래 그림 참조). 각 함수에는 종료 처리기가 하나씩 있습니다. 예외가 D 함수에서 발생하고 A에서 처리될 경우 시스템이 스택 D, C, B를 해제하면 그 순서대로 종료 처리기가 호출됩니다.  
   
- ![종료 & #45 순서; 처리기 실행](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![종료 &#45;순서; 처리기 실행](../cpp/media/vc38cx1.gif "vc38CX1")  
 종료 처리기 실행 순서  
   
 > [!NOTE]

@@ -43,11 +43,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 060ac8704fdb3d17e46452ff369368785a43bc8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 116ab4c4822f6bc1431f1c66a2666fedadde71de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 복소수의 실수부를 검색합니다.  
@@ -84,11 +85,11 @@ long double creall(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|C 헤더|C++ 헤더|  
+|루틴에서 반환된 값|C 헤더|C++ 헤더|  
 |-------------|--------------|------------------|  
 |`creal`,               `crealf`, `creall`|\<complex.h>|\<ccomplex>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

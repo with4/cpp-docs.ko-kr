@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: b105fce4bec1a4cc8f9dbe06a9f28b1a33b168d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a02dfeb83096281bf189eda0150b7a559a25f416
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="template-friends"></a>템플릿 friend
 
@@ -35,7 +36,7 @@ class my_class
 };  
 ```  
   
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서 friend 함수는 클래스 템플릿 내에서 함수 템플릿으로 정의됩니다. 이 코드는 모든 템플릿 인스턴스화에 대한 friend 함수 버전을 만듭니다. 이 구문은 사용자의 friend 함수가 클래스와 같은 템플릿 매개 변수로 결정될 경우 유용합니다.  
   
@@ -115,7 +116,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z   
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
 다음 예제에서는 템플릿 특수화를 가진 friend를 다룹니다. 원본 함수 템플릿이 friend인 경우 함수 템플릿 특수화는 자동으로 friend입니다.  
   
@@ -205,7 +206,7 @@ int main()
 10 int  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  
 다음 예제에서는 클래스 템플릿 내에 선언된 friend 클래스 템플릿을 보여 줍니다. 클래스 템플릿은 friend 클래스의 템플릿 인수로 사용됩니다. friend 클래스 템플릿은 선언된 클래스 템플릿의 외부에 정의되어야 합니다. 또한 friend 템플릿의 모든 특수화 또는 부분 특수화는 원본 클래스 템플릿의 friend입니다.  
   

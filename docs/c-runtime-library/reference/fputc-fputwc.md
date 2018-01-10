@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75065ba914356db06f75e80acc4ca3a6350237de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06f9fb737ac57ad04a661eb0e8438b3d557c0e3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 스트림에 문자를 씁니다.  
@@ -82,7 +83,7 @@ wint_t fputwc(
   
  이어서 루틴별 설명이 제공됩니다.  
   
-|루틴|설명|  
+|루틴에서 반환된 값|설명|  
 |-------------|-------------|  
 |`fputc`|`putc`와 일치하지만 함수 및 매크로가 아니라 함수로만 구현됩니다.|  
 |`fputwc`|와이드 문자 버전의 `fputc`입니다. `stream`이 텍스트 모드 또는 이진 모드로 열리는지에 따라 `c`를 멀티바이트 문자 또는 와이드 문자로 씁니다.|  
@@ -102,7 +103,7 @@ wint_t fputwc(
   
  콘솔은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 지원되지 않습니다. 콘솔에 연결된 표준 스트림 핸들 `stdin`, `stdout` 및 `stderr`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 C 런타임 함수에서 사용되기 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_fputc.c  

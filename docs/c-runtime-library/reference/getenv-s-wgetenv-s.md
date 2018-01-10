@@ -40,11 +40,12 @@ caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d391e24a5b14bd015b43f88b2a687011d84d35fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b714d1643ae929245f93f770fe67a87b0c75b54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 현재 환경에서 값을 가져옵니다. 이러한 버전의 [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 포함되어 있습니다.  
@@ -89,7 +90,8 @@ errno_t _wgetenv_s(
  환경 변수의 값을 저장할 버퍼입니다.  
   
  `numberOfElements`  
- `buffer`의 크기입니다.  
+ 
+          `buffer`의 크기입니다.  
   
  `varname`  
  환경 변수 이름입니다.  
@@ -101,9 +103,9 @@ errno_t _wgetenv_s(
   
 |`pReturnValue`|`buffer`|`numberOfElements`|`varname`|반환 값|  
 |--------------------|--------------|------------------------|---------------|------------------|  
-|`NULL`|모두|모두|모두|`EINVAL`|  
-|모두|`NULL`|>0|모두|`EINVAL`|  
-|모두|모두|모두|`NULL`|`EINVAL`|  
+|`NULL`|any|any|any|`EINVAL`|  
+|any|`NULL`|>0|any|`EINVAL`|  
+|any|any|any|`NULL`|`EINVAL`|  
   
  이들 오류 조건은 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
   
@@ -128,7 +130,7 @@ errno_t _wgetenv_s(
   
  C++에서는 템플릿 오버로드를 통해 이러한 함수를 사용하는 것이 보다 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -138,14 +140,14 @@ errno_t _wgetenv_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`getenv_s`|\<stdlib.h>|  
 |`_wgetenv_s`|\<stdlib.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C  
 // crt_getenv_s.c  

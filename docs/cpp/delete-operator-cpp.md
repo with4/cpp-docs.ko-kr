@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b12d0e20ebb355eb8422784ae0921f693279117
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36da346329341221d43af2ec96aa17be4f819bf8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-operator-c"></a>delete 연산자 (C++)
 메모리 블록을 할당 취소합니다.  
@@ -88,7 +89,7 @@ int main()
   
  개체에 대해 delete의 배열 형태(delete [ ])를 사용하는 경우와 배열에 대해 delete의 비배열 형태를 사용하는 경우에는 정의되지 않은 결과가 생성됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  에 대 한 예제 **삭제**, 참조 [new 연산자](../cpp/new-operator-cpp.md)합니다.  
   
 ## <a name="how-delete-works"></a>delete 작동 방식  

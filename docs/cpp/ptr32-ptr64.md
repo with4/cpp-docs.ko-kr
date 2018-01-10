@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __ptr32_cpp
 - __ptr64_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __ptr64 keyword [C++]
 - _ptr32 keyword [C++]
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d722f8403efbe1172fefbe8a792c95d4063e893f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3e811999bacada521d77bc14b19eb86d660b5901
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -48,7 +46,7 @@ int * __ptr64 p64;
 > [!NOTE]
 >  사용할 수 없습니다 `__ptr32` 또는 `__ptr64` 로 컴파일할 때 **/clr: pure**합니다. 그렇지 않으면 `Compiler Error C2472`가 생성됩니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `__ptr32` 및 `__ptr64` 키워드로 포인터를 선언 및 할당하는 방법을 보여 줍니다.  
   
 ```  

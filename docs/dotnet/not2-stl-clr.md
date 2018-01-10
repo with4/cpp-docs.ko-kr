@@ -1,50 +1,51 @@
 ---
-title: "not2(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not2 함수[STL/CLR]"
+title: not2 (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not2
+dev_langs: C++
+helpviewer_keywords: not2 function [STL/CLR]
 ms.assetid: f8aedcca-e4d1-4430-93b4-83dd55579d04
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 183ddc8d55f6948901118ba47ee237127a632020
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# not2(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Generates a `binary_negate` for a functor.  
+# <a name="not2-stlclr"></a>not2(STL/CLR)
+생성 한 `binary_negate` 함수에 대 한 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
-## 템플릿 매개 변수  
- Fun  
- The type of the functor.  
+## <a name="template-parameters"></a>템플릿 매개 변수  
+ 재미  
+ 함수의 형식입니다.  
   
-## 함수 매개 변수  
- functor  
- The functor to wrap.  
+## <a name="function-parameters"></a>함수 매개 변수  
+ 함수  
+ 래핑할 함수입니다.  
   
-## 설명  
- The template function returns [binary\_negate](../dotnet/binary-negate-stl-clr.md)`<``Fun``>(functor)`.  You use it as a convenient way to wrap a two\-argument functor in a functor that delivers its logical NOT.  
+## <a name="remarks"></a>설명  
+ 템플릿 함수를 반환 [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`합니다. 해당 논리 NOT을 전달 하는 함수에 인수가 두 개인 함수를 래핑합니다 하는 편리한 방법으로 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_not2.cpp   
@@ -94,14 +95,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## 요구 사항  
- **Header:** \<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [binary\_negate](../dotnet/binary-negate-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [binary_negate(STL/CLR)](../dotnet/binary-negate-stl-clr.md)

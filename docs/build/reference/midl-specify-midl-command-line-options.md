@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 957d9679c57cd15162c5820ccd7dc41bdea0fa2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8e842f4cf0f9c52945c04739879d0132eb34171
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL(MIDL 명령줄 옵션 지정)
 ```  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
  `file`  
  포함 하는 파일의 이름 [MIDL 명령줄 옵션](http://msdn.microsoft.com/library/windows/desktop/aa366839)합니다.  

@@ -4,36 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - delete_cpp
 - new
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 88f91e113ef47dc44ec0a300a99051cfaed3f08c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a34d703783ce638991585b7e7a99b2015923182b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-and-delete-operators"></a>new 및 delete 연산자
 
 C + +에서는 동적 할당 및 개체를 사용 하 여 할당 취소는 [새](../cpp/new-operator-cpp.md) 및 [삭제](../cpp/delete-operator-cpp.md) 연산자입니다. 이러한 연산자는 사용 가능한 저장소라고 하는 풀에서 개체에 대한 메모리를 할당합니다. `new` 특수 함수를 호출 하는 연산자 [new 연산자](../cpp/new-operator-cpp.md), 및 `delete` 특수 함수를 호출 하는 연산자 [delete 연산자](../cpp/delete-operator-cpp.md)합니다.  
   
- Visual c + +.NET 2002에서의 `new` c + + 표준 라이브러리의 함수는 메모리 할당에 실패 하는 경우 std:: bad_alloc 예외를 throw 하는 c + + 표준에 지정 된 동작을 지원 합니다. Throw 되지 않는 버전의 원하는 경우 `new`, 프로그램을 nothrownew.obj와 연결 합니다. 그러나을 연결할 때 기본 nothrownew.obj와 연결 `operator new` c + + 표준 라이브러리의 함수가 더 이상.  
+ `new` c + + 표준 라이브러리의 함수는 메모리 할당에 실패 하는 경우 std:: bad_alloc 예외를 throw 하는 c + + 표준에 지정 된 동작을 지원 합니다. Throw 되지 않는 버전의 원하는 경우 `new`, 프로그램을 nothrownew.obj와 연결 합니다. 그러나을 연결할 때 기본 nothrownew.obj와 연결 `operator new` c + + 표준 라이브러리의 함수가 더 이상.  
   
  C 런타임 라이브러리 및 c + + 표준 라이브러리를 구성 하는 라이브러리 파일의 목록에 대 한 참조 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)합니다.  
   
@@ -58,7 +56,7 @@ char *pch = new char[BUFFER_SIZE];
 |**:: new 연산자**|Global|  
 |*클래스 이름* **:: new 연산자**|클래스|  
   
- 첫 번째 인수 **new 연산자** 형식 이어야 합니다 **size_t** (STDDEF에 정의 된 형식입니다. 반환 형식 및 8)은 항상 **void \* **합니다.  
+ 첫 번째 인수 **new 연산자** 형식 이어야 합니다 **size_t** (STDDEF에 정의 된 형식입니다. 반환 형식 및 8)은 항상 **void \*** 합니다.  
   
  전역 **new 연산자** 함수 때 호출 되는 **새** 기본 제공 형식의 개체를 할당 연산자가 사용, 클래스 형식 개체의 포함 하지 않는 사용자 정의 **new 연산자** 함수 및 모든 종류의 배열입니다. 때는 **새** 클래스 형식의 개체를 할당 연산자를 사용 하는 위치는 **new 연산자** 정의 된 해당 클래스의 **new 연산자** 호출 됩니다.  
   
@@ -155,7 +153,7 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- 위의 두 가지 형태 중 하나만 지정된 된 클래스에 사용할 수 있습니다. 형식의 단일 인수를 사용 하는 첫 번째 형태는 **void \* **를 할당 해제할 개체에 포인터를 포함 합니다. 두 번째 형태-할당 취소 크기의-는 두 개의 인수는 첫 번째 할당 해제할 메모리 블록에 대 한 포인터가 고 중 두 번째 할당 해제할 바이트 수입니다. 두 가지 양식의 반환 형식이 `void` (**delete 연산자** 값을 반환할 수 없습니다).  
+ 위의 두 가지 형태 중 하나만 지정된 된 클래스에 사용할 수 있습니다. 형식의 단일 인수를 사용 하는 첫 번째 형태는 **void \*** 를 할당 해제할 개체에 포인터를 포함 합니다. 두 번째 형태-할당 취소 크기의-는 두 개의 인수는 첫 번째 할당 해제할 메모리 블록에 대 한 포인터가 고 중 두 번째 할당 해제할 바이트 수입니다. 두 가지 양식의 반환 형식이 `void` (**delete 연산자** 값을 반환할 수 없습니다).  
   
  두 번째 폼의 목적은 삭제 될 개체의 정확한 크기 범주에 대 한 검색을 하지 않는 자체 할당에 가깝게 저장 되 고 캐시 가능성이 해제; 속도를입니다. 두 번째 형태는 특히 유용 프로그램 **delete 연산자** 기본 클래스에서 함수는 파생된 클래스의 개체를 삭제 하는 데 사용 됩니다.  
   
@@ -232,5 +230,4 @@ void f() {
    delete [] pX;  
 }  
 ```  
-
 

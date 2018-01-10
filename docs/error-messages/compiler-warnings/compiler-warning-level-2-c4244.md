@@ -1,38 +1,37 @@
 ---
 title: "컴파일러 경고 (수준 2) C4244 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4244"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4244"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4244
+dev_langs: C++
+helpviewer_keywords: C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d1920fbc2ed78cf498df61c7177796645730cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 2) C4244
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'argument' : 'type1'에서 'type2'\(으\)로 변환하면서 데이터가 손실될 수 있습니다.  
+# <a name="compiler-warning-level-2-c4244"></a>컴파일러 경고(수준 2) C4244
+'argument': 'type1'에서 'type2', 데이터가 손실 될 수로 변환  
   
- 부동 소수점 형식을 정수 형식으로 변환했습니다.  데이터가 손실될 수 있습니다.  
+ A 부동 소수점 형식은 정수 형식으로 변환 합니다.  데이터 손실이 발생했을 수 있습니다.  
   
- C4244가 발생하면 호환되는 형식을 사용하도록 프로그램을 변경하거나 가능한 값의 범위가 사용 중인 형식과 항상 호환되도록 코드에 몇 가지 논리를 추가해야 합니다.  
+ C4244 오류가 발생하는 경우 호환되는 형식을 사용하도록 프로그램을 변경하거나 코드에 일부 논리를 추가하여 가능한 값의 범위가 사용 중인 형식과 항상 호환되는지 확인해야 합니다.  
   
- C4244는 수준 3 및 4에서도 발생할 수 있습니다. 자세한 내용은 [컴파일러 경고 \(수준s 3 and 4\) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)를 참조하십시오.  
+ C4244 오류가 수준 3 및 4;에서 발생할 수도 있습니다. 참조 [컴파일러 경고 (수준 3 및 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) 자세한 정보에 대 한 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4244 오류가 발생하는 경우를 보여 줍니다.  
   
 ```  

@@ -10,14 +10,13 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: b44e0a5d36a99f322c1b1455d753c324a6834d34
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt; 함수
 |||  
@@ -57,7 +56,7 @@ void swap(
 ### <a name="remarks"></a>설명  
  템플릿 함수는 `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`을 실행합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <unordered_set>  
@@ -146,7 +145,7 @@ void swap(
 ### <a name="remarks"></a>설명  
  템플릿 함수는 `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`을 실행합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__unordered_set__u_ms_swap.cpp  
@@ -206,5 +205,4 @@ int main()
   
 ## <a name="see-also"></a>참고 항목  
  [<unordered_set>](../standard-library/unordered-set.md)
-
 

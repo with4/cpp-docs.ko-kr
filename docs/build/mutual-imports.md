@@ -25,11 +25,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65b930cece9dd940da3171811fb027fccc3074b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutual-imports"></a>상호 가져오기
 Import에는 상호 (또는 순환) 내보내기 또는 가져오기를 다른 실행 파일에 대해 복잡해 집니다. 예를 들어 두 개의 Dll 상호 재귀 함수를 유사한 다른 기호를 가져옵니다.  

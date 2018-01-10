@@ -28,11 +28,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6f9bd7613254bfd0fd4aaef239b5e848ae87b99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="composite-control-global-functions"></a>복합 컨트롤 전역 함수
 이러한 함수를 작성, 호스팅 및 ActiveX 컨트롤 라이센스 획득 하 고 대화 상자 만들기에 대 한 지원을 제공 합니다.  
@@ -285,7 +286,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 샘플을 사용 하는 방법에 대 한 `AtlAxCreateControlLic`합니다.  
   
 ##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
@@ -347,7 +348,7 @@ ATLAPI AtlAxCreateControlLicEx(
 ### <a name="remarks"></a>설명  
  `AtlAxCreateControlLicEx`유사한 [AtlAxCreateControlLic](#atlaxcreatecontrollic) 하지만 새로 만든된 컨트롤에 대 한 인터페이스 포인터를 받아서 컨트롤에 의해 실행 되는 이벤트를 수신할 이벤트 싱크를 설정할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 샘플을 사용 하는 방법에 대 한 `AtlAxCreateControlLicEx`합니다.  
   
 ##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
@@ -495,7 +496,7 @@ ATLAPI AtlGetObjectSourceInterface(
 > [!NOTE]
 >  가 나타내는 개체가 성공적으로 요청된 된 정보를 검색 하려면이 함수에 대해 `punkObj` 구현 해야 `IDispatch` (통해 형식 정보를 반환 하 고 **IDispatch::GetTypeInfo**)와 해야 합니다 구현 `IProvideClassInfo2` 또는 `IPersist`합니다. 소스 인터페이스에 대 한 형식 정보에 대 한 형식 정보와 동일한 형식 라이브러리에 있어야 합니다. `IDispatch`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 이벤트 싱크 클래스를 정의 하는 방법을 보여 줍니다. `CEasySink`에 전달할 수 있는 템플릿 인수 개수를 줄여 주는 `IDispEventImpl` 완전 essentials에 합니다. `EasyAdvise`및 `EasyUnadvise` 사용 `AtlGetObjectSourceInterface` 초기화 하는 [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) 호출 하기 전에 멤버 [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) 또는 [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)합니다.  
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  

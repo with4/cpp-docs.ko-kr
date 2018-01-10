@@ -19,16 +19,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c0765dde0ee0e910fe9bc865f68e0d4edeeb67e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 46a9301904d3293c242ca631c161b7e71304f283
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>방법: 단순 일치에 정규식 사용(C++/CLI)
 다음 코드 예제에서는 부분 문자열 정확히 일치 항목을 찾을 정규식을 사용 합니다. 정적 검색은 수행 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 메서드를 두 개의 문자열을 입력으로 사용 합니다. 첫 번째 문자열을 검색할 수이 고 두 번째 하기 위해 검색할 패턴입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // regex_simple.cpp  

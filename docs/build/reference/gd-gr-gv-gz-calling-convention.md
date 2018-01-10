@@ -1,47 +1,48 @@
 ---
-title: "/Gd, /Gr, /Gv, /Gz(호출 규칙) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gr"
-  - "/Gv"
-  - "/gz"
-  - "/Gd"
-  - "VC.Project.VCCLCompilerTool.CallingConvention"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gd 컴파일러 옵션[C++]"
-  - "/Gr 컴파일러 옵션[C++]"
-  - "/Gv 컴파일러 옵션[C++]"
-  - "/Gz 컴파일러 옵션[C++]"
-  - "Gd 컴파일러 옵션[C++]"
-  - "-Gd 컴파일러 옵션[C++]"
-  - "Gr 컴파일러 옵션[C++]"
-  - "-Gr 컴파일러 옵션[C++]"
-  - "Gv 컴파일러 옵션[C++]"
-  - "-Gv 컴파일러 옵션[C++]"
-  - "Gz 컴파일러 옵션[C++]"
-  - "-Gz 컴파일러 옵션[C++]"
+title: "-Gd,-Gr-Gv,-Gz (호출 규칙) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /gr
+- /Gv
+- /gz
+- /Gd
+- VC.Project.VCCLCompilerTool.CallingConvention
+dev_langs: C++
+helpviewer_keywords:
+- -Gd compiler option [C++]
+- -Gv compiler option [C++]
+- /Gv compiler option [C++]
+- -Gr compiler option [C++]
+- Gd compiler option [C++]
+- Gr compiler option [C++]
+- /Gz compiler option [C++]
+- -Gz compiler option [C++]
+- /Gd compiler option [C++]
+- Gz compiler option [C++]
+- Gv compiler option [C++]
+- /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 26e88abf30c0f67fe5b104d560c40dd2adc57752
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /Gd, /Gr, /Gv, /Gz(호출 규칙)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이러한 옵션에 따라 함수 인수가 스택에 푸시되는 순서, 호출자 함수 또는 호출된 함수가 호출 마지막 단계에서 스택의 인수를 제거하는지 여부, 개별 함수를 식별하기 위해 컴파일러에 사용되는 이름 데코레이션 규칙이 결정됩니다.  
+# <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz(호출 규칙)
+이러한 옵션은 함수에서 인수는 스택에 밀어 넣은, 여부는 호출자가 함수 또는 호출된 된 함수 호출의 끝에 스택에서 인수를 제거 하는 순서 및 컴파일러를 사용 하 여 식별 이름을 데코 레이트 규칙 결정 개별 함수입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /Gd  
@@ -50,79 +51,79 @@ caps.handback.revision: 19
 /Gz  
 ```  
   
-## 설명  
- **\/Gd**는 기본 설정으로, C\+\+ 멤버 함수와 [\_\_stdcall](../../cpp/stdcall.md), [\_\_fastcall](../../cpp/fastcall.md) 또는 [\_\_vectorcall](../../cpp/vectorcall.md)로 표시된 함수를 제외한 모든 함수에 대해 [\_\_cdecl](../../cpp/cdecl.md) 호출 규칙을 지정합니다.  
+## <a name="remarks"></a>설명  
+ **/Gd**, 기본 설정 지정는 [__cdecl](../../cpp/cdecl.md) 함수 및 표시 된 함수 c + + 멤버를 제외한 모든 함수에 대 한 호출 규칙 [__stdcall](../../cpp/stdcall.md), [__ fastcall](../../cpp/fastcall.md), 또는 [__vectorcall](../../cpp/vectorcall.md)합니다.  
   
- **\/Gr**은 C\+\+ 멤버 함수, 이름이 `main`인 함수 및 `__cdecl`, `__stdcall` 또는 `__vectorcall`로 표시된 함수를 제외한 모든 함수에 대해 `__fastcall` 호출 규칙을 지정합니다.  모든 `__fastcall` 함수는 프로토타입을 가져야 합니다.  이 호출 규칙은 x86을 대상으로 하는 컴파일러에서만 사용할 수 있으며 기타 아키텍처를 대상으로 하는 컴파일러에서 무시됩니다.  
+ **/Gr** 지정는 `__fastcall` 함수 라는 c + + 멤버 함수를 제외한 모든 함수에 대 한 호출 규칙을 `main`, 및 표시 된 함수 `__cdecl`, `__stdcall`, 또는 `__vectorcall`합니다. 모든 `__fastcall` 함수 프로토타입이 있어야 합니다. 이 호출 규칙은 x86, 대상 컴파일러에서 사용할 수 있으며 다른 아키텍처를 대상으로 하는 컴파일러에서 무시 됩니다.  
   
- **\/Gz**는 C\+\+ 멤버 함수, 이름이 `main`인 함수 및 `__cdecl`, `__fastcall` 또는 `__vectorcall`로 표시된 함수를 제외한 모든 함수에 대해 `__stdcall` 호출 규칙을 지정합니다.  모든 `__stdcall` 함수는 프로토타입을 가져야 합니다.  이 호출 규칙은 x86을 대상으로 하는 컴파일러에서만 사용할 수 있으며 기타 아키텍처를 대상으로 하는 컴파일러에서 무시됩니다.  
+ **/Gz** 지정는 `__stdcall` 함수 라는 c + + 멤버 함수를 제외한 모든 함수에 대 한 호출 규칙을 `main`, 및 표시 된 함수 `__cdecl`, `__fastcall`, 또는 `__vectorcall`합니다. 모든 `__stdcall` 함수 프로토타입이 있어야 합니다. 이 호출 규칙은 x86, 대상 컴파일러에서 사용할 수 있으며 다른 아키텍처를 대상으로 하는 컴파일러에서 무시 됩니다.  
   
- **\/Gv**는 C\+\+ 멤버 함수, main이라는 함수, `vararg` 변수 인수 목록이 있는 함수 또는 `__cdecl`, `__stdcall` 또는 `__fastcall` 특성과 충돌하는 것으로 표시된 함수를 제외한 모든 함수에 대한 `__vectorcall` 호출 규칙을 지정합니다.  이 호출 규칙은 \/arch:SSE2 이상을 지원하는 x86 및 x64 아키텍처에서만 사용할 수 있으며 ARM 아키텍처를 대상으로 하는 컴파일러에서 무시됩니다.  
+ **/Gv** 지정는 `__vectorcall` 함수, 명명 된 main 함수 c + + 멤버 함수를 제외한 모든 함수에 대 한 호출 규칙을 한 `vararg` 가변 인수 목록 또는 충돌 하는로 표시 된 함수 `__cdecl`, `__stdcall`, 또는 `__fastcall` 특성입니다. 이 호출 규칙 이상 지 원하는 /arch: sse2 x86 및 x64 아키텍처에서 제공 되 고 ARM 아키텍처를 대상으로 하는 컴파일러에서 무시 됩니다.  
   
- 가변 인수를 취하는 함수는 `__cdecl`로 표시해야 합니다.  
+ 가변 개수의 인수를 사용 하는 함수를 표시 해야 `__cdecl`합니다.  
   
- **\/Gd**, **\/Gr**, **\/Gv** 및 **\/Gz**는 [\/clr:safe](../../build/reference/clr-common-language-runtime-compilation.md) 또는 **\/clr:pure**와 함께 사용할 수 없습니다.  
-  
-> [!NOTE]
->  x86 프로세서의 경우 기본적으로 C\+\+ 멤버 함수에서 [\_\_thiscall](../../cpp/thiscall.md)을 사용합니다.  
-  
- 모든 프로세서에 대해 `__cdecl`, `__fastcall`, `__vectorcall` 또는 `__stdcall`로서 명시적으로 표시된 멤버 함수는 해당 아키텍처에서 무시되지 않을 경우 지정된 호출 규칙을 사용합니다.  다양한 수의 인수를 가지는 멤버 함수는 항상 `__cdecl` 호출 규칙을 사용합니다.  
-  
- 이러한 컴파일러 옵션은 C\+\+ 메서드와 함수의 이름 데코레이션에 영향을 주지 않습니다.  `extern "C"`로 선언된 것을 제외하고 C\+\+ 메서드와 함수는 다른 이름 데코레이션 구성표를 사용합니다.  자세한 내용은 [데코레이팅된 이름](../../build/reference/decorated-names.md)을 참조하십시오.  
-  
- 호출 규칙에 대한 자세한 내용은 [호출 규칙](../../cpp/calling-conventions.md)를 참조하십시오.  
-  
-## \_\_cdecl 특성  
- X86 프로세서의 경우 모든 함수 인수는 스택 오른쪽에서 왼쪽으로 전달됩니다.  ARM 및 x64 아키텍처에서 일부 인수는 레지스터로 전달되며 나머지는 오른쪽에서 왼쪽으로 스택에 전달됩니다.  호출 루틴은 스택에서 인수를 꺼냅니다.  
-  
- C에서 `__cdecl` 명명 규칙은 앞에 밑줄\(`_`\)이 오는 함수 이름을 사용하며, 대\/소문자 변환은 수행되지 않습니다.  `extern "C"`로 선언되는 경우를 제외하고 C\+\+ 함수는 다른 이름 데코레이션 구성표를 사용합니다.  자세한 내용은 [데코레이팅된 이름](../../build/reference/decorated-names.md)을 참조하십시오.  
-  
-## \_\_fastcall 특성  
- `__fastcall` 함수의 인수 중 일부는 레지스터에 전달되고\(x86 프로세서의 경우 EXC 및 EDX\) 나머지 인수는 오른쪽에서 왼쪽으로 스택에 푸시됩니다.  호출된 루틴은 반환하기 전에 스택에서 이 인수를 꺼냅니다.  일반적으로 **\/Gr**는 실행 시간을 줄입니다.  
+ **/Gd**, **/Gr**, **/Gv** 및 **/Gz** 와 호환 되지 않는 [/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md) 또는 **/clr: pure**. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
   
 > [!NOTE]
->  인라인 어셈블리 언어로 작성된 함수에 대해 `__fastcall` 호출 규칙을 사용할 때는 주의하십시오.  레지스터 사용과 컴파일러의 사용이 충돌할 수 있습니다.  
+>  X86 기본적으로 사용 하 여 프로세서, c + + 멤버 함수 [__thiscall](../../cpp/thiscall.md)합니다.  
   
- C에서 `__fastcall` 명명 규칙은 앞에 \(`@`\) 기호가 오고 뒤에 바이트 단위로 표시된 함수 인수 크기가 오는 함수 이름을 사용합니다.   대\/소문자 변환은 수행되지 않습니다.  컴파일러는 명명 규칙에 이 템플릿을 사용합니다.  
+ 모든 프로세서를 명시적으로 표시 하는 멤버 함수에 대 한 `__cdecl`, `__fastcall`, `__vectorcall`, 또는 `__stdcall` 해당 아키텍처에서 무시 되지 경우 지정 된 호출 규칙을 사용 합니다. 가변 개수의 인수를 사용 하 여 항상 사용 하는 멤버 함수는 `__cdecl` 호출 규칙입니다.  
   
-```c  
+ 이러한 컴파일러 옵션은 c + + 메서드 및 함수 이름 데코레이션에 대 한 영향을 주지 않습니다. 로 선언 되지 않은 `extern "C"`, c + + 메서드 및 함수는 다른 이름 장식 구성표를 사용 합니다. 자세한 내용은 참조 [데코 레이트 된 이름](../../build/reference/decorated-names.md)합니다.  
+  
+ 호출 규칙에 대 한 자세한 내용은 참조 [호출 규칙](../../cpp/calling-conventions.md)합니다.  
+  
+## <a name="cdecl-specifics"></a>__cdecl 세부 사항  
+ X86 프로세서에서는 모든 함수 인수는 스택에 전달 오른쪽에서 왼쪽으로 합니다. ARM 및 x64 아키텍처에서는 일부 인수가 레지스터에 의해 전달 되 고 나머지는 오른쪽에서 왼쪽으로 스택에 전달 됩니다. 호출 루틴 스택에서 인수를 꺼냅니다.  
+  
+ C의 경우는 `__cdecl` 명명 규칙 사용 하 여 함수 이름 앞에 밑줄이 ( `_` ); 소문자 변환은 수행 되지 않습니다. 로 선언 되지 않은 `extern "C"`, c + + 함수는 다른 이름 장식 구성표를 사용 합니다. 자세한 내용은 참조 [데코 레이트 된 이름](../../build/reference/decorated-names.md)합니다.  
+  
+## <a name="fastcall-specifics"></a>__fastcall 세부 사항  
+ 일부는 `__fastcall` 함수의 인수가 레지스터에 전달 됩니다 (x86 프로세서, ECX 및 EDX), 나머지는 오른쪽에서 왼쪽으로 스택에 푸시됩니다. 호출된 된 루틴을 반환 하기 전에 이러한 인수는 스택에서 팝 합니다. 일반적으로 **/Gr** 실행 시간을 줄입니다.  
+  
+> [!NOTE]
+>  사용 하는 경우 주의 해야는 `__fastcall` 인라인 어셈블리 언어로 작성 된 모든 함수에 대 한 호출 규칙입니다. 레지스터 사용 컴파일러의 사용을 충돌할 수 있습니다.  
+  
+ C의 경우는 `__fastcall` 명명 규칙 사용 하 여 함수 이름 앞에 at 기호 (`@`) 뒤에 크기 (바이트)에서 함수의 인수에 의해 합니다. 없음 대/소문자 변환은 수행 됩니다. 컴파일러는 명명 규칙에 대 한이 서식 파일을 사용합니다.  
+  
+```  
 @function_name@number  
 ```  
   
- `__fastcall` 명명 규칙을 사용할 때는 표준 포함 파일을 사용합니다.  그렇지 않으면 확인할 수 없는 외부 참조가 발생합니다.  
+ 사용 하는 경우는 `__fastcall` 명명 규칙을 사용 하 여 표준 포함 파일입니다. 그렇지 않으면 확인 되지 않은 외부 참조를 얻을 수 있습니다.  
   
-## \_\_stdcall 특성  
- `__stdcall` 함수의 인수는 스택에 오른쪽부터 왼쪽으로 넣어지고,호출된 함수는 반환되기 전에 스택에서 이 인수를 꺼냅니다.  
+## <a name="stdcall-specifics"></a>__stdcall 세부 사항  
+ A `__stdcall` 함수 인수는 오른쪽에서 왼쪽으로 스택에 밀어 넣은 및 반환 되기 전에 호출된 된 함수가 스택에서 이러한 인수를 꺼냅니다.  
   
- C에서 `__stdcall` 명명 규칙은 앞에 밑줄\(`_`\)이 오고 뒤에 \(@\) 기호와 바이트 단위로 표시된 함수의 인수 크기가 오는 함수 이름을 사용합니다.  대\/소문자 변환은 수행되지 않습니다.  컴파일러는 명명 규칙에 이 템플릿을 사용합니다.  
+ C의 경우는 `__stdcall` 명명 규칙 사용 하 여 함수 이름 앞에 밑줄이 ( `_` ) 뒤에는 at 기호 (@) 및 함수 인수 (바이트)에서의 크기입니다. 대/소문자 변환은 수행되지 않습니다. 컴파일러는 명명 규칙에 대 한이 서식 파일을 사용합니다.  
   
-```c  
+```  
 _functionname@number  
 ```  
   
-## \_\_vectorcall 고유 정보  
- `__vectorcall` 함수의 정수 인수는 부동 소수점과 벡터 값에 대해 최대 2개\(x86\) 또는 4개\(x64\)의 정수 레지스터 및 최대 6개의 XMM 레지스터를 사용하여 값으로 전달되고 나머지는 스택우로 오른쪽에서 왼쪽으로 전달됩니다.  호출된 함수는 반환 전에 스택을 정리합니다.  벡터 및 부동 소수점 반환 값은 XMM0에 반환됩니다.  
+## <a name="vectorcall-specifics"></a>__vectorcall 세부 사항  
+ A `__vectorcall` 함수의 정수 인수는 값으로 전달, 최대 (x86)에 2 또는 4 (x64)를 사용 하 여 정수를 등록 하 고 6 개의 XMM 최대 등록에 대 한 부동 소수점 벡터 값과 나머지는 오른쪽에서 왼쪽으로 스택에 전달 됩니다. 반환 하기 전에 호출된 된 함수가 스택에서 정리 합니다. 벡터와 반환 값을 부동 소수점 x m m 0에 반환 됩니다.  
   
- C의 경우 `__vectorcall` 명명 규칙에서는 함수 이름 뒤에 두 개의 @ 기호\(@@\)와 바이트 단위로 표시된 함수 인수의 크기가 차례로 따라오는 형식을 사용합니다.  대\/소문자 변환은 수행되지 않습니다.  컴파일러는 명명 규칙에 이 템플릿을 사용합니다.  
+ C의 경우는 `__vectorcall` 명명 규칙에 두 개의 at 기호 (@ @) 및 크기 (바이트)는 함수 인수는 함수 이름을 사용 합니다. 대/소문자 변환은 수행되지 않습니다. 컴파일러는 명명 규칙에 대 한이 서식 파일을 사용합니다.  
   
-```c  
+```  
 functionname@@number  
 ```  
   
-### To set this compiler option in the Visual Studio development environment  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  Open the project's **Property Pages** dialog box.  For details, see [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md).  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  Select the **C\/C\+\+** folder.  
+2.  선택 된 **C/c + +** 폴더입니다.  
   
-3.  Select the **Advanced** property page.  
+3.  선택 된 **고급** 속성 페이지.  
   
-4.  Modify the **Calling Convention** property.  
+4.  수정 된 **호출 규칙** 속성입니다.  
   
-### To set this compiler option programmatically  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

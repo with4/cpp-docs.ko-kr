@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0c8702ff0438fe9a22de0c7b079d757e9a8d66d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aedc8861815d7a6fbd91af984656940a928b3a84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listreverse-stlclr"></a>list::reverse(STL/CLR)
 제어 되는 시퀀스를 반대로 바꿉니다.  
@@ -33,7 +36,7 @@ void reverse();
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 되는 시퀀스에 있는 모든 요소의 순서를 반대로 바꿉니다. 요소 목록이 반영 하기 위해 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_list_reverse.cpp   

@@ -1,34 +1,36 @@
 ---
-title: "MFC ODBC 클래스에 대한 추가 정보 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ODBC 클래스"
+title: "추가 MFC ODBC 클래스에 대 한 정보 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5f43b8fa403aad5b2df6aebf07c1aaf3b0dd191b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# MFC ODBC 클래스에 대한 추가 정보
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음 항목에서는 이 항목에서 소개한 개념과 기술을 더 자세하게 설명합니다.  
+# <a name="further-reading-about-the-mfc-odbc-classes"></a>MFC ODBC 클래스에 대한 추가 정보
+다음 항목을 추가 개념 및이 항목에서 소개 하는 기술을 설명 합니다.  
   
 -   [MFC 응용 프로그램 마법사, 데이터베이스 지원](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
 -   [MFC ODBC 소비자 추가](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
   
--   [데이터 소스\(ODBC\)](../../data/odbc/data-source-odbc.md)  
+-   [데이터 소스(ODBC)](../../data/odbc/data-source-odbc.md)  
   
 -   [다이너셋](../../data/odbc/dynaset.md)  
   
@@ -42,24 +44,24 @@ caps.handback.revision: 8
   
 -   [ODBC 관리자](../../data/odbc/odbc-administrator.md)  
   
--   [RFX](../../data/odbc/record-field-exchange-rfx.md)  
+-   [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)  
   
--   [레코드 집합\(ODBC\)](../../data/odbc/recordset-odbc.md)  
+-   [레코드 집합(ODBC)](../../data/odbc/recordset-odbc.md)  
   
 -   [레코드 뷰](../../data/record-views-mfc-data-access.md)  
   
--   [Serialization: Serialization vs. Database Input\/Output](../../mfc/serialization-serialization-vs-database-input-output.md)  
+-   [Serialization: Serialization과 데이터베이스 입/출력](../../mfc/serialization-serialization-vs-database-input-output.md)  
   
 -   [스냅숏](../../data/odbc/snapshot.md)  
   
 -   [SQL](../../data/odbc/sql.md)  
   
--   [트랜잭션\(ODBC\)](../../data/odbc/transaction-odbc.md)  
+-   [트랜잭션(ODBC)](../../data/odbc/transaction-odbc.md)  
   
- 먼저 [레코드 집합\(ODBC\)](../../data/odbc/recordset-odbc.md)을 읽는 것이 좋습니다.  
+ 에 읽기를 시작 하려면 먼저 인 [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md)합니다.  
   
- MFC 참조에서 [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) 및 [CDBException](../../mfc/reference/cdbexception-class.md)을 참조하십시오.  
+ 에 *MFC 참조*, 참조 [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md), 및 [잠금을](../../mfc/reference/cdbexception-class.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 및 MFC](../../data/odbc/odbc-and-mfc.md)   
- [데이터 엑세스 프로그래밍 \(MFC\/ATL\)](../../data/data-access-programming-mfc-atl.md)
+ [데이터 액세스 프로그래밍 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
