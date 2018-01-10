@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af833219039a03e7e403f7e3cd10210057f3abfa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3190c1f6914ae8ea24b968a8cf286de1867938cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyin"></a>copyin
 스레드가 마스터 스레드에 값에 대 한 액세스를 허용 된 [threadprivate](../../../parallel/openmp/reference/threadprivate.md) 변수입니다.  
@@ -47,7 +48,7 @@ copyin(var)
   
  자세한 내용은 참조 [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [threadprivate](../../../parallel/openmp/reference/threadprivate.md) 사용 하는 예제에 대 한 `copyin`합니다.  
   
 ## <a name="see-also"></a>참고 항목  

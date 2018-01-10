@@ -43,11 +43,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01961cf610a50ff9f0c858eeb0269288120edbe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1709ebf0a831fa7c1bba79b338a2978d6c6dae86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sourceblock-class"></a>source_block 클래스
 `source_block` 클래스는 소스 전용 블록에 대한 추상 기본 클래스입니다. 이 클래스는 기본 링크 관리 기능 및 일반적인 오류 검사를 제공합니다.  
@@ -95,7 +96,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |[unlink_target](#unlink_target)|이 대상 블록을 연결 해제 `source_block` 개체입니다.|  
 |[unlink_targets](#unlink_targets)|이 모든 대상 블록의 연결을 해제 `source_block` 개체입니다. (재정의 [isource:: Unlink_targets](isource-class.md#unlink_targets).)|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  

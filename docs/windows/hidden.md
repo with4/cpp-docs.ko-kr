@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a33faa8f0b21e26842f6ad6fc98c16228f8335ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c038eb4869cb3191dd26b5c4ea8e1c6cc182e366
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hidden"></a>hidden
 항목이 존재 하지만 하지 사용자 기반 브라우저에 표시할지 나타냅니다.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  **숨겨진** c + + 특성에 동일한 기능을는 [숨겨진](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  예를 참조 [바인딩 가능한](../windows/bindable.md) 사용 하는 방법의 예 **숨겨진**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

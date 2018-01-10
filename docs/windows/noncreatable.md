@@ -1,32 +1,33 @@
 ---
-title: "noncreatable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.noncreatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "noncreatable attribute"
+title: noncreatable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.noncreatable
+dev_langs: C++
+helpviewer_keywords: noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bb9f67b4efac28a1cacd6301c8ca849246f9a481
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# noncreatable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-자체로 인스턴스화할 수 있는 개체를 정의 합니다.  
+# <a name="noncreatable"></a>noncreatable
+단독으로 인스턴스화할 수 없는 개체를 정의 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,12 +35,12 @@ caps.handback.revision: 9
   
 ```  
   
-## 설명  
- **만들 수 없도록** C\+\+ 특성을 동일한 기능을가지고 있는  [만들 수 없도록](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 속성 및 자동으로 생성 된 전달 됩니다.컴파일러에서 IDL 파일입니다.  
+## <a name="remarks"></a>설명  
+ **noncreatable** c + + 특성에 동일한 기능을는 [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 특성을 생성 된 자동으로 전달 됩니다. 컴파일러에서 IDL 파일입니다.  
   
- ATL을 사용 하는 프로젝트 내에서이 특성을 사용 하는 경우 특성의 동작을 변경 합니다.  위의 문제 이외에 특성 또한 삽입은  [OBJECT\_ENTRY\_NON\_CREATEABLE\_EX\_AUTO](../Topic/OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO.md) 매크로.  이 매크로를 ATL 개체 외부에서 만들 수 없습니다 나타냅니다.  
+ ATL을 사용 하는 프로젝트 내에서이 특성을 사용 하는 경우 특성의 동작이 변경 됩니다. 위의 동작 외에도 특성도 삽입 합니다.는 [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) 매크로입니다. Atl 나타냅니다이 매크로 개체 외부에서 만들 수 없습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cpp_attr_ref_noncreatable.cpp  
@@ -59,20 +60,19 @@ class CMyClass : public A
 };  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**,`struct`|  
+|**적용 대상**|**class**, `struct`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|**coclass**|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [클래스 특성](../windows/class-attributes.md)   

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2416e8872998f9cb59efee21d33bbe60dd96d37
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1331931ba2fa7219a27b8f60b185dc3ab9310328
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4219"></a>링커 도구 경고 LNK4219
 픽스업 이름 픽스업 오버플로입니다. 대상 '대상 symbol name' 범위를 벗어남 썽크가 삽입 됩니다.  

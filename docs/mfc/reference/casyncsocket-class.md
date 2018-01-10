@@ -85,11 +85,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1043273a7a0c8d34428289664b651ccb158a8e9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24ef9c6e39d72e756b95472daee46b7d39503943
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 클래스
 Windows 소켓 나타냅니다 — 네트워크 통신의 끝점입니다.  
@@ -139,7 +140,7 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket::ShutDown](#shutdown)|사용 하지 않도록 설정 **보낼** 및/또는 **수신** 소켓에서 호출 합니다.|  
 |[CASyncSocket::Socket](#socket)|소켓 핸들을 할당합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -968,7 +969,7 @@ virtual void OnConnect(int nErrorCode);
   
  자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCAsyncSocket#1](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
 ##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
@@ -1009,7 +1010,7 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCAsyncSocket#2](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
 ##  <a name="onsend"></a>CAsyncSocket::OnSend  
@@ -1030,7 +1031,7 @@ virtual void OnSend(int nErrorCode);
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
 ##  <a name="operator_eq"></a>CAsyncSocket::operator =  
@@ -1122,7 +1123,7 @@ virtual int Receive(
   
  **수신** 각 시간에 대해 한 번만 호출 해야 [CAsyncSocket::OnReceive](#onreceive) 호출 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CAsyncSocket::OnReceive](#onreceive)합니다.  
   
 ##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
@@ -1353,7 +1354,7 @@ virtual int Send(
   
  `CAsyncSocket` 유형의 개체 **SOCK_STREAM**, 쓴 바이트 수는 1부터 로컬 및 외부 호스트의 버퍼 가용성에 따라 요청 된 길이 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CAsyncSocket::OnSend](#onsend)합니다.  
   
 ##  <a name="sendto"></a>CAsyncSocket::SendTo  
@@ -1672,7 +1673,7 @@ BOOL ShutDown(int nHow = sends);
   
  `ShutDown` 않습니다 하지 닫기 소켓과 소켓에 연결 된 리소스가 해제 되지 것입니다까지 **닫습니다** 호출 됩니다. 응용 프로그램을 종료 한 후에 소켓을 다시 사용 되지는지 않습니다. 사용을 지 원하는 Windows 소켓 구현이 필요 하지는 특히 **연결** 이러한 소켓에 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CAsyncSocket::OnReceive](#onreceive)합니다.  
   
 ##  <a name="socket"></a>CASyncSocket::Socket  

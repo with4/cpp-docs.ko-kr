@@ -15,10 +15,9 @@ f1_keywords:
 - xutility/std::operator+
 - xutility/std::operator-
 - xutility/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (iterator)
@@ -26,12 +25,11 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: a6e5d30b970c3887c9ac7641ec39275acd9cd79d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 연산자
 ||||  
@@ -67,7 +65,7 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 ### <a name="remarks"></a>설명  
  반복기 개체가 컨테이너의 동일한 요소로 주소 지정되면 서로 같습니다. 두 반복기가 컨테이너의 다른 요소를 가리키면 반복기가 같지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // iterator_op_ne.cpp  
@@ -169,7 +167,7 @@ bool operator==(
   
  처음 두 템플릿 연산자는 `left`와 `right`가 동일한 반복기를 저장하는 경우에만 true를 반환합니다. 세 번째 템플릿 연산자는 `left`와 `right`가 동일한 스트림 포인터를 저장하는 경우에만 true를 반환합니다. 네 번째 템플릿 연산자는 ` left.equal ( right)`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // iterator_op_eq.cpp  
@@ -252,7 +250,7 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ### <a name="remarks"></a>설명  
  한 반복기 개체가 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 먼저 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 작습니다. 한 반복기 개체가 다른 반복기 개체와 동일한 요소 또는 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 나중에 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 작지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // iterator_op_lt.cpp  
@@ -339,7 +337,7 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ### <a name="remarks"></a>설명  
  한 반복기 개체가 동일한 요소 또는 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 먼저 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 작거나 같습니다. 한 반복기 개체가 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 나중에 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 큽니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // iterator_op_le.cpp  
@@ -430,7 +428,7 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ### <a name="remarks"></a>설명  
  한 반복기 개체가 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 나중에 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 큽니다. 한 반복기 개체가 다른 반복기 개체와 동일한 요소 또는 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 먼저 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 크지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // iterator_op_gt.cpp  
@@ -515,7 +513,7 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ### <a name="remarks"></a>설명  
  한 반복기 개체가 동일한 요소 또는 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 나중에 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 큽니다. 한 반복기 개체가 컨테이너에서 다른 반복기 개체에 의해 주소가 지정된 요소보다 먼저 나타나는 요소의 주소를 지정하는 경우 다른 반복기 개체보다 작습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // iterator_op_ge.cpp  
@@ -612,7 +610,7 @@ operator+(
 ### <a name="return-value"></a>반환 값  
  합계 `right` + `_Off`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // iterator_op_insert.cpp  
@@ -693,7 +691,7 @@ Tdiff operator-(
   
  `Tdiff`는 반환된 식의 형식에 의해 결정됩니다. 그렇지 않으면 `RandomIterator1::difference_type`입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // iterator_op_sub.cpp  
@@ -752,5 +750,4 @@ The difference: rVPOS2 - rVPOS1= 4.
   
 ## <a name="see-also"></a>참고 항목  
  [\<iterator>](../standard-library/iterator.md)
-
 

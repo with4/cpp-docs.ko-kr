@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0ecbdfb78c0a37f7d261b60ecb4ebd8b92aee2db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a03cfd4b8f8b1d199cd7a3f613bed8717c1910e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timeputbyname-class"></a>time_put_byname 클래스
 `time_put`\< CharType, OutputIterator > 형식의 로캘 패싯으로 사용할 수 있는 개체에 대해 설명하는 파생된 템플릿 클래스입니다.  
@@ -50,7 +51,7 @@ protected:
  로캘 이름  
   
  `_Refs`  
- 초기 참조 횟수  
+ 초기 참조 개수입니다.  
   
 ## <a name="remarks"></a>설명  
  해당 동작은 [명명된](../standard-library/locale-class.md#name) 로캘 `_Locname`에 의해 결정됩니다. 각 생성자는 [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.  

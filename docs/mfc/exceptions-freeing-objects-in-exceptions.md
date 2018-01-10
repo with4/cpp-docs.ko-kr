@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd995abc405ce7c8f43bc2b0438331b7c1566552
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a422347e319fabbd91f20e0ebf7897865f1ca4c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>예외: 예외의 개체 해제
 이 문서 필요성 및 예외가 발생 하면 개체를 해제 하는 방법을 설명 합니다. 다음과 같은 내용을 다룹니다.  

@@ -61,11 +61,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd6322b372a9cfb6ef75875d183d1b3e0a3e79c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596d39f5d6338f7a16e7a6090fbc47f5ca799d6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 클래스
 `CMFCRibbonStatusBar` 클래스는 리본 요소를 표시할 수 있는 상태 표시줄 컨트롤을 구현 합니다.  
@@ -104,7 +105,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 |[CMFCRibbonStatusBar::RemoveElement](#removeelement)|리본 메뉴 상태 표시줄에서 지정 된 명령 ID를 가진 요소를 제거 합니다.|  
 |[CMFCRibbonStatusBar::SetInformation](#setinformation)|리본 메뉴 상태 표시줄에 대 한 정보 모드를 사용할지 설정 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -117,7 +118,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
  일반적으로 기본 영역은 상태 표시줄의 상태 알림 표시 하 고 확장 된 영역의 뷰 컨트롤을 표시 합니다. 사용자가 크기 조정 리본 메뉴 상태 표시줄에서 확장 된 영역의 가능한 한 오랫동안 표시 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCRibbonStatusBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 구분 기호를 추가 리본 메뉴 상태 표시줄에 새 리본 요소를 추가, 리본 메뉴 상태 표시줄의 확장된 된 영역에 리본 요소를 추가 하는 방법을 설명 하 고 리본 메뉴 상태 표시줄에 대 한 일반 모드를 설정 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]  

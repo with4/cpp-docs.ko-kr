@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e05b4acf06f17813d45b4888a1342b31a424648
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07f59d65b5231e7e102dcf154ef2bc64ed8cbf04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="divides-struct"></a>divides 구조체
 인수에 대해 나누기 연산(`operator/`)을 수행하는 사전 정의된 함수 개체입니다.  
@@ -58,7 +59,7 @@ struct divides<void>
 ## <a name="return-value"></a>반환 값  
  `Left / Right`의 결과입니다. 특수화된 템플릿은 `operator/`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // functional_divides.cpp  

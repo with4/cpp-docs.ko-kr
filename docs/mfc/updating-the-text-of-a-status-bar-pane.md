@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e447b6b8d4895bf0103995742fe0b2a5c8d62484
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0fb0f9bdaa032340256eee4781bfd775767f62ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>상태 표시줄 창의 텍스트 업데이트
 이 문서에서는 MFC 상태 표시줄 창에 표시 되는 텍스트를 변경 하는 방법에 설명 합니다. 상태 표시줄-window 개체 클래스의 [CStatusBar](../mfc/reference/cstatusbar-class.md) -여러 개의 "창이 있습니다."를 포함 합니다. 각 창에 정보를 표시 하는 데 사용할 수 있는 상태 표시줄의 사각형 영역입니다. 예를 들어 많은 응용 프로그램 맨 오른쪽 창에 CAPS LOCK, NUM LOCK 및 다른 키의 상태를 표시 합니다. 응용 프로그램 에서도 대개 유용한 정보가 표시 (0 창)에서 가장 왼쪽 창에서 "메시지 창입니다." 라고도 함 예를 들어 기본 MFC 상태 표시줄 메시지 창을 사용 하 여 현재 선택 된 메뉴 항목이 나 도구 모음 단추를 설명 하는 문자열을 표시 합니다. 이 그림에서 [상태 표시줄](../mfc/status-bar-implementation-in-mfc.md) MFC 응용 프로그램 마법사로 만든 응용 프로그램에서 상태 표시줄을 표시 합니다.  

@@ -1,27 +1,27 @@
 ---
-title: "A.18   Nested for Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A. 18 지시문에 대 한 중첩 된 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ae2b2e0b-ec94-43f8-928c-6d621b51f0df
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9784afedd20d8e3492b056179b9c60601a065a11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# A.18   Nested for Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음의 예제 `for` 지시문의 중첩 \([2.9 절](../../parallel/openmp/2-9-directive-nesting.md) 페이지 33\) 준수 하는 때문에 내부 및 외부 `for` 지시문 바인딩할 다른 병렬 영역에:  
+# <a name="a18---nested-for-directives"></a>A.18   지시문에 중첩됨
+다음 예제에서는 `for` 지시문 중첩 ([섹션 2.9](../../parallel/openmp/2-9-directive-nesting.md) 페이지 33) 규격이 때문에 내부 및 외부 `for` 지시문 병렬 서로 다른 지역에 바인딩:  
   
 ```  
 #pragma omp parallel default(shared)  
@@ -39,7 +39,7 @@ manager: "ghogen"
 }  
 ```  
   
- 앞의 예제에서는 다음 변형도 호환 됩니다.  
+ 위 예의 다음 변형은 규격 이기도합니다.  
   
 ```  
 #pragma omp parallel default(shared)  

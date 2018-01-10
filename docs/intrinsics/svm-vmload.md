@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9aee6ce3d9a3554e4722a143bcb683c40b78ea14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 458a650214ab2186f9697ca587b2b429e9cb5a6f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Microsoft 전용**  
@@ -43,7 +44,7 @@ void __svm_vmload(
 |[in] `VmcbPhysicalAddress`|VMCB의 실제 주소입니다.|  
   
 ## <a name="remarks"></a>설명  
- `__svm_vmload` 함수는 동일는 `VMLOAD` 컴퓨터 명령입니다. 이 함수는 게스트 운영 체제 및 해당 응용 프로그램과 호스트 가상 컴퓨터 모니터의 상호 작용을 지원합니다. 자세한 내용을 보려면 문서에 대 한 검색 "AMD64 아키텍처 프로그래머의 수동 볼륨 2: 시스템 프로그래밍" 24593, 3.11, 수정 버전 번호에 문서는 [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746) 사이트입니다.  
+ `__svm_vmload` 함수는 동일는 `VMLOAD` 컴퓨터 명령입니다. 이 함수는 게스트 운영 체제 및 해당 응용 프로그램과 호스트 가상 컴퓨터 모니터의 상호 작용을 지원합니다. 자세한 내용을 보려면 문서에 대 한 검색 "AMD64 아키텍처 프로그래머의 수동 볼륨 2: 시스템 프로그래밍" 24593, 3.11, 수정 버전 번호에 문서는 [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) 사이트입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

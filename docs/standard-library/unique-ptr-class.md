@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 148d4b734f0e2cb56e959f54b99fb89a5efa6669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba6ac8e50764801052c051703a211c4605a33601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniqueptr-class"></a>unique_ptr 클래스
 소유한 개체 또는 배열에 대한 포인터를 저장합니다. 개체/배열은 다른 `unique_ptr`이 소유하지 않습니다. 개체/배열은 `unique_ptr`이 소멸될 때 소멸됩니다.  
@@ -135,7 +136,7 @@ public:
 |-|-|  
 |[unique_ptr](#unique_ptr)|`unique_ptr`의 8가지 생성자가 있습니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -245,7 +246,7 @@ pointer release();
 ### <a name="remarks"></a>설명  
  `release`를 사용하여 `unique_ptr`이 저장한 원시 포인터의 소유권을 가져올 수 있습니다. 호출자는 반환된 포인터를 삭제해야 합니다. `unique-ptr`은 비어 있는 기본 생성 상태로 설정됩니다. `unique_ptr` 호출 후에 호환되는 형식의 다른 포인터를 `release`에 할당할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   이 예에서는 릴리스의 호출자가 반환된 개체를 책임지는 방식을 보여 줍니다.  
   
 ```cpp  

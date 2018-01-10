@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 902044e23974b882c52f5cb715d42f0fe1f2f610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL 마법사
 MFC DLL 마법사를 사용 하 여 MFC DLL 프로젝트를 만들 때 시작 응용 프로그램을 사용 된 기본 제공 기능이 있는 게의 기본 기능을 구현 하는 경우는 [DLL](../../build/dlls-in-visual-cpp.md)합니다. C + + 소스 (.cpp) 파일, 리소스 (.rc) 파일 및 프로젝트 (.vcxproj) 파일을 포함 하는 MFC 시작 프로그램입니다. 이 기초 파일에서 생성 된 코드는 MFC를 기반으로 합니다. 자세한 내용은 Visual Studio에서 프로젝트에 대해 생성 되는 Readme.txt 파일 세부 정보를 보려면 및 [클래스와 MFC DLL 마법사에서 생성 된 함수](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -46,7 +47,7 @@ MFC DLL 마법사를 사용 하 여 MFC DLL 프로젝트를 만들 때 시작 �
 -   [DLL 초기화](../../build/run-time-library-behavior.md#initializing-a-dll)  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual c + + 프로젝트 만들기 및 관리](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Visual C++ 프로젝트 만들기 및 관리](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [속성 페이지](../../ide/property-pages-visual-cpp.md)   
  [프로젝트 속성 사용](../../ide/working-with-project-properties.md)   
  [응용 프로그램 배포](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)   

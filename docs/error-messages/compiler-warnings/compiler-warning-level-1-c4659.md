@@ -1,32 +1,31 @@
 ---
 title: "컴파일러 경고 (수준 1) C4659 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4659"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4659"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4659
+dev_langs: C++
+helpviewer_keywords: C4659
 ms.assetid: e29ba8db-7917-43f6-8e34-868b752279ae
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd974c730a67489d9197b448f02a5042f77159f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4659
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\#pragma 'pragma' : 예약된 세그먼트 'segment'에 정의되지 않은 동작이 있습니다. \#pragma comment\(linker, ...\)를 사용하십시오.  
+# <a name="compiler-warning-level-1-c4659"></a>컴파일러 경고(수준 1) C4659
+\#pragma 'pragma': #pragma 주석 (linker,...)를 사용 하 여, 사용 하 여 예약 된 세그먼트 'segment' 동작이 정의 되지 않았습니다  
   
- 옵션을 링커에 전달하는 데 .drectve 옵션을 사용했습니다.  링커 옵션을 전달하려면 대신 pragma [comment](../../preprocessor/comment-c-cpp.md)을 사용하십시오.  
+ .Drectve 옵션을 링커에 옵션 전달 하는 데 사용 되었습니다. Pragma를 사용 하는 대신 [주석](../../preprocessor/comment-c-cpp.md) 링커 옵션을 전달 합니다.  
   
 ```  
 // C4659.cpp  

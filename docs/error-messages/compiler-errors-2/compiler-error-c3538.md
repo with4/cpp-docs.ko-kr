@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: da21036ddd4cc8b468f291079e0c475ca1b7c4b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 111e75b562020057596baf3f778d97cdab2ab528
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3538"></a>컴파일러 오류 C3538
 선언자 목록에서 'auto'는 항상 동일한 형식으로 추론되어야 합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 1.  목록에 있는 모든 `auto` 선언이 동일한 형식으로 추론되는지 확인합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 문은 3538 오류를 생성합니다. 각 문에서 여러 변수를 선언하지만 각각의 `auto` 키워드 사용이 동일한 형식으로 추론되지 않습니다.  
   
 ```  

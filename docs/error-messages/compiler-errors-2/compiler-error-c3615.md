@@ -10,11 +10,12 @@ ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c2c527c4b32c8338212a703d80ecb38c00b0a9d
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: ea5502ee6e66cf3add4a4ff97e4922a66712ed70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3615"></a>컴파일러 오류 C3615
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 11/11/2017
 
 함수 *함수* 로 평가 될 수 없습니다 `constexpr` 컴파일 타임에 있습니다. 되도록 `constexpr`, 함수는 호출할 수 있습니다. 다른 `constexpr` 함수입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 조건에 따라 평가 연산의 왼쪽 피연산자에서 유효 하지 않을 때 올바르게 visual Studio 2017에서 오류가 발생 한 `constexpr` 컨텍스트. Visual Studio 2017 있지만 Visual Studio 2015에 다음 코드를 컴파일합니다.
 

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 62a192704a7a78cac7dd8777db54316a9713e3b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d05560a2821b51f6cf2829b85cefce7a63ac747
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltsample-containergt-operators"></a>&lt;sample container&gt; 연산자
 \<sample container>의 연산자에 대한 자세한 내용은 [\<sample container>](../standard-library/sample-container.md)를 참조하세요.

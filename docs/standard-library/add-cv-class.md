@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::add_cv
-dev_langs:
-- C++
+f1_keywords: type_traits/std::add_cv
+dev_langs: C++
 helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ccea9fe28ab942341a431585b7d536687dd85345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 90d31b9eaa9baf3f282fb5cc57e0c75c7480e489
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addcv-class"></a>add_cv 클래스
 형식에서 const volatile 형식을 만듭니다.  
@@ -49,7 +46,7 @@ using add_cv_t = typename add_cv<T>::type;
   
 `add_cv_t<T>` 도우미 형식은 `add_cv<T>` 멤버 typedef `type`에 액세스하기 위한 바로 가기입니다.
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // add_cv.cpp
@@ -102,4 +99,3 @@ invoked const volatile S.f()
 [<type_traits>](../standard-library/type-traits.md)   
 [remove_const 클래스](../standard-library/remove-const-class.md)   
 [remove_volatile 클래스](../standard-library/remove-volatile-class.md)
-

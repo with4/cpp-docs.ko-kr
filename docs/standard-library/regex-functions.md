@@ -11,11 +11,9 @@ f1_keywords:
 - regex/std::regex_replace
 - regex/std::regex_search
 - regex/std::swap
-- regex/std::swap
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
 helpviewer_keywords:
 - std::regex_match [C++]
@@ -23,12 +21,11 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
+ms.openlocfilehash: f9ac58b6022d1497f0f06ff08edd29f2e012000f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 82b4ea038efad847c8c6f50873fa4cdd8250c453
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 함수
 ||||  
@@ -143,7 +140,7 @@ bool regex_match(
   
  **(1):**  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include "stdafx.h"  
@@ -259,7 +256,7 @@ basic_string<Elem> regex_replace(
   
  두 번째 함수는 형식 `basic_string<charT>`의 지역 변수 `result`를 생성하고 `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`를 호출합니다. `result`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_replace.cpp   
@@ -394,7 +391,7 @@ bool regex_search(
 ### <a name="remarks"></a>설명  
  각 템플릿 함수는 피연산자 시퀀스의 해당 정규식 인수 `re`에 대한 검색이 성공하는 경우에만 true를 반환합니다. `match_results` 개체를 사용하는 함수는 검색에 성공했는지를 반영하도록 구성원를 설정하고 그런 경우 정규식의 다양한 캡처 그룹이 캡처됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_search.cpp   
@@ -476,7 +473,7 @@ void swap(
 ### <a name="remarks"></a>설명  
  템플릿 함수는 일정한 시간에 개별 인수의 내용을 교환하며 예외를 throw하지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__swap.cpp   
@@ -521,5 +518,4 @@ string == aaa
 [regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)  
 [regex_traits 클래스](../standard-library/regex-traits-class.md)  
 [\<regex> 형식 정의](../standard-library/regex-typedefs.md)  
-
 

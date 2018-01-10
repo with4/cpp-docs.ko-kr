@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-containers"></a>C++ 표준 라이브러리 컨테이너
 표준 라이브러리는 관련 개체 컬렉션을 저장할, 형식이 안전한 다양한 컨테이너를 제공합니다. 컨테이너는 클래스 템플릿입니다. 컨테이너 변수를 선언할 때 컨테이너에 포함할 요소의 형식을 지정합니다. 컨테이너는 이니셜라이저 목록을 사용하여 생성할 수 있습니다. 요소 추가 및 제거, 다른 작업 수행 등을 위한 멤버 함수가 있습니다.  
@@ -182,15 +166,14 @@ int main()
 >  [range-based for 루프](../cpp/range-based-for-statement-cpp.md)를 사용하여 C++ 표준 라이브러리 컬렉션을 반복할 수도 있습니다.  
   
 ## <a name="comparing-containers"></a>컨테이너 비교  
- 모든 컨테이너는 같은 요소 형식을 가진 같은 형식의 두 컨테이너를 비교하기 위해 == 연산자를 오버로드합니다. ==를 사용하여 한 vector\<string>을 다른 vector\<string>과 비교할 수는 있지만 vector\<string>을 list\<string>과 비교하거나 vector\<string>을 vector\<char*>와 비교할 수는 없습니다.  C++98/03에서는 [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae) 또는 [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323)를 사용하여 다른 종류의 컨테이너 형식 및/또는 요소 형식을 비교할 수 있습니다. C++11에서는 [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f)을 사용할 수도 있습니다. 하지만 이 모든 경우에, 함수는 컨테이너의 길이가 동일하다고 가정합니다. 두 번째 범위가 첫 번째 범위보다 짧은 경우 정의되지 않은 동작이 나타납니다. 두 번째 범위가 더 긴 경우에도 첫 번째 범위의 끝 이후에는 비교가 계속되지 않기 때문에 잘못된 결과가 나옵니다.  
+ 모든 컨테이너는 같은 요소 형식을 가진 같은 형식의 두 컨테이너를 비교하기 위해 == 연산자를 오버로드합니다. ==를 사용하여 한 vector\<string>을 다른 vector\<string>과 비교할 수는 있지만 vector\<string>을 list\<string>과 비교하거나 vector\<string>을 vector\<char*>와 비교할 수는 없습니다.  C++98/03에서는 [std::equal](algorithm-functions.md#equal) 또는 [std::mismatch](algorithm-functions.md#mismatch)를 사용하여 다른 종류의 컨테이너 형식 및/또는 요소 형식을 비교할 수 있습니다. C++11에서는 [std::is_permutation](algorithm-functions.md#is_permutation)을 사용할 수도 있습니다. 하지만 이 모든 경우에, 함수는 컨테이너의 길이가 동일하다고 가정합니다. 두 번째 범위가 첫 번째 범위보다 짧은 경우 정의되지 않은 동작이 나타납니다. 두 번째 범위가 더 긴 경우에도 첫 번째 범위의 끝 이후에는 비교가 계속되지 않기 때문에 잘못된 결과가 나옵니다.  
   
 ### <a name="comparing-dissimilar-containers-c14"></a>다른 종류의 컨테이너 비교(C++14)  
- C++14 이상에서는 두 개의 전체 범위를 사용하는 [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae), [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) 또는 [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f) 함수 오버로드 중 하나를 사용하여 다른 종류의 컨테이너 및/또는 다른 종류의 요소 형식을 비교할 수 있습니다. 이러한 오버로드를 사용하면 길이가 서로 다른 컨테이너를 비교할 수 있습니다. 이 오버로드는 사용자 오류 취약성이 훨씬 덜하며 길이가 서로 다른 컨테이너를 비교할 때 일정한 시간에 false를 반환하도록 최적화되어 있습니다. 따라서 (1) 사용하지 않아야 할 매우 명확한 이유가 없는 경우 또는 (2) 이중 범위 최적화의 이점을 활용할 수 없는 [std::list](../standard-library/list-class.md) 컨테이너를 사용하지 않는 경우에는 이러한 오버로드를 사용하는 것이 좋습니다.  
+ C++14 이상에서는 두 개의 전체 범위를 사용하는 **std::equal**, **std::mismatch** 또는 **std::is_permutation** 함수 오버로드 중 하나를 사용하여 다른 종류의 컨테이너 및/또는 다른 종류의 요소 형식을 비교할 수 있습니다. 이러한 오버로드를 사용하면 길이가 서로 다른 컨테이너를 비교할 수 있습니다. 이 오버로드는 사용자 오류 취약성이 훨씬 덜하며 길이가 서로 다른 컨테이너를 비교할 때 일정한 시간에 false를 반환하도록 최적화되어 있습니다. 따라서 (1) 사용하지 않아야 할 매우 명확한 이유가 없는 경우 또는 (2) 이중 범위 최적화의 이점을 활용할 수 없는 [std::list](../standard-library/list-class.md) 컨테이너를 사용하지 않는 경우에는 이러한 오버로드를 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [컨테이너](../cpp/containers-modern-cpp.md)   
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)   
  [\<sample container>](../standard-library/sample-container.md)   
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

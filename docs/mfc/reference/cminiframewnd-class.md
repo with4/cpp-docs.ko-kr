@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13abe38c4d5a632a2d13d0c5770109b23f86bc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 클래스
 일반적으로 부동 도구 모음에 있는 절반 높이의 프레임 창을 나타냅니다.  

@@ -10,14 +10,13 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 6ce4e11a41f199d4ec82a593b53c2f0b7f1c47e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 함수
 |||  
@@ -34,7 +33,7 @@ extern const std::nothrow_t nothrow;
 ### <a name="remarks"></a>설명  
  이 개체는 매개 변수 형식 [std::nothrow_t](../standard-library/nothrow-t-structure.md)의 일치를 확인하기 위한 함수 인수로 사용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `std::nothrow_t`를 함수 매개 변수로 사용하는 방법의 예제는 [operator new](../standard-library/new-operators.md#op_new) 및 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)를 참조하세요.  
   
 ##  <a name="set_new_handler"></a>  set_new_handler  
@@ -54,7 +53,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 ### <a name="remarks"></a>설명  
  함수는 유지 관리하는 정적 [새 처리기](../standard-library/new-typedefs.md#new_handler) 포인터에 `Pnew`를 저장한 다음 이전에 포인터에 저장되었던 값을 반환합니다. 새 처리기는 [operator new](../standard-library/new-operators.md#op_new)( **size_t**)에서 사용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // new_set_new_handler.cpp  
@@ -119,5 +118,4 @@ bad allocation
   
 ## <a name="see-also"></a>참고 항목  
  [\<new>](../standard-library/new.md)
-
 

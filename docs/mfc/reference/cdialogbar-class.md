@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ee7507165c64f10def930f97c5f0ca2a62423dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 클래스
 컨트롤 막대에 Windows 모덜리스 대화 상자의 기능을 제공합니다.  
@@ -139,7 +140,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  지정 하는 경우는 `CBRS_TOP` 또는 `CBRS_BOTTOM` 맞춤 스타일 대화 상자 막대 너비 프레임 창의 방식과 높이가 이므로로 지정 된 리소스의 `nIDTemplate`합니다. 지정 하는 경우는 `CBRS_LEFT` 또는 `CBRS_RIGHT` 맞춤 스타일 대화 상자 막대의 높이 프레임 창 이며 너비 지정 하는 리소스의 `nIDTemplate`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

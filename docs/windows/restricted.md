@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6a6b0172b0078dee659964b36ec37464ec1705d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 569d57da691f40857f54dcae1c383ff7758564f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restricted"></a>restricted
 모듈, 인터페이스 또는 dispinterface의 멤버를 임의로 호출할 수 없도록 지정 합니다.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  **제한** c + + 특성에 동일한 기능을는 [제한](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 사용 하 여 **제한** 특성:  
   
 ```  

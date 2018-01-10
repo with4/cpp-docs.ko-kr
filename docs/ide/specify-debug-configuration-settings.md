@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1781d5c5bba0d818111673594a5526354a490bd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7d357d53cb93ad5ba81c02fc3ccf1931cdd1cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>기존 코드 파일에서 새 프로젝트 만들기 마법사, 디버그 구성 설정 지정
 기존 코드 파일에서 새 프로젝트 만들기 마법사의이 페이지를 사용 하 여 디버그 구성 프로젝트 설정 지정 합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
  새 프로젝트의 디버그 구성에 대 한 출력 파일의 디렉터리 경로 지정합니다. 이 옵션은 사용할 수 때는 **외부 빌드 시스템 사용** 옵션을 선택는 **프로젝트 설정 지정** 페이지; 사용할 수는 그렇지 않은 경우.  
   
  **전처리기 정의 (/ D)**  
- 새 프로젝트에 대 한 전처리기 기호를 정의합니다. 자세한 내용은 [/D(전처리기 정의)](../build/reference/d-preprocessor-definitions.md)를 참조하세요.  
+ 새 프로젝트에 대 한 전처리기 기호를 정의합니다. 자세한 내용은 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)을 참조하세요.  
   
  **포함 검색 경로 (/ I)**  
  새 프로젝트에서 전처리기 지시문에 전달 된 파일 참조를 확인 하는 컴파일러가 검색할 디렉터리 목록에 추가할 디렉터리 경로를 지정 합니다. 자세한 내용은 [/I(추가 포함 디렉터리)](../build/reference/i-additional-include-directories.md)를 참조하세요.  

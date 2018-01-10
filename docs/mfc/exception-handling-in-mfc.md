@@ -44,11 +44,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d90482cc7b58962e76558a26bbf2777d8854e4ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="exception-handling-in-mfc"></a>MFC의 예외 처리
 이 문서에서는 MFC에서 제공 되는 예외 처리 메커니즘에 설명 합니다. 두 가지 메커니즘을 사용할 수 있습니다.  
@@ -137,5 +138,5 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C + + 예외 처리](../cpp/cpp-exception-handling.md)   
- [I: 나만의 사용자 지정 예외 클래스를 만드는 방법](http://go.microsoft.com/fwlink/linkid=128045)
+ [I: 나만의 사용자 지정 예외 클래스를 만드는 방법](http://go.microsoft.com/fwlink/p/?linkid=128045)
 

@@ -1,32 +1,33 @@
 ---
-title: "iid_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.iid_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iid_is attribute"
+title: iid_is | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.iid_is
+dev_langs: C++
+helpviewer_keywords: iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2caa675f222ad1e2940117c60eb5a83d6a4f976f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# iid_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-인터페이스 포인터에서 가리키는 COM 인터페이스의 IID를 지정 합니다.  
+# <a name="iidis"></a>iid_is
+인터페이스 포인터에 의해 COM 인터페이스의 IID를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,15 +36,15 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 매개 변수  
- *expression*  
- COM 인터페이스는 IID를 지정 하는 C 언어 식에는 인터페이스 포인터가 가리키는 합니다.  
+#### <a name="parameters"></a>매개 변수  
+ *식*  
+ COM 인터페이스의 IID를 지정 하는 C 언어 식 인터페이스 포인터에서 가리키는입니다.  
   
-## 설명  
- **Iid\_is** C\+\+ 특성을 동일한 기능을가지고 있는  [iid\_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **iid_is** c + + 특성에 동일한 기능을는 [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) MIDL 특성입니다.  
   
-## 예제  
- 다음 코드의 사용을 보여 줍니다.  **iid\_is**:  
+## <a name="example"></a>예  
+ 다음 코드의 사용을 보여 줍니다. **iid_is**:  
   
 ```  
 // cpp_attr_ref_iid_is.cpp  
@@ -60,20 +61,19 @@ __interface IFireTabCtrl : IDispatch
 [module(name="ATLFIRELib")];  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|인터페이스 매개 변수 데이터 멤버|  
+|**적용 대상**|인터페이스 매개 변수, 데이터 멤버|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [매개 변수 특성](../windows/parameter-attributes.md)   

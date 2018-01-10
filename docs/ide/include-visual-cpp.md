@@ -1,60 +1,60 @@
 ---
-title: "&lt;include&gt;(Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "include"
-  - "<include>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<include> C++ XML 태그"
-  - "include C++ XML 태그"
+title: "&lt;포함&gt; (Visual c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- include
+- <include>
+dev_langs: C++
+helpviewer_keywords:
+- include C++ XML tag
+- <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f9a6b07ce540d67a44e46a24fb943dac93bb95a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;include&gt;(Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<include\> 태그를 사용하면 소스 코드의 형식과 멤버를 설명하는 다른 파일의 주석을 참조할 수 있습니다.  이렇게 하면 소스 코드 파일에 직접 문서 주석을 배치하지 않아도 됩니다.  예를 들어, 사용할 수 있습니다 \<include\> 팀 또는 회사 전체에서 사용 되는 표준 "상용구" 주석을 삽입.  
+# <a name="ltincludegt-visual-c"></a>&lt;포함&gt; (Visual c + +)
+\<include> 태그를 사용하면 소스 코드의 형식과 멤버를 설명하는 다른 파일의 주석을 참조할 수 있습니다. 소스 코드 파일에 직접 문서 주석을 포함하는 대신 사용되는 대안입니다.  사용할 수는 예를 들어 \<포함 >를 팀 이나 회사에서 사용 되는 표준 "상용구" 주석을 삽입 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <include file='filename' path='tagpath' />  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `filename`  
- 문서를 포함할 파일 이름입니다.  파일 이름은 path로 한정될 수 있습니다.  이름을 단일 또는 이중 따옴표로 묶어야 합니다.  검색 되지 않는 경우에 컴파일러에서 경고가 발생 `filename`.  
+ 설명서를 포함 하는 파일의 이름입니다. 경로를 사용하여 파일 이름을 정규화할 수 있습니다.  이름을 단일 또는 이중 따옴표로 묶습니다.  `filename`가 검색되지 않는 경우 컴파일러에서 경고가 발생합니다.  
   
  `tagpath`  
- 원하는 노드는 파일에 포함 된 집합을 선택 하는 유효한 XPath 식입니다.  
+ 파일에 포함 된 원하는 노드 집합을 선택 하는 유효한 XPath 식입니다.  
   
  `name`  
- 주석 앞에 오는 태그의 이름 지정자입니다. `name`에는 `id`가 있어야 합니다.  
+ 주석 앞에 오는 태그의 이름 지정자입니다. `name`에는 `id`가 있습니다.  
   
  `id`  
- 주석 앞에 오는 태그의 ID입니다.  이름을 단일 또는 이중 따옴표로 묶어야 합니다.  
+ 주석 앞에 오는 태그의 ID입니다.  이름을 단일 또는 이중 따옴표로 묶습니다.  
   
-## 설명  
- \<include\> 태그는 XML XPath 구문을 사용합니다.  사용 하 여 사용자 지정 하는 방법에 대 한 XPath 문서를 참조 하십시오 \<include\>.  
+## <a name="remarks"></a>설명  
+ \<include> 태그는 XML XPath 구문을 사용합니다. 사용 하 여 사용자 지정 하는 방법에 대 한 XPath 설명서를 참조 \<포함 > 합니다.  
   
- [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 저장합니다.  
+ [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## 예제  
- 아래 예제는 여러 개의 파일로 구성됩니다.  사용 하 여 첫 번째 파일 \<include\> 다음 문서 주석이 포함 되어 있습니다.  
+## <a name="example"></a>예  
+ 다중 파일 예제입니다. 사용 하는 첫 번째 파일이 \<포함 >, 다음과 같은 문서 주석을 포함:  
   
 ```  
 // xml_include_tag.cpp  
@@ -74,7 +74,7 @@ public ref class Test2 {
 };  
 ```  
   
- 두 번째 파일 xml\_include\_tag.doc에는 다음 문서 주석이 있습니다.  
+ 두 번째 파일인 xml_include_tag.doc에는 다음과 같은 문서 주석이 포함되어 있습니다.  
   
 ```  
 <MyDocs>  
@@ -94,7 +94,7 @@ The summary for this other type.
 </MyDocs>  
 ```  
   
-## 프로그램 출력  
+## <a name="program-output"></a>프로그램 출력  
   
 ```  
 <?xml version="1.0"?>  
@@ -117,5 +117,5 @@ The summary for this other type.
 </doc>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 문서](../ide/xml-documentation-visual-cpp.md)

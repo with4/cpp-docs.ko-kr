@@ -1,52 +1,56 @@
 ---
-title: "Using the 256-Color Palette (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "256-color palette"
-  - "colors, icons and cursors"
-  - "cursors, color"
-  - "color palettes, 256-color"
-  - "palettes, 256-color"
-  - "icons, color"
+title: "256 색상표 (아이콘에 대 한 이미지 편집기)를 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- 256-color palette
+- colors, icons and cursors
+- cursors, color
+- color palettes, 256-color
+- palettes, 256-color
+- icons, color
 ms.assetid: 1506ed00-669b-4a21-b1a4-39b6a84a78bb
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6ed1aaf782bb5261fae28e0cf8f8e9a5cbe839c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Using the 256-Color Palette (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-256 색상표에서 선택하여 그리려면 [색상 창](../windows/colors-window-image-editor-for-icons.md)의 색상표에서 색을 선택해야 합니다.  
+# <a name="using-the-256-color-palette-image-editor-for-icons"></a>256 색상표 사용(아이콘에 대한 이미지 편집기)
+256 색상표에서 선택 하 여 그리려면, 하려면 색 색상표에서 색을 선택 해야는 [색상 창](../windows/colors-window-image-editor-for-icons.md)합니다.  
   
-### 256 색상표에서 큰 아이콘에 사용할 색을 선택하려면  
+### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>큰 아이콘에 대 한 256 색 색상표에서 색을 선택 하려면  
   
-1.  큰 아이콘 또는 커서를 선택하거나 큰 아이콘이나 커서를 새로 만듭니다.  
+1.  큰 아이콘 또는 커서를 선택 하거나 새 큰 아이콘 또는 커서를 만듭니다.  
   
-2.  **색상 창**의 **색** 색상표에 표시된 256색 중에서 색을 선택합니다.  
+2.  에 표시 된 256 색 중에서 색을 선택는 **색** 색상표는 **색** 창.  
   
-     선택한 색이 **색상** 창의 색상표에 현재 색으로 표시됩니다.  
+     선택한 색의 색상표에서 현재 색 표시 됩니다는 **색** 창.  
   
     > [!NOTE]
-    >  256색 이미지에 사용되는 초기 색상표는 CreateHalftonePalette Windows API에서 반환된 색상표와 일치합니다.  Windows 셸용 아이콘은 모두 이 색상표를 사용해야 색상표를 사용하는 동안 깜빡임을 막을 수 있습니다.  
+    >  256 색 이미지에 사용 되는 초기 팔레트 CreateHalftonePalette Windows API에서 반환 된 색상표를 찾습니다. Windows 셸 하기 위한 모든 아이콘 색상표 동안 깜빡임을 방지 하기 위해이 색상표를 사용 해야 합니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
  요구 사항  
   
  없음  
   
-## 참고 항목  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Creating a 256\-Color Icon or Cursor](../mfc/creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>참고 항목  
+ [액셀러레이터 키](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [256 색 아이콘이 나 커서 만들기](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)   
+ [아이콘 및 커서: 디스플레이 장치용 이미지 리소스](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+

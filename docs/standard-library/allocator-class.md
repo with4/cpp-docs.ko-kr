@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,8 +23,7 @@ f1_keywords:
 - memory/std::allocator::destroy
 - memory/std::allocator::max_size
 - memory/std::allocator::rebind
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::allocator [C++]
 - std::allocator [C++], const_pointer
@@ -43,16 +41,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 50967f59b594cfba30167b67dcb2802541a5eafc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocator-class"></a>allocator 클래스
 템플릿 클래스는 **형식** 형식의 개체 배열에 대한 저장소 할당 및 해제를 관리하는 개체를 설명합니다. 클래스 **allocator**의 개체는 C++ 표준 라이브러리의 여러 컨테이너 템플릿 클래스에 대한 생성자에 지정된 기본 할당자 개체입니다.  
@@ -97,7 +95,7 @@ class allocator
 |-|-|  
 |[allocator](#allocator)|`allocator` 개체를 만드는 데 사용되는 생성자입니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -150,7 +148,7 @@ const_pointer address(const_reference val) const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 할당된 요소에 대해 포인터가 가져야 하는 형식으로 `val`의 주소를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_address.cpp  
@@ -214,7 +212,7 @@ pointer allocate(size_type count, const void* _Hint);
 ### <a name="remarks"></a>설명  
  멤버 함수는 연산자 new(`count`)를 호출함으로써 **Type** 형식의 count 요소 배열에 대한 저장소를 할당합니다. 할당된 개체에 대한 포인터를 반환합니다. 힌트 인수는 일부 할당자의 참조 지역성 개선에 도움이 됩니다. 동일한 할당자 개체에 의해 이미 할당되었지만 아직 할당 취소되지 않은 개체의 주소가 유효한 선택입니다. 힌트를 제공하지 않으려면 null 포인터 인수를 대신 사용합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_allocate.cpp  
@@ -267,7 +265,7 @@ allocator(const allocator<Other>& right);
 ### <a name="remarks"></a>설명  
  생성자는 아무 작업도 수행하지 않습니다. 그러나 일반적으로 다른 할당자 개체로부터 구성된 할당자 개체는 비교 시 같아야 하며, 두 할당자 개체 간에 개체 할당 및 해제를 서로 혼합할 수 있어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_allocator.cpp  
@@ -340,7 +338,7 @@ typedef const value_type *const_pointer;
 ### <a name="remarks"></a>설명  
  포인터 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 const 개체를 **\*ptr** 식을 통해 지정할 수 있는 **ptr** 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_const_ptr.cpp  
@@ -393,7 +391,7 @@ typedef const value_type& const_reference;
 ### <a name="remarks"></a>설명  
  참조 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 const 개체를 지정할 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_const_ref.cpp  
@@ -467,7 +465,7 @@ void construct(pointer ptr, _Other&&...   val);
 ### <a name="remarks"></a>설명  
  첫 번째 멤버 함수는 **new** ( ( `void` \*) `ptr` ) **Type** ( `val` )과 등가입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_construct.cpp  
@@ -533,7 +531,7 @@ void deallocate(pointer ptr, size_type count);
 ### <a name="remarks"></a>설명  
  형식의 개수 개체의 배열에 대 한 저장소를 해제 하는 멤버 함수 **형식** 에서 시작 `ptr`를 호출 하 여 `operator delete(ptr)`합니다. **\*이것**과 같은지를 비교하는 할당자 개체에 대해 [allocate](#allocate)를 호출하고 같은 크기와 형식의 배열 개체를 할당하여 `ptr` 포인터가 이미 반환된 상태여야 합니다. `deallocate`은 예외를 throw할 수 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   멤버 함수 사용의 예제를 보려면 [allocator::allocate](#allocate)를 참조하세요.  
   
 ##  <a name="destroy"></a>  allocator::destroy  
@@ -550,7 +548,7 @@ void destroy(pointer ptr);
 ### <a name="remarks"></a>설명  
  가 지정 된 개체를 제거 하는 멤버 함수 `ptr`, 소멸자를 호출 하 여 `ptr->` **형식**::**~ 유형**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_destroy.cpp  
@@ -609,7 +607,7 @@ typedef ptrdiff_t difference_type;
 ### <a name="remarks"></a>설명  
  부호 있는 정수 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_diff_type.cpp  
@@ -668,7 +666,7 @@ size_type max_size() const;
 ### <a name="return-value"></a>반환 값  
  할당할 수 있는 요소의 수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_max_size.cpp  
@@ -743,7 +741,7 @@ allocator<Type>& operator=(const allocator<Other>& right);
 ### <a name="remarks"></a>설명  
  템플릿 대입 연산자는 아무것도 수행하지 않습니다. 그러나 일반적으로 다른 할당자 개체에 할당된 할당자 개체는 비교 시 같아야 하며, 두 할당자 개체 간에 개체 할당 및 해제를 서로 혼합할 수 있어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_op_assign.cpp  
@@ -794,7 +792,7 @@ typedef value_type *pointer;
 ### <a name="remarks"></a>설명  
  포인터 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 개체를 **\*ptr** 식을 통해 지정할 수 있는 **ptr** 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_ptr.cpp  
@@ -863,7 +861,7 @@ A::rebind<Other>::other(al).allocate(1, (Other *)0)
 A::rebind<Other>::other::pointer  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_rebind.cpp  
@@ -898,7 +896,7 @@ typedef value_type& reference;
 ### <a name="remarks"></a>설명  
  참조 형식은 템플릿 클래스 할당자의 개체가 할당할 수 있는 개체를 지정할 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_reference.cpp  
@@ -953,7 +951,7 @@ The element referred to by vref after being modified is: 150.
 typedef size_t size_type;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_size_type.cpp  
@@ -1000,7 +998,7 @@ typedef Type value_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 **Type**과 동일한 의미입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // allocator_value_type.cpp  
@@ -1051,5 +1049,4 @@ The modified vector v is:
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

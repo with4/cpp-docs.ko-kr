@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33835dcaa40b217e9248e5c03b775f968332b687
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ef1188c9519e57c8132a2b20fc3b272d6c0ac51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="communicating-with-a-tree-control"></a>트리 컨트롤과 통신
 멤버 함수를 호출 하는 것에 대 한 다양 한 방법을 사용 하면 한 [CTreeCtrl](../mfc/reference/ctreectrl-class.md) 개체가 생성 된 방식에 따라 개체:  

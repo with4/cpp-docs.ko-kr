@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c136e2d73256c78768e8b712d901e4fe4f819673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2f8991b6cc827c35c94b0989ef82e32422fd5c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>비활성 상태 중 마우스 상호 작용 제공
 컨트롤을 즉시 활성화 되지 않은 경우 계속 경우 처리할 수 `WM_SETCURSOR` 및 `WM_MOUSEMOVE` 컨트롤에 창이 자체의 경우에 메시지입니다. 이 사용 하 여 수행할 수 있습니다 `COleControl`의 구현의 `IPointerInactive` 인터페이스에는 기본적으로 해제 합니다. (참조는 *ActiveX SDK* 이 인터페이스의 설명에 대 한 합니다.) 를 사용 하려면 포함 된 `pointerInactive` 에서 반환 하는 플래그 집합에서 플래그 [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  

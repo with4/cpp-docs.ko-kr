@@ -1,30 +1,31 @@
 ---
-title: "Module::MethodReleaseNotifier 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::MethodReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MethodReleaseNotifier 클래스"
+title: "Module:: methodreleasenotifier 클래스 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::MethodReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: MethodReleaseNotifier class
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 113ea9179292606461a8fe67ff161f63e58161da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Module::MethodReleaseNotifier 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-현재 모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다. 이벤트 처리기는 개체와 해당 포인터를-a-메서드 멤버에 의해 지정 됩니다.  
+# <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier 클래스
+현재 모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다. 이벤트 처리기는 멤버의 포인터-에-a-메서드 멤버 및 개체에서 지정 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,11 +52,11 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Module:: methodreleasenotifier:: Invoke 메서드](../windows/module-methodreleasenotifier-invoke-method.md)|현재 module:: methodreleasenotifier 개체와 관련 된 이벤트 처리기를 호출 합니다.|  
+|[Module::MethodReleaseNotifier::Invoke 메서드](../windows/module-methodreleasenotifier-invoke-method.md)|현재 module:: methodreleasenotifier 개체와 연결 된 이벤트 처리기를 호출 합니다.|  
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[Module::MethodReleaseNotifier::method_ 데이터 멤버](../windows/module-methodreleasenotifier-method-data-member.md)|현재 Module::MethodReleaseNotifier 개체의 이벤트 처리기에 대한 포인터를 보유합니다.|  
 |[Module::MethodReleaseNotifier::object_ 데이터 멤버](../windows/module-methodreleasenotifier-object-data-member.md)|멤버 함수가 현재 Module::MethodReleaseNotifier 개체의 이벤트 처리기인 개체에 대한 포인터를 보유합니다.|  
@@ -71,4 +72,4 @@ class MethodReleaseNotifier : public ReleaseNotifier;
  **네임스페이스:** Microsoft::WRL
  
  ## <a name="see-also"></a>참고 항목
- [모듈 클래스](../windows/module-class.md)
+ [Module 클래스](../windows/module-class.md)

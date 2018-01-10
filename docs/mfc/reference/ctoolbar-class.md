@@ -55,11 +55,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e0e4b0699f17e4bf00106b3d4a22938569a2254
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dec2dac93dae9860dfadd347584fbdf465d15838
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctoolbar-class"></a>CToolBar 클래스
 비트맵 단추의 행과 구분 기호(선택 사항)가 있는 컨트롤 막대입니다.  
@@ -223,7 +224,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  또한 도구 모음 높이 기본값으로 설정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
 ##  <a name="createex"></a>CToolBar::CreateEx  
@@ -266,7 +267,7 @@ virtual BOOL CreateEx(
   
  사용 하 여 `CreateEx`, 대신 [만들기](#create)포함 된 도구 모음 컨트롤을 만들 때 특정 스타일 있어야 하는 경우. 예를 들어 설정 `dwCtrlStyle` 를 **TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT** Internet Explorer 4 도구 모음 유사한 도구 모음을 만들려면 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
 ##  <a name="ctoolbar"></a>CToolBar::CToolBar  
@@ -387,7 +388,7 @@ virtual void GetItemRect(
   
  사용 하 여 `GetItemRect` 콤보 상자나 기타 컨트롤으로 교체 하려면 구분의 좌표를 얻으려고 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CToolBar::SetSizes](#setsizes)합니다.  
   
 ##  <a name="gettoolbarctrl"></a>CToolBar::GetToolBarCtrl  
@@ -405,7 +406,7 @@ CToolBarCtrl& GetToolBarCtrl() const;
   
  공용 컨트롤을 사용 하는 방법에 대 한 자세한 내용은 문서 참조 [컨트롤](../../mfc/controls-mfc.md) 및 [공용 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775493) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
 ##  <a name="loadbitmap"></a>CToolBar::LoadBitmap  
@@ -453,7 +454,7 @@ BOOL LoadToolBar(UINT nIDResource);
 ### <a name="remarks"></a>설명  
  참조 [도구 모음 편집기](../../windows/toolbar-editor.md) 에서 도구 모음 리소스를 만들기에 대 한 자세한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CToolBar::CreateEx](#createex)합니다.  
   
 ##  <a name="setbitmap"></a>CToolBar::SetBitmap  
@@ -606,7 +607,7 @@ BOOL SetButtonText(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CToolBar::GetToolBarCtrl](#gettoolbarctrl)합니다.  
   
 ##  <a name="setheight"></a>CToolBar::SetHeight  
@@ -646,7 +647,7 @@ void SetSizes(
   
  준수 하지 않는 도구 모음에 대해서만이 함수를 호출 *소프트웨어 디자인에 대 한 Windows 인터페이스 지침* 단추와 이미지 크기에 대 한 권장 사항입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

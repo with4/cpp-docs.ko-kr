@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba07a13c8955a45c49797619ba69f7f89f71d5bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efc240a12835da1bda0fe840e347200a4f58bcc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="removepointer-class"></a>remove_pointer 클래스
 포인터부터 형식까지 다양한 형식을 만듭니다.  
@@ -43,7 +44,7 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 ## <a name="remarks"></a>설명  
  `remove_pointer<T>`의 인스턴스는 `T1`가 `T`, `T1*`, `T1* const` 또는 `T1* volatile` 형식인 경우 수정된 형식인 `T1* const volatile`을 보관하며, 그렇지 않은 경우 `T`를 보관합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 #include <type_traits>   

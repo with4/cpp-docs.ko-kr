@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 09be7a5efbf3f78aa3cbc1862b811fff3d487c75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c021b11809b3e6598e694fdaa46b7f829358e24f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="framework-mfc"></a>프레임워크(MFC)
 Microsoft Foundation 클래스 (MFC) 라이브러리 프레임 워크를 사용 하 여 주로 몇 가지 주요 클래스와 여러 가지 Visual c + + 도구에 기반 합니다. 일부 클래스는 Win32 응용 프로그래밍 인터페이스 (API)의 많은 부분을 캡슐화합니다. 다른 클래스에는 문서, 뷰 및 응용 프로그램 자체와 같은 응용 프로그램 개념 캡슐화합니다. 여전히 다른 OLE 기능이 및 ODBC / DAO 데이터 액세스 기능을 캡슐화합니다.  
@@ -36,7 +37,7 @@ Microsoft Foundation 클래스 (MFC) 라이브러리 프레임 워크를 사용 
   
  캡슐화 것을 의미 하는 c + + 클래스 `CWnd`, 예를 들어 형식의 멤버 변수를 포함 `HWND`, 클래스의 멤버 함수를 사용 하는 Win32 함수 호출을 캡슐화 하 고는 `HWND` 매개 변수로 합니다. 클래스 멤버 함수에는 일반적으로 캡슐화 하는 Win32 함수와 동일한 이름을 갖고 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SDI 및 MDI](../mfc/sdi-and-mdi.md)  
   
  [문서, 뷰 및 프레임워크](../mfc/documents-views-and-the-framework.md)  

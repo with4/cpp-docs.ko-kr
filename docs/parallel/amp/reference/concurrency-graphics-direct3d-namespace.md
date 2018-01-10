@@ -1,43 +1,27 @@
 ---
-title: "Concurrency::graphics::direct3d Namespace | Microsoft 문서"
+title: Concurrency::graphics::direct3d Namespace | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d
 - amp_short_vectors/Concurrency::graphics::direct3d
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f842080ce65d4c7a378a9c16ff91b24ae4f17a07
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5d72b26167a51c6d25e2a9d569ab0424e097a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d 네임스페이스
 제공 된 [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) 및 [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) 메서드.  
@@ -54,7 +38,7 @@ namespace direct3d;
   
 |이름<br /><br /> 설명|  
 |--------------------------|  
-|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Get 주어진된 엑셀 러 레이 터는 Direct3D 샘플러 상태 인터페이스는이 나타내는 지정된 샘플러 개체를 봅니다.|  
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Get 주어진된 accelerator는 Direct3D 샘플러 상태 인터페이스를 나타내는 지정된 샘플러 개체를 봅니다.|  
 |[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> 지정 된 원본으로 사용 하는 Direct3D 텍스처 인터페이스를 가져옵니다 [질감](texture-class.md) 개체입니다.|  
 |[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Direct3D 샘플러 상태 인터페이스 포인터에서는 샘플러를 만듭니다.|  
 |[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> 만듭니다는 [질감](texture-class.md) 지정된 된 매개 변수를 사용 하 여 개체입니다.|  
@@ -67,4 +51,3 @@ namespace direct3d;
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
-

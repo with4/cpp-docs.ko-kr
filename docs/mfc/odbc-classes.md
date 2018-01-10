@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6058aee8e1efd6a56ec21a1a170f1d8b1eb5238a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33fcc3453d36a2567330f60cec73383f842210c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-classes"></a>ODBC 클래스
 이러한 클래스는 다양 한 데이터베이스 ODBC (Open Connectivity) 드라이버를 사용할 수 있는 데이터베이스에 쉽게 액세스할 수 있도록를 다른 응용 프로그램 프레임 워크 클래스와 함께 작동 합니다.  

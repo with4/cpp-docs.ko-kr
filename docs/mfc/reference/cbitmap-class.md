@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33e0ca4c92d22d8afaed4523a7f274b6b5d20a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap 클래스
 Windows GDI(그래픽 장치 인터페이스) 비트맵을 캡슐화하고 비트맵을 조작하는 멤버 함수를 제공합니다.  
@@ -374,7 +375,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>설명  
  기본적으로 `LoadMappedBitmap` 단추 문자 모양에서 일반적으로 사용 되는 색에 매핑됩니다.  
   
- 매핑된 비트맵 만들기에 대 한 정보에 대 한 Windows 함수를 참조 하십시오. [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) 및 [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Windows SDK에는 구조입니다.  
+ 매핑된 비트맵 만들기에 대 한 정보에 대 한 Windows 함수를 참조 하십시오. [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) 및 [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Windows SDK에는 구조입니다.  
   
 ##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  Windows에서 사용 되는 미리 정의 된 비트맵을 로드 합니다.  

@@ -1,41 +1,42 @@
 ---
-title: "String  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string support with /clr"
-  - "/clr compiler option [C++], string support"
+title: "문자열 (c + + 구성 요소 확장명) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- string support with /clr
+- /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 19
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# String  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 컴파일러는 일련의 문자 시퀀스로 표현되는 개체인 *문자열*을 지원합니다.  Visual C\+\+는 문자열 값이 명시적으로 인용된 스트링 값을 갖는 리터럴과 암시적인 값을 갖는 스트링 변수를 지원합니다.  
+# <a name="string--c-component-extensions"></a>문자열(C++ 구성 요소 확장)
+Visual c + + 컴파일러에서는 *문자열*, 하는 일련의 문자로 텍스트를 나타내는 개체입니다. Visual c + + 문자열 값이 암시적, 변수와 값은 명시적 따옴표 붙은 문자열 리터럴을 지원 합니다.  
   
-## 모든 런타임  
- 할당된 메모리를 갖는 개체로 스트링을 표현하는 Windows 런타임 및 공용 언어 런타임은 자동적으로 관리됩니다.  즉, 스트링 변수가 범위를 벗어나거나 응용 프로그램이 종료될 때 스트링의 메모리를 명시적으로 버리는 것을 요구하지 않습니다.  문자열 개체의 수명을 자동적으로 관리되는 것을 나타내려면, [핸들 개체 \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) 한정자로 스트링 형식을 선언합니다.  
+## <a name="all-runtimes"></a>모든 런타임  
+ Windows 런타임 및 공용 언어 런타임 할당 된 메모리를 자동으로 관리 되는 개체로 문자열을 나타냅니다. 즉, 되는 문자열 변수 범위를 벗어난 또는 응용 프로그램이 종료 될 때 명시적으로 문자열에 대 한 메모리를 취소 필요가 없습니다. String 개체의 수명을 자동으로 관리 하도록 임을 나타내려면를 사용 하 여 문자열 형식 선언에서 [핸들 개체 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) 한정자입니다.  
   
-## Windows 런타임\(Windows Runtime\)  
- Windows 런타임 아키텍처는 `Platform` 네임 스페이스에서 `String` 데이터 형식을 구현하기 위해 Visual C\+\+가 필요합니다.  편의를 위해, Visual C\+\+는 또한 `string` 데이터 형식을 제공하는데, 이 형식은  `Platform::String`가 `default` 네임 스페이스에서 쓰이는 것과 동의어입니다.  
+## <a name="windows-runtime"></a>Windows 런타임  
+ Windows 런타임 아키텍처에서는 Visual c + + 구현 하는 `String` 데이터 형식에 `Platform` 네임 스페이스입니다. 사용자 편의 위해 Visual c + + 제공는 `string` 데이터 형식, 변수인에 대 한 동의어 `Platform::String`에 `default` 네임 스페이스입니다.  
   
-### 구문  
+### <a name="syntax"></a>구문  
   
 ```cpp  
-  
 // compile with /ZW  
 using namespace Platform;  
 using namespace default;  
@@ -45,45 +46,43 @@ using namespace default;
   
 ```  
   
-### 설명  
- 스트링에 대한 자세한 내용과 예제를 보려면 [Platform::String, std::wstring, and Literals \(Platform\)](http://msdn.microsoft.com/ko-kr/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)을 참조하십시오.  
+### <a name="remarks"></a>설명  
+ 자세한 내용과 예제 문자열에 대 한 참조 [platform:: string, std:: wstring, 및 리터럴 (플랫폼)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
-### 요구 사항  
- 컴파일러 옵션: **\/ZW**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/ZW**  
   
-## 공용 언어 런타임  
- 이 항목은 **\/clr** 컴파일러 옵션을 사용하여 Visual C\+\+ 컴파일러가 스트링 리터럴을 처리하는 방법을 보여줍니다.  **\/clr**를 사용하려면, 공용 언어 런타임 \(CLR\), C\+\+\/CLI 구문과 관리된 개체를 사용해야 합니다.  **\/clr**에 대한 자세한 내용은 [\/clr\(공용 언어 런타임 컴파일\)](../build/reference/clr-common-language-runtime-compilation.md)을 참조하십시오.  
+## <a name="common-language-runtime"></a>공용 언어 런타임  
+ 이 항목에서는 사용 하 여 실행 하면 Visual c + + 컴파일러에서 문자열 리터럴을 처리 하는 방법을 설명는 **/clr** 컴파일러 옵션입니다. 사용 하도록 **/clr**, 공용 언어 런타임 (CLR), C +을 사용 해야 + /CLI 구문 및 관리 되는 개체입니다. 에 대 한 자세한 내용은 **/clr**, 참조 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
   
- **\/clr**로 컴파일 하는 경우, 컴파일러는 문자열 리터럴 형식의 문자열을 <xref:System.String>의 형식으로 변환합니다.  기존 코드와의 호환성 유지를 하기 위한 이 두 가지 예외가 다음과 같습니다.  
+ 로 컴파일할 때 **/clr**, 컴파일러는 문자열 리터럴 형식의 문자열로 변환 <xref:System.String>합니다. 유지 하기 위해 기존 코드를 있는 함께 이전 버전과 호환성은이 두 가지 예외가:  
   
--   예외 처리.  문자열 리터럴이 발생 하면, 컴파일러는 문자열 리터럴로 캐치합니다.  
+-   예외 처리 합니다. 문자열 리터럴을 throw 되 면 컴파일러 문자열 리터럴로 catch 됩니다.  
   
--   템플릿 추론.  문자열 리터럴이 템플릿 인수로 전달된 경우, 컴파일러는 <xref:System.String>로 변환하지 않습니다.  제네릭 인수로 전달된 문자열 리터럴은 <xref:System.String>로 승격되는 것을 참조하세요.  
+-   템플릿 추론 합니다. 문자열 리터럴에 템플릿 인수로 전달 되는 경우 컴파일러는 하지 변환에 <xref:System.String>합니다. 제네릭 인수로 전달 된 문자열 리터럴으로 승격 된다는 점에 유의 <xref:System.String>합니다.  
   
- 컴파일러는 동작을 사용자 지정 하기 위해 재정의할 수 있는 기본적인 세 가지 연산자가 있습니다.  
+ 컴파일러는 해당 동작을 사용자 지정 하기 위해 재정의할 수 있는 세 명의 연산자에 대 한 기본 제공 지원도 있습니다.  
   
--   System::String ^ 연산자 \+ \( System::String, System::String\).  
+-   System:: string ^ 연산자 + (system:: string, system:: string);  
   
--   System::String ^ 연산자 \+ \( System::Object, System::String\).  
+-   System:: string ^ 연산자 + (system:: object, system:: string);  
   
--   System::String ^ 연산자 \+ \( System::String, System::Object\).  
+-   System:: string ^ 연산자 + (system:: string, system:: object);  
   
- <xref:System.String>를 전달할 때, 컴파일러는 필요에 따라 입력한 다음 문자열을 사용하여 \(ToString을 사용하여\) 개체를 연결할 합니다.  
-  
- **\/clr:oldSyntax**로 컴파일 할 경우, 문자열 리터럴은 <xref:System.String>로 변환되지 않을 것입니다.  
+ 전달 될 때는 <xref:System.String>는 컴파일러에서 필요에 따라 상자 하 고 다음 문자열 사용 (ToString)을 사용 하 여 개체를 연결 합니다.  
   
 > [!NOTE]
->  캐럿 \("^"\)은 선언된 변수가 C\+\+\/CLI 관리 개체를 위한 핸들인 것을 나타냅니다.  
+>  캐럿 ("^") 선언 된 변수는 C +에 대 한 핸들 임을 나타냅니다 + CLI 관리 되는 개체입니다.  
   
- 자세한 내용은 [문자열 및 문자 리터럴](../cpp/string-and-character-literals-cpp.md)를 참조하십시오.  
+ 자세한 내용은 참조 [문자열 및 문자 리터럴](../cpp/string-and-character-literals-cpp.md)합니다.  
   
-### 요구 사항  
- 컴파일러 옵션: **\/clr**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/clr**  
   
-### 예제  
+### <a name="examples"></a>예제  
  **예제**  
   
- 다음 코드 예제에서는 문자열을 결합하고 비교하는 방법을 보여 줍니다.  
+ 다음 코드 예제에서는 결합 하 고, 문자열 비교를 보여 줍니다.  
   
 ```cpp  
 // string_operators.cpp  
@@ -140,24 +139,41 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **abcdef**  
- **abcghi**  
- **ghiabc**  
- **c**  
- **abcdefghi**  
- **abczzz**  
- **abc1**  
- **abc97**  
- **abc3.1**  
- **abcdef**  
- **a 와 b는 같습니다**  
- **a와 b는 같지 않습니다.**  
- **abc**  
- **n은 비어 있습니다.** **예제**  
+```Output  
+abcdef  
   
- 다음 예제는 컴파일러에서 제공한 연산자를 오버 로드할 수 있고 <xref:System.String> 형식에 따라 함수 오버 로드를 찾을 수 있는 컴파일러를 보여줍니다.  
+abcghi  
+  
+ghiabc  
+  
+c  
+  
+abcdefghi  
+  
+abczzz  
+  
+abc1  
+  
+abc97  
+  
+abc3.1  
+  
+abcdef  
+  
+a and b are equal  
+  
+a and b are not equal  
+  
+abc  
+  
+n is empty  
+```  
+  
+ **예제**  
+  
+ 다음 샘플은 컴파일러에서 제공 하는 연산자를 오버 로드할 수 있습니다 및 컴파일러에서는 기반으로 하는 함수 오버 로드를 찾을 <xref:System.String> 유형입니다.  
   
 ```cpp  
 // string_operators_2.cpp  
@@ -203,15 +219,23 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **오버로드된 \+\(문자열 ^ a, 문자열 ^ b\)**   
- **오버로드된 \+ \(문자열 ^ a, 개체 ^ b\).**   
- **오버로드된 \+ \(개체 ^ a, 문자열 ^ b\).**   
- **문자열 ^ a**  
- **const char \* a** **예제**  
+```Output  
+overloaded +(String ^ a, String ^ b)   
   
- 다음 샘플은 컴파일러가 네이티브 문자열과 <xref:System.String> 문자열을 구분하는 것을 보여줍니다.  
+overloaded +(String ^ a, Object ^ b)   
+  
+overloaded +(Object ^ a, String ^ b)   
+  
+String ^ a  
+  
+const char * a  
+```  
+  
+ **예제**  
+  
+ 다음 예제에서는 컴파일러가 네이티브 문자열 구분을 보여 줍니다. 및 <xref:System.String> 문자열입니다.  
   
 ```cpp  
 // string_operators_3.cpp  
@@ -250,13 +274,19 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **char\***  
- **String ^ str**  
- **System.SByte\***  
- **System.String**   
-## 참고 항목  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
+```Output  
+char *  
+  
+String^ str  
+  
+System.SByte*  
+  
+System.String  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [런타임 플랫폼의 구성 요소 확장명](../windows/component-extensions-for-runtime-platforms.md)   
  [문자열 및 문자 리터럴](../cpp/string-and-character-literals-cpp.md)   
- [\/clr\(공용 언어 런타임 컴파일\)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)

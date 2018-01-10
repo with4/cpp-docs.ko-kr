@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8100119dba1094ced9358e5ff0102d831a713b2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-maps"></a>이벤트 맵
 컨트롤 (컨트롤 개발자가 결정) 일부 동작 (예: 키, 마우스 클릭 또는 컨트롤의 상태에 대 한 변경) 발생 하는 해당 컨테이너에 알리기 위해 하지 않고자 한다면 때마다 이벤트 발생 함수를 호출 합니다. 이 함수는 관련 된 이벤트를 발생 시켜 서 몇 가지 중요 한 작업을 수행한 컨트롤 컨테이너를 알립니다.  

@@ -10,14 +10,13 @@ f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 32707847948c32f671e7ebd7def23165b59a63a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltnewgt-operators"></a>&lt;new&gt; 연산자
 ||||  
@@ -51,7 +50,7 @@ void operator delete(void* ptr,
   
  세 번째 함수는 **new**( **std::size_t**, **conststd::nothrow_t&**) 형식의 new 식에 해당하는 placement delete 식에 의해 호출됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있습니다. 필요한 동작은 이전 `operator new`( **size_t**) 호출에 의해 반환되었거나 null인 `ptr`의 값을 허용하는 것입니다. 기본 동작은 **delete**( `ptr`)를 평가하는 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `operator delete`를 사용하는 예제는 [operator new](../standard-library/new-operators.md#op_new)를 참조하세요.  
   
 ##  <a name="op_delete_arr"></a>  operator delete[]  
@@ -78,7 +77,7 @@ void operator delete[](void* ptr,
   
  세 번째 함수는 `new[]`( **std::size_t**, **const std::nothrow_t&**) 형식의 `new[]` 식에 해당하는 placement delete 식에 의해 호출됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있습니다. 필요한 동작은 이전 operator `new[]`( **size_t**) 호출에 의해 반환되었거나 null인 `ptr`의 값을 허용하는 것입니다. 기본 동작은 `delete[]`( `ptr`)를 평가하는 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `operator delete[]` 사용 방법의 예제는 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)를 참조하세요.  
   
 ##  <a name="op_new"></a>  operator new  
@@ -133,7 +132,7 @@ void* operator new(std::size_t count,
   
  new의 throw 또는 비throw 동작에 대한 자세한 내용은 [new 및 delete 연산자](../cpp/new-and-delete-operators.md)를 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // new_op_new.cpp  
@@ -210,7 +209,7 @@ void* operator new[](std::size_t count,
   
  new의 throw 또는 비throw 동작에 대한 자세한 내용은 [new 및 delete 연산자](../cpp/new-and-delete-operators.md)를 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // new_op_alloc.cpp  
@@ -253,7 +252,6 @@ int main() {
   
 ## <a name="see-also"></a>참고 항목  
  [\<new>](../standard-library/new.md)
-
 
 
 

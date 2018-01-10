@@ -26,11 +26,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 718cb52bbc06645ec40fe5e35ba0a8cc55ff1778
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8117c3ac56305637164886c6c27f7f20528d64a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 클래스
 `vector<bool>` 클래스는 `bool` 형식의 요소에 대한 [vector](../standard-library/vector-class.md)의 부분적 특수화입니다. 특수화(비트당 하나의 `bool` 값을 저장하여 공간 최적화 제공)에서 사용하는 기본 형식에 대한 할당자가 있습니다.  
@@ -47,7 +48,7 @@ class vector<bool, Allocator>
   
  `bool` 형식으로 처리되는 작업은 컨테이너 저장소의 값에 해당합니다. `allocator_traits::construct`는 이러한 값을 만드는 데 사용되지 않습니다.  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -101,7 +102,7 @@ typedef bool const_reference;
 void flip();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // vector_bool_flip.cpp  
@@ -156,7 +157,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 ### <a name="remarks"></a>설명  
  `_ITERATOR_DEBUG_LEVEL` 집합을 사용하여 컴파일할 경우 벡터 경계 밖에서 요소를 액세스하려고 하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   이 코드 예제는 `vector<bool>::operator[]`의 올바른 사용 방법과 두 가지 흔한 코딩 실수(주석 처리)를 보여 줍니다. 이러한 실수는 `vector<bool>::reference`에서 반환하는 `vector<bool>::operator[]` 개체의 주소를 가져올 수 없으므로 오류가 발생합니다.  
   
 ```cpp  
@@ -213,7 +214,7 @@ bool& refb = vb[1];   // conversion error - do not use
 void flip();
 ```  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   
 ```cpp  
 // vector_bool_ref_flip.cpp  
@@ -280,7 +281,7 @@ reference& operator=(bool Val);
  `Val`  
  비트에 할당될 부울 값입니다.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   
 ```cpp  
 // vector_bool_ref_op_assign.cpp  

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.doctemp
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, document template strings
+f1_keywords: vc.appwiz.mfc.exe.doctemp
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 96cbb565ffae20d449b2164280fa461b2acfd4fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 문서 템플릿 문자열
 MFC 응용 프로그램 마법사의이 페이지를 제공 하거나 다음 옵션을 사용 하 여 문서 관리 및 지역화 합니다. 문서 템플릿 문자열은 포함 된 응용 프로그램에 사용할 수 있는 **문서/뷰 아키텍처 지원** 에 [응용 프로그램 종류](../../mfc/reference/application-type-mfc-application-wizard.md)합니다. 대화 상자에 대 한 가능 하지 않습니다. 대부분의 문서 템플릿 문자열을 보고 응용 프로그램의 사용자가 사용할 수 있으므로로 지역화 됩니다는 **리소스 언어** 에 표시 된는 **응용 프로그램 종류** 마법사의 페이지입니다.  
@@ -51,5 +47,4 @@ MFC 응용 프로그램 마법사의이 페이지를 제공 하거나 다음 옵
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)
-
 

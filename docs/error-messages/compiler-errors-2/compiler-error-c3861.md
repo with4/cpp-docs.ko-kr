@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d515c112c94024f123ee712b674b668b0c62287d
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 82656822d408be4b2fc085abe8a007469c822a65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3861"></a>컴파일러 오류 C3861
 
@@ -33,7 +34,7 @@ Visual Studio 2015에서 C 런타임 라이브러리에서 사용 되지 않는 
 
 이전 버전의 컴파일러에서 오류 C3861 나타나면 프로젝트 마이그레이션 후에 지원 되는 Windows 버전에 관련 된 문제를 할 수 있습니다. Visual C++에서는 더 이상 Windows 95, Windows 98, Windows ME, Windows NT 또는 Windows 2000을 대상으로 지정할 수 없습니다. WINVER 또는 _WIN32_WINNT 매크로가 이러한 Windows 버전 중 하나에 할당 된 경우에 매크로 수정 해야 합니다. 자세한 내용은 참조 [수정 WINVER 및 _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md)합니다.
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
 다음 샘플에서는 식별자가 정의 되지 않았으므로 C3861 오류가 발생 합니다.  
   
@@ -46,7 +47,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
 다음 샘플을 사용 하는 다른 소스 파일에서 선언 되지 않은 식별자는 해당 정의의 파일 범위에서 볼 수만 이므로 C3861를 생성 합니다.  
   
@@ -68,7 +69,7 @@ int f() {  // declared and defined here
 }
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
 C + + 표준 라이브러리의 예외 클래스에 필요한는 `std` 네임 스페이스입니다.  
   
@@ -87,7 +88,7 @@ int main() {
    }  
 }  
 ```  
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
 CRT 라이브러리에서 사용 되지 않는 함수가 제거 되었습니다.  
   

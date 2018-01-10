@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
@@ -20,30 +18,16 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
-ms.openlocfilehash: 37f3450fbd320105781fa5398e838d3a8e317879
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ea016877744bed8e91f8e7144560969b2dbca745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 Visual C++ 런타임 라이브러리는 부정확한 반복기 사용을 검색하고 런타임에 대화 상자를 어설션하고 표시합니다. Debug Iterator Support를 사용하도록 설정하려면 프로그램 컴파일 시 C++ 표준 라이브러리 및 C 런타임 라이브러리의 디버그 버전을 사용해야 합니다. 자세한 내용은 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요. 확인된 반복기를 사용하는 방법에 대한 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
@@ -54,7 +38,7 @@ Visual C++ 런타임 라이브러리는 부정확한 반복기 사용을 검색�
   
 -   push 또는 insert를 사용하여 [vector](../standard-library/vector.md)의 크기를 줄이면 `vector`에 대한 반복기가 무효화됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 이 샘플 프로그램을 디버그 모드에서 컴파일하면 이 프로그램이 런타임에 어설션되고 종료됩니다.  
   
 ```cpp  
@@ -84,7 +68,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 전처리기 매크로 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 디버그 빌드에서 반복기 디버깅 기능을 끌 수 있습니다. 이 프로그램은 어설션되지 않지만 정의되지 않은 동작을 계속 트리거합니다.  
   
 ```cpp  
@@ -120,7 +104,7 @@ int main() {
 -572662307  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음과 같이 반복기가 초기화되기 전에 반복기를 사용하려고 하면 어설션이 발생합니다.  
   
 ```cpp  
@@ -136,7 +120,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 [for_each](../standard-library/algorithm-functions.md#for_each) 알고리즘에 대한 두 개의 반복기가 호환되지 않으므로 다음 코드 예제는 어설션을 발생시킵니다. 알고리즘은 알고리즘에 제공되는 반복기가 같은 컨테이너를 참조하는지 확인합니다.  
   
 ```cpp  
@@ -165,7 +149,7 @@ int main()
   
 이 예제에서는 함수 대신 람다 식 `[] (int& elem) { elem *= 2; }`를 사용합니다. 이 선택은 비슷한 함수가 같은 실패를 일으키는 어설션 실패와 아무런 관련이 없지만 람다는 간단한 함수 개체 작업을 수행하는 매우 유용한 방법입니다. 람다 식에 대한 자세한 내용은 [람다 식](../cpp/lambda-expressions-in-cpp.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 디버그 반복기 확인을 실행하면 `for` 루프 범위가 끝날 때 루프에 선언된 반복기 변수가 `for` 범위를 벗어납니다.  
   
 ```cpp  
@@ -186,7 +170,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 디버그 반복기에 non-trivial 소멸자가 있습니다. 소멸자가 실행되지 않으면 이유가 무엇이든 액세스 위반 및 데이터 손상이 발생할 수 있습니다. 다음 예제를 고려해 보세요.  
   
 ```cpp  
@@ -214,7 +198,6 @@ int main() {
   
 ## <a name="see-also"></a>참고 항목  
 [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)
-
 
 
 

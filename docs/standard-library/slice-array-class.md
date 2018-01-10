@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- valarray/std::slice_array
-dev_langs:
-- C++
-helpviewer_keywords:
-- slice_array class
+f1_keywords: valarray/std::slice_array
+dev_langs: C++
+helpviewer_keywords: slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2935ec42892c2d28d7e0ccab1a8222bdb771e944
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 12c40729fa9a848a87f37283277e88392fb04614
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="slicearray-class"></a>slice_array 클래스
 valarray의 조각으로 정의된 하위 집합 배열 간의 작업을 제공하여 조각 개체를 지원하는 내부 보조 템플릿 클래스입니다.  
@@ -85,7 +81,7 @@ public:
   
  **slice_array\<Type>** 개체는 valarray **va**의 조각 **sl**에 대해 [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at) 형식의 표현식을 작성하는 방식으로만 생성할 수 있습니다. 그러면 slice_array 클래스의 구성원 함수는 선택한 요소의 시퀀스에만 영향을 준다는 점만 제외하고 **valarray\<Type>**에 대해 정의된 해당하는 함수 시그니처처럼 동작합니다. slice_array에 의해 제어되는 시퀀스는 조각 생성자의 3개 매개 변수(조각의 첫 번째 요소 인덱스, 요소의 수 및 요소 간 거리)로 정의됩니다. **va**[ `slice`(2, 5, 3)]로 선언되는 valarray **va**에서 잘라낸 slice_array는 **va**의 인덱스 2, 5, 8, 11, 14 인덱스에서 요소를 선택합니다. 인덱스가 유효해야 프로시저도 유효합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  slice_array를 선언하고 사용하는 방법의 예제는 [slice::slice](../standard-library/slice-class.md#slice)의 예제를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -95,5 +91,4 @@ public:
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

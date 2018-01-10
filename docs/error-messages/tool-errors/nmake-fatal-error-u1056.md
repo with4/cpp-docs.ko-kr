@@ -1,31 +1,30 @@
 ---
 title: "NMAKE 심각한 오류 U1056 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1056"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1056"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1056
+dev_langs: C++
+helpviewer_keywords: U1056
 ms.assetid: da855728-b69e-413c-83ed-df912126215e
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 41db646e2559051c11de5265900dde8ad0a03214
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# NMAKE 심각한 오류 U1056
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nmake-fatal-error-u1056"></a>NMAKE 심각한 오류 U1056
 명령 처리기를 찾을 수 없습니다.  
   
- **COMSPEC** 또는 **PATH** 환경 변수에서 지정한 경로에 명령 처리기가 없습니다.  
+ 명령 처리기에 지정 된 경로에 없습니다.는 **COMSPEC** 또는 **경로** 환경 변수입니다.  
   
- NMAKE는 명령을 실행할 때 COMMAND.COM 또는 CMD.EXE를 명령 처리기로 사용합니다.  먼저 **COMSPEC**에 설정된 경로에서 명령 처리기를 찾습니다.  **COMSPEC**에 없으면 NMAKE는 **PATH**에 지정된 디렉터리를 검색합니다.
+ NMAKE 모드를 사용할지 COMMAND.COM cmd. Exe 명령을 실행할 때 명령 처리기로 사용 합니다. 에 설정 된 경로에 명령 처리기를 먼저 찾고 **COMSPEC**합니다. 경우 **COMSPEC** NMAKE 검색에 지정 된 디렉터리가 존재 하지 않는 **경로**합니다.

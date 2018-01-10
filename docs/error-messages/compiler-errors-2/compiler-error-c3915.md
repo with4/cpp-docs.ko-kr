@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3915
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3915
+f1_keywords: C3915
+dev_langs: C++
+helpviewer_keywords: C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ba1c6e2ecb81796058cc6d31227a313b25979ecf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: b753abc02e84c8373fe6115a5bf2f2a0719094f3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3915"></a>컴파일러 오류 C3915
 'type'에 기본 인덱싱된 속성이 (클래스 인덱서)  
@@ -33,7 +29,7 @@ ms.lasthandoff: 10/10/2017
   
  자세한 내용은 [property](../../windows/property-cpp-component-extensions.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3915 오류가 발생 합니다.  
   
 ```  
@@ -57,7 +53,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  으로 정의 된 위치는 동일한 compiland에서 기본 인덱서를 사용 하려는 경우에 C3915 발생할 수 있습니다 <xref:System.Reflection.DefaultMemberAttribute>합니다.  
   
  다음 샘플에서는 C3915 오류가 발생 합니다.  

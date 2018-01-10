@@ -1,34 +1,34 @@
 ---
 title: "동시성 런타임과 기타 동시성 모델 비교 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "동시성 런타임, 다른 모델과 비교"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 동시성 런타임과 기타 동시성 모델 비교
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>동시성 런타임과 기타 동시성 모델 비교
 이 문서에서는 동시성 런타임과 기타 기술의 기능 및 프로그래밍 모델 간 차이점에 대해 설명합니다. 동시성 런타임의 이점을 다른 프로그래밍 모델의 이점과 비교하는 방법을 이해하면 응용 프로그램 요구 사항에 가장 적합한 기술을 선택할 수 있습니다.  
   
  현재 Windows 스레드 풀, OpenMP 등의 다른 프로그래밍 모델을 사용하는 경우, 상황에 따라 동시성 런타임으로 마이그레이션하는 것이 적절할 수 있습니다. 예를 들어 [Migrating from OpenMP to the Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) 항목에서는 OpenMP에서 동시성 런타임으로 마이그레이션하는 것이 적절한 시기에 대해 설명합니다. 그러나 응용 프로그램 성능 및 현재 디버깅 지원에 만족하는 경우 마이그레이션이 필요하지 않습니다.  
   
  다른 동시성 모델을 사용하는 기존 응용 프로그램을 보완하기 위해 동시성 런타임의 기능 및 생산성 이점을 사용할 수 있습니다. 여러 작업 스케줄러가 같은 컴퓨팅 리소스에 대해 경쟁하는 경우 동시성 런타임에서 부하 분산을 보장할 수 없습니다. 그러나 작업이 겹치지 않을 경우 이 효과는 최소화됩니다.  
   
-##  <a name="a-nametopa-sections"></a><a name="top"></a> 섹션  
+##  <a name="top"></a> 섹션  
   
 -   [선점형 일정을 협조적 일정과 비교](#models)  
   
@@ -36,7 +36,7 @@ caps.handback.revision: 18
   
 -   [동시성 런타임을 OpenMP와 비교](#openmp)  
   
-##  <a name="a-namemodelsa-comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a> 선점형 일정을 협조적 일정과 비교  
+##  <a name="models"></a> 선점형 일정을 협조적 일정과 비교  
  선점형 일정 모델과 협조적 일정 모델은 여러 작업이 프로세서나 하드웨어 스레드 같은 컴퓨팅 리소스를 공유하도록 해주는 두 가지 일반적인 방법입니다.  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>선점형 일정 및 협조적 일정  
@@ -55,7 +55,7 @@ caps.handback.revision: 18
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="a-namewinapia-comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> 동시성 런타임을 Windows API와 비교  
+##  <a name="winapi"></a> 동시성 런타임을 Windows API와 비교  
  Windows API(이전의 Win32)라고도 하는 Microsoft Windows 응용 프로그래밍 인터페이스는 응용 프로그램에서 동시성을 가능하게 하는 프로그래밍 모델을 제공합니다. 동시성 런타임은 Windows API를 기반으로 구축되어 기본 운영 체제에서 사용할 수 없는 추가 프로그래밍 모델을 제공합니다.  
   
  동시성 런타임은 Windows API 스레드 모델을 기반으로 구축되어 병렬 작업을 수행합니다. 또한 Windows API 메모리 관리 및 스레드 로컬 저장소 메커니즘을 사용합니다. Windows 7 및 Windows Server 2008 R2에서 동시성 런타임은 사용자가 예약할 수 있는 스레드 및 64개가 넘는 하드웨어 스레드를 가지고 있는 컴퓨터에 대해 Windows API 지원을 사용합니다. 동시성 런타임은 협조적 작업 스케줄러 및 작업 가로채기 알고리즘을 제공하여 컴퓨팅 리소스의 사용을 최대화하고 여러 동시 스케줄러 인스턴스를 사용하도록 설정함으로써 Windows API 모델을 확장합니다.  
@@ -81,8 +81,8 @@ caps.handback.revision: 18
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="a-nameopenmpa-comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> 동시성 런타임을 OpenMP와 비교  
- 동시성 런타임은 다양한 프로그래밍 모델을 사용합니다. 이러한 모델은 중복되거나 다른 라이브러리의 모델을 보완할 수 있습니다. 이 섹션에서는 동시성 런타임을 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add)와 비교합니다.  
+##  <a name="openmp"></a> 동시성 런타임을 OpenMP와 비교  
+ 동시성 런타임은 다양한 프로그래밍 모델을 사용합니다. 이러한 모델은 중복되거나 다른 라이브러리의 모델을 보완할 수 있습니다. 이 섹션에서는 동시성 런타임을 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)와 비교합니다.  
   
  OpenMP 프로그래밍 모델은 공개 표준에 의해 정의되며, Fortran 및 C/C++ 프로그래밍 언어에 대한 잘 정의된 바인딩을 가지고 있습니다. OpenMP 버전 2.0 및 2.5는 반복적인 병렬 알고리즘에 적합합니다. 즉, 일련의 데이터에 대한 병렬 반복을 수행합니다. OpenMP는 병렬 처리 수준이 미리 결정되어 있고 시스템에서 사용 가능한 리소스와 일치할 때 가장 효율적입니다. OpenMP 모델은 매우 큰 규모의 계산 문제가 단일 컴퓨터의 처리 리소스 간에 배포되어 있는 고성능 컴퓨팅 환경에 특히 적합합니다. 이 시나리오에서는 하드웨어 환경이 알려져 있으며, 개발자는 알고리즘이 실행될 때 컴퓨팅 리소스에 단독으로 액세스할 수 있을 것이라고 합리적으로 예상할 수 있습니다.  
   
@@ -99,4 +99,4 @@ caps.handback.revision: 18
  [개요](../../parallel/concrt/asynchronous-message-blocks.md)   
  [PPL(병렬 패턴 라이브러리)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md)   
- [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add)
+ [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

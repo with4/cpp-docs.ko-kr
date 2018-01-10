@@ -10,11 +10,12 @@ ms.assetid: 7e86338a-2d4b-40fe-9dd2-ac6886f3f31a
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d5a6ee17459de6bf311f94028b5afbbdf10e7d2c
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 52663aed470aff254d07cba6a65f484269d8703d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2672"></a>컴파일러 오류 C2672
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 11/11/2017
 
 특정 표준 라이브러리 컨테이너 또는 알고리즘에서 사용 하는, 액세스 가능한 멤버 또는 friend 함수는 컨테이너 또는 알고리즘의 요구 사항을 충족 하는 형식을 제공 해야 합니다. 예를 들어 반복기 형식에서 파생 `std::iterator<>`합니다. 비교 연산 또는 컨테이너 요소 형식에 다른 연산자의 사용 유형을 왼쪽 및 오른쪽 피연산자 것으로 간주 합니다. 필요할 수 있습니다. 오른쪽 피연산자 형식이 아닌 멤버 함수로 구현 된 연산자를 요구할 수와 종류를 사용 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 버전의 Visual Studio 2017 하기 전에 컴파일러는 일부 템플릿 컨텍스트의 정규화 된 이름을 확인 하는 액세스를 수행 하지 못했습니다. 이는 이름에 액세스할 수 없기 때문에 대체에 실패할 것으로 예상되는 경우 예상되는 SFINAE 동작을 방해할 수 있습니다. 따라서 컴파일러가 연산자의 잘못된 오버로드를 잘못 호출하기 때문에 잠재적으로 런타임에 크래시나 예기치 않은 동작이 발생했을 수 있습니다. Visual Studio 2017에서는 컴파일러 오류가 발생합니다.
 

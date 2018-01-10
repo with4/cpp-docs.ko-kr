@@ -15,11 +15,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f811197526d2d3da0700af27be84151da79d67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e55fd4ad47470a86a0a3d61cc847c20fb21768e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-c"></a>custom(C++)
 형식 라이브러리의 개체에 대 한 메타 데이터를 정의합니다.  
@@ -38,7 +41,7 @@ ms.lasthandoff: 10/24/2017
  *uuid*  
  고유한 ID입니다.  
   
- *value*  
+ *값*  
  Variant로 들어갈 수 있는 값입니다.  
   
 ## <a name="remarks"></a>설명  

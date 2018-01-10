@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 007d95d5db0785deae08744b46738d7188e4da70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3543adfe0cb25f7946e6ed6c81c4bd66a7b60324
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="local-c"></a>local(C++)
 인터페이스 헤더를 사용할 경우 MIDL 컴파일러 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  `local` c + + 특성에 동일한 기능을는 [로컬](http://msdn.microsoft.com/library/windows/desktop/aa367071) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [call_as](../windows/call-as.md) 사용 하는 방법의 예 `local`합니다.  
   
 ## <a name="requirements"></a>요구 사항  

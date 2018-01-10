@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e9c5ff46d20af4b668d705a782e7765a9d49da35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e70365040b5f009e634a4867a4a1f974d47bd61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="image-overlays-in-image-lists"></a>이미지 목록의 이미지 오버레이
 모든 이미지 목록 ([CImageList](../mfc/reference/cimagelist-class.md)) 오버레이 마스크도 사용할 이미지의 목록을 포함 합니다. "오버레이 마스크"에 다른 이미지 위에 투명 하 게 그려지는 하는 이미지입니다. 모든 이미지 오버레이 마스크도 사용할 수 있습니다. 이미지 목록 당 최대 4 개의 오버레이 마스크를 지정할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,22 +20,21 @@ f1_keywords:
 - AFXDISP/DDX_OCShortRO
 - AFXDISP/DDX_OCText
 - AFXDISP/DDX_OCTextRO
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c0629e57c518334b84ed3110e3dab14a5d259fc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 컨트롤에 대한 대화 상자 데이터 교환 함수
 이 항목 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 내 OLE 컨트롤의 속성 및 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간에 데이터를 교환 하는 데 사용 하 여 DDX_OC 함수를 나열 합니다.  
@@ -79,7 +77,7 @@ void AFXAPI DDX_OCBool(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -109,7 +107,7 @@ void AFXAPI DDX_OCBoolRO(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -139,7 +137,7 @@ void AFXAPI DDX_OCColor(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -169,7 +167,7 @@ void AFXAPI DDX_OCColorRO(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -205,7 +203,7 @@ void AFXAPI DDX_OCFloat(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -241,7 +239,7 @@ void AFXAPI DDX_OCFloatRO(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -277,7 +275,7 @@ void AFXAPI DDX_OCInt(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -313,7 +311,7 @@ void AFXAPI DDX_OCIntRO(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -343,7 +341,7 @@ void AFXAPI DDX_OCShort(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -373,7 +371,7 @@ void AFXAPI DDX_OCShortRO(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -403,7 +401,7 @@ void AFXAPI DDX_OCText(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -433,7 +431,7 @@ void AFXAPI DDX_OCTextRO(
  `dispid`  
  컨트롤의 속성에 대한 디스패치 ID입니다.  
   
- *value*  
+ *값*  
  데이터를 교환할 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 멤버 변수에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -444,4 +442,3 @@ void AFXAPI DDX_OCTextRO(
     
 ## <a name="see-also"></a>참고 항목  
  [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
-

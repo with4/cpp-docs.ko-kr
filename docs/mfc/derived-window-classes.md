@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d75a6692eadaa3a080803b9aa69d30e4b384307a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4601a04932f467be3b63527f12c46f797d9e11d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derived-window-classes"></a>파생된 창 클래스
 Windows에서 직접 만들 수 있습니다 [CWnd](../mfc/reference/cwnd-class.md)에서 새 창 클래스를 파생 하거나 `CWnd`합니다. 일반적으로 사용자 지정 창을 만드는 방법입니다. 하지만 대부분의 프레임 워크 프로그램에 사용 되는 창을 대신 중 하나에서 생성 된 `CWnd`-MFC에서 제공 하는 프레임 창 클래스를 파생 합니다.  

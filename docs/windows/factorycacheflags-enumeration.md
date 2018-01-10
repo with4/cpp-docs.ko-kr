@@ -1,27 +1,29 @@
 ---
 title: "FactoryCacheFlags 열거형 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::FactoryCacheFlags"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::FactoryCacheFlags
+dev_langs: C++
 ms.assetid: 6f54258f-0144-4264-9608-414e5905f6fb
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 41b31ccede1cca717418c9f489ab7de67d313319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# FactoryCacheFlags 열거형
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags 열거형
 팩터리 개체를 캐시하는지 여부를 결정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -31,7 +33,7 @@ enum FactoryCacheFlags;
 ```  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 팩터리 캐싱 정책은로 지정 된 [ModuleType](../windows/moduletype-enumeration.md) 만들 때 템플릿 매개 변수는 [모듈](../windows/module-class.md) 개체. 이 정책을 재정의하려면 팩터리 개체를 만들 때 `FactoryCacheFlags` 값을 지정합니다.  
+ 기본적으로 팩터리 캐싱 정책은로 지정 된 [ModuleType](../windows/moduletype-enumeration.md) 만들 때 템플릿 매개 변수는 [모듈](../windows/module-class.md) 개체입니다. 이 정책을 재정의하려면 팩터리 개체를 만들 때 `FactoryCacheFlags` 값을 지정합니다.  
   
 |||  
 |-|-|  
@@ -45,4 +47,4 @@ enum FactoryCacheFlags;
  **네임스페이스:** Microsoft::WRL  
   
 ## <a name="see-also"></a>참고 항목  
- [Microsoft:: wrl 네임 스페이스](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL 네임스페이스](../windows/microsoft-wrl-namespace.md)
