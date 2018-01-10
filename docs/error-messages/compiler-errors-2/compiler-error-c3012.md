@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a75b8845fafef81768ae5a2da8c81e8734db4ebf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32c12397339f861b71fe41566f29fd1a8929b66e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3012"></a>컴파일러 오류 C3012
   
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/24/2017
   
  A [컴파일러 내장 함수](../../intrinsics/compiler-intrinsics.md) 함수에서 허용 되지 않는 한 `omp parallel` 영역입니다. 이 문제를 해결 하려면 내장 함수는 영역 외부로 이동 하거나 비 내장 해당 항목으로 바꾸세요.   
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
  다음 샘플에서는 c 3012, 오류가 발생 하 고를 해결 하는 방법을 보여 줍니다.  
   

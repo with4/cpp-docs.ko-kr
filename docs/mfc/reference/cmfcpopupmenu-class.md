@@ -171,11 +171,12 @@ caps.latest.revision: "40"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36057304130150dbd12cf33f708d1d82cd52e0c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e40f7b601eda828784fb8ebdaf010059c4d9933e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 클래스
 Windows 팝업 메뉴 기능을 구현하고 분리 메뉴, 도구 설명 같은 기능을 추가하여 확장합니다.
@@ -273,7 +274,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 |[CMFCPopupMenu::UpdateAllShadows](#updateallshadows)|모든 열린된 팝업 메뉴에 그림자를 업데이트합니다.|  
 |[CMFCPopupMenu::UpdateShadow](#updateshadow)|팝업 메뉴의 그림자를 업데이트합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -284,7 +285,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 ### <a name="remarks"></a>설명  
  일반적으로 MFC 팝업 메뉴 자동으로 만듭니다. 만들려는 경우 한 `CMFCPopupMenu` 개체를 수동으로, 힙에 각각 하나씩 할당 한 다음 호출 [CMFCPopupMenu::Create](#create)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 팝업 메뉴 개체를 구성 하는 방법을 보여 줍니다. 이 예제에는 로고 및 팝업 메뉴의 소리 설정, 애니메이션 속도 및 유형을 설정, 그림자 주 프레임 외부 팝업 메뉴에 표시 하는 경우, 최대 너비를 설정 및 팝업 메뉴의 오른쪽 메뉴 맞춤을 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [사용자 지정 페이지 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]  
@@ -442,7 +443,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  경우 `bOwnMessage` 은 `TRUE`, 프레임 워크 메뉴 메시지를 라우팅하고 `pWndParent`합니다. `pWndParent`않아야 `NULL` 경우 `bOwnMessage` 은 `TRUE.` 경우 `bOwnMessage` 은 `FALSE`, 프레임 워크 부모 팝업 메뉴로 메뉴 메시지를 라우팅합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `Create` 의 메서드는 `CMFCPopuMenu` 클래스. 이 코드 조각은의 일부인는 [사용자 지정 페이지 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]  

@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-spaces"></a>네임스페이스
 컴파일러가 "네임스페이스"를 설정하여 여러 종류의 항목에 사용된 식별자를 구별합니다. 각 네임스페이스에 있는 이름이 고유해야 충돌을 피할 수 있지만 네임스페이스 안에 같은 이름이 두 번 이상 나타날 수도 있습니다. 즉, 항목이 서로 다른 네임스페이스에 있을 경우 2개 이상의 다른 항목에 같은 식별자를 사용할 수 있습니다. 컴파일러는 프로그램에서 식별자의 구문 컨텍스트를 기반으로 참조를 확인할 수 있습니다.  

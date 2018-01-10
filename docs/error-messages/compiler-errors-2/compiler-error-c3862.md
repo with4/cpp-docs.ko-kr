@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3862
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3862
+f1_keywords: C3862
+dev_langs: C++
+helpviewer_keywords: C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 63fa12348ee2ab58782fad02719918bfe7929ff8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: af959252ce5b404d8646ad61e02c5e480b41ed83
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3862"></a>컴파일러 오류 C3862
 'function': /clr으로 관리 되지 않은 함수를 컴파일할 수 없습니다: pure 또는 /clr: safe  
@@ -35,7 +31,7 @@ ms.lasthandoff: 10/10/2017
   
  자세한 내용은 참조 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md) 및 [관리, 관리 되지 않는](../../preprocessor/managed-unmanaged.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3862 오류가 생성 됩니다.  
   
 ```  

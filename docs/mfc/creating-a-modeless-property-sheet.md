@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e587c130a06ff30a38138f1e0ecf94e7cdfe1ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4686caf6c414952cd86dfe0c69fcc3be8ee09af9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-modeless-property-sheet"></a>모덜리스 속성 시트 만들기
 일반적으로 만들어야 하는 속성 시트 모달 됩니다. 모달 속성 시트를 사용 하는 경우 사용자는 응용 프로그램의 다른 부분을 사용 하기 전에 속성 시트를 닫아야 합니다. 이 문서에 사용자를 응용 프로그램의 다른 부분을 사용 하는 동안 속성 시트를 열어 모덜리스 속성 시트를 만드는 데 사용할 수 있는 방법을 설명 합니다.  

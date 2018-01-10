@@ -1,32 +1,33 @@
 ---
-title: "map::insert(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert 멤버[STL/CLR]"
+title: 'map:: insert (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 599c702e-7db0-45b8-8247-4ff041a3639c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 495a3e80e28ea70f1784f12ee9750050847e6e2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# map::insert(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Adds elements.  
+# <a name="mapinsert-stlclr"></a>map::insert(STL/CLR)
+요소를 추가합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 cliext::pair<iterator, bool> insert(value_type val);  
@@ -36,36 +37,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### 매개 변수  
- first  
- Beginning of range to insert.  
+#### <a name="parameters"></a>매개 변수  
+ 첫 번째  
+ 삽입할 범위의의 시작입니다.  
   
  last  
- End of range to insert.  
+ 삽입할 범위의 끝입니다.  
   
- right  
- Enumeration to insert.  
+ 오른쪽  
+ 삽입 하는 열거형입니다.  
   
  val  
- Key value to insert.  
+ 삽입할 키 값입니다.  
   
- where  
- Where in container to insert \(hint only\).  
+ 형식에 대한 설명  
+ (힌트에만 해당)를 삽입할 컨테이너의 위치입니다.  
   
-## 설명  
- Each of the member functions inserts a sequence specified by the remaining operands.  
+## <a name="remarks"></a>설명  
+ 각 멤버 함수는 나머지 피연산자에서 지정 된 시퀀스를 삽입 합니다.  
   
- The first member function endeavors to insert an element with value `val`, and returns a pair of values `X`.  If `X.second` is true, `X.first` designates the newly inserted element; otherwise `X.first` designates an element with equivalent ordering that already exists and no new element is inserted.  You use it to insert a single element.  
+ 첫 번째 멤버 함수는 값을 가진 요소를 삽입할 노력 `val`, 한 쌍의 값을 반환 하 고 `X`합니다. 경우 `X.second` 가 true 이면 `X.first` 새로 삽입된 된 요소를 지정 고, 그렇지 않으면 `X.first` 해당 키와 요소를 지정 순서 이미 존재 하 고 새 요소가 삽입 됩니다. 단일 요소를 삽입 하려면 사용 합니다.  
   
- The second member function inserts an element with value `val`, using `where` as a hint \(to improve performance\), and returns an iterator that designates the newly inserted element.  You use it to insert a single element which might be adjacent to an element you know.  
+ 두 번째 멤버 함수는 값을 가진 요소를 삽입 `val`를 사용 하 여 `where` (성능을 향상 시키기) 힌트로 새로 삽입된 된 요소를 지정 하는 반복기를 반환 합니다. 알고 있는 요소에 인접 한 될 수 있는 단일 요소를 삽입 하려면 사용 합니다.  
   
- The third member function inserts the sequence `[``first``,` `last``)`.  You use it to insert zero or more elements copied from another sequence.  
+ 세 번째 멤버 함수는 시퀀스를 삽입 [`first`, `last`). 다른 시퀀스에서 복사 된 0 개 이상의 요소를 삽입 하려면 사용 합니다.  
   
- The fourth member function inserts the sequence designated by the `right`.  You use it to insert a sequence described by an enumerator.  
+ 로 지정 된 시퀀스를 삽입 하는 네 번째 멤버 함수는 `right`합니다. 열거자에서 설명 하는 시퀀스를 삽입 하려면 사용 합니다.  
   
- Each element insertion takes time proportional to the logarithm of the number of elements in the controlled sequence.  Insertion can occur in amortized constant time, however, given a hint that designates an element adjacent to the insertion point.  
+ 제어 된 시퀀스의 요소 수 로그 비례 하는 시간을 사용 하는 각 요소를 삽입 합니다. 그러나 삽입 발생할 수 있습니다 분할 상환된 상수 시간에 삽입 지점에 인접 하는 요소를 지정 하는 힌트를 제공 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_map_insert.cpp   
@@ -130,18 +131,21 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**insert\(\[L'x' 24\]\) \= \[\[x 24\] True\]**  
-**insert\(\[L'b' 2\]\) \= \[\[b 2\] False\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\]**  
-**insert\(begin\(\), \[L'y' 25\]\) \= \[y 25\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\] \[y 25\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\] \[y 25\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+insert([L'x' 24]) = [[x 24] True]  
+insert([L'b' 2]) = [[b 2] False]  
+ [a 1] [b 2] [c 3] [x 24]  
+insert(begin(), [L'y' 25]) = [y 25]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+ [a 1] [b 2] [c 3] [x 24]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map(STL/CLR)](../dotnet/map-stl-clr.md)

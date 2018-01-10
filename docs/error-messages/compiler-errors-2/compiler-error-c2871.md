@@ -15,18 +15,19 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0003f04a32ff017234607a90162465549092a013
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc5c4b4d0cdb90e550a0685795d89ef18c18c376
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2871"></a>컴파일러 오류 C2871
 'name':이 이름의 네임 스페이스가 없습니다.  
   
 네임 스페이스를 하지 않은 식별자를 전달 하는 경우이 오류가 발생 합니다는 [를 사용 하 여](../../cpp/namespaces-cpp.md#using_directives) 지시문입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 샘플에서는 C2871 오류가 생성 됩니다.  
   
 ```cpp  

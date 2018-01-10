@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 21d3ad8d4cbd73c2a1ab99497db2f671196de523
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8bf941f5e020a608817919b2819f2d6be023d89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
 실행 파일의 경로입니다. 더 이상 사용되지 않습니다. [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) 및 [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md)을 사용하세요.  
@@ -50,7 +51,7 @@ C> hello
   
  `_wpgmptr`은 `_pgmptr`을 사용하는 프로그램에 사용할 `wmain`에 대응하는 와이드 문자입니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -62,7 +63,7 @@ C> hello
 |--------------|---------------------|  
 |`_pgmptr`, `_wpgmptr`|\<stdlib.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 프로그램에서는 `_pgmptr`의 사용을 보여 줍니다.  
   
 ```  

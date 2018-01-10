@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3dceac5102936bbb86f5c103fb0c9240f5ee2d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28f350f8cf522032fbdaad22098508ec8545ee01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3290"></a>컴파일러 오류 C3290
 'type': trivial 속성은 참조 형식일 수 없습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  참조 [속성](../../windows/property-cpp-component-extensions.md) 및 [추적 참조 연산자](../../windows/tracking-reference-operator-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3290을 생성합니다.  
   
 ```  

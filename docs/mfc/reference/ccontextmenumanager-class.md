@@ -39,11 +39,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceed1a7127d86ced1c68d92269a6b1a55f41991f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38bfaec077501173fade6fa15fba3516cde534b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 클래스
 `CContextMenuManager` 개체 관리 바로 가기 메뉴, 상황에 맞는 메뉴 라고도 합니다.  
@@ -87,7 +88,7 @@ class CContextMenuManager : public CObject
   
  `CContextMenuManager` 도 저장 하 고 Windows 레지스트리에 해당 상태를 로드할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 메뉴를 추가 하는 방법을 `CContextMenuManager` 개체 및 활성 팝업 메뉴 닫기 방법 때는 `CContextMenuManager` 새 팝업 메뉴를 표시 하는 개체입니다. 이 코드 조각은의 일부인는 [사용자 지정 페이지 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]  

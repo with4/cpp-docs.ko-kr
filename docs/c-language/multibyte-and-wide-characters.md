@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f20860d036b667c95f16924f67ff306bf66ce238
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0b2c07429e4401bbecb5e989ac8fd2ece772e29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multibyte-and-wide-characters"></a>멀티바이트 및 와이드 문자
 멀티바이트 문자는 하나 이상의 바이트의 시퀀스로 구성된 문자입니다. 각 바이트 시퀀스는 확장된 문자 집합에서 단일 문자를 나타냅니다. 멀티바이트 문자는 한자와 같은 문자 집합에 사용됩니다.  

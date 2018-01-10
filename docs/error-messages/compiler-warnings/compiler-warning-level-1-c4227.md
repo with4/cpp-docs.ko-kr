@@ -15,18 +15,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e1d94ed5a5be12d3c439c43a34f982336b583abf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc8d9a03acf6f06d19259184b83296e873fcfc81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4227"></a>컴파일러 경고(수준 1) C4227
 사용 하는 오래 된 구문: 참조의 한정자는 무시 됩니다.  
   
  같은 한정자를 사용 하 여 `const` 또는 `volatile` 은 쿼리로 c + + 참조를 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // C4227.cpp  

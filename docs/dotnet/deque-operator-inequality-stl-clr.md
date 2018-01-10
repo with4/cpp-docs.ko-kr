@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d4b682b5d125f21e8212e2ac442caf51f8c2832e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 17a5fb91f77e1b0a83e63bf498568690001acebd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequeoperator-stlclr"></a>deque::operator!=(STL/CLR)
 Deque에 같지 비교 합니다.  
@@ -42,7 +45,7 @@ template<typename Value>
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 `left` 동일 정렬 되지 않은 `right` 두 deque 경우 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // cliext_deque_operator_ne.cpp   

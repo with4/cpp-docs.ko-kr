@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75f06d9edff4d437c841a022193e276505c8b1b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b6fa95f8477f889aa8664d2b6d99c753cb9848d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4744"></a>컴파일러 경고(수준 1) C4744
 'var'의 'file1' 및 'file2'에서 형식이 다릅니다.: 'type1' 및 'type2'  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  C + +에서 변수 이름을 형식 정보로 데코 레이트 된 때문에 일반적으로 C4744 C (하지 c + +) 파일에서 발생 합니다.  샘플 (아래) 이면 컴파일합니다도 c + + 링커 오류 LNK2019 얻게 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플에는 첫 번째 정의 합니다.  
   
 ```  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 int global;  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4744 오류가 발생 합니다.  
   
 ```  

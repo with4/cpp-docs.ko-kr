@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f70ad153a0d74df9102f2e4e4ff048603378cb55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c0a5962909c15d881214969c177cad234b2950a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 생성된 클래스
 이 항목에는 프로젝트에서 생성 되는 기본 클래스 및 파일 이름을 나열 합니다. 기본적으로는 이름에 지정 된 프로젝트 이름에 따라는 **새 프로젝트 대화 상자**합니다. 여기에 설명 된 대로 대부분의이 이름은 변경할 수 있습니다.  

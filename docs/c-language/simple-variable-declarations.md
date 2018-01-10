@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd5ab69e0e6621324f04008c34b2a52dcbd20787
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18798941b227a5da4248b7b44179cb99e3c7d5d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simple-variable-declarations"></a>단순 변수 선언
 직접 선언자의 가장 간단한 형태로 단순 변수를 선언하여 변수의 이름 및 형식을 지정합니다. 이 선언에서 변수의 저장소 클래스와 데이터 형식도 지정합니다.  

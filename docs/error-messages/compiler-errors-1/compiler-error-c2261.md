@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8269b891ed899501625973b81c1823d4db2d56c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3907a1d270de11af82462815ce87398e10c50513
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2261"></a>컴파일러 오류 C2261
 'string': 어셈블리 참조가 잘못 되었으며 확인할 수 없습니다  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  Friend 어셈블리 지정 하는 경우에 올바른 구문에 자세한 내용은 [Friend 어셈블리 (c + +)](../../dotnet/friend-assemblies-cpp.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2261 오류가 발생 합니다.  
   
 ```  

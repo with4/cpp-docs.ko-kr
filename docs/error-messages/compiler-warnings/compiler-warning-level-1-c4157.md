@@ -1,29 +1,28 @@
 ---
 title: "컴파일러 경고 (수준 1) C4157 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4157"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4157"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4157
+dev_langs: C++
+helpviewer_keywords: C4157
 ms.assetid: 6dabc303-eba1-4a8e-a124-a6e1dc84f4bd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3f8b12e684326b1c4364933fe7d0500f2b244b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4157
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-C 컴파일러에서 pragma가 무시되었습니다.  
+# <a name="compiler-warning-level-1-c4157"></a>컴파일러 경고 (수준 1) C4157
+C 컴파일러에서 pragma가 무시  
   
- C\+\+ 컴파일러만 **init\_seg\(\)**를 인식합니다.
+ c + + 컴파일러가 인식 **init_seg()**합니다.

@@ -15,18 +15,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b051cff464a7aa7736b8ff7ac9f9e1a33731832
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a9030921178fc23c225a775359724cf5c932d95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1313"></a>링커 도구 오류 LNK1313
 ijw/native 모듈이 발견되었습니다. 순수 모듈에 링크할 수 없습니다.  
   
  현재 버전의 Visual c + + 네이티브 또는 혼합 관리/네이티브.obj 파일을 사용 하 여 컴파일된.obj 파일에 연결을 지원 하지 않습니다 **/clr: pure**합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // LNK1313.cpp  
@@ -35,7 +36,7 @@ ijw/native 모듈이 발견되었습니다. 순수 모듈에 링크할 수 없�
 int main() {}  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // LNK1313_b.cpp  
@@ -44,7 +45,7 @@ int main() {}
 void test(){}  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 LNK1313을 생성합니다.  
   
 ```  

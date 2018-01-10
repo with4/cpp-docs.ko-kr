@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c348cacffa0e9818cac70cfbc984c514fc8f243
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1e4dede1dab1fcaf9ae4de5846539924d0095e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-conversions-c"></a>형식 변환 (C)
 형식 변환은 지정된 연산자와 피연산자 및 연산자의 형식에 따라 달라집니다. 다음과 같은 경우에 형식 변환이 수행됩니다.  

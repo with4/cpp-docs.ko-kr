@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33101873b016b939ee1e3fc28fe972424b258eb0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 526a7bb902374fb3df936d5ac81cf602e1871a4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-declarations-and-definitions"></a>C 선언 및 정의
 "선언"은 특정 변수, 함수 또는 형식과 해당 특성을 연결합니다. [선언 개요](../c-language/overview-of-declarations.md)는 `declaration` 비터미널에 대한 ANSI 구문을 제공합니다. 선언은 식별자에 액세스할 수 있는 위치 및 경우도 지정합니다(식별자의 "링크"). 링크에 대한 자세한 내용은 [수명, 범위, 표시 유형 및 링크](../c-language/lifetime-scope-visibility-and-linkage.md)를 참조하세요.  

@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: caea9442973d131e99b3f52ca36a6cf991f2410a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 896ada2c46c68a794265e7344e9b7f7c7f91aebe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-an-interface-visual-c"></a>인터페이스 구현(Visual C++)
 인터페이스를 구현 하려면 해야 프로젝트를 만들었다고는 ATL 지원을 포함 하는 MFC 응용 프로그램 또는 ATL COM 응용 프로그램으로 합니다. 사용할 수는 [ATL 프로젝트 마법사](../atl/reference/atl-project-wizard.md) ATL 응용 프로그램을 만드는 또는 [MFC 응용 프로그램에 ATL 개체를 추가](../mfc/reference/adding-atl-support-to-your-mfc-project.md) MFC 응용 프로그램에 대 한 ATL 지원을 구현 하 합니다.  

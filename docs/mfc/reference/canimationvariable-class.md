@@ -55,11 +55,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc59fa4597bff59901ef77b0a661cf406bda6b29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a90db931ca53687c42263df6a4112eb478059227
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 클래스
 애니메이션 변수를 나타냅니다.  
@@ -96,7 +97,7 @@ class CAnimationVariable;
 |[CAnimationVariable::GetVariable](#getvariable)|IUIAnimationVariable COM 개체에 대 한 포인터를 반환합니다.|  
 |[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|기본값을 설정 하 고 IUIAnimationVariable COM 개체를 해제 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -110,7 +111,7 @@ class CAnimationVariable;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|IUIAnimationVariable로 전파 되는 기본값을 지정 합니다.|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|이 애니메이션 변수 애니메이션 효과 적용 하는 전환 목록을 포함 합니다.|  

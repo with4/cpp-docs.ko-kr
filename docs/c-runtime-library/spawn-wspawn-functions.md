@@ -56,11 +56,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10de882f1d1942d2abec027da76aa40a201bfaad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0634aeb37d0374f5e6e1dfae0ac004792c279fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn 함수
 각 `_spawn` 함수는 새로운 프로세스를 만들고 실행합니다.  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  `_spawn` 함수는 각각 새로운 프로세스를 만들고 실행합니다. 이러한 함수는 현재 사용 중인 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하며 멀티바이트 문자열 인수를 자동으로 적절하게 처리합니다. `_wspawn` 함수는 `_spawn` 함수의 와이드 문자 버전으로, 멀티바이트 문자열을 처리하지 않습니다. 그 외에는 `_wspawn` 함수가 `_spawn`의 상응 함수와 동일하게 동작합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -158,7 +159,7 @@ ms.lasthandoff: 10/24/2017
   
 -   그런 다음 [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)을 호출합니다. 이 함수는 **cmd.exe /c** 또는 **command.exe /c**를 사용하여 파이프를 만들고 앱을 호출합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_spawn.c  

@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8dee0ebbec9393bcf0cbc271e22e107ef7c93387
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ff4bd61f63790f7e59d2f6a1a03ea2802b9e158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-settings-makefile-project-wizard"></a>메이크파일 프로젝트 마법사, 응용 프로그램 설정
 프로젝트에 대 한 정보를 제공 합니다. 지정 하는 옵션은 프로젝트에 반영 됩니다 [속성 페이지](../ide/working-with-project-properties.md)합니다. 프로젝트를 만든 후에 보고 및 각에서 다음 옵션을 편집할 수 있습니다는 **Nmake** 프로젝트의 속성 페이지의 페이지입니다.  

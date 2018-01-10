@@ -28,11 +28,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41372637e9ee68db087fbe0ad532d9e6bb4935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-library-features"></a>CRT 라이브러리 기능
 이 항목에서는 C 런타임 라이브러리 및 관련 컴파일러 옵션과 전처리기 지시문을 구성하는 다양한 .lib 파일에 대해 설명합니다.  

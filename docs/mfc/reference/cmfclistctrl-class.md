@@ -39,11 +39,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8b4172167a60425603bb25acff5670a5901c307
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 770a1cec528355d6f7be7800ba1f77f2394bef79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 클래스
 `CMFCListCtrl` 클래스의 기능을 확장 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 의 고급 헤더 컨트롤 기능을 지원 하 여 클래스는 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md)합니다.  
@@ -75,7 +76,7 @@ class CMFCListCtrl : public CListCtrl
 ## <a name="remarks"></a>설명  
  `CMFCListCtrl`두 가지 기능이 향상 제공 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 클래스입니다. 첫째, 열 정렬을 머리글에 정렬 화살표를 자동으로 그려서 사용 가능한 옵션은 나타냅니다. 둘째, 동시에 여러 열에서 정렬 하는 데이터를 지원 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCListCtrl` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에는 목록 컨트롤을 만들려면, 삽입 열이, 항목을 삽입할 항목의 텍스트를 설정 및 목록 컨트롤의 글꼴 설정 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]  

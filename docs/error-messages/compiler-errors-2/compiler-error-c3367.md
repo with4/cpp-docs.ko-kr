@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d1d144399ca42ba321d8f3d11425bf2ff8e65891
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e341266c37411d96a4cf313e6a101e48aeb2a85d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3367"></a>컴파일러 오류 C3367
 'static_member_function': 바인딩되지 않은 대리자를 만드는 데 정적 함수를 사용할 수 없습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
 바인딩되지 않은 대리자에 대 한 자세한 내용은 참조 [하는 방법: 정의 하 고 사용 하 여 위임 (C + + /cli CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 샘플에서는 C3367을 생성합니다.  
   
 ```cpp  

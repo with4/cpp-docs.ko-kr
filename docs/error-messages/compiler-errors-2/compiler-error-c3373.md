@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3373
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3373
+f1_keywords: C3373
+dev_langs: C++
+helpviewer_keywords: C3373
 ms.assetid: 6e7586c3-1a15-4773-ad20-f90090a400dc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5de888c83ca91d9e05cd5521d487f9c8d4e3492f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 641842664228bdbf9442c50cf5233332e05534c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3373"></a>컴파일러 오류 C3373
 'attribute' 특성은 coclass의 경우를 제외하고 인수를 사용하지 않습니다.  

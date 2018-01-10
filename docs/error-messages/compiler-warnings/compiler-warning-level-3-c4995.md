@@ -1,35 +1,34 @@
 ---
 title: "컴파일러 경고 (수준 3) C4995 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4995"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4995"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4995
+dev_langs: C++
+helpviewer_keywords: C4995
 ms.assetid: c6b61755-4730-4947-ad4d-d1c2bc82585a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4c8bf04670f8899209a42e2cc8d20420d522ef4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 3) C4995
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function': 이름이 \#pragma deprecated로 표시되었습니다.  
+# <a name="compiler-warning-level-3-c4995"></a>컴파일러 경고 (수준 3) C4995
+'function': 이름 #pragma 사용 되지 않는 것으로 표시 되었습니다  
   
- 컴파일러에서 pragma [deprecated](../../preprocessor/deprecated-c-cpp.md)로 표시한 함수를 발견했습니다.  이 함수는 이후 릴리스에서 제공되지 않을 수 있습니다.  다음 예제와 같이 [warning](../../preprocessor/warning.md) pragma를 사용하여 이 경고를 해제할 수 있습니다.  
+ 컴파일러가 pragma로 표시 된 함수를 발견 했습니다. [사용 되지 않는](../../preprocessor/deprecated-c-cpp.md)합니다. 이 함수는 이후 릴리스에서 제공되지 않을 수 있습니다. 해제할 수 있습니다이 경고와는 [경고](../../preprocessor/warning.md) pragma (아래 예제).  
   
-## 예제  
- 다음 샘플에서는 C4995 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 C4995 오류가 생성 됩니다.  
   
 ```  
 // C4995.cpp  

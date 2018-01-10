@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be52ccf8ba42b61d7393c32587e54a5a768d2f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 333b72f2ad27fb079380ea8f2fb07c06f32e5b26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>OLE DB 소비자 템플릿 작업
 다음 항목에서는 일반적인 시나리오에서 OLE DB 소비자 템플릿 사용 하는 방법의 몇 가지 예를 제공 합니다.  

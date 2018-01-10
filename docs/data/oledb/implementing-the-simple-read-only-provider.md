@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc7f2ff81874c49ed203c9733ad31741c1fde6cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 354d1f64c2236706a977b8a9093e99f7b2013b22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>단순한 읽기 전용 공급자 구현
 이 항목의 확장 된 예제에는 텍스트 파일에서 두 문자열의 집합을 읽을 수 있는 간단한 읽기 전용 공급자 만들기 위해 마법사가 만든 파일을 편집 하는 방법을 보여 줍니다. 마법사 파일에서이 공급자를 만들려면 다음 작업을 완료 하는 코드를 추가 합니다.  

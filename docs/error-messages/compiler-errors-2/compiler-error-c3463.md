@@ -15,18 +15,19 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c5f79f76329277fa24e90eaa0ab32209cafe6c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51a39661145d380813903bcbf91c2fc5029a785b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3463"></a>컴파일러 오류 C3463
 'type': 형식을 'implements' 특성에 사용할 수 없습니다.  
   
  에 전달 된 값이 잘못 된 [구현](../../windows/implements-cpp.md) 특성입니다. 예를 들어 `implements`에 인터페이스를 전달할 수 있지만 포인터를 인터페이스에 전달할 수는 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3463을 생성합니다.  
   
 ```  

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 212e9f67f699281bebd85506e895c22cf012b4be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df809971ecf8bdd8700217cf6a1965e2973de754
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-container-classes"></a>OLE 컨테이너 클래스
 이러한 클래스는 컨테이너 응용 프로그램에서 사용 됩니다. 둘 다 `COleLinkingDoc` 및 `COleDocument` 의 컬렉션을 관리 `COleClientItem` 개체입니다. 문서 클래스 파생 하지 않고 **CDocument**에서 파생 됩니다 `COleLinkingDoc` 또는 `COleDocument`문서에 포함 된 개체에 대 한 링크에 대 한 지원이 필요 여부에 따라 합니다.  

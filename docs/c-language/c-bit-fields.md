@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ebc62a975e534d89fd99dbb05a65e8d6cb379bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bit-fields"></a>C 비트 필드
 구조 선언자는 구조체 또는 공용 구조체의 멤버에 대한 선언자일 뿐만 아니라 “비트 필드"라는 지정된 비트 수로 구성될 수도 있습니다. 해당 길이는 필드 이름에 대한 선언자에서 콜론으로 설정됩니다. 비트 필드는 정수 데이터 형식으로 해석됩니다.  

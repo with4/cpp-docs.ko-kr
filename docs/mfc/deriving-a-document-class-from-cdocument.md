@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f9152384522725dc932d0ce5e1c4cc81827160b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5c128a2a2e32b5e4854725354ed484a335ab0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>CDocument에서 문서 클래스 파생시키기
 문서를 포함 하 고 응용 프로그램의 데이터를 관리 합니다. MFC 응용 프로그램 마법사를 제공 하는 문서 클래스를 사용 하려면 다음을 수행 해야 합니다.  

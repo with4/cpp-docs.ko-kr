@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88af917cb86826cc4615948f7a5d2e53e888bad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 261fb23c96bee0d646f64d587d9f7afecc59d4d2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 지정된 로캘 종속 변환을 수행하여 하나의 문자열을 다른 문자열에 매핑합니다. 이 함수는 입력 문자열에 대한 정렬 키를 생성하는 데에도 사용될 수 있습니다.  
@@ -75,10 +76,10 @@ int __crtLCMapStringW(
  0은 실패를 나타냅니다. 확장 오류 정보를 가져오려면 `GetLastError` 함수를 호출하십시오.  
   
 ## <a name="remarks"></a>설명  
- `cchSrc` 가 0보다 크고 `lpSrcStr` 이 null 종결 문자열인 경우 `__crtLCMapStringW` 는 `cchSrc` 를 문자열 길이로 설정합니다. 그러면 `__crtLCMapStringW` 가 지정된 매개 변수를 사용하여 `LCMapString` 함수의 와이드 문자(유니코드) 버전을 호출합니다. 이 함수의 반환 값 및 매개 변수에 대한 자세한 내용은 `LCMapString` MSDN 라이브러리 [에서](http://go.microsoft.com/fwlink/?linkID=150542)함수를 참조하세요.  
+ `cchSrc` 가 0보다 크고 `lpSrcStr` 이 null 종결 문자열인 경우 `__crtLCMapStringW` 는 `cchSrc` 를 문자열 길이로 설정합니다. 그러면 `__crtLCMapStringW` 가 지정된 매개 변수를 사용하여 `LCMapString` 함수의 와이드 문자(유니코드) 버전을 호출합니다. 이 함수의 반환 값 및 매개 변수에 대한 자세한 내용은 `LCMapString` MSDN 라이브러리 [에서](http://go.microsoft.com/fwlink/p/?linkid=150542)함수를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |__crtLCMapStringW|awint.h|

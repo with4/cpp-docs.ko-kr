@@ -4,34 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2039
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2039
+f1_keywords: C2039
+dev_langs: C++
+helpviewer_keywords: C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 753ba66cfbc20e19bab5351ff67d9e6f8cc3a392
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 0a2fc962926a4a4d12232a9f785e7254fbcdb3f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2039"></a>컴파일러 오류 C2039
 'identifier1': 'identifier2'의 구성원이 아닙니다  
   
  코드 잘못 호출 하거나 구조체, 클래스 또는 공용 구조체의 멤버를 참조 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
@@ -46,7 +42,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
@@ -60,7 +56,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
@@ -77,7 +73,7 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C2039 기본 인덱서를 올바르게 액세스 하려고 할 경우에 발생할 수 있습니다. 다음 샘플 C#에서 작성 된 구성 요소를 정의 합니다.  
   
 ```  
@@ -93,7 +89,7 @@ public class B {
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
@@ -111,7 +107,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C2039는 제네릭을 사용 하는 경우에 발생할 수 있습니다. 다음 샘플에서는 C2039 오류가 발생 합니다.  
   
 ```  
@@ -135,7 +131,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C2039 관리 되거나 관리 되지 않는 리소스를 해제 하려고 할 때 발생할 수 있습니다. 자세한 내용은 참조 [소멸자 및 종료자](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)합니다.  
   
  다음 샘플에서는 C2039 오류가 발생 합니다.  

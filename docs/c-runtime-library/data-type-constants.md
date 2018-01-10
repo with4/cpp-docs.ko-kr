@@ -97,11 +97,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49faa73a334d2feed480499735220a1ae7f6d2c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-constants"></a>데이터 형식 상수
 데이터 형식 상수는 정수 데이터 형식에 대해 허용되는 값의 구현에 따라 다른 값입니다. 아래 나열된 상수는 정수 데이터 형식의 범위를 제공하고 LIMITS.H에 정의됩니다.  
@@ -114,7 +115,7 @@ ms.lasthandoff: 10/24/2017
 |**SCHAR_MAX**|127|최대 부호 있는 `char` 값|  
 |**SCHAR_MIN**|-128|최소 부호 있는 `char` 값|  
 |**UCHAR_MAX**|255(0Xff)|최대 `unsigned char` 값|  
-|**CHAR_BIT**|9|`char`의 비트 수|  
+|**CHAR_BIT**|8|`char`의 비트 수|  
 |**USHRT_MAX**|65535(0xffff)|최대 **unsigned short** 값|  
 |**SHRT_MAX**|32767|최대 (부호 있는) **short** 값|  
 |**SHRT_MIN**|-32768|최소 (부호 있는) **short** 값|  

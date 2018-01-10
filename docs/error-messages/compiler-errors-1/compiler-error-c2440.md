@@ -4,34 +4,30 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2440
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2440
+f1_keywords: C2440
+dev_langs: C++
+helpviewer_keywords: C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 62a83da358738f7892fd5db06fbe775ff0b7d7da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 23d6666e2b8e61a8761454729f4f7444a9800cbe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2440"></a>컴파일러 오류 C2440
 'conversion': 'type1'에서 'type2'로 변환할 수 없습니다  
   
 컴파일러에서 캐스팅할 수 없습니다 `type1` 를 `type2`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 C2440 비 const를 초기화 하려고 하면 발생할 수 있습니다 `char*` (또는 `wchar_t*`) c + + 코드에 있는 문자열 리터럴이 사용 하 여 때 컴파일러 규칙 옵션 [/zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) 설정 됩니다. C에서는 문자열 리터럴 형식이 배열 `char`, 표시 되지만 c + +, 배열을 `const char`합니다. 이 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
@@ -49,7 +45,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C2440은 void * 멤버 포인터 변환 하려는 경우에 발생할 수 있습니다. 다음 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
@@ -71,7 +67,7 @@ public:
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C2440 앞 으로만 선언 되었지만 정의 되어 있지 하는 형식에서 캐스팅 하 려 하는 경우에 발생할 수 있습니다. 이 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
@@ -86,7 +82,7 @@ Base * func(Derived * d) {
   
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  15, 16 다음 샘플의 줄에 있는 C2440 오류도 한정 되는 `Incompatible calling conventions for UDT return value` 메시지입니다. A *UDT* 클래스, 구조체 또는 공용 구조체와 같은 사용자 정의 형식입니다. 이러한 종류의 비 호환성 오류는 UDT의 호출 규칙은 반환 형식의 실제 udt 및 함수 포인터와 연관 된 호출 규칙으로 충돌 하는 정방향 선언에 지정 된 경우에 발생 합니다.  
   
  예제에서는 먼저 없는 구조체 및 구조체; 반환 하는 함수에 대 한 정방향 선언 컴파일러는 구조체는 c + + 호출 규칙을 사용 하는 가정 합니다. 다음은 기본적으로 C를 사용 하는 구조체 정의 호출 규칙. 모르기 때문에 컴파일러는 구조체의 호출 규칙 전체 구조체 구조체의 반환 형식에 대 한 호출 규칙을 읽는 완료 될 때까지 `get_c2` 또한 c + +로 간주 됩니다.  
@@ -135,7 +131,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C2440 내부 포인터에 0을 할당 하는 경우에 발생할 수 있습니다.  
   
 ```cpp  
@@ -149,7 +145,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용자 정의 변환 사용이 잘못 C2440도 발생할 수 있습니다. 예를 들어 때 변환 연산자 정의 된 `explicit`, 컴파일러는 암시적 변환에 사용할 수 없습니다. 사용자 정의 변환에 대 한 자세한 내용은 참조 [사용자 정의 변환 (C + + /cli CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). 이 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
@@ -172,7 +168,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  형식의 Visual c + + 배열의 인스턴스를 만들려고 할 경우에 C2440 발생할 수 있습니다는 <xref:System.Array>합니다.  자세한 내용은 참조 [배열](../../windows/arrays-cpp-component-extensions.md)합니다.  다음 샘플에서는 C2440 오류가 생성 됩니다.  
   
 ```cpp  
@@ -186,7 +182,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C2440 특성 기능의 변경으로 인해 발생할 수도 있습니다.  다음 샘플에서는 C2440 합니다.  
   
 ```cpp  
@@ -197,7 +193,7 @@ int main() {
 // [ module(name="PropDemoLib", version="1.0") ];  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  Visual c + + 컴파일러는 더 이상 허용는 [const_cast 연산자](../../cpp/const-cast-operator.md) 아래로 캐스팅할 때 소스 코드를 사용 하 **/clr** 프로그래밍 컴파일됩니다.  
   
  이 c2440 오류를 해결 하려면 올바른 캐스트 연산자를 사용 합니다. 자세한 내용은 참조 [캐스팅 연산자](../../cpp/casting-operators.md)합니다.  
@@ -217,7 +213,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 C2440 Visual Studio 2015 업데이트 3에서 컴파일러 규칙 변경으로 인해 발생할 수 있습니다. 이전에 컴파일러 잘못 처리 특정 개별 식 같은 형식으로 일치 하는 서식 파일을 식별할 때는 `static_cast` 작업 합니다. 이전에 의존 하는 이제 컴파일러는 형식이 올바르게 구분 하 고 코드 `static_cast` 동작은 중단 합니다. 이 문제를 해결 하려면 변경 템플릿 매개 변수 형식과 일치 하거나 사용 하려면 템플릿 인수는 `reinterpret_cast` 또는 C 스타일 캐스트 합니다.
   
 이 샘플에서는 C2440 오류가 생성 됩니다.  
@@ -244,7 +240,7 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 
 ```
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
 2017 및 이후 버전의 visual Studio에는 올바르게 Visual Studio 2015에서 하지 되었으나 및 충돌 될 수는 이니셜라이저 목록을 사용 하 여 개체 만들기와 관련 된 컴파일러 오류가 발생 하거나 런타임 동작을 정의 되지 않았습니다. C + + 17 복사 목록-초기화, 컴파일러는 오버 로드 확인에 대 한 명시적 생성자를 고려해 야 하는 데 필요 하지만 오버 로드 하는 실제로 선택 하는 경우 오류가 발생 합니다.
@@ -282,7 +278,7 @@ int main()
 }  
 ```  
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 ### <a name="cv-qualifiers-in-class-construction"></a>클래스 생성의 cv 한정자
 
 Visual Studio 2015에서는 컴파일러가 생성자 호출을 통해 클래스 개체를 생성할 때 cv 한정자를 잘못 무시하는 경우가 있습니다. 이로 인해 잠재적으로 크래시 또는 예기치 않은 런타임 동작이 발생할 수 있습니다. 다음 예제에서는 Visual Studio 2015에서 컴파일하지만 이상 Visual Studio 2017에서 컴파일러 오류를 발생 시킵니다.
@@ -298,4 +294,3 @@ int i = (const S)0; // error C2440
 ```
 
 오류를 수정하려면 operator int()를 생성자로 선언합니다.
-

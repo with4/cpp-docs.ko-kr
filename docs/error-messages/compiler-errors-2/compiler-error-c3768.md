@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d334473e326f28a628ebda9dede7a83340a1cb34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba2f52622cde34a8301529d569790c67a72bbb74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3768"></a>컴파일러 오류 C3768
 순수 관리 코드에서는 가상 vararg 함수의 주소를 가져올 수 없습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  로 컴파일할 때 `/clr:pure`를 가상의 주소를 가져올 수 없습니다 `vararg` 함수입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 샘플에서는 C3768 오류가 생성 됩니다.  
   

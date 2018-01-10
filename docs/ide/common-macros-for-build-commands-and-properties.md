@@ -103,11 +103,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f83ed395860033aa35dfedc4713653976a1f2763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>빌드 명령 및 속성에 대 한 일반적인 매크로
 설치 옵션에 따라 Visual Studio에 수행할 수 수백 매크로의 사용할 수 있습니다. 이 값은 기본적으로.props 또는.targets 파일 또는 프로젝트 설정에서 설정 된 MSBuild 속성입니다. 프로젝트의 **속성 페이지** 대화 상자에서 문자열이 허용되는 모든 위치에서 이러한 매크로를 사용할 수 있습니다. 이러한 매크로는 대/소문자를 구분하지 않습니다.  
@@ -121,7 +122,7 @@ ms.lasthandoff: 10/24/2017
 |매크로|설명|  
 |-----------|-----------------|  
 |**$ (Remotemachine)**|디버그 속성 페이지에서 **Remote Machine** 속성의 값으로 설정합니다. 자세한 내용은 [C/C++ 디버그 구성에 대한 프로젝트 설정 변경](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) 을 참조하세요.|  
-|**$(Configuration)**|현재 프로젝트 구성에서, 예를 들어, "디버그"의 이름입니다.|  
+|**$(Configuration)**|현재 프로젝트 구성의 이름(예: "디버그")입니다.|  
 |**$(Platform)**|예를 들어 "Win32" 현재 프로젝트 플랫폼의 이름입니다.|  
 |**$ (Parentname)**|(사용되지 않음) 이 프로젝트 항목을 포함하는 항목의 이름입니다. 부모 폴더 이름 또는 프로젝트 이름이 됩니다.|  
 |**$ (Rootnamespace)**|응용 프로그램을 포함하는 네임스페이스(있는 경우)입니다.|  

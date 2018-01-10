@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 697b06bcddbaadb8c3a8a1dece761cdf31a31527
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 972c789e17b2b42e0df7229b94b4f10aaa5ff470
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rdtscp"></a>__rdtscp
 **Microsoft 전용**  
@@ -62,7 +63,7 @@ unsigned __int64 __rdtscp(
   
  에 있는 값의 의미 `TSC_AUX[31:0]` 운영 체제에 따라 달라 집니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 #include <intrin.h>   
