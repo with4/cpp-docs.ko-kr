@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df073aa0e831d6809b3fcd02fb651574ab47c7e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 338b619580ef7967d871ff3f960fc467555ab72a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-manager-mfc"></a>자동화 관리자(MFC)
 AUTMGR32 합니다. 원격 자동화 개체를 제공 하려는 각 컴퓨터의 Windows 시스템 디렉터리에 EXE는 복사 해야 합니다. Windows 95, Windows 98이이 디렉터리는 대개 C:\WINDOWS\SYSTEM입니다. Windows NT 및 Windows 2000 것이 일반적으로 C:\WINNT\SYSTEM32입니다.  

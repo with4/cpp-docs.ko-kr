@@ -37,11 +37,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f07115db4d627a1116f9eaefd0f1731841be83ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22c801b95eff65093a6ff93bfbe99b0ea83358ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd Intrinsic Functions
 **Microsoft 전용**  
@@ -115,7 +116,7 @@ __int64 _InterlockedAdd64_rel(
   
  이러한 루틴은 내장 함수로만 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // interlockedadd.cpp  
@@ -142,7 +143,7 @@ int main()
 0xffffff00 0xff0000 0xffffff00  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // interlockedadd64.cpp  

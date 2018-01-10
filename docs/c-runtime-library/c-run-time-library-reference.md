@@ -18,18 +18,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b1c9965b221002a38428d3d813f4568e937cf52d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b393bc72bbc6722d353295dc244f75f504b9730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-run-time-library-reference"></a>C 런타임 라이브러리 참조
 Microsoft 런타임 라이브러리는 Microsoft Windows 운영 체제에 대한 프로그래밍 루틴을 제공합니다. 이러한 루틴은 C 및 C++ 언어에서 제공하지 않는 여러 일반 프로그래밍 작업을 자동화합니다.  
   
  샘플 프로그램은 대부분의 라이브러리 루틴에 대한 개별 참조 항목에 포함됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [C 런타임 라이브러리](../c-runtime-library/crt-library-features.md)  
  C 런타임 라이브러리를 구성하는 .lib 파일에 대해 설명합니다.  
   

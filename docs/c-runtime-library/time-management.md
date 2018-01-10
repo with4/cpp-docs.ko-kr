@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a634d748a0960e0eda56f89bcca66463780f08f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf86c854345244eafff80392cdc575d026c61ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-management"></a>시간 관리
 다음 함수를 사용하여 현재 시간을 가져오고 필요에 따라 변환, 조정 및 저장할 수 있습니다. 현재 시간은 시스템 시간입니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="time-routines"></a>시간 루틴  
   
-|함수|기능|  
+|함수|사용|  
 |--------------|---------|  
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|시간을 `struct tm` 형식에서 문자열로 변환합니다. `_s` 접미사를 포함한 버전의 함수가 더 안전합니다.|  
 |[clock](../c-runtime-library/reference/clock.md)|프로세스의 경과된 벽시계 시간을 반환합니다.|  

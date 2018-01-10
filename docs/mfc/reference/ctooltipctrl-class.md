@@ -83,11 +83,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b55d466e62ed306e41877b855c06b9fe8bc8577d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f67a9ccb25216c6f7546d9d906f91cfe5102bc4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 응용 프로그램 도구의 용도를 설명하는 텍스트 한 줄을 표시하는 작은 팝업 창인 "도구 설명 컨트롤"의 기능을 캡슐화합니다.  
@@ -182,7 +183,7 @@ void Activate(BOOL bActivate);
   
  컨트롤;에 등록 하는 도구에 커서를 가져갈 때 도구 설명 정보 표시 도구 설명 컨트롤이 활성화 되 면 활성 상태인 도구 설명 정보 나타나지 않습니다, 심지어 커서가 있는 경우에 도구입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
 ##  <a name="addtool"></a>CToolTipCtrl::AddTool  
@@ -230,7 +231,7 @@ BOOL AddTool(
 > [!NOTE]
 >  사용 하 여 정적 컨트롤 도구 설명을 설정할 수 없습니다 `AddTool`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
 ##  <a name="adjustrect"></a>CToolTipCtrl::AdjustRect  
@@ -288,7 +289,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
   
  확장된 창 스타일을 사용 하 여 도구 설명 컨트롤을 만들려면 호출 [CToolTipCtrl::CreateEx](#createex) 대신 **만들기**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
 ##  <a name="createex"></a>CToolTipCtrl::CreateEx  
@@ -327,7 +328,7 @@ CToolTipCtrl();
 ### <a name="remarks"></a>설명  
  호출 해야 **만들기** 후 개체를 생성 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]  
   
 ##  <a name="deltool"></a>CToolTipCtrl::DelTool  
@@ -382,7 +383,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [TTM_GETCURRENTTOOL](http://msdn.microsoft.com/library/windows/desktop/bb760389) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 현재 도구 창에 대 한 정보를 검색합니다.  
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]  
@@ -612,7 +613,7 @@ void Popup();
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [TTM_POPUP](http://msdn.microsoft.com/library/windows/desktop/bb760402) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 도구 설명 창이 표시 됩니다.  
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]  
@@ -637,7 +638,7 @@ void RelayEvent(LPMSG lpMsg);
 |`WM_MBUTTONDOWN`|`WM_RBUTTONUP`|  
 |`WM_MBUTTONUP`||  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
 ##  <a name="setdelaytime"></a>CToolTipCtrl::SetDelayTime  

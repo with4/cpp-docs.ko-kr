@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8d4d55e991b104cfab07045b70f189d0295790a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43f97774036c42fa0f681a65e0a335f944daf09c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: MFC IOleCommandTarget 구현
 > [!NOTE]
@@ -96,7 +97,7 @@ olecmdid  ,
   
  사용 하 여는 `ON_OLECMD` OLE에 대 한 항목을 추가 하려면 명령 맵에서 매크로 처리할 명령입니다. 변환지 것입니다 OLE 명령의 받을 때 지정 된 **WM_COMMAND** 메시지 보내기 및 표준 MFC 명령 라우팅 아키텍처를 사용 하 여 응용 프로그램의 메시지 맵을 통해 라우팅됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 처리 하는 MFC 액티브 문서 서버에 OLE 명령 처리 기능을 추가 하는 [OLECMDID_PRINT](http://msdn.microsoft.com/library/windows/desktop/ms691264) OLE 명령입니다. 이 예에서는 가정 액티브 문서 서버는 MFC 응용 프로그램을 생성 하려면 응용 프로그램 마법사를 사용 합니다.  
   
 1.  사용자 `CView`-파생 클래스의 헤더 파일에서 추가 `DECLARE_OLECMD_MAP` 클래스 선언에는 매크로입니다.  

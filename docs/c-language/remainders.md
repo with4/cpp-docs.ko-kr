@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c4f5bc22cf5d1eddbd199cffda0aeb95cc438bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2509f0159b1aefb18a16bd2b2bec7d0e0537ea45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remainders"></a>나머지
 **ANSI 3.3.5** 정수 나누기에 대한 나머지의 부호  
   
- 나머지의 부호는 피제수의 부호와 동일합니다. 예를 들면 다음과 같습니다.  
+ 나머지의 부호는 피제수의 부호와 동일합니다. 예를 들어 개체에 적용된  
   
 ```  
  50 / -6 == -8  

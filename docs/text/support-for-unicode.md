@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: b58901f213d5e69eb50ad449a87266736fba0af7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 150f161b71efc07bc7b5a08d79e17fac0dea7931
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-unicode"></a>유니코드 지원
 유니코드는 1바이트로 표현할 수 없는 문자를 비롯하여 모든 문자 집합을 지원하는 사양입니다. 국제 시장을 프로그래밍 하는 경우 유니코드를 사용 하는 것이 좋습니다 또는 [멀티 바이트 문자 집합](../text/support-for-multibyte-character-sets-mbcss.md) (Mbcs) 사용 하거나 스위치 변경을 통해 빌드할 수 있도록 프로그램을 사용 합니다.  

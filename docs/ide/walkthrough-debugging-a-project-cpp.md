@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec7a363d3aa4601e33e44d15fbb3d667c3a87db4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>연습: 프로젝트 디버깅(C++)
 이 연습에서는 프로젝트를 테스트할 때 발견 된 문제를 해결 하려면 프로그램을 수정 합니다.  

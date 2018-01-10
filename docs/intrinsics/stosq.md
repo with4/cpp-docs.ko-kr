@@ -1,69 +1,69 @@
 ---
-title: "__stosq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep stosq 명령"
-  - "stosq 명령"
-  - "__stosq 내장 함수"
+title: __stosq | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosq
+dev_langs: C++
+helpviewer_keywords:
+- rep stosq instruction
+- stosq instruction
+- __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4f64f8414ea0ec99a4e484db0527e101102c4f88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# __stosq
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stosq"></a>__stosq
 **Microsoft 전용**  
   
- 생성 된 저장소 문자열 명령 \(`rep stosq`\).  
+ 저장소 문자열 명령 생성 (`rep stosq`).  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
+void __stosb(   
+   unsigned __int64* Dest,   
+   unsigned __int64 Data,   
+   size_t Count   
 );  
 ```  
   
-#### 매개 변수  
- \[out\] `Dest`  
- 대상 작업입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [out] `Dest`  
+ 작업의 대상입니다.  
   
- \[in\] `Data`  
- 저장할 데이터입니다.  
+ [in] `Data`  
+ 데이터를 저장 하는입니다.  
   
- \[in\] `Count`  
- 쿼드 워드이 쓸 개 블록의 길이입니다.  
+ [in] `Count`  
+ 쓸 개 쿼드 워드 블록의 길이입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`__stosq`|AMD64|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 결과 quadword입니다 `Data` 의 블록으로 쓰여집니다 `Count` 쿼드 워드 개에는 `Dest` 문자열입니다.  
+## <a name="remarks"></a>설명  
+ 결과 쿼드 워드는 `Data` 블록으로 기록 `Count` 쿼드 워드를 두는 `Dest` 문자열입니다.  
   
- 이 루틴에만 내장로 사용할 수 있습니다.  
+ 이 루틴은 내장 루틴으로만 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // stosq.c  
@@ -83,13 +83,13 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 0 ffffffffffff ffffffffffff 0  
 ```  
   
-### Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

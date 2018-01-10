@@ -1,41 +1,42 @@
 ---
-title: "컴파일러 경고(수준 1) C4436 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "컴파일러 경고 (수준 1) C4436 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1018d678b6105f2d727f7806326218c168d8f728
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고(수준 1) C4436
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'class2' 생성자 나 소멸자를 가상 기본 'class1'에서 dynamic\_cast \/vd2와 부분적으로 생성 된 개체 컴파일 실패 하거나 적용 'class2' \#pragma vtordisp\(2\) 사용 하 여 정의할 수 있습니다.  
+# <a name="compiler-warning-level-1-c4436"></a>컴파일러 경고(수준 1) C4436
+생성자 또는 소멸자에서 가상 기본 'class1'에서 'class2'로의 dynamic_cast는 부분적으로 생성된 개체와 함께 실패할 수 있습니다.        /vd2를 사용해서 컴파일하거나 해당 #pragma vtordisp(2)에 'class2'를 정의하십시오.  
   
- 컴파일러에서  `dynamic_cast`  작업을 발견하면서 다음과 같은 특징이 있습니다.  
+ 컴파일러에서 다음과 같은 특성의 `dynamic_cast` 작업이 발견되었습니다.  
   
--   기본 클래스 포인터에서 파생된 클래스 포인터 캐스트입니다.  
+-   캐스트는 기본 클래스 포인터에서 파생된 클래스 포인터의 방향으로 수행됩니다.  
   
--   파생 클래스는 기본 클래스를 가상으로 상속합니다.  
+-   파생된 클래스는 기본 클래스를 상속합니다.  
   
--   파생된 클래스에 `vtordisp` 필드가 없습니다.  
+-   파생된 클래스에는 가상 기본에 대한 `vtordisp` 필드가 포함되지 않습니다.  
   
--   생성자 또는 소멸자가 파생된 클래스의 캐스팅 찾거나 일부 클래스의 추가 파생된 클래스에서 상속 합니다.  
+-   파생된 클래스 또는 파생 클래스에서 추가로 상속되는 일부 다른 클래스의 생성자 또는 소멸자에서 클래스가 발견되었습니다.  
   
- 경고는 `dynamic_cast` 이 부분적으로 생성 된 개체에서 작동 하는 경우 제대로 작동 하지 않을 수 있습니다.  하는 몇 가지 더 파생 된 개체의 하위 개체에서 파생 된 생성자\/소멸자 작동 하는 경우 발생 합니다.  라는 경고에서 파생된 된 클래스는 더 이상 경우 파생에 경고를 무시할 수 있습니다.  
+ 경고는 부분적으로 생성된 개체에서 작동할 경우 `dynamic_cast`가 올바르게 작동하지 않을 수 있음을 나타냅니다.  이 경우는 파생된 생성자/소멸자가 추가로 파생된 일부 개체의 하위 개체에서 작동하는 경우에 발생합니다.  경고에 지정된 파생된 클래스가 더 이상 파생되지 않을 경우 경고를 무시해도 됩니다.  
   
-## 예제  
- 다음 샘플은 C4436를 생성 하 고 누락된 것에서 발생 하는 코드 생성 문제를 보여 줍니다.  `vtordisp`  필드입니다.  
+## <a name="example"></a>예  
+ 다음 샘플은 C4436을 생성하고 누락된 `vtordisp` 필드로부터 발생하는 코드 생성 문제를 보여줍니다.  
   
 ```cpp  
 // C4436.cpp  
@@ -77,7 +78,7 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [dynamic\_cast 연산자](../../cpp/dynamic-cast-operator.md)   
+## <a name="see-also"></a>참고 항목  
+ [dynamic_cast 연산자](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [컴파일러 경고\(수준 4\) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+ [컴파일러 경고(수준 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

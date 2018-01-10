@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c791feb2abb9deda0fcd0c18602682b81e4dcf28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 992c3164a8adb95125d9e4be4f88f930270b08ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-syntax-summary"></a>C 언어 구문 요약
 이 섹션에서는 C 언어 및 Microsoft 전용 C 언어 기능에 대한 자세한 설명을 제공합니다. 이 섹션의 구문 표기법을 사용하여 언어 구성 요소에 대한 정확한 구문을 확인할 수 있습니다. 구문에 대한 설명은 이 설명서에서 항목 설명 섹션에 나와 있습니다.  

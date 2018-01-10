@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8712e75aad6eeaa50227989043a2aaad6973193d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bbc721669d51860c01c760a8d1f9fb899e019e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stock-properties"></a>스톡 속성
 사용 하 여 MFC dispinterface 속성을 추가 하는 경우는 [속성 추가 마법사](../ide/idl-attributes-add-property-wizard.md)에서 스톡 속성을 선택할 수는 **속성 이름** 목록에 [이름](../ide/names-add-property-wizard.md) 의 페이지는 마법사입니다. 속성은 다음과 같습니다.  

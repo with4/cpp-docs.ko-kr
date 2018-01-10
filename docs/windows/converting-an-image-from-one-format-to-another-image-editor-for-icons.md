@@ -1,48 +1,52 @@
 ---
-title: "Converting an Image From One Format to Another (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], stand-alone editing"
-  - "Image editor [C++], converting image formats"
-  - "graphics [C++], converting formats"
-  - "images [C++], converting formats"
+title: "에 다른 (이미지 편집기 아이콘에 대 한) 이미지의 형식을 변환 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], stand-alone editing
+- Image editor [C++], converting image formats
+- graphics [C++], converting formats
+- images [C++], converting formats
 ms.assetid: 0409c2bd-3bd8-4d72-9c71-c683b6cf51be
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2defaafb1c0edb58f3fbd50ecc47ad26309ca38b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Converting an Image From One Format to Another (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이미지 편집기에서 GIF나 JPEG 이미지를 열어 비트맵으로 저장할 수 있습니다.  또한, 비트맵 파일을 열어 GIF나 JPEG로 저장할 수도 있습니다.  작업할 이미지가 프로젝트에 포함된 이미지가 아닌 경우에도 개발 환경에서 편집할 수 있습니다\([프로젝트 외부의 이미지 편집](../mfc/editing-an-image-outside-of-a-project-image-editor-for-icons.md) 참조\).  
+# <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>이미지를 한 형식에서 다른 형식으로 변환(아이콘에 대한 이미지 편집기)
+GIF 나 JPEG 이미지 이미지 편집기에서 열고 비트맵으로 저장할 수 있습니다. 또한 비트맵 파일을 열고 GIF 또는 JPEG로 저장 수 있습니다. 이미지를 사용 하 여 작업할 개발 환경에서 편집을 위해 프로젝트의 일부가 필요는 없습니다 (참조 [외부의 이미지 편집](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  
   
-### 이미지를 다른 형식으로 변환하려면  
+### <a name="to-convert-an-image-from-one-format-to-another"></a>이미지의 형식을 변환 하려면  
   
-1.  **이미지** 편집기에서 이미지를 엽니다.  
+1.  이미지에서 열고는 **이미지** 편집기입니다.  
   
-2.  **파일** 메뉴에서 **다른 이름으로 *filename* 저장**을 선택합니다.  
+2.  **파일** 메뉴 선택 **저장 *filename* 으로**합니다.  
   
-3.  **다른 이름으로 파일 저장** 대화 상자의 **파일 이름** 상자에 원하는 형식에 맞는 파일 이름과 확장명을 입력합니다.  
+3.  에 **이름으로 파일 저장** 대화 상자는 **파일 이름** 파일 이름 및 형식을 나타내는 확장명을 입력 합니다.  
   
 4.  **저장**을 클릭합니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
  요구 사항  
   
  없음  
   
-## 참고 항목  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>참고 항목  
+ [그래픽 리소스 편집](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [아이콘에 대한 이미지 편집기](../windows/image-editor-for-icons.md)
+

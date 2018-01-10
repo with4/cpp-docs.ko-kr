@@ -1,35 +1,38 @@
 ---
-title: "Associating an Accelerator Key with a Menu Item | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "menus, shortcut keys"
-  - "keyboard shortcuts, menu association"
+title: "메뉴 항목과 액셀러레이터 키 연결 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- menus, shortcut keys
+- keyboard shortcuts, menu association
 ms.assetid: 15087bdd-3481-4ea9-9481-49f31845be70
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea2b7e10641a8215dfb3338092d967d188f1011d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Associating an Accelerator Key with a Menu Item
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="associating-an-accelerator-key-with-a-menu-item"></a>메뉴 항목과 액셀러레이터 키 연결
+메뉴 항목과 키보드 조합에서 동일한 프로그램 명령을 여러 번 실행하도록 하려고 합니다. 이렇게 하려면 메뉴 항목과 응용 프로그램의 액셀러레이터 테이블에 있는 항목에 동일한 리소스 식별자(ID)를 할당합니다. 그런 다음 메뉴 항목의 캡션을 편집하여 액셀러레이터 키의 이름을 표시합니다. 메뉴 항목과 액셀러레이터 키에 대 한 자세한 내용은 참조 하십시오. [메뉴 항목 바로 가기 키와 연결](../windows/associating-a-menu-command-with-an-accelerator-key.md)합니다.  
+  
 
-메뉴 항목과 키보드 조합에서 동일한 프로그램 명령을 여러 번 실행하도록 하려고 합니다.  이렇게 하려면 메뉴 항목과 응용 프로그램의 액셀러레이터 테이블에 있는 항목에 동일한 리소스 식별자\(ID\)를 할당합니다.  그런 다음 메뉴 항목의 캡션을 편집하여 액셀러레이터 키의 이름을 표시합니다.  메뉴 항목과 액셀러레이터 키에 대한 자세한 내용은 [메뉴 항목과 액셀러레이터 키 연결](../windows/associating-a-menu-command-with-an-accelerator-key.md)을 참조하세요.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하세요.  
-  
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  Win32  
   
-## 참고 항목  
- [Accelerator Editor](../mfc/accelerator-editor.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>참고 항목  
+ [액셀러레이터 키 편집기](../windows/accelerator-editor.md)   
+ [리소스 편집기](../windows/resource-editors.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd46ddafa76d47be7e237066c034e16010ff7b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d10db5f1282c726b30536be35b348d50c8bb4a14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tabs-and-tab-control-attributes"></a>탭 및 탭 컨트롤 특성
 모양 및 탭 컨트롤을 구성 하는 탭의 동작을 상당히 제어할 수 있습니다 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). 각 탭 레이블, 아이콘, 항목 상태 및 연결 된 하는 응용 프로그램 정의 32 비트 값을 포함할 수 있습니다. 각 탭에 대 한 아이콘, 레이블, 또는 둘 모두를 표시할 수 있습니다.  

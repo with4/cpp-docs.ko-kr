@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4fad93505a5778c23171b413654624a32e825b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8fc671e624b16299db3366885f7bcd38b8518ee5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-qualifiers"></a>형식 한정자
 형식 한정자는 두 속성 중 하나를 식별자에 제공합니다. **const** 형식 한정자는 개체를 수정할 수 없는 것으로 선언합니다. `volatile` 형식 한정자가 선언하는 항목의 값은 해당 항목이 나타나는 프로그램의 제어를 벗어난 요소(예: 동시에 실행되는 스레드)가 올바르게 변경할 수 있습니다.  

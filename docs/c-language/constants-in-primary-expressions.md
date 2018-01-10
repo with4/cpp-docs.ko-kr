@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11b316ce00dd961c2c7d0dbd91a95d9a71df6f69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96798abe1c70ee83a1e897133ef5036742d8771c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constants-in-primary-expressions"></a>기본 식의 상수
 상수 피연산자에는 자신이 나타내는 상수 값의 값과 형식이 있습니다. 문자 상수의 형식은 `int`입니다. 정수 상수는 정수 크기 및 값 지정 방법에 따라 `int`, **long**, `unsigned int` 또는 `unsigned long` 형식을 가집니다. 자세한 내용은 [상수](../c-language/c-constants.md)를 참조하세요.  

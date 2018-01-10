@@ -1,55 +1,59 @@
 ---
-title: "Changing Image Properties (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], properties"
-  - "Image editor [C++], Properties window"
-  - "Image editor [C++], image properties"
-  - "Properties window, image editor"
+title: "이미지 속성 (아이콘에 대 한 이미지 편집기) 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], properties
+- Image editor [C++], Properties window
+- Image editor [C++], image properties
+- Properties window, image editor
 ms.assetid: f6172bf1-08c4-4dfd-b542-dd8749e83fe6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 96122b2bdc6419b41cd0e00cb544955d8d7c8463
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Changing Image Properties (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[속성 창](../Topic/Properties%20Window.md)을 사용하여 이미지 속성을 설정하거나 수정할 수 있습니다.  
+# <a name="changing-image-properties-image-editor-for-icons"></a>이미지 속성 변경(아이콘에 대한 이미지 편집기)
+설정 하거나 사용 하 여 이미지의 속성을 수정할 수는 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  
   
-### 이미지 속성을 변경하려면  
+### <a name="to-change-an-images-properties"></a>이미지의 속성을 변경 하려면  
   
-1.  **이미지** 편집기에서 이미지를 엽니다.  
+1.  이미지에서 열고는 **이미지** 편집기입니다.  
   
-2.  **속성** 창에서 이미지의 일부 속성이나 모든 속성을 변경합니다.  
+2.  에 **속성** 창 이미지에 대 한 일부 또는 모든 속성을 변경 합니다.  
   
-    |Property|설명|  
-    |--------------|--------|  
-    |**Colors**|이미지의 색 구성표를 지정합니다.  단색, 16색, 256색, 트루 컬러 중 하나를 선택합니다.  이미 16색 색상표로 이미지를 그렸을 경우 단색을 선택하면 이미지의 색이 흑백으로 대체됩니다.  대비가 항상 유지되는 것은 아닙니다. 예를 들어, 빨강과 녹색이 인접한 영역은 모두 검정으로 바뀝니다.|  
-    |**Filename**|이미지 파일의 이름을 지정합니다.  기본적으로 Visual Studio에서는 기본 리소스 식별자\(IDB\_BITMAP1\)에서 처음 네 문자\("IDB\_"\)를 제거한 후 원하는 확장명을 붙여 만든 기본 파일 이름을 지정합니다.  이 예제에서 이미지 파일 이름은 BITMAP1.bmp가 됩니다.  이 파일 이름을 MYBITMAP1.bmp로 변경해도 됩니다.|  
-    |**높이**|이미지의 높이를 픽셀 단위로 설정합니다.  기본값은 48입니다.  이 값에 따라 이미지가 잘리거나 기존 이미지 아래에 공백이 추가됩니다.|  
-    |**ID**|리소스의 식별자를 설정합니다.  이미지의 경우, Microsoft Visual Studio에서는 기본적으로 사용 가능한 다음 식별자를 시리즈로 지정합니다\(예: IDB\_BITMAP1, IDB\_BITMAP2 등\).  유사한 이름이 아이콘과 커서에 사용됩니다.|  
-    |**Palette**|색 속성을 변경합니다.  두 번 클릭하여 색을 선택하고 [사용자 지정 색 선택 대화 상자](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)를 표시합니다.  적절한 텍스트 상자에 RGB나 HSL 값을 입력하여 색을 정의합니다.|  
-    |**SaveCompressed**|이미지를 압축 형식으로 저장할 것인지 여부를 나타냅니다.  이 속성은 읽기 전용입니다.  Visual Studio에서는 이미지를 압축 형식으로 저장할 수 없으므로 Visual Studio에서 만든 이미지의 경우 이 속성은 **False**가 됩니다.  다른 프로그램에서 만든 압축 이미지를 Visual Studio에서 열면 이 속성이 **True**가 됩니다.  Visual Studio를 사용하여 압축 이미지를 저장하면 압축이 풀리고 이 속성은 **False**로 다시 설정됩니다.|  
-    |**너비**|이미지의 너비를 픽셀 단위로 설정합니다.  비트맵의 기본값은 48입니다.  이 값에 따라 이미지가 잘리거나 기존 이미지 오른쪽에 공백이 추가됩니다.|  
+    |속성|설명|  
+    |--------------|-----------------|  
+    |**색**|이미지에 대 한 색 구성표를 지정합니다. 단색, 16, 또는 256, 또는 True 색을 선택 합니다. 이미지에 16 색상표를 사용 하 여 이미지 이미 모델링 다이어그램 단색을 선택 흑백 색에 대 한 대체 하면 합니다. 대비 항상 유지 되지 않습니다: 예를 들어 빨간색 및 녹색의 인접 한 영역 둘 다로 변환할지 검정.|  
+    |**파일 이름**|이미지 파일의 이름을 지정합니다. 기본적으로 Visual Studio에서 기본 리소스 식별자 (IDB_BITMAP1) 적절 한 확장명을 추가 하는 처음 4 자리 ("IDB_")를 제거 하 여 만든 기본 파일 이름을 할당 합니다. 이 예에서 이미지에 대 한 파일 이름을 BITMAP1.bmp 것입니다. MYBITMAP1.bmp 이름을 수 없습니다.|  
+    |**높이**|이미지의 높이 (픽셀)를 설정합니다. 기본값은 48입니다. 이미지 잘리거나 기존 이미지 아래에 공백이 추가 됩니다.|  
+    |**ID**|리소스의 식별자를 설정합니다. 이미지에 대 한 Microsoft Visual Studio에서는 기본적으로 할당는 계열에서 사용 가능한 다음 식별자: IDB_BITMAP1, IDB_BITMAP2, 등입니다. 이름이 비슷한 아이콘 및 커서에 사용 됩니다.|  
+    |**색상표**|색 속성을 변경 합니다. 색을 선택 하 고 표시를 두 번 클릭은 [사용자 지정 색 선택 대화 상자](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)합니다. 적절 한 텍스트 상자에 RGB 또는 HSL 값을 입력 하 여 색을 정의 합니다.|  
+    |**SaveCompressed**|이미지 압축 된 형식 인지 여부를 나타냅니다. 이 속성은 읽기 전용입니다. Visual Studio 이미지 압축된 된 형식으로 저장할 수를 허용 하지 않는 Visual Studio에서 만든 모든 이미지의 경우이 속성을 갖게 됩니다 **False**합니다. Visual Studio에서 (다른 프로그램에서 만든) 압축 된 이미지를 열면이 속성은 됩니다 **True**합니다. Visual Studio를 사용 하 여 압축 된 이미지를 저장 하면 압축 되 고이 속성은 되돌아갑니다 **False**합니다.|  
+    |**너비**|이미지의 너비 (픽셀)를 설정합니다. 비트맵에 대 한 기본값은 48입니다. 이미지 잘리거나 기존 이미지의 오른쪽에 공백이 추가 됩니다.|  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
  요구 사항  
   
  없음  
   
-## 참고 항목  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>참고 항목  
+ [액셀러레이터 키](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [그래픽 리소스 편집](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [아이콘에 대한 이미지 편집기](../windows/image-editor-for-icons.md)
+

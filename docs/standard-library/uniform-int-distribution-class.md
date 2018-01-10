@@ -37,11 +37,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 693e9a21687c56a060bf3b4224050162a6937f9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 172686fbd7f6717bda8fe102745696031936dea1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution 클래스
 시작 범위와 끝 범위가 포함되는 출력 범위 내에서 균등한(모든 값이 균일하게 있을 것 같음) 정수 분포를 생성합니다.  
@@ -78,7 +79,7 @@ public:
 ```  
 ### <a name="parameters"></a>매개 변수  
 *IntType*  
-정수 결과 형식으로, 기본적으로 `int`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+정수 결과 형식으로, 기본적으로 `int`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
 템플릿 클래스는 분포를 사용하여 사용자 지정 정수 형식의 값을 생성하는 포함-포함 분포를 설명합니다. 따라서 모든 값이 균일할 수 있습니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
@@ -100,7 +101,7 @@ public:
   
 분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // compile with: /EHsc /W4  

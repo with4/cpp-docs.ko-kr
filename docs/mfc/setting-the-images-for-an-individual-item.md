@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dec67e2ff5423213645b2e5bb8493198eb53dff9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d9cb74c2290292f44b8c6c9b8797890e759f315
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>개별 항목에 대한 이미지 설정
 여러 종류의 확장 된 콤보 상자 항목에서 사용 하는 이미지의 값에 의해 결정 됩니다는 `iImage`, **iSelectedImage**, 및 **iOverlay** 의 멤버는 [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) 구조입니다. 각 값은 컨트롤의 연결 된 이미지 목록의 이미지의 인덱스입니다. 기본적으로 이러한 멤버는 항목에 대 한 이미지가 표시 하도록 컨트롤을 일으키는 0으로 설정 됩니다. 특정 항목에 대 한 이미지를 사용 하려는 경우 수정할 수 있습니다 구조 적절 하 게 콤보 상자 항목을 삽입할 때 또는 기존 콤보 상자 항목을 수정 하 여 합니다.  

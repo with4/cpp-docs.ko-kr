@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c952c23af6e1695ca9032e0687334c4ebb881a1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d67e671f2f374790c50e45777d62317d3899c383
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="sidt"></a>__sidt
 **Microsoft 전용**  
@@ -50,7 +51,7 @@ void __sidt(
  **헤더 파일** \<. h >  
   
 ## <a name="remarks"></a>설명  
- `__sidt` 함수는 동일는 `SIDT` 컴퓨터 명령입니다. 자세한 내용을 보려면 문서에 대 한 검색 "Intel 아키텍처 소프트웨어 개발자 설명서, 볼륨 2: 명령 집합 참조"에 [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) 사이트입니다.  
+ `__sidt` 함수는 동일는 `SIDT` 컴퓨터 명령입니다. 자세한 내용을 보려면 문서에 대 한 검색 "Intel 아키텍처 소프트웨어 개발자 설명서, 볼륨 2: 명령 집합 참조"에 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) 사이트입니다.  
   
 **Microsoft 전용 종료**  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d1891c18527cc9682fbb563c8121f81df4f5f30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-dialog-data-validation-routines"></a>표준 대화 상자 데이터 유효성 검사 루틴
 이 항목에서는 일반적인 MFC 대화 상자 컨트롤에 사용 되는 표준 대화 상자 데이터 유효성 검사 (DDV) 루틴을 나열 합니다.  
@@ -62,7 +63,7 @@ void AFXAPI DDV_MaxChars(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `nChars`  
@@ -89,7 +90,7 @@ void AFXAPI DDV_MinMaxByte(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -155,7 +156,7 @@ void AFXAPI DDV_MinMaxDouble(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -185,7 +186,7 @@ void AFXAPI DDV_MinMaxDWord(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -215,7 +216,7 @@ void AFXAPI DDV_MinMaxFloat(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -245,7 +246,7 @@ void AFXAPI DDV_MinMaxInt(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -275,7 +276,7 @@ void AFXAPI DDV_MinMaxLong(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -305,7 +306,7 @@ void AFXAPI DDV_MinMaxLongLong(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -371,7 +372,7 @@ void AFXAPI DDV_MinMaxShort(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -401,7 +402,7 @@ void AFXAPI DDV_MinMaxSlider(
  `pDX`  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  유효성을 검사할 값에 대 한 참조입니다. 이 매개 변수를 보유 하거나 슬라이더 컨트롤의 현재 스크롤 상자 위치를 설정 합니다.  
   
  `minVal`  
@@ -431,7 +432,7 @@ void AFXAPI DDV_MinMaxUInt(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -461,7 +462,7 @@ void AFXAPI DDV_MinMaxULongLong(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  
@@ -495,7 +496,7 @@ void AFXAPI DDV_MinMaxULongLong(
  `pDX`  
  `CDataExchange` 개체에 대한 포인터입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *value*  
+ *값*  
  대화 상자, 폼 뷰 또는 컨트롤 뷰 개체는 데이터의 유효성은의 멤버 변수를 가리킵니다.  
   
  `minVal`  

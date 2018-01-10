@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eea0ec7b9216f94d5a3ed017e94e90639aeb0ddd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fee6da358620281039a5dcb8fda521630f56fffc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-text-mappings"></a>일반 텍스트 매핑
 국제 시장에 대한 코드를 간단하게 작성하기 위해 다음에 대한 TCHAR.H에 제네릭 텍스트 매핑이 정의되어 있습니다.  

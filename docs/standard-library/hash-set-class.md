@@ -97,11 +97,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df9bc7c0bd614206dc3c0d5e419b59d5029b8077
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 3dd9f781b39db5e8c9df5e70a4a291db44e61cbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashset-class"></a>hash_set 클래스
 > [!NOTE]
@@ -163,7 +164,7 @@ class hash_set
 |-|-|  
 |[hash_set](#hash_set)|비어 있거나 다른 `hash_set`의 전체 또는 일부의 복사본인 `hash_set`을 생성합니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -242,7 +243,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.  
   
 ##  <a name="begin"></a>  hash_set::begin  
@@ -266,7 +267,7 @@ iterator begin();
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_begin.cpp  
@@ -325,7 +326,7 @@ const_iterator cbegin() const;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_cbegin.cpp  
@@ -372,7 +373,7 @@ const_iterator cend() const;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_cend.cpp  
@@ -415,7 +416,7 @@ void clear();
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_clear.cpp  
@@ -462,7 +463,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `const_iterator`를 사용하는 예제는 [begin](#begin)에 대한 예제를 참조하세요.  
   
 ##  <a name="const_pointer"></a>  hash_set::const_pointer  
@@ -497,7 +498,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_const_ref.cpp  
@@ -547,7 +548,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.  
   
 ##  <a name="count"></a>  hash_set::count  
@@ -577,7 +578,7 @@ size_type count(const Key& key) const;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 예제에서는 hash_set::count 멤버 함수를 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -635,7 +636,7 @@ const_reverse_iterator crbegin() const;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_crbegin.cpp  
@@ -687,7 +688,7 @@ const_reverse_iterator crend() const;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_crend.cpp  
@@ -735,7 +736,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::diff
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_diff_type.cpp  
@@ -822,7 +823,7 @@ emplace(
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_emplace.cpp  
@@ -878,7 +879,7 @@ iterator emplace(
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_emplace_hint.cpp  
@@ -921,7 +922,7 @@ bool empty() const;
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_empty.cpp  
@@ -974,7 +975,7 @@ iterator end();
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_end.cpp  
@@ -1041,7 +1042,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_equal_range.cpp  
@@ -1136,7 +1137,7 @@ size_type erase(const key_type& key);
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 예제에서는 hash_set::erase 멤버 함수의 사용을 보여 줍니다.  
   
 ```  
@@ -1245,7 +1246,7 @@ const_iterator find(const Key& key) const;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_find.cpp  
@@ -1316,7 +1317,7 @@ Allocator get_allocator() const;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_get_allocator.cpp  
@@ -1517,7 +1518,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **iterator**를 선언하고 사용하는 방법의 예제는 [begin](#begin)의 예제를 참조하세요.  
   
 ##  <a name="key_comp"></a>  hash_set::key_comp  
@@ -1547,7 +1548,7 @@ key_compare key_comp() const;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_key_comp.cpp  
@@ -1608,7 +1609,7 @@ typedef Traits key_compare;
 ```  
   
 ### <a name="remarks"></a>설명  
- `key_compare`는 템플릿 매개 변수 `Traits`의 동의어입니다.  
+ `key_compare`은 템플릿 매개 변수 `Traits`의 동의어입니다.  
   
  `Traits`에 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목을 참조하세요.  
   
@@ -1616,7 +1617,7 @@ typedef Traits key_compare;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.  
   
 ##  <a name="key_type"></a>  hash_set::key_type  
@@ -1635,12 +1636,12 @@ typedef Key key_type;
   
  `Key`에 대한 자세한 내용은 [hash_set 클래스](../standard-library/hash-set-class.md) 항목의 설명 섹션을 참조하세요.  
   
- `key_type` 및 [value_type](#value_type)은 둘 다 템플릿 매개 변수 **Key**의 동의어입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
+ `key_type` 및 [value_type](#value_type)은 둘 다 템플릿 매개 변수 **Key**와 동일한 의미입니다. 두 형식 모두 hash_set 및 hash_multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, hash_map 및 hash_multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
    
   
-### <a name="example"></a>예제  
-  `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
+### <a name="example"></a>예  
+  `key_type`를 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
   
 ##  <a name="lower_bound"></a>  hash_set::lower_bound  
   
@@ -1665,7 +1666,7 @@ iterator lower_bound(const Key& key);
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_lower_bound.cpp  
@@ -1732,7 +1733,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_max_size.cpp  
@@ -1776,7 +1777,7 @@ hash_set& operator=(hash_set&& right);
 ### <a name="remarks"></a>설명  
  `hash_set`는 `operator=`에서 기존 요소를 지운 후에 `right`의 내용을 `hash_set`로 복사하거나 이동합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_operator_as.cpp  
@@ -1826,7 +1827,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::poin
 ```  
   
 ### <a name="remarks"></a>설명  
- 형식 **pointer**는 요소의 값을 수정할 때 사용할 수 있습니다.  
+ 형식 **pointer**는 요소값을 수정할 때 사용할 수 있습니다.  
   
  대부분의 경우 [iterator](#iterator)를 사용하여 hash_set 개체의 요소에 액세스해야 합니다.  
   
@@ -1857,7 +1858,7 @@ reverse_iterator rbegin();
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_rbegin.cpp  
@@ -1929,7 +1930,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::refe
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_reference.cpp  
@@ -1991,7 +1992,7 @@ reverse_iterator rend();
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_rend.cpp  
@@ -2068,7 +2069,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.  
   
 ##  <a name="size"></a>  hash_set::size  
@@ -2088,7 +2089,7 @@ size_type size() const;
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_size.cpp  
@@ -2132,7 +2133,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.  
   
 ##  <a name="swap"></a>  hash_set::swap  
@@ -2155,7 +2156,7 @@ void swap(hash_set& right);
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_swap.cpp  
@@ -2232,7 +2233,7 @@ iterator upper_bound(const Key& key);
 ### <a name="remarks"></a>설명  
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_upper_bound.cpp  
@@ -2309,7 +2310,7 @@ value_compare value_comp() const;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_value_comp.cpp  
@@ -2378,7 +2379,7 @@ typedef key_compare value_compare;
   
    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `value_compare`를 선언하고 사용하는 방법의 예제는 [value_comp](#value_comp)의 예제를 참조하세요.  
   
 ##  <a name="value_type"></a>  hash_set::value_type  
@@ -2392,7 +2393,7 @@ typedef key_compare value_compare;
 typedef Key value_type;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // hash_set_value_type.cpp  

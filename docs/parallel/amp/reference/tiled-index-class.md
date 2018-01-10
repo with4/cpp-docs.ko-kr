@@ -29,11 +29,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4acda08cac0e67559db48525e634cd21cdf5a8f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledindex-class"></a>tiled_index 클래스
 에 대 한 인덱스를 제공는 [tiled_extent](tiled-extent-class.md) 개체입니다. 이 클래스에 전역 원점을 기준으로 로컬 타일 원점을 기준으로 요소에 액세스 하는 속성이 있습니다. 바둑판식으로 배열 된 공간에 대 한 자세한 내용은 참조 [를 사용 하 여 타일](../../../parallel/amp/using-tiles.md)합니다.  
@@ -161,7 +162,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|이름|설명|  
+|name|설명|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|새 인스턴스를 초기화는 `tile_index` 전역 좌표에서 타일 및 타일 로컬 좌표에 내의 상대적인 위치의 인덱스에서 클래스입니다. `_Global` 및 `_Tile_origin` 매개 변수에서 계산 됩니다.|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|새 인스턴스를 초기화는 `tile_index` 지정 된 복사 하 여 클래스 `tiled_index` 개체입니다.|  
 

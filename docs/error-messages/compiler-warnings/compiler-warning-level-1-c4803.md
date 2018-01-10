@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43353a5a86bbd7c8e185fed925506ac1ae0fbfe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b6725685e84e1c9ce0fc5c3f58f4ff163870d278
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4803"></a>컴파일러 경고(수준 1) C4803
 'method': raise 메서드에 이벤트의 다른 저장소 클래스는 'event'  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 참조 [경고](../../preprocessor/warning.md) pragma 경고를 해제 하는 방법에 대 한 내용은 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 c4803 오류가 발생 합니다.  
   
 ```  

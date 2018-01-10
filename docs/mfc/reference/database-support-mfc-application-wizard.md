@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 875df8f8205d132cf6bcafe536c221876a5e3e51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b7c9aaa6389f5e86a51348a8b5423260c4c76e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-support-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 데이터베이스 지원
 이 페이지에서는 데이터베이스의 수준을 지정할 수 있도록 하는 옵션이 제공 프로젝트에 대 한 데이터 원본, 필요한 경우) (더하기 지원 합니다.  

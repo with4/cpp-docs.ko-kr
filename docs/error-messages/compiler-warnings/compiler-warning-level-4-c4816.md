@@ -15,18 +15,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 718f44a665757941c9dc837819494eb1d36061a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8002b165d80763c00fe7fa7d2b3c44cddbd2e199
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4816"></a>컴파일러 경고(수준 4) C4816
 'param': 매개 변수에 크기가 0인 배열이 있으면 잘리게 됩니다(개체가 참조로 전달된 경우 제외).  
   
  크기가 0인 배열을 가진 개체에 대한 매개 변수가 참조로 전달되지 않았습니다. 개체가 전달될 때 배열이 복사되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4816을 생성합니다.  
   
 ```  

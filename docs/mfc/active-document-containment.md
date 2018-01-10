@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 749d4badb3a7b5a2c61fa753a840765f14e2a329
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-containment"></a>액티브 문서 포함
 액티브 문서 포함은 작업을 만들고 각 문서 유형에 대 한 여러 응용 프로그램 프레임을 사용 하도록 요구 하는 대신 문서는 단일 한 프레임을 제공 하는 기술입니다. OLE 콘텐츠의 일부만 활성화 될 수 있는 복합 문서 내에서 포함 된 개체와 함께 작동 한다는 점에서 기본 OLE 기술에서 다릅니다. 액티브 문서 포함을 단일 프레임의 컨텍스트 내에서 전체 문서 (즉, 전체 응용 프로그램, 연결 된 메뉴, 도구 모음, 및 등을 포함 하 여)를 활성화 합니다.  

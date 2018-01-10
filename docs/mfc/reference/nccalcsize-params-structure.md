@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ead03bc7cd89667f16905e2a3f76ee48ebbc14d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76a0a16ff0a2c90c6dd6060badc2c79dde1af231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS 구조체
 `NCCALCSIZE_PARAMS` 처리 하는 동안 응용 프로그램이 사용할 수 있는 정보를 포함 하는 구조는 `WM_NCCALCSIZE` 창의 클라이언트 영역의 유효한 콘텐츠, 위치 및 크기를 계산 하는 메시지입니다.  

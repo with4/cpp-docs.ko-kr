@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b512bad001ed86ad0720002cd49c54b21b6e555
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbe2879f031f261871676f9e11f0b6f2a0908a95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbc-routines"></a>_ismbc 루틴
 각 **_ismbc** 루틴은 특정 조건에 대해 지정된 멀티바이트 문자 `c`를 테스트합니다.  
@@ -41,12 +42,12 @@ ms.lasthandoff: 10/24/2017
 |[_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|[_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|  
 |[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  각 **_ismbc** 루틴의 테스트 결과는 적용되는 멀티바이트 코드 페이지에 따라 다릅니다. 멀티바이트 코드 페이지는 싱글바이트 알파벳 문자를 포함합니다. 기본적으로 멀티바이트 코드 페이지는 프로그램 시작 시 운영 체제에서 가져온 system-default ANSI 코드 페이지로 설정됩니다. [_getmbcp](../c-runtime-library/reference/getmbcp.md) 또는 [_setmbcp](../c-runtime-library/reference/setmbcp.md)를 각각 사용하여 사용 중인 멀티바이트 코드 페이지를 변경하거나 쿼리할 수 있습니다.  
   
  출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다.  
   
-|루틴|테스트 조건|932 코드 페이지 예제|  
+|루틴에서 반환된 값|테스트 조건|932 코드 페이지 예제|  
 |-------------|--------------------|---------------------------|  
 |[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|영숫자|`c`가 ASCII 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcdigit` 및 `_ismbcalpha`의 예제를 참조하십시오.|  
 |[_ismbcalpha, _ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphabetic|`c`가 ASCII 영어 문자(`_ismbcupper` 및 `_ismbclower`에 대한 예 참조) 또는 가타카나 문자(0xA6<=`c`<=0xDF)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|  

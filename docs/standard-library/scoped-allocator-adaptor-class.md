@@ -34,11 +34,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c74216b8b510b17327c22a087295725049c4f024
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 클래스
 할당자의 중첩을 나타냅니다.  
@@ -73,7 +74,7 @@ class scoped_allocator_adaptor;
   
 ### <a name="constructors"></a>생성자  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|`scoped_allocator_adaptor` 개체를 생성합니다.|  
   
@@ -81,20 +82,20 @@ class scoped_allocator_adaptor;
   
 |이름|설명|  
 |----------|-----------------|  
-|`const_pointer`|이 형식은 `Outer` 할당자와 연결된 `const_pointer`와 동일한 의미입니다.|  
+|`const_pointer`|이 형식은 `Outer` 할당자와 연결된 `const_pointer`과 동일한 의미입니다.|  
 |`const_void_pointer`|이 형식은 `Outer` 할당자와 연결된 `const_void_pointer`와 동일한 의미입니다.|  
 |`difference_type`|이 형식은 `Outer` 할당자와 연결된 `difference_type`과 동일한 의미입니다.|  
 |`inner_allocator_type`|이 형식은 중첩된 어댑터 `scoped_allocator_adaptor<Inner...>`의 형식과 동일한 의미니다.|  
 |`outer_allocator_type`|이 형식은 기본 할당자 `Outer`의 형식과 동일한 의미입니다.|  
 |`pointer`|이 형식은 `Outer` 할당자와 연결된 `pointer`와 동일한 의미입니다.|  
 |`propagate_on_container_copy_assignment`|`Outer_traits::propagate_on_container_copy_assignment`가 true이거나 `inner_allocator_type::propagate_on_container_copy_assignment`가 true여야 형식은 true입니다.|  
-|`propagate_on_container_move_assignment`|`Outer_traits::propagate_on_container_move_assignment`가 true이거나 `inner_allocator_type::propagate_on_container_move_assignment`가 true여야 형식은 true입니다.|  
+|`propagate_on_container_move_assignment`|`Outer_traits::propagate_on_container_move_assignment`이 true이거나 `inner_allocator_type::propagate_on_container_move_assignment`이 true여야 형식은 true입니다.|  
 |`propagate_on_container_swap`|`Outer_traits::propagate_on_container_swap`이 true이거나 `inner_allocator_type::propagate_on_container_swap`이 true여야 형식은 true입니다.|  
 |`size_type`|이 형식은 `Outer` 할당자와 연결된 `size_type`과 동일한 의미입니다.|  
 |`value_type`|이 형식은 `Outer` 할당자와 연결된 `value_type`과 동일한 의미입니다.|  
-|`void_pointer`|이 형식은 `Outer` 할당자와 연결된 `void_pointer`와 동일한 의미입니다.|  
+|`void_pointer`|이 형식은 `Outer` 할당자와 연결된 `void_pointer`과 동일한 의미입니다.|  
   
-### <a name="structs"></a>Structs  
+### <a name="structs"></a>구조체  
   
 |이름|설명|  
 |----------|-----------------|  

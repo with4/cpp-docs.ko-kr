@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a95212d3774e9befeccbd8f0da3773305041d11c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25685991222b02f4c622f344b06e9faaea4caf02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="threadprivate"></a>threadprivate
 변수는 스레드에 private 임을 지정 합니다.  
@@ -68,7 +69,7 @@ int main()
   
  사용자가 병렬 영역을 구성 하는 스레드를 종료에 대 한 제어 하지 않습니다.  프로세스가 종료, 프로세스 종료에 대 한 스레드를 받을 수 없습니다 및에 대 한 소멸자가 호출 되지 것입니다 해당 스레드에 있으면 `threaded_var` 끝내을 제외한 모든 스레드에서 (여기서, 기본 스레드).  코드의 적절 한 소멸에서 계산 되지 해야 하므로 `threadprivate` 변수입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 예제에 대 한 `threadprivate`, 참조 [개인](../../../parallel/openmp/reference/private-openmp.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

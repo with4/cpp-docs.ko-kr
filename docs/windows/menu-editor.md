@@ -1,35 +1,37 @@
 ---
-title: "Menu Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.menu.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resource editors, Menu editor"
-  - "editors, menus"
-  - "Menu editor"
-  - "menus, Menu editor"
+title: "메뉴 편집기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.menu.F1
+dev_langs: C++
+helpviewer_keywords:
+- resource editors, Menu editor
+- editors, menus
+- Menu editor
+- menus, Menu editor
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5580c32b76af4b1115c9327b3387aa6de4baa32a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Menu Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="menu-editor"></a>메뉴 편집기
 메뉴를 통해 논리적이고 찾기 쉬운 방식으로 명령을 정렬할 수 있습니다. 메뉴 편집기를 사용하면 완성된 응용 프로그램과 매우 유사한 메뉴 모음을 직접 활용하여 메뉴를 만들고 편집할 수 있습니다.  
   
- Visual C\+\+ 프로젝트의 경우 메뉴 편집기를 사용하여 다음을 할 수 있습니다.  
+ Visual C++ 프로젝트의 경우 메뉴 편집기를 사용하여 다음을 할 수 있습니다.  
   
 -   [메뉴 만들기](../windows/creating-a-menu.md)  
   
@@ -63,14 +65,15 @@ caps.handback.revision: 9
     > [!NOTE]
     >  MFC 라이브러리 프로그램 및 ATL 프로그램의 경우 코드 마법사를 사용하여 코드에 메뉴 명령을 연결할 수 있습니다. 자세한 내용은 [이벤트 추가](../ide/adding-an-event-visual-cpp.md)를 참조하세요.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 *.NET Framework 개발자 가이드*에서 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하세요. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하세요.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  Win32  
   
-## 참고 항목  
- [Working with Resource Files](../mfc/working-with-resource-files.md)   
- [Resource Editors](../mfc/resource-editors.md)   
- [사용자 인터페이스 개체 및 명령 ID](../mfc/user-interface-objects-and-command-ids.md)   
- [Menus](../mfc/menus-mfc.md)   
+## <a name="see-also"></a>참고 항목  
+ [리소스 파일 작업](../windows/working-with-resource-files.md)   
+ [리소스 편집기](../windows/resource-editors.md)   
+ [사용자 인터페이스 개체 및 명령 Id](../mfc/user-interface-objects-and-command-ids.md)   
+ [메뉴](../mfc/menus-mfc.md)   
  [메뉴](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
+

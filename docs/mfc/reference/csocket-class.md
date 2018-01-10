@@ -31,11 +31,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fa709c0f58becfa18b286ba9c84d01c4c853dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csocket-class"></a>CSocket 클래스
 파생 `CAsyncSocket`, Windows 소켓 API의 해당 캡슐화를 상속 하 고 보다 상위 수준의 추상을 나타내는 `CAsyncSocket` 개체입니다.  
@@ -64,7 +65,7 @@ class CSocket : public CAsyncSocket
 |[CSocket::FromHandle](#fromhandle)|에 대 한 포인터를 반환 합니다.는 `CSocket` 지정 된 개체는 **소켓** 처리 합니다.|  
 |[CSocket::IsBlocking](#isblocking)|차단 호출이 진행 중인지 여부를 결정 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -119,7 +120,7 @@ BOOL Attach(SOCKET hSocket);
   
  자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCSocketThread#1](../../mfc/reference/codesnippet/cpp/csocket-class_2.h)]  
   
  [!code-cpp[NVC_MFCSocketThread#2](../../mfc/reference/codesnippet/cpp/csocket-class_3.cpp)]  

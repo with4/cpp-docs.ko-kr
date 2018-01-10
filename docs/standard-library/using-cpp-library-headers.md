@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a90218b8cfc0dcc23475bb5e9fb531b2cebe4078
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ed672aed333a23b1f7722c3990e024b21bcc56a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-c-library-headers"></a>C++ 라이브러리 헤더 사용
 include 지시문에서 이름을 지정하여 표준 헤더의 내용을 포함할 수 있습니다.  

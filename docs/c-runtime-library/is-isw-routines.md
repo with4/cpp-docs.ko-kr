@@ -27,11 +27,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72a9e61f7ddf4731dd8cd47af9f7fc8e0c007f47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa1cc76bf925a334b78e5f15565c089081cfe9d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="is-isw-routines"></a>is, isw 루틴
 |||  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 |[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|  
 |[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이러한 루틴은 지정한 조건에 대해 문자를 테스트합니다.  
   
  **is** 루틴은 -1(`EOF`)에서 **UCHAR_MAX**(0xFF)(포함)까지 정수 인수에 대해 의미 있는 결과를 생성합니다. 필요한 인수 형식은 `int`입니다.  
@@ -173,7 +174,7 @@ ms.lasthandoff: 10/24/2017
  `iswxdigit`  
  16진수 문자에 해당하는 와이드 문자  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_isfam.c  

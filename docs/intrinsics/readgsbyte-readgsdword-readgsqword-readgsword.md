@@ -1,79 +1,80 @@
 ---
-title: "__readgsbyte, __readgsdword, __readgsqword, __readgsword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readgsbyte"
-  - "__readgsdword"
-  - "__readgsqword"
-  - "__readgsword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__readgsword 내장 함수"
-  - "__readgsdword 내장 함수"
-  - "__readgsqword 내장 함수"
-  - "__readgsbyte 내장 함수"
+title: __readgsbyte, __readgsdword, __readgsqword, __readgsword | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __readgsbyte
+- __readgsdword
+- __readgsqword
+- __readgsword
+dev_langs: C++
+helpviewer_keywords:
+- __readgsword intrinsic
+- __readgsdword intrinsic
+- __readgsqword intrinsic
+- __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b8eb0cd893553e16bea326e4ccb81c2602fe352b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# __readgsbyte, __readgsdword, __readgsqword, __readgsword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 **Microsoft 전용**  
   
- GS 세그먼트의 시작에 상대적인 오프셋에 의해 지정 된 위치에서 메모리를 읽습니다.  
+ GS 세그먼트의 시작 부분에 상대적인 오프셋으로 지정 된 위치에서 메모리를 읽습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-unsigned char __readgsbyte(   
-   unsigned long Offset   
+unsigned char __readgsbyte(   
+   unsigned long Offset   
 );  
-unsigned short __readgsword(   
-   unsigned long Offset   
+unsigned short __readgsword(   
+   unsigned long Offset   
 );  
-unsigned long __readgsdword(   
+unsigned long __readgsdword(   
    unsigned long Offset  
 );  
-unsigned __int64 __readgsqword(   
-   unsigned long Offset   
+unsigned __int64 __readgsqword(   
+   unsigned long Offset   
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `Offset`  
+#### <a name="parameters"></a>매개 변수  
+ [in] `Offset`  
  시작 부분에서 오프셋 `GS` 에서 읽을 수 있습니다.  
   
-## 반환 값  
- 메모리 내용을 바이트, 단어, 이중 단어 또는 quadword \(호출 되는 함수 이름으로 표시 됨\)의 위치에 `GS:[``Offset``]`.  
+## <a name="return-value"></a>반환 값  
+ 바이트, word, 2 배 워드를 또는 쿼드 워드 (대로 호출 되는 함수 이름으로 표시 됨)의 메모리 내용이 위치의 `GS:[Offset]`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 이러한 내장 커널 모드로 가능 하 고 루틴만 내장으로 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 이러한 내장 함수는 커널 모드에서 사용할 수만 이며 루틴은 내장 함수로 사용할 수만 있습니다.  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_\_writegsbyte, \_\_writegsdword, \_\_writegsqword, \_\_writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
+## <a name="see-also"></a>참고 항목  
+ [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a34b4098b04be1c121ed4a70fdbde8de4a57a94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98ff527e9abbb4e80e9a2460cce9ea067b09a557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-constants"></a>예외 처리 상수
 **try-except** 문의 가드된 섹션을 실행하는 중 예외가 발생하면 `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` 또는 `EXCEPTION_EXECUTE_HANDLER` 상수가 반환됩니다. 반환 값에 따라 예외 처리 방법이 결정됩니다. 자세한 내용은 *C++ 언어 참조*의 [try-except Statement](../cpp/try-except-statement.md)을 참조하세요.  

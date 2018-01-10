@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 355b22ecf40251e3bb0b9910660e56bf9fe763a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4abf5415e9b252a7cc92408fb273d226106fc16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-created-for-clr-projects"></a>CLR 프로젝트용 파일
 Visual c + + 서식 파일을 사용 하 여 프로젝트를 만들 때 사용 되는 서식 파일에 따라 여러 개의 파일 생성 됩니다. 다음 표에서.NET Framework 프로젝트에 대 한 프로젝트 템플릿으로 만든 모든 파일을 나열 합니다.  

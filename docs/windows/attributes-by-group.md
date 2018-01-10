@@ -1,40 +1,42 @@
 ---
-title: "Attributes by Group | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++]"
+title: "그룹별 특성 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs: C++
+helpviewer_keywords: attributes [C++]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 32de68754f5d305f15894e5144a1c56ae4e1c981
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Attributes by Group
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-C \+ \+ 특성은 다음과 같은 기능을 가진 그룹으로 구성 됩니다.  
+# <a name="attributes-by-group"></a>그룹별 특성
+C + + 특성은 다음 기능 그룹으로 구성 됩니다.  
   
 |특성|설명|  
-|--------|--------|  
-|[COM Attributes](../windows/com-attributes.md)|COM 개발 및.NET Framework 공용 언어 런타임 개발의 다양 한 영역을 지원 하기 위해 코드를 삽입 합니다.|  
-|[IDL Attributes](../windows/idl-attributes.md)|.Idl 파일에서 소스 코드 파일을 마법사의 사용 및 구조에 대 한 지식이 및 해당 파일의 구문 없이 수정할을 수 있습니다.|  
-|[OLE DB 소비자 특성](../windows/ole-db-consumer-attributes.md)|코드 주입\-기반은  [OLE DB 소비자 템플릿](../data/oledb/ole-db-consumer-templates-reference.md)\-명령 실행 및 데이터에 액세스 하 여 테이블 등의 작업을 수행 하는 작업 OLE DB 소비자를 만드는.|  
-|[컴파일러가 특성](../windows/compiler-attributes.md)|Visual C\+\+ 컴파일러에 의해 제공 됩니다.|  
+|---------------|-----------------|  
+|[COM 특성](../windows/com-attributes.md)|COM 개발 및.NET Framework 공용 언어 런타임 개발의 다양 한 영역을 지 원하는 코드를 삽입 합니다.|  
+|[IDL 특성](../windows/idl-attributes.md)|마법사를 사용 하지 않고 및 구조의 정보 및 해당 파일의 구문 없이 소스 코드 파일에서.idl 파일의 수정이 가능 합니다.|  
+|[OLE DB 소비자 특성](../windows/ole-db-consumer-attributes.md)|코드를 넣을-기반는 [OLE DB 소비자 템플릿](../data/oledb/ole-db-consumer-templates-reference.md)-소비자를 만드는 작업 OLE DB opening 테이블 등의 작업을 수행 하는 명령을 실행 하 고 데이터에 액세스 합니다.|  
+|[컴파일러 특성](../windows/compiler-attributes.md)|Visual c + + 컴파일러에서 제공 합니다.|  
   
- .NET Framework 응용 프로그램에 대 한 사용자 지정 특성을 정의 하는 방법에 대 한 내용은 [User\-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
+ .NET Framework 응용 프로그램에 대 한 사용자 지정 특성을 정의 하는 방법에 대 한 정보를 참조 하십시오. [사용자 정의 특성](../windows/user-defined-attributes-cpp-component-extensions.md)합니다.  
   
-## 참고 항목  
- [C\+\+ Attributes Reference](../windows/cpp-attributes-reference.md)   
- [Concepts](../windows/attributed-programming-concepts.md)   
- [Attributes by Usage](../windows/attributes-by-usage.md)   
- [Attributes Alphabetical Reference](../windows/attributes-alphabetical-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [C + + 특성 참조](../windows/cpp-attributes-reference.md)   
+ [개념](../windows/attributed-programming-concepts.md)   
+ [용도별 특성](../windows/attributes-by-usage.md)   
+ [특성 사전순 참조](../windows/attributes-alphabetical-reference.md)

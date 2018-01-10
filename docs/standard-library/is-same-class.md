@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 896d01a648c056ffa4f40b3cdccda2ff057b0e5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3714edaac63df8bf278706b41b1bb5472b817f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="issame-class"></a>is_same 클래스
 두 형식이 동일한지 테스트합니다.  
@@ -43,7 +44,7 @@ struct is_same;
 ## <a name="remarks"></a>설명  
  형식 조건자의 인스턴스는 `Ty1` 및 `Ty2` 형식이 동일한 형식인 경우 true이고 그렇지 않은 경우 false입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // std__type_traits__is_same.cpp   

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8959c30a5c1b65687d51e127781b82cccf0cce5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28ded528d584e98b704b5f2d8e6e0a379a6a11a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exported-dll-function-entry-points"></a>내보낸 DLL 함수 시작 지점
 DLL의 내보낸된 함수에 대 한 사용는 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) DLL 모듈에서 호출 응용 프로그램의 DLL로 전환 하는 경우 적절 한 글로벌 상태를 유지 하는 매크로입니다.  

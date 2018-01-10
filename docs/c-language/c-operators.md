@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fee64f3d5c5e26783745961f4aa5dc076dd472c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d4acb0acec44d695bd4c03ffa102a0ac42971b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-operators"></a>C 연산자
 C 연산자는 [C++ 기본 제공 연산자](../cpp/cpp-built-in-operators-precedence-and-associativity.md)의 하위 집합입니다.  
@@ -33,7 +34,7 @@ C 연산자는 [C++ 기본 제공 연산자](../cpp/cpp-built-in-operators-prece
   
  C에는 다음과 같은 단항 연산자가 포함되어 있습니다.  
   
-|기호|이름|  
+|기호|name|  
 |------------|----------|  
 |**- ~ !**|부정 및 보수 연산자|  
 |**\* &**|간접 참조 및 주소 연산자|  
@@ -43,7 +44,7 @@ C 연산자는 [C++ 기본 제공 연산자](../cpp/cpp-built-in-operators-prece
   
  이항 연산자는 왼쪽에서 오른쪽으로 연결됩니다. C에서는 다음과 같은 이항 연산자를 제공합니다.  
   
-|기호|이름|  
+|기호|name|  
 |------------|----------|  
 |**\* / %**|곱하기 연산자|  
 |**+ -**|더하기 연산자|  

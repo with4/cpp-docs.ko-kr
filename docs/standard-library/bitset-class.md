@@ -45,11 +45,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 542be13898b18fb6f73a724eebe72f135f7ebde2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitset-class"></a>bitset 클래스
 일련의 항목 또는 조건에 대한 플래그를 유지하는 간단한 방법을 제공하는 고정 비트 수로 구성된 시퀀스를 저장하는 개체의 유형에 대해 설명합니다. bitset 클래스에서는 비트 컬렉션을 포함하고 각 비트에 대한 constant-time 액세스 권한을 제공하는 형식 bitset의 개체에 대한 작업을 지원합니다.  
@@ -146,7 +147,7 @@ bool any() const;
 ### <a name="return-value"></a>반환 값  
  bitset의 비트가 1로 설정된 경우 **true**, 비트가 0인 경우 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_any.cpp  
@@ -264,7 +265,7 @@ explicit bitset(
   
 -   두 번째 생성자 템플릿은 첫 번째와 유사하지만, 초기화할 비트 수를 지정하는 데 사용되는 추가 매개 변수(`count`)를 포함합니다. 또한 `_Zero`와 `_One`이라는 두 개의 선택적 매개 변수를 가지고 있는데, 이는 `str`의 문자가 각각 0비트와 1비트를 의미하는 것으로 해석됨을 나타냅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_bitset.cpp  
@@ -350,7 +351,7 @@ size_t count() const;
   
 비트 시퀀스에 설정된 비트 수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 다음 예제에서는 bitset::count 멤버 함수를 사용하는 방법을 보여 줍니다.  
   
@@ -401,7 +402,7 @@ The number of bits in the bitset set to 1 is: 4.
 typedef bool element_type;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_elem_type.cpp  
@@ -467,7 +468,7 @@ bitset\<N>& flip(size_t _Pos);
 ### <a name="remarks"></a>설명  
  비트가 반전된 **bitset\<***N***>**의 *N* 크기보다 매개 변수로 지정된 위치가 더 큰 경우 두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 throw합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_flip.cpp  
@@ -528,7 +529,7 @@ bool none() const;
 ### <a name="return-value"></a>반환 값  
  bitset의 비트 중 1로 설정된 것이 없으면 **true**, 하나라도 1로 설정된 것이 있으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_none.cpp  
@@ -590,7 +591,7 @@ bool operator!=(const bitset\<N>& right) const;
 ### <a name="remarks"></a>설명  
  멤버 연산자 함수로 다른지를 테스트하려면 두 bitset의 크기가 같아야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_NE.cpp  
@@ -650,7 +651,7 @@ bitset\<N>& operator&=(const bitset\<N>& right);
   
  멤버 연산자 함수를 이용해 **AND** 연산자와 비트로 결합하려면 두 bitset의 크기가 같아야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_bitwise.cpp  
@@ -712,7 +713,7 @@ bitset\<N> operator<<(size_t _Pos) const;
 ### <a name="remarks"></a>설명  
  멤버 연산자 함수는 **bitset**( **\*this**) **<<= pos,**를 반환합니다. 여기서 [<<=](#op_lshift_eq)는 bitset의 비트를 지정된 위치 수만큼 왼쪽으로 이동하고 결과를 대상 bitset로 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_LS.cpp  
@@ -760,7 +761,7 @@ bitset\<N>& operator<<=(size_t _Pos);
 ### <a name="remarks"></a>설명  
  위치로 이동할 요소가 없으면 함수는 비트를 0 값으로 지웁니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_LSE.cpp  
@@ -803,7 +804,7 @@ bool operator==(const bitset\<N>& right) const;
 ### <a name="remarks"></a>설명  
  멤버 연산자 함수로 같은지를 테스트하려면 두 bitset의 크기가 같아야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_EQ.cpp  
@@ -857,7 +858,7 @@ bitset\<N> operator>>(size_t _Pos) const;
 ### <a name="return-value"></a>반환 값  
  대상 bitset를 기준으로 비트가 필요한 위치 수만큼 오른쪽으로 이동한 새 bitset입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_RS.cpp  
@@ -910,7 +911,7 @@ bitset\<N>& operator>>=(size_t _Pos);
 ### <a name="remarks"></a>설명  
  위치로 이동할 요소가 없으면 함수는 비트를 0 값으로 지웁니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_RSE.cpp  
@@ -952,7 +953,7 @@ reference operator[](size_t _Pos);
 ### <a name="remarks"></a>설명  
 빌드에서 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)을 1 또는 2로 지정하면 bitset 경계를 벗어난 요소에 액세스하려고 할 경우 실행 파일에 런타임 오류가 발생합니다. 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_REF.cpp  
@@ -997,7 +998,7 @@ bitset\<N>& operator^=(const bitset\<N>& right);
   
  멤버 연산자 함수를 이용해 배타적 `OR` 연산자와 비트로 결합하려면 두 bitset의 크기가 같아야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_bitwiseOR.cpp  
@@ -1059,7 +1060,7 @@ bitset\<N>& operator|=(const bitset\<N>& right);
   
  멤버 연산자 함수를 이용해 포괄적 `OR` 연산자와 비트로 결합하려면 두 bitset의 크기가 같아야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_BIO.cpp  
@@ -1113,7 +1114,7 @@ bitset\<N> operator~() const;
 ### <a name="return-value"></a>반환 값  
  대상 bitset에 대해 모든 비트가 반전된 bitset입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_op_invert.cpp  
@@ -1182,7 +1183,7 @@ public:
 |*b* = *x*[*i*]|*x*[ *i*] 비트의 값을 `bool` *b*에 저장합니다.|  
 |*x*[*i*]. `flip`( )|*x*[ *i*] 비트의 대칭 이동된 값을 *x* 내 *i* 비트 위치에 다시 저장합니다.|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_reference.cpp  
@@ -1282,7 +1283,7 @@ bitset\<N>& reset(size_t _Pos);
 ### <a name="remarks"></a>설명  
  지정된 위치가 bitset의 크기보다 큰 경우 두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 throw합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_reset.cpp  
@@ -1344,7 +1345,7 @@ bitset\<N>& set(
 ### <a name="remarks"></a>설명  
  지정된 위치가 bitset의 크기보다 큰 경우 두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 throw합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // bitset_set.cpp  
@@ -1392,7 +1393,7 @@ size_t size() const;
 ### <a name="return-value"></a>반환 값  
  bitset\<N>의 비트 수 *N*입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 예제에서는 bitset::size 멤버 함수를 사용하는 방법을 보여 줍니다.  
   
 ```cpp  

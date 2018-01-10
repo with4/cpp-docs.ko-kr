@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4876d2b05f7124a12976e87022700f9be660b8fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3a9597ca8807c8ac1a3182b3daa1891a195c39c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-description"></a>인수 설명
 **main** 및 **wmain** 함수 안의 `argc` 매개 변수는 명령줄에서 프로그램에 전달되는 인수의 개수를 지정하는 정수입니다. 프로그램 이름이 인수로 간주되므로 `argc`의 값이 1 이상입니다.  

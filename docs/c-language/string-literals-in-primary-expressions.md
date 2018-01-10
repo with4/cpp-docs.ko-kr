@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d1ed5731f0b46769ac9f49c34752d8794a0dddc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0920280f672b1c45d317ade4c592a6b93356fb8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-literals-in-primary-expressions"></a>기본 식의 문자열 리터럴
 "문자열 리터럴"은 문자, 와이드 문자 또는 큰따옴표로 묶은 인접 문자의 시퀀스입니다. 이는 변수가 아니므로 문자열 리터럴 및 해당 요소 중 어느 것도 할당 연산에서 왼쪽 피연산자일 수 없습니다. 문자열 리터럴의 형식은 `char`의 배열(또는 와이드 문자열 리터럴에 대한 `wchar_t`의 배열)입니다. 식의 배열은 포인터로 변환됩니다. 문자열에 대한 자세한 내용은 [문자열 리터럴](../c-language/c-string-literals.md)을 참조하세요.  

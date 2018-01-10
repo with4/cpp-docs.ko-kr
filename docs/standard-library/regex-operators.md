@@ -14,17 +14,15 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 7c37cc1a2708346ed8af0fd8b5df9a91a625feb6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 연산자
 ||||  
@@ -90,7 +88,7 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 ### <a name="remarks"></a>설명  
  각 템플릿 연산자는 `!(left == right)`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__operator_ne.cpp   
@@ -203,7 +201,7 @@ bool operator<(const sub_match<BidIt>& left,
 ### <a name="remarks"></a>설명  
  각 템플릿 연산자는 해당 인수를 문자열 형식으로 변환하고 `left`의 변환된 값이 `right`의 변환된 값과 비교하여 더 작은 경우에만 true를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__operator_lt.cpp   
@@ -289,7 +287,7 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 ### <a name="remarks"></a>설명  
  템플릿 연산자는 `os << right.str()`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__operator_ins.cpp   
@@ -369,7 +367,7 @@ bool operator<=(const sub_match<BidIt>& left,
 ### <a name="remarks"></a>설명  
  각 템플릿 연산자는 `!(right < left)`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__operator_le.cpp   
@@ -489,7 +487,7 @@ bool operator==(const match_results<BidIt, Alloc>& left,
   
  그 외의 모든 인수 형식은 템플릿 클래스 `basic_string`의 적절한 특수화를 위한 생성자로 인수 값을 전달하여 변환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__operator_eq.cpp   
@@ -602,7 +600,7 @@ bool operator>(const sub_match<BidIt>& left,
 ### <a name="remarks"></a>설명  
  각 템플릿 연산자는 `right < left`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__operator_gt.cpp   
@@ -710,7 +708,7 @@ bool operator>=(const sub_match<BidIt>& left,
 ### <a name="remarks"></a>설명  
  각 템플릿 연산자는 `!(left < right)`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__operator_ge.cpp   
@@ -773,6 +771,5 @@ sub >= 'a' == true
 [regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)  
 [regex_traits 클래스](../standard-library/regex-traits-class.md)  
 [\<regex> 형식 정의](../standard-library/regex-typedefs.md)  
-
 
 

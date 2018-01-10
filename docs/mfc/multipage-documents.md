@@ -36,11 +36,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d54eb376ef7568d390fb97e833cca30ca254ad30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43bc9bbe4653e34c37ae46439baa1e649d6d8042
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multipage-documents"></a>다중 페이지 문서
 이 문서는 Windows 인쇄 프로토콜을 설명 하 고 여러 페이지를 포함 하는 문서를 인쇄 하는 방법에 설명 합니다. 문서는 다음 항목을 다룹니다.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="cviews-overridable-functions-for-printing"></a>인쇄용 CView의 재정의 가능 함수  
   
-|이름|재정의 대 한 설명|  
+|name|재정의 대 한 설명|  
 |----------|---------------------------|  
 |[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|문서의 길이 특히 인쇄 대화 상자에서 값을 삽입 하려면|  
 |[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|글꼴 또는 기타 GDI 리소스 할당|  

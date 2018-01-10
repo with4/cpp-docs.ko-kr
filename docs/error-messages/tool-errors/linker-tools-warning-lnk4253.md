@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe7e60c3066e2981f1b826381691950b2ccd46d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d1142544852980b8bd1d543783a9ffdf3361879
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4253"></a>링커 도구 경고 LNK4253
 섹션 '사항 구역 1' 'section2;'에 병합 되지 않았습니다 'section3'에 이미 병합  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [C 주석(C/C++)](../../preprocessor/comment-c-cpp.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 링커에 지시에 병합 하는 `.rdata` 섹션을 두 번 서로 다른 섹션에 있습니다. 다음 샘플에서는 LNK4253 경고가 발생 합니다.  
   
 ```  

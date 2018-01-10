@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9ac70acd706237cfeb40e709d2562883263c687
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2054a11365cc6f9db7a5608f0b056d0d85ff117d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>MFC ActiveX 컨트롤 컨테이너 만들기
 ActiveX 컨트롤 컨테이너는 실행 하기 위해 (이전의 OLE) ActiveX 컨트롤에 대 한 환경을 제공 하는 부모 프로그램. 상관 없이, MFC ActiveX 컨트롤을 포함할 수 있는 응용 프로그램을 만들 수 있지만 MFC로 수행할 작업을 훨씬 쉽습니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d8a1a902b5e1a7c09a0ed043f87bfa5c7819482
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7109651bc250f83d8ee7e162b647ef54dd5308d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sdi-and-mdi"></a>SDI 및 MDI
 MFC를 사용 하면 쉽게 단일 문서 인터페이스 (SDI) 및 (mdi 다중) 다중 문서 인터페이스 응용 프로그램 모두와 작업할 수 있습니다.  

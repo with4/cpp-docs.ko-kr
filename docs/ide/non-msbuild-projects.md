@@ -13,11 +13,12 @@ ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da81f8731be97c69a73eddb96e9e56e49c59c91b
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual c + +에서 폴더 프로젝트 열기
 Visual Studio 2017 소스 파일의 폴더를 열고 즉시 IntelliSense, 검색, 리팩터링, 디버깅을 지원 하 여 코딩을 시작 및 등을 사용할 수 있는 "폴더 열기" 기능을 소개 합니다. .Sln 또는.vcxproj 파일이 로드 됩니다. 필요에 따라 빌드 및 간단한.json 파일을 통해 매개 변수를 시작 하는 것은 물론 사용자 지정 작업을 지정할 수 있습니다. 열려 있는 폴더에서 구동, Visual c + + 이제 지원할 수 파일의 느슨한 컬렉션 뿐만 아니라도 거의 모든 빌드 시스템을 CMake, 등 닌자, QMake (하 프로젝트)의 경우, gyp, SCons, Gradle, 프로세스, 만들기. 
@@ -25,7 +26,7 @@ Visual Studio 2017 소스 파일의 폴더를 열고 즉시 IntelliSense, 검색
 열려 있는 폴더를 사용 하려면 주 메뉴에서 선택 *파일 | 열기 | 폴더* 하거나 키를 눌러 *Ctrl + Shift + Alt + O*합니다. 솔루션 탐색기는 즉시 폴더에 있는 모든 파일을 표시합니다. 편집을 시작할 수 있는 모든 파일을 클릭할 수 있습니다. 백그라운드에서 Visual Studio IntelliSense, 탐색 및 리팩터링 기능을 사용 하도록 설정 하려면 파일을 시작 합니다. 편집, 만들기, 이동 하거나 파일을 삭제, Visual Studio에서 변경 내용을 자동으로 추적 하 고 지속적으로 IntelliSense 해당 항목이 있는 인덱스를 업데이트 합니다. 
   
 ## <a name="cmake-projects"></a>CMake 프로젝트
-CMake Visual c + +, c + + 데스크톱 작업 부하의 구성 요소에 대 한 Visual Studio IDE에서 CMake 도구와 통합 되어 있습니다. 자세한 내용은 참조 [Visual c + +에 대 한 CMake 도구](cmake-tools-for-visual-cpp.md)합니다.
+CMake Visual c + +, c + + 데스크톱 작업 부하의 구성 요소에 대 한 Visual Studio IDE에서 CMake 도구와 통합 되어 있습니다. 자세한 내용은 [Visual C++용 CMake 도구](cmake-tools-for-visual-cpp.md)를 참조하세요.
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Framework를 대상으로 하는 QMake 프로젝트
 있습니다 사용 CMake 도구 Visual c + +에 대 한 대상 하 하 프로젝트를 빌드하려면 하거나 하 Visual Studio 확장을 사용할 수 있습니다. 참고: 2017 년 1 년 8 월부터는 [Visual Studio 2017에 대 한 Visual Studio Extension 하 지원](https://download.qt.io/development_releases/vsaddin/) 베타 버전으로 사용할 수 있습니다.

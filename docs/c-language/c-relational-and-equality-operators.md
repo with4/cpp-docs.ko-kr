@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1581fe5a952d1ea8e78f29e606af5ac148f3b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6860198b9acce372b710e819a17f534e793f1ead
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-relational-and-equality-operators"></a>C 관계 및 같음 연산자
 이진 관계형 연산자와 같음 연산자는 첫 번째 피연산자와 두 번째 피연산자를 비교하여 지정된 관계의 유효성을 테스트합니다. 테스트된 관계가 true이면 관계식 결과는 1이고, 테스트된 관계가 false이면 결과는 0입니다. 결과의 형식은 `int`입니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74cfdf5393487ddd2cda7d478c0940c6db74b35a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06742239c48503a5917317a674a39f50a38702c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-declarations"></a>배열 선언
 "배열 선언"은 배열의 이름을 지정하고 배열 요소의 형식을 지정합니다. 배열 선언은 배열의 요소 수를 정의할 수도 있습니다. 배열 형식이 있는 변수는 배열 요소의 형식에 대한 포인터로 간주됩니다.  

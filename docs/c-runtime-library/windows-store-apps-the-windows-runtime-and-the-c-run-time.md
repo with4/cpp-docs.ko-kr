@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b332e392db2ca788d041cb73e73cf42cce85906c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c75d66fcbe9ef437980878e7789a82dc94b68573
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Windows 스토어 앱, Windows 런타임 및 C 런타임
 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 앱은 [!INCLUDE[win8](../build/reference/includes/win8_md.md)]에서 실행되는 Windows 런타임에서 실행하는 프로그램입니다.  Windows 런타임은 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 앱에서 사용할 수 있는 함수, 변수 및 리소스를 제어하는 신뢰할 수 있는 환경입니다. 그러나 기본적으로 Windows 런타임 제한 때문에 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 앱의 대부분의 CRT(C 런타임 라이브러리) 기능을 사용할 수 없습니다.  
