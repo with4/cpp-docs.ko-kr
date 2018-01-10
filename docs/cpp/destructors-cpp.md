@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>소멸자 (C++)
 소멸자 개체가 범위에서 벗어나거나 명시적으로 호출 하 여 제거 될 때 자동으로 호출 되는 멤버 함수는 `delete`합니다. 소멸자에 앞에 물결표 클래스와 동일한 이름을 (`~`). 예를 들어 클래스 `String`의 소멸자는 `~String()`으로 선언됩니다. 소멸자를 정의 하지 않으면 컴파일러는 요소가 기본을 제공 다 수의 클래스에는 이것 만으로 충분 합니다. 클래스를 해제 해야 하는 시스템 리소스에 대 한 핸들을 저장 하는 경우 사용자 정의 소멸자를 정의 하면 또는 메모리를 소유 하는 포인터를 가리킵니다.
@@ -74,7 +72,7 @@ int main() {
   
  위 예제에서 소멸자 `String::~String`은 `delete` 연산자를 사용하여 텍스트 저장소에 동적으로 할당된 공간을 할당 해제합니다.  
   
-## <a name="delcaring-destructors"></a>소멸자 선언  
+## <a name="declaring-destructors"></a>소멸자 선언  
  소멸자는 클래스와 이름이 같지만 물결표(`~`)가 앞에 붙어 있는 함수입니다.  
   
  몇 가지 규칙이 소멸자의 선언에 적용됩니다. 소멸자는 다음과 같습니다.  
@@ -232,4 +230,3 @@ ps->~String();     // Virtual call
 ```  
   
  앞에 나온 대로 소멸자를 정의하는 형식에 관계없이 소멸자를 명시적으로 호출하기 위한 표기법을 사용할 수 있습니다. 그러면 형식에 대해 소멸자가 정의되었는지 여부를 몰라도 명시적인 호출이 가능합니다. 소멸자가 정의되지 않은 경우 명시적 호출은 아무 효과가 없습니다.  
-

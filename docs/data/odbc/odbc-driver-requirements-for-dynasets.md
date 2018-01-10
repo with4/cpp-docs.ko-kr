@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 387520b478be07cd1829f9665663173cfa15efcc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2c444cd8e8d13cca7d891dba92e881b8ca167bbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>다이너셋에 대한 ODBC 드라이버 요구 사항
 MFC ODBC 데이터베이스 클래스에서 다이너셋 되 고 동적 속성을 갖는 레코드 집합 다양 한 방식으로 데이터 소스와 동기화 상태로 남아 있습니다. MFC 다이너셋 (그러나 정방향 전용 레코드 집합)에 수준 2 API 규칙을 따르는 한 ODBC 드라이버가 필요 합니다. 경우에 대 한 드라이버 프로그램 [데이터 원본](../../data/odbc/data-source-odbc.md) 수준 1 API를 준수 설정, 있습니다 사용할 수 모두 업데이트 가능 하 고 읽기 전용 스냅숏 및 앞 으로만 이동 가능한 레코드 집합 있지만 다이너셋 되지 않습니다. 그러나 확장된 fetch와 키 집합 커서를 지 원하는 경우 수준 1 드라이버 다이너셋을 지원할 수 있습니다.  

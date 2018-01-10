@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,19 @@ f1_keywords:
 - ATLUTIL/ATL::CWorkerThread::Initialize
 - ATLUTIL/ATL::CWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CWorkerThread::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CWorkerThread class
+dev_langs: C++
+helpviewer_keywords: CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 25d102e7e47898ee2f93326756b3d50e8bb3bbff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 클래스
 이 클래스에서 작업자 스레드 또는 기존을 사용 하 여, 하나 이상의 커널 개체 핸들을 대기 만들고 핸들 중 하나에 신호가 전달 될 때 지정 된 클라이언트 함수를 실행 합니다.  
@@ -70,7 +53,7 @@ class CWorkerThread
   
 ### <a name="protected-structures"></a>Protected 구조체  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |`WorkerClientEntry`||  
   
@@ -139,7 +122,7 @@ HRESULT AddHandle(
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 를 통해 호출할 수 `pClient` 때 핸들에 `hObject`, 신호를 받는 합니다.  
   
 ##  <a name="addtimer"></a>CWorkerThread::AddTimer  
@@ -188,7 +171,7 @@ CWorkerThread() throw();
 ~CWorkerThread() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 [CWorkerThread::Shutdown](#shutdown)합니다.  
   
 ##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
@@ -227,7 +210,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드를 호출 하 여 만든 이후 또는 호출한 후에 개체를 초기화 하는 [CWorkerThread::Shutdown](#shutdown)합니다.  
   
  두 개 이상이 있어야 `CWorkerThread` 개체 동일한 작업자 스레드를 사용 하 여 인수를 해당 개체에 대 한 포인터를 전달 합니다 전달 하지 않고 그 중 하나를 초기화 합니다.는 `Initialize` 메서드는 다른 인스턴스의 합니다. 개체 초기화에 사용 하기 전에 마우스 포인터를 사용 하 여 초기화 개체 종료 합니다.  
@@ -248,7 +231,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  핸들이 제거 되 면 [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) 에 전달 된 연결된 된 개체에 대해 [AddHandle](#addhandle)합니다. 이 호출이 실패 한 경우 `CWorkerThread` Windows 호출 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) 핸들에 대해 함수입니다.  
   
 ##  <a name="shutdown"></a>CWorkerThread::Shutdown  
@@ -265,7 +248,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ### <a name="return-value"></a>반환 값  
  성공 또는 실패의 경우와 같이 오류 HRESULT에 S_OK를 반환 합니다. 제한 시간 값 `dwWait`를 초과 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  개체를 다시 사용 하려면 호출 [CWorkerThread::Initialize](#initialize) 후이 메서드를 호출 합니다.  
   
  호출 **종료** 다른에 대 한 포인터를 사용 하 여 초기화 하는 개체에 `CWorkerThread` 개체 아무 효과가 없으며 항상 S_OK를 반환 합니다.  
@@ -275,4 +258,3 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
  [클래스](../../atl/reference/atl-classes.md)   
  [다중 스레딩: 작업자 스레드 만들기](../../parallel/multithreading-creating-worker-threads.md)   
  [IWorkerThreadClient 인터페이스](../../atl/reference/iworkerthreadclient-interface.md)
-

@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5bb9f4c00976ce60901148509d9390b85412ab7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 74ab0cb7bc84a5d6959989bacd52509d6eb639ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequeclear-stlclr"></a>deque::clear(STL/CLR)
 모든 요소를 제거합니다.  
@@ -33,7 +36,7 @@ void clear();
 ## <a name="remarks"></a>설명  
  멤버 함수 시그니처 [deque:: erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md) `(` [deque:: begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md) `(),` [deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md) `())`. 제어 되는 시퀀스 비어 있는지 확인 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_deque_clear.cpp   

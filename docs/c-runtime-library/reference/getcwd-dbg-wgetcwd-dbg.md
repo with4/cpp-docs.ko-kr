@@ -42,11 +42,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 286404a87680f50be5311250643925488eff88e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7dfa0f619990045cd6ae1be4f800c2624fd9efe3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
 [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md) 함수의 디버그 버전입니다(디버그 중에만 사용 가능).  
@@ -89,14 +90,14 @@ wchar_t *_wgetcwd_dbg(
 ## <a name="return-value"></a>반환 값  
  `buffer`에 대한 포인터를 반환합니다. `NULL` 반환 값은 오류를 나타내고 `errno` 는 `ENOMEM`으로 설정되어 `maxlen` 바이트를 할당할 메모리가 부족함을 나타내거나( `NULL` 인수가 `buffer`로 지정된 경우) `ERANGE`로 설정되어 경로가 `maxlen` 자보다 긺을 나타냅니다.  
   
- 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  `_getcwd_dbg` 및 `_wgetcwd_dbg` 함수는 동일 `_getcwd` 및 `_wgetcwd` 점을 제외 하 고, `_DEBUG` 는 디버그 버전의를 사용 하 여 이러한 함수 정의 `malloc` 및 `_malloc_dbg` 메모리를 할당 하는 경우 `NULL` 첫 번째 매개 변수로 전달 됩니다. 자세한 내용은 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)를 참조하세요.  
   
  대부분의 경우 이러한 함수를 명시적으로 호출할 필요가 없습니다. 대신 `_CRTDBG_MAP_ALLOC` 플래그를 정의할 수 있습니다. `_CRTDBG_MAP_ALLOC`을 정의하면 `_getcwd` 및 `_wgetcwd`에 대한 호출이 각각 `_getcwd_dbg` 및 `_wgetcwd_dbg`로 다시 매핑되고 `blockType`은 `_NORMAL_BLOCK`으로 설정됩니다. 따라서 힙 블록을 `_CLIENT_BLOCK`으로 표시하려는 경우가 아니면 이러한 함수를 명시적으로 호출할 필요가 없습니다. 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.  
   
-## <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+## <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -104,7 +105,7 @@ wchar_t *_wgetcwd_dbg(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_getcwd_dbg`|\<crtdbg.h>|  
 |`_wgetcwd_dbg`|\<crtdbg.h>|  

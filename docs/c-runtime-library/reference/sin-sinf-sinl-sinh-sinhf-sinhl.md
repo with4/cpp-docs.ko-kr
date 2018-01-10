@@ -53,11 +53,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f91d8af5b76cb48c884c8eb4466738a544b744b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de4f4914589c5803733bdcd279b3d0a3fa00e360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sin-sinf-sinl-sinh-sinhf-sinhl"></a>sin, sinf, sinl, sinh, sinhf, sinhl
 사인 및 쌍곡선 사인을 계산합니다.  
@@ -108,7 +109,7 @@ long double sinhl(
 |입력|SEH 예외|Matherr 예외|  
 |-----------|-------------------|-----------------------|  
 |± QNAN,IND|없음|_DOMAIN|  
-|±∞(sin, sinf, sinl)|INVALID|_DOMAIN|  
+|± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|  
 |&#124;x&#124; ≥ 7.104760e+002(sinh, sinhf, sinhl)|OVERFLOW+INEXACT|OVERFLOW|  
   
  반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
@@ -118,13 +119,13 @@ long double sinhl(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`sin`, `sinf`, `sinl`, `sinh`, `sinhf`, `sinhl`|\<math.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_sincos.c  

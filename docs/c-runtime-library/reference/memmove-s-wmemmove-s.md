@@ -35,11 +35,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 834cd18283874bc975d896f319bb6f8ebf962792
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8194acf1a8a0708d2584745a7a49449ca7f554c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 한 버퍼를 다른 버퍼로 이동합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [memmove, wmemmove](../../c-runtime-library/reference/memmove-wmemmove.md)의 버전입니다.  
@@ -82,9 +83,9 @@ errno_t wmemmove_s(
   
 |`dest`|`numberOfElements`|`src`|반환 값|`dest`의 내용|  
 |------------|------------------------|-----------|------------------|------------------------|  
-|`NULL`|any|모두|`EINVAL`|수정 안 됨|  
-|any|모두|`NULL`|`EINVAL`|수정 안 됨|  
-|any|< `count`|모두|`ERANGE`|수정 안 됨|  
+|`NULL`|any|any|`EINVAL`|수정 안 됨|  
+|any|any|`NULL`|`EINVAL`|수정 안 됨|  
+|any|< `count`|any|`ERANGE`|수정 안 됨|  
   
 ## <a name="remarks"></a>설명  
  복사본 `count` 바이트의 문자를 `src` 를 `dest`합니다. 소스 영역과 대상의 일부 영역이 겹치는 경우 `memmove_s`는 겹치는 영역에서 원래 소스 바이트가 덮어쓰기 전에 복사되도록 합니다.  
@@ -93,14 +94,14 @@ errno_t wmemmove_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`memmove_s`|\<string.h>|  
 |`wmemmove_s`|\<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_memmove_s.c  

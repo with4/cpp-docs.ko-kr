@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21b2155ffd5bb3861202c112bd9552ed36113a02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3508217e7dc333543fa2dbff9cf0643d6faff060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-keyword"></a>auto 키워드
 `auto` 키워드는 선언 지정자입니다. 그러나 C++ 표준에는 이 키워드의 원래 의미와 수정된 의미가 정의되어 있습니다. Visual c + + 2010 이전는 `auto` 에 변수를 선언 하는 키워드는 *자동* 저장소 클래스, 즉 변수 지역 변수입니다. Visual c + + 2010부터는 `auto` 키워드로 선언 된 변수 선언에 초기화 식에서 해당 형식이 추론 됩니다. [/zc: auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md) 컴파일러 옵션의 의미를 제어는 `auto` 키워드입니다.  

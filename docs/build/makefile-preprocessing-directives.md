@@ -50,11 +50,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 742faea629cb085c203e231c29ab9e512b9c2812
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1bc73a86b0772b13731aaf7ac4e2ef0760caa8a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makefile-preprocessing-directives"></a>메이크파일 전처리 지시문
 전처리 지시문은 대/소문자 구분 하지 않습니다. 느낌표 (!)은 줄의 시작 부분에 표시 되어야 합니다. 공백이 나 탭을 0 이상 들여쓰기에 느낌표 뒤에 나타날 수 있습니다.  

@@ -21,18 +21,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a741008b894c5349bd198c2abfd13e11a158c4b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="console-and-port-io"></a>콘솔 및 포트 I/O
 이러한 루틴은 콘솔 또는 지정된 포트에서 읽고 씁니다. 콘솔 I/O 루틴은 스트림 I/O 또는 하위 수준 I/O 라이브러리 루틴과 호환되지 않습니다. I/O가 수행되기 전에 콘솔 또는 포트를 열거나 닫지 않아야 합니다. 따라서 이 범주에 열기 또는 닫기 루틴이 없습니다. Windows 운영 체제에서 이러한 함수의 출력은 항상 콘솔로 보내지고 리디렉션될 수 없습니다.  
   
 ### <a name="console-and-port-io-routines"></a>콘솔 및 포트 I/O 루틴  
   
-|루틴|기능|  
+|루틴에서 반환된 값|사용|  
 |-------------|---------|  
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md), [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|콘솔에서 문자열을 읽습니다.|  
 |[_cprintf, _cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md), [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|형식이 지정된 데이터를 콘솔에 씁니다.|  

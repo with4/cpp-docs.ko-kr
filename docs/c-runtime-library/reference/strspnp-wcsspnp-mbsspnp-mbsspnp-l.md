@@ -53,11 +53,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 919719e67445f242b59bf6c84a6579b449f91ae0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 314adc5ad7011d715f0c49887761390994ebc45f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 지정된 다른 문자열에 없는 지정된 문자열의 첫 번째 문자에 대한 포인터를 반환합니다.  
@@ -114,11 +115,11 @@ unsigned char *_mbsspnp_l(
   
  `_strspnp` 및 `_wcsspnp`는 `_mbsspnp`의 싱글바이트 문자 및 와이드 문자 버전입니다. `_strspnp` 및 `_wcsspnp`는 `_mbsspnp`와 동일합니다. 이러한 함수는 이 매핑용으로만 제공되며 다른 이유로 사용해서는 안 됩니다. 자세한 내용은 [일반 텍스트 매핑 사용](../../c-runtime-library/using-generic-text-mappings.md) 및 [일반 텍스트 매핑](../../c-runtime-library/generic-text-mappings.md)을 참조하세요.  
   
- `_mbsspnp_l`은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_mbsspnp_l`은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_mbsspnp`|\<mbstring.h>|  
 |`_strspnp`|\<tchar.h>|  
@@ -126,7 +127,7 @@ unsigned char *_mbsspnp_l(
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_mbsspnp.c  

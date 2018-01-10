@@ -47,11 +47,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04c06a172485525105c1e49de88855273984e145
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64c09dc8c8ce1ce5493ac4b2515c6b0be2910627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 인수의 절대값을 계산합니다.  
@@ -106,14 +107,14 @@ __int64 _abs64(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 C 헤더|필수 C++ 헤더|  
+|루틴에서 반환된 값|필수 C 헤더|필수 C++ 헤더|  
 |-------------|-----------------------|---------------------------|  
 |`abs`, `labs`, `llabs`|\<math.h> 또는 \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> 또는 \<math.h>|  
 |`_abs64`|\<stdlib.h>|\<cstdlib> 또는 \<stdlib.h>|  
   
  C++에서 `abs`의 오버로드된 버전을 사용하려면 \<cmath> 헤더를 포함해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 여러 숫자의 절대 값을 계산하여 표시합니다.  
   
 ```C  

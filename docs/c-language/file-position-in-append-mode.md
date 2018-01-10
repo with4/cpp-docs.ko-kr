@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7dd3616dc88d46e7312bbe6b647555d4cf34c9b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d216066e3d52006c8bce9e94aa599046d54b8bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-position-in-append-mode"></a>추가 모드의 파일 위치
 **ANSI 4.9.3** 추가 모드 스트림의 파일 위치 표시기가 처음에 파일의 시작에 배치되는지 아니면 끝에 배치되는지 여부  

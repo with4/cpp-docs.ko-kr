@@ -1,38 +1,40 @@
 ---
-title: "for each를 사용하여 STL 컬렉션 반복 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DTL 컬렉션, 반복 처리"
+title: "각각에 대해 사용 하 여 c + + 표준 라이브러리 컬렉션을 반복 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1a4ce2de13380895f1f313559abeb87e4cd65db2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# for each를 사용하여 STL 컬렉션 반복
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The `for each` keyword can be used to iterate over a Standard C\+\+ Library \(STL\) collection.  
+# <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>각각에 대해 사용 하 여 c + + 표준 라이브러리 컬렉션 반복
+`for each` c + + 표준 라이브러리 컬렉션을 반복 하는 키워드를 사용할 수 있습니다.  
   
-## 모든 플랫폼  
- **설명**  
+## <a name="all-platforms"></a>모든 플랫폼  
+ **주의**  
   
- An STL collection is also known as a *container*.  자세한 내용은 [STL 컨테이너](../standard-library/stl-containers.md)을 참조하십시오.  
+ C + + 표준 라이브러리 컬렉션이 라고도 *컨테이너*합니다. 자세한 내용은 [C++ 표준 라이브러리 컨테이너](../standard-library/stl-containers.md)를 참조하세요.  
   
-## 예제  
+## <a name="examples"></a>예제  
  **예제**  
   
- The following code example uses `for each` to iterate over a [\< 맵 \>](../standard-library/map.md).  
+ 다음 코드 예제에서는 `for each` 반복 하는 [ \<지도 >](../standard-library/map.md)합니다.  
   
 ```  
 // for_each_stl.cpp  
@@ -72,11 +74,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **Months with 30 days \= 4** **예제**  
+```Output  
+Months with 30 days = 4  
+```  
   
- The following code example uses a const reference \(`const&`\) for an iteration variable with STL containers.  You can use a reference \(`&`\) as an iteration variable on any collection of a type that can be declared as a *T*`&`.  
+ **예제**  
+  
+ 다음 코드 예제에서는 const 참조를 사용 하 여 (`const&`)에 대 한 c + + 표준 라이브러리 컨테이너와 반복 변수입니다. 참조를 사용할 수 있습니다 (`&`)로 선언 될 수 있는 형식의 컬렉션에서 반복 변수로 *T*`&`합니다.  
   
 ```  
 // for_each_stl_2.cpp  
@@ -100,25 +106,28 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **retval: 60**   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **설명**  
+```Output  
+retval: 60  
+```  
   
- There are no platform\-specific remarks about this feature.  
+## <a name="windows-runtime"></a>Windows 런타임  
+ **주의**  
   
-### 요구 사항  
- 컴파일러 옵션: **\/ZW**  
+ 이 기능에 대 한 플랫폼별 설명이 없습니다.  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **설명**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/ZW**  
   
- There are no platform\-specific remarks about this feature.  
+## <a name="common-language-runtime"></a>공용 언어 런타임 
+ **주의**  
   
-### 요구 사항  
- 컴파일러 옵션: **\/clr**  
+ 이 기능에 대 한 플랫폼별 설명이 없습니다.  
   
-## 참고 항목  
- [for each, in](../dotnet/for-each-in.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/clr**  
+  
+## <a name="see-also"></a>참고 항목  
+ [각 항목에 대해에서](../dotnet/for-each-in.md)   
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

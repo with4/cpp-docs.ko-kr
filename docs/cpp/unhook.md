@@ -4,29 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unhook
 - __unhook_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2b1909cf5d7bde440d434bb44ff2276e68679e78
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1513391aedf9a08cd1ece971d79fd5f6913d406d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unhook"></a>__unhook
 처리기 메서드를 이벤트에서 분리합니다.  
@@ -84,7 +82,7 @@ long  __unhook(
  `receiver`(선택 사항)  
  이벤트 수신기 클래스의 인스턴스에 대한 포인터입니다. 수신기를 지정하지 않으면 기본값은 `__unhook`가 호출되는 수신기 클래스 또는 구조체입니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  이벤트 수신기 클래스 외부의 main을 포함하여 모든 함수 범위에서 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
@@ -107,7 +105,7 @@ long  __unhook(
 > [!NOTE]
 >  템플릿 기반 클래스 또는 구조체에 event를 포함시킬 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [네이티브 c + +에서 이벤트 처리](../cpp/event-handling-in-native-cpp.md) 및 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md) 샘플에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

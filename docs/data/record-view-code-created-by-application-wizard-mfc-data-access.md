@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9475dd6192eb6bc1abd00e3614c18482be415c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 239ace3f23987bc4f704515e7f87d62ba2e26543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>응용 프로그램 마법사가 만든 레코드 뷰 코드  (MFC Data Access)
 [MFC 응용 프로그램 마법사](../mfc/reference/database-support-mfc-application-wizard.md) 재정의 보기의 `OnInitialUpdate` 및 `OnGetRecordset` 멤버 함수입니다. 프레임워크는 프레임 창, 문서 및 뷰를 만든 후 `OnInitialUpdate`를 호출하여 뷰를 초기화합니다. `OnInitialUpdate`는 문서에서 레코드 집합에 대한 포인터를 가져옵니다. 기본 클래스에 대 한 호출 [cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate) 기능은 레코드 집합을 엽니다. 다음 코드에서는이 프로세스에 대 한는 `CRecordView`:  

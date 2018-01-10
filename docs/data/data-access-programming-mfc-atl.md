@@ -1,79 +1,47 @@
 ---
-title: "데이터 엑세스 프로그래밍 (MFC/ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터[C++], 데이터 액세스 기술"
-  - "데이터 액세스[C++], 데이터베이스용 클래스 라이브러리"
-  - "데이터베이스[C++], MFC"
-  - "MFC[C++], 데이터 액세스 응용 프로그램"
-  - "OLE DB[C++], 데이터 액세스 기술"
+title: "데이터 액세스 프로그래밍 (MFC ATL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], data access applications
+- databases [C++], MFC
+- OLE DB [C++], data access technologies
+- data [C++], data access technologies
+- data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 06ab0ff17db77975d365280b6ee95cafb094db3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 데이터 엑세스 프로그래밍 (MFC/ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="data-access-programming-mfcatl"></a>데이터 엑세스 프로그래밍 (MFC/ATL)
+수년에 걸쳐 Visual C++는 데이터베이스로 작업하는 여러 가지 방법을 제공했습니다. 2011년에 Microsoft는 네이티브 코드에서 SQL Server 제품에 액세스하기 위한 기본 기술로서 Visual C++가 ODBC에 정렬되어 있다고 발표했습니다. ODBC는 산업 표준으로, 이것을 사용하여 여러 플랫폼 및 데이터 소스에서 코드의 이식성을 극대화할 수 있습니다. 대부분의 SQL 데이터베이스 제품 및 많은 NoSQL 제품이 ODBC를 지원합니다. 하위 수준 ODBC API를 호출하여 ODBC를 직접 사용할 수도 있고, MFC ODBC 래퍼 클래스 또는 타사 C++ 래퍼 라이브러리를 사용할 수도 있습니다. 
 
-Visual C\+\+는 데이터베이스를 사용하여 작업하는 여러 가지 방법을 제공합니다.  기본적으로는 ATL\(액티브 템플릿 클래스 라이브러리\) 또는 MFC\(Microsoft Foundation Class\) 라이브러리와 같은 클래스 라이브러리 중 하나를 사용합니다. 따라서 데이터베이스 API를 간편하게 사용할 수 있습니다.  
+OLE DB는 COM 사양을 기반으로 하는 하위 수준의 고성능 API이며 Windows에서만 지원됩니다. 프로그램이 [연결된 서버](/sql/relational-databases/linked-servers/linked-servers-database-engine)에 액세스하는 경우 OLE DB를 사용합니다. ATL은 사용자 지정 OLE DB 공급자 및 소비자를 보다 쉽게 생성할 수 있도록 하는 OLE DB 템플릿을 제공합니다. 최신 버전의 OLE DB는 SQL Native Client 11에서 제공합니다.  
+
+레거시 응용 프로그램이 OLE DB 또는 더 높은 수준의 ADO 인터페이스를 사용하여 SQL Server에 연결하는 경우 연결된 서버에 액세스하지 않으려면 곧 ODBC로 마이그레이션하는 것이 좋습니다. 플랫폼 간 이식성 또는 최신 SQL Server 기능이 필요하지 않은 경우 ODBC용 Microsoft OLE DB Provider(MSDASQL)를 사용할 수 있습니다.  MSDASQL은 OLEDB 및 ADO(내부적으로 OLEDB 사용)에서 빌드된 응용 프로그램이 ODBC 드라이버를 통해 데이터 소스에 액세스하도록 허용합니다. 다른 변환 계층과 마찬가지로 MSDASQL도 데이터베이스 성능에 영향을 줄 수 있습니다. 그러한 영향이 응용 프로그램에 중요한지 여부를 확인하려면 테스트해야 합니다. MSDASQL은 Windows 운영 체제와 함께 제공되며 Windows Server 2008 및 Windows Vista SP1은 64비트 버전을 포함할 수 있는 최초의 Windows 릴리스입니다.
+
+OLE DB와 ODBC 드라이버가 단일 DLL에 포함된 SQL Native Client 구성 요소(SNAC)는 ODBC 응용 프로그램에 대해서는 사용되지 않습니다. SNAC의 SQL Server 2012 버전(SQLNCLI11.DLL)은 다른 SQL Server 구성 요소가 종속되어 있는 SQL Server 2016 함께 제공됩니다. 그러나 ODBC를 통해 SQL Server 또는 Azure SQL Database에 연결하는 새로운 C++ 응용 프로그램은 [최신 ODBC 드라이버](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server)를 사용해야 합니다. 자세한 내용은 [SQL Server Native Client 프로그래밍](/sql/relational-databases/native-client/sql-server-native-client-programming)을 참조하세요.
+
+C++/CLI를 사용하는 경우에는 ADO.NET을 계속 사용할 수 있습니다. 자세한 내용은 [ADO.NET을 사용하여 데이터 액세스(C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) 및 [Visual Studio에서 데이터 액세스](/visualstudio/data-tools/accessing-data-in-visual-studio)를 참조하세요.  
   
-> [!NOTE]
->  이 항목에서는 Visual C\+\+의 데이터베이스 응용 프로그램에 사용할 수 있는 기존 기술에 대해 설명합니다.  Visual C\+\+ 및 SQL Server 2005를 사용하는 데이터 액세스 프로그래밍에 대한 자세한 내용은 [데이터 액세스](../dotnet/data-access-using-adonet-cpp-cli.md), [Visual Studio에서 데이터 액세스](../Topic/Accessing%20data%20in%20Visual%20Studio.md) 및 [Creating SQL Server 2005 Objects In Managed Code](http://msdn.microsoft.com/ko-kr/5358a825-e19b-49aa-8214-674ce5fed1da)를 참조하세요.  
-  
- 라이브러리 클래스는 다음과 같은 종류의 데이터 액세스를 지원합니다.  
-  
--   ATL은 OLE DB 템플릿 및 데이터베이스 특성을 제공합니다.  
-  
--   MFC는 ODBC\(Open Database Connectivity\) 및 ODBC 드라이버를 제공합니다.  
-  
- 이러한 라이브러리는 C\+\+의 빠른 속도와 효율적인 기능 및 유동성을 완벽하게 제공하여 데이터베이스를 간편하게 사용할 수 있도록 하는 추상화를 제공하며  데이터 액세스 작업을 라이브러리의 응용 프로그램 프레임워크에 통합합니다.  
-  
- COM, ODBC 또는 DAO SDK\(소프트웨어 개발 키트\)에서 데이터베이스 API 함수를 직접 호출할 수도 있습니다.  COM, DAO 또는 ODBC API 함수를 사용하여 직접 프로그래밍하는 방법에 대한 자세한 내용은 COM SDK, DAO SDK 또는 ODBC SDK를 참조하세요.  
-  
- 데이터가 저장되는 폼에 관계없이 데이터에 액세스해야 하는 경우에는 ATL OLE DB를 사용합니다.  Microsoft Jet\(.mdb\) 데이터베이스를 사용 중이지 않으며 완전한 데이터 소스 독립성을 위해 ODBC API를 사용하려는 경우에는 MFC ODBC 클래스를 사용합니다.  ODBC 데이터 소스와 같은 외부 데이터베이스 또는 Microsoft Jet\(.mdb\) 데이터베이스를 사용하려는 경우에는 MFC DAO 클래스를 사용합니다.  
-  
-> [!NOTE]
->  새 프로젝트의 경우에는 OLE DB 또는 ODBC를 사용하는 것이 좋습니다.  DAO는 기존 응용 프로그램 유지 관리에만 사용해야 합니다.  
-  
- 독립 실행형 데이터베이스 응용 프로그램 외에 다른 종류의 프로그램에서도 편리한 저장소 및 검색 매체로 데이터베이스를 효율적으로 사용할 수 있는 경우가 많습니다.  
-  
-|자세한 정보를 확인할 항목|참조|  
-|--------------------|--------|  
-|**데이터베이스 기술 선택**||  
-|비교: ODBC와  DAO|[DAO와 ODBC를 사용해야 합니까?](../data/should-i-use-dao-or-odbc-q.md)|  
-|Microsoft 기술 자료를 사용하여 제품 지원 엔지니어가 작성한 데이터베이스 항목에 대한 추가 문서 찾기|[Microsoft 기술 자료](../data/where-can-i-find-microsoft-knowledge-base-articles-on-database-topics-q.md)|  
-|**ATL 데이터베이스 지원\(OLE DB\)**||  
-|OLE DB 프로그래밍\(개념 항목\)|[OLE DB 프로그래밍 개요](../data/oledb/ole-db-programming-overview.md)|  
-|OLE DB 소비자 템플릿 사용\(개념 항목\)|[OLE DB 소비자 템플릿](../data/oledb/ole-db-consumer-templates-cpp.md)|  
-|OLE DB 소비자 특성|[OLE DB 소비자 특성](../windows/ole-db-consumer-attributes.md)|  
-|OLE DB 공급자 템플릿 사용\(개념 항목\)|[OLE DB 공급자 템플릿](../data/oledb/ole-db-provider-templates-cpp.md)|  
-|MFC 프로젝트에 OLE DB 소비자 추가|[OLE DB 소비자 만들기](../data/oledb/creating-an-ole-db-consumer.md)|  
-|**MFC 데이터베이스 지원\(ODBC 및 DAO\)**||  
-|DAO와 ODBC의 정의|[DAO와 ODBC란 무엇입니까?](../data/what-are-dao-and-odbc-q.md)|  
-|MFC 데이터베이스 클래스를 사용하는 경우|[데이터베이스 클래스를 사용하는 시기는 언제입니까?](../data/when-should-i-use-the-database-classes-q.md)|  
-|MFC 데이터베이스 프로그래밍 모델에 대한 자세한 정보|[MFC 데이터베이스 프로그래밍 모델은 무엇입니까?](../data/what-is-the-mfc-database-programming-model-q.md).|  
-|MFC DAO 클래스와 MFC ODBC 클래스 중에서 선택|[DAO와 ODBC를 사용해야 합니까?](../data/should-i-use-dao-or-odbc-q.md).|  
-|DAO 및 ODBC를 사용하여 액세스할 수 있는 데이터 소스|[DAO와 ODBC를 사용하여 액세스할 수 있는 데이터 소스는 무엇입니까?](../data/what-data-sources-can-i-access-with-dao-and-odbc-q.md)|  
-|ODBC\(Open Database Connectivity\)|[ODBC 및 MFC](../data/odbc/odbc-and-mfc.md)|  
-|클래스를 사용하면서 DAO 또는 ODBC API를 직접 호출할 수 있는지 여부|[DAO나 ODBC를 직접 호출할 수 있습니까?](../data/can-i-call-dao-or-odbc-directly-q.md)|  
-|제공되는 ODBC 드라이버|[ODBC 드라이버 목록](../data/odbc/odbc-driver-list.md)|  
-|데이터베이스 클래스가 MFC 문서\/뷰 아키텍처를 사용하는 방식|[MFC: 문서 및 뷰를 이용한 데이터베이스 클래스 사용](../data/mfc-using-database-classes-with-documents-and-views.md)|  
-|MFC 데이터베이스 지원 설치\/Visual C\+\+에서 기본적으로 설치되는 ODBC 드라이버\/설치되는 ODBC 및 DAO SDK 구성 요소|[MFC 데이터베이스 지원 설치](../data/installing-mfc-database-support.md)|  
-|**데이터 바인딩된 컨트롤\(ADO 및 RDO\)**||  
-|데이터 바인딩된 컨트롤을 사용하는 프로그램 작성|[데이터 바인딩된 컨트롤\(ADO 및 RDO\)](../data/ado-rdo/data-bound-controls-ado-and-rdo.md)|  
-|ActiveX 컨트롤을 사용한 데이터 바인딩|[MFC ActiveX 컨트롤: ActiveX 컨트롤에서 데이터 바인딩 사용](../mfc/mfc-activex-controls-using-data-binding-in-an-activex-control.md)|  
-|ActiveX 컨트롤 배포|[MFC ActiveX 컨트롤: ActiveX 컨트롤 배포](../mfc/mfc-activex-controls-distributing-activex-controls.md)|  
-  
-## 참고 항목  
- [데이터 액세스](../Topic/Data%20Access%20in%20Visual%20C++.md)
+-   ODBC 래퍼 클래스 외에도 MFC는 Access 데이터베이스에 연결하기 위한 데이터 액세스 개체(DAO) 래퍼 클래스도 제공합니다.  그러나 DAO는 사용되지 않습니다. CDaoDatabase 또는 CDaoRecordset 기반의 모든 코드를 업그레이드해야 합니다. 
+
+Microsoft Windows에서 데이터 액세스 기술의 기록에 대한 자세한 내용은 [Microsoft Data Access Components(Wikipedia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components)를 참조하세요.  
+
+## <a name="see-also"></a>참고 항목  
+ [데이터 액세스](data-access-in-cpp.md) [Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc) [데이터 액세스 기술 로드맵](https://msdn.microsoft.com/en-us/library/ms810810.aspx)

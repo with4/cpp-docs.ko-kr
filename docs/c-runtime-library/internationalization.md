@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3220b96f66465af8348fc50f0c702423439d34bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d48af3fb762100fa52b37db58cfc57caca1b6e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internationalization"></a>국제화
 Microsoft 런타임 라이브러리는 국제 시장을 겨냥한 프로그램의 여러 가지 버전을 만드는 데 도움이 되는 많은 루틴을 제공합니다. 여기에는 [로캘 관련 루틴](../c-runtime-library/locale.md), 와이드 문자 루틴, 멀티바이트 문자 루틴 및 일반 텍스트 루틴이 포함됩니다. 편의를 위해 대부분의 로캘 관련 루틴도 수행하는 작업에 따라 이 참조에 분류되어 있습니다. 이 단원 및 사전순 참조에는 멀티 바이트 문자 루틴 및 와이드 문자 루틴이 존재하는 단일 바이트 문자 요소와 함께 설명되어 있습니다.  

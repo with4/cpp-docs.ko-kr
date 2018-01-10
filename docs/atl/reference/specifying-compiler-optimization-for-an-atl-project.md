@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b9b3d6b3fabe2a24a4b296709e835d07a63e441
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6e60f22b7b91567948dfc2efc90935fce266d7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>ATL 프로젝트에 대 한 컴파일러 최적화를 지정합니다.
 기본적으로는 [ATL 컨트롤 마법사](../../atl/reference/atl-control-wizard.md) ATL_NO_VTABLE 매크로 사용 하 여 새 클래스를 다음과 같이 생성 합니다.  

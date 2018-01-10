@@ -1,44 +1,47 @@
 ---
 title: "XML 데이터 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStreamRowset 클래스, XML 데이터 검색"
-  - "CXMLAccessor 클래스, XML 데이터 검색"
-  - "데이터[C++], XML 데이터 액세스"
-  - "데이터 액세스[C++], XML 데이터"
-  - "행 집합[C++], XML 데이터 검색"
-  - "XML[C++], 데이터 액세스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], XML data
+- XML [C++], accessing data
+- CXMLAccessor class, retrieving XML data
+- data [C++], XML data access
+- rowsets [C++], retrieving XML data
+- CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# XML 데이터 액세스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-데이터 소스에서 XML 데이터를 검색하는 두 개의 메서드가 있습니다. 하나는 [CStreamRowset](../../data/oledb/cstreamrowset-class.md)을 사용하며 다른 하나는 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)를 사용합니다.  
+# <a name="accessing-xml-data"></a>XML 데이터 액세스
+데이터 소스에서 XML 데이터를 검색 하는 두 개의 메서드가: 하나 사용 하 여 [CStreamRowset](../../data/oledb/cstreamrowset-class.md) 다른 사용 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)합니다.  
   
 |기능|CStreamRowset|CXMLAccessor|  
-|--------|-------------------|------------------|  
-|전송되는 데이터의 양|한 번에 모든 열과 행에서 데이터를 검색합니다.|한 번에 모든 열과 하나의 행에서 데이터를 검색합니다.  `MoveNext`같은 메서드를 사용하여 행을 탐색해야 합니다.|  
-|문자열 형식 지정|SQL Server는 XML 문자열을 형식 지정하여 소비자에게 전송합니다.|원시 형식으로 된 행 집합 데이터를 검색\(공급자에게 이 데이터를 유니코드 문자열로 전송하도록 요청\)한 다음, XML 형식의 데이터가 들어 있는 문자열을 빌드합니다.|  
-|형식 제어|일부 SQL Server 2000 특정 속성을 설정하여 XML 문자열이 형식 지정되는 방법을 어느 정도 제어할 수 있습니다.|생성된 XML 문자열의 형식을 제어할 수 없습니다.|  
+|-------------------|-------------------|------------------|  
+|전송 데이터의 양|한 번에 모든 열과 행에서 데이터를 검색합니다.|모든 열에서 데이터를 검색 하지만 한 번에 한 행만 있습니다. 와 같은 메서드를 사용 하 여 행을 탐색 해야 `MoveNext`합니다.|  
+|문자열의 서식을 지정|SQL Server는 XML 문자열의 형식을 지정 하 고 소비자에 게 보냅니다.|행 집합 데이터의 네이티브 형식 (공급자 유니코드 문자열로 전송 요청)을 검색 하 고 그런 다음 XML 형식으로 데이터를에서 포함 하는 문자열을 작성 합니다.|  
+|형식 제어|일부 SQL Server 2000 관련 속성을 설정 하 여 XML 문자열 형식 지정 방법을 제어할 일정 수준의 해야 합니다.|해야 생성 된 XML 문자열의 서식 제어할 수 없습니다.|  
   
- `CStreamRowset`을 사용하면 XML 형식의 데이터를 보다 효과적으로 검색할 수 있지만, `CStreamRowset`은 SQL Server 2000에서만 지원됩니다.  
+ 반면 `CStreamRowset` 제공 XML 형식으로 데이터를 검색 하는 보다 효과적으로 SQL Server 2000 에서만 지원 됩니다.  
   
-## CStreamRowset을 사용하여 XML 데이터 검색  
- `CCommand` 또는 `CTable` 선언에서 [CStreamRowset](../../data/oledb/cstreamrowset-class.md)을 행 집합 형식으로 지정하십시오.  CStreamRowset은 다음과 같이 사용자 고유의 접근자와 함께 사용되거나 접근자 없이 사용될 수도 있습니다.  
+## <a name="retrieving-xml-data-using-cstreamrowset"></a>CStreamRowset를 사용 하 여 XML 데이터 검색  
+ 지정한 [CStreamRowset](../../data/oledb/cstreamrowset-class.md) 에서 행 집합 형식으로 프로그램 `CCommand` 또는 `CTable` 선언 합니다. 사용할 수 있습니다 사용자 고유의 접근자 또는 접근자가 없습니다 예:  
   
 ```  
 CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;  
@@ -50,31 +53,31 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- 일반적으로 `CRowset`을 `TRowset` 클래스로 지정하는 경우처럼 `CCommand::Open`을 호출하면 `IRowset` 포인터를 얻습니다.  `ICommand::Execute`는 `CRowset` 개체의 `m_spRowset` 멤버에 저장된 `IRowset` 포인터를 반환합니다.  `MoveFirst`, `MoveNext` 및 `GetData`와 같은 메서드는 이 포인터를 사용하여 데이터를 검색합니다.  
+ 일반적으로 호출 하는 경우 `CCommand::Open` (예를 들어 지정 하 `CRowset` 으로 `TRowset` 클래스)을 가져와서는 `IRowset` 포인터. `ICommand::Execute`반환는 `IRowset` 에 저장 된 포인터는 `m_spRowset` 의 멤버는 `CRowset` 개체입니다. 와 같은 메서드 `MoveFirst`, `MoveNext`, 및 `GetData` 해당 포인터를 사용 하 여 데이터를 검색 합니다.  
   
- 이와 반대로, `CStreamRowset`을 `TRowset` 클래스로 지정하고 `CCommand::Open`을 호출하면, `ICommand::Execute`는 [CStreamRowset](../../data/oledb/cstreamrowset-class.md)의 `m_spStream` 데이터 멤버에 저장된 `ISequentialStream` 포인터를 반환합니다.  그런 다음 `Read` 메서드를 사용하여 XML 형식의 데이터\(유니코드 문자열\)를 검색합니다.  예를 들면 다음과 같습니다.  
+ 이와 반대로 호출 하는 경우 `CCommand::Open` (하지만 지정 `CStreamRowset` 로 `TRowset` 클래스), `ICommand::Execute` 반환는 `ISequentialStream` 에 저장 된 포인터는 `m_spStream` 데이터 멤버의 [CStreamRowset](../../data/oledb/cstreamrowset-class.md). 사용 하 여는 `Read` 메서드를 XML 형식 (유니코드 문자열) 데이터를 검색 합니다. 예:  
   
 ```  
 myCmd.m_spStream->Read()  
 ```  
   
- SQL Server 2000은 XML 형식 지정을 수행하고 행 집합의 모든 열과 행을 하나의 XML 문자열로 반환합니다.  
+ SQL Server 2000에서 XML 서식 지정을 수행 하 고 모든 열과 하나의 XML 문자열로 행 집합의 모든 행을 반환 합니다.  
   
- `Read` 메서드 사용 예제는 [단순 소비자 구현](../../data/oledb/implementing-a-simple-consumer.md)의 "XML 지원을 소비자에 추가"를 참조하십시오.  
+ 사용 하는 예제는 `Read` 메서드를 "XML 지원 소비자에 추가"의 참조 [단순 소비자 구현](../../data/oledb/implementing-a-simple-consumer.md)합니다.  
   
 > [!NOTE]
->  `CStreamRowset`을 사용하는 XML 지원은 SQL Server 2000에서만 작동되며 MDAC와 함께 설치된 SQL Server 2000용 OLE DB 공급자가 있어야 합니다.  
+>  XML을 사용 하 여 지원 `CStreamRowset` SQL Server 2000 에서만 작동 하 고 SQL Server 2000 (mdac를 사용할 경우 설치 됨)에 대 한 OLE DB Provider가 있어야 합니다.  
   
-## CXMLAccessor를 사용하여 XML 데이터 검색  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)를 사용하면 데이터 저장소의 스키마에 대한 아무런 정보가 없을 때 데이터 소스의 데이터에 문자열 데이터로 액세스할 수 있습니다.  `CXMLAccessor`는 데이터 저장소에서 액세스한 모든 데이터를 태그가 지정된 XML 형식의 데이터로 변환한다는 점을 제외하고는 `CDynamicStringAccessorW`와 동일한 기능을 수행합니다.  XML 태그 이름은 데이터 저장소의 열 이름과 가능하면 거의 일치해야 합니다.  
+## <a name="retrieving-xml-data-using-cxmlaccessor"></a>CXMLAccessor를 사용 하 여 XML 데이터 검색  
+ [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) 데이터 저장소의 스키마 모를 때 데이터 원본에서 문자열 데이터로 액세스할 수 있습니다. `CXMLAccessor`처럼 작동 `CDynamicStringAccessorW` 제외 하 고 전자 (태그 있음된) 데이터를 XML 형식으로 데이터 저장소에서 액세스 하는 모든 데이터를 변환 합니다. XML 태그 이름은 데이터 저장소의 열 이름과 최대한 가깝게 일치 합니다.  
   
- `CXMLAccessor`를 다른 접근자 클래스처럼 사용하여 `CCommand` 또는 `CTable`에 템플릿 매개 변수로 전달하십시오.  
+ 사용 하 여 `CXMLAccessor` 적절 하 게 다른 접근자 클래스에 템플릿 매개 변수로 전달 `CCommand` 또는 `CTable`:  
   
 ```  
 CTable<CXMLAccessor, CRowset> rs;  
 ```  
   
- [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)를 사용하여 테이블 데이터를 한 번에 한 행씩 검색하고, `MoveNext` 같은 메서드를 사용하여 행을 탐색하십시오. 예를 들면 다음과 같습니다.  
+ 사용 하 여 [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md) 하 한 번에 하나의 테이블 행에서 데이터를 검색 하 고 같은 메서드를 사용 하 여 행을 탐색 `MoveNext`, 예:  
   
 ```  
 // Open data source, session, and rowset  
@@ -90,7 +93,7 @@ while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )
 }  
 ```  
   
- [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)를 사용하여 해당 열\(데이터 형식\) 정보를 XML 형식 문자열 데이터로 검색할 수 있습니다.  
+ 사용할 수 있습니다 [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) XML 형식의 문자열 데이터로 열 (데이터 형식) 정보를 검색 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [접근자 사용](../../data/oledb/using-accessors.md)

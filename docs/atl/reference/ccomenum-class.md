@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 417dcf3ff0d578c4febcefb5caa6989ed98bb209
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 792c5ff95858936d38d9a87350dd3ca405c5ec66
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomenum-class"></a>CComEnum 클래스
 이 클래스는 배열을 기반으로 하는 COM 열거자 개체를 정의 합니다.  
@@ -82,7 +83,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  아래 표시 된 코드 만들기 및 초기화 열거자 개체에 대 한 재사용 가능한 함수를 제공 합니다.  
   
  [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]  

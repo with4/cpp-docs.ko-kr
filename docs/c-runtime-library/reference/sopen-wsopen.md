@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a28e6a05676b7340c4dfbf3e963e6046c7beafa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bce1d0aac8b6b4d835b956a9ac05eece4e2e6428
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 공유할 파일을 엽니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)를 참조하세요.  
@@ -94,8 +95,7 @@ int _wsopen(
  `_O_CREAT` 및 `_O_EXCL` 플래그를 지정했으나 `filename`이 이미 있습니다.  
   
  `EINVAL`  
- 
-          `oflag` 또는 `shflag` 인수가 잘못되었습니다.  
+ `oflag` 또는 `shflag` 인수가 잘못되었습니다.  
   
  `EMFILE`  
  사용 가능한 추가 파일 설명자가 없습니다.  
@@ -103,7 +103,7 @@ int _wsopen(
  `ENOENT`  
  파일 또는 경로를 찾을 수 없습니다.  
   
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
+ 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
   
 ## <a name="remarks"></a>설명  
  `_sopen` 함수는 `filename`이 지정한 파일을 열고 `oflag` 및 `shflag`에서 정의한 대로 공유 읽기 또는 쓰기를 위해 해당 파일을 준비합니다. `_wsopen`은 `_sopen`의 와이드 문자 버전이며, `filename`에 대한 `_wsopen` 인수는 와이드 문자열입니다. 그렇지 않으면 `_wsopen`과 `_sopen`이 동일하게 작동합니다.  
@@ -127,17 +127,14 @@ int _wsopen(
           `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
   
  `_O_CREAT | _O_SHORT_LIVED`  
- 파일을 임시로 만든 다음 가능한 경우 디스크로 플러시하지 않습니다. 
-          `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
+ 파일을 임시로 만든 다음 가능한 경우 디스크로 플러시하지 않습니다. `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
   
  `_O_CREAT | _O_TEMPORARY`  
- 파일을 임시로 만듭니다. 마지막 파일 설명자가 닫히면 파일이 삭제됩니다. 
-          `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
+ 파일을 임시로 만듭니다. 마지막 파일 설명자가 닫히면 파일이 삭제됩니다. `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
   
  `_O_CREAT | _O_EXCL`  
  
-          `filename`으로 지정한 파일이 있으면 오류 값을 반환합니다. 
-          `_O_CREAT`와 함께 사용하는 경우에만 적용됩니다.  
+          `filename`으로 지정한 파일이 있으면 오류 값을 반환합니다. `_O_CREAT`와 함께 사용하는 경우에만 적용됩니다.  
   
  `_O_NOINHERIT`  
  공유 파일 설명자의 생성을 방지합니다.  
@@ -146,12 +143,10 @@ int _wsopen(
  디스크에서의 임의 액세스를 주로 지정합니다.  
   
  `_O_RDONLY`  
- 읽으려는 경우에만 파일을 엽니다. 
-          `_O_RDWR` 또는 `_O_WRONLY`와 함께 지정할 수 없습니다.  
+ 읽으려는 경우에만 파일을 엽니다. `_O_RDWR` 또는 `_O_WRONLY`와 함께 지정할 수 없습니다.  
   
  `_O_RDWR`  
- 읽고 쓰기 위해 파일을 엽니다. 
-          `_O_RDONLY` 또는 `_O_WRONLY`와 함께 지정할 수 없습니다.  
+ 읽고 쓰기 위해 파일을 엽니다. `_O_RDONLY` 또는 `_O_WRONLY`와 함께 지정할 수 없습니다.  
   
  `_O_SEQUENTIAL`  
  디스크에서의 순차적 액세스를 주로 지정합니다.  
@@ -217,14 +212,14 @@ int _wsopen(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_sopen`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
 |`_wsopen`|\<io.h> 또는 \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [_locking](../../c-runtime-library/reference/locking.md)의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

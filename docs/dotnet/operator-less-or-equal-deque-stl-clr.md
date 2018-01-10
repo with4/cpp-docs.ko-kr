@@ -1,33 +1,33 @@
 ---
-title: "operator&lt;= (deque)(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= 멤버[STL/CLR]"
+title: "연산자&lt;= (deque) (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: b70cc499-35fb-4fa5-b8e3-5270bc647ace
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 707f98d523278ff5d1af811083596b0bd2d96558
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt;= (deque)(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Deque less than or equal comparison.  
+# <a name="operatorlt-deque-stlclr"></a>연산자&lt;= (deque) (STL/CLR)
+Deque 작은 보다 짧거나 비교 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         deque<Value>% right);  
 ```  
   
-#### 매개 변수  
- left  
- Left container to compare.  
+#### <a name="parameters"></a>매개 변수  
+ 왼쪽  
+ 비교할 왼쪽 컨테이너입니다.  
   
- right  
- Right container to compare.  
+ 오른쪽  
+ 비교할 오른쪽 컨테이너입니다.  
   
-## 설명  
- The operator function returns `!(``right` `<` `left``)`.  You use it to test whether `left` is not ordered after `right` when the two deques are compared element by element.  
+## <a name="remarks"></a>설명  
+ 연산자 함수 반환 `!(right < left)`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 되지 않은 `right` 두 deque 경우 요소 별로 비교 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_deque_operator_le.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \<\= \[a b c\] is True**  
-**\[a b d\] \<\= \[a b c\] is False**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [operator\=\= \(deque\)](../dotnet/operator-equality-deque-stl-clr.md)   
- [deque::operator\!\=](../dotnet/deque-operator-inequality-stl-clr.md)   
- [operator\< \(deque\)](../dotnet/operator-less-than-deque-stl-clr.md)   
- [operator\>\= \(deque\)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
- [operator\> \(deque\)](../dotnet/operator-greater-than-deque-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [연산자 = = (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)   
+ [deque:: operator! = (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)   
+ [연산자\< (deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)   
+ [연산자 > = (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
+ [operator> (deque)(STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)

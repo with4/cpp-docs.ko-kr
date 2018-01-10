@@ -1,46 +1,46 @@
 ---
-title: "hash_map::operator=(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 멤버[STL/CLR]"
+title: 'hash_map:: operator = (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: fbcbae4c-c8f8-431e-831b-a40cce00a88c
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94fe53c70e6f11af31f40822e4a66b3fc77ea833
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::operator=(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Replaces the controlled sequence.  
+# <a name="hashmapoperator-stlclr"></a>hash_map::operator=(STL/CLR)
+제어되는 시퀀스를 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 hash_map<Key, Mapped>% operator=(hash_map<Key, Mapped>% right);  
 ```  
   
-#### 매개 변수  
- right  
- Container to copy.  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
+ 복사할 컨테이너입니다.  
   
-## 설명  
- The member operator copies `right` to the object, then returns `*this`.  You use it to replace the controlled sequence with a copy of the controlled sequence in `right`.  
+## <a name="remarks"></a>설명  
+ 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 이를 사용하여 제어되는 시퀀스를 `right`의 제어되는 시퀀스 복사본으로 대체합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_map_operator_as.cpp   
@@ -72,12 +72,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_map](../dotnet/hash-map-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_map(STL/CLR)](../dotnet/hash-map-stl-clr.md)

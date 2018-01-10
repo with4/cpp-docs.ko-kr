@@ -22,11 +22,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bfdb54ece1669a2e3630fecad2d23ee55c2ac823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd96a89ef4228835307f8f8f0d9fff5d61441f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM(하위 시스템 지정)
 ```  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/24/2017
   
  (옵션) 최소값 및 기본값 `major` 및 `minor` 하위 시스템에 대 한 버전 번호는 다음과 같습니다.  
   
-|하위 시스템|최소|기본값|  
+|하위 시스템|최소|기본|  
 |---------------|-------------|-------------|  
 |BOOT_APPLICATION|1.0|1.0|  
 |CONSOLE|(x86) 5.01 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  

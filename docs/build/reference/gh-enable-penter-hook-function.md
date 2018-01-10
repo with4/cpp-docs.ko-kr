@@ -1,67 +1,67 @@
 ---
-title: "/Gh(_penter 후크 함수 사용) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_penter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gh 컴파일러 옵션[C++]"
-  - "_penter 함수"
-  - "Gh 컴파일러 옵션[C++]"
-  - "-Gh 컴파일러 옵션[C++]"
+title: "-Gh (_penter 후크 함수 사용) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _penter
+dev_langs: C++
+helpviewer_keywords:
+- /Gh compiler option [C++]
+- Gh compiler option [C++]
+- _penter function
+- -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dec38a8822bb8a330c4dccff9833780ea3a0a45d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /Gh(_penter 후크 함수 사용)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-모든 메서드나 함수를 시작할 때 `_penter` 함수가 호출됩니다.  
+# <a name="gh-enable-penter-hook-function"></a>/Gh(_penter 후크 함수 사용)
+에 대 한 호출으로 인해는 `_penter` 모든 메서드 또는 함수의 시작 부분에 함수입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /Gh  
 ```  
   
-## 설명  
- `_penter` 함수는 라이브러리의 일부가 아니며 `_penter`에 대한 정의는 사용자가 결정합니다.  
+## <a name="remarks"></a>설명  
+ `_penter` 함수 라이브러리의 일부가 아니며에 대 한 정의에 `_penter`합니다.  
   
- `_penter`를 명시적으로 호출하지 않는 경우 프로토타입을 제공하지 않아도 됩니다.  이 함수는 다음과 같은 프로토타입을 갖고 있는 것처럼 나타나야 하며, 시작 시 모든 레지스터의 내용을 푸시하고 종료 시 변경되지 않은 내용을 팝해야 합니다.  
+ 명시적으로 호출 하려는 경우가 아니면 `_penter`, 프로토타입을 제공 필요가 없습니다. 함수 처럼 다음과 같은 프로토타입을 이전의 하 고 항목에 모든 레지스터의 내용을 강제 종료 시 변경 되지 않은 콘텐츠를 팝에 나타나야 합니다.  
   
 ```  
 void __declspec(naked) _cdecl _penter( void );  
 ```  
   
- 이 선언은 64비트 프로젝트에 사용할 수 없습니다.  
+ 이 선언은 64 비트 프로젝트에 대 한 공간이 없습니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
+2.  **C/C++** 폴더를 클릭합니다.  
   
 3.  **명령줄** 속성 페이지를 클릭합니다.  
   
 4.  **추가 옵션** 상자에 컴파일러 옵션을 입력합니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## 예제  
- 다음 코드를 **\/Gh**를 사용하여 컴파일하면 `_penter`는 `main` 함수를 시작할 때와 `x` 함수를 시작할 때 각각 한 번씩 두 번 호출됩니다.  
+## <a name="example"></a>예  
+ 로 컴파일하는 경우 다음 코드 **/Gh**, 표시 방법을 `_penter` 두 번 호출 됩니다 함수를 입력할 때 한 번 `main` 함수를 입력할 때 한 번 `x`합니다.  
   
 ```  
 // Gh_compiler_option.cpp  
@@ -100,8 +100,11 @@ extern "C" void __declspec(naked) _cdecl _penter( void ) {
 }  
 ```  
   
-  **함수에\!**  
-**함수에\!**   
-## 참고 항목  
+```Output  
+In a function!  
+In a function!  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

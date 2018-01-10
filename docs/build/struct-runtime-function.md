@@ -1,34 +1,35 @@
 ---
 title: "구조체 RUNTIME_FUNCTION | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 84386527-d3aa-41c5-871d-78e3e1913704
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c05dcd516af5c078b4e4e664bae16f65370ca117
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 구조체 RUNTIME_FUNCTION
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-테이블 기반 예외 처리에는 스택 공간을 할당하거나 다른 함수를 호출하는 모든 함수\(예: 리프가 아닌 함수\)에 대한 테이블 엔트리가 필요합니다.  함수 테이블 엔트리의 형식은 다음과 같습니다.  
+# <a name="struct-runtimefunction"></a>구조체 RUNTIME_FUNCTION
+테이블 기반 예외 처리 스택 공간을 할당 하거나 다른 함수 (예를 들어 리프가 아닌 함수)를 호출 하는 모든 기능을 위한 테이블 항목을 필요 합니다. 함수 테이블 항목의 형식을 갖습니다.  
   
 |||  
 |-|-|  
 |ULONG|함수 시작 주소|  
-|ULONG|함수 끝 주소|  
-|ULONG|해제 정보 주소|  
+|ULONG|끝 주소 함수|  
+|ULONG|정보 주소를 해제 합니다.|  
   
- RUNTIME\_FUNCTION 구조체는 메모리에 DWORD 정렬되어야 합니다.  모든 주소는 이미지를 기준으로 합니다. 즉, 모든 주소는 함수 테이블 엔트리가 포함된 이미지의 시작 주소에서 32비트 오프셋됩니다.  이러한 엔트리는 PE32\+ 이미지의 .pdata 섹션에 정렬 및 추가됩니다.  동적으로 생성된 함수\[JIT 컴파일러\]의 경우 이러한 함수를 지원하는 런타임에서는 RtlInstallFunctionTableCallback 또는 RtlAddFunctionTable을 사용하여 운영 체제에 이 정보를 제공해야 합니다.  그렇지 않으면 예외 처리와 프로세스 디버깅을 신뢰할 수 없게 됩니다.  
+ 구조체 RUNTIME_FUNCTION DWORD 메모리에 정렬 해야 합니다. 모든 주소는 상대 이미지, 즉, 함수 테이블 항목을 포함 하는 이미지의 시작 주소에서 32 비트 오프셋 됩니다. 이러한 항목은 정렬 되며 PE32 + 이미지의.pdata 섹션에 놓여집니다. 동적으로 생성 된 함수 [JIT 컴파일러]에 대 한 이러한 함수를 지원 하기 위해 런타임 해야 RtlInstallFunctionTableCallback 또는 사용할 RtlAddFunctionTable 운영 체제에이 정보를 제공. 신뢰할 수 없는 예외 처리 및 프로세스 디버깅 하지 못하면 발생 합니다.  
   
-## 참고 항목  
- [예외 처리 및 디버거 지원을 위한 해제 데이터](../build/unwind-data-for-exception-handling-debugger-support.md)
+## <a name="see-also"></a>참고 항목  
+ [디버거 지원, 예외 처리를 위한 해제 데이터](../build/unwind-data-for-exception-handling-debugger-support.md)

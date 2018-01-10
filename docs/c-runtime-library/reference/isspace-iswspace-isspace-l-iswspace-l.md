@@ -44,11 +44,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0326dc826417287a1695904c99f1f3e9733f1b7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 618ba621f385307d3609667c6df5cf56c91da2f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 정수가 공백 문자를 나타내는지 여부를 확인합니다.  
@@ -80,7 +81,7 @@ int _iswspace_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c`가 공백 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isspace`0이 아닌 값을 반환 `c` 공백 문자 (0x09-0x0D 또는 0x20). `isspace` 함수에 대한 테스트 조건의 결과는 로캘의 `LC_CTYPE` 범주 설정에 따라 달라집니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `c`가 공백 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isspace`0이 아닌 값을 반환 `c` 공백 문자 (0x09-0x0D 또는 0x20). `isspace` 함수에 대한 테스트 조건의 결과는 로캘의 `LC_CTYPE` 범주 설정에 따라 달라집니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `iswspace`는 `c`가 표준 공백 문자에 해당하는 와이드 문자인 경우 0이 아닌 값을 반환합니다.  
   
@@ -94,7 +95,7 @@ int _iswspace_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`isspace`|\<ctype.h>|  
 |`iswspace`|\<ctype.h> 또는 \<wchar.h>|  

@@ -1,57 +1,61 @@
 ---
-title: "/O 옵션(코드 최적화) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.Optimization"
-  - "/o"
-  - "VC.Project.VCCLWCECompilerTool.Optimization"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe 컴파일러, 성능"
-  - "성능, cle.exe 컴파일러"
+title: "-O 옵션 (코드 최적화) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.Optimization
+- /o
+- VC.Project.VCCLWCECompilerTool.Optimization
+dev_langs: C++
+helpviewer_keywords:
+- performance, cle.exe compiler
+- cl.exe compiler, performance
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b7da04384d0c4ea00c2eaaedbcf0ec770e216289
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /O 옵션(코드 최적화)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="o-options-optimize-code"></a>/O 옵션(코드 최적화)
 
-**\/O** 옵션은 속도가 가장 빠르고 크기는 가장 작은 코드를 만들 수 있도록 여러 가지 최적화를 제어합니다.  
-  
--   [\/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)은 크기가 최소가 되도록 코드를 최적화합니다.  
-  
--   [\/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)는 속도가 최대가 되도록 코드를 최적화합니다.  
-  
--   [\/Ob](../../build/reference/ob-inline-function-expansion.md)는 인라인 함수 확장을 제어합니다.  
-  
--   [\/Od](../../build/reference/od-disable-debug.md)는 최적화 기능을 사용할 수 없게 설정하므로 컴파일 속도가 빨라지고 디버깅이 간단해집니다.  
-  
--   [\/Og](../../build/reference/og-global-optimizations.md)는 전역 최적화를 수행할 수 있도록 합니다.  
-  
--   [\/Oi](../../build/reference/oi-generate-intrinsic-functions.md)는 적절한 함수 호출에 대해 내장 함수를 생성합니다.  
-  
--   [\/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)는 컴파일러가 속도 최적화보다 크기 최적화를 우선적으로 처리하도록 합니다.  
-  
--   [\/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)\(기본 설정\)는 컴파일러가 크기 최적화보다 속도 최적화를 우선적으로 처리하도록 합니다.  
-  
--   [\/Ox](../../build/reference/ox-full-optimization.md)는 최대 최적화를 선택합니다.  
-  
--   [\/Oy](../../build/reference/oy-frame-pointer-omission.md)는 호출 스택에 프레임 포인터를 만들지 않으므로 함수 호출이 빨라집니다.  
-  
-## 설명  
- 여러 **\/O** 옵션을 단일 옵션 문에 결합할 수도 있습니다.  예를 들어, `/Odi`는 `/Od /Oi`와 같습니다.  
-  
-## 참고 항목  
- [컴파일러 옵션](../../build/reference/compiler-options.md)   
- [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)
+**/O** 다양 한 옵션으로 제어 코드 속도 최대 또는 최소 크기를 만들 수 있는 최적화 합니다.
+
+- [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) 최소 크기 코드를 생성 하는 최적화의 조합을 설정 합니다.
+
+- [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md) 최대 속도 대 한 코드를 최적화 하는 최적화의 조합을 설정 합니다.
+
+- [/Ob](../../build/reference/ob-inline-function-expansion.md) 인라인 함수 확장을 제어 합니다.
+
+- [/Od](../../build/reference/od-disable-debug.md) 컴파일 및 디버깅을 간소화 하려면 최적화를 사용할 수 있습니다.
+
+- [/Og](../../build/reference/og-global-optimizations.md) 전역 최적화를 사용 합니다.
+
+- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) 적절 한 함수 호출에 대 한 내장 함수를 생성 합니다.
+
+- [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) 컴파일러가 크기에 대 한 최적화 속도 최적화 보다 우선 합니다.
+
+- [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (기본 설정) 컴파일러가 속도 최적화 크기에 대 한 최적화 보다 우선 합니다.
+
+- [/Ox](../../build/reference/ox-full-optimization.md) 선택 하는 속도에 중점을 두어 최적화 기능 중 몇 가지 조합 옵션입니다. 하위 집합이 고 **/O2** 최적화 합니다.
+
+- [/Oy](../../build/reference/oy-frame-pointer-omission.md) 빠르게 함수 호출에 대 한 호출 스택에서 프레임 포인터를 생성 하지 않습니다.
+
+## <a name="remarks"></a>설명
+
+여러 결합할 수 **/O** 단일 옵션 문으로 옵션입니다. 예를 들어 **/Odi** 동일 **/Od /Oi**합니다. 일부 옵션은 상호 배타적 이므로 함께 사용 하는 경우 컴파일러 오류가 발생 합니다. 개별 참조 **/O** 옵션을 참조 하십시오.
+
+## <a name="see-also"></a>참고 항목
+
+[컴파일러 옵션](../../build/reference/compiler-options.md)   
+[컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

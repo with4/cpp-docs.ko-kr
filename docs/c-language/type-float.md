@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-float"></a>float 형식
 부동 소수점 수는 IEEE(Institute of Electrical and Electronics Engineers) 형식을 사용합니다. float 형식의 단정밀도 값은 부호 비트, -127승 이진 지수 8비트 및 가수 23비트로 구성된 4바이트를 사용합니다. 가수는 1.0에서 2.0 사이의 수를 의미합니다. 가수의 상위 비트가 항상 1이기 때문에 가수의 상위 비트는 수에 저장되지 않습니다. 이 표현은 float 형식에 대한 약 3.4E–38 ~ 3.4E+38의 범위를 제공합니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
 |형식|유효 자릿수|바이트 수|  
 |----------|------------------------|---------------------|  
 |float|6 - 7|4|  
-|double|15 - 16|9|  
+|double|15 - 16|8|  
   
  부동 소수점 변수는 숫자 값을 포함하는 가수 및 숫자 크기의 순서를 포함하는 지수로 표시됩니다.  
   

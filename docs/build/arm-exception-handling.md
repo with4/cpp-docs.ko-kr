@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 803e4e0556026eaa5a3fb75c8faa7fd87f34052f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-exception-handling"></a>ARM 예외 처리
 Windows on ARM은 하드웨어에서 생성하는 비동기식 예외 및 소프트웨어에서 생성하는 동기식 예외에 대해 동일한 구조적 예외 처리 메커니즘을 사용합니다. 언어별 예외 처리기가 언어 도우미 함수를 사용하여 Windows의 구조적 예외 처리를 기반으로 작성됩니다. 이 문서에서는 Windows on ARM의 예외 처리 및 MASM과 Visual C++ 컴파일러에 의해 생성되는 코드를 사용하는 언어 도우미에 대해 설명합니다.  
@@ -149,7 +150,7 @@ Windows on ARM은 하드웨어에서 생성하는 비동기식 예외 및 소프
 |-----------------|-----------------------------------|----------|------------|  
 |6|*스택 조정*! = 0 및 *EF*= = 0|16/32|`add   sp,sp,#xx`|  
 |7|*R*= = 1 및 *Reg*! = 7 까지의 유형은|32|`vpop  {d8-dE}`|  
-|9|*C*= = 1 또는 (*L*= = 1 및 *H*= = 0) 또는 *R*= = 0 또는 *EF*= = 1|16/32|`pop   {registers}`|  
+|8|*C*= = 1 또는 (*L*= = 1 및 *H*= = 0) 또는 *R*= = 0 또는 *EF*= = 1|16/32|`pop   {registers}`|  
 |9a|*H*= = 1 및 *L*= = 0|16|`add   sp,sp,#0x10`|  
 |9b|*H*= = 1 및 *L*= = 1|32|`ldr   pc,[sp],#0x14`|  
 |10a|*Ret*= = 1|16|`bx    reg`|  

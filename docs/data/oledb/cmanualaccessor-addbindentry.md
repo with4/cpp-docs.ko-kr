@@ -1,36 +1,38 @@
 ---
-title: "CManualAccessor::AddBindEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor::AddBindEntry"
-  - "ATL.CManualAccessor.AddBindEntry"
-  - "CManualAccessor::AddBindEntry"
-  - "AddBindEntry"
-  - "CManualAccessor.AddBindEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddBindEntry 메서드"
+title: 'Cmanualaccessor:: Addbindentry | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor::AddBindEntry
+- ATL.CManualAccessor.AddBindEntry
+- CManualAccessor::AddBindEntry
+- AddBindEntry
+- CManualAccessor.AddBindEntry
+dev_langs: C++
+helpviewer_keywords: AddBindEntry method
 ms.assetid: 8556dda9-dda1-4f67-96bc-6031e6c6a271
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 14a2fbae8ee29728d145b3ff8d20a02b4000b5a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::AddBindEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Adds a bind entry to the output columns.  
+# <a name="cmanualaccessoraddbindentry"></a>CManualAccessor::AddBindEntry
+출력 열에 바인딩 항목을 추가합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -44,33 +46,33 @@ Adds a bind entry to the output columns.
 ) throw ( );  
 ```  
   
-#### 매개 변수  
- See [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) in the *OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>매개 변수  
+ 참조 [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
  `nOrdinal`  
- \[in\] Column number.  
+ [in] 열 번호입니다.  
   
  `wType`  
- \[in\] Data type.  
+ [in] 데이터 형식입니다.  
   
  `nColumnSize`  
- \[in\] Column size in bytes.  
+ [in] 열 크기 (바이트)에서입니다.  
   
  `pData`  
- \[in\] A pointer to the column data stored in the buffer.  
+ [in] 버퍼에 저장 된 열 데이터에 대 한 포인터입니다.  
   
  `pLength`  
- \[in\] A pointer to the field length, if required.  
+ [in] 필요한 경우 필드 길이에 대 한 포인터입니다.  
   
  `pStatus`  
- \[in\] A pointer to the variable to be bound to the column status, if required.  
+ [in] 필요한 경우 열 상태에 바인딩할 수를 변수에 대 한 포인터입니다.  
   
-## 설명  
- To use this function, you must first call [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md).  You cannot add more entries than the number of columns specified in `CreateAccessor`.  
+## <a name="remarks"></a>설명  
+ 이 함수를 사용 하려면 호출 먼저 해야 [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)합니다. 에 지정 된 열의 수보다 더 많은 항목을 추가할 수 없습니다 `CreateAccessor`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CManualAccessor 클래스](../../data/oledb/cmanualaccessor-class.md)   
- [DBViewer sample](../../top/visual-cpp-samples.md)
+ [DBViewer 샘플](../../visual-cpp-samples.md)

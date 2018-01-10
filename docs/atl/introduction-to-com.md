@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 236222296b270fe52f43f42a823e3f6f790d08ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a8953949e722265afabc22410174b84c017276c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com"></a>COM 소개
 COM 켜져 있습니다 "개체 모델" 기본 어떤 ActiveX 컨트롤 및 OLE 작성 됩니다. COM 응용 프로그램을 호스트 하 고 다른 구성 요소에 해당 기능을 노출 하는 개체 수 있습니다. 개체 표시 방식을 프로세스 간에 및 네트워크를 통해 이러한 인터페이스의 작동 방식 모두를 정의 합니다. 또한 COM 개체의 수명 주기를 정의합니다.  

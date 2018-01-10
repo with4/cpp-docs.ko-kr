@@ -4,76 +4,59 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatch
-- No header/ATL::IAxWinAmbientDispatch
-- No header/ATL::get_AllowContextMenu
-- No header/ATL::get_AllowShowUI
-- No header/ATL::get_AllowWindowlessActivation
-- No header/ATL::get_BackColor
-- No header/ATL::get_DisplayAsDefault
-- No header/ATL::get_DocHostDoubleClickFlags
-- No header/ATL::get_DocHostFlags
-- No header/ATL::get_Font
-- No header/ATL::get_ForeColor
-- No header/ATL::get_LocaleID
-- No header/ATL::get_MessageReflect
-- No header/ATL::get_OptionKeyPath
-- No header/ATL::get_ShowGrabHandles
-- No header/ATL::get_ShowHatching
-- No header/ATL::get_UserMode
-- No header/ATL::put_AllowContextMenu
-- No header/ATL::put_AllowShowUI
-- No header/ATL::put_AllowWindowlessActivation
-- No header/ATL::put_BackColor
-- No header/ATL::put_DisplayAsDefault
-- No header/ATL::put_DocHostDoubleClickFlags
-- No header/ATL::put_DocHostFlags
-- No header/ATL::put_Font
-- No header/ATL::put_ForeColor
-- No header/ATL::put_LocaleID
-- No header/ATL::put_MessageReflect
-- No header/ATL::put_OptionKeyPath
-- No header/ATL::put_UserMode
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinAmbientDispatch interface
+- ATLIFACE/ATL::IAxWinAmbientDispatch
+- ATLIFACE/ATL::get_AllowContextMenu
+- ATLIFACE/ATL::get_AllowShowUI
+- ATLIFACE/ATL::get_AllowWindowlessActivation
+- ATLIFACE/ATL::get_BackColor
+- ATLIFACE/ATL::get_DisplayAsDefault
+- ATLIFACE/ATL::get_DocHostDoubleClickFlags
+- ATLIFACE/ATL::get_DocHostFlags
+- ATLIFACE/ATL::get_Font
+- ATLIFACE/ATL::get_ForeColor
+- ATLIFACE/ATL::get_LocaleID
+- ATLIFACE/ATL::get_MessageReflect
+- ATLIFACE/ATL::get_OptionKeyPath
+- ATLIFACE/ATL::get_ShowGrabHandles
+- ATLIFACE/ATL::get_ShowHatching
+- ATLIFACE/ATL::get_UserMode
+- ATLIFACE/ATL::put_AllowContextMenu
+- ATLIFACE/ATL::put_AllowShowUI
+- ATLIFACE/ATL::put_AllowWindowlessActivation
+- ATLIFACE/ATL::put_BackColor
+- ATLIFACE/ATL::put_DisplayAsDefault
+- ATLIFACE/ATL::put_DocHostDoubleClickFlags
+- ATLIFACE/ATL::put_DocHostFlags
+- ATLIFACE/ATL::put_Font
+- ATLIFACE/ATL::put_ForeColor
+- ATLIFACE/ATL::put_LocaleID
+- ATLIFACE/ATL::put_MessageReflect
+- ATLIFACE/ATL::put_OptionKeyPath
+- ATLIFACE/ATL::put_UserMode
+dev_langs: C++
+helpviewer_keywords: IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 3dd34ffec68e4503aebe7b8d0e72ec1f711dca03
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e9d53dc257920e40dbf6a2f360d1289676d121fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch 인터페이스
 이 인터페이스는 호스트 된 컨트롤 또는 컨테이너의 특성을 지정 하기 위한 메서드를 제공 합니다.  
   
 > [!IMPORTANT]
->  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -100,7 +83,7 @@ interface IAxWinAmbientDispatch : IDispatch
 |[get_MessageReflect](#get_messagereflect)|**MessageReflect** 앰비언트 속성 컨테이너는 호스팅된 컨트롤에 메시지를 반영 하는지 여부를 지정 합니다.|  
 |[get_OptionKeyPath](#get_optionkeypath)|**OptionKeyPath** 속성 사용자 설정으로 레지스트리 키의 경로 지정 합니다.|  
 |[get_ShowGrabHandles](#get_showgrabhandles)|**ShowGrabHandles** 앰비언트 속성이 경우 것 그릴지 자체 잡기 핸들을 사용한 찾을 컨트롤을 찾을 수 있습니다.|  
-|[get_ShowHatching](#get_showhatching)|**ShowHatching** 앰비언트 속성이 무늬 자체 그리기 되어야 하는 경우 찾을 컨트롤을 찾을 수 있습니다.|  
+|[get_ShowHatching](#get_showhatching)|**ShowHatching** 앰비언트 속성이 무늬 자체 그리기 해야 하는 경우 찾을 컨트롤을 찾을 수 있습니다.|  
 |[get_UserMode](#get_usermode)|**UserMode** 속성 컨테이너의 앰비언트 사용자 모드를 지정 합니다.|  
 |[put_AllowContextMenu](#put_allowcontextmenu)|**컨텍스트 메뉴 사용** 속성 호스팅된 컨트롤 상황에 맞는 메뉴를 표시할 수 있는지 여부를 지정 합니다.|  
 |[put_AllowShowUI](#put_allowshowui)|**AllowShowUI** 속성 호스팅된 컨트롤의 고유한 사용자 인터페이스를 표시할 수 있는지 여부를 지정 합니다.|  
@@ -116,7 +99,7 @@ interface IAxWinAmbientDispatch : IDispatch
 |[put_OptionKeyPath](#put_optionkeypath)|**OptionKeyPath** 속성 사용자 설정으로 레지스트리 키의 경로 지정 합니다.|  
 |[put_UserMode](#put_usermode)|**UserMode** 속성 컨테이너의 앰비언트 사용자 모드를 지정 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 인터페이스는 ATL의 ActiveX 컨트롤 호스팅 개체에 의해 노출 됩니다. 호스팅된 컨트롤에 사용할 수 있는 앰비언트 속성을 설정 하거나 컨테이너의 동작의 기타 측면을 지정 하려면이 인터페이스에서 메서드를 호출 합니다. 제공 되는 속성을 보완 하기 위해 `IAxWinAmbientDispatch`를 사용 하 여 [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)합니다.  
   
  [AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) 에 대 한 형식 정보를 로드 하려고 `IAxWinAmbientDispatch` 및 `IAxWinAmbientDispatchEx` 코드를 포함 하는 형식 라이브러리에서.  
@@ -148,7 +131,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
@@ -165,7 +148,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 **VARIANT_FALSE** 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
@@ -182,7 +165,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
@@ -199,7 +182,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 **COLOR_BTNFACE** 또는 **COLOR_WINDOW** (에 따라 호스트 창의 부모 인지 여부는 대화 상자)이이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
@@ -216,7 +199,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 **VARIANT_FALSE** 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
@@ -267,7 +250,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을이 속성의 값을 기본값으로 기본 GUI 글꼴 또는 시스템 글꼴을 사용합니다.  
   
 ##  <a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
@@ -284,7 +267,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 속성의 값을 기본값으로 시스템 창 텍스트 색을 사용 하는 ATL 호스트 개체 구현 합니다.  
   
 ##  <a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
@@ -320,7 +303,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
@@ -351,11 +334,11 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현 시 항상 반환 **VARIANT_FALSE** 이 속성의 값으로.  
   
 ##  <a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
- **ShowHatching** 앰비언트 속성이 무늬 자체 그리기 되어야 하는 경우 찾을 컨트롤을 찾을 수 있습니다.  
+ **ShowHatching** 앰비언트 속성이 무늬 자체 그리기 해야 하는 경우 찾을 컨트롤을 찾을 수 있습니다.  
   
 ```
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
@@ -368,7 +351,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현 시 항상 반환 **VARIANT_FALSE** 이 속성의 값으로.  
   
 ##  <a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
@@ -402,7 +385,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
@@ -436,7 +419,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
@@ -453,7 +436,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 **COLOR_BTNFACE** 또는 **COLOR_WINDOW** (에 따라 호스트 창의 부모 인지 여부는 대화 상자)이이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
@@ -470,7 +453,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 **VARIANT_FALSE** 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
@@ -504,7 +487,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 **DOCHOSTUIFLAG_NO3DBORDER** 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
@@ -521,7 +504,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을이 속성의 값을 기본값으로 기본 GUI 글꼴 또는 시스템 글꼴을 사용합니다.  
   
 ##  <a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
@@ -538,7 +521,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 속성의 값을 기본값으로 시스템 창 텍스트 색을 사용 하는 ATL 호스트 개체 구현 합니다.  
   
 ##  <a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
@@ -555,7 +538,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 속성의 값을 기본값으로 사용자의 기본 로캘을 사용 하는 ATL 호스트 개체 구현 합니다.  
   
 ##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
@@ -572,7 +555,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
   
 ##  <a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
@@ -603,7 +586,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  ATL 호스트 개체 구현을 사용 하 여 `VARIANT_TRUE` 이 속성의 값을 기본값으로 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
@@ -611,7 +594,6 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
  [IAxWinHostWindow 인터페이스](../../atl/reference/iaxwinhostwindow-interface.md)   
  [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-
 
 
 

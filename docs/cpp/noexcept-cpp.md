@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a45a15fcc2e29a31bc43ab493aa15b58985bf336
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5068c7cf010c128fd7954ddfd356f49158bf6f17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="noexcept-c"></a>noexcept(C++)
 **C + + 11:** 함수 예외가 throw 될 가능성이 있는지 여부를 지정 합니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
  
  함수로 표시 `noexcept` 직접 또는 간접적으로 호출 하는 모든 함수는 또한 하는 경우에 `noexcept` 또는 `const`합니다. 컴파일러 최대 생성 될 수 있는 예외에 대 한 모든 코드 경로 반드시 확인 하지 않습니다는 `noexcept` 함수입니다. 예외가 않습니다 표시 된 함수의 외부 범위를 종료 하는 경우 `noexcept`, [std:: terminate](../standard-library/exception-functions.md#terminate) 가 즉시 호출 및 모든 범위에 개체의 소멸자가 호출 될 보장 되지 않습니다. 사용 하 여 `noexcept` 동적 예외 지정자는 대신 `throw`, C + + 11에서 사용 되지 않습니다 되며 Visual Studio에서 나중에 완전히 구현입니다. 적용 하는 것이 좋습니다 `noexcept` 예외가 호출 스택으로 전파 하는 데는 사용할 수 있는 모든 함수에 있습니다. 함수를 선언 `noexcept`, 다양 한 컨텍스트에서 보다 효율적인 코드를 생성 하도록 컴파일러에 있습니다.    
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 해당 인수를 복사 하는 템플릿 함수를 선언할 수 있습니다 `noexcept` 복사 중인 개체가 일반 이전 데이터 형식 (POD) 조건을 사용 하 여 합니다. 이러한 함수는 다음과 같이 선언될 수 있습니다.  
   
 ```cpp  

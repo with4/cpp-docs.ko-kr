@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bef78ba6047305ccb20e5740ae03535ca2c366b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be6aff46df500a55665f85f6f462514985885b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-counting"></a>참조 횟수
 자체 COM 개체가 더 이상 사용 되지 것으로 확인 하는 경우 메모리에서 개체를 제거 하려면 자동으로 시도 하지 않습니다. 대신, 개체 프로그래머가 사용 하지 않는 개체를 제거 해야 합니다. 프로그래머가 여부는 개체를 제거할 수 참조 횟수에 따라 결정 합니다.  

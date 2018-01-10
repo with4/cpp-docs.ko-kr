@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 728da6b530c16a45ac2cc83a5f409eaff198bd3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eada9ed75bd69122523350536d0757e98b31358d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-macros"></a>레지스트리 매크로
 이러한 매크로 유용한 형식 라이브러리 및 레지스트리 시설을 정의 합니다.  
@@ -71,7 +72,7 @@ DECLARE_LIBID( libid )
 ### <a name="remarks"></a>설명  
  사용 하 여 `DECLARE_LIBID` 에 `CAtlModuleT`-클래스를 파생 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  ATL 프로젝트 마법사에서 생성 된 아닌 특성을 사용이 매크로 사용 하는 예제를 갖습니다.  
   
 ##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
@@ -133,7 +134,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="remarks"></a>설명  
  사용 하 여 `DECLARE_REGISTRY_APPID_RESOURCEID` 에 `CAtlModuleT`-클래스를 파생 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  클래스 추가 코드 마법사로 ATL 프로젝트에 추가 되는 클래스가이 매크로 사용 하는 예제를 갖습니다.  
   
 ##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  

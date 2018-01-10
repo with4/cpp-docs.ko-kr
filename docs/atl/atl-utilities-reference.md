@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd8bcd1cf83c134d4a3709329093ba0eeececde1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-utilities-reference"></a>ATL 유틸리티 참조
 형식의 경로 Url을 조작 하기 위한 코드를 제공 하는 ATL [CPathT](../atl/reference/cpatht-class.md) 및 [CUrl](../atl/reference/curl-class.md)합니다. 스레드 풀 [CThreadPool](../atl/reference/cthreadpool-class.md), 응용 프로그램에서 사용할 수 있습니다. 이 코드는 atlpath.h 및 atlutil.h에서 찾을 수 있습니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 |[CUrl 클래스](../atl/reference/curl-class.md)|이 클래스는 URL을 나타냅니다. 기존 URL을 구문 분석 하는지 여부를 개별적으로 URL의 각 요소를 조작할 수 있습니다 문자열 또는 처음부터 문자열을 작성 합니다.|  
 |[CWorkerThread 클래스](../atl/reference/cworkerthread-class.md)|이 클래스에서 작업자 스레드 또는 기존을 사용 하 여, 하나 이상의 커널 개체 핸들을 대기 만들고 핸들 중 하나에 신호가 전달 될 때 지정 된 클라이언트 함수를 실행 합니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  

@@ -34,11 +34,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 46181817aaf455ef777ba479a1bd2abe774ba792
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c83765da12b7e29d3e90037508a3cba4aa6d1ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gettimezone"></a>_get_timezone
 현지 시간과 UTC 사이의 차이(초)를 검색합니다.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_get_timezone`|\<time.h>|  
   

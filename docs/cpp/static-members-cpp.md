@@ -24,11 +24,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb2597352fcc4a263dc2ceb93121a95dcd493f44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d19985271648e66aa86946c685608f805b1dfe1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-members-c"></a>정적 멤버(C++)
 클래스는 정적 멤버 데이터와 멤버 함수를 포함할 수 있습니다. 로 데이터 멤버가 선언 되는 경우 **정적**, 클래스의 모든 개체에 대 한 데이터의 복사본을 하나만 유지 됩니다.

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d4db358543430b5bba0da93bb3525398b3e675a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9efdcdc0863105f4a07a69c99a30fcd7f7f2ac92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-tokens"></a>C 토큰
 C 소스 프로그램에서 컴파일러가 인식하는 기본 요소는 "토큰"입니다. 토큰은 컴파일러가 구성 요소로 분할하지 않는 소스 프로그램 텍스트입니다.  

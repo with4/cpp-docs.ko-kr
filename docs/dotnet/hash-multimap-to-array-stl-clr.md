@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::to_array(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 멤버[STL/CLR]"
+title: 'hash_multimap:: to_array (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: a7fe11ba-5a0b-4152-b24d-8b142450863c
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 91b0f740b2612d7167f94a287e70a899b8795622
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::to_array(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copies the controlled sequence to a new array.  
+# <a name="hashmultimaptoarray-stlclr"></a>hash_multimap::to_array(STL/CLR)
+제어 되는 새 배열에 복사합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## 설명  
- The member function returns an array containing the controlled sequence.  You use it to obtain a copy of the controlled sequence in array form.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어 되는 시퀀스를 포함 하는 배열을 반환 합니다. 배열 형식으로 제어 되는 시퀀스의 복사본을 사용 하면 됩니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_multimap_to_array.cpp   
@@ -67,12 +68,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\] \[d 4\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_multimap(STL/CLR)](../dotnet/hash-multimap-stl-clr.md)

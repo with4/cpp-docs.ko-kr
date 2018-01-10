@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7635595adedf961c014bf8792316ca4943dc84a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-function-and-program-execution"></a>기본 함수 및 프로그램 실행
 모든 C 프로그램에는 **main**이라는 이름을 지정해야 하는 기본(main) 함수가 있습니다. 코드가 유니코드 프로그래밍 모델을 따르는 경우 **main**의 와이드 문자 버전인 **wmain**을 사용할 수 있습니다. **main** 함수는 프로그램 실행을 위한 시작 지점 역할을 하며, 일반적으로 프로그램의 다른 함수로 호출을 보내 프로그램 실행을 제어합니다. 프로그램은 여러 가지 이유로 프로그램의 다른 지점에서 종료될 수 있지만 대개 **main** 끝에서 실행을 중지합니다. 때때로 특정 오류가 감지될 때 등에 프로그램을 강제 종료해야 할 수 있습니다. 이렇게 하려면 **exit** 함수를 사용합니다. [exit](../c-runtime-library/reference/exit-exit-exit.md) 함수 사용에 대한 정보 및 예제는 *런타임 라이브러리 참조*를 참조하세요.  

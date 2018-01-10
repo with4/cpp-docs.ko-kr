@@ -1,50 +1,50 @@
 ---
-title: "/SAFESEH(이미지에 안전한 예외 처리기 포함) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/SAFESEH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SAFESEH 링커 옵션"
-  - "-SAFESEH 링커 옵션"
-  - "SAFESEH 링커 옵션"
+title: "-SAFESEH (이미지에 안전한 예외 처리기를 포함) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /SAFESEH
+dev_langs: C++
+helpviewer_keywords:
+- /SAFESEH linker option
+- -SAFESEH linker option
+- SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1c57a882e3a421d03b2edf97c9fb4bf2f352e5d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /SAFESEH(이미지에 안전한 예외 처리기 포함)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH(이미지에 안전한 예외 처리기 포함)
 ```  
 /SAFESEH[:NO]  
 ```  
   
- **\/SAFESEH**를 지정하면 링커에서는 이미지의 안전한 예외 처리기 테이블을 만들 수 있을 경우에만 이미지를 생성합니다.  이 테이블은 해당 운영 체제에서 해당 이미지에 올바른 예외 처리기를 지정합니다.  
+ 때 **/SAFESEH** 지정, 링커에서 이미지의 안전한 예외 처리기 테이블을 만들 수 있을 경우에 이미지를 생성 합니다. 이 테이블은 예외 처리기는 이미지에 사용할 운영 체제를 지정 합니다.  
   
- **\/SAFESEH**는 x86을 대상으로 링크할 때만 사용할 수 있습니다.  예외 처리기가 이미 포함되어 있는 플랫폼에 대해서는 **\/SAFESEH**가 지원되지 않습니다.  예를 들어 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 와 ARM 에서는 모든 예외 처리기가 PDATA에 포함되어 있습니다.  ML64.exe는 SEH 정보\(XDATA 및 PDATA\)를 이미지에 생성하는 주석을 추가하는 기능을 지원합니다. 이 기능을 통해 ml64 함수에서 해제할 수 있습니다.  자세한 내용은 [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md)를 참조하십시오.  
+ **/SAFESEH** x86에 대 한 연결 때만 유효 대상으로 합니다. **/SAFESEH** 예외 처리기에 이미 있는 플랫폼에 대 한 지원 되지 않습니다. 예를 들어 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 및 ARM에서는 모든 예외 처리기가 PDATA에 표시됩니다. ML64.exe는 ml64 함수를 통해 해제할 수 있도록 이미지에 추가 (XDATA 및 PDATA) SEH 정보를 생성 하는 주석을 지원 합니다. 참조 [MASM (ml64.exe) x64](../../assembler/masm/masm-for-x64-ml64-exe.md) 자세한 정보에 대 한 합니다.  
   
- **\/SAFESEH**를 지정하지 않은 경우 링커에서는 모든 모듈이 안전한 예외 처리 기능과 호환될 때만 안전한 예외 처리기 테이블이 있는 이미지를 생성합니다.  안전한 예외 처리 기능과 호환되지 않는 모듈이 있으면 결과적으로 만들어지는 이미지에 안전한 예외 처리기 테이블이 포함되지 않습니다.  [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)에서 WINDOWSCE 또는 EFI\_\* 옵션 중 하나를 지정할 경우에는 링커에서 안전한 예외 처리기 테이블이 있는 이미지를 생성하려고 시도하지 않습니다. 이러한 하위 시스템에서는 해당 정보를 사용할 수 없기 때문입니다.  
+ 경우 **/SAFESEH** 을 지정 하지 않으면 링커는 모든 모듈 안전한 예외 처리 기능과 호환 될 때만 안전한 예외 처리기 테이블을 사용 하 여 이미지를 생성 합니다. 모든 모듈 안전한 예외 처리 기능과 호환 되었으면 결과 이미지에 안전한 예외 처리기 테이블을 포함 되지 않습니다. 경우 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE 또는 EFI_ * 옵션 중 하나를 지정 수 모두 하위 시스템으로 안전한 예외 처리기 테이블을 사용 하 여 이미지를 생성 하기 위해 링커 시도 하지 것입니다는 정보를 사용 합니다.  
   
- **\/SAFESEH:NO**를 지정하면 링커에서는 모든 모듈이 안전한 예외 처리 기능과 호환되더라도 안전한 예외 처리기 테이블이 있는 이미지를 생성하지 않습니다.  
+ 경우 **/SAFESEH:NO** 를 지정 링커는 모든 모듈 안전한 예외 처리 기능과와 호환 되는 경우에 안전한 예외 처리기 테이블을 사용 하 여 이미지를 생성 하지 않습니다.  
   
- 링커에서 이미지를 생성할 수 없는 가장 일반적인 이유는 링커에 대한 입력 파일\(모듈\) 중 하나 이상이 안전한 예외 처리기 기능과 호환되지 않기 때문입니다.  또한 모듈이 안전한 예외 처리기와 호환되지 않는 일반적인 이유는 모듈이 이전 버전의 Visual C\+\+ 컴파일러로 만들어졌기 때문입니다.  
+ 이미지를 생성할 수 링커에 대 한 가장 일반적인 이유 하나 이상의 입력된 파일 (모듈)을 링커에 안전한 예외 처리기 기능과 호환 되지 않았습니다. 때문입니다. 안전한 예외 처리기와 호환 되지 모듈에 대 한 일반적인 이유에는 이전 버전의 Visual c + + 컴파일러로 작성 되었으므로입니다.  
   
- [.SAFESEH](../../assembler/masm/dot-safeseh.md)를 사용하여 함수를 구조적 예외 처리기로 등록할 수도 있습니다.  
+ 사용 하 여 구조적된 예외 처리기로 함수를 등록할 수도 있습니다 [합니다. SAFESEH](../../assembler/masm/dot-safeseh.md)합니다.  
   
- 안전한 예외 처리기가 있거나 예외 처리기가 없는 것으로 기존 이진 데이터를 표시할 수 없습니다. 안전한 예외 처리에 대한 정보는 빌드할 때 추가되어야 합니다.  
+ 기존 표시할 수 없는 이진 또는 있는 것으로 안전한 예외 처리기 (예외 처리기가 없는); 빌드 시에 안전한 예외 처리에 대 한 정보를 추가 합니다.  
   
- 링커에서 안전한 예외 처리기 테이블을 만들 수 있는지 여부는 C 런타임 라이브러리를 사용하는 응용 프로그램에 따라 결정됩니다.  [\/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)를 사용하여 링크하면서 안전한 예외 처리기 테이블이 필요한 경우에는 loadcfg.c CRT 소스 파일과 같이 Visual C\+\+용으로 정의된 모든 항목이 들어 있는 로드 구성 구조를 제공해야 합니다.  예를 들면 다음과 같습니다.  
+ C 런타임 라이브러리를 사용 하 여 응용 프로그램에 안전한 예외 처리기 테이블을 작성 하는 링커의 기능에 따라 다릅니다. 사용 하 여 링크 [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) 안전한 예외 처리기 테이블, (예: loadcfg.c CRT 소스 파일에서 확인할 수 있습니다) 로드 구성 구조를 제공 해야 하 고 Visual c + +에 대해 정의 된 모든 항목을 포함 하 합니다. 예:  
   
 ```  
 #include <windows.h>  
@@ -105,20 +105,20 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 };  
 ```  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 선택합니다.  
+2.  선택 된 **링커** 폴더입니다.  
   
-3.  **명령줄** 속성 페이지를 선택합니다.  
+3.  선택 된 **명령줄** 속성 페이지.  
   
-4.  **추가 옵션** 상자에 옵션을 입력합니다.  
+4.  에 옵션을 입력에서 **추가 옵션** 상자입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

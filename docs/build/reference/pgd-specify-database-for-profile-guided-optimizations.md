@@ -17,17 +17,18 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 37113ef23adbbb50e36b51ed8ef0035ee20e885e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb61395d9f3b8c98e17e3683a7c3897b9315d78b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD(프로필 기반 최적화를 위한 데이터베이스 지정)
 /PGD:`filename`  
   
 ## <a name="remarks"></a>설명  
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
  `filename`  
  실행 중인 프로그램에 대 한 정보를 보관 하는 데 사용 될.pgd 파일의 이름을 지정 합니다.  

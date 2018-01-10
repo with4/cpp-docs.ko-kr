@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8659a30ef17811c84984c2e61866e3a879ad3a6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8cbf3aa44331bc482928ae3ddb26bb59b751b9e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmapsizetype-stlclr"></a>hash_map::size_type(STL/CLR)
 두 요소 사이의 부호가 있는 거리의 형식입니다.  
@@ -33,7 +36,7 @@ typedef int size_type;
 ## <a name="remarks"></a>설명  
  형식은은 음수가 아닌 요소 수를 설명 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_map_size_type.cpp   

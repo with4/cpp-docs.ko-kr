@@ -1,37 +1,40 @@
 ---
 title: "데이터 페치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "데이터[C++], 페칭"
-  - "페칭"
-  - "OLE DB 소비자 템플릿[C++], 데이터 페칭(fetching)"
-  - "행 집합[C++], 페칭"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], fetching
+- rowsets [C++], fetching
+- fetching
+- OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b18847666d4f0f57d23e9b179e3e186a1b3ff736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 데이터 페치
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-데이터 소스, 세션 및 행 집합 개체를 연 후에는 데이터를 페치할 수 있습니다.  사용하는 접근자의 형식에 따라 열을 바인딩해야 하는 경우도 있습니다.  
+# <a name="fetching-data"></a>데이터 페치
+데이터 원본, 세션 및 행 집합 개체를 연 후에 데이터를 인출할 수 있습니다. 사용 하는 접근자의 형식에 따라 열을 바인딩할 할 수 있습니다.  
   
-### 데이터를 페치하려면  
+### <a name="to-fetch-data"></a>데이터를 인출  
   
-1.  알맞은 **Open** 명령을 사용하여 행 집합을 엽니다.  
+1.  적절 한 사용 하 여 행 집합을 열고 **열려** 명령입니다.  
   
-2.  `CManualAccessor`를 사용하고 있으면, 아직 출력 열을 바인딩하지 않은 경우 출력 열을 바인딩합니다.  열을 바인딩하려면 다음 예제와 같이 `GetColumnInfo`를 호출한 다음 바인딩을 가진 접근자를 만듭니다.  
+2.  사용 중인 경우 `CManualAccessor`을 아직 수행 하지 않은 경우 출력 열을 바인딩합니다. 열을 바인딩하려면 호출 `GetColumnInfo`, 다음 예제에 나와 있는 것 처럼 접근자에 바인딩을 만듭니다.  
   
     ```  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -48,7 +51,7 @@ caps.handback.revision: 8
     rs.Bind();  
     ```  
   
-3.  `while` 루프를 작성하여 데이터를 검색합니다.  다음 예제에서처럼 루프에서 `MoveNext`를 호출하여 커서를 다음으로 이동하고 S\_OK에 대한 반환 값을 검사합니다.  
+3.  작성 한 `while` 루프 데이터를 검색 합니다. 루프에 호출 `MoveNext` 커서를 이동 하 고 다음 예제와 같이 S_OK에 대 한 반환 값을 검사 하려면:  
   
     ```  
     while (rs.MoveNext() == S_OK)  
@@ -58,9 +61,9 @@ caps.handback.revision: 8
     }  
     ```  
   
-4.  `while` 루프 내에서 접근자 형식에 따라 데이터를 페치할 수 있습니다.  
+4.  내에서 `while` 루프 접근자 형식에 따라 데이터를 인출할 수 있습니다.  
   
-    -   [CAccessor](../../data/oledb/caccessor-class.md) 클래스를 사용하는 경우, 데이터 멤버가 들어 있는 사용자 레코드가 있어야 합니다.  다음 예제와 같이 이들 데이터 멤버를 사용하여 데이터에 액세스할 수 있습니다.  
+    -   사용 하는 경우는 [CAccessor](../../data/oledb/caccessor-class.md) 클래스 데이터 멤버를 포함 하는 사용자 레코드가 있어야 합니다. 다음 예제에 나와 있는 것 처럼 이들 데이터 멤버를 사용 하 여 데이터를 액세스할 수 있습니다.  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -72,7 +75,7 @@ caps.handback.revision: 8
         }  
         ```  
   
-    -   `CDynamicAccessor` 또는 `CDynamicParameterAccessor` 클래스를 사용하는 경우, 다음 예제에서처럼 `GetValue` 및 `GetColumn` 액세스 함수를 사용하여 데이터를 페치할 수 있습니다.  사용하고 있는 데이터 형식을 확인하려는 경우에는 `GetType`을 사용하십시오.  
+    -   사용 하는 경우는 `CDynamicAccessor` 또는 `CDynamicParameterAccessor` 클래스 액세스 함수를 사용 하 여 데이터를 인출할 수 `GetValue` 및 `GetColumn`다음 예제에 나온 것 처럼 합니다. 사용 하는, 사용 하 여 데이터의 형식을 결정 하려면 `GetType`합니다.  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -87,7 +90,7 @@ caps.handback.revision: 8
         }  
         ```  
   
-    -   `CManualAccessor`를 사용하는 경우 다음 예제와 같이 사용자 고유의 데이터 멤버를 지정하여 바인딩한 후 직접 액세스해야 합니다.  
+    -   사용 하는 경우 `CManualAccessor`, 사용자 고유의 데이터 멤버를 지정, 직접, 바인딩 및 예제에 나와 있는 것 처럼, 직접 액세스 해야 합니다.  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -99,5 +102,5 @@ caps.handback.revision: 8
         }  
         ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿 작업](../../data/oledb/working-with-ole-db-consumer-templates.md)

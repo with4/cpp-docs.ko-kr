@@ -1,32 +1,33 @@
 ---
 title: "ICommandTextImpl 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandText 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ICommandText
+dev_langs: C++
+helpviewer_keywords: ICommandText class
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 53b5e19fbeaccfb61380054426315ad9b92f624a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandTextImpl 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Provides an implementation for the [ICommandText](https://msdn.microsoft.com/en-us/library/ms714914.aspx) interface.  
+# <a name="icommandtextimpl-class"></a>ICommandTextImpl 클래스
+에 대 한 구현을 제공는 [ICommandText](https://msdn.microsoft.com/en-us/library/ms714914.aspx) 인터페이스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <class T >  
@@ -34,31 +35,31 @@ class ATL_NO_VTABLE ICommandTextImpl
    : public ICommandImpl<T, ICommandText>  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- The command class derived from **ICommandTextImpl**.  
+ 명령 클래스에서 파생 된 **ICommandTextImpl**합니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Interface Methods  
-  
-|||  
-|-|-|  
-|[GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)|Returns the text command set by the last call to [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|  
-|[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)|Sets the command text, replacing the existing command text.|  
-  
-### 데이터 멤버  
+### <a name="interface-methods"></a>인터페이스 메서드  
   
 |||  
 |-|-|  
-|[m\_strCommandText](../../data/oledb/icommandtextimpl-m-strcommandtext.md)|Stores the command text.|  
+|[GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)|텍스트 명령 집합에 대 한 마지막 호출에서 반환 [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)합니다.|  
+|[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)|기존 명령 텍스트를 바꿀 명령 텍스트를 설정 합니다.|  
   
-## 설명  
- A mandatory interface on commands.  
+### <a name="data-members"></a>데이터 멤버  
   
-## 요구 사항  
- **Header:** altdb.h  
+|||  
+|-|-|  
+|[m_strCommandText](../../data/oledb/icommandtextimpl-m-strcommandtext.md)|명령 텍스트를 저장합니다.|  
   
-## 참고 항목  
+## <a name="remarks"></a>설명  
+ 명령에서 필수 인터페이스입니다.  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** altdb.h  
+  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,49 +1,51 @@
 ---
-title: "이중 썽킹(C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 컴파일러 옵션[C++], 이중 썽킹"
-  - "이중 썽크"
-  - "interop[C++], 이중 썽킹"
-  - "상호 운용성[C++], 이중 썽킹"
-  - "혼합형 어셈블리[C++], 이중 썽킹"
+title: "이중 썽킹 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- double thunks
+- interop [C++], double thunking
+- mixed assemblies [C++], double thunking
+- /clr compiler option [C++], double thunking
+- interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 이중 썽킹(C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이중 썽킹은 관리되는 컨텍스트의 함수 호출로 Visual C\+\+ 관리되는 함수를 호출할 때 관리되는 함수를 호출하기 위해 함수의 네이티브 진입점을 호출하는 프로그램 실행에서 발생할 수 있는 성능 저하를 가리킵니다.  이 항목에서는 이중 썽킹이 발생하는 위치와 이를 방지하여 성능을 향상시키는 방법에 대해 설명합니다.  
+# <a name="double-thunking-c"></a>이중 썽킹(C++)
+이중 썽킹 Visual c + + 관리 되는 함수는 프로그램 실행 하 고 관리 되는 컨텍스트 호출에 함수 호출 함수의 네이티브 진입점을 관리 되는 함수를 호출 하려면 호출할 때 발생할 수 있는 성능 저하를 가리킵니다. 이 항목에서는 이중 썽킹 발생 하는 위치 및 성능을 향상 시키기 위해를 방지 하는 방법을 설명 합니다.  
   
-## 설명  
- 기본적으로 **\/clr:pure**가 아닌 **\/clr**를 사용하여 컴파일하는 경우 관리되는 함수의 정의로 인해 컴파일러에서 관리되는 진입점과 네이티브 진입점이 생성됩니다.  이 경우 네이티브 및 관리되는 호출 사이트에서 관리되는 함수를 호출할 수 있습니다.  그러나 네이티브 진입점이 있는 경우 이는 함수에 대한 모든 호출의 진입점으로 사용될 수 있습니다.  호출 함수가 관리되는 경우 네이티브 진입점은 관리되는 진입점을 호출합니다.  실제로 함수를 호출하려면 두 호출이 모두 필요하므로 이중 썽킹이 발생합니다.  예를 들어, 가상 함수는 항상 네이티브 진입점을 통해 호출됩니다.  
+## <a name="remarks"></a>설명  
+ 기본적으로 사용 하 여 컴파일할 때 **/clr**, 관리 되는 함수 정의 컴파일러 기본 진입점 및 관리 되는 진입점을 생성 하도록 합니다. 따라서 관리 되는 함수를 네이티브 모듈과 관리 호출 사이트에서 호출할 수 있습니다. 그러나 네이티브 진입점이 있으면이 함수에 대 한 모든 호출에 대 한 진입점을 수 있습니다. 호출 함수의 경우 관리 되는 경우 네이티브 진입점 관리 되는 진입점 다음 호출 합니다. 두 번 호출 함수를 호출 하는 데 필요한 실제로 (하므로 이중 썽킹). 예를 들어 가상 함수는 항상 네이티브 진입점을 통해 호출 됩니다.  
   
- 이를 해결하는 한 가지 방법은 [\_\_clrcall](../cpp/clrcall.md) 호출 규칙을 사용하여 함수가 관리되는 컨텍스트에서만 호출되고 관리되는 함수의 네이티브 진입점을 생성하지 않도록 컴파일러에 지시하는 것입니다.  
+ 하나의 해결책은 함수는만 호출할 것으로 관리 되는 컨텍스트를 사용 하 여를 관리 되는 함수에 대 한 네이티브 진입점을 생성 하지 않도록 컴파일러에 지시 하는 [__clrcall](../cpp/clrcall.md) 호출 규칙입니다.  
   
- 마찬가지로, 관리되는 함수를 내보내는 경우\([dllexport, dllimport](../cpp/dllexport-dllimport.md)\) 네이티브 진입점이 생성되고 해당 함수를 가져오고 호출하는 모든 함수가 네이티브 진입점을 통해 호출합니다.  이 상황에서 이중 썽킹이 발생하지 않도록 하려면 네이티브 내보내기\/가져오기 의미를 사용하지 말고 `#using`을 통해 메타데이터를 참조해야 합니다. 자세한 내용은 [\#using 지시문](../preprocessor/hash-using-directive-cpp.md)를 참조하십시오.  
+ 마찬가지로, 내보내면 ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) 관리 되는 함수 네이티브 진입점이 생성 되 고 네이티브 진입점을 통해 가져오고 해당 함수를 호출 하는 모든 함수를 호출 합니다. 이 경우 이중 썽킹를 방지 하려면 기본 내보내기/가져오기 의미 체계;을 사용 하지 마십시오 통해 메타 데이터를 단순히 참조 `#using` (참조 [#using 지시문](../preprocessor/hash-using-directive-cpp.md)).  
   
- 불필요한 이중 썽킹을 줄이기 위해 컴파일러가 업데이트되었습니다.  예를 들어, 반환 형식을 비롯하여 시그니처에 관리되는 형식이 있는 함수는 모두 암시적으로 `__clrcall`로 표시됩니다.  For more information on double thunk elimination, see [http:\/\/msdn.microsoft.com\/msdnmag\/issues\/05\/01\/COptimizations\/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ 이중 썽킹 불필요 한 줄이기 위해 컴파일러 업데이트 되었습니다. 로 모든 함수는 시그니처 (반환 형식 포함)에서 관리 되는 유형으로 암시적으로 표시 됩니다 예를 들어 `__clrcall`합니다. 이중 썽크 제거에 대 한 자세한 내용은 참조 하십시오. [http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx)합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
-### 설명  
- 다음 샘플에서는 이중 썽킹을 보여 줍니다.  **\/clr**를 사용하지 않고 네이티브로 컴파일하면 `main`의 가상 함수에 대한 호출을 통해 `T`의 복사 생성자에 대한 호출 하나와 소멸자에 대한 호출 하나가 생성됩니다.  **\/clr** 및 `__clrcall`을 사용하여 가상 함수를 선언하는 경우에도 비슷한 결과가 발생합니다.  그러나 **\/clr**를 사용하여 컴파일하는 경우 함수를 호출하면 복사 생성자에 대한 호출이 생성될 뿐만 아니라 네이티브에서 관리되는 형식으로의 썽크로 인해 복사 생성자에 대한 호출이 하나 더 생성됩니다.  
+### <a name="description"></a>설명  
+ 다음 예제에서는 이중 썽킹 네이티브 컴파일하면 (없이 **/clr**)의 가상 함수에 대 한 호출 `main` 를 한 번 호출 생성 `T`의 복사 생성자와 소멸자를 한 번 호출 합니다. 가상 함수가 선언 되는 경우 비슷한 동작이 이루어집니다 **/clr** 및 `__clrcall`합니다. 그러나으로 컴파일하는 경우 **/clr**, 함수 호출에서 복사 생성자를 호출 하지만 네이티브-관리 되는 썽크 인해 복사 생성자에 대 한 호출이 있습니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // double_thunking.cpp  
@@ -82,7 +84,7 @@ int main() {
 }  
 ```  
   
-### 샘플 출력  
+### <a name="sample-output"></a>샘플 출력  
   
 ```  
 __thiscall T::T(void)  
@@ -95,12 +97,12 @@ after calling struct S
 __thiscall T::~T(void)  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- 위 예제에서는 이중 썽킹이 발생하는 경우를 보여 주었습니다.  이 샘플에서는 이중 썽킹의 영향을 보여 줍니다.  `for` 루프에서는 가상 함수를 호출하고 프로그램은 실행 시간을 보고합니다.  **\/clr**를 사용하여 프로그램을 컴파일한 경우 실행 시간이 가장 느린 것으로 보고됩니다.  반면, **\/clr**를 사용하지 않고 컴파일하거나 `__clrcall`을 사용하여 가상 함수를 호출한 경우에 실행 시간이 가장 빠른 것으로 보고됩니다.  
+### <a name="description"></a>설명  
+ 앞의 예제에는 이중 썽킹 있는지 보여 줍니다. 이 샘플의 효과 보여 줍니다. `for` 루프 가상 함수를 호출 하는 프로그램은 실행 시간을 보고 합니다. 실행 시간이 가장 느린 프로그램으로 컴파일될 때 보고 됩니다 **/clr**합니다. 시간이 가장 빠른 없이 컴파일하는 경우 보고 **/clr** 사용 가상 함수를 선언 하는 경우 또는 `__clrcall`합니다.  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // double_thunking_2.cpp  
@@ -137,12 +139,12 @@ int main() {
 }  
 ```  
   
-### 샘플 출력  
+### <a name="sample-output"></a>샘플 출력  
   
 ```  
 4.2 seconds  
 after calling struct S  
 ```  
   
-## 참고 항목  
- [혼합형\(네이티브 및 관리\) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>참고 항목  
+ [혼합형(네이티브 및 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)

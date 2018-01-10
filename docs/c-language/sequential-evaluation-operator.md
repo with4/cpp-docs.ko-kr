@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df14f32b8b51d8b74b56a697f3928ff8da485a5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dee769d0a5bc2d0992dfb51de240bdd5e3d62d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sequential-evaluation-operator"></a>순차적 확인 연산자
 "쉼표 연산자"라고도 하는 순차 계산 연산자는 두 피연산자를 왼쪽에서 오른쪽으로 순차적으로 계산합니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  일부 컨텍스트에서는 쉼표를 구분 기호로 사용할 수 있습니다. 그러나 쉼표를 구분 기호로 사용하는 경우와 연산자로 사용하는 경우는 완전히 다르기 때문에 둘을 혼동하지 않도록 주의해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 순차 계산 연산자를 보여 줍니다.  
   
 ```  

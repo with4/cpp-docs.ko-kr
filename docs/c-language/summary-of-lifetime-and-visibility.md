@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e8c676a950979906bbc741679735ba452baec18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ee45ec7a2a842cc45c01c0e6f43ab49ba55aa3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>수명 및 표시 유형에 대한 요약
 다음 표에서는 대부분의 식별자에 대한 수명 및 표시 유형 특징을 요약합니다. 처음 세 열에서는 수명과 표시 유형을 정의하는 특성을 제공합니다. 처음 세 열에서 제공하는 특성이 있는 식별자의 수명과 표시 유형은 4번째 열과 5번째 열에 표시되어 있습니다. 가능한 모든 경우가 이 표에 포함되어 있지는 않습니다. 자세한 내용은 [저장소 클래스](../c-language/c-storage-classes.md)를 참조하세요.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 ||변수 정의|**static**|Global|블록|  
 ||변수 정의|**auto** 또는 **register**|로컬|블록|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 예제에서는 변수의 블록, 중첩 및 표시 유형을 보여 줍니다.  

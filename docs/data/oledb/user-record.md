@@ -1,32 +1,35 @@
 ---
 title: "사용자 레코드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 공급자, 사용자 레코드"
-  - "레코드, 사용자"
-  - "행 집합, 사용자 레코드"
-  - "사용자 레코드"
-  - "사용자 레코드, 설명"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, user
+- OLE DB providers, user record
+- user records
+- user records, described
+- rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 587f10c14a360d2c5bbf447d13a161f985edf5b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 사용자 레코드
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-사용자 레코드는 행 집합의 열 데이터를 나타내는 코드와 데이터 구조를 제공합니다.  사용자 레코드는 컴파일 타임이나 런타임에 만들 수 있습니다.  ATL OLE DB 공급자 마법사를 사용하여 공급자를 만들면 마법사가 다음과 같은 기본 사용자 레코드를 만듭니다. 이 경우 공급자 이름\(약식 이름\)을 "MyProvider"로 지정했다고 가정합니다.  
+# <a name="user-record"></a>사용자 레코드
+사용자 레코드에 대 한 행 집합 열 데이터를 나타내는 코드 및 데이터 구조를 제공 합니다. 컴파일 타임 또는 런타임 시 사용자 레코드를 만들 수 있습니다. ATL OLE DB 공급자 마법사를 사용 하 여 공급자를 만들 때 마법사는 다음과 같은 ("MyProvider"의 공급자 이름 [short name]로 지정 했다고 가정) 기본 사용자 레코드를 만듭니다.  
   
 ```  
 class CWindowsFile:  
@@ -45,35 +48,35 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- OLE DB 공급자 템플릿은 클라이언트와의 상호 작용에 관련된 모든 OLE DB 사항을 처리합니다.  공급자는 응답에 필요한 열 데이터를 얻기 위해 사용자가 사용자 레코드에 반드시 넣어야 할 함수인 `GetColumnInfo` 함수를 호출합니다.  예를 들어, 다음과 같이 이 함수를 .h 파일에 선언하여 사용자 레코드의 `GetColumnInfo`를 명시적으로 재정의할 수 있습니다.  
+ OLE DB 공급자 템플릿 클라이언트와의 상호 작용에 대 한 모든 OLE DB 사항을 처리합니다. 공급자는 응답에 필요한 열 데이터를 얻기 위해 호출는 `GetColumnInfo` 사용자 레코드에 배치 해야 하는 함수입니다. 명시적으로 재정의할 수 `GetColumnInfo` 사용자 레코드에서 예를 들어 선언 하 여.h 파일에서 다음과 같이 합니다.  
   
 ```  
 template <class T>  
 static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)   
 ```  
   
- 다음과 일치합니다.  
+ 다음 코드와 동일합니다.  
   
 ```  
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)  
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)  
 ```  
   
- 또한 사용자 레코드의 .cpp 파일에서 `GetColumnInfo`를 구현해야 합니다.  
+ 구현 해야 `GetColumnInfo` 사용자 레코드의.cpp 파일에 있습니다.  
   
- PROVIDER\_COLUMN\_MAP 매크로를 사용하면 `GetColumnInfo` 함수를 만드는 데 도움이 됩니다.  
+ 만드는 데에 도움이 PROVIDER_COLUMN_MAP 매크로 `GetColumnInfo` 함수:  
   
--   BEGIN\_PROVIDER\_COLUMN\_MAP은 함수 프로토타입과 **ATLCOLUMNINFO** 구조의 정적 배열을 정의합니다.  
+-   함수 프로토타입 및 정적 배열에 BEGIN_PROVIDER_COLUMN_MAP 정의 **ATLCOLUMNINFO** 구조입니다.  
   
--   PROVIDER\_COLUMN\_ENTRY는 단일 **ATLCOUMNINFO**를 정의하고 초기화합니다.  
+-   PROVIDER_COLUMN_ENTRY 정의 하 고 단일 초기화 **ATLCOLUMNINFO**합니다.  
   
--   END\_PROVIDER\_COLUMN\_MAP은 배열과 함수를 닫습니다.  또한 이 함수는 `pcCols`매개 변수에 배열 요소의 개수를 배치합니다.  
+-   END_PROVIDER_COLUMN_MAP 배열 및 함수를 닫습니다. 또한 배열 요소 개수를 파악할 수는 `pcCols` 매개 변수입니다.  
   
- 런타임에 사용자 레코드를 만들면 **GetColumnInfo** 가 `pThis` 매개 변수를 사용하여 행 집합이나 명령 인스턴스에 대한 포인터를 받습니다.  명령과 행 집합은 `IColumnsInfo` 인터페이스를 지원하므로 이 포인터에서 열 정보를 가져올 수 있습니다.  
+ 런타임 시 사용자 레코드를 만들 때 **GetColumnInfo** 사용 하 여는 `pThis` 매개 변수 행 집합 또는 명령 인스턴스에 대 한 포인터를 받을 수 있습니다. 명령 및 행 집합을 지원 해야 합니다는 `IColumnsInfo` 인터페이스, 하므로이 포인터에서 열 정보를 가져올 수 있습니다.  
   
- **CommandClass**와 **RowsetClass**는 사용자 레코드를 사용하는 명령과 행 집합입니다.  
+ **CommandClass** 및 **RowsetClass** 명령 및 사용자 레코드를 사용 하는 행 집합입니다.  
   
- 사용자 레코드에서 `GetColumnInfo`를 재정의하는 자세한 예제는 [소비자에게 반환되는 열을 동적으로 결정](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)을 참조하십시오.  
+ 재정의 하는 방법의 자세한 예에 대 한 `GetColumnInfo` 사용자 레코드에 참조 [소비자에 게 반환 되는 열을 동적으로 결정](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

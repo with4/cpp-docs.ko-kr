@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bc3947dc31c1355a67864e509c28dc3569b488b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cfa27e2d76e546748258a5f6c1af1df9ded28f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-time-routines-by-category"></a>범주별 런타임 루틴
 이 단원에서는 Microsoft 런타임 라이브러리 루틴을 범주별로 나열하고 설명합니다. 참조상의 편의를 위해 일부 루틴은 둘 이상의 범주에 나열됩니다. 멀티바이트 문자 루틴 및 와이드 문자 루틴은 이들이 존재하는 싱글바이트 문자 상응 항목과 함께 그룹화됩니다.  

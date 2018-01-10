@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f7b85af65da564f7231d606933ff1ebbb90d5af0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f44da30387421123ab6998cfbb2855a743aace39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="routine-mappings"></a>루틴 매핑
 제네릭 텍스트 루틴 매핑은 TCHAR.H에 정의되어 있습니다. `_tccpy` 및 `_tclen`은 MBCS 모델의 함수에 매핑됩니다. 이러한 함수는 완전성을 위해 SBCS 및 유니코드 모델의 매크로 또는 인라인 함수에 매핑됩니다. 제네릭 텍스트 루틴에 대한 자세한 내용은 `SBCS`, `_MBCS` 또는 `_UNICODE` 관련 루틴에 대한 도움말 항목을 참조하십시오.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
   
  자세한 내용은 [TCHAR.H의 제네릭 텍스트 매핑](../text/generic-text-mappings-in-tchar-h.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |제네릭 텍스트 루틴 이름|SBCS(_UNICODE 및 MBCS가 정의되지 않음)|_MBCS 정의됨|_UNICODE 정의됨|  
 |--------------------------------|-------------------------------------------|--------------------|-----------------------|  

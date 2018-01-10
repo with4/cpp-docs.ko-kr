@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebfa692f422283e69395639295b3bf2ace1741ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bff1ab29841ff2dd9973d538bb763d1fc1126a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="displaying-assertions"></a>어설션 표시
 서비스에 연결 된 클라이언트는 응답 하지 않는 것 처럼, 서비스 어설션 있고 볼 수 없는 메시지 상자에 표시 될 수 있습니다. 코드를 디버깅 하려면 Visual c + +의 디버거를 사용 하 여이 확인할 수 있습니다 (참조 [작업 관리자를 사용 하 여](../atl/using-task-manager.md) 이 섹션의 앞부분에 나오는).  

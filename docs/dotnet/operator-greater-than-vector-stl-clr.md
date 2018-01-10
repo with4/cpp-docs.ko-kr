@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 585da6a571ac39ab177cafd654a3bc8e5933c48b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f3054fd8ef62716f77269887f419acf3535e4a98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-vector-stlclr"></a>연산자&gt; (vector) (STL/CLR)
 비교에 보다 큰 사용 되는 벡터입니다.  
@@ -42,7 +45,7 @@ template<typename Value>
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `right` `<` `left`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 `right` 두 벡터 요소에서 비교 된 요소를가 하는 경우.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_vector_operator_gt.cpp   

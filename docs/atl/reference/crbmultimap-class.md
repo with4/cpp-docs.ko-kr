@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e359b6bcb7ba201991575ab310e0db9b3b4f06a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79ef7fdd5799b01ec115befcd50bbe4625d48bea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap 클래스
 이 클래스는 각 키 빨간색 검정 이진 트리를 사용 하 여 둘 이상의 값에 연결할 수 있게 하는 매핑 구조를 나타냅니다.  
@@ -111,7 +112,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
 ##  <a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
@@ -145,7 +146,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
 ##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
@@ -175,7 +176,7 @@ V& GetNextValueWithKey(
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
 ##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
@@ -216,7 +217,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
  `key`  
  에 추가할 키 값은 `CRBMultiMap` 개체입니다.  
   
- *value*  
+ *값*  
  에 추가할 값의 `CRBMultiMap` 와 연결 된 개체 `key`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -225,7 +226,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="remarks"></a>설명  
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
 ##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
@@ -247,7 +248,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - printf
 - _tprintf
 - wprintf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - printf function
 - printf_l function
@@ -47,30 +45,16 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bb6f97733d7609c63c0f9f3f559200fd9564ad5d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60ac5a99e307e73569fe165d675e90c5da2af3a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 서식이 지정된 출력을 표준 출력 스트림에 인쇄합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)를 참조하세요.  
@@ -120,7 +104,7 @@ int _wprintf_l(
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -142,7 +126,7 @@ Line one
  [형식 지정](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)은 항상 백분율 기호(`%`)로 시작되며 왼쪽에서 오른쪽으로 설정됩니다. `printf`는 첫 번째 형식 지정(있는 경우)을 발견하면 `format` 다음의 첫 번째 인수 값을 변환하여 적절하게 출력합니다. 두 번째 형식 지정이 있으면 두 번째 인수가 변환되는 출력되는 식으로 실행이 계속됩니다. 형식 지정보다 인수가 더 많으면 추가 인수는 무시됩니다. 모든 형식 지정에 해당하는 충분한 인수가 없으면 결과는 정의되지 않습니다.  
   
 > [!IMPORTANT]
->  `format`이 사용자 정의 문자열이 아닌지 확인하십시오.  
+>  `format` 이 사용자 정의 문자열이 아닌지 확인하세요.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
@@ -153,14 +137,14 @@ Line one
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`printf`, `_printf_l`|\<stdio.h>|  
 |`wprintf`, `_wprintf_l`|\<stdio.h> 또는 \<wchar.h>|  
   
  콘솔은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 지원되지 않습니다. 콘솔에 연결된 표준 스트림 핸들 `stdin`, `stdout` 및 `stderr`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 C 런타임 함수에서 사용되기 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_printf.c  

@@ -1,36 +1,38 @@
 ---
 title: "CAccessor 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CAccessor<T>"
-  - "ATL::CAccessor"
-  - "CAccessor"
-  - "ATL::CAccessor<T>"
-  - "ATL.CAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessor 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CAccessor<T>
+- ATL::CAccessor
+- CAccessor
+- ATL::CAccessor<T>
+- ATL.CAccessor
+dev_langs: C++
+helpviewer_keywords: CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f3f92d86ff67cc4ebfa752e84373c4f77bf3dc55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CAccessor 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Represents one of the accessor types.  
+# <a name="caccessor-class"></a>CAccessor 클래스
+접근자 형식 중 하나를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -40,20 +42,20 @@ Represents one of the accessor types.
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- The user record class.  
+ 사용자 레코드 클래스입니다.  
   
-## 설명  
- It is used when a record is statically bound to a data source.  The record contains the buffer.  This class supports multiple accessors on a rowset.  
+## <a name="remarks"></a>설명  
+ 레코드를 데이터 원본에 정적으로 바인딩할 때 사용 됩니다. 이 레코드는 버퍼에 포함 합니다. 이 클래스는 행 집합에서 여러 접근자를 지원합니다.  
   
- Use this accessor type when you know the structure and the type of the database.  
+ 구조 및 데이터베이스의 형식을 알고 있는 경우이 접근자 유형을 사용 합니다.  
   
- If your accessor contains fields that point to memory \(such as a `BSTR` or interface\) that must be freed, call the member function [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) before the next record is read.  
+ 접근자에 메모리를 가리키는 필드를 포함 하는 경우 (같은 `BSTR` 또는 인터페이스) 수 있어야 하 해제, 멤버 함수를 호출 [caccessorrowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) 후 다음 레코드를 읽을 합니다.  
   
-## 요구 사항  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -28,11 +28,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac1e1904ea5b1d7280f614ec65af2be71f862104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ce98025001529313260f62e8f45e85add148c77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lifetime"></a>수명
 "수명"은 변수나 함수가 존재하는 프로그램 실행 중의 기간입니다. 식별자의 저장 기간에 따라 수명이 결정됩니다.  

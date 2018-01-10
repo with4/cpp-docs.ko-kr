@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ff141818e05f9b5b36b6d0cfc5a58170fa97ab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01d364313420c0a950f8eba222e3ae020fbd86cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>기초로 Nauer BNF (Form) 구문을 이해
 ATL 등록자에서 사용 하는 스크립트는 다음 표에 표시 된 표기법을 사용 하 여 BNF 구문을 사용 하 여이 항목에 설명 되어 있습니다.  

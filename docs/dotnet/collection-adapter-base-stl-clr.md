@@ -1,41 +1,42 @@
 ---
-title: "collection_adapter::base(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "기본 멤버[STL/CLR]"
+title: 'collection_adapter:: base (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::base
+dev_langs: C++
+helpviewer_keywords: base member [STL/CLR]
 ms.assetid: 44928046-3fda-4974-817f-bc61a6f11b9f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 920235952f57bf82c6d8607b9732592053941b9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::base(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Designates the wrapped BCL interface.  
+# <a name="collectionadapterbase-stlclr"></a>collection_adapter::base(STL/CLR)
+래핑된 BCL 인터페이스를 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 Coll^ base();  
 ```  
   
-## 설명  
- The member function returns the stored BCL interface handle.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 저장된 BCL 인터페이스 핸들을 반환 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_collection_adapter_base.cpp   
@@ -61,12 +62,15 @@ int main()
   
 ```  
   
-  **x x x x x x**  
-**base\(\) same \= True**   
-## 요구 사항  
- **Header:** \<cliext\/adapter\>  
+```Output  
+ x x x x x x  
+base() same = True  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/어댑터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [collection_adapter(STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

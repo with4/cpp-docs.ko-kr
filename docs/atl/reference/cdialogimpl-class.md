@@ -28,11 +28,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aab3048667099a698bd4aff928c7a23d7fbb01e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 클래스
 이 클래스는 모달 또는 모덜리스 대화 상자를 생성 하기 위한 메서드를 제공 합니다.  
@@ -97,7 +98,7 @@ template <class T,
   
  여기서 `MyDlg` 는 **약식 이름** 는 마법사에서 입력 한 **이름** 페이지.  
   
-|추가 정보|참조|  
+|추가 정보|보기|  
 |--------------------------------|---------|  
 |컨트롤 만들기|[ATL 자습서](../../atl/active-template-library-atl-tutorial.md)|  
 |Atl에서 대화 상자를 사용 하 여|[ATL 창 클래스](../../atl/atl-window-classes.md)|  

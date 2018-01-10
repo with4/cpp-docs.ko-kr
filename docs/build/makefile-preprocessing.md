@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e242610d2755091704386b0cb3cd85f3cbba70a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f08b1568bd205b02ff2069e096725a7a52730f4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makefile-preprocessing"></a>메이크파일 전처리
 전처리 지시문과 식을 사용 하 여 NMAKE 세션을 제어할 수 있습니다. 메이크파일의 또는 Tools.ini 지침 전처리를 배치할 수 있습니다. 지시문을 사용 조건에 따라 처리 메이크파일을, 오류 메시지를 표시, 다른 메이크파일 포함는 매크로 정의 해제 하 고 있습니다 특정 옵션을 설정 하거나 해제 합니다.  

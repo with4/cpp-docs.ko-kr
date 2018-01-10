@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e42bbe4f724f711f407072c12a61ae9abbaca07d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 043ad96ada12467ce9c2ff39c9e337e0da9d2391
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="masm-macros"></a>MASM 매크로
 사용을 단순화 하기 위해는 [원시 의사 작업](../build/raw-pseudo-operations.md)를 일반적인 방법 프롤로그 및 에필로그를 만드는 데 사용할 수 있도록 ksamd64.inc에에 정의 된 매크로의 집합입니다.  

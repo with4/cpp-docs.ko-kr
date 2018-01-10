@@ -22,11 +22,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 077da64dbcad46357e52e49f9e006e49456615aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d4b522286a727f428cd445bf67d12a1360b49b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>예외 처리에서의 타이밍: 요약
 종료 처리기는 `__try` 문 블록이 종료되는 방법과 관계없이 실행됩니다. `__try` 블록 밖으로의 점프, 제어를 블록 밖으로 전송하는 `longjmp` 문, 예외 처리로 인한 스택 해제 등이 원인입니다.  

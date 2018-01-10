@@ -35,11 +35,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7c46eff8faabb52f514e2711a065d7fc1fed8b75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a14fa401b2a46bbfb3d5aafcda4d05c0167b3d9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pipe"></a>_pipe
 읽기 및 쓰기용 파이프를 만듭니다.  
@@ -68,7 +69,7 @@ int _pipe(
  파일 모드입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 정상적으로 실행되는 경우 0을 반환합니다. 오류를 나타내는 데-1 반환 합니다. 오류 시 `errno`는 다음 값 중 하나로 설정됩니다.  
+ 성공하면 0을 반환합니다. 오류를 나타내는 데-1 반환 합니다. 오류 시 `errno`는 다음 값 중 하나로 설정됩니다.  
   
 -   `EMFILE` - 파일 설명자를 더 이상 사용할 수 없음을 나타냅니다.  
   
@@ -76,7 +77,7 @@ int _pipe(
   
 -   `EINVAL` - 배열 `pfds`가 null 포인터이거나 `textmode`에 대한 잘못된 값이 전달되었음을 나타냅니다.  
   
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
+ 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  `_pipe` 함수는 프로그램이 다른 프로그램에 정보를 전달하는 데 사용하는 인위적인 I/O 채널인 *파이프*를 만듭니다. 파이프는 파일 포인터나 파일 설명자 또는 두 항목을 모두 포함하며, 표준 라이브러리 입력 및 출력 함수를 사용하여 읽거나 쓸 수 있으므로 파일과 비슷합니다. 그러나 파이프는 특정 파일 또는 장치를 나타내지 않습니다. 대신 전적으로 운영 체제에 의해 제어되며 프로그램의 자체 메모리와는 독립적인 임시 저장소를 나타냅니다.  
@@ -97,7 +98,7 @@ int _pipe(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_pipe`|\<io.h>|\<fcntl.h>,1 \<errno.h>2|  
   

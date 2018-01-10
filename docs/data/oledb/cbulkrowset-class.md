@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7208e2ecda79cf175f234499f6e69550693f182f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 26ed8c0a3f58ae046ad3e4766b7e009023759be0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 클래스
 인출 하 고 한 번의 호출으로 여러 행 핸들을 검색 하 여 대량으로 데이터에서 작동 하도록 행을 조작 합니다.  
@@ -57,7 +60,7 @@ class CBulkRowset : public CRowset<TAccessor>
 |[ReleaseRows](../../data/oledb/cbulkrowset-releaserows.md)|현재 행을 설정 (**m_nCurrentRow**) 0 및 릴리스인 모든 행입니다.|  
 |[SetRows](../../data/oledb/cbulkrowset-setrows.md)|한 번 호출 하 여 검색할 행 핸들의 수를 설정 합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 사용 된 `CBulkRowset` 클래스입니다.  
   
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  

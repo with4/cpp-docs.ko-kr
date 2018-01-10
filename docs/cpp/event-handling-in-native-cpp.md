@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c404caf0090381af1697516d25358daa29c70d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e30e9259a5b3e59b9f8c2f3af877bca3a98c84dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-in-native-c"></a>네이티브 C++에서 이벤트 처리
 네이티브 c + + 이벤트 처리를 설정 하는 이벤트 소스와 이벤트 수신기를 사용 하는 [event_source](../windows/event-source.md) 및 [event_receiver](../windows/event-receiver.md) 특성에 각각 지정 `type` = `native`. 이러한 특성을 사용하면 해당 특성이 적용되는 클래스가 COM 이외의 네이티브 컨텍스트에서 이벤트를 발생시키고 처리할 수 있습니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
 ### <a name="native-c-event-code"></a>네이티브 C++ 이벤트 코드  
  다음 예제에서는 네이티브 C++에서 이벤트를 발생시키는 방법을 보여 줍니다. 예제를 컴파일 및 실행하려면 코드의 주석을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="code"></a>코드  
   

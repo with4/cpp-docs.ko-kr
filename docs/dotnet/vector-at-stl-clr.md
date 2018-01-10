@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 902652b8b74c11f79aad09079ea3ebb42d0d2ff0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7f8747242f757855b58a72a4604e84200df02a6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorat-stlclr"></a>vector::at(STL/CLR)
 지정된 위치에 있는 요소에 액세스합니다.  
@@ -37,7 +40,7 @@ reference at(size_type pos);
 ## <a name="remarks"></a>설명  
  멤버 함수는 위치에서 제어 된 시퀀스의 요소에 대 한 참조를 반환 `pos`합니다. 읽기 또는 쓰기 요소 위치를 알아야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_vector_at.cpp   

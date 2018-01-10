@@ -17,18 +17,19 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 74d0bd9011c77d67383e36b15817a71f853a409b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4674029fe5bdfc4323f580fcc0567b2ceeb1929
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="directory-control"></a>디렉터리 제어
 이러한 루틴은 디렉터리 구조를 액세스 및 수정하고 관련 정보를 가져옵니다.  
   
 ### <a name="directory-control-routines"></a>디렉터리 제어 루틴  
   
-|루틴|기능|  
+|루틴에서 반환된 값|사용|  
 |-------------|---------|  
 |[_chdir, _wchdir](../c-runtime-library/reference/chdir-wchdir.md)|현재 작업 디렉터리를 변경합니다.|  
 |[_chdrive](../c-runtime-library/reference/chdrive.md)|현재 드라이브를 변경합니다.|  

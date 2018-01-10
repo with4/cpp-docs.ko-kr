@@ -5,14 +5,37 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
+f1_keywords:
+- atlbase/ATL::AtlGetHexValue
+- atlbase/ATL::AtlGetVersion
+- atlenc/ATL::AtlHexDecode
+- atlenc/ATL::AtlHexDecodeGetRequiredLength
+- atlenc/ATL::AtlHexEncode
+- atlenc/ATL::AtlHexEncodeGetRequiredLength
+- atlenc/ATL::AtlHexValue
+- atlenc/ATL::BEncode
+- atlenc/ATL::BEncodeGetRequiredLength
+- atlenc/ATL::EscapeXML
+- atlenc/ATL::GetExtendedChars
+- atlenc/ATL::IsExtendedChar
+- atlenc/ATL::QEncode
+- atlenc/ATL::QEncodeGetRequiredLength
+- atlenc/ATL::QPDecode
+- atlenc/ATL::QPDecodeGetRequiredLength
+- atlenc/ATL::QPEncode
+- atlenc/ATL::QPEncodeGetRequiredLength
+- atlenc/ATL::UUDecode
+- atlenc/ATL::UUDecodeGetRequiredLength
+- atlenc/ATL::UUEncode
+- atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: 3
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: a7d4572f34a88192723c574e1b749947f76d819a
-ms.lasthandoff: 03/31/2017
-
+caps.latest.revision: "3"
+ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 텍스트 인코딩 함수
 이러한 함수는 텍스트 인코딩 및 디코딩을 지원 합니다.
@@ -74,10 +97,10 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="return-value"></a>반환 값  
  반환 된 `DWORD` 컴파일 또는 실행 여부를 지정 하는 ATL 라이브러리 버전의 정수 값입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  함수는 다음과 같이 호출 되어야 합니다.  
   
- [!code-cpp[NVC_ATL_Utilities # 95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
   
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
@@ -150,7 +173,7 @@ int * pnDestLen) throw();
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 **FALSE** 실패 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  원본 데이터의 각 바이트는 16 진수 문자를 2로 인코딩됩니다.  
   
 ## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
@@ -208,7 +231,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="return-value"></a>반환 값  
  변환된 된 문자열에 대 한 문자의 수를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  변환 된 문자열에 필요한 버퍼의 크기를 결정 하려면에 대 한 0을 전달 합니다.이 함수를 호출 `szDest` 및 `nDest`합니다.  
   
 ## <a name="bencode"></a>BEncode  
@@ -262,7 +285,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="return-value"></a>반환 값  
  인코딩된 데이터를 포함할 수 있는 버퍼 필요한 문자 수 `nSrcLen` 바이트입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  RFC 2047에서 설명 하는 "B" 인코딩 체계 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
 ## <a name="escapexml"></a>EscapeXML
@@ -301,7 +324,7 @@ inline int EscapeXML(
 ### <a name="return-value"></a>반환 값  
  변환된 된 문자열의 문자 길이입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 함수에 의해 수행 되는 가능한 변환 테이블에 나와 있습니다.  
   
 |소스|대상|  
@@ -378,7 +401,7 @@ inline BOOL QEncode(
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 **FALSE** 실패 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  "Q" 인코딩 체계 RFC 2047에 설명 되어 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
 ## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength 
@@ -398,7 +421,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="return-value"></a>반환 값  
  인코딩된 데이터를 포함할 수 있는 버퍼 필요한 문자 수 `nSrcLen` 바이트입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  "Q" 인코딩 체계 RFC 2047에 설명 되어 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
 ## <a name="qpdecode"></a>QPDecode
@@ -487,7 +510,7 @@ inline BOOL QPEncode(
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 **FALSE** 실패 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  따옴표 붙은 인쇄 가능한 인코딩 체계 RFC 2045에 설명 되어 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
 ## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
@@ -504,7 +527,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="return-value"></a>반환 값  
  인코딩된 데이터를 포함할 수 있는 버퍼 필요한 문자 수 `nSrcLen` 바이트입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  따옴표 붙은 인쇄 가능한 인코딩 체계 RFC 2045에 설명 되어 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
 ## <a name="uudecode"></a>UUDecode
@@ -534,7 +557,7 @@ inline BOOL UUDecode(
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 **FALSE** 실패 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 uuencoding 구현은 POSIX P1003.2b/D11 사양을 따릅니다.  
   
 ## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
@@ -609,7 +632,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="return-value"></a>반환 값  
  인코딩된 데이터를 포함할 수 있는 버퍼 필요한 문자 수 `nSrcLen` 바이트입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 uuencoding 구현은 POSIX P1003.2b/D11 사양을 따릅니다.  
   
 ### <a name="see-also"></a>참고 항목  

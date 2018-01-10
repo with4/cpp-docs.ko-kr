@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e4d3f6b2b7617705b38c0b8e13ca2ed65fcf8d81
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71117aed66d83c2c2ae1651c4de9c91e06a43653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 현재 시스템 날짜를 버퍼에 복사합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_strdate, _wstrdate](../../c-runtime-library/reference/strdate-wstrdate.md)의 버전입니다.  
@@ -82,7 +83,7 @@ errno_t _wstrdate_s(
  버퍼의 크기입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공할 경우 0입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 ERRNO.H에 정의됩니다. 이 함수가 생성하는 정확한 오류는 아래 표를 참조하세요. 오류 코드에 대한 자세한 내용은 [errno](../../c-runtime-library/errno-constants.md)를 참조하세요.  
+ 정상적으로 실행되는 경우 0입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 ERRNO.H에 정의됩니다. 이 함수가 생성하는 정확한 오류는 아래 표를 참조하세요. 오류 코드에 대한 자세한 내용은 [errno](../../c-runtime-library/errno-constants.md)를 참조하세요.  
   
 ## <a name="error-conditions"></a>오류 조건  
   
@@ -105,7 +106,7 @@ errno_t _wstrdate_s(
   
  `buffer`가 `NULL` 포인터이거나 `numberOfElements`가 9자보다 작으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속하도록 허용하는 경우 이러한 함수는 -1을 반환하고 버퍼가 `NULL`이거나 `numberOfElements`가 0보다 작거나 같으면 `errno`를 `EINVAL`로 설정하며, `numberOfElements`가 9보다 작으면 `errno`를 `ERANGE`로 설정합니다.  
   
- C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ### <a name="generic-text-routine-mapping"></a>제네릭 텍스트 루틴 매핑:  
   
@@ -115,13 +116,13 @@ errno_t _wstrdate_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_strdate`|\<time.h>|  
 |`_wstrdate`|\<time.h> 또는 \<wchar.h>|  
 |`_strdate_s`|\<time.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [time](../../c-runtime-library/reference/time-time32-time64.md)의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

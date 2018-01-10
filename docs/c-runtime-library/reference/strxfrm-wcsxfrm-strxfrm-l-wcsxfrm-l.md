@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - strxfrm
 - _tcsxfrm
 - wcsxfrm
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strxfrm_l function
 - _tcsxfrm function
@@ -44,30 +42,16 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: b05ec00ae2144670844cd54de0900aa1412128ff
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bc61e1f1dee03d0604b4a7fab97dc4236c1f705c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 로캘별 정보를 기반으로 문자열을 변형합니다.  
@@ -116,7 +100,7 @@ size_t wcsxfrm_l(
  종료 null 문자를 세지 않고 변형된 문자열의 길이를 반환합니다. 반환 값이 `count`보다 크거나 같으면 `strDest`의 콘텐츠는 예측할 수 없습니다. 오류에서 각 함수는 `errno`를 설정하고 `INT_MAX`를 반환합니다. 잘못된 문자의 경우 `errno`는 `EILSEQ`로 설정됩니다.  
   
 ## <a name="remarks"></a>설명  
- `strxfrm` 함수는 `strSource`가 가리키는 문자열을 `strDest`에 저장된 새 데이터 정렬된 형식으로 변환합니다. null 문자를 포함하여 `count`개 이하의 문자가 변환되어 결과 문자열에 저장됩니다. 로캘의 `LC_COLLATE` 범주 설정을 사용하여 변환이 일어납니다. `LC_COLLATE`에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `strxfrm`은 로캘 종속인 동작에 현재 로캘을 사용합니다. 현재 로캘 대신 전달된 로캘을 사용한다는 것을 제외하면 `_strxfrm_l`도 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `strxfrm` 함수는 `strSource`가 가리키는 문자열을 `strDest`에 저장된 새 데이터 정렬된 형식으로 변환합니다. null 문자를 포함하여 `count`개 이하의 문자가 변환되어 결과 문자열에 저장됩니다. 로캘의 `LC_COLLATE` 범주 설정을 사용하여 변환이 일어납니다. `LC_COLLATE`에 대한 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `strxfrm`은 로캘 종속인 동작에 현재 로캘을 사용합니다. 현재 로캘 대신 전달된 로캘을 사용한다는 것을 제외하면 `_strxfrm_l`도 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  변환 이후 변형된 문자열 두 개를 사용하여 `strcmp`를 호출할 경우 두 원본 문자열에 적용된 `strcoll`의 호출과 동일한 결과가 발생합니다. `strcoll` 및 `stricoll`과 마찬가지로, `strxfrm`은 자동으로 멀티바이트 문자열을 적절하게 처리합니다.  
   
@@ -124,7 +108,7 @@ size_t wcsxfrm_l(
   
  이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `strSource`가 null 포인터이거나, `strDest`가 NULL 포인터이거나(count가 0이 아닌 경우), `count`가 `INT_MAX`보다 큰 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `errno`를 `EINVAL`로 설정하고 `INT_MAX`을 반환합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -152,7 +136,7 @@ return( strlen( _string1 ) );
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`strxfrm`|\<string.h>|  
 |`wcsxfrm`|\<string.h> 또는 \<wchar.h>|  

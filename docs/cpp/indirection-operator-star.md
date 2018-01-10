@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '* operator'
 - indirection operator
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2c87c279ae1f45899dfa4525c3bdc65bfa5acc2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indirection-operator-"></a>간접 참조 연산자: *
 ## <a name="syntax"></a>구문  
@@ -36,11 +34,11 @@ ms.lasthandoff: 09/25/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- 단항 간접 연산자 (**\***)는 포인터를 역참조 l 값을 포인터 값 즉, 변환 합니다. 간접 참조 연산자의 피연산자는 형식에 대한 포인터여야 합니다. 간접 참조의 결과는 포인터 형식이 파생된 형식입니다. 사용은 ** \* ** 이 컨텍스트에서 연산자는 곱셈 이항 연산자로 해당 의미와에서 다릅니다.  
+ 단항 간접 연산자 (**\***)는 포인터를 역참조 l 값을 포인터 값 즉, 변환 합니다. 간접 참조 연산자의 피연산자는 형식에 대한 포인터여야 합니다. 간접 참조의 결과는 포인터 형식이 파생된 형식입니다. 사용은  **\***  이 컨텍스트에서 연산자는 곱셈 이항 연산자로 해당 의미와에서 다릅니다.  
   
  피연산자가 함수를 가리키는 경우 결과는 함수 지정자입니다. 저장소 위치를 가리키는 경우 결과는 저장소 위치를 지정하는 l-value입니다.  
   
- 포인터에 대한 포인터를 역참조하기 위해 간접 연산자를 누적하여 사용할 수도 있습니다. 예:  
+ 포인터에 대한 포인터를 역참조하기 위해 간접 참조 연산자를 누적하여 사용할 수도 있습니다. 예:  
   
 ```  
 // expre_Indirection_Operator.cpp  

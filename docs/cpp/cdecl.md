@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f11414914bb1682c0bd5e05d80ab2ebbbe3ae72a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d73de8b2a158c09ebd61306683f6fdc1ad0f514e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdecl"></a>__cdecl
 **Microsoft 전용**  
@@ -60,7 +61,7 @@ void CMyClass::mymethod() { return; }
 void __cdecl CMyClass::mymethod() { return; }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 컴파일러는 `system` 함수에 대해 C 명명 규칙 및 호출 규칙을 사용하도록 지시되었습니다.  
   
 ```cpp  

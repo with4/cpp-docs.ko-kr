@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6351de62aa9141d98c5afabe1425d4586ca54371
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d1e51f1a23a81811bdd4aa6c6feec45748ee572
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calculating-necessary-values"></a>필요한 값 계산
 두 가지 중요 한 정보를 지연 도우미 루틴에 의해 계산 해야 합니다. 이 위해이 정보를 계산 하기 위한 delayhlp.cpp에 두 개의 인라인 함수 있습니다.  

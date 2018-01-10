@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc0aefab82d9bcb5004cfad776a007977278b3d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5eb419c01cb3699ad90ab9fbf98a5f9ec282bb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-reference"></a>C 언어 참조
 *C 언어 참조*는 Microsoft C에서 구현되는 C 프로그래밍 언어에 대해 설명합니다. 이 책의 구성은 ANSI C 표준(C89라고도 함)을 기준으로 하며 ANSI 표준에 대한 Microsoft 확장에 관한 추가 자료를 제공합니다.  

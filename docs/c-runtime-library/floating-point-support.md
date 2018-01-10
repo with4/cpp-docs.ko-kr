@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 60a2131b08b9f0ac119bdcd414f2d4d1761a9b6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 961ede0b381555b3e41d0432f2aa4093ee496ac1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-support"></a>부동 소수점 지원
 Microsoft CRT(C 런타임 라이브러리)는 ISO C99에 따라 필요한 모든 함수를 포함하여 다양한 부동 소수점 수학 라이브러리 함수를 제공합니다. 이러한 함수는 수정을 통해 성능을 균형있게 분배하도록 구현됩니다. 올바르게 반올림된 결과를 생성하는 것은 막대한 비용이 들 수 있으므로 이러한 함수는 올바르게 반올림된 결과에 대한 근사치를 효율적으로 생성하도록 설계됩니다. 부정확성이 더 큰 경우도 있을 수 있지만 대부분은 생성된 결과가 올바르게 반올림된 결과의 +/-1 ulp 내에 있습니다.  

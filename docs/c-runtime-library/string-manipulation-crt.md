@@ -18,18 +18,19 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fca1b898f43670499c9dace3f912b207f5b7933
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6710b4e849ea95aa9d7399a85b3dc7853d34947a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-manipulation-crt"></a>문자열 조작(CRT)
 이러한 루틴은 null로 종료되는 싱글바이트 문자, 와이드 문자 및 멀티바이트 문자 문자열에서 작동합니다. [버퍼 조작](../c-runtime-library/buffer-manipulation.md)에 설명된 버퍼 조작 루틴을 사용하여 null 문자로 끝나지 않는 문자 배열을 사용합니다.  
   
 ### <a name="string-manipulation-routines"></a>문자열 조작 루틴  
   
-|루틴|기능|  
+|루틴에서 반환된 값|사용|  
 |-------------|---------|  
 |[strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md), [_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md), [_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md), [_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|코드 페이지 정보를 사용하여 두 문자열을 비교합니다(`_mbsicoll` 및 `_mbsnicoll`은 대/소문자를 구분하지 않음).|  
 |[_strdec, _wcsdec, _mbsdec, _mbsdec_l](../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)|문자열 포인터를 한 문자 뒤로 이동합니다.|  

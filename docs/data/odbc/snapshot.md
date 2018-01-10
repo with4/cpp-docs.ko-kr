@@ -1,57 +1,60 @@
 ---
-title: "스냅샷 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "커서 라이브러리[ODBC], 스냅샷"
-  - "커서[ODBC], static"
-  - "ODBC 커서 라이브러리[ODBC], 스냅샷"
-  - "ODBC 레코드 집합, 스냅샷"
-  - "레코드 집합, 스냅샷"
-  - "스냅샷"
-  - "스냅샷, ODBC 지원"
-  - "정적 커서"
+title: "스냅숏 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC cursor library [ODBC], snapshots
+- cursors [ODBC], static
+- recordsets, snapshots
+- snapshots, support in ODBC
+- static cursors
+- ODBC recordsets, snapshots
+- cursor library [ODBC], snapshots
+- snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c31e08fdda3cef526f46946e45ef956f9ad1adaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 스냅샷
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-스냅숏은 생성 당시에 있던 그대로 데이터의 정적 뷰를 반영하는 레코드 집합입니다.  스냅숏을 열어 모든 레코드로 이동시키고 나면 스냅숏에 포함된 레코드 집합 및 값은 **Requery**를 호출하여 스냅숏을 다시 만들 때까지 변경되지 않습니다.  
+# <a name="snapshot"></a>스냅숏
+스냅숏은은 스냅숏이 만들어진 때의 상태로 데이터의 정적 뷰를 반영 하는 레코드 집합입니다. 스냅숏 열고 모든 레코드를 이동 하면 포함 된 여러 레코드 집합 및 호출 하 여 스냅숏을 다시 만들 때까지 해당 값이 변경 되지 않는 **Requery**합니다.  
   
 > [!NOTE]
->  이 항목은 MFC ODBC 클래스에 적용됩니다.  MFC ODBC 클래스 대신 MFC DAO 클래스를 사용하는 경우에는 [CDaoRecordset::Open](../Topic/CDaoRecordset::Open.md)에서 스냅숏 형식 레코드 집합에 대한 설명을 참조하십시오.  
+>  MFC ODBC 클래스에이 항목에 적용 됩니다. MFC DAO 클래스와 MFC ODBC 클래스 대신 사용 하는 경우 참조 [cdaorecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open) 에 대 한 설명은 스냅숏 형식 레코드 집합입니다.  
   
- 데이터베이스 클래스를 사용하여 업데이트 가능한 스냅숏 또는 읽기 전용 스냅숏을 만들 수 있습니다.  다이너셋과 달리 업데이트 가능한 스냅숏은 다른 사용자에 의한 레코드 값 변경을 반영하지 않지만 사용자 프로그램에서 수행한 업데이트나 삭제는 반영합니다.  스냅숏에 추가한 레코드는 **Requery**를 호출하기 전에는 스냅숏에 나타나지 않습니다.  
+ 데이터베이스 클래스와 업데이트 가능 하거나 읽기 전용 스냅숏을 만들 수 있습니다. 다이너셋, 달리 업데이트할 수 있는 스냅숏 레코드 값을 다른 사용자가 수행한 변경 내용을 반영 하지 않습니다 않지만 업데이트 및 삭제 사용자 프로그램에서 수행한 반영 합니다. 호출할 때까지 스냅숏으로에 추가 된 레코드는 스냅숏에 나타나지 지나지 않도록 **Requery**합니다.  
   
 > [!TIP]
->  스냅숏은 ODBC 정적 커서입니다.  정적 커서는 해당 레코드로 스크롤하기 전에는 실제로 데이터 행을 가져오지 않습니다.  모든 레코드를 즉시 검색하려면 레코드 집합의 마지막 레코드까지 스크롤한 다음 보려는 첫째 레코드로 스크롤하십시오.  그러나 마지막 레코드까지 스크롤하면 추가 오버헤드로 인해 성능이 저하될 수 있습니다.  
+>  스냅숏은은 ODBC 정적 커서입니다. 해당 레코드를 스크롤할 때까지 정적 커서 데이터의 행을 실제로 발생 하지 않습니다. 모든 레코드를 즉시 검색을 보장 하려면 레코드 집합의 끝으로 스크롤하여 수 있으며 다음 보려는 첫 번째 레코드를 스크롤합니다. 그러나 끝으로 스크롤하면 과도 한 오버 헤드에 수반 되 고 성능을 저하 시킬 수 note 합니다.  
   
- 스냅숏은 보고서를 작성하거나 계산을 수행할 때처럼 작업을 하는 동안 데이터가 고정되어 있어야 하는 경우에 유용합니다.  이 경우에도 시간이 지나면 데이터 소스가 스냅숏과 많이 달라질 수 있으므로 가끔씩 스냅숏을 다시 만드는 것이 좋습니다.  
+ 스냅숏은 보고서를 작성 하거나 계산을 수행할 때 처럼 작업을 하는 동안 고정 된 상태로 유지할 데이터 유지 해야 하는 경우에 가장 중요 합니다. 데이터 원본 수를 분기 상당히 스냅샷을 않으므로 때때로 다시 작성 해야 할 수 있습니다.  
   
- 스냅숏 지원은 모든 수준 1 드라이버에 정적 커서 및 위치 지정 업데이트\(업데이트 시 필요\)를 제공하는 ODBC 커서 라이브러리를 기반으로 합니다.  이 지원을 위해 커서 라이브러리 DLL을 메모리에 로드해야 합니다.  `CDatabase` 개체를 생성하고 `OpenEx` 멤버 함수를 호출하는 경우 `dwOptions` 매개 변수의 **CDatabase::useCursorLib** 옵션을 지정해야 합니다.  **Open** 멤버 함수를 호출하면 커서 라이브러리가 기본적으로 로드됩니다.  스냅숏 대신 다이너셋을 사용할 때는 커서 라이브러리를 로드하지 않는 것이 좋습니다.  
+ 스냅숏을 지원 위치 지정 업데이트 (업데이트 시 필요)에 대 한 모든 수준 1 드라이버 및 정적 커서를 제공 하는 ODBC 커서 라이브러리를 기반으로 합니다. 커서 라이브러리 DLL이이 지원에 대 한 메모리에 로드 해야 합니다. 생성할 때는 `CDatabase` 개체와 호출 해당 `OpenEx` 지정 해야 멤버 함수는 **CDatabase::useCursorLib** 옵션의는 `dwOptions` 매개 변수입니다. 호출 하는 경우는 **열려** 멤버 함수를 커서 라이브러리는 기본적으로 로드 됩니다. 다이너셋 스냅샷 대신를 사용 하는 경우 커서 라이브러리를 로드 하지 않을 수 있습니다.  
   
- `CDatabase` 개체가 생성될 당시 ODBC 커서 라이브러리가 로드되었거나 사용 중인 ODBC 드라이버가 정적 커서를 지원하는 경우에만 스냅숏을 사용할 수 있습니다.  
-  
-> [!NOTE]
->  일부 ODBC 드라이버에서는 스냅숏\(정적 커서\)을 업데이트하지 못할 수도 있습니다.  지원되는 커서 형식과 동시성 형식을 드라이버 설명서에서 확인하십시오.  스냅숏을 업데이트할 수 있으려면 `CDatabase` 개체를 만들 때 메모리에 커서 라이브러리를 로드해야 합니다.  자세한 내용은 [ODBC: ODBC 커서 라이브러리](../../data/odbc/odbc-the-odbc-cursor-library.md)를 참조하십시오.  
+ ODBC 커서 라이브러리 때 로드 된 경우에 사용할 수 있는 스냅숏이 `CDatabase` 생성 된 개체 또는 ODBC 드라이버를 사용 하는 정적 커서를 지원 합니다.  
   
 > [!NOTE]
->  스냅숏과 다이너셋 모두를 사용하려면 드라이버가 서로 다른 두 개의 `CDatabase` 개체\(서로 다른 두 개의 연결\)에 기초해야 합니다.  
+>  일부 ODBC 드라이버 스냅샷 (정적 커서)을 업데이트 하지 못할 수도 있습니다. 지원 되는 커서 형식에 대 한 드라이버 설명서를 지 원하는 동시성 유형은 확인 합니다. 스냅숏을 업데이트할 수 있으려면를 만들 때 메모리에 커서 라이브러리를 로드 있는지 확인 한 `CDatabase` 개체입니다. 자세한 내용은 참조 [ODBC: ODBC 커서 라이브러리](../../data/odbc/odbc-the-odbc-cursor-library.md)합니다.  
   
- 스냅숏이 모든 레코드 집합과 공유하는 속성에 대한 자세한 내용은 [레코드 집합\(ODBC\)](../../data/odbc/recordset-odbc.md)을 참조하십시오.  ODBC 커서 라이브러리를 비롯하여 ODBC와 스냅숏에 대한 자세한 내용은 [ODBC](../../data/odbc/odbc-basics.md)를 참조하십시오.  
+> [!NOTE]
+>  스냅숏과 다이너셋 사용 하려는 경우 두 개의 다른에 기반 해야 `CDatabase` 개체 (두 개의 서로 다른 연결).  
   
-## 참고 항목  
- [ODBC\(Open Database Connectivity\)](../../data/odbc/open-database-connectivity-odbc.md)
+ 모든 레코드 집합과 속성 스냅숏 공유에 대 한 자세한 내용은 참조 [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md)합니다. ODBC 및 스냅숏, ODBC 커서 라이브러리를 포함 하는 방법에 대 한 자세한 내용은 참조 [ODBC](../../data/odbc/odbc-basics.md)합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [ODBC(Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

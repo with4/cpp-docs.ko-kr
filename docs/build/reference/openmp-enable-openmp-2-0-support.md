@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 61f0617a07d71624e11f2c9adaceac7691192585
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8d3aaeb5d3e71dfced4bf78384a62898d99a5ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp(OpenMP 2.0 지원 활성화)
 컴파일러에서 처리 하도록 `#pragma` [omp](../../preprocessor/omp.md)합니다.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OpenMP%2A>을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 threadpool 시작 시작 된 후 스레드 풀을 사용 하 여 비교 결과 중 일부를 보여 줍니다. X64, 단일 코어 가정 듀얼 프로세서 threadpool 이동 약 되 시작 합니다. 그 후 하지만 비용은 거의 threadpool에 대 한 합니다.  
   
  로 컴파일할 때 **/openmp**, 두 번째 호출 test2로 사용 하 여 컴파일하는 경우 보다 더 이상 실행 되지 않도록 **/openmp-**threadpool 시작 되지 않으므로 합니다. 백만 반복에는 **/openmp** 버전 보다 빠릅니다.이 **/openmp-** test2 하 고 두 번째 호출에 대 한 버전 **/openmp-** 및 **/openmp** 클록 세분성 보다 작은 버전 레지스터입니다.  

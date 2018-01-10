@@ -37,11 +37,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f4067e9555200805631fb72fe3e40afa09c168e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1d0049643ef7a3695eef8c3271e22586b5c7454d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-generic-text-mappings"></a>일반 텍스트 매핑 사용
 **Microsoft 전용**  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>일반 텍스트 매핑용 전처리기 지시문  
   
-|#define|컴파일 버전|예제|  
+|#define|컴파일 버전|예|  
 |--------------|----------------------|-------------|  
 |`_UNICODE`|유니코드(와이드 문자)|`_tcsrev`는 `_wcsrev`에 매핑됩니다.|  
 |`_MBCS`|멀티바이트 문자|`_tcsrev`는 `_mbsrev`에 매핑됩니다.|  

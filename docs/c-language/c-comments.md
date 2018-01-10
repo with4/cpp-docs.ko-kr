@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78c3e97530198b6685e402237bda5cdaf9a0754a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2962669c6d925931d0e8ff0cbf3796dbbd1b430
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-comments"></a>C 주석
 "주석"은 정방향 슬래시/별표 조합(<b>/\*</b>)으로 시작하는 문자 시퀀스로, 컴파일러에 의해 단일 공백 문자로 처리되거나 무시됩니다. 주석은 줄 바꿈 문자를 비롯하여 표현 가능한 문자 집합의 모든 문자 조합을 포함할 수 있습니다. 단, "종료 주석" 구분 기호(<b>\*/</b>)는 제외됩니다. 주석은 두 줄 이상을 차지할 수 있지만 중첩될 수는 없습니다.  

@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&&'
-dev_langs:
-- C++
+f1_keywords: '&&'
+dev_langs: C++
 helpviewer_keywords:
 - logical AND operator
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5a594efcc987fba69ceb17e7e09d10470adab75f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0612b9c2430d316aa9ba3a6d2dd9351342b5d352
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logical-and-operator-ampamp"></a>논리 AND 연산자:&amp;&amp;
 ## <a name="syntax"></a>구문  
@@ -57,9 +54,9 @@ char *pch = 0;
  `pch`가 null(0)인 경우 식의 오른쪽이 계산되지 않습니다. 따라서 null 포인터를 통해 할당할 수 없습니다.  
   
 ## <a name="operator-keyword-for-"></a>&&에 대한 연산자 키워드  
- **및** 연산자는 해당 하는 텍스트 ** && **합니다. 두 가지 방법으로 액세스 하는 **및** 를 프로그램에서 연산자: 헤더 파일을 포함 `iso646.h`,으로 컴파일하는 [/Za](../build/reference/za-ze-disable-language-extensions.md) (언어 확장명 사용 안 함) 컴파일러 옵션입니다.  
+ **및** 연산자는 해당 하는 텍스트  **&&** 합니다. 두 가지 방법으로 액세스 하는 **및** 를 프로그램에서 연산자: 헤더 파일을 포함 `iso646.h`,으로 컴파일하는 [/Za](../build/reference/za-ze-disable-language-extensions.md) (언어 확장명 사용 안 함) 컴파일러 옵션입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // expre_Logical_AND_Operator.cpp  

@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f6a524e552728df0cee3e320aa36bf92d687c539
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compatibility"></a>호환성
 UCRT(유니버설 C 런타임 라이브러리)는 C++ 규칙에 필요한 C 표준 라이브러리를 대부분 지원합니다. \<tgmath.h>에 정의된 형식 제네릭 매크로와 \<complex.h>의 엄격한 형식 호환성을 제외하고 C99(ISO/IEC 9899:1999) 라이브러리를 구현합니다. 또한 UCRT는 POSIX.1(ISO/IEC 9945-1:1996, POSIX 시스템 응용 프로그램 인터페이스) C 라이브러리의 큰 하위 집합을 구현하지만 어떠한 특정 POSIX 표준에도 완전히 부합되지 않습니다.  뿐만 아니라 UCRT는 표준에 속하지 않는 여러 Microsoft 특정 함수 및 매크로를 구현합니다.  

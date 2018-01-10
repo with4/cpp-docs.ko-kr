@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6b2678add561eda41a7426a840b9c4ad074301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controlling-streams"></a>스트림 제어
 [fopen](../c-runtime-library/reference/fopen-wfopen.md)은 형식이 `FILE`인 개체의 주소를 반환합니다. 이 주소를 여러 라이브러리 함수에 대한 `stream` 인수로 사용하여 열려 있는 파일에 대한 다양한 작업을 수행합니다. 바이트 스트림의 경우 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md)를 호출하여 각 문자를 읽는 것처럼 모든 입력이 수행되고 [fputc](../c-runtime-library/reference/fputc-fputwc.md)를 호출하여 각 문자를 쓰는 것처럼 모든 출력이 수행됩니다. 와이드 스트림의 경우 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md)를 호출하여 각 문자를 읽는 것처럼 모든 입력이 수행되고 [fputwc](../c-runtime-library/reference/fputc-fputwc.md)를 호출하여 각 문자를 쓰는 것처럼 모든 출력이 수행됩니다.  

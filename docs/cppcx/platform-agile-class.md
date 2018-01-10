@@ -21,11 +21,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4acb38dc8619123fe2f0640366e506f77993edb2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformagile-class"></a>Platform::Agile 클래스
 MashalingBehavior=Standard를 agile 개체로 나타냅니다. 이를 통해 런타임 스레딩 예외가 발생할 가능성이 매우 감소합니다. `Agile<T>` 를 사용하여 agile이 아닌 개체가 같거나 다른 스레드를 호출하거나 해당 스레드에서 호출될 수 있습니다. 자세한 내용은 참조 [스레딩 및 마샬링](../cppcx/threading-and-marshaling-c-cx.md)합니다.  

@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 97c54a8a07614440e343979f5c2529a3df1b7164
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 부동 소수점 표시
 Microsoft Visual c + +는 IEEE 숫자 표준 일치 합니다. 세 종류의 실수로 가지가 있습니다. 실제\*4 및 real\*8 Visual c + +에서 사용 됩니다. 실제\*4 라는 단어를 사용 하 여 선언 된 **float**합니다. 실제\*8 단어를 사용 하 여 선언 된 **double**합니다. Windows 32 비트 프로그래밍에는 `long double` 데이터 형식은 **double**합니다. 하지만가 실제를 사용 하 여 계산에 대 한 어셈블리 언어 지원 * 10 데이터 형식입니다.  
@@ -57,7 +58,7 @@ Microsoft Visual c + +는 IEEE 숫자 표준 일치 합니다. 세 종류의 실
   
  형식으로 다음, 여러 크기는 다음과 같습니다.  
   
-|서식|1 바이트|2 바이트|3 바이트|4 바이트|...|바이트 n|  
+|형식|1 바이트|2 바이트|3 바이트|4 바이트|...|바이트 n|  
 |------------|------------|------------|------------|------------|---------|------------|  
 |real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
 |real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  

@@ -4,47 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::AtlGetDacl
+- atlsecurity/ATL::AtlSetDacl
+- atlsecurity/ATL::AtlGetGroupSid
+- atlsecurity/ATL::AtlSetGroupSid
+- atlsecurity/ATL::AtlGetOwnerSid
+- atlsecurity/ATL::AtlSetOwnerSid
+- atlsecurity/ATL::AtlGetSacl
+- atlsecurity/ATL::AtlSetSacl
+- atlsecurity/ATL::AtlGetSecurityDescriptor
+dev_langs: C++
 helpviewer_keywords:
 - SIDs [C++], modifying SID objects
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ff5afaaf2746d9e07eb9e06a079d34adb2f67109
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-global-functions"></a>보안 전역 함수
 이러한 함수는 SID 및 ACL 개체를 수정 하기 위한 지원을 제공 합니다.  
   
 > [!IMPORTANT]
->  다음 표에 나열 된 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  다음 표에 나열 된 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 |||  
 |-|-|  
@@ -65,7 +59,7 @@ ms.lasthandoff: 04/04/2017
  지정된 개체의 DACL(임의 액세스 제어 목록) 정보를 검색하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
->  이 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ```
 inline bool AtlGetDacl(
@@ -94,7 +88,7 @@ inline bool AtlGetDacl(
  지정된 개체의 DACL(임의 액세스 제어 목록) 정보를 설정하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
->  이 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ```
 inline bool AtlSetDacl(
@@ -120,7 +114,7 @@ inline bool AtlSetDacl(
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  디버그 빌드에 어설션 오류가 발생 하는 경우 발생 합니다 `hObject` 유효 하지 않을 경우 또는 `dwInheritanceFlowControl` 허용 되는 세 가지 값 중 하나가 아닙니다.  
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h 
@@ -129,7 +123,7 @@ inline bool AtlSetDacl(
  개체의 그룹 보안 식별자(SID)를 검색하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
->  이 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ```
 inline bool AtlGetGroupSid(
@@ -158,7 +152,7 @@ inline bool AtlGetGroupSid(
  개체의 그룹 보안 식별자(SID)를 설정하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
->  이 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ```
 inline bool AtlSetGroupSid(
@@ -187,7 +181,7 @@ inline bool AtlSetGroupSid(
  개체의 소유자 보안 식별자(SID)를 검색하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
->  이 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ```
 inline bool AtlGetOwnerSid(
@@ -216,7 +210,7 @@ inline bool AtlGetOwnerSid(
  개체의 소유자 보안 식별자(SID)를 설정하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
->  이 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ```
 inline bool AtlSetOwnerSid(
@@ -245,7 +239,7 @@ inline bool AtlSetOwnerSid(
  지정된 개체의 SACL(시스템 액세스 제어 목록) 정보를 검색하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
->  이 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ```
 inline bool AtlGetSacl(
@@ -281,7 +275,7 @@ inline bool AtlGetSacl(
  지정된 개체의 SACL(시스템 액세스 제어 목록) 정보를 설정하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
->  이 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ```
 inline bool AtlSetSacl(
@@ -311,7 +305,7 @@ inline bool AtlSetSacl(
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  디버그 빌드에 어설션 오류가 발생 하는 경우 발생 합니다 `hObject` 유효 하지 않을 경우 또는 `dwInheritanceFlowControl` 허용 되는 세 가지 값 중 하나가 아닙니다.  
   
  경우 `AtlSetSacl` 많은 다른 개체를 여러 번 호출 되는 것 보다 효율적으로 함수를 호출 하기 전에 한 번 se_security_name 권한을 권한을 설정 하려면 `bRequestNeededPrivileges` false로 설정 합니다.  
@@ -323,7 +317,7 @@ inline bool AtlSetSacl(
  지정된 개체의 보안 설명자를 검색하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
->  이 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -363,4 +357,3 @@ inline bool AtlGetSecurityDescriptor(
    
 ## <a name="see-also"></a>참고 항목  
  [함수](../../atl/reference/atl-functions.md)
-

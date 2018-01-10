@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2d4e955df4982ba2077098adc7bd47506b42239
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f34682fa780ef430d27104d3df9658f9e32ad39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-const-int-linkage-is-no-longer-literal"></a>Static Const Int 링크가 더 이상 리터럴이 아닙니다.
 상수 멤버 클래스의 선언 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

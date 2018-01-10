@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -81,8 +80,7 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -115,30 +113,16 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 1c3fc1e6ee3ca15d610d2c25ad38eedb795d0ebf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ed4a232cc5d563a724adf29500e70aa28cf36432
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 파일의 상태 정보를 가져옵니다.  
@@ -206,7 +190,7 @@ int _wstat64i32(
 ## <a name="return-value"></a>반환 값  
  파일 상태 정보를 가져오는 경우 이러한 함수는 각각 0을 반환합니다. 반환 값이-1은 오류를 나타내며이 경우 `errno` 로 설정 된 `ENOENT`는 파일 이름 또는 경로 수 찾을 수 없음을 나타냅니다. `EINVAL` 의 반환 값은 잘못된 매개 변수를 나타냅니다. 또한 이 경우 `errno` 는 `EINVAL` 로 설정됩니다.  
   
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
+ 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 을 참조하세요.  
   
  `_stat32` 또는 `_wstat32`를 사용하지 않거나 `_USE_32BIT_TIME_T`를 정의(이 경우 날짜는 UTC 시간 2038년 1월 18일 23:59:59까지만 표시될 수 있음)하지 않는 한, 파일의 날짜 스탬프가 1970년 1월 1일 자정 이후이고 3000년 12월 31일 23:59:59 이전인 경우 표시될 수 있습니다.  
   
@@ -217,10 +201,10 @@ int _wstat64i32(
   
  이러한 함수의 변형은 32비트 또는 64비트 시간 형식 및 32비트 또는 64비트 파일 길이를 지원합니다. 첫 번째 숫자 접미사(`32` 또는 `64`)는 사용된 시간 형식의 크기를 나타내며, 두 번째 접미사( `i32` 또는 `i64`)는 파일 크기가 32비트 정수로 표시되는지 아니면 64비트 정수로 표시되는지를 나타냅니다.  
   
- `_stat`는 `_stat64i32`와 동일하며, `struct``_stat`는 64비트 시간을 포함합니다. `_USE_32BIT_TIME_T` 가 정의되지 않는 한 그러하며, 이 경우 이전 동작이 적용됩니다. `_stat` 는 32비트 시간을 사용하고 `struct``_stat` 는 32비트 시간을 포함합니다. 이는 `_stati64`의 경우에도 마찬가지입니다.  
+ `_stat`는 `_stat64i32`와 동일하며, `struct _stat`는 64비트 시간을 포함합니다. `_USE_32BIT_TIME_T` 가 정의되지 않는 한 그러하며, 이 경우 이전 동작이 적용됩니다. `_stat` 는 32비트 시간을 사용하고 `struct _stat` 는 32비트 시간을 포함합니다. 이는 `_stati64`의 경우에도 마찬가지입니다.  
   
 > [!NOTE]
->  `_wstat` 는 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] 바로 가기 링크와 작동하지 않습니다. 이러한 경우 `_wstat` 는 항상 0의 파일 크기를 보고합니다. `_stat` 는 바로 가기 링크와 제대로 작동합니다.  
+>  `_wstat`는 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] 바로 가기 링크에서 작동하지 않습니다. 이러한 경우 `_wstat` 는 항상 0의 파일 크기를 보고합니다. `_stat` 는 바로 가기 링크와 제대로 작동합니다.  
   
  이 함수는 해당 매개 변수의 유효성을 검사합니다. `path` 또는 `buffer`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다.  
   
@@ -237,7 +221,7 @@ int _wstat64i32(
 |`_stat32i64`, `_wstat32i64`|매크로 정의의 영향을 받지 않음|32비트|64비트|  
 |`_stat64i32`, `_wstat64i32`|매크로 정의의 영향을 받지 않음|64비트|32비트|  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -286,14 +270,14 @@ int _wstat64i32(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|----------------------|  
 |`_stat`, `_stat32`, `_stat64`, `_stati64`, `_stat32i64`, `_stat64i32`|\<sys/types.h> 다음에 \<sys/stat.h>|\<errno.h>|  
 |`_wstat`, `_wstat32`, `_wstat64`, `_wstati64`, `_wstat32i64`, `_wstat64i32`|\<sys/types.h> 다음에 \<sys/stat.h> 또는 \<wchar.h>|\<errno.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_stat.c  

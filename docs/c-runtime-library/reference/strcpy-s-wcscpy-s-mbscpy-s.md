@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -42,36 +40,22 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 390272a4fdeba5633df3ecabff4b4f4f57d97e83
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7a07af46cda1e3ce9c567b12bd83e2d3fd055a38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 문자열을 복사합니다. 이러한 버전의 [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 포함되어 있습니다.  
   
 > [!IMPORTANT]
->  `_mbscpy_s`는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbscpy_s`를 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -125,9 +109,9 @@ errno_t _mbscpy_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|반환 값|`strDestination`의 내용|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL`|any|모두|`EINVAL`|수정 안 됨|  
-|any|모두|`NULL`|`EINVAL`|`strDestination`[0]을 0으로 설정합니다.|  
-|모두|0 또는 너무 작음|모두|`ERANGE`|`strDestination`[0]을 0으로 설정합니다.|  
+|`NULL`|any|any|`EINVAL`|수정 안 됨|  
+|any|any|`NULL`|`EINVAL`|`strDestination`[0]을 0으로 설정합니다.|  
+|any|0 또는 너무 작음|any|`ERANGE`|`strDestination`[0]을 0으로 설정합니다.|  
   
 ## <a name="remarks"></a>설명  
  `strcpy_s` 함수는 null 종결 문자를 포함하여 `strSource`의 주소 내용을 `strDestination`에서 지정하는 위치로 복사합니다. 대상 문자열은 소스 문자열 및 이 문자열의 null 종결 문자를 포함할 만큼 충분히 커야 합니다. 소스 문자열과 대상 문자열이 겹치는 경우 `strcpy_s`의 동작이 정의되지 않습니다.  
@@ -138,11 +122,11 @@ errno_t _mbscpy_s(
   
  실행이 완료되면 대상 문자열은 항상 null로 종료됩니다.  
   
- C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없음), 보안 수준이 낮은 기존 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없음), 보안 수준이 낮은 기존 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
  이러한 함수의 디버그 버전은 우선 0xFE로 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -150,7 +134,7 @@ errno_t _mbscpy_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`strcpy_s`|\<string.h>|  
 |`wcscpy_s`|\<string.h> 또는 \<wchar.h>|  
@@ -158,7 +142,7 @@ errno_t _mbscpy_s(
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_strcpy_s.cpp  

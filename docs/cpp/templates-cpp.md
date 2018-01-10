@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32c65fc68bc9e7be2770e951de466e48f482af90
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="templates-c"></a>템플릿 (C++)
 서식 파일에는 c + +의 제네릭 프로그래밍을 위한 기반이 됩니다. 강력한 형식의 언어가 c + +는 특정 형식에서 프로그래머가 선언 명시적으로 또는 컴파일러에 의해 추론 된 모든 변수가 필요 합니다. 그러나 많은 데이터 구조 및 알고리즘 확인에 적용 될 형식에 관계 없이 동일 합니다. 이러한 작업 형식을 클래스 또는 함수를의 작업을 정의 하 여 사용자가 어떤 콘크리트 지정 템플릿 사용에서 작동 해야 합니다.  

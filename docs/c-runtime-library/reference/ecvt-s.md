@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _ecvt_s
+apiname: _ecvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - ecvt_s
 - _ecvt_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ecvt_s function
 - ecvt_s function
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 81bcb9fe1306f5affa49672269890d6f5888a3ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: af4b49b0fd0e4de74a3f454a544c07f08c89b81d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ecvts"></a>_ecvt_s
 `double` 숫자를 문자열로 변환합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 향상된 [_ecvt](../../c-runtime-library/reference/ecvt.md) 버전입니다.  
@@ -103,7 +86,7 @@ errno_t _ecvt_s(
  변환된 숫자의 부호입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공할 경우 0입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 Errno.h에서 정의됩니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 정상적으로 실행되는 경우 0입니다. 오류가 있을 경우 반환 값은 오류 코드입니다. 오류 코드는 Errno.h에서 정의됩니다. 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
  다음 표에 나와 있는 잘못된 매개 변수의 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 이 함수는 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
   
@@ -111,10 +94,10 @@ errno_t _ecvt_s(
   
 |`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|반환 값|`buffer`의 값|  
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|  
-|`NULL`|모두|모두|모두|모두|모두|`EINVAL`|수정되지 않습니다.|  
-|`NULL` 아님(유효한 메모리를 가리킴)|<=0|any|모두|모두|모두|`EINVAL`|수정되지 않습니다.|  
-|any|모두|모두|모두|`NULL`|모두|`EINVAL`|수정되지 않습니다.|  
-|any|모두|모두|모두|모두|`NULL`|`EINVAL`|수정되지 않습니다.|  
+|`NULL`|any|any|any|any|any|`EINVAL`|수정되지 않습니다.|  
+|`NULL` 아님(유효한 메모리를 가리킴)|<=0|any|any|any|any|`EINVAL`|수정되지 않습니다.|  
+|any|any|any|any|`NULL`|any|`EINVAL`|수정되지 않습니다.|  
+|any|any|any|any|any|`NULL`|`EINVAL`|수정되지 않습니다.|  
   
  **보안 문제**  
   
@@ -129,7 +112,7 @@ errno_t _ecvt_s(
   
  `_ecvt_s`와 `_fcvt_s`의 차이는 `_Count` 매개 변수의 해석에 있습니다. `_ecvt_s`는 `_Count`를 출력 문자열의 전체 숫자 개수로 해석하는 반면, `_fcvt_s`는 `_Count`를 소수점 뒤의 자릿수로 해석합니다.  
   
- C++에서는 템플릿 오버로드로 인해 이 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
  이 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하세요.  
   
@@ -139,9 +122,9 @@ errno_t _ecvt_s(
 |--------------|---------------------|---------------------|  
 |`_ecvt_s`|\<stdlib.h>|\<errno.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // ecvt_s.c  

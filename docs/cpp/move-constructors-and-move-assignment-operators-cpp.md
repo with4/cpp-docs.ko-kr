@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- move constructor
+dev_langs: C++
+helpviewer_keywords: move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 69280eff199b9c04b51bf9b7aa298a67bf31bd89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>이동 생성자 및 이동 할당 연산자(C++)
 이 항목에서는 작성 하는 방법을 설명는 *이동 생성자* 및 c + + 클래스에 대 한 이동 할당 연산자입니다. 이동 생성자를 사용하면 응용 프로그램의 성능을 크게 향상시킬 수 있는 이동 의미 체계를 구현할 수 있습니다. 이동 의미 체계에 대 한 자세한 내용은 참조 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.  
@@ -180,7 +177,7 @@ private:
     return *this;  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `MemoryBlock` 클래스에 대한 완전한 이동 생성자와 이동 할당 연산자를 보여 줍니다.  
   
 ```cpp  
@@ -228,7 +225,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 이동 의미 체계를 통해 응용 프로그램의 성능을 향상시키는 방법을 보여 줍니다. 이 예제에서는 벡터 개체에 두 요소를 추가한 다음 기존의 두 요소 사이에 새 요소를 삽입합니다. Visual c + + 2010에서의 `vector` 클래스는 이동 의미 체계를 복사 하는 대신 벡터의 요소를 이동 하 여 삽입 작업을 효율적으로 수행 합니다.  
   
 ```cpp  

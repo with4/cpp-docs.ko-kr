@@ -14,16 +14,19 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2cbaddee30c9b02b99c10852b7e9c0d425d80ebb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 19b573ca0069031cda6d7c8108d51f8bf4fa83ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-test-for-equality-ccli"></a>방법: 같음 여부 테스트(C++/CLI)
 다음 샘플에서는 c + +에 대 한 관리 되는 확장을 사용 하 여 같음 테스트를 기반으로를 핸들 참조 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // mcppv2_equality_test.cpp  

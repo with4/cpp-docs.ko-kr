@@ -19,18 +19,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 176e744423441711715cc32b355278db20491e8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f40b2deb5c78667e5343bd2be0948252e2f2e154
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-handling-crt"></a>오류 처리(CRT)
 이러한 루틴을 사용하여 프로그램 오류를 처리합니다.  
   
 ### <a name="error-handling-routines"></a>오류 처리 루틴  
   
-|루틴|기능|  
+|루틴|사용|  
 |-------------|---------|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) 매크로|런타임 라이브러리의 디버그 및 릴리스 버전 모두에서 사용할 수 있는 프로그래밍 논리 오류 테스트입니다.|  
 |[_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 매크로|`assert`와 유사하지만 런타임 라이브러리의 디버그 버전에서만 사용할 수 있습니다.|  

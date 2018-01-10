@@ -1,53 +1,55 @@
 ---
-title: "ptr::Detach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.Detach"
-  - "msclr.com.ptr.Detach"
-  - "ptr::Detach"
-  - "msclr::com::ptr::Detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::Detach"
+title: ptr::Detach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.Detach
+- msclr.com.ptr.Detach
+- ptr::Detach
+- msclr::com::ptr::Detach
+dev_langs: C++
+helpviewer_keywords: ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::Detach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gives up ownership of the COM object, returning a pointer to the object.  
+# <a name="ptrdetach"></a>ptr::Detach
+개체에 대 한 포인터를 반환 하는 COM 개체의 소유권을 제공 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 _interface_type * Detach();  
 ```  
   
-## 반환 값  
- The pointer to the COM object.  
+## <a name="return-value"></a>반환 값  
+ COM 개체에 대 한 포인터입니다.  
   
- If no object is owned, NULL is returned.  
+ 개체가 소유 하는 경우에 NULL이 반환 됩니다.  
   
-## 예외  
- Internally, `QueryInterface` is called on the owned COM object and any error `HRESULT` is converted to an exception by <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+## <a name="exceptions"></a>예외  
+ 내부적으로 `QueryInterface` 소유한 COM 개체 및 모든 오류를 호출할 `HRESULT` 여 예외로 변환 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>합니다.  
   
-## 설명  
- `Detach` first adds a reference to the COM object on behalf of the caller and then releases all references owned by the `com::ptr`.  The caller must ultimately release the returned object to destroy it.  
+## <a name="remarks"></a>설명  
+ `Detach`먼저 호출자를 대신 하 여 COM 개체에 대 한 참조를 추가 하 고 다음가 소유 하는 모든 참조를 해제는 `com::ptr`합니다.  호출자에 게 반환된 된 개체를 소멸 시킵니다 해제 궁극적으로 해야 합니다.  
   
-## 예제  
- This example implements a CLR class that uses a `com::ptr` to wrap its private member `IXMLDOMDocument` object.  The `DetachDocument` member function calls `Detach` to give up ownership of the COM object and return a pointer to the caller.  
+## <a name="example"></a>예  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `DetachDocument` 멤버 함수 호출 `Detach` COM 개체의 소유권을 호출자에 대 한 포인터를 반환 합니다.  
   
 ```  
 // comptr_detach.cpp  
@@ -128,12 +130,12 @@ int main() {
 }  
 ```  
   
-## 요구 사항  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ptr 멤버](../dotnet/ptr-members.md)   
  [ptr::Release](../dotnet/ptr-release.md)   
  [ptr::Attach](../dotnet/ptr-attach.md)

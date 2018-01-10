@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d89324e49cb08014892d08a046221b9a1e28d2e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 209124e6d4e8afa7930a4c74d2cce1acd7e279b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>방법: 리플렉션을 사용하여 어셈블리에 데이터 형식 열거(C++/CLI)
 다음 코드에서는 공용 형식 및 멤버를 사용 하 여 열거 <xref:System.Reflection>합니다.  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 없는 파일 확장명으로 사용 됩니다. 따라서 "mscorlib.dll" 명령줄 인수로 사용 하 여 실패 합니다 "mscorlib"를 사용 하 여.NET Framework 형식 표시 발생 됩니다. 제공 된 어셈블리 이름이 없는 경우 코드에서는 검색 하 고 보고서는 현재 어셈블리 내의 형식을 (이 코드에서 발생 하는 EXE).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // self_reflection.cpp  

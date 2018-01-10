@@ -1,45 +1,46 @@
 ---
-title: "vector::reserve(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::reserve"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reserve 멤버[STL/CLR]"
+title: 'vector:: reserve (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::reserve
+dev_langs: C++
+helpviewer_keywords: reserve member [STL/CLR]
 ms.assetid: d1d5ede9-9628-4b55-95ec-f087a57205f2
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2c8c5ac474cc2b94baedab64854fec3ca3e0a78a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# vector::reserve(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ensures a minimum growth capacity for the container.  
+# <a name="vectorreserve-stlclr"></a>vector::reserve(STL/CLR)
+컨테이너에 대 한 최소 증가 용량을 보장합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void reserve(size_type count);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  count  
- New minimum capacity of the container.  
+ 새 컨테이너의 최소 용량입니다.  
   
-## 설명  
- The member function ensures that `capacity()` henceforth returns at least `count`.  You use it to ensure that the container need not reallocate storage for the controlled sequence until it has grown to the specified size.  
+## <a name="remarks"></a>설명  
+ 멤버 함수를 사용 하면 `capacity()` 예측이 이상 반환 `count`합니다. 컨테이너 지정된 된 크기 성장 했으며 될 때까지 제어 되는 시퀀스에 대 한 저장소 할당 되지 필요 하도록 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_vector_reserve.cpp   
@@ -70,18 +71,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**capacity\(\) \= 4, ok \= True**  
-**capacity\(\) \= 9, ok \= True**   
-## 설명  
- Note that the actual capacities may differ from the values shown here, so long as all `ok` tests report true.  
+```Output  
+ a b c  
+capacity() = 4, ok = True  
+capacity() = 9, ok = True  
+```  
   
-## 요구 사항  
- **Header:** \<cliext\/vector\>  
+## <a name="description"></a>설명  
+ 여기에 표시 된 너무 오래 모든 값에서 실제 용량을 다를 수 있습니다 참고 `ok` 보고 되지 않으면 true입니다.  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/벡터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::capacity](../dotnet/vector-capacity-stl-clr.md)   
- [vector::resize](../dotnet/vector-resize-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)   
+ [vector::resize(STL/CLR)](../dotnet/vector-resize-stl-clr.md)

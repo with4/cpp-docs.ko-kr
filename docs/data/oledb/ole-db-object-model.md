@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b91198d4280a271c775b7be79ecab3da7271fb57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-object-model"></a>OLE DB 개체 모델
 OLE DB 개체 모델에는 다음 개체 또는 구성 요소 구성 됩니다. 처음 4 개의 개체나 나열 된 구성 요소 (데이터 원본, 세션, 명령 및 행 집합) 데이터 원본에 연결 하 고 볼 수 있도록 합니다. 접근자 이하의 나머지 표시 되 면 데이터 작업과 관련이 있습니다.  

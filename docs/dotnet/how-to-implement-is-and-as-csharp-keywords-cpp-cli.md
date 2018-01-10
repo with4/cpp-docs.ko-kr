@@ -16,16 +16,19 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae9753a30e513a237d658e3110b9174072ccd25b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d73cc06a79dd20743044803dd9c53b9e67e72995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>방법: is 및 as C# 키워드 구현(C++/CLI)
 이 항목에서는의 기능을 구현 하는 방법을 보여 줍니다.는 `is` 및 `as` Visual c + +의 C# 키워드입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // CS_is_as.cpp  

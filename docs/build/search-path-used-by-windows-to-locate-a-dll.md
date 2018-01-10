@@ -1,55 +1,56 @@
 ---
-title: "Windows에서 DLL을 찾는 데 사용되는 검색 경로 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL[C++], Windows 검색 경로"
-  - "DLL 찾기"
-  - "알려진 DLL 검색[C++]"
-  - "DLL 찾기"
-  - "검색 경로[C++]"
-  - "검색[C++], DLL"
-  - "Windows[C++], DLL 검색 경로"
+title: "Windows에서 DLL을 찾기 위해 사용 되는 경로 검색 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- searching [C++], DLLs
+- DLLs [C++], Windows search path
+- Windows [C++], DLL search path
+- known DLL searches [C++]
+- locating DLLs
+- finding DLLs
+- search paths [C++]
 ms.assetid: 84bfb380-ad7b-4962-b2d0-51b19a45f1bb
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 53350ed473226c86dd4fefa93cff376a371dedf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Windows에서 DLL을 찾는 데 사용되는 검색 경로
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-암시적 링크와 명시적 링크의 경우 모두 Windows는 Kernel32.dll 및 User32.dll과 같이 "알려진 DLL"을 먼저 검색합니다.  그런 다음 아래 순서에 따라 DLL을 검색합니다.  
+# <a name="search-path-used-by-windows-to-locate-a-dll"></a>Windows에서 DLL을 찾는 데 사용되는 검색 경로
+암시적 및 명시적 링크의 경우, 먼저 검색 "알려진된 Dll", 예: Kernel32.dll 및 User32.dll 됩니다. 그런 다음 다음 순서에 따라 Dll을 검색 합니다.  
   
-1.  현재 프로세스의 실행 모듈이 있는 디렉터리  
+1.  현재 프로세스에 대 한 실행 모듈 위치한 디렉터리입니다.  
   
-2.  현재 디렉터리  
+2.  현재 디렉터리입니다.  
   
-3.  Windows 시스템 디렉터리.  **GetSystemDirectory** 함수가 이 디렉터리의 경로를 검색합니다.  
+3.  Windows 시스템 디렉터리입니다. **GetSystemDirectory** 함수는이 디렉터리의 경로 검색 합니다.  
   
-4.  Windows 디렉터리.  **GetWindowsDirectory** 함수가 이 디렉터리의 경로를 검색합니다.  
+4.  Windows 디렉터리입니다. **GetWindowsDirectory** 함수는이 디렉터리의 경로 검색 합니다.  
   
-5.  PATH 환경 변수에 나열된 디렉터리  
+5.  PATH 환경 변수에 나열 된 디렉터리입니다.  
   
     > [!NOTE]
-    >  LIBPATH 환경 변수는 사용되지 않습니다.  
+    >  LIBPATH 환경 변수 사용 되지 않습니다.  
   
-## 수행할 작업  
+## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   
--   [암시적 링크](../build/linking-implicitly.md)  
+-   [암시적으로 DLL에 연결 하는 방법](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [명시적 링크](../build/linking-explicitly.md)  
+-   [명시적으로 DLL에 연결 하는 방법](../build/linking-an-executable-to-a-dll.md#linking-explicitly)  
   
--   [사용할 링크 방법 결정](../build/determining-which-linking-method-to-use.md)  
+-   [사용할 연결 방법을 결정 합니다.](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## 참고 항목  
- [Visual C\+\+의 DLL](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [Visual C++의 DLL](../build/dlls-in-visual-cpp.md)

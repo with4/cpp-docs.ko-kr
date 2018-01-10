@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dd7a16cb35257104b79d0347fe415c5b17cd4bb4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0eb93347f76c7becf44fb7f36fb066fe41f3f41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 버퍼에서 문자를 찾습니다.  
@@ -98,7 +99,7 @@ const wchar_t *wmemchr(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`memchr`|\<memory.h> 또는 \<string.h>|  
 |`wmemchr`|\<wchar.h>|  
@@ -108,7 +109,7 @@ const wchar_t *wmemchr(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_memchr.c  

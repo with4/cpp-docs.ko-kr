@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1e3d50dd4ecf19b1a7bcee7b5efc0d6e2e57d1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 373dc99b7c4292501a41e17ba4d7393972c31c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>문자 상수 및 조건부 포함
 **ANSI 3.8.1** 조건부 포함을 제어하는 상수 식의 단일 문자 상수 값이 실행 문자 집합의 동일한 문자 상수 값과 일치=하는지 여부. 해당 문자 상수가 음의 값을 가질 수 있는지 여부  

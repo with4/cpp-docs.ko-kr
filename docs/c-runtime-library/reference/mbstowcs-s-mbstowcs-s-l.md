@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,38 +26,22 @@ apitype: DLLExport
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbstowcs_s_l function
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 8858827e65ad342f2c48dba26b3be7f7f9dd2ca3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 822a7058afd6588be6f953c5c2b89d41ec02c87f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 멀티바이트 문자 시퀀스를 해당 와이드 문자 시퀀스로 변환합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)의 버전입니다.  
@@ -142,22 +125,22 @@ errno_t _mbstowcs_s_l(
   
  `count`가 특수 값 [_TRUNCATE](../../c-runtime-library/truncate.md)이면 `mbstowcs_s`는 대상 버퍼에 포함할 수 있을 만큼 문자열을 최대한 변환하지만 null 종결자를 포함할 공간은 남겨 둡니다.  
   
- `mbstowcs_s`가 소스 문자열을 성공적으로 변환하는 경우 null 종결자를 포함하여 변환된 문자열의 와이드 문자 크기를 `*``pReturnValue`에 배치합니다(`pReturnValue`가 `NULL`이 아닌 경우). `wcstr` 인수가 `NULL`이며 필요한 버퍼 크기를 결정하는 방법을 제공하는 경우에도 발생합니다. `wcstr`이 `NULL`인 경우 `count`가 무시되고 `sizeInWords`는 0이어야 합니다.  
+ `mbstowcs_s`가 소스 문자열을 성공적으로 변환하는 경우 null 종결자를 포함하여 변환된 문자열의 와이드 문자 크기를 `*pReturnValue`에 배치합니다(`pReturnValue`가 `NULL`이 아닌 경우). `wcstr` 인수가 `NULL`이며 필요한 버퍼 크기를 결정하는 방법을 제공하는 경우에도 발생합니다. `wcstr`이 `NULL`인 경우 `count`가 무시되고 `sizeInWords`는 0이어야 합니다.  
   
- `mbstowcs_s`가 잘못된 멀티바이트 문자를 발견하면 `*``pReturnValue`에 0을 배치하고, 대상 버퍼를 빈 문자열로 설정하며, `errno`를 `EILSEQ`로 설정하고, `EILSEQ`를 반환합니다.  
+ `mbstowcs_s`가 잘못된 멀티바이트 문자를 발견하면 `*pReturnValue`에 0을 배치하고, 대상 버퍼를 빈 문자열로 설정하며, `errno`를 `EILSEQ`로 설정하고, `EILSEQ`를 반환합니다.  
   
  `mbstr`이 가리키는 시퀀스와 `wcstr`이 가리키는 시퀀스가 겹치는 경우 `mbstowcs_s`의 동작이 정의되지 않습니다.  
   
 > [!IMPORTANT]
 >  `wcstr` 및 `mbstr`이 겹치지 않고 `count`가 변환할 멀티바이트 문자 수를 정확하게 반영하도록 합니다.  
   
- `mbstowcs_s`는 로캘 종속 동작에 현재 로캘을 사용하고 `_mbstowcs_s_l`은 전달된 로캘을 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `mbstowcs_s`는 로캘 종속 동작에 현재 로캘을 사용하고 `_mbstowcs_s_l`은 전달된 로캘을 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
- C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [안전한 템플릿 오버로드](../../c-runtime-library/secure-template-overloads.md)를 참조하세요.  
+ C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`mbstowcs_s`|\<stdlib.h>|  
 |`_mbstowcs_s_l`|\<stdlib.h>|  

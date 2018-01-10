@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bb8391ddeee73e5a5f4b2ce63b7034079b64897
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fb127496347e39e22b446c84583ad37b75cc025e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queueassign-stlclr"></a>queue::assign(STL/CLR)
 모든 요소를 바꿉니다.  
@@ -37,7 +40,7 @@ void assign(queue<Value, Container>% right);
 ## <a name="remarks"></a>설명  
  멤버 함수는 할당 `right.get_container()` 기본 컨테이너에 있습니다. 큐의 전체 내용을 변경 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_queue_assign.cpp   

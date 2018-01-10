@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - ATLBASE/ATL::CAtlWinModule::CAtlWinModule
 - ATLBASE/ATL::CAtlWinModule::AddCreateWndData
 - ATLBASE/ATL::CAtlWinModule::ExtractCreateWndData
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlWinModule class
+dev_langs: C++
+helpviewer_keywords: CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f2d5e28f39159b097c4e00e11518295b2872a84b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dcaf3d6573432b7f6f16826b2551a7e9330abed9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 클래스
 이 클래스는 ATL windowing 구성 요소에 대 한 지원을 제공합니다.  
@@ -97,7 +80,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
  `pObject`  
  개체의에 대 한 포인터 **이** 포인터입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드를 호출 [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) 어떤 초기화는 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) 구조입니다. 이 구조는 저장 된 **이** 창 프로시저의 클래스 인스턴스를 가져오는 데 포인터입니다.  
   
 ##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
@@ -107,7 +90,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 CAtlWinModule();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  초기화에 실패 하면는 **EXCEPTION_NONCONTINUABLE** 예외가 발생 합니다.  
   
 ##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
@@ -117,7 +100,7 @@ CAtlWinModule();
 ~CAtlWinModule();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다.  
   
 ##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
@@ -134,4 +117,3 @@ void* ExtractCreateWndData();
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
  [클래스 개요](../../atl/atl-class-overview.md)   
  [모듈 클래스](../../atl/atl-module-classes.md)
-

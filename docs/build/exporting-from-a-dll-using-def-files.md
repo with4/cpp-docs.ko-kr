@@ -1,38 +1,39 @@
 ---
-title: "DEF 파일을 사용하여 DLL에서 내보내기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".def 파일[C++], DLL에서 내보내기"
-  - "def 파일[C++], DLL에서 내보내기"
-  - "DLL 내보내기[C++], DEF 파일"
+title: "DEF 파일을 사용 하 여 DLL에서 내보내기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- def files [C++], exporting from DLLs
+- .def files [C++], exporting from DLLs
+- exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15806c3e40d45588ec27f1351e583fc5e8e897e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# DEF 파일을 사용하여 DLL에서 내보내기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-모듈 정의\(.def\) 파일은 DLL의 여러 가지 특성을 설명하는 하나 이상의 모듈 문이 들어 있는 텍스트 파일입니다.  **\_\_declspec\(dllexport\)** 키워드를 사용하여 DLL의 함수를 내보내지 않는 경우에는 해당 DLL에 대한 .def 파일이 있어야 합니다.  
+# <a name="exporting-from-a-dll-using-def-files"></a>DEF 파일을 사용하여 DLL에서 내보내기
+모듈 정의 (.def) 파일은 DLL의 다양 한 특성을 설명 하는 하나 이상의 모듈 문을 포함 하는 텍스트 파일. 사용 하지 않는 경우는 **__declspec (dllexport)** DLL의 함수를 내보내려면 키워드 DLL.def 파일을 필요 합니다.  
   
- .def 파일에는 적어도 다음과 같은 모듈 정의 문이 포함되어야 합니다.  
+ .Def 파일은 다음 모듈 정의 문을 포함 해야 합니다.  
   
--   파일의 첫째 문은 LIBRARY 문이어야 합니다.  이 문은 해당 .def 파일이 DLL에 속한다는 것을 나타냅니다.  LIBRARY 문 다음에는 DLL의 이름이 옵니다.  링커는 이 이름을 DLL의 가져오기 라이브러리에 포함시킵니다.  
+-   파일의 첫 번째 문 라이브러리 문 이어야 합니다. 이 문은 DLL에 속하는 것으로.def 파일을 나타냅니다. 라이브러리 문에 DLL의 이름에 나옵니다. 링커는 DLL 가져오기 라이브러리에이 이름을 배치합니다.  
   
--   EXPORTS 문은 해당 DLL이 내보내기 함수의 이름 및 서수 값\(선택적\)을 나열합니다.  함수 이름 다음에 @ 기호와 숫자를 사용하여 해당 함수에 서수 값을 할당합니다.  서수 값을 지정할 때 사용할 수 있는 서수 값의 범위는 1부터 N까지이며, 여기에서 N은 해당 DLL에서 내보내기 함수의 수입니다.  서수 순서로 함수를 내보내려면 [이름 대신 서수를 사용하여 DLL에서 함수 내보내기](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)도 참조하십시오.  
+-   EXPORTS 문은 이름 및 필요에 따라 DLL에서 내보낸 함수의 서 수 값을 나열 합니다. 함수 이름에 따라 기능 서 수 값 할당는 at 기호 (@) 및 번호입니다. 서 수 값을 지정할 때 N, 여기서 N은 DLL에서 내보낸 함수 개수-%1 범위에 있어야 합니다. 서 수로 함수를 내보낼 경우 참조 [이름 대신 서 수를 사용 하 여 DLL에서 함수 내보내기](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) 이 항목 뿐만 아니라 합니다.  
   
- 예를 들어, 이진 검색 트리를 구현하는 코드가 들어 있는 DLL의 형식은 다음과 같습니다.  
+ 예를 들어 다음과 같은 검색 이진 트리를 구현 하는 코드를 포함 하는 DLL 형식입니다.  
   
 ```  
 LIBRARY   BTREE  
@@ -43,11 +44,11 @@ EXPORTS
    Min   @4  
 ```  
   
- [MFC DLL 마법사](../mfc/reference/mfc-dll-wizard.md)를 사용하여 MFC DLL을 만드는 경우에는 마법사가 사용자 대신 기초 .def 파일을 만들고 이 파일을 프로젝트에 자동으로 추가합니다.  그러면 내보내기 함수의 이름을 이 파일에 추가합니다.  비 MFC DLL의 경우에는 사용자가 직접 .def 파일을 만들어 프로젝트에 추가해야 합니다.  
+ 사용 하는 경우는 [MFC DLL 마법사](../mfc/reference/mfc-dll-wizard.md) MFC DLL을 만들려면 마법사 뼈대.def 파일을 만들고 프로젝트에 자동으로 추가 합니다. 이 파일에 내보낼 함수의 이름을 추가 합니다. 비 MFC Dll의 경우 직접.def 파일을 만들어 하며 프로젝트에 추가 합니다.  
   
- C\+\+ 파일에서 함수를 내보내는 경우에는 .def 파일에 데코레이팅된 이름을 포함시키거나 extern "C"를 사용하여 내보내기 함수를 표준 C 링크로 정의해야 합니다.  .def 파일에 데코레이팅된 이름을 포함해야 하는 경우 이 이름은 [DUMPBIN](../build/reference/dumpbin-reference.md) 도구 또는 링커 옵션 [\/MAP](../build/reference/map-generate-mapfile.md)을 사용하여 가져올 수 있습니다.  컴파일러에서 생성된 데코레이팅된 이름은 해당 컴파일러에서만 사용할 수 있습니다.  Visual C\+\+ 컴파일러에서 생성된 데코레이팅된 이름을 .def 파일에 포함하는 경우, 호출 응용 프로그램의 데코레이팅된 이름과 DLL의 .def 파일에 있는 내보내는 이름이 일치하도록 해당 DLL에 링크하는 응용 프로그램도 같은 버전의 Visual C\+\+를 사용하여 빌드해야 합니다.  
+ C + + 파일에서 함수를 내보내는 경우 데코레이팅된 이름이.def 파일에 배치 하거나 extern "C"를 사용 하 여 표준 C 링크를 사용 하 여 내보낸된 함수를 정의 해야 합니다. .Def 파일의 데코레이팅된 이름을 배치 해야 하는 경우 사용 하 여 가져올 수 있습니다는 [DUMPBIN](../build/reference/dumpbin-reference.md) 도구 또는 링커를 사용 하 여 [/맵](../build/reference/map-generate-mapfile.md) 옵션입니다. 컴파일러에서 생성 한 데코레이팅된 이름을 컴파일러 에서만 되는지 확인 합니다. .Def 파일에 Visual c + + 컴파일러에서 생성 한 데코레이팅된 이름을 포함 하는 경우, 사용자 DLL에 연결 하는 응용 프로그램 빌드해야 호출 응용 프로그램의 데코레이팅된 이름을 내보내는 이름이 DLL의.de에 일치 하도록 동일한 버전의 Visual c + +를 사용 하 여 f 파일입니다.  
   
- [확장 DLL](../build/extension-dlls-overview.md)을 빌드하고 .def 파일을 사용하여 내보내는 경우에는 내보내는 클래스가 들어 있는 헤더 파일의 처음과 끝 부분에 다음 코드를 추가합니다.  
+ 작성 하는 경우는 [확장 DLL](../build/extension-dlls-overview.md), 내보내는 클래스가 들어 있는 헤더 파일의 시작과 끝에 다음 코드를 추가.def 파일을 사용 하 여 내보내기 및:  
   
 ```  
 #undef AFX_DATA  
@@ -57,29 +58,29 @@ EXPORTS
 #define AFX_DATA  
 ```  
   
- 이 코드 줄을 추가하면 내부적으로 사용되거나 클래스에 추가되는 MFC 변수를 해당 확장 DLL에서 내보내거나 가져올 수 있습니다.  예를 들어, `DECLARE_DYNAMIC`을 사용하여 클래스를 파생시키는 경우에는 이 매크로가 확장되어 클래스에 `CRuntimeClass` 멤버 변수를 추가합니다.  이 네 줄의 코드가 없으면 DLL이 올바르게 컴파일 또는 링크되지 않거나 클라이언트 응용 프로그램이 DLL에 링크할 때 오류가 발생할 수 있습니다.  
+ 이 줄 되도록 MFC 변수 내부적으로 사용 되는 또는 클래스에 추가 됩니다 (내보내거나 가져올) MFC 확장 DLL에서에서 합니다. 예를 들어, 사용 하는 클래스를 파생 하는 경우 `DECLARE_DYNAMIC`, 매크로 확장을 추가 하 여 한 `CRuntimeClass` 클래스에 멤버 변수입니다. 이 네 개의 줄 DLL에 컴파일 또는 올바르게 연결 또는 클라이언트 응용 프로그램 DLL에 연결 되 면 오류가 발생 될 수 있습니다.  
   
- DLL 빌드 시 링커는 .def 파일을 사용하여 내보내기 파일\(.exp\) 및 가져오기 라이브러리 파일\(.lib\)을 만듭니다.  그런 다음 링커는 이 내보내기 파일을 사용하여 DLL 파일을 빌드합니다.  또한 해당 DLL을 암시적으로 링크하는 실행 파일은 빌드 시 가져오기 라이브러리에 링크합니다.  
+ DLL을 빌드할 때 링커 내보내기 (.exp) 파일을 만드는.def 파일 및 가져오기 라이브러리 (.lib) 파일을 사용 합니다. 다음 링커 내보내기 파일을 사용 하 여 DLL 파일을 빌드합니다. 암시적으로 작성 될 때 가져오기 라이브러리에 대 한 DLL 링크에 연결 된 실행 합니다.  
   
- MFC 자체는 .def 파일을 사용하여 함수 및 클래스를 MFCx0.dll에서 내보냅니다.  
+ Note 자체 MFC MFCx0.dll에서 함수 및 클래스를 내보내려면.def 파일을 사용 합니다.  
   
-## 수행할 작업  
+## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   
--   [\_\_declspec\(dllexport\)을 사용하여 DLL에서 내보내기](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [__Declspec (dllexport)를 사용 하 여 DLL에서 내보내기](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [AFX\_EXT\_CLASS를 사용하여 내보내기 및 가져오기](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [AFX_EXT_CLASS를 사용 하 여 가져오기 및 내보내기](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [C\+\+ 함수를 C 언어 실행 파일에서 사용할 수 있도록 내보내기](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [C 언어 실행 파일에서 사용 하기 위해 c + + 함수 내보내기](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [C 함수를 C 또는 C\+\+ 언어 실행 파일에서 사용할 수 있도록 내보내기](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [C 또는 c + + 언어 실행 파일에서 사용 하기 위해 내보내기 C 함수](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
 -   [사용할 내보내기 방법 결정](../build/determining-which-exporting-method-to-use.md)  
   
--   [\_\_declspec\(dllimport\)을 사용하여 응용 프로그램으로 가져오기](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [__Declspec (dllimport)을 사용 하 여 응용 프로그램으로 가져오기](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [DLL 초기화](../build/initializing-a-dll.md)  
+-   [DLL 초기화](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>추가 정보  
   
 -   [.def 파일](../build/reference/module-definition-dot-def-files.md)  
   
@@ -87,9 +88,9 @@ EXPORTS
   
 -   [데코레이팅된 이름](../build/reference/decorated-names.md)  
   
--   [인라인 함수 가져오기 및 내보내기](../build/importing-and-exporting-inline-functions.md)  
+-   [가져오기 및 내보내기 인라인 함수](../build/importing-and-exporting-inline-functions.md)  
   
 -   [상호 가져오기](../build/mutual-imports.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DLL에서 내보내기](../build/exporting-from-a-dll.md)

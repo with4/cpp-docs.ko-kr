@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb349b2c1649b6e4e46fcc92829de87043d0c50a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6ceb3e20bdf6ba2ef8402c7881f6aa4cc9de290
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-of-unions"></a>공용 구조체의 저장소
 공용 구조체 변수와 연결된 저장소는 공용 구조체의 최대 멤버에 필요한 저장소입니다. 작은 멤버를 저장하면 사용하지 않는 메모리 공간에 공용 구조체 변수에 포함될 수 있습니다. 모든 멤버가 같은 메모리 공간에 저장되고 같은 주소에서 시작됩니다. 값이 다른 멤버에 할당될 때마다 저장된 값을 덮어씁니다. 예:  

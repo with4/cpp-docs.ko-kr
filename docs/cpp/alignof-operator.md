@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - alignas_cpp
 - __alignof_cpp
 - alignof_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - alignas [C++]
 - alignment of structures
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 66ec7ff196a4f22aec043d8b76faf0189e05cd0f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignof-operator"></a>__alignof 연산자
 C++11에서는 지정된 형식의 맞춤(바이트)을 반환하는 `alignof` 연산자를 소개합니다. 최대 이식성을 제공하려면 Microsoft 전용 __alignof 연산자가 아닌 alignof 연산자를 사용해야 합니다.  
@@ -56,9 +54,9 @@ C++11에서는 지정된 형식의 맞춤(바이트)을 반환하는 `alignof` �
 |**__alignof (char)**|1|  
 |**__alignof (short)**|2|  
 |**__alignof (int)**|4|  
-|**__alignof ( \__int64)**|9|  
+|**__alignof ( \__int64)**|8|  
 |**__alignof (float)**|4|  
-|**__alignof (double)**|9|  
+|**__alignof (double)**|8|  
 |**__alignof (char\* )**|4|  
   
  `__alignof` 값은 기본 유형에 대해 `sizeof`의 값과 동일합니다. 그러나 다음과 같은 예제를 고려해야 합니다.  

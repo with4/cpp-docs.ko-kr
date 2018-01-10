@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - CrtDbgReportW
 - _CrtDbgReportW
 - _CrtDbgReport
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debug reporting
 - _CrtDbgReport function
@@ -37,31 +35,16 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a2f148b031312db10449c6f33c67b94f6e171c5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 디버깅 메시지가 포함된 보고서를 생성하고 이 보고서를 가능한 대상 3개로 보냅니다(디버그 버전에만 해당).  
@@ -126,8 +109,7 @@ int _CrtDbgReportW(
 |`_CRTDBG_MODE_WNDW`|적용할 수 없음|Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) API를 호출하여 **중단**, **다시 시도** 및 **무시** 단추와 함께 메시지를 표시하는 메시지 상자를 만듭니다. 사용자가 **중단**을 클릭하면 `_CrtDbgReport` 또는 `_CrtDbgReport`가 즉시 중단됩니다. 사용자가 **다시 시도**를 클릭하면 1이 반환됩니다. 사용자가 **무시**를 클릭하면 실행이 계속되고 `_CrtDbgReport` 및 `_CrtDbgReportW`가 0을 반환합니다. 오류 조건이 있을 때 **무시**를 클릭하면 종종 "정의되지 않은 동작"이 발생할 수 있습니다.|  
 |`_CRTDBG_MODE_FILE`|`__HFILE`|Windows [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747.aspx) API를 사용하여 사용자가 제공한 `HANDLE`에 메시지를 작성하지만 파일 핸들의 유효성을 검사하지는 않습니다. 보고서 파일 열기 및 유효한 파일 핸들 전달은 응용 프로그램에서 담당합니다.|  
 |`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDERR`|`stderr`에 메시지를 씁니다.|  
-|`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDOUT`|
-          `stdout`에 메시지를 씁니다.|  
+|`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDOUT`|`stdout`에 메시지를 씁니다.|  
   
  보고서는 1개, 2개 또는 3개 대상으로 보내거나 아무 대상으로도 보내지 않을 수 있습니다. 보고서 모드 및 보고서 파일을 지정하는 방법에 대한 자세한 내용은 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 및 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 함수를 참조하세요. 디버그 매크로 및 보고 함수 사용에 대한 자세한 내용은 [보고서 매크로](/visualstudio/debugger/macros-for-reporting)를 참조하세요.  
   
@@ -135,7 +117,7 @@ int _CrtDbgReportW(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_CrtDbgReport`|\<crtdbg.h>|  
 |`_CrtDbgReportW`|\<crtdbg.h>|  
@@ -145,7 +127,7 @@ int _CrtDbgReportW(
 ## <a name="libraries"></a>라이브러리  
  [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)의 디버그 버전만 해당됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_crtdbgreport.c  

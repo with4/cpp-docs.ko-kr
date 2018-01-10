@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d79f2a7ae74b17c544e8da9ce2df0d34fe0e3874
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 838c3ffb92c77a624271b91adcfea89257ed7126
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fardata"></a>.FARDATA?
 와 함께 사용할 경우 [합니다. 모델](../../assembler/masm/dot-model.md), 먼 데이터 세그먼트 초기화 되지 않은 데이터에 대 한 시작 (세그먼트 이름 FAR_BSS 또는 *이름*).  

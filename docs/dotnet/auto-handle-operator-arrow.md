@@ -1,45 +1,46 @@
 ---
-title: "auto_handle::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_handle::operator->"
-  - "auto_handle.operator->"
-  - "auto_handle::operator->"
-  - "msclr.auto_handle.operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator->"
+title: auto_handle::operator-&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_handle::operator->
+- auto_handle.operator->
+- auto_handle::operator->
+- msclr.auto_handle.operator->
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator->
 ms.assetid: c8c7a771-ea15-41fa-981a-065b8d1162b4
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7fcaef569626c21154437973c525aee85f4cd4cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The member access operator.  
+# <a name="autohandleoperator-gt"></a>auto_handle::operator-&gt;
+멤버 액세스 연산자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 _element_type ^ operator->();  
 ```  
   
-## 반환 값  
- `auto_handle`로 래핑되는 개체입니다.  
+## <a name="return-value"></a>반환 값  
+ 개체에서 래핑된 `auto_handle`합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // msl_auto_handle_op_arrow.cpp  
@@ -71,13 +72,16 @@ int main() {
 }  
 ```  
   
-  **Hello from first A\!**  
-**a\-\>m\_i \= 5**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_handle.h\>  
+```Output  
+Hello from first A!  
+a->m_i = 5  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_handle 멤버](../dotnet/auto-handle-members.md)   
- [auto\_handle::get](../dotnet/auto-handle-get.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_handle 멤버](../dotnet/auto-handle-members.md)   
+ [auto_handle::get](../dotnet/auto-handle-get.md)

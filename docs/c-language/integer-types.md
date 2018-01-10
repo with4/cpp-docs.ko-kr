@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b5ce16963e027771bd82a8e2820e0b9ba319806
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e324976d0054cd1b32188b6ebe0f10ab4e1bdd69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integer-types"></a>정수 형식
 모든 정수 상수에는 값과 표현 방식에 따라 형식이 제공됩니다. **l** 또는 **L** 문자를 상수 끝에 추가하여 모든 정수 상수를 **long** 형식으로 지정할 수 있으며, **u** 또는 **U**를 값에 추가하여 `unsigned` 형식으로 지정할 수 있습니다. 소문자 **l**은 숫자 1과 혼동할 수 있으므로 사용하지 않아야 합니다. **long** 정수 상수의 몇 가지 형태는 다음과 같습니다.  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - using declaration
 - declaring namespaces, unqualified names in namespaces
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - using keyword [C++]
 - declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c55abac758c636bce596b0613e0ad5671fc9c430
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c6bf39dfdb4f59bcf54ce1ddd5174f1e3a55e3a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-declaration"></a>선언 사용
 선언을 사용 하는 이름을는 선언적 영역에 새로 추가 선언을 사용 하 여 나타납니다.  
@@ -53,7 +51,7 @@ using declarator-list ;
 ## <a name="remarks"></a>설명  
 엔터티에 대 한 동의어로 정규화 되지 않은 이름을 소개 선언을 사용 하 여 다른 곳에서 선언 합니다. 나타나는 선언 영역에서 명시적 자격 증명 없이 사용할 특정 네임 스페이스에서 단일 이름 수 있습니다. 이 달리는 [지시문을 사용 하 여](../cpp/namespaces-cpp.md#using_directives)을 허용 하는 *모든* 자격 증명 없이 사용 하는 네임 스페이스의 이름입니다. `using` 키워드에도 사용 됩니다 [형식의 별칭](../cpp/aliases-and-typedefs-cpp.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  선언을 사용 하 여 클래스 정의에 사용할 수 있습니다.  
   
 ```cpp  
@@ -98,7 +96,7 @@ In B::f()
 In B::g()  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 사용 하는 멤버를 선언 하는 데 사용 하는 경우 선언은 기본 클래스의 멤버를 참조 해야 합니다.  
   
 ```cpp  
@@ -137,7 +135,7 @@ int main() {
 In B::f()  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 사용 하 여 선언 된 멤버 선언 명시적 정규화를 사용 하 여 참조할 수 있습니다. `::` 전역 네임 스페이스 접두사를 참조 합니다.  
   
 ```cpp  
@@ -176,7 +174,7 @@ In f
 In A::g  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 사용 하는 경우 선언한, 사용 하는 지점에서 사용할 수 있는 정의에 선언 하 여 만든 동의어에서 참조 선언 합니다. 에서는 사용 된 네임 스페이스에 추가 된 정의 선언 값은 유효한 동의어가 아닙니다.  
   
 에 정의 된 이름을 `using` 선언은 원래 이름에 대 한 별칭입니다. 형식, 링크 또는 다른 특성이 원래 선언에는 영향을 주지 않습니다.  
@@ -204,7 +202,7 @@ void b() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 지역 선언에는 네임 스페이스의 함수에 대해 선언 대 한 사용 하는 선언적 영역에서 단일 이름 제공, 해야 모두 동일한 엔터티를 참조 또는 해야 모든 함수를 참조 합니다.  
   
 ```cpp  
@@ -226,7 +224,7 @@ void g() {
   
  위의 예에는 `using B::i` 문을 사용 하면 두 번째 `int i` 에서 선언할 수는 `g()` 함수입니다. `using B::f` 문을와 충돌 하지 않는 `f(char)` 에 의해 정의 된 함수 이름 때문에 작동 `B::f` 매개 변수 형식이 다릅니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  로컬 함수 선언 선언을 사용 하 여에서 도입 된 함수와 같은 이름과 형식을 가질 수 없습니다. 예:  
   
 ```cpp  
@@ -252,7 +250,7 @@ void h() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  상속을 기준으로 제공 하는 경우 using 선언 이름을 기본 클래스에서 파생된 클래스 범위, 기본 클래스에 동일한 이름 및 인수 형식 가진 파생된 클래스 재정의 가상 멤버 함수에서 멤버 함수에 있습니다.  
   
 ```cpp  
@@ -309,7 +307,7 @@ In B::g
 In D::g(char)  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 이름 사용 하 여 언급 된 함수의 모든 인스턴스의 선언 액세스할 수 있어야 합니다. 특히, 파생된 클래스를 사용 하 여 사용 하는 경우에 기본 클래스 멤버 이름은 멤버 액세스 하는 선언에 액세스할 수 있어야 합니다. 이름이 경우 오버 로드 된 멤버 함수의 명명 하는 모든 함수에 액세스할 수 있어야 합니다.  
   
 멤버의 액세스 가능성에 자세한 내용은 참조 [멤버 액세스 제어](../cpp/member-access-control-cpp.md)합니다.  

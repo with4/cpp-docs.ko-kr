@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -40,8 +39,7 @@ f1_keywords:
 - _RPTF3
 - RPT2
 - _RPTF1
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _RPTW3 macro
@@ -95,16 +93,16 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 453b04174325a7c112105bdef1147e1b7909ccdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW 매크로
 디버그 보고서를 생성하여 응용 프로그램의 진행률을 추적합니다(디버그 버전에만 해당함).  *n*  의 인수 개수를 지정 `args` 이며 0, 1, 2, 3, 4 또는 5 일 수 있습니다.  
@@ -179,14 +177,14 @@ _RPTFWn(
 |`_RPTW` 매크로|\<crtdbg.h>|  
 |`_RPTFW` 매크로|\<crtdbg.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="libraries"></a>라이브러리  
  [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)의 디버그 버전만 해당됩니다.  
   
  이러한 항목은 매크로이며 Crtdbg.h를 포함하면 가져올 수 있지만, 이러한 매크로는 다른 런타임 함수를 호출하므로 응용 프로그램을 디버그 라이브러리 중 하나와 연결해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 항목의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1f0b531942e281236c65ef9a2e1ad3d3f669bbe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc32ab53469b1f125b56343806c7920461c64bf2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 클래스
 `CComMultiThreadModelNoCS`스레드로부터 안전한은 메서드를 제공 증가 및 감소는 변수 값 없이 임계 영역 잠금 또는 잠금 해제 기능입니다.  
@@ -90,7 +91,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
   
  외에 `AutoCriticalSection`를 사용할 수 있습니다는 `typedef` 이름 [CriticalSection](#criticalsection)합니다. 지정 하지 않아야 `AutoCriticalSection` 전역 개체 또는 정적 클래스 멤버는 CRT 시작 코드를 제거 하려는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)합니다.  
   
 ##  <a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
@@ -113,7 +114,7 @@ typedef CComFakeCriticalSection CriticalSection;
   
  외에 `CriticalSection`를 사용할 수 있습니다는 `typedef` 이름 `AutoCriticalSection`합니다. 지정 하지 않아야 `AutoCriticalSection` 전역 개체 또는 정적 클래스 멤버는 CRT 시작 코드를 제거 하려는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)합니다.  
   
 ##  <a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
@@ -172,7 +173,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
   
  에 대 한 지정 된 클래스에 관계 없이 `ThreadModel` (같은 `CComMultiThreadModelNoCS`), `_ThreadModel` 적절 하 게 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

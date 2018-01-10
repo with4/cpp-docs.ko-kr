@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5207b7479876cc88941397906646fbd08fa02b6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f904d5f03d4c9e74123bc5be43f02178cb2e3d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
 가타카나 기호에 대한 테스트이며 코드 페이지 932만 해당됩니다.  
@@ -68,11 +69,11 @@ int _ismbbkana_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_ismbbkana`는 정수 `c`가 가타카나 기호인 경우 0이 아닌 값을 반환하고 그렇지 않은 경우 0을 반환합니다. `_ismbbkana` 는 로캘 종속 문자 정보에 대한 현재 로캘을 사용합니다. `_ismbbkana_l` 은 전달된 로캘 개체를 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_ismbbkana`는 정수 `c`가 가타카나 기호인 경우 0이 아닌 값을 반환하고 그렇지 않은 경우 0을 반환합니다. `_ismbbkana` 는 로캘 종속 문자 정보에 대한 현재 로캘을 사용합니다. `_ismbbkana_l` 은 전달된 로캘 개체를 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_ismbbkana`|\<mbctype.h>|  
 |`_ismbbkana_l`|\<mbctype.h>|  

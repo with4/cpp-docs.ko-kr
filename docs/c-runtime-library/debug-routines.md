@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25bbbfae7e12154f9e64540ce9f5e8bdb7ebef42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 158a3b782ffedc7bd206f400c066c052062ad402
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-routines"></a>디버그 루틴
 C 런타임 라이브러리의 디버그 버전은 프로그램을 더 쉽게 디버그할 수 있는 여러 진단 서비스를 제공하며 개발자는 다음 작업을 수행할 수 있습니다.  
@@ -41,7 +42,7 @@ C 런타임 라이브러리의 디버그 버전은 프로그램을 더 쉽게 �
   
 ### <a name="debug-versions-of-the-c-run-time-library-routines"></a>C 런타임 라이브러리 루틴의 디버그 버전  
   
-|루틴|기능|  
+|루틴에서 반환된 값|기능|  
 |-------------|---------|  
 |[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|식을 계산하고 결과가 FALSE인 경우 디버그 보고서를 생성합니다.|  
 |[_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|`_ASSERT`와 비슷하지만 생성된 보고서에 실패한 식을 포함합니다.|  

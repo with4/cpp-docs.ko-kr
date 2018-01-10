@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 23f8215e94139417c6bd098b669904783fb88b36
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e082637e25832c5c5036910f7b67aff53d867bdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR(PInvoke 호출의 마지막 오류 코드 유지)
 **/CLRSUPPORTLASTERROR**, 기본적으로 켜져 있는, 사용 하 여 컴파일한 DLL에 코드에서 네이티브 함수를 호출할 수 있는 P/Invoke 메커니즘을 통해 호출 함수의 마지막 오류 코드는 전처리 **/clr**합니다.  
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/24/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플 마지막 오류를 수정 하는 내보낸 함수를 하나의 네이티브 DLL을 정의 합니다.  
   
 ```  
@@ -103,7 +104,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에 사용 하는 방법을 보여 주는 DLL 사용 **/CLRSUPPORTLASTERROR**합니다.  
   
 ```  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -43,8 +42,7 @@ f1_keywords:
 - _strncoll
 - _tcsncoll
 - mbsncoll
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strncoll_l function
 - code pages, using for string comparisons
@@ -69,36 +67,22 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: d9498ca8aaab36e7443488a1c98b70ad4b7604d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 51777605e24d9bb3ddf6fa7e6b9ad9c332165881
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 로캘별 정보를 사용하여 문자열을 비교합니다.  
   
 > [!IMPORTANT]
->  `_mbsncoll` 및 `_mbsncoll_l`은 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbsncoll` 및 `_mbsncoll_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -160,7 +144,7 @@ int _mbsncoll_l(
  이러한 각 함수는 `_NLSCMPERROR`를 반환합니다. `_NLSCMPERROR`를 사용하려면 STRING.h 또는 MBSTRING.h를 포함합니다. `_wcsncoll` 또는 `string1`에 정렬 순서 도메인을 벗어나는 와이드 문자 코드가 포함된 경우 `string2`이 실패할 수 있습니다. 오류가 발생하면 `_wcsncoll`에서 `errno`를 `EINVAL`로 설정할 수 있습니다. `_wcsncoll`에 대한 호출 시 오류가 있는지 확인하려면 `errno`를 0으로 설정한 다음 `errno` 호출 후 `_wcsncoll`를 검사합니다.  
   
 ## <a name="remarks"></a>설명  
- 이러한 각 함수는 현재 사용 중인 코드 페이지에 따라 `count` 및 `string1`에 있는 첫 번째 `string2` 문자를 대/소문자를 구분하며 비교합니다. 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 문자열 비교 시 중요한 경우에만 이러한 함수를 사용하세요. 문자 집합 순서는 로캘별로 다릅니다. `_l` 접미사가 없는 이러한 함수의 버전은 현재 로캘을 사용하지만 `_l` 접미사가 있는 버전은 전달되는 로캘을 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 이러한 각 함수는 현재 사용 중인 코드 페이지에 따라 `count` 및 `string1`에 있는 첫 번째 `string2` 문자를 대/소문자를 구분하며 비교합니다. 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 문자열 비교 시 중요한 경우에만 이러한 함수를 사용하세요. 문자 집합 순서는 로캘별로 다릅니다. `_l` 접미사가 없는 이러한 함수의 버전은 현재 로캘을 사용하지만 `_l` 접미사가 있는 버전은 전달되는 로캘을 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  이러한 모든 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `string1` 또는 `string2`가 null 포인터이거나 `count`가 `INT_MAX`보다 큰 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `_NLSCMPERROR`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
@@ -173,7 +157,7 @@ int _mbsncoll_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_strncoll`, `_strncoll_l`|\<string.h>|  
 |`_wcsncoll`, `_wcsncoll_l`|\<wchar.h> 또는 \<string.h>|  

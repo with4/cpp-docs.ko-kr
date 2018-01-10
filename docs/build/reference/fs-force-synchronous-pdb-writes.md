@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a29b5f58517a8348c20bb233491aec01fda7f771
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cec8aa3d1b3417b6bfcb35757ac4a4a51961e16b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/F(동기 PDB 쓰기 적용)
 프로그램 데이터베이스 (PDB) 파일에 강제로 씁니다-에서 만든 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) 또는 [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)-를 MSPDBSRV를 통해 serialize 할 수 있습니다. EXE 합니다.  

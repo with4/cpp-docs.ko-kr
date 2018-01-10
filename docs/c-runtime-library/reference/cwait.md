@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1ae32ba6acd758d958bbcc1db419a2946471b1e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 817b8ef39758a47fe28a3a2e2320ae7384a2bc86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwait"></a>_cwait
 다른 프로세스가 종료될 때까지 기다립니다.  
@@ -71,7 +72,7 @@ intptr_t _cwait(
 |`ECHILD`|지정된 프로세스가 없으며 `procHandle`이 잘못되었거나 [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx) 또는 [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx) API에 대한 호출이 실패했습니다.|  
 |`EINVAL`|`action`이 잘못되었습니다.|  
   
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  `_cwait` 함수는 `procHandle`에서 제공하는 지정된 프로세스의 프로세스 ID가 종료될 때까지 기다립니다. `_cwait`에 전달된 `procHandle`의 값은 지정된 프로세스를 만든 [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) 함수에 대한 호출에서 반환한 값이어야 합니다. `_cwait`가 호출되기 전에 프로세스 ID가 종료되면 `_cwait`가 즉시 반환됩니다. `_cwait`는 모든 프로세스에서 유효한 핸들(`procHandle`)이 있는 다른 모든 알려진 프로세스를 기다리는 데 사용할 수 있습니다.  
@@ -84,13 +85,13 @@ intptr_t _cwait(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_cwait`|\<process.h>|\<errno.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C  
 // crt_cwait.c  

@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77a5e1c01254a67151d5b8577676537709bdba4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unions"></a>Unions
 `union`은 모든 멤버가 동일한 메모리 위치를 공유하는 사용자 정의 형식입니다. 즉, 지정된 시간에 공용 구조체에는 멤버 목록의 개체가 둘 이상 포함될 수 없습니다. 또한 공용 구조체의 멤버 수에 관계없이 항상 가장 큰 멤버를 저장할 수 있을 만큼 충분한 메모리를 사용해야 합니다.  
@@ -661,4 +662,4 @@ union  {  member-list  }
  [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [class](../cpp/class-cpp.md)   
- [truct](../cpp/struct-cpp.md)
+ [struct](../cpp/struct-cpp.md)

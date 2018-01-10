@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2bef2db5990c9034cce946d494199922dfa989c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 39acfd3b3d38186057c18ecb8701b23eba95a061
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-multiset-stlclr"></a>연산자&gt; (multiset) (STL/CLR)
 목록 비교 보다 큽니다.  
@@ -42,7 +45,7 @@ template<typename Key>
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `right` `<` `left`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 `right` 때 두 개의 다중 집합은 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_multiset_operator_gt.cpp   

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0962059e6e55ce68133960cc9f8d1de8c7f0ef61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b47969da4c560f28c07ac09caef83873e362ddc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>지연 로드된 DLL 언로드
 기본적으로 제공 되는 지연 로드 도우미 지연 로드 설명자는 포인터가 되 고 원래 가져오기 주소 테이블 (IAT)의 사본을 pUnloadIAT 필드에 있어야 하는 경우를 확인 합니다. 이 경우은 가져오기 지연 설명자를 목록에 대 한 포인터를 저장 합니다. 이렇게 하면 DLL을 찾을 해당 DLL의 명시적 언로드를 지원 하기 위해 이름별 도우미 함수입니다.  

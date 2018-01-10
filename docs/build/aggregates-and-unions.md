@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e1eee05a9a206d3c02f34d619cf78822aaa4ed61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74ee1bbcf1a39171b18c09274543c72e0b844748
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aggregates-and-unions"></a>집계 및 공용 구조체
 배열, 구조체 및 공용 구조체와 같은 다른 형식에는 일관성 있는 집계 및 공용 구조체 저장소 및 데이터 검색을 보장 하는 보다 엄격한 맞춤 요구 사항이 있습니다. 배열, 구조체 및 공용 구조체에 대 한 정의 다음과 같습니다.  
@@ -39,8 +40,8 @@ ms.lasthandoff: 10/24/2017
 |스칼라 형식|C 데이터 형식|필수 맞춤|  
 |**INT8**|`char`|Byte|  
 |**UINT8**|`unsigned char`|Byte|  
-|**INT16**|**short**|Word|  
-|**UINT16**|**unsigned short**|Word|  
+|**INT16**|**short**|단어|  
+|**UINT16**|**unsigned short**|단어|  
 |**INT32**|**int, long**|워드 단위|  
 |**UINT32**|**부호 없는 int, 부호 없는 long**|워드 단위|  
 |**INT64**|`__int64`|쿼드 워드|  

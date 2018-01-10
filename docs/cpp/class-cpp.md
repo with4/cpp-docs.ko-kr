@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- class_cpp
-dev_langs:
-- C++
+f1_keywords: class_cpp
+dev_langs: CPP
 helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 7cdd7b7cefcd9f3826cfe426008bdf1eefde82f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ed344d5c15e709b09b760dee74a986dde6383d22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-c"></a>클래스 (C++)
 `class` 키워드 클래스 형식을 선언 또는 클래스 형식의 개체를 정의 합니다.  
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="remarks"></a>설명  
  클래스에 대 한 자세한 내용은 다음 항목 중 하나를 참조 일반적으로.  
   
--   [truct](../cpp/struct-cpp.md)  
+-   [struct](../cpp/struct-cpp.md)  
   
 -   [union](../cpp/unions.md)  
   
@@ -79,7 +76,7 @@ ms.lasthandoff: 09/25/2017
   
  관리 되는 클래스와 구조체에 대 한 정보를 참조 하십시오. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // class.cpp  

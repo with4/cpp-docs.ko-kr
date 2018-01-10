@@ -1,35 +1,37 @@
 ---
-title: "auto_handle::reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle.reset"
-  - "msclr::auto_handle::reset"
-  - "auto_handle::reset"
-  - "msclr.auto_handle.reset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::reset"
+title: auto_handle::reset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle.reset
+- msclr::auto_handle::reset
+- auto_handle::reset
+- msclr.auto_handle.reset
+dev_langs: C++
+helpviewer_keywords: auto_handle::reset
 ms.assetid: 32dc3a83-80fd-45c9-8f79-8c4096c30f57
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 39746666423e98db2135079415ad184f1f0c62f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::reset
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Destroy the current owned object and optionally take possession of a new object.  
+# <a name="autohandlereset"></a>auto_handle::reset
+현재 소유한 개체를 삭제 하 고 필요에 따라 새 개체를 소유한을 수행 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void reset(  
@@ -38,11 +40,11 @@ void reset(
 void reset();  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_new_ptr`  
- \(Optional\) The new object.  
+ (선택 사항) 새 개체입니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // msl_auto_handle_reset.cpp  
@@ -82,18 +84,21 @@ int main()
 }  
 ```  
   
-  **ClassA constructor: first**  
-**Hello from first A\!**  
-**ClassA constructor: second**  
-**ClassA destructor: first**  
-**Hello from second A\!**  
-**ClassA destructor: second**  
-**done**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_handle.h\>  
+```Output  
+ClassA constructor: first  
+Hello from first A!  
+ClassA constructor: second  
+ClassA destructor: first  
+Hello from second A!  
+ClassA destructor: second  
+done  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_handle 멤버](../dotnet/auto-handle-members.md)   
- [auto\_handle::release](../dotnet/auto-handle-release.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_handle 멤버](../dotnet/auto-handle-members.md)   
+ [auto_handle::release](../dotnet/auto-handle-release.md)

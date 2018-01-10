@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2ffa9ed5a25417cfcf46c5b47b55b3eecc2fe27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69d3837cc0996c0e0e0784214cfbfa6744afbf94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, ATL Active Server Page 구성 요소 마법사
 ATL Active Server 페이지 구성 요소 마법사의이 페이지를 사용 하 여 ASP 구성 요소와 관련 된 상태 및 정보 처리에 대 한 선택적 설정을 지정 합니다.  

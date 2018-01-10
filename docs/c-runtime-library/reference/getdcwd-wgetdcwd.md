@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7541bf3135dfcc3734a43fe64277e5b8ea141e9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e314db740322fc3d5e7df5aeb6bd7de747e77695
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 지정한 드라이브의 현재 작업 디렉터리의 전체 경로를 가져옵니다.  
@@ -94,7 +95,7 @@ wchar_t *_wgetdcwd(
   
  `_wgetdcwd` 가 `_getdcwd`의 와이드 문자 버전이고 해당 `buffer` 매개 변수 및 반환 값이 와이드 문자열입니다. 그렇지 않으면 `_wgetdcwd` 과 `_getdcwd` 은 동일하게 작동합니다.  
   
- 이 함수는 자체적으로 스레드로부터 안전하지 않는 **GetFullPathName**에 의존하지만 스레드로부터 안전합니다. 그러나 다중 스레드 응용 프로그램에서 이 함수와 **GetFullPathName**을 모두 호출하는 경우 스레드 안전성을 위반할 수 있습니다. 자세한 내용을 보려면 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) 로 이동한 다음 **GetFullPathName**입니다.  
+ 이 함수는 자체적으로 스레드로부터 안전하지 않는 **GetFullPathName**에 의존하지만 스레드로부터 안전합니다. 그러나 다중 스레드 응용 프로그램에서 이 함수와 **GetFullPathName**을 모두 호출하는 경우 스레드 안전성을 위반할 수 있습니다. 자세한 내용을 보려면 [MSDN 라이브러리](http://go.microsoft.com/fwlink/p/?linkid=150542)로 이동한 다음 **GetFullPathName**을 검색하세요.  
   
  `_nolock` 접미사가 있는 이 함수의 버전은 이 함수와 동일하게 작동합니다. 단, 스레드로부터 안전하지 않고 다른 스레드의 간섭으로부터 보호받지 않습니다. 자세한 내용은 [_getdcwd_nolock, _wgetdcwd_nolock](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md)을 참조하세요.  
   
@@ -108,14 +109,14 @@ wchar_t *_wgetdcwd(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_getdcwd`|\<direct.h>|  
 |`_wgetdcwd`|\<direct.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [_getdrive](../../c-runtime-library/reference/getdrive.md)의 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

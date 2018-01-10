@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtIsValidPointer
+apiname: _CrtIsValidPointer
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidPointer
 - _CrtIsValidPointer
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a5063a82ca90b9f854adb1ef68328272df54f4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: ba249bc78b2e6b6aac95bef2c39b0d9526489ec9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 포인터가 null이 아닌지 확인합니다. Visual Studio 2010 이전 버전의 C 런타임 라이브러리에서 지정된 메모리 범위가 읽기 및 쓰기(디버그 버전에만 해당)에 유효한지 확인합니다.  
@@ -77,11 +74,11 @@ int _CrtIsValidPointer(
 _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );  
 ```  
   
- `_CrtIsValidPointer`를 다른 디버그 함수 및 매크로와 함께 사용할 수 있는 방법에 대한 자세한 내용은 [보고서 매크로](/visualstudio/debugger/macros-for-reporting)를 참조하세요. 기본 힙의 디버그 버전에서 메모리 블록을 할당, 초기화 및 관리하는 방법에 대한 자세한 내용은 [CRT 디버그 힙 정보](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요.  
+ `_CrtIsValidPointer`를 다른 디버그 함수 및 매크로와 함께 사용할 수 있는 방법에 대한 자세한 내용은 [보고서 매크로](/visualstudio/debugger/macros-for-reporting)를 참조하세요. 기본 힙의 디버그 버전에서 메모리 블록을 할당, 초기화 및 관리하는 방법에 대한 자세한 내용은 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_CrtIsValidPointer`|\<crtdbg.h>|  
   
@@ -90,7 +87,7 @@ _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
 ## <a name="libraries"></a>라이브러리  
  [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)의 디버그 버전만 해당됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md) 항목에 대한 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

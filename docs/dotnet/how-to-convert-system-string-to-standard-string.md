@@ -1,31 +1,34 @@
 ---
-title: "방법: System::String을 표준 문자열로 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "표준 C++ 라이브러리, System::String을 표준 문자열로 변환"
-  - "문자열 변환, System::String"
+title: "방법: system:: string을 표준 문자열로 변환 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, converting System::String to standard string
+- string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6bac914a2803390fa737acce5d424d56079777a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: System::String을 표준 문자열로 변환
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vcclr.h에서 `PtrToStringChars`를 사용하지 않고도 <xref:System.String>을 `std::string` 또는 `std::wstring`으로 변환할 수 있습니다.  
+# <a name="how-to-convert-systemstring-to-standard-string"></a>방법: System::String을 표준 문자열로 변환
+변환할 수는 <xref:System.String> 를 `std::string` 또는 `std::wstring`, 사용 하지 않고 `PtrToStringChars` Vcclr.h에서 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // convert_system_string.cpp  
@@ -71,5 +74,5 @@ abcd
 efgh  
 ```  
   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

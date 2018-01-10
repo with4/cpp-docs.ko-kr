@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ccbda062d28cdbdaafcbae68793b6583f31a3be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transporting-exceptions-between-threads"></a>스레드 간 예외 전송
 Visual c + + 지원 *예외 전송* 다른 스레드 간에 합니다. 예외 전송으로 하나의 스레드에서 예외를 잡아내어 다른 스레드에서 예외가 throw되어 나타나도록 합니다. 예를 들어, 이 기능을 사용하여 기본 스레드가 보조 스레드에서 throw되는 모든 예외를 처리하는 위치에 있는 다중 스레드 응용 프로그램을 작성할 수 있습니다. 예외 전송 병렬 프로그래밍 라이브러리를 만들거나 시스템 개발자에 주로 유용합니다. Visual c + + 제공 전송 예외를 구현 하려면는 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 유형 및 [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), 및 [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) 함수입니다.  
@@ -95,7 +96,7 @@ namespace std
     > [!IMPORTANT]
     >  지정 하는 것이 좋습니다는 **/EHsc** 컴파일러 옵션과 c + + 예외를 catch 합니다. 사용 하는 경우 보안 위협에 노출 직접는 **/EHa** 또는 **/CLR** 컴파일러 옵션 및 **catch** 줄임표를 사용 하 여 문을  *예외 선언이* (`catch(...)`). `catch` 문을 사용하여 몇 가지 특정 예외를 캡처하려고 할 것입니다. 하지만 `catch(...)` 문은 예기치 않은 심각한 예외를 포함하여 모든 C++ 및 SEH 예외를 캡처합니다. 예기치 않은 예외를 무시하거나 잘못 처리하는 경우 악성 코드가 이 기회를 이용하여 프로그램 보안을 해칠 수 있습니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  다음 섹션에서는 사용 하 여 예외 사항을 전송 하는 방법에 설명 된 `exception_ptr` 형식 및 `current_exception`, `rethrow_exception`, 및 `make_exception_ptr` 함수.  
   
 ### <a name="exceptionptr-type"></a>exception_ptr 형식  
@@ -146,7 +147,7 @@ namespace std
   
  응용 프로그램에는 일반적으로 `make_exception_ptr` 함수가 필요하지 않으며 이 함수를 사용하지 않는 것이 좋습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 표준 C++ 예외와 사용자 지정 C++ 예외를 한 스레드에서 다른 스레드로 전송합니다.  
   
 ```  

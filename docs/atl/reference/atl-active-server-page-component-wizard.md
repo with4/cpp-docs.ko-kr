@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 021740039044a43972cb51390ecf5cc1babdafe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 구성 요소 마법사
 이 마법사는 프로젝트에는 ASP Active Server Pages () 구성 요소를 삽입합니다. Microsoft 인터넷 정보 서비스 (IIS)의 향상 된 웹 페이지 개발 아키텍처의 일부로 ASP 구성 요소를 사용합니다.  

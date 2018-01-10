@@ -46,11 +46,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 66e06a0a35980d28b03e3b0ba5b2e06ca6861e41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35c0947d51b4caf239838a38a31df39226f7da50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 정수가 제어 문자를 나타내는지 여부를 확인합니다.  
@@ -84,7 +85,7 @@ int _iswcntrl_l(
 ## <a name="return-value"></a>반환 값  
  `c`가 제어 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `iscntrl`0이 아닌 값을 반환 `c` 제어 문자 (0x00-0x7F 또는 0x1F). `c`가 제어 와이드 문자인 경우 `iswcntrl`은 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
   
- `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `iscntrl` 및 `_iscntrl_l`의 동작은 `c`가 EOF가 아니거나 0 - 0xFF 범위 내에 포함되지 않는 경우 정의되지 않습니다. 디버그 CRT 라이브러리가 사용되고 `c`가 이러한 값 중 하나가 아닌 경우 함수에서 어설션이 발생합니다.  
   
@@ -97,7 +98,7 @@ int _iswcntrl_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`iscntrl`|\<ctype.h>|  
 |`iswcntrl`|\<ctype.h> 또는 \<wchar.h>|  

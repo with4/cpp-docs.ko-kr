@@ -14,11 +14,12 @@ caps.latest.revision: "64"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50589e18914ed452381a416cfb0f59d87b4be6a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec2b8f0f05da535fd6a4f212a08af847c997a860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-listed-by-category"></a>컴파일러 옵션 범주별 목록
 이 문서에는 컴파일러 옵션의 범주별 목록이 포함되어 있습니다. 사전순으로 나열된 목록을 보려면 [Compiler Options Listed Alphabetically](../../build/reference/compiler-options-listed-alphabetically.md)을 참조하세요.  

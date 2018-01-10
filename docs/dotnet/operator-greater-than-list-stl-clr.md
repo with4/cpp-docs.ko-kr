@@ -1,33 +1,33 @@
 ---
-title: "operator&gt; (list)(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator> 멤버[STL/CLR]"
+title: "연산자&gt; (list) (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: 58584708-1fa6-4908-84f6-790d53f46d9a
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0a50137d309c5913d627a065455061123c0e6146
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# operator&gt; (list)(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-List greater than comparison.  
+# <a name="operatorgt-list-stlclr"></a>연산자&gt; (list) (STL/CLR)
+목록 비교 보다 큽니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         list<Value>% right);  
 ```  
   
-#### 매개 변수  
- left  
- Left container to compare.  
+#### <a name="parameters"></a>매개 변수  
+ 왼쪽  
+ 비교할 왼쪽 컨테이너입니다.  
   
- right  
- Right container to compare.  
+ 오른쪽  
+ 비교할 오른쪽 컨테이너입니다.  
   
-## 설명  
- The operator function returns `right` `<` `left`.  You use it to test whether `left` is ordered after `right` when the two lists are compared element by element.  
+## <a name="remarks"></a>설명  
+ 연산자 함수 반환 `right` `<` `left`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 `right` 두 목록의 요소 별로 비교를 하는 경우.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_list_operator_gt.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \> \[a b c\] is False**  
-**\[a b d\] \> \[a b c\] is True**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [operator\=\= \(list\)](../dotnet/operator-equality-list-stl-clr.md)   
- [operator\!\= \(list\)](../dotnet/operator-inequality-list-stl-clr.md)   
- [operator\< \(list\)](../dotnet/operator-less-than-list-stl-clr.md)   
- [operator\>\= \(list\)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
- [operator\<\= \(list\)](../dotnet/operator-less-or-equal-list-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [연산자 = = (list) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)   
+ [operator! = (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)   
+ [연산자\< (list) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)   
+ [연산자 > = (list) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
+ [operator<= (list)(STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)
