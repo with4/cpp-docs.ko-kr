@@ -243,7 +243,6 @@
 ## [창 클래스 매크로](window-class-macros.md)
 ## [Windows 메시지 매크로](windows-messages-macros.md)
 # [ATL 전역 변수](atl-global-variables.md)
-## [_pAtlModule](patlmodule.md)
 # [ATL 마법사 및 대화 상자](atl-wizards-and-dialog-boxes.md)
 ## [응용 프로그램 설정, ATL 프로젝트 마법사](application-settings-atl-project-wizard.md)
 ## [ATL Active Server Page 구성 요소 마법사, ASP](asp-atl-active-server-page-component-wizard.md)
