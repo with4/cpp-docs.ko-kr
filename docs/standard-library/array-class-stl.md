@@ -107,11 +107,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ceec96efcfde06af2ad98178dff41f8569a81d85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 864e155bf921bb273ad0e7eb9d2e014c01760543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class-c-standard-library"></a>array 클래스(C++ 표준 라이브러리)
 길이가 `N`인 `Ty` 형식의 요소 시퀀스를 제어하는 개체를 설명합니다. 시퀀스는 `array<Ty, N>` 개체에 포함된 `Ty`의 배열로 저장됩니다.  
@@ -178,7 +179,7 @@ class array;
 |[array::operator[]](#op_at)|지정된 위치에 있는 요소에 액세스합니다.|  
   
 ## <a name="remarks"></a>설명  
- 형식에 기본 생성자 `array()`와 기본 대입 연산자 `operator=`가 있고 `aggregate`에 대한 요구 사항을 충족합니다. 따라서 집계 이니셜라이저를 사용하여 `array<Ty, N>` 형식의 개체를 초기화할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 형식에 기본 생성자 `array()`와 기본 대입 연산자 `operator=`가 있고 `aggregate`에 대한 요구 사항을 충족합니다. 따라서 집계 이니셜라이저를 사용하여 `array<Ty, N>` 형식의 개체를 초기화할 수 있습니다. 예를 들어 개체에 적용된  
   
 ```  
 array<int, 4> ai = { 1, 2, 3 };  
@@ -209,7 +210,7 @@ array(const array& right);
   
 복사 생성자 `array(const array& right)`는 시퀀스 [*right*`.begin()`, *right*`.end()`)로 제어되는 시퀀스를 초기화합니다. 배열 개체 *right*에 의해 제어되는 시퀀스의 복사본인 초기의 제어되는 시퀀스를 지정하려면 이 생성자를 사용합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_array.cpp   
@@ -260,7 +261,7 @@ void assign(const Ty& val);
 ### <a name="remarks"></a>설명  
  멤버 함수는 `*this`에 의해 제어되는 시퀀스를 `val` 값의 반복되는 `N` 요소로 대체합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_assign.cpp   
@@ -314,7 +315,7 @@ constexpr const_reference at(size_type off) const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 위치 `off`에서 제어되는 시퀀스의 요소에 대한 참조를 반환합니다. 해당 위치가 잘못된 경우 함수는 `out_of_range` 클래스의 개체를 throw합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_at.cpp   
@@ -355,7 +356,7 @@ constexpr const_reference back() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 비어 있지 않아야 하는 제어된 시퀀스의 마지막 요소에 대한 참조를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_back.cpp   
@@ -399,7 +400,7 @@ const_iterator begin() const noexcept;
 ### <a name="remarks"></a>설명  
  멤버 함수는 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 임의 액세스 반복기를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_begin.cpp   
@@ -446,7 +447,7 @@ const_iterator cbegin() const noexcept;
 ### <a name="remarks"></a>설명  
  `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.  
   
- `begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`가 `begin()` 및 `cbegin()`을 지원하는 수정 가능(비`const`)한 컨테이너로 가정합니다.  
+ `begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`가 `begin()` 및 `cbegin()`를 지원하는 수정 가능(비`const`)한 컨테이너로 가정합니다.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -491,7 +492,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>설명  
  형식은 제어되는 시퀀스의 상수 임의 액세스 반복기로 사용될 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_const_iterator.cpp  
@@ -542,7 +543,7 @@ typedef const Ty *const_pointer;
 ### <a name="remarks"></a>설명  
  이 형식은 시퀀스의 요소에 대한 상수 포인터로 사용될 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_const_pointer.cpp   
@@ -586,7 +587,7 @@ typedef const Ty& const_reference;
 ### <a name="remarks"></a>설명  
  이 형식은 제어되는 시퀀스의 요소에 대한 상수 참조로 사용될 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_const_reference.cpp   
@@ -630,7 +631,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="remarks"></a>설명  
  이 형식은 제어되는 시퀀스의 상수 역방향 반복기로 사용될 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_const_reverse_iterator.cpp   
@@ -677,7 +678,7 @@ const_reverse_iterator crbegin() const;
 ### <a name="remarks"></a>설명  
  반환 값이 `crbegin`인 배열 개체는 수정할 수 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // array_crbegin.cpp  
@@ -726,7 +727,7 @@ const_reverse_iterator crend() const noexcept;
   
  `crend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // array_crend.cpp  
@@ -762,7 +763,7 @@ const Ty *data() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 제어되는 시퀀스에서 첫 번째 요소의 주소를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_data.cpp   
@@ -806,7 +807,7 @@ typedef std::ptrdiff_t difference_type;
 ### <a name="remarks"></a>설명  
  부호 있는 정수 형식은 제어되는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다. 이 형식은 `std::ptrdiff_t` 형식의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_difference_type.cpp   
@@ -850,7 +851,7 @@ constexpr bool empty() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 `N == 0`인 경우에만 true를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_empty.cpp   
@@ -902,7 +903,7 @@ const_reference end() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 시퀀스 끝의 바로 다음을 가리키는 임의 액세스 반복기를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_end.cpp   
@@ -953,7 +954,7 @@ void fill(const Type& val);
 ### <a name="remarks"></a>설명  
  `fill`은 배열의 각 요소를 지정된 값으로 바꿉니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // array_fill.cpp  
@@ -992,7 +993,7 @@ constexpr const_reference front() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 비어 있지 않아야 하는 제어된 시퀀스의 첫 번째 요소에 대한 참조를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_front.cpp   
@@ -1035,7 +1036,7 @@ typedef implementation-defined iterator;
 ### <a name="remarks"></a>설명  
  이 형식은 제어되는 시퀀스의 임의 액세스 반복기로 사용될 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_iterator.cpp   
@@ -1086,7 +1087,7 @@ constexpr size_type max_size() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 `N`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_max_size.cpp   
@@ -1137,7 +1138,7 @@ constexpr const_reference operator[](size_type off) const;
   
 `array`의 요소에 대한 참조를 가져오는 데 사용할 수 있는 비 멤버 [get](array-functions.md#get) 함수도 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_operator_sub.cpp   
@@ -1185,7 +1186,7 @@ array <Value>%  operator=(array <Value>% right);
 ### <a name="remarks"></a>설명  
  멤버 연산자는 `right`의 각 요소를 제어되는 시퀀스의 해당 요소에 할당하고 `*this`를 반환합니다. 이를 사용하여 제어되는 시퀀스를 `right`의 제어되는 시퀀스 복사본으로 대체합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_operator_as.cpp   
@@ -1233,7 +1234,7 @@ typedef Ty *pointer;
 ### <a name="remarks"></a>설명  
  이 형식은 시퀀스의 요소에 대한 포인터로 사용될 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_pointer.cpp   
@@ -1278,7 +1279,7 @@ const_reverse_iterator rbegin() const noexcept;
 ### <a name="remarks"></a>설명  
  멤버 함수는 제어되는 시퀀스 끝의 바로 다음을 가리키는 역방향 반복기를 반환합니다. 따라서 역방향 시퀀스의 시작을 지정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_rbegin.cpp   
@@ -1322,7 +1323,7 @@ typedef Ty& reference;
 ### <a name="remarks"></a>설명  
  이 형식은 제어되는 시퀀스의 요소에 대한 참조로 사용될 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_reference.cpp   
@@ -1367,7 +1368,7 @@ const_reverse_iterator rend() const noexcept;
 ### <a name="remarks"></a>설명  
  멤버 함수는 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 역방향 반복기를 반환합니다. 따라서 역방향 시퀀스의 끝을 지정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_rend.cpp   
@@ -1411,7 +1412,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>설명  
  이 형식은 제어되는 시퀀스의 역방향 반복기로 사용될 수 있는 개체를 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_reverse_iterator.cpp   
@@ -1455,7 +1456,7 @@ constexpr size_type size() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 `N`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_size.cpp   
@@ -1498,7 +1499,7 @@ typedef std::size_t size_type;
 ### <a name="remarks"></a>설명  
  부호 없는 정수 형식은 제어되는 시퀀스의 길이를 나타낼 수 있는 개체를 설명합니다. 이 형식은 `std::size_t` 형식의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_size_type.cpp   
@@ -1548,7 +1549,7 @@ void swap(array& right);
 
 두 개의 `array` 인스턴스를 교환하는 데 사용할 수 있는 비 멤버 [swap](array-functions.md#swap) 함수도 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_swap.cpp   
@@ -1605,7 +1606,7 @@ typedef Ty value_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 `Ty`의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__array_value_type.cpp   

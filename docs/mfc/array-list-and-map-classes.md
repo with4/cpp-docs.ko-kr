@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff37c762049121750a342eac1cf7f310b2fbce63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7de6f3c72b31ea9094af032bc81e9f2506606cce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-list-and-map-classes"></a>배열, 목록 및 맵 클래스
 클래스 라이브러리를 데이터의 집계를 처리 하기 위한 컬렉션 클래스의 그룹을 통해-목록, 배열 및 맵-다양 한 개체 및 미리 정의 된 형식을 포함 될 수 있는 합니다. 컬렉션 동적으로 크기가 조정 됩니다. 또는 Windows 용으로 작성 하는지 여부를 이러한 클래스를 모든 프로그램에서 사용할 수 있습니다. 그러나 이들 프로토콜은 응용 프로그램 프레임 워크에서 문서 클래스를 정의 하는 데이터 구조를 구현 하는 데 가장 유용 합니다. 이러한 경우에서 특수 한 컬렉션 클래스를 파생 시키고 쉽게 또는 템플릿 클래스에 따라 만들 수 있습니다. 이러한 방법에 대 한 자세한 내용은 문서 참조 [컬렉션](../mfc/collections.md)합니다. 목록이 템플릿 컬렉션 클래스에 대 한 문서를 참조 [배열, 목록 및 맵에 대 한 템플릿 클래스](../mfc/template-classes-for-arrays-lists-and-maps.md)합니다.  
