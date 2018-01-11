@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2005
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK2005
+f1_keywords: LNK2005
+dev_langs: C++
+helpviewer_keywords: LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 40097ea2b5c5519a5b883aad09788cf2f802ea36
-ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk2005"></a>링커 도구 오류 LNK2005
 *기호* 개체에 이미 정의  
@@ -49,7 +31,7 @@ ms.lasthandoff: 05/10/2017
   
 ### <a name="possible-causes-and-solutions"></a>가능한 원인 및 해결  
   
-일반적으로이 오류 위반한 것을 의미는 *단일 정의 규칙*, 외부에서 표시 되는 개체 또는 기능에는 전체 실행 파일에서 사용 되는 템플릿, 함수, 형식 또는 지정 된 개체 파일에 개체에 대 한 하나의 정 및 정의 하나만 있습니다.  
+일반적으로이 오류 위반한 것을 의미는 *단일 정의 규칙*에 대 한 전체 실행 파일에서 사용 되는 템플릿, 함수, 형식 또는 지정 된 개체 파일에 개체에 대 한 하나의 정 및 정의 하나만 있습니다 외부에서 표시 되는 개체 또는 함수입니다.  
   
 이 오류에 대 한 몇 가지 일반적인 원인은 다음과 같습니다.  
   
@@ -118,7 +100,7 @@ ms.lasthandoff: 05/10/2017
   
 -   이 오류는 여러 개 버전의 표준 라이브러리 또는 CRT 연결 되는 경우에 발생할 수 있습니다. 예를 들어 실행 파일에 모두 일반 정품 및 디버그 CRT 라이브러리 또는 라이브러리의 정적 및 동적 버전 또는 표준 라이브러리의 두 가지 버전을 연결 하려고 하면이 오류 보고 될 수 여러 번입니다. 이 문제를 해결 하려면 링크 명령에서 각 라이브러리의 복사본을 하나만 남기고 모두 제거 합니다. 소매를 혼합 하 고 디버그 라이브러리 또는 다른 버전의 동일한 실행 파일에는 라이브러리는 권장 하지 않습니다.  
   
-    명령줄에서 기본값을 이외의 라이브러리를 사용 하도록 링커에 지시 하려면을 사용 하 여 사용할 라이브러리를 지정 된 [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) 기본 라이브러리를 사용 하지 않도록 설정 하는 옵션입니다. IDE에 추가 하 고 다음 열고 사용할 라이브러리를 지정 하려면 프로젝트에 대 한 참조는 **속성 페이지** 및 프로젝트에 대 한 대화는 **링커**, **입력** 속성 페이지를 설정 **모든 기본 라이브러리 무시**, 또는 **특정 기본 라이브러리 무시** 기본 라이브러리를 사용 하지 않도록 설정 하는 속성입니다.   
+    명령줄에서 기본값을 이외의 라이브러리를 사용 하도록 링커에 지시 하려면을 사용 하 여 사용할 라이브러리를 지정 된 [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) 기본 라이브러리를 사용 하지 않도록 설정 하는 옵션입니다. IDE에 추가 하 고 다음 열고 사용할 라이브러리를 지정 하려면 프로젝트에 대 한 참조는 **속성 페이지** 및 프로젝트에 대 한 대화 상자는 **링커**, **입력** 속성 페이지에서 설정 **모든 기본 라이브러리 무시**, 또는 **특정 기본 라이브러리 무시** 속성을 기본 라이브러리를 사용 하지 않도록 설정 합니다.   
   
 -   사용 하는 경우 정적 및 동적 라이브러리의 사용을 혼합 하는 경우이 오류가 발생할 수 있습니다는 [/clr](../../build/reference/clr-common-language-runtime-compilation.md) 옵션입니다. 예를 들어 DLL을 빌드하는 사용 하기 위해 실행 파일에는 정적 CRT에 연결 되는 경우이 오류가 발생할 수 있습니다. 이 문제를 해결 하려면 실행 파일에 사용 하도록 구성한 모든 라이브러리 및 전체 실행에 대 한 정적 라이브러리만 또는 동적 라이브러리만 사용 합니다.  
   
@@ -128,7 +110,7 @@ ms.lasthandoff: 05/10/2017
   
 -   이 오류는 경우에 발생할 수 있습니다는 `extern const` 변수를 두 번 정의 되어 있고 각 정의에서 다른 값을 갖도록 합니다. 이 문제를 해결 하는 일정 한 번만 정의 하거나 네임 스페이스를 사용 하거나 `enum class` 상수를 구분 하기 위해 정의 합니다.  
   
--   이 오류 (예: oledb.lib 및 adsiid.lib) Guid를 정의 하는 다른.lib 파일과 함께에서 uuid.lib를 사용 하는 경우에 발생할 수 있습니다. 예를 들면 다음과 같습니다.  
+-   이 오류 (예: oledb.lib 및 adsiid.lib) Guid를 정의 하는 다른.lib 파일과 함께에서 uuid.lib를 사용 하는 경우에 발생할 수 있습니다. 예:  
   
     ```Output  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  
@@ -147,4 +129,3 @@ ms.lasthandoff: 05/10/2017
   
 -   [Visual c + +에서 ATL 실행 (.exe) 프로젝트를 컴파일할 때 LNK2005 오류가 나타나면](https://support.microsoft.com/kb/184235)합니다.  
   
-

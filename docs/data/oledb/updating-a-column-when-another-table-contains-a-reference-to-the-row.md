@@ -1,28 +1,30 @@
 ---
-title: "다른 테이블에 행에 대한 참조가 들어 있는 경우의 열 업데이트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "행 집합, 열 업데이트"
+title: "다른 테이블의 행에 대 한 참조를 포함 하는 경우 열을 업데이트할 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: rowsets, column updates
 ms.assetid: abb5db69-055d-431f-b12d-ad2940a661ba
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4c5fdf37cedd2c20430f87e15446244321c68bdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 다른 테이블에 행에 대한 참조가 들어 있는 경우의 열 업데이트
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-일부 공급자는 행에서 변경된 열을 감지할 수 있지만, 대부분의 공급자는 그렇게 하지 못합니다.  따라서, 업데이트하려는 행에 대한 참조가 있는 경우, 열을 업데이트하면 오류가 발생할 수 있습니다.  이 문제를 해결하려면, 변경하려는 열만 들어 있는 개별 접근자를 만드십시오.  해당 접근자의 번호를 `SetData`에 전달하십시오.  
+# <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>다른 테이블에 행에 대한 참조가 들어 있는 경우의 열 업데이트
+일부 공급자는 행 변경에는 열을 검색할 수 있지만 대부분의 공급자가 없습니다. 결과적으로 업데이트 하려고 하는 행에 대 한 참조가 있으면 때 열을 업데이트 하면 오류가 발생할 수 있습니다. 이 문제를 해결 하려면 변경 하려는 열만 포함 하는 별도 접근자를 만듭니다. 에 해당 접근자의 번호를 전달 `SetData`합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [접근자 사용](../../data/oledb/using-accessors.md)

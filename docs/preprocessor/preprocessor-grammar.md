@@ -1,112 +1,113 @@
 ---
 title: "전처리기 문법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "문법, 전처리기"
-  - "전처리기"
-  - "전처리기, 문법"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor
+- grammar, preprocessor
+- preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 전처리기 문법
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**\#define**  *identifier* *token\-string*opt  
+# <a name="preprocessor-grammar"></a>전처리기 문법
+**#define***식별자* *토큰 문자열*선택    
   
- *\#* **define**  *identifier*\[**\(** *identifier*opt**,** *...* **,** *identifier*opt **\)**\] *token\-string*opt  
+ *#***정의***식별자*[**(** *식별자*opt**,** *...*  **,** *식별자*opt **)**] *토큰 문자열*선택    
   
- **defined\(**  *identifier* **\)**  
+ **정의 (***식별자* **)**   
   
- **defined**  *identifier*  
+ **정의 된***식별자*   
   
- `#include` **"***path\-spec***"**  
+ `#include`**"***경로 사양***"**  
   
- `#include` **\<***path\-spec***\>**  
+ `#include` **\<**  *경로 사양***>**  
   
- **\#line**  *digit\-sequence*  **"** *filename* **"** opt  
+ **#line***자리 시퀀스***"** *filename* **"**선택      
   
- *\#* **undef**  *identifier*  
+ *#***undef***식별자*   
   
- **\#error**  *token\-string*  
+ **#error***토큰 문자열*   
   
- **\#pragma**  *token\-string*  
+ **#pragma***토큰 문자열*   
   
- *conditional* :  
- *if\-part elif\-parts* opt *else\-part*opt *endif\-line*  
+ *조건부* :  
+ *if 부분 elif 부품*opt*else 부분*opt*endif 줄*  
   
- *if\-part* :  
- *if\-linetext*  
+ *if 부분* :  
+ *if linetext*  
   
- *if\-line* :  
- **\#if**  *constant\-expression*  
+ *if 줄* :  
+ **#if***상수 식*   
   
- **\#ifdef**  *identifier*  
+ **#ifdef***식별자*   
   
- **\#ifndef**  *identifier*  
+ **#ifndef***식별자*   
   
- *elif\-parts* :  
- *elif\-line text*  
+ *elif 부품* :  
+ *elif 줄 텍스트*  
   
- *elif\-parts elif\-line text*  
+ *elif 부품 elif 줄 텍스트*  
   
- *elif\-line* :  
- **\#elif**  *constant\-expression*  
+ *elif 줄* :  
+ **#elif***상수 식*   
   
- *else\-part* :  
- *else\-linetext*  
+ *else 부분* :  
+ *else linetext*  
   
- *else\-line* :  
+ *다른 줄* :  
  `#else`  
   
- *endif\-line* :  
+ *endif 줄* :  
  `#endif`  
   
- *digit\-sequence* :  
+ *자리 시퀀스* :  
  *digit*  
   
- *digit\-sequence digit*  
+ *digit-sequence digit*  
   
- *digit* : 다음 중 하나  
+ *자리* : 중 하나  
  **0 1 2 3 4 5 6 7 8 9**  
   
- *token\-string* :  
+ *토큰 문자열* :  
  토큰 문자열  
   
- *token* :  
+ *토큰* :  
  *keyword*  
   
- *식별자*  
+ *identifier*  
   
- *상수*  
+ *constant*  
   
- *연산자*  
+ *operator*  
   
  `punctuator`  
   
  *filename* :  
  올바른 운영 체제 파일 이름  
   
- *path\-spec* :  
+ *경로-사양* :  
  Legal file path  
   
- *text* :  
+ *텍스트* :  
  임의의 텍스트 시퀀스  
   
 > [!NOTE]
->  다음 비터미널은 *C\+\+ 언어 참조*의 부록 A인 [문법 요약](../misc/grammar-summary-cpp.md)에 더 자세히 설명되어 있습니다\(`constant`, `constant`\-*expression*, *identifier*, *keyword*, `operator` 및 `punctuator`\).  
+>  다음 비 단말에서 확장 되는 [어휘 규칙](../cpp/lexical-conventions.md) 의 섹션은 *c + + 언어 참조*: `constant`, `constant` - *식* , *식별자*, *키워드*, `operator`, 및 `punctuator`합니다.  
   
-## 참고 항목  
- [문법 요약](../preprocessor/grammar-summary-c-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [문법 요약(C/C++)](../preprocessor/grammar-summary-c-cpp.md)

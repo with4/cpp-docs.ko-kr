@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 351541763039abb4095785d562ee9ab22b30b74a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16364843ca5d85181b84e56f56b43ca4856a1667
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccriticalsection-class"></a>아니오 클래스
 "임계 섹션" 나타냅니다-코드 섹션 또는 리소스에 액세스 하려면 한 번에 하나의 스레드를 허용 하는 동기화 개체입니다.  
@@ -107,7 +108,7 @@ CCriticalSection();
   
  메모리 예외가 필요한 시스템 메모리를 할당 하는 생성자가 실패 하는 경우 (형식의 [CMemoryException](../../mfc/reference/cmemoryexception-class.md))이 자동으로 throw 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CCriticalSection::Lock](#lock)합니다.  
   
 ##  <a name="lock"></a>CCriticalSection::Lock  
@@ -132,7 +133,7 @@ BOOL Lock(DWORD dwTimeout);
   
  경우 `Lock` 메모리 예외가 필요한 시스템 메모리 할당에 실패 (형식의 [CMemoryException](../../mfc/reference/cmemoryexception-class.md))이 자동으로 throw 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예제에서는 공유 리소스에 대 한 액세스를 제어 하 여 중첩 된 임계 영역 방법을 보여 줍니다 (정적 `_strShared` 개체) 사용 하 여 공유 `CCriticalSection` 개체입니다. `SomeMethod` 함수 안전한 방법으로 공유 리소스를 업데이트 하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
@@ -167,7 +168,7 @@ BOOL Unlock();
 ### <a name="remarks"></a>설명  
  경우는 `CCriticalSection` 독립 실행형을 사용 하 고 `Unlock` 임계 영역에 의해 제어 되는 리소스의 사용을 완료 한 후 바로 호출 해야 합니다. 경우는 [경우 CSingleLock](../../mfc/reference/csinglelock-class.md) 개체 사용 중인 `CCriticalSection::Unlock` 잠금 개체에서 호출 되며 `Unlock` 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CCriticalSection::Lock](#lock)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

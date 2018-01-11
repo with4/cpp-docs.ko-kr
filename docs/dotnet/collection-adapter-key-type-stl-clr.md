@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 815e52fc75212128aa48293aef8630456a47f919
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ef47469e549c262b7c35cac1a8b8e7e7fb6208ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collectionadapterkeytype-stlclr"></a>collection_adapter::key_type(STL/CLR)
 사전 키의 형식입니다.  
@@ -33,7 +36,7 @@ typedef Key key_type;
 ## <a name="remarks"></a>설명  
  형식은 템플릿 매개 변수에 대 한 동의어 `Key`에 대 한 특수화에 `IDictionary` 또는 `IDictionary<Value>`; 정의 되지 않은 그렇지 않은 경우.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_collection_adapter_key_type.cpp   

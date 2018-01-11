@@ -1,70 +1,64 @@
 ---
-title: "HString::Operator!= 연산자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::operator!="
-dev_langs: 
-  - "C++"
+title: "Hstring:: Operator! = 연산자 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::operator!=
+dev_langs: C++
 ms.assetid: dcdd2aca-e7d6-4bf1-b2de-03efbb430a93
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5aab0784b2a099a104fee696148fb9d7ec0c5ac9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# HString::Operator!= 연산자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-두 매개 변수가 같지 않은지 여부를 나타냅니다.  
+# <a name="hstringoperator-operator"></a>HString::Operator!= 연산자
+두 개의 매개 변수가 같지 않은지를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```cpp  
+inline bool operator!=( const HString& lhs,   
+                        const HString& rhs) throw()  
   
-   inline bool operator!=(  
-                  const HString& lhs,   
-                  const HString& rhs) throw()  
+inline bool operator!=( const HStringReference& lhs,   
+                        const HString& rhs) throw()  
   
-inline bool operator!=(  
-                  const HStringReference& lhs,   
-                  const HString& rhs) throw()  
+inline bool operator!=( const HString& lhs,   
+                        const HStringReference& rhs) throw()  
   
-inline bool operator!=(  
-                  const HString& lhs,   
-                  const HStringReference& rhs) throw()  
+inline bool operator!=( const HSTRING& lhs,   
+                        const HString& rhs) throw()  
   
-inline bool operator!=(  
-                  const HSTRING& lhs,   
-                  const HString& rhs) throw()  
-  
-inline bool operator!=(  
-                  const HString& lhs,   
-                  const HSTRING& rhs) throw()  
-  
+inline bool operator!=( const HString& lhs,   
+                        const HSTRING& rhs) throw()  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `lhs`  
- 비교할 첫 번째 매개변수입니다.  `lhs`HStringReference 개체 또는 HSTRING 핸들 또는 HString 일 수 있습니다.  
+ 비교할 첫 번째 매개 변수입니다. `lhs`HString 또는 HStringReference 개체 또는 HSTRING 핸들 수 있습니다.  
   
  `rhs`  
- `rhs` 를 비교할 두번째 매개변수는 HStrinReference 개체 또는 HSTRING 핸들 또는 HString입니다.  
+ 비교할 두 번째 매개 변수입니다.`rhs` HString 또는 HStringReference 개체 또는 HSTRING 핸들 수 있습니다.  
   
-## 반환 값  
- `lhs`와 `rhs` 매개 변수가 같지 않으면 `true`이고, 그렇지 않으면 `false`입니다.  
+## <a name="return-value"></a>반환 값  
+ `true`경우는 `lhs` 및 `rhs` 매개 변수는 같고, 그렇지 않으면 `false`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
   
- **네임스페이스:** Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [HString 클래스](../windows/hstring-class.md)

@@ -13,10 +13,9 @@ f1_keywords:
 - vector/std::operator&lt;
 - vector/std::operator&lt;=
 - vector/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1d14f312-6f59-4ec7-88ae-95f89a558823
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (vector)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 310bf81e6dd20440c57ce5a0c73da7a6919f0015
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt; 연산자
 ||||  
@@ -58,7 +56,7 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="remarks"></a>설명  
  포함된 요소 수가 같고 개별 요소의 값이 같으면 두 벡터는 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // vector_op_ne.cpp  
@@ -102,7 +100,7 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ### <a name="return-value"></a>반환 값  
  연산자 좌변의 벡터가 연산자 우변의 벡터보다 작으면 **true**이고 그렇지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // vector_op_lt.cpp  
@@ -150,7 +148,7 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="return-value"></a>반환 값  
  연산자 좌변의 벡터가 연산자 우변의 벡터보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // vector_op_le.cpp  
@@ -201,7 +199,7 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="remarks"></a>설명  
  포함된 요소 수가 같고 개별 요소의 값이 같으면 두 벡터는 같은 것이고 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // vector_op_eq.cpp  
@@ -245,7 +243,7 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ### <a name="return-value"></a>반환 값  
  연산자 좌변의 벡터가 연산자 우변의 벡터보다 크면 **true**이고 그렇지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // vector_op_gt.cpp  
@@ -294,7 +292,7 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="return-value"></a>반환 값  
  연산자 좌변의 벡터가 벡터 우변의 벡터보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // vector_op_ge.cpp  
@@ -328,5 +326,4 @@ Vector v1 is greater than or equal to vector v2.
   
 ## <a name="see-also"></a>참고 항목  
  [\<vector>](../standard-library/vector.md)
-
 

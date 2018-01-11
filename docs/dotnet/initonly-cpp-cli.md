@@ -17,11 +17,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7957c92ca243a9055bfce62232067e51b3f395d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a238453c7879cab29f0fa058b654841f0c4786cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initonly-ccli"></a>initonly(C++/CLI)
 **initonly** 해당 변수 할당을 나타내는 상황에 맞는 키워드는 선언 또는 동일한 클래스의 정적 생성자의 일부로 서만 발생할 수 있습니다.  

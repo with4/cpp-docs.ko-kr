@@ -1,5 +1,5 @@
 ---
-title: "동시성 네임 스페이스 상수의 (AMP) | Microsoft 문서"
+title: "동시성 네임 스페이스 상수의 (AMP) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,18 +9,18 @@ ms.topic: article
 f1_keywords:
 - amp/Concurrency::HLSL_MAX_NUM_BUFFERS
 - amp/Concurrency::MODULENAME_MAX_LENGTH
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 13a8e8cd-2eec-4e60-a91d-5d271072747b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 26106b632e13dd339ba058108c04801f8018d5b4
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a28853f91c6d75a322d6edfd15b96f5589b74e0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-constants-amp"></a>동시성 네임 스페이스 상수의 (AMP)
 |||  
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/17/2017
 |[HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[MODULENAME_MAX_LENGTH](#modulename_max_length)|  
   
 ##  <a name="hlsl_max_num_buffers"></a>HLSL_MAX_NUM_BUFFERS 상수  
- DirectX에 의해 허용 되는 버퍼의 최대 수입니다.  
+ DirectX에서 허용 하는 버퍼의 최대 수입니다.  
   
 ```  
 static const UINT HLSL_MAX_NUM_BUFFERS = 64 + 128;  
@@ -43,4 +43,3 @@ static const UINT MODULENAME_MAX_LENGTH = 1024;
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency 네임스페이스(C++ AMP)](concurrency-namespace-cpp-amp.md)
-

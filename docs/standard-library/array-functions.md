@@ -10,10 +10,9 @@ f1_keywords:
 - array/std::array::get
 - array/std::get
 - array/std::swap
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e0700a33-a833-4655-8735-16e71175efc8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
+ms.workload: cplusplus
+ms.openlocfilehash: 7116d8bd3517bb412eecf4c0ba9040ce3fe0f7b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: be5128d8a5a8d3b6d60395633122fa3dd697435e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 함수
 \<array> 헤더에는 `array` 개체에서 작동하는 두 개의 비 멤버 함수인 `get` 및 `swap`이 포함되어 있습니다.  
@@ -62,7 +61,7 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
  `arr`  
  선택할 배열입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <array>   
@@ -118,7 +117,7 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 ### <a name="remarks"></a>설명  
  이 템플릿 함수는 `left.swap(right)`를 실행합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__swap.cpp   
@@ -166,5 +165,4 @@ int main()
   
 ## <a name="see-also"></a>참고 항목  
  [\<array>](../standard-library/array.md)
-
 

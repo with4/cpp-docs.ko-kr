@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 940d4c2604f65166faa95ca06ef3cc9b81a47b3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddda6fd1643d828f3ad566b679fa8bf80c49845b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution 클래스
 지수 분포를 생성합니다.  
@@ -75,9 +76,9 @@ public:
 ``` 
 ### <a name="parameters"></a>매개 변수  
 *RealType*  
-부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
-*URNG* 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.
+*URNG* 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
   
   
 ## <a name="remarks"></a>설명  
@@ -92,11 +93,11 @@ public:
   
 속성 멤버 함수 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
   
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-지수 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Exponential Distribution](http://go.microsoft.com/fwlink/LinkId=401098)(지수 분포)을 참조하세요.  
+지수 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Exponential Distribution](http://go.microsoft.com/fwlink/p/?linkid=401098)(지수 분포)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // compile with: /EHsc /W4  

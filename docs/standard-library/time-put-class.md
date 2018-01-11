@@ -25,11 +25,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7d7d4d2554e346f67d62f3832ed1722c35970154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d27cb58766e019d26e3cfc3d99b4d719be701f37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timeput-class"></a>time_put 클래스
 시간 값에서 `CharType` 형식의 시퀀스로 변환을 제어하는 로캘 패싯으로 사용 가능한 개체에 대해 설명하는 템플릿 클래스입니다.  
@@ -58,7 +59,7 @@ class time_put : public locale::facet;
 |-|-|  
 |[time_put](#time_put)|`time_put` 형식의 개체에 대한 생성자입니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -85,7 +86,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**과 동일한 의미입니다.  
+ 이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
   
 ##  <a name="do_put"></a>  time_put::do_put  
  시간과 날짜 정보를 **CharType**의 시퀀스로 출력하는 가상 함수입니다.  
@@ -123,7 +124,7 @@ virtual iter_type do_put(
   
  출력은 `strftime`에 사용되는 것과 같은 규칙을 통해 생성되며, 배열에 일련의 `char`을 생성하기 위한 `_Pt`의 마지막 인수가 포함됩니다. 이러한 각 `char` 요소는 간단한 일대일 매핑을 통해 **CharType** 형식의 동일 요소에 매핑된다고 가정합니다. `_Mod`가 0인 경우 유효 형식은 "%F"이며, 여기서 F는 `_Fmt`로 바뀝니다. 그렇지 않은 경우의 유효 형식은 "%MF"이며, 여기서 M은 `_Mod`로 바뀝니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_put`을 호출하는 [put](#put)에 대한 예제를 참조하세요.  
   
 ##  <a name="iter_type"></a>  time_put::iter_type  
@@ -186,7 +187,7 @@ iter_type put(iter_type next,
 ### <a name="remarks"></a>설명  
  첫 번째 구성원 함수는 [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`)을 반환합니다. 두 번째 구성원 함수는 퍼센트 기호(%)를 제외한 간격 [ `first`, `last`)의 모든 요소를 \* `next`에 복사합니다. 간격 [ `first`, `last`)에서 퍼센트 기호 뒤에 문자 *C*가 오는 경우 함수는 `next` = `do_put`(`next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0)을 대신 계산하여 *C*를 지난 위치로 건너뜁니다. 그러나 *C*가 EOQ# 집합의 한정자 문자이고 간격 [ `first`, `last`)에서 뒤에 문자 `C2`가 오는 경우 함수는 `next` = `do_put`(`next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*)를 대신 계산하여 `C2`를 지난 위치로 건너뜁니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // time_put_put.cpp  

@@ -1,46 +1,46 @@
 ---
-title: "hash_set::operator=(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 멤버[STL/CLR]"
+title: 'hash_set:: operator = (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 25ee3afd-90cd-483f-ae03-b52ce1396090
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 10c96dd8b8445679f54dc1850ade00a5c5a55fc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::operator=(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-제어된 시퀀스를 대체합니다.  
+# <a name="hashsetoperator-stlclr"></a>hash_set::operator=(STL/CLR)
+제어되는 시퀀스를 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 hash_set<Key>% operator=(hash_set<Key>% right);  
 ```  
   
-#### 매개 변수  
- right  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
  복사할 컨테이너입니다.  
   
-## 설명  
- 멤버 연산자는 개체에 `right`를 복사하고 `*this`를 반환합니다.  제어된 시퀀스를 `right`에서 제어된 시퀀스의 복사본으로 교체하기 위해서 사용합니다.  
+## <a name="remarks"></a>설명  
+ 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 이를 사용하여 제어되는 시퀀스를 `right`의 제어되는 시퀀스 복사본으로 대체합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_set_operator_as.cpp   
@@ -72,12 +72,15 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_set](../dotnet/hash-set-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_set(STL/CLR)](../dotnet/hash-set-stl-clr.md)

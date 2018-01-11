@@ -1,32 +1,33 @@
 ---
-title: "binary_negate(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_negate 함수[STL/CLR]"
+title: binary_negate (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_negate
+dev_langs: C++
+helpviewer_keywords: binary_negate function [STL/CLR]
 ms.assetid: 0c3b47eb-0f37-4cb2-b879-4c9f0e57d275
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3780c89c178c0c71f3388d2bd846ed7d52af3ceb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# binary_negate(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-템플릿 클래스는 호출될 때 함수를 설명하고 저장된 두 인수 함수의 논리적 NOT 을 반환합니다.  저장된 함수에서 함수 개체를 지정할 때 사용합니다.  
+# <a name="binarynegate-stlclr"></a>binary_negate(STL/CLR)
+함수를 설명 하는 템플릿 클래스는 논리를 호출 하는 경우 반환 구조으로 저장된 하는 두 인수 함수의 없습니다. 사용 하면 해당 저장된 함수 측면에서 함수 개체를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Fun>  
@@ -50,35 +51,35 @@ public:
     };  
 ```  
   
-#### 매개 변수  
- Fun  
+#### <a name="parameters"></a>매개 변수  
+ 재미  
  저장 된 함수의 형식입니다.  
   
-## 멤버 함수  
+## <a name="member-functions"></a>멤버 함수  
   
 |형식 정의|설명|  
-|-----------|--------|  
-|대리자 형식|일반적 대리자의 형식입니다.|  
-|첫 번째 인수 형식입니다.|함수 첫 번째 인수의 형식입니다.|  
-|결과 형식|함수 결과의 형식입니다.|  
-|두 번째 인수 형식입니다.|함수 둘째 인수의 형식입니다.|  
-|저장된 함수 형식|함수의 형식입니다.|  
+|---------------------|-----------------|  
+|delegate_type|제네릭 대리자의 형식입니다.|  
+|first_argument_type|구조 함수의 첫 번째 인수의 형식입니다.|  
+|result_type|함수 결과의 형식입니다.|  
+|second_argument_type|두 번째 함수 인수 형식입니다.|  
+|stored_function_type|함수의 형식입니다.|  
   
 |멤버|설명|  
-|--------|--------|  
-|binary\_negate|함수를 생성합니다.|  
+|------------|-----------------|  
+|binary_negate|함수를 생성합니다.|  
   
 |연산자|설명|  
-|---------|--------|  
-|operator\(\)|원하는 함수를 계산합니다.|  
-|operator delegate\_type^\(\)|대리자에 함수를 캐스팅합니다.|  
+|--------------|-----------------|  
+|operator()|원하는 함수를 계산합니다.|  
+|연산자 delegate_type^()|대리자에 함수를 캐스팅합니다.|  
   
-## 설명  
- 템플릿 클래스는 다른 두 인수를 저장하는 두 인수 함수를 설명합니다.  개체가 함수로 호출되었을 때 멤버 연산자 `operator()` 를 정의함으로서 두 인수를 사용하여 호출된 저장된 함수의 논리적 NOT을 반환합니다.  
+## <a name="remarks"></a>설명  
+ 다른 두 인수 함수를 저장 하는 두 인수 함수를 설명 하는 템플릿 클래스입니다. 멤버 연산자 정의 `operator()` 논리 반환 개체를 함수로 호출 될 때 있도록 하지 저장 함수의 두 개의 인수를 사용 하 여 호출 합니다.  
   
- 형식이 `delegate_type^` 인 개체는 함수 인수로 전달할 수 있고 적절하게 변환됩니다.  
+ 함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_binary_negate.cpp   
@@ -128,14 +129,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## 요구 사항  
- \`**Header:** \<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [not2](../dotnet/not2-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [not2(STL/CLR)](../dotnet/not2-stl-clr.md)

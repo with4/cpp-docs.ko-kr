@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0cb598a5b0f87080a937218962037d849275d7bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tiles"></a>타일 사용
 바둑판식 배열 응용 프로그램의 가속을 최대화 하기 위해 사용할 수 있습니다. 바둑판식 배열 사각형 동일한 하위 집합으로 스레드를 분할 또는 *타일*합니다. 적절 한 타일 크기와 바둑판식으로 배열 된 알고리즘을 사용 하면 c + + AMP 코드에서 더 많은 가속을 얻을 수 있습니다. 바둑판식 배열 기본 구성 요소입니다.  

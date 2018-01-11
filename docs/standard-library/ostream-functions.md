@@ -19,163 +19,193 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 252a178f1ce71c30bdd830811cbce59b22acc791
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 9b9f64f67b1649c1c2f3d65f63636fd62601d06a
+ms.sourcegitcommit: a7e4956c1150273e8dd39fda8b41655a6cf2cb98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 함수
-||||  
-|-|-|-|  
-|[swap](#swap)|[endl](#endl)|[ends](#ends)|  
-|[flush](#flush)|  
-  
-##  <a name="endl"></a>  endl  
- 줄을 종료하고 버퍼를 플러시합니다.  
-  
-```  
-template class<Elem, Tr> basic_ostream<Elem, Tr>& endl(basic_ostream<Elem, Tr>& Ostr);
-```  
-  
-### <a name="parameters"></a>매개 변수  
- `Elem`  
- 요소 형식입니다.  
-  
- `Ostr`  
- `basic_ostream` 형식의 개체입니다.  
-  
- `Tr`  
- 문자 특성입니다.  
-  
-### <a name="return-value"></a>반환 값  
- `basic_ostream` 형식의 개체입니다.  
-  
-### <a name="remarks"></a>설명  
- 조작자는 `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Ostr`**.** [widen](../standard-library/basic-ios-class.md#widen)( **'\n'**))을 호출한 다음 `Ostr`**.** [flush](../standard-library/basic-ostream-class.md#flush)를 호출하고 `Ostr`를 반환합니다.  
-  
-### <a name="example"></a>예제  
-  
-```cpp  
-// ostream_endl.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-int main( )   
-{  
-   using namespace std;  
-   cout << "testing" << endl;  
-}  
-```  
-  
-```Output  
-testing  
-```  
-  
-##  <a name="ends"></a>  ends  
- 문자열을 종료합니다.  
-  
-```  
-template class<Elem, Tr> basic_ostream<Elem, Tr>& ends(basic_ostream<Elem, Tr>& Ostr);
-```  
-  
-### <a name="parameters"></a>매개 변수  
- `Elem`  
- 요소 형식입니다.  
-  
- `Ostr`  
- `basic_ostream` 형식의 개체입니다.  
-  
- `Tr`  
- 문자 특성입니다.  
-  
-### <a name="return-value"></a>반환 값  
- `basic_ostream` 형식의 개체입니다.  
-  
-### <a name="remarks"></a>설명  
- 조작자는 `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Elem`( **'\0'**))을 호출하고 `Ostr.`을 반환합니다.  
-  
-### <a name="example"></a>예제  
-  
-```cpp  
-// ostream_ends.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-int main( )   
-{  
-   using namespace std;  
-   cout << "a";  
-   cout << "b" << ends;  
-   cout << "c" << endl;  
-}  
-```  
-  
-```Output  
-ab c  
-```  
-  
-##  <a name="flush"></a>  flush  
- 버퍼를 플러시합니다.  
-  
-```  
-template class<Elem, Tr> basic_ostream<Elem, Tr>& flush(basic_ostream<Elem, Tr>& Ostr);
-```  
-  
-### <a name="parameters"></a>매개 변수  
- `Elem`  
- 요소 형식입니다.  
-  
- `Ostr`  
- `basic_ostream` 형식의 개체입니다.  
-  
- `Tr`  
- 문자 특성입니다.  
-  
-### <a name="return-value"></a>반환 값  
- `basic_ostream` 형식의 개체입니다.  
-  
-### <a name="remarks"></a>설명  
- 조작자는 `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#flush)를 호출하고 `Ostr`를 반환합니다.  
-  
-### <a name="example"></a>예제  
-  
-```cpp  
-// ostream_flush.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-int main( )   
-{  
-   using namespace std;  
-   cout << "testing" << flush;  
-}  
-```  
-  
-```Output  
-testing  
-```  
-  
-##  <a name="swap"></a>  swap  
- 두 `basic_ostream` 개체의 값을 교환합니다.  
-  
-```  
-template <class Elem, class Tr>  
-void swap(
-    basic_ostream<Elem, Tr>& left,  
-    basic_ostream<Elem, Tr>& right);
-```  
-  
-### <a name="parameters"></a>매개 변수  
- `left`  
- `basic_ostream` 개체에 대한 lvalue 참조입니다.  
-  
- `right`  
- `basic_ostream` 개체에 대한 lvalue 참조입니다.  
-  
-### <a name="remarks"></a>설명  
- 템플릿 함수 `swap`은 `left.swap(right)`을 실행합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [\<ostream>](../standard-library/ostream.md)
 
+이것은에 정의 된 기본 서식 파일 함수 &lt;ostream&gt;합니다. 멤버 함수에 대 한 참조는 [basic_ostream 클래스](basic-ostream-class.md) 설명서입니다.
+
+||||
+|-|-|-|
+|[endl](#endl)|[ends](#ends)|[flush](#flush)|
+|[swap](#swap)|
+
+## <a name="endl"></a>endl
+
+줄을 종료하고 버퍼를 플러시합니다.
+
+```cpp
+template class<Elem, Tr> 
+basic_ostream<Elem, Tr>& endl(
+   basic_ostream<Elem, Tr>& Ostr);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*Elem*  
+요소 형식입니다.
+
+*Ostr*  
+형식의 개체 **basic_ostream**합니다.
+
+*Tr*  
+문자 특성입니다.
+
+### <a name="return-value"></a>반환 값
+
+형식의 개체 **basic_ostream**합니다.
+
+### <a name="remarks"></a>설명
+
+조작자 호출 *Ostr*.[ 배치](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ 확대 변환](../standard-library/basic-ios-class.md#widen)('\n')), 한 다음 호출 *Ostr*.[ 플러시](../standard-library/basic-ostream-class.md#flush)합니다. 반환 *Ostr*합니다.
+
+### <a name="example"></a>예
+
+```cpp
+// ostream_endl.cpp
+// compile with: /EHsc
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   cout << "testing" << endl;
+}
+```
+
+```Output
+testing
+```
+
+## <a name="ends"></a>끝
+
+문자열을 종료합니다.
+
+```cpp
+template class<Elem, Tr> 
+basic_ostream<Elem, Tr>& ends(
+   basic_ostream<Elem, Tr>& Ostr);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*Elem*  
+요소 형식입니다.
+
+*Ostr*  
+형식의 개체 **basic_ostream**합니다.
+
+*Tr*  
+문자 특성입니다.
+
+### <a name="return-value"></a>반환 값
+
+형식의 개체 **basic_ostream**합니다.
+
+### <a name="remarks"></a>설명
+
+조작자 호출 *Ostr*.[ 배치](../standard-library/basic-ostream-class.md#put)(*Elem*('\0')). 반환 *Ostr*합니다.
+
+### <a name="example"></a>예
+
+```cpp
+// ostream_ends.cpp
+// compile with: /EHsc
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   cout << "a";
+   cout << "b" << ends;
+   cout << "c" << endl;
+}
+```
+
+```Output
+ab c
+```
+
+## <a name="flush"></a>flush
+
+버퍼를 플러시합니다.
+
+```cpp
+template class<Elem, Tr>
+basic_ostream<Elem, Tr>& flush(
+   basic_ostream<Elem, Tr>& Ostr);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*Elem*  
+요소 형식입니다.
+
+*Ostr*  
+형식의 개체 **basic_ostream**합니다.
+
+*Tr*  
+문자 특성입니다.
+
+### <a name="return-value"></a>반환 값
+
+형식의 개체 **basic_ostream**합니다.
+
+### <a name="remarks"></a>설명
+
+조작자 호출 *Ostr*.[ 플러시](../standard-library/basic-ostream-class.md#flush)합니다. 반환 *Ostr*합니다.
+
+### <a name="example"></a>예
+
+```cpp
+// ostream_flush.cpp
+// compile with: /EHsc
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+   cout << "testing" << flush;
+}
+```
+
+```Output
+testing
+```
+
+## <a name="swap"></a>swap
+
+두 값을 교환 **basic_ostream** 개체입니다.
+
+```cpp
+template <class Elem, class Tr>
+void swap(
+   basic_ostream<Elem, Tr>& left,
+   basic_ostream<Elem, Tr>& right);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*Elem*  
+요소 형식입니다.
+
+*Tr*  
+문자 특성입니다.
+
+*left*  
+에 대 한 lvalue 참조는 **basic_ostream** 개체입니다.
+
+*right*  
+에 대 한 lvalue 참조는 **basic_ostream** 개체입니다.
+
+### <a name="remarks"></a>설명
+
+템플릿 함수 **스왑** 실행 `left.swap(right)`합니다.
+
+## <a name="see-also"></a>참고 항목
+
+[\<ostream>](../standard-library/ostream.md)  

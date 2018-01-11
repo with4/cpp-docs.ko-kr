@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3d528d56a08cf6333e671ba6db18bbbe7a1be932
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a7b193a0d059598a3b73bc2e743ace5724b9cf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3085"></a>컴파일러 오류 C3085
 'constructor': 생성자는 'keyword'일 수 없습니다.  
   
  생성자가 잘못 선언되었습니다. 자세한 내용은 [Override Specifiers](../../windows/override-specifiers-cpp-component-extensions.md) 를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3085를 생성합니다.  
   
 ```  

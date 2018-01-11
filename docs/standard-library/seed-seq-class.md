@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: de741e8e36f6358b0b0f100eaa266336c0338ca2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3eb5a5d383044e0e44a0913c06afa73c6fe2f0ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seedseq-class"></a>seed_seq 클래스
 난수 엔진에 필요한 임의 시드를 공급할 수 있는 부호가 없는 정수 값의 벡터를 저장합니다.  
@@ -95,7 +96,7 @@ public:
  `template<class OutputIterator> void param(OutputIterator dest) const;`   
 내부 시퀀스를 출력 반복기 `dest`에 복사합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 생성자 3개를 사용하여 배열에 할당된 경우 결과 `seed_seq` 인스턴스에서 출력을 생성합니다. 난수 생성기와 함께 `seed_seq`를 사용하는 예제는 [\<random>](../standard-library/random.md)을 참조하세요.  
   
 ```cpp  

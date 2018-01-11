@@ -73,11 +73,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 089841b51421567f2faff9d06508feb20a57e15d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96cc8325ce8084d62f05283b424ead222bc55dd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 클래스
 단일 사용자가 로그인부터 로그인까지 암호로 보호되고 명명된 데이터베이스 세션을 관리합니다.  
@@ -153,7 +154,7 @@ class CDaoWorkspace : public CObject
 ## <a name="security"></a>보안  
  MFC dao에서 보안 제어 기능에 사용 되는 사용자 및 그룹 컬렉션을 구현 하지 않습니다. DAO에서 이러한 요소를 필요 하면 프로그램 해야 이러한 직접 DAO 인터페이스를 직접 호출을 통해. 자세한 내용은 참조 [기술 참고 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)합니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  클래스를 사용할 수 `CDaoWorkspace` 에:  
   
 -   기본 작업 영역을 명시적으로 열어야 합니다.  

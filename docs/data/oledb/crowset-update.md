@@ -1,72 +1,74 @@
 ---
-title: "CRowset::Update | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset.Update"
-  - "ATL.CRowset.Update"
-  - "ATL.CRowset<TAccessor>.Update"
-  - "ATL::CRowset<TAccessor>::Update"
-  - "CRowset<TAccessor>::Update"
-  - "CRowset::Update"
-  - "CRowset<TAccessor>.Update"
-  - "ATL::CRowset::Update"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Update 메서드"
+title: 'Crowset:: Update | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset.Update
+- ATL.CRowset.Update
+- ATL.CRowset<TAccessor>.Update
+- ATL::CRowset<TAccessor>::Update
+- CRowset<TAccessor>::Update
+- CRowset::Update
+- CRowset<TAccessor>.Update
+- ATL::CRowset::Update
+dev_langs: C++
+helpviewer_keywords: Update method
 ms.assetid: cd5fedc8-2b85-4cb8-8c40-c79576316903
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 26cbada107bbefe4c5e32243f2761193b1912a0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::Update
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Transmits any pending changes made to the current row since the last fetch or **Update** call on it.  
+# <a name="crowsetupdate"></a>CRowset::Update
+보류 중인 마지막 인출 이후 현재 행에 대해 변경 내용을 전송 또는 **업데이트** 호출 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      HRESULT Update(   
-   DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL    
+      HRESULT Update(   
+   DBCOUNTITEM* pcRows = NULL,   
+   HROW* phRow = NULL,   
+   DBROWSTATUS* pStatus = NULL    
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pcRows`  
- \[out\] A pointer to the location where **Update** returns the number of rows it attempted to update, if required.  
+ [out] 위치에 대 한 포인터를 **업데이트** 필요한 경우 업데이트를 시도 하는 행 수를 반환 합니다.  
   
  `phRow`  
- \[out\] A pointer to the location where **Update** returns the handle of the row it attempted to update.  No handle is returned if `phRow` is null.  
+ [out] 위치에 대 한 포인터를 **업데이트** 를 업데이트 하려고 시도 하는 행의 핸들을 반환 합니다. 핸들이 없는 경우 반환 됩니다 `phRow` null입니다.  
   
  `pStatus`  
- \[out\] A pointer to the location where **Update** returns the row status value.  No status is returned if `pStatus` is null.  
+ [out] 위치에 대 한 포인터를 **업데이트** 행 상태 값을 반환 합니다. 상태가 반환 됩니다 `pStatus` null입니다.  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 설명  
- Transmits any pending changes made to the current row since that row was last fetched or updated \(using **Update** or [UpdateAll](../../data/oledb/crowset-updateall.md)\).  You typically call [SetData](../../data/oledb/crowset-setdata.md) to set data values in columns in a row, and then call **Update** to transmit those changes.  
+## <a name="remarks"></a>설명  
+ 보류 중인 행 마지막 인출 되거나 업데이트 이후 현재 행에 대해 변경 내용을 전송 (사용 하 여 **업데이트** 또는 [UpdateAll](../../data/oledb/crowset-updateall.md)). 일반적으로 호출 [SetData](../../data/oledb/crowset-setdata.md) 한 행의에서 열에 데이터 값을 설정 하 여 호출 **업데이트** 이러한 변경 내용을 전송할 수 있습니다.  
   
- This method requires the optional interface `IRowsetUpdate`, which might not be supported on all providers; if this is the case, the method returns **E\_NOINTERFACE**.  You must also set **DBPROP\_IRowsetUpdate** to `VARIANT_TRUE` before calling **Open** on the table or command containing the rowset.  
+ 이 메서드를 사용 하려면 선택적 인터페이스 `IRowsetUpdate`, 모든 공급자에서 지원 되지 않는 있는;의 경우이 메서드는 반환 **E_NOINTERFACE**합니다. 설정 해야 **DBPROP_IRowsetUpdate** 를 `VARIANT_TRUE` 호출 하기 전에 **열려** 테이블이 나 행 집합을 포함 하는 명령입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRowset 클래스](../../data/oledb/crowset-class.md)   
- [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md)   
+ [Irowsetupdate:: Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
+ [Crowset:: Updateall](../../data/oledb/crowset-updateall.md)   
  [CRowset::SetData](../../data/oledb/crowset-setdata.md)

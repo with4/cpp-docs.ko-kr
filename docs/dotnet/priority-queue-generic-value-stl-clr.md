@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::generic_value(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value 멤버[STL/CLR]"
+title: 'priority_queue:: generic_value (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: d534e95b-7939-4fb4-bb71-2164e2b97c4f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 19ebfefefcc3827fb632654e39a865449b3cf675
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::generic_value(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of an element for use with the generic interface for the container.  
+# <a name="priorityqueuegenericvalue-stlclr"></a>priority_queue::generic_value(STL/CLR)
+컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 요소의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## 설명  
- The type describes an object of type `GValue` that describes the stored element value for use with the generic interface for this template container class. \(`GValue` is either `value_type` or `value_type^` if `value_type` is a ref type.\)  
+## <a name="remarks"></a>설명  
+ 이 형식은 형식의 개체를 설명 `GValue` 이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 저장 된 요소 값을 설명 하는 합니다. (`GValue` 있거나 `value_type` 또는 `value_type^` 경우 `value_type` ref 형식입니다.)  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_priority_queue_generic_value.cpp   
@@ -74,15 +75,18 @@ int main()
   
 ```  
   
-  **c a b**  
- **c a b**  
- **c b a**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+c a b  
+c a b  
+c b a  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue:: generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::value_type(STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)

@@ -1,34 +1,35 @@
 ---
-title: "방법: C++/CLI에서 배열 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "배열[C++], 1차원"
+title: "방법: 배열을 사용 하 여 C + + /cli CLI | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b061437cfe34ee0ec9c00242bf0e62b1e7426f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: C++/CLI에서 배열 사용
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-This article describes how to use arrays in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)].  
+# <a name="how-to-use-arrays-in-ccli"></a>방법: C++/CLI에서 배열 사용
+이 문서에서는 배열을 사용 하 여 C + + /cli CLI 합니다.  
   
-## Single\-dimension arrays  
- The following sample shows how to create single\-dimension arrays of reference, value, and native pointer types.  It also shows how to return a single\-dimension array from a function and how to pass a single\-dimension array as an argument to a function.  
+## <a name="single-dimension-arrays"></a>1 차원 배열  
+ 다음 샘플에는 참조, 값 및 네이티브 포인터 형식의 1 차원 배열을 만드는 방법을 보여 줍니다. 또한 단일 차원 배열이 함수에서 반환 하는 방법과 함수에는 1 차원 배열을 인수로 전달 하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // mcppv2_sdarrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -138,25 +139,31 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine("MyStruct1[{0}] = {1}", i, MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**MyClass1\[0\] \= 20**  
-**MyClass1\[1\] \= 21**  
-**MyClass2\[0\] \= 30**  
-**MyClass2\[1\] \= 31**  
-**MyClass2\[0\] \= 32**  
-**MyClass2\[1\] \= 33**  
-**MyStruct1\[0\] \= 40**  
-**MyStruct1\[1\] \= 41** The next sample shows how to perform aggregate initialization on single\-dimension managed arrays.  
+IntArray[0] = 10  
+IntArray[1] = 11  
   
+MyClass1[0] = 20  
+MyClass1[1] = 21  
+  
+MyClass2[0] = 30  
+MyClass2[1] = 31  
+  
+MyClass2[0] = 32  
+MyClass2[1] = 33  
+  
+MyStruct1[0] = 40  
+MyStruct1[1] = 41  
 ```  
+  
+ 다음 예제에는 관리 되는 1 차원 배열에 집합체 초기화를 수행 하는 방법을 보여 줍니다.  
+  
+```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -193,21 +200,23 @@ int main() {
    array<N*>^ native1 = gcnew array<N*>{new N(0), new N(1), new N(2)};  
    array<N*>^ native2 = {new N(0), new N(1), new N(2)};  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0, 0] = 0  
+MyClass0[0, 1] = 0  
+MyClass0[1, 0] = 1  
+MyClass0[1, 1] = 1  
   
-  **MyClass0\[0, 0\] \= 0**  
-**MyClass0\[0, 1\] \= 0**  
-**MyClass0\[1, 0\] \= 1**  
-**MyClass0\[1, 1\] \= 1**  
-**IntArray\[0, 0\] \= 10**  
-**IntArray\[0, 1\] \= 10**  
-**IntArray\[1, 0\] \= 11**  
-**IntArray\[1, 1\] \= 11** This example shows how to perform aggregate initialization on a multi\-dimension managed array:  
-  
+IntArray[0, 0] = 10  
+IntArray[0, 1] = 10  
+IntArray[1, 0] = 11  
+IntArray[1, 1] = 11  
 ```  
+  
+ 이 예제에는 관리 되는 다차원 배열에서 집합체 초기화를 수행 하는 방법을 보여 줍니다.  
+  
+```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -249,10 +258,10 @@ int main() {
 }  
 ```  
   
-## Jagged arrays  
- This section shows how to create single\-dimension arrays of managed arrays of reference, value, and native pointer types.  It also shows how to return a single\-dimension array of managed arrays from a function and how to pass a single\-dimension array as an argument to a function.  
+## <a name="jagged-arrays"></a>가변 배열  
+ 이 섹션에는 관리 되는 배열 참조, 값 및 네이티브 포인터 형식의 1 차원 배열을 만드는 방법을 보여 줍니다. 또한 관리 되는 배열의 1 차원 배열 함수에서 반환 하는 방법과 함수에는 1 차원 배열을 인수로 전달 하는 방법을 보여 줍니다.  
   
-```  
+```cpp  
 // mcppv2_array_of_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -330,23 +339,26 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine(MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**MyClass0\[1\] \= 1**  
-**IntArray\[0\] \= 10**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**IntArray\[1\] \= 11**  
-**40**  
-**41** The following sample shows how to perform aggregate initialization with jagged arrays.  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
   
+40  
+41  
 ```  
+  
+ 다음 샘플에서는 가변된 배열이 포함 된 집합체 초기화를 수행 하는 방법을 보여 줍니다.  
+  
+```cpp  
 // mcppv2_array_of_arrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -431,25 +443,28 @@ int main() {
       Console::WriteLine();  
    }  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**MyClass0\[1\] \= 1**  
-**\[ 1 2 \]**  
-**\[ 3 4 5 \]**  
-**\[ 0 1 \]**  
-**\[ 2 3 4 \]**  
-**\[ a b c d e f \]**  
-**\[ g h \]**   
-## Managed arrays as template type parameters  
- This example shows how to use a managed array as a parameter to a template:  
+[ 1 2 ]  
+[ 3 4 5 ]  
   
+[ 0 1 ]  
+[ 2 3 4 ]  
+  
+[ a b c d e f ]  
+[ g h ]  
 ```  
+  
+## <a name="managed-arrays-as-template-type-parameters"></a>관리 되는 배열을 템플릿 형식 매개 변수  
+ 이 예제에는 관리 되는 배열을 템플릿 매개 변수로 사용 하는 방법을 보여 줍니다.  
+  
+```cpp  
 // mcppv2_template_type_params.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -469,16 +484,16 @@ int main() {
    retval += larr->Length - 10;  
    Console::WriteLine("Return Code: {0}", retval);  
 }  
-  
 ```  
   
- **Output**  
-  
-  **Return Code: 0**   
-## typedefs for managed arrays  
- This example shows how to make a typedef for a managed array:  
-  
+```Output  
+Return Code: 0  
 ```  
+  
+## <a name="typedefs-for-managed-arrays"></a>관리 되는 배열에 대 한 typedef  
+ 이 예제에는 관리 되는 배열에 대 한 typedef를 확인 하는 방법을 보여 줍니다.  
+  
+```cpp  
 // mcppv2_typedef_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -489,15 +504,14 @@ typedef array<array<G^>^> jagged_array;
 int main() {  
    jagged_array ^ MyArr = gcnew jagged_array (10);  
 }  
-  
 ```  
   
-## Sorting arrays  
- Unlike standard C\+\+ arrays, managed arrays are implicitly derived from an array base class from which they inherit common behavior.  An example is the `Sort` method, which can be used to order the items in any array.  
+## <a name="sorting-arrays"></a>배열 정렬  
+ 표준 c + + 배열과 달리, 관리 되는 배열 일반 동작을 상속 하는 배열의 기본 클래스에서 암시적으로 파생 됩니다. 예로 `Sort` 모든 배열에 있는 항목을 정렬 하는 데 사용할 수 있는 메서드.  
   
- For arrays that contain basic intrinsic types, you can call the `Sort` method.  You can override the sort criteria, and doing so is required when you want to sort for arrays of complex types.  In this case, the array element type must implement the [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) method.  
+ 기본 내장 형식을 포함 하는 배열에 대해 호출할 수 있습니다는 `Sort` 메서드. 정렬 조건을 재정의 하 고이 필요한 한 복합 형식의 배열에 대 한 정렬 하려는 경우 키를 누릅니다. 이 경우 배열 요소 형식은 구현 해야 합니다는 [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) 메서드.  
   
-```  
+```cpp  
 // array_sort.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -508,15 +522,14 @@ int main() {
    for (int i=0; i < a->Length; i++)  
       Console::Write("{0} ", a[i] );  
 }  
-  
 ```  
   
-## Sorting arrays by using custom criteria  
- To sort arrays that contain basic intrinsic types, just call the `Array::Sort` method.  However, to sort arrays that contain complex types or to override the default sort criteria, override the [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) method.  
+## <a name="sorting-arrays-by-using-custom-criteria"></a>사용자 지정 조건을 사용 하 여 배열 정렬  
+ 기본 내장 형식을 포함 하는 배열을 정렬 하려면 호출는 `Array::Sort` 메서드. 그러나 기본 정렬 조건을 재정의 하려면 재정의 또는 복합 형식을 포함 하는 정렬 배열에는 [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) 메서드.  
   
- In the following example, a structure named `Element` is derived from <xref:System.IComparable>, and written to provide a <xref:System.IComparable.CompareTo%2A> method that uses the average of two integers as the sort criterion.  
+ 다음 예제에서는 구조체 이름이 `Element` 에서 파생 된 <xref:System.IComparable>, 하 게 작성 하 고는 <xref:System.IComparable.CompareTo%2A> 정렬 기준으로 두 정수의 평균을 사용 하는 메서드.  
   
-```  
+```cpp  
 using namespace System;  
   
 value struct Element : public IComparable {  
@@ -558,10 +571,10 @@ int main() {
 }  
 ```  
   
-## Array covariance  
- Given reference class D that has direct or indirect base class B, an array of type D can be assigned to an array variable of type B.  
+## <a name="array-covariance"></a>배열 공 분산  
+ 직접 또는 간접 기본 클래스가 B 참조 클래스 D를 매개 변수로 받아 D 형식의 배열에 할당할 수 형식 B.의 배열 변수  
   
-```  
+```cpp  
 // clr_array_covariance.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -572,11 +585,11 @@ int main() {
 }  
 ```  
   
- An assignment to an array element shall be assignment\-compatible with the dynamic type of the array.  An assignment to an array element that has an incompatible type causes `System::ArrayTypeMismatchException` to be thrown.  
+ 배열 요소에 할당 하는 할당 호환이 되어야 합니다. 동적 유형의 배열입니다. 호환 되지 않는 형식이 지정 된 배열 요소에 대 한 할당 하면 `System::ArrayTypeMismatchException` throw 됩니다.  
   
- Array covariance doesn't apply to arrays of value class type.  For example, arrays of Int32 cannot be converted to Object^ arrays, not even by using boxing.  
+ 배열 공 분산 값 클래스 형식의 배열에 적용 되지 않습니다. 예를 들어 int32 배열 변환할 수 없습니다 개체 ^ 배열, boxing을 사용 하 여도 마찬가지입니다.  
   
-```  
+```cpp  
 // clr_array_covariance2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -609,5 +622,5 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>참고 항목  
+ [배열](../windows/arrays-cpp-component-extensions.md)

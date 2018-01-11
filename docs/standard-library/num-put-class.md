@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d3870564e7374d4e3faba9bc2055f04e9d2f4b63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f93a5536b73c5d62a95ff076e40304204071d83f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numput-class"></a>num_put 클래스
 숫자 값에서 `CharType` 형식의 시퀀스로 변환을 제어하는 로캘 패싯으로 사용 가능한 개체에 대해 설명하는 템플릿 클래스입니다.  
@@ -58,7 +59,7 @@ class num_put : public locale::facet;
 |-|-|  
 |[num_put](#num_put)|`num_put` 형식의 개체에 대한 생성자입니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -85,7 +86,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**과 동일한 의미입니다.  
+ 이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
   
 ##  <a name="do_put"></a>  num_put::do_put  
  숫자를 지정된 로캘에 대해 서식이 지정된 숫자를 나타내는 **CharType**의 시퀀스로 변환하기 위해 호출하는 가상 함수입니다.  
@@ -189,7 +190,7 @@ virtual iter_type do_put(
   
 -   **iosbase**. **flags** & **ios_base::**[showbase](../standard-library/ios-functions.md#showbase)가 0이 아니면 변환 사양 앞에 플래그 **#**이 추가됩니다.  
   
- 정수 출력 필드의 형식은 [locale facet](../standard-library/locale-class.md#facet_class)**fac**에 의해 추가로 결정됩니다. 이 항목은 [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 호출에서 반환됩니다. 구체적으로는 다음과 같습니다.  
+ 정수 출력 필드의 형식은 [locale facet](../standard-library/locale-class.md#facet_class)**fac**에 의해 추가로 결정됩니다. 이 항목은 [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). 구체적으로는 다음과 같습니다.  
   
 - **fac**. [grouping](../standard-library/numpunct-class.md#grouping)은 숫자가 소수점 왼쪽으로 그룹화되는 방법을 결정합니다.  
   
@@ -288,7 +289,7 @@ virtual iter_type do_put(iter_type next,
   
  이 함수는 `ld`의 변환 사양을 `llu`로 대체한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_put`을 호출하는 [put](#put)에 대한 예제를 참조하세요.  
   
 ##  <a name="iter_type"></a>  num_put::iter_type  
@@ -405,7 +406,7 @@ iter_type put(
 ### <a name="remarks"></a>설명  
  모든 구성원 함수는 [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `val`)을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // num_put_put.cpp  

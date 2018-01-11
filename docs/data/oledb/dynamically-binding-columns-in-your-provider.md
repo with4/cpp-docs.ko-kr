@@ -1,48 +1,51 @@
 ---
 title: "공급자에서 열을 동적으로 바인딩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "열[C++], 동적 열 바인딩"
-  - "동적 열 바인딩"
-  - "공급자[C++], 동적 열 바인딩"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- columns [C++], dynamic column binding
+- dynamic column binding
+- providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f95dde27d6958bd9f1ad40bc411c7c434634879b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 공급자에서 열을 동적으로 바인딩
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-동적 열 바인딩이 실제로 필요한지 확인합니다.  다음과 같은 경우에 동적 열 바인딩이 필요할 수 있습니다.  
+# <a name="dynamically-binding-columns-in-your-provider"></a>공급자에서 열을 동적으로 바인딩
+동적 열 바인딩 게이트웨이가 필요한 지 확인 합니다. 때문에 필요할 수 있습니다.  
   
--   컴파일 타임에 행 집합 열이 정의되지 않은 경우  
+-   행 집합 열 컴파일 타임에 정의 되지 않습니다.  
   
--   열을 추가하는 책갈피 등의 요소를 지원할 경우  
+-   열을 추가 하는 책갈피와 같은 요소를 지원 합니다.  
   
-### 동적 열 바인딩을 구현하려면  
+### <a name="to-implement-dynamic-column-binding"></a>동적 열 바인딩 구현 하려면  
   
-1.  코드에 **PROVIDER\_COLUMN\_MAP**이 있으면 모두 제거합니다.  
+1.  제거 **PROVIDER_COLUMN_MAP**사용자 코드에서 s입니다.  
   
-2.  사용자 레코드\(사용자 구조\)에서 다음 선언을 추가합니다.  
+2.  사용자 레코드 (구조)에 다음 선언을 추가 합니다.  
   
     ```  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  `GetColumnInfo` 함수를 구현합니다.  이 함수는 정보 저장 방법을 레이아웃합니다.  이 함수에 대한 속성이나 기타 정보를 가져와야 할 경우도 있습니다.  [COLUMN\_ENTRY](../../data/oledb/column-entry.md)와 비슷한 매크로를 작성하여 사용자 정보를 추가할 수도 있습니다.  
+3.  구현 된 `GetColumnInfo` 함수입니다. 이 함수를 통해 정보가 저장 되는 방법을 레이아웃 합니다. 속성 또는이 함수에 대 한 기타 정보를 가져와야 할 수 있습니다. 에 매크로 만들 수도 있습니다는 [COLUMN_ENTRY](../../data/oledb/column-entry.md) 매크로 고유한 정보를 추가 합니다.  
   
-     다음 예제는 `GetColumnInfo` 함수를 보여 줍니다.  
+     다음 예제에서는 한 `GetColumnInfo` 함수입니다.  
   
     ```  
     // Check the property flag for bookmarks, if it is set, set the zero  
@@ -95,5 +98,5 @@ caps.handback.revision: 7
     }  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿을 사용하여 작업](../../data/oledb/working-with-ole-db-provider-templates.md)

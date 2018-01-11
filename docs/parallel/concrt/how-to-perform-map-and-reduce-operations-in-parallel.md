@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6648933aa972ec1391afe2d9cecd37b15ad53f9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e38dd845f3503512f48c19e226d56d9978cc21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>방법: 매핑 수행 및 병렬 작업 줄이기
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/24/2017
   
  A *지도* 작업 시퀀스의 각 값에 함수를 적용 합니다. A *줄일* 작업 하나의 값으로 시퀀스의 요소를 결합 합니다. C + + 표준 라이브러리를 사용할 수 [std:: transform](../../standard-library/algorithm-functions.md#transform) 및 [std:: accumulate](../../standard-library/numeric-functions.md#accumulate) 매핑 수행 및 줄이기 작업을 하는 함수입니다. 그러나 많은 문제에 대해 성능을 향상시키기 위해 `parallel_transform` 알고리즘을 사용하여 매핑 작업을 병렬로 수행하고, `parallel_reduce` 알고리즘을 사용하여 줄이기 작업을 병렬로 수행할 수 있습니다. 경우에 따라 `concurrent_unordered_map`을 사용하여 매핑과 줄이기를 하나의 작업으로 수행할 수도 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 파일에서 단어가 나타나는 횟수를 계산합니다. 사용 하 여 [std:: vector](../../standard-library/vector-class.md) 두 파일의 콘텐츠를 나타내는입니다. 매핑 작업은 각 벡터에서 각 단어가 나타나는 횟수를 계산합니다. 줄이기 작업은 두 벡터의 단어 개수를 누적합니다.  
   
  [!code-cpp[concrt-parallel-map-reduce#1](../../parallel/concrt/codesnippet/cpp/how-to-perform-map-and-reduce-operations-in-parallel_1.cpp)]  

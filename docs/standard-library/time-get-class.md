@@ -49,11 +49,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6178c35ff5d9ed0fbe53af7d488cc24cbcf81f2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc6d855b1ff1776cdbb1777a4250317accac68a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timeget-class"></a>time_get 클래스
 템플릿 클래스는 `CharType` 형식의 시퀀스에서 시간 값으로 변환을 제어하는 로캘 패싯으로 사용할 수 있는 개체를 설명합니다.  
@@ -82,7 +83,7 @@ class time_get : public time_base;
 |-|-|  
 |[time_get](#time_get)|`time_get` 형식의 개체에 대한 생성자입니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -136,7 +137,7 @@ dateorder date_order() const;
 ### <a name="remarks"></a>설명  
  구성원 함수는 [do_date_order](#do_date_order)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // time_get_date_order.cpp  
@@ -193,7 +194,7 @@ virtual dateorder do_date_order() const;
 ### <a name="remarks"></a>설명  
  보호된 가상 구성원 함수는 [do_get_date](#do_get_date)를 통해 날짜 구성 요소 일치를 확인하는 순서를 설명하는 **time_base::dateorder** 형식의 값을 반환합니다. 이 구현에서 값은 1979년 12월 2일 형식의 날짜에 해당하는 **time_base::mdy**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_date_order`를 호출하는 [date_order](#date_order)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_get"></a>  time_get::do_get  
@@ -332,7 +333,7 @@ virtual iter_type do_get_date(iter_type first,
   
  리터럴 공백 및 쉼표는 입력 시퀀스의 해당 요소와 일치해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_get_date`를 호출하는 [get_date](#get_date)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_get_monthname"></a>  time_get::do_get_monthname  
@@ -370,7 +371,7 @@ virtual iter_type do_get_monthname(iter_type first,
   
  월 입력 필드는 1, 1월, 2, 2월 등의 로캘별 시퀀스 집합 중 가장 긴 항목과 일치하는 시퀀스입니다. 변환된 값은 1월 이후 지난 개월 수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_get_monthname`을 호출하는 [get_monthname](#get_monthname)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_get_time"></a>  time_get::do_get_time  
@@ -416,7 +417,7 @@ virtual iter_type do_get_time(iter_type first,
   
  리터럴 콜론은 입력 시퀀스의 해당 요소와 일치해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_get_time`을 호출하는 [get_time](#get_time)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_get_weekday"></a>  time_get::do_get_weekday  
@@ -454,7 +455,7 @@ virtual iter_type do_get_weekday(iter_type first,
   
  요일 입력 필드는 일, 일요일, 월, 월요일 등의 로캘별 시퀀스 집합 중 가장 긴 항목과 일치하는 시퀀스입니다. 변환된 값은 일요일 이후 지난 일 수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_get_weekday`를 호출하는 [get_weekday](#get_weekday)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_get_year"></a>  time_get::do_get_year  
@@ -492,7 +493,7 @@ virtual iter_type do_get_year(iter_type first,
   
  연도 입력 필드는 해당하는 숫자 값이 [1900, 2036) 범위에 있어야 하는 10진수 시퀀스입니다. 이 값에서 1900을 뺀 값이 저장됩니다. 이 구현에서는 [69, 136) 범위의 값이 연도 범위 [1969, 2036)을 나타냅니다. [0, 69) 범위의 값도 사용 가능하지만 이 값은 특정 변환 환경에 따라 연도 범위 [1900, 1969) 또는 [2000, 2069)를 나타낼 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_get_year`를 호출하는 [get_year](#get_year)에 대한 예제를 참조하세요.  
   
 ##  <a name="get"></a>  time_get::get  
@@ -595,7 +596,7 @@ iter_type get_date(iter_type first,
   
  월은 0~11 범위로 계산됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // time_get_get_date.cpp  
@@ -683,7 +684,7 @@ iter_type get_monthname(iter_type first,
 ### <a name="remarks"></a>설명  
  구성원 함수는 [do_get_monthname](#do_get_monthname)( `first`, `last`, `iosbase`, `state`, `ptm`)을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // time_get_get_monthname.cpp  
@@ -771,7 +772,7 @@ iter_type get_time(iter_type first,
 ### <a name="remarks"></a>설명  
  구성원 함수는 [do_get_time](#do_get_time)( `first`, `last`, `iosbase`, `state`, `ptm`)을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // time_get_get_time.cpp  
@@ -848,7 +849,7 @@ iter_type get_weekday(iter_type first,
 ### <a name="remarks"></a>설명  
  구성원 함수는 [do_get_weekday](#do_get_weekday)( `first`, `last`, `iosbase`, `state`, `ptm`)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // time_get_get_weekday.cpp  
@@ -921,7 +922,7 @@ iter_type get_year(iter_type first,
 ### <a name="remarks"></a>설명  
  구성원 함수는 [do_get_year](#do_get_year)( `first`, `last`, `iosbase`, `state`, `ptm`)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // time_get_get_year.cpp  

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a397789958e229363f535ed9b39f83ed928cb6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72c8aca2b90f021771ba9f9fc8a86d784ffe24a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   고정된 수의 스레드 지정
 일부 응용 프로그램 스레드를 제대로 실행할 고정, 미리 지정한 숫자에 의존 합니다.  구현에서 정의 된 스레드 수를 동적으로 조정에 대 한 기본 설정 이기 때문에 이러한 프로그램 동적 스레드 기능을 해제 하 고 명시적으로 이동성을 보장 하는 스레드 수를 설정 하도록 선택할 수 있습니다. 사용 하는 방법을 보여 주는 다음 예제 `omp_set_dynamic` ([섹션 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 페이지 39), 및 `omp_set_num_threads` ([섹션 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) 페이지 36):  

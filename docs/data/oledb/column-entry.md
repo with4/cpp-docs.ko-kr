@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4d398f93e84662ca3101a6fcbaacfeb6b477cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f509ebc6e3e8a050d6b3bd5fb18b999024ec8af1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columnentry"></a>COLUMN_ENTRY
 행 집합의 특정 열에는 행 집합의 바인딩을 나타냅니다.  
@@ -54,7 +57,7 @@ data
   
 -   사이 [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) 및 [END_PARAM_MAP](../../data/oledb/end-param-map.md) 매크로입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  매크로 항목의 예제를 참조 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) 및 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  

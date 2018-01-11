@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3d48ed78b221217fd132592521481922c15c949d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 256f24ad40234db2bbc191a50b0d7e05de39c073
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resultof-class"></a>result_of 클래스
 지정된 인수 유형을 사용하는 호출 가능 형식의 반환 형식을 결정합니다.  

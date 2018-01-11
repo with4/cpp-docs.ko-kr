@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25c116950380ee182d1f59bb65ee1e8a1442181f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79f062a1b1b2e97a37d88ce3ac30d76b5adc43de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="month-calendar-control-examples"></a>MonthCalendar 컨트롤 예
 [CMNCTRL1](../visual-cpp-samples.md) 샘플 응용 프로그램의 다양 한 특성을 보여 줍니다.는 `CMonthCalCtrl` 클래스입니다. 샘플에서 별도의 탭에 있는 컨트롤은 기본 기능을 보여주고 이를 통해 사용자는 동적으로 특정 특성들을 수정할 수 있습니다.  

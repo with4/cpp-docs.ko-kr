@@ -1,66 +1,68 @@
 ---
-title: "nullptr  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nullptr keyword (C++)"
-  - "nullptr keyword [C++]"
+title: "nullptr (c + + 구성 요소 확장명) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- __nullptr keyword (C++)
+- nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# nullptr  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`nullptr` 키워드는 *null 포인터 값*을 나타냅니다.  널 포인터 값을 사용하여 개체 핸들, 내부 포인터 또는 네이티브 포인터가 개체를 가리킵니다.  
+# <a name="nullptr--c-component-extensions"></a>nullptr(C++ 구성 요소 확장)
+`nullptr` 키워드 나타냅니다는 *null 포인터 값*합니다. 개체 핸들, 내부 포인터 또는 원시 포인터 형식 개체를 가리키지 않습니다 나타내기 위해 null 포인터 값을 사용 합니다.  
   
- 관리 코드나 네이티브 코드와 함께  `nullptr`  를 사용합니다.  컴파일러는 적절하게 나타내지만 관리된 혹은 네이티브 null 포인터 값에 대해 다른 지시를 합니다.  이 키워드의 ISO 표준 c \+ \+ 버전을 사용하는 방법에 대한 내용은 [nullptr](../cpp/nullptr.md)를 참조하십시오.  
+ 사용 하 여 `nullptr` 는 관리 코드나 네이티브 코드와 함께 합니다. 컴파일러가 관리 / 네이티브 null 포인터 값에 대 한 적절 한 하지만 서로 다른 지침을 내보냅니다. 이 키워드의 ISO 표준 c + + 버전을 사용 하는 방법에 대 한 정보를 참조 하십시오. [nullptr](../cpp/nullptr.md)합니다.  
   
- `__nullptr` 키워드는 `nullptr`과 동일한 의미를 갖는 Microsoft 고유의 키워드입니다.  네이티브 C\/c \+ \+ 코드와  `nullptr` 을  사용하고나서 [\/clr](../build/reference/clr-common-language-runtime-compilation.md) 컴파일러 옵션으로 컴파일을 하면 컴파일러는   `nullptr` 이 네이티브 또는 관리 되는 null 포인터 값을 가리키는지 여부를 확인할 수 없습니다.  컴파일러에 명령을 지우려면,  `nullptr` 을 사용하여 관리 되는 값을 지정하거나  `__nullptr` 로 기본 값을 지정합니다.  
+ `__nullptr` 키워드는 Microsoft 전용 키워드와 같은 의미 있는 `nullptr`, 하지만 네이티브 코드에만 적용 됩니다. 사용 하는 경우 `nullptr` 네이티브 C/c + +로 코드을 다음으로 컴파일하는 [/clr](../build/reference/clr-common-language-runtime-compilation.md) 컴파일러 옵션을 컴파일러 확인할 수 없습니다 여부 `nullptr` 네이티브 또는 관리 되는 null 포인터 값을 나타냅니다. 컴파일러가 해제 하 여 의도를 사용 하 여 `nullptr` 관리 되는 값을 지정 하려면 또는 `__nullptr` 네이티브 값을 지정 합니다.  
   
- `nullptr` 는 Visual Basic `Nothing`와 C\#의 `null`에  keyword키워드에 해당합니다.  
+ `nullptr` 키워드에 해당 하는 `Nothing` Visual basic에서 및 `null` C#입니다.  
   
-## 용도  
- `nullptr` 키워드는 핸들, 네이티브 포인터 또는 함수 인수로 어디든지 사용할 수 있습니다.  
+## <a name="usage"></a>용도  
+ `nullptr` 핸들, 네이티브 포인터 또는 함수 인수로 사용할 수 원격 키워드를 사용할 수 있습니다.  
   
- `nullptr`  키워드는 형식이 아니므로 사용할 수 없습니다.  
+ `nullptr` 키워드 형식이 며 사용 하도록 지원 되지 않습니다.  
   
 -   [sizeof](../cpp/sizeof-operator.md)  
   
 -   [typeid](../cpp/typeid-operator.md)  
   
--   `throw nullptr`\(하지만  `throw (Object^)nullptr;` 는 작동합니다\)  
+-   `throw nullptr`(하지만 `throw (Object^)nullptr;` 작동)  
   
- `nullptr` 키워드는 다음 포인터 형식 초기화에서 사용할 수 있습니다.  
+ `nullptr` 다음 포인터 형식의 초기화에서 키워드를 사용할 수 있습니다.  
   
 -   네이티브 포인터입니다.  
   
 -   Windows 런타임 핸들  
   
--   관리되는 핸들  
+-   관리 되는 핸들  
   
--   관리되는 내부 포인터  
+-   관리 되는 내부 포인터  
   
- `nullptr`  키워드는 포인터 또는 핸들 참조가 null 참조를 사용하기 전에 테스트에 사용할 수 있습니다.  
+ `nullptr` 포인터 또는 핸들 참조는 참조를 사용 하기 전에 null 여부를 테스트 하는 키워드를 사용할 수 있습니다.  
   
- 함수는 올바르게 해석하는지 체크하는 오류검사에 대한 null 포인터 값을 사용하는 언어 중에서 호출합니다.  
+ 오류 검사에 대 한 null 포인터 값을 사용 하는 언어 마다 함수 호출이 올바르게 해석 됩니다.  
   
- 핸들을 0로 초기화할 수 없습니다. 오직  `nullptr` 만 사용할 수 있습니다.  개체 핸들 상수 0을 할당은 박스형  `Int32` 을 생성하고  `Object^` 으로 변환합니다.  
+ 0;에 대 한 핸들을 초기화할 수 없습니다. 만 `nullptr` 사용할 수 있습니다. 상수 0 개체 핸들을 할당 한 boxed 생성 `Int32` 및 캐스트를 `Object^`합니다.  
   
-## 예제  
- 다음 코드 예제는  `nullptr` 키워드가 핸들을 네이티브 포인터 위치에 관계 없이 사용되거나 함수 인수로 사용할 수 있음을 보여줍니다.  그리고 예제는  `nullptr` 키워드를 사용하여 사용하기 전에 참조를 확인할 수 있음을 보여줍니다.  
+## <a name="example"></a>예  
+ 다음 코드 예제에서는 것을 보여 줍니다는 `nullptr` 때마다 네이티브 포인터, 핸들에 키워드를 사용할 수 있습니다 또는 함수 인수를 사용할 수 있습니다. 이 예제를 보여 줍니다는 `nullptr` 사용 하기 전에 대 한 참조를 확인 하는 키워드를 사용할 수 있습니다.  
   
 ```  
 // mcpp_nullptr.cpp  
@@ -87,10 +89,10 @@ int main() {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예  
  **예제**  
   
- 다음 코드 예제에서는  `nullptr`  및 네이티브 포인터에 0을 교대로 사용할 수 있음을 보여줍니다.  
+ 다음 코드 예제에서는 `nullptr` 0 네이티브 포인터에 대 한 서로 바꿔 사용할 수 있습니다.  
   
 ```  
 // mcpp_nullptr_1.cpp  
@@ -117,16 +119,22 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **pMyClass \=\= nullptr**  
- **pMyClass \=\= 0**  
- **pMyClass \=\= nullptr**  
- **pMyClass \=\= 0**   
-## 예제  
+```Output  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+```  
+  
+## <a name="example"></a>예  
  **예제**  
   
- 다음 코드 예제에서는  `nullptr` 가 모든 종류에 대한 핸들 또는 네이티브 포인터 형식으로 해석되는 것을 보여줍니다.  다양한 종류에 대한 핸들을 사용하여 함수 오버 로드를 발생하는 경우 모호성 오류가 생성됩니다.   `nullptr` 은 명시적으로 캐스팅해야 합니다.  
+ 다음 코드 예제에서는 `nullptr` 모든 형식에 대 한 핸들 또는 네이티브 포인터 형식으로 해석 됩니다. 다른 형식에 대 한 핸들을 사용한 함수 오버 로드의 경우 모호성 오류가 생성 됩니다. `nullptr` 형식으로 명시적으로 캐스팅 해야 합니다.  
   
 ```  
 // mcpp_nullptr_2.cpp  
@@ -142,10 +150,10 @@ void f_null() {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예  
  **예제**  
   
- 다음 코드 예제에서는  `nullptr`  캐스팅이 허용되며  `nullptr`  값을 포함하는 캐스트 형식으로 포인터나 핸들을 반환하는 것을 보여줍니다.  
+ 다음 코드 예제에서는 해당 캐스팅을 보여 줍니다. `nullptr` 수 있으며 포함 된 캐스트 형식에 대 한 포인터 또는 핸들 반환는 `nullptr` 값입니다.  
   
 ```  
 // mcpp_nullptr_3.cpp  
@@ -164,10 +172,10 @@ int main() {
 }  
 ```  
   
-## 예제  
+## <a name="example"></a>예  
  **예제**  
   
- 다음 코드 예제에서는  `nullptr` 가 함수 매개 변수로 사용될 수 있음을 보여줍니다.  
+ 다음 코드 예제에서는 `nullptr` 함수 매개 변수로 사용할 수 있습니다.  
   
 ```  
 // mcpp_nullptr_4.cpp  
@@ -182,13 +190,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **테스트**   
-## 예제  
+```Output  
+test  
+```  
+  
+## <a name="example"></a>예  
  **예제**  
   
- 다음 코드 예제에서는 핸들은 선언되고 명시적으로 초기화 하는 경우,  `nullptr` 로 기본적으로 초기화되는 것을 보여줍니다.  
+ 다음 코드 예제에서는 핸들은 선언 되 고 명시적으로 초기화 하는 경우는 기본적으로 초기화를 보여 줍니다. `nullptr`합니다.  
   
 ```  
 // mcpp_nullptr_5.cpp  
@@ -209,13 +220,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **NULL**   
-## 예제  
+```Output  
+NULL  
+```  
+  
+## <a name="example"></a>예  
  **예제**  
   
- 다음 코드 예제에서는  `nullptr` 가  **\/clr** 을 사용하여 컴파일할 때 네이티브 포인터에 할당할 수 있음을 보여줍니다.  
+ 다음 코드 예제에서는 `nullptr` 사용 하 여 컴파일하면 네이티브 포인터에 할당할 수 **/clr**합니다.  
   
 ```  
 // mcpp_nullptr_6.cpp  
@@ -226,9 +240,9 @@ int main() {
 }  
 ```  
   
-## 요구 사항  
- 컴파일러 옵션: \(불필요;  **\/ZW**  및  **\/clr**  을 포함한 모든 코드 생성 옵션의 지원\)  
+## <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: (하지 필요 합니다; 모든 코드 생성 옵션을 포함 하 여에서 지 원하는 **/ZW** 및 **/clr**)  
   
-## 참고 항목  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
+## <a name="see-also"></a>참고 항목  
+ [런타임 플랫폼의 구성 요소 확장명](../windows/component-extensions-for-runtime-platforms.md)   
  [nullptr](../cpp/nullptr.md)

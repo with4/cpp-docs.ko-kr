@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b96edfdabeaf4ae31f4eaabb334f56bf29c99c70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e68097d234519cdea75875d355ef798672ad4b22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-build-error-prj0034"></a>프로젝트 빌드 오류 PRJ0034
 프로젝트 수준의 사용자 지정에 대 한 ' 추가 종속성 ' 속성이 'macro_expansion'으로 계산 되는 포함 된 단계 '매크로를' 빌드합니다.  

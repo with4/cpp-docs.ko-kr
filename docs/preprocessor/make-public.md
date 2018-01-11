@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e4e6f96c1b794c71cf6f3ce97600583e88d52b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b28c6cd71e8d8ac1165ff6e3afe95ab1f6d4de0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makepublic"></a>make_public
 네이티브 형식이 공용 어셈블리 액세스 가능성을 갖도록 지정합니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   
 네이티브 형식으로 암시적 또는 명시적으로 개인; 수 있습니다. 참조 [형식 표시 유형](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 샘플은 두 네이티브 구조체에 대한 정의가 포함된 .h 파일의 내용입니다.  
   
 ```cpp  
@@ -53,7 +54,7 @@ struct Native_Struct_1 { int i; };
 struct Native_Struct_2 { int i; };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 코드 샘플에서는 헤더 파일을 사용하며, `make_public`을 사용하여 네이티브 구조체를 명시적으로 public으로 표시하지 않는 경우 공용 관리되는 형식의 공용 함수 시그니처에서 네이티브 구조체를 사용하려고 하면 컴파일러에서 경고를 생성하는 것을 보여 줍니다.  
   
 ```cpp  

@@ -30,11 +30,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 35299f80b85432286859ed76afdd7a599809f67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c371b6805616ff0b114be24bb291469eae2dd26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 클래스
 개별적으로 인덱스에 의해 액세스될 수 있는 개체의 순차적인 컬렉션을 나타냅니다.  
@@ -51,7 +52,7 @@ template <typename T, typename E>
  Vector 개체에 포함된 요소의 형식입니다.  
   
  `E`  
- `T`형식의 값을 사용하여 같음을 테스트하기 위한 이진 조건자를 지정합니다. 기본값은 `std::equal_to<T>`입니다.  
+ `T` 형식의 값을 사용하여 같음을 테스트하기 위한 이진 조건자를 지정합니다. 기본값은 `std::equal_to<T>`입니다.  
   
 ### <a name="remarks"></a>설명  
  허용되는 형식은 다음과 같습니다.  
@@ -100,7 +101,7 @@ template <typename T, typename E>
   
 |||  
 |-|-|  
-|이름|설명|  
+|name|설명|  
 |이벤트 [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Vector가 변경될 때 발생합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  

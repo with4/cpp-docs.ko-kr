@@ -85,11 +85,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 031a26d0b7b461c64bd111d26811ccf4031694c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04dcf7628e45d4c43ffbd5bbcd85132092ca04a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 클래스
 `CMFCColorBar` 문서 또는 응용 프로그램에서 색을 선택할 수 있는 도킹 컨트롤 막대 클래스를 나타냅니다.  
@@ -130,7 +131,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |[CMFCColorBar::SetHorzMargin](#sethorzmargin)|가로 여백, 왼쪽 또는 오른쪽 색 셀 창과 클라이언트 영역 경계에서 간격을 설정 합니다.|  
 |[CMFCColorBar::SetVertMargin](#setvertmargin)|위쪽 또는 아래쪽 색 셀과 클라이언트 영역 경계 사이의 공간이 세로 여백을 설정 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -153,7 +154,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |`m_bInternal`|마우스 이벤트 처리 되는지 여부를 결정 하는 부울 필드입니다. 이 필드를이 때 마우스 이벤트를 처리 하는 일반적으로 `TRUE` 사용자 지정 모드는 `FALSE`합니다.|  
 |`m_bIsEnabled`|컨트롤 사용 여부를 나타내는 부울 값입니다.|  
@@ -208,7 +209,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
  프레임 워크를 사용 하는 사용자가 색 막대 컨트롤 단추를 클릭 하면는 `ON_COMMAND` 색 막대 컨트롤의 부모에 알리기 위해 매크로입니다. 매크로의 명령 ID 매개 변수는 값 1 (이 예제의 ID_CHAR_COLOR) 단계에서 색 막대 컨트롤 단추에 지정 된입니다. 자세한 내용은 참조는 [CMFCColorMenuButton 클래스](../../mfc/reference/cmfccolormenubutton-class.md), [CMFCColorButton 클래스](../../mfc/reference/cmfccolorbutton-class.md), [CMFCColorPickerCtrl 클래스](../../mfc/reference/cmfccolorpickerctrl-class.md), [CFrameWndEx클래스](../../mfc/reference/cframewndex-class.md), 및 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md) 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 색 막대에서 다양 한 메서드를 사용 하 여 구성 하는 방법의 `CMFCColorBar` 클래스입니다. 메서드 가로 및 세로 여백을 설정, 다른 단추를 사용 하도록 설정, 색 막대 컨트롤 창을 만들 및 현재 선택 된 색을 설정 합니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]  

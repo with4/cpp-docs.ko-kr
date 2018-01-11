@@ -1,62 +1,64 @@
 ---
-title: "utility(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/utility>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/utility> 헤더[STL/CLR]"
-  - "<utility> 헤더[STL/CLR]"
-  - "utility 헤더[STL/CLR]"
+title: "유틸리티 (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/utility>
+dev_langs: C++
+helpviewer_keywords:
+- <utility> header [STL/CLR]
+- utility header [STL/CLR]
+- <cliext/utility> header [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3876ee887cfeec811d88684927ea9a03af1a8f1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# utility(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Include the STL\/CLR header `<cliext/utility>` to define the template class `pair` and several supporting template functions.  
+# <a name="utility-stlclr"></a>utility(STL/CLR)
+STL/CLR 헤더를 포함 `<cliext/utility>` 템플릿 클래스를 정의 하려면 `pair` 및 여러 개의 지원 템플릿 함수입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 #include <utility>  
 ```  
   
-## 선언  
+## <a name="declarations"></a>선언  
   
 |클래스|설명|  
-|---------|--------|  
-|[pair](../dotnet/pair-stl-clr.md)|Wrap a pair of elements.|  
+|-----------|-----------------|  
+|[pair(STL/CLR)](../dotnet/pair-stl-clr.md)|요소 쌍을 래핑하십시오.|  
   
 |연산자|설명|  
-|---------|--------|  
-|[operator\=\= \(pair\)](../dotnet/operator-equality-pair-stl-clr.md)|Pair equal comparison.|  
-|[operator\!\= \(pair\)](../dotnet/operator-inequality-pair-stl-clr.md)|Pair not equal comparison.|  
-|[operator\< \(pair\)](../dotnet/operator-less-than-pair-stl-clr.md)|Pair less than comparison.|  
-|[operator\<\= \(pair\)](../dotnet/operator-less-or-equal-pair-stl-clr.md)|Pair less than or equal comparison.|  
-|[operator\> \(pair\)](../dotnet/operator-greater-than-pair-stl-clr.md)|Pair greater than comparison.|  
-|[operator\>\= \(pair\)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|Pair greater than or equal comparison.|  
+|--------------|-----------------|  
+|[operator== (pair)(STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)|쌍 같은지 비교 합니다.|  
+|[operator!= (pair)(STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)|같지 않음 비교와 쌍으로 연결 합니다.|  
+|[operator< (pair)(STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)|쌍 비교를 보다 작음입니다.|  
+|[연산자\<= (pair) (STL/CLR)](../dotnet/operator-less-or-equal-pair-stl-clr.md)|보다 작거나 같은 쌍으로 연결 비교 합니다.|  
+|[operator> (pair)(STL/CLR)](../dotnet/operator-greater-than-pair-stl-clr.md)|비교에 보다 큰 쌍입니다.|  
+|[operator>= (pair)(STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|보다 큰 쌍 또는 같은지 비교 합니다.|  
   
-|Function|설명|  
-|--------------|--------|  
-|[make\_pair](../dotnet/make-pair-stl-clr.md)|Make a pair from a pair of values.|  
+|함수|설명|  
+|--------------|-----------------|  
+|[make_pair(STL/CLR)](../dotnet/make-pair-stl-clr.md)|한 쌍의 값에서 쌍을 확인 합니다.|  
   
-## 요구 사항  
- **Header:** \<cliext\/utility\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/유틸리티 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [STL\/CLR 라이브러리](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [STL/CLR 라이브러리 참조](../dotnet/stl-clr-library-reference.md)

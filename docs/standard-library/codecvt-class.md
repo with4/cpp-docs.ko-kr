@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 290b48c5417aa5511b34f2e4ec2e0d4b7358b026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36631c1a23c90b875d2a2fba8a1cec23b97c2400
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvt-class"></a>codecvt 클래스
 로캘 패싯으로 사용할 수 있는 개체를 설명하는 템플릿 클래스입니다. 프로그램 내의 문자를 인코딩하는 데 사용하는 값의 시퀀스와 프로그램 밖의 문자를 인코딩하는 데 사용하는 값 사이의 변환을 제어할 수 있습니다.  
@@ -112,7 +113,7 @@ class codecvt : public locale::facet, codecvt_base;
 |-|-|  
 |[codecvt](#codecvt)|변환을 처리할 로캘 패싯으로 사용할 `codecvt` 클래스 개체의 생성자입니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -157,7 +158,7 @@ bool always_noconv() const throw();
 ### <a name="remarks"></a>설명  
  멤버 함수는 [do_always_noconv](#do_always_noconv)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // codecvt_always_noconv.cpp  
@@ -226,7 +227,7 @@ virtual bool do_always_noconv() const throw();
   
  템플릿 버전은 항상 **true**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_always_noconv`를 호출하는 [always_noconv](#always_noconv)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_encoding"></a>  codecvt::do_encoding  
@@ -245,7 +246,7 @@ virtual int do_encoding() const throw();
   
 - *N*: 인코딩에 *N* 길이의 시퀀스만 포함된 경우  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_encoding`을 호출하는 [encoding](#encoding)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_in"></a>  codecvt::do_in  
@@ -298,7 +299,7 @@ virtual result do_in(
 ### <a name="remarks"></a>설명  
  `_State`는 새 소스 시퀀스의 시작 부분에 있는 초기 변환 상태를 나타내야 합니다. 함수는 성공적인 변환의 현재 상태를 반영하기 위해 필요에 따라 해당 저장 값을 변경합니다. 저장 값은 달리 지정되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_in`을 호출하는 [in](#in)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_length"></a>  codecvt::do_length  
@@ -335,7 +336,7 @@ virtual int do_length(
   
  서식 파일 버전은 항상 중에서 가장 작은 반환 `last1`  -  `first1` 및 `_Len2`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **do_length**를 호출하는 [length](#length)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_max_length"></a>  codecvt::do_max_length  
@@ -351,7 +352,7 @@ virtual int do_max_length() const throw();
 ### <a name="remarks"></a>설명  
  보호된 가상 멤버 함수가 `first1` 및 `last1`의 유효한 임의 값에 대해 [do_length](#do_length)(`first1`, `last1`, 1)로 반환할 수 있는 가장 큰 허용 가능 값을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_max_length`를 호출하는 [max_length](#max_length)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_out"></a>  codecvt::do_out  
@@ -404,7 +405,7 @@ virtual result do_out(
 ### <a name="remarks"></a>설명  
  `_State`는 새 소스 시퀀스의 시작 부분에 있는 초기 변환 상태를 나타내야 합니다. 함수는 성공적인 변환의 현재 상태를 반영하기 위해 필요에 따라 해당 저장 값을 변경합니다. 저장 값은 달리 지정되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_out`을 호출하는 [out](#out)에 대한 예제를 참조하세요.  
   
 ##  <a name="do_unshift"></a>  codecvt::do_unshift  
@@ -447,7 +448,7 @@ virtual result do_unshift(
   
  _*State*는 새 소스 시퀀스의 시작 부분에 있는 초기 변환 상태를 나타내야 합니다. 함수는 성공적인 변환의 현재 상태를 반영하기 위해 필요에 따라 해당 저장 값을 변경합니다. 일반적으로 소스 요소 **CharType**(0)을 변환하면 현재 상태가 초기 변환 상태로 유지됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `do_unshift`를 호출하는 [unshift](#unshift)에 대한 예제를 참조하세요.  
   
 ##  <a name="encoding"></a>  codecvt::encoding  
@@ -471,7 +472,7 @@ int encoding() const throw();
 ### <a name="remarks"></a>설명  
  멤버 함수는 [do_encoding](#do_encoding)을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // codecvt_encoding.cpp  
@@ -560,7 +561,7 @@ result in(
   
  멤버 함수가 [do_in](#do_in)(`_State`, _ *First1,  last1,  next1, First2, _Llast2,  next2*)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // codecvt_in.cpp  
@@ -637,7 +638,7 @@ int length(
 ### <a name="remarks"></a>설명  
  멤버 함수가 [do_length](#do_length)(*_State,  first1*, `last1`, `_Len2`)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // codecvt_length.cpp  
@@ -679,7 +680,7 @@ int max_length() const throw();
 ### <a name="remarks"></a>설명  
  멤버 함수는 [do_max_length](#do_max_length)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // codecvt_max_length.cpp  
@@ -744,7 +745,7 @@ result out(
 ### <a name="remarks"></a>설명  
  자세한 내용은 [codecvt::do_out](#do_out)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // codecvt_out.cpp  

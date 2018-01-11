@@ -19,7 +19,7 @@ f1_keywords:
 - iomanip/std::setprecision
 - iomanip/std::setw
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
 helpviewer_keywords:
 - std::get_money [C++]
@@ -33,12 +33,11 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 8ea88bd5f1400eab0fe3cdbf09321e152412e1e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 함수
 ||||  
@@ -150,7 +149,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 ### <a name="remarks"></a>설명  
  [삽입 연산자 사용 및 형식 제어](../standard-library/using-insertion-operators-and-controlling-format.md)를 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   이 예제에서는 좁은 문자열을 사용하여 기본 구분 기호 및 이스케이프 문자와 함께 `quoted`를 사용하는 방법을 보여 줍니다. 와이드 문자열도 동일하게 지원됩니다.  
   
 ```cpp  
@@ -206,7 +205,7 @@ Press Enter to exit
 */  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 예제에서는 사용자 지정 구분 기호 및/또는 이스케이프 문자를 제공하는 방법을 보여 줍니다.  
   
 ```cpp  
@@ -304,7 +303,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 ### <a name="return-value"></a>반환 값  
  조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `resetiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
 ##  <a name="setbase"></a>  setbase  
@@ -329,7 +328,7 @@ T3 setbase(int _Base);
   
 -   _ *Base*가 다른 모든 값이면 mask는 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0)입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `setbase` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
 ##  <a name="setfill"></a>  setfill  
@@ -347,7 +346,7 @@ T4 setfill(Elem Ch);
 ### <a name="return-value"></a>반환 값  
  템플릿 조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`)을 호출하는 개체를 반환한 다음 **str**을 반환합니다. **Elem** 형식은 **str** 스트림에 대한 요소 형식과 동일해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `setfill` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
 ##  <a name="setiosflags"></a>  setiosflags  
@@ -364,7 +363,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
 ### <a name="return-value"></a>반환 값  
  조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*)를 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `setiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
 ##  <a name="setprecision"></a>  setprecision  
@@ -381,7 +380,7 @@ T5 setprecision(streamsize Prec);
 ### <a name="return-value"></a>반환 값  
  조작자는 **str** 스트림에서 추출되거나 이 스트림에 삽입될 경우 **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`)을 호출하는 개체를 반환한 다음 **str**을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `setprecision` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.  
   
 ##  <a name="setw"></a>  setw  
@@ -401,7 +400,7 @@ T6 setw(streamsize Wide);
 ### <a name="remarks"></a>설명  
  setw는 스트림에서 다음 요소에 대한 너비만 설정하며 너비를 지정하려는 각 요소 앞에 삽입되어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // iomanip_setw.cpp   
@@ -618,5 +617,4 @@ l5 = 65536
   
 ## <a name="see-also"></a>참고 항목  
  [\<iomanip>](../standard-library/iomanip.md)
-
 

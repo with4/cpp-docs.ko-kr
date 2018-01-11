@@ -13,14 +13,17 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d43aa6d82f44965e8defda2af3e6455e86cba38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2a49fba82867650a80f45de3c6301405f96b5c47
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>DeferrableEventArgs::GetDeferral 메서드
-에 대 한 참조는 [Deferral](http://go.microsoft.com/fwlink/?LinkId=526520) 지연된 된 이벤트를 나타내는 개체입니다.  
+에 대 한 참조는 [Deferral](http://go.microsoft.com/fwlink/p/?linkid=526520) 지연된 된 이벤트를 나타내는 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,7 +33,7 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
   
 #### <a name="parameters"></a>매개 변수  
  `result`  
- 참조 하는 포인터는 [Deferral](http://go.microsoft.com/fwlink/?LinkId=526520) 호출이 완료 되 면 개체입니다.  
+ 참조 하는 포인터는 [Deferral](http://go.microsoft.com/fwlink/p/?linkid=526520) 호출이 완료 되 면 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dac551353180a823ffff00f8db82d6ec3dde4dd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cc5ca9fa0deda974f4e64827b129904041b9286
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isobject-class"></a>is_object 클래스
 형식이 개체 형식인지 테스트합니다.  
@@ -40,7 +41,7 @@ struct is_object;
 ## <a name="remarks"></a>설명  
  형식 조건자의 인스턴스는 형식 `Ty`가 참조 형식, 함수 형식 또는 void이거나 이들 중 하나에 대한 `cv-qualified` 형식인 경우 false이고, 그렇지 않으면 true입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // std__type_traits__is_object.cpp   

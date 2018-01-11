@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5e07ce23d2c6416cc98bc2996dbe52d88d3a1cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6196cb6bb2e86f39bb738e32c013c4408447e859
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicalor-struct"></a>logical_or 구조체
 인수에 대해 논리합 연산(`operator||`)을 수행하는 미리 정의된 함수 개체입니다.  
@@ -61,7 +62,7 @@ struct logical_or<void>
 ## <a name="remarks"></a>설명  
  사용자 정의 형식의 경우 피연산자 평가의 단락(short-circuiting)이 없습니다. 두 인수 모두 `operator||`로 평가됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // functional_logical_or.cpp  

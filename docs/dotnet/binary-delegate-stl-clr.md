@@ -1,32 +1,33 @@
 ---
-title: "binary_delegate(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_delegate 함수[STL/CLR]"
+title: binary_delegate (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_delegate
+dev_langs: C++
+helpviewer_keywords: binary_delegate function [STL/CLR]
 ms.assetid: 52a9291a-e354-4b9e-a035-78dac1179ec5
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 178aad61a49740e9194014b5e63e0e9dcbdfff78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# binary_delegate(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The genereic class describes a two\-argument delegate.  You use it specify a delegate in terms of its argument and return types.  
+# <a name="binarydelegate-stlclr"></a>binary_delegate(STL/CLR)
+Genereic 클래스는 두 인수 대리자를 설명합니다. 사용 하면 대리자를 해당 인수 및 반환 형식으로 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 generic<typename Arg1,  
@@ -35,34 +36,34 @@ generic<typename Arg1,
     delegate Result binary_delegate(Arg1, Arg2);  
 ```  
   
-#### 매개 변수  
- Arg1  
- The type of the first argument.  
+#### <a name="parameters"></a>매개 변수  
+ arg1  
+ 첫 번째 인수의 형식입니다.  
   
- Arg2  
- The type of the second argument.  
+ arg2  
+ 두 번째 인수의 형식입니다.  
   
  결과  
  반환 형식입니다.  
   
-## 설명  
- The genereic delegate describes a two\-argument function.  
+## <a name="remarks"></a>설명  
+ Genereic 대리자는 두 인수 함수를 설명합니다.  
   
- Note that for:  
+ 에 대 한는 note:  
   
  `binary_delegate<int, int, int> Fun1;`  
   
  `binary_delegate<int, int, int> Fun2;`  
   
- the types `Fun1` and `Fun2` are synonyms, while for:  
+ 형식을 `Fun1` 및 `Fun2` 은 동의어 이며에 대 한 동안:  
   
  `delegate int Fun1(int, int);`  
   
  `delegate int Fun2(int, int);`  
   
- they are not the same type.  
+ 형식이 같은 하지 않습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_binary_delegate.cpp   
@@ -91,15 +92,18 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**   
-## 요구 사항  
- **Header:** \<cliext\/functional\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)   
+ [unary_delegate_noreturn(STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

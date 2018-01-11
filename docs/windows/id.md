@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9110bfe44ea1ffe373ab5e3ed5d4aa3e06c2574
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9225a87f32c3c7bf42ca5fc7de98dd0ab8f12639
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="id"></a>ID
 지정 된 `dispid` 멤버 함수 (속성 또는 메서드를 인터페이스 또는 dispinterface)에 대 한 매개 변수입니다.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  **id** c + + 특성에 동일한 기능을는 [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  예를 참조 [바인딩 가능한](../windows/bindable.md) 사용 하는 방법의 예 **id**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

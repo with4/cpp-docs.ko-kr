@@ -1,31 +1,27 @@
 ---
 title: "링커 도구 경고 LNK4206 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4206"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4206"
+ms.date: 12/05/2017
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4206
+dev_langs: C++
+helpviewer_keywords: LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cd13ac59aefa074db869f0502743c7a49d23082c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 링커 도구 경고 LNK4206
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="linker-tools-warning-lnk4206"></a>링커 도구 경고 LNK4206
 
-미리 컴파일된 형식 정보를 찾을 수 없습니다. 'filename'이\(가\) 링크되지 않았거나 덮어쓰여졌습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.  
-  
- [\/Yc](../../build/reference/yc-create-precompiled-header-file.md)로 컴파일한 지정된 개체 파일이 LINK 명령에 지정되지 않았거나 덮어쓰여졌습니다.  
-  
- 이 경고가 발생하는 일반적인 시나리오로는 \/Yc를 사용하여 컴파일한 .obj가 라이브러리에 있지만 이 .obj에 대한 기호 참조가 코드에 없는 경우를 들 수 있습니다.  이 경우 링커는 .obj 파일을 사용하거나 확인하지 않습니다.  이러한 상황에서는 코드를 다시 컴파일하고 나머지 개체\(\/Yc를 사용하여 컴파일하지 않은 개체\)에 대해 [\/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md)을 사용해야 합니다.
+> 미리 컴파일된 형식 정보를 찾을 수 없습니다. '*filename*' 링크 되지 않았거나 덮어쓴; 디버그 정보가 없는 것 처럼 개체를 링크 합니다.
+
+*filename* 개체 파일을 사용 하 여 컴파일된 [/Yc](../../build/reference/yc-create-precompiled-header-file.md), LINK 명령에 지정 되지 않았거나 덮어 쓰여졌습니다.
+
+이 경고에 대 한 일반적인 시나리오에는 라이브러리에는 /Yc로 컴파일된.obj 및.obj 사용자 코드에서 기호 참조가 많이 있는입니다.  이 경우 링커는 또는 사용 하지 (그 역시 볼).obj 파일입니다.  이 경우 코드를 다시 컴파일하거나 하 고 사용 해야 [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) 사용 하 여 컴파일된 개체에 대 한 [/Yu](../../build/reference/yu-use-precompiled-header-file.md)합니다.

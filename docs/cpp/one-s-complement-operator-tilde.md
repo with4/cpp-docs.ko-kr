@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb63adc5d776bec488661ea3e575c8693ea1b728
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 635a3e3b2d270d2164adc3f25a260085d7c50d60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="one39s-complement-operator-"></a>하나 &#39; s 보수 연산자: ~
 ## <a name="syntax"></a>구문  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="operator-keyword-for-"></a>~에 대한 연산자 키워드  
  `compl` 연산자는 `~`에 해당하는 텍스트입니다. 두 가지 방법으로 액세스 하는 `compl` 를 프로그램에서 연산자: 헤더 파일을 포함 `iso646.h`, 사용 하 여 컴파일 또는 [/Za](../build/reference/za-ze-disable-language-extensions.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // expre_One_Complement_Operator.cpp  

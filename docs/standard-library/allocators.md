@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 74e453298857b94c2c4eb62c5387d4e727f7bb7c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eb2c193fd12578e69abef2db555ebbc4fa061e1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocators"></a>Allocators
 할당자는 C++ 표준 라이브러리에서 컨테이너에 저장된 요소의 할당 및 할당 취소를 처리하는 데 사용됩니다. std::array를 제외한 모든 C++ 표준 라이브러리 컨테이너에는 `allocator<Type>` 형식의 템플릿 매개 변수가 있습니다. 여기서 `Type`은 컨테이너 요소의 형식을 나타냅니다. 예를 들어 vector 클래스는 다음과 같이 선언됩니다.  
@@ -50,7 +34,7 @@ template <
 class vector  
 ```  
   
- C++ 표준 라이브러리에서는 할당자에 대한 기본 구현을 제공합니다. C++11 이상에서 기본 할당자는 더 작은 인터페이스를 표시하도록 업데이트되고 새 할당자를 *최소 할당자*라고 합니다. 특히 최소 할당자의 `construct()` 멤버는 성능을 크게 향상할 수 있는 이동 의미 체계를 지원합니다. 대부분 이 기본 할당자로 충분해야 합니다. C++&11;에서 할당자 형식 매개 변수를 사용하는 모든 표준 라이브러리 형식 및 함수는 `std::function`, `shared_ptr, allocate_shared()` 및 `basic_string`을 포함한 최소 할당자 인터페이스를 지원합니다.  기본 할당자에 대한 자세한 내용은 [allocator 클래스](../standard-library/allocator-class.md)를 참조하세요.  
+ C++ 표준 라이브러리에서는 할당자에 대한 기본 구현을 제공합니다. C++11 이상에서 기본 할당자는 더 작은 인터페이스를 표시하도록 업데이트되고 새 할당자를 *최소 할당자*라고 합니다. 특히 최소 할당자의 `construct()` 멤버는 성능을 크게 향상할 수 있는 이동 의미 체계를 지원합니다. 대부분 이 기본 할당자로 충분해야 합니다. C++ 11에서 할당자 형식 매개 변수를 사용하는 모든 표준 라이브러리 형식 및 함수는 `std::function`, `shared_ptr, allocate_shared()` 및 `basic_string`을 포함한 최소 할당자 인터페이스를 지원합니다.  기본 할당자에 대한 자세한 내용은 [allocator 클래스](../standard-library/allocator-class.md)를 참조하세요.  
   
 ## <a name="writing-your-own-allocator-c11"></a>고유한 할당자 작성(C++11)  
  기본 할당자는 `new` 및 `delete`를 사용하여 메모리를 할당 및 할당 해제합니다. 공유 메모리를 사용하는 등의 다른 메모리 할당 방법을 사용하려면 고유한 할당자를 만들어야 합니다. C++11을 대상으로 지정하고 새 사용자 지정 할당자를 작성해야 할 경우 가능하면 최소 할당자로 설정하세요. 이전 스타일 할당자를 이미 구현했더라도 자동으로 제공되는 더 효율적인 `construct()` 메서드를 사용하기 위해 이전 스타일 할당자를 *최소 할당자*로 수정하는 것이 좋습니다.  
@@ -72,7 +56,7 @@ class vector
 > [!WARNING]
 >  컴파일 시간에 C++ 표준 라이브러리에서는 allocator_traits 클래스를 사용하여 명시적으로 제공한 멤버를 감지하고 존재하지 않는 모든 멤버에 대한 기본 구현을 제공합니다. 할당자에 대한 allocator_traits의 특수화를 제공하여 이 메커니즘을 방해하지 마세요.  
   
- 다음 예제에서는 `malloc` 및 `free`를 사용하는 할당자의 최소 구현을 보여 줍니다. 배열 크기가&0;보다 작거나 최대 허용 크기보다 클 경우 throw되는 새 예외 형식 `std::bad_array_new_length`의 사용에 주의하세요.  
+ 다음 예제에서는 `malloc` 및 `free`를 사용하는 할당자의 최소 구현을 보여 줍니다. 배열 크기가 0보다 작거나 최대 허용 크기보다 클 경우 throw되는 새 예외 형식 `std::bad_array_new_length`의 사용에 주의하세요.  
   
 ```  
 #pragma once  
@@ -123,7 +107,7 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 ```  
   
 ## <a name="writing-your-own-allocator-c03"></a>고유한 할당자 작성(C++03)  
- C++&03;에서 C++ 표준 라이브러리 컨테이너와 함께 사용된 모든 할당자는 다음 형식 정의를 구현해야 합니다.  
+ C++ 03에서 C++ 표준 라이브러리 컨테이너와 함께 사용된 모든 할당자는 다음 형식 정의를 구현해야 합니다.  
   
 |||  
 |-|-|  
@@ -147,7 +131,6 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -73,11 +73,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf80d43179c0b7e5de52aeb2db46ac17b7df2763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35ede62ddb5fcfbc32fec37322985d40fffbbe44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 클래스
 `CDataRecoveryHandler` 문서화 하 고 응용 프로그램이 예기치 않게 종료 하는 경우 복원 하는 자동으로 저장 합니다.  

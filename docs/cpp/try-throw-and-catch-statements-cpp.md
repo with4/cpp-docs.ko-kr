@@ -30,11 +30,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 747ee64a701250c83b3b0401a5fbb3d82496a99e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b100f1ee61b06639e75290fafd01dca6a10a820c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Try, Throw 및 Catch 문(C++)
 C++에서 예외 처리를 구현하려면 `try`, `throw` 및 `catch` 식을 사용합니다.  
@@ -47,7 +48,7 @@ C++에서 예외 처리를 구현하려면 `try`, `throw` 및 `catch` 식을 사
   
  이 예제에서는 `try` 블록과 해당 처리기를 보여 줍니다. `GetNetworkResource()`가 네트워크 연결을 통해 데이터를 받고 두 개의 예외 형식은 `std::exception`에서 파생된 사용자 정의 클래스라고 가정합니다. 예외는 `const` 문의 `catch` 참조를 통해 catch됩니다. 값으로 예외를 throw하고 상수 참조로 catch하는 것이 좋습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
   

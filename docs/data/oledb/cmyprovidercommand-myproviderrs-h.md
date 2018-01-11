@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68846352d3e6b407a4ec7ef6b7993969371a89de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 67a394ce3c3b05e3f5eea49cbd3a234a0dd89df2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand(MyProviderRS.H)
 `CMyProviderCommand` 클래스는 공급자 명령 개체에 대 한 구현 합니다. 에 대 한 구현을 제공는 `IAccessor`, `ICommandText`, 및 **ICommandProperties** 인터페이스입니다. `IAccessor` 인터페이스 행 집합에 있는 것과 같습니다. 명령 개체가 매개 변수에 대 한 바인딩을 지정 하는 접근자를 사용 합니다. 행 집합 개체 하는 데 사용 출력 열에 대 한 바인딩을 지정 합니다. `ICommandText` 인터페이스는 명령을 텍스트로 지정할 때 유용 합니다. 사용 하 여이 예제는 `ICommandText` 사용자 지정 코드를 추가 하는 경우 나중에 인터페이스; 또한 재정의 `ICommand::Execute` 메서드. **ICommandProperties** 인터페이스의 모든 명령 및 행 집합 개체에 대 한 속성을 처리 합니다.  

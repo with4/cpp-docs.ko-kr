@@ -1,46 +1,46 @@
 ---
-title: "list::operator=(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 멤버[STL/CLR]"
+title: 'list:: operator = (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 0e4fdcc6-7574-40af-b947-98c2c683676d
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8a6c606844f4dbd926aacb33dc90057371b7593d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# list::operator=(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-제어된 시퀀스를 대체합니다.  
+# <a name="listoperator-stlclr"></a>list::operator=(STL/CLR)
+제어되는 시퀀스를 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 list<Value>% operator=(list<Value>% right);  
 ```  
   
-#### 매개 변수  
- right  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
  복사할 컨테이너입니다.  
   
-## 설명  
- 멤버 연산자는 개체에 `right`를 복사하고 `*this`를 반환합니다.  제어된 시퀀스를 `right`에서 제어된 시퀀스의 복사본으로 교체하기 위해서 사용합니다.  
+## <a name="remarks"></a>설명  
+ 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 이를 사용하여 제어되는 시퀀스를 `right`의 제어되는 시퀀스 복사본으로 대체합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_list_operator_as.cpp   
@@ -70,13 +70,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/list\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/목록 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::assign(STL/CLR)](../dotnet/list-assign-stl-clr.md)

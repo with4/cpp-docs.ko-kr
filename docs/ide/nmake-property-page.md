@@ -1,5 +1,5 @@
 ---
-title: "NMake 속성 페이지 | Microsoft Docs"
+title: "NMake 속성 페이지 (c + + Windows) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c487cf7218f11ba6a6a27ddcf5e7b6b575b1499
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cc9f6dc7c5fec4a184ed189cfaae230df3f1e9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-property-page"></a>NMake 속성 페이지
 **NMake** 속성 페이지 NMake 프로젝트의 빌드 설정을 지정할 수 있습니다.  
   
- NMake 프로젝트에 대 한 자세한 내용은 참조 [메이크파일 프로젝트 만들기](../ide/creating-a-makefile-project.md)합니다.  
+ NMake 프로젝트에 대 한 자세한 내용은 참조 [메이크파일 프로젝트 만들기](../ide/creating-a-makefile-project.md)합니다. 메이크파일 프로젝트 non_Windows 참조 [메이크파일 프로젝트 속성 (Linux c + +)](../linux/prop-pages/makefile-linux.md), [일반 프로젝트 속성 (c + + Android 메이크파일)](/visualstudio/cross-platform/general-makefile-android-prop-page) 또는 [NMake 속성 (Android c + +)](/visualstudio/cross-platform/nmake-android-prop-page).
   
  **NMake** 속성 페이지에는 다음과 같은 속성이 포함 되어 있습니다.  
   

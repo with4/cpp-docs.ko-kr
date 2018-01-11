@@ -1,42 +1,44 @@
 ---
-title: "방법: C++ Interop를 사용하여 ANSI 문자열 마샬링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ANSI[C++], 문자열 마샬링"
-  - "C++ Interop, 문자열"
-  - "데이터 마샬링[C++], 문자열"
-  - "interop[C++], 문자열"
-  - "마샬링[C++], 문자열"
+title: "방법: c + + Interop를 사용 하 여 ANSI 문자열 마샬링 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- ANSI [C++], marshaling strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e70d62fa7a94a7278080c31f6650b31b71ff35b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: C++ Interop를 사용하여 ANSI 문자열 마샬링
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이 항목에서는 C\+\+ Interop를 사용하여 ANSI 문자열을 전달하는 방법을 보여 줍니다. .NET Framework <xref:System.String>은 유니코드 형식의 문자열을 나타내므로 문자열을 ANSI로 변환하는 추가 단계가 필요합니다.  다른 문자열 형식과 상호 운용하는 방법에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>방법: C++ Interop를 사용하여 ANSI 문자열 마샬링
+이 항목에서는 ANSI 문자열 수 있는 방법을 보여 줍니다. c + + Interop 하지만.NET Framework를 사용 하 여 전달 <xref:System.String> ANSI로 변환에는 추가 단계는 유니코드 형식으로 문자열을 나타냅니다. 다른 문자열 형식 상호 작용을 하기 위한 다음 항목을 참조 합니다.  
   
--   [방법: C\+\+ Interop를 사용하여 유니코드 문자열 마샬링](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [방법: C++ Interop를 사용하여 유니코드 문자열 마샬링](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [방법: C\+\+ Interop를 사용하여 COM 문자열 마샬링](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
+-   [방법: C++ Interop를 사용하여 COM 문자열 마샬링](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
- 다음 코드 예제에서는 [관리되는, 관리되지 않는](../preprocessor/managed-unmanaged.md) \#pragma 지시문을 사용하여 동일한 파일에서 관리되는 함수와 관리되지 않는 함수를 구현합니다. 그러나 이러한 함수는 서로 다른 파일에 정의된 경우 동일한 방식으로 상호 운용됩니다.  관리되지 않는 함수만 포함된 파일은 [\/clr\(공용 언어 런타임 컴파일\)](../build/reference/clr-common-language-runtime-compilation.md)를 사용하여 컴파일할 필요가 없으므로 성능을 그대로 유지할 수 있습니다.  
+ 다음 코드 예제에서 사용 된 [관리, 관리 되지 않는](../preprocessor/managed-unmanaged.md) #pragma 지시문을 구현 하 관리는 관리 되지 않는 함수에서 동일한 파일에 별도 파일에 정의 된 경우 이러한 함수가 동일한 방식으로 상호 운용 합니다. 관리 되지 않는 함수만 포함 된 파일 사용 하 여 컴파일할 필요가 없습니다 때문에 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md), 성능 특성으로 유지할 수 있습니다.  
   
-## 예제  
- 이 예제에서는 <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>를 사용하여 관리되는 함수에서 관리되지 않는 함수로 ANSI 문자열을 전달하는 방법을 보여 줍니다.  이 메서드는 관리되지 않는 힙에 메모리를 할당하고 변환을 수행한 다음 주소를 반환합니다.  즉, GC 힙의 메모리가 관리되지 않는 함수에 전달되지 않으므로 고정 작업이 필요하지 않으며, <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>에서 반환되는 IntPtr를 명시적으로 해제하지 않으면 메모리 누수가 발생합니다.  
+## <a name="example"></a>예  
+ 이 예제에서는 관리 되는 ANSI string을 사용 하 여 관리 되지 않는 함수에 전달 하는 방법을 보여 줍니다 <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>합니다. 이 메서드는 관리 되지 않는 힙에서 메모리를 할당 하 고 변환을 수행 후 주소를 반환 합니다. 즉,는 고정 작업이 필요 하지 (하기 때문에 메모리 GC 힙에 관리 되지 않는 함수에 전달 되 고 되지 않은)에서 반환 되는 IntPtr 고 <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> 명시적으로 해제 해야 합니다. 그렇지 메모리 누수가 발생 합니다.  
   
 ```  
 // MarshalANSI1.cpp  
@@ -68,8 +70,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 예제에서는 관리되지 않는 함수가 호출한 관리되는 함수의 ANSI 문자열에 액세스하는 데 필요한 데이터 마샬링을 보여 줍니다.  관리되는 함수는 네이티브 문자열을 받을 때 이를 직접 사용하거나 다음과 같이 <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> 메서드를 사용하여 이 문자열을 관리되는 문자열로 변환할 수 있습니다.  
+## <a name="example"></a>예  
+ 다음 예제는 ANSI 문자열은 관리 되지 않는 함수에 의해 호출 되는 관리 되는 함수에 액세스 하는 데 필요한 데이터 마샬링을입니다. 네이티브 문자열을 수신한 경우에 관리 되는 함수를 직접 사용 하거나 사용 하 여 관리 되는 문자열을 변환의 <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> 메서드를 표시 된 것 처럼 합니다.  
   
 ```  
 // MarshalANSI2.cpp  
@@ -103,5 +105,5 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

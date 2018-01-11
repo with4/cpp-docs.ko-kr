@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c090041969bae959ecb386486032f3f848a1440b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 309080a807a1325bbf921657a152cff60e87cb95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-management-functions"></a>메모리 관리 함수
 이 문서에서는 동시성 런타임에서 메모리 할당과 해제를 동시에 수 있도록 제공 하는 메모리 관리 함수를 설명 합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  이러한 메모리 관리 함수를 사용 하 고 프로그램 응용 프로그램 사용 하 여 많은 응용 프로그램 메모리를 입력할 수 있습니다 때 메모리 부족 상태 예상 보다 빨리 합니다. 한 스레드에서 캐시 되는 메모리 블록의 한 스레드가 많은 메모리를 보유 하는 경우 다른 스레드를 사용할 수 없기 때문 해당 메모리를 사용할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 예제에 대 한는 `Alloc` 및 `Free` 메모리 성능을 향상 시키는 함수 참조 [하는 방법: 사용 Alloc 및 Free 메모리 성능 개선에](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

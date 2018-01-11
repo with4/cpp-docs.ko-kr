@@ -1,69 +1,69 @@
 ---
-title: "__stosd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stosd 명령"
-  - "rep stosd 명령"
-  - "__stosd 내장 함수"
+title: __stosd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosd
+dev_langs: C++
+helpviewer_keywords:
+- stosd instruction
+- rep stosd instruction
+- __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 213a014df3336a8a42188dc45876228a533f4a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# __stosd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stosd"></a>__stosd
 **Microsoft 전용**  
   
- 생성 된 저장소 문자열 명령 \(`rep stosd`\).  
+ 저장소 문자열 명령 생성 (`rep stosd`).  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-void __stosd(   
-   unsigned long* Dest,   
-   unsigned long Data,   
-   size_t Count   
+void __stosd(   
+   unsigned long* Dest,   
+   unsigned long Data,   
+   size_t Count   
 );  
 ```  
   
-#### 매개 변수  
- \[out\] `Dest`  
- 대상 작업입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [out] `Dest`  
+ 작업의 대상입니다.  
   
- \[in\] `Data`  
- 저장할 데이터입니다.  
+ [in] `Data`  
+ 데이터를 저장 하는입니다.  
   
- \[in\] `Count`  
- 쓸 더블 워드 개 블록의 길이입니다.  
+ [in] `Count`  
+ 쓰려는 2 배 워드를 블록의 길이입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__stosd`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 결과 더블 워드 `Data` 의 블록으로 쓰여집니다 `Count` 를 더블 워드 개 메모리 위치를 가리키는 여 `Dest`.  
+## <a name="remarks"></a>설명  
+ 결과 더블 워드 `Data` 블록으로 기록 `Count` 가리키는 메모리 위치에 2 배 워드 `Dest`합니다.  
   
- 이 루틴에만 내장로 사용할 수 있습니다.  
+ 이 루틴은 내장 루틴으로만 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // stosd.c  
@@ -88,8 +88,11 @@ printf_s( "%u %u %u %u",
 }  
 ```  
   
-  **0 99999 99999 0**   
-## Microsoft 특정 끝  
+```Output  
+0 99999 99999 0  
+```  
   
-## 참고 항목  
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

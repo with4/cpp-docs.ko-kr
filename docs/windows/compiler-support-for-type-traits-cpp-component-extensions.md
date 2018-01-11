@@ -1,94 +1,96 @@
 ---
-title: "형식 특성에 대한 컴파일러 지원(C++ 구성 요소 확장명) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__is_simple_value_class"
-  - "__has_trivial_destructor"
-  - "__has_assign"
-  - "__is_union"
-  - "__is_class"
-  - "__is_abstract"
-  - "__has_trivial_assign"
-  - "__has_virtual_destructor"
-  - "__is_ref_array"
-  - "__is_base_of"
-  - "__has_copy"
-  - "__is_polymorphic"
-  - "__has_nothrow_constructor"
-  - "__is_ref_class"
-  - "__is_delegate"
-  - "__is_convertible_to"
-  - "__is_value_class"
-  - "__is_interface_class"
-  - "__has_nothrow_copy"
-  - "__is_sealed"
-  - "__has_trivial_constructor"
-  - "__has_trivial_copy"
-  - "__is_enum"
-  - "__has_nothrow_assign"
-  - "__has_finalizer"
-  - "__is_empty"
-  - "__is_pod"
-  - "__has_user_destructor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__is_class 키워드[C++]"
-  - "__is_pod 키워드[C++]"
-  - "__is_delegate 키워드[C++]"
-  - "__is_value_class 키워드[C++]"
-  - "__has_copy 키워드[C++]"
-  - "__has_nothrow_copy 키워드[C++]"
-  - "__is_interface_class 키워드[C++]"
-  - "__is_sealed 키워드[C++]"
-  - "__is_convertible_to 키워드[C++]"
-  - "__is_ref_class 키워드[C++]"
-  - "__has_trivial_copy 키워드[C++]"
-  - "__has_user_destructor 키워드[C++]"
-  - "__is_abstract 키워드[C++]"
-  - "__is_empty 키워드[C++]"
-  - "__has_trivial_assign 키워드[C++]"
-  - "__has_nothrow_constructor 키워드[C++]"
-  - "__is_ref_array 키워드[C++]"
-  - "__is_base_of 키워드[C++]"
-  - "__has_nothrow_assign 키워드[C++]"
-  - "__has_virtual_destructor 키워드[C++]"
-  - "__has_finalizer 키워드[C++]"
-  - "__is_union 키워드[C++]"
-  - "__has_assign 키워드[C++]"
-  - "__has_trivial_destructor 키워드[C++]"
-  - "__is_polymorphic 키워드[C++]"
-  - "__is_enum 키워드[C++]"
-  - "__is_simple_value_class 키워드[C++]"
-  - "__has_trivial_constructor 키워드[C++]"
+title: "형식 특성 (c + + 구성 요소 확장명)에 대 한 컴파일러 지원 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __is_simple_value_class
+- __has_trivial_destructor
+- __has_assign
+- __is_union
+- __is_class
+- __is_abstract
+- __has_trivial_assign
+- __has_virtual_destructor
+- __is_ref_array
+- __is_base_of
+- __has_copy
+- __is_polymorphic
+- __has_nothrow_constructor
+- __is_ref_class
+- __is_delegate
+- __is_convertible_to
+- __is_value_class
+- __is_interface_class
+- __has_nothrow_copy
+- __is_sealed
+- __has_trivial_constructor
+- __has_trivial_copy
+- __is_enum
+- __has_nothrow_assign
+- __has_finalizer
+- __is_empty
+- __is_pod
+- __has_user_destructor
+dev_langs: C++
+helpviewer_keywords:
+- __is_class keyword [C++]
+- __is_pod keyword [C++]
+- __is_delegate keyword [C++]
+- __is_value_class keyword [C++]
+- __has_copy keyword [C++]
+- __has_nothrow_copy keyword [C++]
+- __is_interface_class keyword [C++]
+- __is_sealed keyword [C++]
+- __is_convertible_to keyword [C++]
+- __is_ref_class keyword [C++]
+- __has_trivial_copy keyword [C++]
+- __has_user_destructor keyword [C++]
+- __is_abstract keyword [C++]
+- __is_empty keyword [C++]
+- __has_trivial_assign keyword [C++]
+- __has_nothrow_constructor keyword [C++]
+- __is_ref_array keyword [C++]
+- __is_base_of keyword [C++]
+- __has_nothrow_assign keyword [C++]
+- __has_virtual_destructor keyword [C++]
+- __has_finalizer keyword [C++]
+- __is_union keyword [C++]
+- __has_assign keyword [C++]
+- __has_trivial_destructor keyword [C++]
+- __is_polymorphic keyword [C++]
+- __is_enum keyword [C++]
+- __is_simple_value_class keyword [C++]
+- __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 형식 특성에 대한 컴파일러 지원(C++ 구성 요소 확장명)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-컴파일러에서 지 원하는 *특성 입력*, 컴파일 타임에 형식의 다양 한 특성을 나타내는 합니다.  
+# <a name="compiler-support-for-type-traits-c-component-extensions"></a>형식 특성에 대한 컴파일러 지원(C++ 구성 요소 확장명)
+컴파일러 지원 *특성 입력*, 컴파일 타임에 형식의 다양 한 특성을 나타내는입니다.  
   
 ## <a name="all-runtimes"></a>모든 런타임  
- **설명**  
+ **주의**  
   
  형식 특성은 라이브러리를 작성하는 프로그래머에게 특히 유용합니다.  
   
- 다음은 컴파일러에 의해 지원 되는 형식 특성을 포함 합니다. 모든 형식 특성은 형식 특성의 이름에 지정된 조건이 충족되지 않을 경우 `false`를 반환합니다.  
+ 다음 목록에는 컴파일러에서 지 원하는 형식 특성을 포함 합니다. 모든 형식 특성은 형식 특성의 이름에 지정된 조건이 충족되지 않을 경우 `false`를 반환합니다.  
   
- (다음 목록에 코드 예제가 작성 되어 에서만 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]합니다. 그러나 해당 형식 특성은 달리 지정되지 않은 경우 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]에서도 지원됩니다. "플랫폼 형식" 용어는 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 형식 또는 공용 언어 런타임 형식 중 하나를 가리킵니다.  
+ (다음 목록에 코드 예제가 작성만 C + + /cli CLI 합니다. 그러나 해당 형식 특성은 달리 지정되지 않은 경우 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]에서도 지원됩니다. , "플랫폼 형식" 용어 Windows 런타임 형식 또는 공용 언어 런타임 형식입니다.)  
   
 -   `__has_assign(` `type` `)`  
   
@@ -124,7 +126,7 @@ manager: "ghogen"
   
 -   `__has_finalizer(` `type` `)`  
   
-     ([!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]에서는 지원되지 않음) CLR 형식에 종료자가 있으면 true를 반환합니다. 참조 [Visual c + +의 소멸자 및 종료자](../misc/destructors-and-finalizers-in-visual-cpp.md) 에 대 한 자세한 내용은 합니다.  
+     ([!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]에서는 지원되지 않음) CLR 형식에 종료자가 있으면 true를 반환합니다. 참조 [소멸자 및 종료자에서 하는 방법: 클래스 및 구조체 정의 및 사용 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 자세한 정보에 대 한 합니다.  
   
     ```  
   
@@ -304,7 +306,7 @@ manager: "ghogen"
   
      형식이 추상 형식이면 true를 반환합니다. 네이티브 추상 형식에 대 한 자세한 내용은 참조 하십시오. [추상](../windows/abstract-cpp-component-extensions.md)합니다.  
   
-     `__is_abstract`는 플랫폼 형식에 대해서도 작동합니다. 하나 이상의 멤버가 있는 인터페이스는 하나 이상의 추상 멤버가 있는 참조 형식과 마찬가지로 추상 형식입니다. 추상 플랫폼 형식에 대 한 자세한 내용은 참조 하십시오. [추상 클래스](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract`는 플랫폼 형식에 대해서도 작동합니다. 하나 이상의 멤버가 있는 인터페이스는 하나 이상의 추상 멤버가 있는 참조 형식과 마찬가지로 추상 형식입니다. 추상 플랫폼 형식에 대 한 자세한 내용은 참조 하세요. [추상 클래스](../cpp/abstract-classes-cpp.md)  
   
     ```  
   
@@ -325,7 +327,7 @@ manager: "ghogen"
   
      첫 번째 형식이 두 번째 형식의 기본 클래스이거나 두 형식이 같으면 true를 반환합니다.  
   
-     `__is_base_of`는 플랫폼 형식에 대해서도 작동합니다. 예를 들어 true가 반환 됩니다 첫 번째 형식이 [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md) 두 번째 형식은 인터페이스를 구현 합니다.  
+     `__is_base_of`는 플랫폼 형식에 대해서도 작동합니다. 예를 들어 true를 반환 합니다 첫 번째 형식이 [인터페이스 클래스](../windows/interface-class-cpp-component-extensions.md) 및 두 번째 형식이 인터페이스를 구현 합니다.  
   
     ```  
   
@@ -382,7 +384,7 @@ manager: "ghogen"
   
 -   `__is_delegate(` `type` `)`  
   
-     `type`이 대리자이면 true를 반환합니다. 자세한 내용은 참조 [대리자 (c + + 구성 요소 확장)](../windows/delegate-cpp-component-extensions.md)합니다.  
+     `type`이 대리자이면 true를 반환합니다. 자세한 내용은 참조 [대리자 (c + + 구성 요소 확장명)](../windows/delegate-cpp-component-extensions.md)합니다.  
   
     ```  
   
@@ -582,16 +584,16 @@ manager: "ghogen"
   
     ```  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **설명**  
+## <a name="windows-runtime"></a>Windows 런타임  
+ **주의**  
   
-  `__has_finalizer(`*형식*`)` 형식 특성에는이 플랫폼에서 종료자를 지원 하지 않으므로 지원 되지 않습니다.  
+ `__has_finalizer(` *형식* `)` 형식 특성에는이 플랫폼에서 종료자를 지원 하지 않으므로 지원 되지 않습니다.  
   
 ### <a name="requirements"></a>요구 사항  
  컴파일러 옵션: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **설명**  
+## <a name="common-language-runtime"></a>공용 언어 런타임 
+ **주의**  
   
  (이 기능에는 플랫폼별 설명이 없습니다.)  
   
@@ -601,7 +603,7 @@ manager: "ghogen"
 ### <a name="examples"></a>예제  
  **예제**  
   
- 다음 코드 예제에서는 대 한 컴파일러 형식 특성을 노출 하는 클래스 템플릿을 사용 하는 방법을 보여 줍니다.는 **/clr** 컴파일입니다. 자세한 내용은 참조 [Windows 런타임 및 관리 하는 템플릿](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)합니다.  
+ 다음 코드 예제에서는 클래스 템플릿을 사용 하 여에 대 한 컴파일러 형식 특성을 노출 하는 방법을 보여 줍니다.는 **/clr** 컴파일입니다. 자세한 내용은 참조 [Windows 런타임 및 관리 되는 템플릿](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)합니다.  
   
 ```  
 // compiler_type_traits.cpp  
@@ -630,4 +632,4 @@ R is a ref class
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [런타임 플랫폼의 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

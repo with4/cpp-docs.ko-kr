@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 95fb254036d2883b6efe6b81bda54864d533c2a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d3cbb5c5c3e8391b3a549fc0c34661dc86b492c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3163"></a>컴파일러 오류 C3163
 'construct': 특성이 이전 선언과 일치 하지 않습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  C3163 오류의 가능한 원인은 Microsoft 소스 코드 주석 언어 (SAL) 작업이 포함 됩니다. 프로젝트를 사용 하 여 컴파일하지 않으면 SAL 매크로가 확장 하지 않고는 **/analyze** 플래그입니다. 사용 하 여 다시 시도 하지 않고 오류 없이 컴파일되지 / 분석 하는 프로그램 C3163를 throw 할 수 있습니다는 /analyze 옵션입니다. SAL에 대 한 자세한 내용은 참조 [SAL 주석을](../../c-runtime-library/sal-annotations.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 c3163 오류가 발생 합니다.  
   
 ```  

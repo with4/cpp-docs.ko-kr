@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aea707a208e9642b5847b17a8f37a4a5f77f145e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 865b30ac7b4c8910e92d14274f1224c25e7f74d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>단일 문서에 뷰 여러 개 추가
 Microsoft Foundation 클래스 (MFC) 라이브러리를 사용 하 여 만든 단일 문서 인터페이스 (SDI) 응용 프로그램에서는 각 문서 형식은 단일 보기 형식과 연결 됩니다. 경우에 따라 새 보기와 문서를 현재 보기를 전환 하는 기능이 하는 것이 좋습니다.  

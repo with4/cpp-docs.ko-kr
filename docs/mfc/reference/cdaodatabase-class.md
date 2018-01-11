@@ -69,11 +69,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c72946edb68212e09ab93e9d36d2dfa8afd5630e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48646e0635098aceea957f93015a5de93515096d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 클래스
 데이터 작업을 할 수 있는 통로인 데이터베이스에 대한 연결을 나타냅니다.  
@@ -133,7 +134,7 @@ class CDaoDatabase : public CObject
 > [!NOTE]
 >  MFC DAO 데이터베이스 클래스는 ODBC를 기반으로 하는 MFC 데이터베이스 클래스 별개입니다. 모든 DAO 데이터베이스 클래스 이름이 "CDao" 접두사가 있습니다. 클래스 `CDaoDatabase` ODBC 클래스의 것과 비슷한 인터페이스를 제공 [CDatabase](../../mfc/reference/cdatabase-class.md)합니다. 주요 차이점은 `CDatabase` DBMS를 DBMS에 대 한 ODBC Open Database Connectivity () 및 ODBC 드라이버를 통해 액세스 합니다. `CDaoDatabase`Microsoft Jet 데이터베이스 엔진에 따라 데이터 액세스 개체 (DAO)를 통해 데이터에 액세스 합니다. 일반적으로 기반으로 DAO MFC 클래스는 ODBC;에 따라 MFC 클래스 보다 더욱 강력한 DAO 기반 클래스를 통해 자신의 데이터베이스 엔진을 통해 ODBC 드라이버를 포함 한 데이터를 액세스할 수 있습니다. 또한 DAO 기반 클래스를 직접 DAO 호출 하지 않고는 클래스를 통해 테이블을 추가 하는 등의 데이터 정의 언어 (DDL) 작업을 지원 합니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  레코드 집합 개체를 만들 때 암시적으로 데이터베이스 개체를 만들 수 있습니다. 하지만 데이터베이스 개체를 명시적으로 만들 수도 있습니다. 기존 데이터베이스를 명시적으로 사용 하려면 `CDaoDatabase`, 다음 중 하나를 수행 합니다.  
   
 -   생성 된 `CDaoDatabase` 열린에 대 한 포인터를 전달 하는 개체 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) 개체입니다.  

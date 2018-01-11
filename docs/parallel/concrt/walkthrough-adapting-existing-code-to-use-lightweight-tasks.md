@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e5be679f1c36d2a0a615f54de099b0d834d15c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a50ad04421d7b4bcdc4a2c98de8f5a57b255c75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>연습: 간단한 작업을 사용하기 위해 기존 코드 조정
 이 항목에서는 Windows API를 사용 하 여 만들고 간단한 작업을 사용 하는 스레드를 실행 하는 기존 코드를 조정 하는 방법을 보여 줍니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 시작 하기 전에 항목을 읽어 [작업 스케줄러](../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 예제를 만들고 스레드를 실행 하는 Windows API의 일반적인 사용입니다. 사용 하 여이 예제는 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) 함수를 호출 하는 `MyThreadFunction` 별도 스레드에서 합니다.  
@@ -87,7 +88,7 @@ Parameters = 50, 100
   
 10. 제거는 `return` 에서 문을 `MyThreadFunction`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 완성 된 예제에서는 코드를 호출 하는 간단한 작업을 사용 하 여 `MyThreadFunction` 함수입니다.  

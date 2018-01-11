@@ -17,16 +17,17 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5848e4f200f528261a135e38e1898a256433871b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad62906f5ee509bd6f99caca55b0df581e1f629b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-manipulators-with-arguments"></a>인수 포함 사용자 지정 조작자
 이 섹션에서는 하나 이상의 인수를 포함하는 출력 스트림 조작자를 만드는 방법 및 비출력 스트림에 대해 조작자를 사용하는 방법을 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [하나의 인수를 포함하는 출력 스트림 조작자](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md)(`int` 또는 `long`)  
   
  [기타 하나의 인수 출력 스트림 조작자](../standard-library/other-one-argument-output-stream-manipulators.md)  

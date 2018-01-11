@@ -24,11 +24,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb39271a7df2471c1373e6b272bbf262f34375ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97e0a5f9276d6ae9f4c5b4dea289227e59437525
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator 클래스
 이 `checked_array_iterator` 클래스를 사용하여 확인한 반복기로 배열 또는 포인터를 변환할 수 있습니다 이러한 경고를 전역적으로 해제하는 대신 이 클래스를 원시 포인터 또는 배열에 대한 래퍼로 목적에 따라 사용하여([make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator) 함수 사용) 확인을 제공하고 확인되지 않은 포인터 경고를 관리합니다. 필요에 따라 이 클래스의 확인되지 않은 버전, [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)를 사용할 수 있습니다.  
@@ -48,7 +49,7 @@ class checked_array_iterator;
   
  확인된 반복기 기능에 대한 자세한 내용 및 예제 코드는 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플은 확인된 배열 반복기를 정의 및 사용하는 방법을 보여 줍니다.  
   
  대상이 복사하는 모든 요소를 보관할 수 없는 크기인 경우, 라인을 변경하는 경우가 해당합니다.  
@@ -98,7 +99,7 @@ int main() {
 *\  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C++ 표준 라이브러리 알고리즘을 사용할 경우 `checked_array_iterator` 클래스를 사용할 필요가 없도록 하려면 동적으로 할당된 배열 대신 `vector`를 사용해 보세요. 다음 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.  
   
 ```cpp  
@@ -151,7 +152,7 @@ int main()
 |-|-|  
 |[checked_array_iterator](#checked_array_iterator)|기본 반복기에서 기본 `checked_array_iterator` 또는 `checked_array_iterator`를 생성합니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -198,9 +199,9 @@ _Iterator base() const;
 ```  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_base.cpp  
@@ -254,9 +255,9 @@ checked_array_iterator(
  (선택 사항) 반복기를 초기화하는 배열의 요소입니다.  기본적으로 반복기는 배열의 첫 번째 요소로 초기화됩니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_ctor.cpp  
@@ -318,9 +319,9 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
  같은지 확인할 `checked_array_iterator`입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_opeq.cpp  
@@ -371,9 +372,9 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
  같지 않은지 확인할 `checked_array_iterator`입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_opneq.cpp  
@@ -424,9 +425,9 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
  같지 않은지 확인할 `checked_array_iterator`입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_oplt.cpp  
@@ -479,7 +480,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 ### <a name="remarks"></a>설명  
  코드 샘플은 [checked_array_iterator::operator&lt;](#op_lt)를 참조하세요.  
   
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
 ##  <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=  
  연산자의 좌변에 있는 `checked_array_iterator`가 우변에 있는 `checked_array_iterator`보다 작거나 같은지 테스트합니다.  
@@ -495,7 +496,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 ### <a name="remarks"></a>설명  
  코드 샘플은 [checked_array_iterator::operator&gt;=](#op_gt_eq)를 참조하세요.  
   
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
 ##  <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=  
  연산자의 좌변에 있는 `checked_array_iterator`가 우변에 있는 `checked_array_iterator`보다 크거나 같은지 테스트합니다.  
@@ -509,9 +510,9 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
  비교할 대상인 `checked_array_iterator`입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_opgteq.cpp  
@@ -561,9 +562,9 @@ reference operator*() const;
  `checked_array_iterator`에서 주소를 지정한 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterator_pointer.cpp  
@@ -621,7 +622,7 @@ pointer operator->() const;
 ### <a name="remarks"></a>설명  
  코드 샘플은 [checked_array_iterator::pointer](#pointer)를 참조하세요.  
   
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
 ##  <a name="op_add_add"></a>  checked_array_iterator::operator++  
  `checked_array_iterator`를 다음 요소로 증가시킵니다.  
@@ -636,9 +637,9 @@ checked_array_iterator<_Iterator> operator++(int);
  첫 번째 연산자는 사전 증가된 `checked_array_iterator`를 반환하고, 두 번째(사후 증가) 연산자는 증가된 `checked_array_iterator`의 복사본을 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_op_plus_plus.cpp  
@@ -681,9 +682,9 @@ checked_array_iterator<_Iterator> operator--(int);
  첫 번째 연산자는 사전 감소된 `checked_array_iterator`를 반환하고, 두 번째(사후 감소) 연산자는 감소된 `checked_array_iterator`의 복사본을 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_op_minus_minus.cpp  
@@ -728,9 +729,9 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
  `checked_array_iterator`에서 주소를 지정한 요소에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_op_plus_eq.cpp  
@@ -772,9 +773,9 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
  오프셋 요소의 주소를 지정하는 `checked_array_iterator`입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_op_plus.cpp  
@@ -816,9 +817,9 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
  `checked_array_iterator`에서 주소를 지정한 요소에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_op_minus_eq.cpp  
@@ -865,7 +866,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 ### <a name="remarks"></a>설명  
  코드 샘플은 [checked_array_iterator::operator-](#operator-)를 참조하세요.  
   
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
 ##  <a name="op_at"></a>  checked_array_iterator::operator[]  
  `checked_array_iterator`에서 주소 지정하는 요소의 요소 오프셋으로 지정된 위치 수만큼 참조를 반환합니다.  
@@ -882,9 +883,9 @@ reference operator[](difference_type _Off) const;
  요소 오프셋에 대한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // checked_array_iterators_op_diff.cpp  
@@ -923,7 +924,7 @@ typedef typename iterator_traits<_Iterator>::pointer pointer;
 ### <a name="remarks"></a>설명  
  코드 샘플은 [checked_array_iterator::operator*](#op_star)를 참조하세요.  
   
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
 ##  <a name="reference"></a>  checked_array_iterator::reference  
  `checked_array_iterator`로 주소를 지정하는 요소에 참조를 제공하는 형식입니다.  
@@ -935,7 +936,7 @@ typedef typename iterator_traits<_Iterator>::reference reference;
 ### <a name="remarks"></a>설명  
  코드 샘플은 [checked_array_iterator::operator[]](#op_at)를 참조하세요.  
   
- 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
+ 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [\<iterator>](../standard-library/iterator.md)   

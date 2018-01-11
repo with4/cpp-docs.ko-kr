@@ -1,34 +1,36 @@
 ---
-title: "CRowsetImpl::GetCommandFromID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl::GetCommandFromID"
-  - "GetCommandFromID"
-  - "CRowsetImpl.GetCommandFromID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetCommandFromID 메서드"
+title: 'Crowsetimpl:: Getcommandfromid | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl::GetCommandFromID
+- GetCommandFromID
+- CRowsetImpl.GetCommandFromID
+dev_langs: C++
+helpviewer_keywords: GetCommandFromID method
 ms.assetid: 9f39cb07-1c40-486f-ba5b-cb4a65fab8a7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e75fbd00b6ee2e4a19cf0fe39d0bcda9f0314f8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CRowsetImpl::GetCommandFromID
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Checks to see if either or both parameters contain string values, and if so, copies the string values to the data members [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) and [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  
+# <a name="crowsetimplgetcommandfromid"></a>CRowsetImpl::GetCommandFromID
+데이터 멤버에 문자열 값을 복사 하는 문자열 값을 포함 하는 매개 변수 중 하나 또는 둘 그리고 있다면 확인 [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) 및 [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -38,22 +40,22 @@ Checks to see if either or both parameters contain string values, and if so, cop
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `pTableID`  
- \[in\] A pointer to the **DBID** representing the Table ID.  
+ [in] 에 대 한 포인터는 **DBID** 나타내는 테이블 id입니다.  
   
  `pIndexID`  
- \[in\] A pointer to the **DBID** representing the Index ID.  
+ [in] 에 대 한 포인터는 **DBID** 나타내는 인덱스 id입니다.  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 설명  
- This method is called through a static upcast by `CRowsetImpl` to populate the data members [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) and [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  By default, this method checks to see if either or both parameters contain string values.  If they contain string values, this method copies the string values to the data members.  By placing a method with this signature in your `CRowsetImpl`\-derived class, your method will be called instead of the base implementation.  
+## <a name="remarks"></a>설명  
+ 이 메서드를 호출 하 여 정적 업캐스팅 통해 `CRowsetImpl` 데이터 멤버를 채우는 데 [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) 및 [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)합니다. 기본적으로이 메서드 중 하나 또는 두 매개 변수 문자열 값을 포함 하는 경우를 확인 합니다. 문자열 값을 포함 하는 경우이 메서드는 문자열 값이 데이터 멤버에 복사 합니다. 이 서명 사용 하 여 메서드를 배치 하 여 프로그램 `CRowsetImpl`-파생 클래스를 기본 구현 하는 대신 메서드를 호출 합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRowsetImpl 클래스](../../data/oledb/crowsetimpl-class.md)   
  [CRowsetImpl::SetCommandText](../../data/oledb/crowsetimpl-setcommandtext.md)

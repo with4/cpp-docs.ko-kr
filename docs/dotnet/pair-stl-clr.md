@@ -1,32 +1,33 @@
 ---
-title: "pair(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pair 클래스[STL/CLR]"
+title: pair (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair
+dev_langs: C++
+helpviewer_keywords: pair class [STL/CLR]
 ms.assetid: 3326b4d9-a52a-49e5-8103-9aa5e8b352de
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8c4ae8ee9fbcfddd6009d4e91134d59a9a02cc9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# pair(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The template class describes an object that wraps a pair of values.  
+# <a name="pair-stlclr"></a>pair(STL/CLR)
+템플릿 클래스는 값의 쌍을 래핑하는 개체를 설명 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Value1,  
@@ -34,41 +35,41 @@ template<typename Value1,
     ref class pair;  
 ```  
   
-#### 매개 변수  
- Value1  
- The type of first wrapped value.  
+#### <a name="parameters"></a>매개 변수  
+ 값 1  
+ 첫 번째 래핑된 값의 형식입니다.  
   
  Value2  
- The type of second wrapped value.  
+ 두 번째 래핑된 값의 형식입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-|Type Definition|설명|  
-|---------------------|--------|  
-|[pair::first\_type](../dotnet/pair-first-type-stl-clr.md)|The type of the first wrapped value.|  
-|[pair::second\_type](../dotnet/pair-second-type-stl-clr.md)|The type of the second wrapped value.|  
+|형식 정의|설명|  
+|---------------------|-----------------|  
+|[pair::first_type(STL/CLR)](../dotnet/pair-first-type-stl-clr.md)|첫 번째 래핑된 값의 형식입니다.|  
+|[pair::second_type(STL/CLR)](../dotnet/pair-second-type-stl-clr.md)|두 번째 래핑된 값의 형식입니다.|  
   
-|Member Object|설명|  
-|-------------------|--------|  
-|[pair::first](../dotnet/pair-first-stl-clr.md)|The first stored value.|  
-|[pair::second](../dotnet/pair-second-stl-clr.md)|The second stored value.|  
+|멤버 개체|설명|  
+|-------------------|-----------------|  
+|[pair::first(STL/CLR)](../dotnet/pair-first-stl-clr.md)|첫 번째 값을 저장 합니다.|  
+|[pair::second(STL/CLR)](../dotnet/pair-second-stl-clr.md)|두 번째 저장 된 값입니다.|  
   
-|Member Function|설명|  
-|---------------------|--------|  
-|[pair::pair](../dotnet/pair-pair-stl-clr.md)|Constructs a pair object.|  
-|[pair::swap](../dotnet/pair-swap-stl-clr.md)|Swaps the contents of two pairs.|  
+|멤버 함수|설명|  
+|---------------------|-----------------|  
+|[pair::pair(STL/CLR)](../dotnet/pair-pair-stl-clr.md)|쌍 개체를 만듭니다.|  
+|[pair::swap(STL/CLR)](../dotnet/pair-swap-stl-clr.md)|두 쌍의 내용을 바꿉니다.|  
   
 |연산자|설명|  
-|---------|--------|  
-|[pair::operator\=](../dotnet/pair-operator-assign-stl-clr.md)|Replaces the stored pair of values.|  
+|--------------|-----------------|  
+|[pair::operator=(STL/CLR)](../dotnet/pair-operator-assign-stl-clr.md)|저장 된 값 쌍을을 바꿉니다.|  
   
-## 설명  
- The object stores a pair of values.  You use this template class to combine two values into a single object.  Note that `cliext::pair` \(described here\) stores only managed types; to store a pair of unmanaged types use `std::pair`, declared in `<utility>`.  
+## <a name="remarks"></a>설명  
+ 개체는 한 쌍의 값을 저장합니다. 이 템플릿 클래스를 사용 하 여 두 값을 단일 개체로 결합 합니다. `cliext::pair` (여기에서 설명) 형식에만 관리 되는 저장소; 형식을 사용 하 여 관리 되지 않는 쌍을 저장 하 `std::pair`에 선언 된 `<utility>`합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/utility\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/유틸리티 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [make\_pair](../dotnet/make-pair-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [make_pair(STL/CLR)](../dotnet/make-pair-stl-clr.md)

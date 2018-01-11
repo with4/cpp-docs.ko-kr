@@ -1,35 +1,35 @@
 ---
-title: "_mm_stream_sd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_stream_sd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mm_stream_sd 내장 함수"
-  - "movntsd 명령"
+title: _mm_stream_sd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_stream_sd
+dev_langs: C++
+helpviewer_keywords:
+- _mm_stream_sd intrinsic
+- movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: da88116f58c6e33d35a69ebb6ac2433a8fe8f4ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_stream_sd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmstreamsd"></a>_mm_stream_sd
 **Microsoft 전용**  
   
- 64 비트 데이터는 캐시를 오염 시 키 지 않고 메모리 위치에 씁니다.  
+ 캐시 오염 하지 않고 메모리 위치를 64 비트 데이터를 씁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void _mm_stream_sd(  
@@ -38,30 +38,30 @@ void _mm_stream_sd(
 );  
 ```  
   
-#### 매개 변수  
- \[out\]`Dest`  
- 원본 데이터를 기록할 위치에 대 한 포인터입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [out] `Dest`  
+ 원본 데이터 작성 될 위치에 대 한 포인터입니다.  
   
- \[in\] `Source`  
- 128 비트 값을 포함 하는 `double` 64 비트 바닥에 쓸 값.  
+ [in] `Source`  
+ 포함 하는 128 비트 값의 `double` 64 비트 아래쪽에 쓸 값입니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  없음  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`_mm_stream_sd`|SSE4a|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 내장이 생성 하는 `movntsd` 명령.  이 명령에 대 한 하드웨어 지원을 확인 하려면 호출을 `__cpuid` 와 내장 `InfoType=0x80000001` 6 비트를 확인 하 고 `CPUInfo[2] (ECX)`.  하드웨어가 명령과 0 지 그렇지 않으면 원하는 경우이 비트는 1입니다.  
+## <a name="remarks"></a>설명  
+ 이 내장 함수 생성의 `movntsd` 명령입니다. 이 명령에 대 한 하드웨어 지원을 확인 하려면 호출는 `__cpuid` 포함 된 내장 함수 `InfoType=0x80000001` 의 6 비트를 확인 하 고 `CPUInfo[2] (ECX)`합니다. 하드웨어에서 지 원하는 경우이 명령과 0 그렇지 않으면이 비트는 1입니다.  
   
- 사용 하는 코드를 실행 하는 경우는 `_mm_stream_sd` 에서 지원 하지 않는 하드웨어에 내장의 `movntsd` 명령의 결과 없는 예측할 수.  
+ 사용 하는 코드를 실행 하는 경우는 `_mm_stream_sd` 지원 하지 않는 하드웨어에 내장 된 `movntsd` 명령 결과 예측할 수 없습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -84,13 +84,15 @@ int main()
   
 ```  
   
-  **d \[0\]\-1 d \[1\] \= \= 1**   
-## Microsoft 특정 끝  
- 저작권 2007 고급 마이크로 장치, Inc의. 모든 권리는 유보 됩니다.  사용 권한에서 고급 마이크로 장치, Inc를 재현.  
+```Output  
+d[0] = -1, d[1] = 1  
+```  
   
-## 참고 항목  
- [\_mm\_stream\_ss](../intrinsics/mm-stream-ss.md)   
- [\_mm\_store\_sd](http://msdn.microsoft.com/ko-kr/8e672d0d-0a96-45b9-a783-392a2457de42)   
- [\_mm\_sfence](http://msdn.microsoft.com/ko-kr/b6c0d18e-3628-4318-826b-45f66782e870)   
- [Streaming SIMD Extensions that Support the Cache](http://msdn.microsoft.com/ko-kr/8f03493a-d5f5-4457-892e-0b6540494872)   
+**Microsoft 전용 종료**  
+ 고급 마이크로 장치, inc 2007 저작권 All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
+  
+## <a name="see-also"></a>참고 항목  
+ [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   
+ [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)   
+ [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)   
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

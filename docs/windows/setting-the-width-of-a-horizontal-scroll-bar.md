@@ -1,47 +1,51 @@
 ---
-title: "Setting the Width of a Horizontal Scroll Bar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "list controls, scroll bar width"
-  - "CListBox::SetHorizontalExtent"
-  - "controls [C++], scroll bar"
-  - "scroll bars, displaying in controls"
-  - "horizontal scroll bar width"
-  - "CListBox class, scroll bar width"
-  - "scroll bars, width"
+title: "가로 스크롤 막대의 너비를 설정 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- list controls, scroll bar width
+- CListBox::SetHorizontalExtent
+- controls [C++], scroll bar
+- scroll bars, displaying in controls
+- horizontal scroll bar width
+- CListBox class, scroll bar width
+- scroll bars, width
 ms.assetid: 51dad141-aa0b-46a3-a82c-46b80d603d94
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7aeabed9eaa164a0c19fd6b425f36e68059a548d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Setting the Width of a Horizontal Scroll Bar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-MFC 클래스를 사용하여 가로 스크롤 막대가 있는 목록 상자를 대화 상자에 추가하면 응용 프로그램에 스크롤 막대가 자동으로 표시되지 않습니다.  
+# <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>가로 스크롤 막대 너비 설정
+MFC 클래스를 사용 하 여 대화 상자에 가로 스크롤 막대를으로 목록 상자를 추가 하면 응용 프로그램에서 스크롤 막대를 자동으로 나타나지 않습니다.  
   
-### 스크롤 막대를 표시하려면  
+### <a name="to-make-the-scroll-bar-appear"></a>스크롤 막대 표시 하려면  
   
-1.  코드에서 [CListBox::SetHorizontalExtent](../Topic/CListBox::SetHorizontalExtent.md)를 호출하여 가장 넓은 요소에 최대 너비를 설정합니다.  
+1.  호출 하 여 가장 넓은 요소에 대 한 최대 너비를 설정 [CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) 코드에서입니다.  
   
-     이렇게 값을 설정하지 않으면 목록 상자의 항목이 상자보다 넓을 경우에도 스크롤 막대가 표시되지 않습니다.  
+     이 값을 설정 하지 않고 스크롤 막대가 나타나지 않습니다도 항목 목록 상자에는 보다 넓습니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
  요구 사항  
   
  MFC  
   
-## 참고 항목  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>참고 항목  
+ [대화 상자의 컨트롤](../windows/controls-in-dialog-boxes.md)   
  [컨트롤](../mfc/controls-mfc.md)
+

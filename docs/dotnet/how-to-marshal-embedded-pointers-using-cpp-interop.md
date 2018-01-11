@@ -20,16 +20,19 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3916d80089d78925b6b5746146490f901c093c09
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 202d48e44419da3bf5dd5832845d63aac8408061
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>방법: C++ Interop를 사용하여 포함 포인터 마샬링
 다음 코드 예제에서 사용 된 [관리, 관리 되지 않는](../preprocessor/managed-unmanaged.md) #pragma 지시문을 구현 하 관리는 관리 되지 않는 함수에서 동일한 파일에 별도 파일에 정의 된 경우 이러한 함수가 동일한 방식으로 상호 운용 합니다. 관리 되지 않는 함수만 포함 된 파일 사용 하 여 컴파일할 필요가 없습니다 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 관리 되는 함수에서 포인터를 포함 하는 구조를 사용 하는 관리 되지 않는 함수를 호출할 수 방법을 보여 줍니다. 관리 되는 함수는 구조체의 인스턴스를 만들고 새 키워드와 함께 포함된 된 포인터를 초기화 합니다 (대신는 [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 키워드)입니다. 없기 때문에 네이티브 힙에 메모리를 할당이 가비지 수집을 위해 배열을 고정 필요가 없습니다. 그러나 메모리 누수를 방지 하기 위해 메모리를 명시적으로 삭제 해야 합니다.  
   
 ```  

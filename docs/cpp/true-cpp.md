@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5d0918d1236f28611c4dd57ee292659eb8f0fce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 453857447c9bf0b07cd40d9158d7e2ed0ba0121f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="true-c"></a>true (C++)
 ## <a name="syntax"></a>구문  
@@ -33,7 +34,7 @@ bool-expression logical-operator true ;
 ## <a name="remarks"></a>설명  
  이 키워드는 형식의 변수에 대 한 두 값 중 하나 [bool](../cpp/bool-cpp.md) 조건식 (조건식은 true 부울 식이 이제). 경우 `i` 유형의 `bool`, then 문 `i = true;` 할당 **true** 를 `i`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // bool_true.cpp  

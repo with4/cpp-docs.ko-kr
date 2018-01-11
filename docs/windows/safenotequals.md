@@ -1,32 +1,33 @@
 ---
-title: "SafeNotEquals | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeNotEquals"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeNotEquals 함수"
+title: SafeNotEquals | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeNotEquals
+dev_langs: C++
+helpviewer_keywords: SafeNotEquals function
 ms.assetid: 032e45a8-4159-4b55-b7cc-ecd27f4e4788
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c1d4449d66f82db73b39c7b3be3ce85ba92ab88d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# SafeNotEquals
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Determines if two numbers are not equal.  
+# <a name="safenotequals"></a>SafeNotEquals
+두 개의 숫자가 같지 않은지 확인합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename T, typename U>  
@@ -36,32 +37,32 @@ inline bool SafeNotEquals (
 ) throw ();  
 ```  
   
-#### 매개 변수  
- \[in\] `t`  
- 비교할 첫 번째 숫자입니다.  이 형식은 T문자열이어야 합니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `t`  
+ 비교할 첫 번째 숫자입니다. T 형식이어야 합니다.  
   
- \[in\] `u`  
- 비교할 두 번째 숫자입니다.  이 형식은 U문자열이어야 합니다.  
+ [in] `u`  
+ 비교할 두 번째 숫자입니다. U 형식이어야 합니다.  
   
-## 반환 값  
- `t`와 `u`가 같지 않으면 `true`이고, 같으면 `false`입니다.  
+## <a name="return-value"></a>반환 값  
+ `true`경우 `t` 및 `u` 같지 않으면 `false`합니다.  
   
-## 설명  
- 메서드가 향상  `!=`  때문에  `SafeNotEquals`  두 가지 숫자를 비교할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `!=`가 두 가지 다른 형식의 숫자를 비교할 수 있게 해주기 때문에 이 메서드는 `SafeNotEquals`을 향상시켜 줍니다.  
   
- 이 메서드는 부분 [SafeInt 라이브러리](../windows/safeint-library.md) 의 인스턴스를 만들지 않고도 단일 비교 작업을 위해 설계되었습니다 [SafeInt 클래스](../windows/safeint-class.md).  
+ 이 메서드는의 일부 [SafeInt 라이브러리](../windows/safeint-library.md) 용인지 단일 비교 작업의 인스턴스를 만들지 않고 및는 [SafeInt 클래스](../windows/safeint-class.md)합니다.  
   
 > [!NOTE]
->  단일 수치 연산을 보호 해야 하는 경우에이 메서드를 사용 합니다.  작업을 여러 개 있는 경우 사용 해야 있는  `SafeInt`  개별 독립 실행형 함수를 호출 하는 대신 클래스입니다.  
+>  이 메서드는 단일 수학 연산을 보호해야 하는 경우에만 사용해야 합니다. 작업이 여러 개 있으면 개별 독립 실행형 함수를 호출하는 대신 `SafeInt` 클래스를 사용해야 합니다.  
   
- 이 템플릿 형식에 대한 자세한 내용은 [SafeInt 함수](../windows/safeint-functions.md)을 참조하십시오.  
+ T와 U 템플릿 형식에 대 한 자세한 내용은 참조 [SafeInt 함수](../windows/safeint-functions.md)합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** safeint.h  
   
- **네임 스페이스:** Microsoft::Utilities  
+ **Namespace:** microsoft:: utilities  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SafeInt 함수](../windows/safeint-functions.md)   
  [SafeInt 라이브러리](../windows/safeint-library.md)   
  [SafeInt 클래스](../windows/safeint-class.md)   

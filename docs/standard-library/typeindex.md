@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9103141b1e1d7ed01dbb1b4a746f0beaf535efbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 42d1788ef0d9864d37e26f5a424b81fb0b57afab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttypeindexgt"></a>&lt;typeindex&gt;
 [type_info](../cpp/type-info-class.md) 클래스의 개체 인덱싱을 지원하는 클래스와 함수를 정의하기 위한 표준 헤더 \<typeindex>를 포함합니다.  

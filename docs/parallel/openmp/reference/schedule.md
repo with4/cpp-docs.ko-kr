@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30023c9e994300b9dcdb09509e7d0c2218aa26f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b83c5e6541cbbdfe64b5f2b7731f7a77832f7293
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedule"></a>일정
 에 적용 된 [에 대 한](../../../parallel/openmp/reference/for-openmp.md) 지시문입니다.  
@@ -48,7 +49,7 @@ schedule(type[,size])
 ## <a name="remarks"></a>설명  
  자세한 내용은 참조 [2.4.1 for 구문](../../../parallel/openmp/2-4-1-for-construct.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // omp_schedule.cpp  

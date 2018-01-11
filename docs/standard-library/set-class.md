@@ -97,11 +97,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdc1385f5aafecc3608ced9e3e5ac1e89247f724
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-class"></a>set 클래스
 C++ 표준 라이브러리 컨테이너 집합은 포함된 요소값이 고유하고 데이터가 자동 정렬되는 기준인 키 값으로 사용된 컬렉션의 데이터를 저장 및 검색하는 데 사용됩니다. set 요소의 값은 직접 변경할 수 없습니다. 대신, 이전 값을 삭제하고 새 값의 요소를 삽입해야 합니다.  
@@ -122,7 +123,7 @@ class set
  `Traits`  
  두 요소 값을 정렬 키로 비교하여 set에서 상대적인 순서를 결정할 수 있는 함수 개체를 제공하는 형식입니다. 이 인수는 선택적이며 이진 조건자 **less** *\<Key>*가 기본값입니다.  
   
- C++14에서는 형식 매개 변수가 없는 `std::less<>` 또는 `std::greater<>` 조건자를 지정하여 유형이 다른 조회를 사용하도록 설정할 수 있습니다. 자세한 내용은 [연관 컨테이너의 유형이 다른 조회](../standard-library/stl-containers.md#sequence_containers)를 참조하세요.  
+ C++14에서는 형식 매개 변수가 없는 `std::less<>` 또는 `std::greater<>` 조건자를 지정하여 유형이 다른 조회를 사용하도록 설정할 수 있습니다. 자세한 내용은 [연관 컨테이너의 유형이 다른 조회](../standard-library/stl-containers.md#sequence_containers)를 참조하세요  
   
  `Allocator`  
  set의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 **allocator***\<Key>*입니다.  
@@ -146,7 +147,7 @@ class set
   
  set는 [key_compare](#key_compare) 형식의 저장된 함수 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](#key_comp) 구성원 함수를 호출하여 액세스할 수 있는 비교 함수입니다. 일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 *f*( *x,y*)는 두 인수 개체 *x* 및 *y* 및 반환 값 **true** 또는 **false**가 있는 함수 개체입니다. 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 set에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서 *f*( *x,y*) 및 *f*( *y,x*)가 모두 false인 경우 *x* 및 *y* 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.  
   
- C++14에서는 형식 매개 변수가 없는 `std::less<>` 또는 `std::greater<>` 조건자를 지정하여 유형이 다른 조회를 사용하도록 설정할 수 있습니다. 자세한 내용은 [연관 컨테이너의 유형이 다른 조회](../standard-library/stl-containers.md#sequence_containers)를 참조하세요.  
+ C++14에서는 형식 매개 변수가 없는 `std::less<>` 또는 `std::greater<>` 조건자를 지정하여 유형이 다른 조회를 사용하도록 설정할 수 있습니다. 자세한 내용은 [연관 컨테이너의 유형이 다른 조회](../standard-library/stl-containers.md#sequence_containers)를 참조하세요  
   
  multiset 클래스에서 제공하는 반복기는 양방향 반복기이지만, [insert](#insert) 및 [set](#set) 클래스 구성원 함수의 버전은 기능 요구 사항이 양방향 반복기 클래스에서 보장하는 것보다 최소화된 약한 입력 반복기를 템플릿 매개 변수로 사용합니다. 다른 반복기 개념은 관련된 상세 기능별로 범주를 구성합니다. 각 반복기 개념은 고유한 요구 사항이 있으며 이러한 요구 사항을 적용하는 알고리즘은 해당 반복기 형식이 제공하는 요구 사항으로 가정을 제한해야 합니다. 입력 반복기를 역참조하여 몇 가지 개체를 참조하고 시퀀스의 다음 반복기로 증가되는 경우를 가정할 수 있습니다. 이는 최소한의 기능 모음이지만, 클래스 구성원 함수의 맥락에서 반복기 범위[ `First`, `Last`)에 대해 설명하는 데에는 충분합니다.  
   
@@ -156,7 +157,7 @@ class set
 |-|-|  
 |[set](#set)|비어 있거나 모든 복사본이거나 또는 일부 다른 집합 부분인 집합을 생성합니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -231,7 +232,7 @@ typedef Allocator allocator_type;
   
  `Allocator`에 대한 자세한 내용은 [set 클래스](../standard-library/set-class.md) 항목의 설명 섹션을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.  
   
 ##  <a name="begin"></a>  set::begin  
@@ -249,7 +250,7 @@ iterator begin();
 ### <a name="remarks"></a>설명  
  **begin**의 반환 값이 `const_iterator`에 할당된 경우 set 개체의 요소를 수정할 수 없습니다. **begin**의 반환 값이 **iterator**에 할당된 경우에는 set 개체의 요소를 수정할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_begin.cpp  
@@ -301,7 +302,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>설명  
  `cbegin` 반환 값을 사용하여 범위의 요소를 수정할 수 없습니다.  
   
- `begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`가 `begin()` 및 `cbegin()`을 지원하는 수정 가능(비`const`) 컨테이너로 가정합니다.  
+ `begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`가 `begin()` 및 `cbegin()`를 지원하는 수정 가능(비`const`)한 컨테이너로 가정합니다.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -343,7 +344,7 @@ auto i2 = Container.cend();
 void clear();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_clear.cpp  
@@ -383,7 +384,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>설명  
  `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `const_iterator`를 사용하는 예제는 [begin](#begin)의 예제를 참조하세요.  
   
 ##  <a name="const_pointer"></a>  set::const_pointer  
@@ -405,7 +406,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 typedef typename allocator_type::const_reference const_reference;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_const_ref.cpp  
@@ -448,7 +449,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="remarks"></a>설명  
  `const_reverse_iterator` 형식은 요소값을 수정할 수 없으며 set를 역방향으로 반복하는 데 사용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.  
   
 ##  <a name="count"></a>  set::count  
@@ -470,7 +471,7 @@ size_type count(const Key& key) const;
   
  [ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) ).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 예제에서는 set::count 멤버 함수를 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -519,7 +520,7 @@ const_reverse_iterator crbegin() const;
   
  반환 값이 `crbegin`이면 set 개체를 수정할 수 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_crbegin.cpp  
@@ -564,7 +565,7 @@ const_reverse_iterator crend() const;
   
  `crend`를 사용하여 역방향 반복기가 set 끝에 도달했는지를 테스트할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_crend.cpp  
@@ -600,7 +601,7 @@ typedef typename allocator_type::difference_type difference_type;
   
  입력 반복기 요구 사항을 충족하는 모든 반복기(set 등의 가역 컨테이너에서 지원하는 양방향 반복기 클래스 포함)에 대해 `difference_type`을 사용할 수는 있지만, 반복기 간의 빼기는 vector와 같은 임의 액세스 컨테이너가 제공하는 임의 액세스 반복기를 통해서만 지원됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_diff_type.cpp  
@@ -682,9 +683,9 @@ emplace(
 ### <a name="remarks"></a>설명  
  이 함수는 반복기나 참조를 무효화 되지 않습니다.  
   
- 배치 중 예외가 throw되면 컨테이너의 상태가 수정되지 않습니다.  
+ 대입 중 예외가 throw되면 컨테이너의 상태가 수정되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_emplace.cpp  
@@ -740,7 +741,7 @@ int main()
 ```  
   
 ##  <a name="emplace_hint"></a>  set::emplace_hint  
- 배치 힌트를 사용하여 생성된 요소를 제 위치에 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.  
+ 배치 힌트를 사용하여 생성된 요소를 삽입합니다. 복사 또는 이동 작업은 수행되지 않습니다.  
   
 ```  
 template <class... Args>  
@@ -765,9 +766,9 @@ iterator emplace_hint(
 ### <a name="remarks"></a>설명  
  이 함수는 반복기나 참조를 무효화 되지 않습니다.  
   
- 배치 중 예외가 throw되면 컨테이너의 상태가 수정되지 않습니다.  
+ 대입 중 예외가 throw되면 컨테이너의 상태가 수정되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_emplace.cpp  
@@ -822,7 +823,7 @@ bool empty() const;
 ### <a name="return-value"></a>반환 값  
  set가 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_empty.cpp  
@@ -870,7 +871,7 @@ iterator end();
 ### <a name="remarks"></a>설명  
  **end**는 반복기가 집합의 끝을 통과했는지를 테스트하는 데 사용됩니다.  
   
- **end**에서 반환한 값을 역참조해서는 안 됩니다.  
+ **end**에서 반환한 값은 역참조해서는 안 됩니다.  
   
  코드 예제를 보려면 [set::find](#find)를 참조하세요.  
   
@@ -892,7 +893,7 @@ pair <iterator, iterator> equal_range (const Key& key);
   
  구성원 함수가 반환하는 `pr` 쌍의 첫 번째 반복기에 액세스하려면 `pr`. **first**를 사용하고 하한 반복기를 역참조하려면 \*( `pr`. **first**)를 사용합니다. 구성원 함수가 반환하는 `pr` 쌍의 두 번째 반복기에 액세스하려면 `pr`. **second**를 사용하고 상한 반복기를 역참조하려면 \*( `pr`. **second**)를 사용합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_equal_range.cpp  
@@ -985,7 +986,7 @@ size_type erase(
   
 ### <a name="remarks"></a>설명  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_erase.cpp  
@@ -1086,7 +1087,7 @@ const_iterator find(const Key& key) const;
   
  **find**의 반환 값이 **const_iterator**에 할당되는 경우 set 개체를 수정할 수 없습니다. **find**의 반환 값이 **iterator**에 할당되는 경우에는 set 개체를 수정할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // compile with: /EHsc /W4 /MTd  
@@ -1163,7 +1164,7 @@ allocator_type get_allocator() const;
 ### <a name="remarks"></a>설명  
  set 클래스의 할당자는 클래스가 저장소를 관리하는 방법을 지정합니다. C++ 표준 라이브러리 컨테이너 클래스와 함께 제공되는 기본 할당자를 사용하면 대부분의 프로그래밍 요구 사항을 충족할 수 있습니다. 할당자 클래스를 직접 작성하고 사용하는 방법에 대해서는 고급 C++ 항목에서 다룹니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_get_allocator.cpp  
@@ -1286,7 +1287,7 @@ IList);
   
  단일 요소 멤버 함수에서 반환한 `pair` `pr`의 반복기 구성 요소에 액세스하려면 `pr.first`를 사용하고 반환된 쌍 내에서 반복기를 역참조하려면 `*pr.first`를 사용하여 요소를 제공합니다. `bool` 구성 요소에 액세스하려면 `pr.second`를 사용합니다. 예제는 이 문서 뒷부분에 있는 샘플 코드를 참조하세요.  
   
- 컨테이너의 [value_type](../standard-library/map-class.md#value_type)은 컨테이너에 속한 형식 정의이고 set의 경우 `set<V>::value_type`은 `const V` 형식입니다.  
+ 컨테이너의 [value_type](../standard-library/map-class.md#value_type)은 컨테이너에 속한 형식 정의이고 set의 경우 `set<V>::value_type`은 `const V`입니다.  
   
  범위 멤버 함수 (5)는 `[First, Last)` 범위에서 반복기가 주소를 지정하는 각 요소에 해당하는 set에 요소 값의 시퀀스를 입력하므로 `Last`는 삽입되지 않습니다. 컨테이너 멤버 함수 `end()`는 컨테이너의 마지막 요소 바로 뒤에 있는 위치를 참조합니다. 예를 들어 `s.insert(v.begin(), v.end());` 문이 `v`의 모든 요소를 `s`에 삽입하려고 합니다. 범위에 고유 값이 있는 요소만 삽입됩니다. 중복 값은 무시됩니다. 어떤 요소가 거부되는지 관찰하려면 `insert`의 단일 요소 버전을 사용합니다.  
   
@@ -1294,7 +1295,7 @@ IList);
   
  생성된 요소를 제 위치에 삽입하려면, 즉 복사 또는 이동 작업을 수행하지 않으려면 [set::emplace](#emplace) 및 [set::emplace_hint](#emplace_hint)를 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_insert.cpp  
@@ -1400,7 +1401,7 @@ int main()
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **반복기**를 선언하고 사용하는 방법의 예제는 [begin](#begin)의 예제를 참조하세요.  
   
 ##  <a name="key_comp"></a>  set::key_comp  
@@ -1422,9 +1423,9 @@ key_compare key_comp() const;
   
  을 정의합니다. 이 함수는 `_xVal`이 앞에 오며 정렬 순서가 `_yVal`과 같지 않으면 **true**를 반환합니다.  
   
- [key_compare](#key_compare)와 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
+ [key_compare](#key_compare)와 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 **Traits**의 동의어입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_key_comp.cpp  
@@ -1483,13 +1484,13 @@ typedef Traits key_compare;
 ```  
   
 ### <a name="remarks"></a>설명  
- `key_compare`는 템플릿 매개 변수 `Traits`와 동일한 의미입니다.  
+ `key_compare`은 템플릿 매개 변수 `Traits`의 동의어입니다.  
   
  `Traits`에 대한 자세한 내용은 [set 클래스](../standard-library/set-class.md) 항목을 참조하세요.  
   
  `key_compare` 및 [value_compare](#value_compare)는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.  
   
 ##  <a name="key_type"></a>  set::key_type  
@@ -1506,7 +1507,7 @@ typedef Key key_type;
   
  `key_type` 및 [value_type](#value_type)은 둘 다 템플릿 매개 변수 **Key**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
   
 ##  <a name="lower_bound"></a>  set::lower_bound  
@@ -1525,7 +1526,7 @@ iterator lower_bound(const Key& key);
 ### <a name="return-value"></a>반환 값  
  인수 키보다 크거나 같은 키가 들어 있는 set 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 set에서 마지막 요소 다음 위치의 주소를 지정하는 반복기 또는 `const_iterator`입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_lower_bound.cpp  
@@ -1584,7 +1585,7 @@ size_type max_size() const;
 ### <a name="return-value"></a>반환 값  
  set의 최대 허용 길이입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_max_size.cpp  
@@ -1627,7 +1628,7 @@ set& operator=(set&& right);
   
  연산자 함수가 실행되기 전에 이 `set`에 있었던 모든 요소는 삭제됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_operator_as.cpp  
@@ -1695,7 +1696,7 @@ reverse_iterator rbegin();
   
  `rbegin`은 set를 역방향으로 반복할 때 사용할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_rbegin.cpp  
@@ -1756,7 +1757,7 @@ After the erasure, the first element in the reversed set is 20.
 typedef typename allocator_type::reference reference;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_reference.cpp  
@@ -1803,7 +1804,7 @@ reverse_iterator rend();
   
  `rend`를 사용하여 역방향 반복기가 set 끝에 도달했는지를 테스트할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_rend.cpp  
@@ -1862,7 +1863,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>설명  
  `reverse_iterator` 형식은 set를 역방향으로 반복하는 데 사용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.  
   
 ##  <a name="set"></a>  set::set  
@@ -1929,7 +1930,7 @@ set(
 |`IList`|요소를 복사해올 initializer_list입니다.|  
   
 ### <a name="remarks"></a>설명  
- 모든 생성자는 set의 메모리 저장소를 관리하며 나중에 [get_allocator](#get_allocator)를 호출하여 반환할 수 있는 할당자 개체 형식을 저장합니다. allocator 매개 변수는 대체 할당자를 대체하는 데 사용되는 전처리 매크로 및 클래스 선언에서 생략되는 경우가 많습니다.  
+ 모든 생성자는 set의 메모리 저장소를 관리하며 나중에 [get_allocator](#get_allocator)를 호출하여 반환할 수 있는 할당자 개체 형식을 저장합니다. 할당자 매개 변수는 대체 할당자를 대체하는 데 사용되는 전처리 매크로 및 클래스 선언에서 생략되는 경우가 많습니다.  
   
  모든 생성자는 해당 set를 초기화합니다.  
   
@@ -1945,7 +1946,7 @@ set(
   
  여덟 번째 생성자는 `right`를 이동하여 set의 복사본을 지정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_set.cpp  
@@ -2068,7 +2069,7 @@ size_type size() const;
 ### <a name="return-value"></a>반환 값  
  set의 현재 길이입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_size.cpp  
@@ -2104,7 +2105,7 @@ The set length is now 2.
 typedef typename allocator_type::size_type size_type;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.  
   
 ##  <a name="swap"></a>  set::swap  
@@ -2122,7 +2123,7 @@ void swap(
 ### <a name="remarks"></a>설명  
  구성원 함수는 해당 요소를 교환할 두 set의 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_swap.cpp  
@@ -2188,7 +2189,7 @@ iterator upper_bound(const Key& key);
 ### <a name="return-value"></a>반환 값  
  인수 키보다 큰 키가 들어 있는 set 내 요소의 위치 주소를 지정하거나, 키와 일치하는 항목이 없는 경우 set에서 마지막 요소 다음 위치의 주소를 지정하는 **반복기** 또는 `const_iterator`입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_upper_bound.cpp  
@@ -2258,7 +2259,7 @@ value_compare value_comp() const;
   
  [value_compare](#value_compare)와 [key_compare](#key_compare)는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_value_comp.cpp  
@@ -2317,13 +2318,13 @@ typedef key_compare value_compare;
 ```  
   
 ### <a name="remarks"></a>설명  
- `value_compare`는 템플릿 매개 변수 `Traits`와 동일한 의미입니다.  
+ `value_compare`은 템플릿 매개 변수 `Traits`의 동의어입니다.  
   
  `Traits`에 대한 자세한 내용은 [set 클래스](../standard-library/set-class.md) 항목을 참조하세요.  
   
  [key_compare](#key_compare)와 **value_compare**는 둘 다 템플릿 매개 변수 **Traits**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `value_compare`를 선언하고 사용하는 방법의 예제는 [value_comp](#value_comp)의 예제를 참조하세요.  
   
 ##  <a name="value_type"></a>  set::value_type  
@@ -2340,7 +2341,7 @@ typedef Key value_type;
   
  [key_type](#key_type) 및 `value_type`은 둘 다 템플릿 매개 변수 **Key**와 동일한 의미입니다. 두 형식 모두 set 및 multiset 클래스용으로 제공되며 이러한 클래스에 사용되는 경우에는 동일하지만, map 및 multimap 클래스와의 호환성을 위해 제공되는 경우에는 서로 다릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_value_type.cpp  

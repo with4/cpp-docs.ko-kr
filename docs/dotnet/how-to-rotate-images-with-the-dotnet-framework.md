@@ -1,35 +1,37 @@
 ---
-title: "방법: .NET Framework로 이미지 회전 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GDI+[C++], 이미지 회전"
-  - "그래픽[C++], 이미지 회전"
+title: "방법:.NET Framework로 이미지 회전 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- GDI+ [C++], rotating images
+- graphics [C++], rotating images
 ms.assetid: e32104d5-87d0-47a9-a22f-9bc835b7e8d7
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 387bd9733ad591f45ef206be8856d4dd4edd464d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/03/2018
 ---
-# 방법: .NET Framework로 이미지 회전
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 <xref:System.Drawing.Image?displayProperty=fullName> 클래스를 사용하여 디스크에서 이미지를 로드하고, 이 이미지를 90도 회전시킨 다음 새 .jpg 파일로 저장하는 방법을 보여 줍니다.  
+# <a name="how-to-rotate-images-with-the-net-framework"></a>방법: .NET Framework로 이미지 회전
+다음 코드 예제에서는 <xref:System.Drawing.Image?displayProperty=fullName> 클래스를 디스크에서 이미지를 로드, 90도 회전 및 새.jpg 파일로 저장 합니다.  
   
 > [!NOTE]
->  GDI\+는 Windows XP에 포함되어 있으며 Windows NT 4.0 SP 6, Windows 2000, Windows 98 및 Windows Millennium Edition을 위한 재배포 가능 파일로도 구할 수 있습니다.  To download the latest redistributable, see [http:\/\/go.microsoft.com\/fwlink\/?linkid\=11232](http://go.microsoft.com/fwlink/?linkid=11232).  자세한 내용은 [GDI\+](_gdiplus_GDI_start_cpp)를 참조하십시오.  
+>  GDI + Windows XP에 포함 되어 있으며 Windows NT 4.0 SP 6, Windows 2000, Windows 98 및 Windows Millennium Edition에 대 한 재배포 가능 구성 요소로 제공 됩니다. 최신 재배포 가능 패키지를 다운로드 하려면 [http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232)합니다. 
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 #using <system.drawing.dll>  
@@ -46,5 +48,5 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

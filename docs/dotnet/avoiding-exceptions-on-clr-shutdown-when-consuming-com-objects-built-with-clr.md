@@ -20,11 +20,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 430420a62915d3378dae863c20c00e3b398ecb3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 287c9831f8c604272b37ac85528d66fe640de557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>/clr로 빌드한 COM 개체를 사용할 때 CLR 종료 시 예외 방지
 공용 언어 런타임 (CLR) 종료 모드로 설정 되 면 네이티브 함수를 CLR 서비스에 대 한 액세스를 제한 됩니다. COM 개체를 사용 하 여 컴파일된에서 릴리스를 호출 하려고 할 때 **/clr**, 네이티브 코드에 CLR 전환 되 고 다음 관리 코드에 서비스 (관리 코드에서 정의 됨)는 iunknown:: Release 호출으로 다시 전환 합니다. CLR 종료 모드 이므로 관리 코드로 다시 호출을 방지 합니다.  

@@ -17,16 +17,17 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>숫자, 부울 및 포인터 리터럴 (c + +)
 리터럴은 값을 직접 나타내는 프로그램 요소입니다. 이 문서에서는 정수, 부동 소수점, 부울 및 포인터 형식의 리터럴에 대해 설명합니다. 문자열 및 문자 리터럴에 대 한 정보를 참조 하십시오. [문자열 및 문자 리터럴 (c + +)](../cpp/string-and-character-literals-cpp.md)합니다. 이러한 범주;에 따라 고유한 리터럴을 정의할 수도 있습니다. 자세한 내용은 참조 하십시오. [사용자 정의 리터럴 (c + +)](../cpp/user-defined-literals-cpp.md)  
   
- 입니다. 리터럴은 많은 컨텍스트에서 사용할 수 있지만 가장 일반적으로 명명된 변수를 초기화하고 인수를 함수에 전달하는 데 사용됩니다.  
+ 이어야 합니다. 리터럴은 많은 컨텍스트에서 사용할 수 있지만 가장 일반적으로 명명된 변수를 초기화하고 인수를 함수에 전달하는 데 사용됩니다.  
   
 ```  
 const int answer = 42; // integer literal  
@@ -113,7 +114,7 @@ long long i = 24'847'458'121
 void func( double );  
 ```  
   
- 및  
+ 를 갖는  
   
 ```  
 void func( long double );  

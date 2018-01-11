@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- utility/std::pair
-dev_langs:
-- C++
-helpviewer_keywords:
-- pair class
+f1_keywords: utility/std::pair
+dev_langs: C++
+helpviewer_keywords: pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 95da7f8ab71b6336f8baf2441ca210db42110390
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e8884eb598002d6dbf3e4bc310d163658afc249b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pair-structure"></a>pair 구조체
 두 개체를 단일 개체로 처리하는 기능을 제공하는 구조체입니다.  
@@ -74,7 +70,7 @@ struct pair
 ## <a name="remarks"></a>설명  
  템플릿 구조체는 각각 **T1** 및 **T2** 형식의 개체 쌍을 저장합니다. **first_type** 형식은 템플릿 매개 변수 **T1**과 동일하고, **second_type** 형식은 템플릿 매개 변수 **T2**와 동일합니다. **T1** 및 **T2**는 각각 기본 생성자, 단일 인수 생성자 및 소멸자만 제공해야 합니다. `pair` 형식의 모든 구성원은 형식이 **class**가 아니라 `struct`로 선언되었으므로 공용입니다. 쌍을 사용하는 두 가지 가장 일반적인 방법은 두 값을 반환하는 함수에 대한 반환 형식으로 사용하거나, 각 요소에 키와 값 형식이 둘 다 연결되어 있는 결합형 컨테이너 클래스 [map 클래스](../standard-library/map-class.md) 및 [multimap 클래스](../standard-library/multimap-class.md)에 대한 요소로 사용하는 것입니다. 후자의 경우 쌍 결합형 컨테이너에 대한 요구 사항을 충족하고 `pair`< **const**`key_type`, `mapped_type`> 형태의 값 형식을 갖습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // utility_pair.cpp  
@@ -170,7 +166,6 @@ The element with a key value of
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

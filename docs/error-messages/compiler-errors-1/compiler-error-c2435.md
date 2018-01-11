@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2435
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2435
+f1_keywords: C2435
+dev_langs: C++
+helpviewer_keywords: C2435
 ms.assetid: be6aa8f8-579b-42ea-bdd8-2d01393646ad
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1616208a5ea0b8c3680e87a23846fc58be816623
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: b70ebf347e2d5b6af8938e348a5e789412241256
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2435"></a>컴파일러 오류 C2435
 'var': 동적 초기화는 관리 되는 CRT 필요, /clr: safe를 컴파일할 수 없습니다  
@@ -35,7 +31,7 @@ ms.lasthandoff: 10/09/2017
   
  자세한 내용은 [appdomain](../../cpp/appdomain.md) 및 [process](../../cpp/process.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2435 오류가 생성 됩니다.  
   
 ```  

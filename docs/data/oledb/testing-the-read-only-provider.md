@@ -1,54 +1,57 @@
 ---
 title: "읽기 전용 공급자 테스트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 공급자, 호출"
-  - "OLE DB 공급자, 테스트"
-  - "공급자 테스트"
-  - "테스트, OLE DB 공급자"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- OLE DB providers, calling
+- OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 읽기 전용 공급자 테스트
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-공급자를 테스트하려면 소비자가 있어야 합니다.  소비자가 공급자와 조화되면 테스트에 도움이 됩니다.  OLE DB 소비자 템플릿은 OLE DB에 사용되는 씬 래퍼로 공급자 COM 개체와 잘 조화됩니다.  소스에 소비자 템플릿이 제공되므로 소비자 템플릿을 사용하여 쉽게 공급자를 디버깅할 수 있습니다.  뿐만 아니라 소비자 템플릿을 사용하면 소비자 응용 프로그램을 쉽고 빠르게 만들 수 있습니다.  
+# <a name="testing-the-read-only-provider"></a>읽기 전용 공급자 테스트
+공급자를 테스트 하려면 소비자가 있어야 합니다. 공급자와 소비자 수와 일치 하는 경우 도움이 됩니다. OLE DB 소비자 템플릿은 OLE DB에 대 한 씬 래퍼 있으며 공급자 COM 개체와 일치 합니다. 소스는 소비자 템플릿과 함께 제공 되, 때문에 이러한 공급자를 디버깅할 쉽습니다. 소비자 템플릿은 소비자 응용 프로그램을 개발 하는 매우 작고 빠른 방법입니다.  
   
- 이 항목의 예제에서는 테스트 소비자에 대해 기본 MFC 응용 프로그램 마법사 응용 프로그램을 만듭니다.  테스트 응용 프로그램은 OLE DB 소비자 템플릿 코드가 추가된 간단한 대화 상자입니다.  
+ 이 항목의 예제는 테스트 소비자에 대 한 기본 MFC 응용 프로그램 마법사 응용 프로그램을 만듭니다. 테스트 응용 프로그램은 OLE DB 소비자 템플릿 코드가 추가 된 간단한 대화 상자.  
   
-### 테스트 응용 프로그램을 만들려면  
+### <a name="to-create-the-test-application"></a>테스트 응용 프로그램을 만들려면  
   
 1.  **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-2.  프로젝트 형식 창에서 **Visual C\+\+ 프로젝트** 폴더를 선택합니다.  템플릿 창에서 **MFC 응용 프로그램**을 선택합니다.  
+2.  프로젝트 형식 창에서 선택 된 **Visual c + + 프로젝트** 폴더입니다. 템플릿 창에서 선택 **MFC 응용 프로그램**합니다.  
   
-3.  프로젝트 이름으로 **TestProv**를 입력하고 **확인**을 클릭합니다.  
+3.  프로젝트 이름에 대 한 입력 **TestProv**, 클릭 하 고 **확인**합니다.  
   
      MFC 응용 프로그램 마법사가 나타납니다.  
   
-4.  **응용 프로그램 종류** 페이지에서 **대화 상자 기반**을 선택합니다.  
+4.  에 **응용 프로그램 종류** 페이지에서 **대화 상자 기반**합니다.  
   
-5.  **고급 기능** 페이지에서 **자동화**를 선택하고 **마침**을 클릭합니다.  
+5.  에 **고급 기능** 페이지에서 **자동화**, 클릭 하 고 **마침**합니다.  
   
 > [!NOTE]
->  **CTestProvApp::InitInstance**에 **CoInitialize**를 추가할 경우에는 응용 프로그램에 자동화 지원이 필요하지 않습니다.  
+>  추가 하는 경우 응용 프로그램 자동화 지원이 필요로 하지 않는 **CoInitialize** 에 **CTestProvApp::InitInstance**합니다.  
   
- 리소스 뷰에서 TestProv 대화 상자\(IDD\_TESTPROV\_DIALOG\)를 선택하여 대화 상자를 보고 편집할 수 있습니다.  대화 상자에 행 집합의 각 문자열에 대해 하나씩 두 목록 상자를 넣습니다.  Alt\+Enter를 누른 채 목록 상자를 선택하고 **스타일** 탭을 클릭한 다음 **정렬** 확인란 선택을 취소하여 두 목록 상자의 정렬 속성을 해제합니다.  파일을 페치하기 위한 **실행** 단추도 대화 상자에 넣습니다.  완성된 TestProv 대화 상자에는 "String 1"과 "String 2"라는 두 목록 상자와 **확인**, **취소**, **실행** 단추가 있어야 합니다.  
+ 확인 및 리소스 뷰에서 선택 하 여 TestProv 대화 상자 (IDD_TESTPROV_DIALOG)를 편집할 수 있습니다. 대화 상자에는 행 집합의 각 문자열에 대해 하나씩 두 개의 목록 상자를 배치 합니다. ALT + Enter를 눌러 목록 상자를 선택 하 고, 클릭 하면 목록 상자 둘 다에 대해 정렬 속성이 해제는 **스타일** 탭을 선택 취소 된 **정렬** 확인란 합니다. 또한 배치는 **실행** 파일을 대화 상자에서 단추입니다. 완성 된 TestProv 대화 상자에 "문자열 1" 및 "2 문자열"를 각각;로 표시 된 두 개의 목록 상자 있어야 합니다. 또한 **확인**, **취소**, 및 **실행** 단추입니다.  
   
- 대화 상자 클래스의 헤더 파일\(이 경우 TestProvDlg.h\)을 열고  클래스 선언 바깥 부분에 다음 코드를 추가합니다.  
+ (이 case TestProvDlg.h)에서 대화 상자 클래스에 대 한 헤더 파일을 엽니다. 클래스 선언) (외부 헤더 파일에 다음 코드를 추가 합니다.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -69,9 +72,9 @@ END_COLUMN_MAP()
 };  
 ```  
   
- 이 코드는 행 집합에 나타날 열을 정의하는 사용자 레코드를 나타냅니다.  클라이언트가 **IAccessor::CreateAccessor**를 호출하면 이러한 항목을 사용하여 바인딩할 열을 지정합니다.  또한 OLE DB 소비자 템플릿을 사용하여 열을 동적으로 바인딩할 수 있습니다.  COLUMN\_ENTRY 매크로는 PROVIDER\_COLUMN\_ENTRY 매크로의 클라이언트 쪽 버전입니다.  두 COLUMN\_ENTRY 매크로는 두 문자열의 서수, 형식, 길이 및 데이터 멤버를 지정합니다.  
+ 코드 행 집합에 나타날 하는 열을 정의 하는 사용자 레코드를 나타냅니다. 클라이언트 호출 하는 경우 **iaccessor:: Createaccessor**, 이러한 항목을 사용 하 여 바인딩할 열을 지정할 수 있습니다. OLE DB 소비자 템플릿 열을 동적으로 바인딩할 수도 있습니다. COLUMN_ENTRY 매크로 PROVIDER_COLUMN_ENTRY 매크로의 클라이언트 쪽 버전입니다. 두 COLUMN_ENTRY 매크로 서 수, 두 개의 문자열에 대 한 형식, 길이 및 데이터 멤버를 지정 합니다.  
   
- Ctrl 키를 누르고 **실행** 단추를 두 번 클릭하여 **실행** 단추에 대한 처리기 함수를 추가한 다음  이 함수에 다음 코드를 넣습니다.  
+ 처리기 함수에 대 한 추가 **실행** CTRL 키를 누르고 두 번 클릭 하면 단추는 **실행** 단추입니다. 함수에 다음 코드를 배치 합니다.  
   
 ```  
 ///////////////////////////////////////////////////////////////////////  
@@ -100,7 +103,7 @@ void CtestProvDlg::OnRun()
 }  
 ```  
   
- `CCommand`, `CDataSource` 및 `CSession` 클래스는 모두 OLE DB 소비자 템플릿에 속합니다.  이러한 각 클래스는 공급자에서 COM 개체를 모방합니다.  `CCommand` 개체는 헤더 파일에 선언된 `CProvider` 클래스를 템플릿 매개 변수로 사용합니다.  `CProvider` 매개 변수는 공급자의 데이터에 액세스하기 위해 사용할 바인딩을 나타냅니다.  Here is the `Open` code for the data source, session, and command:  
+ `CCommand`, `CDataSource`, 및 `CSession` OLE DB 소비자 템플릿에 속한 모든 클래스입니다. 각 클래스는 공급자에서 COM 개체를 모방합니다. `CCommand` 개체는 `CProvider` 템플릿 매개 변수로 헤더 파일에 선언 된 클래스입니다. `CProvider` 매개 변수는 공급자에서 데이터에 액세스 하는 데 사용할 수 있는 바인딩을 나타냅니다. 다음은 `Open` 데이터 원본, 세션 및 명령에 대 한 코드:  
   
 ```  
 if (source.Open("MyProvider.MyProvider.1", NULL) != S_OK)  
@@ -113,13 +116,13 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
- 각 클래스를 열기 위한 위 코드는 공급자에 각 COM 개체를 만듭니다.  공급자가 있는 위치를 찾으려면 공급자의 ProgID를 사용합니다.  시스템 레지스트리에서 ProgID를 찾거나 MyProvider.rgs 파일\(공급자 디렉터리를 열고 ProgID 키 검색\)에서 ProgID를 찾을 수 있습니다.  
+ 각각의 클래스를 열려는 행 공급자에서 각 COM 개체를 만듭니다. 공급자를 찾을 공급자의 ProgID를 사용 합니다. 시스템 레지스트리에서 또는 MyProvider.rgs 파일을 보면 ProgID를 얻을 수 있습니다 (공급자의 디렉터리 및 ProgID 키에 대 한 검색 열기).  
   
- MyProv 샘플에는 MyData.txt 파일이 포함되어 있습니다.  직접 파일을 만들려면 편집기를 사용하여 각 문자열 사이에 Enter 키를 눌러 짝수 개수의 문자열을 입력합니다.  파일을 이동한 경우에는 경로 이름을 변경합니다.  
+ MyData.txt 파일 MyProv 샘플에 포함 됩니다. 사용자의 파일을 만들려면 편집기를 사용 하 고 enter 키를 눌러 각 문자열 사이 문자열의 수는 짝수를 입력 합니다. 파일을 이동 하는 경우 경로 이름을 변경 합니다.  
   
- `table.Open` 줄에 "c:\\\\samples\\\\myprov\\\\MyData.txt" 문자열을 전달합니다.  `Open` 호출 단계에 이르면 이 문자열이 공급자의 `SetCommandText` 메서드로 전달된 것을 볼 수 있습니다.  `ICommandText::Execute` 메서드가 이 문자열을 사용했음에 주목하십시오.  
+ 문자열에 전달 "c:\\\samples\\\myprov\\\MyData.txt"에서 `table.Open` 선입니다. 경우에 `Open` 호출 표시이 문자열에 전달 되는 `SetCommandText` 공급자의 메서드. `ICommandText::Execute` 메서드는이 문자열을 사용 합니다.  
   
- 데이터를 페치하려면 테이블에 대해 `MoveNext`를 호출합니다.  `MoveNext`는 **IRowset::GetNextRows**, `GetRowCount` 및 `GetData` 함수를 호출합니다.  더 이상 행이 없으면, 즉 행 집합의 현재 위치가 `GetRowCount`보다 크면 루프가 종료됩니다.  
+ 데이터를 페치 하려면 호출 `MoveNext` 테이블에 있습니다. `MoveNext`호출 된 **irowset:: Getnextrows**, `GetRowCount`, 및 `GetData` 함수입니다. 행이 더 이상 없는 경우 (즉, 행 집합의 현재 위치 보다 큽니다 `GetRowCount`), 루프가 종료 됩니다.  
   
 ```  
 while (table.MoveNext() == S_OK)  
@@ -129,9 +132,9 @@ while (table.MoveNext() == S_OK)
 }  
 ```  
   
- 더 이상 행이 없으면 공급자가 **DB\_S\_ENDOFROWSET**을 반환합니다.  **DB\_S\_ENDOFROWSET** 값은 오류가 아닙니다.  데이터 페치 루프를 취소하고 SUCCEEDED 매크로를 사용하지 않으려면 항상 `S_OK`를 확인해야 합니다.  
+ 더 많은 행이 없는 경우 공급자 반환 **DB_S_ENDOFROWSET**합니다. **DB_S_ENDOFROWSET** 값은 오류가 아닙니다. 에 대해 항상 확인 해야 `S_OK` 데이터 인출 루프를 취소 및 SUCCEEDED 매크로 사용 하지 않습니다.  
   
- 이제 프로그램을 빌드하고 테스트할 수 있습니다.  
+ 이제을 빌드 및 프로그램을 테스트할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [단순한 읽기 전용 공급자의 기능 향상](../../data/oledb/enhancing-the-simple-read-only-provider.md)

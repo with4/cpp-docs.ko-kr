@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7c108dd9435d433076ea2f2c9b573f2ebf3685e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce300956045c0a111deef6d514d1699bea8d794b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata 네임스페이스
 이 네임스페이스는 형식 선언을 수정하는 특성을 포함합니다.  
@@ -36,7 +37,7 @@ namespace Platform {
 ### <a name="members"></a>멤버  
  이 네임스페이스는 내부용으로 설계되었지만 브라우저에서 이 네임스페이스의 다음 멤버를 표시할 수 있습니다.  
   
-|이름|설명|  
+|name|설명|  
 |----------|------------|  
 |특성|특성의 기본 클래스입니다.|  
 |[Platform::Metadata::DefaultMemberAttribute 특성](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|몇 가지 가능한 오버로드된 함수 중에서 호출할 기본 설정 함수를 나타냅니다.|  

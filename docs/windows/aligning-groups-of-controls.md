@@ -1,56 +1,59 @@
 ---
-title: "Aligning Groups of Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], aligning"
+title: "컨트롤 그룹 맞춤 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: controls [C++], aligning
 ms.assetid: a4f49a73-4a17-44b3-8568-aa35f646b5cf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ebec5697faf252a13befdf2a9b3c98888db96c19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Aligning Groups of Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 절차에서는 컨트롤 그룹을 맞추는 방법을 보여 줍니다.  
+# <a name="aligning-groups-of-controls"></a>컨트롤 그룹 맞춤
+다음 절차에서는 컨트롤 그룹을 정렬 하는 방법을 보여 줍니다.  
   
-### 컨트롤 그룹을 맞추려면  
+### <a name="to-align-groups-of-controls"></a>그룹 컨트롤을 맞추려면  
   
-1.  맞출 [컨트롤을 여러 개 선택](../mfc/selecting-multiple-controls.md)합니다.  맞춤 또는 크기 조정 명령을 실행하기 전에 기준으로 사용할 컨트롤을 먼저 선택하거나 해당 컨트롤을 기준 컨트롤로 설정합니다.  
+1.  [컨트롤 선택](../windows/selecting-multiple-controls.md) 정렬 하려는 합니다. 기준 컨트롤을 먼저 수 있도록 하려는 컨트롤을 선택 해야 하거나 맞춤을 실행 하거나 명령 크기 조정 하기 전에 기준 컨트롤로 설정 합니다.  
   
-     컨트롤 그룹의 최종 위치는 기준 컨트롤의 위치에 따라 결정됩니다.  기준 컨트롤 선택에 대한 자세한 내용은 [기준 컨트롤 지정](../mfc/specifying-the-dominant-control.md)을 참조하십시오.  
+     컨트롤 그룹의 최종 위치 기준 컨트롤의 위치에 따라 달라 집니다. 기준 컨트롤을 선택에 대 한 자세한 내용은 참조 하십시오. [기준 컨트롤 지정](../windows/specifying-the-dominant-control.md)합니다.  
   
-2.  **서식** 메뉴에서 **맞춤**을 선택한 후 다음 맞춤 방법 중 하나를 선택합니다.  
+2.  **형식** 메뉴에서 선택 **맞춤**, 다음 맞춤 중 하나를 선택 합니다.  
   
-    -   **왼쪽**: 선택한 컨트롤의 왼쪽 면을 일렬로 맞춥니다.  
+    -   **왼쪽**: 왼쪽으로 선택 된 컨트롤을 맞춥니다.  
   
-    -   **가운데**: 선택한 컨트롤의 가운데\(가로 방향\)를 일렬로 맞춥니다.  
+    -   **센터**: 선택한 컨트롤의 가운데 일렬로 가로로 맞춥니다.  
   
-    -   **오른쪽**: 선택한 컨트롤의 오른쪽 면을 일렬로 맞춥니다.  
+    -   **권한**: 선택한 컨트롤의 오른쪽 면 일렬로 정렬 합니다.  
   
-    -   **위쪽**: 선택한 컨트롤의 위쪽 가장자리를 일렬로 맞춥니다.  
+    -   **위쪽**: 위쪽 가장자리를 따라 선택 된 컨트롤을 맞춥니다.  
   
-    -   **중간**: 선택한 컨트롤의 가운데\(세로 방향\)를 일렬로 맞춥니다.  
+    -   **중간**: 선택한 컨트롤의 중간 일렬로 세로로 맞춥니다.  
   
-    -   **아래쪽**: 선택한 컨트롤의 아래쪽 가장자리를 일렬로 맞춥니다.  
+    -   **점과 저점을**: 아래쪽 가장자리를 따라 선택 된 컨트롤을 맞춥니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
  요구 사항  
   
  Win32  
   
-## 참고 항목  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>참고 항목  
+ [대화 상자에 컨트롤 배치](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [대화 상자의 컨트롤](../windows/controls-in-dialog-boxes.md)   
  [컨트롤](../mfc/controls-mfc.md)
+

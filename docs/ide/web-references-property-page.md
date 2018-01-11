@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f5792191a7dcff961b2b5be39c4c15855ca99348
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc1692805c3e1bced7cb7662f0da8b7a1fea092c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="web-references-property-page"></a>웹 참조 속성 페이지
 **웹 참조** 속성 페이지는 XML 웹 서비스 프록시 클래스를 생성 하는 방법을 지정 합니다. 프로젝트에 웹 참조를 추가 하는 경우 XML 웹 서비스 프록시 클래스가 생성 됩니다. 참조 [웹 참조 추가](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) 자세한 정보에 대 한 합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
  **시작 배너 표시 안 함**  
  웹 서비스 설명 언어 도구 (Wsdl.exe)에 대 한 배너를 표시 하지 않습니다.  
   
- **Namespace**  
+ **네임스페이스**  
  생성된 된 웹 프록시 이름을 지정합니다.  
   
  **추가 참조**  

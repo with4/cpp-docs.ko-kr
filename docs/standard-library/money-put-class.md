@@ -27,11 +27,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d93a25339802edc4f03b1f5e5cf03be0b2558dda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd47afe55f1e2625dfe216afd6ef98cbcba7b21f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneyput-class"></a>money_put 클래스
 통화 값에서 `CharType` 형식의 시퀀스로 변환을 제어하는 로캘 패싯으로 사용 가능한 개체에 대해 설명하는 템플릿 클래스입니다.  
@@ -60,7 +61,7 @@ class money_put : public locale::facet;
 |-|-|  
 |[money_put](#money_put)|`money_put` 형식의 개체에 대한 생성자입니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -88,7 +89,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 **CharType**과 동일한 의미입니다.  
+ 이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
   
 ##  <a name="do_put"></a>  money_put::do_put  
  숫자 또는 문자열을 통화 값을 나타내는 문자 시퀀스로 변환하기 위해 호출하는 가상 함수입니다.  
@@ -166,7 +167,7 @@ virtual iter_type do_put(
   
  함수는 **iosbase**. **width**(0)을 호출하여 필드 너비를 0으로 다시 설정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **put**에 의해 가상 구성원 함수가 호출되는 [put](#put)의 예제를 참조하세요.  
   
 ##  <a name="iter_type"></a>  money_put::iter_type  
@@ -245,7 +246,7 @@ iter_type put(
 ### <a name="remarks"></a>설명  
  두 구성원 함수는 모두 [do_put](#do_put)( `next`, `_Intl`, `_Iosbase`, `_Fill`, `val`)을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // money_put_put.cpp  

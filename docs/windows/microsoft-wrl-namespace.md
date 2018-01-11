@@ -23,11 +23,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b3c3bef713bd63b7b82761ce36ab039556e63c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 64c8b82320e0b402c06432438cd49a23be5d1f2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 네임스페이스
 Windows 런타임 c + + 템플릿 라이브러리를 구성 하는 기본 형식을 정의 합니다.  
@@ -75,7 +78,7 @@ namespace Microsoft::WRL;
   
 ### <a name="enumerations"></a>열거형  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[AsyncResultType 열거형](../windows/asyncresulttype-enumeration.md)|GetResults 메서드에서 반환되는 결과 형식을 지정합니다.|  
 |[ModuleType 열거형](../windows/moduletype-enumeration.md)|모듈이 in-process 서버를 지원하는지 out-of-process 서버를 지원해야 하는지 여부를 지정합니다.|  

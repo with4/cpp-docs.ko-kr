@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -65,8 +64,7 @@ f1_keywords:
 - AFXRENDERTARGET/CRenderTarget::m_lstResources
 - AFXRENDERTARGET/CRenderTarget::m_pRenderTarget
 - AFXRENDERTARGET/CRenderTarget::m_pTextFormatDefault
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CRenderTarget [MFC], CRenderTarget
 - CRenderTarget [MFC], Attach
@@ -123,16 +121,16 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a52a2add3306aaf684f9a48a06d1add229205233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a12ec4bd293901ed1b8928ecd4e425b335e11890
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 클래스
 ID2D1RenderTarget에 대 한 래퍼입니다.  
@@ -206,7 +204,7 @@ class CRenderTarget : public CObject;
 |[CRenderTarget::SetTextRenderingParams](#settextrenderingparams)|모든 후속 텍스트와 문자 모양 그리기 작업에 적용할 텍스트 렌더링 옵션을 지정 합니다.|  
 |[CRenderTarget::SetTransform](#settransform)|오버로드됨. 기존 변환을 바꾸는 렌더링 대상으로 지정된 된 변환을 적용 합니다. 이후의 모든 그리기 작업은 변환 된 공간에서 발생 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -220,7 +218,7 @@ class CRenderTarget : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CRenderTarget::m_lstResources](#m_lstresources)|목록 CD2DResource 개체에 대 한 포인터입니다.|  
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|ID2D1RenderTarget 개체에 대 한 포인터입니다.|  
@@ -1049,4 +1047,3 @@ BOOL VerifyResource(CD2DResource* pResource);
   
 ## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
-

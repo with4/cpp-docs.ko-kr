@@ -1,98 +1,100 @@
 ---
-title: "interface class  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "interface_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interface class keyword"
-  - "interface struct keyword"
+title: "인터페이스 클래스 (c + + 구성 요소 확장명) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: interface_CPP
+dev_langs: C++
+helpviewer_keywords:
+- interface class keyword
+- interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-caps.latest.revision: 30
-caps.handback.revision: 28
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "30"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: abe4173dabd20442b96c8e5536b040483df4f150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# interface class  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-인터페이스를 선언합니다.  네이티브 인터페이스에 대한 자세한 내용은 [인터페이스](../cpp/interface.md)를 참조하십시오.  
+# <a name="interface-class--c-component-extensions"></a>interface 클래스(C++ 구성 요소 확장)
+인터페이스를 선언합니다.  네이티브 인터페이스에 대 한 자세한 내용은 참조 [__interface](../cpp/interface.md)합니다.  
   
-## 모든 런타임  
+## <a name="all-runtimes"></a>모든 런타임  
  **구문**  
   
 ```  
   
-        interface_access interface class  name :  inherit_access base_interface {};  
-interface_access interface struct name :  inherit_access base_interface {};  
+interface_access  
+interface class  
+ name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
  **매개 변수**  
   
- *interface\_access*  
- 어셈블리 외부에서 인터페이스의 액세스 가능성입니다.  가능한 값은 **public** 및 `private`이고 기본값은 `private`입니다.  중첩된 인터페이스는  *interface\_access*  지정자를 사용할 수 없습니다.  
+ *interface_access*  
+ 어셈블리 외부에서 인터페이스의 접근성입니다.  가능한 값은 **공용** 및 `private`합니다.  기본값은 `private`입니다.  중첩 된 인터페이스를 사용할 수 없습니다는 *interface_access* 지정자입니다.  
   
  *name*  
  인터페이스의 이름입니다.  
   
- *inherit\_access*  
- *base\_interface*의 액세스 가능성.  기본 인터페이스에 대한 허용된 필요한 옵션은  `public`  \(기본값\)인 경우뿐입니다.  
+ *inherit_access*  
+ 액세스 가능성 *base_interface*합니다.  유일한 허용 내게 필요한 옵션은 기본 인터페이스에 대 한 `public` (기본값).  
   
- *base\_interface*\(선택적 요소\)  
- *name*  인터페이스의 기본 인터페이스.  
+ *base_interface* (선택 사항)  
+ 인터페이스에 대 한 기본 인터페이스 *이름*합니다.  
   
- **설명**  
+ **주의**  
   
- **구조체 인터페이스**는 **인터페이스 클래스**에 해당합니다.  
+ **구조체 인터페이스** 같습니다 **인터페이스 클래스**합니다.  
   
- 인터페이스는 함수, 이벤트 및 속성에 대한 선언이 포함될 수 있습니다.  모든 인터페이스 멤버는 공용 액세스 가능성을 포함합니다.  정적 데이터 멤버, 함수, 이벤트 및 속성을 인터페이스에 포함될 수도 있습니다. 인터페이스는 이러한 정적 멤버를 정의해야 합니다.  
+ 인터페이스는 함수, 이벤트 및 속성에 대 한 선언을 포함할 수 있습니다.  모든 인터페이스 멤버는 public 액세스 가능성을 갖습니다. 인터페이스는 정적 데이터 멤버, 함수, 이벤트 및 속성에도 포함 될 수 있습니다 및 이러한 정적 멤버는 인터페이스에 정의 되어야 합니다.  
   
- 인터페이스는 클래스는 구현하는 방법을 정의합니다.  인터페이스는 클래스가 아닙니다. 클래스는 오직 인터페이스만을 구현할 수 있습니다.  클래스 인터페이스에 선언 된 함수를 정의하는 경우 재정의되지 않은 함수 구현됩니다.  따라서 이름 조회는 인터페이스 멤버를 포함하지 않습니다.  
+ 인터페이스는 클래스 수 구현 하는 방법을 정의 합니다. 인터페이스 클래스 아니며 클래스만 인터페이스를 구현할 수 있습니다. 클래스 인터페이스에 선언 된 함수를 정의 하는 경우 재정의 되지 함수 구현 됩니다. 따라서 이름 조회는 인터페이스 멤버를 포함 되지 않습니다.  
   
- 인터페이스에서 상속되는 클래스나 상수는 모든 인터페이스 멤버를 구현해야 합니다.  *이름* 인터페이스를 구현할 때,  `base_interface`  목록에 인터페이스를 반드시 구현해야 합니다.  
+ 클래스 또는 구조체는 인터페이스에서 파생 되는 인터페이스의 모든 멤버를 구현 해야 합니다. 인터페이스를 구현할 때 *이름* 의 인터페이스를 구현 해야는 `base_interface` 목록입니다.  
   
- 자세한 내용은 다음을 참조하십시오.  
+ 자세한 내용은 다음을 참조하세요.  
   
 -   [인터페이스 정적 생성자](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)  
   
--   [Generic Interfaces \(Visual C\+\+\)](../windows/generic-interfaces-visual-cpp.md)  
+-   [제네릭 인터페이스(Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
   
- 다른 CLR 형식에 대한 정보를 보려면  [클래스와 구조체](../windows/classes-and-structs-cpp-component-extensions.md)를 참조하십시오.  
+ 다른 CLR 형식에 대 한 자세한 내용은 참조 하십시오. [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
   
- `__is_interface_class(`   `type`   `)` 형식이 있는 경우 컴파일 타임을 감지할 수 있습니다.  자세한 내용은 [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)을 참조하십시오.  
+ 형식이와 인터페이스 하는 경우 컴파일 타임에 감지할 수 `__is_interface_class(type)`합니다. 자세한 내용은 참조 [형식 특성에 대 한 컴파일러 지원](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)합니다.  
   
- 개발 환경에서 키워드를 강조 표시하여\(예: `interface class`\) F1을 누르면 키워드에 대한 F1 도움말을 볼 수 있습니다.  
+ 개발 환경에서 있습니다 수 F1 도움말을 볼 이러한 키워드는 키워드를 강조 표시 하 여 (`interface class`예를 들면) F1 키를 눌러 합니다.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **설명**  
+## <a name="windows-runtime"></a>Windows 런타임  
+ **주의**  
   
- \(이 언어 기능에는 Windows 런타임에만 적용되는 설명이 없습니다.\)  
+ (이 언어 기능에는 Windows 런타임에만 적용되는 설명이 없습니다.)  
   
-### 요구 사항  
- 컴파일러 옵션: **\/ZW**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **설명**  
+## <a name="common-language-runtime"></a>공용 언어 런타임 
+ **주의**  
   
- \(이 언어 기능에는 공용 언어 런타임에만 적용되는 설명이 없습니다.\)  
+ (이 언어 기능에는 공용 언어 런타임에만 적용되는 설명이 없습니다.)  
   
-### 요구 사항  
- 컴파일러 옵션: **\/clr**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/clr**  
   
-### 예제  
+### <a name="examples"></a>예제  
  **예제**  
   
- 다음 코드 예제에서는 인터페이스 시계 함수의 동작을 정의하는 방법을 보여줍니다.  
+ 다음 코드 예제에서는 인터페이스 수 clock 함수 동작을 정의 하는 방법을 보여 줍니다.  
   
 ```  
 // mcppv2_interface_class.cpp  
@@ -184,16 +186,25 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **IN 함수 3**  
- **IN 함수 2**  
- **IN 함수 1**  
- **8**  
- **OnClick: 7, 3.14159**  
- **IN 함수 1** **예제**  
+```Output  
+in Function_3  
   
- 다음 코드 예제에서는 시그니처가 동일한 선언에서 여러 인터페이스 및 인터페이스 클래스에 의해 사용되는 위치 기능을 구현하는 두 가지 보여줍니다.  
+in Function_2  
+  
+in Function_1  
+  
+8  
+  
+OnClick: 7, 3.14159  
+  
+in Function_1  
+```  
+  
+ **예제**  
+  
+ 다음 코드 예제에는 여러 인터페이스에 및 이러한 인터페이스는 클래스에 의해 사용 되는 위치를 선언 하는 동일한 서명으로 함수를 구현 하는 두 가지 방법으로 보여 줍니다.  
   
 ```  
 // mcppv2_interface_class_2.cpp  
@@ -218,5 +229,5 @@ ref struct R : I, J {
 };  
 ```  
   
-## 참고 항목  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>참고 항목  
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23988e9d8669bee558ec5418f44921d60bec08d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8496b5228fe4002bb1ca80f8fbe793fd5e16ca81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>예외: 예외 Catch 및 삭제
 다음 지침과 예제를 catch 하 고 예외를 삭제 하는 방법을 보여 줍니다. 대 한 자세한 내용은 **시도**, **catch**, 및 `throw` 키워드 참조 [c + + 예외 처리](../cpp/cpp-exception-handling.md)합니다.  

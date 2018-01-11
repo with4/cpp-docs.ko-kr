@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6fe2773ab5a6429f2ab2c863598dabb4dddef628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h의 제네릭 텍스트 매핑
 국가별 사용에 대 한 코드의 전송을 단순화 하기 위해는 [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 런타임 라이브러리는 [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-다양 한 데이터 형식을, 루틴 및 다른 개체에 대 한 특정 일반 텍스트 매핑. 1 바이트의 멀티 바이트에 대해 컴파일할 수 있는 제네릭 코드를 작성 하려면 Tchar.h에 정의 된 이러한 매핑을 사용 하 여 또는 [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] 문자를 사용 하 여 정의 하는 매니페스트 상수에 따라 집합을 `#define` 문. 제네릭 텍스트 매핑은 [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 없는 확장 [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] 호환 됩니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>일반 텍스트 매핑용 전처리기 지시문  
   
-|# 정의|컴파일 버전|예제|  
+|# 정의|컴파일 버전|예|  
 |---------------|----------------------|-------------|  
 |`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)](와이드 문자)|`_tcsrev`는 `_wcsrev`에 매핑됩니다.|  
 |`_MBCS`|멀티바이트 문자|`_tcsrev`는 `_mbsrev`에 매핑됩니다.|  

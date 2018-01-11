@@ -6,16 +6,43 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- valarray/std::operator!=
+- valarray/std::operator%
+- valarray/std::operator&amp;
+- valarray/std::operator&amp;&amp;
+- valarray/std::operator&gt;
+- valarray/std::operator&gt;&gt;
+- valarray/std::operator&gt;=
+- valarray/std::operator&lt;
+- valarray/std::operator&lt;&lt;
+- valarray/std::operator&lt;=
+- valarray/std::operator*
+- valarray/std::operator+
+- valarray/std::operator-
+- valarray/std::operator/
+- valarray/std::operator==
+- valarray/std::operator^
+- valarray/std::operator|
+- valarray/std::operator||
+dev_langs: C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: aa730db3fd5e9a3ea4919bb255d49532f7440981
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::operator!= (valarray), std::operator&amp; (valarray)
+- std::operator&amp;&amp; (valarray)
+- std::operator&gt; (valarray)
+- std::operator&gt;&gt; (valarray)
+- std::operator&gt;= (valarray)
+- std::operator&lt; (valarray)
+- std::operator&lt;&lt; (valarray)
+- std::operator&lt;= (valarray), std::operator== (valarray)
+ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 연산자
 ||||  
@@ -71,7 +98,7 @@ operator!=(
   
  세 번째 템플릿 연산자는 요소에 저장 `I` `left != right[I]`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_ne.cpp  
@@ -151,7 +178,7 @@ operator%(
 ### <a name="return-value"></a>반환 값  
  요소가 요소나 나머지 인 valarray의 `left` 나눈 `right`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_rem.cpp  
@@ -232,11 +259,11 @@ operator&(
  비트 AND 연산 요소나 조합의 요소가 valarray의 `left` 및 `right`합니다.  
   
 ### <a name="remarks"></a>설명  
- 비트 연산은 `char` 및 `int` 데이터 형식과 변환의 비트를 조작하는 데만 사용할 수 있으며 **float**, **double**, **longdouble**, `void``bool` 또는 보다 복잡한 기타 데이터 형식에는 사용할 수 없습니다.  
+ 비트 연산은 `char` 및 `int` 데이터 형식과 변환의 비트를 조작하는 데만 사용할 수 있으며 **float**, **double**, **longdouble**, `void`, `bool` 또는 보다 복잡한 기타 데이터 형식에는 사용할 수 없습니다.  
   
  비트 **AND**는 논리적 **AND**와 같은 진리표를 포함하지만 개별 비트 수준에서 데이터 형식에 적용됩니다. [operator&&](../standard-library/valarray-operators.md#amp)는 요소 수준에서 적용되어 0이 아닌 모든 값을 true로 계산하며, 결과는 부울 값의 valarray입니다. 반면 비트 **ANDoperator&**를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_bitand.cpp  
@@ -314,12 +341,12 @@ operator&&(
  개별 요소를 논리적 **AND**로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 결합할 두 valarray 중 두 번째 valarray입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 해당 요소가 bool 및 요소나 논리 결합 valarray **AND** 의 작동 `left` 및 `right`합니다.  
+ 해당 요소가 bool 및 논리의 요소나 조합이 됩니다 valarray **AND** 의 작동 `left` 및 `right`합니다.  
   
 ### <a name="remarks"></a>설명  
  논리적 **ANDoperator&&**는 요소 수준에서 적용되어 0이 아닌 모든 값을 true로 계산하며, 결과는 부울 값의 valarray입니다. 반면 비트 버전 **AND**, [operator&](../standard-library/valarray-operators.md#op_amp)를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_logand.cpp  
@@ -406,7 +433,7 @@ operator>(
 ### <a name="remarks"></a>설명  
  두 valarray의 요소 수가 같지 않으면 결과는 정의되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_gt.cpp  
@@ -493,7 +520,7 @@ operator>=(
 ### <a name="remarks"></a>설명  
  두 valarray의 요소 수가 같지 않으면 결과는 정의되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_ge.cpp  
@@ -576,7 +603,7 @@ operator>>(
 ### <a name="remarks"></a>설명  
  부호 있는 숫자의 부호는 유지됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_rs.cpp  
@@ -663,7 +690,7 @@ operator<(
 ### <a name="remarks"></a>설명  
  두 valarray의 요소 수가 같지 않으면 결과는 정의되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_lt.cpp  
@@ -750,7 +777,7 @@ operator<=(
 ### <a name="remarks"></a>설명  
  두 valarray의 요소 수가 같지 않으면 결과는 정의되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_le.cpp  
@@ -833,7 +860,7 @@ operator<<(
 ### <a name="remarks"></a>설명  
  부호 있는 숫자의 부호는 유지됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_ls.cpp  
@@ -913,7 +940,7 @@ operator*(
 ### <a name="return-value"></a>반환 값  
  한 valarray 요소 전체의 곱의 `left` 및 `right`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_eprod.cpp  
@@ -993,7 +1020,7 @@ operator+(
 ### <a name="return-value"></a>반환 값  
  한 valarray 요소 합계의 `left` 및 `right`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_esum.cpp  
@@ -1078,7 +1105,7 @@ operator-(
   
  차 = 피감수 - 감수  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_ediff.cpp  
@@ -1163,7 +1190,7 @@ operator/(
   
  몫 = 피제수/제수  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_equo.cpp  
@@ -1250,7 +1277,7 @@ operator==(
 ### <a name="remarks"></a>설명  
  클래스의 개체를 반환 하는 첫 번째 템플릿 연산자 [valarray\<bool >](../standard-library/valarray-bool-class.md), 각 해당 요소의 `I` 은 `left[I] == right[I]`합니다. 두 번째 템플릿 연산자는 요소에 저장 `I` `left[I] == right`합니다. 세 번째 템플릿 연산자는 요소에 저장 `I` `left == right[I]`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_eq.cpp  
@@ -1331,11 +1358,11 @@ operator^(
  한 valarray의 비트 조합 요소나 **XOR** 의 작동 `left` 및 `right`합니다.  
   
 ### <a name="remarks"></a>설명  
- 비트 연산은 `char` 및 `int` 데이터 형식과 변환의 비트를 조작하는 데만 사용할 수 있으며 **float**, **double**, `long double`, `void``bool` 또는 보다 복잡한 기타 데이터 형식에는 사용할 수 없습니다.  
+ 비트 연산을 데 사용할 수 있는 비트를 조작 `char` 및 `int` 데이터 형식 및 변형 아닌 **float**, **double**, `long double`, `void`, `bool` 또는 기타, 더 복잡 한 데이터 형식입니다.  
   
  비트 배타적 `OR`(**XOR**)의 의미 체계에서 *b*1 및 *b*2 비트가 지정되는 경우 *b*1 **XOR** *b*2는 비트 중 정확히 하나가 true이면 **true**이고 두 비트가 모두 false이거나 true이면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_xor.cpp  
@@ -1424,7 +1451,7 @@ operator|(
   
  비트 OR은 논리적 `OR`와 같은 진리표를 포함하지만 개별 비트 수준에서 데이터 형식에 적용됩니다. *b*1 및 *b*2가 지정되는 경우 *b*1 `OR` *b*2는 비트 중 하나 이상이 true이면 **true**이고 두 비트가 모두 false이면 **false**입니다. 논리적 `OR`[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor)는 요소 수준에서 적용되어 0이 아닌 모든 값을 **true**로 계산하며, 결과는 부울 값의 valarray입니다. 반면 비트 OR `operator|`를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_bitor.cpp  
@@ -1509,9 +1536,9 @@ operator||(
  Valarray 요소 형식의 `bool` 의 논리 OR 연산의 요소나 조합이 됩니다 `left` 및 `right`합니다.  
   
 ### <a name="remarks"></a>설명  
- 논리적 `OR``operator||`는 요소 수준에서 적용되어 0이 아닌 모든 값을 **true**로 계산하며, 결과는 부울 값의 valarray입니다. 반면 비트 버전 `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or)를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.  
+ 논리 `OR` `operator||` 로 0이 아닌 모든 값을 계산 하는 요소 수준에서 적용 **true**, 결과 부울 값의 valarray입니다. 반면 비트 버전 `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or)를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_op_logor.cpp  
@@ -1564,5 +1591,4 @@ The element-by-element result of the logical OR operator|| is the
   
 ## <a name="see-also"></a>참고 항목  
  [\<valarray>](../standard-library/valarray.md)
-
 

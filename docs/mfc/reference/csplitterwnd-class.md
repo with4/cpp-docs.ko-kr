@@ -83,11 +83,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d3ba13476ca5595e821ce8a233dae8520f190be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 706425dd8d729937d310da9cc2f09eac8ec1ad57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 클래스
 여러 개의 창이 포함된 창인 분할자 창 기능을 제공합니다.  
@@ -140,7 +141,7 @@ class CSplitterWnd : public CWnd
 |[CSplitterWnd::SplitColumn](#splitcolumn)|프레임 창이 세로로 분할 하는 지점을 나타냅니다.|  
 |[CSplitterWnd::SplitRow](#splitrow)|프레임 창이 가로로 분할 하는 지점을 나타냅니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -288,7 +289,7 @@ virtual BOOL Create(
   
  에 대 한 자세한 동적 분할 창, 문서에서 "분할 창"을 참조 [여러 문서 형식, 뷰 및 프레임 창](../../mfc/multiple-document-types-views-and-frame-windows.md), [기술 참고 29](../../mfc/tn029-splitter-windows.md), 및 `CSplitterWnd` 클래스 개요입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]  
   
 ##  <a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
@@ -399,7 +400,7 @@ virtual BOOL CreateView(
   
  프레임 워크는 또한 동적 분할 창 사용자 창, 행 또는 열을 분할 하는 경우 새 창을 만들려면이 멤버 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]  
   
 ##  <a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
@@ -682,7 +683,7 @@ int IdFromRowCol(
 ### <a name="remarks"></a>설명  
  이 멤버 함수 nonviews 창으로 만들기 위한 사용 되 고 창 존재 전에 호출 될 수도 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
 ##  <a name="ischildpane"></a>CSplitterWnd::IsChildPane  
@@ -786,7 +787,7 @@ virtual void RecalcLayout();
   
  프레임 워크는 사용자 분할 창 크기를 조정 하거나 분할을 이동 될 때마다이 멤버 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CSplitterWnd::SetColumnInfo](#setcolumninfo)합니다.  
   
 ##  <a name="setactivepane"></a>CSplitterWnd::SetActivePane  
@@ -839,7 +840,7 @@ void SetColumnInfo(
   
  프레임 워크가 표시 분할 창, 분할자 창의 클라이언트 영역 오른쪽 아래 모서리에 왼쪽 위에서 작동 하 여 이상적인 차원에 따른 행과 열에 있는 창 레이아웃 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]  
   
 ##  <a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  

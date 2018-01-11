@@ -14,16 +14,19 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab7ad407d5a3c2bb207f2dca601cfc583696ec88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 25a1f041f9f2968fd74749727044573f1d787797
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>ODBC 데이터베이스 응용 프로그램 디자인과 작성
 이러한 항목을 사용 하 여 디자인 및 ODBC 데이터베이스 응용 프로그램을 설정할 수 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [ODBC 및 MFC](../../data/odbc/odbc-and-mfc.md)  
   

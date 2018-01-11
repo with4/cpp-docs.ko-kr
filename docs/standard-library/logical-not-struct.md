@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 28d04e39518584249ee6cbd1d0966dc0d4eb9f52
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8d37a928bf385a0c3a836c294d838237e5142be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicalnot-struct"></a>logical_not 구조체
 인수에 대해 논리적 NOT 연산(`operator!`)을 수행하는 미리정의된 함수 개체입니다.  
@@ -55,7 +56,7 @@ struct logical_not<void>
 ## <a name="return-value"></a>반환 값  
  `!Left`의 결과입니다. 특수화된 템플릿은 `operator!`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // functional_logical_not.cpp  

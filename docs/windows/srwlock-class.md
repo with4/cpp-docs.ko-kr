@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6721620490a00da0b9c8fa039be0379f4d7dd1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1325a089739b3820009aa239f56805264dbb6b83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="srwlock-class"></a>SRWLock 클래스
 슬림 판독기/작성기 잠금을 나타냅니다.  
@@ -60,7 +63,7 @@ class SRWLock;
   
 ### <a name="protected-data-member"></a>보호 된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[SRWLock::SRWLock_ 데이터 멤버](../windows/srwlock-srwlock-data-member.md)|현재 SRWLock 개체에 대한 기본 잠금 변수를 포함합니다.|  
   

@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86d286b31d8ac9255af6f6d20400213f39576a47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe77bb54a72c340a2fbf2a986a4346397cff11fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3850"></a>컴파일러 오류 C3850
 'char': 유니버설 문자 이름에 잘못된 문자를 지정했습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  C++로 컴파일된 코드에서 유니버설 문자 이름은 문자열 또는 문자 리터럴의 유효한 유니코드 코드 포인트를 모두 사용할 수 있습니다. 리터럴 외부에서 유니버설 문자 이름은 0000-001F(포함) 또는 007F-009F(포함) 범위의 제어 문자나 기본 소스 문자 집합의 멤버를 나타낼 수 없습니다.  자세한 내용은 [Character Sets](../../cpp/character-sets2.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3850을 생성하고 해결 방법을 보여 줍니다.  
   
 ```cpp  

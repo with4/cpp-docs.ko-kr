@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1968d34302cea355f174c96fb51b5bec3941fcb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc40ac38d4f74848448b26284ad225faad04864e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 클래스
 창 관리 멤버와 함께 Windows MDI(다중 문서 인터페이스) 프레임 창 기능을 제공합니다.  
@@ -119,7 +120,7 @@ class CMDIFrameWnd : public CFrameWnd
   
 -   MDI 프레임 창 구현 역시 **ID_WINDOW_NEW**, 새 프레임와 현재 문서에서 보기 생성 되어 있습니다. 응용 프로그램은 MDI 창을 처리 사용자 지정 하려면 이러한 기본 명령 구현 재정의할 수 있습니다.  
   
- C + +를 사용 하지 마십시오 **삭제** 연산자를 프레임 창을 삭제 합니다. 대신 `CWnd::DestroyWindow` 를 사용하세요. `CFrameWnd` 구현의 `PostNcDestroy` 창이 소멸 될 때에 c + + 개체를 삭제 합니다. 사용자 프레임 창에 기본값을 닫을 때 `OnClose` 처리기를 호출 하는 `DestroyWindow`합니다.  
+ C + +를 사용 하지 마십시오 **삭제** 연산자를 프레임 창을 삭제 합니다. 대신 `CWnd::DestroyWindow`를 사용하세요. `CFrameWnd` 구현의 `PostNcDestroy` 창이 소멸 될 때에 c + + 개체를 삭제 합니다. 사용자 프레임 창에 기본값을 닫을 때 `OnClose` 처리기를 호출 하는 `DestroyWindow`합니다.  
   
  대 한 자세한 내용은 `CMDIFrameWnd`, 참조 [프레임 창](../../mfc/frame-windows.md)합니다.  
   
@@ -147,7 +148,7 @@ CMDIFrameWnd();
 ### <a name="remarks"></a>설명  
  호출 된 **만들기** 또는 `LoadFrame` 멤버 함수를 표시 하는 MDI 프레임 창을 만듭니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
   
 ##  <a name="createclient"></a>CMDIFrameWnd::CreateClient  
@@ -172,7 +173,7 @@ virtual BOOL CreateClient(
 ### <a name="remarks"></a>설명  
  재정의 하는 경우이 멤버 함수를 호출 해야는 `OnCreate` 직접 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#14](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]  
   
 ##  <a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
@@ -202,7 +203,7 @@ CMDIChildWnd* CreateNewChild(
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 자식 창을 MDI 프레임 창의 만든 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]  
   
  이 예제는 Q201045, 기술 자료 문서에서 "방법: 여러 창 형식을 비-문서/뷰 MDI 응용 프로그램에 추가 합니다." 기술 자료 문서에서 사용할 수 있는 [http://support.microsoft.com](http://support.microsoft.com/)합니다.  
@@ -226,7 +227,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
   
  표준 메뉴 명령 Id를 사용 하지 않는 창 메뉴에 있는 경우이 멤버 함수를 재정의 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#16](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]  
   
 ##  <a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
@@ -248,7 +249,7 @@ void MDIActivate(CWnd* pWndActivate);
 > [!NOTE]
 >  MDI 자식 창은 MDI 프레임 창을 독립적으로 활성화 됩니다. 프레임 활성화 되 면 마지막으로 활성화 된 자식 창을 보내집니다는 [WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate) 를 활성 창 프레임 및 캡션 표시줄 하지만 그릴 메시지에서 다른 수신 하지 `WM_MDIACTIVATE` 메시지입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup)합니다.  
   
 ##  <a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
@@ -266,7 +267,7 @@ void MDICascade(int nType);
 ### <a name="remarks"></a>설명  
  첫 번째 버전 `MDICascade`, 매개 변수 없이 비활성화 된 것을 비롯 한 모든 MDI 자식 창을 계단식으로 배열 합니다. 지정 하는 경우 필요에 따라 두 번째 버전은 사용 하지 않도록 설정 하는 cascade MDI 자식 창을 하지 않는 `MDITILE_SKIPDISABLED` 에 대 한는 `nType` 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#17](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]  
   
 ##  <a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
@@ -283,7 +284,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ### <a name="return-value"></a>반환 값  
  활성 MDI 자식 창에 대 한 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)합니다.  
   
 ##  <a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
@@ -296,7 +297,7 @@ void MDIIconArrange();
 ### <a name="remarks"></a>설명  
  최소화 됩니다 자식 창에는 영향을 주지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMDIFrameWnd::MDICascade](#mdicascade)합니다.  
   
 ##  <a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
@@ -315,7 +316,7 @@ void MDIMaximize(CWnd* pWnd);
   
  현재 활성 MDI 자식 창이 최대화 될 때 다른 MDI 자식 창이 활성화 되어 있으면 Windows 현재 활성 자식 복원 되 고 새로 활성화 된 자식 창을 최대화 하는.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)합니다.  
   
 ##  <a name="mdinext"></a>CMDIFrameWnd::MDINext  
@@ -328,7 +329,7 @@ void MDINext();
 ### <a name="remarks"></a>설명  
  현재 활성 MDI 자식 창을 최대화 하는 경우 멤버 함수는 현재 활성 자식 복원 하 고 새로 활성화 된 자식 극대화 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#18](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]  
   
 ##  <a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
@@ -352,7 +353,7 @@ void MDIRestore(CWnd* pWnd);
  `pWnd`  
  복원 하려면 창을 가리킵니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore)합니다.  
   
 ##  <a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
@@ -383,7 +384,7 @@ CMenu* MDISetMenu(
   
  MDI 자식 창을 관리 하는 프레임 워크를 사용 하는 경우에이 멤버 함수를 호출 하지 마십시오.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#19](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_7.cpp)]  
   
  [!code-cpp[NVC_MFCWindowing#20](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]  
@@ -409,7 +410,7 @@ void MDITile(int nType);
 ### <a name="remarks"></a>설명  
  첫 번째 버전 `MDITile`, 매개 변수 없이 Windows 버전 3.1 이상에서 세로로 창을 바둑판식으로 배열 합니다. 두 번째 버전 창을 바둑판식으로 배열 세로 또는 가로로 값에 따라는 `nType` 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMDIFrameWnd::MDICascade](#mdicascade)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

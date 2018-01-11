@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebf8d12c7c3b0f9578724fe772f24c0bc8c845ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68089c80528265a4375767d9f0a744cb95cb970b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="const-and-volatile-pointers"></a>const 및 volatile 포인터
 [const](../cpp/const-cpp.md) 및 [휘발성](../cpp/volatile-cpp.md) 키워드는 포인터 처리 방법을 변경 합니다. **const** 키워드 지정 초기화 된 후 포인터를 수정할 수 없습니다 5d; 포인터 이후에 수정 되지 않도록에서 보호 됩니다.  

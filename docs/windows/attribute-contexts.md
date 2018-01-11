@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fceb15c713eee25c4ae04ef2a095737e587170a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-contexts"></a>특성 컨텍스트
 4 개의 기본 필드를 사용 하 여 c + + 특성을 설명할 수 있습니다: 대상에 적용 될 수 있습니다 (**에 적용 됩니다.**)는 인지 반복 하는 경우, (**Repeatable**), 필요한 (다른특성의존재여부 **필수 특성**), 및 이며 다른 특성과 호환 되지 않는 기능 (**잘못 된 특성이**). 이러한 필드는 각 특성의 참조 항목에 있는 해당 테이블에 나열 됩니다. 이러한 각 필드 아래에 설명 되어 있습니다.  

@@ -16,11 +16,14 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af3742ae4c8f22dd2b5cef8189d02e8f19f7c9fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b78b244a93bea0c669c37b5df32ec7146f7ac3b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variable-argument-lists--ccli"></a>가변 인수 목록(...)(C++/CLI)
 사용 하는 방법을 보여 주는이 예제는 `...` Visual c + + 가변 개수의 인수는 함수를 구현 하는 구문입니다.  
@@ -30,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
  매개 변수를 사용 하 여 `...` 매개 변수 목록의 마지막 매개 변수 여야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="code"></a>코드  
   

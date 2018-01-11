@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50adbc6faa802802c36e18c614992341def06331
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fcbed7cec501257f03ab13447d54e081c1d46c76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-dialog-classes"></a>일반 대화 상자 클래스
 클래스 외에도 [CDialog](../mfc/reference/cdialog-class.md), MFC 여러 클래스에서 파생 된 제공 `CDialog` 다음 표와 같이 자주 사용 되는 대화 상자를 캡슐화 하 합니다. 캡슐화 된 대화 상자 "일반 대화 상자" 이라고 하며 일부 Windows 공용 대화 라이브러리 (COMMDLG 합니다. DLL)입니다. 버전 3.1 이상 Windows의 일부인 일반 대화 상자 템플릿 리소스 및 이러한 클래스에 대 한 코드 창에 제공 됩니다.  

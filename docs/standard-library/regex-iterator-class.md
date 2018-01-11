@@ -27,11 +27,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ef28175227bc35641909af71268a86804218649e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13744086b9e25c5f3be880885fae624822fd5f73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regexiterator-class"></a>regex_iterator 클래스
 일치 항목에 대한 반복기 클래스입니다.  
@@ -110,7 +111,7 @@ typedef std::ptrdiff_t difference_type;
 ### <a name="remarks"></a>설명  
  이 형식은 `std::ptrdiff_t`의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_difference_type.cpp   
@@ -163,7 +164,7 @@ typedef std::forward_iterator_tag iterator_category;
 ### <a name="remarks"></a>설명  
  이 형식은 `std::forward_iterator_tag`의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_iterator_category.cpp   
@@ -220,7 +221,7 @@ bool operator!=(const regex_iterator& right);
 ### <a name="remarks"></a>설명  
  멤버 함수는 `!(*this == right)`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_operator_ne.cpp   
@@ -273,7 +274,7 @@ const match_results<BidIt>& operator*();
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 저장된 값 `match`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_operator_star.cpp   
@@ -329,7 +330,7 @@ regex_iterator& operator++(int);
   
  두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_operator_inc.cpp   
@@ -386,7 +387,7 @@ bool operator==(const regex_iterator& right);
 ### <a name="remarks"></a>설명  
  멤버 함수는 `*this` 와 `right` 가 둘 다 시퀀스의 끝 반복기이거나 둘 다 시퀀스의 끝 반복기가 아니고 `begin == right.begin`, `end == right.end`, `pregex == right.pregex`및 `flags == right.flags`가 아닌 경우 true를 반환합니다. 그렇지 않으면 false를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_operator_as.cpp   
@@ -439,7 +440,7 @@ const match_results<BidIt> * operator->();
 ### <a name="remarks"></a>설명  
  멤버 함수는 저장된 값 `match`의 주소를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_operator_arrow.cpp   
@@ -492,7 +493,7 @@ typedef match_results<BidIt> *pointer;
 ### <a name="remarks"></a>설명  
  이 형식은 `match_results<BidIt>*`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_pointer.cpp   
@@ -545,7 +546,7 @@ typedef match_results<BidIt>& reference;
 ### <a name="remarks"></a>설명  
  이 형식은 `match_results<BidIt>&`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_reference.cpp   
@@ -617,7 +618,7 @@ regex_iterator(BidIt first,
 ### <a name="remarks"></a>설명  
  첫 번째 생성자는 시퀀스의 끝 반복기를 생성합니다. 두 번째 생성자는 `begin` 로 저장된 값 `first`, `end` 로 저장된 값 `last`, `pregex` 로 저장된 값 `&re`및 `flags` 로 저장된 값 `f`를 초기화합니다. 그런 다음 `regex_search(begin, end, match, *pregex, flags)`를 호출합니다. 검색에 실패하면 생성자는 개체를 시퀀스의 끝 반복기로 설정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_construct.cpp   
@@ -671,7 +672,7 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 ### <a name="remarks"></a>설명  
  typedef는 `basic_regex<Elem, RXtraits>`의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_regex_type.cpp   
@@ -725,7 +726,7 @@ typedef match_results<BidIt> value_type;
 ### <a name="remarks"></a>설명  
  이 형식은 `match_results<BidIt>`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_iterator_value_type.cpp   

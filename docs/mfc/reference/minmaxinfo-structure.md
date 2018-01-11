@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 997e00d8d4fd70281f2dbfeeecbc9d5823c5050a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2c799299ef9058648d6b056dcd02fe580f06148
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="minmaxinfo-structure"></a>MINMAXINFO 구조체
 `MINMAXINFO` 구조 창 최대화 크기와 위치 및 최소 및 최대 추적 크기에 대 한 정보를 포함 합니다.  

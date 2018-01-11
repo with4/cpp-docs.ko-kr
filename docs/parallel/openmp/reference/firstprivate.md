@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0645eee74ab162c444531c141b297665653907b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c7d4a5ba23e343f7858bf3320ed05ebce84f1c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="firstprivate"></a>firstprivate
 병렬 구문 하기 전에 존재 하기 때문에 각 스레드에 변수의 자체 인스턴스에 있어야 하 고 변수 값으로 변수를 초기화 해야 한다는 지정 합니다.  
@@ -51,7 +52,7 @@ firstprivate(var)
   
  자세한 내용은 참조 [2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용 하는 예제에 대 한 `firstprivate`의 예제를 참조 [개인](../../../parallel/openmp/reference/private-openmp.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

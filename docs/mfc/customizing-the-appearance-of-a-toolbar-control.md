@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 452debf30eec9f5ca5eacd562302a578e0d0138a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c40b7e055585a11b90c2cec1fefb967b51b35cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>도구 모음 컨트롤의 모양 사용자 지정
 클래스 `CToolBarCtrl` 모양을 (및 경우에 따라서는 동작)의 도구 모음 개체에 영향을 주는 많은 스타일을 제공 합니다. 도구 모음 개체를 설정 하 여 수정는 `dwCtrlStyle` 의 매개 변수는 `CToolBarCtrl::Create` (또는 `CToolBar::CreateEx`) 도구 모음 컨트롤을 처음 만들 때 멤버 함수입니다.  

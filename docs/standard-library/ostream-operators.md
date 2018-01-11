@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30924dfb52c2bf07f30cbbeaca2cbb48ffe5a155
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f78befe92263dd6b4ef666c865ef9dd65c7103db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 연산자
 ||  
@@ -266,7 +267,7 @@ basic_ostream<_Elem, _Tr>& operator<<(
   
  `_Ostr` `<<` `val`을 반환하고 [RValue 참조](../cpp/rvalue-reference-declarator-amp-amp.md)를 `_Ostr`(프로세스의 lvalue)로 변환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `operator<<`를 사용하는 방법의 예제를 보려면 [flush](../standard-library/ostream-functions.md#flush)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

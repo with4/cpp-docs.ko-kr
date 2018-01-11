@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0036a39681ba73258839f05ffcc83e0fbb50dfe7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95b7db2678c03b0508a1507567f8bedcf243cd4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn029-splitter-windows"></a>TN029: 분할 창
 이 노트에서는 MFC 설명 [CSplitterWnd 클래스](../mfc/reference/csplitterwnd-class.md), 창 분할 및 다른 창 창 크기를 조정 관리를 제공 합니다.  

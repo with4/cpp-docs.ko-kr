@@ -1,35 +1,36 @@
 ---
-title: "특성 대상(C++ 구성 요소 확장명) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "사용자 지정 특성을 대상으로"
+title: "특성 대상 (c + + 구성 요소 확장명) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 특성 대상(C++ 구성 요소 확장명)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="attribute-targets-c-component-extensions"></a>특성 대상(C++ 구성 요소 확장명)
 특성 사용 지정자를 사용하여 특성 대상을 지정할 수 있습니다.  각 특성을 정의하여 특정 언어 요소에 적용합니다. 예를 들어, 특성을 정의하여 클래스와 구조체에만 적용할 수도 있습니다.  다음 목록에서는 사용자 지정 특성을 사용할 수 있는 가능한 구문 요소를 보여 줍니다. 이러한 값의 조합(논리적 OR)을 사용할 수 있습니다.  
   
- 하나 이상의 전달할 특성 대상을 지정 하려면 <xref:System.AttributeTargets> 열거자를 <xref:System.AttributeUsageAttribute> 특성을 정의할 때입니다.  
+ 특성 대상을 지정하려면 특성을 정의할 때 하나 이상의 <xref:System.AttributeTargets> 열거자를 <xref:System.AttributeUsageAttribute>에 전달합니다.  
   
  다음은 유효한 특성 대상 목록입니다.  
   
--   `All` (모든 구문에 적용 됨)  
+-   `All`(모든 구문에 적용 됨)  
   
     ```  
   
@@ -41,7 +42,7 @@ manager: "ghogen"
   
     ```  
   
--   `Assembly` (전체 어셈블리에 적용)  
+-   `Assembly`(전체 어셈블리에 적용)  
   
     ```  
   
@@ -53,7 +54,7 @@ manager: "ghogen"
   
     ```  
   
--   `Module` (전체 모듈에 적용)  
+-   `Module`(전체 모듈에 적용 됨)  
   
     ```  
   

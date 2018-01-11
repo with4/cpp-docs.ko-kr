@@ -1,34 +1,36 @@
 ---
 title: "ICommandPropertiesImpl 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandPropertiesImpl"
-  - "ATL.ICommandPropertiesImpl"
-  - "ATL::ICommandPropertiesImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandPropertiesImpl 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandPropertiesImpl
+- ATL.ICommandPropertiesImpl
+- ATL::ICommandPropertiesImpl
+dev_langs: C++
+helpviewer_keywords: ICommandPropertiesImpl class
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5878e7fa6345e294025b45474b1b384d01283c49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandPropertiesImpl 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Provides an implementation of the [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx) interface.  
+# <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 클래스
+구현을 제공는 [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx) 인터페이스입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <class T, class PropClass = T>  
@@ -36,28 +38,28 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
    : public ICommandProperties, public CUtlProps<PropClass>  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- Your class, derived from  
+ 파생 클래스  
   
  `PropClass`  
- Your properties class.  
+ 속성 클래스입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Interface Methods  
+### <a name="interface-methods"></a>인터페이스 메서드  
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/icommandpropertiesimpl-getproperties.md)|Returns the list of properties in the Rowset property group that are currently requested for the rowset.|  
-|[SetProperties](../../data/oledb/icommandpropertiesimpl-setproperties.md)|Sets properties in the Rowset property group.|  
+|[GetProperties](../../data/oledb/icommandpropertiesimpl-getproperties.md)|현재 행 집합에 대 한 요청 된 행 집합 속성 그룹의 속성 목록을 반환 합니다.|  
+|[SetProperties](../../data/oledb/icommandpropertiesimpl-setproperties.md)|행 집합 속성 그룹의 속성을 설정합니다.|  
   
-## 설명  
- This is mandatory on commands.  The implementation is provided by a static function defined by the [BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md) macro.  
+## <a name="remarks"></a>설명  
+ 명령에서 필수입니다. 정의 된 정적 함수에서 구현 되는 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 매크로입니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

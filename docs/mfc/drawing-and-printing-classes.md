@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 160d85e3cba62e102e823c8eeb3b9a3190c812b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4917bf4503958ccdacb7f38082139a36d0e8374
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drawing-and-printing-classes"></a>클래스 그리기 및 인쇄
 Windows에서 모든 그래픽은 출력은 DC(장치 컨텍스트)라는 가상 그리기 영역에 그려집니다. MFC는 비트맵, 브러시, 색상표, 펜 같은 Windows 그리기 도구를 캡슐화할 뿐만 아니라 다양한 DC 형식을 캡슐화하는 클래스를 제공합니다.  

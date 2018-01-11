@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ea704fce0aebd3ffa83410104b38ceb5d359a6c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80cda9575b604c9dd8e0000428c2d32a487079dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3286"></a>컴파일러 오류 C3286  
   
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/24/2017
   
 반복 변수에는 저장소 클래스를 지정할 수 없습니다. 자세한 내용은 참조 [저장소 클래스 (c + +)](../../cpp/storage-classes-cpp.md) 및 [각 항목에 대해에서](../../dotnet/for-each-in.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 다음 샘플에서는 c 3286, 오류가 발생 하는 경우 및 올바른 사용법을 보여 줍니다.  
   

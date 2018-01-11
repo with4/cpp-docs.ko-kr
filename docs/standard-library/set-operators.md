@@ -13,10 +13,9 @@ f1_keywords:
 - set/std::operator&lt;
 - set/std::operator&lt;=
 - set/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: b4256ebc-c449-4688-95db-fced42d20d4d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (set)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 5bae2e375833cae5d775085519e145a4dab69eab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; 연산자
 ||||  
@@ -60,7 +58,7 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 ### <a name="remarks"></a>설명  
  set 개체 간의 비교는 해당 요소 간의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 집합은 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_op_ne.cpp  
@@ -117,7 +115,7 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 ### <a name="remarks"></a>설명  
  set 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 작음 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_op_lt.cpp  
@@ -174,7 +172,7 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 ### <a name="remarks"></a>설명  
  set 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 작거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_op_le.cpp  
@@ -238,7 +236,7 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 ### <a name="remarks"></a>설명  
  set 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 집합은 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_op_eq.cpp  
@@ -295,7 +293,7 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 ### <a name="remarks"></a>설명  
  set 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 큼 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_op_gt.cpp  
@@ -352,7 +350,7 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 ### <a name="remarks"></a>설명  
  set 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 크거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // set_op_ge.cpp  
@@ -416,7 +414,7 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 ### <a name="remarks"></a>설명  
  multiset 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 set 또는 multiset는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multiset_op_ne.cpp  
@@ -473,7 +471,7 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 ### <a name="remarks"></a>설명  
  multiset 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 작음 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multiset_op_lt.cpp  
@@ -534,7 +532,7 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 ### <a name="remarks"></a>설명  
  multiset 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 작거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multiset_op_le.cpp  
@@ -604,7 +602,7 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 ### <a name="remarks"></a>설명  
  multiset 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 set 또는 multiset는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multiset_op_eq.cpp  
@@ -661,7 +659,7 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 ### <a name="remarks"></a>설명  
  multiset 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 큼 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multiset_op_gt.cpp  
@@ -722,7 +720,7 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 ### <a name="remarks"></a>설명  
  multiset 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 크거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multiset_op_ge.cpp  
@@ -774,7 +772,6 @@ The multiset s1 is greater than or equal to the multiset s4.
   
 ## <a name="see-also"></a>참고 항목  
  [\<set>](../standard-library/set.md)
-
 
 
 

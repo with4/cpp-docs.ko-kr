@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8fd62c603fd657c545c8fff4e6341f1964d822f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82e562ceb73da2b103360ab9607cecbbe9f1da02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 컨트롤 마법사
 ActiveX 컨트롤은 특정 유형의 [자동화 서버](../../mfc/automation-servers.md);는 재사용 가능한 구성 요소입니다. ActiveX 컨트롤을 호스팅하는 응용 프로그램은는 [자동화 클라이언트](../../mfc/automation-clients.md) 해당 컨트롤의 합니다. 이러한 다시 사용할 수 있는 구성 요소를 만드는 것이 목표인 경우 컨트롤을 만드는이 마법사를 사용 합니다. 참조 [MFC ActiveX 컨트롤](../../mfc/mfc-activex-controls.md) 자세한 정보에 대 한 합니다.  
@@ -67,7 +68,7 @@ ActiveX 컨트롤은 특정 유형의 [자동화 서버](../../mfc/automation-se
 -   컨트롤 없는 기존 Windows 컨트롤에 따라, 표시 되 고 사용자 인터페이스가, 포함 하는 경우 활성화 되는 **에 대 한** 대화 상자. 이러한 기본 설정을 변경할 수 있습니다는 [제어 설정](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) 페이지.  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual c + + 프로젝트 만들기 및 관리](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Visual C++ 프로젝트 만들기 및 관리](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Visual c + + 프로젝트 형식](../../ide/visual-cpp-project-types.md)   
  [개념](../../atl/active-template-library-atl-concepts.md)
 

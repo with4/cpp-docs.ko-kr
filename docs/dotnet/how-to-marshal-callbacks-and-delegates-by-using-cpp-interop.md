@@ -20,18 +20,21 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a835dbdbce23f7f92f13fabd038d6e294345981
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dbae96aeb7b11105a1a2aa30aa513c8d94011a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>방법: C++ Interop를 사용하여 콜백 및 대리자 마샬링
 이 항목 마샬링하는 방법을 보여 줍니다 하 고 Visual c + +를 사용 하 여 관리 코드와 비관리 코드 (콜백의 관리 되는 버전)을 위임 합니다.  
   
  다음 코드 예제에서 사용 된 [관리, 관리 되지 않는](../preprocessor/managed-unmanaged.md) #pragma 지시문을 구현 하 관리는 관리 되지 않는 동일한 파일의 함수는 함수를 별도 파일에 정의 될 수도 있습니다. 관리 되지 않는 함수만 포함 된 파일 사용 하 여 컴파일할 필요가 없습니다는 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 관리 되는 대리자를 트리거하는 관리 되지 않는 API를 구성 하는 방법을 보여 줍니다. 관리 되는 대리자가 interop 메서드 중 하나를 <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, 대리자에 대 한 기본 진입점을 검색 하는 데 사용 됩니다. 그러면이 주소는 관리 되는 함수로 구현 된 사실 모르는 상태로 호출 하는 관리 되지 않는 함수에 전달 됩니다.  
   
  다음에 유의 있지만 핀에 필요 하지 않은 사용 하 여 대리자 [pin_ptr (C + + /cli CLI)](../windows/pin-ptr-cpp-cli.md) 재배치 하거나 가비지 수집기에 의해 삭제 하지 못하게 합니다. 예기치 않은 가비지 수집에 보호 필요 하지만 고정 컬렉션이 않도록 또한 재배치 방지 있지만 필요한 것 보다 더 나은 보호를 제공 합니다.  
@@ -84,7 +87,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 앞의 예와 유사 하지만 경우 제공 된 함수 포인터 저장 되어 관리 되지 않는 API에서 있으므로 호출할 수 있습니다 언제 든 지 가비지 수집 임의의 기간에 대 한 보류 수를 요구 합니다. 다음 예제에서는의 전역 인스턴스를 사용 하 여 결과적으로, <xref:System.Runtime.InteropServices.GCHandle> 대리자 재배치 되는, 독립적인 함수 범위의 되 고 하지 못하도록 합니다. 첫 번째 예제에서 설명 했 듯이 pin_ptr를 사용 하 여 이러한 예제에 대 한 필요는 없지만 경우으로 작동 하지 누르고, pin_ptr의 범위를 하나의 함수로 제한 됩니다.  
   
 ```  

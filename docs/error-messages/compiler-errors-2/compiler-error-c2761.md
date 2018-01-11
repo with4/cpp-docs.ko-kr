@@ -15,18 +15,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7670c3fa67579c218024dfd3f1f585ad57cf37e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 978ec4af1371f06ac5577f3dde66f6e7b62d0e4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2761"></a>컴파일러 오류 C2761
 'function': 멤버 함수를 재선언 할 수 없습니다  
   
  멤버 함수를 다시 선언할 수 없습니다. 정의할 수 있지만 하지 다시 선언할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2761 오류가 발생 합니다.  
   
 ```  
@@ -41,7 +42,7 @@ void a::test;  // C2761
   
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  클래스 또는 구조체의 비정적 멤버를 정의할 수 없습니다.  다음 샘플에서는 C2761 오류가 발생 합니다.  
   
 ```  

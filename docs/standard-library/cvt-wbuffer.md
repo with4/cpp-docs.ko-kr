@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40175e8d7e9c81295efd9cda96a63625b40c40b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57b5b7a2939dfeea0ead87851b4bb4cef953b94d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcvtwbuffergt"></a>&lt;cvt/wbuffer&gt;
 이전 버전의 Visual Studio에서는 `<cvt/wstring>` 헤더가 stdext::cvt 네임스페이스의 템플릿 클래스 [wbuffer_convert 클래스](../standard-library/wbuffer-convert-class.md)를 정의했습니다. 이 헤더는 이전 버전과 호환성을 위해 유지됩니다. 새 코드는 `std` 네임스페이스의 [\<locale>](../standard-library/locale.md)에 정의된 클래스 버전을 사용해야 합니다.  

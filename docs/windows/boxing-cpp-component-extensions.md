@@ -1,50 +1,52 @@
 ---
-title: "Boxing  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boxing, Visual C++"
+title: "Boxing (c + + 구성 요소 확장명) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: boxing, Visual C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 15fa5471280935c54cdb936af378634e2b60cacd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Boxing  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 컴파일러는 *boxing*이라는 프로세스에서 값 형식을 개체로 변환하고 *unboxing*이라는 프로세스에서 개체를 값 형식으로 변환할 수 있습니다.  
+# <a name="boxing--c-component-extensions"></a>Boxing(C++ 구성 요소 확장)
+Visual c + + 컴파일러 호출 프로세스의 개체에 값 형식을 변환할 수 *boxing*, 이라는 프로세스에서 값 형식에 개체를 변환 하 고 *unboxing*합니다.  
   
-## 모든 런타임  
- \(이 언어 기능에는 모든 런타임에 적용되는 설명이 없습니다.\)  
+## <a name="all-runtimes"></a>모든 런타임  
+ (이 언어 기능에는 모든 런타임에 적용되는 설명이 없습니다.)  
   
-## Windows 런타임  
- [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)]는 boxing 값 형식 및 unboxing 참조 형식에 대한 간단한 구문을 지원합니다.  값 형식은 형식 `Object`의 변수에 할당될 때 boxing됩니다.  `Object` 변수는 값 형식 변수에 할당되고 unboxing된 형식이 괄호 안에 지정될 때, 즉 개체 변수가 값 형식으로 캐스팅될 때 unboxing됩니다.  
+## <a name="windows-runtime"></a>Windows 런타임  
+ C + + /cli CX 값 형식을 boxing 및 unboxing 참조 형식에 대 한 약식 구문을 지원 합니다. 값 형식은 형식 `Object`의 변수에 할당될 때 boxing됩니다. `Object` 변수는 값 형식 변수에 할당되고 unboxing된 형식이 괄호 안에 지정될 때, 즉 개체 변수가 값 형식으로 캐스팅될 때 unboxing됩니다.  
   
 ```  
   
-Platform::Object^ object_variable  = value_variable;  
+  Platform::Object^  
+  object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
   
 ```  
   
-### 요구 사항  
- 컴파일러 옵션: **\/ZW**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/ZW**  
   
-### 예  
- 다음 코드 예제에서는 `DateTime` 값을 boxing 및 unboxing합니다.  먼저 예제에서는 현재 날짜 및 시간을 나타내는 DateTime 값을 가져오고 이를 DateTime 변수에 할당합니다.  그다음에 DateTime은 Object 변수에 할당하는 방식으로 boxing됩니다.  마지막으로 boxing된 값은 또 다른 DateTime 변수에 할당하는 방식으로 unboxing됩니다.  
+### <a name="examples"></a>예제  
+ 다음 코드 예제에서는 `DateTime` 값을 boxing 및 unboxing합니다. 먼저 예제에서는 현재 날짜 및 시간을 나타내는 DateTime 값을 가져오고 이를 DateTime 변수에 할당합니다. 그다음에 DateTime은 Object 변수에 할당하는 방식으로 boxing됩니다. 마지막으로 boxing된 값은 또 다른 DateTime 변수에 할당하는 방식으로 unboxing됩니다.  
   
- 예제를 테스트하려면 BlankApplication 프로젝트를 만들고, BlankPage::OnNavigatedTo\(\) 메서드를 바꾸고, 닫는 대괄호의 중단점 및 변수 str1에 대한 할당을 지정합니다.  예제가 닫는 대괄호에 도달하면 str1을 검사합니다.  
+ 예제를 테스트하려면 BlankApplication 프로젝트를 만들고, BlankPage::OnNavigatedTo() 메서드를 바꾸고, 닫는 대괄호의 중단점 및 변수 str1에 대한 할당을 지정합니다. 예제가 닫는 대괄호에 도달하면 str1을 검사합니다.  
   
 ```  
   
@@ -80,12 +82,12 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
   
 ```  
   
- 자세한 내용은 [Boxing\(C\+\+\/CX\)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx)을 참조하세요.  
+ 자세한 내용은 참조 [Boxing (C + + /cli CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx)합니다.  
   
-## 공용 언어 런타임  
- Visual C\+\+ 컴파일러에서는 값 형식을 <xref:System.Object>로 boxing합니다.  값 형식을 <xref:System.Object>로 변환하는 컴파일러에서 정의된 변환 때문에 이 작업이 가능합니다.  
+## <a name="common-language-runtime"></a>공용 언어 런타임  
+ Visual C++ 컴파일러에서는 값 형식을 <xref:System.Object>로 boxing합니다.  값 형식을 <xref:System.Object>로 변환하는 컴파일러에서 정의된 변환 때문에 이 작업이 가능합니다.  
   
- Boxing 및 unboxing을 통해 값 형식으로 개체로 처리할 수 있습니다.  구조체 형식 및 int와 같은 기본 제공 형식을 비롯하여 값 형식을 <xref:System.Object> 형식으로 변환하거나 그 반대로 변환할 수 있습니다.  
+ Boxing 및 unboxing을 통해 값 형식으로 개체로 처리할 수 있습니다. 구조체 형식 및 int와 같은 기본 제공 형식을 비롯하여 값 형식을 <xref:System.Object> 형식으로 변환하거나 그 반대로 변환할 수 있습니다.  
   
  자세한 내용은 다음을 참조하세요.  
   
@@ -97,10 +99,10 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
   
 -   [표준 변환 및 암시적 boxing](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
-### 요구 사항  
- 컴파일러 옵션: **\/clr**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/clr**  
   
-### 예  
+### <a name="examples"></a>예제  
  **예제**  
   
  다음 예제에서는 암시적 boxing의 작동 방식을 보여 줍니다.  
@@ -177,14 +179,25 @@ int main() {
   
  **출력**  
   
-  **1**  
- **xx \= 10**  
- **in A**  
- **Class V passed using implicit boxing**  
- **Class V passed with forced boxing**  
- **Interface function**  
- **in func1\(V2^\)**  
- **in func2\(System::ValueType^\)**  
- **in func2\(System::ValueType^\)**   
-## 참고 항목  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+1  
+  
+xx = 10  
+  
+in A  
+  
+Class V passed using implicit boxing  
+  
+Class V passed with forced boxing  
+  
+Interface function  
+  
+in func1(V2^)  
+  
+in func2(System::ValueType^)  
+  
+in func2(System::ValueType^)  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

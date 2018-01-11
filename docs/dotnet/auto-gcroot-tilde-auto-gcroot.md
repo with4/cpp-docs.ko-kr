@@ -1,46 +1,47 @@
 ---
-title: "auto_gcroot::~auto_gcroot | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot::~auto_gcroot"
-  - "~auto_gcroot"
-  - "auto_gcroot.~auto_gcroot"
-  - "msclr::auto_gcroot::~auto_gcroot"
-  - "msclr.auto_gcroot.~auto_gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::~auto_gcroot"
+title: 'auto_gcroot:: ~ auto_gcroot | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot::~auto_gcroot
+- ~auto_gcroot
+- auto_gcroot.~auto_gcroot
+- msclr::auto_gcroot::~auto_gcroot
+- msclr.auto_gcroot.~auto_gcroot
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::~auto_gcroot
 ms.assetid: 3c970d43-0cb1-4b27-8bee-0394d91b4739
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f4f0891575f82744925f7658fb18a116b89203ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# auto_gcroot::~auto_gcroot
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The `auto_gcroot` destructor.  
+# <a name="autogcrootautogcroot"></a>auto_gcroot::~auto_gcroot
+`auto_gcroot` 소멸자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 ~auto_gcroot();  
 ```  
   
-## 설명  
- The destructor also destructs the owned object.  
+## <a name="remarks"></a>설명  
+ 소멸자에는 또한 소유한 개체를 destructs 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // msl_auto_gcroot_dtor.cpp  
@@ -69,15 +70,18 @@ int main()
 }  
 ```  
   
-  **ClassA constructor**  
-**ClassA destructor**  
-**done**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_gcroot.h\>  
+```Output  
+ClassA constructor  
+ClassA destructor  
+done  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::release](../dotnet/auto-gcroot-release.md)   
- [auto\_gcroot::auto\_gcroot](../dotnet/auto-gcroot-auto-gcroot.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::release](../dotnet/auto-gcroot-release.md)   
+ [auto_gcroot::auto_gcroot](../dotnet/auto-gcroot-auto-gcroot.md)

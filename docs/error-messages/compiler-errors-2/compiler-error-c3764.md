@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 60317bb31b5021d4b9b1b6568d77ae92e06880ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35ddb204e3444ea270fb2f11bb0897047fe2863f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3764"></a>컴파일러 오류 C3764
 'override_function': 기본 클래스 메서드 'base_class_function'를 재정의할 수 없습니다  
   
  컴파일러가 잘못 재정의 검색 했습니다. 예를 들어 기본 클래스 함수는 없습니다 `virtual`합니다. 자세한 내용은 참조 [재정의](../../windows/override-cpp-component-extensions.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3764 오류가 발생 합니다.  
   
 ```  
@@ -43,7 +44,7 @@ public ref struct B : A {
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  C3764 기본 클래스 메서드를 둘 다 명시적으로 하는 경우에 발생할 수 있습니다 및 명명 된 재정의 합니다. 다음 샘플에서는 C3764 오류가 발생 합니다.  
   
 ```  

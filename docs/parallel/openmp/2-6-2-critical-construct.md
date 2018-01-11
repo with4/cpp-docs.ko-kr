@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13e9b4a8611732c7dddb81be1ca6123b725f7169
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c658b32536404dde1a693582e78bfbedc2823b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="262-critical-construct"></a>2.6.2 critical 구문
 **중요** 지시문 식별 한 번에 스레드 하나에 연결된 된 구조화 된 블록의 실행을 제한 하는 구문입니다. 구문은 **중요** 지시문은 다음과 같습니다.  

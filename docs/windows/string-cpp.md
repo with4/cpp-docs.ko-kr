@@ -1,33 +1,33 @@
 ---
-title: "string (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string attribute"
+title: "문자열 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.string
+dev_langs: C++
+helpviewer_keywords: string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7579dc9d3f7aec17982a0f60e20719c0b52eda42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# string (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-나타내는 있는 1 차원 `char`, `wchar_t`,  **바이트** \(또는 동등한\) 문자열로 배열 또는 이러한 배열에 대 한 포인터를 처리 해야 합니다.  
+# <a name="string-c"></a>string(C++)
+나타냅니다는 1 차원 `char`, `wchar_t`, **바이트** (또는 동일한) 배열 또는 이러한 배열에 대 한 포인터를 문자열로 취급 되어야 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,11 +35,11 @@ manager: "ghogen"
   
 ```  
   
-## 설명  
- **문자열** C\+\+ 특성을 동일한 기능을가지고 있는  [문자열](http://msdn.microsoft.com/library/windows/desktop/aa367270) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **문자열** c + + 특성에 동일한 기능을는 [문자열](http://msdn.microsoft.com/library/windows/desktop/aa367270) MIDL 특성입니다.  
   
-## 예제  
- 다음 코드를 사용 하는 방법을 보여 줍니다.  **문자열** 인터페이스와 형식 정의:  
+## <a name="example"></a>예  
+ 다음 코드를 사용 하는 방법을 보여 줍니다 **문자열** typedef와 인터페이스에:  
   
 ```  
 // cpp_attr_ref_string.cpp  
@@ -54,21 +54,20 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|배열 또는 배열, 인터페이스 매개 변수가 인터페이스 메서드에 대 한 포인터|  
+|**적용 대상**|배열 또는 포인터 배열, 인터페이스 매개 변수, 인터페이스 메서드에|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Array Attributes](../windows/array-attributes.md)   
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [배열 특성](../windows/array-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

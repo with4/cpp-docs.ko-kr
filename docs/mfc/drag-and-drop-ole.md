@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5efc5a12acbad786039b687e5a9e3bb00e62e090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a852e597c06a08c3e9eb83731dc7da7df077435
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drag-and-drop-ole"></a>끌어서 놓기(OLE)
 Ole 끌어서 놓기 기능은 주로 데이터 복사 및 붙여넣기의 바로 가기를 표시 합니다. 클립보드를 사용 하 여 복사 하거나 데이터를 붙여 넣을 때 몇 가지 단계는 필요 합니다. 데이터 선택를 클릭 **잘라내기** 또는 **복사** 에서 **편집** 대상 파일, 창 또는 응용 프로그램로 이동 메뉴 누른 원하는 위치에 커서를 놓고 **붙여넣기** 에서 **편집** 메뉴.  

@@ -15,18 +15,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d7e3fb78715063813215eaa505850d8bbbe4cf7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b60ee80f9b08914a7f8f2004bc4c6afecc80186a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4709"></a>컴파일러 경고(수준 4) C4709
 배열 인덱스 식 내에 쉼표 연산자  
   
  쉼표에 배열 인덱스 식에서 발생 하는 경우 컴파일러는 마지막 쉼표 후 값을 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4709 오류가 생성 됩니다.  
   
 ```  

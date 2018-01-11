@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d246c6951b397e2eb888483f8afcdf2a822fd56d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cc214eb98b8aa9e927fd471ba313e4cade426a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-internet-applications"></a>인터넷 응용 프로그램 테스트
 웹 서버에서 실행 중인 응용 프로그램에 대 한 특히 인터넷에 몇 가지 고유한 테스트 방법이 있습니다. 초기 테스트 아마도 수행 됩니다 테스트 서버에 연결 하는 단일 사용자 클라이언트를 사용 하 여 합니다. 이 코드를 디버깅에 유용 합니다.  

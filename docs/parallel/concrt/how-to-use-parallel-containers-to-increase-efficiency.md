@@ -17,44 +17,45 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6fd904db5d01bf1464da522d7209f8d15502556
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64b191b97bcf4b5f1607cde56fac8fefd1505c7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>방법: 병렬 컨테이너를 사용하여 효율성 향상
 이 항목에서는 효율적으로 저장 하 고 데이터를 병렬로 액세스할 병렬 컨테이너를 사용 하는 방법을 보여 줍니다.  
   
  예제 코드 소수와 병렬로 카마이클 수의 집합을 계산 합니다. 그런 다음 각 카마이클 번호에 대 한 코드는 수의 소수를 계산 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제와 `is_prime` 입력된 값이 소수 인지를 결정 하는 함수 및 `is_carmichael` 입력된 값이 카마이클 수 있는지 여부를 결정 하는 함수입니다.  
   
  [!code-cpp[concrt-carmichael-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_1.cpp)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `is_prime` 및 `is_carmichael` 소수와 카마이클 수의 집합을 계산 하는 함수입니다. 이 예제에서는 사용은 [concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) 및 [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) 동시에 각 계산 하는 알고리즘을 설정 합니다. 병렬 알고리즘에 대 한 자세한 내용은 참조 [병렬 알고리즘](../../parallel/concrt/parallel-algorithms.md)합니다.  
   
  사용 하 여이 예제는 [concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) 카마이클 집합을 보유 하는 개체 번호 작업 큐로 해당 개체를 나중에 사용 됩니다. 사용 하 여 한 [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) 것가 나중에 반복이 소수를 찾으려고 집합 때문에 소수 집합을 보유 하는 개체입니다.  
   
  [!code-cpp[concrt-carmichael-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_2.cpp)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제와 `prime_factors_of` 평가판 나누기를 사용 하 여 지정된 된 값의 모든 주요 요소를 검색 하는 함수입니다.  
   
  이 함수는 사용 된 [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) 소수의 컬렉션을 반복 하는 알고리즘입니다. `concurrent_vector` 개체 병렬 루프를 동시에 결과에 소수를 추가할 수 있습니다.  
   
  [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 카마이클 수의 큐에 있는 각 요소를 호출 하 여 처리는 `prime_factors_of` 해당 주요 요소를 계산 하는 함수입니다. 동시에이 작업을 수행 하는 작업 그룹을 사용 합니다. 작업 그룹에 대 한 자세한 내용은 참조 [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md)합니다.  
   
  이 예제는 해당 개수에 최대 4 개의 주요 요인을 각 카마이클 번호에 대 한 주요 요소를 출력 합니다.  
   
  [!code-cpp[concrt-carmichael-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_4.cpp)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 병렬 컨테이너를 사용 하 여 카마이클 숫자의 소수를 계산 하는 전체 예제를 보여 줍니다.  
   
  [!code-cpp[concrt-carmichael-primes#5](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_5.cpp)]  

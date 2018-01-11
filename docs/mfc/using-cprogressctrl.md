@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89fc982eba1a4eeeb291a33440cfae71c4b2a745
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09d7673450834fbe6824e731679c1a6517c247a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cprogressctrl"></a>CProgressCtrl 사용
 긴 작업의 진행률을 표시 하는 진행률 컨트롤을 사용할 수 있습니다. 작업이 진행 됨에 따라 시스템 강조 색으로 점차적으로 채워진 사각형입니다.  

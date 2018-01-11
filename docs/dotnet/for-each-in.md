@@ -19,11 +19,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d89552bd299edc778b06bd01ee185c275c45db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-each-in"></a>for each, in
 배열 또는 컬렉션을 반복합니다. 이 비표준 키워드는 C++/CLI 및 네이티브 C++ 프로젝트에서 사용할 수 있습니다. 그러나 사용하지 않는 것이 좋습니다. 표준을 사용 하는 것이 좋습니다 [범위 기반에 대 한 문 (c + +)](../cpp/range-based-for-statement-cpp.md) 대신 합니다.  
@@ -76,7 +79,7 @@ ms.lasthandoff: 10/24/2017
 ### <a name="requirements"></a>요구 사항  
  컴파일러 옵션: **/ZW**  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예제는 `for each`를 사용해서 문자열을 반복하는 방법을 보여줍니다.  
   
 ```  
@@ -126,7 +129,7 @@ Testing
 ### <a name="requirements"></a>요구 사항  
  컴파일러 옵션: **/clr**  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예제는 `for each`를 사용해서 문자열을 반복하는 방법을 보여줍니다.  
   
 ```  

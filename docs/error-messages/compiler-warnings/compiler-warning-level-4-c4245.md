@@ -1,34 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 4) C4245 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4245"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4245"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4245
+dev_langs: C++
+helpviewer_keywords: C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 94308b2b19878c3c25a91bfd27658209b7635cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 4) C4245
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'conversion' : 'type1'에서 'type2'\(으\)로의 변환입니다. signed 또는 unsigned가 일치하지 않습니다.  
+# <a name="compiler-warning-level-4-c4245"></a>컴파일러 경고(수준 4) C4245
+'conversion': 'type1'에서 'type2', 불일치 signed 또는 unsigned로 변환  
   
- 음수 값을 가진 부호 있는 **const**를 `unsigned`로 변환하려고 했습니다.  
+ 서명 된 변환 하려고 했습니다. **const** 에 음수 값이 있는 `unsigned`합니다.  
   
- 다음 샘플에서는 C4245 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4245 오류가 생성 됩니다.  
   
 ```  
 // C4245.cpp  

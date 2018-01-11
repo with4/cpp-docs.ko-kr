@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86d4eeaadd8c2afcd5b223e7431614436ab8a786
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 119969860f031acbc2f1764a34a456d2e8a16437
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-implementing-futures"></a>연습: 미래 구현
 이 항목에서는 응용 프로그램에서 미래를 구현 하는 방법을 보여 줍니다. 이 항목에는 기존 기능으로 결합 하는 동시성 런타임에서 무언가 많은 기능을 수행 하는 방법을 보여 줍니다.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
   
  [!code-cpp[concrt-futures#6](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_5.cpp)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 예에서는 전체 `async_future` 클래스 및 그 사용법의 예입니다. `wmain` 함수 만듭니다는 std::[벡터](../../standard-library/vector-class.md) 10, 000 임의의 정수 값을 포함 하는 개체입니다. 다음 사용 하 여 `async_future` 에 포함 된 최소 및 최대 값을 찾는 개체는 `vector` 개체입니다.  

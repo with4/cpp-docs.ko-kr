@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 790a47c8449694a6c82aa1f9564b1d935ef9e39e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e12c446ec97bc4cf9d2f2caff642b0ed6fb210d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="randomdevice-class"></a>random_device 클래스
 외부 장치에서 임의 시퀀스를 생성합니다.  
@@ -74,7 +75,7 @@ public:
   
 일반적으로 `random_device`는 엔진 또는 엔진 어댑터를 통해 생성된 다른 생성기를 시드하는 데 사용됩니다. 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 코드는 이 클래스의 기본 기능과 예제 결과를 보여줍니다. `random_device`의 명확하지 않은 특성 때문에 **출력** 섹션에 표시된 난수 값은 사용자의 결과와 일치하지 않습니다. 이는 정상적이며 예상된 결과입니다.  
   
 ```cpp  

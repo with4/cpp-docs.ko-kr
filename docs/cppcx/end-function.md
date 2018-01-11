@@ -1,30 +1,31 @@
 ---
 title: "end 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Windows::Foundation::Collections::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 함수"
+ms.custom: 
+ms.date: 01/22/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: collection/Windows::Foundation::Collections::end
+dev_langs: C++
+helpviewer_keywords: end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 264ffdad3d55ae9d2df44646240d42ac02d5fcb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# end 함수
+# <a name="end-function"></a>end 함수
 지정된 인터페이스 매개 변수로 액세스되는 컬렉션 끝 너머를 가리키는 반복자를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -46,28 +47,28 @@ template <typename T>
   
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
  템플릿 형식 매개 변수입니다.  
   
  `v`  
- IVector\<T\> 또는 IVectorView\<T\> 인터페이스로 액세스되는 Vector\<T\> 또는 VectorView\<T\> 개체의 컬렉션입니다.  
+ 벡터의 컬렉션인\<T > 또는\<T > IVector에서 액세스할 수 있는 개체\<T >, 또는 IVectorView\<T > 인터페이스입니다.  
   
  `i`  
- IIterable\<T\> 인터페이스로 액세스할 수 있는 임의의 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 개체 컬렉션입니다.  
+ Windows 런타임 수의 컬렉션 개체는 IIterable 액세스 되\<T > 인터페이스입니다.  
   
-## 반환 값  
+### <a name="return-value"></a>반환 값  
  컬렉션 끝 너머를 가리키는 반복자입니다.  
   
-## 설명  
+### <a name="remarks"></a>설명  
  처음 두 템플릿 함수는 반복기를 반환하고 세 번째 템플릿 함수는 입력 반복기를 반환합니다.  
   
- `end`에 의해 반환되는 [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) 개체는 `VectorProxy<T>` 형식의 요소를 저장하는 프록시 반복기입니다. 그러나 프록시 개체는 사용자 코드에 거의 표시되지 않습니다. 자세한 내용은 [컬렉션\(C\+\+\/CX\)](../cppcx/collections-c-cx.md)을 참조하세요.  
+ [에 의해 반환되는](../cppcx/platform-collections-vectorviewiterator-class.md) Platform::Collections::VectorViewIterator `end` 개체는 `VectorProxy<T>`형식의 요소를 저장하는 프록시 반복기입니다. 그러나 프록시 개체는 사용자 코드에 거의 표시되지 않습니다. 자세한 내용은 [컬렉션(C++/CX)](../cppcx/collections-c-cx.md)을 참조하세요.  
   
-## 요구 사항  
+### <a name="requirements"></a>요구 사항  
  **헤더:** collection.h  
   
  **네임스페이스:** Windows::Foundation::Collections  
   
-## 참고 항목  
- [Windows::Foundation::Collections 네임스페이스](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+## <a name="see-also"></a>참고 항목  
+ [Windows::Foundation::Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

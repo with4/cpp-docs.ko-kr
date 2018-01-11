@@ -10,13 +10,9 @@ f1_keywords:
 - tuple/std::get
 - tuple/std::make_tuple
 - tuple/std::tie
-- tuple/std::get
-- tuple/std::make_tuple
-- tuple/std::tie
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: bc6be38f-5258-4c14-b81b-63caa335fd44
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::get [C++]
@@ -25,12 +21,11 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
+ms.openlocfilehash: a81820c920339bb3e006af6df11bda855d4d33ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 3404df4c21b1abb4153c6163f1fd5537ed87928e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 함수
 ||||  
@@ -86,7 +81,7 @@ template <class T, class... Types>
   
  `get<T>(Tuple)` 을 호출할 때 튜플에 T 형식의 요소가 두 개 이상 있거나 없는 경우 컴파일러 오류가 생성됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <tuple>   
@@ -135,7 +130,7 @@ template <class T1, class T2, ..., class TN>
   
  `make_tuple`의 장점 하나는 저장되는 개체 형식이 컴파일러에서 자동으로 저장되며 명시적으로 지정하지 않아도 된다는 점입니다. `make_tuple<int, int>(1, 2)`를 사용할 경우 불필요하게 장황해지고 컴파일 문제의 원인이 될 수 있는 복잡한 rvalue 참조 문제만 더해지므로 `make_tuple` 등의 명시적 템플릿 인수를 사용하지 마십시오.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__tuple__make_tuple.cpp   
@@ -187,7 +182,7 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 ### <a name="remarks"></a>설명  
  템플릿 함수가 `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__tuple__tie.cpp   
@@ -230,5 +225,4 @@ int main() {
   
 ## <a name="see-also"></a>참고 항목  
  [\<tuple>](../standard-library/tuple.md)
-
 

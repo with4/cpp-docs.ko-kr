@@ -117,11 +117,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c638679058d6c914d3dac4207b9ae320c4ee2697
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 56e8e97645d4baa74033af07ba08ab2eae0a3557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 클래스
 도킹을 구현하는 메뉴 모음입니다.  
@@ -197,7 +198,7 @@ class CMFCMenuBar : public CMFCToolbar
   
  사용 하는 `CMFCMenuBar` 개체, 주 창 프레임 개체에 포함 합니다. 처리 하는 경우는 `WM_CREATE` 메시지, 호출 `CMFCMenuBar::Create` 또는 `CMFCMenuBar::CreateEx`합니다. 함수를 만들 있는 관계 없이 사용 하 여, 주 프레임 창에 대 한 포인터를 전달 합니다. 다음 호출 하 여 도킹을 사용 하도록 설정 [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking)합니다. 이 메뉴를 호출 하 여 도킹 [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCMenuBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 창 스타일을 설정, 사용자 지정 단추를 사용 하도록 설정, 도움말 상자를 사용 하도록 설정, 팝업 메뉴에 대 한 그림자를 사용 하도록 설정 및 메뉴 모음을 업데이트 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
@@ -389,7 +390,7 @@ virtual BOOL CreateEx(
   
  추가 스타일의 목록에 대 한 참조 [도구 모음 컨트롤과 단추 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760439), [공통 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498), 및 [일반적인 창 스타일](http://msdn.microsoft.com/library/windows/desktop/ms632600)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `CreateEx` 의 메서드는 `CMFCMenuBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  

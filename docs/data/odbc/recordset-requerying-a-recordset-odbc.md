@@ -1,67 +1,70 @@
 ---
-title: "레코드 집합: 레코드 집합 다시 쿼리(ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC 레코드 집합, 다시 쿼리"
-  - "레코드 집합, 다시 쿼리"
-  - "레코드 집합 새로 고침"
-  - "Requery 메서드"
-  - "레코드 집합 다시 쿼리"
+title: "레코드 집합: 레코드 집합 (ODBC) 다시 쿼리 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets, requerying
+- requerying recordsets
+- Requery method
+- ODBC recordsets, requerying
+- refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 레코드 집합: 레코드 집합 다시 쿼리(ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이 항목은 MFC ODBC 클래스에 적용됩니다.  
+# <a name="recordset-requerying-a-recordset-odbc"></a>레코드 집합: 레코드 집합 다시 쿼리(ODBC)
+MFC ODBC 클래스에이 항목에 적용 됩니다.  
   
- 이 항목에서는 레코드 집합 개체를 사용하여 데이터베이스에서 자체를 다시 쿼리, 즉 새로 고치는 방법 및 [Requery](../Topic/CRecordset::Requery.md) 멤버 함수를 사용하여 이 작업을 수행하는 시기에 대해 설명합니다.  
+ 이 항목에서는 레코드 집합 개체를 사용 하는 방법을 설명 (즉, 새로 고침) 된 경우에 작업을 수행 하는 시기 및 데이터베이스에서 자체는 [Requery](../../mfc/reference/crecordset-class.md#requery) 멤버 함수입니다.  
   
- 레코드 집합을 다시 쿼리하는 주요 이유는 다음과 같습니다.  
+ 레코드 집합 다시 쿼리 하는 주요 이유는 것입니다.  
   
--   자신 또는 다른 사용자가 추가한 레코드 및 다른 사용자가 삭제한 레코드를 반영하도록 레코드 집합을 업데이트합니다. 자신이 삭제한 레코드는 레코드 집합에 이미 반영되어 있습니다.  
+-   최신 또는 다른 사용자가 추가 된 레코드 및 (삭제 하는 것은 이미 반영) 다른 사용자가 삭제 된 레코드와 관련해 서 레코드 집합을 가져옵니다.  
   
--   매개 변수 값이 변경되면 레코드 집합을 새로 고칩니다.  
+-   매개 변수 값 변경에 따라 레코드 집합을 새로 고칩니다.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a> 레코드 집합 업데이트  
- 경우에 따라서는 레코드 집합 개체를 다시 쿼리하여 업데이트해야 할 수도 있습니다.  다중 사용자 데이터베이스 환경에서는 레코드 집합을 사용하는 동안 다른 사용자가 데이터를 변경할 수 있습니다.  다른 사용자가 변경한 내용을 레코드 집합에 반영하는 시기와 자신의 변경 내용이 다른 사용자의 레코드 집합에 반영되는 시기에 대한 자세한 내용은 [레코드 집합: 레코드 집합의 레코드 업데이트 방법\(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) 및 [다이너셋](../../data/odbc/dynaset.md)을 참조하십시오.  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a>날짜를 레코드 집합 보기  
+ 자주 하려는 requery 여 recordset 개체를 다시 최신 상태입니다. 다중 사용자 데이터베이스 환경에서 다른 사용자가 변경할 수 데이터를 레코드 집합의 수명 동안. 레코드 집합에 다른 사용자가 변경한 내용을 반영 하는 경우 및 다른 사용자의 변경 내용을 반영 하는 경우에 대 한 자세한 내용은 참조 [레코드 집합: 레코드 집합의 레코드 업데이트 방법 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) 및 [다이너셋](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a> 새 매개 변수에 기반하여 다시 쿼리하기  
- [Requery](../Topic/CRecordset::Requery.md)는 변경된 매개 변수 값에 기반하여 새 레코드 집합을 선택하는 경우에도 자주 사용되는 만큼 중요한 역할을 합니다.  
+##  <a name="_core_requerying_based_on_new_parameters"></a>새 매개 변수를 기반으로 다시 쿼리  
+ 자주-만큼 중요 한 역할-활용 [Requery](../../mfc/reference/crecordset-class.md#requery) 새 매개 변수 값 변경에 따라 레코드 집합을 선택 하는 것입니다.  
   
 > [!TIP]
->  쿼리 속도는 **Open**을 다시 호출하는 것보다 매개 변수 값을 변경하여 **Requery**를 호출하는 경우가 훨씬 빠릅니다.  
+>  쿼리 속도 호출 하는 경우 더 빠른 경우가 훨씬 **Requery** 호출 하는 매개 변수 값을 변경 하 여 **열려** 다시 합니다.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Requerying Dynasets vs. Snapshots  
- 다이너셋은 동적으로 업데이트되는 데이터가 포함된 레코드 집합을 제공하는 데 사용되므로 다른 사용자가 추가한 내용을 반영하려면 다이너셋을 자주 다시 쿼리해야 합니다.  반면에 스냅숏은 보고서를 작성하고 총계를 계산하는 등의 작업을 수행할 때 스냅숏의 자주 변경되지 않는 내용을 안전하게 사용할 수 있기 때문에 유용합니다.  그러나 스냅숏을 다시 쿼리해야 할 때도 있습니다.  다중 사용자 환경에서 다른 사용자가 데이터베이스를 변경하면 스냅숏 데이터와 해당 데이터베이스가 동기화되지 않을 수도 있습니다.  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>다이너셋 vs를 다시 쿼리 합니다. 스냅숏  
+ 다이너셋은 동적 최신 데이터를 레코드 집합을 제공 하는 데 때문에 다른 사용자가 추가한을 반영 하도록 하려는 경우에 종종 다이너셋 requery 하려고 합니다. 스냅숏, 반면에 유용 보고서를 작성 하 고, 합계를 계산 하는 등의 작업을 수행할 때 안전 하 게 정적 내용에 사용할 수 있기 때문에 합니다. 그러나 스냅샷을 requery 할 때도 있습니다. 다중 사용자 환경에서 스냅숏 데이터를 다른 사용자가 데이터베이스를 변경할 때 데이터 소스와 동기화를 손실 될 수 있습니다.  
   
-#### 레코드 집합 개체를 다시 쿼리하려면  
+#### <a name="to-requery-a-recordset-object"></a>레코드 집합 개체를 다시 쿼리  
   
-1.  개체의 [Requery](../Topic/CRecordset::Requery.md) 멤버 함수를 호출합니다.  
+1.  호출 된 [Requery](../../mfc/reference/crecordset-class.md#requery) 개체의 멤버 함수입니다.  
   
- 또는 원래 레코드 집합을 닫고 다시 열수도 있습니다.  두 경우 모두에서 새 레코드 집합은 데이터 소스의 현재 상태를 나타냅니다.  
+ 또는 닫고 원본 레코드를 다시 여세요. 두 경우 모두 새 레코드 집합의 데이터 원본 현재 상태를 나타냅니다.  
   
- 예제는 [레코드 뷰: 두 번째 레코드 집합에서 목록 상자 채우기](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)를 참조하십시오.  
+ 예를 들어 참조 [레코드 뷰: 두 번째 레코드 집합에서 목록 상자 채우기](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)합니다.  
   
 > [!TIP]
->  **Requery** 성능을 최적화하려면 레코드 집합의 [필터](../../data/odbc/recordset-filtering-records-odbc.md) 또는 [정렬](../../data/odbc/recordset-sorting-records-odbc.md)을 변경하지 마십시오.  **Requery**를 호출하기 전에 매개 변수 값만을 변경하십시오.  
+>  최적화 하기 위해 **Requery** 성능, 레코드 집합의 변경 되지 않도록 [필터](../../data/odbc/recordset-filtering-records-odbc.md) 또는 [정렬](../../data/odbc/recordset-sorting-records-odbc.md)합니다. 호출 하기 전에 매개 변수 값만 변경 **Requery**합니다.  
   
- **Requery** 호출에 실패한 경우 다시 호출하거나 응용 프로그램을 종료해야 합니다.  **Requery** 또는 **Open** 호출에 실패하는 이유는 여러 가지입니다.  네트워크 오류가 발생한 경우, 호출하는 동안 기존 데이터를 해제한 다음 새 데이터를 얻기 전에 다른 사용자가 단독 액세스한 경우, 레코드 집합이 의존하는 테이블이 삭제된 경우 등이 실패 원인이 될 수 있습니다.  
+ 경우는 **Requery** 호출에 실패 호출을 다시 시도할 수 있습니다; 그렇지 않은 경우 응용 프로그램 정상적으로 종료 해야 합니다. 에 대 한 호출 **Requery** 또는 **열려** 다양 한 이유로 실패할 수 있습니다. 아마도 네트워크 오류가 발생합니다. 또는 호출 하는 동안 상태로 새 데이터를 가져온 기존 데이터를 해제 한 후 다른 사용자 수 가져옵니다 배타적으로 액세스 합니다. 또는 레코드 집합에 의존 하는 테이블을 삭제할 수 없습니다.  
   
-## 참고 항목  
- [레코드 집합\(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [레코드 집합: 데이터 열 동적 바인딩\(ODBC\)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
- [레코드 집합: 레코드 집합 만들기 및 닫기\(ODBC\)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+## <a name="see-also"></a>참고 항목  
+ [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [레코드 집합: 데이터 열 (ODBC)을 동적으로 바인딩](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
+ [레코드 집합: 레코드 집합 만들기 및 닫기(ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

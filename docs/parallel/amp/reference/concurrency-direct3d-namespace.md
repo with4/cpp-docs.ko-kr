@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 849f430caaaf8dacef53ecedd5dc4897041b624a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46b4962e30a6990f6de2c67437fc2af3989c2407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 네임스페이스
 `direct3d` 네임 스페이스를 지 원하는 D3D 상호 운용성 기능을 제공 합니다. 그 AMP 코드에는 계산에 대 한 D3D 리소스를 원활 하 게 사용 하도록 설정으로 중간 중복 복사본을 만들지 않고 AMP에 D3D 코드에서 생성 된 리소스의 사용을 허용 합니다. 증분 AMP 계산에서 생성 되는 데이터의 D3D API를 사용 하 c + + AMP를 사용 하 여 DirectX 응용 프로그램의 계산 집약적인 섹션을 가속화할 수 있습니다.  

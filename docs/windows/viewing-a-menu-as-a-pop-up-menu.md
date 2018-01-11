@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e7130c37799ad67054fd4c71f8c1eb5a27aadde
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fbddc8fb0b4e382c954fe4b11f100ecefdff75d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>메뉴를 팝업 메뉴로 보기
 일반적으로 메뉴 편집기에서 작업하면 메뉴 리소스가 메뉴 모음으로 표시됩니다. 그러나 프로그램이 실행되는 동안 응용 프로그램의 메뉴 모음에 메뉴 리소스가 추가될 수 있습니다.  
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
 
   
- **Requirements**  
+ **요구 사항**  
   
  Win32  
   

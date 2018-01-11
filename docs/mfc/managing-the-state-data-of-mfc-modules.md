@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 295d10f3b586dab6e45d103d8e65244887b759e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d070bb91d9c1c229feaa563123c12702a7b5027
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>MFC 모듈의 상태 데이터 관리
 이 문서에서는 MFC 모듈 및 (path 코드는 응용 프로그램을 통해 실행할 때) 실행 흐름을 입력 하 고 하거나 모듈에서 벗어날 때이 상태가 업데이트 되는 방법을 상태 데이터를 설명 합니다. 모듈 상태와 전환의 `AFX_MANAGE_STATE` 및 `METHOD_PROLOGUE` 매크로 대해서도 설명 합니다.  

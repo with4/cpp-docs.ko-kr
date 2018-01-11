@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a6722e2cea4141a44bee43a162a73176ce35fea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 546f5b5daa88578fc7dd062018257f0929bc0cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>다중 스레드 프로그램으로 문제 영역 방지
 만들기, 링크 또는 다중 스레드 C 프로그램을 실행할 때 발생할 수 있는 몇 가지 문제가 있습니다. 일반적인 문제 중 일부는 다음 표에 설명 되어 있습니다. (MFC의 관점에서 비슷한 논의 알려면 [다중 스레딩: 프로그래밍 팁](../parallel/multithreading-programming-tips.md).)  

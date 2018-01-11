@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d147d57d3858d34091d66cdd602bf150eb8f2761
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bb43f8e43197d86f692a84d36e7abe41f88f198c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-queue-stlclr"></a>연산자&lt;= (queue) (STL/CLR)
 보다 작거나 같은 큐 비교 합니다.  
@@ -43,7 +46,7 @@ template<typename Value,
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `!(right < left)`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 되지 않은 `right` 때 두 개의 큐는 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_queue_operator_le.cpp   

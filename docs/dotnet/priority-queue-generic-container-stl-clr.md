@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db6717b124eb04a98060da7b02d391e7d067d0ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05aad642e7009522dd4968cec1a1242ba2d2d077
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueuegenericcontainer-stlclr"></a>priority_queue::generic_container(STL/CLR)
 컨테이너에 대 한 제네릭 인터페이스의 형식입니다.  
@@ -34,7 +37,7 @@ typedef Microsoft::VisualC::StlClr::IPriorityQueue<Value>
 ## <a name="remarks"></a>설명  
  이 형식은이 템플릿 컨테이너 어댑터 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_priority_queue_generic_container.cpp   

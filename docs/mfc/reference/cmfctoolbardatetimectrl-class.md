@@ -59,11 +59,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60e9427b569c7f3e15b779b0764e0316945880b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4f7bdc964da8df8d8a402ae70b38eec1dbbf436
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl 클래스
 날짜 및 시간 선택 컨트롤을 포함 하는 도구 모음 단추입니다.  
@@ -170,7 +171,7 @@ CMFCToolBarDateTimeCtrl(
 ### <a name="remarks"></a>설명  
  이 개체는 시스템 날짜 및 시간으로 초기화 됩니다. 내부 창 스타일이 `CMFCToolBarDateTimeCtrlImpl` 개체에 포함 되어는 `dwStyle` 매개 변수 및 `WS_CHILD` 및 `WS_VISIBLE` 스타일입니다. 사용 하 여 이러한 스타일을 변경할 수 없습니다 `CMFCToolBarDateTimeCtrl::SetStyle`합니다. 사용 하 여 `SetStyle` 의 스타일을 변경 하는 `CMFCToolBarDateTimeCtrl` 제어 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCToolBarDateTimeCtrl` 클래스입니다. 이 코드 조각은의 일부인는 [날짜 시간 선택 도구 모음 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_ToolbarDateTimePicker#1](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]  

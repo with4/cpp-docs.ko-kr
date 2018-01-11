@@ -125,11 +125,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab6ca8710c2ee05f05157175eaafa5ae281470e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8c91cdd7b793195e0afb05acfe3fc33694fdb60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 클래스
 리본 요소 집합이 포함된 패널을 구현합니다. 패널을 그리면 지정된 패널 크기에 가능한 한 많은 요소를 표시합니다.  
@@ -214,7 +215,7 @@ class CMFCRibbonPanel : public CObject
   
  리본 메뉴를 호출 하 여 리본 범주에 포함 된 패널을 얻을 수는 [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 하는 `CMFCRibbonPanel` 에서 다양 한 메서드를 사용 하 여 개체는 `CMFCRibbonPanel` 클래스입니다. 예제에는 리본 패널을 표시 하는 바로 가기 키 설정, 패널의 요소를 세로로 열 기준 정렬 및 열 맞춤을 사용 하도록 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]  
@@ -965,7 +966,7 @@ CRuntimeClass* pRTC);
 ### <a name="remarks"></a>설명  
  사용자 지정 요소 (예를 들어 색 단추)를 리본 패널에 추가 하려는 경우 사용자 지정 요소의 런타임 클래스 정보를 지정 해야 합니다. 리본이이 정보를 저장, 사용자 지정 요소를 만듭니다 및 지정한 명령 id에 있는 기존 요소를 대체 합니다. 그런 다음 새로 만든된 요소에 대 한 포인터를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는 `SetElementRTCByID` 메서드:  
   
 ```  

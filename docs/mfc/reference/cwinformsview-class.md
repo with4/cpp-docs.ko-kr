@@ -21,11 +21,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d3551252d04dc97f6e2b4dd13df61edda576744
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb68e906a06d18b41d97851d8d91717ac3dd78b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView 클래스
 Windows Forms 컨트롤을 MFC 뷰로 호스팅하기 위한 일반 기능을 제공합니다.  
@@ -52,7 +53,7 @@ class CWinFormsView : public CView;
   
 ### <a name="public-operators"></a>Public 연산자  
   
-|이름||  
+|name||  
 |----------|-|  
 |[CWinFormsView::operator 제어 ^](#operator_control)|Windows Forms 컨트롤에 대 한 포인터로 형식을 캐스팅합니다.|  
   
@@ -81,7 +82,7 @@ CWinFormsView(System::Type^ pManagedViewType);
  `pManagedViewType`  
  Windows Forms 사용자 정의 컨트롤의 데이터 형식에 대 한 포인터입니다.   
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 `CUserView` 클래스에서 상속 `CWinFormsView` 유형을 전달 하 고 `UserControl1` 에 `CWinFormsView` 생성자입니다. `UserControl1`ControlLibrary1.dll에 사용자가 작성 한 컨트롤이입니다.  
   
  [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
@@ -111,7 +112,7 @@ operator System::Windows::Forms::Control^() const;
 ### <a name="remarks"></a>설명  
  이 연산자를 사용 하면 전달할 수는 `CWinFormsView` 뷰 형식의 Windows Forms 컨트롤에 대 한 포인터를 허용 하는 함수를 <xref:System.Windows.Forms.Control>합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CWinFormsView::GetControl](#getcontrol)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

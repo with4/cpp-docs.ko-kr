@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e86ca1959ce22370e47bca508602d5efa35cd4f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a413f28909a52e3bc82e9d8f2694d559bf8a885c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-restart-manager-support"></a>방법: 다시 시작 관리자 지원 추가
 다시 시작 관리자는 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] for [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]에 추가된 기능입니다. 다시 시작 관리자는 예기치 않게 닫히거나 다시 시작되는 경우 응용 프로그램에 대한 지원을 추가합니다. 다시 시작 관리자의 동작은 응용 프로그램의 유형에 따라 달라집니다. 응용 프로그램이 문서 편집기인 경우 다시 시작 관리자는 예기치 않게 닫힌 후 응용 프로그램에서 열려 있는 문서의 상태 및 내용을 자동으로 저장하도록 하고 응용 프로그램을 다시 시작합니다. 응용 프로그램이 문서 편집기가 아닌 경우 다시 시작 관리자는 응용 프로그램을 다시 시작하지만 기본적으로 응용 프로그램의 상태를 저장할 수 없습니다.  

@@ -17,16 +17,19 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74b7be820479b2ef9fa742ee343e0aa33c26dfe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 415da036c9ac2f285b97096368754f176d655eff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generics--c-component-extensions"></a>제네릭(C++ 구성 요소 확장명)
 제네릭은 매개 변수화된 형식 및 메서드입니다. 이 섹션에서는 Windows 런타임 및 공용 언어 런타임에서 모두 지원되거나 공용 언어 런타임에서만 지원되는 제네릭 기능을 확인할 수 있습니다. 또한 Visual C++에서 고유한 제네릭 메서드 및 형식을 작성하는 방법과 Visual C++에서 .NET Framework 언어로 작성한 제네릭 형식을 사용하는 방법을 확인할 수 있습니다. 마지막으로 이 섹션에서는 제네릭 및 C++ 템플릿의 비교를 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  **Windows 런타임 및 공용 언어 런타임 지원**  
   
  [Visual C++의 제네릭 개요](../windows/overview-of-generics-in-visual-cpp.md)  

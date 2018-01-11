@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2e2a72eb947e1d29b1cca091777ee51e9861f26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e6e20ceb4a258a1b5916d4d8594d53e49a2e52c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4517"></a>컴파일러 경고(수준 4) C4517
 액세스 선언은 사용 되지 않습니다. 멤버를 사용 하 여 선언 보다 더 효율적을 제공합니다.  

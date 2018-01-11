@@ -1,37 +1,40 @@
 ---
-title: "방법: System::String의 문자에 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "문자[C++], System::String에서 액세스"
-  - "예제[C++], 문자열"
-  - "문자열[C++], 문자 액세스"
+title: "방법: 문자에는 system:: string 액세스 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], accessing in System::String
+- examples [C++], strings
+- strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: System::String의 문자에 액세스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`wchar_t*` 문자열을 사용하는 관리되지 않는 함수에 대한 호출 성능을 향상시키기 위해 <xref:System.String> 개체의 문자에 액세스할 수 있습니다.  이렇게 하면 <xref:System.String> 개체의 첫 번째 문자에 대한 내부 포인터가 생성됩니다.  이 포인터를 직접 조작하거나 이 포인터를 고정하여 일반적인 `wchar_t` 문자열이 필요한 함수에 전달할 수 있습니다.  
+# <a name="how-to-access-characters-in-a-systemstring"></a>방법: System::String의 문자에 액세스
+문자에 액세스할 수 있습니다는 <xref:System.String> 관리 되지 않는 호출 성능을 향상에 대 한 개체 사용 하는 함수의 `wchar_t*` 문자열입니다. 메서드가 생성의 첫 번째 문자에 대 한 내부 포인터는 <xref:System.String> 개체입니다. 이 포인터 직접 조작할 또는 고정 하 고 수는 일반 필요한 함수에 전달 된 `wchar_t` 문자열입니다.  
   
-## 예제  
- `PtrToStringChars`에서는 `byref`라고도 하는 내부 포인터인 <xref:System.Char>를 반환합니다.  따라서 이는 가비지 수집의 영향을 받습니다.  이 포인터를 네이티브 함수에 전달하려는 경우가 아니면 이를 고정할 필요가 없습니다.  
+## <a name="example"></a>예  
+ `PtrToStringChars`반환는 <xref:System.Char>, 내부 포인터는 (라고도 `byref`). 따라서 가비지 수집의 대상이 됩니다. 네이티브 함수에 전달 하려는 경우가 아니면이 포인터를 고정 필요가 없습니다.  
   
- 다음과 같은 코드를 생각해 볼 수 있습니다.  `ppchar`는 내부 포인터이므로 고정할 필요가 없습니다. 이 포인터가 가리키는 문자열을 가비지 수집기가 옮기면 `ppchar`도 함께 업데이트됩니다.  [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) 없이도 코드가 작동하며 고정으로 인해 발생할 수 있는 성능 손실도 없습니다.  
+ 다음과 같은 코드를 생각해 볼 수 있습니다.  고정 하기 때문에 필요 하지 않습니다 `ppchar` 내부 포인터 이며 가비지 수집기가 가리키는 문자열을 이동 하면 업데이트 합니다 `ppchar`합니다. 없이 [pin_ptr (C + + /cli CLI)](../windows/pin-ptr-cpp-cli.md)코드가 작동 하 고 하지 잠재적인 성능 저하가 발생 한 고정 합니다.  
   
- 네이티브 함수에 `ppchar`를 전달하는 경우 이는 고정 포인터여야 합니다. 가비지 수집기는 관리되지 않는 스택 프레임의 포인터를 업데이트할 수 없습니다.  
+ 전달 하는 경우 `ppchar` 네이티브 함수 여야 합니다 고정 포인터 않으면 가비지 수집기는 관리 되지 않는 스택 프레임에 포인터를 업데이트할 수 없습니다.  
   
 ```  
 // PtrToStringChars.cpp  
@@ -49,9 +52,12 @@ int main() {
 }  
 ```  
   
-  **abcdefg**   
-## 예제  
- 이 예제에서는 고정이 필요한 부분을 보여 줍니다.  
+```Output  
+abcdefg  
+```  
+  
+## <a name="example"></a>예  
+ 고정이 필요한이 예제에서는 표시 합니다.  
   
 ```  
 // PtrToStringChars_2.cpp  
@@ -74,9 +80,12 @@ int main() {
 }  
 ```  
   
- **7**   
-## 예제  
- 내부 포인터에는 네이티브 C\+\+ 포인터의 모든 속성이 있습니다.  예를 들어, 이 포인터를 사용하여 링크된 데이터 구조를 살펴보고 포인터 하나만으로 삽입과 삭제 작업을 수행할 수 있습니다.  
+```Output  
+7  
+```  
+  
+## <a name="example"></a>예  
+ 내부 포인터는 네이티브 c + + 포인터의 모든 속성에 있습니다. 예를 들어 연결 된 데이터 구조를 탐색 하 고 삽입 및 삭제 하나의 포인터를 사용 하 여 실행에 사용할 수 있습니다.  
   
 ```  
 // PtrToStringChars_3.cpp  
@@ -98,5 +107,5 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }  
 ```  
   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

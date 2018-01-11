@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e61f081f65ed64f7dcf68d35d74e3aeeb68fef1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 365889ce3ae5ef9cdffa8dc585974afca366b779
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="endpropertyset"></a>END_PROPERTY_SET
 속성 집합의 끝을 표시 합니다.  
@@ -38,7 +41,7 @@ guid
  `guid`  
  [in] GUID 속성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  

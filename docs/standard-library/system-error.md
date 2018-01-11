@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - <system_error>
 - system_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- system_error header
+dev_langs: C++
+helpviewer_keywords: system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 68bfea40f926ed74afd6fd246b57d39b7225cdf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f5f68b5eb7ca9e4fa9ab29d55fdbaf05c49b786c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 하위 수준 시스템 오류 처리를 위한 예외 클래스 `system_error` 및 관련 템플릿을 정의하는 헤더 `<system_error>`를 포함합니다.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 10/03/2017
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|일반 오류의 범주를 나타냅니다.|  
 |[system_category](../standard-library/system-error-functions.md#system_category)|하위 수준 시스템 오버플로로 인해 발생하는 오류의 범주를 나타냅니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -90,7 +87,6 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

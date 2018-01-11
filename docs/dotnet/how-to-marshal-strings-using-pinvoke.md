@@ -18,11 +18,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0047c76000d336ce18d2bbbab741dc965c1fbc59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 86f51c31cb329b05f58452818b7a9292d7699273
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>방법: PInvoke를 사용하여 문자열 마샬링
 이 항목에서는 CLR 문자열을 사용 하 여 C 스타일 문자열을 호출할 수를 허용 하는 방법을 네이티브 함수를 설명 지원을.NET Framework 플랫폼 호출을 사용 하 여 system:: string을 입력 합니다. Visual c + + 프로그래머는 P/Invoke는 작은 컴파일 타임 오류를 보고, 형식 안전 하지 않은 및는 것을 제공 하므로 (가능한 경우) 대신 c + + Interop 기능을 사용 하는 것이 좋습니다. 관리 되지 않는 API는 DLL로 패키지 되어 소스 코드를 사용할 수 없는 경우 다음 P/Invoke 유일한 옵션은 있지만 그렇지 않은 경우 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)합니다.  
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  내장 데이터 형식만 사용 하는 함수의 <xref:System.Runtime.InteropServices.DllImportAttribute> 는 네이티브 함수에 하지만 C 스타일 문자열에 대 한 핸들을 사용 하도록 이러한 진입점을 정의 하는 대신 문자열을 전달 하기 위한 관리 되는 진입점을 선언 하는 데 사용 되는 <xref:System.String> 유형 대신 사용할 수 있습니다. 이 메시지는 필요한 변환을 수행 하는 코드를 삽입 하도록 컴파일러에 표시 합니다. 각 함수 인수는 문자열을 사용 하는 관리 되지 않는 함수에 대해는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 문자열 개체를 C 스타일 문자열로 네이티브 함수에 마샬링되어야 한다는 것을 나타내기 위해 사용 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 관리 되지 않는 관리 되는 모듈 구성 됩니다. 관리 되지 않는 모듈은 TakesAString char *의 형태로 ANSI C 스타일 문자열을 수락 하는 호출 하는 함수를 정의 하는 DLL입니다. 관리 되는 모듈 TakesAString 함수 가져오지만 char 대신 관리 되는 System.String를 사용 하도록 정의 하는 명령줄 응용 프로그램은\*합니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성 TakesAString 호출 될 때 관리 되는 문자열을 마샬링하는 방법을 나타내는 데 사용 됩니다.  
   
  관리 되는 모듈, /clr 하지만 /clr을 사용 하 여 컴파일되며: pure 합니다.  

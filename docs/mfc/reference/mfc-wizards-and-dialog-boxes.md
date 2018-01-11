@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a4c9d15f5b86aea78ae02837f0b7073189894d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 198fd62e8134a14930d88b478d5ed78b1e8d8e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC 마법사 및 대화 상자
 Microsoft Foundation 클래스 (MFC) 마법사는 다양 한 종류의 구성 요소와 개체에 대 한 상용구 코드를 생성합니다. 프로젝트의 바로 가기 메뉴를 열고 마법사를 실행할 수 있습니다 **솔루션 탐색기** 선택한 **추가**, **클래스**합니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63b3d7a313f0f725444ba77612d8b53280393640
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53d2470e0be0ca314da8486d74d8fc618e134c35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="-operations-comment"></a>// 작업 주석
 `// Operations` MFC 클래스 선언의 섹션 멤버 함수가 포함 된 작업을 수행 하거나 (작업을 수행 합니다.) 작업을 수행 하기 위해 개체에서 호출할 수 있습니다. 이러한 함수는 일반적으로 비-**const** 부작용을 일반적으로 했기 때문에 있습니다. 가상 또는 클래스의 필요에 따라 비가상 수 있습니다. 일반적으로 이러한 멤버는 public입니다.  

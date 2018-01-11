@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c61ee3729a859d1ed2d9dd0ba9fe4ce253634bc0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52c296251e22adef2702aa9feba2b1fe2bc5122e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4481"></a>컴파일러 경고(수준 4) C4481
 비표준 확장이 사용 됨: 재정의 지정자는 'keyword'  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Override 지정자](../../windows/override-specifiers-cpp-component-extensions.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4481 오류가 발생 합니다.  
   
 ```  

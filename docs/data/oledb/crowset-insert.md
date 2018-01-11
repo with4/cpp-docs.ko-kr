@@ -23,11 +23,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a8cdb6c413cc1a655ace270df632ca501b9b5f3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 75dfe26fa04f8e639b3d391a9dc703a9a98c70c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetinsert"></a>CRowset::Insert
 만들고는 접근자의 데이터를에서 사용 하 여 새 행을 초기화 합니다.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
  하나 이상의 열에 쓸 수 없는 경우 삽입 실패할 수 있습니다. 이 문제를 해결하려면 커서 맵을 수정합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에는 행 집합을 통해 데이터 원본에 액세스 한 다음 해당 행 집합의 테이블을 사용 하는 문자열을 삽입 하는 방법을 보여 줍니다.  
   
  먼저 프로젝트에 새 ATL 개체를 삽입 하 여 테이블 클래스를 만듭니다. 예를 들어, 작업 영역 창에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **새로운 ATL 개체**합니다. **데이터 액세스** 범주를 **소비자**합니다. 형식의 소비자 개체를 만들고 **테이블**합니다. (선택 **테이블** 테이블에서 직접 행 집합을 만듭니다; 선택 **명령** SQL 명령을 통해 행 집합을 만듭니다.) 해당 데이터 원본에 액세스할 수 있는 테이블을 지정 하는 데이터 원본을 선택 합니다. 소비자 개체를 호출할 경우 **CCustomerTable**, 삽입 코드를 다음과 같이 구현 합니다.  

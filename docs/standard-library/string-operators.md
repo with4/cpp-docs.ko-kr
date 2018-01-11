@@ -16,10 +16,9 @@ f1_keywords:
 - string/std::operator&lt;=
 - string/std::operator+
 - string/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (string)
@@ -29,12 +28,11 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: caa6cad7f0801b5459bd2999ae38a3da52c00469
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 연산자
 ||||  
@@ -121,7 +119,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 ### <a name="remarks"></a>설명  
  각 함수는 `operator+`를 오버로드하여 템플릿 클래스 [basic_string 클래스](../standard-library/basic-string-class.md)의 두 개체를 연결합니다. 모든 함수는 실제로는 `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // string_op_con.cpp  
@@ -206,7 +204,7 @@ bool operator!=(
 ### <a name="remarks"></a>설명  
  string 개체 간의 비교는 해당 문자의 쌍 단위 어휘 비교를 기반으로 합니다. 문자 수와 개별 문자 값이 같은 두 문자열은 동일한 문자열입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // string_op_ne.cpp  
@@ -293,7 +291,7 @@ bool operator==(
 ### <a name="remarks"></a>설명  
  string 개체 간의 비교는 해당 문자의 쌍 단위 어휘 비교를 기반으로 합니다. 문자 수와 개별 문자 값이 같은 두 문자열은 동일한 문자열입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // string_op_eq.cpp  
@@ -386,7 +384,7 @@ bool operator<(
   
 -   같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // string_op_lt.cpp  
@@ -478,7 +476,7 @@ bool operator<=(
   
 -   같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // string_op_le.cpp  
@@ -600,7 +598,7 @@ bool operator>(
   
 -   같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // string_op_gt.cpp  
@@ -699,7 +697,7 @@ bool operator>=(
   
 -   같지 않은 문자가 없으며 문자열의 문자 수도 같음이 확인될 때까지. 이 경우 두 문자열은 동일한 것으로 간주합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // string_op_ge.cpp  
@@ -794,7 +792,7 @@ basic_istream<CharType, Traits>& operator>>(
   
  함수는 요소를 추출하지 않는 경우 [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`)를 호출하며, 어떤 경우든 **istr**. **width**(0)을 호출하고 \* **this**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // string_op_read_.cpp  
@@ -815,4 +813,3 @@ int main( )
   
 ## <a name="see-also"></a>참고 항목  
  [\<string>](../standard-library/string.md)
-

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 234288be0313c8e50fde08a3cb898f498ebe4174
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedule-groups"></a>일정 그룹
 이 문서에서는 동시성 런타임의 일정 그룹의 역할에 설명 합니다. A *일정 그룹* 선호도 설정 하거나, 관련된 태스크를 함께 그룹화 합니다. 모든 스케줄러에는 하나 이상의 일정 그룹에 있습니다. 작업 간에 높은 수준의 국부성이 필요한 경우, 예를 들어 동일한 프로세서 노드에서 관련 작업 그룹을 실행하면 이점이 있는 경우 일정 그룹을 사용합니다. 반대로, 응용 프로그램에 특정 품질 요구 사항, 예를 들어 일련의 작업에 할당 되는 처리 리소스의 크기를 제한 하려는 경우 스케줄러 인스턴스를 사용 합니다. 스케줄러 인스턴스에 대 한 자세한 내용은 참조 [스케줄러 인스턴스](../../parallel/concrt/scheduler-instances.md)합니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
  사용할 수도 있습니다는 [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask) 간단한 작업을 예약 하는 메서드. 간단한 작업에 대 한 자세한 내용은 참조 [간단한 작업](../../parallel/concrt/lightweight-tasks.md)합니다.  
 
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  일정 작업 실행 순서를 제어 하는 그룹을 사용 하는 예제를 보려면 [하는 방법: 실행의 영향 범위 순서를 사용 하 여 일정 그룹](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

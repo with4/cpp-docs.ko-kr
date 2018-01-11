@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: a031176d6636aedddbeac28c858c777c26625f5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeint-class"></a>SafeInt 클래스
 정수 오버플로 방지 하는 정수 기본 형식을 확장 하 고 다양 한 유형의 정수를 비교할 수 있습니다.  
@@ -55,7 +58,7 @@ class SafeInt;
   
 ### <a name="assignment-operators"></a>할당 연산자  
   
-|이름|구문|  
+|name|구문|  
 |----------|------------|  
 |=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const U& rhs)`|  
 |=|`SafeInt<T,E>& operator= (const T& rhs) throw()`|  
@@ -82,7 +85,7 @@ class SafeInt;
   
 ### <a name="comparison-operators"></a>비교 연산자  
   
-|이름|구문|  
+|name|구문|  
 |----------|------------|  
 |<|`template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()`|  
 |<|`bool operator< (SafeInt<T,E> rhs) const throw()`|  
@@ -101,7 +104,7 @@ class SafeInt;
   
 ### <a name="arithmetic-operators"></a>산술 연산자  
   
-|이름|구문|  
+|name|구문|  
 |----------|------------|  
 |+|`const SafeInt<T,E>& operator+ () const throw()`|  
 |-|`SafeInt<T,E> operator- () const`|  

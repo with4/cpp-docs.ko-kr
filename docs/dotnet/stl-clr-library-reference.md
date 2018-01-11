@@ -17,11 +17,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5906ffd662bb8b88c1c7ec42879da7f3730020f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aecb7c509fc1b072086a8772c3430c43b67350be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 라이브러리 참조
 STL/CLR 라이브러리는 c + + 및.NET Framework 공용 언어 런타임 (CLR) 사용 하기 위해 c + + 표준 라이브러리의 하위 집합의 패키징. STL/CLR 컨테이너, 반복기 및 알고리즘의 관리 되는 환경에서 표준 라이브러리를 사용할 수 있습니다.  
@@ -34,7 +37,7 @@ STL/CLR 라이브러리는 c + + 및.NET Framework 공용 언어 런타임 (CLR)
   
  .NET 어셈블리에서 어셈블리 간 시나리오에서 사용 하 여 제네릭 형식 및 인터페이스를 노출 하는 STL/CLR **Microsoft.VisualC.STLCLR.dll**합니다. 이 DLL은.NET Framework 3.5에 포함 됩니다. STL/CLR을 사용 하는 응용 프로그램을 재배포 하는 경우에.NET Framework 3.5 설치 프로젝트 종속성 섹션에서 프로젝트를 사용 하는 모든 Visual c + + 라이브러리를 포함 해야 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [cliext 네임스페이스](../dotnet/cliext-namespace.md)  
  STL/CLR 라이브러리의 모든 형식이 포함 된 네임 스페이스에 설명 합니다.  
   

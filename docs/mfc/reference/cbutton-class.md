@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eb955843d2390864a7fbc2c45025dca39ce498b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6e92efe5b5a99042426dd2e6a7594f2de46f2ce
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbutton-class"></a>CButton 클래스
 Windows 단추 컨트롤의 기능을 제공합니다.  
@@ -199,7 +200,7 @@ class CButton : public CWnd
 CButton();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
   
 ##  <a name="create"></a>CButton::Create  
@@ -250,7 +251,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** 탭 이동 순서에 있는 단추를 포함 하려면  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
   
 ##  <a name="drawitem"></a>CButton::DrawItem  
@@ -269,7 +270,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  또한 참조는 [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) 스타일 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
   
 ##  <a name="getbitmap"></a>CButton::GetBitmap  
@@ -282,7 +283,7 @@ HBITMAP GetBitmap() const;
 ### <a name="return-value"></a>반환 값  
  비트맵에 대 한 핸들입니다. **NULL** 비트맵이 없습니다 이전에 지정 하는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
 ##  <a name="getbuttonstyle"></a>CButton::GetButtonStyle  
@@ -295,7 +296,7 @@ UINT GetButtonStyle() const;
 ### <a name="return-value"></a>반환 값  
  이 대 한 단추 스타일 반환 `CButton` 개체입니다. 이 함수는만 반환 된 [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) 는 다른 창 스타일의 스타일 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
 ##  <a name="getcheck"></a>CButton::GetCheck  
@@ -316,7 +317,7 @@ int GetCheck() const;
   
  반환 값은 단추에 다른 스타일을 **BST_UNCHECKED**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
 ##  <a name="getcursor"></a>CButton::GetCursor  
@@ -329,7 +330,7 @@ HCURSOR GetCursor();
 ### <a name="return-value"></a>반환 값  
  커서 이미지에 대 한 핸들입니다. **NULL** 커서가 없습니다 이전에 지정 하는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
 ##  <a name="geticon"></a>CButton::GetIcon  
@@ -342,7 +343,7 @@ HICON GetIcon() const;
 ### <a name="return-value"></a>반환 값  
  아이콘에 대 한 핸들입니다. **NULL** 아이콘이 없는 이전에 지정 하는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
 ##  <a name="getidealsize"></a>CButton::GetIdealSize  
@@ -538,7 +539,7 @@ UINT GetState() const;
 ### <a name="remarks"></a>설명  
  단추 컨트롤을는 `BS_3STATE` 또는 `BS_AUTO3STATE` 단추 스타일 비활성화 상태 라는 세 번째 상태에 있는 확인란을 만듭니다. 비활성화 상태 확인란 checked 또는 unchecked 아닙니다 임을 나타냅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
 ##  <a name="gettextmargin"></a>CButton::GetTextMargin  
@@ -594,7 +595,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
   
  비트맵을 마쳤을 때 해제 책임이 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
 ##  <a name="setbuttonstyle"></a>CButton::SetButtonStyle  
@@ -616,7 +617,7 @@ void SetButtonStyle(
 ### <a name="remarks"></a>설명  
  사용 된 `GetButtonStyle` 멤버 함수를 단추 스타일을 검색 합니다. 완료 단추 스타일의 하위 단어는 단추 특정 스타일입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
 ##  <a name="setcheck"></a>CButton::SetCheck  
@@ -639,7 +640,7 @@ void SetCheck(int nCheck);
 ### <a name="remarks"></a>설명  
  이 멤버 함수에 누름 영향을 주지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
 ##  <a name="setcursor"></a>CButton::SetCursor  
@@ -673,7 +674,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
   
  와 달리 [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), 단추, 당 4 개의 비트맵을 사용 하 여 `SetCursor` 단추 당 하나만 커서를 사용 합니다. 단추를 누를 때 아래쪽 및 오른쪽 시프트를 커서가 나타납니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
 ##  <a name="setdropdownstate"></a>CButton::SetDropDownState  
@@ -697,12 +698,12 @@ BOOL SetDropDownState(BOOL fDropDown);
   
  이 메서드는 전송 된 [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_splitButton`즉, 분할 단추 컨트롤을 프로그래밍 방식으로 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용 됩니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 드롭 다운 화살표 푸시 됨을 나타내기 위해 분할 단추 컨트롤의 상태를 설정 합니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
@@ -724,7 +725,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
  이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
   
 ### <a name="remarks"></a>설명  
- 명령이 나 단추 링크 컨트롤 작업을 수행 하려면 관리자 권한 보안 권한이 필요한 경우 컨트롤을 설정 `elevation required` 상태입니다. 그 후 Windows 컨트롤에 사용자 계정 컨트롤 (UAC) 방패 아이콘을 표시합니다. 자세한 내용은에서 "사용자 계정 컨트롤" 참조 [MSDN](http://go.microsoft.com/fwlink/linkid=18507)합니다.  
+ 명령이 나 단추 링크 컨트롤 작업을 수행 하려면 관리자 권한 보안 권한이 필요한 경우 컨트롤을 설정 `elevation required` 상태입니다. 그 후 Windows 컨트롤에 사용자 계정 컨트롤 (UAC) 방패 아이콘을 표시합니다. 자세한 내용은에서 "사용자 계정 컨트롤" 참조 [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507)합니다.  
   
  이 메서드는 전송 된 [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
@@ -759,7 +760,7 @@ HICON SetIcon(HICON hIcon);
   
  와 달리 [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), 단추, 당 4 개의 비트맵을 사용 하 여 `SetIcon` 단추 당 하나의 아이콘을 사용 합니다. 단추를 누르면 아래쪽 및 오른쪽으로 이동 하는 아이콘이 나타납니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
 ##  <a name="setimagelist"></a>CButton::SetImageList  
@@ -800,12 +801,12 @@ BOOL SetNote(LPCTSTR lpszNote);
   
  이 메서드는 전송 된 [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_cmdLink`, 즉 명령 링크 컨트롤을 프로그래밍 방식으로 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용 됩니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 명령 링크 컨트롤에 대 한 메모 텍스트를 설정합니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
@@ -875,12 +876,12 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
  이 메서드는 전송 된 [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_splitButton`즉, 분할 단추 컨트롤을 프로그래밍 방식으로 액세스 하는 데 사용 합니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 분할 단추 드롭다운 화살표에 사용 되는 문자 모양이 변경 됩니다. 이 예제에서는 기본 아래쪽 삼각형 문자에 대 한 위쪽 삼각형 문자를 대체합니다. 표시 되는 문자 모양에서 지정 하는 문자에 따라 달라 집니다는 `himlGlyph` 의 멤버는 `BUTTON_SPLITINFO` 구조입니다. 아래쪽 삼각형 문자 모양 지정 된 문자 ' 6' 및 위쪽을 가리키는 삼각형 문자 모양 문자 ' 5로 지정 된 '. 참조 편의 메서드를 비교 하기 위해 [CButton::SetSplitGlyph](#setsplitglyph)합니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
@@ -908,12 +909,12 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  이 메서드를 초기화는 `mask` 의 멤버는 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) 구조체는 `BCSIF_SIZE` 플래그 및 `size` 인 멤버는 `pSize` 매개 변수를 한 다음이 구조는 에서보냅니다[ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK에 설명 된 메시지입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_splitButton`즉, 분할 단추 컨트롤을 프로그래밍 방식으로 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용 됩니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 분할 단추 드롭다운 화살표 크기 두 배로 만듭니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
@@ -941,12 +942,12 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
  이 메서드를 초기화는 `mask` 의 멤버는 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) 구조체는 `BCSIF_STYLE` 플래그 및 `uSplitStyle` 인 멤버는 `uSplitStyle` 매개 변수를 한 다음이 구조는 에서보냅니다[ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK에 설명 된 메시지입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_splitButton`즉, 분할 단추 컨트롤을 프로그래밍 방식으로 액세스 하는 데 사용 합니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 분할 단추 드롭다운 화살표의 스타일을 설정 합니다. `BCSS_ALIGNLEFT` 단추의 왼쪽에 있는 화살표를 표시 하는 스타일 및 `BCSS_STRETCH` 스타일의 단추 크기를 조정할 때 드롭 다운 화살표의 비율을 유지 합니다.  
   
  [!code-cpp[NVC_MFC_CButton_s1#3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
@@ -967,7 +968,7 @@ void SetState(BOOL bHighlight);
   
  Button 컨트롤 사용자가을 마우스 왼쪽된 단추를 보유 하는 경우 자동으로 강조 표시 됩니다. 강조 표시를 사용자가 마우스 단추를 놓을 때 제거 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
 ##  <a name="settextmargin"></a>CButton::SetTextMargin  

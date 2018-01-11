@@ -1,48 +1,49 @@
 ---
 title: "빌드 사용자 지정 문제 해결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "빌드 이벤트[C++], 문제 해결"
-  - "빌드 단계[C++], 문제 해결"
-  - "빌드[C++], 빌드 이벤트"
-  - "빌드[C++], 문제 해결"
-  - "사용자 지정 빌드 단계[C++], 문제 해결"
-  - "이벤트[C++], 빌드"
-  - "문제 해결[C++], 빌드"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- build events [C++], troubleshooting
+- builds [C++], build events
+- troubleshooting [C++], builds
+- build steps [C++], troubleshooting
+- events [C++], build
+- builds [C++], troubleshooting
+- custom build steps [C++], troubleshooting
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5fa3b2d3910a71d189f5177e13fbd91930e15ee8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 빌드 사용자 지정 문제 해결
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-사용자 지정 빌드 단계나 이벤트가 예상한 대로 작동하지 않으면 다음 작업을 수행하여 문제점을 확인할 수 있습니다.  
+# <a name="troubleshooting-build-customizations"></a>빌드 사용자 지정 문제 해결
+사용자 지정 빌드 단계 또는 이벤트에는 예상 대로 작동 하지 않으면 경우 무엇이 문제 입니까 이해 하려고 할 수 있는 몇 가지 사항이 있습니다.  
   
--   사용자 지정 빌드 단계에서 생성한 파일이 사용자가 출력 파일로 선언한 파일과 일치하는지 확인합니다.  
+-   사용자 지정 빌드 단계를 생성 하는 파일에 출력으로 선언 하는 파일와 일치 하는지 확인 합니다.  
   
--   사용자 지정 빌드 단계에서 다른 빌드 단계\(사용자 지정 여부는 상관 없음\)의 입력 파일이나 종속 파일인 파일을 생성하는 경우 해당 파일이 프로젝트에 추가되어 있는지 확인합니다.  이러한 파일을 사용하는 도구가 사용자 지정 빌드 후 실행되는지 확인하십시오.  
+-   입력에 있는 모든 파일을 생성 하는 사용자 지정 빌드 단계 또는 다른 종속성 빌드 단계 (사용자 지정 또는 다른 방법), 다음 사항을 확인 하는 경우 해당 파일을 프로젝트에 추가 됩니다. 고 이러한 파일을 사용 하는 도구는 사용자 지정 빌드 단계 후에 실행 되는지 확인 합니다.  
   
--   사용자 지정 빌드 단계에서 실제로 수행하는 작업을 표시하려면 `@echo on`을 첫 번째 명령으로 추가합니다.  빌드 이벤트와 빌드 단계는 임시 .bat 파일에 저장되며 프로젝트가 빌드될 때 실행됩니다.  따라서 빌드 이벤트 또는 빌드 단계 명령에 오류 검사를 추가할 수도 있습니다.  
+-   사용자 지정 빌드 단계 실제로 수행 하는 추가 하며, `@echo on` 첫 번째 명령으로 합니다. 빌드 이벤트 및 빌드 단계 임시.bat 파일에 배치 하 고 프로젝트를 빌드할 때 실행 됩니다. 따라서 빌드 단계 명령을 하거나 오류 검사 빌드 이벤트를 추가할 수 있습니다.  
   
--   중간 파일 디렉터리에 있는 빌드 로그 파일을 검사하여 실제로 실행된 작업을 확인합니다.  빌드 로그의 이름 및 경로는 **MSBuild** 매크로 식 **$\(IntDir\)\\$\(MSBuildProjectName\).log**로 표현됩니다.  
+-   실제로 실행 된 중간 파일 디렉터리에 빌드 로그를 검사 합니다. 경로 빌드 로그의 이름으로 표시 됩니다는 **MSBuild** 매크로 식 **$ (intdir)\\$(MSBuildProjectName).log**합니다.  
   
--   빌드 로그에서 기본 양보다 많은 정보를 수집하도록 프로젝트 설정을 수정합니다.  **도구** 메뉴에서 **옵션**을 클릭합니다.  **옵션** 대화 상자에서 **프로젝트 및 솔루션** 노드를 클릭한 다음 **빌드 및 실행** 노드를 클릭합니다.  그런 다음 **MSBuild 프로젝트 빌드 로그 파일의 자세한 정도** 상자에서 **자세히**를 클릭합니다.  
+-   빌드 로그에 정보가 기본 용량 보다 더 수집 하도록 프로젝트 설정을 수정 합니다. **도구** 메뉴에서 **옵션**을 클릭합니다. 에 **옵션** 대화 상자에서 클릭는 **프로젝트 및 솔루션** 노드와 클릭은 **빌드 및 실행** 노드. 그런 다음는 **MSBuild 프로젝트 빌드 로그 파일의 자세한 정도** 상자 **Detailed**합니다.  
   
--   사용하고 있는 모든 파일 이름 매크로 또는 디렉터리 매크로의 값을 검사합니다.  매크로를 개별적으로 에코시키거나 `copy %0 command.bat`을 사용자 지정 빌드 단계의 처음에 추가할 수 있습니다. 이렇게 하면 모든 매크로가 확장된 상태에서 사용자 지정 빌드 단계의 명령이 command.bat에 복사됩니다.  
+-   파일 또는 디렉터리 이름을 매크로 사용 하는 모든 값을 확인 합니다. 매크로 개별적으로 출력 하거나 추가할 수 있습니다 `copy %0 command.bat` 사용자 지정 빌드 단계 시작 위치에 있는으로 복사를 사용자 지정 빌드 단계 명령을 모든 매크로 확장 합니다.  
   
--   사용자 지정 빌드 단계와 빌드 이벤트를 개별적으로 실행하여 동작을 확인합니다.  
+-   사용자 지정 빌드 단계를 실행 하 고 빌드 이벤트를 개별적으로 여 동작을 확인 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 빌드 단계 및 빌드 이벤트 이해](../ide/understanding-custom-build-steps-and-build-events.md)

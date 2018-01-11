@@ -1,112 +1,115 @@
 ---
-title: "CProcedureColumns, CProcedureColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_guidType"
-  - "CProcedureColumnInfo"
-  - "IS_NULLABLE"
-  - "m_szCatalog"
-  - "m_nRowsetNumber"
-  - "m_nColumnPropID"
-  - "ORDINAL_POSITION"
-  - "m_nOrdinalPosition"
-  - "COLUMN_GUID"
-  - "m_szColumnName"
-  - "NUMERIC_PRECISION"
-  - "m_nDataType"
-  - "m_szSchema"
-  - "CHARACTER_OCTET_LENGTH"
-  - "NUMERIC_SCALE"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "m_nMaxLength"
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "m_nPrecision"
-  - "m_szName"
-  - "CProcedureColumns"
-  - "DATA_TYPE"
-  - "m_nOctetLength"
-  - "m_bIsNullable"
-  - "m_nScale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "CHARACTER_OCTET_LENGTH"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "CProcedureColumnInfo 매개 변수 클래스"
-  - "CProcedureColumns typedef 클래스"
-  - "DATA_TYPE"
-  - "DESCRIPTION 클래스 데이터 멤버"
-  - "IS_NULLABLE"
-  - "m_bIsNullable"
-  - "m_guidColumn"
-  - "m_guidType"
-  - "m_nColumnPropID"
-  - "m_nDataType"
-  - "m_nMaxLength"
-  - "m_nOctetLength"
-  - "m_nOrdinalPosition"
-  - "m_nPrecision"
-  - "m_nRowsetNumber"
-  - "m_nScale"
-  - "m_szCatalog"
-  - "m_szColumnName"
-  - "m_szDescription"
-  - "m_szName"
-  - "m_szSchema"
-  - "NUMERIC_PRECISION"
-  - "NUMERIC_SCALE"
-  - "ORDINAL_POSITION"
+title: CProcedureColumns, CProcedureColumnInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_guidType
+- CProcedureColumnInfo
+- IS_NULLABLE
+- m_szCatalog
+- m_nRowsetNumber
+- m_nColumnPropID
+- ORDINAL_POSITION
+- m_nOrdinalPosition
+- COLUMN_GUID
+- m_szColumnName
+- NUMERIC_PRECISION
+- m_nDataType
+- m_szSchema
+- CHARACTER_OCTET_LENGTH
+- NUMERIC_SCALE
+- COLUMN_PROPID
+- m_guidColumn
+- m_nMaxLength
+- CHARACTER_MAXIMUM_LENGTH
+- m_nPrecision
+- m_szName
+- CProcedureColumns
+- DATA_TYPE
+- m_nOctetLength
+- m_bIsNullable
+- m_nScale
+dev_langs: C++
+helpviewer_keywords:
+- NUMERIC_PRECISION
+- COLUMN_PROPID
+- DATA_TYPE
+- ORDINAL_POSITION
+- m_nMaxLength
+- DESCRIPTION class data member
+- m_guidType
+- m_szSchema
+- CHARACTER_OCTET_LENGTH
+- m_szCatalog
+- CProcedureColumns typedef class
+- m_nPrecision
+- m_nOrdinalPosition
+- m_nColumnPropID
+- NUMERIC_SCALE
+- m_nRowsetNumber
+- m_szColumnName
+- COLUMN_NAME
+- m_nOctetLength
+- IS_NULLABLE
+- m_szName
+- m_bIsNullable
+- m_szDescription
+- m_nDataType
+- m_nScale
+- COLUMN_GUID
+- CHARACTER_MAXIMUM_LENGTH
+- m_guidColumn
+- CProcedureColumnInfo parameter class
 ms.assetid: c82626c4-8047-4b9c-b342-e35bf37b7611
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b11e91c450e082cbb46e2f17975ff98a95f8d25d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CProcedureColumns, CProcedureColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Call the typedef class **CProcedureColumns** to implement its parameter class **CProcedureColumnInfo**.  
+# <a name="cprocedurecolumns-cprocedurecolumninfo"></a>CProcedureColumns, CProcedureColumnInfo
+Typedef 클래스 호출 **CProcedureColumns** 해당 매개 변수 클래스를 구현 하려면 **CProcedureColumnInfo**합니다.  
   
-## 설명  
- See [Schema Rowset Classes and Typedef Classes](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) for more information on using typedef classes.  
+## <a name="remarks"></a>설명  
+ 참조 [스키마 행 집합 클래스 및 Typedef 클래스](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) typedef 클래스 사용에 대 한 자세한 내용은 합니다.  
   
- This class returns information about the columns of rowsets returned by procedures.  
+ 이 클래스는 프로시저에서 반환 하는 행 집합의 열에 대 한 정보를 반환 합니다.  
   
- The following table lists the class data members and their corresponding OLE DB Columns.  See [PROCEDURE\_COLUMNS Rowset](https://msdn.microsoft.com/en-us/library/ms723092.aspx) in the *OLE DB Programmer's Reference* for more information about the schema and columns.  
+ 다음 표에는 클래스 데이터 멤버 및 해당 OLE DB 열이 나열됩니다. 참조 [PROCEDURE_COLUMNS 행 집합](https://msdn.microsoft.com/en-us/library/ms723092.aspx) 에 *OLE DB Programmer's Reference* 스키마 및 열에 대 한 자세한 내용은 합니다.  
   
-|Data members|OLE DB columns|  
+|데이터 멤버|OLE DB 열|  
 |------------------|--------------------|  
-|m\_szCatalog|PROCEDURE\_CATALOG|  
-|m\_szSchema|PROCEDURE\_SCHEMA|  
-|m\_szName|PROCEDURE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_nRowsetNumber|ROWSET\_NUMBER|  
-|m\_nOrdinalPosition|ORDINAL\_POSITION|  
-|m\_bIsNullable|IS\_NULLABLE|  
-|m\_nDataType|DATA\_TYPE|  
-|m\_guidType|TYPE\_GUID|  
-|m\_nMaxLength|CHARACTER\_MAXIMUM\_LENGTH|  
-|m\_nOctetLength|CHARACTER\_OCTET\_LENGTH|  
-|m\_nPrecision|NUMERIC\_PRECISION|  
-|m\_nScale|NUMERIC\_SCALE|  
-|m\_szDescription|DESCRIPTION|  
+|m_szCatalog|PROCEDURE_CATALOG|  
+|m_szSchema|PROCEDURE_SCHEMA|  
+|m_szName|PROCEDURE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_nRowsetNumber|ROWSET_NUMBER|  
+|m_nOrdinalPosition|ORDINAL_POSITION|  
+|m_bIsNullable|IS_NULLABLE|  
+|m_nDataType|DATA_TYPE|  
+|m_guidType|TYPE_GUID|  
+|m_nMaxLength|CHARACTER_MAXIMUM_LENGTH|  
+|m_nOctetLength|CHARACTER_OCTET_LENGTH|  
+|m_nPrecision|NUMERIC_PRECISION|  
+|m_nScale|NUMERIC_SCALE|  
+|m_szDescription|설명|  
   
-## 요구 사항  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbsch.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRestrictions 클래스](../../data/oledb/crestrictions-class.md)

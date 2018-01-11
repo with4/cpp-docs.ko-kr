@@ -1,33 +1,33 @@
 ---
-title: "range (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range attribute"
+title: "범위 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.range
+dev_langs: C++
+helpviewer_keywords: range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b95b1bfd093a12bca5398c266d6a7c8236140105
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# range (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-인수 또는 런타임에 값이 설정 된 필드에 대해 허용 가능한 값 범위를 지정 합니다.  
+# <a name="range-c"></a>range(C++)
+형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -37,17 +37,17 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 매개 변수  
- *낮음*  
- 낮은 범위 값입니다.  
+#### <a name="parameters"></a>매개 변수  
+ *low*  
+ 하위 범위의 값입니다.  
   
- *높음*  
- 높은 범위 값입니다.  
+ *high*  
+ 범위 상한 값입니다.  
   
-## 설명  
- **범위** C\+\+ 특성을 동일한 기능을가지고 있는  [범위](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **범위** c + + 특성에 동일한 기능을는 [범위](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL 특성입니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cpp_attr_ref_range.cpp  
@@ -63,22 +63,21 @@ __interface ICustom {
 };  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
 |**적용 대상**|인터페이스 메서드를 인터페이스 매개 변수|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [메서드 특성](../windows/method-attributes.md)   
+ [매개 변수 특성](../windows/parameter-attributes.md)   
+ [데이터 멤버 특성](../windows/data-member-attributes.md)   

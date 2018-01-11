@@ -1,35 +1,37 @@
 ---
-title: "방법: 파일 시스템 변경 사항 모니터링(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "이벤트[C++], 모니터링"
-  - "예제[C++], 파일 시스템 변경 사항 모니터링"
-  - "파일 시스템 이벤트[C++]"
-  - "FileSystemWatcher 클래스, 예제"
-  - "파일 시스템 이벤트 모니터링"
+title: "방법: 파일 시스템 변경 사항 모니터링 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- monitoring file system events
+- FileSystemWatcher class, examples
+- examples [C++], monitoring file system changes
+- events [C++], monitoring
+- file system events [C++]
 ms.assetid: 207a3069-e63d-417e-8b56-00ab44f29c52
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ba75c40b87da01052cd6511cdfd4b8b08219742d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: 파일 시스템 변경 사항 모니터링(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 <xref:System.IO.FileSystemWatcher>를 사용하여 파일이 생성, 변경 또는 삭제되거나 피일의 이름이 변경될 때 발생하는 이벤트에 대해 등록합니다.  디렉터리에서 주기적으로 파일 변경 내용을 폴링하는 대신 <xref:System.IO.FileSystemWatcher> 클래스를 사용하여 변경 내용이 발견되면 이벤트가 발생하도록 할 수 있습니다.  
+# <a name="how-to-monitor-file-system-changes-ccli"></a>방법: 파일 시스템 변경 사항 모니터링(C++/CLI)
+다음 코드 예제에서는 <xref:System.IO.FileSystemWatcher> 를 생성, 변경, 삭제 또는 이름이 바뀐 파일에 해당 하는 이벤트에 대 한 등록 합니다. 파일의 변경에 대 한 디렉터리를 주기적으로 폴링 대신 사용할 수 있습니다는 <xref:System.IO.FileSystemWatcher> 변경이 감지 된 경우 이벤트를 발생 시키는 클래스입니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // monitor_fs.cpp  
@@ -91,7 +93,7 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [System.IO 네임스페이스](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
- [파일 및 스트림 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [System.IO 네임 스페이스](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
+ [파일 및 스트림 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

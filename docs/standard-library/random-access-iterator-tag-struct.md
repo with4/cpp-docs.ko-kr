@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b7d45bba5c61948bb77dd2136687d47f8b4e9b33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f58235755081b2e0618388ede19e818784e8de0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 구조체
 임의 액세스 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.  
@@ -37,7 +38,7 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
   
  **Iter**가 임의 액세스 반복기로 사용될 수 있는 개체를 설명할 경우 형식은 **iterator**\< **Iter**> **::iterator_category**와 같습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // iterator_rait.cpp  

@@ -1,34 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 1) C4930 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4930"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4930"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4930
+dev_langs: C++
+helpviewer_keywords: C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7a09baa7f7918bfe861bea1b3d67744e87098a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4930
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'prototype': 프로토타입 함수가 호출되지 않았습니다. 변수 정의로 사용하려고 한 것은 아닌지 확인하십시오.  
+# <a name="compiler-warning-level-1-c4930"></a>컴파일러 경고(수준 1) C4930
+'프로토타입': 프로토타입 함수가 호출 되지 (의도 되는 변수 정의 ि ल ्?)  
   
- 컴파일러에서 사용되지 않은 함수 프로토타입을 발견했습니다.  프로토타입을 변수 정의로 사용하려면 여는 괄호와 닫는 괄호를 제거하십시오.  
+ 컴파일러가 사용 되지 않는 함수 프로토타입을 발견 했습니다. 변수 정의로 프로토타입의 의도 열기/닫기 괄호를 제거 합니다.  
   
- 다음 샘플에서는 C4930 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4930 오류가 생성 됩니다.  
   
 ```  
 // C4930.cpp  
@@ -48,9 +47,9 @@ int main() {
 }  
 ```  
   
- C4930 경고는 컴파일러에서 함수 프로토타입 선언과 함수 호출을 구별할 수 없는 경우에도 발생할 수 있습니다.  
+ 컴파일러는 함수 프로토타입 선언 하 고 함수 호출을 구분할 수 C4930 발생할 수 있습니다.  
   
- 다음 샘플에서는 C4930 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4930 오류가 생성 됩니다.  
   
 ```  
 // C4930b.cpp  
@@ -121,4 +120,4 @@ int main()
 }  
 ```  
   
- 위 샘플에서는 인수를 받지 않는 메서드의 결과가 이름이 없는 로컬 클래스 변수의 생성자에 인수로 전달됩니다.  이 호출을 명확하게 하려면 로컬 변수에 이름을 지정하거나 개체 인스턴스와 적절한 pointer\-to\-member 연산자를 사용하여 메서드 호출에 접두사를 지정합니다.
+ 위의 샘플에서 인수를 사용 하는 메서드의 결과 명명 되지 않은 지역 클래스 변수의 생성자에 대 한 인수로 전달 됩니다. 지역 변수를 지정 하거나 적절 한 멤버 포인터 연산자와 함께 개체 인스턴스를 사용 하 여 메서드 호출을 접두사로 사용 하 여 호출을 명확히 구분 수 있습니다.

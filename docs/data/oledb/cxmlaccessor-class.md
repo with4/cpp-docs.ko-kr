@@ -1,62 +1,64 @@
 ---
 title: "CXMLAccessor 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CXMLAccessor"
-  - "CXMLAccessor"
-  - "ATL.CXMLAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CXMLAccessor 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CXMLAccessor
+- CXMLAccessor
+- ATL.CXMLAccessor
+dev_langs: C++
+helpviewer_keywords: CXMLAccessor class
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 96620f287522168cd7b6b78d43163e8c4bb64217
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CXMLAccessor 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Allows you to access data sources as string data when you have no knowledge of the data store's schema \(underlying structure\).  
+# <a name="cxmlaccessor-class"></a>CXMLAccessor 클래스
+데이터 저장소의 스키마 (기본 구조)에 대해 알지 못합니다 때 문자열 데이터로 데이터 소스에 액세스할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CXMLAccessor : public CDynamicStringAccessorW  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|Retrieves the column information.|  
-|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|Retrieves the entire contents of a table by rows.|  
+|[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|열 정보를 검색합니다.|  
+|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|행으로 테이블의 전체 내용을 검색합니다.|  
   
-## 설명  
- However, `CXMLAccessor` differs from `CDynamicStringAccessorW` in that it converts all data accessed from the data store as XML\-formatted \(tagged\) data.  This is especially useful for output to XML\-aware Web pages.  The XML tag names will match the data store's column names as closely as possible.  
+## <a name="remarks"></a>설명  
+ 그러나 `CXMLAccessor` 에서 다른 `CDynamicStringAccessorW` (태그 있음된) 데이터를 XML 형식으로 데이터 저장소에서 액세스 하는 모든 데이터를 변환 한다는 점에서 합니다. 출력 XML 인식 웹 페이지에 특히 유용합니다. XML 태그 이름은는 가능한 데이터 저장소의 열 이름과 일치 합니다.  
   
- `CDynamicAccessor` 메서드를 사용하여 열 정보를 구하십시오.  사용자는 이 열 정보를 사용하여 런타임에 동적으로 접근자를 만듭니다.  
+ 사용 하 여 `CDynamicAccessor` 열 정보를 가져오는 방법입니다. 이 열 정보를 사용 하 여 접근자를 런타임에 동적으로 만듭니다.  
   
- 열 정보는 이 클래스에서 만들고 관리하는 버퍼에 저장됩니다.  Obtain column information using [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) or obtain column data by rows using [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md).  
+ 열 정보는이 클래스에서 만들고 관리 하는 버퍼에 저장 됩니다. 사용 하 여 열 정보를 가져올 [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) 사용 하 여 행에서 열 데이터를 얻는 [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)합니다.  
   
-## 예제  
- [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/CPP/cxmlaccessor-class_1.cpp)]  
+## <a name="example"></a>예  
+ [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
   
-## 요구 사항  
- **Header**: atldbcli.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더**: atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 클래스](../../data/oledb/caccessor-class.md)   

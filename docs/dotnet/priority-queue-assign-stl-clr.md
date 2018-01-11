@@ -1,45 +1,46 @@
 ---
-title: "priority_queue::assign(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign 멤버[STL/CLR]"
+title: 'priority_queue:: assign (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 00cd3623-ecd0-4dde-ba5c-777c1c0bc0b5
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf9eec9f8e8905cbc22d670d0ca33b1f89eaa4b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::assign(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueueassign-stlclr"></a>priority_queue::assign(STL/CLR)
 모든 요소를 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void assign(priority_queue<Value, Container>% right);  
 ```  
   
-#### 매개 변수  
- right  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
  삽입할 컨테이너 어댑터입니다.  
   
-## 설명  
- 멤버 함수는 내부 컨테이너에 대한 `right``.get_container()` 을 할당합니다.  queue의 전체 내용을 변경하기위해 이것을 사용합니다.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 할당 `right.get_container()` 기본 컨테이너에 있습니다. 큐의 전체 내용을 변경 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_priority_queue_assign.cpp   
@@ -70,13 +71,16 @@ int main()
   
 ```  
   
-  **c a b**  
- **c a b**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+c a b  
+c a b  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::operator=(STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

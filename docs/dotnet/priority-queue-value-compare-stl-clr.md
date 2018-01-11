@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bfa61ac20d5d09a3f5e9ed30aa2b328aab5efe10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1ef22902b0994eb8554334f4af12d83b13d61c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueuevaluecompare-stlclr"></a>priority_queue::value_compare(STL/CLR)
 두 값에 대 한 순서 지정 하는 대리자입니다.  
@@ -33,7 +36,7 @@ binary_delegate<value_type, value_type, int> value_compare;
 ## <a name="remarks"></a>설명  
  형식은 첫 번째 인수는 초가 되기 전에 정렬 여부를 결정 하는 대리자에 대 한 동의어입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_priority_queue_value_compare.cpp   

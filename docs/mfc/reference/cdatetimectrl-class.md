@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ced7bfbb2cedd8cad4353cdbb2d5627864de5ad7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3359b506217d2828207e06341fbf1fe53b3c0719
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 클래스
 날짜 및 시간 선택 컨트롤의 기능을 캡슐화합니다.  
@@ -131,12 +132,12 @@ void CloseMonthCal() const;
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [DTM_CLOSEMONTHCAL](http://msdn.microsoft.com/library/windows/desktop/bb761753) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_dateTimeCtrl`즉, 날짜 및 시간 선택 컨트롤을 프로그래밍 방식으로 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 현재 날짜 및 시간 선택 컨트롤에 대 한 드롭다운 달력을 닫습니다.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]  
@@ -178,7 +179,7 @@ virtual BOOL Create(
   
  호출 하는 경우 **만들기**, 공용 컨트롤은 초기화 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]  
   
 ##  <a name="getdatetimepickerinfo"></a>CDateTimeCtrl::GetDateTimePickerInfo  
@@ -200,12 +201,12 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [DTM_GETDATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761755) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_dateTimeCtrl`즉, 날짜 및 시간 선택 컨트롤을 프로그래밍 방식으로 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 성공적으로 현재 날짜 및 시간 선택 컨트롤에 대 한 정보를 검색 하는지 여부를 나타냅니다.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_4.cpp)]  
@@ -227,7 +228,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [DTM_GETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761759)Windows SDK에 설명 된 대로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]  
   
 ##  <a name="getmonthcalctrl"></a>CDateTimeCtrl::GetMonthCalCtrl  
@@ -243,7 +244,7 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 ### <a name="remarks"></a>설명  
  날짜 및 시간 선택 컨트롤에서 드롭다운 화살표를 클릭할 때 자식 month calendar 컨트롤을 만듭니다. 경우는 `CMonthCalCtrl` 소멸 되기, 응용 프로그램을 날짜 시간 선택 컨트롤의 자식 개월 달력을 나타내는 개체를 저장 합니다. 사용할 수 있어야 하므로, 개체가 더 이상 필요 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]  
   
 ##  <a name="getmonthcalfont"></a>CDateTimeCtrl::GetMonthCalFont  
@@ -306,7 +307,7 @@ DWORD GetRange(
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [DTM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761767)Windows SDK에 설명 된 대로 합니다. MFC의 구현에서 하나만 지정할 수 있습니다 `COleDateTime` 또는 `CTime` 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]  
   
 ##  <a name="gettime"></a>CDateTimeCtrl::GetTime  
@@ -333,7 +334,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
   
  반환 값 `DWORD` 두 번째 및 세 번째 버전에서는 위, 이면 여부 날짜 및 시간 선택 컨트롤은으로 설정 "날짜 없음" 상태에 표시 된 대로 [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) 구조체 멤버 `dwFlags`합니다. 값 반환 equals **GDT_NONE**, 컨트롤이 "날짜 없음" 상태로 설정 되 고 사용 하 여는 **DTS_SHOWNONE** 스타일입니다. 값 반환 equals **GDT_VALID**, 시스템 시간은 대상 위치에 성공적으로 저장 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
   
 ##  <a name="getidealsize"></a>CDateTimeCtrl::GetIdealSize  
@@ -355,12 +356,12 @@ BOOL GetIdealSize(LPSIZE psize) const;
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [DTM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb761757) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_dateTimeCtrl`즉, 날짜 및 시간 선택 컨트롤을 프로그래밍 방식으로 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 날짜 및 시간 선택 컨트롤을 표시 하는 이상적인 크기를 검색 합니다.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]  
@@ -385,7 +386,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [DTM_SETFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb761771)Windows SDK에 설명 된 대로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#6](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]  
   
 ##  <a name="setmonthcalcolor"></a>CDateTimeCtrl::SetMonthCalColor  
@@ -419,7 +420,7 @@ COLORREF SetMonthCalColor(
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [DTM_SETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761773)Windows SDK에 설명 된 대로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)합니다.  
   
 ##  <a name="setmonthcalfont"></a>CDateTimeCtrl::SetMonthCalFont  
@@ -441,7 +442,7 @@ void SetMonthCalFont(
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [DTM_SETMCFONT](http://msdn.microsoft.com/library/windows/desktop/bb761775)Windows SDK에 설명 된 대로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]  
   
 > [!NOTE]
@@ -466,12 +467,12 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [DTM_SETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761778) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_dateTimeCtrl`즉, 날짜 및 시간 선택 컨트롤을 프로그래밍 방식으로 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 약식된 이름이 요일과 오늘의 표시가 없는 일, 주 수를 표시 하려면 날짜 및 시간 선택 컨트롤을 설정 합니다.  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]  
@@ -503,7 +504,7 @@ BOOL SetRange(
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [DTM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761780)Windows SDK에 설명 된 대로 합니다. MFC의 구현에서 하나만 지정할 수 있습니다 `COleDateTime` 또는 `CTime` 사용 합니다. 경우는 `COleDateTime` 개체에는 **NULL** 상태 범위 제거 됩니다. 경우는 `CTime` 포인터 또는 `COleDateTime` 포인터가 **NULL**, 범위 제거 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CDateTimeCtrl::GetRange](#getrange)합니다.  
   
 ##  <a name="settime"></a>CDateTimeCtrl::SetTime  
@@ -528,7 +529,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782)Windows SDK에 설명 된 대로 합니다. MFC 구현에서 **SetTime**를 사용할 수 있습니다는 `COleDateTime` 또는 `CTime` 클래스 또는 있습니다 사용할 수는 `SYSTEMTIME` 구조 시간 정보를 설정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

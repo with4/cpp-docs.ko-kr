@@ -12,11 +12,12 @@ caps.latest.revision: "35"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c8496e0128d3ebd88c5a3a2fafad593c135f6fbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c97a264488e8b382091b24cdef8faae4c7bbfc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections-ccx"></a>컬렉션(C++/CX)
 C + + /CX 프로그램 템플릿 STL (표준 라이브러리) 컨테이너 또는 다른 모든 사용자 정의 컬렉션 형식을 자유롭게 사용할 만들 수 있습니다. 그러나 전달 하는 경우 컬렉션에서 Windows 런타임 응용 프로그램 이진 인터페이스 ABI ()를 통해-예를 들어 XAML 컨트롤 또는 JavaScript 클라이언트로-Windows 런타임 컬렉션 형식을 사용 해야 합니다.  
@@ -132,7 +133,7 @@ void FindButton(UIElementCollection^ col)
   
  다음 표에서는 사용 가능한 반복기 및 함수를 보여 줍니다.  
   
-|Iterators|함수|  
+|반복기|함수|  
 |---------------|---------------|  
 |[Platform::Collections::VectorIterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (내부적으로 저장 [Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) 및 int)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
 |[Platform::Collections::VectorViewIterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (내부적으로 저장 [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ 및 int)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  

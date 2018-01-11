@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7213f6d784c0591531a3f6141aa34eb39122c30c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e5ea633ca0d6e9f654e5462f8cebded18d9b9f99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dual"></a>dual
 .Idl 파일에는 이중 인터페이스로 인터페이스를 배치합니다.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  경우는 **이중** c + + 특성 인터페이스 앞, 생성된 된.idl 파일에 있는 라이브러리 블록 안에 배치 될 인터페이스를 수행 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는를 사용 하는 특성 블록 **이중** 인터페이스 정의 하기 전에:  
   
 ```  

@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6c567c720f5dc1febe0626754721c7c6ec9af4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbrush-class"></a>CBrush 클래스
 Windows GDI(그래픽 장치 인터페이스) 브러시를 캡슐화합니다.  
@@ -137,7 +138,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  사용 하 여 생성자는 `CBitmap` 매개 변수는 무늬 브러시를 생성 합니다. 매개 변수는 비트맵을 식별합니다. 비트맵을 사용 하 여 만들어진 것으로 가정 [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [cbitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), 또는 [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)합니다. 비트맵을 채우기 패턴에 사용할 수는 최소 크기는 8 x 8 픽셀입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
 ##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
@@ -159,7 +160,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
   
  (1 평면, 1 비트 / 픽셀) 단색 비트맵을 사용 하 여 만든 브러시는 현재 텍스트 색과 배경색을 사용 하 여 그려집니다. 0으로 설정 하는 비트를 나타내는 픽셀 현재 텍스트 색으로 그려집니다. 1로 설정 된 비트를 나타내는 픽셀을 현재 배경색으로 그려집니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
 ##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
@@ -214,7 +215,7 @@ BOOL CreateDIBPatternBrush(
   
 - [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
 ##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
@@ -251,7 +252,7 @@ BOOL CreateHatchBrush(
 ### <a name="remarks"></a>설명  
  브러시 모든 장치 컨텍스트에 대 한 현재 브러시도 이후에 선택할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
 ##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
@@ -279,7 +280,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
   
  사용 하 여에 대 한 내용은 [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), Windows 함수를 Windows SDK를 참조 하십시오.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
 ##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
@@ -301,7 +302,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
   
  만든 브러시를 사용 하 여 응용 프로그램이 완료할 때 `CreateSolidBrush`, 브러시 장치 컨텍스트를 선택 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CBrush::CBrush](#cbrush)합니다.  
   
 ##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
@@ -323,7 +324,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
  만든 브러시를 사용 하 여 응용 프로그램이 완료할 때 `CreateSysColorBrush`, 브러시 장치 컨텍스트를 선택 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
 ##  <a name="fromhandle"></a>CBrush::FromHandle  
@@ -345,7 +346,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CBrush::CBrush](#cbrush)합니다.  
   
 ##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
@@ -371,7 +372,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
   
  예를 들어 호출 `GetLogBrush` 특정 색 또는 패턴 비트맵의 일치 하도록 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
 ##  <a name="operator_hbrush"></a>HBRUSH CBrush::operator  
@@ -389,7 +390,7 @@ operator HBRUSH() const;
   
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

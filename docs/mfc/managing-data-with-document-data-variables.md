@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af24c461d579ee784487697cc376d9e8f0816643
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c737557d503ca7e0959d159a0818f1ca78280ea2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-data-with-document-data-variables"></a>문서 데이터 변수로 데이터 관리
 문서 클래스의 멤버 변수로 문서의 데이터를 구현 합니다. Scribble 프로그램 형식의 데이터 멤버를 선언 하는 예를 들어 `CObList` -에 대 한 포인터를 저장 하는 연결 된 목록 `CObject` 개체입니다. 이 목록은 자유 선 그리기를 구성 하는 점의 배열을 저장에 사용 됩니다.  

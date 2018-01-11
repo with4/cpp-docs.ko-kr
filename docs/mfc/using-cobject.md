@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a892d2831d21c17ceaa21a6403cf325a2b241c9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17bffb412975cfc6a97eae8b30aff2514a2e1d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cobject"></a>CObject 사용
 [CObject](../mfc/reference/cobject-class.md) Microsoft Foundation 클래스 라이브러리 (MFC)의 대부분에 대 한 루트 기본 클래스입니다. `CObject` 클래스 serialization 지 원하는, 런타임 클래스 정보 및 개체 진단 출력을 포함 하 여 프로그램 개체를 직접 통합할 수 있는 많은 유용한 기능을 포함 합니다. 클래스를 파생 하는 경우 `CObject`, 이러한 클래스에 악용할 수 있는 `CObject` 기능입니다.  

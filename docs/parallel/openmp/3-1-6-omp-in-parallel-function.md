@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b72351095fd56ae6543c2ca742983eef315f2158
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e5d05af81eb112894ca27a7599c271138893ee1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel 함수
 **omp_in_parallel** 함수 병렬로 실행 되는 병렬 영역 동적 범위 내에서 호출 되 면 0이 아닌 값을 반환; 그렇지 않으면 0을 반환 합니다. 형식은 다음과 같습니다.  

@@ -151,11 +151,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c317390f804e90ed2faf4302ab0a46d783dd49ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b557a56b1d525941c96b9a6a96fd367b64afcaf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 클래스
 도구 모음에 이미지입니다. `CMFCToolBarImages` 클래스 파일에서 응용 프로그램 리소스에서 로드 되는 도구 모음 이미지를 관리 합니다.  
@@ -243,7 +244,7 @@ class CMFCToolBarImages : public CObject
 |[CMFCToolBarImages::SmoothResize](#smoothresize)|밑줄이 그어진된 이미지를 원활 하 게 크기가 조정 됩니다.|  
 |[CMFCToolBarImages::UpdateImage](#updateimage)|비트맵에서 사용자 정의 도구 모음 이미지를 업데이트합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -251,14 +252,14 @@ class CMFCToolBarImages : public CObject
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE`truecolor 알파 혼합 (32 비트 색상)은 사용할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
  관리 하는 도구 모음 이미지의 전체 비트맵 `CMFCToolbarImages` 하나 이상의 작은 도구 모음 이미지 (단추)의 크기가 고정 되어 구성 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 하는 `CMFCToolBarImages` 에서 다양 한 메서드를 사용 하 여 개체는 `CMFCToolBarImages` 클래스입니다. 도구 모음 이미지의 크기를 설정, 이미지, 로드 및 이미지의 투명 한 색을 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]  

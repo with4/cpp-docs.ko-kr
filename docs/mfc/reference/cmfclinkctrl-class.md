@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1105e69599b1741d79c20e4f0ceb362cfc8c15eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc83e5abf09102af8f27b1ee73fc78ed162b9335
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 클래스
 `CMFCLinkCtrl` 클래스 하이퍼링크로 단추를 표시 하 고 단추를 클릭할 때 링크 대상을 호출 합니다.  
@@ -50,7 +51,7 @@ class CMFCLinkCtrl : public CMFCButton
 |[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|암시적 프로토콜 설정 (예를 들어 "http:")의 URL입니다.|  
 |[CMFCLinkCtrl::SizeToContent](#sizetocontent)|단추 텍스트 또는 비트맵을 포함 단추의 크기를 조정 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -59,7 +60,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="remarks"></a>설명  
  파생 되는 단추를 클릭할 때는 `CMFCLinkCtrl` 클래스, 프레임 워크 단추의 URL에 대 한 매개 변수로 전달 된 `ShellExecute` 메서드. 그런 다음 `ShellExecute` 메서드 URL 대상을 엽니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 크기를 설정 하는 `CMFCLinkCtrl` 개체 및에 도구 설명 및 url을 설정 하는 `CMFCLinkCtrl` 개체입니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  

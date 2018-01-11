@@ -89,11 +89,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d5de8001f328a4f4b75b94c26974d02768fd85c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6cb4772f685a38db39c946a5e6f4e77df87998a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 클래스
 Office 2007 스타일의 리본 갤러리를 구현합니다.  
@@ -161,7 +162,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 ## <a name="remarks"></a>설명  
  갤러리 단추는 사용자가 열 때 갤러리를 표시 한다는 일반 메뉴 단추 처럼 동작 합니다. 갤러리에서 항목을 선택할 때 프레임 워크 보냅니다는 `WM_COMMAND` 단추의 명령 ID와 함께 메시지입니다. 메시지를 처리 하는 경우 호출 해야 [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) 갤러리에서 선택 된 항목을 찾으려고 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 다양 한 메서드를 사용 하는 방법을 보여 줍니다는 `CMFCRibbonGallery` 구성 하는 클래스는 `CMFCRibbonGallery` 개체입니다. 이 예제에서는 갤러리의 행 마다 항목의 수를 지정, 메뉴 패널의 크기 조정 가능 하 고, 팝업 메뉴의 왼쪽에 세로 막대를 활성화 하 고 리본 메뉴 모음에 직접 색상표로 리본 갤러리를 표시 하는 방법을 보여 줍니다. 이 코드 조각은 [클라이언트 그리기 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]  

@@ -1,30 +1,31 @@
 ---
-title: "샘플 다중 스레드 C 프로그램 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "다중 스레드 C 프로그램 샘플 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 샘플 다중 스레드 C 프로그램
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bounce.c는 문자 **a** 또는 **A**가 입력될 때마다 새 스레드를 만드는 샘플 다중 스레드 프로그램입니다.  각 스레드는 화면 주위에 여러 색상의 움직이는 웃는 얼굴을 표시합니다.  최대 32개의 스레드를 만들 수 있습니다.  `q` 또는 **Q**를 입력하면 프로그램이 정상적으로 종료됩니다.  Bounce.c를 컴파일하고 링크하는 데 대한 자세한 내용은 [다중 스레드 프로그램 컴파일 및 링크](../parallel/compiling-and-linking-multithread-programs.md)를 참조하십시오.  
+# <a name="sample-multithread-c-program"></a>샘플 다중 스레드 C 프로그램
+Bounce.c 샘플 다중 스레드 프로그램에서는 새입니다 스레드 때마다 문자는 **는** 또는 **A** 를 입력 합니다. 각 스레드는 화면 다른 색상의 웃는 얼굴을 반송 합니다. 최대 32 개의 스레드를 만들 수 있습니다. 프로그램의 정상적으로 종료 때 `q` 또는 **Q** 를 입력 합니다. 컴파일 및 Bounce.c 연결 하는 방법에 대 한 정보를 참조 하십시오. [프로그램 컴파일 및 링크 다중 스레드](../parallel/compiling-and-linking-multithread-programs.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // sample_multithread_c_program.c  
@@ -211,12 +212,12 @@ void ClearScreen( void )
 }  
 ```  
   
-### 입력  
+### <a name="input"></a>입력  
   
 ```  
 a  
 q  
 ```  
   
-## 참고 항목  
- [C 및 Wind32를 사용한 다중 스레딩](../parallel/multithreading-with-c-and-win32.md)
+## <a name="see-also"></a>참고 항목  
+ [C 및 Win32를 사용한 다중 스레딩](../parallel/multithreading-with-c-and-win32.md)

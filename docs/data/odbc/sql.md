@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1879def3a66765c48d9f86e4b7f0c56785a0cf91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql"></a>SQL
 SQL (구조적 쿼리 언어)은 쿼리를 정의 수정 및 데이터를 제어할 수 있는 관계형 데이터베이스와 통신 하는 방법입니다. SQL 구문을 사용 하 여, 사용자가 지정한 조건에 따라 레코드를 추출 하는 문을 생성할 수 있습니다.  
@@ -54,8 +57,8 @@ SQL (구조적 쿼리 언어)은 쿼리를 정의 수정 및 데이터를 제어
   
 |SQL 키워드|마법사 및 데이터베이스 클래스 사용|  
 |-----------------|---------------------------------------------|  
-|**선택**|테이블 및 데이터 원본의 열은 데 사용할 식별.|  
-|**여기서**|선택 영역을 범위를 좁히는 필터를 적용 합니다.|  
+|**SELECT**|테이블 및 데이터 원본의 열은 데 사용할 식별.|  
+|**WHERE**|선택 영역을 범위를 좁히는 필터를 적용 합니다.|  
 |**ORDER BY**|레코드 집합에 정렬 순서를 적용 합니다.|  
 |**삽입**|레코드 집합에 새 레코드를 추가 합니다.|  
 |**삭제**|레코드 집합에서 레코드를 삭제 합니다.|  

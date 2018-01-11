@@ -1,36 +1,38 @@
 ---
-title: "CDynamicAccessor::SetBlobSizeLimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor::SetBlobSizeLimit"
-  - "SetBlobSizeLimit"
-  - "CDynamicAccessor.SetBlobSizeLimit"
-  - "ATL.CDynamicAccessor.SetBlobSizeLimit"
-  - "ATL::CDynamicAccessor::SetBlobSizeLimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetBlobSizeLimit 메서드"
+title: 'Cdynamicaccessor:: Setblobsizelimit | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor::SetBlobSizeLimit
+- SetBlobSizeLimit
+- CDynamicAccessor.SetBlobSizeLimit
+- ATL.CDynamicAccessor.SetBlobSizeLimit
+- ATL::CDynamicAccessor::SetBlobSizeLimit
+dev_langs: C++
+helpviewer_keywords: SetBlobSizeLimit method
 ms.assetid: fb8cb85d-f841-408e-a344-37895b10993f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e5d683c06283c82e6117893e44def41d09300da0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::SetBlobSizeLimit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Sets the maximum BLOB size in bytes.  
+# <a name="cdynamicaccessorsetblobsizelimit"></a>CDynamicAccessor::SetBlobSizeLimit
+최대 BLOB 크기를 바이트 단위로 설정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -39,17 +41,17 @@ Sets the maximum BLOB size in bytes.
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nBlobSize`  
- Specifies the BLOB size limit.  
+ BLOB 크기 제한을 지정합니다.  
   
-## 설명  
- Sets the maximum BLOB size in bytes; column data larger than this value is treated as a BLOB.  Some providers give extremely large sizes for columns \(such as 2 GB\).  Rather than attempting to allocate memory for a column this size, you would typically try to bind these columns as BLOBs.  In that way you don't have to allocate all the memory, but you can still read all the data without fear of truncation.  However, there are some cases in which you might want to force `CDynamicAccessor` to bind large columns in their native data types.  To do this, call `SetBlobSizeLimit` before calling **Open**.  
+## <a name="remarks"></a>설명  
+ 최대 BLOB 크기 (바이트) 설정 이 값 보다 큰 열 데이터를 BLOB로 처리 됩니다. 일부 공급자 (2GB) 등의 열에 대 한 매우 큰 크기를 제공 합니다. 이 크기는 열에 대 한 메모리를 할당을 말고 Blob으로 이러한 열을 바인딩할 하려고 일반적으로 합니다. 모든 메모리를 할당할 필요가 해당 방법으로 없지만 잘림의 한 걱정 없이 모든 데이터를 읽을 수 있습니다. 그러나를 강제 적용 하려는 경우도 있습니다. `CDynamicAccessor` 네이티브 데이터 형식으로에 큰 열을 바인딩할 수 있습니다. 이 작업을 수행 하려면 호출 `SetBlobSizeLimit` 호출 하기 전에 **열려**합니다.  
   
- The constructor method [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) sets the maximum BLOB size to a default value of 8,000 bytes.  
+ 생성자 메서드 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 최대 BLOB 크기 기본값은 8, 000 바이트를 설정 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)

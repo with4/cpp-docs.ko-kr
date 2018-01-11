@@ -1,30 +1,32 @@
 ---
-title: "표준 변환 및 암시적 boxing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boxing, implicit"
+title: "표준 변환 및 암시적 Boxing | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: boxing, implicit
 ms.assetid: 33f7fc7d-5674-44a2-a859-0e6a04fae519
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ade776e2d1eab0fe244254a91a2ed3830ffbda6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 표준 변환 및 암시적 boxing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A standard conversion will be chosen by the compiler over a conversion that requires boxing.  
+# <a name="standard-conversions-and-implicit-boxing"></a>표준 변환 및 암시적 boxing
+표준 변환이 필요한 boxing 변환을 통해 컴파일러에 의해 선택 됩니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // clr_implicit_boxing_Std_conversion.cpp  
@@ -43,6 +45,9 @@ int main() {
 }  
 ```  
   
- **2**   
-## 참고 항목  
+```Output  
+2  
+```  
+  
+## <a name="see-also"></a>참고 항목  
  [Boxing](../windows/boxing-cpp-component-extensions.md)

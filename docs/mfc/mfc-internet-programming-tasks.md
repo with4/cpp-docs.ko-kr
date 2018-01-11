@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c99ee29adb900154b3e9943f4f40d6301af5ce5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd726860e181eb352d7368f31a31d2cbd7489000
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC 인터넷 프로그래밍 작업
 이 섹션에는 응용 프로그램에 인터넷 지원을 추가 하는 자세한 단계 포함 되어 있습니다. 항목에는 MFC 클래스 인터넷 가능 하 게 기존 응용 프로그램을 사용 하는 방법 및 기존 COM 구성 요소에 활성 문서 지원을 추가 하는 방법을 포함 됩니다. 최신 주식 시세 Pittsburgh의 football 점수를 사용 하 여 문서를 만들려면 원하는 및 남극 대륙 Microsoft에서 최신 온도 다양 한 인터넷을 통해 작업을 수행 하는 데 도움이 되는 기술 제공 합니다.  

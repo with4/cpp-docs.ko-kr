@@ -1,58 +1,60 @@
 ---
-title: "CDBPropSet::CDBPropSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropSet.CDBPropSet"
-  - "CDBPropSet::CDBPropSet"
-  - "ATL::CDBPropSet::CDBPropSet"
-  - "ATL.CDBPropSet.CDBPropSet"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDBPropSet 클래스, 생성자"
+title: 'Cdbpropset:: Cdbpropset | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropSet.CDBPropSet
+- CDBPropSet::CDBPropSet
+- ATL::CDBPropSet::CDBPropSet
+- ATL.CDBPropSet.CDBPropSet
+dev_langs: C++
+helpviewer_keywords: CDBPropSet class, constructor
 ms.assetid: 02ae5d9e-c067-47ca-8111-a03e86b5626b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 239f6c0a03186736d35b8d082913aeb76cac1d14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDBPropSet::CDBPropSet
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-생성자입니다.  **rgProperties**, **cProperties**, 및  **guidPropertySet** 필드는  [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 구조를 초기화합니다.  
+# <a name="cdbpropsetcdbpropset"></a>CDBPropSet::CDBPropSet
+생성자입니다. 초기화는 **rgProperties**, **cProperties**, 및 **guidPropertySet** 의 필드는 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 구조입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
       CDBPropSet(  
    const GUID& guid   
 );  
-CDBPropSet(   
-   const CDBPropSet& propset    
+CDBPropSet(   
+   const CDBPropSet& propset    
 );  
 CDBPropSet( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `guid`  
- \[in\] GUID를 초기화 하는 데는  **guidPropertySet** 필드입니다.  
+ [in] GUID를 초기화 하는 데 사용 된 **guidPropertySet** 필드입니다.  
   
- *propset*  
- \[in\] 다른  `CDBPropSet`  복사 생성에 대 한 개체입니다.  
+ *속성 집합*  
+ [in] 복사 생성을 위한 다른 `CDBPropSet` 개체입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDBPropSet 클래스](../../data/oledb/cdbpropset-class.md)   
- [CDBPropSet::SetGUID](../../data/oledb/cdbpropset-setguid.md)   
- [DBPROP Structure](https://msdn.microsoft.com/en-us/library/ms717970.aspx)
+ [Cdbpropset:: Setguid](../../data/oledb/cdbpropset-setguid.md)   
+ [DBPROP 구조](https://msdn.microsoft.com/en-us/library/ms717970.aspx)

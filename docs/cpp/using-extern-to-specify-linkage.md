@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a62c394b857dfe3ac5cee557c50c2f9e5d6293bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db93feb8c8fad13cf8de082858e68b89f93b5323
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-extern-to-specify-linkage"></a>extern을 사용하여 링크 지정
 ## <a name="syntax"></a>구문  
@@ -36,7 +37,7 @@ extern string-literal declaration
 ## <a name="remarks"></a>설명  
  `extern` 키워드는 변수 또는 함수를 선언하며 외부 링크를 포함하도록 지정합니다. 외부 링크의 이름은 해당 링크가 정의된 파일이 아닌 다른 파일에 표시됩니다. `extern`은 변수를 한정할 때 변수에 정적 지속 기간을 지정합니다. 정적 지속 기간은 프로그램 시작 시 할당되고 프로그램 종료 시 할당 해제됩니다. 변수 또는 함수는 다른 소스 파일에서 정의하거나 나중에 같은 파일에서 정의할 수 있습니다. 파일 범위의 변수 및 함수는 기본적으로 외부에서 선언됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // specifying_linkage1.cpp  
@@ -61,7 +62,7 @@ void other() {
   
  Microsoft c + +에서는 문자열 **"C"** 및 **"c + +"** 에 *문자열 리터럴* 필드입니다. 모든 표준 include 파일은 `extern` "C" 구문을 사용하여 C++ 프로그램에 사용할 런타임 라이브러리 함수를 허용합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 C 링크가 있는 이름을 선언하는 또 다른 방법을 보여 줍니다.  
   
 ```  

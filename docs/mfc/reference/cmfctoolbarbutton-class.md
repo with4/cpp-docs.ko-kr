@@ -171,11 +171,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b834b46a9a899b9b5ae7cce0d399593588ff2d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aaf355d15679bdb30b7561fe28dd6f927688ede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 클래스
 도구 모음 단추 기능을 제공합니다.  
@@ -269,7 +270,7 @@ class CMFCToolBarButton : public CObject
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCToolBarButton::m_bImage](#m_bimage)|이미지 단추에 표시 되는지 여부를 지정 합니다.|  
 |[CMFCToolBarButton::m_bText](#m_btext)|단추 텍스트 레이블을 표시 되는지 여부를 지정 합니다.|  
@@ -293,7 +294,7 @@ class CMFCToolBarButton : public CObject
   
  `CMFCToolBarButton` 클래스는 다른 도구 모음 단추 클래스에 대 한 기본 클래스와 같은 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md), [CMFCToolBarEditBoxButton 클래스](../../mfc/reference/cmfctoolbareditboxbutton-class.md), 및 [ CMFCToolBarComboBoxButton 클래스](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 하는 `CMFCToolBarButton` 에서 다양 한 메서드를 사용 하 여 개체는 `CMFCToolBarButton` 클래스입니다. 이 예제에서는 마우스를 사용 하도록 설정 및 키보드 입력 단추 이미지 인덱스, 단추의 경계 사각형 및 설정 단추를 보이게 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [탭 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]  

@@ -31,11 +31,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 047032e65f0d1fa7847caae36e10fac4175b5db0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a433d723e15d910674c129b1e62ca82c1de4bb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 클래스
 `CNetAddressCtrl` 클래스에 입력 한 IPv4, IPv6 및 DNS 주소를 이름이 지정된 형식의 유효성을 검사하는 데 사용할 수 있는 네트워크 주소 컨트롤을 나타냅니다.  
@@ -74,12 +75,12 @@ class CNetAddressCtrl : public CEdit
   
  ![네트워크 주소 컨트롤 및 정보 팁 있는 대화 상자. ] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 네트워크 주소 유효성을 검사 하는 대화의 일부입니다. 세 개의 라디오 단추에 대 한 이벤트 처리기 지정 네트워크 주소 세 가지 주소 유형 중 하나가 될 수 있습니다. 사용자가 네트워크 컨트롤의 텍스트 상자에는 주소를 입력 한 다음 주소의 유효성을 검사 하는 단추를 누를 합니다. 주소는 유효 성공 메시지가 표시 됩니다. 그렇지 않은 경우에 미리 정의 된 정보 팁 오류 메시지가 표시 됩니다.  
   
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  대화 상자 헤더 파일에서 다음 코드 예제에서는 정의 [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) 및 [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) 에서 필요로 하는 변수는 [CNetAddressCtrl::GetAddress](#getaddress)메서드.  
   
  [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]  

@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16f75743010087eb13ab38186b6326b4bcc38688
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb269a4c7e85269096e5df8a56e16bf898348118
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defaultvalue"></a>defaultvalue
 형식화 된 선택적 매개 변수 기본값을의 지정을 허용 합니다.  
@@ -32,13 +35,13 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *value*  
+ *값*  
  매개 변수에 대해 기본 값입니다.  
   
 ## <a name="remarks"></a>설명  
  **defaultvalue** c + + 특성에 동일한 기능을는 [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 사용 하 여 인터페이스 메서드는 **defaultvalue** 특성:  
   
 ```  

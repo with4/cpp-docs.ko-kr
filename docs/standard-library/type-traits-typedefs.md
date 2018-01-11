@@ -11,17 +11,15 @@ f1_keywords:
 - xtr1common/std::false_type
 - type_traits/std::true_type
 - xtr1common/std::true_type
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: edd81913357c8402d93f2712ef0120179a22968f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lttypetraitsgt-typedefs"></a>&lt;type_traits&gt; 형식 정의
 |||  
@@ -38,7 +36,7 @@ typedef integral_constant<bool, false> false_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 `integral_constant` 특수화의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <type_traits>   
@@ -69,7 +67,7 @@ typedef integral_constant<bool, true> true_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 `integral_constant` 특수화의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__type_traits__true_type.cpp   
@@ -94,5 +92,4 @@ true_type == true
   
 ## <a name="see-also"></a>참고 항목  
  [<type_traits>](../standard-library/type-traits.md)
-
 

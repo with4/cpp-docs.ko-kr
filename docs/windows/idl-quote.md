@@ -1,32 +1,33 @@
 ---
-title: "idl_quote | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_quote"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_quote attribute"
+title: idl_quote | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_quote
+dev_langs: C++
+helpviewer_keywords: idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 288d90bf2e32024792eaf5ec44825a9ac992bd71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# idl_quote
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-생성 된.idl 파일을 통해 전달할 수 및 Visual C\+\+의 현재 버전에서 지원 되지 않는 IDL 구문을 사용할 수 있습니다.  
+# <a name="idlquote"></a>idl_quote
+Visual c + +의 현재 버전에서 지원 되지 않는 IDL 구문을 사용할 수 있습니다 및 생성된 된.idl 파일을 통과 하도록 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,15 +36,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 매개 변수  
- *text*  
- Visual C\+\+ 컴파일러에서 컴파일러 오류를 반환 하지 않고를 통해 생성 된.idl 파일을 전달 하는 특성 이름입니다.  
+#### <a name="parameters"></a>매개 변수  
+ *텍스트*  
+ Visual c + + 컴파일러는 컴파일러 오류를 반환 하지 않고 생성된 된.idl 파일을 통과 하는 특성 이름입니다.  
   
-## 설명  
- 경우는  **idl\_quote** C\+\+ 특성으로 사용 됩니다 \(세미콜론 닫는 대괄호 뒤에\)를 사용 하 여 독립 실행형 특성 다음  *텍스트*  으로 병합 된.idl 파일에 저장 됩니다.  경우  **idl\_quote** 는 심볼을 사용  *텍스트*  해당 기호에 대 한 특성 블록 내에 배치 됩니다.  
+## <a name="remarks"></a>설명  
+ 경우는 **idl_quote** (세미콜론으로 닫는 괄호 뒤)를 독립 실행형 특성으로 다음 c + + 특성은 사용 *텍스트* 그대로 병합 된.idl 파일에 배치 됩니다. 경우 **idl_quote** 를 기호를 사용할 경우 *텍스트* 해당 기호에 대 한 특성 블록 내에 배치 됩니다.  
   
-## 예제  
- 다음 코드에 지원 되지 않는 특성을 지정 하는 수 있습니다 보여 줍니다 \(를 사용 하 여  **에서**, 지원 되\) 정의 및 정의 되지 않은.idl 구문을 사용 하는 방법:  
+## <a name="example"></a>예  
+ 다음 코드는 지원 되지 않는 특성을 지정 하는 방법은 보여 줍니다 (사용 하 여 **에**, 지원 되는) 정의 하는 정의 되지 않은.idl 구문을 사용 하는 방법 및:  
   
 ```  
 // cpp_attr_ref_idl_quote.cpp  
@@ -78,22 +79,21 @@ __interface IStatic{
 };  
 ```  
   
- MYFLOT 및 MYDUB이이 코드에서 발생 하는  *텍스트* 항목에서 생성 된.idl 파일을 추가할 수 있습니다.  *이름* 매개 변수가 힘  *텍스트* 를 참조 하는 것 보다 먼저 배치할 수  *이름* 생성 된.idl 파일에.  *종속성* 매개 변수 종속성 목록 정의 앞에 배치 됩니다  *텍스트* 생성 된.idl 파일에 있습니다.  
+ 이 코드는 MYFLOT 및 MYDUB 및 *텍스트* 항목이 생성된 된.idl 파일에 저장 됩니다. *이름* 매개 변수가 강제로 *텍스트* 참조 하는 것 보다 먼저 배치 될 *이름* 생성된 된.idl 파일에 있습니다. *종속성* 매개 변수 앞에 배치 하려면 종속성 목록 정의 강제로 *텍스트* 생성된 된.idl 파일에 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|원하는 위치에|  
+|**적용 대상**|원하는 위치|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [독립 실행형 특성](../windows/stand-alone-attributes.md)   

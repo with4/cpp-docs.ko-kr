@@ -19,16 +19,17 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3531ab24116cd64778f43604fa6196b9ffd67f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c341f208d9aa54e60568b066f462db65b9172394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>구조체, 스타일, 콜백 및 메시지 맵
 이 단원에서는 MFC 라이브러리와 MFC 메시지 맵에 사용되는 구조체, 스타일 및 콜백 함수를 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [MFC에서 사용하는 구조체](../../mfc/reference/structures-used-by-mfc.md)  
  다양한 멤버 함수에서 호출되는 구조체에 대한 링크를 제공합니다.  
   

@@ -33,11 +33,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae23fabc33d744265677e395310ba1f14dcb64ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dba8ba22325d3ea9e68411f0372cfac4d6b0659d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame 클래스
 키프레임의 기본 기능을 구현합니다.  
@@ -67,7 +68,7 @@ class CBaseKeyFrame : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CBaseKeyFrame::m_bAdded](#m_badded)|이 키 프레임에 스토리 보드에 추가 되었는지 여부를 지정 합니다.|  
 |[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|이 키 프레임에서 다른 기존 키 프레임의 오프셋 또는 일부 전환의 끝에서 스토리 보드에 추가할지 여부를 지정 합니다.|  

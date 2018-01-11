@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c29ec07f9a912fb66adc391465885da8030cc466
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8aa1406b490128657da19f7c48c958d382850d96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 동작을 수정 하는 [일정](../../../parallel/openmp/reference/schedule.md) 절 때 `schedule(runtime)` 에 지정 된 한 `for` 또는 `parallel for` 지시문입니다.  
@@ -52,7 +53,7 @@ set OMP_SCHEDULE[=type[,size]]
   
  자세한 내용은 참조 [4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령 집합의 **OMP_SCHEDULE** 환경 변수:  
   
 ```  
