@@ -24,11 +24,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b19503d60629011621ef320b46325e17a217804c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98601b9d4293417d03dcdcc96b2ae0bb54defdc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raising-software-exceptions"></a>소프트웨어 예외 발생
 프로그램 오류의 가장 일반적인 원인 중 몇 가지는 시스템에서 예외로 플래그가 지정되지 않습니다. 예를 들어 메모리 블록을 할당하려고 시도하지만 메모리가 부족한 경우, 런타임 또는 API 함수에서 예외를 발생시키지 않지만 오류 코드를 반환합니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  WINERROR.H 파일은 예외 코드의 형식을 보여 줍니다. 기존 예외 코드와 충돌하는 코드를 정의하지 않으려면 세 번째 최상위 비트를 1로 설정합니다. 4개의 최상위 비트는 다음 표와 같이 설정되어야 합니다.  
   
-|비트|권장하는 이진 설정|설명|  
+|Bits|권장하는 이진 설정|설명|  
 |----------|--------------------------------|-----------------|  
 |31-30|11|이러한 두 비트는 코드의 기본 상태(11 = 오류, 00 = 성공, 01 = 정보, 10 = 경고)를 나타냅니다.|  
 |29|1|클라이언트 비트. 사용자 정의 코드의 경우 1로 설정합니다.|  

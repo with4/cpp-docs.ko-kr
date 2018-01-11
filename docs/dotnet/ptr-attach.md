@@ -1,35 +1,37 @@
 ---
-title: "ptr::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::com::ptr::Attach"
-  - "ptr::Attach"
-  - "ptr.Attach"
-  - "msclr.com.ptr.Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach 메서드"
+title: ptr::Attach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::com::ptr::Attach
+- ptr::Attach
+- ptr.Attach
+- msclr.com.ptr.Attach
+dev_langs: C++
+helpviewer_keywords: Attach method
 ms.assetid: 81d930de-cb2a-4c30-9bd6-94d65942c47a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d8e3a107bef12ca7f1bcd89098d35ed6a124775f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Attaches a COM object to a `com::ptr`.  
+# <a name="ptrattach"></a>ptr::Attach
+COM 개체에 연결 된 `com::ptr`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void Attach(  
@@ -37,20 +39,20 @@ void Attach(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_right`  
- The COM interface pointer to attach.  
+ 연결할 COM 인터페이스 포인터입니다.  
   
-## 예외  
- If the `com::ptr` already owns a reference to a COM object, `Attach` throws <xref:System.InvalidOperationException>.  
+## <a name="exceptions"></a>예외  
+ 경우는 `com::ptr` COM 개체에 대 한 참조를 이미 소유한 `Attach` throw <xref:System.InvalidOperationException>합니다.  
   
-## 설명  
- A call to `Attach` references the COM object but does not release the caller's reference to it.  
+## <a name="remarks"></a>설명  
+ 에 대 한 호출 `Attach` COM 개체를 참조 하지만 호출자의에 대 한 참조를 해제 하지 않습니다.  
   
- Passing `NULL` to `Attach` results in no action being taken.  
+ 전달 `NULL` 를 `Attach` 라인 아무 동작도 수행 합니다.  
   
-## 예제  
- This example implements a CLR class that uses a `com::ptr` to wrap its private member `IXMLDOMDocument` object.  The `ReplaceDocument` member function first calls `Release` on any previously owned object and then calls `Attach` to attach a new document object.  
+## <a name="example"></a>예  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `ReplaceDocument` 멤버 함수에 대 한 첫 번째 호출 `Release` 에서 이전에 소유 하 고 개체와 호출 `Attach` 새 문서 개체를 연결 합니다.  
   
 ```  
 // comptr_attach.cpp  
@@ -124,12 +126,12 @@ int main() {
 }  
 ```  
   
-## 요구 사항  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ptr 멤버](../dotnet/ptr-members.md)   
- [ptr::operator\=](../dotnet/ptr-operator-assign.md)   
+ [ptr::operator =](../dotnet/ptr-operator-assign.md)   
  [ptr::Release](../dotnet/ptr-release.md)

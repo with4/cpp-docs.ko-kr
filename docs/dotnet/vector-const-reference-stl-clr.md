@@ -1,41 +1,42 @@
 ---
-title: "vector::const_reference(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::const_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reference 멤버[STL/CLR]"
+title: 'vector:: const_reference (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::const_reference
+dev_langs: C++
+helpviewer_keywords: const_reference member [STL/CLR]
 ms.assetid: c68743cd-5367-46ca-88ae-b90b2f0ecc34
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: be4558111dc41d5a2c6c66463ea2c749e68bb1b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# vector::const_reference(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorconstreference-stlclr"></a>vector::const_reference(STL/CLR)
 요소에 대한 상수 참조의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef value_type% const_reference;  
 ```  
   
-## 설명  
- The type describes a constant reference to an element.  
+## <a name="remarks"></a>설명  
+ 이 형식은 요소에 대 한 상수 참조를 설명 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_vector_const_reference.cpp   
@@ -62,13 +63,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/vector\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/벡터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::reference](../dotnet/vector-reference-stl-clr.md)   
- [vector::value\_type](../dotnet/vector-value-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: reference (STL/CLR)](../dotnet/vector-reference-stl-clr.md)   
+ [vector::value_type(STL/CLR)](../dotnet/vector-value-type-stl-clr.md)

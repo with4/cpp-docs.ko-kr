@@ -1,33 +1,33 @@
 ---
-title: "operator== (vector)(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator== 멤버[STL/CLR]"
+title: "연산자 = = (vector) (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: b552c9a1-8d06-4090-b394-d08a84947594
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 860f25b0d38f6689927eebd5cb1359d33d03332d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# operator== (vector)(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vector equal comparison.  
+# <a name="operator-vector-stlclr"></a>operator== (vector)(STL/CLR)
+벡터 같은지 비교 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         vector<Value>% right);  
 ```  
   
-#### 매개 변수  
- left  
- Left container to compare.  
+#### <a name="parameters"></a>매개 변수  
+ 왼쪽  
+ 비교할 왼쪽 컨테이너입니다.  
   
- right  
- Right container to compare.  
+ 오른쪽  
+ 비교할 오른쪽 컨테이너입니다.  
   
-## 설명  
- The operator function returns true only if the sequences controlled by `left` and `right` have the same length and, for each position `i`, `left``[i] ==` `right``[i]`.  You use it to test whether `left` is ordered the same as `right` when the two vectors are compared element by element.  
+## <a name="remarks"></a>설명  
+ 연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 `left` 및 `right` 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트를 사용 하는지 여부를 `left` 와 동일 하 게 정렬 되 `right` 두 벡터 요소에서 비교 된 요소를가 하는 경우.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_vector_operator_eq.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \=\= \[a b c\] is True**  
-**\[a b c\] \=\= \[a b d\] is False**   
-## 요구 사항  
- **Header:** \<cliext\/vector\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/벡터 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [vector](../dotnet/vector-stl-clr.md)   
- [operator\!\= \(vector\)](../dotnet/operator-inequality-vector-stl-clr.md)   
- [operator\< \(vector\)](../dotnet/operator-less-than-vector-stl-clr.md)   
- [operator\>\= \(vector\)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
- [operator\> \(vector\)](../dotnet/operator-greater-than-vector-stl-clr.md)   
- [operator\<\= \(vector\)](../dotnet/operator-less-or-equal-vector-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [operator! = (vector) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)   
+ [연산자\< (vector) (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)   
+ [연산자 > = (vector) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
+ [연산자 > (vector) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)   
+ [operator<= (vector)(STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)

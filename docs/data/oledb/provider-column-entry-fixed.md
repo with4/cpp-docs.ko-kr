@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e404e18a072650d89f3987d8e8f0e286240d022a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6362feced77174238a773678de11a781b0729211
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providercolumnentryfixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
 공급자에서 지 원하는 특정 열을 나타냅니다.  
@@ -49,7 +52,7 @@ name
 ## <a name="remarks"></a>설명  
  열 데이터 형식을 지정할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  

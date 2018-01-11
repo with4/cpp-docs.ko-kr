@@ -46,11 +46,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ac41aff966956506c79dda65d895f805dede1d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af0601299046276c135571be2bac615df1571140
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-ranges"></a>데이터 형식 범위
 Visual C++ 32비트 및 64비트 컴파일러는 이 문서의 뒷부분의 표에 나온 형식을 인식합니다.  
@@ -85,7 +86,7 @@ Visual C++ 32비트 및 64비트 컴파일러는 이 문서의 뒷부분의 표�
 |unsigned __int16|2|unsigned short, unsigned short int|0 ~ 65,535|  
 |__int32|4|signed, signed int 및 int|–2,147,483,648 ~ 2,147,483,647|  
 |unsigned __int32|4|unsigned, unsigned int|0 ~ 4,294,967,295|  
-|__int64|8|long long, signed long long|–9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807|  
+|__int64|9|long long, signed long long|–9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807|  
 |unsigned __int64|8|unsigned long long|0 ~ 18,446,744,073,709,551,615|  
 |bool|1|없음|false 또는 true|  
 |char|1|없음|-기본적으로 128에서 127<br /><br /> [/J](../build/reference/j-default-char-type-is-unsigned.md)를 사용하여 컴파일된 경우 0~255|  

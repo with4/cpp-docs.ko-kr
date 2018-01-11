@@ -18,11 +18,14 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52fa9aece3f31cf20029e58352d459f91bb56526
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>방법: PInvoke를 사용하여 구조체 마샬링
 이 문서에서는 C 스타일 문자열의 인스턴스를 제공 하는 관리 되는 함수에서 호출할 수 있는 허용 하는 방법을 네이티브 함수를 설명 <xref:System.String> P/Invoke를 사용 하 여 합니다. 있지만 대신 c + + Interop 기능을 사용 하는 것이 좋습니다 P/Invoke P/Invoke 거의 컴파일 타임 오류 보고를 제공 하기 때문에 형식이 안전한 아니며 관리 되지 않는 API는 DLL로 패키지와 소스 코드를 없는 경우 구현 하는 것 P/Invoke를 사용할 수 있는 유일한 옵션입니다. 다음 문서를 참조 하십시오.  
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
 2.  이제 관리 되는 코드 관리 되지 것으로 관리 되지 않는 함수에 구조체의 관리 되는 버전을 전달할 수 있습니다. 이러한 구조는 다음 예제와 같이 값 이나 참조로 전달할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 관리 되지 않는 관리 되는 모듈 구성 됩니다. 관리 되지 않는 모듈에는 위치 및 위치 구조의 두 인스턴스를 허용 하는 GetDistance를 호출 하는 함수를 호출 하는 구조를 정의 하는 DLL은입니다. 두 번째 모듈은 GetDistance 함수 가져오지만 MLocation 위치 구조체의 관리 되는 항목 측면에서 정의 하는 관리 되는 명령줄 응용 프로그램. 연습; 구조체의 두 버전에 대해 동일한 이름을 사용할 것은 그러나 다른 이름은 DllImport 프로토타입 관리 되는 버전 측면에서 정의 됨을 보여 주기 위해 여기 사용 됩니다.  
   
  관리 되는 모듈, /clr 하지만 /clr을 사용 하 여 컴파일되며: pure 합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
@@ -94,7 +97,7 @@ void InitLocation(Location* lp) {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // MarshalStruct_pi.cpp  
