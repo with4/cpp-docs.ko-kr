@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3b5d930b0c8a79542526adcd174a9ed6a0a8db4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37849850c89f8c02726b730fbdbabed66bd849b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4917"></a>컴파일러 경고(수준 1) C4917
 'declarator': GUID만 클래스, 인터페이스 또는 네임 스페이스와 연결할 수  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 코드 샘플에서는 C4917 오류가 생성 됩니다.  
   
 ```cpp  

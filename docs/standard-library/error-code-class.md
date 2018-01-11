@@ -25,17 +25,17 @@ helpviewer_keywords:
 - std::error_code::clear
 - std::error_code::default_error_condition
 - std::error_code::message
-- 
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7674aeb2a2a1e15ceb38af662f51964884b81ada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2d451de1cacbb9654d7aafeb59cb1c23006dce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcode-class"></a>error_code 클래스
 구현에 관련된 하위 수준 시스템 오류를 나타냅니다.  
@@ -55,7 +55,7 @@ class error_code;
 |-|-|  
 |[error_code](#error_code)|`error_code` 형식의 개체를 생성합니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -194,7 +194,7 @@ bool operator==(const error_code& right) const;
  개체가 같으면 **true**이고, 개체가 같지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자는 `category() == right.category() && value == right.value()`를 반환합니다.  
+ 멤버 연산자는 `category() == right.category() && value == right.value()`을 반환합니다.  
   
 ##  <a name="op_neq"></a>  error_code::operator!=  
  `error_code` 개체가 같지 않은지 테스트합니다.  
@@ -213,7 +213,7 @@ bool operator!=(const error_code& right) const;
  `error_code` 개체가 `right`에 전달된 `error_code` 개체와 같지 않으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자는 `!(*this == right)`를 반환합니다.  
+ 멤버 연산자는 `!(*this == right)`을 반환합니다.  
   
 ##  <a name="op_lt"></a>  error_code::operator&lt;  
  [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체가 비교를 위해 전달된 `error_code` 개체보다 작은지 테스트합니다.  
@@ -232,7 +232,7 @@ bool operator<(const error_code& right) const;
  `error_code` 개체가 비교를 위해 전달된 `error_code` 개체보다 작으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 연산자는 `category() < right.category() || category() == right.category() && value < right.value()`를 반환합니다.  
+ 멤버 연산자는 `category() < right.category() || category() == right.category() && value < right.value()`을 반환합니다.  
   
 ##  <a name="op_eq"></a>  error_code::operator=  
  새 열거형 값을 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체에 할당합니다.  

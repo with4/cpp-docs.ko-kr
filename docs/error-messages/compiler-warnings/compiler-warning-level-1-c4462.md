@@ -10,11 +10,12 @@ ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3c3f125224832002e3ae962b75e4b770cd766b21
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 95fef51c6b96146842413cd52ab203b747247398
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4462"></a>컴파일러 경고 (수준 1) C4462
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/11/2017
 #pragma warning(4:4462)
 ```
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 샘플에서는 C4462 경고를 생성합니다.
 

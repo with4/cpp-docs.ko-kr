@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b48166f1002bd5a43325c2838a6d4b5a3626811
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aad0ed0df5eb25ccc0dd896a5a032cd190b6c3b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>문서/뷰 아키텍처의 이점
 MFC 문서/뷰 아키텍처를 사용 하 여 주요 이점은 아키텍처는 동일한 문서의 여러 뷰를 잘 지원입니다. (여러 뷰를 필요 하지 않습니다. 문서/보기의 작은 오버 헤드는 응용 프로그램에서 과도 한을 방지할 수 있습니다 아키텍처. [문서/뷰 아키텍처의 대체](../mfc/alternatives-to-the-document-view-architecture.md).)  

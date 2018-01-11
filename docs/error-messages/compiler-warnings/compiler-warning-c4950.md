@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a922a0ee324afcf5f263abe2189e4071c5575c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0bad063bce3e99e64177476cea8470da0de81d3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-c4950"></a>컴파일러 경고 C4950
 'type_or_member': 사용되지 않는 것으로 표시되었습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
 C4950은 항상 오류로 실행됩니다. 사용 하 여이 경고를 해제할 수 있습니다는 [경고](../../preprocessor/warning.md) pragma 지시문 또는 [/wd](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 샘플에서는 C4950을 생성합니다.  
   
 ```cpp  

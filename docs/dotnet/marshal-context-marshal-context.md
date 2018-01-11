@@ -1,52 +1,54 @@
 ---
-title: "marshal_context::marshal_context | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::interop::marshal_context::marshal_context"
-  - "marshal_context::marshal_context"
-  - "msclr.interop.marshal_context.marshal_context"
-  - "marshal_context.marshal_context"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshal_context 클래스[C++], 작업"
+title: 'marshal_context:: marshal_context | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::interop::marshal_context::marshal_context
+- marshal_context::marshal_context
+- msclr.interop.marshal_context.marshal_context
+- marshal_context.marshal_context
+dev_langs: C++
+helpviewer_keywords: marshal_context class [C++], operations
 ms.assetid: 5f08c895-60b0-4f72-97ff-7ae37c68e853
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a91b4f1c5f30711c46550dabb4369e380214fce1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# marshal_context::marshal_context
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Constructs a `marshal_context` object to use for data conversion between managed and native data types.  
+# <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
+생성 된 `marshal_context` 관리 / 네이티브 데이터 형식 간의 데이터 변환에 사용할 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 marshal_context();  
 ```  
   
-## 설명  
- Some data conversions require a marshal context.  See [C\+\+ 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md) for more information about which translations require a context and which marshaling file has to be included in your application.  
+## <a name="remarks"></a>설명  
+ 데이터 변환 중 일부는 마샬링 컨텍스트가 필요합니다. 참조 [개요의 c + + 마샬링](../dotnet/overview-of-marshaling-in-cpp.md) 어떤 번역 컨텍스트에 필요한 및 응용 프로그램에 포함할 어떤 마샬링 파일에 대 한 자세한 내용은 합니다.  
   
-## 예제  
- [marshal\_context::marshal\_as](../dotnet/marshal-context-marshal-as.md)의 예제를 참조하십시오.  
+## <a name="example"></a>예  
+ 예를 참조 [marshal_context:: marshal_as](../dotnet/marshal-context-marshal-as.md)합니다.  
   
-## 요구 사항  
- **헤더 파일:**\<msclr\\marshal.h\>, \<msclr\\marshal\_windows.h\>, \<msclr\\marshal\_cppstd.h\>, 또는 \<msclr\\marshal\_atl.h \>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, 또는 \<msclr\marshal_atl.h >  
   
- **네임 스페이스:** msclr::interop  
+ **Namespace:** msclr::interop  
   
-## 참고 항목  
- [C\+\+ 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal\_as](../dotnet/marshal-as.md)   
- [marshal\_context 클래스](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>참고 항목  
+ [C + + 마샬링 개요](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [marshal_as](../dotnet/marshal-as.md)   
+ [marshal_context 클래스](../dotnet/marshal-context-class.md)

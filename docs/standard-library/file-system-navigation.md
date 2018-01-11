@@ -4,38 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60e7e32c79965e50255c5728cad3e9d399ea2df1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-system-navigation"></a>파일 시스템 탐색
 \<filesystem> 헤더는 C++ 파일 시스템 기술 사양 ISO/IEC TS 18822:2015(최종 초안: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))을 구현하며 파일 시스템을 탐색하기 위한 플랫폼 독립적인 코드를 작성할 수 있게 해주는 형식과 함수를 포함합니다. 크로스 플랫폼이기 때문에 Windows 시스템과 관련이 없는 API를 포함합니다. 예를 들어 `is_fifo(const path&)` 는 Windows에서 항상 `false` 를 반환합니다.   
@@ -231,4 +214,3 @@ Press Enter to exit
 \<filesystem> 헤더는 단일 디렉터리를 반복하는 [directory_iterator](../standard-library/directory-iterator-class.md) 형식과 디렉터리 및 하위 디렉터리를 재귀적으로 반복하는 [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) 클래스를 제공합니다. `path` 개체를 전달하여 반복기를 생성하면 반복기가 경로의 첫 번째 directory_entry를 가리킵니다. 기본 생성자를 호출하여 끝 반복기를 만듭니다.  
   
 디렉터리를 반복하는 경우 디렉터리, 파일, 기호화된 링크 및 소켓 파일을 포함하되 이에 제한되지 않고 발견할 수 있는 여러 종류의 항목이 있습니다. `directory_iterator`는 해당 항목을 [directory_entry](../standard-library/directory-entry-class.md) 개체로 반환합니다.  
-

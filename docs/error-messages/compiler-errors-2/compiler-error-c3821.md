@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 47e0a2ed3c824ed1598f7e998d4966b95cc9233b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eda98ddd6247a2b3d137c015e5e4e3b06f04d821
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3821"></a>컴파일러 오류 C3821
 'function': 관리 되지 않는 함수에 관리 되는 형식 또는 함수를 사용할 수 없습니다  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  C3821은 vararg 함수에서 자동 저장소를 사용 하려는 경우에 발생할 수 있습니다.  자세한 내용은 참조 [가변 인수 목록 (...) (C + + /CLI CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) 및 [참조 형식에 대 한 c + + 스택 의미 체계](../../dotnet/cpp-stack-semantics-for-reference-types.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3821 오류가 발생 합니다.  
   
 ```  
@@ -40,7 +41,7 @@ void test1(...) {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3821 오류가 발생 합니다.  
   
 ```  

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aaf8bb7cf4cd3c078ac4f4d47667ff9656df1450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 471201d1817bc19b76ac1357c33a97da75587790
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-automation-threading-models"></a>원격 자동화 스레드 모델
 원격 자동화는 단일 스레드 및 com 아파트-스레드 모델을 모두 지원 Visual c + +가 지원 되는, 32 비트 및 64 비트 플랫폼에서의 스레딩 모델이 "apartment"로 설정 해야 이 작업을 수행할 수 있는 위치와 방법에 대 한 자세한 내용은 참조 [만드는 프로그램을 사용 하 여 원격 자동화](../mfc/creating-programs-that-use-remote-automation.md)합니다.  

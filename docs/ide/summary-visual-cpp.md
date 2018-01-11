@@ -1,50 +1,50 @@
 ---
-title: "&lt;summary&gt;(Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<summary>"
-  - "summary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<summary> C++ XML 태그"
-  - "summary C++ XML 태그"
+title: "&lt;요약&gt; (Visual c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <summary>
+- summary
+dev_langs: C++
+helpviewer_keywords:
+- <summary> C++ XML tag
+- summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 48e4401967719313d9af7924d12cf68b870f4543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;summary&gt;(Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-형식 또는 형식 멤버를 설명하려면 \<summary\> 태그를 사용해야 합니다.  형식에 대한 설명을 보충하는 정보를 추가하려면 [\<remarks\>](../ide/remarks-visual-cpp.md)를 사용합니다.  
+# <a name="ltsummarygt-visual-c"></a>&lt;요약&gt; (Visual c + +)
+\<summary > 태그를 사용하여 형식 또는 형식 멤버를 설명해야 합니다. [\<remarks>](../ide/remarks-visual-cpp.md)를 사용하여 형식 설명에 보충 정보를 추가할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <summary>description</summary>  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `description`  
  개체에 대한 요약입니다.  
   
-## 설명  
- \<summary\>에 대 한 텍스트 태그, IntelliSense에서 형식에 대 한 정보의 유일한 소스가 고도 표시 됩니다의  [개체 브라우저](http://msdn.microsoft.com/ko-kr/f89acfc5-1152-413d-9f56-3dc16e3f0470) 및 코드 주석 웹 보고서에.  
+## <a name="remarks"></a>설명  
+ 에 대 한 텍스트는 \<요약 > 태그가 유일한 소스 intellisense에서 유형에 대 한 정보는이 고에 표시 됩니다는 [개체 브라우저](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) 및 코드 주석 웹 보고서입니다.  
   
- [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 저장합니다.  
+ [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_summary_tag.cpp  
@@ -65,5 +65,5 @@ public:
 };  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 문서](../ide/xml-documentation-visual-cpp.md)

@@ -1,34 +1,33 @@
 ---
 title: "리소스 컴파일러 오류 RW2001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RW2001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RW2001"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RW2001
+dev_langs: C++
+helpviewer_keywords: RW2001
 ms.assetid: 963bdc7d-6ebe-4378-8bbc-47dfcf5d330c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1a14cd36ab87297cf5bc0aa547bdea5ef23260e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 리소스 컴파일러 오류 RW2001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-전처리 RC 파일에서 지시문이 잘못되었습니다.  
+# <a name="resource-compiler-error-rw2001"></a>리소스 컴파일러 오류 RW2001
+전처리 RC 파일에서 잘못 된 지시문  
   
- RC 파일에 **\#pragma** 지시문이 들어 있습니다.  
+ RC 파일에 포함 되어는 **#pragma** 지시문입니다.  
   
- 포함 파일을 처리할 때 리소스 컴파일러가 정의하는 **RC\_INVOKED** 상수와 함께 **\#ifndef** 전처리기 지시문을 사용하십시오.  **RC\_INVOKED** 상수가 정의될 때 처리되지 않는 코드 블록 내부에 **\#pragma** 지시문을 배치하십시오.  블록의 코드는 리소스 컴파일러가 아닌 C\/C\+\+ 컴파일러에 의해서만 처리됩니다.  다음 샘플 코드는 이 기술을 보여 줍니다.  
+ 사용 하 여는 **#ifndef** 전처리기 지시문은 **RC_INVOKED** 정의 하는 include 파일을 처리할 때 리소스 컴파일러는 상수입니다. 위치는 **#pragma** 하지 않은 코드 블록 안에 지시문 해도 처리는 **RC_INVOKED** 상수 정의 됩니다. C/c + + 컴파일러에 의해서만 및 리소스 컴파일러가 아니라 블록의 코드에서에서 처리 됩니다. 다음 샘플 코드에이 기술을 보여 줍니다.  
   
 ```  
 #ifndef RC_INVOKED  
@@ -36,6 +35,6 @@ caps.handback.revision: 6
 #endif  
 ```  
   
- .RC 파일에서는 **\#pragma** 전처리기 지시문이 아무런 의미가 없습니다.   **\#include** 전처리기 지시문은 헤더 파일\(프로젝트 기반 사용자 지정 헤더 파일이나 Microsoft에서 제품과 함께 제공한 표준 헤더 파일\)을 포함하기 위해 .RC 파일에서 주로 사용됩니다.  이러한 포함 파일 중 일부에는 **\#pragma** 지시문이 들어 있습니다.  헤더 파일 한 개에 여러 헤더 파일을 포함할 수 있으므로 잘못된 **\#pragma** 지시문이 들어 있는 파일을 즉시 알아낼 수는 없습니다.  
+ **#pragma** 전처리기 지시문에서 의미가 있는 합니다. RC 파일입니다. **#include** 전처리기 지시문에서 자주 사용 되는 합니다. RC 파일 헤더 파일 (프로젝트 기반 사용자 지정 헤더 파일 또는 제품 중 하나를 Microsoft에서 제공 하는 표준 헤더 파일)을 포함 합니다. 포함 파일 포함 된 **#pragma** 지시문입니다. 헤더 파일을 하나 이상의 다른 헤더 파일, 잘못 된 포함 된 파일을 포함할 수 있으므로 **#pragma** 지시문을 즉시 알아낼 수 있습니다.  
   
- **\#ifndef RC\_INVOKED** 기술을 통해 프로젝트 기반 헤더 파일에 헤더 파일을 포함하는 작업을 제어할 수 있습니다.
+ **#ifndef RC_INVOKED** 기술을 프로젝트 기반 헤더 파일의 헤더 파일 포함 하 여 제어할 수 있습니다.

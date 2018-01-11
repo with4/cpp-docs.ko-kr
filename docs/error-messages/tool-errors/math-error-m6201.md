@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8288770d74497e576a299d683b846214a187a1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17de7fab7b41a5a8acc2fed2f3c8185f66aadd9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="math-error-m6201"></a>수학 오류 M6201
 'function': _DOMAIN 오류  
   
  지정된 된 함수에 인수로 해당 함수에 대 한 유효한 입력된 값의 도메인을 벗어났습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 result = sqrt(-1.0)   // C statement  

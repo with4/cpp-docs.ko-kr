@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c1c70749a805d94c79fd1b9d2521575cc99022
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicifstream-class"></a>basic_ifstream 클래스
 문자 특성이 클래스 `Tr`에 의해 결정되는 `Elem` 형식의 요소가 있는 클래스 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>의 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어하는 개체에 대해 설명합니다.  
@@ -53,7 +54,7 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 ## <a name="remarks"></a>설명  
  이 개체는 `basic_filebuf`< `Elem`, `Tr`> 클래스의 개체를 저장합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 파일에서 텍스트를 읽는 방법을 보여 줍니다.  
   
 ```  
@@ -152,7 +153,7 @@ basic_ifstream(basic_ifstream&& right);
   
  네 번째 생성자는 rvalue 참조로 처리되는 `right`의 내용으로 개체를 초기화합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 예제에서는 파일에서 텍스트를 읽는 방법을 보여 줍니다. 파일을 만들려면 [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream)에 대한 예제를 참조하세요.  
   
 ```  
@@ -184,9 +185,9 @@ void close();
 ```  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)를 호출합니다.  
+ 멤버 함수 호출 [rdbuf](#rdbuf)  **->**  [닫습니다](../standard-library/basic-filebuf-class.md#close)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **close**를 사용하는 예는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.  
   
 ##  <a name="is_open"></a>  basic_ifstream::is_open  
@@ -200,9 +201,9 @@ bool is_open() const;
  파일이 열린 경우 **true**, 아닌 경우 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- 멤버 함수는 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)을 반환합니다.  
+ 멤버 함수는 반환 [rdbuf](#rdbuf)  **->**  [is_open](../standard-library/basic-filebuf-class.md#is_open)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `is_open`을 사용하는 방법의 예는 [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open)을 참조하세요.  
   
 ##  <a name="open"></a>  basic_ifstream::open  
@@ -241,7 +242,7 @@ void open(
 ### <a name="remarks"></a>설명  
  멤버 함수는 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**)을 호출합니다. 열기에 실패하면 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출하는데, 이 경우 ios_base::failure 예외가 throw될 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **open**을 사용하는 예는 [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)을 참조하세요.  
   
 ##  <a name="op_eq"></a>  basic_ifstream::operator=  
@@ -271,7 +272,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 ### <a name="return-value"></a>반환 값  
  저장된 스트림 버퍼를 나타내는 [basic_filebuf](../standard-library/basic-filebuf-class.md) 개체에 대한 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `rdbuf`의 사용 예제는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.  
   
 ##  <a name="swap"></a>  basic_ifstream::swap  

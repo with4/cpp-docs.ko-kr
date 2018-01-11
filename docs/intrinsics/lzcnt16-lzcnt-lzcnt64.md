@@ -1,42 +1,43 @@
 ---
-title: "__lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__lzcnt64"
-  - "__lzcnt16"
-  - "__lzcnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__lzcnt 내장 함수"
-  - "lzcnt 명령"
-  - "lzcnt16 내장 함수"
-  - "lzcnt 내장 함수"
-  - "__lzcnt16 내장 함수"
-  - "lzcnt64 내장 함수"
-  - "__lzcnt64 내장 함수"
+title: __lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __lzcnt64
+- __lzcnt16
+- __lzcnt
+dev_langs: C++
+helpviewer_keywords:
+- __lzcnt intrinsic
+- lzcnt instruction
+- lzcnt16 intrinsic
+- lzcnt intrinsic
+- __lzcnt16 intrinsic
+- lzcnt64 intrinsic
+- __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5fcd699cd137e6adbb2cf08f5852970d009f745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# __lzcnt16, __lzcnt, __lzcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 **Microsoft 전용**  
   
- 16\-, 32 비트 또는 64 비트 정수에 행간 수가 0을 카운트 합니다.  
+ 개수 앞에 오는 수는 16, 32 비트 또는 64 바이트 정수에 0입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 unsigned short __lzcnt16(  
@@ -50,29 +51,31 @@ unsigned __int64 __lzcnt64(
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `value`  
- 16\-, 32 비트 또는 64 비트 부호 없는 정수 앞에 0을 스캔 합니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `value`  
+ 16-, 32 또는 64 비트 부호 없는 정수 앞에 오는 0에 대 한 검색입니다.  
   
-## 반환 값  
- 앞에 0 비트의 수는 `value` 매개 변수.  경우 `value` 0이 반환 값은 입력된 피연산자 \(16, 32, 64\)의 크기입니다.  대부분의 경우 중요 한 비트의 `value` 1 반환 값은 0입니다.  
+## <a name="return-value"></a>반환 값  
+ 앞에 있는 0 비트의 수는 `value` 매개 변수입니다. 경우 `value` 가 0 이면 반환 값 (16, 32 또는 64) 입력된 피연산자의 크기입니다. 이면 가장 중요 한 비트가 `value` 1이 반환 값은 0입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__lzcnt16`|고급 비트 조작|  
-|`__lzcnt`|고급 비트 조작|  
-|`__lzcnt64`|64 비트 모드에서 고급 비트 조작 합니다.|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__lzcnt16`|AMD: 고급 비트 조작을 (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt`|AMD: 고급 비트 조작을 (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt64`|AMD: 64 비트 모드에서 비트 조작 (ABM) 고급합니다.<br /><br /> Intel: Haswell|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 각 이러한 내장 함수를 생성 하는 `lzcnt` 명령.  값의 크기는 해당 `lzcnt` 명령 반환 인수의 크기와 동일 합니다.  32 비트 모드에서 가지 않습니다 64 비트 범용 레지스터, 따라서 아니오 64 비트 `lzcnt`.  
+## <a name="remarks"></a>설명  
+ 각각의 이러한 내장 함수 생성의 `lzcnt` 명령입니다.  값의 크기는는 `lzcnt` 해당 인수의 크기와 같습니다 반환 하는 명령입니다.  32 비트 모드에서 발생 하는 없는 64 비트 범용 레지스터, 따라서 더 64 비트 `lzcnt`합니다.  
   
- 하드웨어 지원을 확인 하는 `lzcnt` 명령 호출을 `__cpuid` 내장 형식으로 `InfoType=0x80000001` 5 비트를 확인 하 고 `CPUInfo[2] (ECX)`.  이 비트 명령이 지원 되지 않으면 1, 0 그렇지 않으면 됩니다.  코드를 사용 하 여 내장이 지원 하지 않는 하드웨어에서 실행 하 여 경우는 `lzcnt` 명령의 결과 없는 예측 합니다.  
+ 에 대 한 하드웨어 지원을 확인 하는 `lzcnt` 명령 호출은 `__cpuid` 포함 된 내장 함수 `InfoType=0x80000001` 의 5 비트를 확인 하 고 `CPUInfo[2] (ECX)`합니다. 그렇지 않으면이 비트는 명령의 지원 되 면 1과 0 수 있습니다. 하는 경우 코드를 실행 하면 사용 하 여이 내장 함수를 지원 하지 않는 하드웨어에는 `lzcnt` 명령 결과 예측할 수 없습니다.  
   
-## 예제  
+ Intel 프로세서를 지원 하지 않는 `lzcnt` 명령으로 실행 명령 바이트 인코딩을 `bsr` (스캔 역방향 비트)입니다. 사용 하 여 코드 이식성 중요 한 경우는 `_BitScanReverse` 내장 함수 대신 합니다. 자세한 내용은 참조 [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)합니다.  
+  
+## <a name="example"></a>예  
   
 ```  
 // Compile this test with: /EHsc  
@@ -100,9 +103,18 @@ int main()
   
 ```  
   
-  **\_\_lzcnt16\(0x0\) \= 16 \_\_lzcnt16\(0xff\) 8 \_\_lzcnt16\(0xffff\) \= 0 \_\_lzcnt\(0x0\) \= 32 \_\_lzcnt\(0xff\) \= 24 \_\_lzcnt\(0xffff\) \= 16 \_\_lzcnt\(0xffffffff\) \= 0 \=**   
-## Microsoft 특정 끝  
- 저작권 2007 고급 마이크로 장치, Inc의. 모든 권리는 유보 됩니다.  사용 권한에서 고급 마이크로 장치, Inc를 재현.  
+```Output  
+__lzcnt16(0x0) = 16  
+__lzcnt16(0xff) = 8  
+__lzcnt16(0xffff) = 0  
+__lzcnt(0x0) = 32  
+__lzcnt(0xff) = 24  
+__lzcnt(0xffff) = 16  
+__lzcnt(0xffffffff) = 0  
+```  
   
-## 참고 항목  
+**Microsoft 전용 종료**  
+ 이 콘텐츠의 일부는 고급 마이크로 장치, inc 2007 저작권 All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
+  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

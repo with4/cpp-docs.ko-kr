@@ -1,73 +1,73 @@
 ---
-title: "연습: 프로젝트 테스트(C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "프로젝트 테스트[C++]"
-  - "프로젝트[C++], 테스트"
-  - "프로젝트 테스트"
+title: "연습: 테스트 프로젝트 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- project testing [C++]
+- testing projects
+- projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba928d4a81252b76856273160af63ed8707e7e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 연습: 프로젝트 테스트(C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-디버그 모드에서 프로그램을 실행하면 중단점을 사용하여 프로그램을 일시 중지하고 변수나 개체의 상태를 검사할 수 있습니다.  
+# <a name="walkthrough-testing-a-project-c"></a>연습: 프로젝트 테스트(C++)
+디버그 모드에서 프로그램을 실행 하는 경우에 변수 및 개체의 상태를 검사 하는 프로그램을 일시 중지 중단점을 사용할 수 있습니다.  
   
- 이 연습에서는 프로그램이 실행될 때 변수의 값을 조사하고 그 값이 예상과 다른 이유를 추론합니다.  
+ 이 연습에서는 프로그램이 실행 될 때 변수 값을 확인 하 고 다른 값이 기대 하는 이유를 추론 합니다.  
   
-## 사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
   
--   이 연습에서는 사용자가 C\+\+ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
+-   이 연습에서는 사용자가 C++ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
   
--   사용자가 [C\+\+ 데스크톱 개발에 Visual Studio IDE 사용](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)에 기재된 초기 관련된 연습을 완수했다는 것을 또한 의미합니다.  
+-   또한 이전 관련된 연습에 나와 있는 완료 한 것으로 가정 [c + + 데스크톱 개발을 위한 Visual Studio IDE를 사용 하 여](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)합니다.  
   
-### 디버그 모드에서 프로그램을 실행하려면  
+### <a name="to-run-a-program-in-debug-mode"></a>디버그 모드에서 프로그램을 실행 하려면  
   
-1.  편집할 TestGames.cpp를 엽니다.  
+1.  TestGames.cpp 편집 하기 위해 엽니다.  
   
-2.  이 코드 줄을 선택합니다.  
+2.  이 코드 줄을 선택 합니다.  
   
      `Cardgame.solitaire(1);`  
   
-3.  이 줄에 중단점을 설정하려면 메뉴 모음에서 **디버그**, **중단점 설정\/해제**를 선택하거나 F9 키를 선택합니다.  줄 왼쪽에 중단점이 설정되었음을 나타내는 빨간색 원이 나타납니다.  중단점을 제거하려면 메뉴 명령 또는 F9 키를 다시 선택합니다.  
+3.  메뉴 모음에서 해당 줄에 중단점을 설정 하려면 선택 **디버그**, **중단점 설정/해제**, 하거나 F9 키를 선택 합니다. 줄의 왼쪽에 빨간색 원이 나타납니다. 중단점 설정 되어 있는지 나타냅니다. 중단점을 제거 하려면 있습니다 수 메뉴 명령이 나 F9 키 다시 선택 합니다.  
   
-     마우스를 사용하는 경우 왼쪽 여백을 클릭해서 중단점을 설정하거나 제거할 수도 있습니다.  
+     마우스를 사용 하는 경우 또한 설정 하거나 왼쪽된 여백을 클릭 하 여 중단점을 제거할 수 있습니다.  
   
-4.  메뉴 모음에서 **디버그**, **디버깅 시작**을 선택하거나 F5 키를 선택합니다.  
+4.  메뉴 모음에서 **디버그**, **디버깅 시작**, 하거나 F5 키를 선택 합니다.  
   
-     중단점이 설정된 줄에 도달하면 현재 프로그램의 모드가 중단 모드이므로 프로그램의 실행이 일시 중지됩니다.  코드 줄의 왼쪽에 표시되는 노란색 화살표는 실행할 다음 줄을 나타냅니다.  
+     프로그램 중단점을 한 줄에 도달 하면 프로그램이 중단 모드 이기 때문에 실행이 일시적으로 중지 합니다. 코드 줄의 왼쪽에 노란색 화살표는 실행 될 다음 줄 임을 나타냅니다.  
   
-5.  `Cardgame::totalParticipants` 변수 값을 조사하려면 포인터를 `Cardgame` 위로 이동한 후 도구 설명 창 왼쪽에 있는 확장 컨트롤 위로 이동합니다.  변수 이름 `totalParticipants` 및 해당 값 12가 표시됩니다.  
+5.  값을 검사 하는 `Cardgame::totalParticipants` 변수 위로 포인터를 이동 `Cardgame` 다음 도구 설명 창의 왼쪽에 확장 컨트롤 위로 이동 합니다. 변수 이름 `totalParticipants` 12의 해당 값이 표시 됩니다.  
   
-     `Cardgame::totalParticipants` 변수를 얻기 위해 바로 가기 메뉴를 열고 난 다음 **조사식 추가** 를 선택하여 **조사식 1** 의 변수를 표시합니다.  변수를 선택하여 **조사식 1** 창에 끌어 놓을 수도 있습니다.  
+     에 대 한 바로 가기 메뉴를 열고는 `Cardgame::totalParticipants` 변수를 선택한 후 **조사식 추가** 에서 해당 변수를 표시 하는 **조사식 1** 창. 또한 변수를 선택 하 고 끌어 수는 **조사식 1** 창.  
   
-6.  코드의 다음 줄로 진행하려면 메뉴 모음에서 **디버그**, **프로시저 단위 실행**을 선택하거나 F10 키를 선택합니다.  
+6.  메뉴 모음에서 코드의 다음 줄으로 선택 **디버그**, **프로시저 단위 실행**, 하거나 F10 키를 선택 합니다.  
   
-     **조사식 1** 창의 `Cardgame::totalParticipants` 값이 이제 13으로 표시됩니다.  
+     값 `Cardgame::totalParticipants` 에 **조사식 1** 창이 이제 13으로 표시 됩니다.  
   
-7.  `return 0;` 문에 대한 바로 가기 메뉴를 열고 **커서까지 실행**을 선택합니다.  코드 왼쪽의 노란색 화살표는 실행할 다음 문을 나타냅니다.  
+7.  에 대 한 바로 가기 메뉴를 열고는 `return 0;` 문을 선택한 후 **커서까지 실행**합니다. 코드의 왼쪽에 노란색 화살표는 다음 문을 실행 하도록를 가리킵니다.  
   
-8.  Cardgame가 종료하면 `Cardgame::totalParticipants` 숫자가 감소합니다.  여기서 모든 Cardgame 인스턴스가 삭제되었으므로 `Cardgame::totalParticipants`가 0이어야 하지만 **조사식 1** 창은 `Cardgame::totalparticipants`가 18임을 나타냅니다.  다음 연습, [연습: 프로젝트 디버깅\(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md)을 완료해서 검색 및 수정할 수 있는 버그가 코드에 있음을 나타냅니다.  
+8.  `Cardgame::totalParticipants` 번호는 Cardgame 종료 될 때 감소 해야 합니다. 이 시점에서 `Cardgame::totalParticipants` 모든 Cardgame 인스턴스가 삭제 되었으므로, 0과 같아야 하지만 **조사식 1** 창 나타냅니다 `Cardgame::totalparticipants` 18 같음. 이 수를 검색 하 고 다음 연습을 완료 하 여 해결 되는 코드의 버그 된다는 의미 [연습: 프로젝트 (c + +) 디버깅](../ide/walkthrough-debugging-a-project-cpp.md)합니다.  
   
-9. 프로그램을 중지하려면 메뉴 모음에서 **디버그**, **디버깅 중지** 또는 Shift\+F5 바로 가기 키를 선택합니다.  
+9. 메뉴 모음에서 프로그램을 중지 하려면 선택 **디버그**, **디버깅 중지**, 하거나 Shift + F5 바로 가기 키를 선택 합니다.  
   
-## 다음 단계  
- **이전:** [연습: 프로젝트 빌드\(C\+\+\)](../ide/walkthrough-building-a-project-cpp.md) &#124; **다음:** [연습: 프로젝트 디버깅\(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md)  
+## <a name="next-steps"></a>다음 단계  
+ **이전:** [연습: 프로젝트 (c + +) 빌드](../ide/walkthrough-building-a-project-cpp.md) &#124; **다음:**[연습: 프로젝트 (c + +) 디버깅](../ide/walkthrough-debugging-a-project-cpp.md)  
   
-## 참고 항목  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/ko-kr/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [DELETE\_PENDING\_Building and Debugging](http://msdn.microsoft.com/ko-kr/9f6ba537-5ea0-46fb-b6ba-b63d657d84f1)
+## <a name="see-also"></a>참고 항목  
+ [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)

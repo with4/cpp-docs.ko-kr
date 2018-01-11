@@ -15,18 +15,19 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 975127c09a44448c5589edfd3b63323caa23f942
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 615a315ff2d9ff3f517c0b046317400792760b73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4400"></a>컴파일러 경고(수준 4) C4400
 'type':이 형식에 대해 const/volatile 한정자는 지원 되지 않습니다  
   
  [const](../../cpp/const-cpp.md)및 [휘발성](../../cpp/volatile-cpp.md)한정자의 공용 언어 런타임 형식 변수와 함께 작동 하지 것입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4400 오류가 발생 합니다.  
   
 ```  

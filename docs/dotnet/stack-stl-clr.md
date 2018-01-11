@@ -1,36 +1,38 @@
 ---
-title: "stack(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/stack> 헤더[STL/CLR]"
-  - "<stack> 헤더[STL/CLR]"
-  - "스택 클래스[STL/CLR]"
+title: stack (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack
+dev_langs: C++
+helpviewer_keywords:
+- <stack> header [STL/CLR]
+- <cliext/stack> header [STL/CLR]
+- stack class [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c7f6d9eac97fa1907a0901c725645f29dcdd5d9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# stack(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The template class describes an object that controls a varying\-length sequence of elements that has last\-in first\-out access.  You use the container adapter `stack` to manage an underlying container as a push\-down stack.  
+# <a name="stack-stlclr"></a>stack(STL/CLR)
+이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 마지막 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `stack` 스택으로 푸시 다운 하는 기본 컨테이너를 관리할 수 있습니다.  
   
- In the description below, `GValue` is the same as `Value` unless the latter is a ref type, in which case it is `Value^`.  Similarly, `GContainer` is the same as `Container` unless the latter is a ref type, in which case it is `Container^`.  
+ 아래 설명에 `GValue` 동일 `Value` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Value^`합니다. 마찬가지로, `GContainer` 동일 `Container` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Container^`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Value,  
@@ -42,71 +44,71 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  값  
  제어되는 시퀀스의 요소 형식입니다.  
   
  컨테이너  
  기본 컨테이너의 형식입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-|Type Definition|설명|  
-|---------------------|--------|  
-|[stack::const\_reference](../dotnet/stack-const-reference-stl-clr.md)|요소에 대한 상수 참조의 형식입니다.|  
-|[stack::container\_type](../dotnet/stack-container-type-stl-clr.md)|기본 컨테이너의 형식입니다.|  
-|[stack::difference\_type](../dotnet/stack-difference-type-stl-clr.md)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
-|[stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)|The type of the generic interface for the container adapter.|  
-|[stack::generic\_value](../dotnet/stack-generic-value-stl-clr.md)|The type of an element for the generic interface for the container adapter.|  
-|[stack::reference](../dotnet/stack-reference-stl-clr.md)|요소에 대한 참조의 형식입니다.|  
-|[stack::size\_type](../dotnet/stack-size-type-stl-clr.md)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
-|[stack::value\_type](../dotnet/stack-value-type-stl-clr.md)|요소의 형식입니다.|  
+|형식 정의|설명|  
+|---------------------|-----------------|  
+|[stack::const_reference(STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)|요소에 대한 상수 참조의 형식입니다.|  
+|[stack::container_type(STL/CLR)](../dotnet/stack-container-type-stl-clr.md)|기본 컨테이너의 형식입니다.|  
+|[stack::difference_type(STL/CLR)](../dotnet/stack-difference-type-stl-clr.md)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
+|[stack::generic_container(STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)|컨테이너 어댑터에 대 한 제네릭 인터페이스의 형식입니다.|  
+|[stack::generic_value(STL/CLR)](../dotnet/stack-generic-value-stl-clr.md)|컨테이너 어댑터에 대 한 제네릭 인터페이스에 대 한 요소의 형식입니다.|  
+|[stack::reference(STL/CLR)](../dotnet/stack-reference-stl-clr.md)|요소에 대한 참조의 형식입니다.|  
+|[stack::size_type(STL/CLR)](../dotnet/stack-size-type-stl-clr.md)|두 요소 사이의 부호가 있는 거리의 형식입니다.|  
+|[stack::value_type(STL/CLR)](../dotnet/stack-value-type-stl-clr.md)|요소의 형식입니다.|  
   
-|Member Function|설명|  
-|---------------------|--------|  
-|[stack::assign](../dotnet/stack-assign-stl-clr.md)|Replaces all elements.|  
-|[stack::empty](../dotnet/stack-empty-stl-clr.md)|Tests whether no elements are present.|  
-|[stack::get\_container](../dotnet/stack-get-container-stl-clr.md)|기본 컨테이너에 액세스합니다.|  
-|[stack::pop](../dotnet/stack-pop-stl-clr.md)|Removes the last element.|  
-|[stack::push](../dotnet/stack-push-stl-clr.md)|Adds a new last element.|  
-|[stack::size](../dotnet/stack-size-stl-clr.md)|요소의 수를 셉니다.|  
-|[stack::stack](../dotnet/stack-stack-stl-clr.md)|컨테이너 개체를 만듭니다.|  
-|[stack::top](../dotnet/stack-top-stl-clr.md)|Accesses the last element.|  
-|[stack::to\_array](../dotnet/stack-to-array-stl-clr.md)|Copies the controlled sequence to a new array.|  
+|멤버 함수|설명|  
+|---------------------|-----------------|  
+|[stack::assign(STL/CLR)](../dotnet/stack-assign-stl-clr.md)|모든 요소를 바꿉니다.|  
+|[stack::empty(STL/CLR)](../dotnet/stack-empty-stl-clr.md)|요소가 있는지 여부를 테스트합니다.|  
+|[stack::get_container(STL/CLR)](../dotnet/stack-get-container-stl-clr.md)|기본 컨테이너에 액세스합니다.|  
+|[stack::pop(STL/CLR)](../dotnet/stack-pop-stl-clr.md)|마지막 요소를 제거 합니다.|  
+|[stack::push(STL/CLR)](../dotnet/stack-push-stl-clr.md)|새 마지막 요소를 추가 합니다.|  
+|[stack::size(STL/CLR)](../dotnet/stack-size-stl-clr.md)|요소 수를 계산합니다.|  
+|[stack::stack(STL/CLR)](../dotnet/stack-stack-stl-clr.md)|컨테이너 개체를 만듭니다.|  
+|[stack::top(STL/CLR)](../dotnet/stack-top-stl-clr.md)|마지막 요소에 액세스합니다.|  
+|[stack::to_array(STL/CLR)](../dotnet/stack-to-array-stl-clr.md)|제어 되는 새 배열에 복사합니다.|  
   
-|Property|설명|  
-|--------------|--------|  
-|[stack::top\_item](../dotnet/stack-top-item-stl-clr.md)|Accesses the last element.|  
+|속성|설명|  
+|--------------|-----------------|  
+|[stack::top_item(STL/CLR)](../dotnet/stack-top-item-stl-clr.md)|마지막 요소에 액세스합니다.|  
   
 |연산자|설명|  
-|---------|--------|  
-|[stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)|Replaces the controlled sequence.|  
-|[operator\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)|Determines if a `stack` object is not equal to another `stack` object.|  
-|[operator\< \(stack\)](../dotnet/operator-less-than-stack-stl-clr.md)|Determines if a `stack` object is less than another `stack` object.|  
-|[operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|Determines if a `stack` object is less than or equal to another `stack` object.|  
-|[operator\=\= \(stack\)](../dotnet/operator-equality-stack-stl-clr.md)|Determines if a `stack` object is equal to another `stack` object.|  
-|[operator\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)|Determines if a `stack` object is greater than another `stack` object.|  
-|[operator\>\= \(stack\)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|Determines if a `stack` object is greater than or equal to another `stack` object.|  
+|--------------|-----------------|  
+|[stack::operator=(STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)|제어되는 시퀀스를 바꿉니다.|  
+|[operator!= (stack)(STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)|있는지 여부를 확인 한 `stack` 개체가 다른과 같지 않습니다. `stack` 개체입니다.|  
+|[operator< (stack)(STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)|있는지 여부를 확인 한 `stack` 개체를 사용 하면 다른 노드보다 작은지 `stack` 개체입니다.|  
+|[operator<= (stack)(STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|있는지 여부를 확인 한 `stack` 개체 보다 작거나 같으면 다른 `stack` 개체입니다.|  
+|[operator== (stack)(STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)|있는지 여부를 확인 한 `stack` 개체는 다른 `stack` 개체입니다.|  
+|[operator> (stack)(STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)|있는지 여부를 확인 한 `stack` 개체가 다른 노드보다 큰지 `stack` 개체입니다.|  
+|[operator>= (stack)(STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|있는지 여부를 확인 한 `stack` 개체는 다른 보다 크거나 `stack` 개체입니다.|  
   
-## 인터페이스  
+## <a name="interfaces"></a>인터페이스  
   
 |인터페이스|설명|  
-|-----------|--------|  
-|<xref:System.ICloneable>|Duplicate an object.|  
-|IStack\<Value, Container\>|Maintain generic container adapter.|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|개체를 복제 합니다.|  
+|IStack\<값, 컨테이너 >|제네릭 컨테이너 어댑터를 유지 합니다.|  
   
-## 설명  
- The object allocates and frees storage for the sequence it controls through an underlying container, of type `Container`, that stores `Value` elements and grows on demand.  The object restricts access to pushing and popping just the last element, implementing a last\-in first\-out queue \(also known as a LIFO queue, or stack\).  
+## <a name="remarks"></a>설명  
+ 개체 할당 및 형식의 기본 컨테이너를 통해 제어 하는 시퀀스에 대 한 저장소를 해제 `Container`, 저장 하는 `Value` 요소 및 필요에 따라 증가 합니다. 개체를 삽입 또는 제거할 방금 마지막 요소를 구현 (라고도 LIFO 큐 또는 스택) 마지막 큐 액세스를 제한 합니다.  
   
-## 요구 사항  
- **Header:** \<cliext\/stack\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/스택 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [queue](../dotnet/queue-stl-clr.md)   
- [vector](../dotnet/vector-stl-clr.md)   
- [STL\/CLR 라이브러리](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [STL/CLR 라이브러리 참조](../dotnet/stl-clr-library-reference.md)

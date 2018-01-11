@@ -13,11 +13,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a17ad8aca031d6345f3ded4839dbb543c1edf133
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fdc0015bda5f0a6678b1d274c79445aba4e4aab0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outline-of-changes-ccli"></a>변경 사항 개요(C++/CLI)
 이 개요 예를 보여 줍니다 하면 일부 변경 Managed Extensions에서 언어의 Visual c + + c + +에 대 한 합니다. 자세한 내용은 각 항목을 함께 제공 되는 링크를 따라 이동 합니다.  

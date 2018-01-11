@@ -1,69 +1,68 @@
 ---
-title: "for (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "for"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for OpenMP directive"
+title: "(OpenMP)에 대 한 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: for
+dev_langs: C++
+helpviewer_keywords: for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 97c32bd93ca208d76fbcb418c6e851e3c50f49ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# for (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-작업에서 발생 한 스레드 간에 나눌 수 있는 병렬 영역 내부 루프에 대 한.  
+# <a name="for-openmp"></a>for (OpenMP)
+수행 된 작업을 발생 한 스레드 간에 나눠집니다 병렬 영역 내부 루프에 대 한 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 #pragma omp [parallel] for [clauses]  
    for_statement  
 ```  
   
-## 설명  
- 다음은 각 매개 변수에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 다음은 각 문자에 대한 설명입니다.  
   
- `clause`\(선택적 요소\)  
- 0 개 이상의 절입니다.  목록에 대 한 설명 부분에서 지원 절을 참조 하십시오.  **에 대 한**.  
+ `clause`(선택 사항)  
+ 0 개 이상의 절입니다. 지 원하는 절을 목록에 대 한 설명 섹션을 참조 **에 대 한**합니다.  
   
  `for_statement`  
- 루프에 대 한 A입니다.  정의 되지 않은 동작 하면 사용자의 코드를 루프의 인덱스 변수 변경 되.  
+ 루프에 대 한 A입니다. 사용자 코드에서 정의 되지 않은 동작이 발생 합니다는 루프 인덱스 변수를 변경 합니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  **에 대 한** 지시문 다음 OpenMP 절을 지원 합니다.  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
 -   [lastprivate](../../../parallel/openmp/reference/lastprivate.md)  
   
--   [에 nowait](../../../parallel/openmp/reference/nowait.md)  
+-   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [순서가 지정 된](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [정렬](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [감소](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [일정](../../../parallel/openmp/reference/schedule.md)  
+-   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- 경우  **병렬** 도 지정 된 `clause` 어떤 절 여 받아들일 수 있는  **병렬** 또는  **에 대 한** 지시문을 제외 하 고  **에 nowait**.  
+ 경우 **병렬** 도 지정 `clause` 모든 절에 허용 될 수는 **병렬** 또는 **에 대 한** 지시문을 제외 하 고 **nowait**.  
   
- 자세한 내용은  [2.4.1 구조에 대 한](../../../parallel/openmp/2-4-1-for-construct.md).  
+ 자세한 내용은 참조 [2.4.1 for 구문](../../../parallel/openmp/2-4-1-for-construct.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // omp_for.cpp  
@@ -122,6 +121,10 @@ int main() {
 }  
 ```  
   
-  **4 OpenMP 스레드 사용 되었습니다.  1\-10의 55입니다.**    
-## 참고 항목  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+4 OpenMP threads were used.  
+The sum of 1 through 10 is 55  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [지시문](../../../parallel/openmp/reference/openmp-directives.md)

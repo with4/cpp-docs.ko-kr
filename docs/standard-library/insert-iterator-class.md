@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b74c2f092088c5dfb6d19417c9a435905bc51d40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5b893e3c1d30d457d479f5c2dcf42fb97bb978f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="insertiterator-class"></a>insert_iterator 클래스
 출력 반복기의 요구 사항을 충족하는 반복기 어댑터에 대해 설명합니다. 반복기 어댑터는 요소를 덮어쓰는 것이 아니라, 시퀀스에 요소를 삽입하므로 C++ 시퀀스 및 연관 컨테이너의 반복기가 제공한 덮어쓰기 의미 체계와 다른 의미 체계를 제공합니다. `insert_iterator` 클래스는 조정하는 컨테이너 형식에 대해 템플릿화됩니다.  
@@ -50,7 +51,7 @@ class insert_iterator;
 |-|-|  
 |[insert_iterator](#insert_iterator)|컨테이너의 지정된 위치에 요소를 삽입하는 `insert_iterator`를 만듭니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -80,7 +81,7 @@ typedef Container container_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 **Container**의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // insert_iterator_container_type.cpp  
@@ -127,7 +128,7 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 ### <a name="remarks"></a>설명  
  모든 컨테이너에는 `insert_iterator`에서 호출하는 삽입 멤버 함수가 있습니다. 연관 컨테이너의 경우 위치 매개 변수는 단순히 제안입니다. inserter 함수는 값에 삽입하는 편리한 방법을 제공합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // insert_iterator_insert_iterator.cpp  
@@ -186,7 +187,7 @@ insert_iterator<Container>& operator*();
 ### <a name="remarks"></a>설명  
  출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. **Iter**이 시퀀스에서 요소의 주소를 지정하는 반복기인 경우 **\*Iter** = **value**는 해당 요소를 값과 바꾸며 시퀀스에서 총 요소 수를 변경하지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // insert_iterator_op_deref.cpp  
@@ -245,7 +246,7 @@ insert_iterator<Container> operator++(int);
 ### <a name="remarks"></a>설명  
  preincrementation과 postincrementation 연산자는 둘 다 동일한 결과를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // insert_iterator_op_incr.cpp  
@@ -326,7 +327,7 @@ insert_iterator<Container>& operator=(
   
  그런 다음 `*this`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // insert_iterator_op_assign.cpp  
@@ -380,7 +381,7 @@ typedef typename Container::reference reference;
 ### <a name="remarks"></a>설명  
  이 형식은 연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // insert_iterator_container_reference.cpp  

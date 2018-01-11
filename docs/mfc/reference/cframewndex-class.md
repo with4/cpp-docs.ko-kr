@@ -189,11 +189,12 @@ caps.latest.revision: "39"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de4de5d693e786cd2cb1f7e4a0e45c9f7df66d99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b968985c598dafe2ed96295c7388d650dc18c636
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 클래스
 겹쳐진 Windows SDI(단일 문서 인터페이스) 또는 팝업 프레임 창의 기능을 구현하고 창 관리를 위한 멤버를 제공합니다. 확장 된 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 클래스입니다.  
@@ -298,7 +299,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::UpdateCaption](#updatecaption)|창 프레임 캡션을 업데이트 하기 위해 프레임 워크에서 호출 됩니다.|  
 |[CFrameWndEx::WinHelp](#winhelp)|중 하나를 호출 하 여 `WinHelp` 응용 프로그램 또는 상황에 맞는 도움말 관련 합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 클래스를 상속 하는 방법을 보여 줍니다는 `CFrameWndEx` 클래스입니다. 이 예제는 하위 클래스에 메서드 서명 및 재정의 하는 방법을 보여 줍니다.는 `OnShowPopupMenu` 메서드. 이 코드 조각은 [워드 패드 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_WordPad#3](../../mfc/reference/codesnippet/cpp/cframewndex-class_1.h)]  
@@ -355,7 +356,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
   
 ### <a name="parameters"></a>매개 변수  
  `hdwp`  
- 여러 개의 창의 위치를 포함 하는 구조에 대 한 핸들입니다. 입니다.  
+ 여러 개의 창의 위치를 포함 하는 구조에 대 한 핸들입니다. 이어야 합니다.  
   
 ### <a name="remarks"></a>설명  
  Hdwp 구조에 의해 초기화 됩니다는 [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) 메서드.  

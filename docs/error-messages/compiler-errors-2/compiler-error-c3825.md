@@ -15,18 +15,19 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3f8547cee8638fe5cda6c5b0a3d3ff375850406
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b609e4832bedb6ded1854df556a4418bef0c4a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3825"></a>컴파일러 오류 C3825
 'class': 관리 되는 지원 또는 WinRTevents WinRTclass 또는 관리 되는 수  
   
  관리되는 클래스에서는 .NET 이벤트만 지원됩니다. Windows 런타임 클래스에서는 Windows 런타임 이벤트만 지원됩니다. 관리 코드에서 이 오류를 해결하려면 `event_source` 및 `event_receiver`의 형식 매개 변수를 `native`에서 `managed`로 변경합니다. 또는 특성을 제거합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3825를 생성하고 해결 방법을 보여 줍니다.  
   
 ```  

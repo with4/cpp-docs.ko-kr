@@ -1,7 +1,7 @@
 ---
 title: "BSCMAKE 오류 BK1500 BK4505 통해 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -13,11 +13,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65e34d78a473cc49225456f132be520ea33b887e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4808ff1f1edbeb3cce9a6e1ffb5669f4e186817a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bscmake-errors-bk1500-through-bk4505"></a>BSCMAKE 오류 BK1500-BK4505
-이 섹션은 빌드 도구에 의해 생성된 오류에 대한 참조입니다. 특정 오류 메시지에 도움말을 보려면 출력 창의 오류 번호를 마우스로 클릭 하 고 F1 키를 하거나 입력에 오류 번호는 **찾아보십시오** 인덱스 상자로 합니다.
+
+이 섹션은 오류에 대 한 참조 및 빌드 도구 BSCMAKE에서 생성 된 경고입니다.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

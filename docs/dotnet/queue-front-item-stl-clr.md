@@ -1,41 +1,42 @@
 ---
-title: "queue::front_item(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::front_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front_item 멤버[STL/CLR]"
+title: 'queue:: front_item (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::front_item
+dev_langs: C++
+helpviewer_keywords: front_item member [STL/CLR]
 ms.assetid: 389ab030-4351-48e6-9b03-417f1d3fcb86
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 871bb12f4dcde45b548614efbb552ba1b0d4bc35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# queue::front_item(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accesses the first element.  
+# <a name="queuefrontitem-stlclr"></a>queue::front_item(STL/CLR)
+첫 번째 요소에 액세스합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 property value_type front_item;  
 ```  
   
-## 설명  
- The property accesses the first element of the controlled sequence, which must be non\-empty.  You use it to read or write the first element, when you know it exists.  
+## <a name="remarks"></a>설명  
+ 비어 있는 제어 된 시퀀스의 첫 번째 요소를 액세스 하는 속성입니다. 읽기 또는 존재 하는 것을 알고 있는 경우 첫 번째 요소를 쓰기를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_queue_front_item.cpp   
@@ -68,17 +69,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\_item \= a**  
- **x b c**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+ a b c  
+front_item = a  
+ x b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::back](../dotnet/queue-back-stl-clr.md)   
- [queue::back\_item](../dotnet/queue-back-item-stl-clr.md)   
- [queue::front](../dotnet/queue-front-stl-clr.md)   
- [queue::front](../dotnet/queue-front-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue:: back (STL/CLR)](../dotnet/queue-back-stl-clr.md)   
+ [queue:: back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)   
+ [queue:: front (STL/CLR)](../dotnet/queue-front-stl-clr.md)   
+ [queue::front(STL/CLR)](../dotnet/queue-front-stl-clr.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3eb7d6c18e1a1fd77e0c0c8506d46536add5cb21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows 소켓: 소켓과 아카이브 함께 사용
 이 문서에서는 설명는 [CSocket 프로그래밍 모델](#_core_the_csocket_programming_model)합니다. 클래스 [CSocket](../mfc/reference/csocket-class.md) 클래스 보다 더 높은 수준의 추상화에서 소켓 지원을 제공 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)합니다. `CSocket`MFC 통해 소켓 개체 간에 데이터를 전달 하는 버전의 MFC serialization 프로토콜을 사용 하 여 [CArchive](../mfc/reference/carchive-class.md) 개체입니다. `CSocket`은 차단을 제공하며(Windows 메시지의 백그라운드 처리 관리), 원시 API 또는 `CArchive`클래스를 사용할 경우 직접 수행해야 하는 문서의 여러 측면에 대한 관리 작업을 수행하는 `CAsyncSocket`에 액세스할 수 있게 해줍니다.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/24/2017
   
      연결을 수락하고 아카이브를 설정한 후에는 암호 유효성 검사와 같은 작업을 수행할 수 있습니다.  
   
-7.  아카이브, 소켓 파일 및 소켓 개체를 삭제합니다.  
+7.  아카이브, 소켓 파일 및 소켓 개체를 제거합니다.  
   
     > [!NOTE]
     >  `CArchive` 클래스는 `IsBufferEmpty` 클래스에 사용할 수 있도록 `CSocket` 멤버 함수를 제공합니다. 예를 들어 버퍼에 여러 데이터 메시지가 포함된 경우에는 모든 항목이 읽혀지고 버퍼가 비워질 때까지 반복해야 합니다. 그렇지 않으면 수신할 데이터가 있음에 대한 다음 알림이 무기한 지연될 수 있습니다. 모든 데이터를 검색할 수 있도록 `IsBufferEmpty`를 사용합니다.  

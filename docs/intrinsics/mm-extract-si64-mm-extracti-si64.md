@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 33467ac3a4397c3f446abe370dca5dc16c1a92ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc28de10a2a0d53ee87920d511ea894ad517a79a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
 **Microsoft 전용**  
@@ -79,7 +80,7 @@ __m128i _mm_extracti_si64(
   
  에 대 한 하드웨어 지원을 확인 하는 `extrq` 명령, 호출의 `__cpuid` 포함 된 내장 함수 `InfoType=0x80000001` 의 6 비트를 확인 하 고 `CPUInfo[2] (ECX)`합니다. 그렇지 않으면이 비트는 명령의 지원 되 면 1과 0 수 있습니다. 지원 하지 않는 내장이 하드웨어를 사용 하는 코드를 실행 하는 경우는 `extrq` 명령 결과 예측할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // Compile this sample with: /EHsc  

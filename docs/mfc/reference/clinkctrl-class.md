@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d61e3f09b96c236277cdaf3c38008be2a661f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6834190d7693e60f80285b04a04c484313d3c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 클래스
 Windows의 공용 SysLink 컨트롤의 기능을 제공합니다.  
@@ -132,7 +133,7 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>매개 변수  
  `lpszLinkMarkup`  
- 표시 된 표시할 텍스트를 포함 하는 0으로 끝나는 문자열에 대 한 포인터입니다. 자세한 내용은 항목의 "태그 및 링크 액세스" 섹션을 참조 하십시오. [SysLink 컨트롤 개요](http://msdn.microsoft.com/library/windows/desktop/bb760706) 에 [MSDN Library](http://go.microsoft.com/fwlink/linkid=556)합니다.  
+ 표시 된 표시할 텍스트를 포함 하는 0으로 끝나는 문자열에 대 한 포인터입니다. 자세한 내용은 항목의 "태그 및 링크 액세스" 섹션을 참조 하십시오. [SysLink 컨트롤 개요](http://msdn.microsoft.com/library/windows/desktop/bb760706)합니다.  
   
  `dwStyle`  
  링크 컨트롤의 스타일을 지정합니다. 컨트롤 스타일의 조합을 적용 됩니다. 참조 [공통 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498) 에 `Windows SDK` 자세한 정보에 대 한 합니다.  
@@ -154,12 +155,12 @@ virtual BOOL Create(DWORD dwStyle,
   
  두 번째 형태는 `Create` 메서드는 사용 되지 않습니다. 지정 하는 첫 번째 폼을 사용 하 여 `lpszLinkMarkup` 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 라는 두 변수를 정의 `m_Link1` 및 `m_Link2`, 두 가지 링크 컨트롤에 액세스 하는 데 사용 되는 합니다.  
   
  [!code-cpp[NVC_MFC_CLinkCtrl_s1#2](../../mfc/reference/codesnippet/cpp/clinkctrl-class_1.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 다른 링크 컨트롤의 위치에 따라 하나의 링크 컨트롤을 만듭니다. 리소스 로더는 응용 프로그램을 시작 하는 경우 첫 번째 링크 컨트롤을 만듭니다. OnInitDialog 메서드를 시작 하는 응용 프로그램이 첫 번째 링크 컨트롤의 위치를 기준으로 두 번째 링크 컨트롤이 만들어집니다. 그런 다음 두 번째 링크 컨트롤을 표시 하는 텍스트에 맞게 조정 있습니다.  
   
  [!code-cpp[NVC_MFC_CLinkCtrl_s1#1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]  
@@ -186,7 +187,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>매개 변수  
  `lpszLinkMarkup`  
- 표시 된 표시할 텍스트를 포함 하는 0으로 끝나는 문자열에 대 한 포인터입니다. 자세한 내용은 항목의 "태그 및 링크 액세스" 섹션을 참조 하십시오. [SysLink 컨트롤 개요](http://msdn.microsoft.com/library/windows/desktop/bb760706) 에 [MSDN Library](http://go.microsoft.com/fwlink/linkid=556)합니다.  
+ 표시 된 표시할 텍스트를 포함 하는 0으로 끝나는 문자열에 대 한 포인터입니다. 자세한 내용은 항목의 "태그 및 링크 액세스" 섹션을 참조 하십시오. [SysLink 컨트롤 개요](http://msdn.microsoft.com/library/windows/desktop/bb760706)합니다.  
   
  `dwExStyle`  
  링크 컨트롤의 확장된 스타일을 지정합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  

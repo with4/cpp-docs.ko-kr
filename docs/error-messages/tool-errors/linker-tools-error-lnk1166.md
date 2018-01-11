@@ -1,31 +1,30 @@
 ---
 title: "링커 도구 오류 LNK1166 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1166"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1166"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1166
+dev_langs: C++
+helpviewer_keywords: LNK1166
 ms.assetid: d69548a8-0efb-44e1-90b7-b27636a4b575
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d23c05fa543825f9bf5fbb2c7dc08f4b9473098
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 링커 도구 오류 LNK1166
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-offset\=offset, va\=value에서 코드를 조정할 수 없습니다.  
+# <a name="linker-tools-error-lnk1166"></a>링커 도구 오류 LNK1166
+오프셋에서 코드를 조정할 수 없는 = 오프셋, va = 값  
   
- LINK가 코드를 필요한 대로 패딩하지 못했습니다.  
+ 링크를 필요에 따라 코드를 채울 수 없습니다.  
   
- 일부 프로세서에서는 페이지 경계를 교차하는 데 특정 명령을 사용할 수 없습니다.  LINK는 패드를 추가하여 이 오류를 수정하려고 합니다.  이 경우에는 LINK가 문제를 해결하지 못했습니다.
+ 일부 프로세서 페이지 경계를 교차 하는 특정 명령은 허용 되지 않습니다. 링크는이 상황을 해결 패드를 추가 하려고 합니다. 이 경우에 링크 문제를 해결 하지 못했습니다.

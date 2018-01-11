@@ -17,13 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8dcfab9baf3a698da0880d9acd84a84c4580b53e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 978c577a01b2f574009c601ca594a235e0712d71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="tree-control-drag-and-drop-operations"></a>트리 컨트롤 끌어서 놓기 작업
+# <a name="tree-control-drag-and-drop-operations"></a>트리 컨트롤 끌어서 드롭 작업
 트리 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 항목을 끌기 시작할 때 알림을 보냅니다. 컨트롤에서 보냅니다는 [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) 마우스 왼쪽된 단추와 항목을 끌기 시작할 때 알림 메시지 및 [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) 알림 메시지를 끌기 시작할 때 마우스 오른쪽 단추로 합니다. 트리 컨트롤을 제공 하 여 이러한 알림을 보낼에서 트리 컨트롤을 방지할 수 있습니다는 **TVS_DISABLEDRAGDROP** 스타일입니다.  
   
  호출 하 여 끌기 작업 중에 표시할 이미지를 가져올는 [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) 멤버 함수입니다. 트리 컨트롤 끌고 항목의 레이블을 기반으로 끌기 비트맵을 만듭니다. 트리 컨트롤 이미지 목록 만들어, 비트맵을 추가 하 고에 대 한 포인터를 반환 합니다. 그런 다음는 [CImageList](../mfc/reference/cimagelist-class.md) 개체입니다.  

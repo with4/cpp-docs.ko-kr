@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97693360d03f0c861f1c2f1b956fcbd136d7c6f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f8b18678545db2782d86b6c8f65a775d016d7e19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorcapacity-stlclr"></a>vector::capacity(STL/CLR)
 컨테이너에 할당 된 저장소의 크기를 보고합니다.  
@@ -33,7 +36,7 @@ size_type capacity();
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 된 시퀀스도 큰 값을 보유할 현재 할당 된 저장소 반환 [vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()`합니다. 제어 되는 시퀀스에 대 한 저장소를 다시 할당 해야 하기 전에 얼마나 많은 컨테이너 증가할 수를 확인 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_vector_capacity.cpp   

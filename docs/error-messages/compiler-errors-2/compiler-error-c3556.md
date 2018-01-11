@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4bdb2c292eaa2c89496cf64a36b917af09e381b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cff9466ff006f303913f52101db57708020ed8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3556"></a>컴파일러 오류 C3556
   
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/24/2017
   
 컴파일러가 `decltype(`*expression*`)` 형식 지정자의 인수인 식의 형식을 추론할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 다음 코드 예제에서는 `myFunction` 이 오버로드되어 컴파일러가 `myFunction` 인수의 형식을 추론할 수 없습니다. 이 문제를 해결 하려면 사용할 수 있습니다 `static_cast` 오버 로드 된 함수에서 지정 하는 특정에 대 한 포인터의 인스턴스를 만들 수는 `decltype` 식입니다.  
   

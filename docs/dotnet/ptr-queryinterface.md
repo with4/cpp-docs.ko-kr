@@ -1,35 +1,37 @@
 ---
-title: "ptr::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.QueryInterface"
-  - "ptr::QueryInterface"
-  - "msclr::com::ptr::QueryInterface"
-  - "msclr.com.ptr.QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface 메서드"
+title: ptr::QueryInterface | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.QueryInterface
+- ptr::QueryInterface
+- msclr::com::ptr::QueryInterface
+- msclr.com.ptr.QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: c2619517-3fde-493b-b12d-da8f62d5d803
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 687c57c32d4f270d397e3ed8fd068d603cbcb9b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Queries the owned COM object for an interface and attaches the result to another `com::ptr`.  
+# <a name="ptrqueryinterface"></a>ptr::QueryInterface
+인터페이스에 대 한 소유 COM 개체를 쿼리하고 결과를 다른 연결 `com::ptr`합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _other_type>  
@@ -38,18 +40,18 @@ void QueryInterface(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `other`  
- The `com::ptr` that will get the interface.  
+ `com::ptr` 인터페이스를 받습니다.  
   
-## 예외  
- Internally, `QueryInterface` is called on the owned COM object and any error `HRESULT` is converted to an exception by <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+## <a name="exceptions"></a>예외  
+ 내부적으로 `QueryInterface` 소유한 COM 개체 및 모든 오류를 호출할 `HRESULT` 여 예외로 변환 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>합니다.  
   
-## 설명  
- Use this method to create a COM wrapper for a different interface of the COM object owned by the current wrapper.  This method calls `QueryInterface` through the owned COM object to request a pointer to a specific interface of the COM object and attaches the returned interface pointer to the passed\-in `com::ptr`.  
+## <a name="remarks"></a>설명  
+ 현재 래퍼가 소유 하는 COM 개체의 다른 인터페이스에 대 한 COM 래퍼를 만들려면이 메서드를 사용 합니다. 이 메서드를 호출 `QueryInterface` COM의 특정 인터페이스에 대 한 포인터를 요청 하려면 소유 COM 개체를 통해 개체를 반환 된 인터페이스 포인터를 전달 기능에 연결 `com::ptr`합니다.  
   
-## 예제  
- This example implements a CLR class that uses a `com::ptr` to wrap its private member `IXMLDOMDocument` object.  The `WriteTopLevelNode` member function uses `QueryInterface` to fill a local `com::ptr` with an `IXMLDOMNode` and then passes the `com::ptr` \(by tracking reference\) to a private member function that writes the node's name and text properties to the console.  
+## <a name="example"></a>예  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `WriteTopLevelNode` 멤버 함수를 사용 하 여 `QueryInterface` 로컬 채울 `com::ptr` 와 `IXMLDOMNode` 다음 전달는 `com::ptr` (추적 참조)에서 노드 이름 및 텍스트 속성을 콘솔에 작성 하는 private 멤버 함수에 있습니다.  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -150,12 +152,15 @@ int main() {
 }  
 ```  
   
-  **\<\#document\>persnickety\<\/\#document\>**   
-## 요구 사항  
- **Header file** \<msclr\\com\\ptr.h\>  
+```Output  
+<#document>persnickety</#document>  
+```  
   
- **Namespace** msclr::com  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
-## 참고 항목  
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>참고 항목  
  [ptr 멤버](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

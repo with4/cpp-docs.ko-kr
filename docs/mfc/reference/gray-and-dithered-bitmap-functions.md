@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 372fd343bbca8bfac4ec31a34b3920cf29d35957
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7f895fb22e4f4d2649cdec1e4c9925b69b013e49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>회색 및 디더링된 비트맵 함수
 **회색 비트맵 함수**  
@@ -81,7 +82,7 @@ void AFXAPI AfxDrawGrayBitmap(
   
  ![회색 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -112,7 +113,7 @@ void AFXAPI AfxGetGrayBitmap(
   
  ![회색 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -155,7 +156,7 @@ void AFXAPI AfxDrawDitheredBitmap(
   
  ![디더링된 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -191,7 +192,7 @@ void AFXAPI AfxGetDitheredBitmap(
   
  ![디더링된 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  

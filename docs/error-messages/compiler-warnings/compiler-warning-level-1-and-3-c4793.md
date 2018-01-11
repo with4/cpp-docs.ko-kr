@@ -25,11 +25,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2c133848adf634935287589c09b94ed871c93f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>컴파일러 경고(수준 1 및 3) C4793
 'function': 함수가 네이티브 코드로 컴파일 되었습니다. 'reason'  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
 |__Clrcall이 아닌 가상 함수 썽크는 네이티브로 컴파일해야 합니다.|비-[__clrcall](../../cpp/clrcall.md) 가상 함수 썽크는 관리 되지 않는 주소를 사용 해야 합니다.|  
 |'_Setjmp'를 사용 하는 함수는 네이티브로 컴파일해야 합니다.|CLR은 프로그램 실행을 제어할 수 있어야 합니다. 그러나는 [setjmp](../../cpp/using-setjmp-longjmp.md) 함수는 저장 및 레지스터 및 실행 상태와 같은 하위 수준 정보를 복원 하 여 일반적인 프로그램 실행을 건너뜁니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4793 합니다.  
   
 ```  
@@ -71,7 +72,7 @@ warning C4793: 'asmfunc' : function is compiled as native code:
         Inline native assembly ('__asm') is not supported in managed code  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4793 합니다.  
   
 ```  

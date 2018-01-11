@@ -1,37 +1,36 @@
 ---
 title: "컴파일러 경고 (수준 1) C4581 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4581"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4581"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4581
+dev_langs: C++
+helpviewer_keywords: C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 59bf4eafe722283f5fced046e845c6b46ca3ce82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4581
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-사용되지 않는 동작: 특성을 처리하기 위해 '"string1"'을\(를\) 'string2'\(으\)로 바꿨습니다.  
+# <a name="compiler-warning-level-1-c4581"></a>컴파일러 경고(수준 1) C4581
+사용 되지 않는 동작: '"string1" ' '문자열 2' 프로세스 특성으로 대체  
   
- 이 오류는 Visual C\+\+ 2005에 대해 적용되었으며, Visual C\+\+ 특성의 매개 변수 확인이라는 컴파일러 규칙의 결과로 발생할 수 있습니다.  
+ 이 오류는 Visual c + + 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 있습니다: 매개 변수 Visual c + + 특성에 대 한 검사 합니다.  
   
- 이전 버전에서는 특성 값이 따옴표로 묶여 있는지 여부와 상관없이 해당 값을 사용할 수 있었습니다.  새 버전의 경우 이 값이 열거형이면 이를 따옴표로 묶지 말아야 합니다.  
+ 이전 버전에서는 특성 값은 따옴표로 묶여 있는지 여부 허용 되었습니다. 열거형 값을 사용 하는 경우 하지 따옴표에 포함 합니다.  
   
-## 예제  
- 다음 샘플에서는 C4581 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 C4581 오류가 발생 합니다.  
   
 ```  
 // C4581.cpp  

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f06779fb8f2d5265d93cc4376b42669b978c4e5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bcf80eb4d45fe1ae163772b96339c123996ae377
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="project-build-error-prj0003"></a>프로젝트 빌드 오류 PRJ0003  
   
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/24/2017
 
 이 오류에 대 한 가능한 원인은 다음과 같습니다.  
   
--   프로젝트에 ATL 서버에 따라 달라 집니다. Visual Studio 2008부터, ATL 서버를 더 이상 Visual Studio의 일부로 포함 있지만 CodePlex에서 공유 원본 프로젝트로 서 놓았습니다. ATL 서버 소스 코드 및 도구를 다운로드 하려면로 이동 [ATL 서버 라이브러리 및 도구](http://go.microsoft.com/fwlink/?LinkID=81979)합니다.  
+-   프로젝트에 ATL 서버에 따라 달라 집니다. Visual Studio 2008부터, ATL 서버를 더 이상 Visual Studio의 일부로 포함 있지만 CodePlex에서 공유 원본 프로젝트로 서 놓았습니다. ATL 서버 소스 코드 및 도구를 다운로드 하려면로 이동 [ATL 서버 라이브러리 및 도구](http://go.microsoft.com/fwlink/p/?linkid=81979)합니다.  
   
 -   시스템 리소스가 부족 합니다. 이 문제를 해결할 일부 응용 프로그램을 닫습니다.  
   

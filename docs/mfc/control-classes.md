@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1bba69597425c10119af1f2c7d29afd870d8c48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 376fb3836d92a1fae348929a7faa49b44dfd866e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="control-classes"></a>컨트롤 클래스
 컨트롤 클래스에 정적 텍스트 컨트롤에서 트리 컨트롤에 이르기까지 표준 Windows 컨트롤의 다양 한 캡슐화 합니다. 또한 MFC는 비트맵 및 컨트롤 막대를 사용 하는 단추 등의 몇 가지 새로운 컨트롤을 제공 합니다.  

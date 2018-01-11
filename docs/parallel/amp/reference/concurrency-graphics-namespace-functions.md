@@ -1,5 +1,5 @@
 ---
-title: "Concurrency:: graphics 네임 스페이스 함수 | Microsoft 문서"
+title: "Concurrency:: graphics 네임 스페이스 함수 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,18 +9,18 @@ ms.topic: article
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7338e634c7ce10b06e7b599494ed934942febe42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: graphics 네임 스페이스 함수
 |||  
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/17/2017
 |[copy](#copy)|[copy_async](#copy_async)|  
   
 ##  <a name="copy"></a>copy 함수 (concurrency:: graphics Namespace)  
- 원본 질감을 대상 버퍼에 복사 하거나 소스 버퍼를 대상 버퍼에 복사 합니다. 이 함수의 일반적인 형태 `copy(src, dest)`합니다.  
+ 원본 질감을 대상 버퍼에 복사 하거나 소스 버퍼를 대상 버퍼에 복사 합니다. 이 함수는 일반적인 형태의 `copy(src, dest)`합니다.  
   
 ```  
 template <
@@ -138,7 +138,7 @@ void copy (
  복사할 질감 섹션의 범위입니다.  
   
  `_Dst`  
- 복사할 개체입니다.  
+ 복사할 대상 개체입니다.  
   
  `_Dst_byte_size`  
  대상의 바이트 수입니다.  
@@ -159,7 +159,7 @@ void copy (
  복사할 개체입니다.  
   
  `_Src_byte_size`  
- 원본의 바이트 수입니다.  
+ 원본의 바이트의 수입니다.  
   
  `_Src_type`  
  원본 개체의 형식입니다.  
@@ -174,7 +174,7 @@ void copy (
  소스 컨테이너에 사용 되는 끝 반복기입니다.  
   
 ##  <a name="copy_async"></a>copy_async 함수 (concurrency:: graphics Namespace)  
- 대상 버퍼에 원본 질감을 비동기적으로 복사 하거나 소스 버퍼를 대상 버퍼에 복사 하 고 다음 반환을 [completion_future](completion-future-class.md) 대기한 수 있는 개체입니다. 액셀러레이터에서 코드를 실행 하는 경우 데이터를 복사할 수 없습니다. 이 함수의 일반적인 형태 `copy(src, dest)`합니다.  
+ 대상 버퍼에 원본 질감을 비동기적으로 복사 또는 소스 버퍼를 대상 버퍼에 복사한 다음 반환을 [completion_future](completion-future-class.md) 대기한 수 있는 개체입니다. 코드 가속기에서 실행 되는 데이터를 복사할 수 없습니다. 이 함수는 일반적인 형태의 `copy(src, dest)`합니다.  
   
 ```  
 template<
@@ -280,7 +280,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  복사할 질감 섹션의 범위입니다.  
   
  `_Dst`  
- 복사할 개체입니다.  
+ 복사할 대상 개체입니다.  
   
  `_Dst_byte_size`  
  대상의 바이트 수입니다.  
@@ -301,7 +301,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  복사할 개체입니다.  
   
  `_Src_byte_size`  
- 원본의 바이트 수입니다.  
+ 원본의 바이트의 수입니다.  
   
  `_Src_type`  
  원본 개체의 형식입니다.  
@@ -322,4 +322,3 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
-

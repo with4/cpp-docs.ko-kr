@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d41e6f1fd4cf66b45d4f79f4f1b27b3fc4d67a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04f6ad8889c9a713b3b64284b329c21d5a2cd49e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hlsl-property-pages-output-files"></a>HLSL 속성 페이지: 출력 파일
 HLSL 컴파일러 (fxc.exe)의 다음 속성을 구성 하려면 사용 하 여 해당 **출력 파일** 속성입니다. 액세스 하는 방법에 대 한 내용은 **출력 파일** HLSL 폴더 속성 페이지에에서 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.  

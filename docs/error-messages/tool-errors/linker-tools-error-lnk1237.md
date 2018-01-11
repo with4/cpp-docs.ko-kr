@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43ab77f153b6e53709422a1826a6beee25d65b2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee9ec0e197d51f76ff57ef06f5584c55df0a4746
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1237"></a>링커 도구 오류 LNK1237
 코드를 생성 하는 동안 컴파일러 'symbol' /GL으로 컴파일된 ' module' 모듈에 정의 된 기호 참조를 했습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  LNK1237를 해결 하려면 컴파일하지 않는 기호 너비 **/GL** 사용 또는 [/INCLUDE (강제 기호 참조)](../../build/reference/include-force-symbol-references.md) 기호에 대 한 참조를 되도록 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 lnk1237 오류가 발생 합니다. 이 오류를 해결 하려면 하지 LNK1237_a.cpp 배열을 초기화 않으며 추가 **/include: __chkstk** 링크 명령입니다.  
   
 ```  

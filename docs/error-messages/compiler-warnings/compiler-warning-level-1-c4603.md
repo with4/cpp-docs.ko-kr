@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7982e0df1186ea4efbf1e4f27ac155221bc93f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8ddc7c360218ca2e0bdbe8062df3be401fb9a7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4603"></a>컴파일러 경고(수준 1) C4603
 '\<식별자 >': 매크로가 정의 되지 않았거나 미리 컴파일된 헤더 사용 후 정의가 다릅니다  

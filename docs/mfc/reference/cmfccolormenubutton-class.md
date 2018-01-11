@@ -55,11 +55,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 665c4b40ca8ec5a149685b5d9c2c54017ca0b883
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c6e976b1a5497e8d2814208b6b3260037458fc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 클래스
 `CMFCColorMenuButton` 메뉴 명령이 나 색 선택 대화 상자를 시작 하는 도구 모음 단추가 클래스를 지원 합니다.  
@@ -111,7 +112,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
   
  색 선택 대화 상자를 처리 하는 동안 만들어집니다는 [CMFCColorMenuButton::CreatePopupMenu](#createpopupmenu) 이벤트 처리기입니다. 이벤트 처리기에 사용 하 여 부모 프레임 알립니다는 `WM_COMMAND` 메시지입니다. `CMFCColorMenuButton` 개체 원래 메뉴 명령이 나 도구 모음 단추에 할당 된 컨트롤 ID를 보냅니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 만들고 색 메뉴 단추에서 다양 한 메서드를 사용 하 여 구성 하는 `CMFCColorMenuButton` 클래스입니다. 예제에서는 한 `CPalette` 개체가 처음 생성 되 고 다음의 개체를 생성 하는 데는 `CMFCColorMenuButton` 클래스입니다. `CMFCColorMenuButton` 개체의 자동 및 기타 단추를 사용 하도록 설정 하 고 색 및 열 수를 설정 하 여 구성 됩니다. 이 코드는의 일부는 [워드 패드 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]  

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- goto_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- goto keyword [C++]
+f1_keywords: goto_cpp
+dev_langs: C++
+helpviewer_keywords: goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3bdad97f36902762f34816a04a4fc0c5c0c16856
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a002071bdb4e271df525b138647b0544cfe9f3c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="goto-statement-c"></a>goto 문 (C++)
 `goto` 문은 지정된 식별자로 레이블이 지정된 문으로 무조건적으로 컨트롤을 전송합니다.  
@@ -44,7 +40,7 @@ goto identifier;
   
  레이블에 대 한 자세한 내용은 및 `goto` 문을 참조 [Labeled 문](../cpp/labeled-statements.md) 및 [goto 문 사용 하 여 레이블을](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `i`가 3일 때 `goto`문이 `stop`이라는 레이블이 지정된 지점으로 컨트롤을 전송합니다.  
   
 ```  

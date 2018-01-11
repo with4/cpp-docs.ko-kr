@@ -1,147 +1,149 @@
 ---
 title: "OLE DB 소비자 템플릿 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-attr.db_param"
-  - "vc-attr.db_column"
-  - "vc-attr.db_accessor"
-  - "vc-attr.db_command"
-  - "vc-attr.db_table"
-  - "vc.templates.ole"
-  - "vc-attr.db_source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 소비자 템플릿, 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-attr.db_param
+- vc-attr.db_column
+- vc-attr.db_accessor
+- vc-attr.db_command
+- vc-attr.db_table
+- vc.templates.ole
+- vc-attr.db_source
+dev_langs: C++
+helpviewer_keywords: OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 681654f79f0cb3574b0893bb9f726bea78435e74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# OLE DB 소비자 템플릿 참조
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-The OLE DB Consumer Templates contain the following classes.  The reference material also includes topics on the [macros for OLE DB Consumer Templates](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+# <a name="ole-db-consumer-templates-reference"></a>OLE DB 소비자 템플릿 참조
+OLE DB 소비자 템플릿은 다음 클래스를 포함 합니다. 참조 자료도 포함 되어 항목에는 [OLE DB 소비자 템플릿에 대 한 매크로](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)합니다.  
   
-## Session Classes  
+## <a name="session-classes"></a>세션 클래스  
  [CDataConnection](../../data/oledb/cdataconnection-class.md)  
- Manages the connection with the data source.  This is a useful class for creating clients because it encapsulates necessary objects \(data source and session\) and some of the work you need to do when connecting to a data source.  
+ 데이터 소스와의 연결을 관리합니다. 필요한 개체 (데이터 소스 및 세션) 및 데이터 원본에 연결할 때 수행 해야 하는 작업의 일부를 캡슐화 하기 때문에 클라이언트를 만들기 위한 유용한 클래스입니다.  
   
  [CDataSource](../../data/oledb/cdatasource-class.md)  
- Corresponds to an OLE DB data source object, representing a connection through a provider to a data source.  One or more database sessions, each represented by a `CSession` object, can take place on a single connection.  
+ 데이터 원본에 공급자를 통해 연결을 나타내는 OLE DB 데이터 원본 개체에 해당 합니다. 하나 이상의 데이터베이스 세션을 각로 표시 되는 `CSession` 개체, 단일 연결에서 수행할 수 있습니다.  
   
  [CEnumerator](../../data/oledb/cenumerator-class.md)  
- Corresponds to an OLE DB enumerator object, which retrieves rowset information about available data sources.  
+ 사용 가능한 데이터 원본에 대 한 행 집합 정보를 검색 하는 OLE DB 열거자 개체에 해당 합니다.  
   
  [CEnumeratorAccessor](../../data/oledb/cenumeratoraccessor-class.md)  
- Used by `CEnumerator` to access the data from the enumerator rowset.  This rowset consists of the data sources and enumerators visible from the current enumerator.  
+ 사용 하는 `CEnumerator` 열거자 행 집합에서 데이터에 액세스할 수 있습니다. 이 행 집합의 데이터 소스와 현재 열거자에서 표시 하는 열거자 구성 됩니다.  
   
  [CSession](../../data/oledb/csession-class.md)  
- Represents a single database access session.  One or more sessions can be associated with each `CDataSource` object.  
+ 단일 데이터베이스 액세스 세션을 나타냅니다. 하나 이상의 세션에 각각 연결할 수 있습니다 `CDataSource` 개체입니다.  
   
-## 접근자 클래스  
+## <a name="accessor-classes"></a>접근자 클래스  
  [CAccessor](../../data/oledb/caccessor-class.md)  
- Used for records that are statically bound to a data source.  Use this accessor class when you know the structure of the data source.  
+ 데이터 원본에 정적으로 바인딩된 레코드에 사용 합니다. 데이터 원본의 구조를 알고 있는 경우이 접근자 클래스를 사용 합니다.  
   
  [CAccessorBase](../../data/oledb/caccessorbase-class.md)  
- Base class for all accessor classes.  
+ 모든 접근자 클래스에 대 한 기본 클래스입니다.  
   
  [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)  
- An accessor that can be created at run time, based on the column information of the rowset.  Use this class to retrieve data if you do not know the structure of the data source.  
+ 만들 수 있는 런타임 시 행 집합의 열 정보를 기반으로 하는 접근자입니다. 이 클래스를 사용 하 여 데이터 원본의 구조 알 수 없는 경우 데이터를 검색 합니다.  
   
  [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)  
- An accessor that can be used when command types are unknown.  Obtains the parameter information by calling the `ICommandWithParameters` interface, if the provider supports the interface.  
+ 명령 유형을 알 수 없는 경우 사용할 수 있는 접근자입니다. 호출 하 여 매개 변수 정보를 가져옵니다는 `ICommandWithParameters` 인터페이스, 공급자 인터페이스를 지원 합니다.  
   
  [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)  
- Allows you to access a data source when you have no knowledge of the database's underlying structure.  
+ 데이터베이스의 기본 구조를 인식 하지 못합니다 때 데이터 원본에 액세스할 수 있습니다.  
   
  [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)  
- Similar to `CDynamicStringAccessor` except that this class requests data accessed from the data store as ANSI string data.  
+ 유사한 `CDynamicStringAccessor` 제외 하 고이 클래스는 ANSI 문자열 데이터로 데이터 저장소에서 액세스 하는 데이터를 요청 합니다.  
   
  [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)  
- Similar to `CDynamicStringAccessor` except that this class requests data accessed from the data store as UNICODE string data.  
+ 유사한 `CDynamicStringAccessor` 제외 하 고이 클래스는 유니코드 문자열 데이터와 데이터 저장소에서 액세스 하는 데이터를 요청 합니다.  
   
  [CManualAccessor](../../data/oledb/cmanualaccessor-class.md)  
- An accessor with methods to handle both columns and command parameters.  With this class, you can use any data types as long as the provider can convert the type.  
+ 열 및 명령 매개 변수를 모두 처리 하도록 메서드로 접근자입니다. 이 클래스와 공급자에서 형식을 변환할 수으로 모든 데이터 형식에 사용할 수 있습니다.  
   
  [CNoAccessor](../../data/oledb/cnoaccessor-class.md)  
- Can be used as a template argument when you do not want the class to support parameters or output columns.  
+ 출력 열 또는 매개 변수를 지원 하도록 클래스 하지 않을 때 템플릿 인수로 사용할 수 있습니다.  
   
  [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)  
- Similar to `CDynamicStringAccessor` except that this class converts all data accessed from the data store as XML\-formatted \(tagged\) data.  
+ 유사한 `CDynamicStringAccessor` 제외 하 고이 클래스는 XML 형식의 (태그 있음) 데이터로 데이터 저장소에서 액세스 하는 모든 데이터를 변환 합니다.  
   
-## 행 집합 클래스  
+## <a name="rowset-classes"></a>행 집합 클래스  
  [CAccessorRowset](../../data/oledb/caccessorrowset-class.md)  
- Encapsulates a rowset and its associated accessors.  
+ 행 집합 및 해당 관련된 접근자를 캡슐화합니다.  
   
  [CArrayRowset](../../data/oledb/carrayrowset-class.md)  
- Used to access elements of a rowset using array syntax.  
+ 배열 구문을 사용 하 여 행 집합의 요소에 액세스 하는 데 사용 합니다.  
   
  [CBulkRowset](../../data/oledb/cbulkrowset-class.md)  
- Used to fetch and manipulate rows in bulk by retrieving multiple row handles with a single call.  
+ 인출 및 한 번의 호출으로 여러 행 핸들을 검색 하 여 대량에서 행을 조작 하는 데 사용 합니다.  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
- Can be used as a template argument if the command does not return a rowset.  
+ 명령 행 집합을 반환 하지 않는 경우 템플릿 인수로 사용할 수 있습니다.  
   
  [CRestrictions](../../data/oledb/crestrictions-class.md)  
- Used to specify restrictions for schema rowsets.  
+ 스키마 행 집합에 대 한 제한을 지정 하는 데 사용 합니다.  
   
  [CRowset](../../data/oledb/crowset-class.md)  
- Used to manipulate, set, and retrieve rowset data.  
+ 조작 설정 하 고 행 집합 데이터를 검색 하는 데 사용 합니다.  
   
  [CStreamRowset](../../data/oledb/cstreamrowset-class.md)  
- Returns an `ISequentialStream` object rather than a rowset; you then use the **Read** method to retrieve data in XML format. \(SQL Server 2000 does the formatting; note that this feature works with SQL Server 2000 only.\)  
+ 반환은 `ISequentialStream` ; 다음 사용 하는 대신 행 집합 개체는 **읽기** XML 형식으로 데이터를에서 검색 하는 메서드입니다. (SQL Server 2000은 서식을,이 기능은 SQL Server 2000과만 작동)  
   
  [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)  
- Provides a dummy implementation for `IRowsetNotify`, with empty functions for the `IRowsetNotify` methods `OnFieldChange`, `OnRowChange`, and `OnRowsetChange`.  
+ 에 대 한 더미 구현을 제공 `IRowsetNotify`에 대 한 빈 함수로 `IRowsetNotify` 메서드 `OnFieldChange`, `OnRowChange`, 및 `OnRowsetChange`합니다.  
   
- [Schema Rowset Classes and Typedef Classes](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)  
+ [스키마 행 집합 클래스 및 Typedef 클래스](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)  
   
- The OLE DB Templates provide you with a set of classes that correspond to the OLE DB schema rowsets.  
+ OLE DB 템플릿 클래스는 OLE DB 스키마 행 집합에 해당 하는 집합을 제공 합니다.  
   
-## Command Classes  
+## <a name="command-classes"></a>명령 클래스  
  [CCommand](../../data/oledb/ccommand-class.md)  
- Used to set and execute a parameter\-based OLE DB command.  To merely open a simple rowset, use `CTable` instead.  
+ 설정 및 매개 변수 기반 OLE DB 명령을 실행 하는 데 사용 합니다. 단순 행 집합을 단순히 열을 사용 하 여 `CTable` 대신 합니다.  
   
  [CMultipleResults](../../data/oledb/cmultipleresults-class.md)  
- Used as a template argument for the `CCommand` template when you want the command to handle multiple result sets.  
+ 에 대 한 템플릿 인수로 사용 된 `CCommand` 서식 파일을 여러 결과 집합을 처리 하는 명령을 선택 합니다.  
   
  [CNoAccessor](../../data/oledb/cnoaccessor-class.md)  
- Used as a template argument for template classes, such as `CCommand` and `CTable`, that take an accessor class argument.  Use `CNoAccessor` if you do not want the class to support parameters or output columns.  
+ 같은 템플릿 클래스에 대 한 템플릿 인수로 사용 `CCommand` 및 `CTable`, 접근자 클래스 인수를 사용 하는 합니다. 사용 하 여 `CNoAccessor` 출력 열 또는 매개 변수를 지원 하도록 클래스 하지 않도록 합니다.  
   
  [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)  
- Used as a template argument for the `CCommand` template when you want the command to handle a single rowset.  `CNoMultipleResults` is the default value for the template argument.  
+ 에 대 한 템플릿 인수로 사용 된 `CCommand` 서식 파일을 단일 행 집합을 처리 하는 명령을 선택 합니다. `CNoMultipleResults`템플릿 인수에 대 한 기본값이입니다.  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
- Used as a template argument for `CCommand` or `CTable` if the command or table does not return a rowset.  
+ 에 대 한 템플릿 인수로 사용 `CCommand` 또는 `CTable` 명령 또는 테이블 행 집합을 반환 하지 않는 경우.  
   
  [CTable](../../data/oledb/ctable-class.md)  
- Used to access a simple rowset with no parameters.  
+ 매개 변수가 없는 단순 행 집합에 액세스 하는 데 사용 합니다.  
   
-## Property Classes  
+## <a name="property-classes"></a>속성 클래스  
  [CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)  
- Used to pass an array of property IDs for which the consumer wants property information.  The properties belong to one property set.  
+ 속성 Id는 소비자가 속성 정보 배열을 전달 하는 데 사용 합니다. 속성이 한 속성 집합에 속해야 합니다.  
   
  [CDBPropSet](../../data/oledb/cdbpropset-class.md)  
- Used to set properties on a provider.  
+ 공급자의 속성을 설정 하는 데 사용 합니다.  
   
-## Bookmark Class  
+## <a name="bookmark-class"></a>책갈피 클래스  
  [CBookmark](../../data/oledb/cbookmark-class.md)  
- Used as an index for accessing data in a rowset.  
+ 행 집합의 데이터에 액세스 하기 위한 인덱스로 사용 합니다.  
   
-## Error Class  
+## <a name="error-class"></a>Error 클래스  
  [CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)  
- Used to retrieve OLE DB error information.  
+ OLE DB 오류 정보를 검색 하는 데 사용 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿 참조](../../data/oledb/ole-db-provider-templates-reference.md)   
  [OLE DB 템플릿](../../data/oledb/ole-db-templates.md)

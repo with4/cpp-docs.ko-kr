@@ -13,10 +13,9 @@ f1_keywords:
 - deque/std::operator&lt;
 - deque/std::operator&lt;=
 - deque/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (deque)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 81645c8f645a3c3a09ef641b2fce003260bcd5f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; 연산자
 ||||  
@@ -58,7 +56,7 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 ### <a name="remarks"></a>설명  
  deque 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 deque 개체는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // deque_op_ne.cpp  
@@ -104,7 +102,7 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 ### <a name="remarks"></a>설명  
  deque 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 작음 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // deque_op_lt.cpp  
@@ -154,7 +152,7 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 ### <a name="remarks"></a>설명  
  deque 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 작거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // deque_op_le.cpp  
@@ -205,7 +203,7 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 ### <a name="remarks"></a>설명  
  deque 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 deque는 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // deque_op_eq.cpp  
@@ -259,7 +257,7 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 ### <a name="remarks"></a>설명  
  deque 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 큼 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // deque_op_gt.cpp  
@@ -311,7 +309,7 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 ### <a name="remarks"></a>설명  
  deque 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 크거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // deque_op_ge.cpp  
@@ -344,7 +342,6 @@ Deque c1 is greater than or equal to deque c2.
   
 ## <a name="see-also"></a>참고 항목  
  [\<deque>](../standard-library/deque.md)
-
 
 
 

@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c5fc88f4af88e5bd95feb90f09f9538e842c59f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 285950f6d155acabee2c049afa2f8b8d38dcf2b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapkeytype-stlclr"></a>map::key_type(STL/CLR)
 정렬 키의 형식입니다.  
@@ -33,7 +36,7 @@ typedef Key key_type;
 ## <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 `Key`의 동의어입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_map_key_type.cpp   

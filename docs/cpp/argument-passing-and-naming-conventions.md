@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b60a2a5b83ed28dbcef1554a07426cd34553cf40
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d57afcd518455ffb836e4d724a68b7d3e5682d6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-passing-and-naming-conventions"></a>인수 전달 및 명명 규칙
 **Microsoft 전용**  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/25/2017
 |키워드|스택 정리|매개 변수 전달|  
 |-------------|-------------------|-----------------------|  
 |[__cdecl](../cpp/cdecl.md)|호출자|매개 변수를 스택에 역순으로(오른쪽에서 왼쪽으로) 푸시합니다.|  
-|[__clrcall](../cpp/clrcall.md)|해당 없음|CLR 식 스택에 매개 변수를 순서대로(왼쪽에서 오른쪽으로) 로드합니다.|  
+|[__clrcall](../cpp/clrcall.md)|N/A|CLR 식 스택에 매개 변수를 순서대로(왼쪽에서 오른쪽으로) 로드합니다.|  
 |[__stdcall](../cpp/stdcall.md)|호출 수신자|매개 변수를 스택에 역순으로(오른쪽에서 왼쪽으로) 푸시합니다.|  
 |[__fastcall](../cpp/fastcall.md)|호출 수신자|레지스터에 저장된 다음 스택에 푸시됩니다.|  
 |[__thiscall](../cpp/thiscall.md)|호출 수신자|스택에 푸시됩니다. **이** 포인터가 ECX에에서 저장|  

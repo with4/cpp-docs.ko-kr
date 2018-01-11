@@ -1,32 +1,33 @@
 ---
-title: "not_equal_to(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not_equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not_equal_to 함수[STL/CLR]"
+title: not_equal_to (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not_equal_to
+dev_langs: C++
+helpviewer_keywords: not_equal_to function [STL/CLR]
 ms.assetid: 1b66e0ca-eace-4672-8da9-ed16f8608bca
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ae79c521f7edcc055ec6eee5907a6102ebf26134
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# not_equal_to(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-만일 첫번째 인수가 두번째와 동일하지 않은 경우, 템플릿 클래스는 함수 설명하고, 호출할 때 true 반환합니다.  인수 형식에서 함수 개체를 지정할 때 사용합니다.  
+# <a name="notequalto-stlclr"></a>not_equal_to(STL/CLR)
+함수를 설명 하는 템플릿 클래스, 호출 되 면 true를 반환 하는 첫 번째 인수가 두 번째 경우에 합니다. 사용 하면 해당 인수 형식 기준으로 함수 개체를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Arg>  
@@ -49,34 +50,34 @@ public:
     };  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  Arg  
- 인수의 형식입니다.  
+ 형식 인수입니다.  
   
-## 멤버 함수  
+## <a name="member-functions"></a>멤버 함수  
   
 |형식 정의|설명|  
-|-----------|--------|  
-|대리자 형식|일반적 대리자의 형식입니다.|  
-|첫 번째 인수 형식입니다.|함수 첫 번째 인수의 형식입니다.|  
-|결과 형식|함수 결과의 형식입니다.|  
-|두 번째 인수 형식입니다.|함수 둘째 인수의 형식입니다.|  
+|---------------------|-----------------|  
+|delegate_type|제네릭 대리자의 형식입니다.|  
+|first_argument_type|구조 함수의 첫 번째 인수의 형식입니다.|  
+|result_type|함수 결과의 형식입니다.|  
+|second_argument_type|두 번째 함수 인수 형식입니다.|  
   
 |멤버|설명|  
-|--------|--------|  
-|not\_equal\_to|함수를 생성합니다.|  
+|------------|-----------------|  
+|not_equal_to|함수를 생성합니다.|  
   
 |연산자|설명|  
-|---------|--------|  
-|operator\(\)|원하는 함수를 계산합니다.|  
-|operator delegate\_type^|대리자에 함수를 캐스팅합니다.|  
+|--------------|-----------------|  
+|operator()|원하는 함수를 계산합니다.|  
+|연산자 delegate_type ^|대리자에 함수를 캐스팅합니다.|  
   
-## 설명  
- 템플릿 클래스는 두 인수를 가지는 함수를 설명합니다.  멤버 연산자 `operator()` 를 정의하도록 개체가 함수로써 호출하고, 만일 첫번째 인수가 두번째와 동일하지 않은 경우 오직 true를 반환합니다.  
+## <a name="remarks"></a>설명  
+ 두 인수 함수를 설명 하는 템플릿 클래스입니다. 멤버 연산자 정의 `operator()` 개체 함수로 호출 될 때 있도록 true를 반환 하는지만 첫 번째 인수는 두 번째 경우.  
   
- 형식이 `delegate_type^` 인 개체는 함수 인수로 전달할 수 있고 적절하게 변환됩니다.  
+ 함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_not_equal_to.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **0 1**   
-## 요구 사항  
- \`**Header:** \<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+0 1  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [equal\_to](../dotnet/equal-to-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [equal_to(STL/CLR)](../dotnet/equal-to-stl-clr.md)

@@ -1,54 +1,62 @@
 ---
-title: "Visual C++의 개발 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "응용 프로그램 배포[C++]"
-  - "응용 프로그램 배포[C++]"
+title: "Visual c + +에서 배포 | Microsoft Docs"
+ms.custom: 
+ms.date: 9/21/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- deploying applications [C++]
+- application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: 21
-caps.handback.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Visual C++의 개발
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="deployment-in-visual-c"></a>Visual C++의 개발
 
-다른 컴퓨터에 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 응용 프로그램을 배포할 때는 응용 프로그램과 해당 응용 프로그램이 종속된 모든 라이브러리 파일을 설치해야 합니다.  보안 취약점이 해결되는 등 라이브러리가 업데이트되면 응용 프로그램이 배포될 때마다 업데이트를 적용할 수 있습니다.  
-  
- Visual Studio는 세 가지 방법\(중앙 배포, 로컬 배포 및 정적 연결\)으로 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리를 응용 프로그램과 함께 배포할 수 있습니다.  Microsoft는 중앙 배포된 라이브러리를 자동으로 업데이트합니다.  로컬 배포 또는 정적 링크 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리의 경우 응용 프로그램 작성자가 업데이트를 제공해야 합니다.  
-  
-## 중앙 배포  
- 중앙 배포의 경우 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리 파일이 %windir%\\system32\\ 디렉터리에 설치됩니다.  [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리를 중앙 배포하려면 다음 중 하나를 사용할 수 있습니다.  
-  
--   *재배포 가능 패키지 파일*. [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 재배포 가능 라이브러리 설치에 사용할 수 있는 독립 실행형 명령줄 실행 파일입니다.  
-  
--   *재배포 가능 병합 모듈\(.msm 파일\)*. 특정 라이브러리 배포에 사용할 수 있고 응용 프로그램의 Windows Installer\(.msi\) 파일에 포함하는 파일입니다.  
-  
- 재배포 가능 패키지 파일은 특정 시스템 아키텍처에 대해 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리를 설치합니다.  응용 프로그램 설치를 프로그래밍하여 응용 프로그램을 설치하기 전에 필수 구성 요소로 실행할 수 있습니다.  병합 모듈을 사용하면 Windows Installer 응용 프로그램 설치 파일의 특정 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리에 대한 설치 논리를 포함할 수 있습니다.  응용 프로그램에 필요한 수의 병합 모듈을 포함할 수 있습니다.  
-  
- 재배포 가능 패키지를 사용하여 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리를 중앙 배포하면 Microsoft 자동 업데이트가 가능하므로 응용 프로그램에 동적 연결 및 재배포 가능 패키지를 사용하는 것이 좋습니다.  
-  
-## 로컬 배포  
- 로컬 배포의 경우 라이브러리 파일은 응용 프로그램 폴더에 실행 파일과 함께 설치됩니다.  각 버전의 파일 이름은 버전 번호 포함으로 고유한 이름이 되기 때문에 다양한 버전의 라이브러리를 같은 폴더에 설치할 수 있습니다.  예를 들어, C 런타임 버전 12는 msvcr120.dll입니다.  
-  
- Microsoft는 로컬 배포된 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리를 자동으로 업데이트할 수 없기 때문에 이러한 라이브러리의 로컬 배포에 주의해야 합니다.  재배포 가능 라이브러리 로컬 배포를 사용하기로 결정하는 경우 로컬 배포된 라이브러리를 자동으로 업데이트하는 사용자 고유의 메서드를 구현하는 것이 좋습니다.  
-  
-## 정적 링크  
- [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리 파일을 별도로 배포할 필요가 없도록 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리를 응용 프로그램에 정적 연결, 즉 응용 프로그램에 컴파일할 수 있습니다.  그러나 정적으로 연결된 라이브러리는 적절하게 업데이트할 수 없기 때문에 이 방식에 주의해야 합니다.  정적 연결을 사용하고 연결된 라이브러리를 업데이트하려면 응용 프로그램을 다시 컴파일하고 다시 배포해야 합니다.  
-  
-## 문제 해결  
- [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 라이브러리의 로드 순서는 시스템에 따라 다릅니다.  로더 문제를 진단하려면 depends.exe 또는 where.exe를 사용합니다.  자세한 내용은 [동적 연결 라이브러리 순서\(Windows\)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)를 참조하십시오.  
-  
-## 참고 항목  
- [데스크톱 응용 프로그램 배포](../ide/deploying-native-desktop-applications-visual-cpp.md)
+개발 컴퓨터 이외의 컴퓨터에서 응용 프로그램 설치 라고 *배포*합니다. 다른 컴퓨터에 Visual c + + 응용 프로그램을 배포 하는 경우 응용 프로그램과 모든 라이브러리 파일에 따라 달라 집니다를 설치 해야 합니다. Visual Studio를 사용 하면 해당 응용 프로그램과 함께 Visual c + + 라이브러리를 배포 하는 세 가지 방법으로: *중앙 배포*, *로컬 배포*, 및 *정적 링크*합니다. 중앙 배포-여기서는 Windows 업데이트 서비스 수를 자동으로 업데이트할 Windows 디렉터리 라이브러리 파일을 가져옵니다. 로컬 배포 응용 프로그램 같은 디렉터리에 라이브러리 파일을 저장합니다. 로컬 배포 된 모든 라이브러리를 다시 배포 해야 직접이 정보도 업데이트 합니다. 정적 연결 라이브러리 코드를 응용 프로그램에 바인딩합니다. 다시 컴파일해야 하 고 활용 하기 위해 모든 업데이트는 라이브러리에 정적 연결을 사용 하는 경우 응용 프로그램을 다시 배포 해야 합니다.
+
+## <a name="central-deployment"></a>중앙 배포
+
+Windows\System32 디렉터리 또는 x64 32 비트 라이브러리 파일에 대 한 중앙 배포 라이브러리 DLL 파일 설치 된 시스템, Windows\SysWow64 디렉터리입니다. Microsoft는 중앙 배포된 라이브러리를 자동으로 업데이트합니다. 로컬 배포 또는 정적으로 연결 하는 Visual c + + 라이브러리에 대 한 업데이트를 제공 해야 합니다.
+
+Visual c + + 라이브러리를 중앙에서 배포 하려면 설치 하는 파일에 대 한 다음 두 가지 소스 중 하나의 사용할 수 있습니다.
+
+- *재배포 가능 패키지* 파일은 압축 된 형태로 모든 Visual c + + 재배포 가능 라이브러리를 포함 하는 독립 실행형 명령줄 실행 파일, 또는
+
+- *재배포 가능 병합 모듈* (.msm 파일) 및 응용 프로그램의 Windows Installer (.msi) 파일에 포함 하는 특정 라이브러리 배포에 사용할 수 있습니다.
+
+재배포 가능 패키지 파일을 설치 하는 모든 Visual c + + 라이브러리는 특정 시스템 아키텍처에 대 한 합니다. 예를 들어 응용 프로그램은 작성 된 경우 x64, 응용 프로그램에서 사용 되는 모든 Visual c + + 라이브러리를 설치 해야 vcredist_x64.exe 재배포 가능 패키지를 사용할 수 있습니다. 응용 프로그램을 설치 하기 전에 필수 구성 요소 재배포 가능 패키지를 실행 하려면 응용 프로그램 설치 관리자를 프로그래밍할 수 있습니다.
+
+병합 모듈의 Windows Installer 응용 프로그램 설치 파일에 특정 Visual c + + 라이브러리에 대 한 설치 논리를 포함할 수 있습니다. 응용 프로그램에 필요한 만큼 또는 적은 병합 모듈을 포함할 수 있습니다. 배포 이진 파일의 크기를 최소화 해야 할 때 병합 모듈을 사용 합니다.
+
+라이브러리 Dll을 사용 하 여 정적 라이브러리 대신 응용 프로그램에서 중앙 사용 하는 권장 중앙 배포-병합 모듈 또는 재배포 가능 패키지를 사용 하 여 Visual c + + 라이브러리를 자동으로 업데이트 하도록 Windows Update를 통해 수, 로컬 배포 하는 대신 배포 합니다.
+
+## <a name="local-deployment"></a>로컬 배포
+
+로컬 배포의 경우 라이브러리 파일은 실행 파일과 함께 응용 프로그램 폴더에 설치 됩니다. 각 버전의 파일 이름은 버전 번호를 포함 하기 때문에 서로 다른 버전의 Visual c + + 재배포 가능 라이브러리와 동일한 폴더에 설치할 수 있습니다. 예를 들어, c + + 런타임 라이브러리의 버전 12 msvcp120.dll, 및 14는 msvcp140.dll 버전입니다.
+
+Microsoft 없습니다 자동으로 하기 때문에 업데이트를 로컬로 Visual c + + 라이브러리를 배포, 이러한 라이브러리의 로컬 배포 권장 하지는 않습니다. 재배포 가능 라이브러리 로컬 배포를 사용하기로 결정하는 경우 로컬 배포된 라이브러리를 자동으로 업데이트하는 사용자 고유의 메서드를 구현하는 것이 좋습니다.
+
+## <a name="static-linking"></a>정적 링크
+
+동적으로 연결 된 라이브러리 외에도 Visual Studio 정적 라이브러리도 대부분의 라이브러리를 제공합니다. 정적으로 링크는 정적 라이브러리 응용 프로그램에 즉, 라이브러리 개체 코드는 응용 프로그램에 직접 연결할 수 있습니다. 이 생성 되어 DLL 종속성 없이 단일 이진 Visual c + + 라이브러리 파일을 별도로 배포할 필요가 없습니다. 그러나 권장 하지는 않습니다이 방법은 정적 연결 라이브러리 위치에서 업데이트할 수 없기 때문에 있습니다. 정적 연결을 사용하고 연결된 라이브러리를 업데이트하려면 응용 프로그램을 다시 컴파일하고 다시 배포해야 합니다.
+
+## <a name="troubleshooting-deployment-issues"></a>배포 문제 해결
+
+Visual c + + 라이브러리의 로드 순서는 시스템에 따라 다릅니다. 로더 문제를 진단하려면 depends.exe 또는 where.exe를 사용합니다. 자세한 내용은 참조 [동적 연결 라이브러리 검색 순서 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)합니다.
+
+## <a name="see-also"></a>참고 항목
+
+[데스크톱 응용 프로그램 배포](../ide/deploying-native-desktop-applications-visual-cpp.md)

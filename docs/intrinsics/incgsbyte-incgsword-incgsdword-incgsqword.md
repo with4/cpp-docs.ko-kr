@@ -1,80 +1,81 @@
 ---
-title: "__incgsbyte, __incgsword, __incgsdword, __incgsqword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__incgsdword"
-  - "__incgsqword_cpp"
-  - "__incgsword_cpp"
-  - "__incgsword"
-  - "__incgsbyte"
-  - "__incgsbyte_cpp"
-  - "__incgsqword"
-  - "__incgsdword_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__incgsbyte 내장 함수"
-  - "__incgsword 내장 함수"
-  - "__incgsqword 내장 함수"
-  - "__incgsdword 내장 함수"
+title: __incgsbyte, __incgsword, __incgsdword, __incgsqword | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __incgsdword
+- __incgsqword_cpp
+- __incgsword_cpp
+- __incgsword
+- __incgsbyte
+- __incgsbyte_cpp
+- __incgsqword
+- __incgsdword_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __incgsbyte intrinsic
+- __incgsword intrinsic
+- __incgsqword intrinsic
+- __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7540219843a3a01968f62c58370cb979e5572943
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# __incgsbyte, __incgsword, __incgsdword, __incgsqword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 **Microsoft 전용**  
   
- 오프셋 시작 부분을 기준으로 하 여 지정 된 메모리 위치에 값 추가 `GS` 세그먼트.  
+ 시작 부분에 상대적인 오프셋으로 지정 된 메모리 위치에 값에 추가 `GS` 세그먼트입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-void __incgsbyte(   
-   unsigned long Offset   
+void __incgsbyte(   
+   unsigned long Offset   
 );  
-void __incgsword(   
-   unsigned long Offset   
+void __incgsword(   
+   unsigned long Offset   
 );  
-void __incgsdword(   
+void __incgsdword(   
    unsigned long Offset  
 );  
-void __incgsqword(   
-   unsigned long Offset   
+void __incgsqword(   
+   unsigned long Offset   
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `Offset`  
- 시작 부분에서 오프셋 `GS`.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `Offset`  
+ 시작 부분에서 오프셋 `GS`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
-## 설명  
- 이러한 내장 커널 모드로 가능 하 고 루틴만 내장으로 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 이러한 내장 함수는 커널 모드에서 사용할 수만 이며 루틴은 내장 함수로 사용할 수만 있습니다.  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
- [\_\_addgsbyte, \_\_addgsword, \_\_addgsdword, \_\_addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
- [\_\_readgsbyte, \_\_readgsdword, \_\_readgsqword, \_\_readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
- [\_\_writegsbyte, \_\_writegsdword, \_\_writegsqword, \_\_writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
+## <a name="see-also"></a>참고 항목  
+ [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
+ [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
+ [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

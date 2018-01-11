@@ -1,6 +1,6 @@
 ---
 title: "컴파일러 경고 C4400 C4599 통해 | Microsoft Docs"
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -132,22 +132,20 @@ ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 580f47f53d84cfba5aa55916bb88c8764c63553a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>컴파일러 경고 C4400 C4599 통해
 
-문서 설명서의이 부분에서는 Visual c + + 컴파일러 경고의 하위 집합에 대 한 정보를 포함 합니다. 이 정보에 액세스할 수 있습니다 또는 **출력** 창 Visual Studio에서 경고 번호를 선택한 다음 F1 키를 선택 합니다.
+설명서의이 섹션의 문서 컴파일러에 의해 생성 되는 경고 메시지의 하위 집합에 설명 합니다.
 
-> [!NOTE]
-> 모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류 또는 경고는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.
-
-## <a name="in-this-section"></a>단원 내용
+## <a name="warning-messages"></a>경고 메시지
 
 |경고|메시지|
 |-------------|-------------|

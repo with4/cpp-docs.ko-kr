@@ -1,41 +1,42 @@
 ---
-title: "map::end(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 멤버[STL/CLR]"
+title: 'map:: end (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 547a34f0-af66-45be-9b55-1e60ab3a1d6e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 12ab437f1916816255fa387328d0cbe834481bef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# map::end(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapend-stlclr"></a>map::end(STL/CLR)
 제어되는 시퀀스의 끝을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator end();  
 ```  
   
-## 설명  
- The member function returns a bidirectional iterator that points just beyond the end of the controlled sequence.  You use it to obtain an iterator that designates the end of the controlled sequence; its status doesn not change if the length of the controlled sequence changes.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 제어 된 시퀀스의 끝 바로 다음을 가리키는 양방향 반복기를 반환합니다. 제어 된 시퀀스의 끝을 지정 하는 반복기를 가져올 사용 해당 상태 대상이 제어 된 시퀀스의 길이가 변경 하는 경우 변경 되지 않습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_map_end.cpp   
@@ -69,11 +70,11 @@ int main()
   
 ```  
   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)   
- [map::begin](../dotnet/map-begin-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::begin(STL/CLR)](../dotnet/map-begin-stl-clr.md)

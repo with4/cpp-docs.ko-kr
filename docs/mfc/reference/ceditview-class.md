@@ -51,11 +51,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38b8389418657499d43263399f1a05b3a0326c84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78aa34f1790b2e86dae183b96c88b4ed35483927
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceditview-class"></a>CEditView 클래스
 Windows 편집 컨트롤의 기능을 제공하고 간단한 텍스트 편집기 기능을 구현하는 데 사용할 수 있는 뷰 클래스의 유형입니다.  
@@ -226,7 +227,7 @@ CEdit& GetEditCtrl() const;
 > [!CAUTION]
 >  사용 하는 `CEdit` 개체의 기본 창 상태를 변경 컨트롤을 편집할 수 있습니다. 사용 하 여 탭 설정을 변경 하면 안 되는 예를 들어는 [CEdit::SetTabStops](../../mfc/reference/cedit-class.md#settabstops) 때문에 작동 `CEditView` 편집 컨트롤 및 인쇄에 사용 하기 위해 이러한 설정을 캐시 합니다. 대신를 사용 하 여 [CEditView::SetTabStops](#settabstops)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#66](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
 ##  <a name="getprinterfont"></a>CEditView::GetPrinterFont  
@@ -433,7 +434,7 @@ void SetTabStops(int nTabStops);
   
  이 함수를 호출 하는 개체의 탭만 수정 합니다. 탭을 변경 하려면 각각에 대 한 중지 `CEditView` 응용 프로그램에서 개체를 호출 하는 각 개체의 `SetTabStops` 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 코드 조각은 컨트롤이 차지 하는 글꼴을 신중 하 게 측정 하 여 모든 4 번째 문자를 컨트롤의 탭 정지를 설정 합니다.  
   
  [!code-cpp[NVC_MFCDocView#67](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  

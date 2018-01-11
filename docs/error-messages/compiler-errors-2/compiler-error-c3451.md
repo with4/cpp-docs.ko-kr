@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c1c0f9de919fbe646eaa6303fa5b1e9fcba886eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb68c546a9064801c68844039b7de077d5ee7c17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3451"></a>컴파일러 오류 C3451
 'attribute': 관리 되지 않는 특성을 't y'를 적용할 수 없습니다  
@@ -28,9 +29,9 @@ ms.lasthandoff: 10/24/2017
   
  자세한 내용은 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)을 참조하세요.  
   
- 이 오류는 Visual c + + 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 없습니다:는 [uuid](../../windows/uuid-cpp-attributes.md) 특성은 CLR 프로그래밍을 사용 하 여 사용자 정의 특성에 더 이상 사용할 수 없습니다. 대신 <xref:System.Runtime.InteropServices.GuidAttribute> 를 사용하세요.  
+ 이 오류는 Visual c + + 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 없습니다:는 [uuid](../../windows/uuid-cpp-attributes.md) 특성은 CLR 프로그래밍을 사용 하 여 사용자 정의 특성에 더 이상 사용할 수 없습니다. 대신 <xref:System.Runtime.InteropServices.GuidAttribute>를 사용하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3451 오류가 발생 합니다.  
   
 ```  

@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8282847c9bbaf18b9f54180b08b5d98a109d75b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc937e64a09ecedb127524de384d48860da5764f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-management-examples"></a>메모리 관리: 예
 이 문서에서는 MFC 프레임 할당과 힙 할당에 대 한 성능을 각 메모리 할당의 세 가지 일반적인 종류를 설명 합니다.  

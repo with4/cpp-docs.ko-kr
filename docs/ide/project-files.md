@@ -18,16 +18,17 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55b18debe0418695cb64e28526790b9e2484d803
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac1b6d01bc454e2bcc7f1c8fd125f9d6ff96c90f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-files"></a>프로젝트 파일
 Visual c + + 프로젝트 파일은 파일 이름 확장명이.vcxproj 하 고 Visual c + + 프로젝트를 빌드하는 데 필요한 정보를 포함 하는 XML 기반 파일입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플.vcxproj 파일을 지정 하 여 만들어진는 **Win32 콘솔 응용 프로그램** 에 **새 프로젝트** 대화 상자. Msbuild.exe 도구는 명령줄에서 파일 프로젝트를 처리 하려면 사용 또는 **빌드** 명령에 [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]합니다. (이 샘플 필요한 소스 및 헤더 파일 제공 되지 않았으므로 처리할 수 없습니다.) 프로젝트 파일의 XML 요소에 대 한 자세한 내용은 참조 [프로젝트 파일 스키마 참조](/visualstudio/msbuild/msbuild-project-file-schema-reference)합니다.  
   
 ```  

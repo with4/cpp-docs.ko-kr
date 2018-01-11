@@ -15,18 +15,19 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65861e03a6710cb328a111d0ade924909b9333b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1a9ae9ec7324b55153f29da94b6a1e08c9264cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3408"></a>컴파일러 오류 C3408
 'attribute': 특성을 템플릿 정의에 사용할 수 없습니다.  
   
  템플릿 정의에는 특성을 적용할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3408을 생성합니다.  
   
 ```  

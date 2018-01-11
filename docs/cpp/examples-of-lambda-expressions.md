@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- lambda expressions [C++], examples
+dev_langs: C++
+helpviewer_keywords: lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 29a2c80bbd586ecf495269dad84f2b42440c41cc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examples-of-lambda-expressions"></a>람다 식의 예
 이 문서에서는 프로그램에 람다 식을 사용하는 방법을 보여 줍니다. 람다 식의 개요를 참조 하십시오. [람다 식](../cpp/lambda-expressions-in-cpp.md)합니다. 람다 식의 구조에 대 한 자세한 내용은 참조 [람다 식 구문](../cpp/lambda-expression-syntax.md)합니다.  
@@ -186,7 +183,7 @@ The first even number in the list is 42.
   
 ##  <a name="nestingLambdaExpressions"></a>람다 식 중첩  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예제와 같이 람다 식을 다른 람다 식 안에 중첩할 수 있습니다. 안쪽 람다 식은 인수를 2를 곱한 후 결과를 반환합니다. 바깥쪽 람다 식은 안쪽 람다 식의 인수와 함께 호출하고 결과에 3을 더합니다.  
   
 ### <a name="code"></a>코드  
@@ -223,7 +220,7 @@ int main()
   
 ##  <a name="higherOrderLambdaExpressions"></a>고차 람다 함수  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  많은 프로그래밍 언어의 개념을 지원 한 *고차 함수입니다.* 고차 함수는 람다 식으로, 다른 람다 식을 인수로 취하거나 람다 식을 반환합니다. 사용할 수는 [함수](../standard-library/function-class.md) 클래스를 사용 하는 동작 하는 c + + 람다 식 고차 함수와 같이 합니다. 다음 예제에서는 `function` 개체를 반환하는 람다 식과 인수로서 `function` 개체를 취하는 람다 식을 보여 줍니다.  
   
 ### <a name="code"></a>코드  
@@ -272,7 +269,7 @@ int main()
   
 ##  <a name="methodLambdaExpressions"></a>함수에서 람다 식 사용  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  함수의 본문에서 람다 식을 사용할 수 있습니다. 람다 식은 바깥쪽 함수에서 액세스할 수 있는 모든 함수 또는 데이터 멤버에 액세스할 수 있습니다. `this` 포인터를 명시적으로나 암시적으로 캡처하여 바깥쪽 클래스의 데이터 멤버 및 함수에 대한 액세스를 제공할 수 있습니다.  
 **Visual Studio 2017 버전 15.3 이상** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 캡처 `this` 값별로 (`[*this]`) 경우 람다는 비동기 또는 병렬 작업에서 코드 수 있습니다 원래 개체 범위를 벗어난 후 실행 합니다.
   
@@ -367,7 +364,7 @@ int main()
   
 ##  <a name="templateLambdaExpressions"></a>템플릿이 있는 람다 식 사용  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  람다 식이 형식화되기 때문에 C++ 템플릿과 함께 사용할 수 있습니다. 다음 예제에서는 `negate_all` 및 `print_all` 함수를 보여 줍니다. `negate_all` 함수는 단항 `operator-`를 `vector` 개체의 각 요소에 적용합니다. `print_all` 함수는 `vector` 개체의 각 요소를 콘솔에 인쇄합니다.  
   
 ### <a name="code"></a>코드  
@@ -431,7 +428,7 @@ After negate_all():
   
 ##  <a name="ehLambdaExpressions"></a>예외 처리  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  람다 수식의 본문은 SEH(구조적 예외 처리)와 C++ 예외 처리에 대한 규칙을 따릅니다. 람다 식의 본문에는 양각된 예외를 처리하거나 예외 처리를 포함하는 범위를 지연시킬 수 있습니다. 다음 예제에서는 `for_each` 함수와 람다 식을 사용하여 하나의 `vector` 개체에 다른 개체의 값을 채웁니다. 사용 하 여 한 `try` / `catch` 첫 번째 벡터에 대 한 잘못 된 액세스를 처리 하는 블록입니다.  
   
 ### <a name="code"></a>코드  
@@ -485,7 +482,7 @@ Caught 'invalid vector<T> subscript'.
   
 ##  <a name="managedLambdaExpressions"></a>관리 되는 형식으로 람다 식 사용 (C + + /cli CLI)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  람다 식의 캡처 절에는 관리되는 형식의 변수가 포함될 수 없습니다. 그러나 관리되는 형식이 포함된 인수를 람다 식의 매개 변수 목록으로 전달할 수 있습니다. 다음 예제에서는 관리되지 않는 지역 변수 `ch`를 캡처하는 람다 식을 포함하고 매개 변수로서 <xref:System.String?displayProperty=fullName> 개체를 가져옵니다.  
   
 ### <a name="code"></a>코드  

@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0ec019561a042b5dd5fd05aa8660bc8ff6b1d976
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0814bb2b6e12d51982975a4fea1914294ca01e69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3484"></a>컴파일러 오류 C3484
 반환 형식 앞에 '->'가 필요합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 -   반환 형식 앞에 `->` 를 제공합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 C3484를 생성합니다.  
   
 ```  
@@ -42,7 +43,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 람다 식의 반환 형식 앞에 `->` 를 제공하여 C3484를 해결합니다.  
   
 ```  

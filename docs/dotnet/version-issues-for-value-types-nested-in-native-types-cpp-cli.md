@@ -16,18 +16,21 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16b6fd7d166b7a997257bfd6cb741b82911c5bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>네이티브 형식에 중첩된 값 형식의 버전 문제(C++/CLI)
 클라이언트 어셈블리를 제조 하는 데 사용 하는 서명된 (강력한 이름) 어셈블리 구성 요소를 고려 합니다. 구성 요소에는 네이티브 공용 구조체, 클래스 또는 배열 멤버에 대 한 형식으로 클라이언트에 사용 되는 값 형식이 포함 되어 있습니다. 이후 버전의 구성 요소 크기 또는 값 형식의 레이아웃을 변경 하는 경우 클라이언트 다시 컴파일해야 합니다.  
   
  키와 파일을 만들려면 [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플 구성 요소입니다.  
   
 ```  
@@ -45,7 +48,7 @@ public value struct S {
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 샘플은 클라이언트:  
   
 ```  

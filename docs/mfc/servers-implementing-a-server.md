@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ed4ca1b131e56b2735b3a6e4ba408f3ad79b8de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 148a3da3c904f5c314c75fb71deede3c92163cc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-implementing-a-server"></a>서버: 서버 구현
 이 문서에서는 MFC 응용 프로그램 마법사에서 비주얼 편집 서버 응용 프로그램 코드를 설명 합니다. 응용 프로그램 마법사를 사용 하지 않는 경우이 문서에서는 서버 응용 프로그램을 구현 하는 코드를 작성 해야 하는 영역을 나열 합니다.  

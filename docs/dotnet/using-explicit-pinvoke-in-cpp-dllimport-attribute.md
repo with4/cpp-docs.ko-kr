@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b3b2c69e022de6420223786f0f3b3f266c4f816
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d05c88167629bcb6bf86dc600afde0ea3162064f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>C++에서 명시적 PInvoke 사용(DllImport 특성)
 .NET Framework 명시적 플랫폼 호출 (또는 PInvoke) 기능을 제공 하는 `Dllimport` Dll 패키지 된 관리 되지 않는 함수를 호출 하는 관리 되는 응용 프로그램을 허용 하는 특성입니다. 명시적 PInvoke는 관리 되지 않는 Api는 Dll로 패키지 하 고 소스 코드를 사용할 수 있는 경우 필요 합니다. PInvoke 필요 예를 들어 Win32 함수를 호출 합니다. 그렇지 않은 경우 암시적 P을 사용 하 여 {Invoke; 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) 자세한 정보에 대 한 합니다.  
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  결과 필요한 전환 코드 (또는 썽크)가 포함 된 각 네이티브 DLL 함수에 대 한 관리 되는 진입점 및 단순한 데이터 변환 합니다. 이러한 진입점을 통해 DLL로 관리 되는 함수를 호출할 수 있습니다. PInvoke 결과 완전 하 게 관리 하 고 명시적 PInvoke에 대해 지원 되는 모듈에 삽입 된 코드 **/clr**, **/clr: pure**, 및 **/clr: safe** 컴파일 합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다. 자세한 내용은 참조 [순수형 및 안정형 코드 (C + + /cli CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [관리 코드에서 네이티브 함수 호출](../dotnet/calling-native-functions-from-managed-code.md)  
   

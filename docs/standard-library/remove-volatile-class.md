@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04e4f764becaf897aa963b48ab9efc8487cf464d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f49f3086d310ca8c0a9722e7b8bf8b0434f1905
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="removevolatile-class"></a>remove_volatile 클래스
 형식에서 비휘발성 형식을 만듭니다.  
@@ -43,7 +44,7 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 ## <a name="remarks"></a>설명  
  `remove_volatile<T>`의 인스턴스는 `T1`가 `T` 형식인 경우 수정된 형식인 `volatile T1`을 보관하고, 그렇지 않은 경우 `T`를 보관합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 #include <type_traits>   

@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8884e03aecd84c4f81551d750f822dc66ba462e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e145200f6cab0bc31f41ad4104995b54e6d5abab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setconstreference-stlclr"></a>set::const_reference(STL/CLR)
 요소에 대한 상수 참조의 형식입니다.  
@@ -33,7 +36,7 @@ typedef value_type% const_reference;
 ## <a name="remarks"></a>설명  
  이 형식은 요소에 대 한 상수 참조를 설명 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_set_const_reference.cpp   

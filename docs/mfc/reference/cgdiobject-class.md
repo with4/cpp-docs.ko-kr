@@ -41,11 +41,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ed1c892dbd7cef4cee8281f63657144dc8dae10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 클래스
 비트맵, 영역, 브러시, 펜, 색상표와 글꼴 등 다양한 Windows GDI(그래픽 장치 인터페이스) 개체에 기본 클래스를 제공합니다.  
@@ -172,7 +173,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="remarks"></a>설명  
  `DeleteTempMap`임시에 연결 하는 Windows GDI 개체를 분리 `CGdiObject` 개체를 삭제 하기 전에 `CGdiObject` 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
 ##  <a name="detach"></a>CGdiObject::Detach  
@@ -226,7 +227,7 @@ int GetObject(
 ### <a name="remarks"></a>설명  
  다음 목록에 표시 된 것 처럼 함수 형식이 그래픽 개체의 유형에 따라 데이터 구조를 검색 합니다.  
   
-|개체|버퍼 유형|  
+|Object|버퍼 유형|  
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
@@ -288,7 +289,7 @@ HGDIOBJ GetSafeHandle() const;
 ### <a name="remarks"></a>설명  
  일반 핸들 인터페이스 패러다임의 일부 이며 때 유용 **NULL** 핸들에 대해 유효한 또는 특수 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)합니다.  
   
 ##  <a name="m_hobject"></a>CGdiObject::m_hObject  

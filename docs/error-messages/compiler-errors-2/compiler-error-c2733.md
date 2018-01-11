@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2733
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2733
+f1_keywords: C2733
+dev_langs: C++
+helpviewer_keywords: C2733
 ms.assetid: 67f83561-c633-407c-a2ee-f9fd16e165bf
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fb0c21850d93a39047bacfe38592e381e9fb5918
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 22643ad7b1e801f2e4b9ee663c73f0d8fb97562d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2733"></a>컴파일러 오류 C2733
 오버 로드 된 사용할 수 없습니다 ' function' 함수의 두 번째 C 링크  

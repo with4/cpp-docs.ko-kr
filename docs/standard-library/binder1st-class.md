@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::binder1st
-- binder1st
-dev_langs:
-- C++
-helpviewer_keywords:
-- binder1st class
+f1_keywords: xfunctional/std::binder1st
+dev_langs: C++
+helpviewer_keywords: binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 4f9198d5b3f29799d38036ce4fd0dd0a67b66137
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ed005f1e8d87841eb0d78d5f7283baff2039897a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binder1st-class"></a>binder1st 클래스
 이항 함수의 첫 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 생성자를 제공하는 템플릿 클래스입니다.  
@@ -86,7 +67,7 @@ protected:
   
  `Func`가 **Operation** 형식의 개체이고 `c`가 상수이면 [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` )는 `binder1st` 클래스 생성자 `binder1st`\< **Operation**> ( `Func`, `c` )와 등가이고 더 편리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // functional_binder1st.cpp  
@@ -144,7 +125,6 @@ The number of elements in v1 less than 10 is: 2.
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4d6a255bebeccc0c63ba621a7c5886fd318ffd5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5528760b28337f1c320195c68d54efb975696c7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3808"></a>컴파일러 오류 C3808
 'type': ComImport 특성이 있는 클래스에는 'member' 멤버를 추상만 정의할 수 없습니다 또는 dllimport 함수를 사용할 수 있습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3808 오류가 발생 합니다.  
   
 ```  

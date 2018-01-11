@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f5ff7825299d0547862ec228ccc8565b3ad42d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd1db02541927b9ccb3827ee1fdd9e35543a7d6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="afxdll-versions"></a>AFXDLL 버전
 MFC 개체 코드 라이브러리에 정적으로 연결 하 여 응용 프로그램을 작성 하는 대신 여러 실행 중인 응용 프로그램에서 공유할 수 있는 DLL에서 포함 된 AFXDLL 라이브러리 중 하나를 사용 하도록 응용 프로그램을 빌드할 수 있습니다. AFXDLL 이름 테이블을 참조 하십시오. [Dll: 명명 규칙](../build/naming-conventions-for-mfc-dlls.md)합니다.  

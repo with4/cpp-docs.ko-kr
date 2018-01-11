@@ -1,42 +1,41 @@
 ---
 title: "컴파일러 경고 (수준 4) C4256 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4256"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4256"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4256
+dev_langs: C++
+helpviewer_keywords: C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4bbaec27948f061cb21eeb432446517d4f9a6b2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 4) C4256
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 가상 기본을 갖는 클래스의 생성자에 '...'가 있습니다. 호출이 Visual C\+\+의 이전 버전과 호환되지 않을 수도 있습니다.  
+# <a name="compiler-warning-level-4-c4256"></a>컴파일러 경고(수준 4) C4256
+'function': 가상 기본 클래스 생성자가 '...'; 호출이 이전 버전의 Visual c + +와 호환 되지 않을 수 있습니다.  
   
- 호환되지 않을 수도 있습니다.  
+ 호환 되지 않을 수도 있습니다.  
   
- 다음 코드 예제를 참조하십시오.  S2::S2 생성자의 정의된다면 \(int i,... \) Visual C\+\+ 컴파일러 버전 7의 이전 버전을 사용 하 여 컴파일한 다음 예제에서는 현재 버전을 사용 하 여 컴파일되는 그러나, s 3에 대 한 생성자를 호출은 특별 한 경우의 호출 규칙 변경 때문에 제대로 작동 하지 않습니다.  둘 다 Visual C\+\+ 6.0으로 컴파일할 경우에는 줄임표\(...\)에 매개 변수를 전달하지 않아야 제대로 호출됩니다.  
+ 다음 코드 예제를 살펴봅니다. 경우 S2::S2 생성자 정의 (int i,...) 버전 7 이전의 Visual c + + 컴파일러의 버전을 사용 하 여 컴파일된 하지만 다음 예에서는 현재 버전을 사용 하 여 컴파일된, 인해 s 3에 대 한 생성자에 대 한 호출 연결이 올바르게 작동 하지 않습니다 특별 한 경우 호출 규칙 변경 합니다. 두 항목이 모두 Visual C++ 6.0을 사용해서 컴파일된 경우, 줄임표에 대해 전달된 매개 변수가 없지 않은 한 어느 항목에서도 호출이 올바르게 작동하지 않습니다.  
   
- 이 경고를 해결하려면  
+ 이 경고를 해결 하려면  
   
-1.  생성자에 줄임표\(...\)를 사용하지 않습니다.  
+1.  생성자에서 줄임표 (...)를 사용 하지 마십시오.  
   
-2.  이 클래스를 정의하거나 참조하는 라이브러리를 포함한 프로젝트의 구성 요소가 모두 현재 버전을 사용하여 빌드되었는지 확인한 다음 [warning](../../preprocessor/warning.md) pragma를 사용하여 경고를 사용 안 함 상태로 만듭니다.  
+2.  프로젝트에 포함 된 모든 구성 요소 (모든 라이브러리를 정의 하거나이 클래스를 참조 하는 포함), 현재 버전으로 작성 된 다음 사용 하 여 경고를 사용 하지 않도록 설정 되었는지 확인는 [경고](../../preprocessor/warning.md) pragma입니다.  
   
- 다음 샘플에서는 C4256 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4256 오류가 생성 됩니다.  
   
 ```  
 // C4256.cpp  

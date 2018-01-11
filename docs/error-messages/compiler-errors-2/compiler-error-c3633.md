@@ -15,18 +15,19 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 982075cdaa72ddd5b1a4fdafdeaaf433b27bcf77
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b88a5008b0703f99d7eefa3892b4ee263fea9d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3633"></a>컴파일러 오류 C3633
 'member' 관리 되는 'type'의 멤버로 정의할 수 없습니다.  
   
 CLR 참조 클래스 데이터 멤버는 비-POD c + + 형식이 될 수 없습니다.  POD 네이티브 형식은 CLR 형식에만 인스턴스화할 수 있습니다.  예를 들어 복사 생성자 또는 대입 연산자는 POD 형식을 포함할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 샘플에서는 C3633 오류가 발생 합니다.  
   
 ```  

@@ -32,11 +32,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f53f9a32da84c450825fc61b8316593e1041784c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0227c6bd088337a4ad3024faebed2c72d870d360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale-class"></a>locale 클래스
 문화별 정보를 특정 지역별 환경을 전체적으로 정의하는 패싯 집합으로 캡슐화하는 로캘 개체에 대해 설명하는 클래스입니다.  
@@ -152,7 +153,7 @@ cout.imbue(loc);
 |-|-|  
 |[locale](#locale)|패싯 또는 범주를 다른 로캘의 패싯 또는 범주로 대체한 경우 로캘 또는 로캘의 복사본을 만듭니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -185,7 +186,7 @@ cout.imbue(loc);
 |||  
 |-|-|  
 |[facet](#facet_class)|모든 로캘 패싯에 대한 기본 클래스로 사용하는 클래스입니다.|  
-|[id](#id_class)|멤버 클래스는 로캘의 패싯을 조회하기 위한 인덱스로 사용되는 고유한 패싯 ID를 제공합니다.|  
+|[ID](#id_class)|멤버 클래스는 로캘의 패싯을 조회하기 위한 인덱스로 사용되는 고유한 패싯 ID를 제공합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<locale>  
@@ -243,7 +244,7 @@ static const locale& classic();
 ### <a name="remarks"></a>설명  
  클래식 C 로캘은 국제화되지 않은 프로그램에서 암시적으로 사용되는 표준 C 라이브러리 내의 영어(미국) ASCII 로캘입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // locale_classic.cpp  
@@ -297,7 +298,7 @@ locale combine(const locale& Loc) const;
 ### <a name="return-value"></a>반환 값  
  이 멤버 함수는 `Loc`에 나열된 **\*이** 패싯 `Facet`을 대체하거나 이 패싯에 추가되는 로캘 개체를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // locale_combine.cpp  
@@ -363,7 +364,7 @@ static locale global(const locale& Loc);
 ### <a name="remarks"></a>설명  
  프로그램이 시작될 때는 전역 로캘이 클래식 로캘과 같습니다. `global()` 함수는 `setlocale( LC_ALL, loc.name. c_str())`을 호출하여 표준 C 라이브러리에서 일치하는 로캘을 설정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // locale_global.cpp  
@@ -450,7 +451,7 @@ locale(const locale& Loc, const Facet* Fac);
   
  로캘 이름 `Locname`이 null 포인터이거나 유효하지 않은 경우 함수는 [runtime_error](../standard-library/runtime-error-class.md)를 throw합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // locale_locale.cpp  
@@ -500,7 +501,7 @@ string name() const;
 ### <a name="return-value"></a>반환 값  
  로캘의 이름을 지정하는 문자열입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // locale_name.cpp  
@@ -544,7 +545,7 @@ bool operator!=(const locale& right) const;
 ### <a name="remarks"></a>설명  
  두 로캘은 두 로캘이 동일한 로캘이거나, 한 로캘이 다른 로캘의 복사본이거나, 이름이 동일한 경우 같습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // locale_op_ne.cpp  
@@ -621,7 +622,7 @@ return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
   
  따라서 로캘 개체를 함수 개체로 사용할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // locale_op_compare.cpp  
@@ -669,7 +670,7 @@ bool operator==(const locale& right) const;
 ### <a name="remarks"></a>설명  
  두 로캘은 두 로캘이 동일한 로캘이거나, 한 로캘이 다른 로캘의 복사본이거나, 이름이 동일한 경우 같습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // locale_op_eq.cpp  

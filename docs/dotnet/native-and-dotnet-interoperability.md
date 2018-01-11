@@ -25,16 +25,19 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9e948534f4e5417a561f8a650f666f32e707632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6206ddf3802078c49bfc1a83e952ed79afe1ff00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="native-and-net-interoperability"></a>네이티브 및 .NET 상호 운용성
 Visual c + +는 스레드와 관리 되지 않는 구문이 공존 하 고 동일한 파일 및 동일한 어셈블리 내에서 상호 운용할 수 있도록 하는 상호 운용성 기능을 지원 합니다. 이 기능을 P/Invoke 등의 작은 하위 집합 뿐, 다른.NET 언어에서 사용할 수 있지만 Visual c + +에서 제공 하는 상호 운용성 지원의 대부분은 다른 언어에서 사용할 수 없습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [혼합형(네이티브 및 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)  
  로 생성 한 어셈블리에 설명 된 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md) 컴파일러 옵션 모두 포함 하는 관리 및 관리 되지 않는 기능입니다.  
   

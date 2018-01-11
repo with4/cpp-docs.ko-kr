@@ -1,39 +1,38 @@
 ---
 title: "컴파일러 경고 (수준 1) C4743 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4743"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4743"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4743
+dev_langs: C++
+helpviewer_keywords: C4743
 ms.assetid: 2ee76ea3-77f3-4c2f-9a57-0751823c89fd
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7169afdf7fb4c9a03e509f0332e738a66a06f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4743
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'*type*'의 크기가 '*file1*'과\(와\) '*file2*'에서 서로 다릅니다\(*number*바이트, *number*바이트\).  
+# <a name="compiler-warning-level-1-c4743"></a>컴파일러 경고(수준 1) C4743
+'*형식*'다른 크기의 '*file1*'및'*file2*': *번호* 및 *번호* 바이트  
   
- 두 파일에서 참조하거나 정의한 외부 변수가 해당 파일에서 서로 다른 형식이고, *file1*의 변수 크기가 *file2*의 변수 크기와 다르다는 것을 컴파일러에서 확인했습니다.  
+ 두 개의 파일에 정의 된 또는 참조는 외부 변수 범위는 해당 파일의 다양 한 종류와 컴파일러에서 확인 하는 변수의 크기 *file1* 변수의 크기와 다른 *file2*.  
   
- C\+\+의 경우 중요한 상황에서 이 경고가 발생할 수 있습니다.  서로 다른 두 파일에서 이름이 같은 동일한 형식을 선언하는 경우, 이러한 선언에 가상 함수가 포함된 경우 및 이 선언이 동일하지 않은 경우 컴파일러는 가상 함수 테이블에 대해 C4744 경고를 표시할 수 있습니다.  이 경고는 동일한 형식에 대해 크기가 서로 다른 두 개의 가상 함수 테이블이 있고 링커가 이 둘 중 하나를 실행 파일에 통합하기 위해 선택해야 하기 때문에 발생합니다.  이 경우 프로그램에서 잘못된 가상 함수를 호출할 수 있습니다.  
+ 됩니다. 중요 한 경우 c + +에 대 한이 경고가 발생할 수 있습니다. 이러한 선언에는 가상 함수를 포함 하 고 선언 된 동일 하지 않은 경우 서로 다른 두 파일에 같은 이름의 동일한 형식으로 선언 하면 컴파일러가 C4744 가상 함수 테이블에 대 한 경고를 내보낼 수 있습니다. 경고에는 동일한 형식에 대 한 두 개의 서로 다른 크기의 가상 함수 테이블은 링커를 실행 파일로 통합 되도록 중 하나를 선택 해야 하기 때문에 발생 합니다.  잘못 된 가상 함수를 호출 하 여 프로그램에서 발생할 수 있습니다이 불가능 합니다.  
   
- 이 경고를 해결하려면 형식이나 변수에 서로 다른 이름을 사용하거나 동일한 형식 정의를 사용해야 합니다.  
+ 이 경고를 해결 하려면 같은 형식 정의 사용 하거나 다른 형식 또는 변수 이름을 사용 합니다.  
   
-## 예제  
- 다음 샘플에는 한 가지 형식 정의가 포함되어 있습니다.  
+## <a name="example"></a>예  
+ 이 샘플 유형에 대 한 하나의 정의 포함합니다.  
   
 ```  
 // C4743a.cpp  
@@ -51,8 +50,8 @@ void C::f3(void) {}
 C q;  
 ```  
   
-## 예제  
- 다음 샘플에서는 C4743 경고가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 C4743 오류가 발생 합니다.  
   
 ```  
 // C4743b.cpp  

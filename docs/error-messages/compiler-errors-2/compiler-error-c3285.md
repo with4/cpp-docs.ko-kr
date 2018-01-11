@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a517ec1b163f3092b8dd161bee6cb348ab0129c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83b1d08d9afc054f5f90190a0677a11fcfc18b53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3285"></a>컴파일러 오류 C3285
 for each 문은 'type' 형식의 변수에 사용할 수 없습니다.  
@@ -28,7 +29,7 @@ for each 문은 'type' 형식의 변수에 사용할 수 없습니다.
   
  자세한 내용은 [for each, in](../../dotnet/for-each-in.md) 를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3285를 생성합니다.  
   
 ```  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fac78eddcdf36ecc295841019f9e3f05e537802
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d4997d2d793102119e5021ba1110db2674e1b42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-application-wizard"></a>MFC 응용 프로그램 마법사
 응용 프로그램을 생성 하는 MFC 응용 프로그램 마법사입니다를 컴파일할 때는 Windows 실행 파일 (.exe) 응용 프로그램의 기본 기능을 구현 합니다. MFC 시작 응용 프로그램이 c + + 소스 (.cpp) 파일, 리소스 (.rc) 파일, 헤더 (.h) 파일 및 프로젝트 (.vcxproj) 파일을 포함합니다. 이 기초 파일에서 생성 되는 코드는 MFC를 기반으로 합니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
     -   프로젝트에서 Visual Studio 프로젝트 스타일을 사용 하 여 만들어지고 비주얼 스타일 전환 사용 하도록 설정 합니다.  
   
-    -   프로젝트 공유 DLL에서 MFC를 사용합니다. 자세한 내용은 참조 [Visual c + +의 Dll](../../build/dlls-in-visual-cpp.md)합니다.  
+    -   프로젝트 공유 DLL에서 MFC를 사용합니다. 자세한 내용은 [Visual C++의 DLL](../../build/dlls-in-visual-cpp.md)을 참조하세요.  
   
 -   [MFC 응용 프로그램 마법사, 복합 문서 지원](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
   

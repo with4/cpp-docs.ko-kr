@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 123bac1ee6bc50249c272120351281258419bf6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d92a337e3ded4b958bb9d1dbb7359d21f28d619c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-2-c4250"></a>컴파일러 경고(수준 2) C4250
 'class1': 'class2::member' 우위를 통해 상속  
@@ -52,7 +53,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4250 오류가 발생 합니다.  
   
 ```  
@@ -84,7 +85,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에는 더 복잡 한 상황을 보여 줍니다. 다음 샘플에서는 C4250 오류가 발생 합니다.  
   
 ```  

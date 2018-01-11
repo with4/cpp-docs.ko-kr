@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e30bac39692844e5f6cd23cc69bfc850d88a3776
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f2812675fd47c72bc0825f9afb870af2451731d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4634"></a>컴파일러 경고(수준 4) C4634
 XML 문서 주석: 적용할 수 없습니다. reason  
@@ -28,7 +29,7 @@ XML 문서 주석: 적용할 수 없습니다. reason
   
  자세한 내용은 [XML Documentation](../../ide/xml-documentation-visual-cpp.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4634를 생성합니다.  
   
 ```  
@@ -40,7 +41,7 @@ namespace hello {
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4634를 생성합니다.  
   
 ```  
