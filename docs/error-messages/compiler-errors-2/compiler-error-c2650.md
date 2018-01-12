@@ -15,18 +15,19 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3352820434c8d794d4980a606cb945bd8ecc4a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b975eb131951712fd5615041dcdb2391784e8003
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2650"></a>컴파일러 오류 C2650
 'operator': 가상 함수 일 수 없습니다  
   
  A `new` 또는 `delete` 연산자가 선언 `virtual`합니다. 이러한 연산자는 `static` 멤버 함수 및 커야 `virtual`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2650 오류가 생성 됩니다.  
   
 ```  

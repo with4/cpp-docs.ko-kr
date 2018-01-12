@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 93150c018159a649e772406a5a9a96836b87da8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f68e4fb49116418377235a283eadbf2f28e92885
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3753"></a>컴파일러 오류 C3753
 일반 속성을 사용할 수 없습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  자세한 내용은 참조 [제네릭](../../windows/generics-cpp-component-extensions.md) 및 [속성](../../windows/property-cpp-component-extensions.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3753 오류가 발생 합니다.  
   
 ```  

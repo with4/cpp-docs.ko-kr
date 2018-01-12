@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 656fe68d831a43f989b6a5ebe0c19d7ed975e29b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a071a5246d00bbc2f4f82255af1aaf80b7b6f2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-framework"></a>응용 프로그램 프레임워크
 Microsoft Foundation 클래스 (MFC) 라이브러리의 핵심은 c + + 형식으로 Windows API의 많은 부분이의 캡슐화 합니다. 라이브러리 클래스 일반적인 GDI 개체 브러시 및 펜, 컨트롤 및 기타 표준 Windows 항목 예: windows, 대화 상자, 장치 컨텍스트를 나타냅니다. 이 클래스는 편리한 제공 캡슐화 하는 Windows의 구조에 c + + 멤버 함수 인터페이스입니다. 이러한 클래스를 사용 하는 방법에 대 한 자세한 내용은 [창 개체 항목](../mfc/window-objects.md)합니다.  

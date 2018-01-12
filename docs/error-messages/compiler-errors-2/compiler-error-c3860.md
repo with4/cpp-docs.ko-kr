@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7f06878b5d7c364704cd028ae87a5b43bd0d738
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7229392e763450e658fc26762751c732bf743bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3860"></a>컴파일러 오류 C3860
 형식 인수 목록에 클래스 형식 이름 다음의 형식 매개 변수 목록에 사용 된 순서 매개 변수를 나열 해야 합니다.  

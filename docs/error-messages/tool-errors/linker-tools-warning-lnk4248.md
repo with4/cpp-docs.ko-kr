@@ -1,47 +1,46 @@
 ---
 title: "링커 도구 경고 LNK4248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4248"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4248
+dev_langs: C++
+helpviewer_keywords: LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 01053ddbbb0c7d234f6b465392f5bbe991ea329c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 링커 도구 경고 LNK4248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-확인되지 않은 형식 정의 토큰\(token\)이 있습니다\('type'\). 이미지가 실행되지 않습니다.  
+# <a name="linker-tools-warning-lnk4248"></a>링커 도구 경고 LNK4248
+확인 되지 않은 형식 정의 토큰 (토큰) 'type'; 이미지가 실행 되지 않습니다.  
   
- MSIL 메타데이터에 형식의 정의가 없습니다.  
+ 형식에는 MSIL 메타 데이터에는 정의 되어 있지 않습니다.  
   
- LNK4248은 **\/clr**를 사용하여 컴파일한 MSIL 모듈에 형식의 전달 선언만 있고 이 형식을 MSIL 모듈에서 참조하고 있으며 MSIL 모듈이 이 형식에 대한 정의가 포함된 네이티브 모듈에 링크되어 있는 경우에 발생할 수 있습니다.  
+ LNK4248 MSIL 모듈의 형식에 대 한 정방향 선언에만 있는 경우 발생할 수 있습니다 (사용 하 여 컴파일된 **/clr**), MSIL 모듈에서 형식을 참조 및 MSIL 모듈이에 대 한 정의가 있는 네이티브 모듈에 링크 형식입니다.  
   
- 이때 링커는 MSIL 메타데이터에 네이티브 형식 정의를 제공하며 경우에 따라서는 동작에 문제가 없을 수도 있습니다.  
+ 이 경우 링커는 MSIL 메타 데이터에 네이티브 형식 정의 제공 합니다 하 고 올바른 동작에 대 한를 제공할 수 있습니다.  
   
- 그러나 전달 형식 선언이 CLR 형식인 경우 링커의 네이티브 형식 정의가 올바르지 않을 수 있습니다.  
+ 그러나 전달 형식 선언을 CLR 형식인 경우 다음 링커의 네이티브 형식 정의가 올바르지 않을 수 있습니다.  
   
- 자세한 내용은 [\/clr\(공용 언어 런타임 컴파일\)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하십시오.  
+ 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.  
   
-### 이 오류를 해결하려면  
+### <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  MSIL 모듈에 형식 정의를 제공합니다.  
+1.  MSIL 모듈의 형식 정의 제공 합니다.  
   
-## 예제  
- 다음 샘플에서는 LNK4248 오류가 발생하는 경우를 보여 줍니다.  문제를 해결하려면 구조체 A를 정의합니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 LNK4248 합니다. 해결 하려면 구조체 A를 정의 합니다.  
   
 ```  
 // LNK4248.cpp  
@@ -55,8 +54,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 샘플에서는 형식의 전달 정의를 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 형식의 앞으로 정의 합니다.  
   
 ```  
 // LNK4248_2.cpp  
@@ -71,8 +70,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 샘플에서는 LNK4248 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 LNK4248 합니다.  
   
 ```  
 // LNK4248_3.cpp  

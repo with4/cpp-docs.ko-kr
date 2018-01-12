@@ -15,18 +15,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 995491fd4fdd05465b4ebdc961ad7ca09c4e7697
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8c2bacdb938cacc451011cffed2b41a1092dabe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4703"></a>컴파일러 경고(수준 4) C4703
 초기화되지 않았을 수 있는 로컬 포인터 변수 'name'이(가) 사용되었습니다.  
   
  로컬 포인터 변수 *이름* 값을 할당 하지 않고 사용 되었을 수 있습니다. 예기치 않은 결과가 발생할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 C4701 및 C4703을 생성합니다.  
   
 ```cpp  

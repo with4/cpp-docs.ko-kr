@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd30633dcf38a3f6e7a65ee1f2046c1d8731f114
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d1d4069bb7b9e2af52d2777c598e6dc737f7043
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4267"></a>컴파일러 경고(수준 3) C4267
 'var' : 'size_t'에서 'type'으로 변환하면서 데이터가 손실될 수 있습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  이 경고를 해결하려면 `type` 대신 `size_t`를 사용합니다. 또는 적어도 `size_t`만큼 큰 정수 계열 형식을 사용합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 C4267을 생성합니다.  
   
 ```  

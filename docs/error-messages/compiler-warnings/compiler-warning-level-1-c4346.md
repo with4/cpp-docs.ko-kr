@@ -1,36 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 1) C4346 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4346"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4346"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4346
+dev_langs: C++
+helpviewer_keywords: C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6e6d425004fcc4dc26271b2bb56dbeffccc46311
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4346
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'name': 종속 이름이 형식이 아닙니다.  
+# <a name="compiler-warning-level-1-c4346"></a>컴파일러 경고(수준 1) C4346
+'name': 종속 이름이 형식이 아닙니다  
   
- 종속 이름을 형식으로 처리하려면 [typename](../../cpp/typename.md) 키워드를 사용해야 합니다.  이는 ISO C\+\+ 표준에 맞도록 Visual C\+\+ .NET 2003 컴파일러에 이루어진 주요 변경 내용입니다.  
+ [typename](../../cpp/typename.md) 키워드는 종속 이름 형식으로 처리 하는 경우에 필요 합니다. 모든 버전의 Visual c + +에서 동일 하 게 작동 하는 코드에 대 한 추가 `typename` 선언에 있습니다.  
   
- 모든 버전의 Visual C\+\+에서 코드가 똑같은 방식으로 작동하도록 하려면 `typename`을 선언에 추가하십시오.  
-  
- 다음 샘플에서는 C4346 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4346 오류가 생성 됩니다.  
   
 ```  
 // C4346.cpp  
@@ -43,7 +40,7 @@ struct C {
 };  
 ```  
   
- 다음 샘플에서는 **typename** 키워드를 사용해야 하는 다른 예를 보여 줍니다.  
+ 다음 샘플에서는 다른 예를 보여 줍니다. 여기서는 **typename** 키워드를 사용 합니다.  
   
 ```  
 // C4346b.cpp  
@@ -64,7 +61,7 @@ struct M : public L<typename T::Type, T::Value>
 };  
 ```  
   
- 또 다른 예입니다.  
+ 및이  
   
 ```  
 // C4346c.cpp  

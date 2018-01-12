@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1fc416d6856b2b84005e4e1d66e17a3b10e93eb6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: e503c3ecbf0cd7245aadeb231030a91577e1e865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE 및 Visual C++ 개발 도구
 Visual C++는 Visual Studio IDE(통합 개발 환경)의 일부로서 다른 언어와 공통된 다양한 창과 도구를 공유합니다. 등의 많은 **솔루션 탐색기**, 코드 편집기 및 디버거, [Visual Studio IDE](/visualstudio/ide/visual-studio-ide)합니다. 공유 도구 또는 창에 있는 C++용 기능 집합과 .NET 언어 또는 Javascript용 기능 집합이 약간 다른 경우가 자주 있습니다. 일부 창이나 도구는 Visual Studio Pro 또는 Visual Studio Enterprise에서만 사용할 수 있습니다.   

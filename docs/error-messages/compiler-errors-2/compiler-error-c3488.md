@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5006ca7cb3477730a4234a8e058acdae520a59c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4db52fac476d227bd1dc0f9bf32fd3f9ee550c79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3488"></a>컴파일러 오류 C3488
 기본 캡처 모드가 참조 방식인 경우 'var'을 사용할 수 없습니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
 -   변수를 캡처 절에 값으로 전달합니다. 이 경우 람다 식의 동작이 변경될 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 기본 모드가 참조 방식인 람다 식의 캡처 절에 `n` 변수에 대한 참조가 나타나기 때문에 C3488을 생성합니다.  
   
 ```  
@@ -49,7 +50,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 C3488에 대한 네 가지 해결 방법을 보여 줍니다.  
   
 ```  

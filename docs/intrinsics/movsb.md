@@ -1,69 +1,69 @@
 ---
-title: "__movsb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movsb 명령"
-  - "rep movsb 명령"
-  - "__movsb 내장 함수"
+title: __movsb | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsb
+dev_langs: C++
+helpviewer_keywords:
+- movsb instruction
+- rep movsb instruction
+- __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 92d748b9242dcf9e068774703cceba86fce747c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# __movsb
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="movsb"></a>__movsb
 **Microsoft 전용**  
   
- 이동 문자열이 생성 \(`rep movsb`\) 명령.  
+ 이동 문자열을 생성 (`rep movsb`) 명령입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-void __movsb(   
-   unsigned char* Destination,   
-   unsigned const char* Source,   
-   size_t Count   
+void __movsb(   
+   unsigned char* Destination,   
+   unsigned const char* Source,   
+   size_t Count   
 );  
 ```  
   
-#### 매개 변수  
- \[out\] `Destination`  
- 대상 복사본에 대 한 포인터입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [out] `Destination`  
+ 복사의 대상에 대 한 포인터입니다.  
   
- \[in\] `Source`  
- 원본 복사본에 대 한 포인터입니다.  
+ [in] `Source`  
+ 복사의 원본에 대 한 포인터입니다.  
   
- \[in\] `Count`  
+ [in] `Count`  
  복사할 바이트 수입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__movsb`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- 따라서 첫 번째 `Count` 바이트 수로를 가리키는 `Source` 복사 되는 `Destination` 문자열.  
+## <a name="remarks"></a>설명  
+ 결과 첫 번째 `Count` 가리키는 바이트 `Source` 복사 되는 `Destination` 문자열입니다.  
   
- 이 루틴에만 내장로 사용할 수 있습니다.  
+ 이 루틴은 내장 루틴으로만 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // movsb.cpp  
@@ -83,9 +83,11 @@ int main()
 }  
 ```  
   
-  **큰 검정 강아지입니다.**  
- **큰 검정 강아지입니다.**   
-## Microsoft 특정 끝  
+```Output  
+A big black dog. A big black dog.  
+```  
   
-## 참고 항목  
+**Microsoft 전용 종료**  
+  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

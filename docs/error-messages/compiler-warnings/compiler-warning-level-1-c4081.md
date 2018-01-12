@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 228a279fa6d6b390a54b295586b57517e2f1a9bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ecf0ffa422abe06f7239ea0c397318582d7f9a71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4081"></a>컴파일러 경고(수준 1) C4081
 'token1'이 필요한데 'token2'가 있습니다.  
   
  이 컨텍스트에서는 컴파일러에 다른 토큰이 필요합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // C4081.cpp  

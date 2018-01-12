@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6ab7c91a9e73a44b3403adb5cfaf77a11713a359
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c603110d77b06fac59a725ba448f058bd4ad7a38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4227"></a>링커 도구 경고 LNK4227  
   
@@ -37,7 +38,7 @@ LNK4227 다른 도구에서 발생 하는 문제를 보고에도 사용 됩니�
   
 경고를 해결 하려면 메타 데이터 문제를 수정 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 참조 된 어셈블리가 참조 하는 어셈블리와 다르게 서명 LNK4227 생성 됩니다.  
   
@@ -70,7 +71,7 @@ ref class MyClass
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 잘못 된 형식으로 버전 번호는 어셈블리 특성에 전달 될 때 LNK4227 생성할 수도 있습니다.  ' *' 표기법은 관련 된 `AssemblyVersionAttribute`합니다.  이 경고를 해결 하려면 사용 하 여만에 번호를 버전 특성 이외의 `AssemblyVersionAttribute`합니다.  
   

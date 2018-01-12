@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eb8a9272a62080bd567989d90502d0ca2d003a57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe6f908cb4ba507f113ec838813cbb10d228fabd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3203"></a>컴파일러 오류 C3203
 'type' : 특수화되지 않은 클래스 템플릿 또는 제네릭은 템플릿 또는 제네릭 매개 변수 'param'에 대한 템플릿 또는 제네릭 인수로 사용할 수 없습니다. 실제 형식이 필요합니다.  

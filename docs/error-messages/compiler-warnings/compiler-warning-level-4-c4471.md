@@ -15,11 +15,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1476beca6b34e8afb53058c7961822f0fb48109
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7429a458c90c30fdf57b985cda88ca85c6d29c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4471"></a>컴파일러 경고 (수준 4) C4471
 '*열거형*': 범위가 지정 되지 않은 열거형의 정방향 선언에 (int로 가정)는 내부 형식이 있어야 합니다.  
@@ -38,7 +39,7 @@ enum Example;    // Spurious C4471
 // ...
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 일반적으로 범위가 지정 되지 않은 열거형의 정방향 선언 하는 대신 전체 정의 사용 하는 안전 합니다. 헤더 파일에는 정의 넣을 수 있으며 참조 하는 소스 파일에 포함할 수 있습니다. 이 기능은 C + + 98 이상용으로 작성 된 코드에서 작동 합니다. 이 솔루션을 portability 및 유지 관리의 편의성을 사용 하는 것이 좋습니다.  
   
 ```cpp  
@@ -50,7 +51,7 @@ enum Example;    // C4471
 // ...
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 C + + 11에서는 범위가 지정 되지 않은 열거 하 고 정방향 선언 명시적 형식을 추가할 수 있습니다. 복잡 한 헤더 포함 논리 정방향 선언 대신 정의 사용을 금지 하는 경우에이 솔루션을 좋습니다. 이 솔루션을 유지 관리 문제를 발생 시킬 수 있습니다: 열거형 정의에 사용 되는 기본 형식을 변경 하면 모든 정방향 선언에 맞게 변경 해야 하거나 코드에서 자동 오류를 할 수 있습니다. 이 문제를 최소화 하기 위해 헤더 파일로 정방향 선언에 넣을 수 있습니다.  
   
 ```cpp  
@@ -73,7 +74,7 @@ enum Example : unsigned { item = 0x80000000 }; // explicit type
   
 열거형에 대 한 명시적 형식을 지정 하면 경고도 사용 하는 것이 좋습니다 [C4369](compiler-warning-level-1-C4369.md), 기본적으로 켜져 있는 합니다. 에 열거형 항목 명시적으로 지정 된 종류와 다른 type을 필요한 경우를 식별 합니다.
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 범위가 지정 된 열거형, C + + 11의 새로운 기능을 사용 하 여 코드를 변경할 수 있습니다. 범위가 지정 된 열거형을 사용 하도록 정의와 열거형 형식을 사용 하는 클라이언트 코드를 변경 해야 합니다. 사용 하면 범위가 지정 된 열거형 네임 스페이스 충돌 문제가 있는 경우 정의 된 열거형 항목 이름에는 열거형의 범위로 제한 하는 것이 좋습니다. 범위가 지정 된 열거형의 또 다른 기능은 해당 멤버를 다른 정수 계열 또는 열거형 형식으로 감지 하기 어려운 버그의 원인이 될 수 있는 암시적으로 변환 될 수 없습니다.
 
 ```cpp  

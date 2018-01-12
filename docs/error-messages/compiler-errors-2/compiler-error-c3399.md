@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3399
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3399
+f1_keywords: C3399
+dev_langs: C++
+helpviewer_keywords: C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a55a6d40d6d39b368c31a2716c14d05e0e49a78c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: abcf9e59df1562bd5b6b430c2c63554e87340abb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3399"></a>컴파일러 오류 C3399
 'type': 제네릭 매개 변수의 인스턴스를 만들 때는 인수를 지정할 수 없습니다.  
@@ -33,7 +29,7 @@ ms.lasthandoff: 10/10/2017
   
  참조 [제네릭 형식 매개 변수에 대 한 제약 조건 (C + + /cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3399를 생성합니다.  
   
 ```  

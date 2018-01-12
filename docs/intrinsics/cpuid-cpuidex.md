@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e986b471f10ed53b7428c498b5ec802f81e368f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc20732fa9a79765f4cd56e53ddd990a4d1ea1a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 **Microsoft 전용**  
@@ -80,7 +81,7 @@ void __cpuidex(
   
  일부 프로세서에서는 확장 함수 CPUID 정보를 지원합니다. 지원되는 경우 정보를 반환하는 데 0x80000000부터의 `function_id` 값이 사용될 수 있습니다. 허용되는 의미 있는 최대값을 확인하려면 `function_id`를 0x80000000으로 설정합니다. 확장 함수에 대해 지원되는 `function_id`의 최대값은 `cpuInfo[0]`에 기록됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `__cpuid` 및 `__cpuidex` 내장 함수를 통해 제공되는 일부 정보를 보여 줍니다. 앱은 현재 프로세서가 지원하는 명령 집합 확장을 나열합니다. 출력에는 특정 프로세서에 대해 반환될 수 있는 결과가 표시됩니다.  
   
 ```  

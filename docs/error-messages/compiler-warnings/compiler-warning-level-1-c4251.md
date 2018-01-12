@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7c05983547cb6efb1d569d95c9154db67b76aba4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b220913d97755547a9cb35fe326f9fb9a06e40a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4251"></a>컴파일러 경고(수준 1) C4251
 'identifier': 'type' 클래스를 'type2' 클래스의 클라이언트에서 사용할 dll 인터페이스가 없는 해야 합니다.  

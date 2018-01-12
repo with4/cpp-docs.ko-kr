@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1b2626d49f759b3e694890ddb73a33e92803dc6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd8b70a22f24e41889c2c6d13cbb5fc2ff3e85e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3492"></a>컴파일러 오류 C3492
 'var': 익명 공용 구조체의 멤버를 캡처할 수 없습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 -   공용 구조체에 이름을 지정하고 완전한 공용 구조체를 람다 식의 캡처 목록에 전달합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 익명 공용 구조체의 멤버를 캡처하므로 C3492를 생성합니다.  
   
 ```  
@@ -49,7 +50,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 공용 구조체에 이름을 지정하고 완전한 공용 구조체를 람다 식의 캡처 목록에 전달하여 C3492를 해결합니다.  
   
 ```  

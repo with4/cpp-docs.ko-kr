@@ -15,18 +15,19 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f0b80ac9029f530b68afdc379d7660bba1ff76cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6f6a8375edc8db75895b103c6311365d571dc65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2524"></a>컴파일러 오류 C2524
 '소멸자': 소멸자/종료자에는 'void' 매개 변수 목록이 있어야 합니다.  
   
  소멸자 또는 종료자에 없는 매개 변수 목록이 [void](../../cpp/void-cpp.md)합니다. 다른 매개 변수 형식은 허용 되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 C2524 재현 합니다.  
   
 ```  
@@ -40,7 +41,7 @@ class A {
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 C2524 재현 합니다.  
   
 ```  

@@ -1,39 +1,38 @@
 ---
 title: "명령줄 경고 D9025 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9025"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9025"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D9025
+dev_langs: C++
+helpviewer_keywords: D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d95c4c16b472f0e1b37a981df7f73ff573d06447
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 명령줄 경고 D9025
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'option1'을\(를\) 'option2'\(으\)로 재정의합니다.  
+# <a name="command-line-warning-d9025"></a>명령줄 경고 D9025
+옵션 '2'와 ' option1' 재정의  
   
- *option1* 옵션은 지정되었으나 *option2*에 의해 재정의되었습니다.  *option2* 옵션을 사용했습니다.  
+ *option1* 옵션 지정 되었지만 하 여 다음 재정의 된 *옵션 2*합니다. *옵션 2* 옵션 사용 되었습니다.  
   
- 두 옵션이 모순되거나 호환되지 않는 지시문을 지정한 경우 명령줄에서 오른쪽에서 가장 멀리 있는 옵션에 지정되었거나 암시된 지시문이 사용됩니다.  
+ 모순 또는 호환 되지 않는 지시문을 지정 하는 두 가지 옵션이 명령줄에서 오른쪽에 있는 옵션에 지정 되었거나 암시 지시문 사용 됩니다.  
   
- 개발 환경에서 컴파일할 때 이 경고가 발생했지만 충돌하는 옵션이 어디에 있는지 알 수 없으면 다음 설명을 참조하십시오.  
+ 개발 환경에서 컴파일하는 경우이 경고가 발생 하 고 확실 하지 않은 충돌 하는 옵션에서 생성 되는 위치는 다음을 고려 합니다.  
   
--   옵션은 코드나 프로젝트의 설정에서 지정할 수 있습니다.  컴파일러의 [명령줄 속성 페이지](../../ide/command-line-property-pages.md)를 살펴본 결과 **모든 옵션** 필드에서 충돌하는 옵션을 발견하면 이 옵션이 프로젝트의 속성 페이지에 설정되어 있는 것이고, 그렇지 않으면 옵션이 소스 코드에 설정되어 있는 것입니다.  
+-   코드 또는 프로젝트의 프로젝트 설정에서 옵션을 지정할 수 있습니다. 컴파일러의 조합은 [명령줄 속성 페이지](../../ide/command-line-property-pages.md) 에서 충돌 하는 옵션을 표시 하 고는 **모든 옵션** 옵션, 그렇지 않으면 프로젝트의 속성 페이지에 옵션이 설정 되어 다음 필드 소스 코드에서 설정 됩니다.  
   
-     옵션이 프로젝트의 속성 페이지에 설정되어 있으면 솔루션 탐색기에서 프로젝트 노드를 선택하고 컴파일러의 전처리기 속성 페이지를 검토하십시오.  여기서 설정된 옵션을 찾지 못하면 솔루션 탐색기에서 각 소스 코드 파일에 대한 전처리기 속성 페이지 설정을 검사하여 옵션이 추가되지 않았는지 확인하십시오.  
+     프로젝트의 속성 페이지에 옵션이 설정 되어, 하는 경우 (솔루션 탐색기에서 선택한 프로젝트 노드)와 컴파일러의 전처리기 속성 페이지를 찾습니다.  여기서 설정, 솔루션 탐색기에서 각 소스 코드 파일에 대 한 전처리기 속성 페이지 설정이 있는지 확인 하는 옵션을 표시 되지 않으면 있습니다 추가 되지 않습니다.  
   
-     코드에 설정되어 있는 옵션은 코드나 창 헤더에 설정되었을 수 있습니다.  [\/P](../../build/reference/p-preprocess-to-a-file.md)를 사용하여 전처리된 파일을 만들고 기호를 검색해 보십시오.
+     코드에서 옵션이 설정 되어 코드 또는 windows 헤더에서 설정할 수 없습니다.  전처리 파일을 만들어 볼 수 있습니다 ([/P](../../build/reference/p-preprocess-to-a-file.md)) 기호를 검색 하 고 있습니다.

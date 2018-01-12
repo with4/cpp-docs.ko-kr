@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 87a41b0937935038cf4f6d30d2abc1f47afef7c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8281df9d869e682bbff026acb80e8a82e9d3e176
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3718"></a>컴파일러 오류 C3718
 'event' 받는 클래스의 멤버 함수의 컨텍스트에서 호출할 수 있습니다.  
   
  `event` 받는 클래스 에서만 호출 될 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3718 오류가 생성 됩니다.  
   
 ```  

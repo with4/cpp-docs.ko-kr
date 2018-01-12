@@ -17,18 +17,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3976e9455966914e124fbfd5a4d2479866305b17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 744b9da2db456a72ed386806d8a4aa34c5942f69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-box-controls-and-variable-types"></a>대화 상자 컨트롤 및 변수 형식
 사용할 수는 [멤버 변수 추가 마법사](../ide/add-member-variable-wizard.md) MFC를 사용 하 여 만든 대화 상자 컨트롤 멤버 변수를 추가 합니다. 멤버 변수를 추가 하는 컨트롤의 형식 대화 상자에 표시 되는 옵션을 결정 합니다.  
   
  다음 표에서 MFC에서 지원 되는 모든 대화 상자 컨트롤 형식에 설명 하며 [대화 상자 편집기](../windows/dialog-editor.md)는 사용할 수 있는 형식 및 값입니다.  
   
-|컨트롤|컨트롤 형식|제어 변수 형식|변수 값 형식|최소/최대 값 (값 형식에만 해당)|  
+|Control|컨트롤 형식|제어 변수 형식|변수 값 형식|최소/최대 값 (값 형식에만 해당)|  
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|  
 |애니메이션 컨트롤|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|해당 항목이 없습니다. 컨트롤에만|N/A|  
 |단추|단추|[CButton](../mfc/reference/cbutton-class.md)|해당 항목이 없습니다. 컨트롤에만|N/A|  

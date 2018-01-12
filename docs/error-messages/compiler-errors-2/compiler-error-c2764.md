@@ -15,18 +15,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 18e32646c3930dfae79ffd1ed13dfa014da4ce1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c623b48baf8a3ba41c7b14a4878e8473e0771cbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2764"></a>컴파일러 오류 C2764
 'param': 템플릿 매개 변수 사용 하거나 부분 특수화 'specialization'에서 추론할 수 없습니다  
   
  부분 특수화에 템플릿 매개 변수가 사용 되지 않습니다. 이 부분 특수화를 사용할 수 없게 되므로 템플릿 매개 변수를 추론할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2764 오류가 생성 됩니다.  
   
 ```  

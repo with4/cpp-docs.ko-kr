@@ -1,38 +1,39 @@
 ---
-title: "__emul, __emulu | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__emulu_cpp"
-  - "__emul"
-  - "__emul_cpp"
-  - "__emulu"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__emul 내장 함수"
-  - "__emulu 내장 함수"
+title: __emul, __emulu | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __emulu_cpp
+- __emul
+- __emul_cpp
+- __emulu
+dev_langs: C++
+helpviewer_keywords:
+- __emul intrinsic
+- __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8592633b0b2356f5a3e9bbdefb509a8f1d1a878d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# __emul, __emulu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="emul-emulu"></a>__emul, __emulu
 **Microsoft 전용**  
   
- 어떻게 32 비트 정수를 저장할 수 있는 오버플로 곱하기를 수행 합니다.  
+ 저장할 수 있는 32 비트 정수를 오버플로 하는 곱하기를 수행 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 __int64 __emul(  
@@ -45,31 +46,31 @@ unsigned __int64 __emulu(
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `a`  
- 첫 번째 정수 피연산자의 곱입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `a`  
+ 곱셈의 첫 번째 정수 피연산자를 지정 합니다.  
   
- \[in\] `b`  
- 두 번째 정수 피연산자의 곱입니다.  
+ [in] `b`  
+ 곱셈의 두 번째 정수 피연산자를 지정 합니다.  
   
-## 반환 값  
- 결과 곱입니다.  
+## <a name="return-value"></a>반환 값  
+ 곱하기의 결과입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
-|`__emul`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x 86[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
+|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
- `__emul`두 개의 32 비트 부호 있는 값을 사용 하는 64 비트 부호 있는 정수 값으로 곱하기의 결과 반환 합니다.  
+## <a name="remarks"></a>설명  
+ `__emul`에서는 두 개의 32 비트 부호 있는 값을 사용 하 고 64 비트 부호 있는 정수 값으로 곱하기의 결과 반환 합니다.  
   
- `__emulu`두 개의 32 비트 부호 없는 정수 값을 사용 하 고는 64 비트 부호 없는 정수 값으로 곱하기의 결과 반환 합니다.  
+ `__emulu`에서는 두 개의 32 비트 부호 없는 정수 값을 사용 하 고 64 비트 부호 없는 정수 값으로 곱하기의 결과 반환 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // emul.cpp  
@@ -101,14 +102,14 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>출력  
   
 ```  
 -268435456 * 2 = -536870912  
 4294967295 * 251658240 = 1080863910317260800  
 ```  
   
-### Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

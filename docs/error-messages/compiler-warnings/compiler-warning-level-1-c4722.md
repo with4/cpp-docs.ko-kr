@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8616fe9834b0f73445bbcb8ffea4d35af3895b12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97c9dff3044eda5ea04bd41a9fda81b5f1af4f13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4722"></a>컴파일러 경고(수준 1) C4722
 'function': 소멸자가 반환하지 않습니다. 메모리 누수가 발생할 수 있습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  이 문제를 해결하려면 소멸자 반환을 방해하는 함수 호출을 제거합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4722를 생성합니다.  
   
 ```  

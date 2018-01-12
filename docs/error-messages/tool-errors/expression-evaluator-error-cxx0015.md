@@ -1,38 +1,38 @@
 ---
 title: "식 계산기 오류 CXX0015 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0015"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0015"
-  - "CXX0015"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0015
+dev_langs: C++
+helpviewer_keywords:
+- CXX0015
+- CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6f671b39fcc0027fdad5308192c5cbd8b8973717
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 식 계산기 오류 CXX0015
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-식이 너무 복잡합니다\(스택 오버플로\).  
+# <a name="expression-evaluator-error-cxx0015"></a>식 계산기 오류 CXX0015
+식이 너무 복잡 합니다 (스택 오버플로).  
   
- 입력한 식이 너무 복잡하거나 깊게 중첩되어 C 식 계산기가 사용할 수 있는 저장 용량을 초과했습니다.  
+ 입력 된 식에는 너무 복잡 하거나 C 식 계산기를 사용할 수 있는 저장소 양에 비해 너무 많이 중첩 되었습니다.  
   
- 일반적으로 오버플로는 보류 중인 계산이 너무 많은 경우에 발생합니다.  
+ 오버플로 일반적으로 너무 많은 보류 중인 계산으로 인해 발생 합니다.  
   
- 식의 각 구성 요소가 다른 부분이 계산될 때까지 기다리지 않고 즉시 계산되도록 다시 정렬하십시오.  
+ 계산 식의 다른 부분에 대 한 대기 하는 대신 식의 각 구성 요소는 발견 된 대로 계산 될 수 있도록 다시 정렬 합니다.  
   
- 식을 다중 명령으로 분할하십시오.  
+ 식은 여러 개의 명령을 분해 합니다.  
   
- 이 오류는 CAN0015와 동일합니다.
+ 이 오류는 can0015와 동일 합니다.

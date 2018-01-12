@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e880eca87816973d531a2662486dde0ae7c77987
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf0ba819aa1e8f0a7651e7c42e457b5766c9eefd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3445"></a>컴파일러 오류 C3445
 초기화-복사-목록 '*형식*' 명시적 생성자를 사용할 수 없습니다  
@@ -28,7 +29,7 @@ ISO C + + 17 표준에 따라 컴파일러는 오버 로드 확인에 복사-목
   
 Visual Studio 2017 년부터 컴파일러는 Visual Studio 2015에서 찾을 수 없는 이니셜라이저 목록을 사용 하 여 개체 만들기와 관련 된 오류를 찾습니다. 이러한 오류 중단을 일으키거나 런타임에 정의 되지 않은 동작이 발생할 수 있습니다.
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3445 합니다.  
   
 ```cpp  

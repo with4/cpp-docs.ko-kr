@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 646e87243e6901827fb2d36076a95e6bcb63c3ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a57803cb584f5ee54ad5533366e6aadc85d1acf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4420"></a>컴파일러 경고(수준 1) C4420
 'operator': 'operator'를 대신 사용 하 여 연산자를 사용할 수 없음 런타임 검사가 손상 될 수 있습니다.  

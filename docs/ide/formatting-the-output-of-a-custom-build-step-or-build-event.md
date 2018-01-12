@@ -1,61 +1,62 @@
 ---
-title: "사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "빌드 이벤트[C++], 출력 형식"
-  - "빌드 단계[C++], 출력 형식"
-  - "빌드[C++], 빌드 이벤트"
-  - "빌드[C++], 사용자 지정 빌드 단계"
-  - "사용자 지정 빌드 단계[C++], 출력 형식"
-  - "이벤트[C++], 빌드"
+title: "사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 서식 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- builds [C++], build events
+- custom build steps [C++], output format
+- events [C++], build
+- build events [C++], output format
+- build steps [C++], output format
+- builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 53720e93c7d45f1eaeb0e62749194720373bee1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식 지정
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-사용자 지정 빌드 단계나 빌드 이벤트의 출력 형식이 올바르게 지정되어 있으면 다음과 같은 측면에서 매우 유용합니다.  
+# <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식 지정
+사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식이 올바른지, 사용자는 다음과 같은 이점을 메시지가 나타납니다.  
   
--   경고 및 오류가 **출력** 창에 나열됩니다.  
+-   경고 및 오류에서 계산 되는 **출력** 창.  
   
--   출력이 **작업 목록** 창에 나타납니다.  
+-   출력에 표시 된 **작업 목록** 창.  
   
--   **출력** 창에서 출력을 클릭하면 해당 항목이 표시됩니다.  
+-   출력을 클릭 하면는 **출력** 창에 해당 항목이 표시 됩니다.  
   
--   F1 키를 사용한 작업을 **작업 목록** 창이나 **출력** 창에서 수행할 수 있습니다.  
+-   F1 작업에서 사용 되는 **작업 목록** 창 또는 **출력** 창.  
   
- 출력의 형식은 다음과 같아야 합니다.  
+ 출력의 형식은 같아야 합니다.  
   
- {*filename* \(*line\#* \[, *column\#*\]\) &#124; *toolname*} **:**  
+ {*filename* (*line #* [, *열 #*]) &#124; *toolname*} **:**  
   
- \[*any text*\] {**error** &#124; **warning**} *code\#\#\#\#***:** *localizable string*  
+ [*텍스트*] {**오류** &#124; **경고**} *코드 # # #***:***지역화 가능한 문자열*  
   
- \[ *any text* \]  
+ [ *텍스트* ]  
   
- 다음은 각 항목에 대한 설명입니다.  
+ 여기서  
   
--   {*a* &#124; *b*}는 *a* 또는 *b* 중 하나를 선택해야 한다는 것을 나타냅니다.  
+-   {*는* &#124; *b*}는 하나의 선택 *는* 또는 *b*합니다.  
   
--   \[`ccc`\]는 선택적 문자열 또는 매개 변수입니다.  
+-   [`ccc`] 매개 변수 또는 선택적 문자열입니다.  
   
- 예를 들면 다음과 같습니다.  
+ 예:  
   
- C:\\*sourcefile.cpp*\(134\) : error C2143: syntax error : missing ';' before '}'  
+ C:\\*sourcefile.cpp*(134): 오류 C2143: 구문 오류: 없습니다. ';' 하기 전에 '을 (를) '  
   
  링크: 심각한 오류 LNK1104: 파일을 열 수 없습니다 '*somelib.lib*'  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 빌드 단계 및 빌드 이벤트 이해](../ide/understanding-custom-build-steps-and-build-events.md)

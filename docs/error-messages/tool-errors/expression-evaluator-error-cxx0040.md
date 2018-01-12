@@ -1,32 +1,32 @@
 ---
 title: "식 계산기 오류 CXX0040 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0040"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0040"
-  - "CXX0040"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0040
+dev_langs: C++
+helpviewer_keywords:
+- CXX0040
+- CAN0040
 ms.assetid: 1914e605-d80b-4abc-9e8f-dbcbefec095b
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7aff8ad6cdf377b16cbcf16cdfb2362850e3af21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 식 계산기 오류 CXX0040
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-함수에 암시적 변환이 필요합니다.  
+# <a name="expression-evaluator-error-cxx0040"></a>식 계산기 오류 CXX0040
+함수에 암시적 변환이 필요 합니다.  
   
- C 식 계산기는 생성자 호출과 관련된 암시적 변환을 지원하지 않습니다.  
+ C 식 계산기 생성자 호출을 관련 된 암시적 변환을 지원 하지 않습니다.  
   
- 이 오류는 CAN0040과 동일합니다.
+ 이 오류는 can0040과 동일 합니다.

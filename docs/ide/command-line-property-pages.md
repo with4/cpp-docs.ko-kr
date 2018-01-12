@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 320e3ac5126ec1e60d768e7c109f32610103f93b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d6c2958c1f6cd5954efb9c8166c151cf2a8cc29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-property-pages"></a>명령줄 속성 페이지
 대부분의 속성 페이지 폴더를 포함 한 **명령줄** 속성 페이지. 이 페이지를 폴더에 설정 되는 속성 표시 합니다. **명령줄** 속성 페이지도 포함 되어 있는 **추가 옵션** 도구에 대 한 유효한 속성을 지정할 수 있는 상자 있지만 폴더에 없는 속성은입니다.  

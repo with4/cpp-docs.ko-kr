@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2346
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2346
+f1_keywords: C2346
+dev_langs: C++
+helpviewer_keywords: C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 769d5addc47ead8ffb338d5fbef313cd46735d31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: bf0133aba65b8477bd949cd90b51edbd407bcda7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2346"></a>컴파일러 오류 C2346
 'function' 네이티브로 컴파일할 수 없습니다: 이유  
@@ -39,7 +35,7 @@ ms.lasthandoff: 10/09/2017
   
 2.  사용 하 여 모듈을 컴파일하지 않거나 하나 **/clr**, 또는 관리 되지 않는 pragma 관리 되지 않는 함수로 표시 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2346 오류가 발생 합니다.  
   
 ```  

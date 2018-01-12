@@ -1,34 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 1) C4945 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4945"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4945"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4945
+dev_langs: C++
+helpviewer_keywords: C4945
 ms.assetid: 6d2079ea-dc59-4611-bc68-9a22c06f7587
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d02583de0d4b986b2b723d3347d0aa0f212f4d16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4945
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'symbol': 'assembly2'에서 기호를 가져올 수 없습니다. 'symbol'을\(를\) 다른 어셈블리 'assembly1'에서 이미 가져왔습니다.  
+# <a name="compiler-warning-level-1-c4945"></a>컴파일러 경고(수준 1) C4945
+'symbol': 'assembly2'에서 기호를 가져올 수 없습니다: 'assembly1' 다른 어셈블리에서 'symbol' 이미 가져왔기 대로  
   
- 다른 참조된 어셈블리에서 이미 가져온 기호를 참조된 어셈블리에서 다시 가져왔습니다.  어셈블리 중 하나를 참조하지 않거나 어셈블리 중 하나의 기호 이름을 변경하십시오.  
+ 기호 참조 된 어셈블리에서 가져왔지만 해당 기호가 다른 참조 된 어셈블리에서 이미 가져왔습니다. 두 어셈블리 중 하나를 참조 하지 않거나 기호 이름을 어셈블리 중 하나에서 변경 합니다.  
   
- 다음 샘플에서는 C4945 경고가 발생하는 경우를 보여 줍니다. 첫 번째 코드 파일:  
+ 다음 샘플에서는 c4945 합니다.  
   
 ```  
 // C4945a.cs  
@@ -39,7 +38,7 @@ public class ClassA {
 }  
 ```  
   
- 두 번째 코드 파일:  
+ 그런 다음  
   
 ```  
 // C4945b.cs  
@@ -50,7 +49,7 @@ public class ClassA {
 }  
 ```  
   
- 두 번째 코드 파일:  
+ 그런 다음  
   
 ```  
 // C4945c.cpp  

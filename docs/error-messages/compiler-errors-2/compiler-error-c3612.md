@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dd430c7dbdfae88d80e073fa9e624f123c41f366
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4cb0ecfbff311878137ea0c80f53388900ba7cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3612"></a>컴파일러 오류 C3612
 'type': 클래스는 봉인된 클래스는 abstract 일 수 없습니다  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
 자세한 내용은 참조 [클래스 및 구조체](../../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 샘플에서는 C3612 오류가 생성 됩니다.  
   
 ```  

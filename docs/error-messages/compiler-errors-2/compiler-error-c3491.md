@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58458a1ab0b67eb4fa6d38d0be2fb38f6d7496eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8c126ae0533424c19fd29ea48dbea8c3d7e8971
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3491"></a>컴파일러 오류 C3491
 'var': 변경 불가능한 람다에서 값 방식 캡처를 수정할 수 없습니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 -   람다 식의 캡처 목록에 변수를 참조로 전달합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 변경할 수 없는 람다 식의 본문에서 `m`캡처 변수를 수정하기 때문에 C3491을 생성합니다.  
   
 ```  
@@ -45,7 +46,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `mutable` 키워드로 람다 식을 선언하여 C3491을 해결합니다.  
   
 ```  

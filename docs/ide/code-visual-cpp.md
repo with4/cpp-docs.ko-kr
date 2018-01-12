@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ce06201d816cb91928f569ef3afe8422d5fecb7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 863ad36def9b32269ff4b1a0c131f46e67189a45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcodegt-visual-c"></a>&lt;코드&gt; (Visual c + +)
 \<코드 > 태그는 하나 이상의 줄을 코드로 표시 하는 방법을 제공 합니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  \<code> 태그를 사용하는 방법의 예는 [\<example>](../ide/example-visual-cpp.md) 항목을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

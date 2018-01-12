@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3499
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3499
+f1_keywords: C3499
+dev_langs: C++
+helpviewer_keywords: C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 141d21be57d1aaa6957bbb9fe2d1ac5c0139076a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 6f9f6ad123e111239cbd2c2d1ff2bd886b587b60
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3499"></a>컴파일러 오류 C3499
 반환 형식이 void로 지정된 람다가 값을 반환할 수 없습니다.  
@@ -39,7 +35,7 @@ ms.lasthandoff: 10/10/2017
   
 -   람다 식의 본문을 구성하는 문을 단일 문으로 결합합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 람다 식의 본문이 여러 문을 포함하고 값을 반환하지만 람다 식에서 반환 형식을 지정하지 않으므로 C3499를 생성합니다.  
   
 ```  
@@ -51,7 +47,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 C3499에 대한 두 가지 해결 방법을 보여 줍니다. 첫 번째 해결 방법은 람다 식의 반환 형식을 제공하는 것입니다. 두 번째 해결 방법은 람다 식의 본문을 구성하는 문을 단일 문으로 결합하는 것입니다.  
   
 ```  

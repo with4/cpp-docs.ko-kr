@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49726b888f18588486b0b58ce771de2e48dfd4e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c121f7bc954cb5df560d2b5517ba1e40c48ad0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4628"></a>컴파일러 경고(수준 1) C4628
 -Ze에는 digraph가 지원되지 않습니다. 문자 시퀀스 'digraph'은(는) 'char'에 대한 대체 토큰으로 해석되지 않습니다.  

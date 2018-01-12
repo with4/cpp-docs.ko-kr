@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2f6d59a03757ca609a821fd0ca7d520ffdbf8ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3290a3be06ecc223bfc87e39ed068d187d4f95c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3772"></a>컴파일러 오류 C3772
 'name': friend 템플릿 선언이 잘못되었습니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 -   응용 프로그램에 해당하는 경우 클래스 템플릿의 friend를 선언하거나 특정 부분 또는 명시적 특수화의 friend를 선언합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 클래스 템플릿 부분 특수화의 friend를 선언하므로 실패합니다.  
   
 ```cpp  

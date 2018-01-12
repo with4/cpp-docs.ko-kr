@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4191
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4191
+f1_keywords: C4191
+dev_langs: C++
+helpviewer_keywords: C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 5cdd66e6318867a7f4df8ff70b6440ae6e7bfa3a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4a40f5a05b4efc030cd545f2ffd27325fca86294
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4191"></a>컴파일러 경고(수준 3) C4191
 'operator/operation': '식 형식'에서 '필요한 형식'으로의 변환이 안전하지 않습니다.  
@@ -60,7 +41,7 @@ ms.lasthandoff: 04/12/2017
   
  결과 포인터를 통해 이 함수를 호출하면 프로그램에서 충돌이 발생할 수 있습니다.  
   
- 기본적으로 이 경고는 해제되어 있습니다. 참조 [기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 자세한 정보에 대 한 합니다.  
+ 기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 를 참조하세요.  
   
  다음 샘플에서는 C4191을 생성합니다.  
   

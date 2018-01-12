@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 64b9c77d8c851364790d61e7844b46f25880168c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3de873cf70bafa77d7c8f4b05c70ce211b2c2258
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI 매크로
 사용 하 여는 **속성** 명령 대상 개체에서 명령 업데이트 처리기에는 사용자 인터페이스 개체를 연결 하는 창입니다. 사용자 인터페이스 개체의 ID를 자동으로 연결 된 `ON_UPDATE_COMMAND_UI` 매크로 및 업데이트를 처리 하는 개체에 핸들을 만듭니다. 참조 [함수에 메시지 매핑](../mfc/reference/mapping-messages-to-functions.md) 자세한 정보에 대 한 합니다.  

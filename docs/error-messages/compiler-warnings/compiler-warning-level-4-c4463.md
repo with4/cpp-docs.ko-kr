@@ -15,11 +15,12 @@ caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bc76019182c376decdd8658defb64dbf90dcfaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71b438de515a4fd01e7714de685ee0a89adb609e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4463"></a>컴파일러 경고 (수준 4) C4463  
   
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/24/2017
   
 할당 된 *값* 비트 필드에서 보유할 수 있는 값의 범위를 벗어났습니다. 부호 있는 비트 필드 형식을 사용 하 여 상위 비트가 부호에 대 한 비트가 하면  *n*  는 부호 있는 비트 필드는-2 비트 필드 크기 범위<sup>n-1</sup> 2로<sup>n-1</sup>-1을 반환 하는 동안 부호 없는 비트 필드는 0에서 2 사이의<sup>n</sup>-1입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 형식의 비트 필드에 값 3 할당 하려고 했기 때문에이 예제에서는 C4463 `int` 1-2에서 범위 크기가 2가 있습니다.  
   

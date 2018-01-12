@@ -1,39 +1,38 @@
 ---
 title: "컴파일러 경고 (수준 1) C4383 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4383"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4383"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4383
+dev_langs: C++
+helpviewer_keywords: C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7c478783c7f908125de7b97a1d21a9f1ece029
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4383
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'instance\_dereference\_operator' : 사용자 정의 'operator' 연산자가 있으면 핸들 역참조의 의미가 달라질 수 있습니다. 피연산자를 명시적으로 지정하려면 연산자를 정적 함수로 작성하십시오.  
+# <a name="compiler-warning-level-1-c4383"></a>컴파일러 경고(수준 1) C4383
+'instance_dereference_operator': 사용자 정의 된 'operator' 연산자가 있으면; 핸들 역참조의 의미가 변경 수 연산자는 피연산자에 대 한 명시적 정적 함수로 작성  
   
- 관리되는 형식의 역참조 연산자에 대한 사용자 정의 인스턴스 재정의를 추가하면 형식의 역참조 연산자에서 핸들의 개체를 반환할 수 있는지 여부가 재정의될 가능성이 있습니다.  사용자 정의 역참조 연산자는 정적으로 작성하는 것이 좋습니다.  
+ 관리 되는 형식에서 역참조 연산자의 사용자 정의 인스턴스 재정의 추가 하면 잠재적으로 핸들의 개체를 반환 하는 형식의 역참조 연산자의 기능을 재정의 합니다. 고려 역참조 연산자를 사용자 지정 하는 정적으로 작성 합니다.  
   
- 자세한 내용은 [개체 연산자에 대한 핸들\(^\)](../../windows/handle-to-object-operator-hat-cpp-component-extensions.md) 및 [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md)를 참조하십시오.  
+ 자세한 내용은 참조 [개체 연산자 (^)에 대 한 핸들](../../windows/handle-to-object-operator-hat-cpp-component-extensions.md) 및 [추적 참조 연산자](../../windows/tracking-reference-operator-cpp-component-extensions.md)합니다.  
   
- 또한 기타 언어 컴파일러에서는 참조된 메타데이터를 통해 인스턴스 연산자를 사용할 수 없습니다.  자세한 내용은 [사용자 정의 연산자](../../dotnet/user-defined-operators-cpp-cli.md)을 참조하십시오.  
+ 또한 인스턴스 연산자는 참조 된 메타 데이터를 통해 다른 언어 컴파일러를 사용할 수 없습니다. 자세한 내용은 참조 [사용자 정의 연산자 (C + + /cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)합니다.  
   
-## 예제  
- 다음 샘플에서는 C4383 경고가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 C4383 경고가 발생 합니다.  
   
 ```  
 // C4383.cpp  

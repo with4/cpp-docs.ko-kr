@@ -1,36 +1,35 @@
 ---
 title: "컴파일러 경고 (수준 3) C4534 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c4534"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4534"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: c4534
+dev_langs: C++
+helpviewer_keywords: C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d9ea2cc6fb15edf61610e96a728e985b78be468
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 3) C4534
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'constructor'은\(는\) 기본 인수 때문에 클래스 'class'에 대한 기본 생성자가 되지 못합니다.  
+# <a name="compiler-warning-level-3-c4534"></a>컴파일러 경고(수준 3) C4534
+'constructor'를 기본 인수 때문에 ' class' 클래스에 대 한 기본 생성자가 됩니다.  
   
- 관리되지 않는\` 클래스에는 기본값이 있는 매개 변수를 사용하는 생성자가 있고 컴파일러에서 이를 기본 생성자로 사용합니다.  `value` 키워드로 표시된 클래스는 매개 변수에 기본값이 있는 생성자를 기본 생성자로 사용하지 않습니다.  
+ 관리 되지 않는 클래스 기본값이 있는 매개 변수와 함께 생성자를 보유할 수 있으며 컴파일러가 생성자는 기본 생성자로 사용 합니다. 클래스에 표시 된 `value` 키워드로 사용 하지 것입니다 생성자는 기본 값으로 해당 매개 변수에 대 한 기본 생성자입니다.  
   
- 자세한 내용은 [Classes and Structs](../../windows/classes-and-structs-cpp-component-extensions.md)을 참조하십시오.  
+ 자세한 내용은 참조 [클래스 및 구조체](../../windows/classes-and-structs-cpp-component-extensions.md)합니다.  
   
- 다음 샘플에서는 C4534 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4534 오류가 생성 됩니다.  
   
 ```  
 // C4534.cpp  

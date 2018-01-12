@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4933ea9f079a18c4147db2da96b99653c5ddda26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 294de3c4d4ecdfcb31f6e8c227bd8a3c6764268d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>창 메모리 할당 및 할당 취소
 C + +를 사용 하지 마십시오 **삭제** 프레임 창이 나 뷰를 제거 하는 연산자입니다. 대신, 호출 된 `CWnd` 멤버 함수 `DestroyWindow`합니다. 연산자를 사용 하 여 힙에 할당는 따라서 프레임 창 **새**합니다. 프레임 창 또는 전역 스택 프레임에 할당할 때 주의 해야 합니다. 다른 창 가능 하면 스택 프레임에 할당 되어야 합니다.  

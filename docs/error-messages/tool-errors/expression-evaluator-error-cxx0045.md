@@ -1,40 +1,40 @@
 ---
 title: "식 계산기 오류 CXX0045 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0045"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0045"
-  - "CXX0045"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0045
+dev_langs: C++
+helpviewer_keywords:
+- CXX0045
+- CAN0045
 ms.assetid: 32181bc8-e79c-4ad7-a82f-47c62ec06d7d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9bb3fa42a32f65ecd463e0585f1fdb25a9623c50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 식 계산기 오류 CXX0045
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-함수가 아닙니다.  
+# <a name="expression-evaluator-error-cxx0045"></a>식 계산기 오류 CXX0045
+not 함수  
   
- 프로그램에서 인수 목록이 함수 이름이 아닌 기호에 제공되었습니다.  
+ 함수의 이름이 되지 않은 프로그램의 기호는 인수 목록을 제공 되었습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 queue( alpha, beta )  
 ```  
   
- `queue` 는 함수가 아닙니다.  
+ 때 `queue` 는 함수가 아닙니다.  
   
- 이 오류는 CAN0045와 동일합니다.
+ 이 오류는 can0045와 동일 합니다.

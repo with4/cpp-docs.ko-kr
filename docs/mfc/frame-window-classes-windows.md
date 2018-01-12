@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50fcd1e22847030680c6e5b7f07711ef4ebb55dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2668a8334192d4de199f1c42a648b74add1ca5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-window-classes-windows"></a>프레임 창 클래스(Windows)
 프레임 창에는 응용 프로그램 또는 응용 프로그램의 일부를 작성 하는 창입니다. 프레임 창에는 일반적으로 보기, 도구 모음 및 상태 표시줄 같은 다른 창에 포함 합니다. 경우 `CMDIFrameWnd`, 포함 될 수 있습니다 `CMDIChildWnd` 직접 개체입니다.  

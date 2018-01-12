@@ -1,37 +1,36 @@
 ---
 title: "NMAKE 심각한 오류 U1073 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1073"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1073"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1073
+dev_langs: C++
+helpviewer_keywords: U1073
 ms.assetid: d46bf2dd-400a-4802-9db2-f832e1c97f02
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: faae317df44560991a88d47ec7f123e6a8126429
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# NMAKE 심각한 오류 U1073
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'targetname'을\(를\) 만드는 방법을 모릅니다.  
+# <a name="nmake-fatal-error-u1073"></a>NMAKE 심각한 오류 U1073
+'targetname'를 확인 하는 방법을 알 수 없습니다  
   
- 지정한 대상이 없으며 실행할 명령이 없고 적용할 유추 규칙이 없습니다.  
+ 지정된 된 대상 없고 명령이 실행 또는 유추 규칙을 적용할 수 없습니다.  
   
-### 문제를 해결하려면 다음과 같은 해결책을 사용해 보십시오.  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>아래의 해결 방법 따라 수정합니다.  
   
-1.  대상 이름의 맞춤법을 확인합니다.  
+1.  대상 이름 철자를 확인 합니다.  
   
-2.  *targetname*이 의사\(pseudo\) 대상인 경우 다른 설명 블록에 대상으로 지정합니다.  
+2.  경우 *targetname* 는 의사는 다른 설명 블록에 대상으로 지정 합니다.  
   
-3.  *targetname*이 매크로 호출이면 null 문자열로 확장되지 않도록 합니다.
+3.  경우 *targetname* 는 매크로 호출 null 문자열로 확장 되지 않고 해야 합니다.

@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6494e19b5e5b7cc24226f92736c96371b4cc2d9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a67e0acc99c25309fc21558a65fac55c37f76fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-classes"></a>액티브 문서 클래스
 Internet Explorer 5.5 등의 웹 브라우저의 전체 클라이언트 창에서 또는 활성 문서를 지 원하는 Microsoft Office Binder 같은 활성 컨테이너에 활성 문서를 표시할 수 있습니다.  

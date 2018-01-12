@@ -1,32 +1,31 @@
 ---
-title: "컴파일러 경고(수준 3) C4316 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4316"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4316"
+title: "컴파일러 경고 (수준 3) C4316 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4316
+dev_langs: C++
+helpviewer_keywords: C4316
 ms.assetid: 10371f01-aeb8-40ac-a290-59e63efa5ad4
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8aaa769ddab0f0fc297a153a3d12cacd23e3c12e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고(수준 3) C4316
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-힙에 할당된 객체는 이 유형에 정렬되지 않을 수 있습니다.  
+# <a name="compiler-warning-level-3-c4316"></a>컴파일러 경고 (수준 3) C4316
+이 형식에 대 한 힙에 할당 된 개체를 정렬할 수 있습니다.  
   
- `operator new`를 사용하여 할당된 과도하게 정렬된 개체에는 지정된 맞춤이 없을 수 있습니다.  맞춤 정렬 루틴을 사용하도록 과도하게 정렬된 형식에 대해 [연산자 new](../../c-runtime-library/operator-new-crt.md) 및 [연산자 delete](../../c-runtime-library/operator-delete-crt.md)를 재정의합니다\(예: [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) 및 [\_aligned\_free](../../c-runtime-library/reference/aligned-free.md)\).  다음 샘플에서는 C4316 오류가 발생하는 경우를 보여 줍니다.  
+ 사용 하 여 할당 된 과도 하 게 정렬 된 개체 `operator new` 지정 된 맞춤을 사용할 수 없습니다. 재정의 [new 연산자](../../c-runtime-library/operator-new-crt.md) 및 [delete 연산자](../../c-runtime-library/operator-delete-crt.md) 에 대 한 과도 하 게 정렬 된 형식 맞춤된 할당 루틴을 사용할 수 있도록-예를 들어 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) 및 [_aligned_free](../../c-runtime-library/reference/aligned-free.md)합니다. 다음 샘플에서는 C4316 오류가 생성 됩니다.  
   
 ```cpp  
 // C4316.cpp  

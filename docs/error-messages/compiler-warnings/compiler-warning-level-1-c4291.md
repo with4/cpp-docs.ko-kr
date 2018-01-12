@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 38308fb0932bb3a62c6fe9611e8b973b2819753d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a1c03e12805c35ce04322a7ffb4d48499a9a9f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4291"></a>컴파일러 경고(수준 1) C4291
 'declaration':를 찾을 수 없는 일치 하는 연산자 삭제 초기화는 예외를 throw 하는 경우 메모리를 해제 되지 않습니다.  

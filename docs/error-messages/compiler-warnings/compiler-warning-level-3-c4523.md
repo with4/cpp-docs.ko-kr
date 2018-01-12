@@ -1,29 +1,28 @@
 ---
 title: "컴파일러 경고 (수준 3) C4523 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4523"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4523"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4523
+dev_langs: C++
+helpviewer_keywords: C4523
 ms.assetid: 0f28761d-999f-43fe-9481-d02afd9b4f60
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ff94ed4807de0fd68642b6c00facb1866630d863
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 3) C4523
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'class' : 소멸자를 여러 개 지정했습니다.  
+# <a name="compiler-warning-level-3-c4523"></a>컴파일러 경고(수준 3) C4523
+'class': 소멸자를 여러 개 지정  
   
- 클래스에 소멸자가 여러 개 있으므로
+ 클래스에는 소멸자를 여러 개 있습니다.

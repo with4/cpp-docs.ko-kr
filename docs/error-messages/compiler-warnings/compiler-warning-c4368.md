@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fd66d8fb6d30a960c659345910242ec5a1a2e11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9694eb05a2d14ff8dac49c0e9a3cb29dcf52bbac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-c4368"></a>컴파일러 경고 C4368
 'member' 관리 되는 'type'의 멤버로 정의할 수 없습니다: 혼합된 형식은 지원 되지 않습니다  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  항상이 경고는 오류로 발생 됩니다. 사용 하 여는 [경고](../../preprocessor/warning.md) pragma를 C4368를 사용 하지 않도록 설정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4368 오류가 발생 합니다.  
   
 ```  

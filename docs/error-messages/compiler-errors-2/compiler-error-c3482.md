@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b19769a8a326613401263fa7700b85c36a9dbbe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ff7a17d663be7168c5743838d782043d7c0ee92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3482"></a>컴파일러 오류 C3482
 비정적 멤버 함수 내에서는 'this'는 람다 캡처로만 사용할 수 있습니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 -   람다 식의 캡처 목록에서 `this` 포인터를 제거합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 C3482를 생성합니다.  
   
 ```  

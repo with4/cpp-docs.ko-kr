@@ -1,34 +1,33 @@
 ---
 title: "컴파일러 경고 (수준 3) C4240 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4240"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4240"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4240
+dev_langs: C++
+helpviewer_keywords: C4240
 ms.assetid: a2657cdb-18e1-493f-882b-4e10c0bca71d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 662aaeb3246fac20bd0ac9f3412424bfacac5698
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 3) C4240
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-비표준 확장이 사용됨 : 'classname'에 대한 액세스가 이제 'access specifier'\(으\)로 정의됩니다. 이전에는 'access specifier'\(으\)로 정의되었습니다.  
+# <a name="compiler-warning-level-3-c4240"></a>컴파일러 경고(수준 3) C4240
+비표준 확장이 사용 됨: 이제 정의 됩니다. 이전에 ' 액세스 지정자', 'classname'에 대 한 액세스를 '액세스 지정자' 되도록 정의 되어 있습니다.  
   
- ANSI 규격\([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\)에서는 중첩 클래스에 대한 액세스를 변경할 수 없습니다.  기본 Microsoft 확장\(\/Ze\)에서는 변경할 수 있지만 이 경고가 발생합니다.  
+ ANSI 호환성 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), 중첩된 클래스에 대 한 액세스를 변경할 수 없습니다. 기본 Microsoft 확장 (/Ze)에서는 할 수 있습니다, 이러한 경고.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // C4240.cpp  

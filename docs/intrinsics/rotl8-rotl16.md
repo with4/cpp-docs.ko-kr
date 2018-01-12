@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f44ce838feab8fd03cbc7ad459617f1b6d52beba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49def56fe4a04e495033b9823e1da8735c6e0319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 **Microsoft 전용**  
@@ -65,7 +66,7 @@ unsigned short _rotl16(
 ## <a name="remarks"></a>설명  
  왼쪽 시프트 작업과는 달리 왼쪽 회전을 실행할 때는 최대값에 속하는 상위 비트가 최하위 비트 위치로 이동됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // rotl.cpp  

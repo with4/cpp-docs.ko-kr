@@ -1,50 +1,50 @@
 ---
 title: "링커 도구 경고 LNK4210 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4210"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4210"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4210
+dev_langs: C++
+helpviewer_keywords: LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e4e2d596527b60735b42fb4edfff6f36d0be808d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 링커 도구 경고 LNK4210
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-section 섹션이 있습니다. 처리되지 않은 정적 이니셜라이저 또는 종결자가 있을 수 있습니다.  
+# <a name="linker-tools-warning-lnk4210"></a>링커 도구 경고 LNK4210  
   
- 일부 코드가 정적 이니셜라이저 또는 종결자를 파생시켰지만 응용 프로그램이 시작될 때 이니셜라이저나 종결자를 실행해야 하는 CRT 또는 동등 항목이 실행되지 않았습니다.  이 오류를 발생시키는 코드의 예입니다.  
+> 섹션 *섹션* 존재; 있을 수 있습니다 수 처리 되지 않은 정적 이니셜라이저 또는 종결자  
   
--   생성자, 소멸자 또는 가상 함수 테이블이 있는 전역 클래스 변수  
+일부 코드에 정적 이니셜라이저 또는 종결자를 도입 하지만 VCRuntime 라이브러리 시작 코드 또는 (정적 이니셜라이저 또는 종결자를 실행 해야 함)는 해당 하는 응용 프로그램이 시작 될 때 실행 되지 않습니다. 정적 이니셜라이저 또는 종결자를 필요로 하는 코드의 몇 가지 예는 다음과 같습니다.  
   
--   비 컴파일 타임 상수로 초기화된 전역 변수  
+-   생성자, 소멸자 또는 가상 함수 테이블 변수는 전역 클래스입니다.  
   
- 이 문제를 해결하려면 다음 중 하나를 수행하십시오.  
+-   전역 변수는 비 컴파일 시간 상수를 사용 하 여 초기화 합니다.  
   
--   정적 이니셜라이저를 포함하는 코드를 모두 제거합니다.  
+이 문제를 해결 하려면 다음 중 하나를 시도해 보십시오.  
   
--   [\/NOENTRY](../../build/reference/noentry-no-entry-point.md)를 사용하지 마십시오.  \/NOENTRY를 제거한 다음 msvcrt.lib, libcmt.lib 또는 libcmtd.lib를 링커 명령줄에 추가해야 할 수도 있습니다.  
+-   정적 이니셜라이저가 있는 모든 코드를 제거 합니다.  
   
--   msvcrt.lib, libcmt.lib 또는 libcmtd.lib를 링커 명령줄에 추가합니다.  
+-   사용 하지 마십시오 [/NOENTRY](../../build/reference/noentry-no-entry-point.md)합니다. /NOENTRY를 제거한 후 제거 해야 또한 [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) 링커 명령줄의 합니다.  
   
--   \/clr:pure 컴파일에서 \/clr로 바꿀 때는 링커 라인에서 [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) 옵션을 제거합니다.  이렇게 하면 CRT 초기화가 사용되므로 응용 프로그램 시작 시 정적 이니셜라이저가 실행됩니다.  
+-   빌드 /MT을 사용 하는 경우 libcmt.lib, libvcruntime.lib 및 libucrt.lib 링커 명령줄에 추가 합니다. 빌드 /MTd를 사용할 경우 libcmtd.lib, vcruntimed.lib, 및 libucrtd.lib를 추가 합니다.  
   
--   [\/ENTRY](../../build/reference/entry-entry-point-symbol.md)를 사용하여 빌드한 프로젝트에서 \/ENTRY를 `_DllMainCRTStartup`이 아닌 다른 함수에 전달하는 경우 이 함수가 CRT\_INIT를 호출해야 합니다.  [런타임 라이브러리 동작](../../build/run-time-library-behavior.md) 및 기술 자료 문서 Q94248, [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;94248](http://support.microsoft.com/default.aspx?scid=kb;en-us;94248) 에 대한 자세한 내용을 위해 확인하세요.  
+-   /Clr에서 이동할 때: /clr 컴파일에 순수 제거는 [/ENTRY](../../build/reference/entry-entry-point-symbol.md) 링커 줄에서 옵션입니다. CRT 초기화 있으며 정적 이니셜라이저 응용 프로그램 시작 시 실행 되도록 허용 합니다.  
   
- [\/GS](../../build/reference/gs-buffer-security-check.md) 컴파일러 옵션에는 CRT 시작 코드가 필요합니다.  
+ [/GS](../../build/reference/gs-buffer-security-check.md) 컴파일러 옵션을 사용 하 여 초기화 하려면는 `__security_init_cookie` 함수입니다. 이 초기화에서 실행 되는 VCRuntime 라이브러리 시작 코드에는 기본적으로 제공 됩니다 `_DllMainCRTStartup`합니다.  
   
-## 참고 항목  
+-   /ENTRY를 사용 하 여 프로젝트를 빌드하고 및 /ENTRY 전달 되는 경우 함수가 아닌 다른 `_DllMainCRTStartup`, 함수를 호출 해야 `_CRT_INIT` CRT를 초기화 합니다. DLL /GS를 사용 하 여 정적 이니셜라이저 등이 필요 하거나 MFC 또는 ATL 코드의 컨텍스트 내에서 호출할 경우이 호출은 만으로는 충분 하지 않습니다. 참조 [Dll 및 Visual c + + 런타임 라이브러리 동작](../../build/run-time-library-behavior.md) 자세한 정보에 대 한 합니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)

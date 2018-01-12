@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 344f56eb3097bad447d9a0b12a0c5aac6f68b119
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44e2ad811645889cd655bf297f6f8b9492574def
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1201"></a>링커 도구 오류 LNK1201
 'filename'; 프로그램 데이터베이스에 쓰기 오류 디스크 공간 부족, 잘못 된 경로 또는 권한이 부족 하 여 확인 합니다.  

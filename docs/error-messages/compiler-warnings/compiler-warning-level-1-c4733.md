@@ -1,36 +1,35 @@
 ---
 title: "컴파일러 경고 (수준 1) C4733 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4733"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4733"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4733
+dev_langs: C++
+helpviewer_keywords: C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 480092a003c90164157f29d2445029a31387a225
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4733
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-인라인 asm이 'FS:0'에 할당되었습니다. 처리기가 안전한 처리기로 등록되지 않았습니다.  
+# <a name="compiler-warning-level-1-c4733"></a>컴파일러 경고(수준 1) C4733
+인라인 asm 'fs: 0'에 할당: 처리기 안전한 처리기로 등록 되지 않았습니다  
   
- 새로운 식 처리기를 추가하기 위해 FS:0의 값을 수정하는 함수가 안전한 예외에는 작동하지 않습니다. 이는 처리기가 올바른 예외 처리기로 등록되지 않았기 때문입니다. 자세한 내용은 [\/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)를 참조하십시오.  
+ 새 예외 핸들러를 추가 하려면 fs: 0에 있는 값을 수정 하는 함수가 안전한 예외에는 작동 하지 않을 수 있습니다 (참조 [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).  
   
- 이 경고를 해결하려면 FS:0 정의를 제거하거나, 이 경고를 해제하고 [.SAFESEH](../../assembler/masm/dot-safeseh.md)를 사용하여 안전한 예외 처리기를 지정하십시오.  
+ 이 경고를 해결 하려면 하거나 fs: 0 정의 제거 하거나이 경고 끈 사용 [합니다. SAFESEH](../../assembler/masm/dot-safeseh.md) 안전한 예외 처리기를 지정할 수 있습니다.  
   
- 다음 샘플에서는 C4733 오류가 발생하는 경우를 보여 줍니다.  
+ 다음 샘플에서는 C4733 오류가 생성 됩니다.  
   
 ```  
 // C4733.cpp  

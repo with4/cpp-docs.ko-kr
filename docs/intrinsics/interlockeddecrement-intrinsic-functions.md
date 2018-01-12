@@ -1,72 +1,73 @@
 ---
-title: "_InterlockedDecrement Intrinsic Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedDecrement16_rel_cpp"
-  - "_InterlockedDecrement16_acq_cpp"
-  - "_InterlockedDecrement16_rel"
-  - "_InterlockedDecrement64_acq"
-  - "_InterlockedDecrement_nf"
-  - "_InterlockedDecrement16_nf"
-  - "_InterlockedDecrement64_rel_cpp"
-  - "_InterlockedDecrement_rel_cpp"
-  - "_InterlockedDecrement16_acq"
-  - "_InterlockedDecrement64_acq_cpp"
-  - "_InterlockedDecrement_rel"
-  - "_InterlockedDecrement64_nf"
-  - "_InterlockedDecrement16_cpp"
-  - "_InterlockedDecrement64"
-  - "_InterlockedDecrement_cpp"
-  - "_InterlockedDecrement64_rel"
-  - "_InterlockedDecrement16"
-  - "_InterlockedDecrement"
-  - "_InterlockedDecrement64_cpp"
-  - "_InterlockedDecrement_acq"
-  - "_InterlockedDecrement_acq_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_InterlockedDecrement intrinsic"
-  - "_InterlockedDecrement_acq intrinsic"
-  - "_InterlockedDecrement_nf intrinsic"
-  - "_InterlockedDecrement_rel intrinsic"
-  - "_InterlockedDecrement16 intrinsic"
-  - "_InterlockedDecrement16_acq intrinsic"
-  - "_InterlockedDecrement16_nf intrinsic"
-  - "_InterlockedDecrement16_rel intrinsic"
-  - "_InterlockedDecrement64 intrinsic"
-  - "_InterlockedDecrement64_acq intrinsic"
-  - "_InterlockedDecrement64_nf intrinsic"
-  - "_InterlockedDecrement64_rel intrinsic"
-  - "InterlockedDecrement intrinsic"
-  - "InterlockedDecrement_acq intrinsic"
-  - "InterlockedDecrement_rel intrinsic"
-  - "InterlockedDecrement16 intrinsic"
-  - "InterlockedDecrement64 intrinsic"
-  - "InterlockedDecrement64_acq intrinsic"
-  - "InterlockedDecrement64_rel intrinsic"
+title: "_InterlockedDecrement 내장 함수 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedDecrement16_rel_cpp
+- _InterlockedDecrement16_acq_cpp
+- _InterlockedDecrement16_rel
+- _InterlockedDecrement64_acq
+- _InterlockedDecrement_nf
+- _InterlockedDecrement16_nf
+- _InterlockedDecrement64_rel_cpp
+- _InterlockedDecrement_rel_cpp
+- _InterlockedDecrement16_acq
+- _InterlockedDecrement64_acq_cpp
+- _InterlockedDecrement_rel
+- _InterlockedDecrement64_nf
+- _InterlockedDecrement16_cpp
+- _InterlockedDecrement64
+- _InterlockedDecrement_cpp
+- _InterlockedDecrement64_rel
+- _InterlockedDecrement16
+- _InterlockedDecrement
+- _InterlockedDecrement64_cpp
+- _InterlockedDecrement_acq
+- _InterlockedDecrement_acq_cpp
+dev_langs: C++
+helpviewer_keywords:
+- InterlockedDecrement64_rel intrinsic
+- InterlockedDecrement64 intrinsic
+- _InterlockedDecrement16 intrinsic
+- _InterlockedDecrement16_acq intrinsic
+- _InterlockedDecrement intrinsic
+- _InterlockedDecrement_nf intrinsic
+- _InterlockedDecrement_acq intrinsic
+- _InterlockedDecrement64_rel intrinsic
+- _InterlockedDecrement16_rel intrinsic
+- InterlockedDecrement intrinsic
+- InterlockedDecrement16 intrinsic
+- _InterlockedDecrement16_nf intrinsic
+- InterlockedDecrement64_acq intrinsic
+- _InterlockedDecrement_rel intrinsic
+- InterlockedDecrement_acq intrinsic
+- _InterlockedDecrement64_acq intrinsic
+- _InterlockedDecrement64 intrinsic
+- _InterlockedDecrement64_nf intrinsic
+- InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8e1ade673c13ed69912ddadc5f6a4d75e7a8e0a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# _InterlockedDecrement Intrinsic Functions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement Intrinsic Functions
 **Microsoft 전용**  
   
- Win32 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx) 함수에 대한 컴파일러 내장 지원을 제공합니다.  
+ Win32에 대 한 컴파일러 내장 지원을 제공 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx) 함수입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 long _InterlockedDecrement(  
@@ -107,34 +108,34 @@ __int64 _InterlockedDecrement64_nf(
 );  
 ```  
   
-#### 매개 변수  
- \[in, out\] `lpAddend`  
+#### <a name="parameters"></a>매개 변수  
+ [in, out] `lpAddend`  
  감소시킬 변수에 대한 포인터입니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  반환 값은 감소된 결과 값입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |내장 함수|아키텍처|  
-|-----------|----------|  
+|---------------|------------------|  
 |`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## 설명  
+## <a name="remarks"></a>설명  
  사용되는 데이터 형식과 프로세서별 획득 또는 해제 의미 체계에 따라 다른 `_InterlockedDecrement`의 여러 변형이 있습니다.  
   
  `_InterlockedDecrement` 함수는 32비트 정수 값에 대해 작동하는 반면 `_InterlockedDecrement16`은 16비트 정수 값에 대해, `_InterlockedDecrement64`는 64비트 정수 값에 대해 작동합니다.  
   
- ARM 플랫폼에서는 임계 영역의 시작 및 끝과 같은 위치에서 의미 체계를 획득하고 해제하려면 `_acq` 및 `_rel` 접미사가 포함된 내장 함수를 사용합니다.  `_nf`\("no fence"의 약어\) 접미사가 포함된 내장 함수는 메모리 장벽으로 작동하지 않습니다.  
+ ARM 플랫폼에서는 임계 영역의 시작 및 끝과 같은 위치에서 의미 체계를 획득하고 해제하려면 `_acq` 및 `_rel` 접미사가 포함된 내장 함수를 사용합니다. `_nf`("no fence"의 약어) 접미사가 포함된 내장 함수는 메모리 장벽으로 작동하지 않습니다.  
   
- `lpAddend` 매개 변수가 가리키는 변수는 32비트 경계에 정렬되어야 합니다. 그렇지 않으면 다중 프로세서 x86 시스템과 x86이 아닌 시스템에서 이 함수가 실패합니다.  자세한 내용은 [align](../cpp/align-cpp.md)을 참조하세요.  
+ `lpAddend` 매개 변수가 가리키는 변수는 32비트 경계에 정렬되어야 합니다. 그렇지 않으면 다중 프로세서 x86 시스템과 x86이 아닌 시스템에서 이 함수가 실패합니다. 자세한 내용은 참조 [맞춤](../cpp/align-cpp.md)합니다.  
   
  이러한 루틴은 내장 함수로만 사용할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // compiler_intrinsics_interlocked.cpp  
@@ -202,7 +203,7 @@ void __cdecl SimpleThread(void* pParam) {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)   
- [C\+\+ 키워드](../cpp/keywords-cpp.md)   
+ [키워드](../cpp/keywords-cpp.md)   
  [x86 컴파일러와 충돌](../build/conflicts-with-the-x86-compiler.md)

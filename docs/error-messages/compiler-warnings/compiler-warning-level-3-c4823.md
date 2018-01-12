@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: af4b7e220957722793458a283244092574d05fa9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18e041bd9a013779a37dc2460b8e1913b69d734b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4823"></a>컴파일러 경고(수준 3) C4823
 'function': 사용 고정 포인터 하지만 해제 의미 체계를 사용할 수 없습니다. /EHa를 사용 하는 것이 좋습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
 개체를 해제 하 고 경고를 무시 수동으로 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 샘플에서는 C4823 오류가 발생 합니다.  
   
 ```  

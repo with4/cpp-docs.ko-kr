@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fb42a88c60b89909f104873ff20e36192b13c69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc17821e2dd358a4b8f596492fa46c2b7412feed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>예외: 생성자의 예외
 생성자에서는 예외를 throw 하는 경우에 설명 된 대로 된 예외를 throw 하기 전에 내용을 모든 개체 및 메모리 할당 정리 [예외: 사용자 자신의 함수에서 예외를 Throw](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)합니다.  

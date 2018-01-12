@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3154
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3154
+f1_keywords: C3154
+dev_langs: C++
+helpviewer_keywords: C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5babdbd5639d4279e60cbfa940479f7398375e03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: de38898f775d621edfec464de8a51d20c3bdb4f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3154"></a>컴파일러 오류 C3154
 예상 ',' 줄임표 앞입니다. 비 쉼표로 구분 줄임표 매개 변수 배열 함수에서 지원 되지 않습니다.  
@@ -33,7 +29,7 @@ ms.lasthandoff: 10/10/2017
   
  자세한 내용은 참조 [가변 인수 목록 (...) (C + + /CLI CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C3154 오류가 발생 합니다.  
   
 ```  

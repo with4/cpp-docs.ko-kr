@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 583b2c0ec67c4799753fe52d74131e7238b11d46
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9792f8b7758ff5a1e5742b6643d9f73931bce6f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idl-attributes-add-method-wizard"></a>IDL 특성, 메서드 추가 마법사
 메서드 추가 마법사의이 페이지를 사용 하 여 메서드에 대 한 인터페이스 정의 (IDL) 언어 설정을 지정 합니다.  
   
- **id**  
+ **ID**  
  메서드를 식별 하는 숫자 ID를 설정 합니다. 참조 [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) 에 *MIDL 참조*합니다.  
   
  이 상자 사용자 지정 인터페이스에 대해 사용할 수 없으면 되며 MFC dispinterface에 사용할 수 없습니다.  

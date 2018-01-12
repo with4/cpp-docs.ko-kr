@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ae5eddbce2e590e53e51b132ebbbd9589b385eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f2ef73d3cb82a65c8114d2e7f921b47ffd45d65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-runtime-error-r6033"></a>C 런타임 오류 r 6033이 발생
 네이티브 코드를 초기화 하는 동안이 어셈블리에서 MSIL 코드를 사용 하려고 합니다. 응용 프로그램에서 버그를 나타냅니다. MSIL로 컴파일된 호출의 결과 가능성이 높으며 (/ clr) 함수를 DllMain 또는 기본 생성자에서 합니다.  

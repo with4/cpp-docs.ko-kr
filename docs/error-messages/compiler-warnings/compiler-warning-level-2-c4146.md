@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f88b4e0dde56bc63619257264d46a7d2770fa58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7a9a67beb4dc122c25318c1796e22a4c35dbe38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-2-c4146"></a>컴파일러 경고 (수준 2) C4146
 단항 빼기 연산자 결과 역시 unsigned 부호 없는 형식에 적용  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  INT_MIN는 형식을 있는 limits.h에서 사용 하 여 C4146를 방지할 수 있습니다 **int 서명**합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4146 오류가 생성 됩니다.  
   
 ```  

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b247be12c40746cb8662093518be1eb8eeff2fa1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0bb658051a4eab579e2c0d2fbb4d6bd525381b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft 전용**  
@@ -60,7 +61,7 @@ __int64 __ll_rshift(
 ## <a name="remarks"></a>설명  
  두 번째 매개 변수 64 x64 (x86 32) 보다 큰 경우 해당 개수 계산 된 것 (x86 32) 64로 나눈 나머지 이동할 비트 수를 결정 합니다. `ll` 접두사에는 작업 임을 나타냅니다. `long long`, 다른 이름을 `__int64`, 64 비트 부호 있는 정수 형식입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // ll_rshift.cpp  

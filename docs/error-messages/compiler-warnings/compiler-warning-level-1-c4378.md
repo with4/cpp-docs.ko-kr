@@ -1,35 +1,34 @@
 ---
 title: "컴파일러 경고 (수준 1) C4378 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4378"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4378"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4378
+dev_langs: C++
+helpviewer_keywords: C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fea0b26b6aeaaa1c10316a8b17c6a988f3130bf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 1) C4378
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이니셜라이저를 실행하려면 함수 포인터를 가져와야 합니다. System::ModuleHandle::ResolveMethodHandle을 사용해 보십시오.  
+# <a name="compiler-warning-level-1-c4378"></a>컴파일러 경고(수준 1) C4378
+이니셜라이저; 실행에 대 한 함수 포인터 얻어야 합니다. resolvemethodhandle  
   
- **\/clr**를 사용하는 경우 이니셜라이저 기호에는 함수 포인터가 아닌 함수 토큰이 포함됩니다.  <xref:System.ModuleHandle.ResolveMethodHandle%2A>을 사용하여 토큰을 포인터로 변환해야 합니다.  
+ 아래 **/clr**, 이니셜라이저 기호 함수 토큰이 함수 포인터가 아닌 포함 합니다.  사용 하 여 포인터를 토큰을 변환 해야 할 <xref:System.ModuleHandle.ResolveMethodHandle%2A>합니다.  
   
-## 예제  
- 다음 샘플에서는 C4378 오류가 발생하는 경우를 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 C4378 오류가 발생 합니다.  
   
 ```  
 // C4378.cpp  
@@ -71,8 +70,8 @@ int main () {
 }  
 ```  
   
-## 예제  
- 다음 샘플에서는 C4378을 해결하는 방법을 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플 C4378 해결 하는 방법을 보여 줍니다.  
   
 ```  
 // C4378_b.cpp  

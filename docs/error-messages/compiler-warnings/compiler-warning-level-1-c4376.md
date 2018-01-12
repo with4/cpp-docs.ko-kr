@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b78407a29ade4c6792afbd8e15295199b7d6b2c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a0bb98149ca800fd7cfde7b85ec52e1133bd894
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4376"></a>컴파일러 경고(수준 1) C4376
 액세스 지정자 ' old_specifier:'은 더 이상 지원:를 사용 하십시오 ' new_specifier:' 대신  
   
  형식 및 멤버 내게 필요한 옵션 메타 데이터의 지정에 대 한 자세한 내용은 참조 하십시오. [표시 유형 입력](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 및 [멤버 표시 유형](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility) 에 [하는 방법: 정의 사용할 클래스 및 구조체 및 (C + + /cli CLI) ](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C4376 오류가 발생 합니다.  
   
 ```  

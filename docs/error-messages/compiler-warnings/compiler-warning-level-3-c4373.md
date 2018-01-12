@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8660501a679b994bfe8fa5e3ad5ff3728725667
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43523cb5f4c024ec3e937e88fca7f78c341ab19d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4373"></a>컴파일러 경고(수준 3) C4373
 '%$S': 가상 함수는 '%$pS'을(를) 재정의하지만, 이전 버전의 컴파일러는 매개 변수의 const/volatile 한정자만 다른 경우에는 재정의하지 않았습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  [!INCLUDE[cpp_orcas_long](../../cpp/includes/cpp_orcas_long_md.md)] 이전의 컴파일러 버전에서는 함수를 기본 클래스의 메서드에 바인딩한 다음 경고 메시지를 실행합니다. 이후 버전의 컴파일러에서는 `const` 또는 `volatile` 한정자를 무시하고 함수를 파생 클래스의 메서드에 바인딩한 다음 `C4373`경고를 실행합니다. 이 두 번째 동작은 C++ 표준을 준수합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 C4373 경고를 생성합니다.  
   
 ```  

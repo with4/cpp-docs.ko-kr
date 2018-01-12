@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d3aa9ae6c79d3320104d9689f82b894cf2b76d9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64d99fb6854a9cf1c1acee88c0d8bddadc30557c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2897"></a>컴파일러 오류 C2897
 소멸자/종료자 함수 템플릿일 수 없습니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  다음 샘플에서는 C2897 오류가 생성 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2897 오류가 발생 합니다.  
   
 ```  
@@ -40,7 +41,7 @@ public:
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2897 오류가 발생 합니다.  
   
 ```  
