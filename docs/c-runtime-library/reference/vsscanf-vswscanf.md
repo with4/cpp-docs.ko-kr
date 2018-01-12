@@ -35,11 +35,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 95446e1442f1df98dff5e1819e97c49c75209fda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b0da3f3578e1ee2176ffca8358d5f5276732cf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 문자열에서 형식이 지정된 데이터를 읽습니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)를 참조하세요.  
@@ -84,7 +85,7 @@ int vswscanf(
   
  `vswscanf`는 `vsscanf`의 와이드 문자 버전이며, `vswscanf`에 대한 인수는 와이드 문자 문자열입니다. `vsscanf`는 멀티바이트 16진수 문자를 처리하지 않습니다. `vswscanf`는 유니코드 전자 16진수 또는 "호환 영역" 문자를 처리하지 않습니다. 그렇지 않으면 `vswscanf`과 `vsscanf`은 동일하게 작동합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -92,14 +93,14 @@ int vswscanf(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`vsscanf`|\<stdio.h>|  
 |`vswscanf`|\<stdio.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_vsscanf.c  

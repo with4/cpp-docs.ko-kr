@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ apitype: DLLExport
 f1_keywords:
 - wctomb_s
 - _wctomb_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wctomb_s function
 - wctomb_s_l function
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: ac97c0bc957c28d8d0837199157d52d4ac0536e1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3c819f62f36966363f32eb16b7af758de274d3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 와이드 문자를 해당 멀티바이트 문자로 변환합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 향상된 [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) 버전입니다.  
@@ -108,7 +92,7 @@ errno_t _wctomb_s_l(
 |`mbchar`|`sizeInBytes`|반환 값|`pRetValue`|  
 |--------------|-------------------|------------------|-----------------|  
 |`NULL`|>0|`EINVAL`|수정 안 됨|  
-|모두|>`INT_MAX`|`EINVAL`|수정 안 됨|  
+|any|>`INT_MAX`|`EINVAL`|수정 안 됨|  
 |any|너무 작음|`EINVAL`|수정 안 됨|  
   
  위의 오류 조건 중 하나라도 발생하는 경우, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `wctomb`는 `EINVAL`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
@@ -116,20 +100,20 @@ errno_t _wctomb_s_l(
 ## <a name="remarks"></a>설명  
  `wctomb_s` 함수는 `wchar` 인수를 해당 멀티바이트 문자로 변환하고 결과를 `mbchar`에 저장합니다. 모든 프로그램에서 언제든지 이 함수를 호출할 수 있습니다.  
   
- `wctomb_s`는 와이드 문자를 멀티바이트 문자로 변환하는 경우 와이드 문자의 바이트 수(항상 `MB_CUR_MAX`보다 크지 않음)를 `pRetValue`가 가리키는 정수에 추가합니다. `wchar`이 와이드 문자 null 문자(L'\0')이면 `wctomb_s`는 `pRetValue`를 1로 채웁니다. 대상 포인터 `mbchar`이 NULL이면 `wctomb_s`는 `pRetValue`에 0을 추가합니다. 현재 로케일에 해당 변환이 불가능 한 경우 `wctomb_s` -1에 저장 `pRetValue`.  
+ `wctomb_s`는 와이드 문자를 멀티바이트 문자로 변환하는 경우 와이드 문자의 바이트 수(항상 `MB_CUR_MAX`보다 크지 않음)를 `pRetValue`가 가리키는 정수에 추가합니다. `wchar`이 와이드 문자 null 문자(L'\0')이면 `wctomb_s`는 `pRetValue`를 1로 채웁니다. 대상 포인터 `mbchar`이 NULL이면 `wctomb_s`는 `pRetValue`에 0을 추가합니다. 현재 로캘 변환이 가져올 수 없으면 `wctomb_s` 에-1을 넣습니다 `pRetValue`합니다.  
   
- `wctomb_s`는 로캘 종속 정보가 필요한 경우 현재 로캘을 사용합니다. `_wctomb_s_l`도 이와 동일하지만 전달된 로캘을 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `wctomb_s`는 로캘 종속 정보가 필요한 경우 현재 로캘을 사용합니다. `_wctomb_s_l`도 이와 동일하지만 전달된 로캘을 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`wctomb_s`|\<stdlib.h>|  
 |`_wctomb_s_l`|\<stdlib.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 `wctomb` 함수의 동작을 보여 줍니다.  
   
 ```  

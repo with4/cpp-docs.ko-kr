@@ -1,32 +1,33 @@
 ---
-title: "pair::pair(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pair 멤버[STL/CLR]"
+title: 'pair:: pair (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::pair
+dev_langs: C++
+helpviewer_keywords: pair member [STL/CLR]
 ms.assetid: 188035f3-bd37-4b46-96dd-5ceb9a16df79
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6b2382161ae1a4acf8cb79f017a39daf51826b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# pair::pair(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-페어 개체를 생성합니다.  
+# <a name="pairpair-stlclr"></a>pair::pair(STL/CLR)
+쌍 개체를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 pair();  
@@ -35,40 +36,40 @@ pair(pair<Coll>^ right);
 pair(Value1 val1, Value2 val2);  
 ```  
   
-#### 매개 변수  
- right  
- 스토어에 페어합니다.  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
+ 저장할 쌍입니다.  
   
  val1  
- 스토어의 첫번째 값.  
+ 첫 번째 저장할 값입니다.  
   
- val2  
- 스토어의 두번째값입니다.  
+ v a l 2  
+ 두 번째 저장할 값입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
  생성자:  
   
  `pair();`  
   
- 기본 구성된 값과 저장된 페어를 초기화합니다.  
+ 기본 생성 값으로 저장된 쌍을 초기화합니다.  
   
  생성자:  
   
  `pair(pair<Value1, Value2>% right);`  
   
- 스토어된 페어를 `right``.`[pair::first](../dotnet/pair-first-stl-clr.md) 와 `right``.`[pair::second](../dotnet/pair-second-stl-clr.md)와 함께 초기화합니다.  
+ 저장 된 쌍을 이루는 초기화 `right.` [pair:: first (STL/CLR)](../dotnet/pair-first-stl-clr.md) 및 `right.` [pair:: second (STL/CLR)](../dotnet/pair-second-stl-clr.md)합니다.  
   
  `pair(pair<Value1, Value2>^ right);`  
   
- 스토어된 페어를 `right``->`[pair::first](../dotnet/pair-first-stl-clr.md) 와 `right``>`[pair::second](../dotnet/pair-second-stl-clr.md)와 함께 초기화합니다.  
+ 저장 된 쌍을 이루는 초기화 `right->` [pair:: first (STL/CLR)](../dotnet/pair-first-stl-clr.md) 및 `right>` [pair:: second (STL/CLR)](../dotnet/pair-second-stl-clr.md)합니다.  
   
  생성자:  
   
  `pair(Value1 val1, Value2 val2);`  
   
- 스토어된 페어를 `val1` 및 `val2`과 초기화합니다.  
+ 와 저장된 쌍으로 초기화 `val1` 및 `val2`합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_pair_construct.cpp   
@@ -99,14 +100,17 @@ int main()
   
 ```  
   
-  **\[\\0, 0\]**  
-**\[x, 3\]**  
-**\[x, 3\]**  
-**\[x, 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/utility\>  
+```Output  
+[\0, 0]  
+[x, 3]  
+[x, 3]  
+[x, 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/유틸리티 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [pair](../dotnet/pair-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [pair(STL/CLR)](../dotnet/pair-stl-clr.md)

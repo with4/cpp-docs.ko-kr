@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7995415bf74dabab43a86495630f77bd015d2bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3d2e722ce96ff7a2f1add779377079a0eaecfc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-dynamic-accessors"></a>동적 접근자 사용
 동적 접근자를 사용 하는 데이터베이스 스키마 (기본 구조)의 모를 때 데이터 원본에 액세스할 수 있습니다. OLE DB 템플릿 라이브러리는이 작업을 수행할 수 있도록 몇 가지 클래스를 제공 합니다.  
@@ -30,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="using-cdynamicaccessor"></a>CDynamicAccessor를 사용 하 여  
  [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 데이터베이스 스키마 (데이터베이스의 기본 구조)의 모를 때 데이터 소스에 액세스할 수 있습니다. `CDynamicAccessor`메서드는 데이터 형식 열 이름, 수 등 열 정보를 가져옵니다. 이 열 정보를 사용 하 여 접근자를 런타임에 동적으로 만듭니다. 열 정보를 만들고이 클래스에서 관리 하는 버퍼에 저장 됩니다. 사용 하 여 버퍼에서 데이터를 가져올는 [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="code"></a>코드  
   
@@ -103,7 +106,7 @@ int main( int argc, char* argv[] )
   
  사용 하 여 `CDynamicStringAccessor` 열 정보를 가져오는 방법입니다. 이 열 정보를 사용 하 여 접근자를 런타임에 동적으로 만듭니다. 열 정보는이 클래스에서 만들고 관리 하는 버퍼에 저장 됩니다. 사용 하 여 버퍼에서 데이터를 가져올 [cdynamicstringaccessor:: Getstring](../../data/oledb/cdynamicstringaccessor-getstring.md) 사용 하 여 버퍼에 저장 하거나 [cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="code"></a>코드  
   

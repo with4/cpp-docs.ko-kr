@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8eb77bc6f99ab6b7d8ca9d51f1a7a8549d8f0c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d49ed2a56738ec784c8a1a2cc3c13239f7317270
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>등록 기관 코드 (c + + 전용)에 대 한 정적 링크가 설정
 C + + 클라이언트 등록자의 코드에 정적 링크를 만들 수 있습니다. 릴리스 빌드로 5k 약 추가 등록자의 파서를 정적으로 연결 합니다.  

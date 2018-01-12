@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f81ffa2e6b8f1dc07e409b737f76cb8e6aca5258
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c06ae1c043551bbb4ed6469ab3f87d1ed86fd92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteration-statements-c"></a>반복 문 (C++)
 반복 문을 사용하면 루프 종료 조건에 따라 문(또는 복합 문)이 0회 이상 실행됩니다. 경우는 제외의 순서를 실행 하는 경우이 명령문은 복합 문, 중 하나는 [나누기](../cpp/break-statement-cpp.md) 문 또는 [계속](../cpp/continue-statement-cpp.md) 문이 합니다.  

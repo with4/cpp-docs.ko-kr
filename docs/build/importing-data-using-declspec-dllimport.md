@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90a58f53aa713bcb2499e3fe720e78fd2e7e6383
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebbc91b9144a7fe8025a34e9c1476ab23b604c46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-data-using-declspecdllimport"></a>__declspec(dllimport)을 사용하여 데이터 가져오기
 사용 하 여 데이터의 경우 **__declspec (dllimport)** 간접 참조 계층을 제거 하는 편의 항목입니다. DLL에서 데이터를 가져올 때에 여전히 가져오기 주소 테이블을 통해 검색 해야 합니다. 하기 전에 **__declspec (dllimport)**, 즉, DLL에서 내보낸 데이터에 액세스할 때 간접 참조 수준이 강화 해야 할 기억해 야 했습니다.  

@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0dc00e20d1177de7532e0da121874476ad9fde2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4a859e455bb0c1569c401a865e9cfffbf6bdf2c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 템플릿, 특성 및 기타 구현
 ## <a name="atl-ole-db-templates"></a>ATL OLE DB 템플릿  
@@ -51,7 +54,7 @@ ms.lasthandoff: 10/24/2017
  [OLE DB 소비자 특성](../../windows/ole-db-consumer-attributes.md) OLE DB 소비자를 만들지는 편리한 방법을 제공 합니다. OLE DB 특성에 따라 코드를 삽입는 [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-reference.md) 작업 OLE DB 소비자 및 공급자를 만들려고 합니다. 특성에서 지원 되지 않습니다는 기능을 지정 해야 할 경우 코드에서 OLE DB 템플릿 특성과 함께에서 사용할 수 있습니다.  
   
 ## <a name="mfc-ole-db-classes"></a>MFC OLE DB 클래스  
- MFC 라이브러리에 클래스를 [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), 컨트롤에 데이터베이스 레코드를 표시 하는 합니다. 뷰는에 직접 연결 하는 폼 보기는 `CRowset` 개체 및 필드가 표시 됩니다는 `CRowset` 대화 상자 템플릿에 컨트롤의 개체입니다. 이동에 대 한 기본 구현을 제공 하는 첫 번째 다음, 이전 또는 마지막 레코드 및 보기에 현재 레코드를 업데이트 하기 위한 인터페이스입니다. 자세한 내용은 `COleDBRecordView`을 참조하십시오.  
+ MFC 라이브러리에 클래스를 [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), 컨트롤에 데이터베이스 레코드를 표시 하는 합니다. 뷰는에 직접 연결 하는 폼 보기는 `CRowset` 개체 및 필드가 표시 됩니다는 `CRowset` 대화 상자 템플릿에 컨트롤의 개체입니다. 이동에 대 한 기본 구현을 제공 하는 첫 번째 다음, 이전 또는 마지막 레코드 및 보기에 현재 레코드를 업데이트 하기 위한 인터페이스입니다. 자세한 내용은 `COleDBRecordView`을 참조하세요.  
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK 인터페이스  
  OLE DB 템플릿 OLE DB 기능 지원 하지 않는 경우에는 OLE DB 인터페이스를 직접 사용 해야 합니다. 자세한 내용은 참조 [OLE DB Programmer's Reference](https://msdn.microsoft.com/en-us/library/ms713643.aspx) Windows sdk에서입니다.  

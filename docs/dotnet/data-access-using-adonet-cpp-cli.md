@@ -19,18 +19,21 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f243b18b2666c21a6d83eabe35ecd6ad9df5905c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fb7d184ebdb537c02b79a412d69a4bdcaabde424
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-access-using-adonet-ccli"></a>ADO.NET을 사용하여 데이터 액세스(C++/CLI)
 ADO.NET은 데이터 액세스를 위한.NET Framework API 및 성능과 이전 데이터 액세스 솔루션에서 일치 하지 않는 사용 편의성을 제공 합니다. 이 섹션에 네이티브 형식을 마샬링하 등의 Visual c + + 사용자 고유의 ADO.NET 관련 문제 중 일부를 설명 합니다.  
   
  ADO.NET에는 공용 언어 런타임 (CLR)에서 실행 됩니다. 따라서 ADO.NET 상호 작용 하는 모든 응용 프로그램은 CLR를 대상도 해야 합니다. 그러나 의미는 아닙니다 네이티브 응용 프로그램 ADO.NET을 사용할 수 없습니다. 이 예제에서는 네이티브 코드에서 ADO.NET 데이터베이스와 상호 작용 하는 방법을 보여 줍니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: ADO.NET용 ANSI 문자열 마샬링(C++/CLI)](../dotnet/how-to-marshal-ansi-strings-for-adonet-cpp-cli.md)  
   
  [방법: ADO.NET용 BSTR 문자열 마샬링(C++/CLI)](../dotnet/how-to-marshal-bstr-strings-for-adonet-cpp-cli.md)  

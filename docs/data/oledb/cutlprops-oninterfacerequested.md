@@ -1,32 +1,33 @@
 ---
-title: "CUtlProps::OnInterfaceRequested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnInterfaceRequested 메서드"
+title: 'Cutlprops:: Oninterfacerequested | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: OnInterfaceRequested method
 ms.assetid: a5e1a879-cff3-4e01-b902-2249a152984f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c458eaf7c1e41ade5d29fa020bacfebb2b278e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps::OnInterfaceRequested
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Handles requests for an optional interface when a consumer calls a method on one of the object creation interfaces.  
+# <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
+소비자 메서드를 호출할 때 개체 중 하나에서 생성 인터페이스는 선택적 인터페이스에 대 한 요청을 처리 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,16 +36,16 @@ Handles requests for an optional interface when a consumer calls a method on one
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `riid`  
- \[in\] The IID for the requested interface.  For more details, see the description of the `riid` parameter of `ICommand::Execute` in the *OLE DB Programmer's Reference* \(in the *MDAC SDK*\).  
+ [in] 요청된 된 인터페이스에 대 한 IID입니다. 자세한 내용은 설명을 참조는 `riid` 의 매개 변수 `ICommand::Execute` 에 *OLE DB Programmer's Reference* (에 *MDAC SDK*).  
   
-## 설명  
- **OnInterfaceRequested** handles consumer requests for an optional interface when a consumer calls a method on one of the object creation interfaces \(such as **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset`, or `ICommand`\).  It sets the corresponding OLE DB property for the requested interface.  For example, if the consumer requests **IID\_IRowsetLocate**, **OnInterfaceRequested** sets the **DBPROP\_IRowsetLocate** interface.  Doing so maintains the correct state during rowset creation.  
+## <a name="remarks"></a>설명  
+ **OnInterfaceRequested** 소비자 메서드를 호출할 때 개체 중 하나에서 생성 인터페이스는 선택적 인터페이스에 대 한 소비자 요청을 처리 (예: **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset`, 또는 `ICommand`). 요청된 된 인터페이스에 대 한 해당 OLE DB 속성을 설정 합니다. 예를 들어 소비자 요청 **IID_IRowsetLocate**, **OnInterfaceRequested** 설정는 **DBPROP_IRowsetLocate** 인터페이스입니다. 이렇게 행 집합을 만드는 동안 올바른 상태를 유지 관리 합니다.  
   
- This method is called when the consumer calls **IOpenRowset::OpenRowset** or `ICommand::Execute`.  
+ 이 메서드는 소비자를 호출할 때 **iopenrowset:: Openrowset** 또는 `ICommand::Execute`합니다.  
   
- If a consumer opens an object and requests an optional interface, the provider should set the property associated with that interface to `VARIANT_TRUE`.  To allow property\-specific processing, **OnInterfaceRequested** is called before the provider's **Execute** method is called.  By default, **OnInterfaceRequested** handles the following interfaces:  
+ 소비자 개체를 엽니다 하는 선택적 인터페이스를 요청 하는 경우 공급자 해당 인터페이스를와 연결 된 속성을 설정 해야 `VARIANT_TRUE`합니다. 속성 관련 처리를 허용할지 **OnInterfaceRequested** 공급자의 이전에 호출 됩니다 **Execute** 메서드를 호출 합니다. 기본적으로 **OnInterfaceRequested** 다음 인터페이스를 처리 합니다.  
   
 -   `IRowsetLocate`  
   
@@ -56,10 +57,10 @@ Handles requests for an optional interface when a consumer calls a method on one
   
 -   `IRowsetScroll`  
   
- If you wish to handle other interfaces, override this function in your data source, session, command, or rowset class to process functions.  Your override should go through the normal set\/get properties interfaces to ensure that setting properties also sets any chained properties \(see [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)\).  
+ 다른 인터페이스를 처리 하려는 경우 프로세스 함수에 데이터 원본, 세션, 명령 또는 행 집합 클래스에이 함수를 재정의 합니다. 재정의 속성을 설정를 설정 하는 모든 연결 된 속성을 확인 하는 일반 set/get 속성 인터페이스를 통과 해야 (참조 [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CUtlProps 클래스](../../data/oledb/cutlprops-class.md)

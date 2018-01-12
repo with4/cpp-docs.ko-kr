@@ -1,58 +1,60 @@
 ---
 title: "CManualAccessor 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor"
-  - "ATL.CManualAccessor"
-  - "CManualAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CManualAccessor 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor
+- ATL.CManualAccessor
+- CManualAccessor
+dev_langs: C++
+helpviewer_keywords: CManualAccessor class
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f32046f36aefa2c19c8c364f7598a06b71d71bd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Represents an accessor type designed for advanced use.  
+# <a name="cmanualaccessor-class"></a>CManualAccessor 클래스
+고급 사용 하기 위한 접근자 유형을 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CManualAccessor : public CAccessorBase  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)|Adds a bind entry to the output columns.|  
-|[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)|Adds a parameter entry to the parameter accessor.|  
-|[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)|Allocates memory for the column bind structures and initializes the column data members.|  
-|[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)|Allocates memory for the parameter bind structures and initializes the parameter data members.|  
+|[AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)|출력 열에 바인딩 항목을 추가합니다.|  
+|[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)|매개 변수 접근자를 매개 변수 항목을 추가합니다.|  
+|[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)|Bind 구조 열에 대 한 메모리를 할당 하 고 열 데이터 멤버를 초기화 합니다.|  
+|[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)|Bind 구조는 매개 변수에 대 한 메모리를 할당 하 고 매개 변수 데이터 멤버를 초기화 합니다.|  
   
-## 설명  
- Using `CManualAccessor`, you can specify the parameter and output column binding by run\-time function calls.  
+## <a name="remarks"></a>설명  
+ 사용 하 여 `CManualAccessor`, 및 런타임 함수 호출에 의해 열 바인딩 출력 매개 변수를 지정할 수 있습니다.  
   
-## 요구 사항  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbcli.h  
   
-## 참고 항목  
- [DBViewer](../../top/visual-cpp-samples.md)   
+## <a name="see-also"></a>참고 항목  
+ [DBViewer](../../visual-cpp-samples.md)   
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 클래스](../../data/oledb/caccessor-class.md)   

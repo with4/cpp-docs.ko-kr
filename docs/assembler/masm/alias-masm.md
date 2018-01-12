@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 39f539c18ce23fb3ef9630e4bfdfca8f265beb33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59dc4fd5481b22e69153c68e94a81b2887118ebc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 **별칭** 지시문 함수에 대해 다른 이름이 만들어집니다.  이 함수에 대 한 이름을 여러 개 만들거나 링커 (LINK.exe) 이전 함수는 새 함수에 매핑할 수 있는 라이브러리를 만들 수 있습니다.  

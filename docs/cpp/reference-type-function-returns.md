@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f972664b7e7a72a5b271ecc4e3ad79c32c6cd0e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3a5d0b299b2bc38c95420515ab49eabd1268305
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-type-function-returns"></a>참조 형식 함수 반환
 참조 형식을 반환하도록 함수를 선언할 수 있습니다. 이렇게 선언하는 데에는 다음과 같은 두 가지 이유가 있습니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
  함수가 l-value로 계산되어야 하는 경우에도 참조 반환 형식이 유용할 수 있습니다. 대부분의 오버로드된 연산자, 특히 할당 연산자가 이 범주에 속합니다. 오버 로드 된 연산자에 대해서는 설명 [오버 로드 된 연산자](../cpp/operator-overloading.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `Point` 예제를 참조하십시오.  
   
 ```  

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3fa561d28ec402e631833310cdd76ecf41beef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-passing"></a>매개 변수 전달
 처음 4 개의 정수 인수 레지스터에 전달 됩니다. 정수 값은 순서 대로 왼쪽에서 오른쪽으로 RCX, RDX, R8 및 r 9에 전달 됩니다. 인수 5 이상이 스택에 전달 됩니다. 모든 인수가 레지스터에 오른쪽 맞춤 합니다. 이 작업은 수행 하는 경우 호출 수신자는 레지스터의 상위 비트를 무시할 수 있도록 수 있어야 하 고 고 레지스터의 필요한 부분에만 액세스할 수 있습니다.  

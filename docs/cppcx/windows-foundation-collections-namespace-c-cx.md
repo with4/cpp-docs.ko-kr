@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ed7868a1f9c0f5d163928c85a09577b9d6db2f37
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd6a2440ea5f3ad708fcd6f569e701e2f47f74a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 네임스페이스(C++/CX)
 C + + /cli CX Vector, VectorView, 지도 및 MapView 컬렉션 클래스 사용을 간소화 하는 함수가 있는 Windows::Foundation::Collections 네임 스페이스를 보완 합니다.  

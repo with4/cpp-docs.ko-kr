@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89be581f6e10ce5c3c7b0f92c37d165affb28844
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1f9c9a09652eb76511c7d059cc70eae3fb99ffd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="break-statement-c"></a>break 문 (C++)
 `break` 문은 가장 가까운 바깥쪽 루프 또는 표시되는 조건문의 실행을 종료합니다. 제어는 종료된 문 뒤의 문이 있는 경우 전달됩니다.  
@@ -39,7 +40,7 @@ break;
   
  중첩된 문 내의 `break` 문은 해당 문을 둘러싼 `do`, `for`, `switch` 또는 `while` 문만을 종료합니다. `return` 또는 `goto` 문을 사용하여 더 많이 중첩된 구조에서 제어를 전송할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에서는 `break` 문에서 `for` 문을 사용하는 방법을 보여 줍니다.  
   
 ```cpp  

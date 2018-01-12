@@ -28,11 +28,12 @@ caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2b43a6b08087dcaeeda7959eaadbee9c250f4de9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25d2e84bb6d336b2e530b833252b2b4a05dce4e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
 예외가 하나 이상 throw되었지만 [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) 문의 해당 `catch` 블록에서 아직 처리되지 않았음을 나타냅니다.  
@@ -51,7 +52,7 @@ bool __uncaught_exception(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |__uncaught_exception|eh.h|  
   

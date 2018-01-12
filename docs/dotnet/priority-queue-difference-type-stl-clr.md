@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::difference_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type 멤버[STL/CLR]"
+title: 'priority_queue:: difference_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 4bedce11-244c-428b-b5e2-e6bbf5674803
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a918bf5317c99fcd62854b17dad8929d3a8ad6a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::difference_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The types of a signed distance between two elements.  
+# <a name="priorityqueuedifferencetype-stlclr"></a>priority_queue::difference_type(STL/CLR)
+두 요소 사이의 부호가 있는 거리의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## 설명  
- The type describes a possibly negative element count.  
+## <a name="remarks"></a>설명  
+ 형식은 음수 수 있는 요소 수를 설명 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_priority_queue_difference_type.cpp   
@@ -74,14 +75,17 @@ int main()
   
 ```  
   
-  **c a b**  
-**pushing 2 \= \-2**  
-**popping 3 \= 3**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+ c a b  
+pushing 2 = -2  
+popping 3 = 3  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::size\_type](../dotnet/priority-queue-size-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::size_type(STL/CLR)](../dotnet/priority-queue-size-type-stl-clr.md)

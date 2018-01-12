@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1b5f7db562dc0173cda49212425b237a44c0610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f70e928c3877bf5d660231cbe2646f6cf72575e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gettzname"></a>_get_tzname
 표준 시간대 이름 또는 일광 표준 시간대 이름(DST)의 문자열 표현을 검색합니다.  
@@ -78,8 +79,8 @@ errno_t _get_tzname(
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
 |TZ 이름의 크기|`NULL`|0|0 또는 1|0|수정 안 됨|  
 |TZ 이름의 크기|any|> 0|0 또는 1|0|TZ 이름|  
-|수정 안 됨|`NULL`|> 0|모두|`EINVAL`|수정 안 됨|  
-|수정 안 됨|any|0|모두|`EINVAL`|수정 안 됨|  
+|수정 안 됨|`NULL`|> 0|any|`EINVAL`|수정 안 됨|  
+|수정 안 됨|any|0|any|`EINVAL`|수정 안 됨|  
 |수정 안 됨|any|> 0|> 1|`EINVAL`|수정 안 됨|  
   
 ## <a name="remarks"></a>설명  
@@ -97,7 +98,7 @@ errno_t _get_tzname(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_get_tzname`|\<time.h>|  
   

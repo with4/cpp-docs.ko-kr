@@ -16,20 +16,23 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e7938022bfe2ba1a8f97420a217590de659d9e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ed069e1f9d7effa686cd572bd505a41dcf60c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-consume-a-c-indexer-ccli"></a>방법: C# 인덱서 사용(C++/CLI)
 Visual c + + 인덱서가; 포함 되어 있지 않습니다. 인덱싱된 속성에 해당 합니다. C# 인덱서를 사용 하려면 인덱싱된 속성 처럼 인덱서를 액세스 합니다.  
   
  인덱서에 대 한 자세한 내용은 다음을 참조 합니다.  
   
--   [인덱서](https://msdn.microsoft.com/library/6x16t2tx.aspx)  
+-   [인덱서](/dotnet/csharp/programming-guide/indexers/index)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 C# 프로그램 인덱서를 정의합니다.  
   
 ```  
@@ -68,7 +71,7 @@ public class MainClass {
 */  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 Visual c + + 프로그램에서는 인덱서를 사용 합니다.  
   
 ```  

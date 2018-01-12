@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _beginthread
 - beginthreadex
 - _beginthreadex
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _beginthread function
 - threading [C++], creating threads
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c556e6460f1a39bab23f2612cbf820e284d7605
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 스레드를 만듭니다.  
@@ -121,7 +105,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
   
  `startaddress`이 NULL인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이러한 함수는 `errno` 를 `EINVAL` 로 설정하고 -1을 반환합니다.  
   
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
  `uintptr_t`에 대한 자세한 내용은 [표준 형식](../../c-runtime-library/standard-types.md)을 참조하세요.  
   
@@ -147,9 +131,9 @@ uintptr_t _beginthreadex( // MANAGED CODE
  `_endthread` 는 스레드 핸들을 자동으로 닫지만, `_endthreadex` 는 그렇지 않습니다. 따라서 `_beginthread` 및 `_endthread`를 사용할 때는 Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API를 호출해서 스레드 핸들을 명시적으로 닫지 마세요. 이 동작은 Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) API와 다릅니다.  
   
 > [!NOTE]
->  Libcmt.lib로 연결된 실행 파일의 경우 런타임 시스템이 할당된 리소스를 회수할 수 있도록 Win32 `ExitThread` API를 호출하지 마세요. `_endthread` 및 `_endthreadex` 는 할당된 스레드 리소스를 회수한 다음 `ExitThread`를 호출합니다.  
+>  Libcmt.lib로 연결된 실행 파일의 경우 런타임 시스템이 할당된 리소스를 회수할 수 있도록 Win32 `ExitThread` API를 호출하지 마세요. `_endthread` 및 `_endthreadex`는 할당된 스레드 리소스를 회수한 다음 `ExitThread`를 호출합니다.  
   
- `_beginthread` 또는 `_beginthreadex` 가 호출되면 운영 체제가 스택 할당을 처리합니다. 스레드 스택의 주소를 이러한 함수 중 하나에 전달할 필요가 없습니다. 또한 `stack_size` 인수는 0일 수 있습니다. 이 경우 운영 체제는 주 스레드에 지정된 스택과 동일한 값을 사용합니다.  
+ `_beginthread` 또는 `_beginthreadex`가 호출되면 운영 체제가 스택 할당을 처리합니다. 스레드 스택의 주소를 이러한 함수 중 하나에 전달할 필요가 없습니다. 또한 `stack_size` 인수는 0일 수 있습니다. 이 경우 운영 체제는 주 스레드에 지정된 스택과 동일한 값을 사용합니다.  
   
  `arglist` 는 새로 만든 스레드에 전달되는 매개 변수입니다. 일반적으로 문자열과 같은 데이터 항목의 주소입니다. 필요 없을 경우`arglist` 가 NULL일 수 있지만 `_beginthread` 및 `_beginthreadex` 에는 새로운 스레드로 전달할 값이 있어야 합니다. 임의의 스레드가 `abort`, `exit`, `_exit`또는 `ExitProcess`를 호출하면 모든 스레드가 종료됩니다.  
   
@@ -159,7 +143,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_beginthread`|\<process.h>|  
 |`_beginthreadex`|\<process.h>|  
@@ -167,11 +151,11 @@ uintptr_t _beginthreadex( // MANAGED CODE
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
 ## <a name="libraries"></a>라이브러리  
- 다중 스레드 버전의 유일한 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md) 입니다.  
+ 다중 스레드 버전의 유일한 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
  `_beginthread` 또는 `_beginthreadex`를 사용하려면 응용 프로그램이 다중 스레드 C 런타임 라이브러리 중 하나와 링크로 연결해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `_beginthread` 및 `_endthread`를 사용합니다.  
   
 ```  
@@ -290,7 +274,7 @@ void Bounce( void * parg )
   
  아무 키나 눌러 샘플 응용 프로그램을 종료합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플 코드는 동기화 API `_beginthreadex` WaitForSingleObject [와 함께](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx)에 의해 반환되는 스레드 핸들 사용 방법을 보여 줍니다. 주 스레드는 두 번째 스레드가 종료할 때까지 기다린 다음 계속합니다. 두 번째 스레드가 `_endthreadex`를 호출하면 스레드 개체가 신호를 받은 상태로 전환됩니다. 그러면 기본 스레드를 계속 실행할 수 있습니다. `_beginthread` 는 신호된 상태로 설정되기 전에 스레드 개체를 소멸하는 `_endthread`을 호출하기 때문에 이 작업은 `_endthread` 및 `CloseHandle`로 수행할 수 없습니다.  
   
 ```  

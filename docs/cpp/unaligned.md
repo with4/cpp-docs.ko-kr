@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c148803da11ea85857cb77753d2e6af6a6ae22e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da662cf9cbe17539381766d37255e63d958fb7b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unaligned"></a>__unaligned
 포인터를 `__unaligned` 한정자로 선언하는 경우, 컴파일러는 포인터가 정렬되지 않은 데이터의 주소 지정한다고 가정합니다. 따라서 IPF(Itanium Processor Family) 컴퓨터를 대상으로 하는 응용 프로그램의 경우, 컴파일러는 정렬되지 않은 데이터를 한 번에 1바이트씩 읽는 코드를 생성합니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [구조체 맞춤 예제](../build/examples-of-structure-alignment.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // unaligned_keyword.cpp  

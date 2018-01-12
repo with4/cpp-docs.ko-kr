@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86f3f27d06b353d0e34a62b636dc7ae0313a462c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1609b713fef253e8beab270ee2ed048466da6504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="failure-hooks"></a>오류 후크
 오류 후크를 동일한 방식으로 사용 하 여 [알림 후크](../../build/reference/notification-hooks.md)합니다. 처리 되도록 적합 한 값을 반환 하려면 후크 라우팅 요구 (HINSTANCE 또는 FARPROC) 계속할 수 또는 0을 예외가 발생 하도록 합니다.  

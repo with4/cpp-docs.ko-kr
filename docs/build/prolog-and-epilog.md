@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prolog-and-epilog"></a>프롤로그 및 에필로그
 스택 공간이 할당 되는 모든 함수, 호출 함수 다른 비휘발성 레지스터를 저장 하거나 예외 처리를 사용 하 여 해당 주소 한계 각 함수의 테이블 항목에 연결 된 해제 데이터에서 설명 하는 프롤로그 있어야 합니다 ( 참조[예외 처리 (x64)](../build/exception-handling-x64.md)). 프롤로그 집 주소에는 레지스터, 필요한 경우 비휘발성 레지스터를 스택에 푸시합니다. 인수를 저장, 지역 및, 임시 개체에 대 한 스택 고정된 부분을 할당 및 필요에 따라 프레임 포인터를 설정 합니다. 연결 된 해제 데이터 프롤로그의 동작을 설명 하 고 프롤로그 코드의 효과 취소 하는 데 필요한 정보를 제공 해야 합니다.  
@@ -60,7 +61,7 @@ lea      R13, 128[RSP]
   
  에필로그 코드에서 예외 및 인터럽트를 통해 안정적으로 해제를 엄격한 집합 해제 코드에 대 한 규칙을 따라야 합니다. 그러면 감소의 각 에필로그를 설명 하기 위해 추가 데이터가 필요 하므로 해제 데이터입니다. 대신, 해제 코드는 에필로그에서는 에필로그를 식별 하는 코드 스트림을 통해 앞으로 검색 하 여 실행 되 고 있음을 확인할 수 있습니다.  
   
- 없는 프레임 포인터를 사용 하는 경우 함수를 다음 에필로그 먼저 할당을 취소 해야는 스택의 고정된 부분 비휘발성 레지스터를 팝 및 제어 호출 하는 함수에 반환 됩니다. 예를 들면 다음과 같습니다.  
+ 없는 프레임 포인터를 사용 하는 경우 함수를 다음 에필로그 먼저 할당을 취소 해야는 스택의 고정된 부분 비휘발성 레지스터를 팝 및 제어 호출 하는 함수에 반환 됩니다. 예를 들어 개체에 적용된  
   
 ```  
 add      RSP, fixed-allocation-size  

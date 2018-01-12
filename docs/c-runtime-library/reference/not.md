@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 62a6cba9111bc5c60ad286b3409ff76257fc4cfc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 211934bba050500ab945e1b7221d9adba841c2ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="not"></a>not
 !에 대한 대안 연산자와 함께 사용되었습니다.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  매크로가 ! 연산자를 생성합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // iso646_not.cpp  

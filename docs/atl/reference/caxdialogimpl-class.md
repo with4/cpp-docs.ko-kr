@@ -28,11 +28,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f11d86eda98696ea85899817dbecc276d5533a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2db97c0de9f262936212cf7f38abddf7c91eb5a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 클래스
 이 클래스는 ActiveX 컨트롤을 호스팅하는 (모달 및 모덜리스) 대화 상자를 구현합니다.  
@@ -71,7 +72,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAxDialogImpl::m_bModal](#m_bmodal)|디버그에만 존재 하는 변수 빌드되고 모달 대화 상자를 true로 설정 됩니다.|  
   

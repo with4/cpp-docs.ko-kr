@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4895e7b1cd0e38b33c1efe66e9070073403ee01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae16adcc6743c7e35aae2a4121819a6df50cf4f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-dual-interface"></a>이중 인터페이스를 구현합니다.
 사용 하 여 이중 인터페이스를 구현할 수는 [IDispatchImpl](../atl/reference/idispatchimpl-class.md) 클래스의 기본 구현을 제공 하는 `IDispatch` 이중 인터페이스에서 메서드. 자세한 내용은 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)을 참조하십시오.  

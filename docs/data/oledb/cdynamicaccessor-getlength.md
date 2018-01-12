@@ -1,71 +1,73 @@
 ---
-title: "CDynamicAccessor::GetLength | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor.GetLength"
-  - "ATL.CDynamicAccessor.GetLength"
-  - "CDynamicAccessor::GetLength"
-  - "ATL::CDynamicAccessor::GetLength"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetLength 메서드"
+title: 'Cdynamicaccessor:: Getlength | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor.GetLength
+- ATL.CDynamicAccessor.GetLength
+- CDynamicAccessor::GetLength
+- ATL::CDynamicAccessor::GetLength
+dev_langs: C++
+helpviewer_keywords: GetLength method
 ms.assetid: 3ae8983b-b267-4cf9-bfc0-3e191f79e646
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 24a22348b873967a860c65edb5c4f6d46ab101ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetLength
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Retrieves the length of the specified column.  
+# <a name="cdynamicaccessorgetlength"></a>CDynamicAccessor::GetLength
+지정 된 열의 길이 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      bool GetLength(   
-   DBORDINAL nColumn,   
-   DBLENGTH* pLength    
+      bool GetLength(   
+   DBORDINAL nColumn,   
+   DBLENGTH* pLength    
 ) const throw( );  
-bool GetLength(   
-   const CHAR* pColumnName,   
-   DBLENGTH* pLength    
+bool GetLength(   
+   const CHAR* pColumnName,   
+   DBLENGTH* pLength    
 ) const throw( );  
-bool GetLength(   
-   const WCHAR* pColumnName,   
-   DBLENGTH* pLength    
+bool GetLength(   
+   const WCHAR* pColumnName,   
+   DBLENGTH* pLength    
 ) const throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nColumn`  
- \[in\] The column number.  Column numbers start with 1.  A value of 0 refers to the bookmark column, if any.  
+ [in] 열 번호입니다. 열 번호는 1부터 시작 합니다. 0 값이 있는 경우 책갈피 열을 참조 합니다.  
   
  `pColumnName`  
- \[in\] A pointer to a character string containing the column name.  
+ [in] 열 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
  `pLength`  
- \[out\] A pointer to the integer containing the length of the column in bytes.  
+ [out] 바이트의 열 길이 포함 하는 정수에 대 한 포인터입니다.  
   
-## 반환 값  
- Returns **true** if the specified column is found.  Otherwise, this function returns **false**.  
+## <a name="return-value"></a>반환 값  
+ 반환 **true** 지정된 된 열이 있으면 합니다. 그렇지 않으면이 함수가 반환 **false**합니다.  
   
-## 설명  
- The first override takes the column number, and the second and third overrides take the column name in ANSI or Unicode format, respectively.  
+## <a name="remarks"></a>설명  
+ 첫 번째 재정의 열 번호를 사용 하 고 두 번째 및 세 번째 재정의 ANSI 또는 유니코드 형식으로 각각 열 이름의 수행 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicAccessor::SetLength](../../data/oledb/cdynamicaccessor-setlength.md)

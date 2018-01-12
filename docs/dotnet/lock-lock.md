@@ -1,35 +1,37 @@
 ---
-title: "lock::lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::lock"
-  - "lock.lock"
-  - "msclr.lock.lock"
-  - "msclr::lock::lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "잠금 생성자"
+title: lock::lock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::lock
+- lock.lock
+- msclr.lock.lock
+- msclr::lock::lock
+dev_langs: C++
+helpviewer_keywords: lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# lock::lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Constructs a `lock` object, optionally waiting to acquire the lock forever, for a specified amount of time, or not at all.  
+# <a name="locklock"></a>lock::lock
+생성 한 `lock` 시간의 되거나 전혀 지정된 된 시간에 대 한 잠금을 영원히 획득 하려고 대기 하는 선택적 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class T> lock(  
@@ -49,27 +51,27 @@ template<class T> lock(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_object`  
- 잠글 개체입니다.  
+ 개체를 잠글 수입니다.  
   
  `_timeout`  
- Timeout value in milliseconds or as a <xref:System.TimeSpan>.  
+ 제한 시간 값 (밀리초) 또는 <xref:System.TimeSpan>합니다.  
   
-## 예외  
- Throws <xref:System.ApplicationException> if lock acquisition does not occur before timeout.  
+## <a name="exceptions"></a>예외  
+ Throw <xref:System.ApplicationException> 잠금 획득 제한 시간 전에 발생 하지 않습니다.  
   
-## 설명  
- The first three forms of the constructor attempt to acquire a lock on `_object` within the specified timeout period \(or <xref:System.Threading.Timeout.Infinite> if none is specified\).  
+## <a name="remarks"></a>설명  
+ 생성자에는 처음 세 가지 시도 대 한 잠금을 얻기 위해 `_object` 지정된 된 제한 시간 내에서 (또는 <xref:System.Threading.Timeout.Infinite> 지정 되지 않은 경우).  
   
- The fourth form of the constructor does not acquire a lock on `_object`.  `lock_later` is a member of the [lock\_when 열거형](../dotnet/lock-when-enum.md).  Use [lock::acquire](../dotnet/lock-acquire.md) or [lock::try\_acquire](../dotnet/lock-try-acquire.md) to acquire the lock in this case.  
+ 네 번째 형식의 생성자에 잠금을 획득 하지 `_object`합니다. `lock_later`구성원은 [lock_when 열거형](../dotnet/lock-when-enum.md)합니다. 사용 하 여 [lock::acquire](../dotnet/lock-acquire.md) 또는 [lock::try_acquire](../dotnet/lock-try-acquire.md) 이 경우에 잠금을 획득 하려고 합니다.  
   
- The lock will automatically be released when the destructor is called.  
+ 소멸자가 호출 되는 경우에 자동으로 잠금이 해제 됩니다.  
   
- `_object`가 <xref:System.Threading.ReaderWriterLock>인 경우  If it is, a compiler error will result.  
+ `_object`가 <xref:System.Threading.ReaderWriterLock>이 될 수 없는 경우  인 경우 컴파일러 오류가 발생 합니다.  
   
-## 예제  
- This example uses a single instance of a class across multiple threads.  The class uses a lock on itself to ensure that accesses to its internal data are consistent for each thread.  The main application thread uses a lock on the same instance of the class to periodically check to see if any worker threads still exist, and waits to exit until all worker threads have completed their tasks.  
+## <a name="example"></a>예  
+ 이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스를 사용 하 여 잠금을 자체에서 내부 데이터에 대 한 액세스가 각 스레드에 대해 일관적인 지 확인 합니다.  기본 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드 여전히 존재 하며, 해당 작업을 완료 될 때까지 모든 작업자 스레드가 끝나기를 대기 하는 클래스의 동일한 인스턴스에 잠금을 사용 합니다.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -143,24 +145,27 @@ int main() {
 }  
 ```  
   
-  **In thread 3, Counter \= 0**  
-**In thread 3, Counter \= 10**  
-**In thread 5, Counter \= 0**  
-**In thread 5, Counter \= 10**  
-**In thread 7, Counter \= 0**  
-**In thread 7, Counter \= 10**  
-**In thread 4, Counter \= 0**  
-**In thread 4, Counter \= 10**  
-**In thread 6, Counter \= 0**  
-**In thread 6, Counter \= 10**  
-**All threads completed.**   
-## 요구 사항  
- **Header file** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [lock 멤버](../dotnet/lock-members.md)   
- [lock::~lock](../dotnet/lock-tilde-lock.md)   
+ [lock:: ~ 잠금](../dotnet/lock-tilde-lock.md)   
  [lock::acquire](../dotnet/lock-acquire.md)   
- [lock::try\_acquire](../dotnet/lock-try-acquire.md)
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

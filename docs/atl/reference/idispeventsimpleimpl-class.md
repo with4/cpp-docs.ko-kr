@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,41 +18,25 @@ f1_keywords:
 - ATLCOM/ATL::IDispEventSimpleImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispEventSimpleImpl::Invoke
 - ATLCOM/ATL::IDispEventSimpleImpl::Unadvise
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDispEventSimpleImpl class
+dev_langs: C++
+helpviewer_keywords: IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 392e8a8d8d38b0eaacce4ab013c46476516f46f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f8a5b3098961af4f3f9262cdc4c99dbe80b4ac7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl 클래스
-이 클래스의 구현을 제공는 `IDispatch` 메서드 형식 라이브러리에서 형식 정보를 가져오지 않고 합니다.  
+이 클래스의 구현을 제공는 `IDispatch` 형식 라이브러리에서 형식 정보를 가져오지 않고 메서드.  
   
 > [!IMPORTANT]
->  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +47,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
   
 #### <a name="parameters"></a>매개 변수  
  `nID`  
- 원본 개체에 대 한 고유 식별자입니다. 때 `IDispEventSimpleImpl` 의 기본 클래스 복합 컨트롤에 대 한이 매개 변수에 대 한 원하는 포함 된 컨트롤의 리소스 ID를 사용 합니다. 다른 경우에는 임의의 양의 정수를 사용 합니다.  
+ 원본 개체에 대 한 고유 식별자입니다. 때 `IDispEventSimpleImpl` 의 기본 클래스에서 합성 컨트롤에 대 한이 매개 변수에 대 한 원하는 포함 된 컨트롤의 리소스 ID를 사용 합니다. 다른 경우에는 임의의 양의 정수를 사용 합니다.  
   
  `T`  
  사용자의 클래스에서 파생 된 `IDispEventSimpleImpl`합니다.  
@@ -87,7 +70,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 |[IDispEventSimpleImpl::Invoke](#invoke)|이벤트 처리기 호출 나열 이벤트 싱크 맵.|  
 |[IDispEventSimpleImpl::Unadvise](#unadvise)|기본 이벤트 소스와의 연결이 끊어집니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `IDispEventSimpleImpl`해당 인터페이스의 모든 메서드/이벤트에 대 한 구현 코드 제공할 필요 없이 이벤트 인터페이스를 구현 방법을 제공 합니다. `IDispEventSimpleImpl`구현을 제공는 `IDispatch` 메서드. 처리에 관심이 있는 이벤트에 대 한 구현을 제공 하기만 하면 됩니다.  
   
  `IDispEventSimpleImpl`적절 한 처리기 함수에 경로 이벤트 하려면 클래스에서 이벤트 싱크 맵와 함께 작동 합니다. 이 클래스를 사용 합니다.  
@@ -105,7 +88,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
  **IDispEventSimplImpl** 와 동일한 기능을 제공 [IDispEventImpl](../../atl/reference/idispeventimpl-class.md)를 제외한 형식 라이브러리에서 인터페이스에 대 한 형식 정보를 가져오지 않습니다. 마법사 코드의 경우에 기반으로 생성 `IDispEventImpl`, 사용할 수 있지만 `IDispEventSimpleImpl` 코드를 직접 추가 하 여 합니다. 사용 하 여 `IDispEventSimpleImpl` 이벤트 인터페이스를 설명 하는 형식 라이브러리 또는 형식 라이브러리를 사용 하 여 연관 된 오버 헤드를 방지 하려면 하지 않는 경우.  
   
 > [!NOTE]
-> `IDispEventImpl`및 `IDispEventSimpleImpl` 의 자체 구현을 제공 **iunknown:: Queryinterface** 각 활성화 `IDispEventImpl` 또는 `IDispEventSimpleImpl` 기본 클래스 기본 COM 개체의 클래스 멤버에 대 한 직접 액세스를 허용 하면서 별도 COM id 역할을 합니다.  
+> `IDispEventImpl`및 `IDispEventSimpleImpl` 의 자체 구현을 제공 **iunknown:: Queryinterface** 각 활성화 `IDispEventImpl` 또는 `IDispEventSimpleImpl` 기본 클래스 멤버에 대 한 직접 액세스를 허용 하면서 역할을 별도 COM id 클래스 기본 COM 개체입니다.  
   
  ActiveX 이벤트 싱크만 지원 형식의 반환 값 HRESULT 또는 이벤트 처리기 메서드에서; void CE ATL 구현 다른 모든 반환 값 지원 되지 않으며 해당 동작이 정의 되지 않습니다.  
   
@@ -185,7 +168,7 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 ### <a name="return-value"></a>반환 값  
  `S_OK`또는 모든 오류 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  연결이 끊어지면 이벤트 더 이상 이벤트 싱크 맵에 나열 된 처리기 함수에 라우팅할 수 없습니다.  
   
 > [!NOTE]
@@ -205,8 +188,8 @@ STDMETHOD(GetIDsOfNames)(
     DISPID* /* rgdispid */);
 ```  
   
-### <a name="remarks"></a>주의  
- 참조 [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>설명  
+ 참조 [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) in the Windows SDK입니다.  
   
 ##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
  이 구현 **IDispatch::GetTypeInfo** 반환 **E_NOTIMPL**합니다.  
@@ -219,7 +202,7 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>설명  
- 참조 [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ 참조 [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) in the Windows SDK입니다.  
   
 ##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
  이 구현 **IDispatch::GetTypeInfoCount** 반환 **E_NOTIMPL**합니다.  
@@ -228,8 +211,8 @@ STDMETHOD(GetTypeInfo)(
 STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ```  
   
-### <a name="remarks"></a>주의  
- 참조 [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>설명  
+ 참조 [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) in the Windows SDK입니다.  
   
 ##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
  이 구현 **idispatch:: Invoke** 이벤트 처리기 나열 이벤트 싱크 맵 호출 합니다.  
@@ -263,7 +246,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 ### <a name="return-value"></a>반환 값  
  `S_OK`또는 모든 오류 `HRESULT` 값입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  연결이 끊어지면 이벤트 더 이상 이벤트 싱크 맵에 나열 된 처리기 함수에 라우팅할 수 없습니다.  
   
 > [!NOTE]
@@ -279,4 +262,3 @@ HRESULT Unadvise(IUnknown* pUnk);
  [IDispEventImpl 클래스](../../atl/reference/idispeventimpl-class.md)   
  [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

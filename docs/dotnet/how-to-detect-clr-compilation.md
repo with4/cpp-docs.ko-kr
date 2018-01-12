@@ -1,33 +1,36 @@
 ---
-title: "방법: /clr 컴파일 감지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 컴파일러 옵션[C++], 사용 감지"
-  - "컴파일, /clr 감지"
+title: "방법:-clr 컴파일 감지 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- compilation, detecting /clr
+- /clr compiler option [C++], detecting use of
 ms.assetid: a9310045-4810-4637-a64a-0b31a08791c1
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 51fa6b5e222b980bdf3a8757434f1caaed0085c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: /clr 컴파일 감지
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`_MANAGED` 또는 `_M_CEE` 매크로를 사용하면 **\/clr**를 사용하여 모듈을 컴파일했는지 확인할 수 있습니다.  자세한 내용은 [\/clr\(공용 언어 런타임 컴파일\)](../build/reference/clr-common-language-runtime-compilation.md)을 참조하십시오.  
+# <a name="how-to-detect-clr-compilation"></a>방법: /clr 컴파일 감지
+사용 하 여는 `_MANAGED` 또는 `_M_CEE` 모듈 컴파일 되었는지 확인 하는 매크로 **/clr**합니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.  
   
- 매크로에 대한 자세한 내용은 [미리 정의된 매크로](../preprocessor/predefined-macros.md)를 참조하십시오.  
+ 매크로 대 한 자세한 내용은 참조 [미리 정의 된 매크로](../preprocessor/predefined-macros.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // detect_CLR_compilation.cpp  
@@ -43,5 +46,5 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

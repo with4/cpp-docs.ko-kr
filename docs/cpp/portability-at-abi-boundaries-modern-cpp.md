@@ -1,0 +1,46 @@
+---
+title: "(최신 c + +) ABI 경계의 이식성 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 06cb6c97580b4c4c9a6c961cb76f2c4d84d841ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
+---
+# <a name="portability-at-abi-boundaries-modern-c"></a>ABI 경계의 이식성(최신 C++)
+이진 인터페이스 경계에서 충분히 이식 가능 형식 및 규칙을 사용 합니다. "노트북" 형식이 C 기본 제공 형식 또는 C만 기본 제공 형식을 포함 하는 구조체입니다. 클래스 형식 호출자와 호출 수신자에 동의 레이아웃 규칙 등을 호출 하는 경우에 사용할 수 있습니다. 이 둘 다 동일한 컴파일러 및 컴파일러 설정을 사용 하 여 컴파일된만 가능 합니다.  
+  
+## <a name="how-to-flatten-a-class-for-c-portability"></a>C 이식성에 대 한 클래스를 평면화 하는 방법  
+ 호출자의 다른 컴파일러/언어를 사용 하 여 컴파일할 수 있습니다 때 다음 "병합" 하는 **extern "C"** 특정 호출 규칙을 사용 하 여 API:  
+  
+```cpp  
+// class widget {  
+//   widget();  
+//   ~widget();  
+//   double method( int, gadget& );  
+// };  
+extern "C" {        // functions using explicit "this"  
+   struct widget;   // opaque type (forward declaration only)  
+   widget* STDCALL widget_create();      // constructor creates new "this"  
+   void STDCALL widget_destroy(widget*); // destructor consumes "this"  
+   double STDCALL widget_method(widget*, int, gadget*); // method uses "this"  
+}  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)

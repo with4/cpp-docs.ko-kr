@@ -51,11 +51,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0cada5532bdaeec4a36e7b9790d930ae91d2ba64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9708c23fc76095a591a2eceafcb875ce173383ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 임시 파일을 만드는 데 사용할 수 있는 이름을 생성합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [tmpnam_s, _wtmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)를 참조하세요.  
@@ -110,11 +111,11 @@ wchar_t *_wtmpnam(
   
  `_tempnam`에서 반환하는 이름은 `prefix`과 순차 번호가 연결된 형태입니다. 이 번호는 지정된 디렉터리에 대해 고유한 파일 이름을 만들기 위해 결합됩니다. `_tempnam`은 확장명이 없는 파일 이름을 생성합니다. `_tempnam`은 [malloc](../../c-runtime-library/reference/malloc.md)를 사용하여 파일 이름을 위한 공간을 할당합니다. 프로그램은 이 공간이 더 이상 필요하지 않으면 해제합니다.  
   
- `_tempnam` 및 `tmpnam`은 운영 체제에서 가져온 OEM 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하여 멀티바이트 문자열 인수를 자동으로 적절히 처리합니다. `_wtempnam`은 `_tempnam`의 와이드 문자 버전이고, `_wtempnam`의 인수와 반환 값은 와이드 문자열입니다. `_wtempnam` 및 `_tempnam`은 동일하게 작동합니다. 단, `_wtempnam`은 멀티바이트 문자열을 처리하지 않습니다. `_wtmpnam`는 `tmpnam`의 와이드 문자 버전이고, `_wtmpnam`의 인수와 반환 값은 와이드 문자 문자열입니다. `_wtmpnam` 및 `tmpnam`은 동일하게 작동합니다. 단, `_wtmpnam`은 멀티바이트 문자열을 처리하지 않습니다.  
+ `_tempnam` 및 `tmpnam`은 운영 체제에서 가져온 OEM 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하여 멀티바이트 문자열 인수를 자동으로 적절히 처리합니다. `_wtempnam`은 `_tempnam`의 와이드 문자 버전이고, `_wtempnam`의 인수와 반환 값은 와이드 문자열입니다. `_wtempnam` 및 `_tempnam`는 동일하게 작동합니다. 단, `_wtempnam`는 멀티바이트 문자열을 처리하지 않습니다. `_wtmpnam`는 `tmpnam`의 와이드 문자 버전이고, `_wtmpnam`의 인수와 반환 값은 와이드 문자 문자열입니다. `_wtmpnam` 및 `tmpnam`은 동일하게 작동합니다. 단, `_wtmpnam`은 멀티바이트 문자열을 처리하지 않습니다.  
   
  `_DEBUG` 및 `_CRTDBG_MAP_ALLOC`를 정의하는 경우 `_tempnam` 및 `_wtempnam`은 [_tempnam_dbg 및 _wtempnam_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md) 호출로 바뀝니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -123,15 +124,15 @@ wchar_t *_wtmpnam(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_tempnam`|\<stdio.h>|  
 |`_wtempnam`, `_wtmpnam`|\<stdio.h> 또는 \<wchar.h>|  
 |`tmpnam`|\<stdio.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_tempnam.c  

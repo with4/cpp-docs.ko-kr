@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f8da63a1b1ee8734a6e767acbe4a6a2f2d304f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f8d8f0903c328ce270a7ce9afe82f3603fb2054
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequepushback-stlclr"></a>deque::push_back(STL/CLR)
 새 마지막 요소를 추가 합니다.  
@@ -33,7 +36,7 @@ void push_back(value_type val);
 ## <a name="remarks"></a>설명  
  멤버 함수는 값을 가진 요소를 삽입 `val` 제어 된 시퀀스의 끝입니다. Deque에 다른 요소를 추가 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_deque_push_back.cpp   

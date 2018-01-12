@@ -1,49 +1,50 @@
 ---
 title: "방법: 릴리스 빌드 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "디버깅[C++], 릴리스 빌드"
-  - "릴리스 빌드, 디버깅"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- debugging [C++], release builds
+- release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 31113d9a5935536ac10b22c7b5f5af27b0d29970
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: 릴리스 빌드 디버깅
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-응용 프로그램의 릴리스 빌드를 디버깅할 수 있습니다.  
+# <a name="how-to-debug-a-release-build"></a>방법: 릴리스 빌드 디버깅
+응용 프로그램의 릴리스 빌드를 디버그할 수 있습니다.  
   
-### 릴리스 빌드를 디버깅하려면  
+### <a name="to-debug-a-release-build"></a>릴리스 빌드를 디버깅 하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [프로젝트 속성 사용](../../ide/working-with-project-properties.md)를 참조하십시오.  
+1.  열기는 **속성 페이지** 프로젝트에 대 한 대화 상자. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 노드를 클릭합니다.  **디버깅 정보 형식**을 [C7 호환\(\/Z7\)](../../build/reference/z7-zi-zi-debug-information-format.md) 또는 **프로그램 데이터베이스\(\/Zi\)**로 설정합니다.  
+2.  클릭는 **C/c + +** 노드. 설정 **디버깅 정보 형식** 를 [C7 호환 되는 (/ Z7)](../../build/reference/z7-zi-zi-debug-information-format.md) 또는 **프로그램 데이터베이스 (/Zi)**합니다.  
   
-3.  **링커**를 확장하고 **일반** 노드를 클릭합니다.  **증분 링크 사용**을 [아니요\(\/INCREMENTAL:NO\)](../../build/reference/incremental-link-incrementally.md)로 설정합니다.  
+3.  확장 **링커** 클릭는 **일반** 노드. 설정 **증분 링크 사용** 를 [아니요 (/ /INCREMENTAL: NO)](../../build/reference/incremental-link-incrementally.md)합니다.  
   
-4.  **디버깅** 노드를 선택합니다.  **디버그 정보 생성**을 [예\(\/DEBUG\)](../../build/reference/debug-generate-debug-info.md)로 설정합니다.  
+4.  선택 된 **디버깅** 노드. 설정 **디버그 정보 생성** 를 [예 (/debug)](../../build/reference/debug-generate-debug-info.md)합니다.  
   
-5.  **최적화** 노드를 선택합니다.  **참조**를 [\/OPT:REF](../../build/reference/opt-optimizations.md)로 설정하고 **COMDAT 정리 사용**을 [\/OPT:ICF](../../build/reference/opt-optimizations.md)로 설정합니다.  
+5.  선택 된 **최적화** 노드. 설정 **참조** 를 [/opt: ref](../../build/reference/opt-optimizations.md) 및 **COMDAT 정리 사용** 를 [/opt: icf](../../build/reference/opt-optimizations.md)합니다.  
   
-6.  이제 릴리스 빌드 응용 프로그램을 디버깅할 수 있습니다.  문제를 찾으려면 오류가 발생한 부분을 찾을 때까지 코드를 단계별로 실행하거나, Just\-In\-Time 디버깅을 사용하여 올바르지 않은 매개 변수 또는 코드를 확인합니다.  
+6.  이제 릴리스 빌드 응용 프로그램을 디버깅할 수 있습니다. 에 오류가 발생 한 위치를 찾을 때까지 문제, 코드 (또는 시간에서 마법사를 사용 하 여 디버깅)를 단계별로 발견 하 고 잘못 된 매개 변수 또는 코드를 확인 합니다.  
   
-     응용 프로그램이 디버그 빌드에서는 작동하지만 릴리스 빌드에서 작동하지 않으면 소스 코드에서 컴파일러 최적화 중 하나에 결함이 있는 경우일 수 있습니다.  문제를 격리하려면 문제의 원인이 되는 최적화와 파일을 찾을 때까지 각 소스 코드 파일에 대해 선택한 최적화를 비활성화합니다. 이 과정을 지원하기 위해 파일을 두 그룹으로 나누고 한 그룹에서 최적화를 비활성화한 다음, 이 그룹에서 문제가 발생하면 문제 있는 파일이 격리될 때까지 그룹을 계속 나눌 수 있습니다.  
+     디버그 빌드에서 작동 하는 응용 프로그램에서 릴리스 빌드를 실패 한 경우 소스 코드에서 결함이 있는 경우일 수 컴파일러 최적화 기능 중 하나입니다. 이 문제를 격리 하려면 문제를 일으키는 되는 최적화와 파일을 찾을 때까지 각 소스 코드 파일에 대 한 선택한 최적화를 비활성화 합니다. (프로세스를 촉진 하기 위해 파일을 두 그룹으로 나누는, 하나의 그룹에서 최적화를 사용 하지 않도록 설정 있고 그룹에서 문제를 발견 하는 경우 문제가 있는 파일을 격리 될 때까지 계속 합니다.)  
   
-     디버그 빌드에서 이와 같은 버그를 노출시키려면 [\/RTC](../../build/reference/rtc-run-time-error-checks.md)를 사용하면 됩니다.  
+     사용할 수 있습니다 [/RTC](../../build/reference/rtc-run-time-error-checks.md) 디버그 빌드에서 이러한 버그를 노출 하려고 합니다.  
   
-     자세한 내용은 [코드 최적화](../../build/reference/optimizing-your-code.md)을 참조하십시오.  
+     자세한 내용은 참조 [코드 최적화](../../build/reference/optimizing-your-code.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [릴리스 빌드 문제 해결](../../build/reference/fixing-release-build-problems.md)

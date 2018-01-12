@@ -1,36 +1,38 @@
 ---
-title: "CDynamicParameterAccessor::GetParamString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor.GetParamString"
-  - "GetParamString"
-  - "CDynamicParameterAccessor::GetParamString"
-  - "ATL.CDynamicParameterAccessor.GetParamString"
-  - "ATL::CDynamicParameterAccessor::GetParamString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamString 메서드"
+title: 'Cdynamicparameteraccessor:: Getparamstring | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor.GetParamString
+- GetParamString
+- CDynamicParameterAccessor::GetParamString
+- ATL.CDynamicParameterAccessor.GetParamString
+- ATL::CDynamicParameterAccessor::GetParamString
+dev_langs: C++
+helpviewer_keywords: GetParamString method
 ms.assetid: 078c2b1c-7072-47c1-a203-f47e75363f91
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ed04d3258ad5f4d5ed68a32b32923432577453ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParamString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-지정된 매개 변수는 버퍼에 저장된 문자열 데이터를 검색 합니다.  
+# <a name="cdynamicparameteraccessorgetparamstring"></a>CDynamicParameterAccessor::GetParamString
+버퍼에 저장된 지정된 매개 변수의 문자열 데이터를 검색합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -54,32 +56,32 @@ bool GetParamString(
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `nParam`  
- \[in\] 매개 변수 번호 \(1에서 오프셋\)입니다.  매개 변수 0은 반환 값으로 예약 됩니다.  매개 변수 번호는 SQL 또는 저장된 프로시저 호출의 순서에 따라 매개 변수의 인덱스입니다.  예제를 보려면 [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 를 참조하십시오.  
+ [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 참조 [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 예에 대 한 합니다.  
   
  `strOutput`  
- \[out\] 지정된 매개 변수의 ANSI \(**CSimpleStringA**\) 또는 유니코드 \(**CSimpleStringW**\) 문자열 데이터 입니다.  `CString` 형식의 매개 변수를 전달해야 합니다. 예를 들어:  
+ [out] ANSI (**CSimpleStringA**) 또는 유니코드 (**CSimpleStringW**) 문자열 데이터의 지정된 된 매개 변수입니다. 형식의 매개 변수를 전달 해야 `CString`, 예:  
   
- [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/CPP/cdynamicparameteraccessor-getparamstring_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]  
   
  `pBuffer`  
- \[out\] 지정된 매개 변수의 ANSI\(**CHAR**\) 또는 유니코드 \(**WCHAR**\) 문자열 데이터에 대한 포인터 입니다.  
+ [out] ANSI에 대 한 포인터 (**CHAR**) 또는 유니코드 (**WCHAR**) 문자열 데이터의 지정된 된 매개 변수입니다.  
   
  `pMaxLen`  
- \[out\] `pBuffer` \(문자에서 종료 NULL 포함\)가 가르키는 버퍼의 사이즈에 대한 포인터입니다.  
+ [out] 버퍼의 크기에 대 한 포인터에서 가리키는 `pBuffer` (문자에서 종결 NULL 포함).  
   
-## 설명  
- 성공하면 **true**를 반환하고 또는 실패하면 **false**를 반환합니다.  
+## <a name="remarks"></a>설명  
+ 반환 **true** 성공 또는 **false** 실패 합니다.  
   
- 이 메서드는 `pMaxLen` 가 가르키는 메모리에서 요구되는 버퍼 사이즈를 설정하고 데이터 복사 없이 **true** 를 반환합니다. `pBuffer` 는 NULL 입니다.  
+ 경우 `pBuffer` 가 null 인 경우이 방법은가 가리키는 메모리에 필요한 버퍼 크기를 설정 합니다 `pMaxLen` 다음 다시 돌아와 **true** 데이터를 복사 하지 않고 있습니다.  
   
- `pBuffer` 가 전체 문자열을 포함할 수 없을 정도로 작다면 이 메서드는 실패합니다.  
+ 경우이 메서드는 사용할 버퍼 `pBuffer` 전체 문자열을 포함할 만큼 크지 않습니다.  
   
- 버퍼에서 문자열 매개 변수 데이터를 추적하기 위해 `GetParamString`를 사용하십시오.  [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) 를 사용하여 버퍼에서 문자열이 아닌 매개 변수 데이터를 검사합니다.  
+ 사용 하 여 `GetParamString` 버퍼에서 문자열 매개 변수 데이터를 검색 합니다. 사용 하 여 [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) 버퍼에서 문자열이 아닌 매개 변수 데이터를 검색 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicParameterAccessor 클래스](../../data/oledb/cdynamicparameteraccessor-class.md)

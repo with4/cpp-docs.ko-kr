@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98a18a7e145a2b23b13e38bd07d5b29c5a397d6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hook"></a>__hook
 처리기 메서드를 이벤트와 연결합니다.  
@@ -76,7 +77,7 @@ long __hook(
  `receiver`(선택 사항)  
  이벤트 수신기 클래스의 인스턴스에 대한 포인터입니다. 수신기를 지정하지 않으면 기본값은 `__hook`가 호출되는 수신기 클래스 또는 구조체입니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  이벤트 수신기 클래스 외부의 main을 포함하여 모든 함수 범위에서 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
@@ -99,7 +100,7 @@ long __hook(
 > [!NOTE]
 >  템플릿 기반 클래스 또는 구조체에 event를 포함시킬 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [네이티브 c + +에서 이벤트 처리](../cpp/event-handling-in-native-cpp.md) 및 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md) 샘플에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

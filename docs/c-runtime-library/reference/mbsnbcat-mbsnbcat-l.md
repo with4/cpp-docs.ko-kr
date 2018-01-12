@@ -43,11 +43,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d19a16635f3e7d0469b8be8244c3484e733ef94c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb036640c10a803eb5dd910c51335409ffdfcd97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 한 멀티바이트 문자열의 처음 `n`바이트 이하를 다른 문자열에 추가합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_mbsnbcat_s, _mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)을 참조하세요.  
@@ -103,7 +104,7 @@ unsigned char *_mbsnbcat_l(
 ## <a name="remarks"></a>설명  
  `_mbsnbcat` 함수는 `src`의 처음 `count` 바이트 이하를 `dest`에 추가합니다. `dest`에서 null 문자 바로 앞에 오는 바이트가 선행 바이트인 경우 `src`의 초기 바이트가 이 선행 바이트를 덮어씁니다. 그렇지 않으면 `src`의 초기 바이트가 `dest`의 null 종결 문자를 덮어씁니다. `src` 바이트가 추가되기 전에 `count`에 null 바이트가 나타나는 경우 _`_mbsnbcat`는 `src`의 모든 바이트를 null 바이트까지 추가합니다. `count`가 `src`의 길이보다 크면 `src`의 길이가 `count` 대신 사용됩니다. 결과 문자열은 null 문자로 끝납니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.  
   
- 출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbsnbcat` 버전의 함수는 이 로캘 종속 동작에 현재 로캘을 사용하고 `_mbsnbcat_l` 버전은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbsnbcat` 버전의 함수는 이 로캘 종속 동작에 현재 로캘을 사용하고 `_mbsnbcat_l` 버전은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  **보안 정보** null로 끝나는 문자열을 사용하세요. null로 끝나는 문자열은 대상 버퍼의 크기를 초과할 수 없습니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
   
@@ -111,7 +112,7 @@ unsigned char *_mbsnbcat_l(
   
  C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -120,7 +121,7 @@ unsigned char *_mbsnbcat_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_mbsnbcat`|\<mbstring.h>|  
 |`_mbsnbcat_l`|\<mbstring.h>|  

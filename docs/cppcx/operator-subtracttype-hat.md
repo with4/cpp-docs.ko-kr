@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 819dc0e1ec45ef3ce816fc7651b84b8ac176a702
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8d51699d56f1868d5840665017feba2dec50766
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-type"></a>연산자 Type^
 [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) 을 `Platform::Type`으로 변환할 수 있습니다.  
@@ -37,7 +38,7 @@ Operator Type^(Windows::UI::Xaml::Interop::TypeName typeName)
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 `TypeName` 과 `Type`간을 변환하는 방법을 보여 줍니다.  
   
 ```  

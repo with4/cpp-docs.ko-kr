@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - program startup [C++]
 - startup code
 - initializing before main
 ms.assetid: 0e942aa6-8342-447c-b068-8980ed7622bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: cb437729d2c60f15bc798438ecbbba0637bf3d22
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 57b1de8fbbdb3d969dca8e84e57e18b81749d944
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="additional-startup-considerations"></a>추가 시작 고려 사항
 C++에서 개체 생성 및 소멸 시 실행할 사용자 코드를 포함할 수 있습니다. 따라서 항목을 되기 전에 어떤 초기화 수행을 이해 하는 **주** 종료 후 어떤 소멸자가 호출 **주**합니다. (개체의 생성과 소멸에 대 한 자세한 내용은 참조 [생성자](../cpp/constructors-cpp.md) 및 [소멸자](../cpp/destructors-cpp.md).)  

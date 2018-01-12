@@ -1,64 +1,65 @@
 ---
 title: "CUtlProps 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CUtlProps 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: CUtlProps class
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 75e92f48729d0aae9f85cc7b7c5c97e4778f96a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implements properties for a variety of OLE DB property interfaces \(for example, `IDBProperties`, `IDBProperties`, and `IRowsetInfo`\).  
+# <a name="cutlprops-class"></a>CUtlProps 클래스
+다양 한 OLE DB 속성 인터페이스에 대 한 속성 구현 (예를 들어 `IDBProperties`, `IDBProperties`, 및 `IRowsetInfo`).  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template < class T >  
 class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- The class that contains the `BEGIN_PROPSET_MAP`.  
+ 포함 하는 클래스는 `BEGIN_PROPSET_MAP`합니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)|Gets a property from a property set.|  
-|[IsValidValue](../../data/oledb/cutlprops-isvalidvalue.md)|Used to validate a value before setting a property.|  
-|[OnInterfaceRequested](../../data/oledb/cutlprops-oninterfacerequested.md)|Handles requests for an optional interface when a consumer calls a method on an object creation interface.|  
-|[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)|Called after setting a property to handle chained properties.|  
-|[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)|Sets a property in a property set.|  
+|[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)|속성 집합에서 속성을 가져옵니다.|  
+|[IsValidValue](../../data/oledb/cutlprops-isvalidvalue.md)|값 속성을 설정 하기 전에 유효성을 검사 하는 데 사용 합니다.|  
+|[OnInterfaceRequested](../../data/oledb/cutlprops-oninterfacerequested.md)|소비자 개체 생성 인터페이스에서 메서드를 호출 하는 경우 선택적 인터페이스에 대 한 요청을 처리 합니다.|  
+|[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)|연결 된 속성을 처리 하는 속성을 설정한 후 호출 됩니다.|  
+|[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)|속성 집합에는 속성을 설정합니다.|  
   
-## 설명  
- Most of this class is an implementation detail.  
+## <a name="remarks"></a>설명  
+ 이 클래스의 대부분에는 구현 정보입니다.  
   
- `CUtlProps` contains two members for setting properties internally: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) and [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
+ `CUtlProps`내부적으로 속성을 설정 하기 위한 두 명의 구성원이 포함: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) 및 [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)합니다.  
   
- For more information on the macros used in a property set map, see [BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md) and [END\_PROPSET\_MAP](../../data/oledb/end-propset-map.md).  
+ 속성 집합 맵에서 사용 되는 매크로에 대 한 자세한 내용은 참조 하십시오. [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 및 [END_PROPSET_MAP](../../data/oledb/end-propset-map.md)합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)

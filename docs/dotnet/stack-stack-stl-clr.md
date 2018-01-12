@@ -1,32 +1,33 @@
 ---
-title: "stack::stack(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stack 멤버[STL/CLR]"
+title: 'stack:: stack (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::stack
+dev_langs: C++
+helpviewer_keywords: stack member [STL/CLR]
 ms.assetid: f1cfb3fe-4d22-41e5-906b-e8faa0bcde9b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a59b353bb6ca1dc55933234c68f39f4b76dd16a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# stack::stack(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Constructs a container adapter object.  
+# <a name="stackstack-stlclr"></a>stack::stack(STL/CLR)
+컨테이너 어댑터 개체를 만듭니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 stack();  
@@ -35,39 +36,39 @@ stack(stack<Value, Container>^ right);
 explicit stack(container_type% wrapped);  
 ```  
   
-#### 매개 변수  
- right  
- Object to copy.  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
+ 복사할 개체입니다.  
   
- wrapped  
- Wrapped container to use.  
+ 래핑  
+ 래핑된 컨테이너를 사용 합니다.  
   
-## 설명  
- The constructor:  
+## <a name="remarks"></a>설명  
+ 생성자:  
   
  `stack();`  
   
- creates an empty wrapped container.  You use it to specify an empty initial controlled sequence.  
+ 빈 래핑된 컨테이너를 만듭니다. 초기는 빈 제어 시퀀스를 지정 하려면 사용 합니다.  
   
- The constructor:  
+ 생성자:  
   
  `stack(stack<Value, Container>% right);`  
   
- creates a wrapped container that is a copy of `right.get_container()`.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the stack object `right`.  
+ 복사본 인 래핑된 컨테이너를 만들고 `right.get_container()`합니다. 스택 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `right`합니다.  
   
- The constructor:  
+ 생성자:  
   
  `stack(stack<Value, Container>^ right);`  
   
- creates a wrapped container that is a copy of `right->get_container()`.  You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the stack object `*right`.  
+ 복사본 인 래핑된 컨테이너를 만들고 `right->get_container()`합니다. 스택 개체에 의해 제어 되는 시퀀스의 복사본 인는 초기 제어 시퀀스를 지정 하려면 사용할 `*right`합니다.  
   
- The constructor:  
+ 생성자:  
   
  `explicit stack(container_type% wrapped);`  
   
- uses the existing container `wrapped` as the wrapped container.  You use it to construct a stack from an existing container.  
+ 기존 컨테이너를 사용 하 여 `wrapped` 래핑된 컨테이너로 합니다. 기존 컨테이너에서 스택을 생성을 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_stack_construct.cpp   
@@ -107,17 +108,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## 요구 사항  
- **Header:** \<cliext\/stack\>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/스택 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::assign](../dotnet/stack-assign-stl-clr.md)   
- [stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)   
- [stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack:: assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)   
+ [stack:: generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)   
+ [stack::operator=(STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)

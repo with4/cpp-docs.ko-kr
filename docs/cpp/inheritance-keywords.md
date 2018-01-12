@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65d338f642d705fec6f1a45b5e88f05c1ee55cc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 442e8958b1d2201d7261242bd9cd90da29a60a62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inheritance-keywords"></a>상속 키워드
 **Microsoft 전용**  
@@ -44,7 +45,7 @@ class [__multiple_inheritance] class-name;
 class [__virtual_inheritance] class-name;  
 ```  
   
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
  *클래스 이름*  
  선언되는 클래스의 이름입니다.  

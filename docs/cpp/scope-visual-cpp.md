@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dcf85a2feff9aa16434f626804edefa4dbe4610e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-visual-c"></a>범위(Visual C++)
 프로그램의 특정 영역에서만 C++를 사용할 수 있습니다. 이 영역을 이름의 "범위"라고 합니다. 범위는 정적 범위의 개체가 표시되지 않는 이름의 "수명"을 결정합니다. 클래스 생성자와 소멸자가 호출되고 범위에 로컬인 변수가 초기화되면 범위가 이름의 표시 유형을 결정하기도 합니다. (자세한 내용은 참조 [생성자](../cpp/constructors-cpp.md) 및 [소멸자](../cpp/destructors-cpp.md).) 범위의 종류는 다음 5가지입니다.  

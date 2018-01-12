@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee5e34ce0af330ec9a788ceda758a412e3d7ac2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 59eb8aecbf2dd2138c8a0469d71364b55fd82774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>트랜잭션: 트랜잭션이 업데이트에 미치는 영향(ODBC)
 업데이트는 [데이터 소스](../../data/odbc/data-source-odbc.md) 편집 버퍼 (트랜잭션 외부에서 사용 되는 것과 동일한 방법)를 사용 하 여 트랜잭션 동안 관리 됩니다. 레코드 집합의 필드 데이터 멤버는 전체적으로 레코드 집합 중 일시적으로 백업 하는 현재 레코드를 포함 하는 편집 버퍼 역할는 `AddNew` 또는 **편집**합니다. 중는 **삭제** 작업을 현재 레코드는 트랜잭션 내에서 백업 되지 않습니다. 업데이트가 현재 레코드를 저장 하는 방법 및 편집 버퍼에 대 한 자세한 내용은 참조 [레코드 집합: 레코드 집합의 레코드 업데이트 방법 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)합니다.  

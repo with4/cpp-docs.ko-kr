@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 02ca51ef8c32e59a94f87419dd4a959022a30cde
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp(부동 소수점 동작 지정)
 소스 코드 파일에서 부동 소수점 동작을 지정합니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
 -   식 평가는 C99 FLT_EVAL_METHOD=2를 따르지만 다음의 경우는 예외로 합니다. x86 프로세서를 프로그래밍할 때 FPU가 53비트의 정밀도로 설정되어 있기 때문에 long-double 정밀도로 간주됩니다.  
   
--   정확히 1.0을 곱하는 식은 다른 인수를 사용하도록 변환됩니다. x * y\*1.0 x로 변환 되므로\*y 합니다. 마찬가지로, x\*1.0\*y x로 변환 되므로\*y 합니다.  
+-   정확히 1.0을 곱하는 식은 다른 인수를 사용하도록 변형됩니다. x * y\*1.0 x로 변환 되므로\*y 합니다. 마찬가지로, x\*1.0\*y x로 변환 되므로\*y 합니다.  
   
 -   정확히 1.0으로 나누는 식은 피제수를 사용하도록 변형됩니다. x * y/1.0 x로 변환 되므로\*y 합니다. 마찬가지로, x / 1.0\*y x로 변환 되므로\*y 합니다.  
   

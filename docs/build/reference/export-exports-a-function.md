@@ -1,72 +1,73 @@
 ---
-title: "/EXPORT(함수 내보내기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ExportFunctions"
-  - "/export"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/EXPORT 링커 옵션"
-  - "EXPORT 링커 옵션"
-  - "-EXPORT 링커 옵션"
+title: "내보내기 (함수 내보내기) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.ExportFunctions
+- /export
+dev_langs: C++
+helpviewer_keywords:
+- /EXPORT linker option
+- EXPORT linker option
+- -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /EXPORT(함수 내보내기)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="export-exports-a-function"></a>/EXPORT(함수 내보내기)
 ```  
 /EXPORT:entryname[,@ordinal[,NONAME]][,DATA]  
 ```  
   
-## 설명  
- 이 옵션을 사용하면 다른 프로그램에서 호출할 수 있도록 프로그램에서 함수를 내보낼 수 있습니다.  데이터도 내보낼 수 있습니다.  내보내기는 대개 DLL에서 정의됩니다.  
+## <a name="remarks"></a>설명  
+ 이 옵션을 다른 프로그램에서 함수를 호출할 수 있도록 프로그램에서 함수를 내보낼 수 있습니다. 데이터를 내보낼 수 있습니다. 내보내기는 일반적으로 DLL에 정의 됩니다.  
   
- *entryname*은 호출 프로그램이 사용할 함수 또는 데이터 항목 이름입니다.  `ordinal`은 내보내기 테이블로 1부터 65,535까지의 인덱스를 지정합니다. 사용자가 `ordinal`을 지정하지 않는 경우에는 LIB에서 이 값을 할당합니다.  **NONAME** 키워드는 함수를 *entryname*이 없는 서수로만 내보냅니다.  
+ *entryname* 호출 프로그램에서 사용 하는 것 만큼은 함수 또는 데이터 항목의 이름입니다. `ordinal`1-65535의에서 내보내기 테이블에 인덱스를 지정합니다. 지정 하지 않으면 `ordinal`, 링크 값을 할당 합니다. **NONAME** 키워드는 서 수로만 하지 않고 함수를 내보내는 *entryname*합니다.  
   
- **DATA** 키워드는 내보낸 항목을 데이터 항목으로 지정합니다.  클라이언트 프로그램의 데이터 항목은 **extern \_\_declspec\(dllimport\)**을 사용하여 선언해야 합니다.  
+ **데이터** 키워드는 내보낸된 항목 데이터 항목 임을 지정 합니다. 사용 하 여 클라이언트 프로그램에서 데이터 항목을 선언 해야 **extern __declspec (dllimport)**합니다.  
   
- 정의를 내보내는 데는 다음과 같은 세 가지 방법을 사용합니다\(권장 순서에 따라 나열\).  
+ 권장된 사용 순서 대로 나열 된 정의 내보내기 위한 세 가지가 있습니다.  
   
-1.  소스 코드에 [\_\_declspec\(dllexport\)](../../cpp/dllexport-dllimport.md) 사용  
+1.  [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) 소스 코드에서  
   
-2.  .def 파일에서 [EXPORTS](../../build/reference/exports.md) 문 사용  
+2.  [내보내기](../../build/reference/exports.md) .def 파일에서 문  
   
-3.  LINK 명령에서 \/EXPORT 지정  
+3.  LINK 명령의 /EXPORT 사양  
   
- 동일한 프로그램에서 이 세 가지 방법을 모두 사용할 수 있습니다.  LINK에서는 내보내기가 들어 있는 프로그램을 빌드할 때 해당 빌드에 .exp 파일이 사용되지 않은 경우 가져오기 라이브러리도 만듭니다.  
+ 세 가지 방법이 모두 동일한 프로그램에서 사용할 수 있습니다. 링크 내보내기가 포함 된 프로그램을 빌드할 때 문제가 빌드에서.exp 파일을 사용 하는 한 가져오기 라이브러리도를 만듭니다.  
   
- LINK에서는 데코레이팅된 형식의 식별자를 사용합니다.  컴파일러에서는 .obj 파일을 만들 때 식별자를 데코레이팅합니다.  *entryname*이 데코레이팅되지 않은 형식으로 링커에 지정되는 경우\(소스 코드에 표시\) LINK에서는 일치하는 이름을 찾습니다.  일치하는 이름을 찾을 수 없는 경우에는 오류 메시지가 표시됩니다.  링커에 식별자를 지정해야 할 때 [데코레이팅된 이름](../../build/reference/decorated-names.md) 형식의 식별자를 가져오려면 [DUMPBIN](../../build/reference/dumpbin-reference.md) 도구를 사용합니다.  
+ LINK 사용 하 여 데코 레이트 형식의 식별자입니다. 컴파일러가는.obj 파일을 만들 때 식별자를 데코 레이트 합니다. 경우 *entryname* 데코레이팅되지 않은 해당 작업에 링커로 지정 됩니다 (소스 코드에 표시)으로 양식의 링크 이름 일치 시 키 려 합니다. 고유한 일치를 찾을 수 없으면 링크는 오류 메시지를 표시 합니다. 사용 하 여는 [DUMPBIN](../../build/reference/dumpbin-reference.md) 도구를는 [데코 레이트 된 이름](../../build/reference/decorated-names.md) 형식의을 링커에 지정을 할 때 식별자입니다.  
   
 > [!NOTE]
->  `__cdecl` 또는 `__stdcall`로 선언된 C 식별자의 데코레이팅된 형식은 지정하지 마십시오.  
+>  데코 레이트 된 형식의 선언 된 C 식별자를 지정 하지 않으면 `__cdecl` 또는 `__stdcall`합니다.  
   
-### Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 링커 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [Visual C\+\+ 프로젝트 속성 설정](../../ide/working-with-project-properties.md)을 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [Visual c + + 프로젝트 속성 설정](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **링커** 폴더를 클릭합니다.  
+2.  클릭는 **링커** 폴더입니다.  
   
 3.  **명령줄** 속성 페이지를 클릭합니다.  
   
-4.  **추가 옵션** 상자에 옵션을 입력합니다.  
+4.  에 옵션을 입력에서 **추가 옵션** 상자입니다.  
   
-### 프로그래밍 방식으로 이 링커 옵션을 설정하려면  
+### <a name="to-set-this-linker-option-programmatically"></a>프로그래밍 방식으로 이 링커 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

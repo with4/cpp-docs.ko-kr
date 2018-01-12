@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a31316d63ad74ccfdf718e15d8e54d5c75b0535b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46007b84d297689b77c3eda5418c4b91be120da5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-window"></a>창 구현
 클래스 [CWindowImpl](../atl/reference/cwindowimpl-class.md) 창을 구현 하 고 해당 메시지를 처리할 수 있습니다. 메시지 ATL에서 처리 한 메시지 맵을 기반으로 합니다. 이 섹션에 설명합니다.  

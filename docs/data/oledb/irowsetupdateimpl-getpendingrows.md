@@ -1,36 +1,38 @@
 ---
-title: "IRowsetUpdateImpl::GetPendingRows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetUpdateImpl::GetPendingRows"
-  - "GetPendingRows"
-  - "IRowsetUpdateImpl.GetPendingRows"
-  - "ATL::IRowsetUpdateImpl::GetPendingRows"
-  - "ATL.IRowsetUpdateImpl.GetPendingRows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetPendingRows 메서드"
+title: 'Irowsetupdateimpl:: Getpendingrows | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetUpdateImpl::GetPendingRows
+- GetPendingRows
+- IRowsetUpdateImpl.GetPendingRows
+- ATL::IRowsetUpdateImpl::GetPendingRows
+- ATL.IRowsetUpdateImpl.GetPendingRows
+dev_langs: C++
+helpviewer_keywords: GetPendingRows method
 ms.assetid: 2d1ef748-da6d-4184-98dc-096427358dfd
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4c8341c6013417daa8b86e484350c67be1752ba6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetUpdateImpl::GetPendingRows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Returns a list of rows with pending changes.  
+# <a name="irowsetupdateimplgetpendingrows"></a>IRowsetUpdateImpl::GetPendingRows
+보류 중인 변경 내용이 있는 행 목록을 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -43,17 +45,17 @@ Returns a list of rows with pending changes.
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `hReserved`  
- \[in\] Corresponds to the `hChapter` parameter in [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx).  
+ [in] 에 해당 하는 `hChapter` 매개 변수에서 [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx)합니다.  
   
- For other parameters, see [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx) in the *OLE DB Programmer's Reference*.  
+ 다른 매개 변수를 참조 하십시오. [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
-## 설명  
- For more information, see [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx) in the *OLE DB Programmer's Reference*.  
+## <a name="remarks"></a>설명  
+ 자세한 내용은 참조 [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [IRowsetUpdateImpl 클래스](../../data/oledb/irowsetupdateimpl-class.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - _popen
 - _wpopen
 - _tpopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tpopen function
 - pipes, creating
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 57476fe794b255bb1822a4446c505897d1668362
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5cf1fc935bbee75eb8acc31cfd7ae0e8d92c3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 파이프를 만들고 명령을 실행합니다.  
@@ -75,16 +59,15 @@ ms.lasthandoff: 03/30/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-      FILE *_popen(  
-const char *command,  
-const char *mode   
-);  
-FILE *_wpopen(  
-const wchar_t *command,  
-const wchar_t *mode   
-);  
+```
+FILE *_popen(
+const char *command,
+const char *mode
+);
+FILE *_wpopen(
+const wchar_t *command,
+const wchar_t *mode
+);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -97,7 +80,7 @@ const wchar_t *mode
 ## <a name="return-value"></a>반환 값  
  생성된 파이프의 한쪽 끝와 연결된 스트림을 반환합니다. 파이프의 반대쪽은 생성된 명령의 표준 입력 또는 표준 출력에 연결됩니다. 오류가 발생하면 함수는 **NULL**을 반환합니다. *command* 또는 *mode*가 null 포인터이거나 *mode*가 올바른 모드가 아닌 경우 등 오류가 잘못된 매개 변수인 경우에는 `errno`가 `EINVAL`로 설정됩니다. 올바른 모드는 설명 섹션을 참조하세요.  
   
- 이러한 오류 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
+ 이 오류 및 다른 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  `_popen` 함수는 파이프를 만들고 지정된 문자열 *command*를 사용하여 명령 프로세서의 생성된 복사본을 비동기 방식으로 실행합니다. 문자열의 *mode*는 다음과 같이 요청된 액세스의 유형을 지정합니다.  
@@ -115,7 +98,7 @@ const wchar_t *mode
  텍스트 모드에서 엽니다.  
   
 > [!NOTE]
->  Windows 프로그램에서 사용하는 경우 `_popen` 함수는 프로그램이 무기한 응답을 중지하도록 하는 잘못된 파일 포인터를 반환합니다. 콘솔 응용 프로그램에서는 `_popen`이 제대로 작동합니다. 입력 및 출력을 리디렉션하는 Windows 응용 프로그램을 만들려면 [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]에서 [리디렉션된 입력 및 출력을 사용하여 자식 프로세스 만들기](http://msdn.microsoft.com/library/windows/desktop/ms682499)를 참조하세요.  
+>  Windows 프로그램에서 사용하는 경우 `_popen` 함수는 프로그램이 무기한 응답을 중지하도록 하는 잘못된 파일 포인터를 반환합니다. 콘솔 응용 프로그램에서는 `_popen`이 제대로 작동합니다. 입력 및 출력을 리디렉션하는 Windows 응용 프로그램을 만들려면 참조 [리디렉션 입력 및 출력을 사용 하 여 자식 프로세스 만들기](http://msdn.microsoft.com/library/windows/desktop/ms682499) Windows sdk에서입니다.  
   
  `_wpopen`은 `_popen`의 와이드 문자 버전이며 `_wpopen`에 대한 *path* 인수는 와이드 문자열입니다. 그렇지 않으면 `_wpopen`과 `_popen`이 동일하게 작동합니다.  
   
@@ -127,7 +110,7 @@ const wchar_t *mode
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_popen`|\<stdio.h>|  
 |`_wpopen`|\<stdio.h> 또는 \<wchar.h>|  
@@ -137,7 +120,7 @@ const wchar_t *mode
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_popen.c  

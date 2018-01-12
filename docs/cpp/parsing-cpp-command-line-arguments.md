@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - quotation marks, command-line arguments
 - double quotation marks
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5d3fbcd6b4e92d6e445d78a1b36efae319e472d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 58db951b2c9459eb9511e0a354e1daec4b29b53d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parsing-c-command-line-arguments"></a>C++ 명령줄 인수 구문 분석
 **Microsoft 전용**  
@@ -47,7 +45,7 @@ ms.lasthandoff: 09/25/2017
   
 -   하나 이상의 백슬래시에 위치한 백슬래시 수가 홀수인 뒤에 큰따옴표가 있으면는 `argv` 큰따옴표 및 백슬래시 모든 쌍에 대 한 배열 "이스케이프 된" 백슬래시로 나머지는 리터럴 큰따옴표 (" )에 배치 될 `argv`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 프로그램 방법을 명령줄 인수를 보여 줍니다. 전달 됩니다.  
   
 ```  

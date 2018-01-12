@@ -1,40 +1,41 @@
 ---
 title: "C 매크로로 __asm 블록 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 키워드[C++], C 매크로"
-  - "매크로, __asm 블록"
-  - "Visual C, 매크로"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- macros, __asm blocks
+- Visual C, macros
+- __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: af95f7b2c74d797203a0e6b3ddd6a92ddcb51e5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# C 매크로로 __asm 블록 정의
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 관련**  
+# <a name="defining-asm-blocks-as-c-macros"></a>__asm 블록을 C 매크로로 정의
+**Microsoft 전용**  
   
- 매크로 C 소스 코드에 어셈블리 코드를 삽입 하는 편리한 방법을 제공 하지만 매크로 논리적으로 확장 하기 때문에 특별 한 주의가 요구 됩니다.  문제 없이 매크로 작성 하려면 다음이 규칙을 따릅니다.  
+ C 매크로를 사용하면 소스 코드에 어셈블리 코드를 편리하게 삽입할 수 있지만 매크로가 단일 논리 줄로 확장되기 때문에 사용 시 특별히 주의해야 합니다. 문제가 없는 매크로를 만들려면 다음 규칙을 따르십시오.  
   
--   묶는  `__asm`중괄호에서를 차단 합니다.  
+-   `__asm` 블록을 중괄호로 묶습니다.  
   
--   배치 된  `__asm`키워드 각 어셈블리 명령 앞에.  
+-   각 어셈블리 명령 앞에 `__asm` 키워드를 배치합니다.  
   
--   이전 스타일 C 주석을 사용 하 여 \(  `/* comment */`\) 대신 어셈블리 스타일 주석 \(   `; comment`\) 또는 한 줄으로 된 주석은 C \(   `// comment`\).  
+-   어셈블리 스타일 주석(`/* comment */`) 또는 한 줄로 된 C 주석(`; comment`) 대신 이전 스타일 C 주석(`// comment`)을 사용합니다.  
   
- 다음 예제를 설명 하기 위해 간단한 매크로 정의 합니다.  
+ 다음 예제에서는 간단한 매크로를 정의합니다.  
   
 ```  
 #define PORTIO __asm      \  
@@ -46,23 +47,23 @@ caps.handback.revision: 7
 }  
 ```  
   
- 처음에, 마지막 3  `__asm`키워드를 불필요 한 것 같습니다.  하지만 필요 한 줄에 매크로 확장 때문에.  
+ 처음에는 마지막 세 `__asm` 키워드가 불필요한 것처럼 보입니다. 그러나 매크로가 단일 줄로 확장되므로 세 키워드가 필요합니다.  
   
 ```  
 __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al }  
 ```  
   
- 세 번째 및 네 번째  `__asm`키워드는 문 구분 기호로 필요 합니다.  문 구분 기호 인식  `__asm`요소는 줄 바꿈 문자 및  `__asm`키워드.  사용 하 여 각 명령을 구분 해야 블록을 매크로로 정의 된 논리 줄 이기 때문에  `__asm`.  
+ 세 번째 및 네 번째 `__asm` 키워드는 문 구분 기호로 필요합니다. `__asm` 블록에서 인식되는 유일한 문 구분 기호는 줄 바꿈 문자 및 `__asm` 키워드입니다. 매크로로 정의된 블록은 하나의 논리 줄이므로 각 명령을 `__asm`으로 구분해야 합니다.  
   
- 중괄호는도 필수적입니다.  생략 하면 컴파일러가 매크로 호출의 오른쪽에는 같은 줄에 C 또는 c \+ \+ 문으로 혼동할 수 있습니다.  닫는 중괄호 없이 컴파일러가 어셈블리 코드 중지 되 고 알 수 없습니다 C 또는 c \+ \+ 문가  `__asm`블록으로 조립 지침.  
+ 중괄호도 필요합니다. 중괄호를 생략하면 동일한 줄의 매크로 호출 오른쪽에 있는 C 또는 C++ 문 때문에 컴파일러에 혼동이 있을 수 있습니다. 닫는 중괄호가 없으면 컴파일러가 어셈블리 코드가 중지되는 위치를 알 수 없으며, `__asm` 블록 뒤에 있는 C 또는 C++ 문을 어셈블리 명령으로 인식합니다.  
   
- 세미콜론으로 시작 하는 어셈블리 스타일 주석 \(**;**\)는 줄의 끝까지 계속 합니다.  컴파일러는 논리 줄의 끝까지 주석 다음 모든 것을 무시 하기 때문에 매크로에서 문제가 발생 합니다.  C 또는 c \+ \+ 주석 줄도 마찬가지입니다 \(  `// comment`\).  이전 스타일 C 메모를 사용 하 여 오류를 방지 하려면 \(  `/* comment */`\)에서  `__asm`매크로로 정의 된 블록입니다.  
+ 세미콜론으로 시작 하는 어셈블리 스타일 주석 (**;**) 줄의 끝까지 계속 합니다. 컴파일러는 논리 줄의 끝까지 주석 이후의 모든 항목을 무시하므로 매크로에서 문제가 발생합니다. 한 줄로 된 C 또는 C++ 주석도 마찬가지입니다(`// comment`). 오류를 방지하려면 매크로로 정의된 `/* comment */` 블록에 이전 스타일 C 주석(`__asm`)을 사용하십시오.  
   
- `__asm`블록 기록 C 매크로 인수를 사용할 수 있습니다.  그러나 일반 C 매크로, 달리는  `__asm`매크로 값을 반환할 수 없습니다.  C 또는 c \+ \+ 식에 이러한 매크로 사용할 수 없습니다.  
+ C 매크로로 작성된 `__asm` 블록은 인수를 사용할 수 있습니다. 그러나 일반 C 매크로와 달리 `__asm` 매크로는 값을 반환할 수 없습니다. 따라서 C 또는 C++ 식에 이러한 매크로를 사용할 수 없습니다.  
   
- 무분별이 형식의 매크로 호출 하지 않도록 주의 하십시오.  예를 들어, 사용 하 여 선언 된 어셈블리 언어 매크로 함수에서를 호출 하 여  `__fastcall`규칙에 예기치 않은 결과가 발생할 수 있습니다.  \(참조  [를 사용 하 여 레지스터를 인라인 어셈블리에서는 유지 및](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).\)  
+ 이 형식의 매크로를 무차별적으로 호출하지 않도록 하십시오. 예를 들어, `__fastcall` 규칙으로 선언된 함수에서 어셈블리 언어 매크로를 호출하면 예기치 않은 결과가 발생할 수 있습니다. (참조 [인라인 어셈블리에서 레지스터 사용 및 유지](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).)  
   
- **Microsoft 특정 끝**  
+ **Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [인라인 어셈블러](../../assembler/inline/inline-assembler.md)

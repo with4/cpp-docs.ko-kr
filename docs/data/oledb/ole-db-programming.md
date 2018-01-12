@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f130c5d17a1a753d97cded0ab987305cc6a75c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: df532b1ffdc8eba635af93f34e0d77fd3da0d115
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-programming"></a>OLE DB 프로그래밍
 Microsoft OLE DB는 레거시 기술입니다. 새 응용 프로그램 연결 된 SQL 서버에 필요한 데이터 액세스 API입니다. 새 응용 프로그램을 모두 ODBC 사용 해야 합니다. SQL Server에 대 한 현재 OLE DB 공급자가 SQLNCLI11 합니다. DLL입니다. 공급자는 SQL Server 2016에서 배송 계속 됩니다. 이 설명서는 이미 OLE DB를 사용 하는 기존 응용 프로그램을 유지 하는 개발자를 위한 것입니다.

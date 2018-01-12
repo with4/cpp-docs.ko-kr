@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 73288ef6bf6881d946e4ec4bdd94e9b85cc0e81a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff124dec52a77ed5bf35d2454f95854ebea5eea0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED(전용 기호 제거)
 ```  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
  *pdb_file_name*  
  링커가 만드는 프로그램 데이터베이스 (PDB)에 대 한 사용자 지정 이름입니다.  

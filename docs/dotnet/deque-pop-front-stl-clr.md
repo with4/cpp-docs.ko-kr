@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c948e6ccd47882f440120a53bad09c77c87c9faf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4a6eab42a6fe3880c3c76f537f3c39b9e663a4f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequepopfront-stlclr"></a>deque::pop_front(STL/CLR)
 첫 번째 요소를 제거합니다.  
@@ -33,7 +36,7 @@ void pop_front();
 ## <a name="remarks"></a>설명  
  멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소를 제거 합니다. 앞에 한 요소 deque를 줄이기 위해 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_deque_pop_front.cpp   

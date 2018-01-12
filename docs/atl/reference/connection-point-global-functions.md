@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d4457712cf99a7e5b34632247e027d6765699ac4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce7f6fc3d2a0b51f88952dd720955367b1dfe9d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-point-global-functions"></a>연결 지점 전역 함수
 이러한 함수는 연결점에 대 한 지원을 제공 하 고 지도 싱크 합니다.  
@@ -72,7 +73,7 @@ HRESULT    AtlAdvise(
 ### <a name="remarks"></a>설명  
  싱크 연결 지점에서 지 원하는 송신 인터페이스를 구현 합니다. 클라이언트가 사용 하 여 `pdw` 쿠키를 전달 하 여 연결을 제거 하려면 [AtlUnadvise](#atlunadvise)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
 ##  <a name="atlunadvise"></a>AtlUnadvise  
@@ -101,7 +102,7 @@ HRESULT    AtlUnadvise(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
 ##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
@@ -124,7 +125,7 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]  
   
 ## <a name="see-also"></a>참고 항목  

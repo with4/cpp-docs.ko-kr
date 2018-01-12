@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,41 +16,25 @@ f1_keywords:
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfo
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispEventImpl::GetUserDefinedType
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDispEventImpl class
+dev_langs: C++
+helpviewer_keywords: IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 07aa3e37dfb1a986f083d3efb007ea8f7c0c9243
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f052ddf0194cf28a0845ae51b9503841ca880912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 클래스
 이 클래스의 구현을 제공는 `IDispatch` 메서드.  
   
 > [!IMPORTANT]
->  이 클래스 및 해당 멤버는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다.  
+>  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +50,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
   
 #### <a name="parameters"></a>매개 변수  
  `nID`  
- 원본 개체에 대 한 고유 식별자입니다. 때 `IDispEventImpl` 의 기본 클래스 복합 컨트롤에 대 한이 매개 변수에 대 한 원하는 포함 된 컨트롤의 리소스 ID를 사용 합니다. 다른 경우에는 임의의 양의 정수를 사용 합니다.  
+ 원본 개체에 대 한 고유 식별자입니다. 때 `IDispEventImpl` 의 기본 클래스에서 합성 컨트롤에 대 한이 매개 변수에 대 한 원하는 포함 된 컨트롤의 리소스 ID를 사용 합니다. 다른 경우에는 임의의 양의 정수를 사용 합니다.  
   
  `T`  
  사용자의 클래스에서 파생 된 `IDispEventImpl`합니다.  
@@ -76,7 +59,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  이 클래스에서 구현 하는 이벤트 인터페이스의 IID에 대 한 포인터입니다. 이 인터페이스를 가리키는 형식 라이브러리에 정의 되어야 합니다 `plibid`, `wMajor`, 및 `wMinor`합니다.  
   
  `plibid`  
- 디스패치 인터페이스를 정의 하는 형식 라이브러리에 대 한 포인터에서 가리키는 `pdiid`합니다. 경우 **GUID_NULL / /**, 이벤트 소싱 개체에서 형식 라이브러리를 로드 됩니다.  
+ 디스패치 인터페이스를 정의 하는 형식 라이브러리에 대 한 포인터에서 가리키는 `pdiid`합니다. 경우 **& GUID_NULL**, 이벤트 소싱 개체에서 형식 라이브러리를 로드 됩니다.  
   
  `wMajor`  
  형식 라이브러리의 주 버전입니다. 기본값은 0입니다.  
@@ -125,7 +108,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  `IDispEventImpl`와 동일한 기능을 제공 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)것에 대 한 포인터를 제공 하지 않고 형식 라이브러리에서 인터페이스에 대 한 형식 정보를 가져옵니다 점을 제외 하 고는 [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) 구조입니다. 사용 하 여 `IDispEventSimpleImpl` 때 또는 하지 않는 이벤트 인터페이스를 설명 하는 형식 라이브러리 형식 라이브러리를 사용 하 여 연관 된 오버 헤드를 방지 하려면.  
   
 > [!NOTE]
-> `IDispEventImpl`및 `IDispEventSimpleImpl` 의 자체 구현을 제공 **iunknown:: Queryinterface** 각 활성화 `IDispEventImpl` 및 `IDispEventSimpleImpl` 기본 클래스 기본 COM 개체의 클래스 멤버에 대 한 직접 액세스를 허용 하면서 별도 COM id 역할을 합니다.  
+> `IDispEventImpl`및 `IDispEventSimpleImpl` 의 자체 구현을 제공 **iunknown:: Queryinterface** 각 활성화 `IDispEventImpl` 및 `IDispEventSimpleImpl` 기본 클래스를 별도 COM id 클래스에 대 한 직접 액세스를 허용 하면서 프록시로 기본 COM 개체의 멤버입니다.  
   
  ActiveX 이벤트 싱크만 지원 형식의 반환 값 HRESULT 또는 이벤트 처리기 메서드에서; void CE ATL 구현 다른 모든 반환 값 지원 되지 않으며 해당 동작이 정의 되지 않습니다.  
   
@@ -183,7 +166,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>설명  
- 참조 [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ 참조 [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) in the Windows SDK입니다.  
   
 ##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  인터페이스의 형식 정보를 가져오는 데 사용할 수 있는 개체의 형식 정보를 검색합니다.  
@@ -204,8 +187,8 @@ STDMETHOD(GetTypeInfo)(
 STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ```  
   
-### <a name="remarks"></a>주의  
- 참조 [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+### <a name="remarks"></a>설명  
+ 참조 [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) in the Windows SDK입니다.  
   
 ##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
  사용자 정의 형식의 기본 형식을 검색합니다.  
@@ -243,7 +226,7 @@ IDispEventImpl();
 typedef tihclass _tihclass;
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기본적으로 클래스는 `CComTypeInfoHolder`합니다. `CComTypeInfoHolder`클래스에 대 한 형식 정보를 관리합니다.  
   
 ## <a name="see-also"></a>참고 항목  

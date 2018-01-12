@@ -1,31 +1,33 @@
 ---
-title: "동기화(lock 클래스) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "잠금 클래스"
+title: "동기화 (lock 클래스) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: lock class
 ms.assetid: 5d468122-875d-4e81-b5ba-c9486a873335
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c6b3c377f54b4d60f5d7b74f062488f1b99ba5ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 동기화(lock 클래스)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Provides a mechanism to automate taking a lock that synchronizes access to an object.  
+# <a name="synchronization-lock-class"></a>동기화(lock 클래스)
+개체에 대 한 액세스를 동기화 하는 잠금을 가져오는 것을 자동화 하는 메커니즘을 제공 합니다.  
   
-## 단원 내용  
- [잠금](../dotnet/lock.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [lock](../dotnet/lock.md)  
   
-## 참고 항목  
- [C\+\+ 지원 라이브러리](../dotnet/cpp-support-library.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ 지원 라이브러리](../dotnet/cpp-support-library.md)

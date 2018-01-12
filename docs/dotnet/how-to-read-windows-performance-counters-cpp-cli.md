@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ad77e459d32ed0fc0b3798d2a37b4754d556f20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>방법: Windows 성능 카운터 읽기(C++/CLI)
 일부 응용 프로그램 및 Windows 하위 시스템에는 Windows 성능 시스템을 통해 성능 데이터를 표시 합니다. 이러한 카운터를 사용 하 여 액세스할 수는 <xref:System.Diagnostics.PerformanceCounterCategory> 및 <xref:System.Diagnostics.PerformanceCounter> 에 상주 하는 클래스는 <xref:System.Diagnostics?displayProperty=fullName> 네임 스페이스입니다.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  이 예제를 Windows Vista에서 실행하려면 관리 권한이 필요합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // processor_timer.cpp  

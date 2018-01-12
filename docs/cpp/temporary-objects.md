@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bb0c065158df339fb7e0a5cf39b4588411babe4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="temporary-objects"></a>임시 개체
 경우에 따라 컴파일러가 임시 개체를 만들어야 합니다. 다음과 같은 이유로 이 임시 개체를 만들 수 있습니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
 -   캐스팅 결과를 사용자 정의 형식에 저장하려는 경우. 지정된 형식의 개체를 사용자 정의 형식으로 명시적으로 변환하는 경우 새 개체는 임시 개체로 구성됩니다.  
   
- 임시 개체는 생성된 시점과 소멸되는 시점에 따라 정의되는 수명을 가집니다. 둘 이상의 임시 개체를 만드는 식은 결국 만들어진 순서의 역순으로 소멸됩니다. 소멸이 발생하는 시점은 다음 표에 나와 있습니다.  
+ 임시 개체는 생성된 시점과 제거되는 시점에 따라 정의되는 수명을 가집니다. 둘 이상의 임시 개체를 만드는 식은 결국 만들어진 순서의 역순으로 소멸됩니다. 소멸이 발생하는 시점은 다음 표에 나와 있습니다.  
   
 ### <a name="destruction-points-for-temporary-objects"></a>임시 개체에 대한 소멸 지점  
   

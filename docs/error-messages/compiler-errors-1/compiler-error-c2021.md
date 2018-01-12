@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d87775cb88579cae93e4de208b1386ab067a07b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fd62bc02ce871f87101ebd255690e2ff3d81d176
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2021"></a>컴파일러 오류 C2021
 'character'가 아니라 지수 값이 필요합니다.  
   
  부동 소수점 상수의 지 수로 사용 되는 문자는 유효한 숫자가 아닙니다. 범위에 있는 지 수를 사용 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2021 오류가 생성 됩니다.  
   
 ```  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 float test1=1.175494351E;   // C2021  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  해결 방법:  
   
 ```  

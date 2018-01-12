@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4196146afe7f72ed9d72d4fb5696492079da9673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9cc5dc2656a1083b4aaa2b6cadc731a6010968e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueuetopitem-stlclr"></a>priority_queue::top_item(STL/CLR)
 우선 순위가 가장 높은 요소에 액세스 합니다.  
@@ -33,7 +36,7 @@ property value_type back_item;
 ## <a name="remarks"></a>설명  
  비어 있는 제어 된 시퀀스의 최상위 (가장 높은 우선 순위) 요소를 액세스 하는 속성입니다. 읽기 또는 존재 하는 것을 알고 있는 경우 우선 순위가 가장 높은 요소를 쓰기 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_priority_queue_top_item.cpp   

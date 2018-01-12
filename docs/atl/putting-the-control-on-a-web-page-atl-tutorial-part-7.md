@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6990539ca6f0bc2956822547e3d41c00c841caf8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 523086c70d9f974c014f5d33a71bf9309b8e017d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>웹 페이지에 컨트롤 배치(ATL 자습서, 7부)
 컨트롤이 완성 되었습니다. 실제 상황에서 작동 하 여 컨트롤을 보려면 웹 페이지에 추가 합니다. 컨트롤을 정의할 때 컨트롤을 포함 하는 HTML 파일을 만들었습니다. PolyCtl.htm 파일 열기 **솔루션 탐색기**, 웹 페이지에 컨트롤을 볼 수 있습니다.  

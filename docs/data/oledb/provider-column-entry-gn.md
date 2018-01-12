@@ -1,32 +1,33 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_GN | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_GN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_GN 매크로"
+title: PROVIDER_COLUMN_ENTRY_GN | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_GN
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_GN macro
 ms.assetid: be77ba85-634c-4e28-832f-d2fa40413254
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8b9899efec9ef3a96ad5ab6377c2451cc8c722a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# PROVIDER_COLUMN_ENTRY_GN
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Represents a specific column supported by the provider.  
+# <a name="providercolumnentrygn"></a>PROVIDER_COLUMN_ENTRY_GN
+공급자에서 지 원하는 특정 열을 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,39 +36,39 @@ name
 , ordinal, flags, colSize, dbtype, precision, scale, guid )  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *name*  
- \[in\] The column name.  
+ [in] 열 이름입니다.  
   
  `ordinal`  
- \[in\] The column number.  Unless the column is a Bookmark column, the column number must not be 0.  
+ [in] 열 번호입니다. 열이 책갈피 열, 하지 않는 한 열 번호는 0 아니어야 합니다.  
   
  `flags`  
- \[in\] Specifies how data is returned.  See the `dwFlags` description in [DBBINDING Structures](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
+ [in] 데이터 반환 되는 방법을 지정 합니다. 참조는 `dwFlags` 에 설명을 [DBBINDING 구조](https://msdn.microsoft.com/en-us/library/ms716845.aspx)합니다.  
   
  *colSize*  
- \[in\] The column size.  
+ [in] 열 크기입니다.  
   
  `dbtype`  
- \[in\] Indicates the data type of the value.  See the **wType** description in [DBBINDING Structures](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
+ [in] 값의 데이터 형식을 나타냅니다. 참조는 **wType** 에 설명을 [DBBINDING 구조](https://msdn.microsoft.com/en-us/library/ms716845.aspx)합니다.  
   
  *precision*  
- \[in\] Indicates the precision to use when getting data if *dbType* is `DBTYPE_NUMERIC` or **DBTYPE\_DECIMAL**.  See the **bPrecision** description in [DBBINDING Structures](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
+ [in] 사용할 경우 데이터를 가져올 때 전체 자릿수를 나타내는 *dbType* 은 `DBTYPE_NUMERIC` 또는 **DBTYPE_DECIMAL**합니다. 참조는 **bPrecision** 에 설명을 [DBBINDING 구조](https://msdn.microsoft.com/en-us/library/ms716845.aspx)합니다.  
   
  `scale`  
- \[in\] Indicates the scale to use when getting data if dbType is `DBTYPE_NUMERIC` or **DBTYPE\_DECIMAL**.  See the **bScale** description in [DBBINDING Structures](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  
+ [in] DbType이 데이터를 가져올 때 사용할 소수 자릿수를 나타냅니다 `DBTYPE_NUMERIC` 또는 **DBTYPE_DECIMAL**합니다. 참조는 **bScale** 에 설명을 [DBBINDING 구조](https://msdn.microsoft.com/en-us/library/ms716845.aspx)합니다.  
   
  `guid`  
- A schema rowset GUID.  See [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) in the *OLE DB Programmer's Reference* for a list of schema rowsets and their GUIDs.  
+ 스키마 행 집합 GUID입니다. 참조 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 에 *OLE DB Programmer's Reference* 스키마 행 집합 및 Guid 목록에 대 한 합니다.  
   
-## 설명  
- Allows you to specify the column's size, data type, precision, scale, and schema rowset GUID.  
+## <a name="remarks"></a>설명  
+ 열의 크기, 데이터 형식, 정밀도, 배율 및 스키마 행 집합 GUID 지정할 수 있습니다.  
   
-## 요구 사항  
- **Header:** atldb.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldb.h  
   
-## 참고 항목  
- [OLE DB 공급자 템플릿에 대한 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+## <a name="see-also"></a>참고 항목  
+ [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)   
  [OLE DB 공급자 만들기](../../data/oledb/creating-an-ole-db-provider.md)

@@ -1,44 +1,46 @@
 ---
-title: "auto_gcroot::release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::release"
-  - "auto_gcroot::release"
-  - "auto_gcroot.release"
-  - "msclr.auto_gcroot.release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "release 메서드"
+title: auto_gcroot::release | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::release
+- auto_gcroot::release
+- auto_gcroot.release
+- msclr.auto_gcroot.release
+dev_langs: C++
+helpviewer_keywords: release method
 ms.assetid: 40b253f0-154e-4d79-80a4-ff13199c3ff0
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ea93fa37ab895bd1b96c4955a3edc8fd773f4a86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# auto_gcroot::release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Releases the object from `auto_gcroot` management.  
+# <a name="autogcrootrelease"></a>auto_gcroot::release
+개체를 해제 `auto_gcroot` 관리 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 _element_type release();  
 ```  
   
-## 반환 값  
- The released object.  
+## <a name="return-value"></a>반환 값  
+ 출시 된 개체입니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // msl_auto_gcroot_release.cpp  
@@ -81,16 +83,19 @@ int main()
 }  
 ```  
   
-  **ClassA constructor: first**  
-**ClassA constructor: second**  
-**ClassA destructor: second**  
-**Hello from first A\!**  
-**done**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_gcroot.h\>  
+```Output  
+ClassA constructor: first  
+ClassA constructor: second  
+ClassA destructor: second  
+Hello from first A!  
+done  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::~auto\_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_gcroot 멤버](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

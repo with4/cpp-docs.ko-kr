@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -32,36 +31,19 @@ f1_keywords:
 - ATLSAFE/ATL::CComSafeArray::Resize
 - ATLSAFE/ATL::CComSafeArray::SetAt
 - ATLSAFE/ATL::CComSafeArray::m_psa
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArray class
+dev_langs: C++
+helpviewer_keywords: CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7bed846015090ef9c4da841adff4968c91d8719d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 클래스
 이 클래스는 **SAFEARRAY** 구조체의 래퍼입니다.  
@@ -94,9 +76,9 @@ class CComSafeArray
 |[CComSafeArray::Attach](#attach)|**SAFEARRAY** 구조체를 `CComSafeArray` 개체에 연결합니다.|  
 |[CComSafeArray::CopyFrom](#copyfrom)|**SAFEARRAY** 구조체의 내용을 `CComSafeArray` 개체에 복사합니다.|  
 |[CComSafeArray::CopyTo](#copyto)|`CComSafeArray` 개체의 복사본을 만듭니다.|  
-|[Ccomsafearray:: Create](#create)|
+|[개체를 만들려면](#create)|
           `CComSafeArray` 개체를 만듭니다.|  
-|[Ccomsafearray:: Destroy](#destroy)|`CComSafeArray` 개체를 제거합니다.|  
+|[CComSafeArray::Destroy](#destroy)|`CComSafeArray` 개체를 제거합니다.|  
 |[CComSafeArray::Detach](#detach)|**SAFEARRAY** 를 `CComSafeArray` 개체에서 분리합니다.|  
 |[CComSafeArray::GetAt](#getat)|1차원 배열에서 단일 요소를 검색합니다.|  
 |[CComSafeArray::GetCount](#getcount)|배열의 요소 수를 반환합니다.|  
@@ -126,14 +108,14 @@ class CComSafeArray
 |----------|-----------------|  
 |[CComSafeArray::m_psa](#m_psa)|이 데이터 멤버는 **SAFEARRAY** 구조체의 주소를 유지합니다.|  
   
-## <a name="remarks"></a>주의  
- `CComSafeArray`에 대 한 래퍼를 제공는 [SAFEARRAY 데이터 형식](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) 만들고의 거의 모든 VARIANT 지원 형식의 1 차원 및 다차원 배열을 관리를 간단 하 게 만드는 클래스입니다.  
+## <a name="remarks"></a>설명  
+ `CComSafeArray` 는 [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) 클래스에 대한 래퍼를 제공합니다. 따라서 거의 모든 VARIANT 지원 형식의 1차원 및 다차원 배열을 쉽게 만들고 관리할 수 있습니다.  
   
- `CComSafeArray`는 프로세스 간의 배열 전달을 간소화할 뿐만 아니라 상한과 하한에 대해 배열 인덱스 값을 확인하여 추가 보안을 제공합니다.  
+ `CComSafeArray` 는 프로세스 간의 배열 전달을 간소화할 뿐만 아니라 상한과 하한에 대해 배열 인덱스 값을 확인하여 추가 보안을 제공합니다.  
   
  `CComSafeArray`의 하한은 모든 사용자 정의 값에서 시작할 수 있지만 C++를 통해 액세스하는 배열에서는 0을 하한으로 사용해야 합니다. Visual Basic과 같은 다른 언어에서는 다른 경계 값(예: -10~10)을 사용할 수 있습니다.  
   
- 사용 하 여 [ccomsafearray:: Create](#create) 를 만드는 `CComSafeArray` 개체 및 [ccomsafearray:: Destroy](#destroy) 삭제할 수 있습니다.  
+ [개체를 만들려면](#create) CComSafeArray::Create `CComSafeArray` 를 사용하고, 제거하려면 [CComSafeArray::Destroy](#destroy) 를 사용합니다.  
   
  `CComSafeArray` 는 VARIANT 데이터 형식의 다음 하위 집합을 포함할 수 있습니다.  
   
@@ -158,8 +140,8 @@ class CComSafeArray
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsafe.h  
   
-## <a name="example"></a>예제  
- [!code-cpp[NVC_ATL_Utilities # 75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+## <a name="example"></a>예  
+ [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  하나 이상의 요소 또는 **SAFEARRAY** 구조체를 `CComSafeArray`에 추가합니다.  
@@ -189,7 +171,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  새 개체는 기존의 끝에 추가 됩니다. **SAFEARRAY** 개체입니다. 개체를 추가 하는 다차원 **SAFEARRAY** 개체가 지원 되지 않습니다. 기존 개체의 배열에 추가할 때는 두 배열에 동일한 형식의 요소가 있어야 합니다.  
   
  `bCopy` 플래그 고려할 때 형식의 요소 `BSTR` 또는 **VARIANT** 배열에 추가 됩니다. 기본값 **TRUE** 요소 배열에 추가 될 때 데이터의 새 복사본이 생성 되 보장 합니다.  
@@ -208,7 +190,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  연결는 **SAFEARRAY** 구조체는 `CComSafeArray` 개체를 기존 `CComSafeArray` 사용할 수 있는 방법입니다.  
   
 ##  <a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
@@ -257,7 +239,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ~CComSafeArray() throw()
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다.  
   
 ##  <a name="copyfrom"></a>CComSafeArray::CopyFrom  
@@ -291,10 +273,10 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  콘텐츠를 복사 하는이 메서드는 `CComSafeArray` 개체는 **SAFEARRAY** 구조입니다.  
   
-##  <a name="create"></a>Ccomsafearray:: Create  
+##  <a name="create"></a>  개체를 만들려면  
  
           `CComSafeArray`을 만듭니다.  
   
@@ -320,9 +302,9 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- A `CComSafeArray` 기존 개체를 만들 수 **SAFEARRAYBOUND** 구조와 차원 또는 한과 배열의 요소 수를 지정 하 여 수 있습니다. 배열이 Visual c + +에서 액세스 해야 하는 경우 하한값 0 이어야 합니다. 다른 언어 하한값 (예:-10 ~ 10 같은 범위를 요소와 Visual Basic에서는 배열)에 대 한 다른 값을 허용할 수 있습니다.  
+ A `CComSafeArray` 기존 개체를 만들 수 **SAFEARRAYBOUND** 구조와 차원 또는 한과 배열의 요소 수를 지정 하 여 수 있습니다. 배열이 Visual c + +에서 액세스 해야 하는 경우 하한값 0 이어야 합니다. 다른 언어는 하 한 (예:-10 ~ 10 같은 범위를 요소와 Visual Basic에서는 배열)에 대 한 다른 값을 허용할 수 있습니다.  
   
-##  <a name="destroy"></a>Ccomsafearray:: Destroy  
+##  <a name="destroy"></a>  CComSafeArray::Destroy  
  `CComSafeArray` 개체를 제거합니다.  
   
 ```
@@ -332,7 +314,7 @@ HRESULT Destroy();
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  기존 소멸 `CComSafeArray` 개체와 모든 포함 된 데이터입니다.  
   
 ##  <a name="detach"></a>CComSafeArray::Detach  
@@ -376,7 +358,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="return-value"></a>반환 값  
  배열의 요소 수를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  다차원 배열에 사용 하는 경우이 메서드는 특정 차원에서 요소 수를 반환 합니다.  
   
 ##  <a name="getdimensions"></a>CComSafeArray::GetDimensions  
@@ -403,7 +385,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="return-value"></a>반환 값  
  하한값을 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  하 한이 0 이면 해당 첫 번째 요소는 요소 번호 0는 C 형식의 배열을 나타냅니다. 오류 발생 시 예를 들어 잘못 된 차원 인수에이 메서드를 호출 `AtlThrow` 오류를 설명 하는 hresult입니다.  
   
 ##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
@@ -458,7 +440,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="return-value"></a>반환 값  
  상한 값을 반환합니다. 이 값은 포함을이 차원에 대 한 유효한 최대 인덱스입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  오류 발생 시 예를 들어 잘못 된 차원 인수에이 메서드를 호출 `AtlThrow` 오류를 설명 하는 hresult입니다.  
   
 ##  <a name="issizable"></a>CComSafeArray::IsSizable  
@@ -512,7 +494,7 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이의 다차원 버전 [CComSafeArray::SetAt](#setat)합니다.  
   
 ##  <a name="operator_at"></a>CComSafeArray::operator\[\]  
@@ -605,12 +587,11 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `bCopy` 플래그 고려할 때 형식의 요소 `BSTR` 또는 **VARIANT** 배열에 추가 됩니다. 기본값 **TRUE** 요소 배열에 추가 될 때 데이터의 새 복사본이 생성 되 보장 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SAFEARRAY 데이터 형식](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
+ [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
  [Ccomsafearray:: Create](#create)   
  [Ccomsafearray:: Destroy](#destroy)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

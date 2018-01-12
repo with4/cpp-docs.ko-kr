@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08c0730567b327896ee3e5b5d7ed86b8de4b391a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 718483b6d95e1eb1eb67f66d2b9c18a8e17cae20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makecollection-stlclr"></a>make_collection(STL/CLR)
 확인 된 `range_adapter` 반복기 쌍에서입니다.  
@@ -44,7 +47,7 @@ template<typename Iter>
 ## <a name="remarks"></a>설명  
  템플릿 함수가 `gcnew range_adapter<Iter>(first, last)`을 반환합니다. 생성에 사용 된 `range_adapter<Iter>` 반복기의 쌍에서 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // cliext_make_collection.cpp   

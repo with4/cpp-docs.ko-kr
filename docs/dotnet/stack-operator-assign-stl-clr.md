@@ -1,46 +1,46 @@
 ---
-title: "stack::operator=(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 멤버[STL/CLR]"
+title: 'stack:: operator = (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 6f23b5fc-667e-4c6c-b43a-88b30da2ecac
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 58a73316bf6928ca690fdc01b5211fc55d8cca7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# stack::operator=(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Replaces the controlled sequence.  
+# <a name="stackoperator-stlclr"></a>stack::operator=(STL/CLR)
+제어되는 시퀀스를 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 stack <Value, Container>% operator=(stack <Value, Container>% right);  
 ```  
   
-#### 매개 변수  
- right  
- Container adapter to copy.  
+#### <a name="parameters"></a>매개 변수  
+ 오른쪽  
+ 복사할 컨테이너 어댑터입니다.  
   
-## 설명  
- The member operator copies `right` to the object, then returns `*this`.  You use it to replace the controlled sequence with a copy of the controlled sequence in `right`.  
+## <a name="remarks"></a>설명  
+ 멤버 연산자 복사본 `right` 개체에 반환 `*this`합니다. 이를 사용하여 제어되는 시퀀스를 `right`의 제어되는 시퀀스 복사본으로 대체합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_stack_operator_as.cpp   
@@ -71,13 +71,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/stack\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/스택 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::assign](../dotnet/stack-assign-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::assign(STL/CLR)](../dotnet/stack-assign-stl-clr.md)

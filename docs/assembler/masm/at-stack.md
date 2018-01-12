@@ -1,33 +1,31 @@
 ---
-title: "@stack | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@stack symbol"
+title: '@stack| Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@stack'
+dev_langs: C++
+helpviewer_keywords: '@stack symbol'
 ms.assetid: 4f656d9f-c3d4-4e19-9d97-bdee01b41861
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6b152b654c62dfbfa28fdf637a0c72d7b507df47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# @stack
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-스택 또는 스택 맨 스택 \(텍스트 매크로\)에 대 한 DGROUP 합니다.  
+# <a name="stack"></a>@stack
+스택 또는 먼 스택 (텍스트 매크로)에 대 한 스택 근처에 대 한 DGROUP 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,5 +33,5 @@ manager: "ghogen"
   
 ```  
   
-## 참고 항목  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [기호 참조](../../assembler/masm/symbols-reference.md)

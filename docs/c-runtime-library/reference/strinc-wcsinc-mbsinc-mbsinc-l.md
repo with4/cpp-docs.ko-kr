@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - wcsinc
 - mbsinc
 - _mbsinc_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbsinc function
 - wcsinc function
@@ -49,36 +47,22 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3eca42c7ad0563ce573dbaa2a75dd85739c342f5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4fcda1d1c288e6fe8d6a3dfafea287e79ab6738f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 문자열 포인터를 한 문자씩 이동합니다.  
   
 > [!IMPORTANT]
->  `_mbsinc` 및 `_mbsinc_l`은 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbsinc` 및 `_mbsinc_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -112,7 +96,7 @@ unsigned char *_mbsinc_l(
  이러한 각 루틴은 `current` 바로 뒤에 오는 문자로 포인터를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- `_mbsinc` 함수는 `current` 바로 뒤에 오는 멀티바이트 문자의 첫 번째 바이트로 포인터를 반환합니다. `_mbsinc`는 현재 사용 중인 [멀티바이트 코드 페이지](../../c-runtime-library/code-pages.md)에 따라 멀티바이트 문자 시퀀스를 인식하고 `_mbsinc_l`은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_mbsinc` 함수는 `current` 바로 뒤에 오는 멀티바이트 문자의 첫 번째 바이트로 포인터를 반환합니다. `_mbsinc`는 현재 사용 중인 [멀티바이트 코드 페이지](../../c-runtime-library/code-pages.md)에 따라 멀티바이트 문자 시퀀스를 인식하고 `_mbsinc_l`은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  Tchar.h에 정의된 제네릭 텍스트 함수인 `_tcsinc`는 `_mbsinc`가 정의된 경우 `_MBCS`로 매핑되고 `_wcsinc`가 정의된 경우 `_UNICODE`로 매핑됩니다. 그렇지 않으면 `_tcsinc`는 `_strinc`로 매핑됩니다. `_strinc` 및 `_wcsinc`는 `_mbsinc`의 싱글바이트 문자 및 와이드 문자 버전입니다. `_strinc` 및 `_wcsinc`는 이러한 매핑을 위해서만 제공되고 그 외에는 사용하면 안 됩니다. 자세한 내용은 [일반 텍스트 매핑 사용](../../c-runtime-library/using-generic-text-mappings.md) 및 [일반 텍스트 매핑](../../c-runtime-library/generic-text-mappings.md)을 참조하세요.  
   
@@ -123,7 +107,7 @@ unsigned char *_mbsinc_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_mbsinc`|\<mbstring.h>|  
 |`_mbsinc_l`|\<mbstring.h>|  

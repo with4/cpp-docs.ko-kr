@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e231644d6a018048a70d594a378d473f3c623e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 095e743f402a01043f198a2460dad124e1e3efb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimapgenericcontainer-stlclr"></a>hash_multimap::generic_container(STL/CLR)
 컨테이너에 대 한 제네릭 인터페이스의 형식입니다.  
@@ -35,7 +38,7 @@ typedef Microsoft::VisualC::StlClr::
 ## <a name="remarks"></a>설명  
  이 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_multimap_generic_container.cpp   

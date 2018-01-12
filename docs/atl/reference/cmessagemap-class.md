@@ -4,45 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CMessageMap
 - ATLWIN/ATL::CMessageMap
 - ATLWIN/ATL::CMessageMap::ProcessWindowMessage
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CMessageMap class
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 2726e73d35d01c942ac3d251579fe350be549800
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 클래스
 이 클래스를 사용 하면 다른 개체에 의해 액세스 되어야 하는 개체의 메시지 맵.  
@@ -69,7 +53,7 @@ class ATL_NO_VTABLE CMessageMap
   
  ATL 사용 하 여 `CMessageMap` 지원이 포함 된 창과 동적 메시지 맵 체인입니다. 예를 들어 모든 클래스를 포함 하는 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) 개체에서 파생 되어야 `CMessageMap`합니다. 다음 코드에서 가져온 것은 [SUBEDIT](../../visual-cpp-samples.md) 샘플. 통해 [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` 클래스에서 자동으로 파생 `CMessageMap`합니다.  
   
- [!code-cpp[NVC_ATL_Windowing # 90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
  때문에 포함된 된 창의 `m_EditCtrl`, 메시지 맵을 포함 하는 클래스에서 사용할 `CAtlEdit` 에서 파생 `CMessageMap`합니다.  
   
@@ -113,7 +97,7 @@ virtual BOOL ProcessWindowMessage(
 ### <a name="return-value"></a>반환 값  
  **True 이면** 메시지를 완전히 처리 된 고, 그렇지 않으면 **FALSE**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  창 프로시저에 의해 호출 된 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) 개체 또는 개체를 동적으로 연결 메시지 맵에 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
@@ -121,4 +105,3 @@ virtual BOOL ProcessWindowMessage(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

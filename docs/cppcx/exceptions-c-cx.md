@@ -12,11 +12,12 @@ caps.latest.revision: "22"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: b9b7a5af4816ff638918ccf7478465fe120e8e67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f578271823b0253dfa3defcb126bec251749a2dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-ccx"></a>예외(C++/CX)
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  다음 표에서는 표준 예외를 보여 줍니다.  
   
-|이름|내부 HRESULT|설명|  
+|name|내부 HRESULT|설명|  
 |----------|------------------------|-----------------|  
 |COMException|*사용자 정의 hresult*|COM 메서드 호출에서 인식할 수 없는 HRESULT가 반환되는 경우에 throw됩니다.|  
 |AccessDeniedException|E_ACCESSDENIED|리소스 또는 기능에 대한 액세스가 거부된 경우 throw됩니다.|  

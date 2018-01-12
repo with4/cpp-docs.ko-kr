@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8e63e071629c2647ccd8f89095fbc7c2285f1a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c2ea7a2509e58cfd4da163cc76c018d06c244fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="macro-substitution"></a>매크로 대체
 때 *매크로 이름* 가 호출의 각 항목 *string1* 으로 대체 하는 문자열의 정의에 *string2*합니다.  

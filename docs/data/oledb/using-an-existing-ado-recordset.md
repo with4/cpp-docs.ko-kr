@@ -1,32 +1,35 @@
 ---
-title: "기존 ADO 레코드 집합 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO 레코드 집합[C++]"
-  - "OLE DB 소비자 템플릿, ADO 레코드 집합"
-  - "레코드 집합[C++], OLE DB에서 사용"
+title: "기존 ADO 레코드 집합을 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ADO recordsets [C++]
+- OLE DB consumer templates, ADO recordsets
+- recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 02f8f29c60601e22a1b005f435d3626336628a1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 기존 ADO 레코드 집합 사용
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB 소비자 템플릿과 ADO\(Active Data Objects\)를 혼합하려면, ADO를 사용하여 OLE DB 소비자 템플릿의 행 집합에 해당하는 레코드 집합을 여십시오.  레코드 집합이 있으면 다음을 수행하여 OLE DB 행 집합에 연결하십시오.  
+# <a name="using-an-existing-ado-recordset"></a>기존 ADO 레코드 집합 사용
+OLE DB 소비자 템플릿 및 현재 데이터 개체 (ADO)를 혼합 하려면 ADO를 사용 하 여 레코드 집합 (OLE DB 소비자 템플릿의 행 집합에 해당)을 엽니다. 레코드 집합을 사용 하는 경우에 OLE DB 행 집합에 연결 하려면 다음을 수행 합니다.  
   
-1.  `IRowset` 및 `IAccessor` 포인터에 대해 `QueryInterface`를 호출합니다.  
+1.  호출 `QueryInterface` 에 대 한는 `IRowset` 및 `IAccessor` 포인터입니다.  
   
     ```  
     IRowset* lpRowset = NULL;  
@@ -36,9 +39,9 @@ OLE DB 소비자 템플릿과 ADO\(Active Data Objects\)를 혼합하려면, ADO
     ```  
   
     > [!NOTE]
-    >  *lpUnk*는 ADO 레코드 집합의 **IUnknown** 개체를 가리킵니다.  
+    >  *lpUnk* 가리키는 **IUnknown** ADO 레코드 집합의 개체입니다.  
   
-2.  접근자와 행 집합을 알맞은 OLE DB 소비자 템플릿 클래스에 첨부합니다.  
+2.  접근자 및 행 집합의 적절 한 OLE DB 소비자 템플릿 클래스에 연결 합니다.  
   
     ```  
     CRowset rs;  
@@ -49,5 +52,5 @@ OLE DB 소비자 템플릿과 ADO\(Active Data Objects\)를 혼합하려면, ADO
     rs.SetAccessor(accessor);  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [접근자 사용](../../data/oledb/using-accessors.md)

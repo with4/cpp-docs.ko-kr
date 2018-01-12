@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea41febbb9de28ff70d89bfe4f6fcebc9a452ed2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b3383efcc78a022fc5131984957d94aa4b47838
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>디버깅 및 오류 보고 함수를 전역
 이러한 함수는 유용한 디버깅 및 추적 기능을 제공 합니다.  
@@ -148,7 +149,7 @@ HRESULT WINAPI AtlReportError(
 ### <a name="remarks"></a>설명  
  문자열 *lpszDesc* 의 오류 텍스트 설명으로 사용 됩니다. 받으면 클라이언트는 `hRes` 에서 반환할 `AtlReportError`, 클라이언트에 액세스할 수는 **IErrorInfo** 오류에 대 한 세부 정보에 대 한 구조입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
   
 > [!CAUTION]
@@ -183,7 +184,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
   
  ATL 프로젝트에 ATL 오류가 발생할 경우 사용할이 함수의 사용자 지정 구현을 제공 하는 것이 같습니다. 이 작업을 수행 하려면으로 동일한 서명 사용 하 여 사용자 고유의 함수를 정의 `AtlThrow` 및 #define `AtlThrow` 함수의 이름 이어야 합니다. 이 atlexcept.h (즉, 수행 atlbase.h atlexcept.h 포함 되므로 ATL 헤더를 포함 하기 전에 해야 함을)를 포함 하기 전에 수행 되어야 합니다. 함수 특성 `__declspec(noreturn)` 에 잘못 된 SAL 경고가 표시 되지 않도록 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
 
 ## <a name="requirements"></a>요구 사항  

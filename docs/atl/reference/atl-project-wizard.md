@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e547f09e303386d3bb28ebd9dab94854ee67599e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 373e39461aed7c3aadb7107e61a8aecab1177ee7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-project-wizard"></a>ATL 프로젝트 마법사
 액티브 템플릿 라이브러리 (ATL)은 작고 빠른 COM 개체를 작성을 단순화 하는 템플릿 기반 c + + 클래스의 집합. ATL 프로젝트 마법사는 COM 개체를 포함 하도록 구조는 프로젝트를 만듭니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
  프로젝트 속성을 지정할 수 있습니다 (예를 들어 [CRT에 정적으로 링크 여부](../../atl/programming-with-atl-and-c-run-time-code.md))에 [프로젝트 속성](../../ide/general-property-page-project.md) 페이지에서 설정할 수 있습니다 [빌드 구성](/visualstudio/ide/understanding-build-configurations) 에 대 한 프로그램 ATL 프로젝트입니다. 참조 [프로젝트 응용 프로그램 빌드를 사용 하 여](http://msdn.microsoft.com/en-us/3339fa90-bac2-4b95-8361-662a2e0e7dfe) 자세한 정보에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual c + + 프로젝트 만들기 및 관리](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Visual C++ 프로젝트 만들기 및 관리](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Visual c + + 프로젝트 형식](../../ide/visual-cpp-project-types.md)   
  [응용 프로그램 마법사를 사용 하 여 데스크톱 프로젝트 만들기](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [ATL COM 개체의 기본 사항](../../atl/fundamentals-of-atl-com-objects.md)   

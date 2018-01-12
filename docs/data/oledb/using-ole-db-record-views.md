@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4e57f320c8b207e7b1c8721ab25744cd1f128bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 03e88eaafa82e346c720810bf567d867a9cd6096
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ole-db-record-views"></a>OLE DB 레코드 뷰 사용
 MFC 응용 프로그램에서 OLE DB 행 집합 데이터를 표시 하려는 경우에 MFC 클래스 사용 해야 [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)합니다. 레코드 뷰 개체에서 만든 `COleDBRecordView` MFC 컨트롤에 데이터베이스 레코드를 표시할 수 있습니다. 레코드 뷰는 직접 만든 OLE DB 행 집합 개체에 연결 대화 상자 폼 보기의 `CRowset` 템플릿 클래스입니다. 행 집합 개체에 대 한 핸들을 가져오는 것은 간단 합니다.  

@@ -1,42 +1,44 @@
 ---
 title: "CDynamicParameterAccessor 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicParameterAccessor"
-  - "ATL::CDynamicParameterAccessor"
-  - "CDynamicParameterAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicParameterAccessor 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicParameterAccessor
+- ATL::CDynamicParameterAccessor
+- CDynamicParameterAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicParameterAccessor class
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b0c2590866db418f1652ebd1a46c0465ccb99086
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)와 유사하지만 [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx) 인터페이스를 호출하여 설정한 매개 변수 정보를 가져옵니다.  
+# <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 클래스
+[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 와 유사하지만 [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx) 인터페이스를 호출하여 설정한 매개 변수 정보를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CDynamicParameterAccessor : public CDynamicAccessor  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
@@ -54,17 +56,17 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 |[SetParamStatus](../../data/oledb/cdynamicparameteraccessor-setparamstatus.md)|버퍼에 저장된 지정된 매개 변수의 상태를 설정합니다.|  
 |[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)|버퍼에 저장된 지정된 매개 변수의 문자열 데이터를 설정합니다.|  
   
-## 설명  
- 공급자는 이 클래스를 사용할 소비자에 대해 `ICommandWithParameters`를 지원해야 합니다.  
+## <a name="remarks"></a>설명  
+ 공급자는 이 클래스를 사용할 소비자에 대해 `ICommandWithParameters` 를 지원해야 합니다.  
   
- 매개 변수 정보는 이 클래스로 만들고 관리하는 버퍼에 저장됩니다.[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) 및 [GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)을 사용하여 버퍼에서 매개 변수 데이터를 가져옵니다.  
+ 매개 변수 정보는 이 클래스로 만들고 관리하는 버퍼에 저장됩니다. [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) 및 [GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)을 사용하여 버퍼에서 매개 변수 데이터를 가져옵니다.  
   
- 이 클래스를 사용하여 SQL Server 저장 프로시저를 실행하고 출력 매개 변수 값을 가져오는 방법을 보여 주는 예제는 기술 자료 문서 Q058860 "방법: CDynamicParameterAccessor를 사용하여 저장 프로시저 실행"을 참조하세요. 기술 자료 문서는 MSDN Library Visual Studio 설명서나 [http:\/\/support.microsoft.com\/](http://support.microsoft.com)에서 사용할 수 있습니다.  
+ 이 클래스를 사용하여 SQL Server 저장 프로시저를 실행하고 출력 매개 변수 값을 가져오는 방법을 보여 주는 예제는 기술 자료 문서 Q058860 "방법: CDynamicParameterAccessor를 사용하여 저장 프로시저 실행"을 참조하세요. 기술 자료 문서는 MSDN Library Visual Studio 설명서나 [http://support.microsoft.com/](http://support.microsoft.com)에서 사용할 수 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더**: atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 클래스](../../data/oledb/caccessor-class.md)   

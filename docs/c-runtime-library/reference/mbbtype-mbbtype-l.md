@@ -39,11 +39,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: badaf05406cc74c4cbf0112f948360fffb93c4c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae66b1c0765f496dcfe460c4ea7ff4f84e9333ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
 이전 바이트에 따라 바이트 형식을 반환합니다.  
@@ -89,13 +90,13 @@ int _mbbtype_l(
 ## <a name="remarks"></a>설명  
  `_mbbtype` 함수는 멀티바이트 문자에서 바이트 형식을 결정합니다. `type` 값이 1을 제외한 모든 값이면 `_mbbtype`는 멀티바이트 문자의 유효한 단일 바이트 또는 선행 바이트가 있는지 테스트합니다. `type` 값이 1이면 `_mbbtype`는 멀티바이트 문자의 유효한 후행 바이트가 있는지 테스트합니다.  
   
- 출력 값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbbtype` 버전의 이 함수 이 로캘 종속 동작의 현재 로캘을 사용하고 `_mbbtype_l` 버전은 전달된 로캘 매개 변수를 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbbtype` 버전의 이 함수 이 로캘 종속 동작의 현재 로캘을 사용하고 `_mbbtype_l` 버전은 전달된 로캘 매개 변수를 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  이전 버전에서 `_mbbtype`의 이름은 `chkctype`입니다. 새 코드의 경우 대신 `_mbbtype`를 사용합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_mbbtype`|\<mbstring.h>|\<mbctype.h>*|  
 |`_mbbtype_l`|\<mbstring.h>|\<mbctype.h>*|  

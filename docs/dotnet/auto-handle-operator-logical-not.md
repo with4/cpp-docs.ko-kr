@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f0cd9ef88895b8fa85bd89775c030aedaa5c042
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d6b37b4f5eaaec603ee457558fb6a68161e6e1e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autohandleoperator"></a>auto_handle::operator!
 사용 하 여에 대 한 연산자 `auto_handle` 조건식에서입니다.  
@@ -37,7 +40,7 @@ bool operator!();
 ## <a name="return-value"></a>반환 값  
  `true`래핑된 개체가 잘못 되었습니다; 없는 경우 `false` 그렇지 않은 경우.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // msl_auto_handle_operator_not.cpp  

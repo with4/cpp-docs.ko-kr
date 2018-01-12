@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 854f15dcc597f2fc6e32f8385c1e9d27cfb37362
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f2b3f46a463eed0d330f7e22975197f76c900b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="anonymous-class-types"></a>익명 클래스 형식
 클래스는 익명 일 수 있으므로-없이 선언할 수 있습니다, 즉는 *식별자*합니다. 다음과 같이 클래스 이름을 `typedef` 이름으로 바꿀 때 유용합니다.  

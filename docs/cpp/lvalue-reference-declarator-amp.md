@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e8a5783a89bc0a9d3bfd8ea9ff0318b894763e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bea07ed3139240279848d94184564ec821a8cd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Lvalue 참조 선언 자:&amp;
 개체의 주소를 보유하지만 구문상 개체처럼 동작합니다.  
@@ -40,7 +41,7 @@ type-id & cast-expression
   
  사용 하 여 참조 선언을 혼동 하지 마십시오는 [address-of 연산자](../cpp/address-of-operator-amp.md)합니다. 경우는 `&` *식별자* 와 같은 형식으로 앞 `int` 또는 `char`, *식별자* 형식에 대 한 참조로 선언 됩니다. 때 `&` *식별자* 앞에 나오지 않는 사용법은 address-of 연산자의 형식으로.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `Person` 개체 및 해당 개체에 대한 참조를 선언하여 참조 선언자를 보여 줍니다. `rFriend`가 `myFriend`에 대한 참조이기 때문에 변수 중 하나를 업데이트하면 동일한 개체가 변경됩니다.  
   
 ```  

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c20707f2fc36790fc1b90e9a9df295bcd25f7af3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5361012fd388f49d8eb956ec1a4fa1bdd53a2dcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commands-in-a-makefile"></a>메이크파일의 명령
 설명 블록 또는 유추 규칙의 종속성이 오래 된 경우 실행 하는 명령 블록을 지정 합니다. NMAKE 않는 한 각 명령을 실행 하기 전에 표시 /S, **합니다. 자동**, **! CMDSWITCHES**, 또는 @ 사용 됩니다. NMAKE 설명 블록 명령 블록이 나오지 않습니다. 일치 하는 유추 규칙을 찾습니다.  

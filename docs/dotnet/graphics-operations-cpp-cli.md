@@ -19,18 +19,21 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 923fc7074c4d139d680ed9dee96a0dc54a185f21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d80d490dd53a6a27c610532cb26825dc29f34cde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="graphics-operations-ccli"></a>그래픽 작업(C++/CLI)
 이미지 조작을 사용 하 여는 [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)]합니다.  
   
  다음 항목의 사용을 보여 주기는 <xref:System.Drawing.Image?displayProperty=fullName> 이미지 조작을 수행 하는 클래스입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: .NET Framework로 이미지 파일 형식 변환](../dotnet/how-to-convert-image-file-formats-with-the-dotnet-framework.md)  
   
  [방법: .NET Framework로 이미지 표시](../dotnet/how-to-display-images-with-the-dotnet-framework.md)  

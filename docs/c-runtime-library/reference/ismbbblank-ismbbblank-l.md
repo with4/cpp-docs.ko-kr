@@ -29,11 +29,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30c47c43c5929eb0c10c584e20e485b9bb724e94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc86603127404fe26d6e826d2903733136411c92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
 지정된 멀티바이트 문자가 공백 문자인지 여부를 확인합니다.  
@@ -61,11 +62,11 @@ int _ismbbblank_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c`가 공백(0x20) 문자, 가로 탭(0x09) 문자 또는 `isspace`가 true인 텍스트 줄 내에서 단어를 구분하는 데 사용되는 로캘별 문자를 나타내는 경우 `_ismbbblank`는 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. `_ismbbblank`는 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_ismbbblank_l`은 전달된 로캘을 대신 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `c`가 공백(0x20) 문자, 가로 탭(0x09) 문자 또는 `isspace`가 true인 텍스트 줄 내에서 단어를 구분하는 데 사용되는 로캘별 문자를 나타내는 경우 `_ismbbblank`는 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. `_ismbbblank`는 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_ismbbblank_l`은 전달된 로캘을 대신 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_ismbbblank`|\<mbctype.h>|  
 |`_ismbbblank_l`|\<mbctype.h>|  

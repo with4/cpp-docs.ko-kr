@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2dc617eeb58594262ea272a0a4ef7da2865b73f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3acd4d91082d79cff0e945f841389fb2428396f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot 클래스
 이 형식 정의의 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) 기본 스레딩 모델을 서버에 템플릿 화 됩니다.  

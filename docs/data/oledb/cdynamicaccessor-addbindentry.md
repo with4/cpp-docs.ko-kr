@@ -1,56 +1,58 @@
 ---
-title: "CDynamicAccessor::AddBindEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::AddBindEntry"
-  - "AddBindEntry"
-  - "CDynamicAccessor.AddBindEntry"
-  - "CDynamicAccessor::AddBindEntry"
-  - "ATL.CDynamicAccessor.AddBindEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddBindEntry 메서드"
+title: 'Cdynamicaccessor:: Addbindentry | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::AddBindEntry
+- AddBindEntry
+- CDynamicAccessor.AddBindEntry
+- CDynamicAccessor::AddBindEntry
+- ATL.CDynamicAccessor.AddBindEntry
+dev_langs: C++
+helpviewer_keywords: AddBindEntry method
 ms.assetid: 8f139376-7db3-4193-ba3b-63fe938ffa79
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 910418d83358817e7b0975507b6797c87cab514a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::AddBindEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Adds a bind entry to the output columns.  
+# <a name="cdynamicaccessoraddbindentry"></a>CDynamicAccessor::AddBindEntry
+출력 열에 바인딩 항목을 추가합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      HRESULT AddBindEntry(   
-   const DBCOLUMNINFO& info    
+      HRESULT AddBindEntry(   
+   const DBCOLUMNINFO& info    
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `info`  
- \[in\] A **DBCOLUMNINFO** structure containing column information.  See "DBCOLUMNINFO Structures" in [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) in the *OLE DB Programmer's Reference*.  
+ [in] A **DBCOLUMNINFO** 열 정보를 포함 하는 구조입니다. "DBCOLUMNINFO 구조"를 참조 하십시오. [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
-## 반환 값  
- One of the standard `HRESULT` values.  
+## <a name="return-value"></a>반환 값  
+ 표준 중 하나 `HRESULT` 값입니다.  
   
-## 설명  
- Use this method when overriding the default accessor created with `CDynamicAccessor` \(see [How Do I Fetch Data?](../../data/oledb/fetching-data.md)\).  
+## <a name="remarks"></a>설명  
+ 사용 하 여 만든 기본 접근자를 재정의 하는 경우이 메서드를 사용 하 여 `CDynamicAccessor` (참조 [데이터 인출?](../../data/oledb/fetching-data.md)).  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)

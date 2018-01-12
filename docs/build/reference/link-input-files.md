@@ -1,49 +1,49 @@
 ---
-title: "LINK 입력 파일 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "링커 파일에 대한 명령 입력[C++]"
-  - "파일[C++], LINK"
-  - "가져오기 라이브러리[C++], 링커 파일"
-  - "입력 파일[C++], LINK"
-  - "LINK 도구[C++], 입력 파일"
-  - "링커[C++], 입력 파일"
-  - "모듈 정의 파일"
-  - "모듈 정의 파일, 링커 파일"
-  - "리소스[C++], 링커 파일"
+title: "입력 파일 링크 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: link
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], LINK
+- module definition files
+- resources [C++], linker files
+- LINK tool [C++], input files
+- module definition files, linker files
+- input files [C++], LINK
+- linker [C++], input files
+- import libraries [C++], linker files
+- command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1d0cae9498d2c9b49e52cf56991d2425de39d7e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# LINK 입력 파일
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-개체, 가져오기 및 표준 라이브러리, 리소스, 모듈 정의, 명령 입력이 포함된 파일은 사용자가 링커에 제공합니다.  LINK에서는 파일 확장명을 통해 파일의 내용을 가정하지 않으며,  대신 각 입력 파일을 검사하여 해당 파일의 형식을 결정합니다.  
+# <a name="link-input-files"></a>LINK 입력 파일
+개체, 가져오기 및 표준 라이브러리, 리소스, 모듈 정 및 명령 입력을 포함 하는 파일에 링커를 제공 합니다. 링크 파일의 내용에 대해 정도 파일 확장명을 사용 하지 않습니다. 대신, 링크는 어떤 종류의 파일 인지 확인 하려면 각 입력된 파일을 검사 합니다.  
   
- 명령줄의 개체 파일은 각 파일이 명령줄에 사용된 순서에 따라 처리됩니다.  라이브러리도 명령줄 순서에 따라 검색되지만 이 경우 주의해야 할 사항이 있습니다. 확인되지 않은 기호를 라이브러리에서 개체 파일로 가져오는 경우 이 기호를 해당 라이브러리에서 먼저 검색한 다음 명령줄과 [\/DEFAULTLIB\(기본 라이브러리 지정\)](../../build/reference/defaultlib-specify-default-library.md) 지시문의 순서에 따라 다음 라이브러리에서 검색하고 마지막으로 명령줄의 시작 부분에 있는 모든 라이브러리에서 검색합니다.  
+ 명령줄에서 개체 파일은 명령줄에서 순서 대로 처리 됩니다. 다음 다 경고와 함께 라이브러리도 순서 명령줄에서에서 검색 됩니다: 때 개체 파일을 라이브러리에서 가져올 수 있으므로 검색에 대 한 해당 라이브러리에 먼저 및 고명령줄에서다음라이브러리기호를확인할수없는[/DEFAULTLIB (기본 라이브러리 지정)](../../build/reference/defaultlib-specify-default-library.md) 지시문, 한 다음 명령줄의 시작 부분에서 모든 라이브러리입니다.  
   
 > [!NOTE]
->  LINK는 지시 파일과 순서 파일에서 세미콜론이나 기타 문자를 더 이상 주석의 시작으로 사용하지 않습니다.  세미콜론은 모듈 정의 파일\(.def\)에서만 주석의 시작으로 인식됩니다.  
+>  링크는 더 이상 응답 파일 및 순서 파일에 주석의 시작으로 세미콜론 (또는 다른 문자)를 받아들입니다. 세미콜론 모듈 정의 파일 (.def) 주석의 시작 으로만 인식 됩니다.  
   
- LINK에서는 다음 형식의 입력 파일을 사용합니다.  
+ 링크는 다음과 같은 유형의 입력된 파일을 사용합니다.  
   
 -   [.obj 파일](../../build/reference/dot-obj-files-as-linker-input.md)  
   
--   [.netmodule files](../../build/reference/netmodule-files-as-linker-input.md)  
+-   [.netmodule 파일](../../build/reference/netmodule-files-as-linker-input.md)  
   
 -   [.lib 파일](../../build/reference/dot-lib-files-as-linker-input.md)  
   
@@ -61,6 +61,6 @@ caps.handback.revision: 8
   
 -   [.ilk 파일](../../build/reference/dot-ilk-files-as-linker-input.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
  [링커 옵션](../../build/reference/linker-options.md)

@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '||'
-dev_langs:
-- C++
+f1_keywords: '||'
+dev_langs: C++
 helpviewer_keywords:
 - OR operator [C++], logical
 - '|| operator'
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1784a3f0e7d069f7f7e2976fc7b71ea130d7c34b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a826b23f94c4eae4a4fdb5379563b015f05dde71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logical-or-operator-"></a>논리합 연산자: ||
 ## <a name="syntax"></a>구문  
@@ -58,7 +55,7 @@ printf( "%d" , (x == w || x == y || x == z) );
 ## <a name="operator-keyword-for-124124"></a>에 대 한 연산자 키워드 &#124; &#124;  
  **또는** 연산자는 해당 하는 텍스트 `||`합니다. 두 가지 방법으로 액세스 하는 **또는** 를 프로그램에서 연산자: 헤더 파일을 포함 `iso646.h`,으로 컴파일하는 [/Za](../build/reference/za-ze-disable-language-extensions.md) (언어 확장명 사용 안 함) 컴파일러 옵션입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // expre_Logical_OR_Operator.cpp  

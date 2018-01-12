@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e33492c0cdab2429f1d8ccfc0ad50247cd457a9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-exception-filter"></a>예외 필터 작성
 예외 처리기의 수준으로 이동하거나 계속 실행하여 예외를 처리할 수 있습니다. 예외 및 제어를 처리 하는 예외 처리기 코드를 사용 하는 대신 사용할 수 있습니다 *필터* 문제를 정리 하 고 그런 다음-1을 반환 하 여 스택을 삭제 하지 않고 정상 흐름 재개 하 합니다.  

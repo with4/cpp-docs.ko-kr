@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b21557fce0735f23e89fe1594a7025170f5f7e7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80aca6af847a33fd7217d0ad710c928f6d2ca32e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>CWindowImpl 포함 된 창을 구현합니다.
 클래스를 파생 창을 구현 하려면 `CWindowImpl`합니다. 파생된 클래스에서 메시지 맵 및 메시지 처리기 함수를 선언 합니다. 세 가지 방법으로 이제 클래스를 사용할 수 있습니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  `CWindowImpl`전달 **NULL** 에 `DECLARE_WND_CLASS` 매크로 ATL Windows 클래스 이름이 생성 됩니다. 고유한 이름을 지정 하려면 문자열을 전달 `DECLARE_WND_CLASS` 에 프로그램 `CWindowImpl`-클래스를 파생 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 새 Windows 클래스를 기반으로 하는 창을 구현 하는 클래스의 예입니다.  
   
  [!code-cpp[NVC_ATL_Windowing#64](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_1.h)]  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
   
  사용 하는 경우 `DECLARE_WND_SUPERCLASS`, 새 Windows 클래스 등록 됩니다. 이 새 클래스를 지정 하지만 창 프로시저 바뀝니다 기존 클래스와 동일 됩니다 `CWindowImpl::WindowProc` (또는이 메서드를 재정의 하 여 함수).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 예제 클래스의 표준 편집을 슈퍼 클래스:  
   
  [!code-cpp[NVC_ATL_Windowing#65](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_2.h)]  

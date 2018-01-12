@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 24c4cc90ed77a57ad053f5608ad5eaf2d1ed62f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fefaaaf6dd6e660c4cda53d28194d6052d1d8bf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 지정된 값의 감마 함수를 결정합니다.  
@@ -94,8 +95,8 @@ long double tgammal(
 |x = +INFINITY|+INFINITY|  
 |x = NaN|NaN|  
 |도메인 오류|NaN|  
-|극 오류|±HUGE_VAL, ±HUGE_VALF 또는 ±HUGE_VALL|  
-|오버플로 범위 오류|±HUGE_VAL, ±HUGE_VALF 또는 ±HUGE_VALL|  
+|극 오류|±HUGE_VAL, ±HUGE_VALF, 또는 ±HUGE_VALL|  
+|오버플로 범위 오류|±HUGE_VAL, ±HUGE_VALF, 또는 ±HUGE_VALL|  
 |언더플로 범위 오류|반올림 후의 올바른 값|  
   
  오류는 [_matherr](../../c-runtime-library/reference/matherr.md)에 지정된 대로 보고됩니다.  

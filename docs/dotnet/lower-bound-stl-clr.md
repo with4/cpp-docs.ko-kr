@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 44ba30cf55df27b08d47b7dc7d540fcefced266d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2e4cbe940ce9eaaa99725a3d252a0275c4fa84e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lowerbound-stlclr"></a>lower_bound(STL/CLR)
 위치를 찾습니다. 첫 번째 요소 값을 갖는 정렬된 된 범위에 정렬 기준은 이진 조건자로 지정할 수 있습니다 위치 지정된 된 값 보다 작거나 동일 합니다.  

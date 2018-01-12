@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 312c2b879f19e670d9737bfa530e0cc2a35bfe58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12b7e383716d7cfa330bdfdebe21c33550669cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-settings-atl-project-wizard"></a>응용 프로그램 설정, ATL 프로젝트 마법사
 사용 하 여 **응용 프로그램 설정** 디자인 하 고 새 ATL 프로젝트에 기본 기능을 추가 하는 ATL 프로젝트 마법사의 페이지입니다.  

@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 97967ad789fe5491aec2be983f28a08e2c143b95
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-conversions"></a>표준 변환
 C++ 언어에서는 기본 형식 간의 변환을 정의합니다. 또한 포인터, 참조 및 멤버 포인터 파생 형식에 대한 변환도 정의합니다. 이러한 변환을 "표준 변환"이라고 합니다. (형식, 표준 형식 및 파생된 형식에 대 한 자세한 내용은 참조 [형식](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -80,11 +78,11 @@ long_num2 = int_num * long_num2;
   
  값을 보존하는 확장과 부호 유부를 보존하는 확장은 보통 동일한 결과를 생성합니다. 하지만 확장된 개체가 다음 중 하나일 경우 다른 결과가 생성될 수 있습니다.  
   
--   피연산자 ** / **, `%`, `/=`, `%=`, ** < **, ** \< = **, ** > **, 또는**>=**  
+-   피연산자  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , 또는**>=**  
   
      이 연산자는 부호를 사용하여 결과를 확인합니다. 따라서 피연산자에 적용될 경우 값을 보존하는 확장과 부호를 보존하는 확장이 다른 결과를 생성합니다.  
   
--   왼쪽된 피연산자 ** >> ** 또는**>>=**  
+-   왼쪽된 피연산자  **>>**  또는**>>=**  
   
      이 연산자는 시프트 연산을 수행할 때 부호 있는 수량과 부호 없는 수량을 다르게 처리합니다. 부호 있는 수량의 경우 수량을 오른쪽으로 이동하면 부호 비트가 빈 비트 위치로 전파됩니다. 부호 없는 수량의 경우 빈 비트 위치가 0으로 채워집니다.  
   
@@ -113,7 +111,7 @@ int main()
   
 ```  
   
- 위의 예제에서는 `signed short` `i`가 정의되고 음수로 초기화됩니다. 식 `(u = i)` 하면 `i` 를 변환할 수는 **부호 없는 short** 에 대 한 할당 하기 전에 `u`합니다.  
+ 위의 예제에서는 `signed short``i`가 정의되고 음수로 초기화됩니다. 식 `(u = i)` 하면 `i` 를 변환할 수는 **부호 없는 short** 에 대 한 할당 하기 전에 `u`합니다.  
   
  **Unsigned에서 signed**  
   
@@ -207,10 +205,10 @@ int main() {
   
 |함수 형식|파생|B*에서 A*로의 변환이<br /><br /> B *에서 A\* 법적?|  
 |----------------------|----------------|-------------------------------------------|  
-|외부(클래스 범위가 아닌) 함수|전용|아니요|  
+|외부(클래스 범위가 아닌) 함수|Private|아니요|  
 ||보호됨|아니요|  
-||공용|예|  
-|B 멤버 함수(B 범위에 있음)|전용|예|  
+||Public|예|  
+|B 멤버 함수(B 범위에 있음)|Private|예|  
 ||보호됨|예|  
 ||공용|예|  
 |C 멤버 함수(C 범위에 있음)|전용|아니요|  
@@ -253,12 +251,12 @@ int main()
  `pA` 포인터는 `A *` 형식이고, 이는 "`A` 형식의 개체에 대한 포인터"로 해석될 수 있습니다. 멤버 `bObject` `(`같은 `BComponent` 및 `BMemberFunc`) 입력에 고유한 `B` 를 통해 액세스할 수는 없으므로 및 `pA`합니다. `pA` 포인터는 `A` 클래스에서 정의된 개체의 특성(멤버 함수 및 데이터)에만 액세스할 수 있습니다.  
   
 ### <a name="pointer-to-function"></a>함수 포인터  
- 함수에 대 한 포인터 형식으로 변환할 수 **void \* **경우 형식 **void \* ** 해당 포인터에 충분히 큰지 합니다.  
+ 함수에 대 한 포인터 형식으로 변환할 수 **void \*** 경우 형식 **void \***  해당 포인터에 충분히 큰지 합니다.  
   
 ### <a name="pointer-to-void"></a>void 포인터  
  `void` 형식의 포인터는 다른 형식으로 변환할 수 있지만 C와 달리 명시적 형식 캐스팅과만 변환할 수 있습니다. (참조 [명시적 형식 변환이 있는 식](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae) 유형 캐스트에 대 한 자세한 내용은.) 입력 포인터를 `void` 형식에 대한 포인터로 암시적으로 변환할 수 있습니다. 형식의 incomplete 개체에 대한 포인터는 `void` 포인터로 변환되고(암시적으로) 다시 반대로 변환(명시적으로)될 수 있습니다. 이러한 변환 결과는 원래 포인터 값과 같습니다. 개체는 선언되지 않은 경우 완료되지 않은 것으로 간주되지만 크기 또는 기본 클래스를 확인하는 데 사용할 수 있는 정보가 부족합니다.  
   
- 하지 않은 모든 개체에 대 한 포인터 **const** 또는 `volatile` 형식의 포인터에 암시적으로 변환할 수 **void \* **합니다.  
+ 하지 않은 모든 개체에 대 한 포인터 **const** 또는 `volatile` 형식의 포인터에 암시적으로 변환할 수 **void \*** 합니다.  
   
 ### <a name="const-and-volatile-pointers"></a>const 및 volatile 포인터  
  C + +에서 표준 변환을 제공 하지 않는 한 **const** 또는 `volatile` 형식이 아닌 형식으로 **const** 또는 `volatile`합니다. 하지만 모든 종류의 변환은 명시적 형식 캐스트를 사용하여 지정할 수 있습니다(안전하지 않은 변환 포함).  

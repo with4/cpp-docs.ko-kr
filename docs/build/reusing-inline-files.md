@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cbad7ad7a4aee928158155a7a38c8d14a2b33a63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f839babe036aff81174b954e1aef7abce8923386
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reusing-inline-files"></a>인라인 파일 다시 사용
 인라인 파일 다시 지정 <<*filename* 파일이 정의 되었고 처음 사용 된 경우 다시 사용할 *filename* 없이 << 같거나 다른의 뒷부분에 나오는 명령입니다. 인라인 파일을 만드는 명령 파일을 사용 하는 모든 명령 앞에 실행 해야 합니다.  

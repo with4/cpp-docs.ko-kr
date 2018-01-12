@@ -1,103 +1,104 @@
 ---
-title: "최적화를 위한 유용한 정보 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Visual C++, 최적화"
-  - "최적화, 유용한 정보"
+title: "최적화에 대 한 유용한 정보 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, optimization
+- optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ec12e847eef72827e11700be322fd2a2ca309037
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 최적화를 위한 유용한 정보
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이 문서에서는 Visual C\+\+의 최적화와 관련된 몇 가지 모범 사례에 대해 설명합니다.  다음 항목에 대해 설명합니다.  
+# <a name="optimization-best-practices"></a>최적화를 위한 유용한 정보
+이 문서에서는 Visual c + +에서 최적화에 대 한 몇 가지 모범 사례를 설명 합니다. 다음 항목을 다룹니다.  
   
 -   컴파일러 및 링커 옵션  
   
     -   프로필 기반 최적화  
   
-    -   적합한 최적화 수준  
+    -   어떤 수준의 최적화를 사용 해야 합니까?  
   
     -   부동 소수점 스위치  
   
--   최적화 declspec  
+-   최적화 Declspec  
   
--   최적화 pragma  
+-   최적화 Pragma  
   
--   \_\_restrict 및 \_\_assume  
+-   __restrict 및 \__assume  
   
--   내장 함수 지원  
+-   내장 지원  
   
 -   예외  
   
-## 컴파일러 및 링커 옵션  
+## <a name="compiler-and-linker-options"></a>컴파일러 및 링커 옵션  
   
-### 프로필 기반 최적화  
- Visual C\+\+에서는 PGO\(프로필 기반 최적화\)를 지원합니다.  이 최적화에서는 이전에 응용 프로그램의 계측된 버전을 실행하여 얻은 프로필 데이터를 사용하여 이후에 응용 프로그램의 최적화를 수행합니다.  PGO는 사용하는 데 많은 시간이 필요하므로 모든 개발자가 사용할 수는 없지만, 제품의 최종 릴리스 빌드에는 PGO를 사용하는 것이 좋습니다.  자세한 내용은 [프로필 기반 최적화](../../build/reference/profile-guided-optimizations.md)을 참조하십시오.  
+### <a name="profile-guided-optimization"></a>프로필 기반 최적화  
+ Visual c + + (PGO) 프로필 기반 최적화를 지원합니다. 이 최적화를 실행 하는 응용 프로그램의 뒷부분에 나오는 최적화 응용 프로그램의 계측된 된 버전의 이전 실행에서 프로필 데이터를 사용 합니다. PGO 사용 시간이 걸릴 수, 모든 개발자가 사용 하는 문제가 않을 것 있지만 PGO를 사용 하 여 제품의 최종 릴리스 빌드에 대 한 권장지 않습니다. 자세한 내용은 참조 [프로필 기반 최적화](../../build/reference/profile-guided-optimizations.md)합니다.  
   
- 또한 링크 시간 코드 생성이라고도 하는 전체 프로그램 최적화 및 **\/O1**과 **\/O2** 최적화가 향상되었습니다.  일반적으로 이들 옵션 중 하나를 사용하여 컴파일한 응용 프로그램은 이전 버전의 컴파일러에서 컴파일한 동일한 응용 프로그램보다 빠릅니다.  
+ 또한 전체 프로그램 최적화 (링크 타임 코드 생성으로 알려져 있습니다) 및 **/O1** 및 **/O2** 최적화가 향상 되었습니다. 일반적으로 이러한 옵션 중 하나를 사용 하 여 컴파일된 응용 프로그램은 이전 버전의 컴파일러를 사용 하 여 컴파일된 동일한 응용 프로그램 보다 더 빠릅니다 됩니다.  
   
- 자세한 내용은 [\/GL\(전체 프로그램 최적화\)](../../build/reference/gl-whole-program-optimization.md) 및 [\/O1, \/O2\(크기 최소화, 속도 최대화\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)를 참조하십시오.  
+ 자세한 내용은 참조 [/GL (전체 프로그램 최적화)](../../build/reference/gl-whole-program-optimization.md) 및 [/O1, /O2 (크기 최소화, 속도 최대화)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)합니다.  
   
-### 적합한 최적화 수준  
- 가능하면 최종 릴리스 빌드는 프로필 기반 최적화를 사용하여 컴파일해야 합니다.  인프라가 부족하여 계측된 빌드를 실행할 수 없거나 응용 프로그램 사용 시나리오를 알 수 없어 PGO를 사용하여 빌드할 수 없는 경우에는 전체 프로그램 최적화를 사용하여 빌드하는 것이 좋습니다.  
+### <a name="which-level-of-optimization-should-i-use"></a>어떤 수준의 최적화를 사용 해야 합니까?  
+ 가능 하면 최종 릴리스 빌드 프로필 기반 최적화를 컴파일해야 합니다. 수 없으면 PGO, 함께 빌드되도록 인프라가 부족 하 여 계측 된 빌드를 실행 또는 시나리오에 액세스할 수 없는, 전체 프로그램 최적화 있는 건물을 제안 했습니다.  
   
- **\/Gy** 스위치도 매우 유용합니다.  이 스위치를 사용하면 각 함수에 대해 별도의 COMDAT가 생성되므로 링커에서 보다 유연하게 참조되지 않는 COMDAT 제거 및 COMDAT 정리를 수행할 수 있습니다.  **\/Gy**를 사용하는 경우 유일한 단점은 빌드 시간이 약간 길어진다는 것입니다.  따라서 일반적으로 이 스위치를 사용하는 것이 좋습니다.  자세한 내용은 [\/Gy\(함수 수준 링크 사용\)](../../build/reference/gy-enable-function-level-linking.md)을 참조하십시오.  
+ **/Gy** 스위치에도 매우 유용 합니다. 생성 되므로 링커에서 더 많은 유연성이 참조 되지 않은 Comdat 및 COMDAT 제거에 관한 각 함수에 대 한 별도 COMDAT 정리 합니다. 사용 하는 유일한 단점은 **/Gy** 빌드 시간에 거의 영향을 주지는 것입니다. 따라서 사용 하 여 일반적으로 좋습니다. 자세한 내용은 [/Gy(함수 수준 링크 사용)](../../build/reference/gy-enable-function-level-linking.md)를 참조하세요.  
   
- 64비트 환경에서 링크하는 경우 **\/OPT:REF,ICF** 링커 옵션을, 32비트 환경에서는 **\/OPT:REF**를 사용하는 것이 좋습니다.  자세한 내용은 [\/OPT\(최적화\)](../../build/reference/opt-optimizations.md)을 참조하십시오.  
+ 를 64 비트 환경에서 연결에 대 한 것이 좋습니다 사용 하는 **ICF, /opt: ref** 링커 옵션 및 32 비트 환경에서 **/opt: ref** 것이 좋습니다. 자세한 내용은 참조 [/OPT (최적화)](../../build/reference/opt-optimizations.md)합니다.  
   
- 또한 최적화된 릴리스 빌드에서도 디버그 기호를 생성하는 것이 좋습니다.  이렇게 해도 생성되는 코드에는 영향을 주지 않으며, 필요한 경우 응용 프로그램을 디버깅하기가 매우 쉬워집니다.  
+ 또한 강력한 최적화 된 릴리스 빌드 된 경우에 디버그 기호를 생성 하는 것이 좋습니다. 생성된 된 코드를 적용 하지 않습니다를 더 쉽게 하는 경우 응용 프로그램을 디버깅할 수 있도록 많은 수 있어야 합니다.  
   
-### 부동 소수점 스위치  
- **\/Op** 컴파일러 옵션이 제거되었고 부동 소수점 최적화를 다루는 다음과 같은 네 개의 컴파일러 옵션이 추가되었습니다.  
+### <a name="floating-point-switches"></a>부동 소수점 스위치  
+ **/Op** 컴파일러 옵션 제거 되 고 부동 소수점 최적화를 다루는 다음 4 개의 컴파일러 옵션이 추가 되었습니다.  
   
 |||  
 |-|-|  
-|**\/fp:precise**|대부분의 경우에 권장되는 기본값입니다.|  
-|**\/fp:fast**|게임 등 성능이 가장 중요한 경우에 권장됩니다.  이 옵션을 사용하면 성능이 가장 빨라집니다.|  
-|**\/fp:strict**|정확한 부동 소수점 예외 및 IEEE 동작이 필요한 경우에 권장됩니다.  이 옵션을 사용하면 성능이 가장 느려집니다.|  
-|**\/fp:except\[\-\]**|**\/fp:strict** 또는 **\/fp:precise**와 함께 사용할 수 있지만 **\/fp:fast**와 함께 사용할 수는 없습니다.|  
+|**/fp: 정확 하 게**|기본 권장 사항을 이며 대부분의 경우에 사용 해야 합니다.|  
+|**/fp: fast**|예를 들어 게임에서에서 가장 중요 성능 인지 하는 것이 좋습니다. 보다 빠른 성능이 됩니다.|  
+|**/fp: strict**|권장 되는 경우 정확한 부동 소수점 예외 및 IEEE 동작이 필요 합니다. 이렇게 하면 성능이 가장 낮습니다.|  
+|**/fp: except [-]**|와 함께에서 사용할 수 있습니다 **/fp: strict** 또는 **/fp: 정확한**, 아닌 **/fp: fast**합니다.|  
   
- 자세한 내용은 [\/fp\(부동 소수점 동작 지정\)](../../build/reference/fp-specify-floating-point-behavior.md)을 참조하십시오.  
+ 자세한 내용은 [/fp(부동 소수점 동작 지정)](../../build/reference/fp-specify-floating-point-behavior.md)를 참조하세요.  
   
-## 최적화 declspec  
- 이 단원에서는 프로그램에서 성능을 향상시키는 데 사용할 수 있는 두 개의 declspec인 `__declspec(restrict)` 및 `__declspec(noalias)`을 살펴봅니다.  
+## <a name="optimization-declspecs"></a>최적화 Declspec  
+ 이 섹션에서는 살펴보겠습니다 성능을 위해 프로그램에서 사용할 수 있는 두 개의 declspec: `__declspec(restrict)` 및 `__declspec(noalias)`합니다.  
   
- `restrict` declspec은 `__declspec(restrict) void *malloc(size_t size);`과 같이 포인터를 반환하는 함수 선언에만 적용할 수 있습니다.  
+ `restrict` declspec 등에 대 한 포인터를 반환 하는 함수 선언에만 적용할 수 있습니다`__declspec(restrict) void *malloc(size_t size);`  
   
- `restrict` declspec은 별칭이 지정되지 않은 포인터를 반환하는 함수에 사용됩니다.  이 키워드는 `malloc`의 C 런타임 라이브러리 구현에 사용됩니다. 그 이유는 이미 해제된 메모리를 사용하는 등의 잘못된 작업을 수행하지 않는 한 이 함수는 현재 프로그램에서 이미 사용 중인 포인터 값을 반환하지 않기 때문입니다.  
+ `restrict` declspec 별칭이 지정 되지 않은 포인터를 반환 하는 함수에 사용 됩니다. 이 키워드는 C 런타임 라이브러리의 구현에 사용 됩니다 `malloc` 이후 이미 사용 중인 현재 프로그램의 (하지 않는 경우 해제 된 후에 메모리를 사용 하는 등 잘못 된 항목)는 포인터 값을 반환 하지 것입니다.  
   
- `restrict` declspec을 사용하면 컴파일러 최적화를 수행하기 위한 보다 자세한 정보가 컴파일러에 제공됩니다.  컴파일러가 판단하기 가장 어려운 내용 중 하나는 다른 포인터의 별칭으로 사용되는 포인터를 확인하는 것이며, 이 정보를 제공하면 컴파일러에 매우 큰 도움이 됩니다.  
+ `restrict` declspec 컴파일러 최적화를 수행 하는 것에 대 한 자세한 정보는 컴파일러에 제공 합니다. 확인 하려면 컴파일러에 대 한 가장 까다로운 중 하나를 어떤 포인터 별칭 다른 포인터 이며 컴파일러를 사용 하면이 정보를 사용 하 여 크게입니다.  
   
- 이 정보는 컴파일러에 대한 약속에 불과하며 컴파일러에서 확인하는 것은 아닙니다.  프로그램에서 이 `restrict` declspec을 잘못 사용하면 프로그램이 잘못 작동할 수 있습니다.  
+ 것은 의미가 지적 컴파일러 하지 것에 컴파일러는 확인 하기 위한 약속입니다. 프로그램이이 사용 하면 `restrict` declspec 프로그램 잘못 된 동작이 있을 수 있습니다, 부적절 하 게 합니다.  
   
- 자세한 내용은 [restrict](../../cpp/restrict.md)을 참조하십시오.  
+ 자세한 내용은 참조 [제한](../../cpp/restrict.md)합니다.  
   
- `noalias` declspec도 함수에만 적용할 수 있으며, 함수가 부분 순수 함수임을 나타냅니다.  부분 순수 함수는 지역 변수, 인수 및 인수의 1차 간접 참조만 참조하거나 수정하는 함수입니다.  이 declspec은 컴파일러에 대한 약속이며, 함수에서 전역 변수 또는 포인터 인수의 2차 간접 참조를 참조하면 컴파일러에서 생성하는 코드로 인해 응용 프로그램이 제대로 작동하지 않을 수 있습니다.  
+ `noalias` declspec 함수에만 적용도 되 고 함수는 부분 순수 함수를 나타냅니다. 부분 순수 함수는 참조 하거나 지역 변수, 인수 및 인수 중 첫 번째 수준의 간접 참조를 수정 하는입니다. 이 declspec 컴파일러에 프라미스 이며 응용 프로그램을 중단 하는 함수가 전역 변수를 참조 하거나 차 간접 참조 포인터 인수는 컴파일러의 코드를 생성할 수 있습니다.  
   
- 자세한 내용은 [noalias](../../cpp/noalias.md)을 참조하십시오.  
+ 자세한 내용은 [noalias](../../cpp/noalias.md)를 참조하세요.  
   
-## 최적화 pragma  
- 코드 최적화와 관련된 몇 가지 유용한 pragma도 있습니다.  여기서 살펴볼 첫 번째 pragma는 `#pragma optimize`입니다.  
+## <a name="optimization-pragmas"></a>최적화 Pragma  
+ 코드 최적화에 대 한 몇 가지 유용한 pragma도 있습니다. 아래에서는 첫 번째 식은 `#pragma optimize`:  
   
 ```  
 #pragma optimize("{opt-list}", on | off)  
 ```  
   
- 이 pragma를 사용하면 함수별로 최적화 수준을 설정할 수 있습니다.  이 기능은 특정 함수를 최적화하여 컴파일할 때 응용 프로그램이 충돌하는 것과 같이 드물게 발생하는 경우에 유용합니다.  이 pragma를 사용하여 단일 함수의 최적화를 해제할 수 있습니다.  
+ 이 pragma를 사용 하면 함수에서 함수 별로 최적화 수준을 설정할 수 있습니다. 이 이상적인 같이 드문 최적화와 함께 지정된 함수 컴파일될 때 응용 프로그램이 충돌 하는 위치입니다. 단일 함수에 대 한 최적화를 해제 하는 데 사용할 수 있습니다.  
   
 ```  
 #pragma optimize("", off)  
@@ -105,50 +106,50 @@ int myFunc() {...}
 #pragma optimize("", on)  
 ```  
   
- 자세한 내용은 [최적화](../../preprocessor/optimize.md)을 참조하십시오.  
+ 자세한 내용은 참조 [최적화](../../preprocessor/optimize.md)합니다.  
   
- 인라인은 컴파일러가 수행하는 가장 중요한 최적화 중 하나이며, 여기서는 인라인 동작을 수정하는 몇 가지 pragma를 살펴 봅니다.  
+ 인라이닝은 컴파일러를 수행 하 고 여기 몇 가지이 동작을 수정 하는 데 도움이 되는 pragma에 설명 하는 가장 중요 한 최적화 중 하나입니다.  
   
- `#pragma inline_recursion`은 응용 프로그램에서 재귀적 호출을 인라인할 수 있는지 여부를 지정하는 데 유용합니다.  기본적으로 이 pragma는 해제됩니다.  작은 함수를 얕은 수준으로 재귀 호출하는 경우 이 pragma를 설정할 수 있습니다.  자세한 내용은 [inline\_recursion](../../preprocessor/inline-recursion.md)을 참조하십시오.  
+ `#pragma inline_recursion`응용 프로그램 재귀 호출을 인라인 할 수 있는 것인지 여부를 지정 하는 데 유용 합니다. 기본적으로 해제 되어 있습니다. 단순 재귀 작은 함수에 대 한이 서비스 설정 할 수 있습니다. 자세한 내용은 참조 [inline_recursion](../../preprocessor/inline-recursion.md)합니다.  
   
- 다른 유용한 pragma로는 인라인 수준을 제한하는 `#pragma inline_depth`가 있습니다.  이 pragma는 일반적으로 프로그램 또는 함수의 크기를 제한하려는 경우에 유용합니다.  자세한 내용은 [inline\_depth](../../preprocessor/inline-depth.md)을 참조하십시오.  
+ 깊이 제한 하는 다른 유용한 pragma 인라인 처리는 `#pragma inline_depth`합니다. 프로그램 또는 함수의의 크기를 제한 하려는 경우에 일반적으로 유용 합니다. 자세한 내용은 참조 [inline_depth](../../preprocessor/inline-depth.md)합니다.  
   
-## \_\_restrict 및 \_\_assume  
- Visual C\+\+에는 성능에 도움이 되는 [\_\_restrict](../../cpp/extension-restrict.md) 및 [\_\_assume](../../intrinsics/assume.md)과 같은 여러 키워드가 있습니다.  
+## <a name="restrict-and-assume"></a>__restrict 및 \__assume  
+ 성능을 향상 시킬 수 있는 Visual c + + 키워드는 두 가지가: [__restrict](../../cpp/extension-restrict.md) 및 [__assume](../../intrinsics/assume.md)합니다.  
   
- 우선 `__restrict`와 `__declspec(restrict)`은 서로 다르다는 점에 주의해야 합니다.  이 두 키워드에는 일부 연관성이 있지만 의미가 서로 다릅니다.  `__restrict`는 `const` 또는 `volatile`과 같은 형식 한정자이지만 포인터 형식에만 사용할 수 있습니다.  
+ 용도로 먼저는 `__restrict` 및 `__declspec(restrict)` 서로 구분 합니다. 다소 관련 되어 있는 동안 해당 의미 체계가 서로 다릅니다. `__restrict`형식 한정자를 같은입니다 `const` 또는 `volatile`, 있지만 포인터 형식에 대 한 단독으로 합니다.  
   
- `__restrict`로 한정된 포인터는 *\_\_restrict 포인터*라고 합니다.  \_\_restrict 포인터에는 \_\_restrict 포인터를 통해서만 액세스할 수 있습니다.  즉, \_\_restrict 포인터가 가리키는 데이터에는 다른 포인터를 사용하여 액세스할 수 없습니다.  
+ 로 한정 되는 포인터 `__restrict` 라고는 *포인터 __restrict*합니다. __Restrict 포인터는만 통해 액세스할 수 있는 포인터는 \_제한 (_r) 포인터입니다. 즉,에서 가리키는 데이터에 액세스 하려면 다른 포인터를 사용할 수 없습니다는 \_제한 (_r) 포인터입니다.  
   
- `__restrict`는 Visual C\+\+ 최적화 프로그램의 강력한 도구이지만 세심한 주의를 기울여 사용해야 합니다.  이 키워드를 잘못 사용하면 최적화를 수행한 결과로 응용 프로그램이 제대로 동작하지 않을 수 있습니다.  
+ `__restrict`Visual c + + 최적화 프로그램을 위한 강력한 도구로 수는 있지만 매우 주의 하 여 사용 합니다. 잘못 사용 하면 최적화 프로그램 결과로 응용 프로그램이 있는 최적화를 수행할 수 있습니다.  
   
- `__restrict` 키워드는 이전 버전의 **\/Oa** 스위치를 대체합니다.  
+ `__restrict` 키워드를 대체는 **/Oa** 이전 버전에서 전환 합니다.  
   
- 개발자는 `__assume`을 사용하여 컴파일러가 일부 변수의 값을 예상하도록 할 수 있습니다.  
+ 와 `__assume`, 개발자 수 있는 일부 변수의 값에 대 한 가정을 컴파일러를 알 수 있습니다.  
   
- 예를 들어 `__assume(a < 5);`을 사용하면 최적화 프로그램은 해당 코드 줄에서 변수 `a`가 5보다 작은 것으로 가정합니다.  마찬가지로 이는 컴파일러에 대한 약속입니다.  프로그램의 이 시점에서 실제로는 `a`가 6인 경우 컴파일러에서 프로그램을 최적화한 후 프로그램이 예상과 다르게 동작할 수 있습니다.  `__assume`은 switch 문 및 조건식 앞에서 가장 유용하게 사용됩니다.  
+ 예를 들어 `__assume(a < 5);` 변수 코드 줄에는 최적화 프로그램에 알립니다 `a` 5 보다 작은 합니다. 다시 컴파일러 하기 위한 약속입니다. 경우 `a` 실제로 6이 시점에서 프로그램에 다음 컴파일러 최적화 한 후 프로그램의 동작은 예상 되지 않을 수 있습니다. `__assume`switch 문 및 조건 식 전에 가장 유용 합니다.  
   
- `__assume`에는 몇 가지 제한이 있습니다.  첫째로, 이는 `__restrict`와 마찬가지로 제안일 뿐이므로 컴파일러에 의해 무시될 수 있습니다.  또한 현재 `__assume`에는 변수와 상수로 구성된 부등식만 사용할 수 있습니다.  예를 들어 assume\(a \< b\)과 같이 기호로만 구성된 부등식은 사용할 수 없습니다.  
+ 몇 가지 제한이 있습니다 `__assume`합니다. 먼저 같은 `__restrict`,이만, 이므로 컴파일러에 의해 무시 될 합니다. 또한 `__assume` 현재 구성 된 상수에 대해 변수 부등식만 작동 합니다. 예를 들어 assume(a < b)과 같이 기호로만 구성된 부등식은 사용할 수 없습니다.  
   
-## 내장 함수 지원  
- 내장 함수는 컴파일러가 호출 관련 정보를 내부적으로 알고 있는 경우에 사용되는 함수 호출이며, 내장 함수에서는 라이브러리의 함수를 호출하는 대신 해당 함수의 코드를 생성합니다.   \<Installation\_Directory\>\\VC\\include\\에 있는 intrin.h 헤더 파일에는 지원되는 세 가지 플랫폼\(x86, x64 및 ARM\)에서 각각 사용할 수 있는 내장 함수가 모두 들어 있습니다.  
+## <a name="intrinsic-support"></a>내장 지원  
+ 내장 함수는 함수 호출 여기서 컴파일러는 호출에 대 한 기본 지식을 하 고 라이브러리에는 함수를 호출 하는 대신 해당 함수에 대 한 코드를 내보냅니다. <Installation_Directory>\VC\include\intrin.h에 있는 헤더 파일 intrin.h에는 세 가지 지원되는 각 플랫폼(x86, x64 및 ARM)에 대해 사용 가능한 모든 내장 함수가 포함됩니다.  
   
- 프로그래머는 어셈블리를 사용하지 않고도 내장 함수를 통해 코드를 자세히 분석할 수 있습니다.  내장 함수를 사용하면 다음과 같은 여러 이점이 있습니다.  
+ 내장 함수는 프로그래머는 어셈블리를 사용 하지 않고도 코드 심층적으로 이동 하는 기능을 제공 합니다. 내장 함수를 사용 하 여 다양 한 이점이 있습니다.  
   
-1.  코드의 이식성이 향상됩니다.  일부 내장 함수는 여러 CPU 아키텍처에서 사용할 수 있습니다.  
+1.  코드 이식성이 향상 됩니다. 일부 내장 함수에서 사용할 수 있는 여러 CPU 아키텍처입니다.  
   
-2.  코드가 여전히 C\/C\+\+로 작성되므로 코드를 읽기가 쉬워집니다.  
+2.  사용자 코드는 가독성을 C/c + +에서 코드를 기록한 여전히 때문입니다.  
   
-3.  코드에서 컴파일러 최적화의 이점을 활용할 수 있습니다.  컴파일러가 발전함에 따라 내장 함수 코드 생성도 개선됩니다.  
+3.  코드는 컴파일러 최적화의 이점은 가져옵니다. 컴파일러 개선 되, 대로 내장 함수에 대 한 코드 생성을 향상 시킵니다.  
   
- 자세한 내용은 [컴파일러 내장 함수](../../intrinsics/compiler-intrinsics.md) 및 [Benefits of Using Intrinsics](http://msdn.microsoft.com/ko-kr/57af8920-527f-44af-a741-a07cbe80bf02)를 참조하십시오.  
+ 자세한 내용은 참조 [컴파일러 내장](../../intrinsics/compiler-intrinsics.md)합니다.  
   
-## 예외  
- 예외를 사용하면 성능이 저하됩니다.  try 블록을 사용하면 컴파일러에서 특정 최적화를 수행하지 못하게 하는 몇 가지 제한이 발생합니다.  x86 플랫폼에서는 try 블록을 사용하면 코드 실행 도중 상태 정보를 추가로 생성해야 하므로 성능이 더욱 저하됩니다.  64비트 플랫폼에서는 try 블록으로 인한 성능 저하가 그만큼 크지 않지만, 예외가 throw될 때 처리기를 찾고 스택을 해제하는 과정에서 성능에 많은 부담이 생길 수 있습니다.  
+## <a name="exceptions"></a>예외  
+ 한 성능 예외를 사용 하는 적중 합니다. 특정 최적화를 수행 하는에서 컴파일러를 방해 하는 try 블록을 사용 하는 경우 몇 가지 제한 사항이 제공 됩니다. X86 플랫폼에서 추가 성능 저하는 try 코드 실행 중 생성 해야 하는 추가 상태 정보로 인해 블록입니다. 64 비트 플랫폼에서 실행 블록 만큼, 성능을 저하 시 키 지 않는 하지만 예외가 throw 된 처리기를 찾아서 스택 해제 과정 비용이 수 있습니다.  
   
- 따라서 코드에 반드시 필요하지 않은 try\/catch 블록은 사용하지 않는 것이 좋습니다.  예외를 사용해야 하는 경우에는 가능하면 동기 예외를 사용합니다.  자세한 내용은 [구조적 예외 처리](../../cpp/structured-exception-handling-c-cpp.md)을 참조하십시오.  
+ 따라서 다음에 실제로 필요 하지 않은 코드를 try/catch 블록 시 키 지 않도록 하는 것이 좋습니다. 예외를 사용 해야 하는 경우 가능 하면 동기 예외를 사용 합니다. 자세한 내용은 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)을 참조하세요.  
   
- 마지막으로, 예외적인 경우에만 예외를 throw하십시오.  일반적인 제어 흐름에서 예외를 사용하면 성능이 저하되기 쉽습니다.  
+ 마지막으로, 예외적인 경우에만 대 한 예외를 throw 합니다. 일반 제어 흐름에 대 한 예외를 사용 하 여 성능이 저하 될 가능성이 생성 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [코드 최적화](../../build/reference/optimizing-your-code.md)

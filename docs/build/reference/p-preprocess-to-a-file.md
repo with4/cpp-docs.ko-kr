@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9812f54e4fb886c721f2162aeac620ec4a02acd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f4de2f19820a846197806e0a24ddc213dd636c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="p-preprocess-to-a-file"></a>/P(파일 전처리)
 C 및 c + + 소스 파일을 전처리 하 고 전처리 된 출력 파일을 씁니다.  
@@ -59,7 +60,7 @@ C 및 c + + 소스 파일을 전처리 하 고 전처리 된 출력 파일을 �
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령줄을 실행 하면 `ADD.C`주석을 유지, 추가, `#line` 지시문을 파일에 결과 기록 `ADD.I`:  
   
 ```  

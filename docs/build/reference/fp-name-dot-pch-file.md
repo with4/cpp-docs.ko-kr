@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d00b7a4007229dc545923f0dc89ab7607111c6f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 77ba54705ec4037f1c98a2ae1832dddcc551956e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fp-name-pch-file"></a>/Fp(.PCH 파일 이름 지정)
 기본 경로 이름을 사용 하는 대신 미리 컴파일된 헤더에 대 한 경로 이름을 제공 합니다.  
@@ -60,14 +61,14 @@ ms.lasthandoff: 10/24/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  프로그램의 디버깅 버전에 대 한 미리 컴파일된 헤더 파일을 만들려고 할 헤더 파일과 소스 코드를 컴파일하는 경우와 같은 명령을 지정할 수 있습니다.  
   
 ```  
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령은 MYPCH.pch 라는 미리 컴파일된 헤더 파일의 사용을 지정 합니다. 컴파일러는 PROG.cpp의 소스 코드 미리 컴파일 MYAPP.h 통해 하며 MYPCH.pch에 미리 컴파일된 코드를 가정 합니다. MYPCH.pch 콘텐츠를 사용 하 고.obj 파일을 만드는 PROG.cpp의 나머지를 컴파일합니다. 이 예의 출력은 PROG.exe 이라는 파일로 내보내집니다.  
   
 ```  

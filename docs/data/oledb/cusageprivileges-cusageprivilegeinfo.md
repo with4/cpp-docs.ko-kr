@@ -1,83 +1,86 @@
 ---
-title: "CUsagePrivileges, CUsagePrivilegeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szObjectCatalog"
-  - "CUsagePrivilegeInfo"
-  - "m_bIsGrantable"
-  - "OBJECT_NAME"
-  - "m_szPrivilegeType"
-  - "OBJECT_SCHEMA"
-  - "IS_GRANTABLE"
-  - "CUsagePrivileges"
-  - "m_szGrantor"
-  - "GRANTOR"
-  - "GRANTEE"
-  - "m_szObjectSchema"
-  - "OBJECT_CATALOG"
-  - "m_szObjectType"
-  - "m_szObjectName"
-  - "m_szGrantee"
-  - "OBJECT_TYPE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CUsagePrivilegeInfo 매개 변수 클래스"
-  - "CUsagePrivileges typedef 클래스"
-  - "GRANTEE"
-  - "GRANTOR"
-  - "IS_GRANTABLE"
-  - "m_bIsGrantable"
-  - "m_szGrantee"
-  - "m_szGrantor"
-  - "m_szObjectCatalog"
-  - "m_szObjectName"
-  - "m_szObjectSchema"
-  - "m_szObjectType"
-  - "m_szPrivilegeType"
-  - "OBJECT_CATALOG"
-  - "OBJECT_NAME"
-  - "OBJECT_SCHEMA"
-  - "OBJECT_TYPE"
+title: CUsagePrivileges, CUsagePrivilegeInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szObjectCatalog
+- CUsagePrivilegeInfo
+- m_bIsGrantable
+- OBJECT_NAME
+- m_szPrivilegeType
+- OBJECT_SCHEMA
+- IS_GRANTABLE
+- CUsagePrivileges
+- m_szGrantor
+- GRANTOR
+- GRANTEE
+- m_szObjectSchema
+- OBJECT_CATALOG
+- m_szObjectType
+- m_szObjectName
+- m_szGrantee
+- OBJECT_TYPE
+dev_langs: C++
+helpviewer_keywords:
+- OBJECT_NAME
+- GRANTOR
+- OBJECT_CATALOG
+- CUsagePrivileges typedef class
+- m_szPrivilegeType
+- OBJECT_SCHEMA
+- m_szObjectSchema
+- m_szObjectType
+- IS_GRANTABLE
+- OBJECT_TYPE
+- CUsagePrivilegeInfo parameter class
+- m_szGrantee
+- m_szObjectCatalog
+- m_szGrantor
+- GRANTEE
+- m_bIsGrantable
+- m_szObjectName
 ms.assetid: 09460e7f-3947-4837-ad1e-407b94acedb8
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ae759b77aa5e95eda7334cea1357e8882667aba9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CUsagePrivileges, CUsagePrivilegeInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**CUsagePrivileges** 클래스의 typedef를 호출하여 **CUsagePrivilegeInfo** 클래스 매개 변수를 구현하십시오.  
+# <a name="cusageprivileges-cusageprivilegeinfo"></a>CUsagePrivileges, CUsagePrivilegeInfo
+Typedef 클래스 호출 **CUsagePrivileges** 해당 매개 변수 클래스를 구현 하려면 **CUsagePrivilegeInfo**합니다.  
   
-## 설명  
- typedef 클래스를 사용하는 것에 대한 자세한 내용은 [Schema Rowset Classes and Typedef Classes](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 참조 [스키마 행 집합 클래스 및 Typedef 클래스](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) typedef 클래스 사용에 대 한 자세한 내용은 합니다.  
   
- 이 클래스는 지정된 사용자가 사용할 수 있거나 지정된 사용자가 승인한 카탈로그에서 정의된 개체에 대한 USAGE 권한을 식별합니다.  
+ 이 클래스를 사용할 수 있는 추가 되거나 지정된 된 사용자가 부여한 카탈로그에 정의 된 개체에 대 한 사용 권한을 식별 합니다.  
   
- 다음 표는 클래스 데이터 멤버 및 그들의 해당 OLE DB 열을 열거합니다.  스키마와 열에 대한 자세한 정보를 *OLE DB Programmer's Reference* 에서 [USAGE\_PRIVILEGES Rowset](https://msdn.microsoft.com/en-us/library/ms722743.aspx) 를 참조하십시오.  
+ 다음 표에는 클래스 데이터 멤버 및 해당 OLE DB 열이 나열됩니다. 참조 [USAGE_PRIVILEGES 행 집합](https://msdn.microsoft.com/en-us/library/ms722743.aspx) 에 *OLE DB Programmer's Reference* 스키마 및 열에 대 한 자세한 내용은 합니다.  
   
 |데이터 멤버|OLE DB 열|  
-|------------|--------------|  
-|m\_szGrantor|GRANTOR|  
-|m\_szGrantee|GRANTEE|  
-|m\_szObjectCatalog|OBJECT\_CATALOG|  
-|m\_szObjectSchema|OBJECT\_SCHEMA|  
-|m\_szObjectName|OBJECT\_NAME|  
-|m\_szObjectType|OBJECT\_TYPE|  
-|m\_szPrivilegeType|PRIVILEGE\_TYPE|  
-|m\_bIsGrantable|IS\_GRANTABLE|  
+|------------------|--------------------|  
+|m_szGrantor|GRANTOR|  
+|m_szGrantee|GRANTEE|  
+|m_szObjectCatalog|OBJECT_CATALOG|  
+|m_szObjectSchema|OBJECT_SCHEMA|  
+|m_szObjectName|OBJECT_NAME|  
+|m_szObjectType|OBJECT_TYPE|  
+|m_szPrivilegeType|PRIVILEGE_TYPE|  
+|m_bIsGrantable|IS_GRANTABLE|  
   
-## 요구 사항  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbsch.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRestrictions 클래스](../../data/oledb/crestrictions-class.md)

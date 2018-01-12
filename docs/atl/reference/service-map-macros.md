@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb8ee6db5f75a71e11a0b3dbdbca1bc6c077c3a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="service-map-macros"></a>서비스 맵 매크로
 이러한 매크로 서비스 맵 및 항목을 정의합니다.  
@@ -55,7 +56,7 @@ BEGIN_SERVICE_MAP(theClass)
   
 - [SERVICE_ENTRY_CHAIN](#service_entry_chain) 하도록 [IServiceProviderImpl::QueryService](#queryservice) 다른, 지정 된 개체에 체인으로 연결 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
 ##  <a name="end_service_map"></a>END_SERVICE_MAP  
@@ -65,7 +66,7 @@ BEGIN_SERVICE_MAP(theClass)
 END_SERVICE_MAP()
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [BEGIN_SERVICE_MAP](#begin_service_map)합니다.  
   
 ##  <a name="service_entry"></a>SERVICE_ENTRY  
@@ -79,7 +80,7 @@ SERVICE_ENTRY( SID )
  *SID*  
  서비스 id입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [BEGIN_SERVICE_MAP](#begin_service_map)합니다.  
   
 ##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
@@ -93,7 +94,7 @@ SERVICE_ENTRY_CHAIN( punk )
  `punk`  
  에 대 한 포인터는 **IUnknown** 체인에 있는 인터페이스입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [BEGIN_SERVICE_MAP](#begin_service_map)합니다.  
   
 ##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  

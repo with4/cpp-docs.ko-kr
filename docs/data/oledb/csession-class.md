@@ -1,59 +1,61 @@
 ---
 title: "CSession 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSession"
-  - "ATL::CSession"
-  - "ATL.CSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSession 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSession
+- ATL::CSession
+- ATL.CSession
+dev_langs: C++
+helpviewer_keywords: CSession class
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d8b6bb75d12b4ab96c3a44c74f4487eb8a70efc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CSession 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Represents a single database access session.  
+# <a name="csession-class"></a>CSession 클래스
+단일 데이터베이스 액세스 세션을 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CSession  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 메서드  
+### <a name="methods"></a>메서드  
   
 |||  
 |-|-|  
-|[중단](../../data/oledb/csession-abort.md)|Cancels \(terminates\) the transaction.|  
-|[닫기](../../data/oledb/csession-close.md)|Closes the session.|  
+|[중단](../../data/oledb/csession-abort.md)|취소 (종료) 트랜잭션이 있습니다.|  
+|[닫기](../../data/oledb/csession-close.md)|세션을 닫습니다.|  
 |[커밋](../../data/oledb/csession-commit.md)|트랜잭션을 커밋합니다.|  
-|[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|Returns information regarding a transaction.|  
-|[를 엽니다.](../../data/oledb/csession-open.md)|Opens a new session for the data source object.|  
-|[StartTransaction](../../data/oledb/csession-starttransaction.md)|Begins a new transaction for this session.|  
+|[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|트랜잭션에 대 한 정보를 반환 합니다.|  
+|[열기](../../data/oledb/csession-open.md)|데이터 원본 개체에 대 한 새 세션을 엽니다.|  
+|[StartTransaction](../../data/oledb/csession-starttransaction.md)|이 세션에 대 한 새 트랜잭션을 시작합니다.|  
   
-## 설명  
- One or more sessions can be associated with each provider connection \(data source\), which is represented by a [CDataSource](../../data/oledb/cdatasource-class.md) object.  To create a new `CSession` for a `CDataSource`, call [CSession::Open](../../data/oledb/csession-open.md).  To begin a database transaction, `CSession` provides the `StartTransaction` method.  Once a transaction is started, you can commit to it using the **Commit** method, or cancel it using the **Abort** method.  
+## <a name="remarks"></a>설명  
+ 하나 이상의 세션으로 표시 된 각 공급자 연결 (데이터 원본)에 연결할 수 있습니다는 [CDataSource](../../data/oledb/cdatasource-class.md) 개체입니다. 새로 만들려면 `CSession` 에 대 한는 `CDataSource`, 호출 [csession:: Open](../../data/oledb/csession-open.md)합니다. 데이터베이스 트랜잭션을 시작 하려면 `CSession` 제공는 `StartTransaction` 메서드. 트랜잭션이 시작 되 면을 사용 하 여 커밋할 수 있습니다는 **커밋** 메서드를 사용 하 여 취소 또는 **중단** 메서드.  
   
-## 요구 사항  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbcli.h  
   
-## 참고 항목  
- [CatDB](../../top/visual-cpp-samples.md)   
+## <a name="see-also"></a>참고 항목  
+ [CatDB](../../visual-cpp-samples.md)   
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)

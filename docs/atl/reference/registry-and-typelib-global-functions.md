@@ -4,45 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- RegistryDataExchange function, global functions
+f1_keywords:
+- atlbase/ATL::AtlGetPerUserRegistration
+- afxpriv/ATL::AfxRegCreateKey
+- afxpriv/ATL::AfxRegDeleteKey
+- atlbase/ATL::AtlRegisterTypeLib
+- afxpriv/ATL::AfxRegOpenKey
+- afxpriv/ATL::AfxRegOpenKeyEx
+- afxdisp/ATL::AfxUnregisterPreviewHandler
+- atlbase/ATL::AtlSetPerUserRegistration
+- atlbase/ATL::AtlUnRegisterTypeLib
+- atlbase/ATL::AtlLoadTypeLib
+- atlbase/ATL::AtlUpdateRegistryFromResourceD
+- atlbase/ATL::RegistryDataExchange
+dev_langs: C++
+helpviewer_keywords: RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 9f05db468d5d7fffce149d7a92ba29615c3ae7c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-and-typelib-global-functions"></a>레지스트리 및 TypeLib 전역 함수
 이러한 함수는 로드 하 고 형식 라이브러리를 등록에 대 한 지원을 제공 합니다.  
   
 > [!IMPORTANT]
->  다음 표에 나열 된 함수에서 실행 되는 응용 프로그램에서 사용할 수 없습니다는 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]합니다.  
+>  다음 표에 나열 된 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 |||  
 |-|-|  
@@ -185,7 +181,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 도우미 함수를 사용 하 여 [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) 및 [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)합니다.  
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h
@@ -284,7 +280,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="return-value"></a>반환 값  
  `S_OK`그렇지 않으면 메서드는 성공 하는 경우는 `HRESULT` 오류가 발생 한 경우 오류 코드입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  레지스트리 리디렉션이 기본적으로 사용 되지 않습니다. 이 옵션을 사용 하는 경우 레지스트리 액세스를 리디렉션되면 **HKEY_CURRENT_USER\Software\Classes**합니다.  
   
  리디렉션 전역있지 않습니다. MFC 및 ATL frameworks이 레지스트리 리디렉션이 영향을 받습니다.  
@@ -344,7 +340,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 도우미 함수를 사용 하 여 [AtlRegisterTypeLib](#atlregistertypelib) 및 [AtlUnRegisterTypeLib](#atlunregistertypelib)합니다.  
   
 ##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
@@ -380,10 +376,10 @@ HRESULT RegistryDataExchange(
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  매크로 [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) 및 [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) 호출 하는 함수를 확장 하 고 `RegistryDataExchange`합니다.  
   
- 함수가 작업을 수행 해야 나타내는 있는 열거형 값은 다음과에서 같습니다.  
+ 함수가 작업을 수행 해야 나타내는 있는 열거형 값은 다음 표에 표시 됩니다.  
   
 |열거형 값|작업|  
 |----------------|---------------|  
@@ -395,9 +391,7 @@ HRESULT RegistryDataExchange(
  **헤더:** atlbase.h
 
 ## <a name="see-also"></a>참고 항목  
- [함수](atl-functions.md)
- [레지스트리 데이터 교환 매크로](registry-data-exchange-macros.md)
-
+ [함수](atl-functions.md) [레지스트리 데이터 교환 매크로](registry-data-exchange-macros.md)
 
 
 

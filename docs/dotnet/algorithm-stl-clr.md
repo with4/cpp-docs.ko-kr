@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1f598b0aba0f5f697fc6603728e2735f0cd50f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7dac0e574122342c96b28a2f5ccbeb1ea5088ae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="algorithm-stlclr"></a>algorithm(STL/CLR)
 알고리즘을 수행 하는 STL/CLR 컨테이너 템플릿 함수를 정의 합니다.  
@@ -78,7 +81,7 @@ ms.lasthandoff: 10/24/2017
 |[remove(STL/CLR)](../dotnet/remove-stl-clr.md)|나머지 요소의 순서를 방해 하지 않고 지정된 된 범위에서 지정된 된 값을 삭제 하 고 지정 된 값이 없는 새 범위의 끝을 반환 합니다.|  
 |[remove_copy(STL/CLR)](../dotnet/remove-copy-stl-clr.md)|나머지 요소의 순서를 방해 하지 않고 지정된 된 값의 요소는 복사 하지를 대상 범위에 소스 범위의 요소를 복사 합니다.|  
 |[remove_copy_if(STL/CLR)](../dotnet/remove-copy-if-stl-clr.md)|소스 범위의 요소를 제외 하 고 나머지 요소의 순서를 방해 하지 않고 조건자를 만족 하는 대상 범위로 복사 합니다.|  
-|[remove_if(STL/CLR)](../dotnet/remove-if-stl-clr.md)|나머지 요소의 순서를 방해 하지 않고 지정된 된 범위에서 조건자를 만족 하는 요소를 삭제 합니다. 입니다.|  
+|[remove_if(STL/CLR)](../dotnet/remove-if-stl-clr.md)|나머지 요소의 순서를 방해 하지 않고 지정된 된 범위에서 조건자를 만족 하는 요소를 삭제 합니다. 이어야 합니다.|  
 |[replace(STL/CLR)](../dotnet/replace-stl-clr.md)|범위에서 새 값으로 지정 된 값과 일치 하는 요소를 바꿉니다.|  
 |[replace_copy(STL/CLR)](../dotnet/replace-copy-stl-clr.md)|소스 범위의 요소 바꾸는 새 값으로 지정 된 값과 일치 하는 요소를 대상 범위로 복사 합니다.|  
 |[replace_copy_if(STL/CLR)](../dotnet/replace-copy-if-stl-clr.md)|소스 범위의 각 요소를 검사하고 요소가 지정된 조건자를 충족하면 대체하는 동시에 결과를 새 대상 범위로 복사합니다.|  

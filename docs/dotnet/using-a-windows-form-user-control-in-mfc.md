@@ -20,11 +20,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e836730942b3293ff8adc6aa7f8c75f4d2376cc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 59b4d974a6b25b896067bce0042d9a5ff9221cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>MFC에서 Windows Form 사용자 정의 컨트롤 사용
 MFC Windows Forms 지원 클래스를 사용 하 여 Windows Forms 컨트롤 MFC 응용 프로그램 내에서 ActiveX 컨트롤 뷰 또는 MFC 대화 상자 내에서 호스트할 수 있습니다. 또한 Windows Forms 폼을 MFC 대화 상자로 호스팅할 수 있습니다.  
@@ -49,7 +52,7 @@ MFC Windows Forms 지원 클래스를 사용 하 여 Windows Forms 컨트롤 MFC
   
  Windows Forms을 사용 하 여 MFC 응용 프로그램에 응용 프로그램과 함께 mfcmifc90.dll를 재배포 해야 합니다. 자세한 내용은 참조 [MFC 라이브러리 재배포](../ide/redistributing-the-mfc-library.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [MFC 대화 상자에서 Windows Form 사용자 정의 컨트롤 호스팅](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
   
  [Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)  

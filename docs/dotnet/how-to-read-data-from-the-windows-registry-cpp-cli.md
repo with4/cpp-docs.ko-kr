@@ -1,34 +1,36 @@
 ---
-title: "방법: Windows 레지스트리에서 데이터 읽기(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "레지스트리, 읽기"
-  - "Visual C++, Windows 레지스트리에서 읽기"
+title: "방법: Windows 레지스트리에서 데이터 읽기 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, reading from Windows Registry
+- registry, reading
 ms.assetid: aebf52c0-acc7-40e2-adbc-d34e0a1e467e
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dfb654ba2cce069086713322624e947e14bc26f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: Windows 레지스트리에서 데이터 읽기(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 <xref:Microsoft.Win32.Registry.CurrentUser> 키를 사용하여 Windows 레지스트리의 데이터를 읽습니다.  우선 <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> 메서드를 사용하여 하위 키를 열거한 다음 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 메서드를 사용하여 Identities 하위 키를 엽니다.  루트 키와 마찬가지로 각 하위 키는 <xref:Microsoft.Win32.RegistryKey> 클래스로 표현됩니다.  마지막으로 새 <xref:Microsoft.Win32.RegistryKey> 개체를 사용하여 키\/값 쌍을 열거합니다.  
+# <a name="how-to-read-data-from-the-windows-registry-ccli"></a>방법: Windows 레지스트리에서 데이터 읽기(C++/CLI)
+다음 코드 예제에서는 <xref:Microsoft.Win32.Registry.CurrentUser> 데이터를 읽을 때 Windows 레지스트리에서 키입니다. 첫째, 하위 키를 사용 하 여 열거 되는 <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> 메서드 및 Identities 하위 키를 사용 하 여을 열릴는 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 메서드. 루트 키와 마찬가지로 각 하위 키로 표시 됩니다는 <xref:Microsoft.Win32.RegistryKey> 클래스입니다. 마지막으로, 새 <xref:Microsoft.Win32.RegistryKey> 개체 키/값 쌍을 열거 하는 데 사용 됩니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```  
 // registry_read.cpp  
@@ -67,14 +69,14 @@ int main( )
 }  
 ```  
   
-## 설명  
- <xref:Microsoft.Win32.Registry> 클래스는 <xref:Microsoft.Win32.RegistryKey>의 정적 인스턴스에 대한 컨테이너에 불과합니다.  각 인스턴스는 루트 레지스트리 노드를 나타냅니다.  인스턴스는 <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> 및 <xref:Microsoft.Win32.Registry.Users>입니다.  
+## <a name="remarks"></a>설명  
+ <xref:Microsoft.Win32.Registry> 클래스는 컨테이너의 정적 인스턴스에 대 한 단지 <xref:Microsoft.Win32.RegistryKey>합니다. 각 인스턴스는 루트 레지스트리 노드를 나타냅니다. 인스턴스는 <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, 및 <xref:Microsoft.Win32.Registry.Users>합니다.  
   
- <xref:Microsoft.Win32.Registry> 클래스 내의 개체는 정적 개체인 동시에 읽기 전용 개체입니다.  또한 레지스트리 개체의 내용에 액세스하기 위해 작성된 <xref:Microsoft.Win32.RegistryKey> 클래스의 인스턴스도 읽기 전용입니다.  이 동작을 재정의하는 방법의 예제는 [방법: Windows 레지스트리에 데이터 쓰기](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)를 참조하십시오.  
+ 에 추가 되 고 정적 내의 개체에는 <xref:Microsoft.Win32.Registry> 클래스는 읽기 전용입니다. 또한, 인스턴스의 <xref:Microsoft.Win32.RegistryKey> 레지스트리의 내용에 액세스 하기 위해 만든 클래스 개체는 읽기 전용도 합니다. 이 동작을 재정의 하는 방법의 예제를 보려면 [하는 방법: Windows 레지스트리에 데이터 쓰기 (C + + /cli CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)합니다.  
   
- <xref:Microsoft.Win32.Registry> 클래스에는 <xref:Microsoft.Win32.Registry.DynData> 및 <xref:Microsoft.Win32.Registry.PerformanceData>라는 두 가지 개체가 더 있습니다.  이 두 개체는 모두 <xref:Microsoft.Win32.RegistryKey> 클래스의 인스턴스입니다.  <xref:Microsoft.Win32.Registry.DynData> 개체에는 Windows 98과 Windows Me에서만 지원되는 동적 레지스트리 정보가 들어 있습니다.  <xref:Microsoft.Win32.Registry.PerformanceData> 개체를 사용하면 Windows 성능 모니터링 시스템을 사용하는 응용 프로그램에 대한 성능 카운터 정보에 액세스할 수 있습니다.  <xref:Microsoft.Win32.Registry.PerformanceData> 노드는 레지스트리에 실제로 저장되지 않은 정보를 나타내므로 Regedit.exe를 사용하여 볼 수 없습니다.  
+ 두 가지 추가 개체에는 <xref:Microsoft.Win32.Registry> 클래스: <xref:Microsoft.Win32.Registry.DynData> 및 <xref:Microsoft.Win32.Registry.PerformanceData>합니다. 둘 다의 인스턴스는 <xref:Microsoft.Win32.RegistryKey> 클래스입니다. <xref:Microsoft.Win32.Registry.DynData> 에서만 Windows 98 및 Windows me에서 지원 되는 동적 레지스트리 정보를 포함 하는 개체 <xref:Microsoft.Win32.Registry.PerformanceData> Windows 성능 모니터링 시스템을 사용 하는 응용 프로그램에 대 한 성능 카운터 정보에 액세스 하려면 개체를 사용할 수 있습니다. <xref:Microsoft.Win32.Registry.PerformanceData> 노드는 실제로 레지스트리에 저장 되지 않으며, 따라서 볼 수 없습니다 Regedit.exe를 사용 하는 정보를 나타냅니다.  
   
-## 참고 항목  
- [방법: Windows 레지스트리에 데이터 쓰기](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
- [Windows 작업](../dotnet/windows-operations-cpp-cli.md)   
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [방법: Windows 레지스트리에 데이터 쓰기 (C + + /cli CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
+ [Windows 작업 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

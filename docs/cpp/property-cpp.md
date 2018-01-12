@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- property_cpp
-dev_langs:
-- C++
+f1_keywords: property_cpp
+dev_langs: C++
 helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d4cb68d02f9ee543c2d3271bc48ad4318352faa2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: afc8fb6ad9808bf0a0139e838982a08820d2fb88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-c"></a>속성 (C++)
 **Microsoft 전용**  
@@ -54,7 +51,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
  **Microsoft 전용 종료**  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // declspec_property.cpp  

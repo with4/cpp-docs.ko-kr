@@ -1,55 +1,55 @@
 ---
-title: "&lt;see&gt;(Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<see>"
-  - "see"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<see> C++ XML 태그"
-  - "see C++ XML 태그"
+title: "&lt;참조&gt; (Visual c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <see>
+- see
+dev_langs: C++
+helpviewer_keywords:
+- <see> C++ XML tag
+- see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15e1aedefe6d20c181ff208f76a61f49e15f5214
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;see&gt;(Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<see\> 태그를 사용하면 텍스트 내부에서 링크를 지정할 수 있습니다.  사용  [\<seealso\>](../ide/seealso-visual-cpp.md) 참고 항목 부분에 나타나는 텍스트를 나타냅니다.  
+# <a name="ltseegt-visual-c"></a>&lt;참조&gt; (Visual c + +)
+\<see> 태그를 사용하면 텍스트 내부에서 링크를 지정할 수 있습니다. 사용 하 여 [ \<seealso >](../ide/seealso-visual-cpp.md) 참고 항목 섹션에 나타낼 수 있는 텍스트를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 <see cref="member"/>  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `member`  
- 현재 컴파일 환경에서 호출될 수 있는 멤버 또는 필드에 대한 참조입니다.  이름을 단일 또는 이중 따옴표로 묶어야 합니다.  
+ 현재 컴파일 환경에서 호출할 수 있는 멤버 또는 필드에 대한 참조입니다.  이름을 단일 또는 이중 따옴표로 묶습니다.  
   
- 컴파일러는 지정 된 코드 요소가 존재 하 고 해결 확인 `member` 를 출력 XML의에서 요소 이름입니다.  검색 되지 않는 경우에 컴파일러에서 경고가 발생 `member`.  
+ 지정 된 코드 요소가 있으며 해결 컴파일러 확인 `member` 출력 XML에에서 요소 이름입니다.  `member`가 검색되지 않는 경우 컴파일러에서 경고가 발생합니다.  
   
-## 설명  
- [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 저장합니다.  
+## <a name="remarks"></a>설명  
+ [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
- 볼  [\<summary\>](../ide/summary-visual-cpp.md) \<see\>를 사용 하는 예제입니다.  
+ 참조 [ \<요약 >](../ide/summary-visual-cpp.md) 사용 하는 예제에 대 한 \<참조 > 합니다.  
   
- Visual C\+\+ 컴파일러에서 문서 주석을 통해 한번에 대 한 cref 참조를 해결 하려고 시도 합니다.  따라서 c \+ \+ 조회 규칙을 사용 하는 경우 기호 참조로 표시 하는 컴파일러에서 찾지는 확인 되지 않은.  자세한 내용은 [\<seealso\>](../ide/seealso-visual-cpp.md)를 참조하십시오.  
+ Visual C++ 컴파일러에서는 문서 주석을 통해 단일 패스로 cref 참조를 확인하려고 합니다.  따라서 C++ 조회 규칙을 사용하는 경우 컴파일러에서 기호를 찾을 수 없으며 참조는 확인되지 않음으로 표시됩니다. 참조 [ \<seealso >](../ide/seealso-visual-cpp.md) 자세한 정보에 대 한 합니다.  
   
-## 예제  
- 컴파일러에 대 한 참조를 해결할 수 있도록 다음 샘플에서는 제네릭 형식에 대 한 cref 참조를 만들 수 있습니다 방법을 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플은 제네릭 형식에 대 한 cref 참조를 확인할 수 있는 방법은 되도록, 컴파일러 참조를 확인 합니다.  
   
 ```  
 // xml_see_cref_example.cpp  
@@ -76,5 +76,5 @@ generic<class T>
 ref class C {};  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 문서](../ide/xml-documentation-visual-cpp.md)

@@ -1,56 +1,56 @@
 ---
-title: "/E(stdout으로 전처리) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/e"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/E 컴파일러 옵션[C++]"
-  - "-E 컴파일러 옵션[C++]"
-  - "전처리기 출력"
-  - "전처리기 출력, 표준 출력에 복사"
+title: "-E (stdout으로 전처리) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /e
+dev_langs: C++
+helpviewer_keywords:
+- -E compiler option [C++]
+- /E compiler option [C++]
+- preprocessor output, copy to stdout
+- preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ed083c960421ce17c0ce61036cd05191fc12c797
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /E(stdout으로 전처리)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-C와 C\+\+ 소스 파일을 전처리하고 전처리된 파일을 표준 출력 장치에 복사합니다.  
+# <a name="e-preprocess-to-stdout"></a>/E(stdout으로 전처리)
+C 및 c + + 소스 파일을 전처리 하 고 표준 출력 장치 전처리 파일을 복사 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 /E  
 ```  
   
-## 설명  
- 이 처리 과정에서 모든 전처리기 지시문이 실행되고 매크로가 확장되며 주석이 제거됩니다.  전처리된 결과에 주석을 보존하려면 [\/C\(전처리 중에 주석 유지\)](../../build/reference/c-preserve-comments-during-preprocessing.md) 옵션을 함께 사용하십시오.  
+## <a name="remarks"></a>설명  
+ 이 프로세스에서는 모든 전처리기 지시문이 실행 되 매크로 확장이 수행 및 주석이 제거 됩니다. 전처리 된 출력에 메모를 유지 하기 위해 사용 하 여는 [(보존 설명 하는 동안 전처리) /C](../../build/reference/c-preserve-comments-during-preprocessing.md) 컴파일러 옵션을 함께 합니다.  
   
- **\/E** 옵션을 사용하면 포함된 파일의 시작과 끝에 그리고 조건적 컴파일을 위해 전처리기 지시문에 의해 제거된 줄에 `#line` 지시문이 추가됩니다.  이 지시문은 전처리된 파일의 행 번호를 다시 지정합니다.  따라서 프로세스의 뒷 단계에서 발생한 오류는 전처리된 파일의 줄이 아닌 원본 소스 파일의 줄 번호를 참조합니다.  
+ **/E** 추가 `#line` 지시문을 시작과 끝에 포함된 된 파일의 그리고 조건부 컴파일 용 전처리기 지시문에 의해 제거 된 줄에 출력 합니다. 이러한 지시문 전처리 파일의 줄 번호를 다시 지정 합니다. 결과적으로, 처리의 이후 단계 동안 발생 한 오류는 전처리 파일의 줄 보다는 원본 소스 파일의 줄 번호를 참조 하십시오.  
   
- **\/E** 옵션을 사용하면 컴파일되지 않습니다.  컴파일에 필요한 사전 처리된 파일을 다시 전송해야 합니다.  또한 **\/E**를 사용하면 **\/FA**, **\/Fa** 및 **\/Fm** 옵션을 사용해도 출력 파일이 생성되지 않습니다.  자세한 내용은 [\/FA, \/Fa\(목록 파일\)](../../build/reference/fa-fa-listing-file.md) 및 [\/Fm\(맵 파일 이름 지정\)](../../build/reference/fm-name-mapfile.md)를 참조하십시오.  
+ **/E** 옵션은 컴파일을 억제 합니다. 컴파일에 대 한 전처리 파일을 전송 해야 합니다. **/E** 출력 파일이 표시는 **/FA**, **/Fa**, 및 **/Fm** 옵션입니다. 자세한 내용은 참조 [/FA, /Fa (목록 파일)](../../build/reference/fa-fa-listing-file.md) 및 [/Fm (맵 파일 이름)](../../build/reference/fm-name-mapfile.md)합니다.  
   
- `#line` 지시문을 사용하지 않으려면 [\/EP\(\#line 지시문 없이 stdout로 전처리\)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) 옵션을 대신 사용합니다.  
+ 표시 하지 않는 `#line` 지시문을 사용 하 여는 [/EP (#line 지시문 없이 stdout로 전처리)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) 옵션을 사용 합니다.  
   
- 전처리된 출력을 `stdout` 대신 파일로 보내려면 [\/P\(파일 전처리\)](../../build/reference/p-preprocess-to-a-file.md) 옵션을 사용합니다.  
+ 전처리 된 출력 대신 파일로 보내도록 `stdout`를 사용 하 여는 [/P (파일 전처리)](../../build/reference/p-preprocess-to-a-file.md) 옵션을 사용 합니다.  
   
- `#line` 지시문을 사용하지 않고 전처리된 출력을 파일로 보내려면 **\/P**와 **\/EP**를 함께 사용합니다.  
+ 표시 하지 않는 `#line` 지시문과 송신 전처리 된 출력 파일을 사용 하 여 **/P** 및 **/EP** 함께 합니다.  
   
- **\/E** 옵션을 사용할 경우에는 미리 컴파일된 헤더를 사용할 수 없습니다.  
+ 미리 컴파일된 헤더를 사용할 수 없습니다는 **/E** 옵션입니다.  
   
- 개별 파일로 전처리를 할 때 토큰 뒤의 공백은 제외됩니다.  이로 인해 잘못된 프로그램이 되거나 의도하지 않은 결과가 생길 수 있습니다.  다음 프로그램은 제대로 컴파일됩니다.  
+ 별도 파일을 전처리 하는 경우 공간 내보내지 않습니다 토큰 후 note 합니다. 이 수에 잘못 된 프로그램이 발생할 수도 있고 의도 하지 않은 부작용입니다. 다음 프로그램은 성공적으로 컴파일됩니다.  
   
 ```  
 #define m(x) x  
@@ -60,35 +60,35 @@ m(int)main( )
 }  
 ```  
   
- 그러나 다음과 같이 컴파일하면  
+ 그러나으로 컴파일하는 경우:  
   
 ```  
 cl -E test.cpp > test2.cpp  
 ```  
   
- test2.cpp의 `int main`이 잘못되어 `intmain`이 됩니다.  
+ `int main`test2.cpp에서 잘못 됩니다 `intmain`합니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)를 참조하십시오.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  **C\/C\+\+** 폴더를 클릭합니다.  
+2.  **C/C++** 폴더를 클릭합니다.  
   
 3.  **명령줄** 속성 페이지를 클릭합니다.  
   
-4.  **추가 옵션** 상자에 컴파일러 옵션을 입력합니다.  
+4.  입력에 컴파일러 옵션은 **추가 옵션**상자입니다.  
   
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>를 참조하십시오.  
+-   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>을 참조하세요.  
   
-## 예제  
- 다음 명령줄은 `ADD.C`를 전처리하고 주석을 유지하며, `#line` 지시문을 추가하고 표준 출력 장치에 결과를 표시합니다.  
+## <a name="example"></a>예  
+ 다음 명령줄을 실행 하면 `ADD.C`주석을 유지, 추가, `#line` 지시문을 표준 출력 장치에 결과 표시 합니다.  
   
 ```  
 CL /E /C ADD.C  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

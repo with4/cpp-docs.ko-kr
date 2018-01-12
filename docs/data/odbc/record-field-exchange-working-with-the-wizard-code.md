@@ -1,53 +1,56 @@
 ---
 title: "레코드 필드 교환: 마법사 코드 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DoFieldExchange 메서드, 재정의"
-  - "필드 데이터 멤버"
-  - "필드 데이터 멤버, 선언"
-  - "m_nFields 데이터 멤버"
-  - "m_nFields 데이터 멤버, 초기화"
-  - "m_nParams 데이터 멤버"
-  - "m_nParams 데이터 멤버, 초기화"
-  - "ODBC, RFX"
-  - "재정의, DoFieldExchange"
-  - "RFX(ODBC), 구현"
-  - "RFX(ODBC), 마법사 코드"
-  - "Unicode, 데이터베이스 클래스 사용"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DoFieldExchange method, overriding
+- Unicode, with database classes
+- field data members, declaring
+- RFX (ODBC), wizard code
+- RFX (ODBC), implementing
+- field data members
+- ODBC, RFX
+- m_nParams data member, initializing
+- m_nFields data member
+- m_nParams data member
+- overriding, DoFieldExchange
+- m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 레코드 필드 교환: 마법사 코드 사용
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이 항목에서는 MFC 응용 프로그램 마법사 및 **클래스 추가**\([MFC ODBC 소비자 추가](../../mfc/reference/adding-an-mfc-odbc-consumer.md)에서 설명\)에서 RFX를 지원하기 위해 작성하는 코드를 설명하고 이 마법사 코드를 수정하는 방법을 설명합니다.  
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>레코드 필드 교환: 마법사 코드 사용
+이 항목에서는 코드를 설명 하는 MFC 응용 프로그램 마법사 및 **클래스 추가** (에 설명 된 대로 [MFC ODBC 소비자 추가](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) RFX와 코드를 수정 하려는 방법을 지원 하기 위해 작성 합니다.  
   
 > [!NOTE]
->  이 항목은 대량 행 페치가 구현되지 않은 `CRecordset`에서 파생된 클래스에 적용됩니다.  대량 행 페치를 사용하는 경우 Bulk RFX\(대량 레코드 필드 교환\)가 구현됩니다.  Bulk RFX는 RFX와 비슷합니다.  차이점을 이해하려면 [레코드 집합: 대량 레코드 페치\(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)를 참조하십시오.  
+>  이 항목에서 파생 된 클래스에 적용 됩니다. `CRecordset` 에서 대량 행 페치 구현 되지 않았습니다. 대량 행 페치를 사용 하는 경우 대량 레코드 필드 교환 (대량 RFX) 구현 됩니다. 대량 RFX RFX와 비슷합니다. 차이점을 이해 하려면 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
   
- MFC 응용 프로그램 마법사 또는 **클래스 추가**를 사용하여 레코드 집합 클래스를 만들면 선택한 데이터 소스와 테이블 및 열을 기반으로 다음과 같은 RFX 관련 요소들을 마법사가 작성합니다.  
+ MFC 응용 프로그램 마법사로 레코드 집합 클래스를 만들 때 또는 **클래스 추가**, 마법사는 데이터 원본에 따라 테이블 및 열 선택 마법사에서 수행한 다음 RFX 관련 요소를 씁니다.  
   
--   레코드 집합 클래스에서 레코드 집합 필드 데이터 멤버 선언  
+-   레코드 집합 클래스의 레코드 집합 필드 데이터 멤버의 선언  
   
--   `CRecordset::DoFieldExchange`의 재정의  
+-   재정`CRecordset::DoFieldExchange`  
   
--   레코드 집합 클래스 생성자에서 레코드 집합 필드 데이터 멤버 초기화  
+-   레코드 집합 클래스 생성자의 레코드 집합 필드 데이터 멤버의 초기화  
   
-##  <a name="_core_the_field_data_member_declarations"></a> 필드 데이터 멤버 선언  
- 마법사는 .h 파일에서 `CSections` 클래스에 대해 다음과 같은 레코드 집합 클래스 선언을 작성합니다.  
+##  <a name="_core_the_field_data_member_declarations"></a>필드 데이터 멤버 선언  
+ 마법사에서 레코드 집합 클래스 선언을 클래스에 대해 다음과 유사한.h 파일에서 작성 `CSections`:  
   
 ```  
 class CSections : public CRecordset  
@@ -79,14 +82,15 @@ public:
 };  
 ```  
   
- 바인딩할 매개 변수 데이터 멤버 또는 새 필드 데이터 멤버를 사용자가 직접 추가하는 경우에는 마법사가 해당 데이터 멤버를 생성한 다음에 추가해야 합니다.  
+ 매개 변수 데이터 멤버 또는 직접 바인딩할 수 있는 새 필드 데이터 멤버를 추가 하는 경우 마법사에서 생성 된 후 추가 합니다.  
   
- 또한 마법사는 `CRecordset` 클래스의 `DoFieldExchange` 멤버 함수를 재정의하기도 합니다.  
+ 또한 마법사를 재정의 하는 통지는 `DoFieldExchange` 클래스의 멤버 함수 `CRecordset`합니다.  
   
-##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange 재정의  
- [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md)는 RFX의 핵심 요소입니다.  프레임워크는 데이터 소스에서 레코드 집합으로 또는 레코드 집합에서 데이터 소스로 데이터를 옮기는 데 필요할 때마다 `DoFieldExchange`를 호출합니다.  `DoFieldExchange`는 [IsFieldDirty](../Topic/CRecordset::IsFieldDirty.md) 및 [IsFieldNull](../Topic/CRecordset::IsFieldNull.md) 멤버 함수를 통해 필드 데이터 멤버에 대한 정보도 가져옵니다.  
+##  <a name="_core_the_dofieldexchange_override"></a>DoFieldExchange 재정  
+
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 는 RFX의 핵심입니다. 프레임 워크를 호출 하 여 `DoFieldExchange` 든 지 또는 레코드 집합에 데이터 원본에서 레코드 집합에서 데이터 원본에 데이터를 이동 해야 합니다. `DoFieldExchange`또한 지원에 대 한 정보를 가져오는 필드를 통해 데이터 멤버는 [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) 및 [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) 멤버 함수입니다.  
   
- 다음은 `CSections` 클래스에 대한 `DoFieldExchange`재정의의 예입니다.  마법사는 .cpp 파일에 레코드 집합 클래스에 대한 함수를 작성합니다.  
+ 다음 `DoFieldExchange` 에 대 한 재정의는 `CSections` 클래스입니다. 레코드 집합 클래스.cpp 파일에서 함수를 작성 하는 마법사입니다.  
   
 ```  
 void CSections::DoFieldExchange(CFieldExchange* pFX)  
@@ -100,27 +104,27 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 }  
 ```  
   
- 다음은 이 함수의 핵심적인 특징입니다.  
+ 함수는 다음과 같은 주요 기능을 확인 합니다.  
   
--   DoFieldExchange 함수의 이 섹션은 필드 맵이라고 합니다.  
+-   이 단원에서는 함수 필드 맵을 라고 합니다.  
   
--   `pFX` 포인터를 통해 `CFieldExchange::SetFieldType`을 호출합니다.  이 호출에서는 `DoFieldExchange` 마지막 부분에서 모든 RFX 함수가 호출되며 `SetFieldType`의 다음 호출이 output column임을 지정합니다.  자세한 내용은 [CFieldExchange::SetFieldType](../Topic/CFieldExchange::SetFieldType.md)을 참조하십시오.  
+-   에 대 한 호출 `CFieldExchange::SetFieldType`통해는 `pFX` 포인터입니다. 이 호출의 끝에 모든 RFX 함수 호출 지정 `DoFieldExchange` 다음 호출 또는 `SetFieldType` 출력 열입니다. 자세한 내용은 참조 [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)합니다.  
   
--   각 필드 데이터 멤버마다 한 번씩 `RFX_Text` 전역 함수를 여러 번 호출합니다\(이 예제에서는 모두 `CString` 변수\).  이 호출은 데이터 소스의 열 이름과 필드 데이터 멤버 사이의 관계를 지정합니다.  RFX 함수는 데이터를 실제로 전달합니다.  클래스 라이브러리는 일반 데이터 형식 모두에 대해 RFX 함수를 제공합니다.  RFX 함수에 대한 자세한 내용은 [레코드 필드 교환: RFX 함수 사용](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)을 참조하십시오.  
+-   몇 번 호출 하는 `RFX_Text` 전역 함수-필드 데이터 멤버에 하나씩 (모두 `CString` 예에서 변수). 데이터 원본에 열 이름 및 필드 데이터 멤버 간의 관계를 지정 하는이 함수를이 호출 합니다. RFX 함수는 실제 데이터 전송을 수행합니다. 클래스 라이브러리는 일반 데이터 형식에 대해 RFX 함수를 제공합니다. RFX 함수에 대 한 자세한 내용은 참조 [레코드 필드 교환: RFX 함수를 사용 하 여](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)합니다.  
   
     > [!NOTE]
-    >  결과 집합의 열 순서는 `DoFieldExchange`의 RFX 함수 호출 순서와 일치해야 합니다.  
+    >  결과 집합의 열 순서에는 RFX 함수 호출의 순서와 일치 해야 `DoFieldExchange`합니다.  
   
--   프레임워크에서 `DoFieldExchange`를 호출하는 경우 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) 개체에 대한 `pFX` 포인터가 전달됩니다.  `CFieldExchange` 개체는 `DoFieldExchange`가 수행할 작업과 전송 방향 및 기타 컨텍스트 정보를 지정합니다.  
+-   `pFX` 에 대 한 포인터는 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) 프레임 워크를 호출할 때 전달 되는 개체 `DoFieldExchange`합니다. `CFieldExchange` 개체 작업을 지정 하는 `DoFieldExchange` 방향을 전송 및 기타 컨텍스트 정보를 수행 하는 것입니다.  
   
-##  <a name="_core_the_recordset_constructor"></a> 레코드 집합 생성자  
- 마법사가 작성한 레코드 집합 생성자에는 RFX 관련 사항이 두 가지 포함됩니다.  
+##  <a name="_core_the_recordset_constructor"></a>레코드 집합 생성자  
+ 마법사에서 작성 하는 레코드 집합 생성자 RFX와 관련 된 다음 두 가지를 포함 되어 있습니다.  
   
--   각 필드 데이터 멤버의 초기화  
+-   각 필드 데이터 멤버에 대 한 초기화  
   
--   픨드 데이터 멤버의 수가 들어 있는 [CRecordset::m\_nFields](../Topic/CRecordset::m_nFields.md) 데이터 멤버의 초기화  
+-   에 대 한 초기화는 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) 필드 데이터 멤버의 수를 포함 하는 데이터 멤버  
   
- `CSections` 레코드 집합 생성자의 예제는 다음과 같습니다.  
+ 에 대 한 생성자는 `CSections` 레코드 집합 예제는 다음과 같습니다.  
   
 ```  
 CSections::CSections(CDatabase* pdb)  
@@ -136,13 +140,14 @@ CSections::CSections(CDatabase* pdb)
 ```  
   
 > [!NOTE]
->  필드 데이터 멤버를 직접 추가하는 경우에는 새 열을 동적으로 바인딩할 때와 마찬가지로 `m_nFields`의 값을 증가시켜야 합니다.  이렇게 하려면 다음과 같은 줄을 코드에 추가합니다.  
+>  새 열을 동적으로 바인딩하는 경우 마찬가지로 수동으로 필드 데이터 멤버 추가 하는 경우 증분 해야 `m_nFields`합니다. 와 같은 다른 코드 줄을 추가 하 여 수행 합니다.  
   
 ```  
 m_nFields += 3;  
 ```  
+
+ 세 개의 새로운 필드를 추가 하기 위한 코드입니다. 매개 변수 데이터 멤버를 추가 하는 경우 초기화 해야는 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) 매개 변수 데이터 멤버의 수를 포함 하는 데이터 멤버입니다. 배치는 `m_nParams` 초기화는 괄호 밖에 있습니다.  
+
   
- 이 코드는 세 개의 필드를 새로 추가합니다.  매개 변수 데이터 멤버를 추가하는 경우 매개 변수 데이터 멤버의 수를 포함하는 [m\_nParams](../Topic/CRecordset::m_nParams.md) 데이터 멤버를 초기화해야 합니다.  `m_nParams` 초기화는 괄호 밖에 배치합니다.  
-  
-## 참고 항목  
- [RFX](../../data/odbc/record-field-exchange-rfx.md)
+## <a name="see-also"></a>참고 항목  
+ [RFX(레코드 필드 교환)](../../data/odbc/record-field-exchange-rfx.md)

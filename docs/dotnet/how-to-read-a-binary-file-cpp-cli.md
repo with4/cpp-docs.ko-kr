@@ -1,34 +1,36 @@
 ---
-title: "방법: 이진 파일 읽기(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "이진 파일, C++에서 읽기"
-  - "파일[C++], 이진"
+title: "방법: 이진 파일 읽기 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], binary
+- binary files, reading in C++
 ms.assetid: 41ad9ad1-5cac-489c-874e-4bb3a649073a
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3714ba3df6d44559db66b56ea1a0f8a3ff7f3f44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: 이진 파일 읽기(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-다음 코드 예제에서는 <xref:System.IO?displayProperty=fullName>네임 스페이스:<xref:System.IO.FileStream> 및 <xref:System.IO.BinaryReader>의 두 클래스를 사용하여 파일에서 이진 데이터를 읽는 방법을 보여줍니다.  <xref:System.IO.FileStream>은 실제 파일을 나타내고  <xref:System.IO.BinaryReader>는 이진 액세스를 허용하는 인터페이스를 스트림에 제공합니다.  
+# <a name="how-to-read-a-binary-file-ccli"></a>방법: 이진 파일 읽기(C++/CLI)
+다음 코드 예제에는 두 개의 클래스에서 사용 하 여 파일에서 이진 데이터를 읽는 방법을 보여 줍니다는 <xref:System.IO?displayProperty=fullName> 네임 스페이스: <xref:System.IO.FileStream> 및 <xref:System.IO.BinaryReader>합니다. <xref:System.IO.FileStream>실제 파일을 나타냅니다. <xref:System.IO.BinaryReader>이진 액세스를 허용 하는 스트림에 대 한 인터페이스를 제공 합니다.  
   
- 이 코드 예제에서는 이름이 data.bin이고 이진 형식의 정수를 포함하는 파일을 읽습니다.  이런 종류의 파일에 대한 자세한 내용은 [방법: 이진 파일 쓰기](../dotnet/how-to-write-a-binary-file-cpp-cli.md)를 참조하십시오.  
+ 코드 예제에서는 이름이 data.bin 및 이진 형식에서 정수를 포함 하는 파일을 읽습니다. 이런이 종류의 파일에 대 한 정보를 참조 하십시오. [하는 방법: 이진 파일 쓰기 (C + + /cli CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // binary_read.cpp  
@@ -63,6 +65,6 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [파일 및 스트림 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [C\+\+\/CLI를 사용한 .NET 프로그래밍](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>참고 항목  
+ [파일 및 스트림 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [C++/CLI를 사용한 .NET 프로그래밍(Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc784af1c23576ff68c8be8b4b400cd10cc8b0e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbcb635cd37a40c2de1599d271658de308e8cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (가정 연산자 새 throw)  
 경우는 `/Zc:throwingNew` 옵션을 지정 하면 컴파일러 최적화에 대 한 호출 `operator new` 반환 null 포인터에 대 한 검사를 건너뜁니다. 이 옵션으로 모든 링크의 구현 된 생각 하는 컴파일러가 `operator new` 및 사용자 지정 할당자를 사용 하면 c + + 표준을 준수 하 고 할당 실패 시 throw 합니다. 기본적으로 Visual Studio에서 컴파일러 pessimistically 생성 null 검사 (`/Zc:throwingNew-`) 호출에 대 한 이러한, 사용자가 throw 되지 않는 구현에 연결할 수 있으므로 `operator new` 하거나 null 포인터를 반환 하는 사용자 지정 할당자 루틴을 작성 합니다.  

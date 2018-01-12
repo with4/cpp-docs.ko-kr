@@ -1,36 +1,39 @@
 ---
-title: "방법: 이미지가 네이티브인지 CLR인지 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 컴파일러 옵션[C++], 컴파일 시 사용 감지"
-  - "공용 언어 런타임, /clr 컴파일러 옵션"
-  - "공용 언어 런타임, 이미지 테스트"
-  - "이미지[C++], CLR 확인"
+title: "방법: 이미지가 네이티브 인지 CLR 인지 확인 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- common language runtime, image testing
+- images [C++], CLR verification
+- /clr compiler option [C++], detecting use in compilation
+- common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3b4b652be03aeb0c147ee39b141bd2df932af055
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: 이미지가 네이티브인지 CLR인지 확인
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-공용 언어 런타임에 대해 이미지가 빌드되었는지 확인하는 방법 중 하나로 **dumpbin** [\/CLRHEADER](../build/reference/clrheader.md)를 사용할 수 있습니다.  
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>방법: 이미지가 네이티브인지 CLR인지 확인
+공용 언어 런타임을 사용 하는 것에 대 한 이미지 빌드 되었는지 여부를 결정 하는 한 가지 방법은 **dumpbin**[/CLRHEADER](../build/reference/clrheader.md)합니다.  
   
- 공용 언어 런타임에 대해 이미지가 빌드되었는지 여부를 프로그래밍 방식으로 검사할 수도 있습니다.  자세한 내용은 [방법: \/clr 컴파일 감지](../dotnet/how-to-detect-clr-compilation.md)을 참조하십시오.  
+ 또한 프로그래밍 방식으로 이미지를 공용 언어 런타임에 대 한 빌드 되었는지 여부를 확인할 수 있습니다. 자세한 내용은 참조 [하는 방법: /clr 컴파일 감지](../dotnet/how-to-detect-clr-compilation.md)합니다.  
   
-## 예제  
- 다음 샘플에서는 공용 언어 런타임에 실행할 이미지가 빌드되었는지 여부를 확인합니다.  
+## <a name="example"></a>예  
+ 다음 예제에서 공용 언어 런타임에서 실행 되도록 이미지 빌드 되었는지 여부를 결정 합니다.  
   
 ```  
 // detect_image_type.cpp  
@@ -88,5 +91,5 @@ int main() {
 }  
 ```  
   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

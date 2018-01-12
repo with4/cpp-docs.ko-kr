@@ -1,31 +1,34 @@
 ---
-title: "오버로드된 연산자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "연산자 오버로드, CLR 클래스"
-  - "연산자[C++], 오버로드"
+title: "오버 로드 된 연산자 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- operator overloading, in a CLR class
+- operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94ee9d7bcffe7d17a5d5cf91fa3accdbe206b641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 오버로드된 연산자
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]에서는 연산자 오버로드가 Managed Extensions for C\+\+와 상당히 다르게 변경되었습니다.  
+# <a name="overloaded-operators"></a>오버로드된 연산자
+연산자 오버 로드는 Visual c + +는 데 Managed Extensions for c + + 정보가 변경 되었습니다.  
   
- 예를 들어, 참조 형식의 선언에서 네이티브 `operator+` 구문을 사용하는 대신 연산자의 기본 내부 이름\(이 경우 `op_Addition`\)을 명시적으로 입력해야 합니다.  또한 이 이름을 통해 연산자를 명시적으로 호출해야 하므로 연산자 오버로드의 두 가지 주요 이점인 \(a\) 직관적인 구문 및 \(b\) 새 형식과 기존 형식을 함께 사용할 수 있는 기능을 활용할 수 없게 됩니다.  예를 들면 다음과 같습니다.  
+ 네이티브를 사용 하 여 보다는 예제에 대 한 참조 형식의 선언에 `operator+` 구문, 작성 하는 명시적으로-연산자의 기본 내부 이름이 경우 `op_Addition`합니다. 연산자 오버 로드의 두 가지 주요 이점은 해야 하므로 이름을 통해 명시적으로 호출 하는 연산자의 호출 또한에: 직관적인 구문 (a) 및 (b) 기존 형식에 새 형식을 혼합 될 수 있는 기능입니다. 예:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -52,7 +55,7 @@ int main()
 }  
 ```  
   
- 새 구문에서는 정적 연산자를 선언하거나 사용할 때 모두 네이티브 C\+\+ 프로그래머가 일반적으로 바라는 작업 방식이 적용됩니다.  새 구문에서는 위의 `Vector` 클래스가 다음과 같이 변환됩니다.  
+ 새 구문 모두 선언 하 고 정적 연산자는에서 네이티브 c + + 프로그래머의 일반적인 기대 복원 됩니다. 다음은 `Vector` 클래스 새 구문으로 변환 합니다.  
   
 ```  
 public ref class Vector sealed {  
@@ -79,5 +82,5 @@ int main()
 }  
 ```  
   
-## 참고 항목  
- [클래스 또는 인터페이스 내에서 멤버 선언\(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>참고 항목  
+ [클래스 또는 인터페이스 내에서 멤버 선언(C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

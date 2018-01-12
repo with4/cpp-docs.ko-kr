@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 506dac565ef30c44c553301c6669e416a7dd5f8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 47fe8c0d7475c67228fd7335b1aa167ced237202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 클래스
 스마트 포인터는 힙에 대 한 포인터를 관리 하기 위한 클래스입니다.  
@@ -95,7 +96,7 @@ bool Allocate(size_t nElements = 1) throw();
 ### <a name="remarks"></a>설명  
  할당자 루틴 힙에 저장할 충분 한 메모리 예약에 익숙한 *nElement* 생성자에 정의 된 형식의 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
   
 ##  <a name="cheapptr"></a>CHeapPtr::CHeapPtr  
@@ -114,7 +115,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 ### <a name="remarks"></a>설명  
  기존 포인터를 사용 하 여 힙 포인터를 만들 수 있습니다 또는 `CHeapPtr` 개체입니다. 이 경우 새 `CHeapPtr` 새 포인터 및 리소스 관리에 대 한 책임을 지지 하는 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
   
 ##  <a name="operator_eq"></a>CHeapPtr::operator =  
@@ -132,7 +133,7 @@ CHeapPtr<T, Allocator>& operator=(
 ### <a name="return-value"></a>반환 값  
  업데이트 된에 대 한 참조를 반환 `CHeapPtr`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
   
 ##  <a name="reallocate"></a>CHeapPtr::Reallocate  
@@ -149,7 +150,7 @@ bool Reallocate(size_t nElements) throw();
 ### <a name="return-value"></a>반환 값  
  True를 반환 하는 메모리를 성공적으로 할당 된, 실패 하면 false를 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

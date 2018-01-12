@@ -1,32 +1,33 @@
 ---
-title: "unary_delegate(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_delegate 함수[STL/CLR]"
+title: unary_delegate (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_delegate
+dev_langs: C++
+helpviewer_keywords: unary_delegate function [STL/CLR]
 ms.assetid: b3ee253c-98e8-466e-a272-505e47aed061
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: df8c3177750433c95b6a98865409d51926c327d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# unary_delegate(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The genereic class describes a one\-argument delegate.  You use it specify a delegate in terms of its argument and return types.  
+# <a name="unarydelegate-stlclr"></a>unary_delegate(STL/CLR)
+Genereic 클래스는 단일 인수 대리자를 설명합니다. 사용 하면 대리자를 해당 인수 및 반환 형식으로 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 generic<typename Arg,  
@@ -34,31 +35,31 @@ generic<typename Arg,
     delegate Result unary_delegate(Arg);  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  Arg  
- 인수의 형식입니다.  
+ 인수 형식입니다.  
   
  결과  
  반환 형식입니다.  
   
-## 설명  
- The genereic delegate describes a one\-argument function.  
+## <a name="remarks"></a>설명  
+ Genereic 대리자는 단일 인수 함수를 설명합니다.  
   
- Note that for:  
+ 에 대 한는 note:  
   
  `unary_delegare<int, int> Fun1;`  
   
  `unary_delegare<int, int> Fun2;`  
   
- the types `Fun1` and `Fun2` are synonyms, while for:  
+ 형식을 `Fun1` 및 `Fun2` 은 동의어 이며에 대 한 동안:  
   
  `delegate int Fun1(int);`  
   
  `delegate int Fun2(int);`  
   
- they are not the same type.  
+ 형식이 같은 하지 않습니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_unary_delegate.cpp   
@@ -82,14 +83,17 @@ int main()
   
 ```  
   
-  **hash\(L'a'\) \= 5**  
-**hash\(L'b'\) \= 22**   
-## 요구 사항  
- **Header:** \<cliext\/functional\>  
+```Output  
+hash(L'a') = 5  
+hash(L'b') = 22  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [binary\_delegate](../dotnet/binary-delegate-stl-clr.md)   
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate_noreturn(STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

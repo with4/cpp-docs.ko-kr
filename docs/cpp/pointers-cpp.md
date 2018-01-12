@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a80b4227cd166edbbd146291ad57bd4efef95e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e81d56cee716a11f918149279f0b0fefadfe4bb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointers-c"></a>포인터 (c + +)
 포인터는 다음 시퀀스를 사용하여 선언합니다.  
@@ -97,7 +98,7 @@ static int *p = &i, *q = &j;
   
  위의 예제에서 p 포인터와 q 포인터 모두 `int` 형식의 개체를 가리키며 각각 i 및 j 주소로 초기화됩니다.  저장소 클래스 지정자 `static`은 두 포인터에 모두 적용됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // pointer.cpp  
@@ -187,7 +188,7 @@ j is 10
 dog dog  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 데이터 구조(이 경우에는 연결된 목록)에서 포인터를 사용하는 방법을 보여 주는 또 다른 예제입니다.  
   
 ```  

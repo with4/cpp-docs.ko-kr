@@ -17,16 +17,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31a3857169ad27ad75ed3ef38022048420d1bf0f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f284532e96e0a985aad8797a8caac0306f1f56f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-between-systemguid-and-guid"></a>방법: System::Guid 및 _GUID 사이에 변환
 다음 코드 예제에서는 간에 변환 하는 방법을 보여 줍니다.는 <xref:System.Guid> 및 `_GUID`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // convert_guids.cpp  

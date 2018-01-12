@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc82213acbc0fa2e6871b9a08119b37186652628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1058ee24eccbc06cf01db804ca0e715bacea4cbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapupperbound-stlclr"></a>map::upper_bound(STL/CLR)
 지정된 된 키와 일치 하는 범위의 끝을 찾습니다.  
@@ -37,7 +40,7 @@ iterator upper_bound(key_type key);
 ## <a name="remarks"></a>설명  
  멤버 함수는 마지막 요소를 결정 `X` 과 순서가 제어 된 시퀀스의 `key`합니다. 이러한 요소가 존재 하거나 `X` 는 제어 된 시퀀스의 마지막 요소 반환 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; 의첫번째요소를지정하는반복기를반환하지않으면`X`. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소 시퀀스의 끝으로 이동 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_map_upper_bound.cpp   

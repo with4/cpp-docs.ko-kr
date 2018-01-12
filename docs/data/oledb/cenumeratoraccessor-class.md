@@ -1,57 +1,59 @@
 ---
 title: "CEnumeratorAccessor 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CEnumeratorAccessor"
-  - "CEnumeratorAccessor"
-  - "ATL.CEnumeratorAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CEnumeratorAccessor 클래스"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CEnumeratorAccessor
+- CEnumeratorAccessor
+- ATL.CEnumeratorAccessor
+dev_langs: C++
+helpviewer_keywords: CEnumeratorAccessor class
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4a82b09a65cb4ebe6f0f796ba9aeb46ac5a2106a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CEnumeratorAccessor 클래스
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Used by [CEnumerator](../../data/oledb/cenumerator-class.md) to access the data from the enumerator rowset.  
+# <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 클래스
+사용 하는 [CEnumerator](../../data/oledb/cenumerator-class.md) 열거자 행 집합에서 데이터에 액세스할 수 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class CEnumeratorAccessor  
 ```  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### 데이터 멤버  
+### <a name="data-members"></a>데이터 멤버  
   
 |||  
 |-|-|  
-|[m\_bIsParent](../../data/oledb/cenumeratoraccessor-m-bisparent.md)|A variable indicating whether the enumerator is a parent enumerator, if the row is an enumerator.|  
-|[m\_nType](../../data/oledb/cenumeratoraccessor-m-ntype.md)|A variable indicating whether the row describes a data source or an enumerator.|  
-|[m\_szDescription](../../data/oledb/cenumeratoraccessor-m-szdescription.md)|The description of the data source or enumerator.|  
-|[m\_szName](../../data/oledb/cenumeratoraccessor-m-szname.md)|The name of the data source or enumerator.|  
-|[m\_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)|String to pass to [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) to obtain a moniker for the data source or enumerator.|  
+|[m_bIsParent](../../data/oledb/cenumeratoraccessor-m-bisparent.md)|행이 있는 경우 열거자 열거자 부모 열거자 인지를 나타내는 변수입니다.|  
+|[m_nType](../../data/oledb/cenumeratoraccessor-m-ntype.md)|행이 데이터 원본 또는 열거자를 설명 하는지 여부를 나타내는 변수입니다.|  
+|[m_szDescription](../../data/oledb/cenumeratoraccessor-m-szdescription.md)|데이터 원본 또는 열거자의 설명입니다.|  
+|[m_szName](../../data/oledb/cenumeratoraccessor-m-szname.md)|데이터 원본 또는 열거자의 이름입니다.|  
+|[m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)|에 전달 하는 문자열 [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) 데이터 원본 또는 열거자에 대 한 모니커를 가져오는 합니다.|  
   
-## 설명  
- This rowset consists of the data sources and enumerators visible from the current enumerator.  
+## <a name="remarks"></a>설명  
+ 이 행 집합의 데이터 소스와 현재 열거자에서 표시 하는 열거자 구성 됩니다.  
   
-## 요구 사항  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 소비자 템플릿](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 소비자 템플릿 참조](../../data/oledb/ole-db-consumer-templates-reference.md)

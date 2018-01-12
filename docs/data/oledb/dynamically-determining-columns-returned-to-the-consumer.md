@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec9ba16d4d600a06cdc5e4fa3de5bf40a67de8d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2827747d91bd1c26e173b6f0bdb44d54c3d0f8e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>소비자에게 반환되는 열을 동적으로 결정
 PROVIDER_COLUMN_ENTRY 매크로 정상적으로 처리는 **icolumnsinfo:: Getcolumnsinfo** 호출 합니다. 그러나 소비자는 책갈피를 사용 하도록 선택할 수도, 때문에 공급자는 소비자는 책갈피를 요청 하는 여부에 따라 반환 되는 열을 변경 하려면 수 있어야 합니다.  

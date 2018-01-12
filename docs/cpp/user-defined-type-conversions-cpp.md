@@ -32,11 +32,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 155afe7c785b111a49a19545e47d175a9b22f7d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-type-conversions-c"></a>사용자 정의 형식 변환(C++)
 A *변환* 다른 형식의 값에서 일부 형식의 새 값을 생성 합니다. *표준 변환* 없으며 해당 기본 제공 형식, 만들 c + + 언어 및 지원에는 기본 제공 *사용자 정의 변환* , 또는 사용자 정의 형식 간의 변환을 수행 하기 위해 합니다.  

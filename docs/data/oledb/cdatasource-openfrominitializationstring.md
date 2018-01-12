@@ -1,62 +1,64 @@
 ---
-title: "CDataSource::OpenFromInitializationString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource.OpenFromInitializationString"
-  - "OpenFromInitializationString"
-  - "CDataSource::OpenFromInitializationString"
-  - "ATL::CDataSource::OpenFromInitializationString"
-  - "ATL.CDataSource.OpenFromInitializationString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenFromInitializationString 메서드"
+title: 'Cdatasource:: Openfrominitializationstring | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource.OpenFromInitializationString
+- OpenFromInitializationString
+- CDataSource::OpenFromInitializationString
+- ATL::CDataSource::OpenFromInitializationString
+- ATL.CDataSource.OpenFromInitializationString
+dev_langs: C++
+helpviewer_keywords: OpenFromInitializationString method
 ms.assetid: 5ef1f1fd-92a9-4e1c-ad80-d3601b094b8c
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 294c5cd893b04dd477a002adb6dc03fa33c60a29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDataSource::OpenFromInitializationString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Opens a data source specified by the user\-supplied initialization string.  
+# <a name="cdatasourceopenfrominitializationstring"></a>CDataSource::OpenFromInitializationString
+사용자가 제공한 초기화 문자열에 지정 된 데이터 원본이 열립니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      HRESULT OpenFromInitializationString(   
-   LPCOLESTR szInitializationString,   
-   bool fPromptForInfo = false    
+      HRESULT OpenFromInitializationString(   
+   LPCOLESTR szInitializationString,   
+   bool fPromptForInfo = false    
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *szInitializationString*  
- \[in\] The initialization string.  
+ [in] 초기화 문자열입니다.  
   
  *fPromptForInfo*  
- \[in\] If this argument is set to **true**, then `OpenFromInitializationString` will set the **DBPROP\_INIT\_PROMPT** property to **DBPROMPT\_COMPLETEREQUIRED**, which specifies that the user be prompted only if more information is needed.  This is useful for situations in which the initialization string specifies a database that requires a password, but the string does not contain the password.  The user will be prompted for a password \(or any other missing information\) when trying to connect to the database.  
+ [in] 이 인수는로 설정 되어 있으면 **true**, 다음 `OpenFromInitializationString` 는 설정의 **DBPROP_INIT_PROMPT** 속성을 **DBPROMPT_COMPLETEREQUIRED**, 사용자 지정 하는 추가 정보가 필요 하는 경우에 메시지가 표시 됩니다. 이 초기화 문자열에서 암호를 요구 하는 데이터베이스를 지정 하는 경우에 유용 하지만 문자열 암호를 포함 하지 않습니다. 사용자 암호 (또는 다른 누락 된 정보)에 대 한 메시지가 표시 되는 데이터베이스에 연결 하려고 할 때입니다.  
   
- The default value is **false**, which specifies that the user never be prompted \(sets **DBPROP\_INIT\_PROMPT** to **DBPROMPT\_NOPROMPT**\).  
+ 기본값은 **false**를 지정 하는 사용자 라는 메시지가 표시 되지 (설정 **DBPROP_INIT_PROMPT** 를 **DBPROMPT_NOPROMPT**).  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 설명  
- This method opens a data source object using the service components in oledb32.dll; this DLL contains the implementation of Service Components features such as Resource Pooling, Automatic Transaction Enlistment, and so on.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 oledb32.dll에 있는 서비스 구성 요소를 사용하여 데이터 원본 개체를 엽니다. 이 DLL에는 리소스 풀링, 자동 트랜잭션 참여 등과 같은 서비스 구성 요소 기능의 구현이 들어 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDataSource 클래스](../../data/oledb/cdatasource-class.md)

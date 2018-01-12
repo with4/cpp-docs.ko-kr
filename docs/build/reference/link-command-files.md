@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2b6543cbb54dc982b1e55be8c0c554a429410b78
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e585fb8fa11d4e3ffe8eff842baacb05f109754c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-command-files"></a>LINK 명령 파일
 명령 파일 형식으로의 링크를 명령줄 인수를 전달할 수 있습니다. 링커에 명령 파일을 지정 하려면 다음 구문을 사용 합니다.  
@@ -40,7 +41,7 @@ LINK @commandfile
   
  명령 파일의 명령줄의 전체 또는 일부를 지정할 수 있습니다. LINK 명령의 명령 파일을 여러 개 사용할 수 있습니다. 링크는 명령줄에 해당 위치에 지정 된 것 처럼 명령 파일 입력을 받아들입니다. 명령 파일을 중첩할 수 없습니다. 링크 하지 않는 한 명령 파일의 내용을 에코는 [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md) 옵션을 지정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  Dll을 다음 명령을 명령 파일에 있는 개체 파일 및 라이브러리의 이름을 전달 하 고 사용 하 여 세 번째 명령 /EXPORTS 옵션의 파일:  
   
 ```  

@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3f8cf68815d5c3ad21767b721b2b3570bbb7119
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9814413a77275183e6f36b49bf721f9b305d9763
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptroperator-gt"></a>ptr::operator-&gt;
 멤버 액세스 연산자를 소유 하는 COM 개체에서 메서드를 호출 하는 데 사용 합니다.  
@@ -43,7 +46,7 @@ _detail::smart_com_ptr<_interface_type> operator->();
 ## <a name="remarks"></a>설명  
  이 연산자를 사용 하면 소유한 COM 개체의 메서드를 호출할 수 있습니다. 임시 반환 `smart_com_ptr` 자동으로 처리 하는 자체 `AddRef` 및 `Release`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `WriteDocument` 사용 하 여 함수 `operator->` 호출 하 여 `get_firstChild` 문서 개체의 멤버입니다.  
   
 ```  

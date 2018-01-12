@@ -17,16 +17,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4738c829f346126dfed7990c50186a7c267df1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1532647327c039994a1d09ee8b7eacc2c341f88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>방법: 현재 사용자 이름 검색(C++/CLI)
 다음 코드 예제에서는 현재 사용자 이름 (Windows에 로그인 한 사용자 이름)을 검색 하는 방법을 보여 줍니다. 이름에 저장 됩니다는 <xref:System.Environment.UserName%2A> 문자열에서 정의 되는 <xref:System.Environment> 네임 스페이스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // username.cpp  

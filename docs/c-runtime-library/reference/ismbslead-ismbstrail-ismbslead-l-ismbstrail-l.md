@@ -51,11 +51,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c895deff6a855a6ccc19f9816d359476907c2f22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af774ccf790c258e1b0bc6bc5f8509eb4537607d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 멀티바이트 문자 문자열의 선행 바이트와 후행 바이트에 대한 상황에 맞는 테스트를 수행하고, 특정 부분 문자열 포인터가 선행 바이트를 가리키는지 아니면 후행 바이트를 가리키는지 여부를 결정합니다.  
@@ -97,16 +98,16 @@ int _ismbstrail_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_ismbslead`문자가 선행 바이트 이면-1을 반환 하 고 `_ismbstrail` 문자가 후행 바이트 이면-1을 반환 합니다. 입력 문자열이 유효하지만 선행 바이트나 후행 바이트가 아닌 경우 이러한 함수는 0을 반환합니다. 한 인수가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `NULL` 를 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
+ `_ismbslead`문자가 선행 바이트 이면-1을 반환 하 고 `_ismbstrail` 문자가 후행 바이트 이면-1을 반환 합니다. 입력 문자열이 유효하지만 선행 바이트나 후행 바이트가 아닌 경우 이러한 함수는 0을 반환합니다. 한 인수가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `NULL`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
 ## <a name="remarks"></a>설명  
  `_ismbslead` 및 `_ismbstrail`은 문자열 컨텍스트를 고려하기 때문에 `_ismbblead` 및 `_ismbbtrail` 버전보다 느립니다.  
   
- 이러한 함수의 `_l` 접미사가 있는 버전은 현재 로캘 대신 전달된 로캘을 사용하는 로캘 종속 동작의 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ 이러한 함수의 `_l` 접미사가 있는 버전은 현재 로캘 대신 전달된 로캘을 사용하는 로캘 종속 동작의 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_ismbslead`|\<mbctype.h> 또는 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
 |`_ismbstrail`|\<mbctype.h> 또는 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  

@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b517bfe6ef3cc93b6edf647d137491ef78c0f716
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7c9f886b7e966f7746610622408dbd6933a10f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cutlpropsonpropertychanged"></a>CUtlProps::OnPropertyChanged
 연결 된 속성을 처리 하는 속성을 설정한 후 호출 됩니다.  
@@ -50,7 +53,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  책갈피나 다른 속성의 값에 의존 하는 값을 포함 하는 업데이트와 같은 연결 된 속성을 처리 하려는 경우이 함수를 재정의 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 함수를 사용자에서 속성 ID를 가져옵니다는 `DBPROP*` 매개 변수입니다. 이제 체인으로 연결 속성에 대해 ID와 비교 하는 것이 같습니다. 속성을 찾을 때 `SetProperties` 속성을 다른 속성과 함께에서 설정 될 것으로 호출 합니다. 이 경우 하나를 가져오면는 `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, 또는 `DBPROP_ORDEREDBOOKMARKS` 속성을 하나 설정할 수 있습니다는 `DBPROP_BOOKMARKS` 속성입니다.  
   
  [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]  

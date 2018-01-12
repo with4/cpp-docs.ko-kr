@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e15c99ef1de1fb0776365429c374b71279b8331
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3deb4737f8e82dd6fa8cd7ce99bfa67ed9f1b5fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-pair-stlclr"></a>연산자&lt; (pair) (STL/CLR)
 쌍 비교를 보다 작음입니다.  
@@ -43,7 +46,7 @@ template<typename Value1,
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`합니다. 테스트를 사용 하는지 여부를 `left` 정렬 되는 하기 전에 `right` 때 두 쌍은 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_pair_operator_lt.cpp   

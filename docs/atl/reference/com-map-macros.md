@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5493d2a1777b999dd13f2fe295b9ee9192580d33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e97db324dc8e130418419ef435e2665c84eb0b64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-map-macros"></a>COM 맵 매크로
 이러한 매크로 COM 인터페이스 맵을 정의 합니다.  
@@ -49,7 +50,7 @@ BEGIN_COM_MAP(x)
  [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) 만 COM 맵에서 인터페이스에 대 한 포인터를 반환 합니다. 시작 된 인터페이스 맵에 `BEGIN_COM_MAP` 매크로와 인터페이스의 각 항목을 추가 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) 매크로 또는 해당 변형 중 하나는 지도에 완료는 [END_COM_MAP](#end_com_map) 매크로입니다.  
 
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  ATL에서 [호출기](../../visual-cpp-samples.md) 샘플:  
   
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  

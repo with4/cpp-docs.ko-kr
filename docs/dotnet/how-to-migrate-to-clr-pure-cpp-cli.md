@@ -17,11 +17,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebff4ae1ac304ee0af073de49f4ee988922247d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b8d49ee233167c02570408ba091c2a99b78487d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clrpure-ccli"></a>방법: /clr:pure로 마이그레이션(C++/CLI)
 이 항목에서는 사용 하 여 순수 MSIL로 마이그레이션할 때 발생할 수 있는 문제를 설명 **/clr: pure** (참조 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md) 자세한 정보에 대 한). 이 항목 가정 마이그레이션하려는 현재 사용 하 여 혼합 된 어셈블리는 **/clr** 으로 순수 MSIL에 비관리 코드에서의 마이그레이션 경로 직접 옵션입니다. 비관리 코드에 대 한 참조 [하는 방법: /clr으로 마이그레이션](../dotnet/how-to-migrate-to-clr.md) 순수 MSIL로 마이그레이션을 시작 하기 전에.  

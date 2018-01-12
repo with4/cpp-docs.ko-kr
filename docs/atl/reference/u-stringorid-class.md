@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b02d539ae2a067c015988a847407bf631b6e8c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebc1b8f65f2a0841baf09b5c95528f571f97ce38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 클래스
 이 인수 어댑터 클래스 리소스 이름 중 하나를 사용 하면 ( `LPCTSTR`s) 또는 리소스 Id ( **UINT**s) 호출자 ID를 사용 하 여 문자열을 변환할 필요 없이 함수에 전달할는 **MAKEINTRESOURCE** 매크로입니다.  

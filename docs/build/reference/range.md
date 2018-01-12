@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2558beae1a7bd689beba001f4637b1109b70faa5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ccca814a388a458513773247f79cecf87fcdeae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="range"></a>/RANGE
 Dumpbin /RAWDATA 또는 /DISASM 등의 다른 dumpbin 옵션와 함께 사용할 경우의 출력을 수정 합니다.  
@@ -42,7 +43,7 @@ Dumpbin /RAWDATA 또는 /DISASM 등의 다른 dumpbin 옵션와 함께 사용할
 ## <a name="remarks"></a>설명  
  이미지에 대 한 가상 주소를 보려면 사용 하 여 맵 파일 (RVA + 자료) 이미지에 대 한는 **/DISASM** 또는 **/HEADERS** dumpbin, 또는 Visual Studio 디버거에서 디스어셈블리 창의 옵션입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 **/범위** 의 표시를 수정 하는 데 사용 되는 **/disasm** 옵션입니다. 이 예제에서는 시작 값은 10 진수로 표현 하 고 끝 값 수는 16으로 지정 됩니다.  
   
 ```  

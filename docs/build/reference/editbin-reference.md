@@ -1,42 +1,42 @@
 ---
 title: "EDITBIN 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "editbin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "이진 데이터, 편집"
-  - "COFF 파일, 편집"
-  - "EDITBIN 프로그램"
-  - "개체 파일, 수정"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: editbin
+dev_langs: C++
+helpviewer_keywords:
+- binary data, editing
+- object files, modifying
+- EDITBIN program
+- COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e0ff9c0c58498361764dcc1b6c454c9b629d9bed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# EDITBIN 참조
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Microsoft COFF Binary File Editor\(EDITBIN.EXE\)는 COFF\(공용 개체 파일 형식\) 이진 파일을 수정합니다.  EDITBIN을 사용하여 개체 파일, 실행 파일 및 DLL\(동적 연결 라이브러리\)을 수정할 수 있습니다.  
+# <a name="editbin-reference"></a>EDITBIN 참조
+Microsoft COFF Binary 파일 편집기 (EDITBIN 합니다. EXE) 파일 형식 COFF (공용 개체) 이진 파일을 수정 합니다. 개체 파일, 실행 파일 및 동적 연결 라이브러리 (DLL)를 수정 하려면 EDITBIN를 사용할 수 있습니다.  
   
 > [!NOTE]
->  이 도구는 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 명령 프롬프트에서만 시작할 수 있습니다.  시스템 명령 프롬프트 또는 파일 탐색기에서는 시작할 수 없습니다.  
+>  [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 명령 프롬프트에서만 이 도구를 시작할 수 있습니다. 시스템 명령 프롬프트 또는 파일 탐색기에서는 시작할 수 없습니다.  
   
- [\/GL](../../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션으로 만든 파일에는 EDITBIN을 사용할 수 없습니다.  \/GL 옵션으로 만든 이진 파일을 수정하려면 컴파일과 링크를 다시 해야 합니다.  
+ EDITBIN 사용으로 생성 된 파일을 사용할 수 없으면는 [/GL](../../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션입니다. 다시 컴파일 및 연결 하 여 실현할 수 /GL으로 생성 된 이진 파일을 수정 해야 합니다.  
   
 -   [EDITBIN 명령줄](../../build/reference/editbin-command-line.md)  
   
 -   [EDITBIN 옵션](../../build/reference/editbin-options.md)  
   
-## 참고 항목  
- [C\/C\+\+ 빌드 도구](../../build/reference/c-cpp-build-tools.md)
+## <a name="see-also"></a>참고 항목  
+ [ 빌드 도구](../../build/reference/c-cpp-build-tools.md)

@@ -1,33 +1,31 @@
 ---
-title: ".LISTMACROALL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".LISTMACROALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LISTMACROALL directive"
+title: . LISTMACROALL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LISTMACROALL
+dev_langs: C++
+helpviewer_keywords: .LISTMACROALL directive
 ms.assetid: 36f329fd-eff0-4414-8b4a-6223113f9fda
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ffa8812c31f2ce7c3e365e84112772be4ef44150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# .LISTMACROALL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-시작의 모든 문을 매크로에 나열 합니다.  
+# <a name="listmacroall"></a>.LISTMACROALL
+매크로의 모든 문 나열을 시작 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,8 +33,8 @@ manager: "ghogen"
   
 ```  
   
-## 설명  
- 다른 이름으로 동일한  [.LALL](../../assembler/masm/dot-lall.md).  
+## <a name="remarks"></a>설명  
+ 와 동일 [합니다. LALL](../../assembler/masm/dot-lall.md)합니다.  
   
-## 참고 항목  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>참고 항목  
+ [지시문 참조](../../assembler/masm/directives-reference.md)

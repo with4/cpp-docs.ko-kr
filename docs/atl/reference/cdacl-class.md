@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDacl class
+dev_langs: C++
+helpviewer_keywords: CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 18da3b079cba8bbccba1a5d9655107620fc41eb8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdacl-class"></a>CDacl 클래스
 이 클래스는 DACL (임의 액세스 제어 목록) 구조에 대 한 래퍼입니다.  
@@ -87,11 +70,11 @@ class CDacl : public CAcl
 ## <a name="remarks"></a>설명  
  개체의 보안 설명자의 DACL을 포함할 수 있습니다. DACL에는 0 개 이상의 Ace (액세스 제어 항목는 사용자 및 그룹 개체를 액세스할 수 있는 사용자를 식별 하 는) 포함 되어 있습니다. DACL이 비어 있으면 (즉, 포함 된 0 Ace) 암시적으로 액세스할 수 있도록에 액세스할 수 없는, 명시적으로 부여 합니다. 그러나 개체의 보안 설명자의 DACL이 없는 경우 개체는 비보호 상태가 및 모든 사용자는 전체 액세스 합니다.  
   
- 개체의 DACL을 검색 하려면 개체의 소유자 여야 하거나 READ_CONTROL 개체에 대 한 액세스 권한이 있어야 합니다. 개체의 DACL을 변경 하려면 WRITE_DAC 개체에 액세스할 수 있어야 합니다.  
+ 개체의 DACL을 검색 하려면 개체의 소유자 여야 또는 READ_CONTROL 개체에 대 한 액세스 권한이 있어야 합니다. 개체의 DACL을 변경 하려면 WRITE_DAC 개체에 액세스할 수 있어야 합니다.  
   
  추가, 제거, 만들고 삭제 하에서 Ace가 제공 하는 클래스 메서드를 사용 하 여는 `CDacl` 개체입니다. 참고 항목 [AtlGetDacl](security-global-functions.md#atlgetdacl) 및 [AtlSetDacl](security-global-functions.md#atlsetdacl)합니다.  
   
- Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) Windows sdk에서입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -137,7 +120,7 @@ bool AddAllowedAce(
 ### <a name="return-value"></a>반환 값  
  반환 **true** ACE에 추가 되 면는 `CDacl` 개체 **false** 실패 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  A `CDacl` 0 개 이상의 Ace (액세스 제어 항목는 사용자 및 그룹 개체를 액세스할 수 있는 사용자를 식별 하 는) 개체에 포함 되어 있습니다. 이 메서드는 추가에 대 한 액세스를 허용 하는 ACE는 `CDacl` 개체입니다.  
   
 > [!NOTE]
@@ -181,7 +164,7 @@ bool AddDeniedAce(
 ### <a name="return-value"></a>반환 값  
  반환 **true** ACE에 추가 되 면는 `CDacl` 개체 **false** 실패 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  A `CDacl` 0 개 이상의 Ace (액세스 제어 항목는 사용자 및 그룹 개체를 액세스할 수 있는 사용자를 식별 하 는) 개체에 포함 되어 있습니다. 이 메서드는 추가에 대 한 액세스를 거부 하는 ACE는 `CDacl` 개체입니다.  
   
 > [!NOTE]
@@ -201,7 +184,7 @@ CDacl () throw();
  `rhs`  
  기존 **ACL** (액세스 제어 목록) 구조입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `CDacl` 개체 수 수 필요에 따라 사용 하 여 만든 기존 **ACL** 구조입니다. 만 DACL (임의 액세스 제어 목록)에 유의 해야 하 고는 SACL (시스템 액세스 제어 목록)이이 매개 변수로 전달 되어야 합니다. 디버그 빌드에 SACL 전달 어설션을 발생 합니다. 릴리스 빌드에서 SACL 전달 됩니다 Ace (액세스 제어 항목) 무시 되는 ACL에서 시키며, 오류가 발생 하지 것입니다.  
   
 ##  <a name="dtor"></a>CDacl:: ~ CDacl  
@@ -211,7 +194,7 @@ CDacl () throw();
 ~CDacl () throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  소멸자를 사용 하 여 모든 Ace (액세스 제어 항목)를 포함 하는 개체에 의해 획득 리소스 해제 [CDacl::RemoveAllAces](#removeallaces)합니다.  
   
 ##  <a name="getacecount"></a>CDacl::GetAceCount  
@@ -238,8 +221,8 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="return-value"></a>반환 값  
  업데이트 된에 대 한 참조를 반환 `CDacl` 개체입니다.  
   
-### <a name="remarks"></a>주의  
- DACL (임의 액세스 제어 목록)이이 함수에 전달만 확인 해야 합니다. SACL (시스템 액세스 제어 목록)를 전달 합니다.이 함수에이 ASSERT 디버그 빌드에서 하지만 릴리스 빌드에 없음 오류가 발생 합니다.  
+### <a name="remarks"></a>설명  
+ 이 함수에 DACL (임의 액세스 제어 목록)만 전달 해야 합니다. SACL (시스템 액세스 제어 목록)를 전달 합니다.이 함수에이 ASSERT 디버그 빌드에서 하지만 릴리스 빌드에 없음 오류가 발생 합니다.  
   
 ##  <a name="removeace"></a>CDacl::RemoveAce  
  특정 ACE (액세스 제어 항목)에서 제거 된 `CDacl` 개체입니다.  
@@ -252,7 +235,7 @@ void RemoveAce(UINT nIndex) throw();
  `nIndex`  
  제거 하려면 ACE 항목 인덱스입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는에서 파생 된 [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)합니다.  
   
 ##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
@@ -272,4 +255,3 @@ void RemoveAllAces() throw();
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [클래스 개요](../../atl/atl-class-overview.md)   
  [보안 전역 함수](../../atl/reference/security-global-functions.md)
-

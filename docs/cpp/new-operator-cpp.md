@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- new keyword [C++]
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a7386d45f5188e7217ebfd4c235c0763bfd70044
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-operator-c"></a>new 연산자 (C++)
 개체 또는 개체의 배열에 대 한 메모리를 할당 *형식-이름이* 스토어에서 무료 및 개체에는 적절 한 형식의 0이 아닌 포인터를 반환 합니다.  
@@ -81,7 +78,7 @@ delete *p;
  *initializer*  
  초기화된 개체의 값을 제공합니다. 배열에 대한 이니셜라이저는 지정할 수 없습니다. **새** 연산자는 클래스에 기본 생성자가 있는 경우에 개체의 배열을 만들어집니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 문자 배열 및 `CName` 클래스 개체를 할당한 다음 해제합니다.  
   
 ```  
@@ -125,7 +122,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  새 배치 형식을 사용 하는 경우는 **새** 연산자를 컴파일러가 할당 크기 이외의 인수가 된 폼의 배치 형태를 지원 하지 않습니다는 **삭제** 연산자 경우는 생성자가 예외를 throw 합니다. 예:  
   
 ```  
@@ -238,7 +235,7 @@ int main()
   
  **새** 연산자 함수를 호출 `operator new`합니다. 하지 않은 개체 및 모든 형식의 배열에 대 한 **클래스**, `struct`, 또는 **union** 형식, 전역 함수인 **:: new 연산자**, 저장소를 할당 하기 위해 호출 됩니다. 클래스 형식 개체는 클래스별로 고유한 `operator new` 정적 멤버 함수를 정의할 수 있습니다.  
   
- 컴파일러에서 발생 하는 경우는 **새** 형식의 개체를 할당 연산자 `type`에 대 한 호출을 내보내려면 `type` **:: 연산자 new (sizeof (** `type` **)) ** 또는 사용자 정의 하지 않는 경우 `operator new` 정의 된 **:: 연산자 new (sizeof (** `type` **))**합니다. 따라서는 **새** 연산자는 개체에 대 한 올바른 양의 메모리를 할당할 수 있습니다.  
+ 컴파일러에서 발생 하는 경우는 **새** 형식의 개체를 할당 연산자 `type`에 대 한 호출을 내보내려면 `type` **:: 연산자 new (sizeof (** `type` **))**  또는 사용자 정의 하지 않는 경우 `operator new` 정의 된 **:: 연산자 new (sizeof (** `type` **))**합니다. 따라서는 **새** 연산자는 개체에 대 한 올바른 양의 메모리를 할당할 수 있습니다.  
   
 > [!NOTE]
 >  에 대 한 인수 `operator new` 유형의 **size_t**합니다. 이 형식은 DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H 및 TIME.H에서 정의됩니다.  

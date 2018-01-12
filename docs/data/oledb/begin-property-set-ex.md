@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57e1b6b75404bf2ccef7cff76adc3d23a3609b1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ede0dac08233d82decb23064e47b61cbd9a05da1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginpropertysetex"></a>BEGIN_PROPERTY_SET_EX
 속성에는 속성의 시작 부분을 설정 하는 부호 맵을 설정 합니다.  
@@ -40,7 +43,7 @@ guid
  `flags`  
  [in] **UPROPSET_HIDDEN** , 노출 하지 않으려면 속성 집합에 또는 **UPROPSET_PASSTHROUGH** 공급자의 공급자의 범위 외부에 정의 된 속성을 노출 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  

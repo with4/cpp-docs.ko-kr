@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 988284714d42c5b39ffc77debb986805f5bd0af4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7fba9f5744ce5374218cfe9783a8bfa3afe56b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimapbucketcount-stlclr"></a>hash_multimap::bucket_count(STL/CLR)
 버킷 수를 계산합니다.  
@@ -33,7 +36,7 @@ int bucket_count();
 ## <a name="remarks"></a>설명  
  멤버 함수는 현재 버킷 수를 반환 합니다. 해시 테이블의 크기를 확인 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_multimap_bucket_count.cpp   

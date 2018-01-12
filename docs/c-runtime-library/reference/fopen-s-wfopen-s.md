@@ -44,11 +44,12 @@ caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49a884b8ae4ea34c02a0ca57563077add4d9d6fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3205577627967fa58c3fbc0d1318a48fc5525561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 파일을 엽니다. 이러한 버전의 [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 포함되어 있습니다.  
@@ -85,8 +86,8 @@ errno_t _wfopen_s(
   
 |`pFile`|`filename`|`mode`|반환 값|`pFile`의 내용|  
 |-------------|----------------|------------|------------------|------------------------|  
-|`NULL`|any|모두|`EINVAL`|변경 안 됨|  
-|any|`NULL`|모두|`EINVAL`|변경 안 됨|  
+|`NULL`|any|any|`EINVAL`|변경 안 됨|  
+|any|`NULL`|any|`EINVAL`|변경 안 됨|  
 |any|any|NULL|`EINVAL`|변경 안 됨|  
   
 ## <a name="remarks"></a>설명  
@@ -98,7 +99,7 @@ errno_t _wfopen_s(
   
  이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `pFile`, `filename` 또는 `mode`가 null 포인터이면 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 예외를 생성합니다.  
   
- 파일에서 다른 작업을 수행하기 전에 항상 반환 값을 검사하여 함수가 성공했는지를 확인하세요. 오류가 발생하면 오류 코드가 반환되고 전역 변수 `errno`가 설정됩니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 파일에서 다른 작업을 수행하기 전에 항상 반환 값을 검사하여 함수가 성공했는지를 확인하세요. 오류가 발생하면 오류 코드가 반환되고 전역 변수 `errno`가 설정됩니다. 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="unicode-support"></a>유니코드 지원  
  `fopen_s`은 유니코드 파일 스트림을 지원합니다. 새 유니코드 파일이나 기존 유니코드 파일을 열려면 `fopen_s`에 원하는 인코딩을 지정하는 `ccs` 플래그를 전달합니다.  
@@ -126,7 +127,7 @@ errno_t _wfopen_s(
   
  경우 `mode` 는 "a, ccs =*인코딩*", `fopen_s` 먼저 읽기 권한과 쓰기 권한을 가진 파일을 열려고 합니다. 성공하면 함수가 BOM을 읽어서 파일에 대한 인코딩을 결정하고, 실패하면 함수가 파일에 대한 기본 인코딩을 사용합니다. 어느 경우든 `fopen_s`는 쓰기 전용 권한으로 파일을 다시 엽니다. 이는 `a` 모드에만 적용되고 `a+` 모드에는 적용되지 않습니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -227,14 +228,14 @@ errno_t _wfopen_s(
 |`fopen_s`|\<stdio.h>|  
 |`_wfopen_s`|\<stdio.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
  `c`, `n` 및 `t` `mode` 옵션은 `fopen_s` 및 `_fdopen`에 대한 Microsoft 확장이므로 ANSI 이식성을 원할 경우 사용하면 안 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C  
 // crt_fopen_s.c  

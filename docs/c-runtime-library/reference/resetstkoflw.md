@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _resetstkoflw
+apiname: _resetstkoflw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,24 +23,23 @@ apitype: DLLExport
 f1_keywords:
 - resetstkoflw
 - _resetstkoflw
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - resetstkoflw function
 - stack overflow
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5bebef156656ba3618c216ad8266e1baf5dd7f9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 82041367fe6cf320138d52b905f1eff7d3d54d3b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 스택 오버플로에서 복구합니다.  
@@ -110,7 +107,7 @@ int _resetstkoflw ( void );
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_resetstkoflw`|\<malloc.h>|  
   
@@ -118,7 +115,7 @@ int _resetstkoflw ( void );
   
  **라이브러리:** 모든 버전의 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 권장되는 `_resetstkoflw` 함수 사용법을 보여 줍니다.  
   
 ```  

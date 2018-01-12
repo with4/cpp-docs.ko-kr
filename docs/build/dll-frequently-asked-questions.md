@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ddacf677dab37bc85492dff1ec13dde23132da15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39c3a36f697527c7e133409f49656e4415f86a7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 관련 질문과 대답  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
 
 ## <a name="mfc_multithreaded_1"></a>MFC DLL은 여러 스레드를 만들 수 있습니까?  
   
-초기화 하는 동안 MFC DLL 안전 하 게 만들 수 다중 스레드 Win32 스레드 로컬 저장소 (TLS)와 같은 함수를 사용으로 제외 하 고 **TlsAlloc** 스레드 로컬 저장소를 할당 합니다. 그러나 MFC DLL을 사용 하는 경우 **__declspec (thread)** 스레드 로컬 저장소를 할당 하려면 클라이언트 응용 프로그램 해야 수 암시적으로 DLL에 연결 합니다. 클라이언트 응용 프로그램 DLL에 대 한 호출에 명시적으로 연결 하는 경우 **LoadLibrary** DLL을 성공적으로 로드 되지 것입니다. 여러 스레드에서 MFC Dll 내 만들기에 대 한 자세한 내용은 기술 자료 문서 "PRB:: 호출 LoadLibrary()를 부하는 DLL을가 정적 TLS" (Q118816)을 참조 하십시오.  
+초기화 하는 동안 MFC DLL 안전 하 게 만들 수 다중 스레드 Win32 스레드 로컬 저장소 (TLS)와 같은 함수를 사용으로 제외 하 고 **TlsAlloc** 스레드 로컬 저장소를 할당 합니다. 그러나 MFC DLL을 사용 하는 경우 **__declspec (thread)** 스레드 로컬 저장소를 할당 하려면 클라이언트 응용 프로그램 해야 수 암시적으로 DLL에 연결 합니다. 클라이언트 응용 프로그램 DLL에 대 한 호출에 명시적으로 연결 하는 경우 **LoadLibrary** DLL을 성공적으로 로드 되지 것입니다. 여러 스레드에서 MFC Dll 내 만들기에 대 한 자세한 내용은 기술 자료 문서 "PRB:: 호출 LoadLibrary()를 부하는 DLL을가 정적 TLS" (Q118816)을 참조 하십시오. 스레드 로컬 변수 Dll에 대 한 자세한 내용은 참조 하십시오. [스레드](../cpp/thread.md)합니다.
   
  MFC DLL 시작 시 새 MFC 스레드를 만드는 응용 프로그램에 의해 로드 되 면 응답 중지 됩니다. 여기에 호출 하 여 스레드를 만들 때마다 `AfxBeginThread` 또는 `CWinThread::CreateThread` 내부:  
   

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _configthreadlocale
+apiname: _configthreadlocale
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -35,30 +32,16 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fca01932efb2f80d4aebf94db8900cee5d79805
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aacd7b82525ca1b74c3d7a7ab7f8e09497e491ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 스레드별 로캘 옵션을 구성합니다.  
@@ -90,7 +73,7 @@ int _configthreadlocale(
  `0`  
  이 특정 스레드에 대한 현재 설정을 검색합니다.  
   
- 이러한 함수에의 동작에 영향을 `setlocale`, `_tsetlocale`, 및 `_wsetlocale`합니다. 스레드별 로캘 사용 안 함, 모든 후속 호출을 경우 `setlocale` 또는 `_wsetlocale` 의 전역 로캘을 사용 하는 모든 스레드 로캘을 변경 합니다. per-thread locale이 사용되는 경우 `setlocale` 또는 `_wsetlocale`만 현재 스레드의 로캘에 영향을 줍니다.  
+ 이러한 함수에는 동작에 영향을 `setlocale`, `_tsetlocale`, `_wsetlocale`, 및 `_setmbcp`합니다. 스레드 단위 로캘을 사용 안 함, 모든 후속 호출을 경우 `setlocale` 또는 `_wsetlocale` 전역 로캘을 사용 하는 모든 스레드의 로캘을 변경 합니다. per-thread locale이 사용되는 경우 `setlocale` 또는 `_wsetlocale`만 현재 스레드의 로캘에 영향을 줍니다.  
   
  `_configurethreadlocale`을 사용하여 per-thread locale을 사용하도록 설정하는 경우 `setlocale` 또는 `_wsetlocale`을 호출하여 바로 다음 스레드에서 원하는 로캘을 설정할 수 있습니다.  
   
@@ -98,11 +81,11 @@ int _configthreadlocale(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_configthreadlocale`|\<locale.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // crt_configthreadlocale.cpp  
@@ -216,4 +199,3 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
  [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [로캘](../../c-runtime-library/locale.md)   
  [다중 스레딩 및 로캘](../../parallel/multithreading-and-locales.md)  
-

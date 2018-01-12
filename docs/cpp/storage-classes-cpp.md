@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3830f91683399eba4784b5348ca252e9caa22d57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>저장소 클래스(C++)  
   
@@ -217,14 +218,12 @@ void DoSomething()
 ```  
   
 에 대 한 주의할 점은 `thread_local` 지정자:  
+
+- Dll에서 스레드 로컬 변수를 동적으로 초기화 된 모든 호출 스레드에서 올바르게 초기화 되지 않을 수 있습니다. 자세한 내용은 참조 [스레드](thread.md)합니다.
   
 -  `thread_local` 지정자와 함께 `static` 또는 `extern`합니다.  
   
 -  적용할 수 있습니다 `thread_local` 데이터 선언 및 정의;에 `thread_local` 함수 선언 또는 정의에 사용할 수 없습니다.  
-  
--  사용 `thread_local` 방해할 수 있으므로 [지연 로드](../build/reference/linker-support-for-delay-loaded-dlls.md) DLL 가져오기의 합니다. 
-  
--  XP 시스템에서는 `thread_local` DLL을 사용 하는 경우 제대로 작동 하지 않을 `thread_local` 고 데이터를 통해 동적으로 로드 되 `LoadLibrary`합니다.  
   
 -  정적 저장 기간이 있는 데이터 항목에만 `thread_local`을 지정할 수 있습니다. 여기에 전역 데이터 개체 (둘 다 `static` 및 `extern`), 지역 정적 개체 및 클래스의 정적 데이터 멤버가 있습니다. 모든 지역 변수의 선언 `thread_local` 는 없는 다른 저장소 클래스를 제공 하도록 하는 경우 암시적으로 정적 블록 범위에서 즉, `thread_local` 같습니다 `thread_local static`합니다. 
   

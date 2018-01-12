@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ca2c849c7ab825dfdfa609d680851de5432f012
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d8978e38745f088884bbf28ffb0ab98cfb87895
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-resolution-for-dependent-types"></a>종속적인 형식에 대한 이름 확인
 사용 하 여 **typename** 정규화 된 이름에 지정된 된 정규화 이름이 형식을 식별 함을 컴파일러에 지시 하는 템플릿 정의 대 한 합니다. 자세한 내용은 참조 [typename](../cpp/typename.md)합니다.  

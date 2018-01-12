@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6531459f26605aa63eccbe69c84959b2abe70493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 159391bc7d362c755c194f478692b2a271d779ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listsort-stlclr"></a>list::sort(STL/CLR)
 제어 된 시퀀스를 정렬 합니다.  
@@ -43,7 +46,7 @@ template<typename Pred2>
   
  모두 안정적인 정렬 수행 하는 기능이-결과 제어 된 시퀀스에서 제어 되는 원래 시퀀스의 요소 쌍 없는 속도가 반대로 바뀝니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_list_sort.cpp   

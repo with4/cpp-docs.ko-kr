@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37acdf0d1784ecfc9893c676f2c056902d56344c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d8b4a1a78fb8231d407e60ded2c6dea3f7c891d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selectany"></a>selectany
 **Microsoft 전용**  
@@ -46,7 +47,7 @@ __declspec( selectany ) declarator
 > [!NOTE]
 >  외부에 표시되는 전역 데이터 항목의 실제 초기화에 한해 `selectany`를 적용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 코드에서는 `selectany` 특성을 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -79,7 +80,7 @@ int i;
 __declspec(selectany) X x(1);  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 코드에서는 사용 하는 `selectany` 특성을 사용할 때 데이터 COMDAT 정리는 [/opt: icf](../build/reference/opt-optimizations.md) 링커 옵션입니다. 데이터와 표시 되어 해야 `selectany` 에 배치 하 고는 **const** (읽기 전용) 섹션. 읽기 전용 섹션을 명시적으로 지정해야 합니다.  
   
 ```  

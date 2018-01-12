@@ -1,44 +1,44 @@
 ---
-title: "/SYMBOLS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/symbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SYMBOLS dumpbin 옵션"
-  - "공용 기호"
-  - "기호 테이블"
-  - "SYMBOLS dumpbin 옵션"
-  - "-SYMBOLS dumpbin 옵션"
-  - "기호, COFF 기호 테이블 표시"
-  - "기호, 덤프하기"
+title: -SYMBOLS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /symbols
+dev_langs: C++
+helpviewer_keywords:
+- symbols, dumping
+- public symbols
+- symbols, displaying COFF symbol table
+- symbol tables
+- SYMBOLS dumpbin option
+- /SYMBOLS dumpbin option
+- -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fb8a1a42bf0bbb3b0bf9b907f93e1c9d0e69cf5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# /SYMBOLS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="symbols"></a>/SYMBOLS
 ```  
 /SYMBOLS  
 ```  
   
- 이 옵션은 COFF 기호 테이블을 표시합니다.  기호 테이블은 모든 개체 파일에 있습니다.  이미지 파일이 \/DEBUG로 링크된 경우에만 COFF 기호 테이블은 이미지 파일에 나타납니다.  
+ 이 옵션은 COFF 기호 테이블을 표시합니다. 기호 테이블은 모든 개체 파일에 존재 합니다. COFF 기호 테이블 /DEBUG으로 연결 된 경우에 이미지 파일에 나타납니다.  
   
- 다음은 \/SYMBOLS 출력에 대한 설명입니다.  \/SYMBOLS 출력의 의미에 대한 추가 정보는 winnt.h\(IMAGE\_SYMBOL 및 IMAGE\_AUX\_SYMBOL\) 또는 COFF 설명서에서 찾을 수 있습니다.  
+ 다음은 실행에 대 한 출력에 대 한 설명을 합니다. /SYMBOLS 출력의 의미에 대 한 추가 정보 (IMAGE_SYMBOL 및 IMAGE_AUX_SYMBOL) winnt.h 또는 COFF 설명서에서 찾을 수 있습니다.  
   
- 다음 샘플 덤프를 참조하십시오.  
+ 다음 샘플 덤프를 가정합니다.  
   
 ```  
 Dump of file main.obj  
@@ -63,18 +63,18 @@ Summary
       23 .text  
 ```  
   
-## 설명  
- 기호 번호로 시작하는 줄에 대한 다음 설명은 사용자와 관련된 정보가 있는 열을 설명합니다.  
+## <a name="remarks"></a>설명  
+ 다음 설명을 기호, 숫자로 시작 하는 줄에 대 한 사용자와 관련 된 정보가 있는 열을 설명 합니다.  
   
--   첫 번째 세 자리 숫자는 기호 인덱스\/번호입니다.  
+-   첫 번째 3 자리 수 기호 인덱스/수가입니다.  
   
--   세 번째 열에 SECT*x*가 있는 경우 개체 파일의 해당 섹션에 기호가 정의됩니다.  반면 UNDEF가 나타난 경우 기호는 해당 개체에 정의되지 않으므로 다른 곳에서 확인되어야 합니다.  
+-   세 번째 열 섹션에 있는 경우*x*, 기호가 개체 파일의 해당 섹션에 정의 합니다. 하지만 UNDEF 표시 되 면 해당 개체에 정의 되지 않았습니다 고 다른 곳에서 확인 해야 합니다.  
   
--   다섯 번째 열\(Static, External\)은 기호가 해당 개체 내에서만 보이는지 또는 공용\(외부에서 보임\)인지 여부를 나타냅니다.  정적 기호 \_sym은 공용 기호 \_sym에 링크되지 않습니다. 이들은 이름이 \_sym인 함수의 서로 다른 두 인스턴스가 됩니다.  
+-   다섯 번째 열 (정적, 외부) 기호를 해당 개체 내 에서만 표시 되는지 여부 또는 공용 인지 알려 줍니다 (표시 외부에서). 정적 기호 _sym 공용 기호 _sym;에 연결할 수 없습니다. 이 이름이 _sym 함수의 서로 다른 두 인스턴스가 됩니다.  
   
- 번호가 붙은 줄의 마지막 열은 기호의 데코레이팅된 이름 및 데코레이팅되지 않은 이름입니다.  
+ 번호가 매겨진된 줄의 마지막 열 기호 이름이 고, 둘 다 데코레이팅된 및 데코 레이트 되지 않은 합니다.  
   
- [\/HEADERS](../../build/reference/headers.md) DUMPBIN 옵션은 [\/GL](../../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션으로 만든 파일에만 사용할 수 있습니다.  
+ 만 [/HEADERS](../../build/reference/headers.md) DUMPBIN 옵션은으로 생성 된 파일에서 사용 하기 위해 사용할 수는 [/GL](../../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DUMPBIN 옵션](../../build/reference/dumpbin-options.md)

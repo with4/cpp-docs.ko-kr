@@ -1,11 +1,10 @@
 ---
-title: "IRegistrar 인터페이스 | Microsoft 문서"
+title: "IRegistrar 인터페이스 | Microsoft Docs"
 ms.custom: 
 ms.date: 2/1/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,45 +18,29 @@ f1_keywords:
 - ATLIFASE/ATL::IRegistrar::StringUnregister
 - ATLIFASE/ATL::IRegistrar::ResourceRegister
 - ATLIFASE/ATL::IRegistrar::ResourceUnregister
-dev_langs:
-- C++
-helpviewer_keywords:
-- Iregistrar Interface
+dev_langs: C++
+helpviewer_keywords: Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 199cdfd91a7d1b9882b57118c852352f6fdda43e
-ms.openlocfilehash: e73e095d253d5ec5ca53e4e446019b2da79e5d39
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0b304b00b5cc5c613ff7e81818d1c637989e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 인터페이스
-이 인터페이스는 atliface.h에서 정의 되며 내부적으로 사용 됩니다 CAtlModule 멤버 함수에 의해 같은 [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)합니다.   
+이 인터페이스 atliface.h에 정의 되어 있으며 내부적으로 사용 됩니다 CAtlModule 멤버 함수에 의해 같은 [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)합니다.   
   
 ## <a name="syntax"></a>구문  
   
 ```
 typedef interface IRegistrar IRegistrar;
 ```  
-## <a name="remarks"></a>주의
-항목을 참조 하십시오 [를 사용 하 여 대체 가능 매개 변수 (The 등록자 전처리기)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) 대 한 자세한 내용은 합니다.  
+## <a name="remarks"></a>설명
+항목을 참조 [를 사용 하 여 대체 가능 매개 변수 (The 등록자 전처리기)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) 내용을 확인 합니다.  
 
 ## <a name="members"></a>멤버  
   
@@ -67,10 +50,10 @@ typedef interface IRegistrar IRegistrar;
 |----------|-----------------|  
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|리소스를 등록합니다. |  
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 리소스를 등록 취소합니다.|  
-|[IRegistrar::FileRegister](#fileregister)|파일을 등록합니다.|  
-|[IRegistrar::FileUnregister](#fileunregister)|파일을 등록 취소합니다.|  
+|[IRegistrar::FileRegister](#fileregister)|파일을 등록 합니다.|  
+|[IRegistrar::FileUnregister](#fileunregister)|파일의 등록을 취소 합니다.|  
 |[IRegistrar::StringRegister](#stringregister)|문자열을 등록합니다.|  
-|[IRegistrar::StringUnregister](#stringunregister)|문자열을 등록 취소|  
+|[IRegistrar::StringUnregister](#stringunregister)|문자열의 등록을 취소합니다|  
 |[IRegistrar::ResourceRegister](#resourceregister)|리소스를 등록합니다.|  
 |[IRegistrar::ResourceUnregister](#resourceunregister)|리소스를 등록 취소합니다.| 
   
@@ -103,7 +86,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
   
   
 ##  <a name="fileregister"></a>IRegistrar::FileRegister  
-파일을 등록합니다.
+파일을 등록 합니다.
   
 ```
 virtual HRESULT STDMETHODCALLTYPE FileRegister( 
@@ -112,7 +95,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
   
   
 ##  <a name="fileunregister"></a>IRegistrar::FileUnregister  
-파일을 등록 취소합니다.
+파일의 등록을 취소 합니다.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileUnregister( 
@@ -158,8 +141,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 ```  
  
 ## <a name="see-also"></a>참고 항목  
- [대체 가능 매개 변수 (등록자 전처리기)를 사용 하 여](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+ [대체 가능 매개 변수 사용(등록자 전처리기)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
  [클래스 개요](../../atl/atl-class-overview.md)   
  [모듈 클래스](../../atl/atl-module-classes.md)   
  [레지스트리 구성 요소 (등록자)](../../atl/atl-registry-component-registrar.md)  
-

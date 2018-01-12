@@ -1,35 +1,77 @@
 ---
-title: "Exception Handling Macros | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 예외 처리, 매크로"
-  - "예외 처리, 매크로"
+title: "예외 처리 매크로 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- atldef/ATL::_ATLCATCH
+- atldef/ATL::_ATLCATCHALL
+- atldef/ATL::_ATLTRY
+dev_langs: C++
+helpviewer_keywords:
+- exception handling, macros
+- C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 424a65c44d7bb22d1fef6e21e1892967ecd3e9b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Exception Handling Macros
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-이러한 매크로 예외 처리를 지원합니다.  
+# <a name="exception-handling-macros"></a>예외 처리 매크로
+이러한 매크로 예외 처리에 대 한 지원을 제공합니다.  
   
 |||  
 |-|-|  
-|[\_ATLCATCH](../Topic/_ATLCATCH.md)|연결에서 발생 하는 오류를 처리 하는 문 `_ATLTRY`.|  
-|[\_ATLCATCHALL](../Topic/_ATLCATCHALL.md)|연결에서 발생 하는 오류를 처리 하는 문 `_ATLTRY`.|  
-|[\_ATLTRY](../Topic/_ATLTRY.md)|보호 된 코드 부분에서 오류가 발생할 수 있을 수도 표시 합니다.|  
+|[_ATLCATCH](#_atlcatch)|연결 된 발생 하는 오류를 처리 하는 문 `_ATLTRY`합니다.|  
+|[_ATLCATCHALL](#_atlcatchall)|연결 된 발생 하는 오류를 처리 하는 문 `_ATLTRY`합니다.|  
+|[_ATLTRY](#_atltry)|오류가 발생할 수 있는 수 있는 보호 된 코드 섹션을 표시 합니다.|  
   
-## 참고 항목  
- [Macros](../../atl/reference/atl-macros.md)
+## <a name="requirements"></a>요구 사항:
+**헤더:** atldef.h
+
+##  <a name="_atlcatch"></a>_ATLCATCH  
+ 연결 된 발생 하는 오류를 처리 하는 문 `_ATLTRY`합니다.  
+  
+```
+_ATLCATCH(e)
+```  
+  
+### <a name="parameters"></a>매개 변수  
+ *e*  
+ Catch 할 예외입니다.  
+  
+### <a name="remarks"></a>설명  
+ 와 함께 사용 `_ATLTRY`합니다. C + +로 확인 [(CAtlException e) catch](../../cpp/try-throw-and-catch-statements-cpp.md) 지정 된 유형의 c + + 예외 처리에 대 한 합니다.  
+  
+##  <a name="_atlcatchall"></a>_ATLCATCHALL  
+ 연결 된 발생 하는 오류를 처리 하는 문 `_ATLTRY`합니다.  
+  
+```
+_ATLCATCHALL
+```  
+  
+### <a name="remarks"></a>설명  
+ 와 함께 사용 `_ATLTRY`합니다. C + +로 확인 [catch (...) ](../../cpp/try-throw-and-catch-statements-cpp.md) 모든 형식의 c + + 예외 처리에 대 한 합니다.  
+  
+##  <a name="_atltry"></a>_ATLTRY  
+ 오류가 발생할 수 있는 수 있는 보호 된 코드 섹션을 표시 합니다.  
+  
+```
+_ATLTRY
+```  
+  
+### <a name="remarks"></a>설명  
+ 와 함께 사용할 [_ATLCATCH](#_atlcatch) 또는 [_ATLCATCHALL](#_atlcatchall)합니다. C + + 기호를 확인 [시도](../../cpp/try-throw-and-catch-statements-cpp.md)합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [매크로](../../atl/reference/atl-macros.md)

@@ -1,42 +1,41 @@
 ---
 title: "컴파일러 경고 (수준 3) C4290 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4290"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4290"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4290
+dev_langs: C++
+helpviewer_keywords: C4290
 ms.assetid: d1c6d85b-28e0-4a1f-9d48-23593337a6fb
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f70a278cb3e660e89e1aba067cab9c20aacf8f62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 컴파일러 경고 (수준 3) C4290
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-함수가 \_\_declspec\(nothrow\)가 아님을 나타내려는 경우를 제외하고 C\+\+ 예외 사양은 무시됩니다.  
+# <a name="compiler-warning-level-3-c4290"></a>컴파일러 경고(수준 3) C4290
+C + + 예외 사양이 나타내는 함수를 제외 하 고 무시 __declspec (nothrow) 되지 않습니다.  
   
- Visual C\+\+에서 받아들이기는 하지만 구현하지 않는 예외 사양을 사용하여 함수를 선언했습니다.  컴파일하는 동안 무시되는 예외 사양을 사용한 코드는 다시 컴파일하고 링크하여 이 예외 사양을 지원하는 이후 버전에서 다시 사용하도록 합니다.  
+ Visual c + + 허용 하지만 구현 되지 않는 예외 사양을 사용 하 여 함수를 선언 합니다. 예외 컴파일 중에 무시 된 사양을 다시 컴파일해야 할 수 있는 코드 다시 연결 되도록 나중에 예외 사양을 지 원하는 버전.  
   
- 자세한 내용은 [예외 사양\(throw\)](../../cpp/exception-specifications-throw-cpp.md)을 참조하십시오.  
+ 자세한 내용은 참조 [예외 사양 (throw)](../../cpp/exception-specifications-throw-cpp.md) 합니다.  
   
- 다음과 같이 [warning](../../preprocessor/warning.md) pragma를 사용하여 이 경고가 발생하지 않도록 합니다.  
+ 사용 하 여이 경고를 방지할 수 있습니다는 [경고](../../preprocessor/warning.md) pragma:  
   
 ```  
 #pragma warning( disable : 4290 )  
 ```  
   
- 다음 코드 샘플에서는 C4290 경고가 발생하는 경우를 보여 줍니다.  
+ 다음 코드 샘플에서는 C4290 오류가 생성 됩니다.  
   
 ```  
 // C4290.cpp  

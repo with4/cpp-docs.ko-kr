@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - <<
 - '>>'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - << operator [C++], with specific objects
 - left shift operators [C++]
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e695a90f871f973780a859fb27a06a2c6b246f3d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7dece9ac4045fa8b46e5edf8b266312242000229
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>왼쪽된 시프트 및 오른쪽 시프트 연산자 (&gt; &gt; 및 &lt; &lt;)
 비트 시프트 연산자는 오른쪽 시프트 연산자 (>>)의 비트 이동 *shift 식* 오른쪽 및 왼쪽 시프트 연산자 (<<)의 비트를 이동 하 *shift 키를 누른 채 식* 왼쪽에 있습니다. <sup>1</sup>  
@@ -201,7 +199,7 @@ int main() {
 ```  
   
 ## <a name="additional-details"></a>추가 정보  
- 경우 시프트 연산의 결과가 정의 되지 않습니다 *덧셈 식* 가 음수 이거나 *덧셈 식* 보다 크거나 (승격)의 비트 수와 같고 * shift 식*합니다. 없음 시프트 연산이 수행 됩니다 *덧셈 식* 은 0입니다.  
+ 경우 시프트 연산의 결과가 정의 되지 않습니다 *덧셈 식* 가 음수 이거나 *덧셈 식* 보다 크거나 (승격)의 비트 수와 같고  *shift 식*합니다. 없음 시프트 연산이 수행 됩니다 *덧셈 식* 은 0입니다.  
   
 ```cpp  
 #include <iostream>  

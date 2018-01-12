@@ -30,11 +30,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 557c0451f0c33e13a8fb572f77c387b43daea6f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlfile-class"></a>CAtlFile 클래스
 이 클래스는 파일 처리 API는 Windows에 대 한 씬 래퍼를 제공 합니다.  
@@ -74,7 +75,7 @@ class CAtlFile : public CHandle
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAtlFile::m_pTM](#m_ptm)|에 대 한 포인터 `CAtlTransactionManager` 개체|  
   

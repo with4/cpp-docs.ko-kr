@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6bbd0adbfa7ccc51093ac087d908360b893ea518
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7794cea8906440c0adca94791d08e3ced6af747e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mxcsr"></a>MxCsr
 레지스터 상태 MxCsr 포함 됩니다. 호출 규칙 휘발성 부분과 비휘발성 부분에이 레지스터를 나눕니다. MXCSR 6 상태 플래그의 휘발성 부분 구성 [0:5], [6:15] MXCSR 레지스터의 나머지 부분에서는 일시적이 아닌 것으로 간주 됩니다.  

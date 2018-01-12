@@ -1,36 +1,37 @@
 ---
-title: "사용자 정의 변환(C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "사용자 정의 변환[C++]"
+title: "사용자 정의 변환 (C + + /cli CLI) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 329461338579dc0787c6e3d208abac89ec762004
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 사용자 정의 변환(C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-This section discusses user\-defined conversions \(UDC\) when one of the types in the conversion is a reference or instance of a value type or reference type.  
+# <a name="user-defined-conversions-ccli"></a>사용자 정의 변환(C++/CLI)
+이 섹션에서는 변환에는 유형 중 참조 또는 값 형식 또는 참조 형식 인스턴스의 경우 사용자 정의 변환 (UDC)를 설명 합니다.  
   
-## Implicit and explicit conversions  
- A user\-defined conversion can either be implicit or explicit.  A UDC should be implicit if the conversion does not result in a loss of information.  Otherwise an explicit UDC should be defined.  
+## <a name="implicit-and-explicit-conversions"></a>암시적 변환과 명시적 변환  
+ 사용자 정의 변환이 암시적 또는 명시적 일 수 있습니다.  UDC 변환 정보가 손실 되지 않습니다 경우 암시적 이어야 합니다. 그렇지 않으면 명시적 UDC 정의 되어야 합니다.  
   
- A native class's constructor can be used to convert a reference or value type to a native class.  
+ 기본 클래스의 생성자를 사용 하 여 참조 또는 값 형식을 네이티브 클래스 하 변환할 수 수 있습니다.  
   
- For more information about conversions, see [Boxing](../windows/boxing-cpp-component-extensions.md) and [표준 변환](../cpp/standard-conversions.md).  
+ 변환에 대 한 자세한 내용은 참조 [Boxing](../windows/boxing-cpp-component-extensions.md) 및 [표준 변환](../cpp/standard-conversions.md)합니다.  
   
 ```  
 // mcpp_User_Defined_Conversions.cpp  
@@ -78,28 +79,31 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **in N::N**  
-**in N::N**   
-## Convert\-From Operators  
- Convert\-from operators create an object of the class in which the operator is defined from an object of some other class.  
+```Output  
+in N::N  
+in N::N  
+```  
   
- Standard C\+\+ does not support convert\-from operators; standard C\+\+ uses constructors for this purpose.  However, when using CLR types, Visual C\+\+ provide syntactic support for calling convert\-from operators.  
+## <a name="convert-from-operators"></a>Convert-From 연산자  
+ Convert-from 연산자는 다른 클래스의 개체에서 연산자가 정의 하는 클래스의 개체를 만듭니다.  
   
- To interoperate well with other CLS\-compliant languages, you may wish to wrap each user\-defined unary constructor for a given class with a corresponding convert\-from operator.  
+ 표준 c + + convert-from 연산자;를 지원 하지 않습니다. 표준 c + +는이 목적을 위해 생성자를 사용합니다. 그러나 CLR 종류를 사용할 때 Visual c + + 지원 구문 convert-from 연산자를 호출 합니다.  
   
- Convert\-from operators:  
+ 다른 CLS 규격 언어와 제대로 상호 운용, 해당 위치에서 변환 연산자와 함께 지정된 된 클래스에 대 한 각 사용자 정의 단항 생성자를 래핑할 수도 있습니다.  
   
--   Shall be defined as static functions.  
+ Convert-from 연산자:  
   
--   Can either be implicit \(for conversions that do not lose precision such as short\-to\-int\) or explicit, when there may be a loss of precision.  
+-   정적 함수를 정의 해야 합니다.  
   
--   Shall return an object of the containing class.  
+-   중일 수 있습니다 (short int 같이 정밀도 손실 되지 않도록 하는 변환)에 대 한 암시적 또는 명시적 때 정밀도 손실 있을 수 있습니다.  
   
--   Shall have the "from" type as the sole parameter type.  
+-   포함 하는 클래스의 개체를 반환 해야 합니다.  
   
- The following sample shows an implicit and explicit "convert\-from", user\-defined conversion \(UDC\) operator.  
+-   가질 수를 유일한 매개 변수 형식 "보낸 사람" 유형입니다.  
+  
+ 다음 샘플에서는 암시적 및 명시적 "변환에서", 사용자 정의 변환 (UDC) 연산자를 보여 줍니다.  
   
 ```  
 // clr_udc_convert_from.cpp  
@@ -138,14 +142,17 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **in operator**  
-**in constructor**  
-**10**  
-**1**   
-## Convert\-to operators  
- Convert\-to operators convert an object of the class in which the operator is defined to some other object.  The following sample shows an implicit, convert\-to, user\-defined conversion operator:  
+```Output  
+in operator  
+in constructor  
+10  
+1  
+```  
+  
+## <a name="convert-to-operators"></a>변환 연산자를 사용 합니다.  
+ 변환 연산자는 다른 개체에 연산자가 정의 된 클래스의 개체를 변환 합니다. 다음 예제는 암시적 변환-, 사용자 정의 변환 연산자에 보여줍니다.  
   
 ```  
 // clr_udc_convert_to.cpp  
@@ -169,9 +176,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **10** An explicit user\-defined convert\-to conversion operator is appropriate for conversions that potentially lose data in some way.  To invoke an explicit convert\-to operator, a cast must be used.  
+```Output  
+10  
+```  
+  
+ 명시적 사용자 정의 변환에 대 한 변환 연산자는 몇 가지 방법으로 데이터를에서 손실 될 수 있는 변환에 적합 합니다. 에 명시적 변환 연산자를 호출 하는 캐스트를 사용 해야 합니다.  
   
 ```  
 // clr_udc_convert_to_2.cpp  
@@ -194,12 +205,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **10.3**  
-**10**   
-## To convert generic classes  
- You can convert a generic class to T.  
+```Output  
+10.3  
+10  
+```  
+  
+## <a name="to-convert-generic-classes"></a>제네릭 클래스 변환 하려면  
+ 제네릭 클래스를 T로 변환할 수 있습니다.  
   
 ```  
 // clr_udc_generics.cpp  
@@ -225,9 +239,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **True** A converting constructor takes a type and uses it to create an object.  A converting constructor is called with direct initialization only; casts will not invoke converting constructors.  By default, converting constructors are explicit for CLR types.  
+```Output  
+True  
+```  
+  
+ 변환 생성자는 형식을 사용 하며 사용 하 여 개체를 만듭니다.  변환 생성자와 직접 초기화 되지 않습니다 라고 합니다. 캐스트 변환 생성자를 호출 합니다. 기본적으로 변환 생성자는 CLR 형식에 대 한 명시적입니다.  
   
 ```  
 // clr_udc_converting_constructors.cpp  
@@ -256,10 +274,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **5**  
-**R** In this code sample, an implicit static conversion function does the same thing as an explicit conversion constructor.  
+```Output  
+5  
+R  
+```  
+  
+ 이 코드 샘플에서는 암시적 정적 변환 함수 명시적 변환 생성자와 동일한 작업을 수행 합니다.  
   
 ```  
 public value struct V {  
@@ -295,11 +317,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **13**  
-**12**  
-**500**  
-**2000**   
-## 참고 항목  
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+```Output  
+13  
+12  
+500  
+2000  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)

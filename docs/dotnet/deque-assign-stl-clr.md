@@ -1,32 +1,33 @@
 ---
-title: "deque::assign(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign 멤버[STL/CLR]"
+title: 'deque:: assign (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 03fafdbb-6b10-4464-b3dc-0cc5cb8ac980
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1ae8bb7a21a336987d30cb41a7a1ff9d586db830
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::assign(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeassign-stlclr"></a>deque::assign(STL/CLR)
 모든 요소를 바꿉니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void assign(size_type count, value_type val);  
@@ -35,32 +36,32 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 매개 변수  
- count  
- 삽입할 요소의 개수입니다.  
+#### <a name="parameters"></a>매개 변수  
+ `count`  
+ 삽입할 요소의 수입니다.  
   
- first  
- 삽입할 범위의 시작입니다.  
+ `first`  
+ 삽입할 범위의의 시작입니다.  
   
- last  
+ `last`  
  삽입할 범위의 끝입니다.  
   
- right  
- 삽입할 열거형입니다.  
+ `right`  
+ 삽입 하는 열거형입니다.  
   
- val  
+ `val`  
  삽입할 요소의 값입니다.  
   
-## 설명  
- 두 번째 멤버 함수는 `count` 에 의해 제어되는 시퀀스를  값의 `val` 요소의 반복으로 대체합니다.  채우는 데 사용할 컨테이너 요소와 같은 값을 갖는 모든것을 사용합니다.  
+## <a name="remarks"></a>설명  
+ 첫 번째 멤버 함수는 반복 된 제어 되는 시퀀스 바꿉니다 `count` 값의 요소 `val`합니다. 하면을 채우는 데 사용할 컨테이너 요소와 동일한 값이 모두 포함 합니다.  
   
- `InIt`  가 정수 형식인 경우, 셋째 멤버 함수는 `assign((size_type)``first``, (value_type)``last``)`처럼 작동합니다.  제어되는 시퀀스를 `[``first``,` `last``)` 시퀀스로 바꿉니다.  사용 하면 그 제어 시퀀스 복사본을 다른 시퀀스입니다.  
+ 경우 `InIt` 정수 형식, 두 번째 멤버 함수는 동일 하 게 동작 `assign((size_type)first, (value_type)last)`합니다. 제어 되는 순서와 대체 그렇지 않으면 [`first`, `last`). 사용할 있습니다 제어 된 시퀀스 복사본 되도록 다른 시퀀스.  
   
- 셋째 멤버 함수 열거자가 지정 된 시퀀스를 사용 하 여 제어 되는 시퀀스 대체  `right` 합니다.  제어 되는 시퀀스의 사본을 열거형에서 설명 하는 순서를 사용 합니다.  
+ 열거자에 지정 된 시퀀스와 제어 된 시퀀스를 대체 하는 세 번째 멤버 함수 `right`합니다. 제어 되는 시퀀스의 사본을 열거형에서 설명 하는 순서를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cliext_deque_assign.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -96,14 +97,17 @@ int main()
   
 ```  
   
-  **x x x x x x**  
- **a b**  
- **a b c**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [operator\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [operator= (deque)(STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)

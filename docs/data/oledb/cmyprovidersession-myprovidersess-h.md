@@ -1,33 +1,35 @@
 ---
-title: "CMyProviderSession(MyProviderSess.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyprovidersession"
-  - ""myprovidersess.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MyProviderSess.H의 CMyProviderSession 클래스"
-  - "OLE DB 공급자, 마법사에서 생성된 파일"
+title: CMyProviderSession (MyProviderSess.H) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cmyprovidersession
+- myprovidersess.h
+dev_langs: C++
+helpviewer_keywords:
+- CMyProviderSession class in MyProviderSess.H
+- OLE DB providers, wizard-generated files
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3cf8a75a416f03fed1ae7e0deb9118b3c40ea5fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderSession(MyProviderSess.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-MyProviderSess.H에는 OLE DB 세션 개체에 대한 선언과 구현이 있습니다.  데이터 소스 개체는 세션 개체를 만들고 소비자와 공급자 사이의 대화를 나타냅니다.  데이터 소스 하나에 대해 몇 개의 동시 세션을 열 수 있습니다.  `CMyProviderSession`의 상속 목록은 다음과 같습니다.  
+# <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession(MyProviderSess.H)
+MyProviderSess.H 선언 및 OLE DB 세션 개체에 대 한 구현을 포함합니다. 데이터 원본 개체 세션 개체를 만들고 소비자 및 공급자 간의 대화를 나타냅니다. 여러 개의 동시 세션 하나의 데이터 원본에 대 한 열 수 있습니다. 에 대 한 상속 목록 `CMyProviderSession` 따릅니다.  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -42,11 +44,11 @@ class ATL_NO_VTABLE CMyProviderSession :
    public IDBCreateCommandImpl<CMyProviderSession, CMyProviderCommand>  
 ```  
   
- 세션 개체는 **IGetDataSource**, `IOpenRowset`, **ISessionProperties** 및 **IDBCreateCommand**에서 상속합니다.  **IGetDataSource** 인터페이스는 세션이 그 세션을 만든 데이터 소스를 검색할 수 있도록 합니다.  이 인터페이스는 자신이 만든 데이터 소스의 속성을 보거나 데이터 소스가 제공하는 다른 정보를 보려고 할 때 유용합니다.  **ISessionProperties** 인터페이스는 세션의 모든 속성을 처리합니다.  `IOpenRowset`과 **IDBCreateCommand** 인터페이스는 데이터베이스 작업을 하는 데 사용됩니다.  공급자가 명령을 지원하면 **IDBCreateCommand** 인터페이스를 구현합니다.  이 인터페이스는 명령을 실행하는 명령 개체를 만드는 데 사용됩니다.  `IOpenRowset`은 공급자가 항상 구현하는 개체로서,  공급자로부터 간단한 행 집합을 생성하는 데 사용됩니다.  이 행 집합이 공급자의 기본 행 집합\(예: `"select * from mytable"`\)이 됩니다.  
+ 세션 개체에서 상속 **IGetDataSource**, `IOpenRowset`, **ISessionProperties**, 및 **IDBCreateCommand**합니다. **IGetDataSource** 이 인터페이스는 세션을 만든 데이터 원본을 검색을 허용 합니다. 만든 데이터 원본 또는 데이터 원본을 제공할 수 있는 기타 정보 속성을 가져오려면 해야 할 경우에 유용 합니다. **ISessionProperties** 인터페이스는 세션에 대 한 모든 속성을 처리 합니다. `IOpenRowset` 및 **IDBCreateCommand** 인터페이스는 데이터베이스 작업을 수행 하는 데 사용 됩니다. 공급자 명령을 지 원하는 경우 구현에서 **IDBCreateCommand** 인터페이스입니다. 명령을 실행할 수 있는 명령 개체를 만들 사용 됩니다. 항상 공급자를 구현 하는 `IOpenRowset` 개체입니다. 단순 행 집합 공급자에서 생성 하는 데 사용 됩니다. 기본 행 집합인 것 (예를 들어 `"select * from mytable"`) 공급자에서입니다.  
   
- 또한 마법사는 `CMyProviderSessionColSchema`, `CMyProviderSessionPTSchema` 및 `CMyProviderSessionTRSchema`라는 세 개의 세션 클래스를 생성하며,  이러한 세션은 스키마 행 집합에 사용됩니다.  스키마 행 집합은 소비자가 쿼리를 실행하거나 데이터를 페치하지 않아도 공급자가 소비자에게 메타데이터를 반환할 수 있도록 합니다.  메타데이터를 페치하는 것이 이에 해당하는 공급자 기능을 찾는 것보다 훨씬 빠릅니다.  
+ 마법사에 세 개의 세션 클래스도 생성: `CMyProviderSessionColSchema`, `CMyProviderSessionPTSchema`, 및 `CMyProviderSessionTRSchema`합니다. 이러한 세션은 스키마 행 집합에 사용 됩니다. 스키마 행 집합 공급자는 소비자가 실행 한 쿼리 또는 fetch 데이터 소비자에 게 메타 데이터를 반환 하기 수 있도록 합니다. 메타 데이터를 인출 하는 것은 공급자 기능을 검색 하는 보다 훨씬 빠를 수 있습니다.  
   
- OLE DB 사양은 **IDBSchemaRowset** 인터페이스를 구현하는 공급자가 **DBSCHEMA\_COLUMNS**, **DBSCHEMA\_PROVIDER\_TYPES** 및 `DBSCHEMA_TABLES`라는 세 개의 스키마 행 집합 형식을 지원하도록 명시합니다.  마법사가 각 스키마 행 집합에 대한 구현을 생성합니다.  마법사가 생성한 각 클래스에는 `Execute` 메서드가 있습니다.  이 `Execute` 메서드를 통해 사용자가 지원하는 테이블, 열 및 데이터 형식에 대한 데이터를 공급자에게 반환할 수 있습니다.  이 데이터는 일반적으로 컴파일 타임에 알려집니다.  
+ 사용 하려면 OLE DB 사양을 구현 하는 공급자는 **IDBSchemaRowset** 인터페이스 지원 3 스키마 행 집합 형식과: **DBSCHEMA_COLUMNS**, **DBSCHEMA_PROVIDER_TYPES** , 및 `DBSCHEMA_TABLES`합니다. 각 스키마 행 집합에 대 한 구현을 생성 됩니다. 마법사에 의해 생성 된 각 클래스에 포함 되어 있는 `Execute` 메서드. 이 `Execute` 메서드를 데이터 테이블, 열 및 데이터 형식에 대 한 지 원하는 공급자를 반환할 수 있습니다. 이 데이터는 컴파일 타임에 일반적으로 알려져 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [공급자 마법사가 생성하는 파일](../../data/oledb/provider-wizard-generated-files.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9eb497aa36a111db647e457a6f1a71475ef74d1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 846e59b0c1303e70e4ed38b43e4869f1f044f64f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads(코드 생성 스레드)
 최적화 및 코드 생성에 사용할 cl.exe 스레드 수를 설정합니다.  

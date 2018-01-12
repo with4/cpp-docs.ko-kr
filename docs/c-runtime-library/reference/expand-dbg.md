@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6062cec95c2471408db4e67f97dac4fddb5233e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2df087072d7f34123b00acafe52c130598592a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expanddbg"></a>_expand_dbg
 블록을 확장하거나 축소하여 힙에서 지정된 메모리 블록의 크기를 조정합니다(디버그 버전에만 해당).  
@@ -88,7 +89,7 @@ void *_expand_dbg(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_expand_dbg`|\<crtdbg.h>|  
   
@@ -97,7 +98,7 @@ void *_expand_dbg(
 ## <a name="libraries"></a>라이브러리  
  [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)의 디버그 버전만 해당됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_expand_dbg.c  
@@ -150,7 +151,7 @@ Size of block after _malloc_dbg of 40 longs: 160
 Size of block after _expand_dbg of 1 more long: 164  
 ```  
   
-## <a name="comment"></a>설명  
+## <a name="comment"></a>주석  
  이 프로그램의 출력은 모든 섹션을 확장하는 컴퓨터 기능에 따라 달라집니다. 모든 섹션이 확장되면 출력이 출력 섹션에 반영됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - class scope [C++], rules
 - classes [C++], scope
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2e4a728d23dc9a04b62c9852823f359c3a7cb150
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-scope-rules"></a>범위 규칙의 요약
 이름은 그 범위 내(과부하가 결정되는 지점까지)에서 명확하게 사용해야 합니다. 이름이 함수를 표시할 경우 함수의 매개 변수 형식 및 숫자가 명확해야 합니다. 이름이 모호 하는 경우 [멤버 액세스](../cpp/member-access-control-cpp.md) 규칙이 적용 됩니다.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="qualified-names"></a>정규화된 이름  
  이진 범위 결정 연산자(`::`)와 함께 사용되는 이름은 "정규화된 이름"이라고 합니다. 이진 범위 결정 연산자 뒤에 지정된 이름은 연산자의 왼쪽에 지정된 클래스의 멤버 또는 해당 기본 클래스의 멤버여야 합니다.  
   
- 멤버 선택 연산자 뒤에 지정 된 이름 (**합니다.** 또는 ** -> **) 연산자의 왼쪽 또는 해당 기본 클래스의 멤버에 지정 된 개체의 클래스 형식의 구성원 이어야 합니다. 멤버 선택 연산자의 오른쪽에 지정 된 이름 (**->**) 개체 일 수도 있습니다 다른 클래스 형식의 제공 하는 식의 왼쪽 ** -> ** 클래스 개체 및 클래스는 오버 로드 된 멤버 선택 연산자를 정의 (**->**) 다른 클래스 형식에 대 한 포인터로 계산 되는 합니다. (에 보다 자세히 설명 되어이 [클래스 멤버 액세스](../cpp/member-access.md).)  
+ 멤버 선택 연산자 뒤에 지정 된 이름 (**합니다.** 또는  **->** ) 연산자의 왼쪽 또는 해당 기본 클래스의 멤버에 지정 된 개체의 클래스 형식의 구성원 이어야 합니다. 멤버 선택 연산자의 오른쪽에 지정 된 이름 (**->**) 개체 일 수도 있습니다 다른 클래스 형식의 제공 하는 식의 왼쪽  **->**  클래스 개체 및 클래스는 오버 로드 된 멤버 선택 연산자를 정의 (**->**) 다른 클래스 형식에 대 한 포인터로 계산 되는 합니다. (에 보다 자세히 설명 되어이 [클래스 멤버 액세스](../cpp/member-access.md).)  
   
  컴파일러는 다음과 같은 순서로 이름을 검색하고 해당 이름이 발견되면 중지합니다.  
   
@@ -66,7 +64,7 @@ ms.lasthandoff: 09/25/2017
   
 1.  앞에 `::`이 있는 이름은 검색이 전역 범위에서 시작되도록 합니다.  
   
-2.  이름 앞에는 **클래스**, `struct`, 및 **union** 키워드에 대해서만 검색 하려면 컴파일러가 **클래스**, `struct`, 또는 **공용 구조체 ** 이름입니다.  
+2.  이름 앞에는 **클래스**, `struct`, 및 **union** 키워드에 대해서만 검색 하려면 컴파일러가 **클래스**, `struct`, 또는 **공용 구조체**  이름입니다.  
   
 3.  범위 결정 연산자의 왼쪽에 있는 이름은 (`::`)만 사용할 수 있습니다 **클래스**, `struct`, **네임 스페이스**, 또는 **union** 이름입니다.  
   

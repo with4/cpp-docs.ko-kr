@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7de79303e414691df7b069b55b82b2ba39f6ea1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 및 AfxLoadLibrary
 호출 처리 [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (또는 [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary))를 명시적으로 DLL에 연결 합니다. 명시적 링크에 다른 함수와 함께 사용할 수 있는 DLL에 대 한 핸들을 반환를 호출 하는 프로세스의 주소 공간에 지정된 된 DLL을 매핑하고 함수가 성공 하면-예를 들어 `GetProcAddress` 및 `FreeLibrary`합니다.  

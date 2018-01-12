@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f46da8128325cb92b83a1d0c8503b248d38c65aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14d12c14144887df5bc3be0878e9a848dcb4de9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name=""></a>@@:
 사이만 인식할 수 있는 코드 레이블을 정의 *label1* 및 *label2*여기서 *label1* 은 코드의 시작 또는 이전 `@@:` 레이블과 *label2* 은 코드의 끝 또는 다음 `@@:` 레이블. 참조 [ @B ](../../assembler/masm/at-b.md) 및 [ @F ](../../assembler/masm/at-f.md)합니다.  

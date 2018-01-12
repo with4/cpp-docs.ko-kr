@@ -13,10 +13,9 @@ f1_keywords:
 - map/std::operator&lt;
 - map/std::operator&lt;=
 - map/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7df02b9f-701c-44ed-834a-a819badc5bd0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (map)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 6b2eb6b5ab3a8b08af5375b7767328289c68a744
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 연산자
 ||||  
@@ -62,7 +60,7 @@ bool operator!=(
 ### <a name="remarks"></a>설명  
  map 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 map은 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // map_op_ne.cpp  
@@ -122,7 +120,7 @@ bool operator<(
 ### <a name="remarks"></a>설명  
  map 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 작음 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // map_op_lt.cpp  
@@ -179,7 +177,7 @@ bool operator<=(
 ### <a name="return-value"></a>반환 값  
  연산자 좌변의 map이 연산자 우변의 map보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // map_op_le.cpp  
@@ -246,7 +244,7 @@ bool operator==(
 ### <a name="remarks"></a>설명  
  map 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 map은 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // map_op_eq.cpp  
@@ -306,7 +304,7 @@ bool operator>(
 ### <a name="remarks"></a>설명  
  map 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 큼 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // map_op_gt.cpp  
@@ -363,7 +361,7 @@ bool operator>=(
 ### <a name="return-value"></a>반환 값  
  연산자 좌변의 map이 연산자 우변의 map보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // map_op_ge.cpp  
@@ -430,7 +428,7 @@ bool operator!=(
 ### <a name="remarks"></a>설명  
  multimap 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 multimap은 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multimap_op_ne.cpp  
@@ -490,7 +488,7 @@ bool operator<(
 ### <a name="remarks"></a>설명  
  multimap 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 작음 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multimap_op_lt.cpp  
@@ -547,7 +545,7 @@ bool operator<=(
 ### <a name="return-value"></a>반환 값  
  연산자 좌변의 multimap이 연산자 우변의 multimap보다 작거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multimap_op_le.cpp  
@@ -614,7 +612,7 @@ bool operator==(
 ### <a name="remarks"></a>설명  
  multimap 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소의 값이 같으면 두 multimap은 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multimap_op_eq.cpp  
@@ -674,7 +672,7 @@ bool operator>(
 ### <a name="remarks"></a>설명  
  multimap 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 개체 간의 보다 큼 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multimap_op_gt.cpp  
@@ -731,7 +729,7 @@ bool operator>=(
 ### <a name="return-value"></a>반환 값  
  연산자 좌변의 multimap이 연산자 우변의 multimap보다 크거나 같으면 **true**이고 그렇지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // multimap_op_ge.cpp  
@@ -778,7 +776,6 @@ The multimap m1 is greater than or equal to the multimap m4.
   
 ## <a name="see-also"></a>참고 항목  
  [\<map>](../standard-library/map.md)
-
 
 
 

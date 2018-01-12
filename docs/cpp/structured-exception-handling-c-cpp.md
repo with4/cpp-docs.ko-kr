@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - termination handlers [C++], handling exceptions in C++
 - structured exception handling [C++]
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9098ac4914bdb9e054d4db27c0a5498c0f9d9ea8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Windows 및 Visual C++에서 SEH(구조적 예외 처리)를 지원하지만 포팅 가능하고 유연한 코드를 만들기 위해 ISO 표준 C++ 예외 처리를 사용하는 것이 좋습니다. 그러나 기존 코드 또는 특정 종류의 프로그램에서는 SEH를 계속 사용할 수 있습니다.  
@@ -74,7 +72,7 @@ Windows 및 Visual C++에서 SEH(구조적 예외 처리)를 지원하지만 포
   
 -   [C++에서 구조적 예외 처리 사용](../cpp/using-structured-exception-handling-with-cpp.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  앞서 설명한 것 처럼, 소멸자는 c + + 프로그램에서 SEH를 사용 하 고 사용 하 여 컴파일하는 경우 로컬 개체는 호출 된는 **/EH** 특정 한정자와 함께 옵션-예를 들어 **/EHsc** 및 **/EHa**. 그러나 C++ 예외도 사용하는 경우 실행 중의 동작은 예상과 다를 수 있습니다. 다음 예제에서는 이러한 동작의 차이를 보여 줍니다.  
   
 ```cpp  

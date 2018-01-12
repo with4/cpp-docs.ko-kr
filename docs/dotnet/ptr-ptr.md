@@ -1,35 +1,37 @@
 ---
-title: "ptr::ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::ptr"
-  - "ptr.ptr"
-  - "msclr.com.ptr.ptr"
-  - "msclr::com::ptr::ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::ptr"
+title: ptr::ptr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::ptr
+- ptr.ptr
+- msclr.com.ptr.ptr
+- msclr::com::ptr::ptr
+dev_langs: C++
+helpviewer_keywords: ptr::ptr
 ms.assetid: 4f5883b4-7c0a-46c6-aa9f-4e49eed463eb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 49013e718ad540e88a1cbd00eceb6bb3dc0071b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Constructs a `com::ptr` to wrap a COM object.  
+# <a name="ptrptr"></a>ptr::ptr
+생성 한 `com::ptr` 를 래핑하는 COM 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 ptr();  
@@ -38,19 +40,19 @@ ptr(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `P`  
  COM 인터페이스 포인터.  
   
-## 설명  
- The no\-argument constructor assigns `nullptr` to the underlying object handle.  Subsequent calls to the `com::ptr` will validate the internal object and silently fail until an object is actually created or attached.  
+## <a name="remarks"></a>설명  
+ 인수 없는 생성자 할당 `nullptr` 기본 개체 핸들을 합니다. 에 대 한 후속 호출에서 `com::ptr` 내부 개체의 유효성을 검사 하 고 자동으로 개체를 실제로 만들거나 연결 될 때까지 실패 합니다.  
   
- The one\-argument constructor adds a reference to the COM object but does not release the caller's reference, so the caller must call `Release` on the COM object to truly give up control.  When the `com::ptr`'s destructor is called it will automatically release its references on the COM object.  
+ 단일 인수 생성자를 사용 하는 COM 개체에 대 한 참조를 추가 하지만 호출자에 게 호출 해야 하므로 호출자의 참조를 해제 하지 않습니다 `Release` 진정으로 컨트롤을 제공 하는 COM 개체에서 합니다. 경우는 `com::ptr`의 소멸자가 호출 되는 COM 개체의 참조를 자동으로 해제 됩니다.  
   
- Passing `NULL` to this constructor is the same as calling the no\-argument version.  
+ 전달 `NULL` 이 생성자에 인수가 없는 버전을 호출 하는 것과 같습니다.  
   
-## 예제  
- This example implements a CLR class that uses a `com::ptr` to wrap its private member `IXMLDOMDocument` object.  It demonstrates usage of both versions of the constructor.  
+## <a name="example"></a>예  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. 생성자의 두 버전의 사용을 보여 줍니다.  
   
 ```  
 // comptr_ptr.cpp  
@@ -111,12 +113,12 @@ int main() {
 }  
 ```  
   
-## 요구 사항  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ptr 멤버](../dotnet/ptr-members.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)

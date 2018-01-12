@@ -18,16 +18,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a297ee1676fb3ffbff45d46334d20280beeab078
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a82afb894b31dcbee88c7ecdf0720ef198c866b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>방법: 정규식을 사용하여 데이터 필드 추출(C++/CLI)
 다음 코드 예제에서는 데이터를 추출 하는 형식이 지정 된 문자열에서 정규식의 사용을 보여 줍니다. 다음 코드 예제에서는 <xref:System.Text.RegularExpressions.Regex> 전자 메일 주소에 해당 하는 패턴을 지정 하는 클래스입니다. 이 패턴이 사용자 전자 메일 주소 각각의 호스트 이름 부분을 검색 하는 데 사용할 수 있는 필드 식별자를 포함 합니다. <xref:System.Text.RegularExpressions.Match> 클래스 실제 패턴 일치를 수행 하는 데 사용 됩니다. 지정 된 전자 메일 주소를 유효한 경우 사용자 이름 및 호스트 이름을 추출 되 고 표시 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // Regex_extract.cpp  

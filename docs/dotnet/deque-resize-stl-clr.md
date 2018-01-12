@@ -1,49 +1,50 @@
 ---
-title: "deque::resize(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::resize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resize 멤버[STL/CLR]"
+title: 'deque:: resize (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::resize
+dev_langs: C++
+helpviewer_keywords: resize member [STL/CLR]
 ms.assetid: c83f3c57-38b3-4706-a124-59bafbf88484
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fac11adade64d03696cbe73b09d1c35dfdd026b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::resize(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-요소 수를 변경합니다.  
+# <a name="dequeresize-stlclr"></a>deque::resize(STL/CLR)
+요소의 수를 변경합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
-#### 매개 변수  
- new\_size  
- New size of the controlled sequence.  
+#### <a name="parameters"></a>매개 변수  
+ new_size  
+ 제어 된 시퀀스의 새 크기입니다.  
   
  val  
- Value of the padding element.  
+ 안쪽 여백 요소의 값입니다.  
   
-## 설명  
- The member functions both ensure that [deque::size](../dotnet/deque-size-stl-clr.md)`()` henceforth returns `new_size`.  If it must make the controlled sequence longer, the first member function appends elements with value `value_type()`, while the second member function appends elements with value `val`.  To make the controlled sequence shorter, both member functions effectively erase the last element [deque::size](../dotnet/deque-size-stl-clr.md)`() -` `new_size` times.  You use it to ensure that the controlled sequence has size `new_size`, by either trimming or padding the current controlled sequence.  
+## <a name="remarks"></a>설명  
+ 두 멤버 함수를 확인 하는 [deque:: size (STL/CLR)](../dotnet/deque-size-stl-clr.md) `()` 예측이 반환 `new_size`합니다. 제어되는 시퀀스 길이를 늘려야 할 경우 첫 번째 멤버 함수는 값이 `value_type()`인 요소를 추가하지만, 두 번째 멤버 함수는 값이 `val`인 요소를 추가합니다. 더 짧은 제어 되는 시퀀스를 두 멤버 함수는 효과적으로 지울 마지막 요소 [deque:: size (STL/CLR)](../dotnet/deque-size-stl-clr.md) `() -` `new_size` 시간입니다. 제어 되는 시퀀스의 크기가을 사용 하면 `new_size`, 트리밍 하거나 현재 제어 되는 시퀀스를 패딩 하 여 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_deque_resize.cpp   
@@ -74,17 +75,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0 0**  
-**size\(\) \= 0**  
- **x x x x x**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+size() = 0  
+ 0 0 0 0  
+size() = 0  
+ x x x x x  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::clear](../dotnet/deque-clear-stl-clr.md)   
- [deque::erase](../dotnet/deque-erase-stl-clr.md)   
- [deque::insert](../dotnet/deque-insert-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)   
+ [deque:: erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)   
+ [deque::insert(STL/CLR)](../dotnet/deque-insert-stl-clr.md)

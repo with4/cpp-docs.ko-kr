@@ -16,16 +16,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 058c2c2c2c8c54a0c4c7d290326c4af453c73d05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9e7bbd9687c3cc696b35e0284d55a18f59c898cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managed-types-ccl"></a>관리되는 형식(C++/CL)
 이러한 형식의 개체의 관리 되는 형식 및는 생성의 선언 및 사용에 대 한 구문 크게에서 변경 되었습니다 Managed Extensions for c + + Visual c + +입니다. 이 ISO c + + 형식 시스템 내에서 통합을 강화 하기 위해서입니다. 이러한 변경 내용은 다음 하위 섹션에서 자세히 표시 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [관리되는 클래스 형식 선언](../dotnet/declaration-of-a-managed-class-type.md)  
  관리 되는 선언 하는 방법에 설명 `class`, `struct`, 또는 `interface`합니다.  
   

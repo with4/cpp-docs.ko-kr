@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 32c3fc0c59f94ca35d80ebfd4f16330517399e72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d7300247c32c5f18190c6a5a1b6469e4c8173be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 클래스
 호출자가 채울 메서드에 대해 배열을 전달할 때 입력 매개 변수로 사용되는 1차원 배열을 나타냅니다.  
@@ -43,7 +44,7 @@ private ref class WriteOnlyArray<T, 1>
 ### <a name="public-methods"></a>Public 메서드  
  이러한 메서드의 액세스 가능성은 internal이므로 C++ 앱 또는 구성 요소 내에서만 액세스할 수 있습니다.  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 
 |[Writeonlyarray:: Begin](#begin)| 배열의 첫 번째 요소를 가리키는 반복기입니다. |  

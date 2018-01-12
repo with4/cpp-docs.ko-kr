@@ -33,11 +33,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 63c45f6466b6a47d92b5dd82d5d5b43fb09d94d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 585d2a295bedb8b0ba49a893d5089bc682a1debd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="max"></a>__max
 두 값 중 더 큰 값을 반환합니다.  
@@ -66,11 +67,11 @@ type __max(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`__max`|\<stdlib.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  자세한 내용은 [__min](../../c-runtime-library/reference/min.md)에 대한 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

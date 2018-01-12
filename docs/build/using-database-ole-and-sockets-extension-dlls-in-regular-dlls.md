@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fda176229d8f6bea5a586c6f6f538a40d7ed8a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>기본 MFC Dll에서 데이터베이스, OLE 및 소켓 MFC 확장명 Dll 사용
 MFC 확장 DLL 연결 되어 있지 않습니다에 MFC 확장 DLL 기본 MFC DLL에서 사용 하는 경우는 **CDynLinkLibrary** 체인 개체 기본 MFC dll에 일련의 관련된 문제를 하나 이상에 실행할 수 있습니다. MFC 데이터베이스, OLE 및 소켓의 디버그 버전을 지원 하기 때문에 Dll이 MFC 확장 Dll로 구현 됩니다, 그리고 사용자의 MFC 확장 Dll 명시적으로 사용 하지 않아도 하는 경우에 이러한 MFC를 사용 하는 경우 비슷한 문제가 기능 발생할 수 있습니다. 이러한 문제는:  

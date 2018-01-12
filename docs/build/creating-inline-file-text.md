@@ -1,32 +1,33 @@
 ---
 title: "인라인 파일 텍스트 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "인라인 파일, 텍스트 만들기"
-  - "NMAKE 프로그램, 인라인 파일"
-  - "텍스트, 인라인 파일"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline files, creating text
+- NMAKE program, inline files
+- text, inline file
 ms.assetid: b8a332ed-8244-4ff8-89e6-029d7f659725
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dcc27a303e9d03d2e899a76703bcfae5abfd0c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 인라인 파일 텍스트 만들기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-인라인 파일은 임시 파일 또는 영구 파일입니다.  
+# <a name="creating-inline-file-text"></a>인라인 파일 텍스트 만들기
+인라인 파일은 임시 또는 영구입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -37,10 +38,10 @@ caps.handback.revision: 8
 <<[KEEP | NOKEEP]  
 ```  
   
-## 설명  
- 명령 이후 첫 번째 줄에 *inlinetext*를 지정합니다.  각 줄의 시작에 꺾쇠괄호\(\<\<\)로 구문이 끝남을 표시합니다.  구분 괄호 앞에 있는 모든 *inlinetext*는 파일에 포함됩니다.  *inlinetext*에 매크로 확장과 대체는 포함될 수 있지만 지시문과 메이크파일 주석은 포함될 수 없습니다.  공백, 탭 및 줄 바꿈 문자는 문자 그대로 처리됩니다.  
+## <a name="remarks"></a>설명  
+ 지정 *inlinetext* 명령 실행 후 첫 번째 줄에 있습니다. 개별 줄의 시작 부분에 이중 꺾쇠괄호(<<)를 사용해서 끝을 표시합니다. 파일에 포함 되어 모든 *inlinetext* 구분 대괄호 앞입니다. *inlinetext* 매크로 확장이 및 대체 있지만 지시문 또는 메이크파일 주석은 가질 수 있습니다. 공백, 탭 및 줄 바꿈 문자는 문자 그대로 처리 됩니다.  
   
- 임시 파일은 세션 중에 존재하고 다른 명령으로 다시 사용할 수 있습니다.  NMAKE 세션이 끝난 후 파일을 유지하려면 꺾쇠괄호를 닫은 후 **KEEP**을 지정합니다. 이름이 없는 파일은 생성된 파일 이름으로 디스크에 보존됩니다.  임시 파일에는 **NOKEEP**을 지정하거나 아무것도 지정하지 않습니다.  **KEEP**과 **NOKEEP**은 대\/소문자를 구분하지 않습니다.  
+ 임시 파일 세션의 기간에 존재 하 고 다른 명령을 사용 하 여 다시 사용할 수 있습니다. 지정 **유지** NMAKE 세션; 후 파일을 유지 하려면 꺾쇠 괄호를 닫은 후 명명 되지 않은 파일은 생성 된 파일 이름으로 디스크에 보존 됩니다. 지정 **NOKEEP** 또는 임시 파일에 아무것도 표시 되지 않음. **유지** 및 **NOKEEP** 대/소문자 구분 없는 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메이크파일의 인라인 파일](../build/inline-files-in-a-makefile.md)

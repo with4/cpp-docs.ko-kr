@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a408af2ac7de2f71c98467e08c49187c346304e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="worker-archetype"></a>작업자 아키타
 준수 하는 클래스는 *작업자* 아키타 스레드 풀 큐에 대기 프로세스 작업 항목에 코드를 제공 합니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/24/2017
   
 |메서드|설명|  
 |------------|-----------------|  
-|[초기화](#initialize)|모든 요청에 전달 되기 전에 worker 개체를 초기화 하기 위해 호출 [Execute](#execute)합니다.|  
+|[Initialize](#initialize)|모든 요청에 전달 되기 전에 worker 개체를 초기화 하기 위해 호출 [Execute](#execute)합니다.|  
 |[실행](#execute)|작업 항목을 처리 하기 위해 호출 됩니다.|  
 |[종료](#terminate)|모든 요청에 전달 된 후 작업자 개체의 초기화를 해제 하기 위해 호출 [Execute](#execute)합니다.|  
   

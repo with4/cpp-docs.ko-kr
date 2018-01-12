@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b30b49825d14e72c06f569c343f96c7cf091a62f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46caba9230676e30cde02e31cc231d606f446767
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-c"></a>friend (C++)
 이 경우에 따라 개별 클래스의 모든 멤버 또는 클래스의 멤버가 아닌 함수에 멤버 수준 액세스 권한을 부여할 간편 합니다. 클래스 구현자만 이 클래스의 friend를 선언할 수 있습니다. 함수 또는 클래스는 자신을 클래스의 friend로 선언할 수 없습니다. 클래스 정의에서 사용 된 `friend` 키워드 및 비멤버 함수 또는 클래스의 private 컨트롤과 protected 멤버에 액세스 권한을 부여 다른 클래스의 이름입니다.         템플릿 정의에 형식 매개 변수는 friend로 선언할 수 있습니다.  

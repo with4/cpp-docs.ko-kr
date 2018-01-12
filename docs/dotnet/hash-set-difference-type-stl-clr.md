@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f8e6e141e68ac6930b5a9490bba49e875f65a1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 56503b53ff115de3a4ed79fbc71db9b096811796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashsetdifferencetype-stlclr"></a>hash_set::difference_type(STL/CLR)
 두 요소 사이의 부호가 있는 거리의 형식입니다.  
@@ -33,7 +36,7 @@ typedef int difference_type;
 ## <a name="remarks"></a>설명  
  형식은 음수 수 있는 요소 수를 설명 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_set_difference_type.cpp   

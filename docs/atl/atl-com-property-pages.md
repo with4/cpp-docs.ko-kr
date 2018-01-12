@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de062b5c9aedb064206dfc40f7c722a298ded774
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08b1c31aeaba25f4eadad5225dd2f5607cf7053c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 속성 페이지
 속성을 설정 하기 위한 사용자 인터페이스를 제공 하는 COM 속성 페이지 (또는 메서드를 호출할) 하나 이상의 COM 개체입니다. 속성 페이지 컨트롤 속성을 디자인 타임에 설정 될 수 있는 풍부한 사용자 인터페이스를 제공 하기 위해 ActiveX 컨트롤에서 광범위 하 게 사용 됩니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
  자세한 내용은 참조 [속성 시트 및 속성 페이지](http://msdn.microsoft.com/library/windows/desktop/ms686577) 에 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [속성 페이지 지정](../atl/specifying-property-pages.md)  
  제어에 대 한 속성 페이지를 지정 하는 단계를 나열 하 고 예제에서는 클래스를 보여 줍니다.  
   

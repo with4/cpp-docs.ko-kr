@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,35 +37,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSecurityDesc class
+dev_langs: C++
+helpviewer_keywords: CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 334081ba67c3b034c4b8170b095fcd77d712dda6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 클래스
 이 클래스는에 대 한 래퍼는 **SECURITY_DESCRIPTOR** 구조입니다.  
@@ -127,12 +110,12 @@ class CSecurityDesc
 |[CSecurityDesc::operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|에 대 한 포인터를 반환 합니다.는 **SECURITY_DESCRIPTOR** 구조입니다.|  
 |[CSecurityDesc::operator =](#operator_eq)|대입 연산자입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  **SECURITY_DESCRIPTOR** 구조 개체에 연결 된 보안 정보를 포함 합니다. 응용 프로그램이이 구조를 사용 하 여 설정 하 고 개체의 보안 상태를 쿼리 합니다. 참고 항목 [AtlGetSecurityDescriptor](security-global-functions.md#atlgetsecuritydescriptor)합니다.  
   
  응용 프로그램을 수정 해서는 안 된 **SECURITY_DESCRIPTOR** 구조를 직접 및 대신 메서드를 사용 해야 클래스 제공 합니다.  
   
- Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) 에 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]합니다.  
+ Windows에서 액세스 제어 모델에 대 한 소개를 참조 하십시오. [액세스 제어](http://msdn.microsoft.com/library/windows/desktop/aa374860) Windows sdk에서입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
@@ -150,7 +133,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
  `rhs`  
  `CSecurityDesc` 개체 또는 **SECURITY_DESCRIPTOR** 새 서버에 할당 하는 구조 `CSecurityDesc` 개체입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  `CSecurityDesc` 를 사용 하 여 개체를 만들 수 있습니다는 **SECURITY_DESCRIPTOR** 구조 또는 이전에 정의한 `CSecurityDesc` 개체입니다.  
   
 ##  <a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc  
@@ -160,7 +143,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 virtual ~CSecurityDesc() throw();
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  소멸자는 할당 된 모든 리소스를 해제합니다.  
   
 ##  <a name="fromstring"></a>CSecurityDesc::FromString  
@@ -177,7 +160,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="return-value"></a>반환 값  
  성공 시 true를 반환 합니다. 실패 한 경우 예외를 throw 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  사용 하 여 문자열을 만들 수 있습니다 [CSecurityDesc::ToString](#tostring)합니다. 보안 설명자를 문자열로 변환 쉽게 저장 하 고 전송 합니다.  
   
  이 메서드는 에서만 사용할 수 있는 Windows 2000 이상를 호출 하므로 [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)합니다.  
@@ -196,7 +179,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면, false 실패할 경우 true를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는만 Windows 2000을 사용 하는 경우에 의미 있는 이상 호출할 때 [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647)합니다.  
   
 ##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
@@ -303,7 +286,7 @@ bool IsDaclAutoInherited() const throw();
 ### <a name="return-value"></a>반환 값  
  보안 설명자 (Ace) 기존 자식 개체에 상속 가능한 액세스 제어 항목의 자동 전파를 지원 하도록 설정 된 DACL 포함 되어 있으면 true를 반환 합니다. 그렇지 않으면 false를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  시스템 개체 및 기존 자식 개체에 대 한 자동 상속 알고리즘을 수행할 때이 비트를 설정 합니다.  
   
 ##  <a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted  
@@ -316,7 +299,7 @@ bool IsDaclDefaulted() const throw();
 ### <a name="return-value"></a>반환 값  
  보안 설명자 포함 되어 있으면 기본 DACL, false를 반환 하지 않으면 true를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 플래그는 시스템 액세스 제어 항목 (ACE) 상속와 관련 하 여 DACL을 처리 하는 방법으로 발생할 수 있습니다. 예를 들어 개체의 작성자의 DACL을 지정 하지 않으면 개체 작성자의 액세스 토큰에서 기본 DACL을 받습니다. SE_DACL_PRESENT 플래그가 설정 되지 않은 경우이 플래그를 무시 하는 시스템.  
   
  이 플래그는 개체의 최종 DACL를 계산 해야 하는 방법을 결정 하는 데 사용 되 및 보안 개체의 보안 설명자 제어에 물리적으로 저장 되지 않습니다.  
@@ -333,7 +316,7 @@ bool IsDaclPresent() const throw();
 ### <a name="return-value"></a>반환 값  
  보안 설명자 false가 포함 된 DACL 그렇지 않으면 true를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 플래그를 설정 하지 않으면, 또는이 플래그가 설정 되 고 DACL null 인 보안 설명자는 모든 사용자에 게 모든 액세스를 허용 합니다.  
   
  이 플래그는 보안 설명자가 보안 개체와 연결 될 때까지 호출자가 지정 된 보안 정보 유지 하기 위해 사용 됩니다. 보안 설명자는 보안 개체와 연결 되 고 나면 SE_DACL_PRESENT 플래그는 항상 보안 설명자 컨트롤에 설정 됩니다.  
@@ -350,7 +333,7 @@ bool IsDaclProtected() const throw();
 ### <a name="return-value"></a>반환 값  
  DACL 보안 설명자 (Ace) 상속 가능한 액세스 제어 항목 수정 하지 못하도록 방지 하기 위해 구성 된 경우 true를 반환 합니다. 그렇지 않으면 false를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 플래그를 설정 하려면는 [csecuritydesc:: Setdacl](#setdacl) 메서드.  
   
  이 메서드는만 의미 있는 이상에 대 한 Windows 2000, Windows 2000만 상속 가능한 Ace의 자동 전파를 지원 합니다.  
@@ -365,7 +348,7 @@ bool IsGroupDefaulted() const throw();
 ### <a name="return-value"></a>반환 값  
  보안 설명자의 원래 공급자 보다는 기본 메커니즘을 제공 된 보안 설명자의 경우 true를 반환 그룹 SID입니다. 그렇지 않으면 false를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 플래그를 설정 하려면는 [csecuritydesc:: Setgroup](#setgroup) 메서드.  
   
 ##  <a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted  
@@ -391,7 +374,7 @@ bool IsSaclAutoInherited() const throw();
 ### <a name="return-value"></a>반환 값  
  보안 설명자 (Ace) 기존 자식 개체에 상속 가능한 액세스 제어 항목의 자동 전파를 지원 하도록 설정 된 SACL 포함 되어 있으면 true를 반환 합니다. 그렇지 않으면 false를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  시스템 개체 및 기존 자식 개체에 대 한 자동 상속 알고리즘을 수행할 때이 비트를 설정 합니다.  
   
 ##  <a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted  
@@ -404,7 +387,7 @@ bool IsSaclDefaulted() const throw();
 ### <a name="return-value"></a>반환 값  
  보안 설명자 포함 되어 있으면 기본 SACL, false를 반환 하지 않으면 true를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 플래그는 시스템 액세스 제어 항목 (ACE) 상속와 관련 하 여 SACL을 처리 하는 방법으로 발생할 수 있습니다. SE_SACL_PRESENT 플래그가 설정 되지 않은 경우이 플래그를 무시 하는 시스템.  
   
  이 플래그를 설정 하려면는 [csecuritydesc:: Setsacl](#setsacl) 메서드.  
@@ -419,7 +402,7 @@ bool IsSaclPresent() const throw();
 ### <a name="return-value"></a>반환 값  
  보안 설명자 false가 포함 된 SACL 그렇지 않으면 true를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 플래그를 설정 하려면는 [csecuritydesc:: Setsacl](#setsacl) 메서드.  
   
 ##  <a name="issaclprotected"></a>CSecurityDesc::IsSaclProtected  
@@ -432,7 +415,7 @@ bool IsSaclProtected() const throw();
 ### <a name="return-value"></a>반환 값  
  SACL 보안 설명자 (Ace) 상속 가능한 액세스 제어 항목 수정 하지 못하도록 방지 하기 위해 구성 된 경우 true를 반환 합니다. 그렇지 않으면 false를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 플래그를 설정 하려면는 [csecuritydesc:: Setsacl](#setsacl) 메서드.  
   
  이 메서드는만 의미 있는 이상에 대 한 Windows 2000, Windows 2000만 상속 가능한 Ace의 자동 전파를 지원 합니다.  
@@ -457,7 +440,7 @@ bool MakeAbsolute() throw(...);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면, false 그렇지 않은 경우 true를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  절대적 형식의 보안 설명자 정보 자체 대신 포함 되는 정보에 대 한 포인터를 포함 합니다. 보안 설명자를 자기 상대적 형식으로 인접 한 메모리 블록의 정보를 포함합니다. 자기 상대적 보안 설명자에서는 **SECURITY_DESCRIPTOR** 구조는 항상에서 정보를 시작 하지만 보안 설명자의 다른 구성 요소는 순서에 관계 없이 구조를 따를 수 있습니다. 메모리 주소를 사용 하는 대신 자기 상대적 보안 설명자의 구성 요소는 보안 설명자의 시작 부분에서의 오프셋으로 식별 됩니다. 이 형식은 보안 설명자를 디스크에 저장 하거나 통신 프로토콜을 통해 전송 해야 하는 경우에 유용 합니다. 자세한 내용은 참조 [Absolute 및 Self-Relative 보안 설명자](http://msdn.microsoft.com/library/windows/desktop/aa374807)합니다.  
   
 ##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative  
@@ -470,7 +453,7 @@ bool MakeSelfRelative() throw(...);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면, false 그렇지 않은 경우 true를 반환 합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  절대적 형식의 보안 설명자 정보 자체를 포함 하는 것이 아니라 포함 된 정보에 대 한 포인터를 포함 합니다. 보안 설명자를 자기 상대적 형식으로 인접 한 메모리 블록의 정보를 포함합니다. 자기 상대적 보안 설명자에서는 **SECURITY_DESCRIPTOR** 구조는 항상에서 정보를 시작 하지만 보안 설명자의 다른 구성 요소는 순서에 관계 없이 구조를 따를 수 있습니다. 보안 설명자의 구성 요소는 메모리 주소를 사용 하는 대신 보안 설명자의 시작 부분에서의 오프셋으로 식별 됩니다. 이 형식은 보안 설명자를 디스크에 저장 하거나 통신 프로토콜을 통해 전송 해야 하는 경우에 유용 합니다. 자세한 내용은 참조 [Absolute 및 Self-Relative 보안 설명자](http://msdn.microsoft.com/library/windows/desktop/aa374807)합니다.  
   
 ##  <a name="operator_eq"></a>CSecurityDesc::operator =  
@@ -514,7 +497,7 @@ bool SetControl(
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 메서드는 사용할 수 있는 Windows 2000 이상 에서만 호출할 때 [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)합니다.  
   
 ##  <a name="setdacl"></a>Csecuritydesc:: Setdacl  
@@ -617,7 +600,7 @@ bool ToString(
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  보안 설명자 문자열 형태로 표시 되 면 보다 쉽게 저장 하거나 이동할 수 있습니다 전송 합니다. 사용 하 여는 `CSecurityDesc::FromString` 보안 설명자에 다시 문자열을 변환 하는 메서드입니다.  
   
  `si` 매개 변수는 다음 SECURITY_INFORMATION 플래그를 포함할 수 있습니다.  
@@ -640,4 +623,3 @@ bool ToString(
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [클래스 개요](../../atl/atl-class-overview.md)   
  [보안 전역 함수](../../atl/reference/security-global-functions.md)
-

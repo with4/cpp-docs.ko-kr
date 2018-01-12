@@ -1,66 +1,69 @@
 ---
-title: "CViewTableUsage, CViewTableInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_szCatalog"
-  - "CViewTableInfo"
-  - "m_szTableCatalog"
-  - "m_szSchema"
-  - "m_szTableName"
-  - "m_szName"
-  - "CViewTableUsage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CViewTableInfo 매개 변수 클래스"
-  - "CViewTableUsage typedef 클래스"
-  - "m_szCatalog"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CViewTableUsage, CViewTableInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_szCatalog
+- CViewTableInfo
+- m_szTableCatalog
+- m_szSchema
+- m_szTableName
+- m_szName
+- CViewTableUsage
+dev_langs: C++
+helpviewer_keywords:
+- CViewTableInfo parameter class
+- CViewTableUsage typedef class
+- m_szSchema
+- m_szTableSchema
+- TABLE_CATALOG
+- m_szCatalog
+- TABLE_NAME
+- TABLE_SCHEMA
+- m_szName
+- m_szTableCatalog
+- m_szTableName
 ms.assetid: 10b74f2a-8010-4f97-acc2-ffce07349981
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6839893f0beffa13ee2c2688d465369688627ca0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CViewTableUsage, CViewTableInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-그들의 매개 변수 클래스 **CViewTableInfo**를 구현하기 위해서 typedef 클래스 **CViewTableUsage**를 호출합니다.  
+# <a name="cviewtableusage-cviewtableinfo"></a>CViewTableUsage, CViewTableInfo
+Typedef 클래스 호출 **CViewTableUsage** 해당 매개 변수 클래스를 구현 하려면 **CViewTableInfo**합니다.  
   
-## 설명  
- typedef 클래스를 사용하는 것에 대한 자세한 내용은 [Schema Rowset Classes and Typedef Classes](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ 참조 [스키마 행 집합 클래스 및 Typedef 클래스](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) typedef 클래스 사용에 대 한 자세한 내용은 합니다.  
   
- 이 클래스는 지정된 사용자가 액세스 가능하며 카탈로그에 정의된 보이는 표를 식별합니다.  
+ 이 클래스는 본된 테이블 카탈로그에 정의 된 지정된 된 사용자에 액세스할 수 있는 식별 합니다.  
   
- 다음 표는 클래스 데이터 멤버 및 그들의 해당 OLE DB 열을 열거합니다.  스키마 및 열에 대한 추가 정보는, *OLE DB Programmer's Reference*에서 [VIEW\_TABLE\_USAGE Rowset](https://msdn.microsoft.com/en-us/library/ms719727.aspx)를 참조하십시오.  
+ 다음 표에는 클래스 데이터 멤버 및 해당 OLE DB 열이 나열됩니다. 참조 [VIEW_TABLE_USAGE 행 집합](https://msdn.microsoft.com/en-us/library/ms719727.aspx) 에 *OLE DB Programmer's Reference* 스키마 및 열에 대 한 자세한 내용은 합니다.  
   
 |데이터 멤버|OLE DB 열|  
-|------------|--------------|  
-|m\_szCatalog|VIEW\_CATALOG|  
-|m\_szSchema|VIEW\_SCHEMA|  
-|m\_szName|VIEW\_NAME|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
+|------------------|--------------------|  
+|m_szCatalog|VIEW_CATALOG|  
+|m_szSchema|VIEW_SCHEMA|  
+|m_szName|VIEW_NAME|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
   
-## 요구 사항  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbsch.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRestrictions 클래스](../../data/oledb/crestrictions-class.md)

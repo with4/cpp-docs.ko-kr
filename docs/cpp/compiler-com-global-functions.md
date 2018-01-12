@@ -4,26 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 74449d26-50a2-47c7-b175-7cf2cf83533e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 28755b770594209d22de0ae6ac35323ebf61e109
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: be73622037c1c058edffa681ccd79322b8252633
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-com-global-functions"></a>컴파일러 COM 전역 함수
 **Microsoft 전용**  
@@ -34,8 +32,8 @@ ms.lasthandoff: 09/25/2017
 |--------------|-----------------|  
 |[_com_raise_error](../cpp/com-raise-error.md)|throw 한 [_com_error](../cpp/com-error-class.md) 는 오류에 대응 합니다.|  
 |[_set_com_error_handler](../cpp/set-com-error-handler.md)|COM 오류 처리에 사용되는 기본 함수를 대체합니다.|  
-|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|변환 된 `BSTR` 값을 한 **char \* **합니다.|  
-|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|변환 된 **char \* ** 값을 한 `BSTR`합니다.|  
+|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|변환 된 `BSTR` 값을 한 **char \*** 합니다.|  
+|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|변환 된 **char \***  값을 한 `BSTR`합니다.|  
   
 **Microsoft 전용 종료**  
   

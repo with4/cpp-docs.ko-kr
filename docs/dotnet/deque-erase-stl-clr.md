@@ -1,60 +1,61 @@
 ---
-title: "deque::erase(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase 멤버[STL/CLR]"
+title: 'deque:: erase (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 831fbc2b-604f-446b-88bc-b37531304c33
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7cd061a112be18a0a8e3f2e2531db8fa0940e48c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# deque::erase(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeerase-stlclr"></a>deque::erase(STL/CLR)
 지정된 위치에 있는 요소를 제거합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
-#### 매개 변수  
- first  
- Beginning of range to erase.  
+#### <a name="parameters"></a>매개 변수  
+ `first`  
+ 범위를 지우려면의 시작입니다.  
   
- last  
- End of range to erase.  
+ `last`  
+ 범위를 지우려면의 끝입니다.  
   
- where  
- Element to erase.  
+ `where`  
+ 지울 요소입니다.  
   
-## 설명  
- The first member function removes the element of the controlled sequence pointed to by `where`.  You use it to remove a single element.  
+## <a name="remarks"></a>설명  
+ 첫 번째 멤버 함수는 `where`로 지정된 제어 시퀀스의 요소를 제거합니다. 단일 요소를 제거 하려면 사용 합니다.  
   
- The second member function removes the elements of the controlled sequence in the range `[``first``,` `last``)`.  You use it to remove zero or more contiguous elements.  
+ 두 번째 멤버 함수는 [`first`, `last`]의 범위에서 제어되는 시퀀스의 요소를 제거합니다. 0 개 이상의 연속 요소를 제거 하려면 사용 합니다.  
   
- Both member functions return an iterator that designates the first element remaining beyond any elements removed, or [deque::end](../dotnet/deque-end-stl-clr.md)`()` if no such element exists.  
+ 제거 된 요소 뒤에 남은 첫 번째 요소를 지정 하는 반복기를 반환 하는 두 멤버 함수 또는 [deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md) `()` 이러한 요소가 없을 경우.  
   
- When erasing elements, the number of element copies is linear in the number of elements between the end of the erasure and the nearer end of the sequence. \(When erasing one or more elements at either end of the sequence, no element copies occur.\)  
+ 요소를 지운 경우에 요소 복사본의 수는 시퀀스의 할수록 끝과 여 지우기의 끝 간 요소 수에 비례 합니다. (시퀀스의 끝에 하나 이상의 요소를 지우는 중 요소 복사본이 발생 합니다.)  
   
-## 예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cliext_deque_erase.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -92,16 +93,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\) \= b**  
- **b c d e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## 요구 사항  
- **Header:** \<cliext\/deque\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::clear](../dotnet/deque-clear-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::clear(STL/CLR)](../dotnet/deque-clear-stl-clr.md)

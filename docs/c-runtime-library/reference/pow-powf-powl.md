@@ -44,11 +44,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43156626c92160003a5ef0d5364b5a006df5141e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16a0d7beefff97eca04e5f94ab720cda4728935f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 `x` 의 `y`승 값을 계산합니다.  
@@ -109,7 +110,7 @@ long double powl(
 ## <a name="remarks"></a>설명  
  `pow`는 `1.0E100`처럼 2<sup>64</sup>보다 큰 정수 부동 소수점 값을 인식하지 못합니다.  
   
- `pow`에는 SSE2(스트리밍 SIMD 확장 2)를 사용하는 구현이 있습니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)을 참조하세요.  
+ `pow`에는 SSE2(스트리밍 SIMD 확장 2)를 사용하는 구현이 포함됩니다. SSE2 구현의 사용 제한 사항 및 그 사용 방법에 대한 자세한 내용은 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)을 참조하세요.  
   
  C++에서는 오버로드를 허용하므로 `pow`의 여러 오버로드 중 원하는 항목을 호출할 수 있습니다. C 프로그램에서 `pow`는 항상 double 값 두 개를 사용하며 double 값 하나를 반환합니다.  
   
@@ -117,7 +118,7 @@ long double powl(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`pow`, `powf`, `powl`|\<math.h>|  
   
@@ -126,7 +127,7 @@ long double powl(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_pow.c  

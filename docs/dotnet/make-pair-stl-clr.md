@@ -1,32 +1,33 @@
 ---
-title: "make_pair(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::make_pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_pair 함수[STL/CLR]"
+title: make_pair (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::make_pair
+dev_langs: C++
+helpviewer_keywords: make_pair function [STL/CLR]
 ms.assetid: 74733f2c-97b0-4d69-b431-5ab8f0de9e3e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 34f86aefd9a7bad7b3b1f03f98d3df8965020e48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# make_pair(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Make a `pair` from a pair of values.  
+# <a name="makepair-stlclr"></a>make_pair(STL/CLR)
+확인 된 `pair` 값의 쌍에서입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Value1,  
@@ -34,25 +35,25 @@ template<typename Value1,
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);  
 ```  
   
-#### 매개 변수  
- Value1  
- The type of the first wrapped value.  
+#### <a name="parameters"></a>매개 변수  
+ `Value1`  
+ 첫 번째 래핑된 값의 형식입니다.  
   
- Value2  
- The type of the second wrapped value.  
+ `Value2`  
+ 두 번째 래핑된 값의 형식입니다.  
   
- first  
- First value to wrap.  
+ `first`  
+ 첫 번째 래핑할 값입니다.  
   
- second  
- Second value to wrap.  
+ `second`  
+ 두 번째 래핑할 값입니다.  
   
-## 설명  
- The template function returns `pair<``Value1``,` `Value2``>(``first``,` `second``)`.  You use it to construct a `pair``<``Value1``,` `Value2``>` object from a pair of values.  
+## <a name="remarks"></a>설명  
+ 템플릿 함수가 `pair<Value1, Value2>(first, second)`을 반환합니다. 생성에 사용 된 `pair<Value1, Value2>` 한 쌍의 값에서 개체입니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
-```  
+```cpp  
 // cliext_make_pair.cpp   
 // compile with: /clr   
 #include <cliext/utility>   
@@ -69,12 +70,15 @@ int main()
   
 ```  
   
-  **\[x, 3\]**  
-**\[y, 4\]**   
-## 요구 사항  
- **Header:** \<cliext\/utility\>  
+```Output  
+[x, 3]  
+[y, 4]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/유틸리티 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [range_adapter(STL/CLR)](../dotnet/range-adapter-stl-clr.md)

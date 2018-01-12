@@ -1,104 +1,107 @@
 ---
-title: "CProcedureParameters CProcedureParamInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szDefault"
-  - "CProcedureParameters"
-  - "m_bHasDefault"
-  - "CProcedureParamInfo"
-  - "IS_NULLABLE"
-  - "m_szCatalog"
-  - "ORDINAL_POSITION"
-  - "m_nOrdinalPosition"
-  - "NUMERIC_PRECISION"
-  - "m_nDataType"
-  - "m_szSchema"
-  - "CHARACTER_OCTET_LENGTH"
-  - "NUMERIC_SCALE"
-  - "m_szParameterName"
-  - "m_nMaxLength"
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "m_nPrecision"
-  - "m_szName"
-  - "DATA_TYPE"
-  - "m_nOctetLength"
-  - "m_nType"
-  - "m_bIsNullable"
-  - "m_nScale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "CHARACTER_OCTET_LENGTH"
-  - "CProcedureParameters typedef 클래스"
-  - "CProcedureParamInfo 매개 변수 클래스"
-  - "DATA_TYPE"
-  - "DESCRIPTION 클래스 데이터 멤버"
-  - "IS_NULLABLE"
-  - "m_bHasDefault"
-  - "m_bIsNullable"
-  - "m_nDataType"
-  - "m_nMaxLength"
-  - "m_nOctetLength"
-  - "m_nOrdinalPosition"
-  - "m_nPrecision"
-  - "m_nScale"
-  - "m_nType"
-  - "m_szCatalog"
-  - "m_szDefault"
-  - "m_szDescription"
-  - "m_szName"
-  - "m_szParameterName"
-  - "m_szSchema"
-  - "NUMERIC_PRECISION"
-  - "NUMERIC_SCALE"
-  - "ORDINAL_POSITION"
+title: CProcedureParameters CProcedureParamInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szDefault
+- CProcedureParameters
+- m_bHasDefault
+- CProcedureParamInfo
+- IS_NULLABLE
+- m_szCatalog
+- ORDINAL_POSITION
+- m_nOrdinalPosition
+- NUMERIC_PRECISION
+- m_nDataType
+- m_szSchema
+- CHARACTER_OCTET_LENGTH
+- NUMERIC_SCALE
+- m_szParameterName
+- m_nMaxLength
+- CHARACTER_MAXIMUM_LENGTH
+- m_nPrecision
+- m_szName
+- DATA_TYPE
+- m_nOctetLength
+- m_nType
+- m_bIsNullable
+- m_nScale
+dev_langs: C++
+helpviewer_keywords:
+- NUMERIC_PRECISION
+- DATA_TYPE
+- ORDINAL_POSITION
+- m_nMaxLength
+- DESCRIPTION class data member
+- m_szParameterName
+- m_szSchema
+- m_nType
+- m_bHasDefault
+- CHARACTER_OCTET_LENGTH
+- CProcedureParameters typedef class
+- m_szCatalog
+- m_nPrecision
+- m_nOrdinalPosition
+- NUMERIC_SCALE
+- m_nOctetLength
+- IS_NULLABLE
+- m_szName
+- m_bIsNullable
+- CProcedureParamInfo parameter class
+- m_szDescription
+- m_szDefault
+- m_nDataType
+- m_nScale
+- CHARACTER_MAXIMUM_LENGTH
 ms.assetid: 61f8d55a-684a-47a3-b102-068cc3f52d84
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d3f4a28a882a9de9bdb3630ebc2bb7d2adda48c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CProcedureParameters CProcedureParamInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Call the typedef class **CProcedureParameters** to implement its parameter class **CProcedureParamInfo**.  
+# <a name="cprocedureparameters-cprocedureparaminfo"></a>CProcedureParameters CProcedureParamInfo
+Typedef 클래스 호출 **CProcedureParameters** 해당 매개 변수 클래스를 구현 하려면 **CProcedureParamInfo**합니다.  
   
-## 설명  
- See [Schema Rowset Classes and Typedef Classes](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) for more information on using typedef classes.  
+## <a name="remarks"></a>설명  
+ 참조 [스키마 행 집합 클래스 및 Typedef 클래스](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) typedef 클래스 사용에 대 한 자세한 내용은 합니다.  
   
- This class returns information about the parameters and return codes of procedures.  
+ 이 클래스의 매개 변수와 프로시저 반환 코드에 대 한 정보를 반환합니다.  
   
- The following table lists the class data members and their corresponding OLE DB Columns.  See [PROCEDURE\_PARAMETERS Rowset](https://msdn.microsoft.com/en-us/library/ms713623.aspx) in the *OLE DB Programmer's Reference* for more information about the schema and columns.  
+ 다음 표에는 클래스 데이터 멤버 및 해당 OLE DB 열이 나열됩니다. 참조 [PROCEDURE_PARAMETERS 행 집합](https://msdn.microsoft.com/en-us/library/ms713623.aspx) 에 *OLE DB Programmer's Reference* 스키마 및 열에 대 한 자세한 내용은 합니다.  
   
-|Data members|OLE DB columns|  
+|데이터 멤버|OLE DB 열|  
 |------------------|--------------------|  
-|m\_szCatalog|PROCEDURE\_CATALOG|  
-|m\_szSchema|PROCEDURE\_SCHEMA|  
-|m\_szName|PROCEDURE\_NAME|  
-|m\_szParameterName|PARAMETER\_NAME|  
-|m\_nOrdinalPosition|ORDINAL\_POSITION|  
-|m\_nType|PARAMETER\_TYPE|  
-|m\_bHasDefault|PARAMETER\_HASDEFAULT|  
-|m\_szDefault|PARAMETER\_DEFAULT|  
-|m\_bIsNullable|IS\_NULLABLE|  
-|m\_nDataType|DATA\_TYPE|  
-|m\_nMaxLength|CHARACTER\_MAXIMUM\_LENGTH|  
-|m\_nOctetLength|CHARACTER\_OCTET\_LENGTH|  
-|m\_nPrecision|NUMERIC\_PRECISION|  
-|m\_nScale|NUMERIC\_SCALE|  
-|m\_szDescription|DESCRIPTION|  
+|m_szCatalog|PROCEDURE_CATALOG|  
+|m_szSchema|PROCEDURE_SCHEMA|  
+|m_szName|PROCEDURE_NAME|  
+|m_szParameterName|PARAMETER_NAME|  
+|m_nOrdinalPosition|ORDINAL_POSITION|  
+|m_nType|PARAMETER_TYPE|  
+|m_bHasDefault|PARAMETER_HASDEFAULT|  
+|m_szDefault|PARAMETER_DEFAULT|  
+|m_bIsNullable|IS_NULLABLE|  
+|m_nDataType|DATA_TYPE|  
+|m_nMaxLength|CHARACTER_MAXIMUM_LENGTH|  
+|m_nOctetLength|CHARACTER_OCTET_LENGTH|  
+|m_nPrecision|NUMERIC_PRECISION|  
+|m_nScale|NUMERIC_SCALE|  
+|m_szDescription|설명|  
   
-## 요구 사항  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** atldbsch.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CRestrictions 클래스](../../data/oledb/crestrictions-class.md)

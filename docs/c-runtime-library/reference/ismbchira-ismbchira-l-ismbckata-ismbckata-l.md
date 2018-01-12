@@ -51,11 +51,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0e257ac4a1998e75fc47e719df2163d49654c71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c696603c7012a1ee95c118a12d45c2fc9132cfcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 **코드 페이지 932 관련 함수**  
@@ -95,9 +96,9 @@ int _ismbckata_l(
 ## <a name="remarks"></a>설명  
  이러한 각 함수는 지정한 조건에 대해 주어진 멀티바이트 문자를 테스트합니다.  
   
- `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
-|루틴|테스트 조건(코드 페이지 932만 해당)|  
+|루틴에서 반환된 값|테스트 조건(코드 페이지 932만 해당)|  
 |-------------|-------------------------------------------|  
 |`_ismbchira`|더블바이트 히라가나: 0x829F<=`c`<=0x82F1.|  
 |`_ismbchira_l`|더블바이트 히라가나: 0x829F<=`c`<=0x82F1.|  
@@ -108,7 +109,7 @@ int _ismbckata_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_ismbchira`|\<mbstring.h>|  
 |`_ismbchira_l`|\<mbstring.h>|  

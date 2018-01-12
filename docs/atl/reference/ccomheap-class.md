@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 771685ce7e3ff5c4ffc01cb793be9f4f93e7ee26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cf86ebe45cdb0a70af6eebaaed90690e83e8db7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomheap-class"></a>CComHeap 클래스
 이 클래스는 구현 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) COM 메모리 할당 함수를 사용 합니다.  
@@ -53,7 +54,7 @@ class CComHeap : public IAtlMemMgr
 ## <a name="remarks"></a>설명  
  `CComHeap`메모리 할당 기능을 포함 하 여 COM 할당 기능을 사용 하 여 구현 하 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226), 및 [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)합니다. 할당 될 수 있는 메모리의 최대 크기는 크거나 **INT_MAX** (2147483647) 바이트입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  예를 참조 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  

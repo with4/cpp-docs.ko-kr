@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b3386f420e3af97ab01defbe57303a8100a2965
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 851b346c8fac955f1d82c0c43fdf75c4784ca04c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definecommandex"></a>DEFINE_COMMAND_EX
 사용 하는 경우 행 집합을 만드는 데 사용할 명령을 지정는 [CCommand](../../data/oledb/ccommand-class.md) 클래스입니다. ANSI 및 유니코드 응용 프로그램을 지원합니다.  
@@ -48,7 +51,7 @@ wszCommand
   
  이 매크로 응용 프로그램 종류에 관계 없이 유니코드 문자열을 허용합니다. 이 매크로 선호 [DEFINE_COMMAND](../../data/oledb/define-command.md) 유니코드를 지원 하기 때문에 ANSI 응용 프로그램 및입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  

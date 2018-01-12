@@ -19,11 +19,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 090d461a8f11d47d25119f5949f9f570093244fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7285a974b788fd2f6e885a67dab9257a83886d6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lockoperator"></a>lock::operator!=
 같지 않음 연산자입니다.  
@@ -43,7 +46,7 @@ template<class T> bool operator!=(
 ## <a name="return-value"></a>반환 값  
  반환 `true` 경우 `t` 은 잠금 개체에서 다른 `false` 그렇지 않은 경우.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // msl_lock_op_ineq.cpp  

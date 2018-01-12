@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9ef52e04bd855824e709c66693cb989a18b1283
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e03a20ad2b49d5c9337e0c8250e5d7c321ee882
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="do-while-statement-c"></a>do-while 문(C++)
 실행는 *문을* 지정된 된 종료 조건 될 때까지 반복 해 서 (는 *식*) 0으로 계산 합니다.  
@@ -45,7 +46,7 @@ while ( expression ) ;
   
 2.  다음으로, *expression*이 평가됩니다. *expression*이 false인 경우 `do-while` 문이 종료되고 프로그램의 다음 문으로 제어가 전달됩니다. *expression*이 true(0이 아님)인 경우에는 프로세스가 1단계부터 반복됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 `do-while` 문을 보여 줍니다.  
   
 ```  

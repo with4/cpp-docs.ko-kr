@@ -1,35 +1,37 @@
 ---
-title: "CDynamicAccessor::CDynamicAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor::CDynamicAccessor"
-  - "ATL::CDynamicAccessor::CDynamicAccessor"
-  - "ATL.CDynamicAccessor.CDynamicAccessor"
-  - "CDynamicAccessor.CDynamicAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicAccessor 클래스, 생성자"
+title: 'Cdynamicaccessor:: Cdynamicaccessor | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor::CDynamicAccessor
+- ATL::CDynamicAccessor::CDynamicAccessor
+- ATL.CDynamicAccessor.CDynamicAccessor
+- CDynamicAccessor.CDynamicAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicAccessor class, constructor
 ms.assetid: bf40fe81-2c85-473e-9075-51ad9b060b39
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3f063652b95cc5e778d7e1ffcbc809b9425f5425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::CDynamicAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Instantiates and initializes the `CDynamicAccessor` object.  
+# <a name="cdynamicaccessorcdynamicaccessor"></a>CDynamicAccessor::CDynamicAccessor
+인스턴스화하고 초기화는 `CDynamicAccessor` 개체입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -39,20 +41,20 @@ Instantiates and initializes the `CDynamicAccessor` object.
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `eBlobHandling`  
- Specifies how the binary large object \(BLOB\) data is to be handled.  The default value is **DBBLOBHANDLING\_DEFAULT**.  See [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) for a description of the **DBBLOBHANDLINGENUM** values.  
+ 이진 대형 개체 (BLOB) 데이터의 처리 방법을 지정 합니다. 기본값은 **DBBLOBHANDLING_DEFAULT**합니다. 참조 [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) 에 대 한 설명은 **DBBLOBHANDLINGENUM** 값입니다.  
   
  `nBlobSize`  
- The maximum BLOB size in bytes; column data over this value is treated as a BLOB.  The default value is 8,000.  See [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) for details.  
+ 최대 BLOB 크기 (바이트) 이 값에 대 한 열 데이터를 BLOB로 처리 됩니다. 기본값은 8000입니다. 참조 [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) 대 한 자세한 내용은 합니다.  
   
-## 설명  
- If you use the constructor to initialize the `CDynamicAccessor` object, you can specify how it will bind BLOBs.  BLOBs can contain binary data such as graphics, sound, or compiled code.  The default behavior is to treat columns more than 8,000 bytes as BLOBs and try to bind them to an `ISequentialStream` object.  However, you can specify a different value to be the BLOB size.  
+## <a name="remarks"></a>설명  
+ 초기화 하는 생성자를 사용 하는 경우는 `CDynamicAccessor` 개체 Blob 바인딩합니다 방법을 지정할 수 있습니다. Blob은 그래픽, 사운드 또는 컴파일된 코드와 같은 이진 데이터를 포함할 수 있습니다. 기본 동작은 Blob으로 8, 000 바이트 보다 큰 열을 처리 하 고 바인딩하고 하려고 하는 `ISequentialStream` 개체입니다. 그러나 BLOB 크기를 다른 값을 지정할 수 있습니다.  
   
- You can also specify how `CDynamicAccessor` handles column data that qualifies as BLOB data: it can handle BLOB data in the default manner; it can skip \(does not bind\) BLOB data; or it can bind BLOB data in provider\-allocated memory.  
+ 지정할 수도 있습니다 방법을 `CDynamicAccessor` BLOB 데이터를 정규화 하는 열 데이터를 처리: 기본 방식으로 BLOB 데이터를 처리할 수 있습니다; 건너뛸 수 있습니다 (연결 하지 않는) 이거나 BLOB 데이터 공급자가 할당 한 메모리의 BLOB 데이터에 바인딩할 수입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)

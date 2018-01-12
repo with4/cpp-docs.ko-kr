@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09ba2ca14a935c9d412fece89099f508dbd32ae3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f316c5fc9209f968219d770a15e6576880b69954
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings(문자열 리터럴 형식 변환 사용 안 함)
 지정한 경우 컴파일러에는 문자열 리터럴을 사용하여 초기화한 포인터에 대한 엄격한 `const` 한정 규칙이 필요합니다.  

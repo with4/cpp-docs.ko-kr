@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e6ed73ffbf5823cde4b45e03d20742a63d9ae95
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-map-macros"></a>속성 맵 매크로
 이러한 매크로 속성 맵 및 항목을 정의합니다.  
@@ -60,7 +61,7 @@ BEGIN_PROP_MAP(theClass)
   
  `BEGIN_PROP_MAP`없는 익스텐트 동일 하 게 되므로 개체 속성 맵을 사용 하 여이 사용자 인터페이스 있을 수 있으므로 속성 맵의 익스텐트 (차원) 저장 하지 않습니다. 개체가 사용자 인터페이스가 있는 ActiveX 컨트롤 경우 익스텐트는에 있습니다. 이 경우 지정 해야 [PROP_DATA_ENTRY](#prop_data_entry) 속성 맵에 범위를 제공 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
 ##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
@@ -85,7 +86,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  마법사는 속성 맵 매크로 뒤이 매크로 삽입 하는 ActiveX 컨트롤을 만들 때 [BEGIN_PROP_MAP](#begin_prop_map) 속성 맵 매크로 하기 전에 [END_PROP_MAP](#end_prop_map)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 개체의 범위 ( `m_sizeExtent`)은 유지 되 고 있습니다.  
   
  [!code-cpp[NVC_ATL_Windowing#131](../../atl/codesnippet/cpp/property-map-macros_2.h)]  
@@ -117,7 +118,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
   
  [BEGIN_PROP_MAP](#begin_prop_map) 속성 맵에의 시작을 표시 하는 매크로, [END_PROP_MAP](#end_prop_map) 매크로 끝을 표시 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [BEGIN_PROP_MAP](#begin_prop_map)합니다.  
   
 ##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX를 대신 사용  
@@ -148,7 +149,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [BEGIN_PROP_MAP](#begin_prop_map) 속성 맵에의 시작을 표시 하는 매크로, [END_PROP_MAP](#end_prop_map) 매크로 끝을 표시 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에 대 한 항목을 그룹화 `IMyDual1` 뒤에 대 한 항목이 `IMyDual2`합니다. 이중 인터페이스에 의해 그룹화 성능이 향상 됩니다.  
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
@@ -172,7 +173,7 @@ PROP_PAGE(clsid)
   
  [BEGIN_PROP_MAP](#begin_prop_map) 속성 맵에의 시작을 표시 하는 매크로, [END_PROP_MAP](#end_prop_map) 매크로 끝을 표시 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
 ##  <a name="end_prop_map"></a>END_PROP_MAP  
@@ -185,7 +186,7 @@ END_PROP_MAP()
 ### <a name="remarks"></a>설명  
  ATL 프로젝트 마법사는 개체를 만들 때 만들어집니다는 빈 속성 맵을 지정 하 여 [BEGIN_PROP_MAP](#begin_prop_map) 이어서 `END_PROP_MAP`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [BEGIN_PROP_MAP](#begin_prop_map)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -46,11 +46,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 95a8a46bc060d9434a0546e6ce741abc412f8b5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0233734a829aa091615bb7feff0970e6912d7199
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
 파일 공유를 사용한 스트림을 엽니다.  
@@ -81,7 +82,7 @@ FILE *_wfsopen(
  허용되는 공유 유형입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 각 함수는 스트림에 대한 포인터를 반환합니다. null 포인터 값은 오류를 나타냅니다. `filename`또는 `mode`가 `NULL`이거나 빈 문자열인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `NULL` 를 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
+ 각 함수는 스트림에 대한 포인터를 반환합니다. null 포인터 값은 오류를 나타냅니다. `filename`또는 `mode`가 `NULL`이거나 빈 문자열인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `NULL`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
  이 오류 및 다른 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
@@ -124,7 +125,7 @@ FILE *_wfsopen(
 |`_SH_DENYRW`|파일에 대한 읽기 및 쓰기 권한을 거부합니다.|  
 |`_SH_DENYWR`|파일에 대한 쓰기 권한을 거부합니다.|  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -137,7 +138,7 @@ FILE *_wfsopen(
 |`_fsopen`|\<stdio.h>|\<share.h><br /><br /> `shflag` 매개 변수에 대한 매니페스트 상수입니다.|  
 |`_wfsopen`|\<stdio.h> 또는 \<wchar.h>|\<share.h><br /><br /> `shflag` 매개 변수에 대한 매니페스트 상수입니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_fsopen.c  

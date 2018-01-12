@@ -16,16 +16,19 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 955de592b5e065164f16a4f78c9faaaffcdd3efb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23f254ad76a080c7dadfc03e354e29bce4a31070
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>방법: 네이티브 함수에서 참조 클래스 수정
 CLR 배열 사용 하 여 참조 클래스에는 네이티브 함수에 전달 하 고 PInvoke 서비스를 사용 하는 클래스를 수정할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음과 같은 네이티브 라이브러리를 컴파일하십시오.  
   
 ```  
@@ -54,7 +57,7 @@ extern "C"  {
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 어셈블리를 컴파일하십시오.  
   
 ```  

@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c816361e20dd571bb243b11870bd4e0571e2364e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1012997408f108192425a4a7c127baa873b34795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiplies-stlclr"></a>multiplies(STL/CLR)
 함수를 설명 하는 템플릿 클래스는 호출 되 면 두 번째 시간 첫 번째 인수를 반환 합니다. 사용 하면 해당 인수 형식 기준으로 함수 개체를 지정 합니다.  
@@ -74,7 +77,7 @@ public:
   
  함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_multiplies.cpp   

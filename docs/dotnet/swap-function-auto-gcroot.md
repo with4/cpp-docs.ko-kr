@@ -1,33 +1,35 @@
 ---
-title: "swap 함수(auto_gcroot) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::swap"
-  - "msclr.swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 함수"
+title: "swap 함수 (auto_gcroot) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::swap
+- msclr.swap
+dev_langs: C++
+helpviewer_keywords: swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8696d5029b0ed412f31a2be3fe7af35239a99e3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# swap 함수(auto_gcroot)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Swaps objects between one `auto_gcroot` and another.  
+# <a name="swap-function-autogcroot"></a>swap 함수(auto_gcroot)
+개체 하나를 바꿉니다 `auto_gcroot` 또 다른 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename _element_type>  
@@ -37,14 +39,14 @@ void swap(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_left`  
  `auto_gcroot`입니다.  
   
  `_right`  
- 다른 `auto_gcroot`입니다.  
+ 다른 `auto_gcroot`합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // msl_swap_auto_gcroot.cpp  
@@ -66,13 +68,16 @@ int main() {
 }  
 ```  
   
-  **s1 \= 'string one', s2 \= 'string two'**  
-**s1 \= 'string two', s2 \= 'string one'**   
-## 요구 사항  
- **Header file** \<msclr\\auto\_gcroot.h\>  
+```Output  
+s1 = 'string one', s2 = 'string two'  
+s1 = 'string two', s2 = 'string one'  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
- [auto\_gcroot](../dotnet/auto-gcroot.md)   
- [auto\_gcroot::swap](../dotnet/auto-gcroot-swap.md)
+## <a name="see-also"></a>참고 항목  
+ [auto_gcroot](../dotnet/auto-gcroot.md)   
+ [auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)

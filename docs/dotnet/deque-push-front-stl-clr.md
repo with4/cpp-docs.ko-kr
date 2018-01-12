@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 110c1eb538c08b8bba891433e639a0f6559a6d1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 68543ee04105843386c1062f31eff8a339f0333d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequepushfront-stlclr"></a>deque::push_front(STL/CLR)
 새 첫 번째 요소를 추가 합니다.  
@@ -33,7 +36,7 @@ void push_front(value_type val);
 ## <a name="remarks"></a>설명  
  멤버 함수는 값을 가진 요소를 삽입 `val` 제어 된 시퀀스의 시작 부분에 있습니다. Deque에 다른 요소 앞에 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_deque_push_front.cpp   

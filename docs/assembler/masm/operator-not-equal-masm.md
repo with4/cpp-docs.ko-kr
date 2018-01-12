@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d3b9a6b2c40d8f733241421f836771b6e82a284a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc9be4a3739a33f8b044967b0f360f5c81319dff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator--masm"></a>연산자 != (MASM)
 같지 않습니다. 내부 에서만 사용 [합니다. IF](../../assembler/masm/dot-if.md), [합니다. 반면](../../assembler/masm/dot-while.md), 또는 [합니다. 반복](../../assembler/masm/dot-repeat.md) 차단 하 고 어셈블리 때가 아니라 런타임에 계산 합니다.  

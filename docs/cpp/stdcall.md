@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1134ef0c0c9854d76ff2c87b3650ec6e91e54180
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec45f93331178f62799fb826ff31dfb6e66c3337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stdcall"></a>__stdcall
 **Microsoft 전용**  
@@ -70,7 +71,7 @@ void CMyClass::mymethod() { return; }
 void __stdcall CMyClass::mymethod() { return; }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 사용 하 여 _ _의**stdcall** 하면 모든 `WINAPI` 함수 형식이 표준 호출으로 처리 됩니다.  
   
 ```cpp  

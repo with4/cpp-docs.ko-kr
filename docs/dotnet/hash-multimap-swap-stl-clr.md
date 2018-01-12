@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 522918e123a606783fc0703853bb2c9baf40ea6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 56dde93cc7a2a2f18c26656e445a4b5b68f589bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimapswap-stlclr"></a>hash_multimap::swap(STL/CLR)
 두 컨테이너의 내용을 바꿉니다.  
@@ -35,9 +38,9 @@ void swap(hash_multimap<Key, Mapped>% right);
  콘텐츠와 바꿀 컨테이너입니다.  
   
 ## <a name="remarks"></a>설명  
- 멤버 함수는 `this`와 `right` 간에 제어된 시퀀스를 교환합니다. 일정 한 시간에 작업을 수행 하 고 예외가 throw 됩니다. 두 컨테이너의 내용을 교환에 신속 하 게 사용 합니다.  
+ 멤버 함수는 `this` 와 `right`간에 제어되는 시퀀스를 교환합니다. 일정 한 시간에 작업을 수행 하 고 예외가 throw 됩니다. 두 컨테이너의 내용을 교환에 신속 하 게 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_multimap_swap.cpp   

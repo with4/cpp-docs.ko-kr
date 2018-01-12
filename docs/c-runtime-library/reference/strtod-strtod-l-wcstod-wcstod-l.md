@@ -53,11 +53,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 91bcf833efb25945dbf6cb33d31c666feec34b56
-ms.sourcegitcommit: ce115fcfb20b4fbc198f0f7b6d0ca3e94d7ce947
+ms.workload: cplusplus
+ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -107,7 +108,7 @@ double wcstod_l(
 
 각 함수는 입력된 문자열을 변환 *nptr* 에 `double`합니다. `strtod` 변환 함수 *nptr* 배정도 값으로. `strtod`읽기를 중단 *nptr* 숫자의 일환으로 인식할 수 없는 첫 번째 문자에서 합니다. 이 문자는 종료 null 문자일 수 있습니다. `wcstod`와이드 문자 버전이 `strtod`; 해당 *nptr* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
 
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -131,14 +132,14 @@ double wcstod_l(
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|
+|루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |`strtod`, `_strtod_l`|C: &lt;stdlib.h> C++: &lt;cstdlib> 또는 &lt;stdlib.h> |
 |`wcstod`, `_wcstod_l`|C: &lt;stdlib.h> 또는 &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> 또는 &lt;wchar.h> |
 
 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```C
 // crt_strtod.c

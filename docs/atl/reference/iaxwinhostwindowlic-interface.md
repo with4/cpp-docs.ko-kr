@@ -9,9 +9,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindowLic
-- No header/ATL::IAxWinHostWindowLic
-- No header/ATL::CreateControlLic
-- No header/ATL::CreateControlLicEx
+- ATLIFACE/ATL::IAxWinHostWindowLic
+- ATLIFACE/ATL::CreateControlLic
+- ATLIFACE/ATL::CreateControlLicEx
 dev_langs: C++
 helpviewer_keywords: IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e74029025daeb18a3c63459845ef9edf4ca69cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61bd50d5602812cc70ccc3201e9df255f469604a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic 인터페이스
 이 인터페이스는 라이센스가 있는 컨트롤 및 해당 호스트 개체를 조작 하기 위한 메서드를 제공 합니다.  
@@ -76,7 +77,7 @@ STDMETHOD(CreateControlLic)(
   
  이 메서드를 호출 하는 것 [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `IAxWinHostWindowLic::CreateControlLic`합니다.  
   
 ##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
@@ -100,7 +101,7 @@ STDMETHOD(CreateControlLicEx)(
 ### <a name="remarks"></a>설명  
  참조 [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) 에 대 한 설명은 나머지 매개 변수 및 반환 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `IAxWinHostWindowLic::CreateControlLicEx`합니다.
 
 

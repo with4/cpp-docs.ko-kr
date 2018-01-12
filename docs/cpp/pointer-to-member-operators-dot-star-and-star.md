@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - .*
 - ->*
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - expressions [C++], pointer
 - pointer-to-member operators [C++]
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1dad74e99612df6ef868b4cd1f0b2ca5abb9c506
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6db7b7190a1374564071775ce2ea6c0777bdf567
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>멤버 포인터 연산자:. * 및-&gt;*
 ## <a name="syntax"></a>구문  
@@ -99,7 +97,7 @@ m_func1
   
  ->를 포함 하는 식에서 * 연산자를 첫 번째 피연산자 형식의 "클래스 형식 포인터" 형식 지정 된 두 번째 피연산자에 해당 해야 형식의 명확 하 게에서 파생 되었거나 해당 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 클래스와 프로그램 부분을 살펴보십시오.  
   
 ```  
@@ -145,5 +143,4 @@ int main() {
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 기본 제공 연산자, 우선 순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-
 

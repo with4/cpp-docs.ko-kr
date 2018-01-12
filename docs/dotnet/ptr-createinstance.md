@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 00a107d0f502d29d37ae085548e66012d4d585d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d764d18f3148dba663e1e6796c44a0add6aa8109
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
 내에서 COM 개체의 인스턴스를 만듭니다는 `com::ptr`합니다.  
@@ -90,7 +93,7 @@ void CreateInstance(
 ## <a name="remarks"></a>설명  
  `CreateInstance`사용 하 여 `CoCreateInstance` ProgID 또는 CLSID에서 식별 된 지정된 된 개체의 새 인스턴스를 만듭니다. `com::ptr` 새로 만든된 개체를 참조 하 고는 자동으로 소멸 시 모든 소유 참조를 해제 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. 클래스 생성자의 두 가지 다른 형식이 사용 `CreateInstance` ProgID 또는 CLSID는 CLSCTX에서 문서 개체를 만들려고 합니다.  
   
 ```  

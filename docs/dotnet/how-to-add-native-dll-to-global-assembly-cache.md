@@ -1,39 +1,42 @@
 ---
 title: "방법: 전역 어셈블리 캐시에 네이티브 DLL 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL[C++], native"
-  - "GAC(전역 어셈블리 캐시), 네이티브 DLL 로드"
-  - "네이티브 DLL[C++]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], native
+- GAC (global assembly cache), loading native DLLs
+- native DLLs [C++]
 ms.assetid: 25e8d78a-b197-4269-b4e9-237a544ab3c8
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: be55fd47cd6024d0660ed0c3e4594c9430f80cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 방법: 전역 어셈블리 캐시에 네이티브 DLL 추가
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-COM이 아닌 네이티브 DLL을 전역 어셈블리 캐시에 추가할 수 있습니다.  
+# <a name="how-to-add-native-dll-to-global-assembly-cache"></a>방법: 전역 어셈블리 캐시에 네이티브 DLL 추가
+네이티브 DLL COM이 아닌 전역 어셈블리 캐시에 넣을 수 있습니다.  
   
-## 예제  
- **\/ASSEMBLYLINKRESOURCE**를 사용하면 어셈블리에 네이티브 DLL을 포함시킬 수 있습니다.  
+## <a name="example"></a>예  
+ **/ASSEMBLYLINKRESOURCE** 어셈블리에 네이티브 DLL을 포함할 수 있습니다.  
   
- 자세한 내용은 [\/ASSEMBLYLINKRESOURCE\(.NET Framework 리소스에 대한 링크\)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)을 참조하십시오.  
+ 자세한 내용은 [/ASSEMBLYLINKRESOURCE(.NET Framework 리소스에 대한 링크)](../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)를 참조하세요.  
   
 ```  
 /ASSEMBLYLINKRESOURCE:MyComponent.dll  
 ```  
   
-## 참고 항목  
- [C\+\+ Interop 사용\(암시적 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>참고 항목  
+ [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

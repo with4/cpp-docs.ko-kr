@@ -48,11 +48,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36a9fee91a98b224d31df6b9af58ce4caf27030a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99cf5168eba3ed03b4e91571cd50a3c6c4bf9afe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 빗변을 계산합니다.  
@@ -93,7 +94,7 @@ long double _hypotl(
 ## <a name="return-value"></a>반환 값  
  성공하면 `hypot`는 빗변의 길이를 반환합니다. 오버플로 시 `hypot`는 INF(무한대)를 반환하고 `errno` 변수는 `ERANGE`로 설정됩니다. `_matherr`를 사용하여 오류 처리를 수정할 수 있습니다.  
   
- 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  `hypot` 함수는 두 변 `x` 및 `y`의 길이가 제공된 경우(즉, `x`<sup>2</sup> + `y`<sup>2</sup>의 제곱근) 정삼각형의 빗변 길이를 계산합니다.  
@@ -102,13 +103,13 @@ long double _hypotl(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`hypot`, `hypotf`, `hypotl`, `_hypot`, `_hypotf`, `_hypotl`|\<math.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_hypot.c  

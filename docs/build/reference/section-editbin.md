@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cac5ba6baf821e7e9450ec01e7851edf625b8bd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91ffb9bd0645cab51e4140697c41e5b715380fe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="section-editbin"></a>/SECTION(EDITBIN)
 ```  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 |특성|설정|  
 |---------------|-------------|  
 |c|코드|  
-|일|삭제 가능한|  
+|d|삭제 가능한|  
 |e|executable|  
 |i|초기화 된 데이터|  
 |k|캐시 된 가상 메모리|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 |o|링크 정보|  
 |p|가상 메모리 페이징된|  
 |r|read|  
-|초|공유|  
+|s|공유|  
 |u|초기화 되지 않은 데이터|  
 |주|쓰기|  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
 |1|1|  
 |2|2|  
 |4|4|  
-|8|9|  
+|8|8|  
 |p|16|  
 |t|32|  
 |초|64|  

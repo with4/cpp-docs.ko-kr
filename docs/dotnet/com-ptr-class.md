@@ -1,54 +1,56 @@
 ---
-title: "com::ptr 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "com::ptr"
-  - "msclr::com::ptr"
-  - "msclr.com.ptr"
-  - "com.ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr 클래스"
+title: "com:: ptr 클래스 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- com::ptr
+- msclr::com::ptr
+- msclr.com.ptr
+- com.ptr
+dev_langs: C++
+helpviewer_keywords: ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ae02518b60190dd129443f00d82b377317c816b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# com::ptr 클래스
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-CLR 클래스의 멤버로 사용할 수 있는 COM 개체에 대 한 래퍼.  또한 래퍼 소멸자가 호출 될 때 개체의 참조를 모두 소유를 해제 하는 COM 개체의 수명 관리를 자동화 합니다.  유사한 [CComPtr Class](../atl/reference/ccomptr-class.md).  
+# <a name="comptr-class"></a>com::ptr 클래스
+CLR 클래스의 멤버로 사용할 수 있는 COM 개체에 대한 래퍼입니다.  이 래퍼는 또한 COM 개체의 수명 주기 관리를 자동화하여 소멸자가 호출될 때 개체에서 모든 소유 참조를 해제합니다. 유사 [CComPtr 클래스](../atl/reference/ccomptr-class.md)합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<class _interface_type>  
 ref class ptr;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_interface_type`  
- COM 인터페이스  
+ COM 인터페이스.  
   
-## 설명  
- A  `com::ptr`  는 함수의 지역 변수로 COM의 다양 한 작업을 단순화 하 고 수명 관리를 자동화할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 또한 `com::ptr`은 로컬 함수 변수로 사용하여 여러 COM 작업을 간소화하고 수명 주기 관리를 자동화할 수 있습니다.  
   
- A  `com::ptr`  ; 함수 매개 변수로 직접 사용할 수 없습니다. 대신 [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md) or a [개체 연산자에 대한 핸들\(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) 사용하세요.  
+ A `com::ptr` 함수 매개 변수로 직접 사용할 수 없습니다; 사용 된 [추적 참조 연산자](../windows/tracking-reference-operator-cpp-component-extensions.md) 또는 [개체 연산자 (^)에 대 한 핸들](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) 대신 합니다.  
   
- A  `com::ptr`  ; 함수에서 직접 반환할 수 없습니다 대신 핸들을 사용 합니다.  
+ `com::ptr`은 함수로부터 직접 반환될 수 없습니다. 대신 핸들을 사용하십시오.  
   
-## 예제  
- 이 이때 사용 하는 CLR 클래스를 구현 하는  `com::ptr`  의 전용 멤버를  `IXMLDOMDocument`  개체입니다.  포함 된에 대 한 호출 결과 클래스의 공용 메서드를 호출 합니다.  `IXMLDOMDocument`  개체입니다.  샘플 몇 가지 간단한 xml 입력을 단순화 된 워크 인쇄 콘솔에 XML 문서 구문 분석된 트리 노드를 XML 문서 인스턴스를 만듭니다.  
+## <a name="example"></a>예  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  클래스의 공용 메서드를 호출하면 포함된 `IXMLDOMDocument` 개체가 호출됩니다.  이 샘플은 XML 문서의 인스턴스를 만들고, 여기에 일부 간단한 XML을 채우고, 구문 분석된 문서 트리에서 간소화된 노드 작업을 수행하고 XML을 콘솔에 출력합니다.  
   
 ```  
 // comptr.cpp  
@@ -158,12 +160,15 @@ int main() {
 }  
 ```  
   
-  **\<단어\>주의\<\/단어\>**   
-## 요구 사항  
- **헤더 파일** \<msclr\\com\\ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
   
- **네임 스페이스** msclr::com  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
-## 참고 항목  
- [C\+\+ 지원 라이브러리](../dotnet/cpp-support-library.md)   
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>참고 항목  
+ [C + + 지원 라이브러리](../dotnet/cpp-support-library.md)   
  [ptr 멤버](../dotnet/ptr-members.md)

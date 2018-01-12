@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b66c473c49527dff395d206594a314b527c4f914
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83965ef2bf64f77dbcb1eb9832e7178c30260d16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fe-name-exe-file"></a>/Fe(EXE 파일 이름 지정)
 이름 및.exe 파일 또는 컴파일러에서 만든 DLL에 대 한 디렉터리를 지정 합니다.  
@@ -54,14 +55,14 @@ ms.lasthandoff: 10/24/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령줄을 컴파일하고 현재 디렉터리의 모든 C 소스 파일을 연결 합니다. 결과 실행 파일 PROCESS.exe 라는 고 C:\BIN 디렉터리에 생성 됩니다.  
   
 ```  
 CL /FeC:\BIN\PROCESS *.C  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 명령줄의 실행 파일을 만듭니다 `C:\BIN` 첫 번째 소스 나 개체 파일과 동일한 기본 이름을 가진:  
   
 ```  

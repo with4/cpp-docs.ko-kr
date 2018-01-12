@@ -1,36 +1,38 @@
 ---
-title: "CCommand::GetNextResult | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CCommand::GetNextResult"
-  - "CCommand::GetNextResult"
-  - "GetNextResult"
-  - "CCommand.GetNextResult"
-  - "ATL.CCommand.GetNextResult"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetNextResult 메서드"
+title: 'Ccommand:: Getnextresult | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CCommand::GetNextResult
+- CCommand::GetNextResult
+- GetNextResult
+- CCommand.GetNextResult
+- ATL.CCommand.GetNextResult
+dev_langs: C++
+helpviewer_keywords: GetNextResult method
 ms.assetid: 63df9b55-9490-45c4-934a-879c5c2725d8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a3bf105f0c85d831d1a8e4bb0048a1385e6275da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# CCommand::GetNextResult
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fetches the next result set if one is available.  
+# <a name="ccommandgetnextresult"></a>CCommand::GetNextResult
+다음 결과 집합 사용 가능한 경우 인출 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -40,23 +42,23 @@ Fetches the next result set if one is available.
 ) throw( );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  *pulRowsAffected*  
- \[in\/out\] A pointer to memory where the count of rows affected by a command is returned.  
+ [/ 출력] 명령에 의해 영향을 받는 행 수가 반환 되는 메모리에 대 한 포인터입니다.  
   
  `bBind`  
- \[in\] Specifies whether to bind the command automatically after being executed.  The default is **true**, which causes the command to be bound automatically.  Setting `bBind` to **false** prevents the automatic binding of the command so that you can bind manually. \(Manual binding is of particular interest to OLAP users.\)  
+ [in] 실행 되 고 후 명령을 자동으로 바인딩할 것인지 지정 합니다. 기본값은 **true**, 때문에 명령을 자동으로 바인딩할 수 있습니다. 설정 `bBind` 를 **false** 수동으로 바인딩할 수 있도록 명령 자동 바인딩 방지 합니다. (수동 바인딩은 OLAP 사용자에 게 특히 중요 합니다.)  
   
-## 반환 값  
- A standard `HRESULT`.  
+## <a name="return-value"></a>반환 값  
+ 표준 `HRESULT`입니다.  
   
-## 설명  
- If a result set has been previously fetched, this function releases the previous result set and unbinds the columns.  If `bBind` is **true**, it binds the new columns.  
+## <a name="remarks"></a>설명  
+ 결과 집합을 이전에 가져온 경우이 함수는 이전 결과 집합을 해제 하 고 열을 바인딩 해제 합니다. 경우 `bBind` 은 **true**, 새 열을 바인딩합니다.  
   
- You should call this function only if you have specified multiple results by setting the `CCommand` template parameter *TMultiple*\=`CMultipleResults`.  
+ 설정 하 여 여러 개의 결과 지정한 경우에이 함수를 호출 해야는 `CCommand` 템플릿 매개 변수 *TMultiple*=`CMultipleResults`합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CCommand 클래스](../../data/oledb/ccommand-class.md)

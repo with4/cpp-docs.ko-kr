@@ -1,37 +1,38 @@
 ---
-title: "C 함수를 C 또는 C++ 언어 실행 파일에서 사용할 수 있도록 내보내기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__cplusplus 매크로"
-  - "DLL 내보내기[C++], C++ 실행 파일의 C 함수"
-  - "함수 내보내기[C++], C++ 실행 파일의 C 함수"
-  - "함수[C++], C 또는 C++ 실행 파일"
-  - "함수[C++], 내보내기"
+title: "C 또는 c + + 언어 실행 파일에서 사용 하기 위해 C 함수를 내보내는 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C], exporting
+- functions [C], C or C++ executables and
+- __cplusplus macro
+- exporting DLLs [C++], C functions in C++ executables
+- exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 232cfb3a65dfe3e65eaa2eeef0a4a55e723b7f7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# C 함수를 C 또는 C++ 언어 실행 파일에서 사용할 수 있도록 내보내기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-DLL에 포함된 C로 작성된 함수를 C 언어 또는 C\+\+ 언어 모듈에서 액세스하려면 전처리기 매크로 **\_\_cplusplus**를 사용하여 컴파일될 언어를 결정한 다음, C\+\+ 언어 모듈에서 사용할 경우 이 함수를 C 링크로 선언해야 합니다.  이 방법을 사용하고 DLL에 헤더 파일을 제공하면 C 및 C\+\+ 사용자가 별도의 변경 없이도 이 함수를 사용할 수 있게 됩니다.  
+# <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>C 함수를 C 또는 C++ 언어 실행 파일에서 사용할 수 있도록 내보내기  
   
- 다음 코드는 C 및 C\+\+ 클라이언트 응용 프로그램에서 사용할 수 있는 헤더 파일을 보여 줍니다.  
+C 언어 또는 c + + 언어 모듈에서 액세스 하려면, 사용 해야 C로 작성 된 DLL에 함수를 포함 하는 경우는 **__cplusplus** 언어를 결정 하는 전처리기 매크로 컴파일되는 고 그런 다음 이러한 선언 c + + 언어 모듈에서 사용 하는 경우에 C 링크가 있는 함수입니다. 이 방법을 사용 하 여 DLL에 대 한 헤더 파일을 제공 하는 경우 변경 되지 않고 C 및 c + + 사용자가 이러한 함수를 사용할 수 있습니다.  
   
-```  
+다음 코드는 C 및 c + + 클라이언트 응용 프로그램에서 사용할 수 있는 헤더 파일을 보여 줍니다.  
+  
+```h  
 // MyCFuncs.h  
 #ifdef __cplusplus  
 extern "C" {  // only need to export C interface if  
@@ -46,33 +47,33 @@ __declspec( dllimport ) void AnotherCFunc();
 #endif  
 ```  
   
- C 함수를 C\+\+ 실행 파일에 링크해야 하는 경우 함수 선언 헤더 파일에서 위의 방법을 사용하지 않았으면 C\+\+ 소스 파일에 다음을 추가하여 컴파일러에서 C 함수 이름을 데코레이팅하지 않게 합니다.  
+C 함수 c + + 실행 파일에 연결할 필요 함수 선언이 헤더 파일은 c + + 소스 파일에서에서 위의 방법을 사용 하지 않은 경우 컴파일러에서 C 함수 이름 장식 않도록 하려면 다음을 수행 합니다.  
   
-```  
+```cpp  
 extern "C" {  
 #include "MyCHeader.h"  
 }  
 ```  
   
-## 수행할 작업  
+## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   
--   [.def 파일을 사용하여 DLL에서 내보내기](../build/exporting-from-a-dll-using-def-files.md)  
+-   [.Def 파일을 사용 하 여 DLL에서 내보내기](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [\_\_declspec\(dllexport\)을 사용하여 DLL에서 내보내기](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [__Declspec (dllexport)를 사용 하 여 DLL에서 내보내기](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [AFX\_EXT\_CLASS를 사용하여 내보내기 및 가져오기](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [AFX_EXT_CLASS를 사용 하 여 가져오기 및 내보내기](../build/exporting-and-importing-using-afx-ext-class.md)  
   
 -   [사용할 내보내기 방법 결정](../build/determining-which-exporting-method-to-use.md)  
   
--   [\_\_declspec\(dllimport\)을 사용하여 응용 프로그램으로 가져오기](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [__Declspec (dllimport)을 사용 하 여 응용 프로그램으로 가져오기](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [DLL 초기화](../build/initializing-a-dll.md)  
+-   [DLL 초기화](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## 추가 정보  
+## <a name="what-do-you-want-to-know-more-about"></a>추가 정보  
   
 -   [데코레이팅된 이름](../build/reference/decorated-names.md)  
   
--   [링크 사양](http://msdn.microsoft.com/ko-kr/d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)  
+-   [extern을 사용하여 링크 지정](../cpp/using-extern-to-specify-linkage.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DLL에서 내보내기](../build/exporting-from-a-dll.md)

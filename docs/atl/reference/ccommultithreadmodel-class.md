@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7aad1856f28a1d76b53b983e63f36cf5fd4a7cfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96f8c24736309ef1030664ee0fd466537d739496
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 클래스
 `CComMultiThreadModel`변수 값 증가 및 감소에 대 한 스레드 안전 메서드를 제공 합니다.  
@@ -90,7 +91,7 @@ typedef CComAutoCriticalSection AutoCriticalSection;
   
  외에 `AutoCriticalSection`를 사용할 수 있습니다는 `typedef` 이름 [CriticalSection](#criticalsection)합니다. 지정 하지 않아야 `AutoCriticalSection` 전역 개체 또는 정적 클래스 멤버는 CRT 시작 코드를 제거 하려는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드는 기반으로 모델링 [CComObjectRootEx](ccomobjectrootex-class.md), 보여줍니다 `AutoCriticalSection` 스레딩 환경에서 사용 되 고 있습니다.  
   
 
@@ -154,7 +155,7 @@ typedef CComCriticalSection CriticalSection;
   
  외에 `CriticalSection`를 사용할 수 있습니다는 `typedef` 이름 [AutoCriticalSection](#autocriticalsection)합니다. 지정 하지 않아야 `AutoCriticalSection` 전역 개체 또는 정적 클래스 멤버는 CRT 시작 코드를 제거 하려는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)합니다.  
   
 ##  <a name="decrement"></a>CComMultiThreadModel::Decrement  
@@ -209,7 +210,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 |`CComSingleThreadModel`|`CComSingleThreadModel`|  
 |`CComMultiThreadModelNoCS`|`CComMultiThreadModelNoCS`|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

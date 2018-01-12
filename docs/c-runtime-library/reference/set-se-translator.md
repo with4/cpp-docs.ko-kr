@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_se_translator
+apiname: _set_se_translator
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,22 @@ apitype: DLLExport
 f1_keywords:
 - _set_se_translator
 - set_se_translator
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - set_se_translator function
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: df4705972f45fd129462f5a3f131c72135254620
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f7ce46b8db587337b7a9c98279efd4b89ffa8f9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 Win32 예외(C 구조적 예외)를 C++ 형식 예외로 처리합니다.  
@@ -98,13 +81,13 @@ typedef void (*_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_set_se_translator`|\<eh.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_settrans.cpp  
@@ -163,7 +146,7 @@ In finally
 Caught a __try exception with SE_Exception.  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `_set_se_translator`에서 제공되는 기능을 관리 코드에서 사용할 수 없지만 `/clr`를 사용하여 네이티브 코드를 표시하는 동안 해당 네이티브 코드가 `#pragma unmanaged` 스위치 아래에서 컴파일되는 경우에도 이 매핑을 네이티브 코드에서 사용할 수 있습니다. 매핑될 관리 코드에서 구조적 예외가 throw되는 경우 예외를 생성하고 처리하는 코드는 `pragma`로 표시되어야 합니다. 다음 코드에서는 가능한 사용법을 보여 줍니다. 자세한 내용은 [Pragma 지시문 및 __Pragma 키워드](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)를 참조하세요.  
   
 ```  

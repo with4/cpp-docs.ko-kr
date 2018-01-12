@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 834825b38eb8d5c81752dfed85f44202fbce3299
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4a7d60f11457e509ae67da83aa6bc589af1ce43a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-administrator"></a>ODBC 관리자
 ODBC 관리자를 등록 하 고 구성는 [데이터 소스](../../data/odbc/data-source-odbc.md) 있습니다 사용할 수 있는 로컬 또는 네트워크를 통해 합니다. ODBC 관리자가 제공 하는 정보를 사용 하 여 사용자가 데이터 원본에 연결 하는 응용 프로그램에서 코드를 만들려면 마법사.  

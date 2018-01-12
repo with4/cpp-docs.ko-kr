@@ -1,26 +1,27 @@
 ---
 title: "언어별 처리기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6503e0cd-2d3a-4330-a925-8bed8c27c2be
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dc15e730666a643dfaa028fe7bc6166144897308
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 언어별 처리기
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-UNW\_FLAG\_EHANDLER 또는 UNW\_FLAG\_UHANDLER 플래그를 설정할 때마다 언어별 처리기의 상대 주소가 UNWIND\_INFO에 표시됩니다.  이전 단원에서 설명한 것처럼 언어별 처리기는 예외 처리기에 대한 검색 또는 해제의 일부로서 호출됩니다.  사용되는 프로토타입은 다음과 같습니다.  
+# <a name="language-specific-handler"></a>언어별 처리기
+언어별 처리기의 상대 주소에에서 있으면는 UNWIND_INFO 때마다 UNW_FLAG_EHANDLER 또는 UNW_FLAG_UHANDLER 플래그를 설정 합니다. 이전 섹션에서 설명한 언어별 처리기는 예외 처리기에 대 한 검색의 일부로 또는 해제의 일부로 호출 됩니다. 여기에 다음과 같은 프로토타입이 있습니다.  
   
 ```  
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (  
@@ -31,13 +32,13 @@ typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
 );  
 ```  
   
- **ExceptionRecord**는 표준 Win64 정의가 있는 예외 레코드에 대한 포인터를 제공합니다.  
+ **ExceptionRecord** 표준 Win64 정의 하는 예외 레코드에 대 한 포인터를 제공 합니다.  
   
- **EstablisherFrame**은 이 함수의 고정된 스택 할당에 대한 기본 주소입니다.  
+ **EstablisherFrame** 이 함수에 대 한 고정된 스택 할당의 기본 주소입니다.  
   
- **ContextRecord**는 예외가 발생한 경우 예외 컨텍스트를 가리키거나\(예외 처리기\) 현재 "해제" 컨텍스트를 가리킵니다\(종료 처리기\).  
+ **ContextRecord** 지점 (예외 처리기의 경우)에 예외가 발생 한 시간 또는 현재 예외 컨텍스트를 "해제" 컨텍스트 (종료 처리기의 경우).  
   
- **DispatcherContext**는 이 함수의 디스패처 컨텍스트를 가리킵니다.  여기에는 다음과 같은 정의가 있습니다.  
+ **DispatcherContext** 이 함수에 대 한 발송자 컨텍스트를 가리킵니다. 여기에 다음 정의가 있습니다.  
   
 ```  
 typedef struct _DISPATCHER_CONTEXT {  
@@ -52,21 +53,21 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;  
 ```  
   
- **ControlPc**는 이 함수 내의 RIP 값입니다.  이는 예외 주소이거나 컨트롤에서 설정 함수가 남겨진 주소입니다.  이 값은 컨트롤이 이 함수 내의 보호되는 구문에 포함되어 있는지 확인하는 데 사용되는 RIP입니다\(예: \_\_try\/\_\_except 또는 \_\_try\/\_\_finally의 \_\_try 블록\).  
+ **ControlPc** 이 함수 내에서 RIP의 값입니다. 이 예외 주소 또는 주소 컨트롤 설정 함수가 중단 합니다. 이이 함수 내에서 일부 보호 된 생성자 내에서 컨트롤 인지 확인 하는 데 사용 될 RIP (예를 들어 __try 블록에 대 한 \__try /\__except 또는 \__try /\__finally).  
   
- **ImageBase**는 이 함수가 포함된 모듈의 이미지 기준\(로드 주소\)입니다. 이 값은 상대 주소를 기록하기 위해 함수 엔트리와 해제 정보에 사용되는 32비트 오프셋에 추가됩니다.  
+ **ImageBase** 기본 (부하 주소)의 이미지 함수 항목에 사용 되는 32 비트 오프셋에 추가 되 고 해제 정보를 상대 주소를 기록 하려면이 함수를 포함 하는 모듈은 합니다.  
   
- **FunctionEntry**는 이 함수에 대한 함수 및 해제 정보 이미지 기준 상대 주소가 저장되는 RUNTIME\_FUNCTION 함수 엔트리에 대한 포인터를 제공합니다.  
+ **FunctionEntry** 는 RUNTIME_FUNCTION에 대 한 포인터를 제공 함수 진입 함수를 보유 하 고이 함수에 대 한 정보 이미지 기본 상대 주소를 해제 합니다.  
   
- **EstablisherFrame**은 이 함수의 고정된 스택 할당에 대한 기본 주소입니다.  
+ **EstablisherFrame** 이 함수에 대 한 고정된 스택 할당의 기본 주소입니다.  
   
- **TargetIp**는 해제의 연속 주소를 지정하는 선택적 명령 주소를 제공합니다.  **EstablisherFrame**을 지정하지 않으면 이 주소가 무시됩니다.  
+ **TargetIp** 해제의 연속 주소를 지정 하는 선택적 명령 주소를 제공 합니다. 이 주소는 무시 됩니다 **EstablisherFrame** 지정 되지 않았습니다.  
   
- **ContextRecord**는 시스템 예외 디스패치\/해제 코드에 사용하기 위한 예외 컨텍스트를 가리킵니다.  
+ **ContextRecord** 시스템 예외 디스패치/해제 코드에서 사용 하기 위해 예외 컨텍스트를 가리킵니다.  
   
- **LanguageHandler**는 호출하려는 언어별 처리기 루틴을 가리킵니다.  
+ **LanguageHandler** 호출 되는 언어 관련 언어 처리기 루틴을 가리킵니다.  
   
- **HandlerData**는 이 함수에 대한 언어별 처리기 데이터를 가리킵니다.  
+ **HandlerData** 이 함수에 대 한 언어별 처리기 데이터를 가리킵니다.  
   
-## 참고 항목  
- [예외 처리\(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>참고 항목  
+ [예외 처리(x64)](../build/exception-handling-x64.md)

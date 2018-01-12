@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac5a39ed59b224304b0c8f2095a032bf39daef48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5e2a482582d49680c448c3172a11b54404d8390a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapmappedtype-stlclr"></a>map::mapped_type(STL/CLR)
 각 키와 연결된 매핑된 값의 형식입니다.  
@@ -33,7 +36,7 @@ typedef Mapped mapped_type;
 ## <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 `Mapped`의 동의어입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_map_mapped_type.cpp   

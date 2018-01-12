@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be9a3cf9c91fecedd596ae7db74158f376ffc00c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a481f8c461cb4fddd4acb090edb2f2b5fd18636d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-parts-syntax"></a>파일 이름 부분 구문
 명령에서 파일 이름 부분 구문 (수도 있음 묵시적된 종속) 하면 첫 번째 종속 파일의 구성 요소를 나타냅니다. 파일 이름 구성 요소입니다 파일의 드라이브, 경로, 기본 이름 및 지정 된 대로 확장 하지 디스크에 있습니다. 사용 하 여 **%s** 전체 파일 이름을 나타내는입니다. 사용 하 여 **% &#124;** [*부분*]**F** (세로 막대 백분율 기호 뒤에 문자가), 파일 이름 부분을 나타내는를 여기서 *부분* 0 개 이상의 다음 문자 수 순서에 관계 없이 합니다.  

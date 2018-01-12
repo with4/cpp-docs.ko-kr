@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wopen
 - _topen
 - _open
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - opening files, for file I/O
 - topen function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 82b12ebfbff06c19a863bec7d8be2e6677c0148e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9c53394391c34dc86e3516c54806c9bbd2b62ca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-wopen"></a>_open, _wopen
 파일을 엽니다. 더욱 안전한 버전을 사용할 수 있으므로 이러한 함수는 사용되지 않습니다. [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)를 참조하세요.  
@@ -132,13 +116,16 @@ int _wopen(
  파일을 이진(변환되지 않음) 모드에서 엽니다. 이진 모드에 대한 설명은 [fopen](../../c-runtime-library/reference/fopen-wfopen.md)을 참조하세요.  
   
  `_O_CREAT`  
- 파일을 만든 다음 쓰기 위해 엽니다. `filename`에서 지정한 파일이 있으면 의미가 없습니다. `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
+ 파일을 만든 다음 쓰기 위해 엽니다. `filename`에서 지정한 파일이 있으면 의미가 없습니다. 
+          `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
   
  `_O_CREAT` &#124; `_O_SHORT_LIVED`  
- 파일을 임시로 만든 다음 가능한 경우 디스크로 플러시하지 않습니다. `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
+ 파일을 임시로 만든 다음 가능한 경우 디스크로 플러시하지 않습니다. 
+          `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
   
  `_O_CREAT` &#124; `_O_TEMPORARY`  
- 파일을 임시로 만듭니다. 마지막 파일 설명자가 닫히면 파일이 삭제됩니다. `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
+ 파일을 임시로 만듭니다. 마지막 파일 설명자가 닫히면 파일이 삭제됩니다. 
+          `pmode`를 지정하는 경우 `_O_CREAT` 인수가 필요합니다.  
   
  `_O_CREAT` &#124; `_O_EXCL`  
  `filename`에서 지정한 파일이 있으면 오류 값을 반환합니다. 
@@ -151,12 +138,10 @@ int _wopen(
  캐싱이 디스크에서 임의 액세스를 위해 최적화되며 이에 제한되지 않습니다.  
   
  `_O_RDONLY`  
- 읽으려는 경우에만 파일을 엽니다. 
-          `_O_RDWR` 또는 `_O_WRONLY`와 함께 지정할 수 없습니다.  
+ 읽으려는 경우에만 파일을 엽니다. `_O_RDWR` 또는 `_O_WRONLY`와 함께 지정할 수 없습니다.  
   
  `_O_RDWR`  
- 읽고 쓰기 위해 파일을 엽니다. 
-          `_O_RDONLY` 또는 `_O_WRONLY`와 함께 지정할 수 없습니다.  
+ 읽고 쓰기 위해 파일을 엽니다. `_O_RDONLY` 또는 `_O_WRONLY`와 함께 지정할 수 없습니다.  
   
  `_O_SEQUENTIAL`  
  캐싱이 디스크에서 순차적 액세스를 위해 최적화되며 이에 제한되지 않습니다.  
@@ -168,12 +153,10 @@ int _wopen(
  파일을 열고 길이가 0이 되도록 자릅니다. 이 파일에는 쓰기 권한이 있어야 합니다. `_O_RDONLY`와 함께 지정할 수 없습니다. `_O_TRUNC`와 함께 `_O_CREAT`를 사용하면 기존 파일을 열거나 파일을 만듭니다.  
   
 > [!NOTE]
->  
-          `_O_TRUNC` 플래그는 지정된 파일의 내용을 제거합니다.  
+>  `_O_TRUNC` 플래그는 지정된 파일의 내용을 제거합니다.  
   
  `_O_WRONLY`  
- 쓰려는 경우에만 파일을 엽니다. 
-          `_O_RDONLY` 또는 `_O_RDWR`와 함께 지정할 수 없습니다.  
+ 쓰려는 경우에만 파일을 엽니다. `_O_RDONLY` 또는 `_O_RDWR`와 함께 지정할 수 없습니다.  
   
  `_O_U16TEXT`  
  유니코드 UTF-16 모드에서 파일을 엽니다.  
@@ -211,7 +194,7 @@ int _wopen(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_open`|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|  
 |`_wopen`|\<io.h> 또는 \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|  
@@ -221,7 +204,7 @@ int _wopen(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_open.c  

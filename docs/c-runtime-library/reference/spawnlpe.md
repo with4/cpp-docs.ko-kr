@@ -28,11 +28,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 674a99a8968b91ecce43ae326b79793001953c3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0bddbcc5b281c009468c97d2c5e26e032ac3fd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnlpe"></a>spawnlpe
 이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_spawnlpe](../../c-runtime-library/reference/spawnlpe-wspawnlpe.md)를 사용하세요.  

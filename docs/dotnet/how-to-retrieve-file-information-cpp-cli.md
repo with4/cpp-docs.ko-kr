@@ -16,18 +16,21 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2cf196fe21c70bbceec90acf3242a995548fe845
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0536366e445995d6c4e77d58eb0a48e08207f263
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>방법: 파일 정보 검색(C++/CLI)
 다음 코드 예제는 <xref:System.IO.FileInfo> 클래스입니다. 파일의 이름이 있는 경우를 생성 및 마지막으로 수정한 파일 크기, 디렉터리, 전체 이름 및 날짜 및 시간과 같은 파일에 대 한 정보를 검색 합니다.이 클래스를 사용할 수 있습니다.  
   
  이 코드는 Notepad.exe에 대 한 파일 정보를 검색합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // file_info.cpp  

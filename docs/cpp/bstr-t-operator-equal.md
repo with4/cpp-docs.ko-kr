@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _bstr_t::operator=
-dev_langs:
-- C++
+f1_keywords: _bstr_t::operator=
+dev_langs: C++
 helpviewer_keywords:
 - operator = [C++], bstr
 - operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 445c18ece9b998d5cfa75a1c9fe5bde3b60b2e52
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ed1de7a529d8c4c1b0d7ae8623d0f1c4a58b5075
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator =
 **Microsoft 전용**  
@@ -65,7 +62,7 @@ _bstr_t& operator=(
   
  **Microsoft 전용 종료**  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [_bstr_t:: assign](../cpp/bstr-t-assign.md) 사용 하는 예제에 대 한 `operator=`합니다.  
   
 ## <a name="see-also"></a>참고 항목  

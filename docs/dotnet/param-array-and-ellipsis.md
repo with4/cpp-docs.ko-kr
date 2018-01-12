@@ -1,50 +1,52 @@
 ---
-title: "매개 변수 배열 및 가변 매개 변수(...) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "함수 오버로드, 인수 일치"
+title: "매개 변수 배열 및 줄임표 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: function overloading, argument matching
 ms.assetid: 492e3f6c-1c4c-4e0c-a358-72f2d39c30be
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f6d256fd48d8c9f206619e6baa9a50a0278d30c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 매개 변수 배열 및 가변 매개 변수(...)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]에서는 오버로드된 함수 호출을 해결하기 위한 매개 변수 배열의 우선 순위가 Managed Extensions for C\+\+와 다르게 변경되었습니다.  
+# <a name="param-array-and-ellipsis"></a>매개 변수 배열 및 가변 매개 변수(...)
+오버 로드 된 함수 호출을 확인 하는 것에 대 한 매개 변수 배열의 우선 순위 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
   
- Managed Extensions와 새 구문 모두 C\# 및 [!INCLUDE[vbprvb](../Token/vbprvb_md.md)]이 지원하는 매개 변수 배열을 명시적으로 지원하지 않습니다.  대신 다음과 같이 특성을 사용하여 일반 배열을 플래그 지정합니다.  
+ Managed Extensions 및 새 구문에서 지 원하는 C# 및 Visual Basic 매개 변수 배열에 대 한 지원이 있습니다. 대신 플래그 하나 특성을 사용 하 여 일반 배열을 다음과 같습니다.  
   
 ```  
 void Trace1( String* format, [ParamArray]Object* args[] );  
 void Trace2( String* format, Object* args[] );  
 ```  
   
- 이 둘은 모두 동일하게 보이지만 `ParamArray` 특성은 C\# 또는 기타 CLR 언어에 대해 이 배열을 각 호출마다 요소의 변수 번호를 가져오는 배열로 지정합니다.  Managed Extensions와 새 구문으로 작성된 프로그램에서 동작의 차이는 Artur Laksberg가 제공한 다음 예제에서와 같이 한 인스턴스가 가변 매개 변수\(...\)를 선언하고 두 번째 인스턴스가 `ParamArray` 특성을 선언하는 오버로드된 함수 집합의 확인 방식에 있습니다.  
+ 이 둘은 모두 동일 하 게 보이지만 동안는 `ParamArray` 특성 태그를 삽입이 C# 이나 다른 CLR 언어에 대 한 각 호출 마다 요소 변수 번호를 가져오는 배열입니다. 관리 되는 확장 및 새 구문 간에 프로그램에서 동작의 변화에 줄임표를 선언 하는 한 인스턴스를 설정 하는 오버 로드 된 함수를 확인에 있고 두 번째 선언 된 `ParamArray` 제공한 다음 예제와 같이 특성 Artur Laksberg 합니다.  
   
 ```  
 int fx(...); // 1  
 int fx( [ParamArray] Int32[] ); // 2  
 ```  
   
- Managed Extensions의 경우 가변 매개 변수\(...\)의 우선 순위가 특성보다 높습니다. 특성은 이 언어의 형식적인 측면이 아니기 때문입니다.  그러나 새 구문의 경우에는 이제 매개 변수 배열이 언어 내에서 직접 지원되며 가변 매개 변수\(...\)보다 우선 순위가 높습니다. 매개 변수 배열이 더 강력한 형식이기 때문입니다.  따라서, 아래의 호출은  
+ Managed extensions에서 줄임표 특성은 아니므로 언어의 정식 측면은 부적절 하는 특성을 통해 우선 순위를 제공 되었습니다. 그러나 새 구문에서 매개 변수 배열 언어에서 내에서 직접 사용할 수 이제 있으며는 더 강력한 형식 때문에 가변 매개 변수를 통해 보다 우선 순위가 높습니다. Managed Extensions로 설정 하는 호출에 따라서,  
   
 ```  
 fx( 1, 2 );  
 ```  
   
- Managed Extensions에서 `fx(…)`로 확인되는 반면, 새 구문에서는 `ParamArray` 인스턴스로 확인됩니다.  거의 있을 법하지 않지만 프로그램 동작이 `ParamArray` 호출 대신 가변 매개 변수\(...\) 인스턴스의 호출에 의존하는 경우 시그니처나 호출을 수정해야 합니다.  
+ 확인 `fx(...)` 확인 되는 새 구문에서는 `ParamArray` 인스턴스. 에 프로그램 동작이 아닌 줄임표 인스턴스의 호출에 따라 달라 지는 `ParamArray`, 서명 또는 호출 중 하나를 수정 해야 합니다.  
   
-## 참고 항목  
- [일반적인 언어 변경 사항](../dotnet/general-language-changes-cpp-cli.md)
+## <a name="see-also"></a>참고 항목  
+ [일반적인 언어 변경 사항(C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)

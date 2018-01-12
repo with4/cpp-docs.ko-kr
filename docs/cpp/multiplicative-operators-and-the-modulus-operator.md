@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '%'
 - /
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], multiplicative
 - arithmetic operators [C++], multiplicative operators
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b63a36817bb0366d21fba11c5e1e4eccbcc6951f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bb6ad2396b47932f05d9404485e4b32a7e92363b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>곱하기 연산자 및 나머지 연산자
 ## <a name="syntax"></a>구문  
@@ -83,7 +81,7 @@ f / 0.0
   
  곱셈 연산자 간의 관계를 지정 하 여 id (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 프로그램은 곱셈 연산자를 보여 줍니다. 피연산자 중 하나가 `10 / 3` 입력으로 명시적으로 캐스팅 되어야 합니다 `float` 잘림을 방지 하 여 두 피연산자가를 `float` 나누기 앞입니다.  
   
 ```  

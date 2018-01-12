@@ -1,36 +1,38 @@
 ---
-title: "lock::acquire | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::acquire"
-  - "acquire"
-  - "msclr.lock.acquire"
-  - "msclr::lock::acquire"
-  - "lock.acquire"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "acquire 메서드"
+title: lock::acquire | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::acquire
+- acquire
+- msclr.lock.acquire
+- msclr::lock::acquire
+- lock.acquire
+dev_langs: C++
+helpviewer_keywords: acquire method
 ms.assetid: c214274e-7519-4739-82aa-91b04a32d3f9
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 622d308b04edc1793da792c6f371753b80c37680
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# lock::acquire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Acquires a lock on an object, optionally waiting to acquire the lock forever, for a specified amount of time, or not at all.  
+# <a name="lockacquire"></a>lock::acquire
+지정 된 시간 또는 전혀 영원히 잠금을 획득 하려고 대기 하는 선택적으로 개체에 대 한 잠금을 획득 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void acquire();  
@@ -42,20 +44,20 @@ void acquire(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `_timeout`  
- Timeout value in milliseconds or as a <xref:System.TimeSpan>.  
+ 제한 시간 값 (밀리초) 또는 <xref:System.TimeSpan>합니다.  
   
-## 예외  
- Throws <xref:System.ApplicationException> if lock acquisition does not occur before timeout.  
+## <a name="exceptions"></a>예외  
+ Throw <xref:System.ApplicationException> 잠금 획득 제한 시간 전에 발생 하지 않습니다.  
   
-## 설명  
- If a timeout value is not supplied, the default timeout is <xref:System.Threading.Timeout.Infinite>.  
+## <a name="remarks"></a>설명  
+ 제한 시간 값이 제공 되지 않은 경우 기본 제한 시간은 <xref:System.Threading.Timeout.Infinite>합니다.  
   
- If a lock has already been acquired, this function does nothing.  
+ 잠금을 이미 가져온 경우이 함수는 아무 작업도 수행 하지 않습니다.  
   
-## 예제  
- This example uses a single instance of a class across multiple threads.  The class uses a lock on itself to ensure that accesses to its internal data are consistent for each thread.  The main application thread uses a lock on the same instance of the class to periodically check to see if any worker threads still exist, and waits to exit until all worker threads have completed their tasks.  
+## <a name="example"></a>예  
+ 이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스를 사용 하 여 잠금을 자체에서 내부 데이터에 대 한 액세스가 각 스레드에 대해 일관적인 지 확인 합니다.  기본 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드 여전히 존재 하며, 해당 작업을 완료 될 때까지 모든 작업자 스레드가 끝나기를 대기 하는 클래스의 동일한 인스턴스에 잠금을 사용 합니다.  
   
 ```  
 // msl_lock_acquire.cpp  
@@ -129,22 +131,25 @@ int main() {
 }  
 ```  
   
-  **In thread 3, Counter \= 0**  
-**In thread 3, Counter \= 10**  
-**In thread 5, Counter \= 0**  
-**In thread 5, Counter \= 10**  
-**In thread 7, Counter \= 0**  
-**In thread 7, Counter \= 10**  
-**In thread 4, Counter \= 0**  
-**In thread 4, Counter \= 10**  
-**In thread 6, Counter \= 0**  
-**In thread 6, Counter \= 10**  
-**All threads completed.**   
-## 요구 사항  
- **Header file** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [lock 멤버](../dotnet/lock-members.md)   
- [lock::try\_acquire](../dotnet/lock-try-acquire.md)
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

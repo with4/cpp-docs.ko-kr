@@ -1,26 +1,27 @@
 ---
 title: "구조체 및 상수 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4f77c74ab4b8c72973526007b2496554f5e672ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 구조체 및 상수 정의
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-기본 도우미 루틴은 여러 구조체를 사용하여 후크 함수와 통신하면서 예외를 처리합니다.  다음은 알림 및 오류 값, 정보 구조체, 후크로 전달되는 pointer\-to\-hook\-function 형식입니다.  
+# <a name="structure-and-constant-definitions"></a>구조체 및 상수 정의
+기본 도우미 루틴은 후크 함수 및 모든 예외는 동안 통신에 몇 가지 구조를 사용 합니다. 알림 및 실패 값, 정보 구조 및 후크에 전달 된 함수 후크 포인터 형식을 다음과 같습니다.  
   
 ```  
 //  
@@ -78,5 +79,5 @@ typedef struct ImgDelayDescr {
     } ImgDelayDescr, * PImgDelayDescr;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [도우미 함수 이해](../../build/reference/understanding-the-helper-function.md)

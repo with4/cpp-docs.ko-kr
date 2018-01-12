@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8a92858303af5050706849f7e688d08ad36f321
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7200fbf4adb7866125cfd8956b7b35ad5d5a2657
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partialsum-stlclr"></a>partial_sum(STL/CLR)
 일련의 첫 번째 요소를 통해 입력 범위의 합계를 계산 합니다.는 `i`th 요소 각 합계의 결과 저장 하 고 `i`번째 요소를 대상 범위로 하거나 일반화 된 절차 결과를 계산 합니다. 여기서 합 연산을 지정 된 다른 이진 연산으로 대체 됩니다.  

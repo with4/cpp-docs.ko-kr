@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: adc340a30fcf0292c3dc7fa0e595d488b4046431
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb8e03bed85a5e466a3c41f0cffc51d35c4b4561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE에서 .Bsc 파일을 빌드하는 방법
 BSCMAKE 빌드하거나 수 있는 가장 효율적인 방법으로.bsc 파일을 다시 빌드합니다. 잠재적 문제를 방지 하려면 빌드 프로세스를 이해 하는 것이 중요 합니다.  

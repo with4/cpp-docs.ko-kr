@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 06a3976149e11b3fa9f4e61f854bd943a0c762b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da47f0113ec2e36f6df4afa32f6aff84d5ee6dfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan 클래스
 이 클래스는 상대 날짜 및 시간 값의 파일 연결을 관리 하기 위한 메서드를 제공 합니다.  
@@ -71,7 +72,7 @@ class CFileTimeSpan
 ## <a name="remarks"></a>설명  
  상대적 기간을 관리 하기 위한 메서드를 제공 하는이 클래스는 시기와 관련 된 작업을 수행할 때 자주 발생 하는 시간은 파일을, 마지막으로 액세스 한 만들거나 마지막으로 수정 합니다. 이 클래스의 메서드는 자주 사용 하는와 함께에서 [CFileTime 클래스](../../atl-mfc-shared/reference/cfiletime-class.md) 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  예를 참조 [CFileTime::Millisecond](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond)합니다.  
   
 ## <a name="requirements"></a>요구 사항  

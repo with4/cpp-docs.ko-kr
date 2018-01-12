@@ -76,11 +76,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 632d0c29612d8209d162fcdf357aad3f149653f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c926c23553545a76bc8e1d0a0427c20ea65f3156
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 대/소문자에 상관없이 두 문자열에서 지정된 개수의 문자를 비교합니다.  
@@ -152,7 +153,7 @@ int _mbsnicmp_l(
   
  ASCII 테이블에서 91~96까지의 문자('[', '\\', ']', '^', '_' 및 '\`')는 영숫자보다 작은 것으로 평가됩니다. 이 순서 지정 방식은 `stricmp`의 방식과 같습니다.  
   
- `_wcsnicmp` 및 `_mbsnicmp`는 `_strnicmp`의 와이드 문자 및 멀티바이트 문자 버전입니다. `_wcsnicmp`의 인수는 와이드 문자열이고 `_mbsnicmp`의 인수는 멀티바이트 문자열입니다. `_mbsnicmp`는 현재 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하며 오류 발생 시 `_NLSCMPERROR`를 반환합니다. 자세한 내용은 [코드 페이지](../../c-runtime-library/code-pages.md) 참조하세요. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다. 이러한 함수에는 로캘 설정이 적용됩니다. `_l` 접미사가 없는 버전은 로캘 종속 동작에서 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달되는 `locale`을 대신 사용합니다. 자세한 내용은 [로캘](../../c-runtime-library/locale.md)을 참조하세요.  
+ `_wcsnicmp` 및 `_mbsnicmp`는 `_strnicmp`의 와이드 문자 및 멀티바이트 문자 버전입니다. `_wcsnicmp`의 인수는 와이드 문자열이고 `_mbsnicmp`의 인수는 멀티바이트 문자열입니다. `_mbsnicmp`는 현재 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하며 오류 발생 시 `_NLSCMPERROR`를 반환합니다. 자세한 내용은 [코드 페이지](../../c-runtime-library/code-pages.md) 참조하세요. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다. 이러한 함수에는 로캘 설정이 적용됩니다. `_l` 접미사가 없는 버전은 로캘 종속 동작에서 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달되는 `locale`을 대신 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  이러한 모든 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `string1` 또는 `string2`가 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `_NLSCMPERROR`를 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
@@ -166,7 +167,7 @@ int _mbsnicmp_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_strnicmp`, `_strnicmp_l`|<string.h>|  
 |`_wcsnicmp`, `_wcsnicmp_l`|<string.h> 또는 <wchar.h>|  
@@ -174,7 +175,7 @@ int _mbsnicmp_l(
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)에 대한 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

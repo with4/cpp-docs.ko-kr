@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81976652c14693c54980f6e0901f5db5576fbbe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bf10a68ae15743a637df2dee52bee83c3dfcbe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-idispeventimpl"></a>IDispEventImpl 지원
 템플릿 클래스 [IDispEventImpl](../atl/reference/idispeventimpl-class.md) 는 연결 지점 싱크에 ATL 클래스에 대 한 지원을 제공 하는 데 사용할 수 있습니다. 연결 지점 싱크 클래스를를 COM 개체 외부에서 발생 하는 이벤트를 처리할 수 있습니다. 이러한 연결 지점 싱크는 클래스에서 제공 하는 이벤트 싱크 맵이 매핑됩니다.  

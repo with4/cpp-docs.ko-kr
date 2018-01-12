@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,37 +14,22 @@ f1_keywords:
 - ATLWIN/ATL::CDynamicChain::CallChain
 - ATLWIN/ATL::CDynamicChain::RemoveChainEntry
 - ATLWIN/ATL::CDynamicChain::SetChainEntry
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - message maps, chaining
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 54137760f2c1ee0f93fd8ad21238710f4b6a4a56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 클래스
 이 클래스는 메시지 맵의 동적 체인을 지 원하는 메서드를 제공 합니다.  
@@ -76,7 +60,7 @@ class CDynamicChain
 |[CDynamicChain::RemoveChainEntry](#removechainentry)|메시지 맵 항목을 컬렉션에서 제거합니다.|  
 |[CDynamicChain::SetChainEntry](#setchainentry)|메시지 맵 항목을 컬렉션에 추가 하거나 기존 항목을 수정 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CDynamicChain`Windows 메시지를 다른 개체의 메시지 맵에 런타임 시 연결을 사용 하도록 설정 하는 메시지 맵의 컬렉션을 관리 합니다.  
   
  에 메시지 맵의 동적 체인에 대 한 지원을 추가 하려면 다음을 수행 합니다.  
@@ -89,11 +73,11 @@ class CDynamicChain
   
  예를 들어, 클래스에 다음과 같이 정의 됩니다.  
   
- [!code-cpp[NVC_ATL_Windowing # 88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
   
  클라이언트는 다음 호출 `CMyWindow::SetChainEntry`:  
   
- [!code-cpp[NVC_ATL_Windowing # 89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
  여기서 `chainedObj` 는 연결 된 개체 이며에서 파생 된 클래스의 인스턴스가 `CMessageMap`합니다. 이제 경우 `myCtl` 하 여 처리 되지 않은 메시지를 받을 `OnPaint` 또는 `OnSetFocus`, 창 프로시저에 메시지를 보냅니다 `chainedObj`의 기본 메시지 맵.  
   
@@ -137,7 +121,7 @@ BOOL CallChain(
 ### <a name="return-value"></a>반환 값  
  **True 이면** 완벽 하 게 처리 되 고, 그렇지 않으면 메시지가 있으면 **FALSE**합니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  호출 하 고 창 프로시저에 대 한 `CallChain`를 지정 해야 합니다는 [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) 메시지 맵에서 매크로입니다. 예를 들어 참조는 [CDynamicChain](../../atl/reference/cdynamicchain-class.md) 개요입니다.  
   
  `CallChain`이전 호출을 [SetChainEntry](#setchainentry) 연결 하는 `dwChainID` 개체 및 자신의 메시지 맵을 포함 된 값입니다.  
@@ -202,4 +186,3 @@ BOOL SetChainEntry(
 ## <a name="see-also"></a>참고 항목  
  [CWindowImpl 클래스](../../atl/reference/cwindowimpl-class.md)   
  [클래스 개요](../../atl/atl-class-overview.md)
-

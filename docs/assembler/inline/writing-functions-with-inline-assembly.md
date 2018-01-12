@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2b7abbb7a09f5205ada192cf15d5b7eb3c5c6b33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2fc9e6a1d2c94e74ef8aabf085af8fc4dc0bc28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-functions-with-inline-assembly"></a>인라인 어셈블리로 함수 작성
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -52,7 +53,7 @@ _TEXT   ENDS
   
  별도의 어셈블러에 대해 작성했으므로 이 함수에는 별도의 소스 파일과 어셈블리 및 링크 단계가 필요합니다. C 및 C++ 함수 인수는 대개 스택에서 전달되므로 이 버전의 `power2` 함수는 스택의 위치를 기준으로 인수에 액세스합니다. (유의 **모델** 지시문을 MASM과 몇몇 다른 어셈블러에서 사용할 수 있는 또한 이름으로 스택 인수와 로컬 스택 변수에 액세스할 수 있습니다.)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 인라인 어셈블리 코드를 사용하여 `power2` 함수를 작성합니다.  
   
 ```  
