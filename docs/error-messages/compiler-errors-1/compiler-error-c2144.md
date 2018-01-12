@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f541465009dcc137b8853351d10ceb9d5db4d05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f85d1f8526a3f91087470b30c01e406d86fdd556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2144"></a>컴파일러 오류 C2144
 구문 오류: 'type' 앞에 있어야 '토큰이 있습니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
  C2144는 형식을 전달 하려는 경우에 나타날 수 있습니다. 참조 [형식 전달 (C + + /cli CLI)](../../windows/type-forwarding-cpp-cli.md) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2144 오류가 발생 합니다.  
   
 ```  
@@ -46,7 +47,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2144 오류가 발생 합니다.  
   
 ```  

@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b549538c1147f3d9574c018f7e15c4066dbbb245
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ad4ff8c26b740b3de246a7f111f60fc3c9e20771
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultisetupperbound-stlclr"></a>hash_multiset::upper_bound(STL/CLR)
 지정된 된 키와 일치 하는 범위의 끝을 찾습니다.  
@@ -37,7 +40,7 @@ iterator upper_bound(key_type key);
 ## <a name="remarks"></a>설명  
  멤버 함수는 마지막 요소를 결정 `X` 동일한 버킷으로 해시 제어 된 시퀀스의 `key` 과 순서가 및 `key`합니다. 이러한 요소가 존재 하거나 `X` 는 제어 된 시퀀스의 마지막 요소 반환 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; 그렇지 않으면의 첫 번째 요소를 지정 하는 반복기를 반환 `X`. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소 시퀀스의 끝으로 이동 하려면 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_multiset_upper_bound.cpp   

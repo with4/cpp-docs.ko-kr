@@ -1,32 +1,33 @@
 ---
-title: "set::generic_container(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container 멤버[STL/CLR]"
+title: 'set:: generic_container (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 8677f211-7feb-4a23-ad02-6d4ab4713857
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0b6c48e70048cc320bb874b1e1b950fdd4146f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# set::generic_container(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-The type of the generic interface for the container.  
+# <a name="setgenericcontainer-stlclr"></a>set::generic_container(STL/CLR)
+컨테이너에 대 한 제네릭 인터페이스의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## 설명  
- The type describes the generic interface for this template container class.  
+## <a name="remarks"></a>설명  
+ 이 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_set_generic_container.cpp   
@@ -79,15 +80,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c d**  
- **a b c d e**   
-## 요구 사항  
- **Header:** \<cliext\/set\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [set](../dotnet/set-stl-clr.md)   
- [set::generic\_iterator](../dotnet/set-generic-iterator-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::generic_iterator(STL/CLR)](../dotnet/set-generic-iterator-stl-clr.md)

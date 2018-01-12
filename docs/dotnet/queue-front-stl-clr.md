@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3f214fdef7ab79876d5f4d6718db8292dd95eee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4726377c30300ee1a139b2a596346ea5cdc804f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queuefront-stlclr"></a>queue::front(STL/CLR)
 첫 번째 요소에 액세스합니다.  
@@ -33,7 +36,7 @@ reference front();
 ## <a name="remarks"></a>설명  
  멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 존재 하는 것을 알고 있는 경우 첫 번째 요소를 액세스할 수 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_queue_front.cpp   

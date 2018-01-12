@@ -1,41 +1,42 @@
 ---
-title: "queue::reference(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reference 멤버[STL/CLR]"
+title: 'queue:: reference (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: cca05237-5b95-4cca-ac21-b786aa8a3c96
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 31768af422052ca9d565a80620d8eb339904590a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# queue::reference(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuereference-stlclr"></a>queue::reference(STL/CLR)
 요소에 대한 참조의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## 설명  
- The type describes a reference to an element.  
+## <a name="remarks"></a>설명  
+ 이 형식은 요소에 대 한 참조를 설명 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_queue_reference.cpp   
@@ -66,14 +67,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b x**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+a b c  
+a b x  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::const\_reference](../dotnet/queue-const-reference-stl-clr.md)   
- [queue::value\_type](../dotnet/queue-value-type-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue:: const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)   
+ [queue::value_type(STL/CLR)](../dotnet/queue-value-type-stl-clr.md)

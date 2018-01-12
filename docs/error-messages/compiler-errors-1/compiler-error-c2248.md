@@ -15,18 +15,19 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a6023532a7644753f1aaff957232fde70d01426f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b5493e6e91a639b83adcddcbd1f680d29ce9f9dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2248"></a>컴파일러 오류 C2248
 '*멤버*': 액세스할 수 없습니다 '*access_level*'클래스에 선언 된 멤버'*클래스*'  
   
 파생된 클래스의 멤버에 액세스할 수 없습니다 `private` 기본 클래스의 멤버입니다. 액세스할 수 없는 `private` 또는 `protected` 클래스 인스턴스의 멤버입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 다음 샘플에서는 개인 때 C2248 또는 클래스의 보호 된 멤버는 클래스 외부에서 액세스 됩니다. 이 문제를 해결 하려면 이러한 멤버는 클래스 외부에 직접 액세스 하지 않습니다. 공용 멤버 데이터와 멤버 함수를 사용 하 여 클래스와 상호 작용할 수 있습니다.  
   

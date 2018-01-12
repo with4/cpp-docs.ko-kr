@@ -1,11 +1,10 @@
 ---
 title: "C/c + + 빌드 오류 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -186,7 +185,6 @@ f1_keywords:
 - LNK4020
 - LNK4030
 - LNK4031
-- LNK4037
 - LNK4038
 - LNK4040
 - LNK4041
@@ -302,52 +300,31 @@ f1_keywords:
 - R6022
 - R6023
 - R6034
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - builds [C++], errors
 - errors [C++]
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1a370ddc7c314cae0cb1a048cacb704480525b0a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-errors"></a>C/C++ 빌드 오류
-설명서의 이 단원에서는 빌드 도구에 의해 생성되는 오류 메시지에 대해 설명합니다. [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 컴파일러 및 빌드 도구는 다양한 종류의 오류 및 경고를 보고할 수 있습니다. 빌드 도구에서 오류 또는 경고가 발견된 이후의 시도와 코드 의도를 추측하므로 더 많은 문제를 동시에 보고될 수 있습니다. 도구의 추측이 잘못된 경우 이후 오류나 경고를 프로젝트에 적용할 수 없습니다. 프로젝트에서 문제를 수정하는 경우 항상 보고된 첫 번째 오류나 경고에서 시작하고 자주 다시 빌드하십시오.  
-  
- 선택의 오류 번호를 도움말을 보려면 Visual Studio에서 특정 오류 메시지에는 **출력** 해당 오류에 대 한 페이지 창과 MSDN을 열 수 있는 F1 키를 누릅니다. MSDN에서는 오류 관련 항목을 검색하고 탐색 창에서 범주별로 오류 목록을 찾아볼 수도 있습니다.  
-  
-> [!NOTE]
->  모든 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 오류 또는 경고는 MSDN에 문서화 됩니다. 대부분의 경우 진단 메시지의 모든 사용 가능한 정보를 제공 합니다. 오류 메시지에 대한 추가 설명이 필요하다고 생각되면 저희에게 알려주십시오. 이 페이지에서 사용자 의견 양식을 사용 하 여 하 또는 Visual Studio의 메뉴 모음으로 이동 하 고 선택할 수 **도움말**, **버그 보고**에 제안 사항이 나 버그 보고서를 제출할 수 있습니다 또는 [Microsoft Connect](http://connect.microsoft.com/VisualStudio)합니다.  
-  
- MSDN 공개 포럼에서 오류 및 경고에 대 한 추가 지원이 필요한을 경우가 있습니다. [Visual c + + 언어](http://go.microsoft.com/fwlink/?LinkId=158195) 포럼에 대 한 질문 및 토론은는 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 언어 구문 및 컴파일러입니다. [Visual c + + 일반](http://go.microsoft.com/fwlink/?LinkId=158194) 포럼에 대 한 질문에 대 한은 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 다른 포럼에서 다루지 않습니다. 오류 및 경고에 대 한 도움말을 찾을 수도 있습니다 [스택 오버플로](http://stackoverflow.com/)합니다.  
-  
- 에 대 한 추가 리소스에 대 한 링크 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], 참조 [Visual c + + 도움말 및 커뮤니티](../../visual-cpp-help-and-community.md)합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [C/C++ 빌드 참조](../../build/reference/c-cpp-building-reference.md)   
- [Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio)
+
+진단 오류 및 경고 메시지 빌드 도구에 의해 생성 되는 설명서의이 섹션의 문서에 설명 합니다.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>참고 항목
+
+[C/C++ 빌드 참조](../../build/reference/c-cpp-building-reference.md)   
+[Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio)

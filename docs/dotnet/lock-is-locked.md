@@ -1,46 +1,48 @@
 ---
-title: "lock::is_locked | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "is_locked"
-  - "msclr::lock::is_locked"
-  - "lock::is_locked"
-  - "msclr::lock.is_locked"
-  - "lock.is_locked"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::is_locked"
+title: lock::is_locked | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- is_locked
+- msclr::lock::is_locked
+- lock::is_locked
+- msclr::lock.is_locked
+- lock.is_locked
+dev_langs: C++
+helpviewer_keywords: lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f561a56b5859f6e7d0eaedeb6e6410bd4fe64a6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# lock::is_locked
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indicates whether a lock is being held.  
+# <a name="lockislocked"></a>lock::is_locked
+잠금이 열리는지 여부를 나타냅니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 bool is_locked();  
 ```  
   
-## 반환 값  
- `true` if a lock is held, `false` otherwise.  
+## <a name="return-value"></a>반환 값  
+ `true`잠금이 유지 되는 경우 `false` 그렇지 않은 경우.  
   
-## 예제  
- This example uses a single instance of a class across multiple threads.  The class uses a lock on itself to ensure that accesses to its internal data are consistent for each thread.  The main application thread uses a lock on the same instance of the class to periodically check to see if any worker threads still exist, and waits to exit until all worker threads have completed their tasks.  
+## <a name="example"></a>예  
+ 이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스를 사용 하 여 잠금을 자체에서 내부 데이터에 대 한 액세스가 각 스레드에 대해 일관적인 지 확인 합니다.  기본 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드 여전히 존재 하며, 해당 작업을 완료 될 때까지 모든 작업자 스레드가 끝나기를 대기 하는 클래스의 동일한 인스턴스에 잠금을 사용 합니다.  
   
 ```  
 // msl_lock_is_locked.cpp  
@@ -115,22 +117,25 @@ int main() {
 }  
 ```  
   
-  **In thread 3, Counter \= 0**  
-**In thread 3, Counter \= 10**  
-**In thread 5, Counter \= 0**  
-**In thread 5, Counter \= 10**  
-**In thread 4, Counter \= 0**  
-**In thread 4, Counter \= 10**  
-**In thread 7, Counter \= 0**  
-**In thread 7, Counter \= 10**  
-**In thread 6, Counter \= 0**  
-**In thread 6, Counter \= 10**  
-**All threads completed.**   
-## 요구 사항  
- **Header file** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [lock 멤버](../dotnet/lock-members.md)   
  [lock::operator bool](../dotnet/lock-operator-bool.md)

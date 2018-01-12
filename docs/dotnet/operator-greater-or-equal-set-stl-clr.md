@@ -1,33 +1,33 @@
 ---
-title: "operator&gt;= (set)(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::operator>="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator>= 멤버[STL/CLR]"
+title: "연산자&gt;= (set) (STL/CLR) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::operator>=
+dev_langs: C++
+helpviewer_keywords: operator>= member [STL/CLR]
 ms.assetid: d08a0fc9-02e4-4e05-b469-bac325c38370
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ed921ecf03eea870e26cec1e89093311a67b3320
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# operator&gt;= (set)(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-List greater than or equal comparison.  
+# <a name="operatorgt-set-stlclr"></a>연산자&gt;= (set) (STL/CLR)
+보다 큰 목록 또는 같은지 비교 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Key>  
@@ -35,17 +35,17 @@ template<typename Key>
         set<Key>% right);  
 ```  
   
-#### 매개 변수  
- left  
- Left container to compare.  
+#### <a name="parameters"></a>매개 변수  
+ 왼쪽  
+ 비교할 왼쪽 컨테이너입니다.  
   
- right  
- Right container to compare.  
+ 오른쪽  
+ 비교할 오른쪽 컨테이너입니다.  
   
-## 설명  
- The operator function returns `!(``left` `<` `right``)`.  You use it to test whether `left` is not ordered before `right` when the two sets are compared element by element.  
+## <a name="remarks"></a>설명  
+ 연산자 함수 반환 `!(left < right)`합니다. 테스트를 사용 하는지 여부를 `left` 하기 전에 정렬 되지 않은 `right` 때 두 가지 않습니다 요소 별로 비교 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_set_operator_ge.cpp   
@@ -85,19 +85,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \>\= \[a b c\] is True**  
-**\[a b c\] \>\= \[a b d\] is False**   
-## 요구 사항  
- **Header:** \<cliext\/set\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] >= [a b c] is True  
+[a b c] >= [a b d] is False  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [set](../dotnet/set-stl-clr.md)   
- [operator\=\= \(set\)](../dotnet/operator-equality-set-stl-clr.md)   
- [operator\!\= \(set\)](../dotnet/operator-inequality-set-stl-clr.md)   
- [operator\< \(set\)](../dotnet/operator-less-than-set-stl-clr.md)   
- [operator\> \(set\)](../dotnet/operator-greater-than-set-stl-clr.md)   
- [operator\<\= \(set\)](../dotnet/operator-less-or-equal-set-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [연산자 = = (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)   
+ [operator! = (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)   
+ [연산자\< (set) (STL/CLR)](../dotnet/operator-less-than-set-stl-clr.md)   
+ [연산자 > (set) (STL/CLR)](../dotnet/operator-greater-than-set-stl-clr.md)   
+ [operator<= (set)(STL/CLR)](../dotnet/operator-less-or-equal-set-stl-clr.md)

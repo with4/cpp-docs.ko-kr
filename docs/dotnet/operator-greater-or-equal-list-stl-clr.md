@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80a503c1b8e4be98c9eb92872373232f1180f2cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1d0f3c5cba12aa240acb5e98046e9bc702558ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-list-stlclr"></a>연산자&gt;= (list) (STL/CLR)
 보다 큰 목록 또는 같은지 비교 합니다.  
@@ -42,7 +45,7 @@ template<typename Value>
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `!(left` `<` `right)`합니다. 테스트를 사용 하는지 여부를 `left` 하기 전에 정렬 되지 않은 `right` 두 목록의 요소 별로 비교를 하는 경우.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_list_operator_ge.cpp   

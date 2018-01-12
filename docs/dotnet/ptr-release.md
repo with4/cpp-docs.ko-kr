@@ -1,45 +1,47 @@
 ---
-title: "ptr::Release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.Release"
-  - "ptr::Release"
-  - "msclr.com.ptr.Release"
-  - "msclr::com::ptr::Release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Release 메서드"
+title: ptr::Release | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.Release
+- ptr::Release
+- msclr.com.ptr.Release
+- msclr::com::ptr::Release
+dev_langs: C++
+helpviewer_keywords: Release method
 ms.assetid: 7855781e-e4f6-4ad5-86a5-a81e2c3d90db
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3959ea6f1c48c22af15272a768cb73923911829a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::Release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Releases all owned references on the COM object.  
+# <a name="ptrrelease"></a>ptr::Release
+COM 개체에서 모든 소유 참조를 해제합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void Release();  
 ```  
   
-## 설명  
- Calling this function releases all owned references on the COM object and sets the internal handle to the COM object to `nullptr`.  If no other references on the COM object exist, it will be destroyed.  
+## <a name="remarks"></a>설명  
+ COM 개체에서 모든 소유 참조를 해제 하 고 내부 핸들을 COM 개체로 설정 합니다.이 함수를 호출 `nullptr`합니다.  COM 개체에 다른 참조가 있는 경우 제거 됩니다.  
   
-## 예제  
- This example implements a CLR class that uses a `com::ptr` to wrap its private member `IXMLDOMDocument` object.  The `ReplaceDocument` member function uses `Release` to release any prior document object before attaching the new document.  
+## <a name="example"></a>예  
+ 이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `ReplaceDocument` 멤버 함수를 사용 하 여 `Release` 새 문서를 연결 하기 전에 모든 이전 문서 개체를 해제 하 합니다.  
   
 ```  
 // comptr_release.cpp  
@@ -113,11 +115,11 @@ int main() {
 }  
 ```  
   
-## 요구 사항  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>요구 사항  
+ **헤더 파일** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ptr 멤버](../dotnet/ptr-members.md)   
  [ptr::Detach](../dotnet/ptr-detach.md)

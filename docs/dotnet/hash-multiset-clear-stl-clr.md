@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::clear(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear 멤버[STL/CLR]"
+title: 'hash_multiset:: clear (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 2253d5e3-38e6-4ad4-aff4-b546fe95830f
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 535e3e56c1851d6aec25406b3242dfde54b1215b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::clear(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Removes all elements.  
+# <a name="hashmultisetclear-stlclr"></a>hash_multiset::clear(STL/CLR)
+모든 요소를 제거합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void clear();  
 ```  
   
-## 설명  
- The member function effectively calls [hash\_multiset::erase](../dotnet/hash-multiset-erase-stl-clr.md)`(` [hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)`(),` [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`())`.  You use it to ensure that the controlled sequence is empty.  
+## <a name="remarks"></a>설명  
+ 멤버 함수 시그니처 [hash_multiset:: erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md) `(` [hash_multiset:: begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md) `(),` [hash_multiset:: end (STL/CLR) ](../dotnet/hash-multiset-end-stl-clr.md)`())`. 제어 되는 시퀀스 비어 있는지 확인 하려면 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_hash_multiset_clear.cpp   
@@ -73,15 +74,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 0**  
- **a b**  
-**size\(\) \= 0**   
-## 요구 사항  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::erase](../dotnet/hash-multiset-erase-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::erase(STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c62bb735a84b04bfb0c1addd5e3dd20a48a3eb33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1cb7d80f016250d289a70456f6fbfe2011c9410b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2071"></a>컴파일러 오류 C2071
 'identifier': 저장소 클래스가 잘못되었습니다  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  이 문제를 해결 하려면 식별자의 의도 한 저장소 클래스를 이해-예를 들어 `static` 또는 `extern`-선언에 맞게 수정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2071 오류가 발생하는 경우를 보여 줍니다.  
   
 ```  
@@ -42,7 +43,7 @@ struct D {
 };  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 C2071 오류가 발생하는 경우를 보여 줍니다.  
   
 ```  

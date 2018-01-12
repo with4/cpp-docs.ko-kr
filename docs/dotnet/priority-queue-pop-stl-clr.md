@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::pop(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop 멤버[STL/CLR]"
+title: 'priority_queue:: pop (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: d363b3f1-247b-466a-a300-c5918b0dfd4e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6894a4acff991b069f7c5b587fd8a90c5a3a40ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::pop(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Removes the highest\-proirity element.  
+# <a name="priorityqueuepop-stlclr"></a>priority_queue::pop(STL/CLR)
+가장 높은 proirity 요소를 제거합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 void pop();  
 ```  
   
-## 설명  
- The member function removes the highest\-priority element of the controlled sequence, which must be non\-empty.  You use it to shorten the queue by one element at the back.  
+## <a name="remarks"></a>설명  
+ 멤버 함수는 비어 있어야 제어 되는 우선 순위가 가장 높은 요소를 제거 합니다. 뒤에 한 요소 하 여 큐를 축소를 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_priority_queue_pop.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **c a b**  
- **b a**   
-## 요구 사항  
- **Header:** \<cliext\/queue\>  
+```Output  
+c a b  
+b a  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/queue >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::push](../dotnet/priority-queue-push-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::push(STL/CLR)](../dotnet/priority-queue-push-stl-clr.md)

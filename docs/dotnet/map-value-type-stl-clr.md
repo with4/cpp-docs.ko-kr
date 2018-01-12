@@ -1,41 +1,42 @@
 ---
-title: "map::value_type(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type 멤버[STL/CLR]"
+title: 'map:: value_type (STL/CLR) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 9f02ac42-c1e0-4671-bed3-72d6c06a1e66
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3d4f1432e26415edd2ac6a3c70da4c51433ca89f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# map::value_type(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapvaluetype-stlclr"></a>map::value_type(STL/CLR)
 요소의 형식입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 typedef generic_value value_type;  
 ```  
   
-## 설명  
- The type is a synonym for `generic_value`.  
+## <a name="remarks"></a>설명  
+ 이 형식은 `generic_value`의 동의어입니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_map_value_type.cpp   
@@ -62,14 +63,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 요구 사항  
- **Header:** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/매핑 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [map](../dotnet/map-stl-clr.md)   
- [map::const\_reference](../dotnet/map-const-reference-stl-clr.md)   
- [map::key\_type](../dotnet/map-key-type-stl-clr.md)   
- [map::reference](../dotnet/map-reference-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map:: const_reference (STL/CLR)](../dotnet/map-const-reference-stl-clr.md)   
+ [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)   
+ [map::reference(STL/CLR)](../dotnet/map-reference-stl-clr.md)

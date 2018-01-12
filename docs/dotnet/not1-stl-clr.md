@@ -1,50 +1,51 @@
 ---
-title: "not1(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not1 함수[STL/CLR]"
+title: not1 (STL/CLR) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not1
+dev_langs: C++
+helpviewer_keywords: not1 function [STL/CLR]
 ms.assetid: a50cd819-10de-4d81-84da-8a34c5414a43
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c159c0667cf09d466a50487a0369a724a538676d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# not1(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Generates a `unary_negate` for a functor.  
+# <a name="not1-stlclr"></a>not1(STL/CLR)
+생성 한 `unary_negate` 함수에 대 한 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
-## 템플릿 매개 변수  
- Fun  
- The type of the functor.  
+## <a name="template-parameters"></a>템플릿 매개 변수  
+ 재미  
+ 함수의 형식입니다.  
   
-## 함수 매개 변수  
- functor  
- The functor to wrap.  
+## <a name="function-parameters"></a>함수 매개 변수  
+ 함수  
+ 래핑할 함수입니다.  
   
-## 설명  
- The template function returns [unary\_negate](../dotnet/unary-negate-stl-clr.md)`<``Fun``>(functor)`.  You use it as a convenient way to wrap a one\-argument functor in a functor that delivers its logical NOT.  
+## <a name="remarks"></a>설명  
+ 템플릿 함수를 반환 [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`합니다. 해당 논리 NOT을 전달 하는 함수에서 인수가 한 개인 함수를 줄 바꿈 하는 편리한 방법으로 사용 합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cliext_not1.cpp   
@@ -86,13 +87,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## 요구 사항  
- **Header:** \<cliext\/functional\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/기능 >  
   
  **Namespace:** cliext  
   
-## 참고 항목  
- [unary\_negate](../dotnet/unary-negate-stl-clr.md)
+## <a name="see-also"></a>참고 항목  
+ [unary_negate(STL/CLR)](../dotnet/unary-negate-stl-clr.md)
