@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-overloading"></a>함수 오버로드
 C++에서는 동일한 범위에서 이름이 같은 함수를 둘 이상 지정할 수 있습니다. 이러한 함수는 오버로드된 함수라고 하며 오버로드에 자세히 설명되어 있습니다. 프로그래머가 오버로드된 함수를 사용하면 인수의 형식 및 수에 따라 함수에 대한 서로 다른 의미 체계를 제공할 수 있습니다.  
@@ -42,7 +43,7 @@ C++에서는 동일한 범위에서 이름이 같은 함수를 둘 이상 지정
   
  함수는 반환 형식에 따라 구분할 수 있지만 오버로드할 수는 없습니다.  `Const`또는 `volatile` 은 기반으로 오버 로드 사용에 적용할 클래스에서 사용 되는 경우는 **이** 함수의 반환 형식이 아니라 클래스에 대 한 포인터입니다.  즉, 경우에 적용 오버 로드는 **const** 또는 `volatile` 키워드가 선언에 있는 함수의 인수 목록을 따르는 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 오버로드 사용 방법을 보여 줍니다.  
   
 ```  

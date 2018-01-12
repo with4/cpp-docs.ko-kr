@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e2c8d500f8621d894439acc9a5d510e92c62914
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9f8c6db8b5359748f350d3c9da73fd0e527bf50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>컴파일러 내장 및 어셈블리 언어
 설명서의 이 단원에는 컴파일러 내장 함수 및 어셈블리 언어에 대한 정보가 포함되어 있습니다.  
