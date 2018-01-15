@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f84f891a12da90efbe68371d077e2d41b111ea0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b458dbe06bd69817c659c3bfec1d1ab7a216d1f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>자동 병렬화 및 자동 벡터화
 자동 평행화 도우미 및 자동 벡터화 도우미는 코드의 루프 성능을 자동으로 향상시키기 위해 설계되었습니다.  
@@ -117,7 +118,7 @@ for (int i = 0; i < 1000; ++i)
   
 ## <a name="see-also"></a>참고 항목  
  [루프](../preprocessor/loop.md)   
- [네이티브 코드의 병렬 프로그래밍](http://go.microsoft.com/fwlink/?linkid=263662)   
+ [네이티브 코드의 병렬 프로그래밍](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [/Qpar (자동 평행 화 도우미)](../build/reference/qpar-auto-parallelizer.md)   
  [/Qpar-report (자동 평행 화 도우미 보고 수준)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
  [/Qvec-report (자동 벡터화 도우미 보고 수준)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)   

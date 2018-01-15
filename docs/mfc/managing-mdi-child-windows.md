@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1489fa4ec75b94c9daad7216a28599c6ef67e5a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5ebcd6e484385ada3cd3d5ccfe450e7e25f539eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-mdi-child-windows"></a>MDI 자식 창 관리
 MDI 주 프레임 창 (응용 프로그램 당 하나) 라는 특수 한 자식 창이 포함 된 **MDICLIENT** 창. **MDICLIENT** 창은 주 프레임 창의 클라이언트 영역을 관리 하 고 자식 창 자체에:에서 파생 된 문서 창인 `CMDIChildWnd`합니다. 문서 창은 그 자체로 프레임 창(MDI 자식 창)이기 때문에 고유 자식을 포함할 수도 있습니다. 이러한 모든 경우, 부모 창은 해당 자식 창을 관리하고 일부 명령을 자식 창에 전달합니다.  

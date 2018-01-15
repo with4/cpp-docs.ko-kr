@@ -24,11 +24,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a44245ea212a770902787e01d1896612b7cb37b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ea618ca6a5784b44666c70d79bb10b2e9f6e394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-class-concurrency-runtime"></a>작업 클래스(동시성 런타임)
 PPL(병렬 패턴 라이브러리) `task` 클래스입니다. `task` 개체는 비동기식으로 실행할 수 있으며 동시성 런타임의 병렬 알고리즘을 통해 생성되는 기타 작업 및 병렬 작업과 동시에 실행할 수 있는 작업을 나타냅니다. 이러한 작업이 정상적으로 완료되면 `_ResultType` 형식의 결과가 생성됩니다. `task<void>` 형식의 작업에서는 결과가 생성되지 않습니다. 작업은 다른 작업과 관계없이 대기 및 취소할 수 있으며 연속을 사용 하 여 다른 작업으로 구성 될 수도 있습니다 ( `then`), 조인 ( `when_all`) 및 선택 ( `when_any`) 패턴.  

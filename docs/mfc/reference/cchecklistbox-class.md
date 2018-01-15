@@ -39,11 +39,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe432aec3a68889ad70ab7c229df3c2f7529df3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64e22176d0df2408db8a8c9435fde5b4c6775d21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 클래스
 Windows 검사 목록 상자의 기능을 제공합니다.  
@@ -128,7 +129,7 @@ CCheckListBox();
 ### <a name="remarks"></a>설명  
  생성할는 `CCheckListBox` 두 단계를 수행에서 하는 개체입니다. 파생 된 클래스를 먼저 정의 `CCheckListBox`, 호출 **만들기**, Windows 검사 목록 상자를 초기화 하 고에 연결 하는 `CCheckListBox` 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
 ##  <a name="create"></a>CCheckListBox::Create  

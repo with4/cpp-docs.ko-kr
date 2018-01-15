@@ -4,37 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 493b622bf49ddd148e0877b15659e10646f46d4e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f23208b916c190e2fbcdcd0db4ce0709485795ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chrono-literals"></a>chrono 리터럴
 (C++14) \<chrono> 헤더는 12가지 [사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md)을 정의하여 시, 분, 초, 밀리초, 마이크로초 및 나노초를 나타내는 리터럴의 사용을 한층 쉽게 만듭니다. 각 사용자 정의 리터럴에는 정수 계열 및 부동 소수점 오버로드가 있습니다. 리터럴은 std::chrono가 범위에 있을 때 자동으로 범위로 가져오는 literals::chrono_literals 인라인 네임스페이스에서 정의됩니다.  
@@ -87,7 +71,7 @@ inline namespace literals {
 ## <a name="return-value"></a>반환 값  
  `long long` 인수를 사용하는 리터럴은 값 또는 해당 형식을 반환합니다. 부동 소수점 인수를 사용하는 리터럴은 [duration](../standard-library/duration-class.md)을 반환합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 chrono 리터럴을 사용하는 방법을 보여 줍니다.  
   
 ```cpp  
@@ -103,5 +87,4 @@ constexpr auto my_duration_unit = 108ms;
   
 ## <a name="see-also"></a>참고 항목  
  [\<chrono>](../standard-library/chrono.md)
-
 

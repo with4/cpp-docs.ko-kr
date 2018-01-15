@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54ca5ac28d4f5fb044b78ad7b846cd20d73e2c22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68b4a5ba27d4fcb6fcaac7c80662d778c7cbbca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 구조체
 `AFX_GLOBAL_DATA` 구조는 프레임워크를 관리하거나 응용 프로그램의 모양과 동작을 사용자 지정하는 데 사용되는 필드 및 메서드를 포함합니다.  
@@ -75,7 +76,7 @@ struct AFX_GLOBAL_DATA
 |[Afx_global_data:: updatefonts](#updatefonts)|프레임워크에서 사용하는 논리 글꼴을 다시 초기화합니다.|  
 |[Afx_global_data:: updatesyscolors](#updatesyscolors)|프레임워크에서 사용하는 색, 색 농도, 브러시, 펜 및 이미지를 초기화합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -85,7 +86,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[Afx_global_data:: bisosalphablendingsupport](#bisosalphablendingsupport)|현재 운영 체제가 알파 혼합을 지원하는지 여부를 나타냅니다.|  
 |[Afx_global_data:: biswindows7](#biswindows7)|응용 프로그램이 Windows 7 운영 체제 이상에서 실행되고 있는지 여부를 나타냅니다.|  

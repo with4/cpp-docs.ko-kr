@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9ccdd1222335cba8ba3169903f8a05e064801ccd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7439908970d61f55f10915ff69bc990a6fcc841
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>인수 없이 고유 조작자 작성
 인수를 사용하지 않는 조작자를 작성할 때는 클래스 파생이 필요하지 않으며 복잡한 매크로를 사용할 필요도 없습니다. 프린터에서 \<ESC>[ 쌍을 굵은 글꼴 모드로 입력해야 한다고 가정해 보겠습니다. 이 경우 스트림에 이 쌍을 직접 삽입할 수 있습니다.  

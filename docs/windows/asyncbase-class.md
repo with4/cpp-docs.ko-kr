@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad32c1ed42a2a991ba9ed9bd550330bc460834cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c33d48c69852ab22cfa2bfb4f33d45edcc469662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncbase-class"></a>AsyncBase 클래스
 Windows 런타임 비동기 상태 컴퓨터를 구현합니다.  
@@ -78,7 +81,7 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
 |[AsyncBase::PutOnProgress 메서드](../windows/asyncbase-putonprogress-method.md)|진행률 이벤트 처리기의 주소 지정된 된 값으로 설정합니다.|  
 |[AsyncBase::Start 메서드](../windows/asyncbase-start-method.md)|비동기 작업을 시작 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  

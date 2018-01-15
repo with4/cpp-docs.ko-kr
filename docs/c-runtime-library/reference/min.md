@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- __min
+apiname: __min
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,23 @@ f1_keywords:
 - __min
 - min
 - _min
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __min macro
 - min macro
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 171ca8b2136e2311a814328989b4dd121416918a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8504736d10c02a58ba456e8dd501ca09084c9529
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="min"></a>__min
 두 값 중 더 작은 값을 반환합니다.  
@@ -86,11 +69,11 @@ type __min(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`__min`|\<stdlib.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_minmax.c  

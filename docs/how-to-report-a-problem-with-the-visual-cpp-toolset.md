@@ -1,23 +1,22 @@
 ---
 title: "Visual C++ 도구 집합의 문제를 보고하는 방법 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: C++
-ms.assetid: ec24a49c-411d-47ce-aa4b-8398b6d3e8f6
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a669b2935e4c21421d0c760e6de0c5c7340bed4
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Visual C++ 도구 집합의 문제를 보고하는 방법
 
@@ -29,9 +28,9 @@ Visual C++ 컴파일러, 링커 또는 기타 도구에 문제가 발생하면 �
 
 - [보고서를 준비하는 방법](#prepare) 및 좋은 보고서의 요소
 
-- [보고서를 보내는 방법](#send) 및 차이점
-
 - [재현하는 방법](#generate) 및 다양한 종류의 재현
+
+- [보고서를 보내는 방법](#send) 및 차이점
 
 보고서는 Microsoft와 다른 개발자에게 중요합니다. Visual C++ 개선에 도움 주셔서 감사합니다!
 
@@ -47,7 +46,7 @@ Visual C++ 컴파일러, 링커 또는 기타 도구에 문제가 발생하면 �
 
 - 발생한 문제에 대한 자세한 설명
 
-- '재현' - 문제를 보여 주는 소스 코드
+- '재현' - 문제를 보여 주는 소스 코드입니다.
 
 필요한 특정 정보와 이 정보를 확인할 수 있는 위치에 대해 자세히 읽어보세요.
 
@@ -94,7 +93,7 @@ cl : Command line error D8003 : missing source filename
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>명령줄의 내용을 보고하려면
 
-1. **CL.command.1.tlog** 파일을 찾아서 엽니다. 기본적으로 이 파일은 \\...\Visual Studio Version\Projects\SolutionName\ProjectName\Config\ProjectName.tlog\CL.command.1.tlog에 있습니다.
+1. **CL.command.1.tlog** 파일을 찾아서 엽니다. 기본적으로 이 파일은 \\...\Visual Studio *version*\Projects\\*SolutionName*\\*ProjectName*\Config\\*ProjectName*.tlog\CL.command.1.tlog에 있습니다.
 
    이 파일 내에서 소스 코드 파일의 이름과 각 파일을 컴파일하는 데 사용된 명령줄 인수를 각 줄에 하나씩 찾을 수 있습니다.
 
@@ -221,43 +220,6 @@ CONTEXT:
 
 이러한 종류의 충돌을 보고하려면 [링크 재현](#link-repros)(LTCG(링크 타임 코드 생성)를 사용하는 경우) 또는 [전처리 재현](#preprocessed-repros)(LTCG를 사용하지 않는 경우)을 제공하세요. LTGC는 cl.exe에 대한 `/GL` 명령줄 인수를 통해 사용됩니다.
 
-## <a name="send"></a> 보고서를 보내는 방법
-
-여러 가지 방법으로 보고서를 보낼 수 있습니다. Visual Studio의 기본 제공 [문제 보고 도구](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)를 사용하거나 Microsoft로 전자 메일을 보낼 수 있습니다. 보고서에 적합한 선택 항목은 발생한 문제 종류, 보고서를 조사할 엔지니어와 상호 작용하려는 방법, 진행 상황을 추적하거나 보고서를 커뮤니티와 공유할지 여부에 따라 달라집니다.
-
-> [!NOTE]
-> 보고서를 제출하는 방법에 관계없이 Microsoft는 사용자의 개인 정보를 보호합니다. Microsoft에서 사용자가 보낸 데이터를 처리하는 방법에 대한 자세한 내용은 [Microsoft Visual Studio 제품군 개인정보처리방침](https://www.visualstudio.com/dn948229)을 참조하세요.
-
-### <a name="send-an-email"></a>전자 메일 보내기
-
-전자 메일은 Visual C++ 팀에게 직접 보고서를 보내는 또 다른 방법입니다. [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com)으로 전자 메일을 보내면 됩니다.
-
-전자 메일을 통해 보고서를 보내는 경우 다음 템플릿을 전자 메일 메시지의 본문으로 사용할 수 있습니다. 전자 메일 본문에 해당 정보를 포함하지 않는 경우 소스 코드나 다른 파일을 첨부하세요.
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
-### <a name="use-the-report-a-problem-tool"></a>문제 보고 도구 사용
-
-Visual Studio의 문제 보고 도구는 Visual Studio 사용자가 마우스만 몇 번 클릭하여 다양한 문제를 보고할 수 있는 방법입니다. IDE를 벗어나지 않고 발생한 문제에 대한 자세한 정보를 지정한 다음 보고서를 제출하는 데 사용할 수 있는 간단한 양식을 제공합니다.
-
-이 문서에 설명된 종류의 도구 집합 문제에서는 문제 보고 도구를 통해 문제를 보고하는 경우가 드물지만 원하는 경우 선택할 수 있는 옵션입니다.
-
-> [!TIP]
-> Visual Studio에서 발생할 수 있고 도구 집합과 관련이 없는 다른 종류의 문제(예: UI 문제, 손상된 IDE 기능 또는 일반 충돌)에서는 스크린샷 기능과 발생한 문제를 초래하는 UI 작업 기록 기능 때문에 문제 보고 도구가 특히 유용할 수 있습니다. 이러한 다른 종류의 오류는 compilercrash@microsoft.com으로 전자 메일을 전송하여 보고하면 안 됩니다.
-
 ## <a name="generate"></a> 재현 생성
 
 재현은 발생한 문제를 보여 주는 완전한 자체 포함된 코드 예제입니다. 재현은 코드 조각이 **아닙니다**. 보고하는 문제로 인해 생성되는 오류를 제외하고 빌드 및 실행되는 전체 예제여야 합니다. 표준 헤더의 경우에도 필요한 모든 #include 지시문을 포함해야 합니다.
@@ -330,3 +292,51 @@ Visual Studio의 문제 보고 도구는 Visual Studio 사용자가 마우스만
 문제를 단일 소스 파일이나 전처리 재현으로 줄일 수 없고 문제에 링크 재현이 필요하지 않은 경우 IDE 프로젝트를 조사할 수 있습니다. 프로젝트 내의 코드는 최소화해야 하며, 이 문서의 모든 지침도 적용됩니다.
 
 재현을 최소 IDE 프로젝트로 만든 다음 전체 디렉터리 구조를 .zip 파일 등으로 압축하여 패키징하고 보고서에 첨부합니다.
+
+## <a name="send"></a> 보고서를 보내는 방법
+
+여러 가지 방법으로 보고서를 보낼 수 있습니다. Visual Studio의 기본 제공 [문제 도구 보고](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) 또는 [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/) 페이지를 사용할 수 있습니다. 또한 보고서가 포함된 전자 메일을 보낼 수도 있지만 앞서 말한 두 가지 방법이 더 좋습니다. 보고서를 조사할 엔지니어와 상호 작용하려는 방법, 진행 상황을 추적하거나 보고서를 커뮤니티와 공유할지 여부에 따라 선택이 달라집니다.
+
+> [!NOTE]
+> 보고서를 제출하는 방법에 관계없이 Microsoft는 사용자의 개인 정보를 보호합니다. Microsoft에서 사용자가 보낸 데이터를 처리하는 방법에 대한 자세한 내용은 [Microsoft Visual Studio 제품군 개인정보처리방침](https://www.visualstudio.com/dn948229)을 참조하세요.
+
+### <a name="use-the-report-a-problem-tool"></a>문제 보고 도구 사용
+
+Visual Studio의 **문제 보고** 도구는 Visual Studio 사용자가 마우스만 몇 번 클릭하여 다양한 문제를 보고할 수 있는 방법입니다. IDE를 벗어나지 않고 발생한 문제에 대한 자세한 정보를 지정한 다음 보고서를 제출하는 데 사용할 수 있는 간단한 양식을 제공합니다.
+
+**문제 보고** 도구를 통한 문제 보고는 IDE에서 쉽고 간편하게 수행할 수 있습니다. **빠른 시작** 검색 상자 옆에 있는 **사용자 의견 보내기** 아이콘을 선택하여 제목 표시줄에서 액세스하거나 메뉴 표시줄의 **도움말** > **사용자 의견 보내기** > **문제 보고**에서 해당 메뉴를 찾을 수 있습니다.
+
+문제를 보고하려는 경우 개발자 커뮤니티에서 유사한 문제를 검색합니다. 이전에 문제가 보고된 적이 있다면 항목에 찬성하고 추가 세부 정보가 포함된 댓글을 추가하세요. 유사한 문제가 표시되지 않는다면 Visual Studio 피드백 대화 상자의 **새로운 문제 보고** 단추를 선택하고 단계에 따라 문제를 보고합니다.
+
+### <a name="use-the-visual-studio-developer-community-pages"></a>Visual Studio 개발자 커뮤니티 페이지 사용
+
+Visual Studio 개발자 커뮤니티 페이지는 C++ 컴파일러, 도구 및 라이브러리에 대한 문제를 보고하고 해결 방법을 찾을 수 있는 또 다른 편리한 방법입니다. [Visual Studio 질문](https://developercommunity.visualstudio.com/spaces/8/index.html) 페이지에는 IDE 또는 설치 관련 문제를 보고합니다. C++ 컴파일러, 링커, 기타 도구 및 라이브러리와 관련된 문제의 경우 [C++ 질문](https://developercommunity.visualstudio.com/spaces/62/index.html) 페이지를 사용합니다.
+
+개발자 커뮤니티에서 각 페이지의 맨 위 부근에 있는 배너는 자신의 문제와 유사한 문제를 보고하는 게시물이나 항목을 찾는 데 사용할 수 있는 검색 상자입니다. 자신의 문제와 관련된 해결 방법이나 기타 유용한 정보가 기존 항목에 이미 있을 수 있습니다. 누군가가 이전에 동일한 문제를 보고한 경우 새 문제 보고서를 만드는 대신 해당 항목에 찬성하고 댓글을 다세요.
+
+문제가 이전에 보고된 적이 없다면 개발자 커뮤니티 페이지의 검색 상자 옆에 있는 **문제 보고** 단추를 선택하세요. Visual Studio 계정에 로그인하고 개발자 커뮤니티 앱의 프로필 액세스에 동의할지 묻는 메시지가 표시될 수 있습니다. 로그인하면 문제를 보고할 수 있는 페이지로 바로 이동합니다. 재현 코드 및 명령줄, 스크린샷, 관련 토론에 대한 링크 및 자신이 관련성 있고 유용하다고 생각하는 기타 정보를 포함할 수 있습니다.
+
+### <a name="send-an-email"></a>전자 메일 보내기
+
+전자 메일은 Visual C++ 팀에게 직접 보고서를 보내는 또 다른 방법입니다. [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com)으로 전자 메일을 보내면 됩니다. 이 방법은 다른 두 가지 방법을 사용할 수 없는 경우에만 사용합니다. 전자 메일은 **문제 보고** 도구나 웹 페이지를 사용하여 개발자 커뮤니티에 보고된 문제만큼 면밀히 추적되지 않으며, 다른 Visual Studio 사용자가 설명과 해결 방법을 볼 수 없기 때문입니다.
+
+전자 메일을 통해 보고서를 보내는 경우 다음 템플릿을 전자 메일 메시지의 본문으로 사용할 수 있습니다. 전자 메일 본문에 해당 정보를 포함하지 않는 경우 소스 코드나 다른 파일을 첨부하세요.
+
+```Example
+To: compilercrash@microsoft.com
+Subject: Visual C++ Error Report
+-----
+
+Compiler version:
+
+CL.EXE command line:
+
+Problem description:
+
+Source code and repro steps:
+
+```
+
+> [!TIP]
+> Visual Studio에서 발생할 수 있고 도구 집합과 관련이 없는 다른 종류의 문제(예: UI 문제, 손상된 IDE 기능 또는 일반 충돌)에서는 스크린샷 기능과 발생한 문제를 초래하는 UI 작업 기록 기능 때문에 문제 보고 도구가 특히 유용할 수 있습니다. 이러한 다른 종류의 오류는 compilercrash@microsoft.com으로 전자 메일을 전송하여 보고하면 안 됩니다.
+

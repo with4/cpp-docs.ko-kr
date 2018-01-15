@@ -43,11 +43,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de31d57f3b9724cf8a3075b34be45a21556aea2f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 546e251f3387175812e6ba7f8cfed5d8a878d658
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 클래스
 ActiveX 컨트롤(이전의 OLE 컨트롤)에서 비동기 모니커를 사용할 수 있도록 기능을 제공합니다.  
@@ -75,7 +76,7 @@ class CAsyncMonikerFile : public CMonikerFile
 |[CAsyncMonikerFile::GetFormatEtc](#getformatetc)|스트림의 데이터의 형식을 검색합니다.|  
 |[CAsyncMonikerFile::Open](#open)|비동기적으로 파일을 엽니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -234,7 +235,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ### <a name="remarks"></a>설명  
  이 함수의 기본 구현은 아무 작업도 수행하지 않습니다. 샘플 구현 보려면 다음 예제를 참조 하십시오.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
   
 ##  <a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  

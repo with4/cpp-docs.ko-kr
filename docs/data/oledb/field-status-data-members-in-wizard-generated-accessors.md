@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e3991e2e5cab8814cba4e92882fbd978bdc051eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5b11350adfa70f38824744054df01d3d657e7474
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>마법사 생성 접근자의 필드 상태 데이터 멤버
 ATL OLE DB 소비자 마법사를 사용 하 여 소비자를 만드는 마법사를 열 지도에 지정 하는 각 필드에 대 한 사용자 레코드 클래스에에서 데이터 멤버를 생성 합니다. 각 데이터 멤버는 형식의 `DWORD` 각 필드에 해당 하는 상태 값을 포함 합니다.  
@@ -84,7 +87,7 @@ END_COLUMN_MAP()
   
  또한 특정 필드에 NULL 값을 설정 하는 상태 값을 사용할 수 있습니다. 이렇게 하면 0이 아닌 NULL로 필드 값을 구분 하기 위해 원하는 경우에 도움이 됩니다. 사용자가 결정 하는 특수 값 또는 유효한 값을 NULL 인지 여부를 결정 하 고 응용 프로그램 해야 처리 하는 방법을 결정 합니다. OLE DB 정의 **DBSTATUS_S_ISNULL** 제네릭 NULL 값을 지정 하는 올바른 방법으로 합니다. 상태 필드 설정 되어 소비자가 데이터를 읽는 경우 값이 null **DBSTATUS_S_ISNULL**합니다. 소비자 상태 값을 설정 하는 소비자를 NULL 값을 설정 하려는 경우 **DBSTATUS_S_ISNULL** 공급자를 호출 하기 전에.  
   
- 다음으로, Oledb.h를 열고 검색 **DBSTATUSENUM**합니다. 0이 아닌 상태에 대 한 숫자 값을 일치 시킬 수 있습니다는 **DBSTATUSENUM** 열거형 값입니다. 열거형 이름으로 문제를 파악 하는 충분 하지 않을 경우의 "데이터 값 바인딩" 섹션에서 "상태" 항목을 참조 하십시오.는 [OLE DB Programmer's Guide](http://go.microsoft.com/fwlink/?linkid=121548)합니다. 이 항목의 상태 값을 가져오거나 데이터를 설정할 때 사용 되는 테이블을 포함 합니다. 길이 값에 대 한 내용은 동일한 섹션에서 "길이" 항목을 참조 합니다.  
+ 다음으로, Oledb.h를 열고 검색 **DBSTATUSENUM**합니다. 0이 아닌 상태에 대 한 숫자 값을 일치 시킬 수 있습니다는 **DBSTATUSENUM** 열거형 값입니다. 열거형 이름으로 문제를 파악 하는 충분 하지 않을 경우의 "데이터 값 바인딩" 섹션에서 "상태" 항목을 참조 하십시오.는 [OLE DB Programmer's Guide](http://go.microsoft.com/fwlink/p/?linkid=121548)합니다. 이 항목의 상태 값을 가져오거나 데이터를 설정할 때 사용 되는 테이블을 포함 합니다. 길이 값에 대 한 내용은 동일한 섹션에서 "길이" 항목을 참조 합니다.  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>길이 또는 열의 상태를 검색합니다.  
  가변 길이 열의 길이 또는 열의 상태를 검색할 수 있습니다 (확인 **DBSTATUS_S_ISNULL**예):  

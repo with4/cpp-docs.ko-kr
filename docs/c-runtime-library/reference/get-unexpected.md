@@ -34,11 +34,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 493dd3036e7f83ebf0e8fd94f62e57945ede52e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d40eab2cb632f7a29d88f0718388ea0582b147d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getunexpected"></a>_get_unexpected
 `unexpected`에서 호출할 종료 루틴을 반환합니다.  
@@ -54,7 +55,7 @@ unexpected_function _get_unexpected( void );
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_get_unexpected`|\<eh.h>|  
   

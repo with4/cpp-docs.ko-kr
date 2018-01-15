@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _creat
 - tcreat
 - _tcreat
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcreat function
 - _wcreat function
@@ -41,31 +39,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f034e2b80cc1bd3e7b5fc4578a6f5e77a060593c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d8474031a7ba98952c258b4dc4041c7eff57c434
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 새 파일을 만듭니다. `_creat` 및 `_wcreat`는 더 이상 사용되지 않습니다. 대신 [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)를 사용하세요.  
@@ -101,7 +84,7 @@ int _wcreat(
   
  `filename`이 NULL인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이러한 함수는 `errno` 를 `EINVAL` 로 설정하고 -1을 반환합니다.  
   
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하십시오.  
   
 ## <a name="remarks"></a>설명  
  `_creat` 함수는 새 파일을 만들거나 기존 파일을 열어 자릅니다. `_wcreat`은 `_creat`의 와이드 문자 버전이며, `filename`에 대한 `_wcreat` 인수는 와이드 문자열입니다. 그렇지 않으면 `_wcreat`과 `_creat`이 동일하게 작동합니다.  
@@ -126,14 +109,14 @@ int _wcreat(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|선택적 헤더|  
+|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
 |-------------|---------------------|---------------------|  
 |`_creat`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
 |`_wcreat`|\<io.h> 또는 \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_creat.c  

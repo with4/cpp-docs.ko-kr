@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 119c98c8cf5f5a3077afce4e706b177513113d03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 컨트롤 마법사, 컨트롤 설정
 마법사의이 페이지를 사용 하 여 컨트롤이 동작 하는 방법을 지정 합니다. 예를 들어 제어 표준 Windows 컨트롤 형식에 기반 해당 동작과 모양은, 최적화 하거나 컨트롤이 다른 컨트롤에 대 한 컨테이너로 작용할 수 있는지를 나타낼 수 있습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
  **기반으로 하는 컨트롤 만들기**  
  이 목록에 컨트롤이 상속 해야 하는 컨트롤의 종류를 선택할 수 있습니다. 목록에 사용할 수 있는 컨트롤 클래스의 하위 집합인 `CreateWindowEx` 및 commctrl.h에 지정 된 공용 컨트롤을 추가 합니다. 선택 영역에서 컨트롤의 스타일을 결정는 `PreCreateWindow` 함수는 *ProjName*Ctrl.cpp 파일입니다. 자세한 내용은 참조 [MFC ActiveX 컨트롤: Windows 컨트롤 서브클래싱](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)합니다.  
   
-|컨트롤|설명|  
+|Control|설명|  
 |-------------|-----------------|  
 |**단추**|Windows 단추 컨트롤|  
 |**콤보 상자**|Windows 콤보 상자 컨트롤|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
  컨트롤에는 표준 Windows 지정 **에 대 한** 버전 번호 및 저작권 정보를 표시 하는 대화 상자.  
   
 > [!NOTE]
->  사용자가 컨트롤에 대 한 도움말을 액세스 하는 방법 도움말 구현 방법 및 컨트롤 도움말 컨테이너 도움말 통합 했는지 여부에 따라 달라 집니다. 도움말을 통합 하는 방법에 대 한 자세한 내용은 [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) 웹 사이트, "추가 상황에 맞는 도움말에 MFC ActiveX 컨트롤"에 대 한 검색입니다.  
+>  사용자가 컨트롤에 대 한 도움말을 액세스 하는 방법 도움말 구현 방법 및 컨트롤 도움말 컨테이너 도움말 통합 했는지 여부에 따라 달라 집니다. 도움말을 통합 하는 방법에 대 한 자세한 내용은 [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) 웹 사이트, "추가 상황에 맞는 도움말에 MFC ActiveX 컨트롤"에 대 한 검색입니다.  
   
  삽입이 옵션을 선택 하는 경우는 `AboutBox` 프로젝트 컨트롤 클래스의 메서드를 제어 (C*ProjName*Ctrl.cpp) AboutBox 프로젝트 디스패치 지도에 추가 합니다. 기본적으로 이 옵션이 선택됩니다.  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/24/2017
  컨트롤이 활성 인지 여부를 컨트롤을 마우스 포인터 알림 처리할 수 있습니다. 이 옵션을 선택 하는 경우는 `pointerInactive` 플래그에 의해 반환 된 플래그 중 하나는 [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags)합니다. 이 옵션을 사용 하는 방법에 대 한 자세한 내용은 참조 [제공 마우스 상호 작용 하는 동안 비활성](../../mfc/providing-mouse-interaction-while-inactive.md)합니다.  
   
  **단순 프레임 컨트롤의 역할**  
- 컨트롤을 설정 하 여 다른 컨트롤에 대 한 컨테이너 임을 지정는 `OLEMISC_SIMPLEFRAME` 컨트롤에 대 한 비트가 있습니다. 자세한 내용은는 [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) 웹 사이트, "단순 프레임 사이트 포함 항목"에 대 한 검색입니다.  
+ 컨트롤을 설정 하 여 다른 컨트롤에 대 한 컨테이너 임을 지정는 `OLEMISC_SIMPLEFRAME` 컨트롤에 대 한 비트가 있습니다. 자세한 내용은는 [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) 웹 사이트, "단순 프레임 사이트 포함 항목"에 대 한 검색입니다.  
   
  **속성을 비동기적으로 로드**  
  이전 비동기 데이터를 다시 설정 하 고 컨트롤의 비동기 속성의 새 로드를 시작 합니다.  

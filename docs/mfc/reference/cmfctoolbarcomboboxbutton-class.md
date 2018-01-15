@@ -75,11 +75,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18fafd4fece0047a8dcb95e50f8d4e5133ca3760
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7732d58c8e37683f670f6f13bb4df5f49e4ef24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 클래스
 콤보 상자 컨트롤을 포함 하는 도구 모음 단추 ( [CComboBox 클래스](../../mfc/reference/ccombobox-class.md)).  
@@ -142,7 +143,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  자세한 내용은 참조 [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)합니다. 콤보 상자 도구 모음 단추의 예를 들어 VisualStudioDemo 예제 프로젝트를 참조 하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCToolBarComboBoxButton` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 예제에서는 편집 및 콤보 상자를 사용 하도록 설정, 세로 위치 콤보 상자 단추 응용 프로그램 설정, 놓을 때 목록 상자의 높이 설정, 응용 프로그램에서 콤보 상자 단추의 평면 스타일 모양을 설정 하는 방법을 보여 줍니다. 및 상자 단추 콤보의 편집 상자에 텍스트를 설정 합니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]  

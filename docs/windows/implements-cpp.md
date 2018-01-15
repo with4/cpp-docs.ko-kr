@@ -1,69 +1,69 @@
 ---
-title: "implements (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.implements"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "implements attribute"
+title: "구현 (c + +) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.implements
+dev_langs: C++
+helpviewer_keywords: implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# implements (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-IDL coclass의 구성원으로 강제 하는 디스패치 인터페이스를 지정 합니다.  
+# <a name="implements-c"></a>implements(C++)
+IDL coclass의 구성원이 될 해야 하는 디스패치 인터페이스를 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
-      [ implements(   
+      [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  **인터페이스**  
- IDL coclass의 구성원이 되는 인터페이스 목록을 쉼표로 구분 하는 방법  단일 인터페이스를 지정 하는 대표 방법입니다  **구현 \(***interface\_name***\)**.  
+ 쉼표로 구분한 목록 IDL coclass의 멤버는 인터페이스입니다. 단일 인터페이스를 지정 하기 위한 줄임 메서드는 **구현 (***interface_name***)**합니다.  
   
- **dispinterfaces**  
- IDL coclass의 구성원이 dispinterface의 목록을 쉼표로 구분 하는 방법  단일 dispinterface를 지정 하는 대표 방법입니다  **구현 \(dispinterfaces** *dispinterface\_name \=***\)**.  
+ **dispinterface**  
+ 쉼표로 구분한 목록 IDL coclass의 구성원이 될 dispinterface입니다. 단일 dispinterface 지정 하기 위한 줄임 메서드는 **구현 (dispinterface** *dispinterface_name =***)**합니다.  
   
-## 설명  
- 기본적으로는 COM\-기본 클래스에는 coclass 인터페이스는 IDL coclass에 추가 됩니다.  **구현** IDL coclass 구성원으로 다른 인터페이스를 강제로 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 기본적으로만-있는 COM 인터페이스는 coclass의 기본 클래스는 IDL coclass에 추가 됩니다. **구현** 통해 IDL coclass 구성원으로 다른 인터페이스를 적용할 수 있습니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**,`struct`|  
+|**적용 대상**|**class**, `struct`|  
 |**반복 가능**|예|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 예제  
- 다음 예제에서는 세 가지 부분으로 구성 되어:.idl 파일 및 해당 관련된.h 파일 및 C\+\+ 파일입니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 세 부분으로 구성 중인:.idl 파일 및 해당 관련된.h 파일과 c + + 파일입니다.  
   
- 컴파일러에 사용할 수 있습니다 다음.idl 파일이 있다고 가정 합니다.  
+ 컴파일러에 사용할 수 있는 다음.idl 파일을 가정 합니다.  
   
 ```  
 // attr_implements.idl  
@@ -112,8 +112,8 @@ library odod
 }  
 ```  
   
-## 예제  
- 및 다음.h 파일 또한 컴파일러를 사용할 수 있어야 합니다.  
+## <a name="example"></a>예  
+ 및 다음.h 파일도 컴파일러에 사용할 수 있어야 합니다.  
   
 ```  
 // attr_implements.h  
@@ -429,8 +429,8 @@ CBar;
 #endif  
 ```  
   
-## 예제  
- 다음 프로그램에서 구현 하지 않고 IBar1, IBar2, 및 Isna는에서 생성 된 IDL coclass에 수 없습니다.  
+## <a name="example"></a>예  
+ 다음 프로그램을 구현 하지 않고 IBar1, IBar2, 및 ISna는 생성된 된 IDL의 coclass에 수 없습니다.  
   
 ```  
 // attr_implements.cpp  
@@ -551,7 +551,6 @@ public:
 };  
 ```  
   
-## 참고 항목  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [컴파일러 특성](../windows/compiler-attributes.md)   
+ [클래스 특성](../windows/class-attributes.md)   

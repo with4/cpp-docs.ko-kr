@@ -19,11 +19,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d5233e5b3f2a27fc821c786d99cb3d996e5c039
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 42ea9049fdd97691bd139599705856baa8acfee1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute"></a>특성
 사용자 지정 특성을 만들 수 있습니다.  
@@ -158,7 +161,7 @@ ref class MyAttr : System::Attribute   // OK, but redundant.
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cpp_attr_ref_attribute_4.cpp  
@@ -173,7 +176,7 @@ ref struct ABC {
 ref class MyClass {};  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `Inherited` 명명 된 인수는 기본 클래스에 적용 하는 사용자 지정 특성의 파생된 클래스는 리플렉션에 표시 됩니다 있는지 여부를 지정 합니다.  
   
 ```  

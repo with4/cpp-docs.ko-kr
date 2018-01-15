@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c47e458d4cd6e9df556eef5e1f61806633208011
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33f536a86a21e56eb36e546109f916ae5d6ca806
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-header-control"></a>헤더 컨트롤 만들기
 헤더 컨트롤 (하지만 헤더 컨트롤을 포함 하는 목록 컨트롤을 추가할 수 있습니다) 대화 상자 편집기에서 직접 사용할 수 있는있지 않습니다.  

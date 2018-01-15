@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _tasctime
 - asctime
 - _wasctime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - asctime function
 - tasctime function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 91f0ffd5b02f9e8bc34604683c6274ec0f2c28b3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 377b785b2803dc7cce09e55baeb31323bf83b4b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 `tm` 시간 구조체를 문자열로 변환합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)를 참조하세요.  
@@ -118,12 +102,12 @@ wchar_t *_wasctime(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`asctime`|\<time.h>|  
 |`_wasctime`|\<time.h> 또는 \<wchar.h>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 시스템 시간을 정수(Long) `aclock`에 배치하고, 이를 `newtime` 구조체로 전환한 다음, `asctime` 함수를 사용하여 출력용 문자열 형식으로 변환합니다.  
   
 ```  

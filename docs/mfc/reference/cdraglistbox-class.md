@@ -31,11 +31,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7ea1cdfa51080cdc91df58eb9fcf2bf1735e39f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 424d9db088aa171bdbca868326eb80144a10704b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 클래스
 Windows 목록 상자의 기능을 제공 하는 것 외에도 `CDragListBox` 클래스 목록 상자 내에서 파일 이름과 같은 목록 상자 항목을 이동할 수 있습니다.  

@@ -11,11 +11,12 @@ ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
 dev_langs: C++
 manager: ghogen
-ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0728827cb2cd604ec4e7ff1ef58b68ed8fb64532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Windows용 C++ 패키지 관리자 
 vcpkg는 Windows에서 타사 라이브러리 획득 및 설치를 크게 간소화하는 명령줄 패키지 관리자입니다. 프로젝트에서 타사 라이브러리를 사용하는 경우 vcpkg를 사용하여 설치하는 것이 좋습니다. vcpkg는 오픈 소스와 독점 라이브러리를 모두 지원합니다. vcpkg 공용 카탈로그의 모든 라이브러리가 Visual Studio 2015 및 Visual Studio 2017과의 호환성 테스트를 거쳤습니다. 2017년 5월 현재 카탈로그에는 238개 이상의 라이브러리가 있으며 C++ 커뮤니티는 지속해서 더 많은 라이브러리를 추가하고 있습니다.
@@ -107,14 +108,16 @@ zlib:x86-windows        1.2.11   A compression library
 공용 카탈로그는 라이브러리의 최신 버전으로 최신 상태로 유지됩니다. 로컬 라이브러리 중 어떤 것이 오래되었는지 확인하려면 `vcpkg update`를 사용합니다. 포트 컬렉션을 공용 카탈로그의 최신 버전으로 업데이트할 준비가 되면 github 리포지토리에 대해 git 풀 작업을 수행하거나 새 클론을 만들고 아직 필요한 이전 클론은 유지하면 됩니다.
 
 ### <a name="contribute-new-libraries"></a>새 라이브러리 제공
-원하는 모든 라이브러리를 개인 포트 컬렉션에 포함할 수 있습니다. 공용 카탈로그에 대한 새 라이브러리를 제안하려면 
-
+원하는 모든 라이브러리를 개인 포트 컬렉션에 포함할 수 있습니다. 공용 카탈로그에 대한 새 라이브러리를 제안하려면 [GitHub vcpkg 문제 페이지](https://github.com/Microsoft/vcpkg/issues)에서 문제를 엽니다.
 
 ### <a name="remove-a-library"></a>라이브러리를 제거합니다.
 `vcpkg remove`를 입력하여 설치된 라이브러리를 제거합니다. 종속된 라이브러리가 있는 경우 모든 다운스트림 라이브러리가 제거되는 `--recurse`를 사용하여 명령을 다시 실행하라는 메시지가 나타납니다.
 
 ### <a name="customize-vcpkg"></a>Vcpkg 사용자 지정
 원하는 어떤 방식으로든 vcpkg의 클론을 수정할 수 있습니다. 여러 vcpkg 클론을 만들고 각 클론에서 포트 파일을 수정하여 특정 라이브러리 버전을 구하거나 명령줄 매개 변수를 지정할 수 있습니다. 예를 들어 기업에서 한 개발자 그룹은 한 가지 종속성 집합을 가진 소프트웨어로 작업하고 다른 그룹은 다른 집합으로 작업할 수 있습니다. Vcpkg의 두 클론을 설정하고 필요에 따라 라이브러리 및 컴파일 스위치 등의 버전을 다운로드하도록 각 클론을 수정할 수 있습니다. 
+
+### <a name="uninstall-vcpkg"></a>vcpkg 제거
+디렉터리를 삭제하기만 하면 됩니다. 
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Vcpkg 폴더 계층 구조
 모든 vcpkg 기능 및 데이터는 단일 디렉터리 계층 구조에서 완전히 독립적입니다. 이를 "인스턴스"라고 합니다. 레지스트리 설정 또는 환경 변수는 없습니다. 한 컴퓨터에 Vcpkg의 인스턴스가 얼마든지 있을 수 있으며 서로를 방해하지 않습니다. 

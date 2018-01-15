@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93e3b33e6e5e9eee52ec08eac32c47bf0ae6213f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e73e7aa3ff62782c6ebd3b5a8728aa05e78b1784
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameters"></a>매개 변수
 인수는 함수 호출을 통해 함수에 전달되는 값의 이름입니다. 매개 변수는 함수가 수신할 수 있는 값입니다. 함수 프로토타입에서 함수 이름 뒤의 괄호에는 함수의 전체 매개 변수 및 해당 형식 목록이 포함됩니다. 매개 변수 선언은 형식, 크기 및 매개 변수에 저장된 값의 식별자를 지정합니다.  

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b75c64268d8181cd109aa1b985f2536a69574e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 459037dd6239171ebe442c19947d23c8bbc34280
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="role-of-the-view-in-printing"></a>인쇄에서 뷰의 역할
 또한 보기는 관련된 문서를 인쇄에 두 가지 중요 한 역할을 재생 합니다.  

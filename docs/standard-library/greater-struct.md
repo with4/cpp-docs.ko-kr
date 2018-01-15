@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 960c8e3f96a79edf8159774e24c1b9744a54cee1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 781da070e5678eab16d746a39a854fda17d5bc38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="greater-struct"></a>greater 구조체
 인수에서 큼 연산(`operator>`)을 수행하는 이진 조건자입니다.  
@@ -64,7 +65,7 @@ struct greater<void>
 ## <a name="remarks"></a>설명  
  이진 조건자 `greater`< `Type`>은 이 형식이 표준 수학 요구 사항을 충족하는 경우에만 동등 클래스에 `Type` 형식 요소 값 집합의 엄격하고 약한 순서를 제공하여 그렇게 정렬되도록 합니다. 고유한 값의 모든 요소가 서로를 기준으로 정렬된다는 점에서 모든 포인터 형식에 대한 특수화는 요소의 전체 순서 지정을 생성합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // functional_greater.cpp  

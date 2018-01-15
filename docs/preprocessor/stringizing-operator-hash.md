@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 585bdd0fa11cecdf3fb337f8c11d2287fe495371
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 320d3d2e5071d03a562e6673a8c13d28f4d0d114
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stringizing-operator-"></a>문자열화 연산자 (#)
 숫자 기호 또는 "문자열 화" 연산자 (**#**) 매개 변수 정의 확장 없이 매크로 매개 변수를 문자열 리터럴로 변환 합니다. 인수를 사용하는 매크로에만 사용됩니다. 매크로 호출이 전달하는 실제 인수가 매크로 정의에서 형식 매개 변수 앞에 나오는 경우, 해당 인수는 따옴표로 묶이고 문자열 리터럴로 취급됩니다. 해당 문자열 리터럴은 매크로 정의에서 문자열화된 연산자와 형식적 매개 변수의 조합이 발생할 때마다 이를 대체합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 Visual c + + 문자열 화 연산자 이스케이프 시퀀스가 포함 된 문자열을 함께 사용 될 때 제대로 작동 하지 않습니다. 이 경우 컴파일러 생성 [컴파일러 오류 C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 예제에서는 매크로를 호출하는 문자열화 연산자 및 main 함수 호출을 포함하는 매크로 정의를 보여 줍니다.  
   
 이러한 호출은 전처리가 수행되는 동안 확장되어 다음 코드를 만듭니다.  
@@ -70,7 +71,7 @@ In quotes in the printf function call
 "This: \"  prints an escaped double quote"  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 다음 예제에서는 매크로 매개 변수를 확장하는 방법을 보여 줍니다.  
   
 ```cpp  

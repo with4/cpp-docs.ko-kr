@@ -16,29 +16,30 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2190d7809791fbc66f6070eb3ae721ec1bc0a04f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cefabd21e04c4c3cc39934de111fe94151317ca5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>방법: parallel_invoke를 사용하여 병렬 작업 실행
 사용 하는 방법을 보여 주는이 예제는 [concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) 공유 데이터 원본에 여러 작업을 수행 하는 프로그램의 성능을 향상 시키기 위해 알고리즘입니다. 소스를 수정 하는 작업을 하기 때문에 이러한 수 병렬 실행 간단 하 게에서 합니다.  
 
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 형식 변수를 만들고를 `MyDataType`해당 변수를 초기화 하는 함수를 호출 하 고 다음 해당 데이터에 대해 여러 개의 긴 작업을 수행 합니다.  
   
  [!code-cpp[concrt-parallel-word-mining#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_1.cpp)]  
   
  경우는 `lengthy_operation1`, `lengthy_operation2`, 및 `lengthy_operation3` 함수를 수정 하지 마십시오는 `MyDataType` 변수, 이러한 함수 수 병렬로 실행 될 추가로 수정 하지 않고 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 동시에 실행 되도록 이전 예제를 수정 합니다. `parallel_invoke` 알고리즘 동시에 각 작업을 실행 하 고 모든 작업이 완료 된 후를 반환 합니다.  
   
  [!code-cpp[concrt-parallel-word-mining#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_2.cpp)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 다운로드 *The Iliad* gutenberg.org에서 Homer 하 여 해당 파일에 대해 여러 작업을 수행 하 고 있습니다. 이 예제에서는 먼저 이러한 작업을 순차적으로 수행 하 고 동시에 동일한 작업을 수행 합니다.  
   
  [!code-cpp[concrt-parallel-word-mining#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_3.cpp)]  

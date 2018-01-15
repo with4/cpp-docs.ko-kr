@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30e597a9d8587128e4de1b2bb80db15143620821
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5bdc0204c538f476c791657d8b29a28b7baedd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-window-styles-c"></a>프레임 창 스타일(C++)
 프레임 창 프레임 워크와 이용은 대부분의 프로그램에 대 한 적합 하지만 고급 함수를 사용 하 여 추가적인 유연성을 얻을 수 있는 [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) MFC 전역 함수 및 [AfxRegisterWndClass ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow`멤버 함수는 `CWnd`합니다.  

@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2260006e45407051f37e220d01cebd0ba8f797d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 40790788fdb5ce73a6c33e62b6ee55d2da4c5364
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registrationscript"></a>registration_script
 지정 된 사용자 지정 등록 스크립트를 실행합니다.  
@@ -42,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   
  이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드는 구성 요소 호출 cpp_attr_ref_registration_script.rgs 레지스트리 스크립트를 갖도록 지정 합니다.  
   
 ```  

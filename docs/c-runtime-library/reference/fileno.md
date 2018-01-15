@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _fileno
+apiname: _fileno
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,41 +21,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _fileno
-dev_langs:
-- C++
+f1_keywords: _fileno
+dev_langs: C++
 helpviewer_keywords:
 - file handles [C++], getting from streams
 - fileno function
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e5a2f9c68eef3698886afd2ed48690d8b4fffd53
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fab2792c46579ef702dfd16cdd248de3d4b7076c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fileno"></a>_fileno
 스트림에 연결된 파일 설명자를 가져옵니다.  
@@ -91,9 +72,9 @@ int _fileno(
 |--------------|---------------------|  
 |`_fileno`|\<stdio.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_fileno.c  

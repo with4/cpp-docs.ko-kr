@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- imaxdiv
+apiname: imaxdiv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,20 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- imaxdiv
-dev_langs:
-- C++
-helpviewer_keywords:
-- imaxdiv function
+f1_keywords: imaxdiv
+dev_langs: C++
+helpviewer_keywords: imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f2d79bcdb10d150b236290d3d5439331516a923f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7a6dbcd5b25fe1a8b1b21b2e2f6ac7a8cc99cc06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imaxdiv"></a>imaxdiv
 크기와 관계없이 한 번의 연산으로 두 정수 값의 몫과 나머지를 계산합니다.  
@@ -78,17 +59,17 @@ imaxdiv_t imaxdiv(
  [intmax_t](../../c-runtime-library/standard-types.md) 형식의 인수를 사용하여 호출된 `imaxdiv`는 몫과 나머지를 구성하는 [imaxdiv_t](../../c-runtime-library/standard-types.md) 형식의 구조체를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- `imaxdiv` 함수는 `numer`를 `denom`으로 나눠서 몫과 나머지를 계산합니다. `imaxdiv_t` 구조체에는 몫인 `intmax_t``quot`와 나머지인 `intmax_t``rem`이 포함됩니다. 몫의 부호는 수학적 몫의 부호와 같습니다. 몫의 절대 값은 수학적 몫의 절대 값보다 작은 가장 큰 정수입니다. 분모가 0이면 프로그램이 종료되고 오류 메시지가 표시됩니다.  
+ `imaxdiv` 함수는 `numer`를 `denom`으로 나눠서 몫과 나머지를 계산합니다. `imaxdiv_t` 구조체에는 몫인 `intmax_t quot`와 나머지인 `intmax_t rem`이 포함됩니다. 몫의 부호는 수학적 몫의 부호와 같습니다. 몫의 절대 값은 수학적 몫의 절대 값보다 작은 가장 큰 정수입니다. 분모가 0이면 프로그램이 종료되고 오류 메시지가 표시됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`imaxdiv`|\<inttypes.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_imaxdiv.c  

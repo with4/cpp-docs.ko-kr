@@ -1,35 +1,35 @@
 ---
-title: "__vmx_on | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_on"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMXON 명령"
-  - "__vmx_on 내장 함수"
+title: __vmx_on | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_on
+dev_langs: C++
+helpviewer_keywords:
+- VMXON instruction
+- __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 457866d54fe3f290c40ca70b07e19ec3f337de41
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_on
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxon"></a>__vmx_on
 **Microsoft 전용**  
   
- 프로세서에서 가상 컴퓨터 \(VMX\) 확장 작업을 활성화합니다.  
+ 프로세서에서 가상 컴퓨터 확장 (VMX) 작업을 활성화합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 unsigned char __vmx_on(  
@@ -37,30 +37,30 @@ unsigned char __vmx_on(
 );  
 ```  
   
-#### 매개 변수  
- \[in\] `VmsSupportPhysicalAddress`  
- 가상 머신 제어 구조 \(VMCS\)를 가리키는 64 비트 물리적 주소에 대 한 포인터입니다.  
+#### <a name="parameters"></a>매개 변수  
+ [in] `VmsSupportPhysicalAddress`  
+ 가상 컴퓨터 제어 구조 (VMCS)를 가리키는 64 비트 물리적 주소에 대 한 포인터입니다.  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
   
 |값|의미|  
-|-------|--------|  
-|0|작업이 성공 했습니다.|  
-|1|작업 실패와 확장 된 상태에서 사용할 수 있는 `VM-instruction error field` 현재 VMCS의.|  
-|2|사용 가능한 상태가 없으면 작업이 실패 했습니다.|  
+|-----------|-------------|  
+|0|작업에 성공했습니다.|  
+|1|현재 VMCS의 `VM-instruction error field` 에서 사용할 수 있는 확장된 상태로 작업이 실패했습니다.|  
+|2|사용 가능한 상태 없이 작업이 실패했습니다.|  
   
-## 설명  
- `__vmx_on` 함수에 해당 하는 `VMXON` 컴퓨터 명령.  이 기능은 상호 작용 하는 호스트의 가상 컴퓨터 모니터의 게스트 운영 체제와 응용 프로그램을 지원 합니다.  검색 문서, "인텔 가상화 기술 사양에는 ia\-32 인텔 아키텍처"에 대 한 자세한 내용은 번호 C97063\-002에서를 문서는 [인텔사](http://go.microsoft.com/fwlink/?LinkId=127) 사이트.  
+## <a name="remarks"></a>설명  
+ `__vmx_on` 에 해당 하는 함수는 `VMXON` 컴퓨터 명령입니다. 이 함수는 게스트 운영 체제 및 해당 응용 프로그램과 호스트 가상 컴퓨터 모니터의 상호 작용을 지원합니다. 문서 번호 C97063-002, 자세한 내용은 "Intel 가상화 기술 사양에 대 한 the ia-32 Intel 아키텍처" 문서에 대 한 검색에 대 한는 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) 사이트입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`__vmx_on`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc9306a7babcd86c96995f4fd464ebd24b138c43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13cb098170e46b8459821156aeb8be369bbc1ffa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
 실행된 시간까지 후속 병렬 영역에서 사용할 수 있는 스레드 수를 조정할 수 있다는 것을 나타냅니다.  
@@ -47,7 +48,7 @@ void omp_set_dynamic(
   
  자세한 내용은 참조 [3.1.7 omp_set_dynamic 함수](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // omp_set_dynamic.cpp  

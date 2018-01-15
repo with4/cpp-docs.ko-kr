@@ -53,11 +53,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1502f2bc315df705f7a135305388277c6d44918e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f9481583c56676d206225ad76f8131c2a79821f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 클래스
 클릭할 때 일반 단추처럼 동작하는 도구 모음 단추의 한 종류입니다. 그러나 드롭다운 도구 모음이 열립니다 ( [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md) 경우 사용자 번 클릭 하 고 도구 모음 단추를 누르고 있습니다.  
@@ -103,7 +104,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|드롭다운 도구 모음이 표시 될 때까지 사용자를 마우스 단추를 누른 해야 하는 시간의 길이 지정 합니다.|  
   
@@ -162,7 +163,7 @@ CMFCDropDownToolbarButton(
   
  일반적으로 드롭 다운 도구 모음 단추를 도구 모음에서 가장 최근에 사용한 단추에서 텍스트를 사용 하는 `pToolBar` 지정 합니다. 로 지정 된 텍스트를 사용 하 여 `lpszName` 때 단추는 메뉴 단추 또는 변환에 표시 되는 **명령을** 탭은 **사용자 지정** 대화 상자. 에 대 한 자세한 내용은 **사용자 지정** 대화 상자, 참조 [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCDropDownToolbarButton` 클래스입니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  

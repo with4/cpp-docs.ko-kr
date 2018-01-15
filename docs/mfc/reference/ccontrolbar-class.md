@@ -55,11 +55,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb4852990bd928a00c5aaf8de4669ed791f68468
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a911ff6251a6b34162377610ae139cfa3a7cefaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 컨트롤 막대 클래스에 대 한 기본 클래스 [CStatusBar](../../mfc/reference/cstatusbar-class.md), [CToolBar](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), 및 [ COleResizeBar](../../mfc/reference/coleresizebar-class.md)합니다.  
@@ -479,7 +480,7 @@ void SetBorders(LPCRECT lpRect);
  `lpRect`  
  에 대 한 포인터는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 컨트롤 막대 개체의 각 테두리의 현재 너비 (픽셀 단위)에 포함 된 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 5 픽셀 컨트롤 막대의 위쪽 및 아래쪽 테두리와 왼쪽 및 오른쪽 테두리를 2 픽셀로 설정합니다.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]  

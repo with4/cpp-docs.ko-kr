@@ -77,11 +77,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e619cbc049e64c25325ab8327ec6dd9d16e071be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbade1dc41b0e195606b10598e92f86195662bba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 클래스
 일반적으로 데이터베이스에 저장되는 쿼리 정의 또는 "querydef"를 나타냅니다.  

@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 505b9b16bb3c84e92a640f136c5aa58fdaaa13a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de955ecc25137f5305806ca5ba03ed15930574dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapi"></a>MAPI
 이 문서에서는 클라이언트 메시지 응용 프로그램 개발자를 위한 Microsoft MAPI(메시징 응용 프로그래밍 인터페이스)에 대해 설명합니다. MFC 클래스에서 MAPI 하위 집합에 대 한 지원을 제공 **CDocument** 하지만 전체 API를 캡슐화 하지 않습니다. 자세한 내용은 참조 [MFC의 MAPI 지원](../mfc/mapi-support-in-mfc.md)합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
  MAPI에 대 한 자세한 내용은 Windows sdk 설명서의 Win32 메시징 (MAPI) 문서를 참조 하십시오.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [MFC의 MAPI 지원](../mfc/mapi-support-in-mfc.md)  
   
 ## <a name="see-also"></a>참고 항목  

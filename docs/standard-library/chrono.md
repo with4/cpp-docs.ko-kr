@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe8917c18937856a6ca310a2bbf8380840202699
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 표준 헤더 \<chrono>를 포함하여 기간 및 시간 인스턴트를 나타내고 조작하는 클래스와 함수를 정의합니다.  

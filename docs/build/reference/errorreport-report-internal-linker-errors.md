@@ -1,58 +1,70 @@
 ---
-title: "/ERRORREPORT(내부 링커 오류 보고) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ERRORREPORT"
-  - "VC.Project.VCLinkerTool.ErrorReporting"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ERRORREPORT 링커 옵션"
-  - "ERRORREPORT 링커 옵션"
-  - "-ERRORREPORT 링커 옵션"
+title: "-ERRORREPORT (내부 링커 오류 보고) | Microsoft Docs"
+ms.custom: 
+ms.date: 12/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ERRORREPORT
+- VC.Project.VCLinkerTool.ErrorReporting
+dev_langs: C++
+helpviewer_keywords:
+- /ERRORREPORT linker option
+- ERRORREPORT linker option
+- -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6ddf65ed2a17dae2d86b0dc4582f1d3158328898
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/03/2018
 ---
-# /ERRORREPORT(내부 링커 오류 보고)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT(내부 링커 오류 보고)
 
-```  
-/errorReport:[ none | prompt | queue | send ]  
-```  
-  
-## 설명  
- ICE\(내부 컴파일러 오류\) 정보를 Microsoft에 직접 제공할 수 있습니다.  
-  
- 옵션 **\/errorReport:send**는 오류 정보를 Microsoft에 자동으로 보내려고 시도하지만 성공 여부는 레지스트리 설정에 따라 다릅니다.  레지스트리에 적절한 값을 설정하는 더 많은 방법은, MSDN 웹 사이트의 [How to Turn on Automatic Error Reporting in Visual Studio 2008 Command\-line Tools](http://go.microsoft.com/fwlink/?LinkID=184695) 를 참조하십시오.  
-  
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
-  
-1.  프로젝트 **속성 페이지** 대화 상자를 엽니다.  자세한 내용은 [방법: 프로젝트 속성 페이지 열기](../../misc/how-to-open-project-property-pages.md)을 참조하십시오.  
-  
-2.  **구성 속성** 폴더를 클릭합니다.  
-  
-3.  **링커** 폴더를 클릭합니다.  
-  
-4.  **고급** 속성 페이지를 클릭합니다.  
-  
-5.  **오류 보고** 속성을 수정합니다.  
-  
-### 프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
-  
--   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>를 참조하십시오.  
-  
-## 참고 항목  
- [\/errorReport\(내부 컴파일러 오류 보고\)](../../build/reference/errorreport-report-internal-compiler-errors.md)   
- [링커 옵션 설정](../../build/reference/setting-linker-options.md)   
- [링커 옵션](../../build/reference/linker-options.md)
+> **/errorreport:**[ **none** | **프롬프트** | **큐** | **보낼** ]
+
+## <a name="arguments"></a>인수
+
+**none**  
+내부 컴파일러 오류에 대한 보고서를 수집하거나 Microsoft로 보내지 않습니다.
+
+**prompt**  
+내부 컴파일러 오류가 발생하면 보고서를 보낼지 묻는 메시지를 표시합니다. **프롬프트** 는 개발 환경에서 응용 프로그램을 컴파일할 때 기본값입니다.
+
+**queue**  
+오류 보고서를 큐에 넣습니다. 관리자 권한으로 로그인 하면 기록 된 마지막 시간 이후 발생 한 모든 오류를 보고할 수 있도록 창이 표시 됩니다 (하면 메시지가 표시 되지 것입니다 3 일에 두 번 이상 실패에 대 한 보고서를 보내도록). **큐** 는 명령 프롬프트에서 응용 프로그램을 컴파일할 때 기본값입니다.
+
+**send**  
+Windows 오류 보고 서비스 설정에 의해 보고를 사용 하는 경우 Microsoft에 내부 컴파일러 오류 보고서를 자동으로 보냅니다.
+
+## <a name="remarks"></a>설명
+
+**/ERRORREPORT** 옵션을 사용 하면 Microsoft에 내부 컴파일러 오류 (ICE) 정보를 제공 합니다.
+
+옵션 **/errorreport: send** Windows 오류 보고 서비스 설정으로 사용 하도록 설정 하는 경우 오류 정보를 Microsoft에 자동으로 보냅니다.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
+
+1. 프로젝트 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.
+
+1. 열기는 **구성 속성** > **링커** > **고급** 속성 페이지.
+
+1. 수정 된 **오류 보고** 속성입니다.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면
+
+- <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>을 참조하세요.
+
+## <a name="see-also"></a>참고 항목
+
+[/errorReport (내부 컴파일러 오류 보고)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
+[링커 옵션 설정](../../build/reference/setting-linker-options.md)  
+[링커 옵션](../../build/reference/linker-options.md)  

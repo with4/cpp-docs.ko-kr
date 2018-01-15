@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffe52194796a6bf92bafd2a79021b709b07d9cec
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 123c8a2d9bcf45d28817e0e9256a86748eae97ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-automation"></a>원격 자동화
 > [!NOTE]
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
  이 문서에서는 호출 하 고 원격으로 실행할 수 있는 자동화 개체를 만드는 방법과 이러한 원격 자동화 개체를 사용할 수 있는 자동화 컨트롤러를 만드는 방법을 설명 합니다. 또한 구성 옵션을 검사 하 고 원격 자동화 및 DCOM (분산 된 버전의 COM 및 OLE 자동화를 호출 하 고 원격으로 실행할 관련 되지 않은 인터페이스를 허용 하) 간의 차이 주 지적 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DCOM (Distributed Component Object Model)의 역사](../mfc/history-of-dcom.md)  
   
  [원격 자동화가 필요한 경우 있습니까](where-does-remote-automation-fit-in-q.md)  

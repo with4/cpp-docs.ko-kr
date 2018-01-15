@@ -1,38 +1,37 @@
 ---
 title: "C 런타임 오류 R6035 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6035"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6035"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6035
+dev_langs: C++
+helpviewer_keywords: R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/03/2018
 ---
-# C 런타임 오류 R6035
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Microsoft Visual C\+\+ 런타임 라이브러리 오류 R6035 \- 이 응용 프로그램의 모듈이 모듈의 전역 보안 쿠키를 초기화하고 있는데 해당 보안 쿠키를 사용하는 함수가 활성화되어 있습니다.  먼저 \_\_security\_init\_cookie를 호출하십시오.  
+# <a name="c-runtime-error-r6035"></a>C 런타임 오류 R6035
+Microsoft Visual c + + 런타임 라이브러리, 오류 R6035-이 응용 프로그램의 모듈을 초기화 하 고 모듈의 전역 보안 쿠키 보안 쿠키에 의존 하는 함수를 활성화 합니다.  이전 __security_init_cookie를 호출 합니다.  
   
- 전역 보안 쿠키를 처음 사용하기 전에 [\_\_security\_init\_cookie](../../c-runtime-library/reference/security-init-cookie.md)를 호출해야 합니다.  
+ [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) 전역 보안 쿠키를 처음 사용 하기 전에 호출 해야 합니다.  
   
- 전역 보안 쿠키는 [\/GS\(버퍼 보안 검사\)](../../build/reference/gs-buffer-security-check.md)로 컴파일된 코드 및 구조적 예외 처리를 사용하는 코드에서 버퍼 오버런 보호에 사용됩니다.  기본적으로 오버런이 보호된 함수에 진입하면 스택에 쿠키가 배치되고 이 함수가 종료되면 스택에 있는 값이 전역 쿠키와 비교됩니다.  두 값이 서로 다르면 버퍼 오버런이 발생한 것이므로 프로그램이 즉시 종료됩니다.  
+ 로 컴파일된 코드에서 버퍼 오버런 방지에 대 한 전역 보안 쿠키를 사용 하는 [/GS (버퍼 보안 검사)](../../build/reference/gs-buffer-security-check.md) 코드에서 구조적된 예외 처리를 사용 하 고 있습니다. 기본적으로, 오버런 방지 함수에 입력 시 쿠키가 스택에 배치 되 고 종료 스택에 값 전역 쿠키에 대해 비교 됩니다. 값이 서로 다르면 버퍼 오버런이 발생 하는 프로그램의 즉시 종료를 나타냅니다.  
   
- R6035 오류는 보호된 함수에 진입한 이후 `__security_init_cookie`를 호출했음을 나타냅니다.  스택의 쿠키와 전역 쿠키가 더 이상 일치하지 않으므로 실행을 계속하면 의사 버퍼 오버런이 감지됩니다.  
+ 오류 R6035 나타냅니다에 대 한 호출 `__security_init_cookie` 이후 보호 된 함수를 입력 했습니다. 계속 하려면 실행 되었으면 가상 버퍼 오버런이 스택에 쿠키 전역 쿠키 더 이상 일치 하기 때문에 감지 됩니다.  
   
- 다음 DLL 예제를 살펴보십시오.  DLL 진입점이 [\/ENTRY\(진입점 기호\)](../../build/reference/entry-entry-point-symbol.md) 링커 옵션을 통해 DllEntryPoint로 설정됩니다.  이렇게 하면 전역 보안 쿠키를 정상적으로 초기화하는 CRT의 초기화를 건너뛰게 되므로 DLL 자체에서 `__security_init_cookie`를 호출해야 합니다.  
+ 예를 들어 다음 DLL입니다. DLL 진입점 링커를 통해 즉 DllEntryPoint로 설정 되어 [/ENTRY (진입점 기호)](../../build/reference/entry-entry-point-symbol.md) 옵션입니다. 이 메서드는 전역 보안 쿠키 초기화 일반적으로 DLL 자체를 호출 해야 하므로 하는 CRT 초기화 `__security_init_cookie`합니다.  
   
 ```  
 // Wrong way to call __security_init_cookie  
@@ -51,9 +50,9 @@ void DllInitialize() {
 }  
 ```  
   
- 이 예제에서는 DllEntryPoint에서 구조적 예외 처리를 사용하고 따라서 보안 쿠키를 사용하여 버퍼 오버런을 감지하므로 R6035 오류가 발생합니다.  DllInitialize가 호출되는 시점에서 전역 보안 쿠키는 이미 스택에 배치된 상태입니다.  
+ 이 예제에서는 즉 DllEntryPoint 구조적된 예외 처리를 사용 하 고 따라서 보안 쿠키를 사용 하 여 버퍼 오버런을 검색할 수 있으므로 오류 R6035 생성 됩니다. DllInitialize 라고 시점에서는 전역 보안 쿠키 이미 놓여진 스택에 있습니다.  
   
- 다음 예제에서는 올바른 방법을 보여 줍니다.  
+ 이 예에서 올바른 방법은 보여 줍니다.  
   
 ```  
 // Correct way to call __security_init_cookie  
@@ -72,10 +71,10 @@ void DllEntryHelper() {
 }  
 ```  
   
- 이 경우 DllEntryPoint는 로컬 문자열 버퍼가 없고 구조적 예외 처리를 사용하지 않으므로 버퍼 오버런 보호를 받지 않습니다. 따라서 `__security_init_cookie`를 안전하게 호출할 수 있습니다.  그런 다음 보호되는 도우미 함수를 호출합니다.  
+ 이 경우 즉 DllEntryPoint 버퍼 오버런 으로부터 보호 되지 않는 경우 (로컬 문자열 버퍼가 있으며 구조적된 예외 처리를 사용 하지 않는); 안전 하 게 호출할 수는 따라서 `__security_init_cookie`합니다. 다음 보호 되는 도우미 함수를 호출 합니다.  
   
 > [!NOTE]
->  R6035 오류 메시지는 x86 디버그 CRT에서만, 그리고 구조적 예외 처리에 대해서만 발생하지만 이 조건은 모든 플랫폼 및 모든 예외 처리 형태\(C\+\+ EH 등\)에서 오류입니다.  
+>  R6035는 오류 메시지만 x86에 의해 생성 된 디버그 CRT를 하 고 구조적된 예외 처리 하지만 조건에 대해서만 하 고 모든 형태의 예외에 대 한 모든 플랫폼에서 오류 처리 하는, c + + EH 같은 키를 누릅니다.  
   
-## 참고 항목  
- [컴파일러 보안 상세 점검](http://go.microsoft.com/fwlink/?linkid=7260)
+## <a name="see-also"></a>참고 항목  
+ [컴파일러 보안 심층 검사](http://go.microsoft.com/fwlink/p/?linkid=7260)

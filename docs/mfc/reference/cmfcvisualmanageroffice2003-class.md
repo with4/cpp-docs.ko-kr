@@ -102,11 +102,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc0da7a9e93846bc0d51f0eaa84fa69876a62b1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2e3e4bc37bc62d061571d1b52b0f92ac59a949c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 클래스
 `CMFCVisualManagerOffice2003`응용 프로그램에 Microsoft Office 2003 모양을 제공 합니다.  
@@ -212,7 +213,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 ## <a name="remarks"></a>설명  
  사용 된 `CMFCVisualManagerOffice2003` Microsoft Office 2003 유사 하 게 응용 프로그램의 시각적 모양을 변경 하는 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 office 2003 비주얼 관리자를 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [바탕 화면 경고 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#6](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2003-class_1.cpp)]  

@@ -1,63 +1,66 @@
 ---
-title: "Choosing a Transparent or Opaque Background (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opaque backgrounds"
-  - "background colors, images"
-  - "colors [C++], image"
-  - "Image editor [C++], transparent or opague backgrounds"
-  - "background images"
-  - "images [C++], transparency"
-  - "images [C++], opaque background"
-  - "transparent backgrounds"
-  - "transparency, background"
-  - "transparent backgrounds, images"
+title: "(아이콘에 대 한 이미지 편집기)는 투명 또는 불투명 배경 선택 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- opaque backgrounds
+- background colors, images
+- colors [C++], image
+- Image editor [C++], transparent or opague backgrounds
+- background images
+- images [C++], transparency
+- images [C++], opaque background
+- transparent backgrounds
+- transparency, background
+- transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Choosing a Transparent or Opaque Background (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-이미지에서 선택 영역을 이동하거나 복사할 경우, 현재 배경색과 일치하는 선택 영역 내의 모든 픽셀은 기본적으로 투명하므로 대상 위치의 픽셀을 가리지 않습니다.  
+# <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>투명 또는 불투명 배경 선택(아이콘에 대한 이미지 편집기)
+때을 이동 하거나 이미지에서 선택 영역 복사 현재 배경색을 일치 하는 모든 픽셀 선택 영역에는 기본적으로 선택 합니다. 대상 위치에서 픽셀을 숨깁니다 하지 않습니다.  
   
- 투명한 배경\(기본값\)에서 불투명한 배경으로 전환할 수도 있고 다시 투명한 배경으로 돌아갈 수도 있습니다.  선택 도구를 사용할 때 **투명한 배경**과 **불투명한 배경** 옵션은 아래 그림처럼 **이미지 편집기** 도구 모음의 옵션 선택기에 표시됩니다.  
+ 불투명 한 배경, 투명 한 배경 (기본값)에서 전환 및 복귀 수 있습니다. 선택 도구를 사용 하는 경우는 **투명 한 배경** 및 **불투명 한 배경** 에 옵션 선택기에 옵션이 표시 된 **이미지 편집기** 도구 모음 (아래와 같이).  
   
- ![배경 옵션 &#45; 불투명 또는 투명](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
-이미지 편집기 도구 모음에 표시되는 투명 및 불투명 옵션  
+ ![배경 옵션 &#45; 투명 또는 불투명](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+이미지 편집기 도구 모음에서 투명 하 고 불투명 옵션  
   
-### 투명한 배경과 불투명한 배경 사이에 전환하려면  
+### <a name="to-switch-between-a-transparent-and-opaque-background"></a>투명 하 고 불투명 한 배경 사이 전환 하려면  
   
-1.  **이미지 편집기** 도구 모음에서 **옵션** 선택기를 클릭하고 다음 중 원하는 배경을 클릭합니다.  
+1.  에 **이미지 편집기** 도구 모음에서 클릭 된 **옵션** 선택기를 다음 원하는 배경을 클릭 하 고:  
   
-    -   **불투명한 배경\(O\)**: 선택 영역의 모든 부분이 기존 이미지를 가립니다.  
+    -   **불투명 한 배경 (O)**: 기존 이미지는 선택 항목의 모든 부분에서 가려집니다.  
   
-    -   **투명한 배경\(T\)**: 현재 배경색과 일치하는 선택 영역의 부분 위에 기존 이미지가 표시됩니다.  
+    -   **투명 한 배경 (T)**: 기존 이미지는 선택 항목의 현재 배경색과 일치 하는 부분 위에 표시 합니다.  
   
- \-또는\-  
+ \- 또는 -  
   
--   **이미지** 메뉴에서 **불투명하게 그리기**를 선택하거나 선택 취소합니다.  
+-   에 **이미지** 메뉴에서 선택 하거나 선택 취소 **불투명 하 게 그리기**합니다.  
   
- 선택 영역의 투명한 이미지 일부를 이미 변경한 경우에도 배경색을 변경할 수 있습니다.  
+ 선택이 이미 적용 이미지의 부분 투명 하 게 변경 하려면 명령 프롬프트 창의 배경색을 변경할 수 있습니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
  요구 사항  
   
  없음  
   
-## 참고 항목  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>참고 항목  
+ [액셀러레이터 키](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [색 작업](../windows/working-with-color-image-editor-for-icons.md)

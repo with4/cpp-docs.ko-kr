@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 49ddbc29762ea07cf1f7b5fa24fafd3cfa5e8612
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffffa6c446487752974549f4a070cf8e86e91aea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-preview-architecture"></a>인쇄 미리 보기 아키텍처
 이 문서에서는 MFC 프레임워크에서 인쇄 미리 보기 기능을 구현하는 방법을 설명합니다. 다루는 항목은 다음과 같습니다.  

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cf53177e0d24777a5447c6655e7b801955610168
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drawing-images-from-an-image-list"></a>이미지 목록에서 이미지 그리기
 이미지를 그리기 위해 사용 하 여는 [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) 멤버 함수입니다. 장치 컨텍스트 개체를 그릴 위치를 이미지를 그릴 장치 컨텍스트에서 이미지의 인덱스 및 그리기 스타일을 표시 하기 위해 플래그 집합이에 대 한 포인터를 지정 합니다.  

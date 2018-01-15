@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c4c6ad648aff3503272760675a8db99cd1889d9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b87e52294ccd61cd349ed6a85eca6760ace2c473
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 노드 기반 컨테이너에 대해 메모리 블록을 할당 및 해제하는 데 도움이 되는 여러 템플릿을 정의합니다.  

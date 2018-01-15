@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7d8b351f7cc58d37d4da8bc273d8541aee54446
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ac15c18ce3277e8268b6b4582de4046f5f74d64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointer-declarations"></a>포인터 선언
 "포인터 선언"은 포인터 변수의 이름을 지정하고 변수가 가리키는 개체의 형식을 지정합니다. 포인터로 선언된 변수는 메모리 주소를 갖습니다.  

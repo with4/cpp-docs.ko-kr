@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ce45b5467032b7660202749117e60a1bb3b88b74
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19c80094cb613900ce8ffb2713b8e94a5826def4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getche-getwche"></a>_getche, _getwche
 에코를 사용하여 콘솔에서 문자를 가져옵니다.  
@@ -66,7 +67,7 @@ wint_t _getwche( void );
   
  이러한 함수는 호출 스레드를 잠그므로 스레드로부터 안전합니다. 잠기지 않는 버전의 경우 [_getche_nolock, _getwche_nolock](../../c-runtime-library/reference/getche-nolock-getwche-nolock.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -74,14 +75,14 @@ wint_t _getwche( void );
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_getche`|\<conio.h>|  
 |`_getwche`|\<conio.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_getche.c  

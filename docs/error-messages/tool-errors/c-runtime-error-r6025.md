@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 06fd7aa6458a3c7e89d80146ec20a0e3f7587b4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cfb7413cd6fd8dca976d668763fab678bb5c9ebf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-runtime-error-r6025"></a>C 런타임 오류 R6025
 순수 가상 함수 호출  
@@ -39,4 +40,4 @@ ms.lasthandoff: 10/24/2017
   
  이 오류는 파생된 클래스의 형식으로 캐스트에서 만들어지지만 실제로 기본 클래스에 대 한 포인터는 포인터를 통해 추상 기본 클래스에는 가상 함수를 호출 하 여 발생 합니다. 이 캐스팅 하면 발생할 수 있습니다는 **void\***  클래스에 대 한 포인터로 때는 **void\***  기본 클래스를 생성 하는 동안 만들어진 합니다.  
   
- 자세한 내용은 참조는 [Microsoft 지원](http://go.microsoft.com/fwlink/?LinkId=75220) 웹 사이트입니다.
+ 자세한 내용은 참조는 [Microsoft 지원](http://go.microsoft.com/fwlink/p/?linkid=75220) 웹 사이트입니다.

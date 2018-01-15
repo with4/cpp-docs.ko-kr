@@ -83,11 +83,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 734097d8fffcbe21f17b68432d6233a03b11a28a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a235b88b676f7cf643a878e9a06408c87b20bcba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 클래스
 `CMFCStatusBar` 비슷한 상태 표시줄을 구현 하는 클래스는 `CStatusBar` 클래스입니다. 그러나 `CMFCStatusBar` 클래스에는 `CStatusBar` 클래스에 의해 제공되지 않는 기능(예: 이미지, 애니메이션 및 진행률 표시줄을 표시하는 기능 및 마우스 두 번 클릭에 응답하는 기능)이 포함되어 있습니다. 
@@ -139,7 +140,7 @@ class CMFCStatusBar : public CPane
 |[CMFCStatusBar::SetPaneWidth](#setpanewidth)|상태 표시줄의 지정 된 창 픽셀 너비를 설정 합니다.|  
 |[CMFCStatusBar::SetTipText](#settiptext)|상태 표시줄의 지정 된 창에 대 한 도구 설명 텍스트를 설정합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -150,18 +151,18 @@ class CMFCStatusBar : public CPane
   
  ![CMFCStatusBar의 예제](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar")  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 다양 한 메서드를 호출 하는 응용 프로그램이 사용 하는 지역 변수는 `CMFCStatusBar` 클래스입니다. 이러한 변수는 StatusBarDemoView.h에서 선언 됩니다. 주 프레임 MainFrm.h에 선언 된, 문서 StatusBarDemoDoc.h에 선언 된 및 보기 StatusBarDemoView.h에서 선언 됩니다. 이 코드 조각은의 일부인는 [상태 표시줄 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에 대 한 참조를 가져오는 방법을 `CMFCStatusBar` 도입 하 여 개체는 `GetStatusBar` MainFrm.h에서이 메서드를 호출한 다음의 방법으로는 `GetStatusBar` StatusBarDemoView.h에서 메서드. 이 코드 조각은의 일부인는 [상태 표시줄 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 다양 한 메서드를 호출 하는 `CMFCStatusBar` StatusBarDemoView.cpp의 클래스. 상수는 MainFrm.h에도 선언 됩니다. 이 예제에서는 설정 아이콘, 상태 표시줄 창의 도구 설명 텍스트를 설정, 지정 된 창에서 진행률 표시줄을 표시, 지정 된 창에 애니메이션을 할당, 텍스트 및 상태 표시줄 창의 너비 설정 및는 progr의 현재 진행률 표시기를 설정 하는 방법을 보여 줍니다. 상태 표시줄 창에 대 한 ess 막대입니다. 이 코드 조각은의 일부인는 [상태 표시줄 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]  
@@ -318,7 +319,7 @@ void EnablePaneProgressBar(
 ### <a name="remarks"></a>설명  
  진행률 표시줄 호출을 사용 하지 않도록 설정 하려는 경우 `EnablePaneProgressBar` 와 `nTotal` -1로 설정 합니다. 기본적으로 `nTotal` 100으로 설정 됩니다. 따라서 백분율로 진행률을 표시 하려면 모든 추가 계산 필요 하지 않습니다.  
   
- 에 대 한 다른 값을 전달 해야 `clrBar` 및 `clrBarDest` 진행률 표시줄의 배경색에 색 그라데이션을에 혼합 표시 되도록 합니다. 입니다.  
+ 에 대 한 다른 값을 전달 해야 `clrBar` 및 `clrBarDest` 진행률 표시줄의 배경색에 색 그라데이션을에 혼합 표시 되도록 합니다. 이어야 합니다.  
   
  현재 진행 상태를 설정 하려면 호출는 [CMFCStatusBar::SetPaneProgress](#setpaneprogress) 메서드.  
   

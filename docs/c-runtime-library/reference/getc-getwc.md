@@ -43,11 +43,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 78a94d954631dfffbdcdc4bcad252599c673f44b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12ddc1fa68f1b27fa96ffb81ef24004fd1fb0a19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getc-getwc"></a>getc, getwc
 스트림에서 문자를 읽습니다.  
@@ -79,12 +80,12 @@ wint_t getwc(
   
  이어서 루틴별 설명이 제공됩니다.  
   
-|루틴|설명|  
+|루틴에서 반환된 값|설명|  
 |-------------|-------------|  
 |`getc`|`fgetc`와 같지만 함수 및 매크로로 구현됩니다.|  
 |`getwc`|와이드 문자 버전의 `getc`입니다. `stream`이 텍스트 모드 또는 이진 모드로 열리는지에 따라 멀티바이트 문자 또는 와이드 문자를 읽습니다.|  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -92,14 +93,14 @@ wint_t getwc(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`getc`|\<stdio.h>|  
 |`getwc`|\<stdio.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_getc.c  

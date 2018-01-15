@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cdf70daec8e357f6da456cab5fe71760b7734fe3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dfbdcac3bd4d16b96b2ce961b102dfa8c2deea6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set 클래스
 `concurrent_unordered_set` 클래스는 다양 한 길이의 K. 형식의 요소 시퀀스를 제어 하는 동시성 으로부터 안전한 컨테이너 시퀀스는 동시성 으로부터 안전한 방식으로 표시 됩니다 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업 합니다.  

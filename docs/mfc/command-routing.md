@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622853951c9119bb2a32e9e624966bf77579b557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing"></a>명령 라우팅
 명령 작업을 수행하는 경우 사용자의 역할은 메시지 맵을 사용하여 명령과 해당 처리기 함수를 연결하는 것으로 제한됩니다. 이 작업에는 속성 창을 사용합니다. 또한 사용자는 대부분의 명령 처리기를 작성해야 합니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="_core_standard_command_route"></a> 표준 명령 경로  
   
-|명령을 수신하는 개체 형식 입니다. 입니다.|자신 및 다른 명령 대상 개체가 명령을 처리하는 순서|  
+|명령을 수신하는 개체 형식 이어야 합니다. 이어야 합니다.|자신 및 다른 명령 대상 개체가 명령을 처리하는 순서|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
 |MDI 프레임 창(`CMDIFrameWnd`)|1.  활성`CMDIChildWnd`<br />2.  이 프레임 창<br />3.  응용 프로그램 (`CWinApp` 개체)|  
 |문서 프레임 창(`CFrameWnd`, `CMDIChildWnd`)|1.  활성 뷰<br />2.  이 프레임 창<br />3.  응용 프로그램 (`CWinApp` 개체)|  

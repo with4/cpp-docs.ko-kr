@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 44727722c843e91d6ee924c2cffa6c4c465becad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b38b1225dbce3f747efeaa7aa1e5384f7931efe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 클래스
 면에 애니메이션을 적용할 수 있는 사각형 기능을 구현합니다.  
@@ -85,7 +86,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |[CAnimationRect::GetValue](#getvalue)|현재 값을 반환 합니다.|  
 |[CAnimationRect::SetDefaultValue](#setdefaultvalue)|기본값을 설정합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -106,7 +107,7 @@ class CAnimationRect : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|아래쪽을 나타내는 캡슐화 된 애니메이션 변수 애니메이션 사각형의 경계입니다.|  
 |[CAnimationRect::m_leftValue](#m_leftvalue)|왼쪽을 나타내는 캡슐화 된 애니메이션 변수 애니메이션 사각형의 경계입니다.|  

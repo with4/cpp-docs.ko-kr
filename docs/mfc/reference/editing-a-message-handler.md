@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 505596c503d7c3e4d95e1b7075d537dad659587e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3343f1d9b9f302d43a5cfbfec55b48c2bfd1b799
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editing-a-message-handler"></a>메시지 처리기 편집
 메시지 처리기를 정의 하기 위해 추가 코드를 수정 하거나 멤버 함수 정의에 이동할 수 있습니다.  

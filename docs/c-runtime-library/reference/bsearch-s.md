@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- bsearch_s
+apiname: bsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- bsearch_s
-dev_langs:
-- C++
+f1_keywords: bsearch_s
+dev_langs: C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 67caa4f6f6f9ba43c5d4b8a23af8be9bebcc717b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 19d60e16ee896049318d8722b59ba124aad67a50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bsearchs"></a>bsearch_s
 정렬된 배열의 이진 검색을 수행합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 향상된 [bsearch](../../c-runtime-library/reference/bsearch.md) 버전입니다.  
@@ -95,17 +76,17 @@ void *bsearch_s(
 ## <a name="return-value"></a>반환 값  
  `bsearch_s`는 `base`가 가리키는 배열의 `key` 발생에 대한 포인터를 반환합니다. `key` 가 없을 경우 함수는 `NULL`을 반환합니다. 배열이 오름차순 정렬이 아니거나 동일한 키를 가진 중복 레코드를 포함하는 경우에는 결과를 예측할 수 없습니다.  
   
- 함수에 잘못된 매개 변수를 전달하면 [Parameter Validation](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
+ 함수에 잘못된 매개 변수를 전달하면 [Parameter Validation](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
 ### <a name="error-conditions"></a>오류 조건  
   
 |||||||  
 |-|-|-|-|-|-|  
 |`key`|`base`|`compare`|`num`|`width`|`errno`|  
-|`NULL`|모두|모두|모두|모두|`EINVAL`|  
-|모두|`NULL`|모두|!= 0|모두|`EINVAL`|  
-|모두|모두|모두|모두|= 0|`EINVAL`|  
-|모두|모두|`NULL`|an|모두|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|= 0|`EINVAL`|  
+|any|any|`NULL`|an|모두|`EINVAL`|  
   
 ## <a name="remarks"></a>설명  
  `bsearch_s` 함수는 각각 크기가 `num` 바이트인 `width` 요소의 정렬된 배열에 대해 이진 검색을 수행합니다. `base` 값은 검색할 배열 기준에 대한 포인터이고 `key` 는 검색되는 값입니다. `compare` 매개 변수는 요청된 키를 배열 요소와 비교하고 해당 관계를 지정하는 다음 값 중 하나를 반환하는 사용자 제공 루틴에 대한 포인터입니다.  
@@ -120,13 +101,13 @@ void *bsearch_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`bsearch_s`|\<stdlib.h> 및 \<search.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 프로그램은 [qsort_s](../../c-runtime-library/reference/qsort-s.md)를 사용하여 문자열 배열을 정렬한 다음 bsearch_s를 사용하여 "cat" 단어를 찾습니다.  
   
 ```  

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95694c3566ef7700d30e40c1a89af56d1e70d05b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6eb7b4e46d0d91779bf7c4c9047cad2f49100cd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outofmemory-class"></a>out_of_memory 클래스
 메서드가 시스템이 나 장치 메모리 부족으로 인해 실패할 경우 throw 되는 예외입니다.  

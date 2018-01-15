@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b4864f4ac15a1d07deb4c3cb8a8d533b8cc4b82
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5015a001bf2c15f3144303ba5e19b2a9ea8c34f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-image-lists"></a>트리 컨트롤 이미지 목록
 트리 컨트롤의 각 항목 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 연결 된 비트맵 이미지의 쌍을 가질 수 있습니다. 이미지 항목의 레이블 왼쪽에 나타납니다. 항목을 선택 하 고 항목을 선택 하지 않은 경우 표시 되 면 다른 한 이미지가 표시 됩니다. 예를 들어 항목 선택 하지 않으면 열린 폴더를 선택 하 고 닫혀 있는 폴더가 표시할 수 있습니다.  

@@ -54,11 +54,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a981de98d801db290833717788d5ae9b9bc4360
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69edd654eac52de75de9b928e19f50def894d5e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 형식을 지정하고 콘솔에 출력합니다. 이러한 버전의 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 향상된 보안 기능이 포함되어 있습니다.  
@@ -114,7 +115,7 @@ int _cwprintf_s_l(
   
  안전하지 않은 버전과 같이([_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md) 참조) 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 해당 매개 변수의 유효성을 검사하고 잘못된 매개 변수 처리기를 호출합니다(`format`이 null 포인터인 경우). 이러한 함수는 형식 문자열 자체도 유효성이 검사된다는 점에서 안전하지 않은 버전과 다릅니다. 알 수 없거나 잘못된 형식의 형식 지정자가 있는 경우 이러한 함수는 잘못된 매개 변수 처리기를 호출합니다. 모든 경우에 계속 실행하도록 허용된 경우 함수는 -1을 반환하며, `errno`를 `EINVAL`로 설정합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -123,7 +124,7 @@ int _cwprintf_s_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_cprintf_s`,`_cprintf_s_l`|\<conio.h>|  
 |`_cwprintf_s`, `_cwprintf_s_l`|\<conio.h>|  
@@ -133,7 +134,7 @@ int _cwprintf_s_l(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_cprintf_s.c  

@@ -14,16 +14,19 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e1abb5cdebca8c19aeeb4ec00fbc46b3120170d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7f5a767995ce0484552d96429573e0b355820207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consuming-generics-ccli"></a>제네릭 사용(C++/CLI)
 한 .NET 언어로 작성된 제네릭은 다른 .NET 언어에서 사용할 수 있습니다. 템플릿과는 달리, 컴파일된 어셈블리의 제네릭은 여전히 제네릭으로 남아있습니다. 따라서 제네릭 형식이 정의된 어셈블리보다 다른 어셈블리 및 다른 언어로 제네릭 형식을 인스턴스화할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  이 예제에서는 C#에 정의된 제네릭 클래스를 보여 줍니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4153bf3a1cf219d50d8e412eec8a0113409f5f8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03045fcda597edcf5f1e0a32da466dc40953d4f3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="halt"></a>__halt
 **Microsoft 전용**  
@@ -45,7 +46,7 @@ void __halt( void );
  **헤더 파일** \<. h >  
   
 ## <a name="remarks"></a>설명  
- `__halt` 함수는 동일는 `HLT` 컴퓨터, 명령 및 커널 모드 에서만 사용할 수 있습니다. 자세한 내용을 보려면 문서에 대 한 검색 "Intel 아키텍처 소프트웨어 개발자 설명서, 볼륨 2: 명령 집합 참조"에 [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) 사이트입니다.  
+ `__halt` 함수는 동일는 `HLT` 컴퓨터, 명령 및 커널 모드 에서만 사용할 수 있습니다. 자세한 내용을 보려면 문서에 대 한 검색 "Intel 아키텍처 소프트웨어 개발자 설명서, 볼륨 2: 명령 집합 참조"에 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) 사이트입니다.  
   
 **Microsoft 전용 종료**  
   

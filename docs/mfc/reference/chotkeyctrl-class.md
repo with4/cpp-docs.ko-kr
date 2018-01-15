@@ -33,11 +33,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bf8168525c89188e27f2982255647b454a22c7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 982d4dec9c00490248da0b0e0dec7fd44376c218
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 클래스
 Windows의 공용 바로 가기 컨트롤의 기능을 제공합니다.  
@@ -232,7 +233,7 @@ static CString GetKeyName(
 ### <a name="remarks"></a>설명  
  지역화 된 버전의 Windows에서의 키보드 지역화 되지 않은 드라이버를 설치할 수 있도록 키보드 드라이버에서이 함수가 반환 하는 키 이름을 제공 하며 그 반대 과정도 수행 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
 ##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  

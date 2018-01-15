@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66618fd86d1ced689cffbaeef3da08cc0c0491a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 077d15837ed857ac983c3c9f9d4e7853b45aeee5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-active-document-container-application"></a>액티브 문서 컨테이너 응용 프로그램 만들기
 액티브 문서 컨테이너 응용 프로그램을 만드는 가장 간단하고 가장 권장되는 방법은 MFC 응용 프로그램 마법사를 사용해서 MFC EXE 컨테이너 응용 프로그램을 만들고 액티브 문서 포함을 지원하도록 응용 프로그램을 수정하는 방법입니다.  

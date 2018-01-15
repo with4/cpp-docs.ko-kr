@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 704bcbb81939ecb721b5b119f8c02a6409c2b82a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4701b0ae9f71099febb1a239cea6285fb0a7b229
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>클래스에 Windows 메시지 매핑
 Windows 메시지를 처리 하 여 대화 상자를 필요한 경우 적절 한 처리기 함수를 재정의 합니다. 이렇게 하려면 속성 창을 사용 하 여 [메시지 매핑](../mfc/reference/mapping-messages-to-functions.md) 대화 상자 클래스에 있습니다. 각 메시지에 대 한 메시지 맵 항목을 기록 하 고 메시지 처리기 멤버 함수는 클래스에 추가 합니다. Visual c + + 소스 코드 편집기를 사용 하 여 메시지 처리기에 코드를 작성 합니다.  

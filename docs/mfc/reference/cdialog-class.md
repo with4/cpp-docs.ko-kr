@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b823d40d4504be0180c3af3a6fb5359bf86725cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89c9670d19330e63a466c38a205a3122237e4f02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialog-class"></a>CDialog 클래스
 화면에 대화 상자를 표시에 사용 되는 기본 클래스입니다.  
@@ -93,7 +94,7 @@ class CDialog : public CWnd
 |[CDialog::SetDefID](#setdefid)|지정 된 누름 단추에 대화 상자에 대 한 기본 누름 단추 컨트롤을 변경합니다.|  
 |[CDialog::SetHelpID](#sethelpid)|대화 상자에 대 한 상황에 맞는 도움말 ID를 설정합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -224,7 +225,7 @@ virtual BOOL Create(
   
  사용 하 여는 `CWnd::DestroyWindow` 함수를 삭제 하 여 만든 대화 상자는 **만들기** 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
   
 ##  <a name="createindirect"></a>CDialog::CreateIndirect  
@@ -285,7 +286,7 @@ virtual INT_PTR DoModal();
 > [!NOTE]
 > `PreTranslateMessage`모달 대화 상자 메시지 처리를 위한 이제 라고 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#63](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
   
 ##  <a name="enddialog"></a>CDialog::EndDialog  
@@ -306,7 +307,7 @@ void EndDialog(int nResult);
   
  `EndDialog`대화 상자를 즉시 닫습니다 하지 않습니다. 대신, 대화 상자를 닫으려면 현재 메시지 처리기가 반환 되는 즉시에 지시 하는 플래그를 설정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#64](../../mfc/codesnippet/cpp/cdialog-class_3.cpp)]  
   
  [!code-cpp[NVC_MFCControlLadenDialog#65](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
@@ -338,7 +339,7 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ### <a name="remarks"></a>설명  
  컨트롤에 전달 하도록 (자식 창)에 대 한 단서를 `pWndCtrl`, 호출의 `CWnd::GetDlgItem` 에 대 한 포인터를 반환 하는 멤버 함수는 [CWnd](../../mfc/reference/cwnd-class.md) 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [cwnd:: Getdlgitem](../../mfc/reference/cwnd-class.md#getdlgitem)합니다.  
   
 ##  <a name="initmodalindirect"></a>CDialog::InitModalIndirect  
@@ -420,7 +421,7 @@ virtual void OnCancel();
 > [!NOTE]
 >  사용 하는 경우이 메서드를 재정의할 수 없습니다는 `CFileDialog` Windows XP에서 컴파일된 프로그램에서 개체입니다. 에 대 한 자세한 내용은 `CFileDialog`, 참조 [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
   
 ##  <a name="oninitdialog"></a>CDialog::OnInitDialog  
@@ -443,7 +444,7 @@ virtual BOOL OnInitDialog();
 > [!NOTE]
 >  사용 하는 경우이 메서드를 재정의할 수 없습니다는 `CFileDialog` 에서 컴파일된 프로그램에서 개체 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]합니다. 에 대 한 변경에 대 한 자세한 내용은 `CFileDialog` 아래 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] 참조 [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
   
 ##  <a name="onok"></a>CDialog::OnOK  
@@ -461,7 +462,7 @@ virtual void OnOK();
 > [!NOTE]
 >  사용 하는 경우이 메서드를 재정의할 수 없습니다는 `CFileDialog` Windows XP에서 컴파일된 프로그램에서 개체입니다. 에 대 한 자세한 내용은 `CFileDialog`, 참조 [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#68](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
   
 ##  <a name="onsetfont"></a>CDialog::OnSetFont  

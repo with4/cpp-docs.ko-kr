@@ -1,56 +1,58 @@
 ---
-title: "Creating a Device Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cursors [C++], creating"
-  - "icons [C++], creating"
-  - "display devices"
-  - "display devices, creating image"
-  - "images [C++], creating for display devices"
-  - "icons [C++], inserting"
+title: "장치 이미지 (아이콘에 대 한 이미지 편집기) 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- cursors [C++], creating
+- icons [C++], creating
+- display devices
+- display devices, creating image
+- images [C++], creating for display devices
+- icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d68a9d35471e43296cade829700fc6c5b311ce2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Creating a Device Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-새 아이콘이나 커서 리소스를 만들 경우, 이미지 편집기에서는 특정 스타일\(아이콘의 경우 32 × 32, 16색, 커서의 경우 32 × 32, 단색\)의 이미지를 먼저 만듭니다.  그런 다음, 처음에 만들어진 아이콘이나 커서에 다른 크기와 스타일의 이미지를 추가하거나, 필요에 따라 다른 디스플레이 장치용으로 각 추가 이미지를 편집할 수 있습니다.  기존 이미지 형식이나 그래픽 프로그램에서 만들어진 비트맵에서 잘라내어 붙여넣기 작업을 수행하여 이미지를 편집할 수도 있습니다.  Windows에서 사용하는 아이콘 크기에 대한 자세한 내용은 Windows SDK 설명서에서 [아이콘](_win32_Icons_cpp)을 참조하십시오.  
+# <a name="creating-a-device-image-image-editor-for-icons"></a>장치 이미지 만들기(아이콘에 대한 이미지 편집기)
+특정 스타일 (32 × 32, 아이콘에 대 한 16 색과 32 × 32, 커서 흑백) 이미지를 먼저 만듭니다 새 아이콘이 나 커서 리소스, 이미지를 만들 때 편집기. 그런 다음 초기 아이콘이 나 커서에 다양 한 크기 및 스타일에 이미지를 추가 및 다른 디스플레이 장치에 대 한 필요에 따라 각 추가 이미지를 편집할 수 있습니다. 또한 기존 이미지 형식에서 또는 그래픽 프로그램에서 만든 비트맵에서의 잘라내기 및 붙여넣기 작업을 수행 하 여 이미지를 편집할 수 있습니다.  
   
- [이미지 편집기](../mfc/image-editor-for-icons.md)에서 아이콘이나 커서 리소스를 열면 기본적으로 현재 디스플레이 장치에 가장 적합한 이미지가 열립니다.  
+ 리소스 아이콘 또는 커서를 열 때는 [이미지 편집기](../windows/image-editor-for-icons.md), 이미지 대부분 밀접 하 게 현재 디스플레이 장치는 기본적으로 열립니다.  
   
-### 새 아이콘이나 커서를 만들려면  
+### <a name="to-create-a-new-icon-or-cursor"></a>새 아이콘 또는 커서를 만들려면  
   
-1.  [리소스 뷰](../windows/resource-view-window.md)에서 .rc 파일을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **리소스 삽입**을 선택합니다.  .rc 파일에 커서 같은 기존 이미지 리소스가 있으면 **Cursor** 폴더를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **Cursor 삽입**을 선택합니다.  
+1.  [리소스 뷰](../windows/resource-view-window.md),.rc 파일을 마우스 오른쪽 단추로 클릭 한 다음 선택 **리소스 삽입** 바로 가기 메뉴에서. (단추로 하기만 하면 cursor와 같은.rc 파일에 기존 이미지 리소스를 이미 있는 경우는 **커서** 폴더와 선택 **커서 삽입** 바로 가기 메뉴에서.)  
   
     > [!NOTE]
-    >  프로젝트에 .rc 파일이 없으면 [새 리소스 스크립트 파일 만들기](../windows/how-to-create-a-resource-script-file.md)를 참조하십시오.  
+    >  프로젝트에 .rc 파일이 아직 없는 경우 [새 리소스 스크립트 파일 만들기](../windows/how-to-create-a-resource-script-file.md)를 참조하세요.  
   
-2.  [리소스 삽입 대화 상자](../windows/add-resource-dialog-box.md)에서 **아이콘**이나 **커서**를 선택하고 **새로 만들기**를 클릭합니다.  아이콘을 선택하면 32 × 32, 16 색 아이콘으로 이루어진 아이콘 리소스가 만들어집니다.  커서를 선택하면 32 × 32, 단색\(2색\) 이미지가 만들어집니다.  
+2.  에 [리소스 삽입 대화 상자](../windows/add-resource-dialog-box.md)선택, **아이콘** 또는 **커서** 클릭 **새로**합니다. 아이콘의 경우 32, 32 × 16 색 아이콘 포함 아이콘 리소스를 만듭니다. 커서의 경우 32 × 32 단색 (2-색) 이미지가 생성 됩니다.  
   
-     **리소스 삽입** 대화 상자의 이미지 리소스 종류 옆에 더하기 기호\(**\+**\)가 표시되면 도구 모음 템플릿을 사용할 수 있습니다.  더하기 기호\(\+\)를 클릭하여 템플릿 목록을 확장하고 템플릿을 선택한 다음 **새로 만들기**를 클릭합니다.  
+     더하기 기호 (**+**) 옆에서 이미지 리소스 종류에 표시는 **리소스 삽입** 대화 상자, 도구 모음 템플릿이 있습니다 사용할 수 있습니다. 템플릿의 목록을 확장, 서식 파일을 선택 하 고 클릭를 더하기 기호를 클릭 **새로**합니다.  
   
- 관리되는 프로젝트에 리소스를 추가하는 방법은 .NET Framework 개발자 가이드의 [응용 프로그램의 리소스](../Topic/Resources%20in%20Desktop%20Apps.md)를 참조하십시오. 관리되는 프로젝트에 리소스 파일 추가, 리소스 액세스, 정적 리소스 표시, 속성에 리소스 문자열 할당 등의 작업을 수동으로 수행하는 방법에 대한 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/ko-kr/9a96220d-a19b-4de0-9f48-01e5d82679e5) 및 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)을 참조하십시오.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
  **요구 사항**  
   
  없음  
   
-## 참고 항목  
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>참고 항목  
+ [아이콘 및 커서: 디스플레이 장치용 이미지 리소스](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [액셀러레이터 키](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [아이콘 및 커서: 디스플레이 장치용 이미지 리소스](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

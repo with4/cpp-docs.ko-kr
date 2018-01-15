@@ -322,11 +322,12 @@ caps.latest.revision: "48"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1cf7e830f2c003135ceda9b63b244f9858b14d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d652be633adca3d21d3cee5b54350c34e691740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 클래스
 `CMFCToolBar` 클래스와 유사 [CToolBar 클래스](../../mfc/reference/ctoolbar-class.md), 하지만 사용자 인터페이스 기능에 대 한 추가 지원을 제공 합니다. 여기에는 평면 도구 모음, 핫 이미지 포함 도구 모음, 큰 아이콘, 페이저 단추, 잠긴 도구 모음, rebar 컨트롤, 이미지 아래 텍스트, 배경 이미지, 탭 도구 모음이 포함됩니다. `CMFCToolBar` 클래스에는 기본 제공 사용자 지정 도구 모음과 메뉴, 메뉴 사이 끌어 놓기, 콤보 상자 단추, 편집 상자 단추, 색 선택 및 롤업 단추 도구 모음이 포함됩니다.
@@ -514,7 +515,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|높은 DPI 모드로 확장할 것인지 또는 하지 도구 모음 이미지를 지정 합니다.|  
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|큰 이미지의 크기 (높이 또는 너비)와 일반 이미지 차원 비율을 지정합니다.|  
@@ -532,7 +533,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
  `CMFCToolBar`MFC 라이브러리 클래스에 대 한 기본 클래스 [CMFCMenuBar 클래스](../../mfc/reference/cmfcmenubar-class.md), [CMFCPopupMenuBar 클래스](../../mfc/reference/cmfcpopupmenubar-class.md), 및 [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCToolBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 도구 모음 창 레이블 텍스트를 설정, 모음, 창 스타일을 설정 및 설정 하는 방법을 설명는 **단추 추가 / 제거** 도구 모음의 끝에 나타나는 단추입니다. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
@@ -968,7 +969,7 @@ virtual BOOL CreateEx(
   
  대신이 메서드를 호출 [CMFCToolBar::Create](#create) 특정 스타일을 제공 하려는 경우. 예를 들어 설정 `dwCtrlStyle` 를 `TBSTYLE_FLAT | TBSTYLE_TRANSPARENT` Internet Explorer 4에서 사용 되는 도구 모음 유사한 도구 모음을 만들려면 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `CreateEx` 의 메서드는 `CMFCToolBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
@@ -1289,7 +1290,7 @@ UINT GetButtonStyle(int nIndex) const;
  도구 모음 단추의 인덱스를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 도구 모음 단추 스타일을 지정 하는 값입니다. 입니다. 참조 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md) 가능한 스타일의 목록에 대 한 합니다.  
+ 도구 모음 단추 스타일을 지정 하는 값입니다. 이어야 합니다. 참조 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md) 가능한 스타일의 목록에 대 한 합니다.  
   
 ### <a name="remarks"></a>설명  
  호출 [CMFCToolBar::SetButtonStyle](#setbuttonstyle) 도구 모음 단추 스타일을 설정 하려면  
@@ -1617,7 +1618,7 @@ virtual void GetItemRect(
 ### <a name="remarks"></a>설명  
  `CRect` 있는 개체를 `lpRect` 포인트는 지정된 된 인덱스에 단추 존재 하지 않는 경우 0으로 설정 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `GetItemRect` 의 메서드는 `CMFCToolBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
@@ -2418,7 +2419,7 @@ virtual BOOL LoadToolBar(
 ### <a name="remarks"></a>설명  
  프레임 워크 초기화 도구 모음과 연관 된 이미지를 로드 하는 동안이 메서드를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `LoadToolBar` 에서 메서드는 `CMFCToolBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
@@ -2723,7 +2724,7 @@ int ReplaceButton(
 ### <a name="remarks"></a>설명  
  리소스에서 로드할 수 없는 도구 모음 단추를 추가 하려면이 메서드를 호출 합니다. 디자인 타임에 자리 표시자 단추를 만들 수 있으며 도구 모음을 초기화 하는 경우이 단추는 사용자 지정 단추 바꿉니다. 이 메서드를 사용 하는 예제에 대 한 VisualStudioDemo 샘플을 참조 하십시오.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `ReplaceButton` 에서 메서드는 `CMFCToolBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  

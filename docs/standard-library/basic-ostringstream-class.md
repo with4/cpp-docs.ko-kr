@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a5d494d28872bf5e59f0c436ceb037bd36a94c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6338ed2bbaa7d16dc2723f4bdcaa93ea0a3f3e31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream 클래스
 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 클래스의 스트림 버퍼에 요소 및 인코드된 개체를 삽입하는 방법을 제어하는 개체를 설명합니다.  
@@ -58,7 +59,7 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 |-|-|  
 |[basic_ostringstream](#basic_ostringstream)|`basic_ostringstream` 형식의 개체를 생성합니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -117,7 +118,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 **pointer** 형식의 저장된 스트림 버퍼 주소를 basic_stringbuf< **Elem**, **Tr**, `Alloc`>로 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `rdbuf`의 사용 예제는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.  
   
 ##  <a name="str"></a>  basic_ostringstream::str  
@@ -141,7 +142,7 @@ void str(
 ### <a name="remarks"></a>설명  
  첫 번째 멤버 함수는 [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str)을 반환합니다. 두 번째 멤버 함수는 `rdbuf` -> **str**( `_Newstr`)을 호출합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **str**의 사용 예제는 [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

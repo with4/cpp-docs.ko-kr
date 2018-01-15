@@ -1,32 +1,33 @@
 ---
-title: "transmit_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.transmit_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "transmit_as attribute"
+title: transmit_as | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.transmit_as
+dev_langs: C++
+helpviewer_keywords: transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 36541f7ebb417302023d214695d07f498808718a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# transmit_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-클라이언트 및 서버 응용 프로그램을 조작, 제시 된 종류는 전송 된 형식과 연결 하려면 컴파일러에 지시 합니다.  
+# <a name="transmitas"></a>transmit_as
+전송된 유형 클라이언트와 서버 응용 프로그램에서 조작 하는 제공 된 형식 연결 컴파일러에 지시 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,15 +36,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `type`  
  클라이언트와 서버 간에 전송 되는 데이터 형식을 지정 합니다.  
   
-## 설명  
- **Transmit\_as** C\+\+ 특성을 동일한 기능을가지고 있는  [transmit\_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **transmit_as** c + + 특성에 동일한 기능을는 [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 특성입니다.  
   
-## 예제  
- 다음 코드의 사용 방법을 보여 줍니다 있는  **transmit\_as** 특성:  
+## <a name="example"></a>예  
+ 다음 코드에서는 사용 하 여 **transmit_as** 특성:  
   
 ```  
 // cpp_attr_ref_transmit_as.cpp  
@@ -73,21 +74,20 @@ struct _TREE_NODE_TYPE * right;
 [transmit_as(TREE_XMIT_TYPE)] typedef TREE_NODE_TYPE * TREE_TYPE;  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
 |**적용 대상**|`typedef`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
- 속성 컨텍스트에 대 한 자세한 내용은 참조 하십시오.  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [Typedef, Enum, Union 및 Struct 특성](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

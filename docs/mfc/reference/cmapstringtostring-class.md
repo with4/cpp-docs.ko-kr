@@ -53,11 +53,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea16f46628cd12e0aa4e70f777cede46fd63e703
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 142a000b5521458e3bdace8f840295efd07209fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 클래스
 `CString` 개체로 키가 지정된 `CString` 개체의 맵을 지원합니다.  
@@ -147,7 +148,7 @@ class CMapStringToString : public CObject
   
  반환 값을 저장 하는 데 사용 됩니다 [CMapStringToString::PLookup](#plookup), [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc), 및 [CMapStringToString::PGetNextAssoc](#pgetnextassoc)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   사용의 예에 대 한 예제를 참조 하십시오. [CMapStringToString::PLookup](#plookup)합니다.  
   
 ##  <a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
@@ -165,7 +166,7 @@ CPair* PGetFirstAssoc();
 ### <a name="remarks"></a>설명  
  Map 개체에 대 한 포인터는 첫 번째 요소를 반환 하려면이 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
@@ -187,7 +188,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="remarks"></a>설명  
  Map의 모든 요소를 반복 하는이 메서드를 호출 합니다. 첫 번째 요소를 호출 하 여 검색 `PGetFirstAssoc` 는 지도에 대 한 연속 호출은을 반복 하 고 `PGetNextAssoc`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)합니다.  
   
 ##  <a name="plookup"></a>CMapStringToString::PLookup  
@@ -209,7 +210,7 @@ CPair* PLookup(LPCTSTR key);
 ### <a name="remarks"></a>설명  
  지정된 된 키를 정확 하 게 일치 하는 키를 사용 하 여 지도 요소에 대 한 검색 하려면이 메서드를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#74](../../mfc/codesnippet/cpp/cmapstringtostring-class_2.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

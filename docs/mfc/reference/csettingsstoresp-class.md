@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30ca86898aa94a2c42f73b2f589c7fc7fc93634
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 클래스
 `CSettingsStoreSP` 클래스는 인스턴스를 만드는 데 사용할 수 있는 도우미 클래스는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  
@@ -55,7 +56,7 @@ class CSettingsStoreSP
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |`m_dwUserData`|에 저장 된 사용자 지정 사용자 데이터는 `CSettingsStoreSP` 개체입니다. 생성자에서이 데이터를 제공는 `CSettingsStoreSP` 개체입니다.|  
 |`m_pRegistry`|`CSettingsStore`-파생 된 개체는 `Create` 메서드를 만듭니다.|  
@@ -104,7 +105,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  경우 `bAdmin` 은 `TRUE`, 응용 프로그램에 관리 권한이 있어야 합니다. 그렇지 않으면 레지스트리에 액세스 하려고 하면 실패 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `Create` 의 메서드는 `CSettingsStoreSP` 클래스.  
   
  [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  

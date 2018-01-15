@@ -77,11 +77,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4449ebd1563fe02705913fd4f19e51d195b3d732
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c23129c1ac857e812b0da837b19322741087934
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 클래스
 A `CMFCCaptionBar` 개체는 세 가지 요소를 표시할 수 있는 컨트롤 막대: 단추, 텍스트 레이블 및 비트맵입니다. 각 형식의 요소를 한 번에 하나만 표시할 수 있습니다. 각 요소를 컨트롤의 왼쪽 또는 오른쪽 가장자리나 가운데에 맞출 수 있습니다. 평면 또는 3D 스타일을 캡션 표시줄의 위쪽 및 아래쪽 테두리에 적용할 수도 있습니다.  
@@ -121,7 +122,7 @@ class CMFCCaptionBar : public CPane
 |[CMFCCaptionBar::SetMargin](#setmargin)|캡션 표시줄 요소의 가장자리와의 캡션 표시줄 컨트롤의 가장자리 사이의 거리를 설정합니다.|  
 |[CMFCCaptionBar::SetText](#settext)|캡션 표시줄에 대 한 텍스트 레이블을 가져오거나 설정 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -133,7 +134,7 @@ class CMFCCaptionBar : public CPane
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|캡션 표시줄의 배경색입니다.|  
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|캡션 표시줄의 테두리 색입니다.|  
@@ -154,7 +155,7 @@ class CMFCCaptionBar : public CPane
   
  메시지 표시줄 모드를 사용 하려면 호출 [CMFCCaptionBar::Create](#create) 네 번째 매개 변수 (bIsMessageBarMode)를 설정 하 고 `TRUE`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCCaptionBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에서는 캡션 표시줄 컨트롤을 만들, 캡션 표시줄의 3D 테두리를 설정, 픽셀의 캡션 표시줄 컨트롤의 가장자리와 요소 막대 캡션 가장자리 사이의 거리를 설정, 캡션 표시줄에 대 한 단추를 설정 합니다. 단추의 도구 설명 설정, 캡션 표시줄의 텍스트 레이블을 설정, 비트맵 이미지의 캡션 표시줄에 대 한 설정 및 캡션 표시줄에는 이미지에 대 한 도구 설명을 설정 합니다. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]  

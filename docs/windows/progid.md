@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f7c0cdf844133cf64c3af70833caff7dc4cf275
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 862629af7e279cf1f03a5e9adc9424b330ee1d90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="progid"></a>progid
 COM 개체에 대 한 ProgID를 지정합니다.  
@@ -50,7 +53,7 @@ COM 개체에 대 한 ProgID를 지정합니다.
   
  ATL을 사용 하는 프로젝트 내에서이 특성을 사용 하는 경우 특성의 동작이 변경 됩니다. 위의 동작 외에도이 특성으로 지정 된 정보에 사용 되는 **GetProgID** 함수에 의해 삽입 된 **coclass** 특성입니다. 자세한 내용은 참조는 [coclass](../windows/coclass.md) 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  예를 참조 [coclass](../windows/coclass.md) 의 샘플 사용에 대 한 **progid**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

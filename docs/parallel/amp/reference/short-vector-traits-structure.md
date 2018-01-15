@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d4054b95dc4c62c645f4e8e9ba1eb7d64e690784
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cf594f08283cbffd1ccd5f22663ef88e7e19e76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits 구조체
 short_vector_traits는 기본 벡터 길이 및 짧은 벡터 형식의 스칼라 형식 또는 스칼라 형식 검색할 수 있게 합니다.  

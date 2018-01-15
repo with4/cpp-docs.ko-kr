@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1060
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1060
+f1_keywords: C1060
+dev_langs: C++
+helpviewer_keywords: C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c551ed3a6befbf646394929a6bcc6406ea93b19f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 36abe3a63515dcb3b8f07ce5d0d169329ed5f7ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fatal-error-c1060"></a>심각한 오류 C1060
 컴파일러의 힙 공간이 부족합니다.  
@@ -39,7 +35,7 @@ ms.lasthandoff: 10/09/2017
   
 2.  64비트 플랫폼에서 컴파일하는 경우 64비트 컴파일러 도구 집합을 사용합니다. 자세한 내용은 참조 [하는 방법: 명령줄에서 64 비트 Visual c + + 도구를 사용 하도록 설정](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)합니다.  
   
-3.  32 비트 Windows에서 사용 하 여 시도 [3GB](http://go.microsoft.com/fwlink/?LinkId=177831) boot.ini 스위치가 있습니다.  
+3.  32 비트 Windows에서 사용 하 여 시도 [3GB](http://go.microsoft.com/fwlink/p/?linkid=177831) boot.ini 스위치가 있습니다.  
   
 4.  Windows 스왑 파일의 크기를 늘립니다.  
   

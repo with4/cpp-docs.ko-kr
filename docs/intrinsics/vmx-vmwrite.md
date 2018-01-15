@@ -1,73 +1,73 @@
 ---
-title: "__vmx_vmwrite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmwrite"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmwrite 내장 함수"
-  - "VMWRITE 명령"
+title: __vmx_vmwrite | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmwrite
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmwrite intrinsic
+- VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 00bc9fe617144db7de3425c5732b3f655b30c790
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmwrite
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Microsoft 전용**  
   
- 현재 가상 컴퓨터 제어 구조 \(VMCS\)에 지정 된 필드에 지정 된 값을 씁니다.  
+ 현재 가상 컴퓨터 제어 구조 (VMCS)에 지정된 된 필드에 지정 된 값을 씁니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-unsigned char __vmx_vmwrite(   
+unsigned char __vmx_vmwrite(   
    size_t Field,  
    size_t FieldValue  
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
   
-|Parameter|설명|  
-|---------------|--------|  
-|\[in\] `Field`|쓰기 VMCS 필드입니다.|  
-|\[in\] `FieldValue`|VMCS 필드에 쓸 값입니다.|  
+|매개 변수|설명|  
+|---------------|-----------------|  
+|[in] `Field`|쓸 VMCS 필드입니다.|  
+|[in] `FieldValue`|VMCS 필드에 쓸 값입니다.|  
   
-## 반환 값  
+## <a name="return-value"></a>반환 값  
  0  
- 작업이 성공 했습니다.  
+ 작업에 성공했습니다.  
   
  1  
- 작업 실패와 확장 된 상태에서 사용할 수 있는 `VM-instruction error field` 현재 VMCS의.  
+ 현재 VMCS의 `VM-instruction error field` 에서 사용할 수 있는 확장된 상태로 작업이 실패했습니다.  
   
  2  
- 사용 가능한 상태가 없으면 작업이 실패 했습니다.  
+ 사용 가능한 상태 없이 작업이 실패했습니다.  
   
-## 설명  
- `__vmx_vmwrite` 함수는 해당 하는 `VMWRITE` 컴퓨터 명령.  값은 `Field` 매개 변수는 인텔 문서에 설명 되어 있는 인코딩된 필드 인덱스입니다.  검색 문서, "인텔 가상화 기술 사양에는 ia\-32 인텔 아키텍처"에 대 한 자세한 내용은 번호 C97063\-002에서를 문서는 [인텔사](http://go.microsoft.com/fwlink/?LinkId=127) 사이트, 및 다음 해당 문서의 부록 C를 참조 하십시오.  
+## <a name="remarks"></a>설명  
+ `__vmx_vmwrite` 함수는 동일는 `VMWRITE` 컴퓨터 명령입니다. 값은 `Field` 매개 변수는 Intel 설명서에 설명 되어 있는 인코딩된 필드 인덱스입니다. 문서 번호 C97063-002, 자세한 내용은 "Intel 가상화 기술 사양에 대 한 the ia-32 Intel 아키텍처" 문서에 대 한 검색에 대 한는 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) 사이트 하 고 다음의 부록 C을 참조 하십시오. 문서입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-|내장|아키텍처|  
-|--------|----------|  
+|내장 함수|아키텍처|  
+|---------------|------------------|  
 |`__vmx_vmwrite`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **헤더 파일** \<intrin.h\>  
+ **헤더 파일** \<. h >  
   
-## Microsoft 특정 끝  
+**Microsoft 전용 종료**  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmread](../intrinsics/vmx-vmread.md)
+ [__vmx_vmread](../intrinsics/vmx-vmread.md)

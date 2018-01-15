@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753c840fe1b4c9850408b53fa0adf09ed1bc121
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>enable_if 클래스
 SFINAE 오버로드 확인을 위한 형식의 인스턴스를 조건부로 만듭니다. 중첩된 typedef `enable_if<Condition,Type>::type`이 있고 이는 `Type`의 동의어입니다. `Condition`이 `true`인 경우에만 해당됩니다.  
@@ -52,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- C++에서 템플릿 매개 변수의 대체 실패는 그 자체만으로는 오류가 아닙니다. 이를 *SFINAE*(대체 실패는 오류가 아닙니다)라고도 합니다. 일반적으로 `enable_if`는 오버로드 확인에서 후보를 제거하는 데 사용됩니다. 즉, 오버로드 집합을 선별합니다. 따라서 다른 정의를 사용하기 위해 정의 하나가 거부될 수 있습니다. 이는 SFINAE 동작을 따릅니다. SFINAE에 대한 자세한 내용은 Wikipedia에서 [Substitution failure is not an error](http://go.microsoft.com/fwlink/LinkId=394798)(대체 실패는 오류가 아닙니다)를 참조하세요.  
+ C++에서 템플릿 매개 변수의 대체 실패는 그 자체만으로는 오류가 아닙니다. 이를 *SFINAE*(대체 실패는 오류가 아닙니다)라고도 합니다. 일반적으로 `enable_if`는 오버로드 확인에서 후보를 제거하는 데 사용됩니다. 즉, 오버로드 집합을 선별합니다. 따라서 다른 정의를 사용하기 위해 정의 하나가 거부될 수 있습니다. 이는 SFINAE 동작을 따릅니다. SFINAE에 대한 자세한 내용은 Wikipedia에서 [Substitution failure is not an error](http://go.microsoft.com/fwlink/p/?linkid=394798)(대체 실패는 오류가 아닙니다)를 참조하세요.  
   
  다음은 4가지 예제 시나리오입니다.  
   
@@ -121,7 +122,7 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
   
 -   사용하지 않으면 좋은 코드를 모호하게 만드는 오버로드 집합이 있는 경우에는 `enable_if`를 사용합니다.  가장 일반적으로 이러한 경우는 생성자를 암시적으로 변환할 때 발생합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제는 C++ 표준 라이브러리 템플릿 함수 [std::make_pair()](../standard-library/utility-functions.md#make_pair)가 `enable_if`를 활용하는 방법을 보여 줍니다.  
   
 ```cpp  

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fdedaf9b100ae85352b1514f96fe7e229e4f9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-documents-on-the-internet"></a>인터넷의 액티브 문서
 액티브 문서는 일반적인 포함된 개체에 대 한 확장을 제공합니다. 액티브 문서는 다중 페이지 수 있으며 전체 클라이언트 영역에 표시 됩니다. 기존 메뉴 협상을 수행 하며 현재 위치와 서버 응용 프로그램에서 열려 있는 창에 편집할 수 있습니다. 해치 테두리가 작은 사각형으로 표시를 하는 대신 액티브 문서는 전체 프레임 및 항상 내부 활성입니다.  

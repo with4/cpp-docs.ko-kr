@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 35f48a87a0b9526ad6150a700190f4509e1128d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c954354321d814952ec3ac5ea148cc9177cd0fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>CStatusBarCtrl 개체의 모드 설정
 두 가지 방식에 대 한는 `CStatusBarCtrl` 개체: 단순 및 비 단순 합니다. 대부분의 경우 상태 표시줄 컨트롤이 텍스트와 아이콘이 나 아이콘 함께 하나 이상의 파트를 갖습니다. 이 비 단순 모드를 라고 합니다. 이 모드에 대 한 자세한 내용은 참조 하십시오. [CStatusBarCtrl 개체의 일부 초기화](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)합니다.  

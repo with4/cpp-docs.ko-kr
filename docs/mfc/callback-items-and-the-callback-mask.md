@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f2d286bcc9e5119e373af6ae2e02d7e39190dc3a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24d9992b8a9db679b30624d85ede1a35bfd9826d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callback-items-and-the-callback-mask"></a>콜백 항목 및 콜백 마스크
 각각의 해당 항목에 대 한 목록 뷰 컨트롤 레이블 텍스트를 항목의 아이콘의 이미지 목록 인덱스를 일반적으로 저장 하 고 항목의 상태에 대 한 플래그 비트의 집합입니다. 응용 프로그램에 이미 일부 항목에 대 한 정보를 저장 하는 경우에 유용 하는 콜백 항목이으로 개별 항목을 정의할 수 있습니다.  

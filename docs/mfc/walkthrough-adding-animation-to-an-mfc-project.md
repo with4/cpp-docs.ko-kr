@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 183a3db0236e8aabc528905e19ef1fb7e4858647
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f027da0e90bc8dde015c2d42bd72ceb388aa0bba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>연습: MFC 프로젝트에 애니메이션 추가
 이 연습에서는 Visual c + +, Microsoft Foundation 클래스 라이브러리 (MFC) 프로젝트에 기본 애니메이션된 개체를 추가 하는 방법에 설명 합니다.  

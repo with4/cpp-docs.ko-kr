@@ -31,11 +31,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 329474d7d2212d621bdf263021a86d170118f1b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38fbca875847e557981c09dc418c8e0ef65bed6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccolordialog-class"></a>CColorDialog 클래스
 색 선택 대화 상자는 응용 프로그램에 통합할 수 있습니다.  
@@ -63,7 +64,7 @@ class CColorDialog : public CCommonDialog
 |[CColorDialog::GetSavedCustomColors](#getsavedcustomcolors)|사용자가 만든 사용자 지정 색을 검색 합니다.|  
 |[CColorDialog::SetCurrentColor](#setcurrentcolor)|지정된 된 색의 현재 색 선택 항목을 강제로 수행합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -135,7 +136,7 @@ CColorDialog(
  `pParentWnd`  
  대화 상자의 부모 또는 소유자 창에 대 한 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#49](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]  
   
 ##  <a name="domodal"></a>CColorDialog::DoModal  
@@ -155,7 +156,7 @@ virtual INT_PTR DoModal();
   
  호출한 후 `DoModal`, 다른 멤버를 설정 또는 사용자가 정보 입력 대화 상자에 검색 함수를 호출할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CColorDialog::CColorDialog](#ccolordialog)합니다.  
   
 ##  <a name="getcolor"></a>CColorDialog::GetColor  
@@ -168,7 +169,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>반환 값  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 색 대화 상자에서 선택한 색의 RGB 정보를 포함 하는 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
   
 ##  <a name="getsavedcustomcolors"></a>CColorDialog::GetSavedCustomColors  
@@ -186,7 +187,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
   
  각 반환된 된 배열에 16 RGB 값 (흰색) RGB(255,255,255) 초기화 됩니다. 사용자가 선택한 사용자 지정 색 응용 프로그램 내에서 대화 상자 호출 사이만 저장 됩니다. 응용 프로그램의 호출 사이의 이러한 색을 저장 하려는 경우 저장 해야 약간 다른 방식에서와 같은 초기화에 (합니다. INI) 파일입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>CColorDialog::m_cc  
@@ -199,7 +200,7 @@ CHOOSECOLOR m_cc;
 ### <a name="remarks"></a>설명  
  생성 한 후 한 `CColorDialog` 개체를 사용할 수 있습니다 `m_cc` 호출 하기 전에 대화 상자의 다양 한 측면을 설정 하는 [DoModal](#domodal) 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
   
 ##  <a name="oncolorok"></a>CColorDialog::OnColorOK  
@@ -227,7 +228,7 @@ virtual BOOL OnColorOK();
   
  호출할 수 있습니다 [SetCurrentColor](#setcurrentcolor) 내에서 `OnColorOK` 강제로 색을 선택 합니다. 한 번 `OnColorOK` 발생 했음을 (즉, 사용자가 클릭 **확인** 색 변경 내용을 적용 하)를 호출할 수 있습니다 [GetColor](#getcolor) 새 색의 RGB 값을 가져올 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
 ##  <a name="setcurrentcolor"></a>CColorDialog::SetCurrentColor  
@@ -244,7 +245,7 @@ void SetCurrentColor(COLORREF clr);
 ### <a name="remarks"></a>설명  
  메시지 처리기 내에서이 함수를 호출 하거나 `OnColorOK`합니다. 대화 상자는 사용자가 선택한 값에 따라 자동으로 업데이트는 `clr` 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CColorDialog::OnColorOK](#oncolorok)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

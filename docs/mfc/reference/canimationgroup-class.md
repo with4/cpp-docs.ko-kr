@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,8 +30,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pStoryboard
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_nGroupID
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pParentController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationGroup [MFC], CAnimationGroup
 - CAnimationGroup [MFC], Animate
@@ -55,16 +53,16 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d047940ac1ef3103168aa40b53c726ce0767b52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c59bd895187d0d9a047c626426736a957a4d6b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 클래스
 애니메이션 스토리 보드, 애니메이션 개체 및 애니메이션을 정의 하는 전환 결합 하는 애니메이션 그룹을 구현 합니다.  
@@ -97,7 +95,7 @@ class CAnimationGroup;
 |[CAnimationGroup::Schedule](#schedule)|지정된 된 시간에 애니메이션을 예약 합니다.|  
 |[CAnimationGroup::SetAutodestroyTransitions](#setautodestroytransitions)|자동으로 그룹에 속하는 모든 애니메이션 개체 전환을 소멸 지시 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -118,7 +116,7 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|애니메이션 그룹의 고유 식별자입니다.|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|이 그룹이 속한는 애니메이션 컨트롤러에 대 한 포인터입니다.|  
@@ -359,4 +357,3 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
   
 ## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
-

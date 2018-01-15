@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a925f476d67ac4bc5abd2270f6c0b96df67c4466
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9f12f2670fce7ea1c28d68510ef6134a199dd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sampler-class"></a>sampler 클래스
 샘플러 클래스 텍스처 샘플링에 사용할 샘플링 구성 정보를 집계 합니다.  

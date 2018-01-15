@@ -47,11 +47,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: def9fca45f36a6e161bbd4b24431c9afd20d77c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aecbb168316b3d6416d3a41a6f6a56b04aeb990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 클래스
 이미지 목록에 대한 지원을 제공하여 콤보 상자 컨트롤을 확장합니다.  

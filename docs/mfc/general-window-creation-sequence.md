@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4bd939d6deda4f50d03ba0951720aa4d445fcae7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59bed4387a6b8e6edeb504e29d221e76a0b39d18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-window-creation-sequence"></a>일반 창 만들기 시퀀스
 프레임 워크 훨씬 동일한 프로세스를 사용 하 여에서 설명 하는 자식 같은 고유한 창의 창을 만들 때 [문서/뷰 만들기](../mfc/document-view-creation.md)합니다.  

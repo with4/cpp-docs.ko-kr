@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae273456a40b5d065177fa6aba91e69a2fbea424
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9142b268c5f09a88883d048c35287966d9ef8aab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry 클래스
 ID2D1PathGeometry에 대 한 래퍼입니다.  
@@ -75,7 +76,7 @@ class CD2DPathGeometry : public CD2DGeometry;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|ID2D1PathGeometry에 대 한 포인터입니다.|  
   

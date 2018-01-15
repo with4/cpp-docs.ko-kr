@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58d1c1ec052c399cf56cd145e7ee06f52483661e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 451cc5690e871c1292f0a8ff2450eca950ada65b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 클래스
 파생 된 디바이스 컨텍스트 클래스 [CDC](../../mfc/reference/cdc-class.md)합니다.  
@@ -54,7 +55,7 @@ class CPaintDC : public CDC
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CPaintDC::m_hWnd](#m_hwnd)|`HWND` 이 `CPaintDC` 개체를 연결 합니다.|  
   
@@ -89,7 +90,7 @@ explicit CPaintDC(CWnd* pWnd);
 ### <a name="remarks"></a>설명  
  예외 (형식의 `CResourceException`) 하는 경우 throw 되는 Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) 호출이 실패 합니다. 장치 컨텍스트에 Windows 이미 할당 된 모든 사용 가능한 장치 컨텍스트에서 사용할 수 있는 수 있습니다. Windows에서 언제 든 지 사용할 수 있는 5 개의 일반적인 디스플레이 컨텍스트를 위한 응용 프로그램 완료 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>CPaintDC::m_hWnd  
@@ -102,7 +103,7 @@ HWND m_hWnd;
 ### <a name="remarks"></a>설명  
  `m_hWnd`보호 된 형식 변수의 `HWND`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
 ##  <a name="m_ps"></a>CPaintDC::m_ps  
@@ -119,7 +120,7 @@ PAINTSTRUCT m_ps;
   
  장치 컨텍스트 핸들을 통해 액세스할 수 있는지 참고는 `PAINTSTRUCT`합니다. 그러나 핸들을 통해 직접 액세스할 수 있습니다는 `m_hDC` 멤버 변수는 `CPaintDC` 에서 상속 `CDC`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPaintDC::m_hWnd](#m_hwnd)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

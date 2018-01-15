@@ -114,11 +114,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8f76e8ace4eff6bd02efeba8a42554a27618bc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79343615b633b583775a482f0a9d2155e79ede10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 클래스
 애니메이션을 만들고 관리하기 위한 중앙 인터페이스를 제공하는 애니메이션 컨트롤러를 구현합니다.  
@@ -190,7 +191,7 @@ class CAnimationController : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|스토리 보드의 시작을 나타내는 키 프레임입니다.|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|애니메이션 컨트롤러 유효한 지 여부를 지정 합니다. 이 멤버는 현재 운영 체제에서 Windows 애니메이션 API를 지원 하지 않으면 FALSE로 설정 됩니다.|  

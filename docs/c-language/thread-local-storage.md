@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aaf6677a779ada2457814aecba5c84a59e1f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1eef6199f67702aeb3d3a886c52e910302a7dcad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-local-storage"></a>스레드 로컬 저장소
 **Microsoft 전용**  
@@ -38,7 +39,7 @@ __declspec( thread ) int tls_i = 1;
   
  정적으로 바인딩된 스레드 로컬 변수를 선언하는 경우 이러한 지침을 준수해야 합니다.  
   
--   **__declspec(thread)**의 사용은 DLL 가져오기의 [지연 로드](../build/reference/linker-support-for-delay-loaded-dlls.md)를 방해할 수 있습니다**.**  
+-   동적 초기화가 있는 스레드 로컬 변수는 DLL이 로드되게 하는 스레드와 프로세스에서 이미 실행 중인 스레드에서만 초기화됩니다. 자세한 내용은 [스레드](../cpp/thread.md)를 참조하세요.  
   
 -   데이터 선언 및 정의에만 thread 특성을 적용할 수 있습니다. 함수 선언 또는 정의에는 사용할 수 없습니다. 예를 들어, 다음 코드는 컴파일러 오류를 생성합니다.  
   

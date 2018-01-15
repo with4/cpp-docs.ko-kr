@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationPoint::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationPoint::m_xValue
 - AFXANIMATIONCONTROLLER/CAnimationPoint::m_yValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationPoint [MFC], CAnimationPoint
 - CAnimationPoint [MFC], AddTransition
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ab685c223c4a86c35ba0feb578d93f58844734b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 81e4221ca2aa9ee653d391d9808666628010a325
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 클래스
 좌표에 애니메이션을 적용할 수 있는 점 기능을 구현합니다.  
@@ -74,7 +72,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 |[CAnimationPoint::GetY](#gety)|CAnimationVariable에 Y 좌표에 대 한 액세스를 제공합니다.|  
 |[CAnimationPoint::SetDefaultValue](#setdefaultvalue)|기본값을 설정합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -89,7 +87,7 @@ class CAnimationPoint : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationPoint::m_xValue](#m_xvalue)|X 나타내는 캡슐화 된 애니메이션 변수 애니메이션 점의 좌표입니다.|  
 |[CAnimationPoint::m_yValue](#m_yvalue)|캡슐화 된 애니메이션 변수 애니메이션 점의 Y 좌표를 나타내는입니다.|  
@@ -280,4 +278,3 @@ void SetDefaultValue(const POINT& ptDefault);
   
 ## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
-

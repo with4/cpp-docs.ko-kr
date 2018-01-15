@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49be20f858d14552cfde1ad3fc4cecf0fc738e84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 196a1e19cee0fe722fbd5511fae658f87b2e1152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismemberpointer-class"></a>is_member_pointer 클래스
 형식이 멤버에 대한 포인터인지 여부를 테스트합니다.  
@@ -40,7 +41,7 @@ struct is_member_pointer;
 ## <a name="remarks"></a>설명  
  형식 조건자의 인스턴스는 `Ty` 형식이 멤버 함수에 대한 포인터, 멤버 개체에 대한 포인터 또는 이들 중 하나의 `cv-qualified` 형식인 경우 true이고, 그렇지 않으면 false입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // std__type_traits__is_member_pointer.cpp   

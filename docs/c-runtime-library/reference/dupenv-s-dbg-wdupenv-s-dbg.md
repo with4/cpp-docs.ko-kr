@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -38,31 +36,16 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b478e11cb4b3b04d92a693fca85cd6257b594514
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 571772a5a75a36a3c49adeb560a4814a5c7fcae6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 현재 환경에서 값을 가져옵니다.  추가 디버깅 정보를 제공하기 위해 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)를 통해 메모리를 할당하는 [_dupenv_s, _wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md)의 버전입니다.  
@@ -120,7 +103,7 @@ errno_t _wdupenv_s_dbg(
   
  대부분의 경우 이러한 함수를 명시적으로 호출할 필요가 없습니다. 대신 `_CRTDBG_MAP_ALLOC` 플래그를 정의할 수 있습니다. `_CRTDBG_MAP_ALLOC`을 정의하면 `_dupenv_s` 및 `_wdupenv_s`에 대한 호출이 각각 `_dupenv_s_dbg` 및 `_wdupenv_s_dbg`로 다시 매핑되고 `blockType`은 `_NORMAL_BLOCK`으로 설정됩니다. 따라서 힙 블록을 `_CLIENT_BLOCK`으로 표시하려는 경우가 아니면 이러한 함수를 명시적으로 호출할 필요가 없습니다. 블록 형식에 대한 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -128,14 +111,14 @@ errno_t _wdupenv_s_dbg(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_dupenv_s_dbg`|\<crtdbg.h>|  
 |`_wdupenv_s_dbg`|\<crtdbg.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_dupenv_s_dbg.c  

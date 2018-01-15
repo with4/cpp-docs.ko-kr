@@ -43,11 +43,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45df3f03ed73a47f170fa19277842f26c840d2da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1e4b05e2aceb8fb4c8a4abed0dd6038fff6cfee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 클래스
 인터넷 프로토콜을 사용 하는 원격 시스템에서 파일에 액세스할 수 있습니다.  
@@ -90,7 +91,7 @@ class CInternetFile : public CStdioFile
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CInternetFile::m_hFile](#m_hfile)|파일에 대 한 핸들입니다.|  
   
@@ -302,7 +303,7 @@ virtual ULONGLONG Seek(
 > [!NOTE]
 >  사용 하 여 `Seek` 암시적으로 호출 않을 [플러시](#flush)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   기본 클래스 구현에 대 한 예제를 참조 하십시오 ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
 ##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  

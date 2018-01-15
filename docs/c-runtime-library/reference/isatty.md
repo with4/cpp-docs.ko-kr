@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _isatty
+apiname: _isatty
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,26 +21,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _isatty
-dev_langs:
-- C++
+f1_keywords: _isatty
+dev_langs: C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4e3c845cf9fc1fec0031ebca94e65ef82445fdff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 39e8b9520672c676ffec470ab2e89fccdfaf3442
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isatty"></a>_isatty
 파일 설명자가 문자 장치와 연결되어 있는지 여부를 확인합니다.  
@@ -70,7 +66,7 @@ int fd
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_isatty`|\<io.h>|  
   
@@ -79,7 +75,7 @@ int fd
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_isatty.c  

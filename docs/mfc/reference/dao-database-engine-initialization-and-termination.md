@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e32930b53c6e05abf692474fdb1236fe007a1eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32dbcb02615f552a2bb26ec047b0b817bb828a95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>DAO 데이터베이스 엔진 초기화 및 종료
 DAO 데이터베이스 엔진은 먼저 해야 MFC DAO 개체를 사용할 때 초기화 하 고 종료 한 다음 응용 프로그램 또는 DLL 종료 되기 전에 합니다. 두 함수 `AfxDaoInit` 및 `AfxDaoTerm`, 이러한 작업을 수행 합니다.  

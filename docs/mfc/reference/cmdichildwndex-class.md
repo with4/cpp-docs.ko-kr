@@ -123,11 +123,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8259103f719fadb0543ae91ffc3334d38affdea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21b302c14d2b4aa17b2818e489a1400230332521
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 클래스
 `CMDIChildWndEx` 클래스 다중 문서 MDI (인터페이스) 자식 창 Windows의 기능을 제공 합니다. 기능을 확장 [CMDIChildWnd 클래스](../../mfc/reference/cmdichildwnd-class.md)합니다. MDI 응용 프로그램에서 특정 MFC 클래스를 사용하면 프레임워크에 이 클래스가 필요합니다.  
@@ -208,7 +209,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 ## <a name="remarks"></a>설명  
  를 사용 하려면 확장 된 도킹 기능의 MDI 응용 프로그램의에서 응용 프로그램의 MDI 자식 창 클래스를 파생 `CMDIChildWndEx` 대신 [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 클래스를 파생 `CMDIChildWndEx`합니다. 이 코드 조각에서 제공 되는 [VisualStudioDemo 샘플: MFC Visual Studio 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]  
@@ -410,7 +411,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
   
  문서 이름은 레지스트리에서 읽을 이며에 전달 되는 프레임 워크는 상태를 복원할 때 나중에 [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow)합니다. 이 메서드를 재정의 한 [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-파생 클래스 또는이 이름을 가진 문서를 열 만들고이 이름을 가진 파일을 읽어올 합니다. 문서 파일을 기반으로 하지 않는 경우에 자체 문서 식별자에 따라 문서를 만듭니다. 저장 하 고 문서를 복원 하려는 경우에 위에 제시한 작업을 수행 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 `GetDocumentName` 메서드를 사용하는 방법을 보여 줍니다. 이 코드 조각에서 제공 되는 [VisualStudioDemo 샘플: MFC Visual Studio 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
@@ -557,7 +558,7 @@ virtual BOOL IsReadOnly();
 ### <a name="remarks"></a>설명  
  이 함수는 사용 되지 않도록 읽기 전용으로 문서를 저장 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 재정의 `IsReadOnly` 메서드. 이 코드 조각에서 제공 되는 [VisualStudioDemo 샘플: MFC Visual Studio 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  

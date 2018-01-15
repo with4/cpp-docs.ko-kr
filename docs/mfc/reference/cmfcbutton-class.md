@@ -91,11 +91,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f27516bc2cd878bb0886133e7c27099c03ff5026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d496cf079cd56d8260c5fd8072809bc05559ef2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 클래스
 `CMFCButton` 클래스에 새로운 기능이 추가 된 [CButton](../../mfc/reference/cbutton-class.md) 단추 텍스트 정렬, 단추 텍스트 및 이미지 결합, 커서 선택, 도구 설명 지정 등 클래스입니다.  
@@ -150,7 +151,7 @@ class CMFCButton : public CButton
 |[CMFCButton::SetTooltip](#settooltip)|단추를 도구 설명에 연결합니다.|  
 |[CMFCButton::SizeToContent](#sizetocontent)|해당 단추 텍스트 및 이미지를 포함 하는 단추 크기가 조정 됩니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -163,7 +164,7 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|단추 주위에 포커스 영역을 그릴 것인지를 나타냅니다.|  
 |[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|커서를 위로 이동할 때 BS_CHECKBOX 스타일의 단추를 강조 표시 여부를 나타냅니다.|  
@@ -181,7 +182,7 @@ class CMFCButton : public CButton
   
  대화 상자 응용 프로그램에서 알림 메시지를 처리 하려면 메시지 맵 항목 및 각 알림에 대 한 이벤트 처리기를 추가 합니다. 보낸 알림의 `CMFCButton` 개체에서 보낸 것과 동일 하 게 되는 `CButton` 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는에서 다양 한 메서드를 사용 하 여 단추의 속성을 구성 하는 `CMFCButton` 클래스입니다. 이 예제에서는의 일부인는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
@@ -456,7 +457,7 @@ FlatStyle  m_nFlatStyle;
   
  `CMFCButton` 생성자에는이 멤버를 초기화 합니다. `BUTTONSTYLE_3D`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 값을 설정 하는 `m_nFlatStyle` 에서 멤버 변수는 `CMFCButton` 클래스. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
@@ -756,7 +757,7 @@ void SetImage(
   
 ### <a name="remarks"></a>설명  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 다양 한 버전을 사용 하는 `SetImage` 에서 메서드는 `CMFCButton` 클래스입니다. 이 예제에서는의 일부인는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
@@ -776,7 +777,7 @@ void SetMouseCursor(HCURSOR hcursor);
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 단추와 같은 손 모양 커서는 커서 이미지를 연결 합니다. 커서는 응용 프로그램 리소스에서 로드 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `SetMouseCursor` 에서 메서드는 `CMFCButton` 클래스. 이 예제에 있는 코드의 일부인는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  

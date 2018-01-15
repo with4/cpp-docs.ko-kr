@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -37,8 +36,7 @@ f1_keywords:
 - _tctime64
 - _ctime64
 - ctime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tctime64 function
 - _ctime32 function
@@ -59,30 +57,16 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f3d756cec6d9482cfabcbc2a336cbf5d6381a97a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 97c6f5f4c827ca315eb1de36ee8d4f19d94214bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 시간 값을 문자열로 변환하고 현지 표준 시간대 설정에 맞게 조정합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)를 참조하세요.  
@@ -142,7 +126,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
  이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. `timer`가 null 포인터이거나 timer 값이 음수인 경우 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우 이 함수는 `NULL`을 반환하며 `errno`를 `EINVAL`로 설정합니다.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -152,7 +136,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`ctime`|\<time.h>|  
 |`_ctime32`|\<time.h>|  
@@ -161,9 +145,9 @@ Wed Jan 02 02:03:55 1980\n\0
 |`_wctime32`|\<time.h> 또는 \<wchar.h>|  
 |`_wctime64`|\<time.h> 또는 \<wchar.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_ctime64.c  

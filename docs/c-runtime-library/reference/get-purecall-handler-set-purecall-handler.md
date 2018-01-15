@@ -45,11 +45,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b32cf4e20be739f712cb9c0b0e0c8d3b0f0792ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fd6373acbea0f265b40ff3bd1c25e1229014cafa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 순수 가상 함수 호출에 대한 오류 처리기를 가져오거나 설정합니다.  
@@ -84,13 +85,13 @@ _purecall_handler __cdecl _set_purecall_handler(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|필수 헤더|  
+|루틴에서 반환된 값|필수 헤더|  
 |-------------|---------------------|  
 |`_get_purecall_handler`, `_set_purecall_handler`|\<cstdlib> 또는 \<stdlib.h>|  
   
  호환성에 대한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // _set_purecall_handler.cpp  

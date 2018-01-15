@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,24 +12,23 @@ f1_keywords:
 - valarray/std::slice::size
 - valarray/std::slice::start
 - valarray/std::slice::stride
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::slice [C++]
 - std::slice [C++], size
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c49abb87a3a1b9c480c9267f21f6fc9d3de55b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f2fdeb6f751fa40d74c2557341279529bca6a8d7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="slice-class"></a>slice 클래스
 부모 valarray의 1차원 하위 집합을 정의하는 데 사용되는 valarray에 대한 유틸리티 클래스입니다. valarray가 배열의 모든 요소를 포함하는 2차원 행렬로 간주되는 경우 조각은 2차원 배열에서 1차원 벡터를 추출합니다.  
@@ -77,7 +75,7 @@ size_t size() const;
 ### <a name="return-value"></a>반환 값  
  valarray의 조각에 있는 요소의 수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // slice_size.cpp  
@@ -157,7 +155,7 @@ slice(
 ### <a name="remarks"></a>설명  
  진행 속도는 음수일 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // slice_ctor.cpp  
@@ -208,7 +206,7 @@ size_t start() const;
 ### <a name="return-value"></a>반환 값  
  valarray 조각의 시작 인덱스입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // slice_start.cpp  
@@ -264,7 +262,7 @@ size_t stride() const;
 ### <a name="return-value"></a>반환 값  
  valarray의 조각 내 요소 간 거리입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // slice_stride.cpp  
@@ -312,5 +310,4 @@ The stride of slice vaSlice is: 3.
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

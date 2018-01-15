@@ -119,11 +119,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04605ec5df5512549822d0e585bf1b28eb0b42e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39098fc501ba94c4fa2cd6cf779e7c5c71cc2f1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iosbase-class"></a>ios_base 클래스
 이 클래스는 템플릿 매개 변수에 따라 달라지지 않는 입력 및 출력 스트림에 공통된 저장소 및 멤버 함수를 설명합니다. (템플릿 클래스 [basic_ios](../standard-library/basic-ios-class.md)는 공통된 항목과 템플릿 매개 변수에 따라 달라지는 항목에 대해 설명합니다.)  
@@ -150,7 +151,7 @@ ms.lasthandoff: 10/24/2017
 |-|-|  
 |[ios_base](#ios_base)|`ios_base` 개체를 생성합니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -251,7 +252,7 @@ enum event {
   
 - **imbue_event**- [imbue](#imbue) 호출이 끝나고 함수가 반환되기 바로 전에 발생하는 콜백을 식별합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
   예제는 [register_callback](#register_callback)을 참조하세요.  
   
@@ -280,7 +281,7 @@ typedef void (__cdecl *event_callback)(
   
  이 형식은 [register_callback](#register_callback)에 등록할 수 있는 함수에 대한 포인터를 설명합니다. 이러한 형식의 함수는 예외를 throw하면 안 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
   `event_callback`을 사용하는 예제는 [register_call](#register_callback)을 참조하세요.  
   
@@ -307,7 +308,7 @@ namespace std {
 
  `what()`에서 반환된 값은 `_Message`의 복사본이며, `_Code`에 기반한 테스트로 확대될 수 있습니다. `_Code`를 지정하지 않은 경우 `make_error_code(io_errc::stream)`가 기본값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_failure.cpp  
@@ -359,7 +360,7 @@ fmtflags flags(fmtflags fmtfl);
   
  첫 번째 멤버 함수는 저장된 형식 플래그를 반환합니다. 두 번째 멤버 함수는 `fmtfl`을 형식 플래그에 저장하고 이전에 저장된 값을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_flags.cpp  
@@ -469,7 +470,7 @@ locale getloc() const;
   
  저장된 로캘 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_getlock.cpp  
@@ -507,7 +508,7 @@ locale imbue(const locale& _Loc);
   
  멤버 함수는 `_Loc`를 로캘 개체에 저장한 다음 콜백 이벤트 및 `imbue_event`를 보고합니다. 이전에 저장된 값을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
   샘플은 [basic_ios:: imbue](../standard-library/basic-ios-class.md#imbue)를 참조하세요.  
   
@@ -583,7 +584,7 @@ long& iword(int idx);
   
  `ios_base` 형식의 모든 개체에서 사용하도록 고유 인덱스를 가져오려면 [xalloc](#xalloc)를 호출합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
   `iword`를 사용하는 방법에 대한 샘플은 [xalloc](#xalloc)를 참조하세요.  
   
@@ -619,7 +620,7 @@ public:
   
 - **trunc** - 해당 제어 개체를 만들 때 기존 파일의 콘텐츠를 삭제합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_openmode.cpp  
@@ -680,7 +681,7 @@ streamsize precision(streamsize _Prec);
   
  부동 소수점 숫자는 [fixed](../standard-library/ios-functions.md#fixed)를 사용하여 고정 표기법으로 표시됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_precision.cpp  
@@ -724,7 +725,7 @@ void *& pword(int _Idx);
   
  `ios_base` 형식의 모든 개체에서 사용하도록 고유 인덱스를 가져오려면 [xalloc](#xalloc)를 호출합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
   `pword` 사용 예제는 [xalloc](#xalloc)를 참조하세요.  
   
@@ -748,7 +749,7 @@ void register_callback(
   
  멤버 함수 쌍 푸시합니다 `{pfn, idx}` 저장된 콜백 스택으로 [콜백 스택을](../standard-library/ios-base-class.md)합니다. 콜백 이벤트를 **ev** 보고 되 면는 함수가 호출 된 순서와 반대로 레지스트리를 식으로 `(*pfn)(ev, *this, idx)`합니다.  
  
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_register_callback.cpp  
@@ -862,7 +863,7 @@ namespace std {
  
 - **end** - 시퀀스의 끝을 기준으로 검색합니다.  
  
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_seekdir.cpp  
@@ -910,7 +911,7 @@ fmtflags setf(
 ### <a name="remarks"></a>설명  
     The first member function effectively calls [flags](#flags)(_ *Mask* &#124; \_ *Flags*) (set selected bits) and then returns the previous format flags. The second member function effectively calls **flags**(\_ *Mask* **& fmtfl, flags& ~**`_Mask`) (replace selected bits under a mask) and then returns the previous format flags.  
  
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_setf.cpp  
@@ -971,7 +972,7 @@ void unsetf(
 ### <a name="remarks"></a>설명  
     The member function effectively calls [flags](#flags)(`~`*_Mask* **& flags**) (clear selected bits).  
  
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
     See [ios_base::setf](#setf) for a sample of using `unsetf`.  
  
 ##  <a name="width"></a> ios_base::width  
@@ -997,7 +998,7 @@ streamsize width(
 
     The first member function returns the stored field width. The second member function stores `_Wide` in the field width and returns its previous stored value.  
  
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_width.cpp  
@@ -1032,7 +1033,7 @@ static int xalloc( );
 ### <a name="remarks"></a>설명  
     You can use the return value as a unique index argument when calling the member functions [iword](#iword) or [pword](#pword).  
  
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_base_xalloc.cpp  

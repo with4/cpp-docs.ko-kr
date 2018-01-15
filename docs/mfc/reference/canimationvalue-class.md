@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationValue::SetDefaultValue
 - AFXANIMATIONCONTROLLER/CAnimationValue::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationValue::m_value
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationValue [MFC], CAnimationValue
 - CAnimationValue [MFC], AddTransition
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5b37801619fae84519dde000c922d34c4b9e1509
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: e56217b4cf92583d965b221360803ce4b4de3b44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 클래스
 하나의 값을 갖는 애니메이션 개체 기능을 구현합니다.  
@@ -66,7 +64,7 @@ class CAnimationValue : public CAnimationBaseObject;
 |[CAnimationValue::GetVariable](#getvariable)|캡슐화 된 애니메이션 변수에 대 한 액세스를 제공합니다.|  
 |[CAnimationValue::SetDefaultValue](#setdefaultvalue)|기본값을 설정합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -82,7 +80,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationValue::m_value](#m_value)|캡슐화 된 애니메이션 변수 애니메이션 값을 나타냅니다.|  
   
@@ -257,4 +255,3 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
   
 ## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
-

@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38898eefcbc2d5bb882186786894e7fb752e28ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6d326a4069334a223db7824e5fa3bcaefbc97697
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synchronize"></a>synchronize
 대상 방법에 대 한 액세스를 동기화합니다.  
@@ -39,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
  이 특성을 사용하려면 [coclass](../windows/coclass.md), [progid](../windows/progid.md)또는 [vi_progid](../windows/vi-progid.md) 특성(또는 이 중 하나를 암시하는 다른 특성)을 동일한 요소에 적용해야 합니다. 단일 특성을 사용하는 경우 다른 두 특성도 자동으로 적용됩니다. 예를 들어 **progid** 를 적용하면 **vi_progid** 및 **coclass** 도 적용됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에 대 한 동기화를 제공 합니다.는 `UpdateBalance` 의 메서드는 `CMyClass` 개체입니다.  
   
 ```  

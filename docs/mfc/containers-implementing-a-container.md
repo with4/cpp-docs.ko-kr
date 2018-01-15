@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe58203bb6f9b5e8aa2c793ac5f4f21a5819df85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e43e1fb1c52413eaae05dcbe8331b1d48dd7e2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-implementing-a-container"></a>컨테이너: 컨테이너 구현
 이 문서는 컨테이너를 구현 하기 위한 절차를 요약 하 고 보다 자세한 컨테이너를 구현 하는 방법에 대 한 설명을 제공 하는 다른 문서를 소개 합니다. 또한 구현 하려면 몇 가지 선택적 OLE 기능 및 이러한 기능을 설명 하는 문서를 나열 합니다.  

@@ -63,11 +63,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b659ae9b1abfe98ba393e7252e79336b2bd3cfb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f774282823d68a3b5f2107b7297714ce8aa918f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 클래스
 편집 컨트롤을 포함 하는 도구 모음 단추 ( [CEdit 클래스](../../mfc/reference/cedit-class.md)).  
@@ -137,7 +138,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
   
  자세한 내용은 참조 [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCToolBarEditBoxButton` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 예제에서는 지정 하는 사용자 수 단추 사용자 지정 하는 동안 스트레치, 단추를 누를 때 단추의 테두리 표시 되도록 지정, 텍스트 상자 컨트롤의 텍스트를 설정는 응용 프로그램에서 편집 상자 단추의 평면 스타일 모양을 지정 하는 방법을 보여 줍니다. cation, 도구 모음 스타일 편집 상자 컨트롤을 지정 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]  

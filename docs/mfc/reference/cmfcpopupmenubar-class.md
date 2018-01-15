@@ -57,11 +57,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6be3c3b6028bab04ae3d8ec32f9063d26012778e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 002e059fd905930409cb5f2745628f8ac1dea103
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 클래스
 팝업 메뉴에 포함된 메뉴 모음입니다.  
@@ -100,14 +101,14 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|응용 프로그램은 Windows XP 모양을 때 회색 세로 막대를 표시할지 여부를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
  `CMFCPopupMenuBar` 와 동시에 생성 됩니다는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 및 그 안에 포함 합니다. `CMFCPopupMenuBar` 의 전체 클라이언트 영역에서 `CMFCPopupMenu` 개체입니다. 키보드 및 마우스 입력을 지원 합니다. 또한 입력이 있는 통신는 `CMFCPopupMenu` 및 최상위 프레임 창에 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 초기화 하는 방법을 `CMFCPopupMenuBar` 에서 개체는 `CMFCPopupMenu` 개체입니다. 이 코드 조각은 [클라이언트 그리기 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]  

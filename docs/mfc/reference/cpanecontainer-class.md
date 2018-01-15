@@ -131,11 +131,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1deb136492fb7897a9f337df4e5957d81175e127
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27193084f2232c17885d3a6ee54ea901764f3d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 클래스
 `CPaneContainer` 클래스는 MFC에서 구현한 도킹 모델의 기본 구성 요소입니다. 이 클래스의 개체는 도킹 창 두 개 또는 `CPaneContainer.` 인스턴스 두 개를 가리키며 창이나 컨테이너를 나누는 구분선의 포인터를 저장합니다. 컨테이너 안에 컨테이너를 중첩하면 프레임워크에서 복잡한 도킹 레이아웃을 나타내는 이진 트리를 빌드할 수 있습니다. 이진 트리의 루트에 저장 되는 [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) 개체입니다.  
@@ -220,7 +221,7 @@ class CPaneContainer : public CObject
 ### <a name="remarks"></a>설명  
  `CPaneContainer`개체는 프레임 워크에서 자동으로 만들어집니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 인스턴스를 생성 하는 `CPaneContainer` 클래스입니다. 이 코드 조각은의 일부인는 [창 크기 설정 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]  

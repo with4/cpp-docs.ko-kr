@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f9691a4edcbf617be415ba8d48d80938cba4979
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49d3d9029f85a8a80da6a7cd38bb26b887223d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>스레드 컨트롤을 위한 C 런타임 라이브러리 함수
 모든 Win32 프로그램에 하나 이상의 스레드가 있어야 합니다. 모든 스레드가 추가 스레드를 만들 수 있습니다. 스레드 수 신속 하 게 작업을 완료 한 다음 종료 또는 프로그램의 수명 동안 비활성 상태로 유지 될 수 있는 합니다.  

@@ -4,39 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- insertion operators
+dev_langs: C++
+helpviewer_keywords: insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 96d388b7ddfdf561e016b4e74ffeb9ca072c7cb2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>삽입 연산자 사용 및 형식 제어
 이 항목에서는 형식을 제어하는 방법 및 고유 클래스에 대한 삽입 연산자를 만드는 방법을 보여 줍니다. 모든 표준 C++ 데이터 형식에 대해 미리 프로그래밍된 삽입(**<<**) 연산자는 출력 스트림 개체에 바이트를 보냅니다. 삽입 연산자는 정수 인수의 기본 형식을 변경하는 요소인 미리 정의된 "조작자"와 함께 작동합니다.  
@@ -238,5 +221,4 @@ std::cout <<extracted;   //   This
   
 ## <a name="see-also"></a>참고 항목  
  [출력 스트림](../standard-library/output-streams.md)   
-
 

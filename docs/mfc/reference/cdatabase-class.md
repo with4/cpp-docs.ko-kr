@@ -61,11 +61,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: efeb16478d78648bb813d0e25a53380ec305d5ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6aeaa64b0b665449ee9216070cdebbc2632948b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatabase-class"></a>CDatabase 클래스
 데이터 소스 작업을 할 수 있는 통로인 데이터 소스에 대한 연결을 나타냅니다.  
@@ -162,7 +163,7 @@ BOOL BeginTrans();
   
  트랜잭션에 대 한 자세한 내용은 문서 참조 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   문서를 참조 [트랜잭션: 트랜잭션이 수행 레코드 집합 (ODBC)에서](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)합니다.  
   
 ##  <a name="bindparameters"></a>CDatabase::BindParameters  
@@ -229,7 +230,7 @@ CDatabase();
   
  포함을 편리 하 게 찾을 수 있습니다 있습니다는 `CDatabase` 문서 클래스의 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예제에서는 사용 하 여 `CDatabase` 에 `CDocument`-클래스를 파생 합니다.  
   
  [!code-cpp[NVC_MFCDatabase#9](../../mfc/codesnippet/cpp/cdatabase-class_1.h)]  
@@ -248,7 +249,7 @@ virtual void Close();
   
  보류 중인 모든 `AddNew` 또는 **편집** 의 모든 레코드는 데이터베이스를 사용 하 여 문 취소 되 고 보류 중인 모든 트랜잭션이 롤백됩니다. 모든 레코드 집합에 종속 된 `CDatabase` 개체가 정의 되지 않은 상태로 유지 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDatabase#12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
   
 ##  <a name="committrans"></a>CDatabase::CommitTrans  
@@ -268,7 +269,7 @@ BOOL CommitTrans();
   
  트랜잭션에 대 한 자세한 내용은 문서 참조 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   문서를 참조 [트랜잭션: 트랜잭션이 수행 레코드 집합 (ODBC)에서](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)합니다.  
   
 ##  <a name="executesql"></a>CDatabase::ExecuteSQL  
@@ -287,7 +288,7 @@ void ExecuteSQL(LPCTSTR lpszSQL);
   
  대부분의 데이터 원본에 대 한 명령 데이터 선택, 새 레코드 삽입, 레코드 및 레코드 편집에 대 한 명령을 지 원하는 레코드 집합 개체를 통해 발급 됩니다. 그러나 일부 ODBC 기능은 직접 지원 데이터베이스 클래스에서 사용 하 여 직접 SQL 호출 때때로 해야 하므로 `ExecuteSQL`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
   
 ##  <a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
@@ -405,7 +406,7 @@ BOOL IsOpen() const;
   
  그러나 상황에 따라 핸들을 직접 사용 하도록 할 수 있습니다. 예를 들어, 클래스를 통해가 대신 직접 ODBC API 함수를 호출 하는 경우 `CDatabase`를 매개 변수로 전달 하 여 연결 핸들을 할 수 있습니다. 아래 코드 예제를 참조 하십시오.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDatabase#15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
   
 ##  <a name="onsetoptions"></a>CDatabase::OnSetOptions  
@@ -476,7 +477,7 @@ virtual BOOL Open(
   
  있기 연결 시도가 시간 초과 대 한 경우 예를 들어 DBMS 호스트를 사용할 수 없습니다. 연결 시도가 실패 하면 **열려** throw 한 `CDBException`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
   
 ##  <a name="openex"></a>CDatabase::OpenEx  
@@ -519,7 +520,7 @@ virtual BOOL OpenEx(
   
  있기 연결 시도가 시간 초과 대 한 경우 예를 들어 DBMS 호스트를 사용할 수 없습니다. 연결 시도가 실패 하면 `OpenEx` throw 한 `CDBException`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDatabase#11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
   
 ##  <a name="rollback"></a>CDatabase::Rollback  
@@ -539,7 +540,7 @@ BOOL Rollback();
   
  롤백 후, 레코드 롤백 이전에 유지 됩니다. 상태 레코드 집합과 롤백 후 데이터 원본에 대 한 자세한 문서를 참조 [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   문서를 참조 [트랜잭션: 트랜잭션이 수행 레코드 집합 (ODBC)에서](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)합니다.  
   
 ##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  

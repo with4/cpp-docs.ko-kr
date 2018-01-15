@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69b35d3007a26cd7ca605617b7441525f44ef3ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-enumeration-declarations"></a>C 열거형 선언
 열거형은 명명된 정수 상수의 집합으로 구성됩니다. 열거형 형식 선언은 (선택적) 열거형 태그의 이름을 제공하고 명명된 정수 식별자의 집합("열거형 집합", "열거자 상수", "열거자" 또는 "멤버"라고 함)을 정의합니다. 열거형 형식의 변수는 해당 형식으로 정의된 열거형 집합의 값 중 하나를 저장합니다.  

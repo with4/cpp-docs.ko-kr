@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4e30b024b6a83a7ea2069386cff3166ce518faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1cf5c850158e445e7695b85e540b1e0c162e621c
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 클래스
 사용자가 장기 작업을 수행하는 동안 대기 커서를 표시하는 한 가지 방법(일반적으로 모래시계로 표시됨)을 제공합니다.  
@@ -75,7 +76,7 @@ class CWaitCursor
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
 ##  <a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
@@ -95,7 +96,7 @@ CWaitCursor();
 > [!NOTE]
 >  해당 생성자 및 소멸자의 작동 방식을 인해 `CWaitCursor` 개체는 항상 지역 변수로 선언-전역 변수로 선언 되지 나 사용 하 여 이러한 할당은 **새**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
 ##  <a name="restore"></a>CWaitCursor::Restore  
@@ -110,7 +111,7 @@ void Restore();
   
  에 있는 것 이외의 다른 함수에 있는 동안 대기 커서를 복원 해야 하는 경우는 `CWaitCursor` 호출할 수 있습니다, 개체를 선언 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#64](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  
@@ -119,7 +120,7 @@ void Restore();
  [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)   
  [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)   
  [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)   
- [할까요?: Microsoft Foundation 클래스 응용 프로그램 단위로 나타낸 마우스 포인터를 어떻게 변경 됩니까](http://go.microsoft.com/fwlink/linkid=128044)
+ [할까요?: Microsoft Foundation 클래스 응용 프로그램 단위로 나타낸 마우스 포인터를 어떻게 변경 됩니까](http://go.microsoft.com/fwlink/p/?linkid=128044)
 
 
 

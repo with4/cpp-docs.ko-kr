@@ -14,11 +14,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 085c658fff3d387019c6e8574ebafcd347400823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b894ec1cbd227663d46e98e523ffe8c1c5d84475
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 아키텍처 설계 문제
 OLE DB 응용 프로그램을 시작 하기 전에 다음과 같은 문제를 고려해 야 합니다.  
@@ -37,11 +40,11 @@ OLE DB 응용 프로그램을 시작 하기 전에 다음과 같은 문제를 �
  **다른 데이터 액세스 기술 (예: ADO, ODBC 또는 DAO)를 사용 하 여 이전 코드 있습니까?**  
  기술 (예: ADO 구성 요소를 사용 하 여 OLE DB 구성 요소와 및 OLE DB로 ODBC 코드 마이그레이션)의 가능한 조합을 지정 된 경우 Visual c + + 설명서의 범위를 벗어납니다 모든 상황을 포함 합니다. 그러나 많은 기사 다양 한 시나리오는 다음 Microsoft 웹 사이트에서 사용할 수 있습니다.  
   
--   [Microsoft 도움말 및 지원](http://go.microsoft.com/fwlink/?linkid=148218)  
+-   [Microsoft 도움말 및 지원](http://go.microsoft.com/fwlink/p/?linkid=148218)  
   
--   [Microsoft 데이터 액세스 기술 문서 개요](http://go.microsoft.com/fwlink/?linkid=148217)  
+-   [Microsoft 데이터 액세스 기술 문서 개요](http://go.microsoft.com/fwlink/p/?linkid=148217)  
   
--   [Visual Studio 솔루션 센터](http://go.microsoft.com/fwlink/?linkid=148215)  
+-   [Visual Studio 솔루션 센터](http://go.microsoft.com/fwlink/p/?linkid=148215)  
   
 -   [Microsoft.com 검색](http://search.microsoft.com/)  
   

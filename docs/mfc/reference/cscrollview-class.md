@@ -39,11 +39,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2fc453acf01b978a7cc9ba7eb569ff1775f6c11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cscrollview-class"></a>CScrollView 클래스
 A [CView](../../mfc/reference/cview-class.md) 스크롤 기능이 있습니다.  
@@ -171,7 +172,7 @@ void FillOutsideRect(
 ### <a name="remarks"></a>설명  
  사용 하 여 `FillOutsideRect` 스크롤 보기에서 `OnEraseBkgnd` 과도 한 배경 다시 표시 하지 않으려면 처리기 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
 ##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
@@ -343,7 +344,7 @@ void SetScrollSizes(
   
  제외한 Windows 매핑 모드 중 하나로 매핑 모드를 설정 해야 `MM_ISOTROPIC` 또는 `MM_ANISOTROPIC`합니다. 제한 없는 매핑 모드를 사용 하려는 경우에 호출 된 `SetScaleToFitSize` 대신 멤버 함수 `SetScrollSizes`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#168](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  

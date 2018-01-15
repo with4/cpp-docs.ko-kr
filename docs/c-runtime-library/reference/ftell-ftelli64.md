@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ apitype: DLLExport
 f1_keywords:
 - _ftelli64
 - ftell
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ftell function
 - ftelli64 function
@@ -36,30 +34,16 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 220b34e5bba7a4a6716d6ef18d6621b58d36ecc3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: df0feee9beb2b2fc5144974f1fc06ff2b8d02b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 파일 포인터의 현재 위치를 가져옵니다.  
@@ -80,7 +64,7 @@ __int64 _ftelli64(
  대상 `FILE` 구조체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `ftell` 및 `_ftelli64`는 현재 파일 위치를 반환합니다. 반환한 값 `ftell` 및 `_ftelli64` 텍스트 모드를 사용 하면 캐리지 리턴-줄 바꿈 변환 하기 때문에 텍스트 모드에서 연 스트림에 대 한 실제 바이트 오프셋을 반영 하지 않을 수 있습니다. 사용 하 여 `ftell` 와 `fseek` 또는 `_ftelli64` 와 `_fseeki64` 파일 위치를 올바르게 돌아갑니다. 오류 시 `ftell` 및 `_ftelli64` 에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 이러한 함수 반환-1l 및 집합을 계속 하려면 실행 허용 된 경우 `errno` ERRNO에 정의 하는 두 상수 중 하나입니다. 8. `EBADF` 상수는 `stream` 인수가 유효한 파일 포인터 값이 아니거나 열린 파일을 참조하지 않음을 의미합니다. `EINVAL`은 잘못된 `stream` 인수가 함수에 전달되었음을 의미합니다. 검색을 수행할 수 없는 장치(예: 터미널 및 프린터)이거나 `stream`이 열린 파일을 참조하지 않을 경우에는 반환 값이 정의 해제됩니다.  
+ `ftell` 및 `_ftelli64`는 현재 파일 위치를 반환합니다. 반환한 값 `ftell` 및 `_ftelli64` 텍스트 모드를 사용 하면 캐리지 리턴-줄 바꿈 변환 하기 때문에 텍스트 모드에서 연 스트림에 대 한 실제 바이트 오프셋을 반영 하지 않을 수 있습니다. 사용 하 여 `ftell` 와 `fseek` 또는 `_ftelli64` 와 `_fseeki64` 파일 위치를 올바르게 돌아갑니다. 오류 시 `ftell` 및 `_ftelli64` 에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 이러한 함수 반환-1l 및 집합을 계속 하려면 실행 허용 된 경우 `errno` ERRNO에 정의 된 두 상수 중 하나에 있습니다. 8. `EBADF` 상수는 `stream` 인수가 유효한 파일 포인터 값이 아니거나 열린 파일을 참조하지 않음을 의미합니다. `EINVAL`은 잘못된 `stream` 인수가 함수에 전달되었음을 의미합니다. 검색을 수행할 수 없는 장치(예: 터미널 및 프린터)이거나 `stream`이 열린 파일을 참조하지 않을 경우에는 반환 값이 정의 해제됩니다.  
   
  이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
@@ -100,9 +84,9 @@ __int64 _ftelli64(
 |`ftell`|\<stdio.h>|\<errno.h>|  
 |`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // crt_ftell.c  

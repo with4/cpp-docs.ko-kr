@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bcd94b8b797a03bb81107daab5b3b1e3259bda34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852a4894478d139013d70813316976a20e99dd41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="html-basics"></a>HTML 기초
 대부분의 브라우저는 검색 중인 페이지의 HTML 소스를 검사 하는 기능이 있습니다. HTML (Hypertext markup language) 태그의 수를 표시 하는 소스를 볼 때 텍스트와 섞여 꺾쇠 괄호 (<>)으로 둘러싸여 있습니다.  

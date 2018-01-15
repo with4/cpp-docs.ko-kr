@@ -1,7 +1,7 @@
 ---
 title: srand | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-standard-libraries
@@ -33,46 +33,50 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.assetid: 7bf56dc5-5692-4182-a3c1-18af98d2dd1a
-caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 99847da3be2e311ac9cb0da301ed4729705ad9fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 205dcb2ba7d61dff1286fd926e3f10cf2a162e9a
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="srand"></a>srand
-의사 난수 생성기에 대한 시작 시드 값을 설정합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-void srand(  
-   unsigned int seed   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `seed`  
- 의사 난수 생성을 위한 시드  
-  
-## <a name="remarks"></a>설명  
- `srand` 함수는 현재 스레드에서 일련의 의사 난수 정수 생성을 위한 시작점을 설정합니다. 같은 결과 시퀀스를 만들도록 생성기를 다시 초기화하려면 `srand` 함수를 사용하고 같은 `seed` 인수를 다시 사용합니다. `seed`에 대해 다른 모든 값을 사용하면 생성기가 의사 난수 시퀀스에서 다른 시작점으로 설정됩니다. `rand`는 생성된 의사 난수를 검색합니다. `srand`를 호출하기 전에 `rand`를 호출하면 1로 전달된 `seed`를 사용하여 `srand`를 호출할 때와 같은 시퀀스가 생성됩니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴|필수 헤더|  
-|-------------|---------------------|  
-|`srand`|\<stdlib.h>|  
-  
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="example"></a>예제  
- [rand](../../c-runtime-library/reference/rand.md)의 예제를 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
- [rand](../../c-runtime-library/reference/rand.md)
+
+사용 하는 의사 난수 생성기에 대 한 시작 시드 값을 설정 하는 `rand` 함수입니다.
+
+## <a name="syntax"></a>구문
+
+```C
+void srand(
+   unsigned int seed
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*시드*  
+의사 난수 생성을 위한 시드
+
+## <a name="remarks"></a>설명
+
+`srand` 함수는 현재 스레드에서 일련의 의사 난수 정수 생성을 위한 시작점을 설정합니다. 호출 결과의 동일한 시퀀스를 만드는 생성자를 다시 초기화 하려면는 `srand` 함수를 사용 하 여 동일한 *시드* 다시 인수입니다. 다른 모든 값에 대 한 *시드* 생성기 의사 난수 시퀀스에서 서로 다른 시작 지점으로 설정 합니다. `rand`는 생성된 의사 난수를 검색합니다. 호출 `rand` 를 호출 하기 전에 `srand` 호출할 때와 동일한 시퀀스를 생성 `srand` 와 *시드* 1로 전달 합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴에서 반환된 값|필수 헤더|
+|-------------|---------------------|
+|`srand`|\<stdlib.h>|
+
+호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.
+
+## <a name="example"></a>예
+
+[rand](../../c-runtime-library/reference/rand.md)의 예제를 참조하세요.
+
+## <a name="see-also"></a>참고 항목
+
+[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)  
+[rand](../../c-runtime-library/reference/rand.md)  

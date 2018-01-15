@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 211ce72e2f2e5dcd1864cbc4374b3468f3ce70c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65aedc5dbeb8a740d5713983f66eefe693864937
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-sheets-as-wizards"></a>마법사 역할을 하는 속성 시트
 마법사 속성 시트의 주요 특징은 탐색 탭 대신 다음 또는 다시, 완료 및 취소 단추와 함께 제공 됩니다. 호출 해야 [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) 호출 하기 전에 [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) 에이 기능을 활용 하려면 속성 시트 개체입니다.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/24/2017
   
  모든 기본 단추를 표시 하려면 모두 "마침" 단추를 표시 하 고 단추를 이동 합니다. 다음 단추를 상대 위치 유지 되도록 뒤로 단추를 이동 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

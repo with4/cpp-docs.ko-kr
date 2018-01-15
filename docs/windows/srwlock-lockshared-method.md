@@ -1,32 +1,33 @@
 ---
-title: "SRWLock::LockShared 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockShared"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LockShared 메서드"
+title: "Srwlock:: Lockshared 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockShared
+dev_langs: C++
+helpviewer_keywords: LockShared method
 ms.assetid: 9d826a5c-b6a2-4430-ac85-d5753cbca889
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 272d851015595840619685a79fcedf616617b2c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# SRWLock::LockShared 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-공유 모드에서 SRWLock 개체를 가져옵니다.  
+# <a name="srwlocklockshared-method"></a>SRWLock::LockShared 메서드
+공유 모드의 SRWLock 개체를 가져옵니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 SyncLockShared LockShared();  
@@ -36,17 +37,17 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `lock`  
- SRWLock개체에 대한 포인터  
+ SRWLock 개체에 대한 포인터입니다.  
   
-## 반환 값  
- 공유 모드에서 SRWLock 개체를 가져옵니다.  
+## <a name="return-value"></a>반환 값  
+ 공유 모드의 SRWLock 개체입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  
   
- **네임스페이스:** Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SRWLock 클래스](../windows/srwlock-class.md)

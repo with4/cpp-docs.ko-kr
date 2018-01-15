@@ -11,36 +11,19 @@ ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.VCLinkerTool.OutputFile
-- VC.Project.VCLinkerTool.ShowProgress
-- VC.Project.VCLinkerTool.Version
-- VC.Project.VCLinkerTool.VerboseOutput
-- VC.Project.VCLinkerTool.UnresolvedReferences
-- VC.Project.VCLinkerTool.OptimizeForMemory
-- VC.Project.VCLinkerTool.SharedLibrarySearchPath
-- VC.Project.VCLinkerTool.AdditionalLibraryDirectories
-- VC.Project.VCConfiguration.BuildLogFile
-- VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames
-- VC.Project.VCLinkerTool.ForceSymbolReferences
-- VC.Project.VCLinkerTool.LibraryDependencies
-- VC.Project.VCLinkerTool.ForceFileOutput
-- VC.Project.VCLinkerTool.GenerateMapFile
-- VC.Project.VCLinkerTool.Relocation
-- VC.Project.VCLinkerTool.FunctionBinding
-- VC.Project.VCLinkerTool.NoExecStackRequired
-- VC.Project.WholeArchive
-- VC.Project.AdditionalOptionsPage
-- VC.Project.VCLinkerTool.AdditionalDependencies
-ms.openlocfilehash: 963d73e73e42930f0245c0fef443da27bf451bc6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 5396021410ec04baa8eb1218c676919a322ac978
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="linker-properties-linux-c"></a>링커 속성(Linux C++)
 
 ## <a name="general"></a>일반
+
 속성 | 설명 | 선택 항목
 --- | ---| ---
 출력 파일 | 이 옵션은 링커가 만드는 프로그램의 기본 이름 및 위치를 재정의합니다. (-o)
@@ -59,6 +42,7 @@ ms.lasthandoff: 10/31/2017
 출력 복사 | 원격 시스템에서 로컬 컴퓨터로 빌드 출력 파일을 복사할지 여부를 지정합니다.
 
 ## <a name="input"></a>입력
+
 속성 | 설명 | 선택 항목
 --- | ---| ---
 특정 기본 라이브러리 무시 | 무시할 하나 이상의 기본 라이브러리 이름을 지정합니다. (-exclude libs lib, lib)
@@ -68,21 +52,17 @@ ms.lasthandoff: 10/31/2017
 추가 종속성 | 링크 명령줄에 추가할 추가 항목을 지정합니다.
 
 ## <a name="debugging"></a>디버깅
+
 속성 | 설명 | 선택 항목
 --- | ---| ---
-디버거 기호 정보 | 출력 파일의 디버거 기호 정보 | **모두 포함**<br>**디버거 기호 정보만 생략**<br>**모든 기호 정보 생략**<br>
+디버거 기호 정보 | 출력 파일의 디버거 기호 정보입니다. | **모두 포함**<br>**디버거 기호 정보만 생략**<br>**모든 기호 정보 생략**<br>
 맵 파일 이름 | [맵] 옵션을 사용하면 사용자가 지정한 이름으로 맵 파일을 만들도록 링커에 지시할 수 있습니다. (-Map=)
 
 ## <a name="advanced"></a>고급
+
 속성 | 설명 | 선택 항목
 --- | ---| ---
 재배치 후 변수를 ReadOnly로 표시 | 이 옵션을 사용하면 재배치 후 변수가 ReadOnly로 표시됩니다.
 직접 함수 바인딩 사용 | 이 옵션을 사용하면 직접 함수 바인딩에 대한 개체가 표시됩니다.
 실행 가능한 스택 필요 없음 | 이 옵션을 사용하면 실행 가능한 스택 필요 없음으로 출력이 표시됩니다.
 전체 보관 파일 | 전체 보관 파일이 소스와 추가 종속성의 모든 코드를 사용합니다.
-
-
-## <a name="additional-options"></a>추가 옵션
-
-
-

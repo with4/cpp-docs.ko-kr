@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67f04b70b47e980455c73550e56d92f4433ee31c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97ca66036930963028681b6179ac7176b0350166
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 구조체
 `CREATESTRUCT` 구조 응용 프로그램의 창 프로시저에 전달 된 초기화 매개 변수를 정의 합니다.  

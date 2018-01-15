@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46611a2cd25f6154d183f44da0c8333471ea2ae6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3ac1915a74aac329ef8b3c94db997dd80ff7905b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="helpcontext"></a>helpcontext
 사용자는 도움말 파일에서이 요소에 대 한 정보를 볼 수 있는 컨텍스트 ID를 지정 합니다.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  **helpcontext** c + + 특성에 동일한 기능을는 [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  예를 참조 [defaultvalue](../windows/defaultvalue.md) 사용 하는 방법의 예 **helpcontext**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

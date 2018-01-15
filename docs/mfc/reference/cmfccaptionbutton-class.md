@@ -35,11 +35,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b75a3782d1e20ccd20cd4f9271d91e2ac391d388
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 857054bd60e206cc3a563aa5f00b872f67c58d3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 클래스
 `CMFCCaptionButton` 클래스 도킹 창 또는 미니 프레임 창의 캡션 표시줄에 표시 되는 단추를 구현 합니다. 일반적으로 프레임워크는 캡션 단추를 자동으로 만듭니다.  
@@ -54,7 +55,7 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>생성자  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|CMFCCaptionButton 개체를 만듭니다.|  
   
@@ -80,7 +81,7 @@ class CMFCCaptionButton : public CObject
   
 - `AFX_CAPTION_BTN_CLOSE`를 표시 하는 **닫기** 의 창 수를 닫거나 때 단추입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 생성 하는 방법을 `CMFCCaptionButton` 개체 및 제목 표시줄의 최소 크기를 설정 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#43](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]  

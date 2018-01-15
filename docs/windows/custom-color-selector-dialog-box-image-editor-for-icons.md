@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 417e1b99066a0e2af6b58fb684bf0912f7c420ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7b85b6b650fcff46371e86e61ab96e9d864c4c53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>사용자 지정 색 선택 대화 상자(아이콘에 대한 이미지 편집기)
 이 대화 상자에는 이미지에 사용할 색을 사용자 지정할 수 있습니다. 자세한 내용은 참조 [사용자 지정 또는 색 변경](../windows/customizing-or-changing-colors-image-editor-for-icons.md)합니다.  

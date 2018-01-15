@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6d4ea26a75d37e264344aaacfa660e6d66dc8d5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5407e201b25fdf9b5344d438a69e2fc3e972327b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="model"></a>.MODEL
 프로그램 메모리 내 모델을 초기화합니다.  
@@ -56,11 +57,11 @@ ms.lasthandoff: 10/24/2017
 |`stackoption`|사용되지 않음|`NEARSTACK`, `FARSTACK`|  
   
 ## <a name="code"></a>코드  
- MASM 관련 샘플에서 컴파일러 샘플을 다운로드 [Visual c + + 샘플 및 Visual Studio 2010에 대 한 관련 문서](http://go.microsoft.com/fwlink/?LinkID=178749)합니다.  
+ MASM 관련 샘플에서 컴파일러 샘플을 다운로드 [Visual c + + 샘플 및 Visual Studio 2010에 대 한 관련 문서](http://go.microsoft.com/fwlink/p/?linkid=178749)합니다.  
   
  다음 예제에서는 `.MODEL` 지시문입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 ; file simple.asm  
@@ -94,4 +95,4 @@ end
   
 ## <a name="see-also"></a>참고 항목  
  [지시문 참조](../../assembler/masm/directives-reference.md)   
- [Visual c + + 샘플 및 Visual Studio 2010에 대 한 관련된 문서](http://go.microsoft.com/fwlink/?LinkID=178749)
+ [Visual c + + 샘플 및 Visual Studio 2010에 대 한 관련된 문서](http://go.microsoft.com/fwlink/p/?linkid=178749)

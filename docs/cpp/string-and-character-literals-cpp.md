@@ -26,11 +26,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 181cd7dd55a41d5452ae02f48db9012e02a41041
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>문자열 및 문자 리터럴 (c + +)
 C++를 사용하면 다양한 문자열 및 문자 형식이 지원되며 이러한 각 형식의 리터럴 값을 표현할 수 있습니다. 소스 코드에서는 문자 집합을 사용하여 문자 및 문자열 리터럴의 내용을 표현합니다. 유니버설 문자 이름 및 이스케이프 문자를 사용하면 기본 소스 문자 집합만 사용하여 모든 문자열을 표현할 수 있습니다. 원시 문자열 리터럴을 사용하면 이스케이프 문자를 사용하지 않아도 되며 원시 문자열 리터럴을 사용하여 모든 유형의 문자열 리터럴을 표현할 수 있습니다. 또한 추가 생성이나 변환 단계를 수행하지 않고도 std:: string 리터럴을 만들 수 있습니다.  
@@ -152,14 +153,14 @@ char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'  
 ```  
   
- 8진수 이스케이프 시퀀스는 백슬래시와 그 뒤에 오는 최대 3자리의 8진수 문자열 시퀀스입니다. 4자리 이상의 숫자를 포함하는 것처럼 보이는 8진수 이스케이프 시퀀스의 동작은 3자리의 8진수 시퀀스로 처리되고 그다음에 후속 숫자를 문자로 처리하여 놀라운 결과를 제공할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 8진수 이스케이프 시퀀스는 백슬래시와 그 뒤에 오는 최대 3자리의 8진수 문자열 시퀀스입니다. 4자리 이상의 숫자를 포함하는 것처럼 보이는 8진수 이스케이프 시퀀스의 동작은 3자리의 8진수 시퀀스로 처리되고 그다음에 후속 숫자를 문자로 처리하여 놀라운 결과를 제공할 수 있습니다. 예:  
   
 ```cpp  
 char c1 = '\100';   // '@'  
 char c2 = '\1000';  // C4305, C4309, truncates to '0'   
 ```  
   
- 8진수가 아닌 문자를 포함하는 것처럼 보이는 이스케이프 시퀀스는 마지막 8진수 문자까지 8진수 시퀀스로 평가되고 그다음에 나머지 문자로 평가됩니다. 예를 들면 다음과 같습니다.  
+ 8진수가 아닌 문자를 포함하는 것처럼 보이는 이스케이프 시퀀스는 마지막 8진수 문자까지 8진수 시퀀스로 평가되고 그다음에 나머지 문자로 평가됩니다. 예:  
   
 ```cpp  
 char c3 = '\009';   // '9'  
@@ -247,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>원시 문자열 리터럴(C++11)  
- 원시 문자열 리터럴은 null로 끝나는 배열-모든 문자 형식의-큰따옴표 ("), 백슬래시를 포함 하 여 모든 그래픽 문자를 포함 하는 (\\), 또는 줄 바꿈 문자입니다. 원시 문자열 리터럴은 문자 클래스를 사용하는 정규식과 HTML 문자열 및 XML 문자열에 종종 사용됩니다. 예제를 보려면 [Bjarne Stroustrup의 C++11에 대한 FAQ](http://go.microsoft.com/fwlink/?LinkId=401172)(영문) 문서를 참조하세요.  
+ 원시 문자열 리터럴은 null로 끝나는 배열-모든 문자 형식의-큰따옴표 ("), 백슬래시를 포함 하 여 모든 그래픽 문자를 포함 하는 (\\), 또는 줄 바꿈 문자입니다. 원시 문자열 리터럴은 문자 클래스를 사용하는 정규식과 HTML 문자열 및 XML 문자열에 종종 사용됩니다. 예제를 보려면 다음 문서를 참조: [Bjarne Stroustrup의 C + + 11 FAQ](http://go.microsoft.com/fwlink/p/?linkid=401172)합니다.  
   
 ```cpp  
 // represents the string: An unescaped \ character  

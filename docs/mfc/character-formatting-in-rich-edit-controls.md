@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86b9686396d8f3bd6abd67f5a1f33be0d20bdc16
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93bb2cda113a56276ad54edb5ccdb6c9d430ed06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Rich Edit 컨트롤의 문자 서식 지정
 Rich edit 컨트롤의 멤버 함수를 사용할 수 있습니다 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 문자 서식을 지정 하 고 서식 지정 정보를 검색 합니다. 문자에 대 한 서체, 크기, 색 및 효과 굵게, 기울임꼴 등을 지정할 수 있으며 보호.  

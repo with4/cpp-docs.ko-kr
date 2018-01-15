@@ -42,11 +42,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f0b2e084e27b951676fddfb20b53d5f74944089e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ecf7f9bb38cdd844514001126a98bced67617e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 지정된 값의 밑이 2인 비편향 지수를 나타내는 정수를 검색합니다.  
@@ -88,18 +89,18 @@ int ilogbl(
 |입력|결과|  
 |-----------|------------|  
 |±0|FP_ILOGB0|  
-|±inf, ±nan, indefinite|FP_ILOGBNAN|  
+|±inf, ±nan, 무한|FP_ILOGBNAN|  
   
  오류는 [_matherr](../../c-runtime-library/reference/matherr.md)에 지정된 대로 보고됩니다.  
   
 ## <a name="remarks"></a>설명  
- C++는 오버로드를 허용하기 때문에 float 및 long double 형식을 사용하고 반환하는 `ilogb`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `ilogb`는 항상 Double을 사용하고 반환합니다.  
+ C++는 오버로드를 허용하기 때문에 float 및 long double 형식을 사용하고 반환하는 `ilogb`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `ilogb`는 항상 double을 사용하고 반환합니다.  
   
  이 함수를 호출하는 것은 해당 `logb` 함수를 호출한 다음 반환 값을 `int`로 캐스팅하는 것과 유사합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|C 헤더|C++ 헤더|  
+|루틴에서 반환된 값|C 헤더|C++ 헤더|  
 |-------------|--------------|------------------|  
 |`ilogb`,                `ilogbf`,  `ilogbl`|\<math.h>|\<cmath>|  
   

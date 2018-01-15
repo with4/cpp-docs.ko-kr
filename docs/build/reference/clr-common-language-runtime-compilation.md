@@ -24,11 +24,12 @@ caps.latest.revision: "72"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c6882732064b002f0c2d4eef03a0fee2f62287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr(공용 언어 런타임 컴파일)
 응용 프로그램 및 구성 요소가 CLR(공용 언어 런타임)의 기능을 사용할 수 있게 합니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/24/2017
  Visual C++ 2005 이전은, **/clr:noAssembly** 에 **/LD**가 필요합니다. **/clr:noAssembly** 를 지정할 때 **/LD**가 암시됩니다.  
   
  **/clr:initialAppDomain**  
- CLR 버전 1에서 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 응용 프로그램을 실행할 수 있게 합니다. **initialAppDomain**을 사용할 경우에는 일부 문제가 나타날 수 있습니다. 이러한 문제에 대해서는 Microsoft 지원 웹 사이트의 [버그: Visual C++ 구성 요소에 대해 관리되는 확장을 사용할 때의 AppDomainUnloaded 예외](http://go.microsoft.com/fwlink/?LinkID=169465) 에서 설명합니다.  
+ CLR 버전 1에서 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 응용 프로그램을 실행할 수 있게 합니다. 사용 하는 경우 **initialAppDomain**에서 설명 하는 문제 중 일부를 나타날 수 [버그: 관리 Visual c + + 구성 요소에 대 한 확장을 사용할 때의 AppDomainUnloaded 예외](http://go.microsoft.com/fwlink/p/?linkid=169465) microsoft 웹 사이트를 지원 합니다.  
   
  **initialAppDomain** 을 사용하여 컴파일된 응용 프로그램은 CLR 버전 1에서 지원되지 않으므로 ASP.NET을 사용하는 응용 프로그램에서 사용하면 안됩니다.  
   

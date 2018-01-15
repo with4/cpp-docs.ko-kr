@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f2f694c03e0aed3e5c5f5072a6fa73365de1fa7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fcf2345774b6df2453dcc4be3c0022e61792b716
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="switchis"></a>switch_is
 식 또는 공용 구조체 멤버를 선택 하 고 union 판별 역할 식별자를 지정 합니다.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  **switch_is** c + + 특성에 동일한 기능을는 [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조는 [대/소문자](../windows/case-cpp.md) 의 샘플 사용에 대 한 예제 **switch_is**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

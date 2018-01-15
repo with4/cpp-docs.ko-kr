@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff189a255fe9e3c54ac4c15fbea43dcf8d8a2b12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15aeb1af7f41cf2df8be3f69657ec6870c55ab34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>예외: 자체 함수에서 예외 Throw
 MFC 또는 다른 라이브러리의 함수에 의해 throw 된 예외를 catch 하는 데에 MFC 예외 처리 패러다임을 사용 하는 것이 불가능 합니다. 라이브러리 코드에서 throw 된 예외를 catch 하는 것 외에도 예외 조건이 발생할 수 있는 함수를 작성 하는 경우 사용자 고유의 코드에서 예외 throw 할 수 있습니다.  

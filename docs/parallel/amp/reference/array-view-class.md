@@ -36,11 +36,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0378e35d182409cd4077b3f7c6fc270d116f18c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrayview-class"></a>array_view 클래스
 다른 컨테이너에 보관 된 데이터를 통해 N 차원 보기를 나타냅니다.  
@@ -112,7 +113,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[extent](#extent)|`extent` 개체의 모양을 정의하는 `array_view` 개체를 가져옵니다.|  
 |[source_accelerator_view](#source_accelerator_view)|가져옵니다는 [accelerator_view](accelerator-view-class.md) 여기서의 데이터 소스는 `array_view` 위치한|  

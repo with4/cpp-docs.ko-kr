@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3908176b6fba46aa9675ac7aa61bb617f1bfa00a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: acd8ee55261dfa03c68aef506dc90188d8d27d37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-automation-installation"></a>원격 자동화 설치
 원격 자동화 비교적 적은 구성 요소에 있습니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  RAC 관리자의 Visual c + + 5.0 이전 버전 GUAGE32 필요합니다. OCX 및 TABCTL32 합니다. OCX 합니다. 이러한 버전의 RAC 관리자 함께 제공 되는 Visual c + + Enterprise edition 버전 5.0 이상 필요 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [자동화 관리자](../mfc/automation-manager-mfc.md)  
   
  [원격 자동화 연결 관리자](../mfc/remote-automation-connection-manager.md)  

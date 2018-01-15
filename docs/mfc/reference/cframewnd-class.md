@@ -117,11 +117,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d5766a883c8bec143a7a635a657ba2545d1d612
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c27f27b8369aeb5fdb15d37dc196556a5f508d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 클래스
 창 관리를 위한 멤버와 함께 겹쳐진 Windows SDI(단일 문서 인터페이스) 또는 팝업 프레임 창의 기능을 제공합니다.  
@@ -189,7 +190,7 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::ShowControlBar](#showcontrolbar)|컨트롤 막대를 표시 하도록 호출 합니다.|  
 |[CFrameWnd::ShowOwnedWindows](#showownedwindows)|하위 항목인 모든 창을 표시는 `CFrameWnd` 개체입니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
@@ -247,7 +248,7 @@ class CFrameWnd : public CWnd
   
 -   기본 응용 프로그램 창 프레임 창의 사용 하는 경우 프레임 창은 WinHelp를 실행 하기 위한 컨텍스트로 사용 됩니다. WINHELP 프레임 창을 닫아 종료 합니다. 이 응용 프로그램에 대 한 도움말에 대 한 시작 된 exe를 실행 합니다.  
   
- C + +를 사용 하지 마십시오 **삭제** 연산자를 프레임 창을 삭제 합니다. 대신 `CWnd::DestroyWindow` 를 사용하세요. `CFrameWnd` 구현의 `PostNcDestroy` 창이 소멸 될 때에 c + + 개체를 삭제 합니다. 사용자 프레임 창에 기본값을 닫을 때 `OnClose` 처리기를 호출 하는 `DestroyWindow`합니다.  
+ C + +를 사용 하지 마십시오 **삭제** 연산자를 프레임 창을 삭제 합니다. 대신 `CWnd::DestroyWindow`를 사용하세요. `CFrameWnd` 구현의 `PostNcDestroy` 창이 소멸 될 때에 c + + 개체를 삭제 합니다. 사용자 프레임 창에 기본값을 닫을 때 `OnClose` 처리기를 호출 하는 `DestroyWindow`합니다.  
   
  대 한 자세한 내용은 `CFrameWnd`, 참조 [프레임 창](../../mfc/frame-windows.md)합니다.  
   
@@ -281,7 +282,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
   
  프레임을 활성화 하는 방법을 변경 하려면이 멤버 함수를 재정의 합니다. 예를 들어 MDI 자식 창이 최대화를 강제할 수 있습니다. 적절 한 기능을 추가한 다음 명시적으로 기본 클래스 버전을 호출 `nCmdShow`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
   
 ##  <a name="beginmodalstate"></a>CFrameWnd::BeginModalState  
@@ -428,7 +429,7 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="remarks"></a>설명  
  기본적으로 옆에 다음 순서 대로 프레임 창은 컨트롤 막대에 도킹할: 위쪽, 아래쪽, 왼쪽, 오른쪽입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CToolBar::Create](../../mfc/reference/ctoolbar-class.md#create)합니다.  
   
 ##  <a name="endmodalstate"></a>CFrameWnd::EndModalState  
@@ -750,7 +751,7 @@ BOOL m_bAutoMenuEnable;
   
  이 데이터 멤버의 현재 선택을 기반으로 하는 선택적 명령 구현을 단순화 하 고 쓸 필요가 줄어 데이터 `ON_UPDATE_COMMAND_UI` 설정 및 해제 메뉴 항목에 대 한 처리기입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#3](../../mfc/reference/codesnippet/cpp/cframewnd-class_3.cpp)]  
   
 ##  <a name="negotiateborderspace"></a>CFrameWnd::NegotiateBorderSpace  

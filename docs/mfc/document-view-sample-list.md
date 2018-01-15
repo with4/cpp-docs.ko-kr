@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a98e087a9155268997e913c2ecafc1bfd7020e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85881d76148ecd273f15320be125411afe9d1fa9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documentview-sample-list"></a>문서/뷰 샘플 목록
 흥미로운 방법으로 MFC의 문서/뷰 아키텍처를 사용 하 여 설명 하는 다음 샘플 프로그램을 참조 하십시오.  

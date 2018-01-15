@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa15cb2eac229201dd0f686428133224b2f32afe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>UNIX에서 Win32로 이식
 UNIX에서 Windows로 응용 프로그램을 마이그레이션하는 경우 다음과 같은 여러 옵션이 있습니다.  
@@ -44,11 +45,11 @@ UNIX에서 Windows로 응용 프로그램을 마이그레이션하는 경우 다
 ### <a name="unix-migration-guides"></a>UNIX 마이그레이션 가이드  
  UNIX 사용자 지정 응용 프로그램 마이그레이션 가이드에서는 UNIX에서 Win32 환경으로의 코드 마이그레이션에 대한 기술 도움말을 제공합니다.  
   
- [http://go.microsoft.com/fwlink/?LinkId=95428](http://go.microsoft.com/fwlink/?LinkId=95428)  
+ [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  Unix 마이그레이션 프로젝트 가이드에서는 UNIX에서 Win32로 많은 프로젝트를 마이그레이션하는 방법에 대한 개괄적인 도움말을 제공하여 UNIX 사용자 지정 응용 프로그램 마이그레이션 가이드를 보완합니다. 이 가이드에서는 프로젝트 마이그레이션의 각 단계에서 고려해야 할 문제에 대해 조언합니다. 이 가이드는 다음 위치에서 다운로드할 수 있습니다.  
   
- [http://go.microsoft.com/fwlink/?linkid=20012](http://go.microsoft.com/fwlink/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows SFU(UNIX용 서비스)  
  Microsoft Windows SFU(UNIX용 서비스)에서는 Windows를 기존 UNIX 기반 환경으로 통합하기 위한 다양한 플랫폼 간 서비스를 제공합니다. UNIX용 서비스는 파일 공유, 원격 액세스 및 관리, 암호 동기화, 공통 디렉터리 관리, 공통 유틸리티 집합 및 셸을 제공합니다.  

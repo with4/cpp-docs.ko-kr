@@ -23,11 +23,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79719ba2d029fc210aff94f78f00783f694a0156
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3303be9f37749436d140028cd5fa45cd4454c8c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 클래스
 가상 키 매핑 및 서식을 구현 하는 도우미 클래스입니다.  
@@ -58,7 +59,7 @@ class CMFCAcceleratorKey : public CObject
   
  바로 가기 키 및 액셀러레이터 키 테이블을 사용 하는 방법에 대 한 자세한 내용은 참조 [CKeyboardManager 클래스](../../mfc/reference/ckeyboardmanager-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 생성 하는 방법을 `CMFCAcceleratorKey` 개체와 사용 하는 방법의 `Format` 메서드.  
   
  [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]  

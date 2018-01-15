@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6f6dabd14ddb95f1b4c2b49389c27f61a69970f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76919bcdd416ed7195e94ed1fa0b2e3f3a4d573d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 공용 컨트롤의 빌드 요구 사항
 MFC(Microsoft Foundation Class) 라이브러리는 Windows 공용 컨트롤 버전 6.1을 지원합니다. 공용 컨트롤은 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]에 포함되며, 라이브러리는 [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]에 포함됩니다. 라이브러리에서 기존 클래스 및 새 클래스를 향상 시키는 새로운 메서드와 지 원하는 메서드를 제공 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 공용 컨트롤입니다. 응용 프로그램을 빌드할 때는 다음 섹션에 설명된 컴파일 및 마이그레이션 요구 사항을 따라야 합니다.  

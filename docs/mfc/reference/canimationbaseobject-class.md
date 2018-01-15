@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -33,8 +32,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nGroupID
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nObjectID
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_pParentController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationBaseObject [MFC], CAnimationBaseObject
 - CAnimationBaseObject [MFC], ApplyTransitions
@@ -59,16 +57,16 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 35af11c38c70513cb2225bbeb8e74c4ab61c8cc5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 0e866ec4858ecc32c4608d1fd9cbd9d42d4b1eee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject 클래스
 모든 애니메이션 개체의 기본 클래스입니다.  
@@ -116,7 +114,7 @@ class CAnimationBaseObject : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|관련 된 전환의 자동으로 제거 되어야 할지 여부를 지정 합니다.|  
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|사용자 정의 데이터를 저장 합니다.|  
@@ -444,4 +442,3 @@ void SetUserData (DWORD dwUserData);
   
 ## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)
-

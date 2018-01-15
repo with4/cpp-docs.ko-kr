@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ce85d60f0a3dc7f7ec88e480fb17289aaaf9fa1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>벡터화 도우미 및 병렬화 도우미 메시지
 Visual c + + 컴파일러 옵션을 사용할 수 [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 및 [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) 설정 하는 [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) 출력 이유 코드를 하 고 해당 작업에 대 한 정보 메시지입니다. 이 문서는 이유 코드 및 메시지를 설명합니다.  
@@ -989,7 +990,7 @@ void code_1505(int *A, int *B)
   
 ## <a name="see-also"></a>참고 항목  
  [자동 병렬화 및 자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md)   
- [네이티브 코드의 병렬 프로그래밍](http://go.microsoft.com/fwlink/?LinkId=263662)   
+ [네이티브 코드의 병렬 프로그래밍](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [#pragma loop)](../../preprocessor/loop.md)   
  [/Q 옵션 (하위 수준 작업)](../../build/reference/q-options-low-level-operations.md)   
  [/Qpar-report (자동 평행 화 도우미 보고 수준)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   

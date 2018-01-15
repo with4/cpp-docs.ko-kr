@@ -61,11 +61,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed7cd5ca4a1c3ef08707efc722c8f6ee299295c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d96a9c1a1b91d7738f768387bf0c24abd01ba22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clist-class"></a>CList 클래스
 순차적으로 또는 값별로 액세스할 수 있고 고유하지 않은 개체의 순서가 지정된 목록을 지원합니다.  
@@ -131,7 +132,7 @@ class CList : public CObject
   
  사용 하 여 대 한 자세한 내용은 `CList`, 문서를 참조 [컬렉션](../../mfc/collections.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#35](../../mfc/codesnippet/cpp/clist-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -166,7 +167,7 @@ void AddHead(CList* pNewList);
 ### <a name="remarks"></a>설명  
  목록 작업 전에 비어 있을 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
 ##  <a name="addtail"></a>CList::AddTail  
@@ -193,7 +194,7 @@ void AddTail(CList* pNewList);
 ### <a name="remarks"></a>설명  
  목록 작업 전에 비어 있을 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#37](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
   
 ##  <a name="clist"></a>CList::CList  
@@ -210,7 +211,7 @@ CList(INT_PTR nBlockSize = 10);
 ### <a name="remarks"></a>설명  
  단위에서 메모리를 할당 목록까지 확장 되면서 `nBlockSize` 항목입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>CList::Find  
@@ -235,7 +236,7 @@ POSITION Find(
 ### <a name="return-value"></a>반환 값  
  A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 개체가 없는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>CList::FindIndex  
@@ -255,7 +256,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 ### <a name="remarks"></a>설명  
  중지 목록의 헤드에서 순차적 검색을 시작 하기는  *n* 번째 요소입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
   
 ##  <a name="getat"></a>CList::GetAt  
@@ -281,7 +282,7 @@ const TYPE& GetAt(POSITION position) const;
   
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CList::GetHeadPosition](#getheadposition)합니다.  
   
 ##  <a name="getcount"></a>CList::GetCount  
@@ -297,7 +298,7 @@ INT_PTR GetCount() const;
 ### <a name="remarks"></a>설명  
  이 메서드를 호출 하면 동일한 결과를 생성 합니다는 [CList::GetSize](#getsize) 메서드.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CList::RemoveHead](#removehead)합니다.  
   
 ##  <a name="gethead"></a>CList::GetHead  
@@ -321,7 +322,7 @@ TYPE& GetHead();
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetHead`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
   
 ##  <a name="getheadposition"></a>CList::GetHeadPosition  
@@ -334,7 +335,7 @@ POSITION GetHeadPosition() const;
 ### <a name="return-value"></a>반환 값  
  A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 목록이 비어 있는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>CList::GetNext  
@@ -364,7 +365,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
   
  검색된 된 요소는 목록에서 마지막 다음 새 값의 경우 `rPosition` 로 설정 된 **NULL**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
 ##  <a name="getprev"></a>CList::GetPrev  
@@ -394,7 +395,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
   
  검색된 된 요소 목록에서 첫 번째 다음의 새 값 이면의 `rPosition` 로 설정 된 **NULL**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
   
 ##  <a name="getsize"></a>CList::GetSize  
@@ -410,7 +411,7 @@ INT_PTR GetSize() const;
 ### <a name="remarks"></a>설명  
  목록에 있는 요소의 수를 검색 하려면이 메서드를 호출 합니다.  이 메서드를 호출 하면 동일한 결과를 생성 합니다는 [CList::GetCount](#getcount) 메서드.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
 ##  <a name="gettail"></a>CList::GetTail  
@@ -431,7 +432,7 @@ const TYPE& GetTail() const;
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetTail`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
 ##  <a name="gettailposition"></a>CList::GetTailPosition  
@@ -444,7 +445,7 @@ POSITION GetTailPosition() const;
 ### <a name="return-value"></a>반환 값  
  A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 목록이 비어 있는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
 ##  <a name="insertafter"></a>CList::InsertAfter  
@@ -467,7 +468,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 ### <a name="return-value"></a>반환 값  
  반복 또는 목록 요소 검색에 사용할 수 있는 **POSITION** 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
   
 ##  <a name="insertbefore"></a>CList::InsertBefore  
@@ -493,7 +494,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ### <a name="remarks"></a>설명  
  *position* 이 **NULL**이면 요소가 목록의 처음 부분에 삽입됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
   
 ##  <a name="isempty"></a>CList::IsEmpty  
@@ -506,7 +507,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>반환 값  
  이 목록은 비어 있으면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
 ##  <a name="removeall"></a>CList::RemoveAll  
@@ -519,7 +520,7 @@ void RemoveAll();
 ### <a name="remarks"></a>설명  
  목록이 비어 이미 하는 경우 오류가 생성 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
   
 ##  <a name="removeat"></a>CList::RemoveAt  
@@ -536,7 +537,7 @@ void RemoveAt(POSITION position);
 ### <a name="remarks"></a>설명  
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
   
 ##  <a name="removehead"></a>CList::RemoveHead  
@@ -556,7 +557,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveHead`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
 ##  <a name="removetail"></a>CList::RemoveTail  
@@ -576,7 +577,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveTail`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
 ##  <a name="setat"></a>CList::SetAt  
@@ -601,7 +602,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
   
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  
