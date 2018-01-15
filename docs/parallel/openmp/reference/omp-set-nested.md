@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b0d04a0eb9813a3829b0f435972c7922bf77d07
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f08fec246b5df4b5a6dc965917e0a6438b58042f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompsetnested"></a>omp_set_nested
 중첩 된 병렬 처리가 가능 합니다.  
@@ -49,7 +50,7 @@ void omp_set_nested(
   
  자세한 내용은 참조 [3.1.9 omp_set_nested 함수](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // omp_set_nested.cpp  

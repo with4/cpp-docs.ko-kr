@@ -1,11 +1,10 @@
 ---
-title: "cancellation_token_source 클래스 | Microsoft 문서"
+title: "cancellation_token_source 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,19 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token_source class
+dev_langs: C++
+helpviewer_keywords: cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f41a4a21af5bc37ab612221152b8311a5a91d914
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 02669609e25fc772f1efa49f55045eaddbaad6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 클래스
 `cancellation_token_source` 클래스는 일부 취소 가능한 작업을 취소하는 기능을 나타냅니다.  
@@ -134,7 +117,7 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
  취소 시 반환된 토큰 소스가 취소되는 토큰입니다. 반환된 토큰 소스 역시 이 매개 변수에 포함된 소스와 별도로 취소될 수 있습니다.  
   
  `_Begin`  
- 해당 되는 c + + 표준 라이브러리 반복기 토큰 범위의 시작 부분으로의 취소에 대 한 수신 대기 하도록 합니다.  
+ 해당 되는 c + + 표준 라이브러리 반복기 토큰의 범위 시작 부분에 취소에 대 한 수신 대기 하도록 합니다.  
   
  `_End`  
  C + + 표준 라이브러리 반복기 토큰의 범위 끝에 해당의 취소에 대 한 수신 대기 하도록 합니다.  
@@ -153,7 +136,7 @@ cancellation_token get_token() const;
 ### <a name="return-value"></a>반환 값  
  이 소스와 연결된 취소 토큰입니다.  
   
-##  <a name="operator_neq"></a>연산자! = 
+##  <a name="operator_neq"></a>operator! = 
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;
@@ -190,4 +173,3 @@ bool operator== (const cancellation_token_source& _Src) const;
   
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)
-

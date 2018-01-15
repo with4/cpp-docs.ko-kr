@@ -18,18 +18,19 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d7c2c20604b2630b5125da839b275170559c08e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc867d0a39a3e3869403c359e2d19a258366b679
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-reference"></a>C++ 표준 라이브러리 참조
 C++ 프로그램은 C++ 표준 라이브러리에 따른 이러한 구현에서 여러 함수를 호출할 수 있습니다. 이러한 함수는 입력 및 출력과 같은 핵심 서비스를 수행하고 자주 사용되는 작업의 효율적인 구현을 제공합니다.  
   
  Visual C++ 런타임 라이브러리에 대한 자세한 내용은 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)  
  C++ 표준 라이브러리의 Microsoft 구현에 대한 개요를 제공합니다.  
   

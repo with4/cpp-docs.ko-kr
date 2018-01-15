@@ -1,42 +1,25 @@
 ---
-title: "task_options 클래스 (동시성 런타임) | Microsoft 문서"
+title: "task_options 클래스 (동시성 런타임) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- ppltasks/concurrency::task_options
-dev_langs:
-- C++
+f1_keywords: ppltasks/concurrency::task_options
+dev_langs: C++
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 9b0d7d245ae204fd59715c8142a836adbb63c10a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 23fe15f95782fc2aead89614143786a845becd62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options 클래스(동시성 런타임)
 작업을 만드는 데 사용할 수 있는 옵션을 나타냅니다.  
@@ -178,5 +161,4 @@ task_options(
  `_TaskOptions`  
   
 ## <a name="see-also"></a>참고 항목  
- [Namespace 동시성](concurrency-namespace.md)
-
+ [concurrency 네임스페이스](concurrency-namespace.md)

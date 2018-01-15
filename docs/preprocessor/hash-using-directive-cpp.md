@@ -1,5 +1,5 @@
 ---
-title: "#<a name=\"using-directive-cclr--microsoft-docs\"></a>using 지시문 (C + + /cli CLR) | Microsoft Docs"
+title: "#using 지시문 (C + + /cli CLR) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72180969287f0d921b76b467925dd193fcf7cc61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8a73eb8e9b5c3f3ba67e4466a6e7138010fd430
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-directive-cclr"></a>#using 지시문 (C + + /cli CLR)
 메타 데이터를 사용 하 여 컴파일된 프로그램으로 가져오는 [/clr](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 #### <a name="parameters"></a>매개 변수  
  `file`  
- MSIL .dll, .exe, .netmodule 또는. obj 예를 들면 다음과 같습니다.  
+ MSIL .dll, .exe, .netmodule 또는. obj 예를 들어 개체에 적용된  
   
  `#using <MyComponent.dll>`  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 10/24/2017
   
 -   LIBPATH 환경 변수의 디렉터리  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  어셈블리(C)를 빌드하고 다른 어셈블리(A)를 참조하는 어셈블리(B)를 참조하는 경우 C에서 A 형식 중 하나를 명시적으로 사용하지 않는 한 어셈블리 A를 명시적으로 참조할 필요가 없습니다.  
   
 ```  
@@ -90,7 +91,7 @@ ms.lasthandoff: 10/24/2017
 public ref class A {};  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // using_assembly_B.cpp  
@@ -104,7 +105,7 @@ public:
   
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 샘플에서는 프로그램이 using_assembly_A.cpp에 정의된 형식 중 하나를 사용하지 않으므로 using_assembly_A.dll을 사용하여 참조하지 않는 컴파일러 오류가 발생하지 않습니다.  
   
 ```  

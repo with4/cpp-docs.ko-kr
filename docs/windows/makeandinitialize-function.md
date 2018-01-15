@@ -14,11 +14,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a97796fa9b13e95cc446f04d7338dd91350c1c26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f759a71117d00e5f01f2f0f53f93fef2ba47a4fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize 함수
 지정된 된 Windows 런타임 클래스를 초기화합니다. 이 함수는 동일한 모듈에 정의 된 구성 요소의 인스턴스를 사용 합니다.  

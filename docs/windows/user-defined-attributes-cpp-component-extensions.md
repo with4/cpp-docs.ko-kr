@@ -1,67 +1,69 @@
 ---
-title: "User-Defined Attributes  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "metadata, extending"
-  - "custom attributes, extending metadata"
+title: "사용자 지정 특성 (c + + 구성 요소 확장명) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- metadata, extending
+- custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d974e8526f983801ed011520f7f78ff8c6cb564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# User-Defined Attributes  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-사용자 지정 특성을 사용하여 인터페이스, 클래스 또는 구조체, 메서드, 매개 변수 또는 열거형의 메타 데이터를 확장할 수 있습니다.  
+# <a name="user-defined-attributes--c-component-extensions"></a>사용자 정의 특성(C++ 구성 요소 확장)
+사용자 지정 특성을 사용 하는 인터페이스, 클래스 또는 구조, 메서드, 매개 변수 또는 열거형의 메타 데이터를 확장할 수 있습니다.  
   
-## 모든 런타임  
- 모든 런타임 사용자 지정 특성을 지원합니다.  
+## <a name="all-runtimes"></a>모든 런타임  
+ 모든 런타임 사용자 지정 특성을 지원 합니다.  
   
-## Windows 런타임\(Windows Runtime\)  
- C \+ \+ \/ CX 속성은 속성 만 지원하지만, 생성자 또는 메소드 속성은 없습니다.  
+## <a name="windows-runtime"></a>Windows 런타임  
+ C + + /cli CX attributes만 속성을 지원 하지만 하지 생성자 또는 메서드 특성입니다.  
   
-### 설명  
+### <a name="remarks"></a>설명  
   
-### 요구 사항  
- 컴파일러 옵션: **\/ZW**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/ZW**  
   
-## 공용 언어 런타임  
- 사용자 지정 특성은 관리되는 요소의 메타 데이터를 확장 할 수 있습니다.  자세한 내용은 [특성](../Topic/Extending%20Metadata%20Using%20Attributes.md)을 참조하십시오.  
+## <a name="common-language-runtime"></a>공용 언어 런타임  
+ 사용자 지정 특성을 통해 관리 되는 요소의 메타 데이터를 확장할 수 있습니다. 자세한 내용은 [특성](/dotnet/standard/attributes/index)을 참조하세요.  
   
-### 설명  
- 이 항목에 제시된 정보와 구문은 [attribute](../windows/attribute.md)에 표시되는 정보를 대체하기위한 것입니다.  
+### <a name="remarks"></a>설명  
+ 정보 및이 항목에 제시 된 구문은에 제시 된 정보를 대체 하기 위한 것 [특성](../windows/attribute.md)합니다.  
   
- 해당 형식에 대한<xref:System.Attribute> 기본 클래스를 생성하거나 선택적으로 <xref:System.AttributeUsageAttribute> 특성을 적용하여 사용자 지정 특성을 정의할 수 있습니다.  
+ 형식을 정의 하 여 사용자 지정 특성을 정의할 수 있습니다 <xref:System.Attribute> 기본 클래스 형식에 대 한 이동 하 고 선택적으로 적용는 <xref:System.AttributeUsageAttribute> 특성입니다.  
   
- 예를 들어, Microsoft 트랜잭션 서버 \(MTS\) 1.0, 등 거래와 관련, 동기화,로드 밸런싱 및과 동작은 ODL 사용자 지정 특성을 사용하여 형식 라이브러리에 삽입 된 사용자 지정 GUID를 통해 지정되었습니다.  따라서, MTS 서버의 클라이언트 형식 라이브러리를 읽어 그 특성을 결정할 수 있습니다.  . NET Framework의 형식 라이브러리의 아날로그 메타 데이터, 그리고 ODL 사용자 지정 특성의 아날로그 사용자 정의 속성입니다.  또한, 형식 라이브러리를 읽는 것은 형식에 리플렉션을 사용하는 것과 유사합니다.  
+ 예를 들어에 Microsoft Transaction Server (MTS) 1.0, 트랜잭션, 동기화, 관련 하 여 동작 부하 분산, 및 등 ODL 사용자 지정 특성을 사용 하 여 형식 라이브러리에 삽입 하는 사용자 지정 Guid를 통해 지정 된 합니다. 따라서 MTS 서버의 클라이언트 형식 라이브러리를 참조 하 여 해당 특성을 지정할 수 없습니다. .NET Framework에서 형식 라이브러리의 메타 데이터를 이며 ODL 사용자 지정 특성의 사용자 지정 특성입니다. 또한 형식 라이브러리를 읽기는 리플렉션을 사용 하 여 형식에과 같습니다.  
   
- 자세한 내용은 다음 항목을 참조하십시오.  
+ 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Attribute Targets](../windows/attribute-targets-cpp-component-extensions.md)  
+-   [특성 대상](../windows/attribute-targets-cpp-component-extensions.md)  
   
--   [Attribute Parameter Types](../windows/attribute-parameter-types-cpp-component-extensions.md)  
+-   [특성 매개 변수 형식](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- Visual C\+\+의 어셈블리 서명에 대한 내용은 [강력한 이름 어셈블리\(어셈블리 서명\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)를 참조하십시오.  
+ Visual c + +에서 어셈블리 서명에 대 한 자세한 내용은 참조 하십시오. [강력한 이름 어셈블리 (어셈블리 서명) (C + + /cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)합니다.  
   
-### 요구 사항  
- 컴파일러 옵션: **\/clr**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/clr**  
   
-### 예제  
+### <a name="examples"></a>예제  
  **예제**  
   
- 다음 샘플에서는 사용자 지정 특성을 정의하는 방법을 보여줍니다.  
+ 다음 샘플에는 사용자 지정 특성을 정의 하는 방법을 보여 줍니다.  
   
 ```cpp  
 // user_defined_attributes.cpp  
@@ -80,7 +82,7 @@ ref class MyClass {};
   
  **예제**  
   
- 다음 예는 사용자 지정 특성의 몇 가지 중요한 기능을 보여줍니다.  완벽하게 고객에게 자신을 설명 할 수있는 서버의 인스턴스 : 예를 들어,이 예제는 사용자 지정 특성의 일반적인 사용을 보여줍니다.  
+ 다음 예제에서는 사용자 지정 특성의 몇 가지 중요 한 기능을 보여 줍니다. 예를 들어 사용자 지정 특성의 일반적인 사용을 보여 주는이 예제: 인스턴스화 완벽 하 게 클라이언트에 자체 설명할 수 있는 서버.  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -155,20 +157,29 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **출력**  
   
-  **서비스 우선 순위 \= 0**  
- **액세스 서비스 \= 쓰기**  
- **서비스 우선 순위 \= 3**  
- **액세스 서비스 \= 쓰기**  
- **서비스 우선 순위 \= 1**  
- **서비스 액세스 \= 읽기** **예제**  
+```Output  
+Service Priority = 0  
   
- 개체 ^ 형식은 variant 데이터 형식을 대체 합니다.  다음은 매개 변수로 ^ 개체의 배열을 사용하는 사용자 지정 특성을 정의합니다.  
+Service Access = Write  
   
- 인수는 컴파일 타임 상수를 표시하여야합니다. 대부분의 경우 그들은 일정한 리터럴이어야합니다.  
+Service Priority = 3  
   
- 사용자 지정 특성 블록에서 type 값을 반환 하는 방법에 대한 정보는 [typeid](../windows/typeid-cpp-component-extensions.md)를 참조하십시오.  
+Service Access = Write  
+  
+Service Priority = 1  
+  
+Service Access = Read  
+```  
+  
+ **예제**  
+  
+ 개체 ^ 형식이 variant 데이터 형식을 대체 합니다. 다음 예제에서는 개체의 배열을 사용 하는 사용자 지정 특성을 정의 ^ 매개 변수로 합니다.  
+  
+ 특성 인수가 컴파일 시간 상수; 이어야 합니다. 대부분의 경우에서 상수 리터럴 수 있어야 합니다.  
+  
+ 참조 [typeid](../windows/typeid-cpp-component-extensions.md) system:: type 값은 사용자 지정 특성 블록에서 반환 하는 방법에 대 한 내용은 합니다.  
   
 ```cpp  
 // extending_metadata_e.cpp  
@@ -188,7 +199,7 @@ public ref class SomeClass {};
   
  **예제**  
   
- 런타임은 사용자 지정 특성 클래스의 공용 부분은 직렬화가 가능해야한다는 것을 요구합니다.  사용자 지정 특성을 만들 때 사용자 지정 특성의 명명 된 인수가 컴파일 타임 상수로 제한됩니다.  \(메타 데이터의 클래스 레이아웃에 추가 된 비트의 순서로 생각하시면됩니다.\)  
+ 런타임에는 사용자 지정 특성 클래스의 공용 부분 직렬화 해야 필요 합니다.  사용자 지정 특성을 만들 때 사용자 지정 특성의 명명 된 인수는 컴파일 시간 상수 제한 됩니다.  (것으로 생각 하면 일련의 메타 데이터에 클래스 레이아웃에 추가 하는 비트.)  
   
 ```cpp  
 // extending_metadata_f.cpp  
@@ -207,5 +218,5 @@ ref struct A : Attribute {
 ref struct B {};  
 ```  
   
-## 참고 항목  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>참고 항목  
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

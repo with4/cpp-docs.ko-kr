@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,33 +17,18 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator/
 - FILESYSTEM/std::experimental::filesystem::operator<<
 - FILESYSTEM/std::experimental::filesystem::operator>>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 102c4833-aa3b-41a8-8998-f5003c546bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 0875324fada10022291e8d33c2c2d6cf7276105c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 815ff0025372e8b085f7c6f6ea38299bb15c8305
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt-operators"></a>&lt;filesystem&gt; 연산자
 연산자는 문자열로 두 경로의 어휘 비교를 수행합니다. **equivalent** 함수를 사용하여 두 경로(예: 상대 경로 및 절대 경로)가 디스크에서 동일한 파일 또는 디렉터리를 나타내는지 확인합니다.  
@@ -148,5 +132,4 @@ return (is);
  [path 클래스(C++ 표준 라이브러리)](../standard-library/path-class.md)   
  [파일 시스템 탐색(C++)](../standard-library/file-system-navigation.md)   
  [\<filesystem>](../standard-library/filesystem.md)
-
 

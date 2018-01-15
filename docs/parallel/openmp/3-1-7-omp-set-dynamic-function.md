@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1569235e807fb8e6981c45d7547cae7bd6f70c56
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87cdd627dd01697fa3d3718a2dc769f4017630a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic 함수
 **omp_set_dynamic** 함수 하거나 병렬 영역의 실행에 사용할 수 있는 스레드 수의 동적 조정을 해제 합니다. 형식은 다음과 같습니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3dee6fb7423ba9245c1b52a8aa7b90a14d52cc9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21d739fb3ead0512776cfd996b59f1ceab5e8250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 **copyprivate** 절 다른 구성원에 게 팀의 멤버 중 하나에서 값을 브로드캐스트할 개인 변수를 사용 하는 메커니즘을 제공 합니다. 것 (예를 들어, 각 수준에서 서로 다른 변수를 요구 하는 재귀)에서 어려울 수는 공유 변수를 제공 하는 경우 값에 대 한 공유 변수를 사용 하는 대신 합니다. **copyprivate** 절에 나타날 수는 **단일** 지시문입니다.  

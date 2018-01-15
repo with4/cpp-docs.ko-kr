@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70e50f4ab18cdfddc3330e5c23e5808040c354bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3f3a9794f7b00a2029f6706db3a846ba127a4d5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synclockt-class"></a>SyncLockT 클래스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -66,7 +69,7 @@ class SyncLockT;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[SyncLockT::sync_ 데이터 멤버](../windows/synclockt-sync-data-member.md)|SyncLockT 클래스에 의해 표시 되는 기본 리소스를 보유 합니다.|  
   

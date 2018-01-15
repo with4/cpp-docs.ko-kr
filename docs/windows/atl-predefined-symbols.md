@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: daa70cb5bc1bcb1fef77930a9955f7afbd618f67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d56fcfa8fb65f183acfe96c3981023d06f5e524a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-predefined-symbols"></a>미리 정의된 ATL 기호
 이러한 기호는 ATL 헤더 파일에 정의 되어 있지만 표준 Windows 응용 프로그램 기능 및 동작을 지원 합니다. 이러한 기호 대화 상자에 주로 사용 됩니다. 대화 상자 및 컨트롤을 사용 하 여 작업할 경우에 [대화 상자 편집기](../windows/dialog-editor.md), 이러한 기호는 일반 컨트롤과 연결 된 속성 창에 표시 됩니다. 예를 들어, 대화 상자에 "취소" 단추가, 해당 명령을 연관 될 명령이에 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  

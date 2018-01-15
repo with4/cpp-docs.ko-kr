@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xutility/std::iterator_traits
-- iterator_traits
-dev_langs:
-- C++
+f1_keywords: xutility/std::iterator_traits
+dev_langs: C++
 helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 24cdef3317b1a2c982858a3832e0085ba7ba7d20
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4ac3034f1384bbd38cb0ca90d0df8ff5bed411d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits 구조체
 반복기에 포함되어야 하는 모든 중요한 형식 정의를 지정하는 데 사용되는 템플릿 도우미 구조체입니다.  
@@ -98,7 +80,7 @@ ptrdiff_t *_Dist_type(const Ty *);
   
  이러한 함수는 여러 가지 동일한 형식을 보다 간접적으로 결정합니다. 함수 호출에서 인수로 이러한 함수를 사용합니다. 또한 호출된 함수에 유용한 템플릿 클래스 매개 변수를 제공하려는 용도로만 사용됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // iterator_traits.cpp  
@@ -150,7 +132,6 @@ struct std::bidirectional_iterator_tag
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

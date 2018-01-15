@@ -14,11 +14,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb54467e0cf37281fab18ad88c6f0c96984dad6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 95e7ec4d1a4a6b473419c23b3565fcce9d5afed6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>특성 매개 변수 형식(C++ 구성 요소 확장)
 특성에 전달된 값은 컴파일 타임에 컴파일러에 알려야 합니다.  특성 매개 변수는 다음 형식일 수 있습니다.  
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/24/2017
   
 -   `enum`  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="code"></a>코드  
   

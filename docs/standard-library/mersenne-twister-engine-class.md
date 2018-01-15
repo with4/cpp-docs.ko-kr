@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58a777a049b270702e63391ebc7bd4c1addc3b32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9db5fd19c480ac7dfa6f647a1e1bf4beec5609d1
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 클래스
 메르센 트위스터 알고리즘을 기반으로 정수의 고품질 임의 시퀀스를 생성합니다.  
@@ -36,7 +37,7 @@ class mersenne_twister_engine;
   
 #### <a name="parameters"></a>매개 변수  
  `UIntType`  
- 부호가 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+ 부호가 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
  `W`  
  **단어 크기**. 상태 시퀀스의 각 단어 크기입니다(비트). **사전 조건**: `2u < W ≤ numeric_limits<UIntType>::digits`  
@@ -104,9 +105,9 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- 메르센 트위스터 알고리즘에 대한 자세한 내용은 Wikipedia 문서 [Mersenne twister](http://go.microsoft.com/fwlink/LinkId=402356)(메르센 트위스터)를 참조하세요.  
+ 메르센 트위스터 알고리즘에 대한 자세한 내용은 Wikipedia 문서 [Mersenne twister](http://go.microsoft.com/fwlink/p/?linkid=402356)(메르센 트위스터)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  코드 예제는 [\<random>](../standard-library/random.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  

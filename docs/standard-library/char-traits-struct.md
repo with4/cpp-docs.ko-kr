@@ -38,11 +38,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0ad63f077bcc018681f852d1495e9f1abd7d4fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b094e0cc34cc1a832e531cff9a5f3fa1366abcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chartraits-struct"></a>char_traits 구조체
 char_traits 구조체는 문자와 연결된 특성을 설명합니다.  
@@ -61,7 +62,7 @@ struct char_traits;
 ## <a name="remarks"></a>설명  
  템플릿 구조체는 **CharType** 형식에 대한 다양한 문자 특성을 설명합니다. [basic_ios](../standard-library/basic-ios-class.md)를 비롯한 여러 iostream 템플릿 클래스와 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)은 이 정보를 사용하여 **CharType** 형식의 요소를 조작합니다. 이러한 요소 형식은 명시적 생성 또는 소멸을 요구하지 않아야 합니다. 기본 생성자, 복사 생성자 및 대입 연산자에 예상 의미 체계를 제공해야 합니다. 비트 복사는 할당과 동일한 효과가 있어야 합니다. char_traits 구조체의 멤버 함수는 예외를 발생시킬 수 없습니다.  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -124,7 +125,7 @@ static char_type *assign(char_type* strTo,
 ### <a name="return-value"></a>반환 값  
  두 번째 멤버 함수는 첫 번째 `_Num` 요소가 *_CharFrom*의 값을 할당받은 문자열에 대한 포인터를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_assign.cpp  
@@ -175,7 +176,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `char_type`을 선언하고 사용하는 방법에 대한 예제는 [copy](#copy)의 예제를 참조하세요.  
   
 ##  <a name="compare"></a>  char_traits::compare  
@@ -205,7 +206,7 @@ static int compare(const char_type* str1,
   
  두 문자열이 범위에 대해 같은지 비교하되 하나가 다른 문자열보다 길면 두 문자열 중 짧은 문자열이 더 긴 문자열보다 작습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_compare.cpp  
@@ -265,7 +266,7 @@ static char_type *copy(char_type* _To,
 ### <a name="remarks"></a>설명  
  소스 및 대상 문자 시퀀스는 겹치지 않아야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_copy.cpp  
@@ -326,7 +327,7 @@ static char_type *_Copy_s(
 ### <a name="remarks"></a>설명  
  소스 및 대상 문자 시퀀스는 겹치지 않아야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits__Copy_s.cpp  
@@ -372,7 +373,7 @@ static int_type eof();
   
  C++ 표준에서는 이 값이 유효한 `char_type` 값에 해당하면 안 됩니다. Visual C++ 컴파일러는 `char` 형식이 아니라 `wchar_t` 형식에 이 제약 조건을 적용합니다. 아래 예제에서는 이 작업을 보여 줍니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_eof.cpp  
@@ -422,7 +423,7 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 ### <a name="return-value"></a>반환 값  
  첫 번째 문자가 두 번째 문자와 같으면 **true**이고, 같지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_eq.cpp  
@@ -479,7 +480,7 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 ### <a name="return-value"></a>반환 값  
  첫 번째 문자가 두 번째 문자와 같으면 **true**이고, 같지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_eq_int_type.cpp  
@@ -566,7 +567,7 @@ static const char_type* find(const char_type* str,
 ### <a name="return-value"></a>반환 값  
  일치 항목이 발견되는 경우 범위에서 지정된 문자 중 처음 나오는 문자에 대한 포인터입니다. 일치 항목이 발견되지 않으면 Null 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_find.cpp  
@@ -618,7 +619,7 @@ typedef long int_type;
 ### <a name="remarks"></a>설명  
  **CharType** 형식의 값을 `int_type`으로 형식 캐스트한 후 원래 값을 변경하지 않고 **CharType**으로 다시 형식 캐스트할 수 있어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `int_type`을 선언하고 사용하는 방법에 대한 예제는 [eq_int_type](#eq_int_type)의 예제를 참조하세요.  
   
 ##  <a name="length"></a>  char_traits::length  
@@ -635,7 +636,7 @@ static size_t length(const char_type* str);
 ### <a name="return-value"></a>반환 값  
  측정되는 시퀀스의 요소 수입니다(Null 종결자를 포함하지 않음).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_length.cpp  
@@ -678,7 +679,7 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 ### <a name="return-value"></a>반환 값  
  첫 번째 문자가 두 번째 문자보다 작으면 **true**이고, 작지 않으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_lt.cpp  
@@ -744,7 +745,7 @@ static char_type *move(char_type* _To,
 ### <a name="remarks"></a>설명  
  소스 및 대상이 겹칠 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_move.cpp  
@@ -820,7 +821,7 @@ static char_type *_Move_s(
 ### <a name="remarks"></a>설명  
  소스 및 대상이 겹칠 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits__Move_s.cpp  
@@ -882,7 +883,7 @@ static int_type not_eof(const int_type& _Ch);
   
  문자 `int_type` 값이 EOF `int_type` 값과 같으면 **false**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_not_eof.cpp  
@@ -992,7 +993,7 @@ static char_type to_char_type(const int_type& _Ch);
   
  위의 식은 임의의 `char_type` *x*에 대해 적용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_to_char_type.cpp  
@@ -1092,7 +1093,7 @@ static int_type to_int_type(const char_type& _Ch);
   
  위의 식은 임의의 `char_type` *x*에 대해 적용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // char_traits_to_int_type.cpp  

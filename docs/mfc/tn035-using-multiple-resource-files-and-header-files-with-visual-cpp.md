@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c03c642dfc3524f69f4aa8d1a397f750b42db27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Visual C++에서 여러 개의 리소스 파일 및 헤더 파일 사용
 > [!NOTE]
@@ -115,7 +116,7 @@ RESOURCE.H     AFXRES.H
   
  사용자 지정 서식 리소스를 사용하는 경우 이러한 리소스를 RES\MYAPP.RC2에 추가하고 Visual C++ 텍스트 편집기를 사용하여 편집할 수 있습니다.  
   
- AFXRES.RC 및 AFXPRINT.RC에는 프레임워크의 특정 기능에 필요한 표준 리소스가 포함되어 있습니다. RES\MYAPP.RC2와 마찬가지로, 프레임워크에서 제공한 이러한 두 리소스 파일은 MYAPP.RC 끝에 #include로 지정되며 Set Includes 대화 상자의 컴파일 타임 지시문에 지정됩니다. 따라서 Visual C++에서 MYAPP.RC를 편집하는 동안 이러한 프레임워크 리소스를 직접 보거나 편집하지는 않지만, 이러한 리소스는 응용 프로그램의 이진 .RES 파일 및 최종 .EXE 파일로 컴파일됩니다. 수정, 절차 등 표준 프레임 워크 리소스에 대 한 자세한 내용은 참조 [Technical Note 23](../mfc/tn023-standard-mfc-resources.md)합니다.  
+ AFXRES.RC 및 AFXPRINT.RC에는 프레임워크의 특정 기능에 필요한 표준 리소스가 포함되어 있습니다. RES\MYAPP.RC2와 마찬가지로, 프레임워크에서 제공한 이러한 두 리소스 파일은 MYAPP.RC 끝에 #include로 지정되며 Set Includes 대화 상자의 컴파일 시간 지시문에 지정됩니다. 따라서 Visual C++에서 MYAPP.RC를 편집하는 동안 이러한 프레임워크 리소스를 직접 보거나 편집하지는 않지만, 이러한 리소스는 응용 프로그램의 이진 .RES 파일 및 최종 .EXE 파일로 컴파일됩니다. 수정, 절차 등 표준 프레임 워크 리소스에 대 한 자세한 내용은 참조 [Technical Note 23](../mfc/tn023-standard-mfc-resources.md)합니다.  
   
  AFXRES.H는 프레임워크와 특히 AFXRES.RC에서 사용되는 `ID_FILE_NEW`와 같은 표준 기호를 정의합니다. 또한 AFXRES.H는 Visual C++에서 생성된 .RC 파일과 AFXRES.RC에 필요한 WINDOWS.H의 부분 집합을 포함하는 WINRES.H를 #include로 지정합니다. AFXRES.H에 정의된 기호는 응용 프로그램 리소스 파일(MYAPP.RC)을 편집할 때 사용할 수 있습니다. 예를 들면 `ID_FILE_NEW`는 MYAPP.RC의 메뉴 리소스에서 새 파일 메뉴 항목에 사용됩니다. 프레임워크에서 정의된 이러한 기호는 변경하거나 삭제할 수 없습니다.  
   
@@ -214,7 +215,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC 
 ```  
   
- 컴파일 타임 지시문을 사용하여 Visual C++ 편집할 수 있거나 편집할 수 없는 리소스를 여러 .RC 파일로 구성할 수 있으며, 이 경우 "마스터" MYAPP.RC 파일에서는 다른 .RC 파일을 #include로 지정할 뿐 아무 기능도 수행하지 않습니다. Visual C++ 프로젝트 .MAK 파일을 사용하려는 경우 "마스터" .RC 파일을 프로젝트에 포함하여 #include로 지정된 모든 리소스가 응용 프로그램과 함께 컴파일되도록 해야 합니다.  
+ 컴파일 시간 지시문을 사용하여 Visual C++ 편집할 수 있거나 편집할 수 없는 리소스를 여러 .RC 파일로 구성할 수 있으며, 이 경우 "마스터" MYAPP.RC 파일에서는 다른 .RC 파일을 #include로 지정할 뿐 아무 기능도 수행하지 않습니다. Visual C++ 프로젝트 .MAK 파일을 사용하려는 경우 "마스터" .RC 파일을 프로젝트에 포함하여 #include로 지정된 모든 리소스가 응용 프로그램과 함께 컴파일되도록 해야 합니다.  
   
  **편집할 수 없는 Visual c + + 파일의 적용**  
   
@@ -318,7 +319,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 |-----------------------------|--------------------------------------|  
 |1|기호 헤더 파일|  
 |2|읽기 전용 기호 지시문|  
-|3|컴파일 타임 지시문|  
+|3|컴파일 시간 지시문|  
   
  아래 설명된 바와 같이 각각의 세 가지 Set Includes 정보 유형이 응용 프로그램 마법사가 만든 기본 MYAPP.RC와 RESOURCE.H 파일을 통해 설명됩니다. BEGIN과 END 블록 사이에 있는 추가 \0과 "" 토큰은 RC 구문에서 각각의 0 종단 문자열과 큰따옴표 문자를 지정하는 데 필요합니다.  
   
@@ -355,7 +356,7 @@ BEGIN
 END  
 ```  
   
-## <a name="compile-time-directives"></a>컴파일 타임 지시문  
+## <a name="compile-time-directives"></a>컴파일 시간 지시문  
  컴파일 타임 지시문은 리소스 컴파일러에 의해 해석할 수 있는 다음 형태로 MYAPP.RC 끝에 포함됩니다.  
   
 ```  

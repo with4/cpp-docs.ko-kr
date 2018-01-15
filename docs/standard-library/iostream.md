@@ -24,11 +24,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e5b749f16b2aa66aba486bd4dd3449f4e485683a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 430981da5ec304bf832e759d40870ee88f3e6557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 표준 스트림에서 읽기 및 쓰기를 제어하는 개체를 선언합니다. 대체로 C++ 프로그램에서 입력 및 출력을 수행하기 위해 포함해야 하는 유일한 헤더입니다.  
@@ -79,7 +80,7 @@ extern ostream cerr;
 #### <a name="remarks"></a>설명  
  이 개체는 표준 오류 출력에 대한 버퍼링되지 않은 삽입을 바이트 스트림으로 제어합니다. 개체가 생성되고 나면 `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) 식은 0이 아니고 `cerr.tie() == &cout`입니다.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   
 ```cpp  
 // iostream_cerr.cpp  
@@ -122,7 +123,7 @@ extern istream cin;
 #### <a name="remarks"></a>설명  
  이 개체는 표준 입력에서의 추출을 바이트 스트림으로 제어합니다. 개체가 생성되고 나면 `cin.`[tie](../standard-library/basic-ios-class.md#tie) 호출에서 `&`[cout](#cout)를 반환합니다.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   이 예제에서는 `cin`이 숫자가 아닌 문자를 발견할 경우 스트림에서 실패 비트를 설정합니다. 프로그램은 이 실패 비트를 지우고 스트림에서 잘못된 문자를 제거하여 계속 진행합니다.  
   
 ```  
@@ -171,7 +172,7 @@ extern ostream clog;
 #### <a name="remarks"></a>설명  
  이 개체는 표준 오류 출력에 대한 버퍼링된 삽입을 바이트 스트림으로 제어합니다.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   `clog` 사용 예제는 [cerr](#cerr)을 참조하세요.  
   
 ###  <a name="cout"></a>  cout  
@@ -187,7 +188,7 @@ extern ostream cout;
 #### <a name="remarks"></a>설명  
  이 개체는 표준 출력에 대한 삽입을 바이트 스트림으로 제어합니다.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   `cout` 사용 예제는 [cerr](#cerr)을 참조하세요.  
   
 ###  <a name="wcerr"></a>  wcerr  
@@ -203,7 +204,7 @@ extern wostream wcerr;
 #### <a name="remarks"></a>설명  
  이 개체는 표준 오류 출력에 대한 버퍼링되지 않은 삽입을 와이드 스트림으로 제어합니다. 개체가 생성되고 나면 `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) 식은 0이 아닙니다.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   `wcerr` 사용 예제는 [cerr](#cerr)을 참조하세요.  
   
 ###  <a name="wcin"></a>  wcin  
@@ -219,7 +220,7 @@ extern wistream wcin;
 #### <a name="remarks"></a>설명  
  이 개체는 표준 입력에서의 추출을 와이드 스트림으로 제어합니다. 개체가 생성되고 나면 `wcin.`[tie](../standard-library/basic-ios-class.md#tie) 호출에서 `&`[wcout](#wcout)를 반환합니다.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   `wcin` 사용 예제는 [cerr](#cerr)을 참조하세요.  
   
 ###  <a name="wclog"></a>  wclog  
@@ -235,7 +236,7 @@ extern wostream wclog;
 #### <a name="remarks"></a>설명  
  이 개체는 표준 오류 출력에 대한 버퍼링된 삽입을 와이드 스트림으로 제어합니다.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   `wclog` 사용 예제는 [cerr](#cerr)을 참조하세요.  
   
 ###  <a name="wcout"></a>  wcout  
@@ -251,7 +252,7 @@ extern wostream wcout;
 #### <a name="remarks"></a>설명  
  이 개체는 넓은 스트림으로 표준 출력에 삽입을 제어합니다.  
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   `wcout` 사용 예제는 [cerr](#cerr)을 참조하세요.  
   
  다음 예제와 같이 `wcout` 문의 `CString` 인스턴스를 `const wchar_t*`로 캐스팅해야 합니다.  

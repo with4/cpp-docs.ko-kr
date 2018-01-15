@@ -4,39 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- container classes
+dev_langs: C++
+helpviewer_keywords: container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 2d8485f7fa62f2aaf3d3e6be920620aaf14fd7ca
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e1bc305ea300d6387dbad7af5c053d855cad302d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sample-container-members"></a>샘플 컨테이너 멤버
 > [!NOTE]
@@ -44,7 +27,7 @@ ms.lasthandoff: 02/24/2017
   
 ## <a name="reference"></a>참조  
   
-## <a name="typedefs"></a>Typedefs  
+## <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -72,4 +55,3 @@ ms.lasthandoff: 02/24/2017
 |[rend](../standard-library/container-class-rend.md)|구성원 함수는 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 역방향 반복기를 반환하여 역방향 시퀀스의 끝을 지정합니다.|  
 |[size](../standard-library/container-class-size.md)|제어되는 시퀀스의 길이를 제어되는 시퀀스의 길이와 관계없이 상수 시간으로 반환합니다.|  
 |[swap](../standard-library/container-class-swap.md)
-

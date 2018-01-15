@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33ccea8f2b688389b386a49f2a2b9094eaaddb9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b8e205ff7073482af2186427592bf5c9319a7935
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ 데이터 멤버
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  

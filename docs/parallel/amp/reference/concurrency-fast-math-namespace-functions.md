@@ -1,5 +1,5 @@
 ---
-title: "Concurrency:: fast_math 네임 스페이스 함수 | Microsoft 문서"
+title: "Concurrency:: fast_math 네임 스페이스 함수 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -50,18 +50,18 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanf
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2ca8b085c7dcc226a216032060e628c7c7ce0a4a
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 406f92d4a13502ed784936398070f1b4a7b4eb95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math 네임 스페이스 함수
 ||||  
@@ -118,7 +118,7 @@ inline float acosf(float _X) restrict(amp);
  인수의 아크코사인 값을 반환합니다.  
   
 ##  <a name="asin"></a>  asin  
- 인수의 아크사인 값을 계산합니다.  
+ 인수의 아크사인 계산  
   
 ```  
 inline float asin(float _X) restrict(amp);
@@ -132,7 +132,7 @@ inline float asin(float _X) restrict(amp);
  인수의 아크사인 값을 반환합니다.  
   
 ##  <a name="asinf"></a>asinf  
- 인수의 아크사인 값을 계산합니다.  
+ 인수의 아크사인 계산  
   
 ```  
 inline float asinf(float _X) restrict(amp);
@@ -240,7 +240,7 @@ inline float ceilf(float _X) restrict(amp);
  인수의 한계를 반환합니다.  
   
 ##  <a name="cosf"></a>cosf  
- 인수의 코사인을 계산합니다.  
+ 인수의 코사인 값을 계산합니다.  
   
 ```  
 inline float cosf(float _X) restrict(amp);
@@ -268,7 +268,7 @@ inline float coshf(float _X) restrict(amp);
  인수의 하이퍼볼릭 코사인 값을 반환합니다.  
   
 ##  <a name="cos"></a>  cos  
- 인수의 코사인을 계산합니다.  
+ 인수의 코사인 값을 계산합니다.  
   
 ```  
 inline float cos(float _X) restrict(amp);
@@ -296,7 +296,7 @@ inline float cosh(float _X) restrict(amp);
  인수의 하이퍼볼릭 코사인 값을 반환합니다.  
   
 ##  <a name="exp"></a>  exp  
- 밑이 e 인 인수의 지 수를 계산합니다.  
+ 밑이 e 인 인수를 계산합니다.  
   
 ```  
 inline float exp(float _X) restrict(amp);
@@ -310,7 +310,7 @@ inline float exp(float _X) restrict(amp);
  인수의 밑이 e인 지수 값을 반환합니다.  
   
 ##  <a name="exp2"></a>exp2  
- 밑이&2; 인 인수의 지 수를 계산합니다.  
+ 밑이 2 인 지 수의 인수를 계산합니다.  
   
 ```  
 inline float exp2(float _X) restrict(amp);
@@ -321,10 +321,10 @@ inline float exp2(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수의 밑이&2;인 지수 값을 반환합니다.  
+ 인수의 밑이 2인 지수 값을 반환합니다.  
   
 ##  <a name="exp2f"></a>exp2f  
- 밑이&2; 인 인수의 지 수를 계산합니다.  
+ 밑이 2 인 지 수의 인수를 계산합니다.  
   
 ```  
 inline float exp2f(float _X) restrict(amp);
@@ -335,10 +335,10 @@ inline float exp2f(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수의 밑이&2;인 지수 값을 반환합니다.  
+ 인수의 밑이 2인 지수 값을 반환합니다.  
   
 ##  <a name="expf"></a>expf  
- 밑이 e 인 인수의 지 수를 계산합니다.  
+ 밑이 e 인 인수를 계산합니다.  
   
 ```  
 inline float expf(float _X) restrict(amp);
@@ -408,7 +408,7 @@ inline float floorf(float _X) restrict(amp);
  인수의 밑을 반환합니다.  
   
 ##  <a name="fmax"></a>fmax  
- 인수의 최대 숫자 값 결정  
+ 인수의 최대 숫자 값을 결정  
   
 ```  
 inline float max(
@@ -427,7 +427,7 @@ inline float max(
  인수의 최대 숫자 값을 반환 합니다.  
   
 ##  <a name="fmaxf"></a>fmaxf  
- 인수의 최대 숫자 값 결정  
+ 인수의 최대 숫자 값을 결정  
   
 ```  
 inline float fmaxf(
@@ -446,7 +446,7 @@ inline float fmaxf(
  인수의 최대 숫자 값을 반환 합니다.  
   
 ##  <a name="fmin"></a>fmin  
- 인수의 최소 숫자 값 결정  
+ 인수의 숫자의 최소값 결정  
   
 ```  
 inline float min(
@@ -462,10 +462,10 @@ inline float min(
  정수 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수의 최소 숫자 값을 반환 합니다.  
+ 인수 중 최소 숫자 값을 반환 합니다.  
   
 ##  <a name="fminf"></a>fminf  
- 인수의 최소 숫자 값 결정  
+ 인수의 숫자의 최소값 결정  
   
 ```  
 inline float fminf(
@@ -481,7 +481,7 @@ inline float fminf(
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수의 최소 숫자 값을 반환 합니다.  
+ 인수 중 최소 숫자 값을 반환 합니다.  
   
 ##  <a name="fmod"></a>fmod  
  _X/_Y의 부동 소수점 나머지 계산  
@@ -571,10 +571,10 @@ inline int isfinite(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수가 유한인 값인 경우에만&0;이 아닌 값을 반환합니다.  
+ 인수가 유한인 값인 경우에만 0이 아닌 값을 반환합니다.  
   
 ##  <a name="isinf"></a>isinf  
- 인수가 무한대 인지 결정 합니다.  
+ 인수가 무한대 인지를 결정 합니다.  
   
 ```  
 inline int isinf(float _X) restrict(amp);
@@ -585,10 +585,10 @@ inline int isinf(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수가 무한대 값인 경우에&0;이 아닌 값을 반환합니다.  
+ 인수가 무한대 값인 경우에 0이 아닌 값을 반환합니다.  
   
 ##  <a name="isnan"></a>isnan  
- 인수가 NaN 인지 결정 합니다.  
+ 인수가 NaN 인지 확인 합니다.  
   
 ```  
 inline int isnan(float _X) restrict(amp);
@@ -599,10 +599,10 @@ inline int isnan(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수가 NaN 값을 갖는 경우에만&0;이 아닌 값을 반환합니다.  
+ 인수가 NaN 값을 갖는 경우에만 0이 아닌 값을 반환합니다.  
   
 ##  <a name="ldexp"></a>ldexp  
- 가 수 및 지 수에서 숫자는 실수를 계산합니다.  
+ 가 수 및 지 수에서 실수를 계산합니다.  
   
 ```  
 inline float ldexp(
@@ -621,7 +621,7 @@ inline float ldexp(
  _X를 반환 합니다 * 2 ^ _Exp  
   
 ##  <a name="ldexpf"></a>ldexpf  
- 가 수 및 지 수에서 숫자는 실수를 계산합니다.  
+ 가 수 및 지 수에서 실수를 계산합니다.  
   
 ```  
 inline float ldexpf(
@@ -640,7 +640,7 @@ inline float ldexpf(
  _X를 반환 합니다 * 2 ^ _Exp  
   
 ##  <a name="log"></a>  log  
- 인수의 밑이 e 인 로그 계산  
+ 인수의 밑이 e 인 지 수 로그를 계산합니다.  
   
 ```  
 inline float log(float _X) restrict(amp);
@@ -654,7 +654,7 @@ inline float log(float _X) restrict(amp);
  인수의 밑이 e인 로그 값을 반환합니다.  
   
 ##  <a name="log10"></a>  log10  
- 인수의 밑이&10; 인 로그 계산  
+ 인수의 밑이 10 인 로그 계산  
   
 ```  
 inline float log10(float _X) restrict(amp);
@@ -665,10 +665,10 @@ inline float log10(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수의 밑이&10;인 로그 값을 반환합니다.  
+ 인수의 밑이 10인 로그 값을 반환합니다.  
   
 ##  <a name="log10f"></a>log10f  
- 인수의 밑이&10; 인 로그 계산  
+ 인수의 밑이 10 인 로그 계산  
   
 ```  
 inline float log10f(float _X) restrict(amp);
@@ -679,10 +679,10 @@ inline float log10f(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수의 밑이&10;인 로그 값을 반환합니다.  
+ 인수의 밑이 10인 로그 값을 반환합니다.  
   
 ##  <a name="log2"></a>log2  
- 인수의 밑이&2; 인 로그 계산  
+ 인수의 밑이 2 인 로그 계산  
   
 ```  
 inline float log2(float _X) restrict(amp);
@@ -693,10 +693,10 @@ inline float log2(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수의 밑이&2; 인 로그 값을 반환  
+ 인수의 밑이 2 인 로그 값을 반환  
   
 ##  <a name="log2f"></a>log2f  
- 인수의 밑이&2; 인 로그 계산  
+ 인수의 밑이 2 인 로그 계산  
   
 ```  
 inline float log2f(float _X) restrict(amp);
@@ -707,10 +707,10 @@ inline float log2f(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- 인수의 밑이&10;인 로그 값을 반환합니다.  
+ 인수의 밑이 10인 로그 값을 반환합니다.  
   
 ##  <a name="logf"></a>logf  
- 인수의 밑이 e 인 로그 계산  
+ 인수의 밑이 e 인 지 수 로그를 계산합니다.  
   
 ```  
 inline float logf(float _X) restrict(amp);
@@ -724,7 +724,7 @@ inline float logf(float _X) restrict(amp);
  인수의 밑이 e인 로그 값을 반환합니다.  
   
 ##  <a name="modf"></a>modf  
- 정수 부분과 소수 부분에 _X 분할합니다.  
+ 정수 부분과 소수 부분에 _X를 분할합니다.  
   
 ```  
 inline float modf(
@@ -742,7 +742,7 @@ inline float modf(
  _X의 부호 있는 소수 부분을 반환합니다.  
   
 ##  <a name="modff"></a>modff  
- 정수 부분과 소수 부분에 _X 분할합니다.  
+ 정수 부분과 소수 부분에 _X를 분할합니다.  
   
 ```  
 inline float modff(
@@ -760,7 +760,7 @@ inline float modff(
  _X의 부호 있는 소수 부분을 반환합니다.  
   
 ##  <a name="pow"></a>  pow  
- _X _y 거듭제곱을 계산 합니다.  
+ _X _Y 거듭제곱을 계산 합니다.  
   
 ```  
 inline float pow(
@@ -779,7 +779,7 @@ inline float pow(
  _Y 거듭제곱을 _X의 값을 반환  
   
 ##  <a name="powf"></a>powf  
- _X _y 거듭제곱을 계산 합니다.  
+ _X _Y 거듭제곱을 계산 합니다.  
   
 ```  
 inline float powf(
@@ -864,7 +864,7 @@ inline int signbit(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- _X의 부호가 음수인 경우에만&0;이 아닌 값을 반환합니다.  
+ _X의 부호가 음수인 경우에만 0이 아닌 값을 반환합니다.  
   
 ##  <a name="signbitf"></a>signbitf  
  _X의 부호가 음수인지 결정합니다.  
@@ -878,7 +878,7 @@ inline int signbitf(float _X) restrict(amp);
  부동 소수점 값  
   
 ### <a name="return-value"></a>반환 값  
- _X의 부호가 음수인 경우에만&0;이 아닌 값을 반환합니다.  
+ _X의 부호가 음수인 경우에만 0이 아닌 값을 반환합니다.  
   
 ##  <a name="sin"></a>  sin  
  인수의 사인 값을 계산합니다.  
@@ -909,7 +909,7 @@ inline float sinf(float _X) restrict(amp);
  인수의 사인 값을 반환합니다.  
   
 ##  <a name="sincos"></a>sincos  
- _X의 사인 및 코사인 값을 계산합니다.  
+ _X의 사인 값 및 코사인 값을 계산  
   
 ```  
 inline void sincos(
@@ -929,7 +929,7 @@ inline void sincos(
  _X의 코사인 값을 반환합니다.  
   
 ##  <a name="sincosf"></a>sincosf  
- _X의 사인 및 코사인 값을 계산합니다.  
+ _X의 사인 값 및 코사인 값을 계산  
   
 ```  
 inline void sincosf(
@@ -1005,7 +1005,7 @@ inline float sqrtf(float _X) restrict(amp);
  인수의 제곱근을 반환합니다.  
   
 ##  <a name="tan"></a>  tan  
- 인수의 탄젠트 값을 계산합니다.  
+ 인수의 탄젠트 값을 계산  
   
 ```  
 inline float tan(float _X) restrict(amp);
@@ -1019,7 +1019,7 @@ inline float tan(float _X) restrict(amp);
  인수의 탄젠트 값을 반환합니다.  
   
 ##  <a name="tanf"></a>tanf  
- 인수의 탄젠트 값을 계산합니다.  
+ 인수의 탄젠트 값을 계산  
   
 ```  
 inline float tanf(float _X) restrict(amp);
@@ -1093,4 +1093,3 @@ inline float truncf(float _X) restrict(amp);
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::fast_math 네임스페이스](concurrency-fast-math-namespace.md)
-

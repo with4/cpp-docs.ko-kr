@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 20ad99729f526cd9cb5f1e4e6c239272341462e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9772b2a4b27521c7aa256f9ee7760a4687152b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c1-notation"></a>C.1 표기법
 문법 규칙은 비 단말에 대 한 이름으로 구성 별도 줄에 대체 대안 뒤에 오는 콜론, 옵니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dedc859a140b99d76b98a5109f9fdc56c1c1f90c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e05f4e0f4431ac9911f98c10540b7aa03a3f486
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare 클래스(&lt;map&gt;)
 키 값 비교를 통해 맵의 요소를 비교하여 map 내의 상대 순서를 확인할 수 있는 함수 개체를 제공합니다.  
@@ -46,7 +47,7 @@ protected:
   
  키 값이 요소 값과 동일한 단순 컨테이너인 sets 및 multisets의 경우 `value_compare`는 `key_compare`와 동일합니다. 반면 maps 및 multimaps의 경우에는 `pair` 형식 요소의 값이 요소 키의 값과 동일하지 않으므로 value_compare가 key_compare와 동일하지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   `value_compare`를 선언하고 사용하는 방법의 예제는 [value_comp](../standard-library/map-class.md#value_comp)의 예제를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  

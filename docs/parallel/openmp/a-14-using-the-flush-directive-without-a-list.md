@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb948476b52cdf76e0a114bed5c95f46bb6ba86e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2a88558de3c04f1ae05922b1ad5bc7f63aed996
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.14   목록이 없는 flush 지시문 사용
 다음 예제에서는 (에 대 한 [섹션 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) 페이지 20) 영향을 받는 공유 개체를 구별는 `flush` 영향을 받지 않는 공유 개체와에서 목록이 없는 지시문:  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="code"></a>코드  
   

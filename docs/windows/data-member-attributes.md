@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 167b6f8e522c7f1c64143da6305f1e275dae334a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 954a0448f160ba6d19eb4f48d44b0b7e0a718f17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-member-attributes"></a>데이터 멤버 특성
 다음 특성은 클래스, coclass 등 또는 인터페이스의 데이터 멤버에 적용 합니다.  
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/24/2017
 |[db_table](../windows/db-table.md)|OLE DB 테이블을 엽니다.|  
 |[defaultbind](../windows/defaultbind.md)|개체에 가장 잘 나타내는 단일, 바인딩 가능 속성을 나타냅니다.|  
 |[displaybind](../windows/displaybind.md)|바인딩 가능한 사용자에 게 표시 되어야 하는 속성을 나타냅니다.|  
-|[id](../windows/id.md)|멤버 함수 (속성 또는 메서드를 인터페이스 또는 dispinterface)에 대 한 DISPID를 지정합니다.|  
+|[ID](../windows/id.md)|멤버 함수 (속성 또는 메서드를 인터페이스 또는 dispinterface)에 대 한 DISPID를 지정합니다.|  
 |[범위](../windows/range-cpp.md)|형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.|  
 |[rdx](../windows/rdx.md)|레지스트리 키를 만들거나 기존 레지스트리 키를 수정 합니다.|  
 |[readonly](../windows/readonly-cpp.md)|데이터 멤버에 대한 할당을 금지합니다.|  

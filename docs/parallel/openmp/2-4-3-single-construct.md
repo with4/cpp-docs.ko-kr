@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3efb6c833227140440d327ea47906f8239769689
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72dc551986f149bda668c438ac5f51d01d530c51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="243-single-construct"></a>2.4.3 single 구문
 **단일** 지시문 (반드시 마스터 스레드) 팀에 한 스레드에서만 관련된 구조화 된 블록 실행 되도록 지정 하는 구조를 식별 합니다. 구문은 **단일** 지시문은 다음과 같습니다.  

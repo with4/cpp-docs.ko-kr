@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d931c1309d583b8904afa403130411e495e0408
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 259b9d0799e46bba6ea2290ba6b02fe3f35e6e74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>방법: 리소스 스크립트 파일에 MFC 지원 추가
 사용 하 여 Windows 용 MFC 응용 프로그램을 빌드할 때 일반적으로 [MFC 응용 프로그램 마법사](../mfc/reference/mfc-application-wizard.md), Microsoft Foundation의 핵심 기능을 포함 하는 기본 파일 (리소스 스크립트 (.rc) 파일 포함) 집합을 생성 하는 마법사 클래스 (MFC)입니다. 그러나 MFC를 기반으로 하지 않는 Windows 응용 프로그램용 .rc 파일을 편집하는 경우에는 MFC 프레임워크와 관련된 다음 기능을 사용할 수 없습니다.  
@@ -54,7 +57,7 @@ ms.lasthandoff: 10/24/2017
   
 
   
- **Requirements**  
+ **요구 사항**  
   
  MFC  
   

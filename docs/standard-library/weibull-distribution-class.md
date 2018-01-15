@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::weibull_distribution::param_type::b
 - random/std::weibull_distribution::param_type::operator==
 - random/std::weibull_distribution::param_type::operator!=
-- random/std::weibull_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::weibull_distribution [C++]
 - std::weibull_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e08b64c18a44083f1af0fd899f71409c69473981
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 87677d884a80c2cc2038f759c31a725299e523f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution 클래스
 와이불 분포를 생성합니다.  
@@ -81,7 +78,7 @@ class weibull_distribution
 ```   
 #### <a name="parameters"></a>매개 변수  
 *RealType*  
-부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
 와이블 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 부동 소수점 형식 또는 아무것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
@@ -103,9 +100,9 @@ class weibull_distribution
   
 분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-와이블 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [와이블 분포](http://go.microsoft.com/fwlink/LinkId=401115)를 참조하세요.  
+와이블 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [와이블 분포](http://go.microsoft.com/fwlink/p/?linkid=401115)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -275,7 +272,6 @@ struct param_type {
   
 ## <a name="see-also"></a>참고 항목  
  [\<random>](../standard-library/random.md)
-
 
 
 

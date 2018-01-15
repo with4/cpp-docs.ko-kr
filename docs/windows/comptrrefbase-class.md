@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c010b85095da67a91c0b4c1df6f3da7a4f677dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 071598c83086afe12e1d19ef541dbfb3d0dbc55a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 클래스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -57,7 +60,7 @@ class ComPtrRefBase;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[ComPtrRefBase::ptr_ 데이터 멤버](../windows/comptrrefbase-ptr-data-member.md)|현재 템플릿 매개 변수에 의해 지정 된 형식에 대 한 포인터입니다.|  
   

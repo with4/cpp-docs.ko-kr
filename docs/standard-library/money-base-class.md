@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocmon/std::money_base
-dev_langs:
-- C++
-helpviewer_keywords:
-- money_base class
+f1_keywords: xlocmon/std::money_base
+dev_langs: C++
+helpviewer_keywords: money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9b3243807c407fa4deeb30b8f35aa6f7acb13707
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b9c41737288a4d323057b42f809dcbf4a3f2ff2c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneybase-class"></a>money_base 클래스
 이 클래스는 템플릿 클래스 [moneypunct](../standard-library/moneypunct-class.md)의 모든 특수화에 공통적인 열거형과 구조체를 설명합니다.  
@@ -56,7 +52,6 @@ struct pattern
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

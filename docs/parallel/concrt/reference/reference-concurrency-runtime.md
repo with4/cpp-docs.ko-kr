@@ -1,11 +1,10 @@
 ---
-title: "참조 (동시성 런타임) | Microsoft 문서"
+title: "참조 (동시성 런타임) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -454,48 +453,32 @@ f1_keywords:
 - concrt/Concurrency::details::_Timer::_Stop
 - concrt/Concurrency::details::_TaskCollectionBase::_M_pParent
 - agents/Concurrency::_Network_link_iterator::operator->
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - DWORD typedef
 - HANDLE typedef
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 88de4e73c29e222009a4ca90b3b22c4701b21e70
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 33d88b6f187e80635bcc1f63077f674d6adbb74a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-concurrency-runtime"></a>참조(동시성 런타임)
 이 섹션에는 동시성 런타임에 대 한 참조 정보가 포함 되어 있습니다.
-**참고** c + + 언어 표준 라이브러리와 같은 구현을 위해 밑줄 (_) 문자로 시작 하는 식별자의 사용이 예약 되어 있습니다. 코드에서는 이러한 이름을 사용하지 마세요. 해당 이름이 이 규칙을 따르는 코드 요소의 동작은 보장되지 않으며 이후 릴리스에서 변경될 수 있습니다. 이러한 이유로, 이러한 코드 요소는 동시성 런타임 설명서에서 생략 됩니다.
+**참고** c + + 언어 표준 라이브러리와 같은 구현을 위해 밑줄 (_) 문자로 시작 하는 식별자의 사용이 예약 되어 있습니다. 코드에서는 이러한 이름을 사용하지 마세요. 해당 이름이 이 규칙을 따르는 코드 요소의 동작은 보장되지 않으며 이후 릴리스에서 변경될 수 있습니다. 이러한 이유로, 등의 코드 요소는 동시성 런타임 설명서에서 생략 됩니다.
 
-## <a name="in-this-section"></a>단원 내용
-[동시성 Namespace](concurrency-namespace.md) 동시성 네임 스페이스 클래스를 제공 하 고 제공 하는 함수를 c + + 용 동시 프로그래밍 프레임 워크인 동시성 런타임에 액세스 합니다. 자세한 내용은 [동시성 런타임](../concurrency-runtime.md)을 참조하세요.
+## <a name="in-this-section"></a>섹션 내용
+[동시성 Namespace](concurrency-namespace.md) 함수를 제공 하는 c + + 용 동시 프로그래밍 프레임 워크인 동시성 런타임에 액세스와 동시성 네임 스페이스 클래스를 제공 합니다. 자세한 내용은 [동시성 런타임](../concurrency-runtime.md)을 참조하세요.
 
 [std 네임 스페이스](std-namespace.md)
 [stdx 네임 스페이스](stdx-namespace.md)
-
 
 

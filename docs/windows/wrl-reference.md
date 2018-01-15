@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ae60f200b9c90c30879370329220d039d7eb03c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7bb80775b6da51c3b70597ce9ad6297cc3021df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wrl-reference"></a>WRL 참조
 이 섹션에는 Windows 런타임 c + + 템플릿 라이브러리 (WRL)에 대 한 참조 정보가 포함 되어 있습니다.  
@@ -25,7 +28,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  Windows 런타임 c + + 템플릿 라이브러리는 Windows 런타임 c + + 템플릿 라이브러리 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없도록 하는 기능을 정의 합니다. 이러한 기능은이 설명서에 기록 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Microsoft::WRL 네임스페이스](../windows/microsoft-wrl-namespace.md)  
  Windows 런타임 c + + 템플릿 라이브러리를 구성 하는 기본 형식을 정의 합니다.  
   

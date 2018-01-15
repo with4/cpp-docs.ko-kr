@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8cc4b94534845901a900a8c0ecff1d89c6bb600
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20b68338dd15eaea0d74af9299da5ce8657f65f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safe-libraries-c-standard-library"></a>안전한 라이브러리: C++ 표준 라이브러리
 C++ 표준 라이브러리를 포함하여 보안을 강화하기 위해 Visual C++와 함께 제공되는 라이브러리의 여러 가지 기능이 향상되었습니다.  
@@ -48,7 +49,7 @@ C++ 표준 라이브러리를 포함하여 보안을 강화하기 위해 Visual 
   
  [Checked Iterators](../standard-library/checked-iterators.md)  
   
- [디버그 반복기 지원](../standard-library/debug-iterator-support.md)  
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)

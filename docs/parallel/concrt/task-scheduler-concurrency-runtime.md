@@ -27,11 +27,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 692f02f6ad2d7486c8460d3dae42500f165f60b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>작업 Scheduler(동시성 런타임)
 설명서의 이 부분의 항목에서는 동시성 런타임 작업 Scheduler의 중요한 기능에 대해 설명합니다. 작업 스케줄러는 동시성 런타임을 사용하는 기존 코드의 성능을 미세 조정하려는 경우에 유용합니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
  작업 Scheduler는 런타임에 작업을 예약하고 조정합니다. A *작업* 특정 작업을 수행 하는 작업의 단위입니다. 작업은 일반적으로 다른 작업과 병렬로 실행될 수 있습니다. 작업 그룹 항목, 병렬 알고리즘 및 비동기 에이전트에서 수행하는 작업이 모두 작업의 예입니다.  
   
- 작업 스케줄러는 여러 컴퓨팅 리소스가 있는 컴퓨터에서 효율적인 작업 예약과 관련된 세부 정보를 관리합니다. 또한 작업 스케줄러는 기본 운영 체제의 최신 기능을 사용합니다. 따라서 동시성 런타임을 사용하는 응용 프로그램은 확장된 기능이 있는 하드웨어에서 자동으로 크기가 조정되고 향상됩니다.  
+ 작업 Scheduler는 여러 컴퓨팅 리소스가 있는 컴퓨터에서 효율적인 작업 예약과 관련된 세부 정보를 관리합니다. 또한 작업 Scheduler는 기본 운영 체제의 최신 기능을 사용합니다. 따라서 동시성 런타임을 사용하는 응용 프로그램은 확장된 기능이 있는 하드웨어에서 자동으로 크기가 조정되고 향상됩니다.  
   
  [기타 동시성 모델과 비교](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) 우선 및 협조적 일정 예약 메커니즘 간의 차이점을 설명 합니다. 작업 Scheduler는 협조적 일정 및 작업 가로채기 알고리즘을 운영 체제의 우선 Scheduler와 함께 사용하여 처리 리소스의 사용량을 최대화합니다.  
   

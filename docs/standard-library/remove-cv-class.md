@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0049a7d71c99e4073a6e045060f92aed6a41cc6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 335d3d5cc2efef9a0a3f3e2642988dc44c3aa067
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="removecv-class"></a>remove_cv 클래스
 형식에서 비 const/휘발성 형식을 만듭니다.  
@@ -43,7 +44,7 @@ using remove_cv_t = typename remove_cv<T>::type;
 ## <a name="remarks"></a>설명  
  `remove_cv<T>`의 인스턴스는 `T1`가 `T`, `const T1` 또는 `volatile T1` 형식인 경우 수정된 형식인 `const volatile T1`을 보관하며, 그렇지 않은 경우 `T`를 보관합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 #include <type_traits>   

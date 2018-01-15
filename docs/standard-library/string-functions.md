@@ -37,11 +37,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 5f6b8c5da1b8d848d751a8ce2189b864538f4cfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b1d77b464ea9e9ab4ca6e9511836c490c1c622a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; functions
 ||||  
@@ -119,7 +120,7 @@ basic_istream<Allocator, Traits>& getline(
   
  예외가 throw되어도 `is` 및 `str`은 유효한 상태로 유지됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 코드에서는 `getline()`을 두 가지 모드에서 보여 줍니다. 첫 번째 모드에서는 기본 구분 기호(줄 바꿈 문자)를 사용하고 두 번째 모드에서는 공백을 구분 기호로 사용합니다. 파일의 끝 문자(키보드에서 CTRL+Z를 누름)를 사용하여 while 루프 종료를 제어합니다. 그러면 `cin`의 내부 상태 플래그가 `eofbit`로 설정되며, [basic_ios::clear()](../standard-library/basic-ios-class.md#clear)를 사용하여 이 상태를 해제해야 두 번째 while 루프가 정상적으로 작동합니다.  
   
 ```cpp  
@@ -408,7 +409,7 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 ### <a name="remarks"></a>설명  
  특수 멤버 함수를 실행 하는 템플릿 함수 *왼쪽*.[ 스왑](../standard-library/basic-string-class.md#swap)(*오른쪽*) 문자열에 대해 고정적 복잡성 보장 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // string_swap.cpp  

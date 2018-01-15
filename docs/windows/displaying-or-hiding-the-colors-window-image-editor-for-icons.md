@@ -1,50 +1,53 @@
 ---
-title: "색상 창 표시 또는 숨기기(아이콘에 대한 이미지 편집기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "색, 색 창"
-  - "색 창, 색 숨기기"
-  - "색 창 표시 명령"
-  - "색 창, 색 표시"
+title: "색상 창 (아이콘에 대 한 이미지 편집기) 표시 또는 숨기기 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- colors, Colors window
+- Colors window, hiding colors
+- Show Colors Window command
+- Colors window, displaying colors
 ms.assetid: 43ba728d-2b69-47a1-a23a-94f82d88a26d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0b6093bc10cb3ce1a94c27a14e03d4cdc44510ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 색상 창 표시 또는 숨기기(아이콘에 대한 이미지 편집기)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 색상 창을 표시하려면  
+# <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>색상 창 표시 또는 숨기기(아이콘에 대한 이미지 편집기)
+### <a name="to-display-colors-window"></a>색상 창 표시 하려면  
   
-1.  **이미지 편집기** 창을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **색상 창 표시**를 선택합니다.  
+1.  마우스 오른쪽 단추로 클릭 한 **이미지 편집기** 창 선택 **색상 창 표시** 바로 가기 메뉴에서.  
   
-     \-또는\-  
+     \- 또는 -  
   
-2.  [이미지 메뉴](../mfc/image-menu-image-editor-for-icons.md)에서 **색상 창 표시**를 클릭합니다.  
+2.  클릭 **색상 창 표시** 에 [이미지 메뉴](../windows/image-menu-image-editor-for-icons.md)합니다.  
   
-### 색상 창을 숨기려면  
+### <a name="to-hide-the-colors-window"></a>색 창을 숨기려면  
   
-1.  창 고정을 해제합니다.  그러면 창이 사용되지 않을 때 자동으로 숨겨집니다.  자세한 내용은 [창 정렬](../misc/how-to-arrange-and-dock-windows.md)을 참조하십시오.  
+1.  창 고정을 해제 합니다. 이렇게 하면 자동 숨기기 창을 사용 중에서이 아닌 경우.  
   
- \-또는\-  
+ \- 또는 -  
   
--   **닫기** 단추를 클릭합니다.  
+-   클릭는 **닫기** 단추입니다.  
   
  요구 사항  
   
  없음  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [색상 창](../windows/colors-window-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+ [아이콘에 대한 이미지 편집기](../windows/image-editor-for-icons.md)

@@ -1,59 +1,59 @@
 ---
-title: "2.7.1 threadprivate Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.1 threadprivate 지시문 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 08e0b70f-5359-4607-b0ca-38c2d570d7b3
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 22bb7f477be397f01ee4bd82f472ff26a26ce811
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.1 threadprivate Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`threadprivate` 지시문을 사용 하면 명명 된 파일 범위, 네임 스페이스 범위, 또는 지정 된 정적 블록 범위 변수는  *변수 목록* 스레드를 개인.  *변수 목록* 형식 없는 변수가 쉼표로 구분 된 목록입니다.  구문에는 `threadprivate` 지시문은 다음과 같습니다:  
+# <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 지시문
+`threadprivate` 명명 된 파일 범위, 네임 스페이스 범위 또는 블록 범위의 정적 변수에 지정 된 지시문을 사용 하면는 *변수 목록* 스레드에 한정 합니다. *변수 목록* 불완전 한 형식을 갖지 않는 변수의 쉼표로 구분 된 목록입니다. 구문은 `threadprivate` 지시문은 다음과 같습니다.  
   
 ```  
 #pragma omp threadprivate(variable-list) new-line  
 ```  
   
- 각 복사본은 `threadprivate` 변수 초기화는 한 번 프로그램 이전에 첫 번째 참조가 해당 복사본에 대 한 일반적인 방법으로 알 수 없는 지점 \(즉, 마스터 복사본에서 직렬 실행 프로그램의 초기화 되었습니다 대로\).  개체의 명시적 이니셜라이저에 참조 되는 경우는 `threadprivate` 변수 및 개체의 값을 수정할 첫 번째 참조 변수를 복사본을 하기 전에 다음 동작이 지정 되지 않습니다.  
+ 각 복사본은 `threadprivate` 변수가 초기화 됩니다 한 번 해당 복사본에 대 한 첫 번째 참조 이전 버전의 프로그램에는 일반적인 방법으로 지정 되지 않은 시점 (즉, 프로그램의 직렬 실행에 마스터 복사본을 초기화할 수는). 경우에 개체의 명시적 initializer에서 참조 되는 `threadprivate` 변수와 개체의 값은 변수 복사본에 대 한 첫 번째 참조 하기 전에 수정 되 다음 동작이 지정 되지 않습니다.  
   
- 모든 개인 변수를 스레드가 다른 스레드의 복사본을 참조 하지 않아야 하는 것은 `threadprivate` 개체입니다.  직렬 영역 및 프로그램의 마스터 영역 중 마스터 스레드 개체의 복사본으로 참조 됩니다.  
+ 모든 개인 변수와 스레드의 다른 스레드 복사본 참조 하지 않아야 하는 대로 `threadprivate` 개체입니다. 직렬 영역 및 프로그램의 마스터 지역 중 참조 된 개체의 마스터 스레드에 복사본을 됩니다.  
   
- 첫 번째 병렬 영역을 실행 하면, 데이터는 `threadprivate` 면 동적 메커니즘 사용 안 함 및 스레드 병렬 모든 지역에 대해 변경 되지 않습니다 경우 되었습니다만 유지 하는 데 반드시 개체.  
+ 첫 번째 병렬 영역을 실행 한 후의 데이터는 `threadprivate` 개체 동적 메커니즘 스레드 경우 비활성화 된 모든 병렬 영역에 대 한 변경 되지 않은 상태로 유지 되는 스레드 수 및 지 속성이 보장 됩니다.  
   
- 제한에는 `threadprivate` 지시어는 다음과 같습니다.  
+ 시의 제한 된 `threadprivate` 지시문은 다음과 같습니다.  
   
--   A `threadprivate` 지시문 파일 범위 또는 네임 스페이스 범위 변수에 대 한 정의 또는 선언에서 외부 표시 되어야 하며 어휘 목록에 모든 참조 하는 변수 앞에 있어야 합니다.  
+-   A `threadprivate` 파일 범위 또는 네임 스페이스 범위 변수에 대 한 지시문 정의 또는 선언 외부에 나타나야 하 고 앞에 변수 중 하나에 대 한 모든 참조의 목록에 어휘 적으로 야 합니다.  
   
--   각 변수에  *변수 목록* 의 `threadprivate` 지시문 파일 또는 네임 스페이스 범위에서 변수 선언을 구문적으로 지시문 앞에 파일 또는 네임 스페이스 범위를 참조 해야 합니다.  
+-   각 변수에 *변수 목록* 의 `threadprivate` 어휘 적으로 지시문 앞에 있는 파일이 나 네임 스페이스 범위에서 변수 선언이 지시문 파일이 나 네임 스페이스 범위에서 참조 해야 합니다.  
   
--   A `threadprivate` 범위 변수 및 중첩 된 범위에 있지 않은 지시문 블록 범위 정적 변수에 대 한 나타나야 합니다.  지시문의 목록에 모든 참조 하는 변수를 구문적으로 보다 빨라야 합니다.  
+-   A `threadprivate` 중첩 된 범위 아니라 변수의 범위에 정적 블록 범위 변수에 대 한 지시문이 나타나야 합니다. 지시문의 목록에 변수 중 하나에 대 한 모든 참조 앞에 어휘 적으로 해야 합니다.  
   
--   각 변수에  *변수 목록* 의 한 `threadprivate` 지시문 블록 범위에서 변수 선언을 구문적으로 지시문 앞에 동일한 범위를 참조 해야 합니다.  변수 선언에서 정적 저장소 클래스 지정자를 사용 해야 합니다.  
+-   각 변수에 *변수 목록* 의 `threadprivate` 어휘 적으로 지시문 앞에 있는 동일한 범위에서 변수 선언 지시문 블록 범위에서 참조 해야 합니다. 변수 선언에 정적 저장소 클래스 지정자를 사용 해야 합니다.  
   
--   변수에 지정 된 경우는 `threadprivate` 지시문에서 하나의 번역 단위에서 지정 해야는 `threadprivate` 지시문에서 선언 된 각 번역 단위입니다.  
+-   변수에서 지정 되 면 한 `threadprivate` 번역 단위에 지시문을 지정 해야에 `threadprivate` 선언 된 각 변환 단위에서 지시문입니다.  
   
--   A `threadprivate` 변수를 제외 하 고는 절에 나타나야 합니다는 `copyin`, `copyprivate`, `schedule`, `num_threads`, 나는  **경우** 절.  
+-   A `threadprivate` 변수를 제외 하 고 모든 절에 나타나지 않아야는 `copyin`, `copyprivate`, `schedule`, `num_threads`, 또는 **경우** 절.  
   
 -   주소는 `threadprivate` 변수 주소 상수가 아닙니다.  
   
--   A `threadprivate` 형식 또는 참조 형식 변수가 있어야지 않습니다.  
+-   A `threadprivate` 불완전 한 형식 또는 참조 형식 변수에 있어야 합니다.  
   
--   A `threadprivate` 포드 클래스 형식의 변수에 명시적 이니셜라이저를 선언 하는 경우 액세스할 수 있는, 분명 복사 생성자에 있어야 합니다.  
+-   A `threadprivate` 명시적 이니셜라이저와 함께 선언 되는 경우 비 POD 클래스 형식의 변수에 액세스 가능 하며 명확한 복사 생성자가 있어야 합니다.  
   
- 다음 예제에서는 변수 이니셜라이저에 나타납니다 수정 지정 하지 않은 동작이 발생할 수 있습니다 어떻게 및 보조 개체와 복사 생성자를 사용 하 여이 문제를 방지 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 또한 방법을 이니셜라이저에 표시 되는 변수를 수정 하면 지정 되지 않은 동작이 보조 개체 및 복사 생성자를 사용 하 여이 문제를 방지 하는 방법을 보여 줍니다.  
   
 ```  
 int x = 1;  
@@ -75,8 +75,8 @@ void f(int n) {
 }  
 ```  
   
-## 상호 참조:  
+## <a name="cross-references"></a>교차 참조:  
   
--   동적 스레드를 참조 하십시오.  [섹션 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 39 페이지에 있습니다.  
+-   동적 스레드 참조 [섹션 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 39 페이지.  
   
--   `OMP_DYNAMIC`환경 변수를 참조 하십시오  [단원 4.3](../../parallel/openmp/4-3-omp-dynamic.md) 49 페이지입니다.
+-   `OMP_DYNAMIC`환경 변수를 참조 [섹션 4.3](../../parallel/openmp/4-3-omp-dynamic.md) 페이지 49에 있습니다.

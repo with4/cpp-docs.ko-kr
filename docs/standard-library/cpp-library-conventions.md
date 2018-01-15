@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67848252bf875303c8120c9d4935e0135f705489
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0699e589340081d5dd13e8ab879094445005e327
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-library-conventions"></a>C++ 라이브러리 규칙
 C++ 라이브러리는 표준 C 라이브러리와 동일한 규칙 외에도 여기에 설명된 몇 가지 추가 규칙도 적절히 준수합니다.  

@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 842562478ab3734b3dd6c0b02475a09b1a331e69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de9db1c9ebf6e95670a36f44c9233458badd74c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isintegral-class"></a>is_integral 클래스
 형식이 정수 계열인지 테스트합니다.  
@@ -42,7 +43,7 @@ struct is_integral;
   
  정수 계열 형식은 `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` 및 `unsigned long` 중 하나입니다. 또한 제공하는 컴파일러를 사용할 경우 정수 계열 형식은 `long long`, `unsigned long long`, `__int64` 및 `unsigned __int64` 중 하나일 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // std__type_traits__is_integral.cpp   

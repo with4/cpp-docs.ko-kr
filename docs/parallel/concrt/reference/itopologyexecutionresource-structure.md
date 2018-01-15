@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ffe0e2d8f4c26274a71082bec2cecaf19acb1af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: caf2cc77cd31df611f71d07c5a0a49f600767f81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 구조체
 리소스 관리자에 의해 정의된 실행 리소스에 대한 인터페이스입니다.  

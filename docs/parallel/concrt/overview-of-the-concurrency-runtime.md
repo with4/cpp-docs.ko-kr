@@ -18,17 +18,18 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 022d4576127d068ea31a215de1adbb6edffb2d75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>동시성 런타임 개요
 이 문서에서는 동시성 런타임에 대한 개요를 제공합니다. 또한 동시성 런타임의 이점, 사용할 시기, 구성 요소가 서로 상호 작용하는 방식과 운영 체제 및 응용 프로그램과 상호 작용하는 방식에 대해 설명합니다.  
   
 > [!IMPORTANT]
->  Visual Studio 2015 이상에서는 동시성 런타임 작업 스케줄러가 더 이상 ppltasks.h에 있는 작업 클래스 및 관련 형식에 대한 스케줄러가 아닙니다. 이제 이러한 형식에서는 성능 향상 및 Windows 동기화 기본 형식과의 상호 운용성을 위해 Windows 스레드 풀을 사용합니다. Parallel_for와 같은 병렬 알고리즘에서는 동시성 런타임 작업 Scheduler를 계속 사용합니다.  
+>  Visual Studio 2015 이상에서는 동시성 런타임 작업 Scheduler가 더 이상 ppltasks.h에 있는 작업 클래스 및 관련 형식에 대한 Scheduler가 아닙니다. 이제 이러한 형식에서는 성능 향상 및 Windows 동기화 기본 형식과의 상호 운용성을 위해 Windows 스레드 풀을 사용합니다. Parallel_for와 같은 병렬 알고리즘에서는 동시성 런타임 작업 Scheduler를 계속 사용합니다.  
   
 ##  <a name="top"></a> 섹션  
  이 문서는 다음 섹션으로 구성됩니다.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 10/24/2017
  에이전트 라이브러리에 대 한 자세한 내용은 참조 [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md)합니다.  
   
 ### <a name="task-scheduler"></a>작업 Scheduler  
- 작업 스케줄러는 런타임에 작업을 예약하고 조정합니다. 작업 스케줄러는 협조적이며 작업 가로채기 알고리즘을 사용하여 처리 리소스의 최대 사용량을 달성합니다.  
+ 작업 Scheduler는 런타임에 작업을 예약하고 조정합니다. 작업 Scheduler는 협조적이며 작업 가로채기 알고리즘을 사용하여 처리 리소스의 최대 사용량을 달성합니다.  
   
  동시성 런타임은 기본 스케줄러를 제공하므로 인프라 세부 정보를 관리할 필요가 없습니다. 그러나 응용 프로그램의 품질 요구 사항을 충족하려면 고유한 일정 예약 정책을 제공하거나 특정 스케줄러를 특정 작업에 연결할 수도 있습니다.  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 10/24/2017
 |---------------|------------------|  
 |PPL(병렬 패턴 라이브러리)|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|  
 |비동기 에이전트 라이브러리|agents.h|  
-|작업 스케줄러|concrt.h|  
+|작업 Scheduler|concrt.h|  
 |리소스 관리자|concrtrm.h|  
   
  동시성 런타임은에서 선언 되는 [동시성](../../parallel/concrt/reference/concurrency-namespace.md) 네임 스페이스입니다. (사용할 수 있습니다 [동시성](../../parallel/concrt/reference/concurrency-namespace.md),이 네임 스페이스에 대 한 별칭인.) `concurrency::details` 네임스페이스는 동시성 런타임 프레임워크를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  

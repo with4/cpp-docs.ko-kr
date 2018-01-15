@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47355ea2c7db35b32c69e91bf8445efe7671ccce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>accelerator 및 accelerator_view 개체 사용
 사용할 수는 [가속기](../../parallel/amp/reference/accelerator-class.md) 및 [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) 장치 또는 에뮬레이터에서 c + + AMP 코드를 실행할 지정 하는 클래스입니다. 여러 장치 또는 에뮬레이터 크기 메모리, 공유 메모리 지원을, 디버깅 지원 또는 이중 정밀도 지원의 차이로 인해를 시스템에 있을 수 있습니다. C + + Accelerated Massive Parallelism (c + + AMP) 사용할 수 있는 액셀러레이터를 검사, 기본으로 설정 하 고, 여러 텍스처가 액셀러레이터 보기에 대 한 여러 호출 parallel_for_each, 지정 하 고 특수 디버깅 작업을 수행 하는 데 사용할 수 있는 Api를 제공 합니다.  
@@ -175,10 +176,10 @@ bool pick_accelerator()
   
 - [accelerator:: direct3d_warp 데이터 멤버](reference/accelerator-class.md#direct3d_warp):이 액셀러레이터 SSE 스트리밍 SIMD 확장명 ()를 사용 하는 다중 코어 Cpu에서 c + + AMP 실행에 대 한 대체 (fallback) 솔루션을 제공 합니다.  
   
-- [accelerator:: cpu_accelerator 데이터 멤버](reference/accelerator-class.md#cpu_accelerator): 배열 준비를 설정 하기 위한이 액셀러레이터를 사용할 수 있습니다. C + + AMP 코드를 실행할 수 없습니다. 자세한 내용은 참조는 [c + + AMP의 준비 배열](http://go.microsoft.com/fwlink/p/LinkId=248485) 블로그 네이티브 코드의에서 병렬 프로그래밍에 게시 합니다.  
+- [accelerator:: cpu_accelerator 데이터 멤버](reference/accelerator-class.md#cpu_accelerator): 배열 준비를 설정 하기 위한이 액셀러레이터를 사용할 수 있습니다. C + + AMP 코드를 실행할 수 없습니다. 자세한 내용은 참조는 [c + + AMP의 준비 배열](http://go.microsoft.com/fwlink/p/?linkId=248485) 블로그 네이티브 코드의에서 병렬 프로그래밍에 게시 합니다.  
   
 ## <a name="interoperability"></a>상호 운용성  
- C + + AMP 런타임 간의 상호 운용성을 지원할는 `accelerator_view` 클래스와는 Direct3D [ID3D11Device 인터페이스](http://go.microsoft.com/fwlink/p/LinkId=248488)합니다. [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) 메서드는 `IUnknown` 인터페이스와 반환 된 `accelerator_view` 개체입니다. [get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439) 메서드는 `accelerator_view` 개체 및 반환 된 `IUknown` 인터페이스입니다.  
+ C + + AMP 런타임 간의 상호 운용성을 지원할는 `accelerator_view` 클래스와는 Direct3D [ID3D11Device 인터페이스](http://go.microsoft.com/fwlink/p/?linkId=248488)합니다. [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) 메서드는 `IUnknown` 인터페이스와 반환 된 `accelerator_view` 개체입니다. [get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439) 메서드는 `accelerator_view` 개체 및 반환 된 `IUknown` 인터페이스입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   

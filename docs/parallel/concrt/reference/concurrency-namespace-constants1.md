@@ -1,5 +1,5 @@
 ---
-title: "동시성 네임 스페이스 상수의 | Microsoft 문서"
+title: "동시성 네임 스페이스 상수의 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,18 +19,18 @@ f1_keywords:
 - concrt/concurrency::ResourceManagerEventGuid
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 807579ee48ec543a050d9e96bf0672fc91b1f2f5
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ae7ceb640e7b92829e4134350a6e6c97747bfd77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-constants"></a>동시성 네임 스페이스 상수
 ||||  
@@ -123,7 +123,7 @@ const __declspec(selectany) GUID LockEventGuid =
     { 0x79A60DC6, 0x5FC8, 0x4952, { 0xA4, 0x1C, 0x11, 0x63, 0xAE, 0xEC, 0x5E, 0xB8 } };
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 범주의 이벤트는 현재 동시성 런타임에서 발생 되지 않습니다.  
   
 ##  <a name="maxexecutionresources"></a>MaxExecutionResources  
@@ -176,7 +176,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
     { 0xE8A3BF1F, 0xA86B, 0x4390, { 0x9C, 0x60, 0x53, 0x90, 0xB9, 0x69, 0xD2, 0x2C } };
 ```  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>설명  
  이 범주의 이벤트는 현재 동시성 런타임에서 발생 되지 않습니다.  
   
 ##  <a name="schedulereventguid"></a>SchedulerEventGuid  
@@ -197,4 +197,3 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
   
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)
-

@@ -13,11 +13,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a37b20af7ee9ef43c64fc0df24b47a380000eb6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 런타임 C++ 템플릿 라이브러리(WRL)
 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 만들고 Windows 런타임 구성 요소를 사용 하기 위한 간단한 방법을 제공 하는 템플릿 라이브러리입니다.  
@@ -115,7 +118,7 @@ Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 만들고 Windows 런
 ### <a name="runtimeclass"></a>RuntimeClass  
  [RuntimeClass](../windows/runtimeclass-class.md) 일련의 지정 된 인터페이스를 상속 하는 인스턴스화된 클래스를 나타냅니다. A `RuntimeClass` 개체가 하나 이상의 Windows 런타임 COM 인터페이스 또는 구성 요소에 대 한 약한 참조에 대 한 지원의 조합을 제공할 수 있습니다.  
   
-### <a name="module"></a>모듈  
+### <a name="module"></a>Module  
  [모듈](../windows/module-class.md) 관련된 개체의 컬렉션을 나타냅니다. `Module` 개체는 개체를 생성하는 클래스 팩터리와, 다른 응용 프로그램이 개체를 사용할 수 있도록 하는 등록을 관리합니다.  
   
 ### <a name="callback"></a>Callback  
@@ -142,5 +145,5 @@ Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 만들고 Windows 런
 |[클래스 라이브러리 프로젝트 템플릿](../windows/wrl-class-library-project-template.md)|WRL 클래스 라이브러리 프로젝트 템플릿에 액세스하는 방법을 설명합니다. 이 서식 파일을 사용 하면 Visual Studio를 사용 하 여 Windows 런타임 구성 요소를 만드는 작업을 간소화할 수 있습니다.|  
 |[범주별 키 Api](../windows/key-wrl-apis-by-category.md)|기본 Windows 런타임 c + + 템플릿 라이브러리 형식, 함수 및 매크로 강조 표시합니다.|  
 |[참조](../windows/wrl-reference.md)|Windows 런타임 c + + 템플릿 라이브러리에 대 한 참조 정보를 포함합니다.|  
-|[빠른 참조 (Windows 런타임 및 Visual c + +)](http://go.microsoft.com/fwlink/?LinkId=229180)|간략하게 설명 하는 C + + /cli CX 기능에는 Windows 런타임에서 지원 합니다.|  
-|[Visual c + +에서 Windows 런타임 구성 요소를 사용 하 여](http://go.microsoft.com/fwlink/?LinkId=229155)|에서는 사용 하 여 C + + /CX 기본적인 Windows 런타임 구성 요소를 합니다.|
+|[빠른 참조 (Windows 런타임 및 Visual c + +)](http://go.microsoft.com/fwlink/p/?linkid=229180)|간략하게 설명 하는 C + + /cli CX 기능에는 Windows 런타임에서 지원 합니다.|  
+|[Visual c + +에서 Windows 런타임 구성 요소를 사용 하 여](http://go.microsoft.com/fwlink/p/?linkid=229155)|에서는 사용 하 여 C + + /CX 기본적인 Windows 런타임 구성 요소를 합니다.|

@@ -1,11 +1,10 @@
 ---
-title: "float_2 클래스 | Microsoft 문서"
+title: "float_2 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,36 +33,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::set_y
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4bc5d2138d3ec8e9a0b173d2a60847e92bb8a3b9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3c963d55bd87dc84d48f8aafedbd6ba8cfa54d3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="float2-class"></a>float_2 클래스
-두 부동 소수점의 short 벡터를 나타냅니다.  
+두 개의 부동 소수점의 short 벡터를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,7 +67,7 @@ class float_2;
   
 |이름|설명|  
 |----------|-----------------|  
-|[float_2 생성자](#ctor)|오버로드됨. 기본 생성자를 0부터 모든 요소를 초기화 합니다.|  
+|[float_2 생성자](#ctor)|오버로드됨. 기본 생성자, 0 인 모든 요소를 초기화 합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -144,7 +128,7 @@ class float_2;
   
 ##  <a name="ctor"></a>float_2 
 
- 기본 생성자를 0부터 모든 요소를 초기화 합니다.  
+ 기본 생성자, 0 인 모든 요소를 초기화 합니다.  
   
 ```  
 float_2() restrict(amp,
@@ -194,10 +178,10 @@ explicit inline float_2(
   
 ### <a name="parameters"></a>매개 변수  
  `_V0`  
- 0 요소를 초기화할 값입니다.  
+ 값 초기화 요소 0입니다.  
   
  `_V1`  
- 1 요소를 초기화할 값입니다.  
+ 1 요소를 초기화 값입니다.  
   
  `_V`  
  초기화에 대 한 값입니다.  
@@ -213,4 +197,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
-

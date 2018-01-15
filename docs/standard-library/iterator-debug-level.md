@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14939c7c39d207e686bcccf786dcabf93e809059
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08b69d4f3cf8f5065cbae2708dace20de3b1f63f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 `_ITERATOR_DEBUG_LEVEL` 매크로는 [확인된 반복기](../standard-library/checked-iterators.md) 및 [디버그 반복기 지원](../standard-library/debug-iterator-support.md)이 사용되는지 여부를 제어합니다. 이 매크로는 이전 `_SECURE_SCL` 및 `_HAS_ITERATOR_DEBUGGING` 매크로의 기능을 대체하고 결합합니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
   
 확인된 반복기에 대한 경고를 사용하지 않도록 설정하는 방법에 대한 자세한 내용은 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)을 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 `_ITERATOR_DEBUG_LEVEL` 매크로에 대한 값을 지정하려면 [/D](../build/reference/d-preprocessor-definitions.md) 컴파일러 옵션을 사용하여 명령줄에서 정의하거나, C++ 표준 라이브러리 헤더를 소스 파일에 포함하기 전에 `#define`을 사용하세요. 예를 들어 명령줄에서 *sample.cpp*를 디버그 모드에서 컴파일하고 디버그 반복기 지원을 사용하려면 `_ITERATOR_DEBUG_LEVEL` 매크로 정의를 지정할 수 있습니다.  
   

@@ -1,53 +1,53 @@
 ---
-title: "default (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default OpenMP clause"
-  - "defaults, OpenMP clause"
+title: "기본 (OpenMP) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: default
+dev_langs: C++
+helpviewer_keywords:
+- default OpenMP clause
+- defaults, OpenMP clause
 ms.assetid: 96055106-a8f0-40b3-8319-e412b6e07bf8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 25b1dd9eb2dcdd5a0a41992ed562ddd290014e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# default (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-병렬 영역에 unscoped 변수 동작을 지정합니다.  
+# <a name="default-openmp"></a>default (OpenMP)
+병렬 영역에서 범위가 지정 되지 않은 변수 동작을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 default(shared | none)  
 ```  
   
-## 설명  
- `shared`에 적용 된 경우는 `default` 절이 지정 되지 함께 지정 된 경우 병렬 영역에 있는 변수를 처리는 [shared](../../../parallel/openmp/reference/shared-openmp.md) 절.  `none`즉, 사용 범위는 병렬 영역에 사용 되는 모든 변수는 [private](../../../parallel/openmp/reference/private-openmp.md), [shared](../../../parallel/openmp/reference/shared-openmp.md), [reduction](../../../parallel/openmp/reference/reduction.md), [firstprivate](../../../parallel/openmp/reference/firstprivate.md), 또는 [lastprivate](../../../parallel/openmp/reference/lastprivate.md) 절 컴파일러 오류가 발생 합니다.  
+## <a name="remarks"></a>설명  
+ `shared`적용 되는 경우는 `default` 절을 지정 하지 않으면으로 지정 된 경우에 따라 병렬 영역에 있는 변수를 처리할 수 있음을 의미는 [공유](../../../parallel/openmp/reference/shared-openmp.md) 절. `none`즉 병렬 지역으로 범위가 한정 되지 않습니다에 사용 되는 모든 변수는 [개인](../../../parallel/openmp/reference/private-openmp.md), [공유](../../../parallel/openmp/reference/shared-openmp.md), [감소](../../../parallel/openmp/reference/reduction.md), [firstprivate](../../../parallel/openmp/reference/firstprivate.md), 또는 [lastprivate](../../../parallel/openmp/reference/lastprivate.md) 절 사용 하면 컴파일러 오류가 발생 합니다.  
   
- `default`다음 지시문에 적용 됩니다.  
+ `default`다음과 같은 지시문에 적용 됩니다.  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [섹션](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 자세한 내용은 [2.7.2.5 default](../../../parallel/openmp/2-7-2-5-default.md)를 참조하십시오.  
+ 자세한 내용은 참조 [2.7.2.5 기본](../../../parallel/openmp/2-7-2-5-default.md)합니다.  
   
-## 예제  
- 참조 하십시오 [private](../../../parallel/openmp/reference/private-openmp.md) 를 사용 하는 예에 대 한 `default`.  
+## <a name="example"></a>예  
+ 참조 [개인](../../../parallel/openmp/reference/private-openmp.md) 사용 하는 예제에 대 한 `default`합니다.  
   
-## 참고 항목  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+## <a name="see-also"></a>참고 항목  
+ [절](../../../parallel/openmp/reference/openmp-clauses.md)

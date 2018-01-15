@@ -18,20 +18,21 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 742d84300a7139e392bda19142643fe469231bdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e609c16d63974506a06d6ec553cf4be09509acb9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>UAC(사용자 계정 컨트롤)가 응용 프로그램에 주는 영향
 UAC(사용자 계정 컨트롤)는 사용자 계정의 권한을 제한하는 Windows Vista의 기능입니다. UAC에 대한 자세한 정보는 다음 사이트에서 찾아볼 수 있습니다.  
   
--   [Windows Vista 사용자 계정 컨트롤 단계별 가이드](http://go.microsoft.com/fwlink/?linkid=53781)  
+-   [Windows Vista 사용자 계정 컨트롤 단계별 가이드](http://go.microsoft.com/fwlink/p/?linkid=53781)  
   
--   [개발자 모범 사례 및 최소 권한 환경에서 응용 프로그램에 대 한 지침](http://go.microsoft.com/fwlink/?linkid=82444)  
+-   [개발자 모범 사례 및 최소 권한 환경에서 응용 프로그램에 대 한 지침](http://go.microsoft.com/fwlink/p/?linkid=82444)  
   
--   [이해 및 Windows Vista에서 사용자 계정 컨트롤 구성](http://go.microsoft.com/fwlink/?LinkId=82445)  
+-   [이해 및 Windows Vista에서 사용자 계정 컨트롤 구성](http://go.microsoft.com/fwlink/p/?linkid=82445)  
   
 ## <a name="building-projects-after-enabling-uac"></a>UAC를 사용하도록 설정한 후에 프로젝트 빌드  
  UAC를 사용하지 않는 Windows Vista에 Visual C++ 프로젝트를 빌드하고 나중에 UAC를 사용하도록 설정하는 경우에는 프로젝트를 지운 후에 다시 빌드해야 제대로 작동합니다.  

@@ -1,29 +1,30 @@
 ---
-title: "Module::GetActivationFactory 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GetActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetActivationFactory 메서드"
+title: "Module:: getactivationfactory 메서드 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GetActivationFactory
+dev_langs: C++
+helpviewer_keywords: GetActivationFactory method
 ms.assetid: 59da8844-072e-414b-b89c-1db1cc4fd81d
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5d5c5ca4d470f52ff9dde862cc99b10a3459cd0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Module::GetActivationFactory 메서드
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory 메서드
 모듈에 대한 활성화 팩터리를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -55,5 +56,4 @@ WRL_NOTHROW HRESULT GetActivationFactory(
  **네임스페이스:** Microsoft::WRL  
   
 ## <a name="see-also"></a>참고 항목  
-[모듈 클래스](../windows/module-class.md)
- [ActivatableClass 매크로](../windows/activatableclass-macros.md)
+[Module 클래스](../windows/module-class.md) [ActivatableClass 매크로](../windows/activatableclass-macros.md)

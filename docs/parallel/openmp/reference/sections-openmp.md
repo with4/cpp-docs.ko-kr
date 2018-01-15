@@ -1,33 +1,33 @@
 ---
-title: "sections (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "section"
-  - "SECTIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sections OpenMP directive"
+title: "섹션 (OpenMP) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- section
+- SECTIONS
+dev_langs: C++
+helpviewer_keywords: sections OpenMP directive
 ms.assetid: 4cd1d776-e198-470e-930a-01fb0ab0a0bd
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 458d62bf17ce7f8778e40a4e90592aa59ba09e4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# sections (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-모든 스레드 간에 나눌 수 있는 코드 섹션을 식별 합니다.  
+# <a name="sections-openmp"></a>sections (OpenMP)
+모든 스레드가에서 나눌 수 있는 코드 섹션을 식별 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 #pragma omp [parallel] sections [clauses]  
@@ -35,18 +35,18 @@ caps.handback.revision: 11
    #pragma omp section  
    {  
       code_block   
-   }   
+   }   
 }  
 ```  
   
-## 설명  
- 다음은 각 매개 변수에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 다음은 각 문자에 대한 설명입니다.  
   
- `clause`\(선택적 요소\)  
- 0 개 이상의 절입니다.  목록에 대 한 설명 부분에서 지원 절을 참조 하십시오.  **섹션**.  
+ `clause`(선택 사항)  
+ 0 개 이상의 절입니다. 지 원하는 절을 목록에 대 한 설명 섹션을 참조 **섹션**합니다.  
   
-## 설명  
- 해당  **섹션** 지시문에 0 개 이상 포함 될 수 있습니다  **섹션** 지시문입니다.  
+## <a name="remarks"></a>설명  
+ **섹션** 지시문에는 0 또는 그 이상 포함 될 수 있습니다 **섹션** 지시문입니다.  
   
  **섹션** 지시문 다음 OpenMP 절을 지원 합니다.  
   
@@ -60,11 +60,11 @@ caps.handback.revision: 11
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- 경우  **병렬** 도 지정 된 `clause` 어떤 절 여 받아들일 수 있는  **병렬** 또는  **섹션** 지시문을 제외 하 고 `nowait`.  
+ 경우 **병렬** 도 지정 `clause` 모든 절에 허용 될 수는 **병렬** 또는 **섹션** 지시문을 제외 하 고 `nowait`합니다.  
   
- 자세한 내용은 [2.4.2 sections Construct](../../../parallel/openmp/2-4-2-sections-construct.md)를 참조하십시오.  
+ 자세한 내용은 참조 [2.4.2 sections 구문](../../../parallel/openmp/2-4-2-sections-construct.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // omp_sections.cpp  
@@ -82,7 +82,10 @@ int main() {
 }  
 ```  
   
-  **안녕하세요 스레드 0에서**  
-**안녕하세요 스레드 0에서**   
-## 참고 항목  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+Hello from thread 0  
+Hello from thread 0  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [지시문](../../../parallel/openmp/reference/openmp-directives.md)

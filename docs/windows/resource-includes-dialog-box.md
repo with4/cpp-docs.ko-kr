@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be954451335deef88ad459b9de6b865ff45ed909
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 610e970ad84c6c89d91182b7a61bb759112fcd7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-includes-dialog-box"></a>리소스 내용 대화 상자
 사용할 수는 **리소스 내용** 작업 수정할 수는 환경의 일반 프로젝트의.rc 파일 및 모든 모든 리소스를 저장할 경우의 대화 상자 [기호](../windows/symbols-resource-identifiers.md) Resource.h에 있습니다.  

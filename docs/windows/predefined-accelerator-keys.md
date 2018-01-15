@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee7aed9bfcbc105892e647c5e59b45805120ba39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b04ab7fafba9f17aeba4f15f937972389467593c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="predefined-accelerator-keys"></a>사전 정의된 액셀러레이터 키
 Windows 응용 프로그램 프로젝트에 포함될 수 있는 미리 정의된 많은 액셀러레이터 키가 있습니다. 이러한 가상 키 중 일부는 Windows 환경을 위한 것입니다. 기타 키는 브라우저 또는 유니코드 응용 프로그램을 지원합니다. 모든 액셀러레이터에 이러한 키 중 하나를 사용할 수 있습니다.  

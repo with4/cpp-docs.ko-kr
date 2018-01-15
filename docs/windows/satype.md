@@ -1,32 +1,33 @@
 ---
-title: "satype | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.satype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "satype attribute"
+title: satype | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.satype
+dev_langs: C++
+helpviewer_keywords: satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d4e083cfd0ee1a72992d3c400c4790f5cd50396
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# satype
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-데이터 형식을 지정은  **SAFEARRAY** 구조체입니다.  
+# <a name="satype"></a>satype
+데이터 형식을 지정 된 **SAFEARRAY** 구조입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,28 +36,28 @@ caps.handback.revision: 13
 ) ]  
 ```  
   
-#### 매개 변수  
- *data\_type*  
- 데이터 형식에 대 한의  **SAFEARRAY** 인터페이스 메서드를 매개 변수로 전달 되는 데이터 구조입니다.  
+#### <a name="parameters"></a>매개 변수  
+ *data_type*  
+ 데이터 형식에 대 한는 **SAFEARRAY** 인터페이스 메서드에 매개 변수로 전달 되는 데이터 구조입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
 |**적용 대상**|인터페이스 매개 변수를 인터페이스 메서드|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|없음|  
+|**잘못된 특성**|없음|  
   
-## 설명  
- **Satype** C\+\+ 특성의 데이터 형식 지정은  **SAFEARRAY**.  
+## <a name="remarks"></a>설명  
+ **satype** c + + 특성의 데이터 형식을 지정 된 **SAFEARRAY**합니다.  
   
 > [!NOTE]
->  간접 참조 수준을 삭제 되는  **SAFEARRAY** 에서.cpp 파일에서 선언 된 생성 된.idl 파일에 대 한 포인터입니다.  
+>  간접 참조 수준을에서 삭제 되 고 **SAFEARRAY** 생성된 된.idl 파일에서.cpp 파일에서 선언 되는 방법에 대 한 포인터입니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // cpp_attr_ref_satype.cpp  
@@ -69,9 +70,8 @@ __interface A {
 };  
 ```  
   
-## 참고 항목  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [id](../windows/id.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [컴파일러 특성](../windows/compiler-attributes.md)   
+ [매개 변수 특성](../windows/parameter-attributes.md)   
+ [메서드 특성](../windows/method-attributes.md)   
+ [ID](../windows/id.md)   

@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <mutex>
-dev_langs:
-- C++
+f1_keywords: <mutex>
+dev_langs: C++
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9da491492437f5bf8ed245c84a33f44174ac44ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 78c6476712f17c5a730b54f7db1a87e187af3720
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 `mutex`, `recursive_mutex`, `timed_mutex`, `recursive_timed_mutex` 클래스, `lock_guard`, `unique_lock` 템플릿, 그리고 상호 배제 코드 영역을 정의하는 지원 형식과 함수를 정의하려면 표준 헤더 \<mutex>를 포함합니다.  
@@ -96,7 +93,6 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

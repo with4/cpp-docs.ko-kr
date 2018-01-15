@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97a6def651826ae71cecf33f751f8c0858c691dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ce2c846d844b79a6ff054bb6c209d1f4653a26d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>기호 &#39; 변경 s 숫자 값
 단일 리소스와 관련 된 기호를 사용할 수 있습니다는 [속성 창](/visualstudio/ide/reference/properties-window) 기호 값을 변경 합니다. 사용할 수는 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md) 리소스에 할당 되어 있지 않은 기호의 값을 변경 합니다. 자세한 내용은 참조 [할당 되지 않은 기호 변경](../windows/changing-unassigned-symbols.md)합니다.  

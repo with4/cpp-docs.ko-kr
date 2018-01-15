@@ -1,36 +1,34 @@
 ---
 title: "Charizing 연산자 (#@) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "#@"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "#@ 전처리 연산자"
-  - "charizing 연산자"
-  - "전처리기, 연산자"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '#@'
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor, operators
+- charizing operator
+- '#@ preprocessor operator'
 ms.assetid: dee03314-d27c-4063-965c-64756efbef22
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 933e97732462b61919d9e5a1e73f2a72d26ea01b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# Charizing 연산자 (#@)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="charizing-operator-"></a>Charizing 연산자 (#@)
 **Microsoft 전용**  
   
- charizing 연산자는 매크로의 인수에만 사용할 수 있습니다.  매크로 정의에서 **\#@**이 형식 매개 변수 앞에 오는 경우 실제 인수는 매크로가 확장될 때 작은따옴표로 묶이고 문자로 취급됩니다.  예를 들면 다음과 같습니다.  
+ charizing 연산자는 매크로의 인수에만 사용할 수 있습니다. 경우  **#@**  정식 매개 변수 앞에 오는 실제 인수 매크로 정의에서 단일 따옴표 안에 묶이고 문자로 취급 매크로 확장 합니다. 예:  
   
 ```  
 #define makechar(x)  #@x  
@@ -52,5 +50,5 @@ a = 'b';
   
  **Microsoft 전용 종료**  
   
-## 참고 항목  
- [전처리 연산자](../preprocessor/preprocessor-operators.md)
+## <a name="see-also"></a>참고 항목  
+ [전처리기 연산자](../preprocessor/preprocessor-operators.md)

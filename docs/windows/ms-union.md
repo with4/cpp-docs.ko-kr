@@ -1,32 +1,33 @@
 ---
-title: "ms_union | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ms_union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ms_union attribute"
+title: ms_union | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ms_union
+dev_langs: C++
+helpviewer_keywords: ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b187c23c60c7294170a66a819f78bebfd5e5f8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ms_union
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="msunion"></a>ms_union
 Nonencapsulated 공용 구조체의 네트워크 데이터 표현 맞춤을 제어합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,11 +35,11 @@ Nonencapsulated 공용 구조체의 네트워크 데이터 표현 맞춤을 제�
   
 ```  
   
-## 설명  
- **Ms\_union** C\+\+ 특성을 동일한 기능을가지고 있는  [ms\_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL 속성입니다.  
+## <a name="remarks"></a>설명  
+ **ms_union** c + + 특성에 동일한 기능을는 [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL 특성입니다.  
   
-## 예제  
- 다음 코드의 배치를 보여줍니다  **ms\_union**:  
+## <a name="example"></a>예  
+ 다음 코드의 배치를 보여 줍니다. **ms_union**:  
   
 ```  
 // cpp_attr_ref_ms_union.cpp  
@@ -63,20 +64,19 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
-### 컨텍스트 특성  
+### <a name="attribute-context"></a>특성 컨텍스트  
   
 |||  
 |-|-|  
 |**적용 대상**|Nonencapsulated 공용 구조체|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
-|**잘못 된 특성**|**dispinterface**|  
+|**잘못된 특성**|**dispinterface**|  
   
- 자세한 내용은  [컨텍스트 특성](../windows/attribute-contexts.md).  
+ 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## 참고 항목  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ko-kr/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>참고 항목  
+ [IDL 특성](../windows/idl-attributes.md)   
+ [Typedef, Enum, Union 및 Struct 특성](../windows/typedef-enum-union-and-struct-attributes.md)   

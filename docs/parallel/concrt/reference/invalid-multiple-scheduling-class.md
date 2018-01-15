@@ -1,46 +1,29 @@
 ---
-title: "invalid_multiple_scheduling 클래스 | Microsoft 문서"
+title: "invalid_multiple_scheduling 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_multiple_scheduling
 - CONCRT/concurrency::invalid_multiple_scheduling
 - CONCRT/concurrency::invalid_multiple_scheduling::invalid_multiple_scheduling
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_multiple_scheduling class
+dev_langs: C++
+helpviewer_keywords: invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 82f1046173ba1f2eebfc74e1121b01ba0ed46b04
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aa021ec655162cb75837ac1475e5cb9094f79fa8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling 클래스
 이 클래스는 `wait` 또는 `run_and_wait` 메서드에 대한 중간 호출 없이 `task_group` 또는 `structured_task_group` 개체의 `run` 메서드를 사용하여 `task_handle` 개체가 여러 번 예약하는 경우 발생하는 예외를 설명합니다.  
@@ -91,4 +74,3 @@ invalid_multiple_scheduling() throw();
  [대기](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group 클래스](structured-task-group-class.md)
-

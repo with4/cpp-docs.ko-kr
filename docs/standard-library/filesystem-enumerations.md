@@ -4,51 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- copy_options
-- filesystem::copy_options
 - filesystem/std::filesystem::copy_options
-- experimental::filesystem::copy_options
 - filesystem/std::experimental::filesystem::copy_options
-- directory_options
-- filesystem::directory_options
 - filesystem/std::filesystem::directory_options
-- experimental::filesystem::directory_options
 - filesystem/std::experimental::filesystem::directory_options
-- file_type
-- filesystem::file_type
 - filesystem/std::filesystem::file_type
-- experimental::filesystem::file_type
 - filesystem/std::experimental::filesystem::file_type
-- perms
-- filesystem::perms
 - filesystem/std::filesystem::perms
-- experimental::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f0bb076a2cfd8a97c2a3cfc5dc8f33e5390c27a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 열거형
 이 항목에서는 filesystem 헤더의 열거형을 설명합니다.
 
 ## <a name="requirements"></a>요구 사항  
- **헤더:** \<experimental/filesystem>  
-  
+ **헤더:** \<experimental/filesystem>    
  **네임스페이스:** std::experimental::filesystem  
 
 ##  <a name="copy_options"></a>  copy_options
@@ -105,7 +90,7 @@ enum class directory_options {
 |`follow_directory_symlink`|디렉터리에 대한 기호화된 링크를 실제 디렉터리로 처리합니다.|  
   
 ##  <a name="file_type"></a>  file_type
-파일 형식에 대한 열거형입니다. 지원되는 값은 regular와 directory, not_found 및 unknown입니다.  
+파일 형식에 대한 열거형입니다. 지원 되는 값은 일반, 디렉터리, not_found, 및 알 수 없음.  
   
 ### <a name="syntax"></a>구문  
 ```cpp  
@@ -172,5 +157,4 @@ enum class perms {// names for permissions
 ## <a name="see-also"></a>참고 항목  
  [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)
-
 

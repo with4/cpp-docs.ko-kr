@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6928fd3aa902b5ed0ab4e942950af76448e16e5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52170e08d3118b5eb0ef7bb1e34edbe29b3d38f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gslice-class"></a>gslice 클래스
 valarray의 다차원 하위 집합을 정의하는 데 사용되는 valarray에 대한 유틸리티 클래스입니다. valarray가 배열의 모든 요소를 포함하는 다차원 행렬로 간주되는 경우 조각은 다차원 배열에서 벡터를 추출합니다.  
@@ -94,7 +95,7 @@ gslice(
 ### <a name="remarks"></a>설명  
  **gslice**는 각각 동일한 지정된 요소에서 시작되는 valarray의 여러 조각으로 구성된 valarray 하위 집합을 정의합니다. 배열을 사용하여 여러 조각을 정의하는 기능은 `gslice`와 [slice::slice](../standard-library/slice-class.md#slice) 간의 유일한 차이점입니다. 첫 번째 조각에는 인덱스가 `_StartIndex`인 첫 번째 요소, `_LenArray`의 첫 번째 요소로 지정된 요소 수, `_IncArray`의 첫 번째 요소가 제공한 진행 속도가 있습니다. 직교 조각의 다음 set에는 첫 번째 조각이 제공한 첫 번째 요소가 있습니다. `_LenArray`의 두 번째 요소는 요소 수를 지정합니다. 진행 속도는 `_IncArray`의 두 번째 요소에서 제공됩니다. 조각의 세 번째 차원은 2차원 배열의 요소를 시작 요소로 사용하고 비슷하게 진행됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // gslice_ctor.cpp  
@@ -154,7 +155,7 @@ valarray<size_t> size() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 저장된 조각 길이를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // gslice_size.cpp  
@@ -226,7 +227,7 @@ size_t start() const;
 ### <a name="return-value"></a>반환 값  
  valarray의 일반 조각 시작 인덱스입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // gslice_start.cpp  
@@ -287,7 +288,7 @@ valarray<size_t> stride() const;
 ### <a name="return-value"></a>반환 값  
  valarray의 일반 조각 중 각 조각의 요소 간 거리를 지정하는 valarray입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // gslice_stride.cpp  

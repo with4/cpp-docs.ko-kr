@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7352f1d72778288067238158449023a197130870
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e11fade0bf5bf6f816f273250217be24c8bc87c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strstream-class"></a>strstream 클래스
 [strstreambuf](../standard-library/strstreambuf-class.md) 클래스의 스트림 버퍼를 사용한 요소 및 인코드된 개체 삽입 및 추출을 제어하는 개체를 설명합니다.  
@@ -78,7 +79,7 @@ void freeze(bool _Freezeit = true);
 ### <a name="remarks"></a>설명  
  구성원 함수는 [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*)를 호출합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **freeze**를 사용하는 예제는 [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze)를 참조하세요.  
   
 ##  <a name="pcount"></a>  strstream::pcount  
@@ -94,7 +95,7 @@ streamsize pcount() const;
 ### <a name="remarks"></a>설명  
  구성원 함수는 [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   pcount를 사용하는 샘플은 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)를 참조하세요.  
   
 ##  <a name="rdbuf"></a>  strstream::rdbuf  
@@ -110,7 +111,7 @@ strstreambuf *rdbuf() const
 ### <a name="remarks"></a>설명  
  구성원 함수는 **pointer** 형식의 저장된 스트림 버퍼 주소를 [strstreambuf](../standard-library/strstreambuf-class.md)에 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `rdbuf`를 사용하는 샘플은 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)를 참조하세요.  
   
 ##  <a name="str"></a>  strstream::str  
@@ -126,7 +127,7 @@ char *str();
 ### <a name="remarks"></a>설명  
  구성원 함수는 [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **str**을 사용하는 샘플은 [strstreambuf::str](../standard-library/strstreambuf-class.md#str)을 참조하세요.  
   
 ##  <a name="strstream"></a>  strstream::strstream  

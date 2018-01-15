@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e3fbc78792034c60c94972ca6b4ed63dfac01b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 데이터 공유 특성 절
 여러 지시문 절 영역의 기간에 대 한 변수 공유 특성을 제어 하는 사용자가 수락 합니다. 공유 특성 절 지시문 절은 표시 되는 어휘 범위 변수에 적용 됩니다. 다음 절 중 일부만 모든 지시문에서 허용 됩니다. 특정 지시문에서 사용할 수 있는 절 목록 지시문과 함께 설명 되어 있습니다.  

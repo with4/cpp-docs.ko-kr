@@ -29,11 +29,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 810f50a17dcdef3aac53462ac059a4aedd4343a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03c9d04786bcffc8fbf951fe125dc64d45e8c0d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator 클래스
 템플릿 클래스는 임의 액세스, 양방향 반복기 또는 역방향으로만 동작하는 역방향 반복기 개체에 대해 설명하는 반복기 어댑터입니다. 범위를 뒤로 이동할 수 있습니다.  
@@ -66,7 +67,7 @@ class reverse_iterator
 |-|-|  
 |[reverse_iterator](#reverse_iterator)|기본 반복기에서 기본 `reverse_iterator` 또는 `reverse_iterator`를 생성합니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -117,7 +118,7 @@ RandomIterator base() const;
   
  실제로, 역방향 시퀀스에서 `reverse_iterator`는 반복기가 원래 시퀀스에서 참조한 요소에서 하나 다음의(오른쪽으로) 요소를 참조함을 의미합니다. 따라서 반복기가 시퀀스(2, 4, 6, 8)에서 요소 6을 주소 지정한 경우 `reverse_iterator`는 역방향 시퀀스(8, 6, 4, 2)에서 요소 4를 주소 지정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_base.cpp  
@@ -178,7 +179,7 @@ typedef typename iterator_traits<RandomIterator>::difference_type  difference_ty
   
  형식은 반복기 특성 형식 이름 `iterator_traits`\< **RandomIterator**> **::pointer**와 동일한 의미입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `difference_type`을 선언하고 사용하는 방법의 예제는 [reverse_iterator::operator&#91;&#93;](#op_at)를 참조하세요.  
   
 ##  <a name="iterator_type"></a>  reverse_iterator::iterator_type  
@@ -191,7 +192,7 @@ typedef RandomIterator iterator_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 `Iterator`의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `iterator_type`을 선언하고 사용하는 방법의 예제는 [reverse_iterator::base](#base)를 참조하세요.  
   
 ##  <a name="op_star"></a>  reverse_iterator::operator*  
@@ -207,7 +208,7 @@ reference operator*() const;
 ### <a name="remarks"></a>설명  
  이 연산자를 반환 \*( **현재** -1).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_op_ref.cpp  
@@ -267,7 +268,7 @@ reverse_iterator<RandomIterator> operator+(difference_type Off) const;
 ### <a name="remarks"></a>설명  
  이 구성원 함수는 `reverse_iterator`가 임의 액세스 반복기에 대한 요구 사항을 충족하는 경우에만 사용할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_op_add.cpp  
@@ -336,7 +337,7 @@ reverse_iterator<RandomIterator> operator++(int);
 ### <a name="remarks"></a>설명  
  이 구성원 함수는 `reverse_iterator`가 양방향 반복기에 대한 요구 사항을 충족하는 경우에만 사용할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_op_incr.cpp  
@@ -406,7 +407,7 @@ reverse_iterator<RandomIterator>& operator+=(difference_type Off);
 ### <a name="return-value"></a>반환 값  
  `reverse_iterator`에서 주소를 지정한 요소에 대한 참조입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_op_addoff.cpp  
@@ -479,7 +480,7 @@ reverse_iterator<RandomIterator> operator-(difference_type Off) const;
 ### <a name="remarks"></a>설명  
  이 구성원 함수는 `reverse_iterator`가 임의 액세스 반복기에 대한 요구 사항을 충족하는 경우에만 사용할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_op_sub.cpp  
@@ -549,7 +550,7 @@ reverse_iterator<RandomIterator> operator--(int);
 ### <a name="remarks"></a>설명  
  이 구성원 함수는 `reverse_iterator`가 양방향 반복기에 대한 요구 사항을 충족하는 경우에만 사용할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_op_decr.cpp  
@@ -621,7 +622,7 @@ reverse_iterator<RandomIterator>& operator-=(difference_type Off);
   
  연산자가 **current** + _ *Off*를 평가합니다. 그런 다음 **\*this**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_op_suboff.cpp  
@@ -690,7 +691,7 @@ pointer operator->() const;
 ### <a name="remarks"></a>설명  
  이 연산자는 **&\*\*this**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_ptrto.cpp  
@@ -770,7 +771,7 @@ reference operator[](difference_type Off) const;
 ### <a name="remarks"></a>설명  
  이 연산자는 **\***( **\*this** + `Off`)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_ret_ref.cpp  
@@ -837,7 +838,7 @@ typedef typename iterator_traits<RandomIterator>::pointer pointer;
 ### <a name="remarks"></a>설명  
  형식은 반복기 특성 형식 이름 `iterator_traits`\< *RandomIterator*> **::pointer**와 동일한 의미입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_pointer.cpp  
@@ -907,7 +908,7 @@ typedef typename iterator_traits<RandomIterator>::reference reference;
 ### <a name="remarks"></a>설명  
  형식은 반복기 특성 형식 이름 `iterator_traits`\< *RandomIterator*> **::reference**와 동일한 의미입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **reference**를 선언하고 사용하는 방법의 예제는 [reverse_iterator::operator&#91;&#93;](#op_at) 또는 [reverse_iterator::operator*](#op_star)를 참조하세요.  
   
 ##  <a name="reverse_iterator"></a>  reverse_iterator::reverse_iterator  
@@ -935,7 +936,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
   
  실제로, 역방향 시퀀스에서 reverse_iterator는 반복기가 원래 시퀀스에서 참조한 요소에서 하나 다음의(오른쪽으로) 요소를 참조함을 의미합니다. 따라서 반복기가 시퀀스(2, 4, 6, 8)에서 요소 6을 주소 지정한 경우 `reverse_iterator`는 역방향 시퀀스(8, 6, 4, 2)에서 요소 4를 주소 지정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // reverse_iterator_reverse_iterator.cpp  

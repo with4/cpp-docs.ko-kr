@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 462247056f916178388ec233d7d0b9d3774bb11f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dce4b42d5e9ec05544ceb7e8c885ba93634579a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regexerror-class"></a>regex_error 클래스
 잘못된 basic_regex 개체를 보고합니다.  
@@ -58,7 +59,7 @@ regex_constants::error_code code() const;
 ### <a name="remarks"></a>설명  
  멤버 함수는 개체의 생성자에 전달된 값을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_error_code.cpp   
@@ -109,7 +110,7 @@ regex_error(regex_constants::error_code error);
 ### <a name="remarks"></a>설명  
  생성자는 `error`값을 보유하는 개체를 생성합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__regex__regex_error_construct.cpp   

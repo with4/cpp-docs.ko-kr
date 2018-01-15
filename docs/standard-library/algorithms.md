@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c660170872662a72a8f4f48b6d6ee81ed0d2b8d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="algorithms"></a>알고리즘
 알고리즘은 C++ 표준 라이브러리의 기본적인 부분입니다. 알고리즘은 컨테이너 자체가 아니라 반복기에서 작동합니다. 따라서 모두는 아니지만 대부분의 C++ 표준 라이브러리 컨테이너에서 동일한 알고리즘을 사용할 수 있습니다. 이 섹션에서는 C++ 표준 라이브러리 알고리즘의 규칙 및 용어를 설명합니다.  

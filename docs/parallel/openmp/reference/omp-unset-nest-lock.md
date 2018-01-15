@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: badb7518b7fa90b39e1fb4af0ee07b27087f5e8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cde62972a3f7cd2094f9a23d824e3f244a9968a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompunsetnestlock"></a>omp_unset_nest_lock
 중첩 잠금을 해제합니다.  
@@ -41,7 +42,7 @@ void omp_unset_nest_lock(
 ## <a name="remarks"></a>설명  
  자세한 내용은 참조 [3.2.4 omp_unset_lock and omp_unset_nest_lock 함수](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) 사용 하는 예제에 대 한 `omp_unset_nest_lock`합니다.  
   
 ## <a name="see-also"></a>참고 항목  

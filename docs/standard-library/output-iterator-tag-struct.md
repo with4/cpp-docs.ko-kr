@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3558e8169d2facdd7319635c852847e3dc77c7ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a45dd68f5788244c7d7f1ea72b22af5f96c1a0d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outputiteratortag-struct"></a>output_iterator_tag 구조체
 출력 반복기를 나타내는 **iterator_category** 함수에 반환 형식을 제공하는 클래스입니다.  
@@ -37,7 +38,7 @@ struct output_iterator_tag {};
   
  이 태그는 다른 반복기 태그처럼 반복기에 대해 `value_type` 또는 `difference_type`에서 매개 변수화되지 않습니다. 출력 반복기에는 `value_type` 또는 `difference_type`이 없기 때문입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **iterator_tag** 사용 방법에 대한 예제는 [iterator_traits](../standard-library/iterator-traits-struct.md) 또는 [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  

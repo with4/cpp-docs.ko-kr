@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a818bac1ab812fc92e87374db309ef60de6ad71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a0f26065a3e95513cf609f1b100de9b934165d5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="propput"></a>propput
 속성 설정 함수를 지정합니다.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  **propput** c + + 특성에 동일한 기능을는 [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) MIDL 특성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  예를 참조 [바인딩 가능한](../windows/bindable.md) 의 샘플 사용에 대 한 **propput**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -1,11 +1,10 @@
 ---
-title: "uint_2 클래스 | Microsoft 문서"
+title: "uint_2 클래스 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,37 +33,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60d3379da90611fe51b5ebb3bc6cdc2dbf4968d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uint2-class"></a>uint_2 클래스
-부호 없는 두 정수의 짧은 벡터를 나타냅니다.  
+두 개의 부호 없는 정수는 short 벡터를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -84,7 +67,7 @@ class uint_2;
   
 |이름|설명|  
 |----------|-----------------|  
-|[uint_2 생성자](#ctor)|오버로드됨. 기본 생성자를 0부터 모든 요소를 초기화 합니다.|  
+|[uint_2 생성자](#ctor)|오버로드됨. 기본 생성자, 0 인 모든 요소를 초기화 합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -109,15 +92,15 @@ class uint_2;
 |----------|-----------------|  
 |uint_2::operator-||  
 |uint_2::operator % =||  
-|uint_2::operator = / /||  
+|uint_2::operator & =||  
 |uint_2::operator * =||  
 |uint_2::operator / =||  
 |uint_2::operator ^ =||  
-|uint_2::operator | =||  
+|uint_2::operator &#124; =||  
 |uint_2::operator ~||  
 |uint_2::operator + +||  
 |uint_2::operator + =||  
-|uint_2::operator\<=||  
+|uint_2::operator <\<=||  
 |uint_2::operator =||  
 |-= uint_2::operator||  
 |uint_2::operator >> =||  
@@ -151,7 +134,7 @@ class uint_2;
   
 ##  <a name="ctor"></a>uint_2 
 
- 기본 생성자를 0부터 모든 요소를 초기화 합니다.  
+ 기본 생성자, 0 인 모든 요소를 초기화 합니다.  
   
 ```  
 uint_2() restrict(amp,
@@ -201,10 +184,10 @@ explicit inline uint_2(
   
 ### <a name="parameters"></a>매개 변수  
  `_V0`  
- 0 요소를 초기화할 값입니다.  
+ 값 초기화 요소 0입니다.  
   
  `_V1`  
- 1 요소를 초기화할 값입니다.  
+ 1 요소를 초기화 값입니다.  
   
  `_V`  
  초기화에 대 한 값입니다.  
@@ -220,4 +203,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>참고 항목  
  [Concurrency::graphics 네임스페이스](concurrency-graphics-namespace.md)
-

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dec5db670afd169093125f2830551aec85b61e35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25313cce5d032c4c3975fffbf8ca89b232031661
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-file-stream-member-functions"></a>Output File Stream Member 함수
 출력 스트림 구성원 함수에는 조작자와 동일한 형식, 서식 없는 쓰기 작업을 수행하는 형식 및 그 외의 스트림 상태를 수정하며 동일한 조작자 또는 삽입 연산자를 포함하지 않는 형식의 세 가지 형식이 있습니다. 서식 있는 순차적 출력을 생성하려는 경우 삽입 연산자 및 조작자만 사용할 수 있습니다. 임의 액세스 이진 디스크 출력의 경우에는 필요에 따라 삽입 연산자를 포함하여 다른 구성원 함수를 사용합니다.  

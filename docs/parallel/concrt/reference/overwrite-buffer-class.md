@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a9098f6f8f0374ad10396f30cf5aa636d9843d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f41348b77d65f3ade8016c9e23a31555db2d3612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer 클래스
 `overwrite_buffer` 메시징 블록은 한 번에 하나의 메시지를 저장할 수 있는, 순서가 지정된 다중 대상 다중 소스 `propagator_block`입니다. 새 메시지가 이전에 보유한 메시지를 덮어씁니다.  
@@ -66,7 +67,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |[has_value](#has_value)|확인 여부를이 `overwrite_buffer` 메시징 블록 값을 갖고 있습니다.|  
 |[value](#value)|에 저장 되는 메시지의 현재 페이로드에 대 한 참조는 `overwrite_buffer` 메시징 블록입니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  

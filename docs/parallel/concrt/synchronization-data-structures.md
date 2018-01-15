@@ -14,11 +14,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aee9abf10646df6395984607544755dcb0ed802a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synchronization-data-structures"></a>동기화 데이터 구조
 동시성 런타임은 여러 스레드에서 공유 데이터에 대 한 액세스를 동기화 할 수 있는 몇 가지 데이터 구조를 제공 합니다. 이러한 데이터 구조는 공유 데이터를 자주 수정 하는 경우에 유용 합니다. 예를 들어 임계 영역 개체를 동기화 하면 다른 스레드가 공유 리소스를 사용할 수 있는 될 때까지 기다립니다. 따라서 이러한 개체를 사용 하 여 자주 사용 되는 데이터에 대 한 액세스를 동기화 하는 경우 응용 프로그램에서 확장성을 잃을 수 있습니다. [라이브러리 PPL (병렬 패턴)](../../parallel/concrt/parallel-patterns-library-ppl.md) 제공는 [concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) 클래스를 통해 여러 개의 스레드 또는 동기화 할 필요가 없는 작업 사이에서 리소스를 공유할 수 있습니다. 에 대 한 자세한 내용은 `combinable` 클래스를 참조 하십시오. [병렬 컨테이너 및 개체](../../parallel/concrt/parallel-containers-and-objects.md)합니다.  
@@ -108,7 +109,7 @@ ms.lasthandoff: 10/24/2017
 |[wait_for_multiple](reference/event-class.md#wait_for_multiple)|여러 이벤트 신호를 받을 때까지 기다립니다.|  
 
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  사용 하는 방법을 보여 주는 예제는 `event` 클래스를 참조 하십시오. [동기화 데이터 구조는 Windows API와 비교](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)합니다.  
   
  [[맨 위로 이동](#top)]  

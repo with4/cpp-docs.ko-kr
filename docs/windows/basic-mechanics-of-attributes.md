@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebf81d5bfb20f151cc8f405fb8346b66451f77e2
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-mechanics-of-attributes"></a>특성의 기본 메커니즘
 프로젝트에 특성을 삽입 하는 방법은 세 가지가 있습니다. 첫째, 삽입할 수 있습니다 수동으로 소스 코드에 있습니다. 둘째, 프로젝트에서 개체의 속성 표를 사용 하 여 삽입할 수 있습니다. 마지막으로, 다양 한 마법사를 사용 하 여 삽입할 수 있습니다. 속성 창 및 다양 한 마법사 사용에 대 한 자세한 내용은 참조 하십시오. [만들기 및 Visual c + + 프로젝트 관리](../ide/creating-and-managing-visual-cpp-projects.md)합니다.  

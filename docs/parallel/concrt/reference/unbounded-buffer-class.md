@@ -30,11 +30,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5815e377dd685cbab285608441c39d9d99ac1726
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9834a3ee67d49651de703a54660767604e067b25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 `unbounded_buffer` 메시징 블록은 메시지를 개수에 제한 없이 저장할 수 있는, 순서가 지정된 다중 대상 다중 소스 `propagator_block`입니다.  
   
@@ -67,7 +68,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |[큐에서 제거](#dequeue)|항목을 제거는 `unbounded_buffer` 메시징 블록입니다.|  
 |[큐에 넣기](#enqueue)|항목을 추가 `unbounded_buffer` 메시징 블록입니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  

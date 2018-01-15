@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43eda0c6bd875b9fd82ee97d346e3f5d89584795
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d189395bbedff4d73cc690d454ddd07af4d109e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>비트맵을 도구 모음으로 변환
 새 도구 모음 비트맵을 변환 하 여 만들 수 있습니다. 비트맵의 그래픽 도구 모음에 대 한 단추 이미지를 변환합니다. 일반적으로 비트맵 각 단추에 대 한 이미지를 사용 하 여 하나의 비트맵에 여러 단추 이미지를 포함합니다. 이미지는 크기에 제한이; 있을 수 있습니다. 기본값이 16 픽셀 너비와 이미지의 높이입니다. 에 단추 이미지의 크기를 지정할 수 있습니다는 [새 도구 모음 리소스 대화 상자](../windows/new-toolbar-resource-dialog-box.md) 에서 도구 모음 편집기를 선택 하는 경우는 **이미지** 이미지 편집기 메뉴.  
@@ -41,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
  사용 하 여 새 도구 모음 단추의 명령 Id를 변경할 수도 있습니다는 [속성 창](/visualstudio/ide/reference/properties-window)합니다. 새 도구 모음 편집에 대 한 자세한 내용은 참조 하십시오. [만들기, 이동 및 편집 도구 모음 단추](../windows/creating-moving-and-editing-toolbar-buttons.md)합니다.  
   
- 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](https://msdn.microsoft.com/library/f45fce5x.aspx) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](https://msdn.microsoft.com/library/xbx3z216.aspx)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](https://msdn.microsoft.com/library/h6270d0z.aspx)합니다.  
+ 관리 되는 프로젝트에 리소스를 추가 정보를 참조 하십시오 [데스크톱 응용 프로그램의 리소스](/dotnet/framework/resources/index) 에 *.NET Framework 개발자 가이드입니다.* 수동으로 관리 되는 프로젝트에 리소스 파일을 추가, 리소스 액세스, 정적 리소스 표시 및 속성에 리소스 문자열 할당에 대 한 정보를 참조 하십시오. [데스크톱 앱에 대 한 리소스 파일 만들기](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)합니다. 전역화 및 지역화의 관리 되는 응용 프로그램의 리소스에 대 한 정보를 참조 하십시오. [전역화 및 지역화.NET Framework 응용 프로그램](/dotnet/standard/globalization-localization/index)합니다.  
   
  요구 사항  
   

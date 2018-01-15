@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7995991477ac2b83c0435db59f923e1406e92ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 835948ba76c7375d2a13bca1b524530bc9efe01e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 컨테이너 템플릿 클래스 forward_list 및 다양한 지원 템플릿을 정의합니다.  

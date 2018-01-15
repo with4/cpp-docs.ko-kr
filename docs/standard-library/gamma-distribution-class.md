@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::gamma_distribution::param_type::beta
 - random/std::gamma_distribution::param_type::operator==
 - random/std::gamma_distribution::param_type::operator!=
-- random/std::gamma_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::gamma_distribution [C++]
 - std::gamma_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cfbaa595c16f6ac3b58d92ff45b7b0335a985a8b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 048f1956d84837512a3273eeae089d6ffef00ced
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution 클래스
 감마 분포를 생성합니다.  
@@ -81,7 +78,7 @@ public:
 ```    
 #### <a name="parameters"></a>매개 변수  
 *RealType*  
-부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
 *URNG* 균일 난수 생성기 엔진입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
@@ -95,7 +92,7 @@ public:
   
 속성 함수 `alpha()` 및 `beta()`는 저장된 분포 매개 변수인 *alpha* 및 *beta* 각각에 대한 값을 반환합니다.  
   
-속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
+속성 구성원 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.  
 
 `min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.  
   
@@ -103,11 +100,11 @@ public:
   
 `operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
   
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
+분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-감마 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Gamma Distribution](http://go.microsoft.com/fwlink/LinkId=401111)(감마 분포)을 참조하세요.  
+감마 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [Gamma Distribution](http://go.microsoft.com/fwlink/p/?linkid=401111)(감마 분포)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -251,7 +248,6 @@ struct param_type {
   
 ## <a name="see-also"></a>참고 항목  
 [\<random>](../standard-library/random.md)
-
 
 
 

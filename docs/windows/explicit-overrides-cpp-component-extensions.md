@@ -14,11 +14,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 387141945882bf3c491c55a4a8ab8ab3804e876a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>명시적 재정의(C++ 구성 요소 확장명)
 이 항목에서는 기본 클래스 또는 인터페이스의 멤버를 명시적으로 재정의 하는 방법을 설명 합니다. 명명 된 명시적 재정의 다른 이름이 있는 파생 메서드로 메서드를 재정의 하만 사용 해야 합니다.  

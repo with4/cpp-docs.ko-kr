@@ -17,11 +17,14 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e821d68fac0467d48a2056e1818c3fd58963581
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event--c-component-extensions"></a>event(C++ 구성 요소 확장)
 `event` 키워드로 선언 된는 *이벤트*, 등록 된 구독자에 게 알리는 (*이벤트 처리기*) 특정 상황이 발생 합니다.  

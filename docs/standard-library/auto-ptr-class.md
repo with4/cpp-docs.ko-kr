@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7411a11a396627fb01d1dad1d47dc957ce968a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 960da86c5ae3efa0cb50077becfb526000f71b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autoptr-class"></a>auto_ptr 클래스
 제어가 블록을 나갈 때 리소스가 자동으로 제거되도록 리소스를 스마트 포인터로 래핑합니다.  
@@ -81,7 +82,7 @@ public:
 |-|-|  
 |[auto_ptr](#auto_ptr)|`auto_ptr` 형식의 개체에 대한 생성자입니다.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>형식 정의  
   
 |||  
 |-|-|  
@@ -138,7 +139,7 @@ auto _ptr(auto _ptr<Other>& right) throw();
   
  **Other**에 대한 포인터가 **Type**에 대한 포인터로 암시적으로 변환될 수 있는 경우, 템플릿 생성자는 두 번째 생성자와 동일하게 동작합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // auto_ptr_auto_ptr.cpp  
@@ -215,7 +216,7 @@ Type *get() const throw();
 ### <a name="return-value"></a>반환 값  
  저장된 포인터 **myptr**입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // auto_ptr_get.cpp  
@@ -282,7 +283,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 ### <a name="remarks"></a>설명  
  이 할당은 저장된 포인터 **myptr**이 할당의 결과로 변경되는 경우에만 **delete myptr** 식을 계산합니다. 그런 다음 _ *Right*에 저장된 포인터의 소유권을 전송하기 위해 \_ *Right*. [release](#release)를 **myptr**에 저장합니다. 함수는 **\*this**를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   멤버 연산자의 사용 예는 [auto_ptr::auto_ptr](#auto_ptr)을 참조하세요.  
   
 ##  <a name="op_star"></a>  auto_ptr::operator*  
@@ -298,7 +299,7 @@ Type& operator*() const throw();
 ### <a name="remarks"></a>설명  
  간접 참조 연산자는 `*`[get](#get)을 반환합니다. 따라서 저장된 포인터는 null이 아니어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   멤버 함수를 사용하는 방법의 예는 [auto_ptr::auto_ptr](#auto_ptr)을 참조하세요.  
   
 ##  <a name="auto_ptr__operator-_gt"></a>  auto_ptr::operator-&gt;  
@@ -314,7 +315,7 @@ Type * operator->() const throw();
 ### <a name="remarks"></a>설명  
  선택 연산자는 [get](#get)`( )`을 반환합니다. 따라서 *ap*-> **member** 식은 ( *ap*. **get**( ) )-> **member**와 동일하게 동작합니다. 여기서 *ap*는 `auto_ptr`\< **Type**> 클래스의 개체입니다. 따라서 저장된 포인터는 null이 아니어야 하며, **Type**은 클래스, 구조체 또는 **member** 멤버가 있는 공용 구조체 형식이어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   멤버 함수를 사용하는 방법의 예는 [auto_ptr::auto_ptr](#auto_ptr)을 참조하세요.  
   
 ##  <a name="op_auto_ptr_lt_other_gt"></a>  auto_ptr::operator auto_ptr&lt;Other&gt;  
@@ -328,7 +329,7 @@ operator auto _ptr<Other>() throw();
 ### <a name="return-value"></a>반환 값  
  형식 캐스팅 연산자는 `auto_ptr` \< **Other**>( **\*this**)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // auto_ptr_op_auto_ptr.cpp  
@@ -356,7 +357,7 @@ operator auto _ptr  _ref<Other>() throw();
 ### <a name="return-value"></a>반환 값  
  형식 캐스팅 연산자는 **auto_ptr_ref**\< **Other**>( **\*this**)를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // auto_ptr_op_auto_ptr_ref.cpp  
@@ -417,7 +418,7 @@ Type *release() throw();
 ### <a name="remarks"></a>설명  
  이 멤버는 저장된 포인터 **myptr**을 null 포인터로 대체하고 이전에 저장된 포인터를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // auto_ptr_release.cpp  
@@ -474,7 +475,7 @@ void reset(Type* ptr = 0);
  `ptr`  
  저장된 포인터 **myptr**을 바꾸도록 지정된 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // auto_ptr_reset.cpp  

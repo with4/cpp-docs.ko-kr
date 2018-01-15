@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15e4b6aca6d9f00806a37a04ffb7c93008125b6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8d4b52839675334ab343adf48790bdce390dd5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>비동기 에이전트 라이브러리의 모범 사례
 이 문서에서는 비동기 에이전트 라이브러리를 효과적으로 사용 하는 방법에 설명 합니다. 에이전트 라이브러리는 행위자 기반 프로그래밍 모델 및 정교 하지 않은 데이터 흐름에 대 한 전달 및 파이프라인 작업을 위해 in-process 메시지의 수준을 올립니다.  

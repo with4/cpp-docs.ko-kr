@@ -42,11 +42,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25def6932680b47e69fc9b16064f046319bb5023
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03876821780ec2f4e2258b9553e936bfdda13c17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sharedptr-class"></a>shared_ptr 클래스
 동적으로 할당된 개체 주위에 참조 횟수가 계산되는 스마트 포인터를 래핑합니다.  
@@ -176,7 +177,7 @@ typedef T element_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 `T`의 동의어입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_element_type.cpp   
@@ -210,7 +211,7 @@ T *get() const;
 ### <a name="remarks"></a>설명  
  구성원 함수는 소유하는 리소스의 주소를 반환합니다. 개체가 리소스를 소유하지 않는 경우에는 0을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_get.cpp   
@@ -247,7 +248,7 @@ operator boolean-type() const;
 ### <a name="remarks"></a>설명  
  연산자는 `bool`로 변환 가능한 형식의 값을 반환합니다. `bool`일 경우 `true`로 변환한 결과는 `get() != 0`입니다. 그렇지 않으면 `false`입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_operator_bool.cpp   
@@ -285,7 +286,7 @@ T& operator*() const;
 ### <a name="remarks"></a>설명  
  간접 연산자는 `*get()`을 반환합니다. 따라서 저장된 포인터는 null이 아니어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_operator_st.cpp   
@@ -340,7 +341,7 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 ### <a name="remarks"></a>설명  
  모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자 실행이 실패하면 `*this`는 변경되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_operator_as.cpp   
@@ -380,7 +381,7 @@ T * operator->() const;
 ### <a name="remarks"></a>설명  
  선택 연산자는 `get()`을 반환합니다. 따라서 `sp->member` 식은 `(sp.get())->member`와 동일하게 동작하며, 여기서 `sp`는 클래스 `shared_ptr<T>`의 개체입니다. 따라서 저장된 포인터는 null이 아니어야 하며, `T`는 클래스, 구조체 또는 `member` 구성원이 있는 공용 구조체 형식이어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_operator_ar.cpp   
@@ -462,7 +463,7 @@ void reset(Other *ptr, D dtor, A alloc);
 ### <a name="remarks"></a>설명  
  모든 연산자는 현재 `*this`가 소유한 리소스의 참조 수를 줄이고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다. 연산자 실행이 실패하면 `*this`는 변경되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_reset.cpp   
@@ -589,7 +590,7 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 ### <a name="remarks"></a>설명  
  각 생성자는 피연산자 시퀀스에 의해 이름이 지정되는 리소스를 소유하는 개체를 생성합니다. `shared_ptr(const weak_ptr<Other>& wp)` 생성자는 `wp.expired()`인 경우 [bad_weak_ptr 클래스](../standard-library/bad-weak-ptr-class.md) 형식의 예외 개체를 throw합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_construct.cpp   
@@ -652,7 +653,7 @@ int main()
 ### <a name="remarks"></a>설명  
  소멸자는 현재 `*this`가 소유한 리소스의 참조 수를 줄입니다. 참조 수가 0으로 감소하면 리소스가 해제됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_destroy.cpp   
@@ -710,7 +711,7 @@ void swap(shared_ptr& sp);
 ### <a name="remarks"></a>설명  
  구성원 함수는 원래 `*this`의 소유였다가 이후에 `sp`의 소유가 된 리소스 및 원래 `sp`의 소유였다가 이후에 `*this`의 소유가 된 리소스를 남겨 둡니다. 함수는 두 리소스의 참조 개수를 변경하지 않으며 예외도 throw하지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_swap.cpp   
@@ -774,7 +775,7 @@ bool unique() const;
 ### <a name="remarks"></a>설명  
  구성원 함수는 다른 `shared_ptr` 개체가 `*this`의 소유인 리소스를 소유하지 않는 경우 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_unique.cpp   
@@ -820,7 +821,7 @@ long use_count() const;
 ### <a name="remarks"></a>설명  
  구성원 함수는 `*this`의 소유인 리소스를 소유한 `shared_ptr` 개체의 수를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__memory__shared_ptr_use_count.cpp   

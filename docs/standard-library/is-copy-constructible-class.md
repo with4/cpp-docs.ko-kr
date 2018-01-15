@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6b5e3a6d40ff0f8ac000714606a1fbbd3c7d2a21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7637ee69712e38a762af7c855685a6b07e12798f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iscopyconstructible-class"></a>is_copy_constructible 클래스
 형식에 복사 생성자가 있는지 테스트합니다.  
@@ -38,7 +39,7 @@ struct is_copy_constructible;
 ## <a name="remarks"></a>설명  
  형식 조건자의 인스턴스는 `Ty` 형식이 복사 생성자가 있는 클래스인 경우 true이고 그렇지 않은 경우 false입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 #include <type_traits>   

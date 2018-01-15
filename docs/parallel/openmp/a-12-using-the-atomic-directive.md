@@ -1,27 +1,27 @@
 ---
-title: "A.12   Using the atomic Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "원자성 지시문을 사용 하 여 A.12 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d3ba3c87-413d-4efa-8a45-8a7f28ab0164
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9aa619d9bbe635a41d15a39d6c05780a4416520e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# A.12   Using the atomic Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-다음은 경합 상태를 피할 수 \(동시 업데이트 요소의  *x* 여러 스레드에서\)를 사용 하 여는 `atomic` 지시문 \([섹션 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) 19 페이지\):  
+# <a name="a12---using-the-atomic-directive"></a>A.12   atomic 지시문 사용
+다음 예제에서는 경합 상태를 방지 (의 요소를 동시에 업데이트할 *x* 여러 스레드에서)를 사용 하 여는 `atomic` 지시문 ([섹션 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) 페이지 19):  
   
 ```  
 #pragma omp parallel for shared(x, y, index, n)  
@@ -33,6 +33,6 @@ manager: "ghogen"
     }  
 ```  
   
- 사용 하는 장점은 `atomic` 이 예제에서는 지시문이이 업데이트 하는 동시에 발생 하는 x의 서로 다른 요소를 두 개 있습니다.  경우는 `critical` 지시문 \([2.6.2 섹션](../../parallel/openmp/2-6-2-critical-construct.md) 18 페이지\)의 요소를 모두 업데이트 한 다음 대신 사용 된  *x* 직렬로 \(어떤에 순서를 보장할 것\) 실행 될 것입니다.  
+ 사용 시의 이점은 `atomic` 지시문이이 예제에서 병렬로 발생 하는 x의 서로 다른 두 요소의 업데이트 수 있다는 점입니다. 경우는 `critical` 지시문 ([섹션 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) 18 페이지에서) 다음의 요소를 업데이트 하는 모든 대신, 사용 된 *x* 직렬로 (하지만 하나에 없는 순서를 보장) 실행 합니다.  
   
- 참고 해당 `atomic` 지시문 바로 그 다음만 C 또는 C\+\+ 문으로 적용 됩니다.  요소는 결과  *y* 이 예제에서는 자동으로 업데이트 되지 않습니다.
+ `atomic` 지시문은 C 또는 c + + 문 바로 다음에 적용 됩니다.  결과적으로 요소의 *y* 이 예제에서 자동으로 업데이트 되지 않습니다.

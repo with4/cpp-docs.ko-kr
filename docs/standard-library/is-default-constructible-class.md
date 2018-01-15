@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fdb6b232afc97a804a75aee29f99c14abd7c0552
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 031eaf0a1de86f354b89152c0ea48b2852de3f86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible Class
 형식에 기본 생성자가 있는지 테스트합니다.  
@@ -38,7 +39,7 @@ struct is_default_constructible;
 ## <a name="remarks"></a>설명  
  형식 조건자의 인스턴스는 `T` 형식이 기본 생성자가 있는 클래스 형식인 경우 true이고 그렇지 않은 경우 false입니다. 이것은 조건자 `is_constructible<T>`에 해당합니다. `T` 형식은 완전한 형식, `void`또는 범위를 알 수 없는 배열이어야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 #include <type_traits>   

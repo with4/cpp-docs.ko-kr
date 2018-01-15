@@ -1,33 +1,34 @@
 ---
 title: "다중 스레드 프로그램 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "다중 스레딩[C++], 스레드 정보"
-  - "스레딩[C++], 스레딩 정보"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- threading [C++], about threading
+- multithreading [C++], about threads
 ms.assetid: 02443596-f7e1-48d0-b3a4-39ee0e54e444
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0ff73b4d3a1c8ee6971fbd3f88f491c2a5c76311
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# 다중 스레드 프로그램
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-스레드는 기본적으로 프로그램 전체의 실행 경로이며  Win32에서 일정을 예약하는 최소 실행 단위이기도 합니다.  스레드는 스택, CPU 레지스터 상태 및 시스템 스케줄러 실행 목록의 엔트리로 구성됩니다.  각 스레드는 프로세스의 모든 리소스를 공유합니다.  
+# <a name="multithread-programs"></a>다중 스레드 프로그램
+스레드는 기본적으로 프로그램을 통해 실행 경로입니다. Win32 일정을 예약 하는 실행의 최소 단위 이기도 합니다. CPU 레지스터와 시스템 스케줄러의 실행 목록에 있는 항목의 상태는 스택, 스레드 구성 됩니다. 각 스레드는 프로세스의 모든 리소스를 공유합니다.  
   
- 프로세스는 한 개 이상의 스레드, 코드, 데이터 및 메모리에 있는 기타 프로그램 리소스로 구성됩니다.  일반적인 프로그램 리소스는 열린 파일, 세마포 및 동적 할당 메모리입니다.  시스템 스케줄러가 스레드 실행 컨트롤 중 하나를 제공하면 프로그램이 실행됩니다.  스케줄러는 실행해야 할 스레드 및 스레드 실행 시기를 결정합니다.  우선 순위가 낮은 스레드는 우선 순위가 높은 스레드가 작업을 완료할 때까지 기다려야 할 수도 있습니다.  다중 프로세서 컴퓨터에서 스케줄러는 CPU 작업량을 균형있게 분배하기 위해 개별 스레드를 다른 프로세서로 이동할 수 있습니다.  
+ 하나 이상의 스레드가 및 코드, 데이터 및 메모리에 있는 프로그램의 다른 리소스의 프로세스 구성 됩니다. 일반적인 프로그램 리소스가 열려 있는 파일, 세마포 및 동적으로 할당 된 메모리입니다. 시스템 스케줄러 스레드 중 하나 실행 컨트롤을 제공 하면 프로그램이 실행 합니다. 스케줄러는 스레드를 실행 해야 하며 실행 되는 시기를 결정 합니다. 우선 순위가 낮은 스레드가 우선 순위가 높은 스레드가 작업을 완료할 때 대기 해야 합니다. 스케줄러 다중 프로세서 컴퓨터에서 CPU 부하를 분산 하는 서로 다른 프로세서를 개별 스레드를 이동할 수 있습니다.  
   
- 한 프로세스에서 각 스레드는 독립적으로 작동합니다.  다른 스레드를 볼 수 있도록 설정하지 않으면 스레드는 개별적으로 실행되며 한 프로세스에서 다른 스레드를 인식하지 못합니다.  그러나 공용 리소스를 공유하는 스레드는 세마포 또는 기타 프로세스간 통신 방법을 사용하여 작업을 조정해야 합니다.  스레드 동기화에 대한 자세한 내용은 [다중 스레드 Win32 프로그램 작성](../parallel/writing-a-multithreaded-win32-program.md)을 참조하십시오.  
+ 각 스레드는 프로세스에서 독립적으로 작동합니다. 으로 만들지 않으면 서로 보이지, 개별적으로 실행 스레드와 다른 스레드가 프로세스에서 인식 하지 않습니다. 그러나 공용 리소스를 공유 하는 스레드 세마포 또는 프로세스 간 통신의 기타 방법을 사용 하 여 작업을 조정 해야 합니다. 스레드를 동기화 하는 방법에 대 한 자세한 내용은 참조 [다중 스레드 Win32 프로그램 작성](../parallel/writing-a-multithreaded-win32-program.md)합니다.  
   
-## 참고 항목  
- [C 및 Wind32를 사용한 다중 스레딩](../parallel/multithreading-with-c-and-win32.md)
+## <a name="see-also"></a>참고 항목  
+ [C 및 Win32를 사용한 다중 스레딩](../parallel/multithreading-with-c-and-win32.md)

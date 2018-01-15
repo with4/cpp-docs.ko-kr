@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cdfae45dabc989113ec7305feed27ea6d697e422
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0145c480d74cb1978c1b6caef65489eae96501c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>다중 스레드 프로그램 컴파일 및 링크
 에 도입 된 Bounce.c 프로그램 [샘플 다중 스레드 C 프로그램](../parallel/sample-multithread-c-program.md)합니다.  

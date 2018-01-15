@@ -37,11 +37,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 076585831b2a0e74b73982b6415cc9ea46fdf4b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6a0fd48843b097de0c6181eda49d6e3879084f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 클래스
 각 간격의 확률이 균일하고 폭이 다양한 간격이 있는 부분 일정 분포를 생성합니다.  
@@ -88,7 +89,7 @@ public:
 
 ### <a name="parameters"></a>매개 변수  
 *RealType*  
-부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+부동 소수점 결과 형식으로, 기본적으로 `double`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
 이 표본 분포에는 각 간격의 확률이 균일하고 폭이 다양한 간격이 있습니다. 표본 분포에 대한 자세한 내용은 [piecewise_linear_distribution 클래스](../standard-library/piecewise-linear-distribution-class.md) 및 [discrete_distribution](../standard-library/discrete-distribution-class.md)을 참조하세요.  
@@ -114,7 +115,7 @@ public:
   
 분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // compile with: /EHsc /W4  

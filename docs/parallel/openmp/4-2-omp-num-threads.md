@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e02f29aeda7d555b7ac2678b030d2ff3475b639
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c2b766d0e3be9b4f1d272a6e3fa205cfcb87039
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 **OMP_NUM_THREADS** 해당 번호를 호출 하 여 명시적으로 변경 하지 않으면 기본 실행 하는 동안 사용할 스레드 수 설정 하는 환경 변수는 **omp_set_num_threads** 라이브러리 루틴 또는 명시적 **num_threads** 절에는 **병렬** 지시문입니다.  

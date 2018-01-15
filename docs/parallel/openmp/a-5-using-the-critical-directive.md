@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ef678b58df9d2c323cdebb61feed52ebbaf607f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cf4170fae6792906db29c90f61f067886b00f1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5   critical 지시문 사용
 다음 예제에서는 몇 개가 포함 되어 `critical` 지시문 ([섹션 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) 18 페이지에서). 이 예제에서는 작업 큐에서 제거 되 고 작업 큐 모델을 보여 줍니다. 여러 스레드에서 동일한 작업 큐를 방지 하려면 큐 해제 작업에 있어야는 `critical` 섹션. 이 예에서 두 개의 큐는 독립적 이므로, 보호 `critical` 다른 이름의 지시문 *xaxis* 및 *yaxis*합니다.  

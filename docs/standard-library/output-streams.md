@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- output streams
+dev_langs: C++
+helpviewer_keywords: output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 34a37749690fc0e42ba855640d0936fd8a25842f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f8fee8ecffda86f306b44f0d5b873d5192d4d181
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-streams"></a>Output Streams
-출력 스트림 개체는 바이트에 대한 대상입니다. 가장 중요한&3;개 출력 스트림 클래스는 `ostream`, `ofstream`, `ostringstream`입니다.  
+출력 스트림 개체는 바이트에 대한 대상입니다. 가장 중요한 3개 출력 스트림 클래스는 `ostream`, `ofstream`, `ostringstream`입니다.  
   
  `ostream` 클래스는 파생 클래스 `basic_ostream`을 통해 미리 정의된 스트림 개체를 지원합니다.  
   
@@ -57,7 +40,7 @@ ms.lasthandoff: 02/24/2017
   
  런타임 함수 `sprintf_s`와 같이 `ostringstream` 클래스는 메모리 내 문자열로의 출력을 지원합니다. I/O 스트림 서식을 사용하여 메모리에서 문자열을 만들려면 클래스 `ostringstream`의 개체를 생성합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [출력 스트림 개체 생성](../standard-library/constructing-output-stream-objects.md)  
   
  [삽입 연산자 사용 및 형식 제어](../standard-library/using-insertion-operators-and-controlling-format.md)  
@@ -76,5 +59,4 @@ ms.lasthandoff: 02/24/2017
  [ofstream](../standard-library/basic-ofstream-class.md)   
  [ostringstream](../standard-library/basic-ostringstream-class.md)   
  [iostream 프로그래밍](../standard-library/iostream-programming.md)
-
 

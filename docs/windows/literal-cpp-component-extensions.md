@@ -1,61 +1,62 @@
 ---
-title: "literal (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "literal"
-  - "literal_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "literal keyword [C++]"
+title: "리터럴 (c + + 구성 요소 확장명) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- literal
+- literal_cpp
+dev_langs: C++
+helpviewer_keywords: literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f858e94bf916c2d441cee607739bb9e08da09b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# literal (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**\/clr**  컴파일에서   `literal` 로 표시 된 변수\(데이터 요소\)는  `static const`  변수의 네이티브와 동일합니다.  
+# <a name="literal-c-component-extensions"></a>리터럴(C++ 구성 요소 확장명)
+로 표시 된 변수 (데이터 멤버) `literal` 에 **/clr** 컴파일이입니다. 해당 하는 네이티브는 `static const` 변수입니다.  
   
-## 모든 플랫폼  
- **설명**  
+## <a name="all-platforms"></a>모든 플랫폼  
+ **주의**  
   
- \(모든 런타임에 적용되는 이 언어 기능에 대한 설명이 없습니다.\)  
+ (이 언어 기능에는 모든 런타임에 적용되는 설명이 없습니다.)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **설명**  
+## <a name="windows-runtime"></a>Windows 런타임  
+ **주의**  
   
- \(이 언어 기능에는 Windows 런타임에만 적용되는 설명이 없습니다.\)  
+ (이 언어 기능에는 Windows 런타임에만 적용되는 설명이 없습니다.)  
   
-### 요구 사항  
- 컴파일러 옵션: **\/ZW**  
+### <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/ZW**  
   
-## 공용 언어 런타임  
+## <a name="common-language-runtime"></a>공용 언어 런타임  
   
-## 설명  
- `literal`  로 표시 된 데이터 멤버는 선언할 때 초기화해야 하며, 정수 계열 상수, 열거형 또는 문자열 형식의 값이어야 합니다.  const 정적 데이터 멤버의 형식으로 초기화 식의 형식에서 변환 사용자 정의 변환을 필요로하지 않아야합니다.  
+## <a name="remarks"></a>설명  
+ 로 표시 된 데이터 멤버는 `literal` 선언할 때 초기화 해야 하며 값은 정수 계열 상수, 열거형 또는 문자열 형식 이어야 합니다. 초기화 식의 형식에서 정적 const 데이터 멤버의 형식으로 변환하는 데 사용자 정의 변환이 필요 없어야 합니다.  
   
- 메모리가 런타임에 문자 필드에 할당되지 않습니다; 컴파일러는 클래스의 메타 데이터에 값을 삽입합니다.  
+ 메모리는 런타임에 리터럴 필드에 대해 할당되지 않습니다. 컴파일러는 클래스에 대한 메타데이터에 해당 값을 삽입하기만 합니다.  
   
- `static const` 라고 표시된 변수는 기타 컴파일러에 대한 메타 데이터에 사용할 수 없습니다.  
+ `static const`라고 표시된 변수는 다른 컴파일러가 메타데이터에서 사용할 수 없습니다.  
   
- 자세한 내용은 [정적](../misc/static-cpp.md) 및 [const](../cpp/const-cpp.md)를 참조하십시오.  
+ 자세한 내용은 참조 [정적](../cpp/storage-classes-cpp.md) 및 [const](../cpp/const-cpp.md)합니다.  
   
- `literal`는 상황에 맞는 키워드입니다.  자세한 내용은 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md)를 참조하십시오.  
+ `literal`는 상황에 맞는 키워드입니다. 참조 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
   
-## 예제  
- 이 예제는  `literal`  변수가  `static` 을 의미함을 보여줍니다.  
+## <a name="example"></a>예  
+ 이 예제에서는 `literal` 변수가 `static`을 의미함을 보여 줍니다.  
   
 ```  
 // mcppv2_literal.cpp  
@@ -69,8 +70,8 @@ int main() {
 }  
 ```  
   
-## 예제  
- 다음 예제에서는 리터럴 메타 데이터가 미치는 영향을 보여줍니다.  
+## <a name="example"></a>예  
+ 다음 샘플에서는 메타데이터에서 리터럴의 영향을 보여 줍니다.  
   
 ```  
 // mcppv2_literal2.cpp  
@@ -81,7 +82,7 @@ public ref struct A {
 };  
 ```  
   
- `sc`  및  `lit` 에 대한 메타 데이터에서 차이점을 알 수 있습니다:  `modopt`  지시문은  `sc` 에 적용 되어 , 다른 컴파일러에 의해 의미가 무시될 수 있습니다.  
+ `sc` 및 `lit`에 대한 메타데이터에서의 차이점을 확인할 수 있습니다. `modopt` 지시문은 `sc`에 적용되어, 다른 컴파일러에서 무시될 수 있습니다.  
   
 ```  
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
@@ -91,8 +92,8 @@ public ref struct A {
 .field public static literal int32 lit = int32(0x0000000A)  
 ```  
   
-## 예제  
- C\#에서 작성된 다음 샘플에서는 이전 샘플에서 만든 메타 데이터를 참조하고  `literal`  및  `static const`  변수의 영향을 보여줍니다 :  
+## <a name="example"></a>예  
+ C#에서 작성된 다음 샘플은 이전 샘플에서 만든 메타데이터를 참조하고 `literal` 및 `static const` 변수의 영향을 보여 줍니다.  
   
 ```  
 // mcppv2_literal3.cs  
@@ -123,8 +124,8 @@ class B {
 }  
 ```  
   
-## 요구 사항  
- 컴파일러 옵션: **\/clr**  
+## <a name="requirements"></a>요구 사항  
+ 컴파일러 옵션: **/clr**  
   
-## 참고 항목  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>참고 항목  
+ [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

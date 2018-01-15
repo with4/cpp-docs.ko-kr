@@ -1,58 +1,57 @@
 ---
-title: "reduction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "reduction"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reduction OpenMP clause"
+title: "감소 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: reduction
+dev_langs: C++
+helpviewer_keywords: reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# reduction
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-각 스레드에 한정 되는 하나 이상의 변수 끝의 병렬 영역 축소 작업의 제목을 지정 합니다.  
+# <a name="reduction"></a>reduction
+각 스레드에 private 되는 하나 이상의 변수에 병렬 영역 끝날 때 감소 작업의 제목을 지정 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 reduction(operation:var)  
 ```  
   
-## 설명  
- 다음은 각 매개 변수에 대한 설명입니다.  
+## <a name="remarks"></a>설명  
+ 다음은 각 문자에 대한 설명입니다.  
   
  `operation`  
- 변수에 대해 작업에 대 한 연산자 \(`var`\) 병렬 영역 끝에입니다.  
+ 변수에서 수행할 작업에 대 한 연산자 (`var`) 병렬 영역의 끝에 있습니다.  
   
  `var`  
- 스칼라 감소를 수행 하는 하나 이상의 변수입니다.  변수가 두 개 이상 지정 된 경우 변수 이름을 쉼표로 구분 합니다.  
+ 스칼라 감소가 수행할 하나 이상의 변수입니다. 둘 이상의 변수를 지정 하는 경우 변수 이름을 쉼표로 구분 합니다.  
   
-## 설명  
- `reduction`다음 지시문에 적용 됩니다.  
+## <a name="remarks"></a>설명  
+ `reduction`다음과 같은 지시문에 적용 됩니다.  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [섹션](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 자세한 내용은 [2.7.2.6 reduction](../../../parallel/openmp/2-7-2-6-reduction.md)를 참조하십시오.  
+ 자세한 내용은 참조 [2.7.2.6 감소](../../../parallel/openmp/2-7-2-6-reduction.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예  
   
 ```  
 // omp_reduction.cpp  
@@ -159,7 +158,11 @@ int main( )
 }  
 ```  
   
-  **병렬 구역 4 회 병렬로 실행 되었습니다.  1에서 연속 된 정수 10 합계 수 55**  
-**모든 해당 함수를 func1 성공 func5 통해\!**    
-## 참고 항목  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+The parallel section was executed 4 times in parallel.  
+The sum of the consecutive integers from 1 to 10, is 55  
+All of the the functions, func1 through func5 succeeded!  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [절](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -18,18 +18,21 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 943639ed97798369bd4efa24561fd5b174f81579
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d8aad77236e5c1b2cdc8fe5958d87d8c53b8f05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>방법: 제네릭을 사용하여 성능 개선(Visual C++)
 제네릭을 사용하여 형식 매개 변수를 기반으로 재사용 가능한 코드를 만들 수 있습니다. 형식 매개 변수의 실제 형식은 클라이언트 코드에서 호출할 때까지 지연됩니다. 제네릭에 대 한 자세한 내용은 참조 하십시오. [제네릭](../windows/generics-cpp-component-extensions.md)합니다.  
   
  이 문서에서는 제네릭으로 컬렉션을 사용하는 응용 프로그램의 성능을 향상시키는 방법을 설명합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  .NET Framework에는 <xref:System.Collections?displayProperty=fullName> 네임스페이스의 여러 컬렉션 클래스가 제공됩니다. 이러한 컬렉션의 대부분은 <xref:System.Object?displayProperty=fullName> 형식의 개체에서 동작합니다. 그러면 값 형식까지 포함한 .NET Framework의 모든 형식이 <xref:System.Object?displayProperty=fullName>에서 파생되기 때문에 컬렉션에서 모든 형식을 저장할 수 있습니다. 그러나 이 방법에는 두 가지 단점이 있습니다.  
   
  우선, 컬렉션에서 정수와 같은 값 형식을 저장하는 경우 해당 값은 컬렉션에 추가되기 전에 boxing되어야 하며 해당 값을 컬렉션에서 검색할 때 unboxing되어야 합니다. 이는 부담이 큰 작업입니다.  
@@ -85,7 +88,7 @@ Popped a String: Seven
 Popped an int: 7  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  새 <xref:System.Collections.Generic?displayProperty=fullName> 네임스페이스는 <xref:System.Collections?displayProperty=fullName> 네임스페이스에서 찾을 수 있는 여러 개의 동일한 컬렉션을 포함하고 있지만, 제네릭 형식 매개 변수를 받기 위해 수정되었습니다. 이렇게 하면 제네릭이 아닌 컬렉션의 두 가지 단점이 사라집니다. 값 형식의 boxing 및 unboxing과 컬렉션에 저장할 형식을 지정할 수 없는 것이 그 단점입니다. 두 컬렉션에 대한 작업은 동일합니다. 인스턴스화되는 방법만 다릅니다.  
   
  제네릭 <xref:System.Collections.Generic.Stack%601> 컬렉션을 사용하는 이 예제와 위에서 작성된 예제를 비교합니다. 자주 액세스되는 큰 컬렉션에서 이 예제의 성능은 위의 예제보다 훨씬 뛰어날 것입니다.  

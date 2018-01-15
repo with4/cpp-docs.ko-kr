@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b749e825563ef9a7e2686a923eb0931ed8d5405
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c59faec7fc981cff31bea4ce6e846d89d0b8bf99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 클래스
 Windows Forms 사용자 정의 컨트롤을 호스팅하는 MFC 대화 상자 클래스의 래퍼입니다.  
@@ -64,7 +65,7 @@ class CWinFormsDialog :
   
 ### <a name="public-operators"></a>Public 연산자  
   
-|이름||  
+|name||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|대체 [CWinFormsDialog::GetControl](#getcontrol) 식에 있습니다.|  
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Windows Forms 사용자 정의 컨트롤에 대 한 참조로 형식을 캐스팅합니다.|  

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocnum/std::numpunct_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- numpunct_byname class
+f1_keywords: xlocnum/std::numpunct_byname
+dev_langs: C++
+helpviewer_keywords: numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 84f71302d43a983772890611e55c56af9b21e922
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: fb424b3c9ec367ef8349a944bb86528fda806a5d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numpunctbyname-class"></a>numpunct_byname 클래스
 이 파생된 템플릿 클래스는 지정된 로캘의 `numpunct` 패싯으로 사용하여 숫자 및 부울 식의 문장 부호 서식을 지정할 수 있는 개체를 설명합니다.  
@@ -50,7 +46,7 @@ protected:
 ```  
   
 ## <a name="remarks"></a>설명  
- 해당 동작은 [명명된](../standard-library/locale-class.md#name) 로캘 `_Locname`에 따라 결정됩니다. 생성자는 [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.  
+ 해당 동작은 [명명된](../standard-library/locale-class.md#name) 로캘 `_Locname`에 의해 결정됩니다. 생성자는 [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** \<locale>  
@@ -59,7 +55,6 @@ protected:
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

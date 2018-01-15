@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d7850721f5005ac1a1ab47c6557dcd99cede897
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-patterns-library-ppl"></a>PPL(병렬 패턴 라이브러리)
 PPL(병렬 패턴 라이브러리)은 여러 응용 프로그램을 동시에 개발할 수 있도록 편의성과 확장성을 높이는 명령적 프로그래밍 모델을 제공합니다. PPL은 동시성 런타임의 예약 및 리소스 관리 구성 요소를 기반으로 빌드됩니다. 또한 데이터에 대해 병렬로 작동하는 형식이 안전한 일반 알고리즘과 컨테이너를 제공함으로써 응용 프로그램 코드와 기본 스레딩 메커니즘 간의 추상화 수준을 높입니다. 또한 PPL을 사용하면 공유 상태 대신 사용할 수 있는 옵션을 제공하여 확장 가능한 응용 프로그램을 개발할 수 있습니다.  
@@ -31,7 +32,7 @@ PPL(병렬 패턴 라이브러리)은 여러 응용 프로그램을 동시에 �
   
 - *병렬 컨테이너 및 개체*: 해당 요소에 안전한 동시 액세스를 제공 하는 일반 컨테이너 형식  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  PPL은 c + + 표준 라이브러리 유사한 프로그래밍 모델을 제공 합니다. 다음 예제에서는 PPL의 여러 기능을 보여 줍니다. 이 예제에서는 여러 피보나치 수를 직렬 및 병렬로 계산합니다. 계산을 모두에서 작동 한 [std:: array](../../standard-library/array-class-stl.md) 개체입니다. 또한 이 예제에서는 두 계산을 모두 수행하는 데 필요한 시간을 콘솔에 출력합니다.  
   
  C + + 표준 라이브러리를 사용 하는 직렬 버전 [for_each](../../standard-library/algorithm-functions.md#for_each) 배열을 이동 하는 알고리즘의 결과 저장 하 고는 [std:: vector](../../standard-library/vector-class.md) 개체입니다. 병렬 버전 동일한 작업을 수행 하지만 PPL을 사용 하 여 [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) 알고리즘의 결과 저장 하 고는 [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) 개체입니다. `concurrent_vector` 클래스를 사용하면 컨테이너에 대한 쓰기 권한을 동기화하지 않아도 각 루프 반복이 요소를 동시에 추가할 수 있습니다.  

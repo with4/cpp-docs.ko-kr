@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3553ac8948e10271da449356bde20d2a9ae4378b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>연습: join을 사용하여 교착 상태 방지
 이 항목에서는 사용 하는 방법을 보여 주기 위해 철학자 들의 만찬 문제 사용는 [concurrency:: join](../../parallel/concrt/reference/join-class.md) 응용 프로그램에서 교착 상태를 방지 하는 클래스입니다. 소프트웨어 응용 프로그램에서 *교착 상태* 두 개 이상의 프로세스 각 리소스를 보유 서로 다른 프로세스를 다른 리소스를 해제 될 때까지 기다릴 때 발생 합니다.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
   
  `pickup_chopsticks` 교착 상태가 발생할 수 있는 메서드를 보여 줍니다. 모든 경우 `philosopher` 개체 잠금 중 다음 없음에 대 한 액세스 권한을 얻습니다 `philosopher` 개체를 다른 잠금은 다른에 의해 제어 되므로 계속 수 `philosopher` 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 10/24/2017
   
  [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음은 사용 하는 전체 예제 식별 `join` 교착 상태의 위험이 제거 하는 개체입니다.  

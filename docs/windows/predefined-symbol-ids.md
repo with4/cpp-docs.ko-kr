@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e457d7369195f20311ac444cb37c74ac077bfd87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e431ce20361a9a7d3d05676d1b9da01b98c07d5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="predefined-symbol-ids"></a>미리 정의된 기호 ID
 새 프로젝트를 시작하면 프로젝트 형식에 따라 일부 기호 ID가 바로 사용할 수 있도록 미리 정의되어 있습니다. 이러한 기호 ID는 다양한 라이브러리와 MFC 등의 프로젝트 형식을 지원합니다. 이 ID는 응용 프로그램에 대체로 포함되는 일반 작업 또는 마우스나 프린터와 같은 하드웨어 항목의 작업 등을 나타냅니다.  

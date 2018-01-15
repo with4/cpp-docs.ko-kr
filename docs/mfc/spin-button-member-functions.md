@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57a2f9cfc5a95671eb21dabb91b8a83874341b76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6f0abfd5803ea4b4d4b4478104790e0f56e5afc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spin-button-member-functions"></a>스핀 단추 멤버 함수
 spin 컨트롤에 사용할 수 있는 여러 멤버 함수 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). 이러한 함수를 사용 하 여 스핀 단추의 다음 특성을 변경 해야 합니다.  

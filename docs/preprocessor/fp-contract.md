@@ -1,52 +1,53 @@
 ---
-title: "fp_contract | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.fp_contract"
-  - "fp_contract_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fp_contract pragma"
-  - "pragma, fp_contract"
+title: fp_contract | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.fp_contract
+- fp_contract_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, fp_contract
+- fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a4feb098555168e07641db30401f23aba2291fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# fp_contract
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fpcontract"></a>fp_contract
 부동 소수점 축약 발생 여부를 결정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 #pragma fp_contract [ON | OFF]  
 ```  
   
-## 설명  
+## <a name="remarks"></a>설명  
  `fp_contract`는 기본적으로 사용하도록 설정되어 있습니다.  
   
- 부동 소수점 동작에 대한 자세한 내용은 [\/fp\(부동 소수점 동작 지정\)](../build/reference/fp-specify-floating-point-behavior.md)를 참조하십시오.  
+ 부동 소수점 동작에 대 한 자세한 내용은 참조 하십시오. [/fp (부동 소수점 동작 지정)](../build/reference/fp-specify-floating-point-behavior.md)합니다.  
   
  다른 부동 소수점 pragma는 다음과 같습니다.  
   
--   [fenv\_access](../preprocessor/fenv-access.md)  
+-   [fenv_access](../preprocessor/fenv-access.md)  
   
--   [float\_control](../preprocessor/float-control.md)  
+-   [float_control](../preprocessor/float-control.md)  
   
-## 예제  
- 이 샘플에서 생성된 코드에서는 Itanium 프로세서에 대해 **fma**\(Fused Multiply Add\) 명령을 사용하지 않습니다.  `#pragma fp_contract (off)`를 주석으로 처리할 경우 생성된 코드는 **fma** 명령을 사용합니다.  
+## <a name="example"></a>예  
+ 이 샘플에서 생성 된 코드는 Fused Multiply Add를 사용 하지 않습니다 (**fma**) Itanium 프로세서에 명령 합니다. 주석으로 처리 하는 경우 `#pragma fp_contract (off)`, 생성 된 코드에서 사용할는 **fma** 명령입니다.  
   
 ```  
 // pragma_directive_fp_contract.cpp  
@@ -70,15 +71,18 @@ int main() {
 }  
 ```  
   
-  **out\=0.000000000000000e\+000**  
-**out\=6.152500152587891e\+001**  
-**out\=2.351000061035156e\+002**  
-**out\=5.207249755859375e\+002**  
-**out\=9.184000244140625e\+002**  
-**out\=1.428125000000000e\+003**  
-**out\=2.049899902343750e\+003**  
-**out\=2.783724853515625e\+003**  
-**out\=3.629600097656250e\+003**  
-**out\=4.587524902343750e\+003**   
-## 참고 항목  
- [Pragma 지시문 및 \_\_Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+out=0.000000000000000e+000  
+out=6.152500152587891e+001  
+out=2.351000061035156e+002  
+out=5.207249755859375e+002  
+out=9.184000244140625e+002  
+out=1.428125000000000e+003  
+out=2.049899902343750e+003  
+out=2.783724853515625e+003  
+out=3.629600097656250e+003  
+out=4.587524902343750e+003  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ [Pragma 지시문 및 __Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

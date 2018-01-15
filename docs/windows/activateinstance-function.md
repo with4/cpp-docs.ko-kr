@@ -1,33 +1,35 @@
 ---
 title: "ActivateInstance 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Windows::Foundation::ActivateInstance"
-  - "client/ABI::Windows::Foundation::ActivateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivateInstance 함수"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- client/Windows::Foundation::ActivateInstance
+- client/ABI::Windows::Foundation::ActivateInstance
+dev_langs: C++
+helpviewer_keywords: ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 051eb51a4461d1b3f9ab180507022cdfa955f0ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ActivateInstance 함수
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-등록하고 지정된 클래스 ID에 정의된 지정된 형식의 인스턴스를 검색합니다.  
+# <a name="activateinstance-function"></a>ActivateInstance 함수
+등록 하 고 id가 지정 된 클래스 ID에 정의 된 지정 된 형식의 인스턴스를 검색  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<  
@@ -39,23 +41,23 @@ inline HRESULT ActivateInstance(
 );  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `T`  
- 활성화할 형식입니다.  
+ 활성화 하는 형식입니다.  
   
  `activatableClassId`  
- 매개변수 `T` 를 정의하는 클래스 ID의 이름입니다.  
+ 매개 변수를 정의 하는 클래스 ID의 이름 `T`합니다.  
   
  `instance`  
- 이 작업이 완료될 때, `T` 의 인스턴스에 대하여 참조합니다.  
+ 이 작업이 완료 될 때의 인스턴스에 대 한 참조 `T`합니다.  
   
-## 반환 값  
- 성공 하면 S\_OK 그렇지 않으면 오류는 오류를 나타내는 HRESULT입니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 하면 s_ok이 고 그렇지 않은 경우 오류의 원인을 나타내는 HRESULT 오류가 발생 합니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  
   
- **네임스페이스**Windows::Foundation  
+ **Namespace:** windows:: foundation  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Windows::Foundation 네임스페이스](../windows/windows-foundation-namespace.md)

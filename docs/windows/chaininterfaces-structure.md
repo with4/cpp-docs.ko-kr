@@ -1,32 +1,33 @@
 ---
 title: "ChainInterfaces 구조체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ChainInterfaces 구조체"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces
+dev_langs: C++
+helpviewer_keywords: ChainInterfaces structure
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9417b3950e4df98ed4e13ea1bb40e76c383868e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
-# ChainInterfaces 구조체
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-인터페이스 Id 집합에 적용할 수 있는 확인 및 초기화 함수를 지정 합니다.  
+# <a name="chaininterfaces-structure"></a>ChainInterfaces 구조체
+인터페이스 ID 집합에 적용할 수 있는 확인 및 초기화 함수를 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template <  
@@ -59,72 +60,72 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `I0`  
- \(필요로 된\) 인터페이스 ID 0.  
+ (필수) 인터페이스 ID 0입니다.  
   
  `I1`  
- \(필요로 된\) 인터페이스 ID 1.  
+ (필수) 인터페이스 ID 1입니다.  
   
  `I2`  
- \(선택 사항\) 인터페이스 ID 2입니다.  
+ (선택 사항) 인터페이스 ID 2입니다.  
   
  `I3`  
- \(선택 사항\) 인터페이스 ID 3입니다.  
+ (선택 사항) 인터페이스 ID 3입니다.  
   
  `I4`  
- \(선택 사항\) 인터페이스 ID 4입니다.  
+ (선택 사항) 인터페이스 ID 4입니다.  
   
  `I5`  
- \(선택 사항\) 인터페이스 ID 5입니다.  
+ (선택 사항) 인터페이스 ID 5입니다.  
   
  `I6`  
- \(선택 사항\) 인터페이스 ID 6입니다.  
+ (선택 사항) 인터페이스 ID 6입니다.  
   
  `I7`  
- \(선택 사항\) 인터페이스 ID 7입니다.  
+ (선택 사항) 인터페이스 ID 7입니다.  
   
  `I8`  
- \(선택 사항\) 인터페이스 ID 8입니다.  
+ (선택 사항) 인터페이스 ID 8입니다.  
   
  `I9`  
- \(선택 사항\) 인터페이스 ID 9입니다.  
+ (선택 사항) 인터페이스 ID 9입니다.  
   
  `DerivedType`  
- 파생 형식  
+ 파생된 형식입니다.  
   
  `BaseType`  
- 파생된 형식의 기본 형식입니다.  
+ 파생 형식의 기본 형식입니다.  
   
  `hasImplements`  
- `true` 일경우, [구현](../windows/implements-structure.md) 구조체로부터 도출되지 않은 클래스를 사용하여 부울 값은 [Mixln](../windows/mixin-structure.md) 구조체를 사용할 수 없게 합니다.  
+ 부울 값 경우 `true`, 사용할 수 없습니다는 [MixIn](../windows/mixin-structure.md) 에서 파생 되지 않는 클래스와 구조체는 [구현](../windows/implements-structure.md) 구조체입니다.  
   
-## 멤버  
+## <a name="members"></a>멤버  
   
-### Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
-|Name|설명|  
-|----------|--------|  
-|[ChainInterfaces::CanCastTo 메서드](../windows/chaininterfaces-cancastto-method.md)|지정된 인터페이스 ID를 ChainInterface 탬플릿 매개변수에 의해 정의된 각각의 특수화를 캐스팅할 수 있는지 여부를 나타냅니다.|  
-|[ChainInterfaces::CastToUnknown 메서드](../windows/chaininterfaces-casttounknown-method.md)|IUnknown 에대한 포인터에 대한 `I0` 템플릿 매개변수에 의해 정의된 형식의 인터페이스 포인터를 캐스팅합니다.|  
-|[ChainInterfaces::FillArrayWithIid 메서드](../windows/chaininterfaces-fillarraywithiid-method.md)|지정된 인터페이스 IDs의 배열에서 지정된 위치에서 `I0` 템플릿 매개변수에 의해 정의된 인터페이스 ID를 저장합니다.|  
-|[ChainInterfaces::Verify 메서드](../windows/chaininterfaces-verify-method.md)|IUnknown 및\/또는 IInspectable로부터 상속받은 `I9` 를 통하여 템플릿 매개변수 `I0` 에 의해 정의된 각각의 인터페이스를 확인합니다. `I9`을 통해, `I0` 은 `I1` 을 상속받습니다.|  
+|이름|설명|  
+|----------|-----------------|  
+|[ChainInterfaces::CanCastTo 메서드](../windows/chaininterfaces-cancastto-method.md)|지정 된 인터페이스 ID 각 ChainInterface 템플릿 매개 변수를 정의한 특수화도 캐스팅 될 수 있는지 여부를 나타냅니다.|  
+|[ChainInterfaces::CastToUnknown 메서드](../windows/chaininterfaces-casttounknown-method.md)|`I0` 템플릿 매개 변수에 의해 정의된 형식의 인터페이스 포인터를 IUnknown에 대한 포인터에 캐스팅합니다.|  
+|[ChainInterfaces::FillArrayWithIid 메서드](../windows/chaininterfaces-fillarraywithiid-method.md)|저장소에 정의 된 인터페이스 ID는 `I0` 인터페이스 Id의 지정된 된 배열에 지정된 된 위치에 템플릿 매개 변수입니다.|  
+|[ChainInterfaces::Verify 메서드](../windows/chaininterfaces-verify-method.md)|템플릿 매개 변수 `I0`-`I9`에 의해 정의된 각 인터페이스가 IUnknown 및/또는 IInspectable에서 상속하는지, `I0`이 `I1`부터 `I9`까지 상속하는지 확인합니다.|  
   
-### 보호 된 상수  
+### <a name="protected-constants"></a>보호 된 상수  
   
-|Name|설명|  
-|----------|--------|  
-|[ChainInterfaces::IidCount 상수](../windows/chaininterfaces-iidcount-constant.md)|인터페이스 ID의 총 수는 `I9` 를 통한 인터페이스에서 템플릿 매개변수 `I0` 로 지정됨을 포함합니다.|  
+|name|설명|  
+|----------|-----------------|  
+|[ChainInterfaces::IidCount 상수](../windows/chaininterfaces-iidcount-constant.md)|템플릿 매개 변수 `I0`부터 `I9`까지에서 지정한 인터페이스에 포함된 인터페이스 ID의 총 개수입니다.|  
   
-## 상속 계층  
+## <a name="inheritance-hierarchy"></a>상속 계층  
  `I0`  
   
  `ChainInterfaces`  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **헤더:** implements.h  
   
  **네임스페이스:** Microsoft::WRL  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft::WRL 네임스페이스](../windows/microsoft-wrl-namespace.md)

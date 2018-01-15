@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c0c486b4ea510de8e998bf1fd4e9b0ee80117c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9ebeb453aefee8310e45779f1fd60c7bd207771
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution 클래스
 푸아송 분포를 생성합니다.  
@@ -76,7 +77,7 @@ public:
   
 #### <a name="parameters"></a>매개 변수  
 *IntType*  
-정수 결과 형식으로, 기본적으로 `int`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)을 참조하세요.  
+정수 결과 형식으로, 기본적으로 `int`로 지정되어 있습니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
 템플릿 클래스는 푸아송 분포를 사용하여 사용자 지정 정수 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.  
@@ -98,9 +99,9 @@ public:
   
 분포 클래스 및 이러한 클래스의 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.  
   
-푸아송 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [푸아송 분포](http://go.microsoft.com/fwlink/LinkId=401112)를 참조하세요.  
+푸아송 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [푸아송 분포](http://go.microsoft.com/fwlink/p/?linkid=401112)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // compile with: /EHsc /W4  

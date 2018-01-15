@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- functional/std::is_placeholder
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_placeholder class
+f1_keywords: functional/std::is_placeholder
+dev_langs: C++
+helpviewer_keywords: is_placeholder class
 ms.assetid: 2b21a792-96d1-4bb8-b911-0db796510835
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9aa19cb8fceb167cd98c94583e47f2e9c1227333
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e50b427abcdaf8388ae35a0fef448603698e220a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isplaceholder-class"></a>is_placeholder 클래스
 형식이 자리 표시자인지 테스트합니다.  
@@ -38,7 +34,7 @@ struct is_placeholder {
 ## <a name="remarks"></a>설명  
  `Ty` 형식이 자리 표시자가 아니면 상수 값 `value`는 0이고, 그렇지 않으면 해당 값은 바인딩된 함수 호출 인수의 위치입니다. N번째 자리 표시자 `_N`에 대해 `N` 값을 확인하는 데 사용됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```cpp  
 // std__functional__is_placeholder.cpp   
@@ -75,5 +71,4 @@ int main()
   
 ## <a name="see-also"></a>참고 항목  
  [_1 개체](../standard-library/1-object.md)
-
 

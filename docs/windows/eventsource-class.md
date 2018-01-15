@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95bb322944b6a7c68c5b9abde53e67382fe73ced
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 705260547d5a42b463d61b79c38592874f9dfa19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsource-class"></a>EventSource 클래스
 이벤트를 나타냅니다. EventSource 멤버 함수는 추가, 제거 및 이벤트 처리기를 호출 합니다.  
@@ -56,7 +59,7 @@ class EventSource;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[EventSource::addRemoveLock_ 데이터 멤버](../windows/eventsource-addremovelock-data-member.md)|에 대 한 액세스를 동기화는 [targets_](../windows/eventsource-targets-data-member.md) 배열을 추가 하는 경우, 제거 또는 이벤트 처리기를 호출 합니다.|  
 |[EventSource::targets_ 데이터 멤버](../windows/eventsource-targets-data-member.md)|하나 이상의 이벤트 처리기 배열입니다.|  

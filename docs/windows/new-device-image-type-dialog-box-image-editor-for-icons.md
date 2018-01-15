@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c667616325cf29d959340db38a8336dd6c63e8c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e41f62a3668174dc9a5873d9bf16617555a96092
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>새 &lt;장치&gt; 이미지 형식 대화 상자 (아이콘에 대 한 이미지 편집기)
 지정 된 형식의 새 장치 이미지를 만들 수 있습니다. 열려는 **새로 \<장치 > 이미지** 대화 상자에서 클릭 **새 이미지 형식** 에 **이미지** 메뉴.  

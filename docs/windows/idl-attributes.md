@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8f64c4f30945ddd13a137ec52f160c1880053f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 447c4369d7a80348dfb6c5eee54c49d76c1e8a4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idl-attributes"></a>IDL 특성
 일반적으로.idl 파일을 유지 해야 했습니다 의미 합니다.  
@@ -67,7 +70,7 @@ ms.lasthandoff: 10/24/2017
 |[hidden](../windows/hidden.md)|항목이 존재 하지만 하지 사용자 기반 브라우저에 표시할지 나타냅니다.|  
 |[idl_module](../windows/idl-module.md)|DLL의 진입점을 지정합니다.|  
 |[idl_quote](../windows/idl-quote.md)|IDL을 생성 하는 현재 버전의 Visual c + +에서 지원 되지 않는 또는 특성을 사용할 수 있습니다.|  
-|[id](../windows/id.md)|멤버 함수 (속성 또는 메서드를 인터페이스 또는 dispinterface)에 대 한 DISPID를 지정합니다.|  
+|[ID](../windows/id.md)|멤버 함수 (속성 또는 메서드를 인터페이스 또는 dispinterface)에 대 한 DISPID를 지정합니다.|  
 |[iid_is](../windows/iid-is.md)|인터페이스 포인터에 의해 COM 인터페이스의 IID를 지정 합니다.|  
 |[immediatebind](../windows/immediatebind.md)|데이터 바인딩된 개체의 속성에 대 한 모든 변경의 데이터베이스를 즉시 된다는 있는지를 나타냅니다.|  
 |[importlib](../windows/importlib.md)|다른 형식 라이브러리에 이미 컴파일된 형식을 만들고 있는 형식 라이브러리에서 사용할 수 있도록 합니다.|  

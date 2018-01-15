@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 357cc266b34f445bb333826ca68afd75fdd8f963
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ec044e18fdd8bcd21fbad8d2e46c847c876cc00d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aggregatable"></a>aggregatable
 클래스에서 집계를 지원 하는지 나타냅니다.  
@@ -58,7 +61,7 @@ ms.lasthandoff: 10/24/2017
 |**허용**|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
 |**항상**|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // cpp_attr_ref_aggregatable.cpp  

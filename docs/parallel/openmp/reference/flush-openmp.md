@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2892a260ae7982741fcda2944683b0d6957824ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72b69daf431ab9dfd2b5c2ed7cebdc8c5af75847
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="flush-openmp"></a>flush (OpenMP)
 모든 스레드가 공유 모든 개체에 대 한 메모리의 동일한 보기를 갖도록 지정 합니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>설명  
  다음은 각 문자에 대한 설명입니다.  
   
- `var`(선택 사항)  
+ `var` (선택 사항)  
  동기화 하려는 개체를 나타내는 변수의 쉼표로 구분 된 목록입니다. 경우 `var` 을 지정 하지 않으면 모든 메모리는 플러시됩니다.  
   
 ## <a name="remarks"></a>설명  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
  자세한 내용은 참조 [2.6.5 flush 지시문](../../../parallel/openmp/2-6-5-flush-directive.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // omp_flush.cpp  
