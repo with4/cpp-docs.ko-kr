@@ -43,14 +43,15 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 11cfea77d86795070f4f679ff69636974e1234b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 333db8403e539d28de766809891a068717c738ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
-복소수의 허수 축 따라 [-1; +1] 간격 외부 컷 분기와의 아크탄젠트 값을 검색합니다.  
+구간 밖에있는 분기 컷이있는 복소수의 아크 탄젠트를 검색합니다. [-1; +1]을 의미합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -84,11 +85,11 @@ _Lcomplex catanl(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴|C 헤더|C++ 헤더|  
+|루틴에서 반환된 값|C 헤더|C++ 헤더|  
 |-------------|--------------|------------------|  
 |`catan`,               `catanf`, `catanl`|\<complex.h>|\<ccomplex>|  
   
- 호환성에 대한 자세한 내용은 소개에서 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

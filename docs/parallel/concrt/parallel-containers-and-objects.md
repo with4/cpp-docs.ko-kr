@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 695e3e07af26c709dadc70935e1e4d72705ecab8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9159b9c8170ee73afd8bee5305506a842368a231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-containers-and-objects"></a>병렬 컨테이너 및 개체
 여러 컨테이너와 해당 요소에 스레드로부터 안전한 액세스를 제공 하는 개체는 라이브러리 PPL (병렬 패턴)에 포함 되어 있습니다.  
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/24/2017
 ||||  
 |-|-|-|  
 
-|[에](reference/concurrent-vector-class.md#at)|[끝](reference/concurrent-vector-class.md#end)|[연산자 &#91; &#93;](reference/concurrent-vector-class.md#operator_at)|  
+|[에서](reference/concurrent-vector-class.md#at)|[끝](reference/concurrent-vector-class.md#end)|[연산자 &#91;&#93;](reference/concurrent-vector-class.md#operator_at)|  
 |[시작](reference/concurrent-vector-class.md#begin)|[앞](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|  
 |[다시](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|  
 |[용량](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|  

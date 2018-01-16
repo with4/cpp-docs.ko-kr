@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - subscript operator [C++], interpretation of
 - arrays [C++], subscripting
 - interpreting subscript operators [C++]
 - operators [C++], interpretation of subscript
 ms.assetid: 8852ca18-9d5b-43f7-b8bd-abc89364fbf2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1a83ff6aea4380688d3b6298b93e04caab1dbb7f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 564ec6bf4fafe2116c41c0f817e2754e1de12abd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpretation-of-subscript-operator"></a>첨자 연산자의 해석
-다른 연산자와 달리 첨자 연산자 (****) 사용자가 다시 정의할 수 있습니다. 첨자 연산자의 기본 동작은 다음 메서드를 사용하여 배열 이름과 첨자를 결합하는 것입니다.  
+다른 연산자와 달리 첨자 연산자 (**[]**) 사용자가 다시 정의할 수 있습니다. 첨자 연산자의 기본 동작은 다음 메서드를 사용하여 배열 이름과 첨자를 결합하는 것입니다.  
   
  \*((*배열 이름*) + (*아래 첨자*))  
   
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/25/2017
   
  **((**   
  ***배열 이름은* ) + (**   
- ***아래 첨자* 1***max*2 * \* max*3*...max*n) ** + ** *아래 첨자*2 * \* max*3*...max*n).   입니다. 입니다. *+**아래 첨자*n))  
+ ***아래 첨자* 1***max*2  *\* max*3*...max*n)  **+**  *아래 첨자*2  *\* max*3*...max*n). 이어야 합니다. 이어야 합니다. *+**아래 첨자*n))  
   
 ## <a name="see-also"></a>참고 항목  
  [배열](../cpp/arrays-cpp.md)

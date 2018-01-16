@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '[]'
-dev_langs:
-- C++
+f1_keywords: '[]'
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], subscript
 - postfix operators [C++]
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 21831cbd727477336c53e9d72e4bea95e123aa81
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subscript-operator"></a>아래 첨자 연산자:
 ## <a name="syntax"></a>구문  
@@ -38,7 +35,7 @@ postfix-expression [ expression ]
 ```  
   
 ## <a name="remarks"></a>설명  
- 뒤에 첨자 연산자, 후 위 식 (수 있는 기본 식) ****, 배열 인덱싱 지정 합니다.  
+ 뒤에 첨자 연산자, 후 위 식 (수 있는 기본 식) **[]**, 배열 인덱싱 지정 합니다.  
   
  관리 되는 배열에 대 한 정보를 참조 하십시오. [배열](../windows/arrays-cpp-component-extensions.md)합니다.  
   
@@ -52,7 +49,7 @@ cout << 2[nArray] << endl;            // prints "2"
   
  위의 예제에서 `nArray[2]` 식은 `2[nArray]`와 동일합니다. 이유는 첨자 식의 결과 *e1***[** *e2* **]** 하 여 제공 됩니다.  
   
- **\*((** *e2* **)** * + * **(***e1***))**  
+ **\*((** *e2* **)**  *+*  **(***e1***))**  
   
  식에서 생성 된 주소 않습니다 *e2* 주소에서 바이트 *e1*합니다. 주소를 배열에 있는 다음 개체가 생성으로 확장 하는 대신, *e2*합니다. 예:  
   
