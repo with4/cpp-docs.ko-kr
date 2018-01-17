@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>관대 한 /-(표준 규칙)
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="syntax"></a>구문
 
-> **관대 한 /-**
+> **/permissive-**
 
 ## <a name="remarks"></a>설명
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 
 **관대 한 /-** 설정 옵션의 [/zc: strictstrings](../../build/reference/zc-conformance.md) 및 [/zc: rvaluecast](../../build/reference/zc-conformance.md) 옵션 표준에 맞는 동작을 합니다. 기본적으로 맞지 않는 동작 합니다. 특정 전달할 수 있습니다 **/Zc** 후 옵션 **관대 한 /-** 이 동작을 재정의 하려면 명령줄에 있습니다.
 
-버전의 Visual Studio 2017 15.3, 버전에서에서 시작 하는 컴파일러는 **관대 한 /-** 집합 옵션는 **/Zc:ternary** 옵션입니다. 컴파일러는 2 단계 이름 조회에 대 한 요구 사항 중에 구현합니다. 경우는 **관대 한 /-** 옵션이 설정 되어, 컴파일러 서식 파일에 사용 되는 종속 및 종속 되지 않은 이름 식별 함수 및 클래스 템플릿 정의 구문 분석 합니다. 이 릴리스에서 이름 종속성 분석만 수행 됩니다.
+버전의 Visual Studio 2017 15.3, 버전에서에서 시작 하는 컴파일러는 **관대 한 /-** 집합 옵션는 [/Zc:ternary](../../build/reference/zc-ternary.md) 옵션입니다. 컴파일러는 2 단계 이름 조회에 대 한 요구 사항 중에 구현합니다. 경우는 **관대 한 /-** 옵션이 설정 되어, 컴파일러 서식 파일에 사용 되는 종속 및 종속 되지 않은 이름 식별 함수 및 클래스 템플릿 정의 구문 분석 합니다. 이 릴리스에서 이름 종속성 분석만 수행 됩니다.
 
 환경 관련 확장 및 구현에 따라 표준을 해제 하는 언어 영역 영향을 받지 않는 **관대 한 /-**합니다. 예를 들어 Microsoft 전용 `__declspec`, 호출 규칙 및 구조적된 예외 처리 키워드 및 관련 컴파일러 pragma 지시문 또는 특성에 컴파일러에서 플래그가 지정 되지 않은 **관대 한 /-** 모드입니다.
 

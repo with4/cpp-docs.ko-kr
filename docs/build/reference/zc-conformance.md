@@ -20,11 +20,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 86b12604a5348c3a1aabb33c7e13a4e7a3c57932
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="zc-conformance"></a>/Zc(규칙)
 
@@ -43,16 +43,17 @@ Visual Studio에서 C 또는 c + + 표준과 호환 되지 않는 확장 문제�
 |옵션|동작|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|C + + 17 과잉 맞춤된 동적 할당을 사용 하도록 설정 (에 기본적으로 C + +에서 17).|
-|[자동\[-\]](zc-auto-deduce-variable-type.md)|에 대 한 새 표준 c + + 의미 적용 `auto` (에 기본적으로).|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|에 대 한 새 표준 c + + 의미 적용 `auto` (에 기본적으로).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|에 대 한 외부 링크를 사용 하도록 설정 `constexpr` 변수 (기본적으로 해제) 합니다.|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|표준 c + + 적용 `for` 범위 지정 규칙 (에 기본적으로).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|암시적 사용 `noexcept` 에 필요한 기능 (에 기본적으로).|
-|[인라인\[-\]](zc-inline-remove-unreferenced-comdat.md)|COMDAT 이거나 내부 링크만 경우 참조 되지 않은 함수 또는 데이터 제거 (기본적으로 해제) 합니다.|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|COMDAT 이거나 내부 링크만 경우 참조 되지 않은 함수 또는 데이터 제거 (기본적으로 해제) 합니다.|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|C + + 17 noexcept 규칙 적용 (에 기본적으로 C + + 17에 또는 나중에).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|UDT 임시 비 const lvalue 참조에 바인딩되지 것입니다 (기본적으로 해제) 합니다.|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|표준 c + + 명시적 형식 변환 규칙 적용 (기본적으로 해제) 합니다.|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|C + + 14 전역 크기 지정 된 할당 해제 함수를 사용 하도록 설정 (에 기본적으로).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|문자열 리터럴 사용 안 함 `char*` 또는 `wchar_t*` 변환 (기본적으로 해제) 합니다.|
+|[ternary\[-\]](zc-ternary.md)|피연산자 형식에 대 한 조건부 연산자 규칙을 적용 (기본적으로 해제) 합니다.|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|스레드로부터 안전한 로컬 정적 초기화를 사용 하도록 설정 (에 기본적으로).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|가정 `operator new` 실패 시 throw (기본적으로 해제) 합니다.|
 |[삼중 자\[-\]](zc-trigraphs-trigraphs-substitution.md)|삼중 자 (사용 되지 않음, off 기본적으로)을 사용 하도록 설정 합니다.|

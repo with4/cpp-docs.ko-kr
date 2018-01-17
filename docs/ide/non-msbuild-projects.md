@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual c + +에서 폴더 프로젝트 열기
 Visual Studio 2017 소스 파일의 폴더를 열고 즉시 IntelliSense, 검색, 리팩터링, 디버깅을 지원 하 여 코딩을 시작 및 등을 사용할 수 있는 "폴더 열기" 기능을 소개 합니다. .Sln 또는.vcxproj 파일이 로드 됩니다. 필요에 따라 빌드 및 간단한.json 파일을 통해 매개 변수를 시작 하는 것은 물론 사용자 지정 작업을 지정할 수 있습니다. 열려 있는 폴더에서 구동, Visual c + + 이제 지원할 수 파일의 느슨한 컬렉션 뿐만 아니라도 거의 모든 빌드 시스템을 CMake, 등 닌자, QMake (하 프로젝트)의 경우, gyp, SCons, Gradle, 프로세스, 만들기. 
@@ -72,19 +72,130 @@ CMake Visual c + +, c + + 데스크톱 작업 부하의 구성 요소에 대 한
 |`undefines`|정의 되지 않은 (MSVC에 대 한 /U를 maps) 되도록 매크로 목록|
 |`intelliSenseMode`|사용할 수 있는 IntelliSense 엔진입니다. MSVC gcc 및 Clang에 대 한 특정 나열 되는 아키텍처를 지정할 수 있습니다.
 - msvc x86 (기본값)
-- msvc x64
-- msvc arm
-- clang x86
-- clang-x64
+- msvc-x64
+- msvc-arm
+- windows-clang-x86
+- windows-clang-x64
 - windows-clang-arm
-- Linux x64
-- Linux x86
+- Linux-x64
+- Linux-x86
 - Linux-arm
 - gccarm
 
-CppProperties.json 지원 환경 변수 확장에 대 한 경로 다른 속성 값을 포함 합니다. 구문은 `${env.FOODIR}` 환경 변수를 확장 하려면 `%FOODIR%`합니다.
+#### <a name="environment-variables"></a>환경 변수
+CppProperties.json 지원 시스템 환경 변수 확장에 대 한 경로 다른 속성 값을 포함 합니다. 구문은 `${env.FOODIR}` 환경 변수를 확장 하려면 `%FOODIR%`합니다. 다음과 같은 시스템 정의 변수에 지원 됩니다.
 
-이 파일 내의 다음 기본 제공 매크로에 대 한 액세스 구성 요소도 필요.
+|변수 이름|설명|  
+|-----------|-----------------|
+|vsdev|기본 Visual Studio 환경|
+|msvc_x86|X86를 사용 하 여 x86 컴파일 도구|
+|msvc_arm|X86를 사용 하 여 ARM에 대 한 컴파일 도구|
+|msvc_arm64|X86를 사용 하 여 arm64 컴파일 도구|
+|msvc_x86_x64|X86를 사용 하 여 AMD64에 대 한 컴파일 도구|
+|msvc_x64_x64|64 비트 도구를 사용 하 여 AMD64에 대 한 컴파일|
+|msvc_arm_x64|64 비트 도구를 사용 하 여 ARM에 대 한 컴파일|
+|msvc_arm64_x64|64 비트 도구를 사용 하 여 arm64 컴파일|
+
+설치 된 Linux 작업은 다음과 같은 환경 원격으로 Linux 및 WSL를 대상으로 사용할 수 있습니다.
+
+|변수 이름|설명|  
+|-----------|-----------------|
+|linux_x86|X86 대상 Linux 원격으로|
+|linux_x64|X64 대상 Linux 원격으로|
+|linux_arm|ARM Linux를 원격으로 대상|
+
+사용자 정의 환경 변수에서에서 정의한 CppProperties.json 하거나 전역으로 또는 구성 합니다. 다음 예제에서는 어떻게 기본 및 사용자 정의 환경 변수 선언 하 고 사용할 수를 보여 줍니다. 전역 **환경** 속성 라는 변수를 선언한 **INCLUDE** 모든 구성에서 사용할 수 있는:
+
+```json
+{
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 32-bit environment and toolchain.
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 64-bit environment and toolchain.
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+정의할 수도 있습니다는 **환경** 구성, 해당 구성에만 적용 됩니다 및 동일한 이름 가진 모든 전역 변수를 재정의 있도록 내부 속성입니다. 다음 예제에서는 x64 구성은 로컬 정의 **INCLUDE** 전역 값을 재정의 하는 변수.
+
+```json
+{
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined in the global environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "environments": [
+        {
+          // Append 64-bit specific include path to env.INCLUDE.
+          "INCLUDE": "${env.INCLUDE};${workspaceRoot}\\src\\includes64"
+        }
+      ],
+ 
+      "inheritEnvironments": [
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined in the local environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+
+모든 사용자 지정 기본 환경 변수는 tasks.vs.json 및 launch.vs.json에서 사용할 수 있습니다.
+
+#### <a name="macros"></a>매크로
+다음 기본 제공 매크로 CppProperties.json 내에 액세스할을 수 있습니다.
 |||
 |-|-|
 |`${workspaceRoot}`| 작업 영역 폴더의 전체 경로|
@@ -138,7 +249,7 @@ CppProperties.json에 임의 개수의 구성 만들 수 있습니다. 각 구�
 
 ![작업을 구성 하는 폴더 열기](media/open-folder-config-tasks.png)
 
-이렇게 (만들거나 엽니다)는 `tasks.vs.json` 파일을 Visual Studio 프로젝트 루트 폴더에 만드는.vs 폴더에 있습니다. 이 파일에 임의 작업을 정의 하 고 다음에서 호출 수는 **솔루션 탐색기** 상황에 맞는 메뉴입니다. 다음 예제에서는 단일 작업을 정의 하는 tasks.vs.json 파일을 보여 줍니다. `taskName`상황에 맞는 메뉴에 표시 되는 이름을 정의 합니다. `appliesTo`명령에서 수행할 수 있는 파일을 정의 합니다. `command` 속성 (Windows에서 cmd.exe) 콘솔에 대 한 경로 식별 하는 COMSPEC 환경 변수를 가리킵니다. `args` 속성 호출할 명령줄을 지정 합니다. `${file}` 매크로에서 선택한 파일을 검색 **솔루션 탐색기**합니다. 다음 예에서는 현재 선택 된.cpp 파일의 파일 이름을 표시 합니다.
+이렇게 (만들거나 엽니다)는 `tasks.vs.json` 파일을 Visual Studio 프로젝트 루트 폴더에 만드는.vs 폴더에 있습니다. 이 파일에 임의 작업을 정의 하 고 다음에서 호출 수는 **솔루션 탐색기** 상황에 맞는 메뉴입니다. 다음 예제에서는 단일 작업을 정의 하는 tasks.vs.json 파일을 보여 줍니다. `taskName`상황에 맞는 메뉴에 표시 되는 이름을 정의 합니다. `appliesTo`명령에서 수행할 수 있는 파일을 정의 합니다. `command` 속성 (Windows에서 cmd.exe) 콘솔에 대 한 경로 식별 하는 COMSPEC 환경 변수를 가리킵니다. CppProperties.json 또는 CMakeSettings.json에 선언 되어 있는 환경 변수를 참조할 수 있습니다. `args` 속성 호출할 명령줄을 지정 합니다. `${file}` 매크로에서 선택한 파일을 검색 **솔루션 탐색기**합니다. 다음 예에서는 현재 선택 된.cpp 파일의 파일 이름을 표시 합니다.
 
 ```json
 {
@@ -155,6 +266,8 @@ CppProperties.json에 임의 개수의 구성 만들 수 있습니다. 각 구�
 }
 ```
 Tasks.vs.json을 저장 한 후 폴더의 모든.cpp 파일을 마우스 오른쪽 단추로 클릭, 선택할 수 있습니다 **에코 filename** 참조 출력 창에 표시 되는 파일 이름을 확인 하 고 상황에 맞는 메뉴에서 합니다.
+
+
 
 #### <a name="appliesto"></a>appliesTo
 이름을 지정 하 여 파일이 나 폴더에 대 한 작업을 만들 수 있습니다는 `appliesTo` 예를 들어 필드 `"appliesTo" : "hello.cpp"`합니다. 다음 파일 마스크 값으로 사용할 수 있습니다.
