@@ -142,6 +142,7 @@
 ##### [/Zc:rvalueCast(형식 변환 규칙 적용)](zc-rvaluecast-enforce-type-conversion-rules.md)
 ##### [/Zc:sizedDealloc(전역으로 크기가 지정된 할당 해제 함수 사용)](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)
 ##### [/Zc:strictStrings(문자열 리터럴 형식 변환 사용 안 함)](zc-strictstrings-disable-string-literal-type-conversion.md)
+##### [/Zc:ternary(조건 연산자 규칙 적용)](zc-ternary.md)
 ##### [/Zc:threadSafeInit(스레드로부터 안전한 로컬 정적 초기화)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew(operator new throw 가정)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs(삼중자 대체)](zc-trigraphs-trigraphs-substitution.md)
