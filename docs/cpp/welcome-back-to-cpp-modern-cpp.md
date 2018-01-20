@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++의 진화(최신 C++)
 C++는 전세계적으로 가장 널리 사용되는 프로그래밍 언어 중 하나입니다. 잘 작성된 C++ 프로그램은 빠르고 효율적입니다. 이 언어는 재미있고 흥미로운 게임에서 고성능 과학 소프트웨어, 장치 드라이버, 포함 프로그램 및 Windows 클라이언트 응용 프로그램에 이르기까지 다양한 응용 프로그램을 만드는 데 사용할 수 있으며 유연성이 다른 언어보다 훨씬 더 뛰어납니다. C++는 20년 이상 이러한 문제와 기타 문제를 해결하는 데 사용되었습니다. 여러분은 모르겠지만, 오래된 C 스타일 프로그래밍을 접고 대신 최신 C++를 사용하는 C++ 프로그래머의 수가 점점 증가하고 있습니다.  
@@ -50,40 +50,60 @@ C++는 전세계적으로 가장 널리 사용되는 프로그래밍 언어 중 
  C++ 언어 자체도 발전하고 있습니다. 다음 코드 조각을 비교해 보십시오. 이 코드는 기존 C++의 방식을 보여 줍니다.  
   
 ```cpp  
-// circle and shape are user-defined types  
-circle* p = new circle( 42 );   
-vector<shape*> v = load_shapes();  
-  
-for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
-    if( *i && **i == *p )  
-        cout << **i << " is a match\n";  
-}  
-  
-for( vector<circle*>::iterator i = v.begin();  
-        i != v.end(); ++i ) {  
-    delete *i; // not exception safe  
-}  
-  
-delete p;  
-```  
-  
+
+#include <vector>
+
+void f()
+{
+    // Assume circle and shape are user-defined types  
+    circle* p = new circle( 42 );   
+    vector<shape*> v = load_shapes();  
+
+    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
+        if( *i && **i == *p )  
+            cout << **i << " is a match\n";  
+    }  
+
+    // CAUTION: If v's pointers own the objects, then you
+    // must delete them all before v goes out of scope.
+    // If v's pointers do not own the objects, and you delete
+    // them here, any code that tries to dereference copies
+    // of the pointers will cause null pointer exceptions.
+    for( vector<circle*>::iterator i = v.begin();  
+            i != v.end(); ++i ) {  
+        delete *i; // not exception safe  
+    }  
+
+    // Don't forget to delete this, too.  
+    delete p;  
+} // end f()
+```
+
  다음은 최신 C++에서는 동일한 작업이 수행되는 방식입니다.  
   
-```cpp  
+```cpp
+
 #include <memory>  
 #include <vector>  
-// ...  
-// circle and shape are user-defined types  
-auto p = make_shared<circle>( 42 );  
-vector<shared_ptr<shape>> v = load_shapes();  
-  
-for( auto& s : v ) {  
-    if( s && *s == *p )  
-        cout << *s << " is a match\n";  
-} 
-```  
-  
- 최신 C++에서는 대신 스마트 포인터를 사용할 수 있으므로 new/delete 또는 명시적 예외 처리를 사용할 필요가 없습니다. 사용 하는 경우는 `auto` 형식 추론 및 [람다 함수](../cpp/lambda-expressions-in-cpp.md), 밀도 있게 더 빨리, 코드를 작성할 수 있으며 더 잘 이해 합니다. 또한 `for_each`가 더 간결하고 사용하기 쉬워졌으며 `for` 루프보다 의도하지 않은 오류가 발생할 가능성이 줄어들었습니다. 상용구와 최소한의 코드 줄을 사용하여 응용 프로그램을 작성할 수 있습니다. 해당 코드를 예외와 메모리로부터 안전하게 유지할 수 있으며 할당/할당 해제 또는 오류 코드를 처리할 필요가 없습니다.  
+
+void f()
+{
+    // ...  
+    auto p = make_shared<circle>( 42 );  
+    vector<shared_ptr<shape>> v = load_shapes();  
+
+    for( auto& s : v ) 
+    {  
+        if( s && *s == *p )
+        {
+            cout << *s << " is a match\n";
+        }
+    }
+}
+
+```
+
+ 최신 C++에서는 대신 스마트 포인터를 사용할 수 있으므로 new/delete 또는 명시적 예외 처리를 사용할 필요가 없습니다. 사용 하는 경우는 `auto` 형식 추론 및 [람다 함수](../cpp/lambda-expressions-in-cpp.md), 밀도 있게 더 빨리, 코드를 작성할 수 있으며 더 잘 이해 합니다. 범위 기반 및 `for` 루프는 깔끔하고 사용 하기 보다는 C 스타일 의도 하지 않은 오류가 발생할 가능성이 적으므로 `for` 루프입니다. 상용구와 최소한의 코드 줄을 사용하여 응용 프로그램을 작성할 수 있습니다. 해당 코드를 예외와 메모리로부터 안전하게 유지할 수 있으며 할당/할당 해제 또는 오류 코드를 처리할 필요가 없습니다.  
   
  최신 C++는 두 가지 종류의 다형성, 즉, 템플릿을 통한 컴파일 타임과 상속 및 가상화를 통한 런타임을 통합합니다. 두 종류의 다형성을 혼합하여 더 뛰어난 효과를 제공할 수 있습니다. C + + 표준 라이브러리 템플릿 `shared_ptr` 해당 형식을 손쉽게 지울을 달성 하기 위해 내부 가상 메서드를 사용 합니다. 템플릿이 더 나은 경우에는 다형성에 가상화를 과다 사용하지 마십시오. 템플릿은 매우 강력할 수 있습니다.  
   
