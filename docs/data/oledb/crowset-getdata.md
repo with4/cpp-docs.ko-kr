@@ -47,7 +47,7 @@ HRESULT GetData(
   
 #### <a name="parameters"></a>매개 변수  
  `nAccessor`  
- [in] (0 오프셋) 인덱스 데이터에 액세스 하기 위해 사용 하는 접근자 수입니다.  
+ [in] \(0 오프셋) 인덱스 데이터에 액세스 하기 위해 사용 하는 접근자 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
  표준 `HRESULT`입니다.  
