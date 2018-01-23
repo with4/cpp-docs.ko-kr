@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9ad7a56663081941f3b3ca18193da55d5df2ab6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55a6f21a8b4589b5288b8aff462dbb0234a10300
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="universal-windows-apps-c"></a>유니버설 Windows 앱(C++)
 유니버설 Windows 플랫폼 (UWP) 앱은 서로 다른 장치에서 다양 한 화면 크기에 대 한 자동으로 조정 하는 콘텐츠를 중심으로 하는 간단한 사용자 인터페이스를 강조 하는 디자인 원칙을 구현 합니다. XAML 태그로 UI를 만들고 네이티브 C++에서 코드 숨김을 만듭니다. 다른 언어로 작성된 UWP 앱에서 사용할 수 있는 구성 요소(DLL)를 만들 수도 있습니다. UWP 앱에 대 한 API 화면은 다양 한 운영 체제 서비스를 제공 하는 잘 구성 된 라이브러리는 Windows 런타임에서 합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 |[Visual C++ 언어 참조(C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)|Windows 런타임 Api의 c + + 소비를 단순화 하 고 예외 기반 오류 처리를 사용 하도록 설정 하는 확장 집합에 설명 합니다.|  
 |[응용 프로그램 및 라이브러리 빌드(C++/CX)](../cppcx/building-apps-and-libraries-c-cx.md)|C++/CX 앱이나 구성 요소에서 액세스할 수 있는 DLL 및 정적 라이브러리를 만드는 방법을 설명합니다.|  
 |[자습서: C++를 사용하여 첫 Windows 스토어 앱 만들기](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|C + +에서 유니버설 Windows 플랫폼 앱 개발의 기본 개념을 소개 하는 연습이 있습니다. (아직 Windows 10에서 UWP 개발을 위해 업데이트되지 않았습니다.)|  
-|[C++로 Windows Runtime 구성 요소 만들기](https://docs.microsoft.com/en-us/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|다른 유니버설 Windows 플랫폼 앱 및 구성 요소에서 사용할 수 있는 Dll을 만드는 방법을 설명 합니다.|  
+|[C + + Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|다른 유니버설 Windows 플랫폼 앱 및 구성 요소에서 사용할 수 있는 Dll을 만드는 방법을 설명 합니다.|  
 |[게임 개발](https://docs.microsoft.com/en-us/windows/uwp/gaming/)|DirectX 및 C++를 사용하여 게임을 작성하는 방법을 설명합니다.|  
   
 ## <a name="universal-windows-platform-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하는 유니버설 Windows 플랫폼 앱 

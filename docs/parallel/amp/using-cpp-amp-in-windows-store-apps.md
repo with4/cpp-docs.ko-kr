@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 3fa6b42dd4e00f3b5314806933d06b3c1534b4d7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-c-amp-in-windows-store-apps"></a>Windows 스토어 앱에서 C++ AMP 사용
 c + + AMP (c + + Accelerated Massive Parallelism)를 사용할 수 있습니다 프로그램 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] GPU (그래픽 처리 장치) 또는 기타 계산 액셀러레이터에서 계산을 수행 하는 앱입니다. 그러나, C++ AMP는 Windows Runtime 형식으로 직접 작업하기 위한 API를 제공하지 않으며, Windows 런타임은 C++ AMP에 대한 래퍼를 제공하지 않습니다. 코드(본인이 직접 만든 형식 포함)에 Windows 런타임 형식을 사용할 경우 C++ AMP와 호환되는 형식으로 변환해야 합니다.  
@@ -120,8 +120,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C + +를 사용 하 여 첫 Windows 스토어 앱 만들기](http://go.microsoft.com/fwlink/p/?linkid=249073)   
- [C + + Windows 런타임 구성 요소 만들기](http://go.microsoft.com/fwlink/p/?linkid=249076)
-
-
+ [C + +를 사용 하 여 첫 Windows 스토어 앱 만들기](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [C + + Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

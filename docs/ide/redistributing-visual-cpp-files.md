@@ -20,13 +20,17 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89795e19df46b3701cf8dcc7a402540f693db94
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="redistributing-visual-c-files"></a>Visual C++ 파일 재배포
+
+> [!NOTE]
+> 하기 때문에 여기 되어 Visual c + + 런타임 파일 중 하나의 다운로드를 찾고 있습니까? 로 이동는 [Microsoft](http://www.microsoft.com/) 웹 사이트를 입력 하 고 **Visual c + + 재배포 가능 패키지** 검색 상자에 있습니다. 다운로드 하 고 필요한 Visual c + +의 버전 및 컴퓨터 (예: x64 64 비트 Windows를 실행 하는 경우)의 아키텍처에 대 한 재배포 가능 패키지를 설치 합니다.   
+  
 응용 프로그램을 배포할 때 이 응용 프로그램을 지원하는 데 필요한 파일도 배포해야 합니다. Microsoft에서 이러한 파일을 제공하는 경우 파일을 다시 배포할 수 있는지 여부를 확인합니다. Visual Studio 사용 약관을 검토 하려면 IDE에서 Microsoft Visual Studio 정보 대화 상자에서 사용권 계약 링크를 참조 하거나 다운로드는 [Microsoft 소프트웨어 사용 조건](http://go.microsoft.com/fwlink/p/?LinkId=831114) 파일입니다. 일부 버전의 Visual Studio에 대 한 Microsoft 소프트웨어 사용 조건의 "배포 가능 코드" 섹션에서 참조 하는 "REDIST 목록"을 참조 하십시오 [Microsoft Visual Studio 2017 및 Microsoft Visual Studio 2017 용 배포 가능 코드 SDK (포함 유틸리티 및 BuildServer 파일)](http://go.microsoft.com/fwlink/p/?LinkId=823098), Visual Studio 2015에 대 한 참조 또는 [Microsoft Visual Studio 2015 및 Microsoft Visual Studio 2015 SDK 용 배포 가능 코드](http://go.microsoft.com/fwlink/p/?LinkId=523763)합니다. 재배포 가능 파일에 대 한 자세한 내용은 참조 [재배포할 Dll 확인](../ide/determining-which-dlls-to-redistribute.md) 및 [배포 예제](../ide/deployment-examples.md)합니다.  
   
  재배포 가능한 Visual c + + 파일을 배포 하려면 Visual c + + 재배포 가능 패키지를 사용할 수 있습니다 (VCRedist\_x86.exe, VCRedist\_x64.exe, 또는 VCRedist\_arm.exe) 하는 Visual Studio에 포함 됩니다. Visual Studio 2017에 이러한 파일에에서 있습니다 Program Files [(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\ MSVC\\_lib 버전_ 폴더를 여기서 _edition_ 가 설치 된 Visual Studio 버전 및 _lib 버전_ 의 버전이 재배포 하는 라이브러리입니다. Visual Studio 2015에서 이러한 파일에서 Visual Studio 설치 디렉터리에에서 있습니다 Program Files [(x86)] \Microsoft Visual Studio *버전*\VC\redist\\*로캘* \\. Visual Studio 2017에는 Program Files [(x86)]에서 찾을 수 있는 재배포 가능 병합 모듈 (.msm 파일)를 사용 하는 또 다른 옵션은\\Microsoft Visual Studio\\2017\\_edition_ \\ VC\\Redist\\MSVC\\_lib 버전_\\MergeModules\\ 폴더입니다. Visual Studio 2015에서 Program Files [(x86)] \common 모듈에서에서 찾을 수 있습니다\\합니다. 재배포 가능한 Visual c + + Dll을 직접 설치할 수 이기도 *응용 프로그램 로컬 폴더*, 응용 프로그램 실행 파일이 포함 된 폴더입니다. 서비스 편의를 위해 이 설치 위치를 사용하지 않는 것이 좋습니다.  

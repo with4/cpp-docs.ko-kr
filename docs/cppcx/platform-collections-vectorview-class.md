@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8ef351759814ee03b54160cac2340eafd304d5f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 클래스
 인덱스로 각각 액세스할 수 있는 순차 개체 컬렉션의 읽기 전용 보기를 나타냅니다. 템플릿 매개 변수로 지정된 컬렉션의 각 개체 형식입니다.  
@@ -54,17 +54,17 @@ template <typename T, typename E>
   
 |이름|설명|  
 |----------|-----------------|  
-|[Vectorview:: Vectorview](#ctor)|VectorView 클래스의 새 인스턴스를 초기화합니다.|  
+|[VectorView::VectorView](#ctor)|VectorView 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Vectorview:: First](#first)|VectorView의 첫 번째 요소를 지정하는 반복기를 반환합니다.|  
-|[Vectorview:: Getat](#getat)|지정된 인덱스가 나타내는 현재 VectorView의 요소를 검색합니다.|  
-|[Vectorview:: Getmany](#getmany)|현재 VectorView에서 지정된 인덱스부터 시작하여 일련의 항목을 검색합니다.|  
-|[Vectorview:: Indexof](#indexof)|현재 VectorView에서 지정한 항목을 검색하고 있는 경우 항목의 인덱스를 반환합니다.|  
-|[Vectorview:: Size](#size)|현재 VectorView 개체의 요소 수를 반환합니다.|  
+|[VectorView::First](#first)|VectorView의 첫 번째 요소를 지정하는 반복기를 반환합니다.|  
+|[VectorView::GetAt](#getat)|지정된 인덱스가 나타내는 현재 VectorView의 요소를 검색합니다.|  
+|[VectorView::GetMany](#getmany)|현재 VectorView에서 지정된 인덱스부터 시작하여 일련의 항목을 검색합니다.|  
+|[VectorView::IndexOf](#indexof)|현재 VectorView에서 지정한 항목을 검색하고 있는 경우 항목의 인덱스를 반환합니다.|  
+|[VectorView::Size](#size)|현재 VectorView 개체의 요소 수를 반환합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `VectorView`  
@@ -277,4 +277,4 @@ VectorView(
   
 ## <a name="see-also"></a>참고 항목  
  [플랫폼 Namespace](platform-namespace-c-cx.md)   
- [C + + Windows 런타임 구성 요소 만들기](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)
+ [C + + Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -1,7 +1,7 @@
 ---
-title: "예외 사양 (throw) (c + +) | Microsoft Docs"
+title: "예외 사양 (throw, noexcept) (c + +) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/12/2018
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-language
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: c93fdaa75155e6f0117ef1c30d4e093d5ca0e576
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>예외 사양 (throw, noexcept) (c + +)
 
 예외 사양은 함수에 의해 전파 될 수 있는 예외 형식에 대해 프로그래머의 의도 표시 하는 c + + 언어 기능. 하는 함수 되거나 예외를 사용 하 여 종료 되지 않을 지정할 수는 *예외 사양이*합니다. 컴파일러는 함수에 대 한 호출을 최적화 하기 위해이 정보를 사용 하 고 예외가 발생된 하는 경우 프로그램을 종료 하려면 함수를 이스케이프 합니다. 
 
-C + + 17 하기 전에 두 종류의 예외 사양이 없습니다. *noexcept 사양* C + + 11부터 였습니다. 함수를 이스케이프 될 수 있는 잠재적인 예외 집합이 비어 있는지 여부를 지정 합니다. *동적 예외 사양은*, 또는 `throw(optional_type_list)` 사양, C + + 11에서 더 이상 사용 되어을 제외 하 고 C + + 17과 제거 `throw()`, noexcept (true)에 대 한 별칭인 합니다. 이 예외 사양은 함수에서 예외를 throw 할 수 하는 방법에 대 한 요약 정보를 제공 하는데 실제로 문제가 있는 것으로 발견 된 합니다. 어느 정도 유용한 것으로 입증 된 하나의 동적 예외 사양을는 무조건 `throw()` 사양입니다. 예를 들어 함수 선언 합니다.
+C + + 17 하기 전에 두 종류의 예외 사양이 없습니다. *noexcept 사양* C + + 11부터 였습니다. 함수를 이스케이프 될 수 있는 잠재적인 예외 집합이 비어 있는지 여부를 지정 합니다. *동적 예외 사양은*, 또는 `throw(optional_type_list)` 사양, C + + 11에서 더 이상 사용 되어을 제외 하 고 C + + 17에서 제거 `throw()`에 대 한 별칭인 `noexcept(true)`합니다. 이 예외 사양은 함수에서 예외를 throw 할 수 하는 방법에 대 한 요약 정보를 제공 하는데 실제로 문제가 있는 것으로 발견 된 합니다. 어느 정도 유용한 것으로 입증 된 하나의 동적 예외 사양을는 무조건 `throw()` 사양입니다. 예를 들어 함수 선언 합니다.
 
 ```cpp
 void MyFunction(int i) throw();
