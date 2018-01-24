@@ -30,7 +30,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW(Windows Runtime 컴파일)
-[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] 앱을 만드는 데 [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]([!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)])를 지원하도록 소스 코드를 컴파일합니다.  
+[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] 앱을 만드는 데 [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)] ([!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)])를 지원하도록 소스 코드를 컴파일합니다.  
   
  사용 하는 경우 **/ZW** 컴파일하려면를 항상 지정 **/EHsc** 도 합니다.  
   

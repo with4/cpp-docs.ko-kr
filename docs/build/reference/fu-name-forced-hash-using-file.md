@@ -44,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  /FU 스위치는 파일 이름을 하나만 사용합니다. 여러 파일을 지정하려면 각 항목에 대해 /FU를 사용합니다.  
   
- 사용 중인 경우 [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] 및 사용 하 고 메타 데이터 참조는 [Friend 어셈블리](../../dotnet/friend-assemblies-cpp.md) 사용할 수 없는 기능을 **/FU**합니다. `#using` 특성과 함께 `[as friend]`을 사용해서 코드에서 메타데이터를 참조해야 합니다. Friend 어셈블리는 [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)]([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)])에서 지원되지 않습니다.  
+ 사용 중인 경우 [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] 및 사용 하 고 메타 데이터 참조는 [Friend 어셈블리](../../dotnet/friend-assemblies-cpp.md) 사용할 수 없는 기능을 **/FU**합니다. `#using` 특성과 함께 `[as friend]`을 사용해서 코드에서 메타데이터를 참조해야 합니다. Friend 어셈블리는 [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)])에서 지원되지 않습니다.  
   
  어셈블리 또는 공용 언어 런타임 (CLR)에 대 한 모듈을 만드는 방법에 대 한 정보를 참조 하십시오. [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)합니다. 작성 하는 방법에 대 한 내용은 [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], 참조 [응용 프로그램 및 라이브러리 빌드](../../cppcx/building-apps-and-libraries-c-cx.md)합니다.  
   
