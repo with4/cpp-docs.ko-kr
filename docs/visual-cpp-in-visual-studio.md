@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio의 Visual C++
 
@@ -32,7 +32,7 @@ Visual Studio 2017 프로그래밍 언어 및 개발 도구는 유니버설 Wind
 
 이 콘텐츠는 프로그램을 작성하는 C++ 개발자를 위한 내용입니다.
 
-- 프로그램을 실행할 수 있도록 C++ 재배포 가능 패키지 및 런타임 구성 요소를 찾고 있다면 [Microsoft 다운로드 센터](http://www.microsoft.com/en-us/download/) 로 이동하여 검색 상자에 **Visual C++** 를 입력합니다.
+- 프로그램을 실행할 수 있도록 특정 C++ 재배포 가능 패키지 및 런타임 구성 요소를 찾고 있다면 [Microsoft](http://www.microsoft.com/) 웹 사이트로 이동하여 검색 상자에 **Visual C++ 재배포 가능 패키지**를 입력합니다. 사용하는 컴퓨터 아키텍처에 해당하는 재배포 가능 패키지(예를 들어 64비트 Windows를 실행하는 경우 x64) 및 필요한 Visual C++ 버전을 다운로드하여 설치합니다. 
 
 - C++ 프로그래밍 개념에 대한 소개를 찾고 있다면 이 콘텐츠를 제공하는 많은 웹 사이트 중 하나로 이동하거나 C++ 개발자인 Bjarne Stroustup이 제공하는 [프로그래밍 -- C++ 사용 원칙 및 사례(Second Edition)](http://stroustrup.com/Programming/) (영문) 복사본을 다운로드하세요. Visual C++ 콘텐츠에서는 사용자가 C++에 대한 기본적인 지식이 있는 것으로 가정합니다.
 

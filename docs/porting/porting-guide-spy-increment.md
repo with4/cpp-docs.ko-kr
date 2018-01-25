@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 11b50aa8eb5c44a8949228d03b0b733de90fb0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
+ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="porting-guide-spy"></a>포팅 가이드: Spy++
 이 포팅 사례 연구는 일반적인 포팅 프로젝트, 발생할 수 있는 문제 유형 및 포팅 문제를 다루기 위한 몇 가지 일반적인 팁과 트릭에 대한 아이디어를 제공하도록 설계되었습니다. 프로젝트 포팅 경험은 코드의 세부 사항에 따라 달라지므로 결정적인 포팅 가이드는 아닙니다.  
@@ -141,7 +141,7 @@ typedef std::basic_ostringstream<TCHAR> ostrstream;
   
 ```  
   
- 현재 프로젝트는 MBCS(멀티바이트 문자 집합)를 사용하여 빌드되므로 char가 적절한 문자 데이터 형식입니다. 그러나 코드를 UTF-16 유니코드로 업데이트하기 쉽도록 프로젝트 설정의 **문자 집합** 속성이 MBCS 또는 유니코드로 설정되었는지에 따라 char 또는 wchar_t로 확인되는 TCHAR로 업데이트합니다.  
+ 프로젝트는 현재 MBCS(멀티바이트 문자 집합)를 사용하여 빌드되므로 `char`가 적절한 문자 데이터 형식입니다. 그러나 코드를 UTF-16 유니코드로 쉽게 업데이트할 수 있도록 프로젝트 설정의 **문자 집합** 속성이 MBCS 또는 유니코드로 설정되었는지 여부에 따라 `char` 또는 `wchar_t`로 확인되는 `TCHAR`로 업데이트합니다.  
   
  다른 몇 가지 코드 부분도 업데이트해야 합니다.  기본 클래스 ios를 ios_base로 바꾸고 ostream을 basic_ostream\<T>로 바꾸었습니다. 두 개의 추가 typedef를 추가하면 이 섹션이 컴파일됩니다.  
   
@@ -514,8 +514,9 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  변수가 처음에 `extern`으로 선언된 후 나중에 `static`으로 선언된 경우 문제가 발생합니다. 이러한 두 저장소 클래스 지정자의 의미는 양립할 수 없지만 Microsoft 확장으로 허용됩니다. 코드를 다른 컴파일러로 포팅할 수 있게 하거나 /Za(ANSI 호환성)를 사용하여 컴파일하려는 경우 일치하는 저장소 클래스 지정자를 포함하도록 선언을 변경합니다.  
   
-##  <a name="porting_to_unicode"></a> 11단계. MBCS에서 유니코드로 포팅  
- Windows 환경에서 유니코드를 말할 때는 일반적으로 UTF-16을 의미합니다. Linux와 같은 다른 운영 체제는 UTF-8을 사용하지만 Windows는 일반적으로 사용하지 않습니다. 실제로 MBCS 코드를 UTF-16 유니코드로 포팅하는 단계를 수행하기 전에 다른 작업을 수행하거나 편리한 시간까지 포팅을 연기하기 위해 MBCS가 사용되지 않는다는 경고를 일시적으로 제거하는 것이 좋습니다. 현재 코드는 MBCS를 사용하며, 계속 MBCS를 사용하려면 MBCS 버전의 MFC를 다운로드해야 합니다.  다소 큰 이 라이브러리는 기본 Visual Studio 설치에서 제거되었으므로 별도로 다운로드해야 합니다. [MFC MBCS DLL 추가 기능](../mfc/mfc-mbcs-dll-add-on.md)을 참조하세요. 다운로드하고 Visual Studio를 다시 시작한 후 MBCS 버전의 MFC를 사용하여 컴파일 및 연결할 수 있지만, MBCS에 대한 경고를 제거하려면 프로젝트 속성의 전처리기 섹션에 있는 미리 정의된 매크로 목록이나 stdafx.h 헤더 파일 또는 기타 공용 헤더 파일의 시작 부분에 NO_WARN_MBCS_MFC_DEPRECATION도 추가해야 합니다.  
+##  <a name="porting_to_unicode"></a> 11단계. MBCS에서 유니코드로 포팅
+
+ Windows 환경에서 유니코드를 말할 때는 일반적으로 UTF-16을 의미합니다. Linux와 같은 다른 운영 체제는 UTF-8을 사용하지만 Windows는 일반적으로 사용하지 않습니다. MBCS 버전의 MFC는 Visual Studio 2013 및 2015에서 사용되지 않았지만, Visual Studio 2017에서는 더 이상 사용되지 않습니다. Visual Studio 2013 또는 2015를 사용하는 경우, 실제로 MBCS 코드를 UTF-16 유니코드로 포팅하는 단계를 수행하기 전에, 다른 작업을 수행하거나 편리한 시간까지 포팅을 연기하기 위해 MBCS가 사용되지 않는다는 경고를 일시적으로 제거하는 것이 좋습니다. 현재 코드는 MBCS를 사용하며, 계속 MBCS를 사용하려면 ANSI/MBCS 버전의 MFC를 설치해야 합니다. 비교적 큰 MFC 라이브러리는 **C++ 설치를 사용하는 기본 Visual Studio 데스크톱 개발**에 포함되지 않으므로 설치 관리자의 선택적 구성 요소에서 선택해야 합니다. [MFC MBCS DLL 추가 기능](../mfc/mfc-mbcs-dll-add-on.md)을 참조하세요. 이러한 라이브러리를 다운로드하고 Visual Studio를 다시 시작한 후에 MBCS 버전의 MFC를 사용하여 컴파일 및 연결할 수 있습니다. 그러나 Visual Studio 2013 또는 2015를 사용하는 경우 MBCS에 대한 경고를 제거해야 합니다. 또한 프로젝트 속성의 전처리기 섹션 또는 stdafx.h 헤더 파일이나 기타 공용 헤더 파일의 시작 부분에서 미리 정의되는 매크로 목록에 **NO_WARN_MBCS_MFC_DEPRECATION**도 추가해야 합니다.  
   
  이제 일부 링커 오류가 있습니다.  
   
@@ -531,7 +532,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
   
  이제 실제로 이전 MBCS(멀티바이트 문자 집합) 코드를 유니코드로 업데이트하겠습니다. Windows 데스크톱 플랫폼에 깊이 연결된 Windows 응용 프로그램이므로 Windows에서 사용하는 UTF-16 유니코드로 포팅하겠습니다. 플랫폼 간 코드를 작성하거나 Windows 응용 프로그램을 다른 플랫폼으로 포팅하는 경우 다른 운영 체제에서 널리 사용되는 UTF-8로 포팅하는 것이 좋습니다.  
   
- UTF-16 유니코드로 포팅하는 경우 MBCS로 컴파일하는 옵션을 원하는지 여부를 결정해야 합니다.  MBCS를 지원하는 옵션을 포함하려는 경우 컴파일하는 동안 _MBCS 또는 _UNICODE가 정의되었는지에 따라 char 또는 wchar_t로 확인되는 TCHAR 매크로를 문자 형식으로 사용해야 합니다. wchar_t 및 관련된 API 대신 TCHAR 및 TCHAR 버전의 다양한 API로 전환하면 간단히 _UNICODE 대신 _MBCS 매크로를 정의하여 코드의 MBCS 버전으로 돌아갈 수 있습니다. TCHAR 외에도 널리 사용되는 typedef, 매크로 및 함수의 다양한 TCHAR 버전이 있습니다. 예를 들어 LPCSTR 대신 LPCTSTR을 사용합니다. 프로젝트 속성 대화 상자의 **구성 속성** 아래, **일반** 섹션에서 **문자 집합** 속성을 **MBCS 문자 집합 사용**에서 **유니코드 문자 집합 사용**으로 변경합니다. 이 설정은 컴파일하는 동안 미리 정의되는 매크로에 영향을 줍니다. UNICODE 매크로와 _UNICODE 매크로가 둘 다 있습니다. 프로젝트 속성은 두 매크로에 일관되게 적용됩니다. Windows 헤더는 unicode를 사용하고 MFC와 같은 Visual C++ 헤더는 _UNICODE를 사용하지만 하나가 정의될 때 다른 하나도 항상 정의됩니다.  
+ UTF-16 유니코드로 포팅하는 경우 MBCS로 컴파일하는 옵션을 원하는지 여부를 결정해야 합니다.  MBCS를 지원하는 옵션이 필요한 경우 하는 동안 _MBCS 또는 _UNICODE가 컴파일 중에 정의되었는지 여부에 따라 `char` 또는 `wchar_t`로 확인되는 TCHAR 매크로를 문자 형식으로 사용해야 합니다. `wchar_t` 및 관련 API 대신 TCHAR 및 TCHAR 버전의 다양한 API로 전환하면 간단히 _UNICODE 대신 _MBCS 매크로를 정의하여 MBCS 버전의 코드로 돌아갈 수 있습니다. TCHAR 외에도 널리 사용되는 typedef, 매크로 및 함수의 다양한 TCHAR 버전이 있습니다. 예를 들어 LPCSTR 대신 LPCTSTR을 사용합니다. 프로젝트 속성 대화 상자의 **구성 속성** 아래, **일반** 섹션에서 **문자 집합** 속성을 **MBCS 문자 집합 사용**에서 **유니코드 문자 집합 사용**으로 변경합니다. 이 설정은 컴파일하는 동안 미리 정의되는 매크로에 영향을 줍니다. UNICODE 매크로와 _UNICODE 매크로가 둘 다 있습니다. 프로젝트 속성은 두 매크로에 일관되게 적용됩니다. Windows 헤더는 unicode를 사용하고 MFC와 같은 Visual C++ 헤더는 _UNICODE를 사용하지만 하나가 정의될 때 다른 하나도 항상 정의됩니다.  
   
  TCHAR를 사용하여 MBCS에서 UTF-16 유니코드로 포팅하는 방법에 대한 유용한 [가이드](http://msdn.microsoft.com/library/cc194801.aspx)가 있습니다. 이 경로를 선택합니다. 먼저, **문자 집합** 속성을 **유니코드 문자 집합 사용**으로 변경하고 프로젝트를 다시 빌드합니다.  
   
@@ -555,7 +556,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);  
 ```  
   
- _T 매크로는 문자열 리터럴이 MBCS 또는 UNICODE 설정에 따라 char 문자열이나 wchar_t 문자열로 컴파일되게 하는 효과가 있습니다. Visual Studio에서 모든 문자열을 _T로 바꾸려면 먼저 **빠른 바꾸기**(키보드: Ctrl+F) 상자 또는 **파일에서 바꾸기**(키보드: Ctrl+Shift+H)를 열고 **정규식 사용** 확인란을 선택합니다. `((\".*?\")|('.+?'))`를 검색 텍스트로 입력하고 `_T($1)`를 바꿀 텍스트로 입력합니다. _T 매크로가 일부 문자열 앞뒤에 이미 있는 경우 이 절차에서 다시 추가하며, `#include`를 사용하는 경우와 같이 _T를 원하지 않는 경우도 있으므로 **모두 바꾸기** 대신 **다음 찾기**를 사용하는 것이 가장 좋습니다.  
+ _T 매크로는 MBCS 또는 UNICODE 설정에 따라 문자열 리터럴을 `char` 문자열 또는 `wchar_t` 문자열로 컴파일하는 효과가 있습니다. Visual Studio에서 모든 문자열을 _T로 바꾸려면 먼저 **빠른 바꾸기**(키보드: Ctrl+F) 상자 또는 **파일에서 바꾸기**(키보드: Ctrl+Shift+H)를 열고 **정규식 사용** 확인란을 선택합니다. `((\".*?\")|('.+?'))`를 검색 텍스트로 입력하고 `_T($1)`를 바꿀 텍스트로 입력합니다. _T 매크로가 일부 문자열 앞뒤에 이미 있는 경우 이 절차에서 다시 추가하며, `#include`를 사용하는 경우와 같이 _T를 원하지 않는 경우도 있으므로 **모두 바꾸기** 대신 **다음 찾기**를 사용하는 것이 가장 좋습니다.  
   
  이 특정 함수 [wsprintf](https://msdn.microsoft.com/library/windows/desktop/ms647550.aspx)는 실제로 Windows 헤더에서 정의되며, 해당 설명서에서 가능한 버퍼 오버런으로 인해 사용하지 않도록 권장합니다. `szTmp` 버퍼에 대한 크기가 지정되지 않으므로 함수에서 버퍼가 기록되는 모든 데이터를 포함할 수 있는지 확인할 방법이 없습니다. 보안 CRT로 포팅하는 방법에 대한 다음 섹션을 참조하세요. 여기서는 다른 유사한 문제를 해결합니다. 결국 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)로 바꾸었습니다.  
   
@@ -573,7 +574,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- 문자열을 복사하기 위한 TCHAR strcpy 함수인 _tcscpy 함수가 사용되었지만 할당된 버퍼는 char 버퍼였습니다. 이 코드는 TCHAR로 쉽게 변경됩니다.  
+ 문자열을 복사하기 위한 TCHAR strcpy 함수인 _tcscpy 함수가 사용되었지만 할당된 버퍼는 `char` 버퍼였습니다. 이 코드는 TCHAR로 쉽게 변경됩니다.  
   
 ```cpp  
 pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];  
@@ -581,7 +582,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- 마찬가지로, 컴파일러 오류가 발생할 경우 `LPSTR`(긴 문자열 포인터) 및 `LPCSTR`(긴 상수 문자열 포인터)를 `LPTSTR`(긴 TCHAR 문자열 포인터) 및 `LPCTSTR`(긴 상수 TCHAR 문자열 포인터)로 각각 변경했습니다. 각 상황을 개별적으로 검사해야 했으므로 전체 검색 및 바꾸기를 사용하여 이러한 바꾸기를 수행하지는 않았습니다. A 접미사가 있는 Windows 구조를 사용하는 특정 Windows 메시지를 처리하는 경우와 같이 char 버전이 필요한 경우도 있습니다. Windows API에서 접미사 A는 ASCII 또는 ANSI를 의미하고(MBCS에도 적용됨), 접미사 W는 와이드 문자 또는 UTF-16 유니코드를 의미합니다. 이 명명 패턴은 Windows 헤더에서 사용되지만, Spy++ 코드에서 MBCS 버전에서만 이미 정의된 함수의 유니코드 버전을 추가해야 하는 경우에도 따랐습니다.  
+ 마찬가지로, 컴파일러 오류가 발생할 경우 `LPSTR`(긴 문자열 포인터) 및 `LPCSTR`(긴 상수 문자열 포인터)를 `LPTSTR`(긴 TCHAR 문자열 포인터) 및 `LPCTSTR`(긴 상수 TCHAR 문자열 포인터)로 각각 변경했습니다. 각 상황을 개별적으로 검사해야 했으므로 전체 검색 및 바꾸기를 사용하여 이러한 바꾸기를 수행하지는 않았습니다. A 접미사가 있는 Windows 구조체를 사용하는 특정 Windows 메시지를 처리할 때와 같이 `char` 버전이 필요한 경우도 있습니다. Windows API에서 접미사 A는 ASCII 또는 ANSI를 의미하고(MBCS에도 적용됨), 접미사 W는 와이드 문자 또는 UTF-16 유니코드를 의미합니다. 이 명명 패턴은 Windows 헤더에서 사용되지만, Spy++ 코드에서 MBCS 버전에서만 이미 정의된 함수의 유니코드 버전을 추가해야 하는 경우에도 따랐습니다.  
   
  올바르게 확인되는 버전을 사용하기 위해 형식을 바꾸어야 하는 경우도 있었습니다(예: WNDCLASSA 대신 WNDCLASS 사용).  
   
