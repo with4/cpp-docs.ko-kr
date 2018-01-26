@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a670d18ab64637b54b063cfeb38f8d0cd8fee5d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variantt-class"></a>_variant_t 클래스
 **Microsoft 전용**  
@@ -53,13 +53,13 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[연산자 =](../cpp/variant-t-operator-equal.md)|기존 `_variant_t` 개체에 새 값을 할당합니다.|  
-|[연산자 = =,! =](../cpp/variant-t-relational-operators.md)|두 `_variant_t` 개체가 같음 또는 같지 않음을 비교합니다.|  
+|[operator ==, !=](../cpp/variant-t-relational-operators.md)|두 `_variant_t` 개체가 같음 또는 같지 않음을 비교합니다.|  
 |[추출기](../cpp/variant-t-extractors.md)|캡슐화 된 데이터를 추출 **VARIANT** 개체입니다.|  
   
 **Microsoft 전용 종료**  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** comutil.h  
+ **헤더:** \<comutil.h >  
   
  **Lib:** 에서는 comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한 내용은)  
   

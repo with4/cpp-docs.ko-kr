@@ -12,9 +12,9 @@ helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
 - exception handling [C++], timing
-- SETJMPEX.H
+- setjmpex.h
 - termination handlers [C++], timing
-- SETJMP.H
+- setjmp.h
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 5d4b522286a727f428cd445bf67d12a1360b49b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9e14f89bba02a53af5956ec2a2dcb52bfb1a38c
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>예외 처리에서의 타이밍: 요약
 종료 처리기는 `__try` 문 블록이 종료되는 방법과 관계없이 실행됩니다. `__try` 블록 밖으로의 점프, 제어를 블록 밖으로 전송하는 `longjmp` 문, 예외 처리로 인한 스택 해제 등이 원인입니다.  
   
 > [!NOTE]
->  Visual C++는 `setjmp` 및 `longjmp` 문의 두 가지 형태를 지원합니다. 빠른 버전은 종료 처리를 건너뛰지만 더 효율적입니다. 이 버전을 사용하려면 SETJMP.H 파일을 포함하십시오. 다른 버전은 이전 단락에 설명된 대로 종료 처리를 지원합니다. 이 버전을 사용하려면 SETJMPEX.H 파일을 포함하십시오. 빠른 버전의 성능 향상 정도는 하드웨어 구성에 따라 달라집니다.  
+>  Visual C++는 `setjmp` 및 `longjmp` 문의 두 가지 형태를 지원합니다. 빠른 버전은 종료 처리를 건너뛰지만 더 효율적입니다. 이 버전을 사용 하려면 파일을 포함 \<setjmp.h > 합니다. 다른 버전은 이전 단락에 설명된 대로 종료 처리를 지원합니다. 이 버전을 사용 하려면 파일을 포함 \<setjmpex.h > 합니다. 빠른 버전의 성능 향상 정도는 하드웨어 구성에 따라 달라집니다.  
   
  운영 체제는 다른 코드를 실행하기 전에 예외 처리기의 본문을 포함한 모든 종료 처리기를 적절한 순서대로 실행합니다.  
   

@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: cfb51d4188917ebcdbad2fead13a9792875d2f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71a4be4ebf6029d0573aee71d74bf9faa241319f
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Microsoft 전용**  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **IErrorInfo** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- comdef.h에서 정의된 `_com_raise_error`는 동일한 이름과 프로토타입의 사용자 작성 버전으로 교체할 수 있습니다. 이는 `#import`를 사용하고 C++ 예외 처리는 사용하지 않으려는 경우 실행할 수 있습니다. 사례를 사용자 버전의에서 **_com_raise_error** 수행 하도록 결정할 수도 `longjmp` 또는 메시지 상자를 표시 하 고 중지 합니다. 컴파일러 COM 지원 코드가 반환을 예상하고 있지 않기 때문에 사용자 버전은 반환할 수 없습니다.  
+ `_com_raise_error`에 정의 된 \<comdef.h >의 동일한 이름과 프로토타입의 사용자 작성 버전으로 대체할 수 있습니다. 이는 `#import`를 사용하고 C++ 예외 처리는 사용하지 않으려는 경우 실행할 수 있습니다. 사례를 사용자 버전의에서 **_com_raise_error** 수행 하도록 결정할 수도 `longjmp` 또는 메시지 상자를 표시 하 고 중지 합니다. 컴파일러 COM 지원 코드가 반환을 예상하고 있지 않기 때문에 사용자 버전은 반환할 수 없습니다.  
   
  사용할 수도 있습니다 [_set_com_error_handler](../cpp/set-com-error-handler.md) 기본 오류 처리 함수를 교체할 수 있습니다.  
   
@@ -60,7 +60,7 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 **Microsoft 전용 종료**  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** comdef.h  
+ **헤더:** \<comdef.h >  
   
  **Lib:** 경우는 **wchar_t is Native Type** 컴파일러 옵션이 설정 되어 있는 경우 comsuppw.lib 또는 comsuppwd.lib를 사용 합니다. 경우 **wchar_t is Native Type** 해제, comsupp.lib를 사용 합니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.  
   

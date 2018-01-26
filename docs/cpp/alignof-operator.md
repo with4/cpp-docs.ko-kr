@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faceca31928d9c49f3c1cf5b933a65767ece7453
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alignof-operator"></a>__alignof 연산자
 C++11에서는 지정된 형식의 맞춤(바이트)을 반환하는 `alignof` 연산자를 소개합니다. 최대 이식성을 제공하려면 Microsoft 전용 __alignof 연산자가 아닌 alignof 연산자를 사용해야 합니다.  
@@ -40,10 +40,7 @@ C++11에서는 지정된 형식의 맞춤(바이트)을 반환하는 `alignof` �
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      __alignof(   
-   type    
-)  
+  __alignof( type )
 ```  
   
 ## <a name="remarks"></a>설명  
@@ -51,13 +48,13 @@ C++11에서는 지정된 형식의 맞춤(바이트)을 반환하는 `alignof` �
   
 |식|값|  
 |----------------|-----------|  
-|**__alignof (char)**|1|  
-|**__alignof (short)**|2|  
-|**__alignof (int)**|4|  
-|**__alignof ( \__int64)**|8|  
-|**__alignof (float)**|4|  
+|**__alignof( char )**|1|  
+|**__alignof( short )**|2|  
+|**__alignof( int )**|4|  
+|**__alignof( \__int64 )**|8|  
+|**__alignof( float )**|4|  
 |**__alignof (double)**|8|  
-|**__alignof (char\* )**|4|  
+|**__alignof( char\* )**|4|  
   
  `__alignof` 값은 기본 유형에 대해 `sizeof`의 값과 동일합니다. 그러나 다음과 같은 예제를 고려해야 합니다.  
   
@@ -92,7 +89,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [__unaligned](../cpp/unaligned.md)  
   
--   [/Zp (구조체 멤버 맞춤)](../build/reference/zp-struct-member-alignment.md)  
+-   [/Zp(구조체 멤버 맞춤)](../build/reference/zp-struct-member-alignment.md)  
   
 -   [구조체 맞춤 예제](../build/examples-of-structure-alignment.md) (x64 전용)  
   

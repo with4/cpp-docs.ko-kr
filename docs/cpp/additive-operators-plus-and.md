@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additive-operators--and--"></a>가감 연산자: + 및 -
 ## <a name="syntax"></a>구문  
@@ -55,21 +55,21 @@ expression - expression
   
 |형식|의미|  
 |----------|-------------|  
-|*산술 연산*|정수 계열 및 부동 형식을 전체적으로 "산술" 형식이라고 합니다.|  
-|*정수 계열*|모든 크기(long, short)의 char 및 int 형식과 열거형은 "정수 계열" 형식입니다.|  
-|*스칼라*|스칼라 피연산자는 산술 또는 포인터 형식의 피연산자입니다.|  
+|*arithmetic*|정수 계열 및 부동 형식을 전체적으로 "산술" 형식이라고 합니다.|  
+|*integral*|모든 크기(long, short)의 char 및 int 형식과 열거형은 "정수 계열" 형식입니다.|  
+|*scalar*|스칼라 피연산자는 산술 또는 포인터 형식의 피연산자입니다.|  
   
  이러한 연산자의 올바른 조합은 다음과 같습니다.  
   
- *산술* + *산술*  
+ *arithmetic* + *arithmetic*  
   
- *스칼라* + *정수 계열*  
+ *scalar* + *integral*  
   
- *정수 계열* + *스칼라*  
+ *integral* + *scalar*  
   
- *산술* - *산술*  
+ *arithmetic* - *arithmetic*  
   
- *스칼라* - *스칼라*  
+ *scalar* - *scalar*  
   
  더하기와 빼기는 동등한 연산이 아닙니다.  
   
@@ -116,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 >  `pIntArray = pIntArray + 1` 형태의 코드는 C++ 프로그램에서 거의 발견되지 않습니다. 증분을 수행하려면 `pIntArray++` 또는 `pIntArray += 1` 형태를 사용하는 것이 좋습니다.  
   
 ## <a name="pointer-subtraction"></a>포인터 빼기  
- 두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식은 표준 include 파일 STDDEF.H에 정의된 ptrdiff_t 형식의 부호 있는 정수 계열 결과를 생성합니다.  
+ 두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식은 ptrdiff_t 형식의 부호 있는 정수 계열 결과 생성 (표준 포함 파일에 정의 된 \<stddef.h >).  
   
  피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기 값은에 대 한 포인터는 (*n* - *i*) 번째 배열 요소 여기서  *n*  요소를 가리키고 원래 포인터와 *i* 두 번째 피연산자의 정수 값입니다.  
   

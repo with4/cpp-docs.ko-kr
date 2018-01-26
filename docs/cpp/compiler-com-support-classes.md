@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54377893135c2b933c25387bccbb750d2f3eb734
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="compiler-com-support-classes"></a>컴파일러 COM 지원 클래스
 **Microsoft 전용**  
   
- 표준 클래스는 COM 형식 중 일부를 지원하는 데 사용됩니다. 클래스는 comdef.h 및 형식 라이브러리에서 생성된 헤더 파일에 정의됩니다.  
+ 표준 클래스는 COM 형식 중 일부를 지원하는 데 사용됩니다. 클래스에 정의 된 \<comdef.h > 및 형식 라이브러리에서 생성 된 헤더 파일입니다.  
   
 |클래스|용도|  
 |-----------|-------------|  

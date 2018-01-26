@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>_com_error 클래스
 **Microsoft 전용**  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[연산자 =](../cpp/com-error-operator-equal.md)|기존 `_com_error` 개체를 다른 개체에 할당합니다.|  
+|[operator =](../cpp/com-error-operator-equal.md)|기존 `_com_error` 개체를 다른 개체에 할당합니다.|  
   
 ### <a name="extractor-functions"></a>기능 추출기  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[설명](../cpp/com-error-description.md)|호출 `IErrorInfo::GetDescription` 함수입니다.|  
 |[HelpContext](../cpp/com-error-helpcontext.md)|호출 `IErrorInfo::GetHelpContext` 함수입니다.|  
-|[도움말 파일](../cpp/com-error-helpfile.md)|호출 `IErrorInfo::GetHelpFile` 함수|  
+|[HelpFile](../cpp/com-error-helpfile.md)|호출 `IErrorInfo::GetHelpFile` 함수|  
 |[Source](../cpp/com-error-source.md)|호출 `IErrorInfo::GetSource` 함수입니다.|  
 |[GUID](../cpp/com-error-guid.md)|호출 `IErrorInfo::GetGUID` 함수입니다.|  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 **Microsoft 전용 종료**  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** comdef.h  
+ **헤더:** \<comdef.h >  
   
  `Lib:`에서는 comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한 내용은)  
   

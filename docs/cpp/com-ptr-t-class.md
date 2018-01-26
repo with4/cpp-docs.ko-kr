@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 클래스
 **Microsoft 전용**  
@@ -60,14 +60,14 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[연산자 =](../cpp/com-ptr-t-operator-equal.md)|기존 `_com_ptr_t` 개체에 새 값을 할당합니다.|  
-|[연산자 = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|스마트 포인터 개체를 다른 스마트 포인터, 원시 인터페이스 포인터를 비교 또는 **NULL**합니다.|  
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|기존 `_com_ptr_t` 개체에 새 값을 할당합니다.|  
+|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|스마트 포인터 개체를 다른 스마트 포인터, 원시 인터페이스 포인터를 비교 또는 **NULL**합니다.|  
 |[추출기](../cpp/com-ptr-t-extractors.md)|캡슐화된 COM 인터페이스 포인터를 추출합니다.|  
   
 **Microsoft 전용 종료**  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** comip.h  
+ **헤더:** \<comip.h >  
   
  **Lib:** 에서는 comsuppw.lib 또는 comsuppwd.lib (참조 [/zc: wchar_t (wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 자세한 내용은)  
   

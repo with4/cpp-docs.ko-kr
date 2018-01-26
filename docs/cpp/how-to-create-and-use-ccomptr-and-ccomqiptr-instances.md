@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 342fd293983840257e83e287df3a8ef6767826c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35f007cadb3afca1ccacebf1e831ba761602c904
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>방법: CComPtr 및 CComQIPtr 인스턴스 만들기 및 사용
 클래식 Windows 프로그래밍에서 라이브러리는 종종 COM 개체(보다 정확하게는 COM 서버)로 구현됩니다. 많은 Windows 운영 체제 구성 요소가 COM 서버로 구현되므로 많은 참가자가 이 형식의 라이브러리를 제공합니다. COM의 기본 사항에 대한 자세한 내용은 [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)을 참조하세요.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` 및 해당 상대는 ATL의 일부이며 atlcomcli.h에 정의됩니다. `_com_ptr_t` 은 Stdlib.h에서 선언됩니다. 컴파일러는 형식 라이브러리에 대한 래퍼 클래스를 생성할 때 `_com_ptr_t` 의 특수화를 만듭니다.  
+ `CComPtr`및 해당 상대는 ATL의 일부에 정의 된 \<atlcomcli.h > 합니다. `_com_ptr_t`에 선언 된 \<comip.h > 합니다. 컴파일러는 형식 라이브러리에 대한 래퍼 클래스를 생성할 때 `_com_ptr_t` 의 특수화를 만듭니다.  
   
 ## <a name="example"></a>예  
  또한 ATL은 COM 개체를 쿼리하여 추가 인터페이스를 검색할 수 있도록 보다 간단한 구문이 있는 `CComQIPtr`을 제공합니다. 그러나 `CComPtr` 에서 수행할 수 있는 모든 작업을 수행하고 원시 COM 인터페이스 포인터와 의미 체계가 보다 일치하므로 `CComQIPtr` 을 사용하는 것이 좋습니다. `CComPtr` 를 사용하여 인터페이스를 쿼리하는 경우 out 매개 변수에 새 인터페이스 포인터가 배치됩니다. 호출에 실패한 경우 일반적인 COM 패턴인 HRESULT가 반환됩니다. `CComQIPtr`을 사용하는 경우 반환 값은 포인터 자체이며, 호출에 실패한 경우 내부 HRESULT 반환 값에 액세스할 수 없습니다. 다음 두 줄은 `CComPtr` 과 `CComQIPtr` 의 오류 처리 메커니즘 차이를 보여 줍니다.  

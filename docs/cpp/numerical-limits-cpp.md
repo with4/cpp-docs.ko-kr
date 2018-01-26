@@ -15,14 +15,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 496bbd686b0baaacda42de29c825c9539fb50371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e531de79621eb3a010a41c7e5059dd5b76b2c2fc
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="numerical-limits-c"></a>숫자 제한 (C++)
-두 표준 포함 파일인 LIMITS.H와 FLOAT.H는 특정 형식의 변수가 보유할 수 있는 최소값 및 최대값이나 수치 한계를 정의합니다. 이러한 최소값 및 최대값으로 ANSI 3. 동일한 데이터 표현을 사용 하는 모든 c + + 컴파일러에 이식 가능 하도록 보장 제한 합니다. 파일을 포함 하는 H 정의 [정수 계열 형식에 대 한 수치 한계](../cpp/integer-limits.md), 및 FLOAT입니다. H 정의 [부동 형식에 대 한 수치 한계](../cpp/floating-limits.md)합니다.  
+두 표준 포함 파일인 \<limits.h > 및 \<float.h >, 지정 된 형식의 변수가 보유할 수 있는 최소 및 최대 값 나 수치 한계를 정의 합니다. 이러한 최소값 및 최대값으로 ANSI 3. 동일한 데이터 표현을 사용 하는 모든 c + + 컴파일러에 이식 가능 하도록 보장 \<limits.h > 포함 파일 정의 [정수 계열 형식에 대 한 수치 한계](../cpp/integer-limits.md), 및 \<float.h > 정의 [부동 형식에 대 한 수치 한계](../cpp/floating-limits.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [기본 개념](../cpp/basic-concepts-cpp.md)

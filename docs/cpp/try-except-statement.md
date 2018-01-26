@@ -37,11 +37,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>try-except 문
 
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-포인터 형식 `PEXCEPTION_RECORD` 및 `PCONTEXT` WINNT 포함 파일에 정의 됩니다. H, 및 `_EXCEPTION_RECORD` 및 `_CONTEXT` EXCPT 포함 파일에 정의 됩니다. H
+포인터 형식 `PEXCEPTION_RECORD` 및 `PCONTEXT` 포함 파일에 정의 된 \<winnt.h >, 및 `_EXCEPTION_RECORD` 및 `_CONTEXT` 포함 파일에 정의 된 \<excpt.h >
 
 사용할 수 있습니다 `GetExceptionCode` 예외 처리기 내에서. 사용할 수 있습니다 `GetExceptionInformation` 예외 필터 식 내 에서만. 해당 내장 함수가 가리키는 정보는 일반적으로 스택에 있으며, 예외 처리기로 제어가 전달되면 더 이상 사용할 수 없습니다.
 
 내장 함수 `AbnormalTermination` 종료 처리기 내에서 사용할 수 있습니다. 경우에 0을 반환의 본문은 **try-finally** 문은 순차적으로 종료 합니다. 다른 모든 경우에는 1이 반환됩니다.
 
-EXCPT.H는 다음과 같은 내장 함수에 대해 일부 대체 이름을 정의합니다.
+excpt.h 이러한 내장 함수에 대 한 일부 대체 이름을 정의합니다.
 
 `GetExceptionCode`가 같음`_exception_code`
 

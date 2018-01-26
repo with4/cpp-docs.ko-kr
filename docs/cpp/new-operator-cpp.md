@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>new 연산자 (C++)
 개체 또는 개체의 배열에 대 한 메모리를 할당 *형식-이름이* 스토어에서 무료 및 개체에는 적절 한 형식의 0이 아닌 포인터를 반환 합니다.  
@@ -69,10 +69,10 @@ delete *p;
   
  다음 목록에는 설명의 문법 요소 **새**:  
   
- *배치*  
+ *placement*  
  재정의 한 경우 추가 인수를 전달 하는 방법을 제공 **새**합니다.  
   
- *형식 이름*  
+ *type-name*  
  기본 제공 또는 사용자 정의 형식 중에서 할당할 형식을 지정합니다. 형식 사양이 복잡한 경우 괄호로 묶어 바인딩 순서를 강제로 지정할 수 있습니다.  
   
  *initializer*  
@@ -238,7 +238,7 @@ int main()
  컴파일러에서 발생 하는 경우는 **새** 형식의 개체를 할당 연산자 `type`에 대 한 호출을 내보내려면 `type` **:: 연산자 new (sizeof (** `type` **))**  또는 사용자 정의 하지 않는 경우 `operator new` 정의 된 **:: 연산자 new (sizeof (** `type` **))**합니다. 따라서는 **새** 연산자는 개체에 대 한 올바른 양의 메모리를 할당할 수 있습니다.  
   
 > [!NOTE]
->  에 대 한 인수 `operator new` 유형의 **size_t**합니다. 이 형식은 DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H 및 TIME.H에서 정의됩니다.  
+>  에 대 한 인수 `operator new` 유형의 **size_t**합니다. 이 형식에 정의 된 \<c t. h >, \<malloc.h >, \<y. h >, \<c h. h >, \<stddef.h >, \<. h >, \<stdlib.h >, \<g. h >, 및 \<. h >입니다.  
   
  문법에서 옵션을 사용 하면 *배치* (에 대 한 문법 참조 [new 연산자](../cpp/new-operator-cpp.md)). *배치* 의 사용자 정의 구현에 대 한 매개 변수를 사용할 수 `operator new`; 추가 정보를 전달 하도록 허용 `operator new`합니다. 식으로는 *배치* 와 같은 필드 `T *TObject = new ( 0x0040 ) T;` 으로 변환 `T *TObject = T::operator new( sizeof( T ), 0x0040 );` 클래스 T 해야 하는 경우 멤버 연산자 새로 만들었거나, 그렇지 않으면 `T *TObject = ::operator new( sizeof( T ), 0x0040 );`합니다.  
   
