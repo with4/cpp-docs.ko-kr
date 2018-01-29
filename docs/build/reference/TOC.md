@@ -102,6 +102,7 @@
 ##### [/Qpar(자동 평행화 도우미)](qpar-auto-parallelizer.md)
 ##### [/Qpar-report(자동 평행화 도우미 보고 수준)](qpar-report-auto-parallelizer-reporting-level.md)
 ##### [/Qsafe_fp_loads](qsafe-fp-loads.md)
+##### [/Qspectre](qspectre.md)
 ##### [/Qvec-report(자동 벡터화 도우미 보고 수준)](qvec-report-auto-vectorizer-reporting-level.md)
 #### [/RTC(런타임 오류 검사)](rtc-run-time-error-checks.md)
 #### [/sdl(추가 보안 검사 사용)](sdl-enable-additional-security-checks.md)
