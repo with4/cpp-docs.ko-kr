@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ffabd4c9ebb3f439fa1e1e70b06def3506b1227d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b55aef95cbe34dc51910035f4a731eed3a6a5679
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 데스크톱 구성 요소
 ATL 참조는 ATL 액티브 템플릿 라이브러리 (), 모델 COM (Component Object) 개체의 프로그래밍을 단순화 하는 템플릿 기반 c + + 클래스 집합인에 설명 합니다. 완전히 활용 하기 위해 ATL를 COM에 대 한 작업 지식이 가장 좋습니다.  
@@ -48,7 +51,7 @@ ATL 참조는 ATL 액티브 템플릿 라이브러리 (), 모델 COM (Component 
  [ATL Typedefs](../atl/reference/atl-typedefs.md)  
  사전순으로 정렬 되어 한 형식 정의에 참조 자료를 제공 합니다.  
   
- [아키타](../atl/reference/atl-archetypes.md)  
+ [Archetypes](../atl/reference/atl-archetypes.md)  
  컬렉션 메서드, 데이터 멤버, 정적 함수, 형식 정의 또는 사전순으로 나열 된 기타 기능을 제공 하는 이론적 클래스는 ATL 아키타에 대 한 링크를 제공 합니다.  
   
  [사용 되지 않는 ATL 항목](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
@@ -66,7 +69,3 @@ ATL 참조는 ATL 액티브 템플릿 라이브러리 (), 모델 COM (Component 
   
  [OLE DB 템플릿](../data/oledb/ole-db-templates.md)  
  흔히 사용되는 여러 OLE DB 인터페이스를 구현하는 템플릿 클래스 집합인 OLE DB 소비자 및 공급자 템플릿에 대한 참조 자료를 제공합니다.  
-  
- [Visual C++ 라이브러리](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- ATL, MFC, OLE DB 템플릿, C 런타임 라이브러리, C++ 표준 라이브러리를 포함하여 Visual C++에 제공되는 다양한 라이브러리에 대한 링크를 제공합니다.
-

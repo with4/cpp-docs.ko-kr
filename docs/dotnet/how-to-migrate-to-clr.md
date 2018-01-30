@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - upgrading Visual C++ applications, /clr compiler option
 - compiling native code [C++]
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>방법: /clr로 마이그레이션
 이 항목에서는 네이티브 코드를 컴파일할 때 발생 하는 문제를 설명 **/clr** (참조 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md) 자세한 정보에 대 한). **/clr** Visual c + + 모듈을 호출 하 고 관리 되지 않는 모듈과 호환성을 유지 하면서.NET 어셈블리를 호출할 수 있습니다. 참조 [혼합 (네이티브 / 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md) 및 [네이티브 및.NET 상호 운용성](../dotnet/native-and-dotnet-interoperability.md) 로 컴파일할의 장점에 대 한 자세한 내용은 **/clr**합니다.  
@@ -147,7 +149,7 @@ COMObj2->Method(args);  // C++ equivalent
 ## <a name="using-new-visual-c-features"></a>Visual c + +의 새로운 기능을 사용 하 여  
  다음 프로그램 응용 프로그램을 컴파일하고, 링크 및 실행을 시작할 수 있습니다로 컴파일된 모든 모듈에서.NET 기능을 사용 하 여 **/clr**합니다. 자세한 내용은 [런타임 플랫폼의 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)을 참조하세요.  
   
- Managed Extensions for c + +를 사용한 경우에 새 구문을 사용 하 여 코드를 변환할 수 있습니다. 구문 차이점 요약에 대 한 참조는 [(NOTINBUILD) Managed Extensions for c + + 구문 업그레이드 검사 목록](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada)합니다. Managed Extensions for c + + 변환에 대 한 세부 정보를 참조 하십시오. [C + + /CLI 마이그레이션 입문](../dotnet/cpp-cli-migration-primer.md)합니다.  
+ Managed Extensions for c + +를 사용한 경우에 새 구문을 사용 하 여 코드를 변환할 수 있습니다. Managed Extensions for c + + 변환에 대 한 세부 정보를 참조 하십시오. [C + + /CLI 마이그레이션 입문](../dotnet/cpp-cli-migration-primer.md)합니다.  
   
  .NET에서 Visual c + + 프로그래밍에 대 한 내용은 다음을 참조 합니다.  
   

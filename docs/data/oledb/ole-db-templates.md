@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB templates
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 40ada455ffa5318e280860504705e1f8fb5ea4b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3078fa97d298856e302b1f835fdbec2f3d489b63
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="ole-db-templates"></a>OLE DB 템플릿
 OLE DB 템플릿 쉽게 OLE DB 데이터 액세스를 확인합니다. Visual c + +는 여러 가지 자주 사용 되는 OLE DB 인터페이스를 구현 하는 템플릿 클래스를 제공 합니다. OLE DB (소비자) 클라이언트 응용 프로그램을 작성 하려면 Visual c + + 소비자 템플릿과 공급자 템플릿으로 서버 (공급자) 응용 프로그램을 작성을 사용할 수 있습니다.  
@@ -64,9 +68,6 @@ OLE DB 템플릿 쉽게 OLE DB 데이터 액세스를 확인합니다. Visual c 
   
  [액티브 템플릿 라이브러리 (ATL) 참조](../../atl/atl-com-desktop-components.md)  
  COM 개체를 손쉽게 프로그래밍할 수 있게 하는 템플릿 기반 C++ 클래스 집합인 ATL 라이브러리에 대한 참고 자료를 제공합니다.  
-  
- [Visual C++ 라이브러리](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- ATL, MFC, OLE DB 템플릿, C 런타임 라이브러리, C++ 표준 라이브러리를 포함하여 Visual C++에 제공되는 다양한 라이브러리에 대한 링크를 제공합니다.  
   
  [디버깅](/visualstudio/debugger/debugging-in-visual-studio)  
  Visual Studio 디버거를 사용하여 응용 프로그램이나 저장 프로시저의 논리적 오류를 수정하는 방법을 설명하는 항목의 링크를 제공합니다.

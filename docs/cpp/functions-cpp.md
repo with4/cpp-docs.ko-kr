@@ -1,13 +1,15 @@
 ---
 title: "함수 (c + +) | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88031e4f47bea363c441986c72d5f890c03447f7
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="functions-c"></a>함수(C++)
 함수는 일부 작업을 수행하는 코드 블록입니다. 함수는 호출자가 함수에 인수를 전달할 수 있도록 하는 입력 매개 변수를 필요에 따라 정의할 수 있습니다. 함수는 필요에 따라 출력으로 값을 반환할 수 있습니다. 함수는 이상적으로 함수의 기능을 명확하게 설명하는 이름을 사용하여 재사용 가능한 단일 블록에서 일반 작업을 캡슐화하는 데 유용합니다. 다음 함수는 호출자의 두 정수 및; 합계를 반환 합니다. `a` 및 `b` 는 *매개 변수* 형식의 `int`합니다.  
@@ -50,6 +53,8 @@ int main()
  함수 길이에 실제적인 제한은 없지만 좋은 디자인은 잘 정의된 단일 작업을 수행하는 함수를 목표로 합니다. 복잡한 알고리즘은 가능하면 이해하기 쉬운 더 간단한 함수로 세분화해야 합니다.  
   
  클래스 범위에서 정의되는 함수는 멤버 함수라고 합니다. 다른 언어와 달리 C++에서는 네임스페이스 범위(암시적 전역 네임스페이스 포함)에서 함수를 정의할 수도 있습니다. 이러한 함수는 호출 *가능한 함수* 또는 *비멤버 함수*; 표준 라이브러리에서 널리 사용 됩니다.  
+
+함수가 될 수 있습니다 *오버 로드 된*, 서로 다른 버전의 함수를 의미 하는 공유할 수 있습니다 이름이 같은 경우 번호 및/또는 정식 매개 변수 형식에 따라 달라 집니다. 자세한 내용은 참조 [함수 오버 로드](../cpp/function-overloading.md)합니다.
   
 ## <a name="parts-of-a-function-declaration"></a>함수 선언의 요소  
  최소 함수 *선언* 반환 형식, 함수 이름 및 매개 변수 목록 (비어 있을 수 있습니다), 컴파일러에 추가 지침을 제공 하는 선택적 키워드와 함께 구성 됩니다. 다음 예제는 함수 선언 합니다.
@@ -127,7 +132,7 @@ int sum(int a, int b)
   
 7.  (멤버 함수만 해당) 멤버 함수에 적용된 `static`은 함수가 클래스의 개체 인스턴스와 연결되어 있지 않음을 의미합니다.  
   
-8.  (비정적 멤버 함수에만 해당) ref 한정자는 시점을 선택 하는 함수 오버 로드를 컴파일러에 지정 하는 암시적 개체 매개 변수 (*이)가 lvalue 참조 및 rvalue 참조입니다.  
+8.  (비정적 멤버 함수에만 해당) ref 한정자는 시점을 선택 하는 함수 오버 로드를 컴파일러에 지정 하는 암시적 개체 매개 변수 (*이)가 lvalue 참조 및 rvalue 참조입니다. 자세한 내용은 참조 [함수 오버 로드](function-overloading.md#ref-qualifiers)합니다. 
   
  다음 그림에서는 함수 정의의 일부분을 보여 줍니다. 음영 처리된 영역은 함수 본문입니다.  
   
@@ -373,7 +378,7 @@ int main()
 }
 ```
 
-4. 반환 값 자체를 사용 하는 것 외에도 "값을 반환할 있습니다" 개수에 관계 없이 함수를 수정 하거나 호출자에 게 제공 하는 개체의 값을 초기화할 수 있도록 참조로 전달에 사용할 매개 변수를 정의 하 여 합니다. 자세한 내용은 참조 [참조 형식 함수 인수](reference-type-function-arguments.md)합니다.
+4. 반환 값 자체를 사용 하는 것 외에도 "값을 반환할 있습니다" 개수에 관계 없이 함수를 수정 하거나 호출자에 게 제공 하는 개체의 값을 초기화할 수 있도록 참조로 전달에 사용할 매개 변수를 정의 하 여 합니다. 자세한 내용은 참조 [참조 형식 함수 인수](reference-type-function-arguments.md)합니다.  
   
 ## <a name="function-pointers"></a>함수 포인터  
  C++은 C 언어와 동일한 방식으로 함수 포인터를 지원합니다. 그러나 일반적으로 함수 개체를 사용하면 형식이 보다 더 안전합니다.  

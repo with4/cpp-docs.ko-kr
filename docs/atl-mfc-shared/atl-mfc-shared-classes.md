@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-f1_keywords: vc.classes.shared
-dev_langs: C++
+f1_keywords:
+- vc.classes.shared
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPoint class, shared class
 - CFileTimeSpan class, shared class
@@ -27,16 +30,17 @@ helpviewer_keywords:
 - CString objects, shared class
 - shared classes
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2da6815b1620d855c6850c657a85e539c3e4b3c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0c05ce62ed0cb118104af3e9cd53671e24c8f8b
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="atlmfc-shared-classes"></a>ATL/MFC 공유 클래스
 이러한 유틸리티 클래스는 MFC DLL을 요구 하지 않고 모든 네이티브 c + + 프로젝트에서 사용할 수 있습니다.  
@@ -52,9 +56,5 @@ ms.lasthandoff: 12/21/2017
  [Microsoft Foundation 클래스 (MFC) 라이브러리 참조](../mfc/mfc-desktop-applications.md)  
  Windows API에 대 한 작성 된 응용 프로그램의 프레임 워크인 프로그램 응용 프로그램 프레임 워크를 구성 하는 클래스 집합인 MFC 라이브러리에 대 한 참조 자료를 제공 합니다.  
   
- [Visual C++ 라이브러리](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- ATL, MFC, OLE DB 템플릿, C 런타임 라이브러리, C++ 표준 라이브러리를 포함하여 Visual C++에 제공되는 다양한 라이브러리에 대한 링크를 제공합니다.  
-  
  [디버깅](/visualstudio/debugger/debugging-in-visual-studio)  
  Visual Studio 디버거를 사용하여 응용 프로그램이나 저장 프로시저의 논리적 오류를 수정하는 방법을 설명하는 항목의 링크를 제공합니다.
-

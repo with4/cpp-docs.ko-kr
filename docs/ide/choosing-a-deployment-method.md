@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - redistributing DLLs
 - manifests [C++]
@@ -19,16 +21,17 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1c444b3319c60b80bdfdc14000a41d65869d0514
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="choosing-a-deployment-method"></a>배포 방법 선택
 Visual c + + 응용 프로그램은 독립적 이며 복사 명령을 사용 하 여 배포할 수 있습니다, 하지 않는 한 배포에 대 한 Windows Installer를 사용 하는 것이 좋습니다. Windows Installer는 설치, 수리 및 제거를 지원하고 응용 프로그램 파일, 종속성 및 레지스트리 항목의 원자성 업데이트도 지원합니다.  
@@ -57,7 +60,5 @@ Visual c + + 응용 프로그램은 독립적 이며 복사 명령을 사용 하
   
 ## <a name="see-also"></a>참고 항목  
  [데스크톱 응용 프로그램 배포](../ide/deploying-native-desktop-applications-visual-cpp.md)   
- [빌드에 없음: 배포 전략 선택](http://msdn.microsoft.com/en-us/ecd632d8-063c-4028-b785-81bba045107b)   
- [Windows Installer 배포 개요](http://msdn.microsoft.com/en-us/3ce4610a-b54f-404e-b650-42f4a55dfc3b)   
  [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)   
  [배포 예제](../ide/deployment-examples.md)

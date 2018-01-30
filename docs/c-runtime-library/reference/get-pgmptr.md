@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: _get_pgmptr
+apiname:
+- _get_pgmptr
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - get_pgmptr
 - _get_pgmptr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - get_pgmptr function
 - _get_pgmptr function
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 962d6198a9daeeca0a79a814da11d1d60438d18f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7dffbed5be8284949e7dbe20b35f64898ae98729
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
 `_pgmptr` 전역 변수의 현재 값을 가져옵니다.  
@@ -61,7 +65,7 @@ errno_t _get_pgmptr(
  성공하는 경우 0을 반환하고, 실패하는 경우 오류 코드를 반환합니다. `pValue`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- `_pgmptr` 전역 변수는 프로세스와 관련 된 실행 파일의 전체 경로 포함 합니다. 자세한 내용은 [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)를 참조하세요.  
+ 호출 `_get_pgmptr` 프로그램 좁은 진입점이 있으면 같은 `main()` 또는 `WinMain()`합니다. `_pgmptr` 전역 변수는 프로세스와 관련 된 실행 파일의 전체 경로 포함 합니다. 자세한 내용은 [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   

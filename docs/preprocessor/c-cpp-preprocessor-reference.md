@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c91928edf1617d8572cf6a6087afecb8e08eec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 66461f2721cae60edbaca80409a3a91cefe6e4ec
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 전처리기 참조
 *C/c + + 전처리기 참조* Microsoft C/c + +에서 구현 되는 전처리기에 설명 합니다. 전처리기는 C 및 C++ 파일이 컴파일러로 전달되기 전에 해당 파일에 대한 준비 작업을 수행합니다. 전처리기를 사용하여 조건에 따라 코드를 컴파일하고, 파일을 삽입하고, 컴파일 시간 오류 메시지를 지정하고, 코드 섹션에 시스템별 규칙을 적용할 수 있습니다.  
@@ -48,9 +51,6 @@ ms.lasthandoff: 12/21/2017
   
  [C/c + + 프로그램 빌드](../build/reference/c-cpp-building-reference.md)  
  컴파일러 및 링커 옵션에 대해 설명하는 항목의 링크를 제공합니다.  
-  
- [Visual C++ 라이브러리](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- ATL, MFC, OLE DB, C 런타임 라이브러리 및 c + + 표준 라이브러리를 포함 하 여 Visual c + +와 함께 제공 되는 다양 한 라이브러리에 대 한 링크를 제공 합니다.  
   
  [Visual C++ 프로젝트 만들기 및 관리](../ide/creating-and-managing-visual-cpp-projects.md)  
  프로젝트 시스템에서 C++ 프로젝트용 파일을 찾기 위해 검색할 디렉터리를 지정할 수 있도록 하는 Visual Studio 사용자 인터페이스에 대해 설명합니다.

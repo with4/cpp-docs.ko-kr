@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>다중 스레딩: 스레드 종료
 두 가지 일반적인 문제 때문 스레드가 종료: 제어 함수 종료 또는 스레드 실행을 완료할 수 없습니다. 백그라운드 인쇄를 위해 스레드를 사용 하는 워드 프로세서를 제어 하는 함수는 정상적으로 종료 성공적으로 완료 된 인쇄 하는 경우. 그러나 사용자가 인쇄 작업을 취소, 백그라운드 인쇄 스레드가 완전히 종료 되어야 합니다. 이 항목에는 각 상황을 구현 하는 방법 및 종료 된 후 스레드 종료 코드를 가져오는 방법을 모두 설명 합니다.  
@@ -58,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 -   설정의 `m_bAutoDelete` 데이터 멤버를 **FALSE**합니다. 이 통해는 `CWinThread` 스레드가 종료 된 후 생존 하는 개체입니다. 에 액세스할 수 있습니다는 `m_hThread` 스레드가 종료 된 후 데이터 멤버입니다. 하지만이 기법을 사용 모르는 경우 제거 해야는 `CWinThread` 프레임 워크는 삭제 하지 않으므로 자동으로 사용자에 대 한 개체입니다. 이것은 기본 방법입니다.  
   
--   스레드 핸들을 별도로 저장 합니다. 스레드를 만든 후 복사 해당 `m_hThread` 데이터 멤버 (사용 하 여 **:: DuplicateHandle**)를 다른 변수에 해당 변수를 통해 액세스 합니다. 이러한 방식으로 개체 있습니다 수 이유를 알에 스레드가 종료 종료할 때 자동으로 삭제 됩니다. 스레드 핸들을 복제 하기 전에 종료 되지 않도록 주의 해야 합니다. 이 작업을 수행 하는 가장 안전한 방법은 전달 하는 **CREATE_SUSPENDED** 를 [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), 핸들을 저장 하 고 호출 하 여 스레드가 다시 [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread)합니다.  
+-   스레드 핸들을 별도로 저장 합니다. 스레드를 만든 후 복사 해당 `m_hThread` 데이터 멤버 (사용 하 여 **:: DuplicateHandle**)를 다른 변수에 해당 변수를 통해 액세스 합니다. 이러한 방식으로 개체 있습니다 수 이유를 알에 스레드가 종료 종료할 때 자동으로 삭제 됩니다. 스레드 핸들을 복제 하기 전에 종료 되지 않도록 주의 해야 합니다. 이 작업을 수행 하는 가장 안전한 방법은 전달 하는 **CREATE_SUSPENDED** 를 [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), 핸들을 저장 하 고 호출 하 여 스레드가 다시 [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread)합니다.  
   
  두 방법 중 하나를 사용 하면 이유를 확인 하는 `CWinThread` 개체가 종료 된 합니다.  
   

@@ -1,33 +1,38 @@
 ---
 title: "함수 오버 로드 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>함수 오버로드
-C++에서는 동일한 범위에서 이름이 같은 함수를 둘 이상 지정할 수 있습니다. 이러한 함수는 오버로드된 함수라고 하며 오버로드에 자세히 설명되어 있습니다. 프로그래머가 오버로드된 함수를 사용하면 인수의 형식 및 수에 따라 함수에 대한 서로 다른 의미 체계를 제공할 수 있습니다.  
+C++에서는 동일한 범위에서 이름이 같은 함수를 둘 이상 지정할 수 있습니다. 이 라고 *오버 로드 된* 함수입니다. 오버 로드 된 함수를 사용 하면 함수, 형식 및 수의 인수에 따라 서로 다른 의미 체계를 제공할 수 있습니다. 
   
- 예를 들어 한 **인쇄** 문자열을 사용 하는 함수 (또는 **char \*** ) 인수는 형식의 인수를 사용 하는 1 보다 상당히 다른 작업을 수행 **double** . 오버로드를 사용하면 일관된 이름을 지정할 수 있으며 프로그래머가 `print_sz` 또는 `print_d` 같은 이름을 만들 필요가 없습니다. 다음 표에서는 C++에서 동일한 범위에서 이름이 동일한 함수 그룹 간을 구별하는 데 사용하는 함수 선언 부분을 보여 줍니다.  
+ 예를 들어 한 **인쇄** 사용 함수는 **std:: string** 인수는 형식의 인수를 사용 하는 1 보다 상당히 다른 작업을 수행할 수 있습니다 **double**합니다. 오버 로드와 같은 이름을 사용 하는 것과 절감 `print_string` 또는 `print_double`합니다. 컴파일 타임에 컴파일러를 사용 하는 오버 로드는 호출자에 의해 전달 된 인수의 형식에 따라 선택 합니다.  호출 하는 경우 **print(42.0)** 하면 **인쇄 (이중 d) void** 함수 호출 됩니다. 호출 하는 경우 **("hello world")를 인쇄** 하면 **print(std::string) void** 오버 로드를 호출 합니다.
+
+멤버 함수와 비멤버 함수를 오버 로드할 수 있습니다. 다음 표에서는 C++에서 동일한 범위에서 이름이 동일한 함수 그룹 간을 구별하는 데 사용하는 함수 선언 부분을 보여 줍니다.  
   
 ### <a name="overloading-considerations"></a>오버로드 고려 사항  
   
@@ -39,9 +44,8 @@ C++에서는 동일한 범위에서 이름이 같은 함수를 둘 이상 지정
 |줄임표의 존재 여부|예|  
 |`typedef` 이름 사용|아니요|  
 |지정하지 않은 배열 범위|아니요|  
-|**const** 또는 `volatile` (아래 참조)|예|  
-  
- 함수는 반환 형식에 따라 구분할 수 있지만 오버로드할 수는 없습니다.  `Const`또는 `volatile` 은 기반으로 오버 로드 사용에 적용할 클래스에서 사용 되는 경우는 **이** 함수의 반환 형식이 아니라 클래스에 대 한 포인터입니다.  즉, 경우에 적용 오버 로드는 **const** 또는 `volatile` 키워드가 선언에 있는 함수의 인수 목록을 따르는 합니다.  
+|**const** 또는`volatile`|예, 함수 전체에 적용 될 때|
+|[ref-qualifier](#ref-qualifier)|예|  
   
 ## <a name="example"></a>예  
  다음 예제에서는 오버로드 사용 방법을 보여 줍니다.  
@@ -51,68 +55,71 @@ C++에서는 동일한 범위에서 이름이 같은 함수를 둘 이상 지정
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -254,14 +261,14 @@ volatile Over&
   
 |변환 전 형식|변환 후 형식|  
 |-----------------------|---------------------|  
-|*형식 이름*|*형식 이름***&**|  
-|*형식 이름***&**|*형식 이름*|  
-|*형식-이름이* ****|*형식 이름\**|  
-|*형식-이름이* **(** *인수 목록* **)**|**(**  *\*형식-이름이* **) (** *인수 목록* **)**|  
-|*형식 이름*|**const** *형식 이름*|  
-|*형식 이름*|`volatile`*형식 이름*|  
-|*형식 이름\**|**const** *형식 이름\**|  
-|*형식 이름\**|`volatile`*형식 이름\**|  
+|*type-name*|*type-name* **&**|  
+|*type-name* **&**|*type-name*|  
+|*type-name* **[ ]**|*type-name\**|  
+|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
+|*type-name*|**const** *type-name*|  
+|*type-name*|`volatile` *type-name*|  
+|*type-name\**|**const** *type-name\**|  
+|*type-name\**|`volatile` *type-name\**|  
   
  변환이 시도되는 시퀀스는 다음과 같습니다.  
   
@@ -399,8 +406,47 @@ obj.name
 ```  
   
  `->*`의 왼쪽 피연산자와 `.*`(멤버에 대한 포인터) 연산자는 인수 일치와 관련하여 `.` 및 `->`(멤버 선택) 연산자와 동일한 방식으로 처리됩니다.  
+
+## <a name="ref-qualifiers"></a>멤버 함수에서 ref-qualifier  
+Ref 한정자 확인 여부는 가리키는 개체를 기반으로 하는 멤버 함수를 오버 로드할 수 `this` rvalue 또는 lvalue입니다.  이 기능은 포인터 데이터에 대 한 액세스를 제공 하지 않아도 선택할 수 있는 시나리오에서 불필요 한 복사 작업을 방지 하기 위해 사용할 수 있습니다. 예를 들어 클래스 **C** 해당 생성자의 일부 데이터를 초기화 하 고 멤버 함수에 해당 데이터의 복사본을 반환 **get_data()**합니다. 경우 형식의 개체 **C** 값이 소멸 될 예정에 있으면 컴파일러는 선택 rvalue는 **get_data() & &** 복사 하지 않고 데이터를 이동 하는 오버 로드 합니다. 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>제한  
+## <a name="restrictions-on-overloading"></a>오버 로드에 대 한 제한  
  여러 제한은 사용할 수 있는 오버로드된 함수 집합을 관리합니다.  
   
 -   오버로드된 함수 집합의 임의의 두 함수에는 서로 다른 인수 목록이 있어야 합니다.  
@@ -443,10 +489,13 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>선언 일치  
+## <a name="overloading-overriding-and-hiding"></a>오버 로드, 재정의 및 숨기기
+  
  동일한 범위에서 동일한 이름의 두 함수 선언은 같은 함수 또는 오버로드된 두 개별 함수를 참조할 수 있습니다. 선언의 인수 목록에 동일한 형식의 인수가 포함되어 있으면(이전 단원 참조) 함수 선언은 같은 함수를 참조하고, 그렇지 않으면 오버로드를 사용하여 선택된 서로 다른 두 함수를 참조합니다.  
   
- 클래스 범위는 엄격하게 준수되므로 기본 클래스에 선언된 함수는 파생 클래스에 선언된 함수와 같은 범위에 있지 않습니다. 파생 클래스의 함수가 기본 클래스의 함수와 동일한 이름으로 선언된 경우 파생 클래스 함수는 오버로드를 유발하는 대신 기본 클래스 함수를 숨깁니다.  
+ 클래스 범위는 엄격하게 준수되므로 기본 클래스에 선언된 함수는 파생 클래스에 선언된 함수와 같은 범위에 있지 않습니다. 기본 클래스 함수가 파생 클래스의에서 가상 함수와 동일한 이름을 가진 파생된 클래스에서 함수를 선언 하는 경우 *재정의* 기본 클래스 함수가 있습니다. 자세한 내용은 참조 [가상 함수](../cpp/virtual-functions.md)합니다.
+
+기본 클래스 함수를 '가상 으로'를 선언 합니다. 경우 파생된 클래스 함수를 라고 *숨기기* 것입니다. 숨기기와 재정의 오버 로드 다릅니다.  
   
  블록 범위는 엄격하게 준수되므로 파일 범위에서 선언된 함수는 로컬로 선언된 함수와 같은 범위에 있지 않습니다. 로컬로 선언된 함수의 이름이 파일 범위에서 선언된 함수의 이름과 같을 경우 로컬로 선언된 함수는 오버로드를 유발하는 대신 파일 범위의 함수를 숨깁니다. 예:  
   
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>참고 항목  
  [함수(C++)](../cpp/functions-cpp.md)

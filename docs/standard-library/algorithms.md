@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="algorithms"></a>알고리즘
 알고리즘은 C++ 표준 라이브러리의 기본적인 부분입니다. 알고리즘은 컨테이너 자체가 아니라 반복기에서 작동합니다. 따라서 모두는 아니지만 대부분의 C++ 표준 라이브러리 컨테이너에서 동일한 알고리즘을 사용할 수 있습니다. 이 섹션에서는 C++ 표준 라이브러리 알고리즘의 규칙 및 용어를 설명합니다.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  [`First`, `Last`) 범위에서 반복기에 의해 지정된 요소의 시퀀스는 [0, `Last` - `First`) 범위의 각 *N* 및 (N, `Last` - `First`) 범위의 각 *M*에 대해 !(\*(`First` + *M*) < \*(*First* + *N*))이 참인 경우 **<** 연산자에 의해 순서가 지정되는 시퀀스입니다. 요소는 오름차순으로 정렬됩니다. 조건자 함수 **operator<** 또는 해당 대체 항목은 피연산자 중 하나를 변경하면 안 됩니다. 평가할 때마다 동일한 `bool` 결과를 생성해야 하며, 두 피연산자 중 하나의 복사본을 피연산자에 대체할 경우 동일한 결과를 생성해야 합니다. 또한 비교하는 피연산자에 엄격하고 약한 순서를 적용해야 합니다.  
   
- [`First`, `Last`) 범위에서 반복기에 의해 지정된 요소의 시퀀스는 [1, `Last` - `First`) 범위의 각 *N*에 대해 조건자 !(\*`First` < \*(`First` + *N*))이 참인 경우 **operator<**에 의해 순서가 지정되는 힙입니다. 첫 번째 요소가 가장 큽니다. 내부 구조는 템플릿 함수 [make_heap](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2), [pop_heap]--brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap), and [push_heap]-brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap)에만 알려집니다. 순서가 지정된 시퀀스와 마찬가지로, 조건자 함수 **operator<** 또는 해당 대체 항목은 피연산자 중 하나를 변경하면 안 되며, 비교하는 피연산자에 엄격하고 약한 순서를 적용해야 합니다. 평가할 때마다 동일한 `bool` 결과를 생성해야 하며, 두 피연산자 중 하나의 복사본을 피연산자에 대체할 경우 동일한 결과를 생성해야 합니다.  
+ [`First`, `Last`) 범위에서 반복기에 의해 지정된 요소의 시퀀스는 [1, `Last` - `First`) 범위의 각 *N*에 대해 조건자 !(\*`First` < \*(`First` + *N*))이 참인 경우 **operator<**에 의해 순서가 지정되는 힙입니다. 첫 번째 요소가 가장 큽니다. 내부 구조는 템플릿 함수에만 알려진 [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), 및 [push_heap](../standard-library/algorithm-functions.md#push_heap)합니다. 순서가 지정된 시퀀스와 마찬가지로, 조건자 함수 **operator<** 또는 해당 대체 항목은 피연산자 중 하나를 변경하면 안 되며, 비교하는 피연산자에 엄격하고 약한 순서를 적용해야 합니다. 평가할 때마다 동일한 `bool` 결과를 생성해야 하며, 두 피연산자 중 하나의 복사본을 피연산자에 대체할 경우 동일한 결과를 생성해야 합니다.  
   
  C++ 표준 라이브러리 알고리즘은 [\<algorithm>](../standard-library/algorithm.md) 및 [\<numeric>](../standard-library/numeric.md) 헤더 파일에 있습니다.  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: _CrtCheckMemory
+apiname:
+- _CrtCheckMemory
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - CrtCheckMemory
 - _CrtCheckMemory
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtCheckMemory function
 - CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 60909079a4d7c30b3a3e6c00257d882d76467585
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c30652e2cbb55853b61b92e871527983e09f629a
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="crtcheckmemory"></a>_CrtCheckMemory
 디버그 힙에서 할당된 메모리 블록의 무결성을 확인합니다(디버그 버전에만 해당).  
@@ -77,7 +81,7 @@ _ASSERTE( _CrtCheckMemory( ) );
  [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)의 디버그 버전만 해당됩니다.  
   
 ## <a name="example"></a>예  
- `_CrtCheckMemory`를 사용하는 방법에 대한 샘플은 [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)을 참조하세요.  
+ `_CrtCheckMemory`를 사용하는 방법에 대한 샘플은 [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [디버그 루틴](../../c-runtime-library/debug-routines.md)   

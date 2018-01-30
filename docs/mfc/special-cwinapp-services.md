@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [MFC], most recently used
 - DragAcceptFiles method [MFC]
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8734bfd4e673e1298d6822bbd272e2d70ff7a81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="special-cwinapp-services"></a>특수 CWinApp 서비스
 것 외에도 메시지 루프를 실행 하면 응용 프로그램을 초기화 하 고 그 뒤를 정리할 수 [CWinApp](../mfc/reference/cwinapp-class.md) 몇 가지 다른 서비스를 제공 합니다.  
@@ -60,9 +63,9 @@ ms.lasthandoff: 12/21/2017
   
  `CWinApp`의 이러한 자동 등록 지원 덕분에 응용 프로그램에 .reg 파일을 포함하거나 특별한 설치 작업을 수행할 필요가 없습니다.  
   
- 응용 프로그램에 대 한 GDI + 초기화 하려는 경우 ([GdiplusStartup]-brokenlink-를 호출 하 여 (_gdiplus_FUNC_GdiplusStartup_token_input_output_)에서 프로그램 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) 함수)를 해야 GDI + 백그라운드 스레드를 표시 합니다.  
+ 응용 프로그램에 대 한 GDI + 초기화 하려는 경우 (호출 하 여 [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) 에 프로그램 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) 함수), GDI + 백그라운드 스레드를 표시 하지 않아야 할 합니다.  
   
- 설정 하 여이 수행할 수는 **SuppressBackgroundThread** 의 멤버는 [GdiplusStartupInput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupInput) 구조를 **TRUE**합니다. 때 GDI + 백그라운드 스레드를는 **NotificationHook** 및 **NotificationUnhook** 호출 (참조 [GdiplusStartupOutput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupOutput)) 해야 응용 프로그램의 메시지 루프에 들어가고 직전 만들 수 있습니다. 따라서 호출 하는 좋은 위치 **GdiplusStartup** 하 고 가상 함수 재정의에서 후크 알림 함수는 [cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)다음과 같이 합니다.  
+ 설정 하 여이 수행할 수는 **SuppressBackgroundThread** 의 멤버는 [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) 구조체 **TRUE**합니다. 때 GDI + 백그라운드 스레드를는 **NotificationHook** 및 **NotificationUnhook** 호출에서 수행 되도록 되기 직전 설정 및 응용 프로그램의 메시지 루프를 종료 합니다. 이러한 호출에 대 한 자세한 내용은 참조 하십시오. [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)합니다. 따라서 호출 하는 좋은 위치 **GdiplusStartup** 하 고 가상 함수 재정의에서 후크 알림 함수는 [cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)다음과 같이 합니다.  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

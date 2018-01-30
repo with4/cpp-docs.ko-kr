@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>삽입 연산자 사용 및 형식 제어
 이 항목에서는 형식을 제어하는 방법 및 고유 클래스에 대한 삽입 연산자를 만드는 방법을 보여 줍니다. 모든 표준 C++ 데이터 형식에 대해 미리 프로그래밍된 삽입(**<<**) 연산자는 출력 스트림 개체에 바이트를 보냅니다. 삽입 연산자는 정수 인수의 기본 형식을 변경하는 요소인 미리 정의된 "조작자"와 함께 작동합니다.  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  이 동작은 수동으로 재정의할 수 있지만, 문자열 왕복을 더 편리하게 만들기 위해 C++14에서는 `std::quoted` 스트림 조작자를 `<iomanip>`에 추가합니다. 삽입 시 `quoted()`는 문자열을 구분 기호(기본적으로 큰따옴표 ' " ')로 둘러싸고, 추출 시 스트림을 조작하여 최종 구분 기호가 발견될 때까지 모든 문자를 추출합니다. 포함된 따옴표는 이스케이프 문자(기본적으로 '\\\\')로 이스케이프됩니다.  
   
- 구분 기호는 스트림 개체에만 있습니다. 추출된 문자열에는 없지만 [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)()에서 반환된 문자열에는 있습니다.  
+ 구분 기호는 스트림 개체;에 추출된 된 문자열에 존재 하지 않는 있지만 반환 하는 문자열에 있는 [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str)합니다.  
   
  삽입 및 추출 작업의 공백 동작은 문자열이 코드에서 표현되는 방식에 독립적이므로 따옴표 붙은 연산자는 입력 문자열이 원시 문자열 리터럴인지 또는 일반 문자열인지에 관계없이 유용합니다. 형식에 관계없이 입력 문자열에 포함된 따옴표, 줄 바꿈, 탭 등이 있을 수 있으며, 이러한 모든 항목은 quoted() 조작자에 의해 보존됩니다.  
   
- 자세한 내용 및 전체 코드 예제는 [quoted]--brokenlink--(../Topic/%3Cios%3E%20functions.md#quoted)를 참조하세요.  
+ 자세한 내용과 전체 코드 예제에 대 한 참조 [따옴표 붙은](../standard-library/iomanip-functions.md#quoted)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [출력 스트림](../standard-library/output-streams.md)   

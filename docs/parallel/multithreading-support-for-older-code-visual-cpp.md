@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - threading [C++]
 - multiple threads
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - multiple concurrent threads
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1037b8b81c9286ac1b1dd9303294b4300e7c9309
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6e082fd9c3f4c34c97f461a11dcec14d778affd8
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>이전 코드를 위한 다중 스레드 지원(Visual C++)
 Visual c + +를 사용 하면 여러 동시 실행 스레드를 동시에 실행할 수 있습니다. 와 다중 스레딩, 백그라운드 작업 분리 시키고, 동시 입력 스트림을 관리, 사용자 인터페이스 및 등을 관리 합니다.  
@@ -54,7 +57,7 @@ Visual c + +를 사용 하면 여러 동시 실행 스레드를 동시에 실행
  [CMutex](../mfc/reference/cmutex-class.md)  
  한 스레드가 한 리소스에 상호 배타적으로 액세스하도록 허용하는 동기화 개체인 뮤텍스를 나타냅니다.  
   
- [아니오](../mfc/reference/ccriticalsection-class.md)  
+ [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
  리소스 또는 코드 섹션에 액세스 하는 한 번에 하나의 스레드를 허용 하는 동기화 개체인 임계 섹션을 나타냅니다.  
   
  [CEvent](../mfc/reference/cevent-class.md)  
@@ -63,8 +66,5 @@ Visual c + +를 사용 하면 여러 동시 실행 스레드를 동시에 실행
  [CMultiLock](../mfc/reference/cmultilock-class.md)  
  다중 스레드 프로그램에 대한 액세스를 제어할 때 사용하는 액세스 제어 메커니즘을 나타냅니다.  
   
- [경우 CSingleLock](../mfc/reference/csinglelock-class.md)  
+ [CSingleLock](../mfc/reference/csinglelock-class.md)  
  다중 스레드 프로그램에서 한 리소스에 대한 액세스를 제어할 때 사용하는 액세스 제어 메커니즘을 나타냅니다.  
-  
- [(NOTINBUILD) Visual c + + 프로그래밍 방법론](http://msdn.microsoft.com/en-us/0822f806-fa81-4b65-bf0f-1e2921f30c95)  
- Visual C++ 라이브러리에 대한 개념적인 정보를 설명하는 항목 및 다양한 코딩 기술 및 기법을 설명하는 항목에 대한 링크를 제공합니다.
