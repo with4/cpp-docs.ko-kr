@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.programs
-dev_langs: C++
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="compatibility"></a>호환성
 UCRT(유니버설 C 런타임 라이브러리)는 C++ 규칙에 필요한 C 표준 라이브러리를 대부분 지원합니다. \<tgmath.h>에 정의된 형식 제네릭 매크로와 \<complex.h>의 엄격한 형식 호환성을 제외하고 C99(ISO/IEC 9899:1999) 라이브러리를 구현합니다. 또한 UCRT는 POSIX.1(ISO/IEC 9945-1:1996, POSIX 시스템 응용 프로그램 인터페이스) C 라이브러리의 큰 하위 집합을 구현하지만 어떠한 특정 POSIX 표준에도 완전히 부합되지 않습니다.  뿐만 아니라 UCRT는 표준에 속하지 않는 여러 Microsoft 특정 함수 및 매크로를 구현합니다.  
@@ -34,7 +38,7 @@ UCRT(유니버설 C 런타임 라이브러리)는 C++ 규칙에 필요한 C 표�
   
  표준 C 라이브러리의 특정 함수에는 잘못 사용된 매개 변수 및 확인되지 않은 버퍼로 인한 안전하지 않은 사용 기록이 있습니다. 이러한 함수가 코드에서 보안 문제의 원인이 되는 경우가 많습니다. Microsoft는 매개 변수 사용을 확인하고 런타임에 문제가 감지될 때 잘못된 매개 변수 처리기를 호출하는 이러한 함수의 더 안전한 버전 집합을 만들었습니다.  기본적으로 Visual C++ 컴파일러는 더 안전한 변형을 사용할 수 있는 함수가 사용될 때 사용 중단 경고를 실행합니다. 코드를 C++로 컴파일할 때 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 을 1로 정의하여 대부분의 경고를 제거할 수 있습니다. 이렇게 하면 템플릿 오버로드를 사용하여 포팅 가능한 소스 코드를 유지하는 동시에 더 안전한 변형을 호출합니다. 이 경고를 표시하지 않으려면 이러한 함수를 사용하는 코드에서 헤더를 포함하기 전에 `_CRT_SECURE_NO_WARNINGS` 를 정의합니다. 자세한 내용은 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)을 참조하세요.  
   
- 설명서 내에서 특정 함수에 대해 언급된 경우를 제외하고 UCRT는 Windows API와 호환됩니다.  특정 함수는 Windows 10의 Windows 8 스토어 앱 또는 유니버설 Windows 앱에서 지원되지 않습니다. 이러한 함수는 [Windows 런타임](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)에서 지원되지 않는 함수를 열거하는 [/ZW로 지원되지 않는 CRT 함수](http://msdn.microsoft.com/en-us/9a1a18b8-9802-4ec5-b9de-0d2dfdf414e9)에 나와 있습니다.  
+ 설명서 내에서 특정 함수에 대해 언급된 경우를 제외하고 UCRT는 Windows API와 호환됩니다.  특정 함수는 Windows 8 스토어 앱 또는 Windows 10의 UWP(유니버설 Windows 플랫폼) 앱에서 지원되지 않습니다. 이러한 함수는 Windows 런타임 및 [UWP](/uwp)에서 지원되지 않는 함수를 열거하는 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수 앱](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)에 나와 있습니다.  
   
 ## <a name="related-articles"></a>관련 문서  
   
