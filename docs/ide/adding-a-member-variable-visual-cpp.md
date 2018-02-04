@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.codewiz.classes.member.variable
-dev_langs: C++
+f1_keywords:
+- vc.codewiz.classes.member.variable
+dev_langs:
+- C++
 helpviewer_keywords:
 - member variables, adding
 - member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 52d98e3eae6e468db7c2737efac8c2b7ab04abd5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ea3f5327568b1ad8380ce905987a570541e8f44f
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="adding-a-member-variable--visual-c"></a>멤버 변수 추가(Visual C++)
 클래스 뷰를 사용 하는 클래스에 멤버 변수를 추가할 수 있습니다. 멤버 변수 수에 대 한 [데이터 교환 및 유효성 검사](../mfc/dialog-data-exchange-and-validation.md), 또는 제네릭이 될 수 있습니다. 데이터 멤버 변수 마법사와 관련 된 정보가 하 고 요소를 삽입 하는 적절 한 위치에서 소스 파일에서 사용 하도록 설계 된. 멤버 변수를 추가할 수는 [대화 상자 편집기](../windows/dialog-editor.md) 에 [리소스 뷰](../windows/resource-view-window.md), 또는 [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)합니다.  

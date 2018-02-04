@@ -4,38 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: thread_cpp
-dev_langs: C++
+f1_keywords:
+- thread_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - thread local storage (TLS)
 - thread __declspec keyword
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8c514879368b8ea3d676635f2b922a2e1c07224
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="thread"></a>스레드
 
-**Microsoft 전용**  
+**Microsoft 전용**
+
 **스레드** 확장된 저장소 클래스 한정자는 스레드 지역 변수를 선언 하는 데 사용 합니다. 이식 가능한 C + + 11에서 지정 된 동일한 및 이후 버전을 사용 하 여는 [thread_local](../cpp/storage-classes-cpp.md#thread_local) 이식 가능한 코드에 대 한 저장소 클래스 지정자. Windows에서 **thread_local** 사용 하 여 구현 **__declspec (thread)**합니다.
 
 ## <a name="syntax"></a>구문
 
-```
-__declspec( thread ) declarator
-```
+> **__declspec (thread)** *선언 자*  
 
 ## <a name="remarks"></a>설명
 
@@ -44,17 +47,16 @@ TLS(스레드 로컬 저장소)는 다중 스레드 프로세스의 각 스레�
 스레드 지역 변수 선언을 사용 해야 [확장 특성 구문](../cpp/declspec.md) 및 `__declspec` 키워드는 **스레드** 키워드입니다. 예를 들어, 다음 코드는 정수 스레드 로컬 변수를 선언한 다음 값으로 초기화합니다.
 
 ```cpp
-__declspec( thread ) int tls_i = 1;  
+__declspec( thread ) int tls_i = 1;
 ```
 
 동적으로 로드 된 라이브러리의 스레드 로컬 변수를 사용할 때 제대로 초기화 하지 하는 스레드 로컬 변수를 일으킬 수 있는 요소의 알아야 할:
 
-1) 변수가 초기화가 함수 호출 (생성자 포함)로, 해당 이진/dll은 프로세스에 로드 하는 스레드 및 binary/DLL이 로드 된 후에 시작 하는 이러한 스레드에 대 한이 함수 호출 에서만 됩니다. 다른 스레드는 DLL을 로드할 때 이미 실행 중에 대 한 초기화 함수가 호출 되지 않습니다. 동적 초기화 스레드가 시작 될 때 DLL은 프로세스에 없는 경우 메시지 가져옵니다를 되지 DLL_THREAD_ATTACH가 DllMain 호출 하지만 DLL에서 발생 합니다. 
+1. 변수가 초기화가 함수 호출 (생성자 포함)로, 해당 이진/dll은 프로세스에 로드 하는 스레드 및 binary/DLL이 로드 된 후에 시작 하는 이러한 스레드에 대 한이 함수 호출 에서만 됩니다. 다른 스레드는 DLL을 로드할 때 이미 실행 중에 대 한 초기화 함수가 호출 되지 않습니다. 동적 초기화 스레드가 시작 될 때 DLL은 프로세스에 없는 경우 메시지 가져옵니다를 되지 DLL_THREAD_ATTACH가 DllMain 호출 하지만 DLL에서 발생 합니다.
 
-2) 상수 값을 사용 하 여 정적으로 초기화 되는 스레드 지역 변수는 일반적으로 모든 스레드에서 올바르게 초기화 됩니다. 그러나, 2017 년 12 월을 기준으로 알려진된 준수 문제를 그에 따라 수신 constexpr 변수는 Microsoft c + + 컴파일러에서 정적 초기화 하는 대신 동적.  
-  
+1. 상수 값을 사용 하 여 정적으로 초기화 되는 스레드 지역 변수는 일반적으로 모든 스레드에서 올바르게 초기화 됩니다. 그러나 2017 년 12 월을 기준으로에서 없는 경우 알려진된 준수 문제를 그에 따라 수신 constexpr 변수는 Microsoft Visual c + + 컴파일러 정적 초기화 하는 대신 동적
+
    참고:이 문제를 모두 업데이트 컴파일러의 나중에 수정으로 예상 됩니다.
-
 
 또한 스레드 로컬 개체 및 변수를 선언 하는 경우 이러한 지침을 준수 해야 합니다.
 
@@ -85,15 +87,15 @@ __declspec( thread ) int tls_i = 1;
 
 - 표준 C에서는 비정적 범위의 개체에 한해 자신에 대한 참조를 포함하는 식으로 개체 또는 변수를 초기화할 수 있습니다. C++에서는 일반적으로 자신에 대한 참조를 포함하는 식으로 개체를 동적으로 초기화할 수 있지만 스레드 로컬 개체에 대해서는 이렇게 초기화할 수 없습니다. 예:
 
-    ```cpp
-    // declspec_thread_3.cpp
-    // compile with: /LD
-    #define Thread __declspec( thread )
-    int j = j;   // Okay in C++; C error
-    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
-    ```
+   ```cpp
+   // declspec_thread_3.cpp
+   // compile with: /LD
+   #define Thread __declspec( thread )
+   int j = j;   // Okay in C++; C error
+   Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
+   ```
 
-     한 **sizeof** 초기화 되는 개체를 포함 하는 식 자체에 대 한 참조를 구성 하지 않으며과 C와 c + +에서 허용 됩니다.
+   한 **sizeof** 초기화 되는 개체를 포함 하는 식 자체에 대 한 참조를 구성 하지 않으며과 C와 c + +에서 허용 됩니다.
 
 **Microsoft 전용 종료**
 
@@ -101,4 +103,4 @@ __declspec( thread ) int tls_i = 1;
 
 [__declspec](../cpp/declspec.md)  
 [키워드](../cpp/keywords-cpp.md)  
-[TLS(스레드 로컬 저장소)](../parallel/thread-local-storage-tls.md)
+[TLS(스레드 로컬 저장소)](../parallel/thread-local-storage-tls.md)  

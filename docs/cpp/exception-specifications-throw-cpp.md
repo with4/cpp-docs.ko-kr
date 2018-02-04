@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -18,12 +20,13 @@ ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbd45c8afed11f613722ecc7586436ff707042d7
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>예외 사양 (throw, noexcept) (c + +)
 
@@ -34,24 +37,22 @@ C + + 17 하기 전에 두 종류의 예외 사양이 없습니다. *noexcept �
 ```cpp
 void MyFunction(int i) throw();
 ```
-
- 컴파일러에 함수가 아무 예외도 throw하지 않음을 알립니다. 그러나 **/std:c + + 14** 모드 초래할 수 정의 되지 않은 동작이 면 함수는 예외를 throw 합니다. 사용할 수 있는 권장 따라서는 [noexcept](../cpp/noexcept-cpp.md) 위와 대신 연산자:
+컴파일러에 함수가 아무 예외도 throw하지 않음을 알립니다. 그러나 **/std:c + + 14** 모드 초래할 수 정의 되지 않은 동작이 면 함수는 예외를 throw 합니다. 사용할 수 있는 권장 따라서는 [noexcept](../cpp/noexcept-cpp.md) 위와 대신 연산자:
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-
-다음 표에는 예외 사양의 Visual C++ 구현이 요약되어 있습니다.
+다음 표에서 예외 사양의 Visual c + + 구현이 요약 되어 있습니다.
 
 |예외 사양|의미|
 |-----------------------------|-------------|
 |`noexcept`<br>`noexcept(true)`<br>`throw()`|이 함수는 예외를 throw하지 않습니다. [/std:c + + 14](../build/reference/std-specify-language-standard-version.md) 모드 (기본값), `noexcept` 및 `noexcept(true)` 동일 합니다. 선언 된 함수에서 예외가 throw 됩니다 때 `noexcept` 또는 `noexcept(true)`, [std:: terminate](../standard-library/exception-functions.md#terminate) 가 호출 됩니다. 로 선언 된 함수에서 예외가 throw 됩니다 때 `throw()` 에 **/std:c + + 14** 모드, 결과 정의 되지 않은 동작이 있습니다. 특정 함수가 호출 됩니다. 이 컴파일러 호출에 필요한 표준 C + + 14에서 확산 [std::unexpected](../standard-library/exception-functions.md#unexpected)합니다.  <br> **Visual Studio 2017 버전 15.5 이상**:에서 **/std:c + + 17** 모드 `noexcept`, `noexcept(true)`, 및 `throw()` 모두 동일 합니다. **/std:c + + 17** 모드 `throw()` 별칭인 `noexcept(true)`합니다. **/std:c + + 17** 모드에서는 이러한 사양을 사용 하 여 선언 된 함수에서 예외가 throw 되 면 [std:: terminate](../standard-library/exception-functions.md#terminate) 호출 되는 C + + 17 표준에 필요 합니다.|
 |`noexcept(false)`<br/>`throw(...)`<br/>사양이 없는|함수는 모든 형식의 예외를 throw 할 수 있습니다.|
-|`throw(type)`| (**C + + 14 및 이전 버전**) 함수 형식의 예외를 throw 할 수 있습니다 `type`합니다. Microsoft c + + 컴파일러는 구문를 허용 하지만로 해석 `noexcept(false)`합니다. **/std:c + + 17** 모드 컴파일러 경고가 C5040 발생 합니다.|
+|`throw(type)`| (**C + + 14 및 이전 버전**) 함수 형식의 예외를 throw 할 수 있습니다 `type`합니다. 컴파일러에서 구문, 하지만로 해석 `noexcept(false)`합니다. **/std:c + + 17** 모드 컴파일러 경고가 C5040 발생 합니다.|
 
- 예외 처리 응용 프로그램을 사용 하는 함수에에서 있어야 함수 외부 범위를 종료 하기 전에 예외를 throw 하는 핸들을 표시 하는 호출 스택을 `noexcept`, `noexcept(true)`, 또는 `throw()`합니다. 예외를 throw 하 한 및 예외를 처리 하는 것으로 지정 된 함수 사이 호출 하는 경우 `noexcept`, `noexcept(true)` (또는 `throw()` 에 **/std:c + + 17** 모드), 경우 프로그램이 종료 되 고 noexcept 함수가 예외를 전파합니다.
+예외 처리 응용 프로그램을 사용 하는 함수에에서 있어야 함수 외부 범위를 종료 하기 전에 예외를 throw 하는 핸들을 표시 하는 호출 스택을 `noexcept`, `noexcept(true)`, 또는 `throw()`합니다. 예외를 throw 하 한 및 예외를 처리 하는 것으로 지정 된 함수 사이 호출 하는 경우 `noexcept`, `noexcept(true)` (또는 `throw()` 에 **/std:c + + 17** 모드), 경우 프로그램이 종료 되 고 noexcept 함수가 예외를 전파합니다.
 
- 예외 동작 함수는 다음 요인에 따라 달라 집니다.
+예외 동작 함수는 다음 요인에 따라 달라 집니다.
 
 - [언어 표준 컴파일 모드](../build/reference/std-specify-language-standard-version.md) 설정 됩니다.
 - C 또는 C++에서 함수를 컴파일하는지 여부
@@ -60,9 +61,9 @@ void MyFunction(int i) noexcept;
 
 - 예외 사양을 명시적으로 지정하는지 여부
 
- C 함수에서는 명시적 예외 사양이 허용되지 않습니다. C 함수 아닌 것으로 가정에서 예외를 throw **/EHsc**, 아래에서 구조화 된 예외를 throw 할 수 있습니다 및 **/EHs**, **/EHa**, 또는 **/EHac**합니다.
+C 함수에서는 명시적 예외 사양이 허용되지 않습니다. C 함수 아닌 것으로 가정에서 예외를 throw **/EHsc**, 아래에서 구조화 된 예외를 throw 할 수 있습니다 및 **/EHs**, **/EHa**, 또는 **/EHac**합니다.
 
- 다음 표에서 c + + 함수는 다양 한 컴파일러 예외 처리 옵션 아래에서 잠재적으로 throw 할 수 있습니다 하는 여부가 요약 되어 있습니다.
+다음 표에서 c + + 함수는 다양 한 컴파일러 예외 처리 옵션 아래에서 잠재적으로 throw 할 수 있습니다 하는 여부가 요약 되어 있습니다.
 
 |함수|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
@@ -70,7 +71,7 @@ void MyFunction(int i) noexcept;
 |C + + 함수 `noexcept`, `noexcept(true)`, 또는 `throw()` 예외 사양|아니요|아니요|예|예|
 |C + + 함수 `noexcept(false)`, `throw(...)`, 또는 `throw(type)` 예외 사양|예|예|예|예|
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```cpp
 // exception_specification.cpp
@@ -110,7 +111,7 @@ void __declspec(nothrow) f2(void) {
     }
 }
 
-// only valid if compiled without /EHc 
+// only valid if compiled without /EHc
 // /EHc means assume extern "C" functions don't throw exceptions
 extern "C" void f4(void);
 void f4(void) {
