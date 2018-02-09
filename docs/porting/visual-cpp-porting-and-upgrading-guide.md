@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ba7e3f139aa9956cd9d2587522dc2d0ac1f2ff7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d5751899dc064da4b17e240411878187a80acbdc
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 포팅 및 업그레이드 가이드
 이 항목에서는 Visual C++ 코드를 업그레이드하기 위한 가이드를 제공합니다. 여기에는 최신 릴리스의 도구에서 코드가 올바르게 컴파일 및 실행되도록 하고 새로운 언어와 Visual Studio 기능을 활용하는 방법이 포함됩니다. 또한 이 항목에는 레거시 앱을 최신 플랫폼으로 마이그레이션하는 방법에 대한 정보가 포함되어 있습니다.  
@@ -82,7 +85,7 @@ ms.lasthandoff: 12/21/2017
 |제목|설명|  
 |-----------|-----------------|  
 |[이전 버전의 Visual C++에서 프로젝트 업그레이드](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|이전 버전의 Visual C++에서 만든 프로젝트를 사용하는 방법을 설명합니다.|  
-|[Visual Studio 2017 RC의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md)|Visual Studio 2015와 Visual Studio 2017 간의 IDE 및 도구 변경 내용|  
+|[Visual Studio 2017 RC에서 C++ 컴파일러의 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md)|Visual Studio 2015와 Visual Studio 2017 간의 IDE 및 도구 변경 내용|  
 |[Visual Studio 2017의 C++ 규칙 향상](../cpp-conformance-improvements-2017.md)|Visual Studio 2015와 Visual Studio 2017 간의 표준 준수 향상|  
 |[Visual C++ 변경 기록 2003 - 2015](visual-cpp-change-history-2003-2015.md)|코드 변경이 필요할 수 있는 Visual Studio 2003과 2015 간 Visual C++ 라이브러리 및 빌드 도구의 모든 변경 내용 목록입니다.|  
 |[Visual C++ 2003 ~ 2015의 새로운 기능](visual-cpp-what-s-new-2003-through-2015.md)|Visual Studio 2003과 Visual Studio 2015 간의 Visual C++에 대한 모든 "새로운 기능" 정보입니다.|  

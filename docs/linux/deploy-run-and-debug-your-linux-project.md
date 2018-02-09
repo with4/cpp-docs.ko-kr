@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-linux
+ms.technology:
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 734fc0f88d1cf8f97c7cac215f366eb6834fc517
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c904c721eedb8f15e254abd68fca56da7fe0e6a
+ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Linux 프로젝트 배포, 실행 및 디버그
 
@@ -28,6 +29,9 @@ Linux 프로젝트를 조작하고 디버그할 수 있는 여러 가지 방법�
 
 * 중단점, 조사식 창과 같은 기존의 Visual Studio 기능을 사용하여 변수를 마우스 단추로 가리켜 디버그합니다. 이러한 메서드를 사용하여 다른 프로젝트 형식에 사용하는 일반적인 방법으로 디버그할 수 있습니다.
 * 특별한 Linux 콘솔 창에서 대상 컴퓨터의 출력을 봅니다. 또한 콘솔을 사용하여 대상 컴퓨터에 입력을 보낼 수 있습니다.
+
+> [!NOTE]
+> Linux의 ARM 디버깅은 [Visual Studio에서 포함된 ARM 장치 디버깅](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) 블로그 게시물을 참조하세요.
 
 ## <a name="debug-your-linux-project"></a>Linux 프로젝트 디버그
 

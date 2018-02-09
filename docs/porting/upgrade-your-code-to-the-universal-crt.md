@@ -7,16 +7,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3e19f72dac00d18af62e91b1466bc40f2148518e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>코드를 유니버설 CRT로 업그레이드
 
@@ -42,7 +43,7 @@ Visual C++ 프로젝트를 업데이트할 때 프로젝트의 **링커** 속성
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>유니버설 CRT의 배포 및 재배포
   
-이제 UCRT는 Microsoft Windows 운영 체제 구성 요소이므로 Windows 10 운영 체제의 일부로 포함되고 Windows Vista부터 Windows 8.1까지 이전 운영 체제에서는 Windows 업데이트를 통해 사용할 수 있습니다. Windows XP의 경우 재배포 가능 버전을 사용할 수 있습니다. 운영 체제 구성 요소로서 UCRT의 업데이트 및 서비스는 Visual Studio 및 Visual C++ 컴파일러 버전과는 별개로 Windows 업데이트를 통해 관리됩니다. UCRT는 Windows 구성 요소이므로 안전하고 쉽게 업데이트하고 이미지 크기를 줄일 수 있도록 앱용 UCRT의 중앙 배포를 사용해야 합니다.  
+이제 UCRT는 Microsoft Windows 운영 체제 구성 요소이므로 Windows 10 운영 체제의 일부로 포함되고 Windows Vista부터 Windows 8.1까지 이전 운영 체제에서는 Windows 업데이트를 통해 사용할 수 있습니다. Windows XP의 경우 재배포 가능 버전을 사용할 수 있습니다. 운영 체제 구성 요소로서 UCRT의 업데이트 및 서비스는 Visual Studio 및 Microsoft C++ 컴파일러 버전과는 별개로 Windows 업데이트를 통해 관리됩니다. UCRT는 Windows 구성 요소이므로 안전하고 쉽게 업데이트하고 이미지 크기를 줄일 수 있도록 앱용 UCRT의 중앙 배포를 사용해야 합니다.  
   
 Visual Studio 2015 또는 Visual Studio 2017에서 지원하는 Windows 버전에서 UCRT를 사용할 수 있습니다. Windows 10이 아닌 지원되는 다른 버전의 Windows에 대해 vcredist 패키지를 사용하여 재배포할 수 있습니다. vcredist 패키지는 UCRT 구성 요소를 포함하고 이들 구성 요소가 기본적으로 설치되지 않은 Windows 운영 체제에 자동으로 설치합니다. 자세한 내용은 [Visual C++ 파일 재배포](../ide/redistributing-visual-cpp-files.md)를 참조하세요.  
   

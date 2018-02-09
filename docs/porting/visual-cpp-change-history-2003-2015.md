@@ -4,32 +4,38 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: breaking changes [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-caps.latest.revision: "124"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 변경 기록 2003 - 2015
-이 문서에서는 Visual C++ 2015에서 Visual Studio 2003까지 모든 주요 변경 내용을 설명하며, 이 문서에서 사용된 “새 동작" 또는 “현재"라는 용어는 Visual Studio 2015 이상 버전을 가리킵니다. "이전 동작" 및 "이전"은 Visual Studio 2013 이하 릴리스를 나타냅니다. 
- 
- Visual Studio 2017에 대한 자세한 내용은 [Visual Studio 2017의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md) 및 [Visual Studio 2017의 Visual C++에서 규칙 향상](../cpp-conformance-improvements-2017.md)을 참조하세요. 
- > [!NOTE]
- > Visual Studio 2015 ~ Visual Studio 2017에서 새로운 이진 변경 내용이 없습니다.
 
-새 버전의 Visual C++ 컴파일러로 업그레이드하는 경우 이전에 컴파일하고 올바르게 실행된 코드에서 컴파일 및/또는 런타임 오류가 발생할 수 있습니다. 그러한 문제가 발생하는 새 버전의 변경 사항은 *주요 변경 사항*이라고 하고 일반적으로 C++ 언어 표준, 함수 서명 또는 메모리의 레이아웃 개체 수정에 필요합니다.  
-  
+이 문서에서는 Visual C++ 2015에서 Visual Studio 2003까지 모든 주요 변경 내용을 설명하며, 이 문서에서 사용된 “새 동작" 또는 “현재"라는 용어는 Visual Studio 2015 이상 버전을 가리킵니다. "이전 동작" 및 "이전"은 Visual Studio 2013 이하 릴리스를 나타냅니다.
+
+Visual Studio 2017에 대한 자세한 내용은 [Visual Studio 2017의 Visual C++에 대한 새로운 기능](../what-s-new-for-visual-cpp-in-visual-studio.md) 및 [Visual Studio 2017의 Visual C++에서 규칙 향상](../cpp-conformance-improvements-2017.md)을 참조하세요. 
+
+> [!NOTE]
+> Visual Studio 2015 ~ Visual Studio 2017에서 새로운 이진 변경 내용이 없습니다.
+
+새 버전의 Visual Studio로 업그레이드하는 경우 이전에 컴파일하고 올바르게 실행된 코드에서 컴파일 및/또는 런타임 오류가 발생할 수 있습니다. 그러한 문제가 발생하는 새 버전의 변경 사항은 *주요 변경 사항*이라고 하고 일반적으로 C++ 언어 표준, 함수 서명 또는 메모리의 레이아웃 개체 수정에 필요합니다.
+
  검색 및 진단하기 어려운 런타임 오류를 방지하려면 다양한 버전의 컴파일러를 사용하여 컴파일된 바이너리에 정적으로 연결하지 않는 것이 좋습니다. 또한 EXE 또는 DLL 프로젝트를 업그레이드하는 경우 연결되는 라이브러리를 업그레이드해야 합니다. CRT(C 런타임) 형식 또는 C++ 표준 라이브러리(C++ 표준 라이브러리) 형식을 사용하는 경우, 다양한 버전의 컴파일러를 사용하여 컴파일된 바이너리(DLL 포함) 간에 이 두 형식을 전달하지 마세요. 자세한 내용은 [DLL 경계를 넘어 CRT 개체를 전달할 때 발생할 수 있는 오류](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)를 참조하세요.  
   
  또한 COM 인터페이스 또는 POD 개체가 아닌 개체에 대한 특정 레이아웃에 의존하는 코드는 작성하지 않는 것이 좋습니다. 그러한 코드를 작성하는 경우 업그레이드한 후 작동하는지 확인해야 합니다. 자세한 내용은 [ABI 경계의 이식성](../cpp/portability-at-abi-boundaries-modern-cpp.md)을 참조하세요.  
@@ -105,9 +111,8 @@ ms.lasthandoff: 12/21/2017
   
 -   **printf 및 scanf 함수 패밀리는 현재 인라인으로 정의됩니다.** 모든 printf 및 scanf 함수의 정의는 \<stdio.h>, \<conio.h> 및 기타 CRT 헤더로 인라인으로 이동되었습니다. 이 주요 변경 내용으로 인해 해당하는 CRT 헤더를 포함하지 않고 이들 함수를 로컬로 선언한 프로그램에 대한 링커 오류(LNK2019, 확인되지 않은 외부 기호)가 발생합니다. 가능하면 코드를 업데이트하여 인라인 함수 및 CRT 헤더를 포함(#include \<stdio.h> 추가)해야 하지만, 이들 헤더 파일을 포함하도록 코드를 수정하지 않으려면 대체 솔루션으로 링커 입력 legacy_stdio_definitions.lib에 추가 라이브러리를 추가합니다.  
   
-     이 라이브러리를 IDE의 링커 입력에 추가하려면 프로젝트 노드의 상황에 맞는 메뉴를 열고, **속성**을 선택하고, **프로젝트 속성** 대화 상자에서 **링커**를 선택하고, **링커 입력** 을 편집하여 legacy_stdio_definitions.lib를 세미콜론으로 구분된 목록에 추가합니다.  
-  
-     프로젝트가 Visual C++ 2015 이전의 릴리스로 컴파일된 정적 라이브러리와 연결되면 링커에서 확인되지 않은 외부 기호가 보고될 수 있습니다. 이들 오류는 _iob, _iob_func에 대한 내부 stdio 정의 또는 _imp\_* 형식의 특정 stdio 함수에 대한 관련 가져오기를 참조할 수 있습니다. 프로젝트를 업그레이드할 때 Visual C++ 컴파일러 및 라이브러리의 최신 버전으로 모든 정적 라이브러리를 다시 컴파일하는 것이 좋습니다. 라이브러리가 소스를 사용할 수 없는 타사 라이브러리이면 타사로부터 업데이트된 라이브러리를 요청하거나 Visual C++ 컴파일러 및 라이브러리의 이전 버전으로 컴파일하는 별도의 DLL로 해당 라이브러리 사용을 캡슐화해야 합니다.  
+     이 라이브러리를 IDE의 링커 입력에 추가하려면 프로젝트 노드의 상황에 맞는 메뉴를 열고, **속성**을 선택하고, **프로젝트 속성** 대화 상자에서 **링커**를 선택하고, **링커 입력** 을 편집하여 legacy_stdio_definitions.lib를 세미콜론으로 구분된 목록에 추가합니다.
+     프로젝트가 Visual Studio 2015 이전의 릴리스로 컴파일된 고정 라이브러리와 연결되면 링커에서 확인되지 않은 외부 기호가 보고될 수 있습니다. 이들 오류는 _iob, _iob_func에 대한 내부 stdio 정의 또는 _imp\_* 형식의 특정 stdio 함수에 대한 관련 가져오기를 참조할 수 있습니다. 프로젝트를 업그레이드할 때 C++ 컴파일러 및 라이브러리의 최신 버전으로 모든 고정 라이브러리를 다시 컴파일하는 것이 좋습니다. 라이브러리가 소스를 사용할 수 없는 타사 라이브러리이면 타사로부터 업데이트된 라이브러리를 요청하거나 이전 버전의 컴파일러 및 라이브러리으로 컴파일하는 별도의 DLL로 해당 라이브러리 사용을 캡슐화해야 합니다.
   
     > [!WARNING]
     >  Windows SDK 8.1 이하와 연결되어 있으면 이러한 확인되지 않은 외부 기호 오류가 발생할 수 있습니다. 이 경우 앞에 설명된 대로 링커 입력에 legacy_stdio_definitions.lib를 추가하여 오류를 해결해야 합니다.  
@@ -122,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **_cgets 및 _cgetws** 이전에 오류 없이 컴파일했던 위치에서 [_cgets](../c-runtime-library/cgets-cgetws.md) 및 [_cgetws](../c-runtime-library/cgets-cgetws.md) 함수가 제거되었습니다. 이들 함수 대신 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 및 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)를 사용하는 것이 좋습니다.  
   
--   **무한대 및 NaN 서식 지정** 이전 버전에서 무한대 및 NaN은 일련의 Visual C++ 관련 센티널 문자열을 사용하여 서식이 지정됩니다.  
+-   **무한대 및 NaN 서식 지정** 이전 버전에서 무한대 및 NaN은 일련의 MSVC 관련 센티널 문자열을 사용하여 서식이 지정됩니다.  
   
     -   무한대: 1.#INF  
   
@@ -132,7 +137,7 @@ ms.lasthandoff: 12/21/2017
   
     -   무한 NaN: 1.#IND  
   
-     이들 문자열 앞에 부호가 추가될 수 있고 필드 너비 및 정밀도에 따라 서식이 약간 다르게 지정되었을 수 있습니다. #INF는 2자리 정밀도로 "반올림"되므로 경우에 따라 비정상적인 효과로 인해 printf("%.2f\n", INFINITY)가 1.#J를 인쇄할 수 있습니다. C99는 무한대 및 NaN 서식을 지정하는 방법에 대한 새로운 요구 사항을 새로 추가했습니다. Visual C++ 구현은 현재 이들 요구 사항을 준수합니다. 새 문자열은 다음과 같습니다.  
+     이들 문자열 앞에 부호가 추가될 수 있고 필드 너비 및 정밀도에 따라 서식이 약간 다르게 지정되었을 수 있습니다. #INF는 2자리 정밀도로 "반올림"되므로 경우에 따라 비정상적인 효과로 인해 printf("%.2f\n", INFINITY)가 1.#J를 인쇄할 수 있습니다. C99는 무한대 및 NaN 서식을 지정하는 방법에 대한 새로운 요구 사항을 새로 추가했습니다. 현재 MSVC 구현은 이러한 요구 사항을 준수합니다. 새 문자열은 다음과 같습니다.  
   
     -   무한대: inf  
   
@@ -240,11 +245,11 @@ ms.lasthandoff: 12/21/2017
 -   **CLOCKS_PER_SEC** 현재 CLOCKS_PER_SEC 매크로는 C 언어에 필요한 형식 clock_t의 정수로 확장됩니다.  
   
 ####  <a name="BK_STL"></a> C++ 표준 라이브러리  
- 새로운 최적화 및 디버깅 검사를 사용하려면 C++ 표준 라이브러리의 Visual Studio 구현은 버전별로 바이너리 호환성을 의도적으로 변경합니다. 따라서 C++ 표준 라이브러리가 사용되면 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 바이너리(EXE 또는 DLL)에 혼합할 수 없고 C++ 표준 라이브러리 개체는 서로 다른 버전을 사용하여 컴파일된 바이너리 사이에서 전달할 수 없습니다. 그렇게 혼합하면 _MSC_VER 불일치에 대한 링커 오류를 내보냅니다. _MSC_VER은 컴파일러의 주 버전(예: Visual Studio 2013의 경우 1800)이 포함된 매크로입니다. 이 검사에서는 DLL 혼합을 비롯하여 Visual C++ 2008 또는 이전 버전과 관련된 혼합을 감지할 수 없습니다.  
+ 새로운 최적화 및 디버깅 검사를 사용하려면 C++ 표준 라이브러리의 Visual Studio 구현은 버전별로 바이너리 호환성을 의도적으로 변경합니다. 따라서 C++ 표준 라이브러리가 사용되면 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 바이너리(EXE 또는 DLL)에 혼합할 수 없고 C++ 표준 라이브러리 개체는 서로 다른 버전을 사용하여 컴파일된 바이너리 사이에서 전달할 수 없습니다. 그렇게 혼합하면 _MSC_VER 불일치에 대한 링커 오류를 내보냅니다. _MSC_VER은 컴파일러의 주 버전(예: Visual Studio 2013의 경우 1800)이 포함된 매크로입니다. 이 검사에서는 DLL 혼합을 비롯하여 Visual Studio 2008 또는 이전 버전과 관련된 혼합을 감지할 수 없습니다.  
   
 -   **C++ 표준 라이브러리 포함 파일** C++ 표준 라이브러리 헤더의 include 구조체에 몇 가지 변경 내용이 적용되었습니다. C++ 표준 라이브러리 헤더는 서로 지정되지 않는 방식으로 포함할 수 있습니다. 일반적으로 C++ 표준에 따라 필요한 모든 헤더를 신중하게 포함하고 다른 C++ 표준 라이브러리 헤더를 포함하는 C++ 표준 라이브러리 헤더를 사용하지 않도록 코드를 작성해야 합니다. 이렇게 하면 버전 및 플랫폼 간에 코드를 이식할 수 있습니다. Visual Studio 2015에서 두 개 이상의 헤더 변경 내용이 사용자 코드에 영향을 줍니다. 첫 번째, \<string>은 더 이상 \<iterator>를 포함하지 않습니다. 두 번째, \<tuple>은 현재 모든 \<array>를 포함하지 않고 std::array를 선언하여 다음 생성자 구문 조합을 통해 코드를 분할합니다. 코드에 "array" 변수가 있고, using 지시문 "using namespace std;"를 포함하고, 현재 std::array를 선언하는 \<tuple>이 포함된 C++ 표준 라이브러리 헤더(예: \<functional>)를 포함합니다.  
   
--   **steady_clock** [steady_clock](../standard-library/steady-clock-struct.md)의 \<chrono> 구현은 지속성 및 단조성에 대한 C++ 표준 요구 사항을 충족하도록 변경되었습니다. 이제 steady_clock은 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) (영문)를 기반으로 하고 high_resolution_clock은 steady_clock에 대한 typedef입니다. 따라서 Visual C++에서 steady_clock::time_point는 현재 chrono::time_point<steady_clock>에 대한 typedef이나, 다른 구현에 이를 반드시 적용할 필요는 없습니다.  
+-   **steady_clock** [steady_clock](../standard-library/steady-clock-struct.md)의 \<chrono> 구현은 지속성 및 단조성에 대한 C++ 표준 요구 사항을 충족하도록 변경되었습니다. 이제 steady_clock은 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) (영문)를 기반으로 하고 high_resolution_clock은 steady_clock에 대한 typedef입니다. 따라서 Visual Studio에서 steady_clock::time_point는 현재 chrono::time_point<steady_clock>에 대한 typedef이지만 다른 구현에 반드시 적용할 필요는 없습니다.  
   
 -   **allocator 및 const** 현재 양쪽에서 const 인수를 수락하려면 allocator 같음/같지 않음 비교가 필요합니다.  allocator가 이들 연산자를 다음과 같이 정의할 경우:  
   
@@ -258,9 +263,9 @@ ms.lasthandoff: 12/21/2017
     bool operator==(const MyAlloc& other) const  
     ```  
   
--   **const elements** C++ 표준에서는 const 요소의 컨테이너(예: vector\<const T> 또는 set\<const T>)를 항상 금지했습니다. Visual C++ 2013 이하에서는 해당 컨테이너를 허용했습니다. 현재 버전에서는 해당 컨테이너가 컴파일되지 않습니다.  
+-   **const elements** C++ 표준에서는 const 요소의 컨테이너(예: vector\<const T> 또는 set\<const T>)를 항상 금지했습니다. Visual Studio 2013 이하에서는 해당 컨테이너를 허용했습니다. 현재 버전에서는 해당 컨테이너가 컴파일되지 않습니다.  
   
--   **std::allocator::deallocate** Visual C++ 2013 이하에서 std::allocator::deallocate(p, n)는 n으로 전달된 인수를 무시했습니다.  C++ 표준에서 n은 항상 p를 반환한 allocate의 호출에 첫 번째 인수로 전달된 값과 같아야 합니다. 그러나 현재 버전에서는 n 값이 검사됩니다. 표준에 필요한 값과 다른 n에 대한 인수를 전달하는 코드는 런타임에 충돌을 가져올 수 있습니다.  
+-   **std::allocator::deallocate** Visual Studio 2013 이하에서 std::allocator::deallocate(p, n)는 n으로 전달된 인수를 무시했습니다.  C++ 표준에서 n은 항상 p를 반환한 allocate의 호출에 첫 번째 인수로 전달된 값과 같아야 합니다. 그러나 현재 버전에서는 n 값이 검사됩니다. 표준에 필요한 값과 다른 n에 대한 인수를 전달하는 코드는 런타임에 충돌을 가져올 수 있습니다.  
   
 -   **hash_map 및 hash_set** 비표준 헤더 파일 hash_map 및 hash_set은 Visual Studio 2015에서 사용되지 않고 이후 릴리스에서 제거될 예정입니다. 대신에 unordered_map 및 unordered_set을 사용하세요.  
   
@@ -316,16 +321,16 @@ ms.lasthandoff: 12/21/2017
     (concurrency::Context::Yield)();  
     ```  
   
-## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Visual C++ 2015의 컴파일러 규칙 향상  
- 이전 버전에서 코드를 업그레이드하는 경우 Visual C++ 2015의 규칙 향상으로 인한 컴파일러 오류가 발생할 수도 있습니다. 이러한 향상된 기능 때문에 이전 버전의 Visual C++에서 이진 호환성이 중단되지는 않지만 이전에는 발생하지 않았던 컴파일러 오류가 생성될 수 있습니다. 자세한 내용은 [Visual C++ 2003 ~ 2015의 새로운 기능](../porting/visual-cpp-what-s-new-2003-through-2015.md)을 참조하세요.  
+## <a name="compiler-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015의 컴파일러 규칙 향상  
+ 이전 버전에서 코드를 업그레이드하는 경우 Visual Studio 2015의 규칙 향상으로 인한 컴파일러 오류가 발생할 수도 있습니다. 이러한 향상된 기능 때문에 이전 버전의 Visual Studio에서 이진 호환성이 중단되지는 않지만 이전에는 발생하지 않았던 컴파일러 오류가 생성될 수 있습니다. 자세한 내용은 [Visual C++ 2003 ~ 2015의 새로운 기능](../porting/visual-cpp-what-s-new-2003-through-2015.md)을 참조하세요.  
   
- Visual C++ 2015에서 컴파일러 규칙 개선 작업이 진행 중이므로 컴파일러에서 기존 소스 코드를 인식하는 방식이 변경될 수 있습니다. 이로 인해 빌드 중 새로운 오류 또는 다른 오류가 발생하거나, 이전에 빌드되어 올바르게 실행되는 것처럼 보이는 코드가 다르게 동작할 수도 있습니다.  
+ Visual Studio 2015에서 컴파일러 규칙 향상 작업이 진행 중이므로 컴파일러에서 기존 소스 코드를 인식하는 방식이 변경될 수 있습니다. 이로 인해 빌드 중 새로운 오류 또는 다른 오류가 발생하거나, 이전에 빌드되어 올바르게 실행되는 것처럼 보이는 코드가 다르게 동작할 수도 있습니다.  
   
  다행히 이러한 차이는 대부분의 소스 코드에 거의 또는 전혀 영향을 주지 않으며, 차이를 해결하기 위해 소스 코드 변경이나 기타 변경이 필요한 경우에도 대체로 간단히 처리할 수 있는 사소한 수정입니다. 이전에는 허용되는 소스 코드였지만 변경해야 할 수 있는 코드*(이전)* 및 수정 코드*(이후)*의 많은 예가 포함되어 있습니다.  
   
- 이러한 차이가 소스 코드나 다른 빌드 아티팩트에 영향을 줄 수도 있지만 Visual C++ 버전 업데이트 간의 이진 호환성에는 영향을 주지 않습니다. 보다 심각한 종류의 변경인 *주요 변경 내용*은 이진 호환성에 영향을 줄 수 있지만 이러한 종류의 이진 호환성 중단은 Visual C++의 주 버전 간에만 발생합니다. 예를 들어 Visual C++ 2013과 Visual C++ 2015 간에 발생합니다. Visual C++ 2013과 Visual C++ 2015 사이에 발생한 주요 변경 내용에 대한 자세한 내용은 [Visual C++ 2015 규칙 변경 내용](#VC_2015)을 참조하세요.  
+ 이러한 차이가 소스 코드나 다른 빌드 아티팩트에 영향을 줄 수도 있지만 Visual Studio 버전 업데이트 간의 이진 호환성에는 영향을 주지 않습니다. 보다 심각한 종류의 변경인 *주요 변경 내용*은 이진 호환성에 영향을 줄 수 있지만 이러한 종류의 이진 호환성 중단은 Visual Studio의 주 버전 간에만 발생합니다. 예를 들어 Visual Studio 2013과 Visual Studio 2015 간에 발생합니다. Visual Studio 2013과 Visual Studio 2015 사이에 발생한 주요 변경 내용에 대한 자세한 내용은 [Visual Studio 2015 규칙 변경 내용](#VC_2015)을 참조하세요.  
   
--   [Visual C++ 2015의 규칙 향상](#VS_RTM)  
+-   [Visual Studio 2015의 규칙 향상](#VS_RTM)  
   
 -   [업데이트 1의 규칙 향상](#VS_Update1)  
   
@@ -333,7 +338,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [업데이트 3의 규칙 향상](#VS_Update3)  
   
-###  <a name="VS_RTM"></a> Visual C++ 2015의 규칙 향상  
+###  <a name="VS_RTM"></a> Visual Studio 2015의 규칙 향상  
   
 -   /Zc:forScope- 옵션  
   
@@ -376,7 +381,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
-     이전 Visual C++ 컴파일러 버전에서는 이를 허용했으나 현재 컴파일러에서는 다음 오류를 표시합니다.  
+     이전 버전의 컴파일러에서는 이를 허용했으나 현재 컴파일러에서는 다음 오류를 표시합니다.  
   
     ```Output  
     error C2071: 'S::r': illegal storage class  
@@ -408,7 +413,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **비형식 템플릿 매개 변수**  
   
-     이제는 비형식 템플릿 매개 변수가 포함된 특정 코드에 명시적 템플릿 인수를 제공하면 형식 호환성 검사가 정확하게 수행됩니다. 예를 들어 다음 코드는 이전 Visual C++ 버전에서는 오류 없이 컴파일되었습니다.  
+     이제는 비형식 템플릿 매개 변수가 포함된 특정 코드에 명시적 템플릿 인수를 제공하면 형식 호환성 검사가 정확하게 수행됩니다. 예를 들어 다음 코드는 이전 버전의 Visual Studio에서는 오류 없이 컴파일되었습니다.  
   
     ```cpp  
     struct S1  
@@ -574,7 +579,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
-     정의한 placement delete 연산자와 새 전역 크기 지정된 delete 연산자 간에 함수 서명이 일치하기 때문에 문제가 발생합니다. placement new 및 delete 연산자에 대해 size_t 이외의 다른 연산자를 사용할 수 있는지를 고려하세요.  size_t typedef의 형식은 컴파일러에 따라 결정되고 Visual C++에서는 부호 없는 int에 대한 typedef입니다. 이 문제를 해결하려면 다음과 같은 열거된 형식을 사용하는 것이 좋습니다.  
+     정의한 placement delete 연산자와 새 전역 크기 지정된 delete 연산자 간에 함수 서명이 일치하기 때문에 문제가 발생합니다. placement new 및 delete 연산자에 대해 size_t 이외의 다른 연산자를 사용할 수 있는지를 고려하세요.  size_t typedef의 형식은 컴파일러에 따라 결정되고 MSVC의 unsigned int에 대해서는 typedef입니다. 이 문제를 해결하려면 다음과 같은 열거된 형식을 사용하는 것이 좋습니다.  
   
     ```cpp  
     enum class my_type : size_t {};  
@@ -2298,7 +2303,7 @@ C c;
   
 -   **정적 멤버 함수는 cv 한정자를 지원하지 않습니다.**  
   
-     이전 버전의 Visual C++ 2015는 정적 멤버 함수에 cv 한정자가 포함되는 것을 허용했습니다. 이 동작은 Visual C++ 2015 및 Visual C++ 2015 업데이트 1에서의 문제 재발로 인한 것입니다. Visual C++ 2013 및 이전 버전의 Visual C++는 이런 식으로 작성된 코드를 거부합니다. Visual C++ 2015 및 Visual C++ 2015 업데이트 1의 동작은 잘못되었으며 C++ 표준과 일치하지 않습니다.  Visual Studio 2015 업데이트 2는 이런 식으로 작성된 코드를 거부하며 대신 컴파일러 오류 C2511을 발생합니다.  
+     이전 버전의 Visual Studio 2015는 고정 멤버 함수에 cv 한정자가 포함되는 것을 허용했습니다. 이 동작은 Visual Studio 2015 및 Visual Studio 2015 업데이트 1에서의 문제 재발로 인한 것입니다. Visual Studio 2013 및 이전 버전의 컴파일러는 이런 방식으로 작성된 코드를 거부합니다. Visual Studio 2015 및 Visual Studio 2015 업데이트 1의 동작은 잘못되었으며 C++ 표준과 일치하지 않습니다.  Visual Studio 2015 업데이트 2는 이런 식으로 작성된 코드를 거부하며 대신 컴파일러 오류 C2511을 발생합니다.  
   
     ```Output  
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'  
@@ -2452,7 +2457,7 @@ C c;
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");  
     ```  
   
-     이전 버전의 Visual C++에서는 `std::is_convertable<>::value`가 `true`로 잘못 설정되었기 때문에 이 예제의 맨 아래에 있는 정적 어설션이 성공합니다. 이제 `std::is_convertable<>::value`이 `false`로 올바르게 설정되므로 정적 어설션이 실패합니다.  
+     이전 버전의 컴파일러에서는 `std::is_convertable<>::value`가 `true`로 잘못 설정되었기 때문에 이 예제의 맨 아래에 있는 고정 어설션이 성공합니다. 이제 `std::is_convertable<>::value`이 `false`로 올바르게 설정되므로 정적 어설션이 실패합니다.  
   
 -   **기본값으로 설정되었거나 삭제된 trivial 복사 및 이동 생성자가 액세스 지정자를 따름**  
   
@@ -2505,7 +2510,7 @@ C c;
   
 -   **특성 사용 ATL 코드 지원 중단**(기본적으로 수준 1(/W1) 설정)  
   
-     이전 버전의 컴파일러에서는 특성 사용 ATL 코드를 지원했습니다. [Visual C++ 2008부터 시작](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)된 특성 사용 ATL 코드 지원 제거의 다음 단계로 특성 사용 ATL 코드가 더 이상 사용되지 않습니다. 이제 컴파일러에서 사용되지 않는 이러한 종류의 코드를 식별하기 위해 컴파일러 경고 C4467을 실행합니다.  
+     이전 버전의 컴파일러에서는 특성 사용 ATL 코드를 지원했습니다. [Visual Studio 2008부터 시작](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)된 특성 사용 ATL 코드 지원 제거의 다음 단계로 특성 사용 ATL 코드가 더 이상 사용되지 않습니다. 이제 컴파일러에서 사용되지 않는 이러한 종류의 코드를 식별하기 위해 컴파일러 경고 C4467을 실행합니다.  
   
     ```Output  
     warning C4467: Usage of ATL attributes is deprecated  
@@ -2683,7 +2688,7 @@ C c;
   
     ```  
   
-## <a name="visual-c-2013-conformance-changes"></a>Visual C++ 2013 규칙 변경 내용  
+## <a name="visual-studio-2013-conformance-changes"></a>Visual Studio 2013 규칙 변경 내용  
   
 ### <a name="compiler"></a>컴파일러  
   
@@ -2740,7 +2745,7 @@ C c;
   
     ```  
   
--   C++ 표준은 클래스에서 명시적 특수화를 허용하지 않습니다. Visual C++는 어떤 경우에는 명시적 특수화를 허용하지만, 다음 예제와 같은 경우에는 컴파일러가 두 번째 함수를 첫 번째 함수의 특수화로 간주하지 않기 때문에 이제 오류가 생성됩니다.  
+-   C++ 표준은 클래스에서 명시적 특수화를 허용하지 않습니다. Microsoft Visual C++ 컴파일러는 어떤 경우에는 명시적 특수화를 허용하지만, 다음 예제와 같은 경우에는 컴파일러가 두 번째 함수를 첫 번째 함수의 특수화로 간주하지 않기 때문에 이제 오류가 생성됩니다.  
   
     ```cpp  
     template < int N>  
@@ -2761,7 +2766,7 @@ C c;
   
     ```  
   
--   다음 예제에서 Visual C++는 더 이상 두 함수를 구분하려고 시도하지 않으며 이제 오류를 생성합니다.  
+-   다음 예제에서 컴파일러는 더 이상 두 함수를 구분하려고 시도하지 않으며 이제 오류가 발생합니다.  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2833,7 +2838,7 @@ C c;
   
     ```  
   
--   이름 조회가 변경되었습니다. 다음 코드는 Visual Studio 2012의 Visual C++와 Visual Studio 2013의 Visual C++에서 다르게 확인됩니다.  
+-   이름 조회가 변경되었습니다. 다음 코드는 Visual Studio 2012 및 Visual Studio 2013의 C++ 컴파일러에서 다르게 결정됩니다.  
   
     ```cpp  
     enum class E1 { a };  
@@ -2847,9 +2852,9 @@ C c;
   
     ```  
   
-     Visual Studio 2012의 Visual C++에서는 E1::b 식의 E1이 전역 범위의 ::E1로 확인됩니다. Visual Studio 2013의 Visual C++에서는 E1::b 식의 E1이 main()의 typedef E2로 확인되고 ::E2 형식을 사용합니다.  
+     Visual Studio 2012에서 E1::b 식의 E1이 전역 범위의 ::E1로 결정됩니다. Visual Studio 2013에서는 E1::b 식의 E1이 main()의 typedef E2 정의로 결정되고 ::E2 형식을 사용합니다.  
   
--   개체 레이아웃이 변경되었습니다. x64에서 클래스의 개체 레이아웃은 이전 릴리스에서 변경될 수 있습니다. 가상 함수가 있지만 가상 함수가 포함된 기본 클래스가 없는 경우 컴파일러의 개체 모델은 데이터 멤버 레이아웃 뒤의 가상 함수 테이블에 포인터를 삽입합니다. 즉, 레이아웃이 최적의 상태가 아닌 경우도 있습니다. 이전 릴리스에서 x64 최적화를 하면 레이아웃 향상을 시도하지만 복잡한 코드 상황에서는 올바르게 작동하지 않기 때문에 Visual Studio 2013의 Visual C++에서 제거했습니다. 예를 들어 다음 코드를 고려합니다.  
+-   개체 레이아웃이 변경되었습니다. x64에서 클래스의 개체 레이아웃은 이전 릴리스에서 변경될 수 있습니다. 가상 함수가 있지만 가상 함수가 포함된 기본 클래스가 없는 경우 컴파일러의 개체 모델은 데이터 멤버 레이아웃 뒤의 가상 함수 테이블에 포인터를 삽입합니다. 즉, 레이아웃이 최적의 상태가 아닌 경우도 있습니다. 이전 릴리스에서 x64 최적화를 하면 레이아웃 향상을 시도하지만 복잡한 코드 상황에서는 올바르게 작동하지 않기 때문에 Visual Studio 2013에서 제거되었습니다. 예를 들어 다음 코드를 고려합니다.  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2863,7 +2868,7 @@ C c;
   
     ```  
   
--   Visual Studio 2013의 Visual C++에서 x64의 sizeof(S2) 결과는 48이지만 이전 릴리스에서는 32로 계산됩니다. Visual Studio 2013의 Visual C++에서 x64의 결과가 32로 계산되게 하려면 가상 함수가 포함된 더미 기본 클래스를 추가합니다.  
+-   Visual Studio 2013에서 x64의 sizeof(S2) 결과는 48이지만 이전 릴리스에서는 32로 계산됩니다. Visual Studio 2013의 C++ 컴파일러에서 x64의 결과가 32로 계산되게 하려면 가상 함수가 포함된 더미 기본 클래스를 추가합니다.  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2896,9 +2901,9 @@ C c;
   
     ```  
   
-     Visual Studio 2013의 Visual C++ 이전 Visual C++ 컴파일러에서 이 코드는 다음 메시지를 출력합니다. 경고 C4370: 'S2': 압축 기능이 향상되어 이전 버전의 컴파일러에서 클래스 레이아웃이 변경되었습니다.  
+     Visual Studio 2013 이전에 이 코드는 다음 메시지를 출력합니다. "경고 C4370: 'S2': 압축 기능이 향상되어 이전 버전의 컴파일러에서 클래스 레이아웃이 변경되었습니다."  
   
-     x86 컴파일러는 모든 버전의 Visual C++에서 같은 차선의 레이아웃 문제가 있습니다. 예를 들어 이 코드가 x86에 대해 컴파일되면  
+     x86 컴파일러에는 모든 버전의 컴파일러에서 동일한 차선의 레이아웃 문제가 있습니다. 예를 들어 이 코드가 x86에 대해 컴파일되면  
   
     ```cpp  
     struct S {  
@@ -2925,7 +2930,7 @@ C c;
     ```  
   
 ### <a name="standard-library"></a>표준 라이브러리  
- Visual Studio 2013의 Visual C++는 Visual C++ 2010에서 구현된 _ITERATOR_DEBUG_LEVEL의 불일치와 RuntimeLibrary 불일치를 감지합니다. 컴파일러 옵션 /MT(정적 릴리스), /MTd(정적 디버그), /MD(동적 릴리스) 및 /MDd(동적 디버그)가 혼합되면 이러한 현상이 발생합니다.  
+ Visual Studio 2013의 C++ 컴파일러는 Visual Studio 2010에서 구현된 _ITERATOR_DEBUG_LEVEL의 불일치와 RuntimeLibrary 불일치를 감지합니다. 컴파일러 옵션 /MT(정적 릴리스), /MTd(정적 디버그), /MD(동적 릴리스) 및 /MDd(동적 디버그)가 혼합되면 이러한 현상이 발생합니다.  
   
 -   코드에서 이전 릴리스의 시뮬레이트된 별칭 템플릿을 승인하는 경우 이를 변경해야 합니다. 예를 들어 allocator_traits\<A>::rebind_alloc\<U>::other 대신 이제 allocator_traits\<A>::rebind_alloc\<U>로 지정해야 합니다. ratio_add\<R1, R2>::type이 더 이상 필요하지 않고 ratio_add\<R1, R2>로 지정하는 것이 좋지만 감소된 비율에 대한 "type" typedef가 있으려면(이미 감소된 경우 같은 형식) ratio\<N, D>가 필요하기 때문에 전자가 계속 컴파일됩니다.  
   
@@ -2947,7 +2952,7 @@ C c;
   
 -   C++ 표준 라이브러리는 /clr:oldSyntax를 지원하지 않습니다.  
   
--   common_type<>에 대한 C++11 사양으로 인해 바람직하지 않은 예기치 않은 결과가 발생했습니다. 특히 common_type\<int, int>::type이 int&&를 반환하게 됩니다. 따라서 Visual C++는 라이브러리 작업 그룹 문제에 대한 제안된 해결 방법 2141을 구현하며, 이를 통해 common_type\<int, int="">::type이 int를 반환하게 됩니다.  
+-   common_type<>에 대한 C++11 사양으로 인해 바람직하지 않은 예기치 않은 결과가 발생했습니다. 특히 common_type\<int, int>::type이 int&&를 반환하게 됩니다. 따라서 컴파일러는 라이브러리 작업 그룹 문제에 대한 제안된 해결 방법 2141을 구현하며, 이를 통해 common_type\<int, int="">::type이 int를 반환하게 됩니다.  
   
      이 변경의 부작용으로 ID의 경우가 더 이상 작동하지 않습니다(common_type\<T>가 T 형식을 생성하지 않는 경우도 있음). 이는 제안된 해결 방법을 사용하여 컴파일되지만 이전 동작에 의존하는 모든 코드가 중단됩니다.  
   
@@ -2962,7 +2967,7 @@ C c;
   
 ### <a name="mfc-and-atl"></a>MFC 및 ATL  
   
--  **Visual Studio 2013만 해당**: 유니코드가 일반화되고 MBCS의 사용이 크게 줄었기 때문에 MFC MBCS 라이브러리는 Visual Studio에 포함되지 않습니다. 여러 새로운 컨트롤과 메시지가 유니코드 전용이기 때문에 이 변경으로 인해 MFC는 Windows SDK 자체와 보다 밀접한 관계로 유지됩니다. 그러나 MFC MBCS 라이브러리를 계속 사용해야 하는 경우 MSDN 다운로드 센터의 [Visual Studio 2013용 멀티바이트 MFC 라이브러리](https://www.microsoft.com/en-us/download/details.aspx?id=40770)에서 다운로드할 수 있습니다. Visual C++ 재배포 가능 패키지에는 이 라이브러리가 계속 포함됩니다.  (참고: MBCS DLL은 Visual Studio 2015 이상의 Visual C++ 설치 구성 요소에 포함됩니다).
+-  **Visual Studio 2013만 해당**: 유니코드가 일반화되고 MBCS의 사용이 크게 줄었기 때문에 MFC MBCS 라이브러리는 Visual Studio에 포함되지 않습니다. 여러 새로운 컨트롤과 메시지가 유니코드 전용이기 때문에 이 변경으로 인해 MFC는 Windows SDK 자체와 보다 밀접한 관계로 유지됩니다. 그러나 MFC MBCS 라이브러리를 계속 사용해야 하는 경우 MSDN 다운로드 센터의 [Visual Studio 2013용 멀티바이트 MFC 라이브러리](https://www.microsoft.com/en-us/download/details.aspx?id=40770)에서 다운로드할 수 있습니다. Visual C++ 재배포 가능 패키지에는 이 라이브러리가 계속 포함됩니다.  (참고: MBCS DLL은 Visual Studio 2015 이상의 C++ 설치 구성 요소에 포함됩니다).
   
 -   MFC 리본에 대한 접근성이 변경되었습니다.  한 수준의 아키텍처 대신 이제 계층적 아키텍처가 있습니다. CRibbonBar::EnableSingleLevelAccessibilityMode()을 호출하여 이전 동작을 계속 사용할 수 있습니다.  
   
@@ -3043,19 +3048,19 @@ C c;
   
 -   C++98/03 및 C++11 표준 간의 주요 변경 내용에 따라 명시적 템플릿 인수를 사용하여 make_pair()를 호출하는 경우(예: make_pair\<int, int>(x, y)) 일반적으로 Visual Studio 2012의 Visual C++에서 컴파일되지 않습니다. 해결 방법은 make_pair(x, y)와 같이 항상 명시적 템플릿 인수 없이 make_pair()를 호출하는 것입니다. 명시적 템플릿 인수를 제공하면 이 함수의 목적에서 벗어납니다. 결과 형식을 정밀하게 제어해야 하는 경우 pair\<short, short>(int1, int2)와 같이 make_pair 대신 pair를 사용합니다.  
   
--   C++98/03 및 C++11 표준 간의 또 다른 주요 변경 내용: A를 B로 암시적으로 변환할 수 있고, B를 C로 암시적으로 변환할 수 있지만 A를 C로 암시적으로 변환할 수 없는 경우 C++98/03 및 Visual C++ 2010에서는 pair\<A, X>를 pair\<C, X>로 변환할 수 있었습니다(암시적 또는 명시적). 다른 형식 X는 여기서 중요하지 않으며, 쌍의 첫 번째 형식과 관련이 없습니다. C++11 및 Visual Studio 2012의 Visual C++는 A를 C로 암시적으로 변환할 수 없음을 감지하기 때문에 오버로드 확인에서 쌍 변환을 제거합니다. 이는 다양한 시나리오에서 긍정적인 변경입니다. 예를 들어 func(const pair\<int, int>&) 및 func(const pair\<string, string>&)를 오버로드하고 pair\<const char *, const char \*>를 사용하여 func()를 호출하면 이 변경과 함께 컴파일됩니다. 그러나 이 변경으로 인해 적극적인 쌍 변환을 사용한 코드가 손상됩니다. 일반적으로 이러한 코드는 pair\<C, X>가 필요한 함수에 make_pair(static_cast\<B>(a), x) 전달 등의 방법으로 변환의 일부를 명시적으로 수행하여 수정할 수 있습니다.  
+-   C++98/03 및 C++11 표준 간의 또 다른 주요 변경 내용: A를 B로 암시적으로 변환할 수 있고, B를 C로 암시적으로 변환할 수 있지만 A를 C로 암시적으로 변환할 수 없는 경우 C++98/03 및 Visual C++ 2010에서는 pair\<A, X>를 pair\<C, X>로 변환할 수 있었습니다(암시적 또는 명시적). 다른 형식 X는 여기서 중요하지 않으며, 쌍의 첫 번째 형식과 관련이 없습니다. Visual Studio 2012에서 C++11 및 C++ 컴파일러가 A를 C로 암시적으로 변환할 수 없음을 감지하기 때문에 오버로드 확인에서 쌍 변환을 제거합니다. 이는 다양한 시나리오에서 긍정적인 변경입니다. 예를 들어 func(const pair\<int, int>&) 및 func(const pair\<string, string>&)를 오버로드하고 pair\<const char *, const char \*>를 사용하여 func()를 호출하면 이 변경과 함께 컴파일됩니다. 그러나 이 변경으로 인해 적극적인 쌍 변환을 사용한 코드가 손상됩니다. 일반적으로 이러한 코드는 pair\<C, X>가 필요한 함수에 make_pair(static_cast\<B>(a), x) 전달 등의 방법으로 변환의 일부를 명시적으로 수행하여 수정할 수 있습니다.  
   
--   Visual C++ 2010에서는 전처리기 기계로 오버로드와 특수화를 제거하여 variadic 템플릿(예: make_shared\<T>(arg1, arg2, argN))을 10개 인수 제한까지 시뮬레이트했습니다. Visual Studio 2012의 Visual C++에서는 대부분의 사용자에 대해 컴파일 시간과 컴파일러 메모리 소비를 개선하기 위해 이 제한이 5개 인수로 축소되었습니다. 그러나 프로젝트 수준에서 _VARIADIC_MAX를 10으로 명시적으로 정의하여 이전 제한을 설정할 수 있습니다.  
+-   Visual C++ 2010에서는 전처리기 기계로 오버로드와 특수화를 제거하여 variadic 템플릿(예: make_shared\<T>(arg1, arg2, argN))을 10개 인수 제한까지 시뮬레이트했습니다. Visual Studio 2012에서는 대부분의 사용자에 대해 컴파일 시간과 컴파일러 메모리 소비를 개선하기 위해 이 제한이 5개의 인수로 축소되었습니다. 그러나 프로젝트 수준에서 _VARIADIC_MAX를 10으로 명시적으로 정의하여 이전 제한을 설정할 수 있습니다.  
   
 -   C++11 17.6.4.3.1 [macro.names]/2에서는 C++ 표준 라이브러리 헤더가 포함된 경우 macro-izing 키워드를 금지합니다. 이제 헤더가 macro-ized 키워드를 검색하면 컴파일러 오류를 내보냅니다. _ALLOW_KEYWORD_MACROS를 정의하면 이러한 코드를 컴파일할 수 있지만 사용하지 않는 것이 좋습니다. 예외로, macro-ized new는 헤더가 #pragma push_macro("new")/#undef new/#pragma pop_macro("new")를 사용하여 포괄적으로 자체 보호되므로 기본적으로 허용됩니다. _ENFORCE_BAN_OF_MACRO_NEW 정의는 이름이 암시하는 작업을 정확히 수행합니다.  
   
--   다양한 최적화 및 디버깅 검사를 구현하기 위해 C++ 표준 라이브러리는 Visual Studio 버전(2005, 2008, 2010, 2012) 간에 이진 호환성을 의도적으로 중단합니다. C++ 표준 라이브러리가 사용되는 경우 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 이진(EXE 또는 DLL)에 혼합할 수 없고, 서로 다른 버전을 사용하여 컴파일된 이진 간에 C++ 표준 라이브러리 개체를 전달할 수 없습니다. 개체 파일과 정적 라이브러리를 혼합(Visual C++ 2010으로 컴파일된 C++ 표준 라이브러리와 Visual Studio 2012의 Visual C++로 컴파일된 C++ 표준 라이브러리를 함께 사용)하면 _MSC_VER 불일치에 대한 링커 오류가 내보내집니다. 여기서 _MSC_VER은 컴파일러의 주 버전(Visual Studio 2012의 Visual C++의 경우 1700)을 포함하는 매크로입니다. 이 검사에서는 DLL 혼합을 비롯하여 Visual C++ 2008 또는 이전 버전과 관련된 혼합을 감지할 수 없습니다.  
+-   다양한 최적화 및 디버깅 검사를 구현하기 위해 C++ 표준 라이브러리는 Visual Studio 버전(2005, 2008, 2010, 2012) 간에 이진 호환성을 의도적으로 중단합니다. C++ 표준 라이브러리가 사용되는 경우 서로 다른 버전을 사용하여 컴파일된 개체 파일 및 정적 라이브러리를 하나의 이진(EXE 또는 DLL)에 혼합할 수 없고, 서로 다른 버전을 사용하여 컴파일된 이진 간에 C++ 표준 라이브러리 개체를 전달할 수 없습니다. 개체 파일과 고정 라이브러리를 혼합(Visual C++ 2010으로 컴파일된 C++ 표준 라이브러리와 Visual Studio 2012의 C++ 컴파일러로 컴파일된 C++ 표준 라이브러리를 함께 사용)하면 _MSC_VER 불일치에 대한 링커 오류가 내보내집니다. 여기서 _MSC_VER은 컴파일러의 주 버전(Visual Studio 2012의 Visual C++의 경우 1700)을 포함하는 매크로입니다. 이 검사에서는 DLL 혼합을 비롯하여 Visual C++ 2008 또는 이전 버전과 관련된 혼합을 감지할 수 없습니다.  
   
--   Visual C++ 2010에서 구현된 _ITERATOR_DEBUG_LEVEL 검색 외에도 Visual Studio 2012의 Visual C++는 런타임 라이브러리 불일치를 검색합니다. 컴파일러 옵션 /MT(정적 릴리스), /MTd(정적 디버그), /MD(동적 릴리스) 및 /MDd(동적 디버그)가 혼합되면 이러한 현상이 발생합니다.  
+-   Visual Studio 2012의 C++ 컴파일러는 Visual C++ 2010에서 구현된 _ITERATOR_DEBUG_LEVEL 불일치 검색 외에도 런타임 라이브러리 불일치를 검색합니다. 컴파일러 옵션 /MT(정적 릴리스), /MTd(정적 디버그), /MD(동적 릴리스) 및 /MDd(동적 디버그)가 혼합되면 이러한 현상이 발생합니다.  
   
 -   구현이 실제로 유용하지는 않았지만 이전에는 operator\<(), operator>(), operator\<=() 및 operator>=()를 std::unordered_map andstdext::hash_map 컨테이너 패밀리에 사용할 수 있었습니다. Visual Studio 2012의 Visual C++에서는 이러한 비표준 연산자가 제거되었습니다. 또한 thestd::unordered_map 패밀리에 대한 operator==() 및 operator!=() 연산자의 구현이 stdext::hash_map 패밀리까지 확장되었습니다. 새 코드에서는 thestdext::hash_map 패밀리 사용하지 않는 것이 좋습니다.  
   
--   C++11 22.4.1.4 [locale.codecvt]에서는 codecvt::length() 및 codecvt::do_length()가 수정 가능한 stateT&parameters를 사용하도록 지정하지만 Visual C++ 2010에서는 const stateT&를 사용했습니다. Visual Studio 2012의 Visual C++에서는 표준에 따라 stateT&를 사용합니다. 이러한 차이는 가상 함수 do_length()를 재정의하려는 사용자에게 중요합니다.  
+-   C++11 22.4.1.4 [locale.codecvt]에서는 codecvt::length() 및 codecvt::do_length()가 수정 가능한 stateT&parameters를 사용하도록 지정하지만 Visual C++ 2010에서는 const stateT&를 사용했습니다. Visual Studio 2012의 C++ 컴파일러에서는 표준에 따라 stateT&를 사용합니다. 이러한 차이는 가상 함수 do_length()를 재정의하려는 사용자에게 중요합니다.  
   
 ### <a name="crt"></a>CRT  
   

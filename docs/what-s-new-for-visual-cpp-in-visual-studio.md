@@ -1,22 +1,24 @@
 ---
 title: "Visual Studio의 Visual C++에 대한 새로운 기능 | Microsoft Docs"
 ms.date: 11/15/2017
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f266e17e88118e41550da68e77434f52b3456261
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]의 Visual C++에 대한 새로운 기능
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]에는 Visual C++ 환경에 대한 많은 업데이트와 수정이 포함되어 있습니다. 대부분 **사용자 의견 보내기** 아래의 [문제 보고](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) 및 [제안하기](https://visualstudio.uservoice.com/) 옵션을 통해 고객이 제출한 250개 이상의 버그와 보고된 문제를 해결했습니다. 버그를 알려 주셔서 감사합니다. 모든 Visual Studio의 새로운 기능에 대한 자세한 내용은 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]의 새로운 기능](https://go.microsoft.com/fwlink/p/?linkid=834481)을 참조하세요.
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] Visual C++ 환경에 대한 많은 업데이트와 수정이 포함되어 있습니다. 대부분 **사용자 의견 보내기** 아래의 [문제 보고](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) 및 [제안하기](https://visualstudio.uservoice.com/) 옵션을 통해 고객이 제출한 250개 이상의 버그와 보고된 문제를 해결했습니다. 버그를 알려 주셔서 감사합니다. 모든 Visual Studio의 새로운 기능에 대한 자세한 내용은 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]의 새로운 기능](https://go.microsoft.com/fwlink/p/?linkid=834481)을 참조하세요.
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
@@ -32,11 +34,11 @@ ms.lasthandoff: 01/03/2018
 
    **Visual Studio 2017 버전 15.3**:
 
-   **/std:c++17** 옵션을 사용하면 Visual C++ 컴파일러에서 구현된 일단의 C++17 기능을 사용할 수 있습니다. 이 옵션에서는 C++17 이후의 C++표준 규격 초안(Working Draft) 및 결함 업데이트의 전에서 변경되거나 새로운 기능에 대한 컴파일러 및 표준 라이브러리 지원을 사용하지 않습니다. 이러한 기능을 사용하려면 **/std:c++latest**를 사용하세요.
+   **/std:c++17** 옵션을 사용하면 컴파일러에서 구현된 일련의 C++17 기능을 사용할 수 있습니다. 이 옵션에서는 C++17 이후의 C++표준 규격 초안(Working Draft) 및 결함 업데이트의 전에서 변경되거나 새로운 기능에 대한 컴파일러 및 표준 라이브러리 지원을 사용하지 않습니다. 이러한 기능을 사용하려면 **/std:c++latest**를 사용하세요.
 
    **Visual Studio 2017 버전 15.5**:
 
-   Visual C++ 컴파일러는 구조적 바인딩, `constexpr` 람다, `if constexpr`, 인라인 변수, fold 식 및 형식 시스템에 `noexcept` 추가 등 C++17에 새롭게 추가된 기능의 약 75%를 지원합니다. 이는 **/std:c++17** 옵션하에서 사용할 수 있습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md)을 참조하세요.
+   컴파일러는 구조적 바인딩, `constexpr` 람다, `if constexpr`, 인라인 변수, fold 식 및 형식 시스템에 `noexcept` 추가 등 C++17에 새롭게 추가된 기능의 약 75%를 지원합니다. 이는 **/std:c++17** 옵션하에서 사용할 수 있습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md)을 참조하세요.
 
 - [/permissive-](build/reference/permissive-standards-conformance.md): 모든 엄격한 표준 준수 컴파일러 옵션을 사용하고 대부분의 Microsoft 전용 컴파일러 확장(예: `__declspec(dllimport)` 제외)을 사용하지 않도록 설정합니다. 이 옵션은 기본적으로 꺼져 있지만 이후 특정 시점에는 기본적으로 켜질 예정입니다.
 
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/03/2018
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md): 모든 디버그 정보를 PDB 파일에 복사하지 않음으로써 최대 30%까지 빠른 증분 연결 시간(Visual Studio 2015 대비)을 사용합니다. 대신, PDB 파일은 실행 파일을 만드는 데 사용된 개체 및 라이브러리 파일에 대한 디버그 정보를 가리킵니다. [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/)(/Debug:fastlink를 사용하는 VS "15"의 더 빠른 C++ 빌드 주기) 및 [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/)(Visual Studio에서 C++ 빌드 속도를 향상하기 위한 권장 사항)를 참조하세요.
 
-- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]에서는 [/sdl](build/reference/sdl-enable-additional-security-checks.md)과 함께 [/await](build/reference/await-enable-coroutine-support.md)를 사용할 수 있습니다. 코루틴에서 [/RTC](build/reference/rtc-run-time-error-checks.md) 제한이 제거되었습니다.
+- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] [/await](build/reference/await-enable-coroutine-support.md)와 함께 [/sdl](build/reference/sdl-enable-additional-security-checks.md)을 사용할 수 있습니다. 코루틴에서 [/RTC](build/reference/rtc-run-time-error-checks.md) 제한이 제거되었습니다.
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen, 보안, 진단 및 버전 관리
 

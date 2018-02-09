@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6445f07c8adff13a65bde46cc9e1cefd789b97ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>포팅 가이드: MFC Scribble
 이 항목은 이전 버전의 Visual Studio에서 만든 Visual C++ 프로젝트를 Visual Studio 2017로 업그레이드하는 절차를 소개하는 여러 항목 중 첫 번째입니다. 이러한 항목에서는 예를 들어 매우 간단한 프로젝트부터 좀더 복잡한 프로젝트로 이동하는 업그레이드 프로세스를 소개합니다. 이 항목에서는 MFC Sribble이라는 특정 프로젝트에 대한 업그레이드 프로세스를 안내합니다. C++ 프로젝트에 대한 업그레이드 프로세스의 기본 사항을 소개하는 데 적합합니다.  
@@ -85,7 +88,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
  테스트 도구 모음이 없으므로 앱을 시작하고 UI를 통해 수동으로 해당 기능을 테스트했습니다. 문제가 발견되지 않았습니다.  
   
 ### <a name="step-4-improve-the-code"></a>4단계. 코드 개선  
- 이제 Visual Studio 2017로 마이그레이션했으므로 새로운 C++ 기능을 활용하기 위해 일부 변경 작업을 수행하는 것이 좋습니다. 현재 버전의 Visual C++ 컴파일러는 이전 버전보다 C++ 표준에 훨씬 더 부합되므로 코드를 더 안전하고 다른 컴파일러 및 운영 체제로 포팅하기 쉽게 변경하려는 경우 몇 가지 향상된 기능을 고려해야 합니다.  
+ 이제 Visual Studio 2017로 마이그레이션했으므로 새로운 C++ 기능을 활용하기 위해 일부 변경 작업을 수행하는 것이 좋습니다. 현재 버전의 C++ 컴파일러는 이전 버전보다 C++ 표준에 훨씬 더 부합되므로 코드를 더 안전하고 다른 컴파일러 및 운영 체제로 포팅하기 쉽게 변경하려는 경우 몇 가지 향상된 기능을 고려해야 합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  Scribble은 작고 간단한 Windows 데스크톱 응용 프로그램이며 변환하기 어렵지 않았습니다. 마찬가지로, 대부분의 작고 간단한 앱은 쉽게 새 버전으로 변환됩니다.  많은 줄의 코드, 최신 엔지니어링 표준에 부합되지 않는 레거시 코드, 여러 프로젝트와 라이브러리, 사용자 지정 빌드 단계를 포함하는 더 복잡한 응용 프로그램이나 복잡한 스크립팅된 자동화 빌드의 경우 업그레이드하는 데 더 오랜 시간이 걸립니다. [다음 예제](../porting/porting-guide-com-spy.md)인 COM Spy라는 ATL/COM 응용 프로그램으로 계속합니다.  

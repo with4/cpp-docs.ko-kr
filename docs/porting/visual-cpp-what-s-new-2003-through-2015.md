@@ -9,18 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c401aa7a063ab7e76353a5781f008243204bc35
-ms.sourcegitcommit: b5ff17bcd5e5e02bc21717859165a6b819a0ab84
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
 
@@ -1485,7 +1487,7 @@ Visual Studio 2015 이상 버전에서 컴파일러 규칙이 지속적으로 �
 
 #### <a name="compiler"></a>컴파일러
 
-Microsoft C++ 컴파일러에서 지원하는 ISO C++11 언어 기능은 다음과 같습니다.
+Microsoft Visual C++ 컴파일러에서 지원하는 ISO C++11 언어 기능은 다음과 같습니다.
 
 - 함수 템플릿의 기본 템플릿 인수
 - 위임 생성자
@@ -1502,8 +1504,8 @@ Microsoft C++ 컴파일러에서 지원하는 ISO C++11 언어 기능은 다음�
 - 복합 리터럴
 - 지정된 이니셜라이저
 - 코드 혼합 선언
-- 새 컴파일러 옵션(/Zc:strictStrings)을 사용하여 문자열 리터럴을 수정할 수 있는 값으로 변환하지 못하게 할 수 있습니다. C++98에서 문자열 리터럴은 char\*로(및 전각 문자열 리터럴은 wchar_t\*로) 변환할 수 없었습니다. C++11에서 변환이 완전히 제거되었습니다. 컴파일러에서 표준을 엄격하게 준수할 수는 있지만, 사용자가 변환을 제어할 수 있도록 /Zc:strictStrings 옵션이 제공됩니다. 기본적으로 이 옵션은 해제되어 있습니다. 디버그 모드에서 이 옵션을 사용하면 STL은 컴파일되지 않습니다.
-- rvalue/lvalue 참조 캐스트. rvalue 참조를 사용하여 C++11은 lvalue와 rvalue를 명확하게 구별할 수 있습니다. 이전에는 Visual C++ 컴파일러가 특정 캐스팅 시나리오에서 이 기능을 제공하지 않았습니다. C++ Language Working Paper(5.4, [expr.cast]/1 섹션 참조)에 따라 새로운 /Zc:rvalueCast 컴파일러 옵션이 추가되었습니다. 이 옵션이 지정되지 않은 경우 기본 동작은 Visual Studio 2012와 동일합니다.
+- 새 컴파일러 옵션 **/Zc:strictStrings**를 사용하여 문자열 리터럴을 수정할 수 있는 값으로 변환하지 못하게 할 수 있습니다. C++98에서 문자열 리터럴은 char\*로(및 전각 문자열 리터럴은 wchar_t\*로) 변환할 수 없었습니다. C++11에서 변환이 완전히 제거되었습니다. 컴파일러에서 표준을 엄격하게 준수할 수는 있지만, 사용자가 변환을 제어할 수 있도록 **/Zc:strictStrings** 옵션이 제공됩니다. 기본적으로 이 옵션은 해제되어 있습니다. 디버그 모드에서 이 옵션을 사용하면 STL은 컴파일되지 않습니다.
+- rvalue/lvalue 참조 캐스트. rvalue 참조를 사용하여 C++11은 lvalue와 rvalue를 명확하게 구별할 수 있습니다. 이전에는 컴파일러가 특정 캐스팅 시나리오에서 이 기능을 제공하지 않았습니다. C++ Language Working Paper(5.4, [expr.cast]/1 섹션 참조)에 따라 새로운 **/Zc:rvalueCast** 컴파일러 옵션이 추가되었습니다. 이 옵션이 지정되지 않은 경우 기본 동작은 Visual Studio 2012와 동일합니다.
   - 참고: 기본 설정되는 함수의 경우 멤버 수준 이동 생성자 및 이동 대입 연산자를 요청하기 위한 =default 사용은 지원되지 않습니다.
 
 ### <a name="c99-libraries"></a>C99 라이브러리

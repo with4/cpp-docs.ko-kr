@@ -1,23 +1,26 @@
 ---
 title: "Visual C++ 도구 집합의 문제를 보고하는 방법 | Microsoft 문서"
 ms.date: 1/11/2018
-ms.technology: cpp
+ms.technology:
+- cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Visual C++ 도구 집합의 문제를 보고하는 방법
 
-Visual C++ 컴파일러, 링커 또는 기타 도구 및 라이브러리에 문제가 발생하는 경우 문제를 파악하고자 합니다.
+Microsoft Visual C++ 컴파일러, 링커 또는 기타 도구 및 라이브러리에 문제가 발생하는 경우 문제를 파악하고자 합니다.
 
 문제를 알리는 가장 좋은 방법은 발생한 문제에 대한 설명, 프로그램 빌드 방법에 대한 세부 정보 및 다른 컴퓨터에서 문제를 재현하는 데 사용할 수 있는 완전한 테스트 사례인 *재현*을 보내는 것입니다. 이 정보를 통해 문제가 코드에 있고 사용자 환경에서만 발생하는 문제가 아님을 빠르게 확인할 수 있으며, 다른 버전의 컴파일러에 영향을 주는지 여부를 확인하고 원인을 진단할 수 있습니다.
 

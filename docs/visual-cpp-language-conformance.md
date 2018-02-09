@@ -1,29 +1,32 @@
 ---
 title: "Visual C++ 언어 규칙 | Microsoft Docs"
 ms.date: 11/15/2017
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fa79bfc63a3906b3f7eb698c3d44ee8136db2c14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 49aabbcc746470815db40f15fa00774d5e05bfe5
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 언어 규칙
 
-이 항목에서는 Visual Studio 2017 및 이전 버전의 Visual C++용 컴파일러 기능 및 표준 라이브러리 기능에 대한 ISO C++03, C++11, C++14, C++17 및 초안 C++20 언어 표준 규칙을 요약하고 있습니다. 각 컴파일러 및 표준 라이브러리 기능 이름은 기능을 설명하는 ISO C++ 표준 제안 문서에 연결됩니다(게시 시점에 사용 가능한 경우). [지원됨] 열에는 기능에 대한 지원이 먼저 표시되는 Visual Studio 버전이 나열됩니다.
+이 항목에서는 Visual Studio 2017 및 이전 버전의 C++ 컴파일러에 대한 컴파일러 기능 및 표준 라이브러리 기능의 ISO C++03, C++11, C++14, C++17 및 초안 C++20 언어 표준 규칙을 요약하고 있습니다. 각 컴파일러 및 표준 라이브러리 기능 이름은 기능을 설명하는 ISO C++ 표준 제안 문서에 연결됩니다(게시 시점에 사용 가능한 경우). [지원됨] 열에는 기능에 대한 지원이 먼저 표시되는 Visual Studio 버전이 나열됩니다.
 
-Visual Studio 2017의 규칙 향상 및 기타 변경 사항에 대한 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md) 및 [Visual Studio 2017의 Visual C++에 대한 새로운 기능 ](what-s-new-for-visual-cpp-in-visual-studio.md)을 참조하세요. 이전 버전의 규칙 변경 내용에 대해서는 [Visual C++ change history](porting/visual-cpp-change-history-2003-2015.md)(Visual C++ 주요 변경 내용) 및 [2003~ 2015 Visual C++ 주요 변경 내용](porting/visual-cpp-what-s-new-2003-through-2015.md)을 참조하세요. C++ 팀의 최신 뉴스를 보려면 [Visual C++ 팀 블로그](https://blogs.msdn.microsoft.com/vcblog/)를 방문하세요.  
+Visual Studio 2017의 규칙 향상 및 기타 변경 사항에 대한 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md) 및 [Visual Studio 2017의 Visual C++에 대한 새로운 기능 ](what-s-new-for-visual-cpp-in-visual-studio.md)을 참조하세요. 이전 버전의 규칙 변경 내용에 대해서는 [Visual C++ change history](porting/visual-cpp-change-history-2003-2015.md)(Visual C++ 주요 변경 내용) 및 [2003~ 2015 Visual C++ 주요 변경 내용](porting/visual-cpp-what-s-new-2003-through-2015.md)을 참조하세요. C++ 팀의 최신 뉴스를 보려면 [Visual C++ 팀 블로그](https://blogs.msdn.microsoft.com/vcblog/)를 방문하세요.
 
- > [!NOTE]
- > Visual Studio 2015 ~ Visual Studio 2017에서 새로운 이진 변경 내용이 없습니다.
+> [!NOTE]
+> Visual Studio 2015 ~ Visual Studio 2017에서 새로운 이진 변경 내용이 없습니다.
 
 ## <a name="compiler-features"></a>컴파일러 기능
 
