@@ -531,7 +531,6 @@
 ##### [그래픽 개체](graphic-objects.md)
 ###### [1단계 및 2단계 개체 생성](one-stage-and-two-stage-construction-of-objects.md)
 ###### [그래픽 개체를 선택하여 장치 컨텍스트로 넣기](selecting-a-graphic-object-into-a-device-context.md)
-###### [이전 운영 체제의 CImage 제한 사항](cimage-limitations-with-earlier-operating-systems.md)
 #### [프레임 창](frame-windows.md)
 ##### [프레임 창 클래스](frame-window-classes.md)
 ###### [응용 프로그램 마법사로 만든 프레임 창 클래스](frame-window-classes-created-by-the-application-wizard.md)
