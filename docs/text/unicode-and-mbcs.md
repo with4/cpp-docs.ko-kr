@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], Unicode
 - MFC [C++], character sets
@@ -19,26 +22,24 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8e64edebc511445973a7fbb79f8fb8ccfd3f607b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a841fc97715782c303065e37cbaeb8137cf0bc3
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-and-mbcs"></a>유니코드 및 MBCS
 Microsoft Foundation 클래스 (MFC) 라이브러리, Visual c + +에 대 한 C 런타임 라이브러리 및 Visual c + + 개발 환경 국제 프로그래밍을 지원 하기 위해 활성화 됩니다. 제공:  
   
--   Windows 2000 (이전의 Windows NT)에서 유니코드 표준 지원 합니다. 유니코드는 현재의 표준이며 어디에서든 항상 사용 가능해야 합니다.  
+-   Windows에서 유니코드 표준 지원 합니다. 유니코드는 현재의 표준이며 어디에서든 항상 사용 가능해야 합니다.  
   
      유니코드는는 16 비트 문자 인코딩, 모든 언어에 대 한 충분 한 인코딩을 제공 합니다. 모든 ASCII 문자는 유니코드에서 와이드 문자로 서 포함 됩니다.  
-  
-    > [!NOTE]
-    >  유니코드 표준 Windows 95, Windows 98 또는 Windows Millennium Edition에서 지원 되지 않습니다.  
   
 -   모든 플랫폼에서 더블 바이트 문자 집합 (DBCS) 불리 멀티 바이트 문자 집합 (MBCS)의 형태를 지원 합니다.  
   

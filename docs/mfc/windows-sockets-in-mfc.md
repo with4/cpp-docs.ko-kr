@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - WINSOCK.DLL
 - sockets [MFC], programming models
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - WSOCK32.DLL
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdade770449b7ae5db9db9a170198b81cbeaf970
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 187a58e719ad320975deba7429d6ec04a70143ac
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC의 Windows 소켓
 > [!NOTE]
@@ -51,9 +54,6 @@ ms.lasthandoff: 12/21/2017
   
 ##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a>Windows 소켓 Dll  
  Microsoft Windows 운영 체제에서는 Windows 소켓 동적 연결 라이브러리 (DLL)를 제공합니다. Visual c + +에는 적절 한 헤더 파일, 라이브러리 및 Windows 소켓 사양을 제공합니다.  
-  
-> [!NOTE]
->  Windows NT 및 Windows 2000에서 16 비트 응용 프로그램에 대 한 Windows 소켓 지원은 WINSOCK를 기반으로 합니다. DLL입니다. 32 비트 응용 프로그램에 대 한 지원은 WSOCK32 합니다. DLL입니다. 제공 된 Api는 32 비트 버전에는 32 비트로 확장 매개 변수는 점을 제외 하 고 동일 합니다. Win32에서 스레드 보호가 제공 됩니다.  
   
  Windows 소켓에 대 한 자세한 내용은 다음을 참조 하세요.  
   

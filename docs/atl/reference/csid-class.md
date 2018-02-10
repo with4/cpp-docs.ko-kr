@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,19 +25,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs: C++
-helpviewer_keywords: CSid class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csid-class"></a>CSid 클래스
 이 클래스는에 대 한 래퍼는 `SID` (보안 식별자) 구조입니다.  
@@ -63,7 +67,7 @@ class CSid
 |이름|설명|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|생성자입니다.|  
-|[CSid:: ~ CSid](#dtor)|소멸자입니다.|  
+|[CSid::~CSid](#dtor)|소멸자입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -86,19 +90,19 @@ class CSid
   
 |||  
 |-|-|  
-|[연산자 =](#operator_eq)|대입 연산자입니다.|  
+|[operator =](#operator_eq)|대입 연산자입니다.|  
 |[연산자 const SID *](#operator_const_sid__star)|캐스트는 `CSid` 개체에 대 한 포인터로 `SID` 구조입니다.|  
   
 ### <a name="global-operators"></a>전역 운영자  
   
 |||  
 |-|-|  
-|[연산자 = =](#operator_eq_eq)|두 개의 보안 설명자 개체가 같은지를 테스트합니다.|  
-|[operator! =](#operator_neq)|두 개의 보안 설명자 개체가 다른 지 테스트합니다.|  
-|[연산자\<](#operator_lt_)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
+|[operator ==](#operator_eq_eq)|두 개의 보안 설명자 개체가 같은지를 테스트합니다.|  
+|[operator !=](#operator_neq)|두 개의 보안 설명자 개체가 다른 지 테스트합니다.|  
+|[operator \<](#operator_lt_)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
 |[연산자 >](#operator_gt_)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
-|[연산자\<=](#operator_lt__eq)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
-|[연산자 > =](#operator_gt__eq)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
+|[operator \<=](#operator_lt__eq)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
+|[operator >=](#operator_gt__eq)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
   
 ## <a name="remarks"></a>설명  
  `SID` 구조는 사용자 또는 그룹을 고유 하 게 식별 하는 데 사용 되는 다양 한 길이의 구조입니다.  
@@ -110,7 +114,7 @@ class CSid
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="accountname"></a>CSid::AccountName  
+##  <a name="accountname"></a>  CSid::AccountName  
  와 연결 된 계정의 이름을 반환 하는 `CSid` 개체입니다.  
   
 ```
@@ -125,7 +129,7 @@ LPCTSTR AccountName() const throw(...);
   
  경우에 대 한 계정 이름이 `SID` 를 찾을 수 있는 `AccountName` 빈 문자열을 반환 합니다. 이 네트워크 제한 시간이이 메서드는 이름을 찾는 것을 방지 한 경우에 발생할 수 있습니다. 예: 해당 계정 이름이 없는 보안 식별자에도 마찬가지 `SID` 로그온 세션을 식별 하는입니다.  
   
-##  <a name="csid"></a>CSid::CSid  
+##  <a name="csid"></a>  CSid::CSid  
  생성자입니다.  
   
 ```
@@ -171,7 +175,7 @@ explicit CSid(
   
  초기화에 실패 하면 생성자에서 throw 한 [CAtlException 클래스](../../atl/reference/catlexception-class.md)합니다.  
   
-##  <a name="dtor"></a>CSid:: ~ CSid  
+##  <a name="dtor"></a>  CSid::~CSid  
  소멸자입니다.  
   
 ```
@@ -181,7 +185,7 @@ virtual ~CSid() throw();
 ### <a name="remarks"></a>설명  
  소멸자는 개체에 의해 획득 하는 모든 리소스를 해제 합니다.  
   
-##  <a name="csidarray"></a>CSid::CSidArray  
+##  <a name="csidarray"></a>  CSid::CSidArray  
  배열을 [CSid](../../atl/reference/csid-class.md) 개체입니다.  
   
 ```
@@ -191,7 +195,7 @@ typedef CAtlArray<CSid> CSidArray;
 ### <a name="remarks"></a>설명  
  이 형식 정의 ACL (액세스 제어 목록)에서 보안 식별자를 검색 하는 데 사용할 수 있는 배열 형식을 지정 합니다. 참조 [CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries)합니다.  
   
-##  <a name="domain"></a>CSid::Domain  
+##  <a name="domain"></a>  CSid::Domain  
  와 연결 된 도메인의 이름을 반환 하는 `CSid` 개체입니다.  
   
 ```
@@ -206,7 +210,7 @@ LPCTSTR Domain() const throw(...);
   
  경우에 대 한 계정 이름이 `SID` 를 찾을 수 있는 **도메인** 도메인 빈 문자열로 반환 합니다. 이 네트워크 제한 시간이이 메서드는 이름을 찾는 것을 방지 한 경우에 발생할 수 있습니다. 예: 해당 계정 이름이 없는 보안 식별자에도 마찬가지 `SID` 로그온 세션을 식별 하는입니다.  
   
-##  <a name="equalprefix"></a>CSid::EqualPrefix  
+##  <a name="equalprefix"></a>  CSid::EqualPrefix  
  테스트 `SID` 같음에 대 한 접두사 (보안 식별자)입니다.  
   
 ```
@@ -224,7 +228,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="remarks"></a>설명  
  참조 [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) 자세한 내용을 보려면 Windows sdk에서입니다.  
   
-##  <a name="getlength"></a>CSid::GetLength  
+##  <a name="getlength"></a>  CSid::GetLength  
  길이 반환 된 `CSid` 개체입니다.  
   
 ```
@@ -240,7 +244,7 @@ UINT GetLength() const throw();
 > [!NOTE]
 >  함수는 ASSERT 경우 발생 하는 디버그 빌드에서 `CSid` 개체가 잘못 되었습니다.  
   
-##  <a name="getpsid"></a>CSid::GetPSID  
+##  <a name="getpsid"></a>  CSid::GetPSID  
  에 대 한 포인터를 반환 합니다.는 `SID` (보안 식별자) 구조입니다.  
   
 ```
@@ -250,7 +254,7 @@ const SID* GetPSID() const throw(...);
 ### <a name="return-value"></a>반환 값  
  주소를 반환 하는 `CSid` 개체 원본으로 사용 `SID` 구조입니다.  
   
-##  <a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY  
+##  <a name="getpsid_identifier_authority"></a>  CSid::GetPSID_IDENTIFIER_AUTHORITY  
  에 대 한 포인터를 반환 합니다.는 **SID_IDENTIFIER_AUTHORITY** 구조입니다.  
   
 ```
@@ -263,7 +267,7 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 > [!NOTE]
 >  함수는 ASSERT 경우 발생 하는 디버그 빌드에서 `CSid` 개체가 잘못 되었습니다.  
   
-##  <a name="getsubauthority"></a>CSid::GetSubAuthority  
+##  <a name="getsubauthority"></a>  CSid::GetSubAuthority  
  에 지정 된 subauthority 반환는 `SID` (보안 식별자) 구조입니다.  
   
 ```
@@ -283,7 +287,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 > [!NOTE]
 >  함수는 ASSERT 경우 발생 하는 디버그 빌드에서 `CSid` 개체가 잘못 되었습니다.  
   
-##  <a name="getsubauthoritycount"></a>CSid::GetSubAuthorityCount  
+##  <a name="getsubauthoritycount"></a>  CSid::GetSubAuthorityCount  
  Subauthority 개수를 반환 합니다.  
   
 ```
@@ -298,7 +302,7 @@ UCHAR GetSubAuthorityCount() const throw();
 > [!NOTE]
 >  함수는 ASSERT 경우 발생 하는 디버그 빌드에서 `CSid` 개체가 잘못 되었습니다.  
   
-##  <a name="isvalid"></a>CSid::IsValid  
+##  <a name="isvalid"></a>  CSid::IsValid  
  테스트는 `CSid` 유효성에 대 한 개체입니다.  
   
 ```
@@ -311,7 +315,7 @@ bool IsValid() const throw();
 ### <a name="remarks"></a>설명  
  `IsValid` 메서드의 유효성 검사는 `CSid` 하위 권한 수는 최대 길이 보다 작으면 및 수정 번호는 알려진된 범위 이내 인지 확인 하 여 개체입니다.  
   
-##  <a name="loadaccount"></a>CSid::LoadAccount  
+##  <a name="loadaccount"></a>  CSid::LoadAccount  
  업데이트는 `CSid` 계정 이름 및 도메인 또는 기존 SID (보안 식별자) 구조를 지정한 개체입니다.  
   
 ```
@@ -340,7 +344,7 @@ bool LoadAccount(
 ### <a name="remarks"></a>설명  
  `LoadAccount`지정 된 이름에 대 한 보안 식별자를 찾으려고 시도 합니다. 참조 [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) 내용을 확인 합니다.  
   
-##  <a name="operator_eq"></a>CSid::operator =  
+##  <a name="operator_eq"></a>  CSid::operator =  
  대입 연산자입니다.  
   
 ```
@@ -355,7 +359,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>반환 값  
  업데이트 된에 대 한 참조를 반환 `CSid` 개체입니다.  
   
-##  <a name="operator_eq_eq"></a>CSid::operator = =  
+##  <a name="operator_eq_eq"></a>  CSid::operator ==  
  두 개의 보안 설명자 개체가 같은지를 테스트합니다.  
   
 ```
@@ -374,7 +378,7 @@ bool operator==(
 ### <a name="return-value"></a>반환 값  
  **true 이면** 그렇지 않으면 보안 설명자가 같으면 **false**합니다.  
   
-##  <a name="operator_neq"></a>CSid::operator! =  
+##  <a name="operator_neq"></a>  CSid::operator !=  
  두 개의 보안 설명자 개체가 다른 지 테스트합니다.  
   
 ```
@@ -393,7 +397,7 @@ bool operator!=(
 ### <a name="return-value"></a>반환 값  
  **true 이면** 보안 설명자 같지 않으면, 그렇지 않으면 **false**합니다.  
   
-##  <a name="operator_lt"></a>CSid::operator&lt;  
+##  <a name="operator_lt"></a>  CSid::operator &lt;  
  두 개의 보안 설명자 개체의 상대 값을 비교합니다.  
   
 ```
@@ -412,7 +416,7 @@ bool operator<(
 ### <a name="return-value"></a>반환 값  
  **true 이면** 경우 `lhs` 는 보다 작은 `rhs`, 그렇지 않으면 **false**합니다.  
   
-##  <a name="operator_lt__eq"></a>CSid::operator&lt;=  
+##  <a name="operator_lt__eq"></a>  CSid::operator &lt;=  
  두 개의 보안 설명자 개체의 상대 값을 비교합니다.  
   
 ```
@@ -431,7 +435,7 @@ bool operator<=(
 ### <a name="return-value"></a>반환 값  
  **true 이면** 경우 `lhs` 보다 작거나 같음 `rhs`, 그렇지 않으면 **false**합니다.  
   
-##  <a name="operator_gt"></a>CSid::operator&gt;  
+##  <a name="operator_gt"></a>  CSid::operator &gt;  
  두 개의 보안 설명자 개체의 상대 값을 비교합니다.  
   
 ```
@@ -450,7 +454,7 @@ bool operator>(
 ### <a name="return-value"></a>반환 값  
  **true 이면** 경우 `lhs` 보다 크면 `rhs`, 그렇지 않으면 **false**합니다.  
   
-##  <a name="operator_gt__eq"></a>CSid::operator&gt;=  
+##  <a name="operator_gt__eq"></a>  CSid::operator &gt;=  
  두 개의 보안 설명자 개체의 상대 값을 비교합니다.  
   
 ```
@@ -469,7 +473,7 @@ bool operator>=(
 ### <a name="return-value"></a>반환 값  
  **true 이면** 경우 `lhs` 보다 크거나 같음 `rhs`, 그렇지 않으면 **false**합니다.  
   
-##  <a name="operator_const_sid__star"></a>CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>  CSid::operator const SID *  
  캐스트는 `CSid` 개체에 대 한 포인터를 한 `SID` (보안 식별자) 구조입니다.  
   
 ```  
@@ -479,7 +483,7 @@ operator const SID *() const throw(...);
 ### <a name="remarks"></a>설명  
  주소를 반환 하는 `SID` 구조입니다.  
   
-##  <a name="sid"></a>CSid::Sid  
+##  <a name="sid"></a>  CSid::Sid  
  반환 된 `SID` 문자열로 (보안 식별자) 구조입니다.  
   
 ```
@@ -487,9 +491,9 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 반환 된 `SID` 표시, 저장 또는 전송에 적합 한 형식에서 문자열로 구조입니다. 에 해당 [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399), 하지만이 함수는만 이상 Windows 2000에서 사용할 수 있고 따라서 이전 버전의 운영 체제에 대 한 에뮬레이트됩니다.  
+ 반환 된 `SID` 표시, 저장 또는 전송에 적합 한 형식에서 문자열로 구조입니다. 에 해당 [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399)합니다.  
   
-##  <a name="sidnameuse"></a>CSid::SidNameUse  
+##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  상태에 대 한 설명을 반환는 `CSid` 개체입니다.  
   
 ```

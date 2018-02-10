@@ -4,34 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - GDI+, drawing shapes
 - drawing, shapes
 - shapes
 - shapes, drawing
 ms.assetid: ffad5ae7-6ef4-4550-8940-be3f209a101d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 62579ca21ba4a4dcf89aea6ff717ce6c884073b3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c5fc48eefb44049e4cff010b16c9567e443ba5db
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>방법: .NET Framework로 도형 그리기
 다음 코드 예제에서는 <xref:System.Drawing.Graphics> 수정 하는 클래스는 <xref:System.Windows.Forms.Form.OnPaint%2A> 이벤트 처리기에 대 한 포인터를 검색 하는 <xref:System.Drawing.Graphics> 기본 폼에 대 한 개체입니다. 이 포인터는 다음 폼의 배경색을 설정 하 고 선 및 사용 하 여 호를 그릴 하는 데 사용 됩니다는 <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> 및 <xref:System.Drawing.Graphics.DrawArc%2A> 메서드.  
-  
-> [!NOTE]
->  GDI + Windows XP에 포함 되어 있으며 Windows NT 4.0 SP 6, Windows 2000, Windows 98 및 Windows me 재배포 가능 구성 요소로 제공 됩니다. 최신 재배포 가능 패키지를 다운로드 하려면 [http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232)합니다. 
   
 ## <a name="example"></a>예  
   

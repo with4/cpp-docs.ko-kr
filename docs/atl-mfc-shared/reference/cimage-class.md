@@ -1,10 +1,11 @@
 ---
 title: "CImage 클래스 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -50,7 +51,8 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -61,16 +63,17 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cimage-class"></a>CImage 클래스
 `CImage`향상 된 비트맵 지원, 로드 및 이미지를 JPEG, GIF, BMP, 및 PNG 이동식 네트워크 그래픽 () 형식으로 저장 하는 기능을 포함 하 여 제공 합니다.  
@@ -120,7 +123,7 @@ class CImage
 |[CImage::IsDIBSection](#isdibsection)|연결 된 비트맵 DIB 섹션 인지 여부를 확인 합니다.|  
 |[CImage::IsIndexed](#isindexed)|비트맵의 색 인덱싱된 팔레트에 매핑되는 것을 나타냅니다.|  
 |[CImage::IsNull](#isnull)|소스 비트맵 현재 로드 된 경우를 나타냅니다.|  
-|[CImage::IsTransparencySupported](#istransparencysupported)|응용 프로그램 투명 한 비트맵 지원 여부 및 Windows 2000 이상 컴파일된 나타냅니다.|  
+|[CImage::IsTransparencySupported](#istransparencysupported)|응용 프로그램에 투명 한 비트맵 지원 하는지 여부를 나타냅니다.|  
 |[CImage::Load](#load)|지정된 된 파일에서 이미지를 로드합니다.|  
 |[CImage::LoadFromResource](#loadfromresource)|지정된 된 리소스에서 이미지를 로드합니다.|  
 |[CImage::MaskBlt](#maskblt)|지정 된 마스크 및 래스터 연산을 사용 하 여 원본 및 대상 비트맵에 대 한 색 데이터를 결합 합니다.|  
@@ -199,17 +202,6 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
   
  통해 `CImage`, DIB 섹션의 실제 비트에 액세스할 수 있습니다. 사용할 수는 `CImage` Win32 HBITMAP 또는 DIB 섹션 이전에 사용한 모든 위치 개체입니다.  
   
-> [!NOTE]
->  다음 `CImage` 메서드 사용에 대 한 제한이 있습니다.  
-  
-|메서드|제한|  
-|------------|----------------|  
-|[PlgBlt](#plgblt)|만 Windows NT 4.0 이상 작동 합니다. 이상 Windows 95/98에서 실행 중인 응용 프로그램에서 작동 하지 않습니다.|  
-|[MaskBlt](#maskblt)|만 Windows NT 4.0 이상 작동 합니다. 이상 Windows 95/98에서 실행 중인 응용 프로그램에서 작동 하지 않습니다.|  
-|[로드](#alphablend)|Windows 2000, Windows 98 및 이상 시스템에서 작동 합니다.|  
-|[지연 해야](#transparentblt)|Windows 2000, Windows 98 및 이상 시스템에서 작동 합니다.|  
-|[그리기](#draw)|Windows 2000, Windows 98 및 이후 시스템과 상호 투명도 지원합니다.|  
-  
  사용할 수 있습니다 `CImage` MFC 또는 ATL.에서  
   
 > [!NOTE]
@@ -220,7 +212,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlimage.h  
   
-##  <a name="alphablend"></a>CImage::AlphaBlend  
+##  <a name="alphablend"></a>  CImage::AlphaBlend  
  투명 하 게 또는 반투명 픽셀로 있는 비트맵을 표시 합니다.  
   
 ```
@@ -309,7 +301,7 @@ BOOL AlphaBlend(
   
  때 `bBlendOp` 기본값인으로 설정 되어 **AC_SRC_OVER**, 소스 비트맵 소스 픽셀의 알파 값을 기반으로 대상 비트맵을 통해 배치 됩니다.  
 
-##  <a name="attach"></a>CImage::Attach  
+##  <a name="attach"></a>  CImage::Attach  
  연결 `hBitmap` 에 `CImage` 개체입니다.  
   
 ```
@@ -332,7 +324,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 ### <a name="remarks"></a>설명  
  비트맵 아닌 DIB 섹션 비트맵 또는 DIB 섹션 비트맵 수 있습니다. 참조 [IsDIBSection](#isdibsection) DIB 에서만 사용할 수 있는 메서드의 목록에 대 한 비트맵 섹션.  
   
-##  <a name="bitblt"></a>CImage::BitBlt  
+##  <a name="bitblt"></a>  CImage::BitBlt  
  이 현재 장치 컨텍스트를 소스 장치 컨텍스트에에서 비트맵을 복사합니다.  
   
 ```
@@ -404,7 +396,7 @@ BOOL BitBlt(
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows sdk에서입니다.  
   
-##  <a name="cimage"></a>CImage::CImage  
+##  <a name="cimage"></a>  CImage::CImage  
  `CImage` 개체를 생성합니다.  
   
 ```
@@ -418,7 +410,7 @@ CImage() throw();
   
  사용 하 여 전역 `CImage` 개체를 DLL에서 권장 되지 않습니다. 전역 사용 해야 할 경우 `CImage` dll로 호출 개체 [CImage::ReleaseGDIPlus](#releasegdiplus) 를 명시적으로 GDI +에서 사용 하는 리소스를 해제 합니다.  
   
-##  <a name="create"></a>CImage::Create  
+##  <a name="create"></a>  CImage::Create  
  만듭니다는 `CImage` 비트맵을 연결 하는 이전에 생성 된 `CImage` 개체입니다.  
   
 ```
@@ -450,7 +442,7 @@ BOOL Create(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="createex"></a>CImage::CreateEx  
+##  <a name="createex"></a>  CImage::CreateEx  
  만듭니다는 `CImage` 비트맵을 연결 하는 이전에 생성 된 `CImage` 개체입니다.  
   
 ```
@@ -503,14 +495,14 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
 
 
-##  <a name="destroy"></a>CImage::Destroy  
+##  <a name="destroy"></a>  CImage::Destroy  
  비트맵을 분리는 `CImage` 개체 하 고 비트맵을 제거 합니다.  
   
 ```
 void Destroy() throw();
 ```  
   
-##  <a name="detach"></a>CImage::Detach  
+##  <a name="detach"></a>  CImage::Detach  
  비트맵을 분리 한 `CImage` 개체입니다.  
   
 ```
@@ -520,7 +512,7 @@ HBITMAP Detach() throw();
 ### <a name="return-value"></a>반환 값  
  분리 비트맵에 대 한 핸들 또는 **NULL** 비트맵이 없습니다 연결 된 경우.  
   
-##  <a name="draw"></a>CImage::Draw  
+##  <a name="draw"></a>  CImage::Draw  
  현재 장치 컨텍스트를 소스 장치 컨텍스트에에서 비트맵을 복사합니다.  
   
 ```
@@ -606,7 +598,7 @@ BOOL Draw(
   
  버전에 대 한 **그리기** 소스 사각형을 지정 하지 않으면, 전체 원본 이미지의 크기는 기본값입니다. 버전에 대 한 **그리기** 대상 사각형에 대 한 크기를 지정 하지 않는, 기본 및 확장 하지 않는 원본 이미지의 크기는 또는 발생을 축소 합니다.  
   
-##  <a name="getbits"></a>CImage::GetBits  
+##  <a name="getbits"></a>  CImage::GetBits  
  비트맵의 각된 픽셀의 실제 비트 값에 대 한 포인터를 검색합니다.  
   
 ```
@@ -622,7 +614,7 @@ void* GetBits() throw();
 > [!NOTE]
 >  이 방법은 지원만 DIB 섹션 비트맵; 따라서의 픽셀을 액세스 하는 `CImage` DIB 섹션의 픽셀을 동일한 동일한 방식으로 개체입니다. 반환된 된 포인터 위치 (0, 0)에 있는 픽셀을 가리킵니다.  
   
-##  <a name="getbpp"></a>CImage::GetBPP  
+##  <a name="getbpp"></a>  CImage::GetBPP  
  픽셀 당 비트 값을 검색합니다.  
   
 ```
@@ -637,7 +629,7 @@ int GetBPP() const throw();
   
  1, 4, 8, 16, 24 또는 32 비트 / 픽셀 일반적으로 합니다. 참조는 **biBitCount** 소속 [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) 이 값에 대 한 자세한 내용은 Windows sdk입니다.  
   
-##  <a name="getcolortable"></a>CImage::GetColorTable  
+##  <a name="getcolortable"></a>  CImage::GetColorTable  
  DIB 섹션의 팔레트에 있는 항목의 범위에서 빨간색, 녹색, 파란색 (RGB) 색 값을 검색 합니다.  
   
 ```
@@ -656,7 +648,7 @@ void GetColorTable(UINT iFirstColor,
  `prgbColors`  
  배열에 대 한 포인터 [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) 색을 검색 하려면 구조 테이블 항목입니다.  
   
-##  <a name="getdc"></a>CImage::GetDC  
+##  <a name="getdc"></a>  CImage::GetDC  
  현재에 선택한 이미지에 있는 장치 컨텍스트를 검색 합니다.  
   
 ```
@@ -669,7 +661,7 @@ HDC GetDC() const throw();
 ### <a name="remarks"></a>설명  
  각 호출에 대 한 `GetDC`, 한 후속 호출에 있어야 [ReleaseDC](#releasedc)합니다.  
   
-##  <a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
+##  <a name="getexporterfilterstring"></a>  CImage::GetExporterFilterString  
  이미지 저장에 사용할 수 있는 이미지 형식을 찾습니다.  
   
 ```
@@ -748,7 +740,7 @@ CImage::GetExporterFilterString(
   
  기본 구분 기호를 사용 하 여 ' &#124;'에 MFC이이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 일반 파일 저장 대화 상자에이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 합니다.  
   
-##  <a name="getheight"></a>CImage::GetHeight  
+##  <a name="getheight"></a>  CImage::GetHeight  
  픽셀 이미지의 높이 검색합니다.  
   
 ```
@@ -758,7 +750,7 @@ int GetHeight() const throw();
 ### <a name="return-value"></a>반환 값  
  픽셀 이미지의 높이입니다.  
   
-##  <a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
+##  <a name="getimporterfilterstring"></a>  CImage::GetImporterFilterString  
  이미지를 로드 하는 것에 대 한 이미지 형식을 사용할 수 있는 찾습니다.  
   
 ```
@@ -834,7 +826,7 @@ CImage::GetImporterFilterString(
   
  기본 구분 기호를 사용 하 여 ' &#124;'에 MFC이이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 공용으로이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 하 여 **파일 열기** 대화 상자.  
   
-##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
+##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  색상표에 있는 항목의 최대 수를 검색 합니다.  
   
 ```
@@ -847,7 +839,7 @@ int GetMaxColorTableEntries() const throw();
 ### <a name="remarks"></a>설명  
  이 방법은 DIB 섹션 비트맵만 지원합니다.  
   
-##  <a name="getpitch"></a>CImage::GetPitch  
+##  <a name="getpitch"></a>  CImage::GetPitch  
  이미지의 피치를 검색합니다.  
   
 ```
@@ -865,7 +857,7 @@ int GetPitch() const throw();
 > [!NOTE]
 >  이 방법은 DIB 섹션 비트맵만 지원합니다.  
   
-##  <a name="getpixel"></a>CImage::GetPixel  
+##  <a name="getpixel"></a>  CImage::GetPixel  
  지정 된 위치에 있는 픽셀의 색을 검색 *x* 및 *y*합니다.  
   
 ```
@@ -882,7 +874,7 @@ COLORREF GetPixel(int x,int y) const throw();
 ### <a name="return-value"></a>반환 값  
  빨간색, 녹색, 파란색 (RGB) 픽셀의 값입니다. 반환 값은 현재 클리핑 영역 외부의 픽셀 이면 **CLR_INVALID**합니다.  
   
-##  <a name="getpixeladdress"></a>CImage::GetPixelAddress  
+##  <a name="getpixeladdress"></a>  CImage::GetPixelAddress  
  정확한 픽셀의 주소를 검색합니다.  
   
 ```
@@ -904,7 +896,7 @@ void* GetPixelAddress(int x,int y) throw();
 > [!NOTE]
 >  이 방법은 DIB 섹션 비트맵만 지원합니다.  
   
-##  <a name="gettransparentcolor"></a>CImage::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>  CImage::GetTransparentColor  
  색상표에서 투명 한 색의 인덱싱된 위치를 검색합니다.  
   
 ```
@@ -914,7 +906,7 @@ LONG GetTransparentColor() const throw();
 ### <a name="return-value"></a>반환 값  
  투명 한 색의 인덱스입니다.  
   
-##  <a name="getwidth"></a>CImage::GetWidth  
+##  <a name="getwidth"></a>  CImage::GetWidth  
  픽셀 이미지의 너비를 검색합니다.  
   
 ```
@@ -924,7 +916,7 @@ int GetWidth() const throw();
 ### <a name="return-value"></a>반환 값  
  픽셀 단위로 비트맵의 너비입니다.  
   
-##  <a name="isdibsection"></a>CImage::IsDIBSection  
+##  <a name="isdibsection"></a>  CImage::IsDIBSection  
  연결 된 비트맵 DIB 섹션 인지 여부를 확인 합니다.  
   
 ```
@@ -951,7 +943,7 @@ bool IsDIBSection() const throw();
   
 - [SetColorTable](#setcolortable)  
   
-##  <a name="isindexed"></a>CImage::IsIndexed  
+##  <a name="isindexed"></a>  CImage::IsIndexed  
  비트맵의 픽셀 색 팔레트에 매핑되는 여부를 결정 합니다.  
   
 ```
@@ -967,7 +959,7 @@ bool IsIndexed() const throw();
 > [!NOTE]
 >  이 방법은 DIB 섹션 비트맵만 지원합니다.  
   
-##  <a name="isnull"></a>CImage::IsNull  
+##  <a name="isnull"></a>  CImage::IsNull  
  비트맵 현재 로드 된 경우를 결정 합니다.  
   
 ```
@@ -977,8 +969,8 @@ bool IsNull() const throw();
 ### <a name="remarks"></a>설명  
  이 메서드가 반환 **True** 비트맵 있지 않으면 현재 로드 된 경우 **False**합니다.  
   
-##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
- 응용 프로그램 투명 한 비트맵 지원 여부 및 Windows 2000 이상 컴파일된 나타냅니다.  
+##  <a name="istransparencysupported"></a>  CImage::IsTransparencySupported  
+ 응용 프로그램에 투명 한 비트맵 지원 하는지 여부를 나타냅니다.  
   
 ```
 static BOOL IsTransparencySupported() throw();
@@ -990,10 +982,8 @@ static BOOL IsTransparencySupported() throw();
 ### <a name="remarks"></a>설명  
  반환 값은 0이 아닌 경우 및 투명도 지원 되는 경우에 대 한 호출 [로드](#alphablend), [지연 해야](#transparentblt), 또는 [그리기](#draw) 투명 색상을 처리 합니다.  
   
- 응용 프로그램이 Windows 2000 또는 Windows 98 이전 운영 체제와 함께 사용할 컴파일될, 하는 경우이 메서드는 0, 최신 운영 체제에도 항상 반환 됩니다.  
-  
 
-##  <a name="load"></a>CImage::Load  
+##  <a name="load"></a>  CImage::Load  
  이미지를 로드합니다.  
   
 ```
@@ -1016,7 +1006,7 @@ HRESULT Load(IStream* pStream) throw();
   
  올바른 이미지 유형은 BMP, GIF, JPEG, PNG 및 TIFF입니다.  
   
-##  <a name="loadfromresource"></a>CImage::LoadFromResource  
+##  <a name="loadfromresource"></a>  CImage::LoadFromResource  
  이미지를 로드 하는 `BITMAP` 리소스입니다.  
   
 ```
@@ -1042,7 +1032,7 @@ void LoadFromResource(
 ### <a name="remarks"></a>설명  
  리소스 형식 이어야 합니다 `BITMAP`합니다.  
   
-##  <a name="maskblt"></a>CImage::MaskBlt  
+##  <a name="maskblt"></a>  CImage::MaskBlt  
  지정 된 마스크 및 래스터 연산을 사용 하 여 원본 및 대상 비트맵에 대 한 색 데이터를 결합 합니다.  
   
 ```
@@ -1133,10 +1123,10 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>설명  
  이 메서드는 Windows NT 4.0 이상만 해당 버전에 적용 됩니다.  
   
-##  <a name="operator_hbitmap"></a>HBITMAP CImage::operator  
+##  <a name="operator_hbitmap"></a>  CImage::operator HBITMAP  
  이 연산자를 사용 하 여의 연결 된 Windows GDI 핸들을 가져올 수는 `CImage` 개체입니다. 이 연산자는의 직접 사용을 지원 하려면 캐스팅 연산자는 `HBITMAP` 개체입니다.  
   
-##  <a name="plgblt"></a>CImage::PlgBlt  
+##  <a name="plgblt"></a>  CImage::PlgBlt  
  대상 장치 컨텍스트에 평행 사변형에 원본 장치 컨텍스트의 사각형에서 비트 블록 전송을 수행합니다.  
   
 ```
@@ -1206,7 +1196,7 @@ BOOL PlgBlt(
   
  이 메서드는 Windows NT 4.0 이상만 해당 버전에 적용 됩니다. 참조 [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) 자세한 내용을 보려면 Windows sdk에서입니다.  
   
-##  <a name="releasedc"></a>CImage::ReleaseDC  
+##  <a name="releasedc"></a>  CImage::ReleaseDC  
  장치 컨텍스트를 해제 합니다.  
   
 ```
@@ -1216,7 +1206,7 @@ void ReleaseDC() const throw();
 ### <a name="remarks"></a>설명  
  한 번에 하나의 비트맵 장치 컨텍스트로 선택할 수 있습니다, 때문에 호출 해야 `ReleaseDC` 호출에 대해 각각 [GetDC](#getdc)합니다.  
   
-##  <a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
+##  <a name="releasegdiplus"></a>  CImage::ReleaseGDIPlus  
  GDI +에서 사용 하는 리소스를 해제 합니다.  
   
 ```
@@ -1226,7 +1216,7 @@ void ReleaseGDIPlus() throw();
 ### <a name="remarks"></a>설명  
  이 메서드는 전역에 의해 할당 된 리소스를 호출 해야 합니다 `CImage` 개체입니다. 참조 [CImage::CImage](#cimage)합니다.  
   
-##  <a name="save"></a>CImage::Save  
+##  <a name="save"></a>  CImage::Save  
  지정 된 스트림 또는 디스크에 파일 이미지를 저장합니다.  
   
 ```
@@ -1264,7 +1254,7 @@ HRESULT Save(LPCTSTR pszFileName,
 ### <a name="remarks"></a>설명  
  지정한 이름 및 유형을 사용 하 여 이미지를 저장 하려면이 함수를 호출 합니다. 경우는 `guidFileType` 매개 변수를 포함할 파일 이름 확장명에서 이미지 형식을 결정 하는 데 사용 됩니다. 확장명이 없는 제공 하는 경우 이미지 BMP 형식으로 저장 됩니다.  
   
-##  <a name="setcolortable"></a>CImage::SetColorTable  
+##  <a name="setcolortable"></a>  CImage::SetColorTable  
  DIB 섹션의 팔레트에서 항목의 범위에 대 한 빨간색, 녹색, 파란색 (RGB) 색 값을 설정합니다.  
   
 ```
@@ -1287,7 +1277,7 @@ void SetColorTable(
 ### <a name="remarks"></a>설명  
  이 방법은 DIB 섹션 비트맵만 지원합니다.  
   
-##  <a name="setpixel"></a>CImage::SetPixel  
+##  <a name="setpixel"></a>  CImage::SetPixel  
  비트맵에서 지정 된 위치에 있는 픽셀의 색을 설정합니다.  
   
 ```
@@ -1307,7 +1297,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 ### <a name="remarks"></a>설명  
  이 메서드는 픽셀을 선택 된 클립 영역 외부에 같고 조정 하는 경우 실패 합니다.  
   
-##  <a name="setpixelindexed"></a>CImage::SetPixelIndexed  
+##  <a name="setpixelindexed"></a>  CImage::SetPixelIndexed  
  픽셀 색에 있는 색을 설정 `iIndex` 색상표에 있습니다.  
   
 ```
@@ -1324,7 +1314,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
  `iIndex`  
  색 색상표의 색의 인덱스입니다.  
   
-##  <a name="setpixelrgb"></a>CImage::SetPixelRGB  
+##  <a name="setpixelrgb"></a>  CImage::SetPixelRGB  
  로 지정 된 위치에서 설정 하는 픽셀 *x* 및 *y* 가리키는 색에 *r*, *g*, 및 *b*, 빨간색, 녹색, 파란색 (RGB) 이미지입니다.  
   
 ```
@@ -1355,7 +1345,7 @@ void SetPixelRGB(
 ### <a name="remarks"></a>설명  
  빨간색, 녹색 및 파란색 매개 변수는 각각 0과 255 사이의 숫자 표시 합니다. 모든 세 개의 매개 변수를 0으로 설정 하면 결합 된 결과 색은 검정입니다. 세 매개 변수 모두를 255로 설정 하면 결합 된 결과 색상은 흰색입니다.  
   
-##  <a name="settransparentcolor"></a>CImage::SetTransparentColor  
+##  <a name="settransparentcolor"></a>  CImage::SetTransparentColor  
  투명으로 지정 된 인덱스 위치의 색을 설정합니다.  
   
 ```
@@ -1369,7 +1359,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 ### <a name="return-value"></a>반환 값  
  색의 인덱스는 이전에 투명 하 게 설정 합니다.  
   
-##  <a name="stretchblt"></a>CImage::StretchBlt  
+##  <a name="stretchblt"></a>  CImage::StretchBlt  
  이 현재 장치 컨텍스트를 소스 장치 컨텍스트에에서 비트맵을 복사합니다.  
   
 ```
@@ -1448,7 +1438,7 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) Windows sdk에서입니다.  
   
-##  <a name="transparentblt"></a>CImage::TransparentBlt  
+##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  이 현재 장치 컨텍스트를 소스 장치 컨텍스트에에서 비트맵을 복사합니다.  
   
 ```

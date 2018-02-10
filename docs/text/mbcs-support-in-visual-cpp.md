@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - tools [C++], MBCS support
 - Asian languages [C++]
@@ -28,19 +31,20 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++에서 MBCS 지원
-MBCS 지원 버전의 Windows 2000 또는 Windows XP 운영 체제에서 실행 될 때 Visual c + + 개발 시스템 등 통합된 소스 코드 편집기, 디버거 및 명령줄 도구는 MBCS 지원, 메모리 창 제외 하 고.  
+MBCS 지원 버전의 Windows 실행 하는 경우 Visual c + + 개발 시스템 등 통합된 소스 코드 편집기, 디버거 및 명령줄 도구는 MBCS 지원, 메모리 창 제외 하 고.  
   
  메모리 창 해석 하지는 않습니다 데이터의 바이트 MBCS 문자로 ANSI 또는 유니코드 문자로 해석할 수 있는 경우에 합니다. ANSI 문자는 항상 1 바이트의 크기 및 유니코드 문자는 2 바이트의 크기입니다. Mbcs, 문자 크기가 1 또는 2 바이트를 사용할 수 있습니다 및의 해석을 사용 하에서는 코드 페이지에 따라 달라 집니다. 이 때문에 안정적으로 MBCS 문자가 표시 메모리 창에 대 한 어렵습니다. 메모리 창은 선행 바이트의 문자를 알 수 없습니다. 개발자는 메모리 창에 바이트 값을 볼 수 있으며 문자 표시를 확인 하는 테이블의 값을 조회 됩니다. 개발자는 소스 코드를 기반으로 문자열의 시작 주소를 알고 때문에 이것이 가능 합니다.  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,7 +28,8 @@ f1_keywords:
 - _putts
 - _putws
 - puts
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _putts function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e05b0560032d79e5e69a1cafe8669c79160b8e1a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e2b57f785ac43866aedfe4bf9dbca59353ca3b51
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="puts-putws"></a>puts, _putws
 **stdout**에 문자열을 씁니다.  
@@ -77,7 +80,7 @@ int _putws(
   
  `_putws`는 `puts`의 와이드 문자 버전이며, 이 두 함수는 스트림이 ANSI 모드에서 열리는 경우 동일하게 작동합니다. `puts`는 현재 UNICODE 스트림에 대한 출력을 지원하지 않습니다.  
   
- Windows 2000 이상 버전에서 **_putwch**는 현재 CONSOLE LOCALE 설정을 사용하여 유니코드 문자를 씁니다.  
+  **_putwch** 현재 콘솔 로캘 설정을 사용 하 여 유니코드 문자를 씁니다.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   

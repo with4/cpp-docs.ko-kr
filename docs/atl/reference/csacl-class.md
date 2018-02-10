@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CSacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csacl-class"></a>CSacl 클래스
 이 클래스는 SACL (시스템 액세스 제어 목록) 구조에 대 한 래퍼입니다.  
@@ -48,7 +52,7 @@ class CSacl : public CAcl
 |이름|설명|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|생성자입니다.|  
-|[CSacl:: ~ CSacl](#dtor)|소멸자입니다.|  
+|[CSacl::~CSacl](#dtor)|소멸자입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -82,7 +86,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>  CSacl::AddAuditAce  
  감사 액세스 제어 항목 (ACE)에 추가 된 `CSacl` 개체입니다.  
   
 ```
@@ -129,11 +133,11 @@ bool AddAuditAce(
  반환 **true** ACE에 추가 되 면는 `CSacl` 개체 **false** 실패 합니다.  
   
 ### <a name="remarks"></a>설명  
- A `CSacl` 개체에 보안 이벤트 로그에서 감사 레코드를 생성 하는 액세스 시도의 유형을 지정 하는 액세스 제어 항목 (Ace)이 포함 되어 있습니다. 이 메서드를 추가 하려면 ACE는 `CSacl` 개체입니다. 두 번째 형식의 `AddAuditAce` 이상 에서만 됩니다 Windows 2000에서 사용할 수 있습니다.  
+ A `CSacl` 개체에 보안 이벤트 로그에서 감사 레코드를 생성 하는 액세스 시도의 유형을 지정 하는 액세스 제어 항목 (Ace)이 포함 되어 있습니다. 이 메서드를 추가 하려면 ACE는 `CSacl` 개체입니다.  
   
  참조 [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) 에 대 한 설명은에서 설정할 수 있는 다양 한 플래그는 `AceFlags` 매개 변수입니다.  
   
-##  <a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>  CSacl::CSacl  
  생성자입니다.  
   
 ```
@@ -148,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>설명  
  `CSacl` 개체 수 수 필요에 따라 사용 하 여 만든 기존 **ACL** 구조입니다. 이 매개 변수는 임의 액세스 제어 목록 (DACL) 및 SACL ()는 시스템 액세스 제어 목록 인지 확인 합니다. 디버그 빌드에 DACL를 제공 하는 경우에 어설션을 발생 합니다. 릴리스 빌드에서 DACL에서 모든 항목은 무시 됩니다.  
   
-##  <a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>  CSacl::~CSacl  
  소멸자입니다.  
   
 ```
@@ -158,7 +162,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>설명  
  소멸자는 모든 액세스 제어 (Ace) 항목을 포함 하는 개체에 의해 획득 하는 모든 리소스를 해제 합니다.  
   
-##  <a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>  CSacl::GetAceCount  
  액세스 제어 (Ace) 항목의 수를 반환 된 `CSacl` 개체입니다.  
   
 ```
@@ -168,7 +172,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>반환 값  
  에 포함 된 Ace의 수를 반환 된 `CSacl` 개체입니다.  
   
-##  <a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>  CSacl::operator =  
  대입 연산자입니다.  
   
 ```
@@ -182,7 +186,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>반환 값  
  업데이트 된에 대 한 참조를 반환 `CSacl` 개체입니다. 확인 된 **ACL** 매개 변수는 실제로 시스템 액세스 제어 목록 (SACL)와 임의 액세스 제어 목록 (DACL). 디버그 빌드에서만 어설션을 발생 하 고 릴리스 빌드에서 **ACL** 매개 변수는 무시 됩니다.  
   
-##  <a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>  CSacl::RemoveAce  
  특정 ACE (액세스 제어 항목)에서 제거 된 **CSacl** 개체입니다.  
   
 ```
@@ -196,7 +200,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>설명  
  이 메서드는에서 파생 된 [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)합니다.  
   
-##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
  에 포함 된 액세스 제어 항목 (Ace)를 모두 제거는 `CSacl` 개체입니다.  
   
 ```
@@ -208,7 +212,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>참고 항목  
  [CAcl 클래스](../../atl/reference/cacl-class.md)   
- [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
+ [ACLs](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [클래스 개요](../../atl/atl-class-overview.md)   
  [보안 전역 함수](../../atl/reference/security-global-functions.md)

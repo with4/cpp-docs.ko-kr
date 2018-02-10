@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - servers [MFC], initializing
 - initializing servers [MFC]
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registration"></a>등록
 응용 프로그램으로 OLE 항목을 삽입 하려는 OLE에서 선택할 수 있는 개체 유형 목록이 표시 됩니다. OLE 서버 응용 프로그램 모두에서 제공 하는 정보가 포함 된 시스템 등록 데이터베이스에서이 목록을 가져옵니다. 서버는 자신을 등록 하는 경우 시스템 등록 데이터베이스 (레지스트리)에 포함할 항목 제공 하는 개체의 각 유형 설명, 파일 확장명 및 기타 정보 중에서 자체에 대 한 경로입니다.  
@@ -44,12 +47,12 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  응용 프로그램 마법사에서 자동으로 생성 하는 MFC 응용 프로그램은 독립 실행형 응용 프로그램으로 실행 될 때 자신을 등록 합니다.  
   
- 를 설치 하는 동안 응용 프로그램을 등록 하려면 RegEdit.exe 프로그램을 사용 합니다. (Windows 95, Windows 98 및 Windows ME, RegEdit에서에서는 Windows 디렉터리입니다. Windows NT 및 Windows 2000 RegEdit은 Windows System32 디렉터리에 있습니다.) 응용 프로그램과 함께 설치 프로그램을 포함 하는 경우 설치 프로그램을 실행 했습니다. "RegEdit /S *appname*.reg"입니다. (/S 플래그 자동 작업을 나타냅니다. 즉, 명령 완료를 보고 대화 상자를 표시 하지 않습니다.) 그렇지 않은 경우 RegEdit를 수동으로 실행 하려면 사용자를 지시 합니다.  
+ 를 설치 하는 동안 응용 프로그램을 등록 하려면 RegEdit.exe 프로그램을 사용 합니다. 응용 프로그램과 함께 설치 프로그램을 포함 하는 경우 설치 프로그램을 실행 했습니다. "RegEdit /S *appname*.reg"입니다. (/S 플래그 자동 작업을 나타냅니다. 즉, 명령 완료를 보고 대화 상자를 표시 하지 않습니다.) 그렇지 않은 경우 RegEdit를 수동으로 실행 하려면 사용자를 지시 합니다.  
   
 > [!NOTE]
 >  응용 프로그램 마법사로 만든.reg 파일에는 실행 파일에 대 한 전체 경로 포함 되지 않습니다. 설치 프로그램 실행 파일에 전체 경로 포함 하거나 설치 디렉터리를 포함 하도록 PATH 환경 변수를 수정 하 여.reg 파일을 수정 하거나 해야 합니다.  
   
- RegEdit 등록 데이터베이스에.reg 텍스트 파일의 콘텐츠를 병합합니다. 데이터베이스를 확인 하거나 복구 하려면 레지스트리 편집기를 사용 합니다. 필수 OLE 항목을 삭제 하지 않도록 주의 합니다. (Windows 95, Windows 98 및 Windows ME, 레지스트리 편집기 인 RegEdit.exe 합니다. Windows NT 및 Windows 2000이 RegEdit32.exe.)  
+ RegEdit 등록 데이터베이스에.reg 텍스트 파일의 콘텐츠를 병합합니다. 데이터베이스를 확인 하거나 복구 하려면 레지스트리 편집기를 사용 합니다. 필수 OLE 항목을 삭제 하지 않도록 주의 합니다.  
   
 ##  <a name="_core_server_initialization"></a>서버 초기화  
  응용 프로그램 마법사는 서버 응용 프로그램을 만들 때 마법사가 완료 모든 초기화 작업을 자동으로 합니다. 이 섹션에서는 수동으로 서버 응용 프로그램을 작성 하는 경우 수행 해야 작업을 설명 합니다.  

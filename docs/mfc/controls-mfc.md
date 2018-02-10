@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows common controls [MFC]
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3fd146ecd4a5c1b431ea63a98e770b0cb2e0917d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b18979ec502ea645cf8cdac39ca9ea75cb229e61
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="controls-mfc"></a>컨트롤(MFC)
 컨트롤은 사용자가 데이터를 입력하거나 조작하기 위해 상호 작용할 수 있는 개체입니다. 일반적으로 대화 상자 또는 도구 모음에 나타납니다. 이 항목 군에서는 다음 세 가지 주요 컨트롤 종류를 설명합니다.  
@@ -36,15 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="windows-common-controls"></a>Windows 공용 컨트롤  
  Windows 운영 체제는 항상 많은 Windows 공용 컨트롤을 제공합니다. 이러한 컨트롤 개체는 프로그래밍이 가능하며, Visual C++ 대화 상자 편집기는 컨트롤 개체를 대화 상자에 추가하는 것을 지원합니다. MFC(Microsoft Foundation Class) 라이브러리는 [Windows 공용 컨트롤 및 MFC 클래스](#_core_windows_common_controls_and_mfc_classes)표에 나와 있는 것처럼 각 컨트롤을 캡슐화하는 클래스를 지원합니다. 표의 일부 항목에는 자세히 설명하는 관련 항목이 있습니다. 관련 항목이 없는 컨트롤은 MFC 클래스에 대한 설명서를 참조하세요.  
   
- [CWnd](../mfc/reference/cwnd-class.md) 클래스는 모든 컨트롤 클래스를 포함하는 모든 창 클래스의 기본 클래스입니다. Windows 공용 컨트롤은 다음과 같은 환경에서 지원됩니다.  
-  
--   Windows 95, Windows 98 및 Windows 2000  
-  
--   Windows NT 버전 3.51 이상  
-  
--   Win32s, 버전 1.3(Visual C++ 버전 4.2 이상은 Win32s를 지원하지 않음)  
-  
- 이전 버전의 Windows에서 사용할 수 있었던 이전 공용 컨트롤(확인란, 콤보 상자, 편집 상자, 목록 상자, 옵션 단추, 누름 단추, 스크롤 막대 컨트롤 및 정적 컨트롤)도 사용할 수 있습니다.  
+ [CWnd](../mfc/reference/cwnd-class.md) 클래스는 모든 컨트롤 클래스를 포함하는 모든 창 클래스의 기본 클래스입니다. 
   
 ## <a name="activex-controls"></a>ActiveX 컨트롤  
  이전에 OLE 컨트롤로 알려진 ActiveX 컨트롤은 Windows 응용 프로그램의 대화 상자 또는 World Wide Web의 HTML 페이지에서 사용할 수 있습니다. 자세한 내용은 [MFC ActiveX 컨트롤](../mfc/mfc-activex-controls.md)을 참조하세요.  

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation Manager
 - Automation servers, Automation Manager
@@ -16,19 +18,20 @@ helpviewer_keywords:
 - Automation clients, Automation Manager
 - AUTMGR32.exe
 ms.assetid: 6bf3429e-1946-41c5-86d0-ad7f5b8585b8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 338b619580ef7967d871ff3f960fc467555ab72a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8773bc60d970f66616c35db84b9f161ea12754d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automation-manager-mfc"></a>자동화 관리자(MFC)
-AUTMGR32 합니다. 원격 자동화 개체를 제공 하려는 각 컴퓨터의 Windows 시스템 디렉터리에 EXE는 복사 해야 합니다. Windows 95, Windows 98이이 디렉터리는 대개 C:\WINDOWS\SYSTEM입니다. Windows NT 및 Windows 2000 것이 일반적으로 C:\WINNT\SYSTEM32입니다.  
+AUTMGR32 합니다. 원격 자동화 개체를 제공 하려는 각 컴퓨터의 Windows 시스템 디렉터리에 EXE는 복사 해야 합니다. 일반적으로 C:\WINDOWS\SYSTEM32입니다.  
   
  서버에서 클라이언트에 콜백할 수 있도록 하려면이 실행 파일을 각 클라이언트 컴퓨터의 시스템 디렉터리에도 복사 해야 합니다.  
   

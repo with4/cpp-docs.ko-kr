@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vc.codewiz.class.atl.asp.options
-dev_langs: C++
-helpviewer_keywords: ATL Active Server Page Component Wizard, options
+f1_keywords:
+- vc.codewiz.class.atl.asp.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6564b340458ae7e9a8e137d2338ba68b3e729a0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>옵션, ATL Active Server Page 구성 요소 마법사
 ATL Active Server 페이지 구성 요소 마법사의이 페이지를 사용 하 여 효율성과 개체에 대 한 오류 지원에 대 한 디자인 합니다.  
@@ -38,7 +43,7 @@ ATL Active Server 페이지 구성 요소 마법사의이 페이지를 사용 �
 |**아파트**|개체가 아파트 스레딩을 사용 하도록 지정 합니다. 단일 같음 스레드 아파트 합니다. 아파트 스레드 구성 요소의 각 개체는 개체의 수명에 대 한 해당 스레드에 대 한 아파트 할당 그러나 여러 개체에 대해 여러 스레드를 사용할 수 있습니다. 각 아파트는 특정 스레드에 연결 되었으며 Windows 메시지 펌프 (기본값).<br /><br /> 참조 [스레드 아파트](http://msdn.microsoft.com/library/windows/desktop/ms680112) 자세한 정보에 대 한 합니다.|  
 |**둘 다**|개체는 사용할 수 있도록 지정 아파트 이거나 자유 스레딩 만든 스레드의 종류에 따라 합니다.|  
 |**무료**|개체가 자유 스레딩을 사용 하도록 지정 합니다. 자유 스레딩은 다중 스레드 아파트 모델입니다. 참조 [다중 스레드 아파트](http://msdn.microsoft.com/library/windows/desktop/ms693421) 자세한 정보에 대 한 합니다.|  
-|**중립** (Windows 2000에만 해당)|개체는 다중 스레드 아파트에 대 한 지침을 따라 하지만 모든 종류의 스레드에서 실행 될 수를 지정 합니다.|  
+|**Neutral**|개체는 다중 스레드 아파트에 대 한 지침을 따라 하지만 모든 종류의 스레드에서 실행 될 수를 지정 합니다.|  
   
  **집계**  
  개체를 사용할지 여부를 나타내는 [집계](http://msdn.microsoft.com/library/windows/desktop/ms686558)합니다. 집계 개체를 클라이언트에서 노출할 인터페이스를 선택 하 고 집계 개체에서 구현 된 것 처럼 인터페이스 노출 됩니다. 집계 개체의 클라이언트는 집계 개체와만 통신합니다.  
@@ -47,7 +52,7 @@ ATL Active Server 페이지 구성 요소 마법사의이 페이지를 사용 �
 |------------|-----------------|  
 |**예**|개체를 집계할 수 있도록 지정 합니다. 기본값입니다.|  
 |**No**|개체가 집계 되지 않은 것을 지정 합니다.|  
-|**만**|개체가 해야 집계할 수 있도록 지정 합니다.|  
+|**Only**|개체가 해야 집계할 수 있도록 지정 합니다.|  
   
  **지원**  
  (추가 될 요소 설명)  

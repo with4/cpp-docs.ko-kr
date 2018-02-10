@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 및 AfxLoadLibrary
 호출 처리 [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (또는 [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary))를 명시적으로 DLL에 연결 합니다. 명시적 링크에 다른 함수와 함께 사용할 수 있는 DLL에 대 한 핸들을 반환를 호출 하는 프로세스의 주소 공간에 지정된 된 DLL을 매핑하고 함수가 성공 하면-예를 들어 `GetProcAddress` 및 `FreeLibrary`합니다.  
@@ -39,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  Windows에서 DLL을 로드할 수 없는 경우 프로세스 오류 로부터 복구 연결할 수 있습니다. 예를 들어 프로세스 오류의 사용자에 게 알리는 및 DLL에 다른 경로 지정 하려면 사용자에 게 수 없습니다.  
   
 > [!IMPORTANT]
->  Windows NT 4, Windows 2000 또는 SP1) (이전의 Windows XP에서 실행 되도록 코드 인 경우에 모든 Dll의 전체 경로 지정 해야 합니다. 이러한 운영 체제 파일을 로드할 때 현재 디렉터리를 먼저 검색 합니다. 파일의 경로 지정 하지 않으면 원하지 않는 파일을 로드할 수 있습니다.  
+>  모든 Dll의 전체 경로 지정할 수 있는지 확인 합니다. 파일을 로드할 때 현재 디렉터리를 먼저 검색 합니다. 파일의 경로 지정 하지 않으면 원하지 않는 파일을 로드할 수 있습니다.  
   
 ## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,7 +27,8 @@ f1_keywords:
 - AFXDLGS/CPrintDialogEx::PrintRange
 - AFXDLGS/CPrintDialogEx::PrintSelection
 - AFXDLGS/CPrintDialogEx::m_pdex
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPrintDialogEx [MFC], CPrintDialogEx
 - CPrintDialogEx [MFC], CreatePrinterDC
@@ -45,19 +47,20 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 147a3d638f76f291a9732b340335331730f5b74d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 클래스
-Windows 2000 인쇄 속성 시트에서 제공하는 서비스를 캡슐화합니다.  
+Windows의 인쇄 속성 시트에서 제공 하는 서비스를 캡슐화 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -137,8 +140,8 @@ class CPrintDialogEx : public CCommonDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdlgs.h  
   
-##  <a name="cprintdialogex"></a>CPrintDialogEx::CPrintDialogEx  
- Windows 2000 인쇄 속성 시트를 생성합니다.  
+##  <a name="cprintdialogex"></a>  CPrintDialogEx::CPrintDialogEx  
+ Windows 인쇄 속성 시트를 생성합니다.  
   
 ```  
 CPrintDialogEx(
@@ -156,7 +159,7 @@ CPrintDialogEx(
 ### <a name="remarks"></a>설명  
  이 멤버 함수는만 개체를 생성 합니다. 사용 된 `DoModal` 멤버 함수 대화 상자를 표시 합니다.  
   
-##  <a name="createprinterdc"></a>CPrintDialogEx::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC  
  프린터 장치 컨텍스트 (DC)를 만듭니다.는 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 및 [DEVNAMES](../../mfc/reference/devnames-structure.md) 구조입니다.  
   
 ```  
@@ -171,8 +174,8 @@ HDC CreatePrinterDC();
   
  이 DC는 DC를 현재 프린터 하 프린터 Dc를 삭제 해야 다른 모든 이전에 가져온. 이 함수를 호출 하 고 현재까지 인쇄 대화 상자를 표시 하지 않고 결과 DC를 사용 합니다.  
   
-##  <a name="domodal"></a>CPrintDialogEx::DoModal  
- Windows 2000 공통 인쇄 속성 시트를 표시 하 고 사용자 페이지 범위를 사본 수 등의 다양 한 인쇄 옵션을 선택 하도록 허용 하려면이 함수를 호출 및 복사본 대조해 야 해야 하는지 여부입니다.  
+##  <a name="domodal"></a>  CPrintDialogEx::DoModal  
+ Windows의 인쇄 속성 시트를 표시 하 고 사용자 페이지 범위를 사본 수 등의 다양 한 인쇄 옵션을 선택 하도록 허용 하려면이 함수 호출 및 복사본 대조해 야 해야 하는지 여부.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -188,7 +191,7 @@ virtual INT_PTR DoModal();
   
  경우는 **PD_RETURNDC** 플래그 호출할 때 사용 되 `DoModal`, 프린터 DC에 반환 됩니다는 **hDC** 소속 [m_pdex](#m_pdex)합니다. 이 DC에 대 한 호출으로 해제 해야 [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) 호출자에 의해 `CPrintDialogEx`합니다.  
   
-##  <a name="getcopies"></a>CPrintDialogEx::GetCopies  
+##  <a name="getcopies"></a>  CPrintDialogEx::GetCopies  
  이 함수를 호출한 후 호출 `DoModal` 를 요청한 복사본 수를 검색 합니다.  
   
 ```  
@@ -198,7 +201,7 @@ int GetCopies() const;
 ### <a name="return-value"></a>반환 값  
  요청한 복사본 수입니다.  
   
-##  <a name="getdefaults"></a>CPrintDialogEx::GetDefaults  
+##  <a name="getdefaults"></a>  CPrintDialogEx::GetDefaults  
  대화 상자를 표시 하지 않고 기본 프린터의 장치 기본값을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -215,7 +218,7 @@ BOOL GetDefaults();
   
  경우는 **PD_RETURNDC** 플래그가 설정 되 면이 반환 되지 것입니다만 **hDevNames** 및 **hDevMode** (에 **m_pdex.hDevNames** 및 **m_pdex.hDevMode**) 호출자에 게에 있는 프린터 DC도 반환 하지만 **m_pdex.hDC**합니다. 호출자가 프린터 DC를 삭제 하 고 Windows를 호출 하는 작업은 [작업](http://msdn.microsoft.com/library/windows/desktop/aa366579) 작업이 종료 된 경우 핸들에 대해 함수는 `CPrintDialogEx` 개체입니다.  
   
-##  <a name="getdevicename"></a>CPrintDialogEx::GetDeviceName  
+##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName  
  이 함수를 호출한 후 호출 [DoModal](#domodal) 를 호출한 후 또는 현재 선택 된 프린터의 이름 검색 [GetDefaults](#getdefaults) 기본 프린터의 이름을 검색 하 합니다.  
   
 ```  
@@ -228,7 +231,7 @@ CString GetDeviceName() const;
 ### <a name="remarks"></a>설명  
  에 대 한 포인터를 사용 하 여는 `CString` 에서 반환 된 개체 `GetDeviceName` 의 값으로 `lpszDeviceName` 호출에서 [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)합니다.  
   
-##  <a name="getdevmode"></a>CPrintDialogEx::GetDevMode  
+##  <a name="getdevmode"></a>  CPrintDialogEx::GetDevMode  
  이 함수를 호출한 후 호출 [DoModal](#domodal) 또는 [GetDefaults](#getdefaults) 인쇄 장치에 대 한 정보를 검색 합니다.  
   
 ```  
@@ -238,7 +241,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>반환 값  
  [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 장치 초기화 및 인쇄 드라이버의 환경에 대 한 정보가 포함 된 데이터 구조입니다. Windows 사용 하 여이 구조에서 사용 되는 메모리의 잠금을 해제 해야 [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) 함수는 Windows SDK에 설명 되어 있습니다.  
   
-##  <a name="getdrivername"></a>CPrintDialogEx::GetDriverName  
+##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName  
  이 함수를 호출한 후 호출 [DoModal](#domodal) 또는 [GetDefaults](#getdefaults) 시스템에서 정의 된 프린터 장치 드라이버의 이름을 검색할 수 있습니다.  
   
 ```  
@@ -251,7 +254,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>설명  
  에 대 한 포인터를 사용 하 여는 `CString` 에서 반환 된 개체 `GetDriverName` 의 값으로 `lpszDriverName` 호출에서 [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)합니다.  
   
-##  <a name="getportname"></a>CPrintDialogEx::GetPortName  
+##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  이 함수를 호출한 후 호출 [DoModal](#domodal) 또는 [GetDefaults](#getdefaults) 를 현재 선택 된 프린터 포트의 이름을 검색 합니다.  
   
 ```  
@@ -261,7 +264,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>반환 값  
  현재 선택 된 프린터 포트의 이름입니다.  
   
-##  <a name="getprinterdc"></a>CPrintDialogEx::GetPrinterDC  
+##  <a name="getprinterdc"></a>  CPrintDialogEx::GetPrinterDC  
  프린터 장치 컨텍스트에 대 한 핸들을 반환합니다.  
   
 ```  
@@ -274,7 +277,7 @@ HDC GetPrinterDC() const;
 ### <a name="remarks"></a>설명  
  Windows를 호출 해야 [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) 완료 되 면 장치 컨텍스트를 삭제 하는 함수 사용 합니다.  
   
-##  <a name="m_pdex"></a>CPrintDialogEx::m_pdex  
+##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex  
  대화 상자 개체의 특성을 저장 하는 멤버가 PRINTDLGEX 구조입니다.  
   
 ```  
@@ -286,7 +289,7 @@ PRINTDLGEX m_pdex;
   
  수정 하는 경우는 `m_pdex` 데이터 멤버를 직접 모든 기본 동작을 재정의 하 합니다.  
   
-##  <a name="printall"></a>CPrintDialogEx::PrintAll  
+##  <a name="printall"></a>  CPrintDialogEx::PrintAll  
  이 함수를 호출한 후 호출 `DoModal` 인쇄 된 문서의 모든 페이지를 여부를 결정 합니다.  
   
 ```  
@@ -296,7 +299,7 @@ BOOL PrintAll() const;
 ### <a name="return-value"></a>반환 값  
  **True 이면** 문서의 모든 페이지가 인쇄 필요가 없으면 경우 **FALSE**합니다.  
   
-##  <a name="printcollate"></a>CPrintDialogEx::PrintCollate  
+##  <a name="printcollate"></a>  CPrintDialogEx::PrintCollate  
  이 함수를 호출한 후 호출 `DoModal` 프린터 모든 인쇄 된 문서의 복사본을 병합 해야 하는지 여부를 확인 하려면.  
   
 ```  
@@ -306,7 +309,7 @@ BOOL PrintCollate() const;
 ### <a name="return-value"></a>반환 값  
  **TRUE** 사용자가 대화 상자의; collate 확인란을 선택 하지 않으면 **FALSE**합니다.  
   
-##  <a name="printcurrentpage"></a>CPrintDialogEx::PrintCurrentPage  
+##  <a name="printcurrentpage"></a>  CPrintDialogEx::PrintCurrentPage  
  이 함수를 호출한 후 호출 `DoModal` 문서의 현재 페이지를 인쇄 하려면 여부를 결정 합니다.  
   
 ```  
@@ -316,7 +319,7 @@ BOOL PrintCurrentPage() const;
 ### <a name="return-value"></a>반환 값  
  **True 이면** 경우 **현재 페이지 인쇄** 인쇄 대화 상자에서 선택 하지 않으면 **FALSE**합니다.  
   
-##  <a name="printrange"></a>CPrintDialogEx::PrintRange  
+##  <a name="printrange"></a>  CPrintDialogEx::PrintRange  
  이 함수를 호출한 후 호출 `DoModal` 범위는 문서에서 페이지를 인쇄 여부를 결정 합니다.  
   
 ```  
@@ -329,7 +332,7 @@ BOOL PrintRange() const;
 ### <a name="remarks"></a>설명  
  지정 된 페이지 범위에서 확인할 수 있는 [m_pdex](#m_pdex) (참조 **nPageRanges**, **nMaxPageRanges**, 및 **lpPageRanges** 는 에서[ PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) Windows SDK의 구조).  
   
-##  <a name="printselection"></a>CPrintDialogEx::PrintSelection  
+##  <a name="printselection"></a>  CPrintDialogEx::PrintSelection  
  이 함수를 호출한 후 호출 `DoModal` 현재 선택한 항목만 인쇄 여부를 결정 합니다.  
   
 ```  

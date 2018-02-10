@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
-dev_langs: C++
-helpviewer_keywords: CPrivateObjectSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 클래스
 이 클래스는 private 개체에서 보안 설명자 개체를 나타냅니다.  
@@ -45,7 +49,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |이름|설명|  
 |----------|-----------------|  
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|생성자입니다.|  
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|소멸자입니다.|  
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|소멸자입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -60,7 +64,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
   
 |||  
 |-|-|  
-|[연산자 =](#operator_eq)|대입 연산자입니다.|  
+|[operator =](#operator_eq)|대입 연산자입니다.|  
   
 ## <a name="remarks"></a>설명  
  이 클래스에서 파생 된 [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)를 만들고 private 개체의 보안 설명자를 관리 하기 위한 메서드를 제공 합니다.  
@@ -75,7 +79,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  보안 설명자 및 해당 액세스 제어 목록 (Acl)을 지 원하는 (Ace) 상속 가능한 액세스 제어 항목의 자동 전파 형식으로 변환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -105,7 +109,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>설명  
  이 Ace의 임의 액세스 제어에서 목록 (DACL) 여부를 확인 하려고 하는 메서드 및 현재 보안 설명자의 시스템 액세스 제어 목록 (SACL) 부모 보안 설명자에서 상속 되었습니다. 호출 된 [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) 함수입니다.  
   
-##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  생성자입니다.  
   
 ```
@@ -115,7 +119,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>설명  
  초기화는 `CPrivateObjectSecurityDesc` 개체입니다.  
   
-##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc  
  소멸자입니다.  
   
 ```
@@ -125,7 +129,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>설명  
  소멸자는 할당 된 모든 리소스를 해제 하 고 개인 개체의 보안 설명자를 삭제 합니다.  
   
-##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create  
  할당 하 고 호출 하는 리소스 관리자가 만든 private 개체에 대 한 자기 상대적 보안 설명자를 초기화할이 메서드를 호출 합니다.  
   
 ```
@@ -177,12 +181,12 @@ bool Create(
 ### <a name="remarks"></a>설명  
  이 메서드를 호출 [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) 또는 [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581)합니다.  
   
- 새 개체의 GUID 개체 유형을 지정할 수 하거나 Windows 2000을 실행 하는 시스템에서 사용할 수 있고 이상만 Ace 상속 되는 방식을 제어 하는 두 번째 메서드.  
+ 두 번째 방법은 Ace 상속 되는 방식을 제어 하거나 새 개체의 GUID 개체 형식 지정을 허용 합니다.  
   
 > [!NOTE]
 >  자기 상대적 보안 설명자는 인접 한 메모리 블록의 모든 보안 정보를 저장 하는 보안 설명자가입니다.  
   
-##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get  
  개인 개체의 보안 설명자에서 정보를 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -204,7 +208,7 @@ bool Get(
 ### <a name="remarks"></a>설명  
  보안 설명자에는 구조와 연결 된 데이터는 보안 가능한 개체에 대 한 보안 정보를 포함 하는 합니다.  
   
-##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CPrivateObjectSecurityDesc::operator =  
  대입 연산자입니다.  
   
 ```
@@ -218,7 +222,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CPrivateObjectSecurityDesc` 개체입니다.  
   
-##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>  CPrivateObjectSecurityDesc::Set  
  Private 개체의 보안 설명자를 수정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -256,7 +260,7 @@ bool Set(
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 개체의 GUID 개체 유형을 지정할 수 하거나 Windows 2000을 실행 하는 시스템에서 사용할 수 있고 이상만 Ace 상속 되는 방식을 제어 하는 두 번째 메서드.  
+ 두 번째 방법은 Ace 상속 되는 방식을 제어 하거나 개체의 GUID 개체 형식 지정을 허용 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   

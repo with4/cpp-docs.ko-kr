@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locales-and-code-pages"></a>로캘 및 코드 페이지
 로캘 ID는 로컬 규칙과 특정 지리적 지역에 대 한 언어를 반영합니다. 지정된 언어는 여러 국가/지역에서 통용될 수 있습니다. 예를 들어 포르투갈어는 브라질과 포르투갈에서 통용됩니다. 반대로 한 국가/지역에 여러 개의 공식 언어가 있을 수 있습니다. 예를 들어, 캐나다에서는 두 언어: 영어와 프랑스어 합니다. 따라서 캐나다에 두 가지 로캘이: 캐나다 영어와 프랑스어 (캐나다). 일부 로캘 종속 범주에는 날짜 형식 지정 및 통화 값의 형식 표시가 포함됩니다.  
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  코드 페이지에 대한 자세한 내용은 [Code Pages](../c-runtime-library/code-pages.md)를 참조하세요.  
   
- C 런타임 라이브러리에 두 가지 유형의 내부 코드 페이지: 로캘 및 멀티 바이트입니다. 프로그램 실행 중 현재 코드 페이지를 변경할 수 있습니다 (에 대 한 설명서를 참조는 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [_setmbcp](../c-runtime-library/reference/setmbcp.md) 함수). 또한 런타임 라이브러리 가져와서 운영 체제 코드 페이지의 값을 사용할 수 있습니다. Windows 2000에서 운영 체제 코드 페이지는 "시스템 기본 ANSI" 코드 페이지를 사용 합니다. 이 코드 페이지는 프로그램의 실행 기간에 대 한 상수입니다.  
+ C 런타임 라이브러리에 두 가지 유형의 내부 코드 페이지: 로캘 및 멀티 바이트입니다. 프로그램 실행 중 현재 코드 페이지를 변경할 수 있습니다 (에 대 한 설명서를 참조는 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 및 [_setmbcp](../c-runtime-library/reference/setmbcp.md) 함수). 또한 런타임 라이브러리 가져와서는 프로그램의 실행 기간에 대 한 상수는 운영 체제 코드 페이지의 값을 사용할 수 있습니다.  
   
  로캘 코드 페이지 변경 되는 경우 선택한 코드 페이지에 적용 하는 변경 내용 함수는 로캘 종속 집합의 동작입니다. 기본적으로 모든 로캘 종속 기능 "C" 로캘에서에 고유한 로캘 코드 페이지를 사용 하 여 실행을 시작합니다. 내부 로캘 코드 페이지 (뿐만 아니라 다른 로캘 관련 속성)를 호출 하 여 변경할 수 있습니다는 `setlocale` 함수입니다. 에 대 한 호출 `setlocale`(LC_ALL, "") 운영 체제 사용자 로캘으로 표시 되는 로캘을 설정 합니다.  
   

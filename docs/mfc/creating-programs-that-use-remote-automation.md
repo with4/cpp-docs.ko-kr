@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, creating programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, creating programs
 ms.assetid: 8eb31320-1037-4029-b1f3-fdc9406dbaf1
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: deb832e0baed30507ef3f9929fb5f12805b7a807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>원격 자동화를 사용하는 프로그램 만들기
 모든 자동화 개체 및 모든 자동화 컨트롤러를 다시 컴파일하거나, 및 링크할 필요 없이 소스 코드를 변경 하지 않고도 원격 자동화를 사용할 수입니다. 로컬로 작동 하는 설치를 수행한 (즉, 동일한 시스템에서)를 원격으로 실행 하는 몇 단계를 통해 이동 해야 합니다.  
@@ -46,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  3 단계 적절히 설치 하 고 선택한 서버 컴퓨터의 컴퓨터에 서버 응용 프로그램을 등록 합니다. 마찬가지로 응용 프로그램이 자체 등록 기능이 있으면 한 번 실행 등록 됩니다.  
   
- 4 단계는 원격 실행을 허용 하도록 서버를 구성 해야 합니다. RAC 관리자 서버 컴퓨터에서 실행 되 고 있는지는 **클라이언트 액세스** 탭에 포커스가 있습니다. 활성화 모델을 선택 합니다. (일반적으로 **키로 원격 만듭니다 허용**합니다. 또한 클릭 해야이 옵션을 선택 하 고 수행 하는 경우는 **원격 활성화 허용** 'Y'로 레지스트리 항목의 값을 설정 하려면 확인란). Windows NT를 실행 하는 또는 Windows 2000 및 하면 원격 만듭니다 허용 (ACL) 옵션을 선택 할 있습니다 푸시하여 ACL을 편집 하는 옵션은 **ACL** 단추입니다.  
+ 4 단계는 원격 실행을 허용 하도록 서버를 구성 해야 합니다. RAC 관리자 서버 컴퓨터에서 실행 되 고 있는지는 **클라이언트 액세스** 탭에 포커스가 있습니다. 활성화 모델을 선택 합니다. (일반적으로 **키로 원격 만듭니다 허용**합니다. 또한 클릭 해야이 옵션을 선택 하 고 수행 하는 경우는 **원격 활성화 허용** 'Y'로 레지스트리 항목의 값을 설정 하려면 확인란). 원격 만듭니다 허용 (ACL) 옵션을 선택 하면 할 있습니다 푸시하여 ACL을 편집 하는 옵션은 **ACL** 단추입니다.  
   
  원격 자동화를 작동을 허용 하려면 다음 자동화 관리자가 서버 컴퓨터 또는 컴퓨터에 설치 및 실행 중인지 확인 해야 합니다. 이 설치 되어 있지 않으면 AUTMGR32 복사 합니다. EXE Windows 시스템 디렉터리에 있습니다. 참조 하는 방법에 대 한 내용은 [원격 자동화 설치](../mfc/remote-automation-installation.md)합니다. 원격 자동화를 시작 하려면 자동화 관리자를 실행 합니다. 메시지 수가 표시 됩니다는 작은 상태 창으로 표시 됩니다. 이 시작 되 면 자동으로 최소화 됩니다. 상태 정보를 보려면 계속 하려는 경우 클릭할 수는 **자동화 관리자** 창을 복원 하려면 작업 표시줄에서 탭 합니다.  
   

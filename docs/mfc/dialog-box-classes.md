@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.classes.dialog
-dev_langs: C++
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
 helpviewer_keywords:
 - property sheet classes
 - dialog box classes
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dialog-box-classes"></a>대화 상자 클래스
 클래스 `CDialog` 및 대화 상자 기능을 캡슐화 하는 클래스의 파생된 클래스입니다. 대화 상자 창의 특별 한 종류 이므로 `CDialog` 에서 파생 된 `CWnd`합니다. 대화 상자 클래스에서 파생 `CDialog` 또는 하나를 사용을 열거나 저장할 파일, 인쇄, 글꼴 또는 색상을 선택 하면 같은 표준 대화 상자에 대 한 일반 대화 상자 클래스의 검색 및 바꾸기 작업을 시작 하거나 수행 하는 다양 한 OLE 관련 작업입니다.  
@@ -58,7 +62,7 @@ ms.lasthandoff: 12/21/2017
  파일 인쇄를 위한 표준 대화 상자를 제공 합니다.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Windows 2000 인쇄 속성 시트를 제공합니다.  
+ Windows 인쇄 속성 시트를 제공합니다.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
  인쇄 여백을 설정 및 수정에 대 한 추가 지원과 함께 Windows 일반 페이지 설정 대화 상자에서 제공 하는 서비스를 캡슐화 합니다.  
@@ -105,7 +109,7 @@ ms.lasthandoff: 12/21/2017
  [CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
  여러 속성 페이지에 대 한 프레임을 제공 합니다. 속성 시트에서 파생 `CPropertySheet` 에 속성 시트를 신속 하 게 구현 합니다.  
   
- [에서는 COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
+ [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
  대화 상자와 유사한 그래픽 인터페이스에서 제어 OLE의 속성을 표시 합니다.  
   
 ## <a name="html-based-dialog-classes"></a>HTML 기반 대화 상자 클래스  

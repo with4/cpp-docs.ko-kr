@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8d3aaeb5d3e71dfced4bf78384a62898d99a5ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c8217a901f071f50dbd2d7dfcbffccf4014a9444
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp(OpenMP 2.0 지원 활성화)
 컴파일러에서 처리 하도록 `#pragma` [omp](../../preprocessor/omp.md)합니다.  
@@ -37,8 +40,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>설명  
  `#pragma omp`지정 하는 데 사용 되 [지시문](../../parallel/openmp/reference/openmp-directives.md) 및 [절](../../parallel/openmp/reference/openmp-clauses.md)합니다. 경우 **/openmp** 지정 하지 않으면 컴파일, 컴파일러 OpenMP 절과 지시문을 무시 합니다. [OpenMP 함수](../../parallel/openmp/reference/openmp-functions.md) 경우에도 해당 컴파일러에서 호출을 처리 **/openmp** 지정 되지 않았습니다.  
-  
- 응용 프로그램을 컴파일하면 **/openmp** 를 사용 하 고는 [라이브러리](../../parallel/openmp/reference/openmp-libraries.md) Windows 2000 이상의 운영 체제에서 실행할 수 있습니다.  
   
  로 컴파일된 응용 프로그램 **/openmp** 및 **/clr** 단일 응용 프로그램 도메인 프로세스에서 실행할 수 있습니다; 여러 응용 프로그램 도메인을 지원 하지 않습니다. 즉, (.cctor) 모듈 생성자를 실행 검색 하는 프로세스를 사용 하 여 컴파일되며 **/openmp** 응용 프로그램 기본이 아닌 런타임으로 로드 되 면 하 고 있습니다. 자세한 내용은 참조 [appdomain](../../cpp/appdomain.md), [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md), 및 [혼합형 어셈블리 초기화](../../dotnet/initialization-of-mixed-assemblies.md)합니다.  
   

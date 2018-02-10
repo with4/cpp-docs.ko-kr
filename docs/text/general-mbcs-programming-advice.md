@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], dialog box fonts
 - MS Shell Dlg
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a09bfb9b30e279e8d0b7696055c1e54ac56bfae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b379c163963a9ae0dd0c59c7d0fc809fee4f46d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="general-mbcs-programming-advice"></a>일반적인 MBCS 프로그래밍 팁
 다음 팁을 사용 합니다.  
@@ -39,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   대화 상자를 디자인할 때 약 30%를 허용 MBCS 번역에 대 한 정적 텍스트 컨트롤의 끝에 추가 공간이 있습니다.  
   
--   일부 글꼴 모든 시스템에서 사용할 수 없기 때문에 응용 프로그램에 대 한 글꼴을 선택할 때 주의 해야 하 고 합니다. 예를 들어 일본어 버전의 Windows 2000 Helvetica 글꼴을 지원 하지 않습니다.  
+-   일부 글꼴 모든 시스템에서 사용할 수 없기 때문에 응용 프로그램에 대 한 글꼴을 선택할 때 주의 해야 하 고 합니다.  
   
 -   대화 상자에 대 한 글꼴을 선택할 때 사용 하 여 [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) MS Sans Serif 또는 Helvetica 대신 합니다. MS Shell Dlg 대화 상자를 만들기 전에 올바른 글꼴로 시스템에 의해 대체 됩니다. MS Shell Dlg를 사용 하 여이 글꼴에 처리 하기 위해 운영 체제의 모든 변경 내용을 자동으로 사용할 수 있는지 확인 합니다. (MFC 바꿉니다 MS Shell Dlg는 DEFAULT_GUI_FONT 또는 시스템 글꼴 Windows 95, Windows 98 및 Windows NT 4에 이러한 시스템 MS Shell Dlg를 올바르게 처리 하지 않습니다.)  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -37,19 +38,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs: C++
-helpviewer_keywords: CSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 클래스
 이 클래스는에 대 한 래퍼는 **SECURITY_DESCRIPTOR** 구조입니다.  
@@ -70,14 +74,14 @@ class CSecurityDesc
 |이름|설명|  
 |----------|-----------------|  
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|생성자입니다.|  
-|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|소멸자입니다.|  
+|[CSecurityDesc::~CSecurityDesc](#dtor)|소멸자입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
 |[CSecurityDesc::FromString](#fromstring)|유효한, 기능 보안 설명자 문자열 형식의 보안 설명자를 변환합니다.|  
-|[Csecuritydesc:: Getcontrol](#getcontrol)|검색은 보안 설명자에서 정보를 제어 합니다.|  
+|[CSecurityDesc::GetControl](#getcontrol)|검색은 보안 설명자에서 정보를 제어 합니다.|  
 |[CSecurityDesc::GetDacl](#getdacl)|보안 설명자에서 임의 액세스 제어 목록 (DACL) 정보를 검색합니다.|  
 |[CSecurityDesc::GetGroup](#getgroup)|보안 설명자에서 주 그룹 정보를 검색합니다.|  
 |[CSecurityDesc::GetOwner](#getowner)|보안 설명자에서 소유자 정보를 검색합니다.|  
@@ -97,10 +101,10 @@ class CSecurityDesc
 |[CSecurityDesc::MakeAbsolute](#makeabsolute)|보안 설명자를 절대 형식으로 변환 하려면이 메서드를 호출 합니다.|  
 |[CSecurityDesc::MakeSelfRelative](#makeselfrelative)|보안 설명자를 자기 상대적 형식으로 변환 하려면이 메서드를 호출 합니다.|  
 |[CSecurityDesc::SetControl](#setcontrol)|보안 설명자의 제어 비트를 설정합니다.|  
-|[Csecuritydesc:: Setdacl](#setdacl)|DACL에 정보를 설정합니다. 보안 설명자에 DACL 이미 있으면 자동으로 바뀝니다.|  
-|[Csecuritydesc:: Setgroup](#setgroup)|이미 있는 모든 주 그룹 정보를 대체 하는 절대 형식이 보안 설명자의 주 그룹 정보를 설정 합니다.|  
-|[Csecuritydesc:: Setowner](#setowner)|이미 있는 모든 소유자 정보를 대체 하는 절대 형식이 보안 설명자의 소유자 정보를 설정 합니다.|  
-|[Csecuritydesc:: Setsacl](#setsacl)|SACL에 정보를 설정합니다. 보안 설명자의 SACL 이미 있으면 자동으로 바뀝니다.|  
+|[CSecurityDesc::SetDacl](#setdacl)|DACL에 정보를 설정합니다. 보안 설명자에 DACL 이미 있으면 자동으로 바뀝니다.|  
+|[CSecurityDesc::SetGroup](#setgroup)|이미 있는 모든 주 그룹 정보를 대체 하는 절대 형식이 보안 설명자의 주 그룹 정보를 설정 합니다.|  
+|[CSecurityDesc::SetOwner](#setowner)|이미 있는 모든 소유자 정보를 대체 하는 절대 형식이 보안 설명자의 소유자 정보를 설정 합니다.|  
+|[CSecurityDesc::SetSacl](#setsacl)|SACL에 정보를 설정합니다. 보안 설명자의 SACL 이미 있으면 자동으로 바뀝니다.|  
 |[CSecurityDesc::ToString](#tostring)|보안 설명자 문자열 형식으로 변환합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
@@ -120,7 +124,7 @@ class CSecurityDesc
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h  
   
-##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
+##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc  
  생성자입니다.  
   
 ```
@@ -136,7 +140,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="remarks"></a>설명  
  `CSecurityDesc` 를 사용 하 여 개체를 만들 수 있습니다는 **SECURITY_DESCRIPTOR** 구조 또는 이전에 정의한 `CSecurityDesc` 개체입니다.  
   
-##  <a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc  
+##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc  
  소멸자입니다.  
   
 ```
@@ -146,7 +150,7 @@ virtual ~CSecurityDesc() throw();
 ### <a name="remarks"></a>설명  
  소멸자는 할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="fromstring"></a>CSecurityDesc::FromString  
+##  <a name="fromstring"></a>  CSecurityDesc::FromString  
  유효한, 기능 보안 설명자 문자열 형식의 보안 설명자를 변환합니다.  
   
 ```
@@ -163,9 +167,9 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>설명  
  사용 하 여 문자열을 만들 수 있습니다 [CSecurityDesc::ToString](#tostring)합니다. 보안 설명자를 문자열로 변환 쉽게 저장 하 고 전송 합니다.  
   
- 이 메서드는 에서만 사용할 수 있는 Windows 2000 이상를 호출 하므로 [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)합니다.  
+ 이 메서드를 호출 [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)합니다.  
   
-##  <a name="getcontrol"></a>Csecuritydesc:: Getcontrol  
+##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  검색은 보안 설명자에서 정보를 제어 합니다.  
   
 ```
@@ -180,9 +184,9 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  메서드가 성공 하면, false 실패할 경우 true를 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는만 Windows 2000을 사용 하는 경우에 의미 있는 이상 호출할 때 [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647)합니다.  
+ 이 메서드를 호출 [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647)합니다.  
   
-##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
+##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  보안 설명자에서 임의 액세스 제어 목록 (DACL) 정보를 검색합니다.  
   
 ```
@@ -205,7 +209,7 @@ bool GetDacl(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면, false 실패할 경우 true를 반환 합니다.  
   
-##  <a name="getgroup"></a>CSecurityDesc::GetGroup  
+##  <a name="getgroup"></a>  CSecurityDesc::GetGroup  
  보안 설명자에서 주 그룹 정보를 검색합니다.  
   
 ```
@@ -224,7 +228,7 @@ bool GetGroup(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면, false 실패할 경우 true를 반환 합니다.  
   
-##  <a name="getowner"></a>CSecurityDesc::GetOwner  
+##  <a name="getowner"></a>  CSecurityDesc::GetOwner  
  보안 설명자에서 소유자 정보를 검색합니다.  
   
 ```
@@ -243,7 +247,7 @@ bool GetOwner(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면, false 실패할 경우 true를 반환 합니다.  
   
-##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
+##  <a name="getpsecurity_descriptor"></a>  CSecurityDesc::GetPSECURITY_DESCRIPTOR  
  에 대 한 포인터를 반환 합니다.는 **SECURITY_DESCRIPTOR** 구조입니다.  
   
 ```
@@ -253,7 +257,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터를 반환 합니다.는 [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) 구조입니다.  
   
-##  <a name="getsacl"></a>CSecurityDesc::GetSacl  
+##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  보안 설명자에서 시스템 액세스 제어 SACL (목록) 정보를 검색합니다.  
   
 ```
@@ -276,7 +280,7 @@ bool GetSacl(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면, false 실패할 경우 true를 반환 합니다.  
   
-##  <a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited  
+##  <a name="isdaclautoinherited"></a>  CSecurityDesc::IsDaclAutoInherited  
  임의 액세스 제어 목록 (DACL)가 자동 전파를 지원 하도록 구성 하는 경우를 결정 합니다.  
   
 ```
@@ -289,7 +293,7 @@ bool IsDaclAutoInherited() const throw();
 ### <a name="remarks"></a>설명  
  시스템 개체 및 기존 자식 개체에 대 한 자동 상속 알고리즘을 수행할 때이 비트를 설정 합니다.  
   
-##  <a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted  
+##  <a name="isdacldefaulted"></a>  CSecurityDesc::IsDaclDefaulted  
  보안 설명자는 기본 액세스 제어 목록 (DACL)으로 구성 된 경우를 결정 합니다.  
   
 ```
@@ -306,7 +310,7 @@ bool IsDaclDefaulted() const throw();
   
  이 플래그를 설정 하려면는 [csecuritydesc:: Setdacl](#setdacl) 메서드.  
   
-##  <a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent  
+##  <a name="isdaclpresent"></a>  CSecurityDesc::IsDaclPresent  
  보안 설명자는 임의 액세스 제어 목록 (DACL)를 포함 하는 경우를 결정 합니다.  
   
 ```
@@ -323,7 +327,7 @@ bool IsDaclPresent() const throw();
   
  이 플래그를 설정 하려면는 [csecuritydesc:: Setdacl](#setdacl) 메서드.  
   
-##  <a name="isdaclprotected"></a>CSecurityDesc::IsDaclProtected  
+##  <a name="isdaclprotected"></a>  CSecurityDesc::IsDaclProtected  
  임의 액세스 제어 목록 (DACL) 수정을 방지 하도록 구성 된 경우를 결정 합니다.  
   
 ```
@@ -336,9 +340,9 @@ bool IsDaclProtected() const throw();
 ### <a name="remarks"></a>설명  
  이 플래그를 설정 하려면는 [csecuritydesc:: Setdacl](#setdacl) 메서드.  
   
- 이 메서드는만 의미 있는 이상에 대 한 Windows 2000, Windows 2000만 상속 가능한 Ace의 자동 전파를 지원 합니다.  
+ 이 메서드는 상속 가능한 Ace의 자동 전파를 지원합니다.  
   
-##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
+##  <a name="isgroupdefaulted"></a>  CSecurityDesc::IsGroupDefaulted  
  보안 설명자의 그룹 보안 식별자 (SID) 기본적으로 설정 된 경우를 결정 합니다.  
   
 ```
@@ -351,7 +355,7 @@ bool IsGroupDefaulted() const throw();
 ### <a name="remarks"></a>설명  
  이 플래그를 설정 하려면는 [csecuritydesc:: Setgroup](#setgroup) 메서드.  
   
-##  <a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted  
+##  <a name="isownerdefaulted"></a>  CSecurityDesc::IsOwnerDefaulted  
  보안 설명자의 소유자 보안 식별자 (SID) 기본적으로 설정 된 경우를 결정 합니다.  
   
 ```
@@ -364,7 +368,7 @@ bool IsOwnerDefaulted() const throw();
 ### <a name="remarks"></a>설명  
  이 플래그를 설정 하려면는 [csecuritydesc:: Setowner](#setowner) 메서드.  
   
-##  <a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited  
+##  <a name="issaclautoinherited"></a>  CSecurityDesc::IsSaclAutoInherited  
  (SACL)의 시스템 액세스 제어 목록 자동 전파를 지원 하도록 구성 된 경우를 결정 합니다.  
   
 ```
@@ -377,7 +381,7 @@ bool IsSaclAutoInherited() const throw();
 ### <a name="remarks"></a>설명  
  시스템 개체 및 기존 자식 개체에 대 한 자동 상속 알고리즘을 수행할 때이 비트를 설정 합니다.  
   
-##  <a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted  
+##  <a name="issacldefaulted"></a>  CSecurityDesc::IsSaclDefaulted  
  보안 설명자는 기본 시스템 액세스 제어 목록 (SACL) 구성 된 경우를 결정 합니다.  
   
 ```
@@ -392,7 +396,7 @@ bool IsSaclDefaulted() const throw();
   
  이 플래그를 설정 하려면는 [csecuritydesc:: Setsacl](#setsacl) 메서드.  
   
-##  <a name="issaclpresent"></a>CSecurityDesc::IsSaclPresent  
+##  <a name="issaclpresent"></a>  CSecurityDesc::IsSaclPresent  
  보안 설명자 시스템 액세스 제어 목록 SACL ()를 포함 하는 경우를 결정 합니다.  
   
 ```
@@ -405,7 +409,7 @@ bool IsSaclPresent() const throw();
 ### <a name="remarks"></a>설명  
  이 플래그를 설정 하려면는 [csecuritydesc:: Setsacl](#setsacl) 메서드.  
   
-##  <a name="issaclprotected"></a>CSecurityDesc::IsSaclProtected  
+##  <a name="issaclprotected"></a>  CSecurityDesc::IsSaclProtected  
  (SACL)의 시스템 액세스 제어 목록 수정을 방지 하도록 구성 된 경우를 결정 합니다.  
   
 ```
@@ -418,9 +422,9 @@ bool IsSaclProtected() const throw();
 ### <a name="remarks"></a>설명  
  이 플래그를 설정 하려면는 [csecuritydesc:: Setsacl](#setsacl) 메서드.  
   
- 이 메서드는만 의미 있는 이상에 대 한 Windows 2000, Windows 2000만 상속 가능한 Ace의 자동 전파를 지원 합니다.  
+ 이 메서드는 상속 가능한 Ace의 자동 전파를 지원합니다.  
   
-##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
+##  <a name="isselfrelative"></a>  CSecurityDesc::IsSelfRelative  
  보안 설명자를 자기 상대적 형식에서 인지 확인 합니다.  
   
 ```
@@ -430,7 +434,7 @@ bool IsSelfRelative() const throw();
 ### <a name="return-value"></a>반환 값  
  연속 된 메모리 블록의 모든 보안 정보로 보안 설명자가 자기 상대적 형식 경우 true를 반환 합니다. 절대적 형식의 보안 설명자가 false를 반환 합니다. 자세한 내용은 참조 [Absolute 및 Self-Relative 보안 설명자](http://msdn.microsoft.com/library/windows/desktop/aa374807)합니다.  
   
-##  <a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute  
+##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  보안 설명자를 절대 형식으로 변환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -443,7 +447,7 @@ bool MakeAbsolute() throw(...);
 ### <a name="remarks"></a>설명  
  절대적 형식의 보안 설명자 정보 자체 대신 포함 되는 정보에 대 한 포인터를 포함 합니다. 보안 설명자를 자기 상대적 형식으로 인접 한 메모리 블록의 정보를 포함합니다. 자기 상대적 보안 설명자에서는 **SECURITY_DESCRIPTOR** 구조는 항상에서 정보를 시작 하지만 보안 설명자의 다른 구성 요소는 순서에 관계 없이 구조를 따를 수 있습니다. 메모리 주소를 사용 하는 대신 자기 상대적 보안 설명자의 구성 요소는 보안 설명자의 시작 부분에서의 오프셋으로 식별 됩니다. 이 형식은 보안 설명자를 디스크에 저장 하거나 통신 프로토콜을 통해 전송 해야 하는 경우에 유용 합니다. 자세한 내용은 참조 [Absolute 및 Self-Relative 보안 설명자](http://msdn.microsoft.com/library/windows/desktop/aa374807)합니다.  
   
-##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative  
+##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  보안 설명자를 자기 상대적 형식으로 변환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -456,7 +460,7 @@ bool MakeSelfRelative() throw(...);
 ### <a name="remarks"></a>설명  
  절대적 형식의 보안 설명자 정보 자체를 포함 하는 것이 아니라 포함 된 정보에 대 한 포인터를 포함 합니다. 보안 설명자를 자기 상대적 형식으로 인접 한 메모리 블록의 정보를 포함합니다. 자기 상대적 보안 설명자에서는 **SECURITY_DESCRIPTOR** 구조는 항상에서 정보를 시작 하지만 보안 설명자의 다른 구성 요소는 순서에 관계 없이 구조를 따를 수 있습니다. 보안 설명자의 구성 요소는 메모리 주소를 사용 하는 대신 보안 설명자의 시작 부분에서의 오프셋으로 식별 됩니다. 이 형식은 보안 설명자를 디스크에 저장 하거나 통신 프로토콜을 통해 전송 해야 하는 경우에 유용 합니다. 자세한 내용은 참조 [Absolute 및 Self-Relative 보안 설명자](http://msdn.microsoft.com/library/windows/desktop/aa374807)합니다.  
   
-##  <a name="operator_eq"></a>CSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  대입 연산자입니다.  
   
 ```
@@ -471,14 +475,14 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CSecurityDesc` 개체입니다.  
   
-##  <a name="operator_const_security_descriptor__star"></a>CSecurityDesc::operator const SECURITY_DESCRIPTOR *  
+##  <a name="operator_const_security_descriptor__star"></a>  CSecurityDesc::operator const SECURITY_DESCRIPTOR *  
  값에 대 한 포인터에 캐스팅은 **SECURITY_DESCRIPTOR** 구조입니다.  
   
 ```  
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```  
   
-##  <a name="setcontrol"></a>CSecurityDesc::SetControl  
+##  <a name="setcontrol"></a>  CSecurityDesc::SetControl  
  보안 설명자의 제어 비트를 설정합니다.  
   
 ```
@@ -498,9 +502,9 @@ bool SetControl(
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 사용할 수 있는 Windows 2000 이상 에서만 호출할 때 [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)합니다.  
+ 이 메서드를 호출 [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)합니다.  
   
-##  <a name="setdacl"></a>Csecuritydesc:: Setdacl  
+##  <a name="setdacl"></a>  CSecurityDesc::SetDacl  
  임의 액세스 제어 목록 (DACL)에서 정보를 설정합니다. 보안 설명자에 DACL 이미 있으면 자동으로 바뀝니다.  
   
 ```
@@ -529,7 +533,7 @@ inline void SetDacl(
 ### <a name="remarks"></a>설명  
  빈 및 존재 하지 않는 DACL 사이는 중요 한 차이점이 있습니다. DACL 비어 있으면 액세스 제어 항목이 없는 및 액세스 권한이 없습니다. 권한이 명시적으로 부여 합니다. 결과적으로, 개체에 대 한 암시적으로 거부 합니다. 반면에 개체에 없는 DACL을 보호 되지 않음는 개체에 할당 된 및 모든 액세스 요청에 권한이 부여 됩니다.  
   
-##  <a name="setgroup"></a>Csecuritydesc:: Setgroup  
+##  <a name="setgroup"></a>  CSecurityDesc::SetGroup  
  이미 있는 모든 주 그룹 정보를 대체 하는 절대 형식이 보안 설명자의 주 그룹 정보를 설정 합니다.  
   
 ```
@@ -546,7 +550,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
-##  <a name="setowner"></a>Csecuritydesc:: Setowner  
+##  <a name="setowner"></a>  CSecurityDesc::SetOwner  
  절대 형식이 보안 설명자의 소유자 정보를 설정합니다. 이미 있는 모든 소유자 정보를 대체합니다.  
   
 ```
@@ -563,7 +567,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
-##  <a name="setsacl"></a>Csecuritydesc:: Setsacl  
+##  <a name="setsacl"></a>  CSecurityDesc::SetSacl  
  SACL ()는 시스템 액세스 제어 목록에 정보를 설정합니다. 보안 설명자의 SACL 이미 있으면 자동으로 바뀝니다.  
   
 ```
@@ -580,7 +584,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>반환 값  
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
-##  <a name="tostring"></a>CSecurityDesc::ToString  
+##  <a name="tostring"></a>  CSecurityDesc::ToString  
  보안 설명자 문자열 형식으로 변환합니다.  
   
 ```
@@ -616,7 +620,7 @@ bool ToString(
   
  DACL NULL이 고 입력된 보안 설명자에 SE_DACL_PRESENT 제어 비트가 설정 되지 않으면 결과 보안 설명자 문자열 없는 경우 d: 구성 요소입니다. 참조 [보안 설명자 문자열 형식](http://msdn.microsoft.com/library/windows/desktop/aa379570) 내용을 확인 합니다.  
   
- 이 메서드는 에서만 사용할 수 있는 Windows 2000 이상에서 호출할 때 [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)합니다.  
+ 이 메서드를 호출 [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Security 샘플](../../visual-cpp-samples.md)   

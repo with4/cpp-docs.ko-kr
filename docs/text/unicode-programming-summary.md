@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d08fcc502ac7daf97955741d044ebf1e50afab3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 03ee8a4032b054eb670de160aea9ec54dcf80f4d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-programming-summary"></a>유니코드 프로그래밍 요약
 유니코드에 대 한 MFC 및 C 런타임 지원을 활용 하려면:  
@@ -91,7 +94,7 @@ ms.lasthandoff: 12/21/2017
   
 -   사용 하 여 [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) 유니코드 파일을 열 수 있습니다.  
   
- 요약 하면, MFC와 런타임 라이브러리 지원의 다음 유니코드에 대 한 Windows 2000에서 프로그래밍:  
+ 요약 하면, MFC 및 런타임 라이브러리 유니코드 프로그래밍에 대 한 다음과 같은 지원을 제공 합니다.  
   
 -   데이터베이스 클래스 멤버 함수를 제외한 모든 MFC 함수는 유니코드를 사용할 수를 포함 하 여 `CString`합니다. `CString`또한 유니코드/ANSI 변환 함수를 제공합니다.  
   

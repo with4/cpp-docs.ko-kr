@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - HRGN
 - HFONT
 - HBITMAP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRgn class [MFC], HRGN handle type
 - HPEN [MFC]
@@ -48,22 +50,23 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fabeeae17b5bc81fdf592ed452a088b75bae544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6dfdba311ed13b1ffbd5e1f830d6fa87cfce915d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="graphic-objects"></a>그래픽 개체
 Windows는 디바이스 컨텍스트에서 사용할 수 있는 다양한 그리기 도구를 제공합니다. 선을 그리는 펜, 내부를 채우는 브러시 및 텍스트를 그리는 글꼴을 제공합니다. MFC는 Windows의 그리기 도구에 해당하는 그래픽 개체 클래스를 제공합니다. 아래 표에서는 사용 가능한 클래스와 그에 해당하는 Windows GDI(그래픽 장치 인터페이스) 핸들 형식을 보여 줍니다.  
   
 > [!NOTE]
->  GDI+는 Windows XP에 포함되어 있으며 Windows NT 4.0 SP6, Windows 2000, Windows 98 및 Windows Me의 재배포 가능 구성 요소로 제공됩니다. 최신 재배포 가능 패키지를 다운로드 하려면 [http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm)합니다. 자세한 내용은 GDI + SDK 설명서를 참조: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)합니다.  
+>  자세한 내용은 GDI + SDK 설명서를 참조: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)합니다.  
   
  이 문서에서는 이러한 그래픽 개체 클래스의 사용에 대해 설명합니다.  
   
@@ -111,8 +114,6 @@ Windows는 디바이스 컨텍스트에서 사용할 수 있는 다양한 그리
 -   [그래픽 개체를 선택하여 장치 컨텍스트로 넣기](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
 -   [장치 컨텍스트](../mfc/device-contexts.md)  
-  
--   [이전 버전의 운영 체제의 CImage 제한 사항](../mfc/cimage-limitations-with-earlier-operating-systems.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [창 개체](../mfc/window-objects.md)
