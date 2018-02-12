@@ -1,28 +1,32 @@
 ---
 title: noalias | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: noalias_cpp
-dev_langs: C++
+f1_keywords:
+- noalias_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92e96ce931ea5bc44e03a5803865daa66f960e92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
+ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="noalias"></a>noalias
 
@@ -32,13 +36,15 @@ ms.lasthandoff: 12/21/2017
 
 함수에 `noalias`로 주석이 지정된 경우 최적화 프로그램은 매개 변수 자체와 포인터 매개 변수의 1차 간접 참조만 함수 내에서 참조되거나 수정된다고 가정할 수 있습니다. 표시되는 전역 상태는 컴파일 범위 외부에서 정의되거나 참조되지 않는 모든 데이터의 집합이며 해당 주소는 사용되지 않습니다. 컴파일 범위는 모든 소스 파일 ([/LTCG (링크 타임 코드 생성)](../build/reference/ltcg-link-time-code-generation.md) 작성) 또는 단일 소스 파일 (비-**/LTCG** 빌드).
 
+`noalias` 주석은 주석이 추가 된 함수 본문에만 적용 됩니다. 로 함수를 표시 하면 `__declspec(noalias)` 함수로 반환 된 포인터의 별칭을 지정 하는 데 영향을 주지 않습니다.
+
+참조 별칭 지정에 영향을 줄 수 있는 다른 주석 [__declspec (restrict)](../cpp/restrict.md)합니다.
+
 ## <a name="example"></a>예
 
-다음 샘플 코드에서는 `__declspec(restrict)` 및 `__declspec(noalias)`의 사용을 보여 줍니다. 일반적으로에서 반환 된 메모리 `malloc` 은 `restrict` CRT 헤더가 적절 하 게 데코레이팅되기 때문에 있습니다.
+다음 샘플의 사용법을 보여줍니다 `__declspec(noalias)`합니다.
 
-그러나이 예에서 포인터 `mempool` 및 `memptr` 은 전역 이므로 컴파일러에서 메모리가 별칭이 적용 되지 않는다고 확신할 수 없습니다. `__declspec(restrict)`를 사용하여 포인터를 반환하는 함수를 데코레이팅하면 반환 값이 가리키는 메모리에 별칭이 지정되지 않음을 컴파일러에 알릴 수 있습니다.
-
-이 예제에서 메모리에 액세스하는 함수를 `__declspec(noalias)`를 사용하여 데코레이팅하면 이 함수가 매개 변수 목록의 포인터를 사용하는 경우를 제외하고 전역 상태에 영향을 주지 않음을 컴파일러에 알릴 수 있습니다.
+때 함수 `multiply` 에 메모리 액세스 된 주석 처리 `__declspec(noalias)`,이 컴파일러가이 함수는 매개 변수 목록의 포인터를 통해 제외 하 고 전역 상태를 수정 하지 않습니다.
 
 ```C
 // declspec_noalias.c
@@ -51,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 
 float * mempool, * memptr;
 
-__declspec(restrict) float * ma(int size)
+float * ma(int size)
 {
     float * retval;
     retval = memptr;
@@ -59,7 +65,7 @@ __declspec(restrict) float * ma(int size)
     return retval;
 }
 
-__declspec(restrict) float * init(int m, int n)
+float * init(int m, int n)
 {
     float * a;
     int i, j;
@@ -101,7 +107,7 @@ int main()
     a = init(M, N);
     b = init(N, P);
     c = init(M, P);
-
+ 
     multiply(a, b, c);
 }
 ```
@@ -109,4 +115,5 @@ int main()
 ## <a name="see-also"></a>참고 항목
 
 [__declspec](../cpp/declspec.md)  
-[키워드](../cpp/keywords-cpp.md)
+[키워드](../cpp/keywords-cpp.md)  
+[__declspec(restrict)](../cpp/restrict.md)  
