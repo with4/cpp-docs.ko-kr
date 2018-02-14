@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,7 +26,8 @@ f1_keywords:
 - _inp
 - _inpw
 - _inpd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - inp function
 - inpw function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 15fa7169f46e84cf60e1b869e5eb68a392b16a3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7b73d8287954a401b8b966fb1220cfcecfc416eb
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 포트에서의 입력으로, 바이트(`_inp`), 워드(`_inpw`), 또는 2배 워드(`_inpd`)입니다.  
@@ -80,7 +83,7 @@ unsigned long _inpd(
 ## <a name="remarks"></a>설명  
  `_inp`, `_inpw`및 `_inpd` 함수는 바이트, 워드 및 2배 워드를 각각 지정된 된 입력 포트로부터 읽습니다. 입력 값은 0 - 65,535 범위의 부호 없는 정수(Short)입니다.  
   
- 이러한 함수는 I/O 포트에서 직접 읽기 때문에 Windows NT, Windows 2000, Windows XP 및 Windows Server 2003의 사용자 코드에서 사용할 수 없습니다.  
+ 이러한 함수는 I/O 포트에서 직접 읽기 때문에 사용자 코드에서 사용할 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

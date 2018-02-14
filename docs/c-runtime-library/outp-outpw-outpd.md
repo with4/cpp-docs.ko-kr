@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,7 +26,8 @@ f1_keywords:
 - _outpd
 - _outp
 - outpd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - outpw function
 - words
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: edcb3f8da6252705fe494acaa64c623b8a22ed3b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f2b32b17ed65120aa98b19ed3b2cf599364fee0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 포트에서 바이트(`_outp`), 워드(`_outpw`) 또는 2배 워드(`_outpd`)를 출력합니다.  
@@ -91,7 +94,7 @@ unsigned long dataword
 ## <a name="remarks"></a>설명  
  `_outp`, `_outpw`및 `_outpd` 함수는 바이트, 워드 및 2배 워드를 각각 지정된 출력 포트에 씁니다. *port* 인수는 0-65,535 범위에 속한 임의의 부호 없는 정수일 수 있고 *databyte*는 0–255 범위에 속한 임의의 정수일 수 있으며 *dataword*는 각각 정수, 부호 없는 정수(Short) 및 부호 없는 정수(Long) 범위에 속한 임의의 값일 수 있습니다.  
   
- 이러한 함수는 I/O 포트에 직접 쓰기 때문에 해당 함수를 Windows NT, Windows 2000, Windows XP 및 Windows Server 2003의 사용자 코드에 사용할 수 없습니다. 이러한 운영 체제에서 I/O 포트를 사용하는 방법에 대한 자세한 내용을 보려면 MSDN에서 "Win32의 직렬 통신"을 검색하십시오.  
+ 이러한 함수는 I/O 포트에 직접 쓰기 때문에 사용자 코드에서 사용할 수 없습니다. 이러한 운영 체제에서 I/O 포트를 사용하는 방법에 대한 자세한 내용을 보려면 MSDN에서 "Win32의 직렬 통신"을 검색하십시오.  
   
 ## <a name="requirements"></a>요구 사항  
   
