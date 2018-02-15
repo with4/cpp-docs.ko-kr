@@ -4,39 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1c30c56012dc14392ecdc6a089dcd88a217d6d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="netmodule-files-as-linker-input"></a>링커 입력 파일로 사용하는 .netmodule 파일
 link.exe에서는 이제 MSIL .obj 및 .netmodules가 입력으로 사용됩니다. 링커에서 생성되는 출력 파일은 링커에 입력된 .obj 또는 .netmodules에 대해 런타임 종속성이 없는 .netmodule 또는 어셈블리입니다.  
   
  Visual c + + 컴파일러에 의해.netmodules 만들어집니다 [/LN (MSIL 모듈 만들기)](../../build/reference/ln-create-msil-module.md) 또는 사용 하 여 링커에 의해 [/NOASSEMBLY (MSIL 모듈 만들기)](../../build/reference/noassembly-create-a-msil-module.md)합니다. .obj Visual c + + 컴파일에서 항상 생성 됩니다. 다른 Visual Studio 컴파일러에 대 한 사용는 **/target: module** 컴파일러 옵션입니다.  
   
- 대부분의 경우에서를 링커에 전달.obj 파일을 만든.netmodule, Visual c + + 컴파일에서에서 사용 하는.netmodule 만들지 않은 할 [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)합니다. 링커에 대 한 입력에 사용 하 여 Visual c + + 컴파일러에서 생산 될 수 있는 순수형 MSIL 이어야 합니다. 사용 되는 MSIL.netmodule **/clr: safe**합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다. .NET Visual Studio 컴파일러는 기본적으로 순수 MSIL 모듈을 생성합니다.  
+  .Netmodule를 만든 Visual c + + 컴파일에서.obj 파일을 링커에 전달 해야 합니다. .Netmodule를 전달 하기 때문에 더 이상 지원 되지는 **/clr: pure** 및 **/clr: safe** 컴파일러 옵션은 Visual Studio 2015에서 사용 되지 않으며 나중 버전의 컴파일러에서 제거 됩니다.   
   
  명령줄에서 링커를 실행 하는 방법에 대 한 정보를 참조 하십시오. [링커 명령줄 구문](../../build/reference/linker-command-line-syntax.md), [명령줄에서 빌드 C/c + + 코드](../../build/building-on-the-command-line.md), 및 [경로 및 환경 변수 설정 명령줄 빌드](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)합니다.  
   
- Visual c + + 컴파일러에 의해 컴파일된 링커에.netmodule 또는.dll 파일을 전달 **/clr** 또는 **/clr: pure** 링커 오류가 발생할 수 있습니다. 자세한 내용은 참조 [.netmodule 입력 파일 형식을 선택 한다는](../../build/reference/choosing-the-format-of-netmodule-input-files.md)합니다.  
+ Visual c + + 컴파일러에 의해 컴파일된 링커에.netmodule 또는.dll 파일을 전달 **/clr** 링커 오류가 발생할 수 있습니다. 자세한 내용은 참조 [.netmodule 입력 파일 형식을 선택 한다는](../../build/reference/choosing-the-format-of-netmodule-input-files.md)합니다.  
   
- 로 컴파일된 MSIL.obj 파일 뿐 아니라 네이티브.obj 파일 링커에서 **/clr**, **/clr: pure**, 또는 **/clr: safe**합니다. 동일한 빌드에서 혼합된.obj로 전달할 때 결과 출력 파일의 검증 가능성, 기본적으로와 같게 됩니다 입력된 모듈의 가장 낮은 수준입니다. 예를 들어 안전 모듈과 순수.obj 링커로 전달 하면 출력 파일은 순수 됩니다. [/CLRIMAGETYPE (지정 종류의 CLR 이미지)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) 필요한 경우 더 낮은 수준의 안정성를 지정할 수 있습니다.  
+ 로 컴파일된 MSIL.obj 파일 뿐 아니라 네이티브.obj 파일 링커에서 **/clr**합니다. 동일한 빌드에서 혼합된.obj로 전달할 때 결과 출력 파일의 검증 가능성, 기본적으로와 같게 됩니다 입력된 모듈의 가장 낮은 수준입니다. 
   
  현재 두 개 이상의 어셈블리로 구성된 응용 프로그램이 있고 이 응용 프로그램을 하나의 어셈블리에 포함하려면 어셈블리를 다시 컴파일한 후 .objs 또는 .netmodules를 링크하여 단일 어셈블리를 생성해야 합니다.  
   

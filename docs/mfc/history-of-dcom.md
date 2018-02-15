@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Remote Automation, DCOM
 - DCOM, about DCOM
 - DCOM
 ms.assetid: c21aa0ea-1396-4b52-b77f-88fb0fdd2a5c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 6ef567c39c93c3d43fdfc0fa63886144b03cd474
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="history-of-dcom"></a>DCOM의 역사
 자동화 초기 1993에서 처음 도입을 동일한 컴퓨터에서 실행 중인 응용 프로그램 사이만 사용할 수 있었습니다. 그러나 OLE를, COM (또는 구성 요소 개체 모델)의 나머지 부분과 동일한 기본 토대를 공유 하기 때문에 항상 원래 원격 기능을 포함 하도록 COM 자체를 업데이트할 때 "원격" 될 것을 합니다. 기존 코드를 거의 또는 전혀 변경 순수한 로컬 작업에서 분산된 작업으로 전환 해야 하는 계획도 되었습니다.  

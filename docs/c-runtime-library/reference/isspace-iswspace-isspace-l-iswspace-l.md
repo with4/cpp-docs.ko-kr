@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -29,7 +30,8 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 618ba621f385307d3609667c6df5cf56c91da2f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5eef3b216ed70bb7fa6a22d02827dec34b44c3b3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 정수가 공백 문자를 나타내는지 여부를 확인합니다.  
@@ -81,7 +84,7 @@ int _iswspace_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c`가 공백 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isspace`0이 아닌 값을 반환 `c` 공백 문자 (0x09-0x0D 또는 0x20). `isspace` 함수에 대한 테스트 조건의 결과는 로캘의 `LC_CTYPE` 범주 설정에 따라 달라집니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
+ `c`가 공백 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isspace` 0이 아닌 값을 반환 `c` 공백 문자 (0x09-0x0D 또는 0x20). `isspace` 함수에 대한 테스트 조건의 결과는 로캘의 `LC_CTYPE` 범주 설정에 따라 달라집니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   
  `iswspace`는 `c`가 표준 공백 문자에 해당하는 와이드 문자인 경우 0이 아닌 값을 반환합니다.  
   

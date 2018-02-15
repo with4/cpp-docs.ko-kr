@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b8773bc60d970f66616c35db84b9f161ea12754d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation-manager-mfc"></a>자동화 관리자(MFC)
 AUTMGR32 합니다. 원격 자동화 개체를 제공 하려는 각 컴퓨터의 Windows 시스템 디렉터리에 EXE는 복사 해야 합니다. 일반적으로 C:\WINDOWS\SYSTEM32입니다.  

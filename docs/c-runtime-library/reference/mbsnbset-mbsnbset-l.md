@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbset
 - _mbsnbset_l
@@ -28,7 +29,8 @@ f1_keywords:
 - mbsnbset_l
 - _mbsnbset
 - _mbsnbset_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcsnset function
 - _tcsnset_l function
@@ -39,22 +41,23 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9f868cdf5d0200df174c5df3629b5578dbf06d31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c98745ae2d995dea5a65caab55cc7e45172a9f53
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 멀티바이트 문자열의 처음 `n`바이트를 지정된 문자로 설정합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_mbsnbset_s, _mbsnbset_s_l](../../c-runtime-library/reference/mbsnbset-s-mbsnbset-s-l.md)을 참조하세요.  
   
 > [!IMPORTANT]
->  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -89,9 +92,9 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset`는 변경된 문자열에 대한 포인터를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- `_mbsnbset` 및 `_mbsnbset_l` 함수는 최대한 `str`의 처음 `count`바이트를 `c`로 설정합니다. `count`가 `str`의 길이보다 큰 경우 `str`의 길이가 `count` 대신 사용됩니다. `c`가 멀티바이트 문자이고 `count`에 지정된 마지막 바이트로만 설정할 수 없는 경우 마지막 바이트는 빈 문자로 채워집니다. `_mbsnbset`및 `_mbsnbset_l` 종료 두지 않는의 끝에 null `str`합니다.  
+ `_mbsnbset` 및 `_mbsnbset_l` 함수는 최대한 `str`의 처음 `count`바이트를 `c`로 설정합니다. `count`가 `str`의 길이보다 큰 경우 `str`의 길이가 `count` 대신 사용됩니다. `c`가 멀티바이트 문자이고 `count`에 지정된 마지막 바이트로만 설정할 수 없는 경우 마지막 바이트는 빈 문자로 채워집니다. `_mbsnbset` 및 `_mbsnbset_l` 종료 두지 않는의 끝에 null `str`합니다.  
   
- `_mbsnbset`및 `_mbsnbset_l` 비슷합니다 `_mbsnset`설정 한다는 점을 제외 하 고, `count` 바이트 보다는 `count` 자의 `c`합니다.  
+ `_mbsnbset` 및 `_mbsnbset_l` 비슷합니다 `_mbsnset`설정 한다는 점을 제외 하 고, `count` 바이트 보다는 `count` 자의 `c`합니다.  
   
  `str`이 `NULL`이거나 `count`가 0인 경우 이 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 예외를 생성합니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 `NULL`을 반환합니다. 또한 `c`가 유효한 멀티바이트 문자가 아닌 경우 `errno`는 `EINVAL`로 설정되고 대신 공백이 사용됩니다.  
   

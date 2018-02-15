@@ -4,40 +4,39 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IAccessorImpl
-dev_langs: C++
-helpviewer_keywords: IAccessorImpl class
+f1_keywords:
+- IAccessorImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IAccessorImpl class
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb76054313946df5b085081a3a619ae3fb3de2ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cfc33432d12ac00c834d16f83cc26404e92c63e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 클래스
 구현을 제공는 [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) 인터페이스입니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
-template <  
-   class T,   
-   class BindType = ATLBINDINGS,   
-   class BindingVector = CAtlMap <   
-      HACCESSOR hAccessor,   
-      BindType* pBindingsStructure   
-   >   
->  
+## <a name="syntax"></a>구문
+
+```cpp
+template <class T, 
+          class BindType = ATLBINDINGS,
+          class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
 ```  
   
@@ -69,7 +68,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](../../data/oledb/iaccessorimpl-releaseaccessor.md)|접근자를 해제 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 행 집합 및 명령에 필수입니다. OLE DB 공급자를 구현할 필요는 **HACCESSOR**, 하는 배열에 태그 [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) 구조입니다. **HACCESSOR**제공한 s `IAccessorImpl` 의 주소는 `BindType` 구조입니다. 기본적으로 `BindType` 로 정의 된 **ATLBINDINGS** 에 `IAccessorImpl`의 템플릿 정의 합니다. `BindType`사용 하는 메커니즘을 제공 `IAccessorImpl` 에 있는 요소의 수를 추적 하는 **DBBINDING** 참조 개수 및 접근자 플래그 뿐만 아니라 배열입니다.  
+ 이 행 집합 및 명령에 필수입니다. OLE DB 공급자를 구현할 필요는 **HACCESSOR**, 하는 배열에 태그 [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) 구조입니다. **HACCESSOR**제공한 s `IAccessorImpl` 의 주소는 `BindType` 구조입니다. 기본적으로 `BindType` 로 정의 된 **ATLBINDINGS** 에 `IAccessorImpl`의 템플릿 정의 합니다. `BindType` 사용 하는 메커니즘을 제공 `IAccessorImpl` 에 있는 요소의 수를 추적 하는 **DBBINDING** 참조 개수 및 접근자 플래그 뿐만 아니라 배열입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atldb.h  

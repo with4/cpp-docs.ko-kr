@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
 - COLLECTION/Platform::Collections::Vector::Append
@@ -23,19 +23,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs: C++
-helpviewer_keywords: Vector Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f77962a6ba1eeb86abf4d91b3a308b4fb0d65ef
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 클래스
 
@@ -117,7 +120,7 @@ Vector 개체에 포함된 요소의 형식입니다.
 
 **네임스페이스:** Platform::Collections
 
-## <a name="append"></a>Vector:: append 메서드
+## <a name="append"></a>  Vector:: append 메서드
 
 현재 Vector의 마지막 항목 다음에 지정된 항목을 삽입합니다.
 
@@ -132,7 +135,7 @@ virtual void Append(T item);
 *index*  
 Vector에 삽입할 항목입니다. 유형의 *항목* 가 정의한는 *T* typename입니다.
 
-## <a name="clear"></a>Vector:: clear 메서드
+## <a name="clear"></a>  Vector:: clear 메서드
 
 현재 Vector의 모든 요소를 삭제합니다.
 
@@ -142,7 +145,7 @@ Vector에 삽입할 항목입니다. 유형의 *항목* 가 정의한는 *T* typ
 virtual void Clear();
 ```
 
-## <a name="first"></a>Vector:: first 메서드
+## <a name="first"></a>  Vector:: first 메서드
 
 Vector의 첫 번째 요소를 가리키는 반복기를 반환합니다.
 
@@ -162,7 +165,7 @@ Vector의 첫 번째 요소를 가리키는 반복기입니다.
 
 STL 함수에 전달 하는 반복기 쌍이 필요한 경우 free 함수를 사용 하 여 [Windows::Foundation::Collections:: 시작](../cppcx/begin-function.md) 및 [Windows::Foundation::Collections::end](../cppcx/end-function.md)
 
-## <a name="getat"></a>Vector:: getat 메서드
+## <a name="getat"></a>  Vector:: getat 메서드
 
 지정된 인덱스로 식별되는 현재 Vector의 요소를 검색합니다.
 
@@ -181,7 +184,7 @@ Vector 개체의 특정 요소를 지정하는 0부터 시작하는 부호 없�
 
 지정한 요소는 *인덱스* 매개 변수입니다. 요소 형식은 정의한는 *T* typename입니다.
 
-## <a name="getmany"></a>Vector:: getmany 메서드
+## <a name="getmany"></a>  Vector:: getmany 메서드
 
 현재 Vector에서 지정된 인덱스부터 시작해 일련의 항목을 검색해서 호출자가 할당한 배열에 복사합니다.
 
@@ -209,7 +212,7 @@ virtual unsigned int GetMany(
 
 이 함수는 클라이언트 코드에서 직접 사용하지 않습니다. 내부적으로 사용 되는 [to_vector 함수](../cppcx/to-vector-function.md) platform std:: vector 인스턴스로 효율적으로 변환할 수 있도록 합니다.
 
-## <a name="getview"></a>Vector:: getview 메서드
+## <a name="getview"></a>  Vector:: getview 메서드
 
 Vector의 읽기 전용 보기, 즉 IVectorView를 반환합니다.
 
@@ -223,7 +226,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 IVectorView 개체입니다.
 
-## <a name="indexof"></a>Vector:: indexof 메서드
+## <a name="indexof"></a>  Vector:: indexof 메서드
 
 현재 Vector에서 지정한 항목을 검색하고 있는 경우 항목의 인덱스를 반환합니다.
 
@@ -251,7 +254,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 IndexOf는 std::find_if를 사용하여 항목을 찾습니다. 그러므로 find_if에 필요한 같음 비교를 사용하려면 사용자 지정 요소 형식이 == 및 != 연산자를 오버로드해야 합니다.
 
-##  <a name="insertat"></a>Vector:: insertat 메서드
+##  <a name="insertat"></a>  Vector:: insertat 메서드
 
 현재 Vector에서 지정된 인덱스로 식별되는 요소 뒤에 지정된 항목을 삽입합니다.
 
@@ -269,7 +272,7 @@ Vector 개체의 특정 요소를 지정하는 0부터 시작하는 부호 없�
 *item*  
 로 지정 된 요소 뒤에 Vector에 삽입할 항목 *인덱스*합니다. 유형의 *항목* 가 정의한는 *T* typename입니다.
 
-## <a name="removeat"></a>Vector:: removeat 메서드
+## <a name="removeat"></a>  Vector:: removeat 메서드
 
 현재 Vector에서 지정된 인덱스로 식별되는 요소를 삭제합니다.
 
@@ -284,7 +287,7 @@ virtual void RemoveAt(unsigned int index);
 *index*  
 Vector 개체의 특정 요소를 지정하는 0부터 시작하는 부호 없는 정수입니다.
 
-## <a name="removeatend"></a>Vector:: removeatend 메서드
+## <a name="removeatend"></a>  Vector:: removeatend 메서드
 
 현재 Vector의 끝에 있는 요소를 삭제합니다.
 
@@ -294,7 +297,7 @@ Vector 개체의 특정 요소를 지정하는 0부터 시작하는 부호 없�
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Vector:: replaceall 메서드
+## <a name="replaceall"></a>  Vector:: replaceall 메서드
 
 현재 Vector에서 요소를 삭제한 다음 지정된 배열의 요소를 삽입합니다.
 
@@ -309,7 +312,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *arr*  
 변수로 정의 된 개체의 배열에서 *T* typename입니다.
 
-## <a name="setat"></a>Vector:: setat 메서드
+## <a name="setat"></a>  Vector:: setat 메서드
 
 현재 Vector에서 지정된 인덱스로 식별되는 요소에 지정된 값을 할당합니다.
 
@@ -327,7 +330,7 @@ Vector 개체의 특정 요소를 지정하는 0부터 시작하는 부호 없�
 *item*  
 지정된 요소에 할당할 값입니다. 유형의 *항목* 가 정의한는 *T* typename입니다.
 
-## <a name="size"></a>Vector:: size 메서드
+## <a name="size"></a>  Vector:: size 메서드
 
 현재 Vector 개체의 요소 수를 반환합니다.
 
@@ -341,7 +344,7 @@ virtual property unsigned int Size;
 
 현재 Vector의 요소 수입니다.
 
-## <a name="ctor"></a>Vector:: vector 생성자
+## <a name="ctor"></a>  Vector:: vector 생성자
 
 Vector 클래스의 새 인스턴스를 초기화합니다.
 

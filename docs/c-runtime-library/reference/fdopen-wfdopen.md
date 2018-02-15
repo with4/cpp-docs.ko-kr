@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fdopen
 - _wfdopen
@@ -28,7 +29,8 @@ f1_keywords:
 - _wfdopen
 - wfdopen
 - tfdopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wfdopen function
 - _fdopen function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7108fdedb2698e6065c22ebe6905d897ee389ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2474c25d30415d48252a2621ae5f7e69e5fed4d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -82,7 +85,7 @@ FILE *_wfdopen(
 
 ## <a name="remarks"></a>설명
 
-`_fdopen` 로 식별 되는 파일과 I/O 스트림을 연결 하는 함수 *fd*, 따라서 버퍼링 되 고 서식이 지정 된 하위 수준 I/O에 대 한 열려 있는 파일 수 있습니다. `_wfdopen`와이드 문자 버전이 `_fdopen`; *모드* 인수를 `_wfdopen` 는 와이드 문자 문자열입니다. 그렇지 않으면 `_wfdopen`과 `_fdopen`이 동일하게 작동합니다.
+`_fdopen` 로 식별 되는 파일과 I/O 스트림을 연결 하는 함수 *fd*, 따라서 버퍼링 되 고 서식이 지정 된 하위 수준 I/O에 대 한 열려 있는 파일 수 있습니다. `_wfdopen` 와이드 문자 버전이 `_fdopen`; *모드* 인수를 `_wfdopen` 는 와이드 문자 문자열입니다. 그렇지 않으면 `_wfdopen`과 `_fdopen`이 동일하게 작동합니다.
 
 파일 설명자에 전달 된 `_fdopen` 소유가 `FILE *` 스트림 합니다. 경우 `_fdopen` 성공적으로 호출 하지 마십시오 [ \_닫습니다](../../c-runtime-library/reference/close.md) 파일 설명자에 있습니다. 호출 [fclose](../../c-runtime-library/reference/fclose-fcloseall.md) 반환 된 `FILE *` 또한 파일 설명자를 종료 합니다.
 
@@ -134,7 +137,7 @@ FILE *_wfdopen(
 
 에 유효한 문자는 *모드* 에 사용 되는 문자열 `fopen` 및 `_fdopen` 에 해당 *oflag* 에 사용 되는 인수 [ \_열고](../../c-runtime-library/reference/open-wopen.md) 및 [ \_sopen](../../c-runtime-library/reference/sopen-wsopen.md)이 표에 표시 된 것 처럼:
 
-|문자 *모드* 문자열|해당 *oflag* 값 `_open` 및`_sopen`|
+|문자 *모드* 문자열|해당 *oflag* 값 `_open` 및 `_sopen`|
 |---------------------------------|---------------------------------------------------|
 |`a`|**\_O\_WRONLY &#124; \_O\_APPEND** (일반적으로  **\_O\_WRONLY &#124; \_O\_만들기 &#124; \_O\_APPEND**)|
 |`a+`|**\_O\_RDWR &#124; \_O\_APPEND** (일반적으로  **\_O\_RDWR &#124; \_O\_추가 &#124; \_O\_CREAT** )|
@@ -142,8 +145,8 @@ FILE *_wfdopen(
 |`r+`|**\_O\_RDWR**|
 |`w`|**\_O\_WRONLY** (일반적으로  **\_O\_WRONLY &#124; \_O\_만들기 &#124; \_O\_TRUNC**)|
 |`w+`|**\_O\_RDWR** (일반적으로  **\_O\_RDWR &#124; \_O\_만들기 &#124; \_O\_TRUNC**)|
-|`b`|**\_O\_이진**|
-|`t`|**\_O\_텍스트**|
+|`b`|**\_O\_BINARY**|
+|`t`|**\_O\_TEXT**|
 |`c`|없음|
 |`n`|없음|
 
@@ -213,4 +216,4 @@ Lines in file: 2
 [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
 [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
 [freopen, \_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
-[\_를 열려면 \_wopen](../../c-runtime-library/reference/open-wopen.md)
+[\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)

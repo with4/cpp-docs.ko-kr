@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,28 +14,30 @@ f1_keywords:
 - ATL.IDBPropertiesImpl<T>
 - ATL::IDBPropertiesImpl<T>
 - ATL::IDBPropertiesImpl
-dev_langs: C++
-helpviewer_keywords: IDBPropertiesImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IDBPropertiesImpl class
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 47034968c4e8e336b348565208d1a9ffed551d15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cc488ac71afedaaf590ef93dbc8d43997e30d0c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 클래스
 에 대 한 구현을 제공는 `IDBProperties` 인터페이스입니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template <class T>   
 class ATL_NO_VTABLE IDBPropertiesImpl   
    : public IDBProperties, public CUtlProps<T>  
@@ -55,7 +58,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)|열거자에 대 한 데이터 원본 개체에 대 한 데이터 원본 및 초기화 속성 그룹 또는 Initialization 속성 그룹의 속성을 설정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx) 데이터 원본 개체에 대 한 필수 인터페이스 이며 열거자에 대 한 선택적 인터페이스입니다. 그러나는 열거자를 노출 하는 경우 [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx)를 노출 해야 `IDBProperties`합니다. `IDBPropertiesImpl`구현 `IDBProperties` 정의 된 정적 함수를 사용 하 여 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)합니다.  
+ [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx) 데이터 원본 개체에 대 한 필수 인터페이스 이며 열거자에 대 한 선택적 인터페이스입니다. 그러나는 열거자를 노출 하는 경우 [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx)를 노출 해야 `IDBProperties`합니다. `IDBPropertiesImpl` 구현 `IDBProperties` 정의 된 정적 함수를 사용 하 여 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atldb.h  

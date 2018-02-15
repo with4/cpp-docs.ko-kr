@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, DCOM
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 4c4c8176-cfc0-44f7-bc87-b690f069ad2f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="where-does-remote-automation-fit-in"></a>원격 자동화가 필요한 경우
 DCOM은 1996 년에 릴리스된 되며 32 비트 및 64 비트 플랫폼에만 사용할 수 있습니다. Microsoft Visual Basic 팀 자동화를 사용 하 여 해당 구성 요소가 통신할 수 있도록 Visual Basic 항상 문제가 했습니다. Visual Basic 4.0 Enterprise Edition 개발 팀에서 자동화에 대 한 원격 구성 요소는 자체 집합 했기 하기로 심각 하 게 분산된 버전 부족 엔터프라이즈 환경에서이 기능의 사용 제한 부분 있었습니다. 명확 하 게 주요 목표는 이었습니다 결과와 호환 되는 것을 사용할 수 있게 하는 경우 DCOM으로 대체할 수 있습니다. 16 비트 및 32 비트 Windows 플랫폼에 대 한 자동화 RA (원격)를 구현 하려면 다음 진행 합니다.  

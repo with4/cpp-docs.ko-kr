@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: BEGIN_ACCESSOR
-dev_langs: C++
+f1_keywords:
+- BEGIN_ACCESSOR
+dev_langs:
+- C++
 helpviewer_keywords:
 - BEGIN_ACCESSOR macro, syntax
 - BEGIN_ACCESSOR macro
 ms.assetid: 59d0ff3e-7cfd-4ce8-9a1c-d664c0892a52
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f9461c508fe13a2930a39a2632d5a5a80f01c385
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39307534a9622160d6620b8d1c501cb112dbc717
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="beginaccessor"></a>BEGIN_ACCESSOR
 접근자 항목의 시작을 표시 합니다.  
@@ -32,20 +35,14 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-BEGIN_ACCESSOR(  
-num  
-,   
-bAuto  
- )  
-  
+BEGIN_ACCESSOR(num, bAuto)  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
  *num*  
  [in] 이 접근자 맵에 있는 접근자에 대 한 0 오프셋 수입니다.  
   
- *한*  
+ *bAuto*  
  [in] 이 접근자 자동 접근자 또는 수동 접근자 인지 여부를 지정 합니다. 경우 **true**, 접근자 이면 자동; **false**, 접근자는 수동입니다. 자동 접근자 이동 작업에 데이터를 인출 되 의미 합니다.  
   
 ## <a name="remarks"></a>설명  

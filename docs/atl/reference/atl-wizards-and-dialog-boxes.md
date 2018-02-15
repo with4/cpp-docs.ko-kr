@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
-helpviewer_keywords: ATL, class wizards
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f7197ce84098961623ea95ccf22a7cec47ac6cb9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2fd2a7295b702726e9be30e0f3009c627727cd6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 마법사와 대화 상자
 액티브 템플릿 라이브러리 (ATL) 마법사는 다양 한 종류의 COM 개체에 대 한 상용구 코드를 생성합니다. 프로젝트의 바로 가기 메뉴를 열고 마법사를 실행할 수 있습니다 **솔루션 탐색기** 선택한 **추가**, **클래스**합니다.  

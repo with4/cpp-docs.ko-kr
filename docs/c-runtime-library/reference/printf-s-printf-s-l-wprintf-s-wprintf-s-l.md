@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _printf_s_l
 - wprintf_s
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - wprintf_s
 - printf_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wprintf_s function
 - tprintf_s function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 26db1617206393b8a3756987233d1e38e8ea79c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2929c79c9ab5cfa5e4455e8a75c76988a1f7cf86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 서식이 지정된 출력을 표준 출력 스트림에 인쇄합니다. 이러한 [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 버전에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 향상된 보안 기능이 포함되어 있습니다.  
@@ -100,7 +103,7 @@ int _wprintf_s_l(
   
  `errno` 및 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
   
- `printf_s`및 `fprintf_s` 점을 제외 하 고 동일 하 게 작동 `printf_s` 출력을 씁니다 `stdout` 형식의 대상이 아니라 `FILE`합니다. 자세한 내용은 [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)를 참조하세요.  
+ `printf_s` 및 `fprintf_s` 점을 제외 하 고 동일 하 게 작동 `printf_s` 출력을 씁니다 `stdout` 형식의 대상이 아니라 `FILE`합니다. 자세한 내용은 [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)를 참조하세요.  
   
  `wprintf_s`는 `printf_s`의 와이드 문자 버전이며 `format`은 와이드 문자열입니다. 스트림이 ANSI 모드에서 열리는 경우 `wprintf_s` 및 `printf_s`가 동일하게 작동합니다. `printf_s`는 현재 UNICODE 스트림에 대한 출력을 지원하지 않습니다.  
   
@@ -138,7 +141,7 @@ Line one
 |`printf_s`, `_printf_s_l`|\<stdio.h>|  
 |`wprintf_s`, `_wprintf_s_l`|\<stdio.h> 또는 \<wchar.h>|  
   
- 콘솔은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 지원되지 않습니다. 콘솔에 연결된 표준 스트림 핸들 `stdin`, `stdout` 및 `stderr`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 C 런타임 함수에서 사용되기 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+콘솔 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 지원 되지 않습니다. 콘솔을 사용 하는 연결 된 표준 스트림 핸들 `stdin`, `stdout`, 및 `stderr`, C 런타임 함수 UWP 앱에서 사용할 수 있는 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
   
 ## <a name="example"></a>예  
   

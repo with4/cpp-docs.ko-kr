@@ -5,17 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-ms.workload: cplusplus
-ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 유틸리티 함수
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 안전하지 않은 문자와 공백을 이스케이프 시퀀스로 변환하는 등 URL을 정식화하려면 이 함수를 호출합니다.  
   
 ```    
@@ -59,13 +60,13 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  이 함수의 동작을 제어 ATL_URL 플래그입니다. 
 
-- `ATL_URL_BROWSER_MODE`인코딩 또는 "#" 뒤에 문자를 해독 하지 않는 또는 "?", 고 후 후행 공백만 제거 하지 않습니다 "?"입니다. 이 값을 지정 하지 않으면 전체 URL은 인코딩되고 후행 공백은 제거 됩니다.
-- `ATL_URL_DECODE`URL은 구문 분석 전에 이스케이프 시퀀스를 포함 하 여 모든 %XX 시퀀스 변환 합니다.
-- `ATL_URL_ENCODE_PERCENT`발생 하는 백분율 기호를 인코딩합니다. 기본적으로 백분율 기호는 인코딩되지 않습니다.
-- `ATL_URL_ENCODE_SPACES_ONLY`공간을 인코딩합니다.
-- `ATL_URL_ESCAPE`해당 문자를 모두 이스케이프 시퀀스 (%XX)을 변환합니다.
-- `ATL_URL_NO_ENCODE`안전 하지 않은 문자를 이스케이프 시퀀스로 변환 하지 않습니다.
-- `ATL_URL_NO_META`메타 시퀀스는 제거 되지 않습니다 (같은 "."및"..") URL에서 합니다. 
+- `ATL_URL_BROWSER_MODE` 인코딩 또는 "#" 뒤에 문자를 해독 하지 않는 또는 "?", 고 후 후행 공백만 제거 하지 않습니다 "?"입니다. 이 값을 지정 하지 않으면 전체 URL은 인코딩되고 후행 공백은 제거 됩니다.
+- `ATL_URL_DECODE` URL은 구문 분석 전에 이스케이프 시퀀스를 포함 하 여 모든 %XX 시퀀스 변환 합니다.
+- `ATL_URL_ENCODE_PERCENT` 발생 하는 백분율 기호를 인코딩합니다. 기본적으로 백분율 기호는 인코딩되지 않습니다.
+- `ATL_URL_ENCODE_SPACES_ONLY` 공간을 인코딩합니다.
+- `ATL_URL_ESCAPE` 해당 문자를 모두 이스케이프 시퀀스 (%XX)을 변환합니다.
+- `ATL_URL_NO_ENCODE` 안전 하지 않은 문자를 이스케이프 시퀀스로 변환 하지 않습니다.
+- `ATL_URL_NO_META` 메타 시퀀스는 제거 되지 않습니다 (같은 "."및"..") URL에서 합니다. 
   
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 **FALSE** 실패 합니다.  
@@ -76,7 +77,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>참고 항목  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a> AtlCombineUrl
  기본 URL과 상대 URL을 단일 정규 URL로 결합하려면 이 함수를 호출합니다.  
   
 ```    
@@ -110,7 +111,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="remarks"></a>설명  
  현재 버전 처럼 작동 하며 [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) WinInet 또는 Internet Explorer를 설치 하지 않아도 되지만 합니다.  
   
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a> AtlEscapeUrl
  모든 안전하지 않은 문자를 이스케이프 시퀀스로 변환하려면 이 함수를 호출합니다.  
   
 ```    
@@ -162,7 +163,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>반환 값  
  [ATL_URL_PORT](atl-typedefs.md#atl_url_port) 체계 인식 되지 않으면 ATL_URL_INVALID_PORT_NUMBER에 지정 된 체계와 연결 합니다.  
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  URL에서 문자를 안전하게 사용할 수 있는지 확인하려면 이 함수를 호출합니다.  
   
 ```  
@@ -179,7 +180,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>설명  
  문자를 Url에 사용할 수 해야이 함수를 사용 하 여 테스트할 수 및 사용 하 여 변환 [AtlCanonicalizeUrl](#atlcanonicalizeurl)합니다.  
   
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  이스케이프된 문자를 원래 값으로 다시 변환하려면 이 함수를 호출합니다.  
   
 ```    
@@ -215,7 +216,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="remarks"></a>설명  
  적용 하 여 변환 프로세스를 반대로 [AtlEscapeUrl](#atlescapeurl)합니다.  
   
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a> RGBToHtml
 변환 된 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 값을 색 값에 해당 하는 HTML 텍스트로 합니다.  
   
 ```  
@@ -241,7 +242,7 @@ bool inline RGBToHtml(
 ### <a name="remarks"></a>설명  
  HTML 색 값은 2 자리를 사용 하 여 각 색의 빨강, 녹색 및 파랑 구성 요소에는 6 자리 16 진수 값 뒤에 파운드 기호 (예를 들어 #FFFFFF는 흰색).  
   
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 시스템 시간을 HTTP 헤더에서 사용하기에 적합한 형식의 문자열로 변환하려면 이 함수를 호출합니다.  
   
 ```  

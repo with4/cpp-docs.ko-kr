@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: /clr compiler option [C++], restrictions
+dev_langs:
+- C++
+helpviewer_keywords:
+- /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-restrictions"></a>/clr 제한
 사용에 대 한 다음과 같은 제한 사항이 **/clr**:  
@@ -60,11 +64,7 @@ ms.lasthandoff: 12/21/2017
   
     -   **/ZI**  
   
--   조합의 `_STATIC_CPPLIB` 전처리기 정의 (`/D_STATIC_CPPLIB`) 및 **/clr** 또는 **/clr: pure** 컴파일러 옵션이 지원 되지 않습니다. 이 정의 인해 응용 프로그램의 정적 다중 스레드 c + + 표준 라이브러리, 지원 되지 않는와 연결 하기 때문에 그렇게 합니다. 자세한 내용은 참조는 [/MD, /MT, /LD (런타임 라이브러리 사용)](../../build/reference/md-mt-ld-use-run-time-library.md) 항목입니다.  
-  
--   [/J](../../build/reference/j-default-char-type-is-unsigned.md) 지원 되지 않는 **/clr: safe** 또는 **/clr: pure**합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
-  
--   순수 모드 컴파일 ATL 및 MFC 라이브러리를 사용할 수 없습니다 (**/clr: pure**). 사용할 수 있습니다 **/clr: pure** CRT도 사용 하 여 컴파일하면 c + + 표준 라이브러리와 **/MD** 또는 **/MDd**합니다.  
+-   조합 된 `_STATIC_CPPLIB` 전처리기 정의 (`/D_STATIC_CPPLIB`) 및 **/clr** 컴파일러 옵션이 지원 되지 않습니다. 이 정의 인해 응용 프로그램의 정적 다중 스레드 c + + 표준 라이브러리, 지원 되지 않는와 연결 하기 때문에 그렇게 합니다. 자세한 내용은 참조는 [/MD, /MT, /LD (런타임 라이브러리 사용)](../../build/reference/md-mt-ld-use-run-time-library.md) 항목입니다.  
   
 -   사용 하는 경우 **/Zi** 와 **/clr**에 성능 문제. 자세한 내용은 참조 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)합니다.  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/21/2017
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [/GS](../../build/reference/gs-buffer-security-check.md) 로 컴파일할 때 무시 됩니다 **/clr**함수에서 있지 않으면 `#pragma` [관리 되지 않는](../../preprocessor/managed-unmanaged.md) 함수가 네이티브로 컴파일해야 합니다.이 경우 컴파일러는 경우 또는 기본적으로 꺼져 있는 C4793, 경고를 생성 합니다.  
+-   [/GS](../../build/reference/gs-buffer-security-check.md) 로 컴파일할 때 무시 됩니다 **/clr**함수에서 있지 않으면 `#pragma` [관리 되지 않는](../../preprocessor/managed-unmanaged.md) 함수가 네이티브로 컴파일해야 합니다.이 경우에 컴파일러에서 생성 또는 기본적으로 꺼져 있는 C4793 경고입니다.  
   
 -   참조 [/ENTRY](../../build/reference/entry-entry-point-symbol.md) 관리 되는 응용 프로그램의 함수 서명 요구 사항에 대 한 합니다.  
   
@@ -84,8 +84,6 @@ ms.lasthandoff: 12/21/2017
 -   네이티브 함수로 가변 개수의 인수 (varargs)를 사용 하는 함수 생성 됩니다. 가변 인수 위치에 있는 관리 되는 데이터 형식은 네이티브 형식으로 마샬링할 수 됩니다. <xref:System.String?displayProperty=fullName> 형식은 실제로 와이드 문자열 하지만 마샬링되 단일 바이트 문자 문자열입니다. 따라서 printf 지정자는 %%S (wchar_t *),입니다 경우 마샬링합니다 %s 문자열을 대신 합니다.  
   
 -   Va_arg 매크로 사용 하는 경우로 컴파일할 때 예기치 않은 결과가 발생할 수 있습니다 **/clr: pure**합니다.  자세한 내용은 참조 [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)합니다.  
-  
--   응용 프로그램 형식의 인수를 전달 하는 경우 [va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) 함수에 가변 개수의 인수를 사용 하도록 선언 하 고 응용 프로그램은으로 컴파일된 **/clr: pure**, CLR throw <xref:System.NotSupportedException>합니다. 경우 **/clr** 사용 하는 대신 영향을 받는 함수를 네이티브 코드로 컴파일된을 제대로 실행 합니다. 경우 **/clr: safe** 는 사용 하는 오류 진단 내보내집니다.  
   
 -   관리 코드 (함수 인수); 매개 변수 정보를 얻으려면 스택을 탐색 하는 함수 내에서 호출 하지 않아야 P/Invoke 계층에서는 정보가 더 스택에서 아래쪽입니다.  예를 들어 프록시/스텁이 있는 컴파일하지 않거나 **/clr**합니다.  
   
@@ -101,7 +99,5 @@ ms.lasthandoff: 12/21/2017
   
     -   에 대 한 참조를 포함 하는 함수 정렬 된 형식, 즉 형식을 사용 하 여 선언 `__declspec(align(...))`합니다.  
   
--   사용할 수 없습니다는 [컴파일러 COM 지원](../../cpp/compiler-com-support.md) 클래스와 **/clr: pure** 또는 **/clr: safe**합니다.  
-  
 ## <a name="see-also"></a>참고 항목  
- [/clr (공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr(공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)

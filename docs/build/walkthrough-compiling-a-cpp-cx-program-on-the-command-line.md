@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13e1b220123d3215e1c9150d00ee092ea4200ca8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>연습: 명령줄에서 C++/CX 프로그램 컴파일
-Windows 런타임을 대상으로 하는 Visual C++ 프로그램을 만들어 명령줄에서 빌드할 수 있습니다. Visual C++는 Windows 런타임 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 Visual C++ 구성 요소 확장(C++/CX)을 지원합니다. C++/CX를 사용하여 Windows Phone 8.1, Windows 스토어 및 Windows 데스크톱용 앱을 빌드할 수 있습니다. 자세한 내용은 참조 [A C+ 둘러보기 + CX](http://msdn.microsoft.com/magazine/dn166929.aspx) 및 [런타임 플랫폼용 구성 요소 확장명](../windows/component-extensions-for-runtime-platforms.md)합니다.  
+Windows 런타임을 대상으로 하는 Visual C++ 프로그램을 만들어 명령줄에서 빌드할 수 있습니다. Visual C++는 Windows 런타임 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 Visual C++ 구성 요소 확장명(C++/CX)을 지원합니다. 에서는 C + + /CX 유니버설 Windows 플랫폼 (UWP), Windows Phone 8.1 및 Windows 데스크톱 앱을 빌드할를 합니다. 자세한 내용은 참조 [A C+ 둘러보기 + CX](http://msdn.microsoft.com/magazine/dn166929.aspx) 및 [런타임 플랫폼용 구성 요소 확장명](../windows/component-extensions-for-runtime-platforms.md)합니다.  
   
  이 연습에서는 텍스트 편집기를 사용하여 기본적인 C++/CX 프로그램을 만든 다음 명령줄에서 컴파일합니다. 여기에 나와 있는 내용을 입력하는 대신 C++/CX 프로그램을 직접 사용할 수도 있고 다른 도움말 문서의 C++/CX 코드 샘플을 사용할 수도 있습니다. 이 기술은 UI 요소가 없는 소형 모듈을 빌드하고 테스트하는 데 유용합니다.  
   
 > [!NOTE]
->  또한 Visual Studio IDE를 사용하여 C++/CX 프로그램을 컴파일할 수 있습니다. IDE는 명령줄에서는 제공되지 않는 디자인, 디버그, 에뮬레이션 및 배포 지원을 포함하므로 IDE를 사용하여 Windows 스토어 앱을 빌드하는 것이 좋습니다. 자세한 내용은 참조 [기본 c + + 스토어 앱 만들기](http://msdn.microsoft.com/library/windows/apps/dn263168)합니다.  
+>  또한 Visual Studio IDE를 사용하여 C++/CX 프로그램을 컴파일할 수 있습니다. IDE에서 디자인, 디버깅, 에뮬레이션 및 배포 지원 명령줄에서 사용할 수 없는 포함 하므로 IDE를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 응용 프로그램을 빌드하는 것이 좋습니다. 자세한 내용은 참조 [c + + UWP 앱을 만들](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)합니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  개발자는 C++ 언어의 기본적인 사항을 알고 있어야 합니다.  

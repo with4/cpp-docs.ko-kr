@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ultoa
 - _ultow
@@ -29,7 +30,8 @@ f1_keywords:
 - _ultoa
 - _ultow
 - _ultot
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ultot function
 - converting integers
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _ultoa function
 - converting numbers, to strings
 ms.assetid: 7a472dc4-5652-4513-93c3-3358522c23be
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e555275f4516d92318ec5cfffbca3472c2a5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 94073b947848199bdc093f959ddceadcb1835f16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ultoa-ultow"></a>_ultoa, _ultow
 부호 없는 long 정수를 문자열로 변환합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_ultoa_s, _ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md)를 참조하세요.  
@@ -95,7 +98,7 @@ wchar_t *_ultow(
  이러한 각 함수는 `str`에 대한 포인터를 반환합니다. 반환되는 오류가 없습니다.  
   
 ## <a name="remarks"></a>설명  
- `_ultoa` 함수는 `value`를 null로 끝나는 문자열로 변환하고 결과(최대 33바이트)를 `str`에 저장합니다. 오버플로 검사는 수행되지 않습니다. `radix`기본 지정 `value`; `radix` 2-36 범위에 있어야 합니다. `_ultow`는 `_ultoa`의 와이드 문자 버전입니다.  
+ `_ultoa` 함수는 `value`를 null로 끝나는 문자열로 변환하고 결과(최대 33바이트)를 `str`에 저장합니다. 오버플로 검사는 수행되지 않습니다. `radix` 기본 지정 `value`; `radix` 2-36 범위에 있어야 합니다. `_ultow`는 `_ultoa`의 와이드 문자 버전입니다.  
   
 > [!IMPORTANT]
 >  버퍼 오버런을 방지하려면 `str` 버퍼가 변환된 숫자와 후행 null 문자를 포함할 만큼 충분히 커야 합니다.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _iswxdigit_l
 - iswxdigit
@@ -29,7 +30,8 @@ f1_keywords:
 - iswxdigit
 - isxdigit
 - _istxdigit
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - isxdigit function
 - istxdigit function
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1ba714f78696cd806cbf1f200e72e09a03168d94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a5849caeddac4b52c80a29b5f4a6e85e2fe3e47b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 정수가 16진수인 문자를 나타내는지 여부를 확인합니다.  
@@ -82,7 +85,7 @@ int _iswxdigit_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c`가 16진수의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isxdigit`0이 아닌 값을 반환 `c` 16 진수 (A-F, a-f 또는 0-9). `iswxdigit`는 `c`가 16진수 문자에 해당하는 와이드 문자인 경우 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
+ `c`가 16진수의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isxdigit` 0이 아닌 값을 반환 `c` 16 진수 (A-F, a-f 또는 0-9). `iswxdigit`는 `c`가 16진수 문자에 해당하는 와이드 문자인 경우 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
   
  "C" 로캘의 `iswxdigit` 함수는 유니코드 전자 16진수 문자를 지원하지 않습니다.  
   

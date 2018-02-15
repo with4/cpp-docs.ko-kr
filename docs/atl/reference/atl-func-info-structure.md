@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _ATL_FUNC_INFO
 - ATL::_ATL_FUNC_INFO
 - ATL._ATL_FUNC_INFO
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b1bbff1fa040454fc8288053938bb439d505b461
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a5e184f1c78264304b8e4424ea3f9659689f333b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 구조
 dispinterface에 메서드 또는 속성을 설명 하는 데 사용 되는 형식 정보를 포함 합니다.  
@@ -42,8 +45,8 @@ struct _ATL_FUNC_INFO {
 ```  
   
 ## <a name="members"></a>멤버  
- **참조**  
- 호출 규칙. 와이 구조를 사용 하는 경우는 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) 클래스를이 멤버 있어야 **CC_STDCALL**합니다. `CC_CDECL`에 대 한 Windows CE에서는 지원 되는 옵션만 `CALLCONV` 필드는 `_ATL_FUNC_INFO` 구조입니다. 다른 모든 값 지원 되지 않습니다. 따라서 해당 동작은 정의 되지 않았습니다.  
+ **cc**  
+ 호출 규칙. 와이 구조를 사용 하는 경우는 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) 클래스를이 멤버 있어야 **CC_STDCALL**합니다. `CC_CDECL` 에 대 한 Windows CE에서는 지원 되는 옵션만 `CALLCONV` 필드는 `_ATL_FUNC_INFO` 구조입니다. 다른 모든 값 지원 되지 않습니다. 따라서 해당 동작은 정의 되지 않았습니다.  
   
  **vtReturn**  
  값을 반환 하는 함수의 variant 유형입니다.  

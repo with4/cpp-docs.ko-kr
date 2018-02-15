@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
 - VC.Project.VCCLCompilerTool.CompileAsManaged
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cl.exe compiler, common language runtime option
 - -clr compiler option [C++]
@@ -20,16 +22,17 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a754e6c2fd8c709fd0397a2c0f78a7385819c586
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr(공용 언어 런타임 컴파일)
 응용 프로그램 및 구성 요소가 CLR(공용 언어 런타임)의 기능을 사용할 수 있게 합니다.  
@@ -54,17 +57,10 @@ ms.lasthandoff: 01/03/2018
  [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md).  
   
  **/clr:pure**  
- 네이티브 실행 코드가 없는 MSIL(Microsoft Intermediate Language) 전용 출력 파일을 생성합니다. 그러나 MSIL로 컴파일된 네이티브 형식을 포함할 수 있습니다.  
-  
- 자세한 내용은 참조 [순수형 및 안정형 코드 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)합니다.  
-  
  /clr:pure는 사용되지 않습니다. 이후 버전의 컴파일러는 이 옵션을 지원하지 않을 수 있습니다. C#에 대한 순수형 MSIL이어야 하는 코드를 포팅하는 것이 좋습니다.  
   
  **/clr:safe**  
- MSIL 전용(네이티브 실행 코드 제외) 안전형 출력 파일을 생성합니다. **/clr:safe** 는 확인 진단([PEVerify 도구(Peverify.exe)](/dotnet/framework/tools/peverify-exe-peverify-tool))을 사용하도록 설정합니다.  
-  
-
- /clr:safe는 사용되지 않습니다. 이후 버전의 컴파일러는 이 옵션을 지원하지 않을 수 있습니다. C#에 대한 순수형, 안정형 MSIL이어야 하는 코드를 포팅하는 것이 좋습니다.  
+ /clr:safe는 사용되지 않습니다. 이후 버전의 컴파일러는 이 옵션을 지원하지 않을 수 있습니다. C#에 대 한 안전 MSIL 이어야 하는 코드를 포팅하는 것이 좋습니다. 
   
  **/clr:noAssembly**  
  어셈블리 매니페스트를 출력 파일에 삽입하지 않도록 지정합니다. 기본적으로 **noAssembly** 옵션은 적용되지 않습니다.  
@@ -96,7 +92,7 @@ ms.lasthandoff: 01/03/2018
   
  기본적으로 **/clr** 은 적용되지 않습니다. **/clr** 이 적용되는 경우 **/MD** 도 적용됩니다. 자세한 내용은 [/MD, /MT, /LD(런타임 라이브러리 사용)](../../build/reference/md-mt-ld-use-run-time-library.md)를 참조하세요. **/MD** 는 표준 헤더(.h) 파일에서 동적으로 연결된 다중 스레드 버전의 런타임 루틴이 선택되도록 합니다. CLR 가비지 수집기는 보조 스레드에서 종료자를 실행하므로 관리되는 프로그래밍에 다중 스레딩이 필요합니다.  
   
- **/c**를 사용하여 컴파일하는 경우 [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)을 사용하여 결과 출력 파일의 CLR 형식(IJW, 안전 또는 순수)을 지정할 수 있습니다.  
+ 사용 하 여 컴파일하는 경우 **/c**, 여 결과 출력 파일의 CLR 형식을 지정할 수 있습니다 [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)합니다.  
   
  **/clr** 은 **/EHa**를 암시하며, 다른 **/EH** 옵션은 **/clr**에 대해 지원되지 않습니다. 자세한 내용은 [/EH(예외 처리 모델)](../../build/reference/eh-exception-handling-model.md)를 참조하세요.  
   
@@ -109,23 +105,6 @@ ms.lasthandoff: 01/03/2018
  **/clr** 을 사용하는 경우 `_MANAGED` 기호가 1로 정의됩니다. 자세한 내용은 [Predefined Macros](../../preprocessor/predefined-macros.md)을 참조하십시오.  
   
  네이티브 개체 파일의 전역 변수가 먼저 초기화된 다음(실행 파일이 DLL인 경우 DllMain 중에) 관리되는 섹션의 전역 변수가 초기화됩니다(관리 코드가 실행되기 전에). `#pragma`[init_seg](../../preprocessor/init-seg.md) 만 스레드와 관리 되지 않는 범주의 초기화 순서에 영향을 줍니다.  
-  
- **/clr:safe** 를 사용한 컴파일은 C#과 같은 언어에서 [/platform:anycpu](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option) 를 사용하여 컴파일하는 것과 유사합니다.  
-  
-## <a name="safe-and-pure-images"></a>안전 및 순수 이미지  
- 순수 이미지는 CLR 버전의 CRT(C 런타임) 라이브러리를 사용합니다. 그러나 CRT는 확인할 수 없으므로 **/clr:safe**를 사용하여 컴파일하는 경우 CRT를 사용할 수 없습니다. 자세한 내용은 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)을 참조하세요.  
-  
- 순수 이미지에 표시할 수 없는 네이티브 코드의 예로 인라인 어셈블리, [setjmp](../../c-runtime-library/reference/setjmp.md)및 [longjmp](../../c-runtime-library/reference/longjmp.md)가 있습니다.  
-  
- 순수 이미지나 안전 이미지의 모든 진입점이 관리됩니다. **/clr**을 사용하여 컴파일하는 경우 네이티브 진입점이 됩니다. 자세한 내용은 [__clrcall](../../cpp/clrcall.md)을 참조하세요.  
-  
- **/clr:safe**를 사용하여 컴파일하는 경우 변수는 기본적으로 [appdomain](../../cpp/appdomain.md) 이며 프로세스 단위가 될 수 없습니다. **/clr:pure**의 경우 **appdomain** 이 기본값이지만 [프로세스](../../cpp/process.md) 변수를 사용할 수 있습니다.  
-  
- **/clr** 또는 **/clr:pure** 를 사용하여 컴파일된 32비트 .exe 파일을 64비트 운영 체제에서 실행하는 경우 32비트 응용 프로그램을 64비트 운영 체제의 32비트 CLR에서 실행할 수 있게 해주는 WOW64로 응용 프로그램이 실행됩니다. 기본적으로 **/clr:safe** 를 사용하여 컴파일된 .exe 파일은 64비트 운영 체제를 실행하는 컴퓨터의 64비트 CLR에서 실행됩니다. 32비트 운영 체제에서는 동일한 .exe 파일이 32비트 CLR에서 실행됩니다. 그러나 안전 응용 프로그램은 32비트 구성 요소를 로드할 수 있습니다. 이 경우 운영 체제 64비트 지원에서 실행되는 안전 이미지가 32비트 응용 프로그램을 로드할 때 실패합니다(BadFormatException). 64비트 운영 체제에서 32비트 이미지를 로드할 때 안전 이미지가 계속 실행되게 하려면 [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md) 을 사용하여 메타데이터(.corflags)를 변경하고 WOW64에서 실행되도록 표시해야 합니다. 다음 명령줄을 예로 들 수 있습니다. 사용자 고유의 항목 기호로 대체합니다.  
-  
- **cl /clr:safe t.cpp /link /clrimagetype:pure /entry:?main@@$$HYMHXZ /subsystem:console**  
-  
- 데코레이트된 이름을 가져오는 방법에 대한 자세한 내용은 [Decorated Names](../../build/reference/decorated-names.md)을 참조하세요. 64 비트 대상에 대 한 자세한 내용은 참조 [구성 Visual c + + 64 비트 x64 대상](../../build/configuring-programs-for-64-bit-visual-cpp.md)합니다. 순수 CLR 코드를 사용 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: /clr으로 마이그레이션: 순수 (C + + /cli CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md) 및 [순수형 및 안정형 코드 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)합니다.  
   
 ## <a name="metadata-and-unnamed-classes"></a>메타데이터 및 명명되지 않은 클래스  
  명명되지 않은 클래스는 `$UnnamedClass$`*crc-of-current-file-name*`$`*index*`$`와 같이 이름이 지정된 메타데이터에 나타납니다. 여기서 *index* 는 컴파일할 때 이름이 지정되지 않은 클래스의 순차적 개수입니다. 예를 들어 다음 코드 샘플은 메타데이터에 명명되지 않은 클래스를 생성합니다.  

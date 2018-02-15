@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mktime32
 - mktime
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - mktime
 - _mktime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mktime32 function
 - mktime function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33ab39945526ac2f53eab653ec374856953fc27e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ee2673f98f219559fd42d192dd934c8fe3eaed8c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 현지 시간을 달력 값으로 변환합니다.  
@@ -73,7 +76,7 @@ __time64_t _mktime64(
 ## <a name="return-value"></a>반환 값  
  `_mktime32`는 [time_t](../../c-runtime-library/standard-types.md) 형식의 값으로 인코딩된 지정한 달력 시간을 반환합니다. 경우 *timeptr* 자정 1970 년 1 월 1 일 이전의 날짜를 참조 하거나 해당 달력 시간을 표현할 수 없는 경우 `_mktime32` 형식으로 캐스팅 하는-1을 반환 `time_t`합니다. 사용 하는 경우 `_mktime32` 쓰고 *timeptr* 23시 59분: 59 2038 년 1 월 18 일, utc (협정 세계시) 이후 날짜는 참조 형식으로 캐스팅 하는-1을 반환 합니다 `time_t`합니다.  
   
- `_mktime64`형식으로 캐스팅 하는-1을 반환 하는 `__time64_t` 경우 *timeptr* 23시 59분: 59를 3000 년 12 월 31 일 UTC 이후 날짜를 참조 합니다.  
+ `_mktime64` 형식으로 캐스팅 하는-1을 반환 하는 `__time64_t` 경우 *timeptr* 23시 59분: 59를 3000 년 12 월 31 일 UTC 이후 날짜를 참조 합니다.  
   
 ## <a name="remarks"></a>설명  
  `mktime`, `_mktime32` 및 `_mktime64` 함수는 정규화된 값을 사용하여 *timeptr*로 가리키는 제공된 시간 구조(불완전할 수 있음)를 완전히 정의된 구조로 변환한 다음 `time_t` 달력 시간 값으로 변환합니다. 변환된 시간은 [time](../../c-runtime-library/reference/time-time32-time64.md) 함수가 반환한 값과 인코딩이 동일합니다. *timeptr* 구조의 `tm_wday` 및 `tm_yday` 구성 요소가 가진 원래 값이 무시되며 다른 구성 요소의 원래 값은 정상 범위로 제한되지 않습니다.  

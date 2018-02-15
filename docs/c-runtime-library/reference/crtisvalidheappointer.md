@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtIsValidHeapPointer
+ms.topic: reference
+apiname:
+- _CrtIsValidHeapPointer
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0af543a4462c5cc9dec32c279750be744efa7303
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4f888466e0b1625f93c4e1cf66fab0bb85678094
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 지정된 포인터가 일부 C 런타임 라이브러리에서 할당된 힙에 있는지 확인하지만 호출자의 CRT 라이브러리에서 할당된 힙에 있는지는 확인하지 않을 수 있습니다. Visual Studio 2010 이전 CRT 버전에서 이 멤버는 지정된 포인터가 로컬 힙에 있는지 확인합니다(디버그 버전에만 해당).  

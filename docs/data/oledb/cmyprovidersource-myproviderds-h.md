@@ -4,34 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - myproviderds.h
 - cmyprovidersource
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8704a4a0733ea8bf688378953af9ff01314271d1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource(MyProviderDS.H)
 공급자 클래스는 다중 상속을 사용합니다. 다음 코드에서는 데이터 원본 개체에 대 한 상속 체인을 보여 줍니다.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // CMyProviderSource  
 class ATL_NO_VTABLE CMyProviderSource :   
@@ -44,7 +46,7 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- 모든 COM 구성 요소에서 파생 `CComObjectRootEx` 및 `CComCoClass`합니다. `CComObjectRootEx`에 대 한 모든 구현을 제공는 **IUnknown** 인터페이스입니다. 모든 스레딩 모델을 처리할 수 있습니다. `CComCoClass`필요한 모든 오류 지원을 처리 합니다. 클라이언트에 자세한 오류 정보를 전송 하려는 경우 일부의 오류 Api 사용할 수 있습니다에 `CComCoClass`합니다.  
+ 모든 COM 구성 요소에서 파생 `CComObjectRootEx` 및 `CComCoClass`합니다. `CComObjectRootEx` 에 대 한 모든 구현을 제공는 **IUnknown** 인터페이스입니다. 모든 스레딩 모델을 처리할 수 있습니다. `CComCoClass` 필요한 모든 오류 지원을 처리 합니다. 클라이언트에 자세한 오류 정보를 전송 하려는 경우 일부의 오류 Api 사용할 수 있습니다에 `CComCoClass`합니다.  
   
  데이터 원본 개체는 또한 여러 'Impl' 클래스에서 상속합니다. 각 클래스에는 인터페이스에 대 한 구현을 제공합니다. 데이터 원본 개체 구현 하는 `IPersist`, `IDBProperties`, **IDBInitialize**, 및 **IDBCreateSession** 인터페이스입니다. OLE DB 데이터 원본 개체를 구현 하려면 각 인터페이스가 필요 합니다. 상속 하거나이 'Impl' 클래스 중 하나에서 상속 하지 않고 하 여 특정 기능을 지원 하지 또는 지원 하도록 선택할 수 있습니다. 지원 하려는 경우는 **IDBDataSourceAdmin** 에서 상속 하는 인터페이스는 **IDBDataSourceAdminImpl** 필요한 기능을 활용 하려면 클래스입니다.  
   

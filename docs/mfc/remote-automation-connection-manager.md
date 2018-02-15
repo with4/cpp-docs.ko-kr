@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ee78c1fb5c66974c946d0571db981d899f405fe3
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-connection-manager"></a>원격 자동화 연결 관리자
 클라이언트와 서버 컴퓨터를 구성 하려면 레지스트리를 변경 해야 합니다. 이 직접 작업 하는 대신 원격 자동화 연결 (RAC) 관리자 도구를 사용 하는 것이 편리은 합니다. 이 도구 RACMGR32입니다. EXE RACREG32 함께 합니다. DLL을 선택 하면 모든 디렉터리에 복사 해야 합니다. 경로에 배치 하 여 실행을 사용 하 여 작업 표시줄에서 실행할 수 있습니다. 또는 것 바로 가기를 만들 수도 있고 시작 메뉴에 대 한 참조를 배치할 수 있습니다.  

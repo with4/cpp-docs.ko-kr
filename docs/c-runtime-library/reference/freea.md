@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _freea
+ms.topic: reference
+apiname:
+- _freea
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - freea
 - _freea
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _freea function
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 921687fbc5d8ab0b509e5a2e43c9c9ff4b18727a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6bf2bd2d3dacba307f529798727e7af745bf7cf9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freea"></a>_freea
 메모리 블록을 할당 해제하거나 해제합니다.  
@@ -61,7 +65,7 @@ void _freea(
 ## <a name="remarks"></a>설명  
  `_freea` 함수는 [_malloca](../../c-runtime-library/reference/malloca.md)를 호출하여 이전에 할당된 메모리 블록(`memblock`)을 할당 해제합니다. `_freea`는 힙 또는 스택에서 메모리가 할당되었는지 확인합니다. 스택에서 할당된 경우 `_freea`는 아무 작업도 수행하지 않습니다. 힙에서 할당된 경우 해제된 바이트 수는 블록이 할당될 때 요청된 바이트 수와 일치합니다. `memblock`이 `NULL`이면 포인터가 무시되고 `_freea`가 즉시 반환됩니다. 잘못된 포인터(`_malloca`를 통해 할당되지 않은 메모리 블록 포인터)를 해제하려고 하면 후속 할당 요청에 영향을 미치고 오류가 발생할 수 있습니다.  
   
- `_freea`호출 `free` 메모리가 힙에 할당은 발견 되 면 내부적으로 합니다. 메모리가 힙 또는 스택에 있는지 여부는 할당된 메모리 바로 앞 주소의 메모리에 배치된 표식에 의해 결정됩니다.  
+ `_freea` 호출 `free` 메모리가 힙에 할당은 발견 되 면 내부적으로 합니다. 메모리가 힙 또는 스택에 있는지 여부는 할당된 메모리 바로 앞 주소의 메모리에 배치된 표식에 의해 결정됩니다.  
   
  메모리 해제 중 오류가 발생하면 운영 체제에서 제공하는 실패 특성에 대한 정보를 바탕으로 `errno`가 설정됩니다. 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   

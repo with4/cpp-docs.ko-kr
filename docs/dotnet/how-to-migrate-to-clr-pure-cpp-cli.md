@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - /clr compiler option [C++], migrating to /clr:pure
 - migration [C++], pure MSIL
 - pure MSIL [C++], porting to
 ms.assetid: 5ffb1184-2095-4ade-84aa-4fa6324bc764
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -21,10 +23,10 @@ ms.workload:
 - cplusplus
 - dotnet
 ms.openlocfilehash: b8d49ee233167c02570408ba091c2a99b78487d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-migrate-to-clrpure-ccli"></a>방법: /clr:pure로 마이그레이션(C++/CLI)
 이 항목에서는 사용 하 여 순수 MSIL로 마이그레이션할 때 발생할 수 있는 문제를 설명 **/clr: pure** (참조 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md) 자세한 정보에 대 한). 이 항목 가정 마이그레이션하려는 현재 사용 하 여 혼합 된 어셈블리는 **/clr** 으로 순수 MSIL에 비관리 코드에서의 마이그레이션 경로 직접 옵션입니다. 비관리 코드에 대 한 참조 [하는 방법: /clr으로 마이그레이션](../dotnet/how-to-migrate-to-clr.md) 순수 MSIL로 마이그레이션을 시작 하기 전에.  

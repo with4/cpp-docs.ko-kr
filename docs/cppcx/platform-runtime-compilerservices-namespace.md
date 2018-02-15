@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::Runtime::CompilerServices
-dev_langs: C++
-helpviewer_keywords: Platform::Runtime::CompilerServices Namespace
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/Platform::Runtime::CompilerServices
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1477c6623b2e30b6ba9feaa9c477e12bf7fd51cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3518f6c0471858f9b3a8399f704b840fac9faddd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices 네임스페이스
 이 네임스페이스는 내부 전용이며 개발용으로 사용되지 않아야 합니다.  

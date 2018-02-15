@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fseeki64
 - fseek
@@ -25,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - fseek
 - _fseeki64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fseeki64 function
 - fseeki64 function
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 90af1581910ceaadf814050be39bc537cfc3881c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4dd4c4e6550946bafdaf0ad8f521e1e942ae04c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 파일 포인터를 지정된 위치로 이동합니다.  
@@ -88,7 +91,7 @@ int _fseeki64(
  `SEEK_SET`  
  파일 시작  
   
- `fseek` 및 `_fseeki64`를 사용하여 파일 내에서 포인터의 위치를 변경합니다. 포인터는 파일 끝을 지나서 배치될 수도 있습니다. `fseek`및 `_fseeki64` 파일 끝 표시기를 지우고 모든 사전의 결과가 무시 `ungetc` 에 대해 호출 `stream`합니다.  
+ `fseek` 및 `_fseeki64`를 사용하여 파일 내에서 포인터의 위치를 변경합니다. 포인터는 파일 끝을 지나서 배치될 수도 있습니다. `fseek` 및 `_fseeki64` 파일 끝 표시기를 지우고 모든 사전의 결과가 무시 `ungetc` 에 대해 호출 `stream`합니다.  
   
  데이터를 추가하기 위해 파일이 열리면 현재 파일 위치는 다음 쓰기가 수행되는 위치가 아니라 마지막 I/O 작업에 의해 결정됩니다. 추가를 위해 열린 파일에서 I/O 작업이 아직 수행되지 않은 경우 파일 위치는 파일의 시작입니다.  
   

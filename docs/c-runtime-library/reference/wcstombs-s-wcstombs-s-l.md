@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstombs_s_l
 - wcstombs_s
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - wcstombs_s
 - _wcstombs_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstombs_s function
 - string conversion, wide characters
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b5c57a82bef1a56925b414302fe2017df255ce2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 863f6dc5b1c7a41145607e8f8ba83466324dac07
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
@@ -103,7 +106,7 @@ errno_t _wcstombs_s_l(
 [in] *wcstr*  
 변환할 와이드 문자열을 가리킵니다.  
   
-[in] *개수*  
+[in] *count*  
 에 저장 하는 바이트의 최대 수는 *mbstr* 버퍼에 null 종결 문자를 제외 또는 [_TRUNCATE](../../c-runtime-library/truncate.md)합니다.  
   
 [in] *로캘*  
@@ -116,7 +119,7 @@ errno_t _wcstombs_s_l(
 |오류 조건|반환 값 및 `errno`|  
 |---------------------|------------------------------|  
 |*mbstr* 은 `NULL` 및 *sizeInBytes* > 0|`EINVAL`|  
-|*wcstr* 은`NULL`|`EINVAL`|  
+|*wcstr* is `NULL`|`EINVAL`|  
 |대상 버퍼가 너무 작아서 변환된 된 문자열을 포함할 수 (하지 않는 한 *count* 은 `_TRUNCATE`; 아래 설명 참조)|`ERANGE`|  
   
 이러한 조건 중 하나라도 발생하는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 예외가 호출됩니다. 계속해서 실행하도록 허용된 경우 이 함수는 오류 코드를 반환하고 `errno`를 표에 표시된 대로 설정합니다.  

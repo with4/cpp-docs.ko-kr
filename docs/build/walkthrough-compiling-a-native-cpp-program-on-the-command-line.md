@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 64bd526bfd72c16cc993d3992c179f107a35fbd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0a14fdba2ece8d077a844685384483ce35146bd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>연습: 명령줄에서 네이티브 C++ 프로그램 컴파일
-Visual C++에는 기본적인 콘솔 앱부터 유니버설 Windows 앱, Windows 스토어 앱 및 .NET 구성 요소에 이르기까지 다양한 프로그램을 만드는 데 사용할 수 있는 명령줄 C++ 컴파일러가 포함되어 있습니다.  
+Visual c + + 유니버설 Windows 플랫폼 앱에 대 한 기본적인 콘솔 앱, 데스크톱 앱, 장치 드라이버 및.NET 구성 요소에서 모든 항목을 만드는 데 사용할 수 있는 명령줄 c + + 컴파일러가 포함 되어 있습니다.  
   
  이 연습에서는 기본 "Hello, World" 만듭니다-편집기에서 텍스트를 사용 하 여 c + + 프로그램을 스타일 하 고 다음 명령줄에서 컴파일합니다. 명령줄을 사용 하는 대신 Visual Studio IDE를 시도 하세요. 참조 하려는 경우 [연습: 프로젝트 및 솔루션 (c + +) 작업](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) 또는 [c + + 데스크톱 개발을 위한 Visual Studio IDE를 사용 하 여](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)합니다.  
   

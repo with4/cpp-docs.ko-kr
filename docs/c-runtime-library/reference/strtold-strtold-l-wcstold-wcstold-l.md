@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -32,18 +33,20 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 814145a5efade94da53830bf6448d7e5422027bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e21329d29bcf65362d837697f2adfe00e27ce3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 문자열을 long 배정밀도 부동 소수점 값으로 변환합니다.  
@@ -82,7 +85,7 @@ long double wcstold_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `strtold`부동 소수점 숫자의 값을 반환는 `long double`, 표현을 오버플로가 인해 경우를 제외 하 고-+ /-함수가 반환 하는 경우`HUGE_VALL`합니다. `HUGE_VALL`의 부호는 표현할 수 없는 값의 부호와 일치합니다. 변환을 수행할 수 없거나 언더플로가 발생하면 `strtold`는 0을 반환합니다.  
+ `strtold` 부동 소수점 숫자의 값을 반환는 `long double`, 표현을 오버플로가 인해 경우를 제외 하 고-+ /-함수가 반환 하는 경우`HUGE_VALL`합니다. `HUGE_VALL`의 부호는 표현할 수 없는 값의 부호와 일치합니다. 변환을 수행할 수 없거나 언더플로가 발생하면 `strtold`는 0을 반환합니다.  
   
  `wcstold`는 `strtold`와 동일한 값을 반환합니다. 오버플로나 언더플로가 발생하면 두 함수에 대해 `errno`가 `ERANGE`로 설정되며 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다.  
   

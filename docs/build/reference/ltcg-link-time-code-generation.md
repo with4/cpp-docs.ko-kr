@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +14,25 @@ f1_keywords:
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 69e67755ce5015cdd63ad36625e71380a303d2d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG(링크 타임 코드 생성)
 ```  
@@ -134,11 +137,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ltcg-and-msil-modules"></a>/LTCG 및 MSIL 모듈  
  [/GL](../../build/reference/gl-whole-program-optimization.md) 및 [/clr](../../build/reference/clr-common-language-runtime-compilation.md) 을 사용해서 컴파일된 모듈은 **/LTCG** 가 지정된 경우 링커에 대한 입력으로 사용될 수 있습니다.  
   
--   **/LTCG** 네이티브 개체 파일, 네이티브/관리 개체 파일 혼합을 사용할 수 있습니다 (사용 하 여 컴파일된 **/clr**), 순수 개체 파일 (사용 하 여 컴파일된 **/clr: pure**), 및 안전한 개체 파일 ( 사용 하 여 컴파일된 **/clr: safe**). **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
+-   **/LTCG** 네이티브 개체 파일을 허용할 수 있으며 혼합 네이티브/관리 개체 파일 (사용 하 여 컴파일된 **/clr**). **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
   
--   **/LTCG** 를 사용 하 여 만들 수 있는 안전한.netmodules를 수락할 수 **/clr: safe /LN** Visual c + +에서 및 **/target: module** .NET Visual Studio 컴파일러에서 합니다. **/clr** 또는 **/clr:pure** 를 사용해서 생성된 .Netmodules는 **/LTCG**에서 수락되지 않습니다.  
-  
--   /LTCG:PGI는 **/GL** 및 **/clr**을 사용해서 컴파일된 네이티브 모듈 또는 순수 모듈( **/clr:pure**를 사용해서 생성)을 수락하지 않습니다.  
+-   /Ltcg: pgi를 사용 하 여 컴파일된 네이티브 모듈을 받아들이지 않는 **/GL** 및 **/clr**  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   

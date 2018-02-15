@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0df51ea0086104a45385673b310b5717bfa1c9ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6db2c999692a2715301b68fd1a4bd7f719fde83
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="passing-ole-db-conformance-tests"></a>OLE DB 적합성 테스트 통과
 Data Access SDK 공급자를 보다 일관 되 게 하려면 OLE DB 적합성 테스트 집합이 제공 합니다. 테스트는 공급자의 모든 측면을 확인 하 고 예상 대로 프로그램 공급자 작동 하는지 적절히 제공 합니다. Microsoft Data Access SDK에 OLE DB 적합성 테스트를 찾을 수 있습니다. 이 섹션 규칙 테스트를 통과 하기 위해 수행 해야 하는 것에 중점을 둡니다. OLE DB 적합성 테스트를 실행 하는 방법에 대 한 정보, SDK를 참조 하십시오.  
@@ -41,7 +43,7 @@ Data Access SDK 공급자를 보다 일관 되 게 하려면 OLE DB 적합성 �
   
  다음 코드는는 **ValidateCommandID** 유효성 검사 루틴:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
 // Class: CMyProviderRowset   

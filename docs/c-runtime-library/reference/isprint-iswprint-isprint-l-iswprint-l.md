@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswprint
 - isprint
@@ -29,7 +30,8 @@ f1_keywords:
 - iswprint
 - _istprint
 - isprint
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istprint function
 - iswprint function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6ab79ddcf6232e8c3d4345cc1bc3cda7c7deb1dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36d4c6fcc699392f32a45dfff6131a3b7b7e66ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
 정수가 인쇄 가능한 문자를 나타내는지 여부를 확인합니다.  
@@ -81,7 +84,7 @@ int _iswprint_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c`가 인쇄 가능한 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isprint`0이 아닌 값을 반환 `c` 인쇄 가능한 문자-여기에 공백 문자 (0x20-0x7E). `c`가 공백 와이드 문자를 포함하여 인쇄 가능한 와이드 문자인 경우 `iswprint`는 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
+ `c`가 인쇄 가능한 문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isprint` 0이 아닌 값을 반환 `c` 인쇄 가능한 문자-여기에 공백 문자 (0x20-0x7E). `c`가 공백 와이드 문자를 포함하여 인쇄 가능한 와이드 문자인 경우 `iswprint`는 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
   
  이러한 함수에 대한 테스트 조건의 결과는 로캘의 `LC_CTYPE` 범주 설정에 따라 달라집니다. 자세한 내용은 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)를 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘을 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   

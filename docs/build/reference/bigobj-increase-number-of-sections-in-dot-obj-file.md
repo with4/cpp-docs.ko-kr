@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /bigobj
-dev_langs: C++
+f1_keywords:
+- /bigobj
+dev_langs:
+- C++
 helpviewer_keywords:
 - -bigobj compiler option [C++]
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 384ec0de9e5cb1b3172b980bf7f412abe759ff91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 178206536522630616bfae0506bfa3edec98068c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj(.Obj 파일의 섹션 수 늘리기)
 **/bigobj** 개체 파일을 포함할 수 있는 섹션의 수를 늘립니다.  
@@ -37,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  기본적으로 개체 파일에는 최대 65, 536 포함할 수 있습니다 (2 ^16) 주소 지정 가능한 섹션. 지정된 대상 플랫폼과는 관계가 없습니다. **/bigobj** 하면 주소 용량을 4294967296 (2 ^32).  
   
- 대부분의 모듈에서 65, 536 개 이상의 섹션이 포함 된.obj 파일을 생성 하지 않습니다. 그러나 생성 된 코드, 컴퓨터 또는 템플릿 라이브러리를 많이 사용 하는 코드 섹션을 더 보유할 수 있는.obj 파일에 필요할 수 있습니다. **/bigobj** 컴퓨터에서 생성 된 XAML 코드에 대량의 헤더가 포함 되어 있으므로 Windows 스토어 프로젝트에서 기본적으로 사용 됩니다. Windows 스토어 응용 프로그램 프로젝트에서 이 옵션을 사용하지 않도록 설정하면 컴파일러 오류 C1128이 발생할 가능성이 높습니다.  
+ 대부분의 모듈에서 65, 536 개 이상의 섹션이 포함 된.obj 파일을 생성 하지 않습니다. 그러나 생성 된 코드, 컴퓨터 또는 템플릿 라이브러리를 많이 사용 하는 코드 섹션을 더 보유할 수 있는.obj 파일에 필요할 수 있습니다. **/bigobj** 컴퓨터에서 생성 된 XAML 코드에 대량의 헤더가 포함 되어 있으므로 유니버설 Windows 플랫폼 (UWP) 프로젝트에 기본적으로 사용 됩니다. UWP 앱 프로젝트에서이 옵션을 사용 하지 않도록 설정 하는 경우 컴파일러 오류 c 1128 발생할 가능성이 높습니다.  
   
  Visual c + + 2005 이전에 판매 된 링커를 사용 하 여 생성 하는.obj 파일을 읽을 수 없습니다 **/bigobj**합니다.  
   

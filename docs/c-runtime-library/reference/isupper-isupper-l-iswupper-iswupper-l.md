@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -29,7 +30,8 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 242646319193e070e59256c71c53a25268e10e64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 333e772c2716b87b43cb71ac1797e714af709b3e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 정수가 대문자를 나타내는지 여부를 확인합니다.  
@@ -81,7 +84,7 @@ int _iwsupper_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c`가 대문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isupper`0이 아닌 값을 반환 `c` 대문자 (A ~ Z)가 있습니다. `iswupper`은 `c`가 대문자에 해당하는 와이드 문자인 경우 또는 `c`가 `iswcntrl`, `iswdigit`, `iswpunct` 또는 `iswspace`가 0인 구현에서 정의된 와이드 문자 집합 중 하나인 경우 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
+ `c`가 대문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isupper` 0이 아닌 값을 반환 `c` 대문자 (A ~ Z)가 있습니다. `iswupper`은 `c`가 대문자에 해당하는 와이드 문자인 경우 또는 `c`가 `iswcntrl`, `iswdigit`, `iswpunct` 또는 `iswspace`가 0인 구현에서 정의된 와이드 문자 집합 중 하나인 경우 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘을 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   

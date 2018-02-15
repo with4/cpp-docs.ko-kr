@@ -4,19 +4,22 @@ description: "Visual c + +에 대 한 Visual Studio 지원 설치"
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>C + + 콘솔 응용 프로그램 프로젝트 빌드 및 실행
 
@@ -83,6 +86,8 @@ Visual Studio는 다음과 같이 표시 하는 경우에 빌드하고 응용 �
 ### <a name="run-your-code-in-a-command-window-issues"></a>문제는 명령 창에서 코드 실행
 
 응용 프로그램을 실행 하는 명령줄에서 솔루션 디버그 폴더로 이동할 수 있습니다. 응용 프로그램에 대 한 경로 지정 하지 않고 다른 디렉터리의 응용 프로그램을 실행할 수 없습니다. 그러나 응용 프로그램을 다른 디렉터리에 복사 하 고 여기에서 실행할 수 있습니다.
+
+표시 되지 않으면 **경로로 복사** 바로 가기 메뉴에서 메뉴를 닫고 다음를 누른 채로 Shift 키를 다시 여십시오. 이 단지 편의 위한 것입니다. 또한 파일 탐색기 검색 창에서 폴더 경로 복사 하 고 붙여 넣습니다 수는 **실행** 대화 상자에서 끝에서 실행 파일의 이름을 입력 합니다. 좀 더 많은 입력 있지만 결과가 동일 합니다.
 
 [돌아 가.](#run-your-code-in-a-command-window)
 

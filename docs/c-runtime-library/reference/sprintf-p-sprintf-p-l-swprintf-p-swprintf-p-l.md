@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -33,7 +34,8 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 46e82b8485458290629916a1eb9f44a2bf2f23ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 형식 문자열에서 매개 변수가 사용되는 순서를 지정하는 기능과 함께 문자열에 형식이 지정된 데이터를 씁니다.  
@@ -120,7 +123,7 @@ int _swprintf_p_l(
   
  `_swprintf_p`는 `_sprintf_p`의 와이드 문자 버전이며, `_swprintf_p`에 대한 포인터 인수는 와이드 문자 문자열입니다. `_swprintf_p`에서 인코딩 오류의 탐지 방식은 `_sprintf_p`와 다를 수 있습니다. `_swprintf_p`는 `FILE` 형식의 대상이 아니라 문자열에 출력을 쓰고, `_swprintf_p`에서는 `count` 매개 변수가 기록할 최대 문자 수를 지정해야 한다는 점을 제외하고 `_swprintf_p` 및 `fwprintf_p`는 동일한 방식으로 동작합니다. `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   
- `_sprintf_p`는 종료 `NULL` 문자를 제외하고 `buffer`에 저장된 바이트 수를 반환합니다. `_swprintf_p`에 저장 된 와이드 문자 수를 반환 `buffer`를 제외 하 고 종료 `NULL` 와이드 문자입니다. `buffer` 또는 `format`이 null 포인터이거나 형식 문자열에 잘못된 형식 지정 문자가 포함되어 있는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수가 -1을 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
+ `_sprintf_p`는 종료 `NULL` 문자를 제외하고 `buffer`에 저장된 바이트 수를 반환합니다. `_swprintf_p` 에 저장 된 와이드 문자 수를 반환 `buffer`를 제외 하 고 종료 `NULL` 와이드 문자입니다. `buffer` 또는 `format`이 null 포인터이거나 형식 문자열에 잘못된 형식 지정 문자가 포함되어 있는 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수가 -1을 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
   
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
   

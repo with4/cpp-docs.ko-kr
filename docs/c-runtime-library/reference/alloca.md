@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _alloca
+ms.topic: reference
+apiname:
+- _alloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a48b0ab3e9717416736acf4187a27df2c737089b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104c3df4e6f69d31c5090a87c8029351accd1e1e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alloca"></a>_alloca
 스택에 메모리를 할당합니다. 더 안전한 버전을 사용할 수 있습니다; 때문에이 함수는 사용 되지 않습니다. 참조 [_malloca](../../c-runtime-library/reference/malloca.md)합니다.  
@@ -61,7 +65,7 @@ void *_alloca(
  공간을 할당할 수 없는 경우 스택 오버플로 예외가 생성됩니다. 스택 오버플로 예외는 C++ 예외가 아니며 구조적 예외입니다. C++ 예외 처리를 사용하는 대신 [SEH(구조적 예외 처리)](../../cpp/structured-exception-handling-c-cpp.md)를 사용해야 합니다.  
   
 ## <a name="remarks"></a>설명  
- `_alloca`할당 `size` 프로그램 스택에서 바이트입니다. 할당 된 공간 (때가 아니라 단지 할당 범위 밖으로 나갈)는 호출 함수가 종료 될 때에 자동으로 해제 됩니다. 따라서에서 반환 된 포인터 값을 전달 하지 마십시오 `_alloca` 인수로 [무료](../../c-runtime-library/reference/free.md)합니다.  
+ `_alloca` 할당 `size` 프로그램 스택에서 바이트입니다. 할당 된 공간 (때가 아니라 단지 할당 범위 밖으로 나갈)는 호출 함수가 종료 될 때에 자동으로 해제 됩니다. 따라서에서 반환 된 포인터 값을 전달 하지 마십시오 `_alloca` 인수로 [무료](../../c-runtime-library/reference/free.md)합니다.  
   
  EH(예외 처리기)에서 `_alloca`를 명시적으로 호출하는 데는 제한이 있습니다. x86급 프로세서에서 실행되는 EH 루틴은 고유한 메모리 프레임에서 작동합니다. 즉, 바깥쪽 함수 스택 포인터의 현재 위치를 기반으로 하지 않는 메모리 공간에서 해당 작업을 수행합니다. 가장 일반적인 구현에는 Windows NT SEH(구조적 예외 처리) 및 C++ catch 절 식이 포함됩니다. 따라서 다음 시나리오 중 하나에서 `_alloca`를 명시적으로 호출하면 호출 EH 루틴으로 돌아가는 동안 프로그램 오류가 발생합니다.  
   

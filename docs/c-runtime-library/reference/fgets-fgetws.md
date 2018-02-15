@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgets
 - fgetws
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgetts
 - fgetws
 - fgets
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fgetts function
 - streams, getting strings from
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70cccdc8dea6abb032fbf6170ca84ad866ddd491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 스트림에서 문자열을 가져옵니다.  
@@ -81,7 +84,7 @@ wchar_t *fgetws(
  이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
   
 ## <a name="remarks"></a>설명  
- `fgets` 함수는 입력 `stream` 인수에서 문자열을 읽어 `str`에 저장합니다. `fgets`첫 번째 줄 바꿈 문자 나타날 경우 현재 스트림 위치에서 읽은 문자 수가 같은지를 때까지 또는 스트림의 끝에 문자를 읽고 `n` -1 중 하나에 먼저 합니다. `str`에 저장된 결과는 null 문자와 함께 추가됩니다. 줄 바꿈 문자는 읽을 경우 문자열에 포함됩니다.  
+ `fgets` 함수는 입력 `stream` 인수에서 문자열을 읽어 `str`에 저장합니다. `fgets` 첫 번째 줄 바꿈 문자 나타날 경우 현재 스트림 위치에서 읽은 문자 수가 같은지를 때까지 또는 스트림의 끝에 문자를 읽고 `n` -1 중 하나에 먼저 합니다. `str`에 저장된 결과는 null 문자와 함께 추가됩니다. 줄 바꿈 문자는 읽을 경우 문자열에 포함됩니다.  
   
  `fgetws`는 `fgets`의 와이드 문자 버전입니다.  
   

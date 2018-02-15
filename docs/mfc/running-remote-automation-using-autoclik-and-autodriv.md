@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: AUTOCLIK sample [MFC]
+dev_langs:
+- C++
+helpviewer_keywords:
+- AUTOCLIK sample [MFC]
 ms.assetid: 8900c0de-8dba-4f0a-8d9e-7db77a1f4f46
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 791655047eaf07732e1e006e8cc3ea8e7dec4727
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="running-remote-automation-using-autoclik-and-autodriv"></a>AUTOCLIK 및 AUTODRIV를 사용하여 원격 자동화 실행
 AUTOCLIK 원격 자동화에 대 한 자세한 내용을 보려면를 기반으로 사용할 수 있는 간단한 자동화 서버 샘플 응용 프로그램이 있습니다. AUTODRIV는 AUTOCLIK를 구동 하는 간단한 자동화 클라이언트 응용 프로그램입니다. 원격 자동화를 보여 주기 위해 사용할 수 있습니다.  

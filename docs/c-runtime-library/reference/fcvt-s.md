@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fcvt_s
+ms.topic: reference
+apiname:
+- _fcvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba668d9c5604ee07b2cafdc4a9b8f70ae1cc884e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fcvts"></a>_fcvt_s
 부동 소수점 숫자를 문자열로 변환합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 향상된 [_fcvt](../../c-runtime-library/reference/fcvt.md) 버전입니다.  
@@ -110,7 +114,7 @@ errno_t _fcvt_s(
   
  모든 부동 소수점 값에는 `_CVTBUFSIZE` 길이의 버퍼로 충분합니다.  
   
- `_ecvt_s`와 `_fcvt_s`의 차이는 `count` 매개 변수의 해석에 있습니다. `_ecvt_s`해석 `count` 으로 출력 문자열에 전체 자릿수 및 `_fcvt_s` 해석 `count` 소수점 뒤에 자릿수의 숫자입니다.  
+ `_ecvt_s`와 `_fcvt_s`의 차이는 `count` 매개 변수의 해석에 있습니다. `_ecvt_s` 해석 `count` 으로 출력 문자열에 전체 자릿수 및 `_fcvt_s` 해석 `count` 소수점 뒤에 자릿수의 숫자입니다.  
   
  C++에서는 템플릿 오버로드로 인해 이 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으므로 크기 인수를 지정할 필요가 없습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   

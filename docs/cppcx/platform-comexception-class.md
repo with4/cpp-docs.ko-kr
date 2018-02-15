@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::COMException Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 클래스
 응용 프로그램을 실행할 때 나타나는 COM 오류를 나타냅니다. COMException은 미리 정의된 표준 예외 집합의 기본 클래스입니다.  
@@ -55,8 +58,8 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
 |멤버|설명|  
 |------------|-----------------|  
-|[Exception:: hresult](#hresult)|예외에 해당하는 HRESULT입니다.|  
-|[Exception:: message](#message)|예외를 설명하는 메시지입니다.|  
+|[Exception::HResult](#hresult)|예외에 해당하는 HRESULT입니다.|  
+|[Exception::Message](#message)|예외를 설명하는 메시지입니다.|  
   
 ## <a name="derived-exceptions"></a>파생된 예외  
  다음과 같은 미리 정의된 예외는 COMException에서 파생됩니다. COMException과 이름, 생성자 이름 및 내부 HRESULT 값만 다릅니다.  
@@ -86,7 +89,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **메타데이터:** platform.winmd  
 
-## <a name="ctor"></a>Comexception:: Comexception 생성자
+## <a name="ctor"></a> Comexception:: Comexception 생성자
 COMException 클래스의 새 인스턴스를 초기화합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -101,7 +104,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a>Comexception:: Hresult 속성
+## <a name="hresult"></a> Comexception:: Hresult 속성
 예외에 해당하는 HRESULT입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -116,7 +119,7 @@ public:property int HResult {    int get();}
 ### <a name="remarks"></a>설명  
  HRESULT 값을 해석 하는 방법에 대 한 자세한 내용은 참조 [COM 오류 코드 구조](http://go.microsoft.com/fwlink/p/?LinkId=262045)합니다.  
 
-## <a name="message"></a>Comexception:: Message 속성
+## <a name="message"></a> Comexception:: Message 속성
 예외를 설명하는 메시지입니다.  
   
 ### <a name="syntax"></a>구문  

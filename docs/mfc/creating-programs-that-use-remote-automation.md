@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>원격 자동화를 사용하는 프로그램 만들기
 모든 자동화 개체 및 모든 자동화 컨트롤러를 다시 컴파일하거나, 및 링크할 필요 없이 소스 코드를 변경 하지 않고도 원격 자동화를 사용할 수입니다. 로컬로 작동 하는 설치를 수행한 (즉, 동일한 시스템에서)를 원격으로 실행 하는 몇 단계를 통해 이동 해야 합니다.  

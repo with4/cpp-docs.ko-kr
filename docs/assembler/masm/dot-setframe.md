@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: .SETFRAME
-dev_langs: C++
-helpviewer_keywords: .SETFRAME directive
+ms.topic: reference
+f1_keywords:
+- .SETFRAME
+dev_langs:
+- C++
+helpviewer_keywords:
+- .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 277eb151fabc62a5d6cd44ba34bac7c230cec39f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fce923925cba53e0c5f8dc57450cbfb64b00e056
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="setframe"></a>.SETFRAME
 채우기 프레임에서 레지스터에 지정된 된 레지스터를 사용 하 여 해제 정보 필드와 오프셋 (`reg`) 및 오프셋 (`offset`). 오프셋은 16의 배수 여야 합니다. 및 240 합니다. 이 지시문도 생성 한 `UWOP_SET_FPREG` 현재 프롤로그 오프셋을 사용 하 여 지정 된 등록에 대 한 코드 항목을 해제 합니다.  

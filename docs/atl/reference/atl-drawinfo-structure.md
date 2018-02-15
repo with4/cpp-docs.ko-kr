@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::ATL_DRAWINFO
 - ATL_DRAWINFO
 - ATL.ATL_DRAWINFO
-dev_langs: C++
-helpviewer_keywords: ATL_DRAWINFO structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70ea9b2532b8ab63bc9c840e7e08790b3af57342
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7a10932fd43e89af6d98d3d931d43810c710000
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 구조
 프린터 및 메타 파일, ActiveX 컨트롤 같은 다양 한 대상에 렌더링에 사용 되는 정보를 포함 합니다.  
@@ -55,10 +59,10 @@ struct ATL_DRAWINFO {
  **dwDrawAspect**  
  대상을 표현할 방법을 지정 합니다. 표현은 콘텐츠, 아이콘, 미리 보기, 또는 인쇄 된 문서를 포함할 수 있습니다. 가능한 값 목록은 참조 [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) 및 [DVASPECT2](http://msdn.microsoft.com/library/windows/desktop/ms688644)합니다.  
   
- **색인입니다.**  
+ **lindex**  
  그리기 작업에 대 한 관심 있는 대상의 부분입니다. 값에 따라 해석이 달라 집니다.는 **dwDrawAspect** 멤버입니다.  
   
- **데**  
+ **ptd**  
  에 대 한 포인터는 [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) 모양 지정에 따른 그리기 최적화를 가능 하는 구조입니다. 참고 새 개체 및 최적화 된 그리기 인터페이스를 지 원하는 컨테이너도이 멤버를 지원 합니다. 이전 개체와 항상 최적화 된 그리기 인터페이스 지원 하지 않는 컨테이너 지정 **NULL** 이 멤버에 대 한 합니다.  
   
  **hicTargetDev**  

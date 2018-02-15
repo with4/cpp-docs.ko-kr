@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _dup
 - _dup2
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - _dup2
 - _dup
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _dup2 function
 - dup function
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c3f4ce550bd0d0d25d73284c87c33b6fa71647a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 687c8e0d2f9f8f860e78a1c8e44cab6886e3cf04
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 열려 있는 파일(`_dup`)에 대한 두 번째 파일 설명자를 만들거나 파일 설명자(`_dup2`)를 다시 할당합니다.  
@@ -89,7 +92,7 @@ int cstderr = _dup( _fileno( stderr ));
 |`_dup`|\<io.h>|  
 |`_dup2`|\<io.h>|  
   
- 콘솔은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서 지원되지 않습니다. 콘솔에 연결된 표준 스트림 핸들 `stdin`, `stdout` 및 `stderr`은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 C 런타임 함수에서 사용되기 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
+ 콘솔 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 지원 되지 않습니다. 콘솔에 연결된 된 표준 스트림 핸들-`stdin`, `stdout`, 및 `stderr`-C 런타임 함수에서 사용 되기 전에 리디렉션되어야 [! INCLUDEUWP 앱입니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
 ## <a name="example"></a>예  
   

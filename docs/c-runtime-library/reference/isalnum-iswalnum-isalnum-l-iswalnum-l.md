@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0c5ee9588635a50ca618a39e919661f9df08a27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f71ab6a960dbc92c4e6d8399e833f2ddf0e2ac1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 정수가 영숫자를 나타내는지 여부를 확인합니다.  
@@ -84,7 +87,7 @@ int _iswalnum_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c`가 영숫자의 특정 표현인 경우 이러한 루틴은 각각 0이 아닌 값을 반환합니다. `isalnum`경우에 0이 아닌 값을 반환 `isalpha` 또는 `isdigit` 에 대 한이 0이 아닌 `c`, 즉, 경우 `c` A-Z, 범위 내 a-z 또는 0-9입니다. `iswalnum` 또는 `iswalpha`가 `iswdigit`에 대해 0이 아닌 경우 `c`은 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
+ `c`가 영숫자의 특정 표현인 경우 이러한 루틴은 각각 0이 아닌 값을 반환합니다. `isalnum` 경우에 0이 아닌 값을 반환 `isalpha` 또는 `isdigit` 에 대 한이 0이 아닌 `c`, 즉, 경우 `c` A-Z, 범위 내 a-z 또는 0-9입니다. `iswalnum` 또는 `iswalpha`가 `iswdigit`에 대해 0이 아닌 경우 `c`은 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   

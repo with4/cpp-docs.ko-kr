@@ -1,13 +1,15 @@
 ---
 title: signal | Microsoft Docs
 ms.custom: 
-ms.date: 1/02/2018
+ms.date: 02/12/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: signal
+ms.topic: reference
+apiname:
+- signal
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,18 +23,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: signal
-dev_langs: C++
-helpviewer_keywords: signal function
+f1_keywords:
+- signal
+dev_langs:
+- C++
+helpviewer_keywords:
+- signal function
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 337bc5e222ee7fcb313d0b7ea0722dbb5cacea75
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23eae404bf5f8e2227d68189938defb2308f5e6b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="signal"></a>신호
 
@@ -44,9 +50,7 @@ ms.lasthandoff: 01/05/2018
 ## <a name="syntax"></a>구문
 
 ```C
-void (__cdecl *signal(
-   int sig,
-   void (__cdecl *func ) (int [, int ] )))(int);
+void __cdecl *signal(int sig, int (*func)(int, int));
 ```
 
 ### <a name="parameters"></a>매개 변수
@@ -54,11 +58,11 @@ _sig_
 신호 값입니다.
 
 _func_  
-실행될 함수입니다. 첫 번째 매개 변수는 신호 값이고 두 번째 매개 변수는 첫 번째 매개 변수가 SIGFPE일 때 사용할 수 있는 하위 코드입니다.
+두 번째 매개 변수는 실행 될 함수에 대 한 포인터입니다. 첫 번째 매개 변수는 신호 값이고 두 번째 매개 변수는 첫 번째 매개 변수가 SIGFPE일 때 사용할 수 있는 하위 코드입니다.
 
 ## <a name="return-value"></a>반환 값
 
-`signal`이전 값을 반환 _func_ 주어진된 신호와 연관 된 합니다. 예를 들어 경우의 이전 값 _func_ 되었습니다 `SIG_IGN`, 반환 값은 또한 `SIG_IGN`합니다. `SIG_ERR`의 반환 값은 오류를 나타냅니다. 이 경우 `errno`가 `EINVAL`로 설정됩니다.
+`signal` 주어진된 신호와 연관 된 func의 이전 값을 반환 합니다. 예를 들어 경우의 이전 값 _func_ 되었습니다 `SIG_IGN`, 반환 값은 또한 `SIG_IGN`합니다. `SIG_ERR`의 반환 값은 오류를 나타냅니다. 이 경우 `errno`가 `EINVAL`로 설정됩니다.
 
 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 

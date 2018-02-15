@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _read
+ms.topic: reference
+apiname:
+- _read
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _read
-dev_langs: C++
+f1_keywords:
+- _read
+dev_langs:
+- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -31,16 +35,17 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c55e2607a706648c818fc94e73197756470110c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ad5b18300ec36cc55a6eb02476b454829193cd8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="read"></a>_read
 
@@ -69,7 +74,7 @@ int _read(
   
 ## <a name="return-value"></a>반환 값  
 
-`_read`작은 일 수 있는 읽은 바이트 수를 반환 보다 *count* 보다 적은 경우 *count* 파일에 남아 있는 바이트 또는 파일이 텍스트 모드로 열려 있으면이 경우 각 캐리지 리턴-줄 바꿈 쌍 `\r\n` 을 단일 줄 바꿈 문자로 대체 `\n`합니다. 반환 값에서는 단일 줄 바꿈 문자만 계산됩니다. 이러한 바꾸기는 파일 포인터에 영향을 주지 않습니다.  
+`_read` 작은 일 수 있는 읽은 바이트 수를 반환 보다 *count* 보다 적은 경우 *count* 파일에 남아 있는 바이트 또는 파일이 텍스트 모드로 열려 있으면이 경우 각 캐리지 리턴-줄 바꿈 쌍 `\r\n` 을 단일 줄 바꿈 문자로 대체 `\n`합니다. 반환 값에서는 단일 줄 바꿈 문자만 계산됩니다. 이러한 바꾸기는 파일 포인터에 영향을 주지 않습니다.  
   
 함수는 파일의 끝에서 읽기를 시도하는 경우 0을 반환합니다. 경우 *fd* 은 유효 하지 않은 파일이 열려 있지 않으면 읽기를 위해 또는 파일이 잠겨에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 계속해서 실행하도록 허용한 경우 함수는 -1을 반환하고 `errno` 를 `EBADF`로 설정합니다.  
   

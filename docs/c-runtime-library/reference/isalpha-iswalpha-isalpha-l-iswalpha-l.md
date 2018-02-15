@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -33,7 +34,8 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04f3d1720420ce7b32e9386ccd384de25c78ac79
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 정수가 영문자를 나타내는지 여부를 확인합니다.  
@@ -86,7 +89,7 @@ int _iswalpha_l(
  현재 로캘 대신 사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `c`가 영문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isalpha`0이 아닌 값을 반환 `c` 이 A-Z 또는 a-z 범위 이내입니다. `iswalpha`는 `iswupper` 또는 `iswlower`이 0이 아닌 와이드 문자 즉, `iswcntrl`, `iswdigit`, `iswpunct` 또는 `iswspace`가 0인 구현에서 정의된 집합 중 하나인 모든 와이드 문자에 대해서만 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
+ `c`가 영문자의 특정 표현인 경우 이러한 각 루틴은 0이 아닌 값을 반환합니다. `isalpha` 0이 아닌 값을 반환 `c` 이 A-Z 또는 a-z 범위 이내입니다. `iswalpha`는 `iswupper` 또는 `iswlower`이 0이 아닌 와이드 문자 즉, `iswcntrl`, `iswdigit`, `iswpunct` 또는 `iswspace`가 0인 구현에서 정의된 집합 중 하나인 모든 와이드 문자에 대해서만 0이 아닌 값을 반환합니다. `c`가 테스트 조건을 만족하지 않는 경우 이러한 루틴은 각각 0을 반환합니다.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 로캘 대신 전달된 로캘 매개 변수를 사용합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   

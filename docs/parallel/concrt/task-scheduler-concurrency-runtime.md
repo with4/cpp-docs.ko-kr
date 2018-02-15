@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - oversubscription [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], oversubscription
@@ -23,22 +25,23 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d2d2d1fa21299867ba7a295ad9ef17759cab6c86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>작업 Scheduler(동시성 런타임)
-설명서의 이 부분의 항목에서는 동시성 런타임 작업 Scheduler의 중요한 기능에 대해 설명합니다. 작업 스케줄러는 동시성 런타임을 사용하는 기존 코드의 성능을 미세 조정하려는 경우에 유용합니다.  
+설명서의 이 부분의 항목에서는 동시성 런타임 작업 Scheduler의 중요한 기능에 대해 설명합니다. 작업 Scheduler는 동시성 런타임을 사용하는 기존 코드의 성능을 미세 조정하려는 경우에 유용합니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에서는 작업 스케줄러를 사용할 수 없습니다. 자세한 내용은 참조 [c + +로 Windows 스토어 앱 용 비동기 작업 만들기](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)합니다.  
+>  작업 스케줄러는 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 사용할 수 없는 경우 자세한 내용은 참조 [비동기 작업 만들기 c + +의 UWP 앱 용](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)합니다.  
 >   
 >  Visual Studio 2015 이상 버전에서는 [concurrency:: task](../../parallel/concrt/reference/task-class.md) 클래스 및 관련된 형식 ppltasks.h에 Windows ThreadPool을 해당 스케줄러로 사용 합니다. 이 항목은 ppltasks.h에서 정의된 형식에 더 이상 적용되지 않습니다. Parallel_for와 같은 병렬 알고리즘은 동시성 런타임을 기본 스케줄러로 계속 사용합니다.  
   

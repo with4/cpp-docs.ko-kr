@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 클래스 및 구조체(C++/CX)
 C + + /cli CX 지원 사용자 정의 *ref 클래스* 및 *ref 구조체*, 사용자 정의 및 *값 클래스* 및 *값 구조체*합니다. 이러한 데이터 구조는는 기본 컨테이너는 C + + /cli CX Windows 런타임 형식 시스템을 지원 합니다. 해당 콘텐츠는 특정 규칙에 따라 메타 데이터로 내보내집니다 및 c + + 또는 다른 언어로 작성 된 유니버설 Windows 플랫폼 앱 및 Windows 런타임 구성 요소 간에 전달 될 수 있도록 합니다.  
@@ -100,7 +101,7 @@ C + + /cli CX 지원 사용자 정의 *ref 클래스* 및 *ref 구조체*, 사�
   
  이미 소멸자가 실행되도록 한 클래스의 멤버에 액세스하려고 하는 경우의 동작은 정의되어 있지 않습니다. 프로그램 작동이 중단될 가능성이 놓습니다. public 소멸자가 없는 형식에 대해 `delete t` 를 호출하면 아무런 효과가 없습니다. 형식 계층 구조 내에서 알려진 `delete this` 또는 `private` 소멸자가 있는 형식 또는 기본 클래스에 대해 `protected private` 를 호출해도 아무런 효과가 없습니다.  
   
- public 소멸자를 선언하는 경우 ref 클래스가 `Platform::IDisposable` 을 구현하고 소멸자가 `Dispose` 메서드를 구현하도록 컴파일러에서 코드가 생성됩니다. `Platform::IDisposable`C + + /CX 프로젝션의 `Windows::Foundation::IClosable`합니다. 이러한 인터페이스를 명시적으로 구현하지 마세요.  
+ public 소멸자를 선언하는 경우 ref 클래스가 `Platform::IDisposable` 을 구현하고 소멸자가 `Dispose` 메서드를 구현하도록 컴파일러에서 코드가 생성됩니다. `Platform::IDisposable` C + + /CX 프로젝션의 `Windows::Foundation::IClosable`합니다. 이러한 인터페이스를 명시적으로 구현하지 마세요.  
   
 ## <a name="inheritance"></a>상속  
  Platform::Object는 모든 ref 클래스의 유니버설 기본 클래스입니다. 모든 ref 클래스는 암시적으로 Platform::Object로 변환될 수 있으며 [Object::ToString](../cppcx/platform-object-class.md#tostring)을 재정의할 수 있습니다. 그러나 Windows 런타임 상속 모델이 아니며 일반적으로 상속 모델; C + + /CX에서는 사용자 정의 public ref 클래스는 기본 클래스로 사용할 수 없습니다.  

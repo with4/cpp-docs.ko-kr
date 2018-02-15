@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: abort
+ms.topic: reference
+apiname:
+- abort
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: Abort
-dev_langs: C++
+f1_keywords:
+- Abort
+dev_langs:
+- C++
 helpviewer_keywords:
 - aborting current process
 - abort function
@@ -30,19 +34,20 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6577ca7927d42e12aa62ed100b9572b7270208f
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02e8c81ef539dc2f078a3b120ca673a0ef612779
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="abort"></a>abort
 
 현재 프로세스를 중단하고 오류 코드를 반환합니다.
 
 > [!NOTE]
-> Microsoft 스토어 응용 프로그램을 종료 하려면이 메서드를 사용 하지 마십시오 또는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱을 테스트 또는 디버깅 시나리오에서를 제외 하 고 있습니다. 스토어 앱을 닫으려면 프로그래밍 또는 UI 방식으로에 따라 허용 되지 않습니다는 [Microsoft 스토어 정책](/legal/windows/agreements/store-policies)합니다. 자세한 내용은 참조 [UWP 앱 수명 주기](/windows/uwp/launch-resume/app-lifecycle)합니다.
+> 테스트 또는 디버깅 시나리오에서 Microsoft 스토어 앱 또는 유니버설 Windows 플랫폼 (UWP) 응용 프로그램을 제외 하 고 종료 하려면이 메서드를 사용 하지 마십시오. 스토어 앱을 닫으려면 프로그래밍 또는 UI 방식으로에 따라 허용 되지 않습니다는 [Microsoft 스토어 정책](/legal/windows/agreements/store-policies)합니다. 자세한 내용은 참조 [UWP 앱 수명 주기](/windows/uwp/launch-resume/app-lifecycle)합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -132,3 +137,4 @@ File could not be opened: No such file or directory
 [_spawn, _wspawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)  
 [_DEBUG](../../c-runtime-library/debug.md)  
 [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md)  
+

@@ -4,42 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetNotifyCP
-dev_langs: C++
-helpviewer_keywords: IRowsetNotifyCP class
+f1_keywords:
+- IRowsetNotifyCP
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetNotifyCP class
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bae872c90a6df76e3efc1fce1aab6e77bc8fd313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d20a4eb011b67a743e91f1f8340c80ea146bb7c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 클래스
 연결 지점 인터페이스에 대 한 공급자 사이트 구현 [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)합니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
-template <  
-   class T,   
-   class ReentrantEventSync = CComSharedMutex   
->  
+## <a name="syntax"></a>구문
+
+```cpp
+template <class T, class ReentrantEventSync = CComSharedMutex>  
 class IRowsetNotifyCP :   
    public IConnectionPointImpl<  
       T,   
       piid = &__uuidof(IRowsetNotify),   
-      CComDynamicUnkArray DynamicUnkArray  
-   >,  
+      CComDynamicUnkArray DynamicUnkArray>,  
    public ReentrantEventSync  
 ```  
   
@@ -67,7 +67,7 @@ class IRowsetNotifyCP :
 |[Fire_OnRowsetChange](../../data/oledb/irowsetnotifycp-fire-onrowsetchange.md)|전체 행 집합에 영향을 미치는 변경의 소비자를 게 알립니다.|  
   
 ## <a name="remarks"></a>설명  
- `IRowsetNotifyCP`구현 브로드캐스트 수신기 연결 지점에 대해 알리기 위해 함수 **IID_IRowsetNotify** 행 집합의 내용 변경 합니다.  
+ `IRowsetNotifyCP` 구현 브로드캐스트 수신기 연결 지점에 대해 알리기 위해 함수 **IID_IRowsetNotify** 행 집합의 내용 변경 합니다.  
   
  또한 구현 하 고 등록 해야 하는 참고 `IRowsetNotify` (라고도 "sink")를 사용 하 여 소비자에 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) 소비자 알림을 처리할 수 있도록 합니다. 참조 [알림 수신](../../data/oledb/receiving-notifications.md) 에 소비자 연결 지점 인터페이스를 구현 하는 방법에 대 한 합니다.  
   

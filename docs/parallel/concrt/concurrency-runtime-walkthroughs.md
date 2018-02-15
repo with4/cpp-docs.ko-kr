@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c9aaff86eb5781872675a46863ccfbafff60d24e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3c5716bcfa997a45ab44fcb1026d7e082026a7a8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>동시성 런타임 연습
 이 섹션에서는 시나리오 기반 항목에는 다양 한 동시성 런타임 기능을 사용 하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [연습: 작업 및 XML HTTP 요청을 사용하여 연결](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- 사용 하는 방법을 보여 줍니다.는 [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) 및 [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) 함께 HTTP GET 및 POST 요청을 웹 서비스에 대 한 인터페이스는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱.  
+ 사용 하는 방법을 보여 줍니다.는 [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) 및 [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 웹 서비스에 HTTP GET 및 POST 요청을 보낼 함께 인터페이스입니다.  
   
  [연습: 에이전트 기반 응용 프로그램 만들기](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
  기본 에이전트 기반 응용 프로그램을 만드는 방법을 설명 합니다.  

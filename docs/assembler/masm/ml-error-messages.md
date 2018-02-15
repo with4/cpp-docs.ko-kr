@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.errors.ml
-dev_langs: C++
-helpviewer_keywords: MASM (Microsoft Macro Assembler), ML error messages
+ms.topic: error-reference
+f1_keywords:
+- vc.errors.ml
+dev_langs:
+- C++
+helpviewer_keywords:
+- MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1fa5933c9c676b76ebe342ffa848e7b40926da08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 09478bd3cff63e890014c6c14b11335feb8dfb3f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ml-error-messages"></a>ML 오류 메시지
 MASM 구성 요소에 의해 생성 된 오류 메시지는 세 가지 범주로 나뉩니다.  
@@ -43,7 +48,7 @@ Utility: Filename (Line) : [Error_type} (Code): Message_text
  `Utility`  
  오류 메시지를 전송 하는 프로그램입니다.  
   
- *파일 이름*  
+ *Filename*  
  오류 생성 조건을 포함 하는 파일입니다.  
   
  *Line*  

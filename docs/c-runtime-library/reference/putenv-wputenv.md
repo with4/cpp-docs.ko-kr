@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putenv
 - _wputenv
@@ -29,7 +30,8 @@ f1_keywords:
 - _putenv
 - wputenv
 - tputenv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _putenv function
 - environment variables, deleting
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 12b1379ea70c841f1689a8b83fae7ca7f43f5789
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 환경 변수를 생성, 수정 또는 제거합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)를 참조하세요.  
   
 > [!IMPORTANT]
->  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -91,7 +94,7 @@ int _wputenv(
   
  환경 항목은 직접 변경하는 대신 `_putenv` 또는 `_wputenv`를 사용하여 변경하세요. 특히 `_environ[]` 전역 배열의 요소를 직접 해제하면 잘못된 메모리가 처리될 수 있습니다.  
   
- `getenv` 및 `_putenv`는 전역 변수 `_environ`을 사용하여 환경 테이블에 액세스하고, `_wgetenv` 및 `_wputenv`는 `_wenviron`을 사용합니다. `_putenv`및 `_wputenv` 의 값이 변경 `_environ` 및 `_wenviron`, 따라서 무효화는 `_envp` 인수를 `main` 및 `_wenvp` 인수를 `wmain`합니다. 따라서 `_environ` 또는 `_wenviron`을 사용하여 환경 정보에 액세스하는 것이 더 안전합니다. `_putenv` 및 `_wputenv`와 전역 변수의 관계에 대한 자세한 내용은 [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md)을 참조하세요.  
+ `getenv` 및 `_putenv`는 전역 변수 `_environ`을 사용하여 환경 테이블에 액세스하고, `_wgetenv` 및 `_wputenv`는 `_wenviron`을 사용합니다. `_putenv` 및 `_wputenv` 의 값이 변경 `_environ` 및 `_wenviron`, 따라서 무효화는 `_envp` 인수를 `main` 및 `_wenvp` 인수를 `wmain`합니다. 따라서 `_environ` 또는 `_wenviron`을 사용하여 환경 정보에 액세스하는 것이 더 안전합니다. `_putenv` 및 `_wputenv`와 전역 변수의 관계에 대한 자세한 내용은 [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md)을 참조하세요.  
   
 > [!NOTE]
 >  함수의 `_putenv` 및 `_getenv` 패밀리는 스레드로부터 안전하지 않습니다. `_getenv`는 `_putenv`가 문자열을 수정하는 동안 문자열 포인터를 반환할 수 있으므로 임의의 오류를 발생시킵니다. 이러한 함수에 대한 호출은 동기화해야 합니다.  
