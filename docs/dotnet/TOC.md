@@ -105,7 +105,6 @@
 #### [캐스트 표기법 및 safe_cast<> 도입](cast-notation-and-introduction-of-safe-cast-angles.md)
 ## [순수형 및 안정형 코드(C++/CLI)](pure-and-verifiable-code-cpp-cli.md)
 ### [혼합형, 순수형 및 안정형 기능 비교(C++/CLI)](mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)
-### [방법: -clr:pure로 마이그레이션(C++/CLI)](how-to-migrate-to-clr-pure-cpp-cli.md)
 ### [방법: 안정형 C++ 프로젝트 만들기(C++/CLI)](how-to-create-verifiable-cpp-projects-cpp-cli.md)
 ### [방법: -clr:safe로 마이그레이션(C++/CLI)](how-to-migrate-to-clr-safe-cpp-cli.md)
 ### [SQL Server에 안정형 어셈블리 사용(C++/CLI)](using-verifiable-assemblies-with-sql-server-cpp-cli.md)
