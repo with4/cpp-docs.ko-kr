@@ -4,45 +4,46 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::IRowsetChangeImpl
 - IRowsetChangeImpl
 - ATL.IRowsetChangeImpl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, updatable
 - updatable providers, immediate update
 - IRowsetChangeImpl class
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4ff5057bed4f6f74511355f4675dd2bc69ad5262
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b289e20f4714503e0aef6deb2273f6cd12192e7d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 클래스
 OLE DB 템플릿 구현의 [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) OLE DB 사양에 대 한 인터페이스입니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template <  
    class T,   
    class Storage,   
    class BaseInterface = IRowsetChange,   
    class RowClass = CSimpleRow,   
-   class MapClass = CAtlMap < RowClass::KeyType, RowClass* >   
->  
+   class MapClass = CAtlMap <RowClass::KeyType, RowClass*>>  
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface  
 ```  
   
@@ -81,7 +82,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ## <a name="remarks"></a>설명  
  이 인터페이스는 데이터 저장소에 즉시 쓰기 작업을 담당 합니다. "즉시" 의미는 최종 사용자 (소비자를 사용 하 여 person)를 모두 변경 하면 해당 변경 내용이 즉시 전송 됩니다 데이터 저장 (하 고은 취소할 수 없습니다).  
   
- `IRowsetChangeImpl`OLE DB 구현 `IRowsetChange` 행을 삭제 하 고 새 행을 삽입의 기존 행의 열 값의 업데이트 수 있도록 하는 인터페이스입니다.  
+ `IRowsetChangeImpl` OLE DB 구현 `IRowsetChange` 행을 삭제 하 고 새 행을 삽입의 기존 행의 열 값의 업데이트 수 있도록 하는 인터페이스입니다.  
   
  OLE DB 템플릿 구현은 모든 기본 메서드를 지원 (`SetData`, `InsertRow`, 및 `DeleteRows`).  
   

@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: ICommandImpl
-dev_langs: C++
-helpviewer_keywords: ICommandImpl class
+f1_keywords:
+- ICommandImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- ICommandImpl class
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c553effb6ad6a4aa9571eed62f30e4e83910afbd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80cc82023131a23ebfea33c5264cf83fdafb1b36
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 클래스
 에 대 한 구현을 제공는 [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) 인터페이스입니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template <class T, class CommandBase = ICommand>   
 class ATL_NO_VTABLE ICommandImpl : public CommandBase  
 ```  
@@ -48,7 +52,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |||  
 |-|-|  
 |[CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)|현재 명령 실행을 취소합니다.|  
-|[취소](../../data/oledb/icommandimpl-cancel.md)|현재 명령 실행을 취소합니다.|  
+|[Cancel](../../data/oledb/icommandimpl-cancel.md)|현재 명령 실행을 취소합니다.|  
 |[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)|행 집합 개체를 만듭니다.|  
 |[실행](../../data/oledb/icommandimpl-execute.md)|명령을 실행합니다.|  
 |[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|명령을 만든 세션에 대 한 인터페이스 포인터를 반환 합니다.|  

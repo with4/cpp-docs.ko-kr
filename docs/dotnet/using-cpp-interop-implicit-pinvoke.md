@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -27,18 +29,18 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>C++ Interop 사용(암시적 PInvoke)
 다른.NET 언어와 달리 Visual c + +에서는 동일한 응용 프로그램 및 동일한 파일에도 존재 하는 관리 및 비관리 코드를 허용 하는 상호 운용성 지원 (으로 [관리, 관리 되지 않는](../preprocessor/managed-unmanaged.md) pragma). Visual c + + 개발자를 응용 프로그램의 나머지 부분을 방해 하지 않고 기존 Visual c + + 응용 프로그램에.NET 기능을 통합할 수 있습니다.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/21/2017
  명시적 PInvoke에는.NET Framework에서 지원 되며 대부분의.NET 언어에서 사용할 수 있는 합니다. 하지만 c + + Interop를 Visual c + + 관련 이름에서 알 수 있듯이 합니다.  
   
 ## <a name="c-interop"></a>C++ Interop  
- C + + Interop 것이 좋습니다 명시적 구현 하려면 일반적으로 번거로운, 관리 되지 않는 API를 수정 하 고 사용 가능 하지 않은 성능 향상 가능한 명시적 하면 경우 폭이 넓어서 더 더 나은 형식 안전성을 제공 하기 때문에 PInvoke입니다. 그러나 c + + Interop 수 없으면 관리 되지 않는 소스 코드를 사용할 수 없는 경우 또는로 컴파일할 때 **/clr: safe**합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다. 자세한 내용은 참조 [순수형 및 안정형 코드 (C + + /cli CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)합니다.  
+ C + + Interop 것이 좋습니다 명시적 구현 하려면 일반적으로 번거로운, 관리 되지 않는 API를 수정 하 고 사용 가능 하지 않은 성능 향상 가능한 명시적 하면 경우 폭이 넓어서 더 더 나은 형식 안전성을 제공 하기 때문에 PInvoke입니다. 그러나 c + + Interop는 관리 되지 않는 소스 코드를 사용할 수 없는 경우에 수는 없습니다.  
   
 ## <a name="c-com-interop"></a>C++ COM Interop  
  COM 구성 요소와의 상호 운용에 관한 다른.NET 언어에 비해 특정 뛰어난을 제공 하는 Visual c + +에서 지 원하는 상호 운용성 기능입니다. .NET Framework의 제한으로 제한 하지 않고 [Tlbimp.exe (형식 라이브러리 가져오기)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), COM을 사용 하면 c + + Interop 예: 데이터 형식 및 모든 COM 인터페이스의 모든 멤버의 필수 노출에 대 한 제한 된 지원 구성 요소에서 액세스할 수 되며 별도 interop 어셈블리를 필요 하지 않습니다. 자세한 내용은 참조 [.NET에서 사용 하 여 COM](http://msdn.microsoft.com/en-us/03976661-6278-4227-a6c1-3b3315502c15)합니다.  

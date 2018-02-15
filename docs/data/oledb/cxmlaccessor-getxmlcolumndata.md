@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,32 +14,31 @@ f1_keywords:
 - CXMLAccessor.GetXMLColumnData
 - ATL::CXMLAccessor::GetXMLColumnData
 - GetXMLColumnData
-dev_langs: C++
-helpviewer_keywords: GetXMLColumnData method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetXMLColumnData method
 ms.assetid: 719e8efe-8758-4af7-a855-0e44ea196546
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9183521d8c627d2d4befb33aa171a1651451ea12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e9a11434be63b75eef5ac0aaed729b7a8c2f0b7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cxmlaccessorgetxmlcolumndata"></a>CXMLAccessor::GetXMLColumnData
 열에서 XML 형식의 문자열 데이터로 테이블의 열 형식 정보를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-      HRESULT GetXMLColumnData(   
-   CSimpleStringW& strOutput    
-) throw( );  
+```cpp
+HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
  표준 중 하나 `HRESULT` 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 다음 열 형식 정보를 XML 형식 지정 방법을 보여 줍니다. `type`열의 데이터 형식을 지정합니다. 데이터 형식은 OLE DB 데이터 형식 액세스 중인 데이터베이스의 인수와 하지 기반는 note 합니다.  
+ 다음 열 형식 정보를 XML 형식 지정 방법을 보여 줍니다. `type` 열의 데이터 형식을 지정합니다. 데이터 형식은 OLE DB 데이터 형식 액세스 중인 데이터베이스의 인수와 하지 기반는 note 합니다.  
   
  `<columninfo>`  
   

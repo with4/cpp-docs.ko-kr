@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - marshaling [C++], arrays
 - platform invoke [C++], arrays
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3694d6628005c49cc824e52d710e64e060822f96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50ff0e0a6e61b3c2c691296f92f6ad471a3007e9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>방법: PInvoke를 사용하여 배열 마샬링
 이 항목에서는 CLR 문자열 형식을 사용 하 여 C 스타일 문자열을 호출할 수를 허용 하는 방법을 네이티브 함수를 설명 <xref:System.String> 지원.NET Framework 플랫폼 호출을 사용 하 여 합니다. Visual c + + 프로그래머는 P/Invoke는 작은 컴파일 타임 오류를 보고, 형식 안전 하지 않은 및는 것을 제공 하므로 (가능한 경우) 대신 c + + Interop 기능을 사용 하는 것이 좋습니다. P/Invoke 유일한 옵션은 관리 되지 않는 API는 DLL로 패키지 하는 경우 소스 코드를 사용할 수 없습니다 (그렇지 않은 경우 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  다음 코드는 관리 되지 않는 관리 되는 모듈 구성 됩니다. 관리 되지 않는 모듈에는 정수 배열을 받는 함수를 정의 하는 DLL은입니다. 두 번째 모듈은이 기능을 하지만 관리 되는 배열 측면에서 정의 및 사용 하는 관리 되는 명령줄 응용 프로그램은 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 배열 호출 될 때 네이티브 배열을 변환 되어야 함을 지정 하는 특성입니다.  
   
- 관리 되는 모듈, /clr 하지만 /clr을 사용 하 여 컴파일되며: pure 합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
+ 관리 되는 모듈은 /clr으로 컴파일됩니다.  
   
 ```cpp  
 // TraditionalDll4.cpp  

@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="casting-ccx"></a>캐스팅(C++/CX)
 Windows 런타임 형식에 적용 된 네 가지 캐스트 연산자: [static_cast 연산자](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **safe_cast Operator**, 및 [ reinterpret_cast 연산자](../cpp/reinterpret-cast-operator.md)합니다. `safe_cast` 및 `static_cast` 는 변환이 수행될 수 없을 때 예외를 throw합니다. [static_cast 연산자](../cpp/static-cast-operator.md) 도 컴파일 타임 형식 검사를 수행합니다. `dynamic_cast` 는 형식을 변환하지 못할 경우 `nullptr` 을 반환합니다. `reinterpret_cast` 는 null이 아닌 값을 반환하지만 이는 잘못되었을 수 있습니다. 따라서 캐스팅이 성공할지 여부를 모른다면 `reinterpret_cast` 를 사용하지 않는 것이 좋습니다. 또한 좋습니다 사용 하는 C 스타일 캐스트 C + + /cli CX 동일 하기 때문에 코드 `reinterpret_cast`합니다.  
@@ -61,7 +62,7 @@ Windows Runtime 예외 대신 HRESULT 오류 코드를 사용 하는 COM을 통�
 ```  
   
 ## <a name="dynamiccast"></a>dynamic_cast  
- 사용 하 여 `dynamic_cast` 개체를 캐스팅 하는 경우 (hat 보다 구체적으로, `^`) 더 많이 파생 된 형식으로 예상 하는 중 하나가 대상 개체가 있을 경우에 따라 수도 있습니다 `nullptr` 이거나 캐스팅에 실패할 수 있습니다를 일반 코드로 상황을 처리 하려면 예외 대신 경로입니다. **Windows 스토어 새 응용 프로그램** 프로젝트 템플릿에서 `OnLaunched` 의 `app.xamp.cpp` 메서드는 `dynamic_cast` 를 사용하여 응용 프로그램 창에 내용이 있는지 여부를 테스트합니다. 내용이 없어도 오류가 아니며 예기된 상황입니다. `Windows::Current::Content` 는 `Windows::UI::XAML::UIElement` 이며 상속 계층 구조에서 더 많이 파생된 형식인 `Windows::UI.XAML::Controls::Frame`으로 변환됩니다.  
+ 사용 하 여 `dynamic_cast` 개체를 캐스팅 하는 경우 (hat 보다 구체적으로, `^`) 더 많이 파생 된 형식으로 예상 하는 중 하나가 대상 개체가 있을 경우에 따라 수도 있습니다 `nullptr` 이거나 캐스팅에 실패할 수 있습니다를 일반 코드로 상황을 처리 하려면 예외 대신 경로입니다. 예를 들어,는 **비어 있는 앱 (유니버설 Windows)** 프로젝트 템플릿에 `OnLaunched` 에서 메서드 `app.xamp.cpp` 사용 하 여 `dynamic_cast` 응용 프로그램 창에 내용이 있는지 여부를 테스트 합니다. 내용이 없어도 오류가 아니며 예기된 상황입니다. `Windows::Current::Content` 는 `Windows::UI::XAML::UIElement` 이며 상속 계층 구조에서 더 많이 파생된 형식인 `Windows::UI.XAML::Controls::Frame`으로 변환됩니다.  
 ```
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)  
 {  

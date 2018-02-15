@@ -1,29 +1,31 @@
 ---
-title: "연습: WRL 및 Media Foundation을 사용 하 여 Windows 스토어 앱 만들기 | Microsoft Docs"
+title: "연습: WRL 및 Media Foundation을 사용 하는 UWP 앱 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>연습: WRL 및 Media Foundation을 사용하여 Windows 스토어 앱 만들기
-사용 하는 유니버설 Windows 플랫폼 앱을 만들려면 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하는 방법에 알아봅니다 [Microsoft 미디어 파운데이션](http://msdn.microsoft.com/library/windows/apps/ms694197)합니다.  
+# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>연습: WRL 및 Media Foundation을 사용 하는 UWP 앱 만들기
+사용 하는 유니버설 Windows 플랫폼 (UWP) 앱을 만들려면 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하는 방법에 알아봅니다 [Microsoft 미디어 파운데이션](http://msdn.microsoft.com/library/windows/apps/ms694197)합니다.  
   
  이 예제에서는 웹캠에서 캡처된 이미지에 회색조 효과를 적용하는 사용자 지정 Media Foundation 변형을 만듭니다. 앱에서는 C++를 사용하여 사용자 지정 변환을 정의하고, C#을 사용하여 구성 요소를 통해 캡처된 이미지를 변환합니다.  
   
@@ -59,13 +61,13 @@ ms.lasthandoff: 12/21/2017
   
 -   구성 요소 DLL을 runtimeobject.lib에 연결합니다. 또한 지정할 [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) Windows 메타 데이터를 생성 하는 링커 줄에 있습니다.  
   
--   WRL 구성 요소를 유니버설 Windows 플랫폼 앱에 액세스할 수 있도록 하려면 프로젝트 참조를 사용 합니다.  
+-   WRL 구성 요소를 UWP 앱에 액세스할 수 있도록 하려면 프로젝트 참조를 사용 합니다.  
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>사용 하려면 Media Foundation 회색조 만들려는 WRL 구성 요소를 변환  
   
 1.  Visual Studio에서 만듭니다는 **빈 솔루션** 프로젝트. 예를 들어 프로젝트 이름을 `MediaCapture`합니다.  
   
-2.  추가 **DLL (Windows 스토어 앱)** 프로젝트를 솔루션입니다. 예를 들어 프로젝트 이름을 `GrayscaleTransform`합니다.  
+2.  추가 **DLL (유니버설 Windows)** 프로젝트를 솔루션입니다. 예를 들어 프로젝트 이름을 `GrayscaleTransform`합니다.  
   
 3.  추가 **Midl 파일 (.idl)** 파일을 프로젝트입니다. 예를 들어 파일 이름을 `GrayscaleTransform.idl`합니다.  
   
@@ -133,5 +135,5 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
- [Microsoft 미디어 파운데이션](http://msdn.microsoft.com/library/windows/apps/ms694197)   
+ [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197)   
  [미디어 확장명 샘플](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

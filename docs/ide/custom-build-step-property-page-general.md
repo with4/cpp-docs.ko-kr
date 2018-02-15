@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,21 +15,23 @@ f1_keywords:
 - VC.Project.VCCustomBuildStep.Outputs
 - VC.Project.VCCustomBuildStep.Message
 - VC.Project.VCCustomBuildStep.Command
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63e599a2a24716de2de3e23cb3a7c2342b036b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e57d6cf00843cd6604ef269235602ea1b5b5e9b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="custom-build-step-property-page-general"></a>사용자 지정 빌드 단계 속성 페이지: 일반
 프로젝트 구성과 프로젝트의 대상 플랫폼이 조합되면 프로젝트를 빌드할 때 수행할 사용자 지정 단계를 지정할 수 있습니다.  
@@ -52,7 +55,7 @@ ms.lasthandoff: 12/21/2017
  이러한 옵션은 나열된 대상 기준으로 빌드 프로세스에서 사용자 지정 빌드 단계가 실행되는 때를 정의합니다. 가장 일반적으로 나열되는 대상은 빌드 프로세스의 주요 단계를 나타내는 BuildGenerateSources, BuildCompile, BuildLink입니다. 종종 나열되는 다른 대상은 Midl, CLCompile, Link입니다.  
   
  출력을 콘텐츠로 처리  
- 이 옵션은 .appx 패키지의 모든 콘텐츠 파일을 포함하는 Windows 스토어 또는 Windows Phone 앱에만 의미가 있습니다.  
+ 이 옵션은.appx 패키지의 모든 콘텐츠 파일을 포함 하는 유니버설 Windows 플랫폼 또는 Windows Phone 앱에 대 한 의미 있는 합니다.  
   
 ### <a name="to-specify-a-custom-build-step"></a>사용자 지정 빌드 단계를 지정하려면  
   

@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL.IRowsetInfoImpl
 - IRowsetInfoImpl
 - ATL::IRowsetInfoImpl
-dev_langs: C++
-helpviewer_keywords: IRowsetInfoImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetInfoImpl class
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cba03cfdda0b7a55c8f4719d5340566ee5dc6050
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 659d3d55635f957ffab2893f2a042564d62abad1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 클래스
 에 대 한 구현을 제공는 [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) 인터페이스입니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template <class T, class PropClass = T>  
 class ATL_NO_VTABLE IRowsetInfoImpl :   
    public IRowsetInfo,    

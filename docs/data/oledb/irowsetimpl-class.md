@@ -4,41 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetImpl
-dev_langs: C++
-helpviewer_keywords: IRowsetImpl class
+f1_keywords:
+- IRowsetImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetImpl class
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7b4d8dd6f6dced2b4847939b0d7ed560f1d59479
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54b9fd321c4240e9ba02cc63d809a492ffa4d439
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 클래스
 `IRowset` 인터페이스의 구현을 제공합니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,  
    class RowClass = CSimpleRow,  
    class MapClass = CAtlMap <  
       RowClass::KeyType,  
-      RowClass*   
-   >  
->  
+      RowClass*>>  
 class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface  
 ```  
   
@@ -69,7 +71,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|생성자입니다. 사용자가 직접 호출 되지 않습니다.|  
 |[RefRows](../../data/oledb/irowsetimpl-refrows.md)|에 의해 호출 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 및 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)합니다. 사용자가 직접 호출 되지 않습니다.|  
 |[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|행을 해제합니다.|  
-|[Restartposition이](../../data/oledb/irowsetimpl-restartposition.md)|다음 인출 위치를 초기 위치로; 위치 변경 즉, 행 집합을 첫 번째 경우에 해당 위치에 만들어집니다.|  
+|[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|다음 인출 위치를 초기 위치로; 위치 변경 즉, 행 집합을 첫 번째 경우에 해당 위치에 만들어집니다.|  
 |[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|지정된 된 필드에 대 한 상태 플래그를 설정합니다.|  
   
 ### <a name="data-members"></a>데이터 멤버  

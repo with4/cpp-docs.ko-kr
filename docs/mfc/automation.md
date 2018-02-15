@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers, about Automation servers
 - clients, Automation
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation"></a>자동화
 자동화(이전의 OLE 자동화) 기술은 한 응용 프로그램에서 다른 응용 프로그램에 구현된 개체를 조작하거나 개체를 조작할 수 있도록 노출시키는 것을 가능하게 하는 기술입니다.  
@@ -47,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   로컬 자동화  
   
--   [원격 자동화](../mfc/remote-automation.md) (네트워크에서 분산 DCOM 또는 DCOM 사용)  
+-   원격 자동화 (네트워크를 통해 분산 DCOM 또는 DCOM을 사용 하 여).  
   
  개체 노출은 응용 프로그램에서 다른 응용 프로그램에 유용한 기능을 제공할 때 편리한 기능입니다. 예를 들어, ActiveX 컨트롤은 자동화 서버의 일종이며 ActiveX 컨트롤을 사용하는 응용 프로그램은 해당 컨트롤의 자동화 클라이언트입니다.  
   
@@ -81,8 +84,6 @@ ms.lasthandoff: 12/21/2017
 -   [자동화 클라이언트](../mfc/automation-clients.md)  
   
 -   [자동화 서버](../mfc/automation-servers.md)  
-  
--   [원격 자동화](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   

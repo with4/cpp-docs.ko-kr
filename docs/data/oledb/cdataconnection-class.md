@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
 - CDataConnection
-dev_langs: C++
-helpviewer_keywords: CDataConnection class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 65e147366ecb7120a9dd2a98cde0c812d02582da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a891052b4fa92f6f642cdab89aadf444ec4d8475
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 클래스
 데이터 소스와의 연결을 관리합니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 class CDataConnection  
 ```  
   
@@ -53,13 +56,13 @@ class CDataConnection
 |-|-|  
 |[연산자 BOOL](../../data/oledb/cdataconnection-operator-bool.md)|현재 세션이 열려 있는지 여부를 결정 합니다.|  
 |[operator bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|현재 세션이 열려 있는지 여부를 결정 합니다.|  
-|[CDataSource 연산자 &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|포함 된에 대 한 참조를 반환 `CDataSource` 개체입니다.|  
-|[CDataSource * 연산자](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|포함된 `CDataSource` 개체에 대한 포인터를 반환합니다.|  
+|[operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|포함 된에 대 한 참조를 반환 `CDataSource` 개체입니다.|  
+|[operator CDataSource*](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|포함된 `CDataSource` 개체에 대한 포인터를 반환합니다.|  
 |[연산자 CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md)|포함 된에 대 한 참조를 반환 `CSession` 개체입니다.|  
 |[연산자 CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|포함된 `CSession` 개체에 대한 포인터를 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CDataConnection`필요한 개체 (데이터 소스 및 세션) 및 데이터 원본에 연결할 때 수행 해야 하는 작업의 일부를 캡슐화 하기 때문에 클라이언트를 만들기 위한 유용한 클래스  
+ `CDataConnection` 필요한 개체 (데이터 소스 및 세션) 및 데이터 원본에 연결할 때 수행 해야 하는 작업의 일부를 캡슐화 하기 때문에 클라이언트를 만들기 위한 유용한 클래스  
   
  없이 `CDataConnection`, 만들어야 할 한 `CDataSource` 개체, 호출 해당 [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) 메서드를 다음의 인스턴스를 만듭니다는 [CSession](../../data/oledb/csession-class.md) 개체, 호출 해당 [ 열기](../../data/oledb/csession-open.md) 메서드를 다음 만듭니다는 [CCommand](../../data/oledb/ccommand-class.md) 개체와 호출 해당 **열려*** 메서드.  
   

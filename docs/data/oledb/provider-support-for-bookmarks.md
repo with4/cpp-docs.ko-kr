@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - IRowsetLocate class, provider support for bookmarks
 - OLE DB provider templates, bookmarks
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb3c0d60c4b339d7ed2ae8bc4eee503036ac9097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e69f0cd9b77f4d492e5011a6c8e653515ea784e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>공급자의 책갈피 지원
 추가 하는이 항목의 예제는 `IRowsetLocate` 인터페이스는 `CMyProviderRowset` 클래스입니다. 대부분의 경우 기존 COM 개체에는 인터페이스를 추가 하 여 시작 합니다. 소비자 템플릿에서 많은 호출을 추가 하 여 테스트할 수 있습니다. 예제에 나오는 하는 방법:  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  추가 `IRowsetLocate` 인터페이스는 대부분의 인터페이스에서 약간 다릅니다. 하려면 vtable, OLE DB 공급자 템플릿은 파생된 된 인터페이스를 처리 하는 템플릿 매개 변수를 보유 합니다. 다음 코드에는 새 상속 목록을 보여 줍니다.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -49,18 +51,18 @@ ms.lasthandoff: 12/21/2017
 class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,   
       CTextData, CMyProviderCommand, CAtlArray<CTextData>,   
       CSimpleRow,   
-          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
+          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>>  
 ```  
   
- 네 번째, 다섯 번째 및 여섯 번째 매개 변수 모두 추가 됩니다. 이 예제에서는 네 번째 작업에 대 한 기본값을 사용 하 고 5 번째 매개 변수를 지정 하지만 `IRowsetLocateImpl` 여섯 번째 매개 변수로 합니다. `IRowsetLocateImpl`두 개의 템플릿 매개 변수를 사용 하는 OLE DB 템플릿 클래스: 이러한 연결는 `IRowsetLocate` 인터페이스는 `CMyProviderRowset` 클래스. 대부분의 인터페이스를 추가 하려면이 단계는 하 한 다음 이동할 수 있습니다. 만 `IRowsetLocate` 및 `IRowsetScroll` 인터페이스에서 이러한 방식으로 처리 해야 합니다.  
+ 네 번째, 다섯 번째 및 여섯 번째 매개 변수 모두 추가 됩니다. 이 예제에서는 네 번째 작업에 대 한 기본값을 사용 하 고 5 번째 매개 변수를 지정 하지만 `IRowsetLocateImpl` 여섯 번째 매개 변수로 합니다. `IRowsetLocateImpl` 두 개의 템플릿 매개 변수를 사용 하는 OLE DB 템플릿 클래스: 이러한 연결는 `IRowsetLocate` 인터페이스는 `CMyProviderRowset` 클래스. 대부분의 인터페이스를 추가 하려면이 단계는 하 한 다음 이동할 수 있습니다. 만 `IRowsetLocate` 및 `IRowsetScroll` 인터페이스에서 이러한 방식으로 처리 해야 합니다.  
   
  다음 지시 해야는 `CMyProviderRowset` 호출할 `QueryInterface` 에 대 한는 `IRowsetLocate` 인터페이스입니다. 줄 추가 `COM_INTERFACE_ENTRY(IRowsetLocate)` 맵에 있습니다. 에 대 한 인터페이스 맵을 `CMyProviderRowset` 다음 코드와 같이 표시 됩니다.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> > _RowsetBaseClass;  
+typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>> _RowsetBaseClass;  
   
 BEGIN_COM_MAP(CMyProviderRowset)  
    COM_INTERFACE_ENTRY(IRowsetLocate)  
@@ -74,7 +76,7 @@ END_COM_MAP()
   
  처리 하는 **icolumnsinfo:: Getcolumnsinfo** 호출, 삭제는 **PROVIDER_COLUMN** 에 매핑하는 `CTextData` 클래스입니다. 함수를 정의 하는 PROVIDER_COLUMN_MAP 매크로 `GetColumnInfo`합니다. 정의 하면 사용자 고유의 `GetColumnInfo` 함수입니다. 함수 선언은 다음과 같이 표시 됩니다.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -92,7 +94,7 @@ class CTextData
   
  그런 다음 구현는 `GetColumnInfo` MyProviderRS.cpp 파일에서 다음과 같이 작동 합니다.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
   
@@ -161,13 +163,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo`이라는 속성 있는지 여부를 확인 하려면 첫 번째 확인 **DBPROP_IRowsetLocate** 설정 됩니다. OLE DB의 각 행 집합 개체는 선택적 인터페이스에 대 한 속성이 있습니다. 소비자가 이러한 선택적 인터페이스 중 하나를 사용 하려는 경우에 속성이 true로 설정 합니다. 공급자 수이 속성을 선택 하 고에 따라 특별 한 조치를 취합니다.  
+ `GetColumnInfo` 이라는 속성 있는지 여부를 확인 하려면 첫 번째 확인 **DBPROP_IRowsetLocate** 설정 됩니다. OLE DB의 각 행 집합 개체는 선택적 인터페이스에 대 한 속성이 있습니다. 소비자가 이러한 선택적 인터페이스 중 하나를 사용 하려는 경우에 속성이 true로 설정 합니다. 공급자 수이 속성을 선택 하 고에 따라 특별 한 조치를 취합니다.  
   
  구현에 명령 개체에 대 한 포인터를 사용 하 여 속성을 가져옵니다. `pThis` 포인터 행 집합이 나 명령 클래스를 나타냅니다. 로이 작업에 전달 해야 하는 여기서 서식 파일을 사용 하므로 `void` 포인터 또는 코드는 컴파일되지 않습니다.  
   
  열 정보를 포함 하도록 정적 배열을 지정 합니다. 소비자는 책갈피 열을 원하지 않는 경우 배열에 항목이 낭비 됩니다. 이 배열에 동적으로 할당할 수 있지만 제대로 소멸 되었는지 확인 해야 합니다. 이 예제에서는 정의 하 고 배열에 정보를 삽입 하는 ADD_COLUMN_ENTRY 및 ADD_COLUMN_ENTRY_EX 매크로 사용 합니다. 다음 코드에 나와 있는 것 처럼 MyProviderRS.H 파일에 매크로 추가할 수 있습니다.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -198,13 +200,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
   
  소비자의 코드를 테스트 하려면 몇 가지 변경에 `OnRun` 처리기입니다. 함수에 첫 번째 변경 내용이 속성은 속성 집합을 추가 하는 코드를 추가 합니다. 코드 집합은 **DBPROP_IRowsetLocate** 속성을 true로, 따라서 공급자 라는 책갈피 열이 필요 합니다. `OnRun` 처리기 코드는 다음과 같이 나타납니다.  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // TestProv Consumer Application in TestProvDlg.cpp  
   
 void CTestProvDlg::OnRun()   
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -229,7 +231,8 @@ void CTestProvDlg::OnRun()
       DBCOMPARE compare;  
       if (ulCount == 2)  
          tempBookmark = table.bookmark;  
-      HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
+
+HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
                  &compare);  
       if (FAILED(hr))  
          ATLTRACE(_T("Compare failed: 0x%X\n"), hr);  
@@ -251,7 +254,7 @@ void CTestProvDlg::OnRun()
   
  소비자의 사용자 레코드를 업데이트 해야 할 수도 있습니다. 항목 책갈피 및에서 항목을 처리 하는 클래스에 추가 하는 **COLUMN_MAP**:  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   

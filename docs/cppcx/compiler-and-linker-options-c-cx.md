@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc7610b56d55fc5d42a0c4b73a5405be3d4dda9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>컴파일러 및 링커 옵션(C++/CX)
 환경 변수를 C + + /cli CX 컴파일러 옵션 및 링커 옵션 Windows 런타임에 대 한 앱의 빌드를 지원 합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 |옵션|설명|  
 |------------|-----------------|  
 |/APPCONTAINER[:NO]|실행 파일을 appcontainer에서(만) 실행 가능으로 표시합니다.|  
-|/WINMD [: {아니요 &#124;만}]|.winmd 파일 및 연결된 이진 파일을 내보냅니다. .winmd를 내보내려면 이 옵션을 링커에 전달해야 합니다.<br /><br /> **NO**—.winmd 파일을 내보내지 않지만 이진 파일을 내보냅니다.<br /><br /> **ONLY**—.winmd 파일을 내보내지만 이진 파일을 내보내지 않습니다.|  
+|/WINMD[:{NO&#124;ONLY}]|.winmd 파일 및 연결된 이진 파일을 내보냅니다. .winmd를 내보내려면 이 옵션을 링커에 전달해야 합니다.<br /><br /> **NO**—.winmd 파일을 내보내지 않지만 이진 파일을 내보냅니다.<br /><br /> **ONLY**—.winmd 파일을 내보내지만 이진 파일을 내보내지 않습니다.|  
 |/WINMDFILE:*filename*|기본 .winmd 파일 이름 대신 내보낼 .winmd 파일의 이름입니다. 명령줄에서 여러 파일 이름을 지정하면 마지막 이름이 사용됩니다.|  
 |/WINMDDELAYSIGN[:NO]|.winmd 파일에 부분적으로 서명하고 공개 키를 이진 파일에 삽입합니다.<br /><br /> **NO**—(기본값) .winmd 파일에 서명하지 않습니다.<br /><br /> /WINMDKEYFILE 또는 /WINMDKEYCONTAINER도 지정하지 않으면 /WINMDDELAYSIGN은 아무런 효과가 없습니다.|  
 |/WINMDKEYCONTAINER:*name*|어셈블리에 서명할 키 컨테이너를 지정합니다. *name* 매개 변수는 메타데이터 파일에 서명하는 데 사용되는 키 컨테이너에 해당합니다.|  

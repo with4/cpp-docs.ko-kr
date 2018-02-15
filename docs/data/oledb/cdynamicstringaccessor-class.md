@@ -4,33 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CDynamicStringAccessor
-dev_langs: C++
-helpviewer_keywords: CDynamicStringAccessor class
+f1_keywords:
+- CDynamicStringAccessor
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDynamicStringAccessor class
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6c24e6eaac83d72f8710b039b312f40517fd7e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 72ca3d1626b22f286a7e1ca9a276582d68cd7619
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 클래스
 데이터베이스 스키마(데이터베이스의 내부 구조)에 대해 모를 때 데이터 소스에 액세스할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp
       template< typename BaseType, DBTYPEENUM OleDbType >  
 class CDynamicStringAccessorT : public CDynamicAccessor  
 ```  

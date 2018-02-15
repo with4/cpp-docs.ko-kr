@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - versions [C++]
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2656b7e1901104b29300f5adb6647e7f3ac1db57
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual c + + 도구 및 Visual Studio 버전의 기능
 다음 표에는 Visual Studio에서 사용할 수 있는 Visual C++ 기능이 나와 있습니다. 셀에 X가 있으면 해당 기능을 사용할 수 있음을 나타내고, 셀이 비어 있으면 해당 기능을 사용할 수 없음을 나타냅니다. 괄호 안의 참고 사항은 해당 기능을 사용할 수 있지만 제한됨을 나타냅니다.  
@@ -34,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 |플랫폼|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|  
 |Windows 바탕 화면||X|X|X|  
 |범용 Windows 플랫폼(휴대폰, 태블릿, PC, Xbox, IoT 및 HoloLens)|X||X|X|  
-|Windows 스토어 8.1|||X|X|  
+|Microsoft 스토어 8.1|||X|X|  
 |Windows Phone 8.0|||X|X|  
 |Android|||X|X|  
 |iOS|||X|X|  
@@ -66,10 +69,10 @@ ms.lasthandoff: 12/21/2017
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
 |UWP, Windows 8.1, Windows Phone 8.0용 XAML 템플릿|X||X|X|  
 |Direct3D 응용 프로그램|X||X|X|  
-|DLL(Windows 스토어 앱)|X||X|X|  
-|정적 라이브러리(Windows 스토어 앱)|X||X|X|  
+|DLL (유니버설 Windows)|X||X|X|  
+|정적 라이브러리 (유니버설 Windows)|X||X|X|  
 |Windows 런타임 구성 요소|X||X|X|  
-|단위 테스트 라이브러리(Windows 스토어 앱)|X||X|X|  
+|단위 테스트 앱 (유니버설 Windows)|X||X|X|  
 |ATL 프로젝트|||X|X|  
 |클래스 라이브러리(CLR)||X|X|X|  
 |CLR 콘솔 응용 프로그램||X|X|X|  

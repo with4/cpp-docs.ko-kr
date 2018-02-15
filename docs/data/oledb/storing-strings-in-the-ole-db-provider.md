@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: user records, editing
+dev_langs:
+- C++
+helpviewer_keywords:
+- user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 11c058bacee52eb2b1df771a27d8695113f1c71d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 523193d7fa5f18d3d0956d39ca68cdc5d34131b0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>OLE DB 공급자에 문자열 저장
 MyProviderRS.h, ATL OLE DB 공급자 마법사 라는 기본 사용자 레코드를 만듭니다. `CWindowsFile`합니다. 수정 하거나 두 문자열을 처리 하려면 `CWindowsFile` 또는 다음 코드에 표시 된 대로 사용자 고유의 레코드를 추가 합니다.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 class CAgentMan:   
    public WIN32_FIND_DATA  

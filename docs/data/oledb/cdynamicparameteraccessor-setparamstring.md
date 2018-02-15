@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,39 +14,35 @@ f1_keywords:
 - SetParamString
 - CDynamicParameterAccessor::SetParamString
 - CDynamicParameterAccessor.SetParamString
-dev_langs: C++
-helpviewer_keywords: SetParamString method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetParamString method
 ms.assetid: 77a38d23-7e33-4e5a-bda6-c12c4c3fe2e4
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 75d6e9887b609349a092bb67e55508ca1429387b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0630f7ee591dccc5c9e3cb5b84ae5387bd4c9a2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicparameteraccessorsetparamstring"></a>CDynamicParameterAccessor::SetParamString
 버퍼에 저장된 지정된 매개 변수의 문자열 데이터를 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-      bool SetParamString(   
-   DBORDINAL nParam,   
-   const CHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
-) throw( );  
-bool SetParamString(   
-   DBORDINAL nParam,   
-   const WCHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
-) throw( );  
+```
+bool SetParamString(DBORDINAL nParam,   
+   constCHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam,   
+   constWCHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK) throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -61,7 +58,7 @@ bool SetParamString(
 ## <a name="remarks"></a>설명  
  반환 **true** 성공 또는 **false** 실패 합니다.  
   
- `SetParamString`에 대 한 지정 된 최대 크기 보다 큰 문자열을 설정 하려고 하면 실패 합니다 `pString`합니다.  
+ `SetParamString` 에 대 한 지정 된 최대 크기 보다 큰 문자열을 설정 하려고 하면 실패 합니다 `pString`합니다.  
   
  사용 하 여 `SetParamString` 버퍼에 문자열 매개 변수 데이터를 설정할 수 있습니다. 사용 하 여 [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 버퍼에 문자열이 아닌 매개 변수 데이터를 설정할 수 있습니다.  
   

@@ -4,38 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - IRowsetUpdateImpl
 - ATL.IRowsetUpdateImpl
 - ATL::IRowsetUpdateImpl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, updatable
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 206f3d25069eaa12efce8150e82c4f54fc96f4fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36282ea38922656484b208f3215c881f8ed8cf34
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 클래스
 OLE DB 템플릿 구현의 [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) 인터페이스입니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template <  
    class T,   
    class Storage,   
@@ -43,13 +45,13 @@ template <
    class RowClass = CSimpleRow,   
    class MapClass = CAtlMap <RowClass::KeyType, RowClass*>   
 >  
+
 class IRowsetUpdateImpl : public IRowsetChangeImpl<  
    T,   
    Storage,   
    IRowsetUpdate,   
    RowClass,   
-   MapClass  
->  
+   MapClass>  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -101,7 +103,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ## <a name="remarks"></a>설명  
  먼저 읽기 및에 대 한 설명서를 이해 해야 [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)적용 되기 때문에 있는 설명 된 모든 것도 여기, 합니다. 6 장 읽어야는 *OLE DB Programmer's Reference* 에 데이터를 설정 합니다.  
   
- `IRowsetUpdateImpl`OLE DB 구현 `IRowsetUpdate` 소비자가 변경 된 내용을 전송 지연 시킬 수 있는 인터페이스 `IRowsetChange` 에 데이터 소스 및 전송 하기 전에 변경 내용을 취소 합니다.  
+ `IRowsetUpdateImpl` OLE DB 구현 `IRowsetUpdate` 소비자가 변경 된 내용을 전송 지연 시킬 수 있는 인터페이스 `IRowsetChange` 에 데이터 소스 및 전송 하기 전에 변경 내용을 취소 합니다.  
   
 > [!IMPORTANT]
 >  공급자를 구현 하기 전에 다음 문서를 읽는 것이 가장 좋습니다.  

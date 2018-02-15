@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd224163f11a4ebafde8faf6b0c3156d89de1781
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="testing-the-read-only-provider"></a>읽기 전용 공급자 테스트
 공급자를 테스트 하려면 소비자가 있어야 합니다. 공급자와 소비자 수와 일치 하는 경우 도움이 됩니다. OLE DB 소비자 템플릿은 OLE DB에 대 한 씬 래퍼 있으며 공급자 COM 개체와 일치 합니다. 소스는 소비자 템플릿과 함께 제공 되, 때문에 이러한 공급자를 디버깅할 쉽습니다. 소비자 템플릿은 소비자 응용 프로그램을 개발 하는 매우 작고 빠른 방법입니다.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  (이 case TestProvDlg.h)에서 대화 상자 클래스에 대 한 헤더 파일을 엽니다. 클래스 선언) (외부 헤더 파일에 다음 코드를 추가 합니다.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // TestProvDlg.h  
   
@@ -76,13 +78,13 @@ END_COLUMN_MAP()
   
  처리기 함수에 대 한 추가 **실행** CTRL 키를 누르고 두 번 클릭 하면 단추는 **실행** 단추입니다. 함수에 다음 코드를 배치 합니다.  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   
 void CtestProvDlg::OnRun()  
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -122,7 +124,7 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
   
  문자열에 전달 "c:\\\samples\\\myprov\\\MyData.txt"에서 `table.Open` 선입니다. 경우에 `Open` 호출 표시이 문자열에 전달 되는 `SetCommandText` 공급자의 메서드. `ICommandText::Execute` 메서드는이 문자열을 사용 합니다.  
   
- 데이터를 페치 하려면 호출 `MoveNext` 테이블에 있습니다. `MoveNext`호출 된 **irowset:: Getnextrows**, `GetRowCount`, 및 `GetData` 함수입니다. 행이 더 이상 없는 경우 (즉, 행 집합의 현재 위치 보다 큽니다 `GetRowCount`), 루프가 종료 됩니다.  
+ 데이터를 페치 하려면 호출 `MoveNext` 테이블에 있습니다. `MoveNext` 호출 된 **irowset:: Getnextrows**, `GetRowCount`, 및 `GetData` 함수입니다. 행이 더 이상 없는 경우 (즉, 행 집합의 현재 위치 보다 큽니다 `GetRowCount`), 루프가 종료 됩니다.  
   
 ```  
 while (table.MoveNext() == S_OK)  

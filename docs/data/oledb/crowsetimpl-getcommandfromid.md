@@ -4,40 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CRowsetImpl::GetCommandFromID
 - GetCommandFromID
 - CRowsetImpl.GetCommandFromID
-dev_langs: C++
-helpviewer_keywords: GetCommandFromID method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetCommandFromID method
 ms.assetid: 9f39cb07-1c40-486f-ba5b-cb4a65fab8a7
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e75fbd00b6ee2e4a19cf0fe39d0bcda9f0314f8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64db10bec645b357107134dc1838e8840f8be6fa
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetimplgetcommandfromid"></a>CRowsetImpl::GetCommandFromID
 데이터 멤버에 문자열 값을 복사 하는 문자열 값을 포함 하는 매개 변수 중 하나 또는 둘 그리고 있다면 확인 [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) 및 [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-      HRESULT CRowsetBaseImpl::GetCommandFromID(  
-   DBID* pTableID,  
-   DBID* pIndexID   
-);  
+```cpp
+HRESULT CRowsetBaseImpl::GetCommandFromID(DBID* pTableID,  
+   DBID* pIndexID);  
 ```  
   
 #### <a name="parameters"></a>매개 변수  

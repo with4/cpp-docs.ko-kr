@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>방법: WRL을 사용하여 비동기 작업 완료
 이 문서에서는 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하 여 비동기 작업을 시작 하 고 작업 완료 시 작업을 수행 하는 방법을 보여 줍니다.  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  다음 단계 비동기 타이머를 시작 하 고 타이머가 만료 될 때까지 대기 합니다. 전체 예제와 같습니다.  
   
 > [!WARNING]
->  유니버설 Windows 플랫폼 앱에서 Windows 런타임 c + + 템플릿 라이브러리를 일반적으로 사용 되지만이 예제에 대 한 예시는 콘솔 응용 프로그램을 사용 합니다. 와 같은 함수가 `wprintf_s` 는 유니버설 Windows 플랫폼 앱에서 사용할 수 없습니다. 형식 및 유니버설 Windows 플랫폼 앱에서 사용할 수 있는 함수에 대 한 자세한 내용은 참조 [CRT 함수는 /ZW에서 지원 되지](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) 및 [Win32 및 COM에 대 한 Windows 스토어 앱](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)합니다.  
+>  일반적으로 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 Windows 런타임 c + + 템플릿 라이브러리를 사용 되지만이 예제에 대 한 예시는 콘솔 응용 프로그램을 사용 합니다. 와 같은 함수가 `wprintf_s` 는 UWP 앱에서 사용할 수 없습니다. 형식 및 UWP 앱에서 사용할 수 있는 함수에 대 한 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) 및 [UWP 앱 용 Win32 및 COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)합니다.  
   
 1.  포함 (`#include`) Windows 런타임, Windows 런타임 c + + 템플릿 라이브러리 또는 c + + 표준 라이브러리 헤더 필수입니다.  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="compiling-the-code"></a>코드 컴파일  
  코드를 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 하거나 라는 파일에 붙여 `wrl-consume-async.cpp` 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
   
- **cl.exe wrl 소비 async.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
   
 ## <a name="example-working-with-a-background-thread"></a>예: 백그라운드 스레드 작업  
  다음 단계 작업자 스레드를 시작 하 고 해당 스레드에 의해 수행 되는 작업을 정의 합니다. 전체 예제와 같습니다.  
@@ -126,7 +128,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="compiling-the-code"></a>코드 컴파일  
  코드를 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 하거나 라는 파일에 붙여 `wrl-consume-asyncOp.cpp` 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
   
- **cl.exe wrl 소비 asyncOp.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 런타임 C++ 템플릿 라이브러리(WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

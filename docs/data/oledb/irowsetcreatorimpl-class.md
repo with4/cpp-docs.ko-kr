@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,28 +14,30 @@ f1_keywords:
 - ATL::IRowsetCreatorImpl<T>
 - ATL.IRowsetCreatorImpl<T>
 - IRowsetCreatorImpl
-dev_langs: C++
-helpviewer_keywords: IRowsetCreatorImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetCreatorImpl class
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3a1a1c17ad9469ff31b5520ffadb3349f86827ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 751f4d41d63a11acd24911969b3649b3ecc46d03
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 클래스
 동일한 기능을 수행 `IObjectWithSite` 하지만 또한 OLE DB 속성을 사용 하면 **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**합니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template < class T >  
 class ATL_NO_VTABLE IRowsetCreatorImpl   
    : public IObjectWithSiteImpl< T >  

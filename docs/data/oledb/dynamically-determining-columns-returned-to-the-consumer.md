@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2827747d91bd1c26e173b6f0bdb44d54c3d0f8e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed7ad9ab7b28758419c2b7c848852678f69bc3e2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>소비자에게 반환되는 열을 동적으로 결정
 PROVIDER_COLUMN_ENTRY 매크로 정상적으로 처리는 **icolumnsinfo:: Getcolumnsinfo** 호출 합니다. 그러나 소비자는 책갈피를 사용 하도록 선택할 수도, 때문에 공급자는 소비자는 책갈피를 요청 하는 여부에 따라 반환 되는 열을 변경 하려면 수 있어야 합니다.  
   
  처리 하는 **icolumnsinfo:: Getcolumnsinfo** 호출, 삭제 하는 함수를 정의 하는 PROVIDER_COLUMN_MAP `GetColumnInfo`에서 `CAgentMan` 사용자 MyProviderRS.h의 기록 및 직접에 대 한 정의로 바꾸기 `GetColumnInfo` 함수:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
 class CAgentMan  
@@ -53,11 +55,11 @@ public:
   
  그런 다음 구현는 `GetColumnInfo` 다음 코드에 나와 있는 것 처럼 MyProviderRS.cpp에서 작동 합니다.  
   
- `GetColumnInfo`먼저 확인 하는 경우 OLE DB 속성인 **DBPROP_BOOKMARKS** 설정 됩니다. 속성을 가져오려면 `GetColumnInfo` 포인터를 사용 하 여 (`pRowset`) 행 집합 개체에 있습니다. `pThis` 포인터는 클래스 속성 맵에 저장 된 클래스는 행 집합을 생성 하는 클래스를 나타냅니다. `GetColumnInfo`대입문에서 `pThis` 에 대 한 포인터는 `RMyProviderRowset` 포인터입니다.  
+ `GetColumnInfo` 먼저 확인 하는 경우 OLE DB 속성인 **DBPROP_BOOKMARKS** 설정 됩니다. 속성을 가져오려면 `GetColumnInfo` 포인터를 사용 하 여 (`pRowset`) 행 집합 개체에 있습니다. `pThis` 포인터는 클래스 속성 맵에 저장 된 클래스는 행 집합을 생성 하는 클래스를 나타냅니다. `GetColumnInfo` 대입문에서 `pThis` 에 대 한 포인터는 `RMyProviderRowset` 포인터입니다.  
   
  확인 하려면는 **DBPROP_BOOKMARKS** 속성을 `GetColumnInfo` 사용 하 여는 `IRowsetInfo` 인터페이스를 호출 하 여 얻을 수 있는 `QueryInterface` 에 `pRowset` 인터페이스입니다. ATL을 사용할 수는 대신 [CComQIPtr](../../atl/reference/ccomqiptr-class.md) 메서드 대신 합니다.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
@@ -118,12 +120,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
  이 예제에서는 정적 배열을 사용 하 여 열 정보를 포함 하도록 합니다. 소비자는 책갈피 열을 원하지 않는 경우 배열에 있는 하나의 항목을 사용 하지 않습니다. 정보를 처리 하려면 두 배열 매크로 만들면: ADD_COLUMN_ENTRY 및 ADD_COLUMN_ENTRY_EX 합니다. 추가 매개 변수를 사용 하는 ADD_COLUMN_ENTRY_EX `flags`, 즉 책갈피 열을 지정 하는 경우에 필요 합니다.  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision,   
-scale, guid, dataClass, member) \  
+#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
@@ -134,8 +135,7 @@ scale, guid, dataClass, member) \
    _rgColumns[ulCols].bScale = (BYTE)scale; \  
    _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);  
   
-#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type,   
-precision, scale, guid, dataClass, member, flags) \  
+#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  

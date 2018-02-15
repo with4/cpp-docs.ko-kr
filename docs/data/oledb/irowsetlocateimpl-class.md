@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetLocateImpl
-dev_langs: C++
+f1_keywords:
+- IRowsetLocateImpl
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, bookmarks
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e2a43df3d8732734ed79aae4c56a891bd20bbebe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 클래스
 OLE DB 구현 [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) 인터페이스에는 행 집합에서 임의의 행을 인출 합니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,   
@@ -40,14 +43,12 @@ template <
    class MapClass = CAtlMap < RowClass::KeyType, RowClass* >,   
    class BookmarkKeyType = LONG,   
    class BookmarkType = LONG,   
-   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >  
->  
+   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >>  
 class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<  
-   T,   
-   RowsetInterface,   
-   RowClass,   
-   MapClass  
->  
+       T,   
+       RowsetInterface,   
+       RowClass,   
+       MapClass>  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -81,7 +82,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|두 개의 책갈피를 비교합니다.|  
 |[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|책갈피에서의 오프셋으로 지정 된 행부터 시작 하는 행을 인출 합니다.|  
 |[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|지정 된 책갈피를 일치 하는 행을 인출 합니다.|  
-|[해시](../../data/oledb/irowsetlocateimpl-hash.md)|지정 된 책갈피에 대 한 값을 해시 하는 반환 합니다.|  
+|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|지정 된 책갈피에 대 한 값을 해시 하는 반환 합니다.|  
   
 ### <a name="data-members"></a>데이터 멤버  
   
@@ -90,9 +91,9 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|책갈피의 배열입니다.|  
   
 ## <a name="remarks"></a>설명  
- `IRowsetLocateImpl`OLE DB 템플릿 구현인는 [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) 인터페이스입니다. `IRowsetLocate`행 집합에서 임의의 행을 인출 하는 데 사용 됩니다. 이 인터페이스를 구현 하지 않는 행 집합은 한 `sequential` 행 집합입니다. 때 `IRowsetLocate` 있으면 행 집합에 열 0이 행에 대 한 책갈피;이 열을 읽는 동일한 행에 위치를 변경 하는 데 사용할 수 있는 책갈피 값을 가져옵니다.  
+ `IRowsetLocateImpl` OLE DB 템플릿 구현인는 [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) 인터페이스입니다. `IRowsetLocate` 행 집합에서 임의의 행을 인출 하는 데 사용 됩니다. 이 인터페이스를 구현 하지 않는 행 집합은 한 `sequential` 행 집합입니다. 때 `IRowsetLocate` 있으면 행 집합에 열 0이 행에 대 한 책갈피;이 열을 읽는 동일한 행에 위치를 변경 하는 데 사용할 수 있는 책갈피 값을 가져옵니다.  
   
- `IRowsetLocateImpl`공급자의 책갈피 지원을 구현 하는 데 사용 됩니다. 책갈피는 자리 표시자 (인덱스 행 집합에서) 소비자는 행에 신속 하 게 반환할 수 있도록 하는 고속 데이터 액세스를 허용 합니다. 공급자 책갈피 수 있는 고유 하 게 결정 한 행을 식별 합니다. 사용 하 여 `IRowsetLocateImpl` 메서드, 책갈피를 비교할 수 있습니다, by 인출 행 오프셋, 책갈피에서 행 인출 및 책갈피에 대 한 해시 값을 반환 합니다.  
+ `IRowsetLocateImpl` 공급자의 책갈피 지원을 구현 하는 데 사용 됩니다. 책갈피는 자리 표시자 (인덱스 행 집합에서) 소비자는 행에 신속 하 게 반환할 수 있도록 하는 고속 데이터 액세스를 허용 합니다. 공급자 책갈피 수 있는 고유 하 게 결정 한 행을 식별 합니다. 사용 하 여 `IRowsetLocateImpl` 메서드, 책갈피를 비교할 수 있습니다, by 인출 행 오프셋, 책갈피에서 행 인출 및 책갈피에 대 한 해시 값을 반환 합니다.  
   
  행 집합에 OLE DB 책갈피를 지원 하려면이 클래스에서 상속 하는 행 집합을 확인 합니다.  
   

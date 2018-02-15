@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,19 +24,22 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs: C++
-helpviewer_keywords: Concurrency namespace
+dev_langs:
+- C++
+helpviewer_keywords:
+- Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8662011107f9befef63ec247060a319172569300
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86513e9196a3bdc8da2f414fcc792cbeb67b706d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-namespace"></a>동시성 네임스페이스
 `Concurrency` 네임스페이스는 C++용 동시 프로그래밍 프레임워크인 동시성 런타임에 액세스하는 데 사용할 수 있는 클래스와 함수를 제공합니다. 자세한 내용은 [동시성 런타임](../../../parallel/concrt/concurrency-runtime.md)을 참조하세요.  
@@ -137,7 +141,7 @@ namespace concurrency;
 |[task 클래스(동시성 런타임)](task-class.md)|PPL(병렬 패턴 라이브러리) `task` 클래스입니다. `task` 개체는 비동기식으로 실행할 수 있으며 동시성 런타임의 병렬 알고리즘을 통해 생성되는 기타 작업 및 병렬 작업과 동시에 실행할 수 있는 작업을 나타냅니다. 이러한 작업이 정상적으로 완료되면 `_ResultType` 형식의 결과가 생성됩니다. `task<void>` 형식의 작업에서는 결과가 생성되지 않습니다. 작업은 다른 작업과 관계없이 대기 및 취소할 수 있으며 연속(`then`), 조인 (`when_all`) 및 선택(`when_any`) 패턴을 사용하여 다른 작업으로 구성될 수도 있습니다.|  
 |[task_canceled 클래스](task-canceled-class.md)|이 클래스는 현재 작업을 강제 취소하도록 PPL 작업 레이어에서 throw된 예외를 설명합니다. throw 됩니다는 `get()` 메서드를 [작업](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f), 취소 된 작업에 대 한 합니다.|  
 |[task_completion_event 클래스](task-completion-event-class.md)|`task_completion_event` 클래스를 사용하면 조건이 충족될 때까지 작업 실행을 지연하거나 외부 이벤트에 대한 응답으로 작업을 시작할 수 있습니다.|  
-|[task_continuation_context 클래스](task-continuation-context-class.md)|`task_continuation_context` 클래스를 사용하면 연속 실행 위치를 지정할 수 있습니다. 이 클래스는 Windows 스토어 앱에서 사용할 때만 유용합니다. 그 외의 앱에서는 작업 연속 실행 컨텍스트가 런타임에 의해 결정되며 구성할 수 없습니다.|  
+|[task_continuation_context 클래스](task-continuation-context-class.md)|`task_continuation_context` 클래스를 사용하면 연속 실행 위치를 지정할 수 있습니다. 만 UWP 앱에서이 클래스를 사용 하는 것이 유용 합니다. 비-Windows 런타임 앱에 대 한 작업 연속 실행 컨텍스트가 결정 되며 런타임에 의해 구성할 수 없습니다.|  
 |[task_group 클래스](task-group-class.md)|`task_group` 클래스는 대기하거나 취소할 수 있는 병렬 작업 컬렉션을 나타냅니다.|  
 |[task_handle 클래스](task-handle-class.md)|`task_handle` 클래스는 개별 병렬 작업 항목을 나타냅니다. 작업을 실행하는 데 필요한 지침 및 데이터를 캡슐화합니다.|  
 |[task_options 클래스(동시성 런타임)](task-options-class-concurrency-runtime.md)|작업을 만드는 데 사용할 수 있는 옵션을 나타냅니다.|  
@@ -177,7 +181,7 @@ namespace concurrency;
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|이벤트 형식에 대한 추적 플래그입니다.|  
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|컨텍스트가 있는 위험 영역의 형식입니다.|  
 |[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` 정책에서 스케줄러에 대한 리소스를 스케줄러에서 수집한 통계 정보에 따라 균형을 조정할지, 아니면 `IVirtualProcessorRoot` 인터페이스의 `Activate` 및 `Deactivate` 메서드 호출을 통해 유휴 상태로 들어오고 나가는 가상 프로세서를 기준으로만 균형을 조정할지를 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|  
-|[조인 유형](concurrency-namespace-enums.md#join_type)|`join` 메시징 블록의 형식입니다.|  
+|[join_type](concurrency-namespace-enums.md#join_type)|`join` 메시징 블록의 형식입니다.|  
 |[message_status](concurrency-namespace-enums.md#message_status)|블록에 대한 `message` 개체 제공에 유효한 응답입니다.|  
 |[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|스케줄러 동작의 측면을 설명하는 정책 키입니다. 각 정책 요소는 키-값 쌍으로 설명됩니다. 스케줄러에 미치는 영향 및 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [작업 스케줄러](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.|  
 |[SchedulerType](concurrency-namespace-enums.md#schedulertype)|`SchedulerKind` 정책에서 스케줄러가 기본 실행 컨텍스트에 활용해야 하는 스레드 형식을 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)합니다.|  
@@ -211,7 +215,7 @@ namespace concurrency;
 |[make_greedy_join 함수](concurrency-namespace-functions.md#make_greedy_join)|오버로드됨. 선택적 `greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|  
 |[make_join 함수](concurrency-namespace-functions.md#make_join)|오버로드됨. 선택적 `non_greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|  
 |[make_task 함수](concurrency-namespace-functions.md#make_task)|`task_handle` 개체를 만들기 위한 팩터리 메서드입니다.|  
-|[parallel_buffered_sort 함수](concurrency-namespace-functions.md#parallel_buffered_sort)|오버로드됨. 지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 병렬로 정렬합니다. 이 함수는 `O(n)` 추가 공간이 필요하고 정렬되는 요소에 대한 기본 초기화를 요구한다는 점을 제외하고, 비교 기반의 불안정한 내부 정렬이라는 점에서 `std::sort`와 의미 체계가 비슷합니다.|  
+|[parallel_buffered_sort Function](concurrency-namespace-functions.md#parallel_buffered_sort)|오버로드됨. 지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 병렬로 정렬합니다. 이 함수는 `O(n)` 추가 공간이 필요하고 정렬되는 요소에 대한 기본 초기화를 요구한다는 점을 제외하고, 비교 기반의 불안정한 내부 정렬이라는 점에서 `std::sort`와 의미 체계가 비슷합니다.|  
 |[parallel_for 함수](concurrency-namespace-functions.md#parallel_for)|오버로드됨. `parallel_for`는 일정 범위의 인덱스를 반복하고 각 반복 시 사용자가 제공한 함수를 병렬로 실행합니다.|  
 |[parallel_for_each 함수](concurrency-namespace-functions.md#parallel_for_each)|오버로드됨. `parallel_for_each`는 범위 내의 각 요소에 지정된 함수를 병렬로 적용합니다. 요소에 대한 반복이 병렬로 수행되고 반복 순서가 지정되지 않는다는 점을 제외하고 `std` 네임스페이스의 `for_each` 함수와 의미 체계가 같습니다. `_Func` 인수는 `operator()(T)` 형식의 함수 호출 연산자를 지원해야 합니다. 여기서 `T` 매개 변수는 반복되는 컨테이너의 항목 형식입니다.|  
 |[parallel_invoke 함수](concurrency-namespace-functions.md#parallel_invoke)|오버로드됨. 매개 변수로 제공된 함수 개체를 병렬로 실행하고 실행이 완료될 때까지 차단됩니다. 각 함수 개체는 람다 식, 함수에 대한 포인터 또는 `void operator()()` 서명을 사용하여 함수 호출 연산자를 지원하는 모든 개체일 수 있습니다.|  
@@ -270,7 +274,7 @@ namespace concurrency;
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|가상 프로세서와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_ list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
+ **Header:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
   
 ## <a name="see-also"></a>참고 항목  
  [참조](reference-concurrency-runtime.md)

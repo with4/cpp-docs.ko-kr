@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d858a940205ab47f1ee07f720a0f8aa1bcaaf42f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa87713b49fe41dbdb7eb8f9e6382c8f78b51d0c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="interfaces-ccx"></a>인터페이스(C++/CX)
 ref 클래스가 상속할 수 있는 구체적 기본 클래스는 하나뿐이지만 구현할 수 있는 인터페이스 클래스의 개수에는 제한이 없습니다. 인터페이스 클래스(또는 인터페이스 구조체) 자체는 여러 인터페이스 클래스를 상속하거나 필요로 할 수 있고, 멤버 함수를 오버로드할 수 있으며, 형식 매개 변수를 사용할 수 있습니다.  

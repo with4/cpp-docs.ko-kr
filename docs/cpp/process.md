@@ -4,34 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: process_cpp
-dev_langs: C++
+f1_keywords:
+- process_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - __declspec keyword [C++], process
 - process __declspec keyword
 ms.assetid: 60eecc2f-4eef-4567-b9db-aaed34733023
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6754adcb348cb6eb061e32fc58e78f43663b1a90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c50948d613a40a03d0249e1930943ef61c855b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="process"></a>process
-프로세스의 모든 응용 프로그램 도메인에서 공유되는 특정 전역 변수, 정적 멤버 변수 또는 정적 지역 변수의 단일 복사본이 관리되는 응용 프로그램 프로세스에 있어야 함을 지정합니다. 이 방법은 주로 사용 하 여 컴파일할 때 사용 되는 **/clr: pure**때문에에서 **/clr: 순수** 전역 및 정적 변수는 기본적으로 응용 프로그램 도메인, 합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다. 로 컴파일할 때 **/clr**, 전역 및 정적 변수는 기본적으로 프로세스별 (사용할 필요가 없습니다 `__declspec(process)`합니다.  
+프로세스의 모든 응용 프로그램 도메인에서 공유되는 특정 전역 변수, 정적 멤버 변수 또는 정적 지역 변수의 단일 복사본이 관리되는 응용 프로그램 프로세스에 있어야 함을 지정합니다. 이 사용 하 여 컴파일할 때 사용 되는 주로 되었습니다 **/clr: pure**는 이제 사용 되지 않는 및 이후 버전의 컴파일러에서 제거 됩니다. 로 컴파일할 때 **/clr**, 전역 및 정적 변수는 기본적으로 프로세스별 (사용할 필요가 없습니다 `__declspec(process)`합니다.  
   
  전역 변수, 정적 멤버 변수 또는 네이티브 형식의 정적 지역 변수만 `__declspec(process)`로 표시할 수 있습니다.  
   
- 로 컴파일할 때 **/clr: pure**,으로 프로세스 별로 표시 된 변수를 선언 해야 `const`합니다. 이렇게 하면 프로세스별 변수가 한 응용 프로그램 도메인에서 변경되지 않아 다른 응용 프로그램 도메인에서 예기치 않은 결과가 발생합니다. 주로 사용 `__declspec(process)` 전역 변수, 정적 멤버 변수 또는 정적 지역 변수의 컴파일 타임 초기화를 사용 하도록 설정 하는 것 **/clr: pure**합니다.  
   
- `process`로 컴파일할 때만 유효 [/clr](../build/reference/clr-common-language-runtime-compilation.md) 또는 **/clr: pure** 로 컴파일할 때 유효 하지 않습니다 **/clr: safe**합니다.  
+ `process` 로 컴파일할 때만 유효 [/clr](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
   
  전역 변수의 자체 복사본을 각 응용 프로그램 도메인 사용 [appdomain](../cpp/appdomain.md)합니다.  
   

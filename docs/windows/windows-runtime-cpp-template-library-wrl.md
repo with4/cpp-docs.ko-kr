@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 런타임 C++ 템플릿 라이브러리(WRL)
-Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 만들고 Windows 런타임 구성 요소를 사용 하기 위한 간단한 방법을 제공 하는 템플릿 라이브러리입니다.  
+WRL(Windows 런타임 C++ 템플릿 라이브러리)은 Windows 런타임 구성 요소를 만들고 사용하기 위한 간단한 방법을 제공하는 템플릿 라이브러리입니다.  
   
 ## <a name="benefits"></a>이점  
  Windows 런타임 c + + 템플릿 라이브러리를 사용 하면 보다 손쉽게 구현 하 고 구성 요소 개체 모델 (COM) 구성 요소를 사용할 수 있습니다. 이 라이브러리는 개체의 수명을 관리하기 위해 참조 횟수와 같은 관리 기법을 제공하며, 작업의 성공 또는 실패를 확인하기 위한 테스트 `HRESULT` 값을 제공합니다. Windows 런타임 c + + 템플릿 라이브러리를 사용 하려면 이러한 규칙과 기법 신중 하 게 수행 해야 합니다.  
@@ -45,7 +47,7 @@ Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 만들고 Windows 런
  다음은 Windows 런타임 c + + 템플릿 라이브러리를 바로 사용할 수 있는 몇 가지 리소스입니다.  
   
  [Windows 런타임 라이브러리 (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- 이 채널 9 비디오에서 자세히 Windows 런타임 c + + 템플릿 라이브러리를 통해 방법에 대 한 Windows 런타임 구성 요소를 사용 하는 방법 및 유니버설 Windows 플랫폼 앱을 작성 합니다.  
+ 이 채널 9 비디오에서 자세히 방법에 대 한 Windows 런타임 c + + 템플릿 라이브러리 Windows 런타임 구성 요소를 사용 하는 방법 및 유니버설 Windows 플랫폼 (UWP) 앱을 작성 합니다.  
   
  [방법: 활성화 하 고 Windows 런타임 구성 요소를 사용 하 여](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
  Windows 런타임을 초기화 및 활성화 하 고 Windows 런타임 구성 요소를 사용 하 여 Windows 런타임 c + + 템플릿 라이브러리를 사용 하는 방법을 보여 줍니다.  
@@ -57,10 +59,10 @@ Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 만들고 Windows 런
  구독 하 고 Windows 런타임 개체의 이벤트를 처리 하는 Windows 런타임 c + + 템플릿 라이브러리를 사용 하는 방법을 보여 줍니다.  
   
  [연습: 기본 Windows 런타임 구성 요소 만들기](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- 두 숫자를 추가 하는 기본적인 Windows 런타임 구성 요소를 Windows 런타임 c + + 템플릿 라이브러리를 사용 하는 방법을 보여 줍니다. 또한 이벤트를 발생 시키고 JavaScript를 사용 하는 유니버설 Windows 플랫폼 앱에서 구성 요소를 사용 하는 방법을 보여 줍니다.  
+ 두 숫자를 추가 하는 기본적인 Windows 런타임 구성 요소를 Windows 런타임 c + + 템플릿 라이브러리를 사용 하는 방법을 보여 줍니다. 또한 이벤트를 발생 시키고 JavaScript를 사용 하는 UWP 앱에서 구성 요소를 사용 하는 방법을 보여 줍니다.  
   
- [연습: WRL 및 Media Foundation을 사용하여 Windows 스토어 앱 만들기](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- 사용 하는 유니버설 Windows 플랫폼 앱을 만드는 방법을 배울 [Microsoft 미디어 파운데이션](http://msdn.microsoft.com/library/windows/apps/ms694197)합니다.  
+ [연습: WRL 및 Media Foundation을 사용 하는 UWP 앱 만들기](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ 사용 하는 UWP 앱을 만드는 방법을 배울 [Microsoft 미디어 파운데이션](http://msdn.microsoft.com/library/windows/apps/ms694197)합니다.  
   
  [방법: 기본 COM 구성 요소 만들기](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  Windows 런타임 c + + 템플릿 라이브러리를 기본 COM 구성 요소를 만들고 등록 하 고 데스크톱 앱에서 COM 구성 요소를 사용 하는 기본 방법을 사용 하는 방법을 보여 줍니다.  
@@ -72,10 +74,10 @@ Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 만들고 Windows 런
  .winmd 메타데이터에서 IDL 파일을 만들어 WRL의 사용자 지정 Windows 런타임 구성 요소를 사용하는 방법을 살펴봅니다.  
   
  [연습: 작업 및 XML HTTP 요청을 사용하여 연결](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- 사용 하는 방법을 보여 줍니다.는 [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) 및 [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) 유니버설 Windows 플랫폼 앱의 웹 서비스에 HTTP GET 및 POST 요청을 보낼 함께 인터페이스입니다.  
+ 사용 하는 방법을 보여 줍니다.는 [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) 및 [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) UWP 앱에서 웹 서비스에 HTTP GET 및 POST 요청을 보낼 함께 인터페이스입니다.  
   
  [Bing 지도 여행 최적화 프로그램 샘플](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- 사용 하 여는 `HttpRequest` 클래스에 정의 된 [연습:를 사용 하 여 작업 연결 및 XML HTTP 요청](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) 전체 유니버설 Windows 플랫폼 앱의 컨텍스트에서 합니다.  
+ 사용 하 여는 `HttpRequest` 클래스에 정의 된 [연습:를 사용 하 여 작업 연결 및 XML HTTP 요청](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) 전체 UWP 앱의 컨텍스트에서 합니다.  
   
  [C + + 샘플을 사용 하 여 Windows 런타임 DLL 구성 요소 만들기](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
  in-process DLL 구성 요소를 만들고 C +에서 사용 하는 Windows 런타임 c + + 템플릿 라이브러리를 사용 하는 방법을 보여 줍니다. + /CX, JavaScript 및 C#입니다.  
@@ -89,7 +91,7 @@ Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 만들고 Windows 런
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>과 ATL의 비교 하는 Windows 런타임 c + + 템플릿 라이브러리  
  작고 빠른 COM 개체 만들기를 사용할 수 있으므로 Windows 런타임 c + + 템플릿 라이브러리 액티브 템플릿 라이브러리 (ATL)을 유사 합니다. Windows 런타임 c + + 템플릿 라이브러리 및 ATL 또한 인터페이스의 명시적 등록, 모듈의 개체 정의와 같은 개념을 공유 하 고 개체 개방 생성 팩터리를 사용 하 여 합니다. Atl 익숙하다면 모두에 Windows 런타임 c + + 템플릿 라이브러리 수도 있습니다.  
   
- Windows 런타임 c + + 템플릿 라이브러리는 유니버설 Windows 플랫폼 앱에 필요한 COM 기능을 지원 합니다. 따라서 다음과 같은 COM 기능에 대한 직접 지원이 생략된다는 점에서 ATL과 구별됩니다.  
+ Windows 런타임 c + + 템플릿 라이브러리는 UWP 앱에 필요한 COM 기능을 지원 합니다. 따라서 다음과 같은 COM 기능에 대한 직접 지원이 생략된다는 점에서 ATL과 구별됩니다.  
   
 -   집계  
   

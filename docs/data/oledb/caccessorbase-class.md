@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CAccessorBase
-dev_langs: C++
-helpviewer_keywords: CAccessorBase class
+f1_keywords:
+- CAccessorBase
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccessorBase class
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b7c12430c4e7a6872afd46e72e93a29a3189333
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f57c771f0d129683bde0629f9c28cfbaa897ee4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 클래스
-OLE DB 템플릿의 모든 접근자가이 클래스에서 파생 됩니다. `CAccessorBase`여러 접근자를 관리 하는 하나의 행 집합을 허용 합니다. 또한 매개 변수 및 출력 열 모두에 대 한 바인딩을 제공합니다.  
+OLE DB 템플릿의 모든 접근자가이 클래스에서 파생 됩니다. `CAccessorBase` 여러 접근자를 관리 하는 하나의 행 집합을 허용 합니다. 또한 매개 변수 및 출력 열 모두에 대 한 바인딩을 제공합니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 // Replace with syntax  
 ```  
   

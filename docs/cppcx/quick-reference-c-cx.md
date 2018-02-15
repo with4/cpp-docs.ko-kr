@@ -6,23 +6,24 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b34c0d36c33652ecbef3a1af745015d92fc05f3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 29c34d20f7098e7d8e09e0a9a874e64aacc6a620
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="quick-reference-ccx"></a>빠른 참조(C++/CX)
-Windows 런타임 지원 권한 있는 함수, 데이터 형식 및 장치를 사용 하 여를 통해 배포 되는 신뢰할 수 있는 운영 체제 환경 에서만에서 실행 하는 유니버설 Windows 플랫폼 앱에서 [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]합니다. C + + /cli CX Windows 런타임에 대 한 앱의 작성을 단순화 합니다. 이 문서는 빠른 참조입니다. 전체 설명서를 참조 하십시오. [형식 시스템](../cppcx/type-system-c-cx.md) 및 [런타임 플랫폼용 구성 요소 확장명](http://go.microsoft.com/fwlink/p/?linkid=228720)합니다.  
+Windows 런타임에서 신뢰할 수 있는 운영 체제 환경 에서만 실행 권한 있는 함수, 데이터 형식 및 장치를 사용 하 고 Microsoft 스토어를 통해 배포 되는 유니버설 Windows 플랫폼 (UWP) 앱을 지원 합니다. C + + /cli CX Windows 런타임에 대 한 앱의 작성을 단순화 합니다. 이 문서는 빠른 참조입니다. 전체 설명서를 참조 하십시오. [형식 시스템](../cppcx/type-system-c-cx.md) 및 [런타임 플랫폼용 구성 요소 확장명](http://go.microsoft.com/fwlink/p/?linkid=228720)합니다.  
   
- 명령줄에서 빌드할 때 사용 된 **/ZW** 컴파일러 옵션을 유니버설 Windows 플랫폼 앱 또는 Windows 런타임 구성 요소입니다. Windows 런타임 메타 데이터 (.winmd) 파일에 정의 된 Windows 런타임 선언에 액세스 하려면 지정 된 `#using` 지시문 또는 **/FU** 컴파일러 옵션입니다. 유니버설 Windows 플랫폼 앱 용 프로젝트를 만들 때 Visual Studio는 기본적으로 이러한 옵션을 설정 하 고 모든 Windows 런타임 라이브러리에 대 한 참조를 추가 합니다.  
+ 명령줄에서 빌드할 때 사용 된 **/ZW** 컴파일러 옵션을 UWP 앱 또는 Windows 런타임 구성 요소입니다. Windows 런타임 메타 데이터 (.winmd) 파일에 정의 된 Windows 런타임 선언에 액세스 하려면 지정 된 `#using` 지시문 또는 **/FU** 컴파일러 옵션입니다. UWP 앱 용 프로젝트를 만들 때 Visual Studio는 기본적으로 이러한 옵션을 설정 하 고 모든 Windows 런타임 라이브러리에 대 한 참조를 추가 합니다.  
   
 ## <a name="quick-reference"></a>빠른 참조  
   
@@ -50,7 +51,7 @@ Windows 런타임 지원 권한 있는 함수, 데이터 형식 및 장치를 �
 |구조체 선언|`struct` *식별자* `{}`<br /><br /> (즉, POD(Plain Old Data) 구조체)|`value class` *식별자* `{}`<br /><br /> `value struct` *식별자* `{}`|기본 private 액세스 가능성이 있는 POD 구조체를 선언합니다.<br /><br /> 값 클래스는 Windows 메타데이터로 표현될 수 있지만 표준 C++ 클래스는 Windows 메타데이터로 표현될 수 없습니다.<br /><br /> 기본 public 액세스 가능성이 있는 POD 구조체를 선언합니다.<br /><br /> 값 구조체는 Windows 메타데이터로 표현될 수 있지만 표준 C++ 구조체는 Windows 메타데이터로 표현될 수 없습니다.|  
 |인터페이스 선언|순수 가상 함수만 포함하는 추상 클래스입니다.|`interface class` *식별자* `{}`<br /><br /> `interface struct` *식별자* `{}`|기본 private 액세스 가능성이 있는 인터페이스를 선언합니다.<br /><br /> 기본 public 액세스 가능성이 있는 인터페이스를 선언합니다.|  
 |대리자(delegate)|`std::function`|`public delegate` *return-type* *delegate-type-identifier* `(` *[ parameters ]* `);`|함수 호출과 같이 호출할 수 있는 개체를 선언합니다.|  
-|이벤트(event)|(해당 없음)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> 또는<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> 또는<br /><br /> `auto`*토큰 식별자* = *obj*합니다. *이벤트 식별자*`::add(`*대리자 식별자*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> 또는<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|이벤트가 발생한 경우에 호출되는 이벤트 처리기(대리자) 컬렉션을 저장하는 이벤트 개체를 선언합니다.<br /><br /> 이벤트 처리기를 만듭니다.<br /><br /> 이벤트 처리기를 추가합니다.<br /><br /> 이벤트 처리기를 추가하면 이벤트 토큰(*token-identifier*)이 반환됩니다. 이벤트 처리기를 명시적으로 제거하려면 나중에 사용하도록 이벤트 토큰을 저장해야 합니다.<br /><br /> 이벤트 처리기를 제거합니다.<br /><br /> 이벤트 처리기를 제거하려면 이벤트 처리기가 추가될 때 저장한 이벤트 토큰을 지정해야 합니다.|  
+|이벤트(event)|(해당 없음)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> 또는<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> 또는<br /><br /> `auto` *token-identifier* = *obj*. *event-identifier*`::add(`*delegate-identifier*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> 또는<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|이벤트가 발생한 경우에 호출되는 이벤트 처리기(대리자) 컬렉션을 저장하는 이벤트 개체를 선언합니다.<br /><br /> 이벤트 처리기를 만듭니다.<br /><br /> 이벤트 처리기를 추가합니다.<br /><br /> 이벤트 처리기를 추가하면 이벤트 토큰(*token-identifier*)이 반환됩니다. 이벤트 처리기를 명시적으로 제거하려면 나중에 사용하도록 이벤트 토큰을 저장해야 합니다.<br /><br /> 이벤트 처리기를 제거합니다.<br /><br /> 이벤트 처리기를 제거하려면 이벤트 처리기가 추가될 때 저장한 이벤트 토큰을 지정해야 합니다.|  
 |속성|(해당 없음)|`property` *T* *identifier*;<br /><br /> `property` *T* *식별자* `[` *인덱스입니다.* `];`<br /><br /> `property` *T* `default[` *인덱스입니다.* `];`|클래스 또는 개체 멤버 함수가 데이터 멤버 또는 인덱싱된 배열 요소에 액세스하는 데 사용된 같은 구문을 사용하여 액세스됨을 선언합니다.<br /><br /> 클래스 또는 개체 멤버 함수의 속성을 선언합니다.<br /><br /> 개체 멤버 함수의 인덱싱된 속성을 선언합니다.<br /><br /> 클래스 멤버 함수의 인덱싱된 속성을 선언합니다.|  
 |매개 변수화된 형식|템플릿|`generic <typename` *T* `> interface class` *식별자* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|매개 변수화된 인터페이스 클래스를 선언합니다.<br /><br /> 매개 변수화된 대리자를 선언합니다.|  
 |Nullable 값 형식|`boost::optional<T>`|[Platform:: ibox \<T >](../cppcx/platform-ibox-interface.md)|스칼라 형식의 변수 및 값 구조체가 `nullptr`값을 가질 수 있도록 합니다.|  

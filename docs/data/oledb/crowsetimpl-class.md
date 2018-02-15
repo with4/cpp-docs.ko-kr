@@ -4,42 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CRowsetImpl
 - ATL.CRowsetImpl
 - ATL::CRowsetImpl
-dev_langs: C++
-helpviewer_keywords: CRowsetImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRowsetImpl class
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c126c757ae4776d0b2a5d2bec352ee8d58c4f0d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl 클래스
 많은 구현 인터페이스의 여러 상속을 요구 하지 않고 표준 OLE DB 행 집합 구현을 제공 합니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template <  
    class T,  
    class Storage,  
    class CreatorClass,  
    class ArrayType = CAtlArray<Storage>,   
    class RowClass = CSimpleRow,   
-   class RowsetInterface = IRowsetImpl < T, IRowset >   
+   class RowsetInterface = IRowsetImpl <T, IRowset>   
 >  
 class CRowsetImpl :    
    public CComObjectRootEx<CreatorClass::_ThreadModel>,   
@@ -86,7 +89,7 @@ class CRowsetImpl :
 |[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)|행 집합의 초기 인덱스를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CRowsetImpl`정적 업캐스팅의 형태로 재정의 제공합니다. 메서드는 주어진된 행 집합은 명령 텍스트를 확인 하는 방식을 제어 합니다. 직접 만들 수도 `CRowsetImpl`-스타일 클래스를 늘려 구현 인터페이스 다중 상속 합니다. 구현이 제공 해야 하는 유일한 방법은 **Execute**합니다. Creator 메서드가 할에 대 한 다른 서명을 만드는 행 집합의 형식에 따라 필요한 **Execute**합니다. 예를 들어, 사용 하는 경우는 `CRowsetImpl`-스키마 행 집합을 구현 하는 클래스를 파생는 **Execute** 메서드는 다음 서명이 갖습니다.  
+ `CRowsetImpl` 정적 업캐스팅의 형태로 재정의 제공합니다. 메서드는 주어진된 행 집합은 명령 텍스트를 확인 하는 방식을 제어 합니다. 직접 만들 수도 `CRowsetImpl`-스타일 클래스를 늘려 구현 인터페이스 다중 상속 합니다. 구현이 제공 해야 하는 유일한 방법은 **Execute**합니다. Creator 메서드가 할에 대 한 다른 서명을 만드는 행 집합의 형식에 따라 필요한 **Execute**합니다. 예를 들어, 사용 하는 경우는 `CRowsetImpl`-스키마 행 집합을 구현 하는 클래스를 파생는 **Execute** 메서드는 다음 서명이 갖습니다.  
   
  `HRESULT Execute(LONG* pcRows, ULONG cRestrictions, const VARIANT* rgRestrictions)`  
   

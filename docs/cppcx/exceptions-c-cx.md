@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e36360279adf22857cfdb5b2f79ffdd7486ca008
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="exceptions-ccx"></a>예외(C++/CX)
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/22/2018
 
 C + + 프로그램에서 있습니다 수 throw 및 catch 하는 Windows 런타임 작업에서 가져온 예외에서 파생 된 예외 `std::exception`, 또는 사용자 정의 형식입니다. 응용 프로그램 이진 인터페이스 (ABI) 경계를 예를 들어 경우 넘는 예외를 catch 하는 코드가 JavaScript로 작성 된 경우에 Windows 런타임 예외를 throw 해야 합니다. 예외로 변환 되는 비-Windows 런타임 c + + 예외가 ABI 경계에 도달 하면는 `Platform::FailureException` 예외가 E_FAIL HRESULT를 나타내는 예외입니다. ABI에 대 한 자세한 내용은 참조 [Windows 런타임 구성 요소 만들기 c + +](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)합니다.
 
-HRESULT 매개 변수 또는 HRESULT 매개 변수, 그리고 ABI 전반에서 [Platform::String](platform-exception-class.md) ^ 매개 변수 처리 Windows 스토어 앱에 전달 가능한 해당 매개 변수를 받는 두 생성자 중 하나를 사용하여 [Platform::Exception](platform-string-class.md)을 선언할 수 있습니다. HRESULT 매개 변수 또는 HRESULT 매개 변수와 [매개 변수를 사용하는 두](platform-exception-class.md#createexception) Exception::CreateException 메서드 `Platform::String^` 오버로드 중 하나를 사용하여 예외를 선언할 수도 있습니다.
+선언할 수는 [platform:: exception](platform-exception-class.md) HRESULT 매개 변수 또는 HRESULT 매개 변수 두 생성자 중 하나를 사용 하 여 및 [platform:: string](platform-string-class.md)^ 넘어 전달 될 수 있는 매개 변수는 ABI 처리 하는 모든 Windows 런타임 앱입니다. HRESULT 매개 변수 또는 HRESULT 매개 변수와 [매개 변수를 사용하는 두](platform-exception-class.md#createexception) Exception::CreateException 메서드 `Platform::String^` 오버로드 중 하나를 사용하여 예외를 선언할 수도 있습니다.
 
 ## <a name="standard-exceptions"></a>표준 예외
 

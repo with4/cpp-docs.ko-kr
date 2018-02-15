@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -21,38 +23,39 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>소비자 마법사 생성 메서드
 ATL OLE DB 소비자 마법사 및 MFC 응용 프로그램 마법사는 알고 있어야 하는 특정 기능을 생성 합니다. 참고는 몇 가지 방법을 다르게 구현 됩니다 특성 사용된 프로젝트에 있으므로 더 몇 가지 주의 해야 합니다. 각 사례는 아래에 자세히 설명 합니다. 삽입된 코드를 보는 방법에 대한 자세한 내용은 [삽입된 코드 디버그](/visualstudio/debugger/how-to-debug-injected-code)를 참조하세요.  
   
--   `OpenAll`데이터 원본의 행 집합을 열고 사용할 수 있는 책갈피 설정 합니다.  
+-   `OpenAll` 데이터 원본의 행 집합을 열고 사용할 수 있는 책갈피 설정 합니다.  
   
--   `CloseAll`열려 있는 모든 행 집합을 닫고 모든 명령 실행을 해제 합니다.  
+-   `CloseAll` 열려 있는 모든 행 집합을 닫고 모든 명령 실행을 해제 합니다.  
   
--   `OpenRowset`OpenAll 소비자의 행 집합 또는 행 집합 열에 의해 호출 됩니다.  
+-   `OpenRowset` OpenAll 소비자의 행 집합 또는 행 집합 열에 의해 호출 됩니다.  
   
--   `GetRowsetProperties`행 집합의 속성을 설정할 수 있는 속성이 있는 설정에 대 한 포인터를 검색 합니다.  
+-   `GetRowsetProperties` 행 집합의 속성을 설정할 수 있는 속성이 있는 설정에 대 한 포인터를 검색 합니다.  
   
--   `OpenDataSource`에 지정 된 초기화 문자열을 사용 하 여 데이터 원본이 열립니다는 **데이터 연결 속성** 대화 상자.  
+-   `OpenDataSource` 에 지정 된 초기화 문자열을 사용 하 여 데이터 원본이 열립니다는 **데이터 연결 속성** 대화 상자.  
   
--   `CloseDataSource`적절 한 방식으로 데이터 소스를 닫습니다.  
+-   `CloseDataSource` 적절 한 방식으로 데이터 소스를 닫습니다.  
   
 ## <a name="openall-and-closeall"></a>OpenAll 및 CloseAll  
   
 ```  
 HRESULT OpenAll();   
+
 void CloseAll();  
 ```  
   
@@ -101,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** 소비자에서 행 집합 열에이 메서드를 호출 합니다. 호출할 필요가 없습니다 일반적으로 `OpenRowset` 여러 데이터 원본/세션/행 집합으로 작업 하는 경우가 있습니다. `OpenRowset`명령 또는 테이블 클래스 헤더 파일에 선언 됩니다.  
+ **OpenAll** 소비자에서 행 집합 열에이 메서드를 호출 합니다. 호출할 필요가 없습니다 일반적으로 `OpenRowset` 여러 데이터 원본/세션/행 집합으로 작업 하는 경우가 있습니다. `OpenRowset` 명령 또는 테이블 클래스 헤더 파일에 선언 됩니다.  
   
 ```  
 // OLE DB Template version:  
@@ -141,7 +144,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- 이 메서드는 행 집합의 속성 집합에 대 한 포인터를 검색합니다. DBPROP_IRowsetChange 등의 속성을 설정 하려면이 포인터를 사용할 수 있습니다. `GetRowsetProperties`사용자 레코드 클래스에 다음과 같이 사용 됩니다. 추가 행 집합 속성을 설정 하는이 코드를 수정할 수 있습니다.  
+ 이 메서드는 행 집합의 속성 집합에 대 한 포인터를 검색합니다. DBPROP_IRowsetChange 등의 속성을 설정 하려면이 포인터를 사용할 수 있습니다. `GetRowsetProperties` 사용자 레코드 클래스에 다음과 같이 사용 됩니다. 추가 행 집합 속성을 설정 하는이 코드를 수정할 수 있습니다.  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -160,6 +163,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
   
 ```  
 HRESULT OpenDataSource();   
+
 void CloseDataSource();  
 ```  
   

@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
 - COLLECTION/Platform::Collections::Map::Clear
@@ -17,19 +17,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs: C++
-helpviewer_keywords: Map Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b58ba1d4407f719bc2f9f1e08715d7e53a11fb58
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 클래스
 
@@ -115,7 +118,7 @@ Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 �
 
 **네임스페이스:** Platform::Collections
 
-## <a name="clear"></a>Map:: clear 메서드
+## <a name="clear"></a>  Map:: clear 메서드
 
 현재 Map 개체에서 모든 키/값 쌍을 제거합니다.
 
@@ -125,7 +128,7 @@ Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 �
 virtual void Clear();
 ```
 
-## <a name="first"></a>Map:: first 메서드
+## <a name="first"></a>  Map:: first 메서드
 
 맵의 첫 번째 요소를 지정하는 반복기 또는 `nullptr`(맵이 비어 있는 경우)을 반환합니다.
 
@@ -144,7 +147,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 선언 된 변수에 반환 값을 할당 하는 First()에서 반환 된 반복기를 보유 하는 편리한 방법은 **자동** 형식 추론 키워드입니다. 예를 들어, `auto x = myMap->First();`을 입력합니다.
 
-## <a name="getview"></a>Map:: getview 메서드
+## <a name="getview"></a>  Map:: getview 메서드
 
 현재 Map의 읽기 전용 보기를 반환합니다. 즉, 한 [Platform::Collections::MapView 클래스](../cppcx/platform-collections-mapview-class.md)를 구현 하는 [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) 인터페이스입니다.
 
@@ -158,7 +161,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `MapView` 개체입니다.
 
-## <a name="haskey"></a>Map:: haskey 메서드
+## <a name="haskey"></a>  Map:: haskey 메서드
 
 현재 Map에 지정한 키가 들어 있는지 여부를 확인합니다.
 
@@ -177,7 +180,7 @@ Map 요소를 찾는 데 사용되는 키입니다. 유형의 *키* 형식 이�
 
 키가 있으면 `true`이고, 그렇지 않으면 `false`입니다.
 
-## <a name="insert"></a>Map:: insert 메서드
+## <a name="insert"></a>  Map:: insert 메서드
 
 지정한 키/값 쌍을 현재 Map 개체에 추가합니다.
 
@@ -197,9 +200,9 @@ virtual bool Insert(K key, V value);
 
 ### <a name="return-value"></a>반환 값
 
-`true`현재 Map의 기존 요소 키와 일치 하는 경우 *키* 요소의 값 부분이로 설정 되어 *값*합니다. `false`현재 Map의 기존 요소가 없는 일치 하는 경우 *키* 및 *키* 및 *값* 매개 변수는 키-값 쌍으로 생성 되며 그런 다음 현재 Map에 추가 합니다.
+`true` 현재 Map의 기존 요소 키와 일치 하는 경우 *키* 요소의 값 부분이로 설정 되어 *값*합니다. `false` 현재 Map의 기존 요소가 없는 일치 하는 경우 *키* 및 *키* 및 *값* 매개 변수는 키-값 쌍으로 생성 되며 그런 다음 현재 Map에 추가 합니다.
 
-## <a name="lookup"></a>Map:: lookup 메서드
+## <a name="lookup"></a>  Map:: lookup 메서드
 
 K 형식의 지정된 키(해당 키가 있는 경우)와 연결된 V 형식의 값을 검색합니다.
 
@@ -222,7 +225,7 @@ V Lookup(K key);
 
 키가 없는 경우는 [platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md) throw 됩니다.
 
-## <a name="ctor"></a>Map:: map 생성자
+## <a name="ctor"></a>  Map:: map 생성자
 
 Map 클래스의 새 인스턴스를 초기화합니다.
 
@@ -272,9 +275,9 @@ A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/app
 
 ## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값
 
-C# 또는 Visual Basic을 사용 하는 Windows 스토어 앱 프로젝트 IMap\<K, V > IDictionary로\<K, V > 합니다.
+C# 또는 Visual Basic을 사용 하는 Windows 런타임 앱 프로젝트 IMap\<K, V > IDictionary로\<K, V > 합니다.
 
-## <a name="remove"></a>Map:: remove 메서드
+## <a name="remove"></a>  Map:: remove 메서드
 
 지정한 키/값 쌍을 현재 Map 개체에서 삭제합니다.
 
@@ -289,7 +292,7 @@ virtual void Remove(K key);
 *key*  
 키-값 쌍의 키 부분입니다. 유형의 *키* 형식 이름 *K*합니다.
 
-## <a name="size"></a>Map:: size 메서드
+## <a name="size"></a>  Map:: size 메서드
 
 개수를 반환 [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) Map의 요소입니다.
 

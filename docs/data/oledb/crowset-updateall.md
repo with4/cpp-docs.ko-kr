@@ -1,10 +1,11 @@
 ---
-title: 'Crowset:: Updateall | Microsoft Docs'
+title: CRowset::UpdateAll | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,34 +18,33 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
-dev_langs: C++
-helpviewer_keywords: UpdateAll method
+dev_langs:
+- C++
+helpviewer_keywords:
+- UpdateAll method
 ms.assetid: e5b26c0a-40fc-4c91-a293-5084951788e6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 048db34bd08ab3db5769fbcb096578a7a6ae8073
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7dc38544641043f95d24cf9a8f9cf40ccca1dbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetupdateall"></a>CRowset::UpdateAll
 보류 중인 마지막 인출 이후 모든 행에 대해 변경 내용을 전송 또는 **업데이트** 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-      HRESULT UpdateAll(   
-   DBCOUNTITEM* pcRows = NULL,   
+```cpp
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,   
    HROW** pphRow = NULL,   
-   DBROWSTATUS** ppStatus = NULL    
-) throw( );  
+   DBROWSTATUS** ppStatus = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/21/2017
  [out] 위치에 대 한 포인터를 **업데이트** 행 상태 값을 반환 합니다. 상태가 반환 됩니다 `ppStatus` null입니다.  
   
 ## <a name="remarks"></a>설명  
- 보류 중인 변경 이후 행 인출 된 마지막 또는 사용 하 여 업데이트할 모든 행에 대해 전송 [업데이트](../../data/oledb/crowset-update.md) 또는 `UpdateAll`합니다. `UpdateAll`수정 된, 여전히이 핸들에 대 한 모든 행을 업데이트 합니다 (참조 `pphRow`) 여부.  
+ 보류 중인 변경 이후 행 인출 된 마지막 또는 사용 하 여 업데이트할 모든 행에 대해 전송 [업데이트](../../data/oledb/crowset-update.md) 또는 `UpdateAll`합니다. `UpdateAll` 수정 된, 여전히이 핸들에 대 한 모든 행을 업데이트 합니다 (참조 `pphRow`) 여부.  
   
  예를 들어, 사용 하는 경우 **삽입** 호출 하거나 할 수는 행 집합의 5 개의 행을 삽입 하려면 **업데이트** 5 번 또는 호출 `UpdateAll` 업데이트 모두에 한 번입니다.  
   
@@ -72,6 +72,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [CRowset 클래스](../../data/oledb/crowset-class.md)   
- [Irowsetupdate:: Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [Crowset:: Setdata](../../data/oledb/crowset-setdata.md)   
+ [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
+ [CRowset::SetData](../../data/oledb/crowset-setdata.md)   
  [CRowset::Update](../../data/oledb/crowset-update.md)

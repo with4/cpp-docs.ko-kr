@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data access [C++], XML data
 - XML [C++], accessing data
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9379abfd27f4dd8297864160f35367da0727935
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="accessing-xml-data"></a>XML 데이터 액세스
 데이터 소스에서 XML 데이터를 검색 하는 두 개의 메서드가: 하나 사용 하 여 [CStreamRowset](../../data/oledb/cstreamrowset-class.md) 다른 사용 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)합니다.  
@@ -53,7 +55,7 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- 일반적으로 호출 하는 경우 `CCommand::Open` (예를 들어 지정 하 `CRowset` 으로 `TRowset` 클래스)을 가져와서는 `IRowset` 포인터. `ICommand::Execute`반환는 `IRowset` 에 저장 된 포인터는 `m_spRowset` 의 멤버는 `CRowset` 개체입니다. 와 같은 메서드 `MoveFirst`, `MoveNext`, 및 `GetData` 해당 포인터를 사용 하 여 데이터를 검색 합니다.  
+ 일반적으로 호출 하는 경우 `CCommand::Open` (예를 들어 지정 하 `CRowset` 으로 `TRowset` 클래스)을 가져와서는 `IRowset` 포인터. `ICommand::Execute` 반환는 `IRowset` 에 저장 된 포인터는 `m_spRowset` 의 멤버는 `CRowset` 개체입니다. 와 같은 메서드 `MoveFirst`, `MoveNext`, 및 `GetData` 해당 포인터를 사용 하 여 데이터를 검색 합니다.  
   
  이와 반대로 호출 하는 경우 `CCommand::Open` (하지만 지정 `CStreamRowset` 로 `TRowset` 클래스), `ICommand::Execute` 반환는 `ISequentialStream` 에 저장 된 포인터는 `m_spStream` 데이터 멤버의 [CStreamRowset](../../data/oledb/cstreamrowset-class.md). 사용 하 여는 `Read` 메서드를 XML 형식 (유니코드 문자열) 데이터를 검색 합니다. 예:  
   
@@ -69,7 +71,7 @@ myCmd.m_spStream->Read()
 >  XML을 사용 하 여 지원 `CStreamRowset` SQL Server 2000 에서만 작동 하 고 SQL Server 2000 (mdac를 사용할 경우 설치 됨)에 대 한 OLE DB Provider가 있어야 합니다.  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>CXMLAccessor를 사용 하 여 XML 데이터 검색  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) 데이터 저장소의 스키마 모를 때 데이터 원본에서 문자열 데이터로 액세스할 수 있습니다. `CXMLAccessor`처럼 작동 `CDynamicStringAccessorW` 제외 하 고 전자 (태그 있음된) 데이터를 XML 형식으로 데이터 저장소에서 액세스 하는 모든 데이터를 변환 합니다. XML 태그 이름은 데이터 저장소의 열 이름과 최대한 가깝게 일치 합니다.  
+ [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) 데이터 저장소의 스키마 모를 때 데이터 원본에서 문자열 데이터로 액세스할 수 있습니다. `CXMLAccessor` 처럼 작동 `CDynamicStringAccessorW` 제외 하 고 전자 (태그 있음된) 데이터를 XML 형식으로 데이터 저장소에서 액세스 하는 모든 데이터를 변환 합니다. XML 태그 이름은 데이터 저장소의 열 이름과 최대한 가깝게 일치 합니다.  
   
  사용 하 여 `CXMLAccessor` 적절 하 게 다른 접근자 클래스에 템플릿 매개 변수로 전달 `CCommand` 또는 `CTable`:  
   
@@ -82,7 +84,8 @@ CTable<CXMLAccessor, CRowset> rs;
 ```  
 // Open data source, session, and rowset  
 hr = rs.MoveFirst();  
-while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
+
+while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
 {  
     CStringW strRowData;  
     myCmd.GetXMLRowData(strRowData);  

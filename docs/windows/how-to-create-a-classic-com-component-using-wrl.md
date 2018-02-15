@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04b84a5deedc5ef112507f4e0f8ccb29af418c28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>방법: WRL을 사용하여 기본 COM 구성 요소 만들기
-Windows 런타임 c + + 템플릿 라이브러리 (WRL)을 사용 하 여 사용 하 여 데스크톱 응용 프로그램에서 사용 하기 위해 기본 클래식 COM 구성 요소 외에 만들 [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)] 앱. COM 구성 요소 만들기에 대 한 Windows 런타임 c + + 템플릿 라이브러리에 ATL 보다 적은 코드가 필요할 수 있습니다. COM 지 원하는 Windows 런타임 c + + 템플릿 라이브러리의 하위 집합에 대 한 정보를 참조 하십시오. [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)합니다.  
+사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱에 대 한 뿐 아니라 데스크톱 앱에서 사용 하기 위해 기본 클래식 COM 구성 요소를 만들려면 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용할 수 있습니다. COM 구성 요소 만들기에 대 한 Windows 런타임 c + + 템플릿 라이브러리에 ATL 보다 적은 코드가 필요할 수 있습니다. COM 지 원하는 Windows 런타임 c + + 템플릿 라이브러리의 하위 집합에 대 한 정보를 참조 하십시오. [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)합니다.  
   
  이 문서는 기본적인 COM 구성 요소를 Windows 런타임 c + + 템플릿 라이브러리를 사용 하는 방법을 보여 줍니다. 사용자 요구에 가장 적합한 배포 메커니즘을 사용할 수 있지만 이 문서에서는 데스크톱 앱에서 COM 구성 요소를 등록 및 사용하는 기본 방법도 보여 줍니다.  
   
@@ -39,7 +41,7 @@ Windows 런타임 c + + 템플릿 라이브러리 (WRL)을 사용 하 여 사용
   
      [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]  
   
-5.  CalculatorComponent.cpp에서 `CalculatorComponent` 클래스를 정의합니다. `CalculatorComponent` 클래스에서 상속 [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)합니다. [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) 클래스에서 파생 되었는지 지정 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) 아닌 [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx)합니다. (`IInspectable` 만 사용할 수 [!INCLUDE[win8_appstore_short](../windows/includes/win8_appstore_short_md.md)] 응용 프로그램 구성 요소입니다.) `CoCreatableClass` 와 같은 함수와 함께 사용할 수 있는 클래스에 대 한 팩터리 생성 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx)합니다.  
+5.  CalculatorComponent.cpp에서 `CalculatorComponent` 클래스를 정의합니다. `CalculatorComponent` 클래스에서 상속 [Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)합니다. [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md) 클래스에서 파생 되었는지 지정 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) 아닌 [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx)합니다. (`IInspectable` Windows 런타임 응용 프로그램 구성 요소에만 사용할 수 있습니다.) `CoCreatableClass` 와 같은 함수와 함께 사용할 수 있는 클래스에 대 한 팩터리 생성 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx)합니다.  
   
      [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]  
   

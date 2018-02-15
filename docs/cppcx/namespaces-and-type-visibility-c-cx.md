@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>네임스페이스 및 형식 표시 유형(C++/CX)
 네임스페이스는 관련된 기능을 가진 형식을 그룹화하고 라이브러리의 이름 충돌을 방지하기 위한 표준 C++ 구조입니다. Windows 런타임 형식 시스템에서는 사용자 코드에서 포함 하는 모든 공용 Windows 런타임 형식은, 네임 스페이스 범위에서 네임 스페이스에 선언 되어야 합니다. 전역 범위에서 선언되거나 다른 클래스 안에 중첩된 public 형식은 컴파일 타임 오류를 발생시킵니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |private|기본 액세스 가능성입니다. 표준 C++에서와 동일한 의미를 갖습니다.|아니요|  
 |protected|응용 프로그램 또는 구성 요소와 메타데이터에서 표준 C++에서와 동일한 의미를 갖습니다.|예|  
 |public|표준 C++에서와 동일한 의미를 갖습니다.|예|  
-|`public protected`-또는-`protected public`|액세스 가능성이 메타데이터에서는 protected이고 응용 프로그램 또는 구성 요소에서는 public입니다.|예|  
+|`public protected` -또는- `protected public`|액세스 가능성이 메타데이터에서는 protected이고 응용 프로그램 또는 구성 요소에서는 public입니다.|예|  
 |`protected private` 또는 `private protected`|메타데이터에서는 표시되지 않고 응용 프로그램 또는 구성 요소에서는 액세스 가능성이 protected입니다.||  
 |`internal` 또는 `private public`|멤버가 응용 프로그램 또는 구성 요소에서는 public이지만 메타데이터에서는 표시되지 않습니다.|아니요|  
   

@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::InputIterator::InputIterator
-dev_langs: C++
-helpviewer_keywords: InputIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::InputIterator::InputIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 클래스
 Windows Runtime에서 파생 된 컬렉션에 대 한 표준 템플릿 라이브러리 InputIterator를 제공 합니다.  
@@ -44,15 +48,15 @@ class InputIterator;
 |----------|-----------------|  
 |`difference_type`|포인터 차이(ptrdiff_t)입니다.|  
 |`iterator_category`|입력 반복기의 범주(::std::input_iterator_tag)입니다.|  
-|`pointer`|에 대 한 포인터는`const X`|  
-|`reference`|에 대 한 참조는`const X`|  
+|`pointer`|에 대 한 포인터는 `const X`|  
+|`reference`|에 대 한 참조는 `const X`|  
 |`value_type`|`X` 형식 이름입니다.|  
   
 ### <a name="public-constructors"></a>Public 생성자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Inputiterator:: Inputiterator](#ctor)|InputIterator 클래스의 새 인스턴스를 초기화합니다.|  
+|[InputIterator::InputIterator](#ctor)|InputIterator 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -72,7 +76,7 @@ class InputIterator;
   
  **네임스페이스:** Platform::Collections  
 
-## <a name="ctor"></a>Inputiterator:: Inputiterator 생성자
+## <a name="ctor"></a>  InputIterator::InputIterator Constructor
 InputIterator 클래스의 새 인스턴스를 초기화합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -88,7 +92,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>Inputiterator:: Operator-&gt; 연산자
+## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator
 현재 InputIterator가 지정하는 요소의 주소를 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -102,7 +106,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>Inputiterator:: 연산자
+## <a name="operator-dereference"></a>  InputIterator::operator* Operator
 현재 InputIterator가 지정하는 요소에 대한 참조를 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -116,7 +120,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>Inputiterator:: Operator = = 연산자
+## <a name="operator-equality"></a>  InputIterator::operator== Operator
 현재 InputIterator가 지정된 InputIterator와 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -134,7 +138,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>Inputiterator:: Operator + + 연산자
+## <a name="operator-increment"></a>  InputIterator::operator++ Operator
 현재 InputIterator를 증가시킵니다.  
   
 ### <a name="syntax"></a>구문  
@@ -154,7 +158,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>Inputiterator:: Operator! = 연산자
+## <a name="operator-inequality"></a>  InputIterator::operator!= Operator
 현재 InputIterator가 지정된 InputIterator와 같지 않은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  

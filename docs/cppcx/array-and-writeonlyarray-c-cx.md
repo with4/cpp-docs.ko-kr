@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6c2e05e3570179ac315e16576c72d2a37b580482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f06e63996024b3fade734a74acdfedf9ece5fba5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 및 WriteOnlyArray(C++/CX)
 일반 C 스타일 배열 자유롭게 사용할 수 있습니다 또는 [std:: array](../standard-library/array-class-stl.md) C + + /CX 프로그램 (있지만 [std:: vector](../standard-library/vector-class.md) 더 적합할), 메타 데이터에 게시 된 모든 api에서는 C 스타일 배열 변환 해야 하지만 또는을 벡터는 [platform:: array](../cppcx/platform-array-class.md) 또는 [platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) 사용 방법에 따라 형식입니다. [Platform::Array](../cppcx/platform-array-class.md) 형식은 [std::vector](../standard-library/vector-class.md)만큼 효율적이지도 않고 강력하지도 않으므로 배열 요소에 대한 많은 작업을 수행하는 내부 코드에서는 사용하지 않아야 합니다.  

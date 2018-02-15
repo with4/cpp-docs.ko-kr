@@ -4,39 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - RMyProviderRowset
 - inheritance [C++]
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ff6e953bf706e0e8767fe6f97fe1d31b70431d08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89f67a5be8ba68ef75a2c13fdbfb8c812812fcb3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>RMyProviderRowset의 상속 수정
 추가 하는 `IRowsetLocate` 단순한 읽기 전용 공급자 예제 인터페이스를의 상속 수정 **RMyProviderRowset**합니다. 처음에 **RMyProviderRowset** 에서 상속 `CRowsetImpl`합니다. 상속 하도록 수정 해야 할 **CRowsetBaseImpl**합니다.  
   
  이렇게 하려면 새 클래스를 만든 `CMyRowsetImpl`, MyProviderRS.h의:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage> >  
+template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage>>  
 class CMyRowsetImpl:  
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, CSimpleRow, IRowsetLocateImpl< T, IRowsetLocate > >  
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, CSimpleRow, IRowsetLocateImpl< T, IRowsetLocate >>  
 {  
 ...  
 };  
@@ -59,7 +61,7 @@ END_COM_MAP()
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- `RAgentRowset`이제 사용할 수는 `IRowsetLocate` 행 집합 클래스에 대 한 구현의 나머지 부분을 활용 하는 동안 인터페이스입니다.  
+ `RAgentRowset` 이제 사용할 수는 `IRowsetLocate` 행 집합 클래스에 대 한 구현의 나머지 부분을 활용 하는 동안 인터페이스입니다.  
   
  이 작업을 수행할 수 있습니다 [소비자에 게 반환 되는 열을 동적으로 결정](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)합니다.  
   

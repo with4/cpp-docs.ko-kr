@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
 - VCCORLIB/Platform::String::Begin
@@ -21,19 +21,22 @@ f1_keywords:
 - VCCORLIB/Platform::String::IsFastPass
 - VCCORLIB/Platform::String::Length
 - VCCORLIB/Platform::String::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::String
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstring-class"></a>Platform::String 클래스
 텍스트를 나타내는 데 사용되는 유니코드 문자의 순차적인 컬렉션을 나타냅니다. 자세한 내용 및 예제에 대 한 참조 [문자열](../cppcx/strings-c-cx.md)합니다.  
@@ -65,7 +68,7 @@ public ref class String sealed : Object,
   
 |멤버|설명|  
 |------------|-----------------|  
-|[String:: string](#ctor)|String 클래스의 새 인스턴스를 초기화합니다.|  
+|[String::String](#ctor)|String 클래스의 새 인스턴스를 초기화합니다.|  
   
  **메서드**  
   
@@ -73,18 +76,18 @@ public ref class String sealed : Object,
   
 |메서드|설명|  
 |------------|-----------------|  
-|[String:: begin](#begin)|현재 문자열의 시작 부분에 대한 포인터를 반환합니다.|  
-|[String:: compareordinal](#compareordinal)|개체가 나타내는 두 문자열 값에서 해당 문자의 숫자 값을 계산하여 두 `String` 개체를 비교합니다.|  
-|[String:: concat](#concat)|두 String 개체의 값을 연결합니다.|  
-|[String:: data](#data)|현재 문자열의 시작 부분에 대한 포인터를 반환합니다.|  
-|[String:: dispose](#dispose)|리소스를 확보하거나 해제합니다.|  
-|[String:: end](#end)|현재 문자열의 끝을 지나는 포인터를 반환합니다.|  
-|[String:: equals](#equals)|지정된 개체가 현재 개체와 같은지 여부를 나타냅니다.|  
-|[String:: gethashcode](#gethashcode)|이 인스턴스의 해시 코드를 반환합니다.|  
-|[String:: isempty](#isempty)|현재 String 개체가 비어 있는지 여부를 나타냅니다.|  
-|[String:: isfastpass](#isfastpass)|현재 String 개체가 *빠른 전달* 작업에 참여하고 있는지를 나타냅니다. 빠른 전달 작업에서는 참조 횟수가 일시 중단됩니다.|  
-|[String:: length](#length)|현재 String 개체의 길이를 검색합니다.|  
-|[String:: tostring](#tostring)|현재 문자열과 같은 값을 갖는 String 개체를 반환합니다.|  
+|[String::Begin](#begin)|현재 문자열의 시작 부분에 대한 포인터를 반환합니다.|  
+|[String::CompareOrdinal](#compareordinal)|개체가 나타내는 두 문자열 값에서 해당 문자의 숫자 값을 계산하여 두 `String` 개체를 비교합니다.|  
+|[String::Concat](#concat)|두 String 개체의 값을 연결합니다.|  
+|[String::Data](#data)|현재 문자열의 시작 부분에 대한 포인터를 반환합니다.|  
+|[String::Dispose](#dispose)|리소스를 확보하거나 해제합니다.|  
+|[String::End](#end)|현재 문자열의 끝을 지나는 포인터를 반환합니다.|  
+|[String::Equals](#equals)|지정된 개체가 현재 개체와 같은지 여부를 나타냅니다.|  
+|[String::GetHashCode](#gethashcode)|이 인스턴스의 해시 코드를 반환합니다.|  
+|[String::IsEmpty](#isempty)|현재 String 개체가 비어 있는지 여부를 나타냅니다.|  
+|[String::IsFastPass](#isfastpass)|현재 String 개체가 *빠른 전달* 작업에 참여하고 있는지를 나타냅니다. 빠른 전달 작업에서는 참조 횟수가 일시 중단됩니다.|  
+|[String::Length](#length)|현재 String 개체의 길이를 검색합니다.|  
+|[String::ToString](#tostring)|현재 문자열과 같은 값을 갖는 String 개체를 반환합니다.|  
   
  **연산자**  
   
@@ -109,7 +112,7 @@ public ref class String sealed : Object,
  **헤더** vccorlib.h(기본적으로 포함)  
 
  
-## <a name="begin"></a>String:: begin 메서드
+## <a name="begin"></a>  String:: begin 메서드
 현재 문자열의 시작 부분에 대한 포인터를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -122,7 +125,7 @@ char16* Begin()
 ### <a name="return-value"></a>반환 값  
  현재 문자열의 시작 부분에 대한 포인터입니다.  
   
-## <a name="compareordinal"></a>String:: compareordinal 메서드
+## <a name="compareordinal"></a>  String:: compareordinal 메서드
 개체가 나타내는 두 문자열 값에서 해당 문자의 숫자 값을 계산하여 두 `String` 개체를 비교합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -153,7 +156,7 @@ int CompareOrdinal(
   
 
 
-## <a name="concat"></a>String:: concat 메서드
+## <a name="concat"></a>  String:: concat 메서드
 두 String 개체의 값을 연결합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -176,7 +179,7 @@ String^ Concat( String^ str1, String^ str2)
   
 
 
-## <a name="data"></a>String:: data 메서드
+## <a name="data"></a>  String:: data 메서드
 개체의 데이터 버퍼 시작에 대한 포인터를 `char16`(`wchar_t`) 요소의 C 스타일 배열로 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -193,7 +196,7 @@ const char16* Data()
   
 
 
-## <a name="dispose"></a>String:: dispose 메서드
+## <a name="dispose"></a>  String:: dispose 메서드
 리소스를 확보하거나 해제합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -203,7 +206,7 @@ const char16* Data()
 virtual override void Dispose()  
 ```  
 
-## <a name="end"></a>String:: end 메서드
+## <a name="end"></a>  String:: end 메서드
 현재 문자열의 끝을 지나는 포인터를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -221,7 +224,7 @@ char16* End()
   
 
 
-## <a name="equals"></a>String:: equals 메서드
+## <a name="equals"></a>  String:: equals 메서드
 지정된 String의 값이 현재 개체와 동일한지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -246,7 +249,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>String:: gethashcode 메서드
+## <a name="gethashcode"></a>  String:: gethashcode 메서드
 이 인스턴스의 해시 코드를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -261,7 +264,7 @@ virtual override int GetHashCode()
   
 
 
-## <a name="isempty"></a>String:: isempty 메서드
+## <a name="isempty"></a>  String:: isempty 메서드
 현재 String 개체가 비어 있는지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -275,7 +278,7 @@ bool IsEmpty()
   
 
 
-## <a name="isfastpass"></a>String:: isfastpass 메서드
+## <a name="isfastpass"></a>  String:: isfastpass 메서드
 현재 String 개체가 *빠른 전달* 작업에 참여하고 있는지를 나타냅니다. 빠른 전달 작업에서는 참조 횟수가 일시 중단됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -292,7 +295,7 @@ bool IsFastPass();
   
 
 
-## <a name="length"></a>String:: length 메서드
+## <a name="length"></a>  String:: length 메서드
 현재 String 개체의 문자 수를 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -316,7 +319,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>String:: operator + 연산자
+## <a name="operator-plus"></a>  String:: operator + 연산자
 두 개의 연결 [문자열](../cppcx/platform-string-class.md) 새 개체 [문자열](../cppcx/platform-string-class.md) 개체입니다.
   
 ### <a name="syntax"></a>구문  
@@ -339,7 +342,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>설명  
  이 연산자는 두 피연산자의 데이터가 들어 있는 `String^` 개체를 만듭니다. 매우 높은 성능이 중요하지 않은 경우 편의를 위해 이를 사용합니다. 함수에서 "`+`"를 몇 번 호출하는 것은 그렇게 눈에 띄지 않지만 대행 개체나 텍스트 데이터를 연속해서 조작하는 경우 표준 C++ 매커니즘과 형식을 사용하십시오.  
   
-##  <a name="operator-equality"></a>String:: operator = = 연산자
+##  <a name="operator-equality">String:: operator = = 연산자</a>
 지정된 두 String 개체의 텍스트 값이 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -363,7 +366,7 @@ bool String::operator==( String^ str1, String^ str2)
   
 
 
-##  <a name="operator-greater-than"></a>String:: operator&gt; 
+##  <a name="operator-greater-than"></a>  String::operator&gt; 
 String 개체 값이 두 번째 String 개체 값보다 큰지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -387,7 +390,7 @@ bool String::operator>( String^ str1, String^ str2)
   
 
 
-## <a name="operator-greater-than-or-equals"></a>String:: operator&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String::operator&gt;= 
 String 개체 값이 두 번째 String 개체 값보다 크거나 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -408,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a>String:: operator! = 
+## <a name="operator-inequality"></a> String::operator!= 
 지정된 두 String 개체의 값이 다른지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -428,7 +431,7 @@ bool String::operator!=( String^ str1, String^ str2)
  `true`가 `str1`와 다르면 `str2`이고, 그러지 않으면 `false`입니다.   
 
 
-## <a name="operator-less-than"></a>String:: operator&lt; 
+## <a name="operator-less-than"></a> String::operator&lt; 
 String 개체 값이 두 번째 String 개체 값보다 작은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -447,7 +450,7 @@ bool String::operator<( String^ str1, String^ str2)
 ### <a name="return-value"></a>반환 값  
  `str1`의 값이 `str2`의 값보다 작으면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-## <a name="ctor"></a>String:: string 생성자
+## <a name="ctor"></a> String:: string 생성자
 입력 문자열 데이터의 복사본을 사용하여 String 클래스의 새 인스턴스를 초기화합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -473,7 +476,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a>String:: tostring
+## <a name="tostring"></a> String::ToString
 현재 문자열과 같은 값을 갖는 String 개체를 반환합니다.  
   
 ### <a name="syntax"></a>구문  

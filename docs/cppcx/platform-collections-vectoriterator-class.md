@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::VectorIterator::VectorIterator
-dev_langs: C++
-helpviewer_keywords: VectorIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::VectorIterator::VectorIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b4dc6ca358959f6842cc16dcd2372094d5d7425b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 873c4c980bc815d0eebb29050a0e2fe2f49e6e6b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator 클래스
 Windows 런타임 IVector 인터페이스에서 파생 된 개체에 대 한 표준 템플릿 라이브러리 반복기를 제공 합니다.  
@@ -54,7 +58,7 @@ class VectorIterator;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Vectoriterator:: Vectoriterator](#ctor)|VectorIterator 클래스의 새 인스턴스를 초기화합니다.|  
+|[VectorIterator::VectorIterator](#ctor)|VectorIterator 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -64,7 +68,7 @@ class VectorIterator;
 |[VectorIterator::operator-- 연산자](#operator-decrement)|현재 VectorIterator를 감소시킵니다.|  
 |[VectorIterator::operator!= 연산자](#operator-inequality)|현재 VectorIterator가 지정된 VectorIterator와 같지 않은지 여부를 나타냅니다.|  
 |[VectorIterator::operator* 연산자](#operator-dereference)|현재 VectorIterator가 지정하는 요소에 대한 참조를 검색합니다.|  
-|[Vectoriterator::\[\]](#operator-at)|현재 VectorIterator에서 지정된 치환에 해당하는 요소에 대한 참조를 검색합니다.|  
+|[VectorIterator::operator\[\]](#operator-at)|현재 VectorIterator에서 지정된 치환에 해당하는 요소에 대한 참조를 검색합니다.|  
 |[VectorIterator::operator+ 연산자](#operator-plus)|지정된 VectorIterator에서 지정된 치환에 해당하는 요소를 참조하는 VectorIterator를 반환합니다.|  
 |[VectorIterator::operator++ 연산자](#operator-increment)|현재 VectorIterator를 증가시킵니다.|  
 |[VectorIterator::operator+= 연산자](#operator-plus-assign)|지정된 치환으로 현재 VectorIterator를 늘립니다.|  
@@ -84,7 +88,7 @@ class VectorIterator;
   
  **네임스페이스:** Platform::Collections  
 
-## <a name="operator-arrow"></a>Vectoriterator:: Operator-&gt; 연산자
+## <a name="operator-arrow"></a>  VectorIterator::operator-&gt; Operator
 현재 VectorIterator가 참조하는 요소의 주소를 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -100,7 +104,7 @@ Detail::ArrowProxy<T> operator->() const;
   
 
 
-## <a name="operator-decrement"></a>Vectoriterator:: Operator-연산자
+## <a name="operator-decrement"></a>  VectorIterator::operator-- Operator
 현재 VectorIterator를 감소시킵니다.  
   
 ### <a name="syntax"></a>구문  
@@ -121,7 +125,7 @@ VectorIterator operator--(int);
   
 
 
-## <a name="operator-dereference"></a>Vectoriterator:: 연산자
+## <a name="operator-dereference"></a>  VectorIterator::operator* Operator
 현재 VectorIterator가 지정하는 요소의 주소를 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -135,7 +139,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>Vectoriterator:: Operator = = 연산자
+## <a name="operator-equality"></a>  VectorIterator::operator== Operator
 현재 VectorIterator가 지정된 VectorIterator와 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -153,7 +157,7 @@ bool operator==(const VectorIterator& other) const;
   
 
 
-## <a name="operator-greater-than"></a>Vectoriterator::&gt; 연산자
+## <a name="operator-greater-than"></a>  VectorIterator::operator&gt; Operator
 현재 VectorIterator가 지정된 VectorIterator보다 큰지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -168,11 +172,11 @@ bool operator>(const VectorIterator& other) const
  다른 VectorIterator입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`현재 VectorIterator 보다 큰 경우 `other`, 그렇지 않으면 `false`합니다.  
+ `true` 현재 VectorIterator 보다 큰 경우 `other`, 그렇지 않으면 `false`합니다.  
   
 
 
-## <a name="operator-greater-than-or-equals"></a>Vectoriterator::&gt;= 연산자
+## <a name="operator-greater-than-or-equals"></a>  VectorIterator::operator&gt;= Operator
 현재 VectorIterator가 지정된 VectorIterator보다 크거나 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -190,7 +194,7 @@ bool operator>=(const VectorIterator& other) const
  현재 VectorIterator가 `true`보다 크거나 같으면 `other`이고, 그렇지 않으면 `false`입니다.    
 
 
-## <a name="operator-increment"></a>Vectoriterator:: Operator + + 연산자
+## <a name="operator-increment"></a>  Vectoriterator:: Operator + + 연산자
 현재 VectorIterator를 증가시킵니다.  
   
 ### <a name="syntax"></a>구문  
@@ -210,7 +214,7 @@ VectorIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>Vectoriterator:: Operator! = 연산자
+## <a name="operator-inequality"></a>  VectorIterator::operator!= Operator
 현재 VectorIterator가 지정된 VectorIterator와 같지 않은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -224,11 +228,11 @@ bool operator!=(const VectorIterator& other) const;
  다른 VectorIterator입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`현재 VectorIterator와 같지 않으면 `other`, 그렇지 않으면 `false`합니다.  
+ `true` 현재 VectorIterator와 같지 않으면 `other`, 그렇지 않으면 `false`합니다.  
   
 
 
-## <a name="operator-less-than"></a>Vectoriterator::&lt; 연산자
+## <a name="operator-less-than"></a>  VectorIterator::operator&lt; Operator
 현재 VectorIterator가 지정된 VectorIterator보다 작은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -247,7 +251,7 @@ bool operator<(const VectorIterator& other) const
   
 
 
-## <a name="operator-less-than-or-equals"></a>Vectoriterator::&lt;= 연산자
+## <a name="operator-less-than-or-equals"></a>  VectorIterator::operator&lt;= Operator
 현재 VectorIterator가 지정된 VectorIterator보다 작거나 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -262,11 +266,11 @@ bool operator<=(const VectorIterator& other) const
  다른 VectorIterator입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`현재 VectorIterator가 보다 작거나 같은 경우 `other`, 그렇지 않으면 `false`합니다.  
+ `true` 현재 VectorIterator가 보다 작거나 같은 경우 `other`, 그렇지 않으면 `false`합니다.  
   
 
 
-## <a name="operator-minus"></a>Vectoriterator:: Operator-연산자
+## <a name="operator-minus"></a>  VectorIterator::operator- Operator
 현재 반복기에서 지정된 요소 수를 빼서 새 반복기를 계산하거나 현재 반복기에서 지정된 반복기를 빼서 반복기 간 요소 수 차이를 계산합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -290,7 +294,7 @@ difference_type operator-(const VectorIterator& other) const;
   
 
 
-## <a name="operator-plus-assign"></a>Vectoriterator:: Operator + = 연산자
+## <a name="operator-plus-assign"></a>  VectorIterator::operator+= Operator
 지정된 치환으로 현재 VectorIterator를 늘립니다.  
   
 ### <a name="syntax"></a>구문  
@@ -308,7 +312,7 @@ VectorIterator& operator+=(difference_type n);
   
 
 
-## <a name="operator-plus"></a>ectorIterator::operator + 연산자
+## <a name="operator-plus"></a>  ectorIterator::operator+ Operator
 지정된 VectorIterator에서 지정된 치환에 해당하는 요소를 참조하는 VectorIterator를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -344,7 +348,7 @@ inline VectorIterator<T> operator+(
   
 
 
-## <a name="operator-minus-equals"></a>Vectoriterator:: Operator-= 연산자
+## <a name="operator-minus-equals"></a>  VectorIterator::operator-= Operator
 지정된 치환으로 현재 VectorIterator를 줄입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -362,7 +366,7 @@ VectorIterator& operator-=(difference_type n);
   
 
 
-## <a name="operator-at"></a>Vectoriterator::\[\]
+## <a name="operator-at"></a>  VectorIterator::operator\[\]
 현재 VectorIterator에서 지정된 치환에 해당하는 요소에 대한 참조를 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -380,7 +384,7 @@ reference operator[](difference_type n) const;
   
 
 
-## <a name="ctor"></a>Vectoriterator:: Vectoriterator 생성자
+## <a name="ctor"></a>  Vectoriterator:: Vectoriterator 생성자
 VectorIterator 클래스의 새 인스턴스를 초기화합니다.  
   
 ### <a name="syntax"></a>구문  

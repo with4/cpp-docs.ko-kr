@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
-dev_langs: C++
-helpviewer_keywords: BackInsertIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 057aebfcba1936bc2a59fbb8b9fb51bff3197b6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23c8b657a6cafb720cf0be07e2e67b5af0d7767d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 클래스
 요소를 덮어쓰지 않고 순차 컬렉션의 백 엔드에 삽입하는 반복기를 나타냅니다.  
@@ -46,7 +50,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Backinsertiterator:: Backinsertiterator](#ctor)|BackInsertIterator 클래스의 새 인스턴스를 초기화합니다.|  
+|[BackInsertIterator::BackInsertIterator](#ctor)|BackInsertIterator 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -65,7 +69,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
  **네임스페이스:** Platform::Collections  
   
 ---
-## <a name="ctor"></a>Backinsertiterator:: Backinsertiterator 생성자
+## <a name="ctor"></a>  BackInsertIterator::BackInsertIterator Constructor
 `BackInsertIterator` 클래스의 새 인스턴스를 초기화합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -83,7 +87,7 @@ explicit BackInsertIterator(
 ### <a name="remarks"></a>설명  
  `BackInsertIterator`는 `v` 매개 변수로 지정된 개체의 마지막 요소 뒤에 요소를 삽입합니다.  
  
-## <a name="operator-assign"></a>Backinsertiterator:: Operator = 연산자
+## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
 지정된 개체를 현재 순차 컬렉션의 끝에 추가합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -99,7 +103,7 @@ BackInsertIterator& operator=( const T& t);
 ### <a name="return-value"></a>반환 값  
  현재 BackInsertIterator에 대한 참조입니다.  
 
-## <a name="operator-dereference"></a>Backinsertiterator:: Operator 연산자
+## <a name="operator-dereference"></a>  BackInsertIterator::operator* Operator
 현재 BackInsertIterator에 대한 참조를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -114,7 +118,7 @@ BackInsertIterator& operator*();
 ### <a name="remarks"></a>설명  
  이 연산자는 현재 컬렉션의 요소가 아닌 현재 BackInsertIterator에 대한 참조를 반환합니다.  
  
-## <a name="operator-increment"></a>Backinsertiterator:: Operator + + 연산자
+## <a name="operator-increment"></a>  BackInsertIterator::operator++ Operator
 현재 BackInsertIterator에 대한 참조를 반환합니다. 반복기는 수정되지 않습니다.  
   
 ## <a name="syntax"></a>구문  

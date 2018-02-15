@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: R6019
-dev_langs: C++
-helpviewer_keywords: R6019
+f1_keywords:
+- R6019
+dev_langs:
+- C++
+helpviewer_keywords:
+- R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c0e027907476eeacf10515556544160e402cd0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4ab7054bdce76aa1dd0b443993cfac8eeb8ecc7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-runtime-error-r6019"></a>C 런타임 오류 R6019
 콘솔 장치를 열 수 없습니다.  
@@ -37,4 +42,4 @@ ms.lasthandoff: 12/21/2017
   
  **프로그래머에 대 한 정보**  
   
- 이 오류는 응용 프로그램 콘솔 함수를 호출 하지만 운영 체제는 콘솔에 대 한 액세스를 부여 하지 못한 때문에 발생 합니다. 제외 하 고 디버깅 모드에서 콘솔 함수는 일반적으로 사용할 수 없습니다 Windows 스토어 앱에서입니다. 앱이 실행 하려면 관리자 권한이 필요한 경우 관리자 권한으로 실행 되도록 기본적으로 설치 되어 있는지 확인 합니다.
+ 이 오류는 응용 프로그램 콘솔 함수를 호출 하지만 운영 체제는 콘솔에 대 한 액세스를 부여 하지 못한 때문에 발생 합니다. 제외 하 고 디버깅 모드에서 콘솔 함수는 일반적으로 사용할 수 없습니다 Microsoft 스토어 앱에서입니다. 앱이 실행 하려면 관리자 권한이 필요한 경우 관리자 권한으로 실행 되도록 기본적으로 설치 되어 있는지 확인 합니다.

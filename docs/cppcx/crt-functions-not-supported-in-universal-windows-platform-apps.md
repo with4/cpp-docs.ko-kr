@@ -6,23 +6,24 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 65d058780ee71731559733ac07eef3f614a47784
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 295b7810c562e141f1b2e22c993bcc7455c0f1d9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수
-UWP(유니버설 Windows 플랫폼) 앱을 빌드할 때는 대부분 CRT(C 런타임) 함수를 사용할 수 없습니다. 경우에 따라 해결 방법이 있습니다--예를 들어 Windows 런타임 또는 Win32 Api를 사용할 수 있습니다. 그러나 지원 API 또는 CRT 함수에 해당하는 기능을 UWP 앱에 적용할 수 없으므로 다른 경우에는 CRT 함수가 금지되었습니다.  
+UWP(유니버설 Windows 플랫폼) 앱을 빌드할 때는 대부분 CRT(C 런타임) 함수를 사용할 수 없습니다. 경우에 따라 해결 방법이 있습니다--예를 들어 Windows 런타임 또는 Win32 Api를 사용할 수 있습니다. 그러나 지원 API 또는 CRT 함수에 해당하는 기능을 UWP 앱에 적용할 수 없으므로 다른 경우에는 CRT 함수가 금지되었습니다. 참조에 Windows 런타임에서 지원 되는 대체 방법을 찾으려면 [UWP 앱에서 Windows Api에 대 한 대안](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)합니다.  
   
- 다음 표에서는 UWP 앱을 빌드할 때 사용할 수 없는 CRT 함수를 보여 주고 적용되는 해결 방법을 지정합니다.  
+다음 표에서는 UWP 앱을 빌드할 때 사용할 수 없는 CRT 함수를 보여 주고 적용되는 해결 방법을 지정합니다.  
   
 ## <a name="unsupported-crt-functions"></a>지원되지 않는 CRT 함수  
   
@@ -42,7 +43,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 빌드할 때는 대부분 CRT(C 런�
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|환경 변수는 UWP 앱에 사용할 수 없습니다.|해결 방법이 없습니다. 표준 시간대를 설정하려면 _tzset를 사용합니다.|  
 |_loaddll _getdllprocaddr _unloaddll|이들 함수는 이전 CRT 버전에서 더 이상 사용되지 않습니다. 또한 사용자는 같은 응용 프로그램 패키지의 DLL에서만 DLL을 로드할 수 있습니다.|Win32 API `LoadPackagedLibrary`, `GetProcAddress`및 `FreeLibrary` 를 사용하여 패키지된 DLL을 로드 및 사용합니다.|  
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|이 기능은 UWP 앱에서 사용할 수 없습니다. UWP 앱은 다른 UWP 앱이나 데스크톱 앱을 호출할 수 없습니다.|해결 방법이 없습니다.|  
-|_heapwalk _heapadd _heapchk _heapset _heapused|일반적으로 이들 기능은 힙 작업을 하는 데 사용됩니다. 그러나 해당 Win32 API는 UWP 앱에서 지원되지 않습니다. 또한 앱에서 더 이상 전용 힙을 만들거나 사용할 수 없습니다.|해결 방법이 없습니다. 그러나 `_heapwalk` 는 DEBUG CRT에서 디버깅 목적으로만 사용할 수 있습니다. Windows 스토어에 업로드되는 앱에서는 사용할 수 없습니다.|  
+|_heapwalk _heapadd _heapchk _heapset _heapused|일반적으로 이들 기능은 힙 작업을 하는 데 사용됩니다. 그러나 해당 Win32 API는 UWP 앱에서 지원되지 않습니다. 또한 앱에서 더 이상 전용 힙을 만들거나 사용할 수 없습니다.|해결 방법이 없습니다. 그러나 `_heapwalk` 는 DEBUG CRT에서 디버깅 목적으로만 사용할 수 있습니다. 이러한 Microsoft 스토어에 업로드 하는 앱에서 사용할 수 없습니다.|  
   
  다음 함수는 UWP 앱 용 CRT에서 사용할 수 있지만 해당 Win32 또는 Windows 런타임 Api를 사용할 수 없는 경우에 사용 해야-예를 들어 때 이식 하는 큰 코드 베이스  
   

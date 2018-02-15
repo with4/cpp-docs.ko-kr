@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 클래스
 
@@ -102,7 +104,7 @@ ref class Map sealed;
 
 **네임스페이스:** Platform::Collections
 
-## <a name="clear"></a>Unorderedmap:: Clear 메서드
+## <a name="clear"></a>  Unorderedmap:: Clear 메서드
 
 현재 UnorderedMap 개체에서 모든 키-값 쌍을 제거합니다.
 
@@ -112,7 +114,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="first"></a>Unorderedmap:: First 메서드
+## <a name="first"></a>  Unorderedmap:: First 메서드
 
 첫 번째 지정 하는 반복기를 반환 [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) unordered map의 요소입니다.
 
@@ -132,7 +134,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 선언 된 변수에 반환 값을 할당 하는 First()에서 반환 된 반복기를 보유 하는 편리한 방법은 **자동** 형식 추론 키워드입니다. 예를 들어, `auto x = myUnorderedMap->First();`을 입력합니다.
 
-## <a name="getview"></a>Unorderedmap:: Getview 메서드
+## <a name="getview"></a>  Unorderedmap:: Getview 메서드
 
 현재 UnorderedMap의 읽기 전용 보기를 반환합니다. 즉, 한 [Platform::Collections::UnorderedMapView 클래스](../cppcx/platform-collections-unorderedmapview-class.md) 구현 하는 [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) 인터페이스입니다.
 
@@ -146,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `UnorderedMapView` 개체입니다.
 
-## <a name="haskey"></a>Unorderedmap:: Haskey 메서드
+## <a name="haskey"></a>  Unorderedmap:: Haskey 메서드
 
 현재 UnorderedMap에 지정한 키가 들어 있는지 여부를 확인합니다.
 
@@ -190,9 +192,9 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>반환 값
 
-`true`현재 Map의 기존 요소 키와 일치 하는 경우 *키* 요소의 값 부분이로 설정 되어 *값*합니다. `false`현재 Map의 기존 요소가 없는 일치 하는 경우 *키* 및 *키* 및 *값* 매개 변수는 키-값 쌍으로 생성 되며 그런 다음 현재 UnorderedMap에 추가 합니다.
+`true` 현재 Map의 기존 요소 키와 일치 하는 경우 *키* 요소의 값 부분이로 설정 되어 *값*합니다. `false` 현재 Map의 기존 요소가 없는 일치 하는 경우 *키* 및 *키* 및 *값* 매개 변수는 키-값 쌍으로 생성 되며 그런 다음 현재 UnorderedMap에 추가 합니다.
 
-## <a name="lookup"></a>Unorderedmap:: Lookup 메서드
+## <a name="lookup"></a>  Unorderedmap:: Lookup 메서드
 
 K 형식의 지정된 키와 연결된 V 형식의 값을 검색합니다.
 
@@ -229,9 +231,9 @@ A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/app
 
 ## <a name="net-framework-equivalent"></a>.NET Framework의 해당 값
 
-Windows 스토어 프로젝트는 앱 C# 또는 Visual Basic IMap\<K, V > IDictionary로\<K, V > 합니다.
+C# 또는 Visual Basic IMap 프로젝트는 Windows 런타임 앱\<K, V > IDictionary로\<K, V > 합니다.
 
-## <a name="remove"></a>Unorderedmap:: Remove 메서드
+## <a name="remove"></a>  Unorderedmap:: Remove 메서드
 
 지정한 키-값 쌍을 UnorderedMap 개체에서 삭제합니다.
 
@@ -247,7 +249,7 @@ virtual void Remove(
 *key*  
 키-값 쌍의 키 부분입니다. 유형의 *키* 형식 이름 *K*합니다.
 
-## <a name="size"></a>Unorderedmap:: Size 메서드
+## <a name="size"></a>  Unorderedmap:: Size 메서드
 
 개수를 반환 [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap에 있는 요소입니다.
 

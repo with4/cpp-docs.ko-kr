@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,7 +15,8 @@ f1_keywords:
 - vc-attr.db_command
 - vc-attr.db_table
 - vc-attr.db_source
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attributes [C++], database
 - attributes [C++], data access
@@ -25,18 +27,18 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 584b83c4b3aa9ea5fd2f98fd59969ab46ce712ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec5eed15f9837637cff51c47c4b000b7e30eeb25
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>데이터베이스 특성을 사용하여 데이터 액세스 단순화
 이 항목에서는 데이터베이스 작업을 간소화 하기 위해 데이터베이스 특성의 사용을 보여 줍니다.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 -   **db_table** 특성이 지정 된 버전에서 호출은 다음 템플릿 선언과 같습니다.  
   
     ```  
-    class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
+    class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 -   **db_column** 호출 특성 사용된 하는 버전에서 열 지도 같습니다 (참조 `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 템플릿 선언에 있습니다.  
@@ -66,11 +68,11 @@ ms.lasthandoff: 12/21/2017
  이 항목에서 설명 하는 특성에 대 한 정보를 참조 하십시오. [OLE DB 소비자 특성](../../windows/ole-db-consumer-attributes.md)합니다.  
   
 ## <a name="table-and-accessor-declaration-using-attributes"></a>테이블 및 특성을 사용 하는 접근자 선언  
- 다음 호출 코드 `db_source` 및 **db_table** 테이블 클래스에 있습니다. `db_source`데이터 원본 및 연결을 사용할 수를 지정 합니다. **db_table** 테이블 클래스 선언에 대 한 적절 한 템플릿 코드를 삽입 합니다. **db_column** 열 지도 지정 하 고 접근자 선언에 삽입 합니다. Atl이 지원 하는 프로젝트에서 OLE DB 소비자 특성을 사용할 수 있습니다.  
+ 다음 호출 코드 `db_source` 및 **db_table** 테이블 클래스에 있습니다. `db_source` 데이터 원본 및 연결을 사용할 수를 지정 합니다. **db_table** 테이블 클래스 선언에 대 한 적절 한 템플릿 코드를 삽입 합니다. **db_column** 열 지도 지정 하 고 접근자 선언에 삽입 합니다. Atl이 지원 하는 프로젝트에서 OLE DB 소비자 특성을 사용할 수 있습니다.  
   
  테이블 및 접근자 선언 특성을 사용 하는 다음과 같습니다.  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // Table and accessor declaration using attributes  
 // authors.h  
@@ -106,7 +108,7 @@ public:
 ## <a name="table-and-accessor-declaration-using-templates"></a>테이블 및 템플릿을 사용 하 여 접근자 선언  
  템플릿을 사용 하 여 테이블 및 접근자 선언에는 다음과 같습니다.  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // Table and user record class declaration using templates  
 // authors.h  
@@ -134,7 +136,8 @@ public:
    HRESULT OpenDataSource()  
    {  
       CDataSource _db;  
-      HRESULT hr;  
+
+HRESULT hr;  
       hr = _db.OpenFromInitializationString(L"your connection string");  
       if (FAILED(hr))  
       {  
@@ -160,12 +163,12 @@ public:
       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, m_dwYearBornLength, m_dwYearBornStatus)  
    END_COLUMN_MAP()  
 };  
-class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
+class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
 {  
 public:  
    HRESULT OpenAll()  
    {  
-      HRESULT hr;  
+HRESULT hr;  
       hr = OpenDataSource();  
       if (FAILED(hr))  
          return hr;  
@@ -192,7 +195,7 @@ public:
    }  
    HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
    {  
-      HRESULT hr = Open(m_session, "Authors", pPropSet);  
+HRESULT hr = Open(m_session, "Authors", pPropSet);  
 #ifdef _DEBUG  
       if(FAILED(hr))  
          AtlTraceErrorRecords(hr);  

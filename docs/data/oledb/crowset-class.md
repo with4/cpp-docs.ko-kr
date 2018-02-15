@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,28 +14,30 @@ f1_keywords:
 - ATL::CRowset
 - ATL::CRowset<TAccessor>
 - ATL.CRowset
-dev_langs: C++
-helpviewer_keywords: CRowset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRowset class
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3b0d46ac3164f7f609e8a8a8099d500d04d91bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef4ec2851365d9fbabab6819a0883b6a9b660f28
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowset-class"></a>CRowset 클래스
 OLE DB 행 집합 개체와 관련 된 몇 가지 캡슐화 인터페이스를 만들고 행 집합 데이터 조작 메서드를 제공 합니다.  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template <class TAccessor = CAccessorBase>  
 class CRowset  
 ```  

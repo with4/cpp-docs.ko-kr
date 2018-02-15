@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], callbacks and delegates
 - interop [C++], callbacks and delegates
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>방법: PInvoke를 사용하여 함수 포인터 마샬링
 이 항목에서는 관리 되는 방식을 대리자 설명 관리 되지 않는.NET Framework P/Invoke 기능을 사용 하 여 함수 리소스와 상호 운용 하는 경우 함수 포인터 대신 사용할 수 있습니다. 그러나 Visual c + + 프로그래머는 P/Invoke는 작은 컴파일 타임 오류를 보고, 형식 안전 하지 않은 및는 것을 제공 하므로 (가능한 경우) 대신 c + + Interop 기능을 사용 하는 것이 좋습니다. 관리 되지 않는 API는 DLL로 패키지 하는 경우 소스 코드를 사용할 수 없는 P/Invoke 유일한 옵션입니다. 다음 항목을 참조 하십시오.  
@@ -42,8 +44,6 @@ ms.lasthandoff: 12/21/2017
  함수 포인터는 네이티브 코드로 마샬링 하 고 사용 하는 대리자를 정의 하는 관리 되는 모듈의 <xref:System.Runtime.InteropServices.DllImportAttribute> 관리 코드에 네이티브 TakesCallback 함수를 노출 하는 특성입니다. Main 함수에 대리자의 인스턴스가 생성 되어 TakesCallback 함수에 전달 합니다. 프로그램 출력이이 함수가 네이티브 TakesCallback 함수에 의해 실행 되는 방법을 보여 줍니다.  
   
  관리 되는 함수에는 네이티브 함수를 실행 하는 동안 대리자가 재배치에서.NET Framework 가비지 수집을 방지 하기 위해 관리 되는 대리자에 대 한 가비지 수집을 하지 않습니다.  
-  
- 관리 되는 모듈, /clr 하지만 /clr을 사용 하 여 컴파일되며: pure 합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
   
 ```cpp  
 // TraditionalDll5.cpp  

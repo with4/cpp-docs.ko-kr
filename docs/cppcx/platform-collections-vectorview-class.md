@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::VectorView
 - COLLECTION/Platform::Collections::VectorView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::GetMany
 - COLLECTION/Platform::Collections::VectorView::IndexOf
 - COLLECTION/Platform::Collections::VectorView::Size
-dev_langs: C++
-helpviewer_keywords: VectorView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f196a1f58e5c480ef09d13a72f1c8ac3a0a50db
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 클래스
 인덱스로 각각 액세스할 수 있는 순차 개체 컬렉션의 읽기 전용 보기를 나타냅니다. 템플릿 매개 변수로 지정된 컬렉션의 각 개체 형식입니다.  
@@ -74,7 +77,7 @@ template <typename T, typename E>
   
  **네임스페이스:** Platform::Collections  
 
-## <a name="first"></a>Vectorview:: First 메서드
+## <a name="first"></a>  Vectorview:: First 메서드
 VectorView의 첫 번째 요소를 지정하는 반복기를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -93,7 +96,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
   
 
 
-## <a name="getat"></a>Vectorview:: Getat 메서드
+## <a name="getat"></a>  Vectorview:: Getat 메서드
 지정된 인덱스가 나타내는 현재 VectorView의 요소를 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -114,7 +117,7 @@ T GetAt(
   
 
 
-## <a name="getmany"></a>Vectorview:: Getmany 메서드
+## <a name="getmany"></a>  Vectorview:: Getmany 메서드
 현재 VectorView에서 지정된 인덱스부터 시작하여 일련의 항목을 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -139,7 +142,7 @@ virtual unsigned int GetMany(
   
 
 
-## <a name="indexof"></a>Vectorview:: Indexof 메서드
+## <a name="indexof"></a>  Vectorview:: Indexof 메서드
 현재 VectorView에서 지정한 항목을 검색하고 있는 경우 항목의 인덱스를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -166,7 +169,7 @@ virtual bool IndexOf(
   
 
 
-## <a name="size"></a>Vectorview:: Size 메서드
+## <a name="size"></a>  Vectorview:: Size 메서드
 현재 VectorView 개체의 요소 수를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -181,7 +184,7 @@ virtual property unsigned int Size;
   
 
 
-## <a name="ctor"></a>Vectorview:: Vectorview 생성자
+## <a name="ctor"></a>  Vectorview:: Vectorview 생성자
 VectorView 클래스의 새 인스턴스를 초기화합니다.  
   
 ### <a name="syntax"></a>구문  

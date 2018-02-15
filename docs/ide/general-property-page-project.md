@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,7 +28,8 @@ f1_keywords:
 - VC.Project.VCConfiguration.AppSupport
 - VC.Project.VCConfiguration.ToolFiles
 - VC.Project.VCConfiguration.useOfATL
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
@@ -35,12 +37,13 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bbe19414dbbe664f15ea2bbbc35a26827ac5b831
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="general-property-page-project"></a>일반 속성 페이지(프로젝트)
 
@@ -149,7 +152,7 @@ _UNICODE 또는 _MBCS를 설정해야 하는지를 정의합니다. 해당하는
 지정 된 [/GL](../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션 및 [/LTCG](../build/reference/ltcg-link-time-code-generation.md) 링커 옵션입니다. 기본적으로 디버그 구성에 대 한 비활성화 이며 소매 구성에 대해 사용 하도록 설정 합니다.
 
 **Windows 스토어 응용 프로그램 지원**  
-이 프로젝트에 Windows 스토어 앱 지원 하는지 여부를 지정 합니다. 자세한 내용은 참조 [/ZW (Windows 런타임 컴파일)](../build/reference/zw-windows-runtime-compilation.md), 및 Windows 개발자 센터입니다.
+이 프로젝트는 Windows 런타임 (유니버설 Windows 플랫폼) 앱을 지원 하는지 여부를 지정 합니다. 자세한 내용은 참조 [/ZW (Windows 런타임 컴파일)](../build/reference/zw-windows-runtime-compilation.md), 및 Windows 개발자 센터입니다.
 
 ## <a name="see-also"></a>참고 항목
 

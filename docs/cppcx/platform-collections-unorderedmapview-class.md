@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMapView
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 클래스
 읽기 전용 보기를 키/값 쌍의 컬렉션인 *맵*으로 나타냅니다.  
@@ -52,17 +54,17 @@ ref class UnorderedMapView sealed;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Unorderedmapview:: Unorderedmapview](#ctor)|UnorderedMapView 클래스의 새 인스턴스를 초기화합니다.|  
+|[UnorderedMapView::UnorderedMapView](#ctor)|UnorderedMapView 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Unorderedmapview:: First](#first)|맵 뷰의 첫 번째 요소로 초기화하는 반복기를 반환합니다.|  
-|[Unorderedmapview:: Haskey](#haskey)|현재 UnorderedMapView에 지정한 키가 들어 있는지 여부를 확인합니다.|  
-|[Unorderedmapview:: Lookup](#lookup)|현재 UnorderedMapView 개체의 지정된 키에 있는 요소를 검색합니다.|  
-|[Unorderedmapview:: Size](#size)|현재 UnorderedMapView 개체의 요소 수를 반환합니다.|  
-|[Unorderedmapview:: Split](#split)|원래 UnorderedMapView 개체를 두 개의 UnorderedMapView 개체로 분할합니다.|  
+|[UnorderedMapView::First](#first)|맵 뷰의 첫 번째 요소로 초기화하는 반복기를 반환합니다.|  
+|[UnorderedMapView::HasKey](#haskey)|현재 UnorderedMapView에 지정한 키가 들어 있는지 여부를 확인합니다.|  
+|[UnorderedMapView::Lookup](#lookup)|현재 UnorderedMapView 개체의 지정된 키에 있는 요소를 검색합니다.|  
+|[UnorderedMapView::Size](#size)|현재 UnorderedMapView 개체의 요소 수를 반환합니다.|  
+|[UnorderedMapView::Split](#split)|원래 UnorderedMapView 개체를 두 개의 UnorderedMapView 개체로 분할합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `UnorderedMapView`  

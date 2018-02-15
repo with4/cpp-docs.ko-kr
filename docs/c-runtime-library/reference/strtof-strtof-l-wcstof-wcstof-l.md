@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strtof_l
 - wcstof
@@ -36,7 +37,8 @@ f1_keywords:
 - wcstof
 - corecrt_wstdlib/_wcstof_l
 - _wcstof_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtof_l function
 - _tcstof function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fdfe3a202d18aa1634a2ef692088264ff8fe188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 35ee9dd81cb2509e161846870d23b7a995ac5807
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 문자열을 단정밀도 부동 소수점 값으로 변환합니다.  
@@ -93,7 +96,7 @@ float wcstof_l(
  사용할 로캘입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `strtof`부동 소수점 숫자 표현을 + /-경우 함수를 반환 하는 오버플로 인해 경우를 제외 하 고 값을 반환`HUGE_VALF`합니다. `HUGE_VALF`의 부호는 표현할 수 없는 값의 부호와 일치합니다. 변환을 수행할 수 없거나 언더플로가 발생하면 `strtof`는 0을 반환합니다.  
+ `strtof` 부동 소수점 숫자 표현을 + /-경우 함수를 반환 하는 오버플로 인해 경우를 제외 하 고 값을 반환`HUGE_VALF`합니다. `HUGE_VALF`의 부호는 표현할 수 없는 값의 부호와 일치합니다. 변환을 수행할 수 없거나 언더플로가 발생하면 `strtof`는 0을 반환합니다.  
   
  `wcstof`는 `strtof`와 동일한 값을 반환합니다. 오버플로나 언더플로가 발생하면 두 함수에 대해 `errno`가 `ERANGE`로 설정되며 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다.  
   

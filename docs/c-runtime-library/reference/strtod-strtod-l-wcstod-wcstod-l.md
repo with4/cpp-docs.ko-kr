@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstod
 - _wcstod_l
@@ -35,7 +36,8 @@ f1_keywords:
 - corecrt_wstdlib/wcstod
 - stdlib/_strtod_l
 - corecrt_wstdlib/_wcstod_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstod_l function
 - tcstod_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -100,13 +103,13 @@ double wcstod_l(
 
 ## <a name="return-value"></a>반환 값
 
-`strtod`부동 소수점 숫자 표현을 + /-경우 함수를 반환 하는 오버플로 인해 경우를 제외 하 고 값을 반환`HUGE_VAL`합니다. `HUGE_VAL`의 부호는 표현할 수 없는 값의 부호와 일치합니다. 변환을 수행할 수 없거나 언더플로가 발생하면 `strtod`는 0을 반환합니다.
+`strtod` 부동 소수점 숫자 표현을 + /-경우 함수를 반환 하는 오버플로 인해 경우를 제외 하 고 값을 반환`HUGE_VAL`합니다. `HUGE_VAL`의 부호는 표현할 수 없는 값의 부호와 일치합니다. 변환을 수행할 수 없거나 언더플로가 발생하면 `strtod`는 0을 반환합니다.
 
 `wcstod`는 `strtod`와 동일한 값을 반환합니다. 오버플로나 언더플로가 발생하면 두 함수에 대해 `errno`가 `ERANGE`로 설정되며 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-각 함수는 입력된 문자열을 변환 *nptr* 에 `double`합니다. `strtod` 변환 함수 *nptr* 배정도 값으로. `strtod`읽기를 중단 *nptr* 숫자의 일환으로 인식할 수 없는 첫 번째 문자에서 합니다. 이 문자는 종료 null 문자일 수 있습니다. `wcstod`와이드 문자 버전이 `strtod`; 해당 *nptr* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+각 함수는 입력된 문자열을 변환 *nptr* 에 `double`합니다. `strtod` 변환 함수 *nptr* 배정도 값으로. `strtod` 읽기를 중단 *nptr* 숫자의 일환으로 인식할 수 없는 첫 번째 문자에서 합니다. 이 문자는 종료 null 문자일 수 있습니다. `wcstod` 와이드 문자 버전이 `strtod`; 해당 *nptr* 인수는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
 
@@ -119,12 +122,12 @@ double wcstod_l(
 
 경우 *endptr* 않습니다 `NULL`, 검색을 중지 하는 문자에 대 한 포인터에서 가리키는 위치에 저장 된 *endptr*합니다. 변환 작업 없이 수행할 수 있으면 (유효 자릿수 없이 발견 된 또는 지정 된 잘못 된 base)의 값 *nptr* 가 가리키는 위치에 저장 된 *endptr*합니다.
 
-`strtod`에서는 *nptr* 문자열을 다음 형식 중 하나를 가리키도록 합니다.
+`strtod` 에서는 *nptr* 문자열을 다음 형식 중 하나를 가리키도록 합니다.
 
-[*공백*] [*기호*] {*자리* [*기 수* *자릿수*] &#124; *기 수* *자리*} [{**e** &#124; **E**} [*기호*] *자릿수*]  
-[*공백*] [*기호*] {**0 x** &#124; **0 X**} {*hexdigits* [*기 수* *hexdigits*] &#124; *기 수* *hexdigits*} [{**p** &#124; **P**} [*기호*] *hexdigits*]  
-[*공백*] [*기호*] {**INF** &#124; **무한대**}  
-[*공백*] [*기호*] **NAN** [*시퀀스*]
+[*whitespace*] [*sign*] {*digits* [*radix* *digits*] &#124; *radix* *digits*} [{**e** &#124; **E**} [*sign*] *digits*]  
+[*whitespace*] [*sign*] {**0x** &#124; **0X**} {*hexdigits* [*radix* *hexdigits*] &#124; *radix* *hexdigits*} [{**p** &#124; **P**} [*sign*] *hexdigits*]  
+[*whitespace*] [*sign*] {**INF** &#124; **INFINITY**}  
+[*whitespace*] [*sign*] **NAN** [*sequence*]
 
 선택적 앞에 오는 *공백* ; 무시 되는 공백 및 탭 문자가 포함 될 수 *기호* 는 더하기 (+) 또는 빼기 (-); *자릿수* 하나 이상의 10 진수 숫자가; *hexdigits* 는 하나 이상의 16 진수; *기 수* 기 수 지점 문자 하거나 마침표 (.)를 기본 "C" 로캘에서 되었거나 로캘 관련 값은 현재 로캘 차이가 있는 경우 *로캘* 지정 되어 있으면는 *시퀀스* 는 일련의 영숫자 문자를 밑줄 또는 합니다. 10 진수 및 16 진수 숫자 형식의 기 수 지점 문자 앞에 자릿수 없이 표시 하는 경우 하나 이상 나타나야 지점 기 수 문자 뒤 합니다. 10 진수 형식에 10 진수의 기본 문자 구성 된 지 수가 올 수 있습니다 (**e** 또는 **E**) 및 선택적으로 부호 있는 정수입니다. 16 진수 형식 자리 16 진수의 기본 문자 구성 된 지 수가 올 수 있습니다 (**p** 또는 **P**)을 나타내는 부호가 붙은 16 진수 정수는 2의 거듭제곱으로 지 수입니다. 둘 중 하나의 형태로 지 수 부분을 차지 아니고 지점 기 수 문자 표시 되 면 지점 기 수 문자는 문자열에서 마지막 자릿수가 양수인 따르도록 간주 됩니다. 둘 다에서 대/소문자는 무시 됩니다는 **INF** 및 **NAN** 폼입니다. 이러한 폼 중 하나가 적합 하지 않은 첫 번째 문자는 검사를 중지 합니다.
 

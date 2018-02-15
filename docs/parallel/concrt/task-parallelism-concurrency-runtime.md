@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>작업 병렬 처리(동시성 런타임)
 동시성 런타임에서 *작업* 특정 작업을 수행 하 고 일반적으로 다른 작업과 병렬로 실행 하는 작업의 단위입니다. 작업으로 구성 되는 보다 세분화 된 추가 작업으로 분해할 수 있습니다는 *작업 그룹*합니다.  
@@ -81,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
 - [강력한 프로그래밍](#robust)  
   
-##  <a name="lambdas"></a>람다 식 사용  
+##  <a name="lambdas">람다 식 사용</a>  
  간결한 구문으로 인해 람다 식은 작업 및 작업 그룹에서 수행하는 작업을 정의하는 일반적인 방법입니다. 다음은 몇 가지 사용 팁입니다.  
   
 -   작업은 일반적으로 백그라운드 스레드에서 실행되므로 람다 식에서 변수를 캡처할 때 개체 수명을 알아 두어야 합니다. 변수를 값으로 캡처하면 해당 변수의 복사본이 람다 본문에 생성됩니다. 참조로 캡처하면 복사본이 생성되지 않습니다. 따라서 참조로 캡처하는 모든 변수의 수명은 해당 변수를 사용하는 작업보다 길어야 합니다.  
@@ -98,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
  람다 식에 대한 자세한 내용은 [람다 식](../../cpp/lambda-expressions-in-cpp.md)을 참조하세요.  
   
-##  <a name="task-class"></a>작업 클래스  
+##  <a name="task-class">작업 클래스</a>  
  사용할 수는 [concurrency:: task](../../parallel/concrt/reference/task-class.md) 종속 작업 집합으로 작업을 구성 하는 클래스입니다. 이 컴퍼지션 모델은 개념에서 지원 *연속*합니다. 때 실행할 연속 활성화 코드는 이전 또는 *선행*, 작업이 완료 합니다. 선행 작업의 결과는 하나 이상의 연속 작업에 대한 입력으로 전달됩니다. 선행 작업이 완료되면 대기 중인 모든 연속 작업이 실행되도록 예약됩니다. 각 연속 작업은 선행 작업 결과의 복사본을 받습니다. 그런 다음 해당 연속 작업은 다른 연속의 선행 작업이 되어 작업 체인을 만들 수도 있습니다. 연속에서는 작업 간에 특정 종속성이 있는 임의 길이의 작업 체인을 만들 수 있습니다. 또한 작업은 작업이 시작되기 전에나 작업이 실행되는 동안 공동 작업 방식으로 취소에 참여할 수 있습니다. 이러한 취소 모델에 대 한 자세한 내용은 참조 [PPL에서의 취소](cancellation-in-the-ppl.md)합니다.  
   
  `task`는 템플릿 클래스입니다. 형식 매개 변수 `T`는 작업에 의해 생성되는 결과의 형식입니다. 작업에서 값을 반환하지 않는 경우 이 형식은 `void`일 수 있습니다. `T`는 `const` 한정자를 사용할 수 없습니다.  
@@ -124,9 +127,9 @@ ms.lasthandoff: 12/21/2017
  사용 하는 예제에 대 한 `task`, [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), 취소, 참조 [연습:를 사용 하 여 작업 연결 및 XML HTTP 요청](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)합니다. `task_completion_event` 클래스는 이 문서의 뒷부분에 설명되어 있습니다.  
   
 > [!TIP]
->  작업과 관련 된 세부 사항에 알아보려면 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱 참조 [c + +의 비동기 프로그래밍](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31) 및 [c + +로 Windows 스토어 앱 용 비동기 작업 만들기](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)합니다.  
+>  UWP 앱의 작업과 관련 된 세부 사항 자세한 내용은 [c + +의 비동기 프로그래밍](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) 및 [비동기 작업 만들기 c + +의 UWP 앱 용](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)합니다.  
   
-##  <a name="continuations"></a>연속 작업  
+##  <a name="continuations">연속 작업</a>  
  비동기 프로그래밍에서는 한 비동기 작업이 완료 시 두 번째 작업을 호출하고 해당 작업에 데이터를 전달하는 것이 일반적입니다. 일반적으로 이 작업은 콜백 메서드를 통해 수행됩니다. 동일한 기능을 하 여 제공 하는 동시성 런타임에서 *연속 작업*합니다. 연속 작업 (연속 마찬가지로 함)으로 알려진 다른 작업에 의해 호출 되는 비동기 작업은는 *선행*선행 작업이 완료 될 때입니다. 연속을 사용하여 다음을 수행할 수 있습니다.  
   
 -   선행 작업의 데이터를 연속 작업에 전달합니다.  
@@ -135,7 +138,7 @@ ms.lasthandoff: 12/21/2017
   
 -   시작되기 전이나 실행 중일 때 함께 연속 작업을 취소합니다.  
   
--   연속 작업을 예약하는 방법에 대한 힌트를 제공합니다. 이 기능은 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱에만 적용됩니다. 자세한 내용은 참조 [c + +로 Windows 스토어 앱 용 비동기 작업 만들기](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
+-   연속 작업을 예약하는 방법에 대한 힌트를 제공합니다. (유니버설 Windows 플랫폼 (UWP) 앱에만에 적용 합니다. 자세한 내용은 참조 [비동기 작업 만들기 c + +의 UWP 앱 용](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
   
 -   동일한 선행 작업에서 여러 개의 연속 작업을 호출합니다.  
   
@@ -159,21 +162,21 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[concrt-continuation-chain#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_6.cpp)]  
   
- 연속 작업은 다른 작업을 반환할 수도 있습니다. 취소가 없을 경우 이 작업은 후속 연속 전에 실행됩니다. 이 기술은 라고 *비동기 래핑 해제*합니다. 비동기 래핑 해제는 백그라운드에서 추가 작업을 수행하려고 하지만 현재 작업에서 현재 스레드를 차단하지 않도록 하려는 경우에 유용합니다. 이 기술은 UI 스레드에서 연속이 실행되는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱에서 일반적입니다. 다음 예제에서는 세 가지 작업을 보여 줍니다. 첫 번째 작업에서는 연속 작업 전에 실행되는 다른 작업을 반환합니다.  
+ 연속 작업은 다른 작업을 반환할 수도 있습니다. 취소가 없을 경우 이 작업은 후속 연속 전에 실행됩니다. 이 기술은 라고 *비동기 래핑 해제*합니다. 비동기 래핑 해제는 백그라운드에서 추가 작업을 수행하려고 하지만 현재 작업에서 현재 스레드를 차단하지 않도록 하려는 경우에 유용합니다. (이 UWP 앱에서 일반적으로 UI 스레드에서 연속 실행할 수 있는). 다음 예제에서는 세 가지 작업을 보여 줍니다. 첫 번째 작업에서는 연속 작업 전에 실행되는 다른 작업을 반환합니다.  
   
  [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]  
   
 > [!IMPORTANT]
 >  작업의 연속에서 `N` 형식의 중첩된 작업을 반환하는 경우 결과 작업은 `task<N>`이 아니라 `N` 형식이며 중첩된 작업이 완료될 때 완료됩니다. 즉, 연속에서 중첩된 작업의 래핑 해제를 수행합니다.  
   
-##  <a name="value-versus-task"></a>값 기반 연속 작업 기반 비교  
+##  <a name="value-versus-task">값 기반 연속 작업 기반 비교</a>  
  반환 형식이 `T`인 `task` 개체를 지정하면 `T` 또는 `task<T>` 형식의 값을 연속 작업에 제공할 수 있습니다. 이 형식을 사용 하는 연속 작업 `T` 라고는 *값 기반 연속*합니다. 값 기반 연속은 선행 작업이 오류 없이 완료되고 취소되지 않으면 실행되도록 예약됩니다. 이 형식을 사용 하는 연속 작업 `task<T>` 대로 해당 매개 변수 라고는 *작업 기반 연속*합니다. 작업 기반 연속은 선행 작업이 취소되거나 예외를 throw하는 경우에도 선행 작업이 완료되면 항상 실행되도록 예약됩니다. 그러면 `task::get`을 호출하여 선행 작업의 결과를 가져올 수 있습니다. 선행 작업이 취소 되 면 `task::get` throw [concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)합니다. 선행 작업에서 예외가 throw되면 `task::get`에서 해당 예외를 다시 throw합니다. 작업 기반 연속은 선행 작업이 취소되어도 취소됨으로 표시되지 않습니다.  
   
-##  <a name="composing-tasks"></a>작업 작성  
+##  <a name="composing-tasks">작업 작성</a>  
  이 섹션에서는 설명는 [concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) 및 [concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) 공통 패턴을 구현 하는 여러 작업을 구성 하는 기능 할 수 있습니다.  
 
   
-###  <a name="when-all"></a>When_all 함수  
+###  <a name="when-all">When_all 함수</a>  
  `when_all` 함수는 작업 집합이 완료된 후 완료되는 작업을 생성합니다. 이 함수는 반환는 std::[벡터](../../standard-library/vector-class.md) 집합의 각 작업의 결과 포함 하는 개체입니다. 다음 기본 예제에서는 `when_all`을 사용하여 다른 세 작업의 완료를 나타내는 작업을 만듭니다.  
   
  [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]  
@@ -197,7 +200,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]  
   
- C++ 및 XAML을 사용하고 디스크에 파일 집합을 쓰는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱을 살펴보겠습니다. 다음 예제에서는 `when_all` 및 `observe_all_exceptions`를 사용하여 프로그램에서 모든 예외를 관찰하도록 하는 방법을 보여 줍니다.  
+ C + + 및 XAML을 사용 하 고 디스크에 파일 집합을 작성 하는 UWP 앱을 고려 합니다. 다음 예제에서는 `when_all` 및 `observe_all_exceptions`를 사용하여 프로그램에서 모든 예외를 관찰하도록 하는 방법을 보여 줍니다.  
   
  [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]  
   
@@ -219,10 +222,10 @@ ms.lasthandoff: 12/21/2017
   
 > [!TIP]
 
-> `when_all`은 `task`를 해당 결과로 생성하는 비블로킹 함수입니다. 와 달리 [task:: wait](reference/task-class.md#wait)에서이 함수를 호출 해도 안전는 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 ASTA (응용 프로그램 STA) 스레드에서 합니다.  
+> `when_all`은 `task`를 해당 결과로 생성하는 비블로킹 함수입니다. 와 달리 [task:: wait](reference/task-class.md#wait), ASTA (응용 프로그램 STA) 스레드에서 UWP 앱에서이 함수를 호출 해도 안전 합니다.  
 
   
-###  <a name="when-any"></a>When_any 함수  
+###  <a name="when-any">When_any 함수</a>  
  `when_any` 함수는 작업 집합의 첫 번째 작업이 완료되면 완료되는 작업을 생성합니다. 이 함수는 반환 된 [std:: pair](../../standard-library/pair-structure.md) 완료 된 작업의 결과 및 집합에서 해당 작업의 인덱스를 포함 하는 개체입니다.  
   
  `when_any` 함수는 다음과 같은 시나리오에서 특히 유용합니다.  
@@ -249,9 +252,9 @@ ms.lasthandoff: 12/21/2017
  `auto t = t1 || t2; // same as when_any`  
   
 > [!TIP]
->  `when_all`과 마찬가지로 `when_any`는 비블로킹이며 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱의 ASTA 스레드에서 호출하는 것이 안전합니다.  
+>  와 마찬가지로 `when_all`, `when_any` 는 비블로킹 이며 ASTA 스레드에서 UWP 앱에서 호출할 수 있습니다.  
   
-##  <a name="delayed-tasks"></a>지연 된 작업 실행  
+##  <a name="delayed-tasks">지연 된 작업 실행</a>  
  경우에 따라 조건이 충족될 때까지 작업 실행을 지연하거나 외부 이벤트에 대한 응답으로 작업을 시작해야 할 수 있습니다. 예를 들어 비동기 프로그래밍에서 I/O 완료 이벤트에 대한 응답으로 작업을 시작해야 할 수 있습니다.  
   
  이렇게 하려면 연속을 사용하거나 작업을 시작하고 작업의 작업 함수 내에서 이벤트를 대기하는 두 가지 방법이 있습니다. 그러나 이러한 기술을 하나를 사용할 수 없는 경우가 있습니다. 예를 들어 연속을 만들려면 선행 작업이 있어야 합니다. 그러나 선행 작업이 없는 경우 만들 수 있습니다는 *작업 완료 이벤트* 하며, 나중에 사용할 수 있게 되 면 선행 작업에 해당 완료 이벤트를 연결 합니다. 또한 대기 중인 작업은 스레드도 차단하므로 작업 완료 이벤트를 사용하여 비동기 작업이 완료되면 작업을 수행함으로써 스레드를 해제할 수 있습니다.  
@@ -260,7 +263,7 @@ ms.lasthandoff: 12/21/2017
   
  사용 하는 예제에 대 한 `task_completion_event` 지연 후 완료 되는 작업을 구현 하려면 참조 [하는 방법: 작업을 완료 한 후에 이러한 지연 시간 만들기](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)합니다.  
   
-##  <a name="task-groups"></a>작업 그룹  
+##  <a name="task-groups">작업 그룹</a>  
  A *작업 그룹* 작업 컬렉션을 구성 합니다. 작업 그룹은 작업 가로채기 큐에 작업을 넣습니다. 스케줄러는 이 큐에서 작업을 제거하고 사용 가능한 컴퓨팅 리소스에서 실행합니다. 작업 그룹에 작업을 추가한 후 모든 작업이 완료되거나 아직 시작되지 않은 작업이 취소될 때까지 기다릴 수 있습니다.  
   
  PPL 사용 하 여는 [concurrency:: task_group](reference/task-group-class.md) 및 [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) 를 작업 그룹을 나타내는 클래스 및 [concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) 클래스 이러한 그룹에서 실행 되는 작업을 나타내는입니다. `task_handle` 클래스는 작업을 수행하는 코드를 캡슐화합니다. `task` 클래스와 마찬가지로 작업 함수는 람다 함수, 함수 포인터 또는 함수 개체의 형태로 제공됩니다. 일반적으로 `task_handle` 개체에서 직접 작업할 필요가 없습니다. 대신 작업 그룹에 작업 함수를 전달하면 작업 그룹에서 `task_handle` 개체를 만들고 관리합니다.  
@@ -277,7 +280,7 @@ ms.lasthandoff: 12/21/2017
   
  또한 런타임은 작업에서 예외를 throw하고 연결된 작업 그룹이 완료될 때까지 기다린 후 해당 예외를 처리할 수 있도록 하는 예외 처리 모델을 제공합니다. 이 예외 처리 모델에 대 한 자세한 내용은 참조 [예외 처리](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)합니다.  
   
-##  <a name="comparing-groups"></a>Task_group과 structured_task_group 비교  
+##  <a name="comparing-groups">Task_group과 structured_task_group 비교</a>  
  `structured_task_group` 클래스 대신 `task_group` 또는 `parallel_invoke`를 사용하는 것이 좋지만 다양한 작업을 수행하거나 취소를 지원해야 하는 병렬 알고리즘을 작성하는 경우처럼 `structured_task_group`을 사용해야 하는 경우가 있습니다. 이 섹션에서는 `task_group`과 `structured_task_group`의 차이점에 대해 설명합니다.  
   
  `task_group` 클래스는 스레드로부터 안전합니다. 따라서 여러 스레드에서 `task_group` 개체에 작업을 추가하고 여러 스레드에서 `task_group` 개체를 대기하거나 취소할 수 있습니다. `structured_task_group` 개체의 생성 및 소멸은 동일한 어휘 범위에서 발생해야 합니다. 또한 `structured_task_group` 개체의 모든 작업은 동일한 스레드에서 발생해야 합니다. 이 규칙에 대 한 예외는 [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) 및 [concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling) 메서드. 자식 작업은 언제든지 이러한 메서드를 호출하여 부모 작업 그룹을 취소하거나 취소를 확인할 수 있습니다.  
@@ -313,7 +316,7 @@ Message from task: 42
   
  사용 하는 방법을 보여 주는 전체 예제는 `parallel_invoke` 알고리즘 참조 [하는 방법: parallel_invoke를 사용 하 여 병렬 정렬 루틴 작성](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) 및 [하는 방법: parallel_invoke 병렬 작업 실행를사용하여](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). 사용 하는 전체 예제는 `task_group` 비동기 미래를 구현 하는 클래스 [연습: 미래 구현](../../parallel/concrt/walkthrough-implementing-futures.md)합니다.  
   
-##  <a name="robust"></a>강력한 프로그래밍  
+##  <a name="robust">강력한 프로그래밍</a>  
  작업, 작업 그룹 및 병렬 알고리즘을 사용하는 경우 취소 및 예외 처리의 역할을 이해하고 있어야 합니다. 예를 들어 병렬 작업 트리에서 취소되는 작업은 자식 작업이 실행되지 않도록 방지합니다. 따라서 자식 작업 중 하나가 리소스 해제와 같이 응용 프로그램에 중요한 작업을 수행하는 경우 문제가 발생할 수 있습니다. 또한 자식 작업에서 예외를 throw하는 경우 해당 예외가 개체 소멸자를 통해 전파되어 응용 프로그램에서 정의되지 않은 동작이 발생할 수 있습니다. 이러한 점을 보여 주는 예제를 참조 하십시오.는 [이해 어떻게 취소 및 예외 처리에 영향을 줄 개체 소멸](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) 병렬 패턴 라이브러리 문서에서 모범 사례에는 섹션입니다. 취소 및 예외 처리 모델 PPL에 대 한 자세한 내용은 참조 하십시오. [취소](../../parallel/concrt/cancellation-in-the-ppl.md) 및 [예외 처리](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)합니다.  
   
 ## <a name="related-topics"></a>관련 항목  

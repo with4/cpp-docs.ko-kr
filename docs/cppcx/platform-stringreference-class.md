@@ -6,25 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
 - VCCORLIB/Platform::StringReference::Data
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 클래스
 최저의 복사 작업으로 `Platform::String^` 입력 매개 변수의 문자열 데이터를 다른 메서드로 전달하는 데 사용할 수 있는 최적화 형식입니다.  
@@ -43,22 +45,22 @@ class StringReference
   
 |이름|설명|  
 |----------|-----------------|  
-|[Stringreference:: Stringreference](#ctor)|`StringReference`인스턴스를 만드는 두 개의 생성자입니다.|  
+|[StringReference::StringReference](#ctor)|`StringReference`인스턴스를 만드는 두 개의 생성자입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Stringreference:: Data](#data)|문자열 데이터를 char16 값의 배열로 반환합니다.|  
-|[Stringreference:: Length](#length)|문자열의 문자 수를 반환합니다.|  
-|[Stringreference:: Gethstring](#gethstring)|문자열 데이터를 HSTRING으로 반환합니다.|  
-|[Stringreference:: Getstring](#getstring)|문자열 데이터를 `Platform::String^`로 반환합니다.|  
+|[StringReference::Data](#data)|문자열 데이터를 char16 값의 배열로 반환합니다.|  
+|[StringReference::Length](#length)|문자열의 문자 수를 반환합니다.|  
+|[StringReference::GetHSTRING](#gethstring)|문자열 데이터를 HSTRING으로 반환합니다.|  
+|[StringReference::GetString](#getstring)|문자열 데이터를 `Platform::String^`로 반환합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Stringreference:: Operator =](#operator-assign)|새 `StringReference` 인스턴스에 `StringReference` 를 할당합니다.|  
+|[StringReference::operator=](#operator-assign)|새 `StringReference` 인스턴스에 `StringReference` 를 할당합니다.|  
 |[StringReference::operator()](#operator-call)|`StringReference` 를 `Platform::String^`로 변환합니다.|  
   
 ### <a name="requirements"></a>요구 사항  
@@ -70,7 +72,7 @@ class StringReference
   
  **헤더:** vccorlib.h  
 
-## <a name="data"></a>Stringreference:: Data 메서드
+## <a name="data"></a>  Stringreference:: Data 메서드
 이 항목의 내용을 반환 `StringReference` char16 값의 배열입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -84,7 +86,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>Stringreference:: Gethstring 메서드
+## <a name="gethstring"></a>  Stringreference:: Gethstring 메서드
 문자열의 내용을 `__abi_HSTRING`으로 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -101,7 +103,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>Stringreference:: Getstring 메서드
+## <a name="getstring"></a>  Stringreference:: Getstring 메서드
 문자열의 내용을 `Platform::String^`로 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -114,7 +116,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>반환 값  
  문자열 데이터가 포함된 `Platform::String^`입니다.  
 
-## <a name="length"></a>Stringreference:: Length 메서드
+## <a name="length"></a>  Stringreference:: Length 메서드
 문자열의 문자 수를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -130,7 +132,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>Stringreference:: Operator = 연산자
+## <a name="operator-assign"></a>  StringReference::operator= Operator
 지정한 개체를 현재 `StringReference` 개체에 할당합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -155,7 +157,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>StringReference::operator() 연산자
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 `StringReference` 개체를 `Platform::String^` 개체로 변환합니다.  
   
 ### <a name="syntax"></a>구문  

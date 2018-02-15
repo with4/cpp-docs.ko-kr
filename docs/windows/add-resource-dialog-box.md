@@ -4,33 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.editors.insertresource
-dev_langs: C++
+f1_keywords:
+- vc.editors.insertresource
+dev_langs:
+- C++
 helpviewer_keywords:
 - resources [Visual Studio], adding
 - Add Resource dialog box
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fde90f5d7c7822155e36b77c74cd80cdf56b10d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aab285109b34b1de2187e02956cfff2e5a0ba724
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="add-resource-dialog-box"></a>리소스 추가 대화 상자
 이 대화 상자는 C++ Windows 데스크톱 응용 프로그램 프로젝트에 리소스를 추가하는 데 사용합니다.  
   
 > [!NOTE]
->  이 정보는 Windows 스토어 앱의 리소스에 적용되지 않습니다. 참조 하는 방법에 대 한 자세한 내용은 [앱 리소스 정의](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4)합니다.  
+>  이 정보는 유니버설 Windows 플랫폼 앱의 리소스에 적용 되지 않습니다. 참조 하는 방법에 대 한 자세한 내용은 [앱 리소스 및 리소스 관리 시스템](/windows/uwp/app-resources/)합니다.  
   
  **리소스 종류**  
  만들려는 리소스의 종류를 지정합니다.  

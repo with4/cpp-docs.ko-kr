@@ -4,37 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: SCHEMA_ENTRY
-dev_langs: C++
-helpviewer_keywords: SCHEMA_ENTRY macro
+f1_keywords:
+- SCHEMA_ENTRY
+dev_langs:
+- C++
+helpviewer_keywords:
+- SCHEMA_ENTRY macro
 ms.assetid: e8bee479-80f3-417e-8f41-cdaddd49690c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 12a4026e94ea5fe5e310e0aeec7cdad10d33d2bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b1ddabb976cdf4897dbd414433f013a84825d01
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="schemaentry"></a>SCHEMA_ENTRY
 GUID는 클래스와 연결합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-      SCHEMA_ENTRY(  
-   guid,  
-   rowsetClass   
-);   
+```cpp
+      SCHEMA_ENTRY(guid,  
+   rowsetClass);   
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -48,8 +49,7 @@ GUID는 클래스와 연결합니다.
  [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 그런 다음 지도 Guid, 목록에 대 한 쿼리 또는 GUID를 지정 하는 경우 행 집합을 만들 수 있습니다. 스키마 행 집합 `IDBSchemaRowsetImpl` 만듭니다 표준 비슷합니다 `CRowsetImpl`-파생 클래스를 제공 해야 하는 단 한 **Execute** 에 다음 서명이 메서드:  
   
 ```  
-HRESULT Execute (
-    LONG* pcRowsAffected,  
+HRESULT Execute (LONG* pcRowsAffected,  
     ULONG cRestrictions,  
     const VARIANT* rgRestrictions);  
 ```  

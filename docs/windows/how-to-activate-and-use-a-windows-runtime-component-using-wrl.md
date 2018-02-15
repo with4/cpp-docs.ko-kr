@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>방법: WRL을 사용하여 Windows 런타임 구성 요소 활성화 및 사용
 이 문서에서는 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하 여 Windows 런타임을 초기화 하는 방법과 활성화 하 고 Windows 런타임 구성 요소를 사용 하는 방법을 보여 줍니다.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/21/2017
  다음 단계를 사용 하 여는 `Windows::Foundation::IUriRuntimeClass` 인터페이스를 Windows 런타임 구성 요소에 대 한 활성화 팩터리를 만들어 해당 구성의 인스턴스를 만들고, 속성 값을 검색 하는 방법을 보여 줍니다. 또한 Windows 런타임을 초기화 하는 방법을 보여 줍니다. 전체 예제와 같습니다.  
   
 > [!IMPORTANT]
->  유니버설 Windows 플랫폼 앱에서 Windows 런타임 c + + 템플릿 라이브러리를 일반적으로 사용 되지만이 예제에 대 한 예시는 콘솔 응용 프로그램을 사용 합니다. 와 같은 함수가 `wprintf_s` 는 유니버설 Windows 플랫폼 앱에서 사용할 수 없습니다. 형식 및 유니버설 Windows 플랫폼 앱에서 사용할 수 있는 함수에 대 한 자세한 내용은 참조 [CRT 함수는 /zw에서 지원 되지 않습니다](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) 및 [Win32 및 COM에 대 한 Windows 스토어 앱](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)합니다.  
+>  일반적으로 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 Windows 런타임 c + + 템플릿 라이브러리를 사용 되지만이 예제에 대 한 예시는 콘솔 응용 프로그램을 사용 합니다. 와 같은 함수가 `wprintf_s` 는 UWP 앱에서 사용할 수 없습니다. 형식 및 UWP 앱에서 사용할 수 있는 함수에 대 한 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) 및 [UWP 앱 용 Win32 및 COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)합니다.  
   
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>활성화 하 고 Windows 런타임 구성 요소를 사용 하 여  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="compiling-the-code"></a>코드 컴파일  
  코드를 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 하거나 라는 파일에 붙여 `wrl-consume-component.cpp` 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
   
- **cl.exe wrl 소비 component.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-component.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 런타임 C++ 템플릿 라이브러리(WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

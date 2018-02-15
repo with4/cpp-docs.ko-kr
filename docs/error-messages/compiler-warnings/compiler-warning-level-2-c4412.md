@@ -4,28 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: C4412
-dev_langs: C++
-helpviewer_keywords: C4412
+f1_keywords:
+- C4412
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92898b9c8e8845ecc8bc650b80cf41a33b3a59d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 41ecffdd760374ce5b96039e81a467572f977bcd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-warning-level-2-c4412"></a>컴파일러 경고(수준 2) C4412
 'function': 함수 시그니처에 ' type'; C + + 개체는 순수 코드 간에 전달 하는 안전 하지 않은 혼합형 / 네이티브는입니다.  
   
- **/clr: pure** 컴파일러 옵션은 Visual Studio 2015에서 사용 되지 않습니다.  
+ **/clr: pure** 컴파일러 옵션은 Visual Studio 2015에서 사용 되지 않습니다. "순수" 되어야 하는 코드가 있는 경우 C#로 포팅하는 것이 좋습니다.  
   
  컴파일러에서 런타임 오류가 발생할 수 있는 안전 하지 않은 상황을 발견 했습니다:에서 호출 되는 **/clr: pure** dllimport 및 함수 시그니처를 통해 가져온 함수 있는 안전 하지 않은 형식 . 멤버 함수가 포함 되어 있거나 안전 하지 않은 형식 또는 안전 하지 않은 형식에 대 한 간접 참조 되는 데이터 멤버는 형식이 안전 하지 않습니다.  
   
@@ -33,7 +38,6 @@ ms.lasthandoff: 12/21/2017
   
  가상 멤버 함수는 예기치 않은 결과가 발생할 특히 취약 합니다.  그러나는 비가상 함수에도 올바른 결과 얻을 수 있도록 테스트 되어야 합니다. 인 경우 올바른 결과 가져오는지 확인 하는 경우이 경고를 무시할 수 있습니다.  
   
- 대 한 자세한 내용은 **/clr: pure**, 참조 [하는 방법: /clr으로 마이그레이션: 순수 (C + + /cli CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)합니다.  
   
  C4412는 기본적으로 해제 되어 있습니다. 참조 [기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 및 [dllexport, dllimport](../../cpp/dllexport-dllimport.md) 자세한 정보에 대 한 합니다.  
   

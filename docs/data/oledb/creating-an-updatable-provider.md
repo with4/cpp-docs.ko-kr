@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, updatable
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d65bce2b262b7582f9194eb8047d71ce06f3ca16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-an-updatable-provider"></a>업데이트 가능 공급자 만들기
 Visual c + +에서는 업데이트 가능 공급자 또는 업데이트할 수 있는 공급자에 쓸 데이터 저장소입니다. 이 항목에서는 OLE DB 템플릿을 사용 하 여 업데이트할 수 있는 공급자를 만드는 방법에 설명 합니다.  
@@ -36,7 +38,7 @@ Visual c + +에서는 업데이트 가능 공급자 또는 업데이트할 수 �
 > [!NOTE]
 >  UpdatePV는 업데이트 가능 공급자의 예시입니다. UpdatePV는 MyProv 뿐만 아니라 업데이트할 수 있는 지원을 통해 같습니다.  
   
-##  <a name="vchowmakingprovidersupdatable"></a>업데이트 가능 공급자를 만들기  
+##  <a name="vchowmakingprovidersupdatable"></a> 업데이트 가능 공급자를 만들기  
  업데이트할 수 있는 공급자를 제공 하기 위해 키 공급자 데이터 저장소 및 원하는 이러한 작업을 수행할 때 공급자에서 수행할 수 있는 작업을 파악 하 고 있습니다. 특히 중요 한 문제는 즉시 또는 지연 업데이트를 데이터 저장소에 요소가 있는지 (일괄 처리) update 명령이 실행 될 때까지 합니다.  
   
  상속 하는 것인지 먼저 결정 해야 `IRowsetChangeImpl` 또는 `IRowsetUpdateImpl` 행 집합 클래스에 있습니다. 다음 중 구현 하기로에 따라 세 가지 방법의 기능에 어떤 영향이: `SetData`, **InsertRows**, 및 `DeleteRows`합니다.  
@@ -146,7 +148,7 @@ Visual c + +에서는 업데이트 가능 공급자 또는 업데이트할 수 �
   
      예를 들어, 속성 설정 방법의 속성을 설정할 지도 참조 **CUpdateCommand** (에서 Rowset.h)에서 [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)합니다.  
   
-##  <a name="vchowwritingtothedatasource"></a>데이터 소스에 기록  
+##  <a name="vchowwritingtothedatasource"></a> 데이터 소스에 기록  
  데이터 소스에서 읽고 호출는 **Execute** 함수입니다. 데이터 원본에 쓰려고 호출에서 `FlushData` 함수입니다. (일반적인 의미에서 플러시 수단을 테이블이 나 인덱스를 디스크에 수정 내용을 저장 합니다.)  
   
 ```  
@@ -160,13 +162,13 @@ FlushData(HROW, HACCESSOR);
 ### <a name="when-to-flush"></a>플러시 하는 경우  
  공급자 템플릿 호출 `FlushData` 데이터 데이터 저장소에 작성 해야 할 때마다, 뿐만 아니라 다음 함수를 호출한 결과로 일반적으로 (항상 그렇지는 않지만) 발생 하는이:  
   
--   **Irowsetchange:: Deleterows**  
+-   **IRowsetChange::DeleteRows**  
   
--   **Irowsetchange:: Setdata**  
+-   **IRowsetChange::SetData**  
   
 -   **IRowsetChange::InsertRows** (경우에 새 데이터를 행에 삽입할)  
   
--   **Irowsetupdate:: Update**  
+-   **IRowsetUpdate::Update**  
   
 ### <a name="how-it-works"></a>작동 방법  
  소비자가 플러시를 필요로 하는 호출 (예: **업데이트**)이이 호출은 항상 다음을 수행 하는 공급자에 전달 됩니다.  
@@ -217,7 +219,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  다음 예제와 방법을 `FlushData` 에서 구현 되는 `RUpdateRowset` 클래스에 [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) 샘플 (샘플 코드에서 Rowset.h 참조):  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////////  
 // class RUpdateRowset (in rowset.h)  
 ...  
@@ -308,7 +310,7 @@ HRESULT FlushData(HROW, HACCESSOR)
  코드는 [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) 샘플; 공급자를 처리할 수는 어떻게 설명 하는지 **NULL** 데이터. UpdatePV의 원본 제어 공급자 **NULL** 데이터 저장소에 문자열 "NULL"을 작성 하 여 데이터입니다. 읽을 때 **NULL** 데이터에서 데이터 저장소를 하 한 다음 버퍼를 비웁니다 만들기는 **NULL** 문자열입니다. 역시 재정의 `IRowsetImpl::GetDBStatus` 에서 반환 하는 **DBSTATUS_S_ISNULL** 해당 데이터 값이 비어 있습니다.  
   
 ### <a name="marking-nullable-columns"></a>Null 허용 열을 표시합니다.  
- 또한 스키마 행 집합을 구현 하는 경우 (참조 `IDBSchemaRowsetImpl`), 구현에서 지정 해야는 **DBSCHEMA_COLUMNS** 행 집합 (일반적으로 표시 하 여 공급자에 **C***xxx* **SchemaColSchemaRowset**) 열이 null을 허용 합니다.  
+ 또한 스키마 행 집합을 구현 하는 경우 (참조 `IDBSchemaRowsetImpl`), 구현에서 지정 해야는 **DBSCHEMA_COLUMNS** 행 집합 (일반적으로 표시 하 여 공급자에 **C***xxx*** SchemaColSchemaRowset**) 열이 null을 허용 합니다.  
   
  모든 null 허용 열이 포함 되도록 지정할 해야는 **DBCOLUMNFLAGS_ISNULLABLE** 값의 버전에는 `GetColumnInfo`합니다.  
   
@@ -316,7 +318,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  다음 예제와 방법을 **CommonGetColInfo** 에서 함수를 구현 하는 **CUpdateCommand** (UpProvRS.cpp 참조) UpdatePV에 있습니다. 열이 있는 어떻게 **DBCOLUMNFLAGS_ISNULLABLE** null 허용 열에 대 한 합니다.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////////  
 // CUpdateCommand (in UpProvRS.cpp)  
   
@@ -412,7 +414,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>플래그 열  
- 메타 데이터를 사용 하 여 설정 해야 하는 열에서 기본값을 지원 하는 경우는  **\<**  *공급자 클래스***> w s e t** 클래스입니다. 설정 *m_bColumnHasDefault* = `VARIANT_TRUE`합니다.  
+ 메타 데이터를 사용 하 여 설정 해야 하는 열에서 기본값을 지원 하는 경우는  **\< ***공급자 클래스***> w s e t** 클래스입니다. 설정 *m_bColumnHasDefault* = `VARIANT_TRUE`합니다.  
   
  있습니다를 사용 하 여 지정 된 열 플래그 설정 된 **DBCOLUMNFLAGS** 열거 형식입니다. 열 플래그 열 특성을 설명 합니다.  
   
@@ -428,6 +430,7 @@ trData[0].m_nNumericPrecision = 10;
 trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |  
                             DBCOLUMNFLAGS_ISFIXEDLENGTH;  
 lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));  
+
 m_rgRowData.Add(trData[0]);  
 ```  
   

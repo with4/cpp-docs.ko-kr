@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -33,24 +34,25 @@ f1_keywords:
 - C4362
 - C4367
 - C4370
-- C4371
 - C4373
 - C4380
 - C4387
 - C4388
 - C4396
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0de6e5d163322cde058ef564b78fdfe1141ab28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>컴파일러 경고 s C4200 C4399 통해
 
@@ -80,145 +82,145 @@ ms.lasthandoff: 12/21/2017
 |[컴파일러 경고(수준 1) C4216](../../error-messages/compiler-warnings/compiler-warning-level-1-c4216.md)|비표준 확장이 사용 됨: long float|
 |[컴파일러 경고(수준 1) C4218](../../error-messages/compiler-warnings/compiler-warning-level-1-c4218.md)|비표준 확장이 사용 됨: 저장소 클래스 또는 형식을 지정 해야 합니다|
 |[컴파일러 경고(수준 4) C4220](../../error-messages/compiler-warnings/compiler-warning-level-4-c4220.md)|varargs는 나머지 매개 변수와 일치|
-|[컴파일러 경고(수준 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|비표준 확장이 사용 됨: 'identifier': 'variable' 자동 변수의 주소를 사용 하 여 초기화할 수 없습니다.|
+|[컴파일러 경고(수준 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|비표준 확장이 사용 됨: '*식별자*': 자동 변수의 주소를 사용 하 여 초기화할 수 없습니다. '*변수*'|
 |[컴파일러 경고(수준 1 및 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|비표준 확장이 사용 됨: lvalue가 아닌 배열을 포인터로 변환|
-|[컴파일러 경고(수준 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|비표준 확장이 사용 됨: 'identifier' 형식 매개 변수 형식으로 이전에 정의 되었습니다|
-|[컴파일러 경고 (수준 1, 오류) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|비표준 확장이 사용 됨: 'k'는 사용 되지 않는 키워드|
+|[컴파일러 경고(수준 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|비표준 확장이 사용 됨: 정식 매개 변수 '*식별자*' 형식으로 이전에 정의 된|
+|[컴파일러 경고 (수준 1, 오류) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|비표준 확장이 사용 됨: '*키워드*'은 사용 되지 않는 키워드|
 |[컴파일러 경고(수준 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|사용 하는 오래 된 구문: 참조의 한정자는 무시 됩니다.|
 |[컴파일러 경고(수준 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|비표준 확장이 사용 됨: 선언 자 목록에서 쉼표 뒤의 한정자는 무시 됩니다.|
 |[컴파일러 경고(수준 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|사용 하는 오래 된 구문: 데이터의 한정자는 무시 됩니다.|
-|[컴파일러 경고(수준 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|사용 하는 오래 된 구문: 오래; 한정자가 무시 되었습니다|
-|[컴파일러 경고(수준 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|비표준 확장이 사용 됨: 'identifier': dllimport 'dllimport의 주소가 정적이 아니거나, identity 보장 되지 않습니다|
-|[컴파일러 경고 (수준 4, 오류) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|비표준 확장이 사용 됨: 'keyword' 키워드는 c + +, C 아님 에서만 지원 됩니다|
-|[컴파일러 경고 (수준 4, 오류) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|비표준 확장이 사용 됨: 'keyword' 키워드는 나중에 사용|
-|[컴파일러 경고 (수준 4, 오류) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|비표준 확장이 사용 됨: 'keyword' 키워드는이 아키텍처에서 지원 되지 않습니다|
-|[컴파일러 경고(수준 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|'keyword' 키워드는 아직 지원 되지 않지만 나중에 사용|
+|[컴파일러 경고(수준 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|anachronism used: modifiers/qualifiers interspersed; qualifier ignored|
+|[컴파일러 경고(수준 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|비표준 확장이 사용 됨: '*식별자*': dllimport의 주소가 '*dllimport*' 정적이 아니거나, identity 보장 되지 않습니다|
+|[컴파일러 경고 (수준 4, 오류) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|비표준 확장이 사용 됨: '*키워드*' 키워드를 c + +에서는 C 아님만 지원|
+|[컴파일러 경고 (수준 4, 오류) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|비표준 확장이 사용 됨: '*키워드*' 키워드를 사용 하도록 예약|
+|[컴파일러 경고 (수준 4, 오류) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|비표준 확장이 사용 됨: '*키워드*' 키워드가이 아키텍처에서 지원 되지 않습니다|
+|[컴파일러 경고(수준 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|'*키워드*' 키워드는 아직 지원 되지 않지만 나중에 사용|
 |[컴파일러 경고(수준 4) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|비표준 확장이 사용 됨: 클래스 rvalue를 lvalue로 사용|
-|[컴파일러 경고(수준 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|비표준 확장이 사용 됨: 'token': 'type1'에서 'type2'로 변환|
-|[컴파일러 경고(수준 3) C4240](../../error-messages/compiler-warnings/compiler-warning-level-3-c4240.md)|비표준 확장이 사용 됨: 이제 정의 'acess_specifier1' 됩니다. 이전에 'classname'에 대 한 액세스를 'access_specifier2' 되도록 정의 되어 있습니다.|
-|[컴파일러 경고(수준 4) C4242](../../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)|'식별자': 'type1'에서 'type1', 데이터가 손실 될 수로 변환|
-|[컴파일러 경고(수준 3) C4243](../../error-messages/compiler-warnings/compiler-warning-level-3-c4243.md)|'type1'에서 'type1'를 'conversion_type' 변환이 있지만 액세스할 수 없으면|
-|[컴파일러 경고(수준 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md)|'conversion_type': 'type1'에서 'type2', 데이터가 손실 될 수로 변환|
-|[컴파일러 경고(수준 3 및 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)|'conversion_type': 'type1'에서 'type2', 데이터가 손실 될 수로 변환|
-|[컴파일러 경고(수준 4) C4245](../../error-messages/compiler-warnings/compiler-warning-level-4-c4245.md)|'conversion_type': 'type1'에서 'type2', 불일치 signed 또는 unsigned로 변환|
-|[컴파일러 경고(수준 2) C4250](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)|'classname': 'base_classname::member' 우위를 통해 상속|
-|[컴파일러 경고(수준 1) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|'identifier': 'object_type1' 'identifier1'를 'object_type' 'identfier2'의 클라이언트에서 사용할 dll 인터페이스가 없는 해야 합니다.|
-|[컴파일러 경고(수준 4) C4254](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)|'operator': 'type1:field_bits'에서 'type2:field_bits', 데이터가 손실 될 수로 변환|
-|[컴파일러 경고(수준 4) C4255](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|'function': 함수 프로토타입을 입력하지 않았습니다. '()'에서 '(void)'로 변환됩니다.|
-|[컴파일러 경고(수준 4) C4256](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)|'function': 가상 기본 클래스 생성자가 '...'; 호출이 이전 버전의 Visual c + +와 호환 되지 않을 수 있습니다.|
-|[컴파일러 경고(수준 1) C4258](../../error-messages/compiler-warnings/compiler-warning-level-1-c4258.md)|'variable':에서 정의 된 루프 무시 됩니다. 사용 되는 바깥쪽 범위에서 정의|
-|[컴파일러 경고(수준 4) C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)|'function': 멤버 함수가 기본 클래스 가상 멤버 함수를 재정의하지 않습니다.|
-|[컴파일러 경고(수준 1) C4264](../../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)|'virtual_function': 재정의 'classname'; 기본에서 가상 멤버 함수에 대해 사용할 수 없습니다 함수가 숨겨집니다.|
-|[컴파일러 경고(수준 3) C4265](../../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)|'classname': 클래스에 가상 함수가 있지만 소멸자는이 클래스의 인스턴스 virtual\n 제대로 소멸 되지 되지|
-|[컴파일러 경고(수준 4) C4266](../../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)|'virtual_function': 재정의 'classname'; 기본에서 가상 멤버 함수에 대해 사용할 수 없습니다 함수가 숨겨집니다.|
-|[컴파일러 경고(수준 3) C4267](../../error-messages/compiler-warnings/compiler-warning-level-3-c4267.md)|'variable': 'size_t'을 't y', 데이터 손실을에서 변환|
-|[컴파일러 경고(수준 4) C4268](../../error-messages/compiler-warnings/compiler-warning-level-4-c4268.md)|'identifier': 컴파일러에서 생성 된 기본 생성자를 사용 하 여 초기화 된 'const' 정적/전역 데이터 개체를 0으로 채우기|
-|[컴파일러 경고(수준 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'identifier': 컴파일러에서 생성 된 기본 생성자를 사용 하 여 초기화 하는 'const' 자동 데이터 신뢰할 수 없는 결과 생성 합니다.|
-|[컴파일러 경고(수준 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'function': __declspec (dllimport); 표시 함수를 가져올 때에 네이티브 호출 규칙을 지정 해야 합니다.|
-|[컴파일러 경고(수준 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'function': 일관성 없는 dll 링크|
+|[컴파일러 경고(수준 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|비표준 확장이 사용 됨: '*토큰*': 변환할 '*type1*'to'*type2*'|
+|[컴파일러 경고(수준 3) C4240](../../error-messages/compiler-warnings/compiler-warning-level-3-c4240.md)|비표준 확장이 사용 됨:에 대 한 액세스 '*classname*'되도록 정의 되어 이제'*access_specifier1*', 이전에 것으로 정의 된'*access_specifier2*'|
+|[컴파일러 경고(수준 4) C4242](../../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)|'*식별자*': 변환할 '*type1*'to'*type2*', 데이터가 손실 될 수|
+|[컴파일러 경고(수준 3) C4243](../../error-messages/compiler-warnings/compiler-warning-level-3-c4243.md)|'*conversion_type*'conversion에서 '*type1*'to'*type2*' 있지만 액세스할 수 없으면|
+|[컴파일러 경고(수준 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md)|'*conversion_type*': 변환할 '*type1*'to'*type2*', 데이터가 손실 될 수|
+|[컴파일러 경고(수준 3 및 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)|'*conversion_type*': 변환할 '*type1*'to'*type2*', 데이터가 손실 될 수|
+|[컴파일러 경고(수준 4) C4245](../../error-messages/compiler-warnings/compiler-warning-level-4-c4245.md)|'*conversion_type*': 변환할 '*type1*'to'*type2*', signed 또는 unsigned 일치 하지 않습니다.|
+|[컴파일러 경고(수준 2) C4250](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)|'*classname*': 상속 '*base_classname*::*멤버*' 우위를 통해|
+|[컴파일러 경고(수준 1) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|'*식별자*': '*object_type1*' '*identifier1*'dll 인터페이스를 클라이언트 컴퓨터에 사용할 수 있어야 하는 데 필요한'*object_type*' '*identfier2*'|
+|[컴파일러 경고(수준 4) C4254](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)|'*연산자*': 변환할 '*type1*:*field_bits*'to'*type2*:*field_bits*', 데이터가 손실 될 수|
+|[컴파일러 경고(수준 4) C4255](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|'*함수*': 함수 프로토타입을 입력 하지 않았습니다: '()'에서 '(void)'로 변환|
+|[컴파일러 경고(수준 4) C4256](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)|'*함수*': 가상 기본 클래스에 대 한 생성자에는 '...'; 호출이 Visual c + +의 이전 버전과 호환 되지 않을 수 있습니다|
+|[컴파일러 경고(수준 1) C4258](../../error-messages/compiler-warnings/compiler-warning-level-1-c4258.md)|'*변수*': 정의 바깥쪽 범위의 정의가 사용 루프 무시 됩니다.|
+|[컴파일러 경고(수준 4) C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)|'*함수*': 멤버 함수가 기본 클래스 가상 멤버 함수를 재정의 하지 않습니다|
+|[컴파일러 경고(수준 1) C4264](../../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)|'*virtual_function*': 재정의 자료에서 가상 멤버 함수에 대해 사용할 수 없습니다 '*classname*'; 함수가 숨겨집니다.|
+|[컴파일러 경고(수준 3) C4265](../../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)|'*classname*': 클래스에 가상 함수가 있지만 소멸자는이 클래스의 인스턴스 virtual\n 제대로 소멸 되지 되지|
+|[컴파일러 경고(수준 4) C4266](../../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)|'*virtual_function*': 재정의 자료에서 가상 멤버 함수에 대해 사용할 수 없습니다 '*classname*'; 함수가 숨겨집니다.|
+|[컴파일러 경고(수준 3) C4267](../../error-messages/compiler-warnings/compiler-warning-level-3-c4267.md)|'*변수*': 변환에 사용 되는 'size_t'에서 '*형식*', 데이터가 손실 될 수|
+|[컴파일러 경고(수준 4) C4268](../../error-messages/compiler-warnings/compiler-warning-level-4-c4268.md)|'*식별자*': 컴파일러에서 생성 된 기본 생성자를 사용 하 여 초기화 된 'const' 정적/전역 데이터 개체를 0으로 채우기|
+|[컴파일러 경고(수준 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*식별자*': 컴파일러에서 생성 된 기본 생성자를 사용 하 여 초기화 하는 'const' 자동 데이터 신뢰할 수 없는 결과 생성 합니다.|
+|[컴파일러 경고(수준 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*함수*': __declspec (dllimport) 표시; 함수를 가져올 때 네이티브 호출 규칙을 지정 해야 합니다.|
+|[컴파일러 경고(수준 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*함수*': 일관성 없는 dll 링크|
 |컴파일러 경고 (수준 1) C4274|#ident 무시 됩니다. #pragma 주석 (exestr, 'string')에 대 한 설명서를 참조 하십시오.|
-|[컴파일러 경고(수준 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|dll 인터페이스가 아닌 'classkey' 'identifier1' dll 'classkey' 'identifier2' 인터페이스에 대 한 기준으로 사용 합니다.|
-|[컴파일러 경고(수준 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'function': 제공 된; 프로토타입이 없는 매개 변수를 가정합니다.|
-|컴파일러 경고 (수준 1) C4277|데이터 멤버와 함수 멤버;로 가져온된 항목 'classname::member' 존재 데이터 멤버가 무시 됩니다.|
-|[컴파일러 경고(수준 3) C4278](../../error-messages/compiler-warnings/compiler-warning-level-3-c4278.md)|'identifier': 형식 라이브러리 'library' 식별자가 이미 매크로입니다. 'rename' 한정자를 사용 하 여|
-|컴파일러 경고 (수준 3 및 수준 4) C4279|'identifier': 형식 라이브러리 'library' 식별자가 키워드입니다. 'rename' 한정자를 사용 하 여|
-|[컴파일러 경고(수준 3) C4280](../../error-messages/compiler-warnings/compiler-warning-level-3-c4280.md)|'type' 형식을 통해 재귀적을 된 'operator->'|
-|[컴파일러 경고(수준 3) C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)|'type1' 형식을 'operator->' 재귀가 발생 했습니다.|
-|[컴파일러 경고(수준 3) C4282](../../error-messages/compiler-warnings/compiler-warning-level-3-c4282.md)|형식 'type2'를 통해 다음|
-|[컴파일러 경고(수준 3) C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|및 'typeN' 형식을 통해|
-|[컴파일러 경고(수준 2) C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|'identifier:: operator->'의 반환 형식은 중 위 표기법을 사용 하 여 적용할 경우 재귀적입니다.|
-|[컴파일러 경고(수준 1) C4286](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)|'derived_type': 'line_number' 줄에 기본 클래스 (e)에서 발견 했습니다|
-|[컴파일러 경고(수준 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'operator': 부호 없는 상수 또는 음의 상수가 일치하지 않습니다.|
-|[컴파일러 경고(수준 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|비표준 확장이 사용 됨: 'variable': for 루프에서 선언 된 루프 제어 변수가 for 루프 범위; 외부에서 사용 됩니다 외부 범위에 있는 선언과 충돌|
-|[컴파일러 경고(수준 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|비표준 확장이 사용 됨: 'variable': for 루프에서 선언 된 루프 제어 변수가 for 루프 범위 외부에서 사용 됩니다|
+|[컴파일러 경고(수준 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|dll 인터페이스가 아닌 '*classkey*' '*identifier1*'dll 인터페이스에 대 한 기준으로 사용'*classkey*' '*identifier2*'|
+|[컴파일러 경고(수준 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*함수*': 프로토타입이 없는 제공 하는 매개 변수를 가정 합니다.|
+|컴파일러 경고 (수준 1) C4277|가져온된 항목 '*classname*::*멤버*' 데이터 멤버와 함수 멤버;로 존재 하므로 데이터 멤버가 무시 됩니다.|
+|[컴파일러 경고(수준 3) C4278](../../error-messages/compiler-warnings/compiler-warning-level-3-c4278.md)|'*식별자*': 형식 라이브러리의 식별자 '*라이브러리*'가 이미 매크로 'rename' 한정자를 사용 하십시오.|
+|컴파일러 경고 (수준 3 및 수준 4) C4279|'*식별자*': 형식 라이브러리의 식별자 '*라이브러리*'는 키워드 'rename' 한정자를 사용 하십시오.|
+|[컴파일러 경고(수준 3) C4280](../../error-messages/compiler-warnings/compiler-warning-level-3-c4280.md)|형식을 통해 재귀적 되었습니다 'operator->' '*형식*'|
+|[컴파일러 경고(수준 3) C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)|'operator->' 재귀가 형식 발생 했습니다. '*type1*'|
+|[컴파일러 경고(수준 3) C4282](../../error-messages/compiler-warnings/compiler-warning-level-3-c4282.md)|형식을 통해 다음 '*type2*'|
+|[컴파일러 경고(수준 3) C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|형식을 통해 및 '*typeN*'|
+|[컴파일러 경고(수준 2) C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|반환 형식에 대 한 '*식별자*:: operator-> ' 중 위 표기법을 사용 하 여 적용할 경우 재귀적입니다.|
+|[컴파일러 경고(수준 1) C4286](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)|'*derived_type*': 기본 클래스에서 발견 했습니다 ('*base_type*') 선에 '*line_number*'|
+|[컴파일러 경고(수준 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'*연산자*': 서명 되지 않은 또는 음의 상수 일치 하지 않습니다.|
+|[컴파일러 경고(수준 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|비표준 확장이 사용 됨: '*변수*': for 루프에서 선언 된 루프 제어 변수가 for 루프 범위 외부에서 사용 되었습니다; 외부 범위에 있는 선언과 충돌|
+|[컴파일러 경고(수준 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|비표준 확장이 사용 됨: '*변수*': for 루프에서 선언 된 루프 제어 변수가 for 루프 범위 외부에서 사용 됩니다|
 |[컴파일러 경고(수준 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|C + + 예외 사양이 나타내는 함수를 제외 하 고 무시 __declspec (nothrow) 되지 않습니다.|
-|[컴파일러 경고(수준 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|'declaration':를 찾을 수 없는 일치 하는 연산자 삭제 초기화는 예외를 throw 하는 경우 메모리를 해제 되지 않습니다.|
-|[컴파일러 경고(수준 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|'shift_operator': 시프트 횟수가 음수 이거나 너무 큽니다., 정의 되지 않은 동작|
-|[컴파일러 경고(수준 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|'array': 배열이 너무 작아서 null 종결 문자를 포함 하려면|
-|[컴파일러 경고(수준 4) C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|'operator': 식이 항상 'boolean_value'입니다.|
-|[컴파일러 경고(수준 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|'function': 함수가 간주 하지 않도록 지정 되었으나 예외를 throw 하려면|
-|컴파일러 경고 (수준 4) C4298|'identifier': 형식 라이브러리 'library' 식별자가 이미 매크로입니다. '__identifier'에 이름 바꾸기|
-|컴파일러 경고 (수준 4) C4299|'identifier': 형식 라이브러리 'library' 식별자가 키워드입니다. '__identifier'에 이름 바꾸기|
-|컴파일러 경고 C4301|'derived_class::function': 'base_class:function'에서 const/volatile 한정자만 다르기 재정의 가상 함수|
-|[컴파일러 경고(수준 2) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|'conversion': 'type1'에서 'type2'(으)로 잘립니다.|
-|컴파일러 경고 C4303|C style_cast'에서 'type2' ' type1'는 사용 되지 않습니다. static_cast, __try_cast 또는 dynamic_cast를 사용 하 여,|
-|[컴파일러 경고(수준 1) C4305](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)|'conversion': 'type1'에서 'type2'(으)로 잘립니다.|
-|[컴파일러 경고(수준 3) C4306](../../error-messages/compiler-warnings/compiler-warning-level-3-c4306.md)|'conversion': 'type1'에서 'type2' (으) 더 큰 변환입니다|
-|[컴파일러 경고(수준 2) C4307](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)|'operator': 정수 계열 상수 오버플로입니다|
+|[컴파일러 경고(수준 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|'*선언*': 일치 하는 연산자 삭제 하지 않으면 초기화 예외를 throw 하는 경우 메모리를 해제 되지 것입니다|
+|[컴파일러 경고(수준 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|'*shift_operator*': 시프트 횟수가 음수 이거나 너무 큽니다., 정의 되지 않은 동작|
+|[컴파일러 경고(수준 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|'*배열*': 배열이 너무 작아서 null 종결 문자를 포함 하려면|
+|[컴파일러 경고(수준 4) C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|'*연산자*': 식이 항상 '*boolean_value*'|
+|[컴파일러 경고(수준 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|'*함수*': 함수가 간주 하지 않도록 지정 되었으나 예외를 throw 하려면|
+|컴파일러 경고 (수준 4) C4298|'*식별자*': 형식 라이브러리의 식별자 '*라이브러리*'가 이미 매크로;에 이름 바꾸기'*__identifier*'|
+|컴파일러 경고 (수준 4) C4299|'*식별자*': 형식 라이브러리의 식별자 '*라이브러리*'는 키워드;에 이름 바꾸기'*__identifier*'|
+|컴파일러 경고 C4301|'*derived_class*::*함수*': 재정의 가상 함수에서 다른만 '*base_class*::*함수*' const/volatile 하 여 한정자|
+|[컴파일러 경고(수준 2) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|'*변환*':에서 잘림 '*type1*'to'*type2*'|
+|컴파일러 경고 C4303|C 스타일 캐스팅 '*type1*'to'*type2*'는 사용 되지 않고 사용 하 여 정적\_캐스팅, \_ \_시도\_캐스트 또는 동적\_캐스트|
+|[컴파일러 경고(수준 1) C4305](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)|'*변환*':에서 잘림 '*type1*'to'*type2*'|
+|[컴파일러 경고(수준 3) C4306](../../error-messages/compiler-warnings/compiler-warning-level-3-c4306.md)|'*변환*': 변환할 '*type1*'to'*type2*' 더 큰|
+|[컴파일러 경고(수준 2) C4307](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)|'*연산자*': 정수 계열 상수 오버플로입니다|
 |[컴파일러 경고(수준 2) C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|음의 정수 상수가 부호 없는 형식으로 변환|
-|[컴파일러 경고(수준 2) C4309](../../error-messages/compiler-warnings/compiler-warning-level-2-c4309.md)|'conversion': 상수 값 잘림|
+|[컴파일러 경고(수준 2) C4309](../../error-messages/compiler-warnings/compiler-warning-level-2-c4309.md)|'*변환*': 상수 값 잘림|
 |[컴파일러 경고(수준 3) C4310](../../error-messages/compiler-warnings/compiler-warning-level-3-c4310.md)|캐스트 상수 값을 잘립니다.|
-|[컴파일러 경고(수준 1) C4311](../../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)|'variable': 'type1'에서 'type2' (으) 포인터 잘림|
-|[컴파일러 경고(수준 1) C4312](../../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)|'operation': 'type1'에서 'type2' (으) 더 큰 변환입니다|
-|[컴파일러 경고(수준 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|'function': 서식 문자열에서 ' format_specifier' 인수 'type' 형식의 ' argument_number'와 충돌|
+|[컴파일러 경고(수준 1) C4311](../../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)|'*변수*': 포인터 잘림에서 '*type1*'to'*type2*'|
+|[컴파일러 경고(수준 1) C4312](../../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)|'*작업*': 변환할 '*type1*'to'*type2*' 더 큰|
+|[컴파일러 경고(수준 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|'*함수*': '*format_specifier*'서식 문자열이 충돌 인수'*argument_number*'형식의'*형식*'|
 |컴파일러 경고 C4314|pragma 매개 변수는 '32' 또는 '64' 이어야 합니다|
-|컴파일러 경고 (수준 4) C4315|'classname': 생성자가 예상 대로 'member' 멤버에 대 한 'this'이 포인터 정렬 된 '맞춤' 되지 않을 수 있습니다|
-|컴파일러 경고 (수준 3) C4316|'identifier': 힙에 할당 된 개체를 정렬 된 '맞춤' 되지 않을 수 있습니다|
-|컴파일러 경고 (수준 1) C4317|'printf_family': 서식 문자열에 대 한 전달 된 인수가 부족 합니다.|
+|컴파일러 경고 (수준 4) C4315|'*classname*': 멤버에 대 한 'this'이 포인터 '*멤버*'있습니다 맞춰지지'*맞춤*' 생성자가 예상 대로|
+|컴파일러 경고 (수준 3) C4316|'*식별자*': 힙에 할당 된 개체를 정렬할 수 있습니다 '*맞춤*'|
+|컴파일러 경고 (수준 1) C4317|'*printf_family*': 서식 문자열에 대 한 전달 된 인수가 부족 합니다.|
 |컴파일러 경고 C4318|memset에 길이로 상수 0을 전달합니다.|
-|[컴파일러 경고(수준 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|'operator': 0 확장 'type1' 더 큰 'type2'|
-|컴파일러 경고 (수준 1) C4321|'%$S' 인터페이스의 IID를 자동으로 생성|
-|컴파일러 경고 (수준 1) C4322|자동으로 생성 되는 '%$S' 클래스에 대 한 CLSID|
-|컴파일러 경고 (수준 1) C4323|'%$S' 클래스에 대 한 등록 된 CLSID를 다시 사용|
-|[컴파일러 경고(수준 4) C4324](../../error-messages/compiler-warnings/compiler-warning-level-4-c4324.md)|'structname': __declspec(align()) 때문에 구조체가 채워졌습니다|
-|[컴파일러 경고(수준 1) C4325](../../error-messages/compiler-warnings/compiler-warning-level-1-c4325.md)|표준 무시 ' section' 섹션에 대 한 특성|
-|[컴파일러 경고(수준 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|'function'의 반환 형식은 'type2' 대신 ' type1' 해야 합니다.|
-|컴파일러 경고 C4327|'할당': LHS ('alignment1')의 간접 참조 맞춤이 RHS ('alignment2') 보다 큽니다.|
-|컴파일러 경고 C4328|'function': 정식 매개 변수 parameter_number (parameter_alignment)의 간접 참조 맞춤이 실제 인수 맞춤 (argument_alignment) 보다 큽니다.|
+|[컴파일러 경고(수준 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|'*연산자*': 0 확장 '*type1*'to'*type2*' 더 큰|
+|컴파일러 경고 (수준 1) C4321|자동으로 생성 되는 인터페이스에 대 한 IID '*인터페이스*'|
+|컴파일러 경고 (수준 1) C4322|자동으로 생성 되는 클래스에 대 한 CLSID*클래스*'|
+|컴파일러 경고 (수준 1) C4323|다시 사용 하 여 등록 된 CLSID를 클래스의*클래스*'|
+|[컴파일러 경고(수준 4) C4324](../../error-messages/compiler-warnings/compiler-warning-level-4-c4324.md)|'*structname*': __declspec(align()) 때문에 구조체가 채워졌습니다|
+|[컴파일러 경고(수준 1) C4325](../../error-messages/compiler-warnings/compiler-warning-level-1-c4325.md)|표준 섹션에 대 한 특성 '*섹션*' 무시|
+|[컴파일러 경고(수준 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|반환 형식 '*함수*'이어야 합니다.'*type1*' 대신의 '*type2*'|
+|컴파일러 경고 C4327|'*할당*': LHS의 간접 참조 맞춤이 ('*alignment1*') RHS 보다 큽니다 ('*alignment2*')|
+|컴파일러 경고 C4328|'*함수*': 정식 매개 변수의 간접 참조 맞춤이 *parameter_number* (*parameter_alignment*) 실제 인수 맞춤 보다 큰 (*argument_alignment*)|
 |[컴파일러 경고(수준 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align())는 enum에서 무시 됩니다.|
-|컴파일러 경고 (수준 1) C4330|'%s'을 무시 하는 '%s' 섹션에 대 한 특성|
-|[컴파일러 경고(수준 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|'shift_operator': 오른쪽 시프트 횟수가 너무 커 데이터가 손실|
-|[컴파일러 경고(수준 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|'shift_operator': 32 비트 시프트의 결과가 암시적으로 64 비트로 변환 (64 비트 시프트를 사용 했습니다.)|
+|컴파일러 경고 (수준 1) C4330|특성 '*특성*'section'에 대 한*섹션*' 무시|
+|[컴파일러 경고(수준 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|'*shift_operator*': 오른쪽 시프트 횟수가 너무 커 데이터가 손실|
+|[컴파일러 경고(수준 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|'*shift_operator*': 32 비트 시프트의 결과가 암시적으로 64 비트로 변환 (64 비트 시프트를 사용 했습니다.)|
 |[컴파일러 경고 C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Mac 파일 형식이 발견 되었습니다: 하십시오 소스 파일을 DOS 나 UNIX 형식 변환|
-|[컴파일러 경고(수준 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|상호 참조 된 형식 라이브러리 'library1' 'library2' 가져오기 전에 가져오기|
-|[컴파일러 경고(수준 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|'library2'에서 'library1' 상호 참조 형식 라이브러리는 자동으로 가져옵니다.|
-|컴파일러 경고 (수준 4) C4338|#pragma %s: '%s' 표준 섹션이 사용 됩니다.|
-|[컴파일러 경고(수준 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'type':에서 발견 되는 정의 되지 않은 형식을 사용 하 여 ' WinRT &#124; CLR' 메타 데이터 사용이 형식의 런타임 예외가 발생할 수 있습니다|
-|[컴파일러 경고(수준 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'value': 값이 음수 값으로 양의에서 래핑 되었습니다|
-|[컴파일러 경고(수준 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|동작 변경: 'function'이(가) 호출되었지만 이전 버전에서는 멤버 연산자가 호출되었습니다.|
+|[컴파일러 경고(수준 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|상호 참조 형식 라이브러리 가져오기 '*library1*'가져오기' before*library2*'|
+|[컴파일러 경고(수준 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|상호 참조 형식 라이브러리 '*library1*'에서'*library2*'가 자동으로 가져옵니다.|
+|컴파일러 경고 (수준 4) C4338|#pragma *지시문*: 표준 섹션 '*섹션*' 사용|
+|[컴파일러 경고(수준 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*형식*':에서 발견 되는 정의 되지 않은 형식을 사용 하 여 ' WinRT &#124; CLR' 메타 데이터 사용이 형식의 런타임 예외가 발생할 수 있습니다|
+|[컴파일러 경고(수준 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*값*': 값이 음수 값으로 양의에서 래핑 되었습니다|
+|[컴파일러 경고(수준 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|동작 변경: '*함수*' 호출 되었지만 이전 버전에서는 멤버 연산자가 호출|
 |컴파일러 경고 (수준 4) C4343|#pragma optimize("g",off)는 /Og 옵션을 재정의합니다.|
-|[컴파일러 경고(수준 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|동작 변경: 'function' 호출에 명시적 템플릿 인수 결과 사용|
-|[컴파일러 경고(수준 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|'name': 종속 이름이 형식이 아닙니다|
-|[컴파일러 경고(수준 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'type': 기본 매개 변수 재정의: 'parameter_number' 매개 변수|
-|[컴파일러 경고(수준 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|동작 변경: 'member1'이(가) 'member2' 대신 호출됩니다.|
-|컴파일러 경고 (수준 1) C4352|' % $I ': 이미 정의 된 내장 함수|
+|[컴파일러 경고(수준 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|동작 변경: 명시적 템플릿 인수 결과 호출에서 사용 하 여 '*함수*'|
+|[컴파일러 경고(수준 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|'*이름*': 종속 이름이 형식이 아닙니다|
+|[컴파일러 경고(수준 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'*형식*': 기본 매개 변수 재정의: 매개 변수 '*parameter_number*'|
+|[컴파일러 경고(수준 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|동작 변경: '*member1*'대신 호출'*member2*'|
+|컴파일러 경고 (수준 1) C4352|'*식별자*': 이미 정의 된 내장 함수|
 |[컴파일러 경고(수준 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|비표준 확장이 사용 됨: 함수 식으로 상수 0입니다.  내장 '__noop' 함수를 사용|
 |[컴파일러 경고 C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)컴파일러 경고 (수준 1 및 수준 4) C4355|'this': 기본 멤버 이니셜라이저 목록에서 사용|
-|[컴파일러 경고(수준 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'member': 파생된 클래스를 통해 정적 데이터 멤버를 초기화할 수 없습니다|
-|[컴파일러 경고(수준 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|매개 변수 배열 인수 대리자에 대 한 형식 인수 목록에 'function'를 생성 하는 경우 무시 'delegate'|
-|[컴파일러 경고(수준 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'operator': 반환 결합된 대리자의 형식이 'void'; 반환 되는 값 정의 되지 않습니다.|
-|[컴파일러 경고(수준 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'type': 맞춤 지정 자가 실제 맞춤 ('맞춤') 보다 작으면 및 무시 됩니다.|
-|컴파일러 경고 (수준 2) C4362|'%$S': 8 바이트 보다 큰 맞춤 CLR에서 지원 되지 않습니다|
-|[컴파일러 경고(수준 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using에서 이전에 표시 하는 ' assembly' 어셈블리에 대 한 ' location'('line_number'); as_friend 특성 없이 as_friend 적용 되지 않습니다|
-|[컴파일러 경고(수준 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'expression': 'type1'에서 'type2', 불일치 signed 또는 unsigned로 변환|
-|[컴파일러 경고(수준 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|단항 'operator' 연산자의 결과 정렬 되지 않을 수 있습니다.|
-|컴파일러 경고 (수준 3) C4367|'%$T'에서 '%$T'로 변환에는 데이터 형식 잘못 맞춤 예외가 발생할 수 있습니다.|
-|[컴파일러 경고 (오류) C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|'member' 관리 되는 'type'의 멤버로 정의할 수 없습니다: 혼합된 형식은 지원 되지 않습니다|
-|[컴파일러 경고(수준 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'열거자': 열거자 값 'value'는 'type'로 나타낼 수 없습니다, 값은 'new_value'|
-|컴파일러 경고 C4370|'classname': 압축 기능이 향상 되어 컴파일러의 이전 버전에서 클래스 레이아웃이 변경 되었습니다|
-|컴파일러 경고 (수준 3) C4371|'classname': 'member' 멤버의 압축 기능이 향상 되어 컴파일러의 이전 버전에서 클래스 레이아웃이 변경 될 수 있습니다|
-|컴파일러 경고 (수준 3) C4373|'derived_class::function': 가상 함수 재정의 'base_class::function', 매개 변수의 const/volatile 한정자만 다른 경우에 이전 버전의 컴파일러 재정의 하지 않았습니다|
-|[컴파일러 경고(수준 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|'function1': 인터페이스 메서드 'function2' 비가상 메서드에서 구현 하지 것입니다.|
-|[컴파일러 경고(수준 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|public이 아닌 메서드 'method2' 2'를 재정의 하지 않습니다.|
-|[컴파일러 경고(수준 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|액세스 지정자 ' old_specifier:'은 더 이상 지원:를 사용 하십시오 ' new_specifier:' 대신|
+|[컴파일러 경고(수준 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'*멤버*': 파생된 클래스를 통해 정적 데이터 멤버를 초기화할 수 없습니다|
+|[컴파일러 경고(수준 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|대리자에 대 한 형식 인수 목록에 있는 매개 변수 배열 인수 '*위임*'생성할 때 무시'*함수*'|
+|[컴파일러 경고(수준 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'*연산자*': 결합된 대리자의 반환 형식은 'void' 이며 반환 되는 값 정의 되지 않습니다.|
+|[컴파일러 경고(수준 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*형식*': 맞춤 지정 자가 실제 맞춤 보다 작습니다 ('*맞춤*'), 무시 됩니다.|
+|컴파일러 경고 (수준 2) C4362|'*형식*': 8 바이트 보다 큰 맞춤 CLR에서 지원 되지 않습니다|
+|[컴파일러 경고(수준 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using 어셈블리에 대 한 '*어셈블리*'에서 확인 된 이전 에'*위치*' ('*line_number*') 없이으로\_friend 특성;\_friend 하지 적용|
+|[컴파일러 경고(수준 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'*식*': 변환할 '*type1*'to'*type2*', signed 또는 unsigned 일치 하지 않습니다.|
+|[컴파일러 경고(수준 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|단항의 결과가 '*연산자*' 연산자는 정렬 되지 않을 수 있습니다|
+|컴파일러 경고 (수준 3) C4367|변환에서 '*type1*'to'*type2*' 데이터 형식 잘못 맞춤 예외가 발생할 수 있습니다|
+|[컴파일러 경고 (오류) C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|정의할 수 없습니다 '*멤버*의 멤버인 관리 되 는' 있는 그대로'*형식*': 혼합된 형식은 지원 되지 않습니다|
+|[컴파일러 경고(수준 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'*열거자*': 열거자 값 '*값*'로 나타낼 수 없습니다'*형식*', 값은 '*new_value*'|
+|컴파일러 경고 C4370|'*classname*': 압축 기능이 향상 되어 컴파일러의 이전 버전에서 클래스 레이아웃이 변경 되었습니다|
+|[컴파일러 경고 (수준 3) C4371](../../error-messages/compiler-warnings/c4371.md)|'*classname*': 멤버의 압축 기능이 향상 되어 컴파일러의 이전 버전에서 클래스 레이아웃이 변경 될 수 있습니다 '*멤버*'|
+|컴파일러 경고 (수준 3) C4373|'*derived_class*::*함수*': 가상 함수 재정의*base_class*::*함수*', 이전 버전의 컴파일러 매개 변수의 const/volatile 한정자만 다른 경우에 재정의 되지 않았습니다.|
+|[컴파일러 경고(수준 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|'*function1*': 인터페이스 메서드가 가상 메서드에서 구현 하지 것입니다. '*function2*'|
+|[컴파일러 경고(수준 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|public이 아닌 메서드 '*method2*'를 재정의 하지 않습니다'*method2*'|
+|[컴파일러 경고(수준 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|액세스 지정자 '*old_specifier*:'은 더 이상 지원:를 사용 하십시오 '*new_specifier*:' 대신|
 |[컴파일러 경고(수준 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|네이티브 형식은 기본적으로 private입니다. -d1PrivateNativeTypes는 사용 되지 않습니다.|
 |[컴파일러 경고(수준 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|이니셜라이저; 실행에 대 한 함수 포인터 얻어야 합니다. resolvemethodhandle|
-|[컴파일러 경고(수준 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|이 컴파일러 버전 'version_number' 공용 언어 런타임의 지원 되지 않습니다. 이 버전을 사용 하 여 예기치 않은 결과가 발생할 수 있습니다.|
-|컴파일러 경고 (수준 1, 오류) C4380|'%$S': 기본 생성자는 사용 되지 않을 수 없습니다|
-|[컴파일러 경고(수준 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|'function1': 인터페이스 메서드 'function2' public이 아닌 메서드에서 구현 하지 것입니다.|
-|[컴파일러 경고(수준 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|'type'를 throw: __clrcall 소멸자 또는 복사 생성자 인 형식이 /clr에서 낼 수 있습니다: 순수 모듈|
-|[컴파일러 경고(수준 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'instance_dereference_operator': 사용자 지정 'instance_dereference_operator' 연산자가 있으면; 핸들 역참조의 의미가 변경 수 연산자는 피연산자에 대 한 명시적 정적 함수로 작성|
+|[컴파일러 경고(수준 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|버전 '*version_number*' 공용 언어 런타임에서이 컴파일러에서 지원 되지 않습니다. 이 버전을 사용 하 여 예기치 않은 결과가 발생할 수 있습니다.|
+|컴파일러 경고 (수준 1, 오류) C4380|'*클래스*': 기본 생성자는 사용 되지 않을 수 없습니다|
+|[컴파일러 경고(수준 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|'*function1*': 인터페이스 메서드가 public이 아닌 방법으로 구현 하지 것입니다. '*function2*'|
+|[컴파일러 경고(수준 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|throw '*형식*': __clrcall 소멸자 또는 복사 생성자 인 형식이 /clr에서 낼 수 있습니다: 순수 모듈|
+|[컴파일러 경고(수준 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'*instance_dereference_operator*': 핸들 역참조의 의미가 변경할 수는 사용자 정의 하는 경우 '*instance_dereference_operator*' 연산자 존재를 정적으로 연산자를 작성 합니다. 피연산자에 대 한 명시적 함수|
 |[컴파일러 경고(수준 1) C4384](../../error-messages/compiler-warnings/compiler-warning-level-1-c4384.md)|'make_public' #pragma 전역 범위에만 사용 해야|
-|컴파일러 경고 (수준 3) C4387|'%s': 고려 되었지만|
-|컴파일러 경고 (수준 4) C4388|'%$L': signed 또는 unsigned 일치 하지 않습니다.|
-|[컴파일러 경고(수준 4) C4389](../../error-messages/compiler-warnings/compiler-warning-level-4-c4389.md)|'operator': signed 또는 unsigned 일치 하지 않습니다.|
+|컴파일러 경고 (수준 3) C4387|'*대체*': 고려 되었지만|
+|컴파일러 경고 (수준 4) C4388|'*식*': signed 또는 unsigned 일치 하지 않습니다.|
+|[컴파일러 경고(수준 4) C4389](../../error-messages/compiler-warnings/compiler-warning-level-4-c4389.md)|'*연산자*': signed 또는 unsigned 일치 하지 않습니다.|
 |[컴파일러 경고(수준 3) C4390](../../error-messages/compiler-warnings/compiler-warning-level-3-c4390.md)|';': 제어 된 빈 문이 반환 합니다. 이 의도 무엇입니까?|
-|[컴파일러 경고(수준 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|'t e r': 내장 함수에 대 한 잘못 된 반환 형식이 'type' 필요 합니다.|
-|[컴파일러 경고(수준 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|'t e r': 내장 함수, 예상된 'argument_count' 인수에 대 한 인수 개수가 잘못 되었습니다|
-|[컴파일러 경고(수준 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'variable': const; 'literal' 데이터 멤버에 영향을 주지 무시|
-|[컴파일러 경고 C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'function': appdomain 별 기호 해야 __declspec('dllexport')로 표시할 수 없습니다|
-|[컴파일러 경고(수준 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'function': 멤버 함수가 initonly 데이터 멤버 'member'의 복사본에서 호출 됩니다.|
-|컴파일러 경고 (수준 2) C4396|'%$S': friend 선언이 함수 템플릿의 특수화를 참조 하는 경우 인라인 지정자를 사용할 수 없습니다|
+|[컴파일러 경고(수준 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|'*t e r*': 내장 함수가 필요 합니다. 반환 형식이 잘못 되었습니다 '*형식*'|
+|[컴파일러 경고(수준 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|'*t e r*': 내장 함수, 예상에 대 한 인수 개수가 잘못 되었습니다 '*argument_count*' 인수|
+|[컴파일러 경고(수준 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'*변수*': const 영향을 주지 않습니다 '*리터럴*' 데이터 멤버; 무시|
+|[컴파일러 경고 C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'*함수*': appdomain 별 기호 해야 __declspec('dllexport')로 표시할 수 없습니다|
+|[컴파일러 경고(수준 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'*함수*': 멤버 함수가 initonly 데이터 멤버의 복사본에서 호출 됩니다. '*멤버*'|
+|컴파일러 경고 (수준 2) C4396|'*함수*': friend 선언이 함수 템플릿의 특수화를 참조 하는 경우 인라인 지정자를 사용할 수 없습니다|
 |[컴파일러 경고(수준 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute는 무시 됩니다.|
-|[컴파일러 경고(수준 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'variable': appdomain이 여러 개; 프로세스별 전역 개체가 제대로 작동 하지 않을 수 __declspec (appdomain)을 사용 하는 것이 좋습니다.|
-|[컴파일러 경고(수준 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'symbol': 프로세스별 기호는 /clr을 사용 하 여 컴파일한 경우 __declspec('dllimport')로 표시할 수 없습니다: 순수|
+|[컴파일러 경고(수준 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'*변수*': appdomain이 여러 개 프로세스별 전역 개체가 제대로 작동 하지 않으면 __declspec (appdomain)을 사용 하는 것이 좋습니다.|
+|[컴파일러 경고(수준 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'*기호*': 프로세스별 기호는 /clr을 사용 하 여 컴파일한 경우 __declspec('dllimport')로 표시할 수 없습니다: 순수|

@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CUtlProps
-dev_langs: C++
-helpviewer_keywords: CUtlProps class
+f1_keywords:
+- CUtlProps
+dev_langs:
+- C++
+helpviewer_keywords:
+- CUtlProps class
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 75e92f48729d0aae9f85cc7b7c5c97e4778f96a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 291094cf913d9c64c91070a281968524227e1376
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cutlprops-class"></a>CUtlProps 클래스
 다양 한 OLE DB 속성 인터페이스에 대 한 속성 구현 (예를 들어 `IDBProperties`, `IDBProperties`, 및 `IRowsetInfo`).  
   
-## <a name="syntax"></a>구문  
-  
-```  
+## <a name="syntax"></a>구문
+
+```cpp
 template < class T >  
 class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase  
 ```  
@@ -53,7 +57,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ## <a name="remarks"></a>설명  
  이 클래스의 대부분에는 구현 정보입니다.  
   
- `CUtlProps`내부적으로 속성을 설정 하기 위한 두 명의 구성원이 포함: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) 및 [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)합니다.  
+ `CUtlProps` 내부적으로 속성을 설정 하기 위한 두 명의 구성원이 포함: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) 및 [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)합니다.  
   
  속성 집합 맵에서 사용 되는 매크로에 대 한 자세한 내용은 참조 하십시오. [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 및 [END_PROPSET_MAP](../../data/oledb/end-propset-map.md)합니다.  
   

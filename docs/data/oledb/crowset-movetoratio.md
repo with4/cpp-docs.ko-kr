@@ -1,10 +1,11 @@
 ---
-title: 'Crowset:: Movetoratio | Microsoft Docs'
+title: CRowset::MoveToRatio | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,34 +18,32 @@ f1_keywords:
 - CRowset.MoveToRatio
 - ATL.CRowset<TAccessor>.MoveToRatio
 - ATL::CRowset<TAccessor>::MoveToRatio
-dev_langs: C++
-helpviewer_keywords: MoveToRatio method
+dev_langs:
+- C++
+helpviewer_keywords:
+- MoveToRatio method
 ms.assetid: 1fa313bd-8fd1-4608-8e85-44993b97dd88
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 70b4d7994bb2175d0d402fdd309a8258f7127dc7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1e7f51fb1bf82ced62c18a863f25870a4e4493
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetmovetoratio"></a>CRowset::MoveToRatio
 행 집합의 소수 자릿수 위치에서 시작 하는 행을 인출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-      HRESULT MoveToRatio(   
-   DBCOUNTITEM nNumerator,   
-   DBCOUNTITEM nDenominator,   
-   bool bForward = true    
-) throw( );  
+```
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,   
+   DBCOUNTITEM nDenominator,bool bForward = true) throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
@@ -61,9 +60,9 @@ ms.lasthandoff: 12/21/2017
  표준 `HRESULT`입니다.  
   
 ## <a name="remarks"></a>설명  
- `MoveToRatio`다음 수식에 대략에 따라 행을 인출 합니다.  
+ `MoveToRatio` 다음 수식에 대략에 따라 행을 인출 합니다.  
   
- `( nNumerator *  RowsetSize ) / nDenominator`  
+ `(nNumerator *  RowsetSize ) / nDenominator`  
   
  여기서 `RowsetSize` (행) 행 집합의 크기입니다. 이 수식은의 정확도 특정 공급자에 따라 달라 집니다. 자세한 내용은 참조 [irowsetscroll::](https://msdn.microsoft.com/en-us/library/ms709602.aspx)합니다.  
   

@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d4898b2d67de4b23d31227e572c0f270aa6f37
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 0c0ae9514736b66be104198c95c3764772a87ef8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE 및 Visual C++ 개발 도구
 
@@ -115,7 +115,7 @@ Visual Studio에는 네이티브 C++ 및 C++/CLI에 대한 단위 테스트 프�
 
 ## <a name="deploy-completed-applications"></a>완성 된 응용 프로그램 배포
 
-Windows 스토어를 통해 고객에 게는 UWP 앱을 배포할는 **프로젝트** > **저장소** 메뉴 옵션입니다. CRT 배포는 백그라운드에서 자동으로 처리됩니다. 자세한 내용은 [앱 판매](http://go.microsoft.com/fwlink/p/?LinkId=262280)를 참조하세요.
+Microsoft 스토어를 통해 고객에 게는 UWP 앱을 배포할는 **프로젝트** > **저장소** 메뉴 옵션입니다. CRT 배포는 백그라운드에서 자동으로 처리됩니다. 자세한 내용은 [앱 판매](http://go.microsoft.com/fwlink/p/?LinkId=262280)를 참조하세요.
 
 네이티브 C++ 데스크톱 응용 프로그램을 다른 컴퓨터에 배포할 때는 응용 프로그램 자체 및 이 응용 프로그램이 종속되는 라이브러리 파일을 설치해야 합니다. 응용 프로그램으로 유니버설 c + + 런타임 UCRT ()를 배포 하는 방법은 세 가지가: 중앙 배포, 로컬 배포 또는 정적 링크 합니다. 자세한 내용은 참조 [데스크톱 응용 프로그램 배포](../ide/deploying-native-desktop-applications-visual-cpp.md)합니다.
 

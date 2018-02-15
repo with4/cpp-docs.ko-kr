@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: OLE DB consumers, creating
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b31f1ad51d9015c491439650060ab3cefaf3270b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a61de0a4621f6f9387da23093f9f450749129ac3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>마법사를 사용하지 않고 소비자 만들기
 다음 예에서는 기존 ATL 프로젝트에 OLE DB 소비자 지원을 추가 가정 합니다. MFC 응용 프로그램에 OLE DB 소비자 지원을 추가 하려는 경우 모든 지원이 필요한 만들고 응용 프로그램을 실행 하는 데 필요한 MFC 루틴을 호출 하는 MFC 응용 프로그램 마법사를 실행 해야 합니다.  
@@ -48,7 +51,7 @@ ms.lasthandoff: 12/21/2017
     ```  
     CDataSource ds;  
     CSession ss;  
-    class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor> >  
+    class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>  
     ```  
   
 -   호출 **CoInitialize** COM을 초기화 하려면 이 일반적으로 주 코드에 호출 됩니다. 예:  

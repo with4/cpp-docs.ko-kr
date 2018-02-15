@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
 - COLLECTION/Platform::Collections::MapView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::MapView::Lookup
 - COLLECTION/Platform::Collections::MapView::Size
 - COLLECTION/Platform::Collections::MapView::Split
-dev_langs: C++
-helpviewer_keywords: MapView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: db25b79476490ccc6bfc3f68370f30b7e8f2afac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 클래스
 읽기 전용 보기를 키/값 쌍의 컬렉션인 *맵*으로 나타냅니다.  
@@ -60,17 +63,17 @@ ref class MapView sealed;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Mapview:: Mapview](#ctor)|MapView 클래스의 새 인스턴스를 초기화합니다.|  
+|[MapView::MapView](#ctor)|MapView 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Mapview:: First](#first)|맵 뷰의 첫 번째 요소로 초기화하는 반복기를 반환합니다.|  
-|[Mapview:: Haskey](#haskey)|현재 MapView에 지정한 키가 들어 있는지 여부를 확인합니다.|  
-|[Mapview:: Lookup](#lookup)|현재 MapView 개체의 지정된 키에 있는 요소를 검색합니다.|  
-|[Mapview:: Size](#size)|현재 MapView 개체의 요소 수를 반환합니다.|  
-|[Mapview:: Split](#split)|원래 MapView 개체를 두 개의 MapView 개체로 분할합니다.|  
+|[MapView::First](#first)|맵 뷰의 첫 번째 요소로 초기화하는 반복기를 반환합니다.|  
+|[MapView::HasKey](#haskey)|현재 MapView에 지정한 키가 들어 있는지 여부를 확인합니다.|  
+|[MapView::Lookup](#lookup)|현재 MapView 개체의 지정된 키에 있는 요소를 검색합니다.|  
+|[MapView::Size](#size)|현재 MapView 개체의 요소 수를 반환합니다.|  
+|[MapView::Split](#split)|원래 MapView 개체를 두 개의 MapView 개체로 분할합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `MapView`  
@@ -81,7 +84,7 @@ ref class MapView sealed;
  **네임스페이스:** Platform::Collections  
 
 
-## <a name="first"></a>Mapview:: First 메서드
+## <a name="first"></a> Mapview:: First 메서드
 맵 뷰의 첫 번째 요소를 지정하는 반복기를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -99,7 +102,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>Mapview:: Haskey 메서드
+## <a name="haskey"></a>  Mapview:: Haskey 메서드
 현재 MapView에 지정한 키가 들어 있는지 여부를 확인합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -118,7 +121,7 @@ bool HasKey(K key);
   
 
 
-##  <a name="lookup"></a>Mapview:: Lookup 메서드
+##  <a name="lookup"></a> Mapview:: Lookup 메서드
 K 형식의 지정된 키와 연결된 V 형식의 값을 검색합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -136,7 +139,7 @@ V Lookup(K key);
   
 
 
-##  <a name="ctor"></a>Mapview:: Mapview 생성자
+##  <a name="ctor"></a> Mapview:: Mapview 생성자
 MapView 클래스의 새 인스턴스를 초기화합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -179,7 +182,7 @@ MapView(
 
 
 
-##  <a name="size"></a>Mapview:: Size 메서드
+##  <a name="size"></a> Mapview:: Size 메서드
 현재 MapView 개체의 요소 수를 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -194,7 +197,7 @@ virtual property unsigned int Size;
   
 
 
-##  <a name="split"></a>Mapview:: Split 메서드
+##  <a name="split"></a> Mapview:: Split 메서드
 현재 MapView 개체를 두 개의 MapView 개체로 분할합니다. 이 메서드는 작동하지 않습니다.  
   
 ### <a name="syntax"></a>구문  

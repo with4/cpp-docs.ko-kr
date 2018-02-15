@@ -6,25 +6,28 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
 - VCCORLIB/Platform::Exception::CreateException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::Exception Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception 클래스
 응용 프로그램을 실행할 때 나타나는 오류를 나타냅니다. 사용자 지정 예외 클래스는 `Platform::Exception`에서 파생될 수 없습니다. 사용자 지정 예외가 필요한 경우 `Platform::COMException` 을 사용하고 앱 관련 HRESULT를 지정할 수 있습니다.  
@@ -44,22 +47,22 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |멤버|설명|  
 |------------|-----------------|  
-|[Exception:: exception](#ctor)|`Exception` 클래스의 새 인스턴스를 초기화합니다.|  
+|[Exception::Exception](#ctor)|`Exception` 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="methods"></a>메서드  
  `Exception` 클래스 상속의 `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`, 및 `ToString()` 에서 메서드는 [platform:: object 클래스](../cppcx/platform-object-class.md)합니다. `Exception` 클래스에는 다음 메서드도 있습니다.  
   
 |멤버|설명|  
 |------------|-----------------|  
-|[Exception:: createexception](#createexception)|지정된 HRESULT 값을 나타내는 예외를 만듭니다.|  
+|[Exception::CreateException](#createexception)|지정된 HRESULT 값을 나타내는 예외를 만듭니다.|  
   
 ### <a name="properties"></a>속성  
  Exception 클래스에는 다음과 같은 속성도 있습니다.  
   
 |멤버|설명|  
 |------------|-----------------|  
-|[Exception:: hresult](#hresult)|예외에 해당하는 HRESULT입니다.|  
-|[Exception:: message](#message)|예외를 설명하는 메시지입니다. 이 값은 읽기 전용이며 `Exception` 이 생성된 후 수정될 수 없습니다.|  
+|[Exception::HResult](#hresult)|예외에 해당하는 HRESULT입니다.|  
+|[Exception::Message](#message)|예외를 설명하는 메시지입니다. 이 값은 읽기 전용이며 `Exception` 이 생성된 후 수정될 수 없습니다.|  
   
 ### <a name="requirements"></a>요구 사항  
  **지원 되는 최소 클라이언트:** Windows 8  
@@ -70,7 +73,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **메타데이터:** platform.winmd  
 
-## <a name="createexception"></a>Exception:: createexception 메서드
+## <a name="createexception"></a> Exception:: createexception 메서드
 지정된 HRESULT 값에서 Platform::Exception^을 만듭니다.  
   
 ### <a name="syntax"></a>구문  
@@ -97,7 +100,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>Exception:: exception 생성자
+## <a name="ctor"></a>  Exception:: exception 생성자
 Exception 클래스의 새 인스턴스를 초기화합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -117,7 +120,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>Exception:: hresult 속성
+## <a name="hresult"></a>  Exception::HResult Property
 예외에 해당하는 HRESULT입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -134,7 +137,7 @@ public:property int HResult {    int get();}
   
 
 
-## <a name="message"></a>Exception:: message 속성
+## <a name="message"></a> Exception:: message 속성
 오류를 설명하는 메시지입니다.  
   
 ### <a name="syntax"></a>구문  

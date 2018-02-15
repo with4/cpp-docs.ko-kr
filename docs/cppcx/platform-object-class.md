@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object 클래스
-Windows Store 앱의 ref 클래스 및 ref 구조체에 대해 일반적인 동작을 제공합니다. 모든 ref 클래스 및 ref 구조체 인스턴스는 Platform::Object^로 암시적으로 변환될 수 있고 해당하는 가상 ToString 메서드를 재정의할 수 있습니다.  
+Ref 클래스 및 ref 구조체는 Windows 런타임 앱에 대 한 일반적인 동작을 제공 합니다. 모든 ref 클래스 및 ref 구조체 인스턴스는 Platform::Object^로 암시적으로 변환될 수 있고 해당하는 가상 ToString 메서드를 재정의할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,15 +46,15 @@ public ref class Object : Object
   
 |이름|설명|  
 |----------|-----------------|  
-|[Object:: object](#ctor)|Object 클래스의 새 인스턴스를 초기화합니다.|  
+|[Object::Object](#ctor)|Object 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[Object:: equals](#equals)|지정한 개체와 현재 개체가 같은지 여부를 확인합니다.|  
-|[Object:: gethashcode](#gethashcode)|이 인스턴스의 해시 코드를 반환합니다.|  
-|[Object:: referenceequals](#referenceequals)|지정한 Object 인스턴스가 동일한지 여부를 확인합니다.|  
+|[Object::Equals](#equals)|지정한 개체와 현재 개체가 같은지 여부를 확인합니다.|  
+|[Object::GetHashCode](#gethashcode)|이 인스턴스의 해시 코드를 반환합니다.|  
+|[Object::ReferenceEquals](#referenceequals)|지정한 Object 인스턴스가 동일한지 여부를 확인합니다.|  
 |[ToString](#tostring)|현재 개체를 나타내는 문자열을 반환합니다. 재정의될 수 있습니다.|  
 |[GetType](#gettype)|현재 인스턴스를 설명하는 [Platform::Type](../cppcx/platform-type-class.md) 을 가져옵니다.|  
   
@@ -66,7 +69,7 @@ public ref class Object : Object
  **네임스페이스:** Platform  
 
   
-## <a name="equals"></a>Object:: equals 메서드
+## <a name="equals"></a> Object:: equals 메서드
 지정한 개체와 현재 개체가 같은지 여부를 확인합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -87,7 +90,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>Object:: gethashcode 메서드
+## <a name="gethashcode"></a>  Object:: gethashcode 메서드
 COM 개체인 경우 이 인스턴스에 대한 `IUnknown`* ID 값을 반환하고, COM 개체가 아닌 경우 계산된 해시 값을 반환합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Object:: gettype 메서드
+## <a name="gettype"></a>  Object:: gettype 메서드
 반환 된 [platform:: type](../cppcx/platform-type-class.md) 개체의 런타임 형식을 설명 하는 개체입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -131,9 +134,9 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>참고 항목  
  [Platform:: type 클래스](../cppcx/platform-type-class.md)   
  [Platform 네임 스페이스](../cppcx/platform-namespace-c-cx.md)   
- [형식 System] (.. /cppcx/type-system-c-cx.md
+ [Type System](../cppcx/type-system-c-cx.md
   
-## <a name="ctor"></a>Object:: object 생성자
+## <a name="ctor"></a>  Object:: object 생성자
 Object 클래스의 새 인스턴스를 초기화합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -142,7 +145,7 @@ Object 클래스의 새 인스턴스를 초기화합니다.
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Object:: referenceequals 메서드
+## <a name="referenceequals"></a>  Object:: referenceequals 메서드
 지정한 Object 인스턴스가 동일한지 여부를 확인합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -161,7 +164,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>반환 값  
  두 개체가 같으면 `true`이고, 그렇지 않으면 `false`입니다.  
  
-## <a name="tostring"></a>Object:: tostring 메서드 (C + + /cli CX)
+## <a name="tostring"></a>  Object:: tostring 메서드 (C + + /cli CX)
 현재 개체를 나타내는 문자열을 반환합니다.  
   
 ### <a name="syntax"></a>구문  

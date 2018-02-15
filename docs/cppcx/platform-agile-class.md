@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
 - AGILE/Platform::Platform::Agile::Agile
@@ -14,19 +14,22 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs: C++
-helpviewer_keywords: Platform::Agile
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile 클래스
 MashalingBehavior=Standard를 agile 개체로 나타냅니다. 이를 통해 런타임 스레딩 예외가 발생할 가능성이 매우 감소합니다. `Agile<T>` 를 사용하여 agile이 아닌 개체가 같거나 다른 스레드를 호출하거나 해당 스레드에서 호출될 수 있습니다. 자세한 내용은 참조 [스레딩 및 마샬링](../cppcx/threading-and-marshaling-c-cx.md)합니다.  
@@ -53,7 +56,7 @@ class Agile;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Agile:: agile](#ctor)|Agile 클래스의 새 인스턴스를 초기화합니다.|  
+|[Agile::Agile](#ctor)|Agile 클래스의 새 인스턴스를 초기화합니다.|  
 |[Agile::~Agile 소멸자](#dtor)|Agile 클래스의 현재 인스턴스를 제거합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
@@ -86,7 +89,7 @@ class Agile;
   
  **헤더:** agile.h  
 
-## <a name="ctor"></a>Agile:: agile 생성자
+## <a name="ctor"></a>  Agile:: agile 생성자
 Agile 클래스의 새 인스턴스를 초기화합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -113,7 +116,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>설명  
  이 생성자의 첫 번째 버전은 기본 생성자입니다. 두 번째 버전은 `object` 매개 변수로 지정된 개체에서 새 Agile 인스턴스 클래스를 초기화합니다. 세 번째 버전은 복사 생성자입니다. 네 번째 버전은 이동 생성자입니다. 이 생성자는 예외를 throw할 수 없습니다.  
 
-## <a name="dtor"></a>Agile:: ~ Agile 소멸자
+## <a name="dtor"></a>  Agile:: ~ Agile 소멸자
 Agile 클래스의 현재 인스턴스를 제거합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -126,7 +129,7 @@ Agile 클래스의 현재 인스턴스를 제거합니다.
 ### <a name="remarks"></a>설명  
  이 소멸자는 현재 Agile 개체가 나타내는 개체도 해제합니다.  
   
-## <a name="get"></a>Agile:: get 메서드
+## <a name="get"></a>   Agile:: get 메서드
 현재 Agile 개체가 나타내는 개체에 대한 핸들을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -142,7 +145,7 @@ Agile 클래스의 현재 인스턴스를 제거합니다.
   
  반환 값의 형식은 실제로 알려지지 않은 내부 형식입니다. 반환 값을 포함 하는 편리한 방법을 지정 하는 것으로 선언 된 변수에 **자동** 형식 추론 키워드입니다. 예를 들어, `auto x = myAgileTvariable->Get();`을 입력합니다.  
   
-## <a name="getaddressof"></a>Agile:: getaddressof 메서드
+## <a name="getaddressof"></a>  Agile::GetAddressOf Method
 현재 Agile 개체를 다시 초기화하고 핸들 주소를 `T`형식 개체에 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -163,7 +166,7 @@ throw();
 ### <a name="remarks"></a>설명  
  이 작업에는 형식의 개체의 현재 표현 해제 `T`; 있는 경우, Agile 개체의 데이터 멤버를 다시 초기화 하 고 현재 스레딩 컨텍스트; 나타낼 수 있는 개체 핸들 변수의 주소를 반환 합니다는 agile이 아닌 개체입니다. 할당 연산자를 사용 하 여 개체를 나타내는 클래스를 Agile 클래스 인스턴스를 발생 ([agile:: operator =](#operator-assign)) 개체를 Agile 클래스 인스턴스에 할당 합니다.  
 
-## <a name="getaddressofforinout"></a>Agile:: getaddressofforinout 메서드
+## <a name="getaddressofforinout"></a>  Agile::GetAddressOfForInOut Method
 현재 Agile 개체가 나타내는 개체에 대한 핸들의 주소를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -184,7 +187,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>설명  
  이 작업은 현재 스레딩 컨텍스트를 가져온 다음 내부 개체에 대한 핸들의 주소를 반환합니다.  
 
-## <a name="release"></a>Agile:: release 메서드
+## <a name="release"></a>  Agile:: release 메서드
 현재 Agile 개체의 기본 개체 및 컨텍스트를 삭제합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -198,7 +201,7 @@ void Release() throw();
 ### <a name="remarks"></a>설명  
  현재 Agile 개체의 기본 개체 및 컨텍스트가 삭제(있는 경우)된 다음 Agile 개체 값이 null로 설정됩니다.  
 
-## <a name="operator-arrow"></a>Agile:: operator-&gt; 연산자
+## <a name="operator-arrow"></a>  Agile::operator-&gt; Operator
 현재 Agile 개체가 나타내는 개체에 대한 핸들을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -214,7 +217,7 @@ const throw();
   
  이 연산자는 실제로 알려지지 않은 내부 형식을 반환합니다. 반환 값을 포함 하는 편리한 방법을 지정 하는 것으로 선언 된 변수에 **자동** 형식 추론 키워드입니다.  
 
-## <a name="operator-assign"></a>Agile:: operator = 연산자
+## <a name="operator-assign"></a>  Agile::operator= Operator
 지정한 개체를 현재 Agile 개체에 할당합니다.  
   
 ## <a name="syntax"></a>구문  

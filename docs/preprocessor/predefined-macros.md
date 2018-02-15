@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/16/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -74,7 +75,8 @@ f1_keywords:
 - _WIN64
 - _WINRT_DLL
 - __func__
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -149,16 +151,17 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 86905a879abe9b81302a8f196e200c1d0c227bb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 53acac18902e261eede565987d6b9c053a8f1707
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="predefined-macros"></a>미리 정의된 매크로
 
@@ -286,7 +289,7 @@ Microsoft Visual c + + 추가 이러한 미리 정의 된 매크로 지원합니
 
 - **&#95; CPPRTTI** 경우 1로 정의 된 [/GR (런타임 형식 정보 사용)](../build/reference/gr-enable-run-time-type-information.md) 컴파일러 옵션을 설정 합니다. 그렇지 않으면 정의 되지 않았습니다.
 
-- **&#95; CPPUNWIND** 하나 이상 있으면 1로 정의 된 [/GX (예외 처리 활성화)](../build/reference/gx-enable-exception-handling.md), [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md), 또는 [/EH (예외 처리 모델) ](../build/reference/eh-exception-handling-model.md) 컴파일러 옵션을 설정 합니다. 그렇지 않으면 정의 되지 않았습니다.
+- **&#95; CPPUNWIND** 하나 이상 있으면 1로 정의 된 [/GX (예외 처리 활성화)](../build/reference/gx-enable-exception-handling.md), [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md), 또는 [/EH (예외 처리 모델)](../build/reference/eh-exception-handling-model.md) 컴파일러 옵션을 설정 합니다. 그렇지 않으면 정의 되지 않았습니다.
 
 - **&#95; 디버그** 하면 1로 정의 된 [/LDd](../build/reference/md-mt-ld-use-run-time-library.md), [/MDd](../build/reference/md-mt-ld-use-run-time-library.md), 또는 [/MTd](../build/reference/md-mt-ld-use-run-time-library.md) 컴파일러 옵션을 설정 합니다. 그렇지 않으면 정의 되지 않았습니다.
 
@@ -372,7 +375,7 @@ Microsoft Visual c + + 추가 이러한 미리 정의 된 매크로 지원합니
 
 - **&#95; MSC &#95; VER** 로 컴파일러의 버전 번호의 주 및 부 번호 요소를 인코딩하는 정수 리터럴로 정의 합니다. 주 번호는 마침표로 구분 된 버전 번호의 첫 번째 요소가 고 부 번호는 두 번째 요소입니다. 예를 들어, Visual c + + 컴파일러의 버전 번호가 17.00.51106.1 인 경우는 **&#95; MSC &#95; VER** 매크로 1700으로 평가 합니다. 입력 **cl /?** 명령줄에서 컴파일러의 버전 번호를 표시 합니다. 이 매크로 항상 정의 됩니다.
 
-- **&#95; MSVC &#95; LANG** c + + 언어 표준 컴파일러에 의해 대상으로 지정 하는 정수 리터럴로 정의 합니다. 경우 매크로 정수 리터럴 값 201402를 c + +를 컴파일할 때는 [/std:c + + 14](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션을 설정 하거나 기본적으로 설정은 201703 경우는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션이 설정 되어; 있고로 설정 되는 이상에서 지정 되지 않은 경우이 값은 [/std:c + + 최신](../build/reference/std-specify-language-standard-version.md)합니다. 그렇지 않으면 매크로가 정의 되지 않습니다. **&#95; MSVC &#95; LANG** 매크로 및 [/std (지정 언어 표준 버전)](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션은 Visual Studio 2015 업데이트 3부터 사용할 수 있습니다.
+- **&#95; MSVC &#95; LANG** c + + 언어 표준 컴파일러에 의해 대상으로 지정 하는 정수 리터럴로 정의 합니다. 경우 매크로 정수 리터럴 값 201402 L c + +를 컴파일할 때는 [/std:c + + 14](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션을 설정 하거나 기본적으로 설정은 201703 L 경우는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션이 설정 되어; 있고로 설정 되는 이상에서 지정 되지 않은 경우이 값은 [/std:c + + 최신](../build/reference/std-specify-language-standard-version.md)합니다. 그렇지 않으면 매크로가 정의 되지 않습니다. **&#95; MSVC &#95; LANG** 매크로 및 [/std (지정 언어 표준 버전)](../build/reference/std-specify-language-standard-version.md) 컴파일러 옵션은 Visual Studio 2015 업데이트 3부터 사용할 수 있습니다.
 
 - **&#95; &#95; MSVC &#95; 런타임 및 #95; 확인** 한 경우 1로 정의의 [/RTC](../build/reference/rtc-run-time-error-checks.md) 컴파일러 옵션을 설정 합니다. 그렇지 않으면 정의 되지 않았습니다.
 

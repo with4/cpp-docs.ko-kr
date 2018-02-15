@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VCCORLIB/Platform::ArrayReference::ArrayReference
-dev_langs: C++
-helpviewer_keywords: Platform::ArrayReference Class
+ms.topic: reference
+f1_keywords:
+- VCCORLIB/Platform::ArrayReference::ArrayReference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7d624422fd7dc1fcdb5e96f0995e8beef5fb8239
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0987511b6653bee85b6cc5c4c680331d12519450
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference 클래스
 `ArrayReference` 는 C 스타일 배열을 입력 데이터로 채울 때 입력 매개 변수에서 [Platform::Array^](../cppcx/platform-array-class.md) 를 대체할 수 있는 최적화 형식입니다.  
@@ -37,7 +41,7 @@ class ArrayReference
   
 |이름|설명|  
 |----------|-----------------|  
-|[Arrayreference:: Arrayreference](#ctor)|`ArrayReference` 클래스의 새 인스턴스를 초기화합니다.|  
+|[ArrayReference::ArrayReference](#ctor)|`ArrayReference` 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -60,7 +64,7 @@ class ArrayReference
   
  **헤더:** vccorlib.h  
   
-## <a name="ctor"></a>Arrayreference:: Arrayreference 생성자
+## <a name="ctor"></a>  Arrayreference:: Arrayreference 생성자
 새 인스턴스를 초기화는 [platform:: arrayreference](../cppcx/platform-arrayreference-class.md) 클래스입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -85,7 +89,7 @@ ArrayReference(ArrayReference&& otherArg)
   
 
 
-## <a name="operator-assign"></a>Arrayreference:: Operator = 연산자
+## <a name="operator-assign"></a>  Arrayreference:: Operator = 연산자
 지정한 개체를 현재 할당 [platform:: arrayreference](../cppcx/platform-arrayreference-class.md) 이동 의미 체계를 사용 하 여 개체입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -108,7 +112,7 @@ ArrayReference& operator=(ArrayReference&& otherArg);
   
 
 
-## <a name="operator-call"></a>ArrayReference::operator() 연산자
+## <a name="operator-call"></a>  ArrayReference::operator() Operator
 현재 변환 [platform:: arrayreference](../cppcx/platform-arrayreference-class.md) 개체를 다시는 [platform:: array](../cppcx/platform-array-class.md) 클래스입니다.  
   
 ### <a name="syntax"></a>구문  

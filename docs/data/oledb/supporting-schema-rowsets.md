@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>스키마 행 집합 지원
 스키마 행 집합 통해 소비자의 기본 구조 또는 스키마를 몰라도 데이터 저장소에 대 한 정보를 얻을 수 있습니다. 예를 들어 데이터 저장소 읽는 것 외에 스키마를 알 수 없으므로 때문에 사용자 정의 계층으로 구성 된 테이블을 할 수 있습니다. (또 다른 예로, note는 Visual c + + 마법사 사용 하 여 스키마 행 집합 생성 소비자에 대 한 접근자입니다.) 이 작업을 수행 하는 소비자를 허용 하려면 공급자의 세션 개체에 메서드를 노출 된 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 인터페이스입니다. Visual c + + 응용 프로그램에서 사용 하는 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 구현할 클래스를 **IDBSchemaRowset**합니다.  
   
- `IDBSchemaRowsetImpl`다음과 같은 방법을 지원합니다.  
+ `IDBSchemaRowsetImpl` 다음과 같은 방법을 지원합니다.  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) 스키마 행 집합에 대해 제한의 유효성을 검사 합니다.  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
  공급자에 적합 한 스키마 정보를 처리 하는 이러한 클래스를 사용자 지정할 수 있습니다.  
   
--   **C***ShortName***SessionTRSchemaRowset**, 카탈로그, 테이블 및 설명 필드를 작성 해야 (**trData.m_szType**, **trData.m_szTable**, 및 **trData.m_szDesc**). 마법사에서 생성 된 예제에서는 하나의 행 (테이블)를 사용합니다. 기타 공급자는 둘 이상의 테이블을 반환할 수 있습니다.  
+-   **C***ShortName***SessionTRSchemaRowset**, 카탈로그, 테이블 및 설명 필드를 작성 해야 (**trData.m_szType**, **trData.m_szTable** , 및 **trData.m_szDesc**). 마법사에서 생성 된 예제에서는 하나의 행 (테이블)를 사용합니다. 기타 공급자는 둘 이상의 테이블을 반환할 수 있습니다.  
   
 -   **C***ShortName***SessionColSchemaRowset**,으로 테이블의 이름을 전달는 **DBID**합니다.  
   
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

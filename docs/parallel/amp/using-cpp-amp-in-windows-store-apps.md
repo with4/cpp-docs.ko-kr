@@ -1,30 +1,33 @@
 ---
-title: "Windows 스토어 앱의 c + + AMP를 사용 하 여 | Microsoft Docs"
+title: "UWP 앱에서 c + + AMP를 사용 하 여 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="using-c-amp-in-windows-store-apps"></a>Windows 스토어 앱에서 C++ AMP 사용
-c + + AMP (c + + Accelerated Massive Parallelism)를 사용할 수 있습니다 프로그램 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] GPU (그래픽 처리 장치) 또는 기타 계산 액셀러레이터에서 계산을 수행 하는 앱입니다. 그러나, C++ AMP는 Windows Runtime 형식으로 직접 작업하기 위한 API를 제공하지 않으며, Windows 런타임은 C++ AMP에 대한 래퍼를 제공하지 않습니다. 코드(본인이 직접 만든 형식 포함)에 Windows 런타임 형식을 사용할 경우 C++ AMP와 호환되는 형식으로 변환해야 합니다.  
+# <a name="using-c-amp-in-uwp-apps"></a>UWP 앱에서 c + + AMP를 사용 하 여
+GPU (그래픽 처리 장치) 또는 기타 계산 액셀러레이터에서 계산을 수행 하려면 유니버설 Windows 플랫폼 (UWP) 앱에서 c + + AMP (c + + Accelerated Massive Parallelism)를 사용할 수 있습니다. 그러나, C++ AMP는 Windows Runtime 형식으로 직접 작업하기 위한 API를 제공하지 않으며, Windows 런타임은 C++ AMP에 대한 래퍼를 제공하지 않습니다. 코드(본인이 직접 만든 형식 포함)에 Windows 런타임 형식을 사용할 경우 C++ AMP와 호환되는 형식으로 변환해야 합니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
- 사용 중인 경우 [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)])를 만들려면 프로그램 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램에 권장 연속 저장소와 함께 일반 이전 데이터 (POD) 형식을 사용 하는-예를 들어 `std::vector` C 스타일 배열 또는-c + + AMP 함께 사용 될 데이터에 대 한 합니다. 이 마샬링이 없는 발생 하기 때문에 비 POD 형식 또는 Windows RT 컨테이너를 사용 하 여 보다 더 높은 성능을 얻을 수 있습니다.  
+ 사용 중인 경우 [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 유니버설 Windows 플랫폼 (UWP) 앱을 만들려면 연속 저장소와 함께 일반 이전 데이터 (POD) 형식을 사용 하는 권장-예를 들어 `std::vector` C 스타일 배열 또는-사용 되는 데이터에 대 한 c + + AMP와. 이 마샬링이 없는 발생 하기 때문에 비 POD 형식 또는 Windows RT 컨테이너를 사용 하 여 보다 더 높은 성능을 얻을 수 있습니다.  
   
  이러한 방식으로 저장 된 데이터에 액세스 하는 c + + AMP 커널에 방금 래핑하는 `std::vector` 또는 배열에 저장소는 `concurrency::array_view` 다음에 배열 뷰를 사용 하 여는 `concurrency::parallel_for_each` 루프:  
   
@@ -120,6 +123,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C + +를 사용 하 여 첫 Windows 스토어 앱 만들기](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [C + +를 사용 하 여 첫 번째 UWP 앱 만들기](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
  [C + + Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

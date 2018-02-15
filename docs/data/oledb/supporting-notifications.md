@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - notifications [C++], OLE DB consumers
 - events [C++], notifications in OLE DB
@@ -16,24 +18,24 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9a859a9f3b2061d1cb18c93cd9f46d30600ada28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbdb3b7faaec99f9893df29e8d368fd05c8fd111
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-notifications"></a>알림 지원
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>공급자 및 소비자 연결 지점 인터페이스 구현  
  상속 해야 합니다는 공급자 클래스를 구현 하기 위해 알림 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) 및 [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)합니다.  
   
- `IRowsetNotifyCP`연결 지점 인터페이스에 대 한 공급자 사이트 구현 [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)합니다. `IRowsetNotifyCP`구현 브로드캐스트 수신기 연결 지점에 대해 알리기 위해 함수 **IID_IRowsetNotify** 행 집합의 내용 변경 합니다.  
+ `IRowsetNotifyCP` 연결 지점 인터페이스에 대 한 공급자 사이트 구현 [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)합니다. `IRowsetNotifyCP` 구현 브로드캐스트 수신기 연결 지점에 대해 알리기 위해 함수 **IID_IRowsetNotify** 행 집합의 내용 변경 합니다.  
   
  또한 구현 하 고 등록 해야 하는 참고 `IRowsetNotify` (싱크 라고도 함)를 사용 하 여 소비자에 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) 소비자 알림을 처리할 수 있도록 합니다. 소비자에 연결 지점 인터페이스를 구현 하는 방법에 대 한 정보를 참조 하십시오. [알림 수신](../../data/oledb/receiving-notifications.md)합니다.  
   
@@ -53,14 +55,14 @@ END_CONNECTION_POINT_MAP
 > [!NOTE]
 >  샘플 코드는 여기 표시 된 것과 다를 수 있습니다. 샘플 코드를 보다 최신 버전으로 간주 해야 합니다.  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////////  
 // class RUpdateRowset (in rowset.h)  
   
 class RUpdateRowset :   
 public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,   
-         CAtlArray< CAgentMan, CAtlArray<CAgentMan> >, CSimpleRow,   
-         IRowsetScrollImpl< RUpdateRowset, IRowsetScroll > >,  
+         CAtlArray< CAgentMan, CAtlArray<CAgentMan>>, CSimpleRow,   
+         IRowsetScrollImpl< RUpdateRowset, IRowsetScroll >>,  
       public IRowsetUpdateImpl< RUpdateRowset, CAgentMan >,  
       public IConnectionPointContainerImpl<RUpdateRowset>,  
       public IRowsetNotifyCP<RUpdateRowset>  
@@ -100,8 +102,8 @@ END_CONNECTION_POINT_MAP()
 |**DBPROP_NOTIFYROWINSERT**|`IRowsetChange`|  
 |**DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE**|Always|  
 |**DBPROP_NOTIFYROWFIRSTCHANGE**|`IRowsetUpdate`|  
-|**DBPROP_NOTIFYROWSETRELEASE**|Always|  
-|**DBPROP_NOTIFYROWUNDOCHANGE**|`IRowsetUpdate`|  
+|DBPROP_NOTIFYROWSETRELEASE|Always|  
+|DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|  
 |**DBPROP_NOTIFYROWUNDODELETE**|`IRowsetUpdate`|  
 |**DBPROP_NOTIFYROWUNDOINSERT**|`IRowsetUpdate`|  
 |**DBPROP_NOTIFYROWUPDATE**|`IRowsetUpdate`|  

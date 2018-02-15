@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strnextc
 - _mbsnextc_l
@@ -38,7 +39,8 @@ f1_keywords:
 - _ftcsnextc
 - _strnextc
 - wcsnextc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsnextc function
 - _tcsnextc function
@@ -51,22 +53,23 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 55127289494e6ecd1260078f76ece3d3ae41c31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c77954cd7eefaa1e739622af4ccf1b3d7a43b7ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 문자열에서 다음 문자를 찾습니다.  
   
 > [!IMPORTANT]
->  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbsnextc` 및 `_mbsnextc_l`을 사용할 수는 없습니다. 자세한 내용은 [/ZW에서 지원하지 않는 CRT 함수](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요.  
+>  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbsnextc` 및 `_mbsnextc_l`을 사용할 수는 없습니다. 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -110,7 +113,7 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
   
- `_strnextc`및 `_wcsnextc` 단일 바이트 문자 문자열 및 버전의 와이드 문자 문자열 `_mbsnextc`합니다. `_wcsnextc`는 `string`에 있는 다음 와이드 문자의 정수값을 반환하고 `_strnextc`는 `string`에 있는 다음 싱글바이트 문자의 정수값을 반환합니다. `_strnextc` 및 `_wcsnextc`는 이러한 매핑을 위해서만 제공되고 그 외에는 사용하면 안 됩니다. 자세한 내용은 [일반 텍스트 매핑 사용](../../c-runtime-library/using-generic-text-mappings.md) 및 [일반 텍스트 매핑](../../c-runtime-library/generic-text-mappings.md)을 참조하세요.  
+ `_strnextc` 및 `_wcsnextc` 단일 바이트 문자 문자열 및 버전의 와이드 문자 문자열 `_mbsnextc`합니다. `_wcsnextc`는 `string`에 있는 다음 와이드 문자의 정수값을 반환하고 `_strnextc`는 `string`에 있는 다음 싱글바이트 문자의 정수값을 반환합니다. `_strnextc` 및 `_wcsnextc`는 이러한 매핑을 위해서만 제공되고 그 외에는 사용하면 안 됩니다. 자세한 내용은 [일반 텍스트 매핑 사용](../../c-runtime-library/using-generic-text-mappings.md) 및 [일반 텍스트 매핑](../../c-runtime-library/generic-text-mappings.md)을 참조하세요.  
   
  `_mbsnextc_l`은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하면 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
   

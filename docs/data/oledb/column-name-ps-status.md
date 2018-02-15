@@ -4,43 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_PS_STATUS
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_PS_STATUS macro
+f1_keywords:
+- COLUMN_NAME_PS_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_PS_STATUS macro
 ms.assetid: 134e1bfe-abfa-4b64-9159-e492f31de44b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a773891e7a3a0a623d10e8eb55069bf46fc10f21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e28307fbc42dbee793fdbb60f2c466d863ac6b2b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnamepsstatus"></a>COLUMN_NAME_PS_STATUS
 행 집합의 특정 열에는 행 집합의 바인딩을 나타냅니다. 비슷한 [COLUMN_NAME](../../data/oledb/column-name.md)제외 하 고이 매크로 또한 정밀도, 배율 및 열 상태를 사용 하며, 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-COLUMN_NAME_PS_STATUS(  
-pszName  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data  
-,   
-status )  
+```cpp
+COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )  
 ```  
   
 #### <a name="parameters"></a>매개 변수  

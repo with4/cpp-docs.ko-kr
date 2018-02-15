@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3341992ce2b10897fca165a787e568b5e0bc660
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f79d35267750c42466a0b2448f9b10c37fe81f05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-handle-events-using-wrl"></a>방법: WRL을 사용하여 이벤트 처리
 이 문서에 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하 여 구독 하 고 Windows 런타임 개체의 이벤트를 처리 하는 방법을 보여 줍니다.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/21/2017
  다음 단계를 시작 프로그램 `ABI::Windows::System::Threading::IDeviceWatcher` 개체 및 이벤트 처리기를 사용 하 여 진행 상황을 모니터링 합니다. `IDeviceWatcher` 인터페이스를 사용 하면 백그라운드에서 비동기적으로 또는 장치를 열거 하 고 장치 추가, 제거 또는 변경 하는 경우 알림을 받을 수 있습니다. [콜백](../windows/callback-function-windows-runtime-cpp-template-library.md) 함수는이 예의 중요 한 부분을 백그라운드 작업의 결과 처리 하는 이벤트 처리기를 지정할 수 있습니다. 전체 예제와 같습니다.  
   
 > [!WARNING]
->  유니버설 Windows 플랫폼 앱에서 Windows 런타임 c + + 템플릿 라이브러리를 일반적으로 사용 되지만이 예제에 대 한 예시는 콘솔 응용 프로그램을 사용 합니다. 와 같은 함수가 `wprintf_s` 는 유니버설 Windows 플랫폼 앱에서 사용할 수 없습니다. 형식 및 유니버설 Windows 플랫폼 앱에서 사용할 수 있는 함수에 대 한 자세한 내용은 참조 [CRT 함수는 /zw에서 지원 되지 않습니다](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) 및 [Win32 및 COM에 대 한 Windows 스토어 앱](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)합니다.  
+>  유니버설 Windows 플랫폼 앱에서 Windows 런타임 c + + 템플릿 라이브러리를 일반적으로 사용 되지만이 예제에 대 한 예시는 콘솔 응용 프로그램을 사용 합니다. 와 같은 함수가 `wprintf_s` 는 유니버설 Windows 플랫폼 앱에서 사용할 수 없습니다. 형식 및 유니버설 Windows 플랫폼 앱에서 사용할 수 있는 함수에 대 한 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) 및 [UWP 앱 용 Win32 및 COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)합니다.  
   
 1.  포함 (`#include`) Windows 런타임, Windows 런타임 c + + 템플릿 라이브러리 또는 c + + 표준 라이브러리 헤더 필수입니다.  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="compiling-the-code"></a>코드 컴파일  
  코드를 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 하거나 라는 파일에 붙여 `wrl-consume-events.cpp` 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
   
- **cl.exe wrl 소비 events.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-events.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 런타임 C++ 템플릿 라이브러리(WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

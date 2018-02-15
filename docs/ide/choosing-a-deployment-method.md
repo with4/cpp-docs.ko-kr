@@ -27,11 +27,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-a-deployment-method"></a>배포 방법 선택
 Visual c + + 응용 프로그램은 독립적 이며 복사 명령을 사용 하 여 배포할 수 있습니다, 하지 않는 한 배포에 대 한 Windows Installer를 사용 하는 것이 좋습니다. Windows Installer는 설치, 수리 및 제거를 지원하고 응용 프로그램 파일, 종속성 및 레지스트리 항목의 원자성 업데이트도 지원합니다.  
@@ -45,7 +45,7 @@ Visual c + + 응용 프로그램은 독립적 이며 복사 명령을 사용 하
 ## <a name="redistributing-visual-c-libraries"></a>Visual C++ 라이브러리 재배포  
  배포 시 재배포 권한이 있는 모든 버전의 Visual C++ 라이브러리를 재배포할 수 있습니다. 배포 방법은 다음 세 가지가 있습니다.  
   
--   중앙 배포-재배포 가능 패키지를 사용 하 여 Visual c + + 라이브러리를 공유 Dll로 %windir%\system32 설치는\\합니다. (이 폴더에 설치하려면 관리자 권한이 필요합니다.) 대상 컴퓨터에 응용 프로그램을 설치하기 전에 재배포 가능 패키지를 실행하는 스크립트 또는 설치 프로그램을 만들 수 있습니다. 재배포 가능 패키지는 x86, x64 및 ARM 플랫폼(VCRedist_x86.exe, VCRedist_x64.exe 또는 VCRedist_arm.exe)에 사용할 수 있습니다. %ProgramFiles (x86) %\Microsoft Visual Studio에서에서 visual Studio는 이러한 패키지 `version`\VC\Redist\\`locale ID`\\합니다. 다운로드할 수도 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/p/?linkid=132793)합니다. (다운로드 센터에서 검색 한는 "Visual c + + 재배포 가능 패키지 *Visual Studio 버전 및 업데이트*"과 일치 하는 응용 프로그램입니다. 예를 들어 Visual Studio 2012 업데이트 4를 사용하여 응용 프로그램을 빌드한 경우 "Visual C++ 재배포 가능 패키지 2012 업데이트 4"를 검색합니다.) 재배포 가능 패키지를 사용 하는 방법에 대 한 정보를 참조 하십시오. [연습: Visual c + + 재배포 가능 패키지는 Visual c + + 응용 프로그램 사용 하 여 배포](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)합니다.  
+-   중앙 배포-재배포 가능 패키지를 사용 하 여 Visual c + + 라이브러리를 공유 Dll로 %windir%\system32 설치는\\합니다. (이 폴더에 설치하려면 관리자 권한이 필요합니다.) 대상 컴퓨터에 응용 프로그램을 설치하기 전에 재배포 가능 패키지를 실행하는 스크립트 또는 설치 프로그램을 만들 수 있습니다. 재배포 가능 패키지는 x86, x64 및 ARM 플랫폼(VCRedist_x86.exe, VCRedist_x64.exe 또는 VCRedist_arm.exe)에 사용할 수 있습니다. %ProgramFiles (x86) %\Microsoft Visual Studio에서에서 visual Studio는 이러한 패키지 `version`\VC\Redist\\`locale ID`\\합니다. 다운로드할 수도 있습니다는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/p/?linkid=132793)합니다. (다운로드 센터에서 검색 상자를 사용 하 여 검색할는 "Visual c + + 재배포 가능 패키지 *Visual Studio 버전 및 업데이트*"과 일치 하는 응용 프로그램입니다. 예를 들어 응용 프로그램을 빌드하려면 Visual Studio 2015 업데이트 3을 사용한 경우 다음 검색에 대 한 "Visual c + + 재배포 가능 패키지 2015 업데이트 3"입니다.) 재배포 가능 패키지를 사용 하는 방법에 대 한 정보를 참조 하십시오. [연습: Visual c + + 재배포 가능 패키지는 Visual c + + 응용 프로그램 사용 하 여 배포](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)합니다.  
   
 -   중앙 배포-병합 모듈을 사용 하며 각 특정 Visual c + + 라이브러리를 공유 DLL로 %windir%\system32 설치\\합니다. (이 폴더에 설치하려면 관리자 권한이 필요합니다.) 병합 모듈은 응용 프로그램의 .msi 설치 관리자의 일부가 됩니다. Visual c + + 재배포 가능 병합 모듈이 \Program Files (x86) \common 모듈의에서 Visual Studio에 포함 됩니다\\합니다. 자세한 내용은 참조 [하 여 사용 하 여 병합 모듈을 재배포](../ide/redistributing-components-by-using-merge-modules.md)합니다.  
   

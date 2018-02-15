@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,35 +14,33 @@ f1_keywords:
 - ATL::CDataSource::OpenWithPromptFileName
 - ATL.CDataSource.OpenWithPromptFileName
 - CDataSource::OpenWithPromptFileName
-dev_langs: C++
-helpviewer_keywords: OpenWithPromptFileName method
+dev_langs:
+- C++
+helpviewer_keywords:
+- OpenWithPromptFileName method
 ms.assetid: 89460504-1aaf-4412-aa7b-fa5a4b39ada3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 272fd65eb0fda3a087853ca3a5793618d356fc7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abaf78245dabff8349795fbd8cb7ab38b32c4978
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdatasourceopenwithpromptfilename"></a>CDataSource::OpenWithPromptFileName
 이 메서드는 사용자에게 대화 상자를 표시한 다음 사용자가 지정한 파일을 사용하여 데이터 원본을 엽니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-      HRESULT OpenWithPromptFileName(   
-   HWND hWnd = GetActiveWindow(   
-   ),   
+```cpp
+HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),   
    DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE,   
-   LPCOLESTR szInitialDirectory = NULL    
-) throw( );  
+   LPCOLESTR szInitialDirectory = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
