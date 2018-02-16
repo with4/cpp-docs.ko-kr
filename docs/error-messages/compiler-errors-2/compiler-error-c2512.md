@@ -1,96 +1,57 @@
 ---
 title: "컴파일러 오류 C2512 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: C2512
-dev_langs: C++
-helpviewer_keywords: C2512
+f1_keywords:
+- C2512
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2512
 ms.assetid: 15206da9-1164-451a-b869-280e00711aad
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 191d56a0f54dacb42d84b1a5f3e121f437746134
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 57dbb542eee7e893253e6c3bdd3410c605a8d2db
+ms.sourcegitcommit: 8ae12a602244a5853e941e5e8806e3545d876844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="compiler-error-c2512"></a>컴파일러 오류 C2512
-'identifier': 사용할 수 있는 적절한 기본 생성자가 없습니다.  
-  
- 지정된 클래스, 구조체 또는 공용 구조체에 사용할 수 있는 기본 생성자가 없습니다. 컴파일러는 사용자 정의 생성자가 제공되지 않는 경우에만 기본 생성자를 제공합니다.  
-  
- void가 아닌 매개 변수를 사용하는 생성자를 제공하고 배열의 요소와 같이 매개 변수 없이 클래스를 만들 수 있도록 하려면 기본 생성자도 제공해야 합니다. 기본 생성자는 모든 매개 변수에 기본값을 사용하는 생성자일 수 있습니다.  
-  
- 다음 샘플에서는 C2512를 생성하고 해결 방법을 보여 줍니다.  
-  
-```  
-// C2512.cpp  
-// C2512 expected  
-struct B {  
-   B (char *);  
-   // Uncomment the following line to fix.  
-   // B() {};  
-};  
-  
-int main() {  
-   B b;   
-}  
-```  
-  
- 다음 샘플에서는 더 미묘한 C2512를 보여 줍니다. 이 오류를 해결하려면 해당 생성자가 참조되기 전에 클래스를 정의하도록 코드를 다시 정렬합니다.  
-  
-```  
-// C2512b.cpp  
-// compile with: /c  
-struct S {  
-   struct X;  
-  
-   void f() {  
-      X *x = new X();   // C2512 X not defined yet  
-   }  
-  
-};  
-  
-struct S::X {};  
-  
-struct T {  
-   struct X;  
-   void f();  
-};  
-  
-struct T::X {};  
-  
-void T::f() {  
-   X *x = new X();  
-}  
-```  
-  
- C2512는 const 또는 참조 데이터 멤버가 포함된 클래스를 기본 생성자로 호출해도 발생할 수 있습니다. 이러한 멤버를 생성자 이니셜라이저 목록에서 초기화하여 컴파일러에서 기본 생성자를 생성할 수 없도록 해야 합니다.  
-  
- 다음 샘플에서는 C2512를 생성하고 해결 방법을 보여 줍니다.  
-  
-```  
-// C2512c.cpp  
-// Compile by using: cl /c /W3 C2512c.cpp  
-struct S {  
-   const int i_;  
-   int &r_;   
-};   
-  
-int SumS() {  
-   const int ci = 7;  
-   int ir = 42;  
-  
-   S s1; // C2512 - no default constructor available  
-   S s2{ci, ir};  // Fix - initialize const and reference members   
-   return s2.i_ + s2.r_;  
-}  
+
+> '*식별자*': 사용할 수 있는 적절 한 기본 생성자 없음  
+
+A *기본 생성자*를 인수 없이, 필요한 생성자는 지정 된 클래스, 구조체 또는 공용 구조체에 사용할 수 없습니다. 컴파일러는 없는 사용자 정의 생성자가 제공 하는 경우에 기본 생성자를 제공 합니다.
+
+Void가 아닌 매개 변수를 사용 하는 생성자를 제공 하는 경우 (예: 배열 요소)로 매개 변수 없이 만들 클래스를 허용 하려면 기본 생성자도 제공 해야 합니다. 기본 생성자는 모든 매개 변수에 기본값을 사용하는 생성자일 수 있습니다.
+
+## <a name="example"></a>예
+
+C 2512 오류의 일반적인 원인은 인수를 사용 하는 클래스 또는 구조체 생성자를 정의 하는 경우 이며 다음 클래스나 인수 없이 구조체의 인스턴스를 선언 하려고 합니다. 예를 들어 `struct B` 아래 필요로 하는 생성자를 선언는 `char *` 인수를 제외 하 고 인수를 받지 않는 합니다. `main`, B의 인스턴스가 선언 되지만 없습니다 인수를 제공 합니다. 2.에 대 한 기본 생성자를 찾을 수 없는 때문에 컴파일러가 c 2512를 생성
+
+```cpp
+// C2512.cpp
+// Compile with: cl /W4 c2512.cpp
+// C2512 expected
+struct B {
+   B (char *) {}
+   // Uncomment the following line to fix.
+   // B() {}
+};
+
+int main() {
+   B b;   // C2512 - This requires a default constructor
+}
 ```
+
+와 같은 구조체 또는 클래스에 대 한 기본 생성자를 정의 하 여이 문제를 해결할 수 `B() {}`, 또는 모든 인수가 기본값을 갖는 같은 생성자 `B (char * = nullptr) {}`합니다.

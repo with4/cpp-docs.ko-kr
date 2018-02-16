@@ -1,10 +1,11 @@
 ---
 title: char, wchar_t, char16_t, char32_t | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/14/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -12,33 +13,40 @@ f1_keywords:
 - char16_t_cpp
 - wchar_t_cpp
 - char32_t_cpp
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c01d4718bbc1781ea4705945bb90874384e09058
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a87eff9801b2754909159ef4d5e2c24c079ee8f1
+ms.sourcegitcommit: 23a0ddd271bbcc31631283542981ff5f1693d27f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
-char, wchar_t, char16_t 및 char32_t 형식은 영숫자 문자와 영숫자가 아닌 문자 모양 및 인쇄되지 않는 문자를 나타내는 기본 제공 형식입니다. char은 크기가 8비트이고 wchar_t 및 char16_t는 크기가 16비트이고 char32_t는 32비트입니다.  
-  
-## <a name="syntax"></a>구문  
-  
+형식을 **char**, **wchar_t**, **char16_t** 및 **char32_t** 는 영숫자 문자를 나타내는 기본 제공 형식으로 영숫자가 아닌 문자 모양 및 인쇄할 수 없는 문자가 있습니다.
+
+## <a name="syntax"></a>구문
+
 ```cpp  
-char     ch1{ 'a' };    
-wchar_t  ch2{ 'a' }; // or {L'a'}    
-char16_t ch3{ L'a' };// or {L'a'}    
-char32_t ch4{ L'a' };// or {L'a'}  
+char     ch1{ 'a' };  // or { u8'a' }   
+wchar_t  ch2{ L'a' };    
+char16_t ch3{ u'a' };    
+char32_t ch4{ U'a' };  
 ```  
   
-## <a name="remarks"></a>설명  
- `char` 형식은 C와 C++의 독창적인 문자 형식이었습니다. ASCII 문자 집합이나 ISO-8859 문자 집합 중 하나 또는 UTF-8  문자 집합의 문자를 저장하는 데 사용할 수 있습니다. 형식 `unsigned char` 나타내는 데는 대개는 *바이트* c + +에는 기본 제공 형식이 아닙니다. char 형식은 다수의 언어에서 텍스트에 적합하지 않습니다. 일반적으로 최신 프로그램에서는 텍스트를 나타내는 데 와이드 문자 형식 중 하나를 사용해야 합니다. 유니코드는  
-  
- C++ 표준 라이브러리에서 basic_string 형식은 좁은 문자열과 와이드 문자열 모두에 특화되었습니다. 문자가 char 형식일 때는 std::string을 사용하고, 문자가 wchar_t 형식일 때는 std::wstring을 사용합니다. 텍스트를 나타내는 다른 형식(예: std::stringstream 및 std::cout)들은 좁은 문자열과 와이드 문자열에 대해 특수화되었습니다.  
+## <a name="remarks"></a>설명
+
+**char** 형식이 C 및 c + + 원본 문자 형식 되었습니다. 형식 **unsigned char** 나타내는 데는 대개는 *바이트*, c + +에는 기본 제공 형식이 아닙니다. **char** 형식 문자를 ASCII 문자 집합이 나 iso-8859 문자 집합 및 개별 바이트 Shift JIS 등 멀티 바이트 문자 또는 유니코드 문자 집합의 u t F-8 인코딩으로 저장 데 사용할 수 있습니다. 문자열 **char** 유형 이라고 *좁힐* 멀티 바이트 문자를 인코딩하는 데 사용 하는 경우에 문자열입니다. Microsoft 컴파일러에서 **char** 8 비트 형식입니다.
+
+**wchar_t** 형식은 구현에서 정의 된 와이드 문자 형식입니다. Microsoft 컴파일러에서 u t F-16LE로 인코딩된 유니코드를 저장 하는 데 사용 하는 16 비트 와이드 문자를 나타내는 Windows 운영 체제에서 네이티브 문자 형식입니다. C 런타임 UCRT (Universal) 라이브러리 함수 사용의 와이드 문자 버전 **wchar_t** 하 고 해당 포인터 및 배열 매개 변수 및 반환 값으로 마찬가지로 네이티브 Windows API의 와이드 문자 버전입니다.
+
+**char16_t** 및 **char32_t** 형식은 16 비트 및 32 비트 와이드 문자를 각각 나타냅니다. 유니코드에 저장할 수 u t F-16으로 인코드된는 **char16_t** 유형 및 u t F-32에 저장할 수 있는으로 인코딩된 유니코드는 **char32_t** 유형입니다. 이러한 종류의 문자열 및 **wchar_t** 모든 라고 하는 *넓은* 문자열, 종종 용어는 특히이 많이 있지만 **wchar_t** 유형입니다.
+
+C + + 표준 라이브러리에는 `basic_string` 형식 형식이 좁은 문자열과 와이드 문자열에 대해 특수화 합니다. 사용 하 여 `std::string` 문자 형식의 경우 **char**, `std::u16string` 문자 형식의 경우 **char16_t**, `std::u32string` 문자 형식의 경우 **char32_t** , 및 `std::wstring` 문자 형식의 경우 **wchar_t**합니다. 텍스트를 나타내는 다른 형식을 포함 하 여 `std::stringstream` 및 `std::cout` 좁은 문자열과 와이드 문자열에 대해 특수화 되었습니다.  
   
