@@ -287,7 +287,7 @@
 ### [방법: WRL을 사용하여 이벤트 처리](how-to-handle-events-using-wrl.md)
 ### [WRL 클래스 라이브러리 프로젝트 템플릿](wrl-class-library-project-template.md)
 ### [연습: WRL을 사용하여 기본 Windows 런타임 구성 요소 만들기](walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)
-### [연습: WRL 및 Media Foundation을 사용하여 Windows 스토어 앱 만들기](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
+### [연습: WRL 및 미디어 파운데이션을 사용하여 UWP 앱 만들기](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
 ### [방법: WRL을 사용하여 기본 COM 구성 요소 만들기](how-to-create-a-classic-com-component-using-wrl.md)
 ### [방법: 직접 WRL 구성 요소 인스턴스화](how-to-instantiate-wrl-components-directly.md)
 ### [방법: winmdidl.exe 및 midlrt.exe를 사용하여 Windows 메타데이터에서 .h 파일 만들기](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)

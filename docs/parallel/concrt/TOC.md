@@ -2,7 +2,7 @@
 # [동시성 런타임 개요](overview-of-the-concurrency-runtime.md)
 # [동시성 런타임에서 예외 처리](exception-handling-in-the-concurrency-runtime.md)
 # [병렬 진단 도구(동시성 런타임)](parallel-diagnostic-tools-concurrency-runtime.md)
-# [C++로 Windows 스토어 앱용 비동기 작업 만들기](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
+# [UWP 앱용 C++ 비동기 작업 만들기](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
 # [동시성 런타임과 기타 동시성 모델 비교](comparing-the-concurrency-runtime-to-other-concurrency-models.md)
 ## [OpenMP에서 동시성 런타임으로 마이그레이션](migrating-from-openmp-to-the-concurrency-runtime.md)
 ### [방법: 동시성 런타임을 사용하기 위해 OpenMP parallel for 루프 변환](how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)

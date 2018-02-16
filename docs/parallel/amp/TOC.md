@@ -1,7 +1,7 @@
 # [C++ AMP(C++ Accelerated Massive Parallelism)](cpp-amp-cpp-accelerated-massive-parallelism.md)
 # [C++ AMP 개요](cpp-amp-overview.md)
 # [타일 사용](using-tiles.md)
-# [Windows 스토어 앱에서 C++ AMP 사용](using-cpp-amp-in-windows-store-apps.md)
+# [UWP 앱에서 C++ AMP 사용](using-cpp-amp-in-windows-store-apps.md)
 # [연습: 매트릭스 곱](walkthrough-matrix-multiplication.md)
 # [연습: C++ AMP 응용 프로그램 디버깅](walkthrough-debugging-a-cpp-amp-application.md)
 # [람다, 함수 개체 및 제한 함수 사용](using-lambdas-function-objects-and-restricted-functions.md)

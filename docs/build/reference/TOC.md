@@ -182,7 +182,7 @@
 ### [/ALIGN(섹션 맞춤)](align-section-alignment.md)
 ### [/ALLOWBIND(DLL 바인딩 방지)](allowbind-prevent-dll-binding.md)
 ### [/ALLOWISOLATION(매니페스트 조회)](allowisolation-manifest-lookup.md)
-### [/APPCONTAINER(Windows 스토어 앱)](appcontainer-windows-store-app.md)
+### [/APPCONTAINER(UWP/Microsoft Store 앱)](appcontainer-windows-store-app.md)
 ### [/ASSEMBLYDEBUG(DebuggableAttribute 추가)](assemblydebug-add-debuggableattribute.md)
 ### [/ASSEMBLYLINKRESOURCE(.NET Framework 리소스에 대한 링크)](assemblylinkresource-link-to-dotnet-framework-resource.md)
 ### [/ASSEMBLYMODULE(MSIL 모듈을 어셈블리에 추가)](assemblymodule-add-a-msil-module-to-the-assembly.md)
