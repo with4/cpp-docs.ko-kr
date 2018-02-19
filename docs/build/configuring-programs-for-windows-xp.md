@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 용 프로그램 구성
 
 Visual Studio는 여러 플랫폼 도구 집합을 지원 하므로 운영 체제 및 런타임 라이브러리 기본 도구 집합에서 지원 되지 않는 대상 수 있습니다. 예를 들어 플랫폼 도구 집합을 전환 하 여 있습니다 사용할 수는 C + + 11, C + + 14, 및 Visual Studio에서 Visual c + + 컴파일러에서 지 원하는 향상 된 C + + 17 언어를 대상으로 하는 앱을 만드는 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]합니다. 또한 이전 플랫폼 도구 집합을 사용 하 여 이진 호환 레거시 코드를 유지 관리할 수 있으며 Visual Studio IDE의 최신 기능도 활용할 수 있습니다.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Windows XP 플랫폼 도구 집합 설치
-
 플랫폼 도구 집합 및 대상 구성 요소를 가져오는 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 및 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Visual Studio 2017에 Visual Studio 설치 관리자를 실행 합니다. Visual Studio를 처음 설치할 때 또는 선택 하면 **수정** 기존 설치를 수정 하려면 있는지 확인 하는 **c + + 데스크톱 개발** 작업을 선택 합니다. 이 작업에 대 한 선택적 구성 요소 목록에서 선택 **c + +에 대 한 Windows XP 지원**를 선택한 후 **설치** 또는 **수정**합니다.
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP 대상 환경
@@ -65,7 +64,7 @@ Windows XP 플랫폼 도구 집합, C 런타임 라이브러리 (CRT), c + + 표
 
 - **C + + 언어 기능**
 
-   v110를 사용 하는 앱에서 지 원하는 Visual Studio 2012에서 구현 된 c + + 언어 기능만\_xp 플랫폼 도구 집합입니다. v120를 사용 하는 앱에서 지 원하는 Visual Studio 2013에서 구현 된 c + + 언어 기능만\_xp 플랫폼 도구 집합입니다. v140를 사용 하는 앱에서 지 원하는 Visual Studio 2012에서 구현 된 c + + 언어 기능만\_xp 플랫폼 도구 집합입니다. 이전 플랫폼 도구 집합을 사용 하 여 빌드할 때 visual Studio에서 해당 컴파일러를 사용 합니다. 해당 버전의 컴파일러에서 구현 되는 추가 c + + 언어 기능을 활용 하는 최신 Windows XP 플랫폼 도구 집합을 사용 합니다.
+   v110를 사용 하는 앱에서 지 원하는 Visual Studio 2012에서 구현 된 c + + 언어 기능만\_xp 플랫폼 도구 집합입니다. v120를 사용 하는 앱에서 지 원하는 Visual Studio 2013에서 구현 된 c + + 언어 기능만\_xp 플랫폼 도구 집합입니다. v140를 사용 하는 앱에서 지 원하는 Visual Studio 2015에서 구현 된 c + + 언어 기능만\_xp 플랫폼 도구 집합입니다. 이전 플랫폼 도구 집합을 사용 하 여 빌드할 때 visual Studio에서 해당 컴파일러를 사용 합니다. 해당 버전의 컴파일러에서 구현 되는 추가 c + + 언어 기능을 활용 하는 최신 Windows XP 플랫폼 도구 집합을 사용 합니다.
 
 - **원격 디버깅**
 

@@ -15,15 +15,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c447389de1accfe95674855645fe044e1d3df41
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>기본적으로 해제되어 있는 컴파일러 경고
 
-컴파일러는 대부분의 사용자에게 표시되면 안 되기 때문에 기본적으로 해제되어 있는 경고를 포함합니다. 그러나 다음 옵션 중 하나를 사용하여 이러한 경고를 사용할 수 있습니다.
+컴파일러에는 해제 되어 기본적으로 대부분의 개발자 하지 않게 하려면 때문에 경고가 포함 됩니다. 그러나 다음 옵션 중 하나를 사용하여 이러한 경고를 사용할 수 있습니다.
 
 **#pragma warning(default :** *warning_number* **)**  
 지정 된 경고 (*warning_number*) 기본 수준에서 사용 하도록 설정 합니다. 경고 설명서에 경고의 기본 수준이 포함되어 있습니다.
