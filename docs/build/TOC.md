@@ -96,7 +96,6 @@
 ### [인라인 함수 가져오기 및 내보내기](importing-and-exporting-inline-functions.md)
 ## [액티브 기술 및 DLL](active-technology-and-dlls.md)
 ## [DLL의 자동화](automation-in-a-dll.md)
-## [MFC DLL의 명명 규칙](naming-conventions-for-mfc-dlls.md)
 ## [Visual Basic 응용 프로그램에서 DLL 함수 호출](calling-dll-functions-from-visual-basic-applications.md)
 # [컴파일러 내장 및 어셈블리 언어](../intrinsics/TOC.md)
 # [명령줄에서 C/C++ 코드 빌드](building-on-the-command-line.md)
