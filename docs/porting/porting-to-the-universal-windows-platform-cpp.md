@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>유니버설 Windows 플랫폼으로 포팅(C++)
 이 항목에서는 Windows 10 앱 플랫폼인 유니버설 Windows 플랫폼에 기존 C++ 코드를 이식하는 방법에 대한 정보를 찾을 수 있습니다. *유니버설* 이라는 용어는 코드가 데스크톱, 휴대폰, 태블릿 및 앞으로 제공될 장치(Windows 10 실행)를 비롯하여 Windows 10을 실행하는 모든 장치에서 실행될 수 있음을 의미합니다. Windows 10을 실행하는 모든 장치에서 제대로 작동하는 단일 XAML 기반 사용자 인터페이스 및 단일 프로젝트를 만듭니다. XAML의 동적 레이아웃 기능을 사용하여 앱 UI를 다른 디스플레이 크기에 맞출 수 있습니다.  
@@ -73,7 +76,7 @@ ms.lasthandoff: 12/21/2017
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
     ```  
   
-     이러한 문은 각각 Windows 스토어 앱, Windows Phone 스토어 앱 중 하나 또는 둘 다에 적용되거나 적용되지 않습니다(클래식 Win32 데스크톱만 해당). 이러한 매크로는 Windows SDK 8.1 이상에서만 사용할 수 있으므로 이전 버전의 Windows SDK 또는 Windows 이외의 다른 플랫폼 용으로 코드를 컴파일해야 하면 이러한 매크로가 정의되지 않은 경우도 고려해야 합니다.  
+     이러한 문은 각각 UWP 앱, Windows Phone 스토어 앱 중 하나 또는 둘 다에 적용되거나 적용되지 않습니다(클래식 Win32 데스크톱만 해당). 이러한 매크로는 Windows SDK 8.1 이상에서만 사용할 수 있으므로 이전 버전의 Windows SDK 또는 Windows 이외의 다른 플랫폼 용으로 코드를 컴파일해야 하면 이러한 매크로가 정의되지 않은 경우도 고려해야 합니다.  
   
 11. 앱이 지원하는 각 장치 종류에 대해 에뮬레이터 또는 실제 장치에서 앱을 실행하고 디버그합니다. 에뮬레이터를 실행하려면 가상 컴퓨터가 아닌 실제 컴퓨터에서 Visual Studio를 실행해야 합니다.  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 12/21/2017
 4.  빌드하고 여러 다른 Windows SDK 버전 간의 주요 변경 사항으로 인해 발생하는 오류를 해결합니다.  
   
 ## <a name="troubleshooting"></a>문제 해결  
- 유니버설 Windows 플랫폼으로 코드를 이식하는 프로세스 동안 다양한 오류가 발생할 수 있습니다. 다음은 발생할 수 있는 몇 가지 문제입니다.  
+ UWP로 코드를 포팅하는 프로세스 동안 다양한 오류가 발생할 수 있습니다. 다음은 발생할 수 있는 몇 가지 문제입니다.  
   
  **프로젝트 구성 문제**  
   
@@ -111,7 +114,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 <ApplicationTypeRevision>10.0</ApplicationTypeRevision>  
 ```  
   
- Visual Studio를 사용하여 새 유니버설 Windows 플랫폼 프로젝트를 만든 경우 이 오류가 나타나지 않습니다.  
+ Visual Studio를 사용하여 새 UWP 프로젝트를 만든 경우 이 오류가 나타나지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual C++ 포팅 가이드](../porting/porting-to-the-universal-windows-platform-cpp.md)   

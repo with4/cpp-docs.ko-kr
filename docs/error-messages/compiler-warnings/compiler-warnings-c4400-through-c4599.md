@@ -1,7 +1,8 @@
 ---
 title: "컴파일러 경고 C4400 C4599 통해 | Microsoft Docs"
 ms.date: 11/17/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -36,6 +37,10 @@ f1_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -43,6 +48,10 @@ f1_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -98,6 +107,10 @@ helpviewer_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -105,6 +118,10 @@ helpviewer_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -127,17 +144,19 @@ helpviewer_keywords:
 - C4593
 - C4594
 - C4595
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>컴파일러 경고 C4400 C4599 통해
 
@@ -165,7 +184,7 @@ ms.lasthandoff: 12/21/2017
 |[컴파일러 경고(수준 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*함수*': 함수 시그니처에 형식 '*형식*'; C + + 개체는 순수 코드 간에 전달 하는 안전 하지 않은 혼합형 / 네이티브는입니다.|
 |컴파일러 경고 C4413|'classname::member': 생성자가 종료 후에 유지 하지 않는 임시 참조 멤버가 초기화는|
 |[컴파일러 경고(수준 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*함수*': 함수로 short 점프는 near로 변환 됩니다|
-|컴파일러 경고 (수준 1) C4415|중복 된 __declspec (code_seg ('*이름*'))|
+|컴파일러 경고 (수준 1) C4415|duplicate __declspec(code_seg('*name*'))|
 |컴파일러 경고 (수준 1) C4416|빈 문자열을 포함 하는 code_seg: 무시|
 |컴파일러 경고 (수준 1) C4417|명시적 템플릿 인스턴스화가 code_seg 가질 수 없습니다: 무시|
 |컴파일러 경고 (수준 1) C4418|code_seg enum에서 무시|
@@ -214,7 +233,13 @@ ms.lasthandoff: 12/21/2017
 |[컴파일러 경고(수준 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|부동 소수점 제어 pragma /clr에서 무시 됩니다.|
 |[컴파일러 경고 (수준 4) C4471](compiler-warning-level-4-c4471.md)|'*열거형*': 범위가 지정 되지 않은 열거형의 정방향 선언에 (int로 가정)는 내부 형식이 있어야 합니다.|
 |컴파일러 경고 (수준 1) c 4472|'*식별자*'가 네이티브 열거형: 선언 하려면 액세스 지정자 (전용/공용) 추가 ' WinRT &#124; 관리 되는 ' 열거형|
-|컴파일러 경고 C4480|비표준 확장이 사용 됨: 열거형에 대 한 기본 형식 지정 '*열거형*'|
+|[컴파일러 경고 (수준 1) C4473](c4473.md)|'*함수*': 서식 문자열에 대 한 전달 된 인수가 부족 합니다.|
+|컴파일러 경고 (수준 3) C4474|'*함수*': 서식 문자열에 전달 된 인수가 너무 많습니다.|
+|컴파일러 경고 (수준 3) C4475|'*함수*': 길이 한정자 '*한정자*'형식 필드 문자를 사용할 수 없습니다'*문자*' 서식 지정자|
+|컴파일러 경고 (수준 3) C4476|'*함수*': 알 수 없는 형식 필드 문자 '*문자*' 서식 지정자|
+|[컴파일러 경고 (수준 1) C4477](c4477.md)|'*함수*': 서식 문자열 '*문자열*'형식의 인수를 사용 해야'*형식*', 하지만 variadic 인수 *번호* 형식이 '*형식*'|
+|컴파일러 경고 (수준 1) C4478|'*함수*': 위치 및 비 위치 자리 표시자는 동일한 형식 문자열에 혼합할 수 없고|
+|컴파일러 경고 C4480 (오류)|비표준 확장이 사용 됨: 열거형에 대 한 기본 형식 지정 '*열거형*'|
 |[컴파일러 경고(수준 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|비표준 확장이 사용 됨: 재정의 지정자 '*키워드*'|
 |컴파일러 경고 C4482|비표준 확장이 사용 됨: 열거형 '*열거형*' 정규화 된 이름에 사용 되는|
 |컴파일러 경고 (수준 1, 오류) C4483|구문 오류: c + + 키워드 필요 합니다.|
@@ -229,6 +254,10 @@ ms.lasthandoff: 12/21/2017
 |컴파일러 경고 (수준 1, 오류) C4492|'*function1*': 일치 기본 ref 클래스 메서드 '*function2*', 하지만 'override'로 표시 되지 않습니다|
 |컴파일러 경고 (수준 3, 오류) c 4493|삭제 식은 효과가 없습니다 소멸자 '*형식*' 'public' 액세스가 없습니다|
 |컴파일러 경고 (수준 1) C4494|'*함수*': __declspec(allocator) 함수 반환 형식이 때문에 아니면 무시 한 포인터 또는 참조|
+|컴파일러 경고 C4495|비표준 확장이 사용 '_': 명시적 기본 클래스 이름으로 대체|
+|컴파일러 경고 C4496|비표준 확장 'for each' 사용: 했습니다. ranged-for 문으로 대체|
+|컴파일러 경고 C4497|비표준 확장이 사용 'sealed': 'final'으로 대체|
+|컴파일러 경고 C4498|비표준 확장이 사용 됨: '*확장*'|
 |컴파일러 경고 (수준 4) C4499|"*함수*': 명시적 특수화 (무시 됨)는 저장소 클래스를 가질 수 없습니다"|
 |[컴파일러 경고(수준 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'*링크 사양이*' 'extern' 키워드를 사용 해야 하 고 다른 모든 지정자 앞에 야|
 |[컴파일러 경고(수준 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'*식별자*': 데코레이팅된 이름 길이 초과 했으므로 이름이 잘립니다|

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +14,24 @@ f1_keywords:
 - AFX/CException::CException
 - AFX/CException::Delete
 - AFX/CException::ReportError
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CException [MFC], CException
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69fb88fc9c12994d413de2cbe2037cc4fc845760
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cexception-class"></a>CException 클래스
 MFC 라이브러리의 모든 예외에 대한 기본 클래스입니다.  
@@ -69,7 +72,7 @@ class AFX_NOVTABLE CException : public CObject
 |[CFileException](../../mfc/reference/cfileexception-class.md)|파일 관련 예외|  
 |[CResourceException](../../mfc/reference/cresourceexception-class.md)|Windows 리소스를 찾을 수 없거나 불가|  
 |[COleException](../../mfc/reference/coleexception-class.md)|OLE 예외|  
-|[잠금](../../mfc/reference/cdbexception-class.md)|데이터베이스 예외 (즉,: Open Database Connectivity에 따라 MFC 데이터베이스 클래스에 대 한 발생 하는 예외 조건)|  
+|[CDBException](../../mfc/reference/cdbexception-class.md)|데이터베이스 예외 (즉,: Open Database Connectivity에 따라 MFC 데이터베이스 클래스에 대 한 발생 하는 예외 조건)|  
 |[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|OLE 디스패치 (자동화) 예외|  
 |[CUserException](../../mfc/reference/cuserexception-class.md)|리소스를 찾을 수를 나타내는 예외|  
 |[CDaoException](../../mfc/reference/cdaoexception-class.md)|데이터 액세스 개체 예외 (즉,: DAO 클래스에 대 한 발생 하는 예외 조건을)|  
@@ -91,7 +94,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="cexception"></a>CException::CException  
+##  <a name="cexception"></a>  CException::CException  
  이 멤버 함수를 생성 한 `CException` 개체입니다.  
   
 ```  
@@ -105,7 +108,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>설명  
  이 생성자를 직접 호출 필요가 하는 것은 일반적으로 없습니다. 인스턴스를 만들도록 예외를 throw 하는 함수는 `CException`-파생 클래스와 MFC 중 하나를 사용 해야 함수 같은 throw 되거나 해당 생성자를 호출 [AfxThrowFileException](exception-processing.md#afxthrowfileexception), 미리 정의 된 형식이 throw 합니다. 이 설명서는 완전성을 위해서만 제공 됩니다.  
   
-##  <a name="delete"></a>CException::Delete  
+##  <a name="delete"></a>  CException::Delete  
  이 함수를 확인 하는 **CException** 힙에서 개체가 만들어지고이 경우 호출는 **삭제** 개체에 연산자입니다.  
   
 ```  
@@ -169,7 +172,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror"></a>  CException::ReportError  
  사용자에 게 메시지 상자에이 보고서 오류 텍스트에 함수를 호출 합니다.  
   
 ```  
@@ -180,7 +183,7 @@ virtual int ReportError(
   
 ### <a name="parameters"></a>매개 변수  
  `nType`  
- 메시지 상자 스타일을 지정합니다. 어떠한 조합의 적용 된 [메시지 상자 스타일](message-box-styles.md) 상자로 합니다. 이 매개 변수를 지정 하지 않으면 기본값은 **MB_OK**합니다.  
+ 메시지 상자 스타일을 지정합니다. 어떠한 조합의 적용 된 [메시지 상자 스타일](styles-used-by-mfc.md#message-box-styles) 상자로 합니다. 이 매개 변수를 지정 하지 않으면 기본값은 **MB_OK**합니다.  
   
  *nMessageID*  
  예외 개체에 오류 메시지가 없는 경우 표시할 메시지를의 리소스 ID (문자열 항목)을 지정 합니다. 0 인 경우, 메시지 "오류 메시지를 사용할 수"가 표시 됩니다.  

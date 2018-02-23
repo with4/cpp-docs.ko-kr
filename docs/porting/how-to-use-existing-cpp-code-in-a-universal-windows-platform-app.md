@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c6d022edae8e63a5a6b8ec98ea67fceb4750b173
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 67bed0f5cc3ad07ae7b726b9e120aa56120186e6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용
 데스크톱 프로그램을 UWP 환경에서 실행되게 하는 가장 쉬운 방법은 데스크톱 브리지 기술을 사용하는 것입니다. 여기에는 코드를 변경할 필요 없이 기존 응용 프로그램을 UWP 앱으로 패키징하는 데스크톱 앱 변환기가 포함됩니다. 자세한 내용은 [데스크톱 브리지를 사용하여 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져오기](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)를 참조하세요.
@@ -27,9 +30,9 @@ ms.lasthandoff: 12/21/2017
   
  UWP 앱은 보호된 환경에서 실행되며 이에 따라 플랫폼의 보안을 손상시킬 수 있는 많은 Win32, COM 및 CRT API 호출이 허용되지 않습니다. /ZW 옵션을 사용하는 경우 컴파일러는 이러한 호출을 검색하고 오류를 생성할 수 있습니다. 응용 프로그램에서 앱 인증 키트를 사용하여 금지된 API를 호출하는 코드를 검색할 수 있습니다. [앱 인증 키트 사용](https://msdn.microsoft.com/library/windows/apps/hh694081.aspx)을 참조하세요.  
   
- 라이브러리의 소스 코드를 사용할 수 있는 경우 금지된 API 호출을 제거할 수 있습니다. 허용되거나 금지되는 API의 목록을 비롯한 자세한 내용은 [Windows 런타임 앱 및 UWP(유니버설 Windows 플랫폼) 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205762.aspx) 및 [/ZW를 사용할 때 지원되지 않는 CRT 함수](https://msdn.microsoft.com/library/windows/apps/jj606124.aspx)를 참조하세요. [Windows 런타임 앱 및 UWP(유니버설 Windows 플랫폼) 앱의 Windows API에 대한 대안](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx)에서 몇 가지 대안을 찾을 수 있습니다.  
+ 라이브러리의 소스 코드를 사용할 수 있는 경우 금지된 API 호출을 제거할 수 있습니다. 허용되거나 금지되는 API의 목록을 비롯한 자세한 내용은 [Windows 런타임 앱 및 UWP(유니버설 Windows 플랫폼) 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205762.aspx) 및 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요. 일부 대안은 [UWP 앱에서 Windows API의 대안](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)에서 찾을 수 있습니다.  
   
- 유니버설 Windows 프로젝트의 참조를 클래식 데스크톱 라이브러리에 추가하려고 하면 라이브러리가 호환되지 않는다는 오류 메시지가 표시됩니다. 정적 라이브러리의 경우 클래식 Win32 응용 프로그램에서와 마찬가지로 라이브러리(.lib 파일)를 링커 입력에 추가하기만 하여 라이브러리에 링크할 수 있습니다. 바이너리만 사용할 수 있는 라이브러리의 경우 이것이 유일한 옵션입니다. 정적 라이브러리는 앱의 실행 파일에 링크되지만 UWP 앱에서 사용하는 Win32 DLL은 프로젝트에 포함하고 콘텐츠로 표시하여 앱에 패키지해야 합니다. 유니버설 Windows 플랫폼 앱에서 Win32 DLL을 로드하려면 LoadLibrary 또는 LoadLibraryEx 대신 [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159.aspx)도 호출해야 합니다.  
+ 유니버설 Windows 프로젝트의 참조를 클래식 데스크톱 라이브러리에 추가하려고 하면 라이브러리가 호환되지 않는다는 오류 메시지가 표시됩니다. 정적 라이브러리의 경우 클래식 Win32 응용 프로그램에서와 마찬가지로 라이브러리(.lib 파일)를 링커 입력에 추가하기만 하여 라이브러리에 링크할 수 있습니다. 바이너리만 사용할 수 있는 라이브러리의 경우 이것이 유일한 옵션입니다. 정적 라이브러리는 앱의 실행 파일에 링크되지만 UWP 앱에서 사용하는 Win32 DLL은 프로젝트에 포함하고 콘텐츠로 표시하여 앱에 패키지해야 합니다. UWP 앱에서 Win32 DLL을 로드하려면 LoadLibrary 또는 LoadLibraryEx 대신 [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159.aspx)도 호출해야 합니다.  
   
  DLL 또는 정적 라이브러리의 소스 코드가 있는 경우 /ZW를 사용하여 UWP 프로젝트로 다시 컴파일할 수 있습니다. 이렇게 하면 솔루션 탐색기를 사용하여 참조를 추가하고 C++ UWP 앱에서 사용할 수 있습니다. DLL의 경우 내보내기 라이브러리에 링크합니다.  
   
@@ -37,11 +40,11 @@ ms.lasthandoff: 12/21/2017
   
  앞의 설명은 다르게 처리되어야 하는 COM 구성 요소의 경우에는 적용되지 않습니다. EXE 또는 DLL에 COM 서버가 있는 경우 [등록이 필요하지 않은 COM 구성 요소](https://msdn.microsoft.com/library/dd408052.aspx)로 패키지하는 한 유니버설 Windows 프로젝트에서 사용할 수 있으며 콘텐츠 파일로 프로젝트에 추가하고 [CoCreateInstanceFromApp](https://msdn.microsoft.com/library/windows/apps/hh404137.aspx)을 사용하여 인스턴스화할 수 있습니다. [Windows 스토어 C++ 프로젝트에서 Free-COM DLL 사용](http://blogs.msdn.com/b/win8devsupport/archive/2013/05/20/using-free-com-dll-in-windows-store-c-project.aspx)을 참조하세요.  
   
- 유니버설 Windows 플랫폼으로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 런타임 C++ 템플릿 라이브러리)](../windows/windows-runtime-cpp-template-library-wrl.md)을 사용하여 Windows 런타임 구성 요소로 변환할 수 있습니다. WRL은 ATL 및 OLE의 모든 기능을 지원하지 않으므로 이러한 포트가 적합한지 여부는 COM 코드가 구성 요소에 필요한 COM, ATL 및 OLE의 어떤 기능에 얼마나 많이 의존하는지에 따라 달라집니다.  
+ UWP로 포팅하려는 기존 COM 라이브러리가 있는 경우 [WRL(Windows 런타임 C++ 템플릿 라이브러리)](../windows/windows-runtime-cpp-template-library-wrl.md)을 사용하여 Windows 런타임 구성 요소로 변환할 수 있습니다. WRL은 ATL 및 OLE의 모든 기능을 지원하지 않으므로 이러한 포트가 적합한지 여부는 COM 코드가 구성 요소에 필요한 COM, ATL 및 OLE의 어떤 기능에 얼마나 많이 의존하는지에 따라 달라집니다.  
   
- 유니버설 Windows 플랫폼 프로젝트에서 기존 C++ 코드를 사용할 수 있는 다양한 방법은 다음과 같습니다. 구성 요소 확장(C++/CX)을 사용하도록 설정하여(즉, /ZW 옵션을 사용하여) 코드를 다시 컴파일할 필요가 없는 방법도 있지만 그렇지 않은 방법도 있으므로 표준 C++로 코드를 유지해야 하거나 일부 코드의 경우 클래식 Win32 컴파일 환경을 보존해야 하는 경우 적절한 아키텍처를 선택하여 그렇게 할 수 있습니다. 예를 들어 C#, Visual Basic 및 JavaScript 호출자에게 노출될 유니버설 Windows 플랫폼 UI 및 형식을 포함하는 모든 코드는 Windows 앱 프로젝트와 Windows 런타임 구성 요소 프로젝트에 있어야 합니다. C++(C++/CX 포함) 코드에서만 소비되어야 하는 코드는 /WX 옵션을 사용하여 컴파일되는 프로젝트나 표준 C++ 프로젝트에 있을 수 있습니다. 바이너리 전용 코드는 금지된 API를 사용하지 않는 경우에만 정적 라이브러리로 링크하여 사용하거나 콘텐츠로 앱과 함께 패키지하고 DLL에서 로드할 수 있습니다.  
+ 이들은 UWP 프로젝트에서 기존 C++ 코드를 사용할 수 있는 다양한 방법입니다. 구성 요소 확장(C++/CX)을 사용하도록 설정하여(즉, /ZW 옵션을 사용하여) 코드를 다시 컴파일할 필요가 없는 방법도 있지만 그렇지 않은 방법도 있으므로 표준 C++로 코드를 유지해야 하거나 일부 코드의 경우 클래식 Win32 컴파일 환경을 보존해야 하는 경우 적절한 아키텍처를 선택하여 그렇게 할 수 있습니다. 예를 들어 C#, Visual Basic 및 JavaScript 호출자에게 노출될 UWP UI 및 형식을 포함하는 모든 코드는 Windows 앱 프로젝트와 Windows 런타임 구성 요소 프로젝트에 있어야 합니다. C++(C++/CX 포함) 코드에서만 소비되어야 하는 코드는 /WX 옵션을 사용하여 컴파일되는 프로젝트나 표준 C++ 프로젝트에 있을 수 있습니다. 바이너리 전용 코드는 금지된 API를 사용하지 않는 경우에만 정적 라이브러리로 링크하여 사용하거나 콘텐츠로 앱과 함께 패키지하고 DLL에서 로드할 수 있습니다.  
   
- 이러한 개발 시나리오 중 어느 것을 선택하든 간에 클래식 데스크톱 Win32와 유니버설 Windows 플랫폼 모두에서 조건부로 코드를 컴파일할 수 있도록 하기 위해 코드에서 사용할 수 있는 많은 매크로 정의를 알고 있어야 합니다.  
+ 이러한 개발 시나리오 중 어느 것을 선택하든 간에 클래식 데스크톱 Win32와 UWP 모두에서 조건부로 코드를 컴파일할 수 있도록 하기 위해 코드에서 사용할 수 있는 많은 매크로 정의를 알고 있어야 합니다.  
   
 ```cpp  
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)  
@@ -50,17 +53,17 @@ ms.lasthandoff: 12/21/2017
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
 ```  
   
- 이러한 문은 각각 Windows 스토어 앱, Windows Phone 스토어 앱 중 하나 또는 둘 다에 적용되거나 적용되지 않습니다(클래식 Win32 데스크톱만 해당). 이러한 매크로는 Windows SDK 8.1 이상에서만 사용할 수 있으므로 이전 버전의 Windows SDK 또는 Windows 이외의 다른 플랫폼 용으로 코드를 컴파일해야 하면 이러한 매크로가 정의되지 않은 경우도 고려해야 합니다.  
+ 이러한 문은 각각 UWP 앱, Windows Phone 스토어 앱 중 하나 또는 둘 다에 적용되거나 적용되지 않습니다(클래식 Win32 데스크톱만 해당). 이러한 매크로는 Windows SDK 8.1 이상에서만 사용할 수 있으므로 이전 버전의 Windows SDK 또는 Windows 이외의 다른 플랫폼 용으로 코드를 컴파일해야 하면 이러한 매크로가 정의되지 않은 경우도 고려해야 합니다.  
   
  이 항목에는 다음과 같은 절차가 포함되어 있습니다.  
   
-1.  [유니버설 Windows 플랫폼 앱에서 Win32 DLL 사용](#BK_Win32DLL)  
+1.  [UWP 앱에서 Win32 DLL 사용하기](#BK_Win32DLL)  
   
 2.  [UWP 앱에서 네이티브 C++ 정적 라이브러리 사용](#BK_StaticLib)  
   
 3.  [Windows 런타임 구성 요소로 C++ 라이브러리 포팅](#BK_WinRTComponent)  
   
-##  <a name="BK_Win32DLL"></a> 유니버설 Windows 플랫폼 앱에서 Win32 DLL 사용  
+##  <a name="BK_Win32DLL"></a>UWP 앱에서 Win32 DLL 사용하기  
  보안과 안정성을 높이기 위해 유니버설 Windows 앱은 제한된 런타임 환경에서 실행되므로 클래식 Windows 데스크톱 응용 프로그램에서 사용하듯이 네이티브 DLL을 사용할 수 없습니다. DLL의 소스 코드가 있는 경우 UWP에서 실행되도록 코드를 이식할 수 있습니다. 먼저 프로젝트를 UWP 프로젝트로 식별하기 위해 몇 가지 프로젝트 설정과 프로젝트 파일 메타데이터를 변경합니다. C++/CX를 사용하도록 설정하는 /ZW 옵션을 사용하여 라이브러리 코드를 컴파일해야 합니다. 특정 API 코드는 해당 환경과 관련된 더 엄격한 제어 때문에 UWP 앱에서 허용되지 않습니다. [Windows 런타임 앱 및 UWP(유니버설 Windows 플랫폼) 앱용 Win32 및 COM](https://msdn.microsoft.com/library/windows/apps/br205757.aspx)을 참조하세요.  
   
  __declspec(dllexport)를 사용하여 함수를 노출하는 네이티브 DLL이 있는 경우에는 다음 절차가 적용됩니다.  

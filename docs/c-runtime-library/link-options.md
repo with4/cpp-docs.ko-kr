@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - nothrownew.obj
 - newmode.obj
@@ -36,21 +38,22 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ece67a7c2b50423ea9ff4610e638dcdc2b979e14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d0108ecd9d0b9caaa2df3d450c185d5937a96463
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="link-options"></a>링크 옵션
 CRT 라이브러리 디렉터리에는 코드를 변경하지 않고도 특정 CRT 기능을 사용할 수 있는 작은 개체 파일이 여러 개 포함되어 있습니다. 이러한 파일은 링커 명령줄에 추가하기만 하면 사용할 수 있기 때문에 "링크 옵션"이라고 합니다.  
   
- 순수 모드 버전이 존재하지만 Visual Studio 2015에서는 더 이상 사용되지 않습니다. 네이티브 및 /clr 코드에는 기본 버전을 사용하고 /clr:pure 모드에는 순수 버전(앞에 p 접두사가 있음)을 사용하세요. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
+ 순수 모드 버전은 Visual Studio 2015부터 더 이상 사용되지 않습니다. 네이티브 및 /clr 코드에는 일반 버전을 사용합니다.  
   
 |네이티브 및 /clr|순수 모드|설명|  
 |----------------------|---------------|-----------------|  

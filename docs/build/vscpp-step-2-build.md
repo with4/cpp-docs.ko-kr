@@ -1,6 +1,6 @@
 ---
 title: "C + + 콘솔 응용 프로그램 프로젝트 빌드 및 실행 | Microsoft Docs"
-description: "Visual c + +에 대 한 Visual Studio 지원 설치"
+description: "빌드 및 Visual c + +에서는 Hello World 콘솔 응용 프로그램 실행"
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 119d39c6aac479c8e08cd017b4d5f8da794c836d
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>C + + 콘솔 응용 프로그램 프로젝트 빌드 및 실행
 

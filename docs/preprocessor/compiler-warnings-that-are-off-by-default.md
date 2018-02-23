@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>기본적으로 해제되어 있는 컴파일러 경고
+# <a name="compiler-warnings-that-are-off-by-default"></a>기본적으로 해제 되어 있는 컴파일러 경고
 
-컴파일러에는 해제 되어 기본적으로 대부분의 개발자 하지 않게 하려면 때문에 경고가 포함 됩니다. 그러나 다음 옵션 중 하나를 사용하여 이러한 경고를 사용할 수 있습니다.
+컴파일러는 대부분의 개발자 하지 않게 하려면 때문에 기본적으로 해제 되어 있는 경고를 포함 합니다. 경우에 따라 스타일 선택 사항을 나타내는 또는 일반적인 구문 이전 코드에서 인지 언어에 대 한 Microsoft 확장을 활용 합니다. 경우에 따라 예기치 않은 또는 정의 되지 않은 동작을 야기할 수 있는 잘못 된 가정을 프로그래머가 자주 확인 영역을 나타냅니다. 이러한 경고 중 일부는 매우 불안정 라이브러리 헤더의 수 있습니다.
 
-**#pragma warning(default :** *warning_number* **)**  
-지정 된 경고 (*warning_number*) 기본 수준에서 사용 하도록 설정 합니다. 경고 설명서에 경고의 기본 수준이 포함되어 있습니다.
+다음 옵션 중 하나를 사용 하 여 이러한 경고를 설정할 수 있습니다.
 
-**#pragma warning(** *warning_level* **:** *warning_number* **)**  
-지정 된 경고 (*warning_number*) 지정된 된 수준에서 사용 됨 (*warning_level*).
+- **#pragma warning(default :** *warning_number* **)**  
+   지정 된 경고 (*warning_number*) 기본 수준에서 사용 하도록 설정 합니다. 경고 설명서에 경고의 기본 수준이 포함되어 있습니다.
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ 벽** 기본적으로 해제 되어 있는 모든 경고를 활성화 합니다.
+- **#pragma warning(** *warning_level* **:** *warning_number* **)**  
+   지정 된 경고 (*warning_number*) 지정된 된 수준에서 사용 됨 (*warning_level*).
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ 벽** 기본적으로 해제 되어 있는 모든 경고를 활성화 합니다. 사용 하 여 개별 경고 해제할 수 있습니다이 옵션을 사용 하는 경우는 [/wd](../build/reference/compiler-option-warning-level.md) 옵션입니다.
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   이 경고를 통해  *nnnn*  수준에서 *l*합니다.
 
 다음 경고는 기본적으로 해제되어 있습니다.
 
@@ -131,6 +136,7 @@ ms.lasthandoff: 02/19/2018
 |C 5032가 발생 (수준 4)|없는 해당 #pragma warning(pop) #pragma warning (push)를 발견 했습니다.|
 |C5035|기능을 사용 하 여 '*기능*' 하면 함수 *함수* 게스트 코드로 컴파일할 수를|
 |C5036 (수준 1)|/hybrid:x86arm64로 컴파일할 때 varargs 함수 포인터 변환이 있습니다. '*type1*'to'*type2*'|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|데이터 멤버 '*member1*'초기화 될 데이터 멤버 뒤'*member2*'|
 
 하지 않는 한 이러한 경고는 해제는 [관대 한 /-](../build/reference/permissive-standards-conformance.md) 컴파일러 옵션을 설정 합니다.
 

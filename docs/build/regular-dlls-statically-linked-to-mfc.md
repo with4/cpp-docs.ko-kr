@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - regular MFC DLLs [C++]
 - DLLs [C++], regular
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ef25785e3d1e37ee622572f03fce56b1fa236aa
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>일반 MFC Dll을 정적으로 MFC에 링크
 MFC DLL 정적으로 MFC에 링크 되는 일반적인 MFC를 내부적으로 사용 하는 DLL 이며 MFC 또는 비 MFC 실행 파일에서 DLL의 내보낸된 함수를 호출할 수 있습니다. 이름에서 알 수 있듯이 이러한 종류의 DLL의 MFC 정적 연결 라이브러리 버전을 사용 하 여 만들어집니다. 함수는 일반적으로 표준 C 인터페이스를 사용 하 여 MFC DLL 일반에서 내보내집니다. 작성, 빌드 및 MFC 기본 DLL을 사용 하는 방법의 예를 들어 샘플을 참조 하십시오. [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)합니다.  
@@ -72,7 +75,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
   
  정적으로 MFC에 링크 된 DLL 공유 MFC Dll에 동적으로 연결할 수 없습니다. 다른 DLL;와 마찬가지로 응용 프로그램에 동적으로 바인딩되어 정적으로 MFC에 링크 된 DLL 다른 DLL과 마찬가지로 응용 프로그램에 연결 합니다.  
   
- 표준 MFC 정적 연결 라이브러리에 설명 된 규칙에 따라 이름을 [MFC Dll에 대 한 명명 규칙](../build/naming-conventions-for-mfc-dlls.md)합니다. 그러나 MFC 버전 3.0 이상 이므로 더 이상에 연결 된 원하는 MFC 라이브러리의 버전을 링커로 수동으로 지정 하는 데 필요한. 대신, MFC 헤더 파일을 자동으로 확인와 같은 올바른 버전에 따라 전처리기에서 링크할 MFC 라이브러리의 정의  **\_디버그** 또는 **_UNICODE**합니다. MFC 헤더 파일 특정 버전의 MFC 라이브러리에 연결 하 여 링커가 /DEFAULTLIB 지시문을 추가 합니다.  
+ 표준 MFC 정적 연결 라이브러리에 설명 된 규칙에 따라 이름을 [MFC Dll에 대 한 명명 규칙](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)합니다. 그러나 MFC 버전 3.0 이상 이므로 더 이상에 연결 된 원하는 MFC 라이브러리의 버전을 링커로 수동으로 지정 하는 데 필요한. 대신, MFC 헤더 파일을 자동으로 확인와 같은 올바른 버전에 따라 전처리기에서 링크할 MFC 라이브러리의 정의  **\_디버그** 또는 **_UNICODE**합니다. MFC 헤더 파일 특정 버전의 MFC 라이브러리에 연결 하 여 링커가 /DEFAULTLIB 지시문을 추가 합니다.  
   
 ## <a name="what-do-you-want-to-do"></a>원하는 작업을 선택하세요.  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +14,24 @@ f1_keywords:
 - AFXPANEDIALOG/CPaneDialog::Create
 - AFXPANEDIALOG/CPaneDialog::HandleInitDialog
 - AFXPANEDIALOG/CPaneDialog::SetOccDialogInfo
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPaneDialog [MFC], Create
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4d292a8f3f8fafc88b23d9375d1894e47e1c0a90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e247d1d824d710cfa9588a01d73e1ca611d77ed
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 클래스
 `CPaneDialog` 클래스는 도킹 가능한 모덜리스 대화 상자를 지원 합니다.  
@@ -60,11 +63,11 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnLButtonDblClk`|처리는 [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) 메시지입니다. (재정의 [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|처리는 [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) 메시지입니다. (재정의 [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
 |`CPaneDialog::OnUpdateCmdUI`|대화 상자 창을 업데이트 하기 위해 프레임 워크에서 호출 됩니다. (재정의 [cdockablepane:: Onupdatecmdui](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|`CPaneDialog::OnWindowPosChanging`|처리는 [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) 메시지입니다. (재정의 [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
+|`CPaneDialog::OnWindowPosChanging`|처리는 [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) 메시지입니다. (Redefines [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|OLE 컨트롤 컨테이너의 대화 상자에 대 한 서식 파일을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 생성 된 `CPaneDialog` 두 단계를 수행에서 하는 개체입니다. 첫째, 코드에서 개체를 생성 합니다. 둘째, 호출 [CPaneDialog::Create](#create)합니다. 올바른 리소스 템플릿 이름이 나 서식 파일의 ID를 지정 하 고 부모 창에 대 한 포인터를 전달 해야 합니다. 그렇지 않은 경우 만들기 프로세스가 실패합니다. 대화 상자 WS_CHILD 및 WS_VISIBLE 스타일을 지정 해야 합니다. WS_CLIPCHILDREN 및 WS_CLIPSIBLINGS 스타일 지정 하는 것이 좋습니다. 자세한 내용은 참조 [창 스타일](window-styles.md)합니다.  
+ 생성 된 `CPaneDialog` 두 단계를 수행에서 하는 개체입니다. 첫째, 코드에서 개체를 생성 합니다. 둘째, 호출 [CPaneDialog::Create](#create)합니다. 올바른 리소스 템플릿 이름이 나 서식 파일의 ID를 지정 하 고 부모 창에 대 한 포인터를 전달 해야 합니다. 그렇지 않은 경우 만들기 프로세스가 실패합니다. 대화 상자 WS_CHILD 및 WS_VISIBLE 스타일을 지정 해야 합니다. WS_CLIPCHILDREN 및 WS_CLIPSIBLINGS 스타일 지정 하는 것이 좋습니다. 자세한 내용은 참조 [창 스타일](styles-used-by-mfc.md#window-styles)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,7 +87,7 @@ class CPaneDialog : public CDockablePane
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpanedialog.h  
   
-##  <a name="create"></a>CPaneDialog::Create  
+##  <a name="create"></a>  CPaneDialog::Create  
  도킹 대화 상자를 만들고 연결 하는 `CPaneDialog` 개체입니다.  
   
 ```  
@@ -130,7 +133,7 @@ BOOL Create(
  부모 창을 가리킵니다.  
   
  [in] `bHasGripper`  
- `TRUE`캡션 (그리퍼);를 사용 하 여 도킹 대화 상자를 만들려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 캡션 (그리퍼);를 사용 하 여 도킹 대화 상자를 만들려면 그렇지 않으면 `FALSE`합니다.  
   
  [in] `lpszTemplateName`  
  대화 상자 템플릿의 리소스의 이름입니다.  
@@ -151,7 +154,7 @@ BOOL Create(
  다른 스타일 특성입니다. 기본값은 `AFX_DEFAULT_DOCKING_PANE_STYLE`입니다. 자세한 내용은 설명 부분을 참조 하십시오.는 [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex) 메서드.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -161,7 +164,7 @@ BOOL Create(
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
-##  <a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
+##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
  처리는 [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) 메시지입니다.  
   
 ```  
@@ -183,7 +186,7 @@ afx_msg LRESULT HandleInitDialog(
 ### <a name="remarks"></a>설명  
  프레임 워크는이 메서드를 사용 하 여 컨트롤 및 대화 상자의 모양을 초기화 합니다. 프레임 워크 대화 상자를 표시 하기 전에이 메서드를 호출 합니다.  
   
-##  <a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
+##  <a name="setoccdialoginfo"></a>  CPaneDialog::SetOccDialogInfo  
  OLE 컨트롤 컨테이너의 대화 상자에 대 한 서식 파일을 지정 합니다.  
   
 ```  

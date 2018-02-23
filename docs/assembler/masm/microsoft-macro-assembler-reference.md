@@ -22,11 +22,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3cb156d4fb8f50c12c2fce172c65dc2b313a24e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4fa951c5386847f216eea8581865ff3ba03a9e05
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 매크로 어셈블러 참조
 Microsoft 매크로 어셈블러 (MASM) 인라인 어셈블리에 비해 여러 가지 이점을 제공합니다. MASM은 매크로 반복, 산술, 및 텍스트 문자열 처리와 같은 기능이 있는 언어를 포함 합니다. MASM도 제어할 수 큰 하드웨어는 386, 486, 및 Pentium 프로세서의 명령 집합을 지원 하기 때문에 있습니다. MASM를 사용 하 여도 시간 및 메모리 오버를 줄일 수 있습니다.  
@@ -54,7 +54,7 @@ Microsoft 매크로 어셈블러 (MASM) 인라인 어셈블리에 비해 여러 
  출력을 만드는 방법에 대 한 정보에 대 한 파일 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [Visual C++](../../top/visual-cpp-in-visual-studio.md)  
+ [Visual C++](../../visual-cpp-in-visual-studio.md)  
  Visual Studio 및 Visual c + + 설명서의 다양 한 영역에 대 한 링크를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  

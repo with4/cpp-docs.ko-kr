@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -15,23 +17,24 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-amp-overview"></a>C++ AMP 개요
-C + + Accelerated Massive Parallelism (c + + AMP)의 개별 그래픽 카드에 데이터 병렬 등의 하드웨어 그래픽 처리 장치 (GPU) 사용 하 여 c + + 코드의 실행 속도 높여 합니다. C + + AMP를 사용 하 여 유형이 다른 하드웨어에서 병렬 처리를 사용 하 여 실행 속도가 빨라질 수 있습니다 수 있도록 다차원 데이터 알고리즘을 코딩할 수 있습니다. 다차원 배열, 인덱싱, 메모리 전송, 바둑판식으로 배열 및 수치 연산 함수 라이브러리는 c + + AMP 프로그래밍 모델에 포함 되어 있습니다. 성능을 향상 시킬 수 있도록 CPU에서 GPU 및 역방향으로 데이터는 이동 하는 방법을 제어 하려면 c + + AMP 언어 확장을 사용할 수 있습니다.  
+C + + Accelerated Massive Parallelism (c + + AMP)의 개별 그래픽 카드에 데이터 병렬 등의 하드웨어 그래픽 처리 장치 (GPU) 사용 하 여 c + + 코드의 실행 속도 높여 합니다. C + + AMP를 사용 하 여 유형이 다른 하드웨어에서 병렬 처리를 사용 하 여 실행 속도가 빨라질 수 있습니다 수 있도록 다차원 데이터 알고리즘을 코딩할 수 있습니다. C++ AMP 프로그래밍 모델에는 다차원 배열, 인덱싱, 메모리 전송, 바둑판식 배열 및 수학 함수 라이브러리가 포함됩니다. 성능을 향상 시킬 수 있도록 CPU에서 GPU 및 역방향으로 데이터는 이동 하는 방법을 제어 하려면 c + + AMP 언어 확장을 사용할 수 있습니다.  
   
 ## <a name="system-requirements"></a>시스템 요구 사항  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] 또는 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)][!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], 또는 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   DirectX 11 기능 수준 11.0 또는 이후 하드웨어  
   
@@ -236,7 +239,7 @@ for (int i = 0; i < 5; i++)
 ### <a name="shared-memory-with-array-and-arrayview"></a>Array와 array_view를 사용 하 여 공유 메모리  
  공유 메모리는 CPU와 액셀러레이터 키에서 액세스할 수 있는 메모리입니다. 공유 메모리 사용을 제거 또는 CPU와 가속기 간에 데이터를 복사 하는 오버 헤드를 크게 줄여 줍니다. 메모리는 공유 되지만 CPU 및 가속기를 둘 다에서 동시에 액세스할 수 없습니다 및 이렇게 하면 정의 되지 않은 동작을 유발 하므로 합니다.  
   
- `array`관련된 가속기 지 원하는 경우 공유 메모리 사용을 세부적으로 제어를 지정 하려면 개체를 사용할 수 있습니다. 액셀러레이터 공유 메모리를 지원 하는지 여부를 따라 사용자가 액셀러레이터 키의 [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) 반환 하는 속성 `true` 공유 메모리가 지원 되는 경우. 공유 메모리 지원 되 면 기본 [access_type 열거형](reference/concurrency-namespace-enums-amp.md#access_type) 메모리 할당 액셀러레이터에 의해 결정 됩니다는 `default_cpu_access_type` 속성입니다. 기본적으로 `array` 및 `array_view` 개체에서 동일한 라인 `access_type` 연결 된 주 `accelerator`합니다.  
+ `array` 관련된 가속기 지 원하는 경우 공유 메모리 사용을 세부적으로 제어를 지정 하려면 개체를 사용할 수 있습니다. 액셀러레이터 공유 메모리를 지원 하는지 여부를 따라 사용자가 액셀러레이터 키의 [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) 반환 하는 속성 `true` 공유 메모리가 지원 되는 경우. 공유 메모리 지원 되 면 기본 [access_type 열거형](reference/concurrency-namespace-enums-amp.md#access_type) 메모리 할당 액셀러레이터에 의해 결정 됩니다는 `default_cpu_access_type` 속성입니다. 기본적으로 `array` 및 `array_view` 개체에서 동일한 라인 `access_type` 연결 된 주 `accelerator`합니다.  
   
  설정 하 여는 [array:: cpu_access_type 데이터 멤버](reference/array-class.md#cpu_access_type) 속성은 `array` 있습니다 명시적으로 연습 세부적으로 제어할 수 어떻게 공유 메모리를 통해을 사용 하는 하드웨어의 성능에 대 한 응용 프로그램을 최적화할 수 있도록 특성의 계산 커널의 메모리 액세스 패턴을 기반으로 합니다. `array_view` 동일한 반영 `cpu_access_type` 로 `array` ;와 연결 된 또는 array_view 데이터 원본 없이 생성 되 면 해당 `access_type` 먼저 하면 마법사가 저장소를 할당 하는 환경을 반영 합니다. 즉, 처음 (CPU) 호스트에서 액세스를 동작 하 고 CPU 데이터 원본 및 공유를 통해 생성 된 마치는 `access_type` 의 `accelerator_view` ; 캡처에 의해 연결 된 첫 번째 경우에서 액세스 하는 반면는 `accelerator_view`, 처럼 작동 한 다음 통해 만든는 `array` 그에 만든 `accelerator_view` 공유는 `array`의 `access_type`합니다.  
   
@@ -465,10 +468,10 @@ void MathExample() {
   
 - [Short 벡터 라이브러리](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f): 2, 3 및 4에 따라 길이의 short 벡터 형식 집합을 정의 `int`, `uint`, `float`, `double`, [norm](../../parallel/amp/reference/norm-class.md), 또는 [unorm](../../parallel/amp/reference/unorm-class.md).  
   
-## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 응용 프로그램  
- 다른 c + + 라이브러리와 마찬가지로 c + + AMP에 사용할 수 있습니다 프로그램 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 앱. 이러한 문서에는 c + +, C#, Visual Basic 또는 JavaScript를 사용 하 여 만든 앱에서 c + + AMP 코드를 포함 하는 방법을 설명 합니다.  
+## <a name="universal-windows-platform-uwp-apps"></a>유니버설 Windows 플랫폼 (UWP) 앱  
+ 다른 c + + 라이브러리와 마찬가지로 c + + AMP UWP 앱에서 사용할 수 있습니다. 이러한 문서에는 c + +, C#, Visual Basic 또는 JavaScript를 사용 하 여 만든 앱에서 c + + AMP 코드를 포함 하는 방법을 설명 합니다.  
   
-- [Windows 스토어 앱에서 C++ AMP 사용](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [UWP 앱에서 C++ AMP 사용](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [연습: c + + 및 JavaScript에서 호출할 기본 Windows 런타임 구성 요소 만들기](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   

@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compatibility"></a>호환성
 UCRT(유니버설 C 런타임 라이브러리)는 C++ 규칙에 필요한 C 표준 라이브러리를 대부분 지원합니다. \<tgmath.h>에 정의된 형식 제네릭 매크로와 \<complex.h>의 엄격한 형식 호환성을 제외하고 C99(ISO/IEC 9899:1999) 라이브러리를 구현합니다. 또한 UCRT는 POSIX.1(ISO/IEC 9945-1:1996, POSIX 시스템 응용 프로그램 인터페이스) C 라이브러리의 큰 하위 집합을 구현하지만 어떠한 특정 POSIX 표준에도 완전히 부합되지 않습니다.  뿐만 아니라 UCRT는 표준에 속하지 않는 여러 Microsoft 특정 함수 및 매크로를 구현합니다.  
@@ -44,7 +44,7 @@ UCRT(유니버설 C 런타임 라이브러리)는 C++ 규칙에 필요한 C 표�
   
 |제목|설명|  
 |-----------|-----------------|  
-|[Windows 스토어 앱, Windows 런타임 및 C 런타임](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|UCRT 루틴이 유니버설 Windows 앱 또는 Windows 스토어 앱과 호환되지 않는 경우를 설명합니다.|  
+|[UWP 앱, Windows 런타임 및 C 런타임](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|UCRT 루틴이 유니버설 Windows 앱 또는 Microsoft 스토어 앱과 호환되지 않는 경우를 설명합니다.|  
 |[ANSI C 준수](../c-runtime-library/ansi-c-compliance.md)|UCRT의 표준 규격 이름 지정을 설명합니다.|  
 |[UNIX](../c-runtime-library/unix.md)|프로그램을 UNIX에 이식하는 작업에 대한 지침을 제공합니다.|  
 |[Windows 플랫폼(CRT)](../c-runtime-library/windows-platforms-crt.md)|CRT가 지원되는 운영 체제를 나열합니다.|  

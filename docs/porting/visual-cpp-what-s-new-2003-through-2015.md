@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
 
@@ -1545,16 +1545,16 @@ C++11 명시적 변환 연산자, 이니셜라이저 목록, 범위가 지정된
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>향상된 PGO(프로필 기반 최적화)
 
 - PGO 사용으로 최적화된 응용 프로그램 작업 집합의 감소로 인한 성능 향상
-- Windows 스토어 앱 개발을 위한 새로운 PGO
+- Windows 런타임 앱 개발을 위한 새로운 PGO
 
-### <a name="windows-store-app-development-support"></a>Windows 스토어 앱 개발 지원
+### <a name="windows-runtime-app-development-support"></a>Windows 런타임 앱 개발 지원
 
-- **값 구조체에서 boxed 형식 지원** int와는 달리 IBox<int>^처럼 null일 수 있는 필드를 사용하여 값 형식을 정의할 수 있습니다. 즉, 필드가 값을 포함할 수 있거나 nullptr과 같을 수 있습니다.
+- **값 구조체에서 boxed 형식 지원** int와는 달리 IBox\<int>^처럼 null일수 있는 필드를 사용하여 값 형식을 정의할 수 있습니다. 즉, 필드가 값을 포함할 수 있거나 nullptr과 같을 수 있습니다.
 - **다양한 예외 정보** C++/CX는 ABI(응용 프로그램 이진 인터페이스)에서 자세한 예외 정보를 캡처하고 전파할 수 있도록 하는 새로운 Windows 오류 모델을 지원합니다. 여기에는 호출 스택과 사용자 지정 메시지 문자열이 포함됩니다.
 - **가상 형식의 Object::ToString()** 사용자 정의 Windows 런타임 ref 형식에서 ToString을 재정의할 수 있습니다.
 - **사용되지 않는 API 지원** 공용 Windows 런타임 API는 이제 사용되지 않는 것으로 표시되고 빌드 경고로 나타나는 사용자 지정 메시지가 제공될 수 있으며, 마이그레이션 지침을 제공할 수 있습니다.
 - **향상된 디버거** 네이티브/JavaScript interop 디버깅, Windows 런타임 예외 진단 및 비동기 코드 디버깅(Windows 런타임 및 PPL)을 지원합니다.
-  - 참고: 이 섹션에서 설명한 C++ 관련 기능 및 향상된 기능 외에도, 향상된 다른 Visual Studio 기능을 사용하면 Windows 스토어 앱을 더 효과적으로 작성할 수 있습니다.
+  - 참고: 이 섹션에서 설명한 C++ 관련 기능 및 향상된 기능 외에도, 향상된 다른 Visual Studio 기능을 사용하면 Windows 런타임 앱을 더 효과적으로 작성할 수 있습니다.
 
 ### <a name="diagnostics-enhancements"></a>진단 향상
 
@@ -1632,12 +1632,12 @@ func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
 func1(Element::Helium); // OK
    ```
 
-### <a name="windows-store-app-development-support"></a>Windows 스토어 앱 개발 지원
+### <a name="windows-runtime-app-development-support"></a>Windows 런타임 앱 개발 지원
 
-- **네이티브 XAML 기반 UI 모델** Windows 스토어 앱의 경우 새로운 네이티브 XAML 기반 UI 모델을 사용할 수 있습니다.
-- **Visual C++ 구성 요소 확장** 이러한 확장은 Windows 스토어 앱의 필수 구성 요소인 Windows 런타임 개체의 사용을 간소화합니다. 자세한 내용은 "C++/CX(C ++ 및 Visual C ++ 언어 참조)를 사용하는 Windows 스토어 앱에 대한 로드맵"을 참조하세요.
-- **DirectX 게임** Windows 스토어 앱에 대한 새로운 DirectX 지원을 사용하여 흥미로운 게임을 개발할 수 있습니다.
-- **XAML/DirectX interop** XAML과 DirectX를 모두 사용하는 Windows 스토어 앱이 효율적으로 상호 운용됩니다.
+- **네이티브 XAML 기반 UI 모델** Windows 런타임 앱의 경우 새로운 네이티브 XAML 기반 UI 모델을 사용할 수 있습니다.
+- **Visual C++ 구성 요소 확장** 이러한 확장은 Windows 런타임 앱의 필수 구성 요소인 Windows 런타임 개체의 사용을 간소화합니다. 자세한 내용은 C++ [및 Visual C++ 언어 참조(C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)를 [사용하는 Windows 런타임 앱에 대한 로드맵을 참조하세요.](../windows/universal-windows-apps-cpp.md)
+- **DirectX 게임** Windows 런타임 앱에 대한 새로운 DirectX 지원을 사용하여 흥미로운 게임을 개발할 수 있습니다.
+- **XAML/DirectX interop** XAML과 DirectX를 모두 사용하는 Windows 런타임 앱이 효율적으로 상호 운용됩니다.
 - **Windows 런타임 구성 요소 DLL 개발** 구성 요소 DLL 개발을 통해 Windows 런타임 환경을 확장할 수 있습니다.
 
 ### <a name="compiler-and-linker"></a>컴파일러 및 링커
@@ -1941,7 +1941,7 @@ __sptr, __uptr
 - 64비트 네이티브 및 크로스 컴파일러
 - /analyze(엔터프라이즈 코드 분석) 컴파일러 옵션이 추가되었습니다.
 - /bigobj 컴파일러 옵션이 추가되었습니다.
-- /clr:pure, /clr:safe 및 /clr:oldSyntax가 추가되었습니다.
+- /clr:pure, /clr:safe 및 /clr:oldSyntax가 추가되었습니다. (나중에 Visual Studio 2015에서는 사용되지 않습니다.)
 - 사용되지 않는 컴파일러 옵션: 이 릴리스에서는 많은 컴파일러 옵션이 더 이상 사용되지 않습니다. 자세한 내용은 "사용되지 않는 컴파일러 옵션"을 참조하세요.
 - /clr 코드의 이중 썽킹이 줄어듭니다. 자세한 내용은 "이중 썽킹(C++)"을 참조하세요.
 - /EH(예외 처리 모델) 또는 /EHs는 throw 이외의 다른 방식으로 발생하는 예외를 catch하는 데 더 이상 사용할 수 없습니다. 대신 /EHa를 사용합니다.

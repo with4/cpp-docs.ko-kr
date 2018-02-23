@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio의 Visual C++
 
@@ -75,7 +75,7 @@ Visual Studio에 대한 도움말을 보고 버그를 제출하고 제안을 하
 ## <a name="writing-applications-in-c"></a>C++에서 응용 프로그램 작성
 
 [유니버설 Windows 앱](windows/universal-windows-apps-cpp.md)  
-Windows 개발자 센터의 가이드 및 참조 내용을 알아봅니다. Windows 스토어 앱에 대한 자세한 내용은 [Visual Studio를 사용하여 Windows 스토어 앱 개발](http://go.microsoft.com/fwlink/p/?LinkId=248364) 및 [C++로 작성한 Windows 스토어 앱용 로드맵](http://go.microsoft.com/fwlink/p/?LinkId=244654)을 참조하세요.
+Windows 개발자 센터의 가이드 및 참조 내용을 알아봅니다. UWP 앱 개발에 대한 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide) 및 [C++을 사용하여 첫 번째 UWP 앱 만들기](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)를 참조하세요.
 
 [데스크톱 응용 프로그램(C++)](windows/desktop-applications-visual-cpp.md)  
 메시지 루프 및 호출이 있는 데스크톱 응용 프로그램을 만드는 방법에 대해 알아봅니다.
@@ -131,7 +131,7 @@ CPU에서 실행되는 비동기 및 병렬 알고리즘입니다.
 GPU에서 실행되는 대규모 병렬 알고리즘입니다.
 
 [WRL(Windows 런타임 템플릿 라이브러리)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] 응용 프로그램 및 구성 요소입니다.
+UWP(유니버설 Windows 플랫폼) 앱 및 구성 요소
 
 [C++/CLI를 사용한 .NET 프로그래밍](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 CLR(공용 언어 런타임)에 대한 프로그래밍입니다.

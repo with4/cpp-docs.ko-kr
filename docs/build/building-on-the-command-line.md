@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>C/c + + 코드를 명령줄에서 빌드
 
@@ -82,7 +85,7 @@ VsDevCmd.bat, 기본 개발자 명령 프롬프트 명령 파일은 설치 디�
 >   
 > 또한 vcvarsall.bat 파일은 버전별로 다릅니다. 현재 버전의 Visual c + +는 이전 버전의 Visual c + +에도 있는 컴퓨터에 설치 되어 실행 하지 마십시오 vcvarsall.bat 또는 다른 명령 파일 같은 명령 프롬프트 창에서 서로 다른 버전의.  
  
-기존 명령 창에서 특정 빌드 아키텍처를 지정 하는 가장 간단한 방법은 vcvarsall.bat 파일을 사용 하는 합니다. Vcvarsall.bat를 사용 하 여 네이티브 32 비트 또는 64 비트 컴파일 또는 x86, x64 또는 ARM 프로세서;에 크로스 컴파일을 위한 명령줄을 구성 하려면 환경 변수를 설정 하려면 Windows 스토어, 유니버설 Windows 플랫폼 또는 Windows 바탕 화면 플랫폼; 대상 Windows SDK; 사용 하도록 지정 하려면 및 플랫폼 도구 집합 버전을 지정할 수 있습니다. Vcvarsall.bat x86에 대 한 현재 32 비트 네이티브 컴파일러를 사용 하는 것에 대 한 환경 변수를 구성 하지 인수를 제공 하는 경우 Windows 바탕 화면을 대상으로 합니다. 그러나 네이티브 조인, 크로스 컴파일러 도구 하나를 구성 하려면 사용할 수 있습니다. 설치 되어 있지 않거나 빌드 컴퓨터 아키텍처에서 사용할 수 없는 컴파일러 구성을 지정 하면 오류 메시지가 표시 됩니다. 이 표에서 지원 되는 아키텍처 인수를 보여 줍니다.  
+기존 명령 창에서 특정 빌드 아키텍처를 지정 하는 가장 간단한 방법은 vcvarsall.bat 파일을 사용 하는 합니다. Vcvarsall.bat를 사용 하 여 네이티브 32 비트 또는 64 비트 컴파일 또는 x86, x64 또는 ARM 프로세서;에 크로스 컴파일을 위한 명령줄을 구성 하려면 환경 변수를 설정 하려면 Microsoft 저장소 대상, 유니버설 Windows 플랫폼 또는 Windows 바탕 화면 플랫폼; Windows SDK; 사용 하도록 지정 하려면 및 플랫폼 도구 집합 버전을 지정할 수 있습니다. Vcvarsall.bat x86에 대 한 현재 32 비트 네이티브 컴파일러를 사용 하는 것에 대 한 환경 변수를 구성 하지 인수를 제공 하는 경우 Windows 바탕 화면을 대상으로 합니다. 그러나 네이티브 조인, 크로스 컴파일러 도구 하나를 구성 하려면 사용할 수 있습니다. 설치 되어 있지 않거나 빌드 컴퓨터 아키텍처에서 사용할 수 없는 컴파일러 구성을 지정 하면 오류 메시지가 표시 됩니다. 이 표에서 지원 되는 아키텍처 인수를 보여 줍니다.  
   
 |Vcvarsall.bat 아키텍처 인수|컴파일러|호스트 컴퓨터 아키텍처|출력 아키텍처 빌드|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
@@ -176,7 +179,7 @@ MSBuild.EXE를 사용하는 방법에 대해 설명하는 문서의 링크를 �
   
 ## <a name="related-sections"></a>관련 단원  
 
-[/MD, /MT, /LD (런타임 라이브러리 사용)](../build/reference/md-mt-ld-use-run-time-library.md)  
+[/MD, /MT, /LD(런타임 라이브러리 사용)](../build/reference/md-mt-ld-use-run-time-library.md)  
 컴파일러 옵션을 사용하여 디버그 또는 릴리스 런타임 라이브러리를 사용하는 방법에 대해 설명합니다.  
   
 [C/c + + 컴파일러 옵션](../build/reference/compiler-options.md)  

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: afxdll
-dev_langs: C++
+f1_keywords:
+- afxdll
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -21,16 +24,17 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36a57d47d32b4526ca6d383b67ca415f705dc982
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="mfc-extension-dlls"></a>MFC 확장명 Dll
 MFC 확장 DLL은 일반적으로 기존의 Microsoft Foundation Class 라이브러리 클래스에서 파생 된 다시 사용할 수 있는 클래스를 구현 하는 DLL입니다.  
@@ -61,7 +65,7 @@ MFC 확장 DLL은 일반적으로 기존의 Microsoft Foundation Class 라이브
   
  MFC의 4.0 버전 이전 DLL이이 유형의 AFXDLL 호출 되었습니다. AFXDLL 참조 하는 `_AFXDLL` DLL을 빌드할 때 정의 된 전처리기 기호입니다.  
   
- 에 설명 된 규칙에 따라 공유 버전의 MFC에 대 한 가져오기 라이브러리 이름을 [MFC Dll에 대 한 명명 규칙](../build/naming-conventions-for-mfc-dlls.md)합니다. Visual c + + MFC Dll 및의 비 MFC Dll를 사용 하 고 응용 프로그램과 함께 배포할 수 있는 많은 미리 작성 된 버전을 제공 합니다. 이러한 Redist.txt Program Files\Microsoft Visual Studio 폴더에 설치 되는 설명 되어 있습니다.  
+ 에 설명 된 규칙에 따라 공유 버전의 MFC에 대 한 가져오기 라이브러리 이름을 [MFC Dll에 대 한 명명 규칙](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)합니다. Visual c + + MFC Dll 및의 비 MFC Dll를 사용 하 고 응용 프로그램과 함께 배포할 수 있는 많은 미리 작성 된 버전을 제공 합니다. 이러한 Redist.txt Program Files\Microsoft Visual Studio 폴더에 설치 되는 설명 되어 있습니다.  
   
  .Def 파일을 내보내는 경우 헤더 파일의 시작과 끝에 다음 코드를 추가 합니다.  
   
@@ -89,7 +93,7 @@ MFC 확장 DLL은 일반적으로 기존의 Microsoft Foundation Class 라이브
 ## <a name="sharing-resources-and-classes"></a>공유 리소스 및 클래스  
  리소스 내보내기 리소스 목록을 통해 수행 됩니다. 각 응용 프로그램에 단일 연결된 목록이 포함 되어 **CDynLinkLibrary** 개체입니다. 대부분의 리소스를 로드 하는 표준 MFC 구현에서는 현재 리소스 모듈에서 먼저 찾습니다 리소스를 찾을 때는 (`AfxGetResourceHandle`) 리소스가 없는 경우의 목록으로 이동 **CDynLinkLibrary** 개체 요청된 된 리소스를 로드 하려고 합니다.  
   
- 목록 트래버스 단점이 약간 느려질 것 및 리소스 ID 범위 관리를 필요로 합니다. MFC 확장 Dll이 몇 개에 연결 하는 클라이언트 응용 프로그램 DLL 인스턴스 핸들을 지정 하지 않고도 DLL에서 제공 하는 리소스를 사용할 수 있다는 이점이 있습니다. `AfxFindResourceHandle`API는 순환 리소스 목록에 대 한 지정 된 일치 하는 합니다. 이름 및 리소스의 형식을 사용 해야 하 고 처음 발견 되는 리소스 핸들 (또는 NULL)를 반환 합니다.  
+ 목록 트래버스 단점이 약간 느려질 것 및 리소스 ID 범위 관리를 필요로 합니다. MFC 확장 Dll이 몇 개에 연결 하는 클라이언트 응용 프로그램 DLL 인스턴스 핸들을 지정 하지 않고도 DLL에서 제공 하는 리소스를 사용할 수 있다는 이점이 있습니다. `AfxFindResourceHandle` API는 순환 리소스 목록에 대 한 지정 된 일치 하는 합니다. 이름 및 리소스의 형식을 사용 해야 하 고 처음 발견 되는 리소스 핸들 (또는 NULL)를 반환 합니다.  
   
  목록으로 이동 하 여만 특정 위치에서 리소스를 로드 하지 않으려면 함수를 사용 `AfxGetResourceHandle` 및 `AfxSetResourceHandle` 하 기존 핸들을 저장 하 고 새 핸들을 설정 합니다. 클라이언트 응용 프로그램에 반환 하기 전에 이전 리소스 핸들을 복원 해야 합니다. 메뉴를 명시적으로 로드 하려면이 방법을 사용의 예로, MFC 샘플에서 Testdll2.cpp을 참조 하십시오. [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)합니다.  
   

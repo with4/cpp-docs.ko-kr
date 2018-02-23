@@ -2,7 +2,6 @@
 title: "정적 라이브러리 (C + + /cli CX) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/03/2017
-ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
@@ -15,11 +14,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a64e1f35350968f16a24a46b8611820d68bf785
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dcd69fc00a44bdc0d8259a4a21d31c83ee5c6258
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="static-libraries-ccx"></a>정적 라이브러리(C++/CX)
 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 사용 되는 정적 라이브러리는 STL 형식 및 Windows 런타임 응용 프로그램 플랫폼에서 제외 되지 않은 Win32 Api에 대 한 호출을 비롯 한 ISO 표준 c + + 코드를 포함할 수 있습니다. 정적 라이브러리 Windows 런타임 구성 요소를 사용 하 고 특정 제한 사항이 있는 Windows 런타임 구성 요소를 만들 수 있습니다.  

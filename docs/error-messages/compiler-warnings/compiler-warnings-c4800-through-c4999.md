@@ -94,7 +94,6 @@ f1_keywords:
 - C5035
 - C5036
 - C5037
-- C5038
 - C5039
 - C5040
 - C5041
@@ -103,17 +102,16 @@ f1_keywords:
 - C5044
 dev_langs:
 - C++
-ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>컴파일러 경고 C4800 C5999 통해
 
@@ -245,6 +243,7 @@ ms.lasthandoff: 02/14/2018
 |컴파일러 경고 C5035|기능을 사용 하 여 '*기능*' 하면 함수 *함수* 게스트 코드로 컴파일할 수를|
 |컴파일러 경고 (수준 1) C5036|/hybrid:x86arm64로 컴파일할 때 varargs 함수 포인터 변환이 있습니다. '*type1*'to'*type2*'|
 |컴파일러 경고 (오류) C5037|'*멤버-함수*': 클래스 템플릿의 멤버는 아웃오브 라인 정의 기본 인수를 가질 수 없습니다|
+|[컴파일러 경고 C5038](c5038.md)|데이터 멤버 '*member1*'초기화 될 데이터 멤버 뒤'*member2*'|
 |컴파일러 경고 C5039|'*함수*': 포인터 또는 함수를 잠재적으로 throw 하는 참조-EHc 아래 extern C 함수에 전달 합니다. 이 함수는 예외를 throw 하는 경우 정의 되지 않은 동작이 발생할 수 있습니다.|
 |컴파일러 경고 C5040|동적 예외 사양은 C + + 14에만 및 이전 버전; 올바른지 noexcept(false)로 처리 하는 방법|
 |컴파일러 경고 C5041|'*정의*': constexpr 정적 데이터 멤버에 대 한 아웃오브 라인 정의 필요 하지 않으며 C + + 17에 사용 되지 않음|
